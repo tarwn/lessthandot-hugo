@@ -2,9 +2,9 @@
     <div class="post-title-line">
         <h1><a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a></h1>
         <div class="post-byline">
-            by <a href="{{ $.Site.BaseURL }}author/{{ .Params.author | urlize }}">{{ .Params.author }}</a>
+            by {{ partial "links/author.html" . }}
             on {{ .Date.Format "January 2, 2006" }}
-            in category {{ partial "post/categories.html" . }}
+            in category {{ partial "post/oneCategory.html" . }}
         </div>
     </div>
     {{ partial "post/shareLinks.html" . }}

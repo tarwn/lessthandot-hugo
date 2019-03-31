@@ -1,0 +1,3 @@
+{{ range .Params.tags }}
+    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+{{ end }}

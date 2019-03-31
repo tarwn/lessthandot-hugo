@@ -1,3 +1,3 @@
-{{ range first 1 .Params.categories }}
-    <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}">{{ . }}</a>
+{{ range .Params.categories }}
+    <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}" class="category">{{ . }}</a>
 {{ end }}

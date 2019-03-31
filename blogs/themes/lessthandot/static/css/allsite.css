@@ -45,6 +45,31 @@ S0 - Static site hacks
     text-decoration: underline;
 }
 
+code.hljs {
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+    padding: .5em 1em;
+}
+
+.tag{
+    border-radius: 6px;
+    padding: 0.25em 0.5em;
+    border: 1px solid #ddd;
+}
+
+.tag:hover{
+    border-radius: 6px;
+    padding: 0.25em 0.5em;
+    border: 1px solid #ccc;
+}
+
+.post-foot-line{
+    line-height: 20px;
+    font-size: 95%;
+    margin: 4px 1em;
+}
+
 /*********************************************************
 S1. Common Elements
 **********************************************************/
@@ -1027,10 +1052,13 @@ S11. Account Page
     float: left;
     margin-right: .5em;
 }
-.bioSocLink{}
-.bioSocLink img{
-    height: 30px;
-    margin: 0px 2px;
+.bioSocLink{
+    display: inline-block;
+    margin: 0.5em;
+    margin-bottom: 0px;
+}
+.bioSocLink > img {
+    height: 28px;
 }
 
 /*********************************************************

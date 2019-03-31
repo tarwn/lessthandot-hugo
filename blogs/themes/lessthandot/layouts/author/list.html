@@ -1,0 +1,12 @@
+
+Read posts by:
+<ul>
+{{ range .Pages }}
+    {{ $authorData := index .Site.Data._authors (.Title | urlize)}}
+    {{if $authorData}}
+        <li><a href="{{ .Permalink }}">{{$authorData.name}}</a></li>
+    {{else}}
+        <li><span style="color: red">❌</span><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{end}}
+{{ end }}
+</ul>

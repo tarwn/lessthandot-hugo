@@ -1,0 +1,18 @@
+{{ $authorData := index .ctxt.Site.Data._authors (.author | urlize)}}
+{{ if $authorData }}
+<div class="userInfo">
+    <h2>About the Author</h2>
+    <img class="bioPic" src="/images/author/{{ $authorData.image }}" alt="User bio image">
+    {{ $authorData.bio }}
+    <br style="clear: left">
+    <div class="bioSoc">
+        <span class="bioSocTitle">Social Sitings</span>
+        {{ if $authorData.twitter }}
+            <a href="http://twitter.com/{{ $authorData.twitter }}" title="{{ $authorData.twitter }} at Twitter" class="bioSocLink" rel="author"><img src="/images/Twitter.svg" alt="Twitter"></a>
+        {{ end }}
+        {{ if $authorData.linkedin }}
+            <a href="{{ $authorData.linkedin }}" title="grrlgeek at LinkedIn" class="bioSocLink" rel="author"><img src="/images/LinkedIn.svg" alt="LinkedIn"></a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

@@ -1,5 +1,11 @@
 {{ .Title }}
 
+{{if isset .Params "author"}}
+{{(index .Site.Data._authors .Params.author).name}}
+{{(index .Site.Data._authors .Params.author).title}}
+{{(index .Site.Data._authors .Params.author).short_bio}}
+{{end}}
+
 <ul>
 {{ range .Pages }}
 <li><a href="{{ .Permalink }}">{{ .Title }}</a> on <span>{{ .Date.Format "January 2, 2006" }}</span></li>

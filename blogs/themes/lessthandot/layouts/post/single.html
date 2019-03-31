@@ -1,2 +1,43 @@
-Post Single
-Title = {{ .Title }}
+{{ partial "post/head.html" . }}
+{{ partial "header.html" . }}
+
+<div class="content-main">
+    <!-- <div class="post-navigation">
+        <div class="post-navigation-forward"><? next_post_link('%link &raquo;') ?> </div>
+        <div class="post-navigation-back"><? previous_post_link('&laquo; %link') ?></div>
+    </div> -->
+    <div class="post-area instapaper_body">
+        <div class="post-title-line">
+            <h1 class="instapaper_ignore"><a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a></h1>
+            <div class="post-byline">
+                by {{ partial "links/author.html" . }}
+                on {{ .Date.Format "January 2, 2006" }}
+                in category {{ partial "post/oneCategory.html" . }}
+            </div>
+        </div>
+        {{ partial "post/shareLinks.html" . }}
+        <div class="post-content">{{ .Content }}</div>
+        <div class="post-author">
+            {{ partial "authorBio.html"  (dict "author" .Params.author "ctxt" $) }}
+        </div>
+        <div class="post-foot instapaper_ignore">
+            <div class="post-foot-line">
+                Author: {{ partial "links/author.html" . }}
+            </div>
+            <div class="post-foot-line">
+                Categories: {{ partial "post/categories.html" . }}
+            </div>
+            {{ if .Params.tags }}
+                <div class="post-foot-line">
+                    Tagged as {{ partial "post/tags.html" . }}
+                </div>
+            {{ end }}
+            {{ partial "post/shareLinks.html" . }}
+        </div>
+        <!-- <?
+        comments_template('/comments.php');
+        ?> -->
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
