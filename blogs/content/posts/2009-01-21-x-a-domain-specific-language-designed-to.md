@@ -1,0 +1,40 @@
+---
+title: 'X# a domain specific language designed to quickly create Web applications and services'
+author: SQLDenis
+type: post
+date: 2009-01-21T22:31:10+00:00
+url: /index.php/webdev/webdesigngraphicsstyling/x-a-domain-specific-language-designed-to/
+views:
+  - 7039
+rp4wp_auto_linked:
+  - 1
+categories:
+  - Web Design, Graphics and Styling
+tags:
+  - 'x#'
+  - x-sharp
+
+---
+Just saw the X# language website, what do you think of X#?
+
+X# (pronounced X-sharp) is a domain specific language designed to quickly create Web applications and services. In X# everything is represented as a hierarchical structure or tree and instead of using functions to manipulate information or perform actions, all possible operations you can think of are done by adding, removing or changing nodes from this tree. Since there are no functions to learn and everything is done intuitively, even inexperienced developers can create complex Web applications and services in record time.
+
+X# is &#8230;
+
+Unlike other similar DSLs which require developers to learn hundreds of libraries and thousands of functions, X# is simple, intuitive, and easy to learn. It only uses 30 statements and four data types (node, string, number, and boolean) to create any application or service you can think of.
+
+Here is an example
+
+Retrieve all RSS Feeds from NY Times and save those entries containing the word oil in a MySQL database titled oil_news:
+
+<pre>&lt;xsp:append-child target="document('xdbc:mysql://192.168.1.27:3306/maindb')/oil_news"&gt;  
+       &lt;xsp:for-each select="(document('http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml')/text() &gt;&gt; /library/xml/pi('import'))/channel/item[contains(title,'oil')]"&gt;  
+            &lt;row&gt;  
+                &lt;title&gt;&lt;xsp:text value="{title}"/&gt;&lt;/title&gt;  
+               &lt;description&gt;&lt;xsp:text value="{description}"/&gt;&lt;/description&gt;  
+                &lt;link&gt;&lt;xsp:text value="{link}"/&gt;&lt;/link&gt;  
+            &lt;/row&gt;  
+        &lt;/xsp:for-each&gt;  
+    &lt;/xsp:append-child&gt;  </pre>
+
+Some samples are here http://www.xsharp.org/samples/ and the main site is here: http://www.xsharp.org/

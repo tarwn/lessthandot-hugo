@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "LessThanDot Archive"
+license = "MIT"
+licenselink = "https://github.com/lessthandot/lessthandot/blob/master/LICENSE"
+description = "Archive copy of the LessThanDot website + theme"
+homepage = "http://www.lessthandot.com"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Eli Weinstock-Herman"
+  homepage = "http://www.tiernok.com"

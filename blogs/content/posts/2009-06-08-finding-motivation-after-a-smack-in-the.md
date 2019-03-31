@@ -1,0 +1,25 @@
+---
+title: Finding motivation after a smack in the face
+author: Ted Krueger (onpnt)
+type: post
+date: 2009-06-08T10:53:37+00:00
+url: /index.php/itprofessionals/ethicsit/finding-motivation-after-a-smack-in-the/
+views:
+  - 5465
+rp4wp_auto_linked:
+  - 1
+categories:
+  - Ethics and IT
+
+---
+Today is going to be a hard day as far as motivation goes. I won&#8217;t go into details of why that is but I want to write about nonetheless. I&#8217;m going to turn the issues around and say how I find motivation in the daily stress of being in a DBA position with great pressure from all around you. First, no matter what you have to feel good about your accomplishments in life. That includes day by day activities. If you don&#8217;t then I wouldn’t bother reading on. You’re already lost and should change careers.
+
+First motivation tool is blogging. I know personally that putting my experiences and daily gains from the systems around me and how they force me to educate myself deeper in the technology I have chosen to work on, helps me in putting them down for others to read. That extends to my daily motivation of working on my own systems and putting my knowledge to test in real high transactional production systems. One thing I feel everyone should learn from blogging and try to understand quickly is the ability to take criticism and downright rude comments to what you put on paper. After finally getting that down myself, I’m not pressured by caring if others appreciate my blog or if they even read them. If they do and it helps them or they enjoy them, then it is extremely gratifying for me. I have learned not to dwell on if people insist on badgering them though or saying this guy wrote a better blog on the same topic. That is a big step in not letting blogging and constructive criticism get to you. Anyone that blogs is doing it to help others and foremost, help themselves by getting feedback from the community. No one in our field knows all and has no room for improvement. If they think this is true, they get NULL of my attention. So blogging on things leads to others knowledge and experience. That in itself is motivation. The perfect example is a blog I wrote awhile ago on using SQLCLR on split methods. This blog brought in much criticism and suggestions. It even spawned off other blogs from other professionals in the field. That alone had me motivated to review my own processes and better them. If it wasn’t for taking the initiative to blog on topics, I never would have been able to better my own processes. If I had one thing to offer someone in getting them motivated in working harder on their systems, it would be to blog about those systems. You will be amazed at how much you can learn just from telling others what you know. 
+
+Next are the social tools around us. Twitter has become a nice tool I use and allows me to follow some great people in the Development, DBA and SQL Development world. Before this I had only contact from forums and personal friends in the field. Honestly, some of the names I’ve learned to pay attention to were unknown to me before jumping into the Twitter revolution. Twitter can be as frustrating as forums though. In the beginning of my career I was extremely heavy in the forum world on various sites. After years of either frustrating threads, management of those forums or egotistical issues from the others that post on forums, my contributions fell off. Thankfully I have a great deal of peers around me that decided to start the very site this blog is being posted on to help me not completely lose the gratification helping on forums can bring. Twitter can be like this though in running into egos. I won’t lie that people with the egos in our field truly drive me to ignore the places they follow. If you can get around from that though, you will see the benefits of tools like Twitter. One is motivation from what is going around in the areas you follow. Recently I was following a few really respected names in the DBA world on Twitter and some issues that revolved around certain performance problems. Needless to say, this sparked my motivation to go after my own instances and improve them from that conversation. 
+
+Sometimes you have to be reminded what you know and should be using in your own systems by sharing with others your knowledge. I always find it amazing how many people preaching the song literally never sing it. 
+
+So there is my brief Monday morning, “finding motivation” snapshot. I recommend Twitter and Blogging to everyone. It doesn’t matter who you are and how much you know. I feel everyone can learn from blogs and things like conversation on Twitter. Even if bad advice is thrown up from time to time, the best thing we can do is learn from it and help the authors learn from it. No one gains from egotistical remarks of being more knowledge about any topic. We however do learn from helpful remarks on how to better ourselves. 
+
+Now that this blog is done I feel better no matter which side of my face was recently smacked at work. I’m now off to fix some log shipping issues I very well could have ignored given motivational issues.

@@ -1,0 +1,14 @@
+# Hugo default output directory
+blogs/public
+blogs/resources
+blogs/content/wp-content/upload
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store
