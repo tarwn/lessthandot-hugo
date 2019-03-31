@@ -1,0 +1,7 @@
+{{ .Title }}
+
+<ul>
+{{ range .Pages }}
+<li><a href="{{ .Permalink }}">{{ .Title }}</a> on <span>{{ .Date.Format "January 2, 2006" }}</span></li>
+{{ end }}
+</ul>

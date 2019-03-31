@@ -1,8 +1,14 @@
-<!DOCTYPE html>
-<html>
-<body>
-  {{ range first 10 .Data.Pages }}
-    <h1>{{ .Title }}</h1>
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+{{ partial "sidebar.html" . }}
+
+{{ $paginator := .Paginate (where .Pages "Section" "posts") }}
+<div class="content-main">
+  {{ range $paginator.Pages }}
+  {{ partial "post/summary.html" . }}
   {{ end }}
-</body>
-</html>
+  {{ template "_internal/pagination.html" . }}
+</div>
+
+{{ partial "footer.html" . }}

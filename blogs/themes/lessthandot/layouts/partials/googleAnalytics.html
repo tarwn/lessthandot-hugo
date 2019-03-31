@@ -1,6 +1,8 @@
+{{ if .Site.Params.googleAnalytics }}
+test
 <script type='text/javascript'>
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '{{ googleAnalytics }}']);
+    _gaq.push(['_setAccount', '{{ $.Site.Params.googleAnalytics }}']);
     _gaq.push(['_trackPageview']);
     _gaq.push(['_setCustomVar', 1, 'Environment', '', 3]);
 
@@ -9,4 +11,5 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-</script>";
+</script>
+{{ end }}

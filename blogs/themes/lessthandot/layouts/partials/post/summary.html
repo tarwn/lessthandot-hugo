@@ -1,0 +1,13 @@
+<div class="post-area">
+    <div class="post-title-line">
+        <h1><a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a></h1>
+        <div class="post-byline">
+            by <a href="{{ $.Site.BaseURL }}author/{{ .Params.author | urlize }}">{{ .Params.author }}</a>
+            on {{ .Date.Format "January 2, 2006" }}
+            in category {{ partial "post/categories.html" . }}
+        </div>
+    </div>
+    {{ partial "post/shareLinks.html" . }}
+    <div class="post-content">{{ .Summary }}</div>
+    <a href="<? print get_permalink(); ?>" class="rm">Read More...</a>
+</div>

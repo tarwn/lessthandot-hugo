@@ -30,6 +30,20 @@ Sections
 	S99. Misc Entries
 */
 
+/*********************************************************
+S0 - Static site hacks
+**********************************************************/
+.pagination{
+    display: block;
+    text-align: center;
+}
+.page-item{
+    display: inline-block;
+}
+.page-item.active{
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 /*********************************************************
 S1. Common Elements

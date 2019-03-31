@@ -1,0 +1,7 @@
+<div class="post-tagline">
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" class="twitter-share-button-static" target="_blank"><i></i><span class="label">Tweet</span></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&source={{ .Permalink }}" target="_blank" title="Share on LinkedIn" class="svg-button"><img alt="Share on LinkedIn"  src="{{ $.Site.BaseURL }}images/LinkedIn.svg" /></a>
+    <a href="http://www.reddit.com/submit?url={{ .Permalink }}&title={{ .Title }}" target="_blank" title="Submit to Reddit" class="svg-button"><img alt="Submit to Reddit" src="{{ $.Site.BaseURL }}images/Reddit.svg" /></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&quote={{ .Title }}" title="Share on Facebook" target="_blank" class="svg-button"><img alt="Share on Facebook" src="{{ $.Site.BaseURL }}images/Facebook.svg" /></a>
+    <a href="http://www.instapaper.com/hello2?url={{ .Permalink }}&title={{ .Title }}" class="instapaper_button">Instapaper</a>
+</div>
