@@ -1,9 +1,15 @@
 {{ $authorData := index .ctxt.Site.Data._authors (.author | urlize)}}
 {{ if $authorData }}
 <div class="userInfo">
-    <h2>About the Author</h2>
+    <h2>About {{ $authorData.name }}</h2>
+    {{ if $authorData.image }}
     <img class="bioPic" src="/images/author/{{ $authorData.image }}" alt="User bio image">
-    {{ $authorData.bio }}
+    {{ end }}
+    {{ if $authorData.bio }}
+        {{ $authorData.bio }}
+    {{ else }}
+        Author bio not found
+    {{ end }}
     <br style="clear: left">
     <div class="bioSoc">
         <span class="bioSocTitle">Social Sitings</span>

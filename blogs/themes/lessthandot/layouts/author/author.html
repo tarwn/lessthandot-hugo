@@ -1,0 +1,47 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
+
+{{ $authorData := index .Site.Data._authors (.Title | urlize)}}
+
+<div class="content-main">
+    <div class="author-page">
+        <h1>{{ $authorData.name }}</h1>
+        <br/>
+
+        {{ partial "authorBio.html"  (dict "author" .Title "ctxt" $) }}
+
+        <h2 style="margin-top: 1em;">Summary</h2>
+        <div>
+            <ul>
+                <li>Active from 
+                        {{ range last 1 .Pages }}{{ .Date.Format "January 2006" }}{{ end }}
+                    to 
+                        {{ range first 1 .Pages }}{{ .Date.Format "January 2006" }}{{ end }}
+                </li>
+                <li>{{ len .Pages }} posts published</li>
+            </ul>
+        </div>
+    
+        <h2 style="margin-top: 1em;">Table of Contents</h2>
+        {{ range .Pages.GroupByDate "2006" }}
+            <ul>
+                <li><a href="#{{ .Key }}">{{ .Key }} ({{ len .Pages }} posts)</a></li>
+            </ul>
+        {{ end }}
+
+        <h2 style="margin-top: 1em;">Posts</h2>
+        {{ range .Pages.GroupByDate "2006" }}
+            <div style="margin: 1em 0;">
+                <h3 id="{{ .Key }}">{{ .Key }} ({{ len .Pages }} posts)</h3>
+                <ul>
+                    {{ range.Pages }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a> on <span>{{ .Date.Format "January 2, 2006" }}</span></li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

@@ -1047,6 +1047,7 @@ S11. Account Page
     padding-top: .25em;
     margin-top: .25em;
     border-top: 1px dashed #cccccc;
+    min-height: 28px;
 }
 .bioSocTitle{
     float: left;
