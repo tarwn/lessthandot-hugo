@@ -1,13 +1,30 @@
-{{ .Title }}
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
 
-{{if isset .Params "author"}}
-{{(index .Site.Data._authors .Params.author).name}}
-{{(index .Site.Data._authors .Params.author).title}}
-{{(index .Site.Data._authors .Params.author).short_bio}}
-{{end}}
+<div class="content-main">
+    <div class="author-page">
+        <h1>{{ .Title }}</h1>
+        <br/>
 
-<ul>
-{{ range .Pages }}
-<li><a href="{{ .Permalink }}">{{ .Title }}</a> on <span>{{ .Date.Format "January 2, 2006" }}</span></li>
-{{ end }}
-</ul>
+        <h2 style="margin-top: 1em;">Posts ({{ len .Pages }} posts published)</h2>
+        <ul>
+            {{ range.Pages }}
+            <li class="post-list-item">
+                <div>
+                    <div class="post-list-row"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+                    <div class="post-list-row">by {{ partial "links/author.html" . }} on <span>{{ .Date.Format "January 2, 2006" }}</span></div>
+
+                    <div class="post-list-row post-list-tags">
+                        {{ range .Params.tags }}
+                            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

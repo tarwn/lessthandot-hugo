@@ -70,6 +70,32 @@ code.hljs {
     margin: 4px 1em;
 }
 
+.disabled-menu-item,
+#nav a.disabled-menu-item {
+    text-decoration: line-through;
+    opacity: 0.5;
+    cursor: default;
+}
+
+.disabled-menu-item:hover,
+#nav a.disabled-menu-item:hover {
+    background-color: #2f2f2f;
+    color: white;
+    text-decoration: line-through;
+
+}
+
+.post-list-item{
+    margin-bottom: 1em;
+}
+.post-list-row + .post-list-row {
+    margin-left: 1em;
+}
+
+.post-list-tags{
+    line-height: 26px;
+}
+
 /*********************************************************
 S1. Common Elements
 **********************************************************/

@@ -8,6 +8,6 @@
         </div>
     </div>
     {{ partial "post/shareLinks.html" . }}
-    <div class="post-content">{{ .Summary }}</div>
+    <div class="post-content"><p>{{ .Summary }}</p></div>
     <a href="<? print get_permalink(); ?>" class="rm">Read More...</a>
 </div>
