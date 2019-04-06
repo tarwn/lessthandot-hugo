@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Deploy to Azure Blobs
           command: |
-              az storage blob upload-batch --source ~/project/blogs/public --destination $web --connection-string ${AZURE_STORAGE_CONNECTIONSTRING}
+              az storage blob upload-batch --source ~/project/blogs/public --destination \$web --connection-string ${AZURE_STORAGE_CONNECTIONSTRING}
 
 workflows:
   version: 2
