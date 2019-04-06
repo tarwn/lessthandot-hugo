@@ -68,5 +68,5 @@ Hope this may help.
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/80fc88a2-bd74-4bd7-aee2-ceb804441bb5
  [2]: /index.php/DataMgmt/DBProgramming/scripting-all-jobs-on-sql-server-2005-20
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

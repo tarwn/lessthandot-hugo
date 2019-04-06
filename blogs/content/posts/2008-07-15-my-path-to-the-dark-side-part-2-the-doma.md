@@ -291,6 +291,6 @@ Finally, we get down to where the mappings are established. As we saw in the dom
 
 Now, we have defined our domain, and thus our database schema. Next part is to set up our first unit test, to ensure that NHibernate can create the schema we&#8217;ve defined.
 
-<font color="Red">Need help with C#? Come and ask a question in our <a href="http://forum.ltd.local/viewforum.php?f=40">C# Forum</a></font>
+<font color="Red">Need help with C#? Come and ask a question in our <a href="http://forum.lessthandot.com/viewforum.php?f=40">C# Forum</a></font>
 
  [1]: /index.php/DesktopDev/MSTech/the-path-to-nhibernate-aamp-tdd-part-1-t

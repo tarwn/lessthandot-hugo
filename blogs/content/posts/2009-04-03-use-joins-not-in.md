@@ -93,5 +93,5 @@ For another reason I dislike IN, check out [Denis&#8217; Old Post][2]
 
  [1]: http://twitter.com/AlexCuse/status/1447655426
  [2]: http://sqlservercode.blogspot.com/2007/04/you-should-never-use-in-in-sql-to-join.html
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

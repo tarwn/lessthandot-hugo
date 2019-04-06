@@ -65,5 +65,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [3]: http://blogs.msdn.com/psssql/archive/2009/04/08/the-3-things-you-need-to-know-to-install-sql-2005-on-windows-2008-cluster.aspx
  [4]: http://feedproxy.google.com/~r/SqlFool/~3/Xlk6dqsXROM/
  [5]: http://blogs.msdn.com/psssql/archive/2009/04/09/sql-server-2008-sp1-and-cumulative-updates-explained.aspx
- [6]: http://forum.ltd.local/viewforum.php?f=17
- [7]: http://forum.ltd.local/viewforum.php?f=22
+ [6]: http://forum.lessthandot.com/viewforum.php?f=17
+ [7]: http://forum.lessthandot.com/viewforum.php?f=22

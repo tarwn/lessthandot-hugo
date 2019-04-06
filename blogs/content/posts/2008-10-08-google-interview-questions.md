@@ -40,4 +40,4 @@ So what do you think, could you answer these questions?
 
 And don&#8217;t forget, if you have any tech questions then don&#8217;t hesitate to ask in our [forums][1]
 
- [1]: http://forum.ltd.local/
+ [1]: http://forum.lessthandot.com/

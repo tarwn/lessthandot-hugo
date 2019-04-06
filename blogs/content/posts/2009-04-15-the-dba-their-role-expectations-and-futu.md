@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-As promised from topic http://forum.ltd.local/viewtopic.php?f=17&t=4735&start=0&st=0&sk=t&sd=a&hilit=DBA I&#8217;m making a blog entry on my expectations of a DBA.
+As promised from topic http://forum.lessthandot.com/viewtopic.php?f=17&t=4735&start=0&st=0&sk=t&sd=a&hilit=DBA I&#8217;m making a blog entry on my expectations of a DBA.
 
 My reply to the question
 

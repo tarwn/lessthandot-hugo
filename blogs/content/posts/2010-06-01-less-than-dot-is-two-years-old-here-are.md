@@ -816,7 +816,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=306">SQL Server Programming Hacks</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=306">SQL Server Programming Hacks</a>
     </td>
     
     <td>
@@ -826,7 +826,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1608">LTD Puzzle 1: Friday the Thirteenths</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1608">LTD Puzzle 1: Friday the Thirteenths</a>
     </td>
     
     <td>
@@ -836,7 +836,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2155">LTD Puzzle 6: split a filepath</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2155">LTD Puzzle 6: split a filepath</a>
     </td>
     
     <td>
@@ -846,7 +846,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2830">LTD Puzzle 14: FInd the match</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2830">LTD Puzzle 14: FInd the match</a>
     </td>
     
     <td>
@@ -856,7 +856,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2933">Do you prefix table names</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2933">Do you prefix table names</a>
     </td>
     
     <td>
@@ -866,7 +866,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2426">LTD Puzzle 9: Find it</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2426">LTD Puzzle 9: Find it</a>
     </td>
     
     <td>
@@ -876,7 +876,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=5874">Amazing surf shots</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=5874">Amazing surf shots</a>
     </td>
     
     <td>
@@ -886,7 +886,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2140">Fantasy Football 2008</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2140">Fantasy Football 2008</a>
     </td>
     
     <td>
@@ -896,7 +896,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=3245">Need help deciding SQL Version</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=3245">Need help deciding SQL Version</a>
     </td>
     
     <td>
@@ -906,7 +906,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1724">LTD Puzzle 2: Regular Pentagon</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1724">LTD Puzzle 2: Regular Pentagon</a>
     </td>
     
     <td>
@@ -916,7 +916,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2595">LTD Puzzle 11: Hello World! For Hackers</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2595">LTD Puzzle 11: Hello World! For Hackers</a>
     </td>
     
     <td>
@@ -926,7 +926,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2055">LTD Puzzle 5: Calculating the Fibonacci Sequence</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2055">LTD Puzzle 5: Calculating the Fibonacci Sequence</a>
     </td>
     
     <td>
@@ -936,7 +936,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1938">LTD Puzzle 4: Finding Prime Numbers</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1938">LTD Puzzle 4: Finding Prime Numbers</a>
     </td>
     
     <td>
@@ -946,7 +946,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=16">Classic ASP URL Rewriting &#8211; A Practical Example</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=16">Classic ASP URL Rewriting &#8211; A Practical Example</a>
     </td>
     
     <td>
@@ -956,7 +956,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1821">LTD Puzzle 3: ASCII Art Shapes</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1821">LTD Puzzle 3: ASCII Art Shapes</a>
     </td>
     
     <td>
@@ -966,7 +966,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=3045">Website Attacks</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=3045">Website Attacks</a>
     </td>
     
     <td>
@@ -976,7 +976,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=4675">Puzzle 23 &#8211; Distance to line segment</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=4675">Puzzle 23 &#8211; Distance to line segment</a>
     </td>
     
     <td>
@@ -986,7 +986,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2660">jQuery vs. ExtJS</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2660">jQuery vs. ExtJS</a>
     </td>
     
     <td>
@@ -996,7 +996,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1506">Building Scalable Websites</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1506">Building Scalable Websites</a>
     </td>
     
     <td>
@@ -1011,5 +1011,5 @@ If you are interested in the stats for our first year then visit this link: [Les
 
  [1]: http://ltd.local/
  [2]: /index.php/WebDev/WebDesignGraphicsStyling/has-firefox-lost-its-mojo-are-firefox-us
- [3]: http://forum.ltd.local/
+ [3]: http://forum.lessthandot.com/
  [4]: /index.php/ITProfessionals/EthicsIT/less-than-dot-a-year-in-review

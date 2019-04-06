@@ -92,5 +92,5 @@ The person who creates such a table is also at fault because this table doesn&#8
  [1]: http://stackoverflow.com/questions/4386592/why-cannot-i-delete-edit-a-row-with-xml-value-in-ssms
  [2]: /wp-content/uploads/blogs/DataMgmt/200rows.png ""
  [3]: /wp-content/uploads/blogs/DataMgmt//delete.png ""
- [4]: http://forum.ltd.local/viewforum.php?f=17
- [5]: http://forum.ltd.local/viewforum.php?f=22
+ [4]: http://forum.lessthandot.com/viewforum.php?f=17
+ [5]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -216,5 +216,5 @@ Make sure that your data types or data type sizes are the same for variables/par
  [2]: /index.php/DataMgmt/DBProgramming/MSSQLServer/always-include-size-when-using-varchar-n
  [3]: http://sqlblog.com/blogs/aaron_bertrand/archive/2009/10/09/bad-habits-to-kick-declaring-varchar-without-length.aspx
  [4]: /index.php/DataMgmt/DataDesign/decimal-and-numeric-problems-when-you-do
- [5]: http://forum.ltd.local/viewforum.php?f=17
- [6]: http://forum.ltd.local/viewforum.php?f=22
+ [5]: http://forum.lessthandot.com/viewforum.php?f=17
+ [6]: http://forum.lessthandot.com/viewforum.php?f=22

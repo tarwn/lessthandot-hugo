@@ -240,5 +240,5 @@ And voilà, as you can see the _left loop join_ is much faster than either of th
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://msdn.microsoft.com/en-us/library/ms191318.aspx
- [2]: http://forum.ltd.local/viewforum.php?f=17
- [3]: http://forum.ltd.local/viewforum.php?f=22
+ [2]: http://forum.lessthandot.com/viewforum.php?f=17
+ [3]: http://forum.lessthandot.com/viewforum.php?f=22

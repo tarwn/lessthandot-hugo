@@ -95,5 +95,5 @@ This last part is also on our wiki, you can find it here [Get last backup dates 
 
  [1]: http://www.amazon.com/gp/product/0470238364?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0470238364
  [2]: http://wiki.ltd.local/index.php/Get_last_backup_dates_for_all_databases
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

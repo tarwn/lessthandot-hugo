@@ -122,8 +122,8 @@ Just the one at the moment, and it is quite weird.
 
   * [WizHook][54]
 
- [1]: http://forum.ltd.local/viewforum.php?f=95
- [2]: http://forum.ltd.local/viewforum.php?f=96
+ [1]: http://forum.lessthandot.com/viewforum.php?f=95
+ [2]: http://forum.lessthandot.com/viewforum.php?f=96
  [3]: http://wiki.ltd.local/index.php/ADO_Schemas
  [4]: http://wiki.ltd.local/index.php/Access%2C_ADO_and_Stored_Procedures
  [5]: http://wiki.ltd.local/index.php/Access%2C_DDL_and_Constraints

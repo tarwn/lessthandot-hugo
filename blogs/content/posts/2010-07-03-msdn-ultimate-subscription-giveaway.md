@@ -42,7 +42,7 @@ So what do you need to do to win this? Here is the deal, you will have to answer
   
 3) You need to have a technical blog and provide the URL to that blog, if you are an active member of the technical community (stackoverflow, msdn forums etc etc) then also include those links.
 
-Leave a comment here, you will also have to join the forums, that way I will have your email to contact you and I will able to ask you questions about your answers if needed. I created a thread in the forums here: http://forum.ltd.local/viewtopic.php?f=121&t=11456
+Leave a comment here, you will also have to join the forums, that way I will have your email to contact you and I will able to ask you questions about your answers if needed. I created a thread in the forums here: http://forum.lessthandot.com/viewtopic.php?f=121&t=11456
 
 _BTW owners/management of Lessthandot are not allowed to enter this giveaway, they will however judge who will get this._
 

@@ -134,6 +134,6 @@ That&#8217;s the setup. I&#8217;ve created [a forum post][3] to discuss the whol
 
  [1]: http://www.informit.com/articles/article.aspx?p=1641923 "Continuous Delivery: The Value Proposition"
  [2]: http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ "Continuous Delivery at Amazon"
- [3]: http://forum.ltd.local/viewtopic.php?f=121&t=15760 "Forum post for discussion"
+ [3]: http://forum.lessthandot.com/viewtopic.php?f=121&t=15760 "Forum post for discussion"
  [4]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Wiki post for Eli's Continuous Delivery Project"
  [5]: http://twitter.com/TarwnBuildSrvr "Eli's Build Server on Twitter"

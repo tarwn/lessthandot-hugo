@@ -435,5 +435,5 @@ The possibilities are endless.
  [20]: http://blogs.technet.com/b/heyscriptingguy/archive/2010/11/02/use-powershell-to-obtain-sql-server-database-sizes.aspx
  [21]: http://www.kodyaz.com/articles/list-database-size-using-sql-server-sp_msforeachdb.aspx
  [22]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/226bbffc-2cfa-4fa8-8873-48dec6b5f17f
- [23]: http://forum.ltd.local/viewforum.php?f=17
- [24]: http://forum.ltd.local/viewforum.php?f=22
+ [23]: http://forum.lessthandot.com/viewforum.php?f=17
+ [24]: http://forum.lessthandot.com/viewforum.php?f=22

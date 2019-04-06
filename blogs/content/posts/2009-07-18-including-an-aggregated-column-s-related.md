@@ -253,7 +253,7 @@ Erik
 
 P.S. I would like to thank [Naomi][1] for co-authoring this blog post with me. She did the heavy lifting of actually writing queries and testing their performance; I just fleshed out the explanations a bit.
 
- [1]: http://forum.ltd.local/memberlist.php?mode=viewprofile&u=314
+ [1]: http://forum.lessthandot.com/memberlist.php?mode=viewprofile&u=314
  [2]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/0217ddf4-bcab-4f2b-a81c-70841753cb23
  [3]: http://forum.foxclub.ru/read.php?32,177183,177232#msg-177232
  [4]: /index.php/DataMgmt/DataDesign/including-an-aggregated-column-s-related-2

@@ -50,5 +50,5 @@ We appreciate everyone&#8217;s feedback on SQLCop and any problems or suggestion
  [3]: http://sqlcop.ltd.local/
  [4]: http://sqlcop.ltd.local/sqlcop.xml
  [5]: http://sqlcop.ltd.local/sqlcopconfig.xml
- [6]: http://forum.ltd.local/viewforum.php?f=145
+ [6]: http://forum.lessthandot.com/viewforum.php?f=145
  [7]: http://ltd.local/donate.php

@@ -87,5 +87,5 @@ Most likely you don&#8217;t really want to return multi million rows in 1 big ch
 
  [1]: http://msdn.microsoft.com/en-us/library/ms188281.aspx
  [2]: /index.php/DataMgmt/DataDesign/sql-server-covering-indexes
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

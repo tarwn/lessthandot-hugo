@@ -81,4 +81,4 @@ There is no need to pull your hair out at the roots; no need to call the CTO and
  [7]: http://serverfault.com/
  [8]: http://www.sqlservercentral.com/Forums/
  [9]: http://www.sqlteam.com/forums/
- [10]: http://forum.ltd.local/viewforum.php?f=14&sid=95273364bfa1d4cbee1b6a2bf998431b
+ [10]: http://forum.lessthandot.com/viewforum.php?f=14&sid=95273364bfa1d4cbee1b6a2bf998431b

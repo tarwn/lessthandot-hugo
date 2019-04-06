@@ -76,5 +76,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [6]: http://feedproxy.google.com/~r/SqlFool/~3/J2HQOSyRsf8/
  [7]: http://blogs.msdn.com/psssql/archive/2009/02/19/how-to-copy-dts-2000-packages-between-servers-and-from-sql-2000-to-sql-2005-and-sql-2008.aspx
  [8]: http://feedproxy.google.com/~r/SqlInTheWild/~3/rv7z9KDR6kQ/
- [9]: http://forum.ltd.local/viewforum.php?f=17
- [10]: http://forum.ltd.local/viewforum.php?f=22
+ [9]: http://forum.lessthandot.com/viewforum.php?f=17
+ [10]: http://forum.lessthandot.com/viewforum.php?f=22

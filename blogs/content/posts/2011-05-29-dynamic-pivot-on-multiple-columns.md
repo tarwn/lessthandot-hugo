@@ -997,7 +997,7 @@ EXECUTE(@sql)</pre>
       </p>
       
       <p>
-        *** <strong>Remember, if you have a SQL related question, try our <a href="http://forum.ltd.local/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.ltd.local/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins>
+        *** <strong>Remember, if you have a SQL related question, try our <a href="http://forum.lessthandot.com/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.lessthandot.com/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins>
       </p>
 
  [1]: http://msdn.microsoft.com/en-us/library/ms157334(SQL.100).aspx

@@ -67,5 +67,5 @@ When all is said and done, I&#8217;ve really come to love, and even depend on ND
  [2]: http://www.red-gate.com/products/reflector/index.htm
  [3]: http://www.codeplex.com/reflectoraddins
  [4]: http://www.ndepend.com/Res/NDependBig08.PNG "CQL Window Screenshot"
- [5]: http://forum.ltd.local/viewforum.php?f=40
- [6]: http://forum.ltd.local/viewforum.php?f=27
+ [5]: http://forum.lessthandot.com/viewforum.php?f=40
+ [6]: http://forum.lessthandot.com/viewforum.php?f=27

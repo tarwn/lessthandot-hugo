@@ -77,5 +77,5 @@ Stay tuned for the exciting conclusion, where we will set up the webservice and 
 
 Got a question on ASP.net? Check out our [ASP.net Forum][1]!
 
- [1]: http://forum.ltd.local/viewforum.php?f=27
+ [1]: http://forum.lessthandot.com/viewforum.php?f=27
  [2]: /index.php/WebDev/ServerProgramming/ASPNET/sharing-asp-net-session-state-between-ap

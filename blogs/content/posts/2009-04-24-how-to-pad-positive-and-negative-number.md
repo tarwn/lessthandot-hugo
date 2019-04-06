@@ -166,5 +166,5 @@ I also updated the post on our wiki page: [Adding Leading Zeros To Integer Value
 
  [1]: http://wiki.ltd.local/index.php/Adding_Leading_Zeros_To_Integer_Values
  [2]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

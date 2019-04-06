@@ -246,7 +246,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </div>
     
     <div class="hint">
-      I don&#8217;t suggest changing the collation from the default for your first SQL instance and I can&#8217;t offer much assistance if you do. if you do choose to change the collation, however, I have a great deal of experience dealing with the results of servers being set to strange collations and not getting along, plus the site has a number of experts that know way more than I do about SQL Server administration. So if you do get adventurous and hurt yourself, put a post up in the <a href="http://forum.ltd.local" target="_blank">forum</a> and someone should be able to help you out.
+      I don&#8217;t suggest changing the collation from the default for your first SQL instance and I can&#8217;t offer much assistance if you do. if you do choose to change the collation, however, I have a great deal of experience dealing with the results of servers being set to strange collations and not getting along, plus the site has a number of experts that know way more than I do about SQL Server administration. So if you do get adventurous and hurt yourself, put a post up in the <a href="http://forum.lessthandot.com" target="_blank">forum</a> and someone should be able to help you out.
     </div>
     
     <p>

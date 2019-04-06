@@ -41,4 +41,4 @@ It will be interesting to see how many people use some of this stuff
   
 You can also indicate why you use or do NOT use a certain feature
 
-The poll is located here: http://forum.ltd.local/viewtopic.php?f=17&t=3087
+The poll is located here: http://forum.lessthandot.com/viewtopic.php?f=17&t=3087

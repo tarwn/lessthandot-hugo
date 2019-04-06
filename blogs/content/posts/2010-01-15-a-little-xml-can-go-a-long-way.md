@@ -109,4 +109,4 @@ What I found awkward here was that nested select &#8211; it&#8217;s written much
 
 It took a bit of mental gymnastics to adjust to the way this feature works, but it **really** saved the day for me in this situation. The feature ended up finished on time, and an internal client that I had once thought was impossible to please was actually pleased (if only for a fleeting moment).
 
- [1]: http://forum.ltd.local/memberlist.php?mode=viewprofile&u=330
+ [1]: http://forum.lessthandot.com/memberlist.php?mode=viewprofile&u=330

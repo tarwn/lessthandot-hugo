@@ -110,5 +110,5 @@ Enough ranting, leave me a comment if you do send emails from withing triggers. 
 
  [1]: http://stackoverflow.com/questions/5964495/email-trigger-when-data-is-changed
  [2]: /index.php/DataMgmt/DBProgramming/MSSQLServer/best-practice-coding-sql-server-triggers
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -33,5 +33,5 @@ Good luck!
  [1]: http://ltd.local/
  [2]: http://www.amazon.com/gp/product/193398872X?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=193398872X
  [3]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/interview-with-rod-colledge-about-the-bo
- [4]: http://forum.ltd.local/viewforum.php?f=17
- [5]: http://forum.ltd.local/viewforum.php?f=22
+ [4]: http://forum.lessthandot.com/viewforum.php?f=17
+ [5]: http://forum.lessthandot.com/viewforum.php?f=22

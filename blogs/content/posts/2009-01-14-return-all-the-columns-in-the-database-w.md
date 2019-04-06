@@ -47,5 +47,5 @@ You can also find this in our [SQL Server Admin Hacks][2] wiki
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/a30fcd83-7752-4b6e-9d23-6b351ba5e78e
  [2]: http://wiki.ltd.local/index.php/SQL_Server_Admin_Hacks
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

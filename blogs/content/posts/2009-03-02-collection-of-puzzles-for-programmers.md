@@ -145,25 +145,25 @@ Keep an eye on [Programmer Puzzles][21] because every 2 weeks or so we post a ne
 
 Also check out our **[Google Interview Questions][22]**
 
- [1]: http://forum.ltd.local/viewtopic.php?f=102&t=1608
- [2]: http://forum.ltd.local/viewtopic.php?f=102&t=1724
- [3]: http://forum.ltd.local/viewtopic.php?f=102&t=1821
- [4]: http://forum.ltd.local/viewtopic.php?f=102&t=1938
- [5]: http://forum.ltd.local/viewtopic.php?f=102&t=2055
- [6]: http://forum.ltd.local/viewtopic.php?f=102&t=2155
- [7]: http://forum.ltd.local/viewtopic.php?f=102&t=2245
- [8]: http://forum.ltd.local/viewtopic.php?f=102&t=2361
- [9]: http://forum.ltd.local/viewtopic.php?f=102&t=2426
- [10]: http://forum.ltd.local/viewtopic.php?f=102&t=2510
- [11]: http://forum.ltd.local/viewtopic.php?f=102&t=2595
- [12]: http://forum.ltd.local/viewtopic.php?f=102&t=2717
- [13]: http://forum.ltd.local/viewtopic.php?f=102&t=2893
- [14]: http://forum.ltd.local/viewtopic.php?f=102&t=3086
- [15]: http://forum.ltd.local/viewtopic.php?f=102&t=3360
- [16]: http://forum.ltd.local/viewtopic.php?f=102&t=4315
- [17]: http://forum.ltd.local/viewtopic.php?f=102&t=4411
- [18]: http://forum.ltd.local/viewtopic.php?f=102&t=4516
- [19]: http://forum.ltd.local/viewtopic.php?f=102&t=4594
- [20]: http://forum.ltd.local/viewtopic.php?f=102&t=4675
- [21]: http://forum.ltd.local/viewforum.php?f=102
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=102&t=1608
+ [2]: http://forum.lessthandot.com/viewtopic.php?f=102&t=1724
+ [3]: http://forum.lessthandot.com/viewtopic.php?f=102&t=1821
+ [4]: http://forum.lessthandot.com/viewtopic.php?f=102&t=1938
+ [5]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2055
+ [6]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2155
+ [7]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2245
+ [8]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2361
+ [9]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2426
+ [10]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2510
+ [11]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2595
+ [12]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2717
+ [13]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2893
+ [14]: http://forum.lessthandot.com/viewtopic.php?f=102&t=3086
+ [15]: http://forum.lessthandot.com/viewtopic.php?f=102&t=3360
+ [16]: http://forum.lessthandot.com/viewtopic.php?f=102&t=4315
+ [17]: http://forum.lessthandot.com/viewtopic.php?f=102&t=4411
+ [18]: http://forum.lessthandot.com/viewtopic.php?f=102&t=4516
+ [19]: http://forum.lessthandot.com/viewtopic.php?f=102&t=4594
+ [20]: http://forum.lessthandot.com/viewtopic.php?f=102&t=4675
+ [21]: http://forum.lessthandot.com/viewforum.php?f=102
  [22]: /index.php/ITProfessionals/EthicsIT/google-interview-questions

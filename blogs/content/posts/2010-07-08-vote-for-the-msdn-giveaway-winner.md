@@ -28,9 +28,9 @@ Here is what I did..I picked the 20 best answers and put them in 2 groups of 10.
 
 Make sure that you look at every person&#8217;s answer, also check their links so that you can decide who should advance.
 
-The group A people can be found here: http://forum.ltd.local/viewtopic.php?f=121&t=11533
+The group A people can be found here: http://forum.lessthandot.com/viewtopic.php?f=121&t=11533
   
-The group B people can be found here: http://forum.ltd.local/viewtopic.php?f=121&t=11532
+The group B people can be found here: http://forum.lessthandot.com/viewtopic.php?f=121&t=11532
 
 Good luck everyone
 

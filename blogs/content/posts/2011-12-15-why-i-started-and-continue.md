@@ -47,7 +47,7 @@ I started blogging because I wanted to help in another way other than forums.  
  [2]: http://twitter.com/#!/stratesql
  [3]: http://www.jasonstrate.com/2011/12/the-meme15-on-social-networking/
  [4]: /index.php/WebDev/WebDesignGraphicsStyling/search-the-internet-archive-with-the-way
- [5]: http://forum.ltd.local/viewtopic.php?f=17&t=3328&p=17555#p17555
+ [5]: http://forum.lessthandot.com/viewtopic.php?f=17&t=3328&p=17555#p17555
  [6]: http://weblogs.asp.net/marksmith/
  [7]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/user-to-schema-to-roles-for-controlling-
  [8]: /index.php/All/?disp=authdir&author=420

@@ -80,4 +80,4 @@ namespace excelGridlineTest
    }
 }</pre>
 
-Got a web related question? Discuss it in the forums: http://forum.ltd.local/
+Got a web related question? Discuss it in the forums: http://forum.lessthandot.com/

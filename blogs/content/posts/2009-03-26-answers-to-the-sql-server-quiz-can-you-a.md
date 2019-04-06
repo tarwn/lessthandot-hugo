@@ -267,5 +267,5 @@ So that is it for all 10 questions
  [4]: http://www.sommarskog.se/error-handling-II.html
  [5]: http://www.sommarskog.se/error-handling-I.html
  [6]: http://wiki.ltd.local/index.php/Integer_math
- [7]: http://forum.ltd.local/viewforum.php?f=17
- [8]: http://forum.ltd.local/viewforum.php?f=22
+ [7]: http://forum.lessthandot.com/viewforum.php?f=17
+ [8]: http://forum.lessthandot.com/viewforum.php?f=22

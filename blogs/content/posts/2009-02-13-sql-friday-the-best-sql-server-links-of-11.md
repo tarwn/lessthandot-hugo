@@ -61,5 +61,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [5]: http://feedproxy.google.com/~r/TheHobt/~3/v-RnN0rVeJo/bit-vs-char1-in-sql-server.html
  [6]: http://feedproxy.google.com/~r/SqlFool/~3/4iOti0-0PaQ/
  [7]: http://blogs.msdn.com/psssql/archive/2009/02/11/how-it-works-file-stream-compression-with-backup-restore.aspx
- [8]: http://forum.ltd.local/viewforum.php?f=17
- [9]: http://forum.ltd.local/viewforum.php?f=22
+ [8]: http://forum.lessthandot.com/viewforum.php?f=17
+ [9]: http://forum.lessthandot.com/viewforum.php?f=22

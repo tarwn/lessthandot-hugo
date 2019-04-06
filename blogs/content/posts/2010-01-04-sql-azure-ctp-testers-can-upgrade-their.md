@@ -126,5 +126,5 @@ You can download the SQL Azure Migration Wizard on CodePlex here: http://sqlazur
 
  [1]: http://blogs.msdn.com/ssds/archive/2010/01/04/9943474.aspx
  [2]: http://www.dotnetrocks.com/default.aspx?showNum=512
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

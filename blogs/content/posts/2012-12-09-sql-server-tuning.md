@@ -292,6 +292,6 @@ With all the tuning efforts that are made with today’s high-volume databases, 
 Using these steps in their basic form is almost a daily review of any SQL Server and database resource. Although many other tuning areas are to be performed such as IO subsystems configurations, memory expansion and types as well as CPU expansion while taking into account altering and setting SQL Server configurations as needed, indexing and what has been covered today still remains the highest impact areas of the relational database.
 
  [1]: /index.php/DataMgmt/DBAdmin/title-12
- [2]: http://forum.ltd.local/viewtopic.php?f=17&t=13566
+ [2]: http://forum.lessthandot.com/viewtopic.php?f=17&t=13566
  [3]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/adding-nonclustered-index-on-primary
  [4]: http://www.sqlsentry.net/plan-explorer/sql-server-query-view.asp

@@ -188,5 +188,5 @@ As you can see doing stuff like this on SQL Server 2008 is fairly easy because o
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DataDesign/sql-server-zipcode-latitude-longitude-pr
- [2]: http://forum.ltd.local/viewforum.php?f=17
- [3]: http://forum.ltd.local/viewforum.php?f=22
+ [2]: http://forum.lessthandot.com/viewforum.php?f=17
+ [3]: http://forum.lessthandot.com/viewforum.php?f=22

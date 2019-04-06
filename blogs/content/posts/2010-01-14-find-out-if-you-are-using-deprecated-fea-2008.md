@@ -565,5 +565,5 @@ NOLOCK or READUNCOMMITTED in UPDATE or DELETE
  [2]: /index.php/All/?disp=authdir&author=10
  [3]: /index.php/DataMgmt/DataDesign/identify-procedures-that-call-sql-server
  [4]: /index.php/DataMgmt/DBProgramming/don-t-use-text-datatype-for-sql-2005-and
- [5]: http://forum.ltd.local/viewforum.php?f=17
- [6]: http://forum.ltd.local/viewforum.php?f=22
+ [5]: http://forum.lessthandot.com/viewforum.php?f=17
+ [6]: http://forum.lessthandot.com/viewforum.php?f=22

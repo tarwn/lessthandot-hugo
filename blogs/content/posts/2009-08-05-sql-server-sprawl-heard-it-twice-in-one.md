@@ -36,5 +36,5 @@ If you would like to read a sample chapter of SQL Server 2008 Administration In 
  [2]: http://www.amazon.com/gp/product/193398872X?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=193398872X
  [3]: /index.php/All/?disp=authdir&author=68
  [4]: /index.php/DataMgmt/DBAdmin/scan-network-for-sql-server-instances
- [5]: http://forum.ltd.local/viewforum.php?f=17
- [6]: http://forum.ltd.local/viewforum.php?f=22
+ [5]: http://forum.lessthandot.com/viewforum.php?f=17
+ [6]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -1100,5 +1100,5 @@ In case you want some more of this stuff we have over 80 hacks, tips and trick o
  [12]: /index.php/DataMgmt/DBProgramming/MSSQLServer/including-an-aggregated-column-s-related
  [13]: http://wiki.ltd.local/index.php/Column_To_Row_%28UNPIVOT%29
  [14]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
- [15]: http://forum.ltd.local/viewforum.php?f=17
- [16]: http://forum.ltd.local/viewforum.php?f=22
+ [15]: http://forum.lessthandot.com/viewforum.php?f=17
+ [16]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -108,4 +108,4 @@ You may also visit our ASP.NET forum at LTD here [ASP.NET Forum at LTD][6]
  [3]: http://forums.asp.net/p/1455158/3332004.aspx#3332004
  [4]: http://www.aspsnippets.com/post/2009/05/27/Get-ID-of-the-newly-inserted-record-in-SQL-Server-using-ADONet.aspx
  [5]: http://msdn.microsoft.com/en-us/library/xt50s8kz.aspx
- [6]: http://forum.ltd.local/viewforum.php?f=27
+ [6]: http://forum.lessthandot.com/viewforum.php?f=27

@@ -114,5 +114,5 @@ http://blog.sqlauthority.com/2009/07/16/sql-server-four-different-ways-to-find-r
  [2]: http://www.karaszi.com/SQLServer/info_dont_shrink.asp
  [3]: http://www.mssqltips.com/tip.asp?tip=1905&ctc
  [4]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/414973eb-a84b-40c4-8a21-919d92947ed0/#4c9c3420-495c-4e0f-ad94-6fbb4b7c44fb
- [5]: http://forum.ltd.local/viewforum.php?f=17
- [6]: http://forum.ltd.local/viewforum.php?f=22
+ [5]: http://forum.lessthandot.com/viewforum.php?f=17
+ [6]: http://forum.lessthandot.com/viewforum.php?f=22

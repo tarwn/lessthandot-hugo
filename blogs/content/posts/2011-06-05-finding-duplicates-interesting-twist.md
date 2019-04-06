@@ -398,5 +398,5 @@ Well, hopefully this was interesting to read as for me trying to solve such prob
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/8ce895b9-11f1-494c-a63e-e25f08f93bd8
- [2]: http://forum.ltd.local/viewforum.php?f=17
- [3]: http://forum.ltd.local/viewforum.php?f=22
+ [2]: http://forum.lessthandot.com/viewforum.php?f=17
+ [3]: http://forum.lessthandot.com/viewforum.php?f=22

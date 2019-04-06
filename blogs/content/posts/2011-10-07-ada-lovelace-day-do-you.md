@@ -44,7 +44,7 @@ Thank you Kalen for providing all that wonderful information in a variety of for
 
 So my readers, which women have influenced you over the years? Leave me a comment or blog about it and drop me a link in the comments&#8230;.
 
- [1]: http://forum.ltd.local/viewtopic.php?f=100&t=15486
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=100&t=15486
  [2]: http://sqlblog.com/blogs/kalen_delaney/
  [3]: http://www.amazon.com/gp/product/0735626243/ref=as_li_ss_tl?ie=UTF8&tag=sql08-20&linkCode=as2&camp=217145&creative=399369&creativeASIN=0735626243
  [4]: http://www.amazon.com/gp/product/1617290475/ref=as_li_ss_tl?ie=UTF8&tag=sql08-20&linkCode=as2&camp=217145&creative=399373&creativeASIN=1617290475

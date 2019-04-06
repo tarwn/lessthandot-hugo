@@ -574,5 +574,5 @@ WHERE OH.CustomerID = C.CustomerID) R
 ORDER BY C.CustomerID </pre>
                   
                   <p>
-                    *** <strong>Remember, if you have a SQL related question, try our <a href="http://forum.ltd.local/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.ltd.local/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins>
+                    *** <strong>Remember, if you have a SQL related question, try our <a href="http://forum.lessthandot.com/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.lessthandot.com/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins>
                   </p>

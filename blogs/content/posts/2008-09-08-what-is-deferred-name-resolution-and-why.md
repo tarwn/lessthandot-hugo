@@ -149,5 +149,5 @@ FROM information_schema.routines
 WHERE object_definition(object_id(specific_name)) LIKE '%somefuction%' 
 AND routine_type = 'procedure'</pre>
 
- [1]: http://forum.ltd.local/viewtopic.php?f=102&t=2829
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2829
  [2]: http://sqlblog.com/blogs/denis_gobo/archive/2008/05/06/6653.aspx

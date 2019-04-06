@@ -111,5 +111,5 @@ So there you have it EXEC sp_readerrorlog 0, 1, &#8216;Command Line Startup Para
 
  [1]: http://wiki.ltd.local/index.php/Using_the_Command_Line_to_manage_SQL_Server_services
  [2]: http://wiki.ltd.local/index.php/Read_the_error_log_with_T-SQL
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

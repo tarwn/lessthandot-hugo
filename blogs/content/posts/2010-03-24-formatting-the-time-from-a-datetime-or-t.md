@@ -80,8 +80,8 @@ SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@d,100),7),6,0,' ')</pre>
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][5] forum**<ins></ins>
 
- [1]: http://forum.ltd.local/viewforum.php?f=17
- [2]: http://forum.ltd.local/viewtopic.php?f=17&t=10289
+ [1]: http://forum.lessthandot.com/viewforum.php?f=17
+ [2]: http://forum.lessthandot.com/viewtopic.php?f=17&t=10289
  [3]: http://msdn.microsoft.com/en-us/library/ms187928.aspx
  [4]: http://msdn.microsoft.com/en-us/library/ms188043.aspx
- [5]: http://forum.ltd.local/viewforum.php?f=22
+ [5]: http://forum.lessthandot.com/viewforum.php?f=22

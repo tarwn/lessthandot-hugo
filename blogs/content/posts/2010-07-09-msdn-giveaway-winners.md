@@ -37,7 +37,7 @@ The winners of the MSDN Ultimate subscriptions are [Emtucifor][1] and [Shawson][
   
 > http://squaredthoughts.blogspot.com/ (a bit out of date but still representative of my work)
   
-> not to mention http://forum.ltd.local/memberlist.php?mode=viewprofile&u=98
+> not to mention http://forum.lessthandot.com/memberlist.php?mode=viewprofile&u=98
 
 Not only did we think that the comment was good but apparently someone else as well, he actually used parts of it as his own in Andy Leonard&#8217;s giveaway here: http://sqlblog.com/blogs/andy_leonard/archive/2010/07/03/a-visual-studio-2010-msdn-seeding-card-giveaway-contest.aspx
 
@@ -55,7 +55,7 @@ We decided to raffle of the other subscription by vote..so I already started to 
 
 Now we had a dilemma, do we yank the poll and give the award to David or not? We proceeded with the poll. Wouldn&#8217;t you know it, David won Andy&#8217;s contest, because of that I emailed him and we decided that he wouldn&#8217;t be eligible here.
 
-Here are the results of the final poll: http://forum.ltd.local/viewtopic.php?f=121&t=11550
+Here are the results of the final poll: http://forum.lessthandot.com/viewtopic.php?f=121&t=11550
 
 Congratulations to both winners, hopefully they will let us know in a couple of months if this has indeed made their developer life easier
 

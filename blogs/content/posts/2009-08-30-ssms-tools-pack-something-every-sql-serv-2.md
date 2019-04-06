@@ -296,5 +296,5 @@ Don&#8217;t forget to thank Mladen Prajdi&#263; on twitter: <http://twitter.com/
  [11]: http://www.ssmstoolspack.com/Features.aspx#RCS
  [12]: http://www.ssmstoolspack.com/Features.aspx#CRUD
  [13]: http://www.ssmstoolspack.com/Features.aspx#NQT
- [14]: http://forum.ltd.local/viewforum.php?f=17
- [15]: http://forum.ltd.local/viewforum.php?f=22
+ [14]: http://forum.lessthandot.com/viewforum.php?f=17
+ [15]: http://forum.lessthandot.com/viewforum.php?f=22

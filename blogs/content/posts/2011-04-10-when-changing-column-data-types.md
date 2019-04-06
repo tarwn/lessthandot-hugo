@@ -164,5 +164,5 @@ The more you know, the better it will be for you and your employer, if suddenly 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://stackoverflow.com/questions/5581639/convert-datetime-column-to-datetime2-column-in-sql-server/5581702#5581702
- [2]: http://forum.ltd.local/viewforum.php?f=17
- [3]: http://forum.ltd.local/viewforum.php?f=22
+ [2]: http://forum.lessthandot.com/viewforum.php?f=17
+ [3]: http://forum.lessthandot.com/viewforum.php?f=22

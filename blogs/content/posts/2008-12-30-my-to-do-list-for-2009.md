@@ -68,7 +68,7 @@ onpnt and
  [3]: http://www.amazon.com/gp/product/1933988363?ie=UTF8&tag=sql08-20&linkCode=xm2&camp=1789&creativeASIN=1933988363
  [4]: http://www.amazon.com/gp/product/0321485890?ie=UTF8&tag=sql08-20&linkCode=xm2&camp=1789&creativeASIN=0321485890
  [5]: http://www.amazon.com/gp/product/0321562992?ie=UTF8&tag=sql08-20&linkCode=xm2&camp=1789&creativeASIN=0321562992
- [6]: http://forum.ltd.local/viewtopic.php?f=17&t=306
+ [6]: http://forum.lessthandot.com/viewtopic.php?f=17&t=306
  [7]: http://wiki.ltd.local/index.php/SQL_Server_Admin_Hacks
  [8]: http://denisgobo.blogspot.com/
  [9]: http://www.brentozar.com/

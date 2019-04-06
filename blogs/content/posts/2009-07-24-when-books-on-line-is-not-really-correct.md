@@ -89,8 +89,8 @@ So what do you think, should I file an item for this on connect?
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][5] forum**<ins></ins>
 
- [1]: http://forum.ltd.local/viewforum.php?f=17
- [2]: http://forum.ltd.local/viewtopic.php?f=17&t=6856
+ [1]: http://forum.lessthandot.com/viewforum.php?f=17
+ [2]: http://forum.lessthandot.com/viewtopic.php?f=17&t=6856
  [3]: http://msdn.microsoft.com/en-us/library/ms188332.aspx
  [4]: /index.php/DataMgmt/DataDesign/sql-server-stored-procedure-with-nvarcha
- [5]: http://forum.ltd.local/viewforum.php?f=22
+ [5]: http://forum.lessthandot.com/viewforum.php?f=22

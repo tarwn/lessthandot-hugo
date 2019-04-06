@@ -180,5 +180,5 @@ where left(Somevalue,1) = '2'</pre>
  [1]: http://stackoverflow.com/questions/230642/create-trigger-is-taking-more-than-30-minutes-on-sql-server-2005/939616#939616
  [2]: http://imgur.com/9qRfI.png
  [3]: http://imgur.com/mHaI0.png
- [4]: http://forum.ltd.local/viewforum.php?f=17
- [5]: http://forum.ltd.local/viewforum.php?f=22
+ [4]: http://forum.lessthandot.com/viewforum.php?f=17
+ [5]: http://forum.lessthandot.com/viewforum.php?f=22

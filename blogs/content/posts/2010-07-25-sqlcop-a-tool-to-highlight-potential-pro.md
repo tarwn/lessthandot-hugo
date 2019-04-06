@@ -49,4 +49,4 @@ You can also leave a comment here but we prefer you do it in the [SQLCop help fo
  [1]: /index.php/DataMgmt/DataDesign/sqlcop-fxcop-for-sql-server-would-you-be
  [2]: /index.php/All/?disp=authdir&author=10
  [3]: http://sqlcop.ltd.local/screenshots/sqlcop1.png "Login screen"
- [4]: http://forum.ltd.local/viewforum.php?f=145
+ [4]: http://forum.lessthandot.com/viewforum.php?f=145

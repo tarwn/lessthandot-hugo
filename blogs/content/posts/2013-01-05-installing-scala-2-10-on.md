@@ -338,4 +338,4 @@ That is really it for this post&#8230;
  [1]: /index.php/ITProfessionals/ProfessionalDevelopment/ah-yes-those-pesky-resolutions
  [2]: https://issues.scala-lang.org/browse/SI-1133
  [3]: http://docs.scala-lang.org/actors-migration/
- [4]: http://forum.ltd.local/viewtopic.php?f=102&t=1608
+ [4]: http://forum.lessthandot.com/viewtopic.php?f=102&t=1608

@@ -102,5 +102,5 @@ I&#8217;ve tried to cover the ups and downs of these methods the best that I cou
  [1]: /index.php/DataMgmt/DataDesign/sql-server-zipcode-latitude-longitude-pr
  [2]: /index.php/DataMgmt/DataDesign/sql-server-2008-proximity-search-with-th
  [3]: /index.php/DataMgmt/DBProgramming/sql-server-distance-calculation-option-3
- [4]: http://forum.ltd.local/viewforum.php?f=17
- [5]: http://forum.ltd.local/viewforum.php?f=22
+ [4]: http://forum.lessthandot.com/viewforum.php?f=17
+ [5]: http://forum.lessthandot.com/viewforum.php?f=22

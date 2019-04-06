@@ -106,5 +106,5 @@ This proc does not tell you how many NULLS you have in a column, it will just re
 
  [1]: /index.php/All/?disp=authdir&author=10
  [2]: /index.php/DataMgmt/DataDesign/the-ten-most-asked-sql-server-questions--1#2
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -93,5 +93,5 @@ D:DataTestMeNow3.mdf
   
 D:LogTestMeNow3_log.ldf
 
- [1]: http://forum.ltd.local/viewtopic.php?f=22&t=15783
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=22&t=15783
  [2]: http://www.flickr.com/photos/denisgobo/6355955641/ "DBSettings "

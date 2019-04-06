@@ -625,5 +625,5 @@ That is it for this post, there is a lot of code but hopefully you can get an id
  [2]: /index.php/DataMgmt/DBProgramming/come-one-come-all-to
  [3]: /index.php/DataMgmt/?disp=authdir&author=420
  [4]: http://msdn.microsoft.com/en-us/library/ms190279.aspx
- [5]: http://forum.ltd.local/viewforum.php?f=17
- [6]: http://forum.ltd.local/viewforum.php?f=22
+ [5]: http://forum.lessthandot.com/viewforum.php?f=17
+ [6]: http://forum.lessthandot.com/viewforum.php?f=22

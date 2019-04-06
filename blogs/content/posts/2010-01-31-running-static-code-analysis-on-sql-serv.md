@@ -289,5 +289,5 @@ I will be back with another post to explore some other things that this tool can
 
  [1]: /index.php/WebDev/ServerProgramming/ASPNET/setting-up-sql-server-with-asp-net-mvc
  [2]: http://imgur.com/oqRCC.png "Run Analysis"
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

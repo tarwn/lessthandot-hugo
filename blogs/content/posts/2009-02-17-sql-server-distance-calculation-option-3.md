@@ -90,5 +90,5 @@ In the future we&#8217;ll put all three to the test, and do a fourth post detail
 
  [1]: /index.php/DataMgmt/DataDesign/sql-server-zipcode-latitude-longitude-pr
  [2]: /index.php/DataMgmt/DataDesign/sql-server-2008-proximity-search-with-th
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

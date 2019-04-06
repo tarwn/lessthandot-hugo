@@ -24,7 +24,7 @@ We are giving away 2 MSDN ultimate subscriptions, for the original announcement 
 
 We did not include David Taylor because he won this morning at sqlblog: http://sqlblog.com/blogs/andy_leonard/archive/2010/07/09/and-the-winner-is.aspx and he was fine with us taking him off.
 
-Here are the 6 finalist, I picked the top 3 from each group that people had a chance to vote on: http://forum.ltd.local/viewtopic.php?f=121&t=11533 and http://forum.ltd.local/posting.php?mode=edit&f=121&p=56403
+Here are the 6 finalist, I picked the top 3 from each group that people had a chance to vote on: http://forum.lessthandot.com/viewtopic.php?f=121&t=11533 and http://forum.lessthandot.com/posting.php?mode=edit&f=121&p=56403
 
 This vote will end in 3 hours, at noon Eastern Standard Time (GMT -5)
   
@@ -96,6 +96,6 @@ http://forums.asp.net/members/superghost.aspx
   
 http://sequenceviz.codeplex.com
 
-**You can vote here: http://forum.ltd.local/viewtopic.php?f=121&t=11550**
+**You can vote here: http://forum.lessthandot.com/viewtopic.php?f=121&t=11550**
 
  [1]: /index.php/Architect/HardwareInfrastructureDesign/msdn-ultimate-subscription-giveaway

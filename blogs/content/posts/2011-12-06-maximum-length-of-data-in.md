@@ -78,5 +78,5 @@ EXECUTE (@SQL)</pre>
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/d2d765e2-7994-4b3e-826b-c49c12f3b6fe
- [2]: http://forum.ltd.local/viewforum.php?f=17
- [3]: http://forum.ltd.local/viewforum.php?f=22
+ [2]: http://forum.lessthandot.com/viewforum.php?f=17
+ [3]: http://forum.lessthandot.com/viewforum.php?f=22

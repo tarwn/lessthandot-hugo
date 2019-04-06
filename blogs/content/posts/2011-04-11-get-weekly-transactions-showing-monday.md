@@ -55,5 +55,5 @@ The interesting part here is in determining the Monday&#8217;s day for each week
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/5442bbd7-ef89-47f8-8ba9-eef04b6b5fe4/#aa2f0695-501b-43b2-a559-290f6c50b0c7
  [2]: http://www.sqlteam.com/forums/topic.asp?TOPIC_ID=47307
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22
