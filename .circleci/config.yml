@@ -11,9 +11,9 @@ jobs:
           command: |
             cd ~/project/blogs
             hugo --config config-prod.toml -v
-      - run:
-          name: "Test Website"
-          command: htmlproofer ~/project/blogs/public --allow-hash-href --check-html --empty-alt-ignore
+      # - run:
+      #     name: "Test Website"
+      #     command: htmlproofer ~/project/blogs/public --allow-hash-href --check-html --empty-alt-ignore
       - run:
           name: Build and Deploy
           command: |
