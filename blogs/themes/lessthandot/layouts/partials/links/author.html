@@ -1,1 +1,5 @@
-<a href="{{ $.Site.BaseURL }}author/{{ .Params.author | urlize }}">{{ .Params.author }}</a>
+{{ if isset .Params "author" }}
+    <a href="{{ $.Site.BaseURL }}author/{{ .Params.author | urlize }}">{{ .Params.author }}</a>
+{{ else }}
+    (Author Not Found)
+{{ end }}
