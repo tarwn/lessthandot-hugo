@@ -45,7 +45,7 @@ VALUES	 ('A',1)
 FROM dbo.TestOver;</pre>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/10/query1.png"><img class="alignnone size-full wp-image-3013" src="http://blogs.ltd.local/wp-content/uploads/2014/10/query1.png" alt="query1" width="595" height="290" srcset="http://blogs.ltd.local/wp-content/uploads/2014/10/query1.png 595w, http://blogs.ltd.local/wp-content/uploads/2014/10/query1-300x146.png 300w" sizes="(max-width: 595px) 100vw, 595px" /></a>
+  <a href="/wp-content/uploads/2014/10/query1.png"><img class="alignnone size-full wp-image-3013" src="/wp-content/uploads/2014/10/query1.png" alt="query1" width="595" height="290" srcset="/wp-content/uploads/2014/10/query1.png 595w, /wp-content/uploads/2014/10/query1-300x146.png 300w" sizes="(max-width: 595px) 100vw, 595px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -53,7 +53,7 @@ FROM dbo.TestOver;</pre>
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/10/query2.png"><img class="alignnone size-full wp-image-3011" src="http://blogs.ltd.local/wp-content/uploads/2014/10/query2.png" alt="query2" width="617" height="142" srcset="http://blogs.ltd.local/wp-content/uploads/2014/10/query2.png 617w, http://blogs.ltd.local/wp-content/uploads/2014/10/query2-300x69.png 300w" sizes="(max-width: 617px) 100vw, 617px" /></a>
+  <a href="/wp-content/uploads/2014/10/query2.png"><img class="alignnone size-full wp-image-3011" src="/wp-content/uploads/2014/10/query2.png" alt="query2" width="617" height="142" srcset="/wp-content/uploads/2014/10/query2.png 617w, /wp-content/uploads/2014/10/query2-300x69.png 300w" sizes="(max-width: 617px) 100vw, 617px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -88,7 +88,7 @@ FROM dbo.TestOver;</pre>
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/10/windows.png"><img class="alignnone size-full wp-image-3012" src="http://blogs.ltd.local/wp-content/uploads/2014/10/windows.png" alt="windows" width="204" height="189" /></a>
+  <a href="/wp-content/uploads/2014/10/windows.png"><img class="alignnone size-full wp-image-3012" src="/wp-content/uploads/2014/10/windows.png" alt="windows" width="204" height="189" /></a>
 </p>
 
 <p style="text-align: justify">

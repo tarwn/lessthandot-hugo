@@ -35,7 +35,7 @@ Th fulle sample code for these posts is on github here: [tarwn/Blog_KnockoutMVVM
 Let&#8217;s start with a sample of what it looks like when we call a regular server-side API.
 
 <div id="attachment_4454" style="width: 439px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/03/ShippingForm.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/03/ShippingForm.png" alt="Sample Shipping Address Form" width="429" height="299" class="size-full wp-image-4454" srcset="http://blogs.ltd.local/wp-content/uploads/2016/03/ShippingForm.png 429w, http://blogs.ltd.local/wp-content/uploads/2016/03/ShippingForm-300x209.png 300w" sizes="(max-width: 429px) 100vw, 429px" /></a>
+  <a href="/wp-content/uploads/2016/03/ShippingForm.png"><img src="/wp-content/uploads/2016/03/ShippingForm.png" alt="Sample Shipping Address Form" width="429" height="299" class="size-full wp-image-4454" srcset="/wp-content/uploads/2016/03/ShippingForm.png 429w, /wp-content/uploads/2016/03/ShippingForm-300x209.png 300w" sizes="(max-width: 429px) 100vw, 429px" /></a>
   
   <p class="wp-caption-text">
     Sample Shipping Address Form
@@ -113,7 +113,7 @@ The services for an API call are built as injectable components that we can easi
 In this example, we are displaying a list of past orders and giving the user an opportunity to quickly reorder. 
 
 <div id="attachment_4455" style="width: 426px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/03/OrderForm.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/03/OrderForm.png" alt="Sample Reorder Form" width="416" height="283" class="size-full wp-image-4455" srcset="http://blogs.ltd.local/wp-content/uploads/2016/03/OrderForm.png 416w, http://blogs.ltd.local/wp-content/uploads/2016/03/OrderForm-300x204.png 300w" sizes="(max-width: 416px) 100vw, 416px" /></a>
+  <a href="/wp-content/uploads/2016/03/OrderForm.png"><img src="/wp-content/uploads/2016/03/OrderForm.png" alt="Sample Reorder Form" width="416" height="283" class="size-full wp-image-4455" srcset="/wp-content/uploads/2016/03/OrderForm.png 416w, /wp-content/uploads/2016/03/OrderForm-300x204.png 300w" sizes="(max-width: 416px) 100vw, 416px" /></a>
   
   <p class="wp-caption-text">
     Sample Reorder Form
@@ -123,7 +123,7 @@ In this example, we are displaying a list of past orders and giving the user an 
 However, we have a business case that requires we check that each of those products is still supported before placing the re-order. If any are no longer available, we need to ask the user to choose to leave that product off their reorder or choose one of several alternatives.
 
 <div id="attachment_4456" style="width: 421px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/03/ReorderFlow.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/03/ReorderFlow.png" alt="Reorder Logic" width="411" height="565" class="size-full wp-image-4456" srcset="http://blogs.ltd.local/wp-content/uploads/2016/03/ReorderFlow.png 411w, http://blogs.ltd.local/wp-content/uploads/2016/03/ReorderFlow-218x300.png 218w" sizes="(max-width: 411px) 100vw, 411px" /></a>
+  <a href="/wp-content/uploads/2016/03/ReorderFlow.png"><img src="/wp-content/uploads/2016/03/ReorderFlow.png" alt="Reorder Logic" width="411" height="565" class="size-full wp-image-4456" srcset="/wp-content/uploads/2016/03/ReorderFlow.png 411w, /wp-content/uploads/2016/03/ReorderFlow-218x300.png 218w" sizes="(max-width: 411px) 100vw, 411px" /></a>
   
   <p class="wp-caption-text">
     Reorder Logic

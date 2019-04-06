@@ -12,13 +12,13 @@ categories:
   - Professional Development
 
 ---
-[<img class="aligncenter size-medium wp-image-8631" src="http://blogs.ltd.local/wp-content/uploads/2017/03/Notebook-225x300.jpg" alt="notebook" width="225" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2017/03/Notebook-225x300.jpg 225w, http://blogs.ltd.local/wp-content/uploads/2017/03/Notebook-768x1024.jpg 768w, http://blogs.ltd.local/wp-content/uploads/2017/03/Notebook.jpg 1512w" sizes="(max-width: 225px) 100vw, 225px" />][1]
+[<img class="aligncenter size-medium wp-image-8631" src="/wp-content/uploads/2017/03/Notebook-225x300.jpg" alt="notebook" width="225" height="300" srcset="/wp-content/uploads/2017/03/Notebook-225x300.jpg 225w, /wp-content/uploads/2017/03/Notebook-768x1024.jpg 768w, /wp-content/uploads/2017/03/Notebook.jpg 1512w" sizes="(max-width: 225px) 100vw, 225px" />][1]
 
 I have a notebook for my Ideas, and Dreams, and Goals.
 
 Here&#8217;s one of my Ideas.
 
-[<img class="aligncenter size-medium wp-image-8632" src="http://blogs.ltd.local/wp-content/uploads/2017/03/Goal-225x300.jpg" alt="goal" width="225" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2017/03/Goal-225x300.jpg 225w, http://blogs.ltd.local/wp-content/uploads/2017/03/Goal-768x1024.jpg 768w, http://blogs.ltd.local/wp-content/uploads/2017/03/Goal.jpg 1512w" sizes="(max-width: 225px) 100vw, 225px" />][2]
+[<img class="aligncenter size-medium wp-image-8632" src="/wp-content/uploads/2017/03/Goal-225x300.jpg" alt="goal" width="225" height="300" srcset="/wp-content/uploads/2017/03/Goal-225x300.jpg 225w, /wp-content/uploads/2017/03/Goal-768x1024.jpg 768w, /wp-content/uploads/2017/03/Goal.jpg 1512w" sizes="(max-width: 225px) 100vw, 225px" />][2]
 
 I watched a very inspiring keynote at [That Conference][3], and I decided I wanted to be the person at the front of the room, giving a keynote, inspiring the audience.
 
@@ -28,7 +28,7 @@ My keynote is &#8220;Busy is a Four Letter Word&#8221;. I&#8217;m tired of askin
 
 Register today to attend this free event and get a great day of technical training!
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2017/03/Notebook.jpg
- [2]: http://blogs.ltd.local/wp-content/uploads/2017/03/Goal.jpg
+ [1]: /wp-content/uploads/2017/03/Notebook.jpg
+ [2]: /wp-content/uploads/2017/03/Goal.jpg
  [3]: https://www.thatconference.com/
  [4]: https://www.chicagocodecamp.com/

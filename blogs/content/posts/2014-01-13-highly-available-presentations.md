@@ -17,19 +17,19 @@ tags:
 ---
 A little over a month ago I posted the follow quick note on Facebook
 
-[<img class="alignnone size-full wp-image-2228" alt="fb1" src="http://blogs.ltd.local/wp-content/uploads/2014/01/fb1.png" width="459" height="95" />][1]
+[<img class="alignnone size-full wp-image-2228" alt="fb1" src="/wp-content/uploads/2014/01/fb1.png" width="459" height="95" />][1]
 
 The second comment I received was from Tom LaRock ([b][2] | [t][3]), who said…
 
-[<img class="alignnone  wp-image-2229" alt="fb2" src="http://blogs.ltd.local/wp-content/uploads/2014/01/fb2.png" width="390" height="42" />][4]
+[<img class="alignnone  wp-image-2229" alt="fb2" src="/wp-content/uploads/2014/01/fb2.png" width="390" height="42" />][4]
 
 My initial response was essentially “Nope, on my W530”
 
-[<img class="alignnone  wp-image-2230" alt="fb3" src="http://blogs.ltd.local/wp-content/uploads/2014/01/fb3.png" width="390" height="39" />][5]
+[<img class="alignnone  wp-image-2230" alt="fb3" src="/wp-content/uploads/2014/01/fb3.png" width="390" height="39" />][5]
 
 I answered quickly and probably should have elaborated, because Tom’s next comment didn’t surprise me at all.
 
-[<img class="alignnone size-full wp-image-2231" alt="fb4" src="http://blogs.ltd.local/wp-content/uploads/2014/01/fb4.png" width="478" height="50" />][6]
+[<img class="alignnone size-full wp-image-2231" alt="fb4" src="/wp-content/uploads/2014/01/fb4.png" width="478" height="50" />][6]
 
 Essentially, what Tom is asking is “Is your presentation highly available?”.  Tom makes a very good point and it’s one that I recommend all presenters seriously think about!  It’s a point that I thought about awhile ago.  Sadly I thought about it because no one had asked me a question similar to Tom’s before and I hadn’t thought about it on my own.
 
@@ -91,9 +91,9 @@ All these steps may not be necessary for every presentation you have, however th
 
 In this post I’ve written about the steps that have worked for me and hopefully made you think about how you can make your own presentations highly available.  I’d love to hear about the steps you’ve taken for your own presentations!  If you’ve got other steps or ideas that work for you, please share them in the comments below.
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2014/01/fb1.png
+ [1]: /wp-content/uploads/2014/01/fb1.png
  [2]: http://thomaslarock.com/
  [3]: http://twitter.com/SQLRockstar
- [4]: http://blogs.ltd.local/wp-content/uploads/2014/01/fb2.png
- [5]: http://blogs.ltd.local/wp-content/uploads/2014/01/fb3.png
- [6]: http://blogs.ltd.local/wp-content/uploads/2014/01/fb4.png
+ [4]: /wp-content/uploads/2014/01/fb2.png
+ [5]: /wp-content/uploads/2014/01/fb3.png
+ [6]: /wp-content/uploads/2014/01/fb4.png

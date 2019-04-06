@@ -28,7 +28,7 @@ For example, take a scenario where we have the following requirements.
 
 The solution would appear as follows
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_1.png" alt="merge_1" width="454" height="154" class="alignnone size-full wp-image-2871" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_1.png 454w, http://blogs.ltd.local/wp-content/uploads/2014/07/merge_1-300x101.png 300w" sizes="(max-width: 454px) 100vw, 454px" />][1]
+[<img src="/wp-content/uploads/2014/07/merge_1.png" alt="merge_1" width="454" height="154" class="alignnone size-full wp-image-2871" srcset="/wp-content/uploads/2014/07/merge_1.png 454w, /wp-content/uploads/2014/07/merge_1-300x101.png 300w" sizes="(max-width: 454px) 100vw, 454px" />][1]
 
 How we can accomplish this is to begin with our publication design. We will use AdventureWorks2012 as our demonstration database and create a publication that sends the Person.Person table. This table is a perfect example of an audit need, due to the nature of data that may change on a human resources basis.
   
@@ -36,11 +36,11 @@ There are a few key aspects to this article that are required to be set.
 
 First, the table will require column-level tracking 
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_2.png" alt="merge_2" width="442" height="162" class="alignnone size-full wp-image-2870" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_2.png 442w, http://blogs.ltd.local/wp-content/uploads/2014/07/merge_2-300x109.png 300w" sizes="(max-width: 442px) 100vw, 442px" />][2]
+[<img src="/wp-content/uploads/2014/07/merge_2.png" alt="merge_2" width="442" height="162" class="alignnone size-full wp-image-2870" srcset="/wp-content/uploads/2014/07/merge_2.png 442w, /wp-content/uploads/2014/07/merge_2-300x109.png 300w" sizes="(max-width: 442px) 100vw, 442px" />][2]
 
 Second, the resolver should be set to a business logic handler that we will create.
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_3.png" alt="merge_3" width="518" height="359" class="alignnone size-full wp-image-2869" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_3.png 518w, http://blogs.ltd.local/wp-content/uploads/2014/07/merge_3-300x207.png 300w" sizes="(max-width: 518px) 100vw, 518px" />][3]
+[<img src="/wp-content/uploads/2014/07/merge_3.png" alt="merge_3" width="518" height="359" class="alignnone size-full wp-image-2869" srcset="/wp-content/uploads/2014/07/merge_3.png 518w, /wp-content/uploads/2014/07/merge_3-300x207.png 300w" sizes="(max-width: 518px) 100vw, 518px" />][3]
 
 To create the PersonAudit resolver, we will need to do coding in Visual Studio and compile a class file that we place in the SQL Server system folders. The class file (assembly file) can be placed in another folder, but assurance this file will not be removed is best. The SQL Server system directories are, hopefully, protected in a critical nature.
   
@@ -97,7 +97,7 @@ Now the update handler would appear as
 
 All we need to do now is compile (build) this project and utilize the .DLL file that is generated in the debug or release folders for our project. 
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_4.png" alt="merge_4" width="294" height="136" class="alignnone size-full wp-image-2868" />][4]
+[<img src="/wp-content/uploads/2014/07/merge_4.png" alt="merge_4" width="294" height="136" class="alignnone size-full wp-image-2868" />][4]
 
 Copy the PersonAudit.dll to your COM directory within the SQL Server system directories.
   
@@ -114,11 +114,11 @@ sp_registercustomresolver @article_resolver='PersonAudit',
 GO
 sp_enumcustomresolvers</pre>
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_5.png" alt="merge_5" width="624" height="157" class="alignnone size-full wp-image-2867" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_5.png 624w, http://blogs.ltd.local/wp-content/uploads/2014/07/merge_5-300x75.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][5]
+[<img src="/wp-content/uploads/2014/07/merge_5.png" alt="merge_5" width="624" height="157" class="alignnone size-full wp-image-2867" srcset="/wp-content/uploads/2014/07/merge_5.png 624w, /wp-content/uploads/2014/07/merge_5-300x75.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][5]
 
 Notice the @dotnet\_class\_name parameter. This parameter is critical for the proper name and is a common problem area. If you revisit the solution in Visual Studio, this two part name will be equivalent to the namespace and class in your code.
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_6.png" alt="merge_6" width="728" height="182" class="alignnone size-full wp-image-2866" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_6.png 728w, http://blogs.ltd.local/wp-content/uploads/2014/07/merge_6-300x75.png 300w" sizes="(max-width: 728px) 100vw, 728px" />][6]
+[<img src="/wp-content/uploads/2014/07/merge_6.png" alt="merge_6" width="728" height="182" class="alignnone size-full wp-image-2866" srcset="/wp-content/uploads/2014/07/merge_6.png 728w, /wp-content/uploads/2014/07/merge_6-300x75.png 300w" sizes="(max-width: 728px) 100vw, 728px" />][6]
 
 The last piece required is the audit table creation on the subscriber. This table can be as elaborate or simplistic as needed. Keep in mind, the longer the bulk loading process takes, the more impact you can have on the system. It is always recommended to keep the tables maintained the same while adding a capture data time and possible login account, if applicable. For our test, the table dbo.PersonAudit is created on the subscriber and it identical to the Person.Person table.
   
@@ -134,7 +134,7 @@ First, check the value of Title for BusinessEntityID of 1
 
 <pre>SELECT * FROM Person.Person WHERE BusinessEntityID = 1</pre>
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_7.png" alt="merge_7" width="624" height="66" class="alignnone size-full wp-image-2874" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_7.png 624w, http://blogs.ltd.local/wp-content/uploads/2014/07/merge_7-300x31.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][7]
+[<img src="/wp-content/uploads/2014/07/merge_7.png" alt="merge_7" width="624" height="66" class="alignnone size-full wp-image-2874" srcset="/wp-content/uploads/2014/07/merge_7.png 624w, /wp-content/uploads/2014/07/merge_7-300x31.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][7]
 
 Now execute a simple UPDATE statement (The Title initial value was Test2 for this publication initialization)
 
@@ -144,13 +144,13 @@ WHERE BusinessEntityID = 1</pre>
 
 On the subscriber server, we want to right click the subscriber in the Replication listing and open the View Synchronization Status. From here, we can force synchronization to occur. 
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_8.png" alt="merge_8" width="624" height="352" class="alignnone size-full wp-image-2873" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_8.png 624w, http://blogs.ltd.local/wp-content/uploads/2014/07/merge_8-300x169.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][8]
+[<img src="/wp-content/uploads/2014/07/merge_8.png" alt="merge_8" width="624" height="352" class="alignnone size-full wp-image-2873" srcset="/wp-content/uploads/2014/07/merge_8.png 624w, /wp-content/uploads/2014/07/merge_8-300x169.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][8]
 
 Click Start and wait for the process to complete.
   
 Once synchronization is completed, we can review the dbo.PersonAudit table and the Person.Person table
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_9.png" alt="merge_9" width="624" height="216" class="alignnone size-full wp-image-2872" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/merge_9.png 624w, http://blogs.ltd.local/wp-content/uploads/2014/07/merge_9-300x103.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][9]
+[<img src="/wp-content/uploads/2014/07/merge_9.png" alt="merge_9" width="624" height="216" class="alignnone size-full wp-image-2872" srcset="/wp-content/uploads/2014/07/merge_9.png 624w, /wp-content/uploads/2014/07/merge_9-300x103.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][9]
 
 We can see that many tests have occurred but the existing Title still remains in the Person.Person table while capturing each change. Again, for a completion solution, addition datetime columsn can be added for the reporting aspect and following changes as they may happen. Reporting then becomes a simplistic aspect to the processing flow and low impact on the total data services in the primary database. 
 
@@ -158,12 +158,12 @@ We can see that many tests have occurred but the existing Title still remains in
   
 Taking advantage of the features natively available in SQL Server is an extremely effective way to accomplish tasks that may be nicely packaged in other features, simply not available to the edition or configurations. We’ve shown a great way of managing Merge Replication in a data audit solution just for this concept. Keep in mind, edition costs and other blocking events may cause you to not have access to features such as CDC but, there are many other features that provide much functionality far and beyond what they may seem to have on the surface.
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2014/07/merge_1.png
- [2]: http://blogs.ltd.local/wp-content/uploads/2014/07/merge_2.png
- [3]: http://blogs.ltd.local/wp-content/uploads/2014/07/merge_3.png
- [4]: http://blogs.ltd.local/wp-content/uploads/2014/07/merge_4.png
- [5]: http://blogs.ltd.local/wp-content/uploads/2014/07/merge_5.png
- [6]: http://blogs.ltd.local/wp-content/uploads/2014/07/merge_6.png
- [7]: http://blogs.ltd.local/wp-content/uploads/2014/07/merge_7.png
- [8]: http://blogs.ltd.local/wp-content/uploads/2014/07/merge_8.png
- [9]: http://blogs.ltd.local/wp-content/uploads/2014/07/merge_9.png
+ [1]: /wp-content/uploads/2014/07/merge_1.png
+ [2]: /wp-content/uploads/2014/07/merge_2.png
+ [3]: /wp-content/uploads/2014/07/merge_3.png
+ [4]: /wp-content/uploads/2014/07/merge_4.png
+ [5]: /wp-content/uploads/2014/07/merge_5.png
+ [6]: /wp-content/uploads/2014/07/merge_6.png
+ [7]: /wp-content/uploads/2014/07/merge_7.png
+ [8]: /wp-content/uploads/2014/07/merge_8.png
+ [9]: /wp-content/uploads/2014/07/merge_9.png

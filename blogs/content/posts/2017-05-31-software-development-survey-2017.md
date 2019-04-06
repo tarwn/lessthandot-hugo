@@ -23,7 +23,7 @@ categories:
 
 ---
 <p class="graf graf--p graf-after--figure">
-  <img class="aligncenter size-large wp-image-8652" src="http://blogs.ltd.local/wp-content/uploads/2017/05/shutterstock_374219557-small-1024x683.jpg" alt="Person having a bright idea" width="800" height="533" srcset="http://blogs.ltd.local/wp-content/uploads/2017/05/shutterstock_374219557-small-1024x683.jpg 1024w, http://blogs.ltd.local/wp-content/uploads/2017/05/shutterstock_374219557-small-300x200.jpg 300w, http://blogs.ltd.local/wp-content/uploads/2017/05/shutterstock_374219557-small-768x512.jpg 768w, http://blogs.ltd.local/wp-content/uploads/2017/05/shutterstock_374219557-small.jpg 1440w" sizes="(max-width: 800px) 100vw, 800px" />
+  <img class="aligncenter size-large wp-image-8652" src="/wp-content/uploads/2017/05/shutterstock_374219557-small-1024x683.jpg" alt="Person having a bright idea" width="800" height="533" srcset="/wp-content/uploads/2017/05/shutterstock_374219557-small-1024x683.jpg 1024w, /wp-content/uploads/2017/05/shutterstock_374219557-small-300x200.jpg 300w, /wp-content/uploads/2017/05/shutterstock_374219557-small-768x512.jpg 768w, /wp-content/uploads/2017/05/shutterstock_374219557-small.jpg 1440w" sizes="(max-width: 800px) 100vw, 800px" />
 </p>
 
 &nbsp;

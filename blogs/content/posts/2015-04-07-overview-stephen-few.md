@@ -43,7 +43,7 @@ tags:
 </h1>
 
 <p style="text-align: justify">
-  <a href="http://amzn.to/1SnBSj9"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="http://blogs.ltd.local/wp-content/uploads/2015/04/dashboard-150x150.jpg" alt="dashboard" width="150" height="150" /></a>This book really opened my eyes regarding data visualization best practices. I read the first edition, of which you can find my review <a href="/index.php/itprofessionals/book-review/data-visualization-book-review/">here</a>. I ordered the second edition the day it came out; the book is that good.
+  <a href="http://amzn.to/1SnBSj9"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2015/04/dashboard-150x150.jpg" alt="dashboard" width="150" height="150" /></a>This book really opened my eyes regarding data visualization best practices. I read the first edition, of which you can find my review <a href="/index.php/itprofessionals/book-review/data-visualization-book-review/">here</a>. I ordered the second edition the day it came out; the book is that good.
 </p>
 
 <p style="text-align: justify">
@@ -59,7 +59,7 @@ tags:
 </h1>
 
 <p style="text-align: justify">
-  <a href="http://amzn.to/1Oejusx"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="http://blogs.ltd.local/wp-content/uploads/2015/04/showmethenumbers-150x150.jpg" alt="showmethenumbers" width="150" height="150" /></a>After reading <em>Information Dashboard Design</em>, I thought: “Great, now I know how to design dashboards and charts, but what about tables?” This book is the answer to that question. It gives a full overview on how to design data visualizations, be it tables or graphs. There are even some exercises in the book.
+  <a href="http://amzn.to/1Oejusx"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2015/04/showmethenumbers-150x150.jpg" alt="showmethenumbers" width="150" height="150" /></a>After reading <em>Information Dashboard Design</em>, I thought: “Great, now I know how to design dashboards and charts, but what about tables?” This book is the answer to that question. It gives a full overview on how to design data visualizations, be it tables or graphs. There are even some exercises in the book.
 </p>
 
 <p style="text-align: justify">
@@ -75,7 +75,7 @@ tags:
 </h1>
 
 <p style="text-align: justify">
-  <a href="http://amzn.to/1OejBUY"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="http://blogs.ltd.local/wp-content/uploads/2015/04/nowyouseeit-150x150.jpg" alt="nowyouseeit" width="150" height="150" /></a>The final book is a bit more different. While the other two books focus more on how to create data visualizations, this book goes into more detail on what you should do with those visualizations and why purpose they can serve.
+  <a href="http://amzn.to/1OejBUY"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2015/04/nowyouseeit-150x150.jpg" alt="nowyouseeit" width="150" height="150" /></a>The final book is a bit more different. While the other two books focus more on how to create data visualizations, this book goes into more detail on what you should do with those visualizations and why purpose they can serve.
 </p>
 
 <p style="text-align: justify">

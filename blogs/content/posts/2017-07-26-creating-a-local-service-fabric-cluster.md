@@ -42,7 +42,7 @@ Unpack the downloaded archive and make a copy of the ClusterConfig.X509.MultiMac
 The configuration (or &#8220;manifest&#8221;) is explained in detail in [Microsoft Docs][2]. I&#8217;ll call out the specifics of what I&#8217;m changing as I go.
 
 <div id="attachment_8718" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/SFNode0ConfigScreen.png" alt="Initial Cluster Configuration" width="1024" height="768" class="size-full wp-image-8718" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/SFNode0ConfigScreen.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/SFNode0ConfigScreen-300x225.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/SFNode0ConfigScreen-768x576.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/SFNode0ConfigScreen.png" alt="Initial Cluster Configuration" width="1024" height="768" class="size-full wp-image-8718" srcset="/wp-content/uploads/2017/07/SFNode0ConfigScreen.png 1024w, /wp-content/uploads/2017/07/SFNode0ConfigScreen-300x225.png 300w, /wp-content/uploads/2017/07/SFNode0ConfigScreen-768x576.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     Initial Cluster Configuration
@@ -114,7 +114,7 @@ Launch PowerShell as an Administrator, then run the altered script `.\CertSetup.
 Opening &#8220;Manage computer certificates&#8221; from the Start menu, I can see my two certificates listed in Personal/Certificates:
 
 <div id="attachment_8719" style="width: 769px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/Certificates.png" alt="Certificates Successfully Generated" width="759" height="155" class="size-full wp-image-8719" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/Certificates.png 759w, http://blogs.ltd.local/wp-content/uploads/2017/07/Certificates-300x61.png 300w" sizes="(max-width: 759px) 100vw, 759px" />
+  <img src="/wp-content/uploads/2017/07/Certificates.png" alt="Certificates Successfully Generated" width="759" height="155" class="size-full wp-image-8719" srcset="/wp-content/uploads/2017/07/Certificates.png 759w, /wp-content/uploads/2017/07/Certificates-300x61.png 300w" sizes="(max-width: 759px) 100vw, 759px" />
   
   <p class="wp-caption-text">
     Certificates Successfully Generated
@@ -150,7 +150,7 @@ Import-PfxCertificate -Exportable -CertStoreLocation Cert:\LocalMachine\My -File
 On each node, I copy the 4 files, run the Install script, then run the Permissions script once for each Thumbprint:
 
 <div id="attachment_8720" style="width: 869px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/InstallCertificates.png" alt="Install Certificates and Grant Access" width="859" height="586" class="size-full wp-image-8720" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/InstallCertificates.png 859w, http://blogs.ltd.local/wp-content/uploads/2017/07/InstallCertificates-300x205.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/InstallCertificates-768x524.png 768w" sizes="(max-width: 859px) 100vw, 859px" />
+  <img src="/wp-content/uploads/2017/07/InstallCertificates.png" alt="Install Certificates and Grant Access" width="859" height="586" class="size-full wp-image-8720" srcset="/wp-content/uploads/2017/07/InstallCertificates.png 859w, /wp-content/uploads/2017/07/InstallCertificates-300x205.png 300w, /wp-content/uploads/2017/07/InstallCertificates-768x524.png 768w" sizes="(max-width: 859px) 100vw, 859px" />
   
   <p class="wp-caption-text">
     Install Certificates and Grant Access
@@ -195,7 +195,7 @@ Here are the errors as I work through them:
   
 1. Open the Network Adapter properties and make sure &#8220;File and Printer Sharing for Microsoft Networks&#8221; is enabled (or netstat -ao and make sure you&#8217;re listening on 445)
   
-2. Reboot <- It's like Windows NT all over again! (I don't know why this fixed it, but it did) <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/SuccessfulConfigTest.png" alt="Successful Configuration Test" width="517" height="258" class="size-full wp-image-8721" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/SuccessfulConfigTest.png 517w, http://blogs.ltd.local/wp-content/uploads/2017/07/SuccessfulConfigTest-300x150.png 300w" sizes="(max-width: 517px) 100vw, 517px" />
+2. Reboot <- It's like Windows NT all over again! (I don't know why this fixed it, but it did) <img src="/wp-content/uploads/2017/07/SuccessfulConfigTest.png" alt="Successful Configuration Test" width="517" height="258" class="size-full wp-image-8721" srcset="/wp-content/uploads/2017/07/SuccessfulConfigTest.png 517w, /wp-content/uploads/2017/07/SuccessfulConfigTest-300x150.png 300w" sizes="(max-width: 517px) 100vw, 517px" />
 
 Much Success!
 
@@ -225,7 +225,7 @@ Connecting via web browser is easy, but the documentation assumes you are using 
 Use https instead and use something like Chrome instead of IE. Chrome will popup an option for you to select the Client Certificate we produced earlier, and then connect successfully:
 
 <div id="attachment_8722" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/ServiceFabricDashboard-1024x593.png" alt="Service Fabric Dashboard" width="1024" height="593" class="size-large wp-image-8722" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/ServiceFabricDashboard-1024x593.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/ServiceFabricDashboard-300x174.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/ServiceFabricDashboard-768x444.png 768w, http://blogs.ltd.local/wp-content/uploads/2017/07/ServiceFabricDashboard.png 1360w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/ServiceFabricDashboard-1024x593.png" alt="Service Fabric Dashboard" width="1024" height="593" class="size-large wp-image-8722" srcset="/wp-content/uploads/2017/07/ServiceFabricDashboard-1024x593.png 1024w, /wp-content/uploads/2017/07/ServiceFabricDashboard-300x174.png 300w, /wp-content/uploads/2017/07/ServiceFabricDashboard-768x444.png 768w, /wp-content/uploads/2017/07/ServiceFabricDashboard.png 1360w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     Service Fabric Dashboard
@@ -260,7 +260,7 @@ Add the new profile file to the project in Visual Studio.
 Right click the project and select &#8220;Publish&#8221;. In the Publish dialog, select your new Profile file from the first dropdown. The dialog will verify it can connect to the Cluster:
 
 <div id="attachment_8723" style="width: 648px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/PublishPackage.png" alt="VS 2017 - Publish Package for Service Fabric" width="638" height="434" class="size-full wp-image-8723" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/PublishPackage.png 638w, http://blogs.ltd.local/wp-content/uploads/2017/07/PublishPackage-300x204.png 300w" sizes="(max-width: 638px) 100vw, 638px" />
+  <img src="/wp-content/uploads/2017/07/PublishPackage.png" alt="VS 2017 - Publish Package for Service Fabric" width="638" height="434" class="size-full wp-image-8723" srcset="/wp-content/uploads/2017/07/PublishPackage.png 638w, /wp-content/uploads/2017/07/PublishPackage-300x204.png 300w" sizes="(max-width: 638px) 100vw, 638px" />
   
   <p class="wp-caption-text">
     VS 2017 &#8211; Publish Package for Service Fabric
@@ -272,7 +272,7 @@ Right click the project and select &#8220;Publish&#8221;. In the Publish dialog,
 Click Publish and Visual Studio will build the project and publish it to the cluster. Visual Studio will provide feedback as it publishes the application and we can see the results in the dashboard:
 
 <div id="attachment_8724" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/UnhealthyDeployedPackage-1024x879.png" alt="Unhealthy, But Deployed Dashboard View" width="1024" height="879" class="size-large wp-image-8724" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/UnhealthyDeployedPackage-1024x879.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/UnhealthyDeployedPackage-300x258.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/UnhealthyDeployedPackage-768x660.png 768w, http://blogs.ltd.local/wp-content/uploads/2017/07/UnhealthyDeployedPackage.png 1345w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/UnhealthyDeployedPackage-1024x879.png" alt="Unhealthy, But Deployed Dashboard View" width="1024" height="879" class="size-large wp-image-8724" srcset="/wp-content/uploads/2017/07/UnhealthyDeployedPackage-1024x879.png 1024w, /wp-content/uploads/2017/07/UnhealthyDeployedPackage-300x258.png 300w, /wp-content/uploads/2017/07/UnhealthyDeployedPackage-768x660.png 768w, /wp-content/uploads/2017/07/UnhealthyDeployedPackage.png 1345w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     Unhealthy, But Deployed Dashboard View

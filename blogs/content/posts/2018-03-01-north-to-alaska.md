@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-[<img class="alignleft size-full wp-image-9036" style="float: left;margin: 1em 1em .5em 1em" src="http://blogs.ltd.local/wp-content/uploads/2018/03/tech-outbound-logo.jpg" alt="tech-outbound-logo" width="200" height="200" srcset="http://blogs.ltd.local/wp-content/uploads/2018/03/tech-outbound-logo.jpg 400w, http://blogs.ltd.local/wp-content/uploads/2018/03/tech-outbound-logo-200x200.jpg 200w, http://blogs.ltd.local/wp-content/uploads/2018/03/tech-outbound-logo-300x300.jpg 300w" sizes="(max-width: 200px) 100vw, 200px" />][1]
+[<img class="alignleft size-full wp-image-9036" style="float: left;margin: 1em 1em .5em 1em" src="/wp-content/uploads/2018/03/tech-outbound-logo.jpg" alt="tech-outbound-logo" width="200" height="200" srcset="/wp-content/uploads/2018/03/tech-outbound-logo.jpg 400w, /wp-content/uploads/2018/03/tech-outbound-logo-200x200.jpg 200w, /wp-content/uploads/2018/03/tech-outbound-logo-300x300.jpg 300w" sizes="(max-width: 200px) 100vw, 200px" />][1]
   
 I&#8217;m excited and privileged to announce that I&#8217;ll be a Technical Lead on [Tech Outbound Alaska][1] this August! Tim and Amy Ford have been putting together high-quality SQL Cruise events since 2010. I&#8217;ve attended three, and each one has been better than the last. (Make sure to read about my experiences on [SQL Cruise Caribbean 2015][2] and [SQL Cruise Caribbean 2016][3]!)
 

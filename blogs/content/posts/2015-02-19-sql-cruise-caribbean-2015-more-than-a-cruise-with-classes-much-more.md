@@ -12,7 +12,7 @@ categories:
   - Uncategorized
 
 ---
-[<img class="alignleft wp-image-3222 size-full" src="http://blogs.ltd.local/wp-content/uploads/2015/02/sqlcruise_logo.png" alt="sqlcruise_logo" width="256" height="256" srcset="http://blogs.ltd.local/wp-content/uploads/2015/02/sqlcruise_logo.png 256w, http://blogs.ltd.local/wp-content/uploads/2015/02/sqlcruise_logo-150x150.png 150w" sizes="(max-width: 256px) 100vw, 256px" />][1]I had the opportunity to attend (and be a technical lead for!) <a href="http://sqlcruise.com/" target="_blank">SQL Cruise Caribbean 2015</a> in February 2015. This was my second SQL Cruise &#8211; my first was as <a href="http://www.brentozar.com/archive/2012/06/sql-cruise-experience/" target="_blank">an attendee on SQL Cruise Alaska 2012</a>. I loved the first event, so my expectations were fairly high &#8211; and they were completely exceeded.
+[<img class="alignleft wp-image-3222 size-full" src="/wp-content/uploads/2015/02/sqlcruise_logo.png" alt="sqlcruise_logo" width="256" height="256" srcset="/wp-content/uploads/2015/02/sqlcruise_logo.png 256w, /wp-content/uploads/2015/02/sqlcruise_logo-150x150.png 150w" sizes="(max-width: 256px) 100vw, 256px" />][1]I had the opportunity to attend (and be a technical lead for!) <a href="http://sqlcruise.com/" target="_blank">SQL Cruise Caribbean 2015</a> in February 2015. This was my second SQL Cruise &#8211; my first was as <a href="http://www.brentozar.com/archive/2012/06/sql-cruise-experience/" target="_blank">an attendee on SQL Cruise Alaska 2012</a>. I loved the first event, so my expectations were fairly high &#8211; and they were completely exceeded.
 
 The mantra for SQL Cruise is Learn, Network, Relax, and Grow. This is not just a phrase &#8211; I&#8217;m an example of this in action.
 
@@ -23,7 +23,7 @@ Fast-forward to Saturday, February 7, 2015. I am riding in a limo to the dock wi
 Sunday was an at-sea, and thus in-class day. Lest you think this is awful, it is not. 20 incredibly smart people are in a room with few distractions. Sessions are set up so that instead of the presenter just talking through slides, everything is a discussion point, and attendees are sharing war stories and knowledge. It was in class on Sunday morning that I got a bit overwhelmed: not with information, but emotion. Three years ago, I had been trying desperately to keep up. I&#8217;d been asking so many questions. I felt out of my league. Sunday, though &#8211; Sunday, I felt leaps and bounds above where I was on my first cruise. I had so much more to add to the discussion, and because I knew the group was small and comfortable, I had no problem sharing my thoughts and ideas.
 
 <div id="attachment_3237" style="width: 310px" class="wp-caption alignright">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2015/02/IMAG0439.jpg"><img class="wp-image-3237 size-medium" src="http://blogs.ltd.local/wp-content/uploads/2015/02/IMAG0439-300x168.jpg" alt="IMAG0439" width="300" height="168" srcset="http://blogs.ltd.local/wp-content/uploads/2015/02/IMAG0439-300x168.jpg 300w, http://blogs.ltd.local/wp-content/uploads/2015/02/IMAG0439-1024x576.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2015/02/IMAG0439.jpg"><img class="wp-image-3237 size-medium" src="/wp-content/uploads/2015/02/IMAG0439-300x168.jpg" alt="IMAG0439" width="300" height="168" srcset="/wp-content/uploads/2015/02/IMAG0439-300x168.jpg 300w, /wp-content/uploads/2015/02/IMAG0439-1024x576.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
     Class time with Mickey! (And Grant)
@@ -53,11 +53,11 @@ Everything SQL Cruise says they accomplish: they do.
 So if you think this sounds amazing, but you don&#8217;t think your company will pay for it &#8211; please leave me a comment and I&#8217;ll get in touch with you (and I&#8217;m not the only cruiser willing to do this). I will personally attest to what SQL Cruise has done for my career &#8211; and what it can do for yours.
 
 <div id="attachment_3238" style="width: 1034px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2015/02/IMAG0532_1.jpg"><img class="size-large wp-image-3238" src="http://blogs.ltd.local/wp-content/uploads/2015/02/IMAG0532_1-1024x579.jpg" alt="On the beach in Nassau after the best on-shore day ever " width="1024" height="579" srcset="http://blogs.ltd.local/wp-content/uploads/2015/02/IMAG0532_1-1024x579.jpg 1024w, http://blogs.ltd.local/wp-content/uploads/2015/02/IMAG0532_1-300x169.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  <a href="/wp-content/uploads/2015/02/IMAG0532_1.jpg"><img class="size-large wp-image-3238" src="/wp-content/uploads/2015/02/IMAG0532_1-1024x579.jpg" alt="On the beach in Nassau after the best on-shore day ever " width="1024" height="579" srcset="/wp-content/uploads/2015/02/IMAG0532_1-1024x579.jpg 1024w, /wp-content/uploads/2015/02/IMAG0532_1-300x169.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
   
   <p class="wp-caption-text">
     On the beach in Nassau after the best on-shore day ever
   </p>
 </div>
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2015/02/sqlcruise_logo.png
+ [1]: /wp-content/uploads/2015/02/sqlcruise_logo.png

@@ -31,7 +31,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/01/MDS_book2_banner.png"><img class="alignleft  wp-image-2331" src="http://blogs.ltd.local/wp-content/uploads/2014/01/MDS_book2_banner.png" alt="MDS_book2_banner" width="207" height="228" /></a>
+  <a href="/wp-content/uploads/2014/01/MDS_book2_banner.png"><img class="alignleft  wp-image-2331" src="/wp-content/uploads/2014/01/MDS_book2_banner.png" alt="MDS_book2_banner" width="207" height="228" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -47,7 +47,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/01/WhereAreTheStoredProcedures.png"><img class="alignleft size-medium wp-image-2332" src="http://blogs.ltd.local/wp-content/uploads/2014/01/WhereAreTheStoredProcedures-300x237.png" alt="WhereAreTheStoredProcedures" width="300" height="237" srcset="http://blogs.ltd.local/wp-content/uploads/2014/01/WhereAreTheStoredProcedures-300x237.png 300w, http://blogs.ltd.local/wp-content/uploads/2014/01/WhereAreTheStoredProcedures.png 724w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2014/01/WhereAreTheStoredProcedures.png"><img class="alignleft size-medium wp-image-2332" src="/wp-content/uploads/2014/01/WhereAreTheStoredProcedures-300x237.png" alt="WhereAreTheStoredProcedures" width="300" height="237" srcset="/wp-content/uploads/2014/01/WhereAreTheStoredProcedures-300x237.png 300w, /wp-content/uploads/2014/01/WhereAreTheStoredProcedures.png 724w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -71,7 +71,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/01/WorstFormatEver.png"><img class="alignleft size-medium wp-image-2333" src="http://blogs.ltd.local/wp-content/uploads/2014/01/WorstFormatEver-300x124.png" alt="WorstFormatEver" width="300" height="124" srcset="http://blogs.ltd.local/wp-content/uploads/2014/01/WorstFormatEver-300x124.png 300w, http://blogs.ltd.local/wp-content/uploads/2014/01/WorstFormatEver.png 755w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2014/01/WorstFormatEver.png"><img class="alignleft size-medium wp-image-2333" src="/wp-content/uploads/2014/01/WorstFormatEver-300x124.png" alt="WorstFormatEver" width="300" height="124" srcset="/wp-content/uploads/2014/01/WorstFormatEver-300x124.png 300w, /wp-content/uploads/2014/01/WorstFormatEver.png 755w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 </p>
 
 <p style="text-align: justify">

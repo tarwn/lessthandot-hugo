@@ -38,6 +38,6 @@ It is a level 300 session, meaning that I will not explain how SSIS works and I 
 
 So if you want to learn more about SSIS or if you want to watch other great sessions (5 different tracks with each 5 slots!), do not hesitate to [register][1]! There is an early bird discount until the July 15th.
 
-[<img class="alignnone size-full wp-image-2811" src="http://blogs.ltd.local/wp-content/uploads/2014/07/SQLServerDays2014.jpg" alt="SQLServerDays2014" width="627" height="161" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/SQLServerDays2014.jpg 627w, http://blogs.ltd.local/wp-content/uploads/2014/07/SQLServerDays2014-300x77.jpg 300w" sizes="(max-width: 627px) 100vw, 627px" />][1]
+[<img class="alignnone size-full wp-image-2811" src="/wp-content/uploads/2014/07/SQLServerDays2014.jpg" alt="SQLServerDays2014" width="627" height="161" srcset="/wp-content/uploads/2014/07/SQLServerDays2014.jpg 627w, /wp-content/uploads/2014/07/SQLServerDays2014-300x77.jpg 300w" sizes="(max-width: 627px) 100vw, 627px" />][1]
 
  [1]: http://www.sqlserverdays.be/registration/

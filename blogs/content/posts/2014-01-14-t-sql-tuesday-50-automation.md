@@ -20,7 +20,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  <a href="http://sqlchow.wordpress.com/2014/01/07/t-sql-tuesday-050-automation-how-much-of-it-is-the-same/"><img class="alignleft" alt="TSQL2sday" src="http://blogs.ltd.local/wp-content/uploads/2014/01/TSQL2sday.png" width="120" height="121" /></a>It’s the second Tuesday of the New Year, so here comes the first T-SQL Tuesday of 2014! SQLChow (<a href="http://sqlchow.wordpress.com/">blog</a> | <a href="https://twitter.com/SqlChow">twitter</a>) has the honour to host this jubilee edition of the world famous blog party. The theme of this month is the utterly DBA-related topic of <i>Automation</i>. However, it is pretty easy to give it a BI spin.
+  <a href="http://sqlchow.wordpress.com/2014/01/07/t-sql-tuesday-050-automation-how-much-of-it-is-the-same/"><img class="alignleft" alt="TSQL2sday" src="/wp-content/uploads/2014/01/TSQL2sday.png" width="120" height="121" /></a>It’s the second Tuesday of the New Year, so here comes the first T-SQL Tuesday of 2014! SQLChow (<a href="http://sqlchow.wordpress.com/">blog</a> | <a href="https://twitter.com/SqlChow">twitter</a>) has the honour to host this jubilee edition of the world famous blog party. The theme of this month is the utterly DBA-related topic of <i>Automation</i>. However, it is pretty easy to give it a BI spin.
 </p>
 
 <p style="text-align: justify">

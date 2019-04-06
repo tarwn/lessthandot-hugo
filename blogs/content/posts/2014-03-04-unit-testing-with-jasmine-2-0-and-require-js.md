@@ -43,7 +43,7 @@ One option to solve this is to simply call window.onload again:
 
 But that&#8217;s icky and causes you to have two test bars across the screen (and probably doesn&#8217;t work well with other reporters either).
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/02/JasmineDoubleFail.png" alt="JasmineDoubleFail" width="726" height="182" class="aligncenter size-full wp-image-2477" srcset="http://blogs.ltd.local/wp-content/uploads/2014/02/JasmineDoubleFail.png 726w, http://blogs.ltd.local/wp-content/uploads/2014/02/JasmineDoubleFail-300x75.png 300w" sizes="(max-width: 726px) 100vw, 726px" />][1]
+[<img src="/wp-content/uploads/2014/02/JasmineDoubleFail.png" alt="JasmineDoubleFail" width="726" height="182" class="aligncenter size-full wp-image-2477" srcset="/wp-content/uploads/2014/02/JasmineDoubleFail.png 726w, /wp-content/uploads/2014/02/JasmineDoubleFail-300x75.png 300w" sizes="(max-width: 726px) 100vw, 726px" />][1]
 
 Yeah, that&#8217;s special.
 
@@ -84,4 +84,4 @@ And then update our SpecRunner to include this replacement boot script and requi
 
 And there we go, Jasmine is now working exactly the same as if we were running without RequireJS (and had pasted 500 script tags in the file).
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2014/02/JasmineDoubleFail.png
+ [1]: /wp-content/uploads/2014/02/JasmineDoubleFail.png

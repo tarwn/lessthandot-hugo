@@ -18,7 +18,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  <a href="http://sqlstudies.com/2015/02/03/tsql-tuesday-63-how-do-you-manage-security/"><img style="float: left;margin: 0px 10px 0px 10px" src="http://blogs.ltd.local/wp-content/uploads/2014/01/TSQL2sday.png" alt="TSQL2sday" width="133" height="134" /></a>This month’s T-SQL Tuesday is hosted by Kenneth Fisher (<a href="http://sqlstudies.com/">blog </a>| <a href="https://twitter.com/sqlstudent144">twitter</a>) and its subject is about security.
+  <a href="http://sqlstudies.com/2015/02/03/tsql-tuesday-63-how-do-you-manage-security/"><img style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2014/01/TSQL2sday.png" alt="TSQL2sday" width="133" height="134" /></a>This month’s T-SQL Tuesday is hosted by Kenneth Fisher (<a href="http://sqlstudies.com/">blog </a>| <a href="https://twitter.com/sqlstudent144">twitter</a>) and its subject is about security.
 </p>
 
 <p style="text-align: justify">

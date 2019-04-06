@@ -30,7 +30,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/08/scatterplot.png"><img class="alignnone wp-image-2898" src="http://blogs.ltd.local/wp-content/uploads/2014/08/scatterplot.png" alt="scatterplot" width="500" height="598" srcset="http://blogs.ltd.local/wp-content/uploads/2014/08/scatterplot.png 573w, http://blogs.ltd.local/wp-content/uploads/2014/08/scatterplot-250x300.png 250w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="/wp-content/uploads/2014/08/scatterplot.png"><img class="alignnone wp-image-2898" src="/wp-content/uploads/2014/08/scatterplot.png" alt="scatterplot" width="500" height="598" srcset="/wp-content/uploads/2014/08/scatterplot.png 573w, /wp-content/uploads/2014/08/scatterplot-250x300.png 250w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -38,7 +38,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/08/histogram.png"><img class="alignnone wp-image-2897" src="http://blogs.ltd.local/wp-content/uploads/2014/08/histogram.png" alt="histogram" width="500" height="521" srcset="http://blogs.ltd.local/wp-content/uploads/2014/08/histogram.png 725w, http://blogs.ltd.local/wp-content/uploads/2014/08/histogram-288x300.png 288w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="/wp-content/uploads/2014/08/histogram.png"><img class="alignnone wp-image-2897" src="/wp-content/uploads/2014/08/histogram.png" alt="histogram" width="500" height="521" srcset="/wp-content/uploads/2014/08/histogram.png 725w, /wp-content/uploads/2014/08/histogram-288x300.png 288w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -46,7 +46,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/08/boxwhiskerplot.png"><img class="alignnone wp-image-2899" src="http://blogs.ltd.local/wp-content/uploads/2014/08/boxwhiskerplot.png" alt="boxwhiskerplot" width="800" height="146" srcset="http://blogs.ltd.local/wp-content/uploads/2014/08/boxwhiskerplot.png 973w, http://blogs.ltd.local/wp-content/uploads/2014/08/boxwhiskerplot-300x54.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="/wp-content/uploads/2014/08/boxwhiskerplot.png"><img class="alignnone wp-image-2899" src="/wp-content/uploads/2014/08/boxwhiskerplot.png" alt="boxwhiskerplot" width="800" height="146" srcset="/wp-content/uploads/2014/08/boxwhiskerplot.png 973w, /wp-content/uploads/2014/08/boxwhiskerplot-300x54.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
 </p>
 
 <p style="text-align: justify">

@@ -17,4 +17,4 @@ I presented &#8220;Level Up Your SQL Server Index Knowledge&#8221; on Wednesday,
 
 For those of you interested, [the slides and demos can be downloaded here][1].
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2015/06/Level-Up-Your-SQL-Server-Index-Knowledge.zip
+ [1]: /wp-content/uploads/2015/06/Level-Up-Your-SQL-Server-Index-Knowledge.zip

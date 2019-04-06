@@ -56,7 +56,7 @@ This is also the place I ran into the madness that is the current [mess of NuGet
 My build pipeline for this project will be a single CI stage that runs the tests for both projects, and package stage that packages releasable versions for both projects, then two independent deploy stages to deploy the website and service fabric packages to their appropriate places. 
 
 <div id="attachment_8781" style="width: 557px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/08/DeployserviceFabric.png" alt="Deployment Pipeline - API updates before ServiceFabric" width="547" height="129" class="size-full wp-image-8781" srcset="http://blogs.ltd.local/wp-content/uploads/2017/08/DeployserviceFabric.png 547w, http://blogs.ltd.local/wp-content/uploads/2017/08/DeployserviceFabric-300x71.png 300w" sizes="(max-width: 547px) 100vw, 547px" />
+  <img src="/wp-content/uploads/2017/08/DeployserviceFabric.png" alt="Deployment Pipeline - API updates before ServiceFabric" width="547" height="129" class="size-full wp-image-8781" srcset="/wp-content/uploads/2017/08/DeployserviceFabric.png 547w, /wp-content/uploads/2017/08/DeployserviceFabric-300x71.png 300w" sizes="(max-width: 547px) 100vw, 547px" />
   
   <p class="wp-caption-text">
     Deployment Pipeline &#8211; API updates before ServiceFabric
@@ -66,7 +66,7 @@ My build pipeline for this project will be a single CI stage that runs the tests
 This is my &#8220;good enough for now&#8221; setup. If I run into versioning issues, I can come back and add some backwards compatibility tests between the packages after CI and run the deployments serially instead of in parallel.
 
 <div id="attachment_8756" style="width: 310px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/DeployScript-300x172.png" alt="Service Fabric Deploy Script" width="300" height="172" class="size-medium wp-image-8756" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/DeployScript-300x172.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/DeployScript.png 520w" sizes="(max-width: 300px) 100vw, 300px" />
+  <img src="/wp-content/uploads/2017/07/DeployScript-300x172.png" alt="Service Fabric Deploy Script" width="300" height="172" class="size-medium wp-image-8756" srcset="/wp-content/uploads/2017/07/DeployScript-300x172.png 300w, /wp-content/uploads/2017/07/DeployScript.png 520w" sizes="(max-width: 300px) 100vw, 300px" />
   
   <p class="wp-caption-text">
     Service Fabric Deploy Script
@@ -152,7 +152,7 @@ Building the package is straightforward. We just need to build the package in re
 The Build Step in my &#8220;Package Stage&#8221; configuration looks like this:
 
 <div id="attachment_8757" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/BuildPackageStage-1024x730.png" alt="TeamCity Package Stage" width="1024" height="730" class="size-large wp-image-8757" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/BuildPackageStage-1024x730.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/BuildPackageStage-300x214.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/BuildPackageStage-768x548.png 768w, http://blogs.ltd.local/wp-content/uploads/2017/07/BuildPackageStage.png 1491w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/BuildPackageStage-1024x730.png" alt="TeamCity Package Stage" width="1024" height="730" class="size-large wp-image-8757" srcset="/wp-content/uploads/2017/07/BuildPackageStage-1024x730.png 1024w, /wp-content/uploads/2017/07/BuildPackageStage-300x214.png 300w, /wp-content/uploads/2017/07/BuildPackageStage-768x548.png 768w, /wp-content/uploads/2017/07/BuildPackageStage.png 1491w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     TeamCity Package Stage
@@ -164,7 +164,7 @@ Once I have the package built, I am going to replace the versions with a value t
 In the &#8220;General&#8221; tab in TeamCity, I use the build number token from my CI step as the version for this step:
 
 <div id="attachment_8758" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-1024x51.png" alt="TeamCity Package Build Number" width="1024" height="51" class="size-large wp-image-8758" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-1024x51.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-300x15.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-768x38.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-1024x51.png" alt="TeamCity Package Build Number" width="1024" height="51" class="size-large wp-image-8758" srcset="/wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-1024x51.png 1024w, /wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-300x15.png 300w, /wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-768x38.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     TeamCity Package Build Number
@@ -174,7 +174,7 @@ In the &#8220;General&#8221; tab in TeamCity, I use the build number token from 
 My CI step has this for it&#8217;s build number:
 
 <div id="attachment_8759" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_CI_BuildNumber-1024x73.png" alt="TeamCity CI Build Number" width="1024" height="73" class="size-large wp-image-8759" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_CI_BuildNumber-1024x73.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_CI_BuildNumber-300x21.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_CI_BuildNumber-768x54.png 768w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_CI_BuildNumber.png 1510w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/TeamCity_CI_BuildNumber-1024x73.png" alt="TeamCity CI Build Number" width="1024" height="73" class="size-large wp-image-8759" srcset="/wp-content/uploads/2017/07/TeamCity_CI_BuildNumber-1024x73.png 1024w, /wp-content/uploads/2017/07/TeamCity_CI_BuildNumber-300x21.png 300w, /wp-content/uploads/2017/07/TeamCity_CI_BuildNumber-768x54.png 768w, /wp-content/uploads/2017/07/TeamCity_CI_BuildNumber.png 1510w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     TeamCity CI Build Number
@@ -186,7 +186,7 @@ So now I will have a matching 1.X.0 value all the way from CI through to the Ser
 Then in a new build step, I replace the versions in my two manifest files with the build version token from TeamCity:
 
 <div id="attachment_8760" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Versions-1024x201.png" alt="TeamCity Package Versions" width="1024" height="201" class="size-large wp-image-8760" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Versions-1024x201.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Versions-300x59.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Versions-768x151.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/TeamCity_Package_Versions-1024x201.png" alt="TeamCity Package Versions" width="1024" height="201" class="size-large wp-image-8760" srcset="/wp-content/uploads/2017/07/TeamCity_Package_Versions-1024x201.png 1024w, /wp-content/uploads/2017/07/TeamCity_Package_Versions-300x59.png 300w, /wp-content/uploads/2017/07/TeamCity_Package_Versions-768x151.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     TeamCity Package Versions
@@ -196,7 +196,7 @@ Then in a new build step, I replace the versions in my two manifest files with t
 Finally, I add entries to the &#8220;Artifact Paths&#8221; back in the &#8220;General&#8221; tab to zip up the package for use by the next step:
 
 <div id="attachment_8761" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Artifacts-1024x104.png" alt="TeamCity Package Artifacts" width="1024" height="104" class="size-large wp-image-8761" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Artifacts-1024x104.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Artifacts-300x30.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Artifacts-768x78.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/TeamCity_Package_Artifacts-1024x104.png" alt="TeamCity Package Artifacts" width="1024" height="104" class="size-large wp-image-8761" srcset="/wp-content/uploads/2017/07/TeamCity_Package_Artifacts-1024x104.png 1024w, /wp-content/uploads/2017/07/TeamCity_Package_Artifacts-300x30.png 300w, /wp-content/uploads/2017/07/TeamCity_Package_Artifacts-768x78.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     TeamCity Package Artifacts
@@ -206,7 +206,7 @@ Finally, I add entries to the &#8220;Artifact Paths&#8221; back in the &#8220;Ge
 The final steps look like this:
 
 <div id="attachment_8762" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Steps-1024x234.png" alt="TeamCity Package Steps" width="1024" height="234" class="size-large wp-image-8762" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Steps-1024x234.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Steps-300x68.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Steps-768x175.png 768w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Steps.png 1517w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/TeamCity_Package_Steps-1024x234.png" alt="TeamCity Package Steps" width="1024" height="234" class="size-large wp-image-8762" srcset="/wp-content/uploads/2017/07/TeamCity_Package_Steps-1024x234.png 1024w, /wp-content/uploads/2017/07/TeamCity_Package_Steps-300x68.png 300w, /wp-content/uploads/2017/07/TeamCity_Package_Steps-768x175.png 768w, /wp-content/uploads/2017/07/TeamCity_Package_Steps.png 1517w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     TeamCity Package Steps
@@ -216,7 +216,7 @@ The final steps look like this:
 Running the build, I can verify everything is successful by opening up the archived package:
 
 <div id="attachment_8763" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Success-1024x321.png" alt="TeamCity Package - Verifying Versions" width="1024" height="321" class="size-large wp-image-8763" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Success-1024x321.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Success-300x94.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Success-768x241.png 768w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Package_Success.png 1392w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/TeamCity_Package_Success-1024x321.png" alt="TeamCity Package - Verifying Versions" width="1024" height="321" class="size-large wp-image-8763" srcset="/wp-content/uploads/2017/07/TeamCity_Package_Success-1024x321.png 1024w, /wp-content/uploads/2017/07/TeamCity_Package_Success-300x94.png 300w, /wp-content/uploads/2017/07/TeamCity_Package_Success-768x241.png 768w, /wp-content/uploads/2017/07/TeamCity_Package_Success.png 1392w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     TeamCity Package &#8211; Verifying Versions
@@ -228,7 +228,7 @@ Running the build, I can verify everything is successful by opening up the archi
 Now that I have a step building the files I need, I&#8217;ll add a new Build Configuration named &#8220;Deploy to Service Fabric&#8221;. I&#8217;ll set Snapshot and Artifact Dependencies to the prior Build Configuration and update the Build Number to use the value from that config (which is in turn using the one from CI).
 
 <div id="attachment_8764" style="width: 922px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies.png" alt="TeamCity Deploy Dependencies" width="912" height="406" class="size-full wp-image-8764" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies.png 912w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies-300x134.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies-768x342.png 768w" sizes="(max-width: 912px) 100vw, 912px" />
+  <img src="/wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies.png" alt="TeamCity Deploy Dependencies" width="912" height="406" class="size-full wp-image-8764" srcset="/wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies.png 912w, /wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies-300x134.png 300w, /wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies-768x342.png 768w" sizes="(max-width: 912px) 100vw, 912px" />
   
   <p class="wp-caption-text">
     TeamCity Deploy Dependencies
@@ -242,7 +242,7 @@ I have one build step, a powershell command that matches the manual one I was ru
 My build step then runs this command like so:
 
 <div id="attachment_8765" style="width: 1034px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Script-1024x272.png" alt="TeamCity Deploy Script" width="1024" height="272" class="size-large wp-image-8765" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Script-1024x272.png 1024w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Script-300x80.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Script-768x204.png 768w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Script.png 1226w" sizes="(max-width: 1024px) 100vw, 1024px" />
+  <img src="/wp-content/uploads/2017/07/TeamCity_Deploy_Script-1024x272.png" alt="TeamCity Deploy Script" width="1024" height="272" class="size-large wp-image-8765" srcset="/wp-content/uploads/2017/07/TeamCity_Deploy_Script-1024x272.png 1024w, /wp-content/uploads/2017/07/TeamCity_Deploy_Script-300x80.png 300w, /wp-content/uploads/2017/07/TeamCity_Deploy_Script-768x204.png 768w, /wp-content/uploads/2017/07/TeamCity_Deploy_Script.png 1226w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
     TeamCity Deploy Script
@@ -256,7 +256,7 @@ Note 2: I also had to alter my LocalCluster.xml profile to `StoreLocation="Local
 And there we have it:
 
 <div id="attachment_8766" style="width: 387px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Success.png" alt="TeamCity Deploy Success for v1.43.0" width="377" height="104" class="size-full wp-image-8766" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Success.png 377w, http://blogs.ltd.local/wp-content/uploads/2017/07/TeamCity_Deploy_Success-300x83.png 300w" sizes="(max-width: 377px) 100vw, 377px" />
+  <img src="/wp-content/uploads/2017/07/TeamCity_Deploy_Success.png" alt="TeamCity Deploy Success for v1.43.0" width="377" height="104" class="size-full wp-image-8766" srcset="/wp-content/uploads/2017/07/TeamCity_Deploy_Success.png 377w, /wp-content/uploads/2017/07/TeamCity_Deploy_Success-300x83.png 300w" sizes="(max-width: 377px) 100vw, 377px" />
   
   <p class="wp-caption-text">
     TeamCity Deploy Success for v1.43.0
@@ -264,7 +264,7 @@ And there we have it:
 </div>
 
 <div id="attachment_8767" style="width: 817px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/07/ServiceFabric_Deploy_Success.png" alt="ServiceFabric Success for v1.43.0" width="807" height="98" class="size-full wp-image-8767" srcset="http://blogs.ltd.local/wp-content/uploads/2017/07/ServiceFabric_Deploy_Success.png 807w, http://blogs.ltd.local/wp-content/uploads/2017/07/ServiceFabric_Deploy_Success-300x36.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/07/ServiceFabric_Deploy_Success-768x93.png 768w" sizes="(max-width: 807px) 100vw, 807px" />
+  <img src="/wp-content/uploads/2017/07/ServiceFabric_Deploy_Success.png" alt="ServiceFabric Success for v1.43.0" width="807" height="98" class="size-full wp-image-8767" srcset="/wp-content/uploads/2017/07/ServiceFabric_Deploy_Success.png 807w, /wp-content/uploads/2017/07/ServiceFabric_Deploy_Success-300x36.png 300w, /wp-content/uploads/2017/07/ServiceFabric_Deploy_Success-768x93.png 768w" sizes="(max-width: 807px) 100vw, 807px" />
   
   <p class="wp-caption-text">
     ServiceFabric Success for v1.43.0

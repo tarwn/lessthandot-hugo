@@ -45,7 +45,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/07/tableau_dashboard_cookbook_cover.gif"><img class="alignnone size-full wp-image-2816" src="http://blogs.ltd.local/wp-content/uploads/2014/07/tableau_dashboard_cookbook_cover.gif" alt="tableau_dashboard_cookbook_cover" width="180" height="222" /></a>
+  <a href="/wp-content/uploads/2014/07/tableau_dashboard_cookbook_cover.gif"><img class="alignnone size-full wp-image-2816" src="/wp-content/uploads/2014/07/tableau_dashboard_cookbook_cover.gif" alt="tableau_dashboard_cookbook_cover" width="180" height="222" /></a>
 </p>
 
 <p style="text-align: justify">

@@ -37,7 +37,7 @@ Besides the confusion of mismatched version numbers, this version of the Storage
 The 1.7 version of the sdk has been silently deprecated. I initially thought I missed the announcement in one of the SDK release posts, but I have been unable to find any news on this via web searches. But if you look in the right places in [MSDN documentation][4]:
 
 <div id="attachment_2408" style="width: 710px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/02/AzureSDK1.7Deprecated.png"><img src="http://blogs.ltd.local/wp-content/uploads/2014/02/AzureSDK1.7Deprecated.png" alt="MSDN Documents 1.7 as Deprecated, 3.0 as Recommended" width="700" height="187" class="size-full wp-image-2408" srcset="http://blogs.ltd.local/wp-content/uploads/2014/02/AzureSDK1.7Deprecated.png 700w, http://blogs.ltd.local/wp-content/uploads/2014/02/AzureSDK1.7Deprecated-300x80.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a>
+  <a href="/wp-content/uploads/2014/02/AzureSDK1.7Deprecated.png"><img src="/wp-content/uploads/2014/02/AzureSDK1.7Deprecated.png" alt="MSDN Documents 1.7 as Deprecated, 3.0 as Recommended" width="700" height="187" class="size-full wp-image-2408" srcset="/wp-content/uploads/2014/02/AzureSDK1.7Deprecated.png 700w, /wp-content/uploads/2014/02/AzureSDK1.7Deprecated-300x80.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a>
   
   <p class="wp-caption-text">
     MSDN Documents 1.7 as Deprecated, 3.0 as Recommended

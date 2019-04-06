@@ -41,7 +41,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://blogs.ltd.local/summary.php">All Blogs</a>
+        <s><a href="summary.php">All Blogs</a></s> (not available in the archive)
       </td>
       
       <td>
@@ -61,7 +61,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://forum.ltd.local/search.php?search_id=active_topics">View active topics</a>
+        <s><a href="http://forum.lessthandot.com/search.php?search_id=active_topics">View active topics</a></s> (not available in the archive)
       </td>
       
       <td>
@@ -71,7 +71,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://ltd.local/">Launchpad</a>
+        <s><a href="http://www.lessthandot.com">Launchpad</a></s> (not available in the archive)
       </td>
       
       <td>
@@ -81,7 +81,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://sqlcop.ltd.local/">SqlCop</a>
+        <s><a href="http://sqlcop.lessthandot.com/">SqlCop</a></s> (not available in the archive)
       </td>
       
       <td>
@@ -101,7 +101,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://ltd.local/">Index page</a>
+        <s><a href="http://lessthandot.com/">Index page</a></s> (not available in the archive)
       </td>
       
       <td>
@@ -201,7 +201,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://wiki.ltd.local/index.php/Kill_All_Active_Connections_To_A_Database">Kill All Active Connections To A Database &#8211; Wiki</a>
+        <s><a href="http://wiki.lessthandot.com/index.php/Kill_All_Active_Connections_To_A_Database">Kill All Active Connections To A Database &#8211; Wiki</a></s> (not available in the archive)
       </td>
       
       <td>
@@ -221,7 +221,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List">SQL Server Programming Hacks &#8211; 100+ List &#8211; Wiki</a>
+        <s><a href="http://wiki.lessthandot.com/index.php/SQL_Server_Programming_Hacks_-_100%2B_List">SQL Server Programming Hacks &#8211; 100+ List &#8211; Wiki</a></s> (not available in the archive)
       </td>
       
       <td>
@@ -231,7 +231,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://forum.ltd.local/viewforum.php?f=102">View forum &#8211; Programmer Puzzles</a>
+        <s><a href="http://forum.lessthandot.com/viewforum.php?f=102">View forum &#8211; Programmer Puzzles</a></s> (not available in the archive)
       </td>
       
       <td>

@@ -26,7 +26,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/blockselected.jpg"><img class="alignnone wp-image-2976" src="http://blogs.ltd.local/wp-content/uploads/2014/09/blockselected-243x300.jpg" alt="blockselected" width="308" height="381" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/blockselected-243x300.jpg 243w, http://blogs.ltd.local/wp-content/uploads/2014/09/blockselected.jpg 571w" sizes="(max-width: 308px) 100vw, 308px" /></a>
+  <a href="/wp-content/uploads/2014/09/blockselected.jpg"><img class="alignnone wp-image-2976" src="/wp-content/uploads/2014/09/blockselected-243x300.jpg" alt="blockselected" width="308" height="381" srcset="/wp-content/uploads/2014/09/blockselected-243x300.jpg 243w, /wp-content/uploads/2014/09/blockselected.jpg 571w" sizes="(max-width: 308px) 100vw, 308px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -83,7 +83,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_01.jpg"><img class="alignnone size-medium wp-image-2977" src="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_01-268x300.jpg" alt="update_statement_01" width="268" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_01-268x300.jpg 268w, http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_01.jpg 581w" sizes="(max-width: 268px) 100vw, 268px" /></a>
+  <a href="/wp-content/uploads/2014/09/update_statement_01.jpg"><img class="alignnone size-medium wp-image-2977" src="/wp-content/uploads/2014/09/update_statement_01-268x300.jpg" alt="update_statement_01" width="268" height="300" srcset="/wp-content/uploads/2014/09/update_statement_01-268x300.jpg 268w, /wp-content/uploads/2014/09/update_statement_01.jpg 581w" sizes="(max-width: 268px) 100vw, 268px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -91,7 +91,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_02.jpg"><img class="alignnone size-medium wp-image-2978" src="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_02-273x300.jpg" alt="update_statement_02" width="273" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_02-273x300.jpg 273w, http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_02.jpg 589w" sizes="(max-width: 273px) 100vw, 273px" /></a>
+  <a href="/wp-content/uploads/2014/09/update_statement_02.jpg"><img class="alignnone size-medium wp-image-2978" src="/wp-content/uploads/2014/09/update_statement_02-273x300.jpg" alt="update_statement_02" width="273" height="300" srcset="/wp-content/uploads/2014/09/update_statement_02-273x300.jpg 273w, /wp-content/uploads/2014/09/update_statement_02.jpg 589w" sizes="(max-width: 273px) 100vw, 273px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -103,7 +103,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_03.jpg"><img class="alignnone size-medium wp-image-2979" src="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_03-300x237.jpg" alt="update_statement_03" width="300" height="237" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_03-300x237.jpg 300w, http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_03.jpg 827w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2014/09/update_statement_03.jpg"><img class="alignnone size-medium wp-image-2979" src="/wp-content/uploads/2014/09/update_statement_03-300x237.jpg" alt="update_statement_03" width="300" height="237" srcset="/wp-content/uploads/2014/09/update_statement_03-300x237.jpg 300w, /wp-content/uploads/2014/09/update_statement_03.jpg 827w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -111,7 +111,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_04.jpg"><img class="alignnone size-medium wp-image-2980" src="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_04-276x300.jpg" alt="update_statement_04" width="276" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_04-276x300.jpg 276w, http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_04.jpg 590w" sizes="(max-width: 276px) 100vw, 276px" /></a>
+  <a href="/wp-content/uploads/2014/09/update_statement_04.jpg"><img class="alignnone size-medium wp-image-2980" src="/wp-content/uploads/2014/09/update_statement_04-276x300.jpg" alt="update_statement_04" width="276" height="300" srcset="/wp-content/uploads/2014/09/update_statement_04-276x300.jpg 276w, /wp-content/uploads/2014/09/update_statement_04.jpg 590w" sizes="(max-width: 276px) 100vw, 276px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -119,7 +119,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_05.jpg"><img class="alignnone size-medium wp-image-2981" src="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_05-268x300.jpg" alt="update_statement_05" width="268" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_05-268x300.jpg 268w, http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_05.jpg 571w" sizes="(max-width: 268px) 100vw, 268px" /></a>
+  <a href="/wp-content/uploads/2014/09/update_statement_05.jpg"><img class="alignnone size-medium wp-image-2981" src="/wp-content/uploads/2014/09/update_statement_05-268x300.jpg" alt="update_statement_05" width="268" height="300" srcset="/wp-content/uploads/2014/09/update_statement_05-268x300.jpg 268w, /wp-content/uploads/2014/09/update_statement_05.jpg 571w" sizes="(max-width: 268px) 100vw, 268px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -131,7 +131,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_06.jpg"><img class="alignnone size-medium wp-image-2982" src="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_06-286x300.jpg" alt="update_statement_06" width="286" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_06-286x300.jpg 286w, http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_06.jpg 584w" sizes="(max-width: 286px) 100vw, 286px" /></a>
+  <a href="/wp-content/uploads/2014/09/update_statement_06.jpg"><img class="alignnone size-medium wp-image-2982" src="/wp-content/uploads/2014/09/update_statement_06-286x300.jpg" alt="update_statement_06" width="286" height="300" srcset="/wp-content/uploads/2014/09/update_statement_06-286x300.jpg 286w, /wp-content/uploads/2014/09/update_statement_06.jpg 584w" sizes="(max-width: 286px) 100vw, 286px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -139,7 +139,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_07.jpg"><img class="alignnone size-medium wp-image-2973" src="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_07-280x300.jpg" alt="update_statement_07" width="280" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_07-280x300.jpg 280w, http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_07.jpg 573w" sizes="(max-width: 280px) 100vw, 280px" /></a>
+  <a href="/wp-content/uploads/2014/09/update_statement_07.jpg"><img class="alignnone size-medium wp-image-2973" src="/wp-content/uploads/2014/09/update_statement_07-280x300.jpg" alt="update_statement_07" width="280" height="300" srcset="/wp-content/uploads/2014/09/update_statement_07-280x300.jpg 280w, /wp-content/uploads/2014/09/update_statement_07.jpg 573w" sizes="(max-width: 280px) 100vw, 280px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -147,7 +147,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_08.jpg"><img class="alignnone size-medium wp-image-2974" src="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_08-273x300.jpg" alt="update_statement_08" width="273" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_08-273x300.jpg 273w, http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_08.jpg 565w" sizes="(max-width: 273px) 100vw, 273px" /></a>
+  <a href="/wp-content/uploads/2014/09/update_statement_08.jpg"><img class="alignnone size-medium wp-image-2974" src="/wp-content/uploads/2014/09/update_statement_08-273x300.jpg" alt="update_statement_08" width="273" height="300" srcset="/wp-content/uploads/2014/09/update_statement_08-273x300.jpg 273w, /wp-content/uploads/2014/09/update_statement_08.jpg 565w" sizes="(max-width: 273px) 100vw, 273px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -155,7 +155,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_09.jpg"><img class="alignnone size-medium wp-image-2975" src="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_09-296x300.jpg" alt="update_statement_09" width="296" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_09-296x300.jpg 296w, http://blogs.ltd.local/wp-content/uploads/2014/09/update_statement_09.jpg 640w" sizes="(max-width: 296px) 100vw, 296px" /></a>
+  <a href="/wp-content/uploads/2014/09/update_statement_09.jpg"><img class="alignnone size-medium wp-image-2975" src="/wp-content/uploads/2014/09/update_statement_09-296x300.jpg" alt="update_statement_09" width="296" height="300" srcset="/wp-content/uploads/2014/09/update_statement_09-296x300.jpg 296w, /wp-content/uploads/2014/09/update_statement_09.jpg 640w" sizes="(max-width: 296px) 100vw, 296px" /></a>
 </p>
 
 <p style="text-align: justify">

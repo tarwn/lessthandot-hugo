@@ -41,7 +41,7 @@ All of the code for the fake application and tests is on github at [tarwn/Blog_R
 
 The fake application looks like this:
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/11/SeleniumKnockoutSampleApp.png" alt="SeleniumKnockoutSampleApp" width="639" height="864" class="aligncenter size-full wp-image-3090" srcset="http://blogs.ltd.local/wp-content/uploads/2014/11/SeleniumKnockoutSampleApp.png 639w, http://blogs.ltd.local/wp-content/uploads/2014/11/SeleniumKnockoutSampleApp-221x300.png 221w" sizes="(max-width: 639px) 100vw, 639px" />][9]
+[<img src="/wp-content/uploads/2014/11/SeleniumKnockoutSampleApp.png" alt="SeleniumKnockoutSampleApp" width="639" height="864" class="aligncenter size-full wp-image-3090" srcset="/wp-content/uploads/2014/11/SeleniumKnockoutSampleApp.png 639w, /wp-content/uploads/2014/11/SeleniumKnockoutSampleApp-221x300.png 221w" sizes="(max-width: 639px) 100vw, 639px" />][9]
 
 The ViewModel behind this view contains all of the properties necessary to display the screen and it&#8217;s actions:
 
@@ -244,7 +244,7 @@ In a larger test suite, I would move this test code to a single startup method f
 
 Running the same 3 tests for each of the 4 methods across two different browsers helped see the difference between startup and ongoing performance costs.
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2014/11/SeleniumRequireJsResults.png" alt="SeleniumRequireJsResults" width="584" height="645" class="aligncenter size-full wp-image-3098" srcset="http://blogs.ltd.local/wp-content/uploads/2014/11/SeleniumRequireJsResults.png 584w, http://blogs.ltd.local/wp-content/uploads/2014/11/SeleniumRequireJsResults-271x300.png 271w" sizes="(max-width: 584px) 100vw, 584px" />][17]
+[<img src="/wp-content/uploads/2014/11/SeleniumRequireJsResults.png" alt="SeleniumRequireJsResults" width="584" height="645" class="aligncenter size-full wp-image-3098" srcset="/wp-content/uploads/2014/11/SeleniumRequireJsResults.png 584w, /wp-content/uploads/2014/11/SeleniumRequireJsResults-271x300.png 271w" sizes="(max-width: 584px) 100vw, 584px" />][17]
 
 We pick up quite a bit of performance when we remove the backend server from the tests. one other thing to note is that the startup time for Phantom is quite a bit faster, but there is a slightly higher ongoing cost.
 
@@ -262,7 +262,7 @@ Switching from a full integration focus to more of a View focus did make things 
  [6]: http://knockoutjs.com/
  [7]: http://requirejs.org/
  [8]: https://github.com/tarwn/Blog_RequireJSandSelenium "tarwn/Blog_RequireJSandSelenium on github"
- [9]: http://blogs.ltd.local/wp-content/uploads/2014/11/SeleniumKnockoutSampleApp.png
+ [9]: /wp-content/uploads/2014/11/SeleniumKnockoutSampleApp.png
  [10]: https://github.com/tarwn/Blog_RequireJSandSelenium/tree/master/SampleWebSite "SampleWebSite on github"
  [11]: https://github.com/tarwn/Blog_RequireJSandSelenium/blob/master/SampleWebSite.UITests/IndexTests.FullIntegration.cs
  [12]: https://github.com/tarwn/Blog_RequireJSandSelenium/blob/master/SampleWebSite.UITests/IndexTests.ClientSideInjection.cs
@@ -270,4 +270,4 @@ Switching from a full integration focus to more of a View focus did make things 
  [14]: https://github.com/tarwn/Blog_RequireJSandSelenium/blob/master/SampleWebSite.UITests/IndexTests.NancyServerWithScriptInjection.cs
  [15]: https://github.com/tarwn/Blog_RequireJSandSelenium/blob/master/SampleWebSite.UITests/NancyServer/LocalServerBootstrapper.cs "/SampleWebSite.UITests/NancyServer/LocalServerBootstrapper.cs on github"
  [16]: https://github.com/tarwn/Blog_RequireJSandSelenium/blob/master/SampleWebSite.UITests/NancyServer/LocalServer.cs "/SampleWebSite.UITests/NancyServer/LocalServer.cs on github"
- [17]: http://blogs.ltd.local/wp-content/uploads/2014/11/SeleniumRequireJsResults.png
+ [17]: /wp-content/uploads/2014/11/SeleniumRequireJsResults.png

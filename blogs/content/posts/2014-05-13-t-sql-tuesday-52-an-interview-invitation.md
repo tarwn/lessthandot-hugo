@@ -21,7 +21,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  <a href="http://borishristov.com/blog/t-sql-tuesday-54-interview-invitation/"><img class="alignnone size-full wp-image-2241" alt="TSQL2sday" src="http://blogs.ltd.local/wp-content/uploads/2014/01/TSQL2sday.png" width="133" height="134" /></a>
+  <a href="http://borishristov.com/blog/t-sql-tuesday-54-interview-invitation/"><img class="alignnone size-full wp-image-2241" alt="TSQL2sday" src="/wp-content/uploads/2014/01/TSQL2sday.png" width="133" height="134" /></a>
 </p>
 
 <p style="text-align: justify">

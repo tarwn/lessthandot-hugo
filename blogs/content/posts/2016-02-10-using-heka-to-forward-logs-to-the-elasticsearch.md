@@ -16,7 +16,7 @@ Sometimes twitter can be useful.
 
 Yesterday I asked how people forward their linux logs to the logstash/elasticsearch server. And got this as one of the replies. 
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2016/02/twitter-195x300.png" alt="twitter" width="195" height="300" class="alignnone size-medium wp-image-4354" srcset="http://blogs.ltd.local/wp-content/uploads/2016/02/twitter-195x300.png 195w, http://blogs.ltd.local/wp-content/uploads/2016/02/twitter.png 303w" sizes="(max-width: 195px) 100vw, 195px" />][1]
+[<img src="/wp-content/uploads/2016/02/twitter-195x300.png" alt="twitter" width="195" height="300" class="alignnone size-medium wp-image-4354" srcset="/wp-content/uploads/2016/02/twitter-195x300.png 195w, /wp-content/uploads/2016/02/twitter.png 303w" sizes="(max-width: 195px) 100vw, 195px" />][1]
 
 Thanks Dan Barua and James Nugent. 
 
@@ -43,6 +43,6 @@ Or you can reboot the server if you&#8217;re a windows admin.
 
 The logs will be in the logstash-* index.
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2016/02/twitter.png
+ [1]: /wp-content/uploads/2016/02/twitter.png
  [2]: http://blog.arnoudvermeer.nl/post/112602966185/replacing-logstash-with-heka
  [3]: https://github.com/mozilla-services/heka/releases

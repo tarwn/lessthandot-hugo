@@ -38,7 +38,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/08/error.png"><img class="alignnone size-full wp-image-2913" src="http://blogs.ltd.local/wp-content/uploads/2014/08/error.png" alt="error" width="297" height="120" /></a>
+  <a href="/wp-content/uploads/2014/08/error.png"><img class="alignnone size-full wp-image-2913" src="/wp-content/uploads/2014/08/error.png" alt="error" width="297" height="120" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -58,7 +58,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/08/versions.png"><img class="alignnone size-full wp-image-2916" src="http://blogs.ltd.local/wp-content/uploads/2014/08/versions.png" alt="versions" width="286" height="327" srcset="http://blogs.ltd.local/wp-content/uploads/2014/08/versions.png 286w, http://blogs.ltd.local/wp-content/uploads/2014/08/versions-262x300.png 262w" sizes="(max-width: 286px) 100vw, 286px" /></a>
+  <a href="/wp-content/uploads/2014/08/versions.png"><img class="alignnone size-full wp-image-2916" src="/wp-content/uploads/2014/08/versions.png" alt="versions" width="286" height="327" srcset="/wp-content/uploads/2014/08/versions.png 286w, /wp-content/uploads/2014/08/versions-262x300.png 262w" sizes="(max-width: 286px) 100vw, 286px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -70,7 +70,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/08/expression.png"><img class="alignnone size-full wp-image-2914" src="http://blogs.ltd.local/wp-content/uploads/2014/08/expression.png" alt="expression" width="568" height="501" srcset="http://blogs.ltd.local/wp-content/uploads/2014/08/expression.png 568w, http://blogs.ltd.local/wp-content/uploads/2014/08/expression-300x264.png 300w" sizes="(max-width: 568px) 100vw, 568px" /></a>
+  <a href="/wp-content/uploads/2014/08/expression.png"><img class="alignnone size-full wp-image-2914" src="/wp-content/uploads/2014/08/expression.png" alt="expression" width="568" height="501" srcset="/wp-content/uploads/2014/08/expression.png 568w, /wp-content/uploads/2014/08/expression-300x264.png 300w" sizes="(max-width: 568px) 100vw, 568px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -82,7 +82,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/08/history.png"><img class="alignnone size-full wp-image-2915" src="http://blogs.ltd.local/wp-content/uploads/2014/08/history.png" alt="history" width="484" height="123" srcset="http://blogs.ltd.local/wp-content/uploads/2014/08/history.png 484w, http://blogs.ltd.local/wp-content/uploads/2014/08/history-300x76.png 300w" sizes="(max-width: 484px) 100vw, 484px" /></a>
+  <a href="/wp-content/uploads/2014/08/history.png"><img class="alignnone size-full wp-image-2915" src="/wp-content/uploads/2014/08/history.png" alt="history" width="484" height="123" srcset="/wp-content/uploads/2014/08/history.png 484w, /wp-content/uploads/2014/08/history-300x76.png 300w" sizes="(max-width: 484px) 100vw, 484px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -90,7 +90,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/08/bimloverwrite.png"><img class="alignnone size-full wp-image-2917" src="http://blogs.ltd.local/wp-content/uploads/2014/08/bimloverwrite.png" alt="bimloverwrite" width="652" height="139" srcset="http://blogs.ltd.local/wp-content/uploads/2014/08/bimloverwrite.png 652w, http://blogs.ltd.local/wp-content/uploads/2014/08/bimloverwrite-300x63.png 300w" sizes="(max-width: 652px) 100vw, 652px" /></a>
+  <a href="/wp-content/uploads/2014/08/bimloverwrite.png"><img class="alignnone size-full wp-image-2917" src="/wp-content/uploads/2014/08/bimloverwrite.png" alt="bimloverwrite" width="652" height="139" srcset="/wp-content/uploads/2014/08/bimloverwrite.png 652w, /wp-content/uploads/2014/08/bimloverwrite-300x63.png 300w" sizes="(max-width: 652px) 100vw, 652px" /></a>
 </p>
 
 <p style="text-align: justify">

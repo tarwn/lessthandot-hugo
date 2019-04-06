@@ -155,7 +155,7 @@ Once I have the configurations set up, my tests run successfully from karma. I h
 `node .\node_modules\karma\bin\karma start karma.conf.js --single-run`
 
 <div id="attachment_2492" style="width: 577px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/03/karma.png"><img src="http://blogs.ltd.local/wp-content/uploads/2014/03/karma.png" alt="Successful Tests w/ Non-Impacting Errors" width="567" class="size-full wp-image-2492" srcset="http://blogs.ltd.local/wp-content/uploads/2014/03/karma.png 567w, http://blogs.ltd.local/wp-content/uploads/2014/03/karma-300x113.png 300w" sizes="(max-width: 567px) 100vw, 567px" /></a>
+  <a href="/wp-content/uploads/2014/03/karma.png"><img src="/wp-content/uploads/2014/03/karma.png" alt="Successful Tests w/ Non-Impacting Errors" width="567" class="size-full wp-image-2492" srcset="/wp-content/uploads/2014/03/karma.png 567w, /wp-content/uploads/2014/03/karma-300x113.png 300w" sizes="(max-width: 567px) 100vw, 567px" /></a>
   
   <p class="wp-caption-text">
     Successful Tests w/ Non-Impacting Errors
@@ -167,7 +167,7 @@ I was getting errors about missing timestamps when Squire loads some of the depe
 `node .\node_modules\karma\bin\karma start karma.conf.js --single-run`
 
 <div id="attachment_2543" style="width: 815px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/04/karma2.png"><img src="http://blogs.ltd.local/wp-content/uploads/2014/04/karma2.png" alt="Karma Run - Take 2 - (Node hasn&#039;t eaten my blue background in this window)" width="805" height="88" class="size-full wp-image-2543" srcset="http://blogs.ltd.local/wp-content/uploads/2014/04/karma2.png 805w, http://blogs.ltd.local/wp-content/uploads/2014/04/karma2-300x32.png 300w" sizes="(max-width: 805px) 100vw, 805px" /></a>
+  <a href="/wp-content/uploads/2014/04/karma2.png"><img src="/wp-content/uploads/2014/04/karma2.png" alt="Karma Run - Take 2 - (Node hasn&#039;t eaten my blue background in this window)" width="805" height="88" class="size-full wp-image-2543" srcset="/wp-content/uploads/2014/04/karma2.png 805w, /wp-content/uploads/2014/04/karma2-300x32.png 300w" sizes="(max-width: 805px) 100vw, 805px" /></a>
   
   <p class="wp-caption-text">
     Karma Run &#8211; Take 2 &#8211; (Node hasn&#8217;t eaten my blue background in this window)

@@ -41,7 +41,7 @@ Building a product in my spare time meant I was working within some tight constr
 One of the biggest barriers was all of the cool things I wanted to do with the system once it was built. Faced with &#8220;how do I make this database migration work&#8221; versus &#8220;how can I use machine learning to do that cool thing&#8221;, I would get sucked into daydreaming about the cool thing.
 
 <div id="attachment_9050" style="width: 610px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_11-600x320.png" alt="Early UI Sketches for User Scenarios + Test Results" width="600" height="320" class="size-medium-width wp-image-9050" srcset="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_11-600x320.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_11-300x160.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_11-562x300.png 562w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_11.png 695w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="/wp-content/uploads/2018/03/launchreadypost_11-600x320.png" alt="Early UI Sketches for User Scenarios + Test Results" width="600" height="320" class="size-medium-width wp-image-9050" srcset="/wp-content/uploads/2018/03/launchreadypost_11-600x320.png 600w, /wp-content/uploads/2018/03/launchreadypost_11-300x160.png 300w, /wp-content/uploads/2018/03/launchreadypost_11-562x300.png 562w, /wp-content/uploads/2018/03/launchreadypost_11.png 695w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Early UI Sketches for User Scenarios + Test Results
@@ -51,7 +51,7 @@ One of the biggest barriers was all of the cool things I wanted to do with the s
 To get past the distractions, I let myself have a short 10-15 minute budget of time to draw or write the idea down. The key ingredients were (1) time-boxed permission to explore the idea, and (2) some form of storage (drawing or typing in OneNote). The time box forced focus but also provided time to explore and capture more than my poor short-term memory would normally support.
 
 <div id="attachment_9048" style="width: 610px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_10-600x309.png" alt="Sketching Architecture Ideas" width="600" height="309" class="size-medium-width wp-image-9048" srcset="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_10-600x309.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_10-300x155.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_10-768x396.png 768w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_10-582x300.png 582w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_10.png 898w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="/wp-content/uploads/2018/03/launchreadypost_10-600x309.png" alt="Sketching Architecture Ideas" width="600" height="309" class="size-medium-width wp-image-9048" srcset="/wp-content/uploads/2018/03/launchreadypost_10-600x309.png 600w, /wp-content/uploads/2018/03/launchreadypost_10-300x155.png 300w, /wp-content/uploads/2018/03/launchreadypost_10-768x396.png 768w, /wp-content/uploads/2018/03/launchreadypost_10-582x300.png 582w, /wp-content/uploads/2018/03/launchreadypost_10.png 898w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Sketching Architecture Ideas
@@ -65,7 +65,7 @@ Once I was done, I would save my thinking and move on, satisfied that I had give
 Some of the things I needed were so undefined I couldn&#8217;t figure out how to build them. I would find myself banging my head against the idea over and over, unable to make progress. When stuck, ship something. Then do it again.
 
 <div id="attachment_8945" style="width: 610px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_04-600x124.png" alt="Push the Button: TeamCity deployment pipeline for LaunchReady (4 servers )" width="600" height="124" class="size-medium-width wp-image-8945" srcset="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_04-600x124.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_04-300x62.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_04-768x158.png 768w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_04-1024x211.png 1024w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_04.png 1100w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="/wp-content/uploads/2018/02/launchreadypost_04-600x124.png" alt="Push the Button: TeamCity deployment pipeline for LaunchReady (4 servers )" width="600" height="124" class="size-medium-width wp-image-8945" srcset="/wp-content/uploads/2018/02/launchreadypost_04-600x124.png 600w, /wp-content/uploads/2018/02/launchreadypost_04-300x62.png 300w, /wp-content/uploads/2018/02/launchreadypost_04-768x158.png 768w, /wp-content/uploads/2018/02/launchreadypost_04-1024x211.png 1024w, /wp-content/uploads/2018/02/launchreadypost_04.png 1100w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Push the Button: TeamCity deployment pipeline for LaunchReady (4+ &#8220;servers&#8221;)
@@ -83,7 +83,7 @@ Luckily this work doesn&#8217;t conflict with my day job, or else I probably wou
 Early on, I worked when I had time. When I was with family I would be working through ideas on the project, when I was working on the project I was worried about not spending time with the family, and I never had time for a book or game. In general it was ineffective all around.
 
 <div id="attachment_9059" style="width: 280px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_12-270x300.png" alt="Time Schedule Template" width="270" height="300" class="size-medium-height wp-image-9059" srcset="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_12-270x300.png 270w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_12-768x854.png 768w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_12-600x667.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_12.png 812w" sizes="(max-width: 270px) 100vw, 270px" />
+  <img src="/wp-content/uploads/2018/03/launchreadypost_12-270x300.png" alt="Time Schedule Template" width="270" height="300" class="size-medium-height wp-image-9059" srcset="/wp-content/uploads/2018/03/launchreadypost_12-270x300.png 270w, /wp-content/uploads/2018/03/launchreadypost_12-768x854.png 768w, /wp-content/uploads/2018/03/launchreadypost_12-600x667.png 600w, /wp-content/uploads/2018/03/launchreadypost_12.png 812w" sizes="(max-width: 270px) 100vw, 270px" />
   
   <p class="wp-caption-text">
     Time Schedule Template
@@ -93,7 +93,7 @@ Early on, I worked when I had time. When I was with family I would be working th
 So I made a schedule. I mapped out my week in 30 minute increments, creating a template for activities I would do each week. I included work (red), minimum family time (green), some time with friends on the weekends (blue), chores (orange), and some small and medium size blocks of project time (purple). Everything else I left blank. 
 
 <div id="attachment_8984" style="width: 305px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_08-295x300.png" alt="Log from Random Week of 2017" width="295" height="300" class="size-medium-height wp-image-8984" srcset="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_08-295x300.png 295w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_08-768x781.png 768w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_08-600x610.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_08.png 891w" sizes="(max-width: 295px) 100vw, 295px" />
+  <img src="/wp-content/uploads/2018/02/launchreadypost_08-295x300.png" alt="Log from Random Week of 2017" width="295" height="300" class="size-medium-height wp-image-8984" srcset="/wp-content/uploads/2018/02/launchreadypost_08-295x300.png 295w, /wp-content/uploads/2018/02/launchreadypost_08-768x781.png 768w, /wp-content/uploads/2018/02/launchreadypost_08-600x610.png 600w, /wp-content/uploads/2018/02/launchreadypost_08.png 891w" sizes="(max-width: 295px) 100vw, 295px" />
   
   <p class="wp-caption-text">
     A selected week in 2017
@@ -107,7 +107,7 @@ Each Sunday, I would make a copy of the template and start logging my week. It n
 Even with scheduled time, sometimes you sit down on a Tuesday night after a long day and just can&#8217;t get started. There&#8217;s still so much to do, I&#8217;m tired from the day, nothing seems interesting, &#8230; So I would pick one small ticket for the marketing site or the application and I would do it. Then I would pick up one more. And before I knew it it was 10PM and I had shipped 3.5 hours of features or website improvements.
 
 <div id="attachment_8987" style="width: 329px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_09.png" alt="Some Easy 1 Hour tasks" width="319" height="376" class="size-full wp-image-8987" srcset="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_09.png 319w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_09-255x300.png 255w" sizes="(max-width: 319px) 100vw, 319px" />
+  <img src="/wp-content/uploads/2018/02/launchreadypost_09.png" alt="Some Easy 1 Hour tasks" width="319" height="376" class="size-full wp-image-8987" srcset="/wp-content/uploads/2018/02/launchreadypost_09.png 319w, /wp-content/uploads/2018/02/launchreadypost_09-255x300.png 255w" sizes="(max-width: 319px) 100vw, 319px" />
   
   <p class="wp-caption-text">
     Some Easy 1 Hour tasks
@@ -124,7 +124,7 @@ Which ended up as a mess, with a lot of pieces that didn&#8217;t fit together.
 
 So I stopped and closed out the functional task list and replaced it with bits of user interface and exposed features that I would build from the top all the way into the back-end database or distributed agents. 
 
-<img src="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_05-600x79.png" alt="LaunchReady - Completed Tasks View" width="600" height="79" class="aligncenter size-medium-width wp-image-8946" srcset="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_05-600x79.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_05-300x39.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_05-768x101.png 768w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_05.png 854w" sizes="(max-width: 600px) 100vw, 600px" />
+<img src="/wp-content/uploads/2018/02/launchreadypost_05-600x79.png" alt="LaunchReady - Completed Tasks View" width="600" height="79" class="aligncenter size-medium-width wp-image-8946" srcset="/wp-content/uploads/2018/02/launchreadypost_05-600x79.png 600w, /wp-content/uploads/2018/02/launchreadypost_05-300x39.png 300w, /wp-content/uploads/2018/02/launchreadypost_05-768x101.png 768w, /wp-content/uploads/2018/02/launchreadypost_05.png 854w" sizes="(max-width: 600px) 100vw, 600px" />
 
 And because I needed small tasks to build momentum on tough days, I sliced these very thin so I could accomplish them and ship something small on rough days or on the two nights I only had 1.5 hours of coding time. 
 
@@ -135,7 +135,7 @@ But keeping the tasks organized became overwhelming, so&#8230;.
 I started with a table of features in OneNote that was connected to a bunch of functional tasks. 
 
 <div id="attachment_9068" style="width: 393px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_13-383x300.png" alt="LaunchReady Feature List, Take 1" width="383" height="300" class="size-medium-height wp-image-9068" srcset="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_13-383x300.png 383w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_13-300x235.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_13.png 463w" sizes="(max-width: 383px) 100vw, 383px" />
+  <img src="/wp-content/uploads/2018/03/launchreadypost_13-383x300.png" alt="LaunchReady Feature List, Take 1" width="383" height="300" class="size-medium-height wp-image-9068" srcset="/wp-content/uploads/2018/03/launchreadypost_13-383x300.png 383w, /wp-content/uploads/2018/03/launchreadypost_13-300x235.png 300w, /wp-content/uploads/2018/03/launchreadypost_13.png 463w" sizes="(max-width: 383px) 100vw, 383px" />
   
   <p class="wp-caption-text">
     LaunchReady Feature List, Take 1
@@ -145,7 +145,7 @@ I started with a table of features in OneNote that was connected to a bunch of f
 This became overwhelming, so I moved them all to Trello and added even more functional tasks. When I ditched the functional tasks and started trying to identify small features, Trello became a mess. Then I found [Clubhouse][1], which was perfect (seriously, go use this and give them money). 
 
 <div id="attachment_9070" style="width: 610px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_14-600x178.png" alt="LaunchReady - Final Task System" width="600" height="178" class="size-medium-width wp-image-9070" srcset="http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_14-600x178.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_14-300x89.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_14-768x227.png 768w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_14-1024x303.png 1024w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_14-1014x300.png 1014w, http://blogs.ltd.local/wp-content/uploads/2018/03/launchreadypost_14.png 1389w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="/wp-content/uploads/2018/03/launchreadypost_14-600x178.png" alt="LaunchReady - Final Task System" width="600" height="178" class="size-medium-width wp-image-9070" srcset="/wp-content/uploads/2018/03/launchreadypost_14-600x178.png 600w, /wp-content/uploads/2018/03/launchreadypost_14-300x89.png 300w, /wp-content/uploads/2018/03/launchreadypost_14-768x227.png 768w, /wp-content/uploads/2018/03/launchreadypost_14-1024x303.png 1024w, /wp-content/uploads/2018/03/launchreadypost_14-1014x300.png 1014w, /wp-content/uploads/2018/03/launchreadypost_14.png 1389w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     LaunchReady &#8211; Final Task System
@@ -155,7 +155,7 @@ This became overwhelming, so I moved them all to Trello and added even more func
 Clubhouse was a nice balance between the disconnected set of cards in Trello and something overboard like Jira. I used Epics to break huge features into much smaller, executable bites (still vertical slices). I used the story points for a general guesstimate of sizing, which helped break some of those down even further. I used a Milestone for the 3-4 epics I would need for an MVP and then as I finished things I got to see the charts reflect my progress, which gave me momentum for the next thing. 
 
 <div id="attachment_8947" style="width: 610px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_06-600x327.png" alt="(Ignore the dashed flightline, I can&#039;t go back to Sept to screenshot this better)" width="600" height="327" class="size-medium-width wp-image-8947" srcset="http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_06-600x327.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_06-300x164.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_06-550x300.png 550w, http://blogs.ltd.local/wp-content/uploads/2018/02/launchreadypost_06.png 682w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="/wp-content/uploads/2018/02/launchreadypost_06-600x327.png" alt="(Ignore the dashed flightline, I can&#039;t go back to Sept to screenshot this better)" width="600" height="327" class="size-medium-width wp-image-8947" srcset="/wp-content/uploads/2018/02/launchreadypost_06-600x327.png 600w, /wp-content/uploads/2018/02/launchreadypost_06-300x164.png 300w, /wp-content/uploads/2018/02/launchreadypost_06-550x300.png 550w, /wp-content/uploads/2018/02/launchreadypost_06.png 682w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     (Ignore the dashed flightline, I can&#8217;t go back to Sept to screenshot this better)

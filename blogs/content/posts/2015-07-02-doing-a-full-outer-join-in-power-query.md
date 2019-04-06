@@ -30,7 +30,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeSource.jpg"><img class="alignnone size-full wp-image-3455" src="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeSource.jpg" alt="MergeSource" width="478" height="135" srcset="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeSource.jpg 478w, http://blogs.ltd.local/wp-content/uploads/2015/07/MergeSource-300x84.jpg 300w" sizes="(max-width: 478px) 100vw, 478px" /></a>
+  <a href="/wp-content/uploads/2015/07/MergeSource.jpg"><img class="alignnone size-full wp-image-3455" src="/wp-content/uploads/2015/07/MergeSource.jpg" alt="MergeSource" width="478" height="135" srcset="/wp-content/uploads/2015/07/MergeSource.jpg 478w, /wp-content/uploads/2015/07/MergeSource-300x84.jpg 300w" sizes="(max-width: 478px) 100vw, 478px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -38,7 +38,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeGUI.jpg"><img class="alignnone wp-image-3456" src="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeGUI-e1435818852971.jpg" alt="MergeGUI" width="800" height="670" srcset="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeGUI-e1435818852971.jpg 871w, http://blogs.ltd.local/wp-content/uploads/2015/07/MergeGUI-e1435818852971-300x251.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="/wp-content/uploads/2015/07/MergeGUI.jpg"><img class="alignnone wp-image-3456" src="/wp-content/uploads/2015/07/MergeGUI-e1435818852971.jpg" alt="MergeGUI" width="800" height="670" srcset="/wp-content/uploads/2015/07/MergeGUI-e1435818852971.jpg 871w, /wp-content/uploads/2015/07/MergeGUI-e1435818852971-300x251.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -46,7 +46,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult.jpg"><img class="alignnone wp-image-3457 size-full" src="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult-e1435818919233.jpg" alt="MergeResult" width="757" height="175" srcset="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult-e1435818919233.jpg 757w, http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult-e1435818919233-300x69.jpg 300w" sizes="(max-width: 757px) 100vw, 757px" /></a>
+  <a href="/wp-content/uploads/2015/07/MergeResult.jpg"><img class="alignnone wp-image-3457 size-full" src="/wp-content/uploads/2015/07/MergeResult-e1435818919233.jpg" alt="MergeResult" width="757" height="175" srcset="/wp-content/uploads/2015/07/MergeResult-e1435818919233.jpg 757w, /wp-content/uploads/2015/07/MergeResult-e1435818919233-300x69.jpg 300w" sizes="(max-width: 757px) 100vw, 757px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -54,7 +54,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult_FullOuter.jpg"><img class="alignnone size-full wp-image-3458" src="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult_FullOuter.jpg" alt="MergeResult_FullOuter" width="902" height="187" srcset="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult_FullOuter.jpg 902w, http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult_FullOuter-300x62.jpg 300w" sizes="(max-width: 902px) 100vw, 902px" /></a>
+  <a href="/wp-content/uploads/2015/07/MergeResult_FullOuter.jpg"><img class="alignnone size-full wp-image-3458" src="/wp-content/uploads/2015/07/MergeResult_FullOuter.jpg" alt="MergeResult_FullOuter" width="902" height="187" srcset="/wp-content/uploads/2015/07/MergeResult_FullOuter.jpg 902w, /wp-content/uploads/2015/07/MergeResult_FullOuter-300x62.jpg 300w" sizes="(max-width: 902px) 100vw, 902px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -62,7 +62,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-   <a href="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult_Expand.jpg"><img class="alignnone size-full wp-image-3459" src="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult_Expand.jpg" alt="MergeResult_Expand" width="1050" height="188" srcset="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult_Expand.jpg 1050w, http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult_Expand-300x53.jpg 300w, http://blogs.ltd.local/wp-content/uploads/2015/07/MergeResult_Expand-1024x183.jpg 1024w" sizes="(max-width: 1050px) 100vw, 1050px" /></a>
+   <a href="/wp-content/uploads/2015/07/MergeResult_Expand.jpg"><img class="alignnone size-full wp-image-3459" src="/wp-content/uploads/2015/07/MergeResult_Expand.jpg" alt="MergeResult_Expand" width="1050" height="188" srcset="/wp-content/uploads/2015/07/MergeResult_Expand.jpg 1050w, /wp-content/uploads/2015/07/MergeResult_Expand-300x53.jpg 300w, /wp-content/uploads/2015/07/MergeResult_Expand-1024x183.jpg 1024w" sizes="(max-width: 1050px) 100vw, 1050px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -70,7 +70,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeFinalResult.jpg"><img class="alignnone size-full wp-image-3460" src="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeFinalResult.jpg" alt="MergeFinalResult" width="354" height="141" srcset="http://blogs.ltd.local/wp-content/uploads/2015/07/MergeFinalResult.jpg 354w, http://blogs.ltd.local/wp-content/uploads/2015/07/MergeFinalResult-300x119.jpg 300w" sizes="(max-width: 354px) 100vw, 354px" /></a>
+  <a href="/wp-content/uploads/2015/07/MergeFinalResult.jpg"><img class="alignnone size-full wp-image-3460" src="/wp-content/uploads/2015/07/MergeFinalResult.jpg" alt="MergeFinalResult" width="354" height="141" srcset="/wp-content/uploads/2015/07/MergeFinalResult.jpg 354w, /wp-content/uploads/2015/07/MergeFinalResult-300x119.jpg 300w" sizes="(max-width: 354px) 100vw, 354px" /></a>
 </p>
 
 <p style="text-align: justify">

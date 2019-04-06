@@ -19,7 +19,7 @@ At SQL Saturday Portland 2013, Russ asked me and Grant Fritchey to sit in on his
 Russ runs a &#8220;<a href="https://sqljudo.wordpress.com/monthly-dba-challenge/" target="_blank">Monthly DBA Challenge</a>&#8221; for his DBAs and his blog readers, and I love it. If you want to sharpen your DBA skills, watch for these every month! I also had the pleasure of watching Russ develop from a first-time SQL Saturday speaker into a PASS Summit speaker &#8211; congratulations Russ! I even had the pleasure of co-presenting with him at SQL Saturday Madison 2015, where we did an SSMS Showdown!
 
 <div id="attachment_3511" style="width: 611px" class="wp-caption alignright">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2015/07/jes_and_russ.jpg"><img class="wp-image-3511" src="http://blogs.ltd.local/wp-content/uploads/2015/07/jes_and_russ.jpg" alt="The SSMS Showdown gets serious" width="601" height="338" srcset="http://blogs.ltd.local/wp-content/uploads/2015/07/jes_and_russ.jpg 1024w, http://blogs.ltd.local/wp-content/uploads/2015/07/jes_and_russ-300x168.jpg 300w" sizes="(max-width: 601px) 100vw, 601px" /></a>
+  <a href="/wp-content/uploads/2015/07/jes_and_russ.jpg"><img class="wp-image-3511" src="/wp-content/uploads/2015/07/jes_and_russ.jpg" alt="The SSMS Showdown gets serious" width="601" height="338" srcset="/wp-content/uploads/2015/07/jes_and_russ.jpg 1024w, /wp-content/uploads/2015/07/jes_and_russ-300x168.jpg 300w" sizes="(max-width: 601px) 100vw, 601px" /></a>
   
   <p class="wp-caption-text">
     The SSMS Showdown gets serious

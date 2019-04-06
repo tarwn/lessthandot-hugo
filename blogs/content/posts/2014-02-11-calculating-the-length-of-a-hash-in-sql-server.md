@@ -23,7 +23,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/02/ScriptOutput.png"><img class="size-full wp-image-2345 alignnone" alt="ScriptOutput" src="http://blogs.ltd.local/wp-content/uploads/2014/02/ScriptOutput.png" width="734" height="421" srcset="http://blogs.ltd.local/wp-content/uploads/2014/02/ScriptOutput.png 734w, http://blogs.ltd.local/wp-content/uploads/2014/02/ScriptOutput-300x172.png 300w" sizes="(max-width: 734px) 100vw, 734px" /></a>
+  <a href="/wp-content/uploads/2014/02/ScriptOutput.png"><img class="size-full wp-image-2345 alignnone" alt="ScriptOutput" src="/wp-content/uploads/2014/02/ScriptOutput.png" width="734" height="421" srcset="/wp-content/uploads/2014/02/ScriptOutput.png 734w, /wp-content/uploads/2014/02/ScriptOutput-300x172.png 300w" sizes="(max-width: 734px) 100vw, 734px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -35,7 +35,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/02/hashbytes.png"><img class="alignnone size-full wp-image-2347" alt="hashbytes" src="http://blogs.ltd.local/wp-content/uploads/2014/02/hashbytes.png" width="603" height="129" srcset="http://blogs.ltd.local/wp-content/uploads/2014/02/hashbytes.png 603w, http://blogs.ltd.local/wp-content/uploads/2014/02/hashbytes-300x64.png 300w" sizes="(max-width: 603px) 100vw, 603px" /></a>
+  <a href="/wp-content/uploads/2014/02/hashbytes.png"><img class="alignnone size-full wp-image-2347" alt="hashbytes" src="/wp-content/uploads/2014/02/hashbytes.png" width="603" height="129" srcset="/wp-content/uploads/2014/02/hashbytes.png 603w, /wp-content/uploads/2014/02/hashbytes-300x64.png 300w" sizes="(max-width: 603px) 100vw, 603px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -47,7 +47,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/02/Code.png"><img class="alignnone size-full wp-image-2346" alt="Code" src="http://blogs.ltd.local/wp-content/uploads/2014/02/Code.png" width="857" height="242" srcset="http://blogs.ltd.local/wp-content/uploads/2014/02/Code.png 857w, http://blogs.ltd.local/wp-content/uploads/2014/02/Code-300x84.png 300w" sizes="(max-width: 857px) 100vw, 857px" /></a>
+  <a href="/wp-content/uploads/2014/02/Code.png"><img class="alignnone size-full wp-image-2346" alt="Code" src="/wp-content/uploads/2014/02/Code.png" width="857" height="242" srcset="/wp-content/uploads/2014/02/Code.png 857w, /wp-content/uploads/2014/02/Code-300x84.png 300w" sizes="(max-width: 857px) 100vw, 857px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -55,7 +55,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/02/hashbytes_cast.png"><img class="alignnone size-full wp-image-2348" alt="hashbytes_cast" src="http://blogs.ltd.local/wp-content/uploads/2014/02/hashbytes_cast.png" width="584" height="233" srcset="http://blogs.ltd.local/wp-content/uploads/2014/02/hashbytes_cast.png 584w, http://blogs.ltd.local/wp-content/uploads/2014/02/hashbytes_cast-300x119.png 300w" sizes="(max-width: 584px) 100vw, 584px" /></a>
+  <a href="/wp-content/uploads/2014/02/hashbytes_cast.png"><img class="alignnone size-full wp-image-2348" alt="hashbytes_cast" src="/wp-content/uploads/2014/02/hashbytes_cast.png" width="584" height="233" srcset="/wp-content/uploads/2014/02/hashbytes_cast.png 584w, /wp-content/uploads/2014/02/hashbytes_cast-300x119.png 300w" sizes="(max-width: 584px) 100vw, 584px" /></a>
 </p>
 
 <p style="text-align: justify">

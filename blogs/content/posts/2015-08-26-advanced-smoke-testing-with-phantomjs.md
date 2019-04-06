@@ -43,7 +43,7 @@ It was pretty clear I needed to be able to perform actions against a browser, ev
 
 I started with a script to test the LessThanDot.com login process. This gives me a lot of the basics I need, allowing me to come back later to add the more complex logic I will need for a modular SPA with delayed loading animations and so on. Knowing the fragility that occurs any time you write code directly against a browser page, I chose to separate my test script from the browser control logic from the page definitions. I based my abstractions on the [PageObject][3] pattern to define and maintain the individual pages separately from the control logic and the test steps.
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2015/08/AdvancedSmokeTest_00.png" alt="AdvancedSmokeTest_00" width="411" height="267" class="aligncenter size-full wp-image-4090" srcset="http://blogs.ltd.local/wp-content/uploads/2015/08/AdvancedSmokeTest_00.png 411w, http://blogs.ltd.local/wp-content/uploads/2015/08/AdvancedSmokeTest_00-300x194.png 300w" sizes="(max-width: 411px) 100vw, 411px" />][4]
+[<img src="/wp-content/uploads/2015/08/AdvancedSmokeTest_00.png" alt="AdvancedSmokeTest_00" width="411" height="267" class="aligncenter size-full wp-image-4090" srcset="/wp-content/uploads/2015/08/AdvancedSmokeTest_00.png 411w, /wp-content/uploads/2015/08/AdvancedSmokeTest_00-300x194.png 300w" sizes="(max-width: 411px) 100vw, 411px" />][4]
 
 The Test Script(s) describe the steps we want to take as we browse the site and verifies the browsing experience matches what we were expecting. The BrowserController manages the page lifecycle as a page is loaded, translating it into the matching page object that our test will interact with. The custom pages extend the Basic Page object, adding in logic to find specific element son the page, like a login button or username input.
 
@@ -329,7 +329,7 @@ This provides a base I need to start implementing smoke tests against my target 
  [1]: /index.php/webdev/uidevelopment/automated-web-testing-with-selenium-2/ "Less Than Dot: Automated Web Testing With Selenium 2"
  [2]: http://phantomjs.org/
  [3]: /index.php/webdev/uidevelopment/automated-web-testing-with-selenium-2/
- [4]: http://blogs.ltd.local/wp-content/uploads/2015/08/AdvancedSmokeTest_00.png
+ [4]: /wp-content/uploads/2015/08/AdvancedSmokeTest_00.png
  [5]: https://github.com/tarwn/Blog_PhantomExperiments/blob/master/AdvancedSmokeTest/test.js
  [6]: https://github.com/petkaantonov/bluebird/blob/master/API.md
  [7]: https://github.com/tarwn/Blog_PhantomExperiments/blob/master/AdvancedSmokeTest/browser/browserController.js

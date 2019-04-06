@@ -25,7 +25,7 @@ Special shout-out to [Jeffery Yao][3], who won the Rookie award.
 
 Let&#8217;s make 2015 an even better year with more dazzling tips!
   
-[<img class="alignnone wp-image-3068 size-full" src="http://blogs.ltd.local/wp-content/uploads/2014/11/mssql_logo.jpg" alt="mssql_logo" width="224" height="133" />][2]
+[<img class="alignnone wp-image-3068 size-full" src="/wp-content/uploads/2014/11/mssql_logo.jpg" alt="mssql_logo" width="224" height="133" />][2]
 
  [1]: http://www.mssqltips.com/sqlservertip/3487/mssqltipscom-author-and-rookie-of-2014
  [2]: http://www.mssqltips.com/

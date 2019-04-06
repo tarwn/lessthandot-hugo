@@ -216,7 +216,7 @@ End NameSpace</pre>
 
 And when it failes it looks like this. 
 
-<img src="http://blogs.ltd.local/wp-content/uploads/2017/09/resx.png" alt="resx" width="850" height="400" class="alignnone size-full wp-image-8801" srcset="http://blogs.ltd.local/wp-content/uploads/2017/09/resx.png 850w, http://blogs.ltd.local/wp-content/uploads/2017/09/resx-300x141.png 300w, http://blogs.ltd.local/wp-content/uploads/2017/09/resx-768x361.png 768w" sizes="(max-width: 850px) 100vw, 850px" />
+<img src="/wp-content/uploads/2017/09/resx.png" alt="resx" width="850" height="400" class="alignnone size-full wp-image-8801" srcset="/wp-content/uploads/2017/09/resx.png 850w, /wp-content/uploads/2017/09/resx-300x141.png 300w, /wp-content/uploads/2017/09/resx-768x361.png 768w" sizes="(max-width: 850px) 100vw, 850px" />
 
 So there you go, simple.
 

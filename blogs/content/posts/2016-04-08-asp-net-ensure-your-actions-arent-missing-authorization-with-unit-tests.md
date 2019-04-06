@@ -181,7 +181,7 @@ Similar to the MVC test, we are looking for any actions that don&#8217;t have an
 
 If, like me, you use NCrunch locally, then you get this nice Red warning without any extra effort:
 
-[<img src="http://blogs.ltd.local/wp-content/uploads/2016/03/ASPNetAuthTests.png" alt="NCrunch Test Output" class="size-full wp-image-4472" srcset="http://blogs.ltd.local/wp-content/uploads/2016/03/ASPNetAuthTests.png 1014w, http://blogs.ltd.local/wp-content/uploads/2016/03/ASPNetAuthTests-300x85.png 300w" sizes="(max-width: 1014px) 100vw, 1014px" />][6] 
+[<img src="/wp-content/uploads/2016/03/ASPNetAuthTests.png" alt="NCrunch Test Output" class="size-full wp-image-4472" srcset="/wp-content/uploads/2016/03/ASPNetAuthTests.png 1014w, /wp-content/uploads/2016/03/ASPNetAuthTests-300x85.png 300w" sizes="(max-width: 1014px) 100vw, 1014px" />][6] 
 
 And there we go, a safety net against accidentally pushing an open endpoint that is built in to every single unit test run.
 
@@ -190,4 +190,4 @@ And there we go, a safety net against accidentally pushing an open endpoint that
  [3]: http://stackoverflow.com/questions/21583278/getting-all-controllers-and-actions-names-in-c-sharp "StackOverflow: Getting All Controllers and Actions names in C#"
  [4]: https://msdn.microsoft.com/en-us/library/system.web.mvc.reflectedcontrollerdescriptor%28v=vs.118%29.aspx "MSDN: ReflectedControllerDescriptor"
  [5]: https://blogs.msdn.microsoft.com/yaohuang1/2012/05/13/asp-net-web-api-introducing-iapiexplorerapiexplorer/ "MSDN Blogs: ASP.NET Web API: Introducing IApiExplorer/ApiExplorer"
- [6]: http://blogs.ltd.local/wp-content/uploads/2016/03/ASPNetAuthTests.png
+ [6]: /wp-content/uploads/2016/03/ASPNetAuthTests.png

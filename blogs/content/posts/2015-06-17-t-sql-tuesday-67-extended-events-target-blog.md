@@ -12,7 +12,7 @@ categories:
   - Uncategorized
 
 ---
-<img class="alignright" src="http://blogs.ltd.local/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="" width="154" height="154" />Last week was a successful sixty-seventh T-SQL Tuesday! I asked bloggers to tell me why they loved Extended Events, why they hated it, what their favorite tricks were, or what they had recently learned. I learned several new tips and tricks! Here&#8217;s a recap of the blogs. Huge thanks to all the bloggers who took time out of their week to help me &#8211; and you! &#8211; learn.
+<img class="alignright" src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="" width="154" height="154" />Last week was a successful sixty-seventh T-SQL Tuesday! I asked bloggers to tell me why they loved Extended Events, why they hated it, what their favorite tricks were, or what they had recently learned. I learned several new tips and tricks! Here&#8217;s a recap of the blogs. Huge thanks to all the bloggers who took time out of their week to help me &#8211; and you! &#8211; learn.
 
 <ol type="1">
   <li value="1">

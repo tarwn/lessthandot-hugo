@@ -14,7 +14,7 @@ categories:
   - Uncategorized
 
 ---
-[<img class="alignleft size-full wp-image-2241" alt="TSQL2sday" src="http://blogs.ltd.local/wp-content/uploads/2014/01/TSQL2sday.png" width="133" height="134" />][1]It&#8217;s T-SQL Tuesday! This month, <a href="http://michaeljswart.com/2014/03/argue_against_a_popular_opinion/" target="_blank">Michael Swart has challenged us to argue against a popularly-held opinion about SQL Server</a>. “Arguing Against Popular Opinion” sounds like the title of my autobiography.
+[<img class="alignleft size-full wp-image-2241" alt="TSQL2sday" src="/wp-content/uploads/2014/01/TSQL2sday.png" width="133" height="134" />][1]It&#8217;s T-SQL Tuesday! This month, <a href="http://michaeljswart.com/2014/03/argue_against_a_popular_opinion/" target="_blank">Michael Swart has challenged us to argue against a popularly-held opinion about SQL Server</a>. “Arguing Against Popular Opinion” sounds like the title of my autobiography.
 
 You’ve been told time and again to back up your SQL Server system databases – master, msdb, and model. I’m here to tell you it’s not that important, especially if you have a large number of SQL Server instances. The information in those databases should be documented, scripted, and available in other locations, not just contained here.
 

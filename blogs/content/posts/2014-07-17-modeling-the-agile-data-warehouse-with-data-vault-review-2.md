@@ -25,7 +25,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2014/07/datavault.jpg"><img class="alignnone wp-image-2841 size-medium" src="http://blogs.ltd.local/wp-content/uploads/2014/07/datavault-200x300.jpg" alt="datavault" width="200" height="300" srcset="http://blogs.ltd.local/wp-content/uploads/2014/07/datavault-200x300.jpg 200w, http://blogs.ltd.local/wp-content/uploads/2014/07/datavault.jpg 231w" sizes="(max-width: 200px) 100vw, 200px" /></a>
+  <a href="/wp-content/uploads/2014/07/datavault.jpg"><img class="alignnone wp-image-2841 size-medium" src="/wp-content/uploads/2014/07/datavault-200x300.jpg" alt="datavault" width="200" height="300" srcset="/wp-content/uploads/2014/07/datavault-200x300.jpg 200w, /wp-content/uploads/2014/07/datavault.jpg 231w" sizes="(max-width: 200px) 100vw, 200px" /></a>
 </p>
 
 <p style="text-align: justify">

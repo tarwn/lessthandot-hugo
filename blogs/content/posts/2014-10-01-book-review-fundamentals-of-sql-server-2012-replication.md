@@ -12,7 +12,7 @@ categories:
   - Uncategorized
 
 ---
-[<img class="alignleft wp-image-2999 size-full" src="http://blogs.ltd.local/wp-content/uploads/2014/10/1843-replication.png" alt="1843-replication" width="117" height="135" />][1]I&#8217;ve been working with transactional replication in SQL Server a lot this year. A lot. I understood the basics of how it worked, but I wanted to know more &#8211; particularly about security, how log readers work, monitoring, and troubleshooting. So, I downloaded a free e-book from <a href="https://www.simple-talk.com/" target="_blank">Simple Talk</a>, <a href="https://www.simple-talk.com/books/sql-books/fundamentals-of-sql-server-2012-replication-by-sebastian-meine/" target="_blank">Fundamentals of SQL Server 2012 Replication</a> by Sebastian Meine. [
+[<img class="alignleft wp-image-2999 size-full" src="/wp-content/uploads/2014/10/1843-replication.png" alt="1843-replication" width="117" height="135" />][1]I&#8217;ve been working with transactional replication in SQL Server a lot this year. A lot. I understood the basics of how it worked, but I wanted to know more &#8211; particularly about security, how log readers work, monitoring, and troubleshooting. So, I downloaded a free e-book from <a href="https://www.simple-talk.com/" target="_blank">Simple Talk</a>, <a href="https://www.simple-talk.com/books/sql-books/fundamentals-of-sql-server-2012-replication-by-sebastian-meine/" target="_blank">Fundamentals of SQL Server 2012 Replication</a> by Sebastian Meine. [
   
 ][1] 
 

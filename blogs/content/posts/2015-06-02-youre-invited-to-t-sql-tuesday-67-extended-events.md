@@ -16,7 +16,7 @@ categories:
   - Uncategorized
 
 ---
-<img class="alignleft" src="http://blogs.ltd.local/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="T-SQL Tuesday #67" width="154" height="154" />We meet again for another edition of T-SQL Tuesday! On Tuesday, June 9, 2015, you&#8217;re invited to blog about a chosen topic. Link back to this blog post, read what others have written, and post about it on Twitter. We share knowledge and get to know other bloggers!
+<img class="alignleft" src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="T-SQL Tuesday #67" width="154" height="154" />We meet again for another edition of T-SQL Tuesday! On Tuesday, June 9, 2015, you&#8217;re invited to blog about a chosen topic. Link back to this blog post, read what others have written, and post about it on Twitter. We share knowledge and get to know other bloggers!
 
 The June 2015 topic is Extended Events. I want to know (and others do, too) how you&#8217;ve solved problems with Extended Events. What sessions have you created? What unique way have you used predicates or targets? What challenges have you overcome?
 

@@ -23,7 +23,7 @@ I recently came across the following error message when I tried to look at the b
 
 <pre>515: A database error has occurred. Please contact your system administrator</pre>
 
-[<img class="alignnone size-full wp-image-2585" alt="koen_mdserror" src="http://blogs.ltd.local/wp-content/uploads/2014/04/koen_mdserror.png" width="299" height="120" />][1]
+[<img class="alignnone size-full wp-image-2585" alt="koen_mdserror" src="/wp-content/uploads/2014/04/koen_mdserror.png" width="299" height="120" />][1]
 
 Too bad I am the system administrator on that machine&#8230;
 
@@ -34,4 +34,4 @@ Simple delete the offending batches and you&#8217;re good to go!
 <pre>DELETE FROM mdm.tblStgBatch
 WHERE BatchTag IS NULL;</pre>
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2014/04/koen_mdserror.png
+ [1]: /wp-content/uploads/2014/04/koen_mdserror.png

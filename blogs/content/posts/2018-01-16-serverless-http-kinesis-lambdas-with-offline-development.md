@@ -27,7 +27,7 @@ I prefer the speed of local development feedback cycles. Getting HTTP Functions 
 By the end of this post, we&#8217;ll have an HTTP endpoint that can accept POSTed events and publish to a Kinesis stream. We&#8217;ll have another function pulling events off that stream and processing them. No infrastructure, no polling code, no webserver configurations, less than 40 lines of code, and a simple cli command to deploy: `serverless deploy`
 
 <div id="attachment_8867" style="width: 666px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png" alt="cUrl => HTTP Function => Kinesis Stream => Kinesis Function" width="656" height="161" class="size-full wp-image-8867" srcset="http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png 656w, http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput-300x74.png 300w" sizes="(max-width: 656px) 100vw, 656px" />
+  <img src="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png" alt="cUrl => HTTP Function => Kinesis Stream => Kinesis Function" width="656" height="161" class="size-full wp-image-8867" srcset="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png 656w, /wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput-300x74.png 300w" sizes="(max-width: 656px) 100vw, 656px" />
   
   <p class="wp-caption-text">
     cUrl => HTTP Function => Kinesis Stream => Kinesis Function
@@ -37,7 +37,7 @@ By the end of this post, we&#8217;ll have an HTTP endpoint that can accept POSTe
 That&#8217;s pretty standard FaaS stuff, but I can&#8217;t stand the latency of deploying to test changes, so I&#8217;ll add in some plugins and a little hackery to have all of that running in realtime, locally, with automatic syncing of changes as they&#8217;re made (because I don&#8217;t even like restarting services to try changes).
 
 <div id="attachment_8890" style="width: 699px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutputUpdated.png" alt="Updated Functions, Running Locally, No Restarts (SUPER!!!)" width="689" height="157" class="size-full wp-image-8890" srcset="http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutputUpdated.png 689w, http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutputUpdated-300x68.png 300w" sizes="(max-width: 689px) 100vw, 689px" />
+  <img src="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutputUpdated.png" alt="Updated Functions, Running Locally, No Restarts (SUPER!!!)" width="689" height="157" class="size-full wp-image-8890" srcset="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutputUpdated.png 689w, /wp-content/uploads/2018/01/OfflineHttpAndKinesisOutputUpdated-300x68.png 300w" sizes="(max-width: 689px) 100vw, 689px" />
   
   <p class="wp-caption-text">
     Updated Functions, Running Locally, No Restarts (SUPER!!!)
@@ -342,7 +342,7 @@ Initial output:
 
 
 <div id="attachment_8868" style="width: 796px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisStartupOutput.png" alt="Offline Lambda and Kinesis Output" width="786" height="391" class="size-full wp-image-8868" srcset="http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisStartupOutput.png 786w, http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisStartupOutput-300x149.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisStartupOutput-768x382.png 768w" sizes="(max-width: 786px) 100vw, 786px" />
+  <img src="/wp-content/uploads/2018/01/OfflineHttpAndKinesisStartupOutput.png" alt="Offline Lambda and Kinesis Output" width="786" height="391" class="size-full wp-image-8868" srcset="/wp-content/uploads/2018/01/OfflineHttpAndKinesisStartupOutput.png 786w, /wp-content/uploads/2018/01/OfflineHttpAndKinesisStartupOutput-300x149.png 300w, /wp-content/uploads/2018/01/OfflineHttpAndKinesisStartupOutput-768x382.png 768w" sizes="(max-width: 786px) 100vw, 786px" />
   
   <p class="wp-caption-text">
     Offline Lambda and Kinesis Output
@@ -356,7 +356,7 @@ And after running the curl command to add an event:
 
 
 <div id="attachment_8867" style="width: 666px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png" alt="cUrl => HTTP Function => Kinesis Stream => Kinesis Function" width="656" height="161" class="size-full wp-image-8867" srcset="http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png 656w, http://blogs.ltd.local/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput-300x74.png 300w" sizes="(max-width: 656px) 100vw, 656px" />
+  <img src="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png" alt="cUrl => HTTP Function => Kinesis Stream => Kinesis Function" width="656" height="161" class="size-full wp-image-8867" srcset="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png 656w, /wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput-300x74.png 300w" sizes="(max-width: 656px) 100vw, 656px" />
   
   <p class="wp-caption-text">
     cUrl => HTTP Function => Kinesis Stream => Kinesis Function

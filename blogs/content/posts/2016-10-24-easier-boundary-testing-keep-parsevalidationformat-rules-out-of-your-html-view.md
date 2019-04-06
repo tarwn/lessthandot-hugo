@@ -22,7 +22,7 @@ When we embed validation rules and logic into the View, we&#8217;re mostly limit
 Meanwhile, testing below the UI means we can do this:
 
 <div id="attachment_4703" style="width: 810px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests1.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests1.png" alt="Testing Model Inputs" width="800" class="size-full wp-image-4703" srcset="http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests1.png 943w, http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests1-300x133.png 300w" sizes="(max-width: 943px) 100vw, 943px" /></a>
+  <a href="/wp-content/uploads/2016/10/FasterBoundaryTests1.png"><img src="/wp-content/uploads/2016/10/FasterBoundaryTests1.png" alt="Testing Model Inputs" width="800" class="size-full wp-image-4703" srcset="/wp-content/uploads/2016/10/FasterBoundaryTests1.png 943w, /wp-content/uploads/2016/10/FasterBoundaryTests1-300x133.png 300w" sizes="(max-width: 943px) 100vw, 943px" /></a>
   
   <p class="wp-caption-text">
     Boundary Testing at Unit Test Speeds
@@ -42,7 +42,7 @@ Boundary testing is testing the extreme edges of what is valid for our inputs, f
 Let&#8217;s look at the basic sample form from the prior post:
 
 <div id="attachment_4416" style="width: 568px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/02/Screenshot.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/02/Screenshot.png" alt="Formatted and Validated Inputs" width="558" height="183" class="size-full wp-image-4416" srcset="http://blogs.ltd.local/wp-content/uploads/2016/02/Screenshot.png 558w, http://blogs.ltd.local/wp-content/uploads/2016/02/Screenshot-300x98.png 300w" sizes="(max-width: 558px) 100vw, 558px" /></a>
+  <a href="/wp-content/uploads/2016/02/Screenshot.png"><img src="/wp-content/uploads/2016/02/Screenshot.png" alt="Formatted and Validated Inputs" width="558" height="183" class="size-full wp-image-4416" srcset="/wp-content/uploads/2016/02/Screenshot.png 558w, /wp-content/uploads/2016/02/Screenshot-300x98.png 300w" sizes="(max-width: 558px) 100vw, 558px" /></a>
   
   <p class="wp-caption-text">
     Formatted and Validated Inputs
@@ -84,7 +84,7 @@ In English, we are exposing the following properties from the underlying OrderLi
 The &#8220;type&#8221; objects are used during the read/write pipelines:
 
 <div id="attachment_4415" style="width: 510px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/02/PresentationModel.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/02/PresentationModel.png" alt="Presentation Model - Read/Write Pipelines" width="500" height="220" class="size-full wp-image-4415" srcset="http://blogs.ltd.local/wp-content/uploads/2016/02/PresentationModel.png 500w, http://blogs.ltd.local/wp-content/uploads/2016/02/PresentationModel-300x132.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="/wp-content/uploads/2016/02/PresentationModel.png"><img src="/wp-content/uploads/2016/02/PresentationModel.png" alt="Presentation Model - Read/Write Pipelines" width="500" height="220" class="size-full wp-image-4415" srcset="/wp-content/uploads/2016/02/PresentationModel.png 500w, /wp-content/uploads/2016/02/PresentationModel-300x132.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>
   
   <p class="wp-caption-text">
     Presentation Model &#8211; Read/Write Pipelines
@@ -141,7 +141,7 @@ Using a knockout extension, we can ensure all writes pass through the parse and 
 So we have two options for boundary testing, we can test each available &#8220;type&#8221; with some common boundary settings or we can test each PresentationModel&#8217;s inputs with the defined ones. The intent of the test is to make sure we handle boundaries the way we think we do, so I lean towards the more target &#8220;type&#8221; tests as getting the most bang for the buck.
 
 <div id="attachment_4703" style="width: 810px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests1.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests1.png" alt="Testing Model Inputs" width="800" class="size-full wp-image-4703" srcset="http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests1.png 943w, http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests1-300x133.png 300w" sizes="(max-width: 943px) 100vw, 943px" /></a>
+  <a href="/wp-content/uploads/2016/10/FasterBoundaryTests1.png"><img src="/wp-content/uploads/2016/10/FasterBoundaryTests1.png" alt="Testing Model Inputs" width="800" class="size-full wp-image-4703" srcset="/wp-content/uploads/2016/10/FasterBoundaryTests1.png 943w, /wp-content/uploads/2016/10/FasterBoundaryTests1-300x133.png 300w" sizes="(max-width: 943px) 100vw, 943px" /></a>
   
   <p class="wp-caption-text">
     Testing Model Inputs
@@ -197,7 +197,7 @@ Here is sample code for validating the boundaries on the Order Line, which has a
 So far not a lot of duplication of effort, but in a larger application we would expect to have 10s or 100s of integer, text, currency, date, etc inputs. So the effort to test at this Model level doesn&#8217;t seem to add much value over testing directly at the type level, unless we&#8217;re passing in custom validation that would cause a specific input to operate differently than others of a similar type.
 
 <div id="attachment_4702" style="width: 810px" class="wp-caption aligncenter">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests2.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests2.png" alt="Testing Input Types" width="800" class="size-full wp-image-4702" srcset="http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests2.png 940w, http://blogs.ltd.local/wp-content/uploads/2016/10/FasterBoundaryTests2-300x103.png 300w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+  <a href="/wp-content/uploads/2016/10/FasterBoundaryTests2.png"><img src="/wp-content/uploads/2016/10/FasterBoundaryTests2.png" alt="Testing Input Types" width="800" class="size-full wp-image-4702" srcset="/wp-content/uploads/2016/10/FasterBoundaryTests2.png 940w, /wp-content/uploads/2016/10/FasterBoundaryTests2-300x103.png 300w" sizes="(max-width: 940px) 100vw, 940px" /></a>
   
   <p class="wp-caption-text">
     Testing Input Types

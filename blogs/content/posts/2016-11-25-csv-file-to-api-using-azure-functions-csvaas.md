@@ -23,7 +23,7 @@ We&#8217;re living in the future. During a conversational aside the other day, t
 When I went down this path, I decided it had to be a realistic. The API side had to have authentication, analytics, rate limiting, documentation, subscriptions, and endpoints that reflect the latest dataset (&#8220;/latest&#8221;), the list of all files received (&#8220;/all&#8221;), and access to a specific dataset/CSV (&#8220;/archive/{name}&#8221;). The CSV side of things had to be incredibly simple, no new interfaces, upload tools, or anything. I want to save a file in a local folder and have the data available via an API on the internet.
 
 <div id="attachment_4840" style="width: 810px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS.png" alt="Transformation Pipeline - Saving a CSV in a folder to Managed API" width="960" height="235" class="size-full wp-image-4840" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS.png 960w, http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS-300x73.png 300w" sizes="(max-width: 960px) 100vw, 960px" /></a>
+  <a href="/wp-content/uploads/2016/11/CSVaaS.png"><img src="/wp-content/uploads/2016/11/CSVaaS.png" alt="Transformation Pipeline - Saving a CSV in a folder to Managed API" width="960" height="235" class="size-full wp-image-4840" srcset="/wp-content/uploads/2016/11/CSVaaS.png 960w, /wp-content/uploads/2016/11/CSVaaS-300x73.png 300w" sizes="(max-width: 960px) 100vw, 960px" /></a>
   
   <p class="wp-caption-text">
     Transformation Pipeline &#8211; Saving a CSV in a folder to Managed API
@@ -88,7 +88,7 @@ And is surfaced as the latest record (which has probably changed by now): <https
 And these are the prepared responses for this API: [CSVaaS Documentation][1]
 
 <div id="attachment_4848" style="width: 810px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_Doc_1.jpg"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_Doc_1.jpg" alt="Automatic Documentation, Code Samples, etc" width="800" height="391" class="size-full wp-image-4848" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_Doc_1.jpg 800w, http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_Doc_1-300x146.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="/wp-content/uploads/2016/11/APIM_Doc_1.jpg"><img src="/wp-content/uploads/2016/11/APIM_Doc_1.jpg" alt="Automatic Documentation, Code Samples, etc" width="800" height="391" class="size-full wp-image-4848" srcset="/wp-content/uploads/2016/11/APIM_Doc_1.jpg 800w, /wp-content/uploads/2016/11/APIM_Doc_1-300x146.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Automatic Documentation, Code Samples, etc
@@ -100,7 +100,7 @@ Including example code in 7 languages and cUrl.
 And, with a subscription id, you can run these directly in the page: <https://csvaas.azure-api.net/latest>
 
 <div id="attachment_4849" style="width: 810px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_Doc_2.jpg"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_Doc_2.jpg" alt="API Sample Run" width="800" height="564" class="size-full wp-image-4849" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_Doc_2.jpg 800w, http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_Doc_2-300x211.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="/wp-content/uploads/2016/11/APIM_Doc_2.jpg"><img src="/wp-content/uploads/2016/11/APIM_Doc_2.jpg" alt="API Sample Run" width="800" height="564" class="size-full wp-image-4849" srcset="/wp-content/uploads/2016/11/APIM_Doc_2.jpg 800w, /wp-content/uploads/2016/11/APIM_Doc_2-300x211.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     API Sample Run
@@ -110,7 +110,7 @@ And, with a subscription id, you can run these directly in the page: <https://cs
 Behind the scenes, I can configure requirements around the subscriptions and approval process:
 
 <div id="attachment_4875" style="width: 659px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS_Settings.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS_Settings.png" alt="Setting the service to require Subscriptions  and Administrator Approval" width="649" height="387" class="size-full wp-image-4875" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS_Settings.png 649w, http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS_Settings-300x178.png 300w" sizes="(max-width: 649px) 100vw, 649px" /></a>
+  <a href="/wp-content/uploads/2016/11/CSVaaS_Settings.png"><img src="/wp-content/uploads/2016/11/CSVaaS_Settings.png" alt="Setting the service to require Subscriptions  and Administrator Approval" width="649" height="387" class="size-full wp-image-4875" srcset="/wp-content/uploads/2016/11/CSVaaS_Settings.png 649w, /wp-content/uploads/2016/11/CSVaaS_Settings-300x178.png 300w" sizes="(max-width: 649px) 100vw, 649px" /></a>
   
   <p class="wp-caption-text">
     Setting the service to require Subscriptions and Administrator Approval
@@ -120,7 +120,7 @@ Behind the scenes, I can configure requirements around the subscriptions and app
 I have access to high-level monitoring:
 
 <div id="attachment_4873" style="width: 692px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS1.png"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS1.png" alt="Usage Analytics" width="682" height="214" class="size-full wp-image-4873" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS1.png 682w, http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS1-300x94.png 300w" sizes="(max-width: 682px) 100vw, 682px" /></a>
+  <a href="/wp-content/uploads/2016/11/CSVaaS1.png"><img src="/wp-content/uploads/2016/11/CSVaaS1.png" alt="Usage Analytics" width="682" height="214" class="size-full wp-image-4873" srcset="/wp-content/uploads/2016/11/CSVaaS1.png 682w, /wp-content/uploads/2016/11/CSVaaS1-300x94.png 300w" sizes="(max-width: 682px) 100vw, 682px" /></a>
   
   <p class="wp-caption-text">
     Usage Analytics
@@ -132,7 +132,7 @@ And dive into details like response times around the world for specific date ran
 
 
 <div id="attachment_4878" style="width: 810px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS_Analytics.jpg"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS_Analytics.jpg" alt="Response Analytics for Geography by Date Rage, Operation, ..." width="800" height="319" class="size-full wp-image-4878" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS_Analytics.jpg 800w, http://blogs.ltd.local/wp-content/uploads/2016/11/CSVaaS_Analytics-300x119.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="/wp-content/uploads/2016/11/CSVaaS_Analytics.jpg"><img src="/wp-content/uploads/2016/11/CSVaaS_Analytics.jpg" alt="Response Analytics for Geography by Date Rage, Operation, ..." width="800" height="319" class="size-full wp-image-4878" srcset="/wp-content/uploads/2016/11/CSVaaS_Analytics.jpg 800w, /wp-content/uploads/2016/11/CSVaaS_Analytics-300x119.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Response Analytics for Geography by Date Rage, Operation, &#8230;
@@ -156,7 +156,7 @@ Open the containers list and add an archive container to hold the JSON files and
 Add an API service via the dashboard. Configure it with a name and Web Service URL:
 
 <div id="attachment_4842" style="width: 810px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_1.jpg"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_1.jpg" alt="Defining an Azure API" width="800" height="489" class="size-full wp-image-4842" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_1.jpg 800w, http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_1-300x183.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="/wp-content/uploads/2016/11/APIM_1.jpg"><img src="/wp-content/uploads/2016/11/APIM_1.jpg" alt="Defining an Azure API" width="800" height="489" class="size-full wp-image-4842" srcset="/wp-content/uploads/2016/11/APIM_1.jpg 800w, /wp-content/uploads/2016/11/APIM_1-300x183.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Defining an Azure API
@@ -168,7 +168,7 @@ To add Authentication, head to the Identities tab. I used a Microsoft Account fo
 Instructions to setup App Service, go through similar steps for the Identity tab: MS Auth: https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-microsoft-authentication
 
 <div id="attachment_4843" style="width: 810px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_2.jpg"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_2.jpg" alt="Defining API Identity Providers" width="800" height="497" class="size-full wp-image-4843" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_2.jpg 800w, http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_2-300x186.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="/wp-content/uploads/2016/11/APIM_2.jpg"><img src="/wp-content/uploads/2016/11/APIM_2.jpg" alt="Defining API Identity Providers" width="800" height="497" class="size-full wp-image-4843" srcset="/wp-content/uploads/2016/11/APIM_2.jpg 800w, /wp-content/uploads/2016/11/APIM_2-300x186.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Defining API Identity Providers
@@ -178,7 +178,7 @@ Instructions to setup App Service, go through similar steps for the Identity tab
 There is a Starter Product and an Unlimited Product already predefined. Use the Starter Product for now, since it has rate limits and such already defined, and associate the API with the Product.
 
 <div id="attachment_4844" style="width: 810px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_3.jpg"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_3.jpg" alt="Defining API Product" width="800" height="253" class="size-full wp-image-4844" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_3.jpg 800w, http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_3-300x94.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="/wp-content/uploads/2016/11/APIM_3.jpg"><img src="/wp-content/uploads/2016/11/APIM_3.jpg" alt="Defining API Product" width="800" height="253" class="size-full wp-image-4844" srcset="/wp-content/uploads/2016/11/APIM_3.jpg 800w, /wp-content/uploads/2016/11/APIM_3-300x94.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Defining API Product
@@ -188,7 +188,7 @@ There is a Starter Product and an Unlimited Product already predefined. Use the 
 Now we need an API endpoint. Add an Operation, I chose to name my &#8220;latest&#8221;. It will concatenate this value automatically on the base URL provided in the first setup screen (or you can choose to rewrite to a different URL). I&#8217;m going with the simple option of matching my Blob name to the path.
 
 <div id="attachment_4845" style="width: 810px" class="wp-caption alignnone">
-  <a href="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_4.jpg"><img src="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_4.jpg" alt="Defining an API Operation" width="800" height="419" class="size-full wp-image-4845" srcset="http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_4.jpg 800w, http://blogs.ltd.local/wp-content/uploads/2016/11/APIM_4-300x157.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="/wp-content/uploads/2016/11/APIM_4.jpg"><img src="/wp-content/uploads/2016/11/APIM_4.jpg" alt="Defining an API Operation" width="800" height="419" class="size-full wp-image-4845" srcset="/wp-content/uploads/2016/11/APIM_4.jpg 800w, /wp-content/uploads/2016/11/APIM_4-300x157.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Defining an API Operation

@@ -14,7 +14,7 @@ categories:
 ---
 Just like [last year][1], I&#8217;m a bit late with the obligatory &#8220;how was last year and what is this year supposed to bring&#8221; blog post. Anyway, here it is. Let&#8217;s start by wishing every one of you the very best for the new year. I hope 2015 may bring us many professional highlights, next to a fulfilling private life.
 
-[<img class="alignnone size-medium wp-image-3148" src="http://blogs.ltd.local/wp-content/uploads/2015/01/fireworks-300x200.jpg" alt="fireworks" width="300" height="200" srcset="http://blogs.ltd.local/wp-content/uploads/2015/01/fireworks-300x200.jpg 300w, http://blogs.ltd.local/wp-content/uploads/2015/01/fireworks-1024x682.jpg 1024w, http://blogs.ltd.local/wp-content/uploads/2015/01/fireworks.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px" />][2]
+[<img class="alignnone size-medium wp-image-3148" src="/wp-content/uploads/2015/01/fireworks-300x200.jpg" alt="fireworks" width="300" height="200" srcset="/wp-content/uploads/2015/01/fireworks-300x200.jpg 300w, /wp-content/uploads/2015/01/fireworks-1024x682.jpg 1024w, /wp-content/uploads/2015/01/fireworks.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px" />][2]
 
 2014 was a great year professional wise: I had a long interesting project with interesting colleagues, I got to speak at two events and I did a webinar for the [PASS BI virtual chapter][3]. Because I got the ride the train to work, I got a little extra time to write articles, watch videos and read books. I got a nice list together in 2014:
 
@@ -41,7 +41,7 @@ Best wishes!
 Koen
 
  [1]: /index.php/itprofessionals/professionaldevelopment/happy-2014/
- [2]: http://blogs.ltd.local/wp-content/uploads/2015/01/fireworks.jpg
+ [2]: /wp-content/uploads/2015/01/fireworks.jpg
  [3]: /index.php/uncategorized/pass-bi-vc-recording-is-available-now/
  [4]: /index.php/datamgmt/datadesign/star-schema-the-complete-reference-review/
  [5]: /index.php/datamgmt/master-data-services-second-edition-review/

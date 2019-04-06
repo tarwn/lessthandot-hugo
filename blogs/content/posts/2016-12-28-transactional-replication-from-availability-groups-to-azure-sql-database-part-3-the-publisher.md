@@ -42,57 +42,57 @@ Click Next on Welcome.
 
 Distributor – select Use the following server and click Add. Connect to the distributor you configured in the previous step. Click Next.
 
-[<img class="aligncenter size-full wp-image-4925" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-1.png" alt="publisher 1" width="503" height="453" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-1.png 503w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-1-300x270.png 300w" sizes="(max-width: 503px) 100vw, 503px" />][1]
+[<img class="aligncenter size-full wp-image-4925" src="/wp-content/uploads/2016/12/publisher-1.png" alt="publisher 1" width="503" height="453" srcset="/wp-content/uploads/2016/12/publisher-1.png 503w, /wp-content/uploads/2016/12/publisher-1-300x270.png 300w" sizes="(max-width: 503px) 100vw, 503px" />][1]
 
 Administrative Password – enter the distributor admin password you created in the previous step. Click Next. (If you add multiple publications from one server, you only do this the first time.)
 
-[<img class="aligncenter size-full wp-image-4926" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-2.png" alt="publisher 2" width="506" height="457" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-2.png 506w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-2-300x270.png 300w" sizes="(max-width: 506px) 100vw, 506px" />][2]
+[<img class="aligncenter size-full wp-image-4926" src="/wp-content/uploads/2016/12/publisher-2.png" alt="publisher 2" width="506" height="457" srcset="/wp-content/uploads/2016/12/publisher-2.png 506w, /wp-content/uploads/2016/12/publisher-2-300x270.png 300w" sizes="(max-width: 506px) 100vw, 506px" />][2]
 
 Publication database – choose your database. Click Next.
 
-[<img class="aligncenter size-full wp-image-4927" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-3.png" alt="publisher 3" width="506" height="454" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-3.png 506w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-3-300x269.png 300w" sizes="(max-width: 506px) 100vw, 506px" />][3]
+[<img class="aligncenter size-full wp-image-4927" src="/wp-content/uploads/2016/12/publisher-3.png" alt="publisher 3" width="506" height="454" srcset="/wp-content/uploads/2016/12/publisher-3.png 506w, /wp-content/uploads/2016/12/publisher-3-300x269.png 300w" sizes="(max-width: 506px) 100vw, 506px" />][3]
 
 Publication type – because this is going to Azure SQL DB, it must be Transactional. Select your option. Click Next.
 
-[<img class="aligncenter size-full wp-image-4928" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-4.png" alt="publisher 4" width="502" height="451" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-4.png 502w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-4-300x269.png 300w" sizes="(max-width: 502px) 100vw, 502px" />][4]
+[<img class="aligncenter size-full wp-image-4928" src="/wp-content/uploads/2016/12/publisher-4.png" alt="publisher 4" width="502" height="451" srcset="/wp-content/uploads/2016/12/publisher-4.png 502w, /wp-content/uploads/2016/12/publisher-4-300x269.png 300w" sizes="(max-width: 502px) 100vw, 502px" />][4]
 
 Articles – choose which database objects you want to replicate. Click Next.
 
-[<img class="aligncenter size-full wp-image-4929" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-5.png" alt="publisher 5" width="505" height="457" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-5.png 505w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-5-300x271.png 300w" sizes="(max-width: 505px) 100vw, 505px" />][5]
+[<img class="aligncenter size-full wp-image-4929" src="/wp-content/uploads/2016/12/publisher-5.png" alt="publisher 5" width="505" height="457" srcset="/wp-content/uploads/2016/12/publisher-5.png 505w, /wp-content/uploads/2016/12/publisher-5-300x271.png 300w" sizes="(max-width: 505px) 100vw, 505px" />][5]
 
 Filter Table Rows – if you need to filter, click Add. Otherwise, click Next.
 
-[<img class="aligncenter size-full wp-image-4930" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-6.png" alt="publisher 6" width="507" height="454" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-6.png 507w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-6-300x268.png 300w" sizes="(max-width: 507px) 100vw, 507px" />][6]
+[<img class="aligncenter size-full wp-image-4930" src="/wp-content/uploads/2016/12/publisher-6.png" alt="publisher 6" width="507" height="454" srcset="/wp-content/uploads/2016/12/publisher-6.png 507w, /wp-content/uploads/2016/12/publisher-6-300x268.png 300w" sizes="(max-width: 507px) 100vw, 507px" />][6]
 
 Snapshot Agent – choose to create a snapshot immediately. Click Next.
 
-[<img class="aligncenter size-full wp-image-4931" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-7.png" alt="publisher 7" width="509" height="453" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-7.png 509w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-7-300x266.png 300w" sizes="(max-width: 509px) 100vw, 509px" />][7]
+[<img class="aligncenter size-full wp-image-4931" src="/wp-content/uploads/2016/12/publisher-7.png" alt="publisher 7" width="509" height="453" srcset="/wp-content/uploads/2016/12/publisher-7.png 509w, /wp-content/uploads/2016/12/publisher-7-300x266.png 300w" sizes="(max-width: 509px) 100vw, 509px" />][7]
 
 Agent Security – click Security Settings to choose what account the snapshot and log reader agents will run under. Click OK. Click Next.
 
 (I could write an entire blog post about this, but that is better left to people more well-versed in replication than myself. I know that I don&#8217;t want to use the SQL Server Agent service account &#8211; I want to create an AD account that has been granted the permissions needed as described in  <a href="https://msdn.microsoft.com/en-us/library/ms151227.aspx" target="_blank">Replication Agent Security Model</a>.)
 
-[<img class="aligncenter size-full wp-image-4932" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-8.png" alt="publisher 8" width="553" height="474" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-8.png 553w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-8-300x257.png 300w" sizes="(max-width: 553px) 100vw, 553px" />][8]
+[<img class="aligncenter size-full wp-image-4932" src="/wp-content/uploads/2016/12/publisher-8.png" alt="publisher 8" width="553" height="474" srcset="/wp-content/uploads/2016/12/publisher-8.png 553w, /wp-content/uploads/2016/12/publisher-8-300x257.png 300w" sizes="(max-width: 553px) 100vw, 553px" />][8]
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-4933" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-9.png" alt="publisher 9" width="508" height="454" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-9.png 508w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-9-300x268.png 300w" sizes="(max-width: 508px) 100vw, 508px" />][9]
+[<img class="aligncenter size-full wp-image-4933" src="/wp-content/uploads/2016/12/publisher-9.png" alt="publisher 9" width="508" height="454" srcset="/wp-content/uploads/2016/12/publisher-9.png 508w, /wp-content/uploads/2016/12/publisher-9-300x268.png 300w" sizes="(max-width: 508px) 100vw, 508px" />][9]
 
 Wizard Actions – choose both options. Click Next.
 
-[<img class="aligncenter size-full wp-image-4934" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-10.png" alt="publisher 10" width="504" height="452" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-10.png 504w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-10-300x269.png 300w" sizes="(max-width: 504px) 100vw, 504px" />][10]
+[<img class="aligncenter size-full wp-image-4934" src="/wp-content/uploads/2016/12/publisher-10.png" alt="publisher 10" width="504" height="452" srcset="/wp-content/uploads/2016/12/publisher-10.png 504w, /wp-content/uploads/2016/12/publisher-10-300x269.png 300w" sizes="(max-width: 504px) 100vw, 504px" />][10]
 
 Script File Properties – choose a location to save the script. Review the other options. Click Next.
 
-[<img class="aligncenter size-full wp-image-4935" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-11.png" alt="publisher 11" width="503" height="452" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-11.png 503w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-11-300x269.png 300w" sizes="(max-width: 503px) 100vw, 503px" />][11]
+[<img class="aligncenter size-full wp-image-4935" src="/wp-content/uploads/2016/12/publisher-11.png" alt="publisher 11" width="503" height="452" srcset="/wp-content/uploads/2016/12/publisher-11.png 503w, /wp-content/uploads/2016/12/publisher-11-300x269.png 300w" sizes="(max-width: 503px) 100vw, 503px" />][11]
 
 Complete the wizard – enter a Publication name. Click Finish.
 
-[<img class="aligncenter size-full wp-image-4936" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-12.png" alt="publisher 12" width="502" height="453" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-12.png 502w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-12-300x270.png 300w" sizes="(max-width: 502px) 100vw, 502px" />][12]
+[<img class="aligncenter size-full wp-image-4936" src="/wp-content/uploads/2016/12/publisher-12.png" alt="publisher 12" width="502" height="453" srcset="/wp-content/uploads/2016/12/publisher-12.png 502w, /wp-content/uploads/2016/12/publisher-12-300x270.png 300w" sizes="(max-width: 502px) 100vw, 502px" />][12]
 
 All options should have green checkmarks.
 
-[<img class="aligncenter size-full wp-image-4937" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-13.png" alt="publisher 13" width="506" height="453" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-13.png 506w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-13-300x268.png 300w" sizes="(max-width: 506px) 100vw, 506px" />][13]
+[<img class="aligncenter size-full wp-image-4937" src="/wp-content/uploads/2016/12/publisher-13.png" alt="publisher 13" width="506" height="453" srcset="/wp-content/uploads/2016/12/publisher-13.png 506w, /wp-content/uploads/2016/12/publisher-13-300x268.png 300w" sizes="(max-width: 506px) 100vw, 506px" />][13]
 
 After initializing, check the Snapshot Agent and Log Reader Agent for success. (To do so, go to Replication, right-click the publication name, and select Snapshot Agent Status and Log Reader Agent Status.) I ran into problems with the Snapshot account not having high enough permissions in the databases (it needs db_owner), and then not having enough permissions on the snapshot folder (it needs Full). (This forum post, answered by Hilary Cotter, helped: <https://social.msdn.microsoft.com/Forums/sqlserver/en-US/899857db-e38e-4026-a34c-2a8c2628c6fc/access-denied-to-sql-replication-snapshot-folder?forum=sqlreplication>.)
 
@@ -108,25 +108,25 @@ Welcome – click Next.
 
 Distributor – select Use the following server. Click Add. Connect to the previously-created distributor. Click Next.
 
-[<img class="aligncenter size-full wp-image-4938" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-14.png" alt="publisher 14" width="573" height="452" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-14.png 573w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-14-300x236.png 300w" sizes="(max-width: 573px) 100vw, 573px" />][14]
+[<img class="aligncenter size-full wp-image-4938" src="/wp-content/uploads/2016/12/publisher-14.png" alt="publisher 14" width="573" height="452" srcset="/wp-content/uploads/2016/12/publisher-14.png 573w, /wp-content/uploads/2016/12/publisher-14-300x236.png 300w" sizes="(max-width: 573px) 100vw, 573px" />][14]
 
 Administrative password – enter the distribution admin password. Click Next.
 
-[<img class="aligncenter size-full wp-image-4939" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-15.png" alt="publisher 15" width="571" height="455" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-15.png 571w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-15-300x239.png 300w" sizes="(max-width: 571px) 100vw, 571px" />][15]
+[<img class="aligncenter size-full wp-image-4939" src="/wp-content/uploads/2016/12/publisher-15.png" alt="publisher 15" width="571" height="455" srcset="/wp-content/uploads/2016/12/publisher-15.png 571w, /wp-content/uploads/2016/12/publisher-15-300x239.png 300w" sizes="(max-width: 571px) 100vw, 571px" />][15]
 
 Wizard Actions – check both boxes, click Next.
 
-[<img class="aligncenter size-full wp-image-4940" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-16.png" alt="publisher 16" width="573" height="454" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-16.png 573w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-16-300x237.png 300w" sizes="(max-width: 573px) 100vw, 573px" />][16][
+[<img class="aligncenter size-full wp-image-4940" src="/wp-content/uploads/2016/12/publisher-16.png" alt="publisher 16" width="573" height="454" srcset="/wp-content/uploads/2016/12/publisher-16.png 573w, /wp-content/uploads/2016/12/publisher-16-300x237.png 300w" sizes="(max-width: 573px) 100vw, 573px" />][16][
   
 ][17] 
 
 Script File Properties – choose a file location and name. Review other options. Click Next.
 
-[<img class="aligncenter size-full wp-image-4941" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-17.png" alt="publisher 17" width="572" height="457" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-17.png 572w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-17-300x239.png 300w" sizes="(max-width: 572px) 100vw, 572px" />][17]
+[<img class="aligncenter size-full wp-image-4941" src="/wp-content/uploads/2016/12/publisher-17.png" alt="publisher 17" width="572" height="457" srcset="/wp-content/uploads/2016/12/publisher-17.png 572w, /wp-content/uploads/2016/12/publisher-17-300x239.png 300w" sizes="(max-width: 572px) 100vw, 572px" />][17]
 
 Complete the wizard – click Finish. All options should have green checkmarks.
 
-[<img class="aligncenter size-full wp-image-4942" src="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-18.png" alt="publisher 18" width="579" height="459" srcset="http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-18.png 579w, http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-18-300x237.png 300w" sizes="(max-width: 579px) 100vw, 579px" />][18]
+[<img class="aligncenter size-full wp-image-4942" src="/wp-content/uploads/2016/12/publisher-18.png" alt="publisher 18" width="579" height="459" srcset="/wp-content/uploads/2016/12/publisher-18.png 579w, /wp-content/uploads/2016/12/publisher-18-300x237.png 300w" sizes="(max-width: 579px) 100vw, 579px" />][18]
 
 ### Create linked server from each replica to distribution server
 
@@ -171,21 +171,21 @@ Expected output is “Commands completed successfully.”
 
 After following all of these steps, your publication is ready. You can now set up the subscriber(s).
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-1.png
- [2]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-2.png
- [3]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-3.png
- [4]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-4.png
- [5]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-5.png
- [6]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-6.png
- [7]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-7.png
- [8]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-8.png
- [9]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-9.png
- [10]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-10.png
- [11]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-11.png
- [12]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-12.png
- [13]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-13.png
- [14]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-14.png
- [15]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-15.png
- [16]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-16.png
- [17]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-17.png
- [18]: http://blogs.ltd.local/wp-content/uploads/2016/12/publisher-18.png
+ [1]: /wp-content/uploads/2016/12/publisher-1.png
+ [2]: /wp-content/uploads/2016/12/publisher-2.png
+ [3]: /wp-content/uploads/2016/12/publisher-3.png
+ [4]: /wp-content/uploads/2016/12/publisher-4.png
+ [5]: /wp-content/uploads/2016/12/publisher-5.png
+ [6]: /wp-content/uploads/2016/12/publisher-6.png
+ [7]: /wp-content/uploads/2016/12/publisher-7.png
+ [8]: /wp-content/uploads/2016/12/publisher-8.png
+ [9]: /wp-content/uploads/2016/12/publisher-9.png
+ [10]: /wp-content/uploads/2016/12/publisher-10.png
+ [11]: /wp-content/uploads/2016/12/publisher-11.png
+ [12]: /wp-content/uploads/2016/12/publisher-12.png
+ [13]: /wp-content/uploads/2016/12/publisher-13.png
+ [14]: /wp-content/uploads/2016/12/publisher-14.png
+ [15]: /wp-content/uploads/2016/12/publisher-15.png
+ [16]: /wp-content/uploads/2016/12/publisher-16.png
+ [17]: /wp-content/uploads/2016/12/publisher-17.png
+ [18]: /wp-content/uploads/2016/12/publisher-18.png

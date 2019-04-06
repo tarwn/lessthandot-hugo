@@ -45,7 +45,7 @@ Here&#8217;s a good overview of what you can expect in SQL Server 2016:
 
 Be careful, if you install Polybase, you apparently need the Oracle JRE. Boooo.
 
-[<img class="alignnone size-full wp-image-3395" src="http://blogs.ltd.local/wp-content/uploads/2015/05/polybase_jre.jpg" alt="polybase_jre" width="594" height="285" srcset="http://blogs.ltd.local/wp-content/uploads/2015/05/polybase_jre.jpg 594w, http://blogs.ltd.local/wp-content/uploads/2015/05/polybase_jre-300x143.jpg 300w" sizes="(max-width: 594px) 100vw, 594px" />][5]
+[<img class="alignnone size-full wp-image-3395" src="/wp-content/uploads/2015/05/polybase_jre.jpg" alt="polybase_jre" width="594" height="285" srcset="/wp-content/uploads/2015/05/polybase_jre.jpg 594w, /wp-content/uploads/2015/05/polybase_jre-300x143.jpg 300w" sizes="(max-width: 594px) 100vw, 594px" />][5]
 
 Anyway, a lot of goodness and I am very excited about this release.
 
@@ -55,4 +55,4 @@ Anyway, a lot of goodness and I am very excited about this release.
  [2]: https://msdn.microsoft.com/en-us/library/dn935015(v=sql.130).aspx
  [3]: http://www.brentozar.com/archive/2015/05/announcing-live-query-execution-plans/
  [4]: http://sqlblog.com/blogs/jorg_klein/archive/2015/05/22/bi-on-your-terms-with-sql-server-2016.aspx
- [5]: http://blogs.ltd.local/wp-content/uploads/2015/05/polybase_jre.jpg
+ [5]: /wp-content/uploads/2015/05/polybase_jre.jpg

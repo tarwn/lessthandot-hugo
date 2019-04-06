@@ -25,7 +25,7 @@ Let me walk through what a deadlock looks like with TF 1222 and compare that to 
 
 In my instance, I have TF 1222 enabled.
 
-[<img class="aligncenter size-full wp-image-9227" src="http://blogs.ltd.local/wp-content/uploads/2018/04/config-mgr.png" alt="config-mgr" width="414" height="496" srcset="http://blogs.ltd.local/wp-content/uploads/2018/04/config-mgr.png 414w, http://blogs.ltd.local/wp-content/uploads/2018/04/config-mgr-250x300.png 250w" sizes="(max-width: 414px) 100vw, 414px" />][1]
+[<img class="aligncenter size-full wp-image-9227" src="/wp-content/uploads/2018/04/config-mgr.png" alt="config-mgr" width="414" height="496" srcset="/wp-content/uploads/2018/04/config-mgr.png 414w, /wp-content/uploads/2018/04/config-mgr-250x300.png 250w" sizes="(max-width: 414px) 100vw, 414px" />][1]
 
 I have simple code to create a deadlock. You can use this as an example in a test environment to replicate it.
 
@@ -54,11 +54,11 @@ COMMIT TRAN</pre>
 
 When I run the last statement, I receive an error that one of the processes was the deadlock victim.
 
-[<img class="aligncenter size-full wp-image-9228" src="http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error.png" alt="deadlock-error" width="609" height="100" srcset="http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error.png 609w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error-300x49.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error-600x99.png 600w" sizes="(max-width: 609px) 100vw, 609px" />][2]
+[<img class="aligncenter size-full wp-image-9228" src="/wp-content/uploads/2018/04/deadlock-error.png" alt="deadlock-error" width="609" height="100" srcset="/wp-content/uploads/2018/04/deadlock-error.png 609w, /wp-content/uploads/2018/04/deadlock-error-300x49.png 300w, /wp-content/uploads/2018/04/deadlock-error-600x99.png 600w" sizes="(max-width: 609px) 100vw, 609px" />][2]
 
 If I open the error log, I can see the details of the deadlock. Every bit of information is on a separate line.
 
-[<img class="aligncenter size-full wp-image-9229" src="http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error-log.png" alt="deadlock-error-log" width="726" height="636" srcset="http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error-log.png 726w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error-log-300x263.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error-log-600x526.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error-log-342x300.png 342w" sizes="(max-width: 726px) 100vw, 726px" />][3]
+[<img class="aligncenter size-full wp-image-9229" src="/wp-content/uploads/2018/04/deadlock-error-log.png" alt="deadlock-error-log" width="726" height="636" srcset="/wp-content/uploads/2018/04/deadlock-error-log.png 726w, /wp-content/uploads/2018/04/deadlock-error-log-300x263.png 300w, /wp-content/uploads/2018/04/deadlock-error-log-600x526.png 600w, /wp-content/uploads/2018/04/deadlock-error-log-342x300.png 342w" sizes="(max-width: 726px) 100vw, 726px" />][3]
 
 This one isn’t bad, but imagine a multi-statement deadlock, or a server with several deadlocks in an hour – how do you easily see if there were other errors on the server at the same time?
 
@@ -66,31 +66,31 @@ With SQL Server 2012+, we have a better tool to see when deadlocks occur – and
 
 In SSMS, open Object Explorer and navigate to Extended Events > Sessions > system\_health > package0.event\_file. Double-click to view the data.
 
-[<img class="aligncenter size-full wp-image-9230" src="http://blogs.ltd.local/wp-content/uploads/2018/04/xe-sessions.png" alt="xe-sessions" width="239" height="129" />][4]
+[<img class="aligncenter size-full wp-image-9230" src="/wp-content/uploads/2018/04/xe-sessions.png" alt="xe-sessions" width="239" height="129" />][4]
 
 I go right to Filters to find the xml\_deadlock\_report events.
 
-[<img class="aligncenter size-full wp-image-9231" src="http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter.png" alt="xe-filter" width="627" height="236" srcset="http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter.png 627w, http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter-300x113.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter-600x226.png 600w" sizes="(max-width: 627px) 100vw, 627px" />][5]
+[<img class="aligncenter size-full wp-image-9231" src="/wp-content/uploads/2018/04/xe-filter.png" alt="xe-filter" width="627" height="236" srcset="/wp-content/uploads/2018/04/xe-filter.png 627w, /wp-content/uploads/2018/04/xe-filter-300x113.png 300w, /wp-content/uploads/2018/04/xe-filter-600x226.png 600w" sizes="(max-width: 627px) 100vw, 627px" />][5]
 
-[<img class="aligncenter size-full wp-image-9232" src="http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter-screen.png" alt="xe-filter-screen" width="637" height="411" srcset="http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter-screen.png 637w, http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter-screen-300x194.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter-screen-600x387.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter-screen-465x300.png 465w" sizes="(max-width: 637px) 100vw, 637px" />][6]
+[<img class="aligncenter size-full wp-image-9232" src="/wp-content/uploads/2018/04/xe-filter-screen.png" alt="xe-filter-screen" width="637" height="411" srcset="/wp-content/uploads/2018/04/xe-filter-screen.png 637w, /wp-content/uploads/2018/04/xe-filter-screen-300x194.png 300w, /wp-content/uploads/2018/04/xe-filter-screen-600x387.png 600w, /wp-content/uploads/2018/04/xe-filter-screen-465x300.png 465w" sizes="(max-width: 637px) 100vw, 637px" />][6]
 
 Here you’ll see deadlocks that have occurred. The Value field will show the XML values that you also see in the log. You can double-click on the Value field to bring up the XML.
 
-[<img class="aligncenter size-full wp-image-9233" src="http://blogs.ltd.local/wp-content/uploads/2018/04/details.png" alt="details" width="515" height="238" srcset="http://blogs.ltd.local/wp-content/uploads/2018/04/details.png 515w, http://blogs.ltd.local/wp-content/uploads/2018/04/details-300x139.png 300w" sizes="(max-width: 515px) 100vw, 515px" />][7]
+[<img class="aligncenter size-full wp-image-9233" src="/wp-content/uploads/2018/04/details.png" alt="details" width="515" height="238" srcset="/wp-content/uploads/2018/04/details.png 515w, /wp-content/uploads/2018/04/details-300x139.png 300w" sizes="(max-width: 515px) 100vw, 515px" />][7]
 
 Don’t ignore that sneaky “Deadlock” tab, however – that’s where you’ll find the easier-to-read deadlock graph!
 
-[<img class="aligncenter size-large wp-image-9234" src="http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-1024x433.png" alt="deadlock" width="1024" height="433" srcset="http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-1024x433.png 1024w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-300x127.png 300w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-768x324.png 768w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-600x253.png 600w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-710x300.png 710w, http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock.png 1044w" sizes="(max-width: 1024px) 100vw, 1024px" />][8]
+[<img class="aligncenter size-large wp-image-9234" src="/wp-content/uploads/2018/04/deadlock-1024x433.png" alt="deadlock" width="1024" height="433" srcset="/wp-content/uploads/2018/04/deadlock-1024x433.png 1024w, /wp-content/uploads/2018/04/deadlock-300x127.png 300w, /wp-content/uploads/2018/04/deadlock-768x324.png 768w, /wp-content/uploads/2018/04/deadlock-600x253.png 600w, /wp-content/uploads/2018/04/deadlock-710x300.png 710w, /wp-content/uploads/2018/04/deadlock.png 1044w" sizes="(max-width: 1024px) 100vw, 1024px" />][8]
 
 A good description of deadlock graphs, and how to interpret them, can be found at <https://www.sqlshack.com/understanding-graphical-representation-sql-server-deadlock-graph/>.
 
 As you modernize your data platform, you should update your troubleshooting methods and tools as well. This is an easy example of taking advantage of Extended Events to solve an old problem!
 
- [1]: http://blogs.ltd.local/wp-content/uploads/2018/04/config-mgr.png
- [2]: http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error.png
- [3]: http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock-error-log.png
- [4]: http://blogs.ltd.local/wp-content/uploads/2018/04/xe-sessions.png
- [5]: http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter.png
- [6]: http://blogs.ltd.local/wp-content/uploads/2018/04/xe-filter-screen.png
- [7]: http://blogs.ltd.local/wp-content/uploads/2018/04/details.png
- [8]: http://blogs.ltd.local/wp-content/uploads/2018/04/deadlock.png
+ [1]: /wp-content/uploads/2018/04/config-mgr.png
+ [2]: /wp-content/uploads/2018/04/deadlock-error.png
+ [3]: /wp-content/uploads/2018/04/deadlock-error-log.png
+ [4]: /wp-content/uploads/2018/04/xe-sessions.png
+ [5]: /wp-content/uploads/2018/04/xe-filter.png
+ [6]: /wp-content/uploads/2018/04/xe-filter-screen.png
+ [7]: /wp-content/uploads/2018/04/details.png
+ [8]: /wp-content/uploads/2018/04/deadlock.png

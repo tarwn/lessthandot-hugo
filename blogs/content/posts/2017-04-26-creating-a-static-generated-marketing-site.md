@@ -26,7 +26,7 @@ So I decided to build a marketing site structure. It didn&#8217;t take long and 
 So my goal was to generate a marketing site that looked somewhat like this:
 
 <div id="attachment_8643" style="width: 643px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/04/StaticSiteOutline.png" alt="Marketing Site Outline" width="633" height="347" class="size-full wp-image-8643" srcset="http://blogs.ltd.local/wp-content/uploads/2017/04/StaticSiteOutline.png 633w, http://blogs.ltd.local/wp-content/uploads/2017/04/StaticSiteOutline-300x164.png 300w" sizes="(max-width: 633px) 100vw, 633px" />
+  <img src="/wp-content/uploads/2017/04/StaticSiteOutline.png" alt="Marketing Site Outline" width="633" height="347" class="size-full wp-image-8643" srcset="/wp-content/uploads/2017/04/StaticSiteOutline.png 633w, /wp-content/uploads/2017/04/StaticSiteOutline-300x164.png 300w" sizes="(max-width: 633px) 100vw, 633px" />
   
   <p class="wp-caption-text">
     Marketing Site Outline
@@ -54,7 +54,7 @@ I also included a basic static webserver so I could test easily: `node static_se
 Azure Websites support automatic deployment from a git repository, so I added a `.deployment` file to tell Azure only to serve up the contents of the /build folder. 
 
 <div id="attachment_8647" style="width: 628px" class="wp-caption aligncenter">
-  <img src="http://blogs.ltd.local/wp-content/uploads/2017/04/StatisSiteAzure.png" alt="Azure Deployment Log" width="618" height="298" class="size-full wp-image-8647" srcset="http://blogs.ltd.local/wp-content/uploads/2017/04/StatisSiteAzure.png 618w, http://blogs.ltd.local/wp-content/uploads/2017/04/StatisSiteAzure-300x145.png 300w" sizes="(max-width: 618px) 100vw, 618px" />
+  <img src="/wp-content/uploads/2017/04/StatisSiteAzure.png" alt="Azure Deployment Log" width="618" height="298" class="size-full wp-image-8647" srcset="/wp-content/uploads/2017/04/StatisSiteAzure.png 618w, /wp-content/uploads/2017/04/StatisSiteAzure-300x145.png 300w" sizes="(max-width: 618px) 100vw, 618px" />
   
   <p class="wp-caption-text">
     Azure Deployment Log

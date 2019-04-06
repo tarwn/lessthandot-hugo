@@ -42,5 +42,5 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://www.mssqltips.com/MSSQLTipsAuthorVoting.asp"><img class="alignnone size-full wp-image-3068" src="http://blogs.ltd.local/wp-content/uploads/2014/11/mssql_logo.jpg" alt="mssql_logo" width="224" height="133" /></a>
+  <a href="http://www.mssqltips.com/MSSQLTipsAuthorVoting.asp"><img class="alignnone size-full wp-image-3068" src="/wp-content/uploads/2014/11/mssql_logo.jpg" alt="mssql_logo" width="224" height="133" /></a>
 </p>
