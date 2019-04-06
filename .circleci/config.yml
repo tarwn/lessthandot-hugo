@@ -8,7 +8,9 @@ jobs:
       - checkout
       - run:
           name: "Run Hugo"
-          command: hugo --config ~/project/blogs/config-prod.toml -v -s ~/project/blogs
+          command: |
+            cd ~/project/blogs
+            hugo --config config-prod.toml -v
       - run:
           name: "Test Website"
           command: htmlproofer ~/project/blogs/public --allow-hash-href --check-html --empty-alt-ignore
