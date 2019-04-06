@@ -15,7 +15,7 @@ jobs:
       #     name: "Test Website"
       #     command: htmlproofer ~/project/blogs/public --allow-hash-href --check-html --empty-alt-ignore
       - run:
-          name: Build and Deploy
+          name: Install Azure CLI
           command: |
             echo "# install Azure CLI"
             apk update && \
@@ -24,6 +24,10 @@ jobs:
               pip --no-cache-dir install -U pip && \
               pip --no-cache-dir install azure-cli && \
               apk del --purge build
+      - run:
+          name: Deploy to Azure Blobs
+          command: |
+              az storage blob upload-batch --source ~/project/blogs/public --destination $web --connection-string ${AZURE_STORAGE_CONNECTIONSTRING}
 
 workflows:
   version: 2
