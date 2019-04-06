@@ -3,5 +3,10 @@ languageCode = "en-us"
 title = "LessThanDot Archive"
 theme = "lessthandot"
 
+[taxonomies]
+  author = "author"
+  tag = "tags"
+  category = "categories"
+
 [params]
 googleAnalytics = "xxx"
