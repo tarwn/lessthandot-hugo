@@ -9,5 +9,5 @@
     </div>
     {{ partial "post/shareLinks.html" . }}
     <div class="post-content"><p>{{ .Summary }}</p></div>
-    <a href="<? print get_permalink(); ?>" class="rm">Read More...</a>
+    <a href="{{ .Permalink }}" class="rm">Read More...</a>
 </div>
