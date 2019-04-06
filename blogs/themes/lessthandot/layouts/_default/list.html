@@ -14,7 +14,11 @@
                 <div>
                     <div class="post-list-row"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
                     <div class="post-list-row">by {{ partial "links/author.html" . }} on <span>{{ .Date.Format "January 2, 2006" }}</span></div>
-
+                <!-- Removed: Generates a hugo error that takes more than 30 minutes to understand
+                    { { if .Pages.categories } }
+                    <div class="post-list-row">in category { { partial "post/oneCategory.html" . } }</div>
+                    { { end } } 
+                -->
                     <div class="post-list-row post-list-tags">
                         {{ range .Params.tags }}
                             <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag">{{ . }}</a>
