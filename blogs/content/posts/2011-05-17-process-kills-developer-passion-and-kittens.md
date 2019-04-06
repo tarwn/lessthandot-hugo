@@ -26,7 +26,7 @@ So recently I found out that [process kills developer passion][1]. Actually I fo
 Except I didn&#8217;t really learn about processes killing developer passion, what I learned was that best practices take a lot of time away from programming and, what&#8217;s more, are generally followed poorly. And process kills developer passion.
 
 <div style="border: 1px solid #AAAAAA; float: right; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://tiernok.com/trent/2003_12_13_14.gif" alt="Kitten" style="padding-bottom: 5px; max-width: 250px;" />
+  <img src="http://www.tiernok.com/trent/2003_12_13_14.gif" alt="Kitten" style="padding-bottom: 5px; max-width: 250px;" />
 </div>
 
 Or, you know, not.
@@ -44,7 +44,7 @@ And let&#8217;s not even try to dig into which software frameworks we should be 
 Whether we&#8217;re operating now, 10 years ago, or ten years in the future, which practices we follow are not the issue. The waterfall process does, in fact, work in some situations, despite initial creation as an intentionally flawed [strawman argument][2]. Slamming code into an editor furiously, with no regard for change management, requirements elicitation, or even five minutes of up front planning also works in some situations.
 
 <div style="border: 1px solid #AAAAAA; float: right; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://tiernok.com/trent/2004_01_19_20.gif" alt="More kitten" style="padding-bottom: 5px; max-width: 250px;" />
+  <img src="http://www.tiernok.com/trent/2004_01_19_20.gif" alt="More kitten" style="padding-bottom: 5px; max-width: 250px;" />
 </div>
 
 And hell, some of us even like exploring processes, practices, and all those other things. Think of it like coding against a quantum compiler that never returns the same result twice, and occasionally turns into a spherical chicken for no apparent reason. Because, you know, as if projects aren&#8217;t tricky enough, they keep staffing them with us developers, and we can complexify anything.
@@ -76,7 +76,7 @@ Yep, totally agree, and I think a lot of people would be willing to volunteer my
 So before I sidetracked, I was offering a solution. Probably one of the best practices I have learned in my career is the practice of continuous improvement, particularly [Deming&#8217;s Plan-Do-Check-Act][5] process.
 
 <div style="border: 1px solid #AAAAAA; float: right; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://tiernok.com/trent/2004_02_17_25.jpg" alt="Yet More kitten" style="padding-bottom: 5px; max-width: 250px;" />
+  <img src="http://www.tiernok.com/trent/2004_02_17_25.jpg" alt="Yet More kitten" style="padding-bottom: 5px; max-width: 250px;" />
 </div>
 
 Evaluate something you think isn&#8217;t working, try an experiment, check how it went, deploy what worked to the wider company/group/etc. Rinse, Repeat.

@@ -32,7 +32,7 @@ The trickiest part is capturing a recording with the webcam overlay without havi
 The download link is available from the [CamStudio frontpage][2]. The download is a standard windows setup. Starting up the application presents us with the application:
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/RecordingWebCam/Recording01.jpg" alt="CamStudio" /><br /> CamStudio
+  <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/Recording01.jpg" alt="CamStudio" /><br /> CamStudio
 </div>
 
 **2: Tweak the Recording Settings (first time only)**
@@ -43,7 +43,7 @@ CamStudio fails to encode the recording if it is over 2GB. By dialing down the f
   * Slide the slider at the bottom until the framerate reflects 40 frames/second or less
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/RecordingWebCam/Recording02.jpg" alt="Recording Settings Dialog" /><br /> Recording Settings Dialog
+  <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/Recording02.jpg" alt="Recording Settings Dialog" /><br /> Recording Settings Dialog
 </div>
 
 Note: You may also want to go to &#8220;Options&#8221;, &#8220;Program Options&#8221;, &#8220;Directory for Recording&#8221; to specify where the files will be saved.
@@ -55,7 +55,7 @@ In CamStudio, select the &#8220;Window&#8221; option from the &#8220;Region&#822
 I&#8217;ll use a browser with the LessThanDot site as the example window I&#8217;ll be recording.
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/RecordingWebCam/RecordingTarget.jpg" alt="Recording - Target Window" /><br /> Recording &#8211; My Target Window
+  <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/RecordingTarget.jpg" alt="Recording - Target Window" /><br /> Recording &#8211; My Target Window
 </div>
 
 Note: If you are recording fullscreen, you will want to go in Option, Program Options menu and select the option to minimize on recording start, then review and/or set keyboard shortcuts to start and stop the recording.
@@ -68,7 +68,7 @@ Note: If you are recording fullscreen, you will want to go in Option, Program Op
 Warning: Cancelling out of this window with a blank selection will give you errors if you try to reopen the dialog, you&#8217;re better off restarting the program.
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/RecordingWebCam/Recording03.jpg" alt="Recording - Video Annotations Source" /><br /> Recording &#8211; Video Annotations Source
+  <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/Recording03.jpg" alt="Recording - Video Annotations Source" /><br /> Recording &#8211; Video Annotations Source
 </div>
 
 **4: Position and Size the Video**
@@ -81,7 +81,7 @@ Right clicking the open video gives access to additional settings for the video 
   * &#8220;Edit Refresh Rate&#8221; &#8211; Lets you dial down the refresh rate of the webcam if you are having performance problems
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/RecordingWebCam/Recording04.jpg" alt="Recording - Video Annotations Options" /><br /> Recording &#8211; Video Annotations Options &#8211; Circle w/ Border
+  <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/Recording04.jpg" alt="Recording - Video Annotations Options" /><br /> Recording &#8211; Video Annotations Options &#8211; Circle w/ Border
 </div>
 
 **5: Record**
@@ -89,7 +89,7 @@ Right clicking the open video gives access to additional settings for the video 
 At this point we are ready to start recording. Press the red record button (circle) on the toolbar and select the window you would like to record. The window will have 4 green indicators placed around the outside and recording will start immediately.
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/RecordingWebCam/RecordingInProgress.jpg" alt="Recording - In Progress" /><br /> Recording &#8211; In Progress
+  <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/RecordingInProgress.jpg" alt="Recording - In Progress" /><br /> Recording &#8211; In Progress
 </div>
 
 After recording the video will be replayed for you. My first video is slightly over 4 minutes at 1140 x 836 and came in at 760MB, although following some of the suggested settings on forums could probably reduce this without adversely affecting quality. 
@@ -109,7 +109,7 @@ The first step is to open the recording. This will simplify the settings when we
 VirtualDub can display the input and output streams side-by-side, but they may will probably be too large to fit on the screen. Right clicking on the input or output, you can select a zoom level for each stream. 50% worked well for me.
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/RecordingWebCam/VirtualDub01.jpg" alt="VirtualDub - Opening the Video" /><br /> VirtualDub &#8211; Opening the Video
+  <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/VirtualDub01.jpg" alt="VirtualDub - Opening the Video" /><br /> VirtualDub &#8211; Opening the Video
 </div>
 
 The option for which panes to see is in the &#8220;View&#8221;, &#8220;Pane Layout&#8221; menu.
@@ -123,7 +123,7 @@ VirtualDub supports multiple codecs, in my case I used the Xvid codec with the b
   * Select configure if you want to change from the the defaults
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/RecordingWebCam/VirtualDub02.jpg" alt="VirtualDub - Codec Selection" /><br /> VirtualDub &#8211; Codec Selection
+  <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/VirtualDub02.jpg" alt="VirtualDub - Codec Selection" /><br /> VirtualDub &#8211; Codec Selection
 </div>
 
 **2: Add a &#8220;Resize&#8221; filter**
@@ -136,7 +136,7 @@ VirtualDub works by passing video through a series of filters. We will specify t
   * At this point you should be able to tweak the height or width and the other dimension will respond accordingly
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/RecordingWebCam/VirtualDub03.jpg" alt="VirtualDub - Resize Filter" /><br /> VirtualDub &#8211; Resize Filter
+  <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/VirtualDub03.jpg" alt="VirtualDub - Resize Filter" /><br /> VirtualDub &#8211; Resize Filter
 </div>
 
 Note: On closing the window, you can see the resolution rounds to the nearest multiple of 4 in the filters window

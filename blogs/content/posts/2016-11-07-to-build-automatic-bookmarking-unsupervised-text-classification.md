@@ -44,11 +44,11 @@ TF-IDF stands for Text Frequency Inverse Document Frequency. At a high level, a 
 I used a series of 5 of my own blog posts to test with:
 
 <pre>pages = [
-    'http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html',
-    'http://tiernok.com/posts/stop-manually-updating-your-jasmine-specrunner.html',
-    'http://tiernok.com/posts/self-hosted-web-updating-assets-without-restarting-the-debugger.html',
-    'http://tiernok.com/posts/asp-net-single-sign-on-against-office365-with-oauth2.html',
-    'http://tiernok.com/posts/improved-teamcity-net-build-warnings.html'
+    'http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html',
+    'http://www.tiernok.com/posts/stop-manually-updating-your-jasmine-specrunner.html',
+    'http://www.tiernok.com/posts/self-hosted-web-updating-assets-without-restarting-the-debugger.html',
+    'http://www.tiernok.com/posts/asp-net-single-sign-on-against-office365-with-oauth2.html',
+    'http://www.tiernok.com/posts/improved-teamcity-net-build-warnings.html'
 ]</pre>
 
 Starting with a set of my own posts meant the consistent would be in a consistent format, I would have some ideas on what I expected the keywords to be, and I could defer things like local content caching logic without running up someone else&#8217;s bill or messing up their page statistics.
@@ -95,7 +95,7 @@ I love python for it&#8217;s readability, but documentation and figuring out whi
 
 This is the top words it gave me for the first entry, a post about a real-time JavaScript test runner using Microsoft&#8217;s VS Code IDE for samples:
 
-<pre>Scoring http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
+<pre>Scoring http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
 Word: wallaby, TF-IDF: 0.01319
 Word: baseurl, TF-IDF: 0.01116
 Word: tests, TF-IDF: 0.00962
@@ -161,7 +161,7 @@ print('Done. Elapsed: %d' % end_time)</pre>
 
 And for the first entry in the list of pages, this nets us:
 
-<pre type="text">Processing http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
+<pre type="text">Processing http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
 Keyword: radiates test statuses directly, score: 14
 Keyword: test markers
 turn green/red, score: 13
@@ -208,7 +208,7 @@ Using the [BeautifulSoup][16] module, I can grab just the article from each page
 
 After adding this little bit of cleanup and running it back through the same logic as above, the results are a lot better:
 
-<pre>Page http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
+<pre>Page http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
     TF-IDF Keywords:
         Word: wallaby, TF-IDF: 0.0133
         Word: test, TF-IDF: 0.00742

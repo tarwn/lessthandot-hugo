@@ -31,7 +31,7 @@ The file processing in the sample application is intended to be a sample workloa
 In addition to running the process via the website, I also need an unattended application that will can run the same processing function. If I owned the server, this would be a scheduled task or service. As an Azure Worker the code will be remarkably similar.
 
 <div style="text-align: center; color: #666666; font-size: 90%">
-  <img src="http://tiernok.com/LTDBlog/CloudFileProcessor.png" alt="Cloud Processor Architecture" style="margin-bottom: 5px" /><br /> Architecture of the Processor
+  <img src="http://www.tiernok.com/LTDBlog/CloudFileProcessor.png" alt="Cloud Processor Architecture" style="margin-bottom: 5px" /><br /> Architecture of the Processor
 </div>
 
 The two front-ends access common logic in the Core library, which is responsible for both the processing logic and interacting with storage resources. This being sample code, it is certified as working on my machine and is definitely not production ready. That being said, I did write this in a few evenings, so writing a production-ready service doesn&#8217;t have to take that long in normal workdays.

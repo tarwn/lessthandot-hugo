@@ -22,7 +22,7 @@ Last week[-ish] I published a pair of books for [software developers][1], this w
 Starting to get interested in the tools necessary to build a framework that enables application design? Of building an application that comes together smoothly instead of coming apart at the seems? Or maybe just trying to bridge a communications gap? 
 
 <div style="float: left; padding: .5em; width: 170px; margin: 0em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <a href="http://msdn.microsoft.com/en-us/library/ff650706.aspx" title="Microsoft Application Architecture Guide as MSDN"><img src="http://tiernok.com/_n_images/books/maag.jpg" alt="Microsoft Application Architecture Guide" /></a><br /> Microsoft Application<br />Architecture Guide
+  <a href="http://msdn.microsoft.com/en-us/library/ff650706.aspx" title="Microsoft Application Architecture Guide as MSDN"><img src="http://www.tiernok.com/_n_images/books/maag.jpg" alt="Microsoft Application Architecture Guide" /></a><br /> Microsoft Application<br />Architecture Guide
 </div>
 
 ### [Microsoft Application Architecture Guide][2]   
@@ -31,7 +31,7 @@ MS Patterns and Practices Team
 This book may have been produced by a Microsoft group and tend to reference Microsoft technologies as practical examples, but I still think it is one of the best survey courses in application architecture I have read. The guide covers application architecture, what it is, terminology, when it is appropriate to use general patterns, and what it means to use them. While most of the information can be found in other books, this book brings it together into a central, organized structure. An added benefit, if you work with Microsoft technologies, is that it comes from the viewpoint of a group that is intimately aware of the tools and services Microsoft provides, giving us insight into the intended congruence of those tools and the architectural patterns. <br style="clear: left" />
 
 <div style="float: left; padding: .5em; width: 170px; margin: 0em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <a href="http://www.codingthearchitecture.com/pages/book/index.html" title="Software Architecture for Developers at Coding The Architecture.com"><img src="http://tiernok.com/_n_images/books/CTA_AFD.jpg" alt="Software Architecture for Developers" style="max-width: 150px;" /></a><br /> Software Architecture<br />for Developers
+  <a href="http://www.codingthearchitecture.com/pages/book/index.html" title="Software Architecture for Developers at Coding The Architecture.com"><img src="http://www.tiernok.com/_n_images/books/CTA_AFD.jpg" alt="Software Architecture for Developers" style="max-width: 150px;" /></a><br /> Software Architecture<br />for Developers
 </div>
 
 ### [Software Architecture for Developers][3]   
@@ -48,7 +48,7 @@ Focused on the architect, rather than the tools of the job, this series of essay
 <br style="clear: left" />
 
 <div style="float: left; padding: .5em; width: 170px; margin: 0em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <a href="http://www.amazon.com/gp/product/0321127420/" title="Patterns of Enterprise Application Architecture at Amazon"><img src="http://tiernok.com/_n_images/books/peaa.jpg" alt="Patterns of Enterprise Application Architecture" /></a><br /> Patterns of Enterprise<br />Application Architecture
+  <a href="http://www.amazon.com/gp/product/0321127420/" title="Patterns of Enterprise Application Architecture at Amazon"><img src="http://www.tiernok.com/_n_images/books/peaa.jpg" alt="Patterns of Enterprise Application Architecture" /></a><br /> Patterns of Enterprise<br />Application Architecture
 </div>
 
 ### [Patterns of Enterprise Application Architecture][4]   

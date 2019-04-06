@@ -43,11 +43,11 @@ Our goal is to quickly add Unit Testing to a pseudo &#8216;existing&#8217; appli
 Opening the project in Visual Studio presents us with our basic Web Application. To get started we right-click the solution and add a Unit Testing Project.
 
 <div class="imgBox">
-  <a href="http://tiernok.com/LTDBlog/unittesting/orig/AddProject.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/AddProject.png" alt="Adding a Unit Test Project" /></a><br /> Adding a Unit Test Project
+  <a href="http://www.tiernok.com/LTDBlog/unittesting/orig/AddProject.png" title="See larger image size"><img src="http://www.tiernok.com/LTDBlog/unittesting/AddProject.png" alt="Adding a Unit Test Project" /></a><br /> Adding a Unit Test Project
 </div>
 
 <div class="imgBox">
-  <a href="http://tiernok.com/LTDBlog/unittesting/orig/AddProject2.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/AddProject2.png" alt="Adding a Unit Test Project" /></a><br /> Adding a Unit Test Project
+  <a href="http://www.tiernok.com/LTDBlog/unittesting/orig/AddProject2.png" title="See larger image size"><img src="http://www.tiernok.com/LTDBlog/unittesting/AddProject2.png" alt="Adding a Unit Test Project" /></a><br /> Adding a Unit Test Project
 </div>
 
 Visual Studio will add our new Test Project to the solution and along with an automatically generated Unit Test class. 
@@ -55,11 +55,11 @@ Visual Studio will add our new Test Project to the solution and along with an au
 Next we need to add a reference to the Unit Test project, allowing it to reference the Web Application project we are going to be testing.
 
 <div class="imgBox">
-  <a href="http://tiernok.com/LTDBlog/unittesting/orig/AddReference.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/AddReference.png" alt="Reference the Project to Test" /></a><br /> Reference the Project to Test
+  <a href="http://www.tiernok.com/LTDBlog/unittesting/orig/AddReference.png" title="See larger image size"><img src="http://www.tiernok.com/LTDBlog/unittesting/AddReference.png" alt="Reference the Project to Test" /></a><br /> Reference the Project to Test
 </div>
 
 <div class="imgBox">
-  <a href="http://tiernok.com/LTDBlog/unittesting/orig/AddReference2.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/AddReference2.png" alt="Reference the Project to Test" /></a><br /> Reference the Project to Test
+  <a href="http://www.tiernok.com/LTDBlog/unittesting/orig/AddReference2.png" title="See larger image size"><img src="http://www.tiernok.com/LTDBlog/unittesting/AddReference2.png" alt="Reference the Project to Test" /></a><br /> Reference the Project to Test
 </div>
 
 We&#8217;ve now added Unit Testing to the solution. In doing so, Visual Studio has done a few extra steps for us, adding a toolbar as well as some generated files.
@@ -69,7 +69,7 @@ We&#8217;ve now added Unit Testing to the solution. In doing so, Visual Studio h
 The new toolbar in Visual Studio will helps us easily manage and run our tests. 
 
 <div class="imgBox">
-  <a href="http://tiernok.com/LTDBlog/unittesting/orig/UnitTestToolbar.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/UnitTestToolbar.png" alt="Unit Test Toolbar" /></a><br /> Visual Studio&#8217;s Unit Test Toolbar
+  <a href="http://www.tiernok.com/LTDBlog/unittesting/orig/UnitTestToolbar.png" title="See larger image size"><img src="http://www.tiernok.com/LTDBlog/unittesting/UnitTestToolbar.png" alt="Unit Test Toolbar" /></a><br /> Visual Studio&#8217;s Unit Test Toolbar
 </div>
 
 From left to right:
@@ -102,7 +102,7 @@ Some of these tools also show up in the right click context menu (like Create Un
 Back to the test project for a moment. When we added our new test project, Visual Studio gave us our first Test Class file, complete with some content. Normally I delete most of this and write it myself, if I need it, but it&#8217;s useful while you are still learning what&#8217;s available and the syntax to take advantage of it.
 
 <div class="imgBox">
-  <a href="http://tiernok.com/LTDBlog/unittesting/orig/GeneratedCode.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/GeneratedCode.png" alt="Generated Code" /></a><br /> Generated Test Code
+  <a href="http://www.tiernok.com/LTDBlog/unittesting/orig/GeneratedCode.png" title="See larger image size"><img src="http://www.tiernok.com/LTDBlog/unittesting/GeneratedCode.png" alt="Generated Code" /></a><br /> Generated Test Code
 </div>
 
 <ol style="list-style-type: upper-alpha;">
@@ -233,7 +233,7 @@ Our test method calls the new GetFormattedAddress method with values for all of 
 _Note: if you are following along with this project in Visual Studio, you will need to add a &#8220;using UnitTestPresentation;&#8221; to the top of your test class_
 
 <div class="imgBox">
-  <a href="http://tiernok.com/LTDBlog/unittesting/orig/TestRun1.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/TestRun1.png" alt="Test Run results" /></a><br /> Viewing Test Run Results
+  <a href="http://www.tiernok.com/LTDBlog/unittesting/orig/TestRun1.png" title="See larger image size"><img src="http://www.tiernok.com/LTDBlog/unittesting/TestRun1.png" alt="Test Run results" /></a><br /> Viewing Test Run Results
 </div>
 
 Technically we could list as many assert statements as we want in the function, but this contradicts our Keep-it-Simple philosophy above and Visual Studio stops evaluating assertions in an individual method after the first one fails. It&#8217;s a good practice to try and limit the number Asserts so that each test method is testing one expectation and, when the customer&#8217;s expectations change, it is obvious where we have to make updates and what is impacted.
@@ -264,7 +264,7 @@ public void GetFormattedText_Address2Whitespace_ReturnsTwoHtmlLines() {
 And when we run our tests this time, we can see that the last one is the case where our function isn&#8217;t working correctly.
 
 <div class="imgBox">
-  <a href="http://tiernok.com/LTDBlog/unittesting/orig/TestRun2.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/TestRun2.png" alt="Test Run results" /></a><br /> Viewing Test Run Results
+  <a href="http://www.tiernok.com/LTDBlog/unittesting/orig/TestRun2.png" title="See larger image size"><img src="http://www.tiernok.com/LTDBlog/unittesting/TestRun2.png" alt="Test Run results" /></a><br /> Viewing Test Run Results
 </div>
 
 So apparently when we have whitespace in Address Line 2, the formatting function wasn&#8217;t smart enough to ignore it. This is easy to fix and we now have 3 tests that can verify our fix will works properly.
@@ -287,7 +287,7 @@ Sample code and previous articles in this unplanned series:
  [1]: /index.php/DesktopDev/GeneralPurposeLanguages/unit-testing-costs-too-much "Check out the first post"
  [2]: /index.php/DesktopDev/MSTech/raleigh-code-camp-followup "Read the codecamp review"
  [3]: /index.php/DesktopDev/GeneralPurposeLanguages/unit-testing-costs-too-much-twice-the-co "Read the post on the twice the code issue"
- [4]: http://tiernok.com/LTDBlog/UnitTestingExample.zip "ZIP Archive of test code and database backup"
+ [4]: http://www.tiernok.com/LTDBlog/UnitTestingExample.zip "ZIP Archive of test code and database backup"
  [5]: /index.php/Architect/IntroductionArchitectureDesign/an-interview-with-roy-osherove-autor-of- "Read the interview here at LessThanDot"
  [6]: http://weblogs.asp.net/rosherove/ "Visit Roy Osherove's blog"
  [7]: http://twitter.com/RoyOsherove "@RoyOsherove on Twitter"

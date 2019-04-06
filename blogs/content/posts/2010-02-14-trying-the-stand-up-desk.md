@@ -26,7 +26,7 @@ The last few months I have seen several posts about stand-up desks, with Ron Per
 My three requirements were ease of implementation, ease of modification, and low initial investment. I considered stacking boxes, raising the brackets holding the desk, and even looked at [purpose-built desks][4], but none of these options satisfied my requirements. After thinking about it a couple weeks, I decided to invest in some build-your-own shelving products from the local Lowes. I had previously used some custom shelving components to build a dual-computer platform for my home office, but I couldn&#8217;t recall what the expense had been. For about $30 I purchased 4 16&#8243;x16&#8243; platforms, 2 12&#8243;x24&#8243; platforms, and several lengths of connecting rods. This gave me enough materials to build the platforms for my desk, with several extra lengths of connecting rod for flexibility in the design process. An extra benefit was that the pieces could be reconfigured to provide additional shelving at home if the standing concept fell through.
 
 <div style="text-align: center; font-style: italic;">
-  <img src="http://tiernok.com/LTDBlog/desk_1.0.jpg" alt="My Standing Desk, v1.0 " /><br /> My Standing Desk, v1.0
+  <img src="http://www.tiernok.com/LTDBlog/desk_1.0.jpg" alt="My Standing Desk, v1.0 " /><br /> My Standing Desk, v1.0
 </div>
 
 ## The First Week
@@ -36,7 +36,7 @@ Before the first day was out, I realized I was feeling more energized and engage
 The first issue that came up was that I had underestimated the height of the keyboard. Also, while I had initially thought it would be difficult to judge the height of the monitors, it took me less than an hour to decide the taller monitor felt more comfortable. On Tuesday I brought in some more lengths of connecting rod and re-arranged the platforms.
 
 <div style="text-align: center; font-style: italic;">
-  <img src="http://tiernok.com/LTDBlog/desk_1.1.jpg" alt="My Standing Desk, v1.1 " /><br /> My Standing Desk, v1.1
+  <img src="http://www.tiernok.com/LTDBlog/desk_1.1.jpg" alt="My Standing Desk, v1.1 " /><br /> My Standing Desk, v1.1
 </div>
 
 Unfortunately I also wore my favorite, though less comfortable, shoes on Tuesday. I learned the difficult lesson that my feet were not as accustomed to sustained standing as they had been when I was younger. For the remainder of the week I borrowed a tall directors chair, allowing me to sit every few hours, and wore my oxfords.

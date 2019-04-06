@@ -76,35 +76,35 @@ From the focus and challenges above, I pulled together a minimal process. Let&#8
 I started by identifying the major features we were looking for in the system. Once I had these (through a series of conversations and prototyping), I had my manager prioritize them and help group them into potential releases. Initially this proved to be 3 major releases and a few extra features that would be prioritized after the last release.
 
 <div style="color: #666666; text-align: center; font-size: .8em;">
-  <a href="http://tiernok.com/LTDBlog/process/FeaturesLg.png" title="View the fullsize version"><img src="http://tiernok.com/LTDBlog/process/FeaturesSm.png" alt="Feature list spreadsheet" /></a><br /> Spreadsheet of prioritized features and releases
+  <a href="http://www.tiernok.com/LTDBlog/process/FeaturesLg.png" title="View the fullsize version"><img src="http://www.tiernok.com/LTDBlog/process/FeaturesSm.png" alt="Feature list spreadsheet" /></a><br /> Spreadsheet of prioritized features and releases
 </div>
 
 I put all of these features into a spreadsheet, along with their priority and a rough estimate in ideal days. In a separate page of the spreadsheet I broke down each of the features into individual tasks and estimated those tasks in hours. There was a little variance between my individual task estimates and the feature estimates, but they averaged out. 
 
 <div style="color: #666666; text-align: center; font-size: .8em;">
-  <a href="http://tiernok.com/LTDBlog/process/TasksLg.png" title="View the fullsize version"><img src="http://tiernok.com/LTDBlog/process/TasksSm.png" alt="Task list spreadsheet" /></a><br /> Spreadsheet of features broken down into tasks
+  <a href="http://www.tiernok.com/LTDBlog/process/TasksLg.png" title="View the fullsize version"><img src="http://www.tiernok.com/LTDBlog/process/TasksSm.png" alt="Task list spreadsheet" /></a><br /> Spreadsheet of features broken down into tasks
 </div>
 
 In a third tab, I created a list of the available workdays for the project, an iteration code, a number of hours available for each day (initially 6), a calculation for number of hours remaining in the iteration, and an empty column for the number of task hours remaining. I then created a pivot chart for this table, grouping by the iteration so I could easily display a burndown chart of the expected hours being done against the actual tasks being completed.
 
 <div style="color: #666666; text-align: center; font-size: .8em;">
-  <a href="http://tiernok.com/LTDBlog/process/TrackingLg.png" title="View the fullsize version"><img src="http://tiernok.com/LTDBlog/process/TrackingSm.png" alt="Tracking spreadsheet" /></a><br /> Spreadsheet for tracking actual vs estimated work against tasks
+  <a href="http://www.tiernok.com/LTDBlog/process/TrackingLg.png" title="View the fullsize version"><img src="http://www.tiernok.com/LTDBlog/process/TrackingSm.png" alt="Tracking spreadsheet" /></a><br /> Spreadsheet for tracking actual vs estimated work against tasks
 </div>
 
 <div style="color: #666666; text-align: center; font-size: .8em;">
-  <a href="http://tiernok.com/LTDBlog/process/BurndownLg.png" title="View the fullsize version"><img src="http://tiernok.com/LTDBlog/process/BurndownSm.png" alt="Tracking spreadsheet" /></a><br /> Burndown chart from tracking data
+  <a href="http://www.tiernok.com/LTDBlog/process/BurndownLg.png" title="View the fullsize version"><img src="http://www.tiernok.com/LTDBlog/process/BurndownSm.png" alt="Tracking spreadsheet" /></a><br /> Burndown chart from tracking data
 </div>
 
 The last spreadsheet step was to load up my first iteration without overloading myself. Adding an iteration code to my task list tab and some calculated fields (visible in the task spreadsheet screenshot above) let me total up how many estimated hours I was loading into the iteration.
 
 <div style="color: #666666; text-align: center; font-size: .8em;">
-  <img src="http://tiernok.com/LTDBlog/process/CapacityAssigned.png" alt="Tracking spreadsheet" /><br /> Simple graphs of available capacity vs assigned tasks
+  <img src="http://www.tiernok.com/LTDBlog/process/CapacityAssigned.png" alt="Tracking spreadsheet" /><br /> Simple graphs of available capacity vs assigned tasks
 </div>
 
 After setting up the spreadsheet, I setup a visual board in the corner of my whiteboard. I created columns for tasks that were ready to be worked (tasks assigned to the current iteration), tasks in progress, tasks completed and waiting for the weekly deployment, and tasks that were completed and in the live environment. Within a couple days I also added an express lane at the bottom for bugs and high priority feature revisions.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/process/board.png" alt="Visual Board Pictures" /><br /> Pictures of visual board over time
+  <img src="http://www.tiernok.com/LTDBlog/process/board.png" alt="Visual Board Pictures" /><br /> Pictures of visual board over time
 </div>
 
 The sticky notes were kept fairly simple. The color indicates the type and each has the name of the task and the iteration code written on it. Though I did not implement WIP limits (Kanban) on my columns, I have unofficial numbers in my head to help me limit task switching.
@@ -164,7 +164,7 @@ If you are interested, here are some random links on related topics (plenty more
   * [Visual Management for Agile Teams][8]
 
  [1]: /index.php/ITProfessionals/ProfessionalDevelopment/the-programmer-vs-the-developer "Read more on my thoughts of the Developer vs Programmer title"
- [2]: http://tiernok.com/LTDBlog/process/SampleWorkbook.xlsx "Download sample workbook"
+ [2]: http://www.tiernok.com/LTDBlog/process/SampleWorkbook.xlsx "Download sample workbook"
  [3]: http://www.delicious.com/tarwn "Eli's bookmarks on Delicious"
  [4]: http://kosmothink.com/2010/12/31/the-uncertainty-principal-or-how-to-choose-the-right-methodology/ "The Uncertainty Principle OR How to Choose the Right Methodology - Kosmothink"
  [5]: http://www.projectsmart.co.uk/waterfall-v-agile-how-should-i-approach-my-software-development-project.html "Waterfall v Agile: How Should I Approach My Software Development Project?"

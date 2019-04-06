@@ -46,7 +46,7 @@ This area still has a number of enhancements on the development list, but links 
 
 As before, I want to thank the members who are taking time out of their schedules to beta test for us. Depending on how this works out we may start incorporating this type of beta testing into new features to help take a more iterative approach to future changes. AS always, questions or comments can be left below or in our forums.
 
- [1]: http://tiernok.com/downloads/LTD/Tidbit_10.png
- [2]: http://tiernok.com/downloads/LTD/Tidbit_1.png
- [3]: http://tiernok.com/downloads/LTD/Tidbit_11.png
- [4]: http://tiernok.com/downloads/LTD/Tidbit_7.png
+ [1]: http://www.tiernok.com/downloads/LTD/Tidbit_10.png
+ [2]: http://www.tiernok.com/downloads/LTD/Tidbit_1.png
+ [3]: http://www.tiernok.com/downloads/LTD/Tidbit_11.png
+ [4]: http://www.tiernok.com/downloads/LTD/Tidbit_7.png

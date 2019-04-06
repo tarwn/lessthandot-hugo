@@ -17,7 +17,7 @@ tags:
 
 ---
 <div style="float: left; margin: .5em;">
-  <img src="http://tiernok.com/LTDBlog/rant.png" alt="Ranting Guy" style="height: 75px; " />
+  <img src="http://www.tiernok.com/LTDBlog/rant.png" alt="Ranting Guy" style="height: 75px; " />
 </div>
 
 Follow me on twitter for a few weeks and you will inevitably see comments reflecting my &#8216;high standards&#8217;, generally in the form of frustration when something falls short. As a technical user I have little patience with software that is difficult to use, communicates poorly, or leaves my systems in an unstable state. Driving this frustration is the fact that we have been discussing these issues since well before I joined the field, yet I am still being sold software that doesn&#8217;t meet even basic standards of usability and safety.
@@ -29,7 +29,7 @@ _Note: this has been sitting the queue for several months. It&#8217;s not the pr
 Usability isn&#8217;t a black and white topic. You don&#8217;t have to be an Apple to provide a User Experience that seems intuitive or simply <span class="MT_under">doesn&#8217;t</span> generate confusion and anxiety. Direct benefits can be found in increased customer understanding (especially critical during hand-offs), lower training costs, lower support costs, increased return business, and improved ability to catch gaps and misunderstandings (the earlier these are caught, the cheaper they are to correct). However many people stop at the surface arguments, that incorporating basic usability costs too much, takes to long, or requires an expert.
 
 <div style="text-align: center; color: #999999;">
-  <img src="http://tiernok.com/LTDBlog/ExtraFeatures.png" alt="Features are useless if it doesn't work" style="height: 75px" /><br /> And it&#8217;s labeled in a dead language&#8230;
+  <img src="http://www.tiernok.com/LTDBlog/ExtraFeatures.png" alt="Features are useless if it doesn't work" style="height: 75px" /><br /> And it&#8217;s labeled in a dead language&#8230;
 </div>
 
 ### The Costs

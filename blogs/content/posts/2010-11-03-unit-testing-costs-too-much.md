@@ -23,7 +23,7 @@ While my presentation aims to dispel a number of these and show that unit testin
 Warning: I know, it seems a little lighter-hearted than my usual posts, maybe a little more sarcastic. I blame it on all the time staring at powerpoint this weekend.
 
 <div style="color: #666666; text-align: center; float: left; margin: .5em; font-size: .8em;">
-  <img src="http://tiernok.com/LTDBlog/iStock_000005447184Smaller.jpg" alt="It's a Picture!" /><br /> Stock from <a href="http://www.istockphoto.com/" title="Visit iStockPhoto.com">iStockPhoto.com</a>
+  <img src="http://www.tiernok.com/LTDBlog/iStock_000005447184Smaller.jpg" alt="It's a Picture!" /><br /> Stock from <a href="http://www.istockphoto.com/" title="Visit iStockPhoto.com">iStockPhoto.com</a>
 </div>
 
 ## It&#8217;s Twice as Much Code!

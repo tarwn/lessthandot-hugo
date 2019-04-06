@@ -23,13 +23,13 @@ Luckily converting the existing Console project to be deployable as an Azure Wor
 For the purposes of this post, I have created a solution with an Existing Console project, an Azure Cloud Project, and an Existing Azure Worker Role project (we have to have at least one to create the Azure Cloud Project, it can be deleted later).
 
 <div class="font-size: 85%; color: #666666; text-align: center">
-  <img src="http://tiernok.com/LTDBlog/AzureWorkerRole/awr_01.png" alt="Solution Explorer" /><br /> Solution Explorer view of the Sample Solution
+  <img src="http://www.tiernok.com/LTDBlog/AzureWorkerRole/awr_01.png" alt="Solution Explorer" /><br /> Solution Explorer view of the Sample Solution
 </div>
 
 If we right click the Azure &#8220;Roles&#8221; folder, the option to use an existing Worker Role project is not available. Visual Studio enables or disables this option automatically, based on whether we have any assignable projects in the solution that aren&#8217;t already associated with the Azure project.
 
 <div class="font-size: 85%; color: #666666; text-align: center">
-  <img src="http://tiernok.com/LTDBlog/AzureWorkerRole/awr_02.png" alt="Add Role menu options" /><br /> &#8220;Worker Role Project in Solution&#8221; is Disabled
+  <img src="http://www.tiernok.com/LTDBlog/AzureWorkerRole/awr_02.png" alt="Add Role menu options" /><br /> &#8220;Worker Role Project in Solution&#8221; is Disabled
 </div>
 
 The first thing we want to do is add a RoleEntryPoint to the console application. To keep this simple, I&#8217;m going to convert the Program class to serve as the RoleEntryPoint also.
@@ -37,7 +37,7 @@ The first thing we want to do is add a RoleEntryPoint to the console application
 To add the RoleEntryPoint class, I need to first add some azure references. I&#8217;m using Azure 1.8, so this means I&#8217;ll need the following 4 references:
 
 <div class="font-size: 85%; color: #666666; text-align: center">
-  <img src="http://tiernok.com/LTDBlog/AzureWorkerRole/awr_03.png" alt="Assembly References Dialog" /><br /> Adding WindowsAzure References
+  <img src="http://www.tiernok.com/LTDBlog/AzureWorkerRole/awr_03.png" alt="Assembly References Dialog" /><br /> Adding WindowsAzure References
 </div>
 
 _Note: The Storage SDK version number for Azure SDK 1.8 is 2.0. I suspect they chose to do this because they made a number of significant changes in the storage library that were not backwards compatible with 1.7._
@@ -84,7 +84,7 @@ The last thing we need to do is add some information to the project file. I can 
 Save and reload the project, and now when we right click on the Azure Cloud Project Roles, the option to associate and existing project is available.
 
 <div class="font-size: 85%; color: #666666; text-align: center">
-  <img src="http://tiernok.com/LTDBlog/AzureWorkerRole/awr_04.png" alt="Add Role menu options" /><br /> &#8220;Worker Role Project in Solution&#8221; is Available Now
+  <img src="http://www.tiernok.com/LTDBlog/AzureWorkerRole/awr_04.png" alt="Add Role menu options" /><br /> &#8220;Worker Role Project in Solution&#8221; is Available Now
 </div>
 
 After adding the project, we can now run it either as a local console application or in the computer emulator as an emulated worker role.

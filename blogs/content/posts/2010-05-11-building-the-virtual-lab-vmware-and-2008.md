@@ -34,7 +34,7 @@ Lets get started.
   </h2>
   
   <p>
-    The purpose of today&#8217;s article is to create a basic windows virtual machine that can serve as a template for later virtual machines. Having a basic image or set of images on hand can dramatically speed up production and non-production roll-outs as well as ensure standardization of systems across your environment.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
+    The purpose of today&#8217;s article is to create a basic windows virtual machine that can serve as a template for later virtual machines. Having a basic image or set of images on hand can dramatically speed up production and non-production roll-outs as well as ensure standardization of systems across your environment.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
   </p>
 </div>
 
@@ -291,8 +291,8 @@ The first decision the installer requires is selection between the various versi
  [1]: http://twitter.com/onpnt "Ted on Twitter"
  [2]: /index.php/All/?disp=authdir&author=68 "Ted's blogs here"
  [3]: /index.php/ITProfessionals/EthicsIT/my-singing-not-so-good "SQL Saturday Chicago article"
- [4]: http://tiernok.com/LTDBlog/dr_beanie.png
- [5]: http://tiernok.com/LTDBlog/dr_wizard.png
+ [4]: http://www.tiernok.com/LTDBlog/dr_beanie.png
+ [5]: http://www.tiernok.com/LTDBlog/dr_wizard.png
  [6]: http://downloads.vmware.com/d/info/datacenter_downloads/vmware_server/2_0#drivers_tools "Available from VMWare Server Tools section"
  [7]: http://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx "Windows 2008 R2 Requirements"
  [8]: http://www.microsoft.com/windowsserver2008/en/us/r2-editions-overview.aspx "See the feature comparison"

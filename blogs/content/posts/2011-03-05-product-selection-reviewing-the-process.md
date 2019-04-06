@@ -44,7 +44,7 @@ It was a long trip from &#8220;I want product ABC&#8221; to what we really ended
 ## Step 4: Review 
 
 <div style="margin: 1.5em .5em .5em 0; padding: .5em; color: #666666; text-align: center; float: right;">
-  <img src="http://tiernok.com/LTDBlog/ThinkingGuy.jpg" title="Assess and review" style="max-width: 120px" />
+  <img src="http://www.tiernok.com/LTDBlog/ThinkingGuy.jpg" title="Assess and review" style="max-width: 120px" />
 </div>
 
 There are a lot of templates out there for reviewing projects and tasks and, like so many areas in our field, there are books upon books upon theories upon methods. Don&#8217;t waste a lot of time trying to find the perfect method, generally any method will get us 80% of the way there. One starting place I like is the [Agile Retrospective][1].
@@ -77,7 +77,7 @@ Document only as much as you need and no more. Documenting every last detail is 
 ## And Done! 
 
 <div style="margin: 1.5em .5em .5em 0; padding: .5em; color: #666666; text-align: center; float: left;">
-  <img src="http://tiernok.com/LTDBlog/success.jpg" title="Success" style="max-width: 120px" />
+  <img src="http://www.tiernok.com/LTDBlog/success.jpg" title="Success" style="max-width: 120px" />
 </div>
 
 We did it. From a general budget line item or CEO query we have evaluated what the company needed, brought all the business owners on board to create requirements and selection criteria, evaluated several products against each other, and executed a lessons learned exercise against our process. Along the way we sidestepped a lot of meetings, reduced a slew of risks, reduced implementation and requirements gaps, and probably saved our company a lot of money they will never know about. 

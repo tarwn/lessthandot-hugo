@@ -48,8 +48,8 @@ The site is still on SQL CE for the membership database, which is used during th
 
 After seeing the increase I thought it would be interesting to share the numbers as well as how useful it is to have a short load test as part of the delivery pipeline.
 
- [1]: http://tiernok.com/LTDBlog/ContinuousDelivery/SqlServerLoadTestRates.png
- [2]: http://tiernok.com/LTDBlog/ContinuousDelivery/SqlServerLoadTestResponses.png
+ [1]: http://www.tiernok.com/LTDBlog/ContinuousDelivery/SqlServerLoadTestRates.png
+ [2]: http://www.tiernok.com/LTDBlog/ContinuousDelivery/SqlServerLoadTestResponses.png
  [3]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "See more information in the Continuous Delivery wiki entry"
  [4]: /index.php/EnterpriseDev/application-lifecycle-management/continuous-delivery-adding-the-load "Implementing the Automated Load test blog post"
  [5]: /index.php/EnterpriseDev/application-lifecycle-management/implementing-wcat-for-load-testing "Implementing WCAT to test a website"

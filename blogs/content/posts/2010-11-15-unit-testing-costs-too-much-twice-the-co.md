@@ -53,7 +53,7 @@ All of these costs have well-defined values in manufacturing environments as wel
 Each step in our sample development process above increases the base cost of producing a working feature. The further a bug makes it without being detected the greater costs it has accrued and the more cost it will take to correct it.
 
 <div style="text-align: center; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/unittesting/UnitTestingGraphs.png" alt="Effort and cost of bugs increase dramatically as time passes" /><br /> Effort and cost from bugs increase dramatically as time passes
+  <img src="http://www.tiernok.com/LTDBlog/unittesting/UnitTestingGraphs.png" alt="Effort and cost of bugs increase dramatically as time passes" /><br /> Effort and cost from bugs increase dramatically as time passes
 </div>
 
 Costs:

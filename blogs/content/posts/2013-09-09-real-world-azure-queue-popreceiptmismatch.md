@@ -203,7 +203,7 @@ Why do the PopReceipts change on Updates at all? I can&#8217;t think of a single
 More Real World Azure to come. Technical issues, how to work with support and their limitations, my personal known issues list, and so on.
 
  [1]: http://www.windowsazure.com/en-us/develop/net/how-to-guides/queue-service/ "Azure Queue Service on WindowsAzure.com"
- [2]: http://tiernok.com/LTDBlog/RealWorldAzure/TwoStepDequeue.png
+ [2]: http://www.tiernok.com/LTDBlog/RealWorldAzure/TwoStepDequeue.png
  [3]: http://msdn.microsoft.com/en-us/library/windowsazure/dd179357.aspx
  [4]: http://msdn.microsoft.com/en-us/library/windowsazure/dd179446.aspx
  [5]: http://msdn.microsoft.com/en-us/library/windowsazure/dd179347.aspx

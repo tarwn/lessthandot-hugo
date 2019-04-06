@@ -48,7 +48,7 @@ Prior to designing the deployment pipeline, I selected the project that will ser
 The delivery pipeline will look something like this:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview.png" title="Pipeline overview diagram" /><br /> Overview of the delivery pipeline
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Overview.png" title="Pipeline overview diagram" /><br /> Overview of the delivery pipeline
 </div>
 
 Initially there won&#8217;t be any configuration management or database change management, and the test coverage will be less than complete. These are all follow-up projects I can take on once I get the main pipeline working.

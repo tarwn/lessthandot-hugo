@@ -29,7 +29,7 @@ I typed &#8220;javascript unit testing&#8221; into Google and started reading.
 The jsTestDriver site includes plugins for Eclipse, Maven, and IntelliJ. I also found an article on [using it with Visual Studio][3] and it was fairly easy setting it up as a user tool in EditPlus.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/jsunittest/editplus.png" alt="Screenshot of EditPlus" /><br /> Screenshot of EditPlus Settings
+  <img src="http://www.tiernok.com/LTDBlog/jsunittest/editplus.png" alt="Screenshot of EditPlus" /><br /> Screenshot of EditPlus Settings
 </div>
 
 Though I&#8217;m not using the feature, jsTestDriver provides a flag to specify an output file for the results, enabling us to use it as part of a continuous build.
@@ -110,7 +110,7 @@ You will need to update the browser and java paths to reflect your own.
 Once the browser has started and it has been captured by the server for testing, it will look like this:
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/jsunittest/jsTestDriver.png" alt="Chrome captured by jsTestDriver Server" /><br /> Chrome captured by jsTestDriver Server
+  <img src="http://www.tiernok.com/LTDBlog/jsunittest/jsTestDriver.png" alt="Chrome captured by jsTestDriver Server" /><br /> Chrome captured by jsTestDriver Server
 </div>
 
 Now we can run our tests by issuing the following command:
@@ -209,7 +209,7 @@ Qunit&#8217;s _equals_ method has it&#8217;s actual and expected arguments rever
 Opening the testrunner html file, we should now see it display a block for each test that we have defined above.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/jsunittest/qunit.png" alt="QUnit Results" /><br /> QUnit Results
+  <img src="http://www.tiernok.com/LTDBlog/jsunittest/qunit.png" alt="QUnit Results" /><br /> QUnit Results
 </div>
 
 Failed tests automatically display details. Any test can be toggled open/closed by clicking it&#8217;s name, and a handy &#8220;rerun&#8221; button lets us re-run a single test.

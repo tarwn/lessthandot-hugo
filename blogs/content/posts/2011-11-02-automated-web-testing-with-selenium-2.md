@@ -85,7 +85,7 @@ namespace SampleWebDriverUnitTest {
 		[TestMethod]
 		public void GettingStarted_BasicFireFoxGET_LoadsPage() {
 			using (FirefoxDriver driver = new FirefoxDriver()) {
-				driver.Url = "http://tiernok.com";
+				driver.Url = "http://www.tiernok.com";
 
 				driver.Navigate();
 
@@ -97,7 +97,7 @@ namespace SampleWebDriverUnitTest {
 
 This is all it takes to get our first test. Create the solution, add the reference, create the test class and method. Since it&#8217;s MS Test, Ctrl+R, A will run all of our tests in the integrated test runner.
 
-Selenium WebDriver is written in a somewhat fluent syntax, so for the rest of the post we will combine the URL and navigation into a single statement: driver.Navigate().GoToUrl(&#8220;http://tiernok.com&#8221;);
+Selenium WebDriver is written in a somewhat fluent syntax, so for the rest of the post we will combine the URL and navigation into a single statement: driver.Navigate().GoToUrl(&#8220;http://www.tiernok.com&#8221;);
 
 ## The First Test Cases
 
@@ -141,7 +141,7 @@ Converting this to an MS Test is not difficult, but we will want to wrap the tes
 <pre>[TestMethod]
 public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 		driver.FindElement(By.LinkText("Contact")).Click();
 		driver.FindElement(By.Id("itxtFromName")).Clear();
 		driver.FindElement(By.Id("itxtFromName")).SendKeys("Selenium Test");
@@ -161,7 +161,7 @@ Based on this one test, we can easily create tests to satisfy the other conditio
 <pre>[TestMethod]
 public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 		driver.FindElement(By.LinkText("Contact")).Click();
 		driver.FindElement(By.Id("itxtFromEmail")).Clear();
 		driver.FindElement(By.Id("itxtFromEmail")).SendKeys(EmailAddress);
@@ -175,7 +175,7 @@ public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 		driver.FindElement(By.LinkText("Contact")).Click();
 		driver.FindElement(By.Id("itxtFromName")).Clear();
 		driver.FindElement(By.Id("itxtFromName")).SendKeys("Selenium Test");
@@ -189,7 +189,7 @@ public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsSuccessWhenAllFieldsProvided() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 		driver.FindElement(By.LinkText("Contact")).Click();
 		driver.FindElement(By.Id("itxtFromName")).Clear();
 		driver.FindElement(By.Id("itxtFromName")).SendKeys("Selenium Test");
@@ -314,7 +314,7 @@ The PageFactory object is responsible for wiring our page objects to the actual 
 <pre>[TestMethod]
 public void ContactPageReturnsErrorWhenEmailFieldEmpty_PageObjectVersion() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 
 		Pages.PageBase homepage = new Pages.PageBase();
 		PageFactory.InitElements(driver, homepage);
@@ -387,7 +387,7 @@ Our refactored test now looks like this:
 <pre>[TestMethod]
 public void ContactPageReturnsErrorWhenEmailFieldEmpty_PageObjectVersion() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 
 		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
@@ -407,7 +407,7 @@ Converting the remining tests is a straightforward exercise.
 <pre>[TestMethod]
 public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
@@ -420,7 +420,7 @@ public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
@@ -433,7 +433,7 @@ public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
@@ -446,7 +446,7 @@ public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsSuccessWhenAllFieldsProvided() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://tiernok.com/");
+		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
