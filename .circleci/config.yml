@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cibuilds/hugo:0.54
+      - image: tarwn/hugo-azurecli:latest
     working_directory: ~/project
     steps:
       - checkout
@@ -14,16 +14,16 @@ jobs:
       # - run:
       #     name: "Test Website"
       #     command: htmlproofer ~/project/blogs/public --allow-hash-href --check-html --empty-alt-ignore
-      - run:
-          name: Install Azure CLI
-          command: |
-            echo "# install Azure CLI"
-            apk update && \
-              apk add bash py-pip && \
-              apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python-dev make && \
-              pip --no-cache-dir install -U pip && \
-              pip --no-cache-dir install azure-cli && \
-              apk del --purge build
+      # - run:
+      #     name: Install Azure CLI
+      #     command: |
+      #       echo "# install Azure CLI"
+      #       apk update && \
+      #         apk add bash py-pip && \
+      #         apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python-dev make && \
+      #         pip --no-cache-dir install -U pip && \
+      #         pip --no-cache-dir install azure-cli && \
+      #         apk del --purge build
       - run:
           name: Deploy to Azure Blobs
           command: |
