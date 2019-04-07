@@ -3,6 +3,7 @@ title: BlueMetal Architects Chicago and the Data Practice
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-06-26T13:48:00+00:00
+ID: 2119
 excerpt: |
    
   

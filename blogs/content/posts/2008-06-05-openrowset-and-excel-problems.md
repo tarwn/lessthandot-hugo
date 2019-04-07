@@ -3,6 +3,7 @@ title: OPENROWSET And Excel Problems
 author: SQLDenis
 type: post
 date: 2008-06-05T23:11:31+00:00
+ID: 44
 url: /index.php/datamgmt/datadesign/openrowset-and-excel-problems/
 views:
   - 13356
@@ -23,20 +24,26 @@ In the first 2 rows put some data, save the excel sheet as testing.xls on the c 
   
 Execute the command below
 
-<pre>SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
-'Excel 8.0;Database=C:testing.xls','SELECT * FROM [Sheet1$]')</pre>
+```sql
+SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
+'Excel 8.0;Database=C:testing.xls','SELECT * FROM [Sheet1$]')
+```
 
 You will see 1 row since the first row will be used for header names
   
 If you want 2 rows you need to add HDR=No like this
 
-<pre>SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
-'Excel 8.0;Database=C:testing.xls;HDR=NO','SELECT * FROM [Sheet1$]')</pre>
+```sql
+SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
+'Excel 8.0;Database=C:testing.xls;HDR=NO','SELECT * FROM [Sheet1$]')
+```
 
 Run the following OPENROWSET command
 
-<pre>SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
-'Excel 8.0;Database=SS:testing.xls','SELECT * FROM [Sheet1$]')</pre>
+```sql
+SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
+'Excel 8.0;Database=SS:testing.xls','SELECT * FROM [Sheet1$]')
+```
 
 The path can&#8217;t be found (SS) you will get this error
   
@@ -48,8 +55,10 @@ OLE DB error trace [OLE/DB Provider &#8216;Microsoft.Jet.OLEDB.4.0&#8217; IDBIni
 
 Run the following OPENROWSET command
 
-<pre>SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
-'Excel 8.0;Database=C:testing2.xls','SELECT * FROM [Sheet1$]')</pre>
+```sql
+SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
+'Excel 8.0;Database=C:testing2.xls','SELECT * FROM [Sheet1$]')
+```
 
 When you spell the filename (testing2) wrong you get this error
   
@@ -63,8 +72,10 @@ OLE DB error trace [OLE/DB Provider &#8216;Microsoft.Jet.OLEDB.4.0&#8217; IColum
 
 Run the following OPENROWSET command
 
-<pre>SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
-'Excel 8.0;Database=C:testing.xls','SELECT * FROM [Sheet11$]')</pre>
+```sql
+SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
+'Excel 8.0;Database=C:testing.xls','SELECT * FROM [Sheet11$]')
+```
 
 When you spell the sheet name (Sheet11) wrong you get this error
   
@@ -76,8 +87,10 @@ OLE DB error trace [Non-interface error: OLE DB provider unable to process objec
 
 Run the following OPENROWSET command
 
-<pre>SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
-'Excel 8.0;Database=D:testing.xls','SELECT * FROM [Sheet1$]')</pre>
+```sql
+SELECT * FROM OPENROWSET( 'Microsoft.Jet.OLEDB.4.0',
+'Excel 8.0;Database=D:testing.xls','SELECT * FROM [Sheet1$]')
+```
 
 When you type the wrong path (D) but the path exists, then you get this error
   

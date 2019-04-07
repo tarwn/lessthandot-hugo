@@ -3,6 +3,7 @@ title: How to change the SA password in SQL Server
 author: SQLDenis
 type: post
 date: 2012-05-22T12:14:00+00:00
+ID: 1634
 excerpt: |
   There was a question today How to change my local sql server sa password? i would like to expand on my answer in this post
   
@@ -34,10 +35,12 @@ The easiest way is to login to the server as sa or any other account that has su
 
 here is what the script looks like
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword'
-GO</pre>
+GO
+```
 
 Most likely you will get this error
   
@@ -47,25 +50,30 @@ Password validation failed. The password does not meet Windows policy requiremen
 
 There are two things you can do, the smarter thing would be to pick a complex password with some digits and some characters that are not alphanumeric. Or you can shoot yourself in the foot by turning the check off
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword', CHECK_POLICY =OFF
-GO</pre>
-
+GO
+```
 Now try to login. It is possible that the sa account is disabled, you will see the following message
 
 Login failed for user &#8216;sa&#8217;. Reason: The account is disabled. (Microsoft SQL Server, Error: 18470)
 
 To enable the account, all you have to do is the following
 
-<pre>ALTER LOGIN [sa] ENABLE
-GO</pre>
+sql
+ALTER LOGIN [sa] ENABLE
+GO
+```
 
 **You do not need to restart the SQL Server service for a password change**. One of the myths that you will hear is that you need to restart SQL Server. When you change from SQL authentication to mixed authentication and vice versa, you do need to restart for the changes to take effect but for a password change it is immediate, no need for a restart!
 
 And if you are old school, you can also do the following, thanks to [Aaron Bertrand][3] for this
 
-<pre>EXEC sp_password N'old password', N'new password', N'sa';</pre>
+sql
+EXEC sp_password N'old password', N'new password', N'sa';
+```
 
 You can also do all of this from SSMS with the GUI, navigate to the security folder, right click on the sa account, select properties and you will see the following window
 

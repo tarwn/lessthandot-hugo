@@ -3,6 +3,7 @@ title: Use WITH RESULT SETS to change column names and datatypes of a resultset
 author: SQLDenis
 type: post
 date: 2013-03-17T21:59:00+00:00
+ID: 2036
 excerpt: |
   SQL Server 2012 has added WITH RESULT SETS to the EXCECUTE command. You can now override the data types and names that the resultset is returning
   
@@ -33,11 +34,13 @@ SQL Server 2012 has added WITH RESULT SETS to the EXCECUTE command. You can now 
   
 Here is one example where we change the name of the column from _name_ to _TableName_
 
-<pre>EXEC ('SELECT name FROM sys.tables' )
+sql
+EXEC ('SELECT name FROM sys.tables' )
 WITH RESULT SETS
 ( 
    (TableName nvarchar(100))
-);</pre>
+);
+```
 
 <pre>TableName
 -----------
@@ -51,12 +54,13 @@ Of course we could have just aliased it as well instead.
   
 You can also changed the datatype, here is a silly example
 
-<pre>EXEC ('SELECT object_id FROM sys.tables' )
+sql
+EXEC ('SELECT object_id FROM sys.tables' )
 WITH RESULT SETS
 ( 
    (ObjectID decimal(20,2))
-);</pre>
-
+);
+```
 Here is the output
 
 <pre>ObjectID
@@ -70,7 +74,9 @@ So far we could have accomplished everything we did by using an alias or cast/co
   
 Take sp_helpdb for example. If you execute the following
 
-<pre>EXEC sp_helpdb</pre>
+sql
+EXEC sp_helpdb
+```
 
 You will get the following columns
 
@@ -81,7 +87,8 @@ AdventureWorksDW2012  201.74 MB	DenisDenis	14	Mar 16 2013	Status=ONLINE.....	110
 
 Let&#8217;s say we want to change the names of all the columns and also we want to make the column created return a datetime value. You can of course dump the stored procedure output in a temporary table and select from that table. But in this case I think WITH RESULT SETS shows its value. Here is how we do this with sp_helpdb
 
-<pre>EXEC sp_helpdb
+sql
+EXEC sp_helpdb
 WITH RESULT SETS
 ( 
    (
@@ -93,7 +100,8 @@ WITH RESULT SETS
    DatabaseStatus nvarchar(2000),
    DatabaseCompatabilitylevel int 
    )
-);</pre>
+);
+```
 
 Here is what the output looks like
 

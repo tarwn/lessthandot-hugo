@@ -3,6 +3,7 @@ title: SQL University – SQL Server Reporting Services Configuration Files Over
 author: Jes Borland
 type: post
 date: 2011-02-01T12:01:00+00:00
+ID: 1013
 excerpt: |
   SQL Server 2008 R2 
   

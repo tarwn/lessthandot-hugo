@@ -3,6 +3,7 @@ title: OpenOffice 3.0 is now available
 author: SQLDenis
 type: post
 date: 2008-10-13T23:02:01+00:00
+ID: 175
 url: /index.php/itprofessionals/ethicsit/openoffice-3-0-is-now-available/
 views:
   - 3225

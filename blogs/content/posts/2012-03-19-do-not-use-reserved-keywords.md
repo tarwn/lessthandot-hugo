@@ -3,6 +3,7 @@ title: Do not use reserved keywords for your column names
 author: George Mastros (gmmastros)
 type: post
 date: 2012-03-19T16:16:00+00:00
+ID: 1567
 excerpt: 'Column names and table names should not use reserved keywords in your database. You can use reserved keywords because SQL Server will allow it.  However, this should not be done because it makes writing and reading queries more difficult. When you use a&hellip;'
 url: /index.php/datamgmt/datadesign/do-not-use-reserved-keywords/
 views:
@@ -22,7 +23,8 @@ The following query compares your column names against a list of [identified key
 
 **How to detect this problem:**
 
-<pre>Declare @Temp Table(Data VarChar(50))
+sql
+Declare @Temp Table(Data VarChar(50))
 Insert Into @Temp Values('ABSOLUTE')
 Insert Into @Temp Values('ACTION')
 Insert Into @Temp Values('ADA')
@@ -424,8 +426,8 @@ From	sys.columns As C
 		Inner Join @Temp T
 			On C.Name = Data
 Where	is_ms_shipped = 0
-Order By object_name(C.object_id), C.Name</pre>
-
+Order By object_name(C.object_id), C.Name
+```
 **How to correct it:**
   
 Correcting for this type of problem can be challenging because you cannot just willy nilly go around changing column names. You are likely to have code that uses the column with the original name and this code will need to change to accommodate the changed column name. To make matters more difficult, you could have systems outside of the database that are sending dynamic SQL making it more difficult to find all of the occurrences in code.

@@ -3,6 +3,7 @@ title: A trip down technology memory lane
 author: SQLDenis
 type: post
 date: 2011-10-29T13:07:00+00:00
+ID: 1364
 excerpt: 'This week I had training in a building on campus where I have never been before. The interesting part besides the training was that there was a mini museum in this building. There were a bunch of old and very old pieces of technology stored here. I had&hellip;'
 url: /index.php/itprofessionals/ethicsit/a-trip-down-technology-memory/
 views:

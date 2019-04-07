@@ -3,6 +3,7 @@ title: Using T-SQL OUTPUT and MERGE To Link Old and New Keys
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-09-13T11:44:00+00:00
+ID: 1312
 excerpt: "You don't catch me doing SQL posts that often, probably because I spend far more time working in a development world that seems to be moving further and further away from SQL. That being said, the database server is optimized towards handling large sets of data and data manipulations, so rather than second-guessing developers that know far more (and have far larger budgets), I like to take advantage of database-side solutions when I can. The time saved not dragging data back and forth on the network is an extra bonus."
 url: /index.php/datamgmt/datadesign/using-t-sql-output-and-merge/
 views:
@@ -26,7 +27,8 @@ Recently I needed the ability to transfer records (and control of the data) betw
 
 To get us started, I&#8217;ve created some simplified, substitute table for the post. Using simpler tables that are far fewer in count will let us focus more on the problem at hand and less on my data definition skills.
 
-<pre>use SampleStuff;
+sql
+use SampleStuff;
 Go
 
 -- "Original" tables with columns for new keys
@@ -62,8 +64,8 @@ CREATE TABLE dbo.New_Phone(
 	New_User_Key	int NOT NULL,
 	Phone			varchar(20) NOT NULL,
 	Is_Work			bit NOT NULL
-);</pre>
-
+);
+```
 _Note: For the sake of shorter examples, I&#8217;m going to provide examples on the User tables. We don&#8217;t actually need anything fancier than SCOPE_IDENTITY() until we get to the step where we transfer Phone records since we are doing one user at a time, but that&#8217;s why examples are so much easier than the real world._
 
 The tricky part of this transform is the ownership of the data. Due to some internal restrictions, the original data structure is going to be the master. This means the original record is responsible for holding both its own key and the key in the newer system. The transform needs to get the record from the original system, push it into the newer system (generating the new key), then update the new key back into the original record.
@@ -74,13 +76,14 @@ If this was a one-shot ETL load, I would probably add a temporary column to the 
 
 Added in SQL Server 2005 (6 years ago already?), OUTPUT can be used to return data from inside INSERT, UPDATE, DELETE, and MERGE statements. This solves the first part, giving us access to the new key when it&#8217;s generated. Well, almost.
 
-<pre>CREATE TABLE #ID_Transfer(new_key int, old_key int);
+sql
+CREATE TABLE #ID_Transfer(new_key int, old_key int);
 
 INSERT INTO dbo.New_User(Username)
 OUTPUT Inserted.New_User_Key, ??? INTO #ID_Transfer
 SELECT OU.Username FROM dbo.Orig_User OU
-WHERE OU.Orig_User_Key = @TargetUserKey;</pre>
-
+WHERE OU.Orig_User_Key = @TargetUserKey;
+```
 While we can easily create a temporary table to capture the resulting New\_User\_Key that is generated on insert, we don&#8217;t have access to the table the data is coming from, so we don&#8217;t have the original key to populate next to that new key.
 
 Which brings us to MERGE.
@@ -91,7 +94,8 @@ MERGE was added in SQL 2008 and allows us to define a source dataset, target dat
 
 By forcing the merge to always perform an INSERT, we will satisfy our needs for inserting the data into the &#8220;New&#8221; tables as well as have the capability to capture both the original and new key in a single OUTPUT statement.
 
-<pre>CREATE TABLE #ID_Transfer(new_key int, old_key int);
+sql
+CREATE TABLE #ID_Transfer(new_key int, old_key int);
 
 MERGE INTO dbo.New_User AS [Target]
 USING (SELECT OU.Orig_User_Key, OU.Username FROM dbo.Orig_User OU WHERE OU.Orig_User_Key = @TargetUserKey) AS Source
@@ -99,15 +103,16 @@ ON 1 = 0
 WHEN NOT MATCHED THEN
 INSERT (Username)
 VALUES(source.Username)
-OUTPUT INSERTED.New_User_Key, source.Orig_USer_Key INTO #ID_Transfer;</pre>
-
+OUTPUT INSERTED.New_User_Key, source.Orig_USer_Key INTO #ID_Transfer;
+```
 
 
 ## Full Roundtrip
 
 With the critical pieces out of the way, it&#8217;s easy now to create the full round-trip update.
 
-<pre>CREATE TABLE #ID_Transfer(new_key int, old_key int);
+sql
+CREATE TABLE #ID_Transfer(new_key int, old_key int);
 
 DECLARE @TargetUserKey int;
 SELECT @TargetUserKey = 1;
@@ -126,14 +131,15 @@ SET New_User_Key = IT.new_key
 FROM dbo.Orig_User OU
 	INNER JOIN #ID_Transfer IT ON IT.old_key = OU.Orig_User_Key;
 
-DROP TABLE #ID_Transfer;</pre>
-
+DROP TABLE #ID_Transfer;
+```
 And we can see the updated values like so:
 
-<pre>SELECT TOP 20 *
+sql
+SELECT TOP 20 *
 FROM dbo.Orig_User O
-LEFT JOIN dbo.New_User N ON N.New_User_Key = O.New_User_Key</pre>
-
+LEFT JOIN dbo.New_User N ON N.New_User_Key = O.New_User_Key
+```
 So that was the first step, next is the phone numbers.
 
 ## Homework/Practice
@@ -142,7 +148,8 @@ Given the sample tables above, it would now be fairly straightforward to apply t
 
 Setup script:
 
-<pre>use SampleStuff;
+sql
+use SampleStuff;
 Go
 
 /*
@@ -219,6 +226,6 @@ WHERE Orig_User_Key % 3 = 0;
 INSERT INTO dbo.Orig_Home_Phone(Orig_User_Key, Phone)
 SELECT Orig_User_Key, 'Phone ' + CAST(Orig_User_Key as varchar)
 FROM dbo.Orig_User
-WHERE Orig_User_Key % 4 = 0;</pre>
-
+WHERE Orig_User_Key % 4 = 0;
+```
 Given those pieces above and some additional scripts, finishing the script should only take 5-10 minutes. Consider it a free practice problem 🙂

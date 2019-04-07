@@ -3,6 +3,7 @@ title: Showing sysjobhistory run_duration in HHMMSS format
 author: SQLDenis
 type: post
 date: 2011-11-17T23:27:00+00:00
+ID: 1388
 excerpt: |
   Someone asked the following question on our forum: HHMMSS format in sysjobhistory.
   
@@ -38,10 +39,12 @@ So to put it all together, you can use a CTE (Common Table Expression) combined 
 
 Here is all the code that is needed
 
-<pre>;WITH cte AS(SELECT RIGHT('000000' + CONVERT(VARCHAR(6),run_duration),6 ) AS FormattedTime,* FROM msdb..sysjobhistory
-WHERE run_duration &gt;=0)
+sql
+;WITH cte AS(SELECT RIGHT('000000' + CONVERT(VARCHAR(6),run_duration),6 ) AS FormattedTime,* FROM msdb..sysjobhistory
+WHERE run_duration >=0)
  
-SELECT STUFF(STUFF(FormattedTime,3,0,':'),6,0,':'),* FROM cte</pre>
+SELECT STUFF(STUFF(FormattedTime,3,0,':'),6,0,':'),* FROM cte
+```
 
 Now I don&#8217;t have any jobs that run over 24 hours, I might have some of them that are 16 hours or so I am not sure if it adds to the hours or if it starts to add 2 more digits for the days
 
@@ -69,5 +72,5 @@ GETUTCDATE
 
 Have fun
 
- [1]: http://forum.lessthandot.com/viewtopic.php?f=22&t=15776
+ [1]: http://forum.ltd.local/viewtopic.php?f=22&t=15776
  [2]: http://wiki.ltd.local/index.php/Ten_SQL_Server_Functions_That_You_Have_Ignored_Until_Now

@@ -3,6 +3,7 @@ title: Column name or number of supplied values does not match table definition 
 author: SQLDenis
 type: post
 date: 2013-03-03T19:25:00+00:00
+ID: 2020
 excerpt: |
   The other day I was doing some testing and then from the same connection I executed a stored procedure only to be greeted with the following message
   
@@ -39,25 +40,31 @@ Let&#8217;s duplicate this here with some code that you can run. Make sure that 
 
 First create this stored procedure, do not close this window after creation
 
-<pre>CREATE PROCEDURE prTestTemp
+sql
+CREATE PROCEDURE prTestTemp
 AS
 
 CREATE TABLE #temp (id int)
 INSERT #temp VALUES(1)
 
 SELECT * FROM #temp
-GO</pre>
+GO
+```
 
 In the same window now create the following temp table
 
-<pre>CREATE TABLE #temp (id int, id2 int)
+sql
+CREATE TABLE #temp (id int, id2 int)
 INSERT #temp VALUES(1,2)
 
-SELECT * FROM #temp</pre>
+SELECT * FROM #temp
+```
 
 Now run the procedure
 
-<pre>EXEC prTestTemp</pre>
+sql
+EXEC prTestTemp
+```
 
 Here is the error
   
@@ -67,31 +74,39 @@ Column name or number of supplied values does not match table definition._
 
 Drop the table and we will try again
 
-<pre>DROP TABLE #temp</pre>
+sql
+DROP TABLE #temp
+```
 
 Run the procedure again
 
-<pre>EXEC prTestTemp</pre>
+sql
+EXEC prTestTemp
+```
 
 This time there was no error
 
 Let&#8217;s do another experiment, create the table again
 
-<pre>CREATE TABLE #temp (id int, id2 int)
+sql
+CREATE TABLE #temp (id int, id2 int)
 INSERT #temp VALUES(1,2)
 
-SELECT * FROM #temp</pre>
+SELECT * FROM #temp
+```
 
 Now, let&#8217;s try modifying the procedure, change create to alter and run it again
 
-<pre>ALTER PROCEDURE prTestTemp
+sql
+ALTER PROCEDURE prTestTemp
 AS
 
 CREATE TABLE #temp (id int)
 INSERT #temp VALUES(1)
 
 SELECT * FROM #temp
-GO</pre>
+GO
+```
 
 Here is the error
   
@@ -105,7 +120,8 @@ The reason you run into this because the temporary table is local to your connec
 
 BTW, doing something like this is no problem
 
-<pre>CREATE PROCEDURE prTestTemp2
+sql
+CREATE PROCEDURE prTestTemp2
 AS
  
 CREATE TABLE #temp (id int, id2 int)
@@ -114,7 +130,8 @@ INSERT #temp VALUES(1,2)
 SELECT * FROM #temp
 
 EXEC prTestTemp
-GO</pre>
+GO
+```
 
 As you can see both procedure have a temporary table named #temp and you get back two resultsets, one has 1 column, the other one has 2 columns
 

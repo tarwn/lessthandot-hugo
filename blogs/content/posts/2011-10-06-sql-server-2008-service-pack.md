@@ -3,6 +3,7 @@ title: SQL Server 2008 Service Pack 3 has been released
 author: SQLDenis
 type: post
 date: 2011-10-06T20:21:00+00:00
+ID: 1343
 excerpt: |
   SQL Server 2008 Service Pack 3 has been released. be aware that you can't use this for SQL Server 2008 R2
   

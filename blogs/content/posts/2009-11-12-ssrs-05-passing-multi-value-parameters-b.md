@@ -3,6 +3,7 @@ title: SSRS 05 Passing Multi-Value Parameters Between Reports.
 author: David Forck (thirster42)
 type: post
 date: 2009-11-12T18:19:21+00:00
+ID: 626
 url: /index.php/datamgmt/datadesign/ssrs-05-passing-multi-value-parameters-b/
 views:
   - 18448

@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #20 – T-SQL Best Practices'
 author: Jes Borland
 type: post
 date: 2011-07-12T10:37:00+00:00
+ID: 1247
 excerpt: 'Here we go again! It’s T-SQL Tuesday #20 – a monthly blog party, this time hosted by Amit Banerjee. (Thanks Amit!) This month, we’re talking about “T-SQL Best&hellip;'
 url: /index.php/datamgmt/dbprogramming/t-sql-tuesday-20-t/
 views:
@@ -34,17 +35,21 @@ No, you don’t need to ask people in the office to start calling you by your Tw
 
 A table alias is easy to implement, and saves trouble in the long run. How? Let’s look at this simple query: 
 
-<pre>SELECT Customer.CustomerID, SalesOrderID, OrderDate, TotalValue 
+sql
+SELECT Customer.CustomerID, SalesOrderID, OrderDate, TotalValue 
 FROM Customer 
-INNER JOIN SalesOrder ON SalesOrder.CustomerID = Customer.CustomerID</pre>
+INNER JOIN SalesOrder ON SalesOrder.CustomerID = Customer.CustomerID
+```
 
 It’s a pain to reference a field with the full table name. And while this query is readable, what table does “OrderDate” reside in? Can you easily tell? 
 
 Try this version instead:
 
-<pre>SELECT CUST.CustomerID, SO.SalesOrderID, SO.OrderDate, SO.TotalValue 
+sql
+SELECT CUST.CustomerID, SO.SalesOrderID, SO.OrderDate, SO.TotalValue 
 FROM Customer CUST 
-INNER JOIN SalesOrder SO ON SO.CustomerID = CUST.CustomerID </pre>
+INNER JOIN SalesOrder SO ON SO.CustomerID = CUST.CustomerID 
+```
 
 With a table alias: 
 

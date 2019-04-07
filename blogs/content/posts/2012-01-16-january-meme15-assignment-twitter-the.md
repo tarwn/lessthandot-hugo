@@ -3,6 +3,7 @@ title: 'January #Meme15 Assignment – Twitter, the Blog, taking over the univer
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-01-16T14:25:00+00:00
+ID: 1496
 excerpt: 'Good friend and SQL Server MVP, Jason Strate (Blog | Twitter) put together the meme15 topic.  Meme15 is a monthly post that involves topics about blogging or meta-blogging.  The monthly event has a ton of value in helping build blogging skills, share bl&hellip;'
 url: /index.php/datamgmt/dbadmin/january-meme15-assignment-twitter-the/
 views:

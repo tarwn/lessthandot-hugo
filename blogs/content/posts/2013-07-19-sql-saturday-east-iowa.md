@@ -3,6 +3,7 @@ title: 'SQL Saturday #239 – East Iowa'
 author: Paul Timmerman
 type: post
 date: 2013-07-19T20:39:00+00:00
+ID: 2138
 excerpt: |
   One week from now I will be arriving in Iowa City to kick of my SQL Saturday #239, East Iowa experience.
   

@@ -3,6 +3,7 @@ title: Send Excel formatted query results on schedules
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-10T10:56:51+00:00
+ID: 381
 url: /index.php/datamgmt/datadesign/send-excel-formatted-query-results-on-sc/
 views:
   - 15820

@@ -3,6 +3,7 @@ title: Review of The Well-Grounded Java Developer
 author: SQLDenis
 type: post
 date: 2013-01-09T15:12:00+00:00
+ID: 1908
 excerpt: |
   This is a review of The Well-Grounded Java Developer, Vital techniques of Java 7 and polyglot programming. Written by Benjamin J. Evans and Martijn Verburg. The book was published in July, 2012 and it contains 496 pages
   

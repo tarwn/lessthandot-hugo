@@ -3,6 +3,7 @@ title: Ghost in the wires by Kevin Mitnick a review
 author: SQLDenis
 type: post
 date: 2011-10-15T11:08:00+00:00
+ID: 1348
 excerpt: 'I noticed Kevin Mitnick latest book Ghost In The Wires was released, since I already read The Art of Deception and The Art of Intrusion I decided to give Ghost in the wires a try. Ghost in the wires is the first time that Kevin Mitnick tells the story o&hellip;'
 url: /index.php/itprofessionals/ethicsit/ghost-in-the-wires/
 views:

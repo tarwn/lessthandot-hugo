@@ -3,6 +3,7 @@ title: Backup file contents with SSIS – INSERT/UPDATE Decisions
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-01-31T10:33:00+00:00
+ID: 1021
 excerpt: 'The last part of the series that shows how to create an SSIS Package to find and backup configuration files found on a server will go over the Data Flow Task (DFT).  The DFT part of this process is split as half of the total processing that will be done in the package.  The DFT will only be a small percentage of the overall processing time because of the Foreach Loop and staging area consuming the higher cost to the process.'
 url: /index.php/datamgmt/dbadmin/backup-file-contents-with-ssis/
 views:

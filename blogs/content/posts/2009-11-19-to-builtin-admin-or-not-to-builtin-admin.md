@@ -3,6 +3,7 @@ title: To BUILTINAdmin or not to BUILTINAdmin
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-11-19T13:42:26+00:00
+ID: 635
 url: /index.php/datamgmt/datadesign/to-builtin-admin-or-not-to-builtin-admin/
 views:
   - 27097
@@ -50,7 +51,9 @@ To do this in T-SQL we can run one of a few system procedures or query off the s
 
 Option 1)
 
-<pre>sp_helpsrvrole 'sysadmin'</pre>
+sql
+sp_helpsrvrole 'sysadmin'
+```
 
 This will show you all members of the sysadmin server roles. Very handy audit tool and one I reported to SOX auditors often with. 
 
@@ -60,9 +63,11 @@ http://wiki.ltd.local/index.php/Find\_Out\_Server\_Roles\_For\_a\_SQL\_Server\_L
 
 In Denis’s Wiki entry there is a query at the end that gives us exactly what we need here also
 
-<pre>SELECT [name],sysadmin,bulkadmin
+sql
+SELECT [name],sysadmin,bulkadmin
 FROM master..syslogins
-WHERE sysadmin =1 or bulkadmin =1</pre>
+WHERE sysadmin =1 or bulkadmin =1
+```
 
 This will show us everyone in the sysadmin role. 
 

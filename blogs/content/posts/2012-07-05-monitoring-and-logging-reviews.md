@@ -3,6 +3,7 @@ title: Monitoring and Logging as a Service – Reviews
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-07-05T13:43:00+00:00
+ID: 1644
 excerpt: There is a lot of value in knowing what the internals of your application are doing and, more importantly, knowing them 5 minutes ago before someone called to complain the system is slow. Instrumenting an application sounds like a complex task, but in my prior post I showed some sample code that allowed me to tie into several log services to store data from my system as it is running.
 url: /index.php/enterprisedev/instrumentation/monitoring-and-logging-reviews/
 views:
@@ -55,9 +56,10 @@ Once you have the input created, create or edit the _sensitive.config_ file at t
 
 **sensitive.config**
 
-<pre>LogProvider = Loggly
-Loggly.BaseURL = https://logs.loggly.com/inputs/put-your-guid-here</pre>
-
+```text
+LogProvider = Loggly
+Loggly.BaseURL = https://logs.loggly.com/inputs/put-your-guid-here
+```
 Open the site, try a few things, then switch over to the Loggly screen and see if a page will load long enough to show it received some data.
 
 ## DataDog (Could Not Review)
@@ -96,12 +98,13 @@ In the inputs section of the project there is a tab called &#8220;API&#8221; tha
 
 **sensitive.config**
 
-<pre>LogProvider = storm
+```text
+LogProvider = storm
 
 Storm.AccessToken = your-access-token-here
 Storm.BaseURL = https://api.splunkstorm.com/1/inputs/http
-Storm.ProjectId = your-project-id-here</pre>
-
+Storm.ProjectId = your-project-id-here
+```
 Load up the sample app, click some buttons, then switch over to Splunk Storm and try out the search. Clicking different items in the log entries will fire off searches. Unfortunately charting is almost a blog series on it&#8217;s own, sorry.
 
 ## Sumo Logic (Could Not Review)
@@ -138,13 +141,14 @@ Add a new Host entry, then inside that host add a new Log with a type of &#8220;
 
 **sensitive.config**
 
-<pre>LogProvider = logentries
+```text
+LogProvider = logentries
 
 logentries.BaseURL = http://api.logentries.com
 logentries.AccountKey = your-account-key-here
 logentries.Host = your-host-name
-logentries.Log = your-log-name-or-key</pre>
-
+logentries.Log = your-log-name-or-key
+```
 Note: I fired up the sample app pointed at logentries when I started writing this up, my data still hasn&#8217;t shown up. I&#8217;m not sure if it will or not.
 
 ## Papertrail (Could Not Review)

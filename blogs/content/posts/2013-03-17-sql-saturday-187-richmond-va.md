@@ -3,6 +3,7 @@ title: 'SQL Saturday #187 – Richmond, VA'
 author: chopstik
 type: post
 date: 2013-03-17T21:56:00+00:00
+ID: 2028
 excerpt: 'I attended my very first SQL Saturday in Richmond, VA this past weekend and it was great! I wish I had been better prepared for it but at least I now know what to expect and will be better prepared for the future. That being said, though, it was a terri&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-187-richmond-va/
 views:

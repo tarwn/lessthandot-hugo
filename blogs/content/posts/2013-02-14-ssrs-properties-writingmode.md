@@ -3,6 +3,7 @@ title: SSRS Properties – WritingMode
 author: Jes Borland
 type: post
 date: 2013-02-14T12:11:00+00:00
+ID: 1993
 excerpt: The purpose of this property is to allow you to display text horizontally or vertically within a text box or tablix cell.
 url: /index.php/datamgmt/ssrs/ssrs-properties-writingmode/
 views:

@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 23: Get the tools you need to be more productive'
 author: SQLDenis
 type: post
 date: 2012-12-23T21:28:00+00:00
+ID: 1881
 excerpt: This is day twenty-three of the SQL Advent 2012 series of blog posts. Today we are going to look at why you should get tools to be more productive.
 url: /index.php/webdev/business-intelligence/get-the-tools-you-need/
 views:

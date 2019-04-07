@@ -3,6 +3,7 @@ title: Banish IE6? Not As Easy As You Think
 author: SQLDenis
 type: post
 date: 2009-05-11T12:17:44+00:00
+ID: 421
 url: /index.php/itprofessionals/ethicsit/banish-ie6-not-as-easy-as-you-think/
 views:
   - 3461

@@ -3,6 +3,7 @@ title: My Path to the Dark Side part 3 – Testing the Schema
 author: Alex Ullrich
 type: post
 date: 2008-07-21T13:59:00+00:00
+ID: 83
 url: /index.php/desktopdev/mstech/my-path-to-the-dark-side-part-3-testing/
 views:
   - 3587
@@ -28,7 +29,8 @@ First step we&#8217;re going to take to set up NUnit is to add another project t
 
 Our first unit test will just be to see that we can export the schema. Here it is:
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,7 +54,8 @@ namespace RecipeTrackerPartOne.Tests
             new SchemaExport(cfg).Execute(false, true, false, false);
         }
     }
-}</pre>
+}
+```
 
 There&#8217;s a lot of new stuff going on here. Most noticeable is the directive to use nunit.framework, and the attributes added to our class and our methods. These attributes are used when we load the project into NUnit, so that the NUnit application knows which code to execute as a test. We need to identify our class as a TestFixture, then our method within the class as a Test (this setup allows us to include supporting code that is not necessarily a test). Also notable is the directive to use NHibernate.Tool.hbm2ddl. This is what allows NHibernate to create the schema for us (by converting Hibernate mappings to Data Definition Language).
 

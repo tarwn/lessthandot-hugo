@@ -3,6 +3,7 @@ title: Learn more about Azure + SQL Server at SQLSaturday Minnesota
 author: Jes Borland
 type: post
 date: 2016-08-15T20:48:43+00:00
+ID: 4661
 url: /index.php/datamgmt/dbprogramming/mssqlserver/learn-more-about-azure-sql-server-at-sqlsaturday-minnesota/
 views:
   - 6129

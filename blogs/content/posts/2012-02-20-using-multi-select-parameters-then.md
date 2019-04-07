@@ -3,6 +3,7 @@ title: 'Using multi-select parameters?  Then you might need to do this.'
 author: David Forck (thirster42)
 type: post
 date: 2012-02-20T12:04:00+00:00
+ID: 1527
 excerpt: 'I’ve created SQL Server Reporting Services reports with Multi-Select parameters before.  In fact it’s pretty par for the course for me now.  I recently ran into an issue with one of my reports that I had never seen before.  Every so often I’d get an err&hellip;'
 url: /index.php/datamgmt/datadesign/using-multi-select-parameters-then/
 views:
@@ -15,7 +16,7 @@ categories:
 ---
 I’ve created SQL Server Reporting Services reports with Multi-Select parameters before. In fact it’s pretty par for the course for me now. I recently ran into an issue with one of my reports that I had never seen before. Every so often I’d get an error stating “operation cannot run due to current state of the object.” Perplexed, I did some searching. At first I came across this [thread][1] on msdn.
 
-Sri vobilisetti basically says to go to c:program milesmicrosoft sql servermsrs10.mssqlserverreporting servicesReportManager and modify the web config file by adding   <code class="codespan"><add key=”aspnet:MaxHttpCollectionKeys” value=”10000” /&gt; </code> to the appsettings section.
+Sri vobilisetti basically says to go to c:program milesmicrosoft sql servermsrs10.mssqlserverreporting servicesReportManager and modify the web config file by adding   <code class="codespan"><add key=”aspnet:MaxHttpCollectionKeys” value=”10000” /> </code> to the appsettings section.
 
 I tried what sri vobilisetti posted, and it fixed my issue. But I still didn’t really understand what caused the issue, so I did some digging into what MaxHttpCollectionKeys was. I eventually found a StackOverflow post that goes into some [detail][2].
 

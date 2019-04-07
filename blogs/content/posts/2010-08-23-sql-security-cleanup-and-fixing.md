@@ -3,6 +3,7 @@ title: SQL Security Cleanup and Fixing
 author: David Forck (thirster42)
 type: post
 date: 2010-08-23T13:11:19+00:00
+ID: 883
 url: /index.php/webdev/serveradmin/sql-security-cleanup-and-fixing/
 views:
   - 5415

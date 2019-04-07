@@ -3,6 +3,7 @@ title: SQL Puzzle.. How many uppercase and lowercase characters in a column
 author: SQLDenis
 type: post
 date: 2013-06-12T12:47:00+00:00
+ID: 2106
 excerpt: |
   In this week's puzzle we are going to try to figure out how many uppercase, how many lowercase characters are in a column, we are also interested in how many are neither uppercase or lowercase
   
@@ -31,7 +32,8 @@ In this week&#8217;s puzzle we are going to try to figure out how many uppercase
 
 Here is the table and the data
 
-<pre>CREATE TABLE Puzzle
+sql
+CREATE TABLE Puzzle
      (Col1 varchar(10));
  
 INSERT INTO Puzzle (Col1)
@@ -43,7 +45,8 @@ SELECT 'aaaaaaaaaZ'
 UNION ALL
 SELECT 'a&a&a&a&aA'
 UNION ALL
-SELECT '1234Tt7890'</pre>
+SELECT '1234Tt7890'
+```
 
 This is the expected output
 

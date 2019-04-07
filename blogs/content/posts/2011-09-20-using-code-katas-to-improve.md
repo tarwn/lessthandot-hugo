@@ -3,6 +3,7 @@ title: Using Code Katas to Improve Programming Skills
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-09-20T09:56:00+00:00
+ID: 1318
 excerpt: "Feelings about programming katas tend to fall into one of 3 buckets; disdain, indifference, or appreciation. The indifferent crowd generally doesn't see what you learn from repeating the same coding exercise, while the disdainful crowd feels the same way, but at a much louder (and of course disdainful) volume. That leaves the group that feel there is value in repetitively coding the same exercise or coding numerous small code examples."
 url: /index.php/itprofessionals/professionaldevelopment/using-code-katas-to-improve/
 views:
@@ -23,7 +24,7 @@ I was in the indifferent group, but then I tried it.
 
 ## Where I Started
 
-<img src="http://www.tiernok.com/LTDBlog/clock.png" style="float: right; margin: 0px 0px 10px 10px" />
+<img src="http://tiernok.com/LTDBlog/clock.png" style="float: right; margin: 0px 0px 10px 10px" />
 
 After finishing [The Clean Coder][1] recently, I decided to give this kata thing a try. I started out with a fairly simple problem in a language I was comfortable with and spent 15-30 minutes each night trying a different variant or constraint. What I found was that even the act of setting up for a kata was a learning experience, in one case learning an entirely new unit test framework before I could even begin.
 
@@ -45,7 +46,7 @@ The value of short, varied approaches is it forces us to stretch our knowledge o
 
 ### Focus
 
-<img src="http://www.tiernok.com/LTDBlog/Scores2.png" style="float: right; margin: 0px 0px 10px 10px" />
+<img src="http://tiernok.com/LTDBlog/Scores2.png" style="float: right; margin: 0px 0px 10px 10px" />
 
 By selecting a fairly simple problem, we can choose to focus on any other aspect of programming that we want. Besides introducing rules or constraints to make the program more challenging, we can also use repetition of a simple, known problem to better get to know our tools or learn new supporting tools. Examples include improving use of keyboard shortcuts, trying out methods like TDD, and training ourselves on new habits or standards. By working on something we already know the answer to, we are free to play with the aspects of how we get to that answer.
 

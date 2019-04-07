@@ -3,6 +3,7 @@ title: SSRS Properties – NoRowsMessage
 author: Jes Borland
 type: post
 date: 2013-02-12T11:50:00+00:00
+ID: 1989
 excerpt: The purpose of this property is to display a specific message when no rows are returned to a table, matrix, or list.
 url: /index.php/datamgmt/ssrs/ssrs-properties-norowsmessage/
 views:

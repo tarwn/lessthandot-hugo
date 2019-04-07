@@ -3,6 +3,7 @@ title: Tips and Tricks to Make SQL Server Management Studio Awesome
 author: Jes Borland
 type: post
 date: 2011-09-22T10:51:00+00:00
+ID: 1324
 excerpt: SQL Server Management Studio is the de facto tool for working with SQL Server. But its default options may not always be the best way for you to work. After working with it for years, I’ve come up with a list of my favorite features.
 url: /index.php/datamgmt/dbprogramming/tips-and-tricks-to-make/
 views:

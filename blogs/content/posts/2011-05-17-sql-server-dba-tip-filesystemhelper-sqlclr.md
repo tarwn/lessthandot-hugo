@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 16 – Working with Files and Folders
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-17T10:08:00+00:00
+ID: 1179
 excerpt: 'Today’s tip is a short but powerful one.  On many occasions a DBA is forced to deal with files in some way.  It may be the need to download and move a file (or folder) around in order to prepare for importing the contents into a database or simply maint&hellip;'
 url: /index.php/datamgmt/dbprogramming/sql-server-dba-tip-filesystemhelper-sqlclr/
 views:

@@ -3,6 +3,7 @@ title: Some PostgreSQL Announcements
 author: SQLDenis
 type: post
 date: 2009-05-08T15:50:09+00:00
+ID: 419
 url: /index.php/datamgmt/datadesign/some-postgresql-announcements/
 views:
   - 2754

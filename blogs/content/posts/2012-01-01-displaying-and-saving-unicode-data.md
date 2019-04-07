@@ -3,6 +3,7 @@ title: Displaying and Saving Unicode data in Visual FoxPro desktop application
 author: Naomi Nosonovsky
 type: post
 date: 2012-01-01T17:09:00+00:00
+ID: 1472
 excerpt: 'Recently I had to deal with the problem of displaying and saving Unicode data in a Visual FoxPro form. As we all know, Visual FoxPro does not support Unicode, so this was  quite a challenge for me. I would never have solved this problem by myself if Gre&hellip;'
 url: /index.php/datamgmt/datadesign/displaying-and-saving-unicode-data/
 views:
@@ -33,7 +34,8 @@ The first problem I encountered with this ActiveX as that it didn&#8217;t show u
 
 Ok, so far so good. Now, following Rick&#8217;s article I used the following in my form to get the data in the binary format:
 
-<pre>LOCAL lcSQL
+```
+LOCAL lcSQL
 TEXT TO lcSQL noshow
 SELECT pri_key      
       ,defltlang
@@ -61,8 +63,8 @@ SELECT pri_key
       ,lngimage10      
   FROM dbo.prefs_sl
 endtext  
-mysqlexec(m.lcSQL, 'Prefs_sl', program())</pre>
-
+mysqlexec(m.lcSQL, 'Prefs_sl', program())
+```
 mysqlexec here is a wrapper for the sqlexec function.
 
 Now I found the first discrepancy with Rick&#8217;s article &#8211; I found that I don&#8217;t need any conversion after that, I can assign the field&#8217;s content to the text property of this ActiveX (or ControlSource property) and the control correctly displays the unicode data!
@@ -71,35 +73,41 @@ I was happy &#8211; the first part of displaying data turned out to be quite eas
 
 Here is the code I used to display the data:
 
-<pre>FOR EACH loObject IN thisform.Objects foxobject
+```
+FOR EACH loObject IN thisform.Objects foxobject
    IF loObject.Baseclass = 'Container'
       loObject.LanguageField = SUBSTR(loObject.name,4,LEN(loObject.name))
       loObject.ImageField = 'lngImage' + RIGHT(loObject.Name,2)
    ENDIF 
 next   
 
-thisform.cntLanguage01.SetFocus()</pre>
+thisform.cntLanguage01.SetFocus()
+```
 
 And in the container itself the following code in the LanguageField assign method:
 
-<pre>this.lblLanguage.caption = this.lblLanguage.caption + ' ' + transform(val(right(tLanguageField,2)))
+```
+this.lblLanguage.caption = this.lblLanguage.caption + ' ' + transform(val(right(tLanguageField,2)))
   this.txtLanguage.Enabled = .t.
   this.txtLanguage.TabStop = .t.   
   this.lProgrammaticChange = .t.
   this.txtLanguage.text = evaluate('prefs_sl.' + tLanguageField)
-  this.lProgrammaticChange = .f.</pre>
+  this.lProgrammaticChange = .f.
+```
 
 Everything was good so far. However, I haven&#8217;t expected how hard (for me) it will be the &#8216;saving&#8217; data part. I was spending days trying various ideas from Rick&#8217;s article and was still unable to achieve the desired result. I was about to throw all I had away and try to switch to ADO for data retrieval, but luckily Gregory Adam helped me here and published a working sample.
 
 First of all, we need to make sure there is no UT8 translation to the current code page. For this we need to do the following
 
-<pre>COMPROP(this,'UTF8',1)</pre>
-
+```
+COMPROP(this,'UTF8',1)
+```
 In the txtLanguage Init method.
 
 We also need the following functions:
 
-<pre>&& StringConversion
+```
+&& StringConversion
 && Gregory Adam 2011
 *===============================================================================
 #define true	.T.
@@ -339,11 +347,12 @@ function WideCharToMultiByte
 	
 	return iif(m.success, m.result, 0)
 	
-endfunc</pre>
-
+endfunc
+```
 and then in the Change event of the ActiveX textbox I added the following code
 
-<pre>IF this.parent.lProgrammaticChange 
+```
+IF this.parent.lProgrammaticChange 
     RETURN
 ENDIF     
 if thisform.IsChanged OR (not this.CurrentValue == this.Text)
@@ -356,11 +365,12 @@ if thisform.IsChanged OR (not this.CurrentValue == this.Text)
    else
       replace (this.parent.LanguageField) with ''
    endif
-endif</pre>
-
+endif
+```
 and finally in the Save method of the form
 
-<pre>IF THISFORM.IsChanged 
+```
+IF THISFORM.IsChanged 
   LOCAL lcSQL
 
   TEXT TO lcSQL noshow
@@ -391,8 +401,8 @@ and finally in the Save method of the form
      where pri_key = ?prefs_sl.pri_key
   ENDTEXT
  RETURN mySQLExec(m.lcSQL, '',PROGRAM())
-ENDIF</pre>
-
+ENDIF
+```
 As we can see, we need to convert data back from binary to nvarchar.
   
 With all this code in place, we display the unicode data and save them back to SQL Server.
@@ -403,9 +413,10 @@ Olaf Doschke showed another way which is even simpler than implemented solution 
 
 In the form&#8217;s Load we need the following:
 
-<pre>Sys(987,.F.)
-Sys(3101,65001)</pre>
-
+```
+Sys(987,.F.)
+Sys(3101,65001)
+```
 Then, after getting binary data from SQL Server the same way as I show in this blog, we still need to use createbinary, e.g.
 
 this.txtLanguage.text = createbinary(prefs_sl.Language00)
@@ -414,11 +425,12 @@ We don&#8217;t want to use COMPROP now for the ActiveX.
 
 and then, saving data, we need to follow Rick&#8217;s steps:
 
-<pre>pcSavedText1 = Strconv(This.Text,12)
+```
+pcSavedText1 = Strconv(This.Text,12)
 
 *** Must explicitly force to binary – can also use CAST in 9.0
-pcSavedText1 = CREATEBINARY(pcSavedText1)</pre>
-
+pcSavedText1 = CREATEBINARY(pcSavedText1)
+```
 and then convert this value back to nvarchar(max) when saving with sqlexec.
 
 This is how the form with many languages looked like

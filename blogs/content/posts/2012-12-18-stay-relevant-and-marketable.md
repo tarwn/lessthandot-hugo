@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 18: Stay relevant and marketable'
 author: SQLDenis
 type: post
 date: 2012-12-19T00:50:00+00:00
+ID: 1867
 excerpt: This is day eighteen of the SQL Advent 2012 series of blog posts. Today we are going to look at how to stay relevant and marketable.
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/stay-relevant-and-marketable/
 views:

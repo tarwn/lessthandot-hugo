@@ -3,6 +3,7 @@ title: AngularJS vs Knockout – Modules and DI (6 of 8)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-10-14T14:06:00+00:00
+ID: 2171
 excerpt: "I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. The larger or more complex a project, the more important it is to be able to modularize the code. Modules provide organization, ensure script load&hellip;"
 url: /index.php/webdev/uidevelopment/angularjs-vs-knockout-modules-and-di-6/
 featured_image: /wp-content/uploads/2013/10/Javascript2.png
@@ -40,25 +41,27 @@ Angular modules are collections of functionality with a shared configuration blo
 
 Here is an example based on the earlier sample for data binding, except our controller has a dependency on the &#8220;sampleServices/ListOfItemsService&#8221; service and when we push the button it will call this service to obtain the list of items to be displayed.
 
-<pre><html ng-app="sampleApp"&gt;
-<head&gt;
-    <!-- ... --&gt;
-    <script type="text/javascript" src="js/lib/angular-1.0.8.min.js"&gt;</script&gt;
-</head&gt;
-<body&gt;
-<div ng-controller="ModuleDIController"&gt;
+```html
+<html ng-app="sampleApp">
+<head>
+    <!-- ... -->
+    <script type="text/javascript" src="js/lib/angular-1.0.8.min.js"></script>
+</head>
+<body>
+<div ng-controller="ModuleDIController">
 	
-    Text Value: {{ textValue }}<br /&gt;
-    List Of Items: <ul ng-repeat="item in listOfItems"&gt;
-                        <li&gt;{{ item.number }} - {{ item.name }}</li&gt;
-                   </ul&gt;<br /&gt;
+    Text Value: {{ textValue }}<br />
+    List Of Items: <ul ng-repeat="item in listOfItems">
+                        <li>{{ item.number }} - {{ item.name }}</li>
+                   </ul><br />
 
-    <input type="button" ng-click="fillItems()" value="Call Service"/&gt;
-</div&gt;</pre>
-
+    <input type="button" ng-click="fillItems()" value="Call Service"/>
+</div>
+```
 And the module, controller, and service:
 
-<pre>var sampleServices = angular.module('sampleServices', []);
+```javascript
+var sampleServices = angular.module('sampleServices', []);
 sampleServices.service('ListOfItemsService', function () {
     this.getList = function () {
         // pretend call
@@ -82,8 +85,8 @@ sampleApp.controller('ModuleDIController',
             $scope.listOfItems = listOfItemsService.getList();
         };
     }]
-);</pre>
-
+);
+```
 As part of the example I&#8217;ve listed both the dependencies ($scope and ListOfItemsService) and then defined the controller function to take these two properties. Angular has the ability to infer dependencies based on the name of the parameters or list them explicitly like this. The explicit method is safe for a wider range of minification programs, so I decided to try it out.
 
 One advantage to working with modules like this is that we can define things like these services independently from the logic that is going to use them, then let the library (AngularJS in this case) figure out how to wire the pieces back together again. This takes a lot of complexity and extra work out of our hands, because we no longer have to deal with juggling a long list of includes or functions into the right order. It also keeps the root namespace clear and makes it simpler to see what external dependencies a chunk of code is using. We can also swap out the provider, replacing it with one that has different functionality, caching, or stubs it out for testing purposes.
@@ -94,13 +97,14 @@ Full source available at [Angular/ModuleError.html][6].
 
 The next thing I&#8217;m concerned with is how errors will look once the framework has wired together my dependencies. Instead of returning a list of items, I&#8217;m going to modify the service to throw an explicit error and see what the result looks like.
 
-<pre>var sampleServices = angular.module('sampleServices', []);
+```javascript
+var sampleServices = angular.module('sampleServices', []);
 sampleServices.service('ListOfItemsService', function () {
     this.getList = function () {
         throw new Error("Error occurred, do we know where?");
     };
-})</pre>
-
+})
+```
 In Chrome I get a clean stack trace with clickable references to the files and correct line numbers, Firefox gets the same information but it&#8217;s jumbled with extra characters (possibly intended specifically for chrome output?) and the whole error is a single link that simply expands to show some properties that aren&#8217;t very useful. This is less than great for an unexpected error during development, but it also means business as usual for expected production errors, as they&#8217;ll be able to use some standard error handling code instead of something new.
 
 ### AngularJS Module Loading
@@ -111,30 +115,32 @@ By default, Angular does not include a method for loading scripts. The documenta
 
 Using script.js, I remove the ng-app attribute and instead bootstrap the document to use the sampleApp module once the two files are loaded.
 
-<pre><html&gt;
-<head&gt;
-    <!-- ... --&gt;
-    <script type="text/javascript" src="js/lib/angular-1.0.8.min.js"&gt;</script&gt;
-    <script type="text/javascript" src="js/lib/script.js"&gt;</script&gt;
-</head&gt;
-<body&gt;
-<div ng-controller="ModuleDIController"&gt;
+```html
+<html>
+<head>
+    <!-- ... -->
+    <script type="text/javascript" src="js/lib/angular-1.0.8.min.js"></script>
+    <script type="text/javascript" src="js/lib/script.js"></script>
+</head>
+<body>
+<div ng-controller="ModuleDIController">
 	
-    Text Value: {{ textValue }}<br /&gt;
-    List Of Items: <ul ng-repeat="item in listOfItems"&gt;
-                        <li&gt;{{ item.number }} - {{ item.name }}</li&gt;
-                   </ul&gt;<br /&gt;
+    Text Value: {{ textValue }}<br />
+    List Of Items: <ul ng-repeat="item in listOfItems">
+                        <li>{{ item.number }} - {{ item.name }}</li>
+                   </ul><br />
 
-    <input type="button" ng-click="fillItems()" value="Call Service" /&gt;
-</div&gt;</pre>
-
+    <input type="button" ng-click="fillItems()" value="Call Service" />
+</div>
+```
 And the javascript section of the page is reduced to defining the path that the scripts should be loaded from, and the bootstrap code that replaces the ngApp directive.
 
-<pre>$script.path('js/AsyncDI/');
+```javascript
+$script.path('js/AsyncDI/');
 $script(['sampleApp', 'sampleServices'], function () {
     angular.bootstrap(document, ['sampleApp']);
-});</pre>
-
+});
+```
 The downside of this method is that it requires me to list all of the files I want to load, which is easy when you have a couple files, but is going to be nasty when I start getting past about 10-20 files (and I imagine it will be real nasty if I have hundreds of files).
 
 ## Modules in Knockout
@@ -147,24 +153,26 @@ Full source available at [Knockout/SimpleDI.html][10].
 
 Using the simple databinding example as a base, here is an example of using RequireJS modules to define a module and a service in seperate modules, then using require to ensure the module with the viewmodel is loaded prior to instantiating and binding it:
 
-<pre><html&gt;
-<head&gt;
-	<!-- ... --&gt;
-	<script type="text/javascript" src="js/lib/knockout-2.3.0.min.js"&gt;</script&gt;
-	<script type="text/javascript" src="js/lib/require-2.1.8.min.js"&gt;</script&gt;
-</head&gt;
-<body&gt;
-<div&gt;
-    Text Value: <span data-bind="text: textValue"&gt;</span&gt;<br /&gt;
-    List Of Items: <ul data-bind="foreach: listOfItems"&gt;
-		                <li data-bind="text: number + ' - ' + name"&gt;</li&gt;
-                   </ul&gt;<br /&gt;
-    <input type="button" data-bind="click: fillItems" value="Call Service"/&gt;
-</div&gt;</pre>
-
+```html
+<html>
+<head>
+	<!-- ... -->
+	<script type="text/javascript" src="js/lib/knockout-2.3.0.min.js"></script>
+	<script type="text/javascript" src="js/lib/require-2.1.8.min.js"></script>
+</head>
+<body>
+<div>
+    Text Value: <span data-bind="text: textValue"></span><br />
+    List Of Items: <ul data-bind="foreach: listOfItems">
+		                <li data-bind="text: number + ' - ' + name"></li>
+                   </ul><br />
+    <input type="button" data-bind="click: fillItems" value="Call Service"/>
+</div>
+```
 And the javascript driving the form:
 
-<pre>define("sampleServices/ListOfItemsService", function () {
+```javascript
+define("sampleServices/ListOfItemsService", function () {
     // return an object literal for the service object
     return {
         getList: function () {
@@ -199,8 +207,8 @@ require(["sampleApp/ModuleDIModel"],
         var viewmodel = new ModuleDIModel();
         ko.applyBindings(viewmodel);
     }
-);</pre>
-
+);
+```
 Each define block has 3 arguments, the name of the module, the array of dependencies it requires, and the function it executes when initially resolved. The require block at the bottom then lists some requirements for inline execution of the included function and executes the function when they are available.
 
 Like the Angular example, the service module will return a single instance of the ListOfItemsService that will be used by anyone needing it, while the ModuleDIModel returns a function constructor for the viewmodel. When I tell RequireJS I require the ModuleDIModel, it automatically resolves the dependency on the ListOfItemsService module.
@@ -211,14 +219,15 @@ Full source available at [Knockout/ModuleError.html][11].
 
 Once again, my next concern is whether troubleshooting errors will be impaired. Substituting an error for the return of the ListOfItemsService again:
 
-<pre>define("sampleServices/ListOfItemsService", function () {
+```javascript
+define("sampleServices/ListOfItemsService", function () {
     return {
         getList: function () {
             throw new Error("Error occurred, do we know where?");
         }
     }
-});</pre>
-
+});
+```
 In Chrome, the console shows the error with a short stack trace which, when clicked, takes me directly to the line that produced the error. In Firefox, the console shows both the error message and the offending line, which opens up the source to the correct spot when clicked.
 
 Again, this is primarily only going to be an issue during development, a I will hopefully have appropriate error handling logic in the application for expected errors in production (and I don&#8217;t expect my users to troubleshoot them for me).
@@ -229,7 +238,8 @@ Full source available at [Knockout/AsyncDI.html][12].
 
 RequireJS is built specifically for asynchronous module loading, so where we only have module level injection, instead of controller level in AngularJS, we do already have the asynchronous module loading of RequireJS. To switch from inline scripts to asynchronously loaded ones, all we have to do is make a few changes:
 
-<pre>require.config({
+```javascript
+require.config({
     baseUrl: 'js/AsyncDI'
 });
 
@@ -238,8 +248,8 @@ require(["sampleApp/ModuleDIModel"],
         var viewmodel = new ModuleDIModel();
         ko.applyBindings(viewmodel);
     }
-);</pre>
-
+);
+```
 Like the AngularJS exmaple, I define a base URL for the library and then relay on it to run my bootstrapping code. In this case the bootstrap code hasn&#8217;t changed, though. RequireJS now automatically looks for js/AsyncDI/sampleApp/ModuleDIModel.js and resolves it&#8217;s dependencies too, then runs my method.
 
 ## Some Differences

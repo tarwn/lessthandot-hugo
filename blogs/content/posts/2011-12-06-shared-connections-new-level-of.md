@@ -3,6 +3,7 @@ title: Shared Connections – New level of efficiency in SSIS 2012
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-06T12:08:00+00:00
+ID: 1414
 excerpt: |
   Using the new feature, Shared Connection Managers is a great step in the direction of making development more efficient and manageable.  This is a new feature in SQL Server 2012 SSIS and a welcome one.
   Shared Connection Managers are created for each pr&hellip;

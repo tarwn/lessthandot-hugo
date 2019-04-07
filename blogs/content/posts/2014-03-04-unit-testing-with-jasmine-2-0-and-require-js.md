@@ -3,6 +3,7 @@ title: Unit Testing with Jasmine 2.0 and Require.JS
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-03-04T13:41:12+00:00
+ID: 2475
 url: /index.php/webdev/uidevelopment/javascript/unit-testing-with-jasmine-2-0-and-require-js/
 views:
   - 19862
@@ -25,22 +26,8 @@ The problem is that RequireJS loads the dependencies asynchronously, but the sta
 
 One option to solve this is to simply call window.onload again:
 
-<pre><script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine.js"&gt;</script&gt;
-<script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine-html.js"&gt;</script&gt;
-<script type="text/javascript" src="tests/lib/jasmine-2.0.0/boot.js"&gt;</script&gt;
-<script type="text/javascript" src="lib/require-2.1.8.min.js" data-main="test-main"&gt;</script&gt;
-
-<script type="text/javascript"&gt;
-	// list spec files here
-	require([
-		"spec/someAwesomeProcess.spec",
-		"spec/anotherAwesomeProcess.spec"
-
-	], function () {
-		window.onload();
-	});
-</script&gt;</pre>
-
+```html
+```
 But that&#8217;s icky and causes you to have two test bars across the screen (and probably doesn&#8217;t work well with other reporters either).
 
 [<img src="/wp-content/uploads/2014/02/JasmineDoubleFail.png" alt="JasmineDoubleFail" width="726" height="182" class="aligncenter size-full wp-image-2477" srcset="/wp-content/uploads/2014/02/JasmineDoubleFail.png 726w, /wp-content/uploads/2014/02/JasmineDoubleFail-300x75.png 300w" sizes="(max-width: 726px) 100vw, 726px" />][1]
@@ -53,7 +40,8 @@ Or we can fix the root cause, the fact that the tests are running on window.onlo
 
 **boot-without-onload.js**
 
-<pre>/**
+```javascript
+/**
    * ## Execution
    *
    * No onload, only on demand now
@@ -62,26 +50,12 @@ Or we can fix the root cause, the fact that the tests are running on window.onlo
   window.executeTests = function(){
     htmlReporter.initialize();
     env.execute();
-  };</pre>
-
+  };
+```
 And then update our SpecRunner to include this replacement boot script and require the test files prior to executing the tests:
 
-<pre><script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine.js"&gt;</script&gt;
-    <script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine-html.js"&gt;</script&gt;
-    <script type="text/javascript" src="tests/lib/jasmine-2.0.0/boot-without-onload.js"&gt;</script&gt;
-    <script type="text/javascript" src="lib/require-2.1.8.min.js" data-main="test-main"&gt;</script&gt;
-
-    <script type="text/javascript"&gt;
-        // list spec files here
-        require([
-            "spec/someAwesomeProcess.spec",
-            "spec/anotherAwesomeProcess.spec"
-
-        ], function () {
-            window.executeTests();
-        });
-    </script&gt;</pre>
-
+```html
+```
 And there we go, Jasmine is now working exactly the same as if we were running without RequireJS (and had pasted 500 script tags in the file).
 
  [1]: /wp-content/uploads/2014/02/JasmineDoubleFail.png

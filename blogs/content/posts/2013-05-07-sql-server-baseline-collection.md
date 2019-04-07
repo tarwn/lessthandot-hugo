@@ -3,6 +3,7 @@ title: SQL Server Baseline Collection
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-05-07T10:38:00+00:00
+ID: 2081
 excerpt: 'SQL Server baseline collection is an important task that is too frequently overlooked.  Collecting information on how SQL Server is both providing data services and reacting to how those data services are being utilized, creates a foundation for efficie&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-baseline-collection/
 views:
@@ -34,7 +35,8 @@ After reviewing the queries Glenn has provided, 32 distinct tables can be formed
 
 **_&#8212; SQL Server 2008 R2 Diagnostic Information Queries_**** __**
 
-<pre>-- SQL Server 2008 R2 Diagnostic Information Queries
+sql
+-- SQL Server 2008 R2 Diagnostic Information Queries
 -- Glenn Berry 
 -- April 2013
 -- Last Modified: April 15, 2013
@@ -44,7 +46,8 @@ After reviewing the queries Glenn has provided, 32 distinct tables can be formed
 
 -- Note: A number of these queries will only work on SQL Server 2008 R2 SP1 or later
 -- They are all noted in the instructions
--- SQL Server 2008 R2 RTM was retired on July 12, 2012</pre>
+-- SQL Server 2008 R2 RTM was retired on July 12, 2012
+```
 
 **_&#8212; They are all noted in the instructions_**** __**
 
@@ -58,7 +61,8 @@ For example:  For the SQL Server 2008 R2 diagnostic information queries, the ha
 
 Other considerations while creating these initial tables are the instance name, collection date and, if applicable, the database name.  Without these pieces of information, a baseline cannot be formed.  Make  these small adjustments so the three key pieces of information are captured.  Using @@SERVERNAME, GETDATE(), and DB\_NAME(DB\_ID()), they can be obtained quite easily.
 
-<pre>-- Hardware information from SQL Server 2008 and 2008 R2  (Query 8) (Hardware Info)
+sql
+-- Hardware information from SQL Server 2008 and 2008 R2  (Query 8) (Hardware Info)
 -- (Cannot distinguish between HT and multi-core)
 SELECT cpu_count AS [Logical CPU Count], hyperthread_ratio AS [Hyperthread Ratio],
 cpu_count/hyperthread_ratio AS [Physical CPU Count], 
@@ -67,7 +71,8 @@ sqlserver_start_time --, affinity_type_desc -- (affinity_type_desc is only in 20
 ,@@SERVERNAME [InstanceName]
 ,GETDATE() [CollectDateTime]
 INTO Hardwareinfo
-FROM sys.dm_os_sys_info WITH (NOLOCK) OPTION (RECOMPILE);</pre>
+FROM sys.dm_os_sys_info WITH (NOLOCK) OPTION (RECOMPILE);
+```
 
  
 
@@ -109,7 +114,10 @@ This DFT is nothing more than a direct source to destination
 
 Until we get to the database specific queries, the DFT creation has been fairly simple.  With database specific queries, however, we need to obtain a listing of the databases that should be evaluated and have data collected.  This can be done by using the Recordset Destination populated by a source adapter based on the following query.
 
-<pre>select name from sys.databases where name not in ('master','tempdb','model','msdb') and state_desc = 'ONLINE' and user_access_desc = 'MULTI_USER'</pre>
+sql
+select name from sys.databases where name not in ('master','tempdb','model','msdb') and state_desc = 'ONLINE' and user_access_desc = 'MULTI_USER'
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/base_6.png?mtime=1367922906"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_6.png?mtime=1367922906" width="332" height="265" /></a>

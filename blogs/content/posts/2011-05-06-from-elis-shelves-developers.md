@@ -3,6 +3,7 @@ title: 'From Eli’s Shelves: Books for Developers'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-05-06T10:07:00+00:00
+ID: 1156
 excerpt: There are times in our careers where we have to branch out and learn more than just the next technology or tools. After a few years we find that the difference between junior and senior, getting by and excelling, is not just learning new technologies and tools, but also learning from our experiences and the experiences of others.
 url: /index.php/itprofessionals/professionaldevelopment/from-elis-shelves-developers/
 views:
@@ -24,7 +25,7 @@ To be honest I was going to post it all at once, but just got too long.
 The role of developer means something different at each company. Some developers spend their day producing code, others are expected to do everything from strategic planning to infrastructure maintenance with more occasional coding. Over the years I&#8217;ve managed to do work in both flavors, but the core of both has been the ability to deliver a solution by understanding requirements, providing estimates, constructing software, and delivering a working solution.
 
 <div style="float: left; padding: .5em; width: 170px; margin: 0em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <a href="http://www.amazon.com/gp/product/0735619670" title="Code Complete at Amazon"><img src="http://www.tiernok.com/_n_images/books/ccaphosc.jpg" alt="Code Complete" height="200" /></a><br /> Code Complete
+  <a href="http://www.amazon.com/gp/product/0735619670" title="Code Complete at Amazon"><img src="http://tiernok.com/_n_images/books/ccaphosc.jpg" alt="Code Complete" height="200" /></a><br /> Code Complete
 </div>
 
 ### [Code Complete: A Practical Handbook of Software Construction][1]   
@@ -33,7 +34,7 @@ Steve McConnell
 Code Complete covers all aspects of code construction, good practices for writing code, how (and the importance) of debugging, project planning for the planner and plannee, software architecture, testing and QA&#8230;the list goes on. Code Complete includes a combination of personal experience, case study finding, and experiences from others in an attempt to provide a well rounded picture, with a focus on proven, good practices. There are companies that require this book as part of the rite of passage from junior to senior developer, but I would suggest it to any developer that has not read it. Read it end-to-end, or consume it one chapter at a time, this book is a must-read. <br style="clear: left" />
 
 <div style="float: left; width: 170px; padding: .5em; margin: 0em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <a href="http://www.amazon.com/dp/1590593898/" title="Joel on Software at Amazon"><img src="http://www.tiernok.com/_n_images/books/jos.jpg" alt="Joel on Software" height="200" /></a><br /> Joel on Software
+  <a href="http://www.amazon.com/dp/1590593898/" title="Joel on Software at Amazon"><img src="http://tiernok.com/_n_images/books/jos.jpg" alt="Joel on Software" height="200" /></a><br /> Joel on Software
 </div>
 
 ### [Joel on Software][2]   

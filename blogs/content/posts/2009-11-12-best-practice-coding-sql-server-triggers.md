@@ -3,6 +3,7 @@ title: 'Best Practice: Coding SQL Server triggers for multi-row operations'
 author: SQLDenis
 type: post
 date: 2009-11-12T18:12:21+00:00
+ID: 625
 excerpt: |
   Best Practice: coding SQL Server triggers for multi-row operations
   
@@ -31,17 +32,20 @@ There are many forum posts where people code triggers but these triggers are cod
   
 Let&#8217;s take a look, first create these two tables
 
-<pre>create table Test(id int identity not null primary key, 
+sql
+create table Test(id int identity not null primary key, 
 			SomeDate datetime not null)
 GO
 
 create table TestHistory(id int  not null, 
 			InsertedDate datetime not null)
-GO</pre>
+GO
+```
 
 Now create this trigger, this trigger is very simple, it basically inserts a row into the history table every time an insert happens in the test table
 
-<pre>CREATE  TRIGGER trTest
+sql
+CREATE  TRIGGER trTest
     ON Test
     FOR INSERT
     AS
@@ -56,24 +60,31 @@ Now create this trigger, this trigger is very simple, it basically inserts a row
     INSERT TestHistory (id,InsertedDate)
     SELECT @id, getdate()
     
-    GO</pre>
+    GO
+```
 
 Run this insert statement which only inserts one row
 
-<pre>insert Test(SomeDate) values(getdate())</pre>
+sql
+insert Test(SomeDate) values(getdate())
+```
 
 Now run this to see what is in the history table
 
-<pre>select * from TestHistory</pre>
+sql
+select * from TestHistory
+```
 
 <pre>1	2009-11-12 14:51:21.103</pre>
 
 That all works fine, what happens when we try to insert 2 rows?
 
-<pre>insert Test(SomeDate)
+sql
+insert Test(SomeDate)
 select getdate()
 union all
-select getdate() + 1</pre>
+select getdate() + 1
+```
 
 Here is the error.
 
@@ -85,7 +96,8 @@ The statement has been terminated._
 
 What would happen if you coded the trigger in this way
 
-<pre>ALTER TRIGGER trTest
+sql
+ALTER TRIGGER trTest
     ON Test
     FOR INSERT
     AS
@@ -100,29 +112,37 @@ What would happen if you coded the trigger in this way
     INSERT TestHistory (id,InsertedDate)
     SELECT @id, getdate()
     
-    GO</pre>
-
+    GO
+```
 Now insert one row
 
-<pre>insert Test(SomeDate) values(getdate())</pre>
+sql
+insert Test(SomeDate) values(getdate())
+```
 
 We look again what is in the history table, as you can see we have id 1 and 4, this is because id 2 and 3 failed and were rolled back
 
-<pre>select * from TestHistory</pre>
+sql
+select * from TestHistory
+```
 
 <pre>1	2009-11-12 14:51:21.103
 4	2009-11-12 14:52:08.370</pre>
 
 Here is where it gets interesting, run this code
 
-<pre>insert Test(SomeDate)
+sql
+insert Test(SomeDate)
 select getdate()
 union all
-select getdate() + 1</pre>
+select getdate() + 1
+```
 
 That runs fine but when we look now we are missing row 5 in the history table
 
-<pre>select * from TestHistory</pre>
+sql
+select * from TestHistory
+```
 
 <pre>1	2009-11-12 14:51:21.103
 4	2009-11-12 14:52:08.370
@@ -130,14 +150,18 @@ That runs fine but when we look now we are missing row 5 in the history table
 
 let&#8217;s try that again
 
-<pre>insert Test(SomeDate)
+sql
+insert Test(SomeDate)
 select getdate()
 union all
-select getdate() + 1</pre>
+select getdate() + 1
+```
 
 Now we are missing row 7 in the history table
 
-<pre>select * from TestHistory</pre>
+sql
+select * from TestHistory
+```
 
 <pre>1	2009-11-12 14:51:21.103
 4	2009-11-12 14:52:08.370
@@ -146,13 +170,16 @@ Now we are missing row 7 in the history table
 
 The problem is with this line of code
 
-<pre>SELECT @id = id FROM inserted</pre>
+sql
+SELECT @id = id FROM inserted
+```
 
 @id will only hold the value for the row that was returned last in the result set
 
 Here is how you would change the trigger to work correctly
 
-<pre>ALTER TRIGGER trTest
+sql
+ALTER TRIGGER trTest
     ON Test
     FOR INSERT
     AS
@@ -165,15 +192,20 @@ Here is how you would change the trigger to work correctly
     SELECT id, getdate()
     FROM inserted
     
-GO</pre>
+GO
+```
 
 Now run this
 
-<pre>insert Test(SomeDate) values(getdate())</pre>
+sql
+insert Test(SomeDate) values(getdate())
+```
 
 We can now verify that it works correctly
 
-<pre>select * from TestHistory</pre>
+sql
+select * from TestHistory
+```
 
 <pre>1	2009-11-12 14:51:21.103
 4	2009-11-12 14:52:08.370
@@ -183,14 +215,18 @@ We can now verify that it works correctly
 
 Now run this for 2 rows
 
-<pre>insert Test(SomeDate)
+sql
+insert Test(SomeDate)
 select getdate()
 union all
-select getdate() + 1</pre>
+select getdate() + 1
+```
 
 And as you can see both rows were inserted into the history table
 
-<pre>select * from TestHistory</pre>
+sql
+select * from TestHistory
+```
 
 <pre>1	2009-11-12 14:51:21.103
 4	2009-11-12 14:52:08.370
@@ -209,5 +245,5 @@ I am putting together a [SQL Server Best Programming Practices][1] wiki page, th
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Best_Practices
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

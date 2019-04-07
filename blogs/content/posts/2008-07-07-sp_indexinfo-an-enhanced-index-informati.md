@@ -3,6 +3,7 @@ title: sp_indexinfo an enhanced index information procedure
 author: SQLDenis
 type: post
 date: 2008-07-07T14:11:09+00:00
+ID: 80
 url: /index.php/datamgmt/datadesign/sp_indexinfo-an-enhanced-index-informati/
 views:
   - 3162

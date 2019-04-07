@@ -3,6 +3,7 @@ title: 'Friday SQL Nugget #1'
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-01-13T12:56:00+00:00
+ID: 1488
 excerpt: |
    
   

@@ -3,6 +3,7 @@ title: Interview With Rod Colledge About The Book SQL Server 2008 Administration
 author: SQLDenis
 type: post
 date: 2009-10-12T16:35:02+00:00
+ID: 584
 url: /index.php/datamgmt/datadesign/interview-with-rod-colledge-about-the-bo/
 views:
   - 49750
@@ -23,7 +24,7 @@ tags:
 ---
 I read [SQL Server 2008 Administration in Action][1] and really like this book, I have reviewed SQL Server 2008 Administration in Action here: [Review of SQL Server 2008 Administration in Action][2]
 
-I decided to ping Rod Colledge about doing an interview and he said yes. Some of the questions came from our forum users in the following thread: http://forum.lessthandot.com/viewtopic.php?f=17&t=8089
+I decided to ping Rod Colledge about doing an interview and he said yes. Some of the questions came from our forum users in the following thread: http://forum.ltd.local/viewtopic.php?f=17&t=8089
 
 Below is the interview.
 
@@ -134,5 +135,5 @@ You can also checkout the book on Amazon for more reviews: [SQL Server 2008 Admi
  [7]: http://summit2009.sqlpass.org/Agenda/ProgramSessions/DBAsBehavingBadlyWorstPracticesfor.aspx
  [8]: http://www.manning.com/colledge/SampleCh04.pdf
  [9]: http://www.manning.com/colledge/SampleCh10.pdf
- [10]: http://forum.lessthandot.com/viewforum.php?f=17
- [11]: http://forum.lessthandot.com/viewforum.php?f=22
+ [10]: http://forum.ltd.local/viewforum.php?f=17
+ [11]: http://forum.ltd.local/viewforum.php?f=22

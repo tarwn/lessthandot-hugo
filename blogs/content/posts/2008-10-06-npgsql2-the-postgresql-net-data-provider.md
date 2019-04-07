@@ -3,6 +3,7 @@ title: 'Npgsql2 the PostgreSQL Net Data provider written 100% in C# has been rel
 author: SQLDenis
 type: post
 date: 2008-10-06T10:58:23+00:00
+ID: 163
 url: /index.php/datamgmt/datadesign/npgsql2-the-postgresql-net-data-provider/
 views:
   - 7165

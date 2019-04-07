@@ -3,6 +3,7 @@ title: 'Another Smashing Success: SQL Saturday Madison 2013'
 author: Jes Borland
 type: post
 date: 2013-04-11T07:51:00+00:00
+ID: 2067
 excerpt: |
   On Saturday, April 6, 2013, Madison, WI hosted its second annual SQL Saturday. It was another successful year!
   

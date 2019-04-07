@@ -3,6 +3,7 @@ title: We ain’t afraid of no errors!
 author: SQLology ~ Kim Tessereau
 type: post
 date: 2011-04-03T02:28:00+00:00
+ID: 1096
 excerpt: "Good old fashion error handling..........This is something that is often skipped over when we code because we don't stop and take the time out to plan it out.  I've put together a presentation on this topic and I'll be submitting it to the next SQL Satu&hellip;"
 url: /index.php/datamgmt/dbprogramming/we-ain-t-afraid-of-1/
 views:

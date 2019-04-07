@@ -3,6 +3,7 @@ title: Finding Exact Duplicate Indexes
 author: George Mastros (gmmastros)
 type: post
 date: 2012-04-12T17:14:00+00:00
+ID: 1596
 excerpt: 'This blog is not meant to be a comprehensive explanation of indexes.  It is meant to help you determine if there are duplicate indexes within your database.  There appears to be some debate regarding what is a duplicate index.  This article defines an “&hellip;'
 url: /index.php/datamgmt/datadesign/finding-exact-duplicate-indexes/
 views:
@@ -33,7 +34,8 @@ Column ordering for include columns does not matter, but which columns are inclu
 
 **The query to identify exact duplicates:**
 
-<pre>; With IndexColumns As
+sql
+; With IndexColumns As
 (
 	select	I.object_id,
 			I.index_id,
@@ -60,7 +62,7 @@ Column ordering for include columns does not matter, but which columns are inclu
 	From	sys.indexes As I
 			Inner Join sys.Tables As T
 				On I.object_id = T.object_id
-	Where	I.type_desc <&gt; 'Clustered'
+	Where	I.type_desc <> 'Clustered'
 			And T.is_ms_shipped = 0
 )
 Select  Object_Name(AIndex.object_id) As TableName,
@@ -78,6 +80,6 @@ From	IndexColumns As A
 			And A.index_id = AIndex.index_id
 		Inner Join sys.indexes As BIndex
 			On B.object_id = BIndex.object_id
-			And B.index_id = BIndex.index_id </pre>
-
+			And B.index_id = BIndex.index_id 
+```
 When you run this query, you will see two columns in the output showing you the duplicates. Since these are exact duplicates, you can drop one of them. Which one you drop is up to you.

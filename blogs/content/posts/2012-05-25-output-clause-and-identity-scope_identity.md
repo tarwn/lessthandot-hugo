@@ -3,6 +3,7 @@ title: OUTPUT Clause and @@identity, scope_identity()
 author: SQLDenis
 type: post
 date: 2012-05-25T14:06:00+00:00
+ID: 1640
 excerpt: |
   Axel posted a post titled Catching the OUTPUT of your DML statements earlier today. I posted something about the OUPUT clause myself as part of my SQL Advent 2011 series here: SQL Advent 2011 Day 11: DML statements with the OUTPUT clause
   
@@ -32,33 +33,43 @@ Reading Axel&#8217;s post where he describes how he can use this instead of a tr
 
 Let&#8217;s see what happens with the OUTPUT clause. First create these two simple tables
 
-<pre>CREATE TABLE TestOutput (id int identity not null,SomeCol date)
+sql
+CREATE TABLE TestOutput (id int identity not null,SomeCol date)
 GO
 
 CREATE TABLE TestOutput2 (id int identity not null,ID2 INT, SomeCol DATE, IndentityVal INT, ScopeIdentityVal int)
-GO</pre>
+GO
+```
 
 Before we start make sure that this returns 1
 
-<pre>SELECT @@identity, scope_identity()</pre>
+sql
+SELECT @@identity, scope_identity()
+```
 
 If it doesn&#8217;t return 1, run the following
 
-<pre>TRUNCATE TABLE TestOutput
+sql
+TRUNCATE TABLE TestOutput
 INSERT TestOutput VALUES('20120101')
 TRUNCATE TABLE TestOutput
-SELECT @@identity, scope_identity()</pre>
+SELECT @@identity, scope_identity()
+```
 
 Now we are set to go, we are inserting one row
 
-<pre>INSERT TestOutput 
+sql
+INSERT TestOutput 
 OUTPUT inserted.id,inserted.SomeCol, @@identity, scope_identity() INTO TestOutput2
-VALUES ('20120525')</pre>
+VALUES ('20120525')
+```
 
 If we do a select for both tables
 
-<pre>SELECT * FROM TestOutput
-SELECT * FROM TestOutput2</pre>
+sql
+SELECT * FROM TestOutput
+SELECT * FROM TestOutput2
+```
 
 We see the following
 
@@ -76,21 +87,27 @@ Not very useful since all the values are 1 so we don&#8217;t know where @@identi
 
 Let&#8217;s just insert a bunch of rows in the TestOutput table
 
-<pre>INSERT TestOutput VALUES('20120101')
+sql
 INSERT TestOutput VALUES('20120101')
 INSERT TestOutput VALUES('20120101')
-INSERT TestOutput VALUES('20120101')</pre>
+INSERT TestOutput VALUES('20120101')
+INSERT TestOutput VALUES('20120101')
+```
 
 Now if the do the insert with the OUTPUT clause again, the values will be different
 
-<pre>INSERT TestOutput 
+sql
+INSERT TestOutput 
 OUTPUT inserted.id,inserted.SomeCol,   INTO TestOutput2
-VALUES ('20120526')</pre>
+VALUES ('20120526')
+```
 
 Let&#8217;s see what we have
 
-<pre>SELECT * FROM TestOutput
-SELECT * FROM TestOutput2</pre>
+sql
+SELECT * FROM TestOutput
+SELECT * FROM TestOutput2
+```
 
 Here is the output
 
@@ -116,13 +133,17 @@ The output is 2 for both. Now you are probably asking yourself why 2 was not ins
   
 Run this statement now
 
-<pre>SELECT @@identity, scope_identity()</pre>
+sql
+SELECT @@identity, scope_identity()
+```
 
 The output of that is what will be inserted when you run the query below next
 
-<pre>INSERT TestOutput 
+sql
+INSERT TestOutput 
 OUTPUT inserted.id,inserted.SomeCol, @@identity, scope_identity() INTO TestOutput2
-VALUES ('20120525')</pre>
+VALUES ('20120525')
+```
 
 If you run that the value 3 will be inserted
 
@@ -136,13 +157,15 @@ But as you can see @@identity and scope_identity() are actually populated with t
 
 Here is a quick test
 
-<pre>CREATE TABLE TestOutput3 (id int identity (1000,1) not null,SomeCol date)
+sql
+CREATE TABLE TestOutput3 (id int identity (1000,1) not null,SomeCol date)
 GO
 
 
 INSERT TestOutput3 VALUES('20120101')
 
-SELECT * FROM TestOutput3</pre>
+SELECT * FROM TestOutput3
+```
 
 Output
 
@@ -152,11 +175,15 @@ Output
 
 Now when you run this again, it will insert the value 1000
 
-<pre>INSERT TestOutput 
+sql
+INSERT TestOutput 
 OUTPUT inserted.id,inserted.SomeCol, @@identity, scope_identity() INTO TestOutput2
-VALUES ('20120525')</pre>
+VALUES ('20120525')
+```
 
-<pre>SELECT * FROM TestOutput2</pre>
+sql
+SELECT * FROM TestOutput2
+```
 
 <pre>id	ID2	SomeCol	     IndentityVal  ScopeIdentityVal
 -----   -----   ---------    ------------  --------------------

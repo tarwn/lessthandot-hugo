@@ -3,6 +3,7 @@ title: SSRS Properties – Chart Series Tooltip
 author: Jes Borland
 type: post
 date: 2013-02-25T11:36:00+00:00
+ID: 2012
 excerpt: The purpose of this property is to show a specific value on a series in a chart when the user hovers over the data point.
 url: /index.php/datamgmt/ssrs/ssrs-properties-chart-series-tooltip/
 views:

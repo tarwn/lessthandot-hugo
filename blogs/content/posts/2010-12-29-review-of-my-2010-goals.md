@@ -3,6 +3,7 @@ title: Review of my 2010 goals
 author: SQLDenis
 type: post
 date: 2010-12-29T17:29:00+00:00
+ID: 985
 excerpt: |
   The end of the year 2010 is coming up, this is an excellent time to review my 2010 goals. In this post 2010 Goals For SQLDenis I have outlined a couple of things I wanted to accomplish in 2010. Here is a list of those goals
   

@@ -3,6 +3,7 @@ title: Triggers affect on SQL System Variables
 author: Kevin Conan
 type: post
 date: 2013-03-12T19:35:00+00:00
+ID: 2030
 excerpt: A while back I ran into an issue where a user was complaining about @@IDENTITY not always returning the value they expected.
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/triggers-affect-on-sql-system/
 views:
@@ -27,7 +28,8 @@ I used to also have a debate with a fellow DBA about @@ROWCOUNT. I use it all th
   
 Here is some sample code that illustrates how triggers affect @@IDENTITY, @@ROWCOUNT and also demonstrates SCOPE_IDENTITY().
 
-<pre>CREATE TABLE tblTest (col1 INT IDENTITY (1,1) NOT NULL, col2 INT NULL);
+sql
+CREATE TABLE tblTest (col1 INT IDENTITY (1,1) NOT NULL, col2 INT NULL);
 
 GO
 
@@ -72,7 +74,8 @@ SELECT	 'Outside Trigger'	AS [Where]
 
 GO
 
-DROP TABLE tblTest;</pre>
+DROP TABLE tblTest;
+```
 
 Here is the output from the above code:
 

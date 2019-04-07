@@ -3,6 +3,7 @@ title: 'TSQL Tuesday #32 – A wicked fun day.'
 author: joshuafennessy
 type: post
 date: 2012-07-18T00:09:00+00:00
+ID: 1675
 excerpt: "Erin Stellato (blog | twitter) announced the most recent incaration of TSQL Tuesday a couple of weeks ago.  A Day in the Life.  A very interesting topic indeed.  I knew I wanted to participate, but I didn't want it to be a normal day, as those are litte&hellip;"
 url: /index.php/itprofessionals/itprocesses/tsql-tuesday-a-wicked-fun/
 views:

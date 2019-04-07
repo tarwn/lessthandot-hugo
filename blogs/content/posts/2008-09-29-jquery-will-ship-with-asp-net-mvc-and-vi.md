@@ -3,6 +3,7 @@ title: jQuery will ship with ASP.NET MVC and Visual Studio!
 author: SQLDenis
 type: post
 date: 2008-09-29T11:06:08+00:00
+ID: 153
 url: /index.php/webdev/webdesigngraphicsstyling/jquery-will-ship-with-asp-net-mvc-and-vi/
 views:
   - 4030

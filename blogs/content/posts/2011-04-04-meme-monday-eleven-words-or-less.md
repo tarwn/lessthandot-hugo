@@ -3,6 +3,7 @@ title: 'Meme Monday: Eleven Words or Less'
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-04T14:24:00+00:00
+ID: 1098
 excerpt: HEAP, One index. Select Column with predicate other column. RID Lookup.
 url: /index.php/datamgmt/datadesign/meme-monday-eleven-words-or-less/
 views:

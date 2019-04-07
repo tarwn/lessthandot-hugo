@@ -3,6 +3,7 @@ title: Hex Editoring
 author: Jes Borland
 type: post
 date: 2012-10-30T13:22:00+00:00
+ID: 1774
 excerpt: It’s time to try something new! I was recently challenged to show something in database page with a hex editor for another blog post. I thought, “Hex what? Are we casting spells?” Let’s start with, “What is a hex editor?”
 url: /index.php/datamgmt/dbprogramming/hex-editoring/
 views:
@@ -36,19 +37,27 @@ Beyond the basics of her blog post, here are the steps I went through to view a 
 
 I issue DBCC IND to view a list of pages that belong to a table or index. The syntax for the command is:
 
-<pre>DBCC IND ('DBName', 'TableName', <indexnumber&gt;);</pre>
+sql
+DBCC IND ('DBName', 'TableName', <indexnumber>);
+```
 
 I run the command:
 
-<pre>DBCC IND ('CorruptMe', 'DeadBirdies', 2);</pre>
+sql
+DBCC IND ('CorruptMe', 'DeadBirdies', 2);
+```
 
 Make note of a file and page number to work with. I issue a DBCC PAGE command to view page 1116. The syntax for the command is:
 
-<pre>DBCC PAGE( {'dbname' | dbid}, filenum, pagenum [, printopt={0|1|2|3} ]);</pre>
+sql
+DBCC PAGE( {'dbname' | dbid}, filenum, pagenum [, printopt={0|1|2|3} ]);
+```
 
 I run the command:
 
-<pre>DBCC PAGE('CorruptMe', 1, 1116, 3);</pre>
+sql
+DBCC PAGE('CorruptMe', 1, 1116, 3);
+```
 
 Following the steps in Kendra’s blog, I take the database offline, copy the physical file location, and figure out my page offset. I’ll need that information going forward.
 
@@ -76,10 +85,12 @@ I click on the first T and type X. Apparently I’ve just changed the data in my
 
 I save the file and go back to SSMS. I bring the database online. That works without a problem. I run a query to view data in that table, which should access the nonclustered index I mangled.
 
-<pre>USE CorruptMe;
+sql
+USE CorruptMe;
 GO
 SELECT birdName
-FROM dbo.DeadBirdies;</pre>
+FROM dbo.DeadBirdies;
+```
 
 I get a terrible error: “SQL Server detected a logical consistency-based I/O error: incorrect checksum”.
 
@@ -107,7 +118,9 @@ First, I go to SSMS and expand the database, table, and indexes. I right-click t
 
 I run the query to drop the index:
 
-<pre>DROP INDEX dbo.DeadBirdies.ncBirds;</pre>
+sql
+DROP INDEX dbo.DeadBirdies.ncBirds;
+```
 
 When I run the query again, data is returned! This time, there is no error.
 
@@ -117,7 +130,9 @@ When I run the query again, data is returned! This time, there is no error.
 
 Now, I rebuild the nonclustered index using the Create statement I scripted, and I can still run the query without errors.
 
-<pre>CREATE NONCLUSTERED INDEX ncBirds ON dbo.DeadBirdies(BirdName);</pre>
+sql
+CREATE NONCLUSTERED INDEX ncBirds ON dbo.DeadBirdies(BirdName);
+```
 
 **What I Learned** 
 

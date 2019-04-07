@@ -3,6 +3,7 @@ title: 'LaunchReady: Focus on the Customer'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2018-03-01T14:41:48+00:00
+ID: 8976
 url: /index.php/uncategorized/launchready-focus-on-the-customer/
 views:
   - 2711

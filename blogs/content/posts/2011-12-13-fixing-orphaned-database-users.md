@@ -3,6 +3,7 @@ title: 'Fixing orphaned database users in 2005 to 2012 – T-SQL Tuesday #025'
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-13T11:40:00+00:00
+ID: 1438
 excerpt: 'This will be my contribution to the T-SQL Tuesday Challenge that was originally created by Adam Machanic.  This month, my good friend Allen White (Blog | Twitter) is hosting the challenge.  The topic he has chosen is, “What T-SQL tricks do you use today&hellip;'
 url: /index.php/datamgmt/dbprogramming/fixing-orphaned-database-users/
 views:
@@ -78,7 +79,8 @@ The below script has a work flow of first identifying the orphaned database user
 
 **SQL Server 2005, 2008, 2008 R2 Versions**
 
-<pre>SET NOCOUNT ON
+sql
+SET NOCOUNT ON
 USE AdventureWorks
 GO
 DECLARE @loop INT
@@ -94,7 +96,7 @@ CREATE TABLE #Orphaned (UserName sysname, UserSID VARBINARY(85),IDENT INT IDENTI
 INSERT INTO #Orphaned
 EXEC SP_CHANGE_USERS_LOGIN 'report';
  
-IF(SELECT COUNT(*) FROM #Orphaned) &gt; 0
+IF(SELECT COUNT(*) FROM #Orphaned) > 0
 BEGIN
  SET @loop = 1
  WHILE @loop <= (SELECT MAX(IDENT) FROM #Orphaned)
@@ -110,11 +112,13 @@ BEGIN
     SET @loop = @loop + 1
   END
 END
-SET NOCOUNT OFF</pre>
+SET NOCOUNT OFF
+```
 
 **SQL Server 2005, 2008, 2008 R2 and 2012 Version with Windows Login check**
 
-<pre>SET NOCOUNT ON
+sql
+SET NOCOUNT ON
 USE AdventureWorks
 GO
 DECLARE @loop INT
@@ -131,7 +135,7 @@ CREATE TABLE #Orphaned (UserName sysname,IDENT INT IDENTITY(1,1))
 INSERT INTO #Orphaned (UserName)
 SELECT [name] FROM sys.database_principals WHERE [type] IN ('U','S') AND is_fixed_role = 0 AND [Name] NOT IN ('dbo','guest','sys','INFORMATION_SCHEMA')
 
-IF(SELECT COUNT(*) FROM #Orphaned) &gt; 0
+IF(SELECT COUNT(*) FROM #Orphaned) > 0
 BEGIN
  SET @loop = 1
  WHILE @loop <= (SELECT MAX(IDENT) FROM #Orphaned)
@@ -159,7 +163,8 @@ BEGIN
     SET @loop = @loop + 1
   END
 END
-SET NOCOUNT OFF</pre>
+SET NOCOUNT OFF
+```
 
  [1]: http://sqlblog.com/blogs/allen_white/default.aspx
  [2]: http://twitter.com/SQLRunr

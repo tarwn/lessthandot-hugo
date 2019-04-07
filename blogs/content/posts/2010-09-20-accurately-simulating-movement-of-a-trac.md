@@ -3,6 +3,7 @@ title: Accurately Simulating Movement of a Tracked Vehicle in 2D Space
 author: Rob Earl
 type: post
 date: 2010-09-20T16:41:38+00:00
+ID: 896
 excerpt: "As part of a simulation I've been developing I recently had to decide how to model movement of vehicles within a 2D space. To keep things simple I settled on a tracked vehicle. Each time the simulation updates I calculate how much the vehicle rotates an&hellip;"
 url: /index.php/webdev/uidevelopment/accurately-simulating-movement-of-a-trac/
 views:
@@ -23,9 +24,10 @@ tags:
 
 Knowing the current location (**x,y**) and heading (**h**) I initially adopted a simplified way to calculate the rotation (**g**) and speed (**s**) based on the speed of the vehicle&#8217;s tracks (**T<span class="MT_smaller">1</span>** and **T<span class="MT_smaller">2</span>**) (Figure 1). With these variables I create a right angled triangle and use [maths][1] to calculate how far the vehicle moves in the x and y coordinates in order to find it&#8217;s finishing location (**x&#8217;,y&#8217;**).
 
-<pre>x' = x + s * sin(h + g)
-y' = y + s * cos(h + g)</pre>
-
+```
+x' = x + s * sin(h + g)
+y' = y + s * cos(h + g)
+```
 This method is a reasonable approximation for the movement of a tracked vehicle: It&#8217;ll move faster when you expect it to and it&#8217;ll turn faster when you expect it to. However, as a [stand up mathematician][2] pointed out to me, it&#8217;s not an accurate representation of what should actually be happening. I had also observed vehicles having problems turning to face something close to and behind them resulting in endless circling of the target.
 
 # Improving Accuracy
@@ -34,18 +36,20 @@ A more accurate representation is the vehicle travelling a distance, **s**, alon
 
 <img align="right" src="/wp-content/uploads/users/robearl/TankMovement-Complex-bare3.png" alt="Figure 2: More Accurate Movement" title="" />If **T<span class="MT_smaller">2</span>** traces a circle of radius **r** then **T<span class="MT_smaller">1</span>** traces a circle of radius **r + 2d**. Since **d** is static we can say that the ratio of **T<span class="MT_smaller">1</span>** to **T<span class="MT_smaller">2</span>** is proportional to the ratio of the radii. This gives us the following equation to solve:
 
-<pre>T1   r + 2d
+```
+T1   r + 2d
 -- = -------
-T2     r</pre>
-
+T2     r
+```
 Solving this for r gives us:
 
-<pre>r =     2d 
+```
+r =     2d 
     ----------
      T1
      --  -  1
-     T2</pre>
-
+     T2
+```
 ## Rotation
 
 We now have a triangle with 2 sides of known length. If we divide this triangle in half we can use the right angles to determine the vehicle will move **2g** radians around the circle (Figure 3).
@@ -55,7 +59,8 @@ We can say that the ratio between **2g** and 2 PI radians (360 degrees) is the s
 
 <img align="right" src="/wp-content/uploads/users/robearl/TankMovement-Complex-Solving.png" alt="Figure 3: Solving Triangles" title="" /> 
 
-<pre>2g                s
+```
+2g                s
 ------  =  -----------------
 2 * PI      2 * PI * (r + d)
        s
@@ -74,21 +79,23 @@ We can say that the ratio between **2g** and 2 PI radians (360 degrees) is the s
 
 g  =     T1 + T2
       -------------
-      4 * ( r + d )</pre>
-
+      4 * ( r + d )
+```
 If we substitute in our value for **r** and simplify we end up with:
 
-<pre>g = T1 - T2
+```
+g = T1 - T2
     --------
-       4d</pre>
-
+       4d
+```
 Which is a fairly simple calculation that scales by the size of the organism. The other thing missing from the approximate calculation is that the change in heading is actually **2g**, as can be seen from the symmetry in our diagrams.
 
 ## Distance
 
 Now that we know the angles we can use the [Law of Sines][3] to calculate the straight line distance, **t**, between our vehicle&#8217;s start and end points. 
 
-<pre>r + d        t / 2
+```
+r + d        t / 2
 --------- = -------
 sin(PI/2)    sin(g)
 
@@ -98,19 +105,21 @@ r + d     t / 2
 
 sin(g) * (r + d) = t / 2
 
-t = 2 * sin(g) * (r + d)</pre>
-
+t = 2 * sin(g) * (r + d)
+```
 Once again we can substitute in our value for **r** and simplify to get:
 
-<pre>t = d(T1 + T2)
+```
+t = d(T1 + T2)
     ---------- * 2 * sin(g)
-      T1 - T2</pre>
-
+      T1 - T2
+```
 Now that we know the distance and we know the angle we can use the same method we used earlier to calculate the new coordinates:
 
-<pre>x' = x + t * sin(h + g)
-y' = y + t * cos(h + g)</pre>
-
+```
+x' = x + t * sin(h + g)
+y' = y + t * cos(h + g)
+```
 ## Applying Our Findings
 
 So far we&#8217;ve seen a lot of (possibly confusing) numbers and symbols but what do we actually have to do do add this to a simulation? Each time our vehicle updates we need to:
@@ -124,9 +133,10 @@ So far we&#8217;ve seen a lot of (possibly confusing) numbers and symbols but wh
 
 You may have noticed there&#8217;s a possible division by zero error when **T<span class="MT_smaller">1</span>** equals **T<span class="MT_smaller">2</span>**. To protect against this we can check if they&#8217;re equal (or catch the exception) and use the calculation:
 
-<pre>x' = x + T1 * sin(h)
-y' = y + T1 * cos(h)</pre>
-
+```
+x' = x + T1 * sin(h)
+y' = y + T1 * cos(h)
+```
 ## Example
 
 Let&#8217;s say our vehicle has the properties:
@@ -145,41 +155,47 @@ h = 2 (Heading)
 
 1. Calculate **g**
 
-<pre>g = T1 - T2
+```
+g = T1 - T2
     --------
        4d
 g = 1.0 - 0.5     0.5
     ---------  =  --- = 0.0625
-        8          8</pre>
-
+        8          8
+```
 2. Calculate **t**
 
-<pre>t = d(T1 + T2)
+```
+t = d(T1 + T2)
     ---------- * 2 * sin(g)
       T1 - T2
 = 0 + (2 * (1.0 + 0.5) * 2 * sin(0.0625) ) / ( 1.0 - 0.5 )
 = (6 * 0.06246 ) / 0.5
 = 0.37476 * 2
-= 0.74951</pre>
-
+= 0.74951
+```
 3. Calculate **x&#8217;**.
 
-<pre>x' = x + t * sin(h + g)
+```
+x' = x + t * sin(h + g)
 = 0 +  0.74951 * sin(2.0625)
-= 0.66072</pre>
+= 0.66072
 
+```
 4. Calculate **y&#8217;**.
 
-<pre>y' = y + t * cos(h + g)
+```
+y' = y + t * cos(h + g)
 = 0 + 0.74951 * cos(2.0625)
-= -0.35387</pre>
-
+= -0.35387
+```
 2. Adjust **h** by **2g**.
 
-<pre>h' = h + 2g
+```
+h' = h + 2g
 h' = 2 + 2 * 0.0625
-h' = 2.125</pre>
-
+h' = 2.125
+```
 After this update our new state is:
 
 x = 0.66072
@@ -190,7 +206,8 @@ h = 2.125
 
 In the following Java example the Vehicle&#8217;s update method would be called from the main program loop.
 
-<pre>public class Vehicle
+```java
+public class Vehicle
 {
   private double x, y, heading;
   private int size, maxSpeed;
@@ -225,8 +242,8 @@ In the following Java example the Vehicle&#8217;s update method would be called 
     // Update the vehicle's heading.
     this.heading += 2 * g;
   }
-}</pre>
-
+}
+```
 When updating the x coordinate we subtract because, when using a JPanel:
 
   * 0,0 is the top left corner.

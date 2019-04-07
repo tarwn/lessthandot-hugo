@@ -3,6 +3,7 @@ title: Visual Studio 2010 and Microsoft .NET Framework 4 Available for download 
 author: SQLDenis
 type: post
 date: 2010-04-12T11:55:29+00:00
+ID: 755
 url: /index.php/desktopdev/mstech/visual-studio-2010-and-microsoft-net-fra/
 views:
   - 4730

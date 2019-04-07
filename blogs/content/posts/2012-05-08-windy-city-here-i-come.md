@@ -3,6 +3,7 @@ title: 'Windy City, Here I Come! SQL Saturday #119 Chicago 2012'
 author: Jes Borland
 type: post
 date: 2012-05-08T23:37:00+00:00
+ID: 1622
 excerpt: Join me in the Chicago area on May 18 and 19 for two great SQL events!
 url: /index.php/itprofessionals/professionaldevelopment/windy-city-here-i-come/
 views:

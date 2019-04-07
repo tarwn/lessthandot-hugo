@@ -3,6 +3,7 @@ title: How I prepared myself for the MCSE certification
 author: Koen Verbeeck
 type: post
 date: 2013-04-04T07:31:00+00:00
+ID: 2059
 excerpt: 'This blog details my preparation for the MCSE - Business Intelligence certification.'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/how-i-prepared-mcse/
 views:

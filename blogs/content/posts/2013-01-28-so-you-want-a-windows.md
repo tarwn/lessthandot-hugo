@@ -3,6 +3,7 @@ title: So you want a Windows 8 Phone?
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-28T12:37:00+00:00
+ID: 1944
 excerpt: 'I’ve been a Droid phone user for some time now and really, couldn’t have imagined using anything else.  One of the things that is always important to me is, efficiency in work.  That being said, Droid has always been quick to find what I need, actually&hellip;'
 url: /index.php/itprofessionals/itservicemanagement/so-you-want-a-windows/
 views:

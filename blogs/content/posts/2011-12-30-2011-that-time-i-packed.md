@@ -3,6 +3,7 @@ title: '2011: That Time I Packed A Lifetime Into A Single Year'
 author: Jes Borland
 type: post
 date: 2011-12-30T13:40:00+00:00
+ID: 1470
 excerpt: 'A year ago, I sat down and wrote 2011 Goals: Bring It On. I wanted to go big in 2011. I wanted to grow. I wanted to experience new things. And the year was a smashing success.'
 url: /index.php/itprofessionals/professionaldevelopment/2011-that-time-i-packed/
 views:

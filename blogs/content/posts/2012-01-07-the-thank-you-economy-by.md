@@ -3,6 +3,7 @@ title: The Thank You Economy by Gary Vaynerchuk
 author: SQLDenis
 type: post
 date: 2012-01-07T14:52:00+00:00
+ID: 1480
 excerpt: |
   The Thank You Economy by Gary Vaynerchuk
   If your company is thinking about jumping on the social media bandwagon then this book is required reading. You should be able to finish this book in one sitting, it is only 256 pages. The length of the book is&hellip;

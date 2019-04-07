@@ -3,6 +3,7 @@ title: Product Selection, Identifying Needs
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-02-03T09:40:00+00:00
+ID: 1017
 excerpt: |
   Product selection is something we will all run into in our careers, regardless of where we fall in the technical spectrum. Whether we are helping select a tool for end users, new hardware for our servers, or a framework to use in our process, product selection can have far reaching affects and the potential to consume a great deal of time and effort.
   
@@ -49,7 +50,7 @@ The following post is the first of four outlining a four step selection process 
 ## Step 0: Why Do I Need a Process?
 
 <div style="float: right; margin: .5em; padding: .45em; border: 1px solid #dddddd; color: #666666; font-size: 80%; text-align: center;">
-  <img src="http://www.tiernok.com/LTDBlog/ProductSelection/AorB.jpg" alt="Option A or Option B?" />
+  <img src="http://tiernok.com/LTDBlog/ProductSelection/AorB.jpg" alt="Option A or Option B?" />
 </div>
 
 It often starts with &#8220;I need an IDE&#8221; or &#8220;I need ABC, Inc&#8217;s IDE&#8221;. On the one hand, when we pre-select a product we then measure all other potential solutions against that product instead of against our needs. On the other, a vague category fails to provide anything but the most general criterion. Despite their differences, they tent to both lead to a very similar outcome: highly opinionated, emotional selection processes where groups of people end up rallying behind the product they like the best. These methods are extremely variable and, beside creating a lot of dissension and wasted time, often leave us with a product that is missing a number of critical features or capabilities and requires far too long to integrate into our environment. This method may seem faster, but it has a lot of additional costs and can actually take far longer.
@@ -67,7 +68,7 @@ By using [Root cause analysis][1] methods we can dig into the reasons behind the
 ### &#8220;The CEO Said So&#8221;
 
 <div style="float: right; margin: .5em; padding: .45em; border: 1px solid #dddddd; color: #666666; font-size: 80%; text-align: center;">
-  <img src="http://www.tiernok.com/LTDBlog/ProductSelection/dashboard.jpg" alt="Dreaming of a dashboard" style="max-width: 200px" /><br /> Are they really asking for<br />more software?
+  <img src="http://tiernok.com/LTDBlog/ProductSelection/dashboard.jpg" alt="Dreaming of a dashboard" style="max-width: 200px" /><br /> Are they really asking for<br />more software?
 </div>
 
 Often we will run into reasons such as &#8220;because the CEO said so&#8221; or &#8220;because we budgeted for it&#8221; as needs. We can these items, but we don&#8217;t want to let the position or invocation of a budget keep us from digging into the root cause. Often when a CEO says &#8220;we need a new dashboarding system&#8221; what he is actually doing is communicating a need such as &#8220;I don&#8217;t feel that I have visibility of X and in my past company product Y gave me that visibility&#8221;. While he thinks he is asking us to buy a specific product, what he is actually doing is asking us to to solve his visibility problem using the solution that satisfied him the last time he had this problem. If we determine which capabilities or features he most greatly misses, we can then determine what those features provided at the CEO&#8217;s last job and likely what they feel they are missing now. 

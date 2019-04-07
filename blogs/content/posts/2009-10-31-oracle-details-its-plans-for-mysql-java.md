@@ -3,6 +3,7 @@ title: Oracle Details Its Plans For MySQL, Java, Virtualization, NetBeans, Glass
 author: SQLDenis
 type: post
 date: 2009-10-31T09:50:45+00:00
+ID: 601
 excerpt: |
   Oracle has updated the Sun Acquisition FAQ. The FAQ now has Oracle's plans for MySQL, Java, Virtualization, NetBeans, Glassfish, OpenOffice, Open Source and other things.
   

@@ -3,6 +3,7 @@ title: 'Danger in Design: Why bother with Architecture ?'
 author: damber
 type: post
 date: 2008-06-30T10:36:11+00:00
+ID: 53
 url: /index.php/architect/hardwareinfrastructuredesign/why-bother-with-architecture/
 views:
   - 15153

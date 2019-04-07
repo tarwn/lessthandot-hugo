@@ -3,6 +3,7 @@ title: 'I’ll See You At SQL Saturday #75 Columbus, OH'
 author: Jes Borland
 type: post
 date: 2011-06-06T11:36:00+00:00
+ID: 1205
 excerpt: |
   Are you busy this Saturday, June 11, 2011? If not, head out to SQL Saturday #75 in Columbus, OH! 
   

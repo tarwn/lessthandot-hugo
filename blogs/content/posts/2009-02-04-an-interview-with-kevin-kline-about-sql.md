@@ -3,6 +3,7 @@ title: An Interview With Kevin Kline About SQL In A Nutshell Third Edition
 author: SQLDenis
 type: post
 date: 2009-02-04T12:42:52+00:00
+ID: 315
 url: /index.php/datamgmt/dbprogramming/an-interview-with-kevin-kline-about-sql/
 views:
   - 14047

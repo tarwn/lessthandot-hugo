@@ -3,6 +3,7 @@ title: Short-Throw-Away T-SQL
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-15T14:45:00+00:00
+ID: 1789
 excerpt: "Throughout the day, I probably write 5 to 15 short scripts to accomplish tasks that really, have no real purpose for future use.  That is, they aren't worth saving.  Typically this is because the script, like the one below, is easier to write than it is&hellip;"
 url: /index.php/datamgmt/dbprogramming/short-throw-away-t-sql/
 views:
@@ -31,7 +32,8 @@ Another way to get them out there, blogging them.  On that note, today&#8217;s 
 To add to all of this and the idea, I’m tagging anyone that reads this to do the same on your own blog.  All of those quick hacks in T-SQL or even C# and so on, post them up.  It’s a blog post, it’s sharing and it just might save someone a lot of time.
 
 > Disclaimer: throw away scripts are just that. Untested and not run threw a ringer. Test them first 🙂</p>
-<pre>set nocount on
+sql
+set nocount on
 declare @int int = 1
 declare @count bigint
 declare @cmd nvarchar(1500)
@@ -47,7 +49,9 @@ while @int <= (Select count(*) from @tbl)
    print @cmd
   set @int += 1
  end
- </pre>
+ 
+```
+
 
  [1]: http://wiki.ltd.local/index.php/Main_Page
  [2]: http://wiki.ltd.local/index.php/Fix_Orphaned_Database_Users_All_SQL_Server_Versions

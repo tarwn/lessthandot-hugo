@@ -3,6 +3,7 @@ title: AngularJS vs Knockout – Final Thoughts (9 of 9)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-10-21T13:38:00+00:00
+ID: 2182
 excerpt: "I started reviewing AngularJS and Knockout because I had some specific projects that I intended to use one of these for and felt the research and comparative examples might prove useful to others. I haven't compared every aspect of the libraries, just enough to give me an idea which will be better for my specific projects (and hopefully give you a headstart on your own decisions)."
 url: /index.php/webdev/uidevelopment/angularjs-vs-knockout-final-thoughts-9/
 featured_image: /wp-content/uploads/2013/10/Javascript2.png

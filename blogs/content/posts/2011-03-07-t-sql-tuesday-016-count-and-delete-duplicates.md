@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #016 – COUNT and DELETE duplicates'
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-03-08T03:02:00+00:00
+ID: 1071
 excerpt: 'Duplicates in data can be detrimental to how you return data from tables.  They can be so detrimental that businesses can report large discrepancies on sales, inventory and other critical calculations.   Dealing with duplicates begins with the design of you database.  It ends with the design of your applications that are inserting data into those databases.  Although constraints and everything we can put into maintaining the integrity of our databases are out there for us to use; bad designs happen.'
 url: /index.php/datamgmt/dbprogramming/t-sql-tuesday-016-count-and-delete-duplicates/
 views:
@@ -40,7 +41,8 @@ COUNT has some concerns.  For finding duplicates in a table where a primary key
 
 To show this, let’s create a table named DUPS.
 
-<pre>IF EXISTS(SELECT 1 FROM SYS.objects WHERE [name] = 'DUPS')
+sql
+IF EXISTS(SELECT 1 FROM SYS.objects WHERE [name] = 'DUPS')
  BEGIN
 	DROP TABLE DUPS
  END
@@ -48,21 +50,26 @@ GO
 CREATE TABLE DUPS (IDENT BIGINT IDENTITY(1,1) PRIMARY KEY, CUST VARCHAR(20), ORDERNUM VARCHAR(20))
 GO
 CREATE TABLE DUPS (IDENT BIGINT IDENTITY(1,1) PRIMARY KEY, CUST VARCHAR(20), ORDERNUM VARCHAR(20))
-GO</pre>
+GO
+```
 
 Now insert some values into this new table with NULL values in the CUST column
 
-<pre>INSERT INTO DUPS 
+sql
+INSERT INTO DUPS 
 VALUES (NULL,'Test'),
 ('Test','Test'),
 (NULL,'Test'),
 ('Test','Test'),
 (NULL,'Test'),
-('Test','Test')</pre>
+('Test','Test')
+```
 
 You may write a simple query using COUNT to return the count of the column CUST as:
 
-<pre>SELECT COUNT(CUST) FROM DUPS</pre>
+sql
+SELECT COUNT(CUST) FROM DUPS
+```
 
  
 
@@ -74,7 +81,8 @@ Looking for duplicates and NULL values plays a key role in what we just went ove
 
 The combination of COUNT, HAVING and GROUP BY is how we will look for duplicates today.  We will use a test script that is shown below.  The test script creates out table and inserts 10,000 rows.  There are three columns.  One is the primary key and is an identity insert.  The other two are customer number (CUST) and an order number (ORDERNUM).  A loop is used to insert test data into the new table.
 
-<pre>IF EXISTS(SELECT 1 FROM SYS.objects WHERE [name] = 'DUPS')
+sql
+IF EXISTS(SELECT 1 FROM SYS.objects WHERE [name] = 'DUPS')
  BEGIN
 	DROP TABLE DUPS
  END
@@ -96,14 +104,15 @@ SET @LOOP = 1
 
 WHILE @LOOP <= 10000
  BEGIN
-	IF (@LOOP % 2 &gt; 0)
+	IF (@LOOP % 2 > 0)
 	 BEGIN
 		INSERT INTO DUPS
 		SELECT 'Customer ' + CAST(@LOOP as VARCHAR(5)),
 			   'OrderNum ' + CAST(@LOOP as VARCHAR(5))
 	 END
 	SET @LOOP += 1
- END</pre>
+ END
+```
 
  
 
@@ -111,30 +120,36 @@ The results from running this transaction will insert 15,000 rows.  We know thi
 
 The HAVING clause will be exactly what grouping will result from a query.  An example of this can be shown by querying the sys.master_files system view for a unique database ID.
 
-<pre>SELECT 
+sql
+SELECT 
  SUM(database_id)
 FROM sys.master_files
 GROUP BY database_id
-HAVING database_id = 1</pre>
+HAVING database_id = 1
+```
 
 To use this in a duplicate search, add COUNT to the HAVING clause
 
-<pre>SELECT 
+sql
+SELECT 
  database_id
 FROM sys.master_files
 GROUP BY database_id
-HAVING COUNT(database_id) &gt; 2</pre>
+HAVING COUNT(database_id) > 2
+```
 
 This would show us the entire database ID’s that have more than 2 files associated with them.
 
 Taking this to work for us with our earlier table and data, we could do the following
 
-<pre>SELECT 
+sql
+SELECT 
 	MAX(IDENT),
 	ORDERNUM
 FROM DUPS 
 GROUP BY ORDERNUM 
-HAVING COUNT(ORDERNUM) &gt; 1</pre>
+HAVING COUNT(ORDERNUM) > 1
+```
 
 The results shown list all the order numbers that are found to be duplicates (or more than 1)
 
@@ -146,13 +161,15 @@ The results shown list all the order numbers that are found to be duplicates (or
 
 Loaded with this information, adding a DELETE to the statement and anything that is not listed as our MAX identity, will remove all duplicates and leave the last one inserted (based on the identity seed)
 
-<pre>DELETE FROM DUPS 
+sql
+DELETE FROM DUPS 
 WHERE IDENT NOT IN (
 SELECT 
 	MAX(IDENT)
 FROM DUPS 
 GROUP BY ORDERNUM 
-HAVING COUNT(ORDERNUM) &gt; 1)</pre>
+HAVING COUNT(ORDERNUM) > 1)
+```
 
 Once this statement is executed, the table is cleansed of the duplicates and back to the row count of 10,000 unique order numbers. 
 
@@ -160,12 +177,14 @@ Once this statement is executed, the table is cleansed of the duplicates and bac
 
 The MIN can also be used if the first inserted row is to be retained.  The other CTE method mentioned earlier can also be done by using PARTITION BY and ROW_NUMBER
 
-<pre>;WITH DUP_CTE AS
+sql
+;WITH DUP_CTE AS
 (
 SELECT ORDERNUM,ROW_NUMBER() OVER (PARTITION BY ORDERNUM ORDER BY (SELECT 0)) RN FROM DUPS 
 )
 DELETE FROM DUP_CTE
-WHERE RN <&gt; 1</pre>
+WHERE RN <> 1
+```
 
 This allows more selectivity to the row ranking and removal process. 
 

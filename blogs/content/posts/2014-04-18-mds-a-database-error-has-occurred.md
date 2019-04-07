@@ -3,6 +3,7 @@ title: 'MDS: A Database Error Has Occurred'
 author: Koen Verbeeck
 type: post
 date: 2014-04-18T09:20:36+00:00
+ID: 2583
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/mds-a-database-error-has-occurred/
 views:
   - 14762
@@ -21,7 +22,7 @@ tags:
 ---
 I recently came across the following error message when I tried to look at the batches in the Integration Management section of MDS:
 
-<pre>515: A database error has occurred. Please contact your system administrator</pre>
+<pre parse="no">515: A database error has occurred. Please contact your system administrator</pre>
 
 [<img class="alignnone size-full wp-image-2585" alt="koen_mdserror" src="/wp-content/uploads/2014/04/koen_mdserror.png" width="299" height="120" />][1]
 
@@ -31,7 +32,10 @@ Anyway, after some searching it came out the MDS stored procedure _udpEntitySta
 
 Simple delete the offending batches and you&#8217;re good to go!
 
-<pre>DELETE FROM mdm.tblStgBatch
-WHERE BatchTag IS NULL;</pre>
+sql
+DELETE FROM mdm.tblStgBatch
+WHERE BatchTag IS NULL;
+```
+
 
  [1]: /wp-content/uploads/2014/04/koen_mdserror.png

@@ -3,6 +3,7 @@ title: Overview of Published Articles – 2014Q4
 author: Koen Verbeeck
 type: post
 date: 2015-01-07T20:39:46+00:00
+ID: 3145
 url: /index.php/datamgmt/dbprogramming/mssqlserver/overview-of-published-articles-2014q4/
 views:
   - 3598

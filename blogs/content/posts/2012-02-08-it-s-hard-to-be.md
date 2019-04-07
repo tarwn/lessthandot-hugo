@@ -3,6 +3,7 @@ title: 'It’s Hard To Be “Average”: Mean, Median, and Mode in SQL Server'
 author: Jes Borland
 type: post
 date: 2012-02-08T12:45:00+00:00
+ID: 1516
 excerpt: |
   Average Joe. An average day. An average salary. An average run. An average house. 
   
@@ -35,15 +36,17 @@ Let&#8217;s use the AdventureWorks2008R2 sample database to explore these functi
 
 To begin, create a view that takes the orders, by salesperson, for a year, and sums the number of orders and value of orders. 
 
-<pre>CREATE VIEW Sales.OrdersBySalesperson 
+sql
+CREATE VIEW Sales.OrdersBySalesperson 
 AS 
 SELECT SOH.SalesOrderID, SOH.OrderDate, SOH.SalesPersonID, SOH.CustomerID, SUM(SOD.OrderQty) AS Qty, SUM(SOD.LineTotal) AS Value
 FROM Sales.SalesOrderHeader AS SOH 
 	INNER JOIN Sales.SalesOrderDetail AS SOD ON SOD.SalesOrderID = SOH.SalesOrderID
-WHERE SOH.OrderDate &gt;= '20080101' 
+WHERE SOH.OrderDate >= '20080101' 
 	AND SOH.OrderDate < '20090101'
 	AND NOT(SalesPersonID IS NULL)
-GROUP BY SOH.SalesOrderID, SOH.OrderDate, SOH.SalesPersonID, SOH.CustomerID;</pre>
+GROUP BY SOH.SalesOrderID, SOH.OrderDate, SOH.SalesPersonID, SOH.CustomerID;
+```
 
 **Mean**
 
@@ -51,11 +54,13 @@ The mean is calculated by adding all the values in a data set, then dividing by 
 
 In SQL Server, this can easily be achieved by using the AVG function. (Note that NULL values are ignored by this function.) 
 
-<pre>SELECT SalesPersonID, AVG(Value) AS MeanValue 
+sql
+SELECT SalesPersonID, AVG(Value) AS MeanValue 
 FROM Sales.OrdersBySalesperson AS OBSP 
 WHERE SalesPersonID IN (274, 275, 277, 278, 279, 282)
 GROUP BY SalesPersonID 
-ORDER BY SalesPersonID;</pre>
+ORDER BY SalesPersonID;
+```
 
 Results: 
 
@@ -67,7 +72,8 @@ The median is calculated by arranging all values in the data set in order, then 
 
 First, we create a CTE that will order the sales value. The ROW_NUMBER function ranks the orders by value, looking at each salesperson separately. The COUNT function will tell us how many orders the salesperson has. 
 
-<pre>WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
+sql
+WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
 (
 	SELECT SalesPersonID, 
 		Value, 
@@ -78,7 +84,8 @@ First, we create a CTE that will order the sales value. The ROW_NUMBER function 
 )
 
 SELECT SPID, Value, RowNum, CountOrders
-FROM OrdersBySP;</pre>
+FROM OrdersBySP;
+```
 
 Here&#8217;s a sample of the results. As you can see, salesperson 275 has a total of 86 orders. Salesperson 277 has 97. 
 
@@ -86,7 +93,8 @@ Here&#8217;s a sample of the results. As you can see, salesperson 275 has a tota
 
 We&#8217;re going to add a WHERE clause to the CTE: 
 
-<pre>WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
+sql
+WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
 (
 	SELECT SalesPersonID, 
 		Value, 
@@ -98,7 +106,8 @@ We&#8217;re going to add a WHERE clause to the CTE:
 
 SELECT SPID, Value, RowNum, CountOrders 
 FROM OrdersBySP
-WHERE RowNum BETWEEN (CountOrders + 1)/2 AND (CountOrders + 2)/2;</pre>
+WHERE RowNum BETWEEN (CountOrders + 1)/2 AND (CountOrders + 2)/2;
+```
 
 ![][3]
 
@@ -106,7 +115,8 @@ What does this _mean_? (Please laugh at that.) Remember, to calculate median, we
 
 The next query will find the average of the two middle values, if necessary. If the two middle values are not the same, it will return a value that is not in the data set (and that’s OK!). 
 
-<pre>WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
+sql
+WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
 (
 	SELECT SalesPersonID, 
 		Value, 
@@ -119,7 +129,8 @@ The next query will find the average of the two middle values, if necessary. If 
 SELECT SPID, AVG(Value) as AvgValue 
 FROM OrdersBySP
 WHERE RowNum BETWEEN (CountOrders + 1)/2 AND (CountOrders + 2)/2 
-GROUP BY SPID;</pre>
+GROUP BY SPID;
+```
 
 ![][4]
 
@@ -131,12 +142,14 @@ In the newest version of SQL Server, it gets even easier to calculate a median v
 
 You will specify the percentile you want &#8211; in this case, we want the 50th, so we use (0.5). Then, we use WITHIN GROUP (ORDER BY &#8230; ) to tell the function which values to sort and compute. I&#8217;m using OVER (PARTITION BY &#8230; ) to tell the function that I want to divide the values up by salesperson. 
 
-<pre>SELECT DISTINCT OBSP.SalesPersonID, 
+sql
+SELECT DISTINCT OBSP.SalesPersonID, 
 	PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY OBSP.Value) 
 		OVER (PARTITION BY OBSP.SalesPersonID) AS MedianCont 
 FROM Sales.OrdersBySalesperson AS OBSP
 WHERE OBSP.SalesPersonID IN (274, 275, 277, 278, 279, 282)
-ORDER BY OBSP.SalesPersonID;</pre>
+ORDER BY OBSP.SalesPersonID;
+```
 
 ![][5]
 
@@ -150,29 +163,33 @@ The mode is the most frequently occurring value in a data set. This is more usef
 
 To translate this into T-SQL, let&#8217;s look at the quantities of an item sold. We&#8217;ll get the COUNT of the quantity, and put it in descending order to see what quantity of the item is ordered most frequently. 
 
-<pre>SELECT COUNT(SOD.OrderQty) AS FrequencyOfValue, SOD.OrderQty
+sql
+SELECT COUNT(SOD.OrderQty) AS FrequencyOfValue, SOD.OrderQty
 FROM Sales.SalesOrderHeader AS SOH 
 	INNER JOIN Sales.SalesOrderDetail AS SOD ON SOD.SalesOrderID = SOH.SalesOrderID
-WHERE SOH.OrderDate &gt;= '20080101' 
+WHERE SOH.OrderDate >= '20080101' 
 	AND SOH.OrderDate < '20090101' 
 	AND NOT(SOH.SalesPersonID IS NULL) 
 		AND SOD.ProductID IN (864) 
 GROUP BY SOD.OrderQty
-ORDER BY COUNT(SOD.OrderQty) DESC;</pre>
+ORDER BY COUNT(SOD.OrderQty) DESC;
+```
 
 ![][6]
 
 Now, we will use the TOP clause to get the most-frequently-ordered quantity. Make sure you use WITH TIES so that if if two or more values occur with the same frequency, both are listed. 
 
-<pre>SELECT TOP 1 WITH TIES SOD.OrderQty
+sql
+SELECT TOP 1 WITH TIES SOD.OrderQty
 FROM Sales.SalesOrderHeader AS SOH 
 	INNER JOIN Sales.SalesOrderDetail AS SOD ON SOD.SalesOrderID = SOH.SalesOrderID
-WHERE SOH.OrderDate &gt;= '20080101' 
+WHERE SOH.OrderDate >= '20080101' 
 	AND SOH.OrderDate < '20090101'  
 	AND NOT(SOH.SalesPersonID IS NULL) 
 		AND SOD.ProductID IN (864) 
 GROUP BY SOD.OrderQty
-ORDER BY COUNT(SOD.OrderQty) DESC;</pre>
+ORDER BY COUNT(SOD.OrderQty) DESC;
+```
 
 ![][7]
 

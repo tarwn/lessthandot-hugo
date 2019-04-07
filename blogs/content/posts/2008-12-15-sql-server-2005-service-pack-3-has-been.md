@@ -3,6 +3,7 @@ title: SQL Server 2005 Service Pack 3 has been released
 author: SQLDenis
 type: post
 date: 2008-12-15T22:45:02+00:00
+ID: 252
 url: /index.php/datamgmt/datadesign/sql-server-2005-service-pack-3-has-been/
 views:
   - 7716

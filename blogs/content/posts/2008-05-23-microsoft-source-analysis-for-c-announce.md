@@ -3,6 +3,7 @@ title: 'Microsoft Source Analysis for C# Announced'
 author: SQLDenis
 type: post
 date: 2008-05-23T16:22:17+00:00
+ID: 35
 url: /index.php/desktopdev/mstech/microsoft-source-analysis-for-c-announce/
 views:
   - 3168

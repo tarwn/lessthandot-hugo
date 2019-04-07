@@ -3,6 +3,7 @@ title: Don’t use Default Database in SQL Server
 author: George Mastros (gmmastros)
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 1983
 excerpt: "When you create a login with SQL Server, you can specify the default database for that login, but you shouldn't.  Here's why."
 draft: true
 url: /?p=1983
@@ -26,21 +27,27 @@ In my opinion, it is best practice to set the default database for every login t
 
 To check the logins with an invalid default database:
 
-<pre>SELECT	L.name, L.dbName
+sql
+SELECT	L.name, L.dbName
 FROM	master.sys.syslogins L
 		Inner Join sys.databases D
 			On L.dbname = d.name
-WHERE	L.dbname <&gt; 'master'
-		And D.state_desc <&gt; 'ONLINE'</pre>
+WHERE	L.dbname <> 'master'
+		And D.state_desc <> 'ONLINE'
+```
 
 To check the logins that have a database other than master:
 
-<pre>SELECT	L.name, L.dbName
+sql
+SELECT	L.name, L.dbName
 FROM	master.sys.syslogins L
-WHERE	L.dbname <&gt; 'master'</pre>
+WHERE	L.dbname <> 'master'
+```
 
 To change the default database to master:
 
-<pre>ALTER LOGIN [YourLoginNameHere] WITH DEFAULT_DATABASE = [master]</pre>
+sql
+ALTER LOGIN [YourLoginNameHere] WITH DEFAULT_DATABASE = [master]
+```
 
 Changing the default database for a login is super easy

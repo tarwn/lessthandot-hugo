@@ -3,6 +3,7 @@ title: SQL Server 2005 Service Pack 3 – Beta Available For Download
 author: SQLDenis
 type: post
 date: 2008-10-31T08:47:12+00:00
+ID: 191
 url: /index.php/datamgmt/datadesign/sql-server-2005-service-pack-3-beta-avai/
 views:
   - 4825

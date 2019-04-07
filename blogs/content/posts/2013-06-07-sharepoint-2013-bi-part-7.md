@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 7 – Configuring Sha
 author: Koen Verbeeck
 type: post
 date: 2013-06-07T13:27:00+00:00
+ID: 2098
 excerpt: 'In this blog post we go over one of the most important parts of the series: running the PowerPivot Configuration Wizard in order to configure our SharePoint installation. If you followed the previous walkthroughs, you can find the wizard in the start me&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sharepoint-2013-bi-part-7/
 views:

@@ -3,6 +3,7 @@ title: SSRS Properties – Chart Series Label Visibility
 author: Jes Borland
 type: post
 date: 2013-02-26T11:06:00+00:00
+ID: 2014
 excerpt: |
   This blog is part of my series Making Data Tell a Story With SSRS Properties.
   Property: Label - Visible

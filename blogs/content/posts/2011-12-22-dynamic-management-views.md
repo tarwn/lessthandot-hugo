@@ -3,6 +3,7 @@ title: 'SQL Advent 2011 Day 22: Dynamic Management Views'
 author: SQLDenis
 type: post
 date: 2011-12-22T08:52:00+00:00
+ID: 1459
 excerpt: |
   Today we are going to take a look at Dynamic Management Views. Dynamic Management Views is one of my favorite things that they have added to the SQL Server product. Instead of running all kinds of stored procedures, dbcc commands and selects from table, you can get all that information now from the Dynamic Management Views, all you need to know is what view will get you the information you need.
         
@@ -37,7 +38,8 @@ Today we are going to take a look at Dynamic Management Views. Dynamic Managemen
 
 Let&#8217;s take a look at some examples. This query below will give me the top 50 most executed statements in stored procedures
 
-<pre>SELECT TOP 50 * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid),'Ad-Hoc') AS ProcName,execution_count,s2.objectid,
+sql
+SELECT TOP 50 * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid),'Ad-Hoc') AS ProcName,execution_count,s2.objectid,
     (SELECT TOP 1 SUBSTRING(s2.TEXT,statement_start_offset / 2+1 ,
       ( (CASE WHEN statement_end_offset = -1
          THEN (LEN(CONVERT(NVARCHAR(MAX),s2.TEXT)) * 2)
@@ -50,7 +52,8 @@ and OBJECTPROPERTYEX(x.objectid,'IsProcedure') = 1
 and exists (SELECT 1 FROM sys.procedures s
 WHERE s.is_ms_shipped = 0
 and s.name = x.ProcName )
-ORDER BY execution_count DESC</pre>
+ORDER BY execution_count DESC
+```
 
 Here is some sample output
 
@@ -69,7 +72,8 @@ usp_GetLast	1	        901578250	SELECT distinct l.Sy	2010-02-12 09:11:59.840</pr
 
 As you can see the first two rows are for the same stored procedure, what if you only want to know the procedure names? You can use the following query for that, I grouped them by name and then used the max count of the statement itself as the execution count, you could also use SUM instead of MAX. If you have a lot of if else conditions then max might not give you the whole picture.
 
-<pre>SELECT TOP 50 * FROM
+sql
+SELECT TOP 50 * FROM
     (SELECT OBJECT_NAME(s2.objectid) AS ProcName,
         MAX(execution_count) AS execution_count,s2.objectid,
         MAX(last_execution_time) AS last_execution_time
@@ -80,7 +84,8 @@ WHERE OBJECTPROPERTYEX(x.objectid,'IsProcedure') = 1
 AND EXISTS (SELECT 1 FROM sys.procedures s
             WHERE s.is_ms_shipped = 0
             AND s.name = x.ProcName )
-ORDER BY execution_count DESC</pre>
+ORDER BY execution_count DESC
+```
 
 Here is the output
 
@@ -100,7 +105,8 @@ Imagine doing stuff like this in the SQL Server 2000 days&#8230;..better get pro
 
 What if you want to know the stored procedures with the highest average CPU time in SQL Server? That is pretty easy as well, here is the query for that
 
-<pre>SELECT TOP 50 * FROM
+sql
+SELECT TOP 50 * FROM
     (SELECT OBJECT_NAME(s2.objectid) AS ProcName,
         SUM(s1.total_worker_time/s1.execution_count) AS AverageCPUTime,s2.objectid,
         SUM(execution_count) AS execution_count
@@ -111,7 +117,8 @@ WHERE OBJECTPROPERTYEX(x.objectid,'IsProcedure') = 1
 AND EXISTS (SELECT 1 FROM sys.procedures s
             WHERE s.is_ms_shipped = 0
             AND s.name = x.ProcName )
-ORDER BY AverageCPUTime DESC</pre>
+ORDER BY AverageCPUTime DESC
+```
 
 Output
 
@@ -131,7 +138,8 @@ Here is another one of my favorite queries. How long will the database restore t
   
 Run the query below and you will know
 
-<pre>SELECT
+sql
+SELECT
     d.PERCENT_COMPLETE AS [%Complete],
     d.TOTAL_ELAPSED_TIME/60000 AS ElapsedTimeMin,
     d.ESTIMATED_COMPLETION_TIME/60000   AS TimeRemainingMin,
@@ -141,21 +149,25 @@ Run the query below and you will know
 FROM    sys.dm_exec_requests d
 CROSS APPLY sys.dm_exec_sql_text(d.sql_handle)AS s
 WHERE  d.COMMAND LIKE 'RESTORE DATABASE%'
-ORDER   BY 2 DESC, 3 DESC</pre>
+ORDER   BY 2 DESC, 3 DESC
+```
 
 For all the sessions that are connected, what state are they in? The query below will give you a quick count
 
-<pre>SELECT COUNT(*) AS StatusCount,CASE status
+sql
+SELECT COUNT(*) AS StatusCount,CASE status
 WHEN 'Running' THEN 'Running - Currently running one or more requests'
 WHEN 'Sleeping ' THEN 'Sleeping - Currently running no requests'
 WHEN 'Preconnect ' THEN 'Session is in the Resource Governor classifier'
 ELSE 'Dormant – Session is in prelogin state' END status
 FROM sys.dm_exec_sessions
-GROUP BY status</pre>
+GROUP BY status
+```
 
 Just a quick count of all the transaction isolation levels
 
-<pre>SELECT COUNT(*),CASE transaction_isolation_level
+sql
+SELECT COUNT(*),CASE transaction_isolation_level
 WHEN 0 THEN 'Unspecified'
 WHEN 1 THEN 'ReadUncomitted'
 WHEN 2 THEN 'Readcomitted'
@@ -163,11 +175,13 @@ WHEN 3 THEN 'Repeatable'
 WHEN 4 THEN 'Serializable'
 WHEN 5 THEN 'Snapshot' END AS TRANSACTION_ISOLATION_LEVEL
 FROM sys.dm_exec_sessions
-GROUP BY transaction_isolation_level</pre>
+GROUP BY transaction_isolation_level
+```
 
 To see what the SET options are that you are using in your connection, use the following query, leave out the WHERE clause if you want to know it for all connections. The query returns pretty much what DBCC USERINFO returns but you can run this for all connected sessions in one shot
 
-<pre>SELECT @@SPID AS SPID,
+sql
+SELECT @@SPID AS SPID,
  text_size,
  language,
  lock_timeout,
@@ -197,20 +211,25 @@ WHEN 3 THEN 'Repeatable'
 WHEN 4 THEN 'Serializable'
 WHEN 5 THEN 'Snapshot' END AS TRANSACTION_ISOLATION_LEVEL
 FROM sys.dm_exec_sessions
-WHERE session_id = @@SPID</pre>
+WHERE session_id = @@SPID
+```
 
 Here is another one where you had to run performance counter back in the 2000 days. This query will get you the page life expectancy for your server
 
-<pre>SELECT *
+sql
+SELECT *
 FROM sys.dm_os_performance_counters  
 WHERE counter_name = 'Page life expectancy'
-AND OBJECT_NAME = 'SQLServer:Buffer Manager'</pre>
+AND OBJECT_NAME = 'SQLServer:Buffer Manager'
+```
 
 Here is another short one, what account are my services running under?
 
-<pre>SELECT  distinct servicename,
+sql
+SELECT  distinct servicename,
  service_account,status_desc
-FROM    sys.dm_server_services</pre>
+FROM    sys.dm_server_services
+```
 
 Output
 
@@ -222,8 +241,10 @@ I only listed a handful of Dynamic Management Views, SQL Server 2008 R2 has 135 
 
 Here is how you can get a list of all of them
 
-<pre>SELECT * FROM master.sys.sysobjects
-WHERE name like 'dm[_]%'</pre>
+sql
+SELECT * FROM master.sys.sysobjects
+WHERE name like 'dm[_]%'
+```
 
 The list below links to Books On Line for related Dynamic Management Views, if you want to know about mirroring Dynamic Management Views then click on the [Database Mirroring Related Dynamic Management Views][2] link. I would say, go to each section and maybe spend a week on it&#8230;by the middle of spring you should be the Dynamic Management Views master 🙂
 

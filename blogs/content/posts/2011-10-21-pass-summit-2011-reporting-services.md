@@ -3,6 +3,7 @@ title: 'PASS Summit 2011: Reporting Services 201 Wrap-Up'
 author: Jes Borland
 type: post
 date: 2011-10-21T11:42:00+00:00
+ID: 1352
 excerpt: 'Thank you to everyone that attended my session at PASS Summit, "Reporting Services 201: From Basic to WOW!"'
 url: /index.php/datamgmt/dbprogramming/pass-summit-2011-reporting-services/
 views:

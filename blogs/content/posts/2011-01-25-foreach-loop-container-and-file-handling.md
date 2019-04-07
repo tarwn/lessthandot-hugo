@@ -3,6 +3,7 @@ title: Backup file contents with SSIS – Foreach Loop Container and file handli
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-01-25T10:14:00+00:00
+ID: 1007
 excerpt: 'In the first part of building the package that will look at the complete contents and back up the files found in a directory and subdirectories, we discussed the designing phase of building the package itself.  In this part we will take that design and start the development process.'
 url: /index.php/datamgmt/datadesign/foreach-loop-container-and-file-handling/
 views:
@@ -57,7 +58,8 @@ Open the script editor by clicking the Edit Script button in the same window
 
 The coding needed to acquire the last modified date and time is as follows. Enter this code into the Main() method
 
-<pre>if (File.Exists(Dts.Variables["IndexFile"].Value.ToString()))
+```csharp
+if (File.Exists(Dts.Variables["IndexFile"].Value.ToString()))
             {
                 Dts.Variables["FileModDate"].Value = Convert.ToDateTime(File.GetLastWriteTime(Dts.Variables["IndexFile"].Value.ToString()));
                 Dts.TaskResult = (int)ScriptResults.Success;
@@ -65,8 +67,8 @@ The coding needed to acquire the last modified date and time is as follows. Ente
             else
             {
                 Dts.TaskResult = (int)ScriptResults.Failure;
-            }</pre>
-
+            }
+```
 Close the script editor (which in turn, saves the code) and click OK to close and save the changes to the Script Task. Using the success precedence line (green connector), connect the Script Task to the Execute SQL Task. 
 
 **Execute SQL Task**
@@ -75,7 +77,8 @@ To insert the file contents of the files the loop container finds, the OPENROWSE
 
 Create the following staging table that will be used before editing the Execute SQL Task.
 
-<pre>CREATE TABLE [dbo].[ConfigRepository_Temp](
+sql
+CREATE TABLE [dbo].[ConfigRepository_Temp](
 	[ContentConfigID] [int] IDENTITY(1,1) NOT NULL,
 	[SystemConfigID] [int] NULL,
 	[ModifiedDate] [datetime] NULL,
@@ -84,14 +87,17 @@ Create the following staging table that will be used before editing the Execute 
 	[FileContents] [varchar](max) NULL
 ) ON [PRIMARY]
 
-GO</pre>
+GO
+```
 
 This table will act as the reusable holding table for all the files and information we find during the enumeration of the directories. 
 
 Open the Execute SQL Task Editor and if not already defined, add a new connection to the Connection option. Set the BypassPrepare option to False. The BypassPrepare option will be needed so the SQL statement we use can be built based on the contents and file that is currently focused on. Go to the Expressions page and open the Property Expressions Editor. Select SqlStatementSource as the property and add the following into the Expression field. If space in the field is needed, open the expressions builder by clicking the button in the field.
 
-<pre>"INSERT DBA.dbo.ConfigRepository_Temp (ModifiedDate,ConfigPath,FileContents,ImportBy)
-SELECT '" + (DT_STR,24,1252)@[User::FileModDate]  + "','" + @[User::IndexFile]  + "',BulkColumn,SUSER_NAME() FROM OPENROWSET(Bulk '" + @[User::IndexFile]  + "', SINGLE_BLOB) [rowsetresults]"</pre>
+```
+"INSERT DBA.dbo.ConfigRepository_Temp (ModifiedDate,ConfigPath,FileContents,ImportBy)
+SELECT '" + (DT_STR,24,1252)@[User::FileModDate]  + "','" + @[User::IndexFile]  + "',BulkColumn,SUSER_NAME() FROM OPENROWSET(Bulk '" + @[User::IndexFile]  + "', SINGLE_BLOB) [rowsetresults]"
+```
 
 Note the use of the FileModDate and IndexFile variables in this expression. The SUSER_NAME() function is also used to insert the user that is running the package. It is important to point out that later when this package is scheduled using the SQL Server Agent, the Agent Service Account will be placed into this field. That account also requires permissions to this table and other tables we create in this package.
 

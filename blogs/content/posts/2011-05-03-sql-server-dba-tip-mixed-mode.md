@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 6 – Server Security – Windows Authentication / SQL
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-03T10:29:00+00:00
+ID: 1131
 excerpt: 'Defaults surround us in SQL Server.  This is both a good thing and a bad thing.  Part of the SQL Server installation process is the choice of mixed mode security.  Mixed mode in SQL Server means both SQL Authentication and Windows Authentication can be&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-mixed-mode/
 views:

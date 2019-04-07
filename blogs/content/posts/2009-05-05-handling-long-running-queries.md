@@ -3,6 +3,7 @@ title: Handling long running queries with a stop sign
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-05-05T11:14:28+00:00
+ID: 404
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/handling-long-running-queries/
 views:
   - 11092
@@ -46,15 +47,16 @@ So let&#8217;s do it.
   
 First open a new query window and execute
 
-<pre>sp_configure 'show advanced options', 1;
+sql
+sp_configure 'show advanced options', 1;
 GO
 RECONFIGURE;
 GO
 sp_configure  'query governor cost limit' ,1;
 GO
 RECONFIGURE;
-GO</pre>
-
+GO
+```
 Now attempt to query a large table or even a poorly indexed table that you know iwll take larger than a second to return. You should be shown the following
   
 Msg 8649, Level 17, State 1, Line 1
@@ -67,19 +69,21 @@ So you&#8217;ve successfully kept your database server from having the life suck
 
 Run this now while you still have the configuration at 1
 
-<pre>While 1=1
+sql
+While 1=1
  Begin
   Select 'Oh boy...'
- End</pre>
-
+ End
+```
 Alright, this was a given what was going to happen. It&#8217;s an infinite loop so it&#8217;s going to run forever. Given a really bad loop you will proceed down the path of sucking the same life out of the server the earlier query may have. This is a misconception of the query governor though. The reason for that is of course the execution plan. If you throw the select on the large table in there, then the governor will pick it up due to the execution plan determining the internal select.
 
 Now configure the governor back to 0 (default and means forever). What you can do now is try it in your session with the SET. 
 
-<pre>SET QUERY_GOVERNOR_COST_LIMIT 1
+sql
+SET QUERY_GOVERNOR_COST_LIMIT 1
 SELECT * FROM BIGARCETABLE
-SET QUERY_GOVERNOR_COST_LIMIT 0</pre>
-
+SET QUERY_GOVERNOR_COST_LIMIT 0
+```
 Makes you feel dirty even thinking you would want to do that doesn&#8217;t it. It is a good warning though if you are possibly missing a DBA position in the company or are running time statistics on how long a query is averaging over time based on performance deterioration from transactions going on in the background. Fragmentation levels can quickly cause a query to go from milliseconds to seconds and that can cause a severe problem with some business tasks. Saying that I do want to say I&#8217;ve only used this option in those few situations. Setting this server wide is tricky and if you do attempt to make sure you are maintaining your objects very well before you do.
 
 Don&#8217;t get this confused with the enterprise feature in SQL Server 2008 called the resource governor either. The resource governor can stop/limit long running queries and limit resources allocated to them along with several other configurations and monitoring features. It is completely different to the query governor though and much more of a feature than a configuration.

@@ -3,6 +3,7 @@ title: How to name groups of tiles in Windows 8
 author: SQLDenis
 type: post
 date: 2012-08-17T23:59:00+00:00
+ID: 1697
 excerpt: |
   Take a look at my Windows 8 start screen
   

@@ -3,6 +3,7 @@ title: 'SQL Rap: I am the DBCC, yeah u know me'
 author: SQLDenis
 type: post
 date: 2009-05-01T13:44:01+00:00
+ID: 405
 url: /index.php/datamgmt/datadesign/sql-rap-i-am-the-dbcc-yeah-u-know-me/
 views:
   - 16736

@@ -3,6 +3,7 @@ title: Mirroring SQL Server 2005 to SQL Server 2008 (Part 1)
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-01-11T12:51:05+00:00
+ID: 668
 url: /index.php/datamgmt/datadesign/mirroring-sql-server-2005-to-sql-server-2008/
 views:
   - 28160
@@ -35,19 +36,25 @@ SQL Server 2005 SP3 Enterprise had no problem mirroring to SQL Server 2008 Enter
   * You are restricted on the mirror for snapshots. Snapshots are a good way to take advantage of a mirror for read-only abilities. Since the restore of the 2005 database will need to stay in recovering, the database version is set to 611. SQL Server 2008 is version 655 and thus will not allow you to create snapshots on the database until it is upgraded to 655.
   * This is of course a one way mirroring path. Given the known fact you cannot restore a SQL Server 2008 database to SQL Server 2005, there is no method of going back.
   * Next problem is, if you bring the database on the 2008 side out of recovering for any reason, it will be upgraded to version 655 without the ability to stop the upgrade. Meaning if you do, 
-    <pre>restore database junk with recovery</pre>
-    
+    sql
+restore database junk with recovery
+```
+
     your database will output the following
     
-    <pre>Converting database 'JUNK' from version 611 to the current version 655.
-Database 'JUNK' running the upgrade step from version 611 to version 621.
-Database 'JUNK' running the upgrade step from version 621 to version 622.
-Database 'JUNK' running the upgrade step from version 622 to version 625.
-………
-Database 'JUNK' running the upgrade step from version 652 to version 653.
-Database 'JUNK' running the upgrade step from version 653 to version 654.
-Database 'JUNK' running the upgrade step from version 654 to version 655.
-RESTORE DATABASE successfully processed 0 pages in 1.825 seconds (0.000 MB/sec).</pre>
+    
+```
+
+Converting database 'JUNK' from version 611 to the current version 655.
+    Database 'JUNK' running the upgrade step from version 611 to version 621.
+    Database 'JUNK' running the upgrade step from version 621 to version 622.
+    Database 'JUNK' running the upgrade step from version 622 to version 625.
+    ………
+    Database 'JUNK' running the upgrade step from version 652 to version 653.
+    Database 'JUNK' running the upgrade step from version 653 to version 654.
+    Database 'JUNK' running the upgrade step from version 654 to version 655.
+    RESTORE DATABASE successfully processed 0 pages in 1.825 seconds (0.000 MB/sec).
+```
 
   * Once you failover to the new mirror, there is no mirroring back to 2008. This means your failover is final. The only way to get back is to set mirroring back up from 2005 to 2008.
 

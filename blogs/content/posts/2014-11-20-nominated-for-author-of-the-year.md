@@ -3,6 +3,7 @@ title: Nominated for Author of the Year
 author: Koen Verbeeck
 type: post
 date: 2014-11-20T13:45:40+00:00
+ID: 3067
 url: /index.php/webdev/business-intelligence/nominated-for-author-of-the-year/
 views:
   - 3032

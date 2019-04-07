@@ -3,6 +3,7 @@ title: July 2013 PASSMN Meeting
 author: Paul Timmerman
 type: post
 date: 2013-07-17T20:15:00+00:00
+ID: 2136
 excerpt: |
   One of the many things that I enjoy about serving as Chapter Leader for PASSMN is the opportunity to bring in a nationally recognized speaker for one of our monthly meetings.
   

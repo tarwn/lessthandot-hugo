@@ -3,6 +3,7 @@ title: When do statistics update?
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-28T14:17:00+00:00
+ID: 1941
 excerpt: |
   The question is often asked: when will SQL Server statistics update if auto update stats is enabled?
   The short answer: When auto update stats is enabled in a database, statistics will update when 20% + 500 rows have changed in the table.  This change c&hellip;
@@ -51,20 +52,23 @@ Let’s run an example to see if the 20% + 500 really is accurate.  To monitor 
 
 Setup XEvent “auto_stats”
 
-<pre>CREATE EVENT SESSION [AutoStats_Monitor] ON SERVER 
+sql
+CREATE EVENT SESSION [AutoStats_Monitor] ON SERVER 
 ADD EVENT sqlserver.auto_stats(
     ACTION(package0.collect_cpu_cycle_time,package0.collect_current_thread_id,package0.collect_system_time,sqlos.cpu_id,sqlserver.client_hostname,sqlserver.client_pid,sqlserver.database_id,sqlserver.database_name,sqlserver.nt_username,sqlserver.plan_handle,sqlserver.request_id,sqlserver.sql_text,sqlserver.username)) 
 ADD TARGET package0.ring_buffer
 WITH (MAX_DISPATCH_LATENCY = 1 SECONDS)
 GO
 ALTER EVENT SESSION [AutoStats_Monitor] ON SERVER STATE = START 
-GO</pre>
+GO
+```
 
  
 
 To query the events captured, use the following query
 
-<pre>DECLARE @xeventdata XML
+sql
+DECLARE @xeventdata XML
 SELECT @xeventdata = CAST(target_data AS XML)
 FROM sys.dm_xe_sessions AS s 
 JOIN sys.dm_xe_session_targets AS t 
@@ -75,7 +79,8 @@ WHERE s.name = 'AutoStats_Monitor'
 SELECT 
     @xeventdata.value('(RingBufferTarget/@processingTime)[1]', 'int') AS [Process time],
     @xeventdata.value('(RingBufferTarget/@eventCount)[1]', 'int') AS [Events captured],
-    @xeventdata.value('(RingBufferTarget/@memoryUsed)[1]', 'int') AS [Memory used]</pre>
+    @xeventdata.value('(RingBufferTarget/@memoryUsed)[1]', 'int') AS [Memory used]
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/autostat_1.gif?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/autostat_1.gif?mtime=1359303289" width="477" height="87" /></a>
@@ -87,7 +92,8 @@ To read more about extended Events, look to [Jonathan Kehayias’s series on SQL
 
 Set up a test table named statsupdate.
 
-<pre>IF EXISTS(SELECT 1 FROM sys.objects WHERE Name = 'statsupdate')
+sql
+IF EXISTS(SELECT 1 FROM sys.objects WHERE Name = 'statsupdate')
  BEGIN
 	DROP TABLE statsupdate
  END
@@ -96,14 +102,18 @@ CREATE TABLE statsupdate (ID INT IDENTITY(1,1), Col1 VARCHAR(10))
 GO
 INSERT INTO statsupdate
 SELECT REPLICATE('x',10)
-GO 11000</pre>
+GO 11000
+```
 
  
 
 The test table now has 11,000 rows in it.  We should be able to determine how many rows would need to change before statistics would automatically update by running the following statement.
 
 > Note: when the 20% + 500 row change count is reached, the statistics are flagged to be updated.  The actual updating event will occur at the next time a query is issued and the statistics are needed.  This is a key piece of information when data is updated often but seldom read</p>
-<pre>SELECT COUNT(*) *.20 + 500 [When will they update?] FROM statsupdate</pre>
+sql
+SELECT COUNT(*) *.20 + 500 [When will they update?] FROM statsupdate
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-196.png?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-196.png?mtime=1359303289" width="295" height="92" /></a>
@@ -113,9 +123,12 @@ The test table now has 11,000 rows in it.  We should be able to determine how m
 
 This means that 2,700 rows would need to change before statistics will update.  Of course, we do not have any statistics on the table at this point due to there not being a clustered index, nonclustered index or querying the table.  To create some statistics to monitor, create the following nonclustered index.
 
-<pre>CREATE INDEX IDX_Col1 ON statsupdate (Col1)
+sql
+CREATE INDEX IDX_Col1 ON statsupdate (Col1)
 INCLUDE (ID)
-GO</pre>
+GO
+```
+
 
  
 
@@ -127,7 +140,10 @@ Viewing the statistics area in Object Explorer in SSMS, we can see the statistic
 
 We can also see this by querying the [sys.stats][3] catalog view.
 
-<pre>SELECT * FROM sys.stats WHERE name = 'IDX_Col1'</pre>
+sql
+SELECT * FROM sys.stats WHERE name = 'IDX_Col1'
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-198.png?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-198.png?mtime=1359303289" width="624" height="52" /></a>
@@ -137,8 +153,11 @@ We can also see this by querying the [sys.stats][3] catalog view.
 
 Given the following query, the statistics and index IDX_Col1 will be utilized.
 
-<pre>SELECT id FROM statsupdate WHERE Col1 = REPLICATE('x',10)
-GO</pre>
+sql
+SELECT id FROM statsupdate WHERE Col1 = REPLICATE('x',10)
+GO
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-199.png?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-199.png?mtime=1359303289" width="389" height="135" /></a>
@@ -154,16 +173,20 @@ Reviewing the Top Operations in Plan Explorer, we can see that the estimation wa
 
 Next, execute an update to alter 2699 rows in the statsupdate table (1 row under the 2700 count or 20% + 500 to update statistics)
 
-<pre>UPDATE statsupdate 
+sql
+UPDATE statsupdate 
 	SET col1 = REPLICATE('a',10)
-WHERE id <= 2699</pre>
+WHERE id <= 2699
+```
 
  
 
 As stated earlier, we truly do not know if the statistics were flagged for auto updating until we try to use them.  To ensure this happens, run the same query from earlier
 
-<pre>SELECT id FROM statsupdate WHERE Col1 = REPLICATE('x',10) 
-GO</pre>
+sql
+SELECT id FROM statsupdate WHERE Col1 = REPLICATE('x',10) 
+GO
+```
 
 After executing the update, check to see if we captured an auto_stats event
 
@@ -181,16 +204,21 @@ At this time we are at a 20% + 499 row changes to the data in the statsupdate ta
 
 Execute the following to update one more row.
 
-<pre>UPDATE statsupdate 
+sql
+UPDATE statsupdate 
 	SET col1 = REPLICATE('a',10)
-WHERE id &gt; 2699 AND id <= 2700</pre>
+WHERE id > 2699 AND id <= 2700
+```
 
  
 
 Query the table to ensure, if flagged, the statistics will update.
 
-<pre>SELECT id FROM statsupdate WHERE Col1 = REPLICATE('x',10)
-GO</pre>
+sql
+SELECT id FROM statsupdate WHERE Col1 = REPLICATE('x',10)
+GO
+```
+
 
  
 

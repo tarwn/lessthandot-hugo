@@ -3,6 +3,7 @@ title: 'Friday SQL Nugget #1'
 author: Jes Borland
 type: post
 date: 2012-01-13T17:34:00+00:00
+ID: 1491
 excerpt: |
   It's time for SQL Nuggets! This week's nugget is "Deciding I need to delete it all and start over again".
 url: /index.php/datamgmt/datadesign/friday-sql-nugget-2/

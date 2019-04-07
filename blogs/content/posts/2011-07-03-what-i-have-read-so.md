@@ -3,6 +3,7 @@ title: What I have read so far this year
 author: SQLDenis
 type: post
 date: 2011-07-03T12:08:00+00:00
+ID: 1240
 excerpt: |
   My goal for this year is to read 50 books. At this point I have read 27 books.
   

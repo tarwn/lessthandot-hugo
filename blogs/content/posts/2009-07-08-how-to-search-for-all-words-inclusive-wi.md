@@ -3,6 +3,7 @@ title: How to search for all words inclusive without using Full Text search
 author: Naomi Nosonovsky
 type: post
 date: 2009-07-09T00:19:54+00:00
+ID: 499
 url: /index.php/datamgmt/datadesign/how-to-search-for-all-words-inclusive-wi/
 views:
   - 32494
@@ -19,7 +20,8 @@ I want to also note, that we can pass the list of keywords as a delimited list a
 
 The code bellow illustrates the problem and the solution I found.
 
-<pre>DECLARE @MyTable TABLE (Id int identity(1,1), Searched varchar(200))
+sql
+DECLARE @MyTable TABLE (Id int identity(1,1), Searched varchar(200))
 DECLARE @Keys    TABLE (Word varchar(200), WordId int identity(1,1))
 
 INSERT INTO @MyTable VALUES ('Mother Father Daughter Son')
@@ -53,7 +55,8 @@ INNER JOIN (SELECT MyTable.Id
                    FROM @MyTable MyTable
             INNER JOIN @Keys KeyWords ON ' ' + MyTable.Searched + ' ' LIKE '% ' + KeyWords.Word  + ' %'
             GROUP BY MyTable.Id
-            HAVING COUNT(Distinct(KeyWords.Word)) = @nAllWords) Tbl1 ON MyTable.Id = Tbl1.Id</pre>
+            HAVING COUNT(Distinct(KeyWords.Word)) = @nAllWords) Tbl1 ON MyTable.Id = Tbl1.Id
+```
 
 The above is the original test case and the solution we implemented with Borislav.
 
@@ -61,7 +64,8 @@ Based on Nikola&#8217;s comments I re-worked the test case. The last suggestion 
 
 See also this blog [ALL, ANY and SOME: The Three Stooges][2] 
 
-<pre>USE [AllTests]
+sql
+USE [AllTests]
 GO
 
 /****** Object:  Table [dbo].[RealTest]    Script Date: 08/19/2009 19:39:24 ******/
@@ -215,8 +219,8 @@ and 1 = ALL ( SELECT Case When ' ' + m.Searched + ' ' like '% ' + k.Word + ' %' 
 PRINT 'Optimized Nikola''s  solution #2 ' +  CAST(@@ROWCOUNT AS VARCHAR(10))        
 
     
-SET STATISTICS TIME OFF</pre>
-
+SET STATISTICS TIME OFF
+```
 with the result on my PC
   
 <code class="codespan">SQL Server Execution Times:</p>
@@ -238,5 +242,5 @@ Optimized Nikola's  solution #2 79992</p>
 
  [1]: http://www.sommarskog.se/arrays-in-sql.html
  [2]: http://bradsruminations.blogspot.com/2009/08/all-any-and-some-three-stooges.html
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

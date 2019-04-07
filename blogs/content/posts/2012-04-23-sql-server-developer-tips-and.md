@@ -3,6 +3,7 @@ title: SQL Server Developer Tips and Tricks
 author: David Forck (thirster42)
 type: post
 date: 2012-04-23T12:25:00+00:00
+ID: 1601
 excerpt: |
   This blog is to share and highlight some of the tips and tricks that I’ve learned while using SQL Server the last few years.  Some of these are code oriented, database design,  or performance oriented, while others focus on personal development. 
   
@@ -31,7 +32,8 @@ A bonus (or down side) is that SQL Server automatically wraps each column with b
 
 Sometimes you need to write a very long query that follows a certain pattern. One pattern could be an update statement comparing one table to another, and updating the destination table if there are any changes. The query could look something like this:
 
-<pre>update dbo.DestinationTable
+sql
+update dbo.DestinationTable
 set
 	Column1 = s.Column1,
 	Column2 = s.Column2,
@@ -47,16 +49,17 @@ from dbo.DestinationTable d
 	inner join dbo.SourceTable s
 		on d.ID=s.ID	
 where
-	isnull(d.Column1,'null') <&gt; isnull(s.Column1,'null')	or
-	isnull(d.Column2,'null') <&gt; isnull(s.Column2,'null')	or
-	isnull(d.Column3,'null') <&gt; isnull(s.Column3,'null')	or
-	isnull(d.Column4,'null') <&gt; isnull(s.Column4,'null')	or
-	isnull(d.Column5,'null') <&gt; isnull(s.Column5,'null')	or
-	isnull(d.Column6,'null') <&gt; isnull(s.Column6,'null')	or
-	isnull(d.Column7,'null') <&gt; isnull(s.Column7,'null')	or
-	isnull(d.Column8,'null') <&gt; isnull(s.Column8,'null')	or
-	isnull(d.Column9,'null') <&gt; isnull(s.Column9,'null')	or
-	isnull(d.Column10,'null') <&gt; isnull(s.Column10,'null')</pre>
+	isnull(d.Column1,'null') <> isnull(s.Column1,'null')	or
+	isnull(d.Column2,'null') <> isnull(s.Column2,'null')	or
+	isnull(d.Column3,'null') <> isnull(s.Column3,'null')	or
+	isnull(d.Column4,'null') <> isnull(s.Column4,'null')	or
+	isnull(d.Column5,'null') <> isnull(s.Column5,'null')	or
+	isnull(d.Column6,'null') <> isnull(s.Column6,'null')	or
+	isnull(d.Column7,'null') <> isnull(s.Column7,'null')	or
+	isnull(d.Column8,'null') <> isnull(s.Column8,'null')	or
+	isnull(d.Column9,'null') <> isnull(s.Column9,'null')	or
+	isnull(d.Column10,'null') <> isnull(s.Column10,'null')
+```
 
 Building an update statement like this can get pretty tiring, especially if you’ve got several that you need to write. A way to speed up this process is by copying the list of columns (which can be gotten using the steps outlined in “You don’t have to type out the columns”) into a premade spreadsheet that looks like this:
 

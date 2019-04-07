@@ -3,6 +3,7 @@ title: SQL Saturday in Chicago – Schedule is up!
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-02-11T23:51:46+00:00
+ID: 700
 url: /index.php/datamgmt/datadesign/sql-saturday-in-chicago-schedule-is-up/
 views:
   - 5466

@@ -3,6 +3,7 @@ title: Differences between Oracle and SQL Server when working with NULL and blan
 author: SQLDenis
 type: post
 date: 2013-01-06T09:45:00+00:00
+ID: 1899
 excerpt: |
   If you ever have to start working with Oracle you have to keep in mind that NULLs and blank values don't work exactly the same as in SQL Server. Let's take a look at some examples
   
@@ -30,21 +31,25 @@ If you ever have to start working with Oracle you have to keep in mind that NULL
 
 Create this table and insert some rows
 
-<pre>create table TestNull(Col2 varchar(100));
+```plsql
+create table TestNull(Col2 varchar(100));
 insert into TestNull values(NULL);
 insert into TestNull values('Bla');
 insert into TestNull values('');
-insert into TestNull values(' ');</pre>
+insert into TestNull values(' ');
+```
 
 As you can see we inserted four rows, one row is null, one row is blank, one row has a space and one row has Bla.
 
 Now let&#8217;s run the following query
 
-<pre>SELECT Col2,
+```plsql
+SELECT Col2,
   NVL(Col2,'EmptyOrNull') a,
   COALESCE(Col2,'EmptyOrNull') b,
   ascii(col2) c
-FROM TestNull;</pre>
+FROM TestNull;
+```
 
 Here are the results in a html table
 
@@ -147,11 +152,15 @@ See what happened, Oracle changed the blanks to NULLs.
 
 We can easily test this theory, let&#8217;s create a table with a column that has a not null constraint
 
-<pre>create table TestNull2(Col2 varchar(100) not null);</pre>
+```plsql
+create table TestNull2(Col2 varchar(100) not null);
+```
 
 Now of course if you try to insert a NULL it will blow up
 
-<pre>insert into TestNull2 values(NULL);</pre>
+```plsql
+insert into TestNull2 values(NULL);
+```
 
 Here is the error
   
@@ -161,11 +170,15 @@ _SQL Error: ORA-01400: cannot insert NULL into (&#8220;SYSTEM&#8221;.&#8221;TEST
 
 Inserting Bla works without a problem
 
-<pre>insert into TestNull2 values('Bla');</pre>
+```plsql
+insert into TestNull2 values('Bla');
+```
 
 What about a blank, what will happen now?
 
-<pre>insert into TestNull2 values('');</pre>
+```plsql
+insert into TestNull2 values('');
+```
 
 _SQL Error: ORA-01400: cannot insert NULL into (&#8220;SYSTEM&#8221;.&#8221;TESTNULL2&#8243;.&#8221;COL2&#8243;)
   
@@ -175,7 +188,9 @@ As you can see the blank gets converted to a NULL and you get the same error. Th
 
 Will a space succeed?
 
-<pre>insert into TestNull2 values(' ');</pre>
+```plsql
+insert into TestNull2 values(' ');
+```
 
 A space is no problem.
 
@@ -185,11 +200,15 @@ Just be aware that coalesce won&#8217;t work the same either. Oracle doesn&#8217
 
 Run the following two statements
 
-<pre>select nvl('','No') as a
-from dual;</pre>
+```plsql
+select nvl('','No') as a
+from dual;
+```
 
-<pre>select coalesce('','No') as a
-from dual;</pre>
+```plsql
+select coalesce('','No') as a
+from dual;
+```
 
 In both cases you are getting No back from the function, as you can see a blank is treated as null.
 

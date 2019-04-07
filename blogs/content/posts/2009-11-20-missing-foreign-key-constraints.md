@@ -3,6 +3,7 @@ title: Missing foreign key constraints
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-20T11:32:30+00:00
+ID: 639
 excerpt: 'References are at the heart of a database.  It is possible to create a beautiful database with perfectly working front end code that always, 100% of the time, does the right thing with your data.  But, writing code is hard.  Very hard!  Your data is oft&hellip;'
 url: /index.php/datamgmt/datadesign/missing-foreign-key-constraints/
 views:
@@ -19,7 +20,8 @@ The code below will check for columns that have ID in the name of the column whe
 
 **How to detect this problem:**
 
-<pre>SELECT  C.TABLE_SCHEMA,C.TABLE_NAME,C.COLUMN_NAME
+sql
+SELECT  C.TABLE_SCHEMA,C.TABLE_NAME,C.COLUMN_NAME
 FROM    INFORMATION_SCHEMA.COLUMNS C          
         INNER Join INFORMATION_SCHEMA.TABLES T            
           ON C.TABLE_NAME = T.TABLE_NAME    
@@ -31,8 +33,8 @@ FROM    INFORMATION_SCHEMA.COLUMNS C
           And U.TABLE_SCHEMA = C.TABLE_SCHEMA
 WHERE   U.COLUMN_NAME IS Null          
         And C.COLUMN_NAME Like '%id'
-ORDER BY C.TABLE_SCHEMA, C.TABLE_NAME, C.COLUMN_NAME</pre>
-
+ORDER BY C.TABLE_SCHEMA, C.TABLE_NAME, C.COLUMN_NAME
+```
 **How to correct it:** Correcting this problem seems simple at first. Just declare your foreign keys, right? Well, it&#8217;s not so simple. You see, there could be code running that deletes all the necessary data from the related tables. If you have code that deletes data in related tables in the wrong order, you will get referential constraint errors. Similar problems can occur with updates and inserts. The order in which you do things is important when you have referential constraints.
 
 **Level of severity:** High

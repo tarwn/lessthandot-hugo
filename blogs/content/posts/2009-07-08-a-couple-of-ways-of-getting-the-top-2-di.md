@@ -3,6 +3,7 @@ title: A couple of ways of getting the top 2 distinct values from a set in SQL S
 author: SQLDenis
 type: post
 date: 2009-07-08T17:14:10+00:00
+ID: 498
 url: /index.php/datamgmt/datadesign/a-couple-of-ways-of-getting-the-top-2-di/
 views:
   - 16302
@@ -42,7 +43,8 @@ You want to get the 2 highest amounts in that table the values 100 and 99, how w
   
 Let&#8217;s take a look at some posibillities, first create this table and populate it with data
 
-<pre>create table TestTies (id int identity,SomeValue tinyint)
+sql
+create table TestTies (id int identity,SomeValue tinyint)
 
 insert TestTies values(100)
 insert TestTies values(100)
@@ -52,13 +54,16 @@ insert TestTies values(99)
 
 insert TestTies values(95)
 insert TestTies values(95)
-insert TestTies values(90)</pre>
+insert TestTies values(90)
+```
 
 Top 2 obviously will not work
 
-<pre>select top 2 id, SomeValue
+sql
+select top 2 id, SomeValue
 from TestTies
-order by SomeValue desc</pre>
+order by SomeValue desc
+```
 
 <pre>output
 -----------------
@@ -68,9 +73,11 @@ id	SomeValue
 
 You also cannot use WITH TIES because that just brings the value 100
 
-<pre>select top 2  WITH TIES id, SomeValue
+sql
+select top 2  WITH TIES id, SomeValue
 from TestTies
-order by SomeValue desc</pre>
+order by SomeValue desc
+```
 
 <pre>Output
 -----------------
@@ -94,43 +101,52 @@ id	SomeValue
 
 The first one is by using the DENSE_RANK() function. The queries below are functionally identical, one is using a Common Table Expression while the other one is using a subquery
 
-<pre>--query 1
+sql
+--query 1
 with rankings as (
 select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank 
 from TestTies)
 
 select id, SomeValue from rankings
-where Rank <=2</pre>
+where Rank <=2
+```
 
-<pre>--query 2
+sql
+--query 2
 select id, SomeValue from   (
 select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank 
 from TestTies) x
-where Rank <=2</pre>
+where Rank <=2
+```
 
 We can also use the MAX function twice like in the query below
 
-<pre>--query 3
+sql
+--query 3
 select *
 from TestTies
 where SomeValue >= (select max(SomeValue) 
 			from TestTies
 			where SomeValue < (select max(SomeValue) 
-			from TestTies))</pre>
+			from TestTies))
+```
 
 Another option is to use distinct top 2 in a sub query
 
-<pre>--query 4
+sql
+--query 4
 select *
 from TestTies
 where SomeValue in(
 select distinct top 2  SomeValue
 from TestTies
-order by SomeValue desc)</pre>
+order by SomeValue desc)
+```
 
 Finally in query 5 we do a running count, as you can see that looks complicated
 
-<pre>--query 5
+sql
+--query 5
 select l.id, l.SomeValue
 from(select v.SomeValue, v.id,
 	Ranking =       (select count(distinct SomeValue) 
@@ -138,13 +154,15 @@ from(select v.SomeValue, v.id,
 			where v.SomeValue <= a.SomeValue)
 	from TestTies v) l
 where l.Ranking <=2
-order by l.Ranking </pre>
+order by l.Ranking 
+```
 
 So how do these queries perform in regards to each other?
 
 Hit CTRL + K, select all the code in the code block below and hit F5/execute
 
-<pre>--query 1
+sql
+--query 1
 with rankings as (
 select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank 
 from TestTies)
@@ -187,7 +205,8 @@ from(select v.SomeValue, v.id,
 			where v.SomeValue <= a.SomeValue)
 	from TestTies v) l
 where l.Ranking <=2
-order by l.Ranking </pre>
+order by l.Ranking 
+```
 
 Here is the result
 
@@ -205,7 +224,9 @@ Wow, query 5 running count is slower than the other 4 combined, this was expecte
   
 Let&#8217;s do some more testing, we will create a non clustered index on the SomeValue column
 
-<pre>create index ix_SomeValue on TestTies(SomeValue desc)</pre>
+sql
+create index ix_SomeValue on TestTies(SomeValue desc)
+```
 
 Run the 5 queries again
 
@@ -221,9 +242,11 @@ query 5 34.32% (running count)
 
 As you can see now dense_rank is fastest. Let&#8217;s make that non clustered index a clustered index and look at the plans again.
 
-<pre>drop index  TestTies.ix_SomeValue
+sql
+drop index  TestTies.ix_SomeValue
 
-create clustered index ix_SomeValue on TestTies(SomeValue desc)</pre>
+create clustered index ix_SomeValue on TestTies(SomeValue desc)
+```
 
 Below are the results of running those queries again
 
@@ -243,5 +266,5 @@ As you can see when we have an index on the column then dense_rank is the fastes
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: The Manga Guide to Databases
 author: SQLDenis
 type: post
 date: 2008-10-08T21:25:53+00:00
+ID: 170
 url: /index.php/datamgmt/datadesign/the-manga-guide-to-databases/
 views:
   - 6933

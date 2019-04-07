@@ -3,6 +3,7 @@ title: SQL Saturday in Madison – The First
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-04-26T18:58:00+00:00
+ID: 1607
 excerpt: 'When last weekend rolled around and the first SQL Saturday in Madison was finally ready to open the doors, I sat back for a minute and watched as attendees arrived and registration flowed.  While taking that moment, something came to my mind.  The best&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-in-madison-the/
 views:

@@ -3,6 +3,7 @@ title: SQL Server Distance Calculation Option 3 – Using the CLR
 author: Alex Ullrich
 type: post
 date: 2009-02-18T00:42:00+00:00
+ID: 328
 url: /index.php/datamgmt/dbprogramming/sql-server-distance-calculation-option-3/
 views:
   - 14453
@@ -22,7 +23,8 @@ In [2005- Version][1] and [2008 Version][2] George and Denis have already shown 
 
 So, lets get down to business. First thing to do is create a class library to hold your functions. You can do this in C# or VB.net, I won&#8217;t judge. But I will use C#.
 
-<pre>using System;
+```csharp
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
@@ -51,34 +53,42 @@ public partial class UserDefinedFunctions
 
         return Math.Sqrt(Math.Pow(DeltaXMeters, 2) + Math.Pow(DeltaYMeters, 2))/1609.344;
     }
-}</pre>
+}
+```
 
 I&#8217;ve never tried to optimize this (it is pretty fast as is), but I am sure it is easily doable. The important thing to notice here is the additional namespace directives (past System). These allow you to use SQL Server types, Identify your function as a SQL Server function, and loads of other fun stuff. I don&#8217;t actually use any of the SQL types in this function, but they do work well in most cases. Its&#8217; easy to see the SqlFunction attribute applied to the method.
 
 Once this is done, compile that sucker! The trickiest part here is really deploying it to your server, but even that is simple, just a lot of steps. First, you&#8217;ll need to put the file in a location where the server can see it. On the server would be a nice easy place. Now we need to create an assembly in SQL Server for it. This is simple too:
 
-<pre>CREATE ASSEMBLY DistanceCalculations FROM 'C:DistanceCalculationLibrary.dll'</pre>
+sql
+CREATE ASSEMBLY DistanceCalculations FROM 'C:DistanceCalculationLibrary.dll'
+```
 
 Ok, we&#8217;re getting close. Once this assembly is created, you need to enable the CLR (it is disabled by default).
 
-<pre>exec sp_configure 'clr enabled',1
-reconfigure</pre>
+sql
+exec sp_configure 'clr enabled',1
+reconfigure
+```
 
 And finally, create our SQL Server udf referencing the assembly. 
 
-<pre>CREATE FUNCTION [dbo].[clrDistCalc](@long1 [float], @lat1 [float], @long2 [float], @lat2 [float])
+sql
+CREATE FUNCTION [dbo].[clrDistCalc](@long1 [float], @lat1 [float], @long2 [float], @lat2 [float])
 RETURNS [float] WITH EXECUTE AS CALLER
 AS 
-EXTERNAL NAME [DistanceCalculations].[UserDefinedFunctions].[clrDistCalc]</pre>
-
+EXTERNAL NAME [DistanceCalculations].[UserDefinedFunctions].[clrDistCalc]
+```
 You can test it by writing some queries against the same table used for Denis&#8217; example (or George&#8217;s). Here&#8217;s an example using Denis&#8217; data:
 
-<pre>SELECT h.*
+sql
+SELECT h.*
    FROM zipcodes g
    INNER JOIN zipcodes h ON g.zipcode <> h.zipcode
    AND g.zipcode = '10028'
    AND h.zipcode <> '10028'
-   WHERE dbo.clrDistCalc(g.Longitude, g.Latitude, h.Longitude, h.Latitude) <= (20 * 1609.344)</pre>
+   WHERE dbo.clrDistCalc(g.Longitude, g.Latitude, h.Longitude, h.Latitude) <= (20 * 1609.344)
+```
 
 If I know those guys like I think I do, the indexes and everything will be sufficient! 
 
@@ -90,5 +100,5 @@ In the future we&#8217;ll put all three to the test, and do a fourth post detail
 
  [1]: /index.php/DataMgmt/DataDesign/sql-server-zipcode-latitude-longitude-pr
  [2]: /index.php/DataMgmt/DataDesign/sql-server-2008-proximity-search-with-th
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: Screenshots of the new look and feel of BIDS in Denali
 author: SQLDenis
 type: post
 date: 2010-11-09T16:21:47+00:00
+ID: 939
 url: /index.php/datamgmt/dbprogramming/screenshots-of-the-new-look-and-feel-of/
 views:
   - 10778

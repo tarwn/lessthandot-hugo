@@ -3,6 +3,7 @@ title: SQL Saturday Iowa another success!
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-10-06T12:03:00+00:00
+ID: 1338
 excerpt: 'The annual SQL Saturday in Iowa has always been one of my favorite SQL Saturdays. This year it was a little later in the year which made it even better for me. See, in Wisconsin, bow hunting has opened the same weekend that Iowa’s SQL Saturday fell on.&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-saturday-iowa-another-success/
 views:

@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 7 – Server Security and grouping – Schema Control
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-04T10:24:00+00:00
+ID: 1134
 excerpt: 'It was a dark and stormy night.  Database User Fred had an idea to venture into tables he wasn’t supposed to be in…OK, really that was for my buddy Noel McKinney (Twitter | Blog).  At some point when you are writing, the single largest barrier is the fi&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-schema/
 views:
@@ -23,20 +24,26 @@ Prior to SQL Server 2005, Schemas were not much more than a form of a database u
 
 Create a basic Schema by using the CREATE SCHEMA statement.
 
-<pre>CREATE SCHEMA FinanceTables
-GO</pre>
+sql
+CREATE SCHEMA FinanceTables
+GO
+```
 
 The FinanceTables Schema will contain all tables that are related to financials for the database ERP.  The database instance has a user login Fred and this login is mapped to a database user in the database ERP.  To restrict Fred to the FinanceTables, the ALTER AUTHORIZATION statement is used.  Once Fred is authorized to alter the schema FinanceTables, Fred can create tables.
 
-<pre>ALTER AUTHORIZATION ON SCHEMA::FinanceTables TO Fred
+sql
+ALTER AUTHORIZATION ON SCHEMA::FinanceTables TO Fred
 GO
 GRANT CREATE TABLE to Fred
-GO</pre>
+GO
+```
 
 Fred is now allowed to create tables in the schema FinanceTables but not allowed to create tables in any other schemas.  To test this, run the following statement to create a table in the schema dbo.
 
-<pre>CREATE TABLE dbo.Sales (MyMula Money)
-GO</pre>
+sql
+CREATE TABLE dbo.Sales (MyMula Money)
+GO
+```
 
 Resulting error message:
 
@@ -44,8 +51,10 @@ Resulting error message:
 
 schema to FinanceTables and attempt to run the statement again.
 
-<pre>CREATE TABLE FinanceTables.Sales (MyMula Money)
-GO</pre>
+sql
+CREATE TABLE FinanceTables.Sales (MyMula Money)
+GO
+```
 
 The Sales table is created successfully under the schema FinanceTables, and Fred is in control of it.  The value in this is containing the tables Fred creates and accesses to the entity FinanceTables as well as preventing Fred from creating tables in any other schemas in the database. 
 
@@ -53,8 +62,10 @@ The Sales table is created successfully under the schema FinanceTables, and Fred
 
 DBAs can benefit from schemas by having the ability to quickly move from one schema to another schema.  This is accomplished by using the ALTER SCHEMA statement.
 
-<pre>ALTER SCHEMA IndexMaint TRANSFER dba.indexlog;
-GO</pre>
+sql
+ALTER SCHEMA IndexMaint TRANSFER dba.indexlog;
+GO
+```
 
 This change does not truly move the table but redefines the schema that owns it.  This method can be used to change security on a wide range of objects quickly.  Moving the entire contents can be performed as shown in the Wiki entry, “[Move all tables from one schema to another quickly][3]”
 

@@ -3,6 +3,7 @@ title: Direction of Intelligent Computing
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-03-08T00:00:00+00:00
+ID: 2025
 excerpt: 'Over the last few months, something has been sticking me in the left side of my brain as it pertains to computing and the overall feel to where we are in computing.  This came about in some great conversations during the recent MVP Summit and sparked th&hellip;'
 url: /index.php/itprofessionals/ethicsit/direction-of-intelligent-computing/
 views:

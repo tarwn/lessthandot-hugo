@@ -3,6 +3,7 @@ title: The Many Functions of WebMatrix
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-06-23T11:42:00+00:00
+ID: 1226
 excerpt: "Several weeks ago I started digging into WebMatrix. Over the course of a weekend I was able to put together a quick, functioning website, pick up some basics of working with WebMatrix and the deployment tool, and play with a few other technologies as well. Then I stepped back and realized I was only using a percentage of it's capabilities."
 url: /index.php/webdev/serverprogramming/the-many-functions-of-webmatrix/
 views:
@@ -40,13 +41,13 @@ And an IIS express manager, database configurator, generator of CMS-driven sites
 WebMatrix works around the concept of a Site. A site can start as an entry in the gallery of pre-built packages or as a template and/or blank code files. 
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/WebGallery.png" alt="Web Gallery" style="padding-bottom: 5px;" /><br /> Web Gallery in Web Matrix
+  <img src="http://tiernok.com/LTDBlog/webmatrix/WebGallery.png" alt="Web Gallery" style="padding-bottom: 5px;" /><br /> Web Gallery in Web Matrix
 </div>
 
 The Gallery option presents a list of 52 CMS, blogging, eCommerce, (the list goes on) packages that can be installed simply by selectig them. If I select the WordPress option, WebMatrix detects that I don&#8217;t have MyQSL installed and asks if I want to install it or have access to a remote installation. Other gallery options offer similar interactions for their own requirements, with the goal being a completely running system in only a few clicks. In the case of WordPress it will also detect whether you have PHP installed (more on that later) and install that as well.
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/Installing.png" alt="WordPress Install" style="padding-bottom: 5px;" /><br /> Installing WordPress
+  <img src="http://tiernok.com/LTDBlog/webmatrix/Installing.png" alt="WordPress Install" style="padding-bottom: 5px;" /><br /> Installing WordPress
 </div>
 
 With a download, a few button clicks, administrative permissions, and entry of some basic settings, I just installed a fully customizeable version of WordPress. Which is really cool, but also kind of scary if you think about how little technical knowledge I really needed and that there are dozens of other packages available.
@@ -60,7 +61,7 @@ _Note: it was at this point I noticed my MySQL installation was annoyed and not 
 Ok, so what if we want to build our own site?
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/SiteFromTemplate.png" alt="Creating Site From Template" style="padding-bottom: 5px;" /><br /> Creating Site from Template
+  <img src="http://tiernok.com/LTDBlog/webmatrix/SiteFromTemplate.png" alt="Creating Site From Template" style="padding-bottom: 5px;" /><br /> Creating Site from Template
 </div>
 
 The other side of the Site creation process is the option to create one from a template. This offers five options ranging from &#8220;Empty Site&#8221; to &#8220;Start Site and even &#8220;Bakery&#8221;. If you start with one of the non-Empty sites you will be given all the files and folders for a fully functioning site. These sites are based on the new WebPages framework and written in the C#-style razor syntax. The WebPages framework was released in conjunction with WebMatrix and joins Web Forms and MVC as an available ASP.Net framework.
@@ -94,7 +95,7 @@ Not so much.
 WebMatrix uses IIS Express internally and offers a simple interface to hook into just a few settings that will cover most of our needs. Press the &#8220;Run&#8221; button and we&#8217;re greeted with the current page run in whatever our default browser is. 
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/Toolbar.png" alt="WebMatrix Files Toolbar" style="padding-bottom: 5px; max-width: 750px;" /><br /> WebMatrix Files Toolbar
+  <img src="http://tiernok.com/LTDBlog/webmatrix/Toolbar.png" alt="WebMatrix Files Toolbar" style="padding-bottom: 5px; max-width: 750px;" /><br /> WebMatrix Files Toolbar
 </div>
 
 PHP? CSHTML? Text file? Doesn&#8217;t matter. Because IIS Express is running in the background, all WebMatrix has to do is fire a URL at a browser and we&#8217;re there. 
@@ -102,7 +103,7 @@ PHP? CSHTML? Text file? Doesn&#8217;t matter. Because IIS Express is running in 
 Another advantage to this setup is that we don&#8217;t have to dig through yet another revision of the IIS management interface. Which is great for me, as I have been downgraded to just a programmer for the last few years and left most of my IIS management experience rusting away on the older IIS 6/5/4-style interface.
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/requests.png" alt="WebMatrix Requests Page" style="padding-bottom: 5px;" /><br /> IIS Requests Page
+  <img src="http://tiernok.com/LTDBlog/webmatrix/requests.png" alt="WebMatrix Requests Page" style="padding-bottom: 5px;" /><br /> IIS Requests Page
 </div>
 
 Basic settings are available to manage our default site pages, enable PHP, change the .Net framework version, enable SSL, and so on. A page is also available to view the HTTP requests that are being made to the IIS instance, letting us see the lonely calls for a favicon go forever unanswered or the execution time for each individual HTTP request.
@@ -114,7 +115,7 @@ So we have web pages and a way to host them, what about managing the database be
 The Databases tab will show you any connections we have configured for the site, as well as any SQL Compact databases (SDF files) available to the site. In our WordPress example this means we have a configured connection to a MySQL (5?) database. For my first sample site I have a SQL Compact database with the ability to manage the tables from inside Web Matrix. I haven&#8217;t connected to SQL Server from inside yet, so I can&#8217;t say whether it offers just a view of the connection, like MySQL, or more extensive management of the tables and queries like SQL Compact or an MDF in Visual Studio.
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/database.png" alt="SQL Compact View" style="padding-bottom: 5px;" /><br /> SQL Compact DB
+  <img src="http://tiernok.com/LTDBlog/webmatrix/database.png" alt="SQL Compact View" style="padding-bottom: 5px;" /><br /> SQL Compact DB
 </div>
 
 Later on when we deploy we get an interesting option for SDF files. They are treated separately from the main files and are not automatically selected as part of the sync (limiting the chances of a low-coffee-foot-shooting incident).
@@ -132,13 +133,13 @@ To be honest I haven&#8217;t spent more than about 15 minutes in the site report
 I had difficulty creating reports for some sites because it seemed like the report engine would immediately run out and start trying to index the internet. Once I got that under control I was able to run a report of my site and get back some meaningful (and some not) information.
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/reports.png" alt="Reports" style="padding-bottom: 5px;" /><br /> WebMatrix Reports
+  <img src="http://tiernok.com/LTDBlog/webmatrix/reports.png" alt="Reports" style="padding-bottom: 5px;" /><br /> WebMatrix Reports
 </div>
 
 Basically the reporting mechanism attempts to walk through the entire site, gathering statistics on the amount of time each page took to run as well as SEO warnings and errors on each page. The output of the the SEO and Performance data comes with a slider that lets you dynamically filter the output from all information to just the most important subset.
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/slider.png" alt="Silder" style="padding-bottom: 5px;" /><br /> Report Slider
+  <img src="http://tiernok.com/LTDBlog/webmatrix/slider.png" alt="Silder" style="padding-bottom: 5px;" /><br /> Report Slider
 </div>
 
 For the SEO errors, selecting an individual error displays more information about the error. Probably the most consistent warning I received was leaving the the meta description tag off every page I had written (guilty as charged). Examples of other errors included broken hyperlinks, mixed canonical formats, and just plain bad URLs. 
@@ -152,7 +153,7 @@ For the SEO errors, selecting an individual error displays more information abou
 Web Matrix uses [WebDeploy][11], doing away with all the manual file dragging or xcopying. On the initial deployment we are asked to enter settings in for our host or, if we don&#8217;t have a host, the tool points us to a [host shopping page][12] to help us find one. Once we have a host, we return to the typical WebMatrix approach of only needing a few settings (instead of a reference manual the size of my car).
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/publish1.png" alt="Publishing" style="padding-bottom: 5px;" /><br /> WebMatrix Publishing
+  <img src="http://tiernok.com/LTDBlog/webmatrix/publish1.png" alt="Publishing" style="padding-bottom: 5px;" /><br /> WebMatrix Publishing
 </div>
 
 The initial deployment only takes a few settings or, if you are like me and have a host that supports it, the download of a settings file. The only major hiccup I ran into was that at one point I had a SQL Compact database open in Visual Studio (or maybe just locked, not sure) and this caused all kinds of deployment problems. I have since decided that closing visual studio while deploying seems to be the safe, pain-free route.
@@ -160,7 +161,7 @@ The initial deployment only takes a few settings or, if you are like me and have
 Deployments after the initial one are not full site deployments. The tool will scan for changes that haven&#8217;t been deployed yet and provide us with the option of selecting which changes we would like to deploy. It automatically selects all file changes, but leaves SQL Compact files unchecked. 
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://www.tiernok.com/LTDBlog/webmatrix/publish2.png" alt="Publishing" style="padding-bottom: 5px;" /><br /> WebMatrix Publishing
+  <img src="http://tiernok.com/LTDBlog/webmatrix/publish2.png" alt="Publishing" style="padding-bottom: 5px;" /><br /> WebMatrix Publishing
 </div>
 
 One problem I have run into, coming from a larger scale database background, was that sometimes I would forget to download a fresh copy of the database before making schema changes (so I then had to download the database, make the changes again, then deploy it back to the live site).

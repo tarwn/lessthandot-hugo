@@ -3,6 +3,7 @@ title: Enabling ReadyBoost In Vista
 author: SQLDenis
 type: post
 date: 2009-06-07T16:47:18+00:00
+ID: 459
 url: /index.php/sysadmins/os/enabling-readyboost-in-vista/
 views:
   - 4055

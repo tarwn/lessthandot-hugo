@@ -3,6 +3,7 @@ title: An Oracle NULL/Blank gotcha when coming from SQL Server
 author: SQLDenis
 type: post
 date: 2013-02-10T19:43:00+00:00
+ID: 1986
 excerpt: |
   In my Differences between Oracle and SQL Server when working with NULL and blank values  post I already showed you how blanks and NULLS are handled differently between Oracle and SQL Server. Today I found another interesting tidbit.
   
@@ -27,19 +28,23 @@ In my [Differences between Oracle and SQL Server when working with NULL and blan
 
 I you have a varchar or char datatype in SQL Server and you store a blank, you get back a blank or padded spaces.
 
-<pre>DECLARE @Test1 varchar(10) = ''
+sql
+DECLARE @Test1 varchar(10) = ''
 DECLARE @Test2 char(10) = ''
 
-SELECT @Test1,@Test2</pre>
+SELECT @Test1,@Test2
+```
 
 The output is one blank and ten spaces. 
 
 You can verify this by using the `DATALENGTH` function .
 
-<pre>DECLARE @Test1 varchar(10) = ''
+sql
+DECLARE @Test1 varchar(10) = ''
 DECLARE @Test2 char(10) = ''
 
-SELECT datalength(@Test1),datalength(@Test2)</pre>
+SELECT datalength(@Test1),datalength(@Test2)
+```
 
 Ouput
 
@@ -49,7 +54,8 @@ In Oracle&#8230;not the same
 
 If you run this
 
-<pre>SET SERVEROUTPUT ON
+```plsql
+SET SERVEROUTPUT ON
  DECLARE 
     Test1 varchar(10):='';
     Test2 char(10):='';
@@ -66,7 +72,8 @@ BEGIN
   ELSE
   DBMS_OUTPUT.PUT_LINE('Test2 is NOT null');
   END IF;
-END;</pre>
+END;
+```
 
 Output
 
@@ -80,11 +87,13 @@ However when inserting into a table this becomes a little bit different with Ora
 
 Running this in SQL Server
 
-<pre>CREATE TABLE TestNull(Col1 CHAR(10),Col2 VARCHAR(10));
+sql
+CREATE TABLE TestNull(Col1 CHAR(10),Col2 VARCHAR(10));
 INSERT INTO TestNull VALUES(NULL,NULL);
 INSERT INTO TestNull VALUES('','');
 
-SELECT * FROM TestNull;</pre>
+SELECT * FROM TestNull;
+```
 
 Output
 
@@ -96,11 +105,13 @@ You get a row with NULLS and a row with blanks, same as with the variables
 
 Running that in Oracle
 
-<pre>CREATE TABLE TestNull(Col1 CHAR(10),Col2 VARCHAR(10));
+```plsql
+CREATE TABLE TestNull(Col1 CHAR(10),Col2 VARCHAR(10));
 INSERT INTO TestNull VALUES(NULL,NULL);
 INSERT INTO TestNull VALUES('','');
 
-SELECT * FROM TestNull;</pre>
+SELECT * FROM TestNull;
+```
 
 Here is what you get
 

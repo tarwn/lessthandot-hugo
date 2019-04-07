@@ -3,6 +3,7 @@ title: Master Data Services stops working after an upgrade
 author: Koen Verbeeck
 type: post
 date: 2013-11-27T11:57:00+00:00
+ID: 2200
 excerpt: 'Recently some SQL Server instances at a client were upgraded to the latest cumulative update of SQL Server 2012 service pack 1. The reason for this update was the added functionality to create Power View reports on top of Analysis Services Multidimensio&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/master-data-services-stops-working/
 views:

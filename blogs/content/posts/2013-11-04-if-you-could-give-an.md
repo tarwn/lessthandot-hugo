@@ -3,6 +3,7 @@ title: If you could give an aspiring DBA just one piece of advice what would it 
 author: Ted Krueger (onpnt)
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 2191
 excerpt: 'Wow, let’s think about this question.  I mean, really think about it.  In a career that some could consider kind of successful, I’m looking back and thinking, “What could be the best piece of advice I could possibly give that would make or break an aspi&hellip;'
 draft: true
 url: /?p=2191

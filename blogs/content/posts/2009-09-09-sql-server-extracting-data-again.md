@@ -3,6 +3,7 @@ title: SQL Server Extracting Data (again)
 author: George Mastros (gmmastros)
 type: post
 date: 2009-09-09T13:06:00+00:00
+ID: 554
 excerpt: 'In a recent article, I explained how to extract numbers from a string.  This blog post is slightly different.  In the previous article, I show how to extract single numeric values (consecutive numbers).  In this article, I will show how to extract all v&hellip;'
 url: /index.php/datamgmt/datadesign/sql-server-extracting-data-again/
 views:
@@ -27,45 +28,48 @@ Please note that I am NOT claiming that this code is the fastest, or the most ef
 
 The following code will remove non-alpha characters.
 
-<pre>CREATE Function [dbo].[RemoveNonAlphaCharacters](@Temp VarChar(1000))
+sql
+CREATE Function [dbo].[RemoveNonAlphaCharacters](@Temp VarChar(1000))
 Returns VarChar(1000)
 AS
 Begin
 
-	While PatIndex('%[^a-z]%', @Temp) &gt; 0
+	While PatIndex('%[^a-z]%', @Temp) > 0
 		Set @Temp = Stuff(@Temp, PatIndex('%[^a-z]%', @Temp), 1, '')
 
 	Return @TEmp
-End</pre>
-
+End
+```
 The following code will remove non-alpha numeric characters.
   
 <span class="MT_red"><strong>** Note:</strong></span> The floowing code has changed recently based on a comment from one of the readers Andrei. Originally I had a search pattern of <span class="MT_red">[^a-z^0-9]</span>, which was incorrect. This search pattern incorrectly allowed the ^ to stay in the data when it should have been removed. The correct search pattern should be: <span class="MT_red">[^a-z0-9]</span>
 
-<pre>CREATE Function [dbo].[RemoveNonAlphaNumericCharacters](@Temp VarChar(1000))
+sql
+CREATE Function [dbo].[RemoveNonAlphaNumericCharacters](@Temp VarChar(1000))
 Returns VarChar(1000)
 AS
 Begin
 
-	While PatIndex('%[^a-z0-9]%', @Temp) &gt; 0
+	While PatIndex('%[^a-z0-9]%', @Temp) > 0
 		Set @Temp = Stuff(@Temp, PatIndex('%[^a-z0-9]%', @Temp), 1, '')
 
 	Return @Temp
-End</pre>
-
+End
+```
 The following code will remove non-numeric characters.
 
-<pre>CREATE Function [dbo].[RemoveNonNumericCharacters](@Temp VarChar(1000))
+sql
+CREATE Function [dbo].[RemoveNonNumericCharacters](@Temp VarChar(1000))
 Returns VarChar(1000)
 AS
 Begin
 
-	While PatIndex('%[^0-9]%', @Temp) &gt; 0
+	While PatIndex('%[^0-9]%', @Temp) > 0
 		Set @Temp = Stuff(@Temp, PatIndex('%[^0-9]%', @Temp), 1, '')
 
 	Return @TEmp
-End</pre>
-
+End
+```
 As you can see, the real work is done by using the like comparison functionality of the PatIndex function.
 
 &#8216;%[^a-z]%&#8217;
@@ -80,7 +84,8 @@ For example, if you wanted to remove certain punctuation characters, but leave e
 
 You can use the following code to test this functionality. It creates a table variable with some sample data. The query at the end returns the original data, and another column showing the output from the three functions presented here.
 
-<pre>Declare @Test Table(Data VarChar(100))
+sql
+Declare @Test Table(Data VarChar(100))
 
 Insert Into @Test Values('(111) 222-3333')
 Insert Into @Test Values('111-222-3333')
@@ -93,8 +98,8 @@ Select	Data,
 		dbo.RemoveNonAlphaCharacters(Data) As AlphaOnly,
 		dbo.RemoveNonAlphaNumericCharacters(Data) As AlphaNumericOnly,
 		dbo.RemoveNonNumericCharacters(Data) As NumericOnly
-From	@Test</pre>
-
+From	@Test
+```
 <pre>Data           AlphaOnly   AlphaNumericOnly NumericOnly
 ---------      ----------- ---------------- -----------
 (111) 222-3333             1112223333       1112223333
@@ -102,6 +107,7 @@ From	@Test</pre>
 111.222.3333               1112223333       1112223333
 (800) XXX-3333 XXX         800XXX3333       8003333
 
-NULL           NULL        NULL             NULL</pre>
+NULL           NULL        NULL             NULL
+</pre>
 
  [1]: /index.php/DataMgmt/DataDesign/extracting-numbers-with-sql-server

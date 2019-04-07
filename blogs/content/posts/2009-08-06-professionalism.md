@@ -3,6 +3,7 @@ title: Professionalism
 author: chopstik
 type: post
 date: 2009-08-06T22:33:38+00:00
+ID: 532
 url: /index.php/itprofessionals/ethicsit/professionalism/
 views:
   - 5460

@@ -3,6 +3,7 @@ title: Internet Facing Reporting Services Instance
 author: David Forck (thirster42)
 type: post
 date: 2010-03-31T16:58:51+00:00
+ID: 747
 url: /index.php/datamgmt/datadesign/internet-facing-reporting-services-insta/
 views:
   - 10260

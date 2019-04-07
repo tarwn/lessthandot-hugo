@@ -3,6 +3,7 @@ title: 'Review of MCTS Self-Paced Training Kit (Exam 70-502): Microsoft .NET Fra
 author: SQLDenis
 type: post
 date: 2008-09-30T15:18:41+00:00
+ID: 156
 url: /index.php/desktopdev/mstech/review-of-mcts-self-paced-training-kit-e/
 views:
   - 4492

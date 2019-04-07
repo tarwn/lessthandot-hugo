@@ -3,6 +3,7 @@ title: 'Python 3.5+: Unicode output for Windows Console'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-11-20T16:10:02+00:00
+ID: 4812
 url: /index.php/desktopdev/python-3-6-unicode-output-for-windows-console/
 views:
   - 2204

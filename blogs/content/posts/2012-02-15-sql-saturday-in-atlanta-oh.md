@@ -3,6 +3,7 @@ title: SQL Saturday in Atlanta – Oh my, the pre-cons
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-02-15T11:21:00+00:00
+ID: 1534
 excerpt: 'I saw a tweet tonight from Julie Smith (Twitter | Blog) about SQL Saturday #111 Atlanta.  The tweet was referring to the pre-conference sessions that this event is supporting the day before the event, April Friday 13th, 2012.  OK, all fun aside about th&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-in-atlanta-oh/
 views:

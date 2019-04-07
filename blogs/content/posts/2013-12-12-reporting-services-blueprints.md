@@ -3,6 +3,7 @@ title: SQL Server 2012 Reporting Services Blueprints – Review
 author: Koen Verbeeck
 type: post
 date: 2013-12-12T12:24:00+00:00
+ID: 2207
 excerpt: |
    
   

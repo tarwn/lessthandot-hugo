@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #008: Gettin’ Schooled “Pushing others into learning a
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-07-13T13:06:41+00:00
+ID: 844
 excerpt: "Everyone in a professional career that involves the constant evolution of computing will be successful while retaining the daily mindset that we always keep learning.  This learning process does isn't limited to what we already know or what we've done.  What we know and have done is the foundation of where we can lift ourselves further by learning more in-depth on our knowledge and gain new knowledge of what we may have not found ourselves needing day-today yet.  This assists us to better ourselves and improve upon our skills.  Our learning foundation is only as good as the manner in which we look upon our accomplishments with great humility.  Doing so allows us to look into our skills and learn to better them while gaining the new skills that we can continue to grow on."
 url: /index.php/itprofessionals/ethicsit/teach-to-learn-tsql-tuesday/
 views:

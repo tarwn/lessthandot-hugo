@@ -3,6 +3,7 @@ title: Grouping and merging data with CROSS APPLY
 author: Axel Achten (axel8s)
 type: post
 date: 2012-03-12T12:14:00+00:00
+ID: 1555
 excerpt: 'The first four letters in database administrator spell data so for some reason people see you as somebody who can do magic with all kinds of data. One of the requests I got was to start from an export of course data and to group the courses and merge th&hellip;'
 url: /index.php/datamgmt/dbprogramming/grouping-and-merging-data-with/
 views:
@@ -23,16 +24,18 @@ The first four letters in database administrator spell data so for some reason p
   
 First things first, let&#8217;s create a table to hold the data:
 
-<pre>CREATE TABLE CourseData (
+sql
+CREATE TABLE CourseData (
 	CourseCode varchar (10),
 	CourseName varchar (100),
 	CourseStartDate date
 	)
-GO</pre>
-
+GO
+```
 Now let&#8217;s insert some data. Note that there are several courses with the different start dates. This was how the excel was given to me.
 
-<pre>DECLARE @i int = 1
+sql
+DECLARE @i int = 1
 WHILE @i < 4
 BEGIN
 INSERT INTO CourseData
@@ -43,8 +46,8 @@ INSERT INTO CourseData
 			('10778A','Implementing Data Models and Reports with Microsoft SQL Server 2012',DATEADD(m,@i,getdate()))
 SET @i = @i + 1
 END
-GO</pre>
-
+GO
+```
 The result looks like this:
 
 <div class="image_block">
@@ -53,15 +56,16 @@ The result looks like this:
 
 Now if you look at the data you&#8217;ll see we have 3 lines per course each with a different date. The request was to have 1 line per course with all the dates in one field. To do this I&#8217;m &#8220;joining&#8221; the table to itself by using it as a normal table once and as XML the second time. Using the DISTINCT clause on the left side filters out the duplicate records. The FOR XML on the right side is used to make a dummy list of the dates the courses start. With the CROSS APPLY operator I&#8217;m joining the two results in a result set like requested by the customer:
 
-<pre>SELECT DISTINCT CourseCode, CourseName, Datelist 
+sql
+SELECT DISTINCT CourseCode, CourseName, Datelist 
 	FROM CourseData AS o
 CROSS APPLY
 (SELECT CONVERT(varchar(10),CourseStartDate,103) + ' '
 	FROM CourseData AS x
 	WHERE o.CourseCode = x.CourseCode
 	FOR XML path('')) AS dummy(datelist)
-GO</pre>
-
+GO
+```
 With the desired result:
 
 <div class="image_block">

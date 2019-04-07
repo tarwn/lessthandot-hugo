@@ -3,6 +3,7 @@ title: Improved TeamCity .Net Build Warnings
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-06-01T21:17:18+00:00
+ID: 4494
 url: /index.php/enterprisedev/application-lifecycle-management/improved-teamcity-net-build-warnings/
 views:
   - 6431
@@ -95,12 +96,14 @@ Download the powershell script here: [BuildWarningReportGenerator.ps1 Gist][2]
 2. Add a a parameter for the Build Log name that we&#8217;ll generate from MSBuild: 
 
 <pre>Name: BuildLogFile
-   Value: BuildLog.Log</pre>
+   Value: BuildLog.Log
+</pre>
 
 3. Add command line argument we need to pass to MSBuild to do so: 
 
 <pre>Name: MSBuildLogClause
-   Value: /l:FileLogger,Microsoft.Build.Engine;logfile=%BuildLogFile%;Append</pre>
+   Value: /l:FileLogger,Microsoft.Build.Engine;logfile=%BuildLogFile%;Append
+</pre>
 
 [<img src="/wp-content/uploads/2016/05/TeamCityWarnings_Template_1-1024x306.png" alt="Add Parameters" width="800" class="aligncenter size-large wp-image-4501" srcset="/wp-content/uploads/2016/05/TeamCityWarnings_Template_1-1024x306.png 1024w, /wp-content/uploads/2016/05/TeamCityWarnings_Template_1-300x89.png 300w, /wp-content/uploads/2016/05/TeamCityWarnings_Template_1.png 1043w" sizes="(max-width: 1024px) 100vw, 1024px" />][3]
 
@@ -113,7 +116,8 @@ Next we&#8217;ll want to add build steps to purge any prior versions of the file
 <pre>Type: Command Line
 Name: Purge BuildLogFile
 Run:  Custom Script
-Script: if exist %BuildLogFile% del %BuildLogFile%</pre>
+Script: if exist %BuildLogFile% del %BuildLogFile%
+</pre>
 
 **2. Existing MSBuild Task**
   
@@ -123,18 +127,14 @@ Append to the CommandLine Input: %MSBuildLogClause%
 
 <pre>Type: Powershell
 Name: Generate Build Warnings Report
-Working Dir: <working dir the powershell script is in&gt;
+Working Dir: <working dir the powershell script is in>
 Script: Source code
-Source:</pre>
-
-<pre>if(test-path .\BuildWarningReportGenerator.ps1){
-   .\BuildWarningReportGenerator.ps1 -BuildLogPath "<path to your MS Build working dir&gt;\%BuildLogFile%" -BuildCheckoutDirectoryPath "<path from script directory to build checkout directory&gt;\" -BuildArtifactRepositoryUrl "%teamcity.serverUrl%/repository/download/%system.teamcity.buildType.id%/"
-}
-
-# ** Requires two trailing lines to work correctly</pre>
+Source:
+</pre><pre lang=text> if(test-path .\BuildWarningReportGenerator.ps1){ .\BuildWarningReportGenerator.ps1 -BuildLogPath "<path to your MS Build working dir>\%BuildLogFile%" -BuildCheckoutDirectoryPath "<path from script directory to build checkout directory>\" -BuildArtifactRepositoryUrl "%teamcity.serverUrl%/repository/download/%system.teamcity.buildType.id%/" } # ** Requires two trailing lines to work correctly </pre> 
 
 <pre>Mode: Put Script into PowerShell stdin with "-Command =" argument
-Advanced Settings: <input type="checkbox" checked&gt; Add -NoProfile argument</pre>
+Advanced Settings: <input type="checkbox" checked /> Add -NoProfile argument
+</pre>
 
 
 
@@ -151,7 +151,8 @@ To add a report tab with the warning information in TeamCity:
 3. Enter settings and press Save
 
 <pre>Tab title: Build Warnings
-Start page: .teamcity/BuildWarningReport.zip!BuildWarningReport.html</pre>
+Start page: .teamcity/BuildWarningReport.zip!BuildWarningReport.html
+</pre>
 
 
 
@@ -161,14 +162,15 @@ You can add a chart to an individual build configuration via the UI, but you hav
 
 Edit config/projects/[your project folder]/pluginData/plugin-settings.xml, and merge in these settings:
 
-<pre><settings&gt;
-	<buildtype-graphs&gt;
-		<graph title="Build Warnings" defaultFilters="" hideFilters="" id="customGraph1" seriesTitle="Serie"&gt;
-			<valueType key="buildWarnings" title="buildWarnings" color="#ffcc00" /&gt;
-		</graph&gt;
-	</buildtype-graphs&gt;
-</settings&gt;</pre>
-
+```xml
+<settings>
+	<buildtype-graphs>
+		<graph title="Build Warnings" defaultFilters="" hideFilters="" id="customGraph1" seriesTitle="Serie">
+			<valueType key="buildWarnings" title="buildWarnings" color="#ffcc00" />
+		</graph>
+	</buildtype-graphs>
+</settings>
+```
 
 
 ### Custom Metric
@@ -177,12 +179,13 @@ Recording the warning count in a custom metric will enable you to create a custo
 
 Edit config/main-config.xml, and merge in these settings
 
-<pre><server&gt;
-	<build-metrics&gt;
-		<statisticValue key="buildWarnings" description="number of build warnings"/&gt;
-	</build-metrics&gt;
-</server&gt;</pre>
-
+```xml
+<server>
+	<build-metrics>
+		<statisticValue key="buildWarnings" description="number of build warnings"/>
+	</build-metrics>
+</server>
+```
 
 
 ## Closing

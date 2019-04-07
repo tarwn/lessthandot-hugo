@@ -3,6 +3,7 @@ title: Suppress string or binary data would be truncated messages with the ANSI 
 author: SQLDenis
 type: post
 date: 2009-02-09T15:13:45+00:00
+ID: 321
 url: /index.php/datamgmt/dbprogramming/mssqlserver/surpress-string-or-binary-data-would-be/
 views:
   - 81525
@@ -24,10 +25,12 @@ This is a frequent enough question on various forums, I answered this one also t
 
 Run this code
 
-<pre>create table bla(id varchar(2))
+sql
+create table bla(id varchar(2))
 go
 
-insert bla values ('123')</pre>
+insert bla values ('123')
+```
 
 You will get the following message:
   
@@ -39,17 +42,21 @@ The statement has been terminated.
 
 But what if you don&#8217;t care about if data is truncated, what if you want to store only what fits? You could do something like this
 
-<pre>insert bla values (left('123',2))</pre>
+sql
+insert bla values (left('123',2))
+```
 
 But since most programmers are lazy they prefer not to change code (and introduce bugs)
 
 Here is one way to do it without changing code but by setting ANSI Warnings to off
 
-<pre>SET ANSI_WARNINGS  OFF
+sql
+SET ANSI_WARNINGS  OFF
 
 insert bla values ('123')
 
-SET ANSI_WARNINGS  ON --set it back on so code following this won't be messed up</pre>
+SET ANSI_WARNINGS  ON --set it back on so code following this won't be messed up
+```
 
 Now I am not saying that you should do this because setting ANSI warning off also does this: When ON, divide-by-zero and arithmetic overflow errors cause the statement to be rolled back and an error message is generated. When OFF, divide-by-zero and arithmetic overflow errors cause null values to be returned
 

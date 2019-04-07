@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #84: Growing New Speakers – Dealing with Failure'
 author: Jes Borland
 type: post
 date: 2016-11-08T13:00:33+00:00
+ID: 4799
 url: /index.php/uncategorized/t-sql-tuesday-84-growing-new-speakers-dealing-with-failure/
 views:
   - 3208

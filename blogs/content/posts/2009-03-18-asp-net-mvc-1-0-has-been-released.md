@@ -3,6 +3,7 @@ title: ASP.NET MVC 1.0 Has Been Released
 author: SQLDenis
 type: post
 date: 2009-03-18T13:14:47+00:00
+ID: 350
 url: /index.php/webdev/webdesigngraphicsstyling/asp-net-mvc-1-0-has-been-released/
 views:
   - 3653

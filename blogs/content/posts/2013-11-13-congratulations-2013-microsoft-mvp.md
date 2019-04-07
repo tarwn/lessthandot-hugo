@@ -3,6 +3,7 @@ title: Congratulations 2013 Microsoft MVP!
 author: Paul Timmerman
 type: post
 date: 2013-11-13T20:31:00+00:00
+ID: 2195
 excerpt: 'First of all, let me assure you that I did not fall prey to some sort of SPAM.  I know as I write this that we are approaching mid-November, not a time when Microsoft awards/renews MVPs.  October 1st however was a different story.  As a whole, October w&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/congratulations-2013-microsoft-mvp/
 views:

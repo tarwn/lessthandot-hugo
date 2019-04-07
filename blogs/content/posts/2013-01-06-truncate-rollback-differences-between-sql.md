@@ -3,6 +3,7 @@ title: Truncate rollback differences between SQL Server and Oracle
 author: SQLDenis
 type: post
 date: 2013-01-06T22:27:00+00:00
+ID: 1902
 excerpt: |
   I wrote a blogpost about the fact that there is a common myth that you can't rollback a truncate statement in SQL this post was written on June 13, 2007 and it showed you that you could rollback a truncate. Here is some code that shows that.
   
@@ -30,25 +31,31 @@ I wrote a blogpost about the fact that there is a common myth that you can&#8217
 
 First create this very simple table
 
-<pre>CREATE TABLE dbo.TruncateTest (ID int IDENTITY PRIMARY KEY, 
+sql
+CREATE TABLE dbo.TruncateTest (ID int IDENTITY PRIMARY KEY, 
 				SomeOtherCol varchar(49))
-GO</pre>
+GO
+```
 
 Add the following two rows
 
-<pre>INSERT dbo.TruncateTest VALUES(1)
-INSERT dbo.TruncateTest VALUES(1)</pre>
+sql
+INSERT dbo.TruncateTest VALUES(1)
+INSERT dbo.TruncateTest VALUES(1)
+```
 
 Now execute this whole block in one shot, you will see three resultsets, two of them will have two rows and one resultset will be empty
 
-<pre>SELECT * FROM dbo.TruncateTest -- 2 rows
+sql
+SELECT * FROM dbo.TruncateTest -- 2 rows
  
 BEGIN TRAN
     TRUNCATE TABLE dbo.TruncateTest
     SELECT * FROM dbo.TruncateTest -- 0 rows
 ROLLBACK TRAN
  
-SELECT * FROM dbo.TruncateTest  -- 2 rows again after rollback</pre>
+SELECT * FROM dbo.TruncateTest  -- 2 rows again after rollback
+```
 
 Here is the output
 
@@ -69,11 +76,14 @@ ID          SomeOtherCol
 1           1
 2           1
 
-(2 row(s) affected)</pre>
+(2 row(s) affected)
+</pre>
 
 As you can see the table was empty at one point, however the table has the same two rows again, if you execute this query, you will see those two row again
 
-<pre>SELECT * FROM dbo.TruncateTest</pre>
+sql
+SELECT * FROM dbo.TruncateTest
+```
 
 ## What about Oracle, can you rollback a truncate statement?
 

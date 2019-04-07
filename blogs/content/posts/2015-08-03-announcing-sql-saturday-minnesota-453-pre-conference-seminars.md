@@ -3,6 +3,7 @@ title: 'Announcing SQL Saturday Minnesota #453 Pre-Conference Seminars!'
 author: Paul Timmerman
 type: post
 date: 2015-08-03T13:00:12+00:00
+ID: 3517
 url: /index.php/datamgmt/dbprogramming/mssqlserver/announcing-sql-saturday-minnesota-453-pre-conference-seminars/
 views:
   - 3092

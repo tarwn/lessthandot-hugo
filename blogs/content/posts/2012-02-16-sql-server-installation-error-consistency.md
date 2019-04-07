@@ -3,6 +3,7 @@ title: SQL Server Installation Error – Consistency validation for SQL Server R
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-02-16T11:39:00+00:00
+ID: 1530
 excerpt: |
   I was installing an instance of SQL Server on a VM this afternoon and ran into the following error
   Rule “Consistency validation for SQL Server registry keys” failed.

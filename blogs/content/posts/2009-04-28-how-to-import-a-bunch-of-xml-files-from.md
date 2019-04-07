@@ -3,6 +3,7 @@ title: How to import a bunch of XML files from a directory in T-SQL
 author: SQLDenis
 type: post
 date: 2009-04-28T18:01:36+00:00
+ID: 403
 url: /index.php/datamgmt/datadesign/how-to-import-a-bunch-of-xml-files-from/
 views:
   - 14508
@@ -27,7 +28,8 @@ You will need to create a directory testxml on the c drive and put a bunch of XM
 
 file1.xml
 
-<pre><MusicCollection>
+```xml
+<MusicCollection>
  <Artist>
   <ArtistName>Pink Floyd</ArtistName>
  <Album>
@@ -65,11 +67,13 @@ file1.xml
   <YearReleased>2006</YearReleased>
   </Album>
   </Artist>
-  </MusicCollection></pre>
+  </MusicCollection>
+```
 
 file2.xml
 
-<pre><MusicCollection>
+```xml
+<MusicCollection>
  <Artist>
   <ArtistName>Pink Floyd</ArtistName>
  <Album>
@@ -96,11 +100,13 @@ file2.xml
   <YearReleased>1982</YearReleased>
   </Album>
   </Artist>
-</MusicCollection></pre>
+</MusicCollection>
+```
 
 Now that we have our files we are ready to grab all the files in the directory. We will use a plain vanilla DOS dir command for this with the B switch so that we don&#8217;t get a lot of garbage returned. Here is what this block of code looks like
 
-<pre>IF OBJECT_ID('tempdb..#tempList') IS NOT NULL
+sql
+IF OBJECT_ID('tempdb..#tempList') IS NOT NULL
 DROP TABLE #tempList
 
 CREATE TABLE #tempList ([FileName] VARCHAR(500))
@@ -118,11 +124,14 @@ DELETE #tempList WHERE [FileName] NOT LIKE '%.xml'
 
 --this will be used to loop over the table
 alter table #tempList add id int identity
-go</pre>
+go
+```
 
 Now let&#8217;s see what has actually been inserted into the table
 
-<pre>select * from #tempList</pre>
+sql
+select * from #tempList
+```
 
 Output
   
@@ -134,18 +143,21 @@ file2.xml	2</pre>
 
 The following table will be used to store the XML.
 
-<pre>CREATE TABLE [dbo].[XMLImport](
+sql
+CREATE TABLE [dbo].[XMLImport](
     [filename] [VARCHAR](500) NULL,
     [timecreated] [DATETIME] NULL,
     [xmldata] [xml] NULL
 ) ON [PRIMARY]
-GO</pre>
+GO
+```
 
 Here is where the import happens, since we have to use dynamic SQL to do the XML import it is better to use SP\_EXECUTESQL instead of EXEC since SP\_EXECUTESQL has output parameters.
   
 I have put comments in this codeblock but if you need more information how exactly this works then leave me a comment.
 
-<pre>truncate table XMLImport --in case you want to rerun just this codeblock
+sql
+truncate table XMLImport --in case you want to rerun just this codeblock
 declare @Directory varchar(50)
 select @Directory = 'c:testxml'
 
@@ -197,11 +209,14 @@ BEGIN
 	SELECT @LoopID = min(id)
 	FROM #tempList
 	where id > @LoopID
-END</pre>
+END
+```
 
 So that is all the code that you need to make this happen, let&#8217;s see what is actually inserted into the table
 
-<pre>select * from XMLImport</pre>
+sql
+select * from XMLImport
+```
 
 output
   
@@ -227,7 +242,8 @@ SQL Server blocked access to procedure &#8216;sys.xp\_cmdshell&#8217; of compone
 
 To enable xp_cmdshell execute the following code
 
-<pre>EXECUTE SP_CONFIGURE 'show advanced options', 1
+sql
+EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
  
@@ -237,7 +253,8 @@ GO
  
 EXECUTE SP_CONFIGURE 'show advanced options', 0
 RECONFIGURE WITH OVERRIDE
-GO</pre>
+GO
+```
 
 **OPENROWSET** 
   
@@ -249,7 +266,8 @@ SQL Server blocked access to STATEMENT &#8216;OpenRowset/OpenDatasource&#8217; o
 
 To enable OPENROWSET and OPENQUERY you can use the previous script but instead of &#8216;xp_cmdshell&#8217; you will use &#8216;Ad Hoc Distributed Queries&#8217;. The script to enable Ad Hoc Distributed Queries is below
 
-<pre>EXECUTE SP_CONFIGURE 'show advanced options', 1
+sql
+EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
  
@@ -259,7 +277,8 @@ GO
  
 EXECUTE SP_CONFIGURE 'show advanced options', 0
 RECONFIGURE WITH OVERRIDE
-GO</pre>
+GO
+```
 
 **xp_fileexist**
   
@@ -270,5 +289,5 @@ The stored proc xp_fileexist is undocumented so be aware that it could change wi
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DataDesign/import-directory-of-xml-files-into-sql-s-2005
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: SQL Server 2008 Developer Training Kit Available For Download
 author: SQLDenis
 type: post
 date: 2009-05-21T12:42:29+00:00
+ID: 440
 url: /index.php/datamgmt/datadesign/sql-server-2008-developer-training-kit-a/
 views:
   - 3581

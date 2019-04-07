@@ -3,6 +3,7 @@ title: Keep your DBA guard up at all times
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-09-25T14:25:32+00:00
+ID: 568
 url: /index.php/datamgmt/dbprogramming/keep-your-dba-guard-up-at-all-times/
 views:
   - 13709

@@ -3,6 +3,7 @@ title: Naked Statistics
 author: Koen Verbeeck
 type: post
 date: 2014-05-23T12:42:53+00:00
+ID: 2640
 url: /index.php/itprofessionals/book-review/naked-statistics/
 views:
   - 7393

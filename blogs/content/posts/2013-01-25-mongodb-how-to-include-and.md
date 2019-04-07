@@ -3,6 +3,7 @@ title: 'MongoDB: How to include and exclude the fields you want in results'
 author: SQLDenis
 type: post
 date: 2013-01-25T11:54:00+00:00
+ID: 1936
 excerpt: |
   In this MongoDB post we are going to look at how to return only the fields you want. We already looked at how to sort the results in the MongoDB, how to sort results but we didn't show you how to return just the fields you want.
   

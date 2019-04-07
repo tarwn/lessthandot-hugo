@@ -3,6 +3,7 @@ title: Daemon by Daniel Suarez is a book every programmer will love
 author: SQLDenis
 type: post
 date: 2010-01-06T16:23:00+00:00
+ID: 665
 excerpt: |
   I was tagged by onpnt in his Goals for 2010 post. One of my resolutions goals of this year is to read more books. Right now I am in the middle of reading Daemon by Daniel Suarez.
   

@@ -3,6 +3,7 @@ title: A quick look at Windows Phone 7 development
 author: SQLDenis
 type: post
 date: 2010-03-21T17:25:13+00:00
+ID: 732
 url: /index.php/itprofessionals/ethicsit/a-quick-look-at-windows-phone-7-developm/
 views:
   - 11380

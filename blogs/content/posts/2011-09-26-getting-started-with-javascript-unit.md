@@ -3,6 +3,7 @@ title: Getting Started with JavaScript Unit Testing
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-09-26T09:58:00+00:00
+ID: 1321
 excerpt: "Recently I decided to start doing JavaScript code katas. I've been using JavaScript for around ten years, but there there are still a lot of aspects I don't know well or that I could use more practice in. Case in point, I had never used a unit testing framework with javascript."
 url: /index.php/webdev/uidevelopment/javascript/getting-started-with-javascript-unit/
 views:
@@ -29,7 +30,7 @@ I typed &#8220;javascript unit testing&#8221; into Google and started reading.
 The jsTestDriver site includes plugins for Eclipse, Maven, and IntelliJ. I also found an article on [using it with Visual Studio][3] and it was fairly easy setting it up as a user tool in EditPlus.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://www.tiernok.com/LTDBlog/jsunittest/editplus.png" alt="Screenshot of EditPlus" /><br /> Screenshot of EditPlus Settings
+  <img src="http://tiernok.com/LTDBlog/jsunittest/editplus.png" alt="Screenshot of EditPlus" /><br /> Screenshot of EditPlus Settings
 </div>
 
 Though I&#8217;m not using the feature, jsTestDriver provides a flag to specify an output file for the results, enabling us to use it as part of a continuous build.
@@ -45,15 +46,17 @@ Setting up jsTestDriver on my system was fairly straightforward.
 
 At this point we should be able to fire up the server for the first time and verify everything is ready to go. I created a .cmd file on my system for the server so I could easily start it:
 
-<pre>"C:Program Files (x86)Javajre6binjava" -jar JsTestDriver-1.3.2.jar --port 4224 --browser "C:Documents and SettingsTarwnLocal SettingsApplication DataGoogleChromeApplicationchrome.exe"</pre>
-
+```text
+"C:Program Files (x86)Javajre6binjava" -jar JsTestDriver-1.3.2.jar --port 4224 --browser "C:Documents and SettingsTarwnLocal SettingsApplication DataGoogleChromeApplicationchrome.exe"
+```
 What this does is starts the jsTestDriver jar on port 4224 and also automatically starts up an instance of chrome that will be captured by the server to run tests. I was initially using Firefox but jsTestDriver can&#8217;t intercept the console log the way it can with Chrome, so I wasn&#8217;t getting very good output for failed or errored tests.
 
 Next I created a .cmd file to run all the tests in my folders:
 
-<pre>"C:Program Files (x86)Javajre6binjava" -jar JsTestDriver-1.3.2.jar --tests all
-pause</pre>
-
+```text
+"C:Program Files (x86)Javajre6binjava" -jar JsTestDriver-1.3.2.jar --tests all
+pause
+```
 This tells jsTestDriver to run all available tests (based on the settings in the conf) using a jsTestDriver server on port 4224. I ended up not using this cmd file very frequently, as it was much handier to be able to run them from a key command inside my editor.
 
 ### Writing Tests
@@ -64,17 +67,19 @@ In each directory (src and src-test), create a file named &#8220;mystuff.js&#822
 
 **src/mystuff.js**
 
-<pre>myAwesomeApp = {};
+```javascript
+myAwesomeApp = {};
 
 myAwesomeApp.MyAwesomeClass = function(){};
 
 myAwesomeApp.MyAwesomeClass.prototype.add = function(num0, num1){
 	return num0 + num1;
-};</pre>
-
+};
+```
 **src-test/mystuff.js**
 
-<pre>TestCase("Sample Test Case",{
+```JavaScript
+TestCase("Sample Test Case",{
 
 	"test Number plus Zero Equals Number": function(){
 		var adder = new myAwesomeApp.MyAwesomeClass();
@@ -95,28 +100,30 @@ myAwesomeApp.MyAwesomeClass.prototype.add = function(num0, num1){
 	"test Fails miserably": function(){
 		fail("miserably");
 	}
-});</pre>
-
+});
+```
 JavaScript provides a number of different methods to define objects with functions, in the source class I used the prototype method and in the tests file I used an object literal. For jsTestDriver, the important part is that the tests in the object we pass to TestCase begin with the word test, and the object literal method seemed like a friendlier layout for a test file.
 
 ### Running Tests
 
 Once we have the two files in place, start the server by issuing the following command (or creating the cmd file like me):
 
-<pre>"C:Program Files (x86)Javajre6binjava" -jar ../JsTestDriver-1.3.2.jar --port 4224 --browser "C:Documents and SettingsTarwnLocal SettingsApplication DataGoogleChromeApplicationchrome.exe"</pre>
-
+```text
+"C:Program Files (x86)Javajre6binjava" -jar ../JsTestDriver-1.3.2.jar --port 4224 --browser "C:Documents and SettingsTarwnLocal SettingsApplication DataGoogleChromeApplicationchrome.exe"
+```
 You will need to update the browser and java paths to reflect your own.
 
 Once the browser has started and it has been captured by the server for testing, it will look like this:
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://www.tiernok.com/LTDBlog/jsunittest/jsTestDriver.png" alt="Chrome captured by jsTestDriver Server" /><br /> Chrome captured by jsTestDriver Server
+  <img src="http://tiernok.com/LTDBlog/jsunittest/jsTestDriver.png" alt="Chrome captured by jsTestDriver Server" /><br /> Chrome captured by jsTestDriver Server
 </div>
 
 Now we can run our tests by issuing the following command:
 
-<pre>"C:Program Files (x86)Javajre6binjava" -jar ../JsTestDriver-1.3.2.jar --tests all</pre>
-
+```text
+"C:Program Files (x86)Javajre6binjava" -jar ../JsTestDriver-1.3.2.jar --tests all
+```
 Again, you will need to change the java path to reflect your own (or remove it if you have added it to your PATH variable).
 
 The results should look something like this:
@@ -149,25 +156,26 @@ Because Qunit will run in our browser, there are relatively few requirements and
 
 The empty file will be our test runner. Update the file to look like this:
 
-<pre><DOCTYPE html&gt;
-<html&gt;
-<head&gt;
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"&gt;</script&gt;
-	<script src="qunit.js" type="text/javascript"&gt;</script&gt;
-	<link rel="stylesheet" media="all" href="qunit.css" /&gt;
+```html
+<DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="qunit.js" type="text/javascript"></script>
+	<link rel="stylesheet" media="all" href="qunit.css" />
 
-	<script src="src/mystuff.js" type="text/javascript"&gt;</script&gt;
-	<script src="src-test/mystuff_qunit.js" type="text/javascript"&gt;</script&gt;
+	<script src="src/mystuff.js" type="text/javascript"></script>
+	<script src="src-test/mystuff_qunit.js" type="text/javascript"></script>
 
-</head&gt;
-<body&gt;
-	<h1 id="qunit-header"&gt;MyStuff</h1&gt;
-	<h2 id="qunit-banner"&gt;</h2&gt;
-	<h2 id="qunit-userAgent"&gt;</h2&gt;
-	<ol id="qunit-tests"&gt;</ol&gt;
-</body&gt;
-</html&gt;</pre>
-
+</head>
+<body>
+	<h1 id="qunit-header">MyStuff</h1>
+	<h2 id="qunit-banner"></h2>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+</body>
+</html>
+```
 As you can see, we are referencing a CDNed version of jQuery, the local qunit files we downloaded, our source file, and a test js file we haven&#8217;t created yet. The remainder of the HTML will be used by Qunit to display the results.
 
 ### Writing Tests
@@ -176,7 +184,8 @@ Writing test in Qunit is pretty straightforward. Since we already have the src/m
 
 **src-test/mystuff_qunit.js**
 
-<pre>module("Sample Test Case");
+```JavaScript
+module("Sample Test Case");
 
 test("Number plus Zero Equals Number", function(){
 	var adder = new myAwesomeApp.MyAwesomeClass();
@@ -200,8 +209,8 @@ test("Number plus Negative of Number Equals Zero", function(){
 
 test("Fails miserably", function(){
 	ok(false,"miserably");
-});</pre>
-
+});
+```
 Qunit&#8217;s _equals_ method has it&#8217;s actual and expected arguments reversed from jsTestDriver, instead expecting them in this order: _Qunit.equals(actual, expected)_. I didn&#8217;t originally notice this and had to update both the jsTestDriver test mapping script and the sample above (here and in bitbucket).
 
 ### Running Tests
@@ -209,7 +218,7 @@ Qunit&#8217;s _equals_ method has it&#8217;s actual and expected arguments rever
 Opening the testrunner html file, we should now see it display a block for each test that we have defined above.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://www.tiernok.com/LTDBlog/jsunittest/qunit.png" alt="QUnit Results" /><br /> QUnit Results
+  <img src="http://tiernok.com/LTDBlog/jsunittest/qunit.png" alt="QUnit Results" /><br /> QUnit Results
 </div>
 
 Failed tests automatically display details. Any test can be toggled open/closed by clicking it&#8217;s name, and a handy &#8220;rerun&#8221; button lets us re-run a single test.
@@ -222,7 +231,8 @@ Add this file to the top level folder:
   
 **jsTestDriverInQunit.js**
 
-<pre>/* bare minimum to run jsTestDriver tests as Qunit tests */
+```JavaScript
+/* bare minimum to run jsTestDriver tests as Qunit tests */
 function TestCase(name, tests){
         if(tests != null)
                 module(name);
@@ -239,29 +249,30 @@ function assertEquals(arg0,arg1){
 }
 function fail(msg){
         ok(false,msg);
-}</pre>
-
+}
+```
 And update the testrunner HTML file we created to look like this:
 
-<pre><DOCTYPE html&gt;
-<html&gt;
-<head&gt;
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"&gt;</script&gt;
-	<script src="qunit.js" type="text/javascript"&gt;</script&gt;
-	<script src="jsTestDriverInQunit.js" type="text/javascript"&gt;</script&gt;
-	<link rel="stylesheet" media="all" href="qunit.css" /&gt;
+```html
+<DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="qunit.js" type="text/javascript"></script>
+	<script src="jsTestDriverInQunit.js" type="text/javascript"></script>
+	<link rel="stylesheet" media="all" href="qunit.css" />
 
-	<script src="src/mystuff.js" type="text/javascript"&gt;</script&gt;
-	<script src="src-test/mystuff.js" type="text/javascript"&gt;</script&gt;
-</head&gt;
-<body&gt;
-	<h1 id="qunit-header"&gt;MyStuff</h1&gt;
-	<h2 id="qunit-banner"&gt;</h2&gt;
-	<h2 id="qunit-userAgent"&gt;</h2&gt;
-	<ol id="qunit-tests"&gt;</ol&gt;
-</body&gt;
-</html&gt;</pre>
-
+	<script src="src/mystuff.js" type="text/javascript"></script>
+	<script src="src-test/mystuff.js" type="text/javascript"></script>
+</head>
+<body>
+	<h1 id="qunit-header">MyStuff</h1>
+	<h2 id="qunit-banner"></h2>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+</body>
+</html>
+```
 And now whether we run the jsTestDriver client/server or open the Qunit file, we will be running the same exact set of tests.
 
 There is also a [project][9] that translates Qunit tests into tests that can be run with jsTestDriver.

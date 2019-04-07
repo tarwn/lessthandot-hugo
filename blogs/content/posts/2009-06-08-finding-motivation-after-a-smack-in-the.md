@@ -3,6 +3,7 @@ title: Finding motivation after a smack in the face
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-06-08T10:53:37+00:00
+ID: 461
 url: /index.php/itprofessionals/ethicsit/finding-motivation-after-a-smack-in-the/
 views:
   - 5465

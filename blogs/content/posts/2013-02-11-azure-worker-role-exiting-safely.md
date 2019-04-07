@@ -3,6 +3,7 @@ title: Azure Worker Role – Exiting Safely
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-02-11T18:59:00+00:00
+ID: 1980
 excerpt: |
   The basic Azure Worker Role consists of a run method, an endless loop, and a sleep statement. Earlier this week, Magnus Martensson walked through implementing a more sophisticated wait object than the generic Thread.Sleep call. Which reminded me of a problem inherent in the basic Microsoft template.
   
@@ -35,7 +36,8 @@ The more critical it was, the higher our chances it was in the work side of the 
 
 Here is the worker class that Visual Studio generates on when creating a new Worker Role project:
 
-<pre>public class WorkerRole : RoleEntryPoint
+```csharp
+public class WorkerRole : RoleEntryPoint
 {
 	public override void Run()
 	{
@@ -59,13 +61,14 @@ Here is the worker class that Visual Studio generates on when creating a new Wor
 
 		return base.OnStart();
 	}
-}</pre>
-
+}
+```
 Azure calls the OnStart when it starts, then calls the Run method. This sample will hard crash when Azure scales it out of existence, swaps in new instances, decides it&#8217;s Windows patch time, lets us press the Stop button, and so on. 
 
 Let&#8217;s see it in action. I&#8217;ve added a DoWork() method that sleeps for 10 seconds to simulate important work being done. I&#8217;ve also added Trace.WriteLine calls to the existing methods and to an override of the OnStop method, so we can see what&#8217;s happening.
 
-<pre>public override void Run()
+```csharp
+public override void Run()
 {
 	// This is a sample worker implementation. Replace with your logic.
 	Trace.WriteLine("BasicWorker - Entry point called", "Information");
@@ -87,20 +90,21 @@ public void DoWork()
 public override void OnStop()
 {
 	Trace.WriteLine("BasicWorker - OnStop", "Information");
-}</pre>
-
+}
+```
 If we run this in the emulator and suspend the worker role in the middle of our important work, it exits right on cue, in the middle of the work.
 
 **Diagnostic Trace Output**
 
-<pre>Information: 000.1s - BasicWorker - Entry point called
+```text
+Information: 000.1s - BasicWorker - Entry point called
 Information: 010.1s - BasicWorker - Starting some work
 Information: 020.1s - BasicWorker - Finished some work
 Information: 030.1s - BasicWorker - Starting some work
 Information: 040.1s - BasicWorker - Finished some work
 Information: 050.1s - BasicWorker - Starting some work
-Information: 056.1s - BasicWorker - OnStop</pre>
-
+Information: 056.1s - BasicWorker - OnStop
+```
 _note: I later added timestamps to the Trace output for readability_
 
 If this were a real worker role, we could have been doing just about anything in that step when it was killed. Is our system still in a good state?
@@ -113,7 +117,8 @@ _Note: Early last year (2012) this was extended to 5 minutes, though it&#8217;s 
 
 The first change we want to make is to replace the while(true) construct with a method that we can [cancel][3]. Using a [CancellationTokenSource][4], we can instead loop while that token is not cancelled.
 
-<pre>private CancellationTokenSource _cancellationTokenSource;
+```csharp
+private CancellationTokenSource _cancellationTokenSource;
 
 public override void Run()
 {
@@ -127,13 +132,14 @@ public override void Run()
 		DoWork();
 		Trace.WriteLine("SafeWorker - Finished some work", "Information");
 		token.WaitHandle.WaitOne(10000);	// sleep 10s or exit early if cancellation is signalled
-		// ...</pre>
-
+		// ...
+```
 Replacing the Thread.Sleep with a [WaitOne()][5] call will allow us to reduce the time to cancel. Unless it receives a signal (cancellation), the token will wait the specified number of milliseconds before continuing. Moving the WaitOne to the end ensures that if a cancellation is signaled, we won&#8217;t pick up one last bit of work before exiting.
 
 The other piece of the equation is making the OnStop wait until the we have safely exited the loop. We can achieve this by creating a &#8220;Safe to exit&#8221; WaitHandle that is only set after successfully exiting the loop. The OnStop will Cancel via the CancellationToken, then wait for the &#8220;Safe to exit&#8221; token to be set before returning.
 
-<pre>private CancellationTokenSource _cancellationTokenSource;
+```csharp
+private CancellationTokenSource _cancellationTokenSource;
 private ManualResetEvent _safeToExitHandle;
 
 public override void Run()
@@ -163,13 +169,14 @@ public override void OnStop()
 	_cancellationTokenSource.Cancel();
 	_safeToExitHandle.WaitOne();
 	Trace.WriteLine("SafeWorker - OnStop Complete, Exiting Safely", "Information");
-}</pre>
-
+}
+```
 Now if we run this like the BasicWorker above, hitting the Suspend button in the middle of the DoWork call, we see the system takes the time to exit out safely:
 
 **Diagnostic Trace Output**
 
-<pre>Information: 000.0s - SafeWorker - Entry point called
+```text
+Information: 000.0s - SafeWorker - Entry point called
 Information: 000.1s - SafeWorker - Starting some work
 Information: 010.1s - SafeWorker - Finished some work
 Information: 020.1s - SafeWorker - Starting some work
@@ -178,8 +185,8 @@ Information: 040.1s - SafeWorker - Starting some work
 Information: 046.4s - SafeWorker - OnStop Called
 Information: 050.1s - SafeWorker - Finished some work
 Information: 050.1s - SafeWorker - Ready to exit
-Information: 050.1s - SafeWorker - OnStop Complete, Exiting Safely</pre>
-
+Information: 050.1s - SafeWorker - OnStop Complete, Exiting Safely
+```
 _note: I later added timestamps to the Trace output for readability_
 
 We can see the OnStop call come in in the middle of our Starting some Work/Finished some work output, but instead of exiting immediately, the worker calmly finished up it&#8217;s work and then announced it was ready to exit (by setting the _safeToExitHandle WaitHandle).

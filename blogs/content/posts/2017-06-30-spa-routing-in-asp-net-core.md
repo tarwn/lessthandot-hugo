@@ -3,6 +3,7 @@ title: SPA Routing in ASP.Net Core
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-06-30T11:58:40+00:00
+ID: 8664
 url: /index.php/webdev/serverprogramming/aspnet/spa-routing-in-asp-net-core/
 views:
   - 3731
@@ -32,25 +33,27 @@ This is not guaranteed to be the only way to do this, just the one that worked f
 
 In my Program.cs file, I renamed wwwroot to Assets:
 
-<pre>public static void Main(string[] args)
+```csharp
+public static void Main(string[] args)
 {
     var host = new WebHostBuilder()
         .UseKestrel()
         .UseContentRoot(Directory.GetCurrentDirectory())
         .UseWebRoot("Assets")
         .UseIISIntegration()
-        .UseStartup<Startup&gt;()
+        .UseStartup<Startup>()
         .UseApplicationInsights()
         .Build();
 
     host.Run();
-}</pre>
-
+}
+```
 ## Startup.cs &#8211; Default Files, Assets, Client Routes
 
 Then in my Startup.cs file I added configuration to load &#8220;index.html&#8221; by default, static files in my &#8220;Assets&#8221; folder, and URL rewriting to rewrite client-side route patterns to the base &#8220;index.html&#8221; file:
 
-<pre>public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+```csharp
+public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 {
    // ...
 
@@ -64,7 +67,7 @@ Then in my Startup.cs file I added configuration to load &#8220;index.html&#8221
     // index.html is the default if a file isn't asked for
     app.UseDefaultFiles(new DefaultFilesOptions()
     {
-        DefaultFileNames = new List<string&gt;() { "index.html" },
+        DefaultFileNames = new List<string>() { "index.html" },
         FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Assets")),
         RequestPath = new PathString("")
     });
@@ -77,8 +80,8 @@ Then in my Startup.cs file I added configuration to load &#8220;index.html&#8221
     });
 
     // ...
-}</pre>
-
+}
+```
 I needed two Nuget packages:
 
   * Install-Package Microsoft.AspNetCore.Rewrite

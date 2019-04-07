@@ -3,6 +3,7 @@ title: 'Compiled list of C# + .Net Features'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2015-09-07T10:16:29+00:00
+ID: 4112
 url: /index.php/desktopdev/mstech/compiled-list-of-c-net-features/
 views:
   - 4050

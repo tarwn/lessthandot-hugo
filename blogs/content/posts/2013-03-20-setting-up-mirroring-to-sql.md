@@ -3,6 +3,7 @@ title: Setting up Mirroring to SQL 2012 Availability Groups Encryption Error
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-03-20T11:43:00+00:00
+ID: 2043
 excerpt: 'With SQL Server 2012, the power of Availability Groups is arguably one of the best high availability, disaster recovery, reporting, and impact-offloading features to be released.  Administrators can now offload reporting to read-only mirrors, offload ba&hellip;'
 url: /index.php/datamgmt/dbadmin/setting-up-mirroring-to-sql/
 views:
@@ -35,31 +36,42 @@ To fix this problem, the best solution is to not tear the availability group dow
 
 Right click the endpoint in SSMS and choose, script to new query window.
 
-<pre>CREATE ENDPOINT [Hadr_endpoint] 
+sql
+CREATE ENDPOINT [Hadr_endpoint] 
 	STATE=STARTED
 	AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
 	FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE
 , ENCRYPTION = REQUIRED ALGORITHM AES)
-GO</pre>
+GO
+```
+
 
  
 
 Now, on the database server that is pre-2012 that you wish to setup mirroring on to use as an upgrade method, run the ALTER statement below.
 
-<pre>ALTER ENDPOINT [Mirroring] 
+sql
+ALTER ENDPOINT [Mirroring] 
 	STATE=STARTED
 	AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
 	FOR DATA_MIRRORING (ROLE = PARTNER, AUTHENTICATION = WINDOWS NEGOTIATE
 , ENCRYPTION = REQUIRED ALGORITHM AES)
-GO</pre>
+GO
+```
 
  
 
 After running the ALTER statement, stop and start then endpoint
 
-<pre>ALTER ENDPOINT [Mirroring] STATE=STOPPED</pre>
+sql
+ALTER ENDPOINT [Mirroring] STATE=STOPPED
+```
 
-<pre>ALTER ENDPOINT [Mirroring] STATE=STARTED</pre>
+
+sql
+ALTER ENDPOINT [Mirroring] STATE=STARTED
+```
+
 
  
 

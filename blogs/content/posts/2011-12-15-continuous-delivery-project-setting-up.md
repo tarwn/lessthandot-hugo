@@ -3,6 +3,7 @@ title: Continuous Delivery Project – Setting up Continuous Integration
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-12-15T11:06:00+00:00
+ID: 1411
 excerpt: A continuous integration server verifies that all of the currently committed changes play well together and reduces the elapsed time between a team member committing a change and finding out it leaves the build in a poor state. The faster we find out about a defect or unstable build, the fresher the changes are in our minds and the faster we can fix it.
 url: /index.php/enterprisedev/application-lifecycle-management/continuous-delivery-project-setting-up/
 views:
@@ -24,7 +25,7 @@ tags:
 A continuous integration server verifies that all of the currently committed changes play well together and reduces the elapsed time between a team member committing a change and finding out it leaves the build in a poor state. The faster we find out about a defect or unstable build, the fresher the changes are in our minds and the faster we can fix it.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Overview_p1.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p1.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
 </div>
 
 This is the second post in a multi-part series on my Continuous Delivery pipeline project. The [first post][1] discussed Continuous Delivery, defined the process I am building, and outlined the technology selections I&#8217;ve made for the project. In this post I will begin setting up Continuous Integration for the project using Jenkins as a build server, MS Build to execute builds, and BitBucket to serve as the source code repository. 
@@ -60,7 +61,7 @@ With the packages above in place, I can start up Jenkins and began configuring i
 _Note: Jenkins somehow magically set itself up as a service on my system (or I was really low on coffee when I was initially poking around it), so if you are following along on your own install, you may want to try accessing the dashboard prior to running the jar to see if it&#8217;s already running._
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/dashboard_lg.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/dashboard.png" title="Jenkins Dashboard" /></a><br /> Jenkins Dashboard (unfortunately a later shot as I misplaced some of my earlier screenshots)
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/dashboard_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/dashboard.png" title="Jenkins Dashboard" /></a><br /> Jenkins Dashboard (unfortunately a later shot as I misplaced some of my earlier screenshots)
 </div>
 
 The side menu offers a link to the server settings (Manage Jenkins), and from there I get a list of sub-menus in the main area that includes &#8220;Plugins&#8221;. To start with I&#8217;ll install the plugins for Mercurial, Twitter, and MS Build from the &#8220;Available&#8221; tab on the plugins screen. After installing, system-wide options for the plugins are added in the system configuration screen (Manage Jenkins &#8211; Configure System). 
@@ -70,7 +71,7 @@ The side menu offers a link to the server settings (Manage Jenkins), and from th
 The mercurial configuration is straightforward and offers a reasonable set of defaults, so of course I changed it. I added the path for the mercurial binaries to my PATH environment to make command-line access easier outside of the build server and then modified the mercurial configs in the build server to reflect that change.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_mercurial_lg.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_mercurial.png" title="Jenkins Configuration - Mercurial" /></a><br /> Jenkins Configuration &#8211; Mercurial
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_mercurial_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_mercurial.png" title="Jenkins Configuration - Mercurial" /></a><br /> Jenkins Configuration &#8211; Mercurial
 </div>
 
 My simplified configuration is the name of the executable and all blanks for the rest of the values.
@@ -80,7 +81,7 @@ My simplified configuration is the name of the executable and all blanks for the
 The latest MS Build executable is installed as part of the .Net framework installation. In the Jenkins server setup, I add an MS Build item, naming it with it&#8217;s version number (I can add separate, named configurations for each version later if I&#8217;m so inclined) and pointing the path to <code class="codespan">"C:WindowsMicrosoft.NETFrameworkv4.0.30319MSBuild.exe"</code>.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_msbuild_lg.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_msbuild.png" title="Jenkins Configuration - MS Build, Framework 4" /></a><br /> Jenkins Configuration &#8211; MS Build, Framework 4
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_msbuild_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_msbuild.png" title="Jenkins Configuration - MS Build, Framework 4" /></a><br /> Jenkins Configuration &#8211; MS Build, Framework 4
 </div>
 
 _Note: You can define multiple MS Build executables if you have projects that run on different versions. Naming them clearly will help when you later need to select the appropriate MS Build exe to build with_
@@ -107,13 +108,13 @@ With the server configured, I can move on to setup the initial CI build job. Ini
 _Note: Though I didn&#8217;t show it here, there is also an advanced option under the mecurial settings called &#8220;Clean Build&#8221;. This will clean the workspace before each build so binaries and test results won&#8217;t pollute later builds_
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_dashboard_failed.png" title="Jenkins Configuration - Failed Build on Dashboard" /><br /> Dashboard View of Failed Build
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_dashboard_failed.png" title="Jenkins Configuration - Failed Build on Dashboard" /><br /> Dashboard View of Failed Build
 </div>
 
 My first attempted build fails. The details are available by opening the build and clicking the Console Log link in the left menu (which changes to reflect the context of the screen we are on). The console log displays the raw output of the commands executed during the build.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_failedbuild.png" title="Jenkins Configuration - Failed Build Console Log" /><br /> Looking at the Console Log for a Failed Build
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_failedbuild.png" title="Jenkins Configuration - Failed Build Console Log" /><br /> Looking at the Console Log for a Failed Build
 </div>
 
 Here are the errors I had to work through in order to get the initial build to work. Some of them were me missing feedback from the system or incorrect configurations.
@@ -140,13 +141,13 @@ At this point the initial build runs successfully.
 After getting the initial build setup, it&#8217;s time to add some refinements. First up is switching the build to run in release mode by adding <code class="codespan">"/p:Configuration=Release"</code> to the command line arguments in the MS Build section.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_rel.png" title="Jenkins Configuration - Adding Release to Build Args" /><br /> Jenkins Configuration &#8211; Adding Release to Build Args
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_rel.png" title="Jenkins Configuration - Adding Release to Build Args" /><br /> Jenkins Configuration &#8211; Adding Release to Build Args
 </div>
 
 Now that I have it working, I also want to add the option to automatically run when new changes are committed to source control. The Build Triggers section of the job configuration controls how jobs are triggered, so I&#8217;ll select the &#8220;Poll SCM&#8221; option to poll my source control repository. A value of <code class="codespan">"*/5 * * * *"</code> will set it to check every 5 minutes (which may be overkill given how few updates I will be making over the course of this project, but oh well).
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_poll.png" title="Jenkins Configuration - Polling for Build Trigger" /><br /> Jenkins Configuration &#8211; Defining Polling for Build Trigger
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_poll.png" title="Jenkins Configuration - Polling for Build Trigger" /><br /> Jenkins Configuration &#8211; Defining Polling for Build Trigger
 </div>
 
 _Note: Timing uses Unix cron-style values. Basically the string is used as a test against the current time to see if a particular step is to be run, so 5 \* \* \* \* would run only if the minutes value was a 5, while \*/5 \* \* \* * runs if it is divisible by 5._
@@ -164,7 +165,7 @@ _Project properties, select the tab for &#8220;Package/Publish Web&#8221; and ch
 The last piece is to tell MSBuild I want to build the web deployment package. In the MSBuild step of the CI job, I add the command-line flag of <code class="codespan">"/p:DeployOnBuild=True"</code>, which will be passed on to the individual projects in the solution to act on if they understand it (which the web project will and the unit test project will not, handy).
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges.png" title="Jenkins Configuration - Failed Build Console Log" /><br /> Looking at the Console Log for a Failed Build
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges.png" title="Jenkins Configuration - Failed Build Console Log" /><br /> Looking at the Console Log for a Failed Build
 </div>
 
 At this point running another build fails, with multiple errors complaining about Package steps (like CheckAndCleanMSDeployPackageIfNeeded) failing. The solution is to install the WebDeploy 2.0 refresh package on the server, located [here][12]. Once this is installed, the build is able to complete successfully.
@@ -172,7 +173,7 @@ At this point running another build fails, with multiple errors complaining abou
 Now that I have a nice, tidy package of the deployable build, I need to put it somewhere for longer term use. In the Post-Build Actions of my job configuration, there is an option to archive artifacts from the build. Checking this box and entering the path for the zip file from the Project Properties screen (objDebugPackageMvcMusicStore.zip) tells Jenkins to archive that zip file as the artifacts from each build.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_successfulbuild_lg.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_successfulbuild.png" title="Jenkins Configuration - Successful Build" /></a><br /> Jenkins Configuration &#8211; Successful Build
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_successfulbuild_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_successfulbuild.png" title="Jenkins Configuration - Successful Build" /></a><br /> Jenkins Configuration &#8211; Successful Build
 </div>
 
 After executing another successful build, we can see the build server has archived the zip file (above). If I click that zip file I&#8217;ll be prompted to download it to a local machine.

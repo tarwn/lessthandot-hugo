@@ -3,6 +3,7 @@ title: SQLCop integration with Red Gate’s SQL Test
 author: George Mastros (gmmastros)
 type: post
 date: 2012-01-04T18:52:00+00:00
+ID: 1478
 excerpt: 'Approximately a year and a half ago, friends of mine and I created SQLCop.  Our motivation was to provide a tool that users can download and run against their database.  This tool is very effective at detecting common problems with database configuratio&hellip;'
 url: /index.php/datamgmt/datadesign/sqlcop-integration-with-red-gate/
 views:

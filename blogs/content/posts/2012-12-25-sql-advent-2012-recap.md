@@ -3,6 +3,7 @@ title: 'SQL Advent 2012: Recap'
 author: SQLDenis
 type: post
 date: 2012-12-25T09:28:00+00:00
+ID: 1883
 excerpt: A recap of all the SQL Advent 2012 posts
 url: /index.php/datamgmt/dbprogramming/sql-advent-2012-recap/
 views:

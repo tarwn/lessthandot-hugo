@@ -3,6 +3,7 @@ title: MADPASS Meeting Wrap-Up
 author: Jes Borland
 type: post
 date: 2011-02-24T19:48:00+00:00
+ID: 1052
 excerpt: |
   Last night, I had a mad, mad evening at the inaugural Madison, WI SQL Server User Group, MADPASS. I think that was one of the best user group meetings I've ever attended!
   

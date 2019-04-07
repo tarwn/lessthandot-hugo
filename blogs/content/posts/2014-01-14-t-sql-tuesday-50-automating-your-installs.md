@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #50 – Automating Your Installs'
 author: Brian Davis
 type: post
 date: 2014-01-14T20:54:32+00:00
+ID: 2255
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/t-sql-tuesday-50-automating-your-installs/
 views:
   - 10514

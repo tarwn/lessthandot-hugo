@@ -3,6 +3,7 @@ title: 'SQL Server Audits: Introduction'
 author: SQLArcher
 type: post
 date: 2011-12-21T05:38:00+00:00
+ID: 1456
 excerpt: "Previously DBA's and in some cases even developers had to write custom triggers or set up various profiler traces to monitor what was happening in their SQL Server instances. When measures like this were left to the junior staff joining the company, it&hellip;"
 url: /index.php/datamgmt/dbadmin/sql-server-audits-introduction/
 views:

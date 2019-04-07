@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #54: An Interview Invitation'
 author: Koen Verbeeck
 type: post
 date: 2014-05-13T06:50:59+00:00
+ID: 2617
 url: /index.php/uncategorized/t-sql-tuesday-52-an-interview-invitation/
 views:
   - 8414

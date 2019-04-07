@@ -3,6 +3,7 @@ title: 'Use an  OUTER LOOP JOIN for faster performance when one of the tables is
 author: SQLDenis
 type: post
 date: 2010-11-05T11:45:58+00:00
+ID: 934
 excerpt: |
   A couple of days ago a coworker was having problems with an insert statement. This insert statement needed to insert data into a table if that data didn't already exists in the table he was inserting to.
   
@@ -37,7 +38,8 @@ First we need to create some data, in order to do that we will create a small ta
 
 This table will hold values from AAA until ZZZ
 
-<pre>create table TestSomeValue (SomeChar char(3))
+sql
+create table TestSomeValue (SomeChar char(3))
 go
 
 ;with cte as(
@@ -49,11 +51,13 @@ and number between 65 and 90)
 insert TestSomeValue
 select c.charnum + c2.charnum + c3.charnum 
 from cte c cross join cte c2
-cross join cte c3</pre>
+cross join cte c3
+```
 
 This will be our large table with 20212400 rows, this might run for a couple of minutes
 
-<pre>create table TestLarge (SomeValue char(3), SomeDate datetime, SomeFlag char(1), SomeOtherValue varchar(100))
+sql
+create table TestLarge (SomeValue char(3), SomeDate datetime, SomeFlag char(1), SomeOtherValue varchar(100))
 go
 
 
@@ -64,11 +68,13 @@ cross join (
 select dateadd(dd,number,'20010101') as SomeDate
 from master..spt_values
 where type = 'p'
-and number < 1150) x</pre>
+and number < 1150) x
+```
 
 This will be our small table and will have 115456 rows
 
-<pre>create table TestSmall (SomeValue char(3), SomeDate datetime, SomeFlag char(1), SomeOtherValue varchar(100))
+sql
+create table TestSmall (SomeValue char(3), SomeDate datetime, SomeFlag char(1), SomeOtherValue varchar(100))
 go
 
 --insert 105456 rows that do not exist
@@ -83,22 +89,26 @@ and number between 1160 and 1165) x
 --insert 10000 rows that do exist
 insert TestSmall
 select top 10000 * 
-from TestLarge</pre>
+from TestLarge
+```
 
 Create a clustered index on both tables, this also might take a couple of minutes
 
-<pre>create clustered index ix_TestSmall on TestSmall(SomeValue,SomeDate,SomeFlag,SomeOtherValue)
+sql
+create clustered index ix_TestSmall on TestSmall(SomeValue,SomeDate,SomeFlag,SomeOtherValue)
 go
 
 
 create clustered index ix_TestLarge on TestLarge(SomeValue,SomeDate,SomeFlag,SomeOtherValue)
-go</pre>
+go
+```
 
 Here we have the 3 versions of the same kind of query, a plain vanilla left join, a not exist and a left loop join
 
 Include the actual execution plan and run these 3 queries
 
-<pre>Select COUNT(*) -- 105456
+sql
+Select COUNT(*) -- 105456
 from TestSmall t1
 left join TestLarge t2 on t1.SomeValue = t2.SomeValue
 and t1.SomeDate =t2.SomeDate
@@ -120,7 +130,8 @@ left outer loop join TestLarge t2 on t1.SomeValue = t2.SomeValue
 and t1.SomeDate =t2.SomeDate
 and t1.SomeFlag = t2.SomeFlag
 and t1.SomeOtherValue = t2.SomeOtherValue
-where t2.SomeValue is null</pre>
+where t2.SomeValue is null
+```
 
 Below is the execution plan generated when you run these 3 queries, click on the image for a larger version.
 
@@ -132,7 +143,8 @@ As you can see the loop join doesn&#8217;t look that impressive compared to the 
 
 What about the reads? Run the following query
 
-<pre>set statistics io on
+sql
+set statistics io on
 go
 select COUNT(*) -- 105456
 from TestSmall t1
@@ -159,7 +171,8 @@ and t1.SomeOtherValue = t2.SomeOtherValue
 where t2.SomeValue is null
 
 set statistics io off
-go</pre>
+go
+```
 
 Here is what is returned
   
@@ -187,7 +200,8 @@ Table &#8216;Worktable&#8217;. Scan count 0, logical reads 0, physical reads 0, 
 
 Finally let&#8217;s look at how long each query took
 
-<pre>set statistics time on
+sql
+set statistics time on
 go
 select COUNT(*) -- 105456
 from TestSmall t1
@@ -215,7 +229,8 @@ where t2.SomeValue is null
 
 
 set statistics time off
-go</pre>
+go
+```
 
 **Left Join**
    
@@ -240,5 +255,5 @@ And voilà, as you can see the _left loop join_ is much faster than either of th
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://msdn.microsoft.com/en-us/library/ms191318.aspx
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

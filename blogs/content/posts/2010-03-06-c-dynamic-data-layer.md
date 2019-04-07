@@ -3,6 +3,7 @@ title: 'C# Dynamic Data Layer'
 author: chaospandion
 type: post
 date: 2010-03-06T20:38:28+00:00
+ID: 718
 url: /index.php/desktopdev/mstech/c-dynamic-data-layer/
 views:
   - 7398
@@ -21,7 +22,8 @@ tags:
 
 With the upcoming release of .NET 4.0 we will be seeing the new dynamic type introduced. The dynamic type bypasses static type checking and is instead checked at run-time. It was introduced to improve interoperability with dynamic languages like IronPython as well as simplifying the usage COM APIs that return objects such as the Microsoft Office API. How can we take advantage of this in other areas? ADO.NET is a perfect candidate for taking advantage of the dynamic type. The following code lays out the ground work for a nice simple class that returns dynamic objects from the database.
 
-<pre>public class DynamicDataLayer : IDisposable
+```CSharp
+public class DynamicDataLayer : IDisposable
 {
     private readonly DbConnection connection;
 
@@ -101,13 +103,14 @@ With the upcoming release of .NET 4.0 we will be seeing the new dynamic type int
         }
         return value;
     }
-}</pre>
-
+}
+```
 Using this class, the code to retrieve records from a database becomes much cleaner.
   
 Take notice of how we don&#8217;t have to explicitly cast the dynamic type to the variable we assign it to.
 
-<pre>using (var dataLayer = new DynamicDataLayer(Provider, ConnectionString))
+```CSharp
+using (var dataLayer = new DynamicDataLayer(Provider, ConnectionString))
 {
     foreach (dynamic record in dataLayer.ExecuteText(CommandText))
     {
@@ -115,4 +118,5 @@ Take notice of how we don&#8217;t have to explicitly cast the dynamic type to th
         string name = record.Name;
         // ...
     }
-}</pre>
+}
+```

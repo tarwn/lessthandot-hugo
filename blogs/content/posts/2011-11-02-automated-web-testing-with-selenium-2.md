@@ -3,6 +3,7 @@ title: Automated Web Testing with Selenium WebDriver
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-11-02T10:27:00+00:00
+ID: 1366
 excerpt: Last week we created a pair of smoke tests with the Selenium IDE tool. Several people commented, with varying levels of politeness, about the downsides of Selenium IDE. Today we are going to get into the nuts and bolts of coding automated tests against the WebDriver library.
 url: /index.php/webdev/uidevelopment/automated-web-testing-with-selenium-2/
 views:
@@ -72,7 +73,8 @@ _Note: If you don&#8217;t have NuGet installed, I highly recommend you go check 
 
 Once we have all of that set up, we can create a single class file with a quick test function to verify we&#8217;re ready to go:
 
-<pre>using System;
+```csharp
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Firefox;
 
@@ -85,7 +87,7 @@ namespace SampleWebDriverUnitTest {
 		[TestMethod]
 		public void GettingStarted_BasicFireFoxGET_LoadsPage() {
 			using (FirefoxDriver driver = new FirefoxDriver()) {
-				driver.Url = "http://www.tiernok.com";
+				driver.Url = "http://tiernok.com";
 
 				driver.Navigate();
 
@@ -93,11 +95,11 @@ namespace SampleWebDriverUnitTest {
 			}
 		}
 	}
-}</pre>
-
+}
+```
 This is all it takes to get our first test. Create the solution, add the reference, create the test class and method. Since it&#8217;s MS Test, Ctrl+R, A will run all of our tests in the integrated test runner.
 
-Selenium WebDriver is written in a somewhat fluent syntax, so for the rest of the post we will combine the URL and navigation into a single statement: driver.Navigate().GoToUrl(&#8220;http://www.tiernok.com&#8221;);
+Selenium WebDriver is written in a somewhat fluent syntax, so for the rest of the post we will combine the URL and navigation into a single statement: driver.Navigate().GoToUrl(&#8220;http://tiernok.com&#8221;);
 
 ## The First Test Cases
 
@@ -121,7 +123,8 @@ The steps for these tests are going to be similar to the second test we created 
 
 Selenium IDE has a feature that allows us to export tests, so when we are getting started we can look at that export to get a feel for how the code version will function. To export a test, open Selenium IDE, go to File, Export Text Case As, and choose C# (WebDriver). A C# file will be generated with the test case converted to an NUnit Test. The file includes some test setup and teardown methods, as well as the following test method:
 
-<pre>[Test]
+```csharp
+[Test]
 public void TheContactPageReturnsErrorWhenEmailFieldEmptyTest()
 {
     driver.Navigate().GoToUrl("/");
@@ -132,16 +135,17 @@ public void TheContactPageReturnsErrorWhenEmailFieldEmptyTest()
     driver.FindElement(By.Id("itxtBody")).SendKeys("This is my Selenium Message");
     driver.FindElement(By.CssSelector("input[type="submit"]")).Click();
     Assert.AreEqual("Please fill in all three entries before sending the message.", driver.FindElement(By.CssSelector(".err")).Text);
-}</pre>
-
+}
+```
 Initially this may look more complicated then the Selenium IDE command steps, but really the only difference is that we are explicitly finding the elements we want to act on before acting, which was was more implicit in Selenium IDE. 
 
 Converting this to an MS Test is not difficult, but we will want to wrap the tests in a using statement so that driver gets properly disposed (MS Test doesn&#8217;t run cleanup properly when an exception occurs).
 
-<pre>[TestMethod]
+```csharp
+[TestMethod]
 public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
 		driver.FindElement(By.LinkText("Contact")).Click();
 		driver.FindElement(By.Id("itxtFromName")).Clear();
 		driver.FindElement(By.Id("itxtFromName")).SendKeys("Selenium Test");
@@ -150,18 +154,19 @@ public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 		driver.FindElement(By.CssSelector("input[type="submit"]")).Click();
 		Assert.AreEqual("Please fill in all three entries before sending the message.", driver.FindElement(By.CssSelector(".err")).Text);
 	}
-}</pre>
-
+}
+```
 The only real changes have been the addition of the using statement and changing the decorated attribute from NUnit&#8217;s Test to MS Test&#8217;s TestMethod. 
 
 ### The Rest of the Test Cases
 
 Based on this one test, we can easily create tests to satisfy the other conditions:
 
-<pre>[TestMethod]
+```csharp
+[TestMethod]
 public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
 		driver.FindElement(By.LinkText("Contact")).Click();
 		driver.FindElement(By.Id("itxtFromEmail")).Clear();
 		driver.FindElement(By.Id("itxtFromEmail")).SendKeys(EmailAddress);
@@ -175,7 +180,7 @@ public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
 		driver.FindElement(By.LinkText("Contact")).Click();
 		driver.FindElement(By.Id("itxtFromName")).Clear();
 		driver.FindElement(By.Id("itxtFromName")).SendKeys("Selenium Test");
@@ -189,7 +194,7 @@ public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsSuccessWhenAllFieldsProvided() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
 		driver.FindElement(By.LinkText("Contact")).Click();
 		driver.FindElement(By.Id("itxtFromName")).Clear();
 		driver.FindElement(By.Id("itxtFromName")).SendKeys("Selenium Test");
@@ -200,8 +205,8 @@ public void ContactPageReturnsSuccessWhenAllFieldsProvided() {
 		driver.FindElement(By.CssSelector("input[type="submit"]")).Click();
 		Assert.AreEqual("Thanks, your message has been sent successfully.", driver.FindElement(By.CssSelector(".suc")).Text);
 	}
-}</pre>
-
+}
+```
 Theoretically we&#8217;re done, if we had a few more cases we could keep copying and pasting our way to the finish line. If you recall, however, one of the goals of moving from Selenium IDE method to a custom solution was to reduce the amount of duplication and the fragility that duplication causes. So far all we have done is transfer that fragility from a series of test cases in the IDE to a series of unit tests in C#.
 
 ## Reducing Test Fragility
@@ -228,7 +233,8 @@ Before we start making code changes, we need to get the Support library. As befo
 
 Next we are going to start modeling our page. Since there is a common layout throughout the site, I&#8217;ll first create a base page object to represent the common elements (like navigation menu items) we will be interacting with:
 
-<pre>namespace SampleWebDriverUnitTest.Pages {
+```csharp
+namespace SampleWebDriverUnitTest.Pages {
 	class PageBase {
 
 		[FindsBy(How = How.LinkText, Using = "Contact")]
@@ -239,11 +245,12 @@ Next we are going to start modeling our page. Since there is a common layout thr
 		}
 
 	}
-}</pre>
-
+}
+```
 Then we can extend this class to define the elements that are specific to the Contact form:
 
-<pre>namespace SampleWebDriverUnitTest.Pages {
+```csharp
+namespace SampleWebDriverUnitTest.Pages {
 	class ContactPage : PageBase {
 
 		[FindsBy(How=How.Id, Using="itxtFromEmail")]
@@ -307,14 +314,15 @@ Then we can extend this class to define the elements that are specific to the Co
 			}
 		}
 	}
-}</pre>
-
+}
+```
 The PageFactory object is responsible for wiring our page objects to the actual page displayed in the browser. It attempts to match each IWebElement in the class to an element in the web page. By default, if you do not decorate the field with the FindsBy decorator then it will search for an element who&#8217;s ID matches the variable name. I prefer to explicitly specify the find criteria, though, as this lets me name my variables consistently and limits the impact of an HTML change to a single decorator instead of causing a property name change.
 
-<pre>[TestMethod]
+```csharp
+[TestMethod]
 public void ContactPageReturnsErrorWhenEmailFieldEmpty_PageObjectVersion() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
 
 		Pages.PageBase homepage = new Pages.PageBase();
 		PageFactory.InitElements(driver, homepage);
@@ -326,8 +334,8 @@ public void ContactPageReturnsErrorWhenEmailFieldEmpty_PageObjectVersion() {
 
 		Assert.IsTrue(contactPage.IsDisplayingValidationError);
 	}
-}</pre>
-
+}
+```
 The new code:
 
 navigates to the site
@@ -350,13 +358,14 @@ The current code, in my opinion, doesn&#8217;t fail soon enough if it is on the 
 
 Rather than repetitively initializing page objects in each test and and adding title verification to each test, lets move that behavior to the PageBase so we can easily do it for every page we load.
 
-<pre>class PageBase {
+```csharp
+class PageBase {
 	public RemoteWebDriver Driver { get; set; }
 	public string ExpectedTitle { get;set; }
 
 	// ... unchanged code ...
 
-	public static TPage GetInstance<TPage&gt;(RemoteWebDriver driver, string expectedTitle) where TPage : PageBase, new() {
+	public static TPage GetInstance<TPage>(RemoteWebDriver driver, string expectedTitle) where TPage : PageBase, new() {
 		TPage pageInstance = new TPage() { 
 			ExpectedTitle = expectedTitle,
 			Driver = driver
@@ -367,48 +376,51 @@ Rather than repetitively initializing page objects in each test and and adding t
 
 		return pageInstance;
 	}
-}</pre>
-
+}
+```
 Now we have a single generic call that can create a Page (provided it inherits from PageBase and has a constructor) and execute an assertion on it&#8217;s title. Lets update the NavigateContactLink method to return an initialized ContactPage instance, since this will be a consistent next step each time we navigate to a new page. This reduces the amount of code in the test and adds an automatic check to ensure we have reached the page we were expecting.
 
-<pre>class PageBase {
+```csharp
+class PageBase {
 	// ... unchanged ...
 
 	public ContactPage NavigateContactLink() {
 		ContactLink.Click();
-		return GetInstance<ContactPage&gt;(Driver, "Eli Weinstock-Herman | Tarwn - Contact");
+		return GetInstance<ContactPage>(Driver, "Eli Weinstock-Herman | Tarwn - Contact");
 	}
 
 	// ... unchanged ...
-}</pre>
-
+}
+```
 Our refactored test now looks like this:
 
-<pre>[TestMethod]
+```csharp
+[TestMethod]
 public void ContactPageReturnsErrorWhenEmailFieldEmpty_PageObjectVersion() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
 
-		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		PageBase homepage = PageBase.GetInstance<PageBase>(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 		
 		contactPage.SendEmail("Selenium Test", "", "This is my Selenium Test Message");
 
 		Assert.IsTrue(contactPage.IsDisplayingValidationError);
 	}
-}</pre>
-
+}
+```
 There is still some additional refactoring we could do, but this is far more readable, has reduced the level of duplication, and added title checks.
 
 ### Converting the Remaining Tests
 
 Converting the remining tests is a straightforward exercise.
 
-<pre>[TestMethod]
+```csharp
+[TestMethod]
 public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
-		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
+		PageBase homepage = PageBase.GetInstance<PageBase>(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
 		contactPage.SendEmail("Selenium Test", "", "This is my Selenium Test Message");
@@ -420,8 +432,8 @@ public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
-		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
+		PageBase homepage = PageBase.GetInstance<PageBase>(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
 		contactPage.SendEmail("", EmailAddress, "This is my Selenium Test Message");
@@ -433,8 +445,8 @@ public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
-		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
+		PageBase homepage = PageBase.GetInstance<PageBase>(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
 		contactPage.SendEmail("Selenium Test", EmailAddress, "");
@@ -446,16 +458,16 @@ public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 [TestMethod]
 public void ContactPageReturnsSuccessWhenAllFieldsProvided() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
-		driver.Navigate().GoToUrl("http://www.tiernok.com/");
-		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		driver.Navigate().GoToUrl("http://tiernok.com/");
+		PageBase homepage = PageBase.GetInstance<PageBase>(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
 		contactPage.SendEmail("Selenium Test", EmailAddress, "This is my Selenium Message");
 
 		Assert.IsTrue(contactPage.IsDisplayingSuccessMessage);
 	}
-}</pre>
-
+}
+```
 There is additional refactoring we could do at this stage. The hardcoded page titles and repeated driver.Navigate() calls could be cleaned up to further reduce duplication and make the tests more readable. As we add more pages and more tests, we are going to find other common functionality to refactor and other necessary functionality to add. The framework I end up building through aggressive refactoring of these tests may not look like the one that you end up with, but we will be reaching in the same direction.
 
 ## Review

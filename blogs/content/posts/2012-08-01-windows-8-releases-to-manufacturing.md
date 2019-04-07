@@ -3,6 +3,7 @@ title: Windows 8, Visual Studio 2012 and Windows Server 2012 released to manufac
 author: SQLDenis
 type: post
 date: 2012-08-01T14:10:00+00:00
+ID: 1686
 excerpt: |
   Microsoft just released a press release announcing that Windows 8 has been released to manufacturing (RTM)
   

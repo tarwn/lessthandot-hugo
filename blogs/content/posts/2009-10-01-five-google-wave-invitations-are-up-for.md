@@ -3,6 +3,7 @@ title: Five Google Wave Invitations are up for grabs
 author: SQLDenis
 type: post
 date: 2009-10-01T09:41:09+00:00
+ID: 573
 url: /index.php/itprofessionals/ethicsit/five-google-wave-invitations-are-up-for/
 views:
   - 21516
@@ -36,7 +37,8 @@ Here is the SQL Code that will determine who will win
 
 First the create table and insert statement
 
-<pre>CREATE TABLE #TEMP(LuckyWinner varchar(500))
+sql
+CREATE TABLE #TEMP(LuckyWinner varchar(500))
 
 
  
@@ -78,13 +80,16 @@ insert #TEMP Values('@AaronBertrand')
 insert #TEMP Values('@aubergineshriek')
 insert #TEMP Values('@bpaisley69')
 insert #TEMP Values('@andryou')
-insert #TEMP Values('wookielnx')</pre>
+insert #TEMP Values('wookielnx')
 
+```
 The query below will pick the 5 random winners
 
-<pre>SELECT TOP 5 * 
+sql
+SELECT TOP 5 * 
 FROM #TEMP
-ORDER BY NEWID()</pre>
+ORDER BY NEWID()
+```
 
 **And the lucky winners are: @AaronBertrand, @misterjp, @Jorriss,@russconklin and sqlsister. Invitations have been entered into Google Wave&#8230;now you have to wait for the Wave team**
 

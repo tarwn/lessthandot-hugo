@@ -3,6 +3,7 @@ title: How to shutdown windows 8
 author: SQLDenis
 type: post
 date: 2012-08-17T20:22:00+00:00
+ID: 1696
 excerpt: |
   If you installed Windows 8, you might be wondering how to shut down or restart this operating system. There is no more start button so where do you start?
   

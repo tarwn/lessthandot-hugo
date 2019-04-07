@@ -3,6 +3,7 @@ title: SQL Puzzle…how many even numbers are there in a row
 author: SQLDenis
 type: post
 date: 2013-05-29T07:29:00+00:00
+ID: 2087
 excerpt: |
   In last week's puzzle SQL Puzzle: RIGHT without using the RIGHT function we looked at how to do a RIGHT function without using the RIGHT function. Today we are going to find out how many columns are even in a row. 
   
@@ -34,14 +35,16 @@ Before starting I want you to be aware that 0 is an even number From wikipedia: 
 
 Here is the table that you will use for your solution
 
-<pre>CREATE TABLE #Puzzle(Col1 int, Col2 int, Col3 int, Col4 int, Col5 int)
+sql
+CREATE TABLE #Puzzle(Col1 int, Col2 int, Col3 int, Col4 int, Col5 int)
 
 INSERT  #Puzzle VALUES (1,2,3,4,5)
 INSERT  #Puzzle VALUES (0,1,2,3,4)
 INSERT  #Puzzle VALUES (2,2,2,2,2)
 INSERT  #Puzzle VALUES (1,1,1,1,1)
 INSERT  #Puzzle VALUES (3,2,3,2,3)
-INSERT  #Puzzle VALUES (2,3,2,3,2)</pre>
+INSERT  #Puzzle VALUES (2,3,2,3,2)
+```
 
 And here is the expected output
 

@@ -3,6 +3,7 @@ title: Exploring Reactive Extensions – Adding a Dash of Linq
 author: Alex Ullrich
 type: post
 date: 2010-11-30T12:27:00+00:00
+ID: 955
 url: /index.php/desktopdev/mstech/exploring-reactive-extensions-adding-a-d/
 views:
   - 13505
@@ -16,7 +17,8 @@ I think the reactive extensions library starts to look even better when you star
 
 The first example here will be a form that listens for mouse movements. We want to update a label to show current coordinates (and buttons pushed) when either the X or Y coordinate is a multiple of 10, OR the left and right buttons are both pushed. Normally this could be done with a bit of conditional logic in our event handler. Consider the following:
 
-<pre>public partial class MouseWatcherForm : Form {
+```csharp
+public partial class MouseWatcherForm : Form {
 	public MouseWatcherForm() {
 		InitializeComponent();
 		this.MouseMove += UpdateLabel;
@@ -28,31 +30,35 @@ The first example here will be a form that listens for mouse movements. We want 
 								&& (e.Button & MouseButtons.Right) == MouseButtons.Right))
 		label1.Text = string.Format("X: {0}, Y: {1}, Button: {2}", e.X, e.Y, e.Button);
 	}
-}</pre>
+}
+```
 
 Then, if we wanted to do the same thing in a reactive way:
 
-<pre>public partial class ReactiveMouseWatcherForm : Form {
+```csharp
+public partial class ReactiveMouseWatcherForm : Form {
 	public ReactiveMouseWatcherForm() {
 		InitializeComponent();
-		var mouseMoveEvent = Observable.FromEvent<MouseEventArgs&gt;(this, "MouseMove");
+		var mouseMoveEvent = Observable.FromEvent<MouseEventArgs>(this, "MouseMove");
 
 		var selectedMovementEvents = from pos in mouseMoveEvent
-					 .Where(x =&gt; (x.EventArgs.X % 10 == 0 || x.EventArgs.Y % 10 == 0)
+					 .Where(x => (x.EventArgs.X % 10 == 0 || x.EventArgs.Y % 10 == 0)
 							|| ((x.EventArgs.Button & MouseButtons.Left) == MouseButtons.Left
 								&& (x.EventArgs.Button & MouseButtons.Right) == MouseButtons.Right))
 					 .Repeat()
 					select pos.EventArgs;
 
-		selectedMovementEvents.Subscribe(p =&gt; {
+		selectedMovementEvents.Subscribe(p => {
 			label1.Text = string.Format("X: {0}, Y: {1}, Button: {2}", p.X, p.Y, p.Button);
 		});
 	}
-}</pre>
+}
+```
 
 In this case the savings aren&#8217;t that significant, though it is interesting to move from a scenario where we&#8217;re always reacting to the event, and handling the conditional logic in our handler to a scenario where we are actually filtering the stream of events to limit what we need to react to in the first place. The latter definitely sounds like a more sane way to do things from where I&#8217;m sitting, and can open up some interesting possibilities. Take, for example, the idea of letting a user draw a line on a form by holding down the left mouse button and moving the mouse. Because you always need the current AND previous location, it can get ugly trying to do this with traditional events.
 
-<pre>public partial class DrawingForm : Form {
+```csharp
+public partial class DrawingForm : Form {
 
 	MouseEventHandler handler;
 	Point? previousMousePosition;
@@ -60,7 +66,7 @@ In this case the savings aren&#8217;t that significant, though it is interesting
 	public DrawingForm() {
 		InitializeComponent();
 
-		handler = (sender, e) =&gt; {
+		handler = (sender, e) => {
 			if (previousMousePosition.HasValue) {
 				using (var gfx = this.CreateGraphics())
 				using (var pen = new Pen(Color.Black, 5F)) {
@@ -82,38 +88,41 @@ In this case the savings aren&#8217;t that significant, though it is interesting
 	void DrawingForm_MouseDown(object sender, MouseEventArgs e) {
 		this.MouseMove += handler;
 	}
-}</pre>
+}
+```
 
 I&#8217;m not sure this is the best way to solve the problem at hand, but this isn&#8217;t tremendously bad. It&#8217;s easy to see how this could get out of hand as more complexities are introduced though. This approach can also be difficult to follow, as the interplay between different event handlers isn&#8217;t always immediately apparent. We can tell that for some reason the mouse&#8217;s previous position is important, and that we have event handlers set up for wiring up (and de-wiring) another event handler. This is not very intuitive, and to make matters worse the bit of saved state leaves us open to the various side effects if we need to access the field from other methods in the future.
 
 However, because we can apply linq queries to streams of events using Rx, something like this becomes a bit easier.
 
-<pre>public partial class ReactiveDrawingForm : Form {
+```csharp
+public partial class ReactiveDrawingForm : Form {
 	public ReactiveDrawingForm() {
 		InitializeComponent();
-		var mouseMove = Observable.FromEvent<MouseEventArgs&gt;(this, "MouseMove");
-		var mouseDown = Observable.FromEvent<MouseEventArgs&gt;(this, "MouseDown");
-		var mouseUp = Observable.FromEvent<MouseEventArgs&gt;(this, "MouseUp");
+		var mouseMove = Observable.FromEvent<MouseEventArgs>(this, "MouseMove");
+		var mouseDown = Observable.FromEvent<MouseEventArgs>(this, "MouseDown");
+		var mouseUp = Observable.FromEvent<MouseEventArgs>(this, "MouseUp");
 
 		var selectedMovementEvents = from pair in mouseMove
 					 .SkipUntil(mouseDown)
 					 .TakeUntil(mouseUp)
-					 .Let(mvmnt =&gt; mvmnt.Zip(mvmnt.Skip(1),
-						(previous, current) =&gt; new {
+					 .Let(mvmnt => mvmnt.Zip(mvmnt.Skip(1),
+						(previous, current) => new {
 							current = current.EventArgs.Location,
 							previous = previous.EventArgs.Location
 						}))
 					.Repeat()
 			select pair;
 
-		selectedMovementEvents.Subscribe(p =&gt; {
+		selectedMovementEvents.Subscribe(p => {
 			using (var gfx = this.CreateGraphics())
 			using (var pen = new Pen(Color.Black, 5F)) {
 				gfx.DrawLine(pen, p.previous, p.current);
 			}
 		});
 	}
-}</pre>
+}
+```
 
 The .SkipUntil and .TakeUntil calls limit our sequence to only the mouse move events that occur between the mouse button being pressed and released. From there, the combination of calls to .Let, .Zip and .Skip allow us to yield a series of **pairs** of locations. This makes drawing the line between the last two locations a piece of cake, and prevents us from needing to store any kind of state globally, which in turn will make the function behave more predictably. The new code is free of the side effects seen in the other example resulting from the global state, and once you get your head around the syntax for working with the sequence it is much better about self-documenting.
 

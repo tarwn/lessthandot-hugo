@@ -3,6 +3,7 @@ title: SQL Injection Pocket Reference for MySQL, SQL Server and Oracle
 author: SQLDenis
 type: post
 date: 2011-07-29T08:51:00+00:00
+ID: 1279
 excerpt: |
   There is a nice SQL Injection Pocket Reference up on Google Docs
   

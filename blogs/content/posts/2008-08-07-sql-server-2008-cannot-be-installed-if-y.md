@@ -3,6 +3,7 @@ title: SQL Server 2008 cannot be installed if you have Visual Studio 2008 RTM in
 author: SQLDenis
 type: post
 date: 2008-08-07T13:28:17+00:00
+ID: 103
 url: /index.php/datamgmt/datadesign/sql-server-2008-cannot-be-installed-if-y/
 views:
   - 5658

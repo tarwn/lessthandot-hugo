@@ -3,6 +3,7 @@ title: Developer, can do new tricks, require good home
 author: Tahir Khalid
 type: post
 date: 2013-02-03T16:56:00+00:00
+ID: 1963
 excerpt: |
   The world of development is an interesting one where creativity comes alive through code to produce wonderful programs that do lots of cool stuff.
   Okay that's the Wizard of Oz intro over, is it really that rosy?

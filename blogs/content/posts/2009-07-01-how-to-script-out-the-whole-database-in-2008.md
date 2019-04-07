@@ -3,6 +3,7 @@ title: How To Script Out The Whole Database In SQL Server 2005 and SQL Server 20
 author: SQLDenis
 type: post
 date: 2009-07-01T13:36:00+00:00
+ID: 491
 excerpt: |
   There seems to be a little bit of confusion on how to script out the database. The correct answer is of course: just run all the scripts you have in source control  :-)
   
@@ -37,7 +38,8 @@ Logically you would think that this would be the way: _Right click on the databa
 
 What that will do is just create the database and not much else, here is what the script might look like
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 
 /****** Object:  Database [AdventureWorks]    Script Date: 06/30/2009 15:04:19 ******/
@@ -54,7 +56,8 @@ IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
 EXEC [AdventureWorks].[dbo].[sp_fulltext_database] @action = 'enable'
 end
-GO</pre>
+GO
+```
 
 What you have to do is actually this: _Right click on your database&#8211;>Tasks&#8211;>Generate Scripts_
 
@@ -74,5 +77,5 @@ That is all, click next a couple of times and review your options and you are se
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

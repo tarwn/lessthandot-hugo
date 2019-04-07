@@ -3,6 +3,7 @@ title: AngularJS vs Knockout – Introduction (1 of 8)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-10-07T17:39:00+00:00
+ID: 2161
 excerpt: "I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. There are already plenty of posts out there comparing AngularJS and Knockout. I have been slowly reading through all the comparisons I could find, but unfortunately I keep running into cases where the posts are too high level, miss capabilities I need, or have errors that undermine my trust in the rest of the post."
 url: /index.php/webdev/uidevelopment/angularjs-vs-knockout-introduction-1/
 views:

@@ -3,6 +3,7 @@ title: Calling Web Services from JSP
 author: Rob Earl
 type: post
 date: 2010-12-18T14:40:51+00:00
+ID: 979
 excerpt: |
   This blog will demonstrate the steps to generate a Web Service Client and test JSP files in Eclipse. Finally, it will show a basic JSP example which uses the generated client to call a remote Web Service.
   
@@ -51,33 +52,34 @@ Eclipse will then generate a Web Service client and sample JSP files to test it.
 
 Below is an example JSP file which will call the Web Service Client and lookup the current time in New York.
 
-<pre><%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
-<html&gt;
-<head&gt;
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-<title&gt;The Time in New York!</title&gt;
-</head&gt;
-<body&gt;
-<jsp:useBean id="localTimeSoapProxy" scope="session" class="com.ripedev.www.LocalTimeSoapProxy" /&gt;
+```java
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Time in New York!</title>
+</head>
+<body>
+<jsp:useBean id="localTimeSoapProxy" scope="session" class="com.ripedev.www.LocalTimeSoapProxy" />
 <%
 try
 {
 	String newYorkTime = localTimeSoapProxy.localTimeByZipCode("10001"); // Pass a New York zipcode.
-	%&gt;The Time in New York is: <%=newYorkTime %&gt;
+	%>The Time in New York is: <%=newYorkTime %>
 	
 <%
 }
 catch(Exception e)
 {
-%&gt; 
-	Exception: <%=e.getMessage() %&gt;
+%> 
+	Exception: <%=e.getMessage() %>
 <%	
 }
-%&gt;
-</body&gt;
-</html&gt;</pre>
-
+%>
+</body>
+</html>
+```
 Save this file to WebContent/NewYorkTime.jsp then navigate to http://localhost:8080/NewYorkTime.jsp and you should see something like:
 
 The Time in New York is: 12/18/2010 11:26:22 AM

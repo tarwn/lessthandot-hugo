@@ -3,6 +3,7 @@ title: How To Modify The Host File In Windows 7 Or Vista
 author: SQLDenis
 type: post
 date: 2009-12-29T01:02:58+00:00
+ID: 656
 excerpt: 'One way I stay protected from bad sites is that I use a modified host file. In Vista and Windows 7 you cannot just open the file in notepad and save it anymore, you will get an error. Someone had this happen at work on Windows Server 2008 last week and&hellip;'
 url: /index.php/sysadmins/security/how-to-modify-the-host-file-in-windows-7/
 views:
@@ -82,4 +83,4 @@ Here is the link to the file in plain text <http://www.mvps.org/winhelp2002/host
 
 What about you, do you use the host file to block bad sites?
 
- [1]: http://forum.lessthandot.com/viewtopic.php?f=139&t=9275
+ [1]: http://forum.ltd.local/viewtopic.php?f=139&t=9275

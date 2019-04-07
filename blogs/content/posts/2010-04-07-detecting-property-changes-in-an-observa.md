@@ -3,6 +3,7 @@ title: Detecting Property Changes in an Observable Collection
 author: ThatRickGuy
 type: post
 date: 2010-04-07T19:16:01+00:00
+ID: 753
 excerpt: A quick and simple demo on how to set up a custom ObservableCollection to raise PropertyChanged events from the items it contains.
 url: /index.php/webdev/webdesigngraphicsstyling/detecting-property-changes-in-an-observa/
 views:
@@ -36,25 +37,30 @@ One of the things I needed to do though, was to detect when the user selected an
 
 For this demo app, the UI is pretty simple. I just have two list boxes. Each list box has a DataTemplate with a CheckBox in it. The CheckBox has its Content bound to the &#8220;Text&#8221; member and IsChecked is bound to a like named member. The IsChecked property is also set to TwoWay mode. This means that when the user changes its checked state, it will update the underlying collection.
 
-<pre><ListBox x:Name="lst1" Grid.Column="0" >
+```XAML
+<ListBox x:Name="lst1" Grid.Column="0" >
             <ListBox.ItemTemplate >
                 <DataTemplate>
                     <CheckBox Content="{Binding Text}" IsChecked="{Binding IsChecked, Mode=TwoWay}" />
                 </DataTemplate>
             </ListBox.ItemTemplate>
-        </ListBox></pre>
+        </ListBox>
+```
 
 ### On to the Items
 
 For the most part the Item class just contains our properties, but we have to beef it up just a bit. First, it needs <code class="codespan">Implements System.ComponentModel.INotifyPropertyChanged</code>. INotifyPropertyChanged will create a public event called &#8220;PropertyChanged&#8221;. In order to save ourselves a bit of repeating code, we can make a method called _onPropertyChanged_ that raises that event for us:
 
-<pre>Private Sub onPropertyChanged(ByVal PropertyName As String)
+```VB.Net
+Private Sub onPropertyChanged(ByVal PropertyName As String)
             RaiseEvent PropertyChanged(Me, New System.ComponentModel.PropertyChangedEventArgs(PropertyName))
-        End Sub</pre>
+        End Sub
+```
 
 Also in the item class we need to tweak the properties a bit. For instance:
 
-<pre>Private _IsChecked As Boolean
+```VB.Net
+Private _IsChecked As Boolean
         Public Property IsChecked() As Boolean
             Get
                 Return _IsChecked
@@ -65,7 +71,8 @@ Also in the item class we need to tweak the properties a bit. For instance:
                     onPropertyChanged("IsChecked")
                 End If
             End Set
-        End Property</pre>
+        End Property
+```
 
 Note that we are only calling the onPropertyChanged event when the value has indeed changed. Also, ensure that the underlying value has changed BEFORE you call the onPropertyChanged, otherwise you&#8217;ll wind up with some really interesting behavior.
 

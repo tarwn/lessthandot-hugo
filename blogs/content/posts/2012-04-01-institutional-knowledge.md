@@ -3,6 +3,7 @@ title: Institutional Knowledge
 author: chopstik
 type: post
 date: 2012-04-01T23:02:00+00:00
+ID: 1574
 excerpt: 'I recently was part of a company supported volunteer project. This project involved ten different people from various groups within my organization who had wanted to join the project - myself included. Indeed, I was the only one from my group but it did&hellip;'
 url: /index.php/itprofessionals/ethicsit/institutional-knowledge/
 views:

@@ -3,6 +3,7 @@ title: When changing column data types use ALTER TABLE TableName ALTER Column sy
 author: SQLDenis
 type: post
 date: 2011-04-10T22:27:00+00:00
+ID: 1107
 excerpt: |
   Someone asked how to change the data type from datetime to datetime2
   
@@ -63,14 +64,16 @@ Let&#8217;s take a closer look at the T-SQL needed for this
 
 First create the following table and insert one row
 
-<pre>USE tempdb
+sql
+USE tempdb
 GO
 
 CREATE TABLE Test(SomeDate DATETIME)
 INSERT Test values ('20110410')
 
 SELECT * FROM Test
-GO</pre>
+GO
+```
 
 Output
   
@@ -82,7 +85,9 @@ Datetime accepts dates in the range from January 1, 1753, through December 31, 9
   
 Run the code below which will try to insert January 1, 1600, to see the error
 
-<pre>INSERT Test values ('16000101')</pre>
+sql
+INSERT Test values ('16000101')
+```
 
 _Msg 242, Level 16, State 3, Line 1
   
@@ -98,17 +103,22 @@ For our table the syntax will be the following: _ALTER TABLE Test ALTER column S
   
 Run the code below to make that happen
 
-<pre>ALTER TABLE Test ALTER column SomeDate datetime2
-GO</pre>
-
+sql
+ALTER TABLE Test ALTER column SomeDate datetime2
+GO
+```
 So now, if we try to insert January 1, 1600, it should succeeed
 
-<pre>INSERT Test values ('16000101')</pre>
+sql
+INSERT Test values ('16000101')
+```
 
 Now, you can look what is in the table
 
-<pre>SELECT * FROM Test
-GO</pre>
+sql
+SELECT * FROM Test
+GO
+```
 
 Output
   
@@ -126,7 +136,8 @@ Learn the product and learn it well. Don&#8217;t overly depend on the wizards in
 
 The wizards are nice but sometimes they get it wrong. Here is the code that the wizard generates to change the column
 
-<pre>/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+sql
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
 BEGIN TRANSACTION
 SET QUOTED_IDENTIFIER ON
 SET ARITHABORT ON
@@ -153,8 +164,9 @@ DROP TABLE dbo.Test
 GO
 EXECUTE sp_rename N'dbo.Tmp_Test', N'Test', 'OBJECT' 
 GO
-COMMIT</pre>
+COMMIT
 
+```
 I definitely don&#8217;t want that either, that creates a whole new table..yikes
 
 Spend some time in Books On Line, maybe every day at lunch open a random topic and read it for half and hour and run the code examples. If you commute, download the topic to your local device or hit the online version and study it. Another good way to learn is of course hitting the newsgroups where you will see top notch advice from SQL Server experts
@@ -164,5 +176,5 @@ The more you know, the better it will be for you and your employer, if suddenly 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://stackoverflow.com/questions/5581639/convert-datetime-column-to-datetime2-column-in-sql-server/5581702#5581702
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: SSRS Properties – FixedRowHeaders
 author: Jes Borland
 type: post
 date: 2013-02-11T11:59:00+00:00
+ID: 1987
 excerpt: The purpose of this property is to show row headers as you scroll across a page to view data.
 url: /index.php/datamgmt/ssrs/ssrs-properties-fixedrowheaders/
 views:

@@ -3,6 +3,7 @@ title: Nice Collection Of Free SQL Server, Visual Studio, Azure ebooks
 author: SQLDenis
 type: post
 date: 2013-06-19T12:17:00+00:00
+ID: 2109
 excerpt: |
   Eric Ligman has posted a nice collection of ebooks available in pdf, epub and mobi formats. The books cover Office, Office 365, SharePoint, SQL Server, System Center, Visual Studio, Web Development, Windows, Windows Azure, and Windows Server
   

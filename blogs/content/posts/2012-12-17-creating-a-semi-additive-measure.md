@@ -3,6 +3,7 @@ title: Creating a Semi-additive Measure over a Parent-child Hierarchy
 author: Koen Verbeeck
 type: post
 date: 2012-12-17T11:11:00+00:00
+ID: 1844
 excerpt: 'Originally this blog post would have had the title “Disabling aggregations over a parent-child hierarchy”, but I thought it could create confusion with the Aggregation Design concept in Analysis Services (SSAS), which is something completely different.&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/creating-a-semi-additive-measure/
 views:
@@ -114,8 +115,9 @@ tags:
   <span lang="EN-US">So we need create our own calculated semi-additive measure. The following MDX does the trick:</span>
 </p>
 
-<pre>([Blogger].[Blogger].CURRENTMEMBER.DATAMEMBER,[Measures].[Blog Count])</pre>
-
+```MDX
+([Blogger].[Blogger].CURRENTMEMBER.DATAMEMBER,[Measures].[Blog Count])
+```
 <p class="MsoNormal" style="text-align: justify;">
   <span lang="EN-US">This calculated measure is the tuple of the normal additive measure </span><em>Blog </em>Count with the current data member of the parent-child hierarchy <em>Blogger</em>. This forces the cube to take the actual value of a member in the hierarchy instead of calculating an aggregate. We now get the following results:
 </p>

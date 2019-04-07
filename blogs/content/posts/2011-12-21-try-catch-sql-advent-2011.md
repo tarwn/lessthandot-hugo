@@ -3,6 +3,7 @@ title: 'SQL Advent 2011 Day 21: TRY CATCH'
 author: SQLDenis
 type: post
 date: 2011-12-21T23:15:00+00:00
+ID: 1458
 excerpt: Today we are going to take a look at TRY CATCH. Like in most modern programming languages, you put your code in the TRY block and you check for the errors in the CATCH block. SQL Server has a bunch of functions that will help you identify why your code failed, here is a list of the functions and what they return
 url: /index.php/datamgmt/datadesign/try-catch-sql-advent-2011/
 views:
@@ -52,7 +53,8 @@ returns the complete text of the error message. The text includes the values sup
 
 Let&#8217;s run an example that generates a divide by zero error, in the catch we are just doing a simple select that calls the functions mentioned before to see what they return
 
-<pre>BEGIN TRY
+sql
+BEGIN TRY
     --  divide-by-zero error.
     SELECT 1/0
 END TRY
@@ -64,7 +66,8 @@ BEGIN CATCH
     ,ERROR_PROCEDURE() AS ErrorProcedure
     ,ERROR_LINE() AS ErrorLine
     ,ERROR_MESSAGE() AS ErrorMessage;
-END CATCH;</pre>
+END CATCH;
+```
 
 
 
@@ -78,18 +81,21 @@ As you can see we got all that information back, that was pretty nice. Let&#8217
 
 Create the following table to store all the error information in
 
-<pre>CREATE TABLE LogErrors (ErrorTime datetime,
+sql
+CREATE TABLE LogErrors (ErrorTime datetime,
 			ErrorNumber int,
 			ErrorSeverity int,
 			ErrorState int, 
 			ErrorProc nvarchar(100), 
 			ErrorLine int, 
 			ErrorMessage nvarchar(1000))
-GO</pre>
+GO
+```
 
 Create this stored procedure that will insert into the table we just created
 
-<pre>CREATE PROCEDURE prInsertError
+sql
+CREATE PROCEDURE prInsertError
 AS
 INSERT LogErrors
 SELECT GETDATE(),
@@ -99,11 +105,13 @@ SELECT GETDATE(),
     ERROR_PROCEDURE(), 
     ERROR_LINE(), 
     ERROR_MESSAGE() ;
-GO</pre>
+GO
+```
 
 Run these 3 queries, they will generate 3 inserts into the LogErrors table
 
-<pre>BEGIN TRY
+sql
+BEGIN TRY
     SELECT 1/0
 END TRY
 BEGIN CATCH
@@ -124,11 +132,13 @@ BEGIN TRY
 END TRY
 BEGIN CATCH
     EXEC prInsertError
-END CATCH;</pre>
-
+END CATCH;
+```
 If you check now what is in the table, you will see 3 rows
 
-<pre>SELECT * FROM LogErrors</pre>
+sql
+SELECT * FROM LogErrors
+```
 
 
 

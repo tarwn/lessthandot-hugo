@@ -3,6 +3,7 @@ title: Ecofont, Will this save the planet?
 author: SQLDenis
 type: post
 date: 2009-07-17T12:18:00+00:00
+ID: 514
 excerpt: |
   I saw this in National Geographic magazine 2 days ago and found it a bit interesting.
   Take a look at this font below

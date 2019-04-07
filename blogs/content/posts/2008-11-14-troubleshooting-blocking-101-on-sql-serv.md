@@ -3,6 +3,7 @@ title: Troubleshooting Blocking 101 on SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2008-11-14T19:05:33+00:00
+ID: 206
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/troubleshooting-blocking-101-on-sql-serv/
 views:
   - 13828
@@ -26,21 +27,23 @@ For now let&#8217;s be old fassion and cheap&#8230;
 
 First query the master.dbo.sysprocesses view. There is a column named &#8220;blocked&#8221;. If the value is 1 then you have blocking going on. So if you wanted to do something really simple you could create a job that runs to check for this and send an email out to you.
 
-<pre>Declare @body varchar(1000)
+sql
+Declare @body varchar(1000)
 Set @body = 'Blocking on ' + @@servername 
 
 if Exists(select 1 from master.dbo.sysprocesses where blocked = 1)
  EXEC msdb.dbo.sp_send_dbmail @recipients='you@yourcompany.com;myphone@provider.com',
   @subject = 'Blocking notification',
   @body = @body,
-  @profile_name = 'SQL DBA'</pre>
-
+  @profile_name = 'SQL DBA'
+```
 Yes that is crude. Not real great at all. I just wanted to show you that you can do it and there are mcuh better ways but not the point of this article 🙂
 
 So what I had to do next now that I knew blocking was occuring was find out the blocking transaction. Again using SQLDM this is easy but sp_lock will give you the same information.
 
-<pre>Exec sp_lock</pre>
-
+sql
+Exec sp_lock
+```
 What I could see then was the transaction locking the object and another transaction trying to grab another lock on it. My write up on deadlock notifications is close to come for how this could go even farther south.
 
 <div class="image_block">
@@ -53,24 +56,27 @@ So the next step is to get the batch 177 is sending over. The way to do this is 
 
 so first my ID is 208
 
-<pre>select * from sys.dm_exec_requests where session_id = 208</pre>
-
+sql
+select * from sys.dm_exec_requests where session_id = 208
+```
 This returned a sql_handle of 0x020000005B7A3A210C1B9AEEC5467BB6AFC4BA74F1C4964A for my session id
 
 now we can grab the text
 
-<pre>select * from  sys.dm_exec_sql_text(0x02000000E7CB3C0ADF13F985EC06EB70C8FD4EB6F9F686BA) </pre>
-
+sql
+select * from  sys.dm_exec_sql_text(0x02000000E7CB3C0ADF13F985EC06EB70C8FD4EB6F9F686BA) 
+```
 which returned &#8220;select * from sys.dm\_exec\_requests&#8221;
 
 We could also use a CROSS APPLY to the sys.dm_exec-connections to grab all the SQL text like
 
-<pre>select 
+sql
+select 
  *
 from 
 sys.dm_exec_connections a
-CROSS APPLY sys.dm_exec_sql_text(most_recent_sql_handle) </pre>
-
+CROSS APPLY sys.dm_exec_sql_text(most_recent_sql_handle) 
+```
 Nice information to have for your analysis
 
 Well in this mornings case it returned a query a bit larger but you see how I got there in this case. Once I had the query I was able to make sure SQL Server was first using indexes correctly. Yes people you should always check your execution plan. No matter how small the query is!!! In this case I did add and index increasing the performance by about 40%. Almost fixed it. So I thought anyhow. Then I checked statistics and there wasn&#8217;t much there. Second was to update the statistics and also check fragementation on the other supporting indexes. Still the blocking was coming up. 

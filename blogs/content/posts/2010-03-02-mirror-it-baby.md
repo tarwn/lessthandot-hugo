@@ -3,6 +3,7 @@ title: Choosing operating modes for mirroring over a WAN
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-03-02T14:37:27+00:00
+ID: 716
 excerpt: Over the weekend on twitter, the topic of high availability over a Wide Area Network (WAN) came up. The limit of 140 characters doesn’t do this topic justice, so a follow up is a good idea.....
 url: /index.php/datamgmt/dbprogramming/mirror-it-baby/
 views:
@@ -33,37 +34,43 @@ On the principal (north region) create the primary database
   
 
 
-<pre>CREATE DATABASE [remotemirror_deleteon03032010] ON  PRIMARY 
+sql
+CREATE DATABASE [remotemirror_deleteon03032010] ON  PRIMARY 
 ( NAME = N'remotemirror', FILENAME = N'C:remotemirror.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, 
 FILEGROWTH = 100MB )
  LOG ON 
 ( NAME = N'remotemirror_log', FILENAME = N'C:remotemirror_log.ldf' , SIZE = 1024KB , MAXSIZE = 1024GB , 
 FILEGROWTH = 10MB)
-GO</pre>
+GO
+```
 
 Next, take our initial full backup followed by a tail-end transaction log backup
   
 
 
-<pre>BACKUP DATABASE [remotemirror_deleteon03032010] TO  DISK = N'C:delelet_remotemirror.bak' 
+sql
+BACKUP DATABASE [remotemirror_deleteon03032010] TO  DISK = N'C:delelet_remotemirror.bak' 
 WITH NOFORMAT, NOINIT,  NAME = N'remotemirror-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO
 
 BACKUP LOG [remotemirror_deleteon03032010] TO  DISK = N'C:delelet_remotemirror.bak' 
 WITH NOFORMAT, NOINIT,  NAME = N'remotemirror-Transaction Log  Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
-GO</pre>
+GO
+```
 
 On the designated mirror (southern region) restore the full and tail end transaction log
   
 
 
-<pre>RESTORE DATABASE remotemirror_deleteon03032010 FROM  DISK = N'D:delelet_remotemirror.bak' 
+sql
+RESTORE DATABASE remotemirror_deleteon03032010 FROM  DISK = N'D:delelet_remotemirror.bak' 
 WITH  FILE = 1,  NORECOVERY,  NOUNLOAD,  REPLACE,  STATS = 10
 GO
 
 RESTORE LOG remotemirror_deleteon03032010 FROM  DISK = N'D:delelet_remotemirror.bak' 
 WITH  FILE = 2,  NORECOVERY,  NOUNLOAD,  STATS = 10
-GO</pre>
+GO
+```
 
 Refer to this blog, &#8220;[Using Mirroring to Reduce DB Migration Downtime (Part 1)&#8221;.][1] 
 
@@ -77,7 +84,8 @@ Again, no complexity is added so the statistics.
   
 Execute the following statements step by step. 
 
-<pre>CREATE TABLE MIRROR_TST_01 
+sql
+CREATE TABLE MIRROR_TST_01 
 (
 ID INT IDENTITY(1,1)
 ,COL1 VARCHAR(10)
@@ -106,7 +114,8 @@ UPDATE MIRROR_TST_01 SET COL1 = 'Update Row' WHERE ID = 5
 GO
 DELETE FROM MIRROR_TST_01 WHERE ID = 10
 GO
-DROP TABLE MIRROR_TST_01</pre>
+DROP TABLE MIRROR_TST_01
+```
 
 GO 
 

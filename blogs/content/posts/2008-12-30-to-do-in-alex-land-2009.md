@@ -3,6 +3,7 @@ title: To-Do in Alex Land 2009
 author: Alex Ullrich
 type: post
 date: 2008-12-30T21:30:36+00:00
+ID: 263
 url: /index.php/itprofessionals/ethicsit/to-do-in-alex-land-2009/
 views:
   - 4803
@@ -33,4 +34,4 @@ If I have to tag something, I&#8217;ve still got [Mark Smith][3] in my sights fr
  [1]: /index.php/ITProfessionals/EthicsIT/my-to-do-list-for-2009
  [2]: http://alexcuse.com
  [3]: http://aspnetlibrary.com
- [4]: http://forum.lessthandot.com/memberlist.php?mode=viewprofile&u=54
+ [4]: http://forum.ltd.local/memberlist.php?mode=viewprofile&u=54

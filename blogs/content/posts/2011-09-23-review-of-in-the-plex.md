@@ -3,6 +3,7 @@ title: 'Review of In The Plex: How Google Thinks, Works, and Shapes Our Lives by
 author: SQLDenis
 type: post
 date: 2011-09-23T15:18:00+00:00
+ID: 1325
 excerpt: |
   Having read three books written by Stephen Levy (Hackers, Crypto and Artificial Life) already I was excited that he had a book coming out about Google.
   

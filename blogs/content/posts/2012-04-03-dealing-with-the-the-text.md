@@ -3,6 +3,7 @@ title: Dealing with the “The text, ntext, or image pointer value conflicts wit
 author: Naomi Nosonovsky
 type: post
 date: 2012-04-03T22:58:00+00:00
+ID: 1569
 excerpt: |
   Recently my colleague sent me a strange error she was getting in our VFP application
   "The text, ntext, or image pointer value conflicts with the column name specified."
@@ -35,7 +36,8 @@ Luckily there was a relatively simple solution for this problem: use direct upda
 
 Here is a test program that can demonstrate the problem:
 
-<pre>ON ERROR 
+```
+ON ERROR 
 CLEAR ALL
 CLEAR 
 oAppObj = NEWOBJECT('my_appObj','my_Class.vcx')
@@ -70,7 +72,8 @@ replace SeatMap WITH m.lcStr IN rsSeatMaps
 ?AERROR(laError)
 DISPLAY MEMORY LIKE laError
 SQLDISCONNECT(0)
-WAIT CLEAR</pre>
+WAIT CLEAR
+```
 
 The first direct update command succeeds, but the second remote view update fails.
 

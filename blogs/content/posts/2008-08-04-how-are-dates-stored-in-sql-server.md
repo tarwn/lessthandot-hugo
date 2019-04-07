@@ -3,6 +3,7 @@ title: How Are Dates Stored In SQL Server?
 author: SQLDenis
 type: post
 date: 2008-08-04T13:57:08+00:00
+ID: 100
 url: /index.php/datamgmt/datadesign/how-are-dates-stored-in-sql-server/
 views:
   - 27088
@@ -16,14 +17,16 @@ Internally dates are stored as 2 integers. The first integer is the number of da
 
 So if we run the following code for the base date (1900/01/01) 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = '1900-01-01 00:00:00.000' 
 
 
 SELECT CONVERT(INT,SUBSTRING(CONVERT(VARBINARY(8),@d),1,4)) AS DateInt, 
 SUBSTRING(CONVERT(VARBINARY(8),@d),1,4) AS DateBinary 
 SELECT CONVERT(INT,SUBSTRING(CONVERT(VARBINARY(8),@d),5,4)) AS TimeInt, SUBSTRING(CONVERT(VARBINARY(8),@d),5,4) AS TimeBinary 
-Go </pre>
+Go 
+```
 
 The results are 
 
@@ -41,14 +44,16 @@ TimeInt TimeBinary
 
 If we use the max date 9999/12/31 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = '9999-12-31 23:59:59.997' 
 
 
 SELECT CONVERT(INT,SUBSTRING(CONVERT(VARBINARY(8),@d),1,4)) AS DateInt, 
 SUBSTRING(CONVERT(VARBINARY(8),@d),1,4) AS DateBinary 
 SELECT CONVERT(INT,SUBSTRING(CONVERT(VARBINARY(8),@d),5,4)) AS TimeInt, SUBSTRING(CONVERT(VARBINARY(8),@d),5,4) AS TimeBinary 
-Go </pre>
+Go 
+```
 
 we get the following result 
 
@@ -66,22 +71,28 @@ TimeInt TimeBinary
 
 If you take binary values and convert to datetime you get the following results 
 
-<pre>SELECT CONVERT(DATETIME,0x0000000000000001) --1 Tick 1/300 of a second </pre>
+```sql
+SELECT CONVERT(DATETIME,0x0000000000000001) --1 Tick 1/300 of a second 
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
 &#8211;1900-01-01 00:00:00.003 
 
-<pre>SELECT CONVERT(DATETIME,0x000000000000012C) -- 1 minute = 300 ticks </pre>
+```sql
+SELECT CONVERT(DATETIME,0x000000000000012C) -- 1 minute = 300 ticks 
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
 &#8211;1900-01-01 00:00:01.000 
 
-<pre>SELECT CONVERT(INT,0x12C) --= 300 
+```sql
+SELECT CONVERT(INT,0x12C) --= 300 
 SELECT CONVERT(VARBINARY(3),300) --= 0x00012C 
 
-SELECT CONVERT(DATETIME,0x0000000100000000) --add 1 day </pre>
+SELECT CONVERT(DATETIME,0x0000000100000000) --add 1 day 
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
@@ -91,46 +102,56 @@ For smalldatetime the time is stored as the number of minutes after midnight
 
 Now here is some fun stuff 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = .0 
 SELECT @d 
-GO </pre>
+GO 
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
 &#8211;1900-01-01 00:00:00.000 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = .1 
 SELECT @d 
-GO </pre>
+GO 
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
 &#8211;1900-01-01 02:24:00.000 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = .12 
 SELECT @d 
-GO </pre>
+GO 
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
 &#8211;1900-01-01 02:52:48.000 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = '0' 
 SELECT @d 
-GO </pre>
+GO 
+```
 
 Server: Msg 241, Level 16, State 1, Line 2
   
 Syntax error converting datetime from character string. 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = 0 
 SELECT @d 
-GO </pre>
+GO 
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
@@ -138,19 +159,23 @@ GO </pre>
 
 So there is no implicit conversion, o is fine &#8216;o&#8217; is not 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = 20061030 
 SELECT @d 
-GO </pre>
+GO 
+```
 
 Server: Msg 8115, Level 16, State 2, Line 2
   
 Arithmetic overflow error converting expression to data type datetime. 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = '20061030' 
 SELECT @d 
-GO </pre>
+GO 
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
@@ -162,10 +187,12 @@ This happens because the max integer value that a datetime can take is 36523
   
 If we run the following we are okay 
 
-<pre>DECLARE @d DATETIME 
+```sql
+DECLARE @d DATETIME 
 SELECT @d = 2958463 
 SELECT @d 
-GO </pre>
+GO 
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   

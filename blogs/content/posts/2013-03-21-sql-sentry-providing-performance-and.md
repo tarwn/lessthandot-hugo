@@ -3,6 +3,7 @@ title: SQL Sentry – Providing Performance and Knowledge
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-03-21T07:51:00+00:00
+ID: 2044
 excerpt: 'If you’ve read my past blogs, you’ll know that I believe SQL Sentry Plan Explorer is absolutely a must for assisting in execution plan review, tuning and troubleshooting.  Recently, SQL Sentry went to the next level with the services offered in Plan Exp&hellip;'
 url: /index.php/datamgmt/dbprogramming/sql-sentry-providing-performance-and/
 views:

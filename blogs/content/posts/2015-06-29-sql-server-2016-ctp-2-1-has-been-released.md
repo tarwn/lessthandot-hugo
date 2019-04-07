@@ -3,6 +3,7 @@ title: SQL Server 2016 CTP 2.1 has been released
 author: Koen Verbeeck
 type: post
 date: 2015-06-29T12:59:52+00:00
+ID: 3432
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sql-server-2016-ctp-2-1-has-been-released/
 views:
   - 25072

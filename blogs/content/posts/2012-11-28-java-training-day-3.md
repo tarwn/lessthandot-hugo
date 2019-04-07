@@ -3,6 +3,7 @@ title: Java Training Day 3
 author: SQLDenis
 type: post
 date: 2012-11-28T23:42:00+00:00
+ID: 1809
 excerpt: |
   Today was day three of our Java training, we did mostly OOP stuff today. I also noticed that whenever you do a week of training by the team that Wednesday PM comes along, you are pretty much mush.
   
@@ -52,14 +53,17 @@ Finally we looked at Annotations and Enumerated Types
 
 Here is an example of an enum from the java docs http://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
 
-<pre>public enum Day {
+```java
+public enum Day {
     SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
     THURSDAY, FRIDAY, SATURDAY 
-}</pre>
+}
+```
 
 Here is an example of a switch statement using the enum
 
-<pre>public class EnumTest {
+```java
+public class EnumTest {
     Day day;
     
     public EnumTest(Day day) {
@@ -98,8 +102,8 @@ Here is an example of a switch statement using the enum
         EnumTest seventhDay = new EnumTest(Day.SUNDAY);
         seventhDay.tellItLikeItIs();
     }
-}</pre>
-
+}
+```
 The output is
 
 Mondays are bad.

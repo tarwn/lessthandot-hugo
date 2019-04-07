@@ -3,6 +3,7 @@ title: Adding External Tools to SQL Server
 author: David Forck (thirster42)
 type: post
 date: 2011-01-27T14:03:00+00:00
+ID: 1015
 excerpt: 'At my company, security for IT personnel is a bit interesting.  Each IT employee has two accounts, a regular account, and a "1" account.  The one account is our regular account with a 1 appended to it.  How this works is our regular accounts have normal&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/adding-external-tools-to-sql/
 views:

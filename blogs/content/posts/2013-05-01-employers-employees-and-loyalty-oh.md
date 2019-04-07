@@ -3,6 +3,7 @@ title: Employers, Employees and Loyalty, Oh My!
 author: chopstik
 type: post
 date: 2013-05-01T06:38:00+00:00
+ID: 2075
 excerpt: 'I recently read an article discussing the idea of loyalty, particularly as it applies to millennials – those of the youngest generation currently working. The article was titled “The Truth About Millennials and Job Loyalty”.  I found the article to be a&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/employers-employees-and-loyalty-oh/
 views:

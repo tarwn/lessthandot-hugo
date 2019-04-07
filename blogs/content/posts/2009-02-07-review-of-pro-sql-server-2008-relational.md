@@ -3,6 +3,7 @@ title: Review of Pro SQL Server 2008 Relational Database Design and Implementati
 author: SQLDenis
 type: post
 date: 2009-02-07T17:45:30+00:00
+ID: 318
 url: /index.php/webdev/webdesigngraphicsstyling/review-of-pro-sql-server-2008-relational/
 views:
   - 8627

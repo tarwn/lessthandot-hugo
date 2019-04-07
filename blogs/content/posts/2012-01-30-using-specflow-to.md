@@ -3,6 +3,7 @@ title: Using SpecFlow to drive Selenium WebDriver Tests
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-01-30T10:52:00+00:00
+ID: 1511
 excerpt: SpecFlow is a .Net library that allows us to describe user expectations in a consistent Domain-Specific Language that can be wired for automatic execution. By writing tests in a human readable manner, our tests can serve as a bridge between the users expectations and the code we spend time writing.
 url: /index.php/enterprisedev/application-lifecycle-management/using-specflow-to/
 views:
@@ -93,7 +94,8 @@ Note that these are a collaborative effort. My pretend end user probably came up
 
 Writing this in a Feature File in Gherkin we would have something like:
 
-<pre>Feature: Cart Total
+```gherkin
+Feature: Cart Total
 	As a shopper 
 	I want to see my cart total on every screen 
 	So I don't have to leave my current page to verify it's contents
@@ -111,8 +113,8 @@ Scenario: Add an Item
 	When I add the album to my cart
 	Then the cart has a total of 1
 
-...</pre>
-
+...
+```
 I&#8217;ve added a SpecFlow Feature File to the project and I can write all of the scenarios for the feature. After saving it, I can run the Nunit GUI and see a series of new, inconclusive tests, each named after the Scenario name I provided in the Feature File.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
@@ -131,19 +133,20 @@ Based on coding up several earlier SpecFlow steps, I ended up with a base class 
 
 **InterfaceTests/Features/FeatureBase.cs**
 
-<pre>namespace MvcMusicStore.InterfaceTests.Features {
+```csharp
+namespace MvcMusicStore.InterfaceTests.Features {
         public class FeatureBase : TestFixtureBase {
 
                 #region Properties for Readability
 
-                /// <summary&gt;
+                /// <summary>
                 /// Shortcut property to Settings.CurrentSettings.Defaults for readability
-                /// </summary&gt;
+                /// </summary>
                 protected DefaultValues Default { get { return Settings.CurrentSettings.Defaults; } }
 
-                /// <summary&gt;
+                /// <summary>
                 /// Sets the Current page to the specified value - provided to help readability
-                /// </summary&gt;
+                /// </summary>
                 protected PageBase NextPage { set { CurrentPage = value; } }
 
                 #endregion
@@ -174,8 +177,8 @@ Based on coding up several earlier SpecFlow steps, I ended up with a base class 
                 }
         }
 
-}</pre>
-
+}
+```
 I&#8217;ve used the SpecFlow hooks for BeforeScenario and AfterScenario to handle initialization and I&#8217;ve used the provided ScenarioContext to help store a common driver and the current page. I&#8217;ve also specified that these hooks only occur for tests tagged with &#8220;UI&#8221; so I can later create some additional tests that will make direct calls to the JSON controller endpoints without spinning up a whole browser session.
 
 At this point I still get all &#8220;Inconclusive&#8221; test results from Nunit, but I can see that each tests fires up a browser as Nunit progresses through the test run and the Before/AfterScenario hooks are called.
@@ -198,12 +201,13 @@ Once I have the Step Definition methods setup, I can go ahead and wire in the co
 
 **InterfaceTests/Features/Cart.feature**
 
-<pre>Given I have the Home Page open
+```gherkin
+Given I have the Home Page open
 	And I select a genre from the left
 	And I select an album from the genre page
 	When I add the album to my cart
-	Then the cart has a total of 1</pre>
-
+	Then the cart has a total of 1
+```
 Keep in mind if you look at the code repository some of these steps are in separate files.
 
 ### Given I have the Home Page Open
@@ -212,11 +216,12 @@ Each of my scenarios starts with the same step, ensuring we have the browser ope
 
 **InterfaceTests/Features/NavigationSteps.cs** &#8211; this is the step I borrowed from a previous test
 
-<pre>[Given(@"I have the Home Page open")]
+```csharp
+[Given(@"I have the Home Page open")]
 public void IHaveTheHomePageOpen() {
 	NextPage = PageBase.LoadIndexPage(CurrentDriver, Settings.CurrentSettings.BaseUrl);
-}</pre>
-
+}
+```
 The class definition for FeatureBase above includes a CurrentPage property that we use to store and retrieve the page object associated with the browsers current page. To improve readability a little, I&#8217;ve created the NextPage property, which is simply a setter for the CurrentPage one. 
 
 ### And I select a genre from the left
@@ -225,11 +230,12 @@ All pages in the application display the genre list on the left, so this makes a
 
 **InterfaceTests/Features/CartSteps.cs**
 
-<pre>[Given(@"I select a genre from the left")]
+```csharp
+[Given(@"I select a genre from the left")]
 public void GivenISelectAGenreFromTheLeft() {
 	NextPage = CurrentPage.SelectGenre(Default.Genre.Name);
-}</pre>
-
+}
+```
 All page objects extend the PageBase class, so I&#8217;ve added a partial class for PageBase (PageLibraryPageBase.Navigation.cs) that includes navigation and behavior that&#8217;s common to all pages in the application. 
 
 **Default.Genre.Name**: As I mentioned earlier, there is a singleton Settings object that is responsible for loading settings from an XML file and making them available to the tests. I&#8217;ve added a _Genre_ and _Album_ element to the settings file so I can provide some default values without hardcoding them into the test code or, worse, each individual test. I then created another shortcut property in my FeatureBase so I can reference these values by the property name Default instead of the much longer Settings.CurrentSettings.Default.
@@ -240,44 +246,48 @@ Once I have the genre page open, I can select an album that I intend to add to t
 
 **InterfaceTests/Features/CartSteps.cs**
 
-<pre>[Given(@"I select an album from the genre page")]
+```csharp
+[Given(@"I select an album from the genre page")]
 public void GivenISelectAnAlbumFromTheGenrePage() {
-	NextPage = CurrentPage.As<BrowsePage&gt;().SelectAlbum(Default.Album.Name);
-}</pre>
-
+	NextPage = CurrentPage.As<BrowsePage>().SelectAlbum(Default.Album.Name);
+}
+```
 One of the downsides of having a single property to track the current page is that it is typed as a PageBase object. I could add cast statements to each line, but by adding a generic method to handle the cast, I preserve the left-to-right reading order of the statement. Had I used an inline cast, we would be looking at:
 
-<pre>[Given(@"I select an album from the genre page")]
+```csharp
+[Given(@"I select an album from the genre page")]
 public void GivenISelectAnAlbumFromTheGenrePage() {
 	NextPage = ((BrowsePage)CurrentPage).SelectAlbum(Default.Album.Name);
-}</pre>
-
+}
+```
 Which just doesn&#8217;t seem as readable to me.
 
 I&#8217;ve added the generic cast method to the PageBase method to make it easily accessible:
 
 **PageLibrary/Base/PageBase.cs**
 
-<pre>public abstract partial class PageBase : CommonBase {
+```csharp
+public abstract partial class PageBase : CommonBase {
 
 	//...
 	
-	public TPage As<TPage&gt;() where TPage : PageBase, new() {
+	public TPage As<TPage>() where TPage : PageBase, new() {
 		return (TPage)this;
 	}
-}</pre>
-
+}
+```
 ### When I add the album to my cart
 
 If you remember, the original scenario we listed above was &#8220;When I add an item to my cart, it displays a total of 1&#8221;. Often it is fairly easy to separate the Given portion of our scenario from the When/Then portion because the Given part is often the part that we took for granted when we were describing the scenario or when it was described to us.
 
 **InterfaceTests/Features/CartSteps.cs**
 
-<pre>[When(@"I add the album to my cart")]
+```csharp
+[When(@"I add the album to my cart")]
 public void WhenIAddTheAlbumToMyCart() {
-	NextPage = CurrentPage.As<AlbumDetailPage&gt;().AddToCart();
-}</pre>
-
+	NextPage = CurrentPage.As<AlbumDetailPage>().AddToCart();
+}
+```
 As you can tell by now, the actual logic that goes into the step definition files is fairly minimal. This is by design and is similar to the MVC concept of a thin controller. By keeping the page behavior in the page objects, we&#8217;re attempting to minimize the brittleness of our test code.
 
 ### Then the cart has a total of 1
@@ -286,11 +296,12 @@ The last step is to verify the expectation. We&#8217;re going to do something a 
 
 **InterfaceTests/Features/CartSteps.cs**
 
-<pre>[Then(@"the cart has a total of (d+)")]
+```csharp
+[Then(@"the cart has a total of (d+)")]
 public void ThenTheCartHasATotalOf(int expectedTotal) {
 	CurrentPage.VerifyCartTotalIs(expectedTotal);
-}</pre>
-
+}
+```
 SpecFlow allows us to enter a regular expression in the step definition, which it will then use to populate arguments for our step definition function. So instead of making a separate function for testing a cart total of 0, 1, and 2, I can make one function that tests whichever value matches the match group in my decorators expression.
 
 ### Result

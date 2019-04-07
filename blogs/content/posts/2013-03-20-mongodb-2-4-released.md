@@ -3,6 +3,7 @@ title: MongoDB 2.4 Released
 author: SQLDenis
 type: post
 date: 2013-03-20T07:51:00+00:00
+ID: 2040
 excerpt: |
   MongoDB 2.4 has been released. MongoDB 2.4 is the latest stable release, following the September 2012 release of MongoDB 2.2. The MongoDB 2.4 release contains key new features along with performance improvements and bug fixes.
   

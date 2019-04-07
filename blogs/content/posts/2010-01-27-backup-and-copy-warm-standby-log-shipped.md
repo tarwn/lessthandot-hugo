@@ -3,6 +3,7 @@ title: Backup and copy warm-standby (log shipped) databases in SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-01-27T13:13:19+00:00
+ID: 688
 excerpt: 'Most DR solutions include log shipping strategies.  Log shipping (LS) is an extremely inexpensive solution for DR and also one I recommend.  There is little learning curve to individuals just coming into the administration career for setting LS up and m&hellip;'
 url: /index.php/datamgmt/datadesign/backup-and-copy-warm-standby-log-shipped/
 views:
@@ -37,7 +38,8 @@ Let’s setup a test database to play with. We’ll create, backup and restore t
   
 
 
-<pre>CREATE DATABASE bah
+sql
+CREATE DATABASE bah
 GO
 BACKUP DATABASE bah TO DISK = 'C:bah.bak'
 GO
@@ -45,7 +47,8 @@ RESTORE DATABASE [bah] FROM
 DISK = N'C:bah.bak' 
 WITH  FILE = 1,  STANDBY = N'C:ROLLBACK_UNDO_bah.BAK',  
 NOUNLOAD,  REPLACE,  STATS = 10
-GO</pre>
+GO
+```
 
 We should now have, “bah (Standby /Read-Only) listed in our database tree.
 
@@ -55,17 +58,21 @@ To do this we perform the following steps
   
 
 
-<pre>USE MASTER
+sql
+USE MASTER
 GO
-ALTER DATABASE bah SET OFFLINE</pre>
+ALTER DATABASE bah SET OFFLINE
+```
 
 Now go to the default folder where the mdf and other files are located and copy/paste them to a local drive. I mentioned local drive because we need to do this as quickly as possible. If there is enough free space locally, it will be the fastest copy transmission. Otherwise at this stage it is crucial to ensure you have disabled the LS plans so no unwanted jobs attempt to access the database while it is offline. 
 
 Once you’ve copied the files off, run the following to bring the database back up
 
-<pre>USE MASTER
+sql
+USE MASTER
 GO
-ALTER DATABASE bah SET ONLINE</pre>
+ALTER DATABASE bah SET ONLINE
+```
 
 We should see the database has come back up in standby mode and log shipping can proceed as normal.
 
@@ -75,7 +82,8 @@ Next, we only need to attach the files to a new instance given the following com
 
 On the secondary instance do the following steps
 
-<pre>CREATE DATABASE bah
+sql
+CREATE DATABASE bah
 ON 
 ( NAME = bah_data,FILENAME = 'c:restorebah.mdf')
 LOG ON
@@ -88,13 +96,16 @@ GO
 --new database to.  in my case C:restore 
 --make sure you replace the files and that the file names, both data and logs are identical to the original
 ALTER DATABASE bah SET ONLINE
-GO</pre>
+GO
+```
 
 Now we can see already in the tree of object explorer that the database online and read-write state. There is no need to issue a restore to recovery or anything. 
 
 To verify, we can check the read only state in sys.databases
 
-<pre>select is_read_only from sys.databases where [name] = 'bah'</pre>
+sql
+select is_read_only from sys.databases where [name] = 'bah'
+```
 
 This will result in 0 meaning the database is read-write 
 

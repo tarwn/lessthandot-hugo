@@ -3,6 +3,7 @@ title: SQL Server 2008 geography data type screencasts on Channel 9
 author: SQLDenis
 type: post
 date: 2008-07-19T18:38:12+00:00
+ID: 88
 url: /index.php/datamgmt/datadesign/sql-server-2008-geography-data-type-scre-9/
 views:
   - 6105

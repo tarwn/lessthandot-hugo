@@ -3,6 +3,7 @@ title: 'Book Review: Pro SQL Server 2012 Practices'
 author: Axel Achten (axel8s)
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 1895
 excerpt: "While reading Microsoft SQL Server 2012 T-SQL Fundamentals, I decided I should always have a book with me to read, learn and understand more about the technoligies and environments I'm working in. So when I finished the book I didn't had to look long. S&hellip;"
 draft: true
 url: /?p=1895

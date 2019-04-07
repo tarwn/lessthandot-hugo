@@ -3,6 +3,7 @@ title: Windows Server 2008 R2 is the first Windows OS platform to go 64-bit only
 author: SQLDenis
 type: post
 date: 2008-10-31T14:30:55+00:00
+ID: 192
 url: /index.php/sysadmins/os/windows-server-2008-r2-is-the-first-wind/
 views:
   - 4394

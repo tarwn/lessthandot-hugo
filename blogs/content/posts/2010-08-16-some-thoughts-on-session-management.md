@@ -3,6 +3,7 @@ title: Some Thoughts on Session Management
 author: Alex Ullrich
 type: post
 date: 2010-08-16T21:31:00+00:00
+ID: 870
 url: /index.php/webdev/serverprogramming/aspnet/some-thoughts-on-session-management/
 views:
   - 4580

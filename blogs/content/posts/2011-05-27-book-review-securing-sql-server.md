@@ -3,6 +3,7 @@ title: 'Book Review: Securing SQL Server By Denny Cherry'
 author: SQLDenis
 type: post
 date: 2011-05-27T15:11:00+00:00
+ID: 1191
 excerpt: 'Every week you hear a new story about some site that got hacked via SQL Injection or that backup tapes have been lost/misplaced. Data is the most important asset of an organization, without data the company has nothing. Unfortunately this data is also h&hellip;'
 url: /index.php/datamgmt/datadesign/book-review-securing-sql-server/
 views:

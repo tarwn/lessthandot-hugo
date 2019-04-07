@@ -3,6 +3,7 @@ title: 'SSRS Nugget: displaying placeholders when no rows are returned'
 author: Koen Verbeeck
 type: post
 date: 2014-05-15T12:59:04+00:00
+ID: 2625
 url: /index.php/datamgmt/dbprogramming/mssqlserver/ssrs-nugget-displaying-placeholders-when-no-rows-are-returned/
 views:
   - 20964
@@ -30,9 +31,10 @@ tags:
   So the “No rows message” property was not what the OP wanted. He still wanted to display the table with the header, but just a line with the value “None” for every cell. To test it out, I created a simple report pulling back some data from AdventureWorks. I used the following query:
 </p>
 
-<pre>SELECT        ProductCategoryAlternateKey, EnglishProductCategoryName
-FROM            DimProductCategory;</pre>
-
+sql
+SELECT        ProductCategoryAlternateKey, EnglishProductCategoryName
+FROM            DimProductCategory;
+```
 <p style="text-align: justify">
   Not exactly rocket science. This gives me the following tablix (I spent an insanely amount of time on the layout):
 </p>
@@ -61,14 +63,16 @@ FROM            DimProductCategory;</pre>
   On the row visibility property, I used the following expression:
 </p>
 
-<pre>=iif(CountRows() = 0,False,True)</pre>
-
+```vb
+=iif(CountRows() = 0,False,True)
+```
 <p style="text-align: justify">
   You can find more info on CountRows <a href="http://technet.microsoft.com/en-us/library/ms156330(v=sql.100).aspx">here</a>. However, when I ran the report the extra row didn’t show up. Maybe I needed to add a scope as a parameter to the CountRows function? So I changed the expression to this, with <em>TablixTest</em> being the name of the Tablix:
 </p>
 
-<pre>=iif(CountRows(“TablixTest”) = 0,False,True)</pre>
-
+```vb
+=iif(CountRows(“TablixTest”) = 0,False,True)
+```
 <p style="text-align: justify">
   The line still didn’t show up. I changed the scope to <i>Detail</i> (in the hope it would count the detail lines), but no luck. To be honest, I don’t know much about scopes in SSRS. Then I had an idea: I added the extra row to the details of the tablix. What if I added it outside that group?
 </p>

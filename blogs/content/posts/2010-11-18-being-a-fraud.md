@@ -3,6 +3,7 @@ title: Being a Fraud
 author: chopstik
 type: post
 date: 2010-11-19T00:28:14+00:00
+ID: 952
 excerpt: 'I saw this blog the other day entitled Why I feel like a fraud and it was something to which I could immediately relate.  The author does a good job of explaining about feeling like a fraud, someone who lives in fear of being exposed for not being good&hellip;'
 url: /index.php/itprofessionals/ethicsit/being-a-fraud/
 views:

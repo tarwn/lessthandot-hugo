@@ -3,6 +3,7 @@ title: 'WiSSUG “Filegroups: Putting the Pieces Together” Materials'
 author: Jes Borland
 type: post
 date: 2012-01-11T01:17:00+00:00
+ID: 1486
 excerpt: |
   I had a great time presenting for WiSSUG tonight! My presentation files can be downloaded here. 
   

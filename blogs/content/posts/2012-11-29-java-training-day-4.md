@@ -3,6 +3,7 @@ title: Java Training Day 4
 author: SQLDenis
 type: post
 date: 2012-11-29T18:55:00+00:00
+ID: 1811
 excerpt: |
   Java Day 4
   
@@ -259,11 +260,14 @@ The general purpose implementations are summarized in the table below:
 
 Code to the interface, not to the class, you can now change the container without having to make code changes
 
-<pre>ArrayList<Integer&gt;   list  = new ArrayList<Integer&gt;();
-LinkedList<Integer&gt;  list =  new LinkedList<Integer&gt;();</pre>
-
-<pre>List<Integer&gt; list  = new ArrayList<Integer&gt;();
-List<Integer&gt; list =  new LinkedList<Integer&gt;();</pre>
+```java
+ArrayList<Integer>   list  = new ArrayList<Integer>();
+LinkedList<Integer>  list =  new LinkedList<Integer>();
+```
+```java
+List<Integer> list  = new ArrayList<Integer>();
+List<Integer> list =  new LinkedList<Integer>();
+```
 
 There is a tutorial availabe on the Oracle website here: http://docs.oracle.com/javase/tutorial/collections/index.html
 

@@ -3,6 +3,7 @@ title: An Introduction to New T-SQL Programmability Features in SQL Server 2008
 author: SQLDenis
 type: post
 date: 2008-07-07T11:39:58+00:00
+ID: 79
 url: /index.php/datamgmt/datadesign/an-introduction-to-new-t-sql-programmabi-2008/
 views:
   - 4273

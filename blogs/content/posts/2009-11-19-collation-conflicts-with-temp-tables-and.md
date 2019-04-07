@@ -3,6 +3,7 @@ title: Collation conflicts with temp tables and table variables.
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-19T13:55:10+00:00
+ID: 636
 url: /index.php/datamgmt/dbprogramming/collation-conflicts-with-temp-tables-and/
 views:
   - 28314
@@ -20,15 +21,17 @@ Under normal circumstances, it is best if all your collations match. This includ
 
 **How to detect this problem:**
 
-<pre>Select	'Warning: Collation conflict between user database and TempDB' As Warning
-Where	DatabasePropertyEx('TempDB', 'Collation') <> DatabasePropertyEx(db_name(), 'Collation')</pre>
-
+sql
+Select	'Warning: Collation conflict between user database and TempDB' As Warning
+Where	DatabasePropertyEx('TempDB', 'Collation') <> DatabasePropertyEx(db_name(), 'Collation')
+```
 **How to correct it:** There are several ways to correct this problem. The long term solution is to change the default collation for your database (affecting new string columns) and then change the collation for your existing columns. Alternatively, you could modify any code that creates a temp table or table variable so that it specifies a collation on your string columns. You can hard code the collation or use the default database collation.
 
 ex:
 
-<pre>Create Table #AnyNameYouWant(Id Int, EyeColor VarChar(20) Collate Database_Default)</pre>
-
+sql
+Create Table #AnyNameYouWant(Id Int, EyeColor VarChar(20) Collate Database_Default)
+```
 **Level of severity:** High. This is a hidden, hard to find bug, just waiting to happen.
 
 **Level of difficulty:** Moderate.

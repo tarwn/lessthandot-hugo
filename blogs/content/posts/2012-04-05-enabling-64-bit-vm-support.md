@@ -3,6 +3,7 @@ title: Enabling 64-bit VM support on a HP Probook
 author: Axel Achten (axel8s)
 type: post
 date: 2012-04-05T09:26:00+00:00
+ID: 1586
 excerpt: "When you have a 64-bit machine with a 64-bit OS, you just want you're Virtual Machines to run in 64-bit mode. I use VMWare Player to run my VM's but when I started the install of a 64-bit OS on the out-of-the-box configuration of my HP Probook I got thi&hellip;"
 url: /index.php/sysadmins/hardware/enabling-64-bit-vm-support/
 views:

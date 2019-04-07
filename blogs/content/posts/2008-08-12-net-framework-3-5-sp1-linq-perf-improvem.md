@@ -3,6 +3,7 @@ title: '.NET Framework 3.5 SP1: LINQ perf improvements (LINQ to Objects and LINQ
 author: SQLDenis
 type: post
 date: 2008-08-12T10:56:32+00:00
+ID: 106
 url: /index.php/datamgmt/datadesign/net-framework-3-5-sp1-linq-perf-improvem/
 views:
   - 4071

@@ -3,6 +3,7 @@ title: Blogging Tip – Removing Sensitive Information from Images
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-11-04T11:04:00+00:00
+ID: 1370
 excerpt: 'One of the things that is fairly important when writing articles, blogs, whitepapers or even authoring books is ensuring you do not share any personal information in your screen captures.  This is even more important when you are using company property&hellip;'
 url: /index.php/itprofessionals/policystandards/removing-sensitive-information-from-images/
 views:

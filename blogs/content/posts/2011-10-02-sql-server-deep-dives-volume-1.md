@@ -3,6 +3,7 @@ title: SQL Server Deep Dives Volume 2
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-10-02T22:39:00+00:00
+ID: 1336
 excerpt: 'Many books through the year are published revolving around SQL Server.  Typically they are focused on a features, methodology, design or administrative eccentric.  A few years ago, a different type of book was published named SQL Server Deep Dives.  Thi&hellip;'
 url: /index.php/datamgmt/datadesign/sql-server-deep-dives-volume-1/
 views:

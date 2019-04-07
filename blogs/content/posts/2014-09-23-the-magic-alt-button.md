@@ -3,6 +3,7 @@ title: The Magic Alt Button
 author: Koen Verbeeck
 type: post
 date: 2014-09-23T13:39:54+00:00
+ID: 2967
 url: /index.php/datamgmt/dbprogramming/mssqlserver/the-magic-alt-button/
 views:
   - 12521
@@ -41,7 +42,8 @@ tags:
   Suppose I want to create an update statement to update the Employee dimension of the AdventureWorks database. The source data is located in a staging table with almost the exact schema of the target table. Typically this staging table is populated with update data coming from an incremental load SSIS package. Using a staging table and an update statement in an Execute SQL Task allows us to get rid of the OLE DB Command, which issues updates row by row in SSIS. Which we do not want. Anyway, I digress. Let’s assume the staging table has the following schema:
 </p>
 
-<pre>USE [AdventureWorksDW2012]
+sql
+USE [AdventureWorksDW2012]
 GO
 
 CREATE TABLE [dbo].[Upd_DimEmployee](
@@ -72,9 +74,8 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 	[StartDate] [date] NULL,
 	[EndDate] [date] NULL,
 	[Status] [nvarchar](50) NULL,
-	[EmployeePhoto] [varbinary](max) NULL);</pre>
-
-<p style="text-align: justify">
+	[EmployeePhoto] [varbinary](max) NULL);
+```<p style="text-align: justify">
   This update table has all the updateable columns of the Employee dimension and the surrogate key, but not the business key (since it won’t change anyway). The surrogate key does not have the IDENTITY property, as it will be retrieved from the Employee dimension with a Lookup component in the SSIS package.
 </p>
 

@@ -3,6 +3,7 @@ title: 'Come One, Come All to T-SQL Tuesday #016 : Aggregate Functions'
 author: Jes Borland
 type: post
 date: 2011-02-26T18:39:00+00:00
+ID: 1058
 excerpt: "I'll be hosting T-SQL Tuesday #016 on Tuesday, March 8, 2011. Join the blog party!"
 url: /index.php/datamgmt/dbprogramming/come-one-come-all-to/
 views:
@@ -34,7 +35,7 @@ The first rule of T-SQL Tuesday is: talk about T-SQL Tuesday!
 
   * Post your blog between 00:00 GMT Tuesday, March 8 and 00:00 GMT Wednesday, March 9. (This is equivalent to 8:00 PM EST Monday, March 7 and 8:00 PM EST Tuesday, March 8.) 
   * Come back here and leave a comment or a pingback to your post. 
-  * In the body of the blog, you must include the T-SQL Tuesday logo, with a link back to this blog. (Sample HTML: <code class="codespan"><a href:"/index.php/DataMgmt/DBProgramming/come-one-come-all-to"&gt;<img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif"&gt;</a&gt;</code> ) 
+  * In the body of the blog, you must include the T-SQL Tuesday logo, with a link back to this blog. (Sample HTML: <code class="codespan"><a href:"/index.php/DataMgmt/DBProgramming/come-one-come-all-to"><img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif"></a></code> ) 
 
 **Bonus Points** 
 

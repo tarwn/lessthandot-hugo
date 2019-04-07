@@ -3,6 +3,7 @@ title: 'Energizing the Next Generation: A Women In Tech Discussion at SQL Saturd
 author: Jes Borland
 type: post
 date: 2011-06-15T12:36:00+00:00
+ID: 1222
 excerpt: 'At SQL Saturday #75 Columbus, OH, on June 11, I had the distinct pleasure of moderating the Women in Technology lunch. The topic: "Energizing the Next Generation".'
 url: /index.php/datamgmt/dbadmin/energizing-the-next-generation-a/
 views:

@@ -3,6 +3,7 @@ title: 'MongoDB: Exporting data into files'
 author: SQLDenis
 type: post
 date: 2013-02-03T11:25:00+00:00
+ID: 1960
 excerpt: |
   In this post we are going to take a look at how to export data into files. We are going to export data in json format as well as in csv format. To get started first connect to mongodb and create a new database named ExportDB
   
@@ -51,7 +52,7 @@ To export the data, we need to tell mongoexport what database to use, what colle
 
 Here is the output
 
-<pre>C:NoSQLmongodbbin&gt;mongoexport --db ExportDb --collection Person -fields name,age
+<pre>C:NoSQLmongodbbin>mongoexport --db ExportDb --collection Person -fields name,age
 connected to: 127.0.0.1
 { "_id" : { "$oid" : "510e5da10e0a53ddf5f2865b" }, "name" : "Denis", "age" : 20 }
 { "_id" : { "$oid" : "510e5da20e0a53ddf5f2865c" }, "name" : "Abe", "age" : 30 }
@@ -66,11 +67,12 @@ As you can see you got the output in the window. What about a file? You can use 
 
 Here is the output
 
-<pre>C:NoSQLmongodbbin&gt;mongoexport --db ExportDb --collection Person  -fields name,age -o Person.txt
+<pre>C:NoSQLmongodbbin>mongoexport --db ExportDb --collection Person  -fields name,age -o Person.txt
 connected to: 127.0.0.1
 exported 5 records
 
-C:NoSQLmongodbbin&gt;</pre>
+C:NoSQLmongodbbin>
+</pre>
 
 If you now locate the file in the bin directory and open the file, you should see something like this
 
@@ -86,7 +88,7 @@ Exporting in csv format is pretty much the same as before with the addition of &
 
 Here is the output
 
-<pre>C:NoSQLmongodbbin&gt;mongoexport --db ExportDb --collection Person --csv -fields name,age
+<pre>C:NoSQLmongodbbin>mongoexport --db ExportDb --collection Person --csv -fields name,age
 connected to: 127.0.0.1
 name,age
 "Denis",20.0
@@ -96,17 +98,17 @@ name,age
 "Zen",50.0
 exported 5 records
 
-C:NoSQLmongodbbin&gt;</pre>
+C:NoSQLmongodbbin></pre>
 
 Just like before we want to direct the output into a file instead of onto the screen, we will just add -o Person.csv to the command , the command will look like this
 
 mongoexport &#8211;db ExportDb &#8211;collection Person &#8211;csv -fields name,age -o Person.csv
 
-<pre>C:NoSQLmongodbbin&gt;mongoexport --db ExportDb --collection Person --csv -fields name,age -o Person.csv
+<pre>C:NoSQLmongodbbin>mongoexport --db ExportDb --collection Person --csv -fields name,age -o Person.csv
 connected to: 127.0.0.1
 exported 5 records
 
-C:NoSQLmongodbbin&gt;</pre>
+C:NoSQLmongodbbin></pre>
 
 Now if we open up the file in notepad you will see the following
 

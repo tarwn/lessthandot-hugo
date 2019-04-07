@@ -3,6 +3,7 @@ title: SQL Server Denali CTP1 Announced at PASS
 author: SQLDenis
 type: post
 date: 2010-11-09T16:31:30+00:00
+ID: 943
 excerpt: 'Today at PASS the SQL Server team has publicly announced the first Community Technology Preview of the next version of SQL Server code named Denali. You can download it here: http://www.microsoft.com/downloads/en/details.aspx?FamilyID=6a04f16f-f6be-4f92&hellip;'
 url: /index.php/datamgmt/dbprogramming/sql-server-denali-ctp1-announced-at-pass/
 views:

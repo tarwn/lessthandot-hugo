@@ -3,6 +3,7 @@ title: Ten things added after SQL Server 2000 that I like the most
 author: SQLDenis
 type: post
 date: 2013-02-18T13:10:00+00:00
+ID: 2005
 excerpt: 'It is almost 8 years since SQL Server 2005 has been released, we have gotten 3 major versions since SQL Server 2000: SQL Server 2005, SQL Server 2008 and SQL Server 2012. I decided to take a look to see what I find the most useful that has been added af&hellip;'
 url: /index.php/datamgmt/dbprogramming/ten-things-added-after-sql/
 views:

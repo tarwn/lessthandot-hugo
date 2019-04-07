@@ -3,6 +3,7 @@ title: Visual Studio 2010 Service Pack 1 released on MSDN
 author: SQLDenis
 type: post
 date: 2011-03-08T18:50:00+00:00
+ID: 1075
 excerpt: |
   It looks like Visual Studio 2010 Service Pack 1 is available on MSDN, the files have a timestamp of today. I have been running the beta for a couple of weeks at home, finally I can install this at work.
   

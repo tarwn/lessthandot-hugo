@@ -3,6 +3,7 @@ title: My first SQL 2016 bug
 author: Koen Verbeeck
 type: post
 date: 2015-06-29T11:40:05+00:00
+ID: 3429
 url: /index.php/datamgmt/dbprogramming/mssqlserver/my-first-sql-2016-bug/
 views:
   - 23192

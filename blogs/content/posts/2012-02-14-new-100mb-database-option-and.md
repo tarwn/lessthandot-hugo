@@ -3,6 +3,7 @@ title: New 100MB database option and lower pricing across the board for SQL Azur
 author: SQLDenis
 type: post
 date: 2012-02-14T15:37:00+00:00
+ID: 1525
 excerpt: |
   The cloud just go a whole lot cheaper for SQL Azure customers
   

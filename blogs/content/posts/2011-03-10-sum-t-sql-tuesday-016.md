@@ -3,6 +3,7 @@ title: 'SUM (T-SQL Tuesday #016: Aggregate Functions)'
 author: Jes Borland
 type: post
 date: 2011-03-10T11:48:00+00:00
+ID: 1076
 excerpt: "Thank you to everyone that participated in T-SQL Tuesday #016. I'd consider this a smashing success with 42 posts submitted! Here is the SUM() of all the posts."
 url: /index.php/datamgmt/dbprogramming/sum-t-sql-tuesday-016/
 views:

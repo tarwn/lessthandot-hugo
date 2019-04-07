@@ -3,6 +3,7 @@ title: Getting the list of parameters from a stored procedure by using sqlCmd.Pa
 author: SQLDenis
 type: post
 date: 2012-02-14T13:11:00+00:00
+ID: 1526
 excerpt: If you want to see what parameters a stored procedure is using then you can accomplish this in a couple of different ways. You can use sys.parameters or INFORMATION_SCHEMA.parameters from within SQL Server itself, you can also SqlCommandBuilder from within ADO.NET
 url: /index.php/datamgmt/datadesign/getting-the-list-of-parameters/
 views:
@@ -23,14 +24,17 @@ If you want to see what parameters a stored procedure is using then you can acco
 
 Let&#8217;s say you have a procedure name prTest in a database named Test2
 
-<pre>CREATE PROCEDURE prTest
+sql
+CREATE PROCEDURE prTest
 @id int,@SomeDate date,@Somechar CHAR(1) OUTPUT
 AS
-SELECT GETDATE(),@id ,@SomeDate ,@Somechar</pre>
+SELECT GETDATE(),@id ,@SomeDate ,@Somechar
+```
 
 Here is how you would do it with c# and ADO.NET
 
-<pre>using System;
+```c#
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -59,8 +63,8 @@ namespace ConsoleApplication1
                 
         }
     }
-}</pre>
-
+}
+```
 Output
 
 <pre>4
@@ -73,9 +77,11 @@ As you can see, we get 4 parameters back not 3, this is because the return value
 
 If you want to do something similar from within SQL Server, you can use the INFORMATION_SCHEMA.parameters view
 
-<pre>SELECT parameter_name, ordinal_position,parameter_mode,data_type 
+sql
+SELECT parameter_name, ordinal_position,parameter_mode,data_type 
 FROM INFORMATION_SCHEMA.parameters
-WHERE SPECIFIC_NAME = 'prTest'</pre>
+WHERE SPECIFIC_NAME = 'prTest'
+```
 
 Here is the output
 
@@ -159,13 +165,15 @@ As you can see INFORMATION_SCHEMA.parameters does not return a row for the retur
 
 You can also use sys.parameters and join that with sys.types 
 
-<pre>SELECT s.name AS parameter_name,
+sql
+SELECT s.name AS parameter_name,
 	   parameter_id AS ordinal_position,
 	   CASE is_output WHEN 0 THEN 'IN' ELSE 'INOUT' END Parameter_Mode,
 	   t.name AS data_type 
 FROM sys.parameters s
 JOIN sys.types t ON s.system_type_id = t.user_type_id
-WHERE object_id = object_id('prTest')</pre>
+WHERE object_id = object_id('prTest')
+```
 
 Here is the same output as with INFORMATION_SCHEMA.parameters
 

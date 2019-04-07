@@ -3,6 +3,7 @@ title: Using Database Snapshot As A Protection Against Rogue Deletes
 author: SQLDenis
 type: post
 date: 2011-02-02T10:50:00+00:00
+ID: 1027
 excerpt: 'Let me first start by saying that this is not a foolproof solution, it is just another way that could help you out when you by mistake delete some data. If someone deletes the data in the table just before you create the database snapshot then you will&hellip;'
 url: /index.php/datamgmt/datadesign/using-database-snapsot-as-a/
 views:
@@ -31,7 +32,8 @@ Now let&#8217;s take a look at some code to see what can be done after a bad del
 
 First create a test database
 
-<pre>USE master
+sql
+USE master
 GO
  
 CREATE DATABASE [test] ON  PRIMARY
@@ -39,11 +41,13 @@ CREATE DATABASE [test] ON  PRIMARY
  LOG ON
 ( NAME = N'test_log', FILENAME = N'C:test_log.LDF' )
  
-GO</pre>
+GO
+```
 
 Now create a table and populate it with some data
 
-<pre>USE test
+sql
+USE test
 GO
  
  
@@ -53,30 +57,37 @@ GO
 INSERT TestTable(id)
 SELECT ROW_NUMBER() OVER (ORDER BY s1.id)
 FROM sysobjects s1
-CROSS JOIN sysobjects s2</pre>
+CROSS JOIN sysobjects s2
+```
 
 Now it is time to create your snapshot
 
-<pre>USE master
+sql
+USE master
 GO
  
    
 CREATE DATABASE TestSnapshot ON  
 ( NAME = N'test', FILENAME = N'C:testss.mdf' )
   AS SNAPSHOT OF Test;
-GO</pre>
+GO
+```
 
 If you run this, you will see that both the test database and the snapshot database table have the same number of rows
 
-<pre>SELECT COUNT(*) FROM TestSnapshot..TestTable
-SELECT COUNT(*) FROM Test..TestTable</pre>
+sql
+SELECT COUNT(*) FROM TestSnapshot..TestTable
+SELECT COUNT(*) FROM Test..TestTable
+```
 
 A database snapshot is read only and you cannot delete data, try it out.
 
-<pre>USE TestSnapshot
+sql
+USE TestSnapshot
 GO
  
-DELETE TestTable</pre>
+DELETE TestTable
+```
 
 _Msg 3906, Level 16, State 1, Line 1
   
@@ -86,28 +97,36 @@ _
   
 Now let&#8217;s delete all the data from the table in the test database
 
-<pre>USE Test
+sql
+USE Test
 GO
  
-DELETE  TestTable</pre>
+DELETE  TestTable
+```
 
 Just to verify, grab the count from the table
 
-<pre>SELECT  COUNT(*)
-FROM    TestTable</pre>
+sql
+SELECT  COUNT(*)
+FROM    TestTable
+```
 
 So the table is empty, but you can still get all the data back by inserting into the table from the database snapshot
 
-<pre>INSERT  TestTable
+sql
+INSERT  TestTable
 SELECT  *
-FROM    TestSnapshot..TestTable</pre>
+FROM    TestSnapshot..TestTable
+```
 
 And now both tables have the same number of rows again
 
-<pre>SELECT  COUNT(*)
+sql
+SELECT  COUNT(*)
 FROM    TestSnapshot..TestTable
 SELECT  COUNT(*)
-FROM    Test..TestTable</pre>
+FROM    Test..TestTable
+```
 
 Just a couple of things to consider. If you have a lot of activity in your database then the database snapshot might grow considerably, be aware of that or you will run out of space if you placed the database snapshot on a drive that doesn&#8217;t have a lot of space.
 
@@ -115,11 +134,13 @@ If you data gets updated frequently then this won&#8217;t work either, the table
 
 To drop the snapshot, you just use a regular DROP DATABASE command
 
-<pre>DROP DATABASE TestSnapshot </pre>
+sql
+DROP DATABASE TestSnapshot 
+```
 
 To learn more about database snapshots, visit books on line: http://msdn.microsoft.com/en-us/library/ms175158.aspx
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

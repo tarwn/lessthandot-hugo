@@ -3,6 +3,7 @@ title: Interview with me about the chapters I wrote for the SQL Server Deep Dive
 author: SQLDenis
 type: post
 date: 2010-03-26T11:41:06+00:00
+ID: 737
 url: /index.php/datamgmt/dbprogramming/interview-with-me-about-the-chapters-i-w/
 views:
   - 3426

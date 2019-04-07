@@ -3,6 +3,7 @@ title: SQL Server 2012 Business Intelligence Whitepaper and Data Tools released
 author: SQLDenis
 type: post
 date: 2013-03-09T08:49:00+00:00
+ID: 2026
 excerpt: |
   If you are into Business Intelligence, you are in luck, this week Microsoft has released a SQL Server 2012 Business Intelligence whitepaper as well as SQL Server Data Tools – Business Intelligence for Visual Studio 2012 (SSDT BI) templates.
   

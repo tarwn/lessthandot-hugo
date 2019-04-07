@@ -3,6 +3,7 @@ title: Create ETL solutions faster with metadata driven development – Session 
 author: Koen Verbeeck
 type: post
 date: 2013-11-13T12:18:00+00:00
+ID: 2194
 excerpt: 'Last week was the 2013 edition of the SQL Server Days. It was an amazing event: there was a great audience, fantastic speakers and nice booths by the sponsors (especially the bar with Belgian beer was pretty awesome). It was great meeting up with the #s&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/create-etl-solutions-faster-with/
 views:

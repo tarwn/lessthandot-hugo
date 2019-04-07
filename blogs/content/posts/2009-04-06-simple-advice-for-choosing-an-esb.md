@@ -3,6 +3,7 @@ title: Simple advice for choosing an ESB
 author: damber
 type: post
 date: 2009-04-06T18:54:28+00:00
+ID: 374
 excerpt: |
   I thought I would share a recent question that was raised on LinkedIn, which asked:
   

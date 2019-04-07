@@ -3,6 +3,7 @@ title: Successful Consulting Series – Family Balance
 author: hopefoley
 type: post
 date: 2012-12-06T15:12:00+00:00
+ID: 1832
 excerpt: |
    
   The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, “Successful Consult&hellip;

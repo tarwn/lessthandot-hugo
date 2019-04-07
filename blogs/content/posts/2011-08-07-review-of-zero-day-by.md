@@ -3,6 +3,7 @@ title: Review of Zero Day by Mark Russinovich
 author: SQLDenis
 type: post
 date: 2011-08-07T12:57:00+00:00
+ID: 1291
 excerpt: |
   This is a small review of Zero Day: A Novel by Mark Russinovich 
   If you are a windows user/developer then the name Mark Russinovich might seem familiar to you, Mark is of course the guy who started Sysinternals, he discovered the Sony rootkit on their&hellip;

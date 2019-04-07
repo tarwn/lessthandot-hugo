@@ -3,6 +3,7 @@ title: 'Transaction Log: VLF’s, Auto Growth and Performance'
 author: SQLArcher
 type: post
 date: 2011-05-11T09:03:00+00:00
+ID: 1165
 excerpt: |
   Recently I presented at SQLSat 83 about VLF's and their performance impact on our databases. I decided to write this post as well for everyone who couldn't make it all the way to Johannesburg, South Africa.
   To provide a bit of history on the subject, I&hellip;
@@ -90,15 +91,19 @@ Below is the schema for the table:
 
  
 
-<pre>CREATE TABLE [dbo].[vlftab]( [ID] [int] IDENTITY(1,1) NOT NULL, [comment] [varchar](8000) NOT NULL, [Name] [varchar](20) NOT NULL, [surname] [varchar](40) NOT NULL, [DoB] [date] NOT NULL, [acc] [int] NOT NULL, [joindate] [datetime] NOT NULL)</pre>
+sql
+CREATE TABLE [dbo].[vlftab]( [ID] [int] IDENTITY(1,1) NOT NULL, [comment] [varchar](8000) NOT NULL, [Name] [varchar](20) NOT NULL, [surname] [varchar](40) NOT NULL, [DoB] [date] NOT NULL, [acc] [int] NOT NULL, [joindate] [datetime] NOT NULL)
+```
 
 I then used three basic statements to test how long it takes to complete:
 
-<pre>update presentation_fast..vlftab set comment = upper(comment),
+sql
+update presentation_fast..vlftab set comment = upper(comment),
 name = upper (name),
 surname = upper(surname)
 insert into Presentation_fast..vlftab select comment, Name, surname, DoB, acc, joindate from Presentation_Fast..vlftab_source;
-delete from Presentation_slow..vlftab</pre>
+delete from Presentation_slow..vlftab
+```
 
 Following company policy, I created for the SlowDB a log file which is 30% of the data size. This resulted in a log file which is 75MB. I manually grew the log in increments of 15MB, this resulted in 20 VLF&#8217;s each with a size of 3.75MB. The second database, using the exact same data had a 8GB log with 16VLF&#8217;s each sized 512MB.
 

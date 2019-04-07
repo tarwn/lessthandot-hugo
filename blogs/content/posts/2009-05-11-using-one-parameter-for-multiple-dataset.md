@@ -3,6 +3,7 @@ title: Using one Parameter for Multiple Datasets in Reporting Services
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-05-11T15:28:56+00:00
+ID: 422
 url: /index.php/datamgmt/datadesign/using-one-parameter-for-multiple-dataset/
 views:
   - 18067
@@ -21,7 +22,8 @@ Here is what I mean by that.
 
 Say you have your first procedure like this
 
-<pre>Create Procedure FindOrders(@date datetime,@plant smallint)
+sql
+Create Procedure FindOrders(@date datetime,@plant smallint)
 As
 Select 
  OrderNum
@@ -32,8 +34,8 @@ Where
 Convert(varchar(10),OrderDate,121) = Convert(varchar(10),@date,121) 
 and
 plant = @plant
-Go</pre>
-
+Go
+```
 You would then call it as a Text statement in the DS as
   
 Exec FindOrders @date,@plant 
@@ -50,7 +52,8 @@ Most would be inclined to create another procedure and then create matching para
 
 So your second procedure would be something like
 
-<pre>Create Procedure FindShippedOrders(@date datetime,@plant smallint)
+sql
+Create Procedure FindShippedOrders(@date datetime,@plant smallint)
 As
 Select 
  shipdate
@@ -61,8 +64,8 @@ Where
 Convert(varchar(10),shipdate,121) = Convert(varchar(10),@date,121) 
 and
 plant = @plant
-Go</pre>
-
+Go
+```
 You would call this as
   
 Exec FindShippedOrders @date,@plant 

@@ -3,6 +3,7 @@ title: Quad Cities PASS “Make Your Voice Heard” Presentation Materials
 author: Jes Borland
 type: post
 date: 2012-07-12T00:25:00+00:00
+ID: 1670
 excerpt: |
   Tonight I had the pleasure of presenting for a new user group, Quad Cities PASS. If you're in the Quad Cities area the second Wednesday of the month, make sure you check it out!
   I was asked to present "Make Your Voice Heard", which is one of my favorit&hellip;

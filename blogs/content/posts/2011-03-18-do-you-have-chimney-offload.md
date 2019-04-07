@@ -3,6 +3,7 @@ title: Do you have Chimney Offload State disabled?
 author: SQLDenis
 type: post
 date: 2011-03-18T11:19:00+00:00
+ID: 1081
 excerpt: |
   This is a short post, leave me a comment if you have TCP Chimney disabled or enabled.
   
@@ -26,7 +27,9 @@ You can easily check by running this from a command prompt _netsh int tcp show g
 
 Or if you want to use SSMS, you can use _xp_cmdshell_ 
 
-<pre>xp_cmdshell 'netsh int tcp show global'</pre>
+sql
+xp_cmdshell 'netsh int tcp show global'
+```
 
 Here is the output for one of my servers
 

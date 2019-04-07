@@ -3,6 +3,7 @@ title: Impersonating a SQL Server DBA
 author: Ted Krueger (onpnt)
 type: post
 date: 2008-12-16T16:16:47+00:00
+ID: 253
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/impersonating-a-sql-server-dba/
 views:
   - 4845

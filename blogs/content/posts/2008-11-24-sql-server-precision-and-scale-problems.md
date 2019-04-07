@@ -3,6 +3,7 @@ title: SQL Server Precision And Scale Problems
 author: George Mastros (gmmastros)
 type: post
 date: 2008-11-24T13:43:49+00:00
+ID: 218
 url: /index.php/datamgmt/datadesign/sql-server-precision-and-scale-problems/
 views:
   - 15979
@@ -17,7 +18,8 @@ Many people are confused about SQL Server&#8217;s precision and scale. This is u
 
 For example:
 
-<pre>Select 10 / 3           UNION All 
+sql
+Select 10 / 3           UNION All 
 Select 10 / 3.0         UNION All 
 Select 10 / 3.00        UNION All 
 Select 10 / 3.000       UNION All 
@@ -25,34 +27,36 @@ Select 10 / 3.0000      UNION All
 Select 10 / 3.00000     UNION All 
 Select 10 / 3.000000    UNION All 
 Select 10 / 3.0000000   UNION All 
-Select 10 / 3.00000000 </pre>
-
+Select 10 / 3.00000000 
+```
 Let&#8217;s take a close look at the above query so that we can predict the output. Of course, it will help if we know the data types that SQL Server uses. There is a relatively obscure function that you can use to determine the data types. SQL\_VARIANT\_PROPERTY
 
 For the first calculation, we have 10 / 3. We all know the answer is 3 1/3, but how is this expressed in the output?
 
 Well, using the SQL\_VARIANT\_PROPERTY function, we can determine the data type that SQL Server will use.
 
-<pre>Select SQL_VARIANT_PROPERTY(3, 'BaseType') As [Base Type], 
+sql
+Select SQL_VARIANT_PROPERTY(3, 'BaseType') As [Base Type], 
        SQL_VARIANT_PROPERTY(3, 'Precision') As [Precision],
        SQL_VARIANT_PROPERTY(3, 'Scale') As [Scale],
 
        SQL_VARIANT_PROPERTY(10, 'BaseType') As [Base Type], 
        SQL_VARIANT_PROPERTY(10, 'Precision') As [Precision],
-       SQL_VARIANT_PROPERTY(10, 'Scale') As [Scale]</pre>
-
+       SQL_VARIANT_PROPERTY(10, 'Scale') As [Scale]
+```
 The output indicates SQL Server will use Integer, Precision 10, scale 0. Using integer math, the output will be 3. Since both values are integer, the result is an integer.
 
 Now, let&#8217;s look at the next one. 10/3.0
 
-<pre>Select SQL_VARIANT_PROPERTY(3.0, 'BaseType') As [Base Type], 
+sql
+Select SQL_VARIANT_PROPERTY(3.0, 'BaseType') As [Base Type], 
        SQL_VARIANT_PROPERTY(3.0, 'Precision') As [Precision],
        SQL_VARIANT_PROPERTY(3.0, 'Scale') As [Scale],
 
        SQL_VARIANT_PROPERTY(10, 'BaseType') As [Base Type], 
        SQL_VARIANT_PROPERTY(10, 'Precision') As [Precision],
-       SQL_VARIANT_PROPERTY(10, 'Scale') As [Scale]</pre>
-
+       SQL_VARIANT_PROPERTY(10, 'Scale') As [Scale]
+```
 This time, we get Numeric(2,1) (for 3.0) and int for the 10. There are well defined (although obscure) rules for math operations. Full rules here: [Precision, Scale, and Length][1]
 
 For division, the rule is:
@@ -161,6 +165,7 @@ Select 10 / 3.0000      3.3333330000 Decimal(12,6)
 Select 10 / 3.00000     3.3333333000 Decimal(14,7)
 Select 10 / 3.000000    3.3333333300 Decimal(16,8)
 Select 10 / 3.0000000   3.3333333330 Decimal(18,9)
-Select 10 / 3.00000000  3.3333333333 Decimal(20,10)</pre>
+Select 10 / 3.00000000  3.3333333333 Decimal(20,10)
+</pre>
 
  [1]: http://msdn.microsoft.com/en-us/library/ms190476.aspx

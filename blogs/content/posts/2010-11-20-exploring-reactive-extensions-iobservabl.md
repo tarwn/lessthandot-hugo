@@ -3,6 +3,7 @@ title: Exploring Reactive Extensions – IObservable and IObserver
 author: Alex Ullrich
 type: post
 date: 2010-11-20T22:10:00+00:00
+ID: 874
 url: /index.php/desktopdev/mstech/exploring-reactive-extensions-iobservabl/
 views:
   - 23713
@@ -29,11 +30,12 @@ I really struggled to think of a simple, &#8220;hello world&#8221; type applicat
 
 We&#8217;ll start with the observable. In this case it is just a class that sends time updates to any subscribers. I called it the Atomic Clock because it sounds cool. The Subscribe method is the most important here.
 
-<pre>class AtomicClock : IObservable<DateTime&gt; {
-	IList<IObserver<DateTime&gt;&gt; observers = new List<IObserver<DateTime&gt;&gt;();
+```csharp
+class AtomicClock : IObservable<DateTime> {
+	IList<IObserver<DateTime>> observers = new List<IObserver<DateTime>>();
 	bool keepRunning;
 
-	public IDisposable Subscribe(IObserver<DateTime&gt; observer) {
+	public IDisposable Subscribe(IObserver<DateTime> observer) {
 		observers.Add(observer);
 		return observer as IDisposable;
 	}
@@ -47,7 +49,7 @@ We&#8217;ll start with the observable. In this case it is just a class that send
 
 	public void Run() {
 		keepRunning = true;
-		while (observers.Count &gt; 0 && keepRunning) {
+		while (observers.Count > 0 && keepRunning) {
 			SendTime();
 		}
 	}
@@ -58,13 +60,15 @@ We&#8217;ll start with the observable. In this case it is just a class that send
 		}
 		System.Threading.Thread.Sleep(1000);
 	}
-}</pre>
+}
+```
 
 The most fun we&#8217;re having here is probably SendTime method. It is not that interesting, but it&#8217;s easy to see this being any kind of push-based notification. I really like the shift of control from the observer (where it would be using traditional event mechanisms) to the observed object that this represents. The observer is still in control of _what_ to do with the information received, but the observed is in (more explicit) control of _when_ it does it. If you&#8217;re using .net 4 (I don&#8217;t have it on my laptop) this could be sped up by using Parallel.ForEach (or use something like [this][3] on 3.5) but that&#8217;s not too important at this point. Note that the Subscribe method returns an IDisposable &#8211; I&#8217;m not actually using it in this example but it would be very convenient when the observer needs to deal with unmanaged resources. The only other thing worth noting is the keepRunning boolean &#8211; this is used to signal to the clock that it can stop running it&#8217;s running on a separate thread.
 
 Now to set up the observers. In this case, I&#8217;m just implementing the IObserver interface on a winforms control that contains a couple of labels (city name and time). They also take an offset property, which is used to localize the UTC time received from the atomic clock (as long as we are willing to pretend there is no such thing as daylight savings). There is some cruft in there to handle crossthread calls on controls, but it could be worse.
 
-<pre>public partial class Clock : UserControl, IObserver<DateTime&gt; {
+```csharp
+public partial class Clock : UserControl, IObserver<DateTime> {
 	public Clock() {
 		InitializeComponent();
 	}
@@ -89,7 +93,7 @@ Now to set up the observers. In this case, I&#8217;m just implementing the IObse
 		SetTimeText(time, "Error reaching time service");
 	}
 
-	Action<Label, string&gt; setterCallback = (toSet, text) =&gt; toSet.Text = text;
+	Action<Label, string> setterCallback = (toSet, text) => toSet.Text = text;
 
 	void SetTimeText(Label toSet, string text) {
 		if (time.InvokeRequired) {
@@ -99,11 +103,12 @@ Now to set up the observers. In this case, I&#8217;m just implementing the IObse
 			setterCallback(toSet, text);
 		}
 	}
-}</pre>
-
+}
+```
 We can throw a few of these on a form, set up the correct city names and offsets, and then its time to wire everything up. The only buttons we&#8217;ve got are to start and stop the clock. Here&#8217;s the code for the form:
 
-<pre>public partial class GlobalClock : Form {
+```csharp
+public partial class GlobalClock : Form {
 	AtomicClock atomicClock = new AtomicClock();
 	System.Threading.Thread backgroundThread;
 	bool running;
@@ -112,7 +117,7 @@ We can throw a few of these on a form, set up the correct city names and offsets
 		InitializeComponent();
 		foreach (var control in this.Controls) {
 			if (control.GetType() == typeof(MasterClock.Clock)) {
-				atomicClock.Subscribe(control as IObserver<DateTime&gt;);
+				atomicClock.Subscribe(control as IObserver<DateTime>);
 			}
 		}
 		this.FormClosing += OnClosing;
@@ -138,7 +143,8 @@ We can throw a few of these on a form, set up the correct city names and offsets
 		atomicClock.Complete();
 		running = false;
 	}
-}</pre>
+}
+```
 
 Hopefully this provided a decent introduction. A VS2008 solution containing all the code can be found over at [github][4], and any further projects will be added there (this post focused on the ClockMaster3000 project).
 

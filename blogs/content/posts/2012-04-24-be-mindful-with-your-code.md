@@ -3,6 +3,7 @@ title: Be Mindful With Your Code
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-04-24T10:36:00+00:00
+ID: 1602
 excerpt: |
   This post really started over fifteen years ago, if only I had known it then. You see, once upon a time I wrote a piece of code with nonsense variable names and, another time, a bunch of dynamic, inline SQL, and there was that time I tried to write half the program on one line. And lets not even get started on error messages....
   

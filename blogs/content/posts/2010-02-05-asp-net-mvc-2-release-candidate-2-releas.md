@@ -3,6 +3,7 @@ title: ASP.NET MVC 2 (Release Candidate 2) Released
 author: SQLDenis
 type: post
 date: 2010-02-05T10:48:16+00:00
+ID: 694
 url: /index.php/webdev/webdesigngraphicsstyling/asp-net-mvc-2-release-candidate-2-releas/
 views:
   - 11401

@@ -3,6 +3,7 @@ title: Finding the Winning Streak
 author: Naomi Nosonovsky
 type: post
 date: 2011-07-14T00:32:00+00:00
+ID: 1253
 excerpt: |
   Ok, I hope I got your attention with this title :)
   
@@ -422,7 +423,8 @@ find the biggest number of consecutive wins or loses regardless of the team.
 
 Here is the code that creates our team table:
 
-<pre>CREATE TABLE team ( 
+sql
+CREATE TABLE team ( 
   Team   CHAR(1), 
   DATE   DATETIME, 
   WiLose VARCHAR(10)) 
@@ -513,24 +515,26 @@ VALUES     ('C','18/02/2010','Win')
 SET DATEFORMAT  mdy 
 
 SELECT * 
-FROM   team</pre>
-
+FROM   team
+```
 This problem is known as &#8216;finding islands of data&#8217;, and I always refer to this blog by Plamen Ratchev [Refactoring Ranges][2] when I am facing such scenario.
 
 The idea of a solution is to first identify the blocks of consecutive wins or loses by each team. Applying the idea from Plamen&#8217;s blog first step will be
 
-<pre>;WITH cte AS (SELECT *, 
+sql
+;WITH cte AS (SELECT *, 
 ROW_NUMBER() OVER 
 (
 PARTITION BY team ORDER BY DATE
 ) - ROW_NUMBER() OVER (PARTITION BY team, wilose ORDER BY DATE) AS [GroupID]
-FROM team),</pre>
-
+FROM team),
+```
 By assigning GroupID we identified blocks of winning or losing streaks.
 
 The last two steps are simple enough:
 
-<pre>-- Calculate Wins/Loses totals per each team/block
+sql
+-- Calculate Wins/Loses totals per each team/block
 cte1 AS (SELECT team, 
 SUM(CASE WHEN WiLose = 'Win' THEN 1 ELSE 0 END) AS [Wins],
 SUM(CASE WHEN WiLose = 'Lose' THEN 1 ELSE 0 END) AS [Loses]
@@ -544,13 +548,13 @@ FROM cte1)
 -- Get final results
 SELECT Team, [Wins],[Loses]
  FROM cteSummary WHERE WinsRank = 1 OR LosesRank = 1
-ORDER BY Team</pre>
-
+ORDER BY Team
+```
 So, correctly identifying a known pattern helps to solve such problems very quickly.
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 
  [1]: http://tek-tips.com/viewthread.cfm?qid=1654675&page=1
  [2]: http://pratchev.blogspot.com/2010/02/refactoring-ranges.html
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

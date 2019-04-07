@@ -3,6 +3,7 @@ title: Formatting the time from a datetime or time datatype by using the STUFF f
 author: SQLDenis
 type: post
 date: 2010-03-24T18:26:11+00:00
+ID: 734
 url: /index.php/datamgmt/dbprogramming/formatting-the-time-from-a-datetime-or-t/
 views:
   - 10125
@@ -31,8 +32,10 @@ So let&#8217;s say for example that you have this datetime &#8216;2010-03-24 16:
 
 Let&#8217;s take a look, if you are on SQL Server 2008 you can convert to time
 
-<pre>DECLARE @t TIME = '2010-03-24 16:20:01.800'
-SELECT @t AS TIME</pre>
+sql
+DECLARE @t TIME = '2010-03-24 16:20:01.800'
+SELECT @t AS TIME
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
   
@@ -42,8 +45,10 @@ Okay that gives me 16:20:01.8000000, not what the original poster wanted
 
 You can do this
 
-<pre>DECLARE @t TIME = '2010-03-24 16:20:01.800'
-SELECT CONVERT(VARCHAR(30),@t,100)</pre>
+sql
+DECLARE @t TIME = '2010-03-24 16:20:01.800'
+SELECT CONVERT(VARCHAR(30),@t,100)
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
   
@@ -53,7 +58,9 @@ That gives me 4:20PM. But how can I add a space between 0 and PM? Say hello to m
 
 Take a look at what I mean
 
-<pre>SELECT STUFF('4:20PM',5,0,' ')</pre>
+sql
+SELECT STUFF('4:20PM',5,0,' ')
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;
   
@@ -61,18 +68,21 @@ Take a look at what I mean
 
 Now let&#8217;s use the code from before and wrap the STUFF function around it
 
-<pre>DECLARE @t TIME = '2010-03-24 16:20:01.800'
-SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@t,100),7),6,0,' ') AS FormattedTime</pre>
-
+sql
+DECLARE @t TIME = '2010-03-24 16:20:01.800'
+SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@t,100),7),6,0,' ') AS FormattedTime
+```
 &#8212;&#8212;&#8212;&#8212;&#8211;
   
 4:20 PM
 
 Okay but what if you are not on SQL Server 2008? No problem really, it is almost the same
 
-<pre>DECLARE @d datetime 
+sql
+DECLARE @d datetime 
 SET @d = '2010-03-24 16:20:01.800'
-SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@d,100),7),6,0,' ')</pre>
+SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@d,100),7),6,0,' ')
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8211;
   
@@ -80,8 +90,8 @@ SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@d,100),7),6,0,' ')</pre>
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][5] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewtopic.php?f=17&t=10289
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewtopic.php?f=17&t=10289
  [3]: http://msdn.microsoft.com/en-us/library/ms187928.aspx
  [4]: http://msdn.microsoft.com/en-us/library/ms188043.aspx
- [5]: http://forum.lessthandot.com/viewforum.php?f=22
+ [5]: http://forum.ltd.local/viewforum.php?f=22

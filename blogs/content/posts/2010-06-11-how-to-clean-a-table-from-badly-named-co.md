@@ -3,6 +3,7 @@ title: How to clean a table from badly named column names
 author: SQLDenis
 type: post
 date: 2010-06-11T10:41:12+00:00
+ID: 816
 url: /index.php/datamgmt/datadesign/how-to-clean-a-table-from-badly-named-co/
 views:
   - 8962
@@ -29,15 +30,18 @@ The solution is to loop over information\_schema.columns, find all the columns t
 
 First create these two tables
 
-<pre>CREATE TABLE Test ([col%1] VARCHAR(50),[col_2] VARCHAR(40))
+sql
+CREATE TABLE Test ([col%1] VARCHAR(50),[col_2] VARCHAR(40))
 GO
 
 CREATE TABLE Test2 ([col%2] VARCHAR(50),[col_3] VARCHAR(40), [Col_%_%4] int)
-GO</pre>
+GO
+```
 
 Now here is the code that will rename this in one shot. I have placed comments in the code to show you what the code does. If you want to know how sp_rename works visit the Books On Line link here: http://msdn.microsoft.com/en-us/library/ms188351.aspx
 
-<pre>--Grab the table and columns that we need and store it in a temp table
+sql
+--Grab the table and columns that we need and store it in a temp table
 SELECT IDENTITY(INT,1,1) AS id ,column_name,table_name, table_schema
 INTO #LOOP
 FROM information_schema.columns
@@ -71,11 +75,14 @@ EXEC sp_rename @TableColumnNAme, @columnName, 'COLUMN';
 SET @loopid = @loopid + 1
 END
 
-DROP TABLE #LOOP</pre>
+DROP TABLE #LOOP
+```
 
 Run a simple select statement to verify that the columns have been renamed
 
-<pre>SELECT * FROM Test2</pre>
+sql
+SELECT * FROM Test2
+```
 
 As you can see, there are no more underscores and percent signs in the column names.
 
@@ -83,17 +90,20 @@ As you can see, there are no more underscores and percent signs in the column na
 
 Here is the other way of doing the same thing. First drop and create the tables again
 
-<pre>DROP TABLE Test,Test2
+sql
+DROP TABLE Test,Test2
 
 CREATE TABLE Test ([col%1] VARCHAR(50),[col_2] VARCHAR(40))
 GO
 
 CREATE TABLE Test2 ([col%2] VARCHAR(50),[col_3] VARCHAR(40), [Col_%_%4] int)
-GO</pre>
+GO
+```
 
 Now hit CTRL + T to display the output in text, run the query below
 
-<pre>SELECT		'EXEC sp_rename ''' 
+sql
+SELECT		'EXEC sp_rename ''' 
 			+ QUOTENAME(TABLE_SCHEMA) + '.' 
 			+ QUOTENAME(TABLE_NAME) + '.' 
 			+ QUOTENAME(COLUMN_NAME) + ''', ''' 
@@ -101,11 +111,13 @@ Now hit CTRL + T to display the output in text, run the query below
 			+ CHAR(13) + CHAR(10) + 'GO'  + CHAR(13) + CHAR(10)  
 FROM INFORMATION_SCHEMA.COLUMNS 
 WHERE column_name LIKE '%[%]%'
-OR column_name LIKE '%[_]%'</pre>
+OR column_name LIKE '%[_]%'
+```
 
 The output from that query is the following T-SQL
 
-<pre>EXEC sp_rename '[dbo].[Test].[col%1]', 'col1', 'COLUMN' 
+sql
+EXEC sp_rename '[dbo].[Test].[col%1]', 'col1', 'COLUMN' 
 GO
 EXEC sp_rename '[dbo].[Test2].[col%2]', 'col2', 'COLUMN' 
 GO
@@ -114,11 +126,13 @@ GO
 EXEC sp_rename '[dbo].[Test].[col_2]', 'col2', 'COLUMN' 
 GO
 EXEC sp_rename '[dbo].[Test2].[col_3]', 'col3', 'COLUMN' 
-GO</pre>
-
+GO
+```
 You can run that SQL and then you can run the same query against the table to see that the columns names don&#8217;t have those unwanted characters anymore
 
-<pre>select * from Test2</pre>
+sql
+select * from Test2
+```
 
 As you can see, there are no more underscores and percent signs in the column names.
 
@@ -126,5 +140,5 @@ There you have it, two ways to do the same thing. Which way do you prefer, the f
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: SQLCop, FxCop For SQL Server, Would You Be Interested in This?
 author: SQLDenis
 type: post
 date: 2009-05-15T12:04:33+00:00
+ID: 430
 url: /index.php/datamgmt/datadesign/sqlcop-fxcop-for-sql-server-would-you-be/
 views:
   - 19177
@@ -164,4 +165,4 @@ So that is a partial list, What do you think, would this be a useful tool? Do yo
 
 Leave a comment with your suggestion
 
- [1]: http://forum.lessthandot.com/viewtopic.php?f=17&t=5836
+ [1]: http://forum.ltd.local/viewtopic.php?f=17&t=5836

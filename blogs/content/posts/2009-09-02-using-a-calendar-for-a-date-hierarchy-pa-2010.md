@@ -3,6 +3,7 @@ title: Using a Calendar for a Date Hierarchy Parameter with SSAS 2008 and SSRS 2
 author: riverguy
 type: post
 date: 2009-09-02T18:10:52+00:00
+ID: 548
 url: /index.php/datamgmt/dbprogramming/mssqlserver/using-a-calendar-for-a-date-hierarchy-pa-2010/
 views:
   - 14588

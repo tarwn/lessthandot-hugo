@@ -3,6 +3,7 @@ title: Define Microsoft Business Intelligence for me?
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-29T20:45:00+00:00
+ID: 1947
 excerpt: 'What is Microsoft Business Intelligence?  I’m not asked this question very often because it’s typically an assumption.  As we know, assumptions can lead to misguidance or misrepresentation of a topic. This topic has been defined in so many different way&hellip;'
 url: /index.php/datamgmt/datadesign/define-microsoft-business-intelligence-for/
 views:

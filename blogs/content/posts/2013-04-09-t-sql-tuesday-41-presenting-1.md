@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #41 – Presenting: Be Prepared'
 author: Jes Borland
 type: post
 date: 2013-04-09T07:23:00+00:00
+ID: 2063
 excerpt: |
   It's the second Tuesday of the month, and you know what that means: it's T-SQL Tuesday!
   Standing up in front of a room of people and talking, especially on a technical topic, can induce nightmares. Think about everything that could go wrong. Your lapto&hellip;

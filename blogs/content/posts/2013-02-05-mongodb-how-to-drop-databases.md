@@ -3,6 +3,7 @@ title: 'MongoDB: How to drop databases and collections'
 author: SQLDenis
 type: post
 date: 2013-02-05T08:47:00+00:00
+ID: 1968
 excerpt: |
   In this post we are going to look at how to drop database and collections. We already covered backup and restores, now that you know how to do that, it is safe to cover dropping collections and databases
   

@@ -3,6 +3,7 @@ title: If you think uninstalling SQL Server is a pain, have fun with Oracle
 author: SQLDenis
 type: post
 date: 2013-07-04T14:23:00+00:00
+ID: 2130
 excerpt: 'Because of a job change next week I have no need for Oracle anymore, I decided to remove it. I know that some people complain that uninstalling SQL Server is a pain, well those people should just be quiet from now on, uninstalling Oracle is much worse.&hellip;'
 url: /index.php/datamgmt/dbadmin/oracleadmin/if-you-think-uninstalling-sql/
 views:
@@ -26,7 +27,8 @@ Click on the Oracle Home that you want to remove and then click on the Remove (n
 <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleRemoveBatfile.PNG?mtime=1372947010"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleRemoveBatfile.PNG?mtime=1372947010" width="440" height="144" /></a></p>
 <p>Really, you couldn&#8217;t at least have an option to run that file from withing this deinstaller?</p>
 <p>Opening that BAT file reveals the following</p>
-<pre>@echo off
+<pre lang="dos">
+@echo off
 
 Rem $Header: install/utl/scripts/db/deinstall.bat /st_install_11.2.0.1.0/3 2010/02/18 22:36:21 ssampath Exp $
 Rem
@@ -41,7 +43,7 @@ Rem      This script will determine the tool directory, cd to it and call the
 Rem      deinstall.pl script
 Rem
 Rem    NOTES
-Rem      <other useful comments, qualifications, etc.&gt;
+Rem      <other useful comments, qualifications, etc.>
 Rem
 Rem    MODIFIED   (MM/DD/YY)
 Rem    ssampath    01/18/10 - Pass bootstrap location to bootstrap.pl and
@@ -100,7 +102,8 @@ if %oracleHomeVersion% == 1 (
 ) else (
       REM Execute startup.bat
       %toolPath%utlstartup.bat %oracleHomeVersion% %toolPath% %*
-)</pre>
+)
+</pre>
 <p>Running the file generates a bunch of output and also asks for some input</p>
 <p>Here is just part of that as well</p>
 <blockquote><p>Specify the storage type used by the Database ASM|FS []: ASM</p>

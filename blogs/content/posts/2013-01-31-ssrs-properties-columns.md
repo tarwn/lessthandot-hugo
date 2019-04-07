@@ -3,6 +3,7 @@ title: SSRS Properties – Columns
 author: Jes Borland
 type: post
 date: 2013-01-31T12:07:00+00:00
+ID: 1952
 excerpt: The purpose of this property is to allow you to display more than one column of data on the report.
 url: /index.php/datamgmt/ssrs/ssrs-properties-columns/
 views:

@@ -3,6 +3,7 @@ title: A Quick look at the new EOMONTH function in SQL Server Denali CTP3
 author: SQLDenis
 type: post
 date: 2011-07-13T14:09:00+00:00
+ID: 1250
 excerpt: |
   SQL Server Denali CTP3  has a bunch of new date/time functions like DATEFROMPARTS,  DATETIMEFROMPARTS and EOMONTH
   
@@ -39,13 +40,17 @@ The syntax for EOMONTH is
 
 If you pass in getdate() you will get the last day of the month for the current month
 
-<pre>SELECT EOMONTH(getdate())</pre>
+sql
+SELECT EOMONTH(getdate())
+```
 
 2011-07-31 00:00:00.000
 
 If you pass in a date, you will also get the last date for that month
 
-<pre>SELECT EOMONTH('20110615')</pre>
+sql
+SELECT EOMONTH('20110615')
+```
 
 2011-06-30 00:00:00.0000000
 
@@ -59,13 +64,17 @@ If this argument is specified, then EOMONTH adds the specified number of months 
 
 So if we pass 1 for month\_to\_add it will add a month
 
-<pre>SELECT EOMONTH('20110615',1)</pre>
+sql
+SELECT EOMONTH('20110615',1)
+```
 
 2011-07-31 00:00:00.0000000
 
 If we pass -1 for month\_to\_add it will subtract a month
 
-<pre>SELECT EOMONTH('20110615',-1)</pre>
+sql
+SELECT EOMONTH('20110615',-1)
+```
 
 2011-05-31 00:00:00.0000000
 

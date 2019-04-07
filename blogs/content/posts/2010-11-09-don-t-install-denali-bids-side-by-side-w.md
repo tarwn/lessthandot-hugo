@@ -3,6 +3,7 @@ title: Don’t install Denali BIDS side by side with a 2008 instance
 author: SQLDenis
 type: post
 date: 2010-11-09T16:28:22+00:00
+ID: 937
 excerpt: 'If you already have a SQL Server 2008 or a SQL Server 2008 R2 instance then do not install SQL Server Denali as a named instance. If you do so then your current SSIS development environment will be broken. There is a reason there are virtual machines, I&hellip;'
 url: /index.php/datamgmt/datadesign/don-t-install-denali-bids-side-by-side-w/
 views:

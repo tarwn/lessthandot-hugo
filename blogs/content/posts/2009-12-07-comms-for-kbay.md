@@ -3,6 +3,7 @@ title: Communicating with KBay, Design Pattern for Web Services
 author: ThatRickGuy
 type: post
 date: 2009-12-07T19:06:46+00:00
+ID: 643
 url: /index.php/webdev/webdesigngraphicsstyling/comms-for-kbay/
 views:
   - 2884
@@ -34,7 +35,8 @@ Hey everyone,
   First off, the actual code behind on the web services:
 </p>
 
-<pre><WebMethod(Description:="Returns a set of data required at application startup.")> _
+```Vb.Net
+<WebMethod(Description:="Returns a set of data required at application startup.")> _
     Public Function GetInit(ByVal Request As GetInitRequest) As GetInitResponse
         Return Request.FillRequest()
     End Function
@@ -42,9 +44,8 @@ Hey everyone,
     <WebMethod(Description:="Returns a list of Alert Data based on the filter criteria set in the request.")> _
     Public Function GetAlertData(ByVal Request As GetAlertDataRequest) As GetAlertDataResponse
         Return Request.FillRequest()
-    End Function</pre>
-
-<p style="text-indent: 30pt;">
+    End Function
+```<p style="text-indent: 30pt;">
   This code is actually for a different project, but it&#8217;s what I had handy. All of the functions follow the same pattern as the ones you can see here. They take a custom Request object and return a custom Response object (both named after the method). Inside the method, they call the Request.FillRequest method.
 </p>
 
@@ -54,7 +55,8 @@ Hey everyone,
   So let&#8217;s keep digging. Here is the GetInit.vb file that contains the functionality for the GetInit method:
 </p>
 
-<pre>Namespace Implementation
+```VB.Net
+Namespace Implementation
     <ServiceManager.AutoCreateSessionId()> _
     Public Class GetInitRequest
         Inherits ServiceManager.BaseRequest(Of GetInitRequest, GetInitResponse)
@@ -93,8 +95,8 @@ Hey everyone,
         End Property
     End Class
 
-End Namespace</pre>
-
+End Namespace
+```
 <p style="text-indent: 30pt;">
   A couple of things to notice here. First, there are two classes in this file, both the request and the response. This is just for organizational purposes. You&#8217;ll also want to note the &#8220;servicemanager.AutoCreateSessionId()&#8221; attribute on the Request class. We&#8217;ll use this again later.
 </p>
@@ -117,7 +119,8 @@ End Namespace</pre>
   While these derived classes show us what the method does, it doesn&#8217;t show us how they are called. The web methods called Request.FillRequest, not InnerFillRequest. So lets look at the class that the request inherits from, BaseRequest:
 </p>
 
-<pre>Namespace ServiceManager
+```VB.Net
+Namespace ServiceManager
     Public MustInherit Class BaseRequest(Of Req As {New, iRequest}, Res As {New, BaseResponse})
         Implements iRequest
 
@@ -269,19 +272,20 @@ End Namespace</pre>
             End If
         End Function
     End Class
-End Namespace</pre>
-
+End Namespace
+```
 <p style="text-indent: 30pt;">
   The BaseRequest class is abstract, it must be inherited. But even cooler, it is a generic class. We can define it&#8217;s type dynamically. It implements iRequest, which just guarantees it some basic members:
 </p>
 
-<pre>Namespace ServiceManager
+```VB.Net
+Namespace ServiceManager
     Public Interface iRequest
         Property SessionId() As Long
         Property RequestToken() As String
     End Interface
-End Namespace</pre>
-
+End Namespace
+```
 <p style="text-indent: 30pt;">
   The &#8220;FillRequest&#8221; method is the conductor of this train. This is the method that the web services are actually calling. Right off the bat, if starts up a stop watch, so we can get performance indicators off of every web service call.
 </p>

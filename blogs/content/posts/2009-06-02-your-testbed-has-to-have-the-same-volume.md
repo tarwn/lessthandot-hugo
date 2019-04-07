@@ -3,6 +3,7 @@ title: Your testbed has to have the same volume of data as on production in orde
 author: SQLDenis
 type: post
 date: 2009-06-02T13:55:54+00:00
+ID: 454
 url: /index.php/datamgmt/datadesign/your-testbed-has-to-have-the-same-volume/
 views:
   - 10472
@@ -34,15 +35,18 @@ Now let&#8217;s look at some code to see what the difference is
 
 First create these two tables
 
-<pre>create table TestSmall (id int identity not null,Somevalue char(108),SomeValue2 uniqueidentifier)
+sql
+create table TestSmall (id int identity not null,Somevalue char(108),SomeValue2 uniqueidentifier)
 go
 
 create table TestBig (id int identity not null,Somevalue char(108),SomeValue2 uniqueidentifier)
-go</pre>
+go
+```
 
 We will populate the small table with 256 rows and the big one with 65536 rows
 
-<pre>--256 rows
+sql
+--256 rows
 insert TestSmall
 select convert(varchar(36),newid())
  + convert(varchar(36),newid())
@@ -61,28 +65,35 @@ where t1.type = 'p'
 and t1.number < 256
 and t2.type = 'p'
 and t2.number < 256
-go</pre>
+go
+```
 
 Now we will create a clustered index on each table
 
-<pre>create clustered index ix_somevalue_small on TestSmall(Somevalue)
+sql
+create clustered index ix_somevalue_small on TestSmall(Somevalue)
 go
 create clustered index ix_somevalue_big on TestBig(Somevalue)
-go</pre>
+go
+```
 
 Time to run some code
   
 First we have to turn on statistics for time
 
-<pre>set statistics io on</pre>
+sql
+set statistics io on
+```
 
 Now run these queries
 
-<pre>select * from TestSmall
+sql
+select * from TestSmall
 where Somevalue like '2%'
 
 select * from TestBig
-where Somevalue like '2%'</pre>
+where Somevalue like '2%'
+```
 
 Table &#8216;TestSmall&#8217;. Scan count 1, logical reads 2, physical reads 0
   
@@ -92,11 +103,13 @@ As you can see the reads are much higher for the TestBig table, this is of cours
 
 What will happen if we write a non sargable query by using a function in the WHERE clause?
 
-<pre>select * from TestSmall
+sql
+select * from TestSmall
 where left(Somevalue,1) = '2'
 
 select * from TestBig
-where left(Somevalue,1) = '2'</pre>
+where left(Somevalue,1) = '2'
+```
 
 Table &#8216;TestSmall&#8217;. Scan count 1, logical reads 7, physical reads 0
   
@@ -106,19 +119,25 @@ Okay, so the smaller table had 3.5 times more reads while the bigger table had 1
 
 Time to turn of the statistics for IO
 
-<pre>set statistics io off</pre>
+sql
+set statistics io off
+```
 
 Now we will look at statistics for time, you can do that by running the following command
 
-<pre>set statistics time on</pre>
+sql
+set statistics time on
+```
 
 Let&#8217;s run the same queries again
 
-<pre>select * from TestSmall
+sql
+select * from TestSmall
 where Somevalue like '2%'
 
 select * from TestBig
-where Somevalue like '2%'</pre>
+where Somevalue like '2%'
+```
 
 SQL Server Execution Times:
      
@@ -132,11 +151,13 @@ As you can see the numbers are much better for the smaller table
   
 When we do the non sargable queries the numbers don&#8217;t increase for the smaller table but they do for the bigger table
 
-<pre>select * from TestSmall
+sql
+select * from TestSmall
 where left(Somevalue,1) = '2'
 
 select * from TestBig
-where left(Somevalue,1) = '2'</pre>
+where left(Somevalue,1) = '2'
+```
 
 SQL Server Execution Times:
      
@@ -148,28 +169,34 @@ CPU time = 31 ms, elapsed time = 132 ms.
 
 Since data might be cached and you would like to start fresh every time you can execute the following command to clear the cache
 
-<pre>dbcc freeproccache
-dbcc dropcleanbuffers</pre>
+sql
+dbcc freeproccache
+dbcc dropcleanbuffers
+```
 
 Finally I will leave you with execution plan pics
 
 **Sargable Query**
 
-<pre>select * from TestSmall
+sql
+select * from TestSmall
 where Somevalue like '2%'
 
 select * from TestBig
-where Somevalue like '2%'</pre>
+where Somevalue like '2%'
+```
 
 ![Sargable Query][2]
 
 **Non Sargable Query**
 
-<pre>select * from TestSmall
+sql
+select * from TestSmall
 where left(Somevalue,1) = '2'
 
 select * from TestBig
-where left(Somevalue,1) = '2'</pre>
+where left(Somevalue,1) = '2'
+```
 
 ![Non Sargable Query][3]
 
@@ -180,5 +207,5 @@ where left(Somevalue,1) = '2'</pre>
  [1]: http://stackoverflow.com/questions/230642/create-trigger-is-taking-more-than-30-minutes-on-sql-server-2005/939616#939616
  [2]: http://imgur.com/9qRfI.png
  [3]: http://imgur.com/mHaI0.png
- [4]: http://forum.lessthandot.com/viewforum.php?f=17
- [5]: http://forum.lessthandot.com/viewforum.php?f=22
+ [4]: http://forum.ltd.local/viewforum.php?f=17
+ [5]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: 'Formatting Durations in SSAS: Caveat'
 author: Koen Verbeeck
 type: post
 date: 2014-12-22T12:49:40+00:00
+ID: 3125
 url: /index.php/webdev/business-intelligence/formatting-durations-in-ssas-caveat/
 views:
   - 4146
@@ -44,7 +45,8 @@ tags:
   My educated guess is that SSAS doesn’t know upfront if the result of the formula will be <em>null</em> or not, so it calculated the measure anyway and displays everything on the grid. The solution is to add an extra check for <em>null</em> values into the formula.
 </p>
 
-<pre>CREATE MEMBER CURRENTCUBE.[Measures].[DurationFormatted]
+```vbnet
+CREATE MEMBER CURRENTCUBE.[Measures].[DurationFormatted]
  AS   Iif(IsEmpty([Measures].[Duration])
         ,null
         ,   Cstr((Int([Measures].[Duration]) * 24)
@@ -52,9 +54,8 @@ tags:
         +   FORMAT(CDate([Measures].[Duration]), ":mm:ss")
         )
 ,VISIBLE = 1
-,ASSOCIATED_MEASURE_GROUP = 'Customer Service';</pre>
-
-<p style="text-align: justify">
+,ASSOCIATED_MEASURE_GROUP = 'Customer Service';
+```<p style="text-align: justify">
   When browsing the cube now, the Unknown member is now ignored due to the explicit check for <em>null</em> values.
 </p>
 

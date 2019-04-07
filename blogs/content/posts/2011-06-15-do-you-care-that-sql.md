@@ -3,6 +3,7 @@ title: Do you care that SQL Server Denali cannot be installed on Windows XP?
 author: SQLDenis
 type: post
 date: 2011-06-15T11:54:00+00:00
+ID: 1221
 excerpt: |
   Dan Jones posted a blogpost here: http://blogs.msdn.com/b/dtjones/archive/2011/06/10/sql-server-code-name-denali-supported-oses-and-upgrade-paths.aspx showing what OS Denali can be installed on.
   

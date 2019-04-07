@@ -3,6 +3,7 @@ title: Make 2012 the year that you will learn how to code
 author: SQLDenis
 type: post
 date: 2012-01-01T23:14:00+00:00
+ID: 1473
 excerpt: "Forget about those crazy Mayans and their stupid calendar, 2012 is here to stay! Is your new year's resolution to learn how to code? I have some good news for you, if you don't know how to code but would like to learn, there is help on the way. There is&hellip;"
 url: /index.php/itprofessionals/ethicsit/make-2012-the-year-that/
 views:

@@ -3,6 +3,7 @@ title: Continuous Delivery – Adding Static Analysis
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-04-27T10:18:00+00:00
+ID: 1605
 excerpt: "Running static analysis checks can help keep us on track with our standards, identify unused code, identify similar code blocks, and much more. In a manual process, running these tools can be time consuming, costing time to wait for the run complete, more time if we don't abandon them after the first run and have to maintain a schedule, and even more time if someone has to keep a spreadsheet somewhere to compare the results from run to run. Add an automated build process, and we can net the same level of information and trending for a modest setup cost."
 url: /index.php/enterprisedev/application-lifecycle-management/continuous-delivery-adding-static-analysis/
 views:
@@ -65,19 +66,19 @@ Several of the plugins below produce data that can be captured and displayed on 
 Compiler warnings can be captured easily using the [Warnings Plugin][5]. After adding it to the Jenkins server, we can open the CI job and add the checks in the &#8220;post-build Actions&#8221; section:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Warnings.png" title="Analysis - Compiler Warnings" /><br /> Analysis &#8211; Compiler Warnings
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Warnings.png" title="Analysis - Compiler Warnings" /><br /> Analysis &#8211; Compiler Warnings
 </div>
 
 The plugin has the ability to scan the build output and files in our workspace, with parsers for a number of different tools. In this case I&#8217;ve chosen to capture the MSBuild output, but I could just as easily capture output from something like JSLint (speaking of future projects). A trend of the warning count is added to the job summary screen and a summary of the warnings is displayed on each individual run:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Warnings_Summary.png" title="Analysis - Compiler Warnings Summary" /><br /> Analysis &#8211; Compiler Warnings Summary
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Warnings_Summary.png" title="Analysis - Compiler Warnings Summary" /><br /> Analysis &#8211; Compiler Warnings Summary
 </div>
 
 And drilling in we can see the details:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Warnings_Detail.png" title="Analysis - Compiler Warnings Details" /><br /> Analysis &#8211; Compiler Warnings Details
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Warnings_Detail.png" title="Analysis - Compiler Warnings Details" /><br /> Analysis &#8211; Compiler Warnings Details
 </div>
 
 In this case, we&#8217;re actually looking at the warnings from 49 builds ago. Since the results are incorporated into the build summary, I can access past versions for as long as I keep the job history.
@@ -89,7 +90,7 @@ Open tasks refer to those little TODO and HACK tags we litter throughout our cod
 The plugin adds a section to the &#8220;post-build Actions&#8221; section, which we can then configure to fit our specific needs:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Tasks.png" title="Analysis - Open Tasks" /><br /> Analysis &#8211; Open Tasks
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Tasks.png" title="Analysis - Open Tasks" /><br /> Analysis &#8211; Open Tasks
 </div>
 
 In the job, we can specify which tags to capture from the code and the filename pattern to use for code files. There is also an advanced section where we can add thresholds. For instance, this is where I could define that 20 or more cases of the high priority tag should cause the build to fail until we get our HACK&#8217;s back under control.
@@ -97,13 +98,13 @@ In the job, we can specify which tags to capture from the code and the filename 
 The output for this plugin is similar to the Compiler Warnings, with a trend on the main project page, a summary in the individual job:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Tasks_Summary.png" title="Analysis - Open Tasks Summary" /><br /> Analysis &#8211; Open Tasks Summary
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Tasks_Summary.png" title="Analysis - Open Tasks Summary" /><br /> Analysis &#8211; Open Tasks Summary
 </div>
 
 And a details page we can drill into:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Tasks_Details.png" title="Analysis - Open Tasks Details" /><br /> Analysis &#8211; Open Tasks Details
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Tasks_Details.png" title="Analysis - Open Tasks Details" /><br /> Analysis &#8211; Open Tasks Details
 </div>
 
 The scan pulls out not just the presence of these tags, but also the content and location of the messages. This makes it easy to quickly scan them and pick one to try and knock off the list.
@@ -117,7 +118,7 @@ There are a number of tools out there to detect duplication in code, in this cas
 First, we need to run simian against our codebase to produce a report. I&#8217;ve added a windows batch command as part of the build steps to run this command, placing it after the unit tests but before the test deployment. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_Command.png" title="Analysis - Simian Execution" /><br /> Analysis &#8211; Simian Execution
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_Command.png" title="Analysis - Simian Execution" /><br /> Analysis &#8211; Simian Execution
 </div>
 
 I&#8217;ve told Simian to run against all *.cs files in my project directory, excluding the sample data file that is used to generate a sample Entity Framework model. At the tail end I force it to return an exit code of 0 so the job will continue to run the later steps and post-build analysis. Simian will helpfully return a failure exit code when it finds violations, but that&#8217;s not useful for this case.
@@ -125,7 +126,7 @@ I&#8217;ve told Simian to run against all *.cs files in my project directory, ex
 In the &#8220;post-build Action&#8221; section, I&#8217;ve provided the path to the output file Simian creates:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_PostBuild.png" title="Analysis - Simian - Post Build" /><br /> Analysis &#8211; Simian &#8211; Post Build
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_PostBuild.png" title="Analysis - Simian - Post Build" /><br /> Analysis &#8211; Simian &#8211; Post Build
 </div>
 
 We also have the ability to define thresholds for good, stormy, and unstable, based on the number of duplicate blocks found.
@@ -133,13 +134,13 @@ We also have the ability to define thresholds for good, stormy, and unstable, ba
 In the summary screen for the job and each individual run screen, the DRY plugin will add a trend that displays the number of duplicate blocks found over time.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_Summary.png" title="Analysis - Simian - Summary Trend" /><br /> Analysis &#8211; Simian &#8211; Summary Trend
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_Summary.png" title="Analysis - Simian - Summary Trend" /><br /> Analysis &#8211; Simian &#8211; Summary Trend
 </div>
 
 As we drill into the details, we get a list of the files where duplicates occur, and can then drill down into those to see the actual code that was found.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_Details.png" title="Analysis - Simian - Detail Trend" /><br /> Analysis &#8211; Simian &#8211; Detail Trend
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_Details.png" title="Analysis - Simian - Detail Trend" /><br /> Analysis &#8211; Simian &#8211; Detail Trend
 </div>
 
 In this case it has found an interface and an implementation of that interface that have a block of 11 lines of code in common.
@@ -151,7 +152,7 @@ When it comes to code standards, the two main engines I had to choose from were 
 Like Simian above, I need to first run the executable against the codebase, then consume the generated report post-build to feed the trends and details.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Gendarme_Command.png" title="Analysis - Gendarme - Batch Command" /><br /> Analysis &#8211; Gendarme &#8211; Batch Command
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Gendarme_Command.png" title="Analysis - Gendarme - Batch Command" /><br /> Analysis &#8211; Gendarme &#8211; Batch Command
 </div>
 
 I&#8217;ve added the command for Gendarme after the unit tests and before the Simian command above, pointing it at the dll for the project and specifying I want XML output. As with Simian, I&#8217;ve forced the batch to return an exit code of 0 so the run will continue through to process the later steps.
@@ -159,25 +160,25 @@ I&#8217;ve added the command for Gendarme after the unit tests and before the Si
 also like simian, we specify the location of the XML file in the Violations section of the &#8220;post-Build Actions&#8221;.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_PostBuild.png" title="Analysis - Gendarme - Post Build" /><br /> Analysis &#8211; Gendarme &#8211; Post Build
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_PostBuild.png" title="Analysis - Gendarme - Post Build" /><br /> Analysis &#8211; Gendarme &#8211; Post Build
 </div>
 
 The Violations plugin overlays the Gendarme results on the chart we saw above:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_Summary.png" title="Analysis - Gendarme - Summary Trend" /><br /> Analysis &#8211; Gendarme &#8211; Summary Trend
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_Summary.png" title="Analysis - Gendarme - Summary Trend" /><br /> Analysis &#8211; Gendarme &#8211; Summary Trend
 </div>
 
 And the detail results are also very similar:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Gendarme_Details.png" title="Analysis - Gendarme - Detail Trend" /><br /> Analysis &#8211; Gendarme &#8211; Detail Trend
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Gendarme_Details.png" title="Analysis - Gendarme - Detail Trend" /><br /> Analysis &#8211; Gendarme &#8211; Detail Trend
 </div>
 
 However once we drill in, we not only get the code view but also can hover over the identified warning locations for details on the rule the gendarme is reporting on.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Gendarme_Details2.png" title="Analysis - Gendarme - Code Details" /><br /> Analysis &#8211; Gendarme &#8211; Code Details
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Gendarme_Details2.png" title="Analysis - Gendarme - Code Details" /><br /> Analysis &#8211; Gendarme &#8211; Code Details
 </div>
 
 The early downward trend above corresponds to the commits starting on [December 21st][2], when I started cleaning up some of the worst offenders.
@@ -194,27 +195,28 @@ This one took more steps for setup:
   * Copy the ReportGenerator folder to server
   * Replace existing MS Test batch command with call to run it from OpenCover and process results with ReportGenerator (below)
 
-<pre>mkdir "%WORKSPACE%testresults"
+```text
+mkdir "%WORKSPACE%testresults"
 "C:AdditionalScriptsOpenCoverOpenCover.Console.exe" -target:"C:Program Files (x86)Microsoft Visual Studio 10.0Common7IDEmstest.exe"  -targetargs:"/resultsfile:"%WORKSPACE%testresultsMyTests.Results.xml" /testcontainer:"%WORKSPACE%MvcMusicStoreTestsbinReleaseMvcMusicStoreTests.dll" /nologo"  -mergebyhash -filter:"+[MvcM*]*" -output:"%WORKSPACE%testresultsopencovertests.xml"
 "C:AdditionalScriptsReportGeneratorReportGenerator.exe" "%WORKSPACE%testresultsopencovertests.xml" "%WORKSPACE%testresultshtml" HtmlSummary
-"C:AdditionalScriptsReportGeneratorReportGenerator.exe" "%WORKSPACE%testresultsopencovertests.xml" "%WORKSPACE%testresultshtml" Html</pre>
-
+"C:AdditionalScriptsReportGeneratorReportGenerator.exe" "%WORKSPACE%testresultsopencovertests.xml" "%WORKSPACE%testresultshtml" Html
+```
 This command (1) creates the test results folder, (2) runs OpenCover with arguments to locate the MSTest executable, flags to use with MSTest, a filter to limit execution to the main assemblies, and an output filename. The last lines (3) run the ReportGenerator executable against the results, producing the HtmlSummary report and (4) detailed HTML reports for each file. 
 
 Checking the &#8220;Publish HTML reports&#8221; option in &#8220;post-build Actions&#8221;, we can specify the folder, index page, and title to use for the generated reports.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Coverage_PostBuild.png" title="Analysis - Coverage - PostBuild" /><br /> Analysis &#8211; Coverage &#8211; PostBuild
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Coverage_PostBuild.png" title="Analysis - Coverage - PostBuild" /><br /> Analysis &#8211; Coverage &#8211; PostBuild
 </div>
 
 This adds a sidebar link to the job summary, which links to the summary we generated and the detail pages associated with it.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Coverage_Button.png" title="Analysis - Coverage Link" /><br /> Analysis &#8211; Coverage Link
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Coverage_Button.png" title="Analysis - Coverage Link" /><br /> Analysis &#8211; Coverage Link
 </div>
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Coverage_Summary.png" title="Analysis - Coverage Summary Report" /><br /> Analysis &#8211; Coverage Summary Report
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Coverage_Summary.png" title="Analysis - Coverage Summary Report" /><br /> Analysis &#8211; Coverage Summary Report
 </div>
 
 Each of the links has a details report behind it that includes code statistics, like cyclomatic complexity, and a copy of the code with markers to indicate covered vs uncovered lines.

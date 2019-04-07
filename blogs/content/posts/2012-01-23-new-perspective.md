@@ -3,6 +3,7 @@ title: New perspective from the other side of the fence
 author: chopstik
 type: post
 date: 2012-01-23T11:03:00+00:00
+ID: 1497
 excerpt: 'A few months ago, I changed jobs and careers. I moved from a software engineer role to an analyst/project manager role (or, as some of my more technical friends have referred to it - the dark side). I had deliberately sought out this change as I wanted&hellip;'
 url: /index.php/itprofessionals/ethicsit/new-perspective/
 views:

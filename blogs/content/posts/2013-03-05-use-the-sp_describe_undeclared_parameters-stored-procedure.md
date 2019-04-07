@@ -3,6 +3,7 @@ title: Use the sp_describe_undeclared_parameters stored procedure to check if dy
 author: SQLDenis
 type: post
 date: 2013-03-06T00:22:00+00:00
+ID: 2024
 excerpt: |
   Let's say you have the following piece of dynamic SQL
   
@@ -26,20 +27,23 @@ categories:
 ---
 Sometimes you get some dynamic SQL handed to you which is 2 pages long with all kind of parameters. Of course you yourself would never write such a monstrosity, but how can you verify that all parameters in the code have been declared? Let&#8217;s say you have the following piece of dynamic SQL
 
-<pre>DECLARE @DynamicSql nvarchar(1000)
+sql
+DECLARE @DynamicSql nvarchar(1000)
 SELECT @DynamicSql = N'DECLARE @Type nchar(3) = ''P'' SELECT *
 FROM master..spt_values where type =@Type'
 
-exec( @DynamicSql )</pre>
+exec( @DynamicSql )
+```
 
 That will execute just fine. What if you forgot the `DECLARE @Type nchar(3) = ''P''` part?
 
-<pre>DECLARE @DynamicSql nvarchar(1000)
+sql
+DECLARE @DynamicSql nvarchar(1000)
 SELECT @DynamicSql = N'SELECT *
 FROM master..spt_values where type =@Type'
 
-exec( @DynamicSql )</pre>
-
+exec( @DynamicSql )
+```
 Here is the error.
   
 _Msg 137, Level 15, State 2, Line 2
@@ -54,11 +58,13 @@ Here is how Books On Line describes the sp\_describe\_undeclared_parameters stor
 
 Here is how you can easily test the code. Change `exec( @DynamicSql )` to `exec sp_describe_undeclared_parameters  @DynamicSql`
 
-<pre>DECLARE @DynamicSql nvarchar(1000)
+sql
+DECLARE @DynamicSql nvarchar(1000)
 SELECT @DynamicSql = N'SELECT *
 FROM master..spt_values where type =@Type'
 
-EXEC sp_describe_undeclared_parameters  @DynamicSql</pre>
+EXEC sp_describe_undeclared_parameters  @DynamicSql
+```
 
 Here is what you see 
 
@@ -70,11 +76,13 @@ There are more columns in the output, feel free to run this yourself to see all 
 
 How many times have you done something like the following
 
-<pre>EXEC sp_executesql @tsql = 
+sql
+EXEC sp_executesql @tsql = 
 N'SELECT id, name, xtype 
 FROM sys.sysobjects
 WHERE id = @id OR NAME = @name',
-@params = N'@id int',@id = 1,@name = 'sysobjects'</pre>
+@params = N'@id int',@id = 1,@name = 'sysobjects'
+```
 
 Running that will give you the following error
 
@@ -86,21 +94,25 @@ Here is how to quickly test that as well, take the code from above and grab ever
 
 Basically, you now have this
 
-<pre>exec sp_executesql @tsql = 
+sql
+exec sp_executesql @tsql = 
 N'SELECT id, name, xtype 
 FROM sys.sysobjects
 WHERE id = @id OR NAME = @name',
-@params = N'@id int'</pre>
+@params = N'@id int'
+```
 
 Now change sp\_executesql to sp\_describe\_undeclared\_parameters 
 
 Run that
 
-<pre>exec sp_describe_undeclared_parameters @tsql = 
+sql
+exec sp_describe_undeclared_parameters @tsql = 
 N'SELECT id, name, xtype 
 FROM sys.sysobjects
 WHERE id = @id OR NAME = @name',
-@params = N'@id int'</pre>
+@params = N'@id int'
+```
 
 Here is what you get
 
@@ -111,14 +123,16 @@ Again there are more columns so feel free to run this yourself. So far I showed 
 
 Here is what it looks like with 4 undeclared parameters
 
-<pre>DECLARE @DynamicSql nvarchar(1000)
+sql
+DECLARE @DynamicSql nvarchar(1000)
 SELECT @DynamicSql = N'SELECT *
 FROM master..spt_values where type =@Type
 AND Name =@Name
 And number =@number
 and high = @high'
 
-EXEC sp_describe_undeclared_parameters  @DynamicSql</pre>
+EXEC sp_describe_undeclared_parameters  @DynamicSql
+```
 
 Here is the output
 

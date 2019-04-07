@@ -3,6 +3,7 @@ title: 'SSIS Deployment with PowerShell: Adding Environment References'
 author: Koen Verbeeck
 type: post
 date: 2013-08-21T13:04:00+00:00
+ID: 2146
 excerpt: This blog post explains how you can add environment references in a PowerShell deployment script for SSIS 2012.
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/ssis-deployment-with-powershell-adding/
 views:
@@ -45,7 +46,8 @@ tags:
   The original script from Matt’s blog – modified for my project – looks like this:
 </p>
 
-<pre># Variables
+```powershell
+# Variables
 $SSIS_server ="localhost"
 $ProjectFilePath = "E:TestSSIS2012PowerShell_TestPowerShell_TestbinDevelopmentPowerShell_Test.ispac"
 
@@ -102,9 +104,8 @@ $project = $folder.Projects[$ProjectName]
 $project.References.Add($EnvironmentName, $folder.Name)
 $project.Alter() 
  
-Write-Host "All done."</pre>
-
-<p style="text-align: justify;">
+Write-Host "All done."
+```<p style="text-align: justify;">
   The script deploys the project to the Catalog, creates an environment and links the environment to the project. The environment has two variables: one to set the server name and one to set the database. Let’s inspect the results. When you right-click on the project, you can choose <em>Configure</em>. In the Configure window, you can see the connection managers used in the project in the Connection Managers tab. When we take a look at the Initial Catalog property of the OLE_TEST connection manager, you can see it is not yet linked to an environment variable.
 </p>
 
@@ -118,7 +119,8 @@ Write-Host "All done."</pre>
   To link the environment variables to the connection manager, we need to add just a few lines to the script:
 </p>
 
-<pre>Write-Host "Setting environment variable on package connection string ..."
+```powershell
+Write-Host "Setting environment variable on package connection string ..."
 $ssisPackage = $project.Packages.Item("PowerShellTest.dtsx")
 
 $parServerName = "CM.OLE_Test.ServerName"
@@ -127,9 +129,8 @@ $ssisPackage.Parameters[$parServerName].Set("Referenced","ServerName")
 $parDatabaseName = "CM.OLE_Test.InitialCatalog"
 $ssisPackage.Parameters[$parDatabaseName].Set("Referenced","DatabaseName")
 
-$ssisPackage.Alter()</pre>
-
-<p style="text-align: justify;">
+$ssisPackage.Alter()
+```<p style="text-align: justify;">
   When you deploy the project to the server with these adjustments, we get the result we want:
 </p>
 
@@ -145,7 +146,8 @@ $ssisPackage.Alter()</pre>
 
 <span style="text-align: justify;">To wrap-up this post, here’s the entire deployment script for easier copy-paste:</span>
 
-<pre># Variables
+```powershell
+# Variables
 $SSIS_server ="localhost"
 $ProjectFilePath = "E:TestSSIS2012PowerShell_TestPowerShell_TestbinDevelopmentPowerShell_Test.ispac"
 
@@ -213,4 +215,5 @@ $ssisPackage.Parameters[$parDatabaseName].Set("Referenced","DatabaseName")
 
 $ssisPackage.Alter()
 
-Write-Host "All done."</pre>
+Write-Host "All done."
+```

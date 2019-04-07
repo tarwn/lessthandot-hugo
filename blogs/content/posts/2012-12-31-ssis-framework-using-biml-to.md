@@ -3,6 +3,7 @@ title: 'SSIS Framework: Dynamically Create Packages to Extract Flat Files Using 
 author: Sam Vanga
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 1824
 excerpt: |
    
   Solution: SSIS Framework for Developing Extract Packages

@@ -3,6 +3,7 @@ title: 'SQL Saturday #77 – Pensacola, FL'
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-20T10:55:00+00:00
+ID: 1123
 excerpt: 'As of the date this blog post is published, there are 45 days left until this year’s SQL Saturday in Pensacola.  The previous Pensacola SQL Saturdays have always sounded like much more than the everyday SQL Saturday.  This was easily seen from twitter f&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-77-pensacola/
 views:

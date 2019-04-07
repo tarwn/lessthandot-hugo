@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #41 – If I Can Do It, So Can You!'
 author: Paul Timmerman
 type: post
 date: 2013-04-09T17:48:00+00:00
+ID: 2064
 excerpt: |
   I didn't think my first blog post on LTD would be for a T-SQL Tuesday, but this month's topic was so timely for me I had no choice but to participate.
   In case you don't know, T-SQL Tuesday is a monthly blogging event, with a different community host ea&hellip;

@@ -3,6 +3,7 @@ title: Kilimanjaro is the code name for the next version of SQL Server
 author: SQLDenis
 type: post
 date: 2008-10-06T22:08:45+00:00
+ID: 165
 url: /index.php/datamgmt/datadesign/kilimanjaro-is-the-code-name-for-the-nex/
 views:
   - 3657

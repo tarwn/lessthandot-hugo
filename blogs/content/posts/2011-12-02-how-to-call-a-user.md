@@ -3,6 +3,7 @@ title: How to call a user defined function with a default parameter
 author: SQLDenis
 type: post
 date: 2011-12-02T13:15:00+00:00
+ID: 1405
 excerpt: |
   Someone had some trouble earlier today with calling a user defined function that has a default value for a parameter
   
@@ -30,7 +31,8 @@ When you have a stored procedure with default values for parameters, you can omi
 
 First create this simple function
 
-<pre>CREATE FUNCTION dbo.fnTest(@param1 INT, @param2 int = 1 )
+sql
+CREATE FUNCTION dbo.fnTest(@param1 INT, @param2 int = 1 )
 RETURNS int
 AS
 BEGIN
@@ -38,13 +40,16 @@ BEGIN
         RETURN @param2
     
 END
-GO</pre>
+GO
+```
 
 As you can see @param2 has a default of 1.
 
 Calling the function by supplying both parameters works as expected
 
-<pre>SELECT dbo.fnTest(  23,3 )</pre>
+sql
+SELECT dbo.fnTest(  23,3 )
+```
 
 Output
   
@@ -54,7 +59,9 @@ Output
 
 Now try to do this
 
-<pre>SELECT dbo.fnTest(  23 )</pre>
+sql
+SELECT dbo.fnTest(  23 )
+```
 
 Here is the error message that we get back
 
@@ -72,7 +79,9 @@ You will see the following text
 
 So, let&#8217;s try that
 
-<pre>SELECT dbo.fnTest(  23, default )</pre>
+sql
+SELECT dbo.fnTest(  23, default )
+```
 
 Output
   

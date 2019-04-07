@@ -3,6 +3,7 @@ title: How I got started with SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-09-08T12:50:18+00:00
+ID: 552
 url: /index.php/datamgmt/dbprogramming/how-i-got-started-with-sql-server-1/
 views:
   - 8462

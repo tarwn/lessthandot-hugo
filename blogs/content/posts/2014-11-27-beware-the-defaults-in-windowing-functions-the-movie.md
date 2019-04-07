@@ -3,6 +3,7 @@ title: Beware the defaults! (in windowing functions) – The Movie!
 author: Koen Verbeeck
 type: post
 date: 2014-11-27T14:30:53+00:00
+ID: 3071
 url: /index.php/datamgmt/dbprogramming/mssqlserver/beware-the-defaults-in-windowing-functions-the-movie/
 views:
   - 4919

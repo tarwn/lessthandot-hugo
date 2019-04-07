@@ -3,6 +3,7 @@ title: Use Filters in SSMS to only see the things that are of interest to you
 author: SQLDenis
 type: post
 date: 2010-02-06T18:13:04+00:00
+ID: 696
 url: /index.php/datamgmt/dbprogramming/use-filters-in-ssms-to-only-see-the-thin/
 views:
   - 5773
@@ -21,7 +22,8 @@ Now that all my server are SQL Server 2008 I use SSMS with SSMS Toolpack and Toa
 
 Let&#8217;s first look at some code. Create a new database named test, create a new schema named Denis and then add 3 tables to the dbo schema and 3 tables to the Denis schema. Just run the code below
 
-<pre>create database test
+sql
+create database test
 go
 
 use test
@@ -43,7 +45,8 @@ go
 create  table Denis.Test2(id int);
 go
 create  table Denis.Test3(id int);
-go</pre>
+go
+```
 
 Now in SSMS you will see the following if you expand the tables folder
 
@@ -86,5 +89,5 @@ So are you using filters in SSMS?
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://en.wikipedia.org/wiki/Brownfield_(software_development)
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

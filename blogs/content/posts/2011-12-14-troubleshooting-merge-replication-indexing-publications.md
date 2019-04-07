@@ -3,6 +3,7 @@ title: Troubleshooting Merge Replication Performance – Indexing Publications
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-14T11:25:00+00:00
+ID: 1431
 excerpt: |
   Troubleshooting Merge Replication – Index your publication design
   When setting up and designing a merge replication publication that will utilize join filters, indexing strategies can be vital to determining design issues in the setup.  Take the below&hellip;
@@ -19,12 +20,14 @@ categories:
 ---
 When setting up and designing a merge replication publication that will utilize join filters, indexing strategies can be vital to determining design issues in the setup.  Take the below query on the AdventureWorks database.
 
-<pre>SELECT 
-	<columns&gt;
+sql
+SELECT 
+	<columns>
 FROM Person.Person
 JOIN Sales.SalesOrderHeader ON Person.BusinessEntityID = SalesOrderHeader.SalesPersonID
 JOIN Sales.SalesOrderDetail ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID]
-WHERE Person.LoginAccount = SUSER_SNAME()</pre>
+WHERE Person.LoginAccount = SUSER_SNAME()
+```
 
 The query above is a common query that is the result of designing merge replication with parameterized filters and join filters.  It filters down as a parameterized filter on the system function SUSER\_SNAME() and then uses join filters on SalesOrderHeader and SalesOrderDetail.  This design will allow for the subscriber to this query, or publication, to only retrieve data that is matching the predicate of their SUSER\_SNAME().  The value here can be seen in a publishing database that may be 500GB and the subscribers only have 200MB of data that they need to continue functioning in the business entity they belong to.
 
@@ -40,10 +43,12 @@ This technique of writing a query can assist in designing merge and transactiona
 
 In the article tuning for [parameterized filters][1], the index IDX\_PARTITION\_LOGIN\_GUID\_ASC was created.  This same index will help in the publication created for this article.  The definition of the index is shown below.
 
-<pre>CREATE NONCLUSTERED INDEX [IDX_PARTITION_LOGIN_GUID_ASC]
+sql
+CREATE NONCLUSTERED INDEX [IDX_PARTITION_LOGIN_GUID_ASC]
 ON [Person].[Person] ([LoginAccount])
 INCLUDE ([rowguid])
-GO</pre>
+GO
+```
 
 To show the tuning steps, the plan below is a plan based off the query shown early but without the IDX\_PARTITION\_LOGIN\_GUID\_ASC index.
 

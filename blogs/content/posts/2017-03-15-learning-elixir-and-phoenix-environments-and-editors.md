@@ -3,6 +3,7 @@ title: Learning Elixir and Phoenix – Environments and Editors
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-03-15T12:36:36+00:00
+ID: 8594
 url: /index.php/webdev/learning-elixir-and-phoenix-environments-and-editors/
 views:
   - 3311
@@ -62,9 +63,10 @@ The biggest issue I ran into was the nodejs plugin, as it relies on a bunch of g
 
 **Error:** 
 
-<pre>Unable to execute program '/usr/local/Cellar/gnupg/1.4.21/libexec/gnupg/gpgkeys_curl': No such file or directory
-Gpg: no handler for keyserver scheme 'hkp'</pre>
-
+```text
+Unable to execute program '/usr/local/Cellar/gnupg/1.4.21/libexec/gnupg/gpgkeys_curl': No such file or directory
+Gpg: no handler for keyserver scheme 'hkp'
+```
 **Resolution:**
   
 After flailing a bit with different gpg installation options, internet posts indicating I needed to build from scratch, etc, the answer ended up being to brew install curl and then uninstall and reinstall gpg via brew as well. This isn&#8217;t 100% for sure, though, as there may have been remnants of other attempts (such as brew installing gpg2, manually installing gpg and brew force linking it and then uninstalling it, etc).

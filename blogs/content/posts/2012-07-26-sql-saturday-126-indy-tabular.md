@@ -3,6 +3,7 @@ title: 'SQL Saturday #126 (Indy) – Tabular Mode SSAS'
 author: joshuafennessy
 type: post
 date: 2012-07-26T13:29:00+00:00
+ID: 1681
 excerpt: |
   SQL Saturday #126 is ALMOST HERE!  I've been looking forward to this event for a long time, and I'm excited to be selected as a presenter.
   Join me this Saturday, 7/28/2012, in Indianapolis, IN for an introduction to Tabular Mode SSAS in SQL 2012.  We'l&hellip;

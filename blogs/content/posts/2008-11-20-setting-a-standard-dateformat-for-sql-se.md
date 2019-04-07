@@ -3,6 +3,7 @@ title: Setting a standard DateFormat for SQL Server
 author: George Mastros (gmmastros)
 type: post
 date: 2008-11-20T16:58:53+00:00
+ID: 213
 url: /index.php/datamgmt/datadesign/setting-a-standard-dateformat-for-sql-se/
 views:
   - 61456
@@ -16,13 +17,17 @@ categories:
 ---
 Each SQL Server has a default language. You can see what the default language is by executing these commands (in a query window).
 
-<pre>sp_configure 'default language'</pre>
+sql
+sp_configure 'default language'
+```
 
 This will tell you what the default language is (sort of). It actually returns a config_value with an integer that represents the language id.
 
 You can then run&#8230;
 
-<pre>sp_helplanguage</pre>
+sql
+sp_helplanguage
+```
 
 You will see a list of languages that SQL Server supports. 
 
@@ -36,13 +41,16 @@ The good news is that you can change the default language for a user so that sub
 
 You can set the default language for a user by issueing the following command.
 
-<pre>sp_defaultlanguage @loginame = 'LoginName', @language = 'Language'</pre>
+sql
+sp_defaultlanguage @loginame = 'LoginName', @language = 'Language'
+```
 
 After running this command, you will need to logout and back in to the database in order for the change to take affect. The good news is that the language setting only needs to be done once (for each user in the database).
 
 There is an alternative method, but it only works for the current session. You can set the language in your query (much the same way the Set DateFormat works). When you disconnect from the database, the language setting is NOT saved. Set Language differs from Set DateFormat regarding weekday names and month names, for example:
 
-<pre>set language 'us_english'
+sql
+set language 'us_english'
 
 Select Convert(DateTime, '4/6/2006'), 
        DateName(weekday, '4/6/2006'),
@@ -52,8 +60,8 @@ set language 'Italian'
 
 Select Convert(DateTime, '4/6/2006'), 
        DateName(Weekday, '4/6/2006'),
-       DateName(Month, '4/6/2006')</pre>
-
+       DateName(Month, '4/6/2006')
+```
 _**Summary**_
   
 You can set the default language for new logins by configuring the server&#8217;s default language by using sp_configure.

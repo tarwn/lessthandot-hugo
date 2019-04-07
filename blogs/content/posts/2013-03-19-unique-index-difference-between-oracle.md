@@ -3,6 +3,7 @@ title: Unique index difference between Oracle and SQL Server
 author: SQLDenis
 type: post
 date: 2013-03-19T21:55:00+00:00
+ID: 2038
 excerpt: |
   When working with different database systems you have to be aware that some things work differently from one system to another. I already blogged a couple of times about differences between SQl Server and Oracle, those post are the following
   Truncate r&hellip;
@@ -37,19 +38,25 @@ Today we are going to look at the difference between a unique index in Oracle an
 
 Let&#8217;s start with SQL Server. First create this table and also this index
 
-<pre>CREATE TABLE TestUnique (Id int)
+sql
+CREATE TABLE TestUnique (Id int)
 
 
-CREATE UNIQUE INDEX SomeIndex ON TESTUNIQUE (ID);</pre>
+CREATE UNIQUE INDEX SomeIndex ON TESTUNIQUE (ID);
+```
 
 Insert the following two rows
 
-<pre>INSERT INTO TestUnique VALUES(1);
-INSERT INTO TestUnique VALUES(null);</pre>
+sql
+INSERT INTO TestUnique VALUES(1);
+INSERT INTO TestUnique VALUES(null);
+```
 
 Now let&#8217;s insert one more NULL
 
-<pre>INSERT INTO TestUnique VALUES(null);</pre>
+sql
+INSERT INTO TestUnique VALUES(null);
+```
 
 Here is the error
   
@@ -65,7 +72,8 @@ What about Oracle? Let&#8217;s take a look. Run this whole block, it will create
   
 
 
-<pre>CREATE TABLE TestUnique (Id int);
+```plsql
+CREATE TABLE TestUnique (Id int);
 
 CREATE UNIQUE INDEX INDEX1 ON TESTUNIQUE (ID);
 
@@ -73,7 +81,8 @@ INSERT INTO TestUnique VALUES(1);
 INSERT INTO TestUnique VALUES(null);
 INSERT INTO TestUnique VALUES(null);
 
-SELECT * FROM TestUnique;</pre>
+SELECT * FROM TestUnique;
+```
 
 Here is what it looks like from SQL developer
 

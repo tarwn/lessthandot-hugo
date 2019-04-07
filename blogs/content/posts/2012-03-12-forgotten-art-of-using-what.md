@@ -3,6 +3,7 @@ title: Forgotten art of using what you know
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-03-12T14:28:00+00:00
+ID: 1556
 excerpt: |
   Forgotten art of using what you know
   One thing that can be very hard to learn early in your career is the art of ignoring the latest and greatest methods to get a task done in a short amount of time.  Now, before I continue, we as technology profession&hellip;
@@ -37,7 +38,8 @@ The task is to export a complete list of view definitions from INFORMATION\_SCHE
 
 If a technology like VBScript was used and the level of skills in writing VBScript were extremely high, the task would have a better overall success rate.  You might be able to write the following in an hour.
 
-<pre>Function ReplaceMethod(ByRef StringToExtract, ByVal MatchPattern,ByVal ReplacementText)
+```vb
+Function ReplaceMethod(ByRef StringToExtract, ByVal MatchPattern,ByVal ReplacementText)
 	Dim regEx, CurrentMatch, CurrentMatches
 
 	Set regEx = New RegExp
@@ -57,7 +59,8 @@ do while not listFile.AtEndOfStream
     fName =  listFile.ReadLine()
     newLine = ReplaceAllByExpression(fName,"(create view dbo.[[a-zA-Z_]{0,}]sasss{0,1})","")
     listFileNew.WriteLine(newLine)
-loop</pre>
+loop
+```
 
 Put this script together with the export capabilities of SQL Server Management Studio and ability to save the export as an SSIS package, you time has now been cut down significantly. 
 

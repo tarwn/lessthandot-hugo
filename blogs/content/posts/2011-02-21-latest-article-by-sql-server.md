@@ -3,6 +3,7 @@ title: Latest article by SQL Server MVP Erland Sommarskog is a gem
 author: SQLDenis
 type: post
 date: 2011-02-21T22:22:00+00:00
+ID: 1048
 excerpt: |
   SQL Server MVP Erland Sommarskog has posted his latest article yesterday and I highly recommend printing it out/transferring it to your ebook reader and reading it.
   Of course I think most of you are already familiar with Erland's article The curse and&hellip;

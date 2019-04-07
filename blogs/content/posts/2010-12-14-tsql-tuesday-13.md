@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #13: What the Business Says Is Not What the Business Wants
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-12-14T10:09:43+00:00
+ID: 975
 excerpt: 'Steve Jones (Twitter | Blog), The Voice of the DBA, is hosting the T-SQL Tuesday blogging fest over on SQLServerCentral.com this month.  The topic is one that has been a battle between DBAs, Developers and even managers since the creation of computing in the business itself.  It causes heated arguments, career changes, and trips to your psychiatrist and worst of all, more work and over-thinking that is ever needed for some projects.  What the Business Says Is Not What the Business Wants.'
 url: /index.php/datamgmt/datadesign/tsql-tuesday-13/
 views:

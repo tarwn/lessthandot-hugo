@@ -3,6 +3,7 @@ title: Nice .NET Design Patterns Articles
 author: SQLDenis
 type: post
 date: 2008-09-17T13:40:00+00:00
+ID: 144
 url: /index.php/webdev/webdesigngraphicsstyling/nice-net-design-patterns-articles/
 views:
   - 11508

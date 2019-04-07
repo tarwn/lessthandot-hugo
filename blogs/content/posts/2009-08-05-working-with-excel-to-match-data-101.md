@@ -3,6 +3,7 @@ title: Working with Excel to match data 101
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-08-05T16:10:26+00:00
+ID: 530
 url: /index.php/datamgmt/dbprogramming/working-with-excel-to-match-data-101/
 views:
   - 9929
@@ -28,18 +29,21 @@ First you need the Excel sheet in the DBA database. Either the import wizard or 
 
 To do that, right click the database, scroll to tasks and select Import Data. Select “Microsoft Excel” in the Data source listing. Note: if you receive an Excel file version 2007+, you need to use Office 12 OLEDB providers. You can read about that [here][1] and how to set the properties or if you allow OPENROWSET then you can simply throw this in there and execute it.
 
-<pre>SELECT * 
+sql
+SELECT * 
 INTO EXCELDATA
 FROM 
-OPENROWSET('Microsoft.ACE.OLEDB.12.0','Excel 12.0;Database=C:ExcelFile.xlsx', 'SELECT * FROM [Sheet1$]')</pre>
-
+OPENROWSET('Microsoft.ACE.OLEDB.12.0','Excel 12.0;Database=C:ExcelFile.xlsx', 'SELECT * FROM [Sheet1$]')
+```
 Nice thing about this is, it will work with pre-2007 versions so you don’t’ have to alter the statement to import other Excel files older as long as you have Office 12 objects installed on the machine importing. If you don’t you can do the older statement of
 
-<pre>SELECT * 
+sql
+SELECT * 
 INTO EXCELDATA
 FROM OPENROWSET('MSDASQL', 
     'Driver={Microsoft Excel Driver (*.xls)};DBQ=C:ExcelFile.xls', 
-    'SELECT * FROM [sheet1$]')</pre>
+    'SELECT * FROM [sheet1$]')
+```
 
 Back to the import wizard; now that you have the data source, click browse to locate your Excel file. 
 
@@ -57,17 +61,22 @@ Hit next and then hit finish. That should be it.
   
 In the Excel sheet I populated Sheet1 with this from AdventureWorks.
 
-<pre>Select TOP 10000 OrderDate,SalesOrderNumber from Sales.SalesOrderHeader</pre>
+sql
+Select TOP 10000 OrderDate,SalesOrderNumber from Sales.SalesOrderHeader
+```
 
 The request at hand is to match up these orders with salesman. Granted this is an odd task and you’re going to get much more complexity in real life, but for the example I like to make it a bit easier so we know you’ll get it working.
   
 So running this
 
-<pre>Select * From BOSSIMPORT</pre>
+sql
+Select * From BOSSIMPORT
+```
 
 We can see our data is in there and waiting for us to complete the task. In AdventureWorks the schema for sales is, Sales. This referes the objects of sales and all pertinent data. Just looking at the design of the schema you can see immediately that Sales.SalesPerson is what you’re going to need to fulfill the additional column of sales person to the order numbers. We can then build a query like this 
 
-<pre>Select
+sql
+Select
 	import.*
 	,salesper.FullName
 	,salesper.SalesPersonID
@@ -84,11 +93,13 @@ Left Join (
 			inner join AdventureWorks.Person.Contact names on  sls.SalesPersonID = names.ContactID
 			Inner Join AdventureWorks.Sales.SalesOrderHeader hdr on sls.SalesPersonID = hdr.SalesPersonID
 			) salesper on import.SalesOrderNumber COLLATE DATABASE_DEFAULT 
-								= salesper.SalesOrderNumber COLLATE DATABASE_DEFAULT</pre>
+								= salesper.SalesOrderNumber COLLATE DATABASE_DEFAULT
+```
 
 With that then you just do an alter to add the columns on the import table and then an update for the data
 
-<pre>Update import
+sql
+Update import
 Set import.FullName = salesper.FullName
 	,import.SalesPersonID = salesper.SalesPersonID
 From
@@ -104,13 +115,15 @@ Left Join (
 			inner join AdventureWorks.Person.Contact names on  sls.SalesPersonID = names.ContactID
 			Inner Join AdventureWorks.Sales.SalesOrderHeader hdr on sls.SalesPersonID = hdr.SalesPersonID
 			) salesper on import.SalesOrderNumber COLLATE DATABASE_DEFAULT 
-								= salesper.SalesOrderNumber COLLATE DATABASE_DEFAULT</pre>
+								= salesper.SalesOrderNumber COLLATE DATABASE_DEFAULT
+```
 
 Now selecting all from the BOSSIMPORT will give you everything. I just copy paste the result set into the Excel file they sent and forward it on back.
 
 The OPENROWSET then can be constructed off the statements above as just
 
-<pre>SELECT * 
+sql
+SELECT * 
 INTO BOSSIMPORT
 FROM OPENROWSET('MSDASQL', 
     'Driver={Microsoft Excel Driver (*.xls)};DBQ=C:ExcelFile.xls', 
@@ -150,7 +163,8 @@ AdventureWorks.HumanResources.Employee emp
 inner join AdventureWorks.Sales.SalesPerson sls on emp.EmployeeID = sls.SalesPersonID
 inner join AdventureWorks.Person.Contact names on  sls.SalesPersonID = names.ContactID
 Inner Join AdventureWorks.Sales.SalesOrderHeader hdr on sls.SalesPersonID = hdr.SalesPersonID
-Go</pre>
+Go
+```
 
 So you can get it all done in one execute.
 

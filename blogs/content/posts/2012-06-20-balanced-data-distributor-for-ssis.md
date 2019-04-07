@@ -3,6 +3,7 @@ title: Balanced Data Distributor for SSIS 2012 Released
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-06-20T10:34:00+00:00
+ID: 1654
 excerpt: 'Yesterday, June 19th, the BDD transform for SSIS 2012 was released (also available for 2008).  BDD is a product and creation from the SQLCAT team so we know that one thing was in mind: Performance!  For me, this has been a long awaited upgrade to the tr&hellip;'
 url: /index.php/datamgmt/datadesign/balanced-data-distributor-for-ssis/
 views:

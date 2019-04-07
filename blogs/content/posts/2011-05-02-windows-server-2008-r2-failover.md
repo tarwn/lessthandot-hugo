@@ -3,6 +3,7 @@ title: 'Windows Server 2008 R2 Failover Clustering: It’s Cool'
 author: Jes Borland
 type: post
 date: 2011-05-02T11:43:00+00:00
+ID: 1154
 excerpt: "I recently took a three-day class on Windows Server 2008 R2: Deploying and Managing Failover Clustering. Here's an overview of some new features, and what I learned."
 url: /index.php/datamgmt/dbadmin/windows-server-2008-r2-failover/
 views:

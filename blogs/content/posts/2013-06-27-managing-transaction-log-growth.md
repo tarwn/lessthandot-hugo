@@ -3,6 +3,7 @@ title: Managing Transaction Log Growth
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-06-27T19:47:00+00:00
+ID: 2125
 excerpt: 'With almost all databases running on SQL Server, at some point there will be a need to load data, move data or delete data from tables that are not ideally setup for the operations in large batch sizes.  While many methods exist to handle the actual tas&hellip;'
 url: /index.php/datamgmt/dbprogramming/managing-transaction-log-growth/
 views:
@@ -46,46 +47,7 @@ Knowing this and already knowing a base utilization of the transaction log, we n
 
 To monitor the log growth, the SQL Agent can be utilized along with reading the DMV sys.dm\_os\_performance_counters.
 
-<pre>SELECT db.[name] AS [Database Name]
-	,ls.cntr_value AS [Log Size (KB)]
-	,lu.cntr_value AS [Log Used (KB)]
-	,CAST(CAST(lu.cntr_value AS FLOAT) / CAST(ls.cntr_value AS FLOAT) AS DECIMAL(18, 2)) * 100 AS [Log Used %]
-	,getdate()
-FROM sys.databases AS db
-INNER JOIN sys.dm_os_performance_counters AS lu ON db.NAME = lu.instance_name
-INNER JOIN sys.dm_os_performance_counters AS ls ON db.NAME = ls.instance_name
-WHERE lu.counter_name LIKE N'Log File(s) Used Size (KB)%'
-	AND ls.counter_name LIKE N'Log File(s) Size (KB)%'
-	AND ls.cntr_value &gt; 0
-	AND db.database_id = 41
-OPTION (RECOMPILE);</pre>
-
-Original query utilized from Glenn Berry’s [diagnostic queries][1] and altered for the needs of this task
-
-This query will provide the database, log size, log used in KB and then the log used as a percentage.  To fully baseline the process, utilizing a SQL Agent Job to run every 10 seconds is optimal.  Once the process to archive is completed, the data will allow for a determination of when and how often a transaction log backup will need to occur to maintain the transaction log and prevent unwanted growth.
-
-To complete the actual job steps, prepare by creating a table in a database outside the one that is being loaded by utilizing the SELECT INTO statement.
-
-<pre>SELECT db.[name] AS [Database Name]
-	,ls.cntr_value AS [Log Size (KB)]
-	,lu.cntr_value AS [Log Used (KB)]
-	,CAST(CAST(lu.cntr_value AS FLOAT) / CAST(ls.cntr_value AS FLOAT) AS DECIMAL(18, 2)) * 100 AS [Log Used %]
-	,getdate()
-INTO [WATCH]
-FROM sys.databases AS db
-INNER JOIN sys.dm_os_performance_counters AS lu ON db.NAME = lu.instance_name
-INNER JOIN sys.dm_os_performance_counters AS ls ON db.NAME = ls.instance_name
-WHERE lu.counter_name LIKE N'Log File(s) Used Size (KB)%'
-	AND ls.counter_name LIKE N'Log File(s) Size (KB)%'
-	AND ls.cntr_value &gt; 0
-	AND db.database_id = 41
-OPTION (RECOMPILE);</pre>
-
- 
-
-Then for the actual job step, simply perform an INSERT on each execution
-
-<pre>INSERT INTO [WATCH]
+sql
 SELECT db.[name] AS [Database Name]
 	,ls.cntr_value AS [Log Size (KB)]
 	,lu.cntr_value AS [Log Used (KB)]
@@ -96,19 +58,70 @@ INNER JOIN sys.dm_os_performance_counters AS lu ON db.NAME = lu.instance_name
 INNER JOIN sys.dm_os_performance_counters AS ls ON db.NAME = ls.instance_name
 WHERE lu.counter_name LIKE N'Log File(s) Used Size (KB)%'
 	AND ls.counter_name LIKE N'Log File(s) Size (KB)%'
-	AND ls.cntr_value &gt; 0
+	AND ls.cntr_value > 0
 	AND db.database_id = 41
-OPTION (RECOMPILE);</pre>
+OPTION (RECOMPILE);
+```
+
+
+Original query utilized from Glenn Berry’s [diagnostic queries][1] and altered for the needs of this task
+
+This query will provide the database, log size, log used in KB and then the log used as a percentage.  To fully baseline the process, utilizing a SQL Agent Job to run every 10 seconds is optimal.  Once the process to archive is completed, the data will allow for a determination of when and how often a transaction log backup will need to occur to maintain the transaction log and prevent unwanted growth.
+
+To complete the actual job steps, prepare by creating a table in a database outside the one that is being loaded by utilizing the SELECT INTO statement.
+
+sql
+SELECT db.[name] AS [Database Name]
+	,ls.cntr_value AS [Log Size (KB)]
+	,lu.cntr_value AS [Log Used (KB)]
+	,CAST(CAST(lu.cntr_value AS FLOAT) / CAST(ls.cntr_value AS FLOAT) AS DECIMAL(18, 2)) * 100 AS [Log Used %]
+	,getdate()
+INTO [WATCH]
+FROM sys.databases AS db
+INNER JOIN sys.dm_os_performance_counters AS lu ON db.NAME = lu.instance_name
+INNER JOIN sys.dm_os_performance_counters AS ls ON db.NAME = ls.instance_name
+WHERE lu.counter_name LIKE N'Log File(s) Used Size (KB)%'
+	AND ls.counter_name LIKE N'Log File(s) Size (KB)%'
+	AND ls.cntr_value > 0
+	AND db.database_id = 41
+OPTION (RECOMPILE);
+```
+
+
+ 
+
+Then for the actual job step, simply perform an INSERT on each execution
+
+sql
+INSERT INTO [WATCH]
+SELECT db.[name] AS [Database Name]
+	,ls.cntr_value AS [Log Size (KB)]
+	,lu.cntr_value AS [Log Used (KB)]
+	,CAST(CAST(lu.cntr_value AS FLOAT) / CAST(ls.cntr_value AS FLOAT) AS DECIMAL(18, 2)) * 100 AS [Log Used %]
+	,getdate()
+FROM sys.databases AS db
+INNER JOIN sys.dm_os_performance_counters AS lu ON db.NAME = lu.instance_name
+INNER JOIN sys.dm_os_performance_counters AS ls ON db.NAME = ls.instance_name
+WHERE lu.counter_name LIKE N'Log File(s) Used Size (KB)%'
+	AND ls.counter_name LIKE N'Log File(s) Size (KB)%'
+	AND ls.cntr_value > 0
+	AND db.database_id = 41
+OPTION (RECOMPILE);
+```
+
 
  
 
 Once the batch load is performed, analyze the data in the Watch table
 
-<pre>SELECT [database name]
+```text
+SELECT [database name]
 	,[log size (KB)]
 	,[log used (KB)]
 	,[log used %]
-FROM [Watch]</pre>
+FROM [Watch]
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/loader_2.png?mtime=1372359869"><img alt="" src="/wp-content/uploads/blogs/All/loader_2.png?mtime=1372359869" width="624" height="365" /></a>
@@ -118,21 +131,27 @@ With this, we can see that the setup that was put in place to back the log up ev
 
 The information above has all been based on a 10 million row table that is archived, or data moved, to another table.  The identifier was a combination of a transaction date and identity seed column as the row identifier.  To allow this to move into a batch processing method, insert the rows that are to be archived into a table that holds the identity column.  This is used while processing to manage while rows have to be moved.  While each batch, 10,000 or another number designated as a good batch size, set a column to in process and then when completed, processed.  A transaction log was set at 1GB and then monitored for normal usage of around 2%.
 
-<pre>CREATE TABLE [dbo].[ArchiveTemp](
+sql
+CREATE TABLE [dbo].[ArchiveTemp](
 	[ROWID] [int] IDENTITY(1,1) NOT NULL,
 	[ID] [int] NULL,
 	[TABLENAME] [nvarchar](255) NULL,
 	[PROCESSED] [tinyint] NULL,
 	[PROCESSDATE] [datetime] NULL
-) ON [PRIMARY]</pre>
+) ON [PRIMARY]
+```
+
 
  
 
 Above is what this type of processing table would appear as.  With this, the initial load for any data older than the most recent 2 years, appears as follows.
 
-<pre>INSERT INTO ArchiveTemp (ID,TABLENAME)
+sql
+INSERT INTO ArchiveTemp (ID,TABLENAME)
 SELECT ID,'MyTable' FROM 'MyTable' WHERE TRANSACTIONDATE <= (SELECT DATEADD(Year,-2,MAX(TRANSACTIONDATE)) FROM TRANFILE)
-AND ID NOT IN (SELECT ID FROM ArchiveTemp WHERE TABLENAME = 'MyTable')</pre>
+AND ID NOT IN (SELECT ID FROM ArchiveTemp WHERE TABLENAME = 'MyTable')
+```
+
 
  
 

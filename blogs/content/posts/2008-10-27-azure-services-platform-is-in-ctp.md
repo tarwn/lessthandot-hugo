@@ -3,6 +3,7 @@ title: Azure Services Platform Is In CTP
 author: SQLDenis
 type: post
 date: 2008-10-27T13:56:25+00:00
+ID: 184
 url: /index.php/webdev/webdesigngraphicsstyling/azure-services-platform-is-in-ctp/
 views:
   - 3535

@@ -3,6 +3,7 @@ title: Installing Scala 2.10 on Eclipse Juno
 author: SQLDenis
 type: post
 date: 2013-01-05T13:46:00+00:00
+ID: 1897
 excerpt: |
   Scala 2.10 was released yesterday and I decided to take a look at it. But first what is Scala anyway? From the Scala site: 
   
@@ -87,15 +88,18 @@ Give it a name and check _public static void main_
 
 You should have something like this
 
-<pre>object Test2 {
+```scala
+object Test2 {
 
   def main(args: Array[String]): Unit = {}
 
-}</pre>
+}
+```
 
 Let&#8217;s make it more interesting by generating some output
 
-<pre>object Test2 {
+```scala
+object Test2 {
 
   def main(args: Array[String]): Unit = {}
 
@@ -107,8 +111,8 @@ Let&#8217;s make it more interesting by generating some output
 	def getSomeInfo() = {
     ("SQLDenis", "LessThanDot", "blogger")
 	}
-}</pre>
-
+}
+```
 Run it by selecting Run As&#8211;> Scala Application from the Run as button
 
 <div class="image_block">
@@ -125,14 +129,17 @@ Role is blogger
 
 Why don&#8217;t we add a simple loop to our code? Here is what needs to be added
 
-<pre>for (i <- 1 to 3) {
+```Scala
+for (i <- 1 to 3) {
 		print(i + ",")
 	}
-	println(" Testing 1,2,3.....")</pre>
+	println(" Testing 1,2,3.....")
+```
 
 Here is the whole code
 
-<pre>object Test2 {
+```scala
+object Test2 {
 
   def main(args: Array[String]): Unit = {}
 
@@ -149,7 +156,8 @@ Here is the whole code
 	def getSomeInfo() = {
     ("SQLDenis", "LessThanDot", "blogger")
 	}
-}</pre>
+}
+```
 
 Run it again, here is what the output should be
 
@@ -238,7 +246,8 @@ And I played a little more with this and decided to do one of our [Friday the Th
 
 Here is a solution that someone posted in Java
 
-<pre>import java.text.DateFormat;
+```java
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -262,11 +271,13 @@ public class Test
             cal.add(Calendar.DATE, 7);
       }
    }
-}</pre>
+}
+```
 
 In Scala you don&#8217;t have to change that much, you can leave or take out the semicolons, here is the code
 
-<pre>object Test2 {
+```scala
+object Test2 {
   
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -289,7 +300,8 @@ import java.util.GregorianCalendar
       
    }
 		
-}</pre>
+}
+```
 
 And here is the output
 
@@ -329,13 +341,15 @@ Fri May 13 2022
 
 With SQL Server, you can just use a number table
 
-<pre>SELECT DATEADD(m, number,'1998-01-13')
+sql
+SELECT DATEADD(m, number,'1998-01-13')
  FROM  master..spt_values WHERE type = 'P'
-and DATENAME(dw,DATEADD(m, number,'1998-01-13')) = 'friday'</pre>
+and DATENAME(dw,DATEADD(m, number,'1998-01-13')) = 'friday'
+```
 
 That is really it for this post&#8230;
 
  [1]: /index.php/ITProfessionals/ProfessionalDevelopment/ah-yes-those-pesky-resolutions
  [2]: https://issues.scala-lang.org/browse/SI-1133
  [3]: http://docs.scala-lang.org/actors-migration/
- [4]: http://forum.lessthandot.com/viewtopic.php?f=102&t=1608
+ [4]: http://forum.ltd.local/viewtopic.php?f=102&t=1608

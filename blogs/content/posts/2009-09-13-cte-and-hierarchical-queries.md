@@ -3,6 +3,7 @@ title: CTE and hierarchical queries
 author: Naomi Nosonovsky
 type: post
 date: 2009-09-13T14:42:07+00:00
+ID: 557
 excerpt: |
   One of my favorite additions to T-SQL language in SQL Server 2005 is Common Table Expressions, CTE for short. Primarily I use them instead of derived tables to improve maintenance and code readability.
   
@@ -30,7 +31,8 @@ See also [Challenge 17][7] and its solutions at [Challenge 17 &#8211; Winners][8
 
 For instance, this code is much easier to read now after moving some logic into CTE
 
-<pre>;WITH
+sql
+;WITH
 
 -- -----------------------------------------------
 
@@ -174,13 +176,15 @@ SELECT J.nRouteHeaderID   as nRouteHeaderID,
 
   LEFT JOIN P             P   on JH.[nCustomerID] = P.[nCustomerID]
 
- ORDER BY J.IdField -- Used for order but not retrieved</pre>
+ ORDER BY J.IdField -- Used for order but not retrieved
 
+```
 One of the most interesting applications of CTE is in solving hierarchical queries by using recursive CTEs. In SQL Server 2000 you would need to use temporary table and looping to solve the problem of hierarchical query, which can now be solved with 1 select in SQL Server 2005 and up.
 
 The example of it which I always refer when I need to solve such a problem could be found in BOL: [Recursive Queries Using Common Table Expressions][9]
 
-<pre>USE AdventureWorks;
+sql
+USE AdventureWorks;
 
 WITH DirectReports (ManagerID, EmployeeID, Title, DeptID, Level)
 AS
@@ -207,8 +211,8 @@ SELECT ManagerID, EmployeeID, Title, Level
 FROM DirectReports
 INNER JOIN HumanResources.Department AS dp
     ON DirectReports.DeptID = dp.DepartmentID
-WHERE dp.GroupName = N'Research and Development' OR Level = 0;</pre>
-
+WHERE dp.GroupName = N'Research and Development' OR Level = 0;
+```
 Another slight variation of this same theme can be found in this [MSDN thread][10]
   
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
@@ -221,82 +225,82 @@ Problem definition:
 I use SQL Server 2005 and I have a list of appr. 7700 items. In the list there is the complete stock quantity for each item and I also have the typical amount for each pallet. I need a list with all individual pallets and its stock</code>
 
 <div class="tables">
-  <table border="1" cellpadding ="2" cellspacing = "2"> 
+<table border="1" cellpadding ="2" cellspacing = "2"> 
+
+<tr>
+<th>
+  Item
+</th>
+
+<th>
+  stock
+</th>
+
+<th>
+  amount/pallet
+</th>
+</tr>
+
+<tr>
+<td>
+  100-001
+</td>
+
+<td>
+  2500
+</td>
+
+<td>
+  1000
+</td>
+</tr></table> 
+
+<p>
+<code class="codespan">I need the list to look like this</code>
+</p>
+
+<div class="tables">
+<table border="1" cellpadding ="2" cellspacing = "2"> 
+
+<tr>
+  <td>
+    100-001
+  </td>
   
-  <tr>
-    <th>
-      Item
-    </th>
-    
-    <th>
-      stock
-    </th>
-    
-    <th>
-      amount/pallet
-    </th>
-  </tr>
+  <td>
+    1000
+  </td>
+</tr>
+
+<tr>
+  <td>
+    100-001
+  </td>
   
-  <tr>
-    <td>
-      100-001
-    </td>
-    
-    <td>
-      2500
-    </td>
-    
-    <td>
-      1000
-    </td>
-  </tr></table> 
+  <td>
+    1000
+  </td>
+</tr>
+
+<tr>
+  <td>
+    100-001
+  </td>
   
-  <p>
-    <code class="codespan">I need the list to look like this</code>
-  </p>
-  
-  <div class="tables">
-    <table border="1" cellpadding ="2" cellspacing = "2"> 
-    
-    <tr>
-      <td>
-        100-001
-      </td>
-      
-      <td>
-        1000
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        100-001
-      </td>
-      
-      <td>
-        1000
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        100-001
-      </td>
-      
-      <td>
-        500
-      </td>
-    </tr></table> 
-    
-    <p>
-      <code class="codespan">Is this possible to do?</code>
-    </p>
-    
-    <p>
-      It took me at least 20 minutes to come up with the following solution:
-    </p>
-    
-    <pre>declare @t table (item Varchar(10), Stock money, Pallet money)
+  <td>
+    500
+  </td>
+</tr></table> 
+
+<p>
+  <code class="codespan">Is this possible to do?</code>
+</p>
+
+<p>
+  It took me at least 20 minutes to come up with the following solution:
+</p>
+
+<pre lang="tsql">declare @t table (item Varchar(10), Stock money, Pallet money)
 
 insert into @t values('100-001',   2500,    1000)
 insert into @t values('100-002',   3000,    400)
@@ -313,16 +317,17 @@ case when Stock-Pallet > 0 then Pallet else Stock end as Amount from cte_toInser
 where (Stock = 0 and Amount > 0) OR Stock > 0 )
 
 select * from cte_toInsert order by Item, Amount DESC OPTION (MAXRECURSION 10) </pre>
-    
-    <p>
-      Here is another interesting problem where I had to use Nikola&#8217;s help to come up to the final solution:
-    </p>
-    
-    <p>
-      Given the initial list like this
-    </p>
-    
-    <pre>pk_rights   fk_rights   RightsName                                         RightsOrder Description
+
+<p>
+  Here is another interesting problem where I had to use Nikola&#8217;s help to come up to the final solution:
+</p>
+
+<p>
+  Given the initial list like this
+</p>
+
+<pre lang="">
+pk_rights   fk_rights   RightsName                                         RightsOrder Description
 ----------- ----------- -------------------------------------------------- ----------- ------------------------------
 
 1           NULL        Open Category Library                              0           Open Category Library
@@ -339,12 +344,13 @@ select * from cte_toInsert order by Item, Amount DESC OPTION (MAXRECURSION 10) <
 8           7           Edit Category                                      0           Edit Category
 13          12          Edit Category Lanaguage                            0           Edit Category Lanaguage
 15          14          EditCategory Caption                               0           EditCategory Caption</pre>
-    
-    <p>
-      I need the output to look like this&#8230;. the indents are for readability only but the rows must be ordered in this sequence.
-    </p>
-    
-    <pre>pk_rights   fk_rights   RightsName                                         RightsOrder Description
+
+<p>
+  I need the output to look like this&#8230;. the indents are for readability only but the rows must be ordered in this sequence.
+</p>
+
+<pre lang="">
+pk_rights   fk_rights   RightsName                                         RightsOrder Description
 ----------- ----------- -------------------------------------------------- ----------- ------------------------------
 
 1           NULL        Open Category Library                              0           Open Category Library
@@ -361,50 +367,53 @@ select * from cte_toInsert order by Item, Amount DESC OPTION (MAXRECURSION 10) <
 15          14                EditCategory Caption                               0     EditCategory Caption
 16          2              Delete Category Caption                            7        Delete Category Caption
 18          NULL        Open Portfolio Footnote Library                    1           Open Portfolio Footnote Library</pre>
-    
-    <p>
-      Here is a solution by Nikola:
-    </p>
-    
-    <pre>;with cte_t AS
- (
- SELECT T1.pk_rights,
-        t1.fk_rights,
-        T1.RightsName,
-        0 AS LEVEL,
-        T1.RightsOrder,
-        T1.Description AS ChildDescr,
-        CAST(RIGHT('000'+CAST(t1.RightsOrder AS VARCHAR(3)),2)  AS VARCHAR(50)) AS ro
-  FROM @Test T1
- WHERE T1.fk_rights IS NULL
- UNION all
- SELECT T1.pk_rights,
-        T1.fk_rights,
-        T1.RightsName,
-        LEVEL + 1 AS LEVEL,
-        T1.RightsOrder,
-        T1.Description AS ChildDescr,
-        CAST(D.ro + '-' + RIGHT('000'+CAST(t1.RightsOrder AS VARCHAR(3)),2) AS VARCHAR(50)) AS ro
-  FROM @Test T1
- INNER join cte_t D ON T1.fk_rights = D.pk_rights
+
+<p>
+  Here is a solution by Nikola:
+</p>
+
+<pre lang="tsql">
+;with cte_t AS
+(
+SELECT T1.pk_rights,
+    t1.fk_rights,
+    T1.RightsName,
+    0 AS LEVEL,
+    T1.RightsOrder,
+    T1.Description AS ChildDescr,
+    CAST(RIGHT('000'+CAST(t1.RightsOrder AS VARCHAR(3)),2)  AS VARCHAR(50)) AS ro
+FROM @Test T1
+WHERE T1.fk_rights IS NULL
+UNION all
+SELECT T1.pk_rights,
+    T1.fk_rights,
+    T1.RightsName,
+    LEVEL + 1 AS LEVEL,
+    T1.RightsOrder,
+    T1.Description AS ChildDescr,
+    CAST(D.ro + '-' + RIGHT('000'+CAST(t1.RightsOrder AS VARCHAR(3)),2) AS VARCHAR(50)) AS ro
+FROM @Test T1
+INNER join cte_t D ON T1.fk_rights = D.pk_rights
 )
 SELECT cte.pk_rights,
-       cte.fk_rights,
-       LEFT(REPLICATE('   ',cte.LEVEL)+cte.RightsName,50) AS RightsName,
-       LEFT(REPLICATE('   ',cte.LEVEL)+CAST(RightsOrder AS VARCHAR(5)),15) AS RightsOrder,
-       LEFT(cte.ChildDescr,50) AS [Description]
-  FROM cte_t cte
- ORDER BY ro</pre>
-    
-    <p>
-      Another simple problem was presented in this <a href="http://forums.asp.net/p/1476562/3434155.aspx#3434155">thread</a>
-    </p>
-    
-    <p>
-      Find sum of products which have multiple level of categories and subcategories:
-    </p>
-    
-    <pre>-- creating test data
+    cte.fk_rights,
+    LEFT(REPLICATE('   ',cte.LEVEL)+cte.RightsName,50) AS RightsName,
+    LEFT(REPLICATE('   ',cte.LEVEL)+CAST(RightsOrder AS VARCHAR(5)),15) AS RightsOrder,
+    LEFT(cte.ChildDescr,50) AS [Description]
+FROM cte_t cte
+ORDER BY ro
+</pre>
+
+<p>
+  Another simple problem was presented in this <a href="http://forums.asp.net/p/1476562/3434155.aspx#3434155">thread</a>
+</p>
+
+<p>
+  Find sum of products which have multiple level of categories and subcategories:
+</p>
+
+<pre lang="tsql">
+-- creating test data
 declare @Test table (ID int identity(1,1), Valore int, IDRef int NULL)
 insert into @Test (Valore, IDRef) values (100,null), (20,1), (15,2),(-10,3), (200,null),(20,5),(335,6)
 
@@ -416,21 +425,21 @@ select C.Root, T.IDRef, T.Valore, T.ID from cte C inner join @Test T on T.IDRef 
 
 -- Our final result
 select C.Root, SUM(Valore) as Total from cte C group by C.Root option (MaxRecursion 10)</pre>
-    
-    <p>
-      There is a similar problem discussed in this <a href="http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/cc672149-0318-475b-b8fa-3ac986a571c1">thread</a>:
-    </p>
-    
-    <p>
-      and you can view very interesting solution in this <a href="http://www.sqlmag.com/Articles/ArticleID/92997/92997.html?Ad=1">blog</a> by Itzik Ben-Gan.
-    </p>
-    
-    <p>
-      *** <strong>Remember, if you have a SQL related question, try our <a href="http://forum.lessthandot.com/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.lessthandot.com/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins></div> </div>
+
+<p>
+  There is a similar problem discussed in this <a href="http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/cc672149-0318-475b-b8fa-3ac986a571c1">thread</a>:
+</p>
+
+<p>
+  and you can view very interesting solution in this <a href="http://www.sqlmag.com/Articles/ArticleID/92997/92997.html?Ad=1">blog</a> by Itzik Ben-Gan.
+</p>
+
+<p>
+  *** <strong>Remember, if you have a SQL related question, try our <a href="http://forum.ltd.local/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.ltd.local/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins></div> </div>
 
  [1]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif "T-SQL Tuesday logo"
  [2]: http://smehrozalam.wordpress.com/2009/06/09/t-sql-using-common-table-expressions-cte-to-generate-sequences/
- [3]: http://forum.lessthandot.com/viewtopic.php?f=17&t=7566&st=0&sk=t&sd=a
+ [3]: http://forum.ltd.local/viewtopic.php?f=17&t=7566&st=0&sk=t&sd=a
  [4]: http://www.sqlusa.com/bestpractices2005/organizationtree/
  [5]: http://bradsruminations.blogspot.com/2009/10/viva-la-famiglia.html
  [6]: http://bradsruminations.blogspot.com/2010/03/this-article-on-recurson-is-entitled.html

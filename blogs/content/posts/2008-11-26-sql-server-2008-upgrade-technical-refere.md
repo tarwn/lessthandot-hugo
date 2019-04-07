@@ -3,6 +3,7 @@ title: SQL Server 2008 Upgrade Technical Reference Guide Available For Download
 author: SQLDenis
 type: post
 date: 2008-11-26T12:46:26+00:00
+ID: 221
 url: /index.php/datamgmt/datadesign/sql-server-2008-upgrade-technical-refere/
 views:
   - 8710

@@ -3,6 +3,7 @@ title: SQL University and why you should be attending
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-10-14T11:26:12+00:00
+ID: 586
 url: /index.php/datamgmt/datadesign/sql-university-and-why-you-should-be-att/
 views:
   - 7347

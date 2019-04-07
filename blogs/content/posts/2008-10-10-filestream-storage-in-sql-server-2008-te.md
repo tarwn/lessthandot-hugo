@@ -3,6 +3,7 @@ title: FILESTREAM Storage in SQL Server 2008 Technical Article
 author: SQLDenis
 type: post
 date: 2008-10-10T11:54:06+00:00
+ID: 171
 url: /index.php/datamgmt/datadesign/filestream-storage-in-sql-server-2008-te/
 views:
   - 7541

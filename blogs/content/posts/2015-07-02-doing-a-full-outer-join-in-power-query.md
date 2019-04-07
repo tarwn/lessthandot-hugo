@@ -3,6 +3,7 @@ title: Doing a Full Outer Join in Power Query
 author: Koen Verbeeck
 type: post
 date: 2015-07-02T11:55:34+00:00
+ID: 3450
 url: /index.php/webdev/business-intelligence/doing-a-full-outer-join-in-power-query/
 views:
   - 26693

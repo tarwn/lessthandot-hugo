@@ -3,6 +3,7 @@ title: 'Will I See You At SQL Saturday #118 Wisconsin?'
 author: Jes Borland
 type: post
 date: 2012-04-09T12:28:00+00:00
+ID: 1589
 excerpt: 'Saturday, April 21, 2012 will be an historic occasion: the first SQL Saturday will take place on Wisconsin soil!'
 url: /index.php/itprofessionals/professionaldevelopment/will-i-see-you-at/
 views:

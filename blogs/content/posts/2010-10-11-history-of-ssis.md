@@ -3,6 +3,7 @@ title: The History of SQL Server Integration Services
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-10-11T09:53:52+00:00
+ID: 920
 excerpt: 'SQL Server has taken on many levels of growth over the years as a relational database management system.  SQL Server has taken on roughly twelve major releases; code names were adopted 10 major releases ago.    During the time of these releases, Microsoft has enriched the features that ship with the SQL Server Engine itself.  These features started with SQL Server 7.0 and the release of OLAP; code name, Plato.  With Plato, came a direction to fulfill the goal of bringing SQL Server to an enterprise level.  Also packaged with SQL Server 7.0 was Data Transformations Services (DTS).  DTS was a milestone as it provided the ability to broaden the range of abilities to work natively with SQL Server and Bulk type operations.  Job scheduling capabilities were also increased in the ability to work more freely with more complex tasks.  These tasks were housed directly in SQL Server (with respect to outside binaries and data stores).  SQL Server 7.0 made a foundation for the years to come.'
 url: /index.php/datamgmt/datadesign/history-of-ssis/
 views:

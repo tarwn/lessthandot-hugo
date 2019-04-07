@@ -3,6 +3,7 @@ title: Report Builder 3.0 – Chart Types, Visualizations, and Properties
 author: Jes Borland
 type: post
 date: 2012-03-08T12:07:00+00:00
+ID: 1550
 excerpt: Charts and other visualizations can be a very powerful and effective way to make your data tell a story.
 url: /index.php/datamgmt/dbprogramming/report-builder-3-0-chart-1/
 views:

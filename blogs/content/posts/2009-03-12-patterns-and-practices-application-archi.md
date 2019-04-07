@@ -3,6 +3,7 @@ title: Patterns And Practices Application Architecture Guide 2.0, Something Ever
 author: SQLDenis
 type: post
 date: 2009-03-12T11:04:46+00:00
+ID: 347
 excerpt: |
   I was listening to show number 426 on dotnetrocks: Rob Boucher on Application Architecture Guidance! They mentioned the Patterns And Practices Application Architecture Guide 2.0, this guide is available for free on codeplex.
   

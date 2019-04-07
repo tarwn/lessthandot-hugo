@@ -3,6 +3,7 @@ title: Using VS.NET 2005 SP1 with SQL Server 2008 connectivity
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-03-27T11:02:27+00:00
+ID: 368
 url: /index.php/datamgmt/datadesign/using-vs-net-2005-sp1-with-sql-server-20/
 views:
   - 4582

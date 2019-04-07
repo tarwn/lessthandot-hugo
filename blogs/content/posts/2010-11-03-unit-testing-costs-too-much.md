@@ -3,6 +3,7 @@ title: Unit Testing Costs Too Much
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-11-03T09:56:08+00:00
+ID: 933
 excerpt: "There is a long list of reasons not to use Unit Testing in your current projects. In fact I was able to make such a long list of reasons not to use automated Unit Testing that I wasn't able to use them all in my presentation for the Raleigh Code Camp this coming weekend."
 url: /index.php/desktopdev/generalpurposelanguages/unit-testing-costs-too-much/
 views:
@@ -23,7 +24,7 @@ While my presentation aims to dispel a number of these and show that unit testin
 Warning: I know, it seems a little lighter-hearted than my usual posts, maybe a little more sarcastic. I blame it on all the time staring at powerpoint this weekend.
 
 <div style="color: #666666; text-align: center; float: left; margin: .5em; font-size: .8em;">
-  <img src="http://www.tiernok.com/LTDBlog/iStock_000005447184Smaller.jpg" alt="It's a Picture!" /><br /> Stock from <a href="http://www.istockphoto.com/" title="Visit iStockPhoto.com">iStockPhoto.com</a>
+  <img src="http://tiernok.com/LTDBlog/iStock_000005447184Smaller.jpg" alt="It's a Picture!" /><br /> Stock from <a href="http://www.istockphoto.com/" title="Visit iStockPhoto.com">iStockPhoto.com</a>
 </div>
 
 ## It&#8217;s Twice as Much Code!

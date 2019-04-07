@@ -3,6 +3,7 @@ title: SQL Server Views and Metadata
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-10-06T13:05:00+00:00
+ID: 1341
 excerpt: 'Something that came out of a recent session I gave at SQL Saturday in Iowa was a discussion on views and the Meta Data that comes along with them.  The discussion came about when I had commented, during a session that views were a pain spot for me.  Mis&hellip;'
 url: /index.php/datamgmt/dbprogramming/sql-server-views-and-meta/
 views:
@@ -35,7 +36,8 @@ Reference: http://msdn.microsoft.com/en-us/library/bb677315.aspx
 
 Of course seeing this means much more. Let’s take a look at AdventureWorks2008. The view HumanResources.vEmployee as the following definition
 
-<pre>SELECT 
+sql
+SELECT 
 e.[EmployeeID],c.[Title],c.[FirstName],c.[MiddleName],c.[LastName]
 ,c.[Suffix],e.[Title] AS [JobTitle] ,c.[Phone],c.[EmailAddress]
 ,c.[EmailPromotion],a.[AddressLine1],a.[AddressLine2],a.[City]
@@ -46,20 +48,23 @@ INNER JOIN [Person].[Contact] c ON c.[ContactID] = e.[ContactID]
 INNER JOIN [HumanResources].[EmployeeAddress] ea ON e.[EmployeeID] = ea.[EmployeeID] 
 INNER JOIN [Person].[Address] a ON ea.[AddressID] = a.[AddressID]
 INNER JOIN [Person].[StateProvince] sp ON sp.[StateProvinceID] = a.[StateProvinceID]
-INNER JOIN [Person].[CountryRegion] cr ON cr.[CountryRegionCode] = sp.[CountryRegionCode];</pre>
+INNER JOIN [Person].[CountryRegion] cr ON cr.[CountryRegionCode] = sp.[CountryRegionCode];
+```
 
 Looking at this view’s definition we can see that several columns are referred to from the tables. SQL Server tracks these dependencies between the objects by name. 
 
 For example, take the view vEmployee. As the definition shows, the tables Employee, Contact, EmployeeAddress, Address, StateProvince and CountryRegion. Using sys.sql\_expression\_dependencies this can also be reviewed with a short query.
 
-<pre>SELECT 
+sql
+SELECT 
 	OBJECT_NAME(referencing_id) AS referencing_entity_name 
     ,referenced_server_name AS server_name
     ,referenced_database_name AS database_name
     ,referenced_schema_name AS schema_name
     ,referenced_entity_name
 FROM sys.sql_expression_dependencies 
-Where OBJECT_NAME(referencing_id) = 'vEmployee'</pre>
+Where OBJECT_NAME(referencing_id) = 'vEmployee'
+```
 
 Resulting in 
 
@@ -69,7 +74,8 @@ Resulting in
 
 The same tables listed in the referenceing\_id and using the OBJECT\_NAME to return the objects name for more meaningful information. Reversing this, in a sense, and adding the sys.objects catalog view, we can start by looking deeper into the dependencies and focus on one of the tables the view is referencing.
 
-<pre>SELECT 
+sql
+SELECT 
 	depends.referenced_entity_name,
     OBJECT_NAME(depends.referencing_id) AS referencing_entity_name, 
     objs.type_desc AS [Object Type]
@@ -77,15 +83,16 @@ FROM sys.sql_expression_dependencies AS depends
 INNER JOIN sys.objects AS objs ON depends.referencing_id = objs.object_id
 WHERE 
 referenced_id = OBJECT_ID(N'HumanResources.Employee') 
-And OBJECT_NAME(referencing_id) = N'vEmployee'; </pre>
-
+And OBJECT_NAME(referencing_id) = N'vEmployee'; 
+```
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-24.png?mtime=1317908836"><img alt="" src="/wp-content/uploads/blogs/All/-24.png?mtime=1317908836" width="401" height="74" /></a>
 </div>
 
 We now see that relationship in the results between the table and the view in a reverse reference based on the same dependency view. This can be taken a bit further in looking to the columns that are only EmployeeID.
 
-<pre>SELECT 
+sql
+SELECT 
 g.referenced_schema_name,
 g.referenced_entity_name,
 g.referenced_minor_name,
@@ -94,20 +101,22 @@ g.referenced_minor_id
 FROM sys.sql_expression_dependencies a
 CROSS APPLY sys.dm_sql_referenced_entities(OBJECT_SCHEMA_NAME(referencing_id) + '.' + OBJECT_NAME(referencing_id), 'OBJECT') g
 WHERE OBJECT_NAME(a.referencing_id) = N'vEmployee'
-AND g.referenced_minor_id &gt; 0
+AND g.referenced_minor_id > 0
 AND referenced_minor_name = 'EmployeeID'
 group by g.referenced_schema_name,
 g.referenced_entity_name,
 g.referenced_minor_name,
 OBJECT_NAME(a.referencing_id),
 g.referenced_minor_id
-ORDER BY g.referenced_minor_id </pre>
+ORDER BY g.referenced_minor_id 
+```
 
 The results of this query can also be quickly obtained by using sys.objects, sys.schemas and the same sys.dm\_sql\_referenced\_entities. All of these catalog views expose the metadata that has been stored on this view. The above shows the referenced\_minor_id a numbering system in the view and relationship to the tables. This is where we get into trouble.
   
 Take this short and the most common problem with this metadata and dependency issue. Run the statements as they are, in order.
 
-<pre>CREATE TABLE tbl (col INT, txt varchar(5))
+sql
+CREATE TABLE tbl (col INT, txt varchar(5))
 GO
 
 CREATE VIEW dbo.vTbl
@@ -125,8 +134,8 @@ GO
 INSERT INTO tbl VALUES ('test2',2)
 GO
 
-SELECT * FROM vTbl</pre>
-
+SELECT * FROM vTbl
+```
 The results would be expected to show 2, test2 but they show the opposite, test2, 2. We will talk about the query in the middle of this batch looking at the results of sysdepends in a minute. 
 
 So we can see the INT value is in the place holders of the varchar value. Imagine this with calculations being run on this view. The view is replying on the metadata already created basedoff the original ordinal order of the columns in tbl. This exact example is only possible with the use of the wildcard * but other metadata oddities can happen do to the naming resolutions.
@@ -159,14 +168,17 @@ In the case where views are used heavily, or even at all, coupled by developers 
 
 Run the following sp_refreshview and recheck sysdepends
 
-<pre>sp_refreshview 'dbo.vTbl'
-GO</pre>
+sql
+sp_refreshview 'dbo.vTbl'
+GO
+```
 
 The results show that sysdepends now map correctly again.
 
 To make this more usable in a large system or where many views are managed, a script like below can be used.
 
-<pre>DECLARE @viewname NVARCHAR(255)
+sql
+DECLARE @viewname NVARCHAR(255)
 DECLARE @looper INT = 1
 IF OBJECT_ID('tempdb..#viewnames') IS NOT NULL
 BEGIN
@@ -185,7 +197,8 @@ SET @viewname = (SELECT vname FROM #viewnames WHERE ID = @looper)
 EXEC SP_REFRESHVIEW @viewname
 PRINT 'Exec sp_refreshview ''' + @viewname + ''''
 SET @looper += 1
-END</pre>
+END
+```
 
 Reference: http://wiki.ltd.local/index.php/Sp\_refreshview\_for\_all\_views\_in\_a_database
 

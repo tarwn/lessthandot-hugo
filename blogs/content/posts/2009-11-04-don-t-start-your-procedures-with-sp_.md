@@ -3,6 +3,7 @@ title: Don’t start your procedures with SP_
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-04T13:16:28+00:00
+ID: 609
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/don-t-start-your-procedures-with-sp_/
 views:
   - 69840
@@ -19,10 +20,11 @@ Also, consider what would happen if Microsoft decides to ship a system stored pr
 
 **How to detect this problem:**
 
-<pre>Select	* 
+sql
+Select	* 
 From	Information_Schema.Routines 
-Where	Specific_Name Like 'sp[_]%'</pre>
-
+Where	Specific_Name Like 'sp[_]%'
+```
 **How to correct it:** To correct this problem, you will need to identify all procedures named this way, and then change the name of the procedure. There are far greater implications though. Some stored procedures are called by other stored procedures. In cases like this, you will need to change those stored procedures too. Additionally, you will also need to change your front end code to call the procedure with the new name.
 
 **Level of difficulty:** medium to high. The level of effort required to correct this problem can range from medium to high, depending on how many procedures you have than require a name change.

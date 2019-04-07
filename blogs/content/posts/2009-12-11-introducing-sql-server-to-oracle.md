@@ -3,6 +3,7 @@ title: Introducing SQL Server to Oracle
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-12-11T13:37:21+00:00
+ID: 646
 url: /index.php/datamgmt/datadesign/introducing-sql-server-to-oracle/
 views:
   - 10720

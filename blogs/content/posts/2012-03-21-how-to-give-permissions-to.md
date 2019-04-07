@@ -3,6 +3,7 @@ title: How to give permissions to User-Defined Table Types
 author: SQLDenis
 type: post
 date: 2012-03-21T17:26:00+00:00
+ID: 1570
 excerpt: How to give permissions to User-Defined Table Types. The syntax is not straight-forward.........
 url: /index.php/datamgmt/datadesign/how-to-give-permissions-to/
 views:
@@ -24,7 +25,9 @@ The EXECUTE permission was denied on the object &#8216;SysObjectsCount&#8217;, d
 
 Let&#8217;s take a look at how to give permissions because if you do the following
 
-<pre>GRANT EXECUTE ON SysObjectsCount TO TestLogin</pre>
+sql
+GRANT EXECUTE ON SysObjectsCount TO TestLogin
+```
 
 You will get this error
 
@@ -36,19 +39,24 @@ Let&#8217;s fix this, I will show you some code so that you can reproduce this
 
 First create the following login
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 CREATE LOGIN [TestLogin] WITH PASSWORD=N'test', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
-GO</pre>
+GO
+```
 
 Now create the following database
 
-<pre>CREATE DATABASE testTVP
-GO</pre>
+sql
+CREATE DATABASE testTVP
+GO
+```
 
 Create a new user in the database that we just created and give the user db\_datareader and db\_datawriter roles
 
-<pre>USE testTVP
+sql
+USE testTVP
 GO
 
 
@@ -60,35 +68,40 @@ GO
 USE [testTVP]
 GO
 EXEC sp_addrolemember N'db_datawriter', N'TestLogin'
-GO</pre>
-
+GO
+```
 Now create the following type
 
-<pre>CREATE TYPE SysObjectsCount AS TABLE(quantity INT, xtype CHAR(2))
-GO</pre>
+sql
+CREATE TYPE SysObjectsCount AS TABLE(quantity INT, xtype CHAR(2))
+GO
+```
 
 Now run the following piece of code
 
-<pre>DECLARE @mySystableCount AS SysObjectsCount
+sql
+DECLARE @mySystableCount AS SysObjectsCount
  
 INSERT @mySystableCount
 SELECT COUNT(*),xtype FROM sysobjects
 GROUP BY xtype
  
-SELECT * FROM @mySystableCount</pre>
+SELECT * FROM @mySystableCount
+```
 
 That runs fine right? Open another connection but this time login as TestLogin
 
 Try to run that code again
 
-<pre>DECLARE @mySystableCount AS SysObjectsCount
+sql
+DECLARE @mySystableCount AS SysObjectsCount
  
 INSERT @mySystableCount
 SELECT COUNT(*),xtype FROM sysobjects
 GROUP BY xtype
  
-SELECT * FROM @mySystableCount</pre>
-
+SELECT * FROM @mySystableCount
+```
 You get the following error
 
 **Msg 229, Level 14, State 5, Line 9
@@ -97,11 +110,15 @@ The EXECUTE permission was denied on the object &#8216;SysObjectsCount&#8217;, d
 
 In order to give the permissions to testLogin, you need to execute the following code, yes the **::** is correct.
 
-<pre>GRANT EXECUTE ON TYPE::SysObjectsCount to TestLogin</pre>
+sql
+GRANT EXECUTE ON TYPE::SysObjectsCount to TestLogin
+```
 
 That reminds me of how you would use fn_helpcollations()
 
-<pre>SELECT * FROM ::fn_helpcollations()</pre>
+sql
+SELECT * FROM ::fn_helpcollations()
+```
 
 Just keep in mind that you need to have those double colons there. It would be nicer if you could just do something like this instead
 
@@ -109,17 +126,21 @@ _GRANT EXECUTE ON TYPE SysObjectsCount to TestLogin_
 
 Anyway, execute this
 
-<pre>GRANT EXECUTE ON TYPE::SysObjectsCount to TestLogin</pre>
+sql
+GRANT EXECUTE ON TYPE::SysObjectsCount to TestLogin
+```
 
 Now you should be able to run this code connected as TestLogin
 
-<pre>DECLARE @mySystableCount AS SysObjectsCount
+sql
+DECLARE @mySystableCount AS SysObjectsCount
  
 INSERT @mySystableCount
 SELECT COUNT(*),xtype FROM sysobjects
 GROUP BY xtype
  
-SELECT * FROM @mySystableCount</pre>
+SELECT * FROM @mySystableCount
+```
 
 And if you look now in SSMS, you will be able to see the User-Defined Table Type in the User-Defined Table Types folder
 

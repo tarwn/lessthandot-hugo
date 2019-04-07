@@ -3,6 +3,7 @@ title: SQL 2016 Preview has been released!
 author: Koen Verbeeck
 type: post
 date: 2015-05-28T10:54:51+00:00
+ID: 3394
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sql-2016-preview-has-been-released/
 views:
   - 28787

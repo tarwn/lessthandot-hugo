@@ -3,6 +3,7 @@ title: '24 Hours of PASS: WIT Edition – Awesome Women I’d Love to Hear Talk 
 author: Jes Borland
 type: post
 date: 2011-01-07T17:49:00+00:00
+ID: 997
 excerpt: "On March 15 &amp; 16, 2011, PASS will be presenting another round of 24 Hours of PASS - 24 one-hour presentations given by SQL People. The March event is centered around Women In Technology (WIT), as it is Women's History Month. PASS put out a call for&hellip;"
 url: /index.php/datamgmt/datadesign/24-hours-of-pass-wit/
 views:

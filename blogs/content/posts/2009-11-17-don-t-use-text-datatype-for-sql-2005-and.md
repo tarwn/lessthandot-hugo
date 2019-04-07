@@ -3,6 +3,7 @@ title: Don’t use text datatype for SQL 2005 and up
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-17T19:24:01+00:00
+ID: 633
 url: /index.php/datamgmt/dbprogramming/don-t-use-text-datatype-for-sql-2005-and/
 views:
   - 25746
@@ -20,7 +21,8 @@ The query presented below will display all the columns in all the tables within 
 
 **How to detect this problem:**
 
-<pre>Select  O.Name, 
+sql
+Select  O.Name, 
         col.name as ColName,
         systypes.name
 From    syscolumns col 
@@ -31,8 +33,8 @@ From    syscolumns col
 Where   O.Type = 'U'
         And ObjectProperty(o.ID, N'IsMSShipped') = 0
         And systypes.name In ('text','ntext','image')
-Order By O.Name, Col.Name</pre>
-
+Order By O.Name, Col.Name
+```
 **How to correct it:** Change the data type to a SQL2005+ version. Text should be converted to varchar(max), ntext should be converted to nvarchar(max) and image should be converted to varbinary(max).
 
 **Level of severity:** Low

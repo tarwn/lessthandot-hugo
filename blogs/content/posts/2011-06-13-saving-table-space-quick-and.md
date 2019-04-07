@@ -3,6 +3,7 @@ title: Saving Table Space (Quick And Dirty)
 author: David Forck (thirster42)
 type: post
 date: 2011-06-13T21:07:00+00:00
+ID: 1219
 excerpt: 'One of the quickest and easiest ways to make a database more performant is to reduce how much space the data takes up.  Here’s a script that I wrote that’ll find each table in a database (run it in the context of the database).  This script determines h&hellip;'
 url: /index.php/datamgmt/datadesign/saving-table-space-quick-and/
 views:
@@ -17,7 +18,8 @@ categories:
 ---
 One of the quickest and easiest ways to make a database more performant is to reduce how much space the data takes up. Here’s a script that I wrote that’ll find each table in a database (run it in the context of the database). This script determines how many rows of data each table has (in kilobytes), determines the size of the data in the table, and then gives you a ratio of data per row. The higher a data/row ratio the more likely there is a chance of reducing the amount of space (note that I’m not looking at table indexes or fill factors, those are another topic to cover).
 
-<pre>declare @tables table (name varchar(max), ID int identity(1,1), cnt int, size int)
+sql
+declare @tables table (name varchar(max), ID int identity(1,1), cnt int, size int)
 declare @i int, @count int, @name varchar(max), @sql varchar(max)
 
 insert into @tables
@@ -68,9 +70,9 @@ end
 select *,
 (size*1.0)/cnt as Ratio
 from @tables
-where cnt&gt;0
-order by (size*1.0)/cnt desc</pre>
-
+where cnt>0
+order by (size*1.0)/cnt desc
+```
 So after this runs on a database the first row will be the table that has the highest ratio. Here are some quick ways to reduce your data size:
   
 • Change nvarchar to varchar

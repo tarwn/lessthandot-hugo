@@ -3,6 +3,7 @@ title: Three different ways of populating variables with configuration values in
 author: SQLDenis
 type: post
 date: 2010-05-19T22:58:00+00:00
+ID: 795
 excerpt: |
   I have a bunch of processes that run at then end of the day. Some of these processes are configured dynamic since table names, server names, database names and a whole bunch of other stuff might change.
   SO you migh have a (over simplified here) table l&hellip;
@@ -37,19 +38,22 @@ And there might be a dozen more configurations for a process
   
 In general people will do 3 selects if there are 3 values, let&#8217;s take a look at what I mean. First create this table
 
-<pre>CREATE TABLE SomeConfigurations(Typeid INT NOT NULL, 
+sql
+CREATE TABLE SomeConfigurations(Typeid INT NOT NULL, 
 			TypeName VARCHAR(100), 
 			TypeValue VARCHAR(100))
 
 INSERT SomeConfigurations VALUES (1,'ActiveServerName','SQLDenisDB1')
 INSERT SomeConfigurations VALUES (1,'DatabaseName','MyDB')
-INSERT SomeConfigurations VALUES (1,'LogTableName','LogFileTable')</pre>
+INSERT SomeConfigurations VALUES (1,'LogTableName','LogFileTable')
+```
 
 ## One select per value
 
 This is what I usually see, one query for each value.
 
-<pre>DECLARE @ActiveServerName VARCHAR(100),
+sql
+DECLARE @ActiveServerName VARCHAR(100),
 		@DatabaseName VARCHAR(100),
 		@LogTableName VARCHAR(100)
 		
@@ -69,7 +73,8 @@ FROM SomeConfigurations
 WHERE Typeid =1
 AND TypeName = 'LogTableName'
 
-SELECT @ActiveServerName,@DatabaseName,@LogTableName</pre>
+SELECT @ActiveServerName,@DatabaseName,@LogTableName
+```
 
 Okay so that is not really something I want to maintain. I guess if you get paid by lines of code written it makes you look good 🙂
   
@@ -79,7 +84,8 @@ Next up.. a different approach&#8230;
 
 Pivot was introduced in SQL Server 2005 and here is how you can change those three selects into one select
 
-<pre>DECLARE @ActiveServerName VARCHAR(100),
+sql
+DECLARE @ActiveServerName VARCHAR(100),
 		@DatabaseName VARCHAR(100),
 		@LogTableName VARCHAR(100)
 
@@ -95,7 +101,8 @@ PIVOT
     FOR TypeName IN (ActiveServerName,DatabaseName,LogTableName)
 ) AS pivTable
 
-SELECT @ActiveServerName,@DatabaseName,@LogTableName</pre>
+SELECT @ActiveServerName,@DatabaseName,@LogTableName
+```
 
 I prefer that over those three selects any time. Not only is it less code but it is also faster because it touches the tables once. If you want to learn more about PIVOT and UNPIVOT, then visit the following books on line link: http://msdn.microsoft.com/en-us/library/ms177410.aspx
 
@@ -103,7 +110,8 @@ I prefer that over those three selects any time. Not only is it less code but it
 
 Even for you people who are still on SQL Server 2000 there is a way to do this in one select, take a look at the query below
 
-<pre>DECLARE @ActiveServerName VARCHAR(100),
+sql
+DECLARE @ActiveServerName VARCHAR(100),
 		@DatabaseName VARCHAR(100),
 		@LogTableName VARCHAR(100)
 
@@ -114,7 +122,8 @@ SELECT
 FROM SomeConfigurations
 WHERE Typeid =1
 
-SELECT @ActiveServerName,@DatabaseName,@LogTableName</pre>
+SELECT @ActiveServerName,@DatabaseName,@LogTableName
+```
 
 And the same applies here as to pivot, this query will hit the table only one time.
 
@@ -128,5 +137,5 @@ C) Case statement (because you are still running NT 4.0 with SQL Server 2000 SP4
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: 'SQL Server Auditing: Creating a Database Specification'
 author: SQLArcher
 type: post
 date: 2011-12-28T05:02:00+00:00
+ID: 1467
 excerpt: |
   Continuing onwards with the SQL Server auditing feature, let's start off by creating a simple audit that will capture some database level events.
   
@@ -49,7 +50,8 @@ The first configuration I have for the Database Specification, I am capturing on
 
 I executed the following query on my account which is sysadmin:
 
-<pre>USE testdb;
+sql
+USE testdb;
 GO
 
 DELETE FROM tab1 WHERE id BETWEEN 9990 AND 10000;
@@ -57,8 +59,9 @@ GO
 DELETE FROM tab2 WHERE id BETWEEN 5000 AND 5100;
 GO
 DELETE FROM tab3 WHERE id BETWEEN 2000 AND 2002;
-GO</pre>
+GO
 
+```
 This resulted in no deletes being captured:
 
 <div class="image_block">
@@ -67,7 +70,8 @@ This resulted in no deletes being captured:
 
 When executed as test\_writer, which belongs to the db\_datawriter role and I execute the following:
 
-<pre>USE testdb;
+sql
+USE testdb;
 GO
 
 DELETE FROM tab1 WHERE id BETWEEN 9900 AND 9990;
@@ -75,8 +79,9 @@ GO
 DELETE FROM tab2 WHERE id BETWEEN 4500 AND 4990;
 GO
 DELETE FROM tab3 WHERE id BETWEEN 2500 AND 2560;
-GO</pre>
+GO
 
+```
 I receive the following results:
 
 <div class="image_block">
@@ -87,7 +92,8 @@ _One thing to note on the output is under &#8220;audit\_file\_offset&#8221;. All
 
 As with the Server Audits, use the following query to retrieve the audit information as it is displayed above:
 
-<pre>SELECT  event_time ,
+sql
+SELECT  event_time ,
         action_id ,
         succeeded ,
         session_id ,
@@ -97,8 +103,8 @@ As with the Server Audits, use the following query to retrieve the audit informa
         [statement] ,
         audit_file_offset
 FROM    fn_get_audit_file('E:SQLAuditingDBAudit*.sqlaudit',
-                          DEFAULT, DEFAULT)</pre>
-
+                          DEFAULT, DEFAULT)
+```
 The second example is just to audit a specific table:
 
 <div class="image_block">
@@ -109,7 +115,8 @@ _Note the areas in the red squares, it changes to audit objects, then a specific
 
 Again, I execute a delete statement:
 
-<pre>USE testdb;
+sql
+USE testdb;
 GO
 
 DELETE FROM tab1 WHERE id BETWEEN 1 AND 100;
@@ -117,8 +124,9 @@ GO
 DELETE FROM tab2 WHERE id BETWEEN 400 AND 6000;
 GO
 DELETE FROM tab3 WHERE id BETWEEN 7000 AND 7050;
-GO</pre>
+GO
 
+```
 Inspecting the statement column, we can see that it only captured the delete statement that was executed against tab1:
 
 <div class="image_block">
@@ -127,7 +135,8 @@ Inspecting the statement column, we can see that it only captured the delete sta
 
 To create the users, database, and populate it with the data I used &#8211; run the following:
 
-<pre>/*Creates the database and the logins*/
+sql
+/*Creates the database and the logins*/
 
 USE [master]
 GO
@@ -227,8 +236,8 @@ INSERT  INTO tab3
         SELECT  comment ,
                 tabdate
         FROM    TAB1 ;
-GO</pre>
-
+GO
+```
 ### Final Thoughts
 
 Just based on auditing for delete statements on database can prove to be very dynamic when using the auditing feature. It doesn&#8217;t even stop here, as this was only a demo, there are a lot more you can audit like stored procedures, functions, views, etc. This is a powerful feature especially for monitoring critical and highly sensitive databases.

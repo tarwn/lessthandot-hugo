@@ -3,6 +3,7 @@ title: Sybase IQ Is A Columnar Database, Why Should I Care?
 author: SQLDenis
 type: post
 date: 2008-06-27T14:15:08+00:00
+ID: 77
 excerpt: 'Maybe you heard about Sybase IQ and maybe you did not. So what is Sybase IQ? Sybase IQ is a columnar database. What does this mean? This mean that the data is stored in columns and not in rows. Inserts are slower that a traditional row based database bu&hellip;'
 url: /index.php/datamgmt/datadesign/sybase-iq-is-a-columnar-database-why-sho/
 views:
@@ -69,9 +70,11 @@ Here are two examples of creating indexes
 
 The first index is a Low Fast index, the second index is a datetime index 
 
-<pre>CREATE LF INDEX IX_LF_IGROUP_Index ON TestTable (SomeColumn)
+```sql
+CREATE LF INDEX IX_LF_IGROUP_Index ON TestTable (SomeColumn)
 
-CREATE DTTM INDEX IX_DTTM_Tradate_Index ON TestTable (SomeDate) </pre>
+CREATE DTTM INDEX IX_DTTM_Tradate_Index ON TestTable (SomeDate) 
+```
 
 If you want to know more about Sybase IQ visit this page http://www.sybase.com/products/datawarehousing/sybaseiq
 

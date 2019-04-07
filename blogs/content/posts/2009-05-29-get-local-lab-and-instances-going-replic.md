@@ -3,6 +3,7 @@ title: 'Get local lab and instances going.  Replication / SQL Agent'
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-05-29T20:32:24+00:00
+ID: 451
 url: /index.php/datamgmt/datadesign/get-local-lab-and-instances-going-replic/
 views:
   - 6456
@@ -24,15 +25,16 @@ other alternate name are not supported. Specify the actual server name, &#8216;L
 
 I knew exactly how to fix that sense I&#8217;ve had to so many times when I do multiple local installs. Simply run the following to clear up the server names
 
-<pre>USE MASTER
+sql
+USE MASTER
 GO
 SP_DROPSERVER 'LKFW00TKLKF00TKSQL05'
 GO
 USE MASTER
 GO
 SP_ADDSERVER 'LKFW00TK', 'LOCAL'
-GO</pre>
-
+GO
+```
 Restart SQL Server and you&#8217;ll get in at least.
 
 Second issue. SQL Agent wasn&#8217;t running mostly because I don&#8217;t let it so my laptop actually runs and isn&#8217;t bogged down. So I start it&#8230;
@@ -43,8 +45,9 @@ Urgh! Alright. I checked the cached credentials.
   
 e.g.
 
-<pre>select * from msdb..syscachedcredentials</pre>
-
+sql
+select * from msdb..syscachedcredentials
+```
 OK, I&#8217;m the only one. That&#8217;s good. Thinking&#8230;.
 
 OK, for the record. If you get this error and you have way too many instances installed, go to services.msc first and make sure you are running the SQL Server services and the SQL Server Agent under the same account. This is the quick fix 🙂 Either that or ensure the account is a local administrator if you have BUILTINAdministrators in the sysadmin role. Now back to the other blog which caused me so many headaches.

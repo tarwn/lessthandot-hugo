@@ -3,6 +3,7 @@ title: Planning your hardware for SQL Server Mirroring
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-05-04T11:26:08+00:00
+ID: 780
 excerpt: 'Hardware can be a single point of high performance and a single point of failure.  In a mirroring situation, there is not a listing we can put on paper as to the best hardware and configuration we can make.  Each database server is configured as it requires for IO operations, memory usage etc…  RAID 1+0 would give you write performance on the mirror but at the cost of what if you database server that is active is on RAID 5?'
 url: /index.php/datamgmt/datadesign/selling-a-mirror-short/
 views:

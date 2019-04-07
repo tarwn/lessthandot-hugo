@@ -3,6 +3,7 @@ title: Deploying Database Changes with PowerShell
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-05-17T07:36:00+00:00
+ID: 2079
 excerpt: "Recently, while working on a personal project, I found myself needing a lightweight way to deploy database changes to multiple environments. In the past I have used a wide range of methods, ranging from applying the changes manually to applying changes via a diff tool (SQL Compare), to automatically applying manually created change scripts, to automatically applying diff scripts that were automatically generated, to working directly in production..er, pretend you didn't see that one."
 url: /index.php/datamgmt/dbprogramming/deploying-database-changes-with-powershell/
 views:
@@ -63,7 +64,8 @@ The deployment script wraps the contents of each script file in an EXECUTE state
 
 **[ApplyDatabaseUpdates.ps1][1]**
 
-<pre>function ApplyDatabaseUpdates
+```powershell
+function ApplyDatabaseUpdates
 {
     param (
         [parameter(Mandatory=$true)]
@@ -145,8 +147,8 @@ The deployment script wraps the contents of each script file in an EXECUTE state
     Remove-Item "$outputPath"
 
     Write-Host "Updates completed."
-}</pre>
-
+}
+```
 <i style="display: block; padding: 1em; margin: 1em; background-color: #eeeeee">Note: this has only been run in the context of my personal project. That means don&#8217;t copy, paste, and run it immediately against your production environment. Running stuff blindly from the internet is known as both a bad idea and a career limiting maneuver.</i>
 
 ### Update\____Database.ps1
@@ -159,7 +161,8 @@ Both scripts detect if their specified database exists and, if not, create them.
 
 **Excerpt from [UpdateSampleDatabase.ps1][2]:**
 
-<pre># ...
+```powershell
+# ...
 
     #database
         Write-Host "Checking database exists...";
@@ -175,13 +178,14 @@ Both scripts detect if their specified database exists and, if not, create them.
             Write-Host "Created."
         }
 
-    # ...</pre>
-
+    # ...
+```
 They also generate the users specified by the build server (which will also be dynamically added into the relevant web.config files for the website):
 
 **Excerpt from [UpdateCoreDatabase.ps1][3]:**
 
-<pre># ...
+```powershell
+# ...
 
     #user
     try{
@@ -211,13 +215,14 @@ They also generate the users specified by the build server (which will also be d
         Write-Error "Powershell Script error: $_" -EA Stop
     }
 
-    # ...</pre>
-
+    # ...
+```
 Once the database and users are created, the SampleDatabase script produces a replacement for one of it&#8217;s script files that will contain some randomized data. The original file is a placeholder and produces an error if it hasn&#8217;t been replaced.
 
 **Excerpt from [UpdateSampleDatabase.ps1][2]:**
 
-<pre># ...
+```powershell
+# ...
 
 # ---------------------------------- Content Generation ---------------------------------------------
 # Scripts to generate content dynamically and update the appropriate update script
@@ -240,8 +245,8 @@ Once the database and users are created, the SampleDatabase script produces a re
         Write-Error "Powershell Script error: $_" -EA Stop
     }
 
-    # ...</pre>
-
+    # ...
+```
 This generated data is a necessary part of the application that I initially replaced on each deployment, but now only use on new database deployments. Keeping it random and replaceable prevents the application code from making any assumptions about the data in this table.
 
 The final step for both scripts is to run the ApplyDatabaseUpdates function on their respective folders and databases.
@@ -252,7 +257,8 @@ The RunLocally.sample.ps1 script will bring a local development environment all 
 
 **RunLocally.sample.ps1:**
 
-<pre># 1) Copy this file to RunLocally.ps1
+```Powershell
+# 1) Copy this file to RunLocally.ps1
 # 2) Open RunLocally.ps1 + substitute meaningful values for the variables below (update web.config connection strings also)
 # 3) [Cross your fingers and] Run it 
 
@@ -270,8 +276,8 @@ $DbCorePassword = "password"
 
 .UpdateSampleDatabase.ps1 -s $DbServer -d $DbSampleDatabase -nu $DbSampleReadUsername -np $DbSampleReadPassword -au $DbAdminUsername -ap $DbAdminPassword -DeleteGeneratedContentAfter $true
 
-.UpdateCoreDatabase.ps1 -s $DbServer -d $DbCoreDatabase -nu $DbCoreUsername -np $DbCorePassword -au $DbAdminUsername -ap $DbAdminPassword</pre>
-
+.UpdateCoreDatabase.ps1 -s $DbServer -d $DbCoreDatabase -nu $DbCoreUsername -np $DbCorePassword -au $DbAdminUsername -ap $DbAdminPassword
+```
 The reason it is a sample file is because the real one is going to be different for my desktop and laptop and I knew if they were under source control I would constantly be accidentally committing them and having to change back and forth as I switched systems. To use it, I create a copy of the sample file, rename it to RunLocally.ps1 (which is ignored via the .gitignore for the project) and fill in the real values.
 
 ## Future Plans

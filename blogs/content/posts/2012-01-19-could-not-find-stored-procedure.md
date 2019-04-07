@@ -3,6 +3,7 @@ title: Could not find stored procedure ‘sp_ExecuteSQL’
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-01-19T23:23:00+00:00
+ID: 1499
 excerpt: |
   Tonight I was upgrading some SSIS packages for another blog on automating index statistics. While doing this task, I ran into the error, "Could not find stored procedure 'sp_ExecuteSQL'".  After sitting there, in disbelief that sp_executesql wasn’t on t&hellip;
 url: /index.php/datamgmt/dbprogramming/could-not-find-stored-procedure/
@@ -22,7 +23,10 @@ The database that I was testing on was AdventureWorks.  AdventureWorks has a co
 
 As a quick test, in your own AdventureWorks database, run the following
 
-<pre>EXEC sp_ExecuteSQL N'SELECT * FROM sys.databases'</pre>
+sql
+EXEC sp_ExecuteSQL N'SELECT * FROM sys.databases'
+```
+
 
 resulting in the following error
 
@@ -30,7 +34,10 @@ resulting in the following error
 
 The correct syntax would be
 
-<pre>EXEC sp_executesql N'SELECT * FROM sys.databases'</pre>
+sql
+EXEC sp_executesql N'SELECT * FROM sys.databases'
+```
+
 
 The fix is simply changing the name to be correct, case wise.  The tip that can come from this is, as a DBA, we become used to typing a specific procedure, a specific way on a set of databases configured a specific way. However, we need to take into account that even system procedures will take the collation of the database they are being executed in. Becoming comfortable and letting your guard down while making assumptions of what we are working on can cause problems while writing them, or worse, after they are in a production environment.
 

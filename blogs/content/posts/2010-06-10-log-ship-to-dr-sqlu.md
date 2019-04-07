@@ -3,6 +3,7 @@ title: Log Shipping for cheap DR
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-10T10:50:34+00:00
+ID: 815
 excerpt: 'Welcome to day three of HA and DR week of SQL University.  Today we are going to look at cheap DR.  Yes, setting up DR can be inexpensive.  The best part of this strategy is it comes along with most of the editions of SQL Server.  The method is Log Shipping.  Log shipping (LS) has a bad name in the Disaster / Recovery (DR) world.  There are concerns with the ability to fail back to primary sites in the case of disasters, and LS is often thought of as a maintenance intense setup along with file mess.  Today’s class will go over some methods to handle these and other concerns, along with the simplicity of configuring and monitoring LS in SQL Server 2008 (R2).'
 url: /index.php/datamgmt/dbprogramming/log-ship-to-dr-sqlu/
 views:
@@ -189,7 +190,9 @@ Once the restore is done and logs have shipped, you will start to notice them mo
 
 Now that LS is running we can look into the process and logging of the events. The log\_shipping\_monitor_history table is extremely useful for validating the entire process between the instances. The Message column has logged information that will explain in detail the process that is occurring:
 
-<pre>select [message] from log_shipping_monitor_history_detail</pre>
+sql
+select [message] from log_shipping_monitor_history_detail
+```
 
 Results:
 

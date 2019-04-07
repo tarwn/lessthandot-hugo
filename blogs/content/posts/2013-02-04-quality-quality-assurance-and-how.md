@@ -3,6 +3,7 @@ title: Quality, Quality Assurance, and How Not To Do It
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-02-04T12:01:00+00:00
+ID: 1957
 excerpt: |
   The technical sphere seems to have very mixed definitions for the terms "Quality" and "Quality Assurance". If "It ain't broke" is the highest measure of quality in your company, it may be time to recalibrate expectations.
 url: /index.php/itprofessionals/itprocesses/quality-quality-assurance-and-how/

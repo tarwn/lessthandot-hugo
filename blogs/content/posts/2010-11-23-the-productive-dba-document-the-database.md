@@ -3,6 +3,7 @@ title: 'The Productive DBA: Part 2 Document the Database'
 author: ptheriault
 type: post
 date: 2010-11-23T11:30:08+00:00
+ID: 957
 excerpt: 'How many times have you started at a new company or been given a new database that you have to code for and you have no clue how the schema relates?  How much time is wasted trying to figure out that schema?  If you’re lucky you will be given a database&hellip;'
 url: /index.php/datamgmt/datadesign/the-productive-dba-document-the-database/
 views:

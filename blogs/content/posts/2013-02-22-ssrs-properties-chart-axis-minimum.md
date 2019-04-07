@@ -3,6 +3,7 @@ title: SSRS Properties – Chart Axis Minimum, Maximum, and Interval
 author: Jes Borland
 type: post
 date: 2013-02-22T12:33:00+00:00
+ID: 2001
 excerpt: The purpose of these properties is to define the minimum and maximum values on a chart axis, and the intervals shown.
 url: /index.php/datamgmt/ssrs/ssrs-properties-chart-axis-minimum/
 views:

@@ -3,6 +3,7 @@ title: Fix Execution Plan showing Parallelism
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-10-06T16:11:00+00:00
+ID: 1342
 excerpt: |
   "I see a ton of parallelism in my execution plan I’m tuning.  I read something online and I’m going to alter the value in Maximum Degree of Parallelism (MAXDOP) so they go away."
   This is a very common problem and a very common solution that is found on&hellip;
@@ -26,7 +27,8 @@ The question in the beginning of this blog is fictitious but let’s pretend it 
 
 Load up some data into a table.  Remember, Parallelism may only show on a table larger than normal, so load a good deal of data into the table.
 
-<pre>CREATE TABLE LotsOhColumns 
+sql
+CREATE TABLE LotsOhColumns 
 (
 	id int identity(1,1) primary key
 	,fk_id uniqueidentifier 
@@ -47,20 +49,20 @@ GO
 
 INSERT INTO LotsOhColumns 
 SELECT NEWID(),'col1','col2','col3','col4','col5','col6','col7','col8','col9','col10','col11','col12'
-GO 3000000</pre>
-
+GO 3000000
+```
 Now let’s run a basic query on the table
 
-<pre>SELECT [fk_id]
+sql
+SELECT [fk_id]
       ,[col1]
       ,[col2]
       ,[col3]
       ,[col4]
       ,[col5]
   FROM [XMLContent].[dbo].[LotsOhColumns]
-WHERE fk_id = NEWID() </pre>
-
-<div class="image_block">
+WHERE fk_id = NEWID() 
+```<div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-28.png?mtime=1317924562"><img alt="" src="/wp-content/uploads/blogs/All/-28.png?mtime=1317924562" width="689" height="95" /></a>
 </div>
 
@@ -70,7 +72,8 @@ Looking at this plan, tons of issues come up.  The first one that we insist on 
 
 Looking at the query we need a nonclustered index on fk_id and include on the resulting columns.  This should prove to be useful given the results and predicate.
 
-<pre>CREATE INDEX IDX_COVERING_ASC ON LotsOhColumns 
+sql
+CREATE INDEX IDX_COVERING_ASC ON LotsOhColumns 
 (
    [fk_id]
 )
@@ -81,8 +84,8 @@ INCLUDE
   ,[col3]
   ,[col4]
   ,[col5]
-) </pre>
-
+) 
+```
 Executing the query again shows a much cleaner plan
 
 <div class="image_block">

@@ -3,6 +3,7 @@ title: Failed to access IIS metabase or why it is important to do things in the 
 author: SQLDenis
 type: post
 date: 2008-12-04T12:11:17+00:00
+ID: 235
 url: /index.php/webdev/webdesigngraphicsstyling/failed-to-access-iis-metabase-or-why-it/
 views:
   - 8921

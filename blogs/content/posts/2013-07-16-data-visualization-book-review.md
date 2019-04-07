@@ -3,6 +3,7 @@ title: Data Visualization – Book Review
 author: Koen Verbeeck
 type: post
 date: 2013-07-16T12:27:00+00:00
+ID: 2127
 excerpt: |
   To prepare myself for my session Data Visualization Tips &amp; Tricks, I read a few books. In this blog post, I’ll give a short review for each one of them.
   Information Dashboard Design

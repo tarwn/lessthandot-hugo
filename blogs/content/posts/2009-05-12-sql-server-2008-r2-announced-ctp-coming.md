@@ -3,6 +3,7 @@ title: SQL Server 2008 R2 Announced, CTP Coming This Summer
 author: SQLDenis
 type: post
 date: 2009-05-12T11:06:15+00:00
+ID: 426
 url: /index.php/datamgmt/datadesign/sql-server-2008-r2-announced-ctp-coming/
 views:
   - 4272

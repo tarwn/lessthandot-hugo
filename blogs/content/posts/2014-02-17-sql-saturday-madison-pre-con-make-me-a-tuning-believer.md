@@ -3,6 +3,7 @@ title: 'SQL Saturday Madison Pre-Con: Make Me a Tuning Believer'
 author: Jes Borland
 type: post
 date: 2014-02-17T18:58:15+00:00
+ID: 2420
 url: /index.php/uncategorized/sql-saturday-madison-pre-con-make-me-a-tuning-believer/
 views:
   - 5186

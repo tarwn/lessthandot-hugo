@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #25: T-SQL Tricks – Checking Transaction Log Space Used'
 author: Jes Borland
 type: post
 date: 2011-12-13T11:15:00+00:00
+ID: 1439
 excerpt: "The twenty-fifth installation of T-SQL Tuesday is brought to us by Allen White. This month's topic is “T-SQL Tricks”."
 url: /index.php/datamgmt/dbadmin/t-sql-tuesday-25-t/
 views:
@@ -35,7 +36,8 @@ What I frequently wanted to know was how large the log was, how much space was b
 
 I’m able to pull information using a DBCC command, SQLPERF, and the system catalog view, sys.databases. Having this information exposed is very helpful to us. 
 
-<pre>-- Set database name 
+sql
+-- Set database name 
 DECLARE @DatabaseName VARCHAR(50);
 SET @DatabaseName = 'AdventureWorks2008R2'; 
 
@@ -48,11 +50,13 @@ DBCC SQLPERF(logspace);
 -- Check recovery mode and why log space can't be reused. 
 SELECT name, recovery_model_desc, log_reuse_wait_desc
 FROM sys.databases
-WHERE name = @DatabaseName;</pre>
+WHERE name = @DatabaseName;
+```
 
 DBCC SQLPERF is used to get transaction log usage information. It returns Database Name, Log Size (MB), Log Space Used (%), and Status. It requires VIEW SERVER STATE permissions. In addition, you can reset DMV information for latch statistics or wait statistics by passing in parameters. This can help with additional troubleshooting. Here’s the full syntax: 
 
-<pre>DBCC SQLPERF 
+sql
+DBCC SQLPERF 
 (
      [ LOGSPACE ]
      |
@@ -60,7 +64,8 @@ DBCC SQLPERF is used to get transaction log usage information. It returns Databa
      |
      [ "sys.dm_os_wait_stats" , CLEAR ]
 ) 
-     [WITH NO_INFOMSGS ]</pre>
+     [WITH NO_INFOMSGS ]
+```
 
 sys.databases will provide information about each database on a SQL Server instance. Just a few of the things you can view are the compatibility level, collation, recovery model, and state. Here, I’m returning the database name, the recovery model, and what the log is waiting on. If a user can connect to a database, they can view the sys.databases information for that database. 
 

@@ -3,6 +3,7 @@ title: LulzSec has shut down, has ended hacking campaign
 author: SQLDenis
 type: post
 date: 2011-06-26T09:59:00+00:00
+ID: 1232
 excerpt: |
   LulzSec  has just announced that it is shutting down. LulzSec, so far has hacked the CIA, U.S. Senate, Nintendo, Sony and others, has surprisingly announced that it is disbanding.
   
@@ -44,7 +45,7 @@ LulzSec has just announced that it is shutting down. LulzSec, so far has hacked 
 .     |''   ``                   |
 .     | [Lulz]                   |      /b/
 .     |           ,,,---===?A`  |  ,==y'
-.   ___,,,,,---==""        |M]  | ;| |&gt;
+.   ___,,,,,---==""        |M]  | ;| |>
 .           _   _      ___,|H,,---==""""bno,
 .    o  O  (_) (_)    /          _     AWAW/
 .                     /         _(+)_  dMM/
@@ -57,7 +58,8 @@ LulzSec has just announced that it is shutting down. LulzSec, so far has hacked 
 .      .-""-.           ///==---   /`-._ ..-'      -.__..-'
 .            `-.__..-' =====\\\ V/  .---.
 .                     ~~~~~~~~~~~~, _',--/_.  .-""-.
-.                            .-""-.___` --  |         -.__..-</pre>
+.                            .-""-.___` --  |         -.__..-
+</pre>
 
 Here is the &#8220;press release&#8221;
 

@@ -3,6 +3,7 @@ title: Use the sys.database_mirroring DMV to quickly check if the databases are 
 author: SQLDenis
 type: post
 date: 2013-01-07T15:39:00+00:00
+ID: 1904
 excerpt: 'I have been using mirroring for about three years now and I must say it is one of the best features that have been added to SQL Server. We used to do plain old replication and log shipping in the past but almost all of those have been replaced by mirror&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/use-the-sys-database_mirroring-dmv/
 views:
@@ -37,7 +38,8 @@ The mirroring connection to &#8220;TCP://SomeServer.SomeNetwork:5022&#8221; has 
 
 I myself like the sys.database_mirroring dynamic management view. This view will give you the state that the mirror is in, the partner name, mirror role, what the safety level is, the connection timeout and more. Here is a query I like to run
 
-<pre>SELECT	db_name(sd.[database_id])              AS [Database Name]
+sql
+SELECT	db_name(sd.[database_id])              AS [Database Name]
 		  ,sd.mirroring_state                  AS [Mirror State]
 		  ,sd.mirroring_state_desc             AS [Mirror State] 
 		  ,sd.mirroring_partner_name           AS [Partner Name]
@@ -47,7 +49,8 @@ I myself like the sys.database_mirroring dynamic management view. This view will
 		  ,sd.mirroring_connection_timeout AS [Timeout(sec)]
     FROM sys.database_mirroring AS sd
     WHERE mirroring_guid IS NOT null
-    ORDER BY [Database Name];</pre>
+    ORDER BY [Database Name];
+```
 
 Here are the different mirroring states and what it means, you can found this information here in Books On Line : http://msdn.microsoft.com/en-us/library/ms189284(v=sql.110).aspx
 

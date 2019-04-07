@@ -3,6 +3,7 @@ title: Microsoft bans memcpy() to minimize buffer overflows
 author: SQLDenis
 type: post
 date: 2009-05-18T00:15:02+00:00
+ID: 434
 excerpt: 'Microsoft announced that they have added memcpy() to their list of banned functions. The function memcpy() has been responsible for a bunch of security problems in Microsoft and third party products. The reason for this is that memcpy() is not safe and&hellip;'
 url: /index.php/enterprisedev/appserver/microsoft-bans-memcpy-to-minimize-buffer/
 views:

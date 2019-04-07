@@ -3,6 +3,7 @@ title: SQLFriends May 18th – What questions do you have for me?
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-04-12T00:46:00+00:00
+ID: 1595
 excerpt: 'The SQL Community is like no other.  Really!  I’ve been part of many technology related communities during my career and no other has felt as well rounded and stable as the SQL Community.  This can be seen in social networking tools such as Twitter and&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sqlfriends-may-18th-what-questions/
 views:

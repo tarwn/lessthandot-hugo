@@ -3,6 +3,7 @@ title: Get weekly transactions showing Monday’s date
 author: Naomi Nosonovsky
 type: post
 date: 2011-04-11T11:25:00+00:00
+ID: 1110
 excerpt: |
   This recent MSDN thread presented an interesting, as I believe, question:
   
@@ -24,7 +25,8 @@ Rather than showing a solution for that particular thread, I show an AdventureWo
 
 Here is the query 
 
-<pre>DECLARE  @First_Bow      DATETIME, 
+sql
+DECLARE  @First_Bow      DATETIME, 
          @Week_Start_Day TINYINT 
 
 SET @Week_Start_Day = 2 
@@ -47,13 +49,13 @@ SELECT *
 FROM   cte2 
        PIVOT 
        (SUM(Total) 
-        FOR Row IN ( [1],[2],[3],[4],[5],[6] ) ) pvt</pre>
-
+        FOR Row IN ( [1],[2],[3],[4],[5],[6] ) ) pvt
+```
 The interesting part here is in determining the Monday&#8217;s day for each week. I decided to use a solution presented in SQL Server Forums [topic][2].
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/5442bbd7-ef89-47f8-8ba9-eef04b6b5fe4/#aa2f0695-501b-43b2-a559-290f6c50b0c7
  [2]: http://www.sqlteam.com/forums/topic.asp?TOPIC_ID=47307
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

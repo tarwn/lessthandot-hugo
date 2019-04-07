@@ -3,6 +3,7 @@ title: First glance at the new Red Gate SQL Monitor
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-12-30T14:46:00+00:00
+ID: 990
 excerpt: My first glance rating of SQL Monitor (1 to 5) is a solid 4. That is extremely high for me as I am hard on tools like this and the footprint they leave on my systems. As such, this monitoring tool as replaced my others and taken the spotlight as my primary tool to use. Cost + functionality + value make this a winner. The post on the footprint SQL Monitor leaves is the winning factor so look for it soon.
 url: /index.php/datamgmt/dbadmin/red-gate-sql-monitor/
 views:

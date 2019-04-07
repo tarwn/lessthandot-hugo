@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 2 – Building the VM
 author: Koen Verbeeck
 type: post
 date: 2013-05-31T07:47:00+00:00
+ID: 2089
 excerpt: 'In this blog post I’ll explain how I build the VM and VHD for my virtual demo environment. I use Hyper-V locally on my Windows 8 OS to run my virtual environment. If you have Windows 8 Enterprise, Hyper-V is a feature you can simply enable in the contro&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sharepoint-2013-bi-part-2/
 views:

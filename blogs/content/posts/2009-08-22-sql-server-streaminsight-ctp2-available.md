@@ -3,6 +3,7 @@ title: SQL Server StreamInsight CTP2 Available For Download
 author: SQLDenis
 type: post
 date: 2009-08-22T12:23:24+00:00
+ID: 543
 url: /index.php/datamgmt/dbprogramming/sql-server-streaminsight-ctp2-available/
 views:
   - 6680

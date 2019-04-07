@@ -3,6 +3,7 @@ title: 'Watch Me (and 23 Others!) During 24 Hours of PASS: Summit Preview'
 author: Jes Borland
 type: post
 date: 2011-08-31T10:48:00+00:00
+ID: 1305
 excerpt: |
   Twice a year, PASS puts on another great, free training event - 24 Hours of PASS. I'll be giving a preview of my PASS Summit presentation, "Reporting Services 201". Register today!
 url: /index.php/datamgmt/dbprogramming/fall-2011-24-hours-of-pass/

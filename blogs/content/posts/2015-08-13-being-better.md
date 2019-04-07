@@ -3,6 +3,7 @@ title: Being Better
 author: Jes Borland
 type: post
 date: 2015-08-13T16:29:27+00:00
+ID: 4083
 url: /index.php/uncategorized/being-better/
 views:
   - 4045

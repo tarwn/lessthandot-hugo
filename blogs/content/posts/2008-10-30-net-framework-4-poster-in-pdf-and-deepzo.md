@@ -3,6 +3,7 @@ title: .NET Framework 4 Poster In PDF and DeepZoom Formats
 author: SQLDenis
 type: post
 date: 2008-10-30T13:25:36+00:00
+ID: 189
 url: /index.php/desktopdev/mstech/net-framework-4-poster-in-pdf-and-deepzo/
 views:
   - 6244

@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 9 – SQL Server Monitoring – Default Trace
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-06T10:31:00+00:00
+ID: 1143
 excerpt: 'The Default Trace exists in SQL Server 2005 and higher versions, in all editions.  The trace has been questioned: what is it, and why is it helpful?  We will go over the answers to these questions and look into the Default Trace, showing how to use it t&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-9/
 views:
@@ -25,14 +26,16 @@ The Default Trace’s value may provide a reason to leave the trace enabled.  T
 
  
 
-<pre>sp_configure 'show advanced options', 1
+sql
+sp_configure 'show advanced options', 1
 GO
 RECONFIGURE
 GO
 sp_configure 'default trace enabled', 0
 GO
 RECONFIGURE
-GO</pre>
+GO
+```
 
  
 
@@ -40,12 +43,14 @@ The Default Trace tracks events that revolve around configurations changes and c
 
  
 
-<pre>SELECT 
+sql
+SELECT 
 	TraceEvents.name as [Event], 
 	TraceData.name as [Data Collected]
 FROM ::fn_trace_geteventinfo((SELECT TOP 1 TraceID FROM ::fn_trace_getinfo(default))) TraceInfo
 JOIN sys.trace_events TraceEvents ON TraceInfo.eventID = TraceEvents.trace_event_id
-JOIN sys.trace_columns TraceData ON TraceInfo.columnid = TraceData.trace_column_id</pre>
+JOIN sys.trace_columns TraceData ON TraceInfo.columnid = TraceData.trace_column_id
+```
 
  
 
@@ -73,13 +78,15 @@ Here we will test the capture of TABLE CREATE, ALTER and DROP running the follow
 
  
 
-<pre>CREATE TABLE Junked (COL INT)
+sql
+CREATE TABLE Junked (COL INT)
 GO
 ALTER TABLE Junked
  ADD COL2 VARCHAR(10)
 GO
 DROP TABLE Junked
-GO</pre>
+GO
+```
 
  
 
@@ -87,7 +94,9 @@ To query the event that was forced above, we can use the fn\_trace\_gettable to 
 
  
 
-<pre>SELECT * FROM ::fn_trace_getinfo(default)</pre>
+sql
+SELECT * FROM ::fn_trace_getinfo(default)
+```
 
  
 
@@ -103,7 +112,8 @@ Then use the file path as:
 
  
 
-<pre>SELECT 
+sql
+SELECT 
 	TraceInfo.ServerName,
 	TraceInfo.StartTime,
 	TraceInfo.LoginName,
@@ -112,8 +122,8 @@ Then use the file path as:
 FROM 
 ::fn_trace_gettable('C:SQL2008R2MSSQL10_50.TK2008R2MSSQLLoglog_257.trc',0) TraceInfo
 JOIN sys.trace_events TraceEvents ON TraceInfo.eventclass = TraceEvents.trace_event_id
-WHERE ObjectName = 'Junked'</pre>
-
+WHERE ObjectName = 'Junked'
+```
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-49.png?mtime=1303838526"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-49.png?mtime=1303838526" width="529" height="113" /></a>
 </div>

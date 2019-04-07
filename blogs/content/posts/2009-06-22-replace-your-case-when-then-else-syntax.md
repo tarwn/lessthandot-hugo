@@ -3,6 +3,7 @@ title: Replace Your Case When Then Else Syntax With the Sign Function In SQL Ser
 author: SQLDenis
 type: post
 date: 2009-06-22T12:50:30+00:00
+ID: 479
 url: /index.php/datamgmt/datadesign/replace-your-case-when-then-else-syntax/
 views:
   - 10326
@@ -21,7 +22,9 @@ tags:
 ---
 If you want to show a 1 when there is a value for something in the column and 0 if none of the rows have that values you typically do something like this
 
-<pre>CASE WHEN SUM(CONVERT(INT,SomeValue)) &gt; 0 THEN 1 ELSE 0 END</pre>
+sql
+CASE WHEN SUM(CONVERT(INT,SomeValue)) > 0 THEN 1 ELSE 0 END
+```
 
 Basically you sum it up and if the sum is greater than 0 then you show 1 otherwise you show 0
   
@@ -29,7 +32,8 @@ Here is what it might look like in code
 
 First create the following table with this data
 
-<pre>create table #Cars(id int,brand varchar(20),HasDefects bit)
+sql
+create table #Cars(id int,brand varchar(20),HasDefects bit)
 
 insert #Cars values(1,'Chevy Corvette',1)
 insert #Cars values(2,'Ford Taurus',0)
@@ -37,13 +41,16 @@ insert #Cars values(3,'Ford Taurus',1)
 insert #Cars values(4,'BMW 635 CSi',0)
 insert #Cars values(5,'BMW 635 CSi',0)
 insert #Cars values(6,'Fiat 500',1)
-insert #Cars values(7,'Fiat 500',1)</pre>
+insert #Cars values(7,'Fiat 500',1)
+```
 
 And here is our CASE WHEN THEN ELSE query
 
-<pre>SELECT brand,CASE WHEN SUM(convert(int,HasDefects)) &gt; 0 THEN 1 ELSE 0 END AS HasDefects
+sql
+SELECT brand,CASE WHEN SUM(convert(int,HasDefects)) > 0 THEN 1 ELSE 0 END AS HasDefects
 from #Cars
-group by brand</pre>
+group by brand
+```
 
 We need to convert HasDefects to an integer before using the sum function, otherwise you will get the following error
 
@@ -53,9 +60,11 @@ The sum or average aggregate operation cannot take a bit data type as an argumen
 
 So how can we change that to use the sign function? It is very easy all you have to do is wrap the sign function around the sign function
 
-<pre>select brand, sign(sum(convert(int,HasDefects))) as HasDefects
+sql
+select brand, sign(sum(convert(int,HasDefects))) as HasDefects
 from #Cars
-group by brand</pre>
+group by brand
+```
 
 Here is our output
   
@@ -85,7 +94,8 @@ Scale will affect the output also; if you use -22.0001 then -1.0000 will be retu
   
 Here is a query you can run to see what sign returns for different values
 
-<pre>select 	sign (0),  -- 0
+sql
+select 	sign (0),  -- 0
 	sign (1),  -- 1
 	sign (-1), -- -1
 	sign (null), --null
@@ -94,7 +104,8 @@ Here is a query you can run to see what sign returns for different values
 	sign (-22.0001), -- -1.0000
 	sign (22.0001),  -- 1.0000
 	sign (-22.01), -- -1.00
-	sign (22.01)  -- 1.00</pre>
+	sign (22.01)  -- 1.00
+```
 
 On our wiki there is an article that shows you another 9 lesser know functions; these functions are
 
@@ -123,5 +134,5 @@ You can find that article here [Ten SQL Server Functions That You Have Ignored U
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://wiki.ltd.local/index.php/Ten_SQL_Server_Functions_That_You_Have_Ignored_Until_Now
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: Silverlight 5 available for download, will it be the last version?
 author: SQLDenis
 type: post
 date: 2011-12-10T12:29:00+00:00
+ID: 1432
 excerpt: |
   Microsoft has made Silverlight 5 available for download.
   

@@ -3,6 +3,7 @@ title: 'T-SQL Window Functions – Part 2: Ranking Functions'
 author: Steve Hughes (DataOnWheels)
 type: post
 date: 2012-09-11T17:33:00+00:00
+ID: 1715
 excerpt: 'This is part 2 in my series on SQL window functions.  In this post, we will explore using ranking functions.  SQL Server support four different ranking functions which are supported in SQL Server versions 2005 and forward.  All of these functions requir&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/t-sql-window-functions-part-2/
 views:

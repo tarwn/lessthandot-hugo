@@ -3,6 +3,7 @@ title: Java Training Day 2
 author: SQLDenis
 type: post
 date: 2012-11-28T00:05:00+00:00
+ID: 1804
 excerpt: |
   Control statements
   
@@ -54,7 +55,8 @@ The switch statement with the string data type is case sensitive
   
 This will print hello
 
-<pre>String test ="hello";
+```java
+String test ="hello";
 		switch(test){
 		case "Hello":
 			System.out.println("Hello");
@@ -65,8 +67,9 @@ This will print hello
 		default:
 			System.out.println("default");
 			break;
-		}</pre>
+		}
 
+```
 **Integer data types**
   
 No null values like in .net where you would use int?
@@ -75,10 +78,12 @@ you can use _ in constants for readability reasons so for example 2_000 and 2000
   
 There are no underflow or overflow error, results will wrap around
 
-<pre>byte x =127;
+```java
+byte x =127;
 System.out.println(x);
 x+= 1;
-System.out.println(x);</pre>
+System.out.println(x);
+```
 
 That will print
   
@@ -90,8 +95,10 @@ Java doesn&#8217;t have the checked keyword like in c#, you need to roll your ow
 
 If you try assigning 128 to a byte, you will get an error, it won&#8217;t become -128
 
-<pre>byte x =128;
-System.out.println(x);</pre>
+```java
+byte x =128;
+System.out.println(x);
+```
 
 Exception in thread &#8220;main&#8221; java.lang.Error: Unresolved compilation problem:
   
@@ -101,9 +108,11 @@ at com.denis.MainClass.main(MainClass.java:12)
 
 You also can&#8217;t convert straight from an int to a string
 
-<pre>String s = "123";
+```java
+String s = "123";
 int z = s;
-System.out.println(z);</pre>
+System.out.println(z);
+```
 
 Exception in thread &#8220;main&#8221; java.lang.Error: Unresolved compilation problem:
   
@@ -111,9 +120,11 @@ Type mismatch: cannot convert from String to int
 
 Here is one way to do the conversion by using the parseInt method of the Integer wrapper type
 
-<pre>String s = "123";
+```java
+String s = "123";
 int z = Integer.parseInt(s);
-System.out.println(z);</pre>
+System.out.println(z);
+```
 
 Looks like Java doesn&#8217;t have TryParse like c#
 
@@ -121,19 +132,23 @@ To test if strings are the same use equals or equalsIgnoreCase
   
 Here is what is the output of the following tests
 
-<pre>String a1 = "A";
+```java
+String a1 = "A";
 String a2 = "a";
 String a3 = "a";
 System.out.println(a1 == a2); 			//false
 System.out.println(a1 == a3); 			//false
 System.out.println(a1.equals(a2));  		//false
-System.out.println(a1.equalsIgnoreCase(a2)); 	//true</pre>
+System.out.println(a1.equalsIgnoreCase(a2)); 	//true
+```
 
 This one is similar to SELECT 5/2 in SQL Server, it does integer math, however since answer is a double, you get back 2.0
 
-<pre>double answer;
+```java
+double answer;
 answer = 5/2;
-System.out.println(answer); // 2.0</pre>
+System.out.println(answer); // 2.0
+```
 
 You need to change either of the two integers in order to get back a result that is not an integer
 

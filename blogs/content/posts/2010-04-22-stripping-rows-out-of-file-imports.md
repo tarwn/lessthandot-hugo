@@ -3,6 +3,7 @@ title: Stripping rows out of file imports
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-04-22T10:31:20+00:00
+ID: 765
 url: /index.php/datamgmt/datadesign/stripping-rows-out-of-file-imports/
 views:
   - 10163
@@ -44,14 +45,16 @@ Create a package named header_Split and the following supporting tables in your 
   
 
 
-<pre>CREATE TABLE [dbo].[header](
+sql
+CREATE TABLE [dbo].[header](
 	[Column 0] [varchar](50) NULL
 ) ON [PRIMARY]
 GO
 CREATE TABLE [dbo].[header_split](
 	[Column 0] [varchar](50) NULL
 ) ON [PRIMARY]
-GO</pre>
+GO
+```
 
 Create a variable at the package scope level named, global.
   
@@ -61,11 +64,13 @@ Our global connections for the package will be one flat file connection named, �
   
 
 
-<pre>header <grab me> string
+```
+header <grab me> string
 test
 test
 test
-test</pre>
+test
+```
 
 Bring over a data flow task and let’s name it, “DF Flat File Pump”
 
@@ -109,7 +114,8 @@ The code to perform the action is below. It will utilize Regular Expressions to 
   
 
 
-<pre>Imports System
+```VBNET
+Imports System
 Imports System.Data
 Imports System.Math
 Imports Microsoft.SqlServer.Dts.Runtime
@@ -138,7 +144,8 @@ Public Class ScriptMain
         End If
     End Sub
 
-End Class</pre>
+End Class
+```
 
 Drag and drop two OLEDB Destination’s into the data flow and rename them “data pump” and “headers”. We are only creating the headers destination for our testing purposes to validate the headers coming out and for later utilization if needed.
   

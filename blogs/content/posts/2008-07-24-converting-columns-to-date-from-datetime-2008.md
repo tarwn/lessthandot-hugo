@@ -3,6 +3,7 @@ title: Converting Columns To Date From Datetime Does Not Result In A Scan In SQL
 author: SQLDenis
 type: post
 date: 2008-07-24T16:28:16+00:00
+ID: 95
 url: /index.php/datamgmt/datadesign/converting-columns-to-date-from-datetime-2008/
 views:
   - 6748
@@ -16,29 +17,34 @@ I was reading Itzik Ben-Gan&#8217;s An Introduction to [New T-SQL Programmabilit
   
 For example, the plan for the following query performs an index seek on the index on the CurrencyRateDate DATETIME column:
 
-<pre>USE AdventureWorks;
+```sql
+USE AdventureWorks;
 
 SELECT FromCurrencyCode, ToCurrencyCode, EndOfDayRate
 
 FROM Sales.CurrencyRate
 
-WHERE CAST(CurrencyRateDate AS DATE) = '20040701';</pre>
+WHERE CAST(CurrencyRateDate AS DATE) = '20040701';
+```
 
 I was surprised by this, as we all know functions/conversions on column names are generaly bad for performance.
 
 Let&#8217;s see how this works. First create this table in the tempdb database.
 
-<pre>use tempdb
+```sql
+use tempdb
 
 go
 
 create table TestDatetimePerf (SomeCol datetime,id int identity)
 
-go</pre>
+go
+```
 
 This will insert 2048 rows with dates between 2008-01-01 12 AM and 2008-03-26 7 AM
 
-<pre>insert TestDatetimePerf(SomeCol)
+```sql
+insert TestDatetimePerf(SomeCol)
 
 select dateadd(hh,number,'20080101')
 
@@ -50,40 +56,50 @@ go
 
 create index ix_Date on TestDatetimePerf(SomeCol)
 
-go</pre>
+go
+```
 
 Turn on the execution plan
 
-<pre>set showplan_text on
+```sql
+set showplan_text on
 
-go</pre>
+go
+```
 
 Execute the following query
 
-<pre>select * 
+```sql
+select * 
 
 from TestDatetimePerf
 
-where convert(varchar(30),SomeCol,112) = '20080103'</pre>
+where convert(varchar(30),SomeCol,112) = '20080103'
+```
 
 Here is the plan
 
-<pre>|--Table Scan(OBJECT:([tempdb].[dbo].[TestDatetimePerf]), 
---WHERE:(CONVERT(varchar(30),[tempdb].[dbo].[TestDatetimePerf].[SomeCol],112)=[@1]))</pre>
+```
+|--Table Scan(OBJECT:([tempdb].[dbo].[TestDatetimePerf]), 
+--WHERE:(CONVERT(varchar(30),[tempdb].[dbo].[TestDatetimePerf].[SomeCol],112)=[@1]))
+```
 
 As you can see that results in a scan. 
 
 What happens when you convert to date?
 
-<pre>select * 
+```sql
+select * 
 
 from TestDatetimePerf
 
-where convert(date,SomeCol) = '20080103'</pre>
+where convert(date,SomeCol) = '20080103'
+```
 
 Here is the plan
 
-<pre>|--Nested Loops(Inner Join, OUTER REFERENCES:([Bmk1000]))
+```
+|--Nested Loops(Inner Join, OUTER REFERENCES:([Bmk1000]))
 |--Nested Loops(Inner Join, OUTER REFERENCES:([Expr1007], [Expr1008], [Expr1006]))
 | |--Compute Scalar(DEFINE:(([Expr1007],[Expr1008],[Expr1006])=GetRangeThroughConvert('2008-01-03','2008-01-03',(62))))
 | | |--Constant Scan
@@ -91,7 +107,8 @@ Here is the plan
 --SEEK:([tempdb].[dbo].[TestDatetimePerf].[SomeCol] > [Expr1007] 
 --AND [tempdb].[dbo].[TestDatetimePerf].[SomeCol] < [Expr1008]), 
 --WHERE:(CONVERT(date,[tempdb].[dbo].[TestDatetimePerf].[SomeCol],0)='2008-01-03') ORDERED FORWARD)
-|--RID Lookup(OBJECT:([tempdb].[dbo].[TestDatetimePerf]), SEEK:([Bmk1000]=[Bmk1000]) LOOKUP ORDERED FORWARD)</pre>
+|--RID Lookup(OBJECT:([tempdb].[dbo].[TestDatetimePerf]), SEEK:([Bmk1000]=[Bmk1000]) LOOKUP ORDERED FORWARD)
+```
 
 See that? You get a seek instead, very interesting. It would be nice that when you use convert with the style optional parameter that the optimizer would be smart enough to convert that also to a seek.
 

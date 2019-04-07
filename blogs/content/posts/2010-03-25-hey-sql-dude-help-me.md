@@ -3,6 +3,7 @@ title: Approach the SQL Community without hesitation!
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-03-25T15:57:11+00:00
+ID: 736
 url: /index.php/itprofessionals/ethicsit/hey-sql-dude-help-me/
 views:
   - 6505

@@ -3,6 +3,7 @@ title: Do not use spaces or other invalid characters in your column names
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-10T13:16:26+00:00
+ID: 619
 excerpt: 'Column names (and table names) should not have spaces or any other invalid characters in them.  This is considered bad practice because it requires you to use square brackets around your names.  Square brackets make the code harder to read and understan&hellip;'
 url: /index.php/datamgmt/dbprogramming/do-not-use-spaces-or-other-invalid-chara/
 views:
@@ -21,7 +22,8 @@ Based on a comment from Aaron Bertrand, I decided to modify the code below. I re
 
 **How to detect this problem:**
 
-<pre>Declare @AcceptableSymbols VarChar(100)
+sql
+Declare @AcceptableSymbols VarChar(100)
 
 Set @AcceptableSymbols = '_$'
 
@@ -34,7 +36,8 @@ UNION all
  
 SELECT  'TableName', Table_Name
 FROM    Information_Schema.Tables
-WHERE   Table_Name Like '%[^a-z' + @AcceptableSymbols + ']%'</pre>
+WHERE   Table_Name Like '%[^a-z' + @AcceptableSymbols + ']%'
+```
 
 **How to correct it:** If this is a number issue, you may need to redesign your database structure to include more tables. For example, if you have a StudentGrade table with (StudentId, Grade1, Grade2, Grade3, Grade4) you should change it to be StudentGrade with (StudentId, Grade, Identifier). Each student would have multiple rows in this table (one for each grade). You would need to add an identifier column to indicate what the grade is for (test on November 10, book report, etc).
 

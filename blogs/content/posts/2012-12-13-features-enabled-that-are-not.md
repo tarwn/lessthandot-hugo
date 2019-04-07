@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 13: Features enabled that are not used'
 author: SQLDenis
 type: post
 date: 2012-12-13T10:14:00+00:00
+ID: 1851
 excerpt: 'This is day thirteen of the SQL Advent 2012 series of blog posts.  Today we are going to look at servers where everything is installed and enabled.'
 url: /index.php/datamgmt/dbprogramming/features-enabled-that-are-not/
 views:
@@ -28,7 +29,8 @@ This is day thirteen of the [SQL Advent 2012 series][1] of blog posts. Today we 
 
 To see what these features are and if they are turned off, you can use the following query. 
 
-<pre>SELECT name, value,value_in_use 
+sql
+SELECT name, value,value_in_use 
 FROM sys.configurations
 WHERE name IN (
 'Agent XPs',
@@ -40,13 +42,15 @@ WHERE name IN (
 'xp_cmdshell',
 'Ad Hoc Distributed Queries',
 'Replication XPs',
-'clr enabled')</pre>
+'clr enabled')
+```
 
 The difference between _value_ and _value\_in\_use_ is that _value\_in\_use_ is what is currently used and _value_ will be used next time the server is restarted. If you want to have the change take effect immediately then use RECONFIGURE
 
 Here is an example that will turn off xp_cmdshell
 
-<pre>EXECUTE sp_configure 'show advanced options', 1
+sql
+EXECUTE sp_configure 'show advanced options', 1
 RECONFIGURE
 GO
  
@@ -56,7 +60,8 @@ GO
  
 EXECUTE sp_configure 'show advanced options', 0
 RECONFIGURE
-GO</pre>
+GO
+```
 
 If you prefer the GUI, you can also use that, right click on the database server name in SSMS, select Facets, from the Facet dropdown select Surface Area Configuration. You will see the following Facet properties
 

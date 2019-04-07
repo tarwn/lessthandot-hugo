@@ -3,6 +3,7 @@ title: 'DATEFROMPARTS  and DATETIMEFROMPARTS functions in SQL Server Denali CTP3
 author: SQLDenis
 type: post
 date: 2011-07-13T17:22:00+00:00
+ID: 1251
 excerpt: |
   Function 
            
@@ -43,8 +44,10 @@ In the [A Quick look at the new EOMONTH function in SQL Server Denali CTP3][1] p
 
 If you are a .NET programmer then you probably know that you can construct a date by passing a bunch of integers to the DateTime constructor. To create a date of July, 13, 2011 you would do something like this
 
-<pre>DateTime date1 = new DateTime(2011, 7, 13);
-Console.WriteLine(date1.ToString());</pre>
+```csharp
+DateTime date1 = new DateTime(2011, 7, 13);
+Console.WriteLine(date1.ToString());
+```
 
 7/13/2011 12:00:00 AM
 
@@ -54,19 +57,25 @@ _DATEFROMPARTS ( year, month, day )_
 
 Here is an example
 
-<pre>SELECT DATEFROMPARTS ( 2011, 7, 13 ) AS Result;</pre>
+sql
+SELECT DATEFROMPARTS ( 2011, 7, 13 ) AS Result;
+```
 
 2011-07-13
 
 If you pass in all ones, you will get year 1, month 1 and day 1
 
-<pre>SELECT DATEFROMPARTS(1,1,1)</pre>
+sql
+SELECT DATEFROMPARTS(1,1,1)
+```
 
 0001-01-01
 
 You can of course also pass in functions, so to get the first day of the current year and month, you would do this
 
-<pre>SELECT DATEFROMPARTS(year(getdate()),month(getdate()),1)</pre>
+sql
+SELECT DATEFROMPARTS(year(getdate()),month(getdate()),1)
+```
 
 2011-07-01
 
@@ -82,7 +91,9 @@ _DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )_
 
 If you were to pass in the same values as for date into the DATETIMEFROMPARTS function you will get an error
 
-<pre>SELECT DATETIMEFROMPARTS(1,1,1)</pre>
+sql
+SELECT DATETIMEFROMPARTS(1,1,1)
+```
 
 Msg 174, Level 15, State 1, Line 1
   
@@ -92,14 +103,18 @@ It would have been nice that the function returned you the datetime with every t
 
 So if you have this in .NET
 
-<pre>DateTime date1 = new DateTime(2011, 7, 13, 16, 32, 18, 500);
-Console.WriteLine(date1.ToString("M/dd/yyyy h:mm:ss.fff tt"));</pre>
+```csharp
+DateTime date1 = new DateTime(2011, 7, 13, 16, 32, 18, 500);
+Console.WriteLine(date1.ToString("M/dd/yyyy h:mm:ss.fff tt"));
+```
 
 7/13/2011 4:32:18.500 PM
 
 You can do this in SQL
 
-<pre>SELECT DATETIMEFROMPARTS ( 2011, 7, 13, 16, 32, 18, 500 ) AS Result;</pre>
+sql
+SELECT DATETIMEFROMPARTS ( 2011, 7, 13, 16, 32, 18, 500 ) AS Result;
+```
 
 2011-07-13 16:32:18.500
 
@@ -107,7 +122,9 @@ There are a couple of things to be aware of
   
 You have to be within the valid datetime range (January 1, 1753, through December 31, 9999)
 
-<pre>SELECT DATETIMEFROMPARTS(1600,1,1,1,1,1,500)</pre>
+sql
+SELECT DATETIMEFROMPARTS(1600,1,1,1,1,1,500)
+```
 
 Msg 289, Level 16, State 3, Line 1
   
@@ -117,7 +134,9 @@ Cannot construct data type datetime, some of the arguments have values which are
 
 If you use datetime2, which goes back to year 1 then you are fine, however if you just change DATETIMEFROMPARTS to DATETIME2FROMPARTS you will have a problem, DATETIME2FROMPARTS needs also precision 
 
-<pre>SELECT DATETIME2FROMPARTS(1600,1,1,1,1,1,500)</pre>
+sql
+SELECT DATETIME2FROMPARTS(1600,1,1,1,1,1,500)
+```
 
 Msg 174, Level 15, State 1, Line 1
   
@@ -125,7 +144,9 @@ The datetime2fromparts function requires 8 argument(s).
   
 &#12288;
 
-<pre>SELECT DATETIME2FROMPARTS(1600,1,1,1,1,1,500,3)</pre>
+sql
+SELECT DATETIME2FROMPARTS(1600,1,1,1,1,1,500,3)
+```
 
 1600-01-01 01:01:01.500
 

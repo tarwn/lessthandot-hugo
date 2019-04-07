@@ -3,6 +3,7 @@ title: How to enable image conversions in hybris 5
 author: Axel Achten (axel8s)
 type: post
 date: 2013-10-02T12:34:00+00:00
+ID: 2164
 excerpt: |
   With hybris 5, you can use ImageMagick to convert your images. ImageMagick is open source software and comes with the hybris 5 platform. Now how do you enable the mediaconversion in hybris running on a Microsoft Windows OS?
   By default mediaconversion i&hellip;
@@ -50,8 +51,9 @@ Open the localextensions.xml file in &#8216;hybris\_install\_dir&#8217;config an
 
 Uncomment the tag and add the location of the mediaconversion extension:
 
-<pre><extension name="mediaconversion" /&gt;</pre>
-
+```xml
+<extension name="mediaconversion" />
+```
 
 
 # Rebuild hybris
@@ -60,8 +62,10 @@ Open a command prompt and navigate to the &#8216;hybris\_install\_dir&#8217;binp
   
 Execute the following commands
 
-<pre>setantenv.bat
-ant clean all</pre>
+```CMD
+setantenv.bat
+ant clean all
+```
 
 
 

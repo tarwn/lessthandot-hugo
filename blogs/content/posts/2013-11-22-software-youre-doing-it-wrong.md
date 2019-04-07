@@ -3,6 +3,7 @@ title: Software, You’re Doing it Wrong
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-11-22T14:10:00+00:00
+ID: 2196
 excerpt: |
   I spend most of my waking day on a computer, using software. Then I get on twitter and share all the many ways that software annoys me, frustrates me, or just plain pisses me off. 
   

@@ -3,6 +3,7 @@ title: Attending PASS Summit 2011? Want Lunch? And Free Career Advice? I Have Ju
 author: Jes Borland
 type: post
 date: 2011-09-15T12:14:00+00:00
+ID: 1317
 excerpt: 'PASS Summit 2011 is fast approaching - in only four weeks, thousands of SQL Server professionals will take Seattle, WA by storm. Join me at the WIT Lunch at Summit!'
 url: /index.php/datamgmt/dbprogramming/attending-pass-summit-2011-want/
 views:

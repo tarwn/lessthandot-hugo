@@ -3,6 +3,7 @@ title: Getting the physical device name and backup time for a SQL Server databas
 author: SQLDenis
 type: post
 date: 2010-04-02T09:22:20+00:00
+ID: 733
 url: /index.php/datamgmt/datadesign/getting-the-physical-device-name-and-bac/
 views:
   - 12582
@@ -27,38 +28,44 @@ This post will focus on getting the physical name for the last backup for a data
 
 Create a test database
 
-<pre>CREATE DATABASE test
-GO</pre>
-
+sql
+CREATE DATABASE test
+GO
+```
 Create some sample data
 
-<pre>USE test
+sql
+USE test
 GO
 
 SELECT * INTO TestTable
 FROM master..spt_values
-GO</pre>
-
+GO
+```
 Now it is time to do the backups, I have a C:Junkdraw folder on my machine and a job that runs every night that will delete everything older than 2 weeks (I got this idea from the [lifehacks][1] book and it really helps with getting rid of not needed files). If you want to run the backup commands on your PC, just make sure to change C:Junkdraw to something that does exist.
 
-<pre>BACKUP DATABASE [Test] TO  DISK = N'C:JunkdrawTest.bak' WITH NOFORMAT, NOINIT
+sql
+BACKUP DATABASE [Test] TO  DISK = N'C:JunkdrawTest.bak' WITH NOFORMAT, NOINIT
 ,SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO
 
 BACKUP DATABASE [Test] TO  DISK = N'C:JunkdrawTest2.bak' WITH NOFORMAT, NOINIT
 ,SKIP, NOREWIND, NOUNLOAD,  STATS = 10
-GO</pre>
+GO
+```
 
 In order to get the information about the backups we need to join the backupset and backupmediafamily tables. Here is the query that will give me the physical device name, backup start date, backup finish date and the size of the backup.
 
-<pre>SELECT			physical_device_name,
+sql
+SELECT			physical_device_name,
 				backup_start_date,
 				backup_finish_date,
 				backup_size/1024.0 AS BackupSizeKB
 FROM msdb.dbo.backupset b
 JOIN msdb.dbo.backupmediafamily m ON b.media_set_id = m.media_set_id
 WHERE database_name = 'Test'
-ORDER BY backup_finish_date DESC</pre>
+ORDER BY backup_finish_date DESC
+```
 
 Output
 
@@ -68,7 +75,8 @@ C:JunkdrawTest.bak	2010-03-24 12:43:33.000	2010-03-24 12:43:33.000	1482.000000</
 
 What if you want to know the time the last backup finished for all the databases? You can use the following query to get that info
 
-<pre>WITH LastBackupTaken AS (
+sql
+WITH LastBackupTaken AS (
 SELECT database_name,
 backup_finish_date,
 RowNumber = ROW_NUMBER() OVER (PARTITION BY database_name 
@@ -79,7 +87,8 @@ FROM msdb.dbo.backupset
 
 SELECT database_name,backup_finish_date 
 FROM LastBackupTaken
-WHERE RowNumber = 1</pre>
+WHERE RowNumber = 1
+```
 
 Here are the results for that query
 
@@ -95,5 +104,5 @@ This last part is also on our wiki, you can find it here [Get last backup dates 
 
  [1]: http://www.amazon.com/gp/product/0470238364?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0470238364
  [2]: http://wiki.ltd.local/index.php/Get_last_backup_dates_for_all_databases
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: '2011 Quarter 3 Goals: Kicking [beep], Taking Names'
 author: Jes Borland
 type: post
 date: 2011-09-30T10:58:00+00:00
+ID: 1333
 excerpt: It’s the end of the third quarter. What a fun year!
 url: /index.php/datamgmt/dbprogramming/2011-quarter-3-goals-kicking/
 views:

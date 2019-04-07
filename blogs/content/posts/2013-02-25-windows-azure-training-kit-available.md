@@ -3,6 +3,7 @@ title: Windows Azure Training Kit available
 author: SQLDenis
 type: post
 date: 2013-02-25T23:39:00+00:00
+ID: 2013
 excerpt: |
   Microsoft has made available the Windows Azure Training Kit
   

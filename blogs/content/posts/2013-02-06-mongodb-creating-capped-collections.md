@@ -3,6 +3,7 @@ title: 'MongoDB: Creating capped collections'
 author: SQLDenis
 type: post
 date: 2013-02-06T09:03:00+00:00
+ID: 1971
 excerpt: "Let's say you have a collection and you are only interested in storing the last 50 items or so. Everytime you add a new item, you want the oldest item to disappear. What you can do is create a capped collection. Here are some behaviors that capped colle&hellip;"
 url: /index.php/datamgmt/dbprogramming/mongodb-creating-capped-collections/
 views:
@@ -73,7 +74,7 @@ Here is the output
 { "_id" : ObjectId("511232046ce24e7ea326990d"), "name" : "denis1966", "age" : 1966 }
 { "_id" : ObjectId("511232046ce24e7ea326990e"), "name" : "denis1967", "age" : 1967 }
 Type "it" for more
-&gt; it
+> it
 { "_id" : ObjectId("511232046ce24e7ea326990f"), "name" : "denis1968", "age" : 1968 }
 { "_id" : ObjectId("511232046ce24e7ea3269910"), "name" : "denis1969", "age" : 1969 }
 { "_id" : ObjectId("511232046ce24e7ea3269911"), "name" : "denis1970", "age" : 1970 }
@@ -95,7 +96,7 @@ Type "it" for more
 { "_id" : ObjectId("511232046ce24e7ea3269921"), "name" : "denis1986", "age" : 1986 }
 { "_id" : ObjectId("511232046ce24e7ea3269922"), "name" : "denis1987", "age" : 1987 }
 Type "it" for more
-&gt; it
+> it
 { "_id" : ObjectId("511232046ce24e7ea3269923"), "name" : "denis1988", "age" : 1988 }
 { "_id" : ObjectId("511232046ce24e7ea3269924"), "name" : "denis1989", "age" : 1989 }
 { "_id" : ObjectId("511232046ce24e7ea3269925"), "name" : "denis1990", "age" : 1990 }
@@ -151,7 +152,7 @@ Here is the output
 { "_id" : ObjectId("511232046ce24e7ea326990e"), "name" : "denis1967", "age" : 1967 }
 { "_id" : ObjectId("511232046ce24e7ea326990f"), "name" : "denis1968", "age" : 1968 }
 Type "it" for more
-&gt; it
+> it
 { "_id" : ObjectId("511232046ce24e7ea3269910"), "name" : "denis1969", "age" : 1969 }
 { "_id" : ObjectId("511232046ce24e7ea3269911"), "name" : "denis1970", "age" : 1970 }
 { "_id" : ObjectId("511232046ce24e7ea3269912"), "name" : "denis1971", "age" : 1971 }
@@ -173,7 +174,7 @@ Type "it" for more
 { "_id" : ObjectId("511232046ce24e7ea3269922"), "name" : "denis1987", "age" : 1987 }
 { "_id" : ObjectId("511232046ce24e7ea3269923"), "name" : "denis1988", "age" : 1988 }
 Type "it" for more
-&gt; it
+> it
 { "_id" : ObjectId("511232046ce24e7ea3269924"), "name" : "denis1989", "age" : 1989 }
 { "_id" : ObjectId("511232046ce24e7ea3269925"), "name" : "denis1990", "age" : 1990 }
 { "_id" : ObjectId("511232046ce24e7ea3269926"), "name" : "denis1991", "age" : 1991 }

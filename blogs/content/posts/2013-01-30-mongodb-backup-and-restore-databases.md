@@ -3,6 +3,7 @@ title: 'MongoDB: How to backup and restore databases'
 author: SQLDenis
 type: post
 date: 2013-01-30T17:13:00+00:00
+ID: 1948
 excerpt: 'Today it is time to learn how to backup and restore databases in MongoDB. You do have jobs setup that automatically create backups right? If you do not, please close this window and go set that up first, your data is the most important part of the organ&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/mongodb-backup-and-restore-databases/
 views:
@@ -84,7 +85,7 @@ Wed Jan 30 13:55:56     blog.Blog to dump/blog/Blog.bson
 Wed Jan 30 13:55:56              5 objects
 Wed Jan 30 13:55:56     Metadata for blog.Blog to dump/blog/Blog.metadata.json
 
-D:mongodbbin&gt;</pre>
+D:mongodbbin></pre>
 
 The Blog.bson file is the actual backup of the database
 
@@ -170,7 +171,8 @@ connected to: 127.0.0.1
 Wed Jan 30 14:05:26 dump/blog/Blog.bson
 Wed Jan 30 14:05:26     going into namespace [RestoredDB.Blog]
 5 objects found
-Wed Jan 30 14:05:26     Creating index: { key: { _id: 1 }, ns: "RestoredDB.Blog", name: "_id_" }</pre>
+Wed Jan 30 14:05:26     Creating index: { key: { _id: 1 }, ns: "RestoredDB.Blog", name: "_id_" }
+</pre>
 
 Now connecting to MongoDB again we can check that the new database is there with the same collection
 

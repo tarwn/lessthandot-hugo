@@ -3,6 +3,7 @@ title: Import Wizard – Microsoft.ACE.OLEDB 12.0 provider is not registered
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-19T17:36:00+00:00
+ID: 1924
 excerpt: 'I use SSMS and the Import Data Wizard quite a bit.  Quickly importing data is a fairly common and anoften task that we all have to perform.  The wizard simply makes it more efficient given less time to perform the task.  Most of this data is, like menti&hellip;'
 url: /index.php/datamgmt/dbprogramming/import-wizard-microsoft-ace-oledb/
 views:

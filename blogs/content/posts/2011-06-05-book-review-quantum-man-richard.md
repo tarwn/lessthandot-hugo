@@ -3,6 +3,7 @@ title: 'Book review: Quantum Man: Richard Feynman’s Life in Science'
 author: SQLDenis
 type: post
 date: 2011-06-05T12:43:00+00:00
+ID: 1202
 excerpt: "I picked up the book Quantum Man: Richard Feynman's Life in Science because I wanted to learn more about Richard Feynman and what he accomplished. Even though it is not a computer book, I decided to still review the book here because most scientists use&hellip;"
 url: /index.php/itprofessionals/ethicsit/book-review-quantum-man-richard/
 views:

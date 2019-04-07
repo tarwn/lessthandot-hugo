@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 15: Benefits of Indexes'
 author: SQLDenis
 type: post
 date: 2012-12-15T07:30:00+00:00
+ID: 1856
 excerpt: This is day fifteen of the SQL Advent 2012 series of blog posts. Today we are going to look at indexes
 url: /index.php/datamgmt/dbprogramming/benefits-of-indexes/
 views:
@@ -71,37 +72,45 @@ A non clustered index is a little different since it doesn&#8217;t store the who
 > 
 > First let&#8217;s create this table and populate it with 2048 rows
 > 
-> <pre>CREATE TABLE Test1(id int, somecol char(36), somecol2 char(36))
-GO
-
-INSERT Test1 
-SELECT number,newid(),newid() 
-FROM master..spt_values
-WHERE type = 'P'</pre>
+> sql
+CREATE TABLE Test1(id int, somecol char(36), somecol2 char(36))
+> GO
 > 
+> INSERT Test1 
+> SELECT number,newid(),newid() 
+> FROM master..spt_values
+> WHERE type = 'P'
+```
+
 > Add a clustered index
 > 
-> <pre>CREATE CLUSTERED INDEX cx on Test1(id)</pre>
-> 
+> sql
+CREATE CLUSTERED INDEX cx on Test1(id)
+```
+
 > Add these two non clustered indexes
 > 
-> <pre>CREATE NONCLUSTERED INDEX ix1 on Test1(somecol)
-CREATE NONCLUSTERED INDEX ix2 on Test1(somecol2)</pre>
-> 
+> sql
+CREATE NONCLUSTERED INDEX ix1 on Test1(somecol)
+> CREATE NONCLUSTERED INDEX ix2 on Test1(somecol2)
+```
+
 > Let&#8217;s check how much storage is required for the non clustered indexes
 > 
-> <pre>SELECT
-DB_NAME(DATABASE_ID) AS [DatabaseName],
-OBJECT_NAME(OBJECT_ID) AS TableName,
-SI.NAME AS IndexName,
-INDEX_TYPE_DESC AS IndexType,
-PAGE_COUNT AS PageCounts
-FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL , NULL, N'LIMITED') DPS
-INNER JOIN sysindexes SI
-ON DPS.OBJECT_ID = SI.ID AND DPS.INDEX_ID = SI.INDID
-AND OBJECT_NAME(OBJECT_ID) = 'Test1'
-GO</pre>
-> 
+> sql
+SELECT
+> DB_NAME(DATABASE_ID) AS [DatabaseName],
+> OBJECT_NAME(OBJECT_ID) AS TableName,
+> SI.NAME AS IndexName,
+> INDEX_TYPE_DESC AS IndexType,
+> PAGE_COUNT AS PageCounts
+> FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL , NULL, N'LIMITED') DPS
+> INNER JOIN sysindexes SI
+> ON DPS.OBJECT_ID = SI.ID AND DPS.INDEX_ID = SI.INDID
+> AND OBJECT_NAME(OBJECT_ID) = 'Test1'
+> GO
+```
+
 > Here is the output, as you can see the non clustered indexes take up 12 pages
 > 
 > <pre>DatabaseName	TableName	IndexName	IndexType	PageCounts
@@ -111,8 +120,10 @@ tempdb	        Test1	        ix2	   NONCLUSTERED INDEX	12</pre>
 > 
 > If we check the table size
 > 
-> <pre>EXEC sp_spaceused 'Test1'</pre>
-> 
+> sql
+EXEC sp_spaceused 'Test1'
+```
+
 > <pre>name	rows	reserved	data	index_size	unused
 Test1	2048    472 KB	       176 KB	240 KB	        56 KB</pre>
 > 
@@ -120,23 +131,27 @@ Test1	2048    472 KB	       176 KB	240 KB	        56 KB</pre>
 > 
 > Let&#8217;s recreate the clustered index with all 3 columns now.
 > 
-> <pre>CREATE CLUSTERED INDEX cx on Test1(id,somecol,somecol2)
-WITH DROP_EXISTING</pre>
-> 
+> sql
+CREATE CLUSTERED INDEX cx on Test1(id,somecol,somecol2)
+> WITH DROP_EXISTING
+```
+
 > Recreating the clustered index also recreated the non clustered indexes. Let&#8217;s check now how many pages a non clustered index is
 > 
-> <pre>SELECT
-DB_NAME(DATABASE_ID) AS [DatabaseName],
-OBJECT_NAME(OBJECT_ID) AS TableName,
-SI.NAME AS IndexName,
-INDEX_TYPE_DESC AS IndexType,
-PAGE_COUNT AS PageCounts
-FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL , NULL, N'LIMITED') DPS
-INNER JOIN sysindexes SI
-ON DPS.OBJECT_ID = SI.ID AND DPS.INDEX_ID = SI.INDID
-AND OBJECT_NAME(OBJECT_ID) = 'Test1'
-GO</pre>
-> 
+> sql
+SELECT
+> DB_NAME(DATABASE_ID) AS [DatabaseName],
+> OBJECT_NAME(OBJECT_ID) AS TableName,
+> SI.NAME AS IndexName,
+> INDEX_TYPE_DESC AS IndexType,
+> PAGE_COUNT AS PageCounts
+> FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL , NULL, N'LIMITED') DPS
+> INNER JOIN sysindexes SI
+> ON DPS.OBJECT_ID = SI.ID AND DPS.INDEX_ID = SI.INDID
+> AND OBJECT_NAME(OBJECT_ID) = 'Test1'
+> GO
+```
+
 > Here are the results
 > 
 > <pre>DatabaseName	TableName	IndexName	IndexType	PageCounts
@@ -148,8 +163,10 @@ tempdb  	Test1	        ix2	     NONCLUSTERED INDEX	21</pre>
 > 
 > The index size changed, if you run this
 > 
-> <pre>EXEC sp_spaceused 'Test1'</pre>
-> 
+> sql
+EXEC sp_spaceused 'Test1'
+```
+
 > Here is the result
 > 
 > <pre>name	rows	reserved data	index_size	unused
@@ -161,15 +178,17 @@ Test1	2048    600 KB	 176 KB	384 KB	        40 KB</pre>
 > 
 > Let&#8217;s look at a simple example, when you do a COUNT(*), the optimizer will pick a non clustered index if there is one since it usually has less columns than the clustered index 
 > 
-> <pre>SET SHOWPLAN_TEXT ON
-GO
-
-SELECT count(*) FROM Test1
-GO
-
-SET SHOWPLAN_TEXT OFF
-GO</pre>
+> sql
+SET SHOWPLAN_TEXT ON
+> GO
 > 
+> SELECT count(*) FROM Test1
+> GO
+> 
+> SET SHOWPLAN_TEXT OFF
+> GO
+```
+
 > Here is the plan
 > 
 > > |&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))

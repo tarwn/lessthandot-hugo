@@ -3,6 +3,7 @@ title: SQL Server and High Availability
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-11T17:57:31+00:00
+ID: 818
 excerpt: 'Realistically, 100% is unachievable given the nature of computing.  There are needs for a SQL Server and Windows Server to be rebooted at least once a year.  This is to allow for updates on both SQL Server and Windows to be maintained.  So the ranking method we use for measuring high availability is the "nines" scale.  The five nines is a goal that most database administrators and teams set for their standards.  The five nines level is a height of availability that is truly an achievement and one to be proud of.'
 url: /index.php/datamgmt/dbprogramming/sql-server-high-availability/
 views:
@@ -82,9 +83,9 @@ What this type of HA landscape provides is even more stripped down overhead in a
 
 In the diagram above, the landscape consists of two physical database servers. Those database servers a standalone installations and active as each unique entity to the infrastructure. Alias naming can be added to the scenario to ensure the clients access the database servers in the event of a failover. Alias naming can be forgone with the changes in recent years to the ability of connections from applications to allow for a failover specification. 
 
-<pre>Data Source=myServerAddress;Failover Partner=myMirrorServerAddress;Initial Catalog=myDataBase;Integrated Security=True;</pre>
-
-<p align="center">
+```
+Data Source=myServerAddress;Failover Partner=myMirrorServerAddress;Initial Catalog=myDataBase;Integrated Security=True;
+```<p align="center">
   <i>Resource: <a href="http://www.connectionstrings.com/sql-server-2008">ConnectionStrings.com</a></i>
 </p>
 

@@ -3,6 +3,7 @@ title: Setting up Kerberos authentication between SQL Servers
 author: David Forck (thirster42)
 type: post
 date: 2012-03-07T12:58:00+00:00
+ID: 1549
 excerpt: 'Throughout the last couple of years I’ve constantly heard that using SA for linked servers is a horrible idea.  Setting up another SQL account with full rights to a server for the link is just about as bad an idea.  If only there was some way to pass th&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/setting-up-kerberos-authentication-between/
 views:
@@ -41,7 +42,8 @@ SETSPN –A MSSQLSvc/sql1.thirsterdomain.com:1433 thirsterdomainsql1ServiceAccou
   
 The very last thing to do is to set up the linked server on each server. So if we had SQL1 and SQL2 we’d run the following commands:
 
-<pre>--run this on sql2
+sql
+--run this on sql2
 exec sp_addlinkedserver @server='sql1', @srvproduct='', @provider='SQLNCLI',  @provstr='Integrated Security=SSPI'
 go
 exec sp_addlinkedsrvlogin 'sql2','true'
@@ -49,6 +51,6 @@ exec sp_addlinkedsrvlogin 'sql2','true'
 --run this on sql1
 exec sp_addlinkedserver @server='sql2', @srvproduct='', @provider='SQLNCLI',  @provstr='Integrated Security=SSPI'
 go
-exec sp_addlinkedsrvlogin 'sql2','true'</pre>
-
+exec sp_addlinkedsrvlogin 'sql2','true'
+```
 If you have any questions or any issues with getting this working leave a comment.

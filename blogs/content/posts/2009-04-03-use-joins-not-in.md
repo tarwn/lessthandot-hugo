@@ -3,6 +3,7 @@ title: Use Joins, Not IN
 author: Alex Ullrich
 type: post
 date: 2009-04-03T21:52:06+00:00
+ID: 373
 url: /index.php/datamgmt/dbprogramming/use-joins-not-in/
 views:
   - 12229
@@ -19,7 +20,8 @@ Well, the answer is simple. Like training wheels, they are easy. Damn easy. But,
 
 Ok here is a second try at an example. The query in question was meant to get the most recent appointment for each invoice, when there is not really a direct link. So take some sample data:
 
-<pre>--invoices, invoice activities, appointments
+sql
+--invoices, invoice activities, appointments
 
 create table #invoices (id int identity(1,1) primary key clustered, bill_date datetime)
 create table #invoice_activities (id int identity(1,1) primary key clustered, invoice_id int, activity_date datetime, cost smallmoney)
@@ -52,11 +54,13 @@ select GETDATE() - 5
 union all select GETDATE() - 7
 union all select GETDATE() - 10
 union all select GETDATE() - 20
-union all select GETDATE() - 25</pre>
+union all select GETDATE() - 25
+```
 
 and two different ways to approach it:
 
-<pre>select id,
+sql
+select id,
 	(select max(appointment_date)
 		from #appointments
 		where id in (
@@ -79,7 +83,8 @@ left join #activities_appointments aa
 on ia.id = aa.act_id
 left join #appointments a
 on aa.appt_id = a.id
-group by i.id</pre>
+group by i.id
+```
 
 Notice that one uses a correlated subquery and some IN&#8217;s, and the other uses simple joins. For this example, there is not much performance difference (most queries are pretty easy with a small data set) but in the real database there are several million rows in each table, and one of the tables involved takes up about 1/2 of the entire database for the application we support. 
 
@@ -93,5 +98,5 @@ For another reason I dislike IN, check out [Denis&#8217; Old Post][2]
 
  [1]: http://twitter.com/AlexCuse/status/1447655426
  [2]: http://sqlservercode.blogspot.com/2007/04/you-should-never-use-in-in-sql-to-join.html
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

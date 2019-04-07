@@ -3,6 +3,7 @@ title: Procedure expects parameter error from SqlCommand
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-12-27T15:00:42+00:00
+ID: 983
 excerpt: 'I was recently asked for some help with a very strange situation involving SQL Server and a .NET application using SqlCommand calls.  It was thought to be a problem with SQL Server and in particular, sp_execute not being formed correctly.'
 url: /index.php/datamgmt/dbprogramming/sqlcommand-parameter-expected/
 views:
@@ -27,7 +28,9 @@ I was recently asked for some help with a very strange situation involving SQL S
 
 The developer did exactly the right steps in troubleshooting the problem. Once the application was failing due to SQL Server return errors, Profiler was enlisted to determine the exact transaction that was being sent to SQL Server. The transaction was found to be sent without specifying the parameters thought to be formed
 
-<pre>sp_executesql N'dbo.uspGetEmployeeManagers',N'@EmployeeID INT',@EmployeeID=1</pre>
+sql
+sp_executesql N'dbo.uspGetEmployeeManagers',N'@EmployeeID INT',@EmployeeID=1
+```
 
 When running this, the error returned is
 
@@ -37,13 +40,16 @@ When running this, the error returned is
 
 Looking at the statement closer and verifying with BOL sp_executesql syntax, the parameter mapping is not completely set. The proper statement should be called as follows
 
-<pre>exec sp_executesql N'dbo.uspGetEmployeeManagers @EmployeeID',N'@EmployeeID INT',@EmployeeID=1</pre>
+sql
+exec sp_executesql N'dbo.uspGetEmployeeManagers @EmployeeID',N'@EmployeeID INT',@EmployeeID=1
+```
 
 Note the @EmployeeID added to the procedure name based.
 
 In order to recreate the problem entirely, the following code was used.
 
-<pre>string str = ""; 
+```csharp
+string str = ""; 
 SqlConnection conn = new SqlConnection("Data Source=localhost;Initial Catalog=AdventureWorks;Integrated Security=SSPI;"); 
 conn.Open();
 SqlCommand cmd = new SqlCommand("dbo.usp_Deltest", conn); 
@@ -58,7 +64,8 @@ while(reader.Read())
 {
 str = reader[0].ToString();
 }
-reader.Close();</pre>
+reader.Close();
+```
 
 This test application appeared to work as it should and the sp_executesql was sent as expected. After exhausting attempts to force the not well-formed statement on SQL Server, sections of the .NET code itself were looked at closer. In order to test different scenarios, certain lines were commented out to change the way the code was being handled.
 
@@ -68,7 +75,9 @@ Specifically, when the command type setting for stored procedure was commented o
 > 
 > The Microsoft .NET Framework Data Provider for SQL Server does not support the question mark (?) placeholder for passing parameters to a SQL Statement or a stored procedure called with a CommandType of Text. In this case, named parameters must be used. For example: 
 > 
-> <pre>SELECT * FROM Customers WHERE CustomerID = @CustomerID</pre>
+> sql
+SELECT * FROM Customers WHERE CustomerID = @CustomerID
+```
 
 Again, not a very effective section to the exact problem but it does allow us to come to the conclusion that without the CommandType being set, the parameters are essentially ignored in the procedure call from ADO.NET.
 

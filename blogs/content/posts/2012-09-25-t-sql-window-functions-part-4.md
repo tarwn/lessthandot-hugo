@@ -3,6 +3,7 @@ title: 'T-SQL Window Functions – Part 4: Analytic Functions'
 author: Steve Hughes (DataOnWheels)
 type: post
 date: 2012-09-25T14:13:00+00:00
+ID: 1716
 excerpt: 'In the final installment of my series on SQL window functions, we will explore using analytic functions.  Analytic functions were introduced in SQL Server 2012 with the expansion of the OVER clause capabilities.  Analytic functions fall in to two primar&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/t-sql-window-functions-part-4/
 views:

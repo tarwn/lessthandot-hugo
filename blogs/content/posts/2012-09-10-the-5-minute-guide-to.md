@@ -3,6 +3,7 @@ title: The 5 minute guide to get started with Windows 8
 author: SQLArcher
 type: post
 date: 2012-09-10T06:35:00+00:00
+ID: 1718
 excerpt: |
   Windows 8 has been a hot topic of late - especially getting started with it. We already had a post from our very own Denis Gobo (@denisgobo) in how to shut down Windows 8. This led me to write a quick post on some features you may or may not know of.
   

@@ -3,6 +3,7 @@ title: 'Suffer to succeed.  Another SQL Server Import Story'
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-09-30T17:15:41+00:00
+ID: 572
 url: /index.php/datamgmt/datadesign/suffer-to-succeed-another-sql-server-imp/
 views:
   - 4135
@@ -32,7 +33,8 @@ Come on, you know who you are. I&#8217;ll show you mine if you show me yours
 
 So after I failed at my normal import practices and knowing a long day of SSIS would go out of my time bounds, I grabbed a new project (almost left WindowsApplication1 as the name :P) and started thinking and the code came out of me as it once did in my earlier programming career. I wrote that small executable in about an hour. Actually, I wrote a little before dinner and the rest after so not quite an hour. The program even logged each line processed, any errors encountered and any transaction ID found. I went as far as helping my validation process of this import by inserting fully qualified file names, line count in the files and date time values so I could write this nasty to validate against the actual files themselves afterwards&#8230;
 
-<pre>select 
+sql
+select 
 	DateDiff(s,Min(processdate),max(processdate)) [Total Import Time]
 	,count(distinct filename) filecount
 	,count(distinct process_line) linecount
@@ -44,7 +46,8 @@ select
 	,count(distinct filename) filecount
 	,count(distinct process_line) linecount
 from ImportLog (nolock)
-where centerlocation = 2</pre>
+where centerlocation = 2
+```
 
 Really there is a point to my ramblings. Even knowing the results of that query showed these horrible performance results,
   

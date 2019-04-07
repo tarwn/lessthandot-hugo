@@ -3,6 +3,7 @@ title: Programatically create a sharepoint calendar entry
 author: ca8msm
 type: post
 date: 2010-06-02T07:50:19+00:00
+ID: 805
 excerpt: "We recently had a requirement to programatically create an entry in an existing Sharepoint calendar, so here is an example of how we went about doing this.I'll be using Visual Studio 2008 for this, but the process will similar for any other versions you are using. First of all, you will need to add a reference to one of the Sharepoint web references, so right-click your project and select Add Web Reference."
 url: /index.php/webdev/serverprogramming/programatically-create-a-sharepoint-cale/
 views:
@@ -35,13 +36,16 @@ Change the Web Reference Name to &#8220;Sharepoint.Lists&#8221; and click the &#
 
 Next, you&#8217;ll need to open up a new form/page/module (whichever is appropriate to your solution), add a few imports:
 
-<pre>Imports Sharepoint
+```vbnet
+Imports Sharepoint
 Imports System.Text
-Imports System.XML</pre>
+Imports System.XML
+```
 
 and then we&#8217;ll create a function that builds an XML string ready to be passed to the Sharepoint web service:
 
-<pre>Public Function CreateCalendarEntry(ByVal CalendarName As String, ByVal Title As String, ByVal Description As String, ByVal AddToDate As DateTime, ByVal FullDay As Boolean, ByVal LengthInMinutes As Double) As XmlNode
+```vbnet
+Public Function CreateCalendarEntry(ByVal CalendarName As String, ByVal Title As String, ByVal Description As String, ByVal AddToDate As DateTime, ByVal FullDay As Boolean, ByVal LengthInMinutes As Double) As XmlNode
 
         ' Declarations
         Dim sBatch As New StringBuilder
@@ -73,7 +77,8 @@ and then we&#8217;ll create a function that builds an XML string ready to be pas
         ' Pass the XML to the webservice and return the result
         Return listService.UpdateListItems(CalendarName, Batch)
 
-    End Function</pre>
+    End Function
+```
 
 As you can see from the above, we build an XML string based upon:
 
@@ -89,7 +94,9 @@ We then pass the XML to the web service which will then insert the calendar entr
 
 So, as an example call to the service, if you pass in some test data:
 
-<pre>MyTestPage.CreateCalendarEntry("Development Team Calendar", "LessThanDot.com", "This is a sample calendar entry", System.DateTime.Now, False, 30)</pre>
+```vbnet
+MyTestPage.CreateCalendarEntry("Development Team Calendar", "LessThanDot.com", "This is a sample calendar entry", System.DateTime.Now, False, 30)
+```
 
 then you should see an example entry in your calendar:
 

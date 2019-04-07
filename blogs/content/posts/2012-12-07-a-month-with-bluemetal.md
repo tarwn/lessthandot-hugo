@@ -3,6 +3,7 @@ title: A Month with BlueMetal
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-12-07T18:01:00+00:00
+ID: 1834
 excerpt: 'It’s been about a month now since I joined the team at BlueMetal Architects.  Since the consulting series has gone so well and the feedback has been really good, I thought this would be the perfect time to extend that series and get a view into a great&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/a-month-with-bluemetal/
 views:

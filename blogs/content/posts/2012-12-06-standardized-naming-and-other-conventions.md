@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 6: Standardized Naming And Other Conventions'
 author: SQLDenis
 type: post
 date: 2012-12-06T09:36:00+00:00
+ID: 1831
 excerpt: |
   Every company needs to have standards that developers need to follow in order to make maintenance easier down the road. There are several things that you can standardize on:
   
@@ -48,25 +49,30 @@ I also wrote about about this in the using the [ISO-11179 Naming Conventions][2]
   
 Never use Hungarian notation on column names or variables, I have worked with tables that looked like this
 
-<pre>CREATE TABLE tblEmployee(
+sql
+CREATE TABLE tblEmployee(
 strFirstName varchar(255),
 strLastName varchar(255),
 intAge	int,
 dtmBirthDate datetime
 .......
 .......
-)</pre>
-
+)
+```
 If you have intellisense in SSMS, having every table start with tbl is making it pretty useless. Also sometimes the data type of a column will change but of course nobody goes back to rename the column to reflect this because it will break code all over the place
 
 Instead of 
 
-<pre>-- the salary for the employee
-declare @decValue decimal(20,2)</pre>
+sql
+-- the salary for the employee
+declare @decValue decimal(20,2)
+```
 
 It would be better to have something like the following
 
-<pre>declare @EmployeeSalary decimal(20,2)</pre>
+sql
+declare @EmployeeSalary decimal(20,2)
+```
 
 Now I don&#8217;t have to scroll all the way to the top to figure out what is actually stored in this variable, EmployeeSalary pretty much describes what it is and I can also pretty much assume that this will be some amount and not a date as well
 
@@ -84,7 +90,8 @@ Now expand the Stored Procedures folder
 
 The basic stored procedure template looks like this
 
-<pre>-- =============================================
+sql
+-- =============================================
 -- Create basic stored procedure template
 -- =============================================
 
@@ -92,15 +99,15 @@ The basic stored procedure template looks like this
 IF EXISTS (
   SELECT * 
     FROM INFORMATION_SCHEMA.ROUTINES 
-   WHERE SPECIFIC_SCHEMA = N'<Schema_Name, sysname, Schema_Name&gt;'
-     AND SPECIFIC_NAME = N'<Procedure_Name, sysname, Procedure_Name&gt;' 
+   WHERE SPECIFIC_SCHEMA = N'<Schema_Name, sysname, Schema_Name>'
+     AND SPECIFIC_NAME = N'<Procedure_Name, sysname, Procedure_Name>' 
 )
-   DROP PROCEDURE <Schema_Name, sysname, Schema_Name&gt;.<Procedure_Name, sysname, Procedure_Name&gt;
+   DROP PROCEDURE <Schema_Name, sysname, Schema_Name>.<Procedure_Name, sysname, Procedure_Name>
 GO
 
-CREATE PROCEDURE <Schema_Name, sysname, Schema_Name&gt;.<Procedure_Name, sysname, Procedure_Name&gt;
-	<@param1, sysname, @p1&gt; <datatype_for_param1, , int&gt; = <default_value_for_param1, , 0&gt;, 
-	<@param2, sysname, @p2&gt; <datatype_for_param2, , int&gt; = <default_value_for_param2, , 0&gt;
+CREATE PROCEDURE <Schema_Name, sysname, Schema_Name>.<Procedure_Name, sysname, Procedure_Name>
+	<@param1, sysname, @p1> <datatype_for_param1, , int> = <default_value_for_param1, , 0>, 
+	<@param2, sysname, @p2> <datatype_for_param2, , int> = <default_value_for_param2, , 0>
 AS
 	SELECT @p1, @p2
 GO
@@ -108,9 +115,9 @@ GO
 -- =============================================
 -- Example to execute the stored procedure
 -- =============================================
-EXECUTE <Schema_Name, sysname, Schema_Name&gt;.<Procedure_Name, sysname, Procedure_Name&gt; <value_for_param1, , 1&gt;, <value_for_param2, , 2&gt;
-GO</pre>
-
+EXECUTE <Schema_Name, sysname, Schema_Name>.<Procedure_Name, sysname, Procedure_Name> <value_for_param1, , 1>, <value_for_param2, , 2>
+GO
+```
 You can modify this template, give it to every developer and now you all have the same template. What can be done with templates can also be done with snippets, if you do Tools&#8211;>Code Snippets Manager, you can see all the snippets that are available, you can add your own snippets so that all developers will have the same snippets for comment tasks.
 
 Standardize on comments as well

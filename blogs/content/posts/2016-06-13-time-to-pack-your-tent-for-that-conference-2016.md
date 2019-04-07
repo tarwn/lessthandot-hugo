@@ -3,6 +3,7 @@ title: Time to pack your tent for That Conference 2016!
 author: Jes Borland
 type: post
 date: 2016-06-13T21:34:03+00:00
+ID: 4542
 url: /index.php/uncategorized/time-to-pack-your-tent-for-that-conference-2016/
 views:
   - 2355

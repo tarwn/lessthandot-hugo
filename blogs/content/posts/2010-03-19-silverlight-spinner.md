@@ -3,6 +3,7 @@ title: Silverlight Spinner
 author: ThatRickGuy
 type: post
 date: 2010-03-19T14:27:48+00:00
+ID: 731
 excerpt: Every week in my shop we do cross training. Someone brings in something they are working on, some system that people are unfamiliar with, some new technology, basically anything related to any of our jobs as developers and maintainers of applications. Often enough I do presentations on Silverlight and Blend, introducing my coworkers to different tools and options that we have available to us. This blog is a write up of one such training presentation. I give you, the Silverlight Spinner.
 url: /index.php/webdev/webdesigngraphicsstyling/silverlight-spinner/
 views:
@@ -271,7 +272,8 @@ Every week in my shop we do cross training. Someone brings in something they are
     The code for the spinner is really simple:
   </p>
   
-  <pre>			Public Sub New()
+  <pre>
+			Public Sub New()
 				' Required to initialize variables
 				InitializeComponent()
 				StopSpinner

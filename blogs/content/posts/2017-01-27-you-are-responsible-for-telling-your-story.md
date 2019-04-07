@@ -3,6 +3,7 @@ title: You Are Responsible for Telling Your Story
 author: Jes Borland
 type: post
 date: 2017-01-27T13:00:17+00:00
+ID: 5006
 url: /index.php/itprofessionals/you-are-responsible-for-telling-your-story/
 views:
   - 4278

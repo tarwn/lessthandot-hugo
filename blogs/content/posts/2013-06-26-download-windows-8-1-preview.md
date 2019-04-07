@@ -3,6 +3,7 @@ title: Download Windows 8.1 preview right now
 author: SQLDenis
 type: post
 date: 2013-06-26T18:02:00+00:00
+ID: 2122
 excerpt: |
   If you want to try out Windows 8.1 preview right now, you can. Be aware that when you install Windows 8.1 preview that you will have to reinstall all your apps. If you then upgrade to the final RTM version you will have to do this again. 
   

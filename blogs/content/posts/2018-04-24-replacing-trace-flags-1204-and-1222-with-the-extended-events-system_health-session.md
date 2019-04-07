@@ -3,6 +3,7 @@ title: Replacing Trace Flags 1204 and 1222 with the Extended Events system_healt
 author: Jes Borland
 type: post
 date: 2018-04-24T16:51:47+00:00
+ID: 9226
 url: /index.php/datamgmt/dbprogramming/replacing-trace-flags-1204-and-1222-with-the-extended-events-system_health-session/
 views:
   - 4373
@@ -29,7 +30,7 @@ In my instance, I have TF 1222 enabled.
 
 I have simple code to create a deadlock. You can use this as an example in a test environment to replicate it.
 
-<pre><code lang="tsql">/* Create deadlock - query 1 */
+<pre style="padding-left: 30px">/* Create deadlock - query 1 */
 
 USE tempdb;
 GO
@@ -50,7 +51,7 @@ INSERT INTO tbl2 VALUES (111, 2); 
 
 /* Come back here and execute this */
 INSERT INTO tbl2 VALUES (111, 555);
-COMMIT TRAN</code></pre>
+COMMIT TRAN</pre>
 
 When I run the last statement, I receive an error that one of the processes was the deadlock victim.
 

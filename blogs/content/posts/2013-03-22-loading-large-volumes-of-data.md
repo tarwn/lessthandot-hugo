@@ -3,6 +3,7 @@ title: Loading Large Volumes of Data into SQL Azure with SSIS
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-03-22T20:34:00+00:00
+ID: 2050
 excerpt: 'Loading data into SQL Databases (Azure) is fairly simple.  With SQL Server Integration Services (SSIS), the task becomes even more trivial as with many ETL tasks that we’ve done in the past from data source to data source.  Truly speaking, a data source&hellip;'
 url: /index.php/datamgmt/dbprogramming/loading-large-volumes-of-data/
 views:

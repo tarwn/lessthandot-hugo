@@ -3,6 +3,7 @@ title: Professional Looking Applications
 author: chopstik
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 2150
 excerpt: |
   --This is intended to serve as a post for professional looking applications. This means applications that do not contain misspellings, do not have visually distracting appearances, etc.
    

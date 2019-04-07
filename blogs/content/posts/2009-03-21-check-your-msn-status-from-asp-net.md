@@ -3,6 +3,7 @@ title: Check your MSN status from ASP.NET
 author: ca8msm
 type: post
 date: 2009-03-21T18:46:07+00:00
+ID: 360
 url: /index.php/webdev/webdesigngraphicsstyling/check-your-msn-status-from-asp-net/
 views:
   - 13349
@@ -48,13 +49,15 @@ I only ever wanted to show whether I was online or not (I wasn&#8217;t bothered 
 
 To do this, I added a few imports:
 
-<pre>Imports System.Net
+```vbnet
+Imports System.Net
 Imports System.IO
-Imports System.Drawing</pre>
-
+Imports System.Drawing
+```
 Then, I made a fairly simple function to grab the image and check how many colours were in the image (it&#8217;s a greyscale image that is shown if you&#8217;re offline, so a low amount means that is your status):
 
-<pre>Public Function IsOnline() As Boolean
+```vbnet
+Public Function IsOnline() As Boolean
         Dim strURL As String
         Dim wbrq As HttpWebRequest
         Dim wbrs As HttpWebResponse
@@ -69,13 +72,13 @@ Then, I made a fairly simple function to grab the image and check how many colou
         ' Read the returned bitmap object and return the status   
         wbrs = wbrq.GetResponse
         Dim b As New Bitmap(wbrs.GetResponseStream)
-        If b.Palette.Entries.GetLength(0) &gt; 64 Then
+        If b.Palette.Entries.GetLength(0) > 64 Then
             Return True
         Else
             Return False
         End If
-    End Function</pre>
-
+    End Function
+```
 So, as you can see from above, if the number of entries is less than 64, this dictates that I&#8217;m offline. Anything else, and I&#8217;m one of the other status&#8217; which as far as I&#8217;m concerned in this case makes me online and available.
 
 To see it in action, have a look at the &#8220;Live Chat&#8221; link in the footer of [my website][1].

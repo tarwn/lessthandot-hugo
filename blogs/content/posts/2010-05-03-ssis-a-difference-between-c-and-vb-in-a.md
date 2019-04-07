@@ -3,6 +3,7 @@ title: 'SSIS A difference between C# and VB in a script task'
 author: SQLDenis
 type: post
 date: 2010-05-03T23:43:05+00:00
+ID: 779
 url: /index.php/datamgmt/dbprogramming/ssis-a-difference-between-c-and-vb-in-a/
 views:
   - 19080
@@ -22,17 +23,21 @@ I ran into this myself a couple of months ago and decided to write a short blog 
 
 If this is your code in Visual Basic
 
-<pre>Dim FileName As String
+```vb
+Dim FileName As String
  FileName = (Dts.Variables("varFileName").Value).ToString()
 
- MsgBox(FileName)</pre>
+ MsgBox(FileName)
+```
 
 And if you change it to this in C#
 
-<pre>string FileName;
+```csharp
+string FileName;
 FileName = (Dts.Variables("varFileName").Value).ToString();
 
-MessageBox.Show(FileName);</pre>
+MessageBox.Show(FileName);
+```
 
 You will get the following friendly error.
   
@@ -48,12 +53,14 @@ Dts.Variables<span class="MT_green">[</span>&#8220;varFileName&#8221;<span class
 
 Here is the code block in C#
 
-<pre>string FileName;
+```csharp
+string FileName;
 FileName = (Dts.Variables["varFileName"].Value).ToString();
 
-MessageBox.Show(FileName);</pre>
+MessageBox.Show(FileName);
+```
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

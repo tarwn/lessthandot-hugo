@@ -3,6 +3,7 @@ title: List of new programmability features/T-SQL enhancements in SQL Server bes
 author: SQLDenis
 type: post
 date: 2013-06-25T12:46:00+00:00
+ID: 2112
 excerpt: |
   Here is a nice image of all the cool new programmability features and T-SQL enhancements in SQL Server 2014 CTP1, there are no Hekaton (In memory OLTP) features in this list
   

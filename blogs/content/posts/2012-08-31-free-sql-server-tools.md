@@ -3,6 +3,7 @@ title: Free SQL Server Tools
 author: Jes Borland
 type: post
 date: 2012-08-31T14:05:00+00:00
+ID: 1706
 excerpt: |
   I recently bought a new laptop – a Lenovo X230. It has an Intel Core i5-3360M, 16 GB RAM, and an OCZ Vertex 3 SSD. It’s powerful and wonderful. And fast. Very fast.
   In the process of installing my programs, I started thinking about all the software I u&hellip;

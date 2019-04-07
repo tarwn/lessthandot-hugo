@@ -3,6 +3,7 @@ title: 'Virtual Lab: 2008 R2 Domain Controller – Basic Tasks'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-06-17T09:51:38+00:00
+ID: 797
 excerpt: 'In the previous article we covered the creation of a basic Domain Controller for our Virtual Lab. Using this basic domain controller and a basic SQL Server machine, we will look at the creation of a basic user account, creating a service account, and ad&hellip;'
 url: /index.php/sysadmins/security/virtual-lab-2008-r2-domain-controller-ba/
 views:
@@ -16,7 +17,7 @@ categories:
 
 ---
 <div class="acc_header">
-  In the <a href="/index.php/SysAdmins/OS/Windows/2008Server/virtual-lab-creating-a-2008-r2-domain-co" target="_blank" title="Virtual Lab: Creating a 2008 R2 Domain Controller">previous article</a> we covered the creation of a basic Domain Controller for our Virtual Lab. Using this basic domain controller and a basic SQL Server machine, we will look at the creation of a basic user account, creating a service account, and addition of a system to the domain.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
+  In the <a href="/index.php/SysAdmins/OS/Windows/2008Server/virtual-lab-creating-a-2008-r2-domain-co" target="_blank" title="Virtual Lab: Creating a 2008 R2 Domain Controller">previous article</a> we covered the creation of a basic Domain Controller for our Virtual Lab. Using this basic domain controller and a basic SQL Server machine, we will look at the creation of a basic user account, creating a service account, and addition of a system to the domain.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
 </div>
 
 This post picks up where the [Virtual Lab: Creating a 2008 R2 Domain Controller][1] post left off. Now that we have a new domain up and running we need to add some systems and users.
@@ -32,13 +33,13 @@ The first account we are going to create on the new domain is a Domain Administr
 Open the &#8220;Active Directory User and Computers&#8221; screen and explore the default groups that have been created. As this is our first visit, there are no custom folders in our tree.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/0_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/0_config.png" alt="AD Users and Computers" /></a><br /> AD &#8211; Users and Computers
+  <a href="http://tiernok.com/LTDBlog/BasicDC/0_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/0_config.png" alt="AD Users and Computers" /></a><br /> AD &#8211; Users and Computers
 </div>
 
 To add a new user to the default &#8220;Users&#8221; folder we will right-click on the folder, select &#8220;New&#8221;, and select &#8220;User&#8221;. This provides us with a dialog to enter the basic user information.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/1_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/1_config.png" alt="AD Adding a User" /></a><br /> AD &#8211; Adding a User
+  <a href="http://tiernok.com/LTDBlog/BasicDC/1_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/1_config.png" alt="AD Adding a User" /></a><br /> AD &#8211; Adding a User
 </div>
 
 After entering the general user information and pressing next, we are presented with a request for the user&#8217;s password and password options. As we have not yet configured the password policy, the <a href="http://technet.microsoft.com/en-us/library/cc264456.aspx" title="Windows 2008 Password Policy Settings" target="_blank">default policy</a> is still in place.
@@ -46,13 +47,13 @@ After entering the general user information and pressing next, we are presented 
 Completing the wizard gives us a brand new member with basic Domain User permissions.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/2_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/2_config.png" alt="AD Adding a User" /></a><br /> AD &#8211; Adding a User
+  <a href="http://tiernok.com/LTDBlog/BasicDC/2_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/2_config.png" alt="AD Adding a User" /></a><br /> AD &#8211; Adding a User
 </div>
 
 To elevate the permissions of the user across the domain, we will assign them membership to the Domain Admins group. Open the user&#8217;s properties panel (right-clicking the user and select &#8220;Properties&#8221;) and select the &#8220;Member Of&#8221; tab.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/3_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/3_config.png" alt="AD Configuring a User" /></a><br /> AD &#8211; Configuring a User
+  <a href="http://tiernok.com/LTDBlog/BasicDC/3_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/3_config.png" alt="AD Configuring a User" /></a><br /> AD &#8211; Configuring a User
 </div>
 
 <div class="hint">
@@ -62,7 +63,7 @@ To elevate the permissions of the user across the domain, we will assign them me
 Pressing the &#8220;Add&#8221; button brings up the search dialog. Enter &#8220;Domain Admins&#8221; and press &#8220;Check Names&#8221; to quickly find and select the Domain Admins group.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/4_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/4_config.png" alt="AD Configuring a User" /></a><br /> AD &#8211; Configuring a User
+  <a href="http://tiernok.com/LTDBlog/BasicDC/4_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/4_config.png" alt="AD Configuring a User" /></a><br /> AD &#8211; Configuring a User
 </div>
 
 Press Ok twice and the user is now part of the Domain Admins group.
@@ -95,13 +96,13 @@ On the AD DS server open the &#8220;Active Directory User and Computers&#8221; s
 To create the new OU, we right-click the Domain (in my case _avl.local_) and select New -> Organizational Unit. In the dialog we enter the name, in my case &#8220;Service Accounts&#8221;, and press Ok.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/5_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/5_config.png" alt="Creating a new OU" /></a><br /> AD &#8211; Creating a new OU
+  <a href="http://tiernok.com/LTDBlog/BasicDC/5_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/5_config.png" alt="Creating a new OU" /></a><br /> AD &#8211; Creating a new OU
 </div>
 
 Right clicking the new &#8220;Service Accounts&#8221; container and selecting New > User opens the new user dialog.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/6_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/6_config.png" alt="Creating a new Service User" /></a><br /> AD &#8211; Creating a new Service User
+  <a href="http://tiernok.com/LTDBlog/BasicDC/6_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/6_config.png" alt="Creating a new Service User" /></a><br /> AD &#8211; Creating a new Service User
 </div>
 
 As this is the domain account for our SQL Server services, I have chosen the name &#8220;SQL Server Service Account&#8221; and a username of &#8220;sqladmin&#8221;.
@@ -109,7 +110,7 @@ As this is the domain account for our SQL Server services, I have chosen the nam
 On the next step we will also ensure that our password won&#8217;t expire in the middle of the night by verifying the checked defaults and modifying a few.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/7_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/7_config.png" alt="Creating a new Service User" /></a><br /> AD &#8211; Creating a new Service User
+  <a href="http://tiernok.com/LTDBlog/BasicDC/7_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/7_config.png" alt="Creating a new Service User" /></a><br /> AD &#8211; Creating a new Service User
 </div>
 
 After viewing the summary in the final step, we press Ok and create the new user. As the user is not going to have any special, domain-wide permissions we do not need to modify their group memberships or other settings. In fact we are done with the account creation until we bring our database server onto the domain and set up the local permissions for the user on that server.
@@ -127,13 +128,13 @@ The first step will be to change the network properties of the virtual server. W
 On the SQL Server machine we open the network settings for our adapter, select the &#8220;Internet Protocol Version 4 (TCP/IPv4)&#8221; value, and press &#8220;Properties&#8221;. 
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/8_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/8_config.png" alt="SQL Server VM - Network Settings" /></a><br /> SQL Server VM &#8211; Network Settings
+  <a href="http://tiernok.com/LTDBlog/BasicDC/8_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/8_config.png" alt="SQL Server VM - Network Settings" /></a><br /> SQL Server VM &#8211; Network Settings
 </div>
 
 Assign the server a static IP address on the network and point the DNS settings to the DC. At this point it would also be a good idea to check the &#8220;Validate&#8221; button to let Windows test the settings when you press Ok.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/9_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/9_config.png" alt="SQL Server VM - Network Settings" /></a><br /> SQL Server VM &#8211; Network Settings
+  <a href="http://tiernok.com/LTDBlog/BasicDC/9_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/9_config.png" alt="SQL Server VM - Network Settings" /></a><br /> SQL Server VM &#8211; Network Settings
 </div>
 
 In my server the validation resulted in a message indicating that Windows couldn&#8217;t identify the problem, this translates to &#8220;Yes It Works&#8221;.
@@ -147,13 +148,13 @@ Next we will open the System Properties.
 Now we want to press the &#8220;Change&#8221; button on the &#8220;Computer Name&#8221; tab. Select the &#8220;Domain&#8221; radio button and type in the name of the domain from your domain controller.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/10_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/10_config.png" alt="SQL Server VM - Join Domain" /></a><br /> SQL Server VM &#8211; Join Domain
+  <a href="http://tiernok.com/LTDBlog/BasicDC/10_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/10_config.png" alt="SQL Server VM - Join Domain" /></a><br /> SQL Server VM &#8211; Join Domain
 </div>
 
 On pressing &#8220;Ok&#8221; we are asked to enter domain credentials with permission to join the network. 
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/11_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/11_config.png" alt="SQL Server VM - Join Domain" /></a><br /> SQL Server VM &#8211; Join Domain
+  <a href="http://tiernok.com/LTDBlog/BasicDC/11_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/11_config.png" alt="SQL Server VM - Join Domain" /></a><br /> SQL Server VM &#8211; Join Domain
 </div>
 
 Once we enter our credentials and press &#8220;Ok&#8221; the system is accepted to the Domain and provides us with the customary reboot request.
@@ -161,7 +162,7 @@ Once we enter our credentials and press &#8220;Ok&#8221; the system is accepted 
 back on the Domain Controller in the &#8220;Users and Computers&#8221; console, the server has been automatically added under the &#8220;Computers&#8221; container. This being a simple setup, we have not created our own containers to store our servers in, so we will leave it in the default one (for now).
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/12_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/12_config.png" alt="SQL Server VM - Join Domain" /></a><br /> SQL Server VM &#8211; Join Domain
+  <a href="http://tiernok.com/LTDBlog/BasicDC/12_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/12_config.png" alt="SQL Server VM - Join Domain" /></a><br /> SQL Server VM &#8211; Join Domain
 </div>
 
 When the SQL Server has finished rebooting we will log in for the first time with our Domain credentials. In the &#8220;Server Manager&#8221; we now see that the full computer name and Domain entries reflect the name of the domain.
@@ -179,13 +180,13 @@ Currently our service account has no permissions on the server, other than as a 
 From the open &#8220;Server Manager&#8221; console, expand the &#8220;Configuration&#8221; and then &#8220;Local Users and Groups&#8221; containers, selecting the &#8220;Groups&#8221; folder. Right click the &#8220;Administartors&#8221; group on the right side and select &#8220;Properties&#8221;.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/13_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/13_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Service Account
+  <a href="http://tiernok.com/LTDBlog/BasicDC/13_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/13_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Service Account
 </div>
 
 We enter the name of the domain account (in this case AVLsqladmin) and press the &#8220;Check Names&#8221; button to ensure the account could be found.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/14_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/14_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Service Account
+  <a href="http://tiernok.com/LTDBlog/BasicDC/14_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/14_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Service Account
 </div>
 
 Press &#8220;Ok&#8221; and &#8220;Ok&#8221; and we are back in the Server Manager again.
@@ -199,7 +200,7 @@ The last step is to configure our services to use the Domain account, however th
 Open the &#8220;SQL Server Configuration Manager&#8221; from the Start Menu (this would also be a good time to pin it to the taskbar).
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/15_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/15_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Service Account
+  <a href="http://tiernok.com/LTDBlog/BasicDC/15_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/15_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Service Account
 </div>
 
 <div class="hint">
@@ -209,19 +210,19 @@ Open the &#8220;SQL Server Configuration Manager&#8221; from the Start Menu (thi
 In the [Basic SQL Server Virtual Lab post][2] we only installed a few services and configured SQL Server and SQL Agent to use a local account.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/16_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/16_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Server Configuration Manager
+  <a href="http://tiernok.com/LTDBlog/BasicDC/16_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/16_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Server Configuration Manager
 </div>
 
 Right-click on each service and select Properties to open the properties panel. Enter the domain account we created above in the Service Accounts section and it&#8217;s password, then press Apply. The system will then warn us that a restart to the services is required to continue.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/17_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/17_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Changing the Account
+  <a href="http://tiernok.com/LTDBlog/BasicDC/17_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/17_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Changing the Account
 </div>
 
 Follow the same instructions for each of the services and we son have all of our services running under the DOmain account.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/BasicDC/18_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/18_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Finished
+  <a href="http://tiernok.com/LTDBlog/BasicDC/18_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/18_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Finished
 </div>
 
 ## Wrapping Up

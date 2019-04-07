@@ -3,6 +3,7 @@ title: AngularJS vs Knockout – Automated Testing (7 of 8)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-10-15T13:00:00+00:00
+ID: 2178
 excerpt: "I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. As we get into projects that are larger than a few small views and routes, the ability to add automated testing becomes important.  Unit testing p&hellip;"
 url: /index.php/webdev/uidevelopment/angularjs-vs-knockout-automated-testing-7/
 views:
@@ -42,24 +43,26 @@ In the [previous post][8], we had sampleApp and sampleServices modules that we m
 
 Relevant sections of [SpecRunner.html][6]
 
-<pre><html&gt;
-<head&gt;
-    <!-- ... --&gt;
+```html
+<html>
+<head>
+    <!-- ... -->
 
-    <!-- Angular files libraries --&gt;
-    <script src="Angular/js/lib/angular-1.0.8.min.js"&gt;</script&gt;
-    <script src="Angular/js/lib/angular-mocks.js"&gt;</script&gt;
-    <!-- Angular source files --&gt;
-    <script src="Angular/js/UnitTesting/sampleApp.js"&gt;</script&gt;
-    <script src="Angular/js/UnitTesting/sampleServices.js"&gt;</script&gt;
-    <!-- Angular specs --&gt;
-    <script src="Angular/UnitTestingSpecs.js"&gt;</script&gt;
+    <!-- Angular files libraries -->
+    <script src="Angular/js/lib/angular-1.0.8.min.js"></script>
+    <script src="Angular/js/lib/angular-mocks.js"></script>
+    <!-- Angular source files -->
+    <script src="Angular/js/UnitTesting/sampleApp.js"></script>
+    <script src="Angular/js/UnitTesting/sampleServices.js"></script>
+    <!-- Angular specs -->
+    <script src="Angular/UnitTestingSpecs.js"></script>
 
-    <!-- ... --&gt;</pre>
-
+    <!-- ... -->
+```
 The specs file then handles mocking the service for the controller and defines the tests I want to run:
 
-<pre>//  borrowed heavily from http://www.benlesh.com/2013/05/angularjs-unit-testing-controllers.html
+```javascript
+//  borrowed heavily from http://www.benlesh.com/2013/05/angularjs-unit-testing-controllers.html
 describe("Angular", function () {
     describe("Testing the ModuleDIController", function () {
         var $scope = null;
@@ -80,8 +83,8 @@ describe("Angular", function () {
 
         // ... tests here ...
     });
-});</pre>
-
+});
+```
 If you&#8217;re going to work with AngularJS, read everything on [Ben Lesh&#8217;s][9] ([@BenLesh][10]) site. It helped me tremendously for both this post and the custom validation section of the validation post. 
 
 The spec file starts off by defining both a mock service and the expected response it is going to return. Before each test I load a fresh sampleApp module, ensuring a clean starting point. Then I use [inject][11] to create an $injector that will be used for resolving references in my tests, which resolves the ModuleDIController by passing in the provided scope and my mock service.
@@ -90,15 +93,16 @@ That last part works, but honestly I only sort of understand what it&#8217;s doi
 
 The tests themselves are pretty straightforward at that point:
 
-<pre>it('should start with an empty list of items', function () {
+```javascript
+it('should start with an empty list of items', function () {
     expect($scope.listOfItems).toEqual([]);
 });
 
 it('should populate list from service when fillItems() is called', function () {
     $scope.fillItems();
     expect($scope.listOfItems).toEqual(expectedServiceResponse);
-});</pre>
-
+});
+```
 And there we have it, verification that our controller uses the service properly to fill it&#8217;s local collection.
 
 This may not be that complicated a test, but once we have the basic components together, extending it to more complex cases is pretty straightforward.
@@ -113,26 +117,28 @@ In the [previous post][8], we had sampleApp/ModuleDIModel and sampleServices/Lis
 
 Relevant sections of [SpecRunner.html][6]
 
-<pre><html&gt;
-<head&gt;
-    <!-- ... --&gt;
+```html
+<html>
+<head>
+    <!-- ... -->
 
-    <!-- Knockout + RequireJS files --&gt;
-    <script src="Knockout/js/lib/knockout-2.3.0.min.js"&gt;</script&gt;
-    <script src="Knockout/js/lib/require-2.1.8.min.js"&gt;</script&gt;
-    <!-- Knockout specs --&gt;    
-    <script src="Knockout/UnitTestingSpecs.js"&gt;</script&gt;
+    <!-- Knockout + RequireJS files -->
+    <script src="Knockout/js/lib/knockout-2.3.0.min.js"></script>
+    <script src="Knockout/js/lib/require-2.1.8.min.js"></script>
+    <!-- Knockout specs -->    
+    <script src="Knockout/UnitTestingSpecs.js"></script>
 
-    <!-- ... --&gt;
-  </script&gt;
-</head&gt;
-<body&gt;
-</body&gt;
-</html&gt;</pre>
-
+    <!-- ... -->
+  </script>
+</head>
+<body>
+</body>
+</html>
+```
 Like the AngularJS example, the specs file is responsible for supplying the mocks and defining the tests:
 
-<pre>require.config({
+```javascript
+require.config({
     baseUrl: "Knockout/js/UnitTesting",
     paths: {
         "Squire": "../../js/lib/Squire"
@@ -163,21 +169,22 @@ describe("Knockout", function () {
 
         // ... tests here
     });
-});</pre>
-
+});
+```
 I start out by configuring the base URL for the file that will be under test and the path for Squire. Like the AngularJS example, the first real step is defining the mock service and it&#8217;s expected response. Before each test, I then use Squire to mock the ListOfItemsService and load a fresh copy of the Model I am putting under test to ensure each test starts with a clean slate.
 
 Like before, the tests themselves are pretty straightforward at that point:
 
-<pre>it("should start with an empty list of items", function (done) {
+```javascript
+it("should start with an empty list of items", function (done) {
     expect(viewmodel.listOfItems()).toEqual([]);
 });
 
 it("should populate list from service when fillItems() is called", function (done) {
     viewmodel.fillItems();
     expect(viewmodel.listOfItems()).toEqual(expectedServiceResponse);
-});</pre>
-
+});
+```
 With the exception of having a viewmodel variable instead of a $scope variable and evaluating the listOfItems value with ()&#8217;s, the tests are almost identical to AngularJS&#8217;s.
 
 As I mentioned at the beginning, the documentation was sparse, so for once the Knockout/RequireJS side of things took more twiddling and frustration to get working. Now that I do have the tests working, though, I think it&#8217;s given me enough of a grasp of the mechanism that I could handle more complex test cases just as easily as I felt I could with AngularJS.

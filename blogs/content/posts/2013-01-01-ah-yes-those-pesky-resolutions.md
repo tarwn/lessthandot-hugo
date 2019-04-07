@@ -3,6 +3,7 @@ title: Ah yes, those pesky resolutions
 author: SQLDenis
 type: post
 date: 2013-01-01T10:31:00+00:00
+ID: 1892
 excerpt: My resolutions for the coming year
 url: /index.php/itprofessionals/professionaldevelopment/ah-yes-those-pesky-resolutions/
 views:

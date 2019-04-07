@@ -3,6 +3,7 @@ title: User Group Success – Paying It Forward
 author: Paul Timmerman
 type: post
 date: 2014-01-08T23:18:00+00:00
+ID: 2219
 excerpt: 'In 2012, as my tenure on the PASSMN Board of Directors began, it quickly became apparent to me that "our little club" was quite fortunate. It was rare for us to have difficulty finding speakers or sponsors and when it came to SQL Saturday, the generosit&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/we-re-taking-passmn-on-the-road/
 views:

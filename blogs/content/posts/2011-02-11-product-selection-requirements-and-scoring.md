@@ -3,6 +3,7 @@ title: Product Selection, Requirements and Scoring
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-02-11T11:11:00+00:00
+ID: 1018
 excerpt: "Once we have the purpose of the product selection defined, it's time to move on to defining the characteristics we need or want from our product. Up until this point in the process we have talked to people one-on-one or in small groups. Now that we have identified the core need or needs the product must fulfill, we are ready to expand that into the list of requirements and features by incorporating input from the wider group of affected people. We can use brainstorming to engage people as well as help them voice their expectations and evaluate the relative priorities of those expectations."
 url: /index.php/itprofessionals/projectmanagement/product-selection-requirements-and-scoring/
 views:
@@ -43,7 +44,7 @@ Once we have the purpose of the product selection defined, it&#8217;s time to mo
 ## Step 2: Requirements and Features
 
 <div style="margin: 1.5em .5em .5em 0; padding: .5em; color: #666666; text-align: center; float: left;">
-  <img src="http://www.tiernok.com/LTDBlog/ProductSelection/List.png" title="Picture of list" style="max-width: 80px" />
+  <img src="http://tiernok.com/LTDBlog/ProductSelection/List.png" title="Picture of list" style="max-width: 80px" />
 </div>
 
 We are going to bring everyone together in a meeting or set of meetings. The end goal is a prioritized list of requirements and features that we can use to evaluate potential products. This prioritized list will simplify the comparison effort and will give us an opportunity to enlist the aid of the people defining requirements to help us prioritize them and determine the line between nice-to-haves and must-haves. In addition it brings together the people with a vested interest in the production selection, engages them in the process, and provides us an opportunity to explain our process to them. This should help to bring up objections and additions sooner, when they can still be incorporated into the process.
@@ -55,7 +56,7 @@ In one step we are managing expectations from the beginning of the process, enga
 Prior to holding the meeting, send everyone a brief outline of the project and the needs that were identified in the prior step. Request that people spend 5-10 minutes brainstorming a list of features or ideas they have about the product and bring that to the meeting. It&#8217;s unlikely that everyone will actually create a list, but it will help people get in the right mind-frame and the 2 or 3 people that do bring lists will help get the brainstorming session flowing. In the event that additional needs are brought forward, we will need to evaluate them and determine if they should be added to the list of core needs for the product selection process or if they reflect requirements or potentially an unrelated matter.
 
 <div style="margin: 1.5em .5em .5em 0; padding: .5em; color: #666666; text-align: center; float: right;">
-  <img src="http://www.tiernok.com/LTDBlog/ProductSelection/clock.png" title="Picture of list" />
+  <img src="http://tiernok.com/LTDBlog/ProductSelection/clock.png" title="Picture of list" />
 </div>
 
 We want to prepare for this meeting. Having a high-level plan doesn&#8217;t mean we have to necessarily stick to it, but it will help us think through what we need to achieve from the meeting as well as provide a tool to help keep the meeting on track. Some highlights of the meeting (or set of meetings) should include:
@@ -93,7 +94,7 @@ An effective meeting is one in which everyone walks away satisfied that the time
 The brainstorming phase is critical because it will provide us with the last raw ingredients we need to create our evaluation checklist. Based on personal experience I have found that using informal materials seems to help people get into the flow quicker. A whiteboard or pad of paper on an easel seems less permanent as a decision-making surface and can help people feel more comfortable about speaking out and making additions.
 
 <div style="margin: 0em .5em .5em 0; padding: .5em; color: #666666; text-align: center; float: left;">
-  <img src="http://www.tiernok.com/LTDBlog/ProductSelection/words.png" title="Brainstorming picture" />
+  <img src="http://tiernok.com/LTDBlog/ProductSelection/words.png" title="Brainstorming picture" />
 </div>
 
 Just as we did when determining the needs the product will fulfill, we are going to have some suggestions that need further analysis. Whether they are shared due to a vested interest in specific products or as an attempt to work some extra responsibilities in, we still want to dig into these suggestions and try to find some root criteria. Even if the entire audience is against including the items, this is a brainstorming session and we include all input, even unpopular items. 
@@ -107,7 +108,7 @@ Up until now we have hopefully been able to manage the groups emotions fairly we
 One of the most effective selection tools I have used is a [Cause and Effect Matrix][3]. Often used as a tool to prioritize risks during a [Failure Modes Effect Analysis][4], a Cause and Effect Matrix helps us score options against a range of criteria that each have a relative weight or priority. For product selection this helps produce a scorecard we can use apply to each product that shows which products score best against the criteria selected by the people in this room.
 
 <div style="margin: .5em .5em .5em 0; padding: .5em; color: #666666; text-align: center; float: left;">
-  <img src="http://www.tiernok.com/LTDBlog/ProductSelection/scorecard.png" title="Scorecard picture" />
+  <img src="http://tiernok.com/LTDBlog/ProductSelection/scorecard.png" title="Scorecard picture" />
 </div>
 
 To use this tool we will need to go through the criteria the group has brainstormed and assign a relative score to each one. Whether we have the group do this together or return to their desks and submit an individual prioritization is a matter of taste. Working together in the room provides the advantage that people can explain what the criteria meant when they suggested, attempt to influence others, and potentially vote to remove criteria altogether. The potential downside is that we are inviting emotional discourse and there could be some hurt feelings (only a problem if it gets out of hand). Asking people to vote on relative weights or averaging the priority they assign individually should give a weighting to each individual criterion and allow us to build a scorecard.

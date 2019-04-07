@@ -3,6 +3,7 @@ title: SQL Server 2008 Release Candidate 0 Available To The General Public
 author: SQLDenis
 type: post
 date: 2008-06-10T17:22:05+00:00
+ID: 52
 url: /index.php/datamgmt/datadesign/sql-server-2008-release-candidate-0-avai-1/
 views:
   - 2686

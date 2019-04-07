@@ -3,6 +3,7 @@ title: Demystifying Power BI – slidedeck
 author: Koen Verbeeck
 type: post
 date: 2015-06-16T10:15:31+00:00
+ID: 3418
 url: /index.php/uncategorized/demystifying-power-bi-slidedeck/
 views:
   - 2654

@@ -3,6 +3,7 @@ title: SQL Server 2008 R2 Editions Pricing Announced
 author: SQLDenis
 type: post
 date: 2009-11-06T12:17:30+00:00
+ID: 612
 url: /index.php/datamgmt/datadesign/sql-server-2008-r2-editions-pricing-anno/
 views:
   - 11878
@@ -175,5 +176,5 @@ You can find all that stuff on this page here: http://www.microsoft.com/sqlserve
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

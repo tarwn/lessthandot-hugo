@@ -3,6 +3,7 @@ title: 'Knowing SQL Server and where it lives – T-SQL Tuesday #028'
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-03-13T15:08:00+00:00
+ID: 1561
 excerpt: 'This month my good friend and newly crowned Microsoft Certified MASTER BLASTER, Argenis Fernandez (T | B) is hosting the T-SQL Tuesday.  Argenis as selected a pretty cool topic this month.  Specializing and how you feel about it as well as if you do or&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/knowing-sql-server-and-where/
 views:

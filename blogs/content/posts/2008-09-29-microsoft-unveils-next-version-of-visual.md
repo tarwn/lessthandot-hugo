@@ -3,6 +3,7 @@ title: 'Microsoft Unveils Next Version of Visual Studio and .NET Framework: Visu
 author: SQLDenis
 type: post
 date: 2008-09-29T21:42:18+00:00
+ID: 154
 excerpt: |
   Microsoft Unveils Next Version of Visual Studio and .NET Framework: Visual Studio 2010 and the .NET Framework 4.0.
   

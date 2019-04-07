@@ -3,6 +3,7 @@ title: T-SQL To find Out If An Index Is Clustered Or Non Clustered
 author: SQLDenis
 type: post
 date: 2009-10-06T16:41:12+00:00
+ID: 576
 url: /index.php/datamgmt/datadesign/t-sql-to-find-out-if-an-index-is-cluster/
 views:
   - 10516
@@ -31,7 +32,8 @@ To see how it works we will create a table with one clustered and one non cluste
   
 Here is the code for that
 
-<pre>USE tempdb
+sql
+USE tempdb
 go
  
 CREATE TABLE Test (id INT, col1 VARCHAR(40), col2 INT, col3 INT)
@@ -43,18 +45,19 @@ go
  
  
 CREATE CLUSTERED  INDEX ix_test_clust ON test (id ASC, col1 DESC)
-go</pre>
-
+go
+```
 **INDEXPROPERTY**
   
 To use INDEXPROPERTY you need to know the table ID, the name of the index and use IsClustered for the property. To get the table id, you use the OBJECT_ID function with the table name passed in
   
 So for the index ix\_test on table Test we will use INDEXPROPERTY(OBJECT\_ID(&#8216;Test&#8217;), &#8216;ix_test&#8217;,&#8217;IsClustered&#8217;)
 
-<pre>SELECT 'ix_test',INDEXPROPERTY(OBJECT_ID('Test'), 'ix_test','IsClustered')
+sql
+SELECT 'ix_test',INDEXPROPERTY(OBJECT_ID('Test'), 'ix_test','IsClustered')
 union all
-SELECT 'ix_test_clust',INDEXPROPERTY(OBJECT_ID('Test'), 'ix_test_clust', 'IsClustered')</pre>
-
+SELECT 'ix_test_clust',INDEXPROPERTY(OBJECT_ID('Test'), 'ix_test_clust', 'IsClustered')
+```
 
 
 <pre>Output
@@ -82,9 +85,11 @@ _0 = Heap
   
 >1 = Nonclustered index_
 
-<pre>select name,case indid when 1 then 'Clustered' else 'Non Clustered' end as TypeOfIndex
+sql
+select name,case indid when 1 then 'Clustered' else 'Non Clustered' end as TypeOfIndex
 from sysindexes --or sys.sysindexes on sql 2005 and up
-where name in( 'ix_test', 'ix_test_clust')</pre>
+where name in( 'ix_test', 'ix_test_clust')
+```
 
 
 
@@ -96,9 +101,11 @@ ix_test	Non Clustered</pre>
 
 And of course you can combine the two methods
 
-<pre>SELECT name,INDEXPROPERTY(id, name,'IsClustered')
+sql
+SELECT name,INDEXPROPERTY(id, name,'IsClustered')
 from sysindexes 
-where name in( 'ix_test', 'ix_test_clust')</pre>
+where name in( 'ix_test', 'ix_test_clust')
+```
 
 
 
@@ -113,5 +120,5 @@ As you can see it is pretty easy to determine if an index is a clustered index o
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

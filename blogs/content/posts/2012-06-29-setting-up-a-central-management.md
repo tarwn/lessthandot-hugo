@@ -3,6 +3,7 @@ title: Setting up a Central Management Server
 author: Kevin Conan
 type: post
 date: 2012-06-29T11:32:00+00:00
+ID: 1661
 excerpt: |
   This is going to be the start of a series on managing multiple SQL Instances.  Up to now, I've been mostly writing about Idera's Diagnostic Manager which is great for this purpose, but like anything else, multiple tools are needed.
   

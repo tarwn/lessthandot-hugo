@@ -3,6 +3,7 @@ title: Validating Architecture with Visual Studio 2010
 author: Alex Ullrich
 type: post
 date: 2010-01-29T11:11:00+00:00
+ID: 689
 excerpt: "I went to a local MS launch event for Visual Studio today, mainly to see what was new with Team Foundation Server, but what really impressed me was some of the new architecture tools they've added.  I admittedly haven't read too much about this before t&hellip;"
 url: /index.php/architect/designingsoftware/validating-architecture-with-visual-stud-2010/
 views:

@@ -3,6 +3,7 @@ title: Calculating number of workdays between 2 dates
 author: Ramireddy
 type: post
 date: 2010-02-25T18:09:17+00:00
+ID: 712
 url: /index.php/datamgmt/dbprogramming/calculating-number-of-workdays-between-2/
 views:
   - 25782
@@ -25,7 +26,8 @@ Today I saw someone asked a question in MSDN t-sql forums [&#8220;How to calcula
              
 This is a good and methodical approach. In this approach, the database has a table that has all the dates that we can represent using sql server. The following script will insert all the dates between 1/1/1753 (minimum date sql can recognize in sql) and 12/31/9999 (maximum date sql can recognize in sql).
 
-<pre>create table AuxCalendarDates
+sql
+create table AuxCalendarDates
 (
 	CalDate datetime
 )
@@ -40,16 +42,19 @@ Numbers as
 	select row_number() over (order by (select null)) as Number from N N,N N1,N N2,N N3,N N4,N N5,N N6
 )
 insert into AuxCalendarDates
-select dateadd(day,Number - 1,'1/1/1753') from Numbers where Number <= 3012154</pre>
+select dateadd(day,Number - 1,'1/1/1753') from Numbers where Number <= 3012154
 
+```
 3012154 is the Total number of days sql can recognize.
 
 Once, calendar table created, Solving this is fairly straight forward. It needs to satisfy the following 2 conditions.
 
 1. The Calendar date should between the 2 given dates. using a where clause like below will do the trick.
 
-<pre>where caldate between @startdate and @enddate 
-   </pre>
+sql
+where caldate between @startdate and @enddate 
+   
+```
 
 2. date should be between Monday to Friday
        
@@ -59,28 +64,32 @@ But unfortunately this function depends on the @@datefirst settings.
   
 If we change the datefirst value, we will get an different week day. run the below code in SSMS. It will give different week numbers for different datefirst values.
 
-<pre>set datefirst 7
+sql
+set datefirst 7
 select datepart(dw,getdate())
 set datefirst 5
-select datepart(dw,getdate())</pre>
-
+select datepart(dw,getdate())
+```
 There is another way to find a weekday,
   
 Calculating the number of days since the beginning and calculating the remainder by dividing with 7.
 
-<pre>select datediff(dd,0,getdate())%7</pre>
-
+sql
+select datediff(dd,0,getdate())%7
+```
 The above expression will give 0 for Monday, 1 for Tuesday, 2 for Wednesday , 3 for Thursday ,4 for Friday , 5 for Saturday and 6 for Sunday.
 
 The above expression is also independent of datefirst settings.
 
 Now using the above expression, to check the weekday, 
 
-<pre>datediff(dd,0,Caldate)%7 between 0 and 4</pre>
-
+sql
+datediff(dd,0,Caldate)%7 between 0 and 4
+```
 finally, keeping it in a function, will make this re-usable.
 
-<pre>create function [dbo].[fn_NoofWorkdaysBetweenDates_Table]
+sql
+create function [dbo].[fn_NoofWorkdaysBetweenDates_Table]
 (
 	@StartDate datetime,
 	@EndDate datetime
@@ -93,8 +102,9 @@ RETURN
 	select count(*) from AuxCalendarDates where CalDate between @startdate and @enddate
 	and datediff(dd,0,Caldate)%7 between 0 and 4
 );
-END</pre>
+END
 
+```
 Now i will explain the second method, which is unorthodox. This Method depends on the pattern of week day of start date and week day of end date, and based on that finding the condition.
 
 For example, take 2 dates Feb1st2010,Feb8th2010. Feb1st 2010 is monday and Feb8th 2010 is monday. so the no of working days = 1 + ( 5 * 1) = 6 days..
@@ -147,7 +157,8 @@ Now, to use this table in query, concatenate these all columns into single row, 
   
 so, final implementation of this function will be
 
-<pre>Create function [dbo].[fn_NoofWorkdaysBetweenDates]
+sql
+Create function [dbo].[fn_NoofWorkdaysBetweenDates]
 (
 	@StartDate datetime,
 	@EndDate datetime
@@ -162,6 +173,8 @@ RETURN
 	select 3,'3451222' union all select 4,'2344111' union all select 5,'1234500' union all select 6,'1234550')t
 	where StartWk = datediff(dd,0,@startdate)%7
 );
-END</pre>
+END
+
+```
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/479b2888-f228-4154-9595-4c9e9b7a5523

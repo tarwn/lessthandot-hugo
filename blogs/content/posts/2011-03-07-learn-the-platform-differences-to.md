@@ -3,6 +3,7 @@ title: Learn the platform differences to be more effective
 author: SQLDenis
 type: post
 date: 2011-03-07T21:03:00+00:00
+ID: 1070
 excerpt: 'Something that you are used to doing on one platform is not always the best thing on another platform. Compacting databases might be good in Access, shrinking databases is not so good in SQL Server. Looping in SQL Server instead of using a SET based sol&hellip;'
 url: /index.php/datamgmt/datadesign/learn-the-platform-differences-to/
 views:
@@ -39,16 +40,22 @@ Let&#8217;s take a look
 
 If I have this table
 
-<pre>CREATE TABLE Test(SomeColumn NVARCHAR(MAX), ID INT, SomeDate DATETIME)
-GO</pre>
+sql
+CREATE TABLE Test(SomeColumn NVARCHAR(MAX), ID INT, SomeDate DATETIME)
+GO
+```
 
 I add 1 row
 
-<pre>INSERT Test VALUES(REPLICATE('T',200),1,GETDATE())</pre>
+sql
+INSERT Test VALUES(REPLICATE('T',200),1,GETDATE())
+```
 
 Now I want to create this index
 
-<pre>CREATE INDEX ix_test ON Test(ID,SomeColumn)</pre>
+sql
+CREATE INDEX ix_test ON Test(ID,SomeColumn)
+```
 
 Here is the error that is raised
 
@@ -58,34 +65,46 @@ Here is the error that is raised
 
 Now, let&#8217;s change the column to nvarchar(200). You can do this by using the ALTER TABLE&#8230;ALTER COLUMN syntax. Here is what it looks like for this table
 
-<pre>ALTER TABLE Test ALTER COLUMN SomeColumn NVARCHAR(200)
-GO</pre>
+sql
+ALTER TABLE Test ALTER COLUMN SomeColumn NVARCHAR(200)
+GO
+```
 
 Now we have no problem creating this index
 
-<pre>CREATE INDEX ix_test ON Test(ID,SomeColumn)</pre>
+sql
+CREATE INDEX ix_test ON Test(ID,SomeColumn)
+```
 
 You can verify that the select works
 
-<pre>SELECT * FROM Test</pre>
+sql
+SELECT * FROM Test
+```
 
 Now, let&#8217;s drop the table and take a look at what happens when the length of the data is more than the column size we want
   
 Drop the table
 
-<pre>DROP TABLE test</pre>
+sql
+DROP TABLE test
+```
 
 create the table again with one row, this time we have 300 bytes in the column
 
-<pre>CREATE TABLE Test(SomeColumn NVARCHAR(MAX), ID INT, SomeDate DATETIME)
+sql
+CREATE TABLE Test(SomeColumn NVARCHAR(MAX), ID INT, SomeDate DATETIME)
 GO
 
-INSERT Test VALUES(REPLICATE('T',300),1,GETDATE())</pre>
+INSERT Test VALUES(REPLICATE('T',300),1,GETDATE())
+```
 
 Now when we try to make in NVARCHAR(200)
 
-<pre>ALTER TABLE Test ALTER COLUMN SomeColumn NVARCHAR(200)
-GO</pre>
+sql
+ALTER TABLE Test ALTER COLUMN SomeColumn NVARCHAR(200)
+GO
+```
 
 We get the infamous error _String or binary data would be truncated._
 
@@ -100,5 +119,5 @@ On the stackoverflow question I gave an additional answer, you can also select i
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://stackoverflow.com/questions/5225923/sql-server-equivalent-of-mysql-dump-to-produce-insert-statements-for-all-data-in
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

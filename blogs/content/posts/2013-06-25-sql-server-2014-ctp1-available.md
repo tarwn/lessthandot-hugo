@@ -3,6 +3,7 @@ title: SQL Server 2014 CTP1 Available for download
 author: SQLDenis
 type: post
 date: 2013-06-25T07:58:00+00:00
+ID: 2110
 excerpt: |
   Microsoft has made available for download CTP1 of SQl Server 2014
   

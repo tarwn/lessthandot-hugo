@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 10: SQL Server Maintenance'
 author: SQLDenis
 type: post
 date: 2012-12-10T14:50:00+00:00
+ID: 1840
 excerpt: |
   This is day ten of the SQL Advent 2012 series of blog posts. Today we are going to look at SQL Server maintenance
   
@@ -71,12 +72,14 @@ Paul Randal who worked on DBCC CHECKDB has a whole bunch of blog posts about DBC
 
 Running out of space on a drive is not fun stuff, suddenly you can&#8217;t insert any more data into your tables because no new pages can be allocated. If you have tools in your shop like cacti then this is probably already monitored. If you don&#8217;t have any tools then either get a tool or roll your own. Here is how you can get the free space fo the drives with T-SQL
 
-<pre>CREATE TABLE #FixedDrives(Drive CHAR(1),MBFree INT)
+sql
+CREATE TABLE #FixedDrives(Drive CHAR(1),MBFree INT)
 
 INSERT #FixedDrives
 EXEC xp_fixeddrives
 
-SELECT * FROM #FixedDrives</pre>
+SELECT * FROM #FixedDrives
+```
 
 Here is the output for one of my servers
 
@@ -92,7 +95,8 @@ V	212075-- User databases </pre>
 
 Here is a simple way of using T-SQL to create a SQL Agent job that runs every 10 minutes and will send an email if you go below the threshold that you specified. This code is very simple and is just to show you that you can do this in T-SQL. You can make it more dynamic/configurable by not hardcoding the drives or thresholds
 
-<pre>DECLARE @MBFreeD INT
+sql
+DECLARE @MBFreeD INT
 DECLARE @MBFreeE INT
 CREATE TABLE #FixedDrives(Drive CHAR(1),MBFree INT)
 
@@ -118,8 +122,8 @@ BEGIN
 		DECLARE @p_body AS NVARCHAR(MAX), @p_subject AS NVARCHAR(MAX), @p_profile_name AS NVARCHAR(MAX)
 
 		SET @p_subject = @@SERVERNAME + N'  Drive Space is running low'
-		SET @p_body = ' Drive Space is running low <br&gt;<br&gt;<br&gt;' + CHAR(13) + CHAR(10) + 'Drive D has ' 
-		+ CONVERT(VARCHAR(20),@MBFreeD) + ' MB left <br&gt;' + CHAR(13) + CHAR(10) + 'Drive E has ' 
+		SET @p_body = ' Drive Space is running low <br><br><br>' + CHAR(13) + CHAR(10) + 'Drive D has ' 
+		+ CONVERT(VARCHAR(20),@MBFreeD) + ' MB left <br>' + CHAR(13) + CHAR(10) + 'Drive E has ' 
 		+ CONVERT(VARCHAR(20),@MBFreeE) + ' MB left'
 
 		EXEC msdb.dbo.sp_send_dbmail
@@ -127,13 +131,14 @@ BEGIN
 		   @body = @p_body,
 		   @body_format = 'HTML',
 		   @subject = @p_subject
-END</pre>
-
+END
+```
 ## Make sure that you have enough space left for the filegroups
 
 In the [Sizing database files][11] I talked about the importance of sizing database files. Just like you can run out of hard drive space, you can also fill up a file used by SQL Server. here is query that will tell you how big the file is, how much space is use and how much free space is left. You can use a query like this to alert you before you run out of space
 
-<pre>SELECT
+sql
+SELECT
 	a.FILEID,
 	[FILE_SIZE_MB] = 
 		CONVERT(DECIMAL(12,2),ROUND(a.size/128.000,2)),
@@ -144,7 +149,8 @@ In the [Sizing database files][11] I talked about the importance of sizing datab
 	NAME = LEFT(a.NAME,35),
 	FILENAME = LEFT(a.FILENAME,60)
 FROM
-	dbo.sysfiles a</pre>
+	dbo.sysfiles a
+```
 
 ## Have the latest scripts of all your objects
 

@@ -3,6 +3,7 @@ title: Kaxaml a lightweight XAML editor
 author: SQLDenis
 type: post
 date: 2009-02-03T17:37:08+00:00
+ID: 312
 url: /index.php/webdev/webdesigngraphicsstyling/kaxaml-a-lightweight-xaml-editor/
 views:
   - 7785

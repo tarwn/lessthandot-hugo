@@ -3,6 +3,7 @@ title: 'Meet LaunchReady: A SaaS Product That Almost Was'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2018-02-27T13:36:46+00:00
+ID: 8954
 url: /index.php/uncategorized/meet-launchready-a-saas-product-that-almost-was/
 views:
   - 2966

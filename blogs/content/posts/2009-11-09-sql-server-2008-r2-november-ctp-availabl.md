@@ -3,6 +3,7 @@ title: SQL Server 2008 R2 November CTP Available For Download
 author: SQLDenis
 type: post
 date: 2009-11-09T18:48:13+00:00
+ID: 616
 url: /index.php/datamgmt/datadesign/sql-server-2008-r2-november-ctp-availabl/
 views:
   - 3625
@@ -44,5 +45,5 @@ Enhancements to the capabilities delivered in the August CTP:
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/sql-server-2008-r2-editions-pricing-anno
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

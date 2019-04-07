@@ -3,6 +3,7 @@ title: 'SQL Saturday #75, Columbus OH: I Came, I Saw, I Ran'
 author: Jes Borland
 type: post
 date: 2011-06-14T01:10:00+00:00
+ID: 1220
 excerpt: 'Another very fun, very successful SQL Saturday has been written down in the history books. The Columbus SQL Server User Group hosted SQL Saturday #75 on Saturday, June 11, 2011.'
 url: /index.php/datamgmt/dbprogramming/sql-saturday-75-columbus-oh/
 views:

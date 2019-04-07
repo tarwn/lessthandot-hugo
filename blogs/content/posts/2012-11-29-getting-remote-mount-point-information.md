@@ -3,6 +3,7 @@ title: Getting remote Mount Point information with PowerShell
 author: Axel Achten (axel8s)
 type: post
 date: 2012-11-29T11:27:00+00:00
+ID: 1810
 excerpt: |
   In a previous post I showed how to get remote disk information with PowerShell. The script works nice untill you execute it on a server with Mount Points. When executing the following script on a server with Mount Points:
   
@@ -26,10 +27,12 @@ tags:
 ---
 In a previous post I showed how to [get remote disk information with PowerShell][1]. The script works nice until you execute it on a server with Mount Points. When executing the following script on a server with Mount Points:
 
-<pre>Get-WmiObject win32_logicaldisk -computer <computername&gt; | 
+```PowerShell
+Get-WmiObject win32_logicaldisk -computer <computername> | 
 select-object DeviceID, VolumeName, @{Name="Size";Expression={$_.Size/1GB}},@{Name="FreeSpace";Expression={$_.FreeSpace/1GB}},
 @{Name="PCTFreeSpace";Expression={
-$_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table</pre>
+$_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table
+```
 
 I get the following result:
 
@@ -47,8 +50,10 @@ At that moment I realized I wasn&#8217;t getting the information from the Mount 
   
 So let&#8217;s find out how we can get that information with Windows PowerShell. I still need the wmiobject but instead of the win32\_logicaldisk I&#8217;m going to use the win32\_volume. I also replace the DeviceID and VolumeName objects with Name and Label:
 
-<pre>get-wmiobject win32_volume -computer <computername|
-select name, label, driveletter</pre>
+```PowerShell
+get-wmiobject win32_volume -computer <computername|
+select name, label, driveletter
+```
 
 The result looks like this:
 
@@ -60,11 +65,12 @@ As you can see, the drive letter properties are empty for my Mount Points and in
   
 So let&#8217;s find the space, free space and percentage free space of the volumes. I can use the calculations from my previous script only Size needs to be replaced with Capacity:
 
-<pre>get-wmiobject win32_volume -computer <computername|
+```PowerShell
+get-wmiobject win32_volume -computer <computername|
 select name, label, @{Name="Capacity (GB)";Expression={$_.Capacity/1GB}},@{Name="FreeSpace (GB)";Expression={$_.FreeSpace/1GB}},
 @{Name="FreeSpace (PCT)";Expression={$_.FreeSpace/$_.Capacity*100}} |
-format-table</pre>
-
+format-table
+```
 The result now shows the drives and Mount Points with all the requested information:
 
 <div class="image_block">
@@ -73,14 +79,16 @@ The result now shows the drives and Mount Points with all the requested informat
 
 To be able to reuse the script I do what I did in the other two PowerShell post:
 
-<pre>param(
+```PowerShell
+param(
 	[string] $compname = $(Throw "Provide a Server name as first parameter")
 )
 Get-WmiObject win32_volume -computer $compname |
 select name, label, @{Name="Capacity (GB)";Expression={$_.Capacity/1GB}},
 @{Name="FreeSpace (GB)";Expression={$_.FreeSpace/1GB}},
 @{Name="FreeSpace (PCT)";Expression={$_.FreeSpace/$_.Capacity*100}} |
-format-table</pre>
+format-table
+```
 
 End that&#8217;s it, the next request for free disk space is a matter of seconds again.
 

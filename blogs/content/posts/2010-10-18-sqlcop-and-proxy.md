@@ -3,6 +3,7 @@ title: SQLCop behind a Proxy
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-10-18T21:09:42+00:00
+ID: 925
 excerpt: 'SQLCop uses an internet connection to ensure that all checks and updates that are added are maintained.  When SQLCop first loads, it checks the SQLCopConfig.xml file to determine if a new SQLCop.xml file needs to be downloaded.  If SQLCop is unable to download the configuration file, it will automatically use the previously saved sqlcop.xml file.  Because of this, a remote file request is always performed when you start up SQLCop.In order to work around this problem with proxy servers there is one of two things you can do to run SQLCop.'
 url: /index.php/datamgmt/datadesign/sqlcop-and-proxy/
 views:
@@ -50,5 +51,5 @@ We appreciate everyone&#8217;s feedback on SQLCop and any problems or suggestion
  [3]: http://sqlcop.ltd.local/
  [4]: http://sqlcop.ltd.local/sqlcop.xml
  [5]: http://sqlcop.ltd.local/sqlcopconfig.xml
- [6]: http://forum.lessthandot.com/viewforum.php?f=145
+ [6]: http://forum.ltd.local/viewforum.php?f=145
  [7]: http://ltd.local/donate.php

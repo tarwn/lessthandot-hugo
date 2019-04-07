@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #44: The second chance'
 author: Koen Verbeeck
 type: post
 date: 2013-07-09T07:55:00+00:00
+ID: 2132
 excerpt: 'My contribution to T-SQL Tuesday #44.'
 url: /index.php/itprofessionals/professionaldevelopment/t-sql-tuesday-44-the/
 views:

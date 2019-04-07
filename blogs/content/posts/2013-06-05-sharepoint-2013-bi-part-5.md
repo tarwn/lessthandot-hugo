@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 5 – Installing Shar
 author: Koen Verbeeck
 type: post
 date: 2013-06-05T11:57:00+00:00
+ID: 2096
 excerpt: |
   Let’s get started with the next step in the series: installing SharePoint. We will install only the software, but we do not configure it. We will do this later with the PowerPivot Configuration Tool, which is explained in another blog post.
   The first s&hellip;

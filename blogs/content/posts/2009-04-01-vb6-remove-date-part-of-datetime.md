@@ -3,6 +3,7 @@ title: VB6 Remove date part of DateTime
 author: George Mastros (gmmastros)
 type: post
 date: 2009-04-01T12:51:55+00:00
+ID: 370
 url: /index.php/desktopdev/mstech/vb56/vb6-remove-date-part-of-datetime/
 views:
   - 10800
@@ -51,7 +52,8 @@ Clearly, there are 2 different methods for separating the date from the time in 
 
 I tested the performance with this code:
 
-<pre>Option Explicit
+```VB
+Option Explicit
 
 Private Sub Command1_Click()
 
@@ -83,6 +85,7 @@ Private Function RemoveDate(ByVal DateTime As Date) As Date
     
     RemoveDate = DateTime - Int(DateTime)
     
-End Function</pre>
+End Function
+```
 
 The Int method runs in 0.40 micro-seconds and the Format method takes 3 micro-seconds. The Int method is approximately 7 times faster.

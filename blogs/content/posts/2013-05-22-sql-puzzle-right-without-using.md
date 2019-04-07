@@ -3,6 +3,7 @@ title: 'SQL Puzzle:  RIGHT without using the RIGHT function'
 author: SQLDenis
 type: post
 date: 2013-05-22T07:44:00+00:00
+ID: 2086
 excerpt: |
   I haven't done a puzzle for a long time so I figured let's do a simple one. Return the right 6 characters of the column but without using the RIGHT function.
   
@@ -32,14 +33,16 @@ I haven&#8217;t done a puzzle for a long time so I figured let&#8217;s do a simp
 
 Here is what the table looks like
 
-<pre>CREATE TABLE #Puzzle(SomeCol CHAR(7))
+sql
+CREATE TABLE #Puzzle(SomeCol CHAR(7))
 
 INSERT  #Puzzle VALUES ('AAAAAAA')
 INSERT  #Puzzle VALUES (' BBBBBB')
 INSERT  #Puzzle VALUES ('CCCCCC')
 INSERT  #Puzzle VALUES (' DDDDD ')
 INSERT  #Puzzle VALUES (NULL)
-INSERT  #Puzzle VALUES ('       ')</pre>
+INSERT  #Puzzle VALUES ('       ')
+```
 
 As you can see some rows start with spaces and some end with spaces, one row has the NULL value
   

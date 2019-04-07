@@ -3,6 +3,7 @@ title: Goodbye Google Reader, hello feedly
 author: SQLDenis
 type: post
 date: 2013-03-14T18:50:00+00:00
+ID: 2034
 excerpt: |
   Yesterday, the following was announced
   

@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #31 – Logging Simple Things'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-06-12T12:14:00+00:00
+ID: 1647
 excerpt: "How big are your core databases right now? Do you know how they got that way? Is that normal? These questions are impossible to answer just by looking at the database options dialog in SSMS. They are also questions I've had to try to answer in several d&hellip;"
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/t-sql-tuesday-31-logging/
 views:
@@ -31,7 +32,8 @@ _For the purpose of these examples I&#8217;m going to be logging the database gr
 
 First up, let&#8217;s create a table to store the raw data in:
 
-<pre>CREATE TABLE dbo.DatabaseSizeLog(
+sql
+CREATE TABLE dbo.DatabaseSizeLog(
 	Id		int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	LogTime		DateTime2 NOT NULL,
 	DatabaseId	int NOT NULL,
@@ -43,13 +45,14 @@ First up, let&#8217;s create a table to store the raw data in:
 	UsedBytes	int NOT NULL,
 	UnusedBytes	int NOT NULL,
 	[RowCount]	int NOT NULL
-);</pre>
-
+);
+```
 Note that I am capturing both ids and names for the table and index. We could JOIN to get the names, but being able to run a quick one line statement to look at key information is worth the slightly higher storage cost. I&#8217;ve also used an integer IDENTITY column as the required clustered index for a SQL Azure database. A better option would be LogTime, DatabaseId, and IndexId in the order that makes the most sense for how you intend to look at the data.
 
 Once we have the raw table, we need the query to capture the data:
 
-<pre>INSERT INTO dbo.DatabaseSizeLog(LogTime, DatabaseId, ObjectId, 
+sql
+INSERT INTO dbo.DatabaseSizeLog(LogTime, DatabaseId, ObjectId, 
 				TableName, IndexId, IndexName, AllocatedBytes, 
 				UsedBytes, UnusedBytes, [RowCount])
 SELECT    GetDate()
@@ -57,7 +60,7 @@ SELECT    GetDate()
 	, o.object_id AS TableId
 	, o.name
 	, ps.index_id as [IndexId]
-	, CASE WHEN ps.index_id &gt; 1 THEN i.name ELSE NULL END AS IndexName
+	, CASE WHEN ps.index_id > 1 THEN i.name ELSE NULL END AS IndexName
 	, CAST(ps.reserved_page_count * 8192 AS DECIMAL(18,0)) AS Allocated
 	, CAST(ps.used_page_count * 8192 AS DECIMAL(18,0)) AS Used
 	, CAST((ps.reserved_page_count - used_page_count) * 8192 AS DECIMAL(18,0)) AS Unused
@@ -65,8 +68,8 @@ SELECT    GetDate()
 FROM sys.dm_db_partition_stats ps
 	INNER JOIN sys.objects o ON ps.object_id = o.object_id
 	INNER JOIN sys.indexes i on i.index_id = ps.index_id AND i.object_id = ps.object_id
-WHERE o.type NOT IN ('S','IT');</pre>
-
+WHERE o.type NOT IN ('S','IT');
+```
 This should be placed in a scheduled job in SQL Agent for an on-premises database, or tied into a scheduled task system (perhaps via a worker role) for a SQL Azure database.
 
 Now that we have some data and we&#8217;re logging it at some regular interval, lets start getting some use out of it.
@@ -77,7 +80,8 @@ Once we have some data in the table, we can build some information gathering que
 
 **What are our largest tables right now?**
 
-<pre>DECLARE @TargetTime DateTime;
+sql
+DECLARE @TargetTime DateTime;
 SELECT TOP 1 @TargetTime = LogTime FROM dbo.DatabaseSizeLog ORDER BY LogTime DESC;
 
 SELECT TOP 10
@@ -89,11 +93,12 @@ SELECT TOP 10
 FROM dbo.DatabaseSizeLog
 WHERE LogTime = @TargetTime
 GROUP BY TableName
-ORDER BY SUM(AllocatedBytes) DESC;</pre>
-
+ORDER BY SUM(AllocatedBytes) DESC;
+```
 **What percentage of our largest tables is indexes?**
 
-<pre>DECLARE @TargetTime DateTime;
+sql
+DECLARE @TargetTime DateTime;
 SELECT TOP 1 @TargetTime = LogTime FROM dbo.DatabaseSizeLog ORDER BY LogTime DESC;
 
 SELECT TOP 10
@@ -104,11 +109,12 @@ SELECT TOP 10
 FROM dbo.DatabaseSizeLog
 WHERE LogTime = @TargetTime
 GROUP BY TableName
-ORDER BY SUM(AllocatedBytes) DESC;</pre>
-
+ORDER BY SUM(AllocatedBytes) DESC;
+```
 **Which tables are growing the quickest?**
 
-<pre>WITH LogHistory AS (
+sql
+WITH LogHistory AS (
 	SELECT Id, LogTime, DatabaseId, ObjectId, 
 			TableName, IndexId, IndexName, AllocatedBytes, 
 			UsedBytes, UnusedBytes, [RowCount],
@@ -128,8 +134,8 @@ FROM LogHistory LH_NOW
 WHERE LH_NOW.PastTimeNumber = 1
 	AND LH_THEN.PastTimeNumber = 3	-- tweak this to widen or narrow the comparison time
 GROUP BY LH_Now.TableName, LH_NOW.LogTime, LH_THEN.LogTime
-ORDER BY SUM(LH_NOW.AllocatedBytes) - SUM(LH_THEN.AllocatedBytes) DESC</pre>
-
+ORDER BY SUM(LH_NOW.AllocatedBytes) - SUM(LH_THEN.AllocatedBytes) DESC
+```
 ## Monitoring
 
 Besides being able to look at some general statistics, if we have a system that can monitor the result of a SQL query, we have a number of options we can start monitoring against:
@@ -138,16 +144,18 @@ Besides being able to look at some general statistics, if we have a system that 
   
 Most recent total allocated size of the database (in MB).
 
-<pre>SELECT TOP 1 SUM(AllocatedBytes) / 1048576.0
+sql
+SELECT TOP 1 SUM(AllocatedBytes) / 1048576.0
 FROM dbo.DatabaseSizeLog
 GROUP BY LogTime
-ORDER BY LogTime DESC;</pre>
-
+ORDER BY LogTime DESC;
+```
 **Hourly database growth for the last two entries**
   
 Hourly growth in MB/hour for the last two entries
 
-<pre>WITH LastTwoEntries AS (
+sql
+WITH LastTwoEntries AS (
 	SELECT TOP 2 
 			SizeInMB = SUM(AllocatedBytes) / 1048576.0,
 			LogTime
@@ -157,13 +165,14 @@ Hourly growth in MB/hour for the last two entries
 )
 SELECT (LTE1.SizeInMB - LTE2.SizeInMB) / (DATEDIFF(minute, LTE1.LogTime, LTE2.LogTime) / 60.0)
 FROM LastTwoEntries LTE1
-	INNER JOIN LastTwoEntries LTE2 ON LTE1.LogTime &gt; LTE2.LogTime</pre>
-
+	INNER JOIN LastTwoEntries LTE2 ON LTE1.LogTime > LTE2.LogTime
+```
 **Wait, you deleted how many records?!?**
   
 This lists all tables that have shrunk by more than 10% since the previous log entry.
 
-<pre>WITH Entries AS (
+sql
+WITH Entries AS (
 	SELECT  ObjectId,
 			TableName,
 			SizeInMB = AllocatedBytes / 1048576.0,
@@ -177,9 +186,9 @@ FROM Entries E1
 	INNER JOIN Entries E2 ON E1.ObjectId = E2.ObjectId
 WHERE E1.Num = 1 
 	AND E2.num = 2
-	AND E2.SizeInMb <&gt; 0
-	AND E1.SizeInMb < E2.SizeInMb - (.10 * E2.SizeInMb);</pre>
-
+	AND E2.SizeInMb <> 0
+	AND E1.SizeInMb < E2.SizeInMb - (.10 * E2.SizeInMb);
+```
 ## And more
 
 By now I hope you have even more ideas for ways to slice this simple data set. Logging is a powerful tool in our inventory and often even a simple query can provide a great deal of information if we log it over time. The basic query that started this post probably didn&#8217;t look like much, but capturing the values over time allowed us to expose a lot of new information about our database. Having visibility into how our systems are running can be the difference between finding out our database hit a size limit after the fact and knowing that it is growing at an abnormal pace long before the problem occurs.

@@ -3,6 +3,7 @@ title: SSIS:Multi Instance Management made easy.
 author: SQLArcher
 type: post
 date: 2011-03-07T05:13:00+00:00
+ID: 1065
 excerpt: |
   Some of us work extensively with SSIS and multi-instance SQL clusters. One of the headaches with SSIS in this type of set up, is that SSIS is not cluster aware. This includes where packages are saved when you upload them through SSMS.
    

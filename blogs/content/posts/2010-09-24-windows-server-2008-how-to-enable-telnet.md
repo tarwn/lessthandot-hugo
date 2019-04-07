@@ -3,6 +3,7 @@ title: Windows Server 2008 – How To Enable Telnet
 author: ca8msm
 type: post
 date: 2010-09-24T08:08:21+00:00
+ID: 906
 excerpt: |
   By default, Telnet is disabled on a Windows Server 2008 installation and if you try to run it you will see an error something along the lines of:
   

@@ -3,6 +3,7 @@ title: Including an Aggregated Column’s Related Values
 author: Erik
 type: post
 date: 2009-07-18T04:51:05+00:00
+ID: 510
 excerpt: "In this co-authored blog post, Naomi and I will present six different solutions to the commonly experienced query problem of how to include an aggregated column's related values - values from the same row in the group that provided the displayed value.&hellip;"
 url: /index.php/datamgmt/dbprogramming/mssqlserver/including-an-aggregated-column-s-related/
 views:
@@ -19,32 +20,38 @@ In this co-authored blog post, [Naomi][1] and I will present six different solut
 
 It&#8217;s a fairly simple query to select the maximum date for each group in a GROUP BY query. You just throw in a Max() on the date column and then GROUP BY the other columns. For example,
 
-<pre>SELECT
+sql
+SELECT
    CustomerID,
    LastOrderDate = Max(OrderDate)
 FROM Orders
-GROUP BY CustomerID</pre>
+GROUP BY CustomerID
+```
 
 But a common query need is to include other column values from the same row as the most recent date. Unfortunately, putting aggregates on other columns doesn&#8217;t work:
 
-<pre>SELECT
+sql
+SELECT
    CustomerID,
    LastOrderDate = Max(OrderDate),
    LastSubTotal = Max(SubTotal) -- wrong: won't be the subtotal from Max(OrderDate), but the greatest order total ever placed by this customer.
 FROM Orders
-GROUP BY CustomerID</pre>
+GROUP BY CustomerID
+```
 
 It&#8217;s almost like you need some kind of Max(OrderDate->SubTotal).
 
 Note that the desired results are fairly easy in MS Access using the aggregate functions Last and First:
 
-<pre>SELECT
+sql
+SELECT
    CustomerID,
    LastOrderDate = Last(OrderDate),
    SubTotal = Last(SubTotal)
 FROM Orders
 GROUP BY CustomerID
-ORDER BY OrderDate</pre>
+ORDER BY OrderDate
+```
 
 What happens in Access is that the Last() aggregate combines with the ORDER BY clause to select values from the row containing the most recent Order Date.
 
@@ -60,12 +67,14 @@ Note that the aggregate doesn&#8217;t have to be on a date. Perhaps you want to 
 
 The basic query we&#8217;ll be working with is:
 
-<pre>SELECT
+sql
+SELECT
    C.AccountNumber,
    LastOrderDate = Max(O.OrderDate)
 FROM
    Sales.Customer C
-   INNER JOIN Sales.SalesOrderHeader O ON C.CustomerID = O.CustomerID</pre>
+   INNER JOIN Sales.SalesOrderHeader O ON C.CustomerID = O.CustomerID
+```
 
 What we want to do is also return the Subtotal value from the same row as the LastOrderDate.
 
@@ -100,7 +109,8 @@ So let&#8217;s use those ideas and turn them into real queries. Unless otherwise
   * Performance degrades geometrically as rows increase.
   * Does not handle NULLs correctly.
 
-<pre>SELECT
+sql
+SELECT
    C.AccountNumber,
    O.OrderDate,
    O.SubTotal
@@ -112,11 +122,13 @@ WHERE
       SELECT Max(OrderDate)
       FROM SalesOrderHeader O2
       WHERE O2.CustomerID = O.CustomerID
-   )</pre>
+   )
+```
 
 Another version of correlated subquery which sometimes performs much better is
 
-<pre>SELECT
+sql
+SELECT
    C.AccountNumber,
    O.OrderDate,
    O.SubTotal
@@ -128,24 +140,27 @@ WHERE
       SELECT top 1 OrderID 
       FROM SalesOrderHeader O2
       WHERE O2.CustomerID = O.CustomerID order by O2.OrderDate Desc, O2.OrderID DESC)
-   </pre>
+   
+```
 
 Another variation of this query is (suggested by Alejandro Mesa (Hunchback) in this [MSDN thread][2]):
 
-<pre>SELECT
+sql
+SELECT
    C.AccountNumber,
    O1.OrderDate,
    O1.SubTotal
 FROM
    Sales.Customer C
    INNER JOIN Sales.SalesOrderHeader O1 ON C.CustomerID = O1.CustomerID 
-WHERE not exists (select 1 from Sales.SalesOrderHeader O2 where O2.CustomerID = O1.CustomerID and O1.OrderDate < O2.OrderDate)</pre>
-
+WHERE not exists (select 1 from Sales.SalesOrderHeader O2 where O2.CustomerID = O1.CustomerID and O1.OrderDate < O2.OrderDate)
+```
 Note, that the first variation of this query may return duplicate rows, but the second will always return only one row per group (with the latest OrderID).
 
 The third variation of this query with NOT EXISTS will produce duplicates in case of the same date, but can also be easily adjusted to return only one row with the max OrderID:
 
-<pre>SELECT
+sql
+SELECT
    C.AccountNumber,
    O1.OrderDate,
    O1.SubTotal
@@ -153,7 +168,8 @@ FROM
    Sales.Customer C
    INNER JOIN Sales.SalesOrderHeader O1 ON C.CustomerID = O1.CustomerID 
 WHERE not exists (select 1 from Sales.SalesOrderHeader O2 where O2.CustomerID = O1.CustomerID and (O1.OrderDate < O2.OrderDate OR 
-(O1.OrderDate = O2.OrderDate and O1.OrderID < O2.OrderID)))</pre></p> 
+(O1.OrderDate = O2.OrderDate and O1.OrderID < O2.OrderID)))
+```</p> 
 
 ### 2. Derived Table</p> 
 
@@ -162,7 +178,8 @@ WHERE not exists (select 1 from Sales.SalesOrderHeader O2 where O2.CustomerID = 
   * Performance degrades linearly as rows increase.
   * Does not handle NULLs correctly.
 
-<pre>SELECT
+sql
+SELECT
    C.AccountNumber,
    O.OrderDate,
    O.SubTotal
@@ -173,7 +190,8 @@ FROM
       SELECT CustomerID, LastOrderDate = Max(OrderDate)
       FROM Sales.SalesOrderHeader
       GROUP BY CustomerID
-   ) O2 ON O.CustomerID = O2.CustomerID AND O.OrderDate = O2.LastOrderDate</pre>
+   ) O2 ON O.CustomerID = O2.CustomerID AND O.OrderDate = O2.LastOrderDate
+```
 
 
 
@@ -191,7 +209,8 @@ The windowing functions were introduced in SQL Server 2005, so the two queries b
 
   * A common table expression is not needed, but is cleaner. The CTE query can be made into a derived table if desired.
 
-<pre>WITH OrderData AS (
+sql
+WITH OrderData AS (
    SELECT
       C.AccountNumber,
       O.OrderDate,
@@ -203,11 +222,13 @@ The windowing functions were introduced in SQL Server 2005, so the two queries b
 )
 SELECT AccountNumber, OrderDate, SubTotal
 FROM OrderData
-WHERE Selector = 1</pre>
+WHERE Selector = 1
+```
 
 ### 4. Windowing Function &#8211; One Stage
 
-<pre>SELECT TOP 1 WITH TIES
+sql
+SELECT TOP 1 WITH TIES
    C.AccountNumber,
    O.OrderDate,
    O.SubTotal
@@ -215,7 +236,8 @@ FROM
    Sales.Customer C
    INNER JOIN Sales.SalesOrderHeader O ON C.CustomerID = O.CustomerID 
 ORDER BY
-   ROW_NUMBER() OVER (PARTITION by O.CustomerID ORDER BY OrderDate DESC)</pre>
+   ROW_NUMBER() OVER (PARTITION by O.CustomerID ORDER BY OrderDate DESC)
+```
 
 
 
@@ -231,7 +253,8 @@ ORDER BY
   * As given, this query does not handle NULLs at all. A few strategic Coalesces can fix that.
   * There is no significant performance difference between unpacking one many-item compound value or many one-item compound values (though you&#8217;d always include all columns needed for ordering).
 
-<pre>SELECT
+sql
+SELECT
    CustomerID,
    LastOrderDate,
    LastSubTotal = Convert(money, Substring(DateAndSubtotal, 20, 25))
@@ -243,7 +266,8 @@ FROM
          DateAndSubtotal = Max(convert(varchar(50), OrderDate, 121) + Convert(varchar(50), Subtotal))
       FROM Sales.SalesOrderHeader
       GROUP BY CustomerID
-   ) X</pre>
+   ) X
+```
 
 Isn&#8217;t that cool? I don&#8217;t advocate using it all the time, but when performance is bad and the trade-offs are worth it, do it.
 
@@ -253,7 +277,7 @@ Erik
 
 P.S. I would like to thank [Naomi][1] for co-authoring this blog post with me. She did the heavy lifting of actually writing queries and testing their performance; I just fleshed out the explanations a bit.
 
- [1]: http://forum.lessthandot.com/memberlist.php?mode=viewprofile&u=314
+ [1]: http://forum.ltd.local/memberlist.php?mode=viewprofile&u=314
  [2]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/0217ddf4-bcab-4f2b-a81c-70841753cb23
  [3]: http://forum.foxclub.ru/read.php?32,177183,177232#msg-177232
  [4]: /index.php/DataMgmt/DataDesign/including-an-aggregated-column-s-related-2

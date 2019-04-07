@@ -3,6 +3,7 @@ title: The most read posts and most searched keywords for 2009 on LessThanDot in
 author: SQLDenis
 type: post
 date: 2010-01-02T18:31:22+00:00
+ID: 661
 url: /index.php/itprofessionals/ethicsit/the-most-read-posts-and-most-searched-ke-2009/
 views:
   - 11158
@@ -131,7 +132,7 @@ So that is it for this post, let&#8217;s hope that we keep producing a lot of gr
  [2]: /index.php/ITProfessionals/EthicsIT/google-interview-questions
  [3]: /index.php/DesktopDev/MSTech/the-new-features-in-c-4
  [4]: /index.php/DataMgmt/DBProgramming/MSSQLServer/surpress-string-or-binary-data-would-be-
- [5]: http://forum.lessthandot.com/viewtopic.php?f=44&t=2660
+ [5]: http://forum.ltd.local/viewtopic.php?f=44&t=2660
  [6]: http://wiki.ltd.local/index.php/ASP.NET:_Using_an_AppOffline.htm_file_for_updates
  [7]: /index.php/DesktopDev/MSTech/visual-studio-2010-screenshots
  [8]: /index.php/DataMgmt/DataDesign/changing-exec-to-sp_executesql-doesn-t-p

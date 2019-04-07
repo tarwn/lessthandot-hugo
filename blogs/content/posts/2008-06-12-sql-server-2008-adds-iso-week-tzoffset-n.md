@@ -3,6 +3,7 @@ title: SQL Server 2008 Adds ISO Week,TZoffset, Nanosecond And Microsecond To Dat
 author: SQLDenis
 type: post
 date: 2008-06-12T12:53:32+00:00
+ID: 57
 url: /index.php/datamgmt/datadesign/sql-server-2008-adds-iso-week-tzoffset-n/
 views:
   - 17885

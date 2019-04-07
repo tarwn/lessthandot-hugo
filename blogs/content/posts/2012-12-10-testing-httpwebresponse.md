@@ -3,6 +3,7 @@ title: Testing the Not-So-Testable HttpWebResponse
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-12-10T14:56:00+00:00
+ID: 1826
 excerpt: Recently I was working on a library to consume a REST API without exposing any of the specifics to the rest of the application. Implementing a common interface and set of custom exceptions was easy enough, but exercising the internal logic was going to be tough.
 url: /index.php/desktopdev/mstech/testing-httpwebresponse/
 views:
@@ -41,7 +42,8 @@ Here is an example of one of those calls and the synchronous method it uses inte
 
 **TestableHttpWebResponse.Sample/SampleService.cs**
 
-<pre>public class SampleService
+```text
+public class SampleService
 {
 	// ...
 
@@ -57,7 +59,7 @@ Here is an example of one of those calls and the synchronous method it uses inte
 
 	private ServiceResponse SendRequest(WebRequest request)
 	{
-		return _retryPolicy.ExecuteAction<ServiceResponse&gt;(() =&gt;
+		return _retryPolicy.ExecuteAction<ServiceResponse>(() =>
 		{
 			try
 			{
@@ -74,48 +76,54 @@ Here is an example of one of those calls and the synchronous method it uses inte
 	}
 
 	// ...
-}</pre>
-
+}
+```
 Testing a method like this typically requires an integration test against the live service. With the provided TestableHttpWebResponse and TestableWebRequest, however, we can set up an expected request and response and verify the service reacts appropriately.
 
 **1: Register the TestableWebRequestCreateFactory**
   
 WebRequest.Create(_uri_) uses a factory to produce the relevant WebRequest instance of a Uri, based on the prefix. So first things first, lets register a new prefix and a factory to serve up requests:
 
-<pre>[TestFixtureSetUp]
+```text
+[TestFixtureSetUp]
 public void TestFixtureSetup()
 {
 	WebRequest.RegisterPrefix("test", TestableWebRequestCreateFactory.GetFactory());
-}</pre>
-
+}
+```
 TestableWebRequestCreateFactory.GetFactory() exposes a singleton that can be referenced from any of the tests in this class. When the WebRequest object receives a Uri starting with &#8220;test://&#8221;, it will call the associated factory, giving us the opportunity to respond with a Request object of our choosing.
 
 A common base URI will prove helpful as we write the tests:
 
-<pre>public Uri BaseUri { get { return new Uri("test://mydomain.com/api/"); } }</pre>
-
+```text
+public Uri BaseUri { get { return new Uri("test://mydomain.com/api/"); } }
+```
 **2: Building a Test**
 
 The easiest test to start with is one that will test the &#8220;happy path&#8221; where our API call receives a 200 Success response. 
 
 First we need to set up the request:
 
-<pre>var operation = "ListOfStuff";
-var expectedRequest = new TestableWebRequest(new Uri(BaseUri, operation));</pre>
-
+```text
+var operation = "ListOfStuff";
+var expectedRequest = new TestableWebRequest(new Uri(BaseUri, operation));
+```
 Next we need to set up the response the request will return when it is executed:
 
-<pre>expectedRequest.EnqueueResponse(HttpStatusCode.OK, "Success", "Even More Success", false);</pre>
-
+```text
+expectedRequest.EnqueueResponse(HttpStatusCode.OK, "Success", "Even More Success", false);
+```
 And then add it to the Factory so it will be available when WebRequest calls it:
 
-<pre>TestableWebRequestCreateFactory.GetFactory().AddRequest(expectedRequest);</pre>
-
+```text
+TestableWebRequestCreateFactory.GetFactory().AddRequest(expectedRequest);
+```
 Put all of this together and we have:
 
 **TestableHttpWebResponse.Sample.Tests/SampleServiceTests.cs**
 
-<pre>[Test]
+```text
+[Test]
 public void ListRemoteStuff_ValidRequest_ReturnsSuccessfulResponse()
 {
 	var operation = "ListOfStuff";
@@ -127,8 +135,8 @@ public void ListRemoteStuff_ValidRequest_ReturnsSuccessfulResponse()
 	var response = service.ListRemoteStuff(operation);
 
 	Assert.IsTrue(response.IsSuccess);
-}</pre>
-
+}
+```
 This exercises the entire successful path of the operation without any additional abstractions in our API code or reliance on external communications and services.
 
 ## Testing Http Status Codes
@@ -139,7 +147,8 @@ The sample service maps received Protocol Errors (401, 404, etc) to a local exce
 
 **TestableHttpWebResponse.Sample/SampleService.cs**
 
-<pre>private Exception MappedException(WebException we)
+```text
+private Exception MappedException(WebException we)
 {
 	// map to custom exceptions
 	if (we.Status == WebExceptionStatus.ProtocolError)
@@ -160,8 +169,8 @@ The sample service maps received Protocol Errors (401, 404, etc) to a local exce
 	}
 	else
 		return new SampleServiceOutageException(we);
-}</pre>
-
+}
+```
 Exercising the mapping logic is going to require the WebRequest to receive a WebException. Let&#8217;s make that happen.
 
 _Yes, I know a HEAD request will break this, that&#8217;s why it&#8217;s called &#8220;sample&#8221; code 🙂_
@@ -170,11 +179,13 @@ In the first test, we used the EnqueueResponse method of the TestableWebRequest 
 
 **TestableHttpWebResponse.Sample.Tests/SampleServiceTests.cs**
 
-<pre>expectedRequest.EnqueueResponse(HttpStatusCode.NotFound, "Dohicky not found", "I couldn't find your dohicky because I don't like you", true);</pre>
-
+```text
+expectedRequest.EnqueueResponse(HttpStatusCode.NotFound, "Dohicky not found", "I couldn't find your dohicky because I don't like you", true);
+```
 Which allows us to create the ExpectedException test:
 
-<pre>[Test]
+```text
+[Test]
 [ExpectedException(typeof(DohickyNotFoundException))]
 public void ListRemoteStuff_404DohickeyNotFound_ThrowsDohickeyNotFoundException()
 {
@@ -187,19 +198,21 @@ public void ListRemoteStuff_404DohickeyNotFound_ThrowsDohickeyNotFoundException(
 	var response = service.ListRemoteStuff(operation);
 
 	// expect exception
-}</pre>
-
+}
+```
 ## Testing Other WebExceptions
 
 What about connection failures? Well there is another version of the EnqueueResponse method that allows us to queue up an exception to be returned from the Request, like so:
 
-<pre>expectedRequest.EnqueueResponse(new WebException("I'm broke!", WebExceptionStatus.ConnectFailure));</pre>
-
+```text
+expectedRequest.EnqueueResponse(new WebException("I'm broke!", WebExceptionStatus.ConnectFailure));
+```
 Just like the previous test, we can use that response to put together a full test
 
 **TestableHttpWebResponse.Sample.Tests/SampleServiceTests.cs**
 
-<pre>[Test]
+```text
+[Test]
 [ExpectedException(typeof(SampleServiceOutageException))]
 public void ListRemoteStuff_ServiceOutage_ThrowsSampleServiceOutage()
 {
@@ -212,15 +225,16 @@ public void ListRemoteStuff_ServiceOutage_ThrowsSampleServiceOutage()
 	var response = service.ListRemoteStuff(operation);
 
 	// expect exception
-}</pre>
-
+}
+```
 ## Testing the Retry Policy
 
 Retry policies are trickier, in that they need to be able to execute a Request multiple times and receive new responses. By enqueueing (sp?) multiple responses on the request, we can exercise the retry policy:
 
 **TestableHttpWebResponse.Sample.Tests/SampleServiceTests.cs**
 
-<pre>[Test]
+```text
+[Test]
 public void ListRemoteStuff_TimeoutOccurs_TruesASecondTime()
 {
 	var operation = "ListOfStuff";
@@ -233,8 +247,8 @@ public void ListRemoteStuff_TimeoutOccurs_TruesASecondTime()
 	var response = service.ListRemoteStuff(operation);
 
 	Assert.AreEqual("Nothing to see, please move along", response.Message);
-}</pre>
-
+}
+```
 And there we have it, all the various flavors of an HttpWebRequest.
 
 ## The Testable Classes

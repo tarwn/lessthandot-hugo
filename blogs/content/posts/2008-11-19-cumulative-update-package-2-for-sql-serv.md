@@ -3,6 +3,7 @@ title: Cumulative update package 2 for SQL Server 2008 is available
 author: SQLDenis
 type: post
 date: 2008-11-19T16:12:14+00:00
+ID: 211
 url: /index.php/datamgmt/datadesign/cumulative-update-package-2-for-sql-serv/
 views:
   - 13274

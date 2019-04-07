@@ -3,6 +3,7 @@ title: Professional Development –Building Relationships
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-02-25T03:21:00+00:00
+ID: 1053
 excerpt: 'Today we are going to discuss relationships in professional development.  No, we are not talking about integrity in data.  Well, we kind of are.  The word integrity and relationships go along with each other.  Integrity is quality, lack of corruption and essentially being in harmony.  Relationships bring us integrity in our career and skills.'
 url: /index.php/itprofessionals/professionaldevelopment/professional-development-building-relationships/
 views:

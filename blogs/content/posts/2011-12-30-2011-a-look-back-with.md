@@ -3,6 +3,7 @@ title: 2011 A look back with some stats
 author: SQLDenis
 type: post
 date: 2011-12-30T11:20:00+00:00
+ID: 1468
 excerpt: |
   Another year is about to end, time to do another post with some stats and numbers
   

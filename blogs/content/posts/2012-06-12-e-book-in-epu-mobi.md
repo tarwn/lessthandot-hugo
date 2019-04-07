@@ -3,6 +3,7 @@ title: E-Books in epu, mobi and pdf for Microsoft Technologies available for dow
 author: SQLDenis
 type: post
 date: 2012-06-12T23:23:00+00:00
+ID: 1651
 excerpt: |
   The Microsoft Technet site has made available a bunch of ebooks in epub, mobi and pdf formats
   

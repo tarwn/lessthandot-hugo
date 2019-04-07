@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #052 – Why Back Up System Databases?'
 author: Jes Borland
 type: post
 date: 2014-03-11T21:29:54+00:00
+ID: 2498
 url: /index.php/uncategorized/t-sql-tuesday-052-why-back-up-system-databases/
 views:
   - 11876

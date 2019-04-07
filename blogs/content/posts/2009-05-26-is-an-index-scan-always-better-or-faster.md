@@ -3,6 +3,7 @@ title: Is an index seek always better or faster than an index scan?
 author: SQLDenis
 type: post
 date: 2009-05-26T15:52:00+00:00
+ID: 445
 excerpt: |
   We all know that we should avoid index and table scans like the plague and try to get an index seek all the time.
   Okay, what will happen if we fill a table with one million rows that have the same exact value and then create a clustered index on it.
@@ -28,23 +29,29 @@ Yes, you can create a clustered index on a non unique column because SQL Server 
 
 Create the following table with a clustered index
 
-<pre>create table TestIndex (Value varchar(100) not null)
+sql
+create table TestIndex (Value varchar(100) not null)
 
-create clustered index ix_TestIndex on TestIndex(Value)</pre>
+create clustered index ix_TestIndex on TestIndex(Value)
+```
 
 Now insert a million rows with all the same value
 
-<pre>insert TestIndex
+sql
+insert TestIndex
 select top 1000000 'A' from master..spt_values s1
-CROSS JOIN master..spt_values s2</pre>
+CROSS JOIN master..spt_values s2
+```
 
 Now run the following and look at the execution plan
 
-<pre>select count(*) from TestIndex
+sql
+select count(*) from TestIndex
 where Value = 'A'
 
 
-select count(*) from TestIndex</pre>
+select count(*) from TestIndex
+```
 
 Here is what the plan looks like.
   
@@ -76,7 +83,8 @@ SEEK:([Test].[dbo].[TestIndex].[Value]=[@1]) ORDERED FORWARD)</p>
 
 What about IO, is that any different?
 
-<pre>set nocount on
+sql
+set nocount on
 set statistics io on
 select count(*) from TestIndex
 where Value = 'A'
@@ -84,7 +92,8 @@ where Value = 'A'
 
 select count(*) from TestIndex
 
-set statistics io off</pre>
+set statistics io off
+```
 
 _Table &#8216;TestIndex&#8217;. Scan count 1, logical reads 2491, physical reads 0,
   
@@ -98,7 +107,8 @@ Looks the same to me
 
 Now let&#8217;s take a look at the time it takes to run this
 
-<pre>set nocount on
+sql
+set nocount on
 set statistics time on
 select count(*) from TestIndex
 where Value = 'A'
@@ -107,7 +117,8 @@ where Value = 'A'
 select count(*) from TestIndex
 
 
-set statistics time off</pre>
+set statistics time off
+```
 
 Here is the output for that
 
@@ -121,25 +132,31 @@ CPU time = 93 ms, elapsed time = 106 ms.</em>
 
 BTW, you will also get an index seek if you specify a WHERE clause like this
 
-<pre>select count(*) from TestIndex
-where Value &gt; ''</pre>
+sql
+select count(*) from TestIndex
+where Value > ''
+```
 
 So there you have it, a seek is not always faster than a scan. And yes, I know that this is a silly example
 
 Okay just for fun now let&#8217;s insert another million rows with the value B
 
-<pre>insert TestIndex
+sql
+insert TestIndex
 select top 1000000 'b' from master..spt_values s1
-CROSS JOIN master..spt_values s2</pre>
+CROSS JOIN master..spt_values s2
+```
 
 And now run this
 
-<pre>select count(*) from TestIndex
+sql
+select count(*) from TestIndex
 where Value in( 'A','B')
 
 
 
-select count(*) from TestIndex</pre>
+select count(*) from TestIndex
+```
 
 You will see almost the same exact behaviour as before, a seek for the statement with the WHERE caluse and a scan for the statament without the WHERE clause.
   
@@ -177,13 +194,15 @@ SEEK:([Test].[dbo].[TestIndex].[Value]=&#8217;A&#8217; OR [Test].[dbo].[TestInde
 
 If we set the max degree of parallelism to 1 by using the MAXDOP option we get the same plan as before
 
-<pre>select count(*) from TestIndex
+sql
+select count(*) from TestIndex
 where Value = 'A'
 option(maxdop 1)
 
 
 select count(*) from TestIndex
-option(maxdop 1)</pre>
+option(maxdop 1)
+```
 
 Here is the graphical plan
   
@@ -215,5 +234,5 @@ So there you have it, nothing earth-shattering in this post but still nice to kn
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

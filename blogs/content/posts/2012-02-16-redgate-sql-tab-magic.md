@@ -3,6 +3,7 @@ title: RedGate SQL Tab Magic
 author: SQLArcher
 type: post
 date: 2012-02-16T10:10:00+00:00
+ID: 1540
 excerpt: |
   After upgrading my SQL Toolbelt installation recently, I came across a new entry in the SQL Prompt menu that is integrated into SQL Server Management Studio. So I have decided to put out a quick post on one of the features which I find is handy.
   

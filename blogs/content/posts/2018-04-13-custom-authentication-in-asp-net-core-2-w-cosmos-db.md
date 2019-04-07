@@ -3,6 +3,7 @@ title: Custom Authentication in ASP.Net Core 2 w/ Cosmos DB
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2018-04-13T12:10:01+00:00
+ID: 9130
 url: /index.php/webdev/serverprogramming/aspnet/custom-authentication-in-asp-net-core-2-w-cosmos-db/
 views:
   - 6789
@@ -80,7 +81,8 @@ The purpose of the Authentication modules are to interact with the outside world
 
 **Starting a Twitter OAuth Sign-in**
 
-<pre>[HttpGet("register/twitter")]
+```csharp
+[HttpGet("register/twitter")]
 [AllowAnonymous]
 public IActionResult RegisterWithTwitter()
 {
@@ -89,8 +91,8 @@ public IActionResult RegisterWithTwitter()
         RedirectUri = "account/register/twitter/continue"
     };
     return Challenge(props, "Twitter");
-}</pre>
-
+}
+```
 There&#8217;s a lot more, here is a great post: [ASP.NET Core 2.0 Authentication and Authorization System Demystified][4].
 
 ## Task 1: Cookies, custom Membership, Cosmos DB, and basic pages
@@ -105,32 +107,34 @@ The concrete `CosmosDBMembership` object will be responsible for creating and va
 
 [SampleCosmosCore2App/Membership/ICustomMembership.cs][5]
 
-<pre>public interface ICustomMembership
+```csharp
+public interface ICustomMembership
 {
 	CustomMembershipOptions Options { get; }
 
-	Task<RegisterResult&gt; RegisterAsync(string userName, string email, string password);
-	Task<LoginResult&gt; LoginAsync(string userName, string password);
+	Task<RegisterResult> RegisterAsync(string userName, string email, string password);
+	Task<LoginResult> LoginAsync(string userName, string password);
 	Task LogoutAsync();
-	Task<bool&gt; ValidateLoginAsync(ClaimsPrincipal principal);
+	Task<bool> ValidateLoginAsync(ClaimsPrincipal principal);
 
-	Task<SessionDetails&gt; GetSessionDetailsAsync(ClaimsPrincipal principal);
-}</pre>
-
+	Task<SessionDetails> GetSessionDetailsAsync(ClaimsPrincipal principal);
+}
+```
 This reflects the basic set of behaviors we intend to perform, with an options object that includes a `DefaultPathAfterLogin` and `AuthenticationType` to use when interacting with Claims and HttpContext SignIn/SignOut methods.
 
 Next, we switch to the `Startup.cs` and register the concrete `CosmosDBMembership` class for this interface, register the default scheme (&#8220;Cookies&#8221;), and configure a Cookie authentication module for the &#8220;Cookies&#8221; scheme:
 
 [SampleCosmosCore2App/Startup.cs][6]
 
-<pre>public void ConfigureServices(IServiceCollection services)
+```csharp
+public void ConfigureServices(IServiceCollection services)
 {
 	services.AddMvc();
 
 	// ...
 
 	// #1
-	services.AddCustomMembership<CosmosDBMembership&gt;((options) =&gt; {
+	services.AddCustomMembership<CosmosDBMembership>((options) => {
 		options.AuthenticationType = CookieAuthenticationDefaults.AuthenticationScheme;
 		options.DefaultPathAfterLogin = "/";
 	});
@@ -138,16 +142,16 @@ Next, we switch to the `Startup.cs` and register the concrete `CosmosDBMembershi
 	// #2
 	services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 	// #3
-	.AddCookie((options) =&gt;
+	.AddCookie((options) =>
 	{
 		options.LoginPath = new PathString("/account/login");
 		options.LogoutPath = new PathString("/account/logout");
 		options.Events = new CookieAuthenticationEvents()
 		{
 			// #3
-			OnValidatePrincipal = async (c) =&gt;
+			OnValidatePrincipal = async (c) =>
 			{
-				var membership = c.HttpContext.RequestServices.GetRequiredService<ICustomMembership&gt;();
+				var membership = c.HttpContext.RequestServices.GetRequiredService<ICustomMembership>();
 				var isValid = await membership.ValidateLoginAsync(c.Principal);
 				if (!isValid)
 				{
@@ -167,8 +171,8 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 	app.UseAuthentication();
 
 	app.UseMvc();
-}</pre>
-
+}
+```
 _Note: While I refer to the &#8220;Cookies&#8221; scheme by name, you&#8217;ll note above I actually use the constant CookieAuthenticationDefaults.AuthenticationScheme_
 
 **#1 &#8211; services.AddCustomMembership:** Register CosmosDBMembership as a Transient dependency for ICustomMembership vi an [extension method (github)][7].
@@ -198,7 +202,8 @@ To solve this, Persistence will be split into a top-level class with general beh
 
 [SampleCosmosCore2App.Core/Persistence.cs][9]
 
-<pre>public class Persistence : IDisposable
+```csharp
+public class Persistence : IDisposable
 {
 	private string _databaseId;
 	private Uri _endpointUri;
@@ -245,19 +250,20 @@ To solve this, Persistence will be split into a top-level class with general beh
 			}
 		}
 	}
-}</pre>
-
+}
+```
 And we&#8217;ve exposed access to `Sample` and `LoginUser` data through two properties, which are also referenced during the `EnsureSetupAsync` call (btw: don&#8217;t use a Task.WhenAll for that like I did, bad things happen).
 
 Next, we&#8217;ll stop calling the `EnsureSetupAsync` method on every persistence call and instead call this one time during the setup of the service.
 
 [SampleCosmosCore2App/Startup.cs][10]
 
-<pre>public void ConfigureServices(IServiceCollection services)
+```csharp
+public void ConfigureServices(IServiceCollection services)
 {
 	// ...
 
-	services.AddSingleton<Persistence&gt;((s) =&gt;
+	services.AddSingleton<Persistence>((s) =>
 	{
 		var p = new Persistence(
 			new Uri(Configuration["CosmosDB:URL"]),
@@ -268,8 +274,8 @@ Next, we&#8217;ll stop calling the `EnsureSetupAsync` method on every persistenc
 	});
 
 	// ... auth stuff
-}</pre>
-
+}
+```
 Now the setup for CosmosDB will be called just the one time, instead of on every call where it was from the early experimentation.
 
 The last step is actually using these changes to read and write `LoginUser` and `LoginSession` instances to CosmosDB.
@@ -285,7 +291,8 @@ We have an Interface defined above and the `Persistence` class has been refactor
 
 [Membership/CosmosDBMembership.cs &#8211; RegisterAsync][11]
 
-<pre>public async Task<RegisterResult&gt; RegisterAsync(string userName, string email, string password)
+```csharp
+public async Task<RegisterResult> RegisterAsync(string userName, string email, string password)
 {
 	var user = new LoginUser()
 	{
@@ -307,13 +314,14 @@ We have an Interface defined above and the `Persistence` class has been refactor
 	await SignInAsync(user);
 
 	return RegisterResult.GetSuccess();
-}</pre>
-
+}
+```
 Registration is pretty straightforward. Take the 3 required properties, load them into a `LoginUser` object, persist it, then sign the user in. The one non-obvious piece is the reliance on an `Exception` to detect duplicate Usernames. We&#8217;re going to add a unique constraint to Cosmos DB later to help enforce unique usernames.
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; LoginAsync][12]
 
-<pre>public async Task<LoginResult&gt; LoginAsync(string userName, string password)
+```csharp
+public async Task<LoginResult> LoginAsync(string userName, string password)
 {
 	var user = await _persistence.Users.GetUserByUsernameAsync(userName);
 	if (user == null)
@@ -329,15 +337,16 @@ Registration is pretty straightforward. Take the 3 required properties, load the
 	await SignInAsync(user);
 
 	return LoginResult.GetSuccess();
-}</pre>
-
+}
+```
 We don&#8217;t have a password hash function yet, so for Login we take a username and password to load a `LoginUer` from the database, perform a direct comparison, and sign the user in if it is a match.
 
 These both use the SignInAsync method, which creates a `LoginSession` for the user and uses the Authentication&#8217;s SignIn method for the `Options.AuthenticationType` we configured back in `Startup`:
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; SignInAsync][13]
 
-<pre>private async Task SignInAsync(LoginUser user)
+```csharp
+private async Task SignInAsync(LoginUser user)
 {
 	// key the login to a server-side session id to make it easy to invalidate later
 	var session = new LoginSession()
@@ -350,13 +359,14 @@ These both use the SignInAsync method, which creates a `LoginSession` for the us
 	var identity = new ClaimsIdentity(Options.AuthenticationType);
 	identity.AddClaim(new Claim("sessionId", session.Id));
 	await _context.HttpContext.SignInAsync(new ClaimsPrincipal(identity));
-}</pre>
-
+}
+```
 Behind the scenes, ASP.Net is calling the `SignIn` method on the &#8220;Cookies&#8221; authentication module. The Cookies module will take the ClaimsPrincipal we just passed it and write it as a cookie on the outgoing Response (and then read it back in on subsequent Requests). This is how we&#8217;ll know who the user is later. Which brings us to ValidateLoginAsync, which is called from our custom OnValidatePrincipal logic.
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; ValidateLoginAsync][14]
 
-<pre>public async Task<bool&gt; ValidateLoginAsync(ClaimsPrincipal principal)
+```csharp
+public async Task<bool> ValidateLoginAsync(ClaimsPrincipal principal)
 {
 	var sessionId = principal.FindFirstValue("sessionId");
 	if (sessionId == null)
@@ -371,15 +381,16 @@ Behind the scenes, ASP.Net is calling the `SignIn` method on the &#8220;Cookies&
 	}
 
 	return true;
-}</pre>
-
+}
+```
 We attempt to read the &#8220;sessionId&#8221; claim from the passed Principal and associate it with a saved `LoginSession` in the database, with a basic verification check to make sure the user has not logged out. In the event that we call false, our OnValidatePrincipal call will reject this principal (ensure it&#8217;s not flagged as &#8220;Authenticated&#8221;).
 
 Finally, we have the last step for a user: Logging out.
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; LogoutAsync][15]
 
-<pre>public async Task LogoutAsync()
+```csharp
+public async Task LogoutAsync()
 {
 	await _context.HttpContext.SignOutAsync();
 
@@ -390,8 +401,8 @@ Finally, we have the last step for a user: Logging out.
 		session.LogoutTime = DateTime.UtcNow;
 		await _persistence.Users.UpdateSessionAsync(session);
 	}
-}</pre>
-
+}
+```
 Like the `LoginAsync<code> call, we use <code>SignOut` to sign out of the configured authentication module. I have not specific the `Scheme` here, so this may be signing us out of all the things.
 
 Once we've signed out, we can mark the session as logged out too. This is more for informational purposes than anything else, as we've already revoke the cookie above and wouldn't be able to connect the user back to this session on their next page load.
@@ -404,7 +415,8 @@ The setup logic has two points of interest. The first is that we make sure we st
 
 [SampleCosmosCore2App.Core/Users/UserPersistence.cs][16]
 
-<pre>public class UserPersistence
+```csharp
+public class UserPersistence
 {
 	// ...
 
@@ -424,42 +436,43 @@ The setup logic has two points of interest. The first is that we make sure we st
 		users.Id = USERS_DOCUMENT_COLLECTION_ID;
 		users.UniqueKeyPolicy = new UniqueKeyPolicy()
 		{
-			UniqueKeys = new Collection<UniqueKey&gt;()
+			UniqueKeys = new Collection<UniqueKey>()
 			{
-				new UniqueKey{ Paths = new Collection<string&gt;{ "/Username" } }
+				new UniqueKey{ Paths = new Collection<string>{ "/Username" } }
 			}
 		};
 		await _client.CreateDocumentCollectionIfNotExistsAsync(databaseUri, users);
 	}
 	
 	// ... CRUD methods
-}</pre>
-
+}
+```
 The Sessions collection is a straightforward, 1-line `CreateDocumentCollectionIfNotExistsAsync`, but for the Users we've used a longer form to create the collection so we can define `Username` as a unique key. This is the second half of the logic in the Membership object that prevents users from registering with a duplicate `Username`.
 
 With the setup out of the way, now we can concentrate on supplying the necessary CRUD methods that `CosmosDBMembership` relies on.
 
 [SampleCosmosCore2App.Core/Users/UserPersistence.cs][16]
 
-<pre>public class UserPersistence
+```csharp
+public class UserPersistence
 {
 	// ... ctor, EnsureSetupAsync ...
 
-	public async Task<LoginUser&gt; CreateUserAsync(LoginUser user)
+	public async Task<LoginUser> CreateUserAsync(LoginUser user)
 	{
 		var result = await _client.CreateDocumentAsync(GetUsersCollectionUri(), user, new RequestOptions() { });
-		return JsonConvert.DeserializeObject<LoginUser&gt;(result.Resource.ToString());
+		return JsonConvert.DeserializeObject<LoginUser>(result.Resource.ToString());
 	}
 
-	public async Task<LoginUser&gt; GetUserAsync(string userId)
+	public async Task<LoginUser> GetUserAsync(string userId)
 	{
-		var result = await _client.ReadDocumentAsync<LoginUser&gt;(UriFactory.CreateDocumentUri(_databaseId, USERS_DOCUMENT_COLLECTION_ID, userId));
+		var result = await _client.ReadDocumentAsync<LoginUser>(UriFactory.CreateDocumentUri(_databaseId, USERS_DOCUMENT_COLLECTION_ID, userId));
 		return result.Document;
 	}
 
-	public async Task<LoginUser&gt; GetUserByUsernameAsync(string userName)
+	public async Task<LoginUser> GetUserByUsernameAsync(string userName)
 	{
-		var query = _client.CreateDocumentQuery<LoginUser&gt;(GetUsersCollectionUri(), new SqlQuerySpec()
+		var query = _client.CreateDocumentQuery<LoginUser>(GetUsersCollectionUri(), new SqlQuerySpec()
 		{
 			QueryText = "SELECT * FROM Users U WHERE U.Username = @username",
 			Parameters = new SqlParameterCollection()
@@ -468,19 +481,19 @@ With the setup out of the way, now we can concentrate on supplying the necessary
 		   }
 		});
 		var results = await query.AsDocumentQuery()
-								 .ExecuteNextAsync<LoginUser&gt;();
+								 .ExecuteNextAsync<LoginUser>();
 		return results.FirstOrDefault();
 	}
 
-	public async Task<LoginSession&gt; CreateSessionAsync(LoginSession session)
+	public async Task<LoginSession> CreateSessionAsync(LoginSession session)
 	{
 		var result = await _client.CreateDocumentAsync(GetSessionsCollectionUri(), session);
-		return JsonConvert.DeserializeObject<LoginSession&gt;(result.Resource.ToString());
+		return JsonConvert.DeserializeObject<LoginSession>(result.Resource.ToString());
 	}
 
-	public async Task<LoginSession&gt; GetSessionAsync(string sessionId)
+	public async Task<LoginSession> GetSessionAsync(string sessionId)
 	{
-		var result = await _client.ReadDocumentAsync<LoginSession&gt;(UriFactory.CreateDocumentUri(_databaseId, SESSIONS_DOCUMENT_COLLECTION_ID, sessionId));
+		var result = await _client.ReadDocumentAsync<LoginSession>(UriFactory.CreateDocumentUri(_databaseId, SESSIONS_DOCUMENT_COLLECTION_ID, sessionId));
 		return result.Document;
 	}
 
@@ -490,8 +503,8 @@ With the setup out of the way, now we can concentrate on supplying the necessary
 	}
 
 	// ...
-}</pre>
-
+}
+```
 With two exceptions, these calls are 1-2 line methods to write a document to Cosmos DB or read it. Here are the exceptions:
 
 **CreateUserAsync uses JsonConvert** to deserialize the result after inserting it into Cosmos DB. This is not automatic, but since we are relying on the generated `id` that Cosmos DB assigns our document then we want an object back. The one danger to wtach out for is if we had set some JSON.Net configurations with the `DocumentClient` we would want to use those here too.
@@ -515,7 +528,8 @@ Add a new `AccountController` to the Controllers folder (Right click, Add, Contr
 
 [SampleCosmosCore2App/Controllers/AccountController.cs][18]
 
-<pre>[Route("account")]
+```csharp
+[Route("account")]
 public class AccountController : Controller
 {
 	private ICustomMembership _membership;
@@ -535,7 +549,7 @@ public class AccountController : Controller
 	[HttpPost("register")]
 	[AllowAnonymous]
 	[ValidateAntiForgeryToken]
-	public async Task<IActionResult&gt; RegisterPostAsync(RegisterModel model)
+	public async Task<IActionResult> RegisterPostAsync(RegisterModel model)
 	{
 		if (!ModelState.IsValid)
 		{
@@ -553,43 +567,46 @@ public class AccountController : Controller
 	}
 
 	// ...
-}</pre>
-
+}
+```
 The `GET` call simply returns a View named "Register". Once they fill in this form, it is `POSTed` to `RegisterPostAsync` which verifies the Model is valid, attempts to use our new `RegisterAsync` method, and then directs to configured default path for newly registered and sign-ed in users. If it fails at any point, it directs the user back to the "Register" view with an error in the `ModelState`.
 
 Add a new "Account" folder to "Views", then add a new "Register.cshtml" view to this folder.
 
 [SampleCosmosCore2App/Views/Account/Register.cshtml][19]
 
-<pre>@model SampleCosmosCore2App.Models.Account.RegisterModel
+```html
+@model SampleCosmosCore2App.Models.Account.RegisterModel
+
 @{
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2&gt;Register</h2&gt;
+<h2>Register</h2>
 
-<form asp-action="Register" method="post"&gt;
-    <div asp-validation-summary="ModelOnly" class="text-danger"&gt;</div&gt;
-    <div class="form-group"&gt;
-        <label asp-for="UserName" class="control-label"&gt;</label&gt;
-        <input asp-for="UserName" class="form-control" /&gt;
-        <span asp-validation-for="UserName" class="text-danger"&gt;</span&gt;
-    </div&gt;
-    <div class="form-group"&gt;
-        <label asp-for="Password" class="control-label"&gt;</label&gt;
-        <input asp-for="Password" class="form-control" /&gt;
-        <span asp-validation-for="Password" class="text-danger"&gt;</span&gt;
-    </div&gt;
-    <div class="form-group"&gt;
-        <label asp-for="Email" class="control-label"&gt;</label&gt;
-        <input asp-for="Email" class="form-control" /&gt;
-        <span asp-validation-for="Email" class="text-danger"&gt;</span&gt;
-    </div&gt;
-    <div class="form-group"&gt;
-        <input type="submit" value="Register" class="btn btn-default" /&gt;
-    </div&gt;
-</form&gt;</pre>
+<form asp-action="Register" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="UserName" class="control-label"></label>
+        <input asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Register" class="btn btn-default" />
+    </div>
+</form>
+```
 
 And there we go!
 
@@ -605,7 +622,8 @@ Next up we can follow the same process for wiring in actions for Login GET/POST:
 
 [SampleCosmosCore2App/Controllers/AccountController.cs][20]
 
-<pre>[Route("account")]
+```csharp
+[Route("account")]
 public class AccountController : Controller
 {
 	// ...
@@ -621,7 +639,7 @@ public class AccountController : Controller
 	[HttpPost("login")]
 	[AllowAnonymous]
 	[ValidateAntiForgeryToken]
-	public async Task<IActionResult&gt; LoginPostAsync(LoginModel user,  string returnUrl = null)
+	public async Task<IActionResult> LoginPostAsync(LoginModel user,  string returnUrl = null)
 	{
 		if (!ModelState.IsValid) {
 			ModelState.AddModelError("", "Username or password is incorrect");
@@ -639,8 +657,8 @@ public class AccountController : Controller
 	}
 
 	// ...
-}</pre>
-
+}
+```
 Like the Registration actions, the `GET` simply returns a view, the user enters their information, and the `POST` is validated, sent to our Membership object to create a session (or not), and then the user is redirected to either the passed URL or back to the Login form with an error.
 
 `returnUrl` is provided by the Cookie Authentication module when someone attempts to access a page requiring Authorization and the cookie authentication module challenges them by sending them to this login page.
@@ -649,32 +667,34 @@ Next, create a "Login" view in the Views/Account folder like we did with the "Re
 
 [Views/Account/Login.cshtml][21]
 
-<pre>@model SampleCosmosCore2App.Models.Account.LoginModel
+```html
+@model SampleCosmosCore2App.Models.Account.LoginModel
 
 @{
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2&gt;Login</h2&gt;
+<h2>Login</h2>
 
-<form asp-action="Login" method="post"&gt;
-    <div asp-validation-summary="ModelOnly" class="text-danger"&gt;</div&gt;
-    <div class="form-group"&gt;
-        <label asp-for="UserName" class="control-label"&gt;</label&gt;
-        <input asp-for="UserName" class="form-control" /&gt;
-        <span asp-validation-for="UserName" class="text-danger"&gt;</span&gt;
-    </div&gt;
-    <div class="form-group"&gt;
-        <label asp-for="Password" class="control-label"&gt;</label&gt;
-        <input asp-for="Password" class="form-control" /&gt;
-        <span asp-validation-for="Password" class="text-danger"&gt;</span&gt;
-    </div&gt;
-    <div class="form-group"&gt;
-        <input type="submit" value="Login" class="btn btn-default" /&gt;
-        <a asp-action="Register"&gt;Register</a&gt;
-    </div&gt;
-</form&gt;</pre>
+<form asp-action="Login" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="UserName" class="control-label"></label>
+        <input asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Login" class="btn btn-default" />
+        <a asp-action="Register">Register</a>
+    </div>
+</form>
+```
 
 And there we go, a new login form!
 
@@ -690,13 +710,14 @@ Finally we need a way for the user to logout and a protected endpoint to test ag
 
 [SampleCosmosCore2App/Controllers/AccountController.cs][22]
 
-<pre>public class AccountController : Controller
+```csharp
+public class AccountController : Controller
 {
 	// ...
 
 	[HttpGet("logout")]
 	[Authorize]
-	public async Task<IActionResult&gt; LogoutAsync()
+	public async Task<IActionResult> LogoutAsync()
 	{
 		await _membership.LogoutAsync();
 		return RedirectToAction("login");
@@ -704,14 +725,14 @@ Finally we need a way for the user to logout and a protected endpoint to test ag
 
 	[HttpGet("protected")]
 	[Authorize]
-	public async Task<IActionResult&gt; Protected()
+	public async Task<IActionResult> Protected()
 	{
 		// ... get some session details and return the view
 	}
 
 	// ...
-}</pre>
-
+}
+```
 For the logout, we're using the `LogoutAsync` method that signs out of the authentication module (clearing the cookie) then redirect to the login screen. The "Protected" endpoint has a couple more lines of logic to get soe data from the Membership object and pass it to the view, but an empty View would work just as well (look at the github link above for the full detail if you want it).
 
 Success, that's a fully functional Membership system! With a really poor password strategy.
@@ -742,11 +763,12 @@ Now we just have to make two small changes to implement it during registration a
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs][25]
 
-<pre>public class CosmosDBMembership : ICustomMembership
+```csharp
+public class CosmosDBMembership : ICustomMembership
 {
 	// ...
 
-	public async Task<LoginResult&gt; LoginAsync(string userName, string password)
+	public async Task<LoginResult> LoginAsync(string userName, string password)
 	{
 		var user = await _persistence.Users.GetUserByUsernameAsync(userName);
 		if (user == null)
@@ -767,7 +789,7 @@ Now we just have to make two small changes to implement it during registration a
 	
 	// ...
 	
-	public async Task<RegisterResult&gt; RegisterAsync(string userName, string email, string password)
+	public async Task<RegisterResult> RegisterAsync(string userName, string email, string password)
 	{
 		// CHANGE #2
 		var passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
@@ -782,8 +804,8 @@ Now we just have to make two small changes to implement it during registration a
 	}
 
 	// ...
-}</pre>
-
+}
+```
 `LoginAsync`: replace the string comparison with `BCrypt.Net.BCrypt.Verify`.
 
 `RegisterAsync`: hash the password before populating the `PasswordHash` property.

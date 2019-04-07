@@ -3,6 +3,7 @@ title: Application Event Log for your website
 author: pmch22
 type: post
 date: 2008-12-08T10:17:20+00:00
+ID: 240
 url: /index.php/webdev/webdesigngraphicsstyling/application-event-log-for-your-website/
 views:
   - 8213
@@ -20,7 +21,8 @@ Server.GetLastError() is accessible only at two places – 1. Page\_Error event 
 
 In this article, we’ll trap the unhandled errors in Application_Error event.
 
-<pre><%Import Namespace= “System.Diagnostics”%>
+```csharp
+<%Import Namespace= “System.Diagnostics”%>
 
 void Application_Error(object sender, EventArgs e) 
     { 
@@ -49,11 +51,13 @@ void Application_Error(object sender, EventArgs e)
          
         Session.Abandon();
 
-    }</pre>
-
+    }
+```
 Note in the above code, Server.ClearError() is commented. This brings the customErrors section of the web.config into play. Once the error occurs, the error is logged into the event log and then redirected to a custom error page. Therefore make sure the customErrors section of the web.config file has an entry like this
 
-<pre><customErrors mode= “On” defaultRedirect= “AppError.htm”></customErrors></pre>
+```csharp
+<customErrors mode= “On” defaultRedirect= “AppError.htm”></customErrors>
+```
 
 Continuing with the creation of Eventlog, create a sample page on your site to generate application error and then follow the below steps.
 
@@ -77,13 +81,14 @@ Continuing with the creation of Eventlog, create a sample page on your site to g
 
 The only drawback to create to an application specific event log is that you need admin rights on the web server. If that’s not possible, you can send out an email or write to a log file on the server. Code to send email &#8211;
 
-<pre><%Import System.Web.Mail%>
+```csharp
+<%Import System.Web.Mail%>
  MailMessage  errMail = new MailMessage();
 errMail.To= "ITgroup@company.com";
 errMail.From= "web@company.com"; 
 errMail.Subject = "Application error on website";
 errMail.Body = errorInfo;
 SmtpMail.SmtpServer = "Mailserverip";
-SmtpMai.Send(errMail);</pre>
-
+SmtpMai.Send(errMail);
+```
 Having an application specific event log helps you to view all the errors in one shot and saves you the time of browsing the regular event log and searching errors for your site.

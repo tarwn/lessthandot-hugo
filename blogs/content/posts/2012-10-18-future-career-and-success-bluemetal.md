@@ -3,6 +3,7 @@ title: Future, Career and Success – BlueMetal Architects
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-10-18T12:44:00+00:00
+ID: 1761
 excerpt: 'Every now and then, it’s important to sit back and reflect on what you’ve accomplished over time.  Doing so can be an extremely effective motivator and professional development step to pushing yourself to accomplish more.  Over the last few years, I’ve&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/future-career-and-success-bluemetal/
 views:

@@ -3,6 +3,7 @@ title: Windows 7 and Windows Server 2008 R2 Released To Manufacturing
 author: SQLDenis
 type: post
 date: 2009-07-22T21:54:48+00:00
+ID: 520
 url: /index.php/sysadmins/os/windows/windows-7-and-windows-server-2008-r2-rel/
 views:
   - 5774

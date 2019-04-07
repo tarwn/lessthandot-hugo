@@ -3,6 +3,7 @@ title: Quite a career change
 author: Axel Achten (axel8s)
 type: post
 date: 2013-09-13T08:50:00+00:00
+ID: 2157
 excerpt: |
   Long time since I posted something on this blog but I hope to pick up the pace again. Only the subjects of the post will slightly change.
   Working for a large e-business integrator in Belgium

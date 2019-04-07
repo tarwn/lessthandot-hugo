@@ -3,6 +3,7 @@ title: Replacing sysfiles With sys.database_files
 author: Jes Borland
 type: post
 date: 2011-12-21T11:42:00+00:00
+ID: 1455
 excerpt: "The SQL 2000 virtual table sysfiles, and the corresponding SQL 2005 + compatibility view sys.sysfiles, will be removed in a future version of SQL Server. What's the replacement?"
 url: /index.php/datamgmt/dbprogramming/replacing-sysfiles-with-sys-database_files/
 views:
@@ -26,25 +27,27 @@ We should now be using the catalog view sys.database_files. Here, I&#8217;ll sho
 
 Here are the columns returned when querying sysfiles. 
 
-<pre>USE AdventureWorks2008R2;
+sql
+USE AdventureWorks2008R2;
 GO
 
 SELECT fileid, groupid, size, maxsize, growth, status, perf, name, filename
 FROM sysfiles;
-GO </pre>
-
+GO 
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/sysfiles all columns.JPG?mtime=1324351775"><img alt="" src="/wp-content/uploads/users/grrlgeek/sysfiles all columns.JPG?mtime=1324351775" width="805" height="99" /></a>
 </div>
 
 Moving on, here is the query of sys.sysfiles. 
 
-<pre>USE AdventureWorks2008R2;
+sql
+USE AdventureWorks2008R2;
 GO
 
 SELECT fileid, groupid, size, maxsize, growth, status, perf, name, filename
-FROM sys.sysfiles;</pre>
-
+FROM sys.sysfiles;
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/sys.sysfiles all columns.JPG?mtime=1324351775"><img alt="" src="/wp-content/uploads/users/grrlgeek/sys.sysfiles all columns.JPG?mtime=1324351775" width="813" height="95" /></a>
 </div>
@@ -53,12 +56,13 @@ This query&#8217;s result is the same as the original virtual table.
 
 Now, the new hotness, sys.database_files. 
 
-<pre>USE AdventureWorks2008R2;
+sql
+USE AdventureWorks2008R2;
 GO
 
 SELECT *
-FROM sys.database_files;</pre>
-
+FROM sys.database_files;
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/sys.database_files all columns.JPG?mtime=1324351775"><img alt="" src="/wp-content/uploads/users/grrlgeek/sys.database_files all columns.JPG?mtime=1324351775" width="1093" height="118" /></a>
 </div>
@@ -77,19 +81,23 @@ Let&#8217;s look at a couple of useful queries using this new view.
 
 A query to determine file size (with a little help from Bob Pusateri ([twitter][3] | [blog][4])) is: 
 
-<pre>SELECT fg.data_space_id AS FGID,
+sql
+SELECT fg.data_space_id AS FGID,
    (f.file_id) AS FileCount,
    ROUND(CAST((f.size) AS FLOAT)/128,2) AS Reserved_MB,
    ROUND(CAST((FILEPROPERTY(f.name,'SpaceUsed')) AS FLOAT)/128,2) AS Used_MB,
    ROUND((CAST((f.size) AS FLOAT)/128)-(CAST((FILEPROPERTY(f.name,'SpaceUsed'))AS FLOAT)/128),2) AS Free_MB
 FROM sys.filegroups fg
-	LEFT JOIN sys.database_files f ON f.data_space_id = fg.data_space_id</pre>
+	LEFT JOIN sys.database_files f ON f.data_space_id = fg.data_space_id
+```
 
 Another useful query, especially as it related to what I was doing, is to determine what filegroup a file is on. 
 
-<pre>SELECT FG.name as FilegroupName, F.file_id, F.name as [FileName] 
+sql
+SELECT FG.name as FilegroupName, F.file_id, F.name as [FileName] 
 FROM sys.database_files F 
-	INNER JOIN sys.filegroups FG ON FG.data_space_id = F.data_space_id;</pre>
+	INNER JOIN sys.filegroups FG ON FG.data_space_id = F.data_space_id;
+```
 
 As Microsoft moves away from the old virtual tables and compatibility views, make sure your T-SQL is also up to date. It&#8217;s a good idea to review scripts that have been in use for some time, and see if they can be updated.
 

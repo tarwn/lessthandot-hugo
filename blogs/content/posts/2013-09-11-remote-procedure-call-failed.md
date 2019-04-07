@@ -3,6 +3,7 @@ title: SQL Server Configuration Manager – Remote Procedure Call Failed
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-09-11T16:53:00+00:00
+ID: 2155
 excerpt: 'If you find a need to install multiple version of SQL Server on a laptop of server, you are bound to run into a problem with the MMC snap for configuring the instances.  One of the most common, the remote procedure call failed.  This error is simply due&hellip;'
 url: /index.php/datamgmt/dbadmin/remote-procedure-call-failed/
 views:

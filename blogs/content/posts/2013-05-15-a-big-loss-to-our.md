@@ -3,6 +3,7 @@ title: A big loss to our community
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-05-15T13:00:00+00:00
+ID: 2085
 excerpt: 'Today was a very sad day for me. I received news that a dear friend, Rose Waters @SQLRose, whom I had the pleasure of working with, passed away yesterday. Rose was an all-around great and very intelligent, hard working person. Her energy in wanting to l&hellip;'
 url: /index.php/itprofessionals/other/a-big-loss-to-our/
 views:

@@ -3,6 +3,7 @@ title: Applying Kanban to IT Processes (Part 1)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2009-12-01T12:44:01+00:00
+ID: 618
 excerpt: 'This is the first article in a multi-article set that describes the basics of Kanban and explores applying Kanban to IT Processes. Part one provides a basic overview of Kanban and how it is used in manufacturing. The remaining parts explore sample scena&hellip;'
 url: /index.php/itprofessionals/itservicemanagement/applying-kanban-to-it-processes-part-1/
 views:
@@ -38,13 +39,13 @@ At it&#8217;s most basic, Kanban is a signaling system that tells _earlier_ step
 
 
 <center>
-  <img src="http://www.tiernok.com/LTDBlog/KanbanSimplePic.png" alt="Simple Kanban Example" title="Simple Kanban Example" />
+  <img src="http://tiernok.com/LTDBlog/KanbanSimplePic.png" alt="Simple Kanban Example" title="Simple Kanban Example" />
 </center>
 
 In a manufacturing process a customer order is converted into one or more cards that represent the production requirement to fulfill the order. Each card or symbol defines the product to be produced and quantity needed. The card is given to the associate responsible for managing the work center that will fulfill the production request. If the associate has a local sign or visual board to display the orders queue or available capacity, they will place the received card in the next empty slot, otherwise they update the board for the area. Depending on the complexity of the process, the receipt or execution of the Kanban signal may trigger additional signals back to prior steps in the process or to personnel responsible for bringing the correct materials to the production step. Each step has a limited number of slots on their board that defines the maximum number of cards that can be present at a given point in time. This Kanban limit keeps the amount of work and in process items constrained and prevents incomplete work or requests from piling up.
 
 <center>
-  <img src="http://www.tiernok.com/LTDBlog/KanbanCards.png" alt="Kanban Cards" title="Kanban Cards" />
+  <img src="http://tiernok.com/LTDBlog/KanbanCards.png" alt="Kanban Cards" title="Kanban Cards" />
 </center>
 
 Limiting the amount of in process work to a small, maintainable number allows us to continue to fully utilize our resources (in this case machinery and operators) while reducing the amount of work that is partially completed and waiting to be finished. The application of Kanban limits to a process helps us start reducing the variability in the duration of producing a product, as well as remove the necessity (and temptation) to reschedule the flow or priority of work at each individual step. Though this may seem like it would slow response times when a priority order comes in, this actually speeds up processing because we don&#8217;t have to rearrange our resources to drop 47 outstanding, partially started tasks. We simply slot the priority order into the queue at the last step (when a spot is available) and let the signal flow back through the previous steps in a standard fashion. Since we have a limited amount of work in progress already, we are able to handle new requests quickly without interrupting items we have already promised.
@@ -56,13 +57,13 @@ By removing backlogged queues and re-prioritization between each step we have re
 Visualizing the requests at each &#8216;station&#8217; using a physical board is a good way to communicate across the group and manage your Kanban. If your board only has 3 physical areas or slots for &#8216;cards&#8217; then your not going to take more than 3 requests. People at later and earlier steps can see progress being made as well as excess capacity (ie, nothing to do) at your step. The board is not only a method to manage your tasks but also an instant communications tool, allowing the area to focus more on doing the work and less on creating reports or filling in metric scorecards.
 
 <center>
-  <img src="http://www.tiernok.com/LTDBlog/InitialExampleBoard.png" alt="Initial Example Board" title="Initial Example Board" /><br /> Finishing 2 Units/Day &#8211; ~14 days to produce new order<br />
+  <img src="http://tiernok.com/LTDBlog/InitialExampleBoard.png" alt="Initial Example Board" title="Initial Example Board" /><br /> Finishing 2 Units/Day &#8211; ~14 days to produce new order<br />
 </center>
 
 Another major benefit from Kanban methods will become apparent as the initial visual board is created. Besides driving the creation of a clear definition of the operations or production steps, the initial population of the board with current requests and WIP will start to make process bottlenecks evident. As time progresses and the kanban system forces you to reduce this backlog, the bottlenecks will continue to become more obvious, showing areas where direct improvement will affect the delivery time for the whole process. In many systems, when a previous step goes dry in a Kanban system the personnel from that step will start to move forward to help product clear the backlogged step. Simple rules or rearrangement of current staff can continue to give performance gains, as the board displays where slowdowns and hiccups occur as well as potential areas that are frequently left without work.
 
 <center>
-  <img src="http://www.tiernok.com/LTDBlog/KanbanExampleBoard.png" alt="Example Board" title="Example Board" /><br /> Finishing 2 Units/Day &#8211; ~5 days to produce new order<br />
+  <img src="http://tiernok.com/LTDBlog/KanbanExampleBoard.png" alt="Example Board" title="Example Board" /><br /> Finishing 2 Units/Day &#8211; ~5 days to produce new order<br />
 </center>
 
 The manufacturing community has hundreds of examples of visual boards, but for the purpose of the article I&#8217;m going to point out a couple links from Agile software development articles. Kanban boards do not have to be expensive and, in my opinion, should always start out as a physical board before diving into a software solution (if ever).

@@ -3,6 +3,7 @@ title: SSRS Properties – Background Image
 author: Jes Borland
 type: post
 date: 2013-01-30T12:26:00+00:00
+ID: 1951
 excerpt: The purpose of this property is to allow you to show an image in the background of a report, table, list, and more.
 url: /index.php/datamgmt/ssrs/ssrs-properties-background-image/
 views:

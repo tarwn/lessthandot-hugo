@@ -3,6 +3,7 @@ title: Do not truncate your ldf files!
 author: Ted Krueger (onpnt)
 type: post
 date: 2008-11-20T14:24:20+00:00
+ID: 212
 excerpt: "You're the perfect DBA.  You have a small environement but critical none the less.  You've setup your disaster recovery plans based on a backup schedule and solid plan.  You've gone as far as to copy backups to external disk along with the tape backups&hellip;"
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/do-not-truncate-your-ldf-files/
 views:
@@ -23,15 +24,17 @@ So lets watch it happen
 
 create a db 
 
-<pre>CREATE DATABASE [dr_db] ON PRIMARY 
+sql
+CREATE DATABASE [dr_db] ON PRIMARY 
 ( NAME = N'dr_db', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL10.LKF00TKSQL08MSSQLDATAdr_db.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
 LOG ON 
 ( NAME = N'dr_db_log', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL10.LKF00TKSQL08MSSQLDATAdr_db_log.ldf' , SIZE = 1024KB , MAXSIZE = 102400KB , FILEGROWTH = 1%)
-GO</pre>
-
+GO
+```
 Here is what we&#8217;ll do then. Run these line for line
 
-<pre>BACKUP DATABASE dr_db TO DISK='D:dr_db_full.bak' WITH INIT
+sql
+BACKUP DATABASE dr_db TO DISK='D:dr_db_full.bak' WITH INIT
 BACKUP LOG dr_db TO DISK='D:db_dr_log1.trn'
 CREATE TABLE dr_db.dbo.tbl (col1 int)
 INSERT INTO dr_db.dbo.tbl VALUES (1)
@@ -50,8 +53,8 @@ INSERT INTO dr_db.dbo.tbl VALUES (8)
 INSERT INTO dr_db.dbo.tbl VALUES (9)
 INSERT INTO dr_db.dbo.tbl VALUES (10)
 INSERT INTO dr_db.dbo.tbl VALUES (11)
-BACKUP LOG dr_db TO DISK='D:db_dr_log5.trn'</pre>
-
+BACKUP LOG dr_db TO DISK='D:db_dr_log5.trn'
+```
 Pretty straight forward. You see the error come up right after the truncate\_only. What you&#8217;ve done is basically kill your recovery to any point in time after the log backup just prior to the truncate\_only. Luckily this is gone in SQL Server 2008 because you have no idea how many DBAs did this.
 
 There is an option to get some disk back
@@ -62,7 +65,8 @@ You can see a shrinkfile in the same situation below work out as such
 
 Same database and we&#8217;ll create another named dr_db2
 
-<pre>BACKUP DATABASE dr_db TO DISK='D:dr_db_full.bak' WITH INIT
+sql
+BACKUP DATABASE dr_db TO DISK='D:dr_db_full.bak' WITH INIT
 BACKUP LOG dr_db TO DISK='D:db_dr_log1.trn'
 CREATE TABLE dr_db.dbo.tbl (col1 int)
 INSERT INTO dr_db.dbo.tbl VALUES (1)
@@ -80,22 +84,24 @@ INSERT INTO dr_db.dbo.tbl VALUES (8)
 INSERT INTO dr_db.dbo.tbl VALUES (9)
 INSERT INTO dr_db.dbo.tbl VALUES (10)
 INSERT INTO dr_db.dbo.tbl VALUES (11)
-BACKUP LOG dr_db TO DISK='D:db_dr_log5.trn'</pre>
-
+BACKUP LOG dr_db TO DISK='D:db_dr_log5.trn'
+```
 Now let&#8217;s see a RESTORE
 
-<pre>RESTORE DATABASE [dr_db2] FROM DISK = N'D:dr_db_full.bak' WITH FILE = 1, MOVE N'dr_db' TO N'D:SQLDATASQLSYSDATAMSSQL.1MSSQLDATAdr_db2.mdf', MOVE N'dr_db_log' TO N'D:SQLDATASQLSYSDATAMSSQL.1MSSQLDATAdr_db2_log.ldf', NORECOVERY, NOUNLOAD, REPLACE, STATS = 10
+sql
+RESTORE DATABASE [dr_db2] FROM DISK = N'D:dr_db_full.bak' WITH FILE = 1, MOVE N'dr_db' TO N'D:SQLDATASQLSYSDATAMSSQL.1MSSQLDATAdr_db2.mdf', MOVE N'dr_db_log' TO N'D:SQLDATASQLSYSDATAMSSQL.1MSSQLDATAdr_db2_log.ldf', NORECOVERY, NOUNLOAD, REPLACE, STATS = 10
 RESTORE DATABASE [dr_db2] FROM DISK = N'D:dr_db_diff1.bak' WITH NORECOVERY
 RESTORE LOG [dr_db2] FROM DISK = N'D:db_dr_log2.trn' WITH NORECOVERY
 
 RESTORE LOG [dr_db2] FROM DISK = N'D:db_dr_log4.trn' WITH NORECOVERY
 RESTORE LOG [dr_db2] FROM DISK = N'D:db_dr_log5.trn' WITH NORECOVERY
-RESTORE DATABASE dr_db2 WITH RECOVERY</pre>
-
+RESTORE DATABASE dr_db2 WITH RECOVERY
+```
 Let&#8217;s test it to see if my &#8220;tbl&#8221; table has data from 1 to 11
 
-<pre>SELECT * FROM tbl</pre>
-
+sql
+SELECT * FROM tbl
+```
 And it does 🙂 Now you&#8217;re a happy DBA
 
 Also if you have log shipping setup and you trunc that gets fun. Next entry I want to go into is using the COPY_ONLY which is based on another LSN topic while having log shipping and remote/local recovery points. This landscape is fun to setup and it may give you ideas on how you can quickly recover data and or from a disaster.

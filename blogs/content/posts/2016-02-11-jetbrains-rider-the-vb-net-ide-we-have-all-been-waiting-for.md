@@ -3,6 +3,7 @@ title: Jetbrains rider the VB.Net IDE we have all been waiting for
 author: Christiaan Baes (chrissie1)
 type: post
 date: 2016-02-11T10:19:22+00:00
+ID: 4356
 url: /index.php/uncategorized/jetbrains-rider-the-vb-net-ide-we-have-all-been-waiting-for/
 views:
   - 1882

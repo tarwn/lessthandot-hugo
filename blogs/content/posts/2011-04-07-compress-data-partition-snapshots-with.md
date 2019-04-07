@@ -3,6 +3,7 @@ title: Compress Data Partition Snapshots with SSIS – SQL University
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-07T10:38:00+00:00
+ID: 1106
 excerpt: 'This week at SQL University we’re talking about Performance Tuning.  Performance tuning SQL Server means just about anything that increases the availability of data to the client requesting it.  This could be anything from an index to a team configurati&hellip;'
 url: /index.php/datamgmt/dbadmin/compress-data-partition-snapshots-with/
 views:
@@ -39,12 +40,15 @@ SSIS is made to move data.  Andy Leonard does a great job of saying that and [s
 
 We will test off a merge replication publication named Prescriptions.  This will be one table and based on SUSER_SNAME for the data partition.  This table can be created from the script below.
 
-<pre>CREATE TABLE [dbo].[tblPrescriptions](
+sql
+CREATE TABLE [dbo].[tblPrescriptions](
 	[PresID] [int] NULL,
 	[UserCreate] [varchar](30) NULL,
 	[DrugID] [int] NULL
 ) ON [PRIMARY]
-GO</pre>
+GO
+```
+
 
 The filter on the table is, WHERE [UserCreate] = suser_sname()
 
@@ -124,7 +128,8 @@ To monitor the status of the job, another script task will be used.  This could
 
 Add the next script task and connect it to the previous SQL task.  Name the script task, Monitor job status.  Add the JobID variable to the ReadOnlyVariables and use the following code for monitoring the job status.
 
-<pre>public void Main()
+```csharp
+public void Main()
         {
             SqlConnection conn = new SqlConnection();
             DateTime current = System.DateTime.Now;
@@ -159,7 +164,9 @@ Add the next script task and connect it to the previous SQL task.  Name the scr
             Dts.TaskResult = (int)ScriptResults.Success;
         }
     }
-}</pre>
+}
+```
+
 
 The code above has a Thread.Sleep call in it.  This is due to the script task being called so quickly after the sp\_start\_job that the job more than likely would not actually be started yet.  In order to work around this the thread is put to rest for 5 seconds to give it time.  This could be a much more logical method of testing the start or pending status.  This worked well for our example.
 
@@ -171,14 +178,17 @@ Once the monitor is completed and the jobs executed, the snapshots are created a
 
 In order to validate the folders, add a script task named Check folder availability and connect to the previous SQL task.  Add the DynoDestination variable as a ReadOnly Variable and use the following code to validate and create, if needed, directory.
 
-<pre>public void Main()
+```csharp
+public void Main()
         {
             if(!Directory.Exists(Dts.Variables["DynoDestination"].Value.ToString()))
             {
                 Directory.CreateDirectory(Dts.Variables["DynoDestination"].Value.ToString());
             }
             Dts.TaskResult = (int)ScriptResults.Success;
-        }</pre>
+        }
+```
+
 
 Next, add a File System Task named Move snapshot to the partition loop and connect the directory validation script task as success precedence.  For the source and destination of the file system task, use the variables as follows.
 

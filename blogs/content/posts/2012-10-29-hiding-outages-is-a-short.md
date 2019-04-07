@@ -3,6 +3,7 @@ title: Hiding Outages is a Short Term Game
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-10-29T17:32:00+00:00
+ID: 1772
 excerpt: "5:20 PM on Saturday night, looking for the correct size air filter at the local superstore. My phone dings and chirps, as I receive almost simultaneous email and twitter alerts; our production application can't talk to it's database. As a SaaS company, it rolls downhill. An unexpected outage with our application means an unexpected service outage for our customers. Time to head home and start troubleshooting."
 url: /index.php/itprofessionals/itservicemanagement/hiding-outages-is-a-short/
 views:

@@ -3,6 +3,7 @@ title: Applying Kanban to IT Processes (Part 3)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2009-12-15T15:14:00+00:00
+ID: 650
 url: /index.php/itprofessionals/itservicemanagement/applying-kanban-to-it-processes-part-3/
 views:
   - 21602

@@ -3,6 +3,7 @@ title: SSMS Tools PACK, Something Every SQL Server Developer That Uses SSMS Shou
 author: SQLDenis
 type: post
 date: 2009-08-30T08:32:00+00:00
+ID: 546
 excerpt: |
   This post was already published yesterday, someone deleted it by mistake so I had to recreate it...sorry for that (and thanks for google cache  :-))
   
@@ -63,13 +64,15 @@ Download SSMS Tools PACK here: <http://www.ssmstoolspack.com/Download.aspx>
 
 After it is installed create this table
 
-<pre>CREATE TABLE Test (ID INT PRIMARY KEY IDENTITY,
+sql
+CREATE TABLE Test (ID INT PRIMARY KEY IDENTITY,
                     LastName VARCHAR(40) not null,
                     FirstName VARCHAR(40) not null,
                     MiddleInitial CHAR(1)  null,
                     Salutation VARCHAR(10) null,
                     InsertedDate DATETIME not null,
-                    LastUpdatedDate DATETIME not null)</pre>
+                    LastUpdatedDate DATETIME not null)
+```
 
 Now from the menu select SSMS Tools&#8211;>CRUD Generator&#8211;>Options (see pic below)
 
@@ -91,7 +94,8 @@ I like to prefix my procs with pr instead of usp_ (See pic below)
 
 You can customize how the procs will be generated, so for example the INSERT proc template looks like this
 
-<pre>IF OBJECT_ID('[|schema|].[|procName|]') IS NOT NULL
+sql
+IF OBJECT_ID('[|schema|].[|procName|]') IS NOT NULL
 BEGIN
     DROP PROC [|schema|].[|procName|]
 END
@@ -122,7 +126,8 @@ AS
     -- End Return Select <- do not remove
                
     COMMIT
-GO</pre>
+GO
+```
 
 As you can see I added a comment block there that has my name and the initial version number. Having all your developers use a tool like this is great because you will have all the same looking procs and don&#8217;t have to worry that some people use @Error or @ErrorCode or @ErrorID. You just modify the template to have the error checking that you have standardized upon and you are done
 
@@ -138,7 +143,8 @@ Right click on the table you created, select SSMS Tools and then Create CRUD (Se
 
 The following code will be generated
 
-<pre>USE [Test];
+sql
+USE [Test];
 GO
  
 IF OBJECT_ID('[dbo].[prTestSelect]') IS NOT NULL
@@ -273,8 +279,9 @@ AS
 GO
  
 ----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------</pre>
+----------------------------------------------------------------------------------------
 
+```
 As you can see that is a huge time saver, you can of course customize it so that it conforms to your style guide.
 
 Don&#8217;t forget to thank Mladen Prajdi&#263; on twitter: <http://twitter.com/MladenPrajdic> or to donate if this tool is useful to you
@@ -296,5 +303,5 @@ Don&#8217;t forget to thank Mladen Prajdi&#263; on twitter: <http://twitter.com/
  [11]: http://www.ssmstoolspack.com/Features.aspx#RCS
  [12]: http://www.ssmstoolspack.com/Features.aspx#CRUD
  [13]: http://www.ssmstoolspack.com/Features.aspx#NQT
- [14]: http://forum.lessthandot.com/viewforum.php?f=17
- [15]: http://forum.lessthandot.com/viewforum.php?f=22
+ [14]: http://forum.ltd.local/viewforum.php?f=17
+ [15]: http://forum.ltd.local/viewforum.php?f=22

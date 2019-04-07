@@ -3,6 +3,7 @@ title: Goals for 2010 (and Beyond!)
 author: Alex Ullrich
 type: post
 date: 2010-01-21T06:00:00+00:00
+ID: 685
 url: /index.php/itprofessionals/ethicsit/goals-for-2010-and-beyond/
 views:
   - 3504

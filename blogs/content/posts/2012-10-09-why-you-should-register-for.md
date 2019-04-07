@@ -3,6 +3,7 @@ title: Why you should register for SQL Server Days 2012
 author: Axel Achten (axel8s)
 type: post
 date: 2012-10-09T11:54:00+00:00
+ID: 1747
 excerpt: 'On 19 and 20 November, the annual SQL Server Days will take place again. This 2 day event organized by the Belgian SQL Server User Group is the event for all people working with MS SQL Server in Belgium (others are welcome too). From beginner to expert,&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/why-you-should-register-for/
 views:

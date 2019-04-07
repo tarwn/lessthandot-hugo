@@ -3,6 +3,7 @@ title: Contained Databases, Temporary Tables and Collations
 author: Axel Achten (axel8s)
 type: post
 date: 2012-03-27T11:54:00+00:00
+ID: 1579
 excerpt: "In SQL Server 2012 we now can have Contained Databases. To be precise we now can have partially Contained Databases. The complete definition is found in the MSDN Database. In short a Contained Database holds it's configuration and security information s&hellip;"
 url: /index.php/datamgmt/dbprogramming/mssqlserver/contained-databases-temptables-and-their/
 views:
@@ -22,8 +23,10 @@ In SQL Server 2012 we now can have Contained Databases. To be precise we now can
   
 First things first, check the Collation settings of the server and tempdb:
 
-<pre>SELECT SERVERPROPERTY('collation'), DATABASEPROPERTYEX('tempdb','collation')
-GO</pre>
+sql
+SELECT SERVERPROPERTY('collation'), DATABASEPROPERTYEX('tempdb','collation')
+GO
+```
 
 In my case the server en tempdb Collation are the same, Case-Insensitive and Accent-Sensitive:
 
@@ -33,13 +36,16 @@ In my case the server en tempdb Collation are the same, Case-Insensitive and Acc
 
 To start I create a database with a different Collation than the server default, in my case Case-Sensitive:
 
-<pre>CREATE DATABASE NotContainedDB
+sql
+CREATE DATABASE NotContainedDB
 	COLLATE SQL_Latin1_General_CP1_CS_AS
-GO</pre>
+GO
+```
 
 From within the new database I create a regular and a Temporary Table and insert a value in it:
 
-<pre>USE NotContainedDB
+sql
+USE NotContainedDB
 GO
 
 CREATE TABLE NotContaintedData (
@@ -59,15 +65,18 @@ GO
 
 INSERT INTO #NotContaintedTempData
 	VALUES ('CapitalData')
-GO</pre>
+GO
+```
 
 Now if we just write a little query to compare the values in both tables:
 
-<pre>SELECT * FROM 
+sql
+SELECT * FROM 
 	NotContaintedData NCD
 	INNER JOIN #NotContaintedTempData NCTD
 	ON NCD.NCDValue = NCTD.NCTDValue
-GO</pre>
+GO
+```
 
 We see that SQL Server is unable to compare the Case-Sensitive and Case-Insensitive data:
 
@@ -77,21 +86,26 @@ We see that SQL Server is unable to compare the Case-Sensitive and Case-Insensit
 
 This behaviour is expected. So will it be the same with a Contained Database? To be able to test it we first have to enable the usage of Contained Databases:
 
-<pre>SP_CONFIGURE 'contained database authentication', 1
+sql
+SP_CONFIGURE 'contained database authentication', 1
 GO
 RECONFIGURE WITH OVERRIDE
-GO</pre>
+GO
+```
 
 Now we can create a Contained Database, note that we can only use PARTIAL and the database is created with a different Collation than the server default:
 
-<pre>CREATE DATABASE ContainedDB
+sql
+CREATE DATABASE ContainedDB
 	CONTAINMENT = PARTIAL
 	COLLATE SQL_Latin1_General_CP1_CS_AS
-GO</pre>
+GO
+```
 
 Now I create simular tables to the ones in the noncontained database:
 
-<pre>USE ContainedDB
+sql
+USE ContainedDB
 GO
 
 CREATE TABLE ContaintedData (
@@ -111,15 +125,18 @@ GO
 
 INSERT INTO #ContaintedTempData
 	VALUES ('CapitalData')
-GO</pre>
+GO
+```
 
 If we now run the query where both values are compared:
 
-<pre>SELECT * FROM 
+sql
+SELECT * FROM 
 	ContaintedData CD
 	INNER JOIN #ContaintedTempData CTD
 	ON CD.CDValue = CTD.CTDValue
-GO</pre>
+GO
+```
 
 We get a resultset:
 
@@ -129,8 +146,10 @@ We get a resultset:
 
 So what does this means? Is the Temporary Table created in the Contained Database itself or is it stored in tempdb with the Collation of the Contained Database? When you execute the following query in both databases you&#8217;ll find the answer:
 
-<pre>SP_HELP #ContaintedTempData
-GO</pre>
+sql
+SP_HELP #ContaintedTempData
+GO
+```
 
 The query only works when executed from tempdb. So the Temporary Table is created in tempdb and in the results of the query you can see that the table is created with the Collation of the Contained Database:
 

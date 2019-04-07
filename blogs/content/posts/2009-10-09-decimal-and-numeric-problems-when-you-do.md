@@ -3,6 +3,7 @@ title: Decimal and Numeric problems when you don’t specify precision and scale
 author: George Mastros (gmmastros)
 type: post
 date: 2009-10-09T11:24:21+00:00
+ID: 581
 url: /index.php/datamgmt/datadesign/decimal-and-numeric-problems-when-you-do/
 views:
   - 15496
@@ -16,13 +17,15 @@ When you don&#8217;t specify the precision and scale for your decimal data types
 
 For example:
 
-<pre>Declare @Blah Decimal  
+sql
+Declare @Blah Decimal  
 
 Set @Blah = 65.00  
   
 SELECT SQL_VARIANT_PROPERTY(@Blah, 'BaseType') AS [Base Type],  
 	SQL_VARIANT_PROPERTY(@Blah, 'Precision') AS [PRECISION],  
-	SQL_VARIANT_PROPERTY(@Blah, 'Scale') AS [Scale]</pre>
+	SQL_VARIANT_PROPERTY(@Blah, 'Scale') AS [Scale]
+```
 
 When you run the above code, you will see:
   
@@ -34,4 +37,5 @@ As you can see, the default precision is 18 and the scale is 0. Most developers 
                ------------    --------------------------  -------------------------
 Decimal(18,0)       9            -999,999,999,999,999,999    999,999,999,999,999,999
 bigint              8          –9,223,372,036,854,775,808  9,223,372,036,854,775,807
-int                 4                      –2,147,483,648              2,147,483,647</pre>
+int                 4                      –2,147,483,648              2,147,483,647
+</pre>

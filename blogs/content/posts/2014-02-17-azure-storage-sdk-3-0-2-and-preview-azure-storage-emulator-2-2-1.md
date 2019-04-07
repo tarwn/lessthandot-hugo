@@ -3,6 +3,7 @@ title: Azure Storage SDK 3.0.2 and Preview Azure Storage Emulator 2.2.1
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-02-17T16:35:56+00:00
+ID: 2401
 url: /index.php/enterprisedev/cloud/azure/azure-storage-sdk-3-0-2-and-preview-azure-storage-emulator-2-2-1/
 views:
   - 9858

@@ -3,6 +3,7 @@ title: Kaspersky Web Site Hacked With SQL Injection, How Embarrassing Is This?
 author: SQLDenis
 type: post
 date: 2009-02-10T12:50:57+00:00
+ID: 322
 url: /index.php/datamgmt/datadesign/kaspersky-web-site-hacked-with-sql-injec/
 views:
   - 9533

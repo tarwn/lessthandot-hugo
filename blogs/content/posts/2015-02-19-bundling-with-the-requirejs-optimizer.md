@@ -3,6 +3,7 @@ title: Bundling with the RequireJS Optimizer
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2015-02-19T11:50:58+00:00
+ID: 3171
 url: /index.php/webdev/bundling-with-the-requirejs-optimizer/
 views:
   - 2747
@@ -51,13 +52,15 @@ tools/
    r.js
    ... my config will go here ...
 js-built/ 
-   ... bundle + minified files will be created here ...</pre>
+   ... bundle + minified files will be created here ...
+</pre>
 
 This project also has some test files mixed in both the lib folder and a parallel test folder, which we want to exclude from processing at all (on a larger project this would be going through a build process, no point eating up CPU time minifying files that will never go to production).
 
 You can feed the optimizer either command-line options or an options file, I suggest putting everything in a configuration file for repeatability (and readability).
 
-<pre>{
+```javascript
+{
     appDir: '../town/js',
     baseUrl: 'src',
     paths: {
@@ -71,8 +74,8 @@ You can feed the optimizer either command-line options or an options file, I sug
             include: ['app', 'townViewModel']
         }
     ]
-}</pre>
-
+}
+```
 The optimizer produces a new &#8220;app.js&#8221; file for me in the js-built folder and I can copy that over my existing source file. Notice how I did not have to define every single file, the optimizer will take the two modules in the &#8220;include&#8221; and trace all of their dependencies for me. There is also an option to exclude individual files or other defined bundles.
 
 Config Translation:

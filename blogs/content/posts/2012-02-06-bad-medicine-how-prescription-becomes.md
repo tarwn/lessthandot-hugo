@@ -3,6 +3,7 @@ title: Bad Medicine – How Prescription Becomes a Problem in User Stories
 author: Alex Ullrich
 type: post
 date: 2012-02-07T01:30:00+00:00
+ID: 1500
 excerpt: "For almost as long as I've been at my current job, we've been pushing for some kind of acceptance criteria from our QA group, both to serve as a contract for what we are estimating and to make the handoff of stories from dev to QA smoother.  With the mo&hellip;"
 url: /index.php/itprofessionals/ethicsit/bad-medicine-how-prescription-becomes/
 views:

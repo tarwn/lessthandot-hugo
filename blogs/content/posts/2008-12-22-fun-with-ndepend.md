@@ -3,6 +3,7 @@ title: Fun With NDepend
 author: Alex Ullrich
 type: post
 date: 2008-12-22T12:24:12+00:00
+ID: 244
 url: /index.php/desktopdev/mstech/fun-with-ndepend/
 views:
   - 6114
@@ -29,22 +30,27 @@ My favorite feature (by far) in working on this project was its&#8217; &#8220;Co
 
 An example query would look something like this:
 
-<pre>// <Name>Most Complex Methods used by Type X</Name>
+```csharp
+// <Name>Most Complex Methods used by Type X</Name>
 SELECT TOP 10 METHODS 
 WHERE IsUsedBy "AssemblyX.NamespaceY.TypeZ" 
-ORDER BY CyclomaticComplexity DESC</pre>
+ORDER BY CyclomaticComplexity DESC
+```
 
 In a larger project, you can use the FROM clause to limit what you bring back to methods from a particular assembly or namespace, like so:
 
-<pre>// <Name>Most Complex Methods from Assembly Q used by Type X</Name>
+```csharp
+// <Name>Most Complex Methods from Assembly Q used by Type X</Name>
 SELECT TOP 10 METHODS 
 FROM ASSEMBLIES "AssemblyQ"
 WHERE IsUsedBy "AssemblyX.NamespaceY.TypeZ" 
-ORDER BY CyclomaticComplexity DESC</pre>
+ORDER BY CyclomaticComplexity DESC
+```
 
 Another cool thing about CQL is the ability to add constraints. So you could set it up to be warned whenever you run analysis if you had a method with over 200 lines of code, or methods with excessive complexity and an insufficient number of comments. Here is an example of a constraint that ships with NDepend, meant to warn the user if any fields break encapsulation.
 
-<pre>// <Name>Fields should be declared as private</Name>
+```csharp
+// <Name>Fields should be declared as private</Name>
 WARN IF Count > 0 IN SELECT TOP 10 FIELDS WHERE 
  !IsPrivate AND 
  // These conditions filter cases where fields doesn't represent state that should be encapsulated. 
@@ -53,7 +59,8 @@ WARN IF Count > 0 IN SELECT TOP 10 FIELDS WHERE
  !IsSpecialName AND 
  !IsInitOnly AND 
  !IsLiteral AND 
- !IsEnumValue</pre>
+ !IsEnumValue
+```
 
 As I think these few examples show, this CQL is very intuitive, and I really recommend checking it out if you get a chance. Even being quite the SQL junkie myself, I found it hard to find anything to complain about. I especially liked the visual display of the query results. Basically in the NDepend window there is a rectangle filled with unevenly sized blocks. Each block represents a field or method (depending what you are looking at) and they form larger blocks representing types. The blocks can be sized based on different attributes like number of lines of code, or number of efferent couplings. Below is a screenshot (from NDepend&#8217;s website) showing what this looks like:
 
@@ -67,5 +74,5 @@ When all is said and done, I&#8217;ve really come to love, and even depend on ND
  [2]: http://www.red-gate.com/products/reflector/index.htm
  [3]: http://www.codeplex.com/reflectoraddins
  [4]: http://www.ndepend.com/Res/NDependBig08.PNG "CQL Window Screenshot"
- [5]: http://forum.lessthandot.com/viewforum.php?f=40
- [6]: http://forum.lessthandot.com/viewforum.php?f=27
+ [5]: http://forum.ltd.local/viewforum.php?f=40
+ [6]: http://forum.ltd.local/viewforum.php?f=27

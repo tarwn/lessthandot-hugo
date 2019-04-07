@@ -3,6 +3,7 @@ title: You should be watching
 author: David Forck (thirster42)
 type: post
 date: 2011-11-09T13:17:00+00:00
+ID: 1377
 excerpt: 'Have you been watching Brent Ozar PLF’s Technology Triage Tuesdays?  If you’re not, you should.  I’ve been watching for the last couple of months, and every web cast is a golden nugget of information.  However, don’t feel blue for missing out on this gr&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/you-should-be-watching/
 views:

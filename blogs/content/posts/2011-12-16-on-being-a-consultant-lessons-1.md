@@ -3,6 +3,7 @@ title: 'On Being A Consultant: Lessons Learned, Month One'
 author: Jes Borland
 type: post
 date: 2011-12-16T16:38:00+00:00
+ID: 1448
 excerpt: "In November, I took a big leap: I went from being a full-time DBA for a Fortune 500 company to being a technical database consultant at a small (but amazing) marketing consulting firm. Here are a few things I've learned."
 url: /index.php/itprofessionals/professionaldevelopment/on-being-a-consultant-lessons-1/
 views:

@@ -3,6 +3,7 @@ title: 'SQL Server: Starting a Server-Side Trace'
 author: Jes Borland
 type: post
 date: 2010-12-10T14:17:42+00:00
+ID: 972
 excerpt: One of the many performance tuning and troubleshooting tools in the SQL Server DBA toolbelt is Profiler. You pick events you want to see, set up a trace, and watch the events roll by. The problem is that this graphical tool, especially when run from a workstation, can place a heavy load on the server.
 url: /index.php/webdev/webdesigngraphicsstyling/starting-a-sql-server-side-trace/
 views:
@@ -62,7 +63,9 @@ Eventually, you will probably want to stop this trace. Collecting an infinite am
 
 First, you’ll need the trace ID. 
 
-<pre>SELECT * FROM :: fn_trace_getinfo(default)</pre>
+sql
+SELECT * FROM :: fn_trace_getinfo(default)
+```
 
 Your results might look something like this: 
 
@@ -90,7 +93,9 @@ The status options are:
 
 I determine that the trace I just started has the ID of 2. To stop the trace, I use sp\_trace\_setstatus. The syntax is 
 
-<pre>sp_trace_setstatus traceid, statusid</pre>
+sql
+sp_trace_setstatus traceid, statusid
+```
 
 The status options are:
   
@@ -102,11 +107,15 @@ The status options are:
 
 So, to stop traceid 2, I run this command: 
 
-<pre>sp_trace_setstatus 2, 0</pre>
+sql
+sp_trace_setstatus 2, 0
+```
 
 I can verify it has been stopped by re-running 
 
-<pre>SELECT * FROM :: fn_trace_getinfo(default) </pre>
+sql
+SELECT * FROM :: fn_trace_getinfo(default) 
+```
 
 I can then open the .trc file in SQL Server Profiler and examine it for performance issues. 
 

@@ -3,6 +3,7 @@ title: Red Gate Releases SQL Backup Pro 7.3
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-03-20T09:57:00+00:00
+ID: 2041
 excerpt: 'Red Gate recently released a new version of their great product, SQL Backup Pro.  The one thing about this version that may get your fancy on is the buzz around cloud storage.  For most administrators, both DBA and Domain alike, the cloud has offered a&hellip;'
 url: /index.php/datamgmt/dbadmin/red-gate-releases-sql-backup/
 views:

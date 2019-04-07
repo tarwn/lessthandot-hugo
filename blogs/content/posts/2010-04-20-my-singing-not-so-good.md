@@ -3,6 +3,7 @@ title: The Measurement of Success – SQL Saturday Chicago
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-04-20T14:10:00+00:00
+ID: 763
 excerpt: 'The importance of measuring your success is critical.  My recent community efforts gave me the opportuntiy to once again put myself under the gun and measure if I can succeed in teh SQL Community.'
 url: /index.php/itprofessionals/ethicsit/my-singing-not-so-good/
 views:

@@ -3,6 +3,7 @@ title: Cardinality Estimate and Computed Columns
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-16T16:22:00+00:00
+ID: 1790
 excerpt: 'A computed column can be described as an expression that is evaluated in a table in the form of a column value.  The computed column can have either a physical or logical representation.  This means, if a computed column is created or altered to apply t&hellip;'
 url: /index.php/datamgmt/dbprogramming/cardinality-estimate-and-computed-columns/
 views:
@@ -20,13 +21,19 @@ A computed column can be described as an expression that is evaluated in a table
 
 Cardinality is an interesting topic when computed columns are used.  In many cases, tuning steps are taken by using computed columns when arithmetic operations are used in queries such as
 
-<pre>SELECT Col1 FROM tbl WHERE Col2 + Col3 = 1</pre>
+sql
+SELECT Col1 FROM tbl WHERE Col2 + Col3 = 1
+```
+
 
 The above query can be _tuned_ in many cases by altering the table to add a computed column that already performs the expression Col2 + Col3.  Once this is done, statistics can be or are, created on the columns and the estimation of 30% selectivity is not performed.  SQL Server 2005 and on uses an estimated 30% selectivity sample or estimation in the case of the query shown above in order to generate the plan. This can be a performance bottleneck in large tables.
 
 Once the computed column is created and persisted, the query could be altered to look like the following
 
-<pre>SELECT Col1 FROM tbl WHERE ColComputed = 1</pre>
+sql
+SELECT Col1 FROM tbl WHERE ColComputed = 1
+```
+
 
 Indexing on ColComputed is typically performed at this point to fulfill the objective of an optimal execution plan.
 
@@ -36,8 +43,10 @@ As we’ve discussed, using computed columns can be a good tuning method in some
 
 To look at the cardinality a little closer, take the following query that was written to read the Credit database from SQLSkills.
 
-<pre>select corp_name + ' ' + city from corporation where 
-corp_name + ' ' + city = 'Corp. Boston Key StonesInc.  '</pre>
+sql
+select corp_name + ' ' + city from corporation where 
+corp_name + ' ' + city = 'Corp. Boston Key StonesInc.  '
+```
 
  
 
@@ -53,7 +62,10 @@ In a lot of cases, the major difference between estimated and actual rows can me
 
 We can look at this in another table with more rows, member.
 
-<pre>select member_no from member where lastname + ',' + firstname = 'INFANTE,WLTANAWOIKGLQR'</pre>
+sql
+select member_no from member where lastname + ',' + firstname = 'INFANTE,WLTANAWOIKGLQR'
+```
+
 
  
 
@@ -65,13 +77,17 @@ Fixing the above plan when performance problems are seen from the query being ex
 
 Alter the corporation table to add a computed column on the expression corp_name + ‘ ‘ + city.
 
-<pre>ALTER TABLE corporation
-ADD [corp_city_computed]  AS (([corp_name]+' ')+[city])</pre>
+sql
+ALTER TABLE corporation
+ADD [corp_city_computed]  AS (([corp_name]+' ')+[city])
+```
 
 Execute the query below and review the results in Plan Explorer.
 
-<pre>select corp_name + ' ' + city from corporation where 
-[corp_city_computed] = 'Corp. Boston Key StonesInc.  '</pre>
+sql
+select corp_name + ' ' + city from corporation where 
+[corp_city_computed] = 'Corp. Boston Key StonesInc.  '
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-43.png?mtime=1353089577"><img alt="" src="/wp-content/uploads/blogs/All/-43.png?mtime=1353089577" width="624" height="98" /></a>
@@ -85,12 +101,14 @@ We’ve actually introduced more problems with the computed problem as seen abov
 
 In order to fully take advantage of the objective of using computed columns to enhance the performance of the query, the persisted attribute needs to be set.  To do this, run the following ALTER statement on corporation.
 
-<pre>ALTER TABLE corporation
+sql
+ALTER TABLE corporation
 DROP COLUMN [corp_city_computed]
 GO
 ALTER TABLE corporation
 ADD [corp_city_computed]  AS (([corp_name]+' ')+[city]) PERSISTED
-GO</pre>
+GO
+```
 
 The ALTER statements above will drop the computed column and add it back on the corporation table while using the persisted setting.  This will force the data to be evaluated and stored in the table.  Be careful at this point.  Creating a computed column with persisted on a large table will take time.  The ALTER statement will execute for a variable amount of time based on the expression and the rows that must be evaluated at the time the ALTER statement is performed.  During this time, locks will be taken on the table and blocking will, more than likely, occur.
 

@@ -3,6 +3,7 @@ title: Undetectable Distributed Deadlocks
 author: Erik
 type: post
 date: 2009-11-13T22:59:13+00:00
+ID: 629
 url: /index.php/datamgmt/dbprogramming/undetectable-distributed-deadlocks/
 views:
   - 19598
@@ -21,7 +22,8 @@ Normally, when SQL server detects this kind of mutual block, it picks one proces
 
 But what if the two resources in question are on separate servers? For SQL Server to detect deadlocks, it has to have enough information to see that a pattern of blocks is mutual.
 
-<pre>--Query 1
+sql
+--Query 1
 UPDATE B
 SET B.Name = A.Name
 FROM
@@ -33,7 +35,8 @@ UPDATE B
 SET B.Name = A.Name
 FROM
    LinkedServer.DB1.dbo.TableB B
-   INNER JOIN TableA A ON B.ID = A.ID</pre>
+   INNER JOIN TableA A ON B.ID = A.ID
+```
 
 Now, let&#8217;s say that locks for these two queries are granted in this order: query 1 acquires a lock on TableA before Table B, but query 2 acquires a lock on TableB before TableA. Even though the example I&#8217;m giving here may not be the greatest, the possibility is not so unlikely, and I&#8217;m sure there are plenty of situations out in the wild where my suggested scenario is possible.
 

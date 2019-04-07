@@ -3,6 +3,7 @@ title: 'An ego will only hurt you: Toughest Challenges'
 author: Ted Krueger (onpnt)
 type: post
 date: 2008-12-10T11:48:24+00:00
+ID: 243
 url: /index.php/itprofessionals/ethicsit/an-ego-will-only-hurt-you-toughest-chall/
 views:
   - 4000

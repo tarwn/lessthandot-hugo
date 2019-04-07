@@ -3,6 +3,7 @@ title: What does a SQL Server developer need to know?
 author: SQLDenis
 type: post
 date: 2011-02-21T23:27:00+00:00
+ID: 1049
 excerpt: 'I have been interviewing people for a SQL Server position for the past six weeks and all I can say that I am glad it is over. What a frustrating experience, people with over 10 years’ experience could not tell me the difference between UNION and UNION A&hellip;'
 url: /index.php/datamgmt/datadesign/what-does-a-sql-server/
 views:

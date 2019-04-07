@@ -3,6 +3,7 @@ title: '24 Hours of PASS: Wrap-Up, Slides, Demos and High-Fives'
 author: Jes Borland
 type: post
 date: 2011-03-17T00:09:00+00:00
+ID: 1080
 excerpt: 'The Spring 2011 edition of 24 Hours of PASS: Celebrating Women in Technology has ended. The past two days have been intense, fun and wonderful. My slides and demos are available here.'
 url: /index.php/datamgmt/dbprogramming/24-hours-of-pass-wrap/
 views:

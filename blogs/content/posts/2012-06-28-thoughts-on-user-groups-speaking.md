@@ -3,6 +3,7 @@ title: Thoughts on User Groups, Speaking, and Paying It Forward
 author: Jes Borland
 type: post
 date: 2012-06-28T15:47:00+00:00
+ID: 1659
 excerpt: 'I’m a huge fan of user groups. It’s why I helped found and am on the board of MADPASS, and why I’ll start another user group in northeast Wisconsin this fall.  User groups give us training and learning opportunities, but with a face-to-face component no&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/thoughts-on-user-groups-speaking/
 views:

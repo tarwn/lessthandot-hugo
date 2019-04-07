@@ -3,6 +3,7 @@ title: Slow source? Make your data flow buffers smaller!
 author: Koen Verbeeck
 type: post
 date: 2013-01-30T12:15:00+00:00
+ID: 1949
 excerpt: This blog post describes how making the data flow buffers smaller might give a performance boost in some scenarios.
 url: /index.php/datamgmt/dbprogramming/mssqlserver/slow-source/
 views:

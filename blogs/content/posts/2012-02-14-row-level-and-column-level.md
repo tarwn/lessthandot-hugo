@@ -3,6 +3,7 @@ title: Row-Level and Column-Level tracking in Merge Replication
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-02-14T22:30:00+00:00
+ID: 1529
 excerpt: 'There are several considerations when deciding if your Merge Replication setup is in need of an article that uses Row-Level Tracking or Column-Level Tracking.  The primary considerations will be the business needs and overall data retention needs.  Can&hellip;'
 url: /index.php/datamgmt/dbadmin/row-level-and-column-level/
 views:
@@ -29,9 +30,11 @@ Let’s look at the merging of data with Column-Level Tracking and what is trans
 
 _We will focus on SalesOrderHeader.SalesOrderID 75123.  Ensure that updates have been made to the SalesOrderID prior to this example and you have synchronized the updates.  If no changes or subscriber traffic has occurred on the publication database, the MSMerge_* tracking tables will be empty at that time.  To show how the level tracking functions, it is best to update a subscriber and merge the changes before this running these examples.  You can use the same update statement below to perform that initial update and merge event._
 
-<pre>update Sales.SalesOrderHeader
+sql
+update Sales.SalesOrderHeader
 set ShipDate = getdate(), OrderDate = getdate()-10,DueDate = getdate()-1
-where SalesOrderID = 75123</pre>
+where SalesOrderID = 75123
+```
 
 set ShipDate = getdate(), OrderDate = getdate()-10,DueDate = getdate()-1
 
@@ -41,7 +44,8 @@ where SalesOrderID = 75123
 
 Before replicating to the publication database, check the MSMerge\_Contents and MSMerge\_Genhistory to see the pending changes on the subscriber that we just performed.
 
-<pre>SELECT 
+sql
+SELECT 
 	contents.generation,
 	contents.lineage,
 	contents.colv1,
@@ -52,7 +56,8 @@ FROM MSmerge_contents contents
 join MSmerge_genhistory gen on contents.generation = gen.generation
 join Sales.SalesOrderHeader upd on contents.rowguid = upd.rowguid
 where SalesOrderID = 75123
-and genstatus = 0</pre>
+and genstatus = 0
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-25.png?mtime=1329265073"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-25.png?mtime=1329265073" width="624" height="41" /></a>
@@ -62,7 +67,8 @@ The query above shows that the update performed earlier is in a pending state on
 
 Now that we have seen how to find the pending changes on the subscriber and return the row and column lineage values, use the lineage values to determine the subscriber that made the changes, actual versions and columns that were changed.  To do this, use the statement below.
 
-<pre>declare @lineage varbinary(311)
+sql
+declare @lineage varbinary(311)
 declare @colv varbinary(311)
 
 SELECT @lineage = lineage, @colv = colv1 FROM MSmerge_contents contents
@@ -72,7 +78,8 @@ where SalesOrderID = 75123
 and genstatus = 0
 
 exec sp_showlineage @lineage
-exec sp_showcolv @colv</pre>
+exec sp_showcolv @colv
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-26.png?mtime=1329265073"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-26.png?mtime=1329265073" width="303" height="195" /></a>
@@ -82,7 +89,8 @@ The position column represents the actual column position for the results from r
 
 The following script shows how we can match these values all together in order to return meaningful information regarding the actual lineage and where updates originated.
 
-<pre>declare @lineage varbinary(311)
+sql
+declare @lineage varbinary(311)
 declare @colv varbinary(311)
 declare @articlename nvarchar(128) = 'SalesOrderHeader'
 
@@ -120,7 +128,8 @@ join INFORMATION_SCHEMA.COLUMNS cols on a.position = cols.ORDINAL_POSITION
 									and cols.TABLE_NAME = @articlename
 
 select * from #row_results
-select * from #colv_results</pre>
+select * from #colv_results
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-27.png?mtime=1329265074"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-27.png?mtime=1329265074" width="584" height="252" /></a>
@@ -148,9 +157,11 @@ Results from the publication database
 
 To show the difference in performance, a mass update has been executed on the SalesOrderHeader on the publication database.  The update changes the SalesPersonID and LoginAccount so the rows will be included in the partitioned snapshot.
 
-<pre>update Sales.SalesOrderHeader set SalesPersonID = 275, LoginAccount = 'ONPNTtkrueger'
+sql
+update Sales.SalesOrderHeader set SalesPersonID = 275, LoginAccount = 'ONPNTtkrueger'
 where SalesOrderID IN (SELECT TOP 10000 SalesOrderID from Sales.SalesOrderHeader
-						Order by OrderDate desc)</pre>
+						Order by OrderDate desc)
+```
 
 Once the update statement has been executed, the subscription was removed and a snapshot was run on the publication.  When the snapshot was completed, the subscription was added back and the snapshot applied.
 
@@ -160,9 +171,11 @@ Next, the subscriber database was updated for all the SalesPersonID of 275.  Th
 
  
 
-<pre>update Sales.SalesOrderHeader
+```
+update Sales.SalesOrderHeader
 set ShipDate = getdate(), OrderDate = getdate()-10,DueDate = getdate()-1
-where SalesPersonID = 275</pre>
+where SalesPersonID = 275
+```
 
  
 

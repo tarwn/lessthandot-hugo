@@ -3,6 +3,7 @@ title: Missing index suggestion – Duplicate Index
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-04-20T10:41:00+00:00
+ID: 2069
 excerpt: |
   Missing index suggestion – Duplicate Index
   The missing index feature while tuning or checking estimated and actual plans is very helpful.  Something that is key in that sentence is the word, helpful.  Don’t run out and simply create all of them.  Make&hellip;
@@ -29,7 +30,10 @@ For example, the table the example below is based on is a 290 million row table,
 
 **Query**
 
-<pre>select max(recordid) from myTable where recordid &gt; 1</pre>
+sql
+select max(recordid) from myTable where recordid > 1
+```
+
 
  
 
@@ -41,19 +45,24 @@ For example, the table the example below is based on is a 290 million row table,
 
 **The missing index details** 
 
-<pre>CREATE NONCLUSTERED INDEX [<Name of Missing Index, sysname,&gt;]
+sql
+CREATE NONCLUSTERED INDEX [<Name of Missing Index, sysname,>]
 ON [dbo].[myTable] ([recordid])
-GO</pre>
+GO
+```
 
  
 
 The index, IDX\_RECORDID\_ASC definition
 
-<pre>CREATE NONCLUSTERED INDEX [IDX_RECORDID_ASC] ON [dbo].[myTable]
+sql
+CREATE NONCLUSTERED INDEX [IDX_RECORDID_ASC] ON [dbo].[myTable]
 (
 	[recordid] ASC
 )
-GO</pre>
+GO
+```
+
 
  
 

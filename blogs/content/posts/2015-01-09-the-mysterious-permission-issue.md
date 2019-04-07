@@ -3,6 +3,7 @@ title: The mysterious permission issue
 author: Koen Verbeeck
 type: post
 date: 2015-01-09T14:58:26+00:00
+ID: 3150
 url: /index.php/datamgmt/ssis/the-mysterious-permission-issue/
 views:
   - 7500

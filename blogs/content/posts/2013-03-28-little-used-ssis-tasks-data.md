@@ -3,6 +3,7 @@ title: 'Little used SSIS tasks: Data Profiling Task'
 author: SQLDenis
 type: post
 date: 2013-03-28T12:19:00+00:00
+ID: 2055
 excerpt: "I was in New York City yesterday, hanging out with fellow MVP and blogger Ted Krueger in Union Square. I asked him if he uses the Data Profiling Task task a lot, he said not really. I don't use it a lot either but I decided to show you what you can do w&hellip;"
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/little-used-ssis-tasks-data/
 views:

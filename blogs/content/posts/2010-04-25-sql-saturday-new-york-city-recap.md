@@ -3,6 +3,7 @@ title: SQL Saturday New York City recap
 author: SQLDenis
 type: post
 date: 2010-04-25T11:19:12+00:00
+ID: 767
 url: /index.php/datamgmt/dbprogramming/sql-saturday-new-york-city-recap/
 views:
   - 8659

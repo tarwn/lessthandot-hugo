@@ -3,6 +3,7 @@ title: SQL Server and xp_cmdshell – The good, the bad and more ugly
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-02-07T13:12:00+00:00
+ID: 1515
 excerpt: 'A little over a year ago I wrote an article that discussed calling SSIS packages from stored procedures.  One of the objectives of that article was to discuss why enabling xp_cmdshell can be dangerous in terms of potential security risks.  To further th&hellip;'
 url: /index.php/datamgmt/dbprogramming/sql-server-and-xp_cmdshell-the/
 views:
@@ -36,16 +37,22 @@ Stepping back from a high-level domain level security risk, take a normal instal
 
 At this stage in the installation discussed above, the SQL Server instance is somewhat secured.  An individual would have to know the sa account, and there has been no mention of XP\_CMDSHELL being enabled.   But, the installation of the application and SQL Server Express utilizes the silent install commands.  In that setup command, the sa account is in clear text.  This was found by a person looking to exploit the laptop in some way.  At this point, the person that means to cause harm to the laptop or network it has access to, can only exploit the databases on the Express instance as it is configured.  XP\_CMDSHELL is, however, can be easily enabled by performing the following reconfiguration of SQL Server.
 
-<pre>EXEC master.dbo.sp_configure 'show advanced options', 1
+sql
+EXEC master.dbo.sp_configure 'show advanced options', 1
 RECONFIGURE
 EXEC master.dbo.sp_configure 'xp_cmdshell', 1
-RECONFIGURE</pre>
+RECONFIGURE
+```
+
 
 With the sa account having CONTROL SERVER, this command can be run.  Once XP_CMDSHELL is enabled, the operating system is exposed to commands that the SQL Server service account has rights to perform.
 
 The folder share that was mentioned earlier and part of the installation has been secured to read only by users of the laptop.  The share can easily be seen by executing the following XP_CMDSHELL statement.
 
-<pre>xp_cmdshell 'net view \.'</pre>
+sql
+xp_cmdshell 'net view \.'
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-110.png?mtime=1328627231"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-110.png?mtime=1328627231" width="292" height="191" /></a>
@@ -53,7 +60,10 @@ The folder share that was mentioned earlier and part of the installation has bee
 
 We have now exposed a local share named Imports.  Further attempts at trying to write files to the share have shown the share is indeed, secured.  That is, until the following xp_cmdshell statement is executed.
 
-<pre>xp_cmdshell 'icacls \%COMPUTERNAME%Imports /t /grant Everyone:F'</pre>
+sql
+xp_cmdshell 'icacls \%COMPUTERNAME%Imports /t /grant Everyone:F'
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-111.png?mtime=1328627231"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-111.png?mtime=1328627231" width="310" height="74" /></a>

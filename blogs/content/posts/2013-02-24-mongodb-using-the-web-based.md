@@ -3,6 +3,7 @@ title: 'MongoDB: Using the web-based administrative tool'
 author: SQLDenis
 type: post
 date: 2013-02-24T13:14:00+00:00
+ID: 2010
 excerpt: |
   MongoDB ships with a web-based administrative tool. You can see this tool by going to http://localhost:28017/
   

@@ -3,6 +3,7 @@ title: 'Small presenter tip: changing display mode automatically after presenter
 author: Koen Verbeeck
 type: post
 date: 2015-03-04T09:52:02+00:00
+ID: 3282
 url: /index.php/uncategorized/small-presenter-tip-changing-display-mode-automatically-after-presenter-view/
 views:
   - 5595

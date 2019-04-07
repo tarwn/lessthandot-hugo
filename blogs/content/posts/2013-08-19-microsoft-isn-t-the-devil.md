@@ -3,6 +3,7 @@ title: Microsoft Isn’t the Devil
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-08-19T12:17:00+00:00
+ID: 2144
 excerpt: 'Something I’ve always had an issue with is people that bash and flame Microsoft products.  Constructive criticism is fine.  We all should be providing feedback about how a product is designed, setup, installs, and even how it performs.  This feedback is&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/microsoft-isn-t-the-devil/
 views:

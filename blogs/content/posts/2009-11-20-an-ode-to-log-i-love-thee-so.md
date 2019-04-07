@@ -3,6 +3,7 @@ title: An ode to Log, I love thee so
 author: ThatRickGuy
 type: post
 date: 2009-11-20T14:33:50+00:00
+ID: 637
 url: /index.php/webdev/webdesigngraphicsstyling/an-ode-to-log-i-love-thee-so/
 views:
   - 7898

@@ -3,6 +3,7 @@ title: Using Mirroring to Reduce DB Migration Downtime (Part 2)
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-09-10T10:28:55+00:00
+ID: 553
 url: /index.php/datamgmt/dbprogramming/using-mirroring-to-reduce-db-migration-d-2/
 views:
   - 15296
@@ -32,16 +33,18 @@ First task for us to prepare the new server was to restore a full backup of the 
   
 To run our full backup and transaction log backup run the following script
 
-<pre>BACKUP DATABASE [NEEDTOMOVE] TO DISK = 'C:needtomove_full_migration.bak'
+sql
+BACKUP DATABASE [NEEDTOMOVE] TO DISK = 'C:needtomove_full_migration.bak'
 Go
 BACKUP LOG [NEEDTOMOVE] TO DISK = 'C:needtomove_taillog_migration.trn'
-Go</pre>
-
+Go
+```
 Once our backups are created we can move to the new server and restore them. As mentioned earlier in part 1 while setting up our initial mirror, the restore process will require the WITH NORECOVERY to place the database in recovering. 
 
 To accomplish the full restore run the following statements on MYLABNEW
 
-<pre>RESTORE DATABASE [NEEDTOMOVE] 
+sql
+RESTORE DATABASE [NEEDTOMOVE] 
 FROM DISK = 'C:needtomove_full_migration.bak'
 WITH NORECOVERY,
 MOVE 'NEEDTOMOVE' TO N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOMOVE_mirror.mdf',
@@ -49,23 +52,28 @@ MOVE 'NEEDTOMOVE_log' TO N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANE
 ,REPLACE,NORECOVERY
 Go
 RESTORE LOG [NEEDTOMOVE] FROM DISK = 'C:needtomove_taillog_migration.trn' WITH NORECOVERY
-Go</pre>
-
+Go
+```
 We now have the new server and database ready for mirroring. In order for us to bring this new mirror up and running, we will need to stop and remove mirroring from our initial setup. I highly recommend this step to be done in production while the lowest amount of transactions is being run on the principle. Once the mirror is stopped, there is a brief point in time that the landscape is exposed to a disaster that will allow the loss of uncommitted transactions. 
 
 To stop and remove mirroring run the following ALTER statement from the principle database server. 
 
-<pre>ALTER DATABASE NEEDTOMOVE SET PARTNER OFF</pre>
+sql
+ALTER DATABASE NEEDTOMOVE SET PARTNER OFF
+```
 
 Setting the partner (mirror) off will remove all mirroring configurations saved previously as well as shut the mirror down. However, this will not remove endpoints created by configuring mirroring. In order to retain a secure landscape on your production mirror, it is a good idea to remove the endpoint at this time if no other mirrors are running.
   
 To remove the endpoint if no other mirrors are running we can run the following statement
 
-<pre>DROP ENDPOINT Mirroring</pre>
+sql
+DROP ENDPOINT Mirroring
+```
 
 At this stage we are ready to configure mirroring from the principle to our new database server. While we have the mirroring endpoint already created on our principle database server, we still need to create a new endpoint on the new server. Using the script from part 1 for configuring the initial mirror, we can remove the first CREATE ENDPOINT statement and then re-sequence the steps to accomplish setting up the new mirror.
 
-<pre>--On the secondary (mirror) run
+sql
+--On the secondary (mirror) run
 --1
 CREATE ENDPOINT [Mirroring_Migration] 
     AUTHORIZATION [PMHCtkrueger]
@@ -84,8 +92,8 @@ ALTER DATABASE [NEEDTOMOVE] SET SAFETY OFF
  
 --on both instances
 --5 + 6
-EXEC sys.sp_dbmmonitoraddmonitoring</pre>
-
+EXEC sys.sp_dbmmonitoraddmonitoring
+```
 You may notice that my endpoint in the script has a change to the name from Mirroring to Mirroring_Migration. This is due to my local installations and the configuration not accepting the same name of Mirroring while bringing mirroring up on the new instance. I’m still investigating this problem in my test lab but would very much like to hear from others if they have had this scenario in their own labs with multiple instances side-by-side.
 
 We now have mirroring going from our old production server to our new production server successfully. During that process there was a brief time where the failover process was vulnerable but as you can see the time lines are short and acceptable in migration steps in most scenarios. 
@@ -104,16 +112,18 @@ From within SSMS you can right click the database and select properties. Then fr
 
 To accomplish this same task from TSQL we can execute the following statement
 
-<pre>ALTER DATABASE NEEDTOMOVE SET SAFETY FULL
+sql
+ALTER DATABASE NEEDTOMOVE SET SAFETY FULL
 GO
 ALTER DATABASE NEEDTOMOVE SET PARTNER FAILOVER
-GO</pre>
-
+GO
+```
 Then we can go on the new principle and reset out safety level to off with
 
-<pre>ALTER DATABASE NEEDTOMOVE SET SAFETY OFF
-GO</pre>
-
+sql
+ALTER DATABASE NEEDTOMOVE SET SAFETY OFF
+GO
+```
 This is followed by any configuration you may need to reset applications for the users to point to our new database server.
 
 Once all of this is accomplished you do have a choice or retaining the old hardware as the mirror but configurations should be altered to act as a primary mirror. If you retire the old server completely, setting up the new mirror is the same as we’ve done in this test case.

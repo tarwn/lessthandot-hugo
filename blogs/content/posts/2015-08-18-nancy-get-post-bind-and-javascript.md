@@ -3,6 +3,7 @@ title: Nancy, Get, Post, Bind and javascript
 author: Christiaan Baes (chrissie1)
 type: post
 date: 2015-08-18T06:17:12+00:00
+ID: 4096
 url: /index.php/uncategorized/nancy-get-post-bind-and-javascript/
 views:
   - 4447
@@ -24,7 +25,8 @@ For this we need some code. In the following example I&#8217;m using GET and POS
 
 Here is a very simple module.
 
-<pre>Option Strict Off
+```vbnet
+Option Strict Off
 Option Explicit Off
 
 Imports Nancy
@@ -57,43 +59,34 @@ Namespace Modules
         End Class
 
     End Class
-End Namespace</pre>
-
+End Namespace
+```
 The module has a way to open the view and a way to get and post data.
   
 The get and post methods are exactly the same. 
 
 In simple html (a razor view here) we can call both methods in our form by just changing the method. for the rest they are the same.
 
-<pre>@Inherits Nancy.ViewEngines.Razor.NancyRazorViewBase(Of String)
+```html
+@Inherits Nancy.ViewEngines.Razor.NancyRazorViewBase(Of String)
 
 @Code
     Layout = Nothing
 End Code
 
-<!DOCTYPE html&gt;
 
-<html&gt;
-<head&gt;
-    <title&gt;</title&gt;
+
+
+
+
     
 
-</head&gt;
-<body&gt;
-    <div&gt;
-        <form action="/persons" method="GET"&gt;
-            <input type="text" name="FirstName" value="testfirstnameget" /&gt;
-            <input type="text" name="LastName" value="testlastnameget" /&gt;
-            <button&gt;Submit</button&gt;
-        </form&gt;
-        <form action="/persons" method="POST"&gt;
-            <input type="text" name="FirstName" value="testfirstnamepost" /&gt;
-            <input type="text" name="LastName" value="testlastnamepost" /&gt;
-            <button&gt;Submit</button&gt;
-        </form&gt;   
-    </div&gt;
-</body&gt;
-</html&gt;</pre>
+<div>
+  
+</div>
+
+
+```
 
 These days of course nobody uses the plain old submit anymore since it reloads your page, which apparently is very bad.
   
@@ -101,63 +94,33 @@ So we can change our code to no longer submit but to react to an onclick event o
   
 And see the code below with added javascript.
 
-<pre>@Inherits Nancy.ViewEngines.Razor.NancyRazorViewBase(Of String)
+```html
+@Inherits Nancy.ViewEngines.Razor.NancyRazorViewBase(Of String)
 
 @Code
     Layout = Nothing
 End Code
 
-<!DOCTYPE html&gt;
 
-<html&gt;
-<head&gt;
-    <title&gt;</title&gt;
+
+
+
+
     
 
-</head&gt;
-<body&gt;
-    <div&gt;
-        <form&gt;
-            <input id="firstnameget" type="text" name="FirstName" value="testfirstnamegetjs" /&gt;
-            <input id="lastnameget" type="text" name="LastName" value="testlastnamegetjs" /&gt;
-            <button type="button" onclick="getjs()"&gt;Submit</button&gt;
-        </form&gt;
-        <form&gt;
-            <input id="firstnamepost" type="text" name="FirstName" value="testfirstnamepostjs" /&gt;
-            <input id="lastnamepost" type="text" name="LastName" value="testlastnamepostjs" /&gt;
-            <button type="button" onclick="postjs()"&gt;Submit</button&gt;
-        </form&gt; 
-        <div&gt;<ul id="result"&gt;</ul&gt;</div&gt;       
-    </div&gt;
-    <script src="@Url.Content("~/Content/Scripts/jquery-2.1.4.min.js")" type="text/javascript"&gt;</script&gt;
-    <script type="text/javascript"&gt;
-        function postjs() {
-            var xhr = new XMLHttpRequest();
-            var data = { FirstName: $("#firstnamepost").val(), LastName: $("#lastnamepost").val() };
-            xhr.open("POST", "/persons", true);
-            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-            xhr.send(JSON.stringify(data));
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    $("#result").append("<li&gt;" + xhr.responseText + "</li&gt;");
-                };
-            }
-        }
-        function getjs() {
-            var xhr = new XMLHttpRequest();
-            var data = {FirstName: $("#firstnameget").val(),LastName: $("#lastnameget").val()};
-            xhr.open("GET", "/persons?" + $.param(data) , true);
-            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-            xhr.send();
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    $("#result").append("<li&gt;" + xhr.responseText + "</li&gt;");
-                };
-            }
-        }
-    </script&gt;
-</body&gt;
-</html&gt;</pre>
+<div>
+  <div>
+    <ul id="result">
+      
+    </ul>
+  </div>       
+      
+</div>
+    
+    
+
+
+```
 
 I used some jquery magic to make the making of the queryparameters easier. 
 

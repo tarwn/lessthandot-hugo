@@ -3,6 +3,7 @@ title: The times they are a-changin’
 author: Koen Verbeeck
 type: post
 date: 2013-10-29T13:02:00+00:00
+ID: 2188
 excerpt: This blog post will not be about Bob Dylan, but rather about some professional changes/challenges I’ve been up to lately.
 url: /index.php/itprofessionals/professionaldevelopment/the-times-they-are-a/
 views:

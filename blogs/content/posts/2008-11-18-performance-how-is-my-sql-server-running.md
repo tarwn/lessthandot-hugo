@@ -3,6 +3,7 @@ title: Performance (How is my SQL Server running?)
 author: Ted Krueger (onpnt)
 type: post
 date: 2008-11-18T16:00:10+00:00
+ID: 208
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/performance-how-is-my-sql-server-running/
 views:
   - 7373
@@ -38,7 +39,8 @@ In the dialog browse to the location the rdl files are and select them all and c
 
 Now double click the &#8220;performace\_dashbaord\_main.rdl&#8221; and hit preview. You were probably shown either permissions errors or a nasty datatime overflow error like this, &#8220;Difference of two datetime columns caused overflow at runtime&#8221;. First, permissions you can handle. You need server view state and access to sys views. The overflow is a bit different. There is an easy fix for it. Basically it&#8217;s from sessions over 24 hours in time. To fix this go into the msdb and modify the procedure MS\_PerfDashboard.usp\_Main_GetSessionInfo to this
 
-<pre>USE [msdb]
+sql
+USE [msdb]
 GO
 ALTER procedure [MS_PerfDashboard].[usp_Main_GetSessionInfo]
 as
@@ -49,13 +51,13 @@ begin
   sum(convert(bigint, s.total_elapsed_time)) - sum(convert(bigint, s.cpu_time)) as wait_time,
   sum(convert(bigint, CAST ( DATEDIFF ( minute, login_time, getdate()) AS BIGINT)*60000 + DATEDIFF ( millisecond, DATEADD ( minute,
     DATEDIFF ( minute, login_time, getdate() ), login_time ),getdate() ))) - sum(convert(bigint, s.total_elapsed_time)) as idle_connection_time,
-  case when sum(s.logical_reads) &gt; 0 then (sum(s.logical_reads) - isnull(sum(s.reads), 0)) / convert(float, sum(s.logical_reads))
+  case when sum(s.logical_reads) > 0 then (sum(s.logical_reads) - isnull(sum(s.reads), 0)) / convert(float, sum(s.logical_reads))
    else NULL
    end as cache_hit_ratio
  from sys.dm_exec_sessions s
  where s.is_user_process = 0x1
-end</pre>
-
+end
+```
 Important to note this is not my fix but from here
 
 http://blogs.msdn.com/sqlrem/archive/2007/03/07/Performance-Dashboard-Reports-Now-Available.aspx

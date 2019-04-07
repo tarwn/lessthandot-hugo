@@ -3,6 +3,7 @@ title: Software Development Survey 2017
 author: damber
 type: post
 date: 2017-05-31T17:10:36+00:00
+ID: 8651
 url: /index.php/webdev/software-development-survey-2017/
 views:
   - 5759

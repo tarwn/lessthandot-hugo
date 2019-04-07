@@ -3,6 +3,7 @@ title: Consulting – The best part?
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-07-03T12:42:00+00:00
+ID: 1664
 excerpt: 'I was fortunate to be asked by Aaron Lowe (T | B) to be the host for the second SQLFriends Lunch event.   The event was really a good time, educational, and a rewarding social mentoring tool.  During the event, I was asked many questions - from the diff&hellip;'
 url: /index.php/itprofessionals/itservicemanagement/consulting-the-best-part/
 views:

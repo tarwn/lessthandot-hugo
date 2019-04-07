@@ -3,6 +3,7 @@ title: Creating statistics manually – Duplicate Statistics
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-19T17:07:00+00:00
+ID: 1918
 excerpt: 'Something I never really would have thought much about was the creation of statistics does as it impacts an index creation – mostly, the naming convention.  In some situations, there may be a need to create your own statistics.  Now, 99.999% of the time&hellip;'
 url: /index.php/datamgmt/dbadmin/creating-statistics-manually-duplicate-statistics/
 views:
@@ -19,18 +20,23 @@ Something I never really would have thought much about was the creation of stati
 
 Take an example table named, testarea loaded with some test data.
 
-<pre>CREATE TABLE testarea (colint INT, colchar varchar(155))
+sql
+CREATE TABLE testarea (colint INT, colchar varchar(155))
 GO
 INSERT INTO testarea
 SELECT RAND()*100,REPLICATE('x',155)
-GO 1000</pre>
+GO 1000
+```
 
  
 
 At the time of this table’s creation, you may already know that colint is going to be needed in a predicate form.  At this time you could create your own statistics on colint.
 
-<pre>CREATE STATISTICS colint_cover ON [dbo].[testarea]([colint])
-GO</pre>
+sql
+CREATE STATISTICS colint_cover ON [dbo].[testarea]([colint])
+GO
+```
+
 
  
 
@@ -40,9 +46,11 @@ In the case of the colint column, we’ll effectively want to have an index if i
 
  
 
-<pre>CREATE INDEX colint_cover ON testarea(colint)
+sql
+CREATE INDEX colint_cover ON testarea(colint)
 INCLUDE (colchar)
-GO</pre>
+GO
+```
 
 Trying to execute this statement will generate the following error
 
@@ -58,10 +66,12 @@ This frustrated me for a second given the creation of an index will automaticall
 
 For example
 
-<pre>CREATE INDEX IDX_colint ON [dbo].[testarea]([colint])
+sql
+CREATE INDEX IDX_colint ON [dbo].[testarea]([colint])
 GO
 select * from sys.stats where object_id = OBJECT_ID('testarea')
-GO</pre>
+GO
+```
 
 ![][1]
 
@@ -69,14 +79,18 @@ As stated earlier, the statistics are named the same as the index.
 
 In order to create the index at this point, a different name would be needed.
 
-<pre>CREATE INDEX idx_colint_cover ON testarea(colint)
+sql
+CREATE INDEX idx_colint_cover ON testarea(colint)
 INCLUDE (colchar)
-GO</pre>
+GO
+```
 
 But run the sys.stats query again
 
-<pre>SELECT * FROM sys.stats WHERE object_id = OBJECT_ID('testarea')
-GO</pre>
+sql
+SELECT * FROM sys.stats WHERE object_id = OBJECT_ID('testarea')
+GO
+```
 
 ![][2]
 

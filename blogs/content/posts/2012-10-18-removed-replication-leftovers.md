@@ -3,6 +3,7 @@ title: Removed Replication – rowguid added back
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-10-18T10:43:00+00:00
+ID: 1760
 excerpt: 'When replication features are used in a database, tables that are part of the publications may be altered.  In particular, Merge and Transactional Replication require either a Primary Key or UNIQUEIDENTIFIER column in order to function correctly.  In or&hellip;'
 url: /index.php/datamgmt/dbadmin/removed-replication-leftovers/
 views:
@@ -24,8 +25,11 @@ With Merge Replication, each table that is part of a publication requires a UNIQ
 
 For example, take a table named MergeMe in database QTuner.
 
-<pre>CREATE TABLE MergeMe (CUSTID INT IDENTITY(1,1) PRIMARY KEY, CUSTNAME NVARCHAR(50), CUSTADDR NVARCHAR(50))
-GO</pre>
+sql
+CREATE TABLE MergeMe (CUSTID INT IDENTITY(1,1) PRIMARY KEY, CUSTNAME NVARCHAR(50), CUSTADDR NVARCHAR(50))
+GO
+```
+
 
 This table consists of a primary key and does not require any additional changes to be used in transactional replication. However, in a Merge Replication setup, this table would require a UNIQUEIDENTIFIER column. If you run the create publication wizard, you are warned about this directly after selecting the table as an article
 
@@ -51,8 +55,10 @@ Up to this point, Merge Replication controls these objects and knows that if rep
 
 For example, the following index may be created
 
-<pre>CREATE INDEX IDX_ROWGUID ON MergeMe (ROWGUID ,CUSTNAME)  
-GO</pre>
+sql
+CREATE INDEX IDX_ROWGUID ON MergeMe (ROWGUID ,CUSTNAME)  
+GO
+```
 
 Another common event is a code change related to the rowguid column. This happens often, and is not recommended, but it is not unheard of for a column to be directly referenced in an application, such as a linq2sql reference pulled in the schema and relies on that column being returned, or perhaps an INSERT statement was written which inserts a UNIQUEIDENTIFIER into the rowguid. The last two instances are extremely bad practice, but, as with any bad practice, they do happen. 
 
@@ -74,9 +80,12 @@ For example, take this sequence of events:
 
 2)      Application errors are reported on rowguid so rowguid is added back to the table
 
-<pre>IF NOT EXISTS (SELECT 1 FROM sys.columns where Name = N'rowguid' and Object_ID = Object_ID(N'MergeMe'))
+sql
+IF NOT EXISTS (SELECT 1 FROM sys.columns where Name = N'rowguid' and Object_ID = Object_ID(N'MergeMe'))
 	ALTER TABLE MergeMe ADD rowguid UNIQUEIDENTIFIER DEFAULT (newsequentialid())
-GO</pre>
+GO
+```
+
 
   * Following a code release of the application, now the columns can be removed. What do you do if there are hundreds of them?  The following script will: 
   * Create a list of tables in table variables 
@@ -84,7 +93,8 @@ GO</pre>
   * Drop the constraints 
   * Drop the column 
 
-<pre>USE QTuner
+sql
+USE QTuner
 GO
 DECLARE @int INT = 1
 DECLARE @CMD NVARCHAR(1200)
@@ -143,7 +153,8 @@ WHILE @int <= (SELECT COUNT(*) FROM @idxList)
 	--EXEC (@CMD)
 	Print @CMD
   SET @int += 1
- END</pre>
+ END
+```
 
 Note: This script does not validate for primary keys or included columns in an indexes.
 

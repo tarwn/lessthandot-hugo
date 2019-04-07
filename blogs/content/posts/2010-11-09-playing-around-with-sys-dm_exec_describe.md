@@ -3,6 +3,7 @@ title: Playing around with sys.dm_exec_describe_first_result_set and sys.dm_exec
 author: SQLDenis
 type: post
 date: 2010-11-09T16:28:31+00:00
+ID: 941
 excerpt: |
   If you have a stored procedure which returns two result sets up till now there was now way to get the meta data easily about the first result set. Let's take a look what is new in SQL Server Denali, first create this very simple stored procedure.
   
@@ -23,19 +24,23 @@ tags:
 ---
 If you have a stored procedure which returns two result sets up till now there was now way to get the meta data easily about the first result set. Let&#8217;s take a look what is new in SQL Server Denali, first create this very simple stored procedure.
 
-<pre>create procedure prTest
+sql
+create procedure prTest
 as
 select 1 as a, 'B' as b
 
 select 'A' as z, 3 as d
-Go</pre>
+Go
+```
 
 ## sys.dm\_exec\_describe\_first\_result\_set\_for_object
 
 Run the following query
 
-<pre>select * 
-from sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('prTest'),1)</pre>
+sql
+select * 
+from sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('prTest'),1)
+```
 
 Here is partial output
 
@@ -158,10 +163,12 @@ This query is more interesting because it will look at a dynamic query. Let&#821
 
 Here is how that would work
 
-<pre>declare @n nvarchar(100) = N'SELECT * FROM sysobjects SELECT 3'
+sql
+declare @n nvarchar(100) = N'SELECT * FROM sysobjects SELECT 3'
 
 SELECT *
-FROM sys.dm_exec_describe_first_result_set(@n, NULL, 1);</pre>
+FROM sys.dm_exec_describe_first_result_set(@n, NULL, 1);
+```
 
 Here is partial output
 

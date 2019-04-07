@@ -3,6 +3,7 @@ title: Adding nonclustered index on primary keys
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-10-11T17:31:00+00:00
+ID: 1752
 excerpt: 'Recently, during a pre-conference seminar that I presented, the group and I had a long discussion about why there would be a need to add a nonclustered index that consisted of the primary key as the key column.  This topic also came up in a client train&hellip;'
 url: /index.php/datamgmt/dbprogramming/adding-nonclustered-index-on-primary/
 views:
@@ -23,15 +24,17 @@ I’d like to focus on what would be the largest aspect to why you would use an 
 
 Using AdventureWork2012, create a table from Sales.SalesOrderHeader that can be manipulated to fit the following tuning steps.
 
-<pre>SELECT * INTO dbo.IndexPageCount FROM Sales.SalesOrderHeader
+sql
+SELECT * INTO dbo.IndexPageCount FROM Sales.SalesOrderHeader
 GO
 ALTER TABLE dbo.IndexPageCount 
 ADD CONSTRAINT PK_SalesOrderID PRIMARY KEY (SalesOrderID) 
-GO</pre>
-
+GO
+```
 The above statement will create dbo.IndexPageCount and make the SalesOrderID the primary key column.  At this point, no other indexing has been done.  If a query was executed that relied on a predicate of the SalesOrderID, technically, further indexing may not be needed.  For example, review the following query and execution plan generated from how the table and indexing is setup on IndexPageCount.
 
-<pre>SET STATISTICS IO ON
+sql
+SET STATISTICS IO ON
 
 SELECT 
 	hdr.DueDate
@@ -42,8 +45,8 @@ dbo.IndexPageCount hdr
 WHERE hdr.SalesOrderID < 50000
 GROUP BY 
 	 hdr.DueDate
-	,hdr.ShipDate</pre>
-
+	,hdr.ShipDate
+```
 IO results
 
 > Table &#8216;IndexPageCount&#8217;. Scan count 1, logical reads 164, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p>
@@ -59,7 +62,8 @@ In all respects, this plan is optimized fairly well.  The one key aspect to the
 
 Query referenced from: <http://www.sqlteam.com/article/what-data-is-in-sql-server-memory>
 
-<pre>SELECT TOP 25 
+sql
+SELECT TOP 25 
 	obj.[name],
 	i.[name],
 	i.[type_desc],
@@ -86,9 +90,8 @@ FROM sys.dm_os_buffer_descriptors AS bd
 LEFT JOIN sys.indexes i on i.object_id = obj.object_id AND i.index_id = obj.index_id
 WHERE database_id = db_id() AND obj.[name] = 'IndexPageCount'
 GROUP BY obj.name, obj.index_id , i.[name],i.[type_desc]
-ORDER BY Buffered_Page_Count DESC</pre>
-
-<div class="image_block">
+ORDER BY Buffered_Page_Count DESC
+```<div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-161.png?mtime=1349983070"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-161.png?mtime=1349983070" width="516" height="73" /></a>
 </div>
 
@@ -100,15 +103,22 @@ To lower the page count, we essentially need to lessen the need to pull the page
 
 Clear the buffer so we are sure we  look at the new index and compare the page count in the buffer to the previous results.
 
-<pre>DBCC DROPCLEANBUFFERS</pre>
+sql
+DBCC DROPCLEANBUFFERS
+```
+
 
 Next, run the script below to create the nonclustered index or, covering index that consists of the key column being the primary key column of SalesOrderID and INCLUDE the DueDate, ShipDate and SunTotal columns.
 
-<pre>CREATE INDEX IDX_SalesOrderID_COVER_ASC ON dbo.IndexPageCount (SalesOrderID) INCLUDE (DueDate,ShipDate,SubTotal)</pre>
+sql
+CREATE INDEX IDX_SalesOrderID_COVER_ASC ON dbo.IndexPageCount (SalesOrderID) INCLUDE (DueDate,ShipDate,SubTotal)
+```
+
 
 Execute the previously used query
 
-<pre>SELECT 
+sql
+SELECT 
 	hdr.DueDate
 	,hdr.ShipDate
 	,SUM(SubTotal) AS SubTotals
@@ -117,8 +127,8 @@ dbo.IndexPageCount hdr
 WHERE hdr.SalesOrderID < 50000
 GROUP BY 
 	 hdr.DueDate
-	,hdr.ShipDate</pre>
-
+	,hdr.ShipDate
+```
 After reviewing the statistics IO from the second execution, the new covering index was utilized and showed an improvement on logical reads.
 
 > Table &#8216;IndexPageCount&#8217;. Scan count 1, logical reads 29, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p>

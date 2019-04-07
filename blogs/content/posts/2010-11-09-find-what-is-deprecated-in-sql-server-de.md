@@ -3,6 +3,7 @@ title: Find what is deprecated in SQL Server Denali by using sys.dm_os_performan
 author: SQLDenis
 type: post
 date: 2010-11-09T16:27:38+00:00
+ID: 940
 excerpt: |
   With every version of SQL Server come warnings about features/code that is deprecated. You can use the sys.dm_os_performance_counters dynamic management view to find what these deprecated features are.
   
@@ -25,8 +26,10 @@ With every version of SQL Server come warnings about features/code that is depre
 
 If you run the following query on SQL Server Denali CTP 1
 
-<pre>select * from sys.dm_os_performance_counters
-where object_name like '%deprecated%'</pre>
+sql
+select * from sys.dm_os_performance_counters
+where object_name like '%deprecated%'
+```
 
 You get back 239 rows, below are the new things compared to 2008
 

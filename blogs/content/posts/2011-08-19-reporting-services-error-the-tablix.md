@@ -3,6 +3,7 @@ title: 'Reporting Services Error: “The tablix has a detail member with inner m
 author: Jes Borland
 type: post
 date: 2011-08-19T11:36:00+00:00
+ID: 1302
 excerpt: As I work on my Reporting Services 201 session for PASS Summit 2011, I am reminded that there are a few areas I always struggle with. This is how I solve one of them.
 url: /index.php/datamgmt/dbprogramming/reporting-services-error-the-tablix/
 views:

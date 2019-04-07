@@ -3,6 +3,7 @@ title: ReportViewer and the RSPrintClient Control Problems
 author: Ted Krueger (onpnt)
 type: post
 date: 2008-12-01T23:58:43+00:00
+ID: 228
 url: /index.php/datamgmt/datadesign/reportviewer-and-the-rsprintclient-contr/
 views:
   - 7110

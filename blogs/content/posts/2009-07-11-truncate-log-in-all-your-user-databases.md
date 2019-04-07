@@ -3,6 +3,7 @@ title: Shrink log in all your user databases
 author: Naomi Nosonovsky
 type: post
 date: 2009-07-12T01:40:34+00:00
+ID: 506
 url: /index.php/datamgmt/datadesign/truncate-log-in-all-your-user-databases/
 views:
   - 38812
@@ -24,7 +25,8 @@ The first idea that came to mind was to use sp_MSForEachDB non-documented stored
   
 Based on Duncan&#8217;s comments the better code than I suggested would be
 
-<pre>sp_MSForEachDb 'IF ''?'' NOT IN (''master'', ''tempdb'', ''tempdev'', ''model'', ''msdb'')
+sql
+sp_MSForEachDb 'IF ''?'' NOT IN (''master'', ''tempdb'', ''tempdev'', ''model'', ''msdb'')
 AND (SELECT recovery_model FROM master.sys.databases WHERE name = ''?'') = 1
 AND (SELECT is_read_only FROM master.sys.databases WHERE name = ''?'') = 0
 BEGIN
@@ -37,11 +39,13 @@ PRINT @LogFile
 EXEC(''ALTER DATABASE [?] SET RECOVERY SIMPLE'')
 DBCC SHRINKFILE (@LogFile, 1)
 EXEC(''ALTER DATABASE [?] SET RECOVERY FULL'')
-END'</pre>
+END'
+```
 
 It may be even a better idea of using dynamic SQL and implicit looping through databases instead of undocumented SP, like this
 
-<pre>declare @SQL nvarchar(max)
+sql
+declare @SQL nvarchar(max)
 
   select @SQL = coalesce(@SQL + char(13) + char(10),'') + N'
  Use ' + QUOTENAME(d.[name]) + ';' + CHAR(13) + '
@@ -51,7 +55,7 @@ It may be even a better idea of using dynamic SQL and implicit looping through d
 FROM sys.databases d
 INNER JOIN sys.master_files mf ON [d].[database_id] = [mf].[database_id]
 WHERE
-    d.[database_id] &gt; 4 --no sys dbs
+    d.[database_id] > 4 --no sys dbs
     AND d.recovery_model = 1
     AND d.is_read_only = 0
     AND mf.[type] = 1 --log files
@@ -59,7 +63,8 @@ ORDER BY d.name
 
 --print @SQL
 
-execute (@SQL)</pre>
+execute (@SQL)
+```
 
 (code based on this [MSDN thread][4])
   
@@ -67,7 +72,8 @@ execute (@SQL)</pre>
   
 Interestingly, this solution, proposed by Borislav Borissov, still attempts to change recovery model in TempDB &#8211; not clear why:
 
-<pre>sp_MSForEachDb 'IF LOWER(''?'') NOT IN (''master'', ''tempdb'', ''tempdev'', ''model'', ''msdb'')
+sql
+sp_MSForEachDb 'IF LOWER(''?'') NOT IN (''master'', ''tempdb'', ''tempdev'', ''model'', ''msdb'')
                  BEGIN
                      declare @LogFile nvarchar(2000)
                      declare @ExeString nvarchar(2000)
@@ -80,11 +86,12 @@ Interestingly, this solution, proposed by Borislav Borissov, still attempts to c
                      ALTER DATABASE [?] SET RECOVERY SIMPLE
                      DBCC SHRINKFILE (@LogFile, 1)
                      ALTER DATABASE [?] SET RECOVERY FULL
-                 END'</pre>
-
+                 END'
+```
 However, the solution suggested by George Mastros of first creating a stored procedure and then executing it, works fine
 
-<pre>sp_msforeachdb 'If ''?'' Not In (''master'',''tempdb'',''model'',''msdb'') 
+sql
+sp_msforeachdb 'If ''?'' Not In (''master'',''tempdb'',''model'',''msdb'') 
       Begin
             Declare @LogFile nvarchar(2000)
             Select @LogFile = Name From master..sysaltfiles Where db_name(dbid) = ''?'' And Fileid = 2
@@ -102,7 +109,8 @@ However, the solution suggested by George Mastros of first creating a stored pro
             Exec (@LogFile)   
             --print(@LogFile)
             exec [?].dbo.ShrinkMe
-      End '</pre>
+      End '
+```
 
 This link allows to check the recovery model for the database
    
@@ -114,5 +122,5 @@ http://blog.sqlauthority.com/2009/07/16/sql-server-four-different-ways-to-find-r
  [2]: http://www.karaszi.com/SQLServer/info_dont_shrink.asp
  [3]: http://www.mssqltips.com/tip.asp?tip=1905&ctc
  [4]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/414973eb-a84b-40c4-8a21-919d92947ed0/#4c9c3420-495c-4e0f-ad94-6fbb4b7c44fb
- [5]: http://forum.lessthandot.com/viewforum.php?f=17
- [6]: http://forum.lessthandot.com/viewforum.php?f=22
+ [5]: http://forum.ltd.local/viewforum.php?f=17
+ [6]: http://forum.ltd.local/viewforum.php?f=22

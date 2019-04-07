@@ -3,6 +3,7 @@ title: Lazy Coding?
 author: chaospandion
 type: post
 date: 2010-03-11T14:03:43+00:00
+ID: 725
 url: /index.php/desktopdev/mstech/lazy-coding/
 views:
   - 3831
@@ -21,7 +22,8 @@ Are you waiting for .NET 4.0 to take advantage of lazy initialization? Now you d
 
 _Aren&#8217;t we all a little lazy?_
 
-<pre>/// <summary>
+```CSharp
+/// <summary>
 /// Provides support for lazy initialization.
 /// </summary>
 /// <typeparam name="T">Specifies the type of object that is being lazily initialized.</typeparam>
@@ -89,12 +91,14 @@ public sealed class Lazy<T>
 	{
 		return Value.ToString();
 	}
-}</pre>
-
+}
+```
 **Example Usage**
 
-<pre>public int MyProperty
+```CSharp
+public int MyProperty
 {
     get { return myProperty.Value; }
 }
-private readonly Lazy<int> myProperty = new Lazy<int>(() => 2);</pre>
+private readonly Lazy<int> myProperty = new Lazy<int>(() => 2);
+```

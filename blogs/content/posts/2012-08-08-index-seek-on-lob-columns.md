@@ -3,6 +3,7 @@ title: Index Seek on LOB Columns
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-08-08T13:35:00+00:00
+ID: 1689
 excerpt: 'I often run across databases that store files, images, and all sorts of large object data types, better known as LOBs.  These databases will typically become problematic as storing these types of objects in a relational database has some performance pro&hellip;'
 url: /index.php/datamgmt/dbadmin/index-seek-on-lob-columns/
 views:
@@ -23,27 +24,36 @@ To show the effects of using the method Paul discussed, I will create a table th
 
 Create the table, PerfLOB
 
-<pre>CREATE TABLE PerfLOB 
+sql
+CREATE TABLE PerfLOB 
 (ID INT IDENTITY(1,1) PRIMARY KEY, 
 USERNAME VARCHAR(155), 
 LOBVAL VARBINARY(MAX), 
 SUB_CONTENT AS CONVERT(VARCHAR(100),SUBSTRING(LOBVAL,1,100)))
-GO</pre>
+GO
+```
+
 
 For testing purposes, the below statement will insert 1000 copies of a Word document found on the system this was tested on into PerfLOB.  Replace the Word document path with a Word document you have on your testing system.
 
  
 
-<pre>INSERT INTO PerfLOB (USERNAME,LOBVAL)
+sql
+INSERT INTO PerfLOB (USERNAME,LOBVAL)
 VALUES (SUSER_SNAME(),(SELECT * FROM OPENROWSET(BULK N'C:NoSecColumStoreIndexBasics.docx', SINGLE_BLOB) AS guts))
-GO 1000</pre>
+GO 1000
+```
+
 
 (Warning: this insert will take some time due to the LOB insertions.)
 
 Review the contents by using a select statement and the LEN() function.  Set Statistics IO on at this point so you can better see the system requirements to fulfill the query.
 
-<pre>SET STATISTICS IO ON
-SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB</pre>
+sql
+SET STATISTICS IO ON
+SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB
+```
+
 
 As you can see, there isn’t much value in looking at the results of a query like this and the actual LOBVAL column,  although the length values returned of the LOBVAL column do have some value for knowledge of what is being taken.
 
@@ -60,12 +70,15 @@ This query requires an extreme amount of resources to complete, as we’ve shown
 
 Now, let’s take a look at something that could be a requirement in a production environment for updating the PerfLOB table.  The USERNAME column must be updated so ownership of the documents are maintained.  This could be done with the following query.
 
-<pre>DECLARE @Doc VARBINARY(MAX)
+sql
+DECLARE @Doc VARBINARY(MAX)
 SET @Doc = (SELECT BulkColumn FROM OPENROWSET(BULK N'C:NoSecColumStoreIndexBasics.docx', SINGLE_BLOB) AS guts)
 UPDATE PerfLOB
 SET USERNAME = SUSER_SNAME()
 WHERE LOBVAL = @Doc
-GO</pre>
+GO
+```
+
 
 > IO Results &#8211; Table &#8216;PerfLOB&#8217;. Scan count 1, logical reads 10, physical reads 0, read-ahead reads 0, lob logical reads 86000, lob physical reads 0, lob read-ahead reads 0.</p><div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-153.png?mtime=1344439799"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-153.png?mtime=1344439799" width="501" height="85" /></a>
@@ -75,7 +88,10 @@ The update above that is relying on searching for the matching document, like th
 
 We have the SUB_CONTENT column and can make it the key column in the index, we can use the INCLUDE option to include the actual LOB column as a non-key column; LOBVAL.
 
-<pre>CREATE NONCLUSTERED INDEX IDX_LOGSTRING ON PerfLOB (SUB_CONTENT) INCLUDE (LOBVAL)</pre>
+sql
+CREATE NONCLUSTERED INDEX IDX_LOGSTRING ON PerfLOB (SUB_CONTENT) INCLUDE (LOBVAL)
+```
+
 
 GO
 
@@ -91,7 +107,8 @@ We could visualize this as
 
 Something to consider about the storage needs for and time of a nonclustered index creation is that the LOB_DATA page will exist in the nonclustered index.  We can take a closer look at this by running the following query to dig into the pages.
 
-<pre>select 
+sql
+select 
 	obj.name, 
 	idx.name,
 	parts.index_id, 
@@ -104,8 +121,8 @@ from sys.objects obj
   inner join sys.partitions parts on obj.object_id = parts.object_id
   inner join sys.allocation_units all_units on all_units.container_id = parts.hobt_id
   inner join sys.indexes idx on parts.index_id = idx.index_id and obj.object_id = idx.object_id
-where obj.name = 'PerfLOB' </pre>
-
+where obj.name = 'PerfLOB' 
+```
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-155.png?mtime=1344439799"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-155.png?mtime=1344439799" width="624" height="85" /></a>
 </div>
@@ -114,14 +131,17 @@ Notice that there is a LOB_DATA page type for both the clustered and the nonclus
 
 Now that the nonclustered index has been created on the computed column, run the same query as earlier, with minor changes to utilize the computed column as the predicate.  Alter the query as shown to force the use of the new nonclustered index with an index hint.
 
-<pre>DECLARE @SUBString VARCHAR(100)
+sql
+DECLARE @SUBString VARCHAR(100)
 DECLARE @PK INT
 SET @SUBString = (SELECT CONVERT(VARCHAR(100),BulkColumn) FROM OPENROWSET(BULK N'C:NoSecColumStoreIndexBasics.docx', SINGLE_BLOB) AS guts)
 SET @PK = (SELECT TOP 1 ID FROM PerfLOB WITH (INDEX=IDX_LOGSTRING) WHERE SUB_CONTENT = @SUBString)
 UPDATE PerfLOB
 SET USERNAME = SUSER_SNAME()
 WHERE ID = @PK
-GO</pre>
+GO
+```
+
 
 (Note: the use of TOP 1 is added given the testing example and the documents all being the same.   The documents would be unique data in a normalized table.)
 

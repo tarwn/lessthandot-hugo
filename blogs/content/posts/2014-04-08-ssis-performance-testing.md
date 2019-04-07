@@ -3,6 +3,7 @@ title: SSIS Performance Testing
 author: Koen Verbeeck
 type: post
 date: 2014-04-08T07:54:01+00:00
+ID: 2549
 url: /index.php/datamgmt/ssis/ssis-performance-testing/
 views:
   - 40704
@@ -23,7 +24,8 @@ I had to do some performance testing for an upcoming [MSSQLTips][1] article and 
 
 First of all we have to log start and end dates of the package to a table so we can easily calculate the duration a package took to finish. This can probably be calculated from the SSIS catalog as well, but I was a bit too <del>busy</del> lazy to find out how to do this. Anyway, the logging table is created using the following statement:
 
-<pre>IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[PackageLogging]') AND type in (N'U'))
+sql
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[PackageLogging]') AND type in (N'U'))
 BEGIN
 	CREATE TABLE [dbo].[PackageLogging](
 		[ID] [int] IDENTITY(1,1) NOT NULL,
@@ -33,7 +35,8 @@ BEGIN
 		[EndDate] [datetime2](7) NULL
 	);
 END
-GO</pre>
+GO
+```
 
 The RunID column is populated by a package parameter; I will come back to this later on.
 
@@ -53,7 +56,8 @@ The RunID parameter is important to link those two Execute SQL Tasks together. A
 
 Logging is the first step, now we have to run the package of course. I created a stored procedure that allows me to easily start a package in the SSIS catalog.
 
-<pre>CREATE PROC [dbo].[RunPackage]
+sql
+CREATE PROC [dbo].[RunPackage]
 	(@RunID			INT
 	,@PackageName	VARCHAR(50)
 	,@FolderName	VARCHAR(50)
@@ -87,32 +91,37 @@ EXEC [SSISDB].[catalog].[set_execution_parameter_value]
 
 EXEC [SSISDB].[catalog].[start_execution] @execution_id;
 
-GO</pre>
+GO
+```
 
 The proc passes the @RunID parameter to the package, as well as other usual suspects, such as the package name, folder name and project name. You can also choose if a package is run synchronously or asynchronously. When run synchronously, the stored procedure doesn’t finish until the package is finished as well.
 
 Using this stored procedure, it is easy to run a package multiple times in a row using a WHILE loop.
 
-<pre>DECLARE @RunID INT = 1;
+sql
+DECLARE @RunID INT = 1;
 
 WHILE (@RunID <= 10)
 BEGIN
 	EXEC dbo.RunPackage @RunID, 'myPackage.dtsx', 'myFolder', 'myProject', 1;
 	SET @RunID += 1;
-END</pre>
+END
+```
 
 The package is run synchronously, so that multiple instances do not run at the same time. This eliminates resource contention and gives us a clearer result of the performance of the individual package.
 
 Using the following query, it is easy to build a nice chart in SSRS:
 
-<pre>SELECT
+sql
+SELECT
 	 [RunID]
 	,[PackageName]
 	,[Duration] = DATEDIFF(MILLISECOND,StartDate,EndDate) / 1000.0
 	,[Mean] = PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY DATEDIFF(MILLISECOND,StartDate,EndDate) / 1000.0)
 					OVER (PARTITION BY PackageName)
 FROM [dbo].[PackageLogging]
-ORDER BY ID;</pre>
+ORDER BY ID;
+```
 
 The result:
 

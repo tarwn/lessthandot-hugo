@@ -3,6 +3,7 @@ title: Desktop Computing is Dead
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-08-08T18:01:00+00:00
+ID: 1293
 excerpt: 'As I was cleaning this past weekend, I did inventory of hardware that was floating about the house and it turns out that I have four laptops and one desktop.  The desktop that I still have is one that I built around four years ago.  It is up in the gues&hellip;'
 url: /index.php/itprofessionals/itservicemanagement/desktop-computing-is-dead/
 views:

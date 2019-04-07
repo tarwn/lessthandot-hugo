@@ -3,6 +3,7 @@ title: CSV file to API using Azure Functions (CSVaaS)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-11-25T14:18:56+00:00
+ID: 4839
 url: /index.php/enterprisedev/cloud/azure/csv-file-to-api-using-azure-functions-csvaas/
 featured_image: /wp-content/uploads/2016/11/API.png
 views:
@@ -56,14 +57,16 @@ API Management offers a lot of extra capabilities, but if I didn&#8217;t want th
 
 So this CSV file: <https://www.dropbox.com/s/3wqj4jpv4vru2a7/file1?dl=0>
 
-<pre>MyString,MyNumber,MyBool,MyAlmostNumber,MyAlmostBool
+```text
+MyString,MyNumber,MyBool,MyAlmostNumber,MyAlmostBool
 "ABC",123,true,456,false
 "DEF",124,false,555,true
-"GHI",125,True,whatever,more stuff</pre>
-
+"GHI",125,True,whatever,more stuff
+```
 Turns into this JSON file: <https://csvaas.blob.core.windows.net/archive/file1>
 
-<pre>{  
+```javascript
+{  
    "info":{  
       "sourceFile":"file1",
       "processedTime":"2016-11-24T14:20:19",
@@ -74,15 +77,16 @@ Turns into this JSON file: <https://csvaas.blob.core.windows.net/archive/file1>
       {  "MyString":"DEF", "MyNumber":124, "MyBool":false, "MyAlmostNumber":"555", "MyAlmostBool":"true" },
       {  "MyString":"GHI", "MyNumber":125, "MyBool":true, "MyAlmostNumber":"whatever", "MyAlmostBool":"more stuff" }
    ]
-}</pre>
-
+}
+```
 Which is then published to the listing: <https://csvaas.blob.core.windows.net/listing/all>
 
-<pre>{
+```javascript
+{
     "LatestUpdate":"2016-11-24T14:29:21.1069912Z",
     "Items":["file2","file1"]
-}</pre>
-
+}
+```
 And is surfaced as the latest record (which has probably changed by now): <https://csvaas.blob.core.windows.net/public/latest>
 
 And these are the prepared responses for this API: [CSVaaS Documentation][1]
@@ -207,11 +211,14 @@ Create a new function with a trigger of type &#8220;External File Trigger&#8221;
 
 Lastly, write some code to convert the CSV to JSON. I used a nuget package, so I added a project.json to specify my dependencies:
 
+```json
+```
 And then a simple Run function to convert the incoming input file into the projected JSON for blob storage:
 
 **[CSVaaSDropboxProcessing/run.csx][3]**
 
-<pre>#r "Microsoft.WindowsAzure.Storage"
+```csharp
+#r "Microsoft.WindowsAzure.Storage"
 
 using System;
 using System.Text;
@@ -230,8 +237,8 @@ public static void Run(Stream input, string name, CloudBlockBlob jsonFile, Trace
     var csv = new CsvReader(reader);
     csv.Configuration.HasHeaderRecord = false;
 
-    var headers = new List<string&gt;();
-    var rows = new List<List<string&gt;&gt;();
+    var headers = new List<string>();
+    var rows = new List<List<string>>();
     InspectedType[] types = null;
     int rowCount = 0;
     string stringValue;
@@ -239,7 +246,7 @@ public static void Run(Stream input, string name, CloudBlockBlob jsonFile, Trace
     {
         if(rowCount == 0)
         {
-            for(int i=0; csv.TryGetField<string&gt;(i, out stringValue); i++) 
+            for(int i=0; csv.TryGetField<string>(i, out stringValue); i++) 
             {
                 headers.Add(stringValue);
             }
@@ -248,8 +255,8 @@ public static void Run(Stream input, string name, CloudBlockBlob jsonFile, Trace
         }
         else
         {
-            var row = new List<string&gt;();
-            for(int i=0; csv.TryGetField<string&gt;(i, out stringValue); i++) 
+            var row = new List<string>();
+            for(int i=0; csv.TryGetField<string>(i, out stringValue); i++) 
             {
                 row.Add(stringValue);
                 if(rowCount == 1)
@@ -341,8 +348,8 @@ public enum InspectedType
     String = 0,
     Number = 1,
     Boolean = 2    
-}</pre>
-
+}
+```
 Nearly all of the code is converting the CSV to JSON, almost no code is required to handle the storage, dropbox, etc interactions.
 
 #### Step 3B: Listing and Latest JSON
@@ -351,7 +358,8 @@ Create a second Azure Function that watches the "Archive" blob, with a blob outp
 
 **[CSVaaSPublish/run.csx][4]**
 
-<pre>#r "Microsoft.WindowsAzure.Storage"
+```csharp
+#r "Microsoft.WindowsAzure.Storage"
 
 using Microsoft.WindowsAzure.Storage.Blob;
 using Newtonsoft.Json;
@@ -365,7 +373,7 @@ public static void Run(Stream triggerBlob, string name, string listBlobIn, Cloud
     CSVList list;
     if(!String.IsNullOrEmpty(listBlobIn))
     {
-        list = JsonConvert.DeserializeObject<CSVList&gt;(listBlobIn);
+        list = JsonConvert.DeserializeObject<CSVList>(listBlobIn);
     }
     else{
         list = new CSVList();
@@ -383,13 +391,13 @@ public class CSVList
 {
     public CSVList() 
     {
-        Items = new List<string&gt;();
+        Items = new List<string>();
     }
 
     public DateTime LatestUpdate { get;set; }
-    public List<string&gt; Items { get;set; }    
-}</pre>
-
+    public List<string> Items { get;set; }    
+}
+```
 And there we have it, a CSV-powered API with full documentation, authentication via Microsoft as a single-sign on source, analytics, rate limits, and an interface that requires me to do nothing more than save my file in a folder and pay an extremely low consumption bill based on usage.
 
 ## Things I Figured Out

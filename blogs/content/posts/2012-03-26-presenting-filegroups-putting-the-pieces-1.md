@@ -3,6 +3,7 @@ title: 'Presenting “Filegroups: Putting the Pieces Together” for Chicago SQL
 author: Jes Borland
 type: post
 date: 2012-03-26T12:39:00+00:00
+ID: 1573
 excerpt: "It's been a busy year already, but I'm just getting started! I'll be presenting on Tuesday, April 3, 2012, for SQL Connection Suburban Chicago."
 url: /index.php/datamgmt/dbprogramming/presenting-filegroups-putting-the-pieces-1/
 views:

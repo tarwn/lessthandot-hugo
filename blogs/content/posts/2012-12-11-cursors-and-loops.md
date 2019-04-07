@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 11: Cursors and loops'
 author: SQLDenis
 type: post
 date: 2012-12-11T13:01:00+00:00
+ID: 1846
 excerpt: |
   This is day eleven of the SQL Advent 2012 series of blog posts. Today we are going to look at cursors and loops.
   
@@ -42,7 +43,8 @@ The reason that cursors are evil is that they tend to be slower than a set based
 
 Take a look at this code
 
-<pre>CREATE FUNCTION dbo.cursorEnroll ()
+sql
+CREATE FUNCTION dbo.cursorEnroll ()
     RETURNS INT AS
     BEGIN
         DECLARE @studentsEnrolled INT
@@ -62,11 +64,14 @@ Take a look at this code
         CLOSE myCursor
         RETURN @studentsEnrolled
  
-    END;</pre>
+    END;
+```
 
 That whole flawed cursor logic can be replaced with one line of T-SQL
 
-<pre>SELECT @studentsEnrolled = COUNT(*) FROM courseEnrollment</pre>
+sql
+SELECT @studentsEnrolled = COUNT(*) FROM courseEnrollment
+```
 
 Which one do you think will perform faster?
 
@@ -74,7 +79,8 @@ Which one do you think will perform faster?
 
 If cursors are evil, then what is more evil than a cursor? Nested cursors of course, especially three nested cursors. Here is an example of some horrible code where a cursor is not needed
 
-<pre>CREATE PROCEDURE [dbo].[sp_SomeMadeUpName]
+sql
+CREATE PROCEDURE [dbo].[sp_SomeMadeUpName]
 AS
 
 DECLARE @SomeDate DATETIME
@@ -129,7 +135,8 @@ WHILE @@FETCH_STATUS = 0
 	END
 
 CLOSE SomeCursor
-DEALLOCATE SomeCursor</pre>
+DEALLOCATE SomeCursor
+```
 
 Why the need of looping over the list od IDs? Join with the linked server and do all this in 3 lines of code
 
@@ -145,8 +152,10 @@ Usually you will find a loop in a trigger that will call some sort of stored pro
 
 Here is where you will find the biggest offenders. All you have to do to find the procs with cursors is run the following piece of code
 
-<pre>SELECT * FROM sys.procedures 
-WHERE OBJECT_DEFINITION((object_id) )LIKE '%DECLARE%%cursor%'</pre>
+sql
+SELECT * FROM sys.procedures 
+WHERE OBJECT_DEFINITION((object_id) )LIKE '%DECLARE%%cursor%'
+```
 
 For while loops, just change the &#8216;%DECLARE%%cursor%&#8217; part to &#8216;%while%&#8217;
 
@@ -158,7 +167,8 @@ One of the few times I will use cursors or while loops is if I need to get infor
 
 Here is an example
 
-<pre>CREATE TABLE #tempSpSpaceUsed (TableName VARCHAR(100),
+sql
+CREATE TABLE #tempSpSpaceUsed (TableName VARCHAR(100),
 								Rows INT,
 								Reserved VARCHAR(100),
 								Data VARCHAR(100),
@@ -181,13 +191,15 @@ INSERT #tempSpSpaceUsed
 SET @loopid +=1
 END
 
-SELECT * FROM #tempSpSpaceUsed</pre>
-
+SELECT * FROM #tempSpSpaceUsed
+```
 Of course this can be simplified as well, you can just run this instead of the while loop and run the output
 
-<pre>SELECT DISTINCT 'INSERT #tempSpSPaceUsed
+sql
+SELECT DISTINCT 'INSERT #tempSpSPaceUsed
 EXEC sp_spaceused ''' + [name] + ''''
-FROM sys.tables</pre>
+FROM sys.tables
+```
 
 ## Are cursors always evil?
 

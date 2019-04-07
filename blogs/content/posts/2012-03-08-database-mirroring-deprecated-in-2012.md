@@ -3,6 +3,7 @@ title: Database Mirroring Deprecated in 2012
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-03-08T12:22:00+00:00
+ID: 1551
 excerpt: 'As the news travels about the Deprecated Database Engine Features in SQL Server 2012, many start to get the fainting scare in them due to features they have worked endlessly on to provide a stable solution in either their company’s system or client’s sy&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/database-mirroring-deprecated-in-2012/
 views:

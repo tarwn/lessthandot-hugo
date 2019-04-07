@@ -3,6 +3,7 @@ title: Do You Get A Benefit From Compressing Backups If You Already Have Compres
 author: SQLDenis
 type: post
 date: 2010-03-02T16:07:27+00:00
+ID: 709
 url: /index.php/datamgmt/datadesign/do-you-get-a-benefit-from-compressing-ba/
 views:
   - 26900
@@ -27,7 +28,8 @@ Here is what we will do; we will create two databases with only one table. In on
 
 Let&#8217;s get started, first we will create the database that will not use compression
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 
 CREATE DATABASE [TestUncompressed] ON  PRIMARY 
@@ -37,11 +39,13 @@ CREATE DATABASE [TestUncompressed] ON  PRIMARY
 GO
 
 ALTER DATABASE [TestUncompressed] SET RECOVERY  SIMPLE
-GO</pre>
+GO
+```
 
 Now we will create the database that will use data compression
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 CREATE DATABASE [TestCompressed] ON  PRIMARY 
 ( NAME = N'TestCompressed_Data', FILENAME = N'C:DbTestTestCompressed_Data.mdf'   )
@@ -50,11 +54,13 @@ CREATE DATABASE [TestCompressed] ON  PRIMARY
 GO
 
 ALTER DATABASE [TestCompressed] SET RECOVERY  SIMPLE
-GO</pre>
+GO
+```
 
 The following block of code will create a table with 3 million rows in the database that will not use compression
 
-<pre>USE [TestUncompressed]
+sql
+USE [TestUncompressed]
 GO
 
 
@@ -78,11 +84,13 @@ SELECT x.Number,
 	 FROM (					
 SELECT TOP 3000000 ROW_NUMBER() OVER (ORDER BY s.id) AS Number
  FROM master..sysobjects s 
-CROSS JOIN master..sysobjects s2) x</pre>
+CROSS JOIN master..sysobjects s2) x
+```
 
 The following block of code will create a table with 3 million rows in the database that will use data compression
 
-<pre>USE [TestCompressed]
+sql
+USE [TestCompressed]
 GO
 
 
@@ -99,13 +107,15 @@ GO
 					
 
 INSERT Test (SomeCol, SomeDate, SomeChar, SomeGuid)
-SELECT * FROM [TestUncompressed]..Test</pre>
+SELECT * FROM [TestUncompressed]..Test
+```
 
 # Backups
 
 Now it is time to do the backups, we will do 4 backups. Each database will be backed up compressed and uncompressed. Here is the code that will do that. I use the _C:DbTest_ folder, if you want to run this, code make sure that you create that folder.
 
-<pre>BACKUP DATABASE TestCompressed TO DISK='C:DbTestTestCompressedBackupCompressed.bak' 
+sql
+BACKUP DATABASE TestCompressed TO DISK='C:DbTestTestCompressedBackupCompressed.bak' 
 WITH  COMPRESSION
 GO
 
@@ -120,7 +130,8 @@ GO
 
 
 BACKUP DATABASE TestUncompressed TO DISK='C:DbTestTestUncompressedBackupUnCompressed.bak' 
-GO</pre>
+GO
+```
 
 Here are the times that each backup took.
   
@@ -159,7 +170,7 @@ Here are the times that each backup took.
     Now let&#8217;s do the restores.
   </p>
   
-  <pre>USE master 
+  <pre lang="tsql">USE master 
 GO
 
 RESTORE DATABASE [TestCompressed] 
@@ -353,5 +364,5 @@ GO
     </p>
     
     <p>
-      *** <strong>Remember, if you have a SQL related question, try our <a href="http://forum.lessthandot.com/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.lessthandot.com/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins>
+      *** <strong>Remember, if you have a SQL related question, try our <a href="http://forum.ltd.local/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.ltd.local/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins>
     </p>

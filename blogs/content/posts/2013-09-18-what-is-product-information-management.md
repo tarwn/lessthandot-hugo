@@ -3,6 +3,7 @@ title: What is Product Information Management?
 author: Axel Achten (axel8s)
 type: post
 date: 2013-09-18T20:42:00+00:00
+ID: 2158
 excerpt: |
   Product Information Management (PIM) or Product Content Management (PCM) systems do exactly what they say: they manage the information about products.
   What do you mean with product information/content?

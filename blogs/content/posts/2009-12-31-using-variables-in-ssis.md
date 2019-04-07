@@ -3,6 +3,7 @@ title: 'Using Variables in SSIS:  Purpose review and functional examples'
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-12-31T14:12:52+00:00
+ID: 657
 url: /index.php/datamgmt/datadesign/using-variables-in-ssis/
 views:
   - 16809
@@ -60,7 +61,9 @@ We want focused_fil to be a constant in our script task so add it to the ReadOnl
 
 Now going into the designer we have the ability to read the focused_fil variable in order to make decisions on setting the processed variable. To do this in SSIS 2008 you reference Dts and drill to the Variables. Use value to reference and set like below
 
-<pre>Dts.Variables["processed"].Value = "File " + Dts.Variables["focused_fil"].Value + " processed @ " + System.DateTime.Now.ToString();</pre>
+```CSHARP
+Dts.Variables["processed"].Value = "File " + Dts.Variables["focused_fil"].Value + " processed @ " + System.DateTime.Now.ToString();
+```
 
 This results in setting the processed variable as “File document.xml processed @ {system date}”
 
@@ -98,8 +101,10 @@ We can do the same with our flat file source connection by using the variable Us
 
 Right click the managers area and create a new flat file connection. To help setting mappings, a shell or initial CSV file is handy to preset the default settings of the connection for us. This can all be done dynamically either in script tasks or by setting columns manually in the advanced section of the editor. For our functional example we need to import bank id, back name, transaction number, amount into a transmissions table. The file is csv formed as below
 
-<pre>bankid,bankname,transcode,amt
-1,take your money bank 1,3737#219%4,3000.32</pre>
+```
+bankid,bankname,transcode,amt
+1,take your money bank 1,3737#219%4,3000.32
+```
 
 Saving this as C:transmission\_1.csv we set the file location in the editor and then only need to set the file containing headers option to complete our mappings. Once this is all done, we use the same property settings through the expression settings of the flat file source as we did on the destination for setting the connection string to the file we set in the focused\_fil variable.
 
@@ -128,8 +133,10 @@ In our File System Task editor we only need to set 3 values with our variables i
   
 Set IsDestinationPathVariable and IsSourcePathVariable to True and set the following variables to the property assigned. 
 
-<pre>SourceVariable = User::focused_fil
-DestinationVariable = User::archive</pre>
+```
+SourceVariable = User::focused_fil
+DestinationVariable = User::archive
+```
 
 We want to move the file so there is no reprocessing occurring so change the operation method to Move over the default, Copy. Notice when this is completed and saved, there will be a warning on the file system task stating the variable is empty. To ensure the package compiles correctly, setting the focused file to the file we used as a shell to map our flat file source should be set to the focused_fil variable
 

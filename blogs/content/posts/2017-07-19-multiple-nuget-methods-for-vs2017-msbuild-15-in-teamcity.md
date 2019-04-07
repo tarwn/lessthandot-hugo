@@ -3,6 +3,7 @@ title: Multiple NuGet Methods for VS2017 + MSBuild 15 in TeamCity
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-07-19T18:06:25+00:00
+ID: 8697
 url: /index.php/itprofessionals/softwareandconfigmgmt/multiple-nuget-methods-for-vs2017-msbuild-15-in-teamcity/
 views:
   - 4033

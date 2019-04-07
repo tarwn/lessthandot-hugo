@@ -3,6 +3,7 @@ title: Tokenizing filenames in SQL Server
 author: SQLDenis
 type: post
 date: 2010-10-20T15:10:34+00:00
+ID: 927
 excerpt: |
   Someone at my job needed to grab a filepath, take out the filename and then split all the pieces into their own columns which were separated by either a dot or an underscore. If you had the following table
   
@@ -25,11 +26,13 @@ tags:
 ---
 Someone at my job needed to grab a filepath, take out the filename and then split all the pieces into their own columns which were separated by either a dot or an underscore. If you had the following table
 
-<pre>CREATE TABLE #test (id INT primary key, PATH VARCHAR(1000))
+sql
+CREATE TABLE #test (id INT primary key, PATH VARCHAR(1000))
 INSERT #test VALUES(1,'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK')
 INSERT #test VALUES(2,'Y:dgfdbla_2010_10_15_Pre_Calc.BAK')
 INSERT #test VALUES(4,'Y:dgfdgdgdgdgdgdgdSome_Databla_2010_16_Pre_Calc.BAK')
-INSERT #test VALUES(3,'Y:dgfdgdgdgdgdgdgdSome_Databla_2010_11_12_Pre_Calc.BAK')</pre>
+INSERT #test VALUES(3,'Y:dgfdgdgdgdgdgdgdSome_Databla_2010_11_12_Pre_Calc.BAK')
+```
 
 Then this was the required output.
 
@@ -285,9 +288,11 @@ In order to attack this problem you have to divide and conquer. Here are the fou
 
 This is pretty easy, all you have to do is use the replace function and replace &#8216;.&#8217; with &#8216;_&#8217;
 
-<pre>declare @FilePath varchar(100)
+sql
+declare @FilePath varchar(100)
 SELECT @FilePath = 'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK'
-SELECT REPLACE(@FilePath,'.','_')</pre>
+SELECT REPLACE(@FilePath,'.','_')
+```
 
 Result
   
@@ -299,9 +304,11 @@ Y:dgfdgdgd\_Databla\_2010\_10\_14\_Pre\_Calc_BAK
 
 To get just the filename, you use the reverse function, then you look for the position of the first backslash, you will then use the right function and use the position of the first backslash as the number of characters to keep. You add -1 to the length because you do not want the backslash included.
 
-<pre>declare @FilePath varchar(100)
+sql
+declare @FilePath varchar(100)
 SELECT @FilePath = 'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK'
-SELECT RIGHT(@FilePath,PATINDEX('%%',REVERSE(@FilePath))-1) AS PATH</pre>
+SELECT RIGHT(@FilePath,PATINDEX('%%',REVERSE(@FilePath))-1) AS PATH
+```
 
 Result
   
@@ -313,9 +320,11 @@ bla\_2010\_10\_14\_Pre_Calc.BAK
 
 This is just a combination of 1 and 2, take the dot out and get just the file name
 
-<pre>declare @FilePath varchar(100)
+sql
+declare @FilePath varchar(100)
 SELECT @FilePath = 'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK'
-SELECT RIGHT(REPLACE(@FilePath,'.','_'),PATINDEX('%%',REVERSE(@FilePath))-1) AS PATH</pre>
+SELECT RIGHT(REPLACE(@FilePath,'.','_'),PATINDEX('%%',REVERSE(@FilePath))-1) AS PATH
+```
 
 Result
   
@@ -327,7 +336,8 @@ bla\_2010\_10\_14\_Pre\_Calc\_BAK
 
 To split the string we can use the built in table of numbers master..spt_values. Running the code below
 
-<pre>declare @FilePath varchar(100)
+sql
+declare @FilePath varchar(100)
 SELECT @FilePath = 'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK'
 SELECT @FilePath = RIGHT(REPLACE(@FilePath,'.','_'),PATINDEX('%%',REVERSE(@FilePath))-1) 
 
@@ -336,7 +346,8 @@ SELECT @FilePath as FilePath, SUBSTRING('_' + @FilePath + '_', Number + 1,
     FROM master..spt_values v
     WHERE TYPE = 'P'
     AND Number <= LEN('_' + @FilePath  + '_') - 1
-    AND SUBSTRING('_' + @FilePath  + '_', Number, 1) = '_'</pre>
+    AND SUBSTRING('_' + @FilePath  + '_', Number, 1) = '_'
+```
 
 This is the output
 
@@ -428,7 +439,8 @@ We are almost there, instead of just one string we want to grab the whole table.
   
 Run this to see what we have so far
 
-<pre>SELECT id,PATH, SUBSTRING('_' + PATH + '_', Number + 1,
+sql
+SELECT id,PATH, SUBSTRING('_' + PATH + '_', Number + 1,
     CHARINDEX('_', '_' + PATH + '_', Number + 1) - Number -1)AS VALUE,
     ROW_NUMBER() OVER (PARTITION BY id ORDER BY id,number ) AS ROW
     FROM master..spt_values v
@@ -437,7 +449,8 @@ Run this to see what we have so far
     WHERE TYPE = 'P'
     AND Number <= LEN('_' + PATH  + '_') - 1
     AND SUBSTRING('_' + PATH  + '_', Number, 1) = '_'
-    </pre>
+    
+```
 
 Here is the output
 
@@ -951,7 +964,8 @@ Here is the output
 
 The missing piece is transposing the columns, this is easily accomplished by using the PIVOT operator. As you can see we use the ROW_NUMBER function to create a number for us, this number is then used as a column name by the Pivot operator. Here is the final query which produced the desired output
 
-<pre>SELECT * FROM
+sql
+SELECT * FROM
    ( 
     SELECT id,PATH, SUBSTRING('_' + PATH + '_', Number + 1,
     CHARINDEX('_', '_' + PATH + '_', Number + 1) - Number -1)AS VALUE,
@@ -965,7 +979,8 @@ The missing piece is transposing the columns, this is easily accomplished by usi
     PIVOT
 (   MAX(VALUE)
     FOR ROW IN ([1],[2],[3],[4],[5],[6],[7],[8],[9])
-  ) AS pivTable</pre>
+  ) AS pivTable
+```
 
 The query produces the desired output.
 
@@ -1211,5 +1226,5 @@ As you can see, if you apply small steps and divide the problem, you can easily 
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

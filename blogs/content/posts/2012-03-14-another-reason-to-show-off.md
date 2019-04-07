@@ -3,6 +3,7 @@ title: Another reason to show off your Tech – Happy Pi()
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-03-14T11:38:00+00:00
+ID: 1563
 excerpt: 'As most of the technology world knows, today is 3.14.2012.  Or, as most of us would see it, Pi. This morning it so happens, I ran across some nasty hard-coded values in some code.  This made me think....hmmm...I bet you could use MONTH() and DAY() in yo&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/another-reason-to-show-off/
 views:
@@ -19,5 +20,7 @@ categories:
 
 <span style="font-family: verdana,geneva;"><br /></span>
 
-<pre>SELECT 'Happy ' + CAST(CONVERT(DECIMAL(5,2),ROUND(PI(),2,1)) AS VARCHAR(4)) + ' Day!'
-SELECT 'Happy ' + CAST(MONTH(GETDATE()) AS VARCHAR(2)) + '.' + CAST(DAY(GETDATE()) AS VARCHAR(2)) + ' Day!'</pre>
+sql
+SELECT 'Happy ' + CAST(CONVERT(DECIMAL(5,2),ROUND(PI(),2,1)) AS VARCHAR(4)) + ' Day!'
+SELECT 'Happy ' + CAST(MONTH(GETDATE()) AS VARCHAR(2)) + '.' + CAST(DAY(GETDATE()) AS VARCHAR(2)) + ' Day!'
+```

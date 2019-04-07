@@ -3,6 +3,7 @@ title: Creating Custom Color Palettes in SSRS Charts
 author: Jes Borland
 type: post
 date: 2013-07-24T15:03:00+00:00
+ID: 2139
 excerpt: SSRS has a default set of color combinations for charts. Let’s face it, they aren’t pretty.
 url: /index.php/datamgmt/ssrs/creating-custom-color-palettes-in/
 views:

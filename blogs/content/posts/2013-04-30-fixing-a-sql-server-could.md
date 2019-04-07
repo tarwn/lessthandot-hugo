@@ -3,6 +3,7 @@ title: Fixing a SQL Server could not spawn FRunCM thread error
 author: SQLDenis
 type: post
 date: 2013-04-30T12:28:00+00:00
+ID: 2077
 excerpt: |
   I had to change the account that some SQL Server boxes were using to run the SQL Server services. After I changed the account on one machine from DomainNameUser to DomainNameNewUser SQL Server wouldn't start up
   

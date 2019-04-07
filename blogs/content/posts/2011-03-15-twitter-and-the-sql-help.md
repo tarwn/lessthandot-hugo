@@ -3,6 +3,7 @@ title: Twitter and the SQL Help hash tag – Questions only!
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-03-15T12:14:00+00:00
+ID: 1078
 excerpt: |
   Hello from Puerto Rico everyone!
   I wasn’t planning on doing much while on vacation this week but after seeing some events this morning; I wanted to get one post out there.

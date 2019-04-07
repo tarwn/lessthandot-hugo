@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 5 – Server Considerations – Installing Features (S
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-02T10:26:00+00:00
+ID: 1130
 excerpt: 'SQL Server performs best when paired with hardware and an OS configured only for the core functionality of the SQL Server Engine.  Installing other features along with the engine can degrade performance and the engine’s ability to process transactions. &hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-4/
 views:

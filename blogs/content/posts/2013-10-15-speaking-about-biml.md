@@ -3,6 +3,7 @@ title: Speaking about BIML at the SQL Server Days 2013
 author: Koen Verbeeck
 type: post
 date: 2013-10-15T11:36:00+00:00
+ID: 2180
 excerpt: 'I’m very thrilled to be selected again as a speaker for the sixth edition of the SQL Server Days! The biggest SQL Server event of the year in Belgium, with lots of learning opportunities for developers, BI folks and DBAs. This event is organized by SQLU&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/speaking-about-biml/
 views:

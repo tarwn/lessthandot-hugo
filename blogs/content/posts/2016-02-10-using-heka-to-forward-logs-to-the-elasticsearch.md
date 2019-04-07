@@ -3,6 +3,7 @@ title: Using Heka to forward logs to the elasticsearch
 author: Christiaan Baes (chrissie1)
 type: post
 date: 2016-02-10T09:57:24+00:00
+ID: 4353
 url: /index.php/uncategorized/using-heka-to-forward-logs-to-the-elasticsearch/
 views:
   - 1969

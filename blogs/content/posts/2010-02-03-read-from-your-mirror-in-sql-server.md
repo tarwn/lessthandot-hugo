@@ -3,6 +3,7 @@ title: Read from your mirror in SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-02-03T12:13:02+00:00
+ID: 693
 url: /index.php/datamgmt/datadesign/read-from-your-mirror-in-sql-server/
 views:
   - 9483
@@ -46,12 +47,15 @@ In the following setup we will work through setting up a snapshot on a mirror to
 
 To fully show our lab and setup steps, I will be using the mirror that we setup in, [Using mirroring to Reduce Migration Downtime (Part 1)][2]. Once we have the mirror setup, creating the actual snapshot from the secondary in the mirroring configure in a T-SQL statement.
 
-<pre>CREATE DATABASE NEEDTOMOVE_20100203072007 ON
+sql
+CREATE DATABASE NEEDTOMOVE_20100203072007 ON
 (
 NAME = NEEDTOMOVE,
 FILENAME = 'C:NEEDTOMOVE_20100203072007.ss'
 )
-AS SNAPSHOT OF NEEDTOMOVE</pre></p> 
+AS SNAPSHOT OF NEEDTOMOVE
+```
+</p> 
 
 Once you have done this the snapshot is available as a read-only, point in time representation of the mirror. You can locate the snapshot in SSMS under the &#8220;database snapshots&#8221; tree located directly under the system databases section.
 

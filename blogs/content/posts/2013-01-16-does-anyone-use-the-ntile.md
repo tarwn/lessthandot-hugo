@@ -3,6 +3,7 @@ title: 'Does anyone use the  NTILE() windowing function?'
 author: SQLDenis
 type: post
 date: 2013-01-16T12:22:00+00:00
+ID: 1921
 excerpt: 'A question was asked on StackOverflow about how NTILE() works: Want to learn more on NTILE() I answered that question and then started thinking about NTILE(), I realized that I have never used this function in production code. Everytime I used it was fo&hellip;'
 url: /index.php/datamgmt/dbprogramming/does-anyone-use-the-ntile/
 views:
@@ -20,8 +21,10 @@ tags:
 ---
 A question was asked on StackOverflow about how NTILE() works: [Want to learn more on NTILE()][1] I answered that question and then started thinking about NTILE(), I realized that I have never used this function in production code. Everytime I used it was for demoware purposes. I did a quick check against a bunch of databases
 
-<pre>SELECT * FROM sys.sql_modules
-WHERE OBJECT_DEFINITION(object_id) LIKE '%ntile%'</pre>
+sql
+SELECT * FROM sys.sql_modules
+WHERE OBJECT_DEFINITION(object_id) LIKE '%ntile%'
+```
 
 &#8212;&#8212;-
   
@@ -33,19 +36,23 @@ For you that don&#8217;t know what NTILE() does it basically distributes the row
 
 Let&#8217;s look at some code to understand how it works, first create this simple table
 
-<pre>CREATE TABLE  #temp(StudentID CHAR(2),  Score  INT) 
+sql
+CREATE TABLE  #temp(StudentID CHAR(2),  Score  INT) 
 
 INSERT #temp  VALUES('S1',75 ) 
 INSERT #temp  VALUES('S2',83)
 INSERT #temp  VALUES('S3',91)
 INSERT #temp  VALUES('S4',83)
-INSERT #temp  VALUES('S5',93 ) </pre>
+INSERT #temp  VALUES('S5',93 ) 
+```
 
 Now if you use NTILE() to create 2 buckets, you will see 1 and 2 as NtileValue
 
-<pre>SELECT NTILE(2) OVER(ORDER BY Score) AS NtileValue,*
+sql
+SELECT NTILE(2) OVER(ORDER BY Score) AS NtileValue,*
 FROM #temp
-ORDER BY 1</pre>
+ORDER BY 1
+```
 
 Here are the results:
 
@@ -60,13 +67,17 @@ Since the number of rows are not even, the first bucket will have three rows and
 
 Let&#8217;s add one more row to this table
 
-<pre>INSERT #temp  VALUES('S6',92 ) </pre>
+sql
+INSERT #temp  VALUES('S6',92 ) 
+```
 
 Now let&#8217;s run the same query as before
 
-<pre>SELECT NTILE(2) OVER(ORDER BY Score) AS NtileValue,*
+sql
+SELECT NTILE(2) OVER(ORDER BY Score) AS NtileValue,*
 FROM #temp
-ORDER BY 1</pre>
+ORDER BY 1
+```
 
 Here are the results:
 
@@ -82,9 +93,11 @@ As you can see both buckets now have three rows
 
 What if we use NTILE(3)?
 
-<pre>SELECT NTILE(3) OVER(ORDER BY Score) AS NtileValue,*
+sql
+SELECT NTILE(3) OVER(ORDER BY Score) AS NtileValue,*
 FROM #temp
-ORDER BY 1</pre>
+ORDER BY 1
+```
 
 Here are the results:
 

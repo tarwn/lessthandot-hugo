@@ -3,6 +3,7 @@ title: Reflector to cost us now
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-02-08T00:52:00+00:00
+ID: 1032
 excerpt: 'Red Gate is a company that is widely known as a community company.  I have yet to meet an individual that had anything bad to say about them, even if there are occasional complaints, whines or whatnot.  Overall, the company really is one that we as a co&hellip;'
 url: /index.php/desktopdev/mstech/reflector-to-cost-us-now-1/
 views:

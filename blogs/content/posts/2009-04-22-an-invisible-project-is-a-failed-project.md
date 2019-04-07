@@ -3,6 +3,7 @@ title: An Invisible Project is a Failed Project
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2009-04-22T07:57:16+00:00
+ID: 393
 url: /index.php/itprofessionals/projectmanagement/an-invisible-project-is-a-failed-project/
 views:
   - 10713

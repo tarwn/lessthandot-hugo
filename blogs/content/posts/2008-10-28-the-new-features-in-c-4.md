@@ -3,6 +3,7 @@ title: 'The new features in C# 4.0'
 author: SQLDenis
 type: post
 date: 2008-10-28T17:29:22+00:00
+ID: 186
 url: /index.php/desktopdev/mstech/the-new-features-in-c-4/
 views:
   - 45097

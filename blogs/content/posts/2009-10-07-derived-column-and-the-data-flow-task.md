@@ -3,6 +3,7 @@ title: Derived Column and the Data Flow Task
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-10-08T00:47:00+00:00
+ID: 580
 url: /index.php/datamgmt/datadesign/derived-column-and-the-data-flow-task/
 views:
   - 8610
@@ -38,7 +39,8 @@ The tables in each are identical and appear as follows
 
 To create our supporting SQL Server table run the following create statement
 
-<pre>SET ANSI_NULLS ON
+sql
+SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
@@ -59,7 +61,8 @@ CREATE TABLE [dbo].[SQLSource](
 GO
 
 SET ANSI_PADDING OFF
-GO</pre>
+GO
+```
 
 We now know what we have to work with. Let’s get going on the process of importing the data into SQL Server.
 
@@ -83,7 +86,9 @@ Drop down the OLE DB Provider list and select either jet 4 or 12.0 in my case fo
 
 Now highlight Source 1 so you can edit the properties of it. In the expressions section click the ellipse to open the properties window. Drop down the selection and select ConnectionString. For this we will add an expression as follows
 
-<pre>"Data Source=" + @[User::source1] + ";Provider=Microsoft.ACE.OLEDB.12.0;"</pre>
+```
+"Data Source=" + @[User::source1] + ";Provider=Microsoft.ACE.OLEDB.12.0;"
+```
 
 This will create a valid connection string to the Access database. Also, add a ServerName property which will map to the same source1 variable. When you are done you should have a properties window as such
 
@@ -127,7 +132,9 @@ The data flow should look like this when all done
 
 Most of you running 64bit job servers or test systems with SSIS know that you can’t just click execute now. You have to use DTEXEC so you run in 32bit mode. To do this you can build the solution so your package is created in the bin folder. Then by running the following command in command prompt
 
-<pre>DTEXEC /f “C:MultiImport.dtsx”</pre>
+```
+DTEXEC /f “C:MultiImport.dtsx”
+```
 
 Once executing that command you should receive the following return
 

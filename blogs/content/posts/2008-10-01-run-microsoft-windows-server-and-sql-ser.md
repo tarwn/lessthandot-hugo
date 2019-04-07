@@ -3,6 +3,7 @@ title: Run Microsoft Windows Server And SQL Server in the cloud on Amazon EC2
 author: SQLDenis
 type: post
 date: 2008-10-01T18:44:52+00:00
+ID: 157
 url: /index.php/datamgmt/datadesign/run-microsoft-windows-server-and-sql-ser/
 views:
   - 6672

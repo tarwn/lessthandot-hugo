@@ -3,6 +3,7 @@ title: Split a Query Window in SSMS
 author: Jes Borland
 type: post
 date: 2014-09-10T19:23:04+00:00
+ID: 2932
 url: /index.php/datamgmt/dbprogramming/split-a-query-window-in-ssms/
 views:
   - 7053

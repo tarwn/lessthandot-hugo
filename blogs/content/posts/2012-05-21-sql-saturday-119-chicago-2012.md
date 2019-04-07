@@ -3,6 +3,7 @@ title: 'SQL Saturday #119 Chicago 2012: They Did It. Again.'
 author: Jes Borland
 type: post
 date: 2012-05-21T23:04:00+00:00
+ID: 1630
 excerpt: |
   This is the third year I’ve headed south to Chicago for SQL Saturday. The first, in 2010, was my first SQL Saturday ever. The second, in 2011, was the first time I ever spoke at a SQL Saturday. Could it get better this year? It could, and it did!
    &hellip;

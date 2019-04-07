@@ -3,6 +3,7 @@ title: The WordPress Migration You Probably Didn’t Know About
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-01-22T16:15:15+00:00
+ID: 2271
 url: /index.php/webdev/the-wordpress-migration-you-probably-didnt-know-about/
 views:
   - 59528
@@ -76,186 +77,196 @@ I quickly started branching out as I followed the tutorial, and before long I re
   <h4 style="margin: 0px 0px 8px 8px;">
     Those Helpful Links
   </h4>
+
+<ul>
+<li>
+<a href="http://blog.teamtreehouse.com/responsive-wordpress-bootstrap-theme-tutorial">How to Build a Responsive WordPress Theme with Bootstrap</li> 
+
+<li>
+  <a href="https://codex.wordpress.org/Function_Reference/get_permalink">WordPress Documentation for get_permalink</a>
+</li>
+<li>
+  <a href="http://yoast.com/wordpress-theme-anatomy/">The anatomy of a WordPress theme</a>
+</li></ul> </div> 
+
+<p>
+  When I branched out from that initial tutorial and realized I needed less generic listing pages to display author posts, for instance, there was a great infographic that showed me exactly how WordPress mapped theme files to incoming requests. The whole process was a smooth flow, from empty folder to mostly functional duplicate theme in WordPress.
+</p>
+
+<p>
+  The ease with which the layout went together was great. As I knocked this out I was able to start identifying potential plugins to socket in and provide behavior that wasn&#8217;t built-in, such as view counts and code highlighting.
+</p>
+
+<h3>
+  Getting More Advanced, Integration
+</h3>
+
+<p>
+  Where things got really messy in some other packages (*cough* MediaWiki) was around the custom authentication and the cross-package integrations. The authentication that ties all of our packages into unified accounts, while the integration allows us to do things like expose data from the blogs on the front page of the site and the statistics area.
+</p>
+
+<p>
+  <a href="/wp-content/uploads/2014/01/login.png"><img src="/wp-content/uploads/2014/01/login.png" alt="login" width="439" height="229" class="aligncenter size-full wp-image-2295" srcset="/wp-content/uploads/2014/01/login.png 439w, /wp-content/uploads/2014/01/login-300x156.png 300w" sizes="(max-width: 439px) 100vw, 439px" /></a>
+</p>
+
+<p>
+  The authentication plugin was easy, with the only messy bits being in my own hackery all of the packages had to interact with (I wrote the central part, all that ugliness is my fault). WordPress clearly defined the hooks I needed to attach into and numerously numerous posts outlined how others had written custom authentication plugins. Even when I accidentally locked out all the native WordPress accounts without having an LTD ones setup yet, it was easy to get unstuck with just a few internet searches.
+</p>
+
+<p>
+  Next up was data integration and showing posts on the front page of LessThanDot.com&#8230;
+</p>
+
+<p>
+  In the past, Chrissie had built some nice DAL objects with interfaces to pull data out of the various packages and bring it together on the front page. I could have just swapped out the SQL statements, but before I did that I decided to see if anyone else in the vast WordPress blogosphere had cracked this nut in the past, since I already had some nice, fresh templates I had built.
+</p>
+
+<p>
+  Well what do you know: <a href="http://codex.wordpress.org/Integrating_Wordpress_with_Your_Website">Integrating WordPress with Your Website</a>.
+</p>
+
+<p>
+  What this helpful WordPress document outlines is a method to include WordPress into another portion of your site, allowing you to use all of the native logic for pulling in the posts and displaying them. basically the front page of our site ended up amounting to pulling in WordPress and telling it to show the post listing template. I basically went from showing B2Evo content to WordPress content in about 5 minutes.
+</p>
+
+<p>
+  Woo!
+</p>
+
+<p>
+  It all really moved this fast. As I had a few hours or a half day on a Saturday, I would sit down and just knock out a whole section of functionality (then take 3-4 weeks off to do other things). If this had been a real job, I&#8217;m confidant this would have taken less than a week&#8230;well, if you don&#8217;t count importing.
+</p>
+
+<h3>
+  Argh, importing&#8230;
+</h3>
+
+<p>
+  The hard part ended up being the data. We had over 2000 posts we wanted to bring across, blog authors we wanted to preserve, thousands of custom tags, way too many categories, more thousands of comments, view counts I wanted to preserve, images in posts that needed their URL redirected to wherever I ended up copying the b2evo image folders, &#8230; surely this had been solved before.
+</p>
+
+<p>
+  We found an importer, and paid for it. Unfortunately the importer had a number of basic things it wasn&#8217;t doing correctly and because the code was encrypted, I couldn&#8217;t fix it. So after numerous test runs and slowly getting ever more frustrated, I threw it out and wrote my own.
+</p>
+
+<div id="attachment_2285" style="width: 682px" class="wp-caption aligncenter">
+  <a href="/wp-content/uploads/2014/01/WordpressUnicode.png"><img src="/wp-content/uploads/2014/01/WordpressUnicode.png" alt="B2Evo had some mix of latin, unicode, and MS Word" width="672" height="192" class="size-full wp-image-2285" srcset="/wp-content/uploads/2014/01/WordpressUnicode.png 672w, /wp-content/uploads/2014/01/WordpressUnicode-300x85.png 300w" sizes="(max-width: 672px) 100vw, 672px" /></a>
   
-  <ul>
-    <li>
-      <a href="http://blog.teamtreehouse.com/responsive-wordpress-bootstrap-theme-tutorial">How to Build a Responsive WordPress Theme with Bootstrap</li> 
-      
-      <li>
-        <a href="https://codex.wordpress.org/Function_Reference/get_permalink">WordPress Documentation for get_permalink</a>
-      </li>
-      <li>
-        <a href="http://yoast.com/wordpress-theme-anatomy/">The anatomy of a WordPress theme</a>
-      </li></ul> </div> 
-      
-      <p>
-        When I branched out from that initial tutorial and realized I needed less generic listing pages to display author posts, for instance, there was a great infographic that showed me exactly how WordPress mapped theme files to incoming requests. The whole process was a smooth flow, from empty folder to mostly functional duplicate theme in WordPress.
-      </p>
-      
-      <p>
-        The ease with which the layout went together was great. As I knocked this out I was able to start identifying potential plugins to socket in and provide behavior that wasn&#8217;t built-in, such as view counts and code highlighting.
-      </p>
-      
-      <h3>
-        Getting More Advanced, Integration
-      </h3>
-      
-      <p>
-        Where things got really messy in some other packages (*cough* MediaWiki) was around the custom authentication and the cross-package integrations. The authentication that ties all of our packages into unified accounts, while the integration allows us to do things like expose data from the blogs on the front page of the site and the statistics area.
-      </p>
-      
-      <p>
-        <a href="/wp-content/uploads/2014/01/login.png"><img src="/wp-content/uploads/2014/01/login.png" alt="login" width="439" height="229" class="aligncenter size-full wp-image-2295" srcset="/wp-content/uploads/2014/01/login.png 439w, /wp-content/uploads/2014/01/login-300x156.png 300w" sizes="(max-width: 439px) 100vw, 439px" /></a>
-      </p>
-      
-      <p>
-        The authentication plugin was easy, with the only messy bits being in my own hackery all of the packages had to interact with (I wrote the central part, all that ugliness is my fault). WordPress clearly defined the hooks I needed to attach into and numerously numerous posts outlined how others had written custom authentication plugins. Even when I accidentally locked out all the native WordPress accounts without having an LTD ones setup yet, it was easy to get unstuck with just a few internet searches.
-      </p>
-      
-      <p>
-        Next up was data integration and showing posts on the front page of LessThanDot.com&#8230;
-      </p>
-      
-      <p>
-        In the past, Chrissie had built some nice DAL objects with interfaces to pull data out of the various packages and bring it together on the front page. I could have just swapped out the SQL statements, but before I did that I decided to see if anyone else in the vast WordPress blogosphere had cracked this nut in the past, since I already had some nice, fresh templates I had built.
-      </p>
-      
-      <p>
-        Well what do you know: <a href="http://codex.wordpress.org/Integrating_Wordpress_with_Your_Website">Integrating WordPress with Your Website</a>.
-      </p>
-      
-      <p>
-        What this helpful WordPress document outlines is a method to include WordPress into another portion of your site, allowing you to use all of the native logic for pulling in the posts and displaying them. basically the front page of our site ended up amounting to pulling in WordPress and telling it to show the post listing template. I basically went from showing B2Evo content to WordPress content in about 5 minutes.
-      </p>
-      
-      <p>
-        Woo!
-      </p>
-      
-      <p>
-        It all really moved this fast. As I had a few hours or a half day on a Saturday, I would sit down and just knock out a whole section of functionality (then take 3-4 weeks off to do other things). If this had been a real job, I&#8217;m confidant this would have taken less than a week&#8230;well, if you don&#8217;t count importing.
-      </p>
-      
-      <h3>
-        Argh, importing&#8230;
-      </h3>
-      
-      <p>
-        The hard part ended up being the data. We had over 2000 posts we wanted to bring across, blog authors we wanted to preserve, thousands of custom tags, way too many categories, more thousands of comments, view counts I wanted to preserve, images in posts that needed their URL redirected to wherever I ended up copying the b2evo image folders, &#8230; surely this had been solved before.
-      </p>
-      
-      <p>
-        We found an importer, and paid for it. Unfortunately the importer had a number of basic things it wasn&#8217;t doing correctly and because the code was encrypted, I couldn&#8217;t fix it. So after numerous test runs and slowly getting ever more frustrated, I threw it out and wrote my own.
-      </p>
-      
-      <div id="attachment_2285" style="width: 682px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2014/01/WordpressUnicode.png"><img src="/wp-content/uploads/2014/01/WordpressUnicode.png" alt="B2Evo had some mix of latin, unicode, and MS Word" width="672" height="192" class="size-full wp-image-2285" srcset="/wp-content/uploads/2014/01/WordpressUnicode.png 672w, /wp-content/uploads/2014/01/WordpressUnicode-300x85.png 300w" sizes="(max-width: 672px) 100vw, 672px" /></a>
-        
-        <p class="wp-caption-text">
-          B2Evo had some mix of latin, unicode, and MS Word
-        </p>
-      </div>
-      
-      <p>
-        This turned out to be the best decision, as it let me slowly add in special processing rules to clean up image paths, only importing initial users that had posted blog posts, push view counts into the meta data table just right to be picked up by the view count plugin, and eventually a bunch of logic to map code blocks from the B2Evo posts to a format that would be understood by the syntax highlighting plugin I had selected for WordPress.
-      </p>
-      
-      <div id="attachment_2287" style="width: 310px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2014/01/wordpress_import.png"><img src="/wp-content/uploads/2014/01/wordpress_import-300x100.png" alt="Importing into WordPress" width="300" height="100" class="size-medium wp-image-2287" srcset="/wp-content/uploads/2014/01/wordpress_import-300x100.png 300w, /wp-content/uploads/2014/01/wordpress_import.png 728w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-        
-        <p class="wp-caption-text">
-          Importing into WordPress
-        </p>
-      </div>
-      
-      <p>
-        Don&#8217;t get me wrong, if someone else had written something like this and made it available, I totally would have started with theirs. In a later blog post, I&#8217;ll post up the code for this plugin in case anyone else finds it helpful down the road (and because I&#8217;m still annoyed by the one we paid for).
-      </p>
-      
-      <h2>
-        Ok, so enough happy-fluffy-puppy-stuff, what sucked?
-      </h2>
-      
-      <p>
-        There have been a few negatives to the WordPress move, but they were less negatives and more opportunities for WordPress to get even better.
-      </p>
-      
-      <p>
-        1. The syntax seemed relatively consistent, or at least well documented enough that I didn&#8217;t notice when it was inconsistent. But it could have been even more obvious/consistent which functions were returning values and which were going to echo.
-      </p>
-      
-      <p>
-        2. What functions are calling the database? Every time I add a function outside &#8220;The Loop&#8221;, I&#8217;m worried that I&#8217;m causing more database calls to be made when I don&#8217;t want them to be. It&#8217;s not clear when it will be smart enough to have 5 or 6 individual calls not call the database on their own when the whole post is going to be loaded just a bit further down the page? I haven&#8217;t done a lot of digging on this topic, but it seems to be more heavily technical than most people want to read about on WordPress, so it doesn&#8217;t show up in the documentation.
-      </p>
-      
-      <p>
-        which brings me to
-      </p>
-      
-      <p>
-        3. A lot of WordPress content is for the beginning developer. And a lot of the PHP examples have grossly horrible syntax that is bad even by my standards.
-      </p>
-      
-      <p>
-        Example:
-      </p>
-      
-      <pre><?php
+  <p class="wp-caption-text">
+    B2Evo had some mix of latin, unicode, and MS Word
+  </p>
+</div>
+
+<p>
+  This turned out to be the best decision, as it let me slowly add in special processing rules to clean up image paths, only importing initial users that had posted blog posts, push view counts into the meta data table just right to be picked up by the view count plugin, and eventually a bunch of logic to map code blocks from the B2Evo posts to a format that would be understood by the syntax highlighting plugin I had selected for WordPress.
+</p>
+
+<div id="attachment_2287" style="width: 310px" class="wp-caption aligncenter">
+  <a href="/wp-content/uploads/2014/01/wordpress_import.png"><img src="/wp-content/uploads/2014/01/wordpress_import-300x100.png" alt="Importing into WordPress" width="300" height="100" class="size-medium wp-image-2287" srcset="/wp-content/uploads/2014/01/wordpress_import-300x100.png 300w, /wp-content/uploads/2014/01/wordpress_import.png 728w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  
+  <p class="wp-caption-text">
+    Importing into WordPress
+  </p>
+</div>
+
+<p>
+  Don&#8217;t get me wrong, if someone else had written something like this and made it available, I totally would have started with theirs. In a later blog post, I&#8217;ll post up the code for this plugin in case anyone else finds it helpful down the road (and because I&#8217;m still annoyed by the one we paid for).
+</p>
+
+<h2>
+  Ok, so enough happy-fluffy-puppy-stuff, what sucked?
+</h2>
+
+<p>
+  There have been a few negatives to the WordPress move, but they were less negatives and more opportunities for WordPress to get even better.
+</p>
+
+<p>
+  1. The syntax seemed relatively consistent, or at least well documented enough that I didn&#8217;t notice when it was inconsistent. But it could have been even more obvious/consistent which functions were returning values and which were going to echo.
+</p>
+
+<p>
+  2. What functions are calling the database? Every time I add a function outside &#8220;The Loop&#8221;, I&#8217;m worried that I&#8217;m causing more database calls to be made when I don&#8217;t want them to be. It&#8217;s not clear when it will be smart enough to have 5 or 6 individual calls not call the database on their own when the whole post is going to be loaded just a bit further down the page? I haven&#8217;t done a lot of digging on this topic, but it seems to be more heavily technical than most people want to read about on WordPress, so it doesn&#8217;t show up in the documentation.
+</p>
+
+<p>
+  which brings me to
+</p>
+
+<p>
+  3. A lot of WordPress content is for the beginning developer. And a lot of the PHP examples have grossly horrible syntax that is bad even by my standards.
+</p>
+
+<p>
+  Example:
+</p>
+
+```php
+<?php
 require('/the/path/to/your/wp-blog-header.php');
-?&gt;
+?>
 
 <?php
-$posts = get_posts('numberposts=10&order=ASC&orderby=post_title');
-foreach ($posts as $post) : setup_postdata( $post ); ?&gt;
-<?php the_date(); echo "<br /&gt;"; ?&gt;
-<?php the_title(); ?&gt;    
-<?php the_excerpt(); ?&gt; 
+$posts = get_posts('numberposts=10&#038;order=ASC&#038;orderby=post_title');
+foreach ($posts as $post) : setup_postdata( $post ); ?>
+
+
+<?php the_date(); echo "<br />"; ?>
+
+
+<?php the_title(); ?>    
+
+
+<?php the_excerpt(); ?> 
+
+
 <?php
 endforeach;
-?&gt;</pre>
-      
-      <p>
-        WTF ??
-      </p>
-      
-      <p>
-        No really, W.T.F. ?!?
-      </p>
-      
-      <p>
-        This was just the very first example I found, not even one of the rally bad ones.
-      </p>
-      
-      <p>
-        4. Look at the source code for plugins before you use them so you know which ones have a lot of positive comments but are obviously going to be impossible to support long term. Some of those same beginner developers got a plugin running on their machine, but you know in a version or two it&#8217;s going to be the biggest security leak in your site.
-      </p>
-      
-      <p>
-        5. The Spam!
-      </p>
-      
-      <div id="attachment_2289" style="width: 310px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2014/01/wordpress-spam.png"><img src="/wp-content/uploads/2014/01/wordpress-spam-300x55.png" alt="Time to empty out the spam for the day..." width="300" height="55" class="size-medium wp-image-2289" srcset="/wp-content/uploads/2014/01/wordpress-spam-300x55.png 300w, /wp-content/uploads/2014/01/wordpress-spam.png 363w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-        
-        <p class="wp-caption-text">
-          Time to empty out the spam for the day&#8230;
-        </p>
-      </div>
-      
-      <p>
-        Oh my god the spam. We have built up our spam rules on B2Evo over the course of years without even realising how much spam LessThanDot would be getting without those rules. Within the first 8 minutes of switching the sub-domain to show WordPress instead of B2Evo, we received more than 10 spam comments. Chrissie started deleting, I started deleting, a vast array of spammers kept at it, I started banning IPs&#8230;and the flood kept coming at a steady pace of 2 spam comments/minute. I finally found a good spam plugin the next day that has managed the 2/minute load just fine without any performance impact on our servers (we still have to empty out the spam folder occasionally though, oh well).
-      </p>
-      
-      <p>
-        Those were the bad moments though, everything else was smooth and easy.
-      </p>
-      
-      <h2>
-        Conclusion
-      </h2>
-      
-      <p>
-        Overall, the move to WordPress seems to have been a good one. WordPress as a platform has a heavy focus on customization and extendability, with clear documentation on the routines and hooks available and a huge community of theme and plugin authors. Though I found their support forums more frustrating than helpful, I often was able to find the information I needed elsewhere on the internet. The focus of the platform helped make our migration easier, and I think will provide a good platform for future changes as we continue to evolve the site and how we produce content.
-      </p>
+?>
+```
+
+<p>
+  WTF ??
+</p>
+
+<p>
+  No really, W.T.F. ?!?
+</p>
+
+<p>
+  This was just the very first example I found, not even one of the rally bad ones.
+</p>
+
+<p>
+  4. Look at the source code for plugins before you use them so you know which ones have a lot of positive comments but are obviously going to be impossible to support long term. Some of those same beginner developers got a plugin running on their machine, but you know in a version or two it&#8217;s going to be the biggest security leak in your site.
+</p>
+
+<p>
+  5. The Spam!
+</p>
+
+<div id="attachment_2289" style="width: 310px" class="wp-caption aligncenter">
+  <a href="/wp-content/uploads/2014/01/wordpress-spam.png"><img src="/wp-content/uploads/2014/01/wordpress-spam-300x55.png" alt="Time to empty out the spam for the day..." width="300" height="55" class="size-medium wp-image-2289" srcset="/wp-content/uploads/2014/01/wordpress-spam-300x55.png 300w, /wp-content/uploads/2014/01/wordpress-spam.png 363w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  
+  <p class="wp-caption-text">
+    Time to empty out the spam for the day&#8230;
+  </p>
+</div>
+
+<p>
+  Oh my god the spam. We have built up our spam rules on B2Evo over the course of years without even realising how much spam LessThanDot would be getting without those rules. Within the first 8 minutes of switching the sub-domain to show WordPress instead of B2Evo, we received more than 10 spam comments. Chrissie started deleting, I started deleting, a vast array of spammers kept at it, I started banning IPs&#8230;and the flood kept coming at a steady pace of 2 spam comments/minute. I finally found a good spam plugin the next day that has managed the 2/minute load just fine without any performance impact on our servers (we still have to empty out the spam folder occasionally though, oh well).
+</p>
+
+<p>
+  Those were the bad moments though, everything else was smooth and easy.
+</p>
+
+<h2>
+  Conclusion
+</h2>
+
+<p>
+  Overall, the move to WordPress seems to have been a good one. WordPress as a platform has a heavy focus on customization and extendability, with clear documentation on the routines and hooks available and a huge community of theme and plugin authors. Though I found their support forums more frustrating than helpful, I often was able to find the information I needed elsewhere on the internet. The focus of the platform helped make our migration easier, and I think will provide a good platform for future changes as we continue to evolve the site and how we produce content.
+</p>
 
  [1]: /wp-content/uploads/2014/01/LTDUmbrella1.png

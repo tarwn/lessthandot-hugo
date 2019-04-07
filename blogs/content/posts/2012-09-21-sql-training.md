@@ -3,6 +3,7 @@ title: SQL Server Training Bonanza
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-09-21T11:59:00+00:00
+ID: 1734
 excerpt: 'There has been a great deal of good opportunities in the last few months for SQL Server training.  If you were fortunate enough to attend, we saw another SQL Skills Immersion Event in August.  There is something to be said about going to an event in whi&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-training/
 views:

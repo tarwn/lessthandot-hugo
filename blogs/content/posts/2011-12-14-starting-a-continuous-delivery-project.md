@@ -3,6 +3,7 @@ title: Starting a Continuous Delivery Project
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-12-14T10:43:00+00:00
+ID: 1410
 excerpt: "I find that often the hardest part of trying a new technology or principle is finding a project that is simple enough to work on in my spare time, yet complex enough to be useful. Several weeks ago I came up with the idea to use a common project to serve as a platform for additional projects and experiments. The first project, build an automated pipeline that will verify the project remains stable (or notify me when it isn't) throughout its lifetime."
 url: /index.php/enterprisedev/application-lifecycle-management/starting-a-continuous-delivery-project/
 views:
@@ -48,7 +49,7 @@ Prior to designing the deployment pipeline, I selected the project that will ser
 The delivery pipeline will look something like this:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Overview.png" title="Pipeline overview diagram" /><br /> Overview of the delivery pipeline
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview.png" title="Pipeline overview diagram" /><br /> Overview of the delivery pipeline
 </div>
 
 Initially there won&#8217;t be any configuration management or database change management, and the test coverage will be less than complete. These are all follow-up projects I can take on once I get the main pipeline working.
@@ -134,6 +135,6 @@ That&#8217;s the setup. I&#8217;ve created [a forum post][3] to discuss the whol
 
  [1]: http://www.informit.com/articles/article.aspx?p=1641923 "Continuous Delivery: The Value Proposition"
  [2]: http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ "Continuous Delivery at Amazon"
- [3]: http://forum.lessthandot.com/viewtopic.php?f=121&t=15760 "Forum post for discussion"
+ [3]: http://forum.ltd.local/viewtopic.php?f=121&t=15760 "Forum post for discussion"
  [4]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Wiki post for Eli's Continuous Delivery Project"
  [5]: http://twitter.com/TarwnBuildSrvr "Eli's Build Server on Twitter"

@@ -3,6 +3,7 @@ title: 'SQL Server Filegroups: The What, The Why and The How'
 author: Jes Borland
 type: post
 date: 2011-04-26T10:28:00+00:00
+ID: 1141
 excerpt: A filegroup is a logical structure to group objects in a database. Don’t confuse filegroups with actual files (.mdf, .ddf, .ldf, etc.). You can have multiple filegroups per database.
 url: /index.php/datamgmt/dbadmin/sql-server-filegroups-the-what/
 views:
@@ -44,7 +45,8 @@ If you are creating a new database, you can specify the filegroups in the CREATE
 
 Here, I will create a database named FilegroupTest. It has two filegroups, **PRIMARY** and **FGTestFG2**. There are two data files, **FGTest1_dat**, assigned to **PRIMARY**; and **FGTest2_dat**, assigned to **FGTestFG2**. 
 
-<pre>CREATE DATABASE FilegroupTest 
+sql
+CREATE DATABASE FilegroupTest 
 ON PRIMARY 
 (NAME = FGTest1_dat, 
  FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGTest1_dat.mdf'), 
@@ -53,36 +55,44 @@ FILEGROUP FGTestFG2
  FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGTest2_dat.mdf') 
 LOG ON 
 (NAME = FGTest_log, 
- FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGTest_log.ldf')</pre>
+ FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGTest_log.ldf')
+```
 
 If you have an existing database, use can use the ALTER DATABASE statement to add a filegroup. I’m going to add **FGTestFG3** to **FilegroupTest**. 
 
-<pre>ALTER DATABASE FilegroupTest 
-ADD FILEGROUP FGTestFG3</pre>
+sql
+ALTER DATABASE FilegroupTest 
+ADD FILEGROUP FGTestFG3
+```
 
 I can view the filegroups in a database using sys.filegroups. 
 
-<pre>USE FilegroupTest;
+sql
+USE FilegroupTest;
 GO
 SELECT * 
-FROM sys.filegroups</pre>
-
+FROM sys.filegroups
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/sysfilegroups.JPG?mtime=1303779715"><img alt="" src="/wp-content/uploads/users/grrlgeek/sysfilegroups.JPG?mtime=1303779715" width="805" height="113" /></a>
 </div>
 
 To create a new file, **FGTest3_dat**, and assign it to **FGTestFG3**, I’ll use ALTER DATABASE again. 
 
-<pre>ALTER DATABASE FilegroupTest 
+sql
+ALTER DATABASE FilegroupTest 
 ADD FILE 
 (NAME = FGTest3_dat, 
  FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGTest3_dat.mdf') 
-TO FILEGROUP FGTestFG3</pre>
+TO FILEGROUP FGTestFG3
+```
 
 Right now, my PRIMARY filegroup is the default filegroup. I can change that to **FGTestFG3** using ALTER DATABASE. 
 
-<pre>ALTER DATABASE FilegroupTest 
-MODIFY FILEGROUP FGTestFG3 DEFAULT  </pre>
+sql
+ALTER DATABASE FilegroupTest 
+MODIFY FILEGROUP FGTestFG3 DEFAULT  
+```
 
 When I re-run my sys.filegroups query, is_default value has changed. 
 
@@ -98,27 +108,31 @@ Note: You can move a heap (a table with no clustered index). To do so, you would
 
 First, I create a table with no indexes. 
 
-<pre>CREATE TABLE StuffAndJunk
+sql
+CREATE TABLE StuffAndJunk
 (StuffHere INT NOT NULL, 
- JunkHere INT NOT NULL)</pre>
+ JunkHere INT NOT NULL)
+```
 
 I can use sp_help to see which filegroup this was created on. It was created on the default, **FGTestFG3**. 
 
-<pre>exec sp_help 'dbo.StuffAndJunk'</pre>
-
+sql
+exec sp_help 'dbo.StuffAndJunk'
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/sphelp.JPG?mtime=1303780300"><img alt="" src="/wp-content/uploads/users/grrlgeek/sphelp.JPG?mtime=1303780300" width="689" height="314" /></a>
 </div>
 
 I can also return this information using the sys.filegroups, sys.allocation_units and sys.partitions tables. 
 
-<pre>SELECT PA.object_id, FG.name 
+sql
+SELECT PA.object_id, FG.name 
 FROM sys.filegroups FG 
 	INNER JOIN sys.allocation_units AU ON AU.data_space_id = FG.data_space_id 
 	INNER JOIN sys.partitions PA ON PA.partition_id = AU.container_id 
 WHERE PA.object_id = 
-	(SELECT object_id(N'FilegroupTest.dbo.StuffAndJunk'))</pre>
-
+	(SELECT object_id(N'FilegroupTest.dbo.StuffAndJunk'))
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/objectid1.JPG?mtime=1303780416"><img alt="" src="/wp-content/uploads/users/grrlgeek/objectid1.JPG?mtime=1303780416" width="215" height="78" /></a>
 </div>
@@ -129,9 +143,11 @@ Note: It is possible to create a table in a secondary filegroup, move the data f
 
 I’m going to add a clustered index to the table. When I do this, I specify which filegroup I want it created on. I create **StuffJunk** on **FGTestFG2**. 
 
-<pre>CREATE CLUSTERED INDEX StuffJunk 
+sql
+CREATE CLUSTERED INDEX StuffJunk 
 	ON StuffAndJunk (StuffHere, JunkHere) 
-	ON FGTestFG2</pre>
+	ON FGTestFG2
+```
 
 If I run my sys.filegroups query again, I can see I have the same object_id, but it has moved to a different filegroup. 
 
@@ -141,10 +157,12 @@ If I run my sys.filegroups query again, I can see I have the same object_id, but
 
 How would I move a table with an existing clustered index? Let’s move **StuffAndJunk** back to **FGTestFG3**. I would issue a create clustered index command with the option to drop existing, like this. 
 
-<pre>CREATE CLUSTERED INDEX StuffJunk 
+sql
+CREATE CLUSTERED INDEX StuffJunk 
 	ON StuffAndJunk (StuffHere, JunkHere) 
 	WITH (DROP_EXISTING = ON)
-	ON FGTestFG3</pre>
+	ON FGTestFG3
+```
 
 Re-running my sys.filegroups query shows that the index, and thus the data and table, are on **FGTestFG3**. 
 

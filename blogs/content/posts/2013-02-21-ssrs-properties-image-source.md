@@ -3,6 +3,7 @@ title: SSRS Properties – Image Source
 author: Jes Borland
 type: post
 date: 2013-02-21T15:23:00+00:00
+ID: 2000
 excerpt: The purpose of this property is to specify where a report image is stored.
 url: /index.php/datamgmt/ssrs/ssrs-properties-image-source/
 views:

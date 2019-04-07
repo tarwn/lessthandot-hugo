@@ -3,6 +3,7 @@ title: Bad Code is like the birds
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-08-31T12:25:00+00:00
+ID: 1705
 excerpt: |
   Bad Code is like the birds
   This morning, I noticed there was hundreds of European Starlings flying over the houses in my neighborhood.  At the same time, I was having a conversation with a coworker regarding a code review.  If you are not practicing co&hellip;

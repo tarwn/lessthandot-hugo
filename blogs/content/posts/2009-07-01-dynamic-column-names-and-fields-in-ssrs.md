@@ -3,6 +3,7 @@ title: Dynamic column names and fields in SSRS (Custom Matrix)
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-07-01T16:26:57+00:00
+ID: 492
 excerpt: 'I had no choice but to do work with creating dynamic column headings and dynamically determine what field in my dataset should go where in a report today.  Since this is the second time I’ve gone through this exercise and knowing the lack of information&hellip;'
 url: /index.php/datamgmt/datadesign/dynamic-column-names-and-fields-in-ssrs/
 views:
@@ -27,7 +28,8 @@ I wrote something in AdventureWorks to for this example so if you have Adventure
 
 Here is our procedure. I’m sure my methods will take great notice from my local TSQL friends 🙂 The dynamic SQL more so than anything&#8230;
 
-<pre>Create Procedure GetSalesPerWeek
+sql
+Create Procedure GetSalesPerWeek
 As
 Declare @weeks_ordered Table (num varchar(3))
 Declare @weeks Table (wk int)
@@ -121,8 +123,9 @@ From
 PIVOT (sum(OrderQty) FOR WeekNumber IN (' + @col_pv + ')) as pv
 Order By AccountNumber
 '
-Exec(@query)</pre>
+Exec(@query)
 
+```
 The results shows us the PIVOT results of each account number and the sales for the week of the year
 
 <div class="image_block">
@@ -133,7 +136,9 @@ The problem with all of this is the dynamic nature of the column names. In repor
 
 So create a new report in your solution and add a new DataSet. Make it a text call with the following statement
 
-<pre>Exec GetSalesPerWeek</pre>
+sql
+Exec GetSalesPerWeek
+```
 
 Run the DataSet to verify everything comes in ok.
 
@@ -145,7 +150,8 @@ Now add a new table to your empty report. Add the account number and product num
 
 In the layout tab go to Report and select Report Properties. This will give you the properties for the entire report. Select the Code tab. Copy and paste the following code into the window
 
-<pre>Public Function GetColumnHeading(ByVal x As Integer)
+```VB
+Public Function GetColumnHeading(ByVal x As Integer)
        Dim WeeksArr As New System.Collections.ArrayList()
         Dim i As Long
         Dim CurrentWeek As Long
@@ -156,8 +162,8 @@ In the layout tab go to Report and select Report Properties. This will give you 
             WeeksArr.Add(1 + (i + CurrentWeek - 1) Mod 52)
         Next
         Return WeeksArr(x)
-    End Function</pre>
-
+    End Function
+```
 This code was written by our own gmmastros. Thanks to him for this and the help it gave me when I needed it. Gets the job done and it does it quickly. 
 
 Final results should look like this
@@ -193,5 +199,5 @@ This blog probably has about 12 pages worth of explanations but I’d like to le
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://www.simple-talk.com/community/blogs/andras/archive/2007/09/14/37265.aspx
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

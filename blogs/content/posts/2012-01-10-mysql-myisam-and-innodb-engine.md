@@ -3,6 +3,7 @@ title: MySQL MyISAM and InnoDB Engine Differences
 author: Jes Borland
 type: post
 date: 2012-01-10T14:48:00+00:00
+ID: 1485
 excerpt: 'I am a stranger in a strange land. I am a SQL Server DBA and developer wandering, lost, in the world of MySQL. Fundamentally, I know that a database is a database. Both MySQL and SQL Server are built on the same ANSI standards. However, as I started wor&hellip;'
 url: /index.php/datamgmt/dbprogramming/mysql-myisam-and-innodb-engine/
 views:

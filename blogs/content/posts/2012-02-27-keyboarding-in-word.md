@@ -3,6 +3,7 @@ title: Keyboarding in Word
 author: chopstik
 type: post
 date: 2012-02-27T12:23:00+00:00
+ID: 1542
 excerpt: "Now that I have moved back over to the not-so-technical side, I find that I am having to relearn things that I probably knew a long time before but have forgotten. As I have pointed out to my friends before, I don't care so much about what tools I use s&hellip;"
 url: /index.php/desktopdev/mstech/vbaformsoffice/keyboarding-in-word/
 views:

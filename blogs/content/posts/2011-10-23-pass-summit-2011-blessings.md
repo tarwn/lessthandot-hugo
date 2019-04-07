@@ -3,6 +3,7 @@ title: PASS Summit 2011 Blessings
 author: rwaters
 type: post
 date: 2011-10-23T13:16:00+00:00
+ID: 1359
 excerpt: |
   Realizing I was lucky enough to attend PASS Summit 2011, I've decided a blog post is de rigueur.  So, here goes.
   

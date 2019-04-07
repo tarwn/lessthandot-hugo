@@ -3,6 +3,7 @@ title: Choosing an Analysis Engine
 author: Steve Hughes (DataOnWheels)
 type: post
 date: 2012-06-21T16:46:00+00:00
+ID: 1655
 excerpt: 'With the introduction of the SQL Server PowerPivot for Excel and SharePoint in SQL Server 2008 R2, Microsoft gave us another analysis engine we could use with our data. While not embedded into the SQL Server stack at the time, it was clear that in-memor&hellip;'
 url: /index.php/datamgmt/ssas/choosing-an-analysis-solution/
 views:

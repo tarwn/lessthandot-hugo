@@ -3,6 +3,7 @@ title: My PASS Summit Packing List
 author: Jes Borland
 type: post
 date: 2012-10-23T16:40:00+00:00
+ID: 1767
 excerpt: It’s almost here! It’s almost here! The world’s largest SQL Server conference kicks off in a few days. What do I need to take with me?
 url: /index.php/itprofessionals/professionaldevelopment/my-pass-summit-packing-list/
 views:

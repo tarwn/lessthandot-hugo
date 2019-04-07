@@ -3,6 +3,7 @@ title: 'Why you shouldn’t use SELECT *'
 author: Axel Achten (axel8s)
 type: post
 date: 2013-01-02T11:28:00+00:00
+ID: 1894
 excerpt: "A customer's DBA team created a checklist for the development teams with some best practices for writing proper T-SQL and asked me to write some contributions for their tips document library. So if I do the research and write the documents I might as we&hellip;"
 url: /index.php/datamgmt/dbprogramming/why-you-shouldn-t-use/
 views:
@@ -31,7 +32,8 @@ To check the performance impact I use a tool called [SQLQueryStress][2] to execu
   
 To get started I need a table with a large number of columns, data is not necessary for this test so I use this script to generate a table with 127 columns:
 
-<pre>DECLARE @colnumber int = 1
+sql
+DECLARE @colnumber int = 1
 DECLARE @command VARCHAR(4000) =''
 
 WHILE @colnumber <= 125
@@ -41,8 +43,8 @@ WHILE @colnumber <= 125
 	END
 SET @command = 'CREATE TABLE StarPerform (PerfId int, ' + @command + ' Lastcolumn int)'
 
-EXEC (@command)</pre>
-
+EXEC (@command)
+```
 Now I query the table using the SQLQueryStress tool and I choose a high Number of Iterations to get a meaningful average:
 
 <div class="image_block">
@@ -57,7 +59,8 @@ Using SELECT * in Views is also a bad practice because changes to the underlying
   
 First I create a table and insert some data:
 
-<pre>--Create the table
+sql
+--Create the table
 CREATE TABLE StarBreak
  (
 	ID int IDENTITY (1,1),
@@ -70,16 +73,17 @@ GO
 --Insert some values
 INSERT INTO StarBreak (Name, DateFirstPost, DateLastPost)
 	VALUES ('Denis','20080207','20130101'),('Ted','20081107','20121231'),('Koen','20121123','20121227'),('Jes','20101210','20121221');
-GO</pre>
-
+GO
+```
 Now I create and query a View to return all the columns:
 
-<pre>CREATE VIEW GetStarFromStarBreak
+sql
+CREATE VIEW GetStarFromStarBreak
 	AS
 		SELECT * from Starbreak;
 		
-GO</pre>
-
+GO
+```
 And I get this result back:
 
 <div class="image_block">
@@ -88,7 +92,8 @@ And I get this result back:
 
 Now let’s drop the table and recreate it but switch the position of the two datecolumns:
 
-<pre>--Drop the table
+sql
+--Drop the table
 DROP TABLE StarBreak;
 GO
 
@@ -105,8 +110,8 @@ GO
 --Insert some values
 INSERT INTO StarBreak (Name, DateFirstPost, DateLastPost)
 	VALUES ('Denis','20080207','20130101'),('Ted','20081107','20121231'),('Koen','20121123','20121227'),('Jes','20101210','20121221');
-GO</pre>
-
+GO
+```
 When I query the table again I get the correct result:
 
 <div class="image_block">
@@ -123,7 +128,8 @@ You see that the column headers are in the same order as in the initial table bu
   
 Dropping the table, and adding a column in the middle will also result in the above behavior:
 
-<pre>--Drop the table
+sql
+--Drop the table
 DROP TABLE StarBreak;
 GO
 
@@ -141,15 +147,15 @@ GO
 --Insert some values
 INSERT INTO StarBreak (Name, DateFirstPost, DateLastPost)
 	VALUES ('Denis','20080207','20130101'),('Ted','20081107','20121231'),('Koen','20121123','20121227'),('Jes','20101210','20121221');
-GO</pre>
-
-<div class="image_block">
+GO
+```<div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform5.JPG?mtime=1357132571"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform5.JPG?mtime=1357132571" width="258" height="96" /></a>
 </div>
 
 What happens when I recreate the table but only 3 instead of 4 columns? Let’s try:
 
-<pre>--Drop the table
+sql
+--Drop the table
 DROP TABLE StarBreak;
 GO
 
@@ -165,11 +171,13 @@ GO
 --Insert some values
 INSERT INTO StarBreak (Name, DateLastPost)
 	VALUES ('Denis','20130101'),('Ted','20121231'),('Koen','20121227'),('Jes','20121221');
-GO</pre>
-
+GO
+```
 Now query the view again but use this query to make sure you only select the 3 existing columns:
 
-<pre>SELECT ID, Name, DateLastPost FROM GetStarFromStarBreak</pre>
+sql
+SELECT ID, Name, DateLastPost FROM GetStarFromStarBreak
+```
 
 And the result is:
 

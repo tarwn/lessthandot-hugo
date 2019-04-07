@@ -3,6 +3,7 @@ title: Lexical Analysis
 author: chaospandion
 type: post
 date: 2010-06-23T14:41:16+00:00
+ID: 829
 url: /index.php/desktopdev/mstech/lexical-analysis/
 views:
   - 6635
@@ -33,7 +34,8 @@ We will need the following tokens:
 
 We need to define the following struct and enum to represent the tokens.
 
-<pre>public struct Token
+```CSharp
+public struct Token
 {
     public string Value
     {
@@ -60,11 +62,13 @@ public enum TokenType
     Number,
     Dash,
     Plus
-}</pre>
+}
+```
 
 Now that we have our Token struct we can write our method to tokenize the input string.
 
-<pre>public static IEnumerable<Token> Tokenize(string input)
+```CSharp
+public static IEnumerable<Token> Tokenize(string input)
 {
     var st = new StringTraverser(input);
     var c = default(char?);
@@ -100,8 +104,8 @@ Now that we have our Token struct we can write our method to tokenize the input 
             yield return new Token(c.ToString(), TokenType.Unknown);
         }
     }
-}</pre>
-
+}
+```
 If we were to pass our input string into the Tokenize method we should get back the following tokens:
 
   * Number = **10**
@@ -114,7 +118,8 @@ In this form we can easily move forward in the process and begin the syntactical
 
 The following code is what makes up the StringTraverser object. 
 
-<pre>public sealed class StringTraverser
+```CSharp
+public sealed class StringTraverser
 {
     private readonly string _value;
     private readonly int _length;
@@ -374,4 +379,5 @@ The following code is what makes up the StringTraverser object.
     {
         _index = 0;
     }
-}</pre>
+}
+```

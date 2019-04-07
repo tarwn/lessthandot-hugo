@@ -3,6 +3,7 @@ title: Successful Consulting Series
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-28T18:49:00+00:00
+ID: 1808
 excerpt: 'Sometimes, as a speaker, the best sessions I’ve presented or co-presented are the ones that are non-technical in nature.  One I’ve been fortunate to co-present with Hope Foley (B | @Hope_Foley) is “Consulting - The Good, The Bad, The Ugly”.  I’ve receiv&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/successful-consulting-series/
 views:

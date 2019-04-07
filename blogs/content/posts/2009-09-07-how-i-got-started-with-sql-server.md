@@ -3,6 +3,7 @@ title: How I got started with SQL Server
 author: SQLDenis
 type: post
 date: 2009-09-07T17:45:04+00:00
+ID: 551
 url: /index.php/datamgmt/dbprogramming/how-i-got-started-with-sql-server/
 views:
   - 5352
@@ -24,13 +25,15 @@ So here is my story. My first database was not SQL Server but DB2 running on a m
   
 I January 2000 I started to work in Silicon Alley (21st and Broadway). I started as an <s>ancient</s> classic ASP developer hitting an Access database (this got converted to SQL Server 6.5 or 7), do any of you remember [Chilisoft ASP][5]? Then I switched from ASP to ColdFusion which was basically very similar to VB but you put everything in tags and prefixed it with CF&#8230;so for example 
 
-<pre><cfif expression>
+```
+<cfif expression>
    HTML and CFML tags
 <cfelseif expression>
    HTML and CFML tags 
 <cfelse>
    HTML and CFML tags
-</cfif></pre>
+</cfif>
+```
 
 When I developed in ColdFusion we were using SQL Server 7 and we actually used stored procs and parameters instead of cfquery with inline SQL. After that we used JSP and also ATG Dynamo. The company I worked for was a GREAT design company, they won a ton of awards. We had this art director who made sure that everything looked the same on Netscape 4.7, IE 5, IE 5.5 for the Mac etc etc. I would sometime spend 3 hours to make sure that something looked the same on all browser only to be told that it is off by 1 pixel on IE 5.5. This person was one of the reasons I liked DB work more and more and front end programming less and less (probably helped by the fact that I don&#8217;t have any design skills). For the last project we used SQL Server 2000 and then after September 11 2001 we did not get any new work. We all got laid off in October and it took me about 4 weeks to find a new job.
 
@@ -62,5 +65,5 @@ I will also tag some people, the list is below
  [6]: /index.php/All/?disp=authdir&author=68
  [7]: http://sqlfool.com/
  [8]: http://www.straightpathsql.com/blog
- [9]: http://forum.lessthandot.com/viewforum.php?f=17
- [10]: http://forum.lessthandot.com/viewforum.php?f=22
+ [9]: http://forum.ltd.local/viewforum.php?f=17
+ [10]: http://forum.ltd.local/viewforum.php?f=22

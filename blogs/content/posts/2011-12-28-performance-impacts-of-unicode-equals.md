@@ -3,6 +3,7 @@ title: Performance Impacts of Unicode, Equals vs LIKE, and Partially Filled Fixe
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-12-28T11:45:00+00:00
+ID: 1466
 excerpt: Several weeks ago I was refreshing my memory on some nvarchar/varchar tradeoffs when I ran into a post by Michael J Swart where he shared the results of investigating a performance problem in one of his live environments. After seeing the differences he posted, I was curious to see what the impact would be to fixed width types, partially populated fixed width columns, and performing equality instead of LIKE comparisons.
 url: /index.php/datamgmt/dbprogramming/mssqlserver/performance-impacts-of-unicode-equals/
 views:
@@ -22,7 +23,7 @@ After reading this, I was curious. Does that follow with char and nchar also? Ho
 The results are based on 4 runs of each query against 1,000,000 rows with explicitly limited parallelism. The name identifies the type, which operation was used (equals or LIKE), and the size of the field. All data was 36 characters, so &#8220;(36)&#8221; tests are fully populated values and &#8220;(72)&#8221; tests are half-full values.
 
 <div style="font-size: 80%; color: #666666; text-align: center">
-  <img src="http://www.tiernok.com/LTDBlog/nchar_all.png" title="Graph of all Results" /><br /> All Results, Normalized to Shortest Value (Char 32 &#8211; Equals)
+  <img src="http://tiernok.com/LTDBlog/nchar_all.png" title="Graph of all Results" /><br /> All Results, Normalized to Shortest Value (Char 32 &#8211; Equals)
 </div>
 
 This graph shows the average for each type as a percentage of the smallest value, &#8216;Char(72) &#8211; Equals&#8217;. What&#8217;s immediately obvious is the level of difference between an equals operation and a LIKE, especially when we get to the trailing, partially filed NCHAR field (wow!).
@@ -270,7 +271,7 @@ _Note: I originally had 5 runs, but removed the first since it had consistently 
 There is limited statistical significance in the fixed-width EQUALs, but the values do group together by type. 
 
 <div style="font-size: 80%; color: #666666; text-align: center">
-  <img src="http://www.tiernok.com/LTDBlog/nchar_equals.png" title="Graph of Equals Results" /><br /> Equals Results, Normalized to Shortest Value (Char 32 &#8211; Equals)
+  <img src="http://tiernok.com/LTDBlog/nchar_equals.png" title="Graph of Equals Results" /><br /> Equals Results, Normalized to Shortest Value (Char 32 &#8211; Equals)
 </div>
 
 It is interesting to note that there is a pretty consistent 20% gap between fixed and variable widths for the same types (char to varchar, for instance), regardless of whether the column is partially or fully populated.
@@ -280,7 +281,7 @@ It is interesting to note that there is a pretty consistent 20% gap between fixe
 There is a much broader impact when we start looking at the LIKE statement comparisons. Like Michael&#8217;s post above, there is a noticeable difference (on my system, ~650%) between searching a varchar and an nvarchar column.
 
 <div style="font-size: 80%; color: #666666; text-align: center">
-  <img src="http://www.tiernok.com/LTDBlog/nchar_like.png" title="Graph of LIKE Results" /><br /> LIKE Results, Normalized to Shortest Value (Char 32 &#8211; Like)
+  <img src="http://tiernok.com/LTDBlog/nchar_like.png" title="Graph of LIKE Results" /><br /> LIKE Results, Normalized to Shortest Value (Char 32 &#8211; Like)
 </div>
 
 The conclusions I see are:
@@ -298,7 +299,8 @@ The script for these results was heavily based on the one in Michael&#8217;s pos
 
 **Setup Sample Data Table**
 
-<pre>-----------------------------------
+sql
+-----------------------------------
 -- Prep - Generate Sample Data
 
 IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'CharTypeTest')
@@ -325,13 +327,14 @@ WITH SampleData AS(
 INSERT INTO dbo.CharTypeTest(VarcharField36, CharField36, NvarcharField36, NCharField36,
                              VarcharField72, CharField72, NvarcharField72, NCharField72)
 SELECT SampleText, SampleText, SampleText, SampleText, SampleText, SampleText, SampleText, SampleText
-FROM SampleData;</pre>
-
+FROM SampleData;
+```
 And here is the test code:
 
 **Setup Sample Data Table**
 
-<pre>-----------------------------
+sql
+-----------------------------
 -- Test
 
 CREATE TABLE #Results (name varchar(30), elapsed int, run int);
@@ -410,8 +413,8 @@ END;
 
 SELECT * FROM #Results;
 
-DROP TABLE #Results;</pre>
-
+DROP TABLE #Results;
+```
 I realize this is not a groundbreaking post, but after finding the results out for myself I thought it would be interesting to share. It also underlines and italicizes the need to fit your data definitions to the data you will be storing.
 
  [1]: http://michaeljswart.com/ "Michael J Swart's Blog"

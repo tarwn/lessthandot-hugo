@@ -3,6 +3,7 @@ title: New Dynamic Management Views in SQL Server 2014 CTP1
 author: SQLDenis
 type: post
 date: 2013-06-25T07:59:00+00:00
+ID: 2111
 excerpt: |
   There are 26 new Dynamic Management Views in SQl Server 2014 CTP1.
   

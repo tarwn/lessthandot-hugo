@@ -3,6 +3,7 @@ title: Creating a local Service Fabric Cluster
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-07-26T15:37:14+00:00
+ID: 8713
 url: /index.php/enterprisedev/cloud/azure/creating-a-local-service-fabric-cluster/
 views:
   - 4829
@@ -51,17 +52,19 @@ The configuration (or &#8220;manifest&#8221;) is explained in detail in [Microso
 
 The first update is the name of the cluster:
 
-<pre>"name": "LaunchReady.LocalCluster",
+```json
+"name": "LaunchReady.LocalCluster",
 "clusterConfigurationVersion": "1.0.0",
-"apiVersion": "04-2017",</pre>
-
+"apiVersion": "04-2017",
+```
 The clusterConfigurationVersion and apiVersion can stay unchanged. Later when we make changes to the cluster, we&#8217;ll increment the clusterConfigurationVersion (and commit it to our git repository).
 
 ### Configuring Nodes
 
 The next section is the node definitions. I&#8217;ve updated these to reflect the names of my VMs, a common fault domain to indicate the shared server they are running on, and a common update domain (it woul dbe better to make these different, I wasn&#8217;t thinking when I first created this).
 
-<pre>{
+```json
+{
 	"nodeName": "SFNode0",
 	"iPAddress": "SFNode0",
 	"nodeTypeRef": "NodeType0",
@@ -81,8 +84,8 @@ The next section is the node definitions. I&#8217;ve updated these to reflect th
 	"nodeTypeRef": "NodeType0",
 	"faultDomain": "fd:/hyperv0",
 	"upgradeDomain": "UD0"
-}</pre>
-
+}
+```
 Here&#8217;s a break down of the properties:
 
   * nodeName: is the name that we will see in logs and the management console.
@@ -123,14 +126,14 @@ Opening &#8220;Manage computer certificates&#8221; from the Start menu, I can se
 
 To export these to pfx files, I copied the thumbprint from the details for each certificate and ran it like so:
 
-<pre>$pswd = ConvertTo-SecureString -String "NotMyRealPassword!" -Force –AsPlainText
+```powershell
+$pswd = ConvertTo-SecureString -String "NotMyRealPassword!" -Force –AsPlainText
 
 #Client cert
 Get-ChildItem -Path "cert:\localMachine\my\ae 01 64 c8 27 56 71 59 e8 3b c9 37 c4 47 b8 75 7d 1c f3 7e" | Export-PfxCertificate -FilePath C:\LaunchReadyLocalClientCert.pfx -Password $pswd
 #Server cert
-Get-ChildItem -Path "cert:\localMachine\my\e7 98 12 6c 5c 04 46 55 ef ad f7 e3 99 88 0a 82 e7 87 c8 6f" | Export-PfxCertificate -FilePath C:\LaunchReadyLocalClusterCert.pfx -Password $pswd</pre>
-
-<div style="background-color: #FFFFCC; padding: 1em; margin: 1em;">
+Get-ChildItem -Path "cert:\localMachine\my\e7 98 12 6c 5c 04 46 55 ef ad f7 e3 99 88 0a 82 e7 87 c8 6f" | Export-PfxCertificate -FilePath C:\LaunchReadyLocalClusterCert.pfx -Password $pswd
+```<div style="background-color: #FFFFCC; padding: 1em; margin: 1em;">
   Potential Error: If you receive a null object error, you may have an invisible character at the beginning of the thumbprint. I put my cursor at the beginning of the thumbprint and pressed backspace once and was able to run the script no the next try.
 </div>
 
@@ -140,13 +143,14 @@ The quickest solution, since I&#8217;m on the same network, is to open up a shar
 
 **Install my certs:**
 
-<pre>$pswd = ConvertTo-SecureString -String "NotMyRealPassword!" -Force –AsPlainText
+```powershell
+$pswd = ConvertTo-SecureString -String "NotMyRealPassword!" -Force –AsPlainText
 
 ## Client Cert
 Import-PfxCertificate -Exportable -CertStoreLocation Cert:\LocalMachine\My -FilePath "C:\LaunchReadyLocalClientCert.pfx" -Password (ConvertTo-SecureString -String $pswd -AsPlainText -Force)
 ## Server Cert
-Import-PfxCertificate -Exportable -CertStoreLocation Cert:\LocalMachine\My -FilePath "C:\LaunchReadyLocalClusterCert.pfx" -Password (ConvertTo-SecureString -String $pswd -AsPlainText -Force)</pre>
-
+Import-PfxCertificate -Exportable -CertStoreLocation Cert:\LocalMachine\My -FilePath "C:\LaunchReadyLocalClusterCert.pfx" -Password (ConvertTo-SecureString -String $pswd -AsPlainText -Force)
+```
 On each node, I copy the 4 files, run the Install script, then run the Permissions script once for each Thumbprint:
 
 <div id="attachment_8720" style="width: 869px" class="wp-caption aligncenter">
@@ -240,20 +244,9 @@ Switching to Visual Studio, your ServiceFabric project should have a folder name
 
 There is an example for connecting via X509 certificates in a comment in the xml file, so replace the current content with that example and edit appropriately. Use the Thumbprint from the Server certificate above (also can be found in the cluster manifest screen at https://(ip address):19080/Explorer/index.html#/tab/manifest).
 
-My file now looks like this:
+My file now looks like this:<pre lang = "xml"> 
 
-<pre><?xml version="1.0" encoding="utf-8"?&gt;
-<PublishProfile xmlns="http://schemas.microsoft.com/2015/05/fabrictools"&gt;
-       <ClusterConnectionParameters ConnectionEndpoint="192.168.173.200:19000"
-                                    X509Credential="true"
-                                    ServerCertThumbprint="E798126C5C044655EFADF7E399880A82E787C86F"
-                                    FindType="FindByThumbprint"
-                                    FindValue="E798126C5C044655EFADF7E399880A82E787C86F"
-                                    StoreLocation="CurrentUser"
-                                    StoreName="My" /&gt;
-
-  <ApplicationParameterFile Path="..\ApplicationParameters\LocalCluster.xml" /&gt;
-</PublishProfile&gt;</pre>
+<?xml version="1.0" encoding="utf-8"?> <PublishProfile xmlns="http://schemas.microsoft.com/2015/05/fabrictools"> <ClusterConnectionParameters ConnectionEndpoint="192.168.173.200:19000" X509Credential="true" ServerCertThumbprint="E798126C5C044655EFADF7E399880A82E787C86F" FindType="FindByThumbprint" FindValue="E798126C5C044655EFADF7E399880A82E787C86F" StoreLocation="CurrentUser" StoreName="My" /> <ApplicationParameterFile Path="..\ApplicationParameters\LocalCluster.xml" /> </PublishProfile> </pre> 
 
 Add the new profile file to the project in Visual Studio.
 

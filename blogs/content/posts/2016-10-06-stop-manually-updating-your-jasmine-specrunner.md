@@ -3,6 +3,7 @@ title: Stop Manually Updating Your Jasmine SpecRunner
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-10-06T12:29:16+00:00
+ID: 4674
 url: /index.php/webdev/stop-manually-updating-your-jasmine-specrunner/
 views:
   - 3091
@@ -30,50 +31,32 @@ Here&#8217;s a sample SpecRunner file that&#8217;s relying on RequireJS to defin
 
 **SpecRunner.html**
 
-<pre><!DOCTYPE html&gt;
-<html&gt;
-<head&gt;
-  <meta charset="utf-8"&gt;
-  <title&gt;Jasmine Spec Runner v2.4.1</title&gt;
+```javascript
 
-  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png"&gt;
-  <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css"&gt;
 
-  <script src="lib/jasmine-2.4.1/jasmine.js"&gt;</script&gt;
-  <script src="lib/jasmine-2.4.1/jasmine-html.js"&gt;</script&gt;
-  <script src="lib/jasmine-2.4.1/boot-without-onload.js"&gt;</script&gt;
 
-  <script src="../libs/require.js"&gt;</script&gt;
-  <script src="main.js"&gt;</script&gt;
 
-  <script type="text/javascript"&gt;
-      // import the specs list
-      require(["../tests/allSpecs"], function () {
-          window.executeTests();
-      });
-  </script&gt;
 
-</head&gt;
-<body&gt;
-</body&gt;
-</html&gt;</pre>
 
+```
 This SpecRunner directly includes only Jasmine, RequireJS, and a set of Require configs in main.js, everything else is loaded from the &#8220;allSpecs.js&#8221; file. The custom bootloader and window.executeTests() method replace the vanilla bootloader so we can make sure we load our spec files and their dependencies before running the tests (see [Unit Testing with Jasmine 2.0 and Require.JS][2] for more info).
 
 The allSpecs file is simply a list of spec files in a RequireJS define() statement (currently only the first spec file for this tiny sample project)
 
 **allSpecs.js**
 
-<pre>define(['spec/siteWideViewModel.spec.js',
-], function(){ });</pre>
-
+```javascript
+define(['spec/siteWideViewModel.spec.js',
+], function(){ });
+```
 The advantage of doing this as a separate file is that we keep the change history for the mechanics of how we run the tests (SpecRunner) and the actual list of spec files (allSpecs) from crossing and greatly simplify future updates to the SpecRunner as newer versions of Jasmine come out as well as keep the text content we have to manage in our gulpfile to a minimum. Additionally, we can now use this &#8220;allSpecs&#8221; file in other test runners, like Karma or via a PhantomJS script, to ensure we&#8217;re running exactly the same set of tests locally and in CI.
 
 All we need now is to be able to build and maintain that allSpecs file. Using [Gulp][3], we can setup a task to watch the file system for any changes to files that match a pattern of *.spec.js. When we see a change, we can grab a full list of the spec files and concatenate that into a new define statement, overwriting the allSpecs file with an updated list.
 
 **gulpfile.js**
 
-<pre>var gulp = require('gulp'),
+```javascript
+var gulp = require('gulp'),
     less = require('gulp-less'),
     watch = require('gulp-watch'),
     insert = require('gulp-insert'),
@@ -110,8 +93,8 @@ function regenerateAllSpecsFile() {
             return 'define([' + contents + '], function(){ });';
         }))
         .pipe(gulp.dest(config.assetsPath + "/tests"));
-}</pre>
-
+}
+```
 And there we go. Now as we add a new spec file or remove one, we don&#8217;t have to also of update our SpecRunner file, just refresh the browser, keep working, and make sure the automatically updated file is in our source control push later.
 
  [1]: /index.php/webdev/self-hosted-web-updating-assets-without-restarting-the-debugger/

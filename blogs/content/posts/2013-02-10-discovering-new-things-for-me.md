@@ -3,6 +3,7 @@ title: Discovering new things (for me) in SSMS
 author: SQLDenis
 type: post
 date: 2013-02-10T12:42:00+00:00
+ID: 1984
 excerpt: 'One of the good things about working in technology is that you always will discover new things. The other day I created a blog post: Listing all your SQL Server databases ordered by size. Buck Woody replied to me on twitter that this is also built into&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/discovering-new-things-for-me/
 views:

@@ -96,6 +96,7 @@ code.hljs {
     line-height: 26px;
 }
 
+
 /*********************************************************
 S1. Common Elements
 **********************************************************/
@@ -111,7 +112,8 @@ body {
 h1, h2, h3, .pgsttl {
     /*font-family: times, georgia;*/
     font-weight: normal;
-    padding-bottom: .1em
+    padding-bottom: .1em;
+    margin-top: 1rem;
 }
 
 a {
@@ -756,6 +758,8 @@ S8B. Blog Post Content Formatting
 .post-content li{
     line-height: 1.4em;	
     padding: .25em 0 .5em .5em ;
+    list-style-type: disc;
+    list-style-position: outside;
 }
 
 .post-content dl{

@@ -3,6 +3,7 @@ title: 'The Lazy DBA Series: Monitoring'
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-22T22:33:11+00:00
+ID: 880
 excerpt: 'There are hundreds if not thousands of T-SQL Scripts, Powershell Cmdlets, .NET programs and even old vbscript scripts and on out there to monitor SQL Server and Operating System level performance.  I’ve written hundreds of them myself over the years.  All of that time and work absolutely paid off.  I know a lot about monitoring, going after the right information when something specific is wrong.  It also gives me a bag of tricks that mostly causes laptops to run out of disk space often.  Disk is cheap though, these days.'
 url: /index.php/datamgmt/datadesign/lazy-dba-monitoring-sql-server/
 views:

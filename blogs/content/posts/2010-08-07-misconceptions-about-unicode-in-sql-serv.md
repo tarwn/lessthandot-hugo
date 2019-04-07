@@ -3,6 +3,7 @@ title: Misconceptions about unicode in SQL Server
 author: SQLDenis
 type: post
 date: 2010-08-07T16:17:37+00:00
+ID: 865
 url: /index.php/datamgmt/datadesign/misconceptions-about-unicode-in-sql-serv/
 views:
   - 7569
@@ -33,7 +34,7 @@ Run this and you will see the character &#25991; in the output
 ** 
 
 <pre>declare @n nchar(1)
-set @n = N'文' 
+set @n = N'&#25991;' 
 
 select @n</pre>
 
@@ -45,7 +46,9 @@ Also be aware that you need to have the N in front of the string, this tells SQL
 
 What if you wanted to store over 4000 characters in a nvarchar? Varchar goes up to 8000 characters but nvarchar only goes up to 4000 characters, take a look and run the statement below.
 
-<pre>DECLARE @n NVARCHAR(4001)</pre>
+sql
+DECLARE @n NVARCHAR(4001)
+```
 
 Below is the error that you will get.
   
@@ -55,13 +58,17 @@ The size (4001) given to the parameter &#8216;@n&#8217; exceeds the maximum allo
 
 But there is hope, you can use NVARCHAR(max) to store up to 2GB of data, so about a billion characters or so
 
-<pre>DECLARE @n NVARCHAR(max)</pre>
+sql
+DECLARE @n NVARCHAR(max)
+```
 
 One more thing to be aware of when using unicode is that LEN will give you the number of characters but DATALENGTH will give you the storage required to store the character(s)
 
 Run this
 
-<pre>SELECT LEN(N'1'),DATALENGTH(N'1')</pre>
+sql
+SELECT LEN(N'1'),DATALENGTH(N'1')
+```
 
 LEN returns 1 and DATALENGTH returns 2. To learn more about LEN and DATALENGTH, take a look at the [The differences between LEN and DATALENGTH in SQL Server][1] post I wrote a while back.
 
@@ -70,5 +77,5 @@ That is all for this short weekend post.
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DBProgramming/the-differences-between-len-and-dataleng
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

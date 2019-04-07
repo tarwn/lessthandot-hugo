@@ -3,6 +3,7 @@ title: HTML5 Support for the Visual Studio 2010 Editor available for download
 author: SQLDenis
 type: post
 date: 2011-06-16T08:45:00+00:00
+ID: 1223
 excerpt: |
   The first Web Standards Update for Visual Studio 2010 SP1 is available for download, you can get it here: http://visualstudiogallery.msdn.microsoft.com/a15c3ce9-f58f-42b7-8668-53f6cdc2cd83
   

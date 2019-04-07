@@ -3,6 +3,7 @@ title: Solving Sudoku in Silverlight
 author: ThatRickGuy
 type: post
 date: 2010-04-09T14:37:24+00:00
+ID: 672
 url: /index.php/webdev/webdesigngraphicsstyling/solving-sudoku-in-silverlight/
 views:
   - 2442
@@ -37,6 +38,6 @@ Code is available [Here][4]
 -Rick
 
  [1]: http://oldschooldotnet.blogspot.com/2009/03/sudoku-in-silverlight.html
- [2]: http://forum.lessthandot.com/viewforum.php?f=102
+ [2]: http://forum.ltd.local/viewforum.php?f=102
  [3]: http://ringdev.com.web10.reliabledomainspace.com/code/sodukusolver/index.html
  [4]: http://ringdev.com.web10.reliabledomainspace.com/code/sodukusolver/SodukuSolver.zip

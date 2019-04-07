@@ -3,6 +3,7 @@ title: Suppressing xp_cmdshell output
 author: SQLDenis
 type: post
 date: 2013-02-21T09:13:00+00:00
+ID: 2006
 excerpt: 'Starting with SQL Server 2005 xp_cmdshell is turned off by default as a security measure. You have to explicitly enable xp_cmdshell it. If you have to move files around on a SQL Server box there are probably better ways than using xp_cmdshell, you can use SSIS,&hellip;'
 url: /index.php/datamgmt/dbprogramming/supressing-xp_cmdshell-output/
 views:
@@ -35,7 +36,9 @@ NULL
 
 If I want to move a file from c:temp to c:tempold, I would execute the following
 
-<pre>xp_cmdshell 'move c:tempbla.txtc:tempoldbla.txt'</pre>
+sql
+xp_cmdshell 'move c:tempbla.txtc:tempoldbla.txt'
+```
 
 Here is what it looks like in SSMS
 
@@ -45,7 +48,9 @@ As you can see you get a resultset, in order to surpress that, you can add no\_o
 
 Here is what the command looks like
 
-<pre>xp_cmdshell 'move c:tempbla.txt c:tempoldbla.txt',no_output</pre>
+sql
+xp_cmdshell 'move c:tempbla.txt c:tempoldbla.txt',no_output
+```
 
 Executing the command like that will not return a resultset anymore
 

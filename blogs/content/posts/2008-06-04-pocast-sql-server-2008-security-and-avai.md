@@ -3,6 +3,7 @@ title: 'Podcast: SQL Server 2008 Security and Availability, Management, Troubles
 author: SQLDenis
 type: post
 date: 2008-06-04T23:00:53+00:00
+ID: 42
 url: /index.php/datamgmt/datadesign/pocast-sql-server-2008-security-and-avai/
 views:
   - 3221

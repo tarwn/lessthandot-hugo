@@ -3,6 +3,7 @@ title: TRY_CONVERT in SQL Server Denali CTP3
 author: SQLDenis
 type: post
 date: 2011-07-19T22:54:00+00:00
+ID: 1257
 excerpt: 'TRY_CONVERT  is a new function in SQL Server Denali CTP3, TRY_CONVERT   enables you to test if a value can be converted to a specific data type, TRY_CONVERT  returns a value cast to the specified data type if the cast succeeds; otherwise, TRY_CONVERT&hellip;'
 url: /index.php/datamgmt/datadesign/try_convert-in-sql-server-denali/
 views:
@@ -51,7 +52,8 @@ Here is what the syntax looks like
 
 Let&#8217;s take a look how this all works, I will create a table and inserts some values
 
-<pre>create table #test(SomeCol varchar(100))
+sql
+create table #test(SomeCol varchar(100))
 GO
 
 insert #test values('1')
@@ -67,11 +69,13 @@ insert #test values('20110230')
 insert #test values('20110228')
 insert #test values('14:58')
 insert #test values('16000228')
-insert #test values('0.12345678901')</pre>
+insert #test values('0.12345678901')
+```
 
 Now, I will try to convert the values in the table to various data types
 
-<pre>select SomeCol,
+sql
+select SomeCol,
 	   TRY_CONVERT(float,SomeCol) as float,
 	   TRY_CONVERT(date,SomeCol) as date,
 	   TRY_CONVERT(datetime2,SomeCol) as datetime2,
@@ -79,8 +83,8 @@ Now, I will try to convert the values in the table to various data types
 	   TRY_CONVERT(time,SomeCol) as time,
 	   TRY_CONVERT(numeric(30,10),SomeCol) as numeric,
 	   TRY_CONVERT(int,SomeCol) as int
-FROm #test</pre>
-
+FROm #test
+```
 Here is the result
 
 <div class="tables">
@@ -605,7 +609,8 @@ You can also use CASE or IIF to return if the value can or cannot be converted, 
 
 **CASE**
 
-<pre>SELECT 
+sql
+SELECT 
     CASE WHEN TRY_CONVERT(float,'bla') IS NULL 
     THEN 'Cast failed'
     ELSE 'Cast succeeded'
@@ -615,7 +620,8 @@ SELECT
     CASE WHEN TRY_CONVERT(float,'1') IS NULL 
     THEN 'Cast failed'
     ELSE 'Cast succeeded'
-END </pre>
+END 
+```
 
 &#8212;&#8212;&#8211;
   
@@ -625,9 +631,11 @@ Cast succeeded
 
 **IIF**
 
-<pre>SELECT IIF(TRY_CONVERT(float,'bla')IS NULL,'Cast failed','Cast succeeded')
+sql
+SELECT IIF(TRY_CONVERT(float,'bla')IS NULL,'Cast failed','Cast succeeded')
 UNION
-SELECT IIF(TRY_CONVERT(float,'1')IS NULL,'Cast failed','Cast succeeded')</pre>
+SELECT IIF(TRY_CONVERT(float,'1')IS NULL,'Cast failed','Cast succeeded')
+```
 
 &#8212;&#8212;&#8211;
   
@@ -637,7 +645,9 @@ Cast succeeded
 
 Be aware that if you pass in a NULL, then NULL is returned
 
-<pre>select  TRY_CONVERT( numeric(30,10),null)</pre>
+sql
+select  TRY_CONVERT( numeric(30,10),null)
+```
 
 
 

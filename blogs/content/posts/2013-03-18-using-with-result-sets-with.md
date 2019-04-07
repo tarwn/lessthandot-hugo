@@ -3,6 +3,7 @@ title: Using WITH RESULT SETS with stored procedures that return multiple result
 author: SQLDenis
 type: post
 date: 2013-03-18T21:07:00+00:00
+ID: 2037
 excerpt: |
   Yesterday I blogged about using WITH RESULT SETS with the EXECUTE command here: Use WITH RESULT SETS to change column names and datatypes of a resultset. Naomi Nosonovsky left the following comment
   Can you use this feature to get result sets from the s&hellip;
@@ -26,7 +27,9 @@ Yesterday I blogged about using WITH RESULT SETS with the EXECUTE command here: 
 
 So today we are going to look at how we can do this. Let&#8217;s say we execute the following stored procedure without specifying an object name
 
-<pre>EXEC sp_spaceused</pre>
+sql
+EXEC sp_spaceused
+```
 
 You will get two resultsets, the output will look something like this 
 
@@ -36,7 +39,8 @@ You will get two resultsets, the output will look something like this
 
 Now let&#8217;s see what happens if we only specify the first result set
 
-<pre>EXEC sp_spaceused 
+sql
+EXEC sp_spaceused 
 WITH RESULT SETS
 ( 
    (
@@ -45,7 +49,8 @@ WITH RESULT SETS
    UnollactedSpace nvarchar(100)
    )
 
-);</pre>
+);
+```
 
 Here is the output
 
@@ -57,7 +62,8 @@ As you can see both result sets have to be accounted for when using WITH RESULT 
   
 Adding the second result set will fix this, run the following
 
-<pre>EXEC sp_spaceused 
+sql
+EXEC sp_spaceused 
 WITH RESULT SETS
 ( 
    (
@@ -71,7 +77,8 @@ WITH RESULT SETS
    IndexSize nvarchar(100),
    Unused nvarchar(100)
    )
-);</pre>
+);
+```
 
 Adding the second result set fixed it, it all works now and the column names are the ones we have specified
 

@@ -3,6 +3,7 @@ title: 'Book Review: Expert Performance Indexing for SQL Server 2012'
 author: Jes Borland
 type: post
 date: 2013-01-03T13:47:00+00:00
+ID: 1896
 excerpt: I just finished reading Expert Performance Indexing for SQL Server 2012 by Jason Strate and Ted Krueger. This is the only index-specific book that I know of for SQL Server, and it was a long-overdue resource.
 url: /index.php/itprofessionals/book-review/book-review-expert-performance-indexing/
 views:

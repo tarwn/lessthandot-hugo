@@ -3,6 +3,7 @@ title: Re-Collating All Columns in a SQL Server Database
 author: Alex Ullrich
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 1309
 excerpt: "At my last job, after getting a few support tickets from customers using case-sensitive collations we decided to change over to case-sensitive collations in our development environment.  Changing the database collation wasn't enough though - this just c&hellip;"
 draft: true
 url: /?p=1309

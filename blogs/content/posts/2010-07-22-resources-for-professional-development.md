@@ -3,6 +3,7 @@ title: Resources for Professional Development
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-07-22T20:36:24+00:00
+ID: 849
 url: /index.php/itprofessionals/professionaldevelopment/resources-for-professional-development/
 views:
   - 5746

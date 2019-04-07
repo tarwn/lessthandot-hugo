@@ -3,6 +3,7 @@ title: Monitoring and Logging as a Service – Introduction
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-06-29T10:03:00+00:00
+ID: 1642
 excerpt: "Monitoring [in IT] sucks and I am probably more critical of its state than most IT people. Over the next few posts I'm going to integrate a sample application with several logging and data services, evaluating them against my own needs and expectations. Besides the comparison, and perhaps more importantly, the examples will show how easy it is to instrument our applications and start getting visibility into what is actually happening behind the scenes."
 url: /index.php/enterprisedev/instrumentation/monitoring-and-logging-as-a-service/
 views:

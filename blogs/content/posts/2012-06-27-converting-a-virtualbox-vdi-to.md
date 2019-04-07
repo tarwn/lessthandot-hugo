@@ -3,6 +3,7 @@ title: Converting a Virtualbox VDI to a VMWare VMDK file
 author: Axel Achten (axel8s)
 type: post
 date: 2012-06-27T11:46:00+00:00
+ID: 1658
 excerpt: 'Today I was "gifted" a Virtualbox VDI file with a setup I need to use to give some custom training. I tried Virtualbox once but it was not a success and also this time the machine failed to boot. It kept complaining about some video settings and the boo&hellip;'
 url: /index.php/itprofessionals/other/converting-a-virtualbox-vdi-to/
 views:
@@ -23,7 +24,9 @@ Today I was &#8220;gifted&#8221; a Virtualbox VDI file with a setup I need to us
   
 First of all you need to have [VirtualBox][1] installed. Now open a command prompt and use the following VboxManage syntax:
 
-<pre>%program filesOracleVirtualBoxVBoxManage clonehd 'sourcefile'.vdi 'destinationfile'.vmdk --format VMDK</pre>
+```cmd
+%program filesOracleVirtualBoxVBoxManage clonehd 'sourcefile'.vdi 'destinationfile'.vmdk --format VMDK
+```
 
 The result looks like this:
 

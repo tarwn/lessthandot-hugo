@@ -3,6 +3,7 @@ title: SQL Saturday 28, Baton Rouge
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-08-16T09:47:36+00:00
+ID: 873
 excerpt: "I'm in the air flying back from SQL Saturday 28 and wanted to capture my thoughts while the event was still fresh. Overall I would have to rate it as a resounding success. Last year the event attracted 200 professionals from Baton Rouge and the surrounding area, this year attendance doubled to 400, with additional interest from about 200 more that weren't able to make it."
 url: /index.php/datamgmt/datadesign/sql-saturday-28-baton-rouge/
 views:
@@ -21,7 +22,7 @@ tags:
 I&#8217;m in the air flying back from SQL Saturday 28 and wanted to capture my thoughts while the event was still fresh. Overall I would have to rate it as a resounding success. Last year the event attracted 200 professionals from Baton Rouge and the surrounding area, this year attendance doubled to 400, with additional interest from about 200 more that weren&#8217;t able to make it. 
 
 <div style="float: left; margin: .5em 2em .5em 0px; color: #666666; font-size: 80%; text-align: center;">
-  <a href="http://yfrog.com/jd1bej" title="See the fullsize picture"><img src="http://www.tiernok.com/LTDBlog/sqlsat28_2010/patrick_leblanc.png" alt="Patrick LeBlanc (@patrickdba) speaking Friday night" /></a><br /> Patrick LeBlanc (<a href="http://sqldownsouth.blogspot.com/" title="Patrick LeBlanc's Blog">blog</a>|<a href="http://twitter.com/patrickdba" title="Patrick LeBlanc (@patrickdba) on twitter">twitter</a>)<br /> Speaking Friday night
+  <a href="http://yfrog.com/jd1bej" title="See the fullsize picture"><img src="http://tiernok.com/LTDBlog/sqlsat28_2010/patrick_leblanc.png" alt="Patrick LeBlanc (@patrickdba) speaking Friday night" /></a><br /> Patrick LeBlanc (<a href="http://sqldownsouth.blogspot.com/" title="Patrick LeBlanc's Blog">blog</a>|<a href="http://twitter.com/patrickdba" title="Patrick LeBlanc (@patrickdba) on twitter">twitter</a>)<br /> Speaking Friday night
 </div>
 
 The event featured [8 tracks][1], including SQL and .Net sessions. Several early-bird sessions kicked off around 7:30AM &#8211; I have to applaud those brave enough to speak in front of a crowd that early, as I was still getting appropriately caffeinated. In addition, INETA made it possible for Keith Elder ([blog][2]|[twitter][3]) to provide a full day&#8217;s &#8220;.Net From Scratch&#8221; training session. Steve Jones ([blog][4]|[twitter][5]) delivered the keynote, starting the day off with commentary on professional development, technical skill, and the importance of enjoying our jobs and finding balance in life. 
@@ -29,7 +30,7 @@ The event featured [8 tracks][1], including SQL and .Net sessions. Several early
 The dinner the night before was in a large enough venue that we were able to mingle and talk a good bit before the dinner appeared, and the food was both good and plentiful (which worked out well for those of us who had been eating airport fare). Patrick LeBlanc ([blog][6]|[twitter][7]) provided our mid-evening entertainment, welcoming everyone to the area and introducing us to the team that had worked so hard to put the event together. Somehow I managed to end up at the [Sparkhound][8] table, but they&#8217;re a friendly group and it made for a fun dinner.
 
 <div style="float: right; margin: 2em; color: #666666; font-size: 80%; text-align: center;">
-  <a href="http://yfrog.com/83a1rxj" title="See the fullsize picture"><img src="http://www.tiernok.com/LTDBlog/sqlsat28_2010/chris_eargle.png" alt="Chris Eargle (@kodefuguru) documenting his audience" /></a><br /> Chris Eargle (<a href="http://www.kodefuguru.com/" title="Chris Eargle's blog">blog</a>|<a href="http://twitter.com/KodefuGuru" title="Chris Eargle (@kodefuguru) on twitter">twitter</a>)<br /> Documenting his Audience
+  <a href="http://yfrog.com/83a1rxj" title="See the fullsize picture"><img src="http://tiernok.com/LTDBlog/sqlsat28_2010/chris_eargle.png" alt="Chris Eargle (@kodefuguru) documenting his audience" /></a><br /> Chris Eargle (<a href="http://www.kodefuguru.com/" title="Chris Eargle's blog">blog</a>|<a href="http://twitter.com/KodefuGuru" title="Chris Eargle (@kodefuguru) on twitter">twitter</a>)<br /> Documenting his Audience
 </div>
 
 The event took place at LSU in a lecture hall, which meant we had classrooms with integrated power and overheads, simplifying some of the setup. A full size classroom was set aside for the speakers and featured plenty of space for us to get off our feet, plug in, or just get a snack throughout the day.
@@ -39,7 +40,7 @@ My session was right after lunch (see the [Conceptual Data Modeling][9] post fro
 Of the three SQL Saturday events I attended this year, this one was probably the best represented on twitter during the day. William Assaf ([blog][12]|[twitter][13]) kept the media flowing, constantly uploading pictures and commentary throughout the day and keeping the [@SQLSatBR][14] account busy. 
 
 <div style="float: left; margin: .5em 2em .5em 0em; color: #666666; font-size: 80%; text-align: center;">
-  <a href="http://yfrog.com/mcg1sp" title="See the fullsize picture"><img src="http://www.tiernok.com/LTDBlog/sqlsat28_2010/sqlsatteam.png" alt="A great team of people" /></a><br /> A great team of people (click for larger)
+  <a href="http://yfrog.com/mcg1sp" title="See the fullsize picture"><img src="http://tiernok.com/LTDBlog/sqlsat28_2010/sqlsatteam.png" alt="A great team of people" /></a><br /> A great team of people (click for larger)
 </div>
 
 As is always the case with the events, the best part was the people. I met a number of new people, at varying places in their respective careers, and had interesting conversations that lasted until the restaurant hosting the after party finally asked the last four of us to leave. I wasn&#8217;t able to work everyone&#8217;s names into the post, but it was a great group and there a lot of names both familiar and new. From what I hear, the planning for next year is already in progress, so maybe I&#8217;ll see you there.
@@ -65,4 +66,4 @@ And the slide decks for my session [are posted now][16].
  [13]: http://twitter.com/william_a_dba "William Assaf (@william_a_dba) on twitter"
  [14]: http://twitter.com/SQLSatBR "[Sorta] Official SQLSatBR Twitter account"
  [15]: http://picasaweb.google.com/willassaf/SQLSaturday28?authkey=Gv1sRgCIDCruLCuNDy4wE&feat=directlink# "William A's full Picasa Gallery"
- [16]: http://www.tiernok.com/presentation.php "Eli's slide decks"
+ [16]: http://tiernok.com/presentation.php "Eli's slide decks"

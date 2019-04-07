@@ -3,6 +3,7 @@ title: Wow what a week in review…..
 author: SQLology ~ Kim Tessereau
 type: post
 date: 2011-03-30T22:43:00+00:00
+ID: 1095
 excerpt: |
   Well this is my first blog posting and I have plenty to blog about.  Last week was amazing!  It all started on....
   Tuesday:  My day started at Microsoft in St. Louis.  I got there nerdy early, as usual.  Microsoft is located on the 11th floor so I rode&hellip;

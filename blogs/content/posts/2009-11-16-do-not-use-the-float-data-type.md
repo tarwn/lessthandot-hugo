@@ -3,6 +3,7 @@ title: Do not use the float data type
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-16T13:25:36+00:00
+ID: 630
 url: /index.php/datamgmt/dbprogramming/do-not-use-the-float-data-type/
 views:
   - 34122
@@ -18,7 +19,8 @@ That may seem a little harsh, and it&#8217;s not always true. However, most of t
 
 **How to detect this problem:**
 
-<pre>Select Table_Name + '.' + Column_Name As Name, 'Table' As ObjectType
+sql
+Select Table_Name + '.' + Column_Name As Name, 'Table' As ObjectType
 From   Information_Schema.Columns
 Where  Data_Type in ('Float', 'Real')
 
@@ -62,8 +64,8 @@ FROM    (
 			) As Types
 			On A.XType = Types.XType
 WHERE   TEXT Like '%float[^(]%'
-ORDER BY Name</pre>
-
+ORDER BY Name
+```
 **How to correct it:** Examine the data you are using and identify the precision and scale required. Change the data type (or code) to use a decimal with the precision and scale you require.
 
 **Level of severity:** Moderate

@@ -3,6 +3,7 @@ title: Should SQL Server Professionals Learn Oracle?
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-21T16:52:00+00:00
+ID: 1126
 excerpt: |
   Should a SQL Server Professionals know Oracle?
   Yes, absolutely!  I strongly feel that all SQL Server Database Administrators and Developers should not only learn the basics and fundamental internals of Oracle, but should push that to others such as DB2&hellip;

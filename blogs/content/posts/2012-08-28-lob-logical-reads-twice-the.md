@@ -3,6 +3,7 @@ title: LOB Logical Reads twice the row count
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-08-28T13:16:00+00:00
+ID: 1690
 excerpt: 'This is a follow-up article to, “Index Seek on LOB Columns”.  While working on the demonstration for the computed column method to achieve index seeks on a LOB data type, I noticed the lob logical reads were exactly twice the row count in the table that&hellip;'
 url: /index.php/datamgmt/dbadmin/lob-logical-reads-twice-the/
 views:
@@ -17,7 +18,10 @@ categories:
 ---
 This is a follow-up article to, “[Index Seek on LOB Columns][1]”.  While working on the demonstration for the computed column method to achieve index seeks on a LOB data type, I noticed the lob logical reads were exactly twice the row count in the table that the queries were being executed on.  For example, the exact row count of PerfLOB was 100.  When running the query shown in listing 1, the statistics IO show exactly 200 lob logical reads.
 
-<pre>SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB WITH (INDEX=IDX_LOGSTRING)</pre>
+sql
+SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB WITH (INDEX=IDX_LOGSTRING)
+```
+
 
 > Note: To follow the examples in this article, please refer to the scripts in Index Seek on LOB Columns and utilize the Word document available for download, “[Columnstore Index Basics][2]”.</p>
 I recalled reading an article by Paul White, “[Beware Sneaky Reads with Unique Indexes][3]” that explains the reasoning to why these reads were coming in higher.  As always, Paul’s deep understanding of and ability to explain the optimizer’s internals are shown in the article.
@@ -26,20 +30,29 @@ To understand the query in listing 1 and the read counts, let’s investigate th
 
 First, create a new table and insert 100 Word documents into it.  Change the path to a Word document on your system that the SQL Server service account has access to.
 
-<pre>CREATE TABLE PerfLOB (ID INT IDENTITY(1,1) PRIMARY KEY, LOBVAL VARCHAR(MAX), SUB_CONTENT AS (CONVERT([varchar](100),substring([LOBVAL],(1),(100)),0)))
+sql
+CREATE TABLE PerfLOB (ID INT IDENTITY(1,1) PRIMARY KEY, LOBVAL VARCHAR(MAX), SUB_CONTENT AS (CONVERT([varchar](100),substring([LOBVAL],(1),(100)),0)))
 GO
 INSERT INTO PerfLOB (LOBVAL)
 VALUES ((SELECT * FROM OPENROWSET(BULK N'C:NoSecColumStoreIndexBasics.docx', SINGLE_BLOB) AS guts))
-GO 100</pre>
+GO 100
+```
+
 
 Next, create the index that utilizes the computed column and the nonkey LOBVAL column.
 
-<pre>CREATE NONCLUSTERED INDEX IDX_LOGSTRING ON PerfLOB (SUB_CONTENT) INCLUDE (LOBVAL)</pre>
+sql
+CREATE NONCLUSTERED INDEX IDX_LOGSTRING ON PerfLOB (SUB_CONTENT) INCLUDE (LOBVAL)
+```
+
 
 Set statistics IO on and run the query below:
 
-<pre>SET STATISTICS IO ON 
-SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB WITH (INDEX=IDX_LOGSTRING)</pre>
+sql
+SET STATISTICS IO ON 
+SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB WITH (INDEX=IDX_LOGSTRING)
+```
+
 
 The IO from this query should show these results:
 
@@ -53,7 +66,8 @@ Immediately we can see, even knowing we inserted only 100 rows into the table, w
 
 Create a table to hold the DBCC IND results so they can be reviewed easier.
 
-<pre>IF  EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IND_Results]') AND type in (N'U'))
+sql
+IF  EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IND_Results]') AND type in (N'U'))
 DROP TABLE [dbo].[IND_Results]
 GO
 CREATE TABLE IND_Results
@@ -74,13 +88,17 @@ CREATE TABLE IND_Results
     PrevPageFID     tinyint,
     PrevPagePID     int
 );
-GO</pre>
+GO
+```
 
 > Using DBCC IND and Dynamic SQL with the EXEC command is a common method to insert the results into a static table for later review.  It is a reliablemethod for capturing results as well.</p>
 To insert the DBCC IND results, use Exec as shown below
 
-<pre>INSERT INTO IND_Results EXEC ('DBCC IND (QTuner, ''dbo.PerfLOB'', 2)') 
-GO</pre>
+sql
+INSERT INTO IND_Results EXEC ('DBCC IND (QTuner, ''dbo.PerfLOB'', 2)') 
+GO
+```
+
 
 The above DBCC IND command will return the information on the index ID 2; index IDX_LOGSTRING. For more information on DBCC IND, read Paul Randal’s article, “[Inside the Storage Engine: Using DBCC PAGE and DBCC IND to find out if the page splits ever roll back][4]”
 
@@ -88,7 +106,10 @@ To read further on DBCC IND and the page types that can be returned in the resul
 
 Before looking too deep into the DBCC IND results, do a direct select on the IND_Results table to return all the information returned.
 
-<pre>SELECT * FROM IND_Results</pre>
+sql
+SELECT * FROM IND_Results
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-40.png?mtime=1346166788"><img alt="" src="/wp-content/uploads/blogs/All/-40.png?mtime=1346166788" width="624" height="235" /></a>
@@ -109,7 +130,10 @@ To visualize this, imagine the page layout shown below starting with the root pa
 > Note: the ordering of the pages as they are stored does not always go in order depicted. Page 20411 starts and contains the text tree to pages 20413 to 20417. Also, page 20411 may not relate directly to the other pages but the illustration shows a good visualization to the effects of the text page type relations and tree sharing.</p>
 This still doesn’t answer the amount of reads until we look at the pages that are PageType 4.
 
-<pre>SELECT COUNT(*) FROM IND_Results WHERE pagetype = 4</pre>
+sql
+SELECT COUNT(*) FROM IND_Results WHERE pagetype = 4
+```
+
 
 The above query to count all page types of 4, results in 100. In this case, the nonclustered index key column is, in a way, chained back to the 100 pages of type 4. In order to retrieve the pages needed, the key column is read as well as the LOB data pages of page type 4. So this shows the 200 reads that take place while the task to read in all the pages, including the LOB pages, is performed.
 
@@ -119,13 +143,15 @@ It is important to mention that the document that was tested and the needs it ha
 
 To further investigate how the storage is handled, and to look at the page types, take a more static and direct approach as shown below.  Performing this method allows us to remove the possibility of variable results based on a LOB insert from a document that may cause different page count needs.
 
-<pre>USE tempdb;
+sql
+USE tempdb;
 SET NOCOUNT ON;
 IF OBJECT_ID(N'Test', N'U') IS NOT NULL DROP TABLE dbo.Test;
 CREATE TABLE dbo.Test (lob varchar(max) NOT NULL);
 GO
 INSERT dbo.Test VALUES (REPLICATE(CONVERT(varchar(max), 'X'), 40 * 1024));
-GO </pre>
+GO 
+```
 
 (Code example written by Paul White ([B][6] | [T][7]) – Thanks again, Paul!)
 
@@ -133,7 +159,8 @@ The code example above creates a testing table, “Test” and inserts enough da
 
 With SQL Server 2012 a new undocumented DMV can be used to look further into the page storage and types, sys.dm\_db\_database\_page\_allocations.
 
-<pre>SELECT
+sql
+SELECT
     rowset_id,
     allocation_unit_id,
     allocation_unit_type_desc,
@@ -144,7 +171,8 @@ With SQL Server 2012 a new undocumented DMV can be used to look further into the
     page_type_desc
 FROM sys.dm_db_database_page_allocations(DB_ID(N'tempdb'), OBJECT_ID(N'Test', N'U'), 0, 1, 'DETAILED') AS dddpa
 WHERE
-    dddpa.is_iam_page = 0;</pre>
+    dddpa.is_iam_page = 0;
+```
 
 From the results, the illustration below shows a more descriptive layout of the pages.  This is seen more clearly in the page\_type\_desc results.
 

@@ -3,6 +3,7 @@ title: 'Announcing SQL Saturday Minnesota #557 Pre-Conference Seminars!'
 author: Paul Timmerman
 type: post
 date: 2016-07-21T21:15:12+00:00
+ID: 4639
 url: /index.php/uncategorized/announcing-sql-saturday-minnesota-557-pre-conference-seminars/
 views:
   - 6038

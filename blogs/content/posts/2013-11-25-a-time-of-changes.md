@@ -3,6 +3,7 @@ title: A Time of Changes
 author: Brian Davis
 type: post
 date: 2013-11-25T13:07:00+00:00
+ID: 2197
 excerpt: |
   This post could have also been titled, "A New Job &amp; Everything That Goes Along With It"...
   My New Job

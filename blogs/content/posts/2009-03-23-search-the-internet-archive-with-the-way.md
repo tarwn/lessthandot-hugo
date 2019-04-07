@@ -3,6 +3,7 @@ title: Search the Internet Archive with the Wayback Machine
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-03-24T00:22:39+00:00
+ID: 363
 url: /index.php/webdev/webdesigngraphicsstyling/search-the-internet-archive-with-the-way/
 views:
   - 3830

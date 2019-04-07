@@ -3,6 +3,7 @@ title: RID Lookup take me down
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-07-18T22:21:52+00:00
+ID: 850
 excerpt: 'The scenario starts with a phone call from the support desk reporting failed integrations from the ERP system to the WMS system.  This integration process is critical for the production of items with the company to fulfill orders and build inventory.  Without the process, finished goods inventory is not posted and thus does not become available for sale.  This causes a more detrimental effect on financial reporting and filters down to the revolving reason we are in business -  making money.In a normal IT team structure, there are three high-level components we all start with to troubleshoot backend systems process failures:  Network, Systems/Applications and Database Server Performance.  Each team sector should work together and focus on their specialty to document possibly causes.  This will benefit the situation the best and also create a collaboration point where the team can compile everything found in order to proceed with the fix.   As a DBA you will find yourself in this situation often and there are a couple of key points you can focus on to quickly determine if the cause is the database server.  After your findings the DBA can then focus on areas to alter, tune or repair.'
 url: /index.php/datamgmt/datadesign/rid-lookup-sql-tuning/
 views:
@@ -49,7 +50,8 @@ First step will be to create a database that we can work in. We will then create
 
 Run the following to prepare the database and needed objects:
 
-<pre>USE master
+sql
+USE master
 GO
 CREATE DATABASE [EXE_PLANS] ON  PRIMARY 
 (NAME = N'EXE_PLANS', 
@@ -83,33 +85,41 @@ SELECT
  GETDATE(),
  GETDATE()
 FROM 
-AdventureWorks.Production.Product Prods</pre>
+AdventureWorks.Production.Product Prods
+```
 
 Now that we have our testing area, we can create some common indexes that may be found on a table like the items tables.
 
 First a nonclustered index on the ITEMCODE
 
-<pre>CREATE UNIQUE NONCLUSTERED INDEX IDX_ITEMID ON ITEMS
+sql
+CREATE UNIQUE NONCLUSTERED INDEX IDX_ITEMID ON ITEMS
 (ITEMCODE)
 WITH (FILLFACTOR = 85)
-GO</pre>
+GO
+```
 
 Next, a nonclustered index on CREATETIME, ITEMCODE and CREATEDATE
 
-<pre>CREATE NONCLUSTERED INDEX IDX_PRODID_DATE_ASC ON ITEMS
+sql
+CREATE NONCLUSTERED INDEX IDX_PRODID_DATE_ASC ON ITEMS
 (CREATETIME,ITEMCODE,CREATEDATE)
 INCLUDE (ITEMNAME)
 WITH (FILLFACTOR = 80)
-GO</pre>
+GO
+```
 
 Once these indexes are created we can run a basic query to extract ITEMNAME and CREATETIME with a WHERE clause only looking at a specific ITEMCODE value. 
 
-<pre>SELECT
+sql
+SELECT
  ITEMS.ITEMNAME,
  ITEMS.CREATETIME
 FROM ITEMS
 WHERE ITEMCODE = 1
-GO</pre></p> 
+GO
+```
+</p> 
 
 We should be fine as the nonclustered index, &#8220;IDX_ITEMID&#8221; should be used in an index seek given the WHERE clause on ITEMCODE. However, when we run this query to check the estimated execution plan, we can see we have a lookup occurring.
 
@@ -123,10 +133,13 @@ The lookup is caused by the fact that there is not a covering index to fulfill t
 
 To create a covering index we can do the following
 
-<pre>CREATE NONCLUSTERED INDEX IDX_COVERING_ASC ON ITEMS
+sql
+CREATE NONCLUSTERED INDEX IDX_COVERING_ASC ON ITEMS
 (ITEMCODE,LASTMODIFY,ITEMNAME,CREATETIME)
 WITH (FILLFACTOR=80)
-GO</pre></p> 
+GO
+```
+</p> 
 
 After looking at our execution plan, we should see only the index seek operation being performed
 

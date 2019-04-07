@@ -3,6 +3,7 @@ title: 'Slides from Execution Plans: The Secret to Query Tuning Success at NEW C
 author: Jes Borland
 type: post
 date: 2015-03-28T17:56:00+00:00
+ID: 3316
 url: /index.php/uncategorized/slides-from-execution-plans-the-secret-to-query-tuning-success-at-new-code-camp/
 views:
   - 3010

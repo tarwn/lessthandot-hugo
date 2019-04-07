@@ -3,6 +3,7 @@ title: 'What does “good at C#” mean?'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-06-20T12:15:41+00:00
+ID: 2751
 url: /index.php/itprofessionals/professionaldevelopment/what-does-good-at-c-mean/
 views:
   - 4522

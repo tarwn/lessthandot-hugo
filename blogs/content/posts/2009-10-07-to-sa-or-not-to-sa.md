@@ -3,6 +3,7 @@ title: To SA or not to SA
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-10-07T11:04:00+00:00
+ID: 578
 url: /index.php/datamgmt/dbprogramming/to-sa-or-not-to-sa/
 views:
   - 15450
@@ -37,15 +38,18 @@ I’ll dive into those points starting with leaving SA on the instance at all. F
 
 This is how…
 
-<pre>ALTER LOGIN sa DISABLE;
+sql
+ALTER LOGIN sa DISABLE;
 ALTER LOGIN sa WITH NAME = IAMGOD;
-ALTER LOGIN IAMGOD ENABLE;</pre>
-
+ALTER LOGIN IAMGOD ENABLE;
+```
 The first problem is that SA is an account recognized by the SQL Server team as a systems admin. Now I know in the last few version of SQL Server SA was not utilized. At least from my upgrade experience, I never saw it referenced. That being said it should not be required. I still have it in the back of my head there is no reason not to leave it there “just in case”. That brings us to handling it though.
 
 How many times have you seen this connection string?
 
-<pre>Provider=SQLNCLI10;Server=(local);Database=master;Uid=sa; Pwd=youbloodyidiot;</pre>
+```VB
+Provider=SQLNCLI10;Server=(local);Database=master;Uid=sa; Pwd=youbloodyidiot;
+```
 
 That’s just wrong people! Let me ask this question. Is the application you decided needed SA in the connection strings a DBA? Even the applications I write to get me the one button click maintenance do not connect with SA. And I am the DBA! That alone should tell you the connection is really bad.
 

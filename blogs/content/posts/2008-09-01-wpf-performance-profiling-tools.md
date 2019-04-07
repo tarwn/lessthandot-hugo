@@ -3,6 +3,7 @@ title: WPF Performance Profiling Tools
 author: SQLDenis
 type: post
 date: 2008-09-01T23:12:58+00:00
+ID: 120
 url: /index.php/desktopdev/mstech/wpf-performance-profiling-tools/
 views:
   - 5092

@@ -3,6 +3,7 @@ title: February 2012 Presentations
 author: Jes Borland
 type: post
 date: 2012-02-10T12:34:00+00:00
+ID: 1518
 excerpt: 'The second half of February is going to be busy for this geek grrl! I am presenting three times in one week, then capping that off with a trip to Seattle, WA to see friends and attend SQL Saturday #108.'
 url: /index.php/itprofessionals/professionaldevelopment/february-2012-presentations/
 views:

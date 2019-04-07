@@ -3,6 +3,7 @@ title: SQL Saturday Speakers – Your submissions
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-05-22T09:58:00+00:00
+ID: 1632
 excerpt: 'A topic that came from my recent post, SQL Saturday Speakers – Thought when scheduling, was regarding the topic of speakers that submit abstracts to multiple SQL Saturdays that fall on the same day.  Is that ok for them to do?  If they did submit multip&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-speakers-your-submissions/
 views:

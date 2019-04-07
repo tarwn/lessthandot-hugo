@@ -3,6 +3,7 @@ title: Client-side vs Server-side Validation in Web Applications
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-08-01T10:59:04+00:00
+ID: 2847
 url: /index.php/webdev/client-side-vs-server-side-validation-in-web-applications/
 views:
   - 47310
@@ -24,23 +25,12 @@ When we start out adding validation, we want to make it as easy as possible for 
 
 Here&#8217;s a sample form using ASP.Net and Razor:
 
-<pre><form method="post" action="/default/saveRecord"&gt;
-	Id: @Model.Id <input type="hidden" name="recordId" value="@Model.Id" /&gt;<br /&gt;
-	Content: <input type="text" name="recordValue" value="@Model.RecordValue" /&gt;<br /&gt;
-	<input type="submit" value="Save Changes" /&gt;
-</form&gt;</pre>
-
+```html
+```
 We want to make the text input required, so with a little jQuery Validation, we now have:
 
-<pre><form method="post" action="/default/saveRecord" id="recordForm"&gt;
-	Id: @Model.Id <input type="hidden" name="recordId" value="@Model.Id" /&gt;<br /&gt;
-	Content: <input type="text" name="recordValue" value="@Model.RecordValue" required/&gt;<br /&gt;
-	<input type="submit" value="Save Changes" /&gt;
-</form&gt;
-<script type="text/javascript"&gt;
-	$('#recordForm').validate();
-</script&gt;</pre>
-
+```html
+```
 That was an easy sample to write and more realistic forms aren&#8217;t much more challenging. It stops the user from submitting invalid data and helps them correct it.
 
 But when we look at how well it achieves the purpose, we find it has a lot of gaps:
@@ -61,20 +51,16 @@ On the server, we can perform the same checks we did on the client to ensure the
 
 Client:
 
-<pre><form method="post" action="/default/saveRecord"&gt;
-	@Html.AntiForgeryToken()
-	Id: @Model.Id <input type="hidden" name="recordId" value="@Model.Id" /&gt;<br /&gt;
-	Content: <input type="text" name="recordValue" value="@Model.RecordValue"/&gt;<br /&gt;
-	<input type="submit" value="Save Changes" /&gt;
-</form&gt;</pre>
-
+```html
+```
 Server:
 
-<pre>[HttpPost]
+```C#
+[HttpPost]
 [ValidateAntiForgeryToken]
 public ActionResult SaveRecord(int recordId, string recordValue)
 {
-    var errors = new List<string&gt;();
+    var errors = new List<string>();
     if (!_backendLogic.IsRecordIdValid(recordId))
         errors.Add("The specified record id is not valid");
     if (string.IsNullOrWhiteSpace(recordValue))
@@ -91,8 +77,8 @@ public ActionResult SaveRecord(int recordId, string recordValue)
         var model = new SaveErrorViewModel(recordId, recordValue, errors);
         return View(model);
     }
-}</pre>
-
+}
+```
 So how does this stack up against the client-side method?
 
   * Yes &#8211; It prevents bad values for users with good intent

@@ -3,6 +3,7 @@ title: My Path to the Dark Side part 1 – The Beginning
 author: Alex Ullrich
 type: post
 date: 2008-07-03T09:30:14+00:00
+ID: 61
 url: /index.php/desktopdev/mstech/the-path-to-nhibernate-aamp-tdd-part-1-t/
 views:
   - 6597

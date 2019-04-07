@@ -3,6 +3,7 @@ title: MVVM Validation with KnockoutJS – Don’t put it in the View/HTML
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-03-02T18:22:10+00:00
+ID: 4396
 url: /index.php/webdev/mvvm-validation-with-knockoutjs-dont-put-it-in-the-viewhtml/
 views:
   - 5146
@@ -29,14 +30,17 @@ Here are a couple examples of what I mean when I say &#8220;validation defined i
 
 AngularJS Documentation: <a href="https://docs.angularjs.org/guide/forms" title="AngularJS Documentation / Forms / Custom Validation" target="_blank">https://docs.angularjs.org/guide/forms</a>
 
-<pre><input type="number" ng-model="size" name="size" min="0" max="10" integer /&gt;{{size}}<br /&gt;</pre>
-
+```HTML
+<input type="number" ng-model="size" name="size" min="0" max="10" integer />{{size}}  
+```
 jQuery Validation: <a href="http://jqueryvalidation.org/documentation/" title="jQuery Validation Plugin" target="_blank">http://jqueryvalidation.org/documentation/</a>
 
-<pre><p&gt;
-  <label for="cname"&gt;Name (required, at least 2 characters)</label&gt;
-  <input id="cname" name="name" minlength="2" type="text" required&gt;
-</p&gt;</pre>
+```HTML
+
+  <label for="cname">Name (required, at least 2 characters)</label>
+  <input id="cname" name="name" minlength="2" type="text" required />
+
+```
 
 So what&#8217;s wrong with this approach?
 
@@ -74,7 +78,8 @@ Enter an adapter I will call, for this post, the &#8220;PresentationModel&#8221;
 
 Wrapping around the Model, this adapter defines how a human reads and writes values and defines the contract for how data flows into the Model and how it is surfaced again. Here is an example of what that could look like in knockout.js:
 
-<pre>// -- Model
+```javascript
+// -- Model
 function OrderLineModel(rawDTO){
 	this.name = ko.observable(rawDTO.name || '');
 	this.quantity = ko.observable(rawDTO.quantity);
@@ -86,8 +91,8 @@ function OrderLinePresModel(orderLineModel){
 	this.name = orderLineModel.name.extend({ validate: { type: stringType, min: 1, max: 25, required: true } });
 	this.quantity = orderLineModel.quantity.extend({ validate: { type: integerType, min: 1, max: 500, required: true } });
 	this.price = orderLineModel.price.extend({ validate: { type: currencyType, min: 0, max: 100, required: true } });
-}</pre>
-
+}
+```
 The example is an Order object with a collection of Order Lines that alow a user to free-type a name, quantity, and price which are then used for various sub-total calculations and presumably saved at some point. In the &#8220;PresentationModel&#8221;, I&#8217;ve extended the Model&#8217;s properties with the validation/formatting definitions for each of the values. 
 
 <div id="attachment_4416" style="width: 568px" class="wp-caption aligncenter">
@@ -125,7 +130,8 @@ The validate extender is a computed observable that we use in the PresentationMo
 
 When a new value comes in, it uses the Type to try and parse the value, performs any validations supported by the type, runs custom validations that are defined directly on that field, then writes to the underlying Model&#8217;s property/observable. When an update is made to the Model&#8217;s observable, a read is triggered back up and runs through the read side of the validate extender, formatting it using the Type&#8217;s format method.
 
-<pre>//-- extender definition
+```javascript
+//-- extender definition
 
 ko.extenders.validate = function (target, options) {
 	// ...
@@ -172,13 +178,14 @@ ko.extenders.validate = function (target, options) {
 	});
 	computed.validation = validationProperties;
 	return computed;
-}</pre>
-
+}
+```
 ### Type Definitions
 
 Adding types is then fairly simple, they just need to implement the parse, validate, and error methods:
 
-<pre>var currencyType = {
+```javascript
+var currencyType = {
 	emptyValue: null,
 	format: function(value){
 		if(value == null){
@@ -208,14 +215,14 @@ Adding types is then fairly simple, they just need to implement the parse, valid
 			return failedInput("'" + value + "' is less than the supported minimum of '" + options.min + "'");
 		}
 
-		if(options.max != undefined && value &gt; options.max){
+		if(options.max != undefined &#038;&#038; value > options.max){
 			return failedInput("'" + value + "' is greater than the supported maximum of '" + options.max + "'");
 		}
 
 		return successfulInput(value);		
 	}
-};</pre>
-
+};
+```
 This is a pretty basic example. Starting here, we could easily come back through and pass the field&#8217;s name though for richer error messages, use the format method for the values in the tryValidate error messages, and so on. We could also extend the tryParse method to accept and expand on values like &#8220;$100K&#8221;, converting something that would be natural to the user to a value that is natural to the inner Model (and then doing the reverse in the format method). 
 
 ## What we gain

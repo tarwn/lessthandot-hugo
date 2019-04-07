@@ -3,6 +3,7 @@ title: SQL Server Code Name “Denali” CTP3 Product Guide available for downlo
 author: SQLDenis
 type: post
 date: 2011-08-10T09:28:00+00:00
+ID: 1294
 excerpt: |
   This is pretty cool and it is all in one place, the download is 456.0 MB
   

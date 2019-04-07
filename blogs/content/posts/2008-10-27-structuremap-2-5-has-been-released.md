@@ -3,6 +3,7 @@ title: Dependency Injection Tool StructureMap 2.5 Has Been Released
 author: SQLDenis
 type: post
 date: 2008-10-27T11:08:47+00:00
+ID: 183
 url: /index.php/desktopdev/mstech/structuremap-2-5-has-been-released/
 views:
   - 5647

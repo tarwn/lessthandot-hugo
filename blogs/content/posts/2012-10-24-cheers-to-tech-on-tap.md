@@ -3,6 +3,7 @@ title: Cheers to Tech on Tap v1.3 PowerShell!
 author: Jes Borland
 type: post
 date: 2012-10-24T23:06:00+00:00
+ID: 1770
 excerpt: Tech on Tap v1.3 PowerShell was held on October 13. This was our third and final event for the year, and it was every bit as great as the first two.
 url: /index.php/itprofessionals/professionaldevelopment/cheers-to-tech-on-tap/
 views:

@@ -3,6 +3,7 @@ title: Bing, Google and Yahoo! announce Schema.org
 author: SQLDenis
 type: post
 date: 2011-06-02T15:32:00+00:00
+ID: 1200
 excerpt: |
   Bing, Google and Yahoo! have announced Schema.org
   
@@ -46,53 +47,55 @@ An example
 
 Orginal HTML
 
-<pre>Jane Doe
-<img src="janedoe.jpg" /&gt;
+```html
+Jane Doe
+<img src="janedoe.jpg" />
 
 Professor
 20341 Whitworth Institute
 405 Whitworth
 Seattle WA 98052
 (425) 123-4567
-<a href="mailto:jane-doe@xyz.edu"&gt;jane-doe@illinois.edu</a&gt;
+<a href="mailto:jane-doe@xyz.edu">jane-doe@illinois.edu</a>
 
 Jane's home page:
-<a href="www.janedoe.com"&gt;janedoe.com</a&gt;
+<a href="www.janedoe.com">janedoe.com</a>
 
 Graduate students:
-<a href="www.xyz.edu/students/alicejones.html"&gt;Alice Jones</a&gt;
-<a href="www.xyz.edu/students/bobsmith.html"&gt;Bob Smith</a&gt;</pre>
-
+<a href="www.xyz.edu/students/alicejones.html">Alice Jones</a>
+<a href="www.xyz.edu/students/bobsmith.html">Bob Smith</a>
+```
 With MicroData
 
-<pre><div itemscope itemtype="http://schema.org/Person"&gt;
-  <span itemprop="name"&gt;Jane Doe</span&gt;
-  <img src="janedoe.jpg" itemprop="image" /&gt;
+```html
+<div itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">Jane Doe</span>
+  <img src="janedoe.jpg" itemprop="image" />
 
-  <span itemprop="jobTitle"&gt;Professor</span&gt;
-  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"&gt;
-    <span itemprop="streetAddress"&gt;
+  <span itemprop="jobTitle">Professor</span>
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">
       20341 Whitworth Institute
       405 N. Whitworth
-    </span&gt;
-    <span itemprop="addressLocality"&gt;Seattle</span&gt;,
-    <span itemprop="addressRegion"&gt;WA</span&gt;
-    <span itemprop="postalCode"&gt;98052</span&gt;
-  </div&gt;
-  <span itemprop="telephone"&gt;(425) 123-4567</span&gt;
-  <a href="mailto:jane-doe@xyz.edu" itemprop="email"&gt;
-    jane-doe@xyz.edu</a&gt;
+    </span>
+    <span itemprop="addressLocality">Seattle</span>,
+    <span itemprop="addressRegion">WA</span>
+    <span itemprop="postalCode">98052</span>
+  </div>
+  <span itemprop="telephone">(425) 123-4567</span>
+  <a href="mailto:jane-doe@xyz.edu" itemprop="email">
+    jane-doe@xyz.edu</a>
 
   Jane's home page:
-  <a href="www.janedoe.com" itemprop="url"&gt;janedoe.com</a&gt;
+  <a href="www.janedoe.com" itemprop="url">janedoe.com</a>
 
   Graduate students:
-  <a href="www.xyz.edu/students/alicejones.html" itemprop="colleagues"&gt;
-    Alice Jones</a&gt;
-  <a href="www.xyz.edu/students/bobsmith.html" itemprop="colleagues"&gt;
-    Bob Smith</a&gt;
-</div&gt;</pre>
-
+  <a href="www.xyz.edu/students/alicejones.html" itemprop="colleagues">
+    Alice Jones</a>
+  <a href="www.xyz.edu/students/bobsmith.html" itemprop="colleagues">
+    Bob Smith</a>
+</div>
+```
 What do you think, will you start implementing this?
 
  [1]: http://schema.org/

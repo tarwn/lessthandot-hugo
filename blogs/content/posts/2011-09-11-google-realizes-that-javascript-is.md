@@ -3,6 +3,7 @@ title: Google realizes that JavaScript is a dead end programming language, to be
 author: SQLDenis
 type: post
 date: 2011-09-11T20:57:00+00:00
+ID: 1313
 excerpt: |
   All the way back in 2010 Google realized that JavaScript is a dead end programming language.
   

@@ -3,6 +3,7 @@ title: Always Double Check Your Work
 author: chaospandion
 type: post
 date: 2010-06-29T19:32:13+00:00
+ID: 831
 url: /index.php/desktopdev/mstech/always-double-check-your-work/
 views:
   - 9316
@@ -38,7 +39,8 @@ _
 
 **Code**
 
-<pre>private Expression<IsWordChar> CreateIsWordCharExpression()
+```CSharp
+private Expression<IsWordChar> CreateIsWordCharExpression()
 {
     var e = Expression.Parameter(typeof(int), "e");
     var c = Expression.Variable(typeof(char), "c");
@@ -83,4 +85,5 @@ _
         new[] { e }
     );
     return lambda;
-}</pre>
+}
+```

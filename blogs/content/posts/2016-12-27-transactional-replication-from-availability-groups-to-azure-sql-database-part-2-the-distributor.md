@@ -3,6 +3,7 @@ title: 'Transactional Replication from Availability Groups to Azure SQL Database
 author: Jes Borland
 type: post
 date: 2016-12-27T15:00:42+00:00
+ID: 4906
 url: /index.php/uncategorized/transactional-replication-from-availability-groups-to-azure-sql-database-part-2-the-distributor/
 views:
   - 4078
@@ -14,11 +15,11 @@ categories:
 ---
 This is part 2 of a 5-part series.
 
-  * <a href="http://blogs.ltd.local/?p=4896" target="_blank">Part 1 &#8211; Planning</a>
-  * <a href="http://blogs.ltd.local/?p=4906" target="_blank">Part 2 &#8211; The Distributor</a>
-  * <a href="http://blogs.ltd.local/?p=4923" target="_blank">Part 3 &#8211; The Publisher</a>
-  * <a href="http://blogs.ltd.local/?p=4945" target="_blank">Part 4 &#8211; The Subscriber</a>
-  * <a href="http://blogs.ltd.local/?p=4960" target="_blank">Part 5 &#8211; Testing</a>
+  * <a href="/?p=4896" target="_blank">Part 1 &#8211; Planning</a>
+  * <a href="/?p=4906" target="_blank">Part 2 &#8211; The Distributor</a>
+  * <a href="/?p=4923" target="_blank">Part 3 &#8211; The Publisher</a>
+  * <a href="/?p=4945" target="_blank">Part 4 &#8211; The Subscriber</a>
+  * <a href="/?p=4960" target="_blank">Part 5 &#8211; Testing</a>
 
 &nbsp;
 

@@ -3,6 +3,7 @@ title: Vulnerabilities in Microsoft SQL Server Could Allow Elevation of Privileg
 author: SQLDenis
 type: post
 date: 2008-07-08T19:48:35+00:00
+ID: 81
 url: /index.php/datamgmt/datadesign/vulnerabilities-in-microsoft-sql-server/
 views:
   - 3959

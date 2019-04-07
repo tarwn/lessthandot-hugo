@@ -3,6 +3,7 @@ title: 'PetaPoco: Mapping related objects'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-05-07T10:16:00+00:00
+ID: 1620
 excerpt: In the prior PetaPoco post, I started to dig into many-to-one relationships a little. Chrissie followed up with yet more mapping behavior in his latest Simple.Data post, so I thought I would cover it in a bit more detail.
 url: /index.php/desktopdev/mstech/csharp/petapoco-mapping-related-objects/
 views:
@@ -34,9 +35,10 @@ _Note: I am using the same tables and insert statements I used in the prior post
 
 As we saw in the prior post, using a pair of decorated objects makes it pretty easy to map a JOIN to objects:
 
-<pre>public void SelectUsingDecoratedClasses() {
+```csharp
+public void SelectUsingDecoratedClasses() {
 	using (var db = GetDatabase()) {
-		var results = db.Query<DecoratedPerson, DecoratedAddress&gt;(
+		var results = db.Query<DecoratedPerson, DecoratedAddress>(
 					@"SELECT Person.*, Address.* 
 					  FROM Person 
 						INNER JOIN Address ON Person.AddressId = Address.Id 
@@ -71,16 +73,17 @@ public class DecoratedAddress {
 	public int Id { get; set; }
 	public string Street { get; set; }
 	public string HouseNumber { get; set; }
-}</pre>
-
+}
+```
 ### Defining Mappings
 
 While the previous example handled the mapping automatically and assigned the Address instance to the appropriate attribute in the Person, we also have the ability to define the mapping manually. 
 
-<pre>public void SelectUsingMappingAndPOCO() {
+```csharp
+public void SelectUsingMappingAndPOCO() {
 	using (var db = GetDatabase()) {
-		var results = db.Query<Person, Address, Person&gt;(
-					(p, a) =&gt; { p.Address = a; return p; },
+		var results = db.Query<Person, Address, Person>(
+					(p, a) => { p.Address = a; return p; },
 					@"SELECT Person.*, Address.* 
 						FROM Person 
 						INNER JOIN Address ON Person.AddressId = Address.Id 
@@ -91,17 +94,18 @@ While the previous example handled the mapping automatically and assigned the Ad
 			Console.WriteLine("Address: {0} {1}", person.Address.Street, person.Address.HouseNumber);
 		}
 	}
-}</pre>
-
+}
+```
 While this example achieves the same outcome as the prior one, the ability to provide our own mapping gives us some flexibility to add more complex logic during the mapping process, such as calculating additional field values or adding change tracking.
 
 ### Dynamics
 
 Of course PetaPoco also handles dynamics, however this is limited to outputting a single object to represent the results. This works well if we wanted to present a report view of the data and didn&#8217;t have any column names that repeat:
 
-<pre>public void SelectWithDynamics() {
+```csharp
+public void SelectWithDynamics() {
 	using (var db = GetDatabase()) {
-		var results = db.Query<dynamic&gt;(
+		var results = db.Query<dynamic>(
 					@"SELECT Person.*, Address.Street, Address.HouseNumber 
 						FROM Person 
 						INNER JOIN Address ON Person.AddressId = Address.Id 
@@ -112,23 +116,25 @@ Of course PetaPoco also handles dynamics, however this is limited to outputting 
 			Console.WriteLine("Address: {0} {1}", person.Street, person.HouseNumber);
 		}
 	}
-}</pre>
-
+}
+```
 Instead of a dynamic, we could just as easily create a POCO for this report view, which would then be easy to offer as a service DTO or serializable object. 
 
 ### One-to-Many
 
 Switching directions for a moment, let&#8217;s instead query for an address and all of it&#8217;s associated persons. First we&#8217;ll need an updated POCO:
 
-<pre>public class AddressWithPeople : Address { 
-	public List<Person&gt; Persons { get; set; }
-}</pre>
-
+```csharp
+public class AddressWithPeople : Address { 
+	public List<Person> Persons { get; set; }
+}
+```
 Then with a slightly more complex mapping method, we can map a one-to-many to our new AddressWithPeople and existing Person POCOs:
 
-<pre>public void SelectOneToMany() {
+```csharp
+public void SelectOneToMany() {
 	using (var db = GetDatabase()) {
-		var results = db.Query<AddressWithPeople, Person, AddressWithPeople&gt;(
+		var results = db.Query<AddressWithPeople, Person, AddressWithPeople>(
 					new AddressToPersonRelator().MapIt,
 					@"SELECT Address.*, Person.*
 						FROM Person 
@@ -141,11 +147,12 @@ Then with a slightly more complex mapping method, we can map a one-to-many to ou
 				Console.WriteLine("tPerson: {0} {1}", person.LastName, person.FirstName);
 		}
 	}
-}</pre>
-
+}
+```
 Of course, the magic in this case is the tricky part. In order to map the objects from the right side of the result set to the columns from my address on the left, I had to write a custom mapper that would keep track of the Address and add Person records to it while it remained the same. 
 
-<pre>public class AddressToPersonRelator {
+```csharp
+public class AddressToPersonRelator {
 	public AddressWithPeople current;
 	
 	public AddressWithPeople MapIt(AddressWithPeople a, Person p) {
@@ -159,12 +166,12 @@ Of course, the magic in this case is the tricky part. In order to map the object
 
 		var prev = current;
 		current = a;
-		current.Persons = new List<Person&gt;() { p };
+		current.Persons = new List<Person>() { p };
 
 		return prev;
 	}
-}</pre>
-
+}
+```
 Even though I mostly copied this code from the official blogs, it was still more work than I would have liked just to map the records. However it wouldn&#8217;t be hard to convert this method to use generics and accept arguments for ID comparison and adding child record to the parent&#8217;s collection. Another option would be to use the [PetaPoco.RelationExtensions nuget][4] package, which offers simplified methods for one-to-many and many-to-one mappings.
 
 ## Conclusion

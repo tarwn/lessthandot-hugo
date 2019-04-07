@@ -3,6 +3,7 @@ title: Successful Consulting Series – Technical Aptitude
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-30T12:53:00+00:00
+ID: 1814
 excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, “Successful Consulting&hellip;'
 url: /index.php/itprofessionals/ethicsit/successful-consulting-series-technical-aptitude/
 views:

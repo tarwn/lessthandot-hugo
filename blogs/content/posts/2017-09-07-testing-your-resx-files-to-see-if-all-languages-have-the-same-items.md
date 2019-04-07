@@ -3,6 +3,7 @@ title: Testing your resx files to see if all languages have the same items.
 author: Christiaan Baes (chrissie1)
 type: post
 date: 2017-09-07T12:48:58+00:00
+ID: 8800
 url: /index.php/uncategorized/testing-your-resx-files-to-see-if-all-languages-have-the-same-items/
 rp4wp_auto_linked:
   - 1
@@ -22,7 +23,8 @@ And on [Stackoverflow][1] the user [TiltonJH][2] was so kind to provide me with 
 
 I translated it to VB.Net code and changed a small thing (the resourcemanager didn&#8217;t find the resourcesets but the resourcemaager from the type did, so I pass that in. 
 
-<pre>Imports System.Globalization
+```vbnet
+Imports System.Globalization
 Imports System.Reflection
 Imports System.Resources
 Imports System.Text
@@ -39,7 +41,7 @@ Namespace Resources
             Dim neutralLanguage = ExtractNeutralLanguage(cultureResourceDictionaries, type)
             Dim missingEntries = GetMissing(cultureResourceDictionaries, neutralLanguage)
             Dim dispensableEntries = GetDispensable(cultureResourceDictionaries, neutralLanguage)
-            If (emptyEntries.Count &gt; 0 OrElse missingEntries.Count &gt; 0 OrElse dispensableEntries.Count &gt; 0) Then
+            If (emptyEntries.Count > 0 OrElse missingEntries.Count > 0 OrElse dispensableEntries.Count > 0) Then
                 Dim message = New StringBuilder()
                 message.AppendFormat("Found resx errors in ""{0}"":", type)
                 message.AppendLine()
@@ -52,7 +54,7 @@ Namespace Resources
         End Sub
 
         Private Shared Sub Append(message As StringBuilder, entries As Dictionary(Of String, List(Of String)), headline As String, description As String)
-            If entries.Count &gt; 0 Then
+            If entries.Count > 0 Then
                 message.AppendLine(headline)
                 message.AppendLine(New String("=", headline.Length))
                 message.Append("(")
@@ -61,7 +63,7 @@ Namespace Resources
                 For Each pair In entries
                     Dim languageName = pair.Key
                     If String.IsNullOrEmpty(languageName) Then
-                        languageName = "<neutral language&gt;"
+                        languageName = "<neutral language>"
                     End If
                     Dim line = String.Format("  Language: {0}  ", languageName)
                     message.AppendLine(line)
@@ -86,7 +88,7 @@ Namespace Resources
             Dim assemblyResxCultures = New HashSet(Of CultureInfo)()
             assemblyResxCultures.Add(CultureInfo.InvariantCulture)
             Dim names = assembly.GetManifestResourceNames()
-            If names IsNot Nothing AndAlso names.Length &gt; 0 Then
+            If names IsNot Nothing AndAlso names.Length > 0 Then
                 Dim allCultures = CultureInfo.GetCultures(CultureTypes.AllCultures)
                 Const resourcesEnding As String = ".resources"
                 For i = 0 To names.Length - 1
@@ -153,7 +155,7 @@ Namespace Resources
                         list.Add(key)
                     End If
                 Next
-                If (list.Count &gt; 0) Then
+                If (list.Count > 0) Then
                     dispensable.Add(pair.Key, list)
                 End If
             Next
@@ -174,7 +176,7 @@ Namespace Resources
                         list.Add(entrie.Key)
                     End If
                 Next
-                If (list.Count &gt; 0) Then
+                If (list.Count > 0) Then
                     empty.Add(pair.Key, list)
                 End If
             Next
@@ -191,29 +193,30 @@ Namespace Resources
                         list.Add(key)
                     End If
                 Next
-                If list.Count &gt; 0 Then missing.Add(pair.Key, list)
+                If list.Count > 0 Then missing.Add(pair.Key, list)
             Next
             Return missing
         End Function
 
     End Class
-End Namespace</pre>
-
+End Namespace
+```
 ANd now my test looks like this. 
 
-<pre>Imports NUnit.Framework                 
+```vbnet
+Imports NUnit.Framework                 
 
 Namespace Resources
     Public Class TestReportResource
 
-        <Test&gt;
+        <Test>
         Public Sub TestResx
             ResourceTester.TestResxForInconsistencies(Gettype(BI.My.Resources.Report), BI.My.Resources.Report.ResourceManager)
         End Sub
         
     End Class
-End NameSpace</pre>
-
+End NameSpace
+```
 And when it failes it looks like this. 
 
 <img src="/wp-content/uploads/2017/09/resx.png" alt="resx" width="850" height="400" class="alignnone size-full wp-image-8801" srcset="/wp-content/uploads/2017/09/resx.png 850w, /wp-content/uploads/2017/09/resx-300x141.png 300w, /wp-content/uploads/2017/09/resx-768x361.png 768w" sizes="(max-width: 850px) 100vw, 850px" />

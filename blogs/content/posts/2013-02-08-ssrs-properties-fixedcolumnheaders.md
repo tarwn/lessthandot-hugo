@@ -3,6 +3,7 @@ title: SSRS Properties – FixedColumnHeaders
 author: Jes Borland
 type: post
 date: 2013-02-08T11:44:00+00:00
+ID: 1979
 excerpt: The purpose of this property is to show column headers as you scroll down a page to view data.
 url: /index.php/datamgmt/ssrs/ssrs-properties-fixedcolumnheaders/
 views:

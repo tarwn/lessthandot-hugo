@@ -3,6 +3,7 @@ title: SQL Server Case/When Data Type problems
 author: George Mastros (gmmastros)
 type: post
 date: 2008-12-04T19:48:38+00:00
+ID: 236
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sql-server-case-when-data-type-problems/
 views:
   - 26437
@@ -22,28 +23,30 @@ This article describes data type precedence that sql server uses:
 
 Here is some code that highlights this issue:
 
-<pre>Declare @Data VarChar(20)
+sql
+Declare @Data VarChar(20)
 
 Set @Data = ''
 
 Select Case When @Data Is NULL Then NULL
             When @Data = ''    Then 'Data is empty'
             When 0=1           Then 1
-            End</pre>
-
+            End
+```
 Since @Data = &#8221;, the code should return &#8216;Data is empty&#8217;. In this case, it doesn&#8217;t because the 0=1 branch causes SQL Server to &#8216;attempt&#8217; to convert each return value to an integer, and fails. 
 
 When mixing numbers and strings, SQL Server prefers (based on data type precedence) to convert data to numbers. This is a little unfortunately because all number data can be converted to a string, but not all strings can be converted to a number. 
 
 The fix for this particular problem is to convert everything to a string. Basically, if you want even just one branch of a Case/When statement to return a string, then you should make sure all branches return a string.
 
-<pre>Declare @Data VarChar(20)
+sql
+Declare @Data VarChar(20)
 
 Set @Data = ''
 
 Select Case When @Data Is NULL Then NULL
             When @Data = ''    Then 'Data is empty'
             When 0=1           Then Convert(VarChar(10), 1)
-            End</pre>
-
+            End
+```
 Now, each branch returns a string (or NULL, which doesn&#8217;t matter), so there will not be any problems with running this code.

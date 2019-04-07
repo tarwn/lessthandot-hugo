@@ -3,6 +3,7 @@ title: SQL Server MVP Deep Dives a book written by SQL Server MVPs supporting a 
 author: SQLDenis
 type: post
 date: 2009-09-25T11:32:22+00:00
+ID: 567
 url: /index.php/datamgmt/datadesign/sql-server-mvp-deep-dives-a-book-written/
 views:
   - 21020
@@ -177,5 +178,5 @@ All in all I think this book is good for any SQL Server developer/administrator.
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://www.amazon.com/gp/product/1935182048?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1935182048
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

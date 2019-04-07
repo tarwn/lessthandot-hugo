@@ -3,6 +3,7 @@ title: How to move datafiles to a new drive in SQL Server
 author: SQLDenis
 type: post
 date: 2010-12-17T15:18:32+00:00
+ID: 978
 excerpt: |
   For one of the databases that I have to manage we were running out of space, so we got a shiny new 10.9 TB sized drive.  
   
@@ -31,7 +32,8 @@ I was asked to move some files used by one database to this new drive. I decided
 
 First create this test database with 3 data files and 1 log file, the data files will be in the C:DB_Files directory
 
-<pre>USE master
+sql
+USE master
 GO
 
 CREATE DATABASE [TestMove] ON  PRIMARY 
@@ -42,11 +44,13 @@ CREATE DATABASE [TestMove] ON  PRIMARY
 ( NAME = N'TestMove_log', 
 FILENAME = N'C:MSSQLDATATestMove_log.ldf' ,
  SIZE = 1024KB , FILEGROWTH = 10%)
-GO</pre>
+GO
+```
 
 Now just create a test table, insert one row and do a simple select.
 
-<pre>USE TestMove
+sql
+USE TestMove
 GO
 
 CREATE TABLE Test(id INT)
@@ -54,13 +58,15 @@ GO
 INSERT Test VALUES(1)
 GO
 
-SELECT * FROM Test</pre>
+SELECT * FROM Test
+```
 
 Now instead of having the data files in the C:DB\_Files we want to move them to the D:DB\_Files directory. You can use ALTER DATABASE&#8230;MODIFY FILE to do that, you just specify the new file locations, just make sure that the directory exists.
 
 The following code will change the location of the data files
 
-<pre>USE master;
+sql
+USE master;
 GO
 ALTER DATABASE TestMove
 MODIFY FILE
@@ -88,7 +94,8 @@ MODIFY FILE
     NAME = TestMove3,
     FILENAME = N'D:DB_FilesTestMove3.ndf'
 );
-GO</pre>
+GO
+```
 
 You will see the following message
 
@@ -108,8 +115,10 @@ Now, the first thing you want to do is stop SQL Server or take the database offl
 
 To take the database offline, you can run this
 
-<pre>ALTER DATABASE TestMove
-SET OFFLINE;</pre>
+sql
+ALTER DATABASE TestMove
+SET OFFLINE;
+```
 
 If you do not stop SQL Server or take the database offline, you won&#8217;t be able to move the files and you will get a message like the one below
   
@@ -133,15 +142,18 @@ Start SQL Server again or make the database online again.
 
 To set the database online, run this
 
-<pre>ALTER DATABASE TestMove
-SET ONLINE;</pre>
+sql
+ALTER DATABASE TestMove
+SET ONLINE;
+```
 
 After SQL Server is up and running. run the following query.
 
-<pre>SELECT name, physical_name AS CurrentLocation, state_desc
+sql
+SELECT name, physical_name AS CurrentLocation, state_desc
 FROM sys.master_files
-WHERE database_id = DB_ID(N'TestMove');</pre>
-
+WHERE database_id = DB_ID(N'TestMove');
+```
 <div class="tables">
   <p>
     You should see something like the following
@@ -225,13 +237,15 @@ WHERE database_id = DB_ID(N'TestMove');</pre>
 
 Finally, just run this simple query again to verify that you didn&#8217;t corrupt anything
 
-<pre>USE TestMove
+sql
+USE TestMove
 GO
 
-SELECT * FROM Test</pre>
+SELECT * FROM Test
+```
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://wiki.ltd.local/index.php/Using_the_Command_Line_to_manage_SQL_Server_services
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

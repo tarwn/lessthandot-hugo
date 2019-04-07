@@ -3,6 +3,7 @@ title: Checking for NULL values in all columns that allow NULLS in all the table
 author: SQLDenis
 type: post
 date: 2010-06-16T14:39:00+00:00
+ID: 822
 url: /index.php/datamgmt/dbprogramming/checking-for-null-values-in-all-columns/
 views:
   - 21641
@@ -23,7 +24,8 @@ This post is based on a question I answered earlier today, someone wanted to che
 
 The Stored Procedure below is based on the code that [George Mastros][1] wrote for the following blog post: [Search all columns in all the tables in a database for a specific value][2]
 
-<pre>CREATE PROCEDURE FindColumnsWithNulls
+sql
+CREATE PROCEDURE FindColumnsWithNulls
 AS
 SET NOCOUNT ON
  
@@ -92,11 +94,13 @@ WHILE @i <= @MAX
 --Report to the user how many columns have NULLS
 SELECT  SchemaName,TableName, ColumnName,DataType
 FROM    @Temp
-WHERE   DataFound = 1</pre>
-
+WHERE   DataFound = 1
+```
 You can call the code like this
 
-<pre>exec FindColumnsWithNulls</pre>
+sql
+exec FindColumnsWithNulls
+```
 
 You will get a &#8216;report&#8217; that lists SchemaName, TableName, ColumnName and DataType
 
@@ -106,5 +110,5 @@ This proc does not tell you how many NULLS you have in a column, it will just re
 
  [1]: /index.php/All/?disp=authdir&author=10
  [2]: /index.php/DataMgmt/DataDesign/the-ten-most-asked-sql-server-questions--1#2
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

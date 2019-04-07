@@ -3,6 +3,7 @@ title: Understanding SQL Server 2000 Pivot with Aggregates
 author: George Mastros (gmmastros)
 type: post
 date: 2011-03-08T13:45:00+00:00
+ID: 1074
 excerpt: "This month's T-SQL Tuesday is being hosted by our very own, Jes Borland (Twitter | Blog).  Not only is she hosting this month but she is making it possible for LessThanDot's first T-SQL Tuesday event.  The topic that is brought to us is to discuss with&hellip;"
 url: /index.php/datamgmt/datadesign/understanding-sql-server-2000-pivot/
 views:
@@ -41,7 +42,8 @@ The data:
 3           ShoeSize             9
 
 4           Name                 Greg
-4           ShoeSize             9</pre>
+4           ShoeSize             9
+</pre>
 
 The data is relatively simple, but is meant to demonstrate the concept. The goal of this blog is to explain how we can pivot the data shown above in to the following output.
 
@@ -50,13 +52,15 @@ The data is relatively simple, but is meant to demonstrate the concept. The goal
 1           George               9.5
 2           Bill                 10.5
 3           John                 9
-4           Greg                 9</pre>
+4           Greg                 9
+</pre>
 
 As you can see, the original data had the name and shoe size for each person on separate rows. The output has just a single row per person but with additional columns for the data.
 
 Setting up the code&#8230;.
 
-<pre>Create Table #Temp(Id Int, Name VarChar(20), Value VarChar(20))
+sql
+Create Table #Temp(Id Int, Name VarChar(20), Value VarChar(20))
 
 Insert Into #Temp Values(1, 'Name','George')
 Insert Into #Temp Values(1, 'ShoeSize','9.5')
@@ -68,19 +72,24 @@ Insert Into #Temp Values(3, 'Name','John')
 Insert Into #Temp Values(3, 'ShoeSize','9')
 
 Insert Into #Temp Values(4, 'Name','Greg')
-Insert Into #Temp Values(4, 'ShoeSize','9')</pre>
+Insert Into #Temp Values(4, 'ShoeSize','9')
+```
 
 Our first query will simply show the data.
 
-<pre>Select *
-From   #Temp</pre>
+sql
+Select *
+From   #Temp
+```
 
 Simple. We see all the data in the table. For our next step, let&#8217;s set up the output structure. We know we want to see the ID column and the Value column twice, once for the person&#8217;s name and again for the shoe size. 
 
-<pre>Select Id,
+sql
+Select Id,
        Value,
        Value
-From   #Temp</pre>
+From   #Temp
+```
 
 <pre>Id          Value                Value
 ----------- -------------------- --------------------
@@ -95,10 +104,12 @@ From   #Temp</pre>
 
 This query is simply duplicating the data in two columns. Ultimately, we will want the second column to show the person&#8217;s name, and the third column to show the shoe size. For the next step, let&#8217;s show just the name in the second column and the shoe size in the third. We will do this using a case expression:
 
-<pre>Select Id,
+sql
+Select Id,
        Case When Name = 'Name' Then Value End,
        Case When Name = 'ShoeSize' Then Value End
-From   #Temp</pre>
+From   #Temp
+```
 
 <pre>Id                               
 ----------- -------------------- --------------------
@@ -113,10 +124,12 @@ From   #Temp</pre>
 
 Take a look at the case expression. Notice that there is no ELSE clause. Without an ELSE, the CASE expression will return NULL. This is extremely important for our end result. However, it&#8217;s important to realize that the second column has the person&#8217;s name and NULL, and the third column has shoe size and null. Next we will introduce column aliases.
 
-<pre>Select Id,
+sql
+Select Id,
        Case When Name = 'Name' Then Value End As Name,
        Case When Name = 'ShoeSize' Then Value End As ShoeSize
-From   #Temp</pre>
+From   #Temp
+```
 
 <pre>Id          Name                 ShoeSize
 ----------- -------------------- --------------------
@@ -131,18 +144,21 @@ From   #Temp</pre>
 
 Nothing fancy here. Just the column names. We still have NULL&#8217;s in our data that we will want to eliminate. Which leads us to our next step, and the most important part, too. When we use aggregates, it&#8217;s important to realize that they ignore NULL&#8217;s in the data. For example, if we have 2 rows with &#8220;George&#8221; in one row and NULL in the other row, Max(Column) will ignore the NULL and return George. We can use that to our advantage here.
 
-<pre>Select Id,
+sql
+Select Id,
        Min(Case When Name = 'Name' Then Value End) As Name,
        Min(Case When Name = 'ShoeSize' Then Value End) As ShoeSize
 From   #Temp
-Group By Id</pre>
+Group By Id
+```
 
 <pre>Id          Name                 ShoeSize
 ----------- -------------------- --------------------
 1           George               9.5
 2           Bill                 10.5
 3           John                 9
-4           Greg                 9</pre>
+4           Greg                 9
+</pre>
 
 As you can see, we finally got the results we wanted, effectively pivoting the data using code that will comfortably run in SQL2000 (and many other databases, too).
 

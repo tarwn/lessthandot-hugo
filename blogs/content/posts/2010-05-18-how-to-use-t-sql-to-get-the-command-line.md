@@ -3,6 +3,7 @@ title: How to use T-SQL to get the command line startup parameters that were use
 author: SQLDenis
 type: post
 date: 2010-05-18T15:04:07+00:00
+ID: 792
 url: /index.php/datamgmt/datadesign/how-to-use-t-sql-to-get-the-command-line/
 views:
   - 6592
@@ -51,7 +52,9 @@ More info about how to use sp_readerrorlog is available on our wiki here: [Read 
 
 To search the current error log we can do this
 
-<pre>EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters'</pre>
+sql
+EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters'
+```
 
 Here is the output
   
@@ -59,7 +62,9 @@ Here is the output
 
 You can also use 2 search arguments like this
 
-<pre>EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/c'</pre>
+sql
+EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/c'
+```
 
 Output is the same
   
@@ -89,7 +94,9 @@ The SQL Server (MSSQLSERVER) service was started successfully.</pre>
 
 Now let&#8217;s run the same stored procedure from before
 
-<pre>EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters'</pre>
+sql
+EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters'
+```
 
 And here is the output
   
@@ -99,11 +106,15 @@ Now you can also search for /c or /g and the result is the same as before
   
 Search for /c
 
-<pre>EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/c'</pre>
+sql
+EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/c'
+```
 
 Search for /g
 
-<pre>EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/g'</pre>
+sql
+EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/g'
+```
 
 So there you have it EXEC sp_readerrorlog 0, 1, &#8216;Command Line Startup Parameters&#8217; is a quick way to check how SQL Server was started without looking through your error log
 
@@ -111,5 +122,5 @@ So there you have it EXEC sp_readerrorlog 0, 1, &#8216;Command Line Startup Para
 
  [1]: http://wiki.ltd.local/index.php/Using_the_Command_Line_to_manage_SQL_Server_services
  [2]: http://wiki.ltd.local/index.php/Read_the_error_log_with_T-SQL
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

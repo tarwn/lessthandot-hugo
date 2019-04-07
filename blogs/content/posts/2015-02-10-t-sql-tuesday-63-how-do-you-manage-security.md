@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #63: How do you manage security'
 author: Koen Verbeeck
 type: post
 date: 2015-02-10T08:11:04+00:00
+ID: 3165
 url: /index.php/datamgmt/ssis/t-sql-tuesday-63-how-do-you-manage-security/
 views:
   - 4999

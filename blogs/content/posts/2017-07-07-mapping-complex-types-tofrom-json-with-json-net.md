@@ -3,6 +3,7 @@ title: Mapping Complex types to/from JSON with JSON.Net
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-07-07T11:54:10+00:00
+ID: 8680
 url: /index.php/webdev/serverprogramming/aspnet/mapping-complex-types-tofrom-json-with-json-net/
 views:
   - 6901
@@ -32,21 +33,24 @@ I want a strongly typed Identity object in my API backend that transparently con
 
 This is what my ASP.Net MVC Method looks like:
 
-<pre>[HttpGet()]
-public async Task<List<ApplicationDTO&gt;&gt; GetAllAsync()
+```csharp
+[HttpGet()]
+public async Task<List<ApplicationDTO>> GetAllAsync()
 {
 	return await _databaseStore.Applications.GetAllAsync();
-}</pre>
-
+}
+```
 And this is what we see over the wire:
 
-<pre>[
+```javascript
+[
   {"id":2, "organizationId":1, "name":"Fictitious Co, LLC Application"}
-]</pre>
-
+]
+```
 Here is the definition of the ApplicationDTO object:
 
-<pre>public class ApplicationDTO
+```csharp
+public class ApplicationDTO
 {   
     [Obsolete("Serialization use only", true)]
     public ApplicationDTO() { }
@@ -63,11 +67,12 @@ Here is the definition of the ApplicationDTO object:
     public OrganizationId OrganizationId { get; set; }
         
     public string Name { get; set; }
-}</pre>
-
+}
+```
 Here is the definition of the OrganizationId Identity:
 
-<pre>public class OrganizationId : IIdentity<int&gt;
+```csharp
+public class OrganizationId : IIdentity<int>
 {   
 	[Obsolete("Serialization use only", true)]
 	public OrganizationId() { }
@@ -78,19 +83,20 @@ Here is the definition of the OrganizationId Identity:
 	}
 	 
 	public int RawValue { get; set; }
-}</pre>
-
+}
+```
 These are both generated code, with some of the extras left out (potentially a future post).
 
 ## Implementing a JSON.Net Mapper
 
 JSON.Net supports custom JsonConverter implementations that will let us transparently convert between IIdentity<int> objects in C# and int values JSON:
 
-<pre>public class IdentityJsonConverter<T&gt; : JsonConverter
+```csharp
+public class IdentityJsonConverter<T> : JsonConverter
 {
     public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
     {
-        writer.WriteValue(((IIdentity<T&gt;)value).RawValue);
+        writer.WriteValue(((IIdentity<T>)value).RawValue);
     }
 
     public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
@@ -109,10 +115,10 @@ JSON.Net supports custom JsonConverter implementations that will let us transpar
 
     public override bool CanConvert(Type objectType)
     {
-        return typeof(IIdentity<T&gt;).IsAssignableFrom(objectType);
+        return typeof(IIdentity<T>).IsAssignableFrom(objectType);
     }
-}</pre>
-
+}
+```
 How it works:
 
 `CanConvert` identifies any implementations of IIdentity<int> as something this converter can handle. 
@@ -129,17 +135,18 @@ To use this custom JSONConverter when ASP.Net is serializing/deserializing Actio
 
 **Startup.cs**
 
-<pre>public IServiceProvider ConfigureServices(IServiceCollection services)
+```csharp
+public IServiceProvider ConfigureServices(IServiceCollection services)
 {
     // Add framework services.
     services.AddMvc()
-            .AddJsonOptions(options =&gt; {
-                options.SerializerSettings.Converters.Add(new IdentityJsonConverter<Int32&gt;());
+            .AddJsonOptions(options => {
+                options.SerializerSettings.Converters.Add(new IdentityJsonConverter<Int32>());
             });
 
    // ...
-}</pre>
-
+}
+```
 Now all attempts to deserialize a value into an IIdentity property and serialization to respond with one of these values will pass through the custom mapper and I have the benefit of my custom type in my server-side logic without any extra overhead in my client-side app or code to write as I add new models or properties.
 
  [1]: /index.php/desktopdev/mstech/csharp/mapping-complex-types-tofrom-the-db-with-petapoco/

@@ -3,6 +3,7 @@ title: SQL Friday, The Best SQL Server Links Of The Past Week Episode 7
 author: SQLDenis
 type: post
 date: 2009-01-16T14:37:56+00:00
+ID: 285
 url: /index.php/datamgmt/datadesign/sql-friday-the-best-sql-server-links-of-7/
 views:
   - 3714
@@ -71,5 +72,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [9]: http://jmkehayias.blogspot.com/2009/01/time-to-rant-applications-and.html
  [10]: http://sqlblog.com/blogs/kevin_kline/archive/2009/01/15/does-the-down-econmy-have-an-impact-on-your-job.aspx
  [11]: http://www.25hoursaday.com/weblog/2009/01/16/BuildingScalableDatabasesProsAndConsOfVariousDatabaseShardingSchemes.aspx
- [12]: http://forum.lessthandot.com/viewforum.php?f=17
- [13]: http://forum.lessthandot.com/viewforum.php?f=22
+ [12]: http://forum.ltd.local/viewforum.php?f=17
+ [13]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: Surrogate Keys Bite Back
 author: David Forck (thirster42)
 type: post
 date: 2012-08-15T17:31:00+00:00
+ID: 1693
 excerpt: 'Not too long ago I got a work order in that was requesting help with removing duplicate records out of a report.  This report, and the database it was built upon, was built solely by a co-worker that left two years ago.  This report just displayed a lis&hellip;'
 url: /index.php/datamgmt/datadesign/surrogate-keys-bite-back/
 views:

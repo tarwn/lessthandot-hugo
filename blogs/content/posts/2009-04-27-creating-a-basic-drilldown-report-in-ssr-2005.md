@@ -3,6 +3,7 @@ title: Creating a Basic Drilldown Report in SSRS 2005
 author: David Forck (thirster42)
 type: post
 date: 2009-04-27T18:45:21+00:00
+ID: 400
 excerpt: |
   This is my first blog, so please go easy one me.
   
@@ -26,7 +27,8 @@ A drill down report starts with a higher level set of data (overview) and allows
   
 So to start, we’ll need a set of data. Just so that we’re on the same page lets create the following stored procedure.
 
-<pre>CREATE PROCEDURE dbo.DrilldownExample 
+sql
+CREATE PROCEDURE dbo.DrilldownExample 
 	-- Add the parameters for the stored procedure here
 	  
 AS
@@ -76,8 +78,8 @@ order by
 	PurchaseDate
  
 END
-GO</pre>
-
+GO
+```
 I like to run my reports off of stored procedures. To me it’s easier because if I need the same data for a different report I can just use the same sp.
 
 Alright, now that we know where we’re pulling the data from, let’s open up Visual Studios. Create a new report project (file – new – project. Business Intelligence Projects, Report Server Project). You can name it whatever you want, I’m going to name it BasicDrillDownExample.

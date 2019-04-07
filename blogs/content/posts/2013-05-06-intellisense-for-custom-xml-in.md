@@ -3,6 +3,7 @@ title: Intellisense for custom XML in Visual Studio
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-05-06T13:44:00+00:00
+ID: 2080
 excerpt: This is one of those things that I only need once every several months and always forget how to do. Working with custom XML in Visual Studio is a whole lot easier with intellisense. Schema errors are highlighted, enumerated values are displayed, and the amount of typing goes from full tag names to just a few characters followed by tab to complete.
 url: /index.php/desktopdev/mstech/vs2012/intellisense-for-custom-xml-in/
 views:
@@ -28,46 +29,48 @@ So let&#8217;s assume for the moment that you have the following sample files:
 
 **AwesomeFile.xml**
 
-<pre><?xml version="1.0" encoding="utf-8" ?&gt;
-<AwesomeList&gt;
-	<AwesomeItem AwesomenessFactor="11"&gt;
-		<AwesomeType&gt;Is Awesome</AwesomeType&gt;
-	</AwesomeItem&gt;
-</AwesomeList&gt;</pre>
-
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<AwesomeList>
+	<AwesomeItem AwesomenessFactor="11">
+		<AwesomeType>Is Awesome</AwesomeType>
+	</AwesomeItem>
+</AwesomeList>
+```
 **Awesome.xsd**
 
-<pre><?xml version="1.0" encoding="utf-8"?&gt;
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema id="MyAwesomeSchema"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-	<xs:simpleType name="AwesomeLevel"&gt;
-		<xs:restriction base="xs:integer"&gt;
-			<xs:enumeration value="1"&gt;</xs:enumeration&gt;
-			<xs:enumeration value="5"&gt;</xs:enumeration&gt;
-			<xs:enumeration value="10"&gt;</xs:enumeration&gt;
-			<xs:enumeration value="11"&gt;</xs:enumeration&gt;
-		</xs:restriction&gt;
-	</xs:simpleType&gt;
+	<xs:simpleType name="AwesomeLevel">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1"></xs:enumeration>
+			<xs:enumeration value="5"></xs:enumeration>
+			<xs:enumeration value="10"></xs:enumeration>
+			<xs:enumeration value="11"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 
-	<xs:complexType name="AwesomeElement"&gt;
-		<xs:sequence&gt;
-			<xs:element name="AwesomeType" type="xs:string"&gt;</xs:element&gt;
-		</xs:sequence&gt;
-		<xs:attribute name="AwesomenessFactor" type="AwesomeLevel" use="required"&gt;</xs:attribute&gt;
-	</xs:complexType&gt;
+	<xs:complexType name="AwesomeElement">
+		<xs:sequence>
+			<xs:element name="AwesomeType" type="xs:string"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="AwesomenessFactor" type="AwesomeLevel" use="required"></xs:attribute>
+	</xs:complexType>
 
-	<xs:element name="AwesomeList"&gt;
-		<xs:complexType&gt;
-			<xs:sequence&gt;
-				<xs:element name="AwesomeItem" type="AwesomeElement" minOccurs="0" maxOccurs="unbounded"&gt;
-				</xs:element&gt;
-			</xs:sequence&gt;
-		</xs:complexType&gt;
-	</xs:element&gt;
+	<xs:element name="AwesomeList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="AwesomeItem" type="AwesomeElement" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 	
-</xs:schema&gt;</pre>
-
+</xs:schema>
+```
 Visual Studio gives us handy intellisense suggestions and warnings when we&#8217;re writing the schema because we have specified a namespace it knows, but how do we get that usefulness when we&#8217;re adding more content to our awesome XML file?
 
 ## More Cowbell
@@ -87,50 +90,52 @@ Updating our files (and adding comments to reflect the list above), we have:
 
 **AwesomeFile.xml**
 
-<pre><?xml version="1.0" encoding="utf-8" ?&gt;
-<AwesomeList xmlns="my://awesomeness"&gt; <!-- (4) --&gt;
-	<AwesomeItem AwesomenessFactor="11"&gt;
-		<AwesomeType&gt;Is Awesome</AwesomeType&gt;
-	</AwesomeItem&gt;
-</AwesomeList&gt;</pre>
-
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<AwesomeList xmlns="my://awesomeness"> <!-- (4) -->
+	<AwesomeItem AwesomenessFactor="11">
+		<AwesomeType>Is Awesome</AwesomeType>
+	</AwesomeItem>
+</AwesomeList>
+```
 **Awesome.xsd**
 
-<pre><?xml version="1.0" encoding="utf-8"?&gt;
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema id="MyAwesomeSchema"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		targetNamespace="my://awesomeness" <!-- (1) --&gt;
-		xmlns="my://awesomeness" <!-- (2) --&gt;
-		attributeFormDefault="unqualified" <!-- (3) --&gt;
-		elementFormDefault="qualified"&gt;
+		targetNamespace="my://awesomeness" <!-- (1) -->
+		xmlns="my://awesomeness" <!-- (2) -->
+		attributeFormDefault="unqualified" <!-- (3) -->
+		elementFormDefault="qualified">
 
-	<xs:simpleType name="AwesomeLevel"&gt;
-		<xs:restriction base="xs:integer"&gt;
-			<xs:enumeration value="1"&gt;</xs:enumeration&gt;
-			<xs:enumeration value="5"&gt;</xs:enumeration&gt;
-			<xs:enumeration value="10"&gt;</xs:enumeration&gt;
-			<xs:enumeration value="11"&gt;</xs:enumeration&gt;
-		</xs:restriction&gt;
-	</xs:simpleType&gt;
+	<xs:simpleType name="AwesomeLevel">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1"></xs:enumeration>
+			<xs:enumeration value="5"></xs:enumeration>
+			<xs:enumeration value="10"></xs:enumeration>
+			<xs:enumeration value="11"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 
-	<xs:complexType name="AwesomeElement"&gt;
-		<xs:sequence&gt;
-			<xs:element name="AwesomeType" type="xs:string"&gt;</xs:element&gt;
-		</xs:sequence&gt;
-		<xs:attribute name="AwesomenessFactor" type="AwesomeLevel" use="required"&gt;</xs:attribute&gt;
-	</xs:complexType&gt;
+	<xs:complexType name="AwesomeElement">
+		<xs:sequence>
+			<xs:element name="AwesomeType" type="xs:string"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="AwesomenessFactor" type="AwesomeLevel" use="required"></xs:attribute>
+	</xs:complexType>
 
-	<xs:element name="AwesomeList"&gt;
-		<xs:complexType&gt;
-			<xs:sequence&gt;
-				<xs:element name="AwesomeItem" type="AwesomeElement" minOccurs="0" maxOccurs="unbounded"&gt;
-				</xs:element&gt;
-			</xs:sequence&gt;
-		</xs:complexType&gt;
-	</xs:element&gt;
+	<xs:element name="AwesomeList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="AwesomeItem" type="AwesomeElement" minOccurs="0" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 
-</xs:schema&gt;</pre>
-
+</xs:schema>
+```
 And there we have it.
 
 ## Results
@@ -138,19 +143,19 @@ And there we have it.
 Now when we start typing in the XML file we will get intellisense suggestions/completion:
 
 <div style="text-align:center; margin: .5em 0;">
-  <img src="http://www.tiernok.com/LTDBlog/XmlSchemaIntellisense/Intellisense.png" alt="Intellisense suggestions" />
+  <img src="http://tiernok.com/LTDBlog/XmlSchemaIntellisense/Intellisense.png" alt="Intellisense suggestions" />
 </div>
 
 We also get warnings when we forget a required attribute:
 
 <div style="text-align:center; margin: .5em 0;">
-  <img src="http://www.tiernok.com/LTDBlog/XmlSchemaIntellisense/SchemaWarning.png" alt="Intellisense suggestions" />
+  <img src="http://tiernok.com/LTDBlog/XmlSchemaIntellisense/SchemaWarning.png" alt="Intellisense suggestions" />
 </div>
 
 And when we use the wrong type:
 
 <div style="text-align:center; margin: .5em 0;">
-  <img src="http://www.tiernok.com/LTDBlog/XmlSchemaIntellisense/WrongTypeWarning.png" alt="Intellisense suggestions" />
+  <img src="http://tiernok.com/LTDBlog/XmlSchemaIntellisense/WrongTypeWarning.png" alt="Intellisense suggestions" />
 </div>
 
 _Hopefully the custom color scheme isn&#8217;t confusing, was feeling too lazy to switch it and switch it back_

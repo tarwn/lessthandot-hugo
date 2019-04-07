@@ -3,6 +3,7 @@ title: Where to find advanced SQL Server Training (in Belgium)
 author: Axel Achten (axel8s)
 type: post
 date: 2012-05-23T08:25:00+00:00
+ID: 1635
 excerpt: "In response of my previous post about being sure you sign up for the correct training, I got the question where you could find training for more experienced DBA's, for a reasonable price and not involving self-study. As I'm living in Belgium, I only can&hellip;"
 url: /index.php/itstudents/learngetanswers/where-to-find-advanced-sql/
 views:

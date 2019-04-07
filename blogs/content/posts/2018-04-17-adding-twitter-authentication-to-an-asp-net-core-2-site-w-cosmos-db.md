@@ -3,6 +3,7 @@ title: Adding Twitter Authentication to an ASP.Net Core 2 site w/ Cosmos DB
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2018-04-17T13:54:52+00:00
+ID: 9170
 url: /index.php/webdev/serverprogramming/aspnet/adding-twitter-authentication-to-an-asp-net-core-2-site-w-cosmos-db/
 views:
   - 2715
@@ -134,7 +135,6 @@ public void ConfigureServices(IServiceCollection services)
         });
 }
 ```
-
 So the only three configurations we need here are the new Cookie provider with an explicit `AuthenticationScheme`, configuring Twitter to Sign In via that `AuthenticationScheme`, and then adding our Twitter Key and Secret via the appsettings.json file.
 
 ## Login Endpoints
@@ -155,14 +155,21 @@ We&#8217;ll add a new `/account/login/twitter` endpoint with a final callback of
 
 ```html
 ...
+
+
 <div class="box">
     <h2>Login</h2>
+
     <a asp-action="LoginWithTwitter" asp-route-returnUrl="@TempData["returnUrl"]" class="btn-white">Login with Twitter</a>
-    ...
+
+      ...
+  
 </div>
 ```
 
 Then we add the endpoints to the Account controller to start the Twitter authentication process and capture the callback values at the end to start a new login session.
+
+
 
 ```csharp
 [HttpGet("login/twitter")]
@@ -196,7 +203,6 @@ public async Task<IActionResult> LoginWithTwitterContinueAsync(string returnUrl 
     return LocalRedirect(returnUrl ?? _membership.Options.DefaultPathAfterLogin);
 }
 ```
-
 The Twitter information comes back in the &#8220;ExternalCookie&#8221; we registered in the Startup configuration. We&#8217;ll add a method to `CosmosDBMembership` to create a `LoginSession` just like we do with a username/password, except for a third-party identity instead. The last step is to clean up the &#8220;External Cookie&#8221; using it&#8217;s `SignOut` method.
 
 <div class="note-area">
@@ -226,11 +232,21 @@ The registration flow is similar to the login flow, but we need one additional e
 [SampleCosmosCore2App/Views/Account/Register.cshtml][6]
 
 ```html
-<div class="box">
-    <h2>Create Account</h2>
-    <a asp-action="RegisterWithTwitter" class="btn-white">Continue with Twitter</a>
+...
 
-    ...
+
+
+<div class="box">
+  <h2>
+    Create Account
+  </h2>
+  
+      
+  
+  <a asp-action="RegisterWithTwitter" class="btn-white">Continue with Twitter</a>
+  
+      ...
+  
 </div>
 ```
 
@@ -238,46 +254,35 @@ Like the Login form, we add a link to the Registration form.
 
 [SampleCosmosCore2App/Views/Account/RegisterWithTwitterContinue.cshtml][7]
 
-<pre>@model SampleCosmosCore2App.Models.Account.RegisterWithTwitterModel
+```html
+@model SampleCosmosCore2App.Models.Account.RegisterWithTwitterModel
 
 @{
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="box">
-    <h2>Create Account</h2>
 
-    <form asp-action="RegisterWithTwitterContinueAsync" method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            Welcome <span>@Model.TwitterUsername</span>!
-            <input asp-for="TwitterUsername" type="hidden" />
-            <input asp-for="TwitterId" type="hidden" />
-        </div>
-        <div class="form-group">
-            <label asp-for="UserName" class="control-label"></label>
-            <input asp-for="UserName" class="form-control" />
-            <span asp-validation-for="UserName" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Email" class="control-label"></label>
-            <input asp-for="Email" class="form-control" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Register" class="btn btn-default" />
-        </div>
-    </form>
-</div></pre>
+
+<div class="box">
+  <h2>
+    Create Account
+  </h2>
+  
+      
+  
+</div>
+
+```
 
 And a view that collects a username (for display purposes) once they&#8217;ve authenticated with Twitter.
 
 Then we can add the 3 endpoints to start the twitter `Challenge`, extract the details and feed them into the Registration form, then complete the Registration and log the user in for the first time:
 
-[]()
 
-<pre>[HttpGet("register/twitter")]
+
+```csharp
+[HttpGet("register/twitter")]
 [AllowAnonymous]
 public IActionResult RegisterWithTwitter()
 {
@@ -333,8 +338,8 @@ public async Task<IActionResult> RegisterWithTwitterContinueAsync(RegisterWithTw
     await HttpContext.SignOutAsync("ExternalCookie");
 
     return LocalRedirect(_membership.Options.DefaultPathAfterLogin);
-}</pre>
-
+}
+```
 Once again, the last step in the process is to SignOut of the &#8220;ExternalCookie&#8221;, cleaning up after the stored Twitter information.
 
 ## Membership and Persistence
@@ -346,9 +351,10 @@ The changes for the membership object are fairly light. We need to be able to:
 
 These will expose the new Persistence methods we need against Cosmos DB.
 
-[]()
 
-<pre>public class CosmosDBMembership : ICustomMembership
+
+```csharp
+public class CosmosDBMembership : ICustomMembership
 {
     // ...
 
@@ -412,8 +418,8 @@ These will expose the new Persistence methods we need against Cosmos DB.
     }
 
     // ...
-}</pre>
-
+}
+```
 The Login method is straightforward: Find a user that has a UserAuthentication of Twitter with the given twitter id. If we can&#8217;t find a user, we don&#8217;t know who they are.
 
 Registration is a little trickier. We have to create and store both a `LoginUser` and `LoginUserAuthentication` object to successfully register the user and we need the generated `id` from the `LoginUser` that Cosmos DB generates from that save to populate the `UserId` property on the &#8220;LoginUserAuthentication</code> before saving. So we create both classes, populate the `UserId` in between saves, and if the second save fails for any reason we delete the initial `LoginUser` document.
@@ -422,9 +428,10 @@ I&#8217;m not sure that I like the &#8220;Twitter&#8221; string being passed aro
 
 Persistence needs some additional setup to create the new DocumentCollection, a method to retrieve a `LoginUser` document for a given Twitter identity, ability to Delete a user document, and methods to create and check given Twitter identities in the system.
   
-[]()
 
-<pre>public class UserPersistence
+
+```csharp
+public class UserPersistence
 {
     // ...
 
@@ -502,8 +509,8 @@ Persistence needs some additional setup to create the new DocumentCollection, a 
     #endregion
 
     // ...
-}</pre>
-
+}
+```
 These all follow naturally from the methods created for prior posts. 
 
 ## Wrapping Up, Next Steps

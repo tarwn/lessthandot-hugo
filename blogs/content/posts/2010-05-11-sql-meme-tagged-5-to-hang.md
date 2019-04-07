@@ -3,6 +3,7 @@ title: Five things wouldn’t miss in SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-05-11T16:20:14+00:00
+ID: 788
 excerpt: 'Everyone took all the good things already so I’m sitting here with the leftovers.  Still a few things I call pet peeves and I wouldn’t miss.  So here is the big five that came to mind...'
 url: /index.php/datamgmt/datadesign/sql-meme-tagged-5-to-hang/
 views:

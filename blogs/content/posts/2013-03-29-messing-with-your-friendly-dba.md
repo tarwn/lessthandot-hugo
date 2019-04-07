@@ -3,6 +3,7 @@ title: Messing with your friendly DBA on April Fools’ Day
 author: SQLDenis
 type: post
 date: 2013-03-29T10:27:00+00:00
+ID: 2056
 excerpt: |
   April Fools' Day is a day when people play practical jokes and hoaxes on each other. Why not trying to play some practical jokes on your friendly DBA :-)
   
@@ -42,9 +43,11 @@ Application Name=TOAD;Workstation ID=LarryEllison-PC
 
 Now you can verify that what you have entered is returned from SQL Server
 
-<pre>SELECT host_name,program_name 
+sql
+SELECT host_name,program_name 
 FROM  sys.dm_exec_sessions
-WHERE session_id = @@spid</pre>
+WHERE session_id = @@spid
+```
 
 
 
@@ -69,7 +72,9 @@ Click on options >>, click on the Additional Connection Parameters tab and paste
 
 Just to verify, run the following query
 
-<pre>SELECT @@SERVERNAME</pre>
+sql
+SELECT @@SERVERNAME
+```
 
 That returns you the local servername. Look what you see everywhere else (highlighted in yellow)
 
@@ -81,7 +86,9 @@ I see PDWSQLServer2015 everywhere else.
   
 Now run your query which returns 0 rows
 
-<pre>SELECT * FROM HugeTable</pre>
+sql
+SELECT * FROM HugeTable
+```
 
 Call your DBA to stop by and then ask him if he deleted all 3 billion rows from this table? Look at his face..let him run `sp_spaceused 'HugeTable'`. Once the panic sets in tell him he has be pranked&#8230;&#8230;.
 

@@ -3,6 +3,7 @@ title: 'Presenting “Filegroups: Putting The Pieces Together” for WiSSUG'
 author: Jes Borland
 type: post
 date: 2012-01-03T14:08:00+00:00
+ID: 1476
 excerpt: Come one, come all to...
 url: /index.php/datamgmt/dbprogramming/presenting-filegroups-putting-the-pieces/
 views:

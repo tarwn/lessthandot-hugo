@@ -3,6 +3,7 @@ title: Patch for the ASP.NET Padding Oracle vulnerability has been released
 author: SQLDenis
 type: post
 date: 2010-09-28T21:24:58+00:00
+ID: 910
 excerpt: |
   If you are running an ASP.NET, ASP.NET MVC or Sharepoint site, grab the patch for the ASP.NET Padding Oracle vulnerability 
   

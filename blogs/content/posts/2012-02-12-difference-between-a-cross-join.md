@@ -3,6 +3,7 @@ title: Difference between a cross join and a full outer join
 author: SQLDenis
 type: post
 date: 2012-02-12T12:36:00+00:00
+ID: 1522
 excerpt: |
   We are interviewing for some SQL developer positions and it seems that most people that I interviewed do not know the difference between a full outer join and a cross join. 
   
@@ -51,7 +52,8 @@ Here is what wikipedia has on full outer join: http://en.wikipedia.org/wiki/Join
 
 Time to look at some code. First create these two really simple tables
 
-<pre>CREATE TABLE TableA (IDA int)
+sql
+CREATE TABLE TableA (IDA int)
 GO
 
 INSERT TableA VALUES(1)
@@ -65,12 +67,15 @@ GO
 INSERT TableB VALUES(2)
 INSERT TableB VALUES(3)
 INSERT TableB VALUES(4)
-GO</pre>
+GO
+```
 
 As you can see both table have 3 rows but only 2 rows are common to both tables. If we do a full outer join now, we will get back a result set that has 4 rows. We get 2 rows that are common to both tables, then we get 1 row from TableA which does not exist in TableB, we also get 1 row from TableB which does not exist in TableA
 
-<pre>SELECT * FROM TableA a
-FULL OUTER JOIN TableB b on a.IDA = b.IDB</pre>
+sql
+SELECT * FROM TableA a
+FULL OUTER JOIN TableB b on a.IDA = b.IDB
+```
 
 Here is the output
 
@@ -132,9 +137,11 @@ As you can see there are two rows that have NULL in them, these are the ones tha
 
 Now, let&#8217;s look at the cross join. We will get back 9 rows since we have 3 rows in both tables, output will be 3 x 3 rows
 
-<pre>SELECT * FROM TableA a
+sql
+SELECT * FROM TableA a
 CROSS JOIN TableB b 
-ORDER BY a.IDA,b.IDB</pre>
+ORDER BY a.IDA,b.IDB
+```
 
 Here is the output
 

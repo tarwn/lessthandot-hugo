@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 21: With VLDBs it matters what you do and how you do
 author: SQLDenis
 type: post
 date: 2012-12-22T00:12:00+00:00
+ID: 1876
 excerpt: This is day twenty-one of the SQL Advent 2012 series of blog posts. Today we are going to look at Very Large Databases
 url: /index.php/datamgmt/dbprogramming/with-vldbs-it-matters-what/
 views:
@@ -60,7 +61,9 @@ If using partitions you can now rebuild just one partition of the index, this wi
   
 When you have a small database, you can delete all the rows from a table without a problem generally. Every now and then you will have someone do this, they will of course do this just one because after that you will have _THE TALK_ with them about this
 
-<pre>DELETE HugeTable</pre>
+sql
+DELETE HugeTable
+```
 
 Instead of doing that, use truncate or do deletes in batches of 50000 for example
 
@@ -68,10 +71,11 @@ Instead of doing that, use truncate or do deletes in batches of 50000 for exampl
   
 Every now and then you will have someone execute something like the following
 
-<pre>SELECT * 
+sql
+SELECT * 
 FROM HugeTable
-ORDER By SomeColumn</pre>
-
+ORDER By SomeColumn
+```
 When doing something like that SQL Server will create a worktable in tempdb, if the table is big and your tempdb is placed on a drive that doesn&#8217;t have a lot of space, you will run out of space, take a look at [Dealing with the could not allocate new page for database &#8216;TEMPDB&#8217;. There are no more pages available in filegroup DEFAULT error message][4] how to resolve this
 
 **Compression**

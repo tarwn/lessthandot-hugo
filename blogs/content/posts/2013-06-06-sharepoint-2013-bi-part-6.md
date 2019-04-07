@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 6 – Installing Powe
 author: Koen Verbeeck
 type: post
 date: 2013-06-06T12:14:00+00:00
+ID: 2097
 excerpt: |
   In this part of the series we will install the Analysis Service instance that will host the PowerPivot workbooks used in SharePoint, also known as “the PowerPivot instance”.
   The first step is to create a service account for this instance. I named it SP&hellip;

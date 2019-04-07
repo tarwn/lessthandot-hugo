@@ -3,6 +3,7 @@ title: What was your first computer and what were some of your favorite games?
 author: SQLDenis
 type: post
 date: 2009-02-17T17:39:00+00:00
+ID: 329
 excerpt: |
   The first computer I ever bought was a commodore 128 (I actually received it as a gift for my 16th birthday)
   
@@ -71,7 +72,8 @@ Programming on the commodore was primarily done in BASIC or assembler (built in)
 
 Here is an example of basic
 
-<pre>10 PRINT "THIS IS THE MAIN PROGRAM",
+```vb
+10 PRINT "THIS IS THE MAIN PROGRAM",
 20 GOSUB 1000
 30 PRINT "AND AGAIN";
 40 GOSUB 1000
@@ -79,16 +81,19 @@ Here is an example of basic
 60 STOP
 1000 REM SUBROUTINE STARTS HERE
 1010 PRINT "THIS IS THE SUBROUTINE,"
-1020 RETURN</pre>
+1020 RETURN
+```
 
 Here is some assembler language
 
-<pre>LDA $5000
+```
+LDA $5000
 ASL
 CLC
 ADC $5000
 STA $5000
-BRK</pre>
+BRK
+```
 
 Now I will tag a bunch of people, I want to know what your first computer was and the top 3 of your favorite games
 

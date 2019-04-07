@@ -3,6 +3,7 @@ title: Help, my company won’t pay for training!
 author: Jes Borland
 type: post
 date: 2016-06-23T17:25:34+00:00
+ID: 4491
 url: /index.php/uncategorized/help-my-company-wont-pay-for-training/
 views:
   - 5832

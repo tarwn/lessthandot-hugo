@@ -3,6 +3,7 @@ title: Dynamic Data Sources in SSRS
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-07-24T16:03:11+00:00
+ID: 523
 url: /index.php/datamgmt/datadesign/one-report-for-many-instances-dyanmicall/
 views:
   - 16559
@@ -31,7 +32,8 @@ So the first taks is scanning the network for SQL Server instances
 
 This can be done with the following SQLCLR UDF. 
 
-<pre>using System;
+```csharp
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
@@ -54,13 +56,15 @@ public partial class UserDefinedFunctions
         InstanceName = new SqlString(r[0].ToString());
     }
 
-};</pre>
-
+};
+```
 Create this and deploy it to your DBA restricted database. As most of my readers know that is always a secured database named DBA (go figure!).
 
 Now call the UDF to search the network for SQL Servers. 
 
-<pre>SELECT * FROM InstanceFinder();</pre>
+sql
+SELECT * FROM InstanceFinder();
+```
 
 Now to use that in SSRS we have to do a few things. Get a project ready and name it &#8220;DBAs Rule&#8221;. Add a shared data source named DBA. This points to the UDF we&#8217;re going to use. Next add a blank report named, &#8220;SQL DB Check.rdl&#8221;
 
@@ -86,7 +90,9 @@ and should appear like this in the prompts&#8230;
 
 Save all of this and then in the text for the dataset use
 
-<pre>Select [Name] From sys.databases</pre>
+sql
+Select [Name] From sys.databases
+```
 
 This step is import so don&#8217;t forget to do it. In order for SSRS to know what you are returning from the query on NoIntialCatalog, you need to define it sense validation is out of it&#8217;s control here and the column will not prefill for you. So in the Fields tab go ahead and enter a field name, &#8220;Name&#8221; with a type of databases field and value of Name.
 

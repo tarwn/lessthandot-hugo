@@ -3,6 +3,7 @@ title: SQL Saturday 33 – Charlotte, NC
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-03-07T20:01:53+00:00
+ID: 719
 url: /index.php/datamgmt/dbprogramming/sql-saturday-33-charlotte-nc/
 views:
   - 4696

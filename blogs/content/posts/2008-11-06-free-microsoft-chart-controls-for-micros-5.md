@@ -3,6 +3,7 @@ title: Free Microsoft Chart Controls for Microsoft .NET Framework 3.5
 author: SQLDenis
 type: post
 date: 2008-11-06T12:52:09+00:00
+ID: 196
 excerpt: 'Microsoft has released a collection of free charting controls for both ASP.NET and Windows Forms. These controls will only work with the .NET Framework 3.5. These are basically the Dundas Chart controls, Microsoft has acquired Dundas a while back and no&hellip;'
 url: /index.php/enterprisedev/appserver/free-microsoft-chart-controls-for-micros-5/
 views:

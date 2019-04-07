@@ -3,6 +3,7 @@ title: You need to have hardware virtualization enabled if you want to run Windo
 author: SQLDenis
 type: post
 date: 2011-09-14T00:56:00+00:00
+ID: 1315
 excerpt: "If your processor does not support Virtualization Technology then you can't run Windows 8 in Virtual Box....you will get a black screen of death. In order to find out if your CPU supports hardware Virtualization Technology you can download the Intel Pro&hellip;"
 url: /index.php/sysadmins/os/windows/2003server/you-need-to-have-hardware/
 views:

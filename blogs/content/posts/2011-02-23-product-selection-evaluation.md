@@ -3,6 +3,7 @@ title: Product Selection, Evaluation
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-02-23T12:15:00+00:00
+ID: 1019
 excerpt: |
   Having identified the root needs the product will fulfill, engaging people while selecting criteria, and generating a scorecard to evaluate each contender against, we're ready to get started, right?
   
@@ -52,7 +53,7 @@ In order to evaluate and score all of the contending products, we first need som
 ### Select Candidates 
 
 <div style="margin: 1.5em .5em .5em 0; padding: .5em; color: #666666; text-align: center; float: left;">
-  <img src="http://www.tiernok.com/LTDBlog/ProductSelection/doors.png" title="Obligatory picture of 3 doors" style="max-width: 120px" />
+  <img src="http://tiernok.com/LTDBlog/ProductSelection/doors.png" title="Obligatory picture of 3 doors" style="max-width: 120px" />
 </div>
 
 At this point it&#8217;s highly likely we will have one or two products that have been suggested. However those aren&#8217;t the only solutions on the market and armed with our enhanced and comprehensive list of requirement, we ought to be able to find a few more options to evaluate. Even if we have a clear winner at this point, looking at additional options will ensure there wasn&#8217;t anything critical we overlooked and that we can show alignment with the groups interests.
@@ -72,7 +73,7 @@ Extra columns or space on the scorecard should be used to reflect software score
 ### Review and Select 
 
 <div style="margin: 1.5em .5em .5em 0; padding: .5em; color: #666666; text-align: center; float: left;">
-  <img src="http://www.tiernok.com/LTDBlog/ProductSelection/scores2.png" title="Use the scorecard" style="max-width: 120px" />
+  <img src="http://tiernok.com/LTDBlog/ProductSelection/scores2.png" title="Use the scorecard" style="max-width: 120px" />
 </div>
 
 Highest score wins, right? Not necessarily.

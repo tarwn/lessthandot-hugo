@@ -3,6 +3,7 @@ title: Idera Diagnostic Manager for End Users
 author: Kevin Conan
 type: post
 date: 2012-03-12T11:46:00+00:00
+ID: 1552
 excerpt: |
   Do you have a group of developers who as soon as their application has any issues they call you because it must be the database server?  Do you have managers who really want to know if all the jobs are running successfully?  Yeah, me too.
   That's one of&hellip;

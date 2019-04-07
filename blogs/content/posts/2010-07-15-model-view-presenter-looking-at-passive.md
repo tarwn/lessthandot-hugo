@@ -3,6 +3,7 @@ title: 'Model-View-Presenter: Looking at Passive View'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-07-15T09:44:12+00:00
+ID: 833
 excerpt: 'Model-View-Presenter is an architecture pattern that defines a structure for behavior and logic at the UI level. M-V-P separates the logic of the presentation, such as interacting with back-end services and the business layer, from the mechanics of disp&hellip;'
 url: /index.php/architect/designingsoftware/model-view-presenter-looking-at-passive/
 views:
@@ -34,7 +35,7 @@ You can read more about Model View Presenter at <a href="http://en.wikipedia.org
 Passive View is a subset of the Model-View-Presenter pattern. In Passive View, the interface is responsible for handling interface-specific logic, such as figuring out how to put a value in a textbox or react to events from button clicks, but all actions and logic outside of the raw UI are sent to the Presenter to execute or manage. The Presenter is responsible for calling business methods in the Business model and updating the data that is available in the View. 
 
 <div style="text-align: center; font-size: .8em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/MVP/mvp.png" alt="Basic Model-View-Presenter diagram" /><br /> Basic Model-View-Presenter Diagram
+  <img src="http://tiernok.com/LTDBlog/MVP/mvp.png" alt="Basic Model-View-Presenter diagram" /><br /> Basic Model-View-Presenter Diagram
 </div>
 
 From the outside in, the architecture for Passive View looks something like this:
@@ -67,7 +68,7 @@ _My unwritten, final requirement was to finish the whole thing in half a day, th
 To start I created a diagram of the application architecture:
 
 <div style="text-align: center; font-size: .8em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/MVP/mvp_arch_01.png" alt="More extensive M-V-P Diagram" /><br /> More Extensive Model-View-Presenter Diagram
+  <img src="http://tiernok.com/LTDBlog/MVP/mvp_arch_01.png" alt="More extensive M-V-P Diagram" /><br /> More Extensive Model-View-Presenter Diagram
 </div>
 
 The purple layer is my presentation layer, which reflects the View. The blue layer is my Presenter layer which contains the logic for interacting between the end user and interface as well as a definition, or contract, of the information available in the View. The Green is the Model (or is behind the model, depending on your viewpoint) and exposes business functions and data entities for the Presenter to interact with.
@@ -91,7 +92,7 @@ To keep the project to a single morning but also allow the ability to come back 
 My final Visio diagram ended up looking like this:
 
 <div style="text-align: center; font-size: .8em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/MVP/mvp_arch_02.png" alt="Example Application Diagram" /><br /> Diagram of Example Application
+  <img src="http://tiernok.com/LTDBlog/MVP/mvp_arch_02.png" alt="Example Application Diagram" /><br /> Diagram of Example Application
 </div>
 
 In this case the left side represents basic components (bases classes and interfaces) that are used to define common structure or contracts on the right side. 
@@ -100,7 +101,8 @@ In this case the left side represents basic components (bases classes and interf
 
 For the purposes of the example project, my view has properties for Search Text, a Search Count (number of results), Results (a generic list of the Product entity), and a boolean indicating whether there are results to display. My Web Form implements these properties, tying them to elements on the screen.
 
-<pre>public partial class WebForm1 : System.Web.UI.Page, Presenter.Views.IProductSearchView {
+```csharp
+public partial class WebForm1 : System.Web.UI.Page, Presenter.Views.IProductSearchView {
 
         Presenter.ProductSearchPresenter _presenter;
 
@@ -135,11 +137,12 @@ For the purposes of the example project, my view has properties for Search Text,
         bool Presenter.Views.IProductSearchView.DisplayResults {
             set { tblResults.Visible = value; }
         }
-...</pre>
-
+...
+```
 As the presenter populates properties in the view, the information is automatically reflected on the page. The actual logic of how the business functions are called and populate those properties are neatly packaged up in the Presenter and View interface and very little logic occurs in the actual web form.
 
-<pre>public class ProductSearchPresenter : BasePresenter {
+```csharp
+public class ProductSearchPresenter : BasePresenter {
 
         protected Views.IProductSearchView _view;
 
@@ -163,8 +166,8 @@ As the presenter populates properties in the view, the information is automatica
                 this._view.SearchResults = null;
             }
         }
-    }</pre>
-
+    }
+```
 To create a unit test, we define a simple view that implements the view interface, execute the presenter logic, and verify the properties are populated the way we would expect when the same presenter calls are made from the interface.
 
 ### Extending the Architecture Further

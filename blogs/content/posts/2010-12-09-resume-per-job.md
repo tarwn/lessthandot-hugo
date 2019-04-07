@@ -3,6 +3,7 @@ title: Build your resume for the position
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-12-09T20:59:42+00:00
+ID: 971
 excerpt: 'I thoroughly enjoy interviewing people.  I take it the same as getting to know everyone in the SQL Community.  Even with such a limited time to directly talk about a person’s experiences and skills, you can really dig deep into how a person confronts the daily trials of holding a position as a database professional or developer.  At the same time, the interviewee has the same opportunity to reverse the conversation and do the same interview back.  I must say, when someone does that, I am extremely impressed.'
 url: /index.php/itprofessionals/professionaldevelopment/resume-per-job/
 views:

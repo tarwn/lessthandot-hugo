@@ -3,6 +3,7 @@ title: MERGE bug when Foreign Key constraint is created on non-clustered index (
 author: niikola
 type: post
 date: 2012-02-10T12:21:00+00:00
+ID: 1517
 excerpt: |
   Few days ago my colleague showed me strange behavior of SQL Server's 2008  RTM MERGE statement. Although this is corrected in SP1 1 or more probably in CU1 (there is bug solved in CU1 connected to this - imo), I do believe it's worth to be mentioned.
   I&hellip;

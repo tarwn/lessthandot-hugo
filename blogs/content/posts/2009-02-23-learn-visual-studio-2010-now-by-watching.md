@@ -3,6 +3,7 @@ title: Learn Visual Studio 2010 now by watching these videos
 author: SQLDenis
 type: post
 date: 2009-02-23T13:15:47+00:00
+ID: 334
 url: /index.php/webdev/webdesigngraphicsstyling/learn-visual-studio-2010-now-by-watching/
 views:
   - 17931

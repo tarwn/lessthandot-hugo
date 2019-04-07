@@ -3,6 +3,7 @@ title: MongoDB, how to sort results
 author: SQLDenis
 type: post
 date: 2013-01-16T08:38:00+00:00
+ID: 1920
 excerpt: |
   This is my third MongoDB post, in the first post we look at how we can install MongoDB as a Windows Service, In the second post we looked at how we could do UPSERTs with MongoDB, today we will look at how to sort results in MongoDB
   

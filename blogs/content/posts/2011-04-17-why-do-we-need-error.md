@@ -3,6 +3,7 @@ title: Why do we need error handling?
 author: SQLology ~ Kim Tessereau
 type: post
 date: 2011-04-17T06:00:00+00:00
+ID: 1118
 excerpt: |
   Why do we need error handling?
    

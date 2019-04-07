@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 11 – SQL Server Configuration – MIN Memory
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-10T12:40:00+00:00
+ID: 1166
 excerpt: 'Tip 11 of this series is being added in as the topic has come up during the series on several occasions.  Specifically, the question was raised on the Twitter hash tag #SQLHELP of, “What are some good use-cases where setting min-server memory makes sens&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-sql-server-min-memory/
 views:

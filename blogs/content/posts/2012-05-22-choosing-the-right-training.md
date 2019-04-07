@@ -3,6 +3,7 @@ title: Choosing the right training for you
 author: Axel Achten (axel8s)
 type: post
 date: 2012-05-22T10:57:00+00:00
+ID: 1631
 excerpt: "This is a post I wanted to write for a while but I just didn't want my students to think I was visioning them. So if you are one of my students, no it's not about you but I have to write this because almost every class I teach I have a student who does&hellip;"
 url: /index.php/itstudents/learngetanswers/choosing-the-right-training/
 views:

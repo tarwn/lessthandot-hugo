@@ -3,6 +3,7 @@ title: Using Binding Redirects to Stay Out of DLL Hell
 author: Alex Ullrich
 type: post
 date: 2010-10-25T14:14:00+00:00
+ID: 928
 excerpt: "We found ourselves in a tricky situation at work this week.  I'm surprised it hadn't come up before, but I suppose our customers aren't always the type to move to a new technology quickly.  But we had a customer trying to install the back end of our app&hellip;"
 url: /index.php/webdev/serverprogramming/using-binding-redirects-to-stay-out-of-d/
 views:
@@ -23,26 +24,28 @@ We first tried updating our references to use the 2008 version, and this seemed 
 
 Eventually we came across the idea of a [Binding Redirect][1] and thought this might be helpful. It seems like the redirect only works when pointing to a newer version of a referenced DLL, so we first changed our references to use the 1.0 version of AzMan (from windows 2000) and kicked of a fresh build of the installer. We set up our redirects like so:
 
-<pre><?xml version="1.0" encoding="utf-8"?&gt;
-<configuration&gt;
-  <configSections&gt;
-    <!-- snip --&gt;
-  </configSections&gt;
-    <runtime&gt;
-        <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1"&gt;
-            <dependentAssembly&gt;
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- snip -->
+  </configSections>
+    <runtime>
+        <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+            <dependentAssembly>
                 <assemblyIdentity name="Microsoft.Interop.Security.AzRoles"
                               publicKeyToken="31bf3856ad364e35"
-                              culture="neutral" /&gt;
+                              culture="neutral" />
                 <bindingRedirect oldVersion="1.0.0.0"
-                                                 newVersion="2.0.0.0"/&gt;
+                                                 newVersion="2.0.0.0"/>
                 <bindingRedirect oldVersion="1.0.0.0"
-                                                 newVersion="1.2.0.0"/&gt;
-            </dependentAssembly&gt;
-        </assemblyBinding&gt;
-    </runtime&gt;
-    <!-- snip --&gt;
-<configuration&gt;</pre>
+                                                 newVersion="1.2.0.0"/>
+            </dependentAssembly>
+        </assemblyBinding>
+    </runtime>
+    <!-- snip -->
+<configuration>
+```
 
 At first it didn&#8217;t work, but looking at the error we noticed that the app was looking for the 2.0 version of AzMan (on a 2003 box where we were expecting 1.2). Wondering if the ordering of the redirects matters, we switched the two redirect lines and restarted IIS. Lucky for us, it worked (on Windows 2008 R2, 2008 and 2003 sp2 boxes). 
 

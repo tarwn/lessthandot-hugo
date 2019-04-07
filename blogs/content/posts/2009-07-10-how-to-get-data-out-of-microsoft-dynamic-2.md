@@ -3,6 +3,7 @@ title: How to get data out of Microsoft Dynamics Great Plains
 author: David Forck (thirster42)
 type: post
 date: 2009-07-10T12:27:50+00:00
+ID: 505
 url: /index.php/datamgmt/datadesign/how-to-get-data-out-of-microsoft-dynamic-2/
 views:
   - 6176

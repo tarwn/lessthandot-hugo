@@ -3,6 +3,7 @@ title: Finding Fragmentation Of An Index And Fixing It
 author: SQLDenis
 type: post
 date: 2008-11-07T14:45:12+00:00
+ID: 198
 excerpt: |
   A lof of time your index will get fragmented over time if you do a lot of updates or inserts and deletes.
   We will look at an example by creating a table, fragmenting the heck out of it and then doing a reorganize and rebuild on the index.
@@ -29,33 +30,41 @@ We will look at an example by creating a table, fragmenting the heck out of it a
 
 First create this table
 
-<pre>CREATE TABLE TestIndex (name1 varchar(500) 
+sql
+CREATE TABLE TestIndex (name1 varchar(500) 
 not null,id int 
 not null,userstat  int not null,
 name2 varchar(500) not null,
-SomeVal uniqueidentifier not null)</pre>
+SomeVal uniqueidentifier not null)
+```
 
 Now insert 50000 rows
 
-<pre>INSERT TestIndex
+sql
+INSERT TestIndex
 SELECT top 50000 s.name,s.id,s.userstat,s2.name,newid() 
 FROM master..sysobjects s
-CROSS JOIN master..sysobjects s2</pre>
+CROSS JOIN master..sysobjects s2
+```
 
 Now create this index
 
-<pre>CREATE CLUSTERED INDEX IX_TestIndex_Index ON TestIndex(SomeVal)</pre>
+sql
+CREATE CLUSTERED INDEX IX_TestIndex_Index ON TestIndex(SomeVal)
+```
 
 Now let us look at some data by using the sys.dm\_db\_index\_physical\_stats DMV. Keep this query handy, we will run it many times
 
-<pre>SELECT Object_name(object_id) as Tablename,s.name as Indexname
+sql
+SELECT Object_name(object_id) as Tablename,s.name as Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent
 ,page_count
 FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL , NULL, N'LIMITED') d
 join sysindexes s on d.object_id = s.id
 and d.index_id = s.indid
-and s.name ='IX_TestIndex_Index'</pre>
+and s.name ='IX_TestIndex_Index'
+```
 
 (Result Set)
 
@@ -107,8 +116,10 @@ and s.name ='IX_TestIndex_Index'</pre>
 
 That is good, almost no fragmentation. Let&#8217;s change that shall we?
 
-<pre>UPDATE TestIndex
-SET SomeVal = NEWID()</pre>
+sql
+UPDATE TestIndex
+SET SomeVal = NEWID()
+```
 
 Okay, now you can see that the index is completely fragmented, we are also using 955 pages to store the data instead of 451
   
@@ -164,8 +175,10 @@ There are two ways to fix fragmentation, one is to reorganize the index and the 
   
 Here is how to do a reorganize
 
-<pre>ALTER INDEX IX_TestIndex_Index ON TestIndex
-REORGANIZE;</pre>
+sql
+ALTER INDEX IX_TestIndex_Index ON TestIndex
+REORGANIZE;
+```
 
 (Result Set)
 
@@ -219,8 +232,10 @@ As you can see after the reorganize(DBCC INDEXDEFRAG for you SQL Server 2000 fol
 
 Just for fun let&#8217;s also rebuild (Drop and recreate the index for you SQL Server 2000 folks) the index
 
-<pre>ALTER INDEX IX_TestIndex_Index ON TestIndex
-REBUILD;</pre>
+sql
+ALTER INDEX IX_TestIndex_Index ON TestIndex
+REBUILD;
+```
 
 (Result Set)
 
@@ -292,20 +307,25 @@ In order to run the query that checks for fragmented indexes, you need to have V
 
 To determine if you have this permission:
 
-<pre>IF Exists(SELECT 1 FROM fn_my_permissions (NULL, 'DATABASE') WHERE permission_name = 'VIEW DATABASE STATE')
+sql
+IF Exists(SELECT 1 FROM fn_my_permissions (NULL, 'DATABASE') WHERE permission_name = 'VIEW DATABASE STATE')
   SELECT 'You have permission'
 ELSE
-  SELECT 'You do not have permission'</pre>
-
+  SELECT 'You do not have permission'
+```
 If you do not have permissions, a security admin on your server can grant you permissions with the following query:
 
-<pre>GRANT VIEW DATABASE STATE TO YourLoginName</pre>
+sql
+GRANT VIEW DATABASE STATE TO YourLoginName
+```
 
  
 
 You can also deny this permission to a user with the following query:
 
-<pre>DENY VIEW DATABASE STATE TO YourLoginName</pre>
+sql
+DENY VIEW DATABASE STATE TO YourLoginName
+```
 
 This post is also on our [SQL Server Admin Hacks][3]
 

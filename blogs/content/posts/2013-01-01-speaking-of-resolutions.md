@@ -3,6 +3,7 @@ title: Speaking of resolutions…
 author: chopstik
 type: post
 date: 2013-01-01T15:18:00+00:00
+ID: 1893
 excerpt: "It's New Year's Day and I am finishing the last of my traditional holiday vacation. Tomorrow, I will return to my office after a hiatus of almost two weeks and am sure I will spend most of the day inundated by emails and following up on the projects tha&hellip;"
 url: /index.php/itprofessionals/projectmanagement/speaking-of-resolutions/
 views:

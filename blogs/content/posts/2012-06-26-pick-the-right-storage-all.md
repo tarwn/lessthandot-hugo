@@ -3,6 +3,7 @@ title: 'Pick the Right Storage: All SQL is Not Equal'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-06-26T10:38:00+00:00
+ID: 1656
 excerpt: As part of a long series of posts, I implemented a version of the MVC Music Store tutorial application on top of a pair of SQL Server CE databases. SQL Server CE is great for small apps, being a portable file-based database that can easily be moved to a full SQL Server instance. Last week I migrated my application to use full SQL Server instances instead of the SDF file and picked up a 3x performance improvement. It was interesting enough that I decided to share :)
 url: /index.php/desktopdev/mstech/csharp/pick-the-right-storage-all/
 views:
@@ -48,8 +49,8 @@ The site is still on SQL CE for the membership database, which is used during th
 
 After seeing the increase I thought it would be interesting to share the numbers as well as how useful it is to have a short load test as part of the delivery pipeline.
 
- [1]: http://www.tiernok.com/LTDBlog/ContinuousDelivery/SqlServerLoadTestRates.png
- [2]: http://www.tiernok.com/LTDBlog/ContinuousDelivery/SqlServerLoadTestResponses.png
+ [1]: http://tiernok.com/LTDBlog/ContinuousDelivery/SqlServerLoadTestRates.png
+ [2]: http://tiernok.com/LTDBlog/ContinuousDelivery/SqlServerLoadTestResponses.png
  [3]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "See more information in the Continuous Delivery wiki entry"
  [4]: /index.php/EnterpriseDev/application-lifecycle-management/continuous-delivery-adding-the-load "Implementing the Automated Load test blog post"
  [5]: /index.php/EnterpriseDev/application-lifecycle-management/implementing-wcat-for-load-testing "Implementing WCAT to test a website"

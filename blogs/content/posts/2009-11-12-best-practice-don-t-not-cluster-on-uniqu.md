@@ -3,6 +3,7 @@ title: 'Best Practice: Do not cluster on UniqueIdentifier when you use NewId'
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-12T11:57:49+00:00
+ID: 624
 url: /index.php/datamgmt/dbprogramming/best-practice-don-t-not-cluster-on-uniqu/
 views:
   - 26479
@@ -22,7 +23,8 @@ SQL Server 2005 introduced a new function called NewSequentialId(). This functio
 
 **How to detect this problem:**
 
-<pre>Select  so.name as TableName, 
+sql
+Select  so.name as TableName, 
         sind.name as IndexName, 
         sik.keyno, 
         col.name as ColName,
@@ -47,8 +49,8 @@ where   sind.status & 16 = 16
         and keyno = 1
         and sind.OrigFillFactor = 0
         and syscomments.text Like '%newid%'
-order by so.name, sik.keyno</pre>
-
+order by so.name, sik.keyno
+```
 **How to correct it:** There are several ways to prevent this problem. The best method is to use NewSequentialId() instead of NewId. Alternatively (if you are using SQL 2000), you could set the fill factor for the index to be less than 100%. Fill factor identifies how &#8220;full&#8221; the data pages are when you recreate the index. With a 100% fill factor there is no room in the index to accommodate new rows. If you need to use a UniqueIdentifier, and it must be clustered and you cannot use NewSequentialId, then you should modify the Fill Factor to minimize page splits. If you do this, it&#8217;s important to rebuild the index periodically.
 
 **Level of severity:** Moderate

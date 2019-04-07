@@ -3,6 +3,7 @@ title: VMware Powershell VI Toolkit 1.5 Released for Windows with 32 new cmdlets
 author: SQLDenis
 type: post
 date: 2009-01-28T12:11:04+00:00
+ID: 300
 url: /index.php/sysadmins/os/vmware-powershell-vi-toolkit-1-5-release/
 views:
   - 8699

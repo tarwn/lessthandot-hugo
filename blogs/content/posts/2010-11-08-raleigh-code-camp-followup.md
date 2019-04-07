@@ -3,6 +3,7 @@ title: Raleigh Code Camp Followup
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-11-08T10:44:35+00:00
+ID: 935
 excerpt: "Saturday started off cold and rainy, but it didn't matter because, for over 100 of us, there were more important things going on. Namely sessions ranging from the one I presented, Unit Testing, to specific C#, jQuery, database, ALM, Silverlight, Ruby, and Python topics. In fact there were so many specific topics and I heard so many good things about all of the sessions that I wish I could have twinned or tripled myself to attend them all."
 url: /index.php/desktopdev/mstech/raleigh-code-camp-followup/
 views:
@@ -24,7 +25,7 @@ tags:
 Saturday started off cold and rainy, but it didn&#8217;t matter because, for over 100 of us, there were more important things going on. Namely sessions ranging from the one I presented, Unit Testing, to specific C#, jQuery, database, ALM, Silverlight, Ruby, and Python topics. In fact there were so many specific topics and I heard so many good things about all of the sessions that I wish I could have twinned or tripled myself to attend them all. 
 
 <div style="float: left; margin: .5em; padding: .25em; border: 1px solid #dddddd;">
-  <img src="http://www.tiernok.com/_n_images/presentations/UnitTesting2.jpg" alt="" />
+  <img src="http://tiernok.com/_n_images/presentations/UnitTesting2.jpg" alt="" />
 </div>
 
 My session was the first one in the craftsmanship series and it was a lot of fun. I purposefully left 15 minutes at the end so we could talk more to peoples specific environments and challenges and I like to think at least one person in my session will be trying some unit testing next week. The slides and notes handout are posted [on my site][1] (the handout is enough for a quick overview).
@@ -39,7 +40,7 @@ Chris Eargle ([blog][7]|[twitter][8]) did a last minute session on C# Ninjitsu, 
 
 The day ended with a raffle from the sponsors who made this event possible. I walked away with an enterprise suite of software from DevExpress (which I&#8217;m not planning on sharing, but may end up in a blog or two). Over the course of the day I got to meet a lot of fantastic people, had a lot of fun presenting on Unit Testing, and overall just had a blast. I&#8217;m looking forward to the next one and, if your in the Raleigh area, I hope to see you out at the User Group meetings.
 
- [1]: http://www.tiernok.com/presentation.php
+ [1]: http://tiernok.com/presentation.php
  [2]: http://www.platinumbay.com/blogs/ "Steve's blog"
  [3]: http://twitter.com/SteveAndrews "Steve on Twitter"
  [4]: http://blog.mikeobrien.net/ "Mike's blog"

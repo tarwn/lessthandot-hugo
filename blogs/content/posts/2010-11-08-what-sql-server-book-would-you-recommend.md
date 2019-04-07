@@ -3,6 +3,7 @@ title: What SQL Server book would you recommend for a Sybase and Oracle admin?
 author: SQLDenis
 type: post
 date: 2010-11-08T09:09:11+00:00
+ID: 946
 url: /index.php/datamgmt/dbprogramming/what-sql-server-book-would-you-recommend/
 views:
   - 3480

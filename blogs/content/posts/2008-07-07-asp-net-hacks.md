@@ -3,6 +3,7 @@ title: ASP.NET Hacks
 author: ca8msm
 type: post
 date: 2008-07-07T06:22:16+00:00
+ID: 78
 url: /index.php/webdev/serverprogramming/aspnet/asp-net-hacks/
 views:
   - 3633

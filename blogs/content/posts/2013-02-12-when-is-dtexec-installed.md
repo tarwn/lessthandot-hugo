@@ -3,6 +3,7 @@ title: When is DTEXEC installed?
 author: Koen Verbeeck
 type: post
 date: 2013-02-12T11:12:00+00:00
+ID: 1988
 excerpt: "Which minimal components do you need to install to run SSIS packages on a server? Let's find out!"
 url: /index.php/datamgmt/dbprogramming/mssqlserver/when-is-dtexec-installed/
 views:

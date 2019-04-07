@@ -3,6 +3,7 @@ title: SQLAzure – My First Cloud
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-05-12T13:30:00+00:00
+ID: 1155
 excerpt: |
   This past weekend I made my first foray into SQL Azure. SQL Azure has been on my list of "to learn" technologies and lately it made it closer to the top. While I had picked up some knowledge from random links in the twitter-sphere, I hadn't made a concerted effort to learn about it yet.
 url: /index.php/datamgmt/datadesign/sqlazure-my-first-cloud/
@@ -30,13 +31,13 @@ I followed the instructions provided by the resources above to create my account
 It so happens that I&#8217;ve been working on an idea for a pet project for some time (well, one of many). In fact I had already used this idea to practice prototyping, requirements elicitation, and creation of an Agile-y product backlog. Some people knit, it never really caught on for me.
 
 <div style="padding: .5em; margin: 1.5em .5em .5em 0px; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <img src="http://www.tiernok.com/LTDBlog/azure/prototype3of8.jpg" alt="Prototype image, 3 of 8" /><br /> Prototype image 3 of 8
+  <img src="http://tiernok.com/LTDBlog/azure/prototype3of8.jpg" alt="Prototype image, 3 of 8" /><br /> Prototype image 3 of 8
 </div>
 
 Not only that, but the act of coming up with user stories (potential features) forced me to invent a common terminology and recognize which terms were coming up the most frequently.
 
 <div style=" padding: .5em; margin: 1.5em .5em .5em 0px; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <img src="http://www.tiernok.com/LTDBlog/azure/features.jpg" alt="Prototype image, 3 of 8" /><br /> 70+ User Stories/Features
+  <img src="http://tiernok.com/LTDBlog/azure/features.jpg" alt="Prototype image, 3 of 8" /><br /> 70+ User Stories/Features
 </div>
 
 So I might have enough information to put together a normalized database to support the core functionality, which is about as close as I am going to get to a realistic data model on a Sunday evening.
@@ -46,7 +47,7 @@ So I might have enough information to put together a normalized database to supp
 Creating the first database was [fairly straightforward (video)][9] and consisted of setting up my subscription, creating a new server, and then creating the database. The main interface uses Silverlight, so unfortunately I wasn&#8217;t able to use my \[insert tablet here\] (the future is here?). After the initial database &#8216;server&#8217; was setup, I switched over to SSMS to actually build out my data model.
 
 <div style="padding: .5em; margin: 1.5em .5em .5em 0px; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <img src="http://www.tiernok.com/LTDBlog/azure/dbdiagram.jpg" alt="DB Diagram" /><br /> I Also Drew A Data Model&#8230;with Color (Oooo)
+  <img src="http://tiernok.com/LTDBlog/azure/dbdiagram.jpg" alt="DB Diagram" /><br /> I Also Drew A Data Model&#8230;with Color (Oooo)
 </div>
 
 The first step was to add my database to SSMS. As I already have 2008 RS on my local machine, this was fairly straightforward. I clicked the &#8220;Connect&#8221; button in SSMS, entered the full server name from the Azure interface (right toolbar after creating &#8220;Server&#8221;) and the credentials I had created as part of setting up the database &#8220;Server&#8221;. Voila, it&#8217;s that easy. The database server is connected, but instead of the usual yellow cylinder I get this nifty new  ![Azure DB Icon][10]icon. 
@@ -76,4 +77,4 @@ And now go click that DeepFriedBytes link up top and listen to Buck, you&#8217;l
  [7]: http://deepfriedbytes.com/ "Visit DeepFriedBytes"
  [8]: http://deepfriedbytes.com/podcast/episode-68-why-your-career-is-going-away-because-you-refuse-to-change-you-pansy/ "DeepFriedBytes - Episode 68 - Why Your Career Is Going Away Because You Refuse To Change You Pansy"
  [9]: http://www.microsoft.com/showcase/en/US/details/1bd6bcb1-87c8-4f77-8425-2624a5f96976?WT.mc_id=otc-f-corp-jtc-DPR-MVA_INTROSQLAZURE "Quick video on initial setup"
- [10]: http://www.tiernok.com/LTDBlog/azure/database.jpg
+ [10]: http://tiernok.com/LTDBlog/azure/database.jpg

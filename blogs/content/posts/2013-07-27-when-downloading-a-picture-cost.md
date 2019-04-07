@@ -3,6 +3,7 @@ title: When downloading a picture could cost you $100
 author: SQLDenis
 type: post
 date: 2013-07-27T12:36:00+00:00
+ID: 2140
 excerpt: |
   I went to Amsterdam (and Antwerp) for 12 days recently and was shocked at the rates that AT&amp;T charges for roaming. Take a look at the following screenshot
   

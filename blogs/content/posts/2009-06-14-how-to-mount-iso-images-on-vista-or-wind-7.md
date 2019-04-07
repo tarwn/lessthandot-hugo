@@ -3,6 +3,7 @@ title: How to mount ISO images on Vista or Windows 7
 author: SQLDenis
 type: post
 date: 2009-06-14T11:57:17+00:00
+ID: 470
 url: /index.php/sysadmins/os/how-to-mount-iso-images-on-vista-or-wind-7/
 views:
   - 16213

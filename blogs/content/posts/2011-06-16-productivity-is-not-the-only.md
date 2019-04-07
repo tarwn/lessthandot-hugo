@@ -3,6 +3,7 @@ title: Productivity Is Not The Only Measurement
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-06-16T13:00:00+00:00
+ID: 1192
 excerpt: "Measurements have value. Measure something over time and we have a baseline. Monitor that measurement and we can see problems before they become obvious. Experiment with minor changes, and we can compare to the baseline to tell if we have improved or hurt our performance. Collect enough measurements and trends will emerge, exposing a layer of information we didn't have access to before."
 url: /index.php/itprofessionals/itprocesses/productivity-is-not-the-only/
 views:

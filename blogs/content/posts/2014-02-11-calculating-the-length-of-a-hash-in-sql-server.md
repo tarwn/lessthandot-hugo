@@ -3,6 +3,7 @@ title: Calculating the length of a hash in SQL Server
 author: Koen Verbeeck
 type: post
 date: 2014-02-11T13:08:15+00:00
+ID: 2343
 url: /index.php/datamgmt/dbprogramming/mssqlserver/calculating-the-length-of-a-hash-in-sql-server/
 views:
   - 27225

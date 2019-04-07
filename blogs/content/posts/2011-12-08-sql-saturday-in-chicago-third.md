@@ -3,6 +3,7 @@ title: SQL Saturday in Chicago – Third year!
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-09T00:15:00+00:00
+ID: 1426
 excerpt: |
   Today I have the absolute pleasure of announcing the third SQL Saturday in Chicago!!!
   It seems like only a few weeks ago the first SQL Saturday in Chicago ended.  And wow, what a great event the first one was.  Thinking about it now, that was SQL Satur&hellip;

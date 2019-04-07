@@ -3,6 +3,7 @@ title: ASP.NET MVC 2 RTM for Visual Studio 2008 SP1 Released
 author: SQLDenis
 type: post
 date: 2010-03-11T13:11:26+00:00
+ID: 724
 url: /index.php/webdev/webdesigngraphicsstyling/asp-net-mvc-2-rtm-for-visual-studio-2008/
 views:
   - 7749

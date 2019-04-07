@@ -3,6 +3,7 @@ title: 'Distributed Storage: How SQL Azure Replicas Work'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2015-11-18T14:36:12+00:00
+ID: 4228
 url: /index.php/architect/distributed-storage-how-sql-azure-replicas-work/
 featured_image: /wp-content/uploads/2015/11/SQL-Azure-Sq.png
 views:

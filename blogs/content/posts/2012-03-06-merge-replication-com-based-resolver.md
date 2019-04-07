@@ -3,6 +3,7 @@ title: Merge Replication – COM Based Resolver throws Buffer too small Error
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-03-06T10:20:00+00:00
+ID: 1546
 excerpt: |
   Troubleshooting Methodolgy
   One of my favorite books is, “Troubleshooting SQL Server – A Guide for the Accidental DBA”.  I may have helped author the book but I also rely on the book and the other authors to remind me just how important troubleshooting&hellip;
@@ -78,7 +79,8 @@ Comparing the contents of the SQLCOM\_backdate.il and SQLCOM\_current.il files r
 
 The SetColumnStatus method is shown below.
 
-<pre>.method public hidebysig newslot virtual 
+```c
+.method public hidebysig newslot virtual 
           instance void  SetColumnStatus(uint32 ColumnId,
                                          uint32 dbStatus) runtime managed internalcall
   {
@@ -86,7 +88,8 @@ The SetColumnStatus method is shown below.
   } // end of method CLRBusinessLogicModuleClass::SetColumnStatus
 
   .method public hidebysig newslot virtual 
-          instance void  UpdateRow() runtime managed internalcall</pre>
+          instance void  UpdateRow() runtime managed internalcall
+```
 
  
 

@@ -3,6 +3,7 @@ title: Dealing with the could not allocate new page for database ‘TEMPDB’. T
 author: SQLDenis
 type: post
 date: 2009-07-21T18:01:51+00:00
+ID: 518
 url: /index.php/datamgmt/datadesign/could-not-allocate-new-page-for-database/
 views:
   - 28045
@@ -38,13 +39,15 @@ So what causes this? You might think that tempdb is only used for temporary(#tem
     
     Here is some sample code that demonstrates that
     
-    <pre>USE AdventureWorks;
-GO
-ALTER INDEX ALL ON Production.Product
-REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON,
-              STATISTICS_NORECOMPUTE = ON);
-GO</pre>
-    
+    sql
+USE AdventureWorks;
+    GO
+    ALTER INDEX ALL ON Production.Product
+    REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON,
+                  STATISTICS_NORECOMPUTE = ON);
+    GO
+```
+
     See also [tempdb and Index Creation][1] in Books On Line
   
     Here is an excerpt
@@ -61,19 +64,25 @@ Here are a couple of ways
 
 Now most likely you want to put in place some long term solutions after you did a quick fix. First of all, you should make sure that autogrow is not turned off. If you run the query below you don&#8217;t want to see a value of 0 in the growth column
 
-<pre>select growth,* from master..sysaltfiles
-where dbid = db_id('tempdb')</pre>
+sql
+select growth,* from master..sysaltfiles
+where dbid = db_id('tempdb')
+```
 
 This query below is another way of getting the growth value for tempdb
 
-<pre>use tempdb
+sql
+use tempdb
 go
 
-EXEC sp_helpfile</pre>
+EXEC sp_helpfile
+```
 
 You also want to make sure that tempdb is in simple recovery mode and not in full, this query will return the recovery mode for tempdb
 
-<pre>SELECT DATABASEPROPERTYEX('tempdb','recovery')</pre>
+sql
+SELECT DATABASEPROPERTYEX('tempdb','recovery')
+```
 
 Ideally you want tempdb on its own drive, doing this will also improve performance. If you can&#8217;t have tempdb on its own drive then make sure you have plenty of space on that drive and if not then add one or more files on another drive.
 
@@ -87,5 +96,5 @@ Most likely you don&#8217;t really want to return multi million rows in 1 big ch
 
  [1]: http://msdn.microsoft.com/en-us/library/ms188281.aspx
  [2]: /index.php/DataMgmt/DataDesign/sql-server-covering-indexes
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: Data Quality and Master Data Management with Microsoft SQL Server 2008 R2
 author: SQLDenis
 type: post
 date: 2011-06-01T08:18:00+00:00
+ID: 1197
 excerpt: |
   Dejan Sarka and Davide Mauri have made available the book Data Quality and Master Data Management with Microsoft SQL Server 2008 R2 as a free download on their site
   

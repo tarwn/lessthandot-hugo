@@ -3,6 +3,7 @@ title: Performance implications using NewID() in Random order
 author: Ramireddy
 type: post
 date: 2010-09-15T17:18:19+00:00
+ID: 899
 url: /index.php/datamgmt/dbprogramming/mssqlserver/performance-implications-with-newid/
 views:
   - 10562
@@ -14,28 +15,30 @@ categories:
 ---
 Today, I came across a question in MSDN forums “How to pick 5 random records?”. In SQL Server the only consistent way I know is to use NEWID() function in the Order By Clause. 
 
-<pre>select top 5 * from Orders  order by NEWID()</pre>
-
+sql
+select top 5 * from Orders  order by NEWID()
+```
 This approach will always scan the entire table irrespective of number of rows requested. It retrieves each record in the table, appends a new GUID for each row, then based on that GUID it sorts the rows and presents the top 5 rows. Disadvantage here is it scans the entire table (if it’s heap) or Clustered Index. 
 
 After thinking for a while, I got an idea; If the table has a Unique column and its covered by an index, we can use that column to select the required random records and then join it with the table. This is going to improve performance.
         
 Assume a table “Orders” with an index on column “OrderId”. In order to pick 5 random rows, we can write query like this.
 
-<pre>;with cte as 
+sql
+;with cte as 
 (
 	select top 5 OrderID from Orders  order by NEWID()
 )
 select  t.* from cte c
-inner join Orders t on t.OrderID = c.OrderID</pre>
-
+inner join Orders t on t.OrderID = c.OrderID
+```
 The Inner CTE will use the index and pick the 5 random orders and outer query will get the details of those 5 random rows. By picking just the OrderIDs in CTE, we avoid the scanning of entire table. In the outer query, SQL optimizer will get the details of those rows by using lookups.
 
 The Table we used for testing,has around 1,80,000 records. Has an Clustered index and Non-Clustered Index on the Column. For Both indexes, the only common column is &#8220;ID&#8221;. The size of these indexes is listed below.
 
-<pre>select index_type_desc,index_level,page_count from sys.dm_db_index_physical_stats(DB_ID(),object_id('Issues'),null,null,'detailed')</pre>
-
-<div class="tables">
+sql
+select index_type_desc,index_level,page_count from sys.dm_db_index_physical_stats(DB_ID(),object_id('Issues'),null,null,'detailed')
+```<div class="tables">
   <table cellpadding="1" cellspacing="1" border="1">
     <tr>
       <th>
@@ -127,7 +130,8 @@ Non Clustered Index occupied total 306 Pages across the 2 Levels
 
 Here are the executed queries
 
-<pre>-- Non CTE Version
+sql
+-- Non CTE Version
 SELECT TOP 5 * FROM Issue_Dump  ORDER BY NEWID()
 
 -- CTE Version
@@ -136,8 +140,8 @@ SELECT TOP 5 * FROM Issue_Dump  ORDER BY NEWID()
     SELECT TOP 5 [CR ID] FROM Issue_Dump  ORDER BY NEWID()
 )
 SELECT  t.* FROM cte c
-INNER join Issue_Dump t ON t.[CR ID] = c.[CR ID]</pre>
-
+INNER join Issue_Dump t ON t.[CR ID] = c.[CR ID]
+```
 Below are the recorded statistics
 
 <div class="tables">

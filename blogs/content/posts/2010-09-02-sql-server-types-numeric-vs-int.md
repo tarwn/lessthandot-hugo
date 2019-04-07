@@ -3,6 +3,7 @@ title: SQL Server Types – Numeric vs Int
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-09-02T12:20:43+00:00
+ID: 892
 excerpt: As I was working on a database yesterday I came across a curious sight, multiple columns defined as numeric(7,0), numeric(9,0), and so on. It seemed like someone was trying to provide the database with the most specific definition possible for a number of different pieces of data. Having never run into this particular practice, I immediately started searching for a reason. Was it smaller? faster? better?
 url: /index.php/datamgmt/datadesign/sql-server-types-numeric-vs-int/
 views:
@@ -152,7 +153,8 @@ When SQL Server is asked to execute a math function (+,-,*,/), it uses a defined
 
 Let&#8217;s test out implicit conversions:
 
-<pre>/* ****** Creation of some number tables ****** */
+sql
+/* ****** Creation of some number tables ****** */
 Create Table NumberIntTest(Num Int Identity(1,1) Primary Key)
 go
 
@@ -176,7 +178,7 @@ Go
 
 Set NOCOUNT ON
 Begin Tran
-	Insert Into NumberNumericTest(Num) Select Num From NumberIntTest WHERE Num &gt; 10001
+	Insert Into NumberNumericTest(Num) Select Num From NumberIntTest WHERE Num > 10001
 Commit Tran
 Go
 
@@ -210,8 +212,8 @@ SELECT DateDiff(Millisecond, @Start, GetDate());
 -- Divide an numeric(7,0) by an int w/ explicit casting
 SELECT @start = GETDATE();
 SELECT @Junk = Num/CAST(@Int as numeric(7,0)) FROM NumberNumericTest n;
-SELECT DateDiff(Millisecond, @Start, GetDate());</pre>
-
+SELECT DateDiff(Millisecond, @Start, GetDate());
+```
 Initially I compared the execution plans and didn&#8217;t see much difference, but after some modifications (thanks George!) and additions we can see the differences between a number of different situations.
 
 Sample Results:
@@ -285,7 +287,8 @@ In the second test&#8217;s plan we can see an example of that implicit cast:
 <pre>numeric/int w/ Implicit Cast:
 
   |--Compute Scalar(DEFINE:([Expr1002]=CONVERT_IMPLICIT(numeric(7,0),[utils].[dbo].[NumberNumericTest].[Num] as [n].[Num]/CONVERT_IMPLICIT(numeric(10,0),[@Int],0),0)))
-       |--Clustered Index Scan(OBJECT:([utils].[dbo].[NumberNumericTest].[PK__NumberNu__C7D08B630AD2A005] AS [n]))</pre>
+       |--Clustered Index Scan(OBJECT:([utils].[dbo].[NumberNumericTest].[PK__NumberNu__C7D08B630AD2A005] AS [n]))
+</pre>
 
 So if we did have an integer that we need to operate on with a float value (the last case), the addition of a simple cast on the integer argument will bring the execution performance in line with having two numerics, meaning there is no gain in storing the value as a numeric(7,0).
 
@@ -303,9 +306,11 @@ So at the end of the day, using a numeric(*,0) requires more space, provides no 
 
 There are two options for finding these columns, using a SQL query like the one below or [downloading SQLCop][6] to check for this and many other common situations.
 
-<pre>SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, DATA_TYPE, NUMERIC_PRECISION, NUMERIC_SCALE
+sql
+SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, DATA_TYPE, NUMERIC_PRECISION, NUMERIC_SCALE
 FROM INFORMATION_SCHEMA.COLUMNS C
-WHERE C.DATA_TYPE IN ('numeric','decimal') AND NUMERIC_SCALE = 0 AND NUMERIC_PRECISION <= 18</pre>
+WHERE C.DATA_TYPE IN ('numeric','decimal') AND NUMERIC_SCALE = 0 AND NUMERIC_PRECISION <= 18
+```
 
  [1]: http://msdn.microsoft.com/en-us/library/ms187745.aspx "Int reference on MSDN"
  [2]: http://msdn.microsoft.com/en-us/library/ms187746.aspx "Numeric/Decimal reference on MSDN"

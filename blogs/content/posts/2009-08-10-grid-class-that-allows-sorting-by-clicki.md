@@ -3,6 +3,7 @@ title: Grid class that allows sorting by clicking on headers
 author: Naomi Nosonovsky
 type: post
 date: 2009-08-10T21:43:19+00:00
+ID: 536
 excerpt: 'Unlike the ASP.NET GridView Class, the Visual Foxpro native grid class does not provide a means for automatic sorting by clicking on the column header. Although there are several workarounds for this deficiency available (such as http://www.rcs-solution&hellip;'
 url: /index.php/datamgmt/datadesign/grid-class-that-allows-sorting-by-clicki/
 views:
@@ -15,7 +16,8 @@ categories:
 ---
 Unlike the ASP.NET GridView Class, the Visual Foxpro native grid class does not provide a means for automatic sorting by clicking on the column header. Although there are several workarounds for this deficiency available (such as http://www.rcs-solutions.com/downloads.aspx), here is my solution using my grdSorting class which allows automatic sorting by clicking on the column headers. Attached also is the library containing this class and two bmp files for displaying Up and Down arrows.<!--more-->
 
-<pre>**************************************************
+```text
+**************************************************
 *-- Class:        grdSorting 
 *-- ParentClass:  grid
 *-- BaseClass:    grid
@@ -677,8 +679,8 @@ ENDIF
 ENDDEFINE
 *
 *-- EndDefine: grdsorting
-**************************************************</pre>
-
+**************************************************
+```
 Attached is the file
 
 [grdSorting class][1]

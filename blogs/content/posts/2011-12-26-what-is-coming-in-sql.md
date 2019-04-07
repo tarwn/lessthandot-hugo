@@ -3,6 +3,7 @@ title: 'SQL Advent 2011: What is coming in SQL Server 2012?'
 author: SQLDenis
 type: post
 date: 2011-12-26T20:39:00+00:00
+ID: 1465
 excerpt: 'This is the last post as part of SQL Advent 2011. You can find all of them linked here: SQL Advent 2011 Recap  All the posts so far were about SQL Server 2005 and SQL Server 2008, this post will have links to all the SQL Server 2012 posts I have created&hellip;'
 url: /index.php/datamgmt/datadesign/what-is-coming-in-sql/
 views:

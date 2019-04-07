@@ -3,6 +3,7 @@ title: 'The Lazy DBA Series: Wizards!'
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-25T13:30:19+00:00
+ID: 885
 excerpt: "Today on the lazy DBA we're going to talk about why Gandalf couldn’t open the door to the mines of Moria.  OK, we're not going to talk about Gandalf or even Trolls.  Although some of us might work with a few Trolls.  We are going to talk about Wizards without pointy hats."
 url: /index.php/datamgmt/datadesign/lazy-dba-sql-server-wizards/
 views:

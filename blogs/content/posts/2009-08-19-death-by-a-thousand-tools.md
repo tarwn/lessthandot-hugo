@@ -3,6 +3,7 @@ title: Death by a thousand tools
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-08-19T11:09:48+00:00
+ID: 542
 url: /index.php/datamgmt/dbadmin/death-by-a-thousand-tools/
 views:
   - 13020
@@ -54,4 +55,4 @@ I&#8217;m not going to plug anything that I use personally in this but if you ar
  [4]: http://www.quest.com/spotlight-on-sql-server-enterprise/
  [5]: http://www.quest.com/litespeed-for-sql-server/
  [6]: http://www.quest.com/capacity-manager-for-sql-server/
- [7]: http://forum.lessthandot.com/viewforum.php?f=22
+ [7]: http://forum.ltd.local/viewforum.php?f=22

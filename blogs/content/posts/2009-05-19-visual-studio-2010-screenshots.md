@@ -3,6 +3,7 @@ title: Visual Studio 2010 Screenshots
 author: SQLDenis
 type: post
 date: 2009-05-19T14:23:00+00:00
+ID: 436
 excerpt: |
   Visual Studio 2010 has been made available to MSDN subscribers yesterday. I downloaded Visual Studio 2010 today and installed it on Windows 7 RC. I took some images so that you can see what it looks like
   

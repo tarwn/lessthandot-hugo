@@ -3,6 +3,7 @@ title: Backup to the cloud by using duplicati
 author: SQLDenis
 type: post
 date: 2012-05-24T23:53:00+00:00
+ID: 1638
 excerpt: 'I decided to give Duplicati a try to backup some of my stuff to the cloud. Duplicati is free/libre/open-source software (FLOSS). Duplicati works with Amazon S3, Windows Live SkyDrive, Google Drive (Google Docs), Rackspace Cloud Files or WebDAV, SSH, FTP&hellip;'
 url: /index.php/itprofessionals/softwareandconfigmgmt/backup-to-the-cloud-by/
 views:

@@ -3,6 +3,7 @@ title: Searching for ranges when you have quarters and years
 author: SQLDenis
 type: post
 date: 2010-08-25T07:36:04+00:00
+ID: 843
 url: /index.php/datamgmt/dbprogramming/searching-for-ranges-when-you-have-quart/
 views:
   - 6692
@@ -20,7 +21,8 @@ tags:
 ---
 Someone posted a question, they wanted to return the quarters and years within a range that were passed in. The problem they had is that they stored this data in a year and a quarter column. The table looked like this
 
-<pre>CREATE TABLE Periods(PeriodQuarter INT,PeriodYear INT)
+sql
+CREATE TABLE Periods(PeriodQuarter INT,PeriodYear INT)
 INSERT Periods VALUES (1,2009)
 INSERT Periods VALUES (2,2009)
 INSERT Periods VALUES (3,2009)
@@ -30,12 +32,15 @@ INSERT Periods VALUES (2,2010)
 INSERT Periods VALUES (3,2010)
 GO
 CREATE CLUSTERED INDEX ix_Periods on Periods(PeriodYear,PeriodQuarter)
-GO</pre>
+GO
+```
 
 When we do this simple select query
 
-<pre>SELECT *
-FROM Periods</pre>
+sql
+SELECT *
+FROM Periods
+```
 
 We get the following table.
 
@@ -177,13 +182,16 @@ The first query creates a date from the 2 columns and then checks if that date f
   
 Run the statement below, it returns &#8216;2009-01-01 00:00:00.000&#8217;. Mess around with the numbers to to see how it works.
 
-<pre>SELECT DATEADD(qq,1-1,DATEADD(yy,2009 -1900,0))</pre>
+sql
+SELECT DATEADD(qq,1-1,DATEADD(yy,2009 -1900,0))
+```
 
 **Query 1** 
   
 Here is the first query:
 
-<pre>declare @startDate datetime
+sql
+declare @startDate datetime
 declare @endDate datetime
 
 select @startDate = '20090101',@endDate = '20090928'
@@ -192,7 +200,8 @@ SELECT *
 FROM Periods
 WHERE  DATEADD(qq,PeriodQuarter-1,DATEADD(yy,PeriodYear -1900,0)) 
 BETWEEN @startDate AND @endDate
-GO</pre>
+GO
+```
 
 This is the execution plan, as you can see it uses a Clustered Index Scan
 
@@ -210,7 +219,8 @@ This is the execution plan, as you can see it uses a Clustered Index Scan
   
 Query 2 is a little smarter, it checks for the year which is the first key in the composite clustered index and thus avoids a Clustered Index Scan like the query above.
 
-<pre>declare @startDate datetime
+sql
+declare @startDate datetime
 declare @endDate datetime
 
 select @startDate = '20090101',@endDate = '20090928'
@@ -220,7 +230,8 @@ FROM Periods
 WHERE  PeriodYear between YEAR(@startDate) and YEAR(@endDate)
 AND DATEADD(qq,PeriodQuarter-1,DATEADD(yy,PeriodYear -1900,0)) 
 BETWEEN @startDate AND @endDate
-GO</pre>
+GO
+```
 
 Here is the plan, as you can see it results in a Clustered Index Seek.
 
@@ -238,14 +249,15 @@ Here is the plan, as you can see it results in a Clustered Index Seek.
   
 Query 3 is very similar to query 2 but instead of dateadd it uses arithmetic to grab the correct rows
 
-<pre>SELECT *
+sql
+SELECT *
 FROM Periods
 WHERE
        PeriodYear BETWEEN YEAR(@startdate) AND YEAR(@enddate)
        AND PeriodYear * 4 + PeriodQuarter
                BETWEEN Year(@startdate) * 4 + DATEPART(Quarter, @startdate)
-               AND Year(@enddate) * 4 + DATEPART(Quarter, @enddate)</pre>
-
+               AND Year(@enddate) * 4 + DATEPART(Quarter, @enddate)
+```
 Here is the plan, as you can see it results in a Clustered Index Seek also.
 
 > |&#8211;Clustered Index Seek(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]),
@@ -262,13 +274,17 @@ Here is the plan, as you can see it results in a Clustered Index Seek also.
 
 Instead of converting and doing arithmetic, you could add a computed column to the table
 
-<pre>ALTER TABLE Periods ADD PeriodDate AS DATEADD(qq,PeriodQuarter-1,DATEADD(yy,PeriodYear -1900,0))  
-GO</pre>
+sql
+ALTER TABLE Periods ADD PeriodDate AS DATEADD(qq,PeriodQuarter-1,DATEADD(yy,PeriodYear -1900,0))  
+GO
+```
 
 Now, when we query the table
 
-<pre>SELECT *
-FROM Periods</pre>
+sql
+SELECT *
+FROM Periods
+```
 
 &#8230; the data looks like this
 
@@ -390,32 +406,37 @@ FROM Periods</pre>
 
 Now the query is much simpler
 
-<pre>DECLARE @startDate DATETIME
+sql
+DECLARE @startDate DATETIME
 DECLARE @endDate DATETIME
 
 SELECT @startDate = '20090101',@endDate = '20090928'
 SELECT *
 FROM Periods
-WHERE PeriodDate BETWEEN @startDate AND @endDate</pre>
+WHERE PeriodDate BETWEEN @startDate AND @endDate
+```
 
 > |&#8211;Clustered Index Scan(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]), WHERE:(dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),&#8217;1900-01-01 00:00:00.000&#8242;))>=[@startDate] AND dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),&#8217;1900-01-01 00:00:00.000&#8242;))<=[@endDate])) 
 
 So we still have an index scan, but if we create an index on the computed column now, we can find out if that helps.
 
-<pre>CREATE INDEX ix_PeriodDate ON Periods(PeriodDate)
-GO</pre>
+sql
+CREATE INDEX ix_PeriodDate ON Periods(PeriodDate)
+GO
+```
 
 Now, if we run the same query again.
 
-<pre>DECLARE @startDate DATETIME
+sql
+DECLARE @startDate DATETIME
 DECLARE @endDate DATETIME
 
 SELECT @startDate = '20090101',@endDate = '20090928'
 
 SELECT *
 FROM Periods
-WHERE PeriodDate BETWEEN @startDate AND @endDate</pre>
-
+WHERE PeriodDate BETWEEN @startDate AND @endDate
+```
 > |&#8211;Index Seek(OBJECT:([msdb].[dbo].[Periods].[ix_PeriodDate]), SEEK:([msdb].[dbo].[Periods].[PeriodDate] >= [@startDate] AND [msdb].[dbo].[Periods].[PeriodDate] <= [@endDate]) ORDERED FORWARD)
 
 And there is your index seek.
@@ -426,5 +447,5 @@ To keep this post to a reasonable length, I decided to create another post that 
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

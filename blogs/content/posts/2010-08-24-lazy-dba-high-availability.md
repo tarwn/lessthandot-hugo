@@ -3,6 +3,7 @@ title: 'The Lazy DBA Series: High Availability'
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-24T14:11:44+00:00
+ID: 881
 excerpt: "Over the years I've had the chance to help a lot of people when it came to SQL Server. One of the things I have enjoyed the most in that time was helping with HA and DR topics. In my opinion, a truly recognized accomplishment for any DBA and Systems Team is to successfully secure the companies data and systems. The security I'm referring to isn’t to deny or grant a user access to data, but the security of data from disasters.Disasters can happen at any time. They never give us much warning either. Luckily, over many of our careers, we will never see a true disaster in action. Some will never have the opportunity to even see their High Availability go into action other than tests. Does that mean we don’t need these mechanisms and safeguards in place? (That was even hard to write) From the largest database down to the smallest script, everything should have a recovery plan. If it is important to the business and holds a key function, it has value and is worth the cost of adding the HA and DR solution to secure it.The topic at hand is High Availability, so let’s not accidentally cross to the DR side."
 url: /index.php/datamgmt/datadesign/lazy-dba-high-availability/
 views:

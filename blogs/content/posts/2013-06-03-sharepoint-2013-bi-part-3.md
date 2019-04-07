@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 3 – Installing the 
 author: Koen Verbeeck
 type: post
 date: 2013-06-03T12:17:00+00:00
+ID: 2090
 excerpt: |
   This part of the series will focus on installing the Windows Server 2012 OS on the virtual machine. In most cases, you have an image file with the installation media available. In the VM settings, go to the DVD drive and attach the image.
    

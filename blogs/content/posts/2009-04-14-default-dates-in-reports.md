@@ -3,6 +3,7 @@ title: Default Dates in SSRS Reports
 author: pmch22
 type: post
 date: 2009-04-14T12:05:17+00:00
+ID: 385
 url: /index.php/datamgmt/datadesign/default-dates-in-reports/
 views:
   - 6115
@@ -16,10 +17,11 @@ For reports that requires start and end dates as parameters, typically the defau
   
 To do this, create a new dataset. Paste the below query 
 
-<pre>Declare @joindate datetime
+sql
+Declare @joindate datetime
 select @joindate = max(joindate)  from employees
-select cast(convert (varchar(10),dateadd(dd,-(day(@joindate)-1),@joindate),101) as datetime) as startdate,  cast(convert(varchar(10),dateadd(dd,-day(dateadd(mm,1,@joindate)),dateadd(mm,1,@joindate)),101) as datetime) as enddate</pre>
-
+select cast(convert (varchar(10),dateadd(dd,-(day(@joindate)-1),@joindate),101) as datetime) as startdate,  cast(convert(varchar(10),dateadd(dd,-day(dateadd(mm,1,@joindate)),dateadd(mm,1,@joindate)),101) as datetime) as enddate
+```
 Next on the Reports Parameters window, set the default values as &#8211; From Query and select the Start and End dates.
 
 <div class="image_block">

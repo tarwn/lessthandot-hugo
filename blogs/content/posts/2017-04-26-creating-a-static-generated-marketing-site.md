@@ -3,6 +3,7 @@ title: Creating a Static-Generated Marketing Site
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-04-26T21:37:41+00:00
+ID: 8637
 url: /index.php/webdev/creating-a-static-generated-marketing-site/
 views:
   - 2338
@@ -75,14 +76,15 @@ I don&#8217;t like the delay of step 3, so I may tighten this up further with a 
 
 All it takes to add a new blog post is adding a markdown file to the blogs folder. The file has this format:
 
-<pre>---
+```markdown
+---
 title: My Awesome Post Title
 date: 2012-08-20
 layout: post.html
 excerpt: summary of my post
 ---
-Content of my post</pre>
-
+Content of my post
+```
 The top section, or &#8220;front matter&#8221;, defines metadata used elsewhere in the build process. A &#8220;draft: true&#8221; value tells metalsmith to skip publishing the entry. The date is used when ordering the posts to decide what should show on the landing page and in the RSS feed. The &#8220;layout&#8221; property tells metalsmith to wrap this in the layouts/post.html content. The &#8220;excerpt&#8221; property is displayed on the landing page and in the RSS feed.
 
 ### Additional details
@@ -121,7 +123,8 @@ To build this, I used a number of [Metalsmith plugins][8].
 
 Here is an annotated version of my index.js file:
 
-<pre>Metalsmith(__dirname)
+```javascript
+Metalsmith(__dirname)
   
   // key/value metadata available for all files in my site
   .metadata({
@@ -199,8 +202,8 @@ Here is an annotated version of my index.js file:
   // and Go!
   .build(function(err, files) {
     if (err) { throw err; }
-});</pre>
-
+});
+```
 You can see the full file here: [index.js on tarwn/StaticMarketingSite][9].
 
 ## Things to Improve

@@ -3,6 +3,7 @@ title: ASP.NET MVC 1.0 Release Candidate Now Available For Download
 author: SQLDenis
 type: post
 date: 2009-01-29T16:04:39+00:00
+ID: 304
 url: /index.php/webdev/webdesigngraphicsstyling/asp-net-mvc-1-0-release-candidate-now-av/
 views:
   - 4139

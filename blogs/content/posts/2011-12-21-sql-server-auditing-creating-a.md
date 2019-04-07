@@ -3,6 +3,7 @@ title: 'SQL Server Auditing: Creating a Server Specification'
 author: SQLArcher
 type: post
 date: 2011-12-21T08:01:00+00:00
+ID: 1457
 excerpt: |
   Continuing onwards with the SQL Server auditing feature, let's start off by creating a simple audit that will capture some server level events.
   
@@ -73,7 +74,8 @@ _Note: It is the default behaviour of Management Studio to create the specificat
 
 So now that both the audit and the specification is in place, I made a few changes to a database and now we can look into the file using the following code:
 
-<pre>--returns all the columns for the file
+sql
+--returns all the columns for the file
 SELECT * FROM fn_get_audit_file ('E:SQLAuditingSQLAudit_DBChanges*.sqlaudit',DEFAULT,DEFAULT)
 
 --Returns specific items to aid in analysing the audit file
@@ -88,8 +90,8 @@ SELECT  event_time ,
         [statement] ,
         audit_file_offset
 FROM    fn_get_audit_file('E:SQLAuditingSQLAudit_DBChanges*.sqlaudit',
-                          DEFAULT, DEFAULT)</pre>
-
+                          DEFAULT, DEFAULT)
+```
 _Note: All the files will be appended with a guid, there for it is easier to use the name and then a wildcard which is * to make it easier to load the file and to read the code._
 
 The output of my test looks like this:

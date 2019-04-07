@@ -3,6 +3,7 @@ title: SQL Connections Suburban Chicago Wrap Up
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-05-06T11:39:48+00:00
+ID: 782
 excerpt: 'Tuesday marked the day that I presented on SSIS basics.  The night went really good and the group and I had a great time during the discussion.  Kim Young (needs to be on twitter) started us off with stored procedures and error handling and moved into Wendy plugging PASS and the community.'
 url: /index.php/datamgmt/datadesign/sqlconns-presentation/
 views:

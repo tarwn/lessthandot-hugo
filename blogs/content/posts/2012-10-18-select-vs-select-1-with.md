@@ -3,6 +3,7 @@ title: 'SELECT * vs SELECT 1 with EXISTS'
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-10-18T14:49:00+00:00
+ID: 1762
 excerpt: 'Often, I see in articles and code a query using the EXISTS logical operator and a Subquery within the EXISTS using SELECT *.  Typically this is an area where it’s been instilled in me to use SELECT 1 instead of SELECT * for performance reasons.  However&hellip;'
 url: /index.php/datamgmt/dbadmin/select-vs-select-1-with/
 views:
@@ -27,13 +28,16 @@ It’s important to note that compilation is where the effects of this occur.  
 
 To look closely at the difference in compilation and execution time, take the following two queries.
 
-<pre>SELECT SalesOrderID FROM Sales.SalesOrderHeader 
+sql
+SELECT SalesOrderID FROM Sales.SalesOrderHeader 
 WHERE EXISTS (SELECT * FROM Sales.SalesOrderDetail WHERE CarrierTrackingNumber = '4911-403C-98')
 OPTION (RECOMPILE)
 
 SELECT SalesOrderID FROM Sales.SalesOrderHeader 
 WHERE EXISTS (SELECT 1 FROM Sales.SalesOrderDetail WHERE CarrierTrackingNumber = '4911-403C-98')
-OPTION (RECOMPILE)</pre>
+OPTION (RECOMPILE)
+```
+
 
  
 
@@ -51,7 +55,8 @@ As shown, there is a slight improvement with the use of SELECT 1.  Running this
 
 Now, the impact of .0190 is extremely low.  In order to really see if the metadata expansion of the columns has a larger impact when there are a high number of columns, run the following code to create an extremely wide table.
 
-<pre>DECLARE @int int = 1
+sql
+DECLARE @int int = 1
 DECLARE @cmd VARCHAR(max) = ''
 
 WHILE @int <= 1000
@@ -60,7 +65,8 @@ WHILE @int <= 1000
   SET @int += 1
  END
 SET @cmd = 'CREATE TABLE tbl (SalesOrderID INT, ' + @cmd + ' MyWideTable int)'
-Exec (@cmd)</pre>
+Exec (@cmd)
+```
 
  
 

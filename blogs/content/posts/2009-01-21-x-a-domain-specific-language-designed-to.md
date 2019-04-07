@@ -3,6 +3,7 @@ title: 'X# a domain specific language designed to quickly create Web application
 author: SQLDenis
 type: post
 date: 2009-01-21T22:31:10+00:00
+ID: 294
 url: /index.php/webdev/webdesigngraphicsstyling/x-a-domain-specific-language-designed-to/
 views:
   - 7039
@@ -27,7 +28,8 @@ Here is an example
 
 Retrieve all RSS Feeds from NY Times and save those entries containing the word oil in a MySQL database titled oil_news:
 
-<pre><xsp:append-child target="document('xdbc:mysql://192.168.1.27:3306/maindb')/oil_news">  
+```xml
+<xsp:append-child target="document('xdbc:mysql://192.168.1.27:3306/maindb')/oil_news">  
        <xsp:for-each select="(document('http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml')/text() >> /library/xml/pi('import'))/channel/item[contains(title,'oil')]">  
             <row>  
                 <title><xsp:text value="{title}"/></title>  
@@ -35,6 +37,7 @@ Retrieve all RSS Feeds from NY Times and save those entries containing the word 
                 <link><xsp:text value="{link}"/></link>  
             </row>  
         </xsp:for-each>  
-    </xsp:append-child>  </pre>
+    </xsp:append-child>  
+```
 
 Some samples are here http://www.xsharp.org/samples/ and the main site is here: http://www.xsharp.org/

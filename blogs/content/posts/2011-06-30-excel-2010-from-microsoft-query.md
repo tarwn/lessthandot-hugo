@@ -3,6 +3,7 @@ title: Excel 2010 Data Source “From Microsoft Query” Missing DSNs
 author: Jes Borland
 type: post
 date: 2011-06-30T14:42:00+00:00
+ID: 1236
 excerpt: The case of the missing System DSN, and how I cracked it.
 url: /index.php/datamgmt/dbprogramming/excel-2010-from-microsoft-query/
 views:

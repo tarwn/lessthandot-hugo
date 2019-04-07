@@ -3,6 +3,7 @@ title: Turning on Optimize for Ad hoc Workloads, Ad Hoc Distributed Queries and 
 author: SQLDenis
 type: post
 date: 2013-03-21T15:39:00+00:00
+ID: 2048
 excerpt: |
   There are several advanced options that you can modify in SQL Server.If you want to turn on optimize for ad hoc workloads in SQL Server, one way is to run the following scripts
   
@@ -25,15 +26,19 @@ tags:
 ---
 There are several advanced options that you can modify in SQL Server. If you want to turn on optimize for ad hoc workloads in SQL Server, you can run the following script
 
-<pre>EXEC sys.sp_configure N'optimize for ad hoc workloads', N'1'
+sql
+EXEC sys.sp_configure N'optimize for ad hoc workloads', N'1'
 RECONFIGURE WITH OVERRIDE
-GO</pre>
+GO
+```
 
 If you want to use OPENROWSET, you can run the following
 
-<pre>EXECUTE sys.sp_configure'Ad Hoc Distributed Queries', '1'
+sql
+EXECUTE sys.sp_configure'Ad Hoc Distributed Queries', '1'
 RECONFIGURE WITH OVERRIDE
-GO</pre>
+GO
+```
 
 When running SQL Server on Amazon&#8217;s AWS RDS, you can&#8217;t do it like that. If you try running it, you will get the following error.
 

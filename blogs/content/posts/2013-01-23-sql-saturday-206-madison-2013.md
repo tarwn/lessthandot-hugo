@@ -3,6 +3,7 @@ title: 'SQL Saturday #206 Madison 2013'
 author: Jes Borland
 type: post
 date: 2013-01-23T22:54:00+00:00
+ID: 1933
 excerpt: "Last year, I was part of the team that brought the first SQL Saturday to Wisconsin. It was such a smashing success, we're busy organizing the second - SQL Saturday #206 in Madison, WI on Saturday, April 6, 2013!"
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-206-madison-2013/
 views:

@@ -3,6 +3,7 @@ title: Blogging isn’t easy unless you have support
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-12-31T18:11:00+00:00
+ID: 1891
 excerpt: 'Over the past year, and previous years, writing blogs, articles for various publications and even books, has been one of the most enjoyable aspects to my work in the data and professional development world.  Given today is the last day of 2012, this yea&hellip;'
 url: /index.php/itprofessionals/itprocesses/blogging-isn-t-easy-unless/
 views:

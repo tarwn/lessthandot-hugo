@@ -3,6 +3,7 @@ title: Dynamic Connections in SSIS – Extract, Transform and Load
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-07T13:47:00+00:00
+ID: 1423
 excerpt: |
   Dynamic Connections in SSIS – Extract, Transform and Load
   On occasion, with a landscape that consists of multiple SQL Server Instances, we find the need to pull information from all of them, work with that information, and then load that information in&hellip;
@@ -109,7 +110,10 @@ Add an ADO.NET Source and ADO.NET Destination to the data flow.
 
 To configure the source, first select the dynamic connection created earlier.   Next, to allow for the retrieval of all the databases on the instance and the actual instance that is being focused on, use the following query as a SQL command in the source
 
-<pre>SELECT [Name],@@SERVERNAME ServerName FROM sys.databases</pre>
+sql
+SELECT [Name],@@SERVERNAME ServerName FROM sys.databases
+```
+
 
  
 
@@ -123,11 +127,12 @@ Click OK to close and save the configuration.
 
 To configure the destination, create the following table in the database and instance that has been selected as the repository for the data retrieved from the other, dynamic instances.
 
-<pre>CREATE TABLE [dbo].[AllMyDatabases](
+sql
+CREATE TABLE [dbo].[AllMyDatabases](
 	[Name] [nvarchar](128) NULL,
 	[ServerName] [nvarchar](128) NULL
-) ON [PRIMARY]</pre>
-
+) ON [PRIMARY]
+```
  
 
 Note: If the instance that is being used for the storage of the data retrieved is also in the list of instances to check dynamically, ensure you use another connection and not the same dynamic connection.  If you do not use multiple connection managers in this case, the connection will never change from the static destination that was set.

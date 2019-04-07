@@ -3,6 +3,7 @@ title: Report Builder 3.0 – The Introduction
 author: Jes Borland
 type: post
 date: 2012-02-15T15:13:00+00:00
+ID: 1531
 excerpt: 'I’ve been building reports with SQL Server Reporting Services for a few years. Until recently, I exclusively used Report Designer, which let me build reports in Business Intelligence Development Studio, a Visual Studio environment. I decided to step outside my comfort zone and learn a new tool - Report Builder 3.0.'
 url: /index.php/datamgmt/dbprogramming/report-builder-3-0-the/
 views:

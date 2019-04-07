@@ -3,6 +3,7 @@ title: 'Book Review: On Writing Well'
 author: Jes Borland
 type: post
 date: 2012-11-28T11:45:00+00:00
+ID: 1806
 excerpt: 'Secret: when I was in high school, I was going to grow up to be a high school English teacher and writer. I read voraciously. I wrote endlessly - journals, short stories, poems, and essays. I haven’t become a teacher yet, but I’ve kept my love of writin&hellip;'
 url: /index.php/itprofessionals/book-review/book-review-on-writing-well/
 views:

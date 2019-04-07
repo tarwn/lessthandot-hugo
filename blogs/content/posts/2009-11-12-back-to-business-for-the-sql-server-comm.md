@@ -3,6 +3,7 @@ title: Back to business for the SQL Server community
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-11-13T00:21:12+00:00
+ID: 627
 url: /index.php/datamgmt/dbadmin/back-to-business-for-the-sql-server-comm/
 views:
   - 5118

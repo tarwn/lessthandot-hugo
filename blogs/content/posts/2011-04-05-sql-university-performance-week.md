@@ -3,6 +3,7 @@ title: SQL University – Performance Week
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-05T10:21:00+00:00
+ID: 1100
 excerpt: |
   Merge Replication: Snapshot Performance with Data Partitions
   This week is SQL University Performance week.  Grant Fritchey and myself are on point (get it?).  There are many things we could talk about when it comes to improving performance for SQL Serv&hellip;

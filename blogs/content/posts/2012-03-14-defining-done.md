@@ -3,6 +3,7 @@ title: Defining What “Done” Means
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-03-14T12:12:00+00:00
+ID: 1553
 excerpt: As I left college, I believed that projects would be clearly defined in a functional specification (despite my actual experience up to that point). The grand purpose of the project would be detailed, the goals and assumptions would be written and indexed, and the expectations for uptime, performance, and similar non-functional requirements would be included.
 url: /index.php/itprofessionals/projectmanagement/defining-done/
 views:

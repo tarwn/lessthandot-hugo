@@ -3,6 +3,7 @@ title: Transaction Log expanding on restore after shrink
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-05-27T09:54:56+00:00
+ID: 799
 excerpt: 'The topic really does cause pain.  Shrinking a file in SQL Server is inherently a terrible action to take.  However, we all know that in some cases when maintenance was never setup and recovery models were not properly chosen, the need does come up.  An interesting topic came up on LTD today regarding moving an overloaded and unmaintained log file to a server that had less disk space than the original.  The first inclination would be to shrink the log and then backup/restore it to the new location.  Seeing as the full backup consists of the data and just enough log to recover, the assumption would be that you would only get this in the new database.  However, in this case, shrinking the log will not be the last step in the process.  The initial size of the log will also need to change.'
 url: /index.php/datamgmt/dbprogramming/transaction-log-size-cold-shrink-ldf/
 views:
@@ -42,9 +43,11 @@ We can see by Size that we have the 300MB mdf and 3000MB log file.
 
 Now assuming we ran a shrinkfile on the log file, we could use DBCC SQLPERF(logspace) to check the logs free space. 
 
-<pre>create table #temp (DatabaseName sysname, LogSize float, SpaceUsedPerc float, Status bit)
+sql
+create table #temp (DatabaseName sysname, LogSize float, SpaceUsedPerc float, Status bit)
 insert #temp EXEC ('dbcc sqlperf(logspace)')
-select SpaceUsedPerc from #temp where DatabaseName = 'LOGSHIP_PUB'</pre>
+select SpaceUsedPerc from #temp where DatabaseName = 'LOGSHIP_PUB'
+```
 
 Resulting in 0.028… give or take a few thousands places.
 
@@ -58,12 +61,14 @@ The problem we will run into will be when this backup is restored. Even knowing 
 
 Best way to see is by example so let’s restore the database.
 
-<pre>RESTORE DATABASE [LOGSHIP_PUB_SECONDARY] FROM  DISK = N'C:LOGSHIP_PUB_FULL.bak' 
+sql
+RESTORE DATABASE [LOGSHIP_PUB_SECONDARY] FROM  DISK = N'C:LOGSHIP_PUB_FULL.bak' 
 	WITH  FILE = 1,  
 	MOVE N'LOGSHIP_PUB' TO N'C:LOGSHIP_PUB_SECONDARY.mdf',  
 	MOVE N'LOGSHIP_PUB_log' TO N'C:LOGSHIP_PUB_SECONDARY_1.ldf',  
 	NOUNLOAD,  REPLACE,  STATS = 10
-GO</pre>
+GO
+```
 
 First thing we may notice is the time this restore takes. It will be slightly more than expected from a 300MB database. Your typical IO should give this in around a 2-3 seconds but given the need to expand the log(s) and any other files that may consist in the restore, the time will be lengthened slightly. Of course this varies given different resources and even more when compression is involved.
   
@@ -85,8 +90,9 @@ Our successful restore…
 
 Checking our size and space utilized we should see the same results from the initial database
 
-<pre>Select [size],[name],[filename] from sysaltfiles</pre>
-
+sql
+Select [size],[name],[filename] from sysaltfiles
+```
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/shrunk_3.gif" alt="" title="" width="543" height="50" />
 </div>
@@ -103,4 +109,4 @@ Moving databases using backup/restore is a good method if your activity allows f
   * Do the full backup after the resize to prevent longer restores and maintaining the disk usage you really require.
   * A well maintained transaction log structure will prevent all of this. You will know precisely the sizing requirements at this level.
 
- [1]: http://forum.lessthandot.com/viewtopic.php?f=17&t=10917
+ [1]: http://forum.ltd.local/viewtopic.php?f=17&t=10917

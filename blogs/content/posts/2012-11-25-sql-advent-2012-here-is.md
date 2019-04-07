@@ -3,6 +3,7 @@ title: SQL Advent 2012, here is what is coming
 author: SQLDenis
 type: post
 date: 2012-11-25T22:40:00+00:00
+ID: 1801
 excerpt: |
   I decided to do a SQL Advent series of posts this year as well, this year I will focus on best practices. In case you are interested in last year's posts, all of them are listed here: SQL Advent 2011 Recap
   

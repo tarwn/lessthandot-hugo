@@ -3,6 +3,7 @@ title: SQL Server 2012 SP1 and in-memory OLTP DB Engine Hekaton announced
 author: SQLDenis
 type: post
 date: 2012-11-07T14:52:00+00:00
+ID: 1783
 excerpt: |
   Microsoft announced a couple of things at the PASS conference today
   

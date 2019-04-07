@@ -3,6 +3,7 @@ title: 'SQL Saturday #92 Portland, OR: Wrap-Ups, High-Fives, and Doughnuts'
 author: Jes Borland
 type: post
 date: 2011-10-17T21:18:00+00:00
+ID: 1349
 excerpt: 'My wrap-up of SQL Saturday #92 in Portland, OR.'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sql-saturday-92-portland-or-2/
 views:

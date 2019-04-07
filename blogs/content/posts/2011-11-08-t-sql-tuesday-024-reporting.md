@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #024: Reporting Services, Stored Procedures, and Multiple 
 author: Jes Borland
 type: post
 date: 2011-11-08T16:44:00+00:00
+ID: 1375
 excerpt: |
   This month's T-SQL Tuesday topic: "Prox n' Funx".
 url: /index.php/datamgmt/dbprogramming/t-sql-tuesday-024-reporting/
@@ -24,7 +25,8 @@ This month’s topic is “Prox n&#8217; Funx”. I am going to show something t
 
 I’m using SQL Server Reporting Services 2008R2 and AdventureWorks2008R2. I built a stored procedure that returns all products in a category, then a count of the number of products in the category, and the count of the number of products in that category in a specific color. 
 
-<pre>ALTER PROCEDURE [dbo].[ProductCountByCatColor]
+sql
+ALTER PROCEDURE [dbo].[ProductCountByCatColor]
 	@Category varchar(25), 
 	@Color varchar(25)
 AS
@@ -61,7 +63,8 @@ BEGIN
 		AND ISNULL(PROD.Color, 'N/A') IN (@Color)
 	GROUP BY PC.Name
 	ORDER BY PC.Name 
-END</pre>
+END
+```
 
 When I execute the SP in SSMS, I get three result sets.
   

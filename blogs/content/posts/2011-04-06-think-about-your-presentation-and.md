@@ -3,6 +3,7 @@ title: Think about your presentation and who reviews it
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-06T11:00:00+00:00
+ID: 1103
 excerpt: 'One of my new friends that I was fortunate to make while attending the MVP Summit, Dan English (Twitter | Blog | MVP), mentioned last night something that hit home pretty hard and fast.  I was writing an SSIS package to go along with one of my SQL Unive&hellip;'
 url: /index.php/datamgmt/datadesign/think-about-your-presentation-and/
 views:

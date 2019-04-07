@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #18: A Recursive CTE Is: A Recursive CTE Is'
 author: Jes Borland
 type: post
 date: 2011-05-10T11:18:00+00:00
+ID: 1167
 excerpt: "This month's T-SQL Tuesday topic is a favorite of mine: CTEs. I show you how to write a recursive CTE to insert dates into a dates table."
 url: /index.php/datamgmt/dbprogramming/t-sql-tuesday-18-a/
 views:
@@ -33,7 +34,8 @@ I didn’t want to go down the manager/employee or order/item path. Those have b
 
 _(If a woman can claim to know what she wants.)_ I want a table that shows me the date, and several pieces of information: the year, quarter, month, week, day of the week, day and day of the year. All of these can be found using DATEPART. My base query is:
 
-<pre>DECLARE @GoDate DATE = GETDATE()
+```sql
+DECLARE @GoDate DATE = GETDATE()
 SELECT @GoDate, 
 	DATEPART(YY, @GoDate), 
 	DATEPART(QQ, @GoDate), 
@@ -41,7 +43,8 @@ SELECT @GoDate,
 	DATEPART(WW, @GoDate), 
 	DATEPART(DW, @GoDate), 
 	DATEPART(DD, @GoDate), 
-	DATEPART(DY, @GoDate)</pre>
+	DATEPART(DY, @GoDate)
+```
 
 ![][5]
 
@@ -49,7 +52,8 @@ SELECT @GoDate,
 
 First, I’m going to build a recursive CTE to select the current date, and then another year’s worth of dates. 
 
-<pre>DECLARE @GoDate DATE = GETDATE()
+```sql
+DECLARE @GoDate DATE = GETDATE()
 ;WITH DateCTE (CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear) AS 
 ( SELECT @GoDate, 
 	DATEPART(YY, @GoDate), 
@@ -73,29 +77,35 @@ First, I’m going to build a recursive CTE to select the current date, and then
 SELECT CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear
 FROM DateCTE AS DC 
 OPTION(MAXRECURSION 365);
-GO</pre>
+GO
+```
 
 **Breaking It Down** 
 
 I declare my starting date variable (@GoDate), and define my CTE, listing what columns I want to return.
 
-<pre>DECLARE @GoDate DATE = GETDATE()
-;WITH DateCTE (CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear) AS</pre>
+```sql
+DECLARE @GoDate DATE = GETDATE()
+;WITH DateCTE (CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear) AS
+```
 
 The first query is the base query, to define where the recursion will start – the **anchor member**. 
 
-<pre>( SELECT @GoDate, 
+```sql
+( SELECT @GoDate, 
 	DATEPART(YY, @GoDate), 
 	DATEPART(QQ, @GoDate), 
 	DATEPART(MM, @GoDate), 
 	DATEPART(WW, @GoDate), 
 	DATEPART(DW, @GoDate), 
 	DATEPART(DD, @GoDate), 
-	DATEPART(DY, @GoDate) </pre>
+	DATEPART(DY, @GoDate) 
+```
 
 Then, the beauty of a CTE: it can reference itself, as I demonstrate with the UNION ALL and second query. This is the **recursive member**. Note that my FROM is not another table, but rather DateCTE. 
 
-<pre>UNION ALL 
+```sql
+UNION ALL 
   SELECT DATEADD(DD, 1, CalendarDate), 
 	DATEPART(YY, DATEADD(DD, 1, CalendarDate)), 
 	DATEPART(QQ, DATEADD(DD, 1, CalendarDate)), 
@@ -105,7 +115,8 @@ Then, the beauty of a CTE: it can reference itself, as I demonstrate with the UN
 	DATEPART(DD, DATEADD(DD, 1, CalendarDate)), 
 	DATEPART(DY, DATEADD(DD, 1, CalendarDate)) 
   FROM DateCTE 
-)</pre>
+)
+```
 
 The final piece is a query, which is the result of all sets returned by the UNION ALL. In this query, I could also join to other tables, another really beautiful part of the CTE. (I find this especially useful when using CTEs for aggregation. Not to distract you. Or me. I have to finish this post first.) 
 
@@ -113,10 +124,12 @@ Because I don’t have a WHERE clause in my second query, this could be an infin
 
 What I learned while writing this post: if not explicitly specified, the default MAXRECURSION is 100. The range is 0 – 32,767. 0 indicates “no limit”. Also, and I quote from [Books Online][6], “When the specified or default number for MAXRECURSION limit is reached during query execution, the query is ended and an error is returned. Because of this error, all effects of the statement are rolled back. If the statement is a SELECT statement, partial results or no results may be returned. Any partial results returned may not include all rows on recursion levels beyond the specified maximum recursion level.” This will come back to haunt me later, as you will see. 
 
-<pre>SELECT CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear
+```sql
+SELECT CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear
 FROM DateCTE AS DC 
 OPTION(MAXRECURSION 365);
-GO</pre>
+GO
+```
 
 Here are my query results. Note that the count is 366 rows: the original anchor row, plus 365 recursions. ![][7]
 
@@ -124,7 +137,8 @@ Here are my query results. Note that the count is 366 rows: the original anchor 
 
 The query results aren’t very useful if you have to run the query every time you want to use it. Solution: build a table! 
 
-<pre>CREATE TABLE Dates
+```sql
+CREATE TABLE Dates
 (CalendarDate DATE NOT NULL, 
  DateYear INT NOT NULL, 
  DateQuarter INT NOT NULL, 
@@ -132,11 +146,13 @@ The query results aren’t very useful if you have to run the query every time y
  DateWeek INT NOT NULL, 
  DateDayOfWeek INT NOT NULL, 
  DateDay INT NOT NULL, 
- DateDayOfYear INT NOT NULL)</pre>
+ DateDayOfYear INT NOT NULL)
+```
 
 Next, I run the CTE query again, but this time with an INSERT instead of a SELECT. 
 
-<pre>DECLARE @GoDate DATE = GETDATE()
+```sql
+DECLARE @GoDate DATE = GETDATE()
 ;WITH DateCTE (CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear) AS 
 ( SELECT @GoDate, 
 	DATEPART(YY, @GoDate), 
@@ -161,18 +177,22 @@ INSERT INTO Dates
 SELECT CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear
 FROM DateCTE AS DC  
 OPTION(MAXRECURSION 365);
-GO </pre>
+GO 
+```
 
 Uh-oh! It blew up! 
 
-<pre>Msg 530, Level 16, State 1, Line 2
-The statement terminated. The maximum recursion 365 has been exhausted before statement completion.</pre>
+```sql
+Msg 530, Level 16, State 1, Line 2
+The statement terminated. The maximum recursion 365 has been exhausted before statement completion.
+```
 
 The MAXRECURSION level was reached, so the results are rolled back. (Remember when I said this would come back to haunt me? This is the ghost.) 
 
 My solution is to set a WHERE clause in the recursive query, limiting the number of days the query is run for. 
 
-<pre>DECLARE @GoDate DATE = GETDATE()
+```sql
+DECLARE @GoDate DATE = GETDATE()
 ;WITH DateCTE (CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear) AS 
 ( SELECT @GoDate, 
 	DATEPART(YY, @GoDate), 
@@ -198,13 +218,16 @@ INSERT INTO Dates
 SELECT CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear
 FROM DateCTE AS DC 
 OPTION(MAXRECURSION 365);
-GO</pre>
+GO
+```
 
 I check my results in the table: 
 
-<pre>SELECT CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear
+```sql
+SELECT CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear
 FROM Dates 
-ORDER BY CalendarDate</pre>
+ORDER BY CalendarDate
+```
 
 My results:
 

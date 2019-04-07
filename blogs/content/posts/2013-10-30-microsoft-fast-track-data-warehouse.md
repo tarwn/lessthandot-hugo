@@ -3,6 +3,7 @@ title: Microsoft Fast Track Data Warehouse – 5 part series on tools developed 
 author: luke7621
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 2189
 excerpt: Series 1
 draft: true
 url: /?p=2189

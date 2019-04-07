@@ -3,6 +3,7 @@ title: Applying Kanban to IT Processes (Part 5)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2009-12-30T12:58:17+00:00
+ID: 654
 url: /index.php/itprofessionals/itservicemanagement/applying-kanban-to-it-processes-part-5/
 views:
   - 15667
@@ -81,7 +82,7 @@ It is hoped that these three examples are close enough to other tasks in our res
   * A database administrator can start looking at their transaction queue mechanisms and create a Kanban-like visualization of the process to help clear the bottlenecks by focusing improvements where they would count the most.
   * A Systems Administrator can design a system review and upgrade schedule for each of their functional areas and start looping the entire list of areas through that process, each time reducing the work or time involved in evaluating new technology options or implementing patches and maintenance.
 
-This series is not going to be the last time I talk about Kanban, but I will also discuss a number of other practices, philosophies, or technologies. If there are further questions, topics of interest, or even if you want to argue about the efficacy of Kanban, feel free to post in the <a href=""http://forum.lessthandot.com" title="To the Forums!">Forums</a>. 
+This series is not going to be the last time I talk about Kanban, but I will also discuss a number of other practices, philosophies, or technologies. If there are further questions, topics of interest, or even if you want to argue about the efficacy of Kanban, feel free to post in the <a href=""http://forum.ltd.local" title="To the Forums!">Forums</a>. 
 
 ### Thanks
 

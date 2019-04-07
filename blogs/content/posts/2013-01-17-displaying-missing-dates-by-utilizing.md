@@ -3,6 +3,7 @@ title: Displaying missing dates by utilizing a calendar table
 author: SQLDenis
 type: post
 date: 2013-01-17T23:59:00+00:00
+ID: 1922
 excerpt: |
   We got a question today from a user who wanted to display counts of zero where dates were missing. For example if you had the following data
   
@@ -39,7 +40,8 @@ We got a question today from a user who [wanted to display counts of zero where 
 2013-01-05	2
 2013-01-07	1
 2013-01-08	1
-2013-01-09	2</pre>
+2013-01-09	2
+</pre>
 
 What you really wanted is the following
 
@@ -47,9 +49,9 @@ What you really wanted is the following
 2013-01-01	2
 2013-01-02	2
 2013-01-03	1
-<strong&gt;2013-01-04	0</strong&gt;
+<strong>2013-01-04	0</strong>
 2013-01-05	2
-<strong&gt;2013-01-06	0</strong&gt;
+<strong>2013-01-06	0</strong>
 2013-01-07	1
 2013-01-08	1
 2013-01-09	2</pre>
@@ -60,19 +62,22 @@ Let&#8217;s get started, first we are going to created a calendar table
 
 Here is a simple way to return a bunch of dates
 
-<pre>;with cte as (select row_number() over(order by s1.name) as Row
+sql
+;with cte as (select row_number() over(order by s1.name) as Row
 from sysobjects s1
 cross join sysobjects s2)
 
 
 select  dateadd(day,Row,'20091231') from cte
-where Row < 5114</pre>
+where Row < 5114
+```
 
 That will return dates between 2010-01-01 and 2023-12-31
 
 Now let&#8217;s create the calendar table and insert the rows from the query above
 
-<pre>CREATE TABLE Calendar (SomeDate date not null primary key)
+sql
+CREATE TABLE Calendar (SomeDate date not null primary key)
 GO
 
 ;with cte as (select row_number() over(order by s1.name) as Row
@@ -81,13 +86,15 @@ cross join sysobjects s2)
 
 INSERT Calendar
 select  dateadd(day,Row,'20091231') from cte
-where Row < 5114</pre>
+where Row < 5114
+```
 
 You might want to adjust the range to start earlier or end later for your purpose
 
 Now that the calendar table is ready, let&#8217;s create a fake order table with some dates
 
-<pre>create table SomeData (OrderDate date, SomeCol int)
+sql
+create table SomeData (OrderDate date, SomeCol int)
 insert SomeData values('2013-01-01',1)
 insert SomeData values('2013-01-01',1)
 insert SomeData values('2013-01-02',1)
@@ -98,13 +105,16 @@ insert SomeData values('2013-01-05',1)
 insert SomeData values('2013-01-07',1)
 insert SomeData values('2013-01-08',1)
 insert SomeData values('2013-01-09',1)
-insert SomeData values('2013-01-09',1)</pre>
+insert SomeData values('2013-01-09',1)
+```
 
 Querying from this table&#8230;..
 
-<pre>select OrderDate, count(somecol) as SomeCount
+sql
+select OrderDate, count(somecol) as SomeCount
 from SomeData
-group by OrderDate</pre>
+group by OrderDate
+```
 
 Here are the results
 
@@ -121,7 +131,8 @@ As you can see January 4th and January 6th are missing. Let&#8217;s do a left jo
 
 Here is the code, I will go over it a little later
 
-<pre>-- grab min and max dates or supply range yourself
+sql
+-- grab min and max dates or supply range yourself
 declare @mindate date,@maxdate date
 select @mindate =min(OrderDate),@maxdate = max(OrderDate)
 from SomeData
@@ -135,7 +146,8 @@ from SomeData
 group by OrderDate) x
 on c.SomeDate = x.OrderDate
 where c.SomeDate between @mindate  and @maxdate
-order by c.SomeDate</pre>
+order by c.SomeDate
+```
 
 Running that will give you this
 
@@ -152,7 +164,8 @@ Running that will give you this
 
 So what are we doing in the code? Here it is again
 
-<pre>-- grab min and max dates or supply range yourself
+sql
+-- grab min and max dates or supply range yourself
 declare @mindate date,@maxdate date
 select @mindate =min(OrderDate),@maxdate = max(OrderDate)
 from SomeData
@@ -166,7 +179,8 @@ from SomeData
 group by OrderDate) x
 on c.SomeDate = x.OrderDate
 where c.SomeDate between @mindate  and @maxdate
-order by c.SomeDate</pre>
+order by c.SomeDate
+```
 
 On line 2,3 and 4 we are grabbing the min and max dates and storing those in variables which we will use in the WHERE clause on line 14
   
@@ -188,11 +202,15 @@ Your calendar table does not have to be that simple, you can add IsWeekday, IsWe
 
 You can also have these be computed columns, for example here we are adding a computed column that will have the week number
 
-<pre>ALTER TABLE calendar ADD WeekNum AS DATEPART(wk,SomeDate)</pre>
+sql
+ALTER TABLE calendar ADD WeekNum AS DATEPART(wk,SomeDate)
+```
 
 Now you can see that the column is showing up
 
-<pre>SELECT * FROM Calendar</pre>
+```
+SELECT * FROM Calendar
+```
 
 <pre>SomeDate	WeekNum
 2010-01-01	1
@@ -204,18 +222,23 @@ Now you can see that the column is showing up
 
 And if you add rows, you don&#8217;t have to update the column
 
-<pre>INSERT Calendar values('20240101')</pre>
+sql
+INSERT Calendar values('20240101')
+```
 
 Select what we just inserted
 
-<pre>SELECT * FROM Calendar
-where SomeDate = '20240101'</pre>
+```text
+SELECT * FROM Calendar
+where SomeDate = '20240101'
+```
 
 And here is the result
 
 <pre>SomeDate	WeekNum
-2024-01-01	1</pre>
+2024-01-01	1
+</pre>
 
 That is it for this post, hopefully it will help out somebody and hopefully someone will be adding a calendar table today
 
- [1]: http://forum.lessthandot.com/viewtopic.php?f=17&t=18042
+ [1]: http://forum.ltd.local/viewtopic.php?f=17&t=18042

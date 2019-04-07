@@ -3,6 +3,7 @@ title: 'The Lazy DBA Series: SQL Trace / Profiler'
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-20T11:05:50+00:00
+ID: 875
 excerpt: 'SQL Trace (and use of profiler as a front end to SQL Trace procedures) is far from a secret.  Performance tuning in the days of 2005/2008 has become much easier with the advent of DMVs but SQL Trace still has its place in the realm of, "Why is this happening".  Performance issues real-time and tuning becomes almost, easy while watching exactly what it going on with the batches hitting out database servers.  The only downfall is the impact SQL Trace plays on an active database server.  This can be done strategically and with minimal impact from a well thought through plan of attack.'
 url: /index.php/datamgmt/datadesign/lazy-dba-sql-trace/
 views:

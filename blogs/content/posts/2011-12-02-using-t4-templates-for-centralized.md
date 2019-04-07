@@ -3,6 +3,7 @@ title: Using T4 templates for Centralized Javascript
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-12-02T15:42:00+00:00
+ID: 1404
 excerpt: In my previous post I mentioned that I was looking for an answer to the age-old question of how to manage common CSS and JavaScript across multiple projects (specifically ASP.Net projects). Using T4 templates, I was able to not only create a common location for CSS files, but to take it a step farther and use Less in ordr to simplify that common CSS even further.
 url: /index.php/webdev/serverprogramming/aspnet/using-t4-templates-for-centralized/
 views:
@@ -29,19 +30,21 @@ On the JavaScript side of things I decided to write my own little T4 template. T
 
 My solution layout is similar to the one in the prior post:
 
-<pre>/SolutionName/Common/NN-*.js files
+```text
+/SolutionName/Common/NN-*.js files
 /SolutionName/Project1/scripts/CommonJS.tt
-/SolutionName/Project2/scripts/CommonJS.tt</pre>
-
+/SolutionName/Project2/scripts/CommonJS.tt
+```
 I prefix my common javascript files with a 2-digit number so I can include them in a planned order every time.
 
 **CommonJS.tt**
 
-<pre><#@ template language="C#" hostspecific="True" #&gt;
-<#@ import namespace="System" #&gt;
-<#@ import namespace="System.IO" #&gt;
-<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #&gt;
-<#@ Output Extension=".js" #&gt;
+```C#
+<#@ template language="C#" hostspecific="True" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ Output Extension=".js" #>
 <#
 /*-------------------------------------------------*/
 // Settings      
@@ -52,12 +55,12 @@ Directory.SetCurrentDirectory(Path.GetDirectoryName(Host.TemplateFile) + _target
 
 var filespec = "*.js";
 var files = Directory.GetFiles(".",filespec);
-#&gt;
+#>
 /*
 CommandJavascript.js
-Converted at: <#= DateTime.Now.ToShortDateString() #&gt; <#= DateTime.Now.ToShortTimeString() #&gt;
-File List (<#= files.Length #&gt; Found):
-<#= "t" + String.Join("nt", files) #&gt;
+Converted at: <#= DateTime.Now.ToShortDateString() #> <#= DateTime.Now.ToShortTimeString() #>
+File List (<#= files.Length #> Found):
+<#= "t" + String.Join("nt", files) #>
 */
 <#
 foreach(var jsFile in files) 
@@ -70,8 +73,8 @@ foreach(var jsFile in files)
 	}
 	Write("n/* ----------- " + jsFile + " ----------- */nn");
 }
-#&gt;</pre>
-
+#>
+```
 Place this file in our project, update the _targetDirectory variable and we have a quick way to pull common javascript down to our projects.
 
 The output file is a merged version of all of the *.js files found in the common folder. I also output comments around each file block to make it easy to track back to the original file, if needed.

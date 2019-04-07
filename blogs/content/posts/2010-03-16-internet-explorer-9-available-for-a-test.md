@@ -3,6 +3,7 @@ title: Internet Explorer 9 available for a test drive
 author: SQLDenis
 type: post
 date: 2010-03-16T13:59:00+00:00
+ID: 729
 url: /index.php/webdev/webdesigngraphicsstyling/internet-explorer-9-available-for-a-test/
 views:
   - 14454

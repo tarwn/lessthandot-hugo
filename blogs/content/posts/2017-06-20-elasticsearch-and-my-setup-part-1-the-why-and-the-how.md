@@ -3,6 +3,7 @@ title: 'Elasticsearch and my setup. Part 1: the why and the how.'
 author: Christiaan Baes (chrissie1)
 type: post
 date: 2017-06-20T17:53:24+00:00
+ID: 8675
 url: /index.php/uncategorized/elasticsearch-and-my-setup-part-1-the-why-and-the-how/
 rp4wp_auto_linked:
   - 1

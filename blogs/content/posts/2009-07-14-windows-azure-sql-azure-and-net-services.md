@@ -3,6 +3,7 @@ title: Windows Azure, SQL Azure and .NET Services pricing announced
 author: SQLDenis
 type: post
 date: 2009-07-14T12:55:42+00:00
+ID: 509
 url: /index.php/datamgmt/datadesign/windows-azure-sql-azure-and-net-services/
 views:
   - 7216

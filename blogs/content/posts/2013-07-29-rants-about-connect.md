@@ -3,6 +3,7 @@ title: Rants about Connect
 author: Koen Verbeeck
 type: post
 date: 2013-07-29T12:49:00+00:00
+ID: 2141
 excerpt: 'The site connect.microsoft.com is a wonderful concept: you can provide feedback about the Microsoft products, report bugs and give suggestions directly to the teams responsible for those products. People can vote on items to indicate them as more import&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/rants-about-connect/
 views:

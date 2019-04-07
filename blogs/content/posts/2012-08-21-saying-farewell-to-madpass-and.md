@@ -3,6 +3,7 @@ title: Saying Farewell to MADPASS and Hello to FoxPASS
 author: Jes Borland
 type: post
 date: 2012-08-21T11:26:00+00:00
+ID: 1698
 excerpt: I’ve spent 45 hours driving 2,340 miles in the last 18 months to found and grow MADPASS. Now, it’s time for me to write a new chapter.
 url: /index.php/itprofessionals/professionaldevelopment/saying-farewell-to-madpass-and/
 views:

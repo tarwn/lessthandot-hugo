@@ -3,6 +3,7 @@ title: Running older compatibility levels in newer versions
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-12-28T15:18:38+00:00
+ID: 986
 excerpt: 'One very sound argument that many DBAs have for pushing an upgrade of SQL Server is the fact that you have the ability to leave a database in an older compatibility level.  In some ways, compatibility levels in a SQL Server database govern the feature set that the database will utilize.  SQL Server will treat the database as though it is still being hosted on the server version that matches the compatibility level the database has been left in.'
 url: /index.php/datamgmt/dbadmin/upgrading-comp-level-sql-server/
 views:

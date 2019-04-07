@@ -3,6 +3,7 @@ title: 'MongoDB: How to restore collections'
 author: SQLDenis
 type: post
 date: 2013-01-31T20:08:00+00:00
+ID: 1953
 excerpt: "In yesterday's post MongoDB: How to backup and restore databases we looked at how to backup and restore a database, today we are going to look at how to restore a collection from a backup. Be aware that mongorestore and mongodump have to be executed fro&hellip;"
 url: /index.php/datamgmt/dbadmin/mongodb-how-to-restore-collections/
 views:
@@ -60,7 +61,7 @@ Thu Jan 31 16:16:52     MultiCollection.People to dump/MultiCollection/People.bs
 Thu Jan 31 16:16:52              5 objects
 Thu Jan 31 16:16:52 Metadata for MultiCollection.People to dump/MultiCollection/People.metadata.json
 
-C:NoSQLmongodbbin&gt;</pre>
+C:NoSQLmongodbbin></pre>
 
 Now let&#8217;s add one more item to the People collection
 

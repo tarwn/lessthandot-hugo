@@ -3,6 +3,7 @@ title: Google Interview Questions
 author: SQLDenis
 type: post
 date: 2008-10-08T10:49:16+00:00
+ID: 169
 excerpt: |
   Google Interview Questions
   
@@ -40,4 +41,4 @@ So what do you think, could you answer these questions?
 
 And don&#8217;t forget, if you have any tech questions then don&#8217;t hesitate to ask in our [forums][1]
 
- [1]: http://forum.lessthandot.com/
+ [1]: http://forum.ltd.local/

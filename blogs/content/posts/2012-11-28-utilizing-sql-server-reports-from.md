@@ -3,6 +3,7 @@ title: Utilizing SQL Server Reports from SSMS
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-28T14:25:00+00:00
+ID: 1807
 excerpt: 'I was working with someone today that had little knowledge of navigating SSMS and other common tools for SQL Server.  At times, we really need to step back and remember that not everyone touches a tool like SSMS almost daily.  That is in part a consulti&hellip;'
 url: /index.php/datamgmt/dbadmin/utilizing-sql-server-reports-from/
 views:

@@ -3,6 +3,7 @@ title: Are you ready for SQL Server 2012 or are you still partying like it is 19
 author: SQLDenis
 type: post
 date: 2011-11-27T12:42:00+00:00
+ID: 1397
 excerpt: 'SQL Server 2012 is around the corner, perhaps you are ready to upgrade and perhaps you are not. Maybe you just have upgraded to SQL Server 2008 R2 without software assurance and thus you don’t qualify for SQL Server 2012 upgrades..  Even though most peo&hellip;'
 url: /index.php/datamgmt/datadesign/are-you-ready-for-sql/
 views:

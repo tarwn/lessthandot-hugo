@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 4: Triggers, what to do, what not to do'
 author: SQLDenis
 type: post
 date: 2012-12-04T10:04:00+00:00
+ID: 1823
 excerpt: 'This is day four of the SQL Advent 2012 series of blog posts. Today we are going to look at triggers. Triggers are a great way to keep your database in a consistent state. There are two types of triggers, DML triggers and DLL triggers. DML triggers  res&hellip;'
 url: /index.php/datamgmt/dbprogramming/triggers-what-to-do-what/
 views:

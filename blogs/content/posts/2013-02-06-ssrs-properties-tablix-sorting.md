@@ -3,6 +3,7 @@ title: SSRS Properties – Tablix Sorting
 author: Jes Borland
 type: post
 date: 2013-02-06T10:48:00+00:00
+ID: 1973
 excerpt: The purpose of this property is to sort the results of a tablix in the order you determine.
 url: /index.php/datamgmt/ssrs/ssrs-properties-tablix-sorting/
 views:

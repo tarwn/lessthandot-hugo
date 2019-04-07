@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday 32: A Day in the Life a Grrl Geek'
 author: Jes Borland
 type: post
 date: 2012-07-17T10:28:00+00:00
+ID: 1673
 excerpt: 'It’s T-SQL Tuesday! This month’s topic, A Day in the Life, is hosted by my friend Erin Stellato (blog | twitter).  She wanted each of us to track what we do for a day. I can attest that she will ask you, "What do you do?", earnestly – she did when I wen&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/t-sql-tuesday-32-a/
 views:

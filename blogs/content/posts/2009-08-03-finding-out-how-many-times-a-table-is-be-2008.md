@@ -3,6 +3,7 @@ title: Finding Out How Many Times A Table Is Being Used In Ad Hoc Or Procedure C
 author: SQLDenis
 type: post
 date: 2009-08-03T12:15:54+00:00
+ID: 528
 url: /index.php/datamgmt/dbprogramming/finding-out-how-many-times-a-table-is-be-2008/
 views:
   - 30797
@@ -32,34 +33,46 @@ So let&#8217;s look at some code
   
 First create the following stored procedure
 
-<pre>create proc prTestProc
+sql
+create proc prTestProc
 as
 select * from master..spt_values where type = 'P'
-go</pre>
+go
+```
 
 Now run this query 5 times
 
-<pre>select * from master..spt_values where type = 'P'</pre>
-
+sql
+select * from master..spt_values where type = 'P'
+```
 Run this query 6 times
 
-<pre>select count(*) from master..spt_values where type = 'P'</pre>
+sql
+select count(*) from master..spt_values where type = 'P'
+```
 
 Run this query 7 times
 
-<pre>select count(*) from master..spt_values</pre>
+sql
+select count(*) from master..spt_values
+```
 
 Run this query 8 times
 
-<pre>select count(*) from master..spt_values where type <> 'P'</pre>
+sql
+select count(*) from master..spt_values where type <> 'P'
+```
 
 Run this stored procedure 9 times
 
-<pre>exec prTestProc</pre>
+sql
+exec prTestProc
+```
 
 Now let&#8217;s look at the output. Here is the query that returns all the queries, their execution counts, if they were ad hoc or not and their last execution time. The query works by using the sys.dm\_exec\_query\_stats and sys.dm\_exec\_sql\_text dynamic management views to bring back the SQL statements themselves. 
 
-<pre>SELECT * FROM(SELECT coalesce(object_name(s2.objectid),'Ad-Hoc') as ProcName,execution_count, 
+sql
+SELECT * FROM(SELECT coalesce(object_name(s2.objectid),'Ad-Hoc') as ProcName,execution_count, 
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 , 
       ( (CASE WHEN statement_end_offset = -1 
          THEN (LEN(CONVERT(nvarchar(max),s2.text)) * 2) 
@@ -69,7 +82,8 @@ FROM sys.dm_exec_query_stats AS s1
 CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS s2 ) x
 where sql_statement like '%spt_values%'
 AND sql_statement NOT like 'SELECT * FROM(SELECT coalesce(object_name(s2.objectid)%'
-ORDER BY execution_count desc</pre>
+ORDER BY execution_count desc
+```
 
 Here is the output
 
@@ -78,21 +92,28 @@ prTestProc	9		select * from master..spt_values where type = 'P'  		2009-08-03 10
 Ad-Hoc		8		SELECT COUNT(*) FROM [master]..[spt_values] WHERE [type]<>@1	2009-08-03 10:11:22.857
 Ad-Hoc		7		select count(*) from master..spt_values   			2009-08-03 10:11:19.107
 Ad-Hoc		6		select count(*) from master..spt_values where type = 'P'  	2009-08-03 10:11:15.760
-Ad-Hoc		5		select * from master..spt_values where type = 'P'  		2009-08-03 10:11:12.280</pre>
+Ad-Hoc		5		select * from master..spt_values where type = 'P'  		2009-08-03 10:11:12.280
+</pre>
 
 Let&#8217;s look at the query in more detail
 
 This line below has the name of the table we are searching for
 
-<pre>where sql_statement like '%spt_values%'</pre>
+sql
+where sql_statement like '%spt_values%'
+```
 
 The line below excludes the query that we are running itself since that is not what we want to return
 
-<pre>AND sql_statement NOT like 'SELECT * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid)%'</pre>
+sql
+AND sql_statement NOT like 'SELECT * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid)%'
+```
 
 The line below will return Ad Hoc or the name of the object that the code was in, if s2.objectid is NULL then it was an Ad-Hoc query
 
-<pre>coalesce(object_name(s2.objectid),'Ad Hoc')</pre>
+sql
+coalesce(object_name(s2.objectid),'Ad Hoc')
+```
 
 As you can see this is probably good enough to give you some quick results to find out if a table is used so that you can drop it. The way I do this is I rename the table by prefixing it with 2 underscores, this enables two things for me
   
@@ -106,5 +127,5 @@ Of course you can also run a trace and then store that in a file, this enables y
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

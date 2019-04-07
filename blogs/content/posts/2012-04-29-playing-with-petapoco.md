@@ -3,6 +3,7 @@ title: Playing with PetaPoco
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-04-29T12:40:00+00:00
+ID: 1610
 excerpt: "Since Chrissie is playing around with Simple.Data today, I found some time to play with PetaPoco. PetaPoco is a single file micro ORM that uses MSIL generation to do it's magic. As the name suggests, it works with concrete POCOs, though support for dyna&hellip;"
 url: /index.php/desktopdev/mstech/csharp/playing-with-petapoco/
 views:
@@ -35,35 +36,38 @@ PetaPoco supports SQL Server, SQL Server CE, MySQL, PostgreSQL and Oracle, and w
 
 As Chrissie did in his post, we&#8217;re going to first create a Compact SQL database, except we&#8217;ll be doing it in C#.
 
-<pre>private SqlCeEngine CreateDatabase() {
+```csharp
+private SqlCeEngine CreateDatabase() {
 	if (File.Exists("test.sdf")) File.Delete("test.sdf");
 
 	string connectionString = "DataSource="test.sdf"; Password="chrissiespassword"";
 	var en = new SqlCeEngine(connectionString);
 	en.CreateDatabase();
 	return en;
-}</pre>
-
+}
+```
 Now that we have Chrissie&#8217;s database, lets add his table.
 
-<pre>private void CreateTable() {
+```csharp
+private void CreateTable() {
 	using (var db = new Database("DataSource="test.sdf"; Password="chrissiespassword"", "System.Data.SqlServerCe.4.0")) {
 		db.Execute("CREATE TABLE Person (LastName nvarchar (40) NOT NULL, FirstName nvarchar (40))");
 	}
-}</pre>
-
+}
+```
 This statement was quite a bit shorter using PetaPoco then it was with Simple.Data. The Database object takes care of the connection and command work for us, leaving us just the bits that are specific to our individual scenario. We still have the option of providing an IDbConnection if we want, which would be handy if we were using something like Sam Saffron&#8217;s [MiniProfiler][9] and wanted to pass in a profiled connection object.
 
 Because we want to play with concrete POCOs, I&#8217;m going to add a very plain POCO and a very basic decorated POCO:
 
-<pre>public class Person {
+```csharp
+public class Person {
 	public string LastName { get; set; }
 	public string FirstName { get; set; }
 }
 
 [PetaPoco.TableName("Person")]
-public class DecoratedPerson : Person { }</pre>
-
+public class DecoratedPerson : Person { }
+```
 There are also attributes for the primary key* and the ability to explicitly define columns so PetaPoco will know which columns should be included in queries and which should not.
 
 _I have to say I was surprised Chrissie didn&#8217;t include a Primary Key given how many DBAs and DB Developers also blog here, brave man 😉_
@@ -74,37 +78,42 @@ So as chrissie pointed out in his post, we&#8217;ve got the basic setup behind u
 
 With a database created, lets go ahead and add some data to play with.
 
-<pre>db.Insert("Person", null, new Person() { LastName = "lastname1", FirstName = "firstname1" });</pre>
-
+```csharp
+db.Insert("Person", null, new Person() { LastName = "lastname1", FirstName = "firstname1" });
+```
 The first overload of the Insert() method takes a table name, primary key name, and the POCO instance to insert. if we don&#8217;t mind add some decoration to our Person object, we can decorate the POCO with the table name and shrink it to this:
 
-<pre>db.Insert(new DecoratedPerson() { LastName = "lastname2", FirstName = "firstname2" });</pre>
-
+```csharp
+db.Insert(new DecoratedPerson() { LastName = "lastname2", FirstName = "firstname2" });
+```
 This method uses the table name attribute to generate the insert.
 
 And last, if we want to keep our table and object names in sync, we can let reflection magically figure it out:
 
-<pre>db.Insert(new Person() { LastName = "lastname3", FirstName = "firstname3" });</pre>
-
+```csharp
+db.Insert(new Person() { LastName = "lastname3", FirstName = "firstname3" });
+```
 Now that we have some data in our database, lets look at a few ways to get it out.
 
-<pre>// select statement
-var results = db.Query<Person&gt;("SELECT * FROM Person WHERE lastname=@0", "lastname1");
+```csharp
+// select statement
+var results = db.Query<Person>("SELECT * FROM Person WHERE lastname=@0", "lastname1");
 // let PetaPoco generate the SELECT portion 
-var results = db.Query<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");</pre>
-
+var results = db.Query<DecoratedPerson>("WHERE lastname=@0", "lastname1");
+```
 We can execute a parameterized SQL statement fairly easily by using numbered parameters that will line up with the additional arguments we provide. In the second case we&#8217;re actually letting PetaPoco generate the SELECT portion of the statement for us, which will resolve to: <code class="codespan">SELECT [Person].[LastName], [Person].[FirstName] FROM [Person] WHERE lastname=@0</code>.
 
 Executing specifically for a single record instead of querying for a collection is similarly straight forward:
 
-<pre>// select statement
-var result = db.Single<Person&gt;("SELECT * FROM Person WHERE lastname=@0", "lastname1");
+```csharp
+// select statement
+var result = db.Single<Person>("SELECT * FROM Person WHERE lastname=@0", "lastname1");
 Console.WriteLine(String.Format("{0}: {1}", result.GetType(), result));
 
 // let PetaPoco generate the SELECT portion 
-var result = db.Single<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
-Console.WriteLine(String.Format("{0}: {1}", result.GetType(), result));</pre>
-
+var result = db.Single<DecoratedPerson>("WHERE lastname=@0", "lastname1");
+Console.WriteLine(String.Format("{0}: {1}", result.GetType(), result));
+```
 And if we examine the output we&#8217;ll see they are concrete instances of our POCOs, not dynamics or proxies:
   
 <monospace>
@@ -115,19 +124,20 @@ PetaPocoSample.DecoratedPerson: lastname1, firstname1
   
 </monospace>
 
-If we then follow Chrissie&#8217;s lead and add two records into the database that will match this criteria, we&#8217;ll receive an exception, as we would expect from a Single call. PetaPoco also offers a <code class="codespan">First<T&gt;</code> implementation we could use in this situation, a <code class="codespan">SkipTake<T&gt;</code> we could use to get the 2nd record, and a number of different ways to query multiple records out of the database:
+If we then follow Chrissie&#8217;s lead and add two records into the database that will match this criteria, we&#8217;ll receive an exception, as we would expect from a Single call. PetaPoco also offers a <code class="codespan">First<T></code> implementation we could use in this situation, a <code class="codespan">SkipTake<T></code> we could use to get the 2nd record, and a number of different ways to query multiple records out of the database:
 
-<pre>// T
-var result = db.First<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
-// List<T&gt;
-var results = db.SkipTake<DecoratedPerson&gt;(1, 1, "WHERE lastname=@0", "lastname1");
-//IEnumerable<T&gt;
-var results2 = db.Query<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
-//List<T&gt;
-var results3 = db.Fetch<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
-//Page<T&gt; - page #2 and page size of 1
-var results4 = db.Page<DecoratedPerson&gt;(2, 1, "WHERE lastname=@0", "lastname1");</pre>
-
+```csharp
+// T
+var result = db.First<DecoratedPerson>("WHERE lastname=@0", "lastname1");
+// List<T>
+var results = db.SkipTake<DecoratedPerson>(1, 1, "WHERE lastname=@0", "lastname1");
+//IEnumerable<T>
+var results2 = db.Query<DecoratedPerson>("WHERE lastname=@0", "lastname1");
+//List<T>
+var results3 = db.Fetch<DecoratedPerson>("WHERE lastname=@0", "lastname1");
+//Page<T> - page #2 and page size of 1
+var results4 = db.Page<DecoratedPerson>(2, 1, "WHERE lastname=@0", "lastname1");
+```
 ## Conclusion
 
 I haven&#8217;t done much with PetaPoco yet, but just from playing with these basic queries I can tell I want to spend some more time with it. The syntax is clean and focuses on simplifying the bits that are repeated in so many projects (connection and command wrangling, mapping) while leaving me the full power of SQL and not injecting an additional layer of abstraction to try to work through. On top of that, it performs very closely to the speed of hand-coded SqlDataReader statements (results available on [the dapper-dot-net][10] page).

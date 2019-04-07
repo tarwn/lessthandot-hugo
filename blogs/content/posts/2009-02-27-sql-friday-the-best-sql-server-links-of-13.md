@@ -3,6 +3,7 @@ title: SQL Friday, The Best SQL Server Links Of The Past Week Episode 13
 author: SQLDenis
 type: post
 date: 2009-02-27T12:23:52+00:00
+ID: 335
 url: /index.php/datamgmt/datadesign/sql-friday-the-best-sql-server-links-of-13/
 views:
   - 5561
@@ -57,8 +58,8 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [3]: http://feedproxy.google.com/~r/TheHobt/~3/yC00L4Ps7o0/enabling-data-compression-by-default-in.html
  [4]: http://sqlblog.com/blogs/paul_nielsen/archive/2009/02/24/sql-in-the-cloud.aspx
  [5]: http://sqlblog.com/blogs/denis_gobo/archive/2009/02/25/12206.aspx
- [6]: http://forum.lessthandot.com/viewtopic.php?f=17&t=4736
+ [6]: http://forum.ltd.local/viewtopic.php?f=17&t=4736
  [7]: http://feedproxy.google.com/~r/TheHobt/~3/HuP8wH5GltI/always-test-your-assertions-calendar.html
  [8]: http://bret.appspot.com/entry/how-friendfeed-uses-mysql
- [9]: http://forum.lessthandot.com/viewforum.php?f=17
- [10]: http://forum.lessthandot.com/viewforum.php?f=22
+ [9]: http://forum.ltd.local/viewforum.php?f=17
+ [10]: http://forum.ltd.local/viewforum.php?f=22

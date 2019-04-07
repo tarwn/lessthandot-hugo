@@ -3,6 +3,7 @@ title: '2010 stats: most popular posts, search keywords and countries'
 author: SQLDenis
 type: post
 date: 2010-12-31T19:15:00+00:00
+ID: 991
 excerpt: 'A couple of days ago I posted about some stats in the 2010.. a year in stats..browsers, smartphones and windows flavors post. Today we are looking at most popular posts, what the most used search engines keywords were and the top 20 countries where our&hellip;'
 url: /index.php/itprofessionals/ethicsit/2010-stats-most-popular-posts/
 views:

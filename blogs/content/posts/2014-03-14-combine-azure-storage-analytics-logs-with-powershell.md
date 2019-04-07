@@ -3,6 +3,7 @@ title: Combine Azure Storage Analytics Logs with Powershell
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-03-14T15:17:33+00:00
+ID: 2515
 url: /index.php/enterprisedev/cloud/azure/combine-azure-storage-analytics-logs-with-powershell/
 views:
   - 10782
@@ -27,7 +28,8 @@ When you have Storage Analytics transaction logging turned on, it produces trans
 
 At some point, I created a powershell script to do the heavy lifting for me. The goal was to be able to start anywhere in the folder hierarchy and combine the files, converting them from semi-colon to comma-delimited as it went. This way I could download one or more folders from any level to a single folder, run the powershell script, and spend my time filtering and querying in the resulting CSV instead of digging through multiple files.
 
-<pre>param (
+```powershell
+param (
     [string]
     [Alias("i")]
     $InputFolder = ".",
@@ -40,8 +42,8 @@ $Headers = "Log Version"," Transaction Start Time"," REST Operation Type"," Requ
 
 ($Headers -Join ",") | Set-Content $OutputFile
 
-dir -recurse $InputFolder -Include "*.log" | %{ Import-Csv $_.FullName -Delimiter ";" -Header $Headers | ConvertTo-Csv -Delimiter "," -NoTypeInformation | select -skip 1 | Add-Content $OutputFile }</pre>
-
+dir -recurse $InputFolder -Include "*.log" | %{ Import-Csv $_.FullName -Delimiter ";" -Header $Headers | ConvertTo-Csv -Delimiter "," -NoTypeInformation | select -skip 1 | Add-Content $OutputFile }
+```
 Running it from a powershell prompt is easy. I downloaded a different hour&#8217;s worth of blob transactions to a folder named &#8220;blob\_2014\_03_11&#8221; and then ran:
 
 `.\CombineLogFiles.ps1  "blob_2014_03_11\1200" combinedfiles.csv` 

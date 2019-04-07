@@ -3,6 +3,7 @@ title: Moving on
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-11-15T11:12:26+00:00
+ID: 950
 excerpt: 'After this week comes to an end, I will be moving to the Magenic family.  I say family because over the months of talking to them I quickly realized that the group at Magenic truly is a family.  Not only one that holds themselves together with a high level of expertise but one that openly draws off each others knowledge and skills.'
 url: /index.php/itprofessionals/professionaldevelopment/my-new-home-with-magenic/
 views:

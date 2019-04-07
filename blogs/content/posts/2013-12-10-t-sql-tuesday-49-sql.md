@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #49: SQL Server, Waits, and You'
 author: Jes Borland
 type: post
 date: 2013-12-10T16:01:00+00:00
+ID: 2205
 excerpt: "It's the monthly blog challenge known as T-SQL Tuesday! Edition 49 is being hosted by Robert Davis, and he wants us to wait around. No, that's not right - he wants us to write about waiting. Yeah, that's it."
 url: /index.php/webdev/business-intelligence/t-sql-tuesday-49-sql/
 views:

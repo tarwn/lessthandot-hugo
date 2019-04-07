@@ -3,6 +3,7 @@ title: Using Azure Functions to add a Contact Form to a Static Site
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-01-27T15:28:45+00:00
+ID: 4979
 url: /index.php/enterprisedev/cloud/azure/using-azure-functions-to-add-a-contact-form-to-a-static-site/
 views:
   - 13766
@@ -76,17 +77,18 @@ We now have the &#8220;hello world&#8221; version of a webhook, let&#8217;s add 
 
 The function starts with some generated code that matches the variable names in the Trigger and Output (I picked C#, JavaScript is also an option), attempts to pull a value out of the querystring, and returns a &#8220;Hello&#8221; response:
 
-<pre>using System.Net;
+```csharp
+using System.Net;
 
-public static async Task<HttpResponseMessage&gt; Run(HttpRequestMessage req, TraceWriter log)
+public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
     // ... sample code we don't need that pulls name from querystring ...
 
     return name == null
         ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body")
         : req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
-}</pre>
-
+}
+```
 Before we start in on the email code, let&#8217;s start by not putting the secrets right in the code. Functions have a built in method to manage secrets, but they&#8217;re not terribly easy to find. Click the &#8220;Function app settings&#8221; menu option at the bottom left to get to this screen:
   
 
@@ -121,18 +123,19 @@ This will open another blade to the right. One of the sections is the &#8220;App
 
 Now we can add some basic validation and some fairly standard &#8220;send an email&#8221; code. I&#8217;m accessing the stored secrets above via ConfigurationManager.AppSettings, as I would if you were writing a .Net application with an app.config. 
 
-<pre>using System.Configuration;
+```csharp
+using System.Configuration;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 
-public static async Task<HttpResponseMessage&gt; Run(HttpRequestMessage req, TraceWriter log)
+public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
     log.Info("C# HTTP trigger function processed a request.");
 
     // 1: Get request body + validate required content is available
     var postData = await req.Content.ReadAsFormDataAsync();
-    var missingFields = new List<string&gt;();
+    var missingFields = new List<string>();
     if(postData["fromEmail"] == null)
         missingFields.Add("fromEmail");
     if(postData["message"] == null)
@@ -174,8 +177,8 @@ public static async Task<HttpResponseMessage&gt; Run(HttpRequestMessage req, Tra
             message = $"Email has not been sent: {ex.GetType()}"            
         });
     }
-}</pre>
-
+}
+```
 With the code in place, we can use a tool like Postman to fire off some test POSTs and verify all the pieces are connected.
 
 Don&#8217;t grab the URL above your code screen yet, it probably has an Administrative key coded into it. Open the &#8220;Keys&#8221; panel from the button (#1 below) in the top right and select the &#8220;default&#8221; key in the &#8220;Function Keys&#8221; list. When you do this, it will update the Function Url (#3) above the code panel to include this key instead of one of the Admin keys. As a final step, click the &#8220;Logs&#8221; (#2) button to open the log so you can see compile and run logs when it builds or is triggered. Now copy the Function URL (#3) so we can paste it into Postman to start testing.
@@ -224,48 +227,22 @@ Success!
 
 Now we just need to switch from Postman to using an HTML form. Here&#8217;s a quick sample:
 
-<pre><h1&gt;Contact Form</h1&gt;
+```csharp
+# Contact Form
 Send me a message! (Congratulations for finding this, it's not an official part of the site!)
-<div id="contactForm"&gt;
-    Your Email: <input type="text" name="fromEmail" /&gt;<br /&gt;
-    Message: <br /&gt;
-    <textarea cols="60" rows="4" name="message"&gt;</textarea&gt;<br /&gt;
-    <input type="submit" value="Send!" /&gt;
-</div&gt;
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;</script&gt;
-<script type="text/javascript"&gt;
-    var url = "https://eli-contactform.azurewebsites.net/api/contact?code=1pabaq6cdy2tt3f43t4uuqsemi8429ygl2n4ca6m9utugoz2gldiw15i5t61ew3pzzb7n60mb1emi";
-    $("form").on('submit', function (event) {
-        event.preventDefault();
 
-        // grab contact form data
-        var data = $(this).serialize();
+<div id="contactForm">
+  Your Email: <input type="text" name="fromEmail" /><br />
+      Message: <br />
+      <textarea cols="60" rows="4" name="message"></textarea><br />
+      <input type="submit" value="Send!" />
+  
+</div>
 
-        // hide prior errors, disable inputs while we're submitting
-        $("#contactFormError").hide();
-        $("#contactForm input").prop('disabled', true);
 
-        // back in my day, we had to AJAX uphill both ways, in the snow, through cross-iframe scripts
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: data,
-            dataType: "text",
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            success: function (respData) {
-                // Yay, success!!
-                $("#contactForm").html("<div style='padding: 5em 1em; text-align: center; color: #008800'&gt;" + respData + "</div&gt;");
-            },
-            error: function (jqXHR) {
-                // Boo, error...
-                $("#contactFormError").html("<div style='padding: 1em; text-align: center; color: #660000'&gt;Sorry, an error occurred: " + jqXHR.responseText + "</div&gt;");
-                $("#contactFormError").show();
-                $("#contactForm input").prop('disabled', false);
-            }
-        });
-    });
-</script&gt;</pre>
+
+```
 
 I use jQuery to post the form content because the Azure Function isn&#8217;t going to return a pretty HTML page. This way I can capture the output and use jQuery to tel the user whether it was successful or not.
 

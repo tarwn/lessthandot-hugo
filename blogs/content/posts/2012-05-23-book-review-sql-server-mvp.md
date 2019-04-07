@@ -3,6 +3,7 @@ title: 'Book Review: SQL Server MVP Deep Dives'
 author: Jes Borland
 type: post
 date: 2012-05-23T13:08:00+00:00
+ID: 1636
 excerpt: 'In another life, I’m a professional bookworm who gets to read and review books full-time. My latest SQL read was SQL Server MVP Deep Dives. It’s a compilation – 59 chapters – on various SQL Server topics, written by&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/book-review-sql-server-mvp/
 views:

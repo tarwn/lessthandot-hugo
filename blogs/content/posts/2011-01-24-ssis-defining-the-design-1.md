@@ -3,6 +3,7 @@ title: Backup file contents with SSIS – Defining the Design
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-01-24T11:03:00+00:00
+ID: 1006
 excerpt: 'SSIS has given SQL Server a powerful and extremely useful ETL platform.  With this ETL platform we have also gained the ability to build packages that can perform higher level tasks that were once impossible or very difficult in SQL Server.  To accomplish some tasks, external executable, scripts and interfaces were development while only having the ability o utilize the SQL Server Agent as a scheduling system.  Tasks such as automated backup and restore, file services, security audits and monitoring were all done with those methods but now can be encapsulated directly in SSIS and thus, held directly within out SQL Server environments.'
 url: /index.php/datamgmt/datadesign/ssis-defining-the-design-1/
 views:

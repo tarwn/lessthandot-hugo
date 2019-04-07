@@ -3,6 +3,7 @@ title: 12 ways to break your database server before the first transaction
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-05-19T10:15:58+00:00
+ID: 794
 excerpt: 'Defaults hurt.  They take a 3 inch splinter and try to bury it as far up and under your nail as far as they possibly can.  Every database server has a task.  A mission if you will.  That mission is to serve the data and secure the data.  Some need 32GB of RAM; some need 3GB of RAM.  This one might need 32 spindles on RAID 3 billion.'
 url: /index.php/datamgmt/datadesign/configuring-sql-server-dba/
 views:

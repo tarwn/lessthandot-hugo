@@ -3,6 +3,7 @@ title: Balsamiq Mockups – Turn Any Computer Into a Napkin
 author: Alex Ullrich
 type: post
 date: 2009-11-05T15:30:31+00:00
+ID: 606
 url: /index.php/webdev/webdesigngraphicsstyling/balsamiq-mockups-turn-any-computer-into/
 views:
   - 7458

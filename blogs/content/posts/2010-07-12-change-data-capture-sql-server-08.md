@@ -3,6 +3,7 @@ title: Change Data Capture rundown 100 (setup)
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-07-12T21:46:57+00:00
+ID: 842
 excerpt: |
   Many times as a database administrator, you're going to find yourself being asked, "When did this change?"  In fact, it is a common question that can come in so often, if you don't have the answer readily available, the business will quickly become frustrated with you.  This can have an adverse effect on your reputation of being able to manage the databases in question.
 url: /index.php/datamgmt/datadesign/change-data-capture-sql-server-08/
@@ -48,10 +49,12 @@ We are going to go through a step-by-step to get CDC going without falling into 
 
 To ensure CDC is not setup, we can check sys.databases and the is\_cdc\_enabled column. You will see either a 1 for enabled or 0 for disabled. 
 
-<pre>SELECT database_id ,
+sql
+SELECT database_id ,
         name ,
         is_cdc_enabled
-FROM sys.databases</pre>
+FROM sys.databases
+```
 
 Security for CDC is handled differently at each level from the database to the tables you enlist. You must first enable CDC for the database itself. In order to accomplish this you must be in the sysadmin server role. Once enabled on the database level, any database user that is in the db_owner database role can then enable tables in the database for CDC.
 
@@ -59,11 +62,13 @@ If is\_cdc\_enabled is set to 0, use sys.sp\_cdc\_enable\_db to enable CDC. sys.
 
 Below is something you could run as a check and enable task:
 
-<pre>If (select is_cdc_enabled from sys.databases where [name] = 'AdventureWorks') = 0
+sql
+If (select is_cdc_enabled from sys.databases where [name] = 'AdventureWorks') = 0
  begin
 	Exec sys.sp_cdc_enable_db
 	print 'CDC Enabled'
- end</pre>
+ end
+```
 
 If you run into a failure to authenticate:
   
@@ -83,7 +88,9 @@ If you run into a failure to authenticate:
 
 It is due to a bad owner state. You can fix this by running: 
 
-<pre>exec sp_changedbowner 'sa','dbo'</pre>
+sql
+exec sp_changedbowner 'sa','dbo'
+```
 
 Now that the database is enabled for CDC, we can move to enabling a table to start tracking change in the data. 
 
@@ -99,7 +106,8 @@ We will show the filegroup practice so let&#8217;s create a filegroup for our CD
 
 **Create a filegroup** 
 
-<pre>USE master
+sql
+USE master
 GO
 ALTER DATABASE AdventureWorks
 ADD FILEGROUP CDCDataStore;
@@ -114,13 +122,15 @@ ADD FILE
     FILEGROWTH = 500MB
 )
 TO FILEGROUP CDCDataStore;
-GO</pre>
+GO
+```
 
 To enable CDC, we use sys.sp\_cdc\_enable_table as mentioned earlier. 
 
 Run the following to enable CDC on the table Employee in the AdventureWorks database (the entire table will be monitored):
 
-<pre>USE AdventureWorks
+sql
+USE AdventureWorks
 GO
 EXEC sys.sp_cdc_enable_table
 @source_schema = N'HumanResources',
@@ -128,7 +138,8 @@ EXEC sys.sp_cdc_enable_table
 @role_name     = N'CDCRoles',
 @filegroup_name = N'CDCDataStore',
 @supports_net_changes = 1
-GO</pre>
+GO
+```
 
 > <span class="MT_red">Note: cdc agents need to be running, so the SQL Server agent needs to be running.</span>
 
@@ -146,24 +157,31 @@ Once you execute the enabling table procedure, some table valued functions will 
 
 To obtain the latest and first LSN we can use sys.fn\_cdc\_getmax_lsn and min:
 
-<pre>select sys.fn_cdc_get_min_lsn('HumanResources_Employee');
-select sys.fn_cdc_get_max_lsn</pre>
+sql
+select sys.fn_cdc_get_min_lsn('HumanResources_Employee');
+select sys.fn_cdc_get_max_lsn
+```
+
 
 **Putting this to work to review CDC**
 
-<pre>declare @begin binary(10), @end binary(10);
+sql
+declare @begin binary(10), @end binary(10);
 set @begin = sys.fn_cdc_get_min_lsn('HumanResources_Employee');
 set @end = sys.fn_cdc_get_max_lsn();
 select * from cdc.fn_cdc_get_all_changes_HumanResources_Employee(@begin,@end,'all update old');
-go</pre>
+go
+```
 
 Time to play with what we&#8217;ve setup on the Employee table. Let&#8217;s break login id for employeeid 1
 
-<pre>select * from HumanResources.Employee
+sql
+select * from HumanResources.Employee
 --adventure-worksguy1 „²we'll take the first one
 update HumanResources.Employee
 set LoginID = 'adventure-worksguy' 
-where EmployeeID = 1</pre>
+where EmployeeID = 1
+```
 
 CDC should have captured the change of the string adventure-worksguy1 to adventure-worksguy
 
@@ -186,10 +204,12 @@ We already have CDC enabled, so executing the Update statement again, the cost i
 
 To disable CDC on a table we use the, sys.sp\_cdc\_disable_table procedure as shown below:
 
-<pre>exec sys.sp_cdc_disable_table 
+sql
+exec sys.sp_cdc_disable_table 
   @source_schema = 'HumanResources', 
   @source_name = 'Employee',
-  @capture_instance = 'HumanResources_Employee'</pre>
+  @capture_instance = 'HumanResources_Employee'
+```
 
 After disabling CDC table instance for Employee, we hit 11ms averages.
 

@@ -3,6 +3,7 @@ title: 'Does updating a column to itself get logged? #TSQL2sday 31'
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-06-12T12:04:00+00:00
+ID: 1649
 excerpt: |
   Does updating a column to itself get logged?
   T-SQL Tuesday #31, hosted by Aaron Nelson this month, asked the SQL community to write about logging.  Logging is an open door into many topics and could pertain to error logging, logging with monitoring, SQ&hellip;
@@ -45,7 +46,8 @@ For the examples below, [Process Monitor][3] will be used to monitor the ldf fil
 
 Below, the example will run through showing updates referring to a primary key or clustered index that affects logging.
 
-<pre>CREATE TABLE tblPrimaryKeyUpdate (
+sql
+CREATE TABLE tblPrimaryKeyUpdate (
 	ID1 INT
 	,ID2 INT
 	,COLVAL VARCHAR(10) PRIMARY KEY (
@@ -57,13 +59,17 @@ Insert one row into the table.
 INSERT INTO tblPrimaryKeyUpdate
 SELECT 1
 	,2
-	,'Case 1'</pre>
+	,'Case 1'
+```
 
 We do not need any more data than the one row to complete the test.
 
 Run a CHECKPOINT to ensure everything that was just logged to the transaction log is flushed.
 
-<pre>CHECKPOINT</pre>
+sql
+CHECKPOINT
+```
+
 
  
 
@@ -75,14 +81,20 @@ Run a CHECKPOINT to ensure everything that was just logged to the transaction lo
 
 Review the transaction log contents using fn_dblog function.
 
-<pre>SELECT * FROM fn_dblog(NULL, NULL)</pre>
+sql
+SELECT * FROM fn_dblog(NULL, NULL)
+```
+
 
  
 
 The above results show the checkpoint and only in the transaction log currently.  Now that the transaction log is cleared of any previous changes, the table and row inserted into tblPrimaryKeyUpdate can be updated.  In this test, we will update the column, COLVAL to itself.
 
-<pre>UPDATE tblPrimaryKeyUpdate 
-SET COLVAL = COLVAL</pre>
+sql
+UPDATE tblPrimaryKeyUpdate 
+SET COLVAL = COLVAL
+```
+
 
 From the results shown in process monitor
 
@@ -96,8 +108,10 @@ From the results shown in process monitor
 
 We see that there was no activity on the ldf file from the update statement that was executed.   Rerun the statement to review the results from fn_dblog.  From the results, you’ll see that the transaction log has not logged any new rows.  This is due to the update statement not altering either column that is part of the composite key.  Next, update one of the ID columns to the same value.
 
-<pre>UPDATE tblPrimaryKeyUpdate
-SET ID1 = ID1</pre>
+sql
+UPDATE tblPrimaryKeyUpdate
+SET ID1 = ID1
+```
 
 Rerun fn_dblog again and review the results.
 
@@ -117,15 +131,18 @@ The second scenario that is taken into account is, is the table a HEAP table?  
 
 For example, create a HEAP table as shown below.
 
-<pre>CREATE TABLE tblHEAPUpdate (
+sql
+CREATE TABLE tblHEAPUpdate (
 	ID1 INT
 	,ID2 INT
 	,COLVAL VARCHAR(10)
-	)</pre>
+	)
+```
 
 Use the same insert and update statements from the examples working on tblPrimaryKeyUpdate by changing the table name.  Make sure a CHECKPOINT is executed again prior to the update statements.
 
-<pre>CREATE TABLE tblHEAPUpdate (
+sql
+CREATE TABLE tblHEAPUpdate (
 	ID1 INT
 	,ID2 INT
 	,COLVAL VARCHAR(10)
@@ -139,7 +156,8 @@ SELECT 1
 CHECKPOINT
 
 UPDATE tblHEAPUpdate
-SET COLVAL = COLVAL</pre>
+SET COLVAL = COLVAL
+```
 
 Rerun the select on fn_dblog and review the results.
 

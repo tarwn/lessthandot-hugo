@@ -3,6 +3,7 @@ title: Writing another chapter in my career book
 author: Jes Borland
 type: post
 date: 2015-03-03T01:40:00+00:00
+ID: 3279
 url: /index.php/uncategorized/writing-another-chapter-in-my-career-book/
 views:
   - 7949

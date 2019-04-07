@@ -3,6 +3,7 @@ title: Extracting numbers with SQL Server
 author: George Mastros (gmmastros)
 type: post
 date: 2008-12-12T17:50:48+00:00
+ID: 251
 excerpt: "We all have perfectly normalized tables, with perfectly scrubbed data, right?  I wish!  Sometimes we are stuck with dirty data in legacy applications.  What's worse is that we are sometimes expected to do interesting things with dirty data.  In this blo&hellip;"
 url: /index.php/datamgmt/datadesign/extracting-numbers-with-sql-server/
 views:
@@ -48,20 +49,22 @@ Next step is to get the left part of the substring, which will return just the n
 
 Now, I will admit that this is a very ugly formula to use. However, there is a high probability that it is re-usable. Because of this, it would make a nice little function to have in our SQL Arsenal.
 
-<pre>Create Function dbo.GetNumbers(@Data VarChar(8000))
+sql
+Create Function dbo.GetNumbers(@Data VarChar(8000))
 Returns VarChar(8000)
 AS
 Begin	
     Return Left(
              SubString(@Data, PatIndex('%[0-9.-]%', @Data), 8000), 
              PatIndex('%[^0-9.-]%', SubString(@Data, PatIndex('%[0-9.-]%', @Data), 8000) + 'X')-1)
-End</pre>
-
+End
+```
 Now, we can use this function wherever we need it. As a final step, let&#8217;s test it on our sample data. Before doing this, let&#8217;s think about other data that could potentially cause us problems. We should test an empty string, NULL, a string without any numbers, and a string that contains multiple numbers separated by characters.
   
 Declare @Temp Table(Data VarChar(60))
 
-<pre>Insert Into @Temp Values('2.1 miles')
+sql
+Insert Into @Temp Values('2.1 miles')
 Insert Into @Temp Values('4 miles')
 Insert Into @Temp Values('Approximately 6.5 miles')
 Insert Into @Temp Values('3.9')
@@ -72,7 +75,8 @@ Insert Into @Temp Values('No Numbers Here')
 Insert Into @Temp Values('approximately 2.5 miles, but less than 3')
 
 Select Data, dbo.GetNumbers(Data)
-From   @Temp</pre>
+From   @Temp
+```
 
 The results are:
 

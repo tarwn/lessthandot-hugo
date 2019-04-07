@@ -3,6 +3,7 @@ title: Getting SSRS Subscriptions for a Specific Date
 author: Kevin Conan
 type: post
 date: 2012-11-20T20:32:00+00:00
+ID: 1795
 excerpt: |
   The Back Story
   
@@ -92,7 +93,8 @@ The query returns the Path to the Report, the Report Name, the owner of the Subs
 
 This by no means a finished and completely polished query, but rather a good starting point for others to use for their purposes.
 
-<pre>DECLARE	 @Date			DATETIME
+sql
+DECLARE	 @Date			DATETIME
 		,@DaysOfWeek	INT
 		,@DaysOfMonth	INT;
 		
@@ -136,4 +138,5 @@ SELECT DISTINCT
 	  JOIN ReportServer.dbo.Users U 
 	    ON U.UserID = SB.OwnerID
 		) SUB
- CROSS APPLY Ext.nodes('/ParameterValues/ParameterValue') AS SubEMail(EMail) WHERE 	EMail.value('Value[1]','VARCHAR(1000)') LIKE '%[^ ]@%';</pre>
+ CROSS APPLY Ext.nodes('/ParameterValues/ParameterValue') AS SubEMail(EMail) WHERE 	EMail.value('Value[1]','VARCHAR(1000)') LIKE '%[^ ]@%';
+```

@@ -3,6 +3,7 @@ title: Six (and a bit) years of LessThanDot, Visualized
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-05-05T16:34:13+00:00
+ID: 2601
 url: /index.php/datamgmt/datadesign/six-and-a-bit-years-of-lessthandot-visualized/
 featured_image: /wp-content/uploads/2014/05/blogs_image.png
 views:
@@ -29,7 +30,8 @@ This is by no means a polished, automated process, but here is how I converted W
 
 First I queried MySQL for the post data:
 
-<pre>SELECT 
+```sql
+SELECT 
    UNIX_TIMESTAMP(CASE WHEN P.post_date_gmt < '2001-1-1' THEN P.post_date ELSE P.post_date_gmt END) AS "timestamp",
    U.display_name, 
    (CASE post_type WHEN 'post' THEN 'A' WHEN 'revision' THEN 'M' ELSE post_type END) as "change", 
@@ -41,27 +43,28 @@ FROM wp_posts P
    INNER JOIN wp_term_taxonomy TT ON TT.term_taxonomy_id = TR.term_taxonomy_id
    LEFT JOIN wp_term_relationships TR2 ON TR2.object_id = P.ID AND TR2.term_taxonomy_id < TR.term_taxonomy_id
 WHERE P.post_type IN ('post','revision')
-   AND P.post_status <&gt; 'auto-draft'
-   AND post_title <&gt; ''
+   AND P.post_status <> 'auto-draft'
+   AND post_title <> ''
    AND TT.taxonomy = 'category'
    AND TR2.term_taxonomy_id IS NULL
-ORDER BY P.post_date</pre>
-
+ORDER BY P.post_date
+```
 Note that I gathered both additions and revisions, filtering out only drafts. I did have a few posts without a valid GMT date, so I failed those over to the local post date. Because we assign multiple categories to posts, I needed to be careful to select only a single one for each post.
 
 ### 2. Query Categories from WordPress
 
 Next I needed the categories (terms) from WordPress. 
 
-<pre>SELECT 
+```sql
+SELECT 
    TT.term_taxonomy_id,
    TT.parent,
    T.Name,
    T.slug
 FROM wp_term_taxonomy TT
    INNER JOIN wp_terms T ON T.term_id = TT.term_id
-WHERE taxonomy = 'category'</pre>
-
+WHERE taxonomy = 'category'
+```
 I wasn&#8217;t sure if I was going to use the name or slug in the &#8220;file path&#8221;, so I grabbed both. I also grabbed the parent so I could recursively build the paths in Excel.
 
 ### 3. Generate Category Paths in Excel
@@ -100,12 +103,13 @@ In Column F, I create a value that matches the format for Gource&#8217;s [Custom
 
 Copying that column into a text file gives me something like this:
 
-<pre>1198243476|Christiaan Baes (chrissie1)|A|LessThanDot/Web Developer/Server Programming/ASP.NET/The concepts of OOP|00AEEF
+```text
+1198243476|Christiaan Baes (chrissie1)|A|LessThanDot/Web Developer/Server Programming/ASP.NET/The concepts of OOP|00AEEF
 1202432676|SQLDenis|A|LessThanDot/Data Management/Data Modelling and Design/Review of Inside Microsoft SQL Server 2005 Query Tuning and Optimization|F9AD81
 1204209656|Christiaan Baes (chrissie1)|A|LessThanDot/Desktop Developer/Microsoft Technologies/VB.NET/VS 2008 ErrorMessage|00AEEF
 1204243512|Christiaan Baes (chrissie1)|A|LessThanDot/Desktop Developer/Microsoft Technologies/VB.NET/Listen to yourself|00AEEF
-...</pre>
-
+...
+```
 ### Run Gource
 
 I&#8217;ve done several runs with Gource this weekend, so I&#8217;ve been playing with various combinations of settings. For this video, I wanted to display one of our old LessThanDot footer logos in the bottom right of the visualization, I suppressed the progress bar from the video, and made various tweaks to the time settings to speed up (5.5 years of posts with the default settings would have been loooong). 1280&#215;720 matches YouTube&#8217;s HD setting, and I tweaked the date format and color to make it stand out less.

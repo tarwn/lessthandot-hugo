@@ -3,6 +3,7 @@ title: A couple of things to be aware of when working with tables in SQL Azure
 author: SQLDenis
 type: post
 date: 2012-05-02T23:25:00+00:00
+ID: 1614
 excerpt: |
   I was messing around with SQL Azure today and noticed a couple of things that are not supported compared to the regular version of SQL Server in regards to tables. I will list these in this post.
   
@@ -37,7 +38,9 @@ There is actually no problem creating a table without a clustered index (heap)
   
 If you run this code
 
-<pre>CREATE TABLE Test(bla uniqueidentifier default newid())</pre>
+sql
+CREATE TABLE Test(bla uniqueidentifier default newid())
+```
 
 And then refresh and expand the tables folder, you will see the following
 
@@ -45,7 +48,9 @@ And then refresh and expand the tables folder, you will see the following
 
 Now run the following
 
-<pre>INSERT Test DEFAULT VALUES</pre>
+sql
+INSERT Test DEFAULT VALUES
+```
 
 And here is the error
   
@@ -55,31 +60,39 @@ Tables without a clustered index are not supported in this version of SQL Server
 
 Adding a clustered index and running the insert again fixes this
 
-<pre>CREATE CLUSTERED INDEX ix_Test_bla on Test(bla)
+sql
+CREATE CLUSTERED INDEX ix_Test_bla on Test(bla)
 GO
 
-INSERT Test DEFAULT VALUES</pre>
+INSERT Test DEFAULT VALUES
+```
 
 The problem is that until you try to insert data in your tables, you won&#8217;t see this error, at that point it might be too late and your application will fail
 
 To list all the tables in your database without a clustered index, you can use this code
 
-<pre>SELECT t.name 
+sql
+SELECT t.name 
 FROM sys.tables t
 WHERE NOT EXISTS (	SELECT 1  FROM sys.indexes i
 					WHERE i.type_desc = 'CLUSTERED' 
-					AND i.object_id = t.object_id )</pre>
+					AND i.object_id = t.object_id )
+```
 
 BTW, temporary tables can be created without a clustered index, this runs without a problem
 
-<pre>CREATE TABLE #bla(id int)
-INSERT #bla VALUES(1)</pre>
+sql
+CREATE TABLE #bla(id int)
+INSERT #bla VALUES(1)
+```
 
 ## 2) Global temporary tables are not supported
 
 If you try to create the following global temporary table, you will get an error
 
-<pre>CREATE TABLE ##bla(id int)</pre>
+sql
+CREATE TABLE ##bla(id int)
+```
 
 _Msg 40516, Level 15, State 1, Line 2
   
@@ -91,7 +104,9 @@ I admit that I have only used a global temporary table once or twice in the last
 
 You cannot use select into either in SQL Azure
 
-<pre>SELECT * INTO Testb from Test</pre>
+sql
+SELECT * INTO Testb from Test
+```
 
 Here is the error
   
@@ -105,11 +120,15 @@ I don&#8217;t think this is a big deal either, sure you will have to list all th
 
 Remember this table from before
 
-<pre>CREATE TABLE Test2(bla uniqueidentifier default newid())</pre>
+sql
+CREATE TABLE Test2(bla uniqueidentifier default newid())
+```
 
 Try making that default newsequentialid() instead of newid()
 
-<pre>CREATE TABLE Testb(bla uniqueidentifier default newsequentialid())</pre>
+sql
+CREATE TABLE Testb(bla uniqueidentifier default newsequentialid())
+```
 
 Here is the error message
   

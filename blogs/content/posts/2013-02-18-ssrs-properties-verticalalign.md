@@ -3,6 +3,7 @@ title: SSRS Properties – VerticalAlign
 author: Jes Borland
 type: post
 date: 2013-02-18T12:25:00+00:00
+ID: 1997
 excerpt: The purpose of this property is to let you set the vertical text alignment of a text box or tablix cell.
 url: /index.php/datamgmt/ssrs/ssrs-properties-verticalalign/
 views:

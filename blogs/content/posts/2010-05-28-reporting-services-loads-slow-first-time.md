@@ -3,6 +3,7 @@ title: Report Manager / Report Server Loading Slow Initially
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-05-28T09:47:45+00:00
+ID: 800
 excerpt: 'I’ve been approached on the web in the SQL Community and in person several times with the question; my Reporting Services instances loads Report Manager extremely slow.  In some cases, nothing loads or I give up on both Report Manager and connecting to Report Server.  Why?'
 url: /index.php/datamgmt/datadesign/reporting-services-loads-slow-first-time/
 views:

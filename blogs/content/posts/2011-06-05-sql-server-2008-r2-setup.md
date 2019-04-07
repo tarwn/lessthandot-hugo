@@ -3,6 +3,7 @@ title: SQL Server 2008 R2 Setup starts and then disappears
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-06-06T00:50:00+00:00
+ID: 1204
 excerpt: 'I had an interesting problem tonight.  The symptoms were; after completely uninstalling SQL Server 2000, 2005, 2008 and 2008 R2 from a machine, running the setup to install a new instance would start fine but soon after running, disappear and seem to ha&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-2008-r2-setup/
 views:

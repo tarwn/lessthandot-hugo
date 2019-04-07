@@ -3,6 +3,7 @@ title: Tableau Dashboard Cookbook by Jen Stirrup
 author: Koen Verbeeck
 type: post
 date: 2014-07-07T08:34:57+00:00
+ID: 2815
 url: /index.php/webdev/business-intelligence/tableau-dashboard-cookbook-by-jen-stirrup/
 views:
   - 40197

@@ -3,6 +3,7 @@ title: Activity Monitor to gather statistics and health of SQL Server 2008
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-01-18T12:53:31+00:00
+ID: 679
 excerpt: 'The enhancements to the Activity Monitor were an extremely useful addition to SQL Server 2008.  We can gather a moving view of statistics and the health of the instances we connect to.  In the real world however, the activity monitor loses value when yo&hellip;'
 url: /index.php/datamgmt/dbprogramming/capture-data-from-activity-monitor-2008/
 views:
@@ -45,7 +46,8 @@ Let’s show this by grabbing the query that populates the file information in t
 
 To use this query for ourselves, all we need to do is comment out the INSERT INTO #am_dbfilestats and we can either convert the INSERT INTO to a SELECT INTO statement with our own temporary table or simply use the query as a direct SELECT 
 
-<pre>SELECT 
+sql
+SELECT 
     d.name AS [Database], 
     f.physical_name AS [File], 
     (fs.num_of_bytes_read / 1024.0 / 1024.0) [Total MB Read], 
@@ -55,7 +57,9 @@ To use this query for ourselves, all we need to do is comment out the INSERT INT
     fs.size_on_disk_bytes / 1024 / 1024 AS [Size (MB)]
 FROM sys.dm_io_virtual_file_stats(default, default) AS fs
 INNER JOIN sys.master_files f ON fs.database_id = f.database_id AND fs.file_id = f.file_id
-INNER JOIN sys.databases d ON d.database_id = fs.database_id; </pre></p> 
+INNER JOIN sys.databases d ON d.database_id = fs.database_id; 
+```
+</p> 
 
 We can take this even further by using the statements we captured in order to insert data from SQL Server over a time period.
 

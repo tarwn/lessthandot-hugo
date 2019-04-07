@@ -3,6 +3,7 @@ title: The Tech on Tap v1.2 SharePoint Top 10
 author: Jes Borland
 type: post
 date: 2012-06-11T23:03:00+00:00
+ID: 1648
 excerpt: To sum up my latest adventure, Tech on Tap v1.2 SharePoint, here’s a simple Top 10 List – in no particular order.
 url: /index.php/itprofessionals/professionaldevelopment/the-tech-on-tap-v1/
 views:

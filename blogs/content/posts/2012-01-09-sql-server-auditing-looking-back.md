@@ -3,6 +3,7 @@ title: 'SQL Server Auditing: Looking Back'
 author: SQLArcher
 type: post
 date: 2012-01-09T08:00:00+00:00
+ID: 1483
 excerpt: |
   Over the past couple of weeks, we have looked at the new auditing feature introduced in SQL Server 2008. This post will finish up with the series and will cover the remaining subjects:
    
@@ -50,7 +51,8 @@ _Note. This is necessary to capture the events. Previously a Server Audit Specif
 
 To create the same audit using TSQL(which is easier) is as follows:
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 
 CREATE SERVER AUDIT [Filtered]
@@ -76,8 +78,8 @@ CREATE SERVER AUDIT SPECIFICATION [Server_Spec_Filtering]
 FOR SERVER AUDIT [Filtered]
 ADD (SCHEMA_OBJECT_ACCESS_GROUP)
 WITH (STATE = OFF)
-GO</pre>
-
+GO
+```
 Below is the results of querying an audit file with the filter:
 
 <div class="image_block">
@@ -136,161 +138,162 @@ Audit Files:
 
 Below are the create conditions:
 
-<pre>--- Audit_Condition
+sql
+--- Audit_Condition
 
 Declare @condition_id int
-EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'Audit_Condition', @description=N'', @facet=N'Audit', @expression=N'<Operator&gt;
-  <TypeClass&gt;Bool</TypeClass&gt;
-  <OpType&gt;AND</OpType&gt;
-  <Count&gt;2</Count&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;AND</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Operator&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <OpType&gt;AND</OpType&gt;
-      <Count&gt;2</Count&gt;
-      <Operator&gt;
-        <TypeClass&gt;Bool</TypeClass&gt;
-        <OpType&gt;AND</OpType&gt;
-        <Count&gt;2</Count&gt;
-        <Operator&gt;
-          <TypeClass&gt;Bool</TypeClass&gt;
-          <OpType&gt;AND</OpType&gt;
-          <Count&gt;2</Count&gt;
-          <Operator&gt;
-            <TypeClass&gt;Bool</TypeClass&gt;
-            <OpType&gt;AND</OpType&gt;
-            <Count&gt;2</Count&gt;
-            <Operator&gt;
-              <TypeClass&gt;Bool</TypeClass&gt;
-              <OpType&gt;EQ</OpType&gt;
-              <Count&gt;2</Count&gt;
-              <Attribute&gt;
-                <TypeClass&gt;Bool</TypeClass&gt;
-                <Name&gt;Enabled</Name&gt;
-              </Attribute&gt;
-              <Function&gt;
-                <TypeClass&gt;Bool</TypeClass&gt;
-                <FunctionType&gt;True</FunctionType&gt;
-                <ReturnType&gt;Bool</ReturnType&gt;
-                <Count&gt;0</Count&gt;
-              </Function&gt;
-            </Operator&gt;
-            <Operator&gt;
-              <TypeClass&gt;Bool</TypeClass&gt;
-              <OpType&gt;EQ</OpType&gt;
-              <Count&gt;2</Count&gt;
-              <Attribute&gt;
-                <TypeClass&gt;Numeric</TypeClass&gt;
-                <Name&gt;DestinationType</Name&gt;
-              </Attribute&gt;
-              <Function&gt;
-                <TypeClass&gt;Numeric</TypeClass&gt;
-                <FunctionType&gt;Enum</FunctionType&gt;
-                <ReturnType&gt;Numeric</ReturnType&gt;
-                <Count&gt;2</Count&gt;
-                <Constant&gt;
-                  <TypeClass&gt;String</TypeClass&gt;
-                  <ObjType&gt;System.String</ObjType&gt;
-                  <Value&gt;Microsoft.SqlServer.Management.Smo.AuditDestinationType</Value&gt;
-                </Constant&gt;
-                <Constant&gt;
-                  <TypeClass&gt;String</TypeClass&gt;
-                  <ObjType&gt;System.String</ObjType&gt;
-                  <Value&gt;File</Value&gt;
-                </Constant&gt;
-              </Function&gt;
-            </Operator&gt;
-          </Operator&gt;
-          <Operator&gt;
-            <TypeClass&gt;Bool</TypeClass&gt;
-            <OpType&gt;EQ</OpType&gt;
-            <Count&gt;2</Count&gt;
-            <Attribute&gt;
-              <TypeClass&gt;Numeric</TypeClass&gt;
-              <Name&gt;MaximumFiles</Name&gt;
-            </Attribute&gt;
-            <Constant&gt;
-              <TypeClass&gt;Numeric</TypeClass&gt;
-              <ObjType&gt;System.Double</ObjType&gt;
-              <Value&gt;100</Value&gt;
-            </Constant&gt;
-          </Operator&gt;
-        </Operator&gt;
-        <Operator&gt;
-          <TypeClass&gt;Bool</TypeClass&gt;
-          <OpType&gt;EQ</OpType&gt;
-          <Count&gt;2</Count&gt;
-          <Attribute&gt;
-            <TypeClass&gt;Numeric</TypeClass&gt;
-            <Name&gt;MaximumRolloverFiles</Name&gt;
-          </Attribute&gt;
-          <Constant&gt;
-            <TypeClass&gt;Numeric</TypeClass&gt;
-            <ObjType&gt;System.Double</ObjType&gt;
-            <Value&gt;10</Value&gt;
-          </Constant&gt;
-        </Operator&gt;
-      </Operator&gt;
-      <Operator&gt;
-        <TypeClass&gt;Bool</TypeClass&gt;
-        <OpType&gt;EQ</OpType&gt;
-        <Count&gt;2</Count&gt;
-        <Attribute&gt;
-          <TypeClass&gt;Numeric</TypeClass&gt;
-          <Name&gt;MaximumFileSize</Name&gt;
-        </Attribute&gt;
-        <Constant&gt;
-          <TypeClass&gt;Numeric</TypeClass&gt;
-          <ObjType&gt;System.Double</ObjType&gt;
-          <Value&gt;5</Value&gt;
-        </Constant&gt;
-      </Operator&gt;
-    </Operator&gt;
-    <Operator&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <OpType&gt;EQ</OpType&gt;
-      <Count&gt;2</Count&gt;
-      <Attribute&gt;
-        <TypeClass&gt;Numeric</TypeClass&gt;
-        <Name&gt;MaximumFileSizeUnit</Name&gt;
-      </Attribute&gt;
-      <Function&gt;
-        <TypeClass&gt;Numeric</TypeClass&gt;
-        <FunctionType&gt;Enum</FunctionType&gt;
-        <ReturnType&gt;Numeric</ReturnType&gt;
-        <Count&gt;2</Count&gt;
-        <Constant&gt;
-          <TypeClass&gt;String</TypeClass&gt;
-          <ObjType&gt;System.String</ObjType&gt;
-          <Value&gt;Microsoft.SqlServer.Management.Smo.AuditFileSizeUnit</Value&gt;
-        </Constant&gt;
-        <Constant&gt;
-          <TypeClass&gt;String</TypeClass&gt;
-          <ObjType&gt;System.String</ObjType&gt;
-          <Value&gt;Gb</Value&gt;
-        </Constant&gt;
-      </Function&gt;
-    </Operator&gt;
-  </Operator&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;EQ</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Attribute&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <Name&gt;ReserveDiskSpace</Name&gt;
-    </Attribute&gt;
-    <Function&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <FunctionType&gt;True</FunctionType&gt;
-      <ReturnType&gt;Bool</ReturnType&gt;
-      <Count&gt;0</Count&gt;
-    </Function&gt;
-  </Operator&gt;
-</Operator&gt;', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
+EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'Audit_Condition', @description=N'', @facet=N'Audit', @expression=N'<Operator>
+  <TypeClass>Bool</TypeClass>
+  <OpType>AND</OpType>
+  <Count>2</Count>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>AND</OpType>
+    <Count>2</Count>
+    <Operator>
+      <TypeClass>Bool</TypeClass>
+      <OpType>AND</OpType>
+      <Count>2</Count>
+      <Operator>
+        <TypeClass>Bool</TypeClass>
+        <OpType>AND</OpType>
+        <Count>2</Count>
+        <Operator>
+          <TypeClass>Bool</TypeClass>
+          <OpType>AND</OpType>
+          <Count>2</Count>
+          <Operator>
+            <TypeClass>Bool</TypeClass>
+            <OpType>AND</OpType>
+            <Count>2</Count>
+            <Operator>
+              <TypeClass>Bool</TypeClass>
+              <OpType>EQ</OpType>
+              <Count>2</Count>
+              <Attribute>
+                <TypeClass>Bool</TypeClass>
+                <Name>Enabled</Name>
+              </Attribute>
+              <Function>
+                <TypeClass>Bool</TypeClass>
+                <FunctionType>True</FunctionType>
+                <ReturnType>Bool</ReturnType>
+                <Count>0</Count>
+              </Function>
+            </Operator>
+            <Operator>
+              <TypeClass>Bool</TypeClass>
+              <OpType>EQ</OpType>
+              <Count>2</Count>
+              <Attribute>
+                <TypeClass>Numeric</TypeClass>
+                <Name>DestinationType</Name>
+              </Attribute>
+              <Function>
+                <TypeClass>Numeric</TypeClass>
+                <FunctionType>Enum</FunctionType>
+                <ReturnType>Numeric</ReturnType>
+                <Count>2</Count>
+                <Constant>
+                  <TypeClass>String</TypeClass>
+                  <ObjType>System.String</ObjType>
+                  <Value>Microsoft.SqlServer.Management.Smo.AuditDestinationType</Value>
+                </Constant>
+                <Constant>
+                  <TypeClass>String</TypeClass>
+                  <ObjType>System.String</ObjType>
+                  <Value>File</Value>
+                </Constant>
+              </Function>
+            </Operator>
+          </Operator>
+          <Operator>
+            <TypeClass>Bool</TypeClass>
+            <OpType>EQ</OpType>
+            <Count>2</Count>
+            <Attribute>
+              <TypeClass>Numeric</TypeClass>
+              <Name>MaximumFiles</Name>
+            </Attribute>
+            <Constant>
+              <TypeClass>Numeric</TypeClass>
+              <ObjType>System.Double</ObjType>
+              <Value>100</Value>
+            </Constant>
+          </Operator>
+        </Operator>
+        <Operator>
+          <TypeClass>Bool</TypeClass>
+          <OpType>EQ</OpType>
+          <Count>2</Count>
+          <Attribute>
+            <TypeClass>Numeric</TypeClass>
+            <Name>MaximumRolloverFiles</Name>
+          </Attribute>
+          <Constant>
+            <TypeClass>Numeric</TypeClass>
+            <ObjType>System.Double</ObjType>
+            <Value>10</Value>
+          </Constant>
+        </Operator>
+      </Operator>
+      <Operator>
+        <TypeClass>Bool</TypeClass>
+        <OpType>EQ</OpType>
+        <Count>2</Count>
+        <Attribute>
+          <TypeClass>Numeric</TypeClass>
+          <Name>MaximumFileSize</Name>
+        </Attribute>
+        <Constant>
+          <TypeClass>Numeric</TypeClass>
+          <ObjType>System.Double</ObjType>
+          <Value>5</Value>
+        </Constant>
+      </Operator>
+    </Operator>
+    <Operator>
+      <TypeClass>Bool</TypeClass>
+      <OpType>EQ</OpType>
+      <Count>2</Count>
+      <Attribute>
+        <TypeClass>Numeric</TypeClass>
+        <Name>MaximumFileSizeUnit</Name>
+      </Attribute>
+      <Function>
+        <TypeClass>Numeric</TypeClass>
+        <FunctionType>Enum</FunctionType>
+        <ReturnType>Numeric</ReturnType>
+        <Count>2</Count>
+        <Constant>
+          <TypeClass>String</TypeClass>
+          <ObjType>System.String</ObjType>
+          <Value>Microsoft.SqlServer.Management.Smo.AuditFileSizeUnit</Value>
+        </Constant>
+        <Constant>
+          <TypeClass>String</TypeClass>
+          <ObjType>System.String</ObjType>
+          <Value>Gb</Value>
+        </Constant>
+      </Function>
+    </Operator>
+  </Operator>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>EQ</OpType>
+    <Count>2</Count>
+    <Attribute>
+      <TypeClass>Bool</TypeClass>
+      <Name>ReserveDiskSpace</Name>
+    </Attribute>
+    <Function>
+      <TypeClass>Bool</TypeClass>
+      <FunctionType>True</FunctionType>
+      <ReturnType>Bool</ReturnType>
+      <Count>0</Count>
+    </Function>
+  </Operator>
+</Operator>', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
 Select @condition_id
 
 GO
@@ -299,59 +302,59 @@ GO
 --- DatabaseAudit_Condition
 
 Declare @condition_id int
-EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'DatabaseAudit_Condition', @description=N'', @facet=N'DatabaseAuditSpecification', @expression=N'<Operator&gt;
-  <TypeClass&gt;Bool</TypeClass&gt;
-  <OpType&gt;AND</OpType&gt;
-  <Count&gt;2</Count&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;AND</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Operator&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <OpType&gt;LIKE</OpType&gt;
-      <Count&gt;2</Count&gt;
-      <Attribute&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <Name&gt;AuditName</Name&gt;
-      </Attribute&gt;
-      <Constant&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <ObjType&gt;System.String</ObjType&gt;
-        <Value&gt;DBAudit_%</Value&gt;
-      </Constant&gt;
-    </Operator&gt;
-    <Operator&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <OpType&gt;LIKE</OpType&gt;
-      <Count&gt;2</Count&gt;
-      <Attribute&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <Name&gt;Name</Name&gt;
-      </Attribute&gt;
-      <Constant&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <ObjType&gt;System.String</ObjType&gt;
-        <Value&gt;DBAudit_Spec_%</Value&gt;
-      </Constant&gt;
-    </Operator&gt;
-  </Operator&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;EQ</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Attribute&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <Name&gt;Enabled</Name&gt;
-    </Attribute&gt;
-    <Function&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <FunctionType&gt;True</FunctionType&gt;
-      <ReturnType&gt;Bool</ReturnType&gt;
-      <Count&gt;0</Count&gt;
-    </Function&gt;
-  </Operator&gt;
-</Operator&gt;', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
+EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'DatabaseAudit_Condition', @description=N'', @facet=N'DatabaseAuditSpecification', @expression=N'<Operator>
+  <TypeClass>Bool</TypeClass>
+  <OpType>AND</OpType>
+  <Count>2</Count>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>AND</OpType>
+    <Count>2</Count>
+    <Operator>
+      <TypeClass>Bool</TypeClass>
+      <OpType>LIKE</OpType>
+      <Count>2</Count>
+      <Attribute>
+        <TypeClass>String</TypeClass>
+        <Name>AuditName</Name>
+      </Attribute>
+      <Constant>
+        <TypeClass>String</TypeClass>
+        <ObjType>System.String</ObjType>
+        <Value>DBAudit_%</Value>
+      </Constant>
+    </Operator>
+    <Operator>
+      <TypeClass>Bool</TypeClass>
+      <OpType>LIKE</OpType>
+      <Count>2</Count>
+      <Attribute>
+        <TypeClass>String</TypeClass>
+        <Name>Name</Name>
+      </Attribute>
+      <Constant>
+        <TypeClass>String</TypeClass>
+        <ObjType>System.String</ObjType>
+        <Value>DBAudit_Spec_%</Value>
+      </Constant>
+    </Operator>
+  </Operator>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>EQ</OpType>
+    <Count>2</Count>
+    <Attribute>
+      <TypeClass>Bool</TypeClass>
+      <Name>Enabled</Name>
+    </Attribute>
+    <Function>
+      <TypeClass>Bool</TypeClass>
+      <FunctionType>True</FunctionType>
+      <ReturnType>Bool</ReturnType>
+      <Count>0</Count>
+    </Function>
+  </Operator>
+</Operator>', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
 Select @condition_id
 
 GO
@@ -361,59 +364,59 @@ GO
 --- ServerAudit_Condition
 
 Declare @condition_id int
-EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'ServerAudit_Condition', @description=N'', @facet=N'ServerAuditSpecification', @expression=N'<Operator&gt;
-  <TypeClass&gt;Bool</TypeClass&gt;
-  <OpType&gt;AND</OpType&gt;
-  <Count&gt;2</Count&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;AND</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Operator&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <OpType&gt;LIKE</OpType&gt;
-      <Count&gt;2</Count&gt;
-      <Attribute&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <Name&gt;AuditName</Name&gt;
-      </Attribute&gt;
-      <Constant&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <ObjType&gt;System.String</ObjType&gt;
-        <Value&gt;SQLAudit_%</Value&gt;
-      </Constant&gt;
-    </Operator&gt;
-    <Operator&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <OpType&gt;LIKE</OpType&gt;
-      <Count&gt;2</Count&gt;
-      <Attribute&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <Name&gt;Name</Name&gt;
-      </Attribute&gt;
-      <Constant&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <ObjType&gt;System.String</ObjType&gt;
-        <Value&gt;ServerAudit_%</Value&gt;
-      </Constant&gt;
-    </Operator&gt;
-  </Operator&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;EQ</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Attribute&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <Name&gt;Enabled</Name&gt;
-    </Attribute&gt;
-    <Function&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <FunctionType&gt;True</FunctionType&gt;
-      <ReturnType&gt;Bool</ReturnType&gt;
-      <Count&gt;0</Count&gt;
-    </Function&gt;
-  </Operator&gt;
-</Operator&gt;', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
+EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'ServerAudit_Condition', @description=N'', @facet=N'ServerAuditSpecification', @expression=N'<Operator>
+  <TypeClass>Bool</TypeClass>
+  <OpType>AND</OpType>
+  <Count>2</Count>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>AND</OpType>
+    <Count>2</Count>
+    <Operator>
+      <TypeClass>Bool</TypeClass>
+      <OpType>LIKE</OpType>
+      <Count>2</Count>
+      <Attribute>
+        <TypeClass>String</TypeClass>
+        <Name>AuditName</Name>
+      </Attribute>
+      <Constant>
+        <TypeClass>String</TypeClass>
+        <ObjType>System.String</ObjType>
+        <Value>SQLAudit_%</Value>
+      </Constant>
+    </Operator>
+    <Operator>
+      <TypeClass>Bool</TypeClass>
+      <OpType>LIKE</OpType>
+      <Count>2</Count>
+      <Attribute>
+        <TypeClass>String</TypeClass>
+        <Name>Name</Name>
+      </Attribute>
+      <Constant>
+        <TypeClass>String</TypeClass>
+        <ObjType>System.String</ObjType>
+        <Value>ServerAudit_%</Value>
+      </Constant>
+    </Operator>
+  </Operator>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>EQ</OpType>
+    <Count>2</Count>
+    <Attribute>
+      <TypeClass>Bool</TypeClass>
+      <Name>Enabled</Name>
+    </Attribute>
+    <Function>
+      <TypeClass>Bool</TypeClass>
+      <FunctionType>True</FunctionType>
+      <ReturnType>Bool</ReturnType>
+      <Count>0</Count>
+    </Function>
+  </Operator>
+</Operator>', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
 Select @condition_id
 
 GO
@@ -422,46 +425,47 @@ GO
 ---ServerVersion
 
 Declare @condition_id int
-EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'ServerVersion', @description=N'', @facet=N'Server', @expression=N'<Operator&gt;
-  <TypeClass&gt;Bool</TypeClass&gt;
-  <OpType&gt;OR</OpType&gt;
-  <Count&gt;2</Count&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;EQ</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Attribute&gt;
-      <TypeClass&gt;Numeric</TypeClass&gt;
-      <Name&gt;VersionMajor</Name&gt;
-    </Attribute&gt;
-    <Constant&gt;
-      <TypeClass&gt;Numeric</TypeClass&gt;
-      <ObjType&gt;System.Double</ObjType&gt;
-      <Value&gt;10</Value&gt;
-    </Constant&gt;
-  </Operator&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;EQ</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Attribute&gt;
-      <TypeClass&gt;Numeric</TypeClass&gt;
-      <Name&gt;VersionMajor</Name&gt;
-    </Attribute&gt;
-    <Constant&gt;
-      <TypeClass&gt;Numeric</TypeClass&gt;
-      <ObjType&gt;System.Double</ObjType&gt;
-      <Value&gt;11</Value&gt;
-    </Constant&gt;
-  </Operator&gt;
-</Operator&gt;', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
+EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'ServerVersion', @description=N'', @facet=N'Server', @expression=N'<Operator>
+  <TypeClass>Bool</TypeClass>
+  <OpType>OR</OpType>
+  <Count>2</Count>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>EQ</OpType>
+    <Count>2</Count>
+    <Attribute>
+      <TypeClass>Numeric</TypeClass>
+      <Name>VersionMajor</Name>
+    </Attribute>
+    <Constant>
+      <TypeClass>Numeric</TypeClass>
+      <ObjType>System.Double</ObjType>
+      <Value>10</Value>
+    </Constant>
+  </Operator>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>EQ</OpType>
+    <Count>2</Count>
+    <Attribute>
+      <TypeClass>Numeric</TypeClass>
+      <Name>VersionMajor</Name>
+    </Attribute>
+    <Constant>
+      <TypeClass>Numeric</TypeClass>
+      <ObjType>System.Double</ObjType>
+      <Value>11</Value>
+    </Constant>
+  </Operator>
+</Operator>', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
 Select @condition_id
 
-GO</pre>
-
+GO
+```
 Next are the policies:
 
-<pre>Declare @object_set_id int
+sql
+Declare @object_set_id int
 EXEC msdb.dbo.sp_syspolicy_add_object_set @object_set_name=N'Audit_Policy_ObjectSet', @facet=N'Audit', @object_set_id=@object_set_id OUTPUT
 Select @object_set_id
 
@@ -508,8 +512,8 @@ GO
 Declare @policy_id int
 EXEC msdb.dbo.sp_syspolicy_add_policy @name=N'ServerAudit_Policy', @condition_name=N'ServerAudit_Condition', @policy_category=N'', @description=N'', @help_text=N'', @help_link=N'', @schedule_uid=N'00000000-0000-0000-0000-000000000000', @execution_mode=0, @is_enabled=False, @policy_id=@policy_id OUTPUT, @root_condition_name=N'ServerVersion', @object_set=N'ServerAudit_Policy_ObjectSet'
 Select @policy_id
-GO</pre>
-
+GO
+```
 This concludes the PBM monitoring for this series. the conditions can be changed as per your needs, and the name prefixes are only suggestions that will work well with a central repository.
 
 ### The Auditing Repository
@@ -518,24 +522,25 @@ So you are capturing audits to a remote server, and they are all sitting there a
 
 In this form they&#8217;re not providing you with any insight. Let&#8217;s rather pull it into a database. First off we need one:
 
-<pre>/*
+sql
+/*
 This is just a template to create a table that will host the audit information.
 Personally I would recommend to use the following format to name the table especially if it gets centralized:
 
 For database audits:
-<DBAudit&gt;_<Action&gt;
+<DBAudit>_<Action>
 
 For server audits:
-<SQLAudit&gt;_<Action&gt;
+<SQLAudit>_<Action>
 
 Then personally I use the following for the specifications:
 
-<ServerAudit&gt;_<Action&gt;
-<DBAudit&gt;_<Spec&gt;_<Action&gt;
+<ServerAudit>_<Action>
+<DBAudit>_<Spec>_<Action>
 
 This makes it easier for naming the tables where I would take the following approach:
 
-<SERVERNAME&gt;_<AUDIT&gt;_<ACTIONS&gt;_<DATABASE_NAME&gt; (OPTIONAL for database audits)
+<SERVERNAME>_<AUDIT>_<ACTIONS>_<DATABASE_NAME> (OPTIONAL for database audits)
 */
 
 if exists(select name from sys.databases where name = '[AuditingLogs]')
@@ -587,13 +592,15 @@ CREATE TABLE [dbo].[AuditTable_Template](
 
 GO
 SET ANSI_PADDING OFF
-GO</pre>
+GO
 
+```
 This gives us our database, you can just move you files to the correct directory as well as add all the secondary files and file groups you need to sustain this. There is also a table &#8220;template&#8221; with which to create your tables. Each table will be specific to an audit file.
 
 Next we need to get the audit information into the database, below is the script I used and can be modified to fit into either a SQL Job or SSIS package.
 
-<pre>/*
+sql
+/*
 This script contains some insert statements as to how you will go about inserting your captured audit events into a SQL database.
 Note that I am using event_time as this is the most unique value that will be written down. I am also reading all the information
 into the database as you may need this for regulatory requirements.
@@ -624,13 +631,14 @@ INSERT  INTO AuditingLogs.dbo.[Table]
         FROM    sys.fn_get_audit_file('file*.sqlaudit',
                                       DEFAULT, DEFAULT) gaf
         WHERE   gaf.event_time NOT IN ( SELECT  event_time
-                                        FROM    table  )</pre>
-
+                                        FROM    table  )
+```
 This is currently very basic, and I included some comments into the scripts to give you an overview of what is going on.
 
 For one of the audits used in demoing the SQL Server Auditing feature, I pulled all the information into a table. As per the sys.fn\_get\_audit\_file we can return the same results from the table. In the following example I&#8217;m using sys.dm\_audit_actions to join to the table to make the information more clear:
 
-<pre>USE AuditingLogs ;
+sql
+USE AuditingLogs ;
 go
 
 SELECT  del.[event_time] ,
@@ -644,8 +652,8 @@ SELECT  del.[event_time] ,
         del.[statement]
 FROM    [dbo].[SQL2012_DBAudit_Deletes] del
         JOIN sys.dm_audit_actions aa ON aa.action_id = del.action_id
-ORDER BY del.event_time ASC</pre>
-
+ORDER BY del.event_time ASC
+```
 This is the result:
 
 <div class="image_block">

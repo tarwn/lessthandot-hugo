@@ -3,6 +3,7 @@ title: If you are suffering from Cisco VPN on 64 bit Windows then use the Shrew 
 author: SQLDenis
 type: post
 date: 2010-02-11T00:09:50+00:00
+ID: 698
 url: /index.php/itprofessionals/softwareandconfigmgmt/if-you-are-suffering-from-cisco-vpn-on-6/
 views:
   - 27676

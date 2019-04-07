@@ -3,6 +3,7 @@ title: SQL Server 2012 to be released Q1 2012
 author: SQLDenis
 type: post
 date: 2011-10-12T13:48:00+00:00
+ID: 1346
 excerpt: |
   Ted Kummert, Senior VP, Business Platform Division announced at the PASS Summit 2011 Day One Keynote that the next version of SQL Server will be named SQL Server 2012 
   SQL Server 2012 will be released in Q1 2012

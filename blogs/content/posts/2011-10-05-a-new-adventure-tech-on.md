@@ -3,6 +3,7 @@ title: 'A New Adventure: Tech On Tap'
 author: Jes Borland
 type: post
 date: 2011-10-05T11:25:00+00:00
+ID: 1340
 excerpt: "Technology. Experts. Beer. It's going to be a great match."
 url: /index.php/datamgmt/dbprogramming/mssqlserver/a-new-adventure-tech-on/
 views:

@@ -3,6 +3,7 @@ title: The State of Software Engineering Report 2017
 author: damber
 type: post
 date: 2017-12-17T14:13:36+00:00
+ID: 8849
 url: /index.php/uncategorized/the-state-of-software-engineering-report-2017/
 rp4wp_auto_linked:
   - 1

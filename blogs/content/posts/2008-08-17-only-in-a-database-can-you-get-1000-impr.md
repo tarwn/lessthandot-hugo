@@ -3,6 +3,7 @@ title: Only In A Database Can You Get 1000% + Improvement By Changing A Few Line
 author: SQLDenis
 type: post
 date: 2008-08-17T11:55:47+00:00
+ID: 109
 url: /index.php/datamgmt/datadesign/only-in-a-database-can-you-get-1000-impr/
 views:
   - 39221
@@ -23,7 +24,8 @@ tags:
 ---
 Take a look at this query.
 
-<pre>select * from
+```sql
+select * from
 
 (
 
@@ -62,7 +64,8 @@ from payment_table) LTD_payments
 
 ) payments_report
 
-order by customer_id, record_type</pre>
+order by customer_id, record_type
+```
 
 Can you see the problem?
   
@@ -70,8 +73,10 @@ A person had this query, it would run for over 24 hours. Wow, that is pretty bad
 
 The problem is that the following piece of code
 
-<pre>where year(payment_dt) = year(getDate())
-and month(payment_dt) = month(getDate())</pre>
+```sql
+where year(payment_dt) = year(getDate())
+and month(payment_dt) = month(getDate())
+```
 
 is not sargable. First what does it mean to be sargable? A query is said to be sargable if the DBMS engine can take advantage of an index to speed up the execution of the query (using index seeks, not covering indexes). The term is derived from a contraction of Search ARGument Able.
 
@@ -79,13 +84,17 @@ This query is not sargable because there is a function on the column, whenever y
 
 Let&#8217;s get back to the query, what can we do to make this piece of code use an index seek?
 
-<pre>where year(payment_dt) = year(getDate())
-and month(payment_dt) = month(getDate())</pre>
+```sql
+where year(payment_dt) = year(getDate())
+and month(payment_dt) = month(getDate())
+```
 
 You would change it to this:
 
-<pre>where payment_dt >= dateadd(mm, datediff(mm, 0, getdate())+0, 0)
-and payment_dt < dateadd(mm, datediff(mm, 0, getdate())+1, 0)</pre>
+```sql
+where payment_dt >= dateadd(mm, datediff(mm, 0, getdate())+0, 0)
+and payment_dt < dateadd(mm, datediff(mm, 0, getdate())+1, 0)
+```
 
 You can see the complete question on the MSDN forum site here:
   
@@ -97,13 +106,17 @@ The same exact day I answered a very similar question, take a look here: http://
 
 The person had this
 
-<pre>AND DATEDIFF(d, '08/10/2008', DateCreated) >= 0
-AND DATEDIFF(d, DateCreated, '08/15/2008') >= 0</pre>
+```sql
+AND DATEDIFF(d, '08/10/2008', DateCreated) >= 0
+AND DATEDIFF(d, DateCreated, '08/15/2008') >= 0
+```
 
 I told him to change it to this
 
-<pre>AND DateCreated >= '08/10/2008'
-and DateCreated < '08/16/2008'</pre>
+```sql
+AND DateCreated >= '08/10/2008'
+and DateCreated < '08/16/2008'
+```
 
 And that solved that query. If you are interested in some more performance, I have written some [Query Optimization][1] items on the LessThanDot Wiki. Below are some direct links
 
@@ -112,7 +125,8 @@ And that solved that query. If you are interested in some more performance, I ha
 <a href="http://wiki.ltd.local/index.php/Query_Optimizations_With_Dates" title="Query Optimizations With Dates">Query Optimizations With Dates</a>
 <a href="http://wiki.ltd.local/index.php/Optimization:_Set_Nocount_On" title="Optimization: Set Nocount On">Optimization: Set Nocount On</a>
 <a href="http://wiki.ltd.local/index.php/No_Math_In_Where_Clause" title="No Math In Where Clause">No Math In Where Clause</a>
-<a href="http://wiki.ltd.local/index.php/Don%27t_Use_%28select_%2A%29%2C_but_List_Columns" title="Don't Use (select *), but List Columns">Don't Use (select *), but List Columns</a></pre>
+<a href="http://wiki.ltd.local/index.php/Don%27t_Use_%28select_%2A%29%2C_but_List_Columns" title="Don't Use (select *), but List Columns">Don't Use (select *), but List Columns</a>
+</pre>
 
 If you are interested in some blogposts about dates, take a look at these two which I wrote earlier
   

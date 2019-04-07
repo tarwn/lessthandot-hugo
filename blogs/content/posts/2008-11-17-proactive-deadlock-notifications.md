@@ -3,6 +3,7 @@ title: Proactive Deadlock Notifications
 author: Ted Krueger (onpnt)
 type: post
 date: 2008-11-17T11:37:21+00:00
+ID: 207
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/proactive-deadlock-notifications/
 views:
   - 17699
@@ -20,14 +21,16 @@ To set a trace flag I still use the DBCC command of &#8220;DBCC TRACEON&#8221;.
   
 Example: 
 
-<pre>DBCC TRACEON (3605,1204,1222,-1)</pre>
-
+sql
+DBCC TRACEON (3605,1204,1222,-1)
+```
 That is the manual way, but you can also set trace flags to start in the startup options of SQL Server by using the -T switch. So if I wanted 1204 to be turned on every time I restart my database server, I would use a &#8220;-T1204&#8221; in the startup options.
   
 If you&#8217;re curious to see, if you&#8217;re running any trace flags, you can call a TRACESTATUS by passing in -1 as the trace flag like this
 
-<pre>DBCC TRACESTATUS(-1)</pre>
-
+sql
+DBCC TRACESTATUS(-1)
+```
 You can also pass the trace event flag you want to see to the TRACESTATUS. Usually you won&#8217;t have many trace flags running, so it&#8217;s common to view them all. Something I should note, is some trace flags can be performance issues themselves. Trace flags that log information on every transaction or if you have a high user count and they log on each security pass will slow performance due to the nature of the logging events. Just be careful, that only the trace events you want to always be running, are set and the ones that are meant for troubleshooting real-time issues are only used periodically. 
 
 Since we&#8217;re on it already, you should have noticed I used trace flags 3605, 1204 and 1222.
@@ -44,7 +47,8 @@ Now you&#8217;re setup to catch deadlocks. After the traces are running it&#8217
 
 So let&#8217;s get right to the small and simple script:
 
-<pre>If OBJECT_ID('tempdb..#ErrorLog') Is Not Null
+sql
+If OBJECT_ID('tempdb..#ErrorLog') Is Not Null
  Begin
   Drop Table #ErrorLog
  End
@@ -71,8 +75,8 @@ If Exists (Select 1 From #ErrorLog Where msg Like '%Deadlock encountered%')
   Exec sp_cycle_errorlog
  End
  
-Drop Table #ErrorLog</pre>
-
+Drop Table #ErrorLog
+```
 Some things to mention is for one the sp\_cycle\_errorlog. What this system procedure does for us is clear out the error log in SQL Server. This is important in the script above mostly, so we don&#8217;t send a thousand emails on the same event. Although if you want to have a nice reminder that there was a problem because you like to be lazy or delete emails then you can comment that out. The script then will send a notification on every run. One of the hardships here is having to log onto the server and view the log. You can grab a query and attach is to the email sent by SQL Server. Problem there is the query gets ugly due to the way the log is written. Basically you get your deadlock encountered but then just a date after that. Much easier to go in and analyze it in the history table. Notifications to me should just be that anyhow. Simple and direct telling you to get there and fix it before they hang you. 
 
 Notice I place my error log rate into a table. This is just to make it easier for me to review the deadlock that just came up while not constantly messing with the error log. Loading the error log into a table view every time you want to see if again will of course be done on the database server and we don&#8217;t want to do that while users are working there. It&#8217;s our job to fix performance issues recall, not make more. 

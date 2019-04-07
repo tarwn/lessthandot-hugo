@@ -3,6 +3,7 @@ title: FIX for A MERGE statement may not enforce a foreign key constraint when t
 author: SQLDenis
 type: post
 date: 2008-09-16T11:07:06+00:00
+ID: 140
 url: /index.php/datamgmt/datadesign/fix-for-a-merge-statement-may-not-enforc/
 views:
   - 3869

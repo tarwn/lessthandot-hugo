@@ -3,6 +3,7 @@ title: ACL added security for Availability Group Listener in Azure
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-12-19T21:29:00+00:00
+ID: 2212
 excerpt: 'Prior to the release of supporting listeners for availability groups in Azure running Windows Server virtual machines, availability groups were supported but more so in a mirroring configuration.  This means, applications, services, or users would conne&hellip;'
 url: /index.php/datamgmt/dbadmin/acl-azure-availability-groups/
 views:
@@ -36,12 +37,14 @@ For example, referring back to the diagram above, if the following names are ass
 
 In PowerShell for Azure, we would construct the following
 
-<pre>$ApplicationCloudServiceIPsubnet = "189.123.0.0/16"
+```
+$ApplicationCloudServiceIPsubnet = "189.123.0.0/16"
 $ServiceName = "SQLAzureService"
 $LBSetName = "SQLAGEndpoint"
 $acl = New-AzureAclConfig
 Set-AzureAclConfig –AddRule –ACL $acl –Order 5 –Action Permit –RemoteSubnet $ApplicationCloudServiceIPsubnet –Description "ACL to SQLAGEndpoint "
-Set-AzureLoadBalancedEndpoint –ServiceName $ServiceName –LBSetName $LBSetName -Protocol tcp –LocalPort 1433 –PublicPort 1433 –ProbePort 99999 -ProbeProtocolTCP -DirectServerReturn $true –ACL $acl</pre>
+Set-AzureLoadBalancedEndpoint –ServiceName $ServiceName –LBSetName $LBSetName -Protocol tcp –LocalPort 1433 –PublicPort 1433 –ProbePort 99999 -ProbeProtocolTCP -DirectServerReturn $true –ACL $acl
+```
 
 Granted, the above is allowing direct access to SQL Server over port 1433.  This may not be typical and further changes are typical to utilize a port that isn’t the default port listening by SQL Server. However, a port scan quickly shows these listening ports so the addition of requiring connections to specify ports may not be viable or capable of the connecting services.  With an ACL now implemented, direct remote access to the SQL Server instance from any IP address other than within the range of 189.123.0.0/16 would not be allowed through.
 

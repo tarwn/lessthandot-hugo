@@ -3,6 +3,7 @@ title: 'Error while enabling Windows Feature: Netfx3'
 author: Koen Verbeeck
 type: post
 date: 2013-04-29T07:43:00+00:00
+ID: 2073
 excerpt: 'Recently I was setting up a virtual machine environment to do some demo’s. One of the virtual machines would be the home for a SQL Server database engine supporting a SharePoint 2013 farm. Since it is a back-end database, the server was not connected to&hellip;'
 url: /index.php/webdev/business-intelligence/error-while-enabling-netfx3/
 views:

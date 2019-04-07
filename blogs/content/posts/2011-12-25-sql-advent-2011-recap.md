@@ -3,6 +3,7 @@ title: SQL Advent 2011 Recap
 author: SQLDenis
 type: post
 date: 2011-12-25T10:22:00+00:00
+ID: 1464
 excerpt: |
   Here is a recap of all the 24 SQL Advent 2011 posts
   Day 1: Date and time

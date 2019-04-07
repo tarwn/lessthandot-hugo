@@ -3,6 +3,7 @@ title: Getting the tables with the most rows from your database
 author: SQLDenis
 type: post
 date: 2013-02-08T15:50:00+00:00
+ID: 1976
 excerpt: 'Sometimes you want to quickly see what tables have the most rows in your database. This is especially rue if you inherited a new database and you want to know some stats about this database. Instead of doing a count(*) against every table, I usually just use the sp_spaceused stored procedure. this will run many times faster, usually it is instantaneous.'
 url: /index.php/datamgmt/dbprogramming/getting-the-tables-with-the/
 views:
@@ -31,7 +32,8 @@ You could use updateusage but I don&#8217;t bother, I just want to get a rough c
 
 Here is the query that will give you that
 
-<pre>CREATE TABLE #temp (name varchar(100), rows int,reserved varchar(100), data varchar(100),index_size  varchar(100),unused  varchar(100))
+sql
+CREATE TABLE #temp (name varchar(100), rows int,reserved varchar(100), data varchar(100),index_size  varchar(100),unused  varchar(100))
 
 CREATE TABLE #loop (id int identity, name varchar(1000))
 INSERT #loop
@@ -67,6 +69,6 @@ SELECT TOP 10 name, rows
 FROM #temp
 ORDER BY rows DESC
 
-DROP TABLE #temp, #loop</pre>
-
+DROP TABLE #temp, #loop
+```
 This post is part of the informational section of SQLCop. I have written the SQL in this way because I want SQLCop to be able to run this against a SQL Server 2000 instance

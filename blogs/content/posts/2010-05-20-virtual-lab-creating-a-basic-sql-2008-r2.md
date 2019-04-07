@@ -3,6 +3,7 @@ title: 'Virtual Lab: Creating the Basic SQL 2008 R2 Virtual Machine'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-05-20T17:36:19+00:00
+ID: 785
 url: /index.php/datamgmt/dbadmin/virtual-lab-creating-a-basic-sql-2008-r2/
 views:
   - 22756
@@ -19,7 +20,7 @@ tags:
 
 ---
 <div class="acc_header">
-  A virtual database server provides you the ability to not only work on database-relate tools and services, but also to try out hundreds of vendor products throughout the market that require a database backend. This article will walk through a basic database setup for SQL Server 2008 R2 on a virtual machine using mostly standard installation options. This first installation will be limited to basic settings and a virtual harddrive, leaving us ready to customize the setup for later uses.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator, Accidental Database Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a></p>
+  A virtual database server provides you the ability to not only work on database-relate tools and services, but also to try out hundreds of vendor products throughout the market that require a database backend. This article will walk through a basic database setup for SQL Server 2008 R2 on a virtual machine using mostly standard installation options. This first installation will be limited to basic settings and a virtual harddrive, leaving us ready to customize the setup for later uses.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator, Accidental Database Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a></p>
 </div>
 
 ## Setting up the Virtual Machine
@@ -27,7 +28,7 @@ tags:
 In the [first post][1] we created a basic Windows 2008 R2 virtual machine to serve as a starting point for our later systems. Our first step will be to to make a copy of tis system for our new SQL Server installation. To begin with, we&#8217;ll make a copy of the folder, renaming that copy to match the name we will be assigning to our new server. If we look inside the folder we will see a variety of configuration files, including the file that serves as our virtual harddrive.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/0_files.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/0_files.png" alt="Files for VM" /></a><br /> VM Folder and Files
+  <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/0_files.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/0_files.png" alt="Files for VM" /></a><br /> VM Folder and Files
 </div>
 
 TO keep things consistent, we will rename the vmx and vmxf files to match the new server name as well. Once we have edited the names we need to open the vmx file in using our favorite editor (mine is EditPlus) and edit the values for &#8220;displayName&#8221; and &#8220;extendedConfigFile&#8221; to reflect the new file names. It&#8217;s possible to rename the other files but requires editing a larger number of configurations and I prefer to leave them with their original name to reflect the system I used as a template.
@@ -35,13 +36,13 @@ TO keep things consistent, we will rename the vmx and vmxf files to match the ne
 To add the new, copied system to VMWare we open the menu and select the option to &#8220;Add Virtual Machine to Inventory&#8221;. 
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/0_AddVirtualMachine.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/0_AddVirtualMachine.png" alt="Add Virtual Machine, Step 0" /></a><br /> Adding a Virtual Machine, Step 0
+  <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/0_AddVirtualMachine.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/0_AddVirtualMachine.png" alt="Add Virtual Machine, Step 0" /></a><br /> Adding a Virtual Machine, Step 0
 </div>
 
 A dialog is presented with the list of stores that are set up on the local system. We select the store our copied VM resides in and then select the VM. The center column should now show us the vmx file we renamed, so we will select that and press Ok.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/1_AddVirtualMachine.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/1_AddVirtualMachine.png" alt="Add Virtual Machine, Step 1" /></a><br /> Adding a Virtual Machine, Step 1
+  <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/1_AddVirtualMachine.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/1_AddVirtualMachine.png" alt="Add Virtual Machine, Step 1" /></a><br /> Adding a Virtual Machine, Step 1
 </div>
 
 <div class="hint">
@@ -57,7 +58,7 @@ The next step, once the VM is added, is to modify some of the settings. This bas
 The last step is to add a virtual drive for database storage. In later articles we will walk through comparisons of different virtual and physical drive options, but for today we will be creating a simple secondary virtual drive to serve as storage. This secondary drive will start off small, as we don&#8217;t intend to work with a large amount of data on the system. 
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/4_AddVirtualMachine.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/4_AddVirtualMachine.png" alt="Add Virtual Machine, Step 2 & 3" /></a><br /> Adding a Virtual Machine, Step 2 & 3
+  <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/4_AddVirtualMachine.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/4_AddVirtualMachine.png" alt="Add Virtual Machine, Step 2 & 3" /></a><br /> Adding a Virtual Machine, Step 2 & 3
 </div>
 
 ## Configuring the OS
@@ -67,7 +68,7 @@ Once the Virtual Machine is prepped, it&#8217;s time to boot into our system for
 When we first attempt to start the new virtual machine, the below error message is displayed prominently on the VMWare interface and we have to select either the &#8220;Copied&#8221; or &#8220;Moved&#8221; option to continue.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/0_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/0_startup.png" alt="VM Error Message" /></a><br /> VM Startup Error Message
+  <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/0_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/0_startup.png" alt="VM Error Message" /></a><br /> VM Startup Error Message
 </div>
 
 <div class="hint">
@@ -77,7 +78,7 @@ When we first attempt to start the new virtual machine, the below error message 
 Before going too far with the new server, lets start by providing it with it&#8217;s new name and executing the obligatory reboot.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/1_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/1_startup.png" alt="Changing the System Name" /></a><br /> Changing the System Name
+  <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/1_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/1_startup.png" alt="Changing the System Name" /></a><br /> Changing the System Name
 </div>
 
 <div class="mylab">
@@ -87,7 +88,7 @@ Before going too far with the new server, lets start by providing it with it&#82
 Next up is mounting the new virtual drive. We can access the &#8220;Server Management&#8221; snap-in by right-clicking on the Computer in Explorer and selecting &#8220;Manage&#8221; or by typing &#8220;Manage&#8221; into the Start menu search and selecting &#8220;Server Manager&#8221;. In the left column is a treeview with a number of options. Expand the Storage option and select &#8220;Disk Management&#8221; to see the available disks. 
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/2_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/2_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management &#8211; Adding a Disk
+  <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/2_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/2_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management &#8211; Adding a Disk
 </div>
 
 Initially the disk is listed as Offline (bottom of center column). Right-clicking the offline disk will provide the option to bring it Online. Once Online the disk will require initialization, so we right-click and select Initialize.
@@ -99,13 +100,13 @@ Initially the disk is listed as Offline (bottom of center column). Right-clickin
 Once the drive reports a status of &#8220;Initialized&#8221; we can allocate it by right clicking on the volume and selecting &#8220;New Simple Volume&#8221;.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/3_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/3_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management &#8211; Adding a Disk
+  <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/3_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/3_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management &#8211; Adding a Disk
 </div>
 
 Windows provides a wizard to walk through the drive allocation process. For the sake of this article we will select all of the defaults it provides, which should net a brand new 10237MB &#8220;E:&#8221; drive formatted for NTFS. Once the wizard is complete, the Server Management console will update the drive status and a dialog will appear with Windows asking if it can now format the new drive.
 
 <div class="screenshot">
-  <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/4_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/4_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management &#8211; Adding a Disk
+  <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/4_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/4_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management &#8211; Adding a Disk
 </div>
 
 <div class="hint">
@@ -130,7 +131,7 @@ When the Format screen appears, Windows provides several values and offers some 
     You can find an excellent article here: <a href="http://www.sqlservercentral.com/blogs/sqlmanofmystery/archive/2010/01/04/fundamentals-of-storage-systems-stripe-size-block-size-and-io-patterns.aspx" target="_blank">Fundamentals of Storage Systems: Stripe Size, Block Size, and I/O Patterns at SQL Server Central</a><br /> The downside of a 64k unit size with NTFS is that NTFS compression requires 4k unit sizes, so selection of any other size means you cannot use this option. </div> 
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/5_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/5_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management &#8211; Adding a Disk
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/5_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/5_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management &#8211; Adding a Disk
     </div>
     
     <p>
@@ -138,7 +139,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/6_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/6_startup.png" alt="Adding an Administrative User" /></a><br /> Server Management &#8211; Adding a New User
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/6_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/6_startup.png" alt="Adding an Administrative User" /></a><br /> Server Management &#8211; Adding a New User
     </div>
     
     <p>
@@ -146,7 +147,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/7_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/7_startup.png" alt="Adding an Administrative User" /></a><br /> Server Management &#8211; Adding a New User
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/7_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/7_startup.png" alt="Adding an Administrative User" /></a><br /> Server Management &#8211; Adding a New User
     </div>
     
     <p>
@@ -154,7 +155,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/8_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/8_startup.png" alt="Adding an Administrative User" /></a><br /> Server Management &#8211; Adding a New User
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/8_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/8_startup.png" alt="Adding an Administrative User" /></a><br /> Server Management &#8211; Adding a New User
     </div>
     
     <h2>
@@ -186,7 +187,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/0_install.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/0_install.png" alt="System Configuration Checker" /></a><br /> System Configuration Checker &#8211; All Green
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/0_install.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/0_install.png" alt="System Configuration Checker" /></a><br /> System Configuration Checker &#8211; All Green
     </div>
     
     <p>
@@ -194,14 +195,14 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/1_install.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/1_install.png" alt="SQL Server 2008 R2 Setup - Support Files (Next, Next, Install)" /></a><br /> SQL Server 2008 R2 Setup &#8211; Support Files (Next, Next, Install)
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/1_install.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/1_install.png" alt="SQL Server 2008 R2 Setup - Support Files (Next, Next, Install)" /></a><br /> SQL Server 2008 R2 Setup &#8211; Support Files (Next, Next, Install)
     </div>
     
     <div class="mylab">
       I did receive a warning at the end of the Support Files installation. Basically the wizard is just warning me that the firewall may block the TCP ports for SQL Server unless I configure it otherwise. As the firewall is still running the default settings from installation, it&#8217;s probable you received this warning as well.</p> 
       
       <div class="screenshot">
-        <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/2_install.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/2_install.png" alt="SQL Server 2008 R2 Setup - Firewall Warning" /></a><br /> SQL Server 2008 R2 Setup &#8211; Firewall Warning
+        <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/2_install.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/2_install.png" alt="SQL Server 2008 R2 Setup - Firewall Warning" /></a><br /> SQL Server 2008 R2 Setup &#8211; Firewall Warning
       </div>
     </div>
     
@@ -210,7 +211,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/3_install.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/3_install.png" alt="SQL Server 2008 R2 Setup - Component Selection" /></a><br /> SQL Server 2008 R2 Setup &#8211; Component Selection
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/3_install.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/3_install.png" alt="SQL Server 2008 R2 Setup - Component Selection" /></a><br /> SQL Server 2008 R2 Setup &#8211; Component Selection
     </div>
     
     <div class="mylab">
@@ -230,7 +231,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/4_install.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/4_install.png" alt="SQL Server 2008 R2 Setup - Instance Configuration" /></a><br /> SQL Server 2008 R2 Setup &#8211; Instance Configuration
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/4_install.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/4_install.png" alt="SQL Server 2008 R2 Setup - Instance Configuration" /></a><br /> SQL Server 2008 R2 Setup &#8211; Instance Configuration
     </div>
     
     <p>
@@ -242,11 +243,11 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/5_install.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/5_install.png" alt="SQL Server 2008 R2 Setup - User Account Configuration" /></a><br /> SQL Server 2008 R2 Setup &#8211; User Account Configuration
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/5_install.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/5_install.png" alt="SQL Server 2008 R2 Setup - User Account Configuration" /></a><br /> SQL Server 2008 R2 Setup &#8211; User Account Configuration
     </div>
     
     <div class="hint">
-      I don&#8217;t suggest changing the collation from the default for your first SQL instance and I can&#8217;t offer much assistance if you do. if you do choose to change the collation, however, I have a great deal of experience dealing with the results of servers being set to strange collations and not getting along, plus the site has a number of experts that know way more than I do about SQL Server administration. So if you do get adventurous and hurt yourself, put a post up in the <a href="http://forum.lessthandot.com" target="_blank">forum</a> and someone should be able to help you out.
+      I don&#8217;t suggest changing the collation from the default for your first SQL instance and I can&#8217;t offer much assistance if you do. if you do choose to change the collation, however, I have a great deal of experience dealing with the results of servers being set to strange collations and not getting along, plus the site has a number of experts that know way more than I do about SQL Server administration. So if you do get adventurous and hurt yourself, put a post up in the <a href="http://forum.ltd.local" target="_blank">forum</a> and someone should be able to help you out.
     </div>
     
     <p>
@@ -254,7 +255,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/6_install.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/6_install.png" alt="SQL Server 2008 R2 Setup - Account Provisioning" /></a><br /> SQL Server 2008 R2 Setup &#8211; Account Provisioning
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/6_install.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/6_install.png" alt="SQL Server 2008 R2 Setup - Account Provisioning" /></a><br /> SQL Server 2008 R2 Setup &#8211; Account Provisioning
     </div>
     
     <div class="mylab">
@@ -266,7 +267,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/7_install.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/7_install.png" alt="SQL Server 2008 R2 Setup - Data Directories" /></a><br /> SQL Server 2008 R2 Setup &#8211; Data Directories
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/7_install.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/7_install.png" alt="SQL Server 2008 R2 Setup - Data Directories" /></a><br /> SQL Server 2008 R2 Setup &#8211; Data Directories
     </div>
     
     <p>
@@ -294,7 +295,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/0_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/0_config.png" alt="SQL Server 2008 R2 Setup - SQL Server Configuration" /></a><br /> SQL Server 2008 R2 Setup &#8211; SQL Server Configuration
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/0_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/0_config.png" alt="SQL Server 2008 R2 Setup - SQL Server Configuration" /></a><br /> SQL Server 2008 R2 Setup &#8211; SQL Server Configuration
     </div>
     
     <div class="hint">
@@ -306,7 +307,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <div class="screenshot">
-      <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/1_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/1_config.png" alt="SQL Server 2008 R2 Setup - SQL Server Configuration" /></a><br /> SQL Server 2008 R2 Setup &#8211; SQL Server Configuration
+      <a href="http://tiernok.com/LTDBlog/FirstSQL/orig/1_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/FirstSQL/1_config.png" alt="SQL Server 2008 R2 Setup - SQL Server Configuration" /></a><br /> SQL Server 2008 R2 Setup &#8211; SQL Server Configuration
     </div>
     
     <div class="mylab">

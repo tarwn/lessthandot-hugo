@@ -3,6 +3,7 @@ title: SQL Server Query Tuning – Back to Basics
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-12-09T19:09:00+00:00
+ID: 1838
 excerpt: |
   The first stage to tuning a query is the coding.  Take a look at the query in listing 1
   SELECT
@@ -27,7 +28,8 @@ categories:
 The first stage to tuning a query is the coding. Take a look at the query in listing 1
 
 > Note: The query above is utilizing three tables pulled from the database AdventureWorks2012. To create these tables, import them without any indexes into another database. Use a SELECT INTO or [any other number of import methods][1] to build the tables. </p>
-<pre>SELECT 
+sql
+SELECT 
 SUM(OrderQty) AS TotalQuantity
 ,salesman.LastName 
 ,salesman.FirstName
@@ -41,8 +43,9 @@ GROUP BY
  salesman.LastName 
 ,salesman.FirstName
 ,hdr.ShipDate
-HAVING SUM(OrderQty) &gt; 10
-ORDER BY LastName</pre>
+HAVING SUM(OrderQty) > 10
+ORDER BY LastName
+```
 
 Listing 1
 
@@ -83,7 +86,10 @@ Sargable queries come down to search argument capable, or effectively utilizing 
 
 A good rule to go by out of the box is, anything that manipulates the left side of the comparison will indicate a non-sargable situation. In listing 1, the function Year on the column ShipDate to the left, comparing 2005 to the resulting value, causes this to be a non-sargable predicate &#8211; a predicate that cannot fully take advantage of indexing. The YEAR() function is used in this example due to the high usage of it just as shown in listing 1. Luckily, there is an effective way to write this in a sargable manner.
 
-<pre>WHERE hdr.ShipDate &gt;= '2005-01-01' AND hdr.ShipDate <= '2005-12-31'</pre>
+sql
+WHERE hdr.ShipDate >= '2005-01-01' AND hdr.ShipDate <= '2005-12-31'
+```
+
 
 Listing 2
 
@@ -99,14 +105,16 @@ Take the example below.
 
 Table tempdb_usage has the following schema and contains 2 million rows of data.
 
-<pre>CREATE TABLE [dbo].[tempdb_usage](
+sql
+CREATE TABLE [dbo].[tempdb_usage](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[bla1] [varchar](36) NULL,
 	[bla2] [varchar](36) NULL,
 	[bla3] [varchar](36) NULL,
 	[SomeDate] [datetime] NULL
 )
-CREATE INDEX IDX_WEIRDINDEX_USE ON tempdb_usage (bla1)</pre>
+CREATE INDEX IDX_WEIRDINDEX_USE ON tempdb_usage (bla1)
+```
 
 > Note: you can find code to load this table for testing of your own from [this LessThanDot forum thread][2].</p>
 Listing 3
@@ -119,8 +127,10 @@ The data is as shown in figure 5
 
 If the following query was executed against this table to return all the rows in column bla1 that are similar to the parameter string of “data”
 
-<pre>SELECT bla1 FROM dbo.[tempdb_usage]
-WHERE bla1 LIKE 'bla1 data %'</pre>
+sql
+SELECT bla1 FROM dbo.[tempdb_usage]
+WHERE bla1 LIKE 'bla1 data %'
+```
 
 Listing 4
 
@@ -132,7 +142,10 @@ The above query would result in a plan that effectively scans on the index creat
 
 If this were an OLAP setup, the query and resulting plan would typically be acceptable. However, if the reporting needs that caused this query to be written and utilized also required the data to be sorted by columns, the needs of the query would drastically change. To take a close look at what sorting would do to the tempdb utilization to fulfill the query, we can look at sys.dm\_io\_virtual\_file\_stats. 
 
-<pre>SELECT num_of_reads,num_of_writes FROM sys.dm_io_virtual_file_stats(DB_ID('tempdb'), 1)</pre>
+sql
+SELECT num_of_reads,num_of_writes FROM sys.dm_io_virtual_file_stats(DB_ID('tempdb'), 1)
+```
+
 
 Listing 5
 
@@ -148,9 +161,11 @@ The results above are from the query in listing 4 being executed. To get a good 
 
 This shows us that tempdb was written to with a factor of 5 given the query from listing 4. Overall, this is a low number and we could live with it on a lot of instances. To show how sorting in SQL Server could drastically change this utilization, execute the query in listing 6. 
 
-<pre>SELECT bla1 FROM dbo.[tempdb_usage]
+sql
+SELECT bla1 FROM dbo.[tempdb_usage]
 WHERE bla1 LIKE 'bla1 data %'
-ORDER BY bla2</pre>
+ORDER BY bla2
+```
 
 Listing 6
 
@@ -224,10 +239,12 @@ Some basics of index creation: Columns in an output list are typically better su
 
 With these basic steps, the following indexes can be created.
 
-<pre>CREATE CLUSTERED INDEX IDX_SalesOrderID ON Sales.SalesOrderHeader (SalesOrderID)
+sql
+CREATE CLUSTERED INDEX IDX_SalesOrderID ON Sales.SalesOrderHeader (SalesOrderID)
 CREATE NONCLUSTERED INDEX IDX_SalesPersonID ON Sales.SalesOrderHeader (SalesPersonID)
 CREATE NONCLUSTERED INDEX IDX_COVER_HEADER ON Sales.SalesOrderHeader (ShipDate) 
-INCLUDE (SalesOrderID, SalesPersonID)</pre>
+INCLUDE (SalesOrderID, SalesPersonID)
+```
 
 Listing 7
 
@@ -257,8 +274,10 @@ Following the same effective steps to create indexes, cover the remaining table 
 
 Person.Person
 
-<pre>CREATE CLUSTERED INDEX IDX_BusinessEntityID ON Person.Person (BusinessEntityID)
-CREATE NONCLUSTERED INDEX IDX_FirstLastName ON Person.Person (FirstName,LastName)</pre>
+sql
+CREATE CLUSTERED INDEX IDX_BusinessEntityID ON Person.Person (BusinessEntityID)
+CREATE NONCLUSTERED INDEX IDX_FirstLastName ON Person.Person (FirstName,LastName)
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-187.png?mtime=1355031682"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-187.png?mtime=1355031682" width="624" height="48" /></a><br /> Figure 19
@@ -266,8 +285,10 @@ CREATE NONCLUSTERED INDEX IDX_FirstLastName ON Person.Person (FirstName,LastName
 
 Sales.SalesOrderDetail
 
-<pre>CREATE CLUSTERED INDEX IDX_SalesOrderID_DTL ON Sales.SalesOrderDetail (SalesOrderID)
-CREATE NONCLUSTERED INDEX IDX_OrderQTY ON Sales.SalesOrderDetail (OrderQTY)</pre>
+sql
+CREATE CLUSTERED INDEX IDX_SalesOrderID_DTL ON Sales.SalesOrderDetail (SalesOrderID)
+CREATE NONCLUSTERED INDEX IDX_OrderQTY ON Sales.SalesOrderDetail (OrderQTY)
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-188.png?mtime=1355031682"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-188.png?mtime=1355031682" width="624" height="35" /></a><br /> Figure 20
@@ -292,6 +313,6 @@ With all the tuning efforts that are made with today’s high-volume databases, 
 Using these steps in their basic form is almost a daily review of any SQL Server and database resource. Although many other tuning areas are to be performed such as IO subsystems configurations, memory expansion and types as well as CPU expansion while taking into account altering and setting SQL Server configurations as needed, indexing and what has been covered today still remains the highest impact areas of the relational database.
 
  [1]: /index.php/DataMgmt/DBAdmin/title-12
- [2]: http://forum.lessthandot.com/viewtopic.php?f=17&t=13566
+ [2]: http://forum.ltd.local/viewtopic.php?f=17&t=13566
  [3]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/adding-nonclustered-index-on-primary
  [4]: http://www.sqlsentry.net/plan-explorer/sql-server-query-view.asp

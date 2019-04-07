@@ -3,6 +3,7 @@ title: Mapping Complex Types to/from the DB with PetaPoco
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-06-20T10:30:47+00:00
+ID: 8660
 url: /index.php/desktopdev/mstech/csharp/mapping-complex-types-tofrom-the-db-with-petapoco/
 views:
   - 4500
@@ -22,7 +23,8 @@ A complex web application can end up passing object id&#8217;s through any numbe
 
 Here&#8217;s an example Identity object (T4 generated):
 
-<pre>public class OrganizationId : IIdentity<int&gt;
+```csharp
+public class OrganizationId : IIdentity<int>
 {	
 [Obsolete("Serialization use only", true)]
 public OrganizationId() { }
@@ -34,11 +36,12 @@ public OrganizationId(int id)
 
 public int RawValue { get; set; }
 
-}</pre>
-
+}
+```
 Here&#8217;s an Application object (also T4 generated) that references an AppId and OrganizationId:
 
-<pre>public class ApplicationDTO
+```csharp
+public class ApplicationDTO
 {	
 	[Obsolete("Serialization use only", true)]
 	public ApplicationDTO() { }
@@ -56,16 +59,18 @@ Here&#8217;s an Application object (also T4 generated) that references an AppId 
 	public OrganizationId OrganizationId { get; set; }
 		
 	public string Name { get; set; }
-}</pre>
+}
 
+```
 Fetching these objects from the database requires no special markup over standard PetaPoco code, even though there are two int columns in the database that need to be expanded into very specific OrganizationId and AppId types in my ApplicationDTO object:
 
-<pre>public async Task<List<ApplicationDTO&gt;&gt; GetAllAsync(OrganizationId organizationId)
+```csharp
+public async Task<List<ApplicationDTO>> GetAllAsync(OrganizationId organizationId)
     using(var db = new AsyncPoco.Database(_connection)){
-        return await db.FetchAsync<ApplicationDTO&gt;("SELECT * FROM Applications WHERE OrganizationId = @0;", organizationId.RawValue);
+        return await db.FetchAsync<ApplicationDTO>("SELECT * FROM Applications WHERE OrganizationId = @0;", organizationId.RawValue);
     }
-}</pre>
-
+}
+```
 This logic looks exactly the same as if I had two int properties on my object instead of two strongly typed identities and I get both my strongly typed C# objects and my simply typed integer database fields.
 
 ## Case 2: Mixed Array to varchar(MAX)
@@ -74,7 +79,8 @@ In the second case, I have a workflow composed of steps, each described as an ob
 
 This is the child-child-child class of the object I&#8217;m loading, UserStep:
 
-<pre>public class UserStepDTO
+```csharp
+public class UserStepDTO
 {	
 	[Obsolete("Serialization use only", true)]
 	public UserStepDTO() { }
@@ -91,21 +97,22 @@ This is the child-child-child class of the object I&#8217;m loading, UserStep:
 	public int OrderNumber { get; set; }
 		
 	public object[] Step { get; set; }
-}</pre>
-
+}
+```
 I have a controlled set of types in the object array, so I just need to make sure I parse and encode them consistently.
 
 Here is the table schema:
 
-<pre>CREATE TABLE dbo.UserSteps(
+```sql
+CREATE TABLE dbo.UserSteps(
 	Id int IDENTITY(1,1) NOT NULL,
 	OrderNumber int NOT NULL,
 	Step varchar(MAX) NOT NULL,
 	
 	CONSTRAINT PK_UserSteps PRIMARY KEY CLUSTERED(Id ASC),
 	// plus more constraints
-);</pre>
-
+);
+```
 The actual query ends up being fairly complex, due to the upper layers of parent objects, but no extra work is done for this mapping.
 
 ## Registering Type Mapping with PetaPoco
@@ -114,21 +121,23 @@ Even though I&#8217;m using AsyncPoco, a fork of PetaPoco that adds await/async 
 
 I&#8217;m using the singleton registration method to register my mapper:
 
-<pre>lock (_lock)
+```csharp
+lock (_lock)
 {
     if (AsyncPoco.Mappers.GetMapper(typeof(AppId)) is AsyncPoco.StandardMapper)
     {
         AsyncPoco.Mappers.Register(Assembly.GetAssembly(typeof(IIdentity)), new IdentityMapper());
     }
-}</pre>
-
+}
+```
 I can only register a mapper for a given type once, so I use a lock statement and see if my custom type is registered before attempting to register my increasingly poorly named &#8220;IdentityMapper&#8221;. I am actually registering this for anything that we attempt to load or save from that Assembly, which also includes objects like the UserStep one above. 
 
 _Note: There are overloads to register for specific types instead of an entire assembly, but they weren&#8217;t working for me and I didn&#8217;t dig deep enough to determine what I had done wrong since I ended up wanting custom mapping for other objects in that assembly also._
 
 This is my IMapper implementation for reading and writing the two cases above:
 
-<pre>public class IdentityMapper : IMapper
+```csharp
+public class IdentityMapper : IMapper
 {
     private StandardMapper standardMapper = new StandardMapper();
 
@@ -137,17 +146,17 @@ This is my IMapper implementation for reading and writing the two cases above:
         return standardMapper.GetColumnInfo(pocoProperty);
     }
 
-    public Func<object, object&gt; GetFromDbConverter(PropertyInfo targetProperty, Type sourceType)
+    public Func<object, object> GetFromDbConverter(PropertyInfo targetProperty, Type sourceType)
     {
         var t = targetProperty.PropertyType;
-        if (typeof(IIdentity<int&gt;).IsAssignableFrom(t))
+        if (typeof(IIdentity<int>).IsAssignableFrom(t))
         {
             var ctor = t.GetConstructor(new Type[] { typeof(Int32) });
-            return (x) =&gt; ctor.Invoke(new object[] { (int)x });
+            return (x) => ctor.Invoke(new object[] { (int)x });
         }
         else if(targetProperty.Name.Equals("Step") && t == typeof(object[]))
         {
-            return (x) =&gt; BasicCsv.Parse((string)x);
+            return (x) => BasicCsv.Parse((string)x);
         }
         else
         {
@@ -160,22 +169,22 @@ This is my IMapper implementation for reading and writing the two cases above:
         return standardMapper.GetTableInfo(pocoType);
     }
 
-    public Func<object, object&gt; GetToDbConverter(PropertyInfo sourceProperty)
+    public Func<object, object> GetToDbConverter(PropertyInfo sourceProperty)
     {
-        if (typeof(IIdentity<int&gt;).IsAssignableFrom(sourceProperty.PropertyType))
+        if (typeof(IIdentity<int>).IsAssignableFrom(sourceProperty.PropertyType))
         {
-            return (x) =&gt; {
+            return (x) => {
                 if (x == null)
                     return null;
-                else if (typeof(IIdentity<int&gt;).IsAssignableFrom(x.GetType()))
-                    return ((IIdentity<int&gt;)x).RawValue;
+                else if (typeof(IIdentity<int>).IsAssignableFrom(x.GetType()))
+                    return ((IIdentity<int>)x).RawValue;
                 else
                     return x;
                 };
         }
         else if (sourceProperty.Name.Equals("Step") && sourceProperty.PropertyType == typeof(object[]))
         {
-            return (x) =&gt; BasicCsv.Encode((object[])x);
+            return (x) => BasicCsv.Encode((object[])x);
         }
         else
         {
@@ -183,8 +192,8 @@ This is my IMapper implementation for reading and writing the two cases above:
         }
     }
    
-}</pre>
-
+}
+```
 Reading Case 1 (Identity): The GetFromDbConverter looks for IIdentity<int> and maps the basic integer from the database to the appropriately strongly-typed Identity object.
 
 Writing Case 1 (Identity): The GetToDbConverter extracts the inner raw value and hands that off to store in the database.

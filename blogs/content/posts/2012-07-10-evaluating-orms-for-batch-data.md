@@ -3,6 +3,7 @@ title: Evaluating ORMs for Batch Data Performance
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-07-10T10:32:00+00:00
+ID: 1662
 excerpt: "Earlier this week I came upon a post (Entity Framework Comparative Performance) by Luke McGregor that compared the performance of several ORMs for handling batch data. Given the amount of batch data I've processed, I was curious how those ORM tests would line up against a couple common non-ORM methods."
 url: /index.php/enterprisedev/orm/evaluating-orms-for-batch-data/
 views:
@@ -69,25 +70,25 @@ The SqlBulkCopy object is designed to &#8220;let you efficiently bulk load a SQL
 I&#8217;ll admit the results were not that surprising. SqlBulkCopy was the fastest method for inserting larger amounts of data, but had some initial overhead that made it slower for the 1, 10, and 100 record tests. Compared to the best times from the other methods (SqlBulkCopy is the SqlCommand representative in the chart), the performance difference is clear:
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/ORM/Graph-1.png" alt="Graph of Best Times for 1-10000 records" /><br /> Best Times for 1, 10, 100, 1000, 10000 scenarios
+  <img src="http://tiernok.com/LTDBlog/ORM/Graph-1.png" alt="Graph of Best Times for 1-10000 records" /><br /> Best Times for 1, 10, 100, 1000, 10000 scenarios
 </div>
 
 Extending this to a larger set of 100000 records and the difference is relatively the same. Relative to the prior set of results, SqlBulkCopy is not as much faster on the 100,000 run as it was on the 10,000. It would be interesting to switch to increments of 10,000 and see if there is a pattern to it.
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/ORM/Graph-2.png" alt="Graph of Best Times for 1-100000 records" /><br /> Best Times for 1, 10, 100, 1000, 10000, 100000 scenarios
+  <img src="http://tiernok.com/LTDBlog/ORM/Graph-2.png" alt="Graph of Best Times for 1-100000 records" /><br /> Best Times for 1, 10, 100, 1000, 10000, 100000 scenarios
 </div>
 
 I also thought it was interesting to see how well the tuning improved some of the ORM methods. In the case of Entity Framework, it&#8217;s clear that if you intend to use it for batch data then tuning is a requirement, not an option. The out-of-the-box experience for Entity Framework 4.1 and 5 were roughly an order of magnitude slower than all other tests.
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/ORM/Graph-3.png" alt="Scaled out to show EF 4.1 and 5 Basic Performance" /><br /> Scaled out to show EF 4.1 and 5 Basic Performance
+  <img src="http://tiernok.com/LTDBlog/ORM/Graph-3.png" alt="Scaled out to show EF 4.1 and 5 Basic Performance" /><br /> Scaled out to show EF 4.1 and 5 Basic Performance
 </div>
 
 The other key indicator is memory. Our two new methods store all the data and send it in a single command, so they will have a higher memory footprint to accommodate that data. The methods that incrementally send the data, like the Dapper scenarios and basic SqlCommand option, will use very little data since they are flushing each addition directly to SQL.
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/ORM/Graph-4.png" alt="Memory Usage per Test Type" /><br /> Memory Usage per Test Type
+  <img src="http://tiernok.com/LTDBlog/ORM/Graph-4.png" alt="Memory Usage per Test Type" /><br /> Memory Usage per Test Type
 </div>
 
 This graph shows the memory/record of the 1000, 10000, and 100000 test runs. As we would expect, the memory/record for the full batch methods is reduced as the overhead is spread across more records. Entity Framework show consistently high memory usage, but the Proxy Entities method does bring it down to just about twice as much as Linq2SQL, which is in turn about 50% higher than the SqlCommand/SqlBulkCopy methods.
@@ -101,7 +102,7 @@ For pure, batch insertions, I still wouldn&#8217;t use an ORM. These tests show 
 Based on Tudor&#8217;s comment below, I&#8217;ve generated a graph of the times for each method in the 100,000 record tests. Unlike the full chart above, I&#8217;ve scaled it to ignore the two basic Entity Framework entries that cause the line chart above to be so unreadable. 
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/ORM/Graph-Followup.png" alt="Readable Execution Times for 1000,000 records" /><br /> Readable Execution Times for 1000,000 records
+  <img src="http://tiernok.com/LTDBlog/ORM/Graph-Followup.png" alt="Readable Execution Times for 1000,000 records" /><br /> Readable Execution Times for 1000,000 records
 </div>
 
 Using ADO.Net does not automatically mean better performance than an ORM. SqlBulkCopy does clearly perform better, but using a SqlCommand.ExecuteNonQuery or a SqlAdapter.InsertCommand does not achieve the same level of performance. Many of the ORM tests kept up or outperformed the non-transactional SqlCommand and SqlAdapter tests, and Dapper kept up with the Transactional SqlCommand test. ADO.Net itself is not giving the boost in speed we see from SqlBulkCopy, it&#8217;s the use of a tool that is built specifically for batch processing (all of the rest operate at the row level, ADO.Net or ORM).

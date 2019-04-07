@@ -3,6 +3,7 @@ title: 'LTD Re-Design Tidbit #1'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2009-10-26T21:54:16+00:00
+ID: 583
 url: /index.php/webdev/webdesigngraphicsstyling/ltd-re-design-tidbit-1/
 views:
   - 6003

@@ -3,6 +3,7 @@ title: Book Review – NHibernate 3.0 Cookbook
 author: Alex Ullrich
 type: post
 date: 2010-11-03T14:21:21+00:00
+ID: 931
 url: /index.php/desktopdev/mstech/book-review-nhibernate-3-0-cookbook/
 views:
   - 6680

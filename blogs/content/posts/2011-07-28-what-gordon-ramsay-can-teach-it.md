@@ -3,6 +3,7 @@ title: What Gordon Ramsay Can Teach the IT Industry
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-07-28T10:03:00+00:00
+ID: 1274
 excerpt: "Recently I found Gordon Ramsay's Kitchen Nightmares on Netflix. Each episode of this show starts with a restaurant that is on the brink of collapse and follows Gordon through his efforts to help the owners turn their restaurant around. Usually I don't enjoy reality shows, but along with the drama and swearing there are a lot of great takeaways (no pun intended) for us as IT people."
 url: /index.php/itprofessionals/ethicsit/what-gordon-ramsay-can-teach-it/
 views:

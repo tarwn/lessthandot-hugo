@@ -3,6 +3,7 @@ title: Overview of the data visualization books by Stephen Few
 author: Koen Verbeeck
 type: post
 date: 2015-04-07T12:04:16+00:00
+ID: 3337
 url: /index.php/webdev/business-intelligence/overview-stephen-few/
 views:
   - 6097

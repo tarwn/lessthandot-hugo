@@ -3,6 +3,7 @@ title: 'MongoDB: How to backup all the databases with one command'
 author: SQLDenis
 type: post
 date: 2013-02-01T08:48:00+00:00
+ID: 1955
 excerpt: 'We looked at how to backup and restore databases in the post MongoDB: How to backup and restore databases. We also looked at how to restore collection in the post MongoDB: How to restore collections. Today we are going to look at how to backup all the d&hellip;'
 url: /index.php/datamgmt/dbadmin/mongodb-how-to-backup-all/
 views:
@@ -62,7 +63,8 @@ db.Stuff.insert( { name : "Denis",  age : 20 } )
 db.Stuff.insert( { name : "Abe",    age : 30 } )
 db.Stuff.insert( { name : "John",   age : 40 } )
 db.Stuff.insert( { name : "Xavier", age : 10 } )
-db.Stuff.insert( { name : "Zen",    age : 50 } )</pre>
+db.Stuff.insert( { name : "Zen",    age : 50 } )
+</pre>
 
 The code above will create 4 databases. Now it is time to back all the databases up. Open up another command window, navigate to the bin directory where MongoDB is installed
 
@@ -79,7 +81,7 @@ mongodump
 
 Here is what the output looks like
 
-<pre>C:NoSQLmongodbbin&gt;mongodump
+<pre>C:NoSQLmongodbbin>mongodump
 connected to: 127.0.0.1
 Fri Feb 01 05:41:33 all dbs
 Fri Feb 01 05:41:35 DATABASE: MultiCollection    to     dump/MultiCollection
@@ -103,7 +105,7 @@ Fri Feb 01 05:41:36              5 objects
 Fri Feb 01 05:41:36     Metadata for TestStuff.Stuff to dump/TestStuff/Stuff.metadata.json
 Fri Feb 01 05:41:36 DATABASE: admin      to     dump/admin
 
-C:NoSQLmongodbbin&gt;</pre>
+C:NoSQLmongodbbin></pre>
 
 If you look in your bin directory, you will see a dump directory, inside the dump directory, you will see a directory for every database that was backed up.
 

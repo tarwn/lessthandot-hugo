@@ -3,6 +3,7 @@ title: LessThanDot Bloggers Weekly 12/11
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-16T16:39:00+00:00
+ID: 1446
 excerpt: |
   This week was an active week for the bloggers on LessThanDot.  Here is a recap on everyone’s contributions.
   Week 12/11 – 12/15

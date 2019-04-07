@@ -3,6 +3,7 @@ title: Being a finalist for the Exceptional DBA of the Year
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-25T16:36:13+00:00
+ID: 830
 excerpt: 'This week brought one of the highest achievements in my career and community work.  On June 23rd it was announced by Red Gate and SQL Server Central that I had made it into the finalists for the Exceptional DBA of the Year award.  WOW!  Every time I say it, I still get that feeling in my gut only certain things that you are truly emotional about can bring.'
 url: /index.php/itprofessionals/ethicsit/exceptional-dba/
 views:

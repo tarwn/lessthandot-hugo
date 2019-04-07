@@ -3,6 +3,7 @@ title: 'Log Shipping for DR and failing back in case of disaster.  The cheap way
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-06-01T13:49:12+00:00
+ID: 452
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/log-shipping-for-dr-and-failing-back-in/
 views:
   - 8983
@@ -22,7 +23,8 @@ The basic steps here are to first monitor the status of the database on a partic
 
 In the below examples I&#8217;m using a database named DBA05 to hold my primary table that consists of the monitored databases and the scripts to execute to start backups rolling.
 
-<pre>IF OBJECT_ID ('DBA05.dbo.BACKUP_PLANS','U') IS NOT NULL
+sql
+IF OBJECT_ID ('DBA05.dbo.BACKUP_PLANS','U') IS NOT NULL
 	BEGIN
 		DROP TABLE DBA05.dbo.BACKUP_PLANS
 	END
@@ -104,15 +106,16 @@ GOTO EndSave
 QuitWithRollback:
     IF (@@TRANCOUNT > 0) ROLLBACK TRANSACTION
 EndSave:',
-0)</pre>
-
+0)
+```
 As you can see the table is pretty simple. We need to know the database to monitor, the job creation script and the status of the job to keep us from recreating a job already set in place. This is also nice if you have one DR site and only fail over a few systems to it. Executing this gives us the ability to dynamically monitor only certain databases and create the jobs on the fly. It would also be possible to create the jobs ahead of time and simply enable them in the event. I like the first method because it seems to give me one script that you can potentially use across many instances with little change if you get more creative with the job creation script. 
 
 Now that you have the table setup, you can get going on the monitor job. The code below will first use the sys.databases system view to validate the status of the databases. This joined to our table of which databases to monitor will filter out any other databases on the instance. Once the databases that are online and a flag for agent status of 0, the job will proceed to setup the SQL Agent jobs for each given script found in the table. After all is done successfully the status is updated.
 
 I wrote this for this blog and tested it out so the script works as is but you will need to alter it greatly in order to fit it into your environment. It was also written in 2005 as you can see with the TRY&#8230;CATCH. 
 
-<pre>BEGIN TRY
+sql
+BEGIN TRY
 BEGIN TRANSACTION
 
 If Exists(SELECT 1
@@ -174,8 +177,8 @@ BEGIN CATCH
          @ErrSeverity = ERROR_SEVERITY()
 
   RAISERROR(@ErrMsg, @ErrSeverity, 1)
-END CATCH</pre>
-
+END CATCH
+```
 To fully get everything up and running you should add differentials and more importantly, log backups into this table. Given your backup strategy and log backup plans on the primary site, you should already know the acceptance of the business for point in time recovery. Follow that same strategy! Once this is all done you can then successfully monitor the DR site for a failover and automatically start backups so you have a point in time to backup the tail logs and get your data in sync quickly. Or as quickly as the size of the pipes to the offsite are. This will also save you in case of a hardware failure on the DR site. Yes, don’t forget to backup the DR servers as well to tape and or other means of recovery. You don’t want to fail over and then have the DR site fail in a day. Not acceptable! Remember that the primary site, once brought back up and ready for failback, will need the databases in recovering status to apply the logs or diff&#8217;s to it. If you recover the site completely and prior to a scheduled full backup, you can restore the last full backup and all other backup to get to the time you had the disaster in recovering mode. Then copy the minimal required backups that started on the DR site over. 
 
 I’ve used this method in a few facilities and it works well when budget is small on DR. That is as most of us know the case in most environments. If the databases are extremely large it may not be the best copying the backups back, however in most cases with databases that size, budget is typically more accessible.

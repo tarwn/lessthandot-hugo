@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #13: Is that what you really want?'
 author: George Mastros (gmmastros)
 type: post
 date: 2010-12-14T14:30:23+00:00
+ID: 977
 excerpt: |
   Steve Jones (Twitter | Blog), The Voice of the DBA, is hosting the T-SQL Tuesday blogging fest over on SQLServerCentral.com this month.  This months topic involves businesses and what they really want.
   

@@ -3,6 +3,7 @@ title: Using STOPAT in the RESTORE DATABASE Statement
 author: Jes Borland
 type: post
 date: 2011-04-04T13:03:00+00:00
+ID: 1097
 excerpt: One of the most important tasks a DBA should know how to perform, and should test regularly, is a database restore. It is absolutely necessary to back up your data so you have it if a disaster strikes, but it is equally important that you know how to retrieve that data when needed.
 url: /index.php/datamgmt/dbprogramming/using-stopat-in-the-restore/
 views:
@@ -20,7 +21,9 @@ One of the most important tasks a DBA should know how to perform, and should tes
 
 The basic RESTORE syntax looks like: 
 
-<pre>RESTORE DATABASE [Name] FROM [Device] WITH [Options]…</pre>
+```sql
+RESTORE DATABASE [Name] FROM [Device] WITH [Options]…
+```
 
 That restores an entire database to the last full backup. You can restore specific files, filegroups, and pages. You can also restore transaction log backups, if you have those for the database. 
 
@@ -94,11 +97,14 @@ I realize that an application change made at 11:40 was not needed. I want to res
   
 Here are the RESTORE statements I would use. Note the last one, which includes the command 
 
-<pre>WITH STOPAT = 'Apr 3, 2011 11:40 AM'</pre>
+```sql
+WITH STOPAT = 'Apr 3, 2011 11:40 AM'
+```
 
 This tells SQL Server to restore only to that point in time. 
 
-<pre>RESTORE DATABASE AdventureWorks
+```sql
+RESTORE DATABASE AdventureWorks
    FROM DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupAdventureWorks.bak' WITH NORECOVERY;
 
 RESTORE LOG AdventureWorks
@@ -108,7 +114,8 @@ RESTORE LOG AdventureWorks
    FROM DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupAdventureWorks2.trn' WITH NORECOVERY;
 
 RESTORE LOG AdventureWorks 
-   FROM DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupAdventureWorks3.trn' WITH STOPAT = 'Apr 3, 2011 11:40 AM', RECOVERY;</pre>
+   FROM DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupAdventureWorks3.trn' WITH STOPAT = 'Apr 3, 2011 11:40 AM', RECOVERY;
+```
 
 When I select rows from my table, I can see that rows 1, 2, 3, 5 and 6 are included. These were part of the transaction log backup taken at 11:38 AM. From the transaction log backup taken at 11:49, only transactions entered before 11:40 AM are restored – row 7. 
 

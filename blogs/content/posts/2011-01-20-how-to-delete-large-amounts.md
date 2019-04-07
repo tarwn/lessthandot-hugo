@@ -3,6 +3,7 @@ title: How to Delete Large amounts of data in a Batch.
 author: ptheriault
 type: post
 date: 2011-01-20T11:56:00+00:00
+ID: 1005
 excerpt: 'Recently I had a request to DELETE all the data except the last 30 days of data from a log table that is 80 GB in size.  It sounded like a simple request on the surface.  However, I couldn’t shut down the web service that logs to that table every 5 minu&hellip;'
 url: /index.php/datamgmt/datadesign/how-to-delete-large-amounts/
 views:
@@ -20,7 +21,9 @@ Recently I had a request to DELETE all the data except the last 30 days of data 
 
 For Example:
 
-<pre>DECLARE @Timestamp datetime
+sql
+DECLARE @Timestamp datetime
 DELETE TOP (10000) from  Log With (tablockx, holdlock)
 WHERE Timestamp < @Timestamp
-GO 500</pre>
+GO 500
+```

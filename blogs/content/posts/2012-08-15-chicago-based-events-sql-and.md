@@ -3,6 +3,7 @@ title: Chicago Events – SQL and .NET
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-08-15T10:49:00+00:00
+ID: 1692
 excerpt: |
   It’s been nearly two years now since joining the Magenic team and it’s been a great ride so far.  Well, the ride is about to get even better.
   Next week, Magenic is hosting a new event titled the BI Summit.  This event is a focus point on the decision m&hellip;

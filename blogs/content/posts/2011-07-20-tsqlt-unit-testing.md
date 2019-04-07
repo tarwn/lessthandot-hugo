@@ -3,6 +3,7 @@ title: tSQLt Unit Testing
 author: George Mastros (gmmastros)
 type: post
 date: 2011-07-20T15:25:00+00:00
+ID: 1260
 excerpt: |
   Yesterday, I attended a training class at Microsoft’s facility in Malvern, Pennsylvania.  This training class was led by Sebastian Meine (sqlity.net) and Dennis Lloyd (curiouslycorrect.com). 
   

@@ -3,6 +3,7 @@ title: Diagnostic Manager Quick Tip – New Server Tag
 author: Kevin Conan
 type: post
 date: 2012-06-04T23:59:00+00:00
+ID: 1645
 excerpt: 'Where I work, we like to buy Diagnostic Manager Licenses in batches.  So every quarter or so I add in a bunch of new instances.  When you start getting over 25 instances being monitored, it gets tricky to remember which 5 instances you just added into t&hellip;'
 url: /index.php/datamgmt/datadesign/diagnostic-manager-quick-tip-new/
 views:

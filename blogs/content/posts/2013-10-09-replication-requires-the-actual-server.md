@@ -3,6 +3,7 @@ title: Replication requires the actual server name – Incorrect server name
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-10-09T22:55:00+00:00
+ID: 2175
 excerpt: 'Tonight I went into a virtual lab to setup Transactional Replication for demonstration purposes.  Over time, the lab has been changed, altered and just about turned upside down, one way or another.  Upon trying to call the wizard in SSMS, I received the&hellip;'
 url: /index.php/datamgmt/dbadmin/replication-requires-the-actual-server/
 views:

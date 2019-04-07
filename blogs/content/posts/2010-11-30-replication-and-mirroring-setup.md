@@ -3,6 +3,7 @@ title: Mirroring and Transactional Replication setup – Auto Failover
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-11-30T12:36:20+00:00
+ID: 961
 excerpt: Since mirroring has come to the SQL Server feature set, High Availability (HA) has become a much easier, inexpensive and available option. Prior to mirroring, third party software and hardware were the main options to achieve HA. This was due to replication never being accepted as a high availability option. With any solution like SQL Server, growth over time builds a better and more stable solution. This has been the fact with many features of SQL Server, including replication. Replication had some issues in previous versions of SQL Server. Maintaining the uptime and stability was not a trivial task. With replication, there is a more in-depth knowledge requirement to maintain it, while mirroring does not require as much in-depth knowledge to provide a solid solution. Do think that mirroring does not include a strict discipline of skills in order to make it a successful HA solution. Mirroring is simplistic from the outside, both in setup and maintainability. However, troubleshooting mirroring is a critical aspect to making it work for HA. In order to be successful, knowledge of the internals of mirroring is as important as replication.
 url: /index.php/datamgmt/dbprogramming/replication-and-mirroring-setup/
 views:
@@ -182,10 +183,12 @@ Once the mirror setup is completed, replication must be configured further to en
 
 To set the agents, use the sp\_add\_agent_parameter procedure
 
-<pre>exec sp_add_agent_parameter @profile_id = 1, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'ONPNT_XPSR2Distributor'
+sql
+exec sp_add_agent_parameter @profile_id = 1, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'ONPNT_XPSR2Distributor'
 exec sp_add_agent_parameter @profile_id = 2, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'ONPNT_XPSR2Distributor'
 exec sp_add_agent_parameter @profile_id = 3, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'ONPNT_XPSR2Distributor'
-exec sp_add_agent_parameter @profile_id = 9, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'ONPNT_XPSR2Distributor'</pre>
+exec sp_add_agent_parameter @profile_id = 9, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'ONPNT_XPSR2Distributor'
+```
 
 The profile ID can be obtained by querying the [MSAgent_Profiles][2] table in the MSDB database. The agent types that will be contained in this table are:
 
@@ -201,7 +204,9 @@ The profile ID can be obtained by querying the [MSAgent_Profiles][2] table in th
 
 Since profile IDs may be different on different installations, verify your profile ID by check this table. Once the parameters are set, use the [MSagent_parameters][3] table to verify by checking the parameter_name column for the value -PublisherFailoverPartner.
 
-<pre>SELECT * FROM MSagent_parameters WHERE parameter_name = '-PublisherFailoverPartner'</pre>
+sql
+SELECT * FROM MSagent_parameters WHERE parameter_name = '-PublisherFailoverPartner'
+```
 
 If we were in a merge replication setup, profile 4 would also need to be set.
 
@@ -213,12 +218,16 @@ Testing is everything when you have a more complex HA setup, such as mirroring w
 
 At this point mirroring and replication is functioning together. The principal and mirror are acting in a synchronized state and replication is acting based off the distributor. To test this setup, test mirroring by altering a record in AdventureWorks on the principal.
 
-<pre>SELECT AddressLine1 FROM person.Address WHERE AddressID = 1</pre>
+sql
+SELECT AddressLine1 FROM person.Address WHERE AddressID = 1
+```
 
 The statement above results in, “1970 Napa Ct”. Update the AddressLine1 value to, “1970 Napa Court” and ensure the changes flow to the subscriber of the publication.
 
-<pre>UPDATE Person.Address SET AddressLine1 = '1970 Napa Court'
-WHERE AddressID = 1</pre>
+sql
+UPDATE Person.Address SET AddressLine1 = '1970 Napa Court'
+WHERE AddressID = 1
+```
 
 Check the subscriber by running the same select. You should see the changes made to the same record. In the replication monitor we can also see the commands sent
 
@@ -248,12 +257,16 @@ To test the failover, run the same test as we performed earlier but in reverse o
 
 In this case, update the same value back to the Ct over Court value.
 
-<pre>UPDATE Person.Address SET AddressLine1 = '1970 Napa Ct'
-WHERE AddressID = 1</pre>
+sql
+UPDATE Person.Address SET AddressLine1 = '1970 Napa Ct'
+WHERE AddressID = 1
+```
 
 Check on the subscriber now that the changes flowed as they should have
 
-<pre>SELECT AddressLine1 FROM person.Address WHERE AddressID = 1</pre>
+sql
+SELECT AddressLine1 FROM person.Address WHERE AddressID = 1
+```
 
 We see that the failover was successful and the value committed as, “1970 Napa Ct” and the distributor in the replication monitor shows the commands sent.
 

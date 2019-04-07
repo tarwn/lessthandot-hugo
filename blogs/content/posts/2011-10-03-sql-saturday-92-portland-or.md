@@ -3,6 +3,7 @@ title: 'SQL Saturday #92 – Portland, OR'
 author: Jes Borland
 type: post
 date: 2011-10-03T17:13:00+00:00
+ID: 1337
 excerpt: 'Where can you get your next @grrl_geek sighting? Check out SQL Saturday #92 in sunny Portland, OR on Saturday, October 8, 2011!'
 url: /index.php/datamgmt/dbprogramming/sql-saturday-92-portland-or/
 views:

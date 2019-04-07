@@ -3,6 +3,7 @@ title: How I used Data Explorer to create a demo
 author: Koen Verbeeck
 type: post
 date: 2013-03-20T10:22:00+00:00
+ID: 2042
 excerpt: In this short blog post I show how you can use Data Explorer to quickly gather some datasets for a demo.
 url: /index.php/webdev/business-intelligence/how-i-used-data-explorer/
 views:

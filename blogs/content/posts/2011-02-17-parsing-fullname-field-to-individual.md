@@ -3,6 +3,7 @@ title: Parsing the FullName field to individual components
 author: Naomi Nosonovsky
 type: post
 date: 2011-02-17T21:50:00+00:00
+ID: 1046
 excerpt: |
   This post expands on my previous post on the similar topic
   Parsing the Address field to its individual components
@@ -33,7 +34,8 @@ Given the names in the format of LastName (Suffix), FirstName (MiddleInitial) (w
 
 Here is the script that does it using my favorite CROSS APPLY technique and step by step approach:
 
-<pre>/*create table #temp 
+sql
+/*create table #temp 
 ( 
     FULLNAME        VARCHAR(100), 
     ID              INT 
@@ -78,7 +80,7 @@ FROM   #temp T
                            SUBSTRING(F1.cLastName,CHARINDEX(' ',F1.cLastName + ' ') + 1, 
                                      LEN(F1.cLastName)) AS pSuffix) F2 
        CROSS APPLY (SELECT CASE 
-                             WHEN LEN(pSuffix) &gt; 0 
+                             WHEN LEN(pSuffix) > 0 
                                   AND EXISTS (SELECT 1 
                                               FROM   @Suffixes S 
                                               WHERE  S.Suffix = pSuffix) THEN 'Y' 
@@ -106,7 +108,8 @@ FROM   #temp T
                            CASE 
                              WHEN F6.MIExists = 'Y' THEN F5.MInitial 
                              ELSE '' 
-                           END AS [Middle Initial]) F7 </pre>
+                           END AS [Middle Initial]) F7 
+```
 
 This code does not consider complex cases of 2 last names following by a suffix or first name consisting of two names following by the middle initial.
 
@@ -117,5 +120,5 @@ Hopefully this short blog is useful.
  [1]: /index.php/DataMgmt/DataDesign/parsing-the-address-field-to-its-individ
  [2]: http://bradsruminations.blogspot.com/2011/04/t-sql-tuesday-017-it-slices-it-dices-it.html
  [3]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/c31fe71b-2c51-497d-a322-0e7e17a861cd
- [4]: http://forum.lessthandot.com/viewforum.php?f=17
- [5]: http://forum.lessthandot.com/viewforum.php?f=22
+ [4]: http://forum.ltd.local/viewforum.php?f=17
+ [5]: http://forum.ltd.local/viewforum.php?f=22

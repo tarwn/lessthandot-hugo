@@ -3,6 +3,7 @@ title: 'SQL Saturday #99 Minnesota – #SQLAwesome'
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-10-26T12:22:00+00:00
+ID: 1362
 excerpt: |
   Does this kind of diagram get you excited about what’s next to come in designing and maintaining a system that involves online and offline data consuming users?  If it is, read on…
   

@@ -3,6 +3,7 @@ title: Plan Explorer Pro – First Glance
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-10-15T10:59:00+00:00
+ID: 1756
 excerpt: 'Over these past few days, I’ve had a chance to check out the new release of Plan Explorer Pro from SQL Sentry.  I’d like to thank them again, for giving me the chance to dig into this new edition and make full use of the additional features it has to of&hellip;'
 url: /index.php/datamgmt/datadesign/plan-explorer-pro-first-glance/
 views:
@@ -47,7 +48,8 @@ The next thing I found really valued in the Pro Edition, the history and comment
 
 The next feature, Full Query Call Stack, is something I’ve been hoping for in Plan Explorer for some time.  Before, tuning a batch was a bit difficult as it pertains to cost and specific issues that go along with aspects to the entire transaction.  For example, a loop is something we can now look closely at.  Take the example query I wrote to test out Pro edition.
 
-<pre>DECLARE @LOOP INT = 1
+sql
+DECLARE @LOOP INT = 1
 DECLARE @DueDate DATETIME
 SET @DueDate = (SELECT MAX(DueDate) FROM Sales.SalesOrderHeader)
 
@@ -55,7 +57,8 @@ WHILE @LOOP < 100
  BEGIN
 	SELECT DueDate, ShipDate FROM Sales.SalesOrderHeader WHERE DueDate = @DueDate 
   SET @LOOP += 1
- END</pre>
+ END
+```
 
 With Pro Edition, we can now follow through the loop and each iteration as it pertains to the cost of that iteration.  In the example query, this equates to 101 generations of cost in terms of a plan to review; the first assignment of the variable @DueDate and then the 100 iterations of the loop.  In the real world, this could provide quick examination of problems that are dug deep in a long process or transaction, such as a procedure call hundreds of lines down in a conditional statement.  Now, that line can be pointed out quickly based on review of runtime based on the cost and Plan Explorer’s way of highlighting the high cost operations.
 
@@ -67,8 +70,10 @@ In the above image, the highlighted row could be a point in which the full query
 
 In this case, I might want to add an index and then comment on the history area that I am doing so to tune this portion of the script.
 
-<pre>CCREATE INDEX IDX_DueDate_ASC ON Sales.SalesOrderHeader (DueDate)
-GO</pre>
+sql
+CCREATE INDEX IDX_DueDate_ASC ON Sales.SalesOrderHeader (DueDate)
+GO
+```
 
 Clicking the actual plan again in Plan Explorer Pro, I drop my reads to 2 and remove the high cost on the other areas.  Again, I would want to add to the comments that the area was successfully tuned base on the index addition.
 
@@ -80,9 +85,11 @@ Stepping through the stack, another statement is seen as high cost to the overal
 
 Again, we’d want to add to the comments, another index change is needed.
 
-<pre>CREATE INDEX IDX_DueDate_ASC ON Sales.SalesOrderHeader (DueDate) INCLUDE (ShipDate)
+sql
+CREATE INDEX IDX_DueDate_ASC ON Sales.SalesOrderHeader (DueDate) INCLUDE (ShipDate)
 WITH (DROP_EXISTING=ON)
-GO</pre>
+GO
+```
 
 After this change, life is good in query land with another lowered overall reads to 2 and the key lookup removed.  Notice the key lookup shown in the last image is removed after you change the index.  I always found this really cool in Plan Explorer; you only see what you need to in order to tune the statements.  Essentially, the bad is provided so we can focus on the areas and get moving along.  That makes a good tool and puts value in it.  Sifting through blank columns goes back to voiding the lazy efficiency concept.
 
@@ -92,7 +99,8 @@ The last feature I’ll go over today is the Pro Edition feature, waits statisti
 
 For example, changing the statement that has been used to perform and table wide update should prove to show high shared page IO latch wait times.
 
-<pre>DECLARE @LOOP INT = 1
+sql
+DECLARE @LOOP INT = 1
 DECLARE @DueDate DATETIME
 SET @DueDate = (SELECT MAX(DueDate) FROM Sales.SalesOrderHeader)
 
@@ -102,7 +110,8 @@ WHILE @LOOP < 100
 	SET DueDate = @DueDate
 	WHERE DueDate = @DueDate
   SET @LOOP += 1
- END</pre>
+ END
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-168.png?mtime=1350304972"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-168.png?mtime=1350304972" width="299" height="116" /></a>

@@ -3,6 +3,7 @@ title: Grouping datetime values in half hour blocks in SQL Server
 author: SQLDenis
 type: post
 date: 2009-05-29T14:38:49+00:00
+ID: 450
 url: /index.php/datamgmt/datadesign/grouping-datetime-values-in-half-hour-bl/
 views:
   - 19213
@@ -77,7 +78,8 @@ vCount time
 
 This is simple to do with a CASE statement in SQL Server. First create the following table with sample data
 
-<pre>create table #temp (SomeDate datetime)
+sql
+create table #temp (SomeDate datetime)
 insert #temp values ( '2009-05-12 11:13:19.667')
 insert #temp values ( '2009-05-12 11:12:19.667')
 insert #temp values ( '2009-05-12 11:33:19.667')
@@ -94,16 +96,19 @@ insert #temp values ( '2009-05-12 13:43:19.667')
 insert #temp values ( '2009-05-12 14:03:19.667')
 insert #temp values ( '2009-05-12 14:53:19.667')
 insert #temp values ( '2009-05-12 15:53:19.667')
-insert #temp values ( '2009-05-12 15:23:19.667')</pre>
+insert #temp values ( '2009-05-12 15:23:19.667')
+```
 
 Here is what the select statement looks like
 
-<pre>select count(*) as vCount,case when datepart(mi,Somedate) < 30 
+sql
+select count(*) as vCount,case when datepart(mi,Somedate) < 30 
 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
 else dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end as time
 from #temp
 group by case when datepart(mi,Somedate) < 30 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
- else dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end</pre>
+ else dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end
+```
 
 As you can see we look at the minutes, if it is below 30 we make it 0 otherwise we make it 30.
 
@@ -129,9 +134,11 @@ vCount time
 
 Here is what the data looks side by side if you run the following query
 
-<pre>select Somedate,case when datepart(mi,Somedate) < 30 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
+sql
+select Somedate,case when datepart(mi,Somedate) < 30 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
  else dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end
-from #temp</pre>
+from #temp
+```
 
 Somedate
   
@@ -171,7 +178,8 @@ To do the same for 15 minute blocks is just adding 2 more CASE statements
 
 Here is what that looks like
 
-<pre>select count(*) as vCount,case when datepart(mi,Somedate) < 15 
+sql
+select count(*) as vCount,case when datepart(mi,Somedate) < 15 
 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
 when datepart(mi,Somedate) between 15 and 29
 then dateadd(mi,15,dateadd(hh, datediff(hh, 0, Somedate)+0, 0))
@@ -185,7 +193,8 @@ when datepart(mi,Somedate) between 15 and 29
 then dateadd(mi,15,dateadd(hh, datediff(hh, 0, Somedate)+0, 0))
 when datepart(mi,Somedate) between 30 and 44
 then dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0))
-else dateadd(mi,45,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end</pre>
+else dateadd(mi,45,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end
+```
 
 vCount time
   
@@ -215,5 +224,5 @@ There are other ways to skin this cat and maybe I will follow up on this next we
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

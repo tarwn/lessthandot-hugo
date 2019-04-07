@@ -3,6 +3,7 @@ title: Hello World
 author: Koen Verbeeck
 type: post
 date: 2012-11-23T11:58:00+00:00
+ID: 1797
 excerpt: |
   Hi and welcome to my blog!
   My name is Koen Verbeeck and I currently work as a Microsoft Business Intelligence consultant at Ordina Belgium. I specialize myself in the SQL Server BI stack and for some strange reason I particularly like to work with Inte&hellip;

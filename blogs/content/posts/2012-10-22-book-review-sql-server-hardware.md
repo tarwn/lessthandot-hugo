@@ -3,6 +3,7 @@ title: 'Book Review: SQL Server Hardware'
 author: Jes Borland
 type: post
 date: 2012-10-22T17:45:00+00:00
+ID: 1765
 excerpt: My latest geek read was SQL Server Hardware by Glenn Berry.
 url: /index.php/datamgmt/dbadmin/book-review-sql-server-hardware/
 views:

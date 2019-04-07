@@ -3,6 +3,7 @@ title: AngularJS vs Knockout – Validation (3 of 8)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-10-09T12:38:00+00:00
+ID: 2165
 excerpt: "I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. So here's the question, how hard is it going to be to add good, client-side validation to my pages? What about custom validation?"
 url: /index.php/webdev/uidevelopment/angularjs-vs-knockout-validation-3/
 views:
@@ -38,30 +39,32 @@ Full source available at [Angular/SimpleValidation.html][2].
 
 The built-in validation in AngularJS uses the HTML5 validation attributes. In this case, we have a basic backing Controller with a text property <code class="codespan">textValue</code>, a numeric property <code class="codespan">integerValue</code>, and a function that adds 5 to the numeric property <code class="codespan">getCalculatedInteger()</code>, and we&#8217;re binding to those properties with the relevant validation requirements:
 
-<pre><!DOCTYPE html&gt;
-<html ng-app="sampleApp"&gt;
-<head&gt;
-    <!-- ... --&gt;  
-    <script type="text/javascript" src="js/lib/angular-1.0.8.min.js"&gt;</script&gt;
-    <!-- ... css classes and such ... --&gt;
-</head&gt;
-<body&gt;
-<div ng-controller="SimpleValidationController"&gt;
-    <form name="appForm" novalidate&gt;
-        Required Text: <input type="text" name="textValueInput" ng-model="textValue" required /&gt;<br /&gt;
-        Required Int: <input type="number" ng-model="integerValue" min="0" max="5" ng-pattern="/^-?d+$/" required /&gt;<br /&gt;
-        Required Int + 5: {{ getCalculatedInteger() }}<br /&gt;
-        <input type="submit" value="Save" /&gt;
-    </form&gt;
-   <!-- ... --&gt;
-</div&gt;
-<!-- ... --&gt;  </pre>
-
+```html
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+    <!-- ... -->  
+    <script type="text/javascript" src="js/lib/angular-1.0.8.min.js"></script>
+    <!-- ... css classes and such ... -->
+</head>
+<body>
+<div ng-controller="SimpleValidationController">
+    <form name="appForm" novalidate>
+        Required Text: <input type="text" name="textValueInput" ng-model="textValue" required /><br />
+        Required Int: <input type="number" ng-model="integerValue" min="0" max="5" ng-pattern="/^-?d+$/" required /><br />
+        Required Int + 5: {{ getCalculatedInteger() }}<br />
+        <input type="submit" value="Save" />
+    </form>
+   <!-- ... -->
+</div>
+<!-- ... -->  
+```
 In the integer input, I&#8217;ve used the required attribute to indicate the value is required, the min and max attributes to define a valid range for the value, and a pattern to ensure the value is an integer. Behind the scenes, Angular sets additional properties on the form and input elements to define their validity.
 
 In the full sample code above, I have included CSS styles and output the validation properties in a pre-formatted section so I can see what&#8217;s going on behind the scenes:
 
-<pre><pre&gt;
+```html
+<pre>
 textValue: 
     value="{{ textValue }}"    
     value is null: {{ textValue == null }}
@@ -78,8 +81,8 @@ appForm:
     valid="{{ appForm.$valid }}"
     error={{ appForm.$error }}
     required={{ appForm.$error.required }}
-</pre&gt;</pre>
-
+</pre>
+```
 ## More Complex AngularJS Validation
 
 The built-in attributes cover a wide range of needs, but there are also cases where I need a field to validate it&#8217;s value against a prior one on the form. AngularJS does not have a pre-built directive for this, but we can build a custom one and use the [Linking Method][3] in the Directive. One of the arguments supplied is the controller for the element. Using this, we can add methods to to the input pipeline ($parsers) and to the pipeline when values are set directly ($formatters), then set the validity on the controller from those methods.
@@ -90,14 +93,16 @@ Full source available at [Angular/ComplexValidation.html][4].
 
 For the purposes of this example, we&#8217;ll have a controller with two integer properties, <code class="codespan">ceilingValue</code> and <code class="codespan">integerValue</code>. Rather than use a hardcoded max value for the input responsible for integerValue, I&#8217;m going to define a custom directive to use the value of the first input as the ceiling. 
 
-<pre><!-- ... ---&gt;
-        Ceiling Input: <input type="number" name="ceilingValueInput" ng-model="ceilingValue" required /&gt;<br /&gt;
-        Integer Input: <input type="number" name="integerValueInput" ng-model="integerValue" ng-pattern="/^-?d+$/" ceiling-validate="{{ ceilingValue }}" required /&gt;<br /&gt;
-<!-- ... --&gt;</pre>
-
+```html
+<!-- ... --->
+        Ceiling Input: <input type="number" name="ceilingValueInput" ng-model="ceilingValue" required /><br />
+        Integer Input: <input type="number" name="integerValueInput" ng-model="integerValue" ng-pattern="/^-?d+$/" ceiling-validate="{{ ceilingValue }}" required /><br />
+<!-- ... -->
+```
 The <code class="codespan">ceilingValidate</code> directive then defines the behavior for the new attribute:
 
-<pre>sampleApp.directive('ceilingValidate', function () {
+```javascript
+sampleApp.directive('ceilingValidate', function () {
     return {
         // can only be used as an attribute
         restrict: 'A',
@@ -110,7 +115,7 @@ The <code class="codespan">ceilingValidate</code> directive then defines the beh
         // and define the logic for the link
         link: function (scope, instanceElement, instanceAttributes, controller) {
             // per http://www.benlesh.com/2012/12/angular-js-custom-validation-via.html
-            // let's add a parser (html input -&gt; model) and a formatter (model -&gt; html input)
+            // let's add a parser (html input -> model) and a formatter (model -> html input)
 
             // when the value in the ceiling changes, re-evaluate validity
             scope.$watch('ceilingValidate', function (newValue, oldValue) {
@@ -141,8 +146,8 @@ The <code class="codespan">ceilingValidate</code> directive then defines the beh
 
         }
     };
-});</pre>
-
+});
+```
 The comments tell the story. I&#8217;ve limited this directive to be used as an attribute and only on an element that has an ng-model defined. The value of the ceiling-validate attribute will be available in the local scope as a read-only attribute. The linking function initializes the behavior for the element, adding validity checks to the $parsers and $formatters pipelines.
 
 When I enter a ceiling and then an integer, the integer is validated against that ceiling. When I modify the ceiling value, the integer value is re-validated against that new ceiling value.
@@ -157,45 +162,47 @@ Full source available at [Knockout/SimpleValidation.html][6].
 
 To compare with the Angular method, I&#8217;ll be configuring the validation library to work like the method above. I&#8217;ll be using HTML5 attributes to define the validation and include the same text and integer values for sample fields.
 
-<pre><!DOCTYPE html&gt;
-<html&gt;
-<head&gt;
-    <!-- ... --&gt;
-    <script type="text/javascript" src="js/lib/knockout-2.3.0.min.js"&gt;</script&gt;
-    <script type="text/javascript" src="js/lib/knockout.validation.min.js"&gt;</script&gt;
-    <!-- ... css classes and such ... --&gt;
-</head&gt;
-<body&gt;
-<div&gt;
-    <form novalidate data-bind="css: { invalid: isValid() == false }"&gt;
-        Required Text: <input type="text" data-bind="value: textValue" required /&gt;<br /&gt;
-        Required Int: <input type="number" data-bind="value: integerValue" min="0" max="5" pattern="^-?d+$" required /&gt;<br /&gt;
-        Required Int + 5: <span data-bind="text: calculatedInteger"&gt;</span&gt;<br /&gt;
-        <input type="submit" value="Save" /&gt;
-        <!-- ... --&gt;
-    </form&gt;</pre>
-
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ... -->
+    <script type="text/javascript" src="js/lib/knockout-2.3.0.min.js"></script>
+    <script type="text/javascript" src="js/lib/knockout.validation.min.js"></script>
+    <!-- ... css classes and such ... -->
+</head>
+<body>
+<div>
+    <form novalidate data-bind="css: { invalid: isValid() == false }">
+        Required Text: <input type="text" data-bind="value: textValue" required /><br />
+        Required Int: <input type="number" data-bind="value: integerValue" min="0" max="5" pattern="^-?d+$" required /><br />
+        Required Int + 5: <span data-bind="text: calculatedInteger"></span><br />
+        <input type="submit" value="Save" />
+        <!-- ... -->
+    </form>
+```
 Using this extra library added an additional 19KB of minified JS to the 42KB we already have for knockout, which still comes in under the 80KB for Angular, but does not include a DOM manipulation library yet either (like [zepto][7] or [jQuery][8]). With the exception of updating after the full value is updated vs on on key down, this knockout version works just like the AngularJS example at the top.
 
 Like the AngularJS version, I included a pre section to output validation states:
 
-<pre><pre&gt;
+```html
+<pre>
 textValue:
-    value="<span data-bind="text: textValue"&gt;</span&gt;"    
-    valid=<span data-bind="text: textValue.__valid__"&gt;</span&gt;
-    error=<span data-bind="validationMessage: textValue"&gt;</span&gt;
-    or=<span data-bind="text: textValue.error"&gt;</span&gt;
+    value="<span data-bind="text: textValue"></span>"    
+    valid=<span data-bind="text: textValue.__valid__"></span>
+    error=<span data-bind="validationMessage: textValue"></span>
+    or=<span data-bind="text: textValue.error"></span>
 
 integerValue: 
-    value="<span data-bind="text: integerValue"&gt;</span&gt;"
-    valid=<span data-bind="text: integerValue.__valid__"&gt;</span&gt;
-    error=<span data-bind="validationMessage: integerValue"&gt;</span&gt;
+    value="<span data-bind="text: integerValue"></span>"
+    valid=<span data-bind="text: integerValue.__valid__"></span>
+    error=<span data-bind="validationMessage: integerValue"></span>
 
 appForm: 
-    valid="<span data-bind="text: isValid()"&gt;</span&gt;"
-    error= <i&gt;no collection at form level</i&gt;
-</pre&gt;</pre>
-
+    valid="<span data-bind="text: isValid()"></span>"
+    error= <i>no collection at form level</i>
+</pre>
+```
 Rather than attach the validation state to the form elements, the knockout validation library attaches them as properties on the observable that is being validated, then provides a binding you can use to get a friendly message.
 
 Using the [configurations][9], I have made this work pretty closely to AngularJS above. There are additional configurations that include outputting error message elements, fine tuning the CSS classes, and even provide the name of a template to use for rendering error messages. 
@@ -212,21 +219,24 @@ Full source available at [Knockout /ComplexValidation.html][10].
 
 Nothing changes for the HTML:
 
-<pre><!-- ... --&gt;
-Ceiling Input: <input type="number" data-bind="value: ceilingValue" required /&gt;<br /&gt;
-Integer Input: <input type="number" data-bind="value: integerValue" pattern="^-?d+$" required /&gt;<br /&gt;
-<!-- ... --&gt;</pre>
-
+```html
+<!-- ... -->
+Ceiling Input: <input type="number" data-bind="value: ceilingValue" required /><br />
+Integer Input: <input type="number" data-bind="value: integerValue" pattern="^-?d+$" required /><br />
+<!-- ... -->
+```
 As I&#8217;ll be applying this custom rule via an extend call on the viewmodel:
 
-<pre>var ComplexValidationModel = function () {
+```javascript
+var ComplexValidationModel = function () {
     this.ceilingValue = ko.observable(10);
     this.integerValue = ko.observable(0).extend({ ceiling: this.ceilingValue });
-};</pre>
-
+};
+```
 Defining this new validation rule is fairly straightforward:
 
-<pre>// add the custom validation rule
+```javascript
+// add the custom validation rule
 ko.validation.rules['ceiling'] = {
     validator: function (val, otherVal) {
         var actualOther = parseInt(ko.isObservable(otherVal) ? otherVal() : otherVal);
@@ -237,8 +247,8 @@ ko.validation.rules['ceiling'] = {
     },
     message: 'The field must be less than or equal to {0}'
 };
-ko.validation.registerExtenders();</pre>
-
+ko.validation.registerExtenders();
+```
 And everything works exactly as you would expect, since it is just an additional rule on the existing library.
 
 ### Knockout Completely Custom Validation Example
@@ -251,7 +261,8 @@ Warning: Don&#8217;t use this in production. It&#8217;s a one off piece of examp
 
 I&#8217;ve moved everything to extends calls, so here is the updated viewmodel:
 
-<pre>var ComplexValidationModel = function () {
+```javascript
+var ComplexValidationModel = function () {
     var rawCeilingValue = ko.observable(10),
         rawIntegerValue = ko.observable(0);
 
@@ -260,13 +271,14 @@ I&#8217;ve moved everything to extends calls, so here is the updated viewmodel:
 	this.isValid = ko.computed(function(){
 		return this.ceilingValue.isValid() && this.integerValue.isValid();
 	}, this);
-};</pre>
-
+};
+```
 I only implemented the required, isNumber, and max/ceiling rules, but the pattern and min wouldn&#8217;t be too hard to add.
 
 The core of this logic is the addition of a <code class="codespan">validate</code> extension. The extension wraps around the observable, replacing the read and write pipelines with it&#8217;s own:
 
-<pre>ko.extenders.validate = function (target, options) {
+```javascript
+ko.extenders.validate = function (target, options) {
 
     // ... logic for validation methods + validate call ...
 
@@ -300,8 +312,8 @@ The core of this logic is the addition of a <code class="codespan">validate</cod
     // write initial value so we can get initial validity
     result(target());
     return result;
-}</pre>
-
+}
+```
 The full code is available via the github link above.
 
 ## Some Differences

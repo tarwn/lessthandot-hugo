@@ -3,6 +3,7 @@ title: How to read the error log on an Amazon RDS SQL Server instance
 author: SQLDenis
 type: post
 date: 2013-03-21T11:21:00+00:00
+ID: 2047
 excerpt: |
   Earlier today, i created an Amazon RDS SQL Server instance, you can check out that post here: Trying out Amazon Relational Database Service
   I decided to take a closer look, the first thing I wanted to know is if I could see the error log. There are two&hellip;
@@ -47,7 +48,9 @@ Once you click on the view button, you will see something like this
 
 That is all nice and dandy but can I do it from T-SQL? Let&#8217;s find out by running xp_readerrorlog.
 
-<pre>EXEC master.dbo.xp_readerrorlog</pre>
+sql
+EXEC master.dbo.xp_readerrorlog
+```
 
 Here is the output
   
@@ -59,7 +62,9 @@ That is no good. Luckily for us there is a stored procedure that is provided, th
 
 Here is how you execute it
 
-<pre>EXEC rdsadmin..rds_read_error_log </pre>
+sql
+EXEC rdsadmin..rds_read_error_log 
+```
 
 The output is something like you expect from xp_readerrorlog
 
@@ -114,10 +119,12 @@ Here is what the stored procedure signature looks like
   
 
 
-<pre>CREATE PROCEDURE [dbo].[rds_read_error_log] @index INT = 0, @type INT = 1,
+sql
+CREATE PROCEDURE [dbo].[rds_read_error_log] @index INT = 0, @type INT = 1,
 @search_str1 VARCHAR(255) = NULL, @search_str2 VARCHAR(255) = NULL,
 @start_time DATETIME = NULL, @end_time DATETIME = NULL,
-@sort_order NVARCHAR(4) = N'asc'  </pre>
+@sort_order NVARCHAR(4) = N'asc'  
+```
 
 From the docs
 

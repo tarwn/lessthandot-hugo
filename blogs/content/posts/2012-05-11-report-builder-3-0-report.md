@@ -3,6 +3,7 @@ title: Report Builder 3.0 – Report Parts
 author: Jes Borland
 type: post
 date: 2012-05-11T11:28:00+00:00
+ID: 1625
 excerpt: |
   In this post, you’ll learn what report parts are, how to use them, and why you should use them.
   Report Builder 3.0 – The Introduction

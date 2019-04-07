@@ -3,6 +3,7 @@ title: 'CHESS: An Automated Concurrency Testing Tool'
 author: SQLDenis
 type: post
 date: 2008-12-11T18:29:08+00:00
+ID: 247
 url: /index.php/desktopdev/mstech/chess-an-automated-concurrency-testing-t/
 views:
   - 10681

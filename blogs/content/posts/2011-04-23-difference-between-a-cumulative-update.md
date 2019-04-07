@@ -3,6 +3,7 @@ title: Difference between a Cumulative Update and Service Pack for SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-23T11:12:00+00:00
+ID: 1136
 excerpt: |
   I read a #SQLHELP tweet that stated it would have been nice if the SQL Server team would have waited to announce SQL Server 2008 SP1 CTP release for testing before releasing SQL Server 2008 SP1 Cumulative Update 7.
   To me, the tweet didn’t make much sen&hellip;

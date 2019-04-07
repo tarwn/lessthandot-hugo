@@ -3,6 +3,7 @@ title: Introducing Windows Azure Infrastructure as a Service
 author: joshuafennessy
 type: post
 date: 2013-10-02T17:41:00+00:00
+ID: 2167
 excerpt: 'If you haven’t heard about Azure yet, I’d be surprised. Cloud based Platform applications like Windows Azure SQL Databases (WASDs) have been around for several years, and are becoming highly popular.  WASDs (for example) don’t quite have all of the same&hellip;'
 url: /index.php/enterprisedev/entdev/entarch/introducting-windows-azure-infrastructure-as-1/
 views:

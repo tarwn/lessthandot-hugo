@@ -3,6 +3,7 @@ title: The Stand-up Desk – Year Two, Version Two
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-05-23T09:59:00+00:00
+ID: 1175
 excerpt: Last February I shared the fact that I was trying a stand-up desk. Since that time, I have received a lot of strange looks and any number of health-related questions. I have also changed desk locations at my original job twice, moved to a new employer, and weathered the sleep-loss that came with the birth of our son.
 url: /index.php/itprofessionals/itprocesses/the-stand-up-desk-year-2/
 views:
@@ -18,7 +19,7 @@ Last February I shared the fact that I was [trying a stand-up desk][1]. Since th
 ## Going back to Sitting
 
 <div style="border: 1px solid #AAAAAA; float: right; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 1em;">
-  <img src="http://www.tiernok.com/LTDBlog/desk_1.1.jpg" alt="Standing Desk, V1.1" style="padding-bottom: 5px; max-width: 200px;" /><br /> My Original Stand-up Desk, v1.1
+  <img src="http://tiernok.com/LTDBlog/desk_1.1.jpg" alt="Standing Desk, V1.1" style="padding-bottom: 5px; max-width: 200px;" /><br /> My Original Stand-up Desk, v1.1
 </div>
 
 Over the moves and turmoil of the past year I continued to stand at my desk. After the first week or two, the initial soreness went away. The soreness in my feet have, however, been a constant. I never quite broke down and bought a stool and I think that was one my greatest oversight with the original desk.
@@ -36,7 +37,7 @@ What I found is that there are a lot of standing desks in the $1500-$3000 range,
 In the smaller price point there was one name that stood out. <a href="http://www.geekdesk.com/" title="Visit GeekDesk" target="_blank">GeekDesk</a> produces a desk that is sturdy, motorized, and lives at the $800 price point. I decided to order [the mini][2], though now that I have the original desk removed from my cube I can tell the full size would have fit easily. Though I didn&#8217;t intend to raise and lower the desk during the day, the motorized feature was nice because it allowed me to easily tweak and customize the standing height of the desk over the course of the first week.
 
 <div style="font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 1em;">
-  <img src="http://www.tiernok.com/LTDBlog/20110519_538_th.jpg" alt="Standing Desk, V2" style="padding-bottom: 5px;" /><br /> My New Stand-up Desk
+  <img src="http://tiernok.com/LTDBlog/20110519_538_th.jpg" alt="Standing Desk, V2" style="padding-bottom: 5px;" /><br /> My New Stand-up Desk
 </div>
 
 Still a work in progress, but having used this setup for two weeks I definitely made the right decision. Notice I have a stool this time around as well, I think this is a good addition and not only allows me a place to sit occasionally throughout the day, but also gives me a place to rest my feet if I feel like just putting one of them up to change position.

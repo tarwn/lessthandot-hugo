@@ -3,6 +3,7 @@ title: Moving On, Getting Converted…
 author: SQLArcher
 type: post
 date: 2012-03-13T07:56:00+00:00
+ID: 1559
 excerpt: "After a great many years (3 to be exact) I'm moving on from my current position into new exciting challenges. I have learned a lot in working in a big environment like this and swimming in the deep waters of SQL Server, but a huge thanks goes to my grea&hellip;"
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/moving-on-getting-converted/
 views:

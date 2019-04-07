@@ -3,6 +3,7 @@ title: Microsoft SQL Server 2008 Feature Pack October 2008 Available For Downloa
 author: SQLDenis
 type: post
 date: 2008-10-30T15:06:15+00:00
+ID: 190
 url: /index.php/datamgmt/datadesign/microsoft-sql-server-2008-feature-pack-o/
 views:
   - 6347

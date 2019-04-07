@@ -3,6 +3,7 @@ title: 'Real World Azure: Lease Container bug in Azure Storage API'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2015-11-16T14:10:14+00:00
+ID: 4250
 url: /index.php/enterprisedev/cloud/azure/real-world-azure-lease-container-bug-in-azure-storage-api/
 views:
   - 2689
@@ -53,10 +54,11 @@ A test for the [Lease Container Operation][3] can be implemented using the SDK l
 
 [ContainerNotFoundReturnsWrongError.cs][4]
 
-<pre>/// <summary&gt;
+```csharp
+/// <summary>
 /// Emulator: Returns 404 Container Not Found (tested with 3.3 and other versions)
 /// Azure API: Returns 404 Blob Not Found (tested with 3.3 and other versions)
-/// </summary&gt;
+/// </summary>
 [Test]
 public void AcquireLease_NonExistentContainer_ReturnsContainerNotFoundError()
 {
@@ -77,8 +79,8 @@ public void AcquireLease_NonExistentContainer_ReturnsContainerNotFoundError()
 
     Assert.AreEqual(ErrorCode_NotFound, statusCode);
     Assert.AreEqual(ErrorStatus_ContainerNotFound, status);
-}</pre>
-
+}
+```
 _(There are also examples of raw HTTP implementations in that same test file to verify it is not an SDK error, which is also why we&#8217;ll look at the response at the network level using fiddler)._
 
 On the local emulator, this will return the following details (fiddler):

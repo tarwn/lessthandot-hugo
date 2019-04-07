@@ -3,6 +3,7 @@ title: Magnolia crashed data corruption and loss
 author: SQLDenis
 type: post
 date: 2009-01-31T13:38:35+00:00
+ID: 308
 url: /index.php/itprofessionals/ethicsit/magnolia-crashed-data-corruption-and-los/
 views:
   - 4678

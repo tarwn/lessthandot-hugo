@@ -3,6 +3,7 @@ title: Java Training Day 1
 author: SQLDenis
 type: post
 date: 2012-11-26T19:22:00+00:00
+ID: 1802
 excerpt: |
   Today is day one of the Java class I am taking this week. I am just dumping some of the stuff that I am hearing about, some of the stuff I might already know.
   Java is a general purpose language, it is interperted, output is by&hellip;
@@ -228,7 +229,8 @@ There are also tags that you can use, it is recommended to use this order
   
 @deprecated (see How and When To Deprecate APIs)
 
-<pre>Here is an example
+```java
+Here is an example
 
    /**
      * Disposes of this graphics context once it is no longer 
@@ -240,7 +242,8 @@ There are also tags that you can use, it is recommended to use this order
     public void finalize() {
         dispose();
     }
-}</pre>
+}
+```
 
 **Identifiers**
   

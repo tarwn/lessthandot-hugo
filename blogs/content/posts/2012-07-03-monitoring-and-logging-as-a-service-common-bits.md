@@ -3,6 +3,7 @@ title: Monitoring and Logging as a Service – The Common Bits
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-07-03T10:01:00+00:00
+ID: 1643
 excerpt: In my previous post I outlined some of my own history with monitoring and my intent to review several available logging services. To help compare apples to apples, the logging mechanisms and log messages will operate consistently for each of the selected services.
 url: /index.php/enterprisedev/instrumentation/monitoring-and-logging-as-a-service-common-bits/
 views:
@@ -33,7 +34,8 @@ The singleton can be setup with any implementation of an ILogProvider. It provid
 
 **Logging.Logger** (<a href="https://github.com/tarwn/InstrumentationSampleCode/blob/master/Logging/Logger.cs" title="Logger.cs on Github" target="_blank">source</a>)
 
-<pre>public class Logger {
+```csharp
+public class Logger {
 
 	private ILogProvider _logProvider;
 	private static Logger _current;
@@ -42,7 +44,7 @@ The singleton can be setup with any implementation of an ILogProvider. It provid
 		_logProvider = logProvider;
 	}
 
-	public void LogMessage(Dictionary<string, string&gt; message, Action<Result&gt; callback) {
+	public void LogMessage(Dictionary<string, string> message, Action<Result> callback) {
 		_logProvider.Log(message, callback);
 	}
 
@@ -59,44 +61,45 @@ The singleton can be setup with any implementation of an ILogProvider. It provid
 		}
 	}
 
-	public static void Log(Dictionary<string, string&gt; message, Action<Result&gt; callback) {
+	public static void Log(Dictionary<string, string> message, Action<Result> callback) {
 		GetDefaultLogger().LogMessage(message, callback);
 	}
 
-	public static LoggerWithElapsedTime CaptureElapsedTime(Dictionary<System.String, System.String&gt; message, Action<Result&gt; callback) {
+	public static LoggerWithElapsedTime CaptureElapsedTime(Dictionary<System.String, System.String> message, Action<Result> callback) {
 		return new LoggerWithElapsedTime(GetDefaultLogger(), message, callback);
 	}
-}</pre>
-
+}
+```
 Each log call passes in a message and a callback that will be called with the result of the HTTP post, though so far the sample website code is using fire-and-forget, not bothering to provide a callback method.
 
 To support the ILogProvider implementation, I created an [HttpJsonPost class][1] class and associated helpers to handle the HTTP communications. This class can do synchronous and asynchronous HTTP requests to the relevant services:
 
 **Logging.Communications.HttpJsonPost** (<a href="https://github.com/tarwn/InstrumentationSampleCode/blob/master/Logging/Communications/HttpJsonPost.cs" title="HttpJsonPost on Github" target="_blank">source</a>)
 
-<pre>public class HttpJsonPost {
+```csharp
+public class HttpJsonPost {
 
-	Dictionary<string,string&gt; _message;
+	Dictionary<string,string> _message;
 	NetworkCredential _credentials;
 	bool _useJson;
 
-	public HttpJsonPost(Dictionary<string, string&gt; message, NetworkCredential credentials = null, bool useJson = true) { /* ... */ }
+	public HttpJsonPost(Dictionary<string, string> message, NetworkCredential credentials = null, bool useJson = true) { /* ... */ }
 
 	private HttpWebRequest InitializeRequest(string url, string method) { /* ... */ }
 
-	public void Send(string url, string method, Action<Result&gt; callback, bool processResponse = true) { /* ... */ }
+	public void Send(string url, string method, Action<Result> callback, bool processResponse = true) { /* ... */ }
 
-	public void SendAsync(string url, string method, Action<Result&gt; callback, bool processResponse = true) { /* ... */ }
+	public void SendAsync(string url, string method, Action<Result> callback, bool processResponse = true) { /* ... */ }
 
 	private void GetRequestStream(IAsyncResult result) { /* ... */ }
 
 	private void GetResponseStream(IAsyncResult result) { /* ... */ }
 
-	private void ProcessResponse(Func<WebResponse&gt; getResponse, Action<Result&gt; callback) { /* ... */ }
+	private void ProcessResponse(Func<WebResponse> getResponse, Action<Result> callback) { /* ... */ }
 
 	private void WriteMessage(Stream stream) { /* ... */ }
-}</pre>
-
+}
+```
 This little bit of code and their supporting classes are all it takes to talk to the external logging services, and to do so with limited impact by using asynchronous requests and callbacks.
 
 ## The Sample Website
@@ -105,7 +108,8 @@ The sample website contains very little code that I added. The majority of the c
 
 **SampleSiteWithLogging.Global** (<a href="https://github.com/tarwn/InstrumentationSampleCode/blob/master/SampleSiteWithLogging/Global.asax.cs" title="Global.asax.cs on GitHub" target="_blank">source</a>)
 
-<pre>public class MvcApplication : System.Web.HttpApplication {
+```csharp
+public class MvcApplication : System.Web.HttpApplication {
 	
 	/* ... */
 
@@ -114,18 +118,18 @@ The sample website contains very little code that I added. The majority of the c
 
 		ILogProvider provider = GetProviderFromSettings();
 		Logger.SetDefaultLogger(provider);
-		Logger.Log(new Dictionary<string, string&gt;() { { "Type", "ApplicationStartup" }, { "Time", DateTime.UtcNow.ToString() } }, null);
+		Logger.Log(new Dictionary<string, string>() { { "Type", "ApplicationStartup" }, { "Time", DateTime.UtcNow.ToString() } }, null);
 	}
 
 	protected void Application_BeginRequest() {
-		Logger.Log(new Dictionary<string, string&gt;() { { "Type", "ApplicationRequest" }, { "UserAgent", Request.UserAgent }, { "Time", DateTime.UtcNow.ToString() } }, null);
+		Logger.Log(new Dictionary<string, string>() { { "Type", "ApplicationRequest" }, { "UserAgent", Request.UserAgent }, { "Time", DateTime.UtcNow.ToString() } }, null);
 	}
 
 	protected void Application_Error(Object sender, System.EventArgs e) {
 		System.Web.HttpContext context = HttpContext.Current;
 		System.Exception exc = Context.Server.GetLastError();
 
-		Logger.Log(new Dictionary<string, string&gt;() { { "Type", "ApplicationError" }, { "Exception", exc.ToString() }, { "Time", DateTime.UtcNow.ToString() } }, null);
+		Logger.Log(new Dictionary<string, string>() { { "Type", "ApplicationError" }, { "Exception", exc.ToString() }, { "Time", DateTime.UtcNow.ToString() } }, null);
 	}
 
 	protected ILogProvider GetProviderFromSettings() {
@@ -147,34 +151,35 @@ The sample website contains very little code that I added. The majority of the c
 		}
 		
 	}
-}</pre>
-
+}
+```
 The global.asax file allows us to wire logic into the global application workflow. On startup we get a provider, based on our &#8220;Sensitive Settings&#8221; configuration file, set that as our default logger, then go ahead and log our first message with entries to indicate this is application startup and the current UTC timestamp. Each time we receive a request from a web browser, we use our on line logging call to log the browsers UserAgent string and a timestamp. When an error goes unhandled, we can log that too.
 
 Elsewhere in our application we can use those same one line calls to pass information to the logging service. The HomeController logs information, but instead uses the CaptureElapsedTime method to log information and the time that elapses between it&#8217;s instantiation and disposal.
 
 **SampleSiteWithLogging.Controllers.HomeController** (<a href="https://github.com/tarwn/InstrumentationSampleCode/blob/master/SampleSiteWithLogging/Controllers/HomeController.cs" title="HomeController.cs on Github" target="_blank">source</a>)
 
-<pre>public class HomeController : Controller {
+```csharp
+public class HomeController : Controller {
 	public ActionResult Index() {
 		return View();
 	}
 
 	public ActionResult ShortOperation() {
-		using (var log = Logging.Logger.CaptureElapsedTime(new Dictionary<string, string&gt; { { "Type", "SiteHit" }, { "Area", "HomeController" }, { "Method", "ShortOperation" } }, null)) {
+		using (var log = Logging.Logger.CaptureElapsedTime(new Dictionary<string, string> { { "Type", "SiteHit" }, { "Area", "HomeController" }, { "Method", "ShortOperation" } }, null)) {
 			return View("Index");
 		}
 	}
 
 	public ActionResult LongOperation() {
-		using (var log = Logging.Logger.CaptureElapsedTime(new Dictionary<string, string&gt; { { "Type", "SiteHit" }, { "Area", "HomeController" }, { "Method", "LongOperation" } }, null)) {
+		using (var log = Logging.Logger.CaptureElapsedTime(new Dictionary<string, string> { { "Type", "SiteHit" }, { "Area", "HomeController" }, { "Method", "LongOperation" } }, null)) {
 			Thread.Sleep((int)(3000 * new Random().NextDouble()));
 			return View("Index");
 		}
 	}
 
-}</pre>
-
+}
+```
 These examples are actually more wordy than I would like. If I were building this as part of a production application, I would refactor them down to take explicit arguments or infer some of the values, reducing the size of each call even further. 
 
 ## &#8220;Sensitive Settings&#8221;

@@ -3,6 +3,7 @@ title: CozyRoc Releases SSIS+ 1.6 Beta
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-03-02T10:54:00+00:00
+ID: 1545
 excerpt: 'CozyRoc has always been one of my favorite companies producing custom components and tasks for SSIS.  I’ve found many real life cases in production settings where the products that CozyRoc provides have been invaluable for rapid development and performa&hellip;'
 url: /index.php/datamgmt/dbadmin/cozyroc-releases-ssis-1-6/
 views:

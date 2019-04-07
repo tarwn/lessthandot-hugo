@@ -3,6 +3,7 @@ title: Send Action Queries to Your Database in Batches
 author: Alex Ullrich
 type: post
 date: 2008-05-22T10:36:45+00:00
+ID: 33
 url: /index.php/desktopdev/mstech/send-action-queries-to-your-database-in/
 views:
   - 7101
@@ -24,7 +25,8 @@ My solution was to add an overload for the function that runs the single SQL Sta
 
 Here is some code for an example:
 
-<pre>public Object RunSQL(String sql, Enums.TransactionState tranState)
+```CSharp
+public Object RunSQL(String sql, Enums.TransactionState tranState)
 {
     IDbCommand cmd;
 
@@ -55,11 +57,13 @@ Here is some code for an example:
 
         cmd = null;
     }
-}</pre>
+}
+```
 
 and the Enum (pretty straightforward, but just in case):
 
-<pre>public enum TransactionState
+```CSharp
+public enum TransactionState
 {
     /// <summary>
     /// Open a new transaction
@@ -73,7 +77,8 @@ and the Enum (pretty straightforward, but just in case):
     /// Commit transaction when finished
     /// </summary>
     Commit
-}</pre>
+}
+```
 
 So now hopefully you can avoid the embarassing mistake of failing to batch your queries properly. One would think a &#8220;database guy&#8221; would know better 😳
 

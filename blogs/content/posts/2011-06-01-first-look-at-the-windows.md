@@ -3,6 +3,7 @@ title: First look at the windows 8 UI
 author: SQLDenis
 type: post
 date: 2011-06-01T22:23:00+00:00
+ID: 1199
 excerpt: |
   Micosoft has uploaded a video on YouTube that explains how the built the UI for windows 
   

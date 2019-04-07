@@ -3,6 +3,7 @@ title: First look at SQL Server Management Studio Denali
 author: SQLDenis
 type: post
 date: 2010-11-09T16:15:54+00:00
+ID: 938
 excerpt: 'The SQL Server Management Studio that ships with SQL Server Denali CTP1 is based on the Visual Studio 2010 shell. One of the advantages you will see right away is that if you have multiple monitors you can drag a query window to another monitor. This is&hellip;'
 url: /index.php/datamgmt/datadesign/first-look-at-sql-server-management-stud/
 views:

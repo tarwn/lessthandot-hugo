@@ -3,6 +3,7 @@ title: Scripting all jobs on SQL Server 2005/2008 into one file
 author: SQLDenis
 type: post
 date: 2009-08-23T10:49:00+00:00
+ID: 544
 excerpt: 'In the Scripting All The Jobs On Your SQL Server Instance Into Separate Files By Using SMO post I showed you how you can use SMO to script all the jobs into separate files. But what if you want to have them all in one file? You can of course use SMO for&hellip;'
 url: /index.php/datamgmt/dbprogramming/scripting-all-jobs-on-sql-server-2005-20/
 views:
@@ -40,5 +41,5 @@ Hopefully this will be handy for you.
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DBAdmin/scripting-all-the-jobs-on-your-sql-serve
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

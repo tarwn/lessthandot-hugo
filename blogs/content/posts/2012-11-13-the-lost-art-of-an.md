@@ -3,6 +3,7 @@ title: The lost art of an IT Professional
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-13T14:24:00+00:00
+ID: 1787
 excerpt: 'Recently, I was discussing a problem I had with Merge Replication and the underlying replrec.dll at the time a service pack was applied to a SQL Server Instance.  In order to prevent you from having to (re)read the article on the problem I uncovered and&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/the-lost-art-of-an/
 views:

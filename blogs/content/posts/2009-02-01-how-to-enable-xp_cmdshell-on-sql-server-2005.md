@@ -3,6 +3,7 @@ title: How to enable xp_cmdshell and Ad Hoc Distributed Queries on SQL Server 20
 author: SQLDenis
 type: post
 date: 2009-02-01T12:06:12+00:00
+ID: 307
 url: /index.php/datamgmt/datadesign/how-to-enable-xp_cmdshell-on-sql-server-2005/
 views:
   - 43505
@@ -43,7 +44,8 @@ Expand Database Engine go all the way down to xp\_cmdshell and click enable xp\_
   
 To do it with a script use the one below
 
-<pre>EXECUTE sp_configure 'show advanced options', 1
+sql
+EXECUTE sp_configure 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
 
@@ -53,7 +55,8 @@ GO
 
 EXECUTE sp_configure 'show advanced options', 0
 RECONFIGURE WITH OVERRIDE
-GO</pre>
+GO
+```
 
 Just so you know you can also use the script to enable xp_cmdshell on SQL Server 2008. The Surface Area Configuration Tool in SQL Server 2008 has been replaced by the SQL Server Configuration Manager.
 
@@ -65,7 +68,8 @@ SQL Server blocked access to STATEMENT &#8216;OpenRowset/OpenDatasource&#8217; o
 
 To enable OPENROWSET and OPENQUERY you can use the previous script but instead of &#8216;xp_cmdshell&#8217; you will use &#8216;Ad Hoc Distributed Queries&#8217;. The script to enable Ad Hoc Distributed Queries is below
 
-<pre>EXECUTE SP_CONFIGURE 'show advanced options', 1
+sql
+EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
  
@@ -75,11 +79,12 @@ GO
  
 EXECUTE SP_CONFIGURE 'show advanced options', 0
 RECONFIGURE WITH OVERRIDE
-GO</pre>
+GO
+```
 
 
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: Diagnostic Manager Quick Tip – Job Messages
 author: Kevin Conan
 type: post
 date: 2012-05-24T09:39:00+00:00
+ID: 1615
 excerpt: "A great use of Idera's Diagnostic Manager is to manage your SQL Job's and knowing which jobs have failed, which ones are running long and which ones have been running for the last 10 hours.  You even get to adjust the thresholds for each all of those me&hellip;"
 url: /index.php/datamgmt/dbadmin/diagnostic-manager-quick-tip/
 views:

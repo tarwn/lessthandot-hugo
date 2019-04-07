@@ -3,6 +3,7 @@ title: Post 300 or why all developers should be blogging
 author: SQLDenis
 type: post
 date: 2010-08-21T10:59:25+00:00
+ID: 882
 url: /index.php/itprofessionals/ethicsit/post-300-or-why-all-developers-should-be/
 views:
   - 18527
@@ -30,8 +31,9 @@ Let’s take a look at these 4 items listed above.
 
 This one can be pretty harsh, you wrote that awesome 50 line piece of code, you created a blog post with that code only to be told by someone that why didn’t you just use the built in function. Here is such an example of some code that flips the sign on a number.
 
-<pre>int x = numberToInvertSign;
-boolean pos = x &gt; 0;
+```java
+int x = numberToInvertSign;
+boolean pos = x > 0;
 for(int i = 0; i < 2*Math.abs(x); i++){
    if(pos){
       numberToInvertSign--;
@@ -39,7 +41,8 @@ for(int i = 0; i < 2*Math.abs(x); i++){
    else{
       numberToInvertSign++;
    }
-}</pre>
+}
+```
 
 Of course all you needed was multiply the number by -1 🙁 
 
@@ -55,7 +58,8 @@ Once you start blogging it might be quiet in the beginning, but after you create
 
 # You will have a code library online
 
-<pre>/*
+```c
+/*
   GNOT General Public License!
   (c) 1995-2007 Microsoft Corporation
 */
@@ -106,7 +110,8 @@ class WindowsVista extends WindowsXP implements Nothing
    return LotsMoreMoney;
   }
  }
-}</pre>
+}
+```
 
 I cannot tell you how many times I search my old blog posts for either myself or co-workers, the post [How to enable xp_cmdshell and Ad Hoc Distributed Queries on SQL Server 2005][2] is probably my most searched post. Whenever I or someone else installs SQL Server, the first issue is always openrowset and xp_cmdshell don’t work..what do I do? Of course I have all the source code in SVN but when a friend or a newsgroup user asks how to do something, it is much easier to just give them the link to the blog post. Sometimes a person will leave a comment with another way to accomplish the same task, this is great because now you have both of them in the same place.
 

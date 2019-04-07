@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #21 – A trigger can do that!'
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-08-10T18:04:00+00:00
+ID: 1297
 excerpt: 'This month’s T-SQL Tuesday Wednesday topic is all about failure.  To be exact, Crap Code.  I’m not going to post any code but instead post the problem, solution and coding initiative that were taken.  Code was the “crap” part that in all was the failure&hellip;'
 url: /index.php/datamgmt/dbprogramming/t-sql-tuesday-21-a/
 views:

@@ -3,6 +3,7 @@ title: ASP.NET MVC Release Candidate 2 Has Been Released
 author: SQLDenis
 type: post
 date: 2009-03-03T23:48:47+00:00
+ID: 338
 url: /index.php/webdev/serveradmin/msiis/asp-net-mvc-release-candidate-2-has-been/
 views:
   - 6209

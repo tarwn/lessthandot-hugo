@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 2 – Server Configuration – Data/Log Files
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-27T10:19:00+00:00
+ID: 1128
 excerpt: |
   The second SQL Server DBA Tip is going to cover placing data files.  There are a few primary concerns when deciding where to place data and log files.  System Databases, I/O Overall Performance and Space Considerations will be the focus today.
   Storage&hellip;

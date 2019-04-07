@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #32: A Day in the Life'
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-07-17T11:32:00+00:00
+ID: 1674
 excerpt: 'This month’s topic, A Day in the Life, is hosted by my friend Erin Stellato (blog | twitter).  Erin doesn’t typically let the community down on brilliant topics and valued content for all of us.  The topic really, to me, holds much value in mentoring an&hellip;'
 url: /index.php/itprofessionals/itprocesses/a-day-in-the-life/
 views:

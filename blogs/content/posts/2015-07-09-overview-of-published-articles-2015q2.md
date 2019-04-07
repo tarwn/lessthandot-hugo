@@ -3,6 +3,7 @@ title: Overview of Published Articles – 2015Q2
 author: Koen Verbeeck
 type: post
 date: 2015-07-09T12:31:10+00:00
+ID: 3479
 url: /index.php/webdev/business-intelligence/overview-of-published-articles-2015q2/
 views:
   - 22582

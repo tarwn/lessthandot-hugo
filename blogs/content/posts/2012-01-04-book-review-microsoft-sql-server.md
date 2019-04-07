@@ -3,6 +3,7 @@ title: 'Book Review: Microsoft SQL Server 2008 Internals'
 author: Jes Borland
 type: post
 date: 2012-01-04T12:28:00+00:00
+ID: 1474
 excerpt: "At SQL Saturday #67, Chicago 2011, I won the SQLskills swag bag. Included was the book Microsoft SQL Server 2008 Internals. I've finally finished it, cover-to-cover! Here's my review."
 url: /index.php/datamgmt/dbprogramming/book-review-microsoft-sql-server/
 views:

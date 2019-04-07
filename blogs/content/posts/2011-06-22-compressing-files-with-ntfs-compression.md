@@ -3,6 +3,7 @@ title: Compressing files with NTFS compression by running compact from the comma
 author: SQLDenis
 type: post
 date: 2011-06-22T14:11:00+00:00
+ID: 1228
 excerpt: |
   You know that you can right click on a file/folder, select properties, click advanced and then compress contents to save disk space(see image).
   
@@ -37,7 +38,7 @@ I decided to try it out
 
 The command is compact , here are all the switches
 
-<pre>C:UsersSQLDenis&gt;compact /?
+<pre>C:UsersSQLDenis>compact /?
 Displays or alters the compression of files on NTFS partitions.
 
 COMPACT [/C | /U] [/S[:dir]] [/A] [/I] [/F] [/Q] [filename [...]]
@@ -67,7 +68,8 @@ COMPACT [/C | /U] [/S[:dir]] [/A] [/I] [/F] [/Q] [filename [...]]
 
 I have a temp folder on my C drive, first I want to see if anything is compressed, I will run **compact /Q** to get some information
 
-<pre>c:Temp&gt;compact /Q
+```dos
+c:Temp>compact /Q
 
  Listing c:Temp
  New files added to this directory will not be compressed.
@@ -76,11 +78,13 @@ I have a temp folder on my C drive, first I want to see if anything is compresse
 Of 8 files within 1 directories
 0 are compressed and 8 are not compressed.
 1,833,822 total bytes of data are stored in 1,833,822 bytes.
-The compression ratio is 1.0 to 1.</pre>
+The compression ratio is 1.0 to 1.
+```
 
 Now, I want to compress those files, I will do that with the **compact /C** command
 
-<pre>c:Temp&gt;compact /C
+```
+c:Temp>compact /C
 
  Setting the directory c:Temp to compress new files [OK]
 
@@ -97,11 +101,13 @@ tshoot.txt              14948 :      8192 = 1.8 to 1 [OK]
 
 9 files within 2 directories were compressed.
 1,833,822 total bytes of data are stored in 435,158 bytes.
-The compression ratio is 4.2 to 1.</pre>
+The compression ratio is 4.2 to 1.
+```
 
 Now I can run **compact /Q** again to get some information
 
-<pre>c:Temp&gt;compact /Q
+```dos
+c:Temp>compact /Q
 
  Listing c:Temp
  New files added to this directory will be compressed.
@@ -110,7 +116,8 @@ Now I can run **compact /Q** again to get some information
 Of 8 files within 1 directories
 8 are compressed and 0 are not compressed.
 1,833,822 total bytes of data are stored in 435,158 bytes.
-The compression ratio is 4.2 to 1.</pre>
+The compression ratio is 4.2 to 1.
+```
 
 As you can see, the files are compressed and the ratio is 4.2 to 1
 

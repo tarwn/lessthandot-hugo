@@ -3,6 +3,7 @@ title: 'Join Me At SQL Saturday #175 Fargo, ND'
 author: Jes Borland
 type: post
 date: 2013-01-23T23:17:00+00:00
+ID: 1934
 excerpt: "It's time for a new adventure! While there have been over 200 SQL Saturdays held all over the world, this will be the first one held in North Dakota."
 url: /index.php/itprofessionals/professionaldevelopment/join-me-at-sql-saturday/
 views:

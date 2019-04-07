@@ -3,6 +3,7 @@ title: The Ten Most Asked SQL Server Questions And Their Answers
 author: SQLDenis
 type: post
 date: 2008-12-10T15:09:00+00:00
+ID: 241
 excerpt: 'If you are active in the SQL Server newsgroups and forums as I am, you will notice that the same questions keep popping up all the time. I picked ten of them which I see daily. Since this became a pretty long blogpost I have linked all the questions bel&hellip;'
 url: /index.php/datamgmt/datadesign/the-ten-most-asked-sql-server-questions-1/
 views:
@@ -45,19 +46,25 @@ If you are active in the SQL Server newsgroups and forums as I am, you will noti
 
 This is a very popular question and people sometimes answer that you need to use between. There is a problem with between if you happen to have a value at exactly midnight. Let us take a look, first create this table.
 
-<pre>CREATE TABLE SomeDates (DateColumn DATETIME)</pre>
+sql
+CREATE TABLE SomeDates (DateColumn DATETIME)
+```
 
 Insert 2 values
 
-<pre>INSERT INTO SomeDates VALUES('2008-10-02 00:00:00.000')
-INSERT INTO SomeDates VALUES('2008-10-01 00:00:00.000')</pre>
+sql
+INSERT INTO SomeDates VALUES('2008-10-02 00:00:00.000')
+INSERT INTO SomeDates VALUES('2008-10-01 00:00:00.000')
+```
 
 Return everything between &#8216;2008-10-01&#8217; and &#8216;2008-10-02&#8217;
 
-<pre>SELECT *
+sql
+SELECT *
 FROM SomeDates
 WHERE DateColumn BETWEEN '20081001' AND '20081002'
-ORDER BY DateColumn</pre>
+ORDER BY DateColumn
+```
 
 This works without a problem, we get this returned
 
@@ -69,19 +76,23 @@ This works without a problem, we get this returned
 
 Let&#8217;s add some more dates including the time portion
 
-<pre>INSERT INTO SomeDates VALUES('2008-10-02 00:01:00.000')
+sql
+INSERT INTO SomeDates VALUES('2008-10-02 00:01:00.000')
 INSERT INTO SomeDates VALUES('2008-10-02 00:00:59.000')
 INSERT INTO SomeDates VALUES('2008-10-02 00:00:01.000')
 INSERT INTO SomeDates VALUES('2008-10-01 00:01:00.000')
 INSERT INTO SomeDates VALUES('2008-10-01 00:12:00.000')
-INSERT INTO SomeDates VALUES('2008-10-01 23:00:00.000')</pre>
+INSERT INTO SomeDates VALUES('2008-10-01 23:00:00.000')
+```
 
 Return everything between &#8216;2008-10-01&#8217; and &#8216;2008-10-02&#8217;
 
-<pre>SELECT *
+sql
+SELECT *
 FROM SomeDates
 WHERE DateColumn BETWEEN '20081001' AND '20081002'
-ORDER BY DateColumn</pre>
+ORDER BY DateColumn
+```
 
 (results)
   
@@ -99,11 +110,12 @@ Here is where it goes wrong; for 2008-10-02 only the midnight value is returned 
 
 Now if we change 2008-10-02 to 2008-10-03 we get what we want
 
-<pre>SELECT *
+sql
+SELECT *
 FROM SomeDates
 WHERE DateColumn BETWEEN '20081001' AND '20081003'
-ORDER BY DateColumn</pre>
-
+ORDER BY DateColumn
+```
 (results)
   
 2008-10-01 00:00:00.000
@@ -124,14 +136,18 @@ ORDER BY DateColumn</pre>
 
 Now insert a value for 2008-10-03 (midnight)
 
-<pre>INSERT INTO SomeDates VALUES('2008-10-03 00:00:00.000')</pre>
+sql
+INSERT INTO SomeDates VALUES('2008-10-03 00:00:00.000')
+```
 
 Run the query again
 
-<pre>SELECT *
+sql
+SELECT *
 FROM SomeDates
 WHERE DateColumn BETWEEN '20081001' AND '20081003'
-ORDER BY DateColumn</pre>
+ORDER BY DateColumn
+```
 
 (results)
   
@@ -157,10 +173,12 @@ We get back 2008-10-03 00:00:00.000, between will return the date if it is exact
 
 If you use >= and < then you get exactly what you need 
 
-<pre>SELECT *
+sql
+SELECT *
 FROM SomeDates
 WHERE DateColumn >= '20081001' AND DateColumn < '20081003'
-ORDER BY DateColumn</pre>
+ORDER BY DateColumn
+```
 
 (results)
   
@@ -186,13 +204,17 @@ So be careful when using between because you might get back rows that you did no
 
 To strip the time portion of a datetime, you can do this and still return a datetime
 
-<pre>Select * ,DATEADD(dd, DATEDIFF(dd, 0, DateColumn), 0) as stripped
-from SomeDates </pre>
+sql
+Select * ,DATEADD(dd, DATEDIFF(dd, 0, DateColumn), 0) as stripped
+from SomeDates 
+```
 
 you can also do a convert to varchar with a style value of 112 and then converting back to datetime
 
-<pre>Select * ,convert(datetime,Convert(varchar(8),DateColumn,112)) as stripped
-from SomeDates </pre>
+sql
+Select * ,convert(datetime,Convert(varchar(8),DateColumn,112)) as stripped
+from SomeDates 
+```
 
 Both methods return this
   
@@ -225,7 +247,8 @@ First create the following 3 stored procedures
 
 Just the date searching proc
 
-<pre>CREATE PROCEDURE FindMyData_Date
+sql
+CREATE PROCEDURE FindMyData_Date
     @DataToFind DATETIME
 AS
 SET NOCOUNT ON
@@ -290,15 +313,19 @@ SELECT  SchemaName,TableName, ColumnName
 FROM    @Temp
 WHERE   DataFound = 1
 
-go</pre>
+go
+```
 
 If you want to test just this proc, try this
 
-<pre>exec FindMyData_Date '20070615'</pre>
+sql
+exec FindMyData_Date '20070615'
+```
 
 This is the string proc
 
-<pre>CREATE PROCEDURE FindMyData_String
+sql
+CREATE PROCEDURE FindMyData_String
     @DataToFind NVARCHAR(4000),
     @ExactMatch BIT = 0
 AS
@@ -369,15 +396,19 @@ WHILE @i <= @MAX
 SELECT  SchemaName,TableName, ColumnName
 FROM    @Temp
 WHERE   DataFound = 1
-GO</pre>
+GO
+```
 
 If you want to test just this proc, try this
 
-<pre>exec FindMyData_string 'google', 0</pre>
+sql
+exec FindMyData_string 'google', 0
+```
 
 Just the number proc
 
-<pre>CREATE PROCEDURE FindMyData_Number
+sql
+CREATE PROCEDURE FindMyData_Number
     @DataToFind NVARCHAR(4000),
     @ExactMatch BIT = 0
 AS
@@ -455,15 +486,19 @@ SELECT  SchemaName,TableName, ColumnName
 FROM    @Temp
 WHERE   DataFound = 1
  
-go</pre>
+go
+```
 
 If you want to test just this proc, try this
 
-<pre>exec FindMyData_Number '562', 1</pre>
+sql
+exec FindMyData_Number '562', 1
+```
 
 The mother of all procs!
 
-<pre>CREATE PROCEDURE FindMyData
+sql
+CREATE PROCEDURE FindMyData
     @DataToFind NVARCHAR(4000),
     @ExactMatch BIT = 0
 AS
@@ -482,32 +517,40 @@ INSERT INTO #Output EXEC FindMyData_String @DataToFind, @ExactMatch
 SELECT SchemaName,TableName, ColumnName
 FROM   #Output
 ORDER BY SchemaName,TableName, ColumnName
-go</pre>
+go
+```
 
 Here are some proc calls to test it out
 
-<pre>exec FindMyData 'google', 0
+sql
+exec FindMyData 'google', 0
 exec FindMyData 1, 0
-exec FindMyData '20081201', 0</pre>
+exec FindMyData '20081201', 0
+```
 
-<pre>exec FindMyData 'sysobjects', 0 </pre>
+sql
+exec FindMyData 'sysobjects', 0 
+```
 
 ## 3 Splitting string values {#3}
 
 The fastest way to split a comma delimited string is by using a number table. If you do not have a number table in your database then use this code to create one
 
-<pre>-- Create our Pivot table ** do this only once
+sql
+-- Create our Pivot table ** do this only once
     CREATE TABLE NumberPivot (NumberID INT PRIMARY KEY)
     
        INSERT INTO NumberPivot
        SELECT number FROM master..spt_values
 	where type = 'P'
    
-    GO</pre>
+    GO
+```
 
 Now you can run the following code to return each of the values in the comma delimited string in its own row
 
-<pre>DECLARE @SplitString VARCHAR(1000)
+sql
+DECLARE @SplitString VARCHAR(1000)
     SELECT @SplitString ='1,4,77,88,4546,234,2,3,54,87,9,6,4,36,6,9,9,6,4,4,68,9,0,5,3,2,'
      
     SELECT SUBSTRING(',' + @SplitString + ',', NumberID + 1,
@@ -515,18 +558,21 @@ Now you can run the following code to return each of the values in the comma del
     FROM NumberPivot
     WHERE NumberID <= LEN(',' + @SplitString + ',') - 1
     AND SUBSTRING(',' + @SplitString + ',', NumberID, 1) = ','
-    GO</pre>
+    GO
+```
 
 You can also return distinct values by using DISTINCT 
 
-<pre>DECLARE @SplitString VARCHAR(1000)
+sql
+DECLARE @SplitString VARCHAR(1000)
     SELECT @SplitString ='1,4,77,88,4546,234,2,3,54,87,9,6,4,36,6,9,9,6,4,4,68,9,0,5,3,2'
      
     SELECT DISTINCT SUBSTRING(',' + @SplitString + ',', NumberID + 1,
     CHARINDEX(',', ',' + @SplitString + ',', NumberID + 1) - NumberID -1)AS VALUE
     FROM NumberPivot
     WHERE NumberID <= LEN(',' + @SplitString + ',') - 1
-    AND SUBSTRING(',' + @SplitString + ',', NumberID, 1) = ','</pre>
+    AND SUBSTRING(',' + @SplitString + ',', NumberID, 1) = ','
+```
 
 You now can dump the result into a table and then you can join one of your real tables with that table which will execute much faster
 
@@ -546,24 +592,30 @@ EXCEPT (2005+)
 
 First Create these two tables
 
-<pre>CREATE TABLE testnulls (ID INT)
+sql
+CREATE TABLE testnulls (ID INT)
     INSERT INTO testnulls VALUES (1)
     INSERT INTO testnulls VALUES (2)
     INSERT INTO testnulls VALUES (null)
  
     CREATE TABLE testjoin (ID INT)
     INSERT INTO testjoin VALUES (1)
-    INSERT INTO testjoin VALUES (3)</pre>
+    INSERT INTO testjoin VALUES (3)
+```
 
 **NOT IN**
 
-<pre>SELECT * FROM testjoin WHERE ID NOT IN(SELECT ID FROM testnulls)</pre>
+sql
+SELECT * FROM testjoin WHERE ID NOT IN(SELECT ID FROM testnulls)
+```
 
 What happened? Nothing gets returned! The reason is because the subquery returns a NULL and you can&#8217;t compare a NULL to anything
 
 Now run this
 
-<pre>SELECT * FROM testjoin WHERE ID NOT IN(SELECT ID FROM testnulls WHERE ID IS NOT NULL)</pre>
+sql
+SELECT * FROM testjoin WHERE ID NOT IN(SELECT ID FROM testnulls WHERE ID IS NOT NULL)
+```
 
 That worked because we eliminated the NULL values in the subquery
 
@@ -571,10 +623,12 @@ That worked because we eliminated the NULL values in the subquery
 
 NOT EXISTS doesn&#8217;t have the problem that NOT IN has. Run the following code
 
-<pre>SELECT * FROM testjoin j
+sql
+SELECT * FROM testjoin j
     WHERE NOT EXISTS (SELECT n.ID
     FROM testnulls n
-    WHERE n.ID = j.ID)</pre>
+    WHERE n.ID = j.ID)
+```
 
 Everything worked as expected
 
@@ -582,45 +636,54 @@ Everything worked as expected
 
 Plain vanilla LEFT and RIGHT JOINS
 
-<pre>SELECT j.* FROM testjoin j
+sql
+SELECT j.* FROM testjoin j
     LEFT OUTER JOIN testnulls n ON n.ID = j.ID
     WHERE n.ID IS NULL
  
     SELECT j.* FROM  testnulls n
     RIGHT OUTER JOIN testjoin j  ON n.ID = j.ID
-    WHERE n.ID IS NULL</pre>
+    WHERE n.ID IS NULL
+```
 
 **OUTER APPLY (SQL 2005 +)**
 
 OUTER APPLY is something that got added to SQL 2005
 
-<pre>SELECT j.* FROM testjoin j
+sql
+SELECT j.* FROM testjoin j
     OUTER APPLY
     (SELECT id  FROM testnulls n
     WHERE n.ID = j.ID) a
-    WHERE a.ID IS NULL</pre>
+    WHERE a.ID IS NULL
+```
 
 **EXCEPT(SQL 2005 +)**
   
 EXCEPT is something that got added to SQL 2005. It basically returns everything from the top table which is not in the bottom table
 
-<pre>SELECT * FROM testjoin
+sql
+SELECT * FROM testjoin
     EXCEPT
-    SELECT * FROM testnulls</pre>
+    SELECT * FROM testnulls
+```
 
 **INTERSECT** 
   
 INTERSECT returns what ever is in both tables(like a regular join)
 
-<pre>SELECT * FROM testjoin
+sql
+SELECT * FROM testjoin
     INTERSECT
-    SELECT * FROM testnulls</pre>
+    SELECT * FROM testnulls
+```
 
 ## 5 Getting all rows from one table and only the latest from the child table  {#5}
 
 First create this table
 
-<pre>CREATE TABLE #MaxVal(id INT,VALUE INT,SomeDate datetime)
+sql
+CREATE TABLE #MaxVal(id INT,VALUE INT,SomeDate datetime)
     INSERT #MaxVal VALUES(1,1,'20010101')
     INSERT #MaxVal VALUES(1,2,'20020101')
     INSERT #MaxVal VALUES(1,3,'20080101')
@@ -628,22 +691,27 @@ First create this table
     INSERT #MaxVal VALUES(2,2,'20060101')
     INSERT #MaxVal VALUES(2,3,'20080101')
     INSERT #MaxVal VALUES(3,1,'20010101')
-    INSERT #MaxVal VALUES(3,2,'20080101')</pre>
+    INSERT #MaxVal VALUES(3,2,'20080101')
+```
 
 If you just need the max value from a column you can just do a group by
 
-<pre>SELECT id,MAX(SomeDate) AS VALUE
+sql
+SELECT id,MAX(SomeDate) AS VALUE
     FROM #MaxVal
-    GROUP BY id</pre>
+    GROUP BY id
+```
 
 If you need the whole row back then the query below is one way of doing this
 
-<pre>SELECT t.* FROM(
+sql
+SELECT t.* FROM(
     SELECT id,MAX(SomeDate) AS MaxValue
     FROM #MaxVal
     GROUP BY id) x
     JOIN #MaxVal t ON x.id =t.id
-    AND x.MaxValue =t.SomeDate</pre>
+    AND x.MaxValue =t.SomeDate
+```
 
 We have another blog post on our site which has a lot more detail about doing this, as a matter of fact that blog post describes 5 ways to do it. These 5 ways are:
 
@@ -669,20 +737,24 @@ That post can be found here: [Including an Aggregated Column&#8217;s Related Val
 
 There are two built in functions that you can use in SQL Server to return the first position in a column of the character you are looking for. These functions are PATINDEX and CHARINDEX. Let&#8217;s take a look at how PATINDEX works. First create this table.
 
-<pre>CREATE TABLE #SomeTable2
+sql
+CREATE TABLE #SomeTable2
 (SomeValue VARCHAR(49))
 INSERT INTO #SomeTable2 VALUES ('one two three')
 INSERT INTO #SomeTable2 VALUES ('1 2 3')
 INSERT INTO #SomeTable2 VALUES ('abc def ghi')
 INSERT INTO #SomeTable2 VALUES ('one two')
 INSERT INTO #SomeTable2 VALUES ('one two three four')
-INSERT INTO #SomeTable2 VALUES ('one two three four five')</pre>
+INSERT INTO #SomeTable2 VALUES ('one two three four five')
+```
 
 Now we want to return everything up to the first space and also everything after the last space. Here is how we do that
 
-<pre>select *,left(SomeValue,patindex('% %',SomeValue)-1),
+sql
+select *,left(SomeValue,patindex('% %',SomeValue)-1),
 right(SomeValue,patindex('% %',(reverse(SomeValue)))-1)
-from #SomeTable2</pre>
+from #SomeTable2
+```
 
 (results)<table border = "1"> 
 
@@ -696,44 +768,56 @@ People have a hard time with nulls, the first problem with NULLs is that your WH
 
 First create this simple table
 
-<pre>CREATE TABLE #SomeTableNull(SomeValue VARCHAR(49))
+sql
+CREATE TABLE #SomeTableNull(SomeValue VARCHAR(49))
 INSERT INTO #SomeTableNull VALUES ('1')
 INSERT INTO #SomeTableNull VALUES ('')
 INSERT INTO #SomeTableNull VALUES ('a')
-INSERT INTO #SomeTableNull VALUES (NULL)</pre>
+INSERT INTO #SomeTableNull VALUES (NULL)
+```
 
 To search a column your WHERE clause uses the = sign
 
-<pre>SELECT * FROM #SomeTableNull WHERE SomeValue = ''
+sql
+SELECT * FROM #SomeTableNull WHERE SomeValue = ''
 SELECT * FROM #SomeTableNull WHERE SomeValue = '1'
-SELECT * FROM #SomeTableNull WHERE SomeValue = 'a'</pre>
+SELECT * FROM #SomeTableNull WHERE SomeValue = 'a'
+```
 
 Now let us try that to find a NULL value
 
-<pre>SELECT * FROM #SomeTableNull WHERE SomeValue = NULL</pre>
+sql
+SELECT * FROM #SomeTableNull WHERE SomeValue = NULL
+```
 
 What just happened? We got nothing back? The reason is that you cannot compare a NULL value according to ANSI standards.
 
-<pre>Take a look at this
+sql
+Take a look at this
 IF NULL = NULL
 print 'equal'
 else 
-print 'not so equal'</pre>
+print 'not so equal'
+```
 
 The bottom print statement got printed, NULL is unknown and you do not know if two unknows are the same
 
 The correct way to return the NULL value is the following
 
-<pre>SELECT * FROM #SomeTableNull WHERE SomeValue IS NULL</pre>
+sql
+SELECT * FROM #SomeTableNull WHERE SomeValue IS NULL
+```
 
 Just so that you know this, if you turn off ansi nulls then you can use =
 
-<pre>SET ansi_nulls off
+sql
+SET ansi_nulls off
 
 
 SELECT * FROM #SomeTableNull WHERE SomeValue = NULL
 
-SET ansi_nulls on</pre>
+SET ansi_nulls on
+```
 
 However I do not recommend doing that ever, the default is ON and I would leave it like that
 
@@ -741,10 +825,13 @@ However I do not recommend doing that ever, the default is ON and I would leave 
 
 A very frequent request is how to pivot/transpose/crosstab a query. SQL server 2005 introduced PIVOT, this makes life a lot easier compared to the SQL 2000 days. so let&#8217;s see how this works. First create this table
 
-<pre>CREATE TABLE #SomeTable
-(SomeName VARCHAR(49), Quantity INT)</pre>
+sql
+CREATE TABLE #SomeTable
+(SomeName VARCHAR(49), Quantity INT)
+```
 
-<pre>INSERT INTO #SomeTable VALUES ('Scarface', 2)
+sql
+INSERT INTO #SomeTable VALUES ('Scarface', 2)
 INSERT INTO #SomeTable VALUES ('Scarface', 4)
 INSERT INTO #SomeTable VALUES ('LOTR', 5)
 INSERT INTO #SomeTable VALUES ('LOTR', 6)
@@ -755,7 +842,8 @@ INSERT INTO #SomeTable VALUES ( 'Saw', 2)
 INSERT INTO #SomeTable VALUES ( 'Jaws', 12)
 INSERT INTO #SomeTable VALUES ('Blade', 5)
 INSERT INTO #SomeTable VALUES ('Saw', 6)
-INSERT INTO #SomeTable VALUES ( 'Saw', 2)</pre>
+INSERT INTO #SomeTable VALUES ( 'Saw', 2)
+```
 
 What we want is too list all the movies in a column and the sum of all quantities for that movie as a value. So in this case we want this output
 
@@ -807,23 +895,27 @@ What we want is too list all the movies in a column and the sum of all quantitie
 
 First let&#8217;s look how we can do this in SQL Server 2000, this BTW will also work in SQL Server 2005/2008
 
-<pre>SELECT SUM(CASE SomeName WHEN 'Scarface' THEN Quantity ELSE 0 END) AS Scarface,
+sql
+SELECT SUM(CASE SomeName WHEN 'Scarface' THEN Quantity ELSE 0 END) AS Scarface,
 SUM(CASE SomeName WHEN 'LOTR' THEN Quantity ELSE 0 END) AS LOTR,
 SUM(CASE SomeName WHEN 'Jaws' THEN Quantity ELSE 0 END) AS Jaws,
 SUM(CASE SomeName WHEN 'Saw' THEN Quantity ELSE 0 END) AS Saw,
 SUM(CASE SomeName WHEN 'Blade' THEN Quantity ELSE 0 END) AS Blade
-FROM #SomeTable</pre>
+FROM #SomeTable
+```
 
 In SQL Server 2005/2008 we can use PIVOT, here is how we can use it
 
-<pre>SELECT Scarface, LOTR, Jaws, Saw,Blade
+sql
+SELECT Scarface, LOTR, Jaws, Saw,Blade
 FROM
 (SELECT SomeName,Quantity
 FROM #SomeTable) AS pivTemp
 PIVOT
 (   SUM(Quantity)
     FOR SomeName IN (Scarface, LOTR, Jaws, Saw,Blade)
-) AS pivTable</pre>
+) AS pivTable
+```
 
 That looks a little bit neater than the SQL 2000 version.
   
@@ -843,16 +935,20 @@ USE tempdb
   
 go
 
-<pre>CREATE TABLE testpadding(id VARCHAR(50),id2 INT)
+sql
+CREATE TABLE testpadding(id VARCHAR(50),id2 INT)
 INSERT testpadding VALUES('000001',1)
 INSERT testpadding VALUES('000134',134)
 INSERT testpadding VALUES('002232',2232)
-INSERT testpadding VALUES('000002',2)</pre>
+INSERT testpadding VALUES('000002',2)
+```
 
 Now run 
 
-<pre>SELECT RIGHT('000000' + CONVERT(VARCHAR(6),id2),6)
-FROM testpadding</pre>
+sql
+SELECT RIGHT('000000' + CONVERT(VARCHAR(6),id2),6)
+FROM testpadding
+```
 
 (results)
   
@@ -868,8 +964,10 @@ what about the id columns and stripping the zeroes from that?
   
 No problem do this
 
-<pre>SELECT CONVERT(INT,id)
-FROM testpadding</pre>
+sql
+SELECT CONVERT(INT,id)
+FROM testpadding
+```
 
 (results)
   
@@ -883,10 +981,14 @@ FROM testpadding</pre>
 
 Beautiful right? Not so fast, insert this row
 
-<pre>INSERT testpadding VALUES('02222222222222222222200002',2)</pre>
+sql
+INSERT testpadding VALUES('02222222222222222222200002',2)
+```
 
-<pre>SELECT CONVERT(INT,id)
-FROM testpadding</pre>
+sql
+SELECT CONVERT(INT,id)
+FROM testpadding
+```
 
 Server: Msg 248, Level 16, State 1, Line 1
   
@@ -894,8 +996,10 @@ The conversion of the varchar value &#8216;02222222222222222222200002&#8217; ove
 
 Okay we can do a bigint instead
 
-<pre>SELECT CONVERT(bigINT,id)
-FROM testpadding</pre>
+sql
+SELECT CONVERT(bigINT,id)
+FROM testpadding
+```
 
 Server: Msg 8115, Level 16, State 2, Line 1
   
@@ -903,8 +1007,10 @@ Arithmetic overflow error converting expression to data type bigint.
 
 Nope, even that doesn&#8217;t fit, now what?
 
-<pre>select replace(ltrim(replace(id,'0',' ')),' ','0')
-FROM testpadding</pre>
+sql
+select replace(ltrim(replace(id,'0',' ')),' ','0')
+FROM testpadding
+```
 
 (results)
   
@@ -926,7 +1032,8 @@ If you want to concatenate values from multiple rows into one and you want to or
 
 Let&#8217;s take a look. First create these tables
 
-<pre>USE TEMPDB
+sql
+USE TEMPDB
 GO
 CREATE TABLE Authors (Id INT, LastName VARCHAR(100), FirstName VARCHAR(100))
 GO
@@ -949,11 +1056,13 @@ INSERT Books VALUES(6,2,'Salems Lot')
 INSERT Books VALUES(7,3,'Snow Crash')
 INSERT Books VALUES(8,3,'The Diamond Age')
 INSERT Books VALUES(9,3,'Cryptonomicon')
-GO</pre>
+GO
+```
 
 This is the old style function, it will run on SQL Server 2000 and up
 
-<pre>CREATE FUNCTION fnGetBooks2 (@AuthorID INT)
+sql
+CREATE FUNCTION fnGetBooks2 (@AuthorID INT)
 RETURNS VARCHAR(8000)
 AS
 BEGIN
@@ -967,11 +1076,13 @@ BEGIN
  
 RETURN LEFT(@BookList,(LEN(@BookList) -1))
 END
-GO</pre>
+GO
+```
 
 This is the same function using XML Path, so SQL Server 2005 and up
 
-<pre>CREATE FUNCTION fnGetBooks (@AuthorID INT)
+sql
+CREATE FUNCTION fnGetBooks (@AuthorID INT)
  
 RETURNS VARCHAR(8000)
 AS
@@ -992,15 +1103,20 @@ BEGIN
  
 RETURN LEFT(@BookList,(LEN(@BookList) -1))
 END
-GO</pre>
+GO
+```
 
 Here are the calls to the functions
 
-<pre>SELECT *,dbo.fnGetBooks(id) AS Books
-FROM Authors</pre>
+sql
+SELECT *,dbo.fnGetBooks(id) AS Books
+FROM Authors
+```
 
-<pre>SELECT *,dbo.fnGetBooks2(id) AS Books
-FROM Authors</pre>
+sql
+SELECT *,dbo.fnGetBooks2(id) AS Books
+FROM Authors
+```
 
 
 
@@ -1100,5 +1216,5 @@ In case you want some more of this stuff we have over 80 hacks, tips and trick o
  [12]: /index.php/DataMgmt/DBProgramming/MSSQLServer/including-an-aggregated-column-s-related
  [13]: http://wiki.ltd.local/index.php/Column_To_Row_%28UNPIVOT%29
  [14]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
- [15]: http://forum.lessthandot.com/viewforum.php?f=17
- [16]: http://forum.lessthandot.com/viewforum.php?f=22
+ [15]: http://forum.ltd.local/viewforum.php?f=17
+ [16]: http://forum.ltd.local/viewforum.php?f=22

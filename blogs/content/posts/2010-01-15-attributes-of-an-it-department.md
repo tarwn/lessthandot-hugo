@@ -3,6 +3,7 @@ title: Attributes of an IT Department
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-01-15T10:34:17+00:00
+ID: 666
 url: /index.php/itprofessionals/itservicemanagement/attributes-of-an-it-department/
 views:
   - 7322

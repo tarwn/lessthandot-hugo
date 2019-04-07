@@ -3,6 +3,7 @@ title: SQL Server Zipcode Latitude/Longitude proximity distance search
 author: George Mastros (gmmastros)
 type: post
 date: 2009-02-11T17:40:00+00:00
+ID: 323
 excerpt: 'Have you ever wanted to add functionality that allows you to perform simple radius searches based on Zip Code?  For example, Show me all the cities within 20 miles of a certain zip code or show me the 5 closest retail locations. You can easily add this&hellip;'
 url: /index.php/datamgmt/datadesign/sql-server-zipcode-latitude-longitude-pr/
 views:
@@ -24,7 +25,8 @@ The first thing we need to do is load our data. There are various sources for th
 
 Once you have downloaded your data, the next step is to import it in to your database. You can use the following script to do it.
 
-<pre>If Exists(Select * 
+sql
+If Exists(Select * 
           From   Information_Schema.Tables 
           Where  Table_Name = 'ZipCodes' 
                  And Table_Type = 'Base Table')
@@ -60,15 +62,16 @@ CREATE NONCLUSTERED INDEX IX_ZipCodes_Longitude_Latitude ON dbo.ZipCodes(Longitu
 
 GO
 
-Select * From ZipCodes</pre>
-
+Select * From ZipCodes
+```
 Next, we’ll need to add a couple of functions that will allow us to use this data.
 
 The original function that calculates distances has been replaced with this one. There was a flaw in the original version. Based on rounding errors, the calculations fed in to the arc-cosine (acos) function could be greater than 1 or less than -1 which would cause a domain error. To accommodate this flaw, I perform the calculations in multiple steps so that I can catch the values that result in the domain error. 
 
 Credit for finding the flaw goes to <span class="MT_red"><strong>Chris</strong></span>. Thank you.
 
-<pre>CREATE Function [dbo].[CalculateDistance]
+sql
+CREATE Function [dbo].[CalculateDistance]
 	(@Longitude1 Decimal(8,5), 
 	@Latitude1   Decimal(8,5),
 	@Longitude2  Decimal(8,5),
@@ -87,15 +90,17 @@ Else If @Temp < -1
 
 Return (3958.75586574 * acos(@Temp)	) 
 
-End</pre>
-
-<pre>Create Function [dbo].[LatitudePlusDistance](@StartLatitude Float, @Distance Float) Returns Float
+End
+```
+sql
+Create Function [dbo].[LatitudePlusDistance](@StartLatitude Float, @Distance Float) Returns Float
 As
 Begin
     Return (Select @StartLatitude + Sqrt(@Distance * @Distance / 4766.8999155991))
-End</pre>
-
-<pre>Create Function [dbo].[LongitudePlusDistance]
+End
+```
+sql
+Create Function [dbo].[LongitudePlusDistance]
     (@StartLongitude Float,
     @StartLatitude Float,
     @Distance Float)
@@ -103,11 +108,12 @@ Returns Float
 AS
 Begin
     Return (Select @StartLongitude + Sqrt(@Distance * @Distance / (4784.39411916406 * Cos(2 * @StartLatitude / 114.591559026165) * Cos(2 * @StartLatitude / 114.591559026165))))
-End</pre>
-
+End
+```
 Finally, we can begin writing some interesting queries. For example, return a list of zipcodes within 20 miles of zipcode 20013 (Washington, DC).
 
-<pre>-- Declare some variables that we will need.
+sql
+-- Declare some variables that we will need.
 Declare @Longitude Decimal(8,5),
         @Latitude Decimal(8,5),
         @MinLongitude Decimal(8,5),
@@ -134,13 +140,14 @@ Select ZipCode
 From   ZipCodes
 Where  Longitude Between @MinLongitude And @MaxLongitude
        And Latitude Between @MinLatitude And @MaxLatitude
-       And dbo.CalculateDistance(@Longitude, @Latitude, Longitude, Latitude) <= 20</pre>
-
+       And dbo.CalculateDistance(@Longitude, @Latitude, Longitude, Latitude) <= 20
+```
 You could also use this for a &#8220;store locator&#8221;. On a website, potential customers could enter their zipcode and you could present a list of top 5 closest stores.
   
 The query shown below assumes you have a Stores table with a ZipCode column.
 
-<pre>Declare @Longitude Decimal(8,5)
+sql
+Declare @Longitude Decimal(8,5)
 Declare @Latitude Decimal(8,5)
 
 Select	@Longitude = Longitude,
@@ -152,6 +159,6 @@ Select  Top 5 Stores.StoreName, ZipCodes.City,  dbo.CalculateDistance(@Longitude
 From	@Stores As Stores
 		Inner Join ZipCodes 
 			On Stores.ZipCode = ZipCodes.ZipCode
-Order By dbo.CalculateDistance(@Longitude, @Latitude, ZipCodes.Longitude, ZipCodes.Latitude)</pre>
-
+Order By dbo.CalculateDistance(@Longitude, @Latitude, ZipCodes.Longitude, ZipCodes.Latitude)
+```
 As you can see, these queries perform very well, and are relatively easy to write.

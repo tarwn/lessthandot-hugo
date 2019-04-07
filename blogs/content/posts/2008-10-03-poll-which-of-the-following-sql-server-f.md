@@ -3,6 +3,7 @@ title: 'Poll: Which of the following SQL Server features do you use?'
 author: SQLDenis
 type: post
 date: 2008-10-03T10:58:31+00:00
+ID: 158
 url: /index.php/datamgmt/datadesign/poll-which-of-the-following-sql-server-f/
 views:
   - 17275
@@ -41,4 +42,4 @@ It will be interesting to see how many people use some of this stuff
   
 You can also indicate why you use or do NOT use a certain feature
 
-The poll is located here: http://forum.lessthandot.com/viewtopic.php?f=17&t=3087
+The poll is located here: http://forum.ltd.local/viewtopic.php?f=17&t=3087

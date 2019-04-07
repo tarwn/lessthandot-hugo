@@ -3,6 +3,7 @@ title: Mirroring Hands On with Developer Edition
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-05-09T22:33:29+00:00
+ID: 784
 excerpt: 'Time to get Dirty!  Today we are going to get down into actually configuring a basic mirror using Developer Edition.  Developer Edition is a great tool that is extremely inexpensive.'
 url: /index.php/datamgmt/datadesign/sql-server-2008-mirroring-setup/
 views:
@@ -58,19 +59,21 @@ We are going to jump right into setting the mirror up. Our first configuration w
 
 In order to ensure the databases we want to mirror are ready for mirroring itself, we need to check a few things first. Full recovery is a requirement of mirroring. This is required for logging purposes. To check that the AdventureWorks database is in Full Recovery, we can run the following
 
-<pre>IF (DATABASEPROPERTYEX('AdventureWorks', 'RECOVERY') <> 'FULL')
+sql
+IF (DATABASEPROPERTYEX('AdventureWorks', 'RECOVERY') <> 'FULL')
  BEGIN
   ALTER DATABASE AdventureWorks SET RECOVERY FULL
  END;
  
---SELECT DATABASEPROPERTYEX('AdventureWorks', 'RECOVERY')</pre>
-
+--SELECT DATABASEPROPERTYEX('AdventureWorks', 'RECOVERY')
+```
 If you have an existing AdventureWorks database on the SQL Server you will be using for the mirror, you will need to know the mdf, ldf and any ndf’s and their locations. 
 
 You can check for these files using sysaltfiles
 
-<pre>SELECT * FROM master.dbo.sysaltfiles</pre>
-
+sql
+SELECT * FROM master.dbo.sysaltfiles
+```
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_0.gif" alt="" title="" width="478" height="89" />
 </div></p> 
@@ -79,14 +82,17 @@ Backing up the principal to get the mirror ready is the next major piece to prep
 
 To create the Full and Tail end log backups, execute the following 
 
-<pre>BACKUP DATABASE AdventureWorks TO DISK = 'C:AdventureWorks_full_initial.bak'
+sql
+BACKUP DATABASE AdventureWorks TO DISK = 'C:AdventureWorks_full_initial.bak'
 GO
 BACKUP LOG AdventureWorks TO DISK = 'C:AdventureWorks_taillog_initial.trn'
-GO</pre>
+GO
+```
 
 We can now restore the database to the mirror SQL Server. In the case of our AdventureWorks database, we have two file groups as well. These files groups pose no complication to the mirroring landscape other than they need to exist on the mirror as well as the principal. The only place we need to reference them is in the restore of the database as well.
 
-<pre>RESTORE DATABASE AdventureWorks 
+sql
+RESTORE DATABASE AdventureWorks 
 FROM DISK = 'C:AdventureWorks_full_initial.bak'
 WITH NORECOVERY,
 MOVE 'AdventureWorks_Data' TO N'C:sql2008NEEDTOMOVE_mirror.mdf',
@@ -96,7 +102,9 @@ MOVE 'YearF2' TO 'C:sql2008AdventureWork_YearF2.ndf'
 ,REPLACE,NORECOVERY
 GO
 RESTORE LOG AdventureWorks FROM DISK = 'C:AdventureWorks_taillog_initial.trn' WITH NORECOVERY
-GO</pre>
+GO
+```
+
 
 ## Jump right into configuring the mirror
 
@@ -160,8 +168,9 @@ Once you exit the wizard, a dialog will come up asking if you want to start the 
 
 Check it out, it works!
 
-<pre>select * from sys.database_mirroring where mirroring_guid is not null</pre>
-
+sql
+select * from sys.database_mirroring where mirroring_guid is not null
+```
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_9.gif" alt="" title="" width="628" height="127" />
 </div>
@@ -180,17 +189,22 @@ Follow the steps commented to ensure each is executed on the correct instance.
 
 First, to clean up the previous mirroring session we setup from SSMS, remove mirroring by executing this statement from the principal. 
 
-<pre>ALTER DATABASE AdventureWorks SET PARTNER OFF;</pre>
+sql
+ALTER DATABASE AdventureWorks SET PARTNER OFF;
+```
 
 Then drop the endpoints on both the principal and mirror by using 
 
-<pre>DROP ENDPOINT [Mirroring]</pre>
+sql
+DROP ENDPOINT [Mirroring]
+```
 
 Use the BACKUP and RESTORE scripts and steps as discussed in the beginning of this post to prepare the databases for mirroring. 
 
 Then run the following on the instances listed in comments and the order noted
 
-<pre>--On the principle run
+sql
+--On the principle run
 --1
 CREATE ENDPOINT [Mirroring] 
     AUTHORIZATION [service_account]
@@ -215,7 +229,8 @@ ALTER DATABASE AdventureWorks SET PARTNER= N'TCP://fully.qualified.domain.name.c
 
 --on both instances
 --5 + 6
-EXEC sys.sp_dbmmonitoraddmonitoring</pre>
+EXEC sys.sp_dbmmonitoraddmonitoring
+```
 
 
 

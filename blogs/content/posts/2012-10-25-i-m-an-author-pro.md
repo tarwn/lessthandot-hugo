@@ -3,6 +3,7 @@ title: I’m An Author! “Pro SQL Server 2012 Practices” Releases October 31
 author: Jes Borland
 type: post
 date: 2012-10-25T12:00:00+00:00
+ID: 1771
 excerpt: One of my bucket list items has always been “publish a book”. Little did I know that I would get to cross that off my list in 2012.
 url: /index.php/datamgmt/dbprogramming/i-m-an-author-pro/
 views:

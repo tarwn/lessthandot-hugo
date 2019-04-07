@@ -3,6 +3,7 @@ title: Django 1.0 Released
 author: SQLDenis
 type: post
 date: 2008-09-04T00:18:26+00:00
+ID: 128
 url: /index.php/webdev/webdesigngraphicsstyling/django-1-0-released/
 views:
   - 3940

@@ -3,6 +3,7 @@ title: Getting remote disk information with Windows PowerShell
 author: Axel Achten (axel8s)
 type: post
 date: 2012-10-04T11:44:00+00:00
+ID: 1740
 excerpt: 'A couple of weeks ago someone asked me why they should upgrade to MS SQL Server 2012. I named a bunch of reasons and only remembered afterwards that the possibility to use Windows Server Core could also be a surplus. Just 2 days later this Case for Core&hellip;'
 url: /index.php/sysadmins/os/windows/getting-remote-disk-information-with/
 views:
@@ -22,7 +23,9 @@ A couple of weeks ago someone asked me why they should upgrade to MS SQL Server 
   
 To get information about disks we use the win32_logicaldisk wmiobject and with the -computer parameter we specify our server name:
 
-<pre>GET-WmiObject win32_logicaldisk -computer <computername&gt;</pre>
+```PowerShell
+GET-WmiObject win32_logicaldisk -computer <computername>
+```
 
 The result looks like this:
 
@@ -34,7 +37,9 @@ As you can see, the requested information is there and if I only need to do this
   
 First things first, let&#8217;s just select the data I need, with a pipe I pass the input from the Get-WmiObject to the second part of my command and there I use the Select-Object to specify the object that I want:
 
-<pre>Get-WmiObject win32_logicaldisk -computer <computername&gt; | select-object DeviceID, VolumeName,Size,FreeSpace</pre>
+```PowerShell
+Get-WmiObject win32_logicaldisk -computer <computername> | select-object DeviceID, VolumeName,Size,FreeSpace
+```
 
 This looks better:
 
@@ -44,7 +49,9 @@ This looks better:
 
 Next step is to see the percentage free space. Using @{Name=&#8221;&#8221;,Expression={}}:
 
-<pre>Get-WmiObject win32_logicaldisk -computer <computername&gt; | select-object DeviceID, VolumeName,Size,FreeSpace,@{Name="PCTFreeSpace";Expression={$_.FreeSpace/$_.Size*100}}</pre>
+```PowerShell
+Get-WmiObject win32_logicaldisk -computer <computername> | select-object DeviceID, VolumeName,Size,FreeSpace,@{Name="PCTFreeSpace";Expression={$_.FreeSpace/$_.Size*100}}
+```
 
 The code works but now I have to scroll again to see all the disk info:
 
@@ -54,10 +61,12 @@ The code works but now I have to scroll again to see all the disk info:
 
 I add a second pipe and specify that I want my result formatted as a table, I also make sure the size and free space make more sense:
 
-<pre>Get-WmiObject win32_logicaldisk -computer <computername&gt; | 
+```PowerShell
+Get-WmiObject win32_logicaldisk -computer <computername> | 
 select-object DeviceID, VolumeName, @{Name="Size";Expression={$_.Size/1GB}},@{Name="FreeSpace";Expression={$_.FreeSpace/1GB}},
 @{Name="PCTFreeSpace";Expression={
-$_.FreeSpace/$_.Size*100}}|format-table</pre>
+$_.FreeSpace/$_.Size*100}}|format-table
+```
 
 Better no?
 
@@ -67,16 +76,20 @@ Better no?
 
 Now you can save this script to a text file, rename the file extension to .ps1 and edit the file every time you need to query another server. Or you can use a parameter. I named my file GetDiskUsage.ps1 and started the script with param([Datatype] $Variablename):
 
-<pre>param(
+```PowerShell
+param(
 	[string] $compname )
-Get-WmiObject win32_logicaldisk -computer <computername&gt; | 
+Get-WmiObject win32_logicaldisk -computer <computername> | 
 select-object DeviceID, VolumeName, @{Name="Size";Expression={$_.Size/1GB}},@{Name="FreeSpace";Expression={$_.FreeSpace/1GB}},
 @{Name="PCTFreeSpace";Expression={
-$_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table</pre>
+$_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table
+```
 
 Now I can execute the script with the following command:
 
-<pre>.Getdiskusage <Computername&gt;</pre>
+```PowerShell
+.Getdiskusage <Computername>
+```
 
 Notice that I also added a Sort-Object before the format to be able to see what disk has the most available free space first:
 
@@ -86,16 +99,20 @@ Notice that I also added a Sort-Object before the format to be able to see what 
 
 To finish things up a use a Throw in my parameter definition to avoid an ugly error message when I execute the script without specifying a parameter value:
 
-<pre>param(
+```PowerShell
+param(
 	[string] $compname = $(Throw "Provide a Server name as first parameter") )
-Get-WmiObject win32_logicaldisk -computer <computername&gt; | 
+Get-WmiObject win32_logicaldisk -computer <computername> | 
 select-object DeviceID, VolumeName, @{Name="Size";Expression={$_.Size/1GB}},@{Name="FreeSpace";Expression={$_.FreeSpace/1GB}},
 @{Name="PCTFreeSpace";Expression={
-$_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table</pre>
+$_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table
+```
 
 When I now execute the script without specifying a computer name:
 
-<pre>.Getdiskusage</pre>
+```PowerShell
+.Getdiskusage
+```
 
 I see I have to specify a computer name:
 

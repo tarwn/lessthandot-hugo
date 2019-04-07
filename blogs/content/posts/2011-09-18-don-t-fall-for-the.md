@@ -3,6 +3,7 @@ title: Don’t fall for the social engineering scam that makes you go to ammyy.c
 author: SQLDenis
 type: post
 date: 2011-09-18T12:10:00+00:00
+ID: 1320
 excerpt: |
   I am pretty sure that none of our readers would fall for this social engineering scam that would make you share your computer with someone else, I am writing about it because I know of one person who had a call like this but she luckily hung up.
   

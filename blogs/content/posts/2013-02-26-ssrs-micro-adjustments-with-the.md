@@ -3,6 +3,7 @@ title: SSRS – Micro Adjustments with the Arrow Keys
 author: Kevin Conan
 type: post
 date: 2013-02-26T16:06:00+00:00
+ID: 2015
 excerpt: Does it every bother you when you use the Arrow Keys to move an object in your SSRS report that it jumps much further over than you really wanted?
 url: /index.php/datamgmt/ssrs/ssrs-micro-adjustments-with-the/
 views:

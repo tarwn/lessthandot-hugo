@@ -3,6 +3,7 @@ title: SSRS Properties – Document Map
 author: Jes Borland
 type: post
 date: 2013-02-13T11:52:00+00:00
+ID: 1990
 excerpt: 'The purpose of this property is to allow you to create a clickable list of values in a pane on the left side of the screen that a user can click on  to quickly reach that value in the report.'
 url: /index.php/datamgmt/ssrs/ssrs-properties-document-map/
 views:

@@ -3,6 +3,7 @@ title: 'Mirroring: Witness misconceptions in High-Performance'
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-02-16T14:22:01+00:00
+ID: 704
 excerpt: 'I wanted to start writing a series of blogs on mirroring to share what I’ve learned over the years and since SQL Server 2005 gave us this feature.  Before we go into that I want to go over the operating modes that we have in mirroring.  We have two operating modes, Asynchronous and synchronous.  The first major key is Asynchronous operating mode is only available in Enterprise Edition (and Developer).'
 url: /index.php/datamgmt/dbadmin/mirroring-witness-misconceptions-in-high/
 views:
@@ -52,12 +53,14 @@ Books Online (BOL) does a good job in describing operating modes in my opinion. 
 > 
 > To do this we first utilize the instance TK2008 as a witness by creating an endpoint on it as follows
 > 
-> <pre>CREATE ENDPOINT Endpoint_Mirroring
-    STATE=STARTED 
-    AS TCP (LISTENER_PORT=7022) 
-    FOR DATABASE_MIRRORING (ROLE=WITNESS)
-GO</pre>
-> 
+> sql
+CREATE ENDPOINT Endpoint_Mirroring
+>     STATE=STARTED 
+>     AS TCP (LISTENER_PORT=7022) 
+>     FOR DATABASE_MIRRORING (ROLE=WITNESS)
+> GO
+```
+
 > Next we verify the port configuration using netstat –a
 > 
 > <div class="image_block">
@@ -66,20 +69,23 @@ GO</pre>
 > 
 > Now on the principle we alter the database to let it know we want the witness on TK2008:7022 to act as the partner in the relationship to handle failing to the mirror. We do this with the following
 > 
-> <pre>ALTER DATABASE NEEDTOMOVE 
-	SET WITNESS = 
-	'TCP://LKFW0133.il.pharmedium.com:7022'</pre>
-> 
+> sql
+ALTER DATABASE NEEDTOMOVE 
+> 	SET WITNESS = 
+> 	'TCP://LKFW0133.il.pharmedium.com:7022'
+```
+
 > Once this is done we can query <span class="MT_green">sys.database_mirroring</span> to validate our witness is connected even with safety still OFF.
 > 
-> <pre>SELECT 
-	mirroring_safety_level_desc, 
-	mirroring_witness_name, 
-	mirroring_witness_state_desc 
-FROM sys.database_mirroring
-WHERE mirroring_safety_level_desc IS NOT NULL</pre>
-> 
-> <div class="image_block">
+> sql
+SELECT 
+> 	mirroring_safety_level_desc, 
+> 	mirroring_witness_name, 
+> 	mirroring_witness_state_desc 
+> FROM sys.database_mirroring
+> WHERE mirroring_safety_level_desc IS NOT NULL
+```
+<div class="image_block">
 >   <img src="/wp-content/uploads/blogs/DataMgmt/mirror_2.gif" alt="" title="" width="588" height="91" />
 > </div>
 > 
@@ -91,9 +97,11 @@ WHERE mirroring_safety_level_desc IS NOT NULL</pre>
 > 
 > At this point we may think all that needs to be done is to restore with recovery. However, when doing so, we will receive an error that the database is configured for mirroring and the restore will terminate. To bring this database up we must remove mirroring all together.
 > 
-> <pre>ALTER DATABASE NEEDTOMOVE SET PARTNER OFF
-GO</pre>
-> 
+> sql
+ALTER DATABASE NEEDTOMOVE SET PARTNER OFF
+> GO
+```
+
 > This brings up another problem in getting our mirroring reconfigured. In the case of Asynchronous mirroring the databases are typically large, high transactional databases that are set geographically apart from each other. This adds hardships to configuring and starting mirroring. Getting the mirror database to the synchronization level enough to start mirroring can truly be an interesting task in itself. 
 > 
 > To read more on the impact of a witness on mirroring review, &#8220;[Asynchronous Database Mirroring (High-Performance Mode)][1]&#8220;

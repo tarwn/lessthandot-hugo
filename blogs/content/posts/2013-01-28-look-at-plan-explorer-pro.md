@@ -3,6 +3,7 @@ title: A Glance of Plan Explorer Pro’s Deadlock Analysis
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-28T11:41:00+00:00
+ID: 1942
 excerpt: 'Analyzing deadlocks in SQL Server can be a frustrating and painful task.  As frustrating as they are, often as a DBA, you’ll also have to explain what, why and how a deadlock(s) were causing performance or loss of transactions.  With Plan Explorer Pro n&hellip;'
 url: /index.php/datamgmt/dbadmin/look-at-plan-explorer-pro/
 views:
@@ -42,7 +43,8 @@ Kids: don’t try this at home. And by home, I mean a production server.
 
 Open SSMS and open three query windows. In this example, the three query windows are holding session IDs 58, 59 and 60.  In each query window, paste the following T-SQL code.
 
-<pre>USE QTuner_Design
+sql
+USE QTuner_Design
 GO
 BEGIN TRAN
 SELECT 
@@ -53,7 +55,8 @@ WHERE ordernum = 4688235
 
 UPDATE [dbo].[OrderHDR_Poor]
 SET customerName = 'Deadlock'
-WHERE ordernum = 4688235</pre>
+WHERE ordernum = 4688235
+```
 
 Go back to session 60 (first query window opened) and execute the statement. Then execute the statement in 59 and 58 in sequential order.  At this point, 60 is blocking the other statements from completing and would remain so if the sessions were left as is.  To force a deadlock, all that is needed is to COMMIT session 60.  To do this, go to session 60’s query window and type “COMMIT”, highlight COMMIT and execute the statement.
 

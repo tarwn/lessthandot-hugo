@@ -3,6 +3,7 @@ title: Thinking with Data by Max Shron
 author: Koen Verbeeck
 type: post
 date: 2014-02-27T11:57:03+00:00
+ID: 2445
 url: /index.php/datamgmt/thinking-with-data-by-max-shron/
 views:
   - 5597

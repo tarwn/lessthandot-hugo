@@ -3,6 +3,7 @@ title: Stop the ‘Stop Online Piracy’ Act
 author: Alex Ullrich
 type: post
 date: 2011-11-10T23:28:00+00:00
+ID: 1380
 excerpt: |
   Anyone from outside the US can safely ignore this post, though the details may provide a scary glimpse of what may be coming in your fair countries as well.
   

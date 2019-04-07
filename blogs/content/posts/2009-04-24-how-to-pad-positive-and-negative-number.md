@@ -3,6 +3,7 @@ title: How to pad positive and negative number with zeroes in SQL Server?
 author: SQLDenis
 type: post
 date: 2009-04-24T13:29:34+00:00
+ID: 397
 url: /index.php/datamgmt/datadesign/how-to-pad-positive-and-negative-number/
 views:
   - 24318
@@ -21,11 +22,15 @@ You have a table with integer values and you are required to always show 8 numbe
   
 The easiest way to pad a number in SQL is by using the following syntax
 
-<pre>SELECT RIGHT('00000000' + 12345,8)</pre>
+sql
+SELECT RIGHT('00000000' + 12345,8)
+```
 
 However running that will still not pad the number with zeroes. You need to convert the number to a varchar first. Run the query below
 
-<pre>SELECT RIGHT('00000000' + CONVERT(VARCHAR(8),12345),8)</pre>
+sql
+SELECT RIGHT('00000000' + CONVERT(VARCHAR(8),12345),8)
+```
 
 That returns the output that we want
 
@@ -33,7 +38,8 @@ That returns the output that we want
 
 Let&#8217;s continue by creating a table and dumping some numbers in that table
 
-<pre>CREATE TABLE #Numbers(Num INT)
+sql
+CREATE TABLE #Numbers(Num INT)
     INSERT #Numbers VALUES('1')
     INSERT #Numbers VALUES('12')
     INSERT #Numbers VALUES('123')
@@ -42,12 +48,15 @@ Let&#8217;s continue by creating a table and dumping some numbers in that table
     INSERT #Numbers VALUES('123456')
     INSERT #Numbers VALUES('1234567')
     INSERT #Numbers VALUES('12345678')
-    INSERT #Numbers VALUES('123456789')</pre>
+    INSERT #Numbers VALUES('123456789')
+```
 
 Now run the following query
 
-<pre>SELECT RIGHT('00000000' + CONVERT(VARCHAR(8),Num),8)
-    FROM #Numbers</pre>
+sql
+SELECT RIGHT('00000000' + CONVERT(VARCHAR(8),Num),8)
+    FROM #Numbers
+```
 
 (output)
   
@@ -71,8 +80,10 @@ Now run the following query
 
 As you can see the last row has the value 0000000*. This is because converting to varchar(8) truncated the value. If we increase our convert and right functions to use 9 instead of 8 characters we are fine. Run the same query again.
 
-<pre>SELECT RIGHT('00000000' + CONVERT(VARCHAR(9),Num),9)
-    FROM #Numbers</pre>
+sql
+SELECT RIGHT('00000000' + CONVERT(VARCHAR(9),Num),9)
+    FROM #Numbers
+```
 
 (output)
   
@@ -100,15 +111,19 @@ What about negative values? What if you want to show -00000123 instead of -123?
   
 First insert these 4 rows
 
-<pre>INSERT #Numbers VALUES('-122')
+sql
+INSERT #Numbers VALUES('-122')
  INSERT #Numbers VALUES('-1')
  INSERT #Numbers VALUES('-777777')
- INSERT #Numbers VALUES('-123456789')</pre>
+ INSERT #Numbers VALUES('-123456789')
+```
 
 Now we will run the same query again
 
-<pre>SELECT RIGHT('00000000' + CONVERT(VARCHAR(9),Num),9)
-    FROM #Numbers</pre>
+sql
+SELECT RIGHT('00000000' + CONVERT(VARCHAR(9),Num),9)
+    FROM #Numbers
+```
 
 Here is what those 4 rows look like that we just inserted
 
@@ -124,9 +139,11 @@ Here is what those 4 rows look like that we just inserted
 
 That is not good. Here is what we will do, if the number is negative we will start with a minus sign otherwise we will use a blank and then we will concatenate and replace the minus sign with a blank. This is what it looks like in SQL
 
-<pre>SELECT CASE  WHEN Num < 0
+sql
+SELECT CASE  WHEN Num < 0
 THEN '-' ELSE '' END + RIGHT('000000000' + REPLACE(Num,'-',''), 9)
- FROM #Numbers</pre>
+ FROM #Numbers
+```
 
 And here is the output
 
@@ -166,5 +183,5 @@ I also updated the post on our wiki page: [Adding Leading Zeros To Integer Value
 
  [1]: http://wiki.ltd.local/index.php/Adding_Leading_Zeros_To_Integer_Values
  [2]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

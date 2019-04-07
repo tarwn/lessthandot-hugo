@@ -3,6 +3,7 @@ title: Sparklines and Conditional Formating in SSRS
 author: Sam Vanga
 type: post
 date: 2013-02-26T11:59:00+00:00
+ID: 2009
 excerpt: |
   When creating a SSRS report, you want to add lines that display trends. You want to show trends for more than one data point. And you want to conditionally format the data point.
   
@@ -34,7 +35,8 @@ Below is how the Sparkline with multiple data points and conditional formatting 
 
 After opening report server project and creating a data source, create a data set. Right click on shared datasets and choose add new dataset. Following is the query I am using for this example which runs against AdventureWorksDW2008R2 sample database.
 
-<pre>SELECT T.CalendarYear
+sql
+SELECT T.CalendarYear
 	, T.CalendarQuarter
 	, T.MonthNumberOfYear
 	, SUM(S.ExtendedAmount) AS Sales
@@ -59,9 +61,8 @@ GROUP BY T.CalendarYear
 	, E.LastName
 	, E.EmployeeKey
 ORDER BY Employee
-	, 1</pre>
-
-<div>
+	, 1
+```<div>
   <h3>
     Insert table:
   </h3>

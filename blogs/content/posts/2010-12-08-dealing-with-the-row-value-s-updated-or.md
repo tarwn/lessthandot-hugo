@@ -3,6 +3,7 @@ title: Dealing with The row value(s) updated or deleted either do not make the r
 author: SQLDenis
 type: post
 date: 2010-12-08T10:08:28+00:00
+ID: 966
 excerpt: "Someone asked about this error this morning and I decided to turn it into a blog post. Basically the person was using the designer/editor in SSMS to delete a row, the table didn't have a key and the rows were not unique, he got the following error: The&hellip;"
 url: /index.php/datamgmt/datadesign/dealing-with-the-row-value-s-updated-or/
 views:
@@ -24,10 +25,12 @@ Someone asked about this error [this morning][1] and I decided to turn it into a
 
 First create the following table.
 
-<pre>CREATE TABLE Test(col1 VARCHAR(200));
+sql
+CREATE TABLE Test(col1 VARCHAR(200));
 go
-INSERT INTO Test (col1) VALUES('<ccc&gt;ddd</ccc&gt;')
-INSERT INTO Test (col1) VALUES('<ccc&gt;ddd</ccc&gt;')</pre>
+INSERT INTO Test (col1) VALUES('<ccc>ddd</ccc>')
+INSERT INTO Test (col1) VALUES('<ccc>ddd</ccc>')
+```
 
 Now, do the following, navigate to this table in Object Explorer, right click on the table, select the &#8220;Edit top 200 rows&#8221; option (see also below for image)
 
@@ -65,19 +68,22 @@ Of course this is also yet another reason to have a primary key on the table.
 
 What can we do to resolve this? Easy, stop using the wizard and get familiar with Transact SQL. Open a new query window and then you can use either of these two queries
 
-<pre>DELETE TOP (1)
+sql
+DELETE TOP (1)
 FROM Test
-WHERE col1 = '<ccc&gt;ddd</ccc&gt;'</pre>
-
+WHERE col1 = '<ccc>ddd</ccc>'
+```
 The query above uses the TOP operator
 
-<pre>SET rowcount 1
+sql
+SET rowcount 1
    
 DELETE
 FROM Test
-WHERE col1 = '<ccc&gt;ddd</ccc&gt;'
+WHERE col1 = '<ccc>ddd</ccc>'
    
-SET rowcount 0</pre>
+SET rowcount 0
+```
 
 The query above uses rowcount with a value of 1, this will only affect 1 row now. The set rowcount setting has been put on the deprecation list so be aware of that.
 
@@ -92,5 +98,5 @@ The person who creates such a table is also at fault because this table doesn&#8
  [1]: http://stackoverflow.com/questions/4386592/why-cannot-i-delete-edit-a-row-with-xml-value-in-ssms
  [2]: /wp-content/uploads/blogs/DataMgmt/200rows.png ""
  [3]: /wp-content/uploads/blogs/DataMgmt//delete.png ""
- [4]: http://forum.lessthandot.com/viewforum.php?f=17
- [5]: http://forum.lessthandot.com/viewforum.php?f=22
+ [4]: http://forum.ltd.local/viewforum.php?f=17
+ [5]: http://forum.ltd.local/viewforum.php?f=22

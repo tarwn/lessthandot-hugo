@@ -3,6 +3,7 @@ title: How to Install Internet Information Services (IIS) On Windows 7
 author: SQLDenis
 type: post
 date: 2009-06-18T00:22:00+00:00
+ID: 476
 excerpt: 'If you are upgrading from windows xp to windows 7 there is a change in the way you install Internet Information Services. On windows xp you would install IIS from add/remove windows components. This is different in Windows 7; it is very similar how it i&hellip;'
 url: /index.php/sysadmins/os/how-to-install-internet-information-serv-7/
 views:

@@ -3,6 +3,7 @@ title: A New Door Opens
 author: Jes Borland
 type: post
 date: 2011-10-24T15:32:00+00:00
+ID: 1361
 excerpt: 'Lesson learned: community involvement can have unexpected rewards.'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/a-new-job-and-new/
 views:

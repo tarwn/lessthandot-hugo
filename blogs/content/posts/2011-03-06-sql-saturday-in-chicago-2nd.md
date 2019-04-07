@@ -3,6 +3,7 @@ title: SQL Saturday in Chicago the second
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-03-06T15:00:00+00:00
+ID: 1064
 excerpt: 'I’m happy to say the schedule is completed and up on the SQL Saturday site.  As with any SQL event, we want to schedule everything that was submitted but simply have to work with the rooms and time slots we have.  With that, some do not make it in.  I know some people will be upset and I can’t do much to help ease that other than say; when scheduling a SQL Saturday, I take into account the key people that SQL Saturday was created for.'
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-in-chicago-2nd/
 views:

@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 8: Foreign Keys'
 author: SQLDenis
 type: post
 date: 2012-12-08T15:17:00+00:00
+ID: 1836
 excerpt: |
   This is day eight of the SQL Advent 2012 series of blog posts. Today we are going to look at foreign keys
   
@@ -40,23 +41,31 @@ Most people will define a foreign key relationship between the foreign key and a
   
 First create a table to which we will add a unique constraint after creation
 
-<pre>CREATE TABLE TestUniqueConstraint(id int)
-GO</pre>
+sql
+CREATE TABLE TestUniqueConstraint(id int)
+GO
+```
 
 Add a unique constraint to the table
 
-<pre>ALTER TABLE TestUniqueConstraint ADD CONSTRAINT ix_unique UNIQUE (id)
-GO</pre>
+sql
+ALTER TABLE TestUniqueConstraint ADD CONSTRAINT ix_unique UNIQUE (id)
+GO
+```
 
 Insert a value of 1, this should succeed
 
-<pre>INSERT  TestUniqueConstraint VALUES(1)
-GO</pre>
+sql
+INSERT  TestUniqueConstraint VALUES(1)
+GO
+```
 
 Insert a value of 1 again, this should fail
 
-<pre>INSERT  TestUniqueConstraint VALUES(1)
-GO</pre>
+sql
+INSERT  TestUniqueConstraint VALUES(1)
+GO
+```
 
 _Msg 2627, Level 14, State 1, Line 2
   
@@ -66,23 +75,31 @@ The statement has been terminated._
 
 Now that we verified that we can&#8217;t have duplicates, it is time to create the table that will have the foreign key
 
-<pre>CREATE TABLE TestForeignConstraint(id int)
-GO</pre>
+sql
+CREATE TABLE TestForeignConstraint(id int)
+GO
+```
 
 Add the foreign key to the table
 
-<pre>ALTER TABLE dbo.TestForeignConstraint ADD CONSTRAINT
+sql
+ALTER TABLE dbo.TestForeignConstraint ADD CONSTRAINT
 	FK_TestForeignConstraint_TestUniqueConstraint FOREIGN KEY
-	(id) REFERENCES dbo.TestUniqueConstraint(id) </pre>
+	(id) REFERENCES dbo.TestUniqueConstraint(id) 
+```
 
 Insert a value that exist in the table that is referenced by the foreign key constraint
 
-<pre>INSERT TestForeignConstraint  VALUES(1)
-INSERT TestForeignConstraint  VALUES(1)</pre>
+sql
+INSERT TestForeignConstraint  VALUES(1)
+INSERT TestForeignConstraint  VALUES(1)
+```
 
 Insert a value that does not exist in the table that is referenced by the foreign key constraint
 
-<pre>INSERT TestForeignConstraint  VALUES(2)</pre>
+sql
+INSERT TestForeignConstraint  VALUES(2)
+```
 
 _Msg 547, Level 16, State 0, Line 1
   
@@ -98,23 +115,31 @@ This section will be similar to the previous section, the difference is that we 
 
 First create a table to which we will add a unique index after creation
 
-<pre>CREATE TABLE TestUniqueIndex(id int)
-GO</pre>
+sql
+CREATE TABLE TestUniqueIndex(id int)
+GO
+```
 
 Add the unique index
 
-<pre>CREATE UNIQUE NONCLUSTERED INDEX ix_unique ON TestUniqueIndex(id)
-GO</pre>
+sql
+CREATE UNIQUE NONCLUSTERED INDEX ix_unique ON TestUniqueIndex(id)
+GO
+```
 
 Insert a value of 1, this should succeed
 
-<pre>INSERT  TestUniqueIndex VALUES(1)
-GO</pre>
+sql
+INSERT  TestUniqueIndex VALUES(1)
+GO
+```
 
 Insert a value of 1 again , this should now fail
 
-<pre>INSERT  TestUniqueIndex VALUES(1)
-GO</pre>
+sql
+INSERT  TestUniqueIndex VALUES(1)
+GO
+```
 
 _Msg 2601, Level 14, State 1, Line 2
   
@@ -124,23 +149,31 @@ The statement has been terminated._
 
 Now that we verified that we can&#8217;t have duplicates, it is time to create the table that will have the foreign key
 
-<pre>CREATE TABLE TestForeignIndex(id int)
-GO</pre>
+sql
+CREATE TABLE TestForeignIndex(id int)
+GO
+```
 
 Add the foreign key constraint
 
-<pre>ALTER TABLE dbo.TestForeignIndex ADD CONSTRAINT
+sql
+ALTER TABLE dbo.TestForeignIndex ADD CONSTRAINT
 	FK_TestForeignIndex_TestUniqueIndex FOREIGN KEY
-	(id) REFERENCES dbo.TestUniqueIndex(id) </pre>
+	(id) REFERENCES dbo.TestUniqueIndex(id) 
+```
 
 Insert a value that exist in the table that is referenced by the foreign key constraint
 
-<pre>INSERT TestForeignIndex  VALUES(1)
-INSERT TestForeignIndex  VALUES(1)</pre>
+sql
+INSERT TestForeignIndex  VALUES(1)
+INSERT TestForeignIndex  VALUES(1)
+```
 
 Insert a value that does not exist in the table that is referenced by the foreign key constraint
 
-<pre>INSERT TestForeignIndex  VALUES(2)</pre>
+sql
+INSERT TestForeignIndex  VALUES(2)
+```
 
 _Msg 547, Level 16, State 0, Line 1
   
@@ -158,18 +191,22 @@ When you create a primary key, SQL Server will by default make that a clustered 
 
 Scroll up to where we added the unique constraint to the TestUniqueConstraint table, you will see this code
 
-<pre>ALTER TABLE TestUniqueConstraint ADD CONSTRAINT ix_unique UNIQUE (id)</pre>
+sql
+ALTER TABLE TestUniqueConstraint ADD CONSTRAINT ix_unique UNIQUE (id)
+```
 
 All we did was add the constraint, SQL Server added the index behind the scenes for us in order to help enforce uniqueness more efficiently
 
 Now run this query below
 
-<pre>SELECT OBJECT_NAME(object_id) as TableName,
+sql
+SELECT OBJECT_NAME(object_id) as TableName,
 name as IndexName, 
 type_desc as StorageType
 FROM sys.indexes
 WHERE OBJECT_NAME(object_id) IN('TestUniqueIndex','TestUniqueConstraint')
-AND name IS NOT NULL</pre>
+AND name IS NOT NULL
+```
 
 You will get these results
 
@@ -182,18 +219,21 @@ As you can see both tables have an index
 
 Now let&#8217;s look at what the case is for the foreign key tables. Run the query below
 
-<pre>SELECT OBJECT_NAME(object_id) as TableName,
+sql
+SELECT OBJECT_NAME(object_id) as TableName,
 name as IndexName, 
 type_desc as StorageType
 FROM sys.indexes
-WHERE OBJECT_NAME(object_id) IN('TestForeignIndex','TestForeignConstraint')</pre>
+WHERE OBJECT_NAME(object_id) IN('TestForeignIndex','TestForeignConstraint')
+```
 
 Here are the results for that query
 
 <pre>TableName	      IndexName	StorageType
 --------------------- --------- -------------
 TestForeignConstraint	NULL	HEAP
-TestForeignIndex	NULL	HEAP</pre>
+TestForeignIndex	NULL	HEAP
+</pre>
 
 As you can see no indexes have been added to the tables. Should you add indexes? In order to answer that let&#8217;s see what would happen if you did add indexes. Joins would perform faster since it can traverse the index instead of the whole table to find the matching join conditions. Updates and deletes will be faster as well since the index can be used to find the foreign keys rows to update or delete (remember this depends if you specified CASCADE or NO ACTION when you create the foreign key constraint)
   

@@ -3,6 +3,7 @@ title: Windows 7 Launch In New York City
 author: SQLDenis
 type: post
 date: 2009-10-23T01:21:08+00:00
+ID: 595
 url: /index.php/itprofessionals/ethicsit/windows-7-launch-in-new-york-city/
 views:
   - 8510

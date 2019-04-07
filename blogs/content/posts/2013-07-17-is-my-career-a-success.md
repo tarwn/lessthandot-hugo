@@ -3,6 +3,7 @@ title: Success in Your Career
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-07-18T03:51:00+00:00
+ID: 2137
 excerpt: 'Success is an interesting concept.  Even more interesting when you make the effort to decide if you are successful and at what level of success you’ve achieved.  To further blow your decision making ability on the topic, imagine the thought of if you sh&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/is-my-career-a-success/
 views:

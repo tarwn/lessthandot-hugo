@@ -3,6 +3,7 @@ title: SQL Server does support regular expressions in check constraints, trigger
 author: SQLDenis
 type: post
 date: 2009-05-26T13:00:38+00:00
+ID: 444
 url: /index.php/datamgmt/dbprogramming/sql-server-does-support-regular-expressi/
 views:
   - 18105
@@ -39,20 +40,25 @@ Here is what the regular expression looks like \[DMOPT\]\[0-9\][0-9], that will 
 
 Enough talking let&#8217;s look at some code, first create this table
 
-<pre>create table blatest(code char(3))</pre>
+sql
+create table blatest(code char(3))
+```
 
 now add the check constraint
 
-<pre>alter table blatest add  constraint ck_bla 
+sql
+alter table blatest add  constraint ck_bla 
 check (code like '[DMOPT][0-9][0-9]' )
-GO</pre>
-
+GO
+```
 Now we can run some tests
 
-<pre>insert blatest values('a12') --fails
+sql
+insert blatest values('a12') --fails
 insert blatest values('M12')  --good
 insert blatest values('D12') --good
-insert blatest values('DA1') --fails</pre>
+insert blatest values('DA1') --fails
+```
 
 As you can see we got the following message twice
   
@@ -70,8 +76,10 @@ check (code like &#8216;\[DMOPT\]\[0-9\][0-9]&#8217; COLLATE SQL\_Latin1\_Genera
 
 What we did is used the SQL\_Latin1\_General\_CP1\_CS_AS collation, to find out what this collation does, run the following
 
-<pre>select * from ::fn_helpcollations()
-where name = 'SQL_Latin1_General_CP1_CS_AS'</pre>
+sql
+select * from ::fn_helpcollations()
+where name = 'SQL_Latin1_General_CP1_CS_AS'
+```
 
 Here is what is returned as the description
 
@@ -83,17 +91,23 @@ SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data
 
 Let&#8217;s create the constraint, first we need to drop the old constraint
 
-<pre>alter table blatest drop  constraint ck_bla
-go</pre>
+sql
+alter table blatest drop  constraint ck_bla
+go
+```
 
 Now we will create the new case sensitive constraint
 
-<pre>alter table blatest add  constraint ck_bla 
+sql
+alter table blatest add  constraint ck_bla 
 check (code like '[DMOPT][0-9][0-9]' COLLATE SQL_Latin1_General_CP1_CS_AS )
-GO</pre>
+GO
+```
 
-<pre>insert blatest values('D12') --good
-insert blatest values('d12') --fails</pre>
+sql
+insert blatest values('D12') --good
+insert blatest values('d12') --fails
+```
 
 The insert with D12 will succeed but the one with d12 will not.
 
@@ -103,5 +117,5 @@ As you can see you can use regular expressions in check constraints, there is no
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: 'Road Trip Time! Presenting at SQL Saturday #149 Minnesota'
 author: Jes Borland
 type: post
 date: 2012-08-27T15:20:00+00:00
+ID: 1701
 excerpt: I don’t think it’s any secret that I love SQL Saturdays.
 url: /index.php/itprofessionals/professionaldevelopment/road-trip-time-presenting-at/
 views:

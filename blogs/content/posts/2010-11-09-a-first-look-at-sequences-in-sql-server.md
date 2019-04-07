@@ -3,6 +3,7 @@ title: A first look at sequences in SQL Server Denali
 author: SQLDenis
 type: post
 date: 2010-11-09T16:18:20+00:00
+ID: 942
 url: /index.php/datamgmt/datadesign/a-first-look-at-sequences-in-sql-server/
 views:
   - 14848
@@ -20,52 +21,68 @@ People have been asking for sequences for a very long time and now finally it is
 
 A simple sequence will look like this
 
-<pre>CREATE SEQUENCE GlobalCounter
+sql
+CREATE SEQUENCE GlobalCounter
     AS INT
     MINVALUE 1
     NO MAXVALUE
     START WITH 1;
-GO</pre>
+GO
+```
 
 To get the next value from the sequence you would do something like this
 
-<pre>SELECT NEXT VALUE FOR GlobalCounter -- 1 
+sql
+SELECT NEXT VALUE FOR GlobalCounter -- 1 
 
-SELECT NEXT VALUE FOR GlobalCounter -- 2</pre>
+SELECT NEXT VALUE FOR GlobalCounter -- 2
+```
 
 As you can see, the value gets incremented by one.
 
 Now we will create a table and instead of using an identity, we will use the sequence as a default
 
-<pre>CREATE TABLE bla (id INT DEFAULT NEXT VALUE FOR GlobalCounter)</pre>
+sql
+CREATE TABLE bla (id INT DEFAULT NEXT VALUE FOR GlobalCounter)
+```
 
 Insert some data into the table, one row will use the default, the other row will call the sequence
 
-<pre>INSERT bla DEFAULT VALUES  --3
+sql
+INSERT bla DEFAULT VALUES  --3
 
-INSERT bla VALUES(NEXT VALUE FOR GlobalCounter)  --4</pre>
+INSERT bla VALUES(NEXT VALUE FOR GlobalCounter)  --4
+```
 
 Now let&#8217;s see what is in the table, should be 3 and 4
 
-<pre>SELECT * FROM bla  --3,4</pre>
+sql
+SELECT * FROM bla  --3,4
+```
 
 Here is one more example, this one will show you what happens when you reach the maximum value and how to reset it
 
-<pre>CREATE SEQUENCE GlobalCounterTest
+sql
+CREATE SEQUENCE GlobalCounterTest
     AS BIGINT
     MINVALUE 1
     MAXVALUE 2
     START WITH 1;
-GO</pre>
+GO
+```
 
 These two statements will succeed
 
-<pre>SELECT NEXT VALUE FOR GlobalCounterTest --1
-	SELECT NEXT VALUE FOR GlobalCounterTest --2</pre>
+sql
+SELECT NEXT VALUE FOR GlobalCounterTest --1
+	SELECT NEXT VALUE FOR GlobalCounterTest --2
+```
 
 this one will fail
 
-<pre>SELECT NEXT VALUE FOR GlobalCounterTest  --error</pre>
+sql
+SELECT NEXT VALUE FOR GlobalCounterTest  --error
+```
 
 Here is the error message
   
@@ -75,35 +92,45 @@ The sequence object &#8216;GlobalCounterTest&#8217; has reached its minimum or m
 
 To reset a sequence, you need to use restart
 
-<pre>ALTER SEQUENCE GlobalCounterTest RESTART
-GO</pre>
+sql
+ALTER SEQUENCE GlobalCounterTest RESTART
+GO
+```
 
 Let&#8217;s take a look at another example, this sequence will generate values 1 and 2 and will restart once you reach the max, this is accomplished by using cycle
 
-<pre>CREATE SEQUENCE MySequence
+sql
+CREATE SEQUENCE MySequence
  MINVALUE 1
  MAXVALUE 2 
- CYCLE </pre>
+ CYCLE 
+```
 
 Now run these 4 statements and you will see 2 rows with the vale 1 and two rows with the value 2
 
-<pre>select NEXT VALUE FOR MySequence  --1
+sql
+select NEXT VALUE FOR MySequence  --1
  select NEXT VALUE FOR MySequence  --2
  select NEXT VALUE FOR MySequence  --1
- select NEXT VALUE FOR MySequence  --2</pre>
+ select NEXT VALUE FOR MySequence  --2
+```
 
 You can also use the tinyint data type
 
-<pre>CREATE SEQUENCE TinySequence
+sql
+CREATE SEQUENCE TinySequence
     AS TINYINT
     MINVALUE 1
     NO MAXVALUE
-    START WITH 1;</pre>
+    START WITH 1;
+```
 
 Of course tinyint can only hold values up to 255, so if you run this in SSMS
 
-<pre>select NEXT VALUE FOR TinySequence
-GO 256</pre>
+sql
+select NEXT VALUE FOR TinySequence
+GO 256
+```
 
 _Msg 11728, Level 16, State 1, Line 1
   
@@ -111,10 +138,12 @@ The sequence object &#8216;TinySequence&#8217; has reached its minimum or maximu
 
 One more example, if you create a sequence like this without specifying a start value, it will start at -2147483648 for an integer
 
-<pre>CREATE SEQUENCE TestSequence
+sql
+CREATE SEQUENCE TestSequence
 NO MAXVALUE;
 
-select NEXT VALUE FOR TestSequence</pre>
+select NEXT VALUE FOR TestSequence
+```
 
 output
   

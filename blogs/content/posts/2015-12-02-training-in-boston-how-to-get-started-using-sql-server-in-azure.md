@@ -3,6 +3,7 @@ title: 'Training in Boston: How to Get Started Using SQL Server in Azure'
 author: Jes Borland
 type: post
 date: 2015-12-02T22:34:03+00:00
+ID: 4275
 url: /index.php/uncategorized/training-in-boston-how-to-get-started-using-sql-server-in-azure/
 views:
   - 3368

@@ -3,6 +3,7 @@ title: Making Data Tell a Story With SSRS Properties
 author: Jes Borland
 type: post
 date: 2013-01-30T12:14:00+00:00
+ID: 1950
 excerpt: SQL Server Reporting Services is one of my favorite parts of the Microsoft SQL Server stack. Making data tell a story is incredibly valuable, and fun.
 url: /index.php/datamgmt/ssrs/making-data-tell-a-story/
 views:

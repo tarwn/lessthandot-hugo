@@ -3,6 +3,7 @@ title: Delete all data in database (when you have FKs)
 author: niikola
 type: post
 date: 2010-05-21T10:27:37+00:00
+ID: 796
 url: /index.php/datamgmt/dbprogramming/mssqlserver/delete-all-data-in-database-when-you-hav/
 views:
   - 54144
@@ -30,7 +31,8 @@ c) Create all FKs
 
 **Script 1. TRUNCATE with drop/create FKs**
 
-<pre>SET NOCOUNT ON
+```sql
+SET NOCOUNT ON
 GO
 
 Select 'USE [' + db_name() +']';
@@ -74,11 +76,12 @@ Select 'ALTER TABLE ' +
   From sys.foreign_keys f
  Inner Join sys.tables t on f.parent_object_id=t.object_id
  Inner Join sys.schemas s on t.schema_id=s.schema_id
- Where t.is_ms_shipped=0;</pre>
-
+ Where t.is_ms_shipped=0;
+```
 **Script 2. DELETE in proper order**
 
-<pre>SET NOCOUNT ON
+```sql
+SET NOCOUNT ON
 GO
 
 Select 'USE [' + db_name() +']';
@@ -100,6 +103,7 @@ Select 'USE [' + db_name() +']';
 Select 'Delete from ['+ object_schema_name(tblID) + '].[' + object_name(tblId) + ']' 
   from a
  Group by tblId 
-Order by Max(lvl),1</pre>
+Order by Max(lvl),1
+```
 
 Note. Don&#8217;t forget to modify max column display size parameter in SSMS and preferably execute it in &#8220;result in text&#8221; mode (Ctrl-T)

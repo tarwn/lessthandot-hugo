@@ -3,6 +3,7 @@ title: What makes a successful SQL Server Pro?
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-10-23T16:02:00+00:00
+ID: 2185
 excerpt: |
   What really makes someone working in and around SQL Server truly successful?  Adaptability to the requirements we are given, while putting aside what we feel is the only right way to complete a task.
   Adaptability

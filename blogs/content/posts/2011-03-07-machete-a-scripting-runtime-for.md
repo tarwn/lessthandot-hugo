@@ -3,6 +3,7 @@ title: Machete – A scripting runtime for .NET
 author: chaospandion
 type: post
 date: 2011-03-07T20:21:00+00:00
+ID: 1069
 excerpt: |
   In an attempt to overcome by perfectionism I've decided to open source my long term side project Machete for the world to see. Machete is my own dialect of the ECMAScript 5 standard or as it is more commonly called JavaScript. 
   
@@ -33,7 +34,8 @@ In an attempt to overcome my perfectionism I&#8217;ve decided to open source my 
 Cleaner lambda expressions:
 
 <pre style="background-color:#EEEEEE;padding:5px;"><code>var succinct = (x, y) x + y;
-var verbose = function (x, y) { return x + y; };</code></pre>
+var verbose = function (x, y) { return x + y; };
+</code></pre>
 
 First class iteration support with the foreach loop and generators.
 
@@ -53,7 +55,8 @@ foreach (var e in ["Array", " objects", " are", " iterable", "!"]) {
 
 foreach (var c in "Strings are iterable!") {
     Output.write(c);
-}</code></pre>
+}
+</code></pre>
 
 <h1 style="margin-bottom:10px;margin-top:15px">
   Implementation

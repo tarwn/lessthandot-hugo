@@ -3,8 +3,9 @@ title: Multidocument updates with MongoDB
 author: SQLDenis
 type: post
 date: 2013-01-20T15:16:00+00:00
+ID: 1926
 excerpt: |
-  This is my fifth MongoDB posts, you can find all the MongoDB posts here [/tags/mongodb](/tags/mongodb):
+  This is my fifth MongoDB posts, you can find all the MongoDB posts here http://blogs.lessthandot.com/index.php/All/mongodb:
   
   Today we are going to look at update statements. We looked at it a little already in the Doing UPSERTs in MongoDB post, in thi&hellip;
 url: /index.php/datamgmt/dbprogramming/multidocument-updates-with-mongodb/
@@ -22,7 +23,7 @@ tags:
   - update
 
 ---
-This is my fifth MongoDB post, you can find all the MongoDB posts here [/tags/mongodb](/tags/mongodb):
+This is my fifth MongoDB post, you can find all the MongoDB posts here /index.php/All/mongodb:
 
 Today we are going to look at update statements. We looked at it a little already in the [Doing UPSERTs in MongoDB][1] post, in this post I want to show you how updates are different from regular SQL.
 
@@ -33,7 +34,8 @@ db.Indexing.insert( { name : "Denis", age : 20 } )
 db.Indexing.insert( { name : "Denis", age : 30 } )
 db.Indexing.insert( { name : "Abe", age : 10 } )
 db.Indexing.insert( { name : "Abe", age : 20 } )
-db.Indexing.insert( { name : "Abe", age : 30 } )</pre>
+db.Indexing.insert( { name : "Abe", age : 30 } )
+</pre>
 
 Now let&#8217;s say I want to update the age for all documents that have the name Denis to 40. You would think it would be this
 

@@ -3,6 +3,7 @@ title: SQL Server Days 2014 – Slide deck
 author: Koen Verbeeck
 type: post
 date: 2014-10-06T07:45:53+00:00
+ID: 3004
 url: /index.php/datamgmt/ssis/sql-server-days-2014-slide-deck/
 views:
   - 3672

@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 15 – SQL Server Agent – Job ownership
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-16T09:14:00+00:00
+ID: 1176
 excerpt: |
   Complexity of Job Ownership
   When a SQL Server Agent Job is created, the creator of the job is, by default, the owner of the job.  This can be important depending on the steps that the job is performing.  When a SQL Server Agent job runs, the agent uses&hellip;
@@ -27,7 +28,10 @@ On the other side of how ownership is impersonated; permission issues with jobs 
 
 To fix this there are two options.  Grant Fred SELECT on SQLAgent2\_Tbl or change the ownership of the job to an account that already has the needed SELECT permissions.  In this example, change job ownership to the SQL Server Agent account which has SELECT permissions to both tables in both databases by using sp\_update_job procedure in the MSDB databases.
 
-<pre>Exec sp_update_job @job_name = 'AgentOwnerExample', @owner_login_name = 'DOMAINAgentAccount'</pre>
+sql
+Exec sp_update_job @job_name = 'AgentOwnerExample', @owner_login_name = 'DOMAINAgentAccount'
+```
+
 
  
 

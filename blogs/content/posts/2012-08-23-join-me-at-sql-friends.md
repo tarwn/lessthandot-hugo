@@ -3,6 +3,7 @@ title: 'Join me at SQL Friends Lunch #4 Chicago!'
 author: Jes Borland
 type: post
 date: 2012-08-23T17:45:00+00:00
+ID: 1700
 excerpt: 'The best part about the SQL Server community is the people in it. Over the past few years, I’ve met many great DBAs, developers, architects, evangelists, consultants, and more. Many times over, the people have become more than colleagues – they have bec&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/join-me-at-sql-friends/
 views:

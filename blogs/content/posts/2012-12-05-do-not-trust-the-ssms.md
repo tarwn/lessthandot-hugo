@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 5: Do not trust the SSMS designers'
 author: SQLDenis
 type: post
 date: 2012-12-05T12:54:00+00:00
+ID: 1830
 excerpt: |
   Today we are going to look at why you need to be able to write your own DDL statements.
   
@@ -43,11 +44,15 @@ Technically, yes, that will create a primary key on the table but what will happ
 
 First create this very simple table
 
-<pre>CREATE TABLE TestInt(Col1 tinyint not null)</pre>
+sql
+CREATE TABLE TestInt(Col1 tinyint not null)
+```
 
 Now they users changed their mind and want to insert values that go beyond what a tinyint can hold. If you try to insert 300, you will get an error
 
-<pre>INSERT TestInt VALUES(300)</pre>
+sql
+INSERT TestInt VALUES(300)
+```
 
 Msg 220, Level 16, State 2, Line 2
   
@@ -57,11 +62,14 @@ The statement has been terminated.
 
 No, problem, I will just change the data type
 
-<pre>ALTER TABLE TestInt ALTER COLUMN Col1 int NOT NULL</pre>
+sql
+ALTER TABLE TestInt ALTER COLUMN Col1 int NOT NULL
+```
 
 But what if you use the SSMS designer by right clicking on the table, choosing design and then changing the data type from tinyint to int? Here is what SSMS will do behind the scenes for you
 
-<pre>/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+sql
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
 BEGIN TRANSACTION
 SET QUOTED_IDENTIFIER ON
 SET ARITHABORT ON
@@ -88,26 +96,31 @@ DROP TABLE dbo.TestInt
 GO
 EXECUTE sp_rename N'dbo.Tmp_TestInt', N'TestInt', 'OBJECT' 
 GO
-COMMIT</pre>
+COMMIT
 
+```
 That is right, it will create a new table, dump all the rows into this table, drop the original table and then rename the table that was just created to match the orginal table. This is overkill.
 
 What about adding some defaults to the table, if you use the SSMS table designer, it will just create those and you have no way to specify a name for the default.
 
 Here is how to create a default with T-SQL, now you can specify a name and make sure it matches your shop&#8217;s naming convention
 
-<pre>ALTER TABLE dbo.TestInt ADD CONSTRAINT
-	DF_TestInt_Col1 DEFAULT 1 FOR Col1</pre>
+sql
+ALTER TABLE dbo.TestInt ADD CONSTRAINT
+	DF_TestInt_Col1 DEFAULT 1 FOR Col1
+```
 
 About that yellow key icon, let&#8217;s add a primary key to our table, I can do the following with T-SQL, I can also make it non clustered if I want to
 
-<pre>ALTER TABLE dbo.TestInt ADD CONSTRAINT
+sql
+ALTER TABLE dbo.TestInt ADD CONSTRAINT
 	PK_TestInt PRIMARY KEY CLUSTERED 
-	(Col1)  ON [PRIMARY]</pre>
-
+	(Col1)  ON [PRIMARY]
+```
 Click that yellow key icon and here is what happens behind the scenes, I have not found a way to make it non clustered from the designer
 
-<pre>/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+sql
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
 BEGIN TRANSACTION
 SET QUOTED_IDENTIFIER ON
 SET ARITHABORT ON
@@ -147,8 +160,8 @@ ALTER TABLE dbo.TestInt ADD CONSTRAINT
 	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 
 GO
-COMMIT</pre>
-
+COMMIT
+```
 You might ask yourself why you should care, all the tables are small, this is not a big issue. This might be true now, what if you start a new job and now you have to supply alter, delete and create scripts? Now you are in trouble. I used to do the same when I started, I used the designers for everything, I didn&#8217;t even know Query Analyzer existed when I started, I created and modified the stored procedures straight inside Enterprise Manager. Trying to modify a view that had a CASE statement in Enterprise Manager from the designer&#8230;.yeah good luck with that one&#8230;.you would get some error that it wasn&#8217;t supported, I believe it also injected TOP 100 PERCENT ORDER BY in the view as well
 
 I don&#8217;t miss those days at all. Get to learn T-SQL and get to love it, you might suffer when you start but you will become a better database developer.

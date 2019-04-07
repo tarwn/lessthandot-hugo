@@ -3,6 +3,7 @@ title: “Connect” an Excel 2010 Slicer to an unrelated object.
 author: joshuafennessy
 type: post
 date: 2012-07-24T01:15:00+00:00
+ID: 1679
 excerpt: 'Slicers are super cool!  By extending the power of filtering to apply to multiple PivotTables (or PivotCharts) they have really increas ed the reporting and data delivery power of Excel 2010.  Not only do they look cool and are fun to interact with, the&hellip;'
 url: /index.php/datamgmt/datadesign/connect-a-slicer-to-an/
 views:
@@ -91,7 +92,7 @@ categories:
 
 <pre>' cubes/perspectives in the same SSAS database.</pre>
 
-<pre><br /&gt;' We want this code to fire with an object connected to our slicer</pre>
+<pre><br />' We want this code to fire with an object connected to our slicer</pre>
 
 <pre>' is updated.  This means that the slicer was likely interacted with.</pre>
 
@@ -211,7 +212,7 @@ categories:
 
 <pre>        'objField.CurrentPageList = strValues()</pre>
 
-<pre><br /&gt;    End If</pre>
+<pre><br />    End If</pre>
 
 <pre>    </pre>
 

@@ -3,6 +3,7 @@ title: 'Presentation Files: EDMPASS and ABQ SQL'
 author: Jes Borland
 type: post
 date: 2011-12-09T19:53:00+00:00
+ID: 1428
 excerpt: Presentation files for EDMPASS on 12/8 and ABQSQL on 12/9
 url: /index.php/datamgmt/dbprogramming/presentation-files-edmpass-and-abq/
 views:

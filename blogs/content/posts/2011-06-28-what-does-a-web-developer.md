@@ -3,6 +3,7 @@ title: What Does a Web Developer Need To Know
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-06-28T09:54:00+00:00
+ID: 1230
 excerpt: "What is a web developer? Recently I was involved in a discussion about the skills a web developer is expected to have and how interesting it has been to watch common bad practices (like table layout and SQL injection) continue to spread. So in the nature of Denis's What does a SQL Server developer need to know? post, I present the web developer breakdown."
 url: /index.php/webdev/uidevelopment/what-does-a-web-developer/
 views:

@@ -3,6 +3,7 @@ title: Increase your knowledge by participating in T-SQL quiz! And have a chance
 author: Naomi Nosonovsky
 type: post
 date: 2011-03-13T00:41:00+00:00
+ID: 1077
 excerpt: |
   My friend Jacob Sebastian runs a very interesting T-SQL quiz this month and everyone is encouraged to take part in it and have a chance to win a prize.
   

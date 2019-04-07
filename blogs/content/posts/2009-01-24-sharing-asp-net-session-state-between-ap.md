@@ -3,6 +3,7 @@ title: Sharing ASP.net Session State Between Applications with SQL Server – Pa
 author: Alex Ullrich
 type: post
 date: 2009-01-24T19:45:00+00:00
+ID: 289
 excerpt: |
   In Part I we set up our awesome website, and a nice SQL Server database to manage our sessions.  But we're not done yet, now we want to share that session state between our site and another web application, in this case a service.
   
@@ -20,11 +21,13 @@ In [Part I][1] we set up our awesome website, and a nice SQL Server database to 
 
 So, now that our site is good to go, we can set up the webservice call. First, we need to set up the service. For this example we&#8217;ll just return a simple string, from the session of course.
 
-<pre>[WebMethod(EnableSession = true)]
+```csharp
+[WebMethod(EnableSession = true)]
 public String RetrieveValue()
 {
     return Session["sessionEntry"].ToString();
-}</pre>
+}
+```
 
 I know, its&#8217; breathtaking 😉
 
@@ -32,7 +35,9 @@ Its&#8217; important to note the &#8220;EnableSession&#8221; attribute here, thi
 
 Another thing you will need to do is set your webservice to allow POSTs, like so:
 
-<pre><add verb="GET,HEAD, POST" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/></pre>
+```xml
+<add verb="GET,HEAD, POST" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/>
+```
 
 (this is found in the &#8220;httpHandlers&#8221; section of the web.config)
 
@@ -42,7 +47,8 @@ To call the webservice we&#8217;ll use a bit of jquery goodness. Its&#8217; easy
 
 Here&#8217;s the javascript to replace the stub we set up in part I:
 
-<pre><script type="text/javascript">
+```javascript
+<script type="text/javascript">
     function retrieve() {
         $.ajax({
             type: 'POST',
@@ -56,7 +62,8 @@ Here&#8217;s the javascript to replace the stub we set up in part I:
             }
         });
     }
-</script></pre>
+</script>
+```
 
 You will need to replace the URL with whatever the VS debugger has assigned to your service (or the URL of an actual service even!).
 
@@ -64,11 +71,14 @@ Now, when you try to run this (make sure that you start the webservice project f
 
 In our connection string, we just need to add the Application Name property. So our web.config entry becomes: 
 
-<pre><sessionState mode="SQLServer" sqlConnectionString="Data Source=127.0.0.1; Integrated Security=SSPI; Application Name=TEST" cookieless="false" timeout="20"/></pre>
+```xml
+<sessionState mode="SQLServer" sqlConnectionString="Data Source=127.0.0.1; Integrated Security=SSPI; Application Name=TEST" cookieless="false" timeout="20"/>
+```
 
 So how can we use this then? Lets check out the stored procedure change (found at [sneal.net][2]). There&#8217;s a proc called &#8220;TempGetAppID&#8221; in the ASP state database. I don&#8217;t know all the inner workings of this database, but its used within the database to identify the application connecting to it. So we can alter the proc to include the kind Mr. (or Mrs.) Sneal&#8217;s change:
 
-<pre>-- start change
+sql
+-- start change
 
     -- Use the application name specified in the connection for the appname if specified
     -- This allows us to share session between sites just by making sure they have the
@@ -80,7 +90,8 @@ So how can we use this then? Lets check out the stored procedure change (found a
     IF (@connStrAppName <> '.NET SQLClient Data Provider')
         SET @appName = @connStrAppName
 
-    -- end change</pre>
+    -- end change
+```
 
 So now, the database managing session state should treat both your website and your webservice as parts of the same application, and you will be able to retrieve the value you stashed in the session through javascript. Its&#8217; clearly not a very good examplle, but I am sure you can think of better ways to use this new power 🙂
 
@@ -91,4 +102,4 @@ Got a question on ASP.net? Check out our [ASP.net Forum][4]!
  [1]: /index.php/WebDev/ServerProgramming/ASPNET/sharing-asp-net-session-state-between-we
  [2]: http://www.sneal.net/blog/2007/06/27/SharingSessionBetweenWebAppsViaConfiguration.aspx
  [3]: /wp-content/uploads/blogs/WebDev//SessionTest.zip ""
- [4]: http://forum.lessthandot.com/viewforum.php?f=27
+ [4]: http://forum.ltd.local/viewforum.php?f=27

@@ -3,6 +3,7 @@ title: Enable TDE when Replication is in use
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-10-10T01:18:00+00:00
+ID: 2176
 excerpt: |
   Are there any specific problems that need to be taken into consideration when enabling Transparent Data Encryption (TDE) on a database that is published with a type of replication?
   The answer to the question above is no, other than ensuring certificate&hellip;
@@ -61,7 +62,8 @@ To show these steps, we will take the replication setup from earlier.  As state
 
 Connect to the publisher instance and create a master key and certificate.  Make a backup of the certificate immediately after the certificate creation.
 
-<pre>CREATE MASTER KEY ENCRYPTION
+sql
+CREATE MASTER KEY ENCRYPTION
 BY PASSWORD = 'Password$1'
 GO
 CREATE CERTIFICATE TDECert
@@ -74,8 +76,8 @@ WITH PRIVATE KEY
     FILE = 'TDECertFile',
     ENCRYPTION BY PASSWORD = 'Password$1'
 );
-GO</pre>
-
+GO
+```
 The above will place two files in the DATA directory for the SQL Server instance.  In the case of the setup in this article, that location is
 
 C:Program FilesMicrosoft SQL ServerMSSQL11.SHAREPOINT2013MSSQLDATA
@@ -86,19 +88,22 @@ Copy the two files from the publisher server to the subscriber server.  Place t
 
 Once the backup files are copied, turn on database encryption for the DBA database.  This is performed by using the CREATE DATABASE ENCRYPTION KEY and ALTER DATABASE commands.
 
-<pre>CREATE DATABASE ENCRYPTION KEY
+sql
+CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = AES_128
 ENCRYPTION BY SERVER CERTIFICATE TDECert;
 GO
 ALTER DATABASE DBA
 SET ENCRYPTION ON;
-GO</pre>
+GO
+```
 
 At this point, the DBA database on the publisher has TDE enabled and is being encrypted on the file level.  Before starting replication, we need to ensure the subscriber is performing the same tasks, with the same certificate.
 
 Connect to the subscriber and create a master key and a certificate.  Create the certificate based on the file copied earlier from the publisher’s certificate.
 
-<pre>CREATE MASTER KEY ENCRYPTION
+sql
+CREATE MASTER KEY ENCRYPTION
 BY PASSWORD = 'Password$1'
 GO
 CREATE CERTIFICATE TDECert 
@@ -108,17 +113,20 @@ WITH PRIVATE KEY
     FILE = 'TDECertFile',
     DECRYPTION BY PASSWORD = 'Password$1'
 );
-GO</pre>
+GO
+```
 
 Next, create a database encryption key and enable the database for encryption.
 
-<pre>CREATE DATABASE ENCRYPTION KEY
+sql
+CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = AES_128
 ENCRYPTION BY SERVER CERTIFICATE TDECert;
 GO
 ALTER DATABASE DBA
 SET ENCRYPTION ON;
-GO</pre>
+GO
+```
 
 At this point, replication can be started again.  Perform a basic test to ensure data is moving through replication as expected.  In the ShippingDelays table, there is a composite key made of the four columns in the table – SalesOrderID, OrderDate, DueDate, and ShipDate.
 
@@ -126,13 +134,15 @@ At this point, replication can be started again.  Perform a basic test to ensur
 
 Given the table structure, the below statement can be used to put a small load on the table and replication.
 
-<pre>DECLARE @ID INT = 1013
+sql
+DECLARE @ID INT = 1013
 WHILE @ID <= 10000
  BEGIN
   INSERT INTO ShippingDelays
   SELECT @ID, GETDATE(), GETDATE(), GETDATE()
   SET @ID += 1
- END</pre>
+ END
+```
 
 Monitor the distribution of the commands and transactions with replication monitor
 

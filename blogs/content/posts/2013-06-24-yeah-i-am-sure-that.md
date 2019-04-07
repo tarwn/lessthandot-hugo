@@ -3,6 +3,7 @@ title: Yeah, I am sure that is the reason we have Oracle on Azure and Hyper-V no
 author: SQLDenis
 type: post
 date: 2013-06-24T23:01:00+00:00
+ID: 2118
 excerpt: 'Microsoft Corp. and Oracle Corp. today announced a partnership that will enable customers to run Oracle software on Windows Server Hyper-V and in Windows Azure. Customers will be able to deploy Oracle software — including Java, Oracle Database and Oracl&hellip;'
 url: /index.php/datamgmt/dbprogramming/yeah-i-am-sure-that/
 views:

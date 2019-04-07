@@ -3,6 +3,7 @@ title: Are you a real programmer, do you know all these artifacts you should kno
 author: SQLDenis
 type: post
 date: 2012-09-20T13:52:00+00:00
+ID: 1732
 excerpt: |
   So I am going through the book The Clean Coder: A Code of Conduct for Professional Programmers by Robert C. Martin (AKA Uncle Bob)
   

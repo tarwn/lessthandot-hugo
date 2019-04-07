@@ -3,6 +3,7 @@ title: Firefox heading for 15% market share?
 author: SQLDenis
 type: post
 date: 2012-02-11T14:57:00+00:00
+ID: 1520
 excerpt: |
   I decided to take a look at my Has FireFox lost its Mojo, are FireFox user jumping ship to Chrome? post to compare the browser stats. In that post I wrote the following 
   

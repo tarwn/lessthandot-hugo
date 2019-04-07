@@ -3,6 +3,7 @@ title: Calculating Mean, Median and Mode with SQL Server
 author: George Mastros (gmmastros)
 type: post
 date: 2008-12-22T14:57:57+00:00
+ID: 258
 excerpt: |
   Calculating Median and Mode with SQL Server can be frustrating for some developers, but it doesn't have to be.  Often times, inexperienced developers will attempt to write this with procedural programming practices, but set based methods do exist.
   
@@ -35,7 +36,8 @@ Mean is another name for average. SQL Server has a built-in function to calculat
 6
 7
 9
-10</pre>
+10
+</pre>
 
 To calculate the average, sum the data and divide by the number of rows. In this case, 1 + 2 + 5 + 5 + 5 + 6 + 6 + 6 + 7 + 9 + 10 = 62. 62/11 = 5.636363
 
@@ -52,7 +54,8 @@ Median represents the &#8216;middle&#8217; value. To calculate the median by han
 6
 7
 9
-10</pre>
+10
+</pre>
 
 Since there is an odd number of rows, the row appearing in the middle of the list contains your median value.
 
@@ -66,7 +69,8 @@ Since there is an odd number of rows, the row appearing in the middle of the lis
 6
 6
 7
-9</pre>
+9
+</pre>
 
 Now, there is an even number of rows. The median for this data set is (5 + 6)/2 = 5.5. Simply take the average of the 2 values appearing in the middle of the data set.
 
@@ -82,7 +86,8 @@ The mode for a data set is the item(s) that appear most frequently. To calculate
 6	3</span>
 7	1
 9	1
-10	1</pre>
+10	1
+</pre>
 
 This data set is considered to be Bi-Modal because there are 2 values with the same frequency. With this data set, the modes are 5 and 6.
 
@@ -92,7 +97,8 @@ For demonstration purposes, I will create a table variable and populate it with 
   
 As I stated earlier, SQL Server has a built-in function for calculating the average. The Avg function will ignore rows with NULL. So the average of 1, 2, NULL is 1.5 because the sum of the data is 3 and there are 2 rows that are not NULL. 3/2 = 1.5.
 
-<pre>Declare @Temp Table(Id Int Identity(1,1), Data Decimal(10,5))
+sql
+Declare @Temp Table(Id Int Identity(1,1), Data Decimal(10,5))
 
 Insert into @Temp Values(1)
 Insert into @Temp Values(2)
@@ -110,7 +116,8 @@ Insert into @Temp Values(NULL)
 Select Avg(Data)
 From   @Temp
 
--- 5.636363</pre>
+-- 5.636363
+```
 
 **MEDIAN**
   
@@ -140,7 +147,8 @@ To get the first value in the last 50 percent of rows…
 
 Putting it all together:
 
-<pre>Declare @Temp Table(Id Int Identity(1,1), Data Decimal(10,5))
+sql
+Declare @Temp Table(Id Int Identity(1,1), Data Decimal(10,5))
 
 Insert into @Temp Values(1)
 Insert into @Temp Values(2)
@@ -173,13 +181,14 @@ Select ((
 				Order By Data DESC
 				) As A
 		Order By Data Asc)) / 2
--- 6</pre>
-
+-- 6
+```
 **MODE**
   
 To Calculate the mode with sql server, we first need to get the counts for each value in the set. Then, we need to filter the data so that values equal to the count are returned.
 
-<pre>Declare @Temp Table(Id Int Identity(1,1), Data Decimal(10,5))
+sql
+Declare @Temp Table(Id Int Identity(1,1), Data Decimal(10,5))
 
 Insert into @Temp Values(1)
 Insert into @Temp Values(2)
@@ -198,6 +207,7 @@ SELECT TOP 1 with ties DATA
 FROM   @Temp
 WHERE  DATA IS Not NULL
 GROUP  BY DATA
-ORDER  BY COUNT(*) DESC</pre>
+ORDER  BY COUNT(*) DESC
 
+```
 As you can see, there are set based methods for calculating all of these values, which can be many times faster than calculating these values in a cursor.

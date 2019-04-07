@@ -3,6 +3,7 @@ title: The differences between LEN and DATALENGTH in SQL Server
 author: SQLDenis
 type: post
 date: 2009-07-20T13:01:36+00:00
+ID: 516
 url: /index.php/datamgmt/dbprogramming/the-differences-between-len-and-dataleng/
 views:
   - 35181
@@ -36,17 +37,20 @@ So what does that mean? It means that the LEN function will first right trim the
 
 Take a look at this example
 
-<pre>declare @v nchar(5)
+sql
+declare @v nchar(5)
 select @v ='ABC  '
 
 
-select len(@v),datalength(@v)</pre>
+select len(@v),datalength(@v)
+```
 
 The output for len is 3 while the output for datalength =10. The reason that datalength returns the value 10 is because nvarchar uses 2 bytes to store 1 character by using unicode while varchar is using ascii which requires 1 byte per charaters
 
 Let&#8217;s take a look at some more data, first create this table
 
-<pre>create table #TeslLen (	CharCol char(5), 
+sql
+create table #TeslLen (	CharCol char(5), 
 			VarCharCol varchar(5),
 			NCharCol nchar(5), 
 			NVarCharCol nvarchar(5))
@@ -57,15 +61,18 @@ insert #TeslLen values('AB','AB','AB','AB')
 insert #TeslLen values('ABC','ABC','ABC','ABC')
 insert #TeslLen values('ABCD','ABCD','ABCD','ABCD')
 insert #TeslLen values('ABCDE','ABCDE','ABCDE','ABCDE')
-insert #TeslLen values(' ',' ',' ',' ')</pre>
+insert #TeslLen values(' ',' ',' ',' ')
+```
 
 Now run the following query
 
-<pre>select CharCol as Value,len(CharCol) as LenChar,DATALENGTH(CharCol) as DLenChar,
+sql
+select CharCol as Value,len(CharCol) as LenChar,DATALENGTH(CharCol) as DLenChar,
 	len(VarCharCol) as LenVarChar,DATALENGTH(VarCharCol)as DLenVarChar,
 	len(NCharCol) as LenNChar,DATALENGTH(NCharCol) as DLenNChar,
 	len(NVarCharCol) as LenNVarChar,DATALENGTH(NVarCharCol) as DLenNVarChar
-from #TeslLen</pre>
+from #TeslLen
+```
 
 Here is the output for all the columns with LEN and DATALENGTH
 
@@ -336,5 +343,5 @@ Here is the output for all the columns with LEN and DATALENGTH
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

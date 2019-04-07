@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 4 – Installing SQL 
 author: Koen Verbeeck
 type: post
 date: 2013-06-04T10:46:00+00:00
+ID: 2091
 excerpt: 'In this blog post we’ll go over the installation of the SQL Server instance. This database engine will serve multiple purposes: it will host the SharePoint databases, the Reporting Services databases, the SSIS catalog and of course databases containing&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sharepoint-2013-bi-part-4/
 views:

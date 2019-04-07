@@ -3,6 +3,7 @@ title: The Productive DBA
 author: ptheriault
 type: post
 date: 2010-11-22T13:28:57+00:00
+ID: 956
 excerpt: 'Over the past 12 years I’ve received a lot of great suggestions from some very good DBAs on how to best be productive and organized.  One of the best pieces of advice I ever read was out of SQL Server magazine a few years back on how to be organized.  T&hellip;'
 url: /index.php/datamgmt/datadesign/the-productive-dba/
 views:

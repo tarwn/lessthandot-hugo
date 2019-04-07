@@ -3,6 +3,7 @@ title: Star Schema The Complete Reference – Review
 author: Koen Verbeeck
 type: post
 date: 2014-01-23T15:02:48+00:00
+ID: 2315
 url: /index.php/datamgmt/datadesign/star-schema-the-complete-reference-review/
 views:
   - 17858

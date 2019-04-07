@@ -3,6 +3,7 @@ title: What is deferred name resolution and why do you need to care?
 author: SQLDenis
 type: post
 date: 2008-09-08T12:23:59+00:00
+ID: 132
 url: /index.php/datamgmt/datadesign/what-is-deferred-name-resolution-and-why/
 views:
   - 15134
@@ -21,7 +22,8 @@ tags:
 ---
 So I posted [a teaser in the puzzles forum][1]. Without running this, try to guess what will happen?
 
-<pre>DECLARE @x INT
+sql
+DECLARE @x INT
  
 SET @x = 1
  
@@ -34,7 +36,8 @@ BEGIN
    SELECT 2 AS VALUE INTO #temptable
 END
  
-SELECT * FROM #temptable --what does this return</pre>
+SELECT * FROM #temptable --what does this return
+```
 
 This is the error you get
   
@@ -44,7 +47,8 @@ There is already an object named &#8216;#temptable&#8217; in the database.
 
 You can do something like this to get around the issue with the temp table
 
-<pre>DECLARE @x INT
+sql
+DECLARE @x INT
  
 SET @x = 1
  
@@ -60,7 +64,8 @@ BEGIN
     SELECT 2
 END
  
-SELECT * FROM #temptable --what does this return</pre>
+SELECT * FROM #temptable --what does this return
+```
 
 So what is thing called Deferred Name Resolution? Here is what is explained in Books On Line
 
@@ -74,7 +79,8 @@ So what is happening is that beginning with SQL server 7 deferred name resolutio
   
 Run this to see what I mean
 
-<pre>DECLARE @x INT
+sql
+DECLARE @x INT
  
 SET @x = 1
  
@@ -87,11 +93,13 @@ BEGIN
    SELECT 2 AS VALUE INTO temptable
 END
  
-SELECT * FROM temptable --what does this return</pre>
+SELECT * FROM temptable --what does this return
+```
 
 What about variables? Let&#8217;s try it out, run this
 
-<pre>DECLARE @x INT
+sql
+DECLARE @x INT
  
 SET @x = 1
  
@@ -106,7 +114,8 @@ BEGIN
    SELECT @i = 6
 END
  
-SELECT @i</pre>
+SELECT @i
+```
 
 And you get the follwing error
   
@@ -118,25 +127,31 @@ Now why do you need to care about deferred name resolution? Let&#8217;s take ano
 
 First create this proc
 
-<pre>CREATE PROC SomeTestProc
+sql
+CREATE PROC SomeTestProc
 AS
 SELECT dbo.somefuction(1)
-GO</pre>
+GO
+```
 
 now create this function
 
-<pre>CREATE FUNCTION somefuction(@id int)
+sql
+CREATE FUNCTION somefuction(@id int)
 RETURNS int
 AS
 BEGIN
 SELECT @id = 1
 RETURN @id
 END
-Go</pre>
+Go
+```
 
 now run this
 
-<pre>sp_depends 'somefuction'</pre>
+sql
+sp_depends 'somefuction'
+```
 
 result: Object does not reference any object, and no objects reference it.
 
@@ -144,10 +159,13 @@ Most people will not create a proc before they have created the function. So whe
 
 SQL Server 2005 makes it pretty easy to do it yourself
 
-<pre>SELECT specific_name,* 
+sql
+SELECT specific_name,* 
 FROM information_schema.routines 
 WHERE object_definition(object_id(specific_name)) LIKE '%somefuction%' 
-AND routine_type = 'procedure'</pre>
+AND routine_type = 'procedure'
+```
 
- [1]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2829
+
+ [1]: http://forum.ltd.local/viewtopic.php?f=102&t=2829
  [2]: http://sqlblog.com/blogs/denis_gobo/archive/2008/05/06/6653.aspx

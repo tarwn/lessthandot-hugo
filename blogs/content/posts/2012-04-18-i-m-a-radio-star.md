@@ -3,6 +3,7 @@ title: I’m a Radio Star! I’m Talking SSRS on RunAs Radio
 author: Jes Borland
 type: post
 date: 2012-04-18T11:31:00+00:00
+ID: 1598
 excerpt: I always wanted to be a radio star. The fame! The glory!
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/i-m-a-radio-star/
 views:

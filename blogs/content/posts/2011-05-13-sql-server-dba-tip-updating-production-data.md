@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 14 – SQL Server General – Updating Production Data
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-13T10:56:00+00:00
+ID: 1172
 excerpt: 'Updating large volumes of production data is a common task for a DBA.  This task falls into the level of responsibility that has been given to the DBA role in faith that the proper steps are taken to ensure the integrity of the data before and after the&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-updating-production-data/
 views:
@@ -45,7 +46,8 @@ No UPDATE, DELETE or INSERT should be performed without wrapping the statements 
 
 For example:
 
-<pre>BEGIN TRY
+sql
+BEGIN TRY
             BEGIN TRY 
 	UPDATE MONEY_TABLE SET SALARY = 200000                                                  
             END TRY
@@ -57,7 +59,9 @@ For example:
 END TRY
 BEGIN CATCH 
       RAISERROR ('Critical error during Update',16,1);
-END CATCH;</pre>
+END CATCH;
+
+```
 
 A basic try catch statement around this update would prevent the worst case of corrupting the data and compromising integrity of the data.  Now the example has no logic or reason to it.  In a situation where enumerating row-by-row data to perform updates, this is extremely effective error handling.  Mass updating based on updates from join statements can also be placed into a try catch.  The entire statement’s failure is then logged in a table or other means that fit the process. 
 

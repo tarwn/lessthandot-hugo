@@ -3,6 +3,7 @@ title: Visual Studio 2013 Preview, Visual Studio 2012 Update 3 and .NET Framewor
 author: SQLDenis
 type: post
 date: 2013-06-26T18:23:00+00:00
+ID: 2123
 excerpt: |
   Visual Studio 2013 Preview, Visual Studio 2012 Update 3 and .NET Framework 4.5.1 are available for download
   

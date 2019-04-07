@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #016 Grouping Market Data With T-SQL'
 author: SQLDenis
 type: post
 date: 2011-03-08T10:52:00+00:00
+ID: 1068
 excerpt: "This month's T-SQL Tuesday is hosted by Jes Borland and it is all about grouping and aggregate functions, here is my attempt. I wrote most of this post on my way to the MVP summit in Seattle. This post is all about the stock market, charting data for In&hellip;"
 url: /index.php/datamgmt/datadesign/t-sql-tuesday-016-grouping/
 views:
@@ -41,40 +42,52 @@ First we need a table of symbols (some people will call them tickers). This tabl
   
 Here is the table
 
-<pre>CREATE TABLE Symbols (
+sql
+CREATE TABLE Symbols (
        SymbolID INT NOT NULL PRIMARY KEY,
-       Symbol VARCHAR(20) NOT NULL)</pre>
+       Symbol VARCHAR(20) NOT NULL)
+```
 
 We will insert these 4 symbols
 
-<pre>INSERT Symbols VALUES(1,'ABC')
+sql
+INSERT Symbols VALUES(1,'ABC')
 INSERT Symbols VALUES(2,'DEF')
 INSERT Symbols VALUES(3,'MNO')
-INSERT Symbols VALUES(4,'XYZ')</pre>
+INSERT Symbols VALUES(4,'XYZ')
+```
 
 Next up is the creation of the table of numbers, this will facilitate the creation of the data later on.
 
-<pre>CREATE TABLE Numbers (number INT NOT NULL  PRIMARY KEY)
-GO</pre>
+sql
+CREATE TABLE Numbers (number INT NOT NULL  PRIMARY KEY)
+GO
+```
 
 This will populate the table with 90000 rows.
 
-<pre>INSERT Numbers
+sql
+INSERT Numbers
 SELECT TOP 90000 ROW_NUMBER() OVER(ORDER BY s1.id )
-FROM sysobjects s1,sysobjects s2,sysobjects s3</pre>
+FROM sysobjects s1,sysobjects s2,sysobjects s3
+```
 
 Next up is a table that will hold some time information
 
-<pre>CREATE TABLE TempTickTime ( TickTime DATETIME NOT NULL)
-GO</pre>
+sql
+CREATE TABLE TempTickTime ( TickTime DATETIME NOT NULL)
+GO
+```
 
 This will populate that table with 30 second intervals between 2011-02-28 09:30:30.000 and 2011-03-31 15:30:00.000 only when it is between 9:30 AM and 4 PM
 
-<pre>DECLARE @StartTime DATETIME = '20110228 09:30:00'
+sql
+DECLARE @StartTime DATETIME = '20110228 09:30:00'
 INSERT TempTickTime
 SELECT DATEADD(s,number * 30,@StartTime)
 FROM Numbers
-WHERE  CONVERT(TIME, DATEADD(s,number * 30,@StartTime)) BETWEEN '09:30:00.0000000' AND '16:00:00.0000000'</pre>
+WHERE  CONVERT(TIME, DATEADD(s,number * 30,@StartTime)) BETWEEN '09:30:00.0000000' AND '16:00:00.0000000'
+```
 
 Now when you deal with global markets, some instruments trade Monday through Friday, some of them trade Sunday till Thursday and there are other variations.
   
@@ -82,7 +95,8 @@ From the 4 tickers we have, two will trade Monday through Friday and two will tr
 
 Create this table and populate it as follows
 
-<pre>CREATE TABLE TickData (
+sql
+CREATE TABLE TickData (
        SymbolID INT NOT NULL,
        TickTime DATETIME NOT NULL,
        TickPrice DECIMAL (20,10) NOT NULL)
@@ -105,7 +119,8 @@ FROM TempTickTime t
 CROSS JOIN Symbols s
 WHERE DATEPART(dw,tickTime) BETWEEN 1 AND 5 --Sunday till Thursday
 AND s.SymbolID IN (3,4)
-ORDER BY tickTime</pre>
+ORDER BY tickTime
+```
 
 What the query does is insert the SymbolID, the ticktime and then a pseudo random value that represents the price. The query also is grouping by day of week by using the DATEPART function.
 
@@ -113,26 +128,31 @@ We are done with intraday data, next up is end of day
 
 First create this table
 
-<pre>CREATE TABLE EODData (
+sql
+CREATE TABLE EODData (
        SymbolID INT NOT NULL,
        SomeDate DATETIME NOT NULL,
        TickPrice DECIMAL (20,10) NOT NULL,
-       IsEndOfWeek tinyint NOT NULL)</pre>
+       IsEndOfWeek tinyint NOT NULL)
+```
 
 In the query below we are grabbing the max time per day for a SymbolID and the associated price for that time. We are in essence grouping by SymbolId and Date, since we are ordering by TickTime descending and we are only grabbing where the ROW value is 1, we will get the latest value for a day.
 
-<pre>;WITH CTE AS(SELECT *,
+sql
+;WITH CTE AS(SELECT *,
 ROW_NUMBER() OVER (PARTITION BY SymbolId,CONVERT(DATE,TickTime) ORDER BY TickTime DESC) AS ROW
 FROM TickData)
  
 INSERT EODData
 SELECT SymbolId,CONVERT(DATE,TickTime),TickPrice,0 FROM CTE
 WHERE ROW = 1
-ORDER BY SymbolID,CONVERT(DATE,TickTime)</pre>
+ORDER BY SymbolID,CONVERT(DATE,TickTime)
+```
 
 Here is another way of doing the insert by grouping by SymbolId and converting the TickTime to a date and grabbing the max TickTime for that, with this derived table we join back to the TickData table and do our inserts.
 
-<pre>--INSERT EODData
+sql
+--INSERT EODData
 SELECT t.SymbolId,CONVERT(DATE,TickTime),TickPrice,0
 FROM TickData t
 JOIN(
@@ -140,14 +160,17 @@ JOIN(
        FROM TickData
        GROUP BY SymbolId,CONVERT(DATE,TickTime)) x on
 t.SymbolId = x.SymbolId
-and t.TickTime =  x.MaxTime</pre>
+and t.TickTime =  x.MaxTime
+```
 
 Here is where we do some grouping, in order to grab the last possible value for a week, we need to group by SymbolID, year, month and the week number.
 
-<pre>SELECT SymbolId,MAX(SomeDate) as MaxDate
+sql
+SELECT SymbolId,MAX(SomeDate) as MaxDate
 FROM EODData
 GROUP BY SymbolId,YEAR(SomeDate), MONTH(SomeDate),DATEPART(wk,SomeDate)
-order by SymbolID, MaxDate</pre>
+order by SymbolID, MaxDate
+```
 
 That query produces the following output, as you can see it has the latest value for each week for each symbol.
   
@@ -389,17 +412,20 @@ That query produces the following output, as you can see it has the latest value
 
 Here is an example of how to join the grouping query to the table so that we can get all the details for the row, we will use this as the basis for our update later on
 
-<pre>SELECT e.* from EODData e
+sql
+SELECT e.* from EODData e
 join (
        SELECT SymbolId,MAX(SomeDate) as MaxDate
        FROM EODData
        GROUP BY SymbolId,YEAR(SomeDate), MONTH(SomeDate),DATEPART(wk,SomeDate)) x
 on e.SomeDAte = x.MaxDate
-and e.SymbolId =x.SymbolId</pre>
+and e.SymbolId =x.SymbolId
+```
 
 And here is how we update the IsEndOfWeek column with the value 1 for the rows that fall on the end of the week
 
-<pre>UPDATE  e
+sql
+UPDATE  e
 SET e.IsEndOfWeek = 1
 FROM EODData e
 JOIN (SELECT SymbolId,MAX(SomeDate) AS MaxDate
@@ -407,24 +433,29 @@ JOIN (SELECT SymbolId,MAX(SomeDate) AS MaxDate
        GROUP BY SymbolId,YEAR(SomeDate), MONTH(SomeDate),DATEPART(wk,SomeDate)
        ) x
 ON e.SomeDate = x.MaxDate
-AND e.SymbolId =x.SymbolId</pre>
+AND e.SymbolId =x.SymbolId
+```
 
 ### Charting end of day values
 
 If we chart 1,3 or 6 months we will use daily values
 
-<pre>SELECT *
+sql
+SELECT *
 FROM EODData
 WHERE SymbolId = 1
-ORDER BY SomeDate</pre>
+ORDER BY SomeDate
+```
 
 If we chart anything over 6 months we want to grab weekly values, the query for that is now really simple
 
-<pre>SELECT *
+sql
+SELECT *
 FROM EODData
 WHERE SymbolId = 1
 AND IsEndOfWeek = 1
-ORDER BY SomeDate</pre>
+ORDER BY SomeDate
+```
 
 ### Charting intraday data
 
@@ -432,7 +463,8 @@ If we want data for a 1 day chart then we are going to grab in 1 minute interval
 
 There is going to be a lot going on in the following code snippet so I will try to explain it in the comments
 
-<pre>DECLARE @StartDate DATETIME = '2011-03-01 09:30:00.000'
+sql
+DECLARE @StartDate DATETIME = '2011-03-01 09:30:00.000'
 DECLARE @TimeSpan INT = 5
 -- 1  will return 2011-03-31 00:00:00.000
 -- 5  will return 2011-03-25 00:00:00.000
@@ -445,7 +477,7 @@ SELECT  TOP (@TimeSpan) @StartDate = Today
 		(SELECT  DISTINCT TOP (@TimeSpan * 5) CONVERT(DATE,TickTime) AS Today
 		FROM dbo.TickData
 		WHERE SymbolID =  1
-		AND TickTime &gt; @StartDate 
+		AND TickTime > @StartDate 
 		ORDER BY CONVERT(DATE,TickTime) DESC) x
 	ORDER BY Today DESC
 	
@@ -459,14 +491,14 @@ SELECT
 		(SELECT SymbolID, MAX(TickTime) AS Ticktime,DATEPART(mi,ticktime) AS TickMinute
 		FROM dbo.TickData
 		WHERE SymbolID =  1
-		AND ticktime &gt;= @StartDate
+		AND ticktime >= @StartDate
 		GROUP BY SymbolID,DATEPART(hh,TickTime),DATEPART(mi,ticktime),DATEPART(dd,ticktime)) x
 	ON x.SymbolID = t1.SymbolID
 	AND x.Ticktime = t1.Ticktime
 	WHERE t1.SymbolID = 1
 	AND TickMinute %  @TimeSpan = 0  --0nly grab the minutes what the value of @TimeSpan holds
-	ORDER BY t1.TickTime</pre>
-
+	ORDER BY t1.TickTime
+```
 Take a look at this line AND TickMinute % @TimeSpan = 0
   
 So basically we are aggregating in 1 or 5 minutes (really whatever @TimeSpan is, if it is 3 then it will be in 3 minute chunks). We are using the % [(Modulo)][4] operator to accomplish this.
@@ -625,5 +657,5 @@ That is it for this post, there is a lot of code but hopefully you can get an id
  [2]: /index.php/DataMgmt/DBProgramming/come-one-come-all-to
  [3]: /index.php/DataMgmt/?disp=authdir&author=420
  [4]: http://msdn.microsoft.com/en-us/library/ms190279.aspx
- [5]: http://forum.lessthandot.com/viewforum.php?f=17
- [6]: http://forum.lessthandot.com/viewforum.php?f=22
+ [5]: http://forum.ltd.local/viewforum.php?f=17
+ [6]: http://forum.ltd.local/viewforum.php?f=22

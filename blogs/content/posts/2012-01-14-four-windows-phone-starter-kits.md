@@ -3,6 +3,7 @@ title: Four Windows Phone Starter Kits Available
 author: SQLDenis
 type: post
 date: 2012-01-14T12:33:00+00:00
+ID: 1493
 excerpt: |
   There are four  Windows Phone starter kits available for download
   These starter kits are great to get an app working and to understand how it woks, all you have to do is add your own artwork, make a couple of tweaks and you are ready to go.  Below is a&hellip;

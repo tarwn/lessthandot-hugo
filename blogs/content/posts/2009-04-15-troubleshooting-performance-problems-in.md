@@ -3,6 +3,7 @@ title: Troubleshooting Performance Problems in SQL Server 2008 White Paper Relea
 author: SQLDenis
 type: post
 date: 2009-04-15T12:20:56+00:00
+ID: 389
 url: /index.php/datamgmt/dbprogramming/troubleshooting-performance-problems-in/
 views:
   - 5277

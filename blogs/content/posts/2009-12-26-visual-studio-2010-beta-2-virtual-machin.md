@@ -3,6 +3,7 @@ title: Visual Studio 2010 Beta 2 Virtual Machines with Sample Data Available
 author: SQLDenis
 type: post
 date: 2009-12-26T13:12:21+00:00
+ID: 653
 url: /index.php/desktopdev/mstech/visual-studio-2010-beta-2-virtual-machin/
 views:
   - 5253

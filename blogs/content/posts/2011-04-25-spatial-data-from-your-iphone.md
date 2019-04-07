@@ -3,6 +3,7 @@ title: Spatial Data From Your iPhone
 author: Brian Davis
 type: post
 date: 2011-04-26T01:43:00+00:00
+ID: 1135
 excerpt: |
   Interested in finding out where your iPhone has been?
   How about importing that data into SQL Server and being able to analyze it and create maps from the spatial data?
@@ -85,25 +86,33 @@ Alright! Discovery and setup are done and since you&#8217;ve stuck with me this 
 **Show Me The Data!**  
 Now that you&#8217;ve got your linked server setup let&#8217;s look at how we get the data out of SQL Lite and into SQL Server. You can run the following query to get the location data out of the SQL Lite database.
 
-<pre>SELECT timestamp, latitude, longitude
-FROM OPENQUERY(iphone,'SELECT Timestamp, Latitude, Longitude FROM CellLocation')</pre>
+sql
+SELECT timestamp, latitude, longitude
+FROM OPENQUERY(iphone,'SELECT Timestamp, Latitude, Longitude FROM CellLocation')
+```
 
 There are other fields in the table that you might or might not be interested in but for this post I am only dealing with the TimeStamp, Latitude, and Longitude. I don&#8217;t know about you, but for me, I&#8217;d rather see a DateTime value instead of the TimeStamp value, so I&#8217;ll convert that and I&#8217;ll also convert the latitude and longitude to geography values. The TimeStamp is stored in MAC Universal Format, which is based off of 1/1/2001. To get the converted values we can run the following query.
 
-<pre>SELECT DATEADD(s, timestamp, '20010101') AS DateTm
+sql
+SELECT DATEADD(s, timestamp, '20010101') AS DateTm
 , geography::Point(latitude, longitude, 4326) AS Geo
-FROM OPENQUERY(iphone,'SELECT Timestamp, Latitude, Longitude FROM CellLocation')</pre>
+FROM OPENQUERY(iphone,'SELECT Timestamp, Latitude, Longitude FROM CellLocation')
+```
 
 Now that we can query the data and get it in a format we want, let&#8217;s load it into SQL Server. We can use the following script to load the data into a new table.
 
-<pre>SELECT DATEADD(s, timestamp, '20010101') AS iDateTime
+sql
+SELECT DATEADD(s, timestamp, '20010101') AS iDateTime
 , geography::Point(latitude, longitude, 4326) AS iGeo
 INTO dbo.iPhoneLoc
-FROM OPENQUERY(iphone,'SELECT Timestamp, Latitude, Longitude FROM CellLocation')</pre>
+FROM OPENQUERY(iphone,'SELECT Timestamp, Latitude, Longitude FROM CellLocation')
+```
 
 If you&#8217;re impatient and wnat to see the spatial results immediatly you can simply run the following query and click on the Spatial tab in the results window.
 
-<pre>SELECT TOP 5000 * FROM iPhoneLoc</pre>
+sql
+SELECT TOP 5000 * FROM iPhoneLoc
+```
 
 Below is a zoomed in section of the spatial results tab.
 

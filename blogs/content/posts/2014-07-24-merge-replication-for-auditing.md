@@ -3,6 +3,7 @@ title: Merge Replication for SQL Server Auditing
 author: Ted Krueger (onpnt)
 type: post
 date: 2014-07-24T19:53:03+00:00
+ID: 2865
 url: /index.php/uncategorized/merge-replication-for-auditing/
 views:
   - 12889
@@ -50,18 +51,21 @@ MSDN has a completed code area for the base structure to use for your own busine
   
 For the UPDATE handler
 
-<pre>public override ActionOnDataChange UpdateHandler(SourceIdentifier updateSource,
+```csharp
+public override ActionOnDataChange UpdateHandler(SourceIdentifier updateSource,
           DataSet updatedDataSet, ref DataSet customDataSet, ref int historyLogLevel,
           ref string LogMessage)
             {
                 updatedDataSet.AcceptChanges();
-            }</pre>
+            }
+```
 
 This event handler will basically do nothing but accept all changes that are being replicated down to the subscriber. In our case, we need a very simple change to bypass this and instead, insert data into a custom table that we create to match the schema of the articles table.
 
 Using a bulk loading method and the RejectData action, we can accomplish this
 
-<pre>public void BulkUpload(DataTable dt)
+```csharp
+public void BulkUpload(DataTable dt)
         {
             dt.TableName = "PersonAudit";
             string constr = "Server=ONPNT\\SQL2008R2;Database=AW_SalesOrder_Report;Trusted_Connection=True;";
@@ -82,18 +86,21 @@ Using a bulk loading method and the RejectData action, we can accomplish this
                     trans.Commit();
                 }
             }
-        }</pre>
+        }
+```
 
 Now the update handler would appear as
 
-<pre>public override ActionOnDataChange UpdateHandler(SourceIdentifier updateSource,
+```csharp
+public override ActionOnDataChange UpdateHandler(SourceIdentifier updateSource,
           DataSet updatedDataSet, ref DataSet customDataSet, ref int historyLogLevel,
           ref string LogMessage)
             {
                 updatedDataSet.AcceptChanges();
                     BulkUpload(updatedDataSet.Tables[0]);
                     return ActionOnDataChange.RejectData;
-            }</pre>
+            }
+```
 
 All we need to do now is compile (build) this project and utilize the .DLL file that is generated in the debug or release folders for our project. 
 
@@ -103,7 +110,8 @@ Copy the PersonAudit.dll to your COM directory within the SQL Server system dire
   
 Once the .DLL is copied, the resolver must be registered. This is done by using the sp_registercustomresolver procedure.
 
-<pre>Use Distribution
+sql
+Use Distribution
 GO
 sp_unregistercustomresolver @article_resolver='PersonAudit'
 GO
@@ -112,7 +120,8 @@ sp_registercustomresolver @article_resolver='PersonAudit',
 @dotnet_assembly_name = 'C:\Program Files\Microsoft SQL Server\100\COM\PersonAudit.dll',
 @dotnet_class_name = 'PersonBusinessLogicHandler.PersonAudit'
 GO
-sp_enumcustomresolvers</pre>
+sp_enumcustomresolvers
+```
 
 [<img src="/wp-content/uploads/2014/07/merge_5.png" alt="merge_5" width="624" height="157" class="alignnone size-full wp-image-2867" srcset="/wp-content/uploads/2014/07/merge_5.png 624w, /wp-content/uploads/2014/07/merge_5-300x75.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][5]
 
@@ -132,15 +141,19 @@ On the publisher and the AdventureWorks2012 database, we can run a test by updat
 
 First, check the value of Title for BusinessEntityID of 1
 
-<pre>SELECT * FROM Person.Person WHERE BusinessEntityID = 1</pre>
+sql
+SELECT * FROM Person.Person WHERE BusinessEntityID = 1
+```
 
 [<img src="/wp-content/uploads/2014/07/merge_7.png" alt="merge_7" width="624" height="66" class="alignnone size-full wp-image-2874" srcset="/wp-content/uploads/2014/07/merge_7.png 624w, /wp-content/uploads/2014/07/merge_7-300x31.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][7]
 
 Now execute a simple UPDATE statement (The Title initial value was Test2 for this publication initialization)
 
-<pre>UPDATE Person.Person
+sql
+UPDATE Person.Person
 SET Title = 'Test5'
-WHERE BusinessEntityID = 1</pre>
+WHERE BusinessEntityID = 1
+```
 
 On the subscriber server, we want to right click the subscriber in the Replication listing and open the View Synchronization Status. From here, we can force synchronization to occur. 
 

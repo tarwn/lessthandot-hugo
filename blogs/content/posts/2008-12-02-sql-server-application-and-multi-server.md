@@ -3,6 +3,7 @@ title: SQL Server Application and Multi-Server Management Private CTP
 author: SQLDenis
 type: post
 date: 2008-12-02T21:43:35+00:00
+ID: 231
 url: /index.php/datamgmt/datadesign/sql-server-application-and-multi-server/
 views:
   - 3540

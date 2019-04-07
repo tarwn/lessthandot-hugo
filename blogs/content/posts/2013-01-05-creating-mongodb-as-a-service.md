@@ -3,6 +3,7 @@ title: Creating MongoDB as a service on Windows 8
 author: SQLDenis
 type: post
 date: 2013-01-05T16:14:00+00:00
+ID: 1898
 excerpt: |
   In addition to Scala I decided to mess around with MongoDB as well. This post is about how to install MongoDB as a service on Windows 8. 
   

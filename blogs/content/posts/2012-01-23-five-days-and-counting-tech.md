@@ -3,6 +3,7 @@ title: 'Five Days and Counting: Tech On Tap v1.1'
 author: Jes Borland
 type: post
 date: 2012-01-23T14:54:00+00:00
+ID: 1504
 excerpt: Tech On Tap v1.1, Virtualization, is coming to Appleton, WI this Saturday, January 28!
 url: /index.php/itprofessionals/professionaldevelopment/five-days-and-counting-tech/
 views:

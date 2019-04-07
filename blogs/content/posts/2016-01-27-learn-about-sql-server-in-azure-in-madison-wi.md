@@ -3,6 +3,7 @@ title: Learn about SQL Server in Azure in Madison, WI
 author: Jes Borland
 type: post
 date: 2016-01-27T16:05:21+00:00
+ID: 4326
 url: /index.php/uncategorized/learn-about-sql-server-in-azure-in-madison-wi/
 views:
   - 5499

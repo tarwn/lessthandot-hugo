@@ -3,6 +3,7 @@ title: DBA SQLCLR Procedures
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-06-26T10:57:12+00:00
+ID: 483
 url: /index.php/datamgmt/dbprogramming/dba-sqlclr-procedures/
 views:
   - 5373
@@ -22,19 +23,21 @@ The first is DateTime formatting. Yesterday I posted on [SSRS internal procedure
 
 Here is that method again (this is also a UDF and not a Proc)
 
-<pre>public partial class UserDefinedFunctions
+```csharp
+public partial class UserDefinedFunctions
 {
     [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString DateTimeTimeZoneOffset(DateTime datetime_sent)
     {
         return new SqlString(datetime_sent.ToString("yyyy-MM-ddTHH:mm:ss.fffzzzz"));
     }
-};</pre>
-
+};
+```
 Call
 
-<pre>Select dbo.DateTimeTimeZoneOffset('2009-06-26')</pre>
-
+sql
+Select dbo.DateTimeTimeZoneOffset('2009-06-26')
+```
 Usage of this is seen directly in the blog post from yesterday and how it can be a simply task for formatting things like DateTime. Don&#8217;t let it stop there though. Formatting strings for file names, headers, logs and on can be done quickly and easily with C# (or VB.NET) and makes this a great tool to any DBA.
 
 Next goes into file operations.
@@ -43,7 +46,8 @@ The first is file movement. This can be done with external objects like batch, A
 
 Move file (which is also the rename file method)
 
-<pre>public partial class StoredProcedures
+```csharp
+public partial class StoredProcedures
 {
     [Microsoft.SqlServer.Server.SqlProcedure]
     public static void MoveFile(string sfilename, string dfilename)
@@ -57,15 +61,18 @@ Move file (which is also the rename file method)
             SqlContext.Pipe.Send("Error writing to file : " + ex.Message);
         }
     }
-};</pre>
-
+};
+```
 Call
 
-<pre>Exec MoveFile 'C:txt_doc.txt','C:txt_doc_new.txt'</pre>
+sql
+Exec MoveFile 'C:txt_doc.txt','C:txt_doc_new.txt'
+```
 
 Write file
 
-<pre>public class SQLCLRIO
+```csharp
+public class SQLCLRIO
 {
 
     public static void WriteToFile(String content, String filename)
@@ -79,17 +86,20 @@ Write file
             SqlContext.Pipe.Send("Error writing to file : " + ex.Message);
         }
     }
-}</pre>
-
+}
+```
 Call
 
-<pre>Exec WriteToFile 'Testing....','C:txt_doc_new.txt'</pre>
+sql
+Exec WriteToFile 'Testing....','C:txt_doc_new.txt'
+```
 
 Last one I&#8217;ll post today is removing old files (backups typically) which is similar to a task I used to do using vbs scripts. The vbs scripts are a good method. I still use it on a few instances I want security more restricted as well. I say that of course as the permission level of any file operations SQLCLR will be external or unsafe. Given that setting is permitted in the situation, the SQLCLR is handy and easier to throw logging and other methods into the process.
 
 Delete old backups in a series of subdirectories. 
 
-<pre>public partial class StoredProcedures
+```csharp
+public partial class StoredProcedures
 {
     [Microsoft.SqlServer.Server.SqlProcedure]
     public static void RemoveOldBackups(string path,int retention)
@@ -107,7 +117,7 @@ Delete old backups in a series of subdirectories.
                 foreach (FileInfo file in dir.GetFiles())
                 {
                     diff = DateTime.Now.Subtract(file.LastWriteTime);
-                    if (diff.Hours &gt; retention)
+                    if (diff.Hours > retention)
                     {
                         file.Delete();
                     }
@@ -119,11 +129,13 @@ Delete old backups in a series of subdirectories.
             SqlContext.Pipe.Send("Error deleting from diretory : " + ex.Message);
         }
     }
-};</pre>
-
+};
+```
 Call
 
-<pre>Exec RemoveOldBackups 'C:test',23</pre>
+sql
+Exec RemoveOldBackups 'C:test',23
+```
 
 Have fun and don&#8217;t forget the pressure SQLCLR can bring to you instances.
 
@@ -132,5 +144,5 @@ Have fun and don&#8217;t forget the pressure SQLCLR can bring to you instances.
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DataDesign/not-a-fan-of-the-report-manager-in-ssrs-
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

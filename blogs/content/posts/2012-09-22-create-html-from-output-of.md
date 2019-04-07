@@ -3,6 +3,7 @@ title: Create HTML from output of Perl::Critic
 author: Rob Earl
 type: post
 date: 2012-09-22T07:46:00+00:00
+ID: 1735
 excerpt: |
   Perl::Critic is great. If you haven't tried it, you should. It has helped me improve the quality of my code no end.
   
@@ -34,7 +35,8 @@ Clicking through to any of the files will give you all the violations found by P
 
 In addition to Perl::Critic, the script uses Template::Toolkit to format the output. The code below and templates can be found in the attached [critic_html.zip][4]
 
-<pre>#!/usr/bin/perl
+```perl
+#!/usr/bin/perl
 
 use strict;
 use warnings;
@@ -47,8 +49,8 @@ use Cwd qw(abs_path);
 use File::Basename;
 use English qw(-no_match_vars);
 
-use constant SEVERITY  =&gt; 1; # Include all violations.
-use constant SKIP_GOOD =&gt; 0; # Skip files with no violations?
+use constant SEVERITY  => 1; # Include all violations.
+use constant SKIP_GOOD => 0; # Skip files with no violations?
 
 mkdir 'critic_html';
 mkdir 'critic_html/src';
@@ -62,20 +64,20 @@ my @summary = (); # Store statistics on each file processed.
 
 foreach my $file (@files) {
     # Create a new Critic for per file statistics.
-    my $critic = Perl::Critic-&gt;new( '-severity' =&gt; SEVERITY );
+    my $critic = Perl::Critic->new( '-severity' => SEVERITY );
 
     my $file_safe = $file;
     $file_safe =~ s/[W]/_/g;
 
-    my @violations = $critic-&gt;critique($file);
+    my @violations = $critic->critique($file);
     next if (!@violations && SKIP_GOOD);
 
-    push @summary, { 'filename' =&gt; $file,
-                     'link'     =&gt; "src/$file_safe.html",
-                     'stats'    =&gt; $critic-&gt;statistics() };
+    push @summary, { 'filename' => $file,
+                     'link'     => "src/$file_safe.html",
+                     'stats'    => $critic->statistics() };
 
     open my $FH, '<', $file;
-    my @lines = <$FH&gt;;
+    my @lines = <$FH>;
     close $FH;
 
     # Attach all violations to the line they were found on.
@@ -83,32 +85,33 @@ foreach my $file (@files) {
     my $line_number = 1;
     foreach my $line (@lines) {
         # Get all the violations for the current line.
-        my @line_violations = grep { $_-&gt;line_number() == $line_number} @violations;
-        push @violations_by_line, { 'number'  =&gt; $line_number,
-                                    'content' =&gt; $line,
-                                    'violations' =&gt; @line_violations };
+        my @line_violations = grep { $_->line_number() == $line_number} @violations;
+        push @violations_by_line, { 'number'  => $line_number,
+                                    'content' => $line,
+                                    'violations' => @line_violations };
         $line_number++;
     }
 
-    write_html("critic_html/src/$file_safe.html", 'codefile', { 'title' =&gt; "Critic Analysis of $file",
-                                                                'lines' =&gt; @violations_by_line } );
+    write_html("critic_html/src/$file_safe.html", 'codefile', { 'title' => "Critic Analysis of $file",
+                                                                'lines' => @violations_by_line } );
 }
 
-write_html('critic_html/index.html', 'index', { 'title' =&gt; 'Perl::Critic::HTML Summary',
-                                                'files' =&gt; @summary });
+write_html('critic_html/index.html', 'index', { 'title' => 'Perl::Critic::HTML Summary',
+                                                'files' => @summary });
 
 sub write_html {
     my ($filename, $template, $data) = @_;
 
     # Include templates from the install directory.
-    my $tt = Template-&gt;new({ 'INCLUDE_PATH' =&gt; dirname(abs_path($PROGRAM_NAME)).'/templates' } );
+    my $tt = Template->new({ 'INCLUDE_PATH' => dirname(abs_path($PROGRAM_NAME)).'/templates' } );
     print "Writing $filenamen";
-    open my $FILE, '&gt;', $filename;
-    $tt-&gt;process($template, $data, $FILE);
+    open my $FILE, '>', $filename;
+    $tt->process($template, $data, $FILE);
     close $FILE;
 
     return;
-}</pre>
+}
+```
 
  [1]: http://search.cpan.org/~thaljef/Perl-Critic-1.118/lib/Perl/Critic.pm
  [2]: /wp-content/uploads/blogs/WebDev/CriticHtml/critic-html-index.jpg ""

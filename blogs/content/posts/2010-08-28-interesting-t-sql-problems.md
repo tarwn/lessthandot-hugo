@@ -3,6 +3,7 @@ title: Interesting T-SQL problems
 author: Naomi Nosonovsky
 type: post
 date: 2010-08-29T03:28:14+00:00
+ID: 890
 excerpt: |
   With this blog post I am hoping to start a new series of blogs devoted to the interesting T-SQL problems I encounter in forums during the week.
   
@@ -130,7 +131,8 @@ Now, my first idea was to use datepart function to get year, month, day, hour po
 
 I list both of the solutions below:
 
-<pre>declare @Sales table (SalesDateTime datetime,     SalesAmount decimal(10,2))
+sql
+declare @Sales table (SalesDateTime datetime,     SalesAmount decimal(10,2))
 insert into @Sales
 select
 
@@ -178,7 +180,8 @@ from cte
 From @Sales)
 Select SalesDateTime, Cast(Avg(SalesAmount) As decimal(12,2)) As AvegSalesAmount
 From cte
-Group By SalesDateTime;</pre>
+Group By SalesDateTime;
+```
 
 See also a different and simpler approach suggested by Celko in [this thread][2] of using Time based Calendar table.
 
@@ -348,7 +351,8 @@ The next day, however, based on Hunchback&#8217;s (Alejandro Mesa) comment I rea
 
 First let&#8217;s create the test table with 100K records:
 
-<pre>CREATE TABLE [dbo].[Chromosomes](
+sql
+CREATE TABLE [dbo].[Chromosomes](
     [Name] [varchar](10) NOT NULL,
     [Chromosome] [varchar](10) NOT NULL,
     [iStart] [int] NOT NULL,
@@ -373,11 +377,13 @@ FROM    (
         FROM    Tally
     ) AS d
     
-select * from Chromosomes</pre>
+select * from Chromosomes
+```
 
 The first solution uses cursor and takes ~27 sec. to execute:
 
-<pre>-- Cursor based idea
+sql
+-- Cursor based idea
 set nocount on
 declare @TimeStart datetime = getdate()
 CREATE TABLE    #Work
@@ -422,7 +428,7 @@ WHILE @@FETCH_STATUS = 0
             Items = Items + 1
         WHERE    Chromosome = @Chromosome
             AND FromNum <= @ToNum
-            AND ToNum &gt;= @FromNum
+            AND ToNum >= @FromNum
  
         IF @@ROWCOUNT = 0
             INSERT    #Work
@@ -458,15 +464,17 @@ SELECT        Chromosome,
         Names,
         Items
 FROM        #Work
---WHERE        Items &gt; 1    -- Uncomment this line to get only the overlapping ranges
+--WHERE        Items > 1    -- Uncomment this line to get only the overlapping ranges
 ORDER BY    FromNum
  
 DROP TABLE #Work
-print 'Time elapsed (sec): ' + convert(varchar(30),datediff(second, @TimeStart, getdate()))</pre>
+print 'Time elapsed (sec): ' + convert(varchar(30),datediff(second, @TimeStart, getdate()))
+```
 
 Set based solution based on the quirky update idea &#8211; it takes ~5 second to execute:
 
-<pre>set statistics time off
+sql
+set statistics time off
 set nocount on
 declare @TimeStart datetime = getdate()
 SELECT	Name,
@@ -495,12 +503,12 @@ AS (
 -- Quirky update - updating variable and field at the same time
 UPDATE	cteUpdate
 SET	@Grp = Grp =	CASE
-				WHEN Chromosome <&gt; @Chromosome THEN @Grp + 1
+				WHEN Chromosome <> @Chromosome THEN @Grp + 1
 				WHEN @End < iStart THEN @Grp + 1
 				ELSE @Grp
 			END,
 	@End =	CASE
-			WHEN Chromosome <&gt; @Chromosome THEN iEnd
+			WHEN Chromosome <> @Chromosome THEN iEnd
 			WHEN iEnd < @End THEN @End
 			ELSE iEnd
 		END,
@@ -524,10 +532,10 @@ CROSS APPLY	(
 			SELECT DISTINCT	', ' + x.Name
 			FROM		#Temp AS x
 			WHERE		x.Grp = s.Grp
-					AND x.Name &gt; s.Names
+					AND x.Name > s.Names
 			FOR XML		PATH('')
 		) AS f(Names)
-WHERE		s.Items &gt; 1
+WHERE		s.Items > 1
 
 SELECT		Chromosome,
 		FromNum,
@@ -541,7 +549,8 @@ ORDER BY	Chromosome,
 DROP TABLE	#Temp,
 		#Stage
 		
-print 'Time elapsed (sec): ' + convert(varchar(30),datediff(second, @TimeStart, getdate()))</pre>
+print 'Time elapsed (sec): ' + convert(varchar(30),datediff(second, @TimeStart, getdate()))
+```
 
 &nbsp;
 
@@ -555,24 +564,25 @@ First problem is to convert the data into the same format. I chose nvarchar(max)
 
 Here is the solution I used based on AdventureWorks.Person.Address table:
 
-<pre><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;declare</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;@</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;SQL nvarchar</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;(</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;max</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;);
+<pre><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">declare</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">@</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">SQL nvarchar</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">(</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">max</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">);
 
-</span&gt;<span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;select</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;@</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;SQL </span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;=</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt; STUFF</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;((</span&gt;<span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;SELECT</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;' UNION ALL
-SELECT AddressID, convert(nvarchar(max),'</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;+</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt; quotename</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;(</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;column_name</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;)</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;+</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;') as Column_Value, '</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;+</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;
-QUOTENAME</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;(</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;Column_Name</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;,</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;''''</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;)</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;+</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;' as Column_Name FROM AdventureWorks.Person.Address'
-</span&gt;<span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;from</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt; AdventureWorks</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;.</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;INFORMATION_SCHEMA</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;.</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;COLUMNS 
-</span&gt;<span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;where</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt; TABLE_NAME </span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;=</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;'Address'</span&gt;<span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;and</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt; TABLE_SCHEMA </span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;=</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;'Person'</span&gt;<span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;FOR</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt; XML PATH</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;(</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;''</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;),</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt; type</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;).</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;value</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;(</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;'.'</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;,</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;'nvarchar(max)'</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;),</span&gt;<span class="lit" style="font-weight: inherit;font-style: inherit;color: #006666"&gt;1</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;,</span&gt;<span class="lit" style="font-weight: inherit;font-style: inherit;color: #006666"&gt;11</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;,</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;''</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;)
+</span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">select</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">@</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">SQL </span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">=</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"> STUFF</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">((</span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">SELECT</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">' UNION ALL
+SELECT AddressID, convert(nvarchar(max),'</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">+</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"> quotename</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">(</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">column_name</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">)</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">+</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">') as Column_Value, '</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">+</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">
+QUOTENAME</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">(</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">Column_Name</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">,</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">''''</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">)</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">+</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">' as Column_Name FROM AdventureWorks.Person.Address'
+</span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">from</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"> AdventureWorks</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">.</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">INFORMATION_SCHEMA</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">.</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">COLUMNS 
+</span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">where</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"> TABLE_NAME </span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">=</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">'Address'</span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">and</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"> TABLE_SCHEMA </span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">=</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">'Person'</span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">FOR</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"> XML PATH</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">(</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">''</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">),</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"> type</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">).</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">value</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">(</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">'.'</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">,</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">'nvarchar(max)'</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">),</span><span class="lit" style="font-weight: inherit;font-style: inherit;color: #006666">1</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">,</span><span class="lit" style="font-weight: inherit;font-style: inherit;color: #006666">11</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">,</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">''</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">)
 
-</span&gt;<span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;print  </span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;@</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;SQL
+</span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">print  </span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">@</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">SQL
 
 
-</span&gt;<span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;set</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;@</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;SQL </span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;=</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;@</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;SQL </span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;+</span&gt;<span class="str" style="font-weight: inherit;font-style: inherit;color: #008800"&gt;'
+</span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">set</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">@</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">SQL </span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">=</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">@</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">SQL </span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">+</span><span class="str" style="font-weight: inherit;font-style: inherit;color: #008800">'
 ORDER BY AddressId'
-</span&gt;<span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088"&gt;execute</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;(@</span&gt;<span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000"&gt;SQL</span&gt;<span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600"&gt;)</span&gt;</pre>
+</span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">execute</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">(@</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">SQL</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">)</span></pre>
 
 And here is Hunchback&#8217;s (Alejandro Mesa) solution using SQL Server 2008 specific syntax:
 
-<pre>SELECT
+sql
+SELECT
 	C.*
 FROM
 	(
@@ -601,7 +611,8 @@ FROM
 ORDER BY
  rowident,
  cn;
-GO</pre>
+GO
+```
 
 &nbsp;
 
@@ -613,7 +624,8 @@ The problem is presented in [this thread][5]. For any given table find percent o
 
 My solution for this problem is to create dynamic query using the idea from my other blog [How to get information about all databases without a loop][6]:
 
-<pre>USE AdventureWorks 
+sql
+USE AdventureWorks 
 
 DECLARE  @TotalCount DECIMAL(10,2), 
          @SQL        NVARCHAR(MAX) 
@@ -635,7 +647,8 @@ SET @SQL = 'set @TotalCount = NULLIF(@TotalCount,0)  ' + @SQL + ' FROM [Adventur
 EXECUTE SP_EXECUTESQL 
   @SQL , 
   N'@TotalCount decimal(10,2)' , 
-  @TotalCount</pre>
+  @TotalCount
+```
 
 Hope you find these problems interesting as well and see you in a week (or more)&#8230;
 
@@ -657,5 +670,5 @@ And perhaps you appreciate this topic as well
  [6]: /index.php/DataMgmt/DataDesign/how-to-get-information-about-all-databas
  [7]: http://beyondrelational.com/blogs/naomi/archive/2010/10/17/interesting-t-sql-problems.aspx
  [8]: http://beyondrelational.com/blogs/naomi/archive/2010/10/29/how-to-search-a-string-value-in-all-columns-in-the-table-and-in-all-tables-in-the-database.aspx
- [9]: http://forum.lessthandot.com/viewforum.php?f=17
- [10]: http://forum.lessthandot.com/viewforum.php?f=22
+ [9]: http://forum.ltd.local/viewforum.php?f=17
+ [10]: http://forum.ltd.local/viewforum.php?f=22

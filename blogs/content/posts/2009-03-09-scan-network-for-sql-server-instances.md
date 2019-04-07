@@ -3,6 +3,7 @@ title: Scan network for SQL Server instances
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-03-09T15:36:26+00:00
+ID: 344
 excerpt: "Securing data services is part of a DBA's critical tasks that should be performed.  This goes beyond users, roles and schemas though.  A DBA must take into account the concept of software installations in a growing and dynamic environment that often pos&hellip;"
 url: /index.php/datamgmt/dbadmin/scan-network-for-sql-server-instances/
 views:
@@ -46,7 +47,8 @@ Go into the designer of the first script task and add IO and Diagnostics in so w
 
 The code will look like such
 
-<pre>Public Sub Main()
+```vbnet
+Public Sub Main()
         If File.Exists("C:instance_searchcorporate_location.csv") Then
             File.Delete("C:instance_searchcorporate_location.csv")
         End If
@@ -62,8 +64,8 @@ The code will look like such
         proc.WaitForExit()
 
         Dts.TaskResult = Dts.Results.Success
-    End Sub</pre>
-
+    End Sub
+```
 Replace the xx with your own structure. There are some things I need to point out with SQLPing 3.0 command line. I have problems putting paths in such as C:folderfile.csv. I have a posting up on sqlsecurity.com and Chip has made some replies. Seeing as the following command works fine I haven&#8217;t pulled SQL Ping 3.0 from this process. The new version is still a very good tool that based all my tests for stability. I thank Chip again for the hard work and offering of SQL Ping to the community. If you have problems you can always comment here as well for help or go to the sqlsecurity.com community.
 
 This is the working command for directory paths other than the root:
@@ -74,7 +76,8 @@ Next step in the SSIS package is to edit the second script task. This step will 
 
 The code will be as follows
 
-<pre>Public Class ScriptMain
+```vbnet
+Public Class ScriptMain
 
 	Public Sub Main()
         If File.Exists("C:instance_searchcorporate_location.csv") Then
@@ -84,13 +87,14 @@ The code will be as follows
         End If
 	End Sub
 
-End Class</pre>
-
+End Class
+```
 All we need to accomplish here is to validate the files existence. If the file does not exist then our steps will go to the send failure email task and notify you.
   
 Next step, drag over a Data Flow task. Add to the connection managers a flat file connection to the csv file in the instance\_search folder as a flat file connection. Second, add an ADO.NET or OLEDB connection to your instance. In my case I have a DBA database on the instance that this package is created. In this database I created a table instance\_audit. This table is where we pump the results from SQL Ping in order to report on later. The create table would be…
 
-<pre>CREATE TABLE [dbo].[instance_audit](
+sql
+CREATE TABLE [dbo].[instance_audit](
 	[ServerIP] [varchar](50) NULL,
 	[TCPPort] [varchar](5) NULL,
 	[ServerName] [varchar](55) NULL,
@@ -102,8 +106,8 @@ Next step, drag over a Data Flow task. Add to the connection managers a flat fil
 	[IsClustered] [varchar](25) NULL,
 	[Details] [varchar](max) NULL,
 	[DetectionMethod] [varchar](55) NULL
-) ON [PRIMARY]</pre>
-
+) ON [PRIMARY]
+```
 In the data flow tab drag over a flat file source, data conversion and OLEDB destination.
   
 Configure the flat file source with the flat file connection. Verify the mappings all look good after configuring the source. Connect to the flat file source to the data conversion and open up the configuration window of the conversion. I edit my types in the conversion so they appear as
@@ -124,7 +128,8 @@ Running this package fills the discovered instances into the instance_audit tabl
   
 Such as…
 
-<pre>EXEC msdb.dbo.sp_send_dbmail @recipients='dba@your_company.com',
+sql
+EXEC msdb.dbo.sp_send_dbmail @recipients='dba@your_company.com',
 	@subject = 'Instance discovery completed.',
 	@body = 'Review attachment for results of SQL Server scan of the network',
 	@body_format = 'HTML',
@@ -134,6 +139,6 @@ Such as…
 	 @query_result_header = false,
 	 @query_result_width = 10000,
 	 @attach_query_result_as_file = 1,
-	 @query_result_separator = ','</pre>
-
+	 @query_result_separator = ','
+```
 It takes around 1 minute 30 seconds to scan 50 IPs, finding 15 instances. The longest time that I have found is the SQL Ping and writing the output contents. That is a local test on my personal machine. The server scans a complete 0 – 254 (24 instances) and completes the insert into the table in around a minute.

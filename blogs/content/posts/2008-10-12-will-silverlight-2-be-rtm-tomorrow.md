@@ -3,6 +3,7 @@ title: Will Silverlight 2 Be RTM Tomorrow?
 author: SQLDenis
 type: post
 date: 2008-10-12T11:40:12+00:00
+ID: 172
 url: /index.php/webdev/webdesigngraphicsstyling/will-silverlight-2-be-rtm-tomorrow/
 views:
   - 2690

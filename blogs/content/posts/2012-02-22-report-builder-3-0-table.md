@@ -3,6 +3,7 @@ title: Report Builder 3.0 – Table or Matrix Wizard
 author: Jes Borland
 type: post
 date: 2012-02-22T12:42:00+00:00
+ID: 1532
 excerpt: SQL Server Report Builder 3.0 has a built-in Table or Matrix Wizard. It will walk you through all the necessary building blocks for a table or matrix, and generate a report layout for you.
 url: /index.php/datamgmt/dbprogramming/report-builder-3-0-table/
 views:

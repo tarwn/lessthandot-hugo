@@ -3,6 +3,7 @@ title: Phone Number Primitive
 author: chaospandion
 type: post
 date: 2010-03-17T15:03:13+00:00
+ID: 730
 url: /index.php/desktopdev/mstech/phone-number-primitive/
 views:
   - 3660
@@ -19,7 +20,8 @@ tags:
 ---
 I don&#8217;t know how many times I&#8217;ve put together the same slow regexp to check if the user input is a valid phone number. I decided that this cannot go on and developed a simple phone number primitive. Now our main concern here is the performance of TryParse since it will be used the most. After running some performance tests the median timing was 400ns on a 3Ghz machine.
 
-<pre>[Serializable]
+```CSharp
+[Serializable]
 public struct PhoneNumber : IEquatable<PhoneNumber>
 {
     private const int AreaCodeShift = 54;
@@ -241,4 +243,5 @@ public enum PhoneNumberFormat
 {
     Plain,
     Separated
-}</pre>
+}
+```

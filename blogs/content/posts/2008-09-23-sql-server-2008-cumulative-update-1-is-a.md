@@ -3,6 +3,7 @@ title: SQL Server 2008 Cumulative Update 1 is available from Microsoft
 author: SQLDenis
 type: post
 date: 2008-09-23T09:49:29+00:00
+ID: 151
 url: /index.php/datamgmt/datadesign/sql-server-2008-cumulative-update-1-is-a/
 views:
   - 44007

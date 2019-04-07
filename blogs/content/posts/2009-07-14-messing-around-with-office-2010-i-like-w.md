@@ -3,6 +3,7 @@ title: Messing around with Office 2010, I like what I see
 author: SQLDenis
 type: post
 date: 2009-07-14T12:43:02+00:00
+ID: 508
 url: /index.php/itprofessionals/ethicsit/messing-around-with-office-2010-i-like-w/
 views:
   - 3791

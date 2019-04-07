@@ -3,6 +3,7 @@ title: SQL Server 2008 R2 Datacenter and SQL Server 2008 R2 Parallel Data Wareho
 author: SQLDenis
 type: post
 date: 2009-11-03T15:01:29+00:00
+ID: 608
 url: /index.php/datamgmt/datadesign/sql-server-2008-r2-datacenter-and-sql-se/
 views:
   - 17935
@@ -28,5 +29,5 @@ You can find the press release with more details here: SQL Server 2008 R2 Novemb
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

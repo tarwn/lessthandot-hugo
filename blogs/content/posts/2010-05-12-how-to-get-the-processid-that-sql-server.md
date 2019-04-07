@@ -3,6 +3,7 @@ title: How to get the processid that SQL Server is using if you have multiple in
 author: SQLDenis
 type: post
 date: 2010-05-12T11:58:28+00:00
+ID: 789
 url: /index.php/datamgmt/dbprogramming/how-to-get-the-processid-that-sql-server/
 views:
   - 18981
@@ -29,7 +30,9 @@ Can you tell which process is the 2008 instance and which process is the 2008 R2
 
 Run the following query in a query window
 
-<pre>select SERVERPROPERTY('processid'),SERVERPROPERTY('productversion')</pre>
+sql
+select SERVERPROPERTY('processid'),SERVERPROPERTY('productversion')
+```
 
 I get the following as output when running that query on both instances
 
@@ -60,5 +63,5 @@ This is probably the easiest one, just switch to the services tab
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins></x64></nl></nl></nl></c>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

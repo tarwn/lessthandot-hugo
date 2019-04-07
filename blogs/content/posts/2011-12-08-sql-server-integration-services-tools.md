@@ -3,6 +3,7 @@ title: 'SQL Server Integration Services tools to have – Expression Editor & Te
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-08T10:46:00+00:00
+ID: 1416
 excerpt: 'Developing SSIS is only as restricting and time consuming as the development studio in which we are forced to develop in.  With SQL Server 2012, Visual Studio 2010 shell has been adopted.  This has been a long winded complaint from the community - havin&hellip;'
 url: /index.php/datamgmt/datadesign/sql-server-integration-services-tools/
 views:

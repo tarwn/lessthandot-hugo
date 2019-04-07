@@ -3,6 +3,7 @@ title: Umm….No…that is not how you export a table into a file with SQL Serve
 author: SQLDenis
 type: post
 date: 2013-01-31T22:28:00+00:00
+ID: 1954
 excerpt: 'Sometimes the creativity of the human species is truly amazing. Someone needed to export a table into a file from within SQL Server. Now there are several ways to do this like bcp, export wizard, Query..Results To File, SSIS etc etc. Today I noticed som&hellip;'
 url: /index.php/datamgmt/dbprogramming/umm-no-that-is-not/
 views:

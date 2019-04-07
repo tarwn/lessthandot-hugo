@@ -3,6 +3,7 @@ title: SQL Saturday Pensacola – Measure of success
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-06-06T11:05:00+00:00
+ID: 1206
 excerpt: 'One of the highlights of my year so far was being accepted to speak for the SQL Saturday in Pensacola #77.  This particular SQL Saturday took my attention because of the feedback I had heard from the previous events held in Pensacola.  Along with the gr&hellip;'
 url: /index.php/datamgmt/dbprogramming/sql-saturday-pensacola-measure-of/
 views:

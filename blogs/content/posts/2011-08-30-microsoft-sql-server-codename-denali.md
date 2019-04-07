@@ -3,6 +3,7 @@ title: Microsoft SQL Server, codename “Denali”, will be the last release to 
 author: SQLDenis
 type: post
 date: 2011-08-30T16:13:00+00:00
+ID: 1304
 excerpt: |
   According to the Microsoft SQLNCli team blog, SQL Server, codename "Denali", will be the last release to support OLE DB.
   

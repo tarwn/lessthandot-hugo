@@ -3,6 +3,7 @@ title: SQL Server Agent Job history purging
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-10T09:55:29+00:00
+ID: 380
 url: /index.php/datamgmt/datadesign/sql-agent-job-history-purging/
 views:
   - 12786
@@ -20,9 +21,10 @@ So to make it easy we have the sp\_purge\_jobhistory procedure. To run you have 
 
 So to make this simple and much quicker so your computer doesn&#8217;t lock on you execute something such as
 
-<pre>Declare @oldest datetime
+sql
+Declare @oldest datetime
 Set @oldest = Getdate() - 14
 
-Exec sp_purge_jobhistory @oldest_date = @oldest</pre>
-
+Exec sp_purge_jobhistory @oldest_date = @oldest
+```
 And then please, don&#8217;t forget to configure a valid retention time in the agents properties 🙂

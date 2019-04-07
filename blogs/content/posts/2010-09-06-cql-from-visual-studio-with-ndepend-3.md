@@ -3,6 +3,7 @@ title: CQL From Visual Studio With NDepend 3
 author: Alex Ullrich
 type: post
 date: 2010-09-06T20:29:00+00:00
+ID: 894
 excerpt: "For the last few months I've had the pleasure of working with NDepend version 3.  Most of my development at home is on linux these days, so I haven't used it as much as I'd like, but I have been using it to poke around in various codebases and see what&hellip;"
 url: /index.php/architect/designingsoftware/cql-from-visual-studio-with-ndepend-3/
 views:
@@ -30,7 +31,9 @@ My favorite CQL feature is the ability to set up CQL constraints _from now_. Thi
 
 The first three queries listed are built in to NDepend. I added the fourth, just to have a listing of new/changed methods ready. The CQL for this query is simply 
 
-<pre>SELECT METHODS WHERE WasAdded OR CodeWasChanged</pre>
+```text
+SELECT METHODS WHERE WasAdded OR CodeWasChanged
+```
 
 Not a bad way to keep an eye on what is getting changed in the codebase. To get in this state I added three new methods to the codebase I was looking at (in a place that I could remove them easily since they are not only low quality but useless as well). Two had 7 parameters, putting them in violation of the constraint for basic quality principles. I didn&#8217;t add any tests, so all three were in violation of the test coverage constraint. And finally they all showed up in the list of new methods. It&#8217;s worth noting the yellow circle at the bottom right as well &#8211; the yellow means that warnings were encountered when running the CQL portion of the analysis. Green would be good, and red would mean I have some bad queries that can&#8217;t be run. 
 

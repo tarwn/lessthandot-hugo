@@ -3,6 +3,7 @@ title: Buffer Latch Error Restoring SQL Server Database
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-04-10T07:39:00+00:00
+ID: 2066
 excerpt: 'When working on SQL Server that is stretching IO and the subsystem to its limits, you are bound to see a buffer latch time-out error at some point.  This is typically, "Time-out occurred while waiting for buffer latch type 2 or 3". If you do, it will us&hellip;'
 url: /index.php/datamgmt/dbadmin/buffer-latch-error-restoring-sql/
 views:
@@ -19,10 +20,12 @@ When working on SQL Server that is stretching IO and the subsystem to its limits
 
 In this case, the restore statement was as simple as it can get.
 
-<pre>USE [master]
+sql
+USE [master]
 RESTORE DATABASE TempRestore FROM  DISK = N'E:Backup DataTempRestore.bak' 
 WITH  FILE = 1,  MOVE N'TempRestore' TO N'I:TempRestore.mdf',  MOVE N' TempRestore_log' TO N'I:TempRestore.ldf',  NOUNLOAD,  REPLACE,  STATS = 5
-GO</pre>
+GO
+```
 
 The restore ran fine, as shown below, until it hit the database version upgrade section. In this case, this is a SQL Server 2008 database, restoring to SQL Server 2012. Or, database version 661 to 706.
 
@@ -76,9 +79,10 @@ As shown, the error occurred upgrading the database and the restore failed. At t
 
 Since the database was restored successfully and the only part that remained was to bring it online, upgrading the internal database version, the following statement should resolve the problem without requiring a completely new restore execution. In most cases, a restore is a one-way street. Start a restore and if it errors, there is no other way but starting over. In this case, don’t be so quick to take that ultimatum.
 
-<pre>RESTORE DATABASE TempRestore WITH RECOVERY
-GO</pre>
-
+sql
+RESTORE DATABASE TempRestore WITH RECOVERY
+GO
+```
 The resulting messages below show the restore was at a state that allowed the call for recovery to complete and bring the database online by upgrading the internal version. Now, a critical step here to verify the databases integrity is to run a CHECKDB before allowing activity on it. This is even more critical if this is a restore that is required for production. Do not skip a CHECKDB on a database if this happens to you.
 
 Converting database &#8216;TEMPRESTORE&#8217; from version 661 to the current version 706.

@@ -3,6 +3,7 @@ title: 'onpnt on Linkedin – Feb #meme15'
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-02-15T11:55:00+00:00
+ID: 1536
 excerpt: |
    
   February’s #meme15 is on Linkedin and how we use it.  The meme15 concept came from one of my good friends, Jason Strate (Twitter | Blog).  The monthly topics focus on professional development, blogging and really, why we do these things to help ourse&hellip;

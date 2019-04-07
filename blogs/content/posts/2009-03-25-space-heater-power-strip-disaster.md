@@ -3,6 +3,7 @@ title: 'Space heater * power strip = support disaster'
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-03-25T13:42:04+00:00
+ID: 365
 excerpt: 'The help desk manager I often work with on high level issues were talking the other day about a problem she had with a user.  The problem the user was having had been her laptop was turning on briefly and then shutting down for no apparent reason.  The&hellip;'
 url: /index.php/itprofessionals/ethicsit/space-heater-power-strip-disaster/
 views:

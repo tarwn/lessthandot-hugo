@@ -3,6 +3,7 @@ title: Instance design; Where to do your work as a DBA and DB Developer
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-07-28T11:19:29+00:00
+ID: 524
 url: /index.php/datamgmt/datadesign/instance-design-where-to-do-your-work-as/
 views:
   - 7437

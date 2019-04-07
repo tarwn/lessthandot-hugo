@@ -3,6 +3,7 @@ title: Identify procedures that call SQL Server undocumented procedures
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-13T11:30:39+00:00
+ID: 628
 url: /index.php/datamgmt/datadesign/identify-procedures-that-call-sql-server/
 views:
   - 46952
@@ -18,7 +19,8 @@ Presented below is a hard coded list of undocumented stored procedures. By their
 
 **How to detect this problem:**
 
-<pre>Declare @Temp Table(ProcedureName VarChar(50))
+sql
+Declare @Temp Table(ProcedureName VarChar(50))
 
 Insert Into @Temp Values('sp_MStablespace')
 Insert Into @Temp Values('sp_who2')
@@ -88,8 +90,8 @@ From   sysobjects
          On Object_Definition(id) Like '%' + T.ProcedureName + '%'		
 Where  XType = 'P'
        And ObjectProperty(ID, N'IsMSShipped') = 0
-Order By Name</pre>
-
+Order By Name
+```
 **How to correct it:** Rewrite your functionality so that is does not rely upon undocumented procedures.
 
 **Level of severity:** moderate to high

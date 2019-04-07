@@ -3,6 +3,7 @@ title: Do you use Metasploit to check if your servers are vulnerable?
 author: SQLDenis
 type: post
 date: 2009-01-20T12:04:11+00:00
+ID: 292
 url: /index.php/sysadmins/os/do-you-use-metasploit-to-check-if-your-s/
 views:
   - 4524

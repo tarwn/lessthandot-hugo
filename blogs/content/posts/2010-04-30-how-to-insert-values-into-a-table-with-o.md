@@ -3,6 +3,7 @@ title: How to insert values into a table with only an identity column
 author: SQLDenis
 type: post
 date: 2010-04-30T14:55:19+00:00
+ID: 774
 url: /index.php/datamgmt/dbprogramming/how-to-insert-values-into-a-table-with-o/
 views:
   - 7017
@@ -24,19 +25,25 @@ Some databases have something called a sequence, you can use this to generate va
   
 The reason I am writing this is because I saw the following table
 
-<pre>CREATE TABLE Sequence (ID int identity not null primary key,Dummy tinyint)
-GO</pre>
+sql
+CREATE TABLE Sequence (ID int identity not null primary key,Dummy tinyint)
+GO
+```
 
 I was thinking to myself why they have that dummy value, so I spoke to one of these people who were using the system. The reason they have this dummy value is so that they can insert into this table like this
 
-<pre>INSERT INTO Sequence VALUES(1)
+sql
 INSERT INTO Sequence VALUES(1)
-INSERT INTO Sequence VALUES(1)</pre>
+INSERT INTO Sequence VALUES(1)
+INSERT INTO Sequence VALUES(1)
+```
 
 And now when you query the table
 
-<pre>SELECT ID 
-FROM  Sequence </pre>
+sql
+SELECT ID 
+FROM  Sequence 
+```
 
 You get these 3 rows as output
 
@@ -49,24 +56,32 @@ So the dummy value is there so that they can insert into the table. Even though 
   
 Let&#8217;s do this a different way. First drop the table we created before.
 
-<pre>DROP TABLE Sequence</pre>
+sql
+DROP TABLE Sequence
+```
 
 Now create the table like this; without the dummy value
 
-<pre>CREATE TABLE Sequence (ID int identity not null primary key)
-GO</pre>
+sql
+CREATE TABLE Sequence (ID int identity not null primary key)
+GO
+```
 
 Here is how the insert looks like if you only have the identity column
 
-<pre>INSERT INTO Sequence DEFAULT VALUES
+sql
 INSERT INTO Sequence DEFAULT VALUES
 INSERT INTO Sequence DEFAULT VALUES
-INSERT INTO Sequence DEFAULT VALUES</pre>
+INSERT INTO Sequence DEFAULT VALUES
+INSERT INTO Sequence DEFAULT VALUES
+```
 
 All you need to use is default values in the insert statements, it will then generate the identity
 
-<pre>SELECT ID 
-FROM  Sequence </pre>
+sql
+SELECT ID 
+FROM  Sequence 
+```
 
 <pre>ID
 1
@@ -76,21 +91,27 @@ FROM  Sequence </pre>
 
 Let&#8217;s take a look at another example, what if we had two other columns and they had defaults on them? First create this table.
 
-<pre>CREATE TABLE Sequence2 (ID int identity not null primary key, 
+sql
+CREATE TABLE Sequence2 (ID int identity not null primary key, 
 			Somedate datetime default getdate() not null,
 			SomeID int default 0 not null)
-GO</pre>
+GO
+```
 
 Now run these statements
 
-<pre>INSERT INTO Sequence2 DEFAULT VALUES
+sql
 INSERT INTO Sequence2 DEFAULT VALUES
 INSERT INTO Sequence2 DEFAULT VALUES
-INSERT INTO Sequence2 DEFAULT VALUES</pre>
+INSERT INTO Sequence2 DEFAULT VALUES
+INSERT INTO Sequence2 DEFAULT VALUES
+```
 
 Now let&#8217;s look what is in the table
 
-<pre>SELECT * FROM  Sequence2</pre>
+sql
+SELECT * FROM  Sequence2
+```
 
 <pre>ID	Somedate	SomeID
 1	2010-04-30 12:50:14.693	0
@@ -102,5 +123,5 @@ As you can see it used the default values for the columns with defaults and also
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

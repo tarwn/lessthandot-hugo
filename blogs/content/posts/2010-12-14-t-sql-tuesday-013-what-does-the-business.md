@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #013: What Does the Business Want?'
 author: Jes Borland
 type: post
 date: 2010-12-14T12:12:36+00:00
+ID: 976
 excerpt: |
   Steve Jones (@way0utwest | blog) is hosting this month's T-SQL Tuesday blog party. The official topic this month is: "What issues have you had in interacting with the business to get your job done?" 
   

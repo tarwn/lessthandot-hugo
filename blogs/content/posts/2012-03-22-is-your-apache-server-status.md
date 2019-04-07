@@ -3,6 +3,7 @@ title: Is your Apache Server Status wide open for the world to see?
 author: SQLDenis
 type: post
 date: 2012-03-22T22:34:00+00:00
+ID: 1572
 excerpt: |
   The Apache web server comes with something called Apache Module mod_status installed
   

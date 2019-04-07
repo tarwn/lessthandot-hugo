@@ -3,6 +3,7 @@ title: The OLE DB Source and the Oracle Date Literal
 author: Koen Verbeeck
 type: post
 date: 2013-01-21T11:36:00+00:00
+ID: 1927
 excerpt: Recently I had some issues using ANSI date literals in an SSIS OLE DB source query to an Oracle database.
 url: /index.php/datamgmt/dbprogramming/mssqlserver/ole-db-source-date-literal/
 views:
@@ -27,14 +28,15 @@ tags:
   Recently I was developing an SSIS package in BIDS 2008R2 which was part of a Oracle to SQL Server migration; my favorite kind of migration. This package had a very simple SQL select statement in the OLE DB source using the Oracle OLE DB provider (slightly altered to protect the innocent):
 </p>
 
-<pre>SELECT
+```SQL
+SELECT
 	 columnA
 	,columnB
 	,42 AS Code
 	,DATE'1900-01-01'
 FROM user.myTable mt
-WHERE mt.Status IN (10,20,30) AND mt.TransactionDate &gt; DATE'2012-01-01';</pre>
-
+WHERE mt.Status IN (10,20,30) AND mt.TransactionDate > DATE'2012-01-01';
+```
 <p style="text-align: justify;">
   The preview in the OLE DB worked flawlessly and I finished constructing my data flow. However, when I ran the package, I got all sorts of weird metadata errors indicating problems at the source. Basically the errors told me new columns needed to be added to the external columns collection (see the advanced editor of the source and check out the <em>Input and Output properties</em> tab) and that existing columns should be removed. Weird because the source and the SQL query hadn’t changed.
 </p>
@@ -43,12 +45,13 @@ WHERE mt.Status IN (10,20,30) AND mt.TransactionDate &gt; DATE'2012-01-01';</pre
   Time to investigate the issue. To reproduce the issue, I created a very simple package with one data flow. In the data flow, I have this select statement in an OLE DB source retrieving data from the Oracle database:
 </p>
 
-<pre>SELECT
+```SQL
+SELECT
 	 DATE'2013-01-14' AS TestDate
 	,'This is a test' AS TestString
 	,42 AS TestInt
-FROM DUAL;</pre>
-
+FROM DUAL;
+```
 <p style="text-align: justify;">
   The output of the source component is connected to a multicast component, which serves as a trash destination.
 </p>

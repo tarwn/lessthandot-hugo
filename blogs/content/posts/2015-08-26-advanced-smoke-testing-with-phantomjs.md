@@ -3,6 +3,7 @@ title: Advanced Smoke Testing with PhantomJS
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2015-08-26T12:16:24+00:00
+ID: 4086
 url: /index.php/webdev/advanced-smoke-testing-with-phantomjs/
 views:
   - 6025
@@ -63,7 +64,8 @@ Writing this script uncovered several peculiarities in the site title and URLs t
 
 [/AdvancedSmokeTest/test.js][5]
 
-<pre>// ... load dependencies ...
+```javascript
+// ... load dependencies ...
 
 // ... capture args for username, password, etc ...
 
@@ -118,8 +120,8 @@ Promise.resolve().then(function(){
 	controller.phantomPage.render('lasterror.png');
 }).finally(function(){
 	phantom.exit();
-});</pre>
-
+});
+```
 The script mostly follows the list from above. I use a Promise library ([bluebird][6]) for asynchronous actions (load this website and let me know when it&#8217;s ready). When each action returns, I make assertions about what the page state is supposed to be, with the mechanics of how I do things like figuring out our login status or how to type a username value into the right box hidden inside the page object. If those assertions fail, they are thrown as errors and the script skips to the catch statement at the end to report the failure.
 
 In the error state, I take a screenshot to help debug. In the success, I take a screenshot to later us for either version comparison or a slideshow.
@@ -128,7 +130,8 @@ The logger object replaced console.log so I could fine tune the level of informa
 
 Example Output:
 
-<pre>[OUT] [Step 1         ] Load the site, we won't be logged in
+```text
+[OUT] [Step 1         ] Load the site, we won't be logged in
 [---] [goToUrl        ] http://ltd.local
 [---] [onUrlChanged   ] Going to http://ltd.local/
 [---] [onLoadFinished ] Page "http://ltd.local/" loaded with status success
@@ -145,8 +148,8 @@ Example Output:
 [---] [onUrlChanged   ] Going to http://ltd.local/index.php?
 [---] [onLoadFinished ] Page "http://ltd.local/index.php?" loaded with status success
 [---] [setLoaded      ] Page loaded in 4206ms :: http://ltd.local/index.php?
-[OUT] [Success        ] We have logged in successfully.</pre>
-
+[OUT] [Success        ] We have logged in successfully.
+```
 # BrowserController
 
 The BrowserController wraps around the PhantomJS page events and pushes the appropriate values into a loaded pageObject and/op handles errors. Script and resource errors are surfaced as &#8220;reject&#8221; calls (which are then handled by the catch back in the test). The onUrlChanged event followed by an onLoadFinished event allows the BrowserController to know a page has been loaded so it can compose additional page behavior logic onto the base page, passing it back to the test. It also has the ability to tie into events that will help track the number and size of files, and potentially even checks that specific files were or were not included (bundles versus individual scripts, for instance).
@@ -159,7 +162,8 @@ Moving on&#8230;0&#8230;
 
 [/AdvancedSmokeTest/browser/browserController.js][7]
 
-<pre>function BrowserController(pageDir, browserControllerDir, logger){
+```javascript
+function BrowserController(pageDir, browserControllerDir, logger){
 	var self = this;
 
 	// ... some setup ...
@@ -271,8 +275,8 @@ Moving on&#8230;0&#8230;
 		});
 	};
 
-}</pre>
-
+}
+```
 The main work for the BrowserController is near the end. We pass in a navigation action to perform that we know will be asynchronous, after wiring up all of the events it needs to watch it then executes that action and waits for the response to finish (the first then). This is triggered by the onLoadFinished event being called after the page has finished loading, which calls the resolve() method. We then attach some additional page utilities (jQuery if it isn&#8217;t present, an autotype plugin) and then scan through the list of known pages we preloaded at the top and add the behavior of each one that matches to the basicPage we started with.
 
 Along the way, we also have hooks into other properties, like timeouts and resource load errors, which will call the reject() method instead of resolve. This causes a break in the script, skipping ahead to the catch in the outer test script.
@@ -285,7 +289,8 @@ Rather than make my page objects match one-to-one to a browser page, I have chos
 
 [/AdvancedSmokeTest/pages/anyPage.js][8]
 
-<pre>var pageUtils = require("../browser/pageUtils");
+```javascript
+var pageUtils = require("../browser/pageUtils");
 
 module.exports = {
 	name: "anyPage",
@@ -318,8 +323,8 @@ module.exports = {
 			// and then we could then an assertion with a URL if we had assertions...
 		};
 	}
-};</pre>
-
+};
+```
 You can see this is a pretty small file and it wouldn&#8217;t be hard to define multiple of these pages to support a larger number of tests. The pageUtils library provides the ability to get DOM elements that have been wrapped with helper functions for visibility, click interaction, and even typing values. We expose abstractions that are simple enough to describe to someone over the phone (are you logged in? what does the welcome text say? Press the login button) and wire this to the lower-level language the browser&#8217;s JavaScript engine understands.
 
 # But that&#8217;s not everything&#8230;

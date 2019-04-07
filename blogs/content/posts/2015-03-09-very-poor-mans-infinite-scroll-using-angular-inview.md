@@ -3,6 +3,7 @@ title: (Very) Poor Man’s Infinite Scroll using angular-inview
 author: Alex Ullrich
 type: post
 date: 2015-03-09T16:12:37+00:00
+ID: 3295
 url: /index.php/all/very-poor-mans-infinite-scroll-using-angular-inview/
 views:
   - 8068
@@ -24,7 +25,8 @@ This brings me to a handy bit of code called <a href="https://github.com/theniks
 
 Lets take a look at how these work, starting with a sample controller. All the controller needs to do here is create an array of objects to bind to, provide a scope variable representing the repeater limit and a function that will increase the limit if passed a truthy value. This is wrapped in a $timeout call just to force a delay so you can see the magic happen. 
 
-<pre>var app = angular.module('inview-example', ['angular-inview']);
+```javascript
+var app = angular.module('inview-example', ['angular-inview']);
 
 app.controller('exampleController', function($scope, $timeout) {
   $scope.limit = 20;
@@ -42,20 +44,30 @@ app.controller('exampleController', function($scope, $timeout) {
       }, 500);
     }
   };
-});</pre>
-
+});
+```
 And some HTML:
 
-<pre><body ng-controller="exampleController"&gt;
-    <h1&gt;Homeless Man's Infinite Scroll</h1&gt;
+```html
+
     
-    <div in-view-container class="container"&gt;
-      <div ng-repeat="item in items | limitTo: limit"&gt;
-        <input type="text" ng-model="item.value" /&gt;</textbox&gt;
-      </div&gt;
-      <span in-view="increaseLimit($inview)" ng-show="limit < items.length"&gt;Loading more...</span&gt;
-    </div&gt;
-  </body&gt;</pre>
+
+# Homeless Man's Infinite Scroll
+    
+    
+
+<div in-view-container class="container">
+  <div ng-repeat="item in items | limitTo: limit">
+    <input type="text" ng-model="item.value" /></textbox>
+          
+  </div>
+        
+  
+  <span in-view="increaseLimit($inview)" ng-show="limit < items.length">Loading more...</span>
+      
+</div>
+  
+```
 
 So on initial load 0-19 will be displayed. The span positioned outside the repeater is the element we will use to trigger expanding the limit (causing more items to be rendered / bound). This will pass the value $inview to our expansion method, and when true the limit will be increased, causing more items to be rendered. Once the limit is greater than or equal to the number of items we have, there is no need to show the trigger element anymore.
 

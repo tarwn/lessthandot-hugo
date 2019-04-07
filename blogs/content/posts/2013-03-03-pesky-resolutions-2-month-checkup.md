@@ -3,6 +3,7 @@ title: Pesky resolutions, the two month checkup
 author: SQLDenis
 type: post
 date: 2013-03-03T12:10:00+00:00
+ID: 2018
 excerpt: |
   It has been two months since I posted my resolution for 2013, you can find that post here: Ah yes, those pesky resolutions. Today I decided to take a look at how I am doing.
   

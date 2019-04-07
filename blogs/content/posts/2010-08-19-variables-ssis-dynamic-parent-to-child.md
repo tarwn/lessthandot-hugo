@@ -3,6 +3,7 @@ title: 'Making SSIS Dynamic: Passing variables between packages'
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-19T11:03:16+00:00
+ID: 879
 excerpt: 'So far, we showed how to manipulate connections so we can freely move packages from server to server without the need to open them in BIDS and change connections.  This allows us to manage packages easily, not only from a development stand point, but allows for teams to pass along our packages and then move them without being required to either open them or have BIDS to change these critical connections.'
 url: /index.php/datamgmt/datadesign/variables-ssis-dynamic-parent-to-child/
 views:
@@ -68,7 +69,9 @@ Now we are ready to use the variables to set the connection properties. Highligh
 
 Set ConnectionString to the following expression
 
-<pre>"Data Source=" + @[User::ServerName]  + ";Initial Catalog=" + @[User::DefaultCatalog]   + ";Provider=SQLNCLI10.1;Integrated Security=SSPI;"</pre>
+```
+"Data Source=" + @[User::ServerName]  + ";Initial Catalog=" + @[User::DefaultCatalog]   + ";Provider=SQLNCLI10.1;Integrated Security=SSPI;"
+```
 
 Then make ServerName and InitialCatalog the value of the matching variables.
 
@@ -102,17 +105,22 @@ Now that we’ve setup and configured the relationships from the parent variable
 
 I like script tasks in the IDE as a quick test for variables values. It is just one of those old school methods. So add a script task to the child package, Pacakge1.dtsx. Enter in the ReadOnlyVariables
 
-<pre>User::DefaultCatalog,User::ServerName</pre>
+```
+User::DefaultCatalog,User::ServerName
+```
 
 And then use this code
 
-<pre>public void Main()
+```SQL
+public void Main()
         {
             MessageBox.Show(Dts.Variables["ServerName"].Value.ToString());
             MessageBox.Show(Dts.Variables["DefaultCatalog"].Value.ToString());
     MessageBox.Show(Dts.Connections["DestinationConnection_Server2008R2"].ConnectionString.ToString());
             Dts.TaskResult = (int)ScriptResults.Success;
-        }</pre></p> 
+        }
+```
+</p> 
 
 Save both packages and then execute the, Execute Package Task in Package.dtsx
   

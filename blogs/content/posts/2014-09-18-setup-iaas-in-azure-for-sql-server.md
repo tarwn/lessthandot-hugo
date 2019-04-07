@@ -3,6 +3,7 @@ title: Setup IaaS in Azure for SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2014-09-19T01:19:59+00:00
+ID: 2942
 url: /index.php/uncategorized/setup-iaas-in-azure-for-sql-server/
 views:
   - 5742
@@ -136,7 +137,8 @@ To complete the remaining step of creating the listener, the second script in th
 
 The last script and the parameters needed are the availability group, “$ag being the availability group name you used”, the cluster network name, which is typically Cluster Network 1 by default.  With these changed, you can execute the script and it will functionally work.  However, it is recommended to change the listener port.
 
-<pre># Define variables
+```powershell
+# Define variables
 
 $ag = "SQLAG_DEV01" # The availability group name
 
@@ -146,7 +148,7 @@ $networkName = "Cluster Network 1" # The cluster network name, usually "Cluster 
 
 $listenerPort = "10000" # Listener port. Same as the endpoint port.
 
- 
+&nbsp;
 
 $aglistener = $ag + "Listener"
 
@@ -176,8 +178,8 @@ Get-ClusterResource -Name $ag | Set-ClusterResourceDependency "[$aglistener]"
 
 # Change port number on the listener to 1433
 
-Set-SqlAvailabilityGroupListener -Path SQLSERVER:\SQL\$env:COMPUTERNAME\DEFAULT\AvailabilityGroups\$ag\AvailabilityGroupListeners\$aglistener -Port $listenerPort</pre>
-
+Set-SqlAvailabilityGroupListener -Path SQLSERVER:\SQL\$env:COMPUTERNAME\DEFAULT\AvailabilityGroups\$ag\AvailabilityGroupListeners\$aglistener -Port $listenerPort
+```
 Once the script executes successfully, test the listener by connecting to the listener name from SSMS on the primary SQL Server in the availability group.
   
 [<img src="/wp-content/uploads/2014/09/azure_11.png" alt="azure_11" width="624" height="346" class="alignnone size-full wp-image-2956" srcset="/wp-content/uploads/2014/09/azure_11.png 624w, /wp-content/uploads/2014/09/azure_11-300x166.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][14]

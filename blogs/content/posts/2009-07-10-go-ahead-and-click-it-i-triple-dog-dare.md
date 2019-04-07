@@ -3,6 +3,7 @@ title: 'Go ahead and click it!  I triple dog dare you!!!'
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-07-10T10:56:32+00:00
+ID: 501
 excerpt: "As a DBA the word no comes out of us often.  It's just the nature of our jobs that we will find ourselves not accepting requests and revoking bad choices already made.  If you are a DBA and you're a yes type of person then you're in the wrong field.  Pr&hellip;"
 url: /index.php/datamgmt/dbprogramming/go-ahead-and-click-it-i-triple-dog-dare/
 views:

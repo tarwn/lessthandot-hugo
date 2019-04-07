@@ -3,6 +3,7 @@ title: Zero-One-Some Testing
 author: George Mastros (gmmastros)
 type: post
 date: 2011-12-13T11:33:00+00:00
+ID: 1441
 excerpt: |
   I met Denis and Sebastian over a year ago when I attended their session on test driven database development.  Since then, I have been using tSQLt to add unit tests to my database.  The following post was written by Denis Lloyd Jr.
   
@@ -87,11 +88,12 @@ The join type (e.g. inner, left or right outer, full) must also be considered. T
 
 **Filters**: Zero-one-some is also particularly useful in filters, such as WHERE clauses. Consider the following sub-query, for example:
 
-<pre>SELECT Name   
+sql
+SELECT Name   
 FROM OrderMgmt.Customer  
 WHERE CustomerId =        
     (SELECT CustomerId          
        FROM OrderMgmt.Order         
-      WHERE OrderId = @OrderId)  </pre>
-
+      WHERE OrderId = @OrderId)  
+```
 While this is a simplistic case, the programmer is likely expecting exactly one record to be returned from the sub-query. If the sub-query returns zero or multiple records though, the actual behavior of this query may not be so pleasant.

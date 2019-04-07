@@ -3,6 +3,7 @@ title: Working with 32 bit providers and 64 bit SQL Server
 author: Naomi Nosonovsky
 type: post
 date: 2010-08-12T14:39:48+00:00
+ID: 869
 excerpt: |
   UPDATE
   Turned out I was wrong and it's easy enough to create SSIS package to run an import of VFP table into SQL Server 64 bit. The complete solution was provided by Jin Chen in this MSDN thread How to run SSIS package - Import VFP table to SQL Server&hellip;
@@ -172,5 +173,5 @@ In other words, if you need working with data in other formats, use 32 bit versi
  [3]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/d730190c-47e6-4c00-91c0-3e95af0fdc5e
  [4]: http://fox.wikis.com/wc.dll?Wiki~VisualFoxProDataFromSQLServer
  [5]: http://social.msdn.microsoft.com/Forums/en-US/sqltools/thread/ad87945a-b47f-4ec5-941a-d2ec7b02be59
- [6]: http://forum.lessthandot.com/viewforum.php?f=17
- [7]: http://forum.lessthandot.com/viewforum.php?f=22
+ [6]: http://forum.ltd.local/viewforum.php?f=17
+ [7]: http://forum.ltd.local/viewforum.php?f=22

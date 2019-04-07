@@ -3,6 +3,7 @@ title: Series of “Bad habits to kick” by Aaron Bertrand
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-10-18T21:10:03+00:00
+ID: 590
 url: /index.php/datamgmt/datadesign/series-of-bad-habits-to-kick-by-aaron-be/
 views:
   - 14197

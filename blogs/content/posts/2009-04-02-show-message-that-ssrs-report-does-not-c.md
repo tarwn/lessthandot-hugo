@@ -3,6 +3,7 @@ title: Show message for SSRS reports that do not return data
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-02T15:23:04+00:00
+ID: 371
 url: /index.php/datamgmt/datadesign/show-message-that-ssrs-report-does-not-c/
 views:
   - 25226
@@ -17,8 +18,7 @@ It is good practice to show the user a message if your report does not return an
   
 Create a blank report. Add a dataset that returns some data. You can use the following query to create your example…
 
-<pre>select 1 col1,2 col2,3 col3,4 col4,5 col5
-union all
+sql
 select 1 col1,2 col2,3 col3,4 col4,5 col5
 union all
 select 1 col1,2 col2,3 col3,4 col4,5 col5
@@ -29,8 +29,10 @@ select 1 col1,2 col2,3 col3,4 col4,5 col5
 union all
 select 1 col1,2 col2,3 col3,4 col4,5 col5
 union all
-select 1 col1,2 col2,3 col3,4 col4,5 col5</pre>
-
+select 1 col1,2 col2,3 col3,4 col4,5 col5
+union all
+select 1 col1,2 col2,3 col3,4 col4,5 col5
+```
 Of course you need a data source to create a report so just create one to a test system or local instance.
   
 Drag over a Table and make it the basic ugly SSRS style blue with white fonts. (optional of course 😉 ) One thing before I forget to say is to make sure you use something other than transparent for the details.
@@ -47,7 +49,9 @@ Right click the table and go into the properties. Click the tab for visibility a
   
 In the Expression box type: 
 
-<pre>=iif(Rownumber("{dataset name}")=0, true,false)</pre>
+```vb
+=iif(Rownumber("{dataset name}")=0, true,false)
+```
 
 Change {dataset name} to what you named your dataset. Click OK to save the expression and exit properties.
   
@@ -81,9 +85,10 @@ Hit preview
 
 Go back to your dataset and change the query to this
 
-<pre>declare @tbl table (col1 int,col2 int,col3 int,col4 int,col5 int)
-select * from @tbl</pre>
-
+sql
+declare @tbl table (col1 int,col2 int,col3 int,col4 int,col5 int)
+select * from @tbl
+```
 Don’t forget to hit the refresh dataset button and then preview your report again. 
 
 <div class="image_block">

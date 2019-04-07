@@ -3,6 +3,7 @@ title: Do you have any questions for Paul Nielsen or Louis Davidson
 author: SQLDenis
 type: post
 date: 2008-06-10T13:48:02+00:00
+ID: 51
 url: /index.php/datamgmt/datadesign/do-you-have-any-questions-for-paul-niels/
 views:
   - 3522

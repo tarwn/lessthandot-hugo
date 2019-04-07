@@ -3,6 +3,7 @@ title: 'Troubleshooting SQL Server: A guide for the Accidental DBA'
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-10-02T19:41:00+00:00
+ID: 1335
 excerpt: 'I’m very excited to announce that the book, “Troubleshooting SQL Server: A guide for the Accidental DBA” will be at the PASS Summit this year.  Jonathan Kehayias is well known as one of the best all-around SQL Server Professionals out there and any publ&hellip;'
 url: /index.php/datamgmt/dbprogramming/troubleshooting-sql-server-a-guide/
 views:

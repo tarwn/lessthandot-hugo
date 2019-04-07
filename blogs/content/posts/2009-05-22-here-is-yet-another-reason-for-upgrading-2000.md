@@ -3,6 +3,7 @@ title: Here Is Yet Another Reason For Upgrading To SQL Server 2008 From SQL Serv
 author: SQLDenis
 type: post
 date: 2009-05-22T13:08:08+00:00
+ID: 442
 url: /index.php/datamgmt/dbprogramming/here-is-yet-another-reason-for-upgrading-2000/
 views:
   - 3990
@@ -24,11 +25,13 @@ The reason for this is that all the filegroups get filled with zeroes. In SQL Se
 
 I decided to take this for a test I ran the following script on both a 2000 and a 2008 box, both are desktop XP machines. The script will create a database named test with a datafile of 3012.00 MB and a log file of 2321.00 MB
 
-<pre>CREATE DATABASE [Test]  ON (NAME = N'Test_Data', 
+sql
+CREATE DATABASE [Test]  ON (NAME = N'Test_Data', 
 FILENAME = N'C:Test.MDF' , SIZE = 3012, FILEGROWTH = 10%) 
 LOG ON (NAME = N'Test_Log', FILENAME = N'C:Test_Log.LDF' , SIZE = 2321, FILEGROWTH = 10%)
  COLLATE SQL_Latin1_General_CP1_CI_AS
-GO</pre>
+GO
+```
 
 The CREATE DATABASE process is allocating 3012.00 MB on disk &#8216;Test_Data&#8217;.
   
@@ -44,14 +47,18 @@ I decided to do another test and made the database bigger. This time I created a
 
 First you need to drop the database we created before
 
-<pre>drop database test
-go</pre>
+sql
+drop database test
+go
+```
 
-<pre>CREATE DATABASE [Test]  ON (NAME = N'Test_Data', 
+sql
+CREATE DATABASE [Test]  ON (NAME = N'Test_Data', 
 FILENAME = N'C:Test.MDF' , SIZE = 6012, FILEGROWTH = 10%) 
 LOG ON (NAME = N'Test_Log', FILENAME = N'C:Test_Log.LDF' , SIZE = 4321, FILEGROWTH = 10%)
  COLLATE SQL_Latin1_General_CP1_CI_AS
-GO</pre>
+GO
+```
 
 The CREATE DATABASE process is allocating 6012.00 MB on disk &#8216;Test_Data&#8217;.
   

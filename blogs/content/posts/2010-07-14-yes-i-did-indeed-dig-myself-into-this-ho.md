@@ -3,6 +3,7 @@ title: Yes, I did indeed dig myself into this hole…
 author: chaospandion
 type: post
 date: 2010-07-14T21:33:50+00:00
+ID: 845
 url: /index.php/desktopdev/mstech/yes-i-did-indeed-dig-myself-into-this-ho/
 views:
   - 4158
@@ -17,9 +18,10 @@ tags:
 ---
 Folks, please remember to refactor early and often&#8230; 
 
-<pre>private Element ReadMemberExpression()
+```CSharp
+private Element ReadMemberExpression()
 {
-    var queue = new Queue<Element[]&gt;();
+    var queue = new Queue<Element[]>();
     var newDepth = 0;
     var argsCount = 0;
     _scanner.CreateRestorePoint();
@@ -31,7 +33,7 @@ Folks, please remember to refactor early and often&#8230;
             if (a != null)
             {
                 argsCount++;
-                if (argsCount &gt; newDepth)
+                if (argsCount > newDepth)
                 {
                     _scanner.Restore();
                     break;
@@ -103,7 +105,7 @@ Folks, please remember to refactor early and often&#8230;
             children = queue.Dequeue();
         }
         element = new Element(ElementType.MemberExpression, children);
-        while (queue.Count &gt; 0)
+        while (queue.Count > 0)
         {
             children = queue.Dequeue();
             if (children.Length == 3 && children[2].Type == ElementType.Arguments)
@@ -119,7 +121,7 @@ Folks, please remember to refactor early and often&#8230;
                 element = new Element(ElementType.MemberExpression, children);
             }
         }
-        if (newDepth &gt; 0)
+        if (newDepth > 0)
         {
             _scanner.Restore();
             return null;
@@ -127,4 +129,5 @@ Folks, please remember to refactor early and often&#8230;
         _scanner.DeleteRestorePoint();
         return element;
     }
-}</pre>
+}
+```

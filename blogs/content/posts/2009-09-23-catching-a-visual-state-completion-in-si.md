@@ -3,6 +3,7 @@ title: Catching a Visual State Completion in Silverlight
 author: ThatRickGuy
 type: post
 date: 2009-09-23T11:41:24+00:00
+ID: 565
 excerpt: Catching the completion of a visual state change in Silverlight 3
 url: /index.php/webdev/webdesigngraphicsstyling/catching-a-visual-state-completion-in-si/
 views:
@@ -26,13 +27,17 @@ Luckily for us, Visual States are composed of Story Boards. Story Boards DO have
 
 To get it to work, it&#8217;s really simple. First, create your event handling method:
 
-<pre>Private Sub SomeStoryBoard_Completed(ByVal sender As Object, ByVal e As System.EventArgs) 
+```VB.Net
+Private Sub SomeStoryBoard_Completed(ByVal sender As Object, ByVal e As System.EventArgs) 
      MessageBox.Show("StoryBoard Completed!")
-End Sub</pre>
+End Sub
+```
 
 Next, in your LayoutRoot_Loaded method, add a handler:
 
-<pre>AddHandler Me.MyVisualState.Storyboard.Completed, AddressOf SomeStoryBoard_Completed</pre>
+```VB.Net
+AddHandler Me.MyVisualState.Storyboard.Completed, AddressOf SomeStoryBoard_Completed
+```
 
 Where &#8220;MyVisualState&#8221; is the name of the visual state you are trying to work with.
 
@@ -42,7 +47,8 @@ There is another way, that is even more simple, but it appears to not be working
 
 Start by going into the XAML and finding the Storyboard in the Visual State you are trying to work with. Once you&#8217;ve found it, give the Storyboard a name (x:Name=&#8221;sbSearchOpen&#8221; on line 11 in the following example)
 
-<pre><VisualStateManager.VisualStateGroups>
+```XAML
+<VisualStateManager.VisualStateGroups>
 	<VisualStateGroup x:Name="SearchBox">
 		<VisualStateGroup.Transitions>
 			<VisualTransition GeneratedDuration="00:00:00.6000000">
@@ -66,13 +72,15 @@ Start by going into the XAML and finding the Storyboard in the Visual State you 
 			</Storyboard>
 		</VisualState>
 	</VisualStateGroup>
-</VisualStateManager.VisualStateGroups></pre>
-
+</VisualStateManager.VisualStateGroups>
+```
 Then we can switch to the code behind and in the object list select the sbSearchOpen story board, and in the event list select Completed. This will generate the sbSearchOpen_Completed event:
 
-<pre>Private Sub sbSearchOpen_Completed(ByVal sender As Object, ByVal e As System.EventArgs) Handles sbSearchOpen.Completed
+```VB.Net
+Private Sub sbSearchOpen_Completed(ByVal sender As Object, ByVal e As System.EventArgs) Handles sbSearchOpen.Completed
         MessageBox.Show("Search Opened!")
-    End Sub</pre>
+    End Sub
+```
 
 Totally an easy and intuitive way of catching the end of a story board. Unfortunately, it doesn&#8217;t work. The IDE acts like it expects it to work, but for some reason, at run time, the sbSearchOpen_Completed method will never fire.
 

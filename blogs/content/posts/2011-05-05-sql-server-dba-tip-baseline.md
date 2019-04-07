@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 8 – Server Monitoring – Baseline
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-05T10:12:00+00:00
+ID: 1142
 excerpt: 'Troubleshooting any type of problem can be stressful and tedious.  SQL Server performance issues are no exception.  If an instance of SQL Server suddenly shows a spike or immediate bottleneck with one or many resources, determining the cause of that spi&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-baseline/
 views:

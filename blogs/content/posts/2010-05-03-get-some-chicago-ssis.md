@@ -3,6 +3,7 @@ title: SQL Connections Suburban Chicago May 2010 Meeting (SSIS Basics)
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-05-03T13:55:24+00:00
+ID: 778
 excerpt: 'I will be speaking tomorrow night on SQL Server Integration Services basics for the SQL Connections group in the Chicago suburbs.  Yes, the Wisconsin guy is going to go farther than Hwy 60 once again.  The session, “SSIS 2008 Basics – Get up to Speed in 90 Minutes”, will be going over the fundamentals of SSIS and getting started with your own installation and development of packages.   There is a lot to cover when considering SSIS basics when starting from opening the installation media, to opening BIDS for the first time.  I hope everyone that attends leaves the session excited and ready to jump into SSIS.'
 url: /index.php/datamgmt/datadesign/get-some-chicago-ssis/
 views:

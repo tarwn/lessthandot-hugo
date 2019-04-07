@@ -3,6 +3,7 @@ title: 'Review: Physics of the Future: How Science Will Shape Human Destiny and 
 author: SQLDenis
 type: post
 date: 2011-06-12T18:34:00+00:00
+ID: 1216
 excerpt: "I picked up the book Physics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 mainly to see what is in store for humanity in the year 2100. Having read Ray Kurzweil's 3 books on a similar subject, this was of inte&hellip;"
 url: /index.php/itprofessionals/ethicsit/review-physics-of-the-future/
 views:

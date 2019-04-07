@@ -3,6 +3,7 @@ title: Report Builder 3.0 – Map Wizard
 author: Jes Borland
 type: post
 date: 2012-03-28T11:33:00+00:00
+ID: 1582
 excerpt: When SQL Server 2008 was introduced, it included the new spatial data types of geometry and geography. Report Builder 3.0 gave us the capability to add maps to reports, which can utilize those data types to visualize data.
 url: /index.php/datamgmt/dbprogramming/report-builder-3-0-map/
 views:

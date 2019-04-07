@@ -3,6 +3,7 @@ title: Automated Job Activation with Mirroring and Availability Groups
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-11-05T18:11:00+00:00
+ID: 2192
 excerpt: 'Database mirroring is a fantastic feature.  It allows for a high safety and performance-capable copy of a database in another physical location.  This feature provides a level of failure tolerance on the database which flows to the disk level.   Of cour&hellip;'
 url: /index.php/datamgmt/dbadmin/automated-job-activation-with-mirroring/
 views:
@@ -34,7 +35,8 @@ As with any customized process, the process is only as good as the effort put in
 
 In order to maintain a result set check and an efficient way of validating the flow, a metadata table is created in a database designed to retain administrative objects.  The table creation statement is shown below.
 
-<pre>CREATE TABLE [dbo].[Mirroring_Jobs](
+sql
+CREATE TABLE [dbo].[Mirroring_Jobs](
 	[JobName] [nvarchar](128) NOT NULL,
 	[RunStatus] [tinyint] NULL,
 	[Active] [bit] NULL,
@@ -43,8 +45,8 @@ In order to maintain a result set check and an efficient way of validating the f
  CONSTRAINT [PK_Mirroring_Jobs] PRIMARY KEY CLUSTERED 
 (
 	[JobName] ASC
-)</pre>
-
+)
+```
 The above table is designed to manage each row as a job.  Each job has the settings capable of dictating if the job is currently active on the primary instance (Active), if the current status of the job is enabled on the primary (RunStatus), if the job in this table and where the administrative database is located is on the mirror or principal (Role) and then the database the job executes within the context of.
 
 A populated view of this table is shown below, containing three jobs – Full Backup, Differential Backup and Log Backup.
@@ -63,7 +65,8 @@ In order to actively monitor the mirror state of this session, another job is cr
 
 In order to maintain an object that is easily updated and retained in the administrative database, a procedure is created that is executed from the monitoring job.  The procedure has the same process as the flow chart earlier discussed.  The primary task of the procedure is to first check if the state of the mirroring session has changed for the mirror databases.  If it has changed and the roles are set for mirror, the jobs will be enabled by calling the sp\_update\_job procedure in the MSDB database. If the roles are set as mirror and the databases are found to be in a mirroring state and the jobs are enabled, the jobs will be set to disabled.   This will protect against a mirror failover being reset back to the originating principal.
 
-<pre>CREATE PROCEDURE [dbo].[dba_CheckMirrorForJobs]
+sql
+CREATE PROCEDURE [dbo].[dba_CheckMirrorForJobs]
 AS
 DECLARE @Loop INT = 1
 DECLARE @CMD NVARCHAR(1500) = ''
@@ -102,8 +105,8 @@ IF EXISTS(SELECT 1 FROM #Review WHERE mirroring_role_desc = 'MIRROR' AND [Role] 
 	 END
  END
 
-DROP TABLE #Review</pre>
-
+DROP TABLE #Review
+```
 As we can see, the coding behind this procedure is easy to follow and has two primary logical conditions behind it – disable or enable based on the state.
 
 **Testing a failover**

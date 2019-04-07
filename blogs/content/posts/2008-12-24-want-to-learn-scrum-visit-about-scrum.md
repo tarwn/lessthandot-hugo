@@ -3,6 +3,7 @@ title: Want To Learn Scrum? Visit About Scrum.
 author: SQLDenis
 type: post
 date: 2008-12-24T11:40:18+00:00
+ID: 260
 url: /index.php/itprofessionals/ethicsit/want-to-learn-scrum-visit-about-scrum/
 views:
   - 6012

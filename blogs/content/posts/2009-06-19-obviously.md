@@ -3,6 +3,7 @@ title: Obviously!
 author: chopstik
 type: post
 date: 2009-06-19T16:05:14+00:00
+ID: 478
 url: /index.php/itprofessionals/ethicsit/obviously/
 views:
   - 5506

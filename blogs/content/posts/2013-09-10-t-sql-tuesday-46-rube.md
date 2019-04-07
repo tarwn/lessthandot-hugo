@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #46: Rube Goldberg Machine'
 author: Koen Verbeeck
 type: post
 date: 2013-09-10T13:46:00+00:00
+ID: 2153
 excerpt: |
    
   

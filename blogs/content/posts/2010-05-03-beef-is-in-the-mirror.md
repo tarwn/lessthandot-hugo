@@ -3,6 +3,7 @@ title: Planning your SQL Server mirroring landscape
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-05-03T12:29:15+00:00
+ID: 777
 excerpt: 'Researching and obtaining the knowledge and test cases for configuring mirroring is a large part in putting SQL Server mirroring to work for your High Availability (HA) solution.  Before you start jumping into configuring mirroring, several questions should be researched and answered.  This ensures that the HA solution and mirroring will work for your environment and your business.  One of the highest achievements in mirroring is to ensure it will always be invisible to your user community.  After all, as DBAs, our position is one that truly is successful when the phones are not ringing and users forget who we are.  Our positions have little to no recognition from their view.  It’s a hard truth that we most of the time are far outside the spotlight, but one that is key to the role.'
 url: /index.php/datamgmt/datadesign/beef-is-in-the-mirror/
 views:

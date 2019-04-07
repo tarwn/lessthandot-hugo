@@ -3,6 +3,7 @@ title: Running static code analysis on SQL Server database with Visual Studio Te
 author: SQLDenis
 type: post
 date: 2010-01-31T23:35:26+00:00
+ID: 690
 url: /index.php/datamgmt/datadesign/running-static-code-analysis-on-sql-serv/
 views:
   - 8525
@@ -86,7 +87,8 @@ Here is the output from that, this creates 216 warnings, I have not pasted the w
 
 Now I was intrigued so I picked the aspnet\_Applications\_CreateApplication stored procedure from that list.
 
-<pre>USE [aspnetdb]
+sql
+USE [aspnetdb]
 GO
 /****** Object:  StoredProcedure [dbo].[aspnet_Applications_CreateApplication]    Script Date: 01/17/2010 15:51:15 ******/
 SET ANSI_NULLS ON
@@ -140,8 +142,8 @@ BEGIN
             END
         END
     END
-END</pre>
-
+END
+```
 As you can see it uses the LOWER function in this line
 
 WHERE LOWER(@ApplicationName) = LoweredApplicationName
@@ -150,7 +152,8 @@ It actually tells you on which line and position this is actually used (ASPNET\_
 
 Here is another stored procedure, this one uses the LOWER function and old style joins
 
-<pre>USE [aspnetdb]
+sql
+USE [aspnetdb]
 GO
 /****** Object:  StoredProcedure [dbo].[aspnet_UsersInRoles_RemoveUsersFromRoles]    Script Date: 01/17/2010 15:53:59 ******/
 SET ANSI_NULLS ON
@@ -279,7 +282,8 @@ BEGIN
     IF( @TranStarted = 1 )
         COMMIT TRANSACTION
     RETURN(0)
-END</pre>
+END
+```
 
 So, as you can see it is pretty simple to use Visual Studio Team System 2008 Database Edition to perform static code analysis, the question is of course if you dare to run this against your own database?
 
@@ -289,5 +293,5 @@ I will be back with another post to explore some other things that this tool can
 
  [1]: /index.php/WebDev/ServerProgramming/ASPNET/setting-up-sql-server-with-asp-net-mvc
  [2]: http://imgur.com/oqRCC.png "Run Analysis"
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

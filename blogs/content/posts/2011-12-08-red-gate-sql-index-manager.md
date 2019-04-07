@@ -3,6 +3,7 @@ title: Red Gate’s new SQL Index Manager
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-08T16:36:00+00:00
+ID: 1425
 excerpt: 'Today, Red Gate announced a new product in beta testing, SQL Index Manager.  The new tool will be used to analyze and recommend solutions to index fragmentation on a SQL Server Instance.  The first thing you may ask yourself is: another tool to fix frag&hellip;'
 url: /index.php/datamgmt/dbadmin/red-gate-sql-index-manager/
 views:
@@ -37,13 +38,15 @@ One thing I noticed is, it does not seem to take into account if the edition of 
 
 I was happy to see the first thing Red Gate does is weed out system databases, but didn’t include databases like distribution or such that are used by replication.  Those system databases are often and commonly indexed and require analysis.  The tool is also filtering out databases that are in standby, offline and snapshots.  I think the query that is used could use some [ ] around name though (ok, now I’m being really picky)
 
-<pre>SELECT name AS databaseName
+sql
+SELECT name AS databaseName
      , database_id AS databaseId
 FROM master.sys.databases
 WHERE name NOT IN ('master', 'msdb', 'tempdb', 'model')   
-  AND is_in_standby <&gt; 1                                 
+  AND is_in_standby <> 1                                 
   AND state_desc = 'ONLINE'                              
-  AND source_database_id IS NULL</pre>
+  AND source_database_id IS NULL
+```
 
  
 
@@ -57,13 +60,14 @@ On to the good stuff: SQL Index Manager is more than likely dynamic T-SQLing out
 
 An example of that call
 
-<pre>exec sp_executesql N'
+sql
+exec sp_executesql N'
 SELECT index_id
      , avg_fragmentation_in_percent
      , page_count
 FROM sys.dm_db_index_physical_stats(@databaseId, @objectId, @indexId, @partitionNr, NULL)
-',N'@databaseId int,@objectId int,@indexId int,@partitionNr int',@databaseId=6,@objectId=341576255,@indexId=1,@partitionNr=1</pre>
-
+',N'@databaseId int,@objectId int,@indexId int,@partitionNr int',@databaseId=6,@objectId=341576255,@indexId=1,@partitionNr=1
+```
  
 
 This is all evaluated and then either the message I received is returned or the tool moves onto some more meaty decisions.

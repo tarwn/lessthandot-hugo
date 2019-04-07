@@ -3,6 +3,7 @@ title: SSRS – Linking one report to another report
 author: Kevin Conan
 type: post
 date: 2013-02-13T18:09:00+00:00
+ID: 1991
 excerpt: When creating reports, I try to keep them simple, clean and with as little information as possible.
 url: /index.php/datamgmt/ssrs/ssrs-linking-one-report-to/
 views:

@@ -3,6 +3,7 @@ title: Thanks, LessThanDot
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-03-29T22:00:00+00:00
+ID: 1091
 excerpt: 'LessThanDot (LTD) is coming of age and making a great name for itself with all the communities.  This past week the primary administrators and operators of the site once again paid, from their own pockets, the server costs to keep us going. We also move&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/thanks-lessthandot/
 views:

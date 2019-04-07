@@ -3,6 +3,7 @@ title: My First Android Application (Ubuntu Linux)
 author: Rob Earl
 type: post
 date: 2011-01-05T17:46:00+00:00
+ID: 996
 excerpt: |
   This post details my first adventure into developing for the Android platform and the steps taken to get the HelloWorld application to run.
   
@@ -58,7 +59,8 @@ This post details my first adventure into developing for the Android platform an
 
 ## HelloAndroid.java
 
-<pre>package com.example.helloandroid;
+```java
+package com.example.helloandroid;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -73,7 +75,8 @@ public class HelloAndroid extends Activity {
        tv.setText("Hello, Android");
        setContentView(tv);
    }
-}</pre>
+}
+```
 
 For more information see the Android development documentation:
 

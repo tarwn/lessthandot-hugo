@@ -3,6 +3,7 @@ title: I’m talking SQL Server, Azure, and Extended Events at SQLintersection
 author: Jes Borland
 type: post
 date: 2016-08-18T13:59:11+00:00
+ID: 4664
 url: /index.php/uncategorized/im-talking-sql-server-azure-and-extended-events-at-sqlintersection/
 views:
   - 6680

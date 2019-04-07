@@ -3,6 +3,7 @@ title: Here are my SSIS 2012 Data Sources
 author: Axel Achten (axel8s)
 type: post
 date: 2012-03-20T07:48:00+00:00
+ID: 1568
 excerpt: 'In my previous post I wass looking for the Data Sources and Data Source Views in SSIS 2012 projects. As Carla Sabotta (site|twitter) mentioned in the comments you can change the deployment model of your project so the Data Sources folder will reappear.&hellip;'
 url: /index.php/datamgmt/ssis/here-are-my-ssis-2012/
 views:

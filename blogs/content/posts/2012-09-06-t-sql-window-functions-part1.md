@@ -3,6 +3,7 @@ title: 'T-SQL Window Functions – Part 1: The OVER Clause'
 author: Steve Hughes (DataOnWheels)
 type: post
 date: 2012-09-06T11:44:00+00:00
+ID: 1714
 excerpt: 'SQL Window functions were introduced in SQL Server 2005.  At the time, only a small set of functionality was available.  Window functions fill a need in the aggregation story for SQL Server.  Window functions allow the developer to use row level aggrega&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/t-sql-window-functions-part1/
 views:

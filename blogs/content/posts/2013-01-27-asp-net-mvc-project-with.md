@@ -3,6 +3,7 @@ title: ASP.NET MVC project with Modal dialogs and Flexigrid
 author: Naomi Nosonovsky
 type: post
 date: 2013-01-27T20:24:00+00:00
+ID: 1943
 excerpt: 'In the last few months I started working on my first ASP.NET MVC project. I already had a Visual FoxPro application I wrote in a few days and I wanted to replicate it for the Web using ASP.NET MVC. This project is still in its infancy, but I want to sha&hellip;'
 url: /index.php/webdev/uidevelopment/ajax/asp-net-mvc-project-with/
 views:
@@ -21,7 +22,8 @@ I started my project from defining my models using Entity Framework Code first p
 
 This is how the table looks in the database:
 
-<pre>CREATE TABLE [dbo].[Clients](
+sql
+CREATE TABLE [dbo].[Clients](
 	[ClientID] [int] IDENTITY(1,1) NOT NULL,
 	[client_no] [smallint] NOT NULL,
 	[client_name] [varchar](30) NULL,
@@ -78,13 +80,14 @@ ALTER TABLE [dbo].[Clients]  WITH CHECK ADD  CONSTRAINT [FK_Clients_Operators_Mo
 REFERENCES [dbo].[Operators] ([op_code])
 GO
 ALTER TABLE [dbo].[Clients] CHECK CONSTRAINT [FK_Clients_Operators_ModifiedBy]
-GO</pre>
-
+GO
+```
 Last 2 constraints in the above script refer to the Operators table I am not showing here.
 
 Let&#8217;s add some data to insert:
 
-<pre>GO
+sql
+GO
 SET IDENTITY_INSERT [dbo].[Clients] ON
 
 INSERT [dbo].[Clients] ([ClientID], [client_no], [client_name], [Contact1], [C1_Email], [Contact2], [C2_Email], [C1_Phone], [C1_Ext], [C2_Phone], [C2_Ext], [Address], [EnteredBy], [EnteredOn], [ModifiedBy], [ModifiedOn]) VALUES (3, 8096, N'Wachusett', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'ADMIN ', CAST(0x9F9002DD AS SmallDateTime), NULL, NULL)
@@ -94,11 +97,12 @@ INSERT [dbo].[Clients] ([ClientID], [client_no], [client_name], [Contact1], [C1_
 INSERT [dbo].[Clients] ([ClientID], [client_no], [client_name], [Contact1], [C1_Email], [Contact2], [C2_Email], [C1_Phone], [C1_Ext], [C2_Phone], [C2_Ext], [Address], [EnteredBy], [EnteredOn], [ModifiedBy], [ModifiedOn]) VALUES (8, 1161, N'Shawnee Mountain', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'ADMIN ', CAST(0x9F9002DD AS SmallDateTime), NULL, NULL)
 INSERT [dbo].[Clients] ([ClientID], [client_no], [client_name], [Contact1], [C1_Email], [Contact2], [C2_Email], [C1_Phone], [C1_Ext], [C2_Phone], [C2_Ext], [Address], [EnteredBy], [EnteredOn], [ModifiedBy], [ModifiedOn]) VALUES (9, 7497, N'Southern Star Obs Wheel', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'ADMIN ', CAST(0x9F9002DD AS SmallDateTime), NULL, NULL)
 INSERT [dbo].[Clients] ([ClientID], [client_no], [client_name], [Contact1], [C1_Email], [Contact2], [C2_Email], [C1_Phone], [C1_Ext], [C2_Phone], [C2_Ext], [Address], [EnteredBy], [EnteredOn], [ModifiedBy], [ModifiedOn]) VALUES (10, 1636, N'Mount Rose', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'ADMIN ', CAST(0x9F9002DD AS SmallDateTime), NULL, NULL)
-INSERT [dbo].[Clients] ([ClientID], [client_no], [client_name], [Contact1], [C1_Email], [Contact2], [C2_Email], [C1_Phone], [C1_Ext], [C2_Phone], [C2_Ext], [Address], [EnteredBy], [EnteredOn], [ModifiedBy], [ModifiedOn]) VALUES (11, 3951, N'Crystal Mtn Washington', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'ADMIN ', CAST(0x9F9002DD AS SmallDateTime), NULL, NULL)</pre>
-
+INSERT [dbo].[Clients] ([ClientID], [client_no], [client_name], [Contact1], [C1_Email], [Contact2], [C2_Email], [C1_Phone], [C1_Ext], [C2_Phone], [C2_Ext], [Address], [EnteredBy], [EnteredOn], [ModifiedBy], [ModifiedOn]) VALUES (11, 3951, N'Crystal Mtn Washington', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'ADMIN ', CAST(0x9F9002DD AS SmallDateTime), NULL, NULL)
+```
 It took me many iterations and consultations with various blogs about Entity Framework to come up with the following model:
 
-<pre>using System;
+```c#
+using System;
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
@@ -162,9 +166,9 @@ namespace CardNumbers.Objects
           }
       }
 
-/// <summary&gt;
+/// <summary>
 /// Client class (Client No, Client Name, Address, Contact1, Contact2 info, Created By, Modified By (operator and date)
-/// </summary&gt;
+/// </summary>
     public class Client
     {
         public Client()
@@ -217,11 +221,12 @@ namespace CardNumbers.Objects
         [DisplayName("Modified on")]
         public DateTime? ModifiedOn { get; set; }
 
-        public virtual ICollection<ClientOrder&gt; ClientOrders { get; set; }
+        public virtual ICollection<ClientOrder> ClientOrders { get; set; }
         
-        public virtual ICollection<Reorder&gt; Reorders { get; set; }
+        public virtual ICollection<Reorder> Reorders { get; set; }
     }
-}</pre>
+}
+```
 
 The interesting thing in this model is 2 Complex Types. Originally this model didn&#8217;t have Complex Types, but I found later that I need them in order to create one Editor for each Contact information (as we see, the table is not properly normalized and contains 2 contacts columns). 
 
@@ -231,7 +236,8 @@ I also created another project called CardNumbers.Data where I placed repository
 
 IClientRepository.cs:
 
-<pre>using CardNumbers.Objects;
+```C#
+using CardNumbers.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -240,7 +246,7 @@ namespace CardNumbers.Data
 {
     public interface IClientRepository:IDisposable
     {
-        IQueryable<Client&gt; Clients { get; }
+        IQueryable<Client> Clients { get; }
         Client GetClientById(int clientId);
         void Commit();
 
@@ -252,11 +258,13 @@ namespace CardNumbers.Data
 
         void UpdateClient(Client client, bool autoCommit = true);
     }
-}</pre>
+}
+```
 
 and the actual implementation of the above interface:
 
-<pre>using System;
+```C#
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -274,7 +282,7 @@ namespace CardNumbers.Data
             this.context = context;
         }        
 
-        IQueryable<Client&gt; IClientRepository.Clients
+        IQueryable<Client> IClientRepository.Clients
         {
             get { return this.context.Clients; }
         }
@@ -336,11 +344,12 @@ namespace CardNumbers.Data
         }
         
     }
-}</pre>
-
+}
+```
 and I show CardNumbersContext.cs for completion:
 
-<pre>using System;
+```C#
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using CardNumbers.Objects;
@@ -352,10 +361,10 @@ namespace CardNumbers.Data
     public class CardNumbersContext : DbContext
 
     {
-        public DbSet<Client&gt; Clients { get; set; }
-        public DbSet<Operator&gt; Operators { get; set; }
-        public DbSet<Reorder&gt; Reorders { get; set; }
-        public DbSet<ClientOrder&gt; ClientOrders { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Operator> Operators { get; set; }
+        public DbSet<Reorder> Reorders { get; set; }
+        public DbSet<ClientOrder> ClientOrders { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -366,8 +375,8 @@ namespace CardNumbers.Data
             modelBuilder.Configurations.Add(new ReorderMap());
         }
     }
-}</pre>
-
+}
+```
 So, the above two projects describe my models and means to work with them.
 
 Now I am going to describe the CardNumbers.Web project. 
@@ -380,35 +389,37 @@ This took me a while to figure out. I was almost ready to give up, but finally f
 
 So, I will show you how my Client View now looks and the relevant portions of Clients.js script file and the ClientController.cs file:
 
-<pre>@model CardNumbers.Models.ClientViewModel
+```html
+@model CardNumbers.Models.ClientViewModel
 
 @section scripts {
-    <script src="@Url.Content("~/Scripts/Clients.js")" type="text/javascript" &gt;</script&gt;
+    <script src="@Url.Content("~/Scripts/Clients.js")" type="text/javascript" ></script>
 }
 
-<form id="frmClientsSearch"&gt;
-    <label for="clientNo"&gt;Client No: </label&gt;
-    <input type="number" name="searchClientNo" class="numericOnly" /&gt;<br /&gt;
-    <label for="clientName"&gt;Client Name: </label&gt;
+<form id="frmClientsSearch">
+    <label for="clientNo">Client No: </label>
+    <input type="number" name="searchClientNo" class="numericOnly" /><br />
+    <label for="clientName">Client Name: </label>
     <input type="search" size="25" value="Please enter the search value" class="SelectOnEntry"
-        name="searchClientName" /&gt;
+        name="searchClientName" />
 
-    <input type="button" id="btnClientsSearch" value="Find / Refresh" /&gt;
-</form&gt;
-<div style="padding-left: 150px; padding-top: 50px; padding-bottom: 50px;" id="ClientsResults"&gt;
-    <table id="flexClients" style="display: none"&gt;
-    </table&gt;
-</div&gt;
+    <input type="button" id="btnClientsSearch" value="Find / Refresh" />
+</form>
+<div style="padding-left: 150px; padding-top: 50px; padding-bottom: 50px;" id="ClientsResults">
+    <table id="flexClients" style="display: none">
+    </table>
+</div>
 
- <div id="add-edit-dialog" style="display: none" title="Add / Edit Client"&gt; 
+ <div id="add-edit-dialog" style="display: none" title="Add / Edit Client"> 
     @Html.Partial("_ClientForm", Model)
-</div&gt;</pre>
-
+</div>
+```
 As you can see, this main view has just few controls and lines of code. At the top I display two search controls and at the bottom the flexigrid placeholder and the dialog (invisible initially) for my modal Add/Edit dialogs.
 
 Now I want to show the Clients.js part that is responsible for the flexigrid and passing Search form data to the controller through form&#8217;s collection:
 
-<pre>$("#flexClients").flexigrid({
+```javascript
+$("#flexClients").flexigrid({
     url: '/Client/Client/',
     dataType: 'json',
     colModel: [
@@ -464,32 +475,33 @@ function addFormData() {
   
     $("#flexClients").flexOptions({ params: dt });
     return true;
-}</pre>
-
+}
+```
 So, the first part defines flexigrid (you can see that it used Client controller Client method to return its data). Then the next piece of code binds grid&#8217;s double click with the same method that is called by the Edit button (in other words, I want to either click on the Edit button or double click on the selected row in a grid to get the same behavior) and the last piece of code (addFormData) is used to pass both Search form and add-edit-form data back to my controller. 
 
 And this is how Client method of the controller looks like (I separated this method into 2 based on the idea I took from looking at the [following solution][3])
 
-<pre>[HttpPost]
+```C#
+[HttpPost]
         public ActionResult Client(FormCollection formValues)
         {
             // Assume we want to select everything
-            var clients = Db.Clients; // Should set type of clients to IQueryable<Clients&gt;
+            var clients = Db.Clients; // Should set type of clients to IQueryable<Clients>
             int searchClientNo = 0;
             
             int.TryParse(formValues["searchClientNo"], out searchClientNo );
             string searchClientName = (formValues["searchClientName"]??"").ToString();
 
             if (searchClientNo == 0 && searchClientName == "Please enter the search value")
-                clients = clients.Where(c =&gt; (c.Number == searchClientNo));
+                clients = clients.Where(c => (c.Number == searchClientNo));
             else
             {
                 if (searchClientNo != 0) //Number was supplied
-                    clients = clients.Where(c =&gt; (c.Number == searchClientNo));
+                    clients = clients.Where(c => (c.Number == searchClientNo));
 
                 // If clientNo was supplied, clients is now filtered by that. If not, it still has the full list. The following will further filter it.
                 if (!String.IsNullOrWhiteSpace(searchClientName)) // Part of the name was supplied
-                    clients = clients.Where(c =&gt; (c.Name.Contains(searchClientName)));
+                    clients = clients.Where(c => (c.Name.Contains(searchClientName)));
 
             }
             int page = int.Parse(formValues["page"] ?? "1");
@@ -519,7 +531,7 @@ And this is how Client method of the controller looks like (I separated this met
 
         }
 
-        private JsonResult CreateFlexiJson(IEnumerable<Client&gt; items, int page, int total)
+        private JsonResult CreateFlexiJson(IEnumerable<Client> items, int page, int total)
         {
             return Json(
                     new
@@ -528,7 +540,7 @@ And this is how Client method of the controller looks like (I separated this met
                         total,
                         rows =
                             items
-                            .Select(x =&gt;
+                            .Select(x =>
                                 new
                                 {
                                     id = x.Id,
@@ -536,54 +548,57 @@ And this is how Client method of the controller looks like (I separated this met
                                     cell = new { Id = x.Id, Number = x.Number, Name = x.Name, Contact1 = x.Contact1.Contact ?? String.Empty }
                                 })
                     }, JsonRequestBehavior.AllowGet);
-        }</pre>
-
+        }
+```
 So far so good. Now I want to describe the modal dialogs implementation for Add and Edit buttons. This really took me a very long time to get working correctly and I was lucky to finally got this resolved with Jazzen Chen help.
 
 First I want to show the partial view _ClientForm. There is nothing too interesting in that view besides using special EditorForm I implemented based on [this blog post][4] by Sergey Barskiy:
 
-<pre>@using CardNumbers.Helper
+```html
+@using CardNumbers.Helper
 @model CardNumbers.Models.ClientViewModel
-  <form id="add-edit-form"&gt;
-    <fieldset&gt;
-        <legend&gt;Client Info</legend&gt;
+  <form id="add-edit-form">
+    <fieldset>
+        <legend>Client Info</legend>
 
         @Html.ValidationSummary(true)
        
-        <input type="hidden" id="fntype" name="fntype"&gt;
+        <input type="hidden" id="fntype" name="fntype">
 
-        @Html.HiddenFor(m =&gt; m.ClientId)
-        @Html.EditorFor(m =&gt; m.ClientNumber, EditorTemplate.TextBox)
+        @Html.HiddenFor(m => m.ClientId)
+        @Html.EditorFor(m => m.ClientNumber, EditorTemplate.TextBox)
 
-        @Html.EditorFor(m =&gt; m.ClientName, EditorTemplate.TextBox)
+        @Html.EditorFor(m => m.ClientName, EditorTemplate.TextBox)
 
-        @Html.EditorFor(m =&gt; m.Client.Address, EditorTemplate.EditBox)
+        @Html.EditorFor(m => m.Client.Address, EditorTemplate.EditBox)
 
-        <div id="ContactsInfo"&gt;
+        <div id="ContactsInfo">
 
-            <div id="Contact1"&gt;
+            <div id="Contact1">
 
-                @Html.EditorFor(m =&gt; m.Client.Contact1)
+                @Html.EditorFor(m => m.Client.Contact1)
 
-            </div&gt;
+            </div>
 
-            <div id="Contact2"&gt;
+            <div id="Contact2">
 
-                @Html.EditorFor(m =&gt; m.Client.Contact2)
-            </div&gt;
-        </div&gt;
+                @Html.EditorFor(m => m.Client.Contact2)
+            </div>
+        </div>
 
-       @* <div id="SaveCancel" class="float-right"&gt;
-            <button id="btnSave"&gt;Save</button&gt;
-            <button type="reset" id ="btnCancel" name="Reset"&gt;Cancel</button&gt;
-        </div&gt;*@
-    </fieldset&gt;
+       @* <div id="SaveCancel" class="float-right">
+            <button id="btnSave">Save</button>
+            <button type="reset" id ="btnCancel" name="Reset">Cancel</button>
+        </div>*@
+    </fieldset>
 
- </form&gt;</pre>
+ </form>
+```
 
 This is the Clients.js relevant code which drives that Add, Edit and Delete (for completeness) buttons:
 
-<pre>function del(com, grid) {
+```javascript
+function del(com, grid) {
     try {
         var clientName = $('.trSelected td:eq(2)').text();
         if (clientName) //Variable is defined and not empty
@@ -699,26 +714,30 @@ function edit(com, grid)
                RunModalDialog("Edit Client: " + ClientName);
         });
 
-    }</pre>
-
+    }
+```
 The most complicated part in the above script was to figure out how to make a server trip to get data for the Edit button and return that page back for editing.
   
 This is done with these two lines of code:
 
-<pre>$.get(url, function (html) {                   
+```javascript
+$.get(url, function (html) {                   
                     $($dlg).html(html);
-                });</pre>
+                });
+```
 
 And to make the whole picture complete I&#8217;ll show the Edit method of my controller that returns the above data:
 
-<pre>public ActionResult Edit(int id)
+```c#
+public ActionResult Edit(int id)
         {
             ClientViewModel model = new ClientViewModel(); 
             var client = Db.GetClientById(id);
             model.Client = client;
             
             return PartialView("_ClientForm",model);
-        }</pre>
+        }
+```
 
 As you can see, just a few lines of code to return the model data and the partial view.
 
@@ -734,4 +753,4 @@ Hope this blog post can help people struggling with the modal dialogs implementa
  [2]: http://mvc4beginner.com/Sample-Code/Insert-Update-Delete/Asp-.Net-MVC-Ajax-Insert-Update-Delete-Using-Flexigrid.html
  [3]: http://www.s4sme.com/Blog/Post/aspnet-mvc-4-application-with-flexigrid-jquery-ui-and-jquery-validation
  [4]: http://dotnetspeak.com/index.php/2012/10/asp-net-mvc-template-and-knockout-js/
- [5]: http://forum.lessthandot.com/viewforum.php?f=6&sid=ebc29b65310d77fa409af74cf8d5cd70
+ [5]: http://forum.ltd.local/viewforum.php?f=6&sid=ebc29b65310d77fa409af74cf8d5cd70

@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #44 – The Second Chance'
 author: Jes Borland
 type: post
 date: 2013-07-09T12:40:00+00:00
+ID: 2133
 excerpt: This month, our host, Bradley Ball, wants to hear about at least one moment in SQL time that I would like back.
 url: /index.php/itprofessionals/professionaldevelopment/t-sql-tuesday-44-the-1/
 views:

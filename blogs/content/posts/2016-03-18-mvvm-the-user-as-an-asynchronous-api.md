@@ -3,6 +3,7 @@ title: MVVM – The User as an Asynchronous API (w/ Knockout)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-03-18T12:38:37+00:00
+ID: 4438
 url: /index.php/webdev/mvvm-the-user-as-an-asynchronous-api/
 views:
   - 4303
@@ -42,52 +43,40 @@ Let&#8217;s start with a sample of what it looks like when we call a regular ser
   </p>
 </div>
 
-<pre><h1&gt;A Basic Form + Fake API Call (Save Button)</h1&gt;
-<div class="form-area" data-bind="with: shippingForm"&gt;
-	<h3&gt;Shipping Information</h3&gt;
+```html
+# A Basic Form + Fake API Call (Save Button)
 
-	<label for="txtName"&gt;Name</label&gt;
-		<input type="text" id="txtName" data-bind="value: newEntry().name" /&gt;<br /&gt;
 
-	<!-- ... etc ... --&gt;
+<div class="form-area" data-bind="with: shippingForm">
+  <h3>
+    Shipping Information
+  </h3>
+  
+  	
+  
+  <label for="txtName">Name</label>
+  		<input type="text" id="txtName" data-bind="value: newEntry().name" /><br />
+  
+  	<!-- ... etc ... -->
+  
+  	
+  
+  <div class="button-strip">
+    <input type="button" data-bind="click: save, disable: isSaving, value: saveText" />
+    	
+  </div>
+  
+</div>
 
-	<div class="button-strip"&gt;
-		<input type="button" data-bind="click: save, disable: isSaving, value: saveText" /&gt;
-	</div&gt;
-</div&gt;
 
-<script type="text/javascript"&gt;
-
-//- Shipping Form Example
-function ShippingFormViewModel(dataService){
-	var self = this;
-
-	// ...
-
-	self.save = function(){
-		if(self.isSaving())
-			return;
-
-		self.isSaving(true);
-		self.saveStatus("Saving...");
-
-		dataService.saveShippingAddress(self.newEntry())
-		.then(function(status){
-			self.isSaving(false);
-			self.saveStatus(status);
-		})
-		
-		// ...
-	};
-}
-
-</script&gt;</pre>
+```
 
 Clicking the &#8220;Save&#8221; button updates some local values that will be used to modify the display, then calls saveShippingAddress on the service, which returns a promise. Once that service call is complete and the promise is resolved successfully, the display is updated again accordingly. 
 
 A test for the save method could then look like this:
 
-<pre>it("clears saving status when server save is successful", function(done){
+```javascript
+it("clears saving status when server save is successful", function(done){
 	// arrange
 	var fakeService = {
 		saveShippingAddress: function(){ return Promise.resolve('Success'); }
@@ -102,8 +91,8 @@ A test for the save method could then look like this:
 		expect(vm.saveStatus()).toBeNull();
 		expect(vm.isSaving()).toBe(false);
 	}).finally(done, done.fail);
-});</pre>
-
+});
+```
 The services are passed into the ViewModel when it&#8217;s created, keeping that logic separate and easy to maintain or change. We can write unit tests that pass in a fake version of the service, ready to pass a specific good or bad result, and ensure our business logic in the ViewModel continues to match our intent as the rest of the team extends it.
 
 ## Promises and User Dialogs
@@ -132,7 +121,8 @@ However, we have a business case that requires we check that each of those produ
 
 Here is what the reorder function looks like with both the user and API treated as services:
 
-<pre>self.reorder = function(priorOrder){
+```javascript
+self.reorder = function(priorOrder){
 	var newOrder = new OrderModel({ id: 'pending', contents:[], price: 0 });
 	self.isReordering(true);
 
@@ -160,7 +150,7 @@ Here is what the reorder function looks like with both the user and API treated 
 	})
 	.then(function(outOfStockResults){
 		//= 3: If there are 'out of stock' products, ask the user what to do for each of them
-		if(outOfStockResults.length &gt; 0){
+		if(outOfStockResults.length > 0){
 			return userDialogService.askAboutOutOfStockProductAlternatives(outOfStockResults)
 			.then(function(answers){
 				if(answers == 'cancel'){
@@ -185,13 +175,14 @@ Here is what the reorder function looks like with both the user and API treated 
 		}
 		self.isReordering(false);
 	});
-};</pre>
-
+};
+```
 Writing tests for the user dialog looks just the same as for the API.
 
 We can test that the user is given choices and those choices are used for the new order:
 
-<pre>it("creates the order with the user alternatives for out of stock products when options are selected", function(done){
+```javascript
+it("creates the order with the user alternatives for out of stock products when options are selected", function(done){
 	// arrange
 	var altProduct = { product: 'JKL'};
 	var fakeDataService = {
@@ -214,11 +205,12 @@ We can test that the user is given choices and those choices are used for the ne
 		expect(vm.orders()[1].contents()).toEqual(sampleOrder.contents);
 		expect(vm.orders()[0].contents()).toEqual([altProduct.product, altProduct.product, altProduct.product]);
 	}).finally(done, done.fail);
-});</pre>
-
+});
+```
 We can also test that we&#8217;re handling the user cancelling the dialog the way we want to:
 
-<pre>it("cancels the order when the user cancels the dialog", function(done){
+```javascript
+it("cancels the order when the user cancels the dialog", function(done){
 	// arrange
 	var altProduct = { product: 'JKL'};
 	var fakeDataService = {
@@ -239,8 +231,8 @@ We can also test that we&#8217;re handling the user cancelling the dialog the wa
 	afterReorder.then(function(){
 		expect(vm.orders().length).toBe(1);
 	}).finally(done, done.fail);
-});</pre>
-
+});
+```
 The full sample implementation, including a working (but not production ready) dialog can be found here: [github: tarwn/Blog_KnockoutMVVMPatterns/tree/master/userDialogs][1]
 
 ## The User is an Asynchronous API

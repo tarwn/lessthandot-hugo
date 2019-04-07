@@ -3,6 +3,7 @@ title: The shaky bug in SSIS
 author: Koen Verbeeck
 type: post
 date: 2015-03-24T11:52:20+00:00
+ID: 3312
 url: /index.php/datamgmt/ssis/the-shaky-bug-in-ssis/
 views:
   - 13222

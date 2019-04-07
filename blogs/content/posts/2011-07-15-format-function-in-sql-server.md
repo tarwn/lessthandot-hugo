@@ -3,6 +3,7 @@ title: Format function in SQL Server Denali CTP3
 author: SQLDenis
 type: post
 date: 2011-07-15T08:30:00+00:00
+ID: 1255
 excerpt: |
   SQL Server Denali CTP3 brings a couple of new functions, one of these is the FORMAT  function
   
@@ -56,7 +57,8 @@ If you are a .NET programmer then this function should look very familiar to you
 
 Let&#8217;s take a look at how it all works, first let&#8217;s create a table and inserts some locales info so that it will be easier to show the different output later
 
-<pre>CREATE TABLE Locales(locale varchar(100))
+sql
+CREATE TABLE Locales(locale varchar(100))
 insert Locales
 select 'en-US'   --USA
 union
@@ -68,15 +70,18 @@ select 'de' --Germany
 union
 select 'no'  --Norway
 union
-select 'ru' --Russia</pre>
+select 'ru' --Russia
+```
 
 Now, let&#8217;s format some dates
 
-<pre>DECLARE @d DATETIME = '01/01/2011';
+sql
+DECLARE @d DATETIME = '01/01/2011';
 
 select locale,FORMAT ( @d, 'd', locale ) AS Result,
               FORMAT( @d, 'yyyy-MM-dd', locale ) Result2
-from Locales</pre>
+from Locales
+```
 
 Here is what the output looks like, as you can see if you use specific formatting, the output is the same no matter what the locale is
 
@@ -184,8 +189,10 @@ Here is what the output looks like, as you can see if you use specific formattin
 
 Let&#8217;s look at another example, this one will format currency
 
-<pre>select locale,FORMAT ( 100, 'c', locale ) AS Result
-from Locales</pre>
+sql
+select locale,FORMAT ( 100, 'c', locale ) AS Result
+from Locales
+```
 
 
 
@@ -267,11 +274,13 @@ As you can see the currency symbol is different depending on what locale has bee
 
 You can also specify the number of characters after the decimal point
 
-<pre>select locale,FORMAT ( 100.34, 'C1', locale ) AS Result1,
+sql
+select locale,FORMAT ( 100.34, 'C1', locale ) AS Result1,
 			  FORMAT ( 100.34, 'C2', locale ) AS Result2,
 			  FORMAT ( 100.34, 'C3', locale ) AS Result3,
 			  FORMAT ( 100.34, 'C4', locale ) AS Result4
-from Locales</pre>
+from Locales
+```
 
 
 

@@ -3,6 +3,7 @@ title: Test your Full Recovery model by restoring backups
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-11-05T12:29:30+00:00
+ID: 611
 url: /index.php/datamgmt/datadesign/test-that-full-recovery-model-with-resto/
 views:
   - 7257

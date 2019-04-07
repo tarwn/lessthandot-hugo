@@ -3,6 +3,7 @@ title: 'C# case sensitivity'
 author: chopstik
 type: post
 date: 2009-07-15T22:46:26+00:00
+ID: 513
 url: /index.php/desktopdev/mstech/csharp/c-case-sensitivity/
 views:
   - 9983

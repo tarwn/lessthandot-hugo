@@ -3,6 +3,7 @@ title: Using DTUtil from PowerShell
 author: Axel Achten (axel8s)
 type: post
 date: 2012-03-16T09:43:00+00:00
+ID: 1565
 excerpt: |
   I'm preparing my demo's for a MS6235A SSIS training I will be teaching in a couple of days. In one of the demo's I just copy a SSIS package from the file system to SQL Server using the DTUtil from the command prompt with this command:
   DTUTIL /FILE <&hellip;
@@ -23,7 +24,9 @@ tags:
 ---
 I&#8217;m preparing my demo&#8217;s for a [MS6235A SSIS training][1] I will be teaching in a couple of days. In one of the demo&#8217;s I just copy a SSIS package from the file system to SQL Server using the DTUtil from the command prompt with this command:
 
-<pre>DTUTIL /FILE <Path to package&gt;.dtsx /COPY SQL;<Packagename&gt;</pre>
+```CMD
+DTUTIL /FILE <Path to package>.dtsx /COPY SQL;<Packagename>
+```
 
 As expected this works like a charm:
 
@@ -33,7 +36,9 @@ As expected this works like a charm:
 
 But on my demo machine I had a PowerShell window open and started from there. I first tried if the DTUtil command is recognized:
 
-<pre>DTUtil /?</pre>
+```PowerShell
+DTUtil /?
+```
 
 And seeing the output it is:
 
@@ -43,7 +48,9 @@ And seeing the output it is:
 
 So I used the same command as in the CMD-prompt to copy the package:
 
-<pre>DTUTIL /FILE <Path to package&gt;.dtsx /COPY SQL;<Packagename&gt;</pre>
+```PowerShell
+DTUTIL /FILE <Path to package>.dtsx /COPY SQL;<Packagename>
+```
 
 But now I got the error message that &#8220;Packagename&#8221; was not recognized as the name of a cmdlet, function, script file, or operable program.
 
@@ -55,7 +62,9 @@ Looking at the code I realized that there was a semicolon right before the &#822
   
 So when I put the DTUtil parameters between double quotes it should work:
 
-<pre>DTUTIL "/FILE <Path to package&gt;.dtsx /COPY SQL;<Packagename&gt;"</pre>
+```PowerShell
+DTUTIL "/FILE <Path to package>.dtsx /COPY SQL;<Packagename>"
+```
 
 And it does:
 

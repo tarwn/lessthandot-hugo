@@ -3,6 +3,7 @@ title: SQL Server 2008 Books Online Jan, 2009 download now available
 author: SQLDenis
 type: post
 date: 2009-02-02T22:27:13+00:00
+ID: 311
 url: /index.php/datamgmt/datadesign/sql-server-2008-books-online-jan-2009-do/
 views:
   - 3674

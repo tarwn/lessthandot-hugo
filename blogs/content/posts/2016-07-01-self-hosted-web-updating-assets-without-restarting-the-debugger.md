@@ -3,6 +3,7 @@ title: Self-Hosted Web – Updating assets without restarting the debugger
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-07-01T17:43:54+00:00
+ID: 4600
 url: /index.php/webdev/self-hosted-web-updating-assets-without-restarting-the-debugger/
 views:
   - 4086
@@ -44,7 +45,8 @@ I only have two tasks, and both are related to building or debugging my project,
 
 **package.json**
 
-<pre>{
+```javascript
+{
   "name": "xyz-tooling",
   "version": "0.1.0",
   "description": "tooling for building/testing xyz local UI",
@@ -56,8 +58,8 @@ I only have two tasks, and both are related to building or debugging my project,
     "gulp-insert": "~0.5.0",
     "yargs": "~4.7.1"
   }
-}</pre>
-
+}
+```
 The key ingredient is <a href="https://www.npmjs.com/package/gulp-watch" title="gulp-watch on npmjs.com" target="_blank">gulp-watch</a>. The &#8220;watch&#8221; task takes a wildcard path and watches the filesystem for changes to that path. When a file matching the path is changed, it calls the provided gulp tasks or function callback.
 
 I have two tasks for gulp: 
@@ -67,7 +69,8 @@ I have two tasks for gulp:
 
 **gulpfile.json**: Configuration
 
-<pre>var gulp = require('gulp'),
+```javascript
+var gulp = require('gulp'),
     less = require('gulp-less'),
     watch = require('gulp-watch'),
     insert = require('gulp-insert'),
@@ -77,13 +80,14 @@ I have two tasks for gulp:
 // Configure
 var config = { };
 config.assetsPath = "Assets";
-config.assetsOutputPath = (argv.output || "bin/Debug/") + config.assetsPath;</pre>
-
+config.assetsOutputPath = (argv.output || "bin/Debug/") + config.assetsPath;
+```
 I set a few configurations at the top of the file, including the name of the local Assets folder and an overridable path to the target Assets folder (which defaults to &#8220;bin/Debug/&#8221;).
 
 **gulpfile.json**: &#8220;less&#8221; Task
 
-<pre>gulp.task('less', function() {
+```javascript
+gulp.task('less', function() {
     gulp.src(config.assetsPath + '/*.less')
         .pipe(less())
         .pipe(insert.transform(function(contents, file) {
@@ -93,15 +97,16 @@ I set a few configurations at the top of the file, including the name of the loc
         }))
         .pipe(concat('stylesheet.css'))
         .pipe(gulp.dest(config.assetsPath))
-});</pre>
-
+});
+```
 The &#8220;less&#8221; task picks up all *.less files in the assets path, performs the LESS transpile on them, adds a prefix on the top of each file (this is a handy way to dynamically add copyright statements too), then concatenates to a single file.
 
 In VisualStudio, I have a pre-build event that runs this command so I am executing my LESS transpile the same exact way if I do a Visual Studio build or the &#8220;watch&#8221; call later (the output stylesheet.css is ignored in my &#8220;.gitignore&#8221;, so my build process can use this same command as well).
 
 **gulpfile.json**: &#8220;watch&#8221; Task
 
-<pre>// Task: watch
+```javascript
+// Task: watch
 gulp.task('watch', function () {
     gulp.watch([ config.assetsPath + '/fonts/*.*',
                  config.assetsPath + '/images/*.*',
@@ -121,8 +126,8 @@ function handleChangedAssetFile(obj) {
         gulp.src(obj.path, { "base": config.assetsPath })
             .pipe(gulp.dest(config.assetsOutputPath));
     }
-}</pre>
-
+}
+```
 I have two sets of files I want to handle, my LESS files and everything else. 
 
 <u>Everything Else:</u> The first watch has everything except the LESS files and when a change occurs, it calls the handleChangedAssetFile method. This specifically targets only file changes, as I want to stop the debugger when I add a new file so I can remember to mark it as Content and Copy Always in the Properties pane. I also output the filename to the console as an easy way to confirm that a change has or has not been copied (it always is, but it&#8217;s easy to second guess when you make a change and the new file doesn&#8217;t do what you expect).

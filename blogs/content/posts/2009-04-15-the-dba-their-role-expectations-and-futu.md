@@ -3,6 +3,7 @@ title: The DBA.. their role, expectations and future?
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-15T10:56:08+00:00
+ID: 388
 url: /index.php/datamgmt/datadesign/the-dba-their-role-expectations-and-futu/
 views:
   - 8737
@@ -14,7 +15,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-As promised from topic http://forum.lessthandot.com/viewtopic.php?f=17&t=4735&start=0&st=0&sk=t&sd=a&hilit=DBA I&#8217;m making a blog entry on my expectations of a DBA.
+As promised from topic http://forum.ltd.local/viewtopic.php?f=17&t=4735&start=0&st=0&sk=t&sd=a&hilit=DBA I&#8217;m making a blog entry on my expectations of a DBA.
 
 My reply to the question
 

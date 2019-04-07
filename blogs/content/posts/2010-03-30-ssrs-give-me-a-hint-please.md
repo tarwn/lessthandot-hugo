@@ -3,6 +3,7 @@ title: Finding meaningful error details to report execution failures
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-03-30T10:15:38+00:00
+ID: 744
 excerpt: The Report Sever Service Trace Logs are a great resource to troubleshooting errors in your reporting instance. By default the trace is enabled and I highly recommend keeping them that way so when errors present themselves, answers are quickly found and resolutions formulated.
 url: /index.php/datamgmt/dbprogramming/ssrs-give-me-a-hint-please/
 views:

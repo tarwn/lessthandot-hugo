@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 1 – Server Configuration – MAX Memory
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-26T15:58:00+00:00
+ID: 1127
 excerpt: |
   For the first post in the SQL Server DBA Tip of the day series, MAX Memory configuration is the topic.  Let’s get right to it…
   SQL Server Maximum Memory configuration is a value specified to limit how much memory the buffer pool can have.  The Buffer P&hellip;

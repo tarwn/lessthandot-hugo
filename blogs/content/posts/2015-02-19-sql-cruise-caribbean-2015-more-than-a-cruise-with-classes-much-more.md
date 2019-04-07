@@ -3,6 +3,7 @@ title: 'SQL Cruise Caribbean 2015: More Than A Cruise With Classes. Much More.'
 author: Jes Borland
 type: post
 date: 2015-02-19T13:59:53+00:00
+ID: 3220
 url: /index.php/uncategorized/sql-cruise-caribbean-2015-more-than-a-cruise-with-classes-much-more/
 views:
   - 5329

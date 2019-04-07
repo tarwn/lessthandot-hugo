@@ -3,6 +3,7 @@ title: How To Restart A Remote Computer
 author: SQLDenis
 type: post
 date: 2008-06-24T16:55:02+00:00
+ID: 73
 url: /index.php/sysadmins/os/how-to-restart-a-remote-computer/
 views:
   - 7756

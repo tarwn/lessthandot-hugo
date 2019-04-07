@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 20: Use the new features'
 author: SQLDenis
 type: post
 date: 2012-12-20T16:56:00+00:00
+ID: 1871
 excerpt: |
   This is day twenty of the SQL Advent 2012 series of blog posts. Today we are going to look at why you should use the new features of the product or language
   
@@ -33,11 +34,12 @@ Even though the text data type is deprecated, you can still use the text data ty
 
 To quickly find out if you are using features that have been deprecated, you can run the following query
 
-<pre>select instance_name,cntr_value
+sql
+select instance_name,cntr_value
 from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Deprecated Features'
-and cntr_value &gt; 0</pre>
-
+and cntr_value > 0
+```
 That might give you back something like the following
 
 <pre>SET ROWCOUNT                                                  	1485
@@ -56,20 +58,24 @@ In java and .NET you can also check if code has been deprecated, here is what it
 
 In java
 
-<pre>/**
+```java
+/**
  * @deprecated  Use this in the future and you will suffer
  */
 @Deprecated  
 public void doStuff() {  
   // ...  
-} </pre>
+} 
+```
 
 In .NET
 
-<pre>[Obsolete("Use this in the future and you will suffer")]
+```c#
+[Obsolete("Use this in the future and you will suffer")]
 public void doStuff() {  
   // ...  
-}  </pre>
+}  
+```
 
 Now that you know you are still using some of these features in your code, it is time to start abandoning the use of code like that for new development.
 

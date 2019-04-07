@@ -3,6 +3,7 @@ title: The new Dynamic Management Views in SQL Server Denali
 author: SQLDenis
 type: post
 date: 2010-11-09T16:28:40+00:00
+ID: 936
 excerpt: |
   With SQL Server Denali CTP1 come 20 new dynamic management views, this brings the total number of dynamic management views to 155
   
@@ -242,8 +243,10 @@ Unfortunately, when I downloaded this there was no documentation available yet, 
 
 If you would like a list of all dynamic management views in SQL Server Denali then run this query
 
-<pre>select * from sysobjects
-where name like 'dm[_]%'</pre>
+sql
+select * from sysobjects
+where name like 'dm[_]%'
+```
 
 In this post [Playing around with sys.dm\_exec\_describe\_first\_result\_set And sys.dm\_exec\_describe\_first\_result\_set\_for\_object][1] I am taking a quick look at two of those views
 

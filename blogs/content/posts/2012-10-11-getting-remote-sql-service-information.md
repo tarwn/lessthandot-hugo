@@ -3,6 +3,7 @@ title: Getting remote SQL Service information with Windows Powershell
 author: Axel Achten (axel8s)
 type: post
 date: 2012-10-11T07:37:00+00:00
+ID: 1751
 excerpt: |
   Every DBA managing multiple SQl Servers with multiple instances will know the issues with developpers, project managers and others that don't know the importance of the instancename when they request you to take some action.
   So you can start some e-mai&hellip;
@@ -25,7 +26,9 @@ So you can start some e-mail ping pong to get the instance name, open the server
   
 First step getting remote services information:
 
-<pre>Get-Service -ComputerName <SQLServerHostName&gt;</pre>
+```PowerShell
+Get-Service -ComputerName <SQLServerHostName>
+```
 
 This gives you all the information you need:
 
@@ -35,7 +38,9 @@ This gives you all the information you need:
 
 But since I only need SQL Server information I will filter out all the other services using the Where-Object and the like operator:
 
-<pre>Get-Service -ComputerName <SQLServerHostName&gt; -name "MSSQL*"</pre>
+```PowerShell
+Get-Service -ComputerName <SQLServerHostName> -name "MSSQL*"
+```
 
 As you can see we can now see the installed instances of SQL Server on our remote server. Only if the Instance name is too long you will see &#8230; at some point:
 
@@ -45,7 +50,9 @@ As you can see we can now see the installed instances of SQL Server on our remot
 
 Since we only need the Name and ass a surplus the Status of our SQL Server Services we can format the output:
 
-<pre>Get-Service -ComputerName <SQLServerHostName&gt; -name "MSSQL*"|Format-Table -Property Name, Status</pre>
+```PowerSHell
+Get-Service -ComputerName <SQLServerHostName> -name "MSSQL*"|Format-Table -Property Name, Status
+```
 
 And now we have only the information we need:
 
@@ -55,11 +62,12 @@ And now we have only the information we need:
 
 Like in my [previous post][1] I will put the command in a PS1 script using a parameter and a Throw to be able to reuse the script:
 
-<pre>param(
+```PowerShell
+param(
 	[string] $compname = $(Throw "Provide a SQL Server name as first parameter")
 )
-Get-Service -ComputerName $compname -name "MSSQL*"|Format-Table -Property Name, Status, DisplayName</pre>
-
+Get-Service -ComputerName $compname -name "MSSQL*"|Format-Table -Property Name, Status, DisplayName
+```
 Executing the script will look like this:
 
 <div class="image_block">

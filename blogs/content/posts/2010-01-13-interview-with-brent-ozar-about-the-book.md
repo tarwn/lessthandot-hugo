@@ -3,6 +3,7 @@ title: Interview with Brent Ozar about the book Professional SQL Server 2008 Int
 author: SQLDenis
 type: post
 date: 2010-01-13T19:01:27+00:00
+ID: 674
 url: /index.php/datamgmt/dbprogramming/interview-with-brent-ozar-about-the-book/
 views:
   - 5672

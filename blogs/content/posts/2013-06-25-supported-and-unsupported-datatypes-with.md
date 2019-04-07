@@ -3,6 +3,7 @@ title: Supported and unsupported datatypes with Hekaton tables
 author: SQLDenis
 type: post
 date: 2013-06-25T08:01:00+00:00
+ID: 2113
 excerpt: |
   If you are ready to use Hekaton then you need to know that there are some limitations, not all data types are supported. 
   
@@ -69,13 +70,15 @@ There is also a limit of 8060 bytes on row size, this includes variable length c
 
 if you try to do the following, you will get an error
 
-<pre>CREATE TABLE [dbo].[HekaTest]
+sql
+CREATE TABLE [dbo].[HekaTest]
 ( [Col1] varchar(5000), 
   [Col2] varchar(4000) NOT NULL,  
 
   CONSTRAINT [HekaTest_PK] PRIMARY KEY NONCLUSTERED HASH ([Col1]) WITH(BUCKET_COUNT = 1000000)
 ) WITH (MEMORY_OPTIMIZED = ON, 
- DURABILITY = SCHEMA_AND_DATA)</pre>
+ DURABILITY = SCHEMA_AND_DATA)
+```
 
 Here is the error that you get
 

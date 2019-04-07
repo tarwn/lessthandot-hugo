@@ -3,6 +3,7 @@ title: Calculating The Percentage Of Null Values In A Column With Transact SQL
 author: SQLDenis
 type: post
 date: 2009-10-02T12:31:24+00:00
+ID: 574
 url: /index.php/datamgmt/dbprogramming/calculating-the-percentage-of-null-value/
 views:
   - 24225
@@ -22,7 +23,8 @@ What is the percentage of null values in a table for a column? This question com
 
 We will start by creating the following table
 
-<pre>CREATE TABLE #perc ( Column1 INT,Column2 INT,Column3 INT)
+sql
+CREATE TABLE #perc ( Column1 INT,Column2 INT,Column3 INT)
 INSERT INTO #perc
 SELECT NULL,1,1
 UNION ALL
@@ -40,20 +42,25 @@ SELECT NULL,1,1
 UNION ALL
 SELECT 2,1,2
 UNION ALL
-SELECT 3,1,1</pre>
+SELECT 3,1,1
+```
 
 There are a couple of ways to calculate this but first we need to understand one thing: COUNT(*) and COUNT(ColumnName) behave differently, **COUNT(*) will count NULLS while COUNT(ColumnName) does not!!!**
 
 Here is one way to calculate the percentages, you use the following formula
 
-<pre>SUM(CASE WHEN ColumnName IS NULL THEN 1 ELSE 0 END) / COUNT(*)</pre>
+sql
+SUM(CASE WHEN ColumnName IS NULL THEN 1 ELSE 0 END) / COUNT(*)
+```
 
 Run this query below
 
-<pre>SELECT 100.0 * SUM(CASE WHEN Column1 IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS Column1Percent,
+sql
+SELECT 100.0 * SUM(CASE WHEN Column1 IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS Column1Percent,
 100.0 * SUM(CASE WHEN Column2 IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS Column2Percent,
 100.0 * SUM(CASE WHEN Column3 IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS Column3Percent
-FROM #perc</pre>
+FROM #perc
+```
 
 output
 
@@ -62,14 +69,18 @@ output
 
 Instead of using SUM and a CASE statement you can also just do the formula below to get the percentage of NULLS
 
-<pre>(COUNT(*) - COUNT(ColumnName)) / COUNT(*)</pre>
+sql
+(COUNT(*) - COUNT(ColumnName)) / COUNT(*)
+```
 
 The query below will return the same output as the query above
 
-<pre>SELECT 100.0 * (COUNT(*) - COUNT(Column1)) / COUNT(*) AS Column1Percent,
+sql
+SELECT 100.0 * (COUNT(*) - COUNT(Column1)) / COUNT(*) AS Column1Percent,
 100.0 * (COUNT(*) - COUNT(Column2)) / COUNT(*) AS Column2Percent,
 100.0 * (COUNT(*) - COUNT(Column3)) / COUNT(*) AS Column3Percent
-FROM #perc</pre>
+FROM #perc
+```
 
 output
 
@@ -78,7 +89,9 @@ output
 
 What if you want to get a percentage of all values in the column? So for example we will take Column3 from the table
 
-<pre>select Column3 from #perc</pre>
+sql
+select Column3 from #perc
+```
 
 <pre>1
 1
@@ -100,12 +113,14 @@ As you can see we have
 
 Here is the query which accomplishes this requirement
 
-<pre>SELECT COALESCE(CONVERT(VARCHAR(50),Column3),'NULL') AS Value,
+sql
+SELECT COALESCE(CONVERT(VARCHAR(50),Column3),'NULL') AS Value,
 COUNT(Column3) AS ValueCount,
 100.0 * COUNT(*)/(SELECT COUNT(*) FROM #perc ) AS Percentage
 FROM #perc
 GROUP BY Column3
-ORDER BY Percentage DESC</pre>
+ORDER BY Percentage DESC
+```
 
 And here is the output
   
@@ -122,5 +137,5 @@ That is all, as you can see it is pretty trivial to calculate NULLS in a column
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

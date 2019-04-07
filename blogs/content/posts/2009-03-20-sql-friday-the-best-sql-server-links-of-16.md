@@ -3,6 +3,7 @@ title: SQL Friday, The Best SQL Server Links Of The Past Week Episode 15
 author: SQLDenis
 type: post
 date: 2009-03-20T21:44:45+00:00
+ID: 354
 url: /index.php/datamgmt/datadesign/sql-friday-the-best-sql-server-links-of-16/
 views:
   - 4211
@@ -47,5 +48,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [1]: http://sqlblog.com/blogs/linchi_shea/archive/2009/03/16/a-dba-utility-database-in-every-sql-server-instance.aspx
  [2]: http://blogs.msdn.com/psssql/archive/2009/03/17/sql-server-what-is-a-cold-dirty-or-clean-buffer.aspx
  [3]: http://sqlblog.com/blogs/alexander_kuznetsov/archive/2009/03/17/set-based-calculation-of-products-of-several-numbers.aspx
- [4]: http://forum.lessthandot.com/viewforum.php?f=17
- [5]: http://forum.lessthandot.com/viewforum.php?f=22
+ [4]: http://forum.ltd.local/viewforum.php?f=17
+ [5]: http://forum.ltd.local/viewforum.php?f=22

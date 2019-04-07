@@ -3,6 +3,7 @@ title: 'Indexes in MongoDB: A quick overview'
 author: SQLDenis
 type: post
 date: 2013-01-19T12:23:00+00:00
+ID: 1923
 excerpt: |
   This is my Fourth MongoDB post, in the first post we looked at how we can install MongoDB as a Windows Service, In the second post we looked at how we could do UPSERTs with MongoDB, In the third post we looked at how to sort results in MongoDB
   This pos&hellip;

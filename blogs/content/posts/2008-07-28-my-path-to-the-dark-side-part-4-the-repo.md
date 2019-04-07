@@ -3,6 +3,7 @@ title: My Path to the Dark Side part 4 – the Repositories
 author: Alex Ullrich
 type: post
 date: 2008-07-28T11:07:07+00:00
+ID: 87
 url: /index.php/desktopdev/mstech/my-path-to-the-dark-side-part-4-the-repo/
 views:
   - 5597
@@ -25,7 +26,8 @@ Previous posts can be found here:
 
 Setting up the repositories for our objects is where this really starts to get fun for me. This is what allows us to work with the persisted objects so easily from our application code, without all the SQL getting in the way. The first thing we want to think about here is what we need the repository to do. Add/Delete/Update all come to mind of course. As well as retrieval of single objects and collections. These will be pretty much standard behaviors across most of our objects. So lets&#8217; look at the interface first:
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using RecipeTracker.Model;
 
@@ -41,11 +43,13 @@ namespace RecipeTracker.Interfaces
         ICollection<Recipe> GetAll();
         void Dispose();
     }
-}</pre>
+}
+```
 
 Looking at all those methods, there is really only one (GetByFamily) that we won&#8217;t need for any repository that we create. So we can put all the other methods into a BaseRepository class. We will need use generics so we can return all the different types however. But first, we need to get a session, so we can add a class for that.
 
-<pre>using System;
+```csharp
+using System;
 using NHibernate;
 using NHibernate.Cfg;
 
@@ -76,13 +80,15 @@ namespace RecipeTracker.Repositories
             return SessionFactory.OpenSession();
         }
     }
-}</pre>
+}
+```
 
 The SessionFactory part should look familar from part 3, the only difference here is that we are initializing the configuration using TypeOf(T) to determine which assembly to find the configuration in rather than TypeOf(MyType). We could probably get away with the latter for this purpose, because there probably won&#8217;t be more than one assembly in the application, but why be lazy right? After all, we do need to use generics to deal with the return types anyways. 
 
 So now this little bit of code doesn&#8217;t need to be handled by our repository, and it can focus on what it does best. So here&#8217;s the BaseRepository, it&#8217;s nice and simple since it doesn&#8217;t need to get its&#8217; own sessions anymore:
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using NHibernate;
 using NHibernate.Cfg;
@@ -139,13 +145,15 @@ namespace RecipeTracker.Repositories
             _session.Dispose();
         }
     }
-}</pre>
+}
+```
 
 Now, look how simple that is to do what we need with our object? No building SQL queries, no creating parameter arrays, or anything. A nice simple bit of code that does just what we need it to do, without all the hassles. We just need a session and the simple commands that it offers, and we can do anything we need. Beautiful, right?
 
 But what if we wanted to do something like get all recipes from a certain family? This will be specific to the object type we need, so we can do that in our implementation of the baseclass (hey, gotta have something in there right!). And this is in fact all that our RecipeRepository class has, one method:
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using RecipeTracker.Model;
 using NHibernate;
@@ -163,7 +171,8 @@ namespace RecipeTracker.Repositories
                 return products;
         }
     }
-}</pre>
+}
+```
 
 This is some wacky looking code at first. It kind of reminds me of Linq, but what its&#8217; called is HQL (Hibernate Query Language). I haven&#8217;t really gotten into it all that much, so I don&#8217;t feel qualified to speak about it in detail, but I do find it kinda cool. It may not be as easy as Linq, where you could do a nice Linq query such as
 
@@ -175,7 +184,8 @@ So after all this I think we are ready to set up some tests. This will be on the
 
 <!--nextpage-->I cut this to only two method for the sake of brevity but all the methods (and other repositories) are included in the attached project.
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -242,8 +252,8 @@ namespace RecipeTracker.Tests
             };
         }    
     }
-}</pre>
-
+}
+```
 A few new things to note here. First, the [TestFixtureSetUp] attribute tag. This identifies a method that needs to be execute when we first set up the fixture. Not to be confused with [SetUp] which identifies a method that needs to be executed before **each test** is run. And then [TearDown] which indicates a method to be run after each test. In our case, TestFixtureSetup() initializes our configuration. SetupContext() creates our schema. And TeardownContext() gets rid of our schema. These are all very simple, and maybe not even necessary, but it is important to know that they are there, and see how much more could be done in these methods (see the commented out SchemaFiller.CreateInitialData() that is used for (you guessed it) creating initial data!).
 
 Now we are ready to fire up NUnit and run our tests. And now is when we&#8217;ll see that beautiful red bar (trust me it is beautiful, it means that you designed a test that will fail when its&#8217; supposed to!). When it fails you&#8217;ll see something like this:

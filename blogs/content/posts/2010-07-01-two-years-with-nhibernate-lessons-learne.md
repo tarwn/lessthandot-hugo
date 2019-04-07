@@ -3,6 +3,7 @@ title: Two Years With NHibernate – Lessons Learned
 author: Alex Ullrich
 type: post
 date: 2010-07-01T10:00:00+00:00
+ID: 827
 url: /index.php/desktopdev/mstech/two-years-with-nhibernate-lessons-learne/
 views:
   - 11503

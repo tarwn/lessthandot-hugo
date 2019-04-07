@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #31 – Reporting Services Logs'
 author: Jes Borland
 type: post
 date: 2012-06-12T11:58:00+00:00
+ID: 1650
 excerpt: It’s the second Tuesday of the month, and that means it’s T-SQL Tuesday! This month’s topic, brought to us by Aaron Nelson (twitter | blog), is Logging.
 url: /index.php/datamgmt/dbadmin/t-sql-tuesday-31-reporting/
 views:
@@ -32,11 +33,13 @@ Doesn’t that sound fantastic? It is! It’s very simple to run, too.
 
  
 
-<pre>USE ReportServer;
+sql
+USE ReportServer;
 GO
 
 SELECT InstanceName, ItemPath, UserName, ExecutionId, RequestType, Format, Parameters, ItemAction, TimeStart, TimeEnd, TimeDataRetrieval, TimeProcessing, TimeRendering, Source, Status, ByteCount, [RowCount], AdditionalInfo
-FROM ExecutionLog3;</pre>
+FROM ExecutionLog3;
+```
 
  
 

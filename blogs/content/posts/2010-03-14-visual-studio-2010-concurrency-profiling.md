@@ -3,6 +3,7 @@ title: Visual Studio 2010 Concurrency Profiling And Parallel Programming
 author: SQLDenis
 type: post
 date: 2010-03-14T11:03:56+00:00
+ID: 726
 excerpt: "Visual Studio 2010 and .NET 4.0 are almost released, one of the new things that ship with this release is Parallel Programming. Since you can't buy a machine anymore with just one core it is time that we developers get intimate with concurrent programmi&hellip;"
 url: /index.php/architect/enterprisearchitecture/visual-studio-2010-concurrency-profiling/
 views:
@@ -38,27 +39,31 @@ Here is the code for the different ways of calculating Pi which is part of the C
 
 **Estimates the value of PI using a LINQ-based implementation**.
 
-<pre>static double SerialLinqPi()
+```csharp
+static double SerialLinqPi()
     {
         double step = 1.0 / (double)num_steps;
         return (from i in Enumerable.Range(0, num_steps)
                 let x = (i + 0.5) * step
                 select 4.0 / (1.0 + x * x)).Sum() * step;
-    }</pre>
-
+    }
+```
 **Estimates the value of PI using a PLINQ-based implementation.**
 
-<pre>static double ParallelLinqPi()
+```csharp
+static double ParallelLinqPi()
     {
         double step = 1.0 / (double)num_steps;
         return (from i in ParallelEnumerable.Range(0, num_steps)
                 let x = (i + 0.5) * step
                 select 4.0 / (1.0 + x * x)).Sum() * step;
-    }</pre>
+    }
 
+```
 **Estimates the value of PI using a for loop.**
 
-<pre>static double SerialPi()
+```csharp
+static double SerialPi()
     {
         double sum = 0.0;
         double step = 1.0 / (double)num_steps;
@@ -68,11 +73,13 @@ Here is the code for the different ways of calculating Pi which is part of the C
             sum = sum + 4.0 / (1.0 + x * x);
         }
         return step * sum;
-    }</pre>
+    }
 
+```
 **Estimates the value of PI using a Parallel.For.**
 
-<pre>static double ParallelPi()
+```csharp
+static double ParallelPi()
     {
         double sum = 0.0;
         double step = 1.0 / (double)num_steps;
@@ -83,11 +90,13 @@ Here is the code for the different ways of calculating Pi which is part of the C
             return local + 4.0 / (1.0 + x * x);
         }, local => { lock (monitor) sum += local; });
         return step * sum;
-    }</pre>
+    }
 
+```
 **Estimates the value of PI using a Parallel.ForEach and a range partitioner.**
 
-<pre>static double ParallelPartitionerPi()
+```csharp
+static double ParallelPartitionerPi()
     {
         double sum = 0.0;
         double step = 1.0 / (double)num_steps;
@@ -103,7 +112,8 @@ Here is the code for the different ways of calculating Pi which is part of the C
         }, local => { lock (monitor) sum += local; });
         return step * sum;
     }
-}</pre>
+}
+```
 
 Here are the results when you run the sample. The first column is the time in seconds and the second column has the method name.
 

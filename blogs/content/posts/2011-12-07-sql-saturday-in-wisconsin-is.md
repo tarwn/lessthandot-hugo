@@ -3,6 +3,7 @@ title: SQL Saturday in Wisconsin is a reality!
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-07T16:04:00+00:00
+ID: 1407
 excerpt: 'Last year I set out to get SQL Saturday in Wisconsin organized.  It was a goal of mine that I really wanted to achieve.  Alas, time and other things got in the way of me doing that on my own.  Conflicts with other SQL Saturdays, working on a few books,&hellip;'
 url: /index.php/itprofessionals/itservicemanagement/sql-saturday-in-wisconsin-is/
 views:

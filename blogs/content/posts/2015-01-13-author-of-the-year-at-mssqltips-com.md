@@ -3,6 +3,7 @@ title: Author of the Year at MSSQLTips.com
 author: Koen Verbeeck
 type: post
 date: 2015-01-13T12:53:02+00:00
+ID: 3160
 url: /index.php/itprofessionals/other/author-of-the-year-at-mssqltips-com/
 views:
   - 5152

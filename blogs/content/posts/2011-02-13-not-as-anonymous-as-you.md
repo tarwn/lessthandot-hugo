@@ -3,6 +3,7 @@ title: Not as anonymous as you thought you were…
 author: chopstik
 type: post
 date: 2011-02-13T23:28:00+00:00
+ID: 1035
 excerpt: 'I was reading an editorial by Jeff Pearlman who is a sports writer for Sports Illustrated and his article resonated with me - which is not to say that I have experienced his problem, per se, but that I have certainly noticed it as an issue as I peruse v&hellip;'
 url: /index.php/itprofessionals/ethicsit/not-as-anonymous-as-you/
 views:

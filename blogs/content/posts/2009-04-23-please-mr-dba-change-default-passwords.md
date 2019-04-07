@@ -3,6 +3,7 @@ title: Please Mr. DBA, Change default passwords and use strong passwords
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-23T16:31:55+00:00
+ID: 395
 url: /index.php/datamgmt/dbadmin/please-mr-dba-change-default-passwords/
 views:
   - 4079

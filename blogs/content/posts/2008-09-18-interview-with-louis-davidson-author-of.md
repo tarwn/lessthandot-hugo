@@ -3,6 +3,7 @@ title: Interview With Louis Davidson Author of Pro SQL Server 2008 Relational Da
 author: SQLDenis
 type: post
 date: 2008-09-18T22:23:24+00:00
+ID: 145
 excerpt: 'Pro SQL Server 2008 Relational Database Design and Implementation is one of those books that should be in the hands of every SQL Server developer. There are tons of SQL Server programming books around but none of them covers the fundamentals of a good S&hellip;'
 url: /index.php/datamgmt/datadesign/interview-with-louis-davidson-author-of/
 views:

@@ -3,6 +3,7 @@ title: How To Convert IP Addresses Between Bigint and Varchar
 author: SQLDenis
 type: post
 date: 2008-10-05T16:06:53+00:00
+ID: 161
 excerpt: |
   Before we start with code let us take a sample IP address, does 127.0.0.1 look familiar? Yes that is your local IP address.
   
@@ -43,11 +44,13 @@ add the fourth value + (256 \* 256 \* 256) =16777216
 
 So in our case the select would be
 
-<pre>select
+sql
+select
 1 +
 0 * 256 +
 0 * 65536 +
-127 * 16777216</pre>
+127 * 16777216
+```
 
 which is
   
@@ -55,7 +58,8 @@ which is
 
 So to convert from IP Adress to integer is very simple, you use PARSENAME to split it up and do the math. Here is the function.
 
-<pre>CREATE FUNCTION dbo.IPAddressToInteger (@IP AS varchar(15))
+sql
+CREATE FUNCTION dbo.IPAddressToInteger (@IP AS varchar(15))
 RETURNS bigint
 AS
 BEGIN
@@ -65,7 +69,8 @@ BEGIN
          CONVERT(bigint, PARSENAME(@IP,4)) * 16777216)
 
 END
-GO</pre>
+GO
+```
 
 But how do you get 127.0.0.1 out of 2130706433?
   
@@ -73,7 +78,8 @@ It is the reversed of what we did before (surprise) so instead of multiplying we
   
 Here is the funcion
 
-<pre>CREATE FUNCTION dbo.IntegerToIPAddress (@IP AS bigint)
+sql
+CREATE FUNCTION dbo.IntegerToIPAddress (@IP AS bigint)
 RETURNS varchar(15)
 AS
 BEGIN
@@ -94,17 +100,22 @@ BEGIN
         CONVERT(varchar, @Octet2) + '.' +
         CONVERT(varchar, @Octet3) + '.' +
         CONVERT(varchar, @Octet4))
-END</pre>
+END
+```
 
 Now let&#8217;s try this out, first run this
 
-<pre>select dbo.IPAddressToInteger('127.0.0.1')</pre>
+sql
+select dbo.IPAddressToInteger('127.0.0.1')
+```
 
 That returns 2130706433
   
 Now run this
 
-<pre>select dbo.IntegerToIPAddress(2130706433)</pre>
+sql
+select dbo.IntegerToIPAddress(2130706433)
+```
 
 That returns 127.0.0.1
 

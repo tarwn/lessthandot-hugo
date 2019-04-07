@@ -3,6 +3,7 @@ title: SQL Saturday Indy – Invasion of SSIS
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-07-26T11:12:00+00:00
+ID: 1680
 excerpt: 'Automation of tasks is a true art and skill that you learn through your career as a DBA, Consultant or even Developer.  Unfortunately and fortunately, in today’s age, we have dozens if not hundreds of tools at our disposal for automation.  Over my own c&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-saturday-indy-invasion-of/
 views:

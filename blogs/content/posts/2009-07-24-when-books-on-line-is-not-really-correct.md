@@ -3,6 +3,7 @@ title: When Books On Line is not really correct
 author: SQLDenis
 type: post
 date: 2009-07-24T12:45:11+00:00
+ID: 522
 url: /index.php/datamgmt/dbprogramming/when-books-on-line-is-not-really-correct/
 views:
   - 5383
@@ -21,21 +22,27 @@ tags:
 ---
 A question was posted in our [SQL Server programming forum][1] [today][2]. A person had this stored procedure
 
-<pre>CREATE PROCEDURE TestStuff
+sql
+CREATE PROCEDURE TestStuff
 @id INT,
 @Val1 VARCHAR(20),
 @Val2 VARCHAR(20)
 AS
  
-SELECT @id,@Val1,@Val2</pre>
+SELECT @id,@Val1,@Val2
+```
 
 Executing it like this works
 
-<pre>EXEC TestStuff 1,'test1','Test2'</pre>
+sql
+EXEC TestStuff 1,'test1','Test2'
+```
 
 However executing it like this also works
 
-<pre>EXEC TestStuff 1,test1,Test2</pre>
+sql
+EXEC TestStuff 1,test1,Test2
+```
 
 So even though you don&#8217;t enclose the character value in quotes it works.
 
@@ -57,11 +64,13 @@ As you can see that is not right at all, I checked Books on line for SQL Server 
 
 So now that we know that you can do that, then why can you not do this?
 
-<pre>DECLARE @v VARCHAR(20)
+sql
+DECLARE @v VARCHAR(20)
  
 SELECT @v = a
  
-SELECT @v</pre>
+SELECT @v
+```
 
 That gives you this error
   
@@ -73,13 +82,17 @@ Of course there are other inconsistent things in SQL Server, here is a perfect e
 
 Varchar defaults to 1 character here
 
-<pre>DECLARE @v VARCHAR
+sql
+DECLARE @v VARCHAR
 SELECT @v = 'aaaaaa'
-SELECT @v</pre>
+SELECT @v
+```
 
 Varchar defaults to 30 characters here
 
-<pre>SELECT CONVERT(VARCHAR,'aaaaa')</pre>
+sql
+SELECT CONVERT(VARCHAR,'aaaaa')
+```
 
 George Mastros wrote a nice blog post about this here: [SQL Server Stored Procedure with nvarchar parameter][4]
 
@@ -89,8 +102,8 @@ So what do you think, should I file an item for this on connect?
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][5] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewtopic.php?f=17&t=6856
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewtopic.php?f=17&t=6856
  [3]: http://msdn.microsoft.com/en-us/library/ms188332.aspx
  [4]: /index.php/DataMgmt/DataDesign/sql-server-stored-procedure-with-nvarcha
- [5]: http://forum.lessthandot.com/viewforum.php?f=22
+ [5]: http://forum.ltd.local/viewforum.php?f=22

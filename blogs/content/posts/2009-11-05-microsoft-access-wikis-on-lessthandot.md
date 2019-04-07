@@ -3,6 +3,7 @@ title: Microsoft Access Wikis on LessThanDot
 author: remou
 type: post
 date: 2009-11-05T08:59:56+00:00
+ID: 569
 url: /index.php/desktopdev/mstech/msaccess/microsoft-access-wikis-on-lessthandot/
 views:
   - 3926
@@ -122,8 +123,8 @@ Just the one at the moment, and it is quite weird.
 
   * [WizHook][54]
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=95
- [2]: http://forum.lessthandot.com/viewforum.php?f=96
+ [1]: http://forum.ltd.local/viewforum.php?f=95
+ [2]: http://forum.ltd.local/viewforum.php?f=96
  [3]: http://wiki.ltd.local/index.php/ADO_Schemas
  [4]: http://wiki.ltd.local/index.php/Access%2C_ADO_and_Stored_Procedures
  [5]: http://wiki.ltd.local/index.php/Access%2C_DDL_and_Constraints

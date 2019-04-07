@@ -3,6 +3,7 @@ title: 'ASP.Net Core 2 w/ Cosmos DB: Getting Started'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2018-04-09T11:33:55+00:00
+ID: 9087
 url: /index.php/webdev/serverprogramming/aspnet/asp-net-core-2-w-cosmosdb-getting-started/
 views:
   - 5609
@@ -100,7 +101,8 @@ The default for routing with this project is attribute routing rather than the g
 
 [SampleCosmosCore2App/Controllers/HomeController.cs][3]
 
-<pre>// ...
+```csharp
+// ...
 
 namespace SampleCosmosCore2App.Controllers
 {
@@ -113,8 +115,8 @@ namespace SampleCosmosCore2App.Controllers
             return View();
         }
     }
-}</pre>
-
+}
+```
 Next we&#8217;ll add a `Layout.cshtml` file that to serve as the general HTML layout for the site. Again we want to match the standard ASP.Net MVC conventions, so first create a top-level folder named `Views`, then create a folder under this named `Shared`, then finally right-click this folder to &#8220;Add View&#8221;, ensure you have Empty Model and no layout selected, with the name &#8220;Layout&#8221;
 
 <div id="attachment_9092" style="width: 603px" class="wp-caption aligncenter">
@@ -133,18 +135,16 @@ Once created, edit the `Layout.cshtml` file to look like this:
 
 [SampleCosmosCore2App/Views/_Shared/Layout.cshtml][4]
 
-<pre><!DOCTYPE html&gt;
+```html
 
-<html&gt;
-<head&gt;
-    <meta name="viewport" content="width=device-width" /&gt;
-    <title&gt;Layout</title&gt;
-</head&gt;
-<body&gt;
+
+
+
+
     @RenderBody()
-</body&gt;
-</html&gt;</pre>
 
+
+```
 Finally, we&#8217;ll create the first view for `HomeController`. Create a `Home` subfolder under `Views`, then right-click and &#8220;Add View&#8221; again. This time select &#8220;Layout.cshtml&#8221; as the layout, but continue to leave Model empty.
 
 <div class="note-area">
@@ -159,12 +159,16 @@ Here we go:
 
 [/SampleCosmosCore2App/Views/Home/Index.cshtml][5]
 
-<pre>@{
+```html
+@{
     ViewData["Title"] = "Home";
     Layout = "~/Views/_Shared/Layout.cshtml";
 }
 
-<h2&gt;Home</h2&gt;</pre>
+
+
+## Home
+```
 
 Time to lock in our winnings again before we move on. Hit F5 and visit the root URL (http://localhost:????/) to verify we have the first task completed successfully.
 
@@ -188,14 +192,16 @@ Open up a terminal window (I prefer Powershell with the posh-git plugin), and ty
 
 There are a number of files we don&#8217;t want to commit and share, such as binaries from the build, user-specific settings in Visual Studio, and so on. We also need to help future us install the right dependencies when we come back to this later. So let&#8217;s create a `/gitignore` for the first and `README.md` for the latter. I typically start this in the console (powershell again) out of habit:
 
-<pre>wget -O .gitignore  https://raw.githubusercontent.com/dotnet/core/master/.gitignore
-echo "" &gt; README.md</pre>
-
+```text
+wget -O .gitignore  https://raw.githubusercontent.com/dotnet/core/master/.gitignore
+echo "" > README.md
+```
 One last file to consider is a license statement. You can use [choosealicense.com][7] to help pick one and providers like github are pretty smart about providing additional visibility when you use a standard one they recognize.
 
 At this point, we&#8217;ll also add some minimal info to the README while it&#8217;s fresh in our minds. A good start is the name of the project and a section outlining the dependencies so far:
 
-<pre># Overview
+```text
+# Overview
 
 Blah blah, amazing things...
 
@@ -203,23 +209,24 @@ Blah blah, amazing things...
 
 * Visual Studio 2017 
 * ASP.Net Core 2
-* .Net Core 2</pre>
-
+* .Net Core 2
+```
 Finally, we&#8217;ll save all this with the first commit as a starting point. Visual Studio includes tooling for git, you can also use third party tools like [gitkraken][8] and [smartgit][9], or you can stick to the command-line. I personally use [posh-git][10], which I find to be better than the basic git command-line. 
 
 So that we don&#8217;t get too side-tracked, here&#8217;s how I&#8217;m going to commit this via command-line:
 
-<pre>git add -A
-git commit -m "Initial Commit" -m "ASP.Net Core 2 project with working MVC endpoint, README, and .gitignore"</pre>
-
+```text
+git add -A
+git commit -m "Initial Commit" -m "ASP.Net Core 2 project with working MVC endpoint, README, and .gitignore"
+```
 ### Third Party Git Repo: Github
 
 First, log into the git provider (in my case github) and create a repository. Once this is done, the service should give you instructions to connect and push your changes to that remote repository. They&#8217;ll look something like this:
 
-<pre>git remote add origin git@your-provider.com:your-username/your-repo-name.git
-git push -u origin master</pre>
-
-<div class="note-area">
+```text
+git remote add origin git@your-provider.com:your-username/your-repo-name.git
+git push -u origin master
+```<div class="note-area">
   You don&#8217;t have to use <code>origin</code> as the remote name, but it is a common convention that many providers build some assumptions around in their interface.
 </div>
 
@@ -280,7 +287,8 @@ Next, in the `SamplePersistence` object, we&#8217;ll add functions to setup the 
 
 [SampleCosmosCore2App.Core/Persistence.cs][12]
 
-<pre>// ...
+```csharp
+// ...
 
 public Persistence(Uri endpointUri, string primaryKey)
 {
@@ -303,9 +311,8 @@ public async Task EnsureSetupAsync()
     await _client.CreateDocumentCollectionIfNotExistsAsync(databaseUri, new DocumentCollection() { Id = "SamplesCollection" });
 }
 
-// ...</pre>
-
-<div class="note-area">
+// ...
+```<div class="note-area">
   If you&#8217;re not familiar with Document Databases, you can think of this DocumentCollection as a table, except instead of a single row that fits a very strict schema we can add any structured document we want and search against them later, letting the database handle the heavy lifting if we have vastly different and/or deep document structures.
 </div>
 
@@ -313,14 +320,15 @@ And a data object like so:
 
 [SampleCosmosCore2App.Core/Sample.cs][13]
 
-<pre>public class Sample
+```csharp
+public class Sample
 {
     [JsonProperty(PropertyName = "id")]
     public string Id { get; set; }
 
     public string Content { get; set; }
-}</pre>
-
+}
+```
 Each document in Cosmos DB will have an `id` property and, by default, it will generate that id value for us when we add a new document. 
 
 <div class="note-area">
@@ -331,7 +339,8 @@ Returning to the `Persistence` class, we&#8217;ll add some basic CRUD operations
 
 [SampleCosmosCore2App.Core/Persistence.cs][12]
 
-<pre>// ...
+```csharp
+// ...
 
 public async Task SaveSampleAsync(Sample sample)
 {
@@ -341,16 +350,16 @@ public async Task SaveSampleAsync(Sample sample)
     await _client.UpsertDocumentAsync(documentCollectionUri, sample);
 }
 
-public async Task<Sample&gt; GetSampleAsync(string Id)
+public async Task<Sample> GetSampleAsync(string Id)
 {
     await EnsureSetupAsync();
 
     var documentUri = UriFactory.CreateDocumentUri(_databaseId, "SamplesCollection", Id);
-    var result = await _client.ReadDocumentAsync<Sample&gt;(documentUri);
+    var result = await _client.ReadDocumentAsync<Sample>(documentUri);
     return result.Document;
 }
 
-public async Task<List<Sample&gt;&gt; GetSamplesAsync()
+public async Task<List<Sample>> GetSamplesAsync()
 {
     await EnsureSetupAsync();
 
@@ -358,46 +367,48 @@ public async Task<List<Sample&gt;&gt; GetSamplesAsync()
 
     // build the query
     var feedOptions = new FeedOptions() { MaxItemCount = -1 };
-    var query = _client.CreateDocumentQuery<Sample&gt;(documentCollectionUri, "SELECT * FROM Sample", feedOptions);
+    var query = _client.CreateDocumentQuery<Sample>(documentCollectionUri, "SELECT * FROM Sample", feedOptions);
     var queryAll = query.AsDocumentQuery();
 
     // combine the results
-    var results = new List<Sample&gt;();
+    var results = new List<Sample>();
     while (queryAll.HasMoreResults) {
-        results.AddRange(await queryAll.ExecuteNextAsync<Sample&gt;());
+        results.AddRange(await queryAll.ExecuteNextAsync<Sample>());
     }
 
     return results;
 }
 
-// ...</pre>
-
+// ...
+```
 This provides all the persistence methods we need, now we can move up to the ASP.Net project and add in the Controller actions and views. Again, I&#8217;m in experimental mode, so I&#8217;m making sure the database and DocumentCollection exist on every call, but later I&#8217;ll find a better pattern for this.
 
 [Dependency Injection][14] is built into ASP.Net Core, so to make an instance of this new `Persistence` class available to Controllers we can register it in `Startup.cs` like so:
 
 [SampleCosmosCore2App/Startup.cs][15]
 
-<pre>services.AddScoped<Persistence&gt;((s) =&gt;
+```csharp
+services.AddScoped<Persistence>((s) =>
 {
     return new Persistence(
         new Uri(Configuration["CosmosDB:URL"]),
                 Configuration["CosmosDB:PrimaryKey"]);
-});</pre>
-
+});
+```
 Then in our local development config we&#8217;ll add the emulator URL and Primary Key:
 
 [SampleCosmosCore2App/appsettings.Development.json][16]
 
-<pre>{
+```javascript
+{
    // ...
 
   "CosmosDB": {
     "URL": "https://localhost:8081",
     "PrimaryKey": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw=="
   }
-}</pre>
-
+}
+```
 I&#8217;ve used a [Scoped][17] service so that a fresh Persistence object will be created for each Request. This will result in a fresh DocumentClient created on each request further down the stack, which is a safe starting point when I&#8217;m working with something new that I haven&#8217;t dug too deep on yet.
 
 <div class="note-area">
@@ -408,7 +419,8 @@ Next, we need Controller Actions to show the list of Sample values, Create a new
 
 [SampleCosmosCore2App/Controllers/HomeController][18]
 
-<pre>[Route("")]
+```csharp
+[Route("")]
 public class HomeController : Controller
 {
     private Persistence _persistence;
@@ -419,7 +431,7 @@ public class HomeController : Controller
     }
 
     [HttpGet()]
-    public async Task<IActionResult&gt; IndexAsync()
+    public async Task<IActionResult> IndexAsync()
     {
         var samples = await _persistence.GetSamplesAsync();
         return View("Index", samples);
@@ -433,20 +445,20 @@ public class HomeController : Controller
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult&gt; GetAsync(string id)
+    public async Task<IActionResult> GetAsync(string id)
     {
         var sample = await _persistence.GetSampleAsync(id);
         return View("Get", sample);
     }
 
     [HttpPost()]
-    public async Task<IActionResult&gt; PostAsync([FromForm] Sample sample)
+    public async Task<IActionResult> PostAsync([FromForm] Sample sample)
     {
         await _persistence.SaveSampleAsync(sample);
         return RedirectToAction("IndexAsync");
     }
-}</pre>
-
+}
+```
 Here are the notable changes:
 
   * We&#8217;ve added `Persistence` as a necessary dependency in the Controller
@@ -462,72 +474,104 @@ Because we started from a blank slate, these templates won&#8217;t work directly
 
 [SampleCosmosCore2App/Views/_ViewImports.cshtml][20]
 
-<pre>@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers</pre>
-
+```csharp
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+```
 The scaffolded views also assume we&#8217;re using bootstrap and include 2-3x more HTML than we actually need, so we can trim them down quite a bit:
 
 [SampleCosmosCore2App/Views/Get.cshtml][21]
 
-<pre>@model SampleCosmosCore2App.Core.Sample
+```html
+@model SampleCosmosCore2App.Core.Sample
 
 @{
     ViewData["Title"] = "GetAsync";
     Layout = "~/Views/_Shared/Layout.cshtml";
 }
 
-<h2&gt;Sample</h2&gt;
 
-<form asp-action="PostAsync"&gt;
-    Id:  @Model.Id <input asp-for="Id" type="hidden" /&gt;<br /&gt;
-    Content: <input asp-for="Content" /&gt;<br /&gt;
-    <input type="submit" value="Save" /&gt;
-</form&gt;
 
-<a asp-action="IndexAsync"&gt;Back to List</a&gt;</pre>
+## Sample
 
+
+
+
+
+<a asp-action="IndexAsync">Back to List</a>
+```
 [SampleCosmosCore2App/Views/Index.cshtml][5]
 
-<pre>@model IEnumerable<SampleCosmosCore2App.Core.Sample&gt;
+```csharp
+@model IEnumerable<SampleCosmosCore2App.Core.Sample>
 
 @{
     ViewData["Title"] = "View";
     Layout = "~/Views/_Shared/Layout.cshtml";
 }
 
-<h2&gt;View</h2&gt;
 
-<p&gt;
-    <a asp-action="Create"&gt;Create New</a&gt;
-</p&gt;
-<table class="table"&gt;
-    <thead&gt;
-        <tr&gt;
-            <th&gt;
-                @Html.DisplayNameFor(model =&gt; model.Id)
-            </th&gt;
-            <th&gt;
-                @Html.DisplayNameFor(model =&gt; model.Content)
-            </th&gt;
-            <th&gt;</th&gt;
-        </tr&gt;
-    </thead&gt;
-    <tbody&gt;
-        @foreach (var item in Model)
-        {
-            <tr&gt;
-                <td&gt;
-                    @Html.DisplayFor(modelItem =&gt; item.Id)
-                </td&gt;
-                <td&gt;
-                    @Html.DisplayFor(modelItem =&gt; item.Content)
-                </td&gt;
-                <td&gt;
-                    @Html.ActionLink("Edit", "GetAsync", new { id=item.Id })
-                </td&gt;
-            </tr&gt;
-        }
-    </tbody&gt;
-</table&gt;</pre>
+
+## View
+
+
+
+
+    <a asp-action="Create">Create New</a>
+
+
+
+<table class="table">
+  
+          
+  
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.Id)
+                  
+    </th>
+                
+    
+    <th>
+      @Html.DisplayNameFor(model => model.Content)
+                  
+    </th>
+                
+    
+    <th>
+      
+    </th>
+            
+  </tr>
+      
+      
+          @foreach (var item in Model)
+          {
+              
+  
+  <tr>
+    <td>
+      @Html.DisplayFor(modelItem => item.Id)
+                      
+    </td>
+                    
+    
+    <td>
+      @Html.DisplayFor(modelItem => item.Content)
+                      
+    </td>
+                    
+    
+    <td>
+      @Html.ActionLink("Edit", "GetAsync", new { id=item.Id })
+                      
+    </td>
+                
+  </tr>
+          }
+      
+  
+</table>
+```
 
 And now we have a very simple CRUD interface:
 

@@ -3,6 +3,7 @@ title: The Cloud as a Make-It-Finish-Sooner Dial
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-05-23T10:10:00+00:00
+ID: 1626
 excerpt: "There's been a lot of buzz about the cloud over the past years, with a lot of that attention going to IaaS and SaaS platforms, but there's a revolution (or re-revolution) that is of even more importance, and that's PaaS. What PaaS brings us is the ability to scale horizontally and treat CPU, memory, and storage as pools of resources that are as deep as our checkbooks allow."
 url: /index.php/desktopdev/mstech/the-cloud-as-a-make/
 views:
@@ -31,7 +32,7 @@ The file processing in the sample application is intended to be a sample workloa
 In addition to running the process via the website, I also need an unattended application that will can run the same processing function. If I owned the server, this would be a scheduled task or service. As an Azure Worker the code will be remarkably similar.
 
 <div style="text-align: center; color: #666666; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/CloudFileProcessor.png" alt="Cloud Processor Architecture" style="margin-bottom: 5px" /><br /> Architecture of the Processor
+  <img src="http://tiernok.com/LTDBlog/CloudFileProcessor.png" alt="Cloud Processor Architecture" style="margin-bottom: 5px" /><br /> Architecture of the Processor
 </div>
 
 The two front-ends access common logic in the Core library, which is responsible for both the processing logic and interacting with storage resources. This being sample code, it is certified as working on my machine and is definitely not production ready. That being said, I did write this in a few evenings, so writing a production-ready service doesn&#8217;t have to take that long in normal workdays.
@@ -44,7 +45,8 @@ The website has a single MVC controller with 3 actions:
   * ~/Home/AddFile: The post address for file uploads
   * ~/Home/ProcessNextItem: An action to process the next queued file
 
-<pre>public class HomeController : Controller {
+```csharp
+public class HomeController : Controller {
 
 	IStorageLocator _storageLocator;
 
@@ -66,7 +68,7 @@ The website has a single MVC controller with 3 actions:
 
 	[HttpPost]
 	public ActionResult AddFile(HttpPostedFileBase file) {
-		if (file != null && file.ContentLength &gt; 0) {
+		if (file != null && file.ContentLength > 0) {
 			var item = new FullItem() {
 				ResourceId = Guid.NewGuid(),
 				Received = DateTime.Now.ToUniversalTime(),
@@ -92,15 +94,16 @@ The website has a single MVC controller with 3 actions:
 
 		return RedirectToAction("Index");
 	}
-}</pre>
-
+}
+```
 The key to all of these methods is the ItemStore and ItemProcessor class, all of the rest of the logic is basic presentation layer logic.
 
 ### The Worker Role
 
 The worker role consists of a roughly 6 line while(true) statement that asks the ItemStore to process the next item in the queue, then sleeps for 1 second.
 
-<pre>public override void Run() {
+```csharp
+public override void Run() {
 	while (true) {
 		var storageLocator = new StorageManager("Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString");
 		var store = new ItemStore(storageLocator);
@@ -108,29 +111,32 @@ The worker role consists of a roughly 6 line while(true) statement that asks the
 		Thread.Sleep(1000);
 		Trace.WriteLine("Working", "Information");
 	}
-}</pre>
-
+}
+```
 Once again, the magic happens in the ItemStore and ItemProcessor instances.
 
 ### The ItemStore
 
 The ItemStore class exposes the basic methods we need execute our process:
 
-<pre>public void AddNewItem(FullItem item) { /* More Code */ }
+```csharp
+public void AddNewItem(FullItem item) { /* More Code */ }
 
 public FullItem RetrieveForProcessing() { /* More Code */ }
 
-public void StoreFinishedItem(FullItem item) { /* More Code */ }</pre>
-
+public void StoreFinishedItem(FullItem item) { /* More Code */ }
+```
 And a pair of methods for visibility:
 
-<pre>public IEnumerable<ItemBase&gt; GetUnprocessedList() { /* More Code */ }
+```csharp
+public IEnumerable<ItemBase> GetUnprocessedList() { /* More Code */ }
 
-public IEnumerable<ItemBase&gt; GetProcessedList() { /* More Code */ }</pre>
-
+public IEnumerable<ItemBase> GetProcessedList() { /* More Code */ }
+```
 Windows Azure offers a number of storage options, each with their own benefits and constraints. For this process I decided to use [table storage][1] to track the summary level information about each file processing job, [blob storage][2] to store the actual file, and the [queue service][3] for managing task execution. 
 
-<pre>public class ItemStore {
+```csharp
+public class ItemStore {
 
 	public static string RAW_BLOB_NAME = "RawItems";
 	public static string FINISHED_BLOB_NAME = "FinishedItems";
@@ -154,11 +160,11 @@ Windows Azure offers a number of storage options, each with their own benefits a
 		_table.Create(item.AsSummary());
 	}
 
-	public IEnumerable<ItemBase&gt; GetUnprocessedList() {
+	public IEnumerable<ItemBase> GetUnprocessedList() {
 		return _table.GetUnprocessedItems().ToList();
 	}
 
-	public IEnumerable<ItemBase&gt; GetProcessedList() {
+	public IEnumerable<ItemBase> GetProcessedList() {
 		// ?
 		return _table.GetProcessedItems().ToList();
 	}
@@ -179,8 +185,8 @@ Windows Azure offers a number of storage options, each with their own benefits a
 		_rawBlob.Delete(item.ResourceId);
 		_table.Update(item.AsSummary());
 	}
-}</pre>
-
+}
+```
 The ItemStore class is built to interact with interfaces for each of these resources, using a single IStorageLocator interface to get instances of those resource interfaces. The class (and application) was driven by the small set of unit tests that helped me define how i wanted the process to work and interact with the resources above.
 
 ### Configurations
@@ -189,46 +195,48 @@ With all of the pieces defined, we use a pair of configurations to tell Azure ho
 
 The first configuration defines the services we intend to package and deploy as well as the instance size and any endpoints:
 
-<pre><ServiceDefinition name="CloudFileProcessorService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition"&gt;
-  <WebRole name="Processor_WebRole" vmsize="Small"&gt;
-    <Sites&gt;
-      <Site name="Web"&gt;
-        <Bindings&gt;
-          <Binding name="Endpoint1" endpointName="Endpoint1" /&gt;
-        </Bindings&gt;
-      </Site&gt;
-    </Sites&gt;
-    <Endpoints&gt;
-      <InputEndpoint name="Endpoint1" protocol="http" port="80" /&gt;
-    </Endpoints&gt;
-    <Imports&gt;
-      <Import moduleName="Diagnostics" /&gt;
-    </Imports&gt;
-  </WebRole&gt;
-  <WorkerRole name="Processor_WorkerRole" vmsize="Small"&gt;
-    <Imports&gt;
-      <Import moduleName="Diagnostics" /&gt;
-    </Imports&gt;
-  </WorkerRole&gt;
-</ServiceDefinition&gt;</pre>
-
+```xml
+<ServiceDefinition name="CloudFileProcessorService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WebRole name="Processor_WebRole" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+  </WebRole>
+  <WorkerRole name="Processor_WorkerRole" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+  </WorkerRole>
+</ServiceDefinition>
+```
 The second configuration is applied when we deploy the instances above and tells Azure that I want to deploy 1 Processor\_WebRole instance and 2 Processor\_WorkerRole instances:
 
-<pre><ServiceConfiguration serviceName="CloudFileProcessorService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*"&gt;
-  <Role name="Processor_WebRole"&gt;
-    <Instances count="1" /&gt;
-    <ConfigurationSettings&gt;
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" /&gt;
-    </ConfigurationSettings&gt;
-  </Role&gt;
-  <Role name="Processor_WorkerRole"&gt;
-    <Instances count="2" /&gt;
-    <ConfigurationSettings&gt;
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" /&gt;
-    </ConfigurationSettings&gt;
-  </Role&gt;
-</ServiceConfiguration&gt;</pre>
-
+```xml
+<ServiceConfiguration serviceName="CloudFileProcessorService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*">
+  <Role name="Processor_WebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="Processor_WorkerRole">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
+```
 Note that I&#8217;m telling it to use the local development storage, which is supported by a local storage emulator. In a production configuration I would enter the service location and a generated token.
 
 ## So Where&#8217;s the Magic?

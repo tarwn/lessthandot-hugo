@@ -3,6 +3,7 @@ title: 'SSRS Properties – Hidden & ToggleItem'
 author: Jes Borland
 type: post
 date: 2013-02-04T12:03:00+00:00
+ID: 1966
 excerpt: The purpose of this property is to have rows or columns automatically expanded or collapsed, with the ability to expand or collapse at any time.
 url: /index.php/datamgmt/ssrs/ssrs-properties-hidden-toggleitem/
 views:

@@ -3,6 +3,7 @@ title: Quick Data Model creation off SSAS Data Source in SSRS
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-27T10:51:28+00:00
+ID: 399
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/quick-data-model-creation-off-ssas-data/
 views:
   - 18317

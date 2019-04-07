@@ -3,6 +3,7 @@ title: 5 Books Every Developer Should Read
 author: SQLDenis
 type: post
 date: 2008-07-20T18:12:06+00:00
+ID: 89
 url: /index.php/desktopdev/mstech/5-books-every-developer-should-read/
 views:
   - 20375

@@ -3,6 +3,7 @@ title: Continuous Javascript Test Execution with WallabyJS
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-10-13T19:53:07+00:00
+ID: 4676
 url: /index.php/webdev/continuous-javascript-test-execution-with-wallabyjs/
 views:
   - 4050
@@ -38,7 +39,8 @@ I then created my wallaby.js configuration using a short example of using wallab
 
 **wallaby.js**
 
-<pre>module.exports = function (wallaby) {
+```javascript
+module.exports = function (wallaby) {
   return {
     files: [
       { pattern: 'town/js/lib/require-2.1.11.js', instrument: false },
@@ -53,15 +55,16 @@ I then created my wallaby.js configuration using a short example of using wallab
 
     testFramework: 'jasmine'
   };
-};</pre>
-
+};
+```
 This identifies all the files and tests for wallaby, but tells it not to actually load anything but RequireJS and and my RequireJS configuration (tets-main.js).
 
 Currently, my test main is focused on running karma, but we can easily switch it to be able to run either.
 
 **test-main.js**
 
-<pre>var tests = [];
+```javascript
+var tests = [];
 
 var baseUrl = '';
 var isUsingKarma = (window.__karma__ != undefined);
@@ -101,8 +104,8 @@ require(tests, function(){
   else if(isUsingWallaby)
     wallaby.start();
 
-});</pre>
-
+});
+```
 The key parts are to ensure I delay wallaby to start, set the test collection and baseUrl for requireJS, then start the tests inside a require statement at the end.
 
 _Note: I did manage to completely lock up Visual Studio Code while updating the test-main file, but I&#8217;m not sure if that was VS Code&#8217;s fault or Wallaby&#8217;s_

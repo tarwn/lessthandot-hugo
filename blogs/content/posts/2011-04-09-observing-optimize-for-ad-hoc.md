@@ -3,6 +3,7 @@ title: Observing – Optimize for Ad Hoc Workload server option
 author: SQLology ~ Kim Tessereau
 type: post
 date: 2011-04-09T11:26:00+00:00
+ID: 1109
 excerpt: |
   Optimize For Ad Hoc Workloads – Observations......
    

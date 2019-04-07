@@ -3,6 +3,7 @@ title: 'Book Review: Fundamentals of SQL Server 2012 Replication'
 author: Jes Borland
 type: post
 date: 2014-10-01T15:16:38+00:00
+ID: 2998
 url: /index.php/uncategorized/book-review-fundamentals-of-sql-server-2012-replication/
 views:
   - 6351

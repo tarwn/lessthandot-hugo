@@ -3,6 +3,7 @@ title: “The What, Why, and How of Filegroups” – I-380 PASS Materials
 author: Jes Borland
 type: post
 date: 2012-12-12T19:42:00+00:00
+ID: 1852
 excerpt: |
   Last night I had the pleasure of presenting "The What, Why, and How of Filegroups" for the East Iowa I-380 SQL Server user group. Thanks for having me!
   My presentation materials are available here.

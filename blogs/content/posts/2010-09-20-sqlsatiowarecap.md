@@ -3,6 +3,7 @@ title: Have SQL, will travel – East Iowa SQL Saturday
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-09-20T16:41:35+00:00
+ID: 900
 excerpt: 'This past weekend I traveled to Iowa City to hold a session on SSIS basics.  The drive was worth it (even the hours looking at the back of a semi while the highway was at a dead stop).  My session went extremely well and the group that attended the session was interactive and we all had a great time together.  Interactive groups always make sessions more enjoyable.  Ask questions and give your own experiences!  Even the speakers gain more from speaking when the group gets into it.  There were some takeaways of my own that I will write up based on some questions and promises to the group (yes, I haven’t forgotten).  I hope to have those posted very soon.  One was the baseline collection that I have mentioned over the past few weeks.  This was based off a blog series that I discussed on collecting and making baselines a must with your SQL Server environments.  I’m writing a new series of packages to handle this in a friendly and portable upload for everyone and hope to have it done soon.'
 url: /index.php/datamgmt/datadesign/sqlsatiowarecap/
 views:

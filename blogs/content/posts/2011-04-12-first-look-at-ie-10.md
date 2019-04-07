@@ -3,6 +3,7 @@ title: First Look at IE 10
 author: SQLDenis
 type: post
 date: 2011-04-12T14:07:00+00:00
+ID: 1112
 excerpt: |
   Channel 9 has made available a video on their site about Internet Explorer 10, I have embedded the video here
   

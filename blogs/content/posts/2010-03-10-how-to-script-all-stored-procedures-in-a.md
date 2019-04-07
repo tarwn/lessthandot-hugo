@@ -3,6 +3,7 @@ title: How to script all stored procedures in a database
 author: Naomi Nosonovsky
 type: post
 date: 2010-03-10T19:20:03+00:00
+ID: 722
 excerpt: |
   In the forums I frequent, the question of scripting all stored procedures in a database arises very often, the most recent encounter is in this MSDN thread script out many stored procedures at once?
   
@@ -20,7 +21,8 @@ In the forums I frequent, the question of scripting all stored procedures in a d
 
 A few years ago, I asked this question myself in www.UniversalThread.com forum and Borislav Borissov helped me to come up with the following solution:
 
-<pre>set nocount on
+sql
+set nocount on
 DECLARE @Test TABLE (Id INT IDENTITY(1,1), Code varchar(max))
 
 INSERT INTO @Test (Code)
@@ -44,8 +46,8 @@ WHILE @lnCurrent <= @lnMax
                    SET @LongName = SUBSTRING(@LongName, 8001, LEN(@LongName))
                END
             SET @lnCurrent = @lnCurrent + 1
-      END</pre>
-
+      END
+```
 The output of this code produces a script of all stored procedures in a database.
 
 Obviously, there are many applications of this code &#8211; you may try appending comments to this script, for example, or change your procedures in some way.
@@ -60,13 +62,14 @@ Option 2: Open the stored procedures folder in SSMS (in the object explorer deta
 
 Options 3: The simplest of them. 
 
-<pre>bcp "SELECT definition + char(13) + 'GO' FROM MyDatabase.sys.sql_modules s INNER JOIN MyDatabase.sys.procedures p ON [s].[object_id] = [p].[object_id] WHERE p.name LIKE 'Something%'" queryout "c:SP_scripts.sql" -S MyInstance -T -t -w</pre>
-
+```
+bcp "SELECT definition + char(13) + 'GO' FROM MyDatabase.sys.sql_modules s INNER JOIN MyDatabase.sys.procedures p ON [s].[object_id] = [p].[object_id] WHERE p.name LIKE 'Something%'" queryout "c:SP_scripts.sql" -S MyInstance -T -t -w
+```
 Hope this may help.
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/80fc88a2-bd74-4bd7-aee2-ceb804441bb5
  [2]: /index.php/DataMgmt/DBProgramming/scripting-all-jobs-on-sql-server-2005-20
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

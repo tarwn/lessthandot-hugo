@@ -3,6 +3,7 @@ title: Procedures with cursors
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-20T11:27:11+00:00
+ID: 638
 url: /index.php/datamgmt/dbprogramming/procedures-with-cursors/
 views:
   - 11556
@@ -20,12 +21,13 @@ There are rare times when a cursor will outperform set based code. Not all proce
 
 **How to detect this problem:**
 
-<pre>Select  Object_Name(Object_ID) As ProcedureName
+sql
+Select  Object_Name(Object_ID) As ProcedureName
 From    sys.sql_modules S
 Where   (Definition Like '%cursor%' or Definition Like '%while%')
         And ObjectProperty(Object_ID, N'IsMSShipped') = 0
-Order By Object_Name(Object_ID)</pre>
-
+Order By Object_Name(Object_ID)
+```
 **How to correct it:** Examine each block of code that has a loop, and design an alternative method for accomplishing the same results. This is not always possible.
 
 **Level of severity:** moderate

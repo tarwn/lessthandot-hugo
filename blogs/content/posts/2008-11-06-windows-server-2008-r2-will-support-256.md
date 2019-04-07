@@ -3,6 +3,7 @@ title: Windows Server 2008 R2 Will Support 256 Logical Processors
 author: SQLDenis
 type: post
 date: 2008-11-06T16:17:27+00:00
+ID: 197
 url: /index.php/sysadmins/os/windows-server-2008-r2-will-support-256/
 views:
   - 4518

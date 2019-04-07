@@ -3,6 +3,7 @@ title: '2011 Goals: Bring It On'
 author: Jes Borland
 type: post
 date: 2010-12-29T19:32:00+00:00
+ID: 988
 excerpt: "I know I've said it before, but 2010 was an amazing year. I can't wait to see what 2011 has in store for me.   A year ago, I sat down and wrote some goals for myself. I achieved almost all of them, and they opened doors for me that have led to opportuni&hellip;"
 url: /index.php/datamgmt/datadesign/2011-goals-bring-it-on/
 views:

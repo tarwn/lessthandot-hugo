@@ -3,6 +3,7 @@ title: Master Data Services (Second Edition) – Review
 author: Koen Verbeeck
 type: post
 date: 2014-01-31T13:45:14+00:00
+ID: 2329
 url: /index.php/datamgmt/master-data-services-second-edition-review/
 views:
   - 12545

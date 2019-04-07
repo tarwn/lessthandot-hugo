@@ -3,6 +3,7 @@ title: 'SQL Saturday #160 — To each end, a beginning'
 author: joshuafennessy
 type: post
 date: 2012-09-30T23:56:00+00:00
+ID: 1739
 excerpt: 'It’s over. I still can’t believe it.  Something that I’ve worked on so hard and cared for 6 months is over.  So many great things happened during the day, and so many great people were involved.  I’m going to use this space to try to thank everyone, and&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sql-saturday-160-to-each/
 views:

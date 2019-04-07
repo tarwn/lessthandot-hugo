@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #67 – What Extended Events is Missing'
 author: Jes Borland
 type: post
 date: 2015-06-09T00:00:27+00:00
+ID: 3403
 url: /index.php/datamgmt/dbprogramming/t-sql-tuesday-67-what-extended-events-is-missing/
 views:
   - 3031

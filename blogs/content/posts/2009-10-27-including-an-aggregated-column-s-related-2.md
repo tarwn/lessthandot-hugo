@@ -3,6 +3,7 @@ title: Including an Aggregated Column’s Related Values – Part 2
 author: Naomi Nosonovsky
 type: post
 date: 2009-10-27T05:51:34+00:00
+ID: 545
 url: /index.php/datamgmt/datadesign/including-an-aggregated-column-s-related-2/
 views:
   - 14592
@@ -22,7 +23,8 @@ One more [related discussion on MSDN][4] with more performance tests.
 
 Take a look also at this [T-SQL challenge][5] 
 
-<pre>USE AdventureWorks
+sql
+USE AdventureWorks
  
 -- This solution is SQL Server 2000 compatible - correlated subquery
 SET STATISTICS TIME ON
@@ -138,7 +140,8 @@ INNER join (SELECT CustomerID,
 MAX(CONVERT(NVARCHAR(30), OrderDate, 126) + CAST(SalesOrderID AS CHAR(12))) AS CompoundKey FROM  
 Sales.SalesOrderHeader OH GROUP BY CustomerID) LastOrder 
 ON Cust.CustomerID = LastOrder.CustomerID and Ord.SalesOrderID  = CAST(RIGHT(LastOrder.CompoundKey,12) AS INT)
-SET STATISTICS TIME OFF</pre>
+SET STATISTICS TIME OFF
+```
 
 With the results
   
@@ -177,7 +180,8 @@ The execution plans
 
 This illustrates a real case scenario &#8211; see [ASP.NET forum&#8217;s thread][6]
 
-<pre>CREATE TABLE Items(
+sql
+CREATE TABLE Items(
 	ItemId int NOT NULL,
 	ItemName varchar(20) NOT NULL,
 	ItemDesciption varchar(20) NULL,
@@ -209,9 +213,10 @@ ALTER TABLE dbo.Bid
 GO
 
 ALTER TABLE dbo.Bid CHECK CONSTRAINT FK_Bid_Items1
-GO</pre>
-
-<pre>SET NOCOUNT ON
+GO
+```
+sql
+SET NOCOUNT ON
 Declare @i int
 Declare @j int
 Declare @r int
@@ -234,11 +239,12 @@ While @i<=100000 Begin
               
    Set @i=@i+1
 end
-GO</pre>
-
+GO
+```
 ### 6 cases combined:
 
-<pre>set nocount on
+sql
+set nocount on
 declare @ItemsCount int, @BidsCount int
 
 select @ItemsCount = COUNT(*) from Items
@@ -349,7 +355,8 @@ set statistics time off
   on Items.ItemId = Bid.ItemId order by Items.ItemId
   
   set statistics time off
-    </pre>
+    
+```
 
 ### Test results in SQL Server 2008 Express
 
@@ -389,5 +396,5 @@ Finally - compound key solution </p>
  [4]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/0217ddf4-bcab-4f2b-a81c-70841753cb23
  [5]: http://www.sqlmag.com/article/articleid/102883/102883.html
  [6]: http://forums.asp.net/p/1462968/3371370.aspx
- [7]: http://forum.lessthandot.com/viewforum.php?f=17
- [8]: http://forum.lessthandot.com/viewforum.php?f=22
+ [7]: http://forum.ltd.local/viewforum.php?f=17
+ [8]: http://forum.ltd.local/viewforum.php?f=22

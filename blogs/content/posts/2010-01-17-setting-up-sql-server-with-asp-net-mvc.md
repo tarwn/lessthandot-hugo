@@ -3,6 +3,7 @@ title: Setting up SQL Server with ASP.NET MVC
 author: SQLDenis
 type: post
 date: 2010-01-17T12:18:28+00:00
+ID: 677
 url: /index.php/webdev/serveradmin/msiis/setting-up-sql-server-with-asp-net-mvc/
 views:
   - 27740
@@ -44,17 +45,18 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
   So I don&#8217;t have the Express version of SQL Server on my machine. The first thing I have to do is open the Web.config file and change the connection string from this
 </p>
 
-<pre><connectionStrings>
+<pre lang="xml"><connectionStrings>
 		<add name="ApplicationServices" 
 			connectionString="data source=.SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|aspnetdb.mdf;
 		User Instance=true" providerName="System.Data.SqlClient"/>
-	</connectionStrings></pre>
+	</connectionStrings>
+</pre>
 
 <p>
   to this
 </p>
 
-<pre><connectionStrings>
+<pre lang="xml"><connectionStrings>
 		<add name="ApplicationServices" 
 			connectionString="data source=.;Integrated Security=SSPI;Initial Catalog=aspnetdb"/>
 	</connectionStrings></pre>

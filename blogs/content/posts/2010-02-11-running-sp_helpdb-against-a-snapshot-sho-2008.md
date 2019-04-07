@@ -3,6 +3,7 @@ title: Running sp_helpdb against a snapshot shows wrong files on SQL Server 2008
 author: SQLDenis
 type: post
 date: 2010-02-11T12:58:49+00:00
+ID: 699
 url: /index.php/datamgmt/dbprogramming/running-sp_helpdb-against-a-snapshot-sho-2008/
 views:
   - 5740
@@ -23,7 +24,8 @@ If you are using snapshots be aware that running sp_helpdb reports wrong files. 
 
 First create a test database
 
-<pre>use master
+sql
+use master
 go
 
 CREATE DATABASE [test] ON  PRIMARY 
@@ -31,11 +33,13 @@ CREATE DATABASE [test] ON  PRIMARY
  LOG ON 
 ( NAME = N'test_log', FILENAME = N'C:test_log.LDF' )
 
-GO</pre>
+GO
+```
 
 Now let&#8217;s create a table and populate it with some data
 
-<pre>USE test
+sql
+USE test
 go
 
 
@@ -47,23 +51,27 @@ select row_number() over (order by s1.id)
 from sysobjects s1
 cross join sysobjects s2
 
-go</pre>
-
+go
+```
 Now create the snapshot database
 
-<pre>use master
+sql
+use master
 go
 
     
     CREATE DATABASE TestSnapshot ON  
 ( NAME = N'test', FILENAME = N'C:testss.mdf' )
   AS SNAPSHOT of Test;
-GO</pre>
+GO
+```
 
 Now run a count for that table against the test database and against the snapshot
 
-<pre>select COUNT(*) from TestSnapshot..TestTable
-select COUNT(*) from Test..TestTable</pre>
+sql
+select COUNT(*) from TestSnapshot..TestTable
+select COUNT(*) from Test..TestTable
+```
 
 <pre>Output
 --------------
@@ -74,7 +82,9 @@ As you can see the count is the same
 
 Now run sp_helpdb and look at the sizes, we will come back to this output later
 
-<pre>sp_helpdb 'Test'</pre>
+sql
+sp_helpdb 'Test'
+```
 
 <pre>Output
 ---------------------------------------------------------------
@@ -83,7 +93,8 @@ test_log	2	C:test_log.LDF	        NULL	1792 KB</pre>
 
 Let&#8217;s add some more data to our table
 
-<pre>use Test
+sql
+use Test
 go
 
 declare @id int =(select MAX(id)
@@ -93,12 +104,15 @@ insert Test..TestTable(id)
 select row_number() over (order by s1.id) + @id
 from sysobjects s1
 cross join sysobjects s2
-cross join sysobjects s3</pre>
+cross join sysobjects s3
+```
 
 Now if we run the count we will see that the count for the table in the Test database has increased (as expected)
 
-<pre>select COUNT(*) from TestSnapshot..TestTable
-select COUNT(*) from Test..TestTable</pre>
+sql
+select COUNT(*) from TestSnapshot..TestTable
+select COUNT(*) from Test..TestTable
+```
 
 <pre>Output
 -------------
@@ -107,14 +121,18 @@ select COUNT(*) from Test..TestTable</pre>
 
 Okay now it is time to run sp_helpdb again
 
-<pre>sp_helpdb 'Test'</pre>
+sql
+sp_helpdb 'Test'
+```
 
 <pre>Output
 ---------------------------------------------------------------
 test		1	C:test.mdf		PRIMARY	20736 KB
 test_log	2	C:test_log.LDF	        NULL	69760 KB</pre>
 
-<pre>sp_helpdb 'TestSnapshot'</pre>
+sql
+sp_helpdb 'TestSnapshot'
+```
 
 <pre>Output
 ---------------------------------------------------------------
@@ -125,8 +143,10 @@ Do you see that? When you run sp\_helpdb against the snapshot now it reports wha
 
 Now run this query
 
-<pre>select db_name(dbid) as DB_Name,name,filename,size * 8 from master..sysaltfiles
-where dbid in (db_id('Test'),db_id('TestSnapshot'))</pre>
+sql
+select db_name(dbid) as DB_Name,name,filename,size * 8 from master..sysaltfiles
+where dbid in (db_id('Test'),db_id('TestSnapshot'))
+```
 
 <pre>Output
 ---------------------------------------------------------------
@@ -141,8 +161,10 @@ So where is the problem? The problem is in the sysfiles table, it has the wrong 
 
 Run these two queries to verify that
 
-<pre>select size * 8 as Size,filename from Test..sysfiles
-select size * 8 as Size,filename from TestSnapshot..sysfiles</pre>
+sql
+select size * 8 as Size,filename from Test..sysfiles
+select size * 8 as Size,filename from TestSnapshot..sysfiles
+```
 
 <pre>Output
 ----------------------------
@@ -158,12 +180,15 @@ sp\_helpdb actually calls the sys.sp\_helpfile proc to get the size and file nam
   
 run this and you will see that it is the second result set of sp_helpdb
 
-<pre>exec Test.sys.sp_helpfile
-exec TestSnapshot.sys.sp_helpfile</pre>
+sql
+exec Test.sys.sp_helpfile
+exec TestSnapshot.sys.sp_helpfile
+```
 
 Inside the sys.sp_helpfile proc you will find the following code
 
-<pre>select  name,  fileid, filename,  
+sql
+select  name,  fileid, filename,  
  filegroup = filegroup_name(groupid),  
  'size' = convert(nvarchar(15), convert (bigint, size) * 8) + N' KB',  
  'maxsize' = (case maxsize when -1 then N'Unlimited'  
@@ -175,18 +200,21 @@ Inside the sys.sp_helpfile proc you will find the following code
   convert(nvarchar(15), convert (bigint, growth) * 8) + N' KB' end),  
  'usage' = (case status & 0x40 when 0x40 then 'log only' else 'data only' end)  
  from sysfiles  
- </pre>
+ 
+```
 
 As you can see it uses the sysfiles table
 
 If you want to see what the code for sp\_helpdb and sys.sp\_helpfile looks like execute the following
 
-<pre>exec sp_helptext 'sp_helpdb'
-exec sp_helptext 'sys.sp_helpfile'</pre>
+sql
+exec sp_helptext 'sp_helpdb'
+exec sp_helptext 'sys.sp_helpfile'
+```
 
 So what do you think, is this a bug?
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

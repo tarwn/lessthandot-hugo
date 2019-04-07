@@ -3,6 +3,7 @@ title: Windows Azure Tools for Microsoft Visual Studio 1.1 Released
 author: SQLDenis
 type: post
 date: 2010-02-02T00:04:02+00:00
+ID: 691
 excerpt: |
   Microsoft has released Windows Azure Tools for Microsoft Visual Studio 1.1 today. 
   Windows Azure Tools for Microsoft Visual Studio extend Visual Studio 2008 and the upcoming Visual Studio 2010 RC to enable the creation, configuration, building, debuggi&hellip;

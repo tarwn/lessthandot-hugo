@@ -3,6 +3,7 @@ title: Find Out If You Are Using Deprecated Features In SQL Server 2008
 author: SQLDenis
 type: post
 date: 2010-01-14T16:58:41+00:00
+ID: 676
 url: /index.php/datamgmt/datadesign/find-out-if-you-are-using-deprecated-fea-2008/
 views:
   - 32014
@@ -25,10 +26,12 @@ Yesterday we used the sys.dm\_os\_performance_counters dynamic management view i
 
 So you have upgraded your old server to SQL Server 2008 and you wonder if you have any deprecated features in your code. Well, there is a query for that, if I run this query below on one of my test servers where I have some databases that I just restored from a 2000 instance I get some results back
 
-<pre>select instance_name,cntr_value 
+sql
+select instance_name,cntr_value 
 from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Deprecated Features'
-and cntr_value &gt; 0</pre>
+and cntr_value > 0
+```
 
 Here is the output from that query
 
@@ -83,7 +86,8 @@ DBCC SHOWCONTIG                                               	4
 Table hint without WITH                                       	603
 Data types: text ntext or image                               	546
 More than two-part column name                                	2
-NOLOCK or READUNCOMMITTED in UPDATE or DELETE                 	1566                                                                                   </pre>
+NOLOCK or READUNCOMMITTED in UPDATE or DELETE                 	1566                                                                                   
+</pre>
 
 Keep in mind that I have some throw-away databases that I use to answer questions on newsgroups so some of these things that show up might be because of that.
 
@@ -99,9 +103,11 @@ You can also take a look at these blog posts by [George Mastros][2] that show yo
 
 In case you don&#8217;t have access to this dynamic management view, here is the whole list of deprcated features that this query returns
 
-<pre>select instance_name 
+sql
+select instance_name 
 from sys.dm_os_performance_counters
-where Object_name = 'SQLServer:Deprecated Features'</pre>
+where Object_name = 'SQLServer:Deprecated Features'
+```
 
 ALTER LOGIN WITH SET CREDENTIAL
   
@@ -565,5 +571,5 @@ NOLOCK or READUNCOMMITTED in UPDATE or DELETE
  [2]: /index.php/All/?disp=authdir&author=10
  [3]: /index.php/DataMgmt/DataDesign/identify-procedures-that-call-sql-server
  [4]: /index.php/DataMgmt/DBProgramming/don-t-use-text-datatype-for-sql-2005-and
- [5]: http://forum.lessthandot.com/viewforum.php?f=17
- [6]: http://forum.lessthandot.com/viewforum.php?f=22
+ [5]: http://forum.ltd.local/viewforum.php?f=17
+ [6]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: Backups are for sissies!!!
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-03-11T11:49:22+00:00
+ID: 345
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/backups-are-for-sissies/
 views:
   - 7151

@@ -3,6 +3,7 @@ title: East Iowa SQL Saturday Oct. 17th
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-09-09T14:05:41+00:00
+ID: 555
 url: /index.php/datamgmt/dbprogramming/east-iowa-sql-saturday-oct-17th/
 views:
   - 3245

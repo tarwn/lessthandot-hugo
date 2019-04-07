@@ -3,6 +3,7 @@ title: Trying out Amazon Relational Database Service
 author: SQLDenis
 type: post
 date: 2013-03-21T09:06:00+00:00
+ID: 2046
 excerpt: |
   Since it is a day off for me today, I decided to give Amazon Relational Database Service a try. Amazon RDS has SQL Server, Oracle and MySQL as databases available.
   
@@ -166,7 +167,9 @@ You can setup alarms as well, here is what that looks like
 
 Run some queries, see what works what doesn&#8217;t. I decided to run sp_helpdb
 
-<pre>sp_helpdb</pre>
+sql
+sp_helpdb
+```
 
 Here is what I see
 

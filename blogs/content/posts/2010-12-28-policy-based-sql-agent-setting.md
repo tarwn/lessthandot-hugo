@@ -3,6 +3,7 @@ title: Policy-Based Management for SQL Agent History
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-12-28T21:37:29+00:00
+ID: 987
 excerpt: 'Policy-Based Management is an addition to SQL Server that allows DBAs to manage multiple SQL Server instances with ease.  In previous years and versions, managing hundreds of instances was an exhausting task which typically involved writing a number of custom collection scripts.  With policies in place, DBAs can evaluate almost everything that involves the entire SQL Server instance from the configurations of SQL Server itself to the databases that reside on the instance.'
 url: /index.php/datamgmt/dbadmin/policy-based-sql-agent-setting/
 views:
@@ -34,7 +35,8 @@ To return the setting of the maximum rows that will be retained in history for e
 
 To return the JobHistoryMaxRowsPerJob, run the following
 
-<pre>DECLARE @jobhistory_max_rows_per_job INT  
+sql
+DECLARE @jobhistory_max_rows_per_job INT  
   
 EXECUTE master.dbo.xp_instance_regread N'HKEY_LOCAL_MACHINE',  
              N'SOFTWAREMicrosoftMSSQLServerSQLServerAgent',  
@@ -42,7 +44,9 @@ EXECUTE master.dbo.xp_instance_regread N'HKEY_LOCAL_MACHINE',
              @jobhistory_max_rows_per_job OUTPUT,  
              N'no_output'  
                                          
-SELECT @jobhistory_max_rows_per_job</pre></p> 
+SELECT @jobhistory_max_rows_per_job
+```
+</p> 
 
 This statement on a base installation of SQL Server with all defaults left in place returns 1000. Now that we know how to return the value we can create the policy to evaluate the settings with Policy-Based Management.
 
@@ -67,7 +71,8 @@ Select the drop down for Check condition and select New Condition. Use the name 
 
 Note that we double single quotes so they are parsed as single quotes on the execution of the executesql() function
 
-<pre>ExecuteSql('Numeric', 'DECLARE @jobhistory_max_rows         INT  
+```
+ExecuteSql('Numeric', 'DECLARE @jobhistory_max_rows         INT  
   
 EXECUTE master.dbo.xp_instance_regread N''HKEY_LOCAL_MACHINE'',  
              N''SOFTWAREMicrosoftMSSQLServerSQLServerAgent'',  
@@ -75,8 +80,8 @@ EXECUTE master.dbo.xp_instance_regread N''HKEY_LOCAL_MACHINE'',
              @jobhistory_max_rows OUTPUT,  
              N''no_output''  
 
-SELECT @jobhistory_max_rows')</pre>
-
+SELECT @jobhistory_max_rows')
+```
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/pbm_1.gif" alt="" title="" width="414" height="334" />
 </div>

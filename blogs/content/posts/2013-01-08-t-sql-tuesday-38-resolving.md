@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #38 – Resolving an SSIS package performance problem'
 author: Koen Verbeeck
 type: post
 date: 2013-01-08T05:04:00+00:00
+ID: 1903
 excerpt: 'This is my contribution to T-SQL Tuesday #38: Standing Firm. I describe how I resolved an SSIS package performance issue.'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/t-sql-tuesday-38-resolving/
 views:

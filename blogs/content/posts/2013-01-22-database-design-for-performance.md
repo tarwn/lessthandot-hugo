@@ -3,6 +3,7 @@ title: Database Designing With Performance In Mind
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-22T10:53:00+00:00
+ID: 1929
 excerpt: 'Database design is the foundation on which we can build a successful initiative for maintenance and scalability.  Administrators have the ability to maintain indexing, statistics, integrity checks and so on, but if a database is designed extremely poorl&hellip;'
 url: /index.php/datamgmt/datadesign/database-design-for-performance/
 views:
@@ -51,9 +52,15 @@ Both designs have been preloaded with 116,000 header rows, 4.2 million detail ro
 
 While designing, it is important to take the step of preloading expected data into your design.  This data is completely volatile, but valuable from the aspect of seeing where redundancy can occur.  Take the following queries:
 
-<pre>SELECT TOP 1000 * FROM OrderHDR_Poor</pre>
+sql
+SELECT TOP 1000 * FROM OrderHDR_Poor
+```
 
-<pre>SELECT TOP 1000 * FROM OrderHDR</pre>
+
+sql
+SELECT TOP 1000 * FROM OrderHDR
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-47.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-47.png?mtime=1358783966" width="624" height="284" /></a>
@@ -67,7 +74,8 @@ Internally, these designs also affect storage.  Since the designs are similar a
 
 Another aspect to look at is how the design is affecting the overall page storage needs.  Setting data types aside, the normalization level will have a direct effect on how many pages are needed. In both designs, we can use catalog views to look at how this impacts page counts.
 
-<pre>select 
+sql
+select 
     obj.name, 
     idx.name,
     all_units.type_desc, 
@@ -76,8 +84,9 @@ from sys.objects obj
   inner join sys.partitions parts on obj.object_id = parts.object_id
   inner join sys.allocation_units all_units on all_units.container_id = parts.hobt_id
   inner join sys.indexes idx on parts.index_id = idx.index_id and obj.object_id = idx.object_id
-where obj.type = 'U' and obj.name <&gt; 'sysdiagrams'
-order by obj.name</pre>
+where obj.type = 'U' and obj.name <> 'sysdiagrams'
+order by obj.name
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-48.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-48.png?mtime=1358783966" width="408" height="149" /></a>
@@ -93,7 +102,8 @@ Querying data that is not normalized has a few concerns and performance aspects 
 
 Take the example below and the plan generated from the query
 
-<pre>CREATE PROCEDURE [dbo].[select_OrderDetailsByOrderNum] (@ordernum INT)
+sql
+CREATE PROCEDURE [dbo].[select_OrderDetailsByOrderNum] (@ordernum INT)
 AS
 SELECT 
 	hdr.ordernum,
@@ -107,7 +117,8 @@ FROM OrderHDR_Poor hdr
 JOIN OrderDTL_Poor dtl ON hdr.ordernum = dtl.ordernum
 LEFT JOIN Shipment_Poor ship ON dtl.ShipID = ship.shipID
 WHERE hdr.ordernum = @ordernum
-GO</pre>
+GO
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-49.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-49.png?mtime=1358783966" width="624" height="156" /></a>
@@ -117,10 +128,12 @@ Figure 4 – Querying a poor design
 
 In order to tune this plan, an index would help the overall performance on ordernum in the order details table.
 
-<pre>CREATE NONCLUSTERED INDEX IDX_ordernum_ASC
+sql
+CREATE NONCLUSTERED INDEX IDX_ordernum_ASC
 ON [dbo].[OrderDTL_Poor] ([ordernum])
 INCLUDE ([item],[itemcost],[itemqty],[shipid])
-GO</pre>
+GO
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-50.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-50.png?mtime=1358783966" width="426" height="146" /></a>
@@ -138,7 +151,8 @@ Figure 6 – Buffer review after tuning
 
 This plan isn’t bad and will perform fairly well under normal conditions.  Let’s compare this to the same procedure and the plan that is generated based on the design of the normalized tables.
 
-<pre>CREATE PROCEDURE select_OrderDetailsByOrderNumv2 (@ordernum INT)
+sql
+CREATE PROCEDURE select_OrderDetailsByOrderNumv2 (@ordernum INT)
 AS
 SELECT 
 	hdr.ordernum,
@@ -152,7 +166,8 @@ FROM OrderHDR hdr
 JOIN OrderDTL dtl ON hdr.ordernum = dtl.ordernum
 LEFT JOIN Shipment ship ON dtl.ShipID = ship.shipID
 WHERE hdr.ordernum = @ordernum
-GO</pre>
+GO
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-52.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-52.png?mtime=1358783966" width="624" height="142" /></a>
@@ -160,10 +175,12 @@ GO</pre>
 
 Figure 7 – normalizing and plan generated from same procedure
 
-<pre>CREATE NONCLUSTERED INDEX IDX_Detail_Ordernum_ASC
+sql
+CREATE NONCLUSTERED INDEX IDX_Detail_Ordernum_ASC
 ON [dbo].[OrderDTL] ([ordernum])
 INCLUDE ([item],[shipID],[itemcost],[itemqty])
-GO</pre>
+GO
+```
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/All/urgh_1.gif?mtime=1358786105" width="437" height="143" />
@@ -181,14 +198,17 @@ Figure 9 – Review buffered page counts
 
 Another example would be a common task &#8211; check if an order is shipped. To do this, in both cases we need to look at the detail table and the shipment table.
 
-<pre>CREATE PROCEDURE sel_ShipDate (@ordernum INT)
+sql
+CREATE PROCEDURE sel_ShipDate (@ordernum INT)
 AS
 SELECT 
 	1
 FROM OrderDTL_Poor dtl
 INNER JOIN Shipment_Poor ship ON dtl.shipid = ship.shipID
 WHERE dtl.ordernum = @ordernum
-GO</pre>
+GO
+```
+
 
  
 
@@ -200,14 +220,16 @@ From the above procedure, the following plan is generated and resulting buffer n
 
 Looking at the normalized design and the same needs, the following procedure can be used and executed.
 
-<pre>CREATE PROCEDURE sel_ShipDatev2 (@ordernum INT)
+sql
+CREATE PROCEDURE sel_ShipDatev2 (@ordernum INT)
 AS
 SELECT 
 	1
 FROM OrderDTL dtl
 INNER JOIN Shipment ship ON dtl.shipid = ship.shipID
 WHERE dtl.ordernum = @ordernum
-GO</pre>
+GO
+```
 
  
 
@@ -223,7 +245,8 @@ With the order header table, poor design and working towards normalization, we�
 
 Poor design – non-normalized
 
-<pre>select 
+sql
+select 
 	hdr.customerName,
 	count(*)
 from OrderHDR_Poor hdr
@@ -231,13 +254,16 @@ join OrderDTL_Poor dtl on hdr.ordernum = dtl.ordernum
 join shipment_Poor ship on dtl.shipid = ship.shipid
 where dtl.shipid is not null
 group by hdr.customerName
-having count(*) &gt; 3</pre>
+having count(*) > 3
+```
+
 
  
 
 **Normalizing**
 
-<pre>select 
+sql
+select 
 	cust.contactName,
 	count(*)
 from OrderHDR hdr
@@ -246,16 +272,19 @@ join shipment ship on dtl.shipid = ship.shipid
 join Contact cust on hdr.customerID = cust.contactID
 where dtl.shipid is not null
 group by hdr.customerID,cust.contactName
-having count(*) &gt; 3</pre>
+having count(*) > 3
+```
 
  
 
 Both of these queries are easily tuned with indexing on ShipID.  Further indexing could be done but we’ll look at indexing ShipID given it has the highest cost for both queries.
 
-<pre>CREATE NONCLUSTERED INDEX IDX_ShipIDPoor
+sql
+CREATE NONCLUSTERED INDEX IDX_ShipIDPoor
 ON [dbo].[OrderDTL_Poor] ([shipID])
 INCLUDE ([ordernum])
-GO</pre>
+GO
+```
 
  
 
@@ -265,10 +294,12 @@ Plan for the non-normalized design (note the sort operation due to poor statisti
   <a href="/wp-content/uploads/blogs/All/-58.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-58.png?mtime=1358783966" width="624" height="202" /></a>
 </div>
 
-<pre>CREATE NONCLUSTERED INDEX IDX_ShipID
+sql
+CREATE NONCLUSTERED INDEX IDX_ShipID
 ON [dbo].[OrderDTL] ([shipID])
 INCLUDE ([ordernum])
-GO</pre>
+GO
+```
 
  
 

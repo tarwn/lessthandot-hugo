@@ -3,6 +3,7 @@ title: Database Projects – Installing the Database Project Template
 author: Axel Achten (axel8s)
 type: post
 date: 2013-01-08T12:10:00+00:00
+ID: 1905
 excerpt: |
   This is the second post in the Database Projects series. The first post was Setting up Source Control.
   So now we have Source Control in place we can start a database project. To do this launch SQL Server Data Tools 2012 (SSDT). In the Start Page, choos&hellip;

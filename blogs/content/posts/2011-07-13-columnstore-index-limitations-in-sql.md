@@ -3,6 +3,7 @@ title: ColumnStore Index limitations in SQL Server Denali CTP3
 author: SQLDenis
 type: post
 date: 2011-07-14T00:22:00+00:00
+ID: 1252
 excerpt: |
   If you have been working with Sybase IQ then you might be familiar with what a columnstore database is.
   
@@ -32,11 +33,13 @@ SQL Server has added a new type of index which is column based instead of row ba
 
 Both of these tables have identical data and have 1 million rows.
 
-<pre>SELECT COUNT(*),SomeValue FROM TestRowStore 
+sql
+SELECT COUNT(*),SomeValue FROM TestRowStore 
 group by SomeValue
 
 SELECT COUNT(*),SomeValue FROM TestColumnStore 
-group by SomeValue</pre>
+group by SomeValue
+```
 
 Here is the execution plan for this query, click on the image for a larger size
 
@@ -74,9 +77,11 @@ You cannot truncate a table with a columnstore index
 
 I decided to look in the sysmessages table for any messages that had columnstore in the description
 
-<pre>select  description  from sys.sysmessages
+sql
+select  description  from sys.sysmessages
 where msglangid = 1033
-and description like'%columnstore%'</pre>
+and description like'%columnstore%'
+```
 
 Here is the whole list of errors that SQL Server might throw when you try to do things that are not supported. Keep in mind that sysmessages only returns the first 255 characters so some of the messages are cut
 

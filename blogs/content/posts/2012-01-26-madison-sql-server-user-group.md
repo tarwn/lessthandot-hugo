@@ -3,6 +3,7 @@ title: Madison SQL Server User Group
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-01-27T00:05:00+00:00
+ID: 1507
 excerpt: "I had the distinct pleasure of attending my first MADPASS meeting last night, January, 25th.  The drive to the Madison SQL Server User Group from the Illinois, Wisconsin border wasn't that bad and well worth it.  I was able to catch up with the Grandfat&hellip;"
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/madison-sql-server-user-group/
 views:

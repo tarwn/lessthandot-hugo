@@ -3,6 +3,7 @@ title: SSRS Properties – CanGrow and CanShrink
 author: Jes Borland
 type: post
 date: 2013-02-20T15:09:00+00:00
+ID: 1999
 excerpt: The purpose of these properties is to allow a text box to grow or reduce in size to fit a value.
 url: /index.php/datamgmt/ssrs/ssrs-properties-cangrow-and-canshrink/
 views:

@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 16: Lack of database design and normalization'
 author: SQLDenis
 type: post
 date: 2012-12-16T12:55:00+00:00
+ID: 1859
 excerpt: |
   This is day sixteen of the SQL Advent 2012 series of blog posts. Today we are going to look at the lack of database design and normalization.
   
@@ -36,41 +37,51 @@ Let&#8217;s take a look at a simple example. Let&#8217;s say we have a book stor
 
 You might come up with a table like this right?
 
-<pre>CREATE TABLE Books (BookdId int, Title varchar(100), PublishDate datetime, Author varchar(100))
-GO</pre>
+sql
+CREATE TABLE Books (BookdId int, Title varchar(100), PublishDate datetime, Author varchar(100))
+GO
+```
 
 One of the problems is that if an author wrote more than one book, the author will be stored in that table more than once. What it the authot is a woman and she gets married and decided to change her name, how will you know this is the same person?
 
 Let&#8217;s drop that table since we are going to recreate it
 
-<pre>DROP TABLE Books
-GO</pre>
+sql
+DROP TABLE Books
+GO
+```
 
 Now, let&#8217;s create two tables, we are going to create an Author table and a Books table. The Author table will hold the AuthotID, the last name as well as the first name. Now we can use the AuthorID and store that in the Books table
 
-<pre>Create Table Authors (AuthorID int, FirstName varchar(100), LastName varchar(100))
+sql
+Create Table Authors (AuthorID int, FirstName varchar(100), LastName varchar(100))
 GO
 
 CREATE TABLE Books (BookdId int, Title varchar(100), PublishDate datetime, AuthorID int)
-GO</pre>
+GO
+```
 
 So what is the problem with this so called design? Ever heard of a book that had more than one author? Of course you have there are many of those, this is especially true with technical books.
 
 Let&#8217;s drop those tables since we are going to recreate it.
 
-<pre>DROP TABLE Books, Authors
-GO</pre>
+sql
+DROP TABLE Books, Authors
+GO
+```
 
 Now what we have to add is a third table, this table will have just two columns, the BookID and the AuthorID, now you can handle many authors per book without a problem. The AuthorID column will now be eliminated from the Books table as well.
 
-<pre>Create Table Authors (AuthorID int, FirstName varchar(100), LastName varchar(100))
+sql
+Create Table Authors (AuthorID int, FirstName varchar(100), LastName varchar(100))
 GO
 
 CREATE TABLE Books (BookdId int, Title varchar(100), PublishDate datetime)
 GO
 
 CREATE TABLE BookAuthors(BookdId int,AuthorID int)
-GO</pre>
+GO
+```
 
 What else are we missing? How about some primary keys and foreign keys. We are going to make BookID and AuthorID a primary key. Those two columns will also be a foreign key in the BookAuthors tables. Since an author can&#8217;t write the same book twice, we will also make the combination of BookID and AuthorID a primary key in the BookAuthors table
 
@@ -82,35 +93,45 @@ Here is what you will end up with
 
 Now, here is the code to add the primary keys and foreign keys to the table
 
-<pre>ALTER TABLE dbo.Books ADD CONSTRAINT
+sql
+ALTER TABLE dbo.Books ADD CONSTRAINT
 	PK_Books PRIMARY KEY CLUSTERED 
 	(BookdID) ON [PRIMARY]
 
-GO</pre>
+GO
+```
 
-<pre>ALTER TABLE dbo.BookAuthors ADD CONSTRAINT
+sql
+ALTER TABLE dbo.BookAuthors ADD CONSTRAINT
 	PK_BookAuthors PRIMARY KEY CLUSTERED 
 	(BookdID,AuthorID)  ON [PRIMARY]
 
-GO</pre>
+GO
+```
 
-<pre>ALTER TABLE dbo.Authors ADD CONSTRAINT
+sql
+ALTER TABLE dbo.Authors ADD CONSTRAINT
 	PK_Authors PRIMARY KEY CLUSTERED 
-	(AuthorID) ON [PRIMARY]</pre>
+	(AuthorID) ON [PRIMARY]
+```
 
-<pre>ALTER TABLE [dbo].[BookAuthors]  WITH CHECK ADD  CONSTRAINT [FK_BookAuthors_Authors] FOREIGN KEY([AuthorID])
+sql
+ALTER TABLE [dbo].[BookAuthors]  WITH CHECK ADD  CONSTRAINT [FK_BookAuthors_Authors] FOREIGN KEY([AuthorID])
 REFERENCES [dbo].[Authors] ([AuthorID])
 GO
 
 ALTER TABLE [dbo].[BookAuthors] CHECK CONSTRAINT [FK_BookAuthors_Authors]
-GO</pre>
+GO
+```
 
-<pre>ALTER TABLE [dbo].[BookAuthors]  WITH CHECK ADD  CONSTRAINT [FK_BookAuthors_Books] FOREIGN KEY([BookdID])
+sql
+ALTER TABLE [dbo].[BookAuthors]  WITH CHECK ADD  CONSTRAINT [FK_BookAuthors_Books] FOREIGN KEY([BookdID])
 REFERENCES [dbo].[Books] ([BookdID])
 GO
 
 ALTER TABLE [dbo].[BookAuthors] CHECK CONSTRAINT [FK_BookAuthors_Books]
-GO</pre>
+GO
+```
 
 That is a lot of code, this is where modeling tools come in handy. You can use the diagramming tool in SQL Server Management Studio but it is not full feature like the ones below.
 

@@ -3,6 +3,7 @@ title: Visual Studio 2010 and .NET Framework 4 Beta 2 Available on MSDN
 author: SQLDenis
 type: post
 date: 2009-10-19T14:11:45+00:00
+ID: 591
 excerpt: 'Microsoft announced the immediate availability of Microsoft Visual Studio 2010 Beta 2 and Microsoft .NET Framework 4 Beta 2 to MSDN subscribers; general availability will follow on Oct. 21. The company also outlined a simplified product lineup and prici&hellip;'
 url: /index.php/enterprisedev/appserver/visual-studio-2010-and-net-framework-4-b/
 views:

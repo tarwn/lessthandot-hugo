@@ -3,6 +3,7 @@ title: Virtual book club.. who is in?
 author: SQLDenis
 type: post
 date: 2013-08-22T00:36:00+00:00
+ID: 2148
 excerpt: |
   At work we decided to start a book club, we pick a book, every week we decide how much we will read. After the week is over, we meet and then discuss what we read. We discuss what we liked, what we didn't like and also what we learned.
   

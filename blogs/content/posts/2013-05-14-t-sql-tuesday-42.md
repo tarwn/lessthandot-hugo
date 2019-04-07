@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #42: The Long and Winding Road'
 author: Koen Verbeeck
 type: post
 date: 2013-05-14T06:23:00+00:00
+ID: 2083
 excerpt: 'It’s the second Tuesday of the month, which means it’s time again for #TSQL2sday! It is the 42nd installment of this blog post series and the subject is not about the Answer to the Ultimate Question of Life, the Universe, and Everything as I hoped it wo&hellip;'
 url: /index.php/webdev/business-intelligence/t-sql-tuesday-42/
 views:

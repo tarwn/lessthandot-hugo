@@ -3,6 +3,7 @@ title: Upgrade Assistant for SQL Server 2012 available for download
 author: SQLDenis
 type: post
 date: 2011-12-23T18:59:00+00:00
+ID: 1461
 excerpt: 'Upgrade Assistant for SQL Server 2012 (UAFS) has Released To Web(RTW). Upgrade Assistant for SQL Server 2012 is shipped as a free web-downloadable tool.  It performs application compatibility testing and detects potential functional and performance issu&hellip;'
 url: /index.php/datamgmt/datadesign/upgrade-assistant-for-sql-server/
 views:

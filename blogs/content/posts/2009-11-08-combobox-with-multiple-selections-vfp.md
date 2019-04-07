@@ -3,6 +3,7 @@ title: “Combobox” with multiple selections (Visual FoxPro)
 author: Naomi Nosonovsky
 type: post
 date: 2009-11-08T15:52:02+00:00
+ID: 614
 excerpt: |
   The class listed below was born as a result of this discussion in UniversalThread Non-standard combobox Thread #1424555 where the idea of using ListBox with MultiSelect property instead of the standard combobox was suggested by Gregory Adam.
   
@@ -24,7 +25,8 @@ The class listed below was born as a result of this discussion in UniversalThrea
 
 While there are other solutions available to resolve this issue (such as the class by Dorin Vasilescu, [File #31183][1] available at www.universalthread.com in the Downloads section) this class best suits my purpose. 
 
-<pre>**************************************************
+```visualfoxpro
+**************************************************
 *-- Class:        listbox_collapsable (c:nadyacollapsable_listboxcollapsable_listbox.vcx)
 *-- ParentClass:  listbox
 *-- BaseClass:    listbox
@@ -268,7 +270,8 @@ DEFINE CLASS listbox_collapsable AS listbox
 ENDDEFINE
 *
 *-- EndDefine: listbox_collapsable
-**************************************************</pre>
+**************************************************
+```
 
 Attached is the <a href="/wp-content/uploads/blogs/DataMgmt/collapsable\_listbox.zip" Title = "Collapsable Listbox">collapsable\_listbox.zip</a>
 

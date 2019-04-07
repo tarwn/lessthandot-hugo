@@ -3,6 +3,7 @@ title: SQL Server Denali Feature Packs
 author: SQLArcher
 type: post
 date: 2011-07-21T14:36:00+00:00
+ID: 1261
 excerpt: |
   So by this time all of you should know that SQL Server "Denali" CTP 3 is out and about.
   

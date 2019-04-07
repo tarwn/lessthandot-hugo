@@ -3,6 +3,7 @@ title: PerformancePoint Server To Become PerformancePoint Services In SharePoint
 author: SQLDenis
 type: post
 date: 2009-01-23T15:23:07+00:00
+ID: 296
 url: /index.php/datamgmt/datadesign/performancepoint-server-to-become-perfor/
 views:
   - 6116

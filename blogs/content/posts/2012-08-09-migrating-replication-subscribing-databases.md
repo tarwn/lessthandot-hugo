@@ -3,6 +3,7 @@ title: Migrating Replication Subscribing Databases
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-08-09T12:34:00+00:00
+ID: 1691
 excerpt: 'In a merge replicating world, laptops are typically the majority of the subscribing machines.  With laptops and any other user controlled computer, changes can come up - upgrades are needed or new hardware rollouts.  These all cause the need for a new o&hellip;'
 url: /index.php/datamgmt/dbadmin/migrating-replication-subscribing-databases/
 views:
@@ -29,13 +30,19 @@ The hardship to this task is, two machines can’t have the same name on the net
 
 Note: if you are unsure which mdf and ldf files are being used for the subscriber database, use the following query either in SSMS or SQLCMD to return the files and paths.
 
-<pre>SELECT physical_name FROM sys.master_files WHERE name = '<db name&gt;'</pre>
+sql
+SELECT physical_name FROM sys.master_files WHERE name = '<db name>'
+```
+
 
  
 
 One way to accomplish this task is to use detach and attach in SQL Server.  First, detach the database that is the subscriber on the old machine.  If your database name is, SalesMan, the detach would appear as shown below.
 
-<pre>EXEC sp_detach_db 'SalesMan', 'true';</pre>
+sql
+EXEC sp_detach_db 'SalesMan', 'true';
+```
+
 
  
 
@@ -43,12 +50,15 @@ Now, copy the mdf and ldf filed for the database to an external storage device.�
 
 Once you’ve renamed the new machine to the same as the old machine, attach the database.  This is done by first copying the mdf and ldf into the directory on the machine where you want them to be located.  Then attach the database using the CREATE DATABASE statement.
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 CREATE DATABASE [SalesMan] ON
-( FILENAME = N’<path to mdf you copied&gt;’),
-( FILENAME = N’<path to ldf you copied&gt;’)
+( FILENAME = N’<path to mdf you copied>’),
+( FILENAME = N’<path to ldf you copied>’)
 FOR ATTACH
-GO</pre>
+GO
+```
+
 
 Now, replicate!  You should see replication function correctly.

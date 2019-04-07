@@ -3,6 +3,7 @@ title: Working with vendor-provided databases
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-03-29T10:20:02+00:00
+ID: 738
 excerpt: 'Don’t be afraid to call your vendor and begin to create a professional relationship with them.  Always work together to build on the systems that are working hard to keep both companies alive.'
 url: /index.php/itprofessionals/ethicsit/play-nice-with-vendors/
 views:
@@ -56,18 +57,20 @@ Here’s a good example. A few weeks ago, a database behind a warehouse manageme
 
 > Finding forwarded records can be done with the following query written by Jonathan Kehayias ([blog][1] | [Twitter][2])</p> 
 > 
-> <pre>SELECT 
-    OBJECT_NAME(ps.OBJECT_ID) AS TableName,
-    i.name AS IndexName,
-    ps.index_type_desc,
-    ps.page_count,
-    ps.avg_fragmentation_in_percent,
-    ps.forwarded_record_count
-FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL, NULL, 'DETAILED') AS ps
-INNER JOIN sys.indexes AS i 
-    ON ps.OBJECT_ID = i.OBJECT_ID 
-        AND ps.index_id = i.index_id
-WHERE ps.forwarded_record_count &gt; 0</pre>
+> sql
+SELECT 
+>     OBJECT_NAME(ps.OBJECT_ID) AS TableName,
+>     i.name AS IndexName,
+>     ps.index_type_desc,
+>     ps.page_count,
+>     ps.avg_fragmentation_in_percent,
+>     ps.forwarded_record_count
+> FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL, NULL, 'DETAILED') AS ps
+> INNER JOIN sys.indexes AS i 
+>     ON ps.OBJECT_ID = i.OBJECT_ID 
+>         AND ps.index_id = i.index_id
+> WHERE ps.forwarded_record_count > 0
+```
 
 To learn more about forwarded records and HEAP issues, check Sankar Reddy’s ([blog][3] | [Twitter][4]) blog, &#8220;[How can I tell if a SQL Server system is affected by Forwarded records?&#8221;][5] and also a very good [reply][6] from Jonathan Kehayias ([blog][1] | [Twitter][2]) in the msdn forums [here][6].
   

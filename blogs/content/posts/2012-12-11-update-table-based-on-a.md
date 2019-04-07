@@ -3,6 +3,7 @@ title: Update Table Based on a JOIN
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-12-11T12:20:00+00:00
+ID: 1849
 excerpt: |
   This may seem like a simple and basic task but it is a common question asked, “How do I update a column based on a query that has joins in it?”
   Let’s say you have a query such as the one below from AdventureWorks2012.
@@ -31,7 +32,8 @@ This may seem like a simple and basic task but it is a common question asked, �
 
 Let’s say you have a query such as the one below from AdventureWorks2012.
 
-<pre>SELECT per.LastName
+sql
+SELECT per.LastName
 	,emp.JobTitle
 	,salesp.CommissionPct
 	,terr.NAME
@@ -40,7 +42,8 @@ FROM [Person].[Person] per
 INNER JOIN [HumanResources].[Employee] emp ON per.BusinessEntityID = emp.BusinessEntityID
 INNER JOIN [Sales].[SalesPerson] salesp ON emp.BusinessEntityID = salesp.BusinessEntityID
 INNER JOIN [Sales].[SalesTerritory] terr ON salesp.TerritoryID = terr.TerritoryID
-WHERE terr.NAME = 'Northwest'</pre>
+WHERE terr.NAME = 'Northwest'
+```
 
  
 
@@ -48,28 +51,34 @@ In the above query, let’s say that you have to update CommissionPct by .002 fo
 
 To perform this type of update, it truly is not much different than a regular update but in this case, you’ll use the alias from the table that needs to be updated in the FROM.  You could really look at this as an UPDATE on a derived table.   Take a look at a typical update statement
 
-<pre>UPDATE [Sales].[SalesPerson] 
-SET [Sales].[SalesPerson].CommissionPct = [Sales].[SalesPerson].CommissionPct + .002</pre>
+sql
+UPDATE [Sales].[SalesPerson] 
+SET [Sales].[SalesPerson].CommissionPct = [Sales].[SalesPerson].CommissionPct + .002
+```
 
  
 
 In the update statement, the table SalesPerson is the object that is focused on or is being updated.  In this case, SalesPerson could reference an alias in order to qualify the path to the correct data to update.  So truly, you could perform this update like the below statement as well.
 
-<pre>UPDATE a
+sql
+UPDATE a
 SET a.CommissionPct = a.CommissionPct + .002
-FROM [Sales].[SalesPerson] a</pre>
+FROM [Sales].[SalesPerson] a
+```
 
  
 
 Now that we know we can do this, why not use the FROM area to really pull together the information we need in order to make a successful update statement based on several bits of data from several tables that are joined together.
 
-<pre>UPDATE salesp
+sql
+UPDATE salesp
 SET salesp.CommissionPct = salesp.CommissionPct + .002
 FROM [Person].[Person] per
 INNER JOIN [HumanResources].[Employee] emp ON per.BusinessEntityID = emp.BusinessEntityID
 INNER JOIN [Sales].[SalesPerson] salesp ON emp.BusinessEntityID = salesp.BusinessEntityID
 INNER JOIN [Sales].[SalesTerritory] terr ON salesp.TerritoryID = terr.TerritoryID
-WHERE terr.NAME = 'Northwest'</pre>
+WHERE terr.NAME = 'Northwest'
+```
 
  
 

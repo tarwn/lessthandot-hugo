@@ -3,6 +3,7 @@ title: 'Separation of Duties Framework Enhancements – Ask & You May Receive'
 author: Brian Davis
 type: post
 date: 2011-05-16T23:14:00+00:00
+ID: 1178
 excerpt: "Back in January, Lara Rubbelke (Blog | Twitter) and I released V2 of the Separation of Duties Framework for SQL Server. If you haven't checked it out yet I suggest you do. It's a framework that helps you design a more restrictive and granular environmen&hellip;"
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/separation-of-duties-framework-enhancements/
 views:

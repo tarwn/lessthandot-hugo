@@ -3,6 +3,7 @@ title: IronPython 2.0 has been released, now runs on top of the Dynamic Language
 author: SQLDenis
 type: post
 date: 2008-12-12T16:55:55+00:00
+ID: 250
 url: /index.php/desktopdev/mstech/ironpython-2-0-has-been-released/
 views:
   - 4098

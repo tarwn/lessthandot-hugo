@@ -3,6 +3,7 @@ title: Changing exec to sp_executesql doesn’t provide any benefit if you are n
 author: SQLDenis
 type: post
 date: 2009-06-09T18:36:42+00:00
+ID: 462
 excerpt: |
   Changing exec to sp_executesql doesn't provide any benefit if you are not using parameters correctly
   
@@ -30,7 +31,8 @@ I was looking through some code recently and noticed all these sp_executesql cal
   
 A typical SQL statement would look like this
 
-<pre>declare @Col2 smallint
+sql
+declare @Col2 smallint
 declare @Col1 int
 
 select @Col2 = 4,@Col1 = 5
@@ -42,7 +44,8 @@ and Col1 = ' + convert(varchar(10),@Col1)
 
 
 
-exec sp_executesql @SQL</pre>
+exec sp_executesql @SQL
+```
 
 What that code does is it builds a SQL statement and executes it. The problem is that when you do something like that the query plan will not be reused when you change the values of @Col2 and @Col1. When a new plan is generated everytime your values change you will bloat SQL Server&#8217;s procedure cache and less memory will be available for data.
   
@@ -50,22 +53,28 @@ Below is some code to demonstrate what I mean, I have tested this code on SQL Se
 
 First create this table
 
-<pre>create table dbo.test (Col1 int primary key,
+sql
+create table dbo.test (Col1 int primary key,
 Col2 smallint not null,
 SomeDate datetime default getdate(),
 SomeValue char(10) default 'ABCDEFG')
-GO</pre>
+GO
+```
 
 Insert a bunch of rows
 
-<pre>insert dbo.test(Col1,Col2)
+sql
+insert dbo.test(Col1,Col2)
 select number+ 1,number from master..spt_values
 where type = 'P'
-order by number</pre>
+order by number
+```
 
 Now let&#8217;s see what we inserted
 
-<pre>select * from dbo.test</pre>
+sql
+select * from dbo.test
+```
 
 (results abridged)
   
@@ -97,11 +106,14 @@ Col1 Col2 SomeDate SomeValue
 
 First let&#8217;s clear our procedure cache
 
-<pre>dbcc freeproccache</pre>
+sql
+dbcc freeproccache
+```
 
 run these 2 queries 5 times
 
-<pre>select * from dbo.test
+sql
+select * from dbo.test
 where Col2 = 3
 and Col1 = 4
 go
@@ -109,11 +121,13 @@ go
 select * from dbo.test
 where Col2 = 4
 and Col1 = 5
-go</pre>
+go
+```
 
 Now run the following query to see how many plans we have.
 
-<pre>select q.text,cp.usecounts,cp.objtype,p.*,
+sql
+select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
 from
@@ -122,19 +136,23 @@ cross apply sys.dm_exec_query_plan(cp.plan_handle) p
 cross apply sys.dm_exec_sql_text(cp.plan_handle) as q
 where
 cp.cacheobjtype = 'Compiled Plan' and q.text  like '%dbo.test%'
-and q.text  not like '%sys.dm_exec_cached_plans %'</pre>
+and q.text  not like '%sys.dm_exec_cached_plans %'
+```
 
 As you can see we have 2 plans and each was used 5 times. So for each change in the value a new plan gets generated
 
 Let&#8217;s clear the cache again
 
-<pre>dbcc freeproccache</pre>
+sql
+dbcc freeproccache
+```
 
 Using dynamic SQL with changing parameters also creates a new plan every time you change the values of the parameters.
   
 Run the following block of code 5 times
 
-<pre>declare @Col2 smallint
+sql
+declare @Col2 smallint
 declare @Col1 int
 
 select @Col2 = 11,@Col1 = 12
@@ -161,11 +179,13 @@ and Col1 = ' + convert(varchar(10),@Col1)
 
 
 exec (@SQL)
-go</pre>
+go
+```
 
 Now let&#8217;s see how many plans we have
 
-<pre>select q.text,cp.usecounts,cp.objtype,p.*,
+sql
+select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
 from
@@ -174,7 +194,8 @@ cross apply sys.dm_exec_query_plan(cp.plan_handle) p
 cross apply sys.dm_exec_sql_text(cp.plan_handle) as q
 where
 cp.cacheobjtype = 'Compiled Plan' and q.text  like '%dbo.test%'
-and q.text  not like '%sys.dm_exec_cached_plans %'</pre>
+and q.text  not like '%sys.dm_exec_cached_plans %'
+```
 
 As you can see we have 2 plans with a count of 5 for each.
 
@@ -182,7 +203,8 @@ Now let&#8217;s convert that query to use sp_executesql instead of exec
 
 Run the query below
 
-<pre>declare @Col2 smallint
+sql
+declare @Col2 smallint
 declare @Col1 int
 
 select @Col2 = 3,@Col1 = 4
@@ -194,7 +216,8 @@ and Col1 = ' + convert(varchar(10),@Col1)
 
 
 
-exec sp_executesql @SQL</pre>
+exec sp_executesql @SQL
+```
 
 And you get the following message
   
@@ -206,11 +229,14 @@ This is because sp_executesql expects nvarchar and not varchar
 
 Below is the correct query(but it is not correctly parameterized). First clear the cache again
 
-<pre>dbcc freeproccache</pre>
+sql
+dbcc freeproccache
+```
 
 Now run the following queries 5 times each
 
-<pre>declare @Col2 smallint
+sql
+declare @Col2 smallint
 declare @Col1 int
 
 select @Col2 = 23,@Col1 = 24
@@ -238,11 +264,12 @@ and Col1 = ' + convert(varchar(10),@Col1)
 
 
 exec sp_executesql @SQL
-GO</pre>
-
+GO
+```
 Now check again for the plans
 
-<pre>select q.text,cp.usecounts,cp.objtype,p.*,
+sql
+select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
 from
@@ -251,7 +278,8 @@ cross apply sys.dm_exec_query_plan(cp.plan_handle) p
 cross apply sys.dm_exec_sql_text(cp.plan_handle) as q
 where
 cp.cacheobjtype = 'Compiled Plan' and q.text  like '%dbo.test%'
-and q.text  not like '%sys.dm_exec_cached_plans %'</pre>
+and q.text  not like '%sys.dm_exec_cached_plans %'
+```
 
 As you can see we have 2 plans with a count of 5 for each. This is because we didn&#8217;t use sp_executesql correctly and the engine couldn&#8217;t reuse the plan. Here is what Books On Line has to say
 
@@ -261,11 +289,14 @@ Below is the query which is correctly parameterized. As you can see we have vari
 
 First clear the cache again
 
-<pre>dbcc freeproccache</pre>
+sql
+dbcc freeproccache
+```
 
 Now run the following queries 5 times each
 
-<pre>declare @Col2 smallint, @Col1 int
+sql
+declare @Col2 smallint, @Col1 int
 select @Col2 = 3,@Col1 = 4
 
 
@@ -301,11 +332,13 @@ exec sp_executesql 	@SQL,@ParmDefinition,
 			@InnerCol2 	= @Col2,
 			@InnerCol1 	= @Col1
 
-go</pre>
+go
+```
 
 Check the plans again
 
-<pre>select q.text,cp.usecounts,cp.objtype,p.*,
+sql
+select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
 from
@@ -314,7 +347,8 @@ cross apply sys.dm_exec_query_plan(cp.plan_handle) p
 cross apply sys.dm_exec_sql_text(cp.plan_handle) as q
 where
 cp.cacheobjtype = 'Compiled Plan' and q.text  like '%dbo.test%'
-and q.text  not like '%sys.dm_exec_cached_plans %'</pre>
+and q.text  not like '%sys.dm_exec_cached_plans %'
+```
 
 And you will see that we have only one plan with a count of 10
 
@@ -322,11 +356,14 @@ Instead of running the query like we did before we can also do the following. We
 
 First clear the cache yet again
 
-<pre>dbcc freeproccache</pre>
+sql
+dbcc freeproccache
+```
 
 Here is the rewritten query, execute it 5 times
 
-<pre>declare @Col2 smallint, @Col1 int
+sql
+declare @Col2 smallint, @Col1 int
 select @Col2 = 3,@Col1 = 4
 
 
@@ -349,11 +386,13 @@ exec sp_executesql 	@SQL,@ParmDefinition,
 			@InnerCol2 	= @Col2,
 			@InnerCol1 	= @Col1
 
-go </pre>
+go 
+```
 
 And we will check the plans yet again
 
-<pre>select q.text,cp.usecounts,cp.objtype,p.*,
+sql
+select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
 from
@@ -362,7 +401,8 @@ cross apply sys.dm_exec_query_plan(cp.plan_handle) p
 cross apply sys.dm_exec_sql_text(cp.plan_handle) as q
 where
 cp.cacheobjtype = 'Compiled Plan' and q.text  like '%dbo.test%'
-and q.text  not like '%sys.dm_exec_cached_plans %'</pre>
+and q.text  not like '%sys.dm_exec_cached_plans %'
+```
 
 As you can see we still have a count of 10 and only one plan.
 
@@ -374,7 +414,8 @@ Take a look at the following queries
 
 Here is the EXEC version
 
-<pre>--EXEC (SQL)
+sql
+--EXEC (SQL)
 DECLARE @TableName VARCHAR(100),
 @TableCount INT,
 @SQL NVARCHAR(100)
@@ -391,11 +432,13 @@ SELECT @TableCount = Totalcount FROM #temp
 SELECT @TableCount as TheCount
  
 DROP TABLE #temp
-GO</pre>
+GO
+```
 
 Here is the sp_executesql version
 
-<pre>--sp_executesql
+sql
+--sp_executesql
 DECLARE @TableName VARCHAR(100),
 @TableCount INT,
 @SQL NVARCHAR(100)
@@ -406,7 +449,8 @@ SELECT @SQL = N'SELECT @InnerTableCount = COUNT(*) FROM ' + @TableName
 EXEC SP_EXECUTESQL @SQL, N'@InnerTableCount INT OUTPUT', @TableCount OUTPUT
  
 SELECT @TableCount
-GO</pre>
+GO
+```
 
 There are more differences between EXEC and sp\_executesql, one of the more important one is that sp\_executesql can protect you from **SQL Injection**. I encourage you to read [The curse and blessings of dynamic SQL][1] to learn more stuff
 
@@ -418,5 +462,5 @@ I have written a follow up to this post that explains how to avoid conversions. 
 
  [1]: http://www.sommarskog.se/dynamic_sql.html
  [2]: /index.php/DataMgmt/DataDesign/avoid-conversions-in-execution-plans-by
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

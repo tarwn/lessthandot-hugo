@@ -3,6 +3,7 @@ title: 'Not a fan of the Report Manager in SSRS?  Using SSRS procedures to get t
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-06-25T15:02:01+00:00
+ID: 481
 url: /index.php/datamgmt/datadesign/not-a-fan-of-the-report-manager-in-ssrs/
 views:
   - 20823
@@ -24,32 +25,36 @@ If you&#8217;re are using SSRS and in a high reporting environment like most are
 
 To run this procedure I recommend first looking at it to see what is does. You should always follow this guideline anytime you try to use objects like this. Follow the train all the way through to the end result set. An example of a really big catch on why you should do this can be seen in the CreateSubscription procedure. In order to gather the records required to insert the SID&#8217;s for the person creating the subscription, the procedure GetUserIDBySid is called given the authority type of 1 being sent. If you do not accurately gather your SID before calling the CreatSubscription, you will essentially force the GetUserIDBySid to insert another row for your SUSER\_NAME value. That will essentially break down the integrity sense you will now have duplicates of your account listed in the Users table. So for this issue you should follow back to the Users table and see that the SID is stored as a varbinary(85) and you can gather that based on your SUSER\_NAME value as such
 
-<pre>Set @my_usersid = (Select [SID] From ReportServer.dbo.Users Where UserName = suser_name())</pre>
-
+sql
+Set @my_usersid = (Select [SID] From ReportServer.dbo.Users Where UserName = suser_name())
+```
 Use this SID the modify and create user value.
 
 The ExtensionSettings and Schedule are XML values so be careful on how you form them. THe best resource you will probably find on the XML values is by looking up the &#8220;CreateSubscription Method&#8221; on MSDN [here][1] 
 
 The one thing that is another catch is the StartDateTime is based on a datetime value with the time zone offset included. If this is not formatted correctly, the report subscription is created but the schedule will fail. This creates a mess and will require you to remove the entire subscription to clear it up. To format this datetime I use a SQLCLR UDF as shown below
 
-<pre>public partial class UserDefinedFunctions
+```CSHARP
+public partial class UserDefinedFunctions
 {
     [Microsoft.SqlServer.Server.SqlFunction]
     public static SqlString DateTimeTimeZoneOffset(DateTime datetime_sent)
     {
         return new SqlString(datetime_sent.ToString("yyyy-MM-ddTHH:mm:ss.fffzzzz"));
     }
-};</pre>
-
+};
+```
 You can then pass to this function a basic datetime value while only needing to worry about sending the time that you want over to it.
 
 as such&#8230;
 
-<pre>Set @time_send = (Select dbo.DateTimeTimeZoneOffset(Cast('2009-06-25 08:00:00' as datetime)))</pre>
-
+sql
+Set @time_send = (Select dbo.DateTimeTimeZoneOffset(Cast('2009-06-25 08:00:00' as datetime)))
+```
 So putting this all together you can come up with a script similar to the following. This tested will create a subscription for each day of the week to be sent out at 8:00 AM
 
-<pre>Declare @me nvarchar(260)
+sql
+Declare @me nvarchar(260)
 Declare @now datetime
 Declare @time_send varchar(35)
 Declare @schedule nvarchar(1000)
@@ -128,8 +133,8 @@ exec CreateSubscription @Report_Name=@report_name,
 			@EventType=N'TimedSubscription',
 			@MatchData=@schedule,
 			@Parameters=N'<ParameterValues />',
-			@Version=3</pre>
-
+			@Version=3
+```
 With all of this you can now create multiple subscriptions for the same report to run through the day while only changing the time entered. You can also modify this easily to utilize the method in a procedure. This makes it much cleaner and easier to dynamically send multiple times and multiple reports so you can create mass subscriptions with one call. I will try to get a well error handled and procedure like that up in the next few days for download.
 
 
@@ -137,5 +142,5 @@ With all of this you can now create multiple subscriptions for the same report t
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://msdn.microsoft.com/en-us/library/aa441019.aspx
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

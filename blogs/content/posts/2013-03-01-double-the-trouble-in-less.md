@@ -3,6 +3,7 @@ title: Double the trouble in less than half the time
 author: SQLDenis
 type: post
 date: 2013-03-01T09:49:00+00:00
+ID: 2017
 excerpt: 'In the ridiculously titled post I hold this blog hostage for 1 million views mahaaahaha mahahaha.... I told you that it took me a little over 3 years to reach 1 million views. I also said that I hoped to get the next million within 2 years, it actually&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/double-the-trouble-in-less/
 views:

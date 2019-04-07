@@ -3,6 +3,7 @@ title: Merge Replication – Parameterized Filters
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-09T11:32:00+00:00
+ID: 1422
 excerpt: 'Merge Replication can be a powerful tool for data mobility and distribution.  Data can be distributed across a wide geographical range and maintained either from a client online or offline, and receive data changes from one or many sources on demand.  W&hellip;'
 url: /index.php/datamgmt/datadesign/merge-replication-parameterized-filters/
 views:
@@ -23,13 +24,19 @@ Merge Replication offers _data partitions_, <ins datetime="2011-12-06T10:03" cit
 
 For instance, if we altered the table Person.Person in the database AdventureWorks to <ins datetime="2011-12-06T10:03" cite="mailto:Theodore%20Krueger"></ins>support of Merge Replication, we would add a column named, LoginAccount.  This new column would hold user domain accounts (DOMAINusername).  A parameterized filter on this column could then be setup to evaluate each row that matches an SUSER_SNAME() passed in by the connecting domain user.  When this occurs, we can compare this with a T-SQL SELECT statement as shown below
 
-<pre>SELECT * FROM Person.Person WHERE [LoginAccount] = SUSER_SNAME()</pre>
+sql
+SELECT * FROM Person.Person WHERE [LoginAccount] = SUSER_SNAME()
+```
+
 
  
 
 With the column addition made to Person.Person, a publication could be set up to use the SUSER\_SNAME() as a parameterized filter on Person.Person.  This would be done in the setup by adding a filter to the table Person.Person and adding a WHERE LoginAccount = SUSER\_SNAME()
 
-<pre>SELECT <published_columns&gt; FROM [Person].[Person] WHERE [LoginAccount] = SUSER_SNAME()</pre>
+```
+SELECT <published_columns> FROM [Person].[Person] WHERE [LoginAccount] = SUSER_SNAME()
+```
+
 
 This configuration in the publication will automatically or manually force a data partition to be generated for any valid domain user with a listing in the publication access list when they initially connect to the publication.  For example, a publication that is based on Person.Person with a filter on SUSER_SNAME() and setting of “A row from this table will go to only one subscription” would reveal the Data Partitions page in the publications properties.  Note: Selecting either one or multiple subscriptions availability for partitions will be discussed later.  The data partitions page shows all data partitions that have been created manually or by a subscriber that has connected to the publication.
 
@@ -51,14 +58,15 @@ sp\_helptext &#8216;dbo.MSmerge\_MultipleSubs\_ParamFilters\_Person\_PARTITION\_
 
 The definition of this view
 
-<pre>create view dbo.[MSmerge_MultipleSubs_ParamFilters_Person_PARTITION_VIEW] 
+sql
+create view dbo.[MSmerge_MultipleSubs_ParamFilters_Person_PARTITION_VIEW] 
 as  
 select [Person].[rowguid], [Person].[LoginAccount], msp.partition_id from [Person].[Person] [Person] , dbo.MSmerge_partition_groups msp where (msp.publication_number = 5 and ( (
 ([LoginAccount] = msp.[SUSER_SNAME_FN] )) )) and ({fn ISPALUSER('6ED96157-62B5-4802-9555-2F6E3662C069')} = 1 or (HAS_PERMS_BY_NAME('[Person].[Person]', 'OBJECT', 'SELECT')
 | HAS_PERMS_BY_NAME('[Person].[Person]', 'OBJECT', 'UPDATE')
 | HAS_PERMS_BY_NAME('[Person].[Person]', 'OBJECT', 'INSERT')
-| HAS_PERMS_BY_NAME('[Person].[Person]', 'OBJECT', 'DELETE'))=1)</pre>
-
+| HAS_PERMS_BY_NAME('[Person].[Person]', 'OBJECT', 'DELETE'))=1)
+```
  
 
 The performance of this view is critical to the replication process and evaluation of the data partitions.  This view generated the following plan on a development system.
@@ -87,10 +95,12 @@ Person.Person would be indexed on LoginAccount from the predicate and then inclu
 
  
 
-<pre>CREATE NONCLUSTERED INDEX [IDX_PARTITION_LOGIN_GUID_ASC]
+sql
+CREATE NONCLUSTERED INDEX [IDX_PARTITION_LOGIN_GUID_ASC]
 ON [Person].[Person] ([LoginAccount])
 INCLUDE ([rowguid])
-GO</pre>
+GO
+```
 
  
 
@@ -98,10 +108,12 @@ Creating this index alone will improve our performance by an estimated 80%, as t
 
  
 
-<pre>CREATE NONCLUSTERED INDEX [IDX_PARTITION_EVAL_ASC]
+sql
+CREATE NONCLUSTERED INDEX [IDX_PARTITION_EVAL_ASC]
 ON dbo.MSmerge_partition_groups ([publication_number])
 INCLUDE ([SUSER_SNAME_FN],[partition_id])
-GO</pre>
+GO
+```
 
  
 

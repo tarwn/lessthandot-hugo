@@ -3,6 +3,7 @@ title: Script Task vs Flat File Connection Management
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-12-16T18:31:58+00:00
+ID: 589
 url: /index.php/datamgmt/datadesign/the-almighty-script-task-in-ssis/
 views:
   - 8684

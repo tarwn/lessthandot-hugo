@@ -3,6 +3,7 @@ title: SQL Saturday in Chicago 2011 Eval
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-03-27T22:35:00+00:00
+ID: 1087
 excerpt: |
   SQL Saturday in Chicago 2011 has come and gone.  From an organizers view the event was very successful.  We had our pumps and one problem in the schedule but overall I feel that is pretty good for such a large event that is organized by volunteers.
   

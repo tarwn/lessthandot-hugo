@@ -3,6 +3,7 @@ title: Using EXECUTE AS OWNER
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-04-19T14:35:00+00:00
+ID: 1599
 excerpt: 'It’s very common to come across user-defined modules that are written to execute as the owner.  Not to be confused with the EXECUTE AS, the EXECUTE AS Clause will change the account context that is used to validate if the procedure, function etc… can be&hellip;'
 url: /index.php/datamgmt/dbadmin/using-execute-as-owner/
 views:
@@ -26,7 +27,8 @@ First, review the ownership of a database.  If a database is created under sa o
 
 Let’s look at an example.  Create the following database
 
-<pre>CREATE DATABASE [OwnerTest] ON  PRIMARY 
+sql
+CREATE DATABASE [OwnerTest] ON  PRIMARY 
 ( NAME = N'OwnerTest', FILENAME = N'C:OwnerTest.mdf' , SIZE = 409600KB , FILEGROWTH = 2%)
  LOG ON 
 ( NAME = N'OwnerTest_log', FILENAME = N'C:OwnerTest_log.ldf' , SIZE = 52224KB , FILEGROWTH = 2%)
@@ -36,18 +38,20 @@ GO
 USE OwnerTest
 GO
 EXEC sp_changedbowner sa
-GO</pre>
+GO
+```
 
 Notice we changed the owner to sa.  This was to set the database up for the example. The owner, by default, would be the account executing the statement above otherwise.
 
 Create a simple procedure to test
 
-<pre>CREATE PROCEDURE Get_OwnerText
+sql
+CREATE PROCEDURE Get_OwnerText
 WITH EXECUTE AS OWNER
 AS
 SELECT SUSER_SNAME()
-GO</pre>
-
+GO
+```
  
 
 Run the procedure and review the results
@@ -60,18 +64,22 @@ This is all expected behavior.
 
 Create another database on a different instance but leave the owner as a user that does not have rights on the first SQL Server instance to any objects in the database itself or a valid login.
 
-<pre>CREATE DATABASE [OwnerTest2] ON  PRIMARY 
+sql
+CREATE DATABASE [OwnerTest2] ON  PRIMARY 
 ( NAME = N'OwnerTest2', FILENAME = N'C:OwnerTest2.mdf' , SIZE = 409600KB , FILEGROWTH = 2%)
  LOG ON 
 ( NAME = N'OwnerTest2_log', FILENAME = N'C:OwnerTest2_log.ldf' , SIZE = 52224KB , FILEGROWTH = 2%)
 GO
 ALTER DATABASE [OwnerTest2] SET RECOVERY SIMPLE 
-GO</pre>
+GO
+```
 
 Run a simple backup of the database created on the second instance
 
-<pre>BACKUP DATABASE [OwnerTest2] TO  DISK = N'C:OwnerTest2.bak' WITH NOFORMAT, NOINIT,  NAME = N'OwnerTest2-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
-GO</pre>
+sql
+BACKUP DATABASE [OwnerTest2] TO  DISK = N'C:OwnerTest2.bak' WITH NOFORMAT, NOINIT,  NAME = N'OwnerTest2-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+GO
+```
 
 Results
 
@@ -95,13 +103,16 @@ BACKUP DATABASE successfully processed 218 pages in 0.227 seconds (7.472 MB/sec)
 
 Use the backup from the second instance housing database OwnerTest2 and restore it, replacing OwnerTest on the first instance.
 
-<pre>USE Master
+sql
+USE Master
 GO
 RESTORE DATABASE [OwnerTest] FROM  DISK = N'C:OwnerTest2.bak' WITH  FILE = 1,  
 MOVE N'OwnerTest2' TO N'C:OwnerTest.mdf',  
 MOVE N'OwnerTest2_log' TO N'C:OwnerTest_log.ldf',  
 NOUNLOAD,  REPLACE,  STATS = 10
-GO</pre>
+GO
+```
+
 
 Results
 
@@ -157,7 +168,7 @@ Make sure that a query window is open with the context as a user that is in the 
 </p>
 
 <p>
-  <pre>EXEC sp_changedbowner sa
+  <pre lang="tsql">EXEC sp_changedbowner sa
 Go</pre>
 </p>
 

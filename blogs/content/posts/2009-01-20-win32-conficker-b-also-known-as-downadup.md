@@ -3,6 +3,7 @@ title: Win32/Conficker.B also known as Downadup worm infections warning
 author: SQLDenis
 type: post
 date: 2009-01-20T17:55:23+00:00
+ID: 293
 url: /index.php/sysadmins/os/win32-conficker-b-also-known-as-downadup/
 views:
   - 9696

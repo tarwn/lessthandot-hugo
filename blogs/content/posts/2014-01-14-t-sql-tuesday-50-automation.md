@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #50: Automation, how much of it is the same?'
 author: Koen Verbeeck
 type: post
 date: 2014-01-14T09:41:07+00:00
+ID: 2240
 url: /index.php/datamgmt/dbprogramming/mssqlserver/t-sql-tuesday-50-automation/
 views:
   - 16700

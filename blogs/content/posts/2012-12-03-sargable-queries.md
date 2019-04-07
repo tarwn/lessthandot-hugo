@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 3: Sargable Queries'
 author: SQLDenis
 type: post
 date: 2012-12-03T13:44:00+00:00
+ID: 1820
 excerpt: 'This is day three of the SQL Advent 2012 series of blog posts. Today we are going to look at sargable queries. You might ask yourself, what is this weird term sargable. Sargable  comes from searchable argument, sometimes also referred as Search ARGument&hellip;'
 url: /index.php/datamgmt/dbprogramming/sargable-queries/
 views:
@@ -30,44 +31,56 @@ This is day three of the [SQL Advent 2012 series][1] of blog posts. Today we are
 
 Some examples that are not sargable 
 
-<pre>WHERE LEFT(Name,1) = 'S'
+sql
+WHERE LEFT(Name,1) = 'S'
 WHERE Year(SomeDate) = 2012
-WHERE OrderID * 3 = 33000</pre>
+WHERE OrderID * 3 = 33000
+```
 
 Those three should be rewritten like this in order to become sargable 
 
-<pre>WHERE Name LIKE 'S%'
-WHERE SomeDate &gt;= '20120101' AND SomeDate < '20130101'
-WHERE OrderID = 33000/3</pre>
+sql
+WHERE Name LIKE 'S%'
+WHERE SomeDate >= '20120101' AND SomeDate < '20130101'
+WHERE OrderID = 33000/3
+```
 
 Let&#8217;s create a table, insert some data so that we can look at the execution plan
   
 Create this simple table
 
-<pre>CREATE TABLE Test(SomeID varchar(100))</pre>
+sql
+CREATE TABLE Test(SomeID varchar(100))
+```
 
 Let&#8217;s insert some data that will start with a letter followed by some digits
 
-<pre>INSERT Test
+sql
+INSERT Test
 SELECT LEFT(v2.type,1) +RIGHT('0000' + CONVERT(varchar(4),v1.number),4) 
 FROM master..spt_values v1
 CROSS JOIN (SELECT DISTINCT LEFT(type,1) AS type 
 FROM master..spt_values) v2
-WHERE v1.type = 'p'</pre>
+WHERE v1.type = 'p'
+```
 
 That insert should have generated 32768 rows
 
 Now create this index on that table
 
-<pre>CREATE CLUSTERED INDEX cx_test ON Test(SomeID)</pre>
+sql
+CREATE CLUSTERED INDEX cx_test ON Test(SomeID)
+```
 
 Let&#8217;s take a look at the execution plan, hit CTRL + M, this will add the execution plan once the query is done running
 
-<pre>SELECT * FROM Test
+sql
+SELECT * FROM Test
 WHERE SomeID LIKE 's%'
 
 SELECT * FROM Test
-WHERE LEFT(SomeID,1) = 's'</pre>
+WHERE LEFT(SomeID,1) = 's'
+```
 
 Here is what the plans looks like
 
@@ -81,7 +94,8 @@ Hit CTRL + M again to disable the inclusion of the plan
 
 Run this codeblock, it will give you the plans in a text format
 
-<pre>SET SHOWPLAN_TEXT ON
+sql
+SET SHOWPLAN_TEXT ON
 GO
 
 SELECT * FROM Test
@@ -92,7 +106,8 @@ WHERE LEFT(SomeID,1) = 's'
 GO
 
 SET SHOWPLAN_TEXT OFF
-GO</pre>
+GO
+```
 
 Here are the two plans
 
@@ -112,14 +127,18 @@ Here is an example to demonstrate what I mean
 
 This is a simple table created without a collation
 
-<pre>CREATE TABLE TempCase1 (Val CHAR(1))
+sql
+CREATE TABLE TempCase1 (Val CHAR(1))
 INSERT TempCase1 VALUES('A')
-INSERT TempCase1 VALUES('a')</pre>
+INSERT TempCase1 VALUES('a')
+```
 
 Running this select statement will return both rows 
 
-<pre>SELECT * FROM TempCase1
-WHERE Val = 'A' </pre>
+sql
+SELECT * FROM TempCase1
+WHERE Val = 'A' 
+```
 
 Val
   
@@ -131,14 +150,18 @@ a
 
 Now create the same kind of table but with a case sensitive collation
 
-<pre>CREATE TABLE TempCase2 (Val CHAR(1) COLLATE SQL_Latin1_General_CP1_CS_AS)
+sql
+CREATE TABLE TempCase2 (Val CHAR(1) COLLATE SQL_Latin1_General_CP1_CS_AS)
 INSERT TempCase2 VALUES('A')
-INSERT TempCase2 VALUES('a')</pre>
+INSERT TempCase2 VALUES('a')
+```
 
 Run the same query
 
-<pre>SELECT * FROM TempCase2
-WHERE Val = 'A' </pre>
+sql
+SELECT * FROM TempCase2
+WHERE Val = 'A' 
+```
 
 Val
   
@@ -148,8 +171,10 @@ A
 
 As you can see you only get the one row now that matches the case
 
-<pre>SELECT * FROM TempCase1
-WHERE Val = 'A' COLLATE SQL_Latin1_General_CP1_CS_AS</pre>
+sql
+SELECT * FROM TempCase1
+WHERE Val = 'A' COLLATE SQL_Latin1_General_CP1_CS_AS
+```
 
 Val
   
@@ -163,7 +188,8 @@ Now let&#8217;s take a look at how we can make the case sensitive search sargabl
 
 First create this table and insert some data
 
-<pre>CREATE TABLE TempCase (Val CHAR(1))
+sql
+CREATE TABLE TempCase (Val CHAR(1))
  
 INSERT TempCase VALUES('A')
 INSERT TempCase VALUES('B')
@@ -172,34 +198,45 @@ INSERT TempCase VALUES('D')
 INSERT TempCase VALUES('E')
 INSERT TempCase VALUES('F')
 INSERT TempCase VALUES('G')
-INSERT TempCase VALUES('H')</pre>
+INSERT TempCase VALUES('H')
+```
 
 Now we will insert some lowercase characters
 
-<pre>INSERT TempCase
-SELECT LOWER(Val) FROM TempCase</pre>
+sql
+INSERT TempCase
+SELECT LOWER(Val) FROM TempCase
+```
 
 Now we will create our real table which will have 65536 rows
 
-<pre>CREATE TABLE CaseSensitiveSearch (Val VARCHAR(50))</pre>
+sql
+CREATE TABLE CaseSensitiveSearch (Val VARCHAR(50))
+```
 
 We will do a couple of cross joins to generate the data for our queries
 
-<pre>INSERT CaseSensitiveSearch
+sql
+INSERT CaseSensitiveSearch
 SELECT t1.val + t2.val + t3.val + t4.val
 FROM TempCase t1
 CROSS JOIN TempCase t2
 CROSS JOIN TempCase t3
-CROSS JOIN TempCase t4</pre>
+CROSS JOIN TempCase t4
+```
 
 Create an index on the table
 
-<pre>CREATE INDEX IX_SearchVal ON CaseSensitiveSearch(Val)</pre>
+sql
+CREATE INDEX IX_SearchVal ON CaseSensitiveSearch(Val)
+```
 
 Just like before, if we run this we will get back the exact value we passed in and also all the upper case and lower case variations
 
-<pre>SELECT * FROM CaseSensitiveSearch
-WHERE Val = 'ABCD' </pre>
+sql
+SELECT * FROM CaseSensitiveSearch
+WHERE Val = 'ABCD' 
+```
 
 Here are the results of that query
   
@@ -241,8 +278,10 @@ AbcD
 
 If you add the collation to the query, you will get only what matches your value
 
-<pre>SELECT * FROM CaseSensitiveSearch
-WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS</pre>
+sql
+SELECT * FROM CaseSensitiveSearch
+WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS
+```
 
 Here is the result, it maches what was passed in
   
@@ -258,23 +297,26 @@ First grab all case sensitive and case insensitive values and then after that fi
 
 Here is what that query will look like
 
-<pre>SELECT * FROM CaseSensitiveSearch
+sql
+SELECT * FROM CaseSensitiveSearch
 WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS
-AND Val LIKE 'ABCD'</pre>
+AND Val LIKE 'ABCD'
+```
 
 AND Val LIKE &#8216;ABCD&#8217; will result in a seek, now when it also does the Val = &#8216;ABCD&#8217; COLLATE SQL\_Latin1\_General\_CP1\_CS_AS part, it only returns the row that matches your value
 
 If you run both queries, you can look at the plan difference (hit CTRL + M so that the plan is included)
 
-<pre>SELECT * FROM CaseSensitiveSearch
+sql
+SELECT * FROM CaseSensitiveSearch
 WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS
 
 
 
 SELECT * FROM CaseSensitiveSearch
 WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS
-AND Val LIKE 'ABCD'</pre>
-
+AND Val LIKE 'ABCD'
+```
 Here is the plan
 
 <div class="image_block">
@@ -285,7 +327,8 @@ As you can see, there is a big difference between the two
 
 Here is the plan in text as well
 
-<pre>SET SHOWPLAN_TEXT ON
+sql
+SET SHOWPLAN_TEXT ON
 GO
  
 SELECT * FROM CaseSensitiveSearch
@@ -300,7 +343,8 @@ AND Val LIKE 'ABCD'
 GO
  
 SET SHOWPLAN_TEXT OFF
-GO</pre>
+GO
+```
 
 > |&#8211;Table Scan(OBJECT:([tempdb].[dbo].[CaseSensitiveSearch]),
      

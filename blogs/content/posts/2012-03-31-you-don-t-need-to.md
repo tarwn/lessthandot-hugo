@@ -3,6 +3,7 @@ title: You don’t need to shrink a database to get a smaller backup
 author: SQLDenis
 type: post
 date: 2012-03-31T16:23:00+00:00
+ID: 1583
 excerpt: 'Last weekend I decided to do some maintenance on one of our database to see if I can get some freespace back. I use compression for some of the older tables and also reindexed the tables with a higher fill factor. After I was done, I got over 200 GB of&hellip;'
 url: /index.php/datamgmt/datadesign/you-don-t-need-to/
 views:
@@ -48,7 +49,8 @@ So let&#8217;s debunk that myth shall we?
 
 First create these 3 database, they will be 3 MB, 3 GB and 9 GB in size
 
-<pre>CREATE DATABASE [TestSmall]
+sql
+CREATE DATABASE [TestSmall]
  ON  PRIMARY 
 ( NAME = N'TestSmall', FILENAME = N'C:SQLFilesTestSmall.mdf' , SIZE = 3072KB , FILEGROWTH = 1024KB )
  LOG ON 
@@ -71,7 +73,8 @@ CREATE DATABASE [TestLarger]
 ( NAME = N'TestSmall', FILENAME = N'C:SQLFilesTestLarger.mdf' , SIZE = 9072MB , FILEGROWTH = 1024KB )
  LOG ON 
 ( NAME = N'TestSmall_log', FILENAME = N'C:SQLFilesTestLarger_log.ldf' , SIZE = 1024KB , FILEGROWTH = 10%)
-GO</pre>
+GO
+```
 
 Here is what it looks like in file explorer
 
@@ -94,7 +97,8 @@ You can see that the files are indeed in the GB and in the MB range
 
 Now back the database up, these are plain vanilla backups, no compression is applied
 
-<pre>BACKUP DATABASE [TestLarge] TO  DISK = N'D:SQLBackupsTestLarge.BAK' 
+sql
+BACKUP DATABASE [TestLarge] TO  DISK = N'D:SQLBackupsTestLarge.BAK' 
 WITH NOFORMAT, NOINIT,  NAME = N'TestLarge-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO
 
@@ -104,7 +108,8 @@ GO
 
 BACKUP DATABASE [TestSmall] TO  DISK = N'D:SQLBackupsTestSmall.BAK' 
 WITH NOFORMAT, NOINIT,  NAME = N'TestLarge-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
-GO</pre>
+GO
+```
 
 Navigate to the folder and what do you see?
 

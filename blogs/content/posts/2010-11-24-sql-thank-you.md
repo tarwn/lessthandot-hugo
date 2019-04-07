@@ -3,6 +3,7 @@ title: What am I thankful for?
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-11-25T00:12:22+00:00
+ID: 959
 excerpt: 'This will be a short post but nonetheless a very important one to me.  A good friend of mine, Jason Strate (Blog | Twitter), posted a blog, "What are you thankful for?"  In this post he asked all of his readers to also take a few moments and blog about&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-thank-you/
 views:

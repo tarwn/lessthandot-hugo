@@ -3,6 +3,7 @@ title: Retrospective for a (Great) Job
 author: Alex Ullrich
 type: post
 date: 2012-05-22T10:51:00+00:00
+ID: 1624
 excerpt: "It was a hard decision, but I recently left what was the best job I'd ever had in my life.  A lot of what made it great was the people there, but a big part of it was the way we worked as well. Since frequent retrospectives were such an important part o&hellip;"
 url: /index.php/itprofessionals/ethicsit/retrospective-for-a-great-job/
 views:

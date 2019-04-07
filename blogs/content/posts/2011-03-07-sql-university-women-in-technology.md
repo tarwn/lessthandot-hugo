@@ -3,6 +3,7 @@ title: 'SQL University Women In Technology (WIT) Week: My Name Is Jes, and I’m
 author: Jes Borland
 type: post
 date: 2011-03-07T11:40:00+00:00
+ID: 1062
 excerpt: "Welcome to Women In Technology week at SQL University. This week, you get to meet a fantastic group of women, all of whom work with SQL Server and are involved in the community. These women are smart, talented, driven and amazing. We're going to talk about how we got involved in technology, how we encourage children to think about tech as a career path, and what you can do to help!"
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sql-university-women-in-technology/
 views:

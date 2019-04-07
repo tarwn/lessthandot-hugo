@@ -3,6 +3,7 @@ title: Changing the 1000 separator in Power View
 author: Koen Verbeeck
 type: post
 date: 2014-03-11T14:43:46+00:00
+ID: 2500
 url: /index.php/datamgmt/dbprogramming/mssqlserver/changing-the-1000-separator-in-power-view/
 views:
   - 20781

@@ -3,6 +3,7 @@ title: October Presentations
 author: Jes Borland
 type: post
 date: 2014-09-30T14:57:03+00:00
+ID: 2994
 url: /index.php/itprofessionals/professionaldevelopment/october-presentations/
 views:
   - 2747

@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 10 – SQL Server Reporting – Offload the reporting 
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-09T10:21:00+00:00
+ID: 1144
 excerpt: 'A primary purpose of retaining data is to view that data at some point.  Even when database servers have a largely OLTP basis, the need to retrieve data from the database will arise.  Retrieving data in some manner is referred to as reporting.  This rea&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-10-offload-the-reporting-factor/
 views:

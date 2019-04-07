@@ -3,6 +3,7 @@ title: Presenting “The What, Why, and How of Filegroups” for PASSMN
 author: Jes Borland
 type: post
 date: 2012-06-14T14:17:00+00:00
+ID: 1653
 excerpt: "Next Tuesday, June 19, 2012, I'm presenting for the Minnesota SQL Server User Group, PASSMN!"
 url: /index.php/itprofessionals/professionaldevelopment/presenting-the-what-why-and/
 views:

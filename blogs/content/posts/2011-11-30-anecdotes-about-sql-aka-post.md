@@ -3,6 +3,7 @@ title: Anecdotes about SQL AKA post 400
 author: SQLDenis
 type: post
 date: 2011-11-30T12:17:00+00:00
+ID: 1399
 excerpt: |
   This is my 400th blog post here on lessthandot and I decide to steal borrow Chrissie's idea and ask a bunch of people if they have an interesting story to share about SQL.
   

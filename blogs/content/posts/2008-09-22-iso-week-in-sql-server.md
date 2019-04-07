@@ -3,6 +3,7 @@ title: ISO Week In SQL Server
 author: SQLDenis
 type: post
 date: 2008-09-22T14:03:04+00:00
+ID: 149
 url: /index.php/datamgmt/datadesign/iso-week-in-sql-server/
 views:
   - 47571
@@ -56,7 +57,8 @@ Sometimes you need to show the ISO week in SQL server but there was no built in 
   
 Here is what the function looks like
 
-<pre>CREATE FUNCTION ISOweek  (@DATE datetime)
+sql
+CREATE FUNCTION ISOweek  (@DATE datetime)
 RETURNS int
 AS
 BEGIN
@@ -69,19 +71,24 @@ BEGIN
          AS CHAR(4))+'12'+ CAST(24+DATEPART(DAY,@DATE) AS CHAR(2)))+1
 --Special case: Dec 29-31 may belong to the next year
    IF ((DATEPART(mm,@DATE)=12) AND 
-      ((DATEPART(dd,@DATE)-DATEPART(dw,@DATE))&gt;= 28))
+      ((DATEPART(dd,@DATE)-DATEPART(dw,@DATE))>= 28))
       SET @ISOweek=1
    RETURN(@ISOweek)
 END
-GO</pre>
+GO
+```
 
 Now run the following query on SQL server 2000 and up
 
-<pre>select dbo.ISOweek('20071231'),datepart(wk,'20071231')</pre>
+sql
+select dbo.ISOweek('20071231'),datepart(wk,'20071231')
+```
 
 If you are running SQL server 2008 then you can use DATEPART and the datepart argument isowk. Run the select statement below to see the result
 
-<pre>select datepart(isowk,'20071231'),datepart(wk,'20071231')</pre>
+sql
+select datepart(isowk,'20071231'),datepart(wk,'20071231')
+```
 
 As you can see here also SQL Server&#8217;s wk part returns 53 while isowk returns 1
 

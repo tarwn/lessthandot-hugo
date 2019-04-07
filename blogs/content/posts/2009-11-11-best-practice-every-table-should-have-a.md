@@ -3,6 +3,7 @@ title: 'Best Practice: Every table should have a primary key'
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-11T12:04:29+00:00
+ID: 620
 url: /index.php/datamgmt/dbprogramming/best-practice-every-table-should-have-a/
 views:
   - 45503
@@ -18,7 +19,8 @@ By definition, primary keys must contain unique data. They are implemented in th
 
 **How to detect this problem:**
 
-<pre>Select AllTables.Name
+sql
+Select AllTables.Name
 From   (
        Select Name, id 
        From   sysobjects 
@@ -31,8 +33,8 @@ From   (
          ) As PrimaryKeys
          On AllTables.id = PrimaryKeys.parent_obj
 Where  PrimaryKeys.Parent_Obj Is NULL
-Order By AllTables.Name</pre>
-
+Order By AllTables.Name
+```
 **How to correct it:** Identify tables without a primary key using the query above. Examine each table and identify what makes each row in the table unique. Modify the table to include a primary key.
 
 **Level of severity:** Moderate

@@ -3,6 +3,7 @@ title: Passing multiple ranges to stored procedure
 author: Naomi Nosonovsky
 type: post
 date: 2010-10-08T12:25:02+00:00
+ID: 917
 excerpt: |
   This blog was inspired by the following thread at MSDN Transact-SQL forum:
   Multiple values in field as parameter
@@ -31,7 +32,8 @@ In order to run the solution I implemented, we need to create a Numbers table in
 
 Here is a script I use to create both Numbers and Calendar tables once in the Model database so all other user databases will inherit them:
 
-<pre>USE model
+sql
+USE model
 GO
 
 CREATE TABLE dbo.numbers (
@@ -94,11 +96,13 @@ SELECT the_date
 FROM  (
     SELECT DateAdd(dd, number, 0) As the_date
     FROM  dbo.numbers
-    ) As dates</pre>
+    ) As dates
+```
 
 Now, we need to create a function that will split the values. I chose the Numbers table variation of this function:
 
-<pre>CREATE FUNCTION [dbo].[fnSplit2](
+sql
+CREATE FUNCTION [dbo].[fnSplit2](
   @List       VARCHAR(MAX),
    @Delimiter  VARCHAR(10)
 )
@@ -116,11 +120,13 @@ AS
            Number <= CONVERT(INT, LEN(@List))
            AND SUBSTRING(@Delimiter + @List, Number, LEN(@Delimiter)) = @Delimiter
    );
-GO</pre>
+GO
+```
 
 And now we can create our final solution:
 
-<pre>use AdventureWorks
+sql
+use AdventureWorks
 --select * from Sales.SalesOrderHeader order by CustomerID
 
 declare @Param varchar(max) 
@@ -172,11 +178,13 @@ select   T.*, F.Pos, F.Value from @t T OUTER apply dbo.fnSplit2(T.cValue, '..') 
             T.CustomerID between X.MinVal and coalesce(X.MaxVal, X.MinVal)) 
             ORDER BY CustomerID 
             
-     end</pre>
+     end
+```
 
 There is a simpler XML based solution presented by Peso (Peter Larsson) in the following  [MSDN Thread][6]:
 
-<pre>DECLARE	@Sample TABLE
+sql
+DECLARE	@Sample TABLE
 	(
 		ID INT,
 		Data VARCHAR(100)
@@ -191,7 +199,7 @@ DECLARE	@ID INT = 1
 ;WITH cteSource(ID, Data)
 AS (
 	SELECT	ID,
-		CAST('<v&gt;<i&gt;' + REPLACE(REPLACE(Data, '|', '</i&gt;</v&gt;<v&gt;<i&gt;'), '..', '</i&gt;<i&gt;') + '</i&gt;</v&gt;' AS XML) AS Data
+		CAST('<v><i>' + REPLACE(REPLACE(Data, '|', '</i></v><v><i>'), '..', '</i><i>') + '</i></v>' AS XML) AS Data
 	FROM	@Sample
 	WHERE	ID = @ID
 )
@@ -199,8 +207,8 @@ SELECT		s.ID,
 		v.value('i[1]', 'INT') AS [Start],
 		COALESCE(v.value('i[2]', 'INT'), v.value('i[1]', 'INT')) AS [End]
 FROM		cteSource AS s
-CROSS APPLY	Data.nodes('v') AS n(v)</pre>
-
+CROSS APPLY	Data.nodes('v') AS n(v)
+```
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][7] forum or our [Microsoft SQL Server Admin][8] forum**<ins></ins>
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/0413b1c2-b7e9-45a2-8d3c-f09adc3d672a
@@ -209,5 +217,5 @@ CROSS APPLY	Data.nodes('v') AS n(v)</pre>
  [4]: http://www.sommarskog.se/arrays-in-sql.html
  [5]: http://sqlserver2000.databases.aspfaq.com/why-should-i-consider-using-an-auxiliary-calendar-table.html
  [6]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/165a4dc0-8d50-45c8-87b7-f34db50e6197
- [7]: http://forum.lessthandot.com/viewforum.php?f=17
- [8]: http://forum.lessthandot.com/viewforum.php?f=22
+ [7]: http://forum.ltd.local/viewforum.php?f=17
+ [8]: http://forum.ltd.local/viewforum.php?f=22

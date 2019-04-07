@@ -3,6 +3,7 @@ title: The Programmer vs The Developer
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-04-06T08:56:00+00:00
+ID: 993
 excerpt: |
   We've been conditioned to accept the terms "Programmer, "Software Developer", and "Software Engineer" as synonymous. Want ads and internal job titles tell us so. When someone gets paid to fill a human-sized hole, they're going to use the most marketable term that can be attached to a three sentence description, so these terms are used almost interchangeably.
 url: /index.php/itprofessionals/professionaldevelopment/the-programmer-vs-the-developer/

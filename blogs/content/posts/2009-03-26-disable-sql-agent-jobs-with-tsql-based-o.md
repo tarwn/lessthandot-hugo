@@ -3,6 +3,7 @@ title: Disable SQL Agent Jobs with TSQL based on events
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-03-26T12:10:56+00:00
+ID: 367
 url: /index.php/datamgmt/datadesign/disable-sql-agent-jobs-with-tsql-based-o/
 views:
   - 8591
@@ -39,7 +40,8 @@ The key is the one notification. This is one option of getting around that using
 
 Step 1) create the table to monitor
 
-<pre>SET ANSI_NULLS ON
+sql
+SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
@@ -59,16 +61,18 @@ CREATE TABLE [dbo].[VOL_MONITOR](
 ) ON [PRIMARY]
 
 GO
-SET ANSI_PADDING OFF</pre>
-
+SET ANSI_PADDING OFF
+```
 Insert the data in order to test out monitor
 
-<pre>INSERT INTO DBO.[VOL_MONITOR]
-VALUES ('AL Plant 1',20000,15000)</pre>
-
+sql
+INSERT INTO DBO.[VOL_MONITOR]
+VALUES ('AL Plant 1',20000,15000)
+```
 Step 2) create the job to monitor the volume count.
 
-<pre>DECLARE @jobId BINARY(16)
+sql
+DECLARE @jobId BINARY(16)
 EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'Capacity Restriction Monitor Plant 01', 
 		@enabled=1, 
 		@notify_level_eventlog=0, 
@@ -123,8 +127,8 @@ COMMIT TRANSACTION
 GOTO EndSave
 QuitWithRollback:
     IF (@@TRANCOUNT > 0) ROLLBACK TRANSACTION
-EndSave:</pre>
-
+EndSave:
+```
 So far we have successfully created a table to hold our capacity values that we negate based on units
   
 sent to eh facility and we have a job to monitor the capacity. Problem is the job will send out an
@@ -139,8 +143,9 @@ First query the sysjob table in MSDB to grab the job_id. You can also use the na
   
 think that is prone to typos and copying the job_id directly out of sysjob is a bit more stable.
 
-<pre>select job_id,[name] from msdb.dbo.sysjobs</pre>
-
+sql
+select job_id,[name] from msdb.dbo.sysjobs
+```
 This shows &#8220;8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC&#8221; for the Capacity Restriction Monitor Plant 01 job_id
 
 Syntax for sp\_update\_job is as follows. One key note is you can use job\_name or job\_id to update the job with
@@ -151,7 +156,8 @@ when you do not specify them. The answer is no, the SP will only update what par
 
 syntax
 
-<pre>sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
+sql
+sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
      [, [@new_name =] 'new_name' ] 
      [, [@enabled =] enabled ]
      [, [@description =] 'description' ] 
@@ -166,14 +172,15 @@ syntax
           [, [@notify_netsend_operator_name =] 'netsend_operator' ]
           [, [@notify_page_operator_name =] 'page_operator' ]
      [, [@delete_level =] delete_level ] 
-     [, [@automatic_post =] automatic_post ]</pre>
-
+     [, [@automatic_post =] automatic_post ]
+```
 So to form this call and disable the job we need to add to the job this statement.
 
 After the db mail send put issue a Go and then add
 
-<pre>Exec msdb.dbo.sp_update_job @job_id = '8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC' , @enabled = 0</pre>
-
+sql
+Exec msdb.dbo.sp_update_job @job_id = '8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC' , @enabled = 0
+```
 Now when the job runs it will send the notifications out and disable the job so no further
   
 notifications will be sent. 
@@ -186,9 +193,10 @@ add to that job is re-enabling out monitor. If we don&#8217;t then the call to c
   
 0 and the we break out monitoring process. So create another job scheduled for midnight with the statement of
 
-<pre>Update mem_vol set vol_status = volume
+sql
+Update mem_vol set vol_status = volume
 Go
 Exec msdb..sp_update_job @job_id = '8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC' , @enabled = 1
-Go</pre>
-
+Go
+```
 Now the process has gone through a complete cycle and the monitor and volume count starts clean.

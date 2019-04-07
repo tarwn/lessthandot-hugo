@@ -3,6 +3,7 @@ title: SQL Is Hard
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-06-12T19:04:00+00:00
+ID: 2095
 excerpt: "SQL is hard. Who's to say whether it's harder for the person that has no technical background or the one that is comfortable with object oriented, procedural, or functional styles and has to cross the great divide to set-based, declarative queries. In either case, there's a journey ahead of you."
 url: /index.php/datamgmt/dbprogramming/sql-is-hard/
 views:

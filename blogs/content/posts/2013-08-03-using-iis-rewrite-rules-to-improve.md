@@ -3,6 +3,7 @@ title: Using IIS Rewrite Rules With SquishIt Cache Invalidation
 author: Alex Ullrich
 type: post
 date: 2013-08-03T13:32:00+00:00
+ID: 2104
 excerpt: 'In version 0.9.2 and earlier, SquishIt had two options for handling browser cache invalidation.  The default behavior was to append the hash to the query string, and the other was to include the hash in the combined filename.  While both got the job don&hellip;'
 url: /index.php/webdev/serverprogramming/using-iis-rewrite-rules-to-improve/
 views:
@@ -24,15 +25,18 @@ In version 0.9.2 and earlier, SquishIt had two options for handling browser cach
 
 SquishIt&#8217;s default versioning behavior is to append the versioning hash to the URL of a combined file as a query string parameter. So a bundle set up like this:
 
-<pre>Bundle.JavaScript()
+```csharp
+Bundle.JavaScript()
    .Add("/assets/js/jquery_1.7.2.js")
    .Add("/assets/js/minifyjs_test.js")
    .ForceRelease()
-   .Render("/output/minifyjs_test_output.js")</pre>
-
+   .Render("/output/minifyjs_test_output.js")
+```
 Would render a script tag like this:
 
-<pre><script type="text/javascript" src="/output/minifyjs_test_output.js?{hashKeyName}={invalidationHash}"&gt;</script&gt;</pre>
+```html
+<script type="text/javascript" src="/output/minifyjs_test_output.js?{hashKeyName}={invalidationHash}"></script>
+```
 
 The main disadvantage of this is that it doesn&#8217;t work with all caching proxies, though it seems to be pretty consistently supported in modern browsers. The advantage is that it only requires one set of combined files to be stored on the server. This is usually the best choice for files served locally because it doesn&#8217;t require any cleanup of old files on the server.
 
@@ -40,15 +44,18 @@ The main disadvantage of this is that it doesn&#8217;t work with all caching pro
 
 When using this strategy, hashes are written directly into the filename. So a bundle set up like this:
 
-<pre>Bundle.JavaScript()
+```csharp
+Bundle.JavaScript()
    .Add("/assets/js/jquery_1.7.2.js")
    .Add("/assets/js/minifyjs_test.js")
    .ForceRelease()
-   .Render("/output/minifyjs_test_output#.js")</pre>
-
+   .Render("/output/minifyjs_test_output#.js")
+```
 Would render a script tag like this:
 
-<pre><script type="text/javascript" src="/output/minifyjs_test_output{invalidationHash}.js"&gt;</script&gt;</pre>
+```html
+<script type="text/javascript" src="/output/minifyjs_test_output{invalidationHash}.js"></script>
+```
 
 The main disadvantage of this strategy is that it tends to accumulate files over time. Because the hash is generated off of the combined file&#8217;s contents, every time a bundled script file or stylesheet changes, a new combined file is created. It eventually becomes necessary to clean this stuff up (The easiest way is to delete all files and reset the app pool, otherwise its usually safe to delete all but the most recent version for each combined file). The main advantage is that it is supported by all caching proxies &#8211; this consistent behavior makes it a good choice for CDN environments where you typically need to manage multiple versions of files anyway.
 
@@ -56,36 +63,43 @@ The main disadvantage of this strategy is that it tends to accumulate files over
 
 This new strategy is similar to the filename invalidation strategy when it comes to output file naming, but behaves more like querystring invalidation in terms of disk footprint. It is used similarly to the hash in filename option, in that you simply put a hash symbol in the path where you want the content&#8217;s hash to show up. Unlike the hash in filename method, it requires you to use it explicitly because we need to be able to figure out the right folder to write files to. So a bundle set up like this:
 
-<pre>Bundle.JavaScript()
+```csharp
+Bundle.JavaScript()
    .Add("/assets/js/jquery_1.7.2.js")
    .Add("/assets/js/minifyjs_test.js")
    .WithCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy())
    .ForceRelease()
-   .Render("/output/#/minifyjs_test_output.js")</pre>
-
+   .Render("/output/#/minifyjs_test_output.js")
+```
 Would render a script tag like this:
 
-<pre><script type="text/javascript" src="/output/{invalidationHash}/minifyjs_test_output.js"&gt;</script&gt;</pre>
+```html
+<script type="text/javascript" src="/output/{invalidationHash}/minifyjs_test_output.js"></script>
+```
 
 From looking at these URLs it is clear that caching agents will handle this the same way they handled the URLs built with the filename invalidation strategy. But the strategy actually scrubs the hash from the disk location for the bundle, meaning that only one file is generated. We can then set up a rewrite rule to scrub the hash out of the URL for incoming requests like so.
 
 So for IIS we could do something like this in our web.config:
 
-<pre><system.webServer&gt;
-    <!-- snip --&gt;
-    <rewrite&gt;
-      <rules&gt;
-        <rule name="squishit"&gt;
-          <match url="([S]+)(/r-[w]+/)([S]+)"  /&gt;
-          <action type="Rewrite" url="{R:1}/{R:3}" /&gt;
-        </rule&gt;
-      </rules&gt;
-    </rewrite&gt;
-  </system.webServer&gt;</pre>
+```xml
+<system.webServer>
+    <!-- snip -->
+    <rewrite>
+      <rules>
+        <rule name="squishit">
+          <match url="([S]+)(/r-[w]+/)([S]+)"  />
+          <action type="Rewrite" url="{R:1}/{R:3}" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+```
 
 To configure these options globally we can add the following in Application_Start:
 
-<pre>Bundle.ConfigureDefaults().UseCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy()); </pre>
+```csharp
+Bundle.ConfigureDefaults().UseCacheInvalidationStrategy(new HashAsVirtualDirectoryCacheInvalidationStrategy()); 
+```
 
 This will result in the supplied strategy being used for all bundles **unless** you override on a bundle using the method shown above.
 

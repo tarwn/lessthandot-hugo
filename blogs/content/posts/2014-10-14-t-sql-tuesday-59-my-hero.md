@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #59: My Hero'
 author: Koen Verbeeck
 type: post
 date: 2014-10-14T06:56:19+00:00
+ID: 3021
 url: /index.php/uncategorized/t-sql-tuesday-59-my-hero/
 views:
   - 26885

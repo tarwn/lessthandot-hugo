@@ -3,6 +3,7 @@ title: Use DDL Triggers To Track Table Changes
 author: SQLDenis
 type: post
 date: 2011-04-21T07:28:00+00:00
+ID: 1121
 excerpt: "Someone wanted to know when and by who a certain table was dropped, I told the person that you can do this with a DDL trigger.Wouldn't it be nice if you could track exactly all the DDL statements that were executed on a table in your database? Well, you can by using DDL Triggers"
 url: /index.php/datamgmt/datadesign/use-ddl-triggers-to-track/
 views:
@@ -28,20 +29,25 @@ DDL triggers are a special kind of trigger that fire in response to Data Definit
 
 First I will create a sample database
 
-<pre>CREATE DATABASE TestTrigger
+sql
+CREATE DATABASE TestTrigger
 GO
 
 USE TestTrigger
-GO</pre>
+GO
+```
 
 Now I will create a table which will hold the DDL statement, the time and the login of the person who executed the statement
 
-<pre>CREATE TABLE TriggerLog(DDL VARCHAR(300), ExecutedBy VARCHAR(100), EventDate datetime)
-GO</pre>
+sql
+CREATE TABLE TriggerLog(DDL VARCHAR(300), ExecutedBy VARCHAR(100), EventDate datetime)
+GO
+```
 
 Here is what my DDL trigger will look like, more information about DDL triggers can be found here: http://msdn.microsoft.com/en-us/library/ms189799.aspx
 
-<pre>CREATE TRIGGER trALterTable 
+sql
+CREATE TRIGGER trALterTable 
 ON DATABASE -- A DB level trigger
 FOR ALTER_TABLE --Event we want to capture
 AS 
@@ -49,17 +55,21 @@ AS
   SELECT EVENTDATA().value('(/EVENT_INSTANCE/TSQLCommand/CommandText)[1]','nvarchar(max)'), 
 		COALESCE(SUSER_SNAME(),USER_NAME()), 
 		GETDATE();
-GO</pre>
+GO
+```
 
 The code in the trigger should be pretty simple to follow. The line _EVENTDATA().value(&#8216;(/EVENT_INSTANCE/TSQLCommand/CommandText)[1]&#8217;,&#8217;nvarchar(max)&#8217;)_ is grabbing the DDL statement, more about EVENTDATA() can be found here: http://msdn.microsoft.com/en-us/library/ms173781.aspx
 
 Next up is the test table that we will use to play around with
 
-<pre>CREATE TABLE test(id INT)</pre>
+sql
+CREATE TABLE test(id INT)
+```
 
 The following block of code will add a column, change the data type of the column and will finally drop the column
 
-<pre>ALTER TABLE test
+sql
+ALTER TABLE test
 ADD SomeDate date
 GO
 
@@ -70,12 +80,15 @@ GO
 
 ALTER TABLE test
 DROP COLUMN SomeDate 
-GO</pre>
+GO
+```
 
 Now let&#8217;s see what we have in our log table
 
-<pre>SELECT * FROM TriggerLog
-order by EventDate</pre>
+sql
+SELECT * FROM TriggerLog
+order by EventDate
+```
 
 Here is the output
   
@@ -148,23 +161,30 @@ As you can see we have all the DDL statements captured in the table, the time it
   
 Let&#8217;s just drop and recreate the table
 
-<pre>drop table Test
-GO</pre>
+sql
+drop table Test
+GO
+```
 
 Now create the table again
 
-<pre>CREATE TABLE test(id INT)
-GO</pre>
+sql
+CREATE TABLE test(id INT)
+GO
+```
 
 If you now execute this query, you will get back pretty much all the DDL statements that we executed before
 
-<pre>SELECT DDL + 'GO'
+sql
+SELECT DDL + 'GO'
 FROM TriggerLog
-ORDER BY EventDate</pre>
+ORDER BY EventDate
+```
 
 Here is what it looks like if you copied the results and pasted them into a query window.
 
-<pre>ALTER TABLE test
+sql
+ALTER TABLE test
 ADD SomeDate date
 GO
 ALTER TABLE test
@@ -172,13 +192,16 @@ ALTER COLUMN SomeDate datetime2
 GO
 ALTER TABLE test
 DROP COLUMN SomeDate 
-GO</pre>
+GO
+```
 
 This was just a small example of how a DDL trigger works, A DDL trigger enables you to also not allow ALTER TABLE statements during business hours or for certain user even though they are db owner.
 
 To see all the events that DDL triggers can listen for you can use the sys.trigger\_event\_types Object Catalog View
 
-<pre>select type_name from sys.trigger_event_types </pre>
+sql
+select type_name from sys.trigger_event_types 
+```
 
 Here is a partial result set
 
@@ -216,5 +239,5 @@ CREATE_PROCEDURE
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

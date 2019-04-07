@@ -3,6 +3,7 @@ title: Nominated for the Tribal Awards
 author: Koen Verbeeck
 type: post
 date: 2013-12-19T21:16:00+00:00
+ID: 2211
 excerpt: 'I’ve been notified I am a finalist for the category Best New Voice at the Tribal Awards. These awards are not for some tattoos on your lower back or on your biceps, but rather a collaboration of Simple-Talk and SQLServerCentral to give outstanding commu&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/nominated-for-the-tribal-awards/
 views:

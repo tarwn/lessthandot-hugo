@@ -3,6 +3,7 @@ title: MongoDB vs. SQL Server – INSERT comparison part deux
 author: SQLDenis
 type: post
 date: 2010-04-06T00:32:20+00:00
+ID: 752
 url: /index.php/datamgmt/dbprogramming/mongodb-vs-sql-server-insert-comparison/
 views:
   - 19812
@@ -21,25 +22,30 @@ Lee Everest created a post named [MongoDB vs. SQL Server &#8211; INSERT comparis
 
 First create this table
 
-<pre>CREATE TABLE MongoCompare
+sql
+CREATE TABLE MongoCompare
     (guid uniqueidentifier
     ,value int
     )
-GO</pre>
+GO
+```
 
 Here is the script he used.
 
-<pre>DECLARE @id int = 1
+sql
+DECLARE @id int = 1
 WHILE (@id < 500001)
 BEGIN
     INSERT INTO MongoCompare VALUES (newid(), @id)
     SET @id+=1
 END
-GO</pre>
+GO
+```
 
 Now if I was to write that code I would write it with an explicit transaction and I would also use nocount on. So If we do this
 
-<pre>SET NOCOUNT ON
+sql
+SET NOCOUNT ON
 BEGIN TRAN
 DECLARE @id int = 1
 WHILE (@id < 500001)
@@ -47,12 +53,13 @@ BEGIN
     INSERT INTO MongoCompare VALUES (newid(), @id)
     SET @id+=1
 END
-COMMIT</pre>
+COMMIT
+```
 
 SQL Server now only takes 6 seconds and you have one atomic block of code, either all succeeds or nothing succeeds.
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://texastoo.com/post/2010/04/04/MongoDB-vs-SQL-Server-INSERT-comparison.aspx
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

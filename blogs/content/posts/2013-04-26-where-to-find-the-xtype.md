@@ -3,6 +3,7 @@ title: Where to find the xtype info for SQL Server in a table
 author: SQLDenis
 type: post
 date: 2013-04-26T14:48:00+00:00
+ID: 2074
 excerpt: |
   If you look at the sys.sysobjects view, you will see an xtype column listed
   
@@ -91,10 +92,12 @@ I answered [this question][1] today and decided to share here as well
 
 Here is how you can find that info, you can use my favorite table spt_values
 
-<pre>SELECT name
+sql
+SELECT name
 FROM master..spt_values
 WHERE type = 'O9T'
-AND number  = -1</pre>
+AND number  = -1
+```
 
 This is the output
 
@@ -156,11 +159,13 @@ X : extended stored proc
 
 Now if you want to split it into two columns, you can use the LEFT and RIGHT functions together with the PATINDEX function
 
-<pre>SELECT LEFT(name,PATINDEX('%:%',name)-1) AS xtype,
+sql
+SELECT LEFT(name,PATINDEX('%:%',name)-1) AS xtype,
 RIGHT(name, (LEN(name) - PATINDEX('%:%',name))) AS Description
 FROM master..spt_values
 WHERE type = 'O9T'
-AND number  = -1</pre>
+AND number  = -1
+```
 
 Here is the result
 

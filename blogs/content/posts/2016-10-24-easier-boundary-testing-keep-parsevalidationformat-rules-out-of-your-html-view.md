@@ -3,6 +3,7 @@ title: 'Easier Boundary Testing: Keep Parse/Validation/Format rules out of your 
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-10-24T19:49:12+00:00
+ID: 4697
 url: /index.php/webdev/easier-boundary-testing-keep-parsevalidationformat-rules-out-of-your-html-view/
 views:
   - 3263
@@ -53,7 +54,8 @@ The binding for each of these inputs binds to a userInput extension using [knock
 
 Here is the PresentationModel that wraps around our data Model and defines how we present the model to a human:
 
-<pre>function OrderLinePresentationModel(orderLine){
+```javascript
+function OrderLinePresentationModel(orderLine){
 	var self = this;
 
 	self.model = orderLine;
@@ -71,8 +73,8 @@ Here is the PresentationModel that wraps around our data Model and defines how w
 			!self.quantity.validation().isError() &&
 			!self.price.validation().isError();
 	});
-}</pre>
-
+}
+```
 In English, we are exposing the following properties from the underlying OrderLine Model:
 
   * Name &#8211; a string type that must have 1-25 characters
@@ -96,7 +98,8 @@ The &#8220;type&#8221; objects are used during the read/write pipelines:
 
 Here is what one of those &#8220;type&#8221; objects looks like as a literal:
 
-<pre>return {
+```javascript
+return {
 	emptyValue: null,
 	format: function(value){
 		if(value == null){
@@ -126,14 +129,14 @@ Here is what one of those &#8220;type&#8221; objects looks like as a literal:
 			return inputResult.failedInput("'" + value + "' is less than the supported minimum of '" + options.min + "'");
 		}
 
-		if(options.max != undefined && value &gt; options.max){
+		if(options.max != undefined &#038;&#038; value > options.max){
 			return inputResult.failedInput("'" + value + "' is greater than the supported maximum of '" + options.max + "'");
 		}
 
 		return inputResult.successfulInput(value);		
 	}
-};</pre>
-
+};
+```
 Using a knockout extension, we can ensure all writes pass through the parse and validate logic before being written to the true underlying model, surface an error state if either fails, and display a formatted value independent of the raw value in that underlying model.
 
 ## Adding Boundary Tests
@@ -152,7 +155,8 @@ Here is sample code for validating the boundaries on the Order Line, which has a
   
 **specs/models/orderLinePresentationModel.boundary.spec.js**
 
-<pre>describe('boundary tests', function(){
+```javascript
+describe('boundary tests', function(){
 
 	var testCases = [
 		{ name: 'name input - shorter than min', field: 'name', input: '', isError: true },
@@ -192,8 +196,8 @@ Here is sample code for validating the boundaries on the Order Line, which has a
 
 	});
 
-});</pre>
-
+});
+```
 So far not a lot of duplication of effort, but in a larger application we would expect to have 10s or 100s of integer, text, currency, date, etc inputs. So the effort to test at this Model level doesn&#8217;t seem to add much value over testing directly at the type level, unless we&#8217;re passing in custom validation that would cause a specific input to operate differently than others of a similar type.
 
 <div id="attachment_4702" style="width: 810px" class="wp-caption aligncenter">
@@ -208,7 +212,8 @@ Here&#8217;s how we can instead do boundary testing for the more generalized inp
   
 **specs/inputTypes/all.boundary.spec.js**
 
-<pre>describe('boundary tests', function(){
+```javascript
+describe('boundary tests', function(){
 	
 		var testCases = [
 			{ name: 'currency input - less than min',	options: { type: currencyType, min: 0, max: 10 }, input: '-.5', isError: true },
@@ -237,8 +242,8 @@ Here&#8217;s how we can instead do boundary testing for the more generalized inp
 			});
 		});
 
-	});</pre>
-
+	});
+```
 We have a common component that handles all input logic that is governed by each type, so now our tests focus just on the collision of the types and input logic. Rather than require our teammates to enter tests every time they re-use a type for a new field in a completely expected way, we now only need to add tests when they want to add in some custom validation specific to that field, getting the value from the boundary testing while minimizing the cost. 
 
 ## But that&#8217;s not real user input?

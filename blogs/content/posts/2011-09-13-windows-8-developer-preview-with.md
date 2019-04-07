@@ -3,6 +3,7 @@ title: Windows 8 Developer Preview with tools available for download
 author: SQLDenis
 type: post
 date: 2011-09-13T22:07:00+00:00
+ID: 1314
 excerpt: |
   Microsoft has made available a couple of Windows 8 ISO images that you can download right now. Here is what is available:
   

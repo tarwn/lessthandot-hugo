@@ -3,6 +3,7 @@ title: LessThanDot Re-Design
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2009-10-23T12:56:44+00:00
+ID: 579
 url: /index.php/webdev/webdesigngraphicsstyling/website-redesign-need-title/
 views:
   - 5690

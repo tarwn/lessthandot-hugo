@@ -3,6 +3,7 @@ title: Why every database should have a calendar table
 author: SQLDenis
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 888
 excerpt: |
   create table Calendar (
           CalendarID smallint not null primary key,
@@ -18,7 +19,8 @@ categories:
   - Microsoft SQL Server
 
 ---
-<pre>create table Calendar (
+sql
+create table Calendar (
         CalendarID smallint not null primary key,
 		DateStamp date not null,
 		DayOfYear as DATEPART(dy,DateStamp),
@@ -28,9 +30,11 @@ categories:
 		YearNumber as YEAR(DateStamp),
 		IsWeekend as CASE WHEN DATEPART(dw,DateStamp) IN(1,7) then 1 else 0 end,
 		IsHoliday tinyint)
-GO</pre>
+GO
+```
 
-<pre>declare @d date
+sql
+declare @d date
 select @d = '20100101'				
 	
 insert Calendar(CalendarID,DateStamp,IsHoliday)					
@@ -42,17 +46,24 @@ select number from master..spt_values
 where type = 'P'
 union all
 select number + 2048 from master..spt_values
-where type = 'P') x</pre>
+where type = 'P') x
+```
 
-<pre>create index ix_cal on Calendar(DateStamp,CalendarID)</pre>
+sql
+create index ix_cal on Calendar(DateStamp,CalendarID)
+```
 
-<pre>select *
+sql
+select *
  from Calendar
-where DateStamp &gt;= '20100826'
+where DateStamp >= '20100826'
 
 select *
  from Calendar
-where CalendarID &gt;= 237</pre>
+where CalendarID >= 237
+```
 
-<pre>select MIN(DateStamp),MAX(DateStamp)
-from Calendar</pre>
+sql
+select MIN(DateStamp),MAX(DateStamp)
+from Calendar
+```

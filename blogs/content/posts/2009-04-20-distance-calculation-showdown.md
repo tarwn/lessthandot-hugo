@@ -3,6 +3,7 @@ title: Distance Calculation Showdown
 author: Alex Ullrich
 type: post
 date: 2009-04-20T11:28:42+00:00
+ID: 376
 url: /index.php/datamgmt/dbprogramming/distance-calculation-showdown/
 views:
   - 9099
@@ -23,7 +24,8 @@ A while back George, Denis and I did a series of posts on calculating distance b
 
 At the time I promised to run some tests. I had an idea how it would turn out at that point, but wanted to make my testing a bit more thorough. So, I&#8217;ve got the three functions that were created from following along with those blog entries. I then created a new stored proc for each method. For example (this is the TSQL version):
 
-<pre>CREATE proc [dbo].[ClosestZips_TSQL] (@ZipCode char(5), @Quantity int)
+sql
+CREATE proc [dbo].[ClosestZips_TSQL] (@ZipCode char(5), @Quantity int)
 as
 
 begin
@@ -41,7 +43,8 @@ JOIN zipcodes h ON g.zipcode <> h.zipcode
 WHERE dbo.tsqlDistCalc(h.Longitude, h.Latitude, g.Longitude, g.Latitude)<=(200 * 1609.344)
 ORDER BY dbo.tsqlDistCalc(h.Longitude, h.Latitude, g.Longitude, g.Latitude)
 
-end</pre>
+end
+```
 
 Then, I ran these procs for my zip code, for a varying number of results. The number of results didn&#8217;t turn out to matter, so I&#8217;ve left that out. This table contains the results:
 
@@ -102,5 +105,5 @@ I&#8217;ve tried to cover the ups and downs of these methods the best that I cou
  [1]: /index.php/DataMgmt/DataDesign/sql-server-zipcode-latitude-longitude-pr
  [2]: /index.php/DataMgmt/DataDesign/sql-server-2008-proximity-search-with-th
  [3]: /index.php/DataMgmt/DBProgramming/sql-server-distance-calculation-option-3
- [4]: http://forum.lessthandot.com/viewforum.php?f=17
- [5]: http://forum.lessthandot.com/viewforum.php?f=22
+ [4]: http://forum.ltd.local/viewforum.php?f=17
+ [5]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: 'Error: The GetBytes function can only be used on columns of type Text, N
 author: SQLDenis
 type: post
 date: 2010-06-03T13:41:57+00:00
+ID: 793
 url: /index.php/datamgmt/datadesign/error-the-getbytes-function-can-only-be/
 views:
   - 10798
@@ -17,8 +18,10 @@ tags:
 ---
 This is just a quick post in case you run into this problem. This is an interesting error and it had a coworker worry about table corruption. This coworker connected to a database on a fairly new server, he then executed a query like the following
 
-<pre>SELECT *
-FROM SomeTable</pre>
+sql
+SELECT *
+FROM SomeTable
+```
 
 And here is the error message he got
 
@@ -32,5 +35,5 @@ Lesson learned&#8230;it is not the server..it is you!
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

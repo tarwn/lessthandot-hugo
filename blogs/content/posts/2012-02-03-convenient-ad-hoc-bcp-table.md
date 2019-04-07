@@ -3,6 +3,7 @@ title: Convenient ad-hoc bcp table loading
 author: Erik
 type: post
 date: 2012-02-04T00:00:00+00:00
+ID: 1514
 excerpt: "Many times I am given an Excel file, or have a data source that makes it easy to paste into Excel, and I need to use the data in my database for a one-time purpose of updating or checking other data. It's not worth creating an SSIS package, and it's not&hellip;"
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/convenient-ad-hoc-bcp-table/
 views:

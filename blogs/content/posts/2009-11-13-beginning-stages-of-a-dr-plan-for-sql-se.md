@@ -3,6 +3,7 @@ title: Beginning stages of a DR plan for SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-11-13T14:06:44+00:00
+ID: 622
 url: /index.php/datamgmt/datadesign/beginning-stages-of-a-dr-plan-for-sql-se/
 views:
   - 9676

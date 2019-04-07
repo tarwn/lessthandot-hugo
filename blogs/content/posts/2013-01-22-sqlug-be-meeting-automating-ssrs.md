@@ -3,6 +3,7 @@ title: 'SQLUG.be meeting: Automating SSRS Deployments'
 author: Koen Verbeeck
 type: post
 date: 2013-01-22T11:29:00+00:00
+ID: 1930
 excerpt: |
    
   

@@ -3,6 +3,7 @@ title: Copy SQL Server Database
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-13T11:13:07+00:00
+ID: 383
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/copy-sql-server-database/
 views:
   - 16018

@@ -3,6 +3,7 @@ title: ASP.NET Beginner Resources
 author: ca8msm
 type: post
 date: 2008-06-01T09:22:41+00:00
+ID: 36
 url: /index.php/webdev/serverprogramming/aspnet/asp-net-beginner-resources/
 views:
   - 4142

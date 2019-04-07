@@ -3,6 +3,7 @@ title: SSRS Properties – InnerPlotPosition
 author: Jes Borland
 type: post
 date: 2013-02-19T11:24:00+00:00
+ID: 1998
 excerpt: Today my guest blogger is Doug Lane, talking about InnerPlotPosition.
 url: /index.php/datamgmt/ssrs/ssrs-properties-innerplotposition/
 views:

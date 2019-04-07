@@ -3,6 +3,7 @@ title: SQL Query Commenting/Uncommenting Quick Tip
 author: Erik
 type: post
 date: 2009-12-11T17:28:37+00:00
+ID: 647
 url: /index.php/datamgmt/dbprogramming/sql-query-commenting-uncommenting-quick/
 views:
   - 10876
@@ -23,20 +24,24 @@ So try this!
 
 Put &#8211;/\* at the top of your query and &#8211;\*/ at the bottom:
 
-<pre>--/* Test Query #3 (Gorp Method)
+sql
+--/* Test Query #3 (Gorp Method)
 SELECT *
 FROM Blah
 WHERE Gorp = 1
---*/</pre>
+--*/
+```
 
 Notice that the query is NOT commented out.
 
 Now, to toggle the whole query as commented or not, just uncomment the first line:
 
-<pre>/* Test Query #3 (Gorp Method)
+sql
+/* Test Query #3 (Gorp Method)
 SELECT *
 FROM Blah
 WHERE Gorp = 1
---*/</pre>
+--*/
+```
 
 I just hit on this method yesterday and I&#8217;m really enjoying it. It provides a natural place to put a query comment, you only have to put the block comments in once, and then you can use your comment/uncomment shortcuts on just a single line to toggle an entire block of code! Just keep in mind that the action IS reversed: you comment to uncomment and you uncomment to comment.

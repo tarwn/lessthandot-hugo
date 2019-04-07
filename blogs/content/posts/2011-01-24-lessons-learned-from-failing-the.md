@@ -3,6 +3,7 @@ title: Lessons Learned from Failing the MCTS 70-432
 author: Jes Borland
 type: post
 date: 2011-01-24T17:04:00+00:00
+ID: 1011
 excerpt: "This morning I got up, went to the gym and ran three miles, and headed to a testing center to take the Microsoft MCTS 70-432 SQL Server Implementation and Maintenance exam. I wasn't expecting to ace it, since I'd been struggling with the practice exams.&hellip;"
 url: /index.php/datamgmt/dbadmin/lessons-learned-from-failing-the/
 views:

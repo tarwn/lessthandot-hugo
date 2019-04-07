@@ -3,6 +3,7 @@ title: Find all the tables and indexes that have data compression
 author: SQLDenis
 type: post
 date: 2012-11-16T17:32:00+00:00
+ID: 1791
 excerpt: |
   I took a backup of one of our test databases today and gave it to someone so that it could be restored on one of their servers.
   
@@ -48,37 +49,43 @@ Okay, so they are running the standard edition of SQL Server. How can you quickl
 
 A table without indexes (a heap)
 
-<pre>CREATE TABLE TestCompress(SomeCol VARCHAR(1000))
+sql
+CREATE TABLE TestCompress(SomeCol VARCHAR(1000))
 GO
 
 ALTER TABLE TestCompress
-REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  PAGE)</pre>
-
+REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  PAGE)
+```
 A table with a non clustered index
 
-<pre>--Non clustered index
+sql
+--Non clustered index
 CREATE TABLE TestCompress2(SomeCol VARCHAR(100) NOT null)
 GO
 
 CREATE NONCLUSTERED INDEX IX_TestCompress2 
     ON TestCompress2 (SomeCol)
 WITH ( DATA_COMPRESSION = ROW ) ; 
-GO</pre>
+GO
+```
 
 A table with a clustered index
 
-<pre>--Clustered index
+sql
+--Clustered index
 CREATE TABLE TestCompress3(SomeCol VARCHAR(100) NOT null)
 GO
 
 CREATE CLUSTERED INDEX IX_TestCompress3 
     ON TestCompress3 (SomeCol)
 WITH ( DATA_COMPRESSION = ROW ) ; 
-GO</pre>
+GO
+```
 
 Here is the query that will give you the table name, the storage type, the index name if there is one and the type of compression
 
-<pre>SELECT DISTINCT
+sql
+SELECT DISTINCT
 SCHEMA_NAME(o.schema_id)  + '.' + OBJECT_NAME(o.object_id) AS TableName,
 i.name AS IndexName,
 p.data_compression_desc AS CompressionType,
@@ -89,8 +96,9 @@ ON p.object_id = o.object_id
 JOIN sys.indexes i 
 ON p.object_id = i.object_id
 AND i.index_id = p.index_id
-WHERE p.data_compression &gt; 0 
-AND SCHEMA_NAME(o.schema_id) <&gt; 'SYS' </pre>
+WHERE p.data_compression > 0 
+AND SCHEMA_NAME(o.schema_id) <> 'SYS' 
+```
 
 Here is the output of that query
 

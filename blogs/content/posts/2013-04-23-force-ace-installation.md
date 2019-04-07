@@ -3,6 +3,7 @@ title: Force installation of 64-bit ACE OLE DB provider
 author: Koen Verbeeck
 type: post
 date: 2013-04-23T06:49:00+00:00
+ID: 2071
 excerpt: This blog post describes how you can install the 64-bit ACE OLE DB provider when you have 32-bit Office components installed.
 url: /index.php/datamgmt/dbprogramming/mssqlserver/force-ace-installation/
 views:

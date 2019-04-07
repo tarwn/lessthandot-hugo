@@ -3,6 +3,7 @@ title: 'Transactional Replication from Availability Groups to Azure SQL Database
 author: Jes Borland
 type: post
 date: 2016-12-26T15:00:35+00:00
+ID: 4896
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/transactional-replication-in-availability-groups-to-azure-sql-database-part-1-planning/
 views:
   - 7370
@@ -16,11 +17,11 @@ Throughout the last few years, I&#8217;ve worked with SQL Server Availability Gr
 
 Both replication of a database in an AG and replication from SQL Server to SQL Database come with several caveats, limitations, and challenges. In this five-post blog series, I hope to share with you the lessons I&#8217;ve learned so you can do this correctly from the beginning.
 
-  * <a href="http://blogs.ltd.local/?p=4896" target="_blank">Part 1 &#8211; Planning</a>
-  * <a href="http://blogs.ltd.local/?p=4906" target="_blank">Part 2 &#8211; The Distributor</a>
-  * <a href="http://blogs.ltd.local/?p=4923" target="_blank">Part 3 &#8211; The Publisher</a>
-  * <a href="http://blogs.ltd.local/?p=4945" target="_blank">Part 4 &#8211; The Subscriber</a>
-  * <a href="http://blogs.ltd.local/?p=4960" target="_blank">Part 5 &#8211; Testing</a>
+  * <a href="/?p=4896" target="_blank">Part 1 &#8211; Planning</a>
+  * <a href="/?p=4906" target="_blank">Part 2 &#8211; The Distributor</a>
+  * <a href="/?p=4923" target="_blank">Part 3 &#8211; The Publisher</a>
+  * <a href="/?p=4945" target="_blank">Part 4 &#8211; The Subscriber</a>
+  * <a href="/?p=4960" target="_blank">Part 5 &#8211; Testing</a>
 
 &nbsp;
 
@@ -28,7 +29,7 @@ Both replication of a database in an AG and replication from SQL Server to SQL D
 
 Determine what you need to accomplish and if there is a simpler way to do it. This is a complicated solution with a lot of moving parts. Many things can go wrong or break. In this situation, we needed to have on-premises data in Azure to be consumed by other Azure services and for analytics. It also had to stay on-premises for transactional applications. The other option for moving the data on a regular basis was <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-sql-data-sync" target="_blank">Azure SQL Data Sync</a>, which has been in preview for five (long) years &#8211; I didn&#8217;t want to use a preview technology, especially one that&#8217;s been in preview mode for so long.
 
-You should have some familiarity with each of these features before combining them. Write up an architecture document ahead of time that will include all the relevant information you need as you&#8217;re setting this up &#8211; replica names, publication properties, distributor properties, subscriber information, SQL DB information. Download my <a href="http://blogs.ltd.local/?p=4899" target="_blank">Replication Setup Checklist</a> to be prepared.
+You should have some familiarity with each of these features before combining them. Write up an architecture document ahead of time that will include all the relevant information you need as you&#8217;re setting this up &#8211; replica names, publication properties, distributor properties, subscriber information, SQL DB information. Download my <a href="/?p=4899" target="_blank">Replication Setup Checklist</a> to be prepared.
 
 Read through this series, and these other blog posts, to be prepared. I&#8217;ve referenced these blogs many time:
 

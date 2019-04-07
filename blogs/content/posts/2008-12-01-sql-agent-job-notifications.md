@@ -3,6 +3,7 @@ title: SQL Agent Job Notifications
 author: Ted Krueger (onpnt)
 type: post
 date: 2008-12-01T12:41:40+00:00
+ID: 227
 url: /index.php/datamgmt/datadesign/sql-agent-job-notifications/
 views:
   - 12298
@@ -25,7 +26,8 @@ So SQL Server 2005 and up implemented a long awaited method of emailing without 
 
 So let&#8217;s first setup you instance for database mail abilities. First you&#8217;ll have to verify that database mail is enabled. you can do that with surface area configuration by going into the surface area configuration features. Then select Database Mail and make sure it is Enabled. Remember by default most of SQL Server 2005 features are disabled. You can also run
 
-<pre>USE Master
+sql
+USE Master
 GO
 sp_configure 'show advanced options', 1
 GO
@@ -36,17 +38,18 @@ GO
 reconfigure 
 GO
 sp_configure 'show advanced options', 0
-GO</pre>
-
+GO
+```
 Now you&#8217;re going to need a profile and account. Out of scope for me to go step by step through this process and there are hundreds of articles out there on how to do it. Probably hundreds on doing what I&#8217;m talking about also but what&#8217;s the internet if it isn&#8217;t full of repeated articles stating the same thing 😉 One thing I do like to do is create a profile named &#8220;DBA {instance name}&#8221; and an account to match that naming. This way I know where it comes from and which aspect of the instance is sending it without even opening the mail. At least it gets me to open it quicker than most that is.
 
 So now that you have that all running you can test it by this simple little script
 
-<pre>EXEC msdb.dbo.sp_send_dbmail @recipients='you@yourcompany.com',
+sql
+EXEC msdb.dbo.sp_send_dbmail @recipients='you@yourcompany.com',
 @subject = 'My Test Email',
 @body = 'It works!',
-@profile_name = 'SQL DBA'</pre>
-
+@profile_name = 'SQL DBA'
+```
 You should have received the email. I you didn&#8217;t you can either wait for me to write a troubleshooting database mail blog or following yourself to http://msdn.microsoft.com/en-us/library/ms188663.aspx
 
 Typically if it doesn&#8217;t work you&#8217;re blocking it on the server level or at the mail server level. Good thing to check is port blocking and or your companies chosen firewall/antivirus software.
@@ -59,7 +62,8 @@ So for a simple job notification and example of what you can do we can create so
 
 First create a new job. Then add a step. Something like this
 
-<pre>USE [msdb]
+sql
+USE [msdb]
 GO
 BEGIN TRANSACTION
 DECLARE @ReturnCode INT
@@ -156,8 +160,8 @@ COMMIT TRANSACTION
 GOTO EndSave
 QuitWithRollback:
 IF (@@TRANCOUNT > 0) ROLLBACK TRANSACTION
-EndSave:</pre>
-
+EndSave:
+```
 You can test this job to see how it works by running as is and also changing the mail &#8220;Caller Task&#8221; so something like select 1/0.
 
 Obviously I like the right click script option. The important things you need to know here is the workflow sense I&#8217;m sure if you&#8217;re reading this you know how to create a SQL Job already and don&#8217;t need me to tell you how.

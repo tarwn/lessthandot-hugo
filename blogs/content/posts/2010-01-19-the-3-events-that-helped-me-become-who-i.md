@@ -3,6 +3,7 @@ title: Three Events that Brought Me Here
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-01-19T12:48:18+00:00
+ID: 682
 url: /index.php/itprofessionals/ethicsit/the-3-events-that-helped-me-become-who-i/
 views:
   - 42372

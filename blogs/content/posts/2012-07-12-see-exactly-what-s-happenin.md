@@ -3,6 +3,7 @@ title: See Exactly What’s Happenin’ with SSIS 2012 Data Taps
 author: joshuafennessy
 type: post
 date: 2012-07-12T20:49:00+00:00
+ID: 1672
 excerpt: |
   -- The Story --
   Experienced SSIS developers will recognize the usefulness of the simple  data viewer object used during the development process to peek into the  data set and see what is going on at various stages of execution.

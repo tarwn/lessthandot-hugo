@@ -3,6 +3,7 @@ title: Use INDEXKEY_PROPERTY in SQL Server to determine if columns in indexes ar
 author: SQLDenis
 type: post
 date: 2009-09-23T18:20:23+00:00
+ID: 566
 url: /index.php/datamgmt/datadesign/use-indexkey_property-in-sql-server-to-d/
 views:
   - 8677
@@ -24,7 +25,9 @@ tags:
 ---
 How can you find out if the columns that are part of the index are sorted descending or ascending in that index? For example when you create the following index
 
-<pre>CREATE CLUSTERED  INDEX ix_test_clust ON test (id ASC, col1 DESC)</pre>
+sql
+CREATE CLUSTERED  INDEX ix_test_clust ON test (id ASC, col1 DESC)
+```
 
 How would you find out without scripting the index if the columns are in descending or ascending order? SQL Server has a function for that, the name of this function is INDEXKEY_PROPERTY
   
@@ -32,20 +35,24 @@ Before starting I need to warn you that this will only run on SQL Server 2005 an
 
 Let&#8217;s see how that works. first create this table in the tempdb
 
-<pre>USE tempdb
+sql
+USE tempdb
 go
  
 CREATE TABLE Test (id INT, col1 VARCHAR(40), col2 INT, col3 INT)
-go</pre>
+go
+```
 
 Now create 2 indexes, one clustered with 2 columns and one non clustered with 4 columns
 
-<pre>CREATE NONCLUSTERED  INDEX ix_test ON test (id ASC, col1 DESC,col2 DESC, col3 ASC)
+sql
+CREATE NONCLUSTERED  INDEX ix_test ON test (id ASC, col1 DESC,col2 DESC, col3 ASC)
 go
  
  
 CREATE CLUSTERED  INDEX ix_test_clust ON test (id ASC, col1 DESC)
-go</pre>
+go
+```
 
 First we need to see what the arguments are for the INDEXKEY_PROPERTY function; here is what you can find in Books On Line
   
@@ -137,14 +144,16 @@ So to use it we need to know a couple of things, we need the table name, the ind
   
 Run the following query which will give you all that info for the table Test, change the table name if you are interested in other tables.
 
-<pre>select OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,k.keyno,k.indid as IndexID 
+sql
+select OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,k.keyno,k.indid as IndexID 
 from sys.sysindexes i
 join sys.sysindexkeys k on i.id = k.id
 and k.indid = i.indid
 join sys.syscolumns c on k.id = c.id
 and k.colid = c.colid
 where OBJECT_NAME(k.id) = 'Test'
-order by OBJECT_NAME(k.id),i.name,k.keyno</pre>
+order by OBJECT_NAME(k.id),i.name,k.keyno
+```
 
 Here is the output
 
@@ -306,28 +315,34 @@ Here is the output
 
 Now with the output from above can easily call the INDEXKEY_PROPERTY function, we use the IsDescending property to find out the sort order, below are the function calls for the two indexes we created.
 
-<pre>--index ix_test 
+sql
+--index ix_test 
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 2 , 1 , 'isdescending' )
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 2 , 2 , 'isdescending' )
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 2 , 3 , 'isdescending' )
-SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 2 , 4 , 'isdescending' )</pre>
+SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 2 , 4 , 'isdescending' )
+```
 
-<pre>-- index ix_test_clust
+sql
+-- index ix_test_clust
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 1 , 1 , 'isdescending' )
-SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 1 , 2 , 'isdescending' )</pre>
+SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 1 , 2 , 'isdescending' )
+```
 
 Of course we are not amateurs and nobody wants to type all that stuff, we will just take the query from before and put the following in the select statement _INDEXKEY_PROPERTY (k.id,k.indid ,c.colid,&#8217;isdescending&#8217;) as IsDescending_
   
 Run the code below to see how that works.
 
-<pre>select INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') as IsDescending,OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,c.colid,k.indid as IndexID 
+sql
+select INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') as IsDescending,OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,c.colid,k.indid as IndexID 
 from sys.sysindexes i
 join sys.sysindexkeys k on i.id = k.id
 and k.indid = i.indid
 join sys.syscolumns c on k.id = c.id
 and k.colid = c.colid
 where OBJECT_NAME(k.id) = 'Test'
-order by OBJECT_NAME(k.id),i.name,k.keyno</pre>
+order by OBJECT_NAME(k.id),i.name,k.keyno
+```
 
 Here is the output
 
@@ -514,17 +529,19 @@ Here is the output
 
 Of course if you can do that you can also very simply write a query that returns all the columns that are sorted descending in any index by making the WHERE clause the following: where INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,&#8217;isdescending&#8217;) = 1. Run the query below to see how that works
 
-<pre>select INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') as IsDescending,OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,k.keyno,k.indid as IndexID 
+sql
+select INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') as IsDescending,OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,k.keyno,k.indid as IndexID 
 from sys.sysindexes i
 join sys.sysindexkeys k on i.id = k.id
 and k.indid = i.indid
 join sys.syscolumns c on k.id = c.id
 and k.colid = c.colid
-where INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') = 1</pre>
+where INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') = 1
+```
 
 
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

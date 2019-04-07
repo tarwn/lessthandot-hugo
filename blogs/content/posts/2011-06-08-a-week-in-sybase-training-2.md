@@ -3,6 +3,7 @@ title: A week in Sybase Training, what did I learn, day 3
 author: SQLDenis
 type: post
 date: 2011-06-08T18:00:00+00:00
+ID: 1212
 excerpt: |
   This is day 3 of my training. It will be a scorching 100 degrees in NYC today so I will not walk around at all today.
   
@@ -33,7 +34,9 @@ There is a proc that is named sp_dbextend that you can use to manage all this st
 
 Here is an example that defines the rate of growth as 5% of current value, in each expansion attempt for the database pubs2
 
-<pre>sp_dbextend 'modify', 'database', pubs2, logsegment, 'growby', '5%'</pre>
+sql
+sp_dbextend 'modify', 'database', pubs2, logsegment, 'growby', '5%'
+```
 
 You can use the sp_dbextend stored procedure to manage devices, databases and thresholds.
 
@@ -45,19 +48,27 @@ I learned some interesting things in regards to tempdb. In Sybase you can have u
 
 Here is how you create a temporary database
 
-<pre>create temporary database tempdb_01 on some_tempdb_device = 10</pre>
+sql
+create temporary database tempdb_01 on some_tempdb_device = 10
+```
 
 Then to add that database to the default group, you would do this
 
-<pre>sp_tempdb 'add', tempdb_01, 'default'</pre>
+sql
+sp_tempdb 'add', tempdb_01, 'default'
+```
 
 Now when you connect and there are 15 temporary databases and for some reason you would like to know which one your session will use, you can use @@tempdbid, below is an example
 
-<pre>select db_name(@@tempdbid)</pre>
+```
+select db_name(@@tempdbid)
+```
 
 You can also make sure that login Menace will always use the tempdb_01 temporary database by binding that login to that database
 
-<pre>sp_tempdb bind, 'LG', 'Menace', 'DB', 'tempdb_01'</pre>
+sql
+sp_tempdb bind, 'LG', 'Menace', 'DB', 'tempdb_01'
+```
 
 If you want to check what tempdb a certain process id has assigned, you can use the tempdb_id() function, you would pass in the SPID
 
@@ -87,7 +98,9 @@ You can enable or disable roles by using the set role RoleName [on | off]
 
 To check if you have a role or not, you can use the proc_role function, here is an example
 
-<pre>select proc_role('sa_role')</pre>
+sql
+select proc_role('sa_role')
+```
 
 That will return 1 if you have that role or 0 if you do not
 
@@ -95,15 +108,21 @@ To see all the roles for a login you can use the sp_displaylogin stored procedur
 
 Here is an example
 
-<pre>sp_displaylogin 'sa'</pre>
+sql
+sp_displaylogin 'sa'
+```
 
 You can grant a role or roles to someone by using the grant role command. Here is an example
 
-<pre>grant role sso_role, sa_role, oper_role to SQLMenace</pre>
+sql
+grant role sso_role, sa_role, oper_role to SQLMenace
+```
 
 To take away the sso_role, you would use revoke
 
-<pre>revoke role sso_role from SQLMenace</pre>
+sql
+revoke role sso_role from SQLMenace
+```
 
 Here are some procs to manage logins, if you are a SQL Server person, some of these will look familiar to you.
 

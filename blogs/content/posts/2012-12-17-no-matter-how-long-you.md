@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 17: No matter how long you are on the wrong path, go
 author: SQLDenis
 type: post
 date: 2012-12-17T22:14:00+00:00
+ID: 1864
 excerpt: This is day seventeen of the SQL Advent 2012 series of blog posts. Today we are going to look at what happens when you get stubborn and keep going down the wrong path
 url: /index.php/datamgmt/dbprogramming/no-matter-how-long-you/
 views:

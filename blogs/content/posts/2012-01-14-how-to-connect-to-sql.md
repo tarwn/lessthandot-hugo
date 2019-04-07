@@ -3,6 +3,7 @@ title: How to connect to SQL Server when your default database is unavailable
 author: SQLDenis
 type: post
 date: 2012-01-14T18:11:00+00:00
+ID: 1495
 excerpt: "I was restoring a TB+ sized database on our staging database today. Someone needed to use a different database but he couldn't login because the database I was restoring was the default database for the login he was using. I told him to click on the Opt&hellip;"
 url: /index.php/datamgmt/datadesign/how-to-connect-to-sql/
 views:
@@ -27,45 +28,54 @@ I was restoring a TB+ sized database on our staging database today. Someone need
 
 First, let&#8217;s create two databases
 
-<pre>CREATE DATABASE Test1
+sql
+CREATE DATABASE Test1
 GO
 
 CREATE DATABASE Test2
-GO</pre>
+GO
+```
 
 Now create a new login named TestLogin with a password of Test
 
-<pre>USE [master]
+sql
+USE [master]
 GO
-CREATE LOGIN [TestLogin] WITH PASSWORD=N'Test', DEFAULT_DATABASE=[Test1]</pre>
-
+CREATE LOGIN [TestLogin] WITH PASSWORD=N'Test', DEFAULT_DATABASE=[Test1]
+```
 Add the login we just created to the Test1 database and make the login part of the db_owner role
 
-<pre>USE [Test1]
+sql
+USE [Test1]
 GO
 CREATE USER [TestLogin] FOR LOGIN [TestLogin]
 GO
 USE [Test1]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [TestLogin]
-GO</pre>
+GO
+```
 
 Add the login we just created to the Test2 database and make the login part of the db_owner role
 
-<pre>USE [Test2]
+sql
+USE [Test2]
 GO
 CREATE USER [TestLogin] FOR LOGIN [TestLogin]
 GO
 USE [Test2]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [TestLogin]
-GO</pre>
+GO
+```
 
 Make sure that you can login with the TestLogin account
 
 Now that you know that you can login with the TestLogin account, use another account and put the Test1 in offline mode
 
-<pre>ALTER DATABASE Test1 SET OFFLINE</pre>
+sql
+ALTER DATABASE Test1 SET OFFLINE
+```
 
 Now if you try to login with the TestLogin account, you will see the following error
 

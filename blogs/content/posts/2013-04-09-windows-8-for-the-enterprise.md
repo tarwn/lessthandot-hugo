@@ -3,6 +3,7 @@ title: Windows 8 for the Enterprise Event – Tuesday, April 16th
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-04-09T18:58:00+00:00
+ID: 2065
 excerpt: 'I’ve had the chance to talk to quite a few people over the last few months about my experiences with Windows 8.  So far, and I can’t see it changing, I’ve been very impressed with Windows 8 and the efficiency boost it has provided me in normal, day-to-d&hellip;'
 url: /index.php/enterprisedev/application-lifecycle-management/windows-8-for-the-enterprise/
 views:

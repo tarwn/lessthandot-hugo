@@ -3,6 +3,7 @@ title: Professional Development Week, Comfort Zone
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-02-22T12:28:00+00:00
+ID: 1050
 excerpt: 'Welcome to this semester’s Professional Development week at SQL University. If you found yourself here without first reading the introduction of this week’s topic, please take a moment to read, "Professional Development Week, An introduction to this week on SQL University". This week is being taught by Andy Leonard (Twitter | Blog) and Ted Krueger (Twitter | Blog).  Yesterday in the introduction, there were questions raised.  One of them was, “Most of all how do we truly become advanced beyond our standings and know we still has further to go?”  Today we are going to focus on this question and look at how we may be able to answer it.'
 url: /index.php/itprofessionals/professionaldevelopment/professional-development-week-comfort-zone/
 views:

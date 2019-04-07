@@ -3,6 +3,7 @@ title: How to capture the error output from xp_cmdshell in SQL Server
 author: SQLDenis
 type: post
 date: 2010-09-22T13:37:55+00:00
+ID: 903
 url: /index.php/datamgmt/dbprogramming/how-to-capture-error-output-from-xp_cmds/
 views:
   - 28628
@@ -45,7 +46,8 @@ _The system cannot find the path specified._
 
 Now let&#8217;s look at some code by running a dir command on a drive that doesn&#8217;t exist, if you do have a z drive then change it to something that you don&#8217;t have
 
-<pre>DECLARE @cmdline VARCHAR(500),
+sql
+DECLARE @cmdline VARCHAR(500),
 		@ReturnCode INT, 
 		@ErrorMessage varchar(2000)
 
@@ -63,7 +65,7 @@ INSERT #temp
 EXEC @ReturnCode = master.dbo.xp_cmdshell @cmdline
 
 -- If we have an error populate variable
-IF @ReturnCode <&gt; 0
+IF @ReturnCode <> 0
 BEGIN
 	SELECT @ErrorMessage = @ErrorMessage + SomeCol   
 	FROM #temp
@@ -74,7 +76,8 @@ BEGIN
 
 END
 -- Look how 'green' we are
-DROP TABLE #temp</pre>
+DROP TABLE #temp
+```
 
 After you run that you should see the following
   
@@ -106,11 +109,15 @@ After you run that you should see the following
 
 Change 
 
-<pre>SELECT @cmdline = 'dir z:'</pre>
+sql
+SELECT @cmdline = 'dir z:'
+```
 
 to 
 
-<pre>SELECT @cmdline = 'bla bla z:'</pre>
+sql
+SELECT @cmdline = 'bla bla z:'
+```
 
 Run the code again and now you should see the following output.
   
@@ -144,5 +151,5 @@ That is it for this post; as you can see there is a way to grab the error messag
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

@@ -3,6 +3,7 @@ title: Using RMO to run replication tasks
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-12-30T00:14:00+00:00
+ID: 989
 excerpt: 'RMO is not a new assembly and has been around a long time for use with replication.  In most cases RMO is extremely beneficial to merge replication when the subscriptions are editions like SQL Express.  This is due to the lack of a SQL Server Agent on the Express side.  With RMO you can run almost every task that involves replication including monitoring.'
 url: /index.php/datamgmt/dbprogramming/using-rmo-to-run-replication/
 views:

@@ -3,6 +3,7 @@ title: Merge Replication Baseline Collector
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-07-18T16:22:00+00:00
+ID: 1676
 excerpt: |
   I’ve created a new project on Codeplex for an SSIS package that performs collections in order to create a baseline of merge replication:  “Merge Replication Baseline Collector”
   The baseline can be used for all types of situations.

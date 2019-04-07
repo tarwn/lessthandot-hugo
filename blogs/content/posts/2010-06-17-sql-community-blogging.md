@@ -3,6 +3,7 @@ title: SQL University – Let’s blog
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-17T16:56:08+00:00
+ID: 823
 excerpt: "SQL University is one of the greatest concepts I've seen in the SQL Community.  Thanks to Jorge for coming up with it and organizing it.  Today we are going to talk about something dear and close to the concept of SQL University.  Blogging!  Blogs are an important part of the concept of SQL University.  With them we can easily bring this wealth of knowledge in the course syllabus format with writers from the SQL Community in a vast geographical range and range of expertise."
 url: /index.php/itprofessionals/ethicsit/sql-community-blogging/
 views:

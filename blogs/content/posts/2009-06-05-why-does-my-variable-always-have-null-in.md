@@ -3,6 +3,7 @@ title: Why does my variable always have NULL in it?
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-06-05T18:22:54+00:00
+ID: 458
 url: /index.php/datamgmt/datadesign/why-does-my-variable-always-have-null-in/
 views:
   - 5073
@@ -16,16 +17,18 @@ I&#8217;m sure one of us already Wiki&#8217;d this or put it in a blog but since
 
 PLEASE and I stress, PLEASE, make sure you initialize your variable in TSQL or at the least, use IsNull or coalesce to prevent this famous and all annoying issue from killing your hard work
 
-<pre>Declare @AllImportantVarToRunThisScript varchar(30)
+sql
+Declare @AllImportantVarToRunThisScript varchar(30)
 Declare @MyVarThatIKnowHasValue varchar(30)
 
 Set @AllImportantVarToRunThisScript = (Select 'MyPretendCharColumn') + @MyVarThatIKnowHasValue
 
-Select @AllImportantVarToRunThisScript</pre>
-
+Select @AllImportantVarToRunThisScript
+```
 Oops! You just lost the game and crashed and burned. Take care of your NULL&#8217;s!!!!
 
-<pre>Declare @AllImportantVarToRunThisScript varchar(30)
+sql
+Declare @AllImportantVarToRunThisScript varchar(30)
 Declare @MyVarThatIKnowHasValue varchar(30)
 
 Set @AllImportantVarToRunThisScript = (Select 'MyPretendCharColumn') + IsNull(@MyVarThatIKnowHasValue,'')
@@ -35,6 +38,6 @@ Set @AllImportantVarToRunThisScript = (Select 'MyPretendCharColumn') + coalesce(
 Set @AllImportantVarToRunThisScript = (Select 'MyPretendCharColumn') 
 				+ (Select Case When @MyVarThatIKnowHasValue Is Null Then '' End)
 
-Select @AllImportantVarToRunThisScript</pre>
-
+Select @AllImportantVarToRunThisScript
+```
 Ok, the last one is just silly and it can get even worse but it&#8217;s better than getting NULL 😉

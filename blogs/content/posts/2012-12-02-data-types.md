@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 2: Data types storage differences'
 author: SQLDenis
 type: post
 date: 2012-12-02T15:53:00+00:00
+ID: 1819
 excerpt: 'SQL Server has two data types to store character data, both of them come in fixed and variable length sizes. The char and varchar data type uses one byte of store to store one character, the nchar and nvarchar data type uses two bytes of store to store one character. The nchar and nvarchar data types are  used to store unicode of data'
 url: /index.php/datamgmt/dbprogramming/data-types/
 views:
@@ -56,15 +57,18 @@ Let&#8217;s take a quick look by running some T-SQL
 
 First create these two tables
 
-<pre>CREATE TABLE TestChar (SomeCol char(10))
+sql
+CREATE TABLE TestChar (SomeCol char(10))
 GO
 
 CREATE TABLE TestNChar (SomeCol nchar(10))
-GO</pre>
+GO
+```
 
 Now populate each with some data
 
-<pre>INSERT TestChar
+sql
+INSERT TestChar
 SELECT TOP 1000000 '1234567890'
 FROM sys.sysobjects c1
 CROSS JOIN sys.sysobjects c2
@@ -78,13 +82,16 @@ FROM sys.sysobjects c1
 CROSS JOIN sys.sysobjects c2
 CROSS JOIN sys.sysobjects c3
 CROSS JOIN sys.sysobjects c4
-GO</pre>
+GO
+```
 
 Let&#8217;s see how much space is used by both tables
 
-<pre>EXEC sp_spaceused 'TestChar'
+sql
+EXEC sp_spaceused 'TestChar'
 
-EXEC sp_spaceused 'TestNChar'</pre>
+EXEC sp_spaceused 'TestNChar'
+```
 
 18,824 KB
   
@@ -96,7 +103,8 @@ If you looked at the reserved column, you will see that the nchar data is using 
 
 Besides the storage increase there is also a problem when querying for data that looks like varchar but is stored as unicode. Run the code below. 
 
-<pre>SET SHOWPLAN_TEXT ON
+sql
+SET SHOWPLAN_TEXT ON
 GO
 DECLARE @v varchar(10) = '0123456789'
 
@@ -104,8 +112,8 @@ SELECT * FROM TestChar WHERE SomeCol LIKE  @v +'%'
 GO
 
 SET SHOWPLAN_TEXT OFF
-GO</pre>
-
+GO
+```
 Here is the plan for that query
 
 > |&#8211;Table Scan(OBJECT:([tempdb].[dbo].[TestChar]),
@@ -116,12 +124,15 @@ If we look at the plan we can see that this looks pretty good
   
 Usually people will sometimes change the datatype of a column but will not change any code that access this column. Let&#8217;s now change the data type of the column to nchar
 
-<pre>ALTER TABLE TestChar ALTER COLUMN SomeCol nchar(10)
-GO</pre>
+sql
+ALTER TABLE TestChar ALTER COLUMN SomeCol nchar(10)
+GO
+```
 
 Run the query that gives you the plan again
 
-<pre>SET SHOWPLAN_TEXT ON
+sql
+SET SHOWPLAN_TEXT ON
 GO
 DECLARE @v varchar(10) = '0123456789'
 
@@ -129,7 +140,8 @@ SELECT * FROM TestChar WHERE SomeCol LIKE  @v +'%'
 GO
 
 SET SHOWPLAN_TEXT OFF
-GO</pre>
+GO
+```
 
 Here is the plan
 
@@ -141,7 +153,8 @@ As you can see, there is a conversion going on right now.
 
 In order to get rid of the conversion, use the correct data types
 
-<pre>SET SHOWPLAN_TEXT ON
+sql
+SET SHOWPLAN_TEXT ON
 GO
 DECLARE @v nvarchar(10) = '0123456789'
 
@@ -149,7 +162,8 @@ SELECT * FROM TestChar WHERE SomeCol LIKE  @v +'%'
 GO
 
 SET SHOWPLAN_TEXT OFF
-GO</pre>
+GO
+```
 
 
 

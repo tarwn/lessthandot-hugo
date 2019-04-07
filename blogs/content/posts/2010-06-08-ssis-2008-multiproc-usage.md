@@ -3,6 +3,7 @@ title: T-SQL Tuesday – Give me my cores SSIS 2008!
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-08T08:39:46+00:00
+ID: 813
 excerpt: 'I’m jumping into the T-SQL Tuesday fun this week.  It is a busy week at that with SQL University writing and everything going on in the SQL Community.  The SQL Server 2008 (R2) hottest, most favorite new feature topic had me wanting to throw SSIS out there once more and show off the Data Flow Engine changes.'
 url: /index.php/datamgmt/dbprogramming/ssis-2008-multiproc-usage/
 views:
@@ -31,9 +32,12 @@ tags:
   <img src="/wp-content/uploads/blogs/DataMgmt/sqltuesday2.gif" alt="" title="" width="628" height="76" />
 </div>  6. Next, drag and drop two Derived Column’s  7. Make one Derived column the Case 1 output by connecting the first Path to it and selecting Case 1 output  8. Make the Expression (DT\_STR,3,1252)ProductID + &#8221; for &#8221; + (DT\_STR,3,1252)OrderQty  9. Change the Data Type to DT_STR (non-unicode string)<div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/sqltuesday3.gif" alt="" title="" width="628" height="112" />
-</div> 10. Do this for the next Derived Column by connecting the remaining output path to it.  11. Name the column Under2orders and leave the Expression the same 12. Connect both Derived Columns to two unique SQL Server Destinations 13. In the SQL Server Destinations, use the same connection of AdventureWorks. Click, New to create a new table. Use the following CREATE TABLE statement: <pre>CREATE TABLE [Playing_1] (
-OrderOver1Unit varchar(10)
-)</pre> 14. Use this for the second destination but name the table, [Playing_2]Our finished product should appear like below<div class="image_block">
+</div> 10. Do this for the next Derived Column by connecting the remaining output path to it.  11. Name the column Under2orders and leave the Expression the same 12. Connect both Derived Columns to two unique SQL Server Destinations 13. In the SQL Server Destinations, use the same connection of AdventureWorks. Click, New to create a new table. Use the following CREATE TABLE statement: sql
+CREATE TABLE [Playing_1] (
+    OrderOver1Unit varchar(10)
+    )
+```
+ 14. Use this for the second destination but name the table, [Playing_2]Our finished product should appear like below<div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/sqltuesday4.gif" alt="" title="" width="444" height="381" />
 </div> 15. Next, click the menu option SSIS and select Logging 16. Select package in the Containers and add a new SSIS log provider for Text files. 17. Add a path to the new log of C:ExecutionTreeSSIS_Test2005 18. Highlight Data Flow Task to move into logging the task. 19. Click Details in the right tabs and click the Advanced button  20. Scroll down a bit and check PipelineExecutionTree.  21. Uncheck everything except MessageText<div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/sqltuesday5.gif" alt="" title="" width="628" height="317" />

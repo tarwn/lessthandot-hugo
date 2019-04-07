@@ -3,6 +3,7 @@ title: Technical nepotism…do you suffer from it?
 author: SQLDenis
 type: post
 date: 2013-08-21T17:08:00+00:00
+ID: 2147
 excerpt: |
   Do you decide on a certain technology to be used because it is better or because your company already is using this product and has some experience with it?
   

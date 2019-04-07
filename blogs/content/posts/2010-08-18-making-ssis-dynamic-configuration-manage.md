@@ -3,6 +3,7 @@ title: 'Making SSIS Dynamic: Configuration Management'
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-18T09:52:32+00:00
+ID: 876
 excerpt: "Every task that is out there to enable SSIS to be more, 'dynamic', ensures that we can develop reusable and more manageable solutions.  Variables and configuration files along with all package configurations are all part in allowing packages to become dynamic in this way.  You may be thinking right now that it would be cool to something like a date variable so you could use it in an Execute SQL Statement or such.  That and a lot of other common uses are indeed, all part of making a package dynamic.  However, we can push this much further and bring out the essential foundation of configurations and variables in working freely from environment to environment."
 url: /index.php/datamgmt/datadesign/making-ssis-dynamic-configuration-manage/
 views:

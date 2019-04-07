@@ -3,6 +3,7 @@ title: 'Split string in SQL Server 2005+  CLR vs. T-SQL'
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-21T22:32:39+00:00
+ID: 394
 url: /index.php/datamgmt/dbprogramming/split-string-in-sql-server-2005-clr-vs-t/
 views:
   - 47312
@@ -25,7 +26,8 @@ Let&#8217;s get the basics out of the way on SQL CLR. SQL CLR is only good once 
 
 I went out and google&#8217;d &#8220;fast split function t-sql&#8221;. Found a few and tested them against the CLR split method. I found a dozen or so split functions that looked good. I still went with a numbers table one after testing them out next to each other. Here is one of the functions I used. If you have a better one, post it in the comments and I can edit the post. 
 
-<pre>ALTER FUNCTION [dbo].[Split] ( 
+sql
+ALTER FUNCTION [dbo].[Split] ( 
 @List varchar(7998), --The delimited list 
 @Del char(1) = ',' --The delimiter 
 ) 
@@ -42,11 +44,12 @@ WHERE n.Number <= LEN(@WrappedList) - 1
 AND SUBSTRING(@WrappedList, n.Number, 1) = @Del 
 
 RETURN 
-END</pre>
-
+END
+```
 Here is my CLR split
 
-<pre>using System;
+```csharp
+using System;
 using System.Data;
 using System.Collections;
 using System.Data.SqlClient;
@@ -70,8 +73,8 @@ public partial class UserDefinedFunctions
     {
         str = new SqlString((string)row);
     }
-};</pre>
-
+};
+```
 I loaded a text file with a huge amount of delimited data to really get a gauge on time this would take. The string is basically, &#8220;data%data%data%data%data&#8221; and on. Around 600 indexes. I restarted my local instance of SQL Server 2005 that I did these on to ensure you can see CLR before cache and after. 
 
 So on a fresh restart you can see by checking type MEMORYCLERK\_SQLCLR from dm\_os\_memory\_clerks that we are clear
@@ -88,10 +91,11 @@ After execution of the CLR function you can see the differences
 
 Call these functions as
 
-<pre>Declare @bigdamnvar varchar(max)
+sql
+Declare @bigdamnvar varchar(max)
 Set @bigdamnvar = (Select * From OpenRowSet ('MSDASQL', 'Driver={Microsoft Text Driver (*.txt; *.csv)};DBQ=C:', 'SELECT * from Data.txt'))
-Select * From dbo.CLR_Split(@bigdamnvar, '%')</pre>
-
+Select * From dbo.CLR_Split(@bigdamnvar, '%')
+```
 Below you can see first execution and then how quickly performance picks up on the second cached plan
 
 <div class="image_block">
@@ -100,10 +104,11 @@ Below you can see first execution and then how quickly performance picks up on t
 
 and
 
-<pre>Declare @bigdamnvar varchar(max)
+sql
+Declare @bigdamnvar varchar(max)
 Set @bigdamnvar = (Select * From OpenRowSet ('MSDASQL', 'Driver={Microsoft Text Driver (*.txt; *.csv)};DBQ=C:', 'SELECT * from Data.txt'))
-Select * From dbo.[Split](@bigdamnvar, '%')</pre>
-
+Select * From dbo.[Split](@bigdamnvar, '%')
+```
 I executed this a few times to get it in cache as well. The odd increase was the server working on something else. I validated that so ignore it.
 
 <div class="image_block">

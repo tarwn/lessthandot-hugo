@@ -3,6 +3,7 @@ title: 'You’re Invited to T-SQL Tuesday #67: Extended Events'
 author: Jes Borland
 type: post
 date: 2015-06-02T14:36:44+00:00
+ID: 3398
 url: /index.php/uncategorized/youre-invited-to-t-sql-tuesday-67-extended-events/
 views:
   - 11031

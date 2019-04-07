@@ -3,6 +3,7 @@ title: Followup on ORMs for Batch Performance
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-08-06T16:02:00+00:00
+ID: 1688
 excerpt: A few weeks ago I looked at a project by Luke McGregor that benchmarks a variety of ORMs doing common operations at the 1 to 10,000 record scales. I was curious to see how the ORMs he had included would fare against common ADO methods and how those ADO methods would compare to one another. This is a followup with Simple.Data, PetaPoco, and NHibernate.
 url: /index.php/enterprisedev/orm/followup-on-orms-for-batch/
 views:
@@ -68,16 +69,17 @@ Along the way I also updated the project to include more information in failing 
 I was simultaneously surprised and not surprised at the results. With Mark Rendle ([blog][5]|[twitter][6]) suggesting I add Simple.Data, I fully expected it to keep up with SqlBulkCopy, but it was still surprising to see the real, raw data.
 
 <div style="text-align: center; color: #666666; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/ORM/GraphB-1.png" alt="Graph of best bulk insert times for each major method" /><br /> 10,000 row inserts, Best times for each category
+  <img src="http://tiernok.com/LTDBlog/ORM/GraphB-1.png" alt="Graph of best bulk insert times for each major method" /><br /> 10,000 row inserts, Best times for each category
 </div>
 
 Raw SqlBulkCopy was still the best option for 10,000 records (this is the TabLock option variant), but Simple.Data was right up there with it. PetaPoco and NHibernate are our other new additions and they were fairly close, about 20-25% slower than Dapper, or about 7x the SqlBulkCopy test.
 
 But the important item on this graph really is Simple.Data. There are many that argue that all ORMs are slow and not worth spending time on but this is clearly not so. Simple.Data was a little slower than SqlBulkCopy and much faster than the other raw ADO variants. And it does this with no column mappings, no tricks and no special configurations. That is a huge milestone for ORMs and makes it tempting to use instead of SqlBulkCopy, as this method may actually be less fragile (no column mappings have to be manually defined).
 
-<pre>public BatchConfiguration(IConnectionString connectionString) {
+```csharp
+public BatchConfiguration(IConnectionString connectionString) {
 	_db = Database.OpenConnection(connectionString.FormattedConnectionString);
-	_entitiesToInsert = new List<TestEntity&gt;();
+	_entitiesToInsert = new List<TestEntity>();
 }
 
 public void Add(TestEntity entity) {
@@ -86,8 +88,8 @@ public void Add(TestEntity entity) {
 		
 public void Commit() {
 	_db.TestEntities.Insert(_entitiesToInsert);
-}</pre>
-
+}
+```
 Create a connection, add as many items as you want to the list, then call Insert on the whole list. Magic.
 
 ## More Detail
@@ -95,7 +97,7 @@ Create a connection, add as many items as you want to the list, then call Insert
 In the last post I included a comparison of all of the various methods used to insert data as a single graph. Unfortunately that graph was hard to read, as the basic Entity Framework methods were operating about an order of magnitude slower than everything else. I still thought the data was interesting, though, so I have created a graph with those values truncated as I did in the original post&#8217;s followup. The one critical difference is that I am plotting the 10,000 record inserts instead of 100,000 like last time. That just took too long to run 🙂
 
 <div style="text-align: center; color: #666666; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/ORM/GraphB-2.png" alt="10,000 row inserts, All categories and variants" /><br /> 10,000 row inserts, All categories and variants
+  <img src="http://tiernok.com/LTDBlog/ORM/GraphB-2.png" alt="10,000 row inserts, All categories and variants" /><br /> 10,000 row inserts, All categories and variants
 </div>
 
 With more details we can see the spread and variation a little more clearly. 

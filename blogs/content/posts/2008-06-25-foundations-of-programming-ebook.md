@@ -3,6 +3,7 @@ title: Foundations of Programming Ebook
 author: Alex Ullrich
 type: post
 date: 2008-06-25T21:18:19+00:00
+ID: 75
 url: /index.php/desktopdev/mstech/foundations-of-programming-ebook/
 views:
   - 3240

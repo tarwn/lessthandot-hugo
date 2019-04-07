@@ -3,6 +3,7 @@ title: Scripting data in SQL Server 2012
 author: SQLDenis
 type: post
 date: 2012-01-02T20:35:00+00:00
+ID: 1475
 excerpt: |
   SQL Server 2008 has the Generate Scripts option inside the script wizard. In SQL Server 2012, this has changed and is kind of buried. Here is how to find it now
   

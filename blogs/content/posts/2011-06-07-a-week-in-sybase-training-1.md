@@ -3,6 +3,7 @@ title: A week in Sybase Training, what did I learn, day 2
 author: SQLDenis
 type: post
 date: 2011-06-07T18:13:00+00:00
+ID: 1209
 excerpt: |
   This is day 2 of my Sybase training.
   
@@ -31,15 +32,21 @@ I forgot to mention [yesterday][1], half of the people are in this class because
 
 Today we continued with configurations. Sybase has something called a data cache, you can have more than 1 cache. to increase the default data cache to 100MB you would issue the following command
 
-<pre>sp_cacheconfig 'default data cache', '100M'</pre>
+sql
+sp_cacheconfig 'default data cache', '100M'
+```
 
 to create a new cache name SQLMenace with 10MB, your command would look like this
 
-<pre>sp_cacheconfig SQLMenace, '10M'</pre>
+sql
+sp_cacheconfig SQLMenace, '10M'
+```
 
 To drop the cache that is named SQLMenace your command would look like this
 
-<pre>sp_cacheconfig SQLMenace, '0'</pre>
+sql
+sp_cacheconfig SQLMenace, '0'
+```
 
 All in all it seems you have to configure a lot more in Sybase compared to SQL Server. It looks like if you have configured to have 200 connection or 10000 open indexes that you have to monitor this, then you have to adjust this if you see that you have configured too much or if user complain that they can&#8217;t connect you need to configure for more connections
 
@@ -55,16 +62,20 @@ sp_diskdefault DeviceName, defaultoff|defaulton
 
 so to make master not default, you would do
 
-<pre>sp_diskdefault master, defaultoff</pre>
+sql
+sp_diskdefault master, defaultoff
+```
 
 You can have many devices just like you can have many files in SQL Server. <del>I have so far not seen a way that you can group these like we have filegroups in SQL Server</del> I was wrong I think, I guess these are segments
 
 Here is how you create a new device
 
-<pre>disk init 
+sql
+disk init 
 name = "my_device", 
 physname = "/usr/u/sybase/data/my_device.dat", 
-vdevno = 2, size = 5120, dsync = true</pre>
+vdevno = 2, size = 5120, dsync = true
+```
 
 A couple of things&#8230;
   
@@ -98,7 +109,9 @@ There is also an option to create an identity column on every table by default. 
 
 Here is what it looks like
 
-<pre>sp_dboption database_name, "auto identity", "true" </pre>
+sql
+sp_dboption database_name, "auto identity", "true" 
+```
 
 You need to then run a checkpoint so that the in-memory structure _dbtable_ gets refreshed
 
@@ -112,7 +125,9 @@ Creates a threshold to monitor space on a database segment. When free space on t
 
 Example
 
-<pre>sp_addthreshold mydb, segment1, 200, pr_threshold_warning</pre>
+sql
+sp_addthreshold mydb, segment1, 200, pr_threshold_warning
+```
 
 Creates a threshold for segment1. When the free space on segment1 drops below 200 pages, Adaptive Server executes the procedure pr\_threshold\_warning
 

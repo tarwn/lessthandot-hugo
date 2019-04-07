@@ -3,6 +3,7 @@ title: How to return only weekend data for the last 4 weeks in SQL Server
 author: SQLDenis
 type: post
 date: 2010-08-06T15:00:40+00:00
+ID: 863
 url: /index.php/datamgmt/dbprogramming/how-to-return-only-weekend-data-for-the/
 views:
   - 7571
@@ -25,17 +26,21 @@ Of course not everyone has a calendar table so here is a way to do it without.
 
 First create this table
 
-<pre>CREATE TABLE TestData (id INT NOT NULL PRIMARY KEY, 
+sql
+CREATE TABLE TestData (id INT NOT NULL PRIMARY KEY, 
 			SomeData VARCHAR(36) NOT NULL, 
 			SomeDate DATETIME NOT NULL)
-GO</pre>
+GO
+```
 
 Now we have to insert some data, the query below will insert 2048 rows into the table
 
-<pre>INSERT TestData
+sql
+INSERT TestData
 SELECT number, NEWID(), DATEADD(hh,- number,GETDATE())
 FROM master..spt_values
-WHERE TYPE = 'P'</pre>
+WHERE TYPE = 'P'
+```
 
 The rows inserted will look something like this
 
@@ -48,14 +53,17 @@ The rows inserted will look something like this
 -----
 -----
 2046	1710469B-0545-4719-95FF-B87570EC07C3	2010-05-13 06:28:09.913
-2047	EF306E11-10F5-40C5-B2BC-862CAC5D5CBD	2010-05-13 05:28:09.913</pre>
+2047	EF306E11-10F5-40C5-B2BC-862CAC5D5CBD	2010-05-13 05:28:09.913
+</pre>
 
 So what we did is take the getdate() value and then subtract one hour from it for each row
 
 Next up is creating an index on the SomeDate column
 
-<pre>CREATE  INDEX ix_SomeDate ON TestData(SomeDate)
-GO</pre>
+sql
+CREATE  INDEX ix_SomeDate ON TestData(SomeDate)
+GO
+```
 
 Now we are ready to write our query. How do we grab all the data that is not older than 4 weeks?
   
@@ -65,41 +73,53 @@ If you run that today on August 8 2010 it returns 2010-07-09 00:00:00.000
   
 Try it yourself
 
-<pre>SELECT CONVERT(DATE,DATEADD(WK,-4,GETDATE()))
+sql
+SELECT CONVERT(DATE,DATEADD(WK,-4,GETDATE()))
 
-SELECT DATEADD(DD, DATEDIFF(dd, 0, DATEADD(WK,-4,GETDATE()))+0, 0)</pre>
+SELECT DATEADD(DD, DATEDIFF(dd, 0, DATEADD(WK,-4,GETDATE()))+0, 0)
+```
 
 Now we have to do the weekend part, in the US the start of the week is Sunday, if you check @@DATEFIRST it should return a 7
 
-<pre>SELECT @@DATEFIRST</pre>
+sql
+SELECT @@DATEFIRST
+```
 
 In Holland for example the week start on Saturday, run this to see what @@DATEFIRST returns for a different language
 
-<pre>SET LANGUAGE Dutch;
+sql
+SET LANGUAGE Dutch;
 GO
 SELECT @@DATEFIRST;  --1
 GO
 SET LANGUAGE us_english;
 GO
-SELECT @@DATEFIRST;  --7</pre>
+SELECT @@DATEFIRST;  --7
+```
 
 You can use DATEFIRST to change that, the command below will make the week start at 1
 
-<pre>SET DATEFIRST 1;</pre>
+sql
+SET DATEFIRST 1;
+```
 
 So DATEPART(dw, Date) will return 7 for Sunday and 1 for Saturday in the US, in order to use this we need to add it like this in SQL&#8230; DATEPART(dw,SomeDate) IN(1,7). If you are not living where the week starts on a Sunday then modify the IN(1,7) part
 
 Finally the query looks like this if you are not on SQL Server 2008 yet
 
-<pre>SELECT * FROM TestData
-WHERE SomeDate &gt;=DATEADD(DD, DATEDIFF(dd, 0, DATEADD(WK,-4,GETDATE()))+0, 0)
-AND DATEPART(dw,SomeDate  ) IN(1,7)</pre>
+sql
+SELECT * FROM TestData
+WHERE SomeDate >=DATEADD(DD, DATEDIFF(dd, 0, DATEADD(WK,-4,GETDATE()))+0, 0)
+AND DATEPART(dw,SomeDate  ) IN(1,7)
+```
 
 If you are on SQl Server 2008, then you can use this query
 
-<pre>SELECT * FROM TestData
-WHERE SomeDate &gt;=CONVERT(DATE,DATEADD(WK,-4,GETDATE()))
-AND DATEPART(dw,SomeDate  ) IN(1,7)</pre>
+sql
+SELECT * FROM TestData
+WHERE SomeDate >=CONVERT(DATE,DATEADD(WK,-4,GETDATE()))
+AND DATEPART(dw,SomeDate  ) IN(1,7)
+```
 
 Below are the execution plans, as you can see both queries result in an index seek
 
@@ -112,5 +132,5 @@ I will investigate that part further
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://stackoverflow.com/questions/3425412/sql-only-select-records-from-weekends/3425437#3425437
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

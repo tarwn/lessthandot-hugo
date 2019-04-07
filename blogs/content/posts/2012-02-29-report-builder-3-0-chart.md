@@ -3,6 +3,7 @@ title: Report Builder 3.0 – Chart Wizard
 author: Jes Borland
 type: post
 date: 2012-02-29T13:54:00+00:00
+ID: 1544
 excerpt: SQL Server Report Builder 3.0 has a Chart Wizard that allows you to build colorful, graphic charts in a few simple steps.
 url: /index.php/datamgmt/dbprogramming/report-builder-3-0-chart/
 views:

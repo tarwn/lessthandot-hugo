@@ -3,6 +3,7 @@ title: The SQL Server Memory Leak Confusion
 author: SQLDenis
 type: post
 date: 2009-01-07T12:47:46+00:00
+ID: 276
 url: /index.php/datamgmt/datadesign/the-sql-server-memory-leak-confusion/
 views:
   - 18680
@@ -39,5 +40,5 @@ If you are running SQL Server on your local machine make sure that you cap the m
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://www.flickr.com/photos/denisgobo/3177172358/ "Buffer Cache Hit Ratio by Denis Gobo, on Flickr"
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

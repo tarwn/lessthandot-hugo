@@ -3,6 +3,7 @@ title: Implementing WCAT to Load Test a Website
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-02-16T13:10:00+00:00
+ID: 1523
 excerpt: "Adding a Load Testing stage to my Continuous Delivery project has been on the todo list since I started the project. The addition will allow me to baseline the applications performance while adding some experience with load testing, a topic I haven't been able to spend as much time on as I would like."
 url: /index.php/enterprisedev/application-lifecycle-management/implementing-wcat-for-load-testing/
 views:
@@ -61,13 +62,14 @@ In my case, creating the settings file was easy. I referred to my server by IP s
 
 **settings.ubr**
 
-<pre>settings
+```text
+settings
 {
 	server		= "192.168.173.57";
 	virtualclients	= 8;
 	clients		= 1;
-}</pre>
-
+}
+```
 _I used 8 virtual clients to match the number of cores on my desktop, but beyond knowing that that represents the number of threads that will be used, I&#8217;m not really sure how to size that value appropriately._
 
 The scenario file is outlined in the documentation and a sample is included, but rather than hand-building it I found out that [Fiddler][4] can generate a WCAT scenario file from the HTTP session traffic it captures.
@@ -77,7 +79,7 @@ Sign me up.
 To get started I opened Fiddler, opened Chrome, then opened one of the sub-sites on my beta VM. This generated a bunch of traffic (especially with Firefox in the background throwing our requests to Delicious and Facebook). 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/wcat_fiddler_1.png" title="Fiddler Screenshot" /><br /> Fiddler Screenshot
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/wcat_fiddler_1.png" title="Fiddler Screenshot" /><br /> Fiddler Screenshot
 </div>
 
 So I cleared the cache in Chrome and deleted all these entries (select them all, press delete). Clean slate.
@@ -85,7 +87,7 @@ So I cleared the cache in Chrome and deleted all these entries (select them all,
 My load test is going to be a worst case. Every &#8220;end user&#8221; will visit with a cold cache and buy just a single item. This will give me a good combination of reads, writes, cart processing logic, and authentication. Generating the session information is as easy as following the path I want to test with Fiddler capturing the individual GET and POST requests in the background.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/wcat_fiddler_2.png" title="Fiddler Screenshot" /><br /> Fiddler Screenshot
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/wcat_fiddler_2.png" title="Fiddler Screenshot" /><br /> Fiddler Screenshot
 </div>
 
 After deleting all the irrelevant traffic, like the Tweetdeck calls to twitter, I have a list of GET/POST requests that ended in 200 and 302 statuses. Form the file menu I&#8217;ll select &#8220;Export Sessions&#8221;, &#8220;All Sessions&#8221;. The dialog offers several options for export, but the one I want is the WCAT option as the bottom.
@@ -100,14 +102,15 @@ With a settings file and a scenario file, I have everything I need to manually r
 
 **run.cmd**
 
-<pre>"C:Program Fileswcatwcat.wsf" -terminate -run -clients localhost -t FiddlerExport.wcat -f settings.ubr -singleip -x</pre>
-
+```text
+"C:Program Fileswcatwcat.wsf" -terminate -run -clients localhost -t FiddlerExport.wcat -f settings.ubr -singleip -x
+```
 FiddlerExport.wcat is my scenario file, settings.ubr is my settings file, the -singleip option tells WCAT only to use the first ip address that resolves for the server (not really necessary in this case), and the -x option tells it to collect additional information from the test server.
 
 Running this command, the controller opens in one console window, then a second opens as my single client. The default options from the fiddler export are a 30 second warmup period, followed by a 120s test run, and then a 10s cooldown. In other words, just enough time to go top off the coffee cup.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/wcat_controller.png" title="WCAT Controller Screenshot" /><br /> WCAT Controller Screenshot
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/wcat_controller.png" title="WCAT Controller Screenshot" /><br /> WCAT Controller Screenshot
 </div>
 
 The controller stays open with the numbers from the last run and a log.xml file is produced with the results in the current directory. As you can see from the screenshot above, my little single-core, 1GB of RAM VM is managing to serve up ~30 requests/second and it&#8217;s erroring on just under 1% of the requests. The log file is more accurate, listing decimal places for values that are shown only as rounded ints on the console (that 1 transaction/second is actually 1.9, for instance).
@@ -130,7 +133,8 @@ There are several issues with the initial scenario file that I need to clean up.
 
 **FiddlerExport.wcat**
 
-<pre>...
+```text
+...
 
     request
     {
@@ -146,8 +150,8 @@ There are several issues with the initial scenario file that I need to clean up.
       }
     }
 
-    ...</pre>
-
+    ...
+```
 At this point I can run my cmd file again and everything runs successfully with about the same number of requests/second.
 
 ## Using Load Testing Results

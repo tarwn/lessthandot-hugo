@@ -3,6 +3,7 @@ title: Applying Kanban to IT Processes (Part 2)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2009-12-08T15:51:27+00:00
+ID: 641
 excerpt: 'This is the second article in a multi-article set that describes the basics of Kanban and explores applying Kanban to IT Processes. Part one provides a basic overview of Kanban and how it is used in manufacturing. The remaining parts explore sample scen&hellip;'
 url: /index.php/itprofessionals/itservicemanagement/applying-kanban-to-it-processes-part-2/
 views:

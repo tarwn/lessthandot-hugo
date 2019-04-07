@@ -3,6 +3,7 @@ title: Diagnostic Manager – Viewing History outside of 8AM to 5PM
 author: Kevin Conan
 type: post
 date: 2012-03-13T12:37:00+00:00
+ID: 1558
 excerpt: 'Prior to being a full-fledged DBA, I was a SQL Developer for a Warehouse Management System called HighJump.  HighJump is a very fast paced system with system owners who partner very closely with IT.  This also means, that I was working closely with peop&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/diagnostic-manager/
 views:

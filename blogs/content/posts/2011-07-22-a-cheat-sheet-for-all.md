@@ -3,6 +3,7 @@ title: 'A Cheat Sheet for All the *{_(%#$] PowerShell Punctuation'
 author: Jes Borland
 type: post
 date: 2011-07-22T13:13:00+00:00
+ID: 1262
 excerpt: "A PowerShell Punctuation Cheat Sheet - for those of us that can't remember why {} instead of []."
 url: /index.php/datamgmt/dbprogramming/a-cheat-sheet-for-all/
 views:

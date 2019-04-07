@@ -3,6 +3,7 @@ title: Using Mirroring to Reduce DB Migration Downtime (Part 1)
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-09-10T10:28:44+00:00
+ID: 549
 url: /index.php/datamgmt/dbprogramming/move-databases-to-new-server-with-little-1/
 views:
   - 12334
@@ -45,44 +46,56 @@ Instance 3 (The new principle) MYNEWLAB
 
 To set up your mirror initially let’s do the following
 
-<pre>CREATE DATABASE [NEEDTOMOVE] ON  PRIMARY 
+sql
+CREATE DATABASE [NEEDTOMOVE] ON  PRIMARY 
 ( NAME = N'NEEDTOMOVE', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOMOVE.mdf' , SIZE = 2048KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
 ( NAME = N'NEEDTOMOVE_log', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOMOVE_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
-GO</pre>
+GO
+```
 
 If you have your model set to Simple recovery you will need to convert to Full recovery before you will be able to setup the initial mirror.
 
 Next, create your secondary database (the mirror)
 
-<pre>CREATE DATABASE [NEEDTOMOVE] ON  PRIMARY 
+sql
+CREATE DATABASE [NEEDTOMOVE] ON  PRIMARY 
 ( NAME = N'NEEDTOMOVE', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOMOVE_mirror.mdf' , SIZE = 2048KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
 ( NAME = N'NEEDTOMOVE_log', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOMOVE_mirror_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
-GO</pre>
+GO
+```
 
 Let’s get mirroring by backing up the log on the principle so we can bring the mirror database in synch. This is always required to start mirroring. If we don’t restore the tail end of the log, mirroring will error on starting mirroring. 
 
 Run a full backup of the principle. Since this is a new database in our lab, a full backup is required to start the full recovery process off. Once the full backup is completed, the log backup can follow. 
 
-<pre>BACKUP DATABASE [NEEDTOMOVE] TO DISK = 'C:needtomove_full_initial.bak'</pre>
+sql
+BACKUP DATABASE [NEEDTOMOVE] TO DISK = 'C:needtomove_full_initial.bak'
+```
 
 Now run your tail end log backup
 
-<pre>BACKUP LOG [NEEDTOMOVE] TO DISK = 'C:needtomove_taillog_initial.trn'</pre>
+sql
+BACKUP LOG [NEEDTOMOVE] TO DISK = 'C:needtomove_taillog_initial.trn'
+```
 
 Now that we have out backups ready we can start the restore process. The key to getting the mirror database ready to configure and start mirroring, is for us to bring the mirror database in synch with the principle and in recovering status. This is required so the mirror can accept transactions from the principle. The concept of a read-only (stand by) database with log shipping is on the same lines of this process. 
 
-<pre>RESTORE DATABASE [NEEDTOMOVE] 
+sql
+RESTORE DATABASE [NEEDTOMOVE] 
 FROM DISK = 'C:needtomove_full_initial.bak'
 WITH NORECOVERY,
 MOVE 'NEEDTOMOVE' TO N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOMOVE_mirror.mdf',
 MOVE 'NEEDTOMOVE_log' TO N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOMOVE_mirror_log.ldf'
-,REPLACE,NORECOVERY</pre>
+,REPLACE,NORECOVERY
+```
 
 Now we can restore the log
 
-<pre>RESTORE LOG [NEEDTOMOVE] FROM DISK = 'C:needtomove_taillog_initial.trn' WITH NORECOVERY</pre>
+sql
+RESTORE LOG [NEEDTOMOVE] FROM DISK = 'C:needtomove_taillog_initial.trn' WITH NORECOVERY
+```
 
 As I mentioned earlier, your database has to be restored with NORECOVERY to start your mirror. If you mess that step up and restore with recovery, you’ll need to start eh restore steps over. With the lab we setup, this can be a quick process. However with larger databases, this can be a lengthy process. 
 
@@ -101,7 +114,8 @@ For T-SQL setup the process we can follow the sequence below.
 
 Here is an example of a script that I wrote to execute the series of tasks. Note the helpful numbering, always a time saver when you come back to re-use to cannibalize a script 6 months later. 
 
-<pre>--On the principle run
+sql
+--On the principle run
 --1
 CREATE ENDPOINT [Mirroring] 
 	AUTHORIZATION [PMHCtkrueger]
@@ -129,7 +143,8 @@ ALTER DATABASE [NEEDTOMOVE] SET SAFETY OFF
 
 --on both instances
 --6 + 7
-EXEC sys.sp_dbmmonitoraddmonitoring</pre>
+EXEC sys.sp_dbmmonitoraddmonitoring
+```
 
 Note that in this example script my port numbers are not the same. This is only because I am building the principle and mirror on the same machine, your port number will depend on how your SQL instances are configured. If you have a test lab at your disposal with default instances on several systems, you will probably use 5022 for both ports. 
 

@@ -3,6 +3,7 @@ title: Do we need to know basic math as programmers?
 author: SQLDenis
 type: post
 date: 2009-10-05T12:11:53+00:00
+ID: 575
 url: /index.php/itprofessionals/ethicsit/do-we-need-to-know-basic-math-as-program/
 views:
   - 70128
@@ -25,7 +26,8 @@ Take a look at this function that someone created on [StackOverflow][1]
   
 > Does such function exist? I created my own but would like to use an official one:
 
-<pre>private function opposite(number:Number):Number
+```c
+private function opposite(number:Number):Number
         {
                 if (number < 0)
                 {
@@ -36,7 +38,8 @@ Take a look at this function that someone created on [StackOverflow][1]
                         number = -(number);
                 }
                 return number;
-        }</pre>
+        }
+```
 
 If we visit the Java forums it doesn&#8217;t get any better, take a look at this thread: [How do you Invert signed numbers?][2]
 
@@ -50,7 +53,8 @@ If we visit the Java forums it doesn&#8217;t get any better, take a look at this
 
 Here is one &#8216;solution&#8217;
 
-<pre>int x = numberToInvertSign;
+```Java
+int x = numberToInvertSign;
 boolean pos = x > 0;
 for(int i = 0; i < 2*Math.abs(x); i++){
    if(pos){
@@ -59,17 +63,19 @@ for(int i = 0; i < 2*Math.abs(x); i++){
    else{
       numberToInvertSign++;
    }
-}</pre>
-
+}
+```
 You have to love this &#8216;gem&#8217; (of course this is someone messing with the original poster)
 
-<pre>switch (i)
+```java
+switch (i)
 {
   case 1: return -1;
   case 2: return -2;
   case 3: return -3;
   // ... etc, you get the proper pattern
-}</pre>
+}
+```
 
 Looking at the php documentation for the [ABS function][3] we find a bunch of comments and replies to create a sign function
 

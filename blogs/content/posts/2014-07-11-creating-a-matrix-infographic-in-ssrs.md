@@ -3,6 +3,7 @@ title: Creating a Matrix Infographic in SSRS
 author: Koen Verbeeck
 type: post
 date: 2014-07-11T11:16:09+00:00
+ID: 2824
 url: /index.php/datamgmt/ssrs/creating-a-matrix-infographic-in-ssrs/
 views:
   - 13211
@@ -31,14 +32,15 @@ Each cell has a unique number and we start with 1 in the left bottom corner and 
 
 The source query (complicated right?):
 
-<pre>SELECT
+sql
+SELECT
 	 BottomStart	= 0 -- England wins
 	,BottomEnd		= 37
 	,MiddleStart	= 38 -- Tie
 	,MiddleEnd		= 66
 	,TopStart		= 67 -- Uruguay wins
-	,TopEnds		= 100;</pre>
-
+	,TopEnds		= 100;
+```
 So we have 3 ranges: bottom, middle and top.
 
 The colors of the matrix are assigned according to the values in the source query. Now, we’re not going to create 100 expressions, so we select all of the cells of the matrix by clicking on one cell in the corner, holding shift and then clicking on the opposite corner.
@@ -47,7 +49,9 @@ The colors of the matrix are assigned according to the values in the source quer
 
 Now we can create one single expression for all of the cells using the **Me** placeholder.
 
-<pre>=iif(Me.Value <= Fields!BottomEnd.Value,"#CD2027",iif(Me.Value &gt;= Fields!MiddleStart.Value And Me.Value <= Fields!MiddleEnd.Value,"#DEDEDF","#9FC9EB"))</pre>
+```vb
+=iif(Me.Value <= Fields!BottomEnd.Value,"#CD2027",iif(Me.Value >= Fields!MiddleStart.Value And Me.Value <= Fields!MiddleEnd.Value,"#DEDEDF","#9FC9EB"))
+```
 
 The hexadecimal values are the colors I extracted from the FiveThirtyEight tweet using a [color picker][10]. When we run the report we get our result:
 

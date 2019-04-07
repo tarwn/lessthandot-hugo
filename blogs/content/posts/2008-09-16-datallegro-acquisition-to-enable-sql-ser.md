@@ -3,6 +3,7 @@ title: DATAllegro acquisition to enable SQL Server to scale into hundreds of ter
 author: SQLDenis
 type: post
 date: 2008-09-16T15:12:46+00:00
+ID: 141
 url: /index.php/datamgmt/datadesign/datallegro-acquisition-to-enable-sql-ser/
 views:
   - 4074

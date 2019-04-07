@@ -3,6 +3,7 @@ title: Dealing with Cannot resolve collation conflict for equal to operation err
 author: SQLDenis
 type: post
 date: 2009-10-26T16:10:21+00:00
+ID: 596
 url: /index.php/datamgmt/datadesign/dealing-with-cannot-resolve-collation-co/
 views:
   - 21605
@@ -29,7 +30,8 @@ This was asked on twitter recently and I gave the answer there. I decided to wri
   
 You will see the Cannot resolve collation conflict for equal to operation error when you try to join 2 tables. let&#8217;s take a look at what we need to do to resolve this. First create and populate these two tables
 
-<pre>use tempdb
+sql
+use tempdb
 go
 
 
@@ -41,12 +43,14 @@ insert Test values('test')
 
 create table Test2 (SomeColumn varchar(100) collate Traditional_Spanish_CI_AI not null)
 insert Test2 values('Niño')
-insert Test2 values('bla')</pre>
-
+insert Test2 values('bla')
+```
 Now run the following join between the Test and Test2 tables
 
-<pre>select * from Test t1
-join Test2 t2 on t1.SomeColumn = t2.SomeColumn</pre>
+sql
+select * from Test t1
+join Test2 t2 on t1.SomeColumn = t2.SomeColumn
+```
 
 Here is the error you will get
 
@@ -56,25 +60,33 @@ Cannot resolve collation conflict for equal to operation.**
 
 To quickly fix this you can use collate in your SQL, you have to make sure that the collation is the same on both columns. So you either add the collate with the collation of the column in test2 to the column in the test table or vice-versa. Here is one example
 
-<pre>select * from Test t1
-join Test2 t2 on t1.SomeColumn = t2.SomeColumn collate Traditional_Spanish_CI_AI</pre>
+sql
+select * from Test t1
+join Test2 t2 on t1.SomeColumn = t2.SomeColumn collate Traditional_Spanish_CI_AI
+```
 
 You can also apply collate on the other column&#8230;first we need to know what the default was in your database. We can use the ANSI information\_schema.columns view to get this info, we need to use the collation\_name column. Run the following query to grab it
 
-<pre>select column_name,collation_name
+sql
+select column_name,collation_name
 from information_schema.columns
-where table_name = 'test'</pre>
+where table_name = 'test'
+```
 
 In my case it is SQL\_Latin1\_General\_CP1\_CI_AS, now the query becomes the following
 
-<pre>select * from Test t1
-join Test2 t2 on t1.SomeColumn collate SQL_Latin1_General_CP1_CI_AS = t2.SomeColumn</pre>
+sql
+select * from Test t1
+join Test2 t2 on t1.SomeColumn collate SQL_Latin1_General_CP1_CI_AS = t2.SomeColumn
+```
 
 Just for fun let&#8217;s see what the collation is for the column in the Test2 table
 
-<pre>select column_name,collation_name
+sql
+select column_name,collation_name
 from information_schema.columns
-where table_name = 'Test2'</pre>
+where table_name = 'Test2'
+```
 
 As expected it is Traditional\_Spanish\_CI_AI
 
@@ -82,8 +94,10 @@ You can use the ::fn_helpcollations()function which returns a list of all the co
 
 Run the following query (and yes :: is not a typo)
 
-<pre>select * from ::fn_helpcollations()
-where name ='Traditional_Spanish_CI_AI'</pre>
+sql
+select * from ::fn_helpcollations()
+where name ='Traditional_Spanish_CI_AI'
+```
 
 The query returns the following description for Traditional\_Spanish\_CI_AI&#8217;
 
@@ -97,5 +111,5 @@ Hopefully this will help some person when dealing with this in the future.
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

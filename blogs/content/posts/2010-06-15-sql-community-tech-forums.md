@@ -3,6 +3,7 @@ title: SQL Server Forums – Helping to build a knowledge base
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-15T16:11:21+00:00
+ID: 821
 excerpt: "We're devoting an entire class to technical forums this week.  Forums have been around as long as most of the online community services have been.  They offer (mostly) unsolicited help at (mostly) no charge to the person requesting the help.  The word mostly worked its way into that last statement quite a bit.  There are resources out there that will allow the solicitation of the members and will charge for help.  This class is not going to discuss any of those services.  Why?  Because we are discussing the SQL community and this community truly puts itself out in front of everyone in need without asking for much of anything in return."
 url: /index.php/itprofessionals/ethicsit/sql-community-tech-forums/
 views:
@@ -81,4 +82,4 @@ There is no need to pull your hair out at the roots; no need to call the CTO and
  [7]: http://serverfault.com/
  [8]: http://www.sqlservercentral.com/Forums/
  [9]: http://www.sqlteam.com/forums/
- [10]: http://forum.lessthandot.com/viewforum.php?f=14&sid=95273364bfa1d4cbee1b6a2bf998431b
+ [10]: http://forum.ltd.local/viewforum.php?f=14&sid=95273364bfa1d4cbee1b6a2bf998431b

@@ -3,6 +3,7 @@ title: Plan Cache effects when dropping columns
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-09-04T17:49:00+00:00
+ID: 1712
 excerpt: 'Recently the question was raised, “If you drop a column on a table, does it also drop the statistics and remove the cached plans that relates to the column?”  To answer the question on statistics directly, yes.  SQL Server will remove any statistics for&hellip;'
 url: /index.php/datamgmt/dbadmin/plan-cache-effects-when-dropping/
 views:
@@ -31,7 +32,8 @@ Let’s look at one example and follow through with the entire process of how SQ
 
 Using the script in listing 1.1, create a table named, CustTable and insert some test data into it.
 
-<pre>CREATE TABLE [dbo].[CustTable](
+sql
+CREATE TABLE [dbo].[CustTable](
 	[CustID] [int] IDENTITY(1,1) NOT NULL,
 	[CustName] [varchar](150) NULL,
 	[SalesQuotaID] [int] NULL,
@@ -44,7 +46,8 @@ Using the script in listing 1.1, create a table named, CustTable and insert some
 GO
 INSERT INTO CustTable
 SELECT 'Name',rand() * 100, rand() * 100
-GO 70000</pre>
+GO 70000
+```
 
 _Listing 1.1_
 
@@ -54,10 +57,12 @@ At this point, with AUTO\_STATS on, checking for existing statistics on the Cust
 
  
 
-<pre>SELECT COUNT(*),CustName,BusRegionID 
+sql
+SELECT COUNT(*),CustName,BusRegionID 
 FROM CustTable  
-WHERE SalesQuotaID &gt; 1
-GROUP BY CustName,BusRegionID</pre>
+WHERE SalesQuotaID > 1
+GROUP BY CustName,BusRegionID
+```
 
 _Listing 1.2_
 
@@ -65,7 +70,10 @@ _Listing 1.2_
 
 We should see a result of three statistics created.  One for each custname, busregionid and salesquotaid.
 
-<pre>SELECT * FROM sys.stats WHERE object_id = OBJECT_ID('dbo.CustTable')</pre>
+sql
+SELECT * FROM sys.stats WHERE object_id = OBJECT_ID('dbo.CustTable')
+```
+
 
 _Listing 1.3_
 
@@ -75,8 +83,10 @@ _Listing 1.3_
 
 For SQL Server 2012, turn trace flag 8666 so we can examine the statistics being used by the plans in the cache.
 
-<pre>DBCC TRACEON(8666)
-GO</pre>
+sql
+DBCC TRACEON(8666)
+GO
+```
 
 _Listing 1.4_
 
@@ -84,7 +94,8 @@ _Listing 1.4_
 
 Once trace flag 8666 is enabled, we can dig deep into dm\_exec\_cached\_plans and dm\_exec\_query\_plan while using XMLNAMESPACES to reference the field, wszStatName.  The plan from the query we ran earlier in listing 1.2 should be in the cache.  This can be verified by running the following query that uses the wszStatName Field Name to examine the statistics the plans referenced.
 
-<pre>;WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/showplan' as showplan)
+sql
+;WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/showplan' as showplan)
 SELECT qt.text AS SQLCommand,
       qp.query_plan,
       Stat.ref.value('@FieldValue','NVarChar(500)') AS StatsName
@@ -93,7 +104,8 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle) qp
 CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle) qt
 CROSS APPLY query_plan.nodes('//showplan:Field[@FieldName="wszStatName"]') Stat(ref)
 WHERE qt.text LIKE '%CustTable%'
-GO</pre>
+GO
+```
 
 _Listing 1.5_
 
@@ -107,8 +119,10 @@ As we can see, the three statistics are shown in the results for the plan that w
 
 Now that both statistics and a valid plan have been cached, drop the CustName column on the CustTable table.
 
-<pre>ALTER TABLE CustTable
-DROP COLUMN CustName</pre>
+sql
+ALTER TABLE CustTable
+DROP COLUMN CustName
+```
 
 _Listing 1.6_
 
@@ -124,20 +138,23 @@ Notice the statistic, \_WA\_Sys\_00000002\_02FC7413 is no longer referenced and 
 
 In order to remove a distinct plan from cache, FREEPROCCACHE can be used by passing in the plan\_handle as a parameter.  To determine all cached plans that reference a particular column, the DMVs dm\_exec\_query\_stats and dm\_exec\_query_plan with XMLNAMESPACES can be used in a manner similar to how we identified the statistics referenced by a specific plan.
 
-<pre>;WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/showplan' as showplan)
+sql
+;WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/showplan' as showplan)
 SELECT cp.plan_handle
 FROM sys.dm_exec_query_stats AS cp (NOLOCK)
 	CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle) AS qp
 	CROSS APPLY query_plan.nodes( '//showplan:ColumnReference' ) Cols(ref)
 WHERE Cols.ref.value('@Column', 'SYSNAME') = 'CustName'
 GROUP BY cp.plan_handle
-GO</pre>
+GO
+```
 
 _Listing 1.7_
 
 Listing 1.7 will return all plan handles that reference the column CustName.  We can take advantage of the ability to identify those plan handles and combine it with dynamic SQL to then  iterate through each plan handle returned in order to execute DBCC FREEPROCCACHE, which allows us to fully automate the removal of these plans.
 
-<pre>;WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/showplan' as showplan)
+sql
+;WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/showplan' as showplan)
 SELECT cp.plan_handle
         ,ROW_NUMBER() OVER (ORDER BY cp.plan_handle) AS ROWID
 INTO #RemovePlans
@@ -157,7 +174,8 @@ WHILE (@LOOP <= (SELECT MAX(ROWID) FROM #RemovePlans))
   SET @FREECACHE = (SELECT 'DBCC FREEPROCCACHE (plan_handle=' + CONVERT(VARCHAR(91), @PLAN_HANDLE, 1) + ')')
   Exec(@FREECACHE)
   SET @LOOP += 1
- END</pre>
+ END
+```
 
 _Listing 1.8_
 

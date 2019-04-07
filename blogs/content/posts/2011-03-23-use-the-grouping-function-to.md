@@ -3,6 +3,7 @@ title: Use the GROUPING function to determine whether a value is NULL because of
 author: SQLDenis
 type: post
 date: 2011-03-23T13:58:00+00:00
+ID: 1085
 excerpt: 'If you have been writing queries that use ROLLUP, you are probably aware that the aggregated rows return NULL for the column that you are grouping by. What if you already have a NULL value in that column, how can you know which row is the aggregated row&hellip;'
 url: /index.php/datamgmt/datadesign/use-the-grouping-function-to/
 views:
@@ -24,7 +25,8 @@ tags:
 ---
 If you have been writing queries that use ROLLUP, you are probably aware that the aggregated rows return NULL for the column that you are grouping by. What if you already have a NULL value in that column, how can you know which row is the aggregated row? Let&#8217;s take a look, first create this table
 
-<pre>CREATE TABLE TestRollup(Country VARCHAR(20),Col1 INT, col2 INT)
+sql
+CREATE TABLE TestRollup(Country VARCHAR(20),Col1 INT, col2 INT)
 INSERT TestRollup VALUES('United States',20,10)
 INSERT TestRollup VALUES('United States',30,90)
 
@@ -34,13 +36,16 @@ INSERT TestRollup VALUES('Denmark',44,33)
 INSERT TestRollup VALUES('Zimbabwe',20,10)
 INSERT TestRollup VALUES('Zimbabwe',20,10)
 INSERT TestRollup VALUES('Zimbabwe',20,1000)
-INSERT TestRollup VALUES('Zimbabwe',2000,10)</pre>
+INSERT TestRollup VALUES('Zimbabwe',2000,10)
+```
 
 Now let&#8217;s do our simple ROLLUP query
 
-<pre>SELECT Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum
+sql
+SELECT Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum
 FROM TestRollup
-GROUP BY Country WITH ROLLUP</pre>
+GROUP BY Country WITH ROLLUP
+```
 
 Here is the results
 
@@ -120,14 +125,17 @@ Here is the results
 
 We can easily determine that the Country column that has the value NULL is the total. What happens when we add the following row
 
-<pre>INSERT TestRollup VALUES(NULL,2000,3000)</pre>
+sql
+INSERT TestRollup VALUES(NULL,2000,3000)
+```
 
 Now when we run the same query again, we have two rows where Country is NULL
 
-<pre>SELECT Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum
+sql
+SELECT Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum
 FROM TestRollup
-GROUP BY Country WITH ROLLUP</pre>
-
+GROUP BY Country WITH ROLLUP
+```
 <div class="tables">
   <p>
     Here are the results
@@ -232,9 +240,11 @@ GROUPING is used to distinguish the null values that are returned by ROLLUP, CUB
 
 Now, let&#8217;s add GROUPING(Country) to our query
 
-<pre>SELECT Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum, GROUPING(Country) AS GroupingCountry
+sql
+SELECT Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum, GROUPING(Country) AS GroupingCountry
 FROM TestRollup
-GROUP BY Country WITH ROLLUP</pre>
+GROUP BY Country WITH ROLLUP
+```
 
 Here are the results, as you can see the function returns 1 for the aggregated row
 
@@ -348,9 +358,11 @@ Here are the results, as you can see the function returns 1 for the aggregated r
 
 Now we can simply add a CASE expression to display Total for the aggregated column
 
-<pre>SELECT CASE  GROUPING(Country) WHEN 1 THEN 'Total' ELSE Country END Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum
+sql
+SELECT CASE  GROUPING(Country) WHEN 1 THEN 'Total' ELSE Country END Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum
 FROM TestRollup
-GROUP BY Country WITH ROLLUP</pre>
+GROUP BY Country WITH ROLLUP
+```
 
 Here is what the results look like 
 
@@ -447,5 +459,5 @@ That is it for this post, hopefully it will help someone
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://msdn.microsoft.com/en-us/library/ms178544.aspx
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

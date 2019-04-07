@@ -3,6 +3,7 @@ title: how to make sure that the view will have the underlying table changes by 
 author: SQLDenis
 type: post
 date: 2009-01-28T14:32:44+00:00
+ID: 301
 url: /index.php/datamgmt/datadesign/how-to-make-sure-that-the-view-will-have/
 views:
   - 9030
@@ -30,7 +31,8 @@ let me show you what I mean.
   
 Run the following block of code
 
-<pre>CREATE TABLE TestTable (id INT,SomeCol VARCHAR(666))
+sql
+CREATE TABLE TestTable (id INT,SomeCol VARCHAR(666))
 GO
 
 INSERT TestTable VALUES(1,'ABC')
@@ -45,28 +47,33 @@ SELECT * FROM TestTable
 GO
 
 SELECT * FROM TestView
-GO</pre>
+GO
 
+```
 Now we will change that table by adding another column
 
-<pre>ALTER TABLE TestTable
+sql
+ALTER TABLE TestTable
 ADD Col2 DATETIME DEFAULT CURRENT_TIMESTAMP
 GO
 
 INSERT TestTable(id,SomeCol) VALUES(2,'XYZ')
-GO</pre>
-
+GO
+```
 Now run the selects again
 
-<pre>SELECT * FROM TestTable
+sql
+SELECT * FROM TestTable
 GO
 
 SELECT * FROM TestView
-GO</pre>
+GO
+```
 
 See what happened? The TestView does not include the Col2 column. So what can you do? There are at least two things that you can do. You can recreate the view with a create or alter statement or you can use sp_refreshview, run the code below to see how that works
 
-<pre>sp_refreshview TestView
+sql
+sp_refreshview TestView
 GO
 
 --All good now
@@ -80,7 +87,8 @@ GO
 
 
 DROP TABLE TestTable
-GO</pre>
+GO
+```
 
 And yes I know &#8216;real&#8217; SQL programmers never use SELECT * and &#8216;real&#8217; SQL programmers name their defaults 😉
 
@@ -88,5 +96,5 @@ And yes I know &#8216;real&#8217; SQL programmers never use SELECT * and &#8216;
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

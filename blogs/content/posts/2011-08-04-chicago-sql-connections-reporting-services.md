@@ -3,6 +3,7 @@ title: 'Chicago SQL Connections – Reporting Services 201 Slides & Code'
 author: Jes Borland
 type: post
 date: 2011-08-04T14:21:00+00:00
+ID: 1287
 excerpt: You can find the PowerPoint slides and .rdl files from my Reporting Services 201 session on Tuesday, August 2 here!
 url: /index.php/datamgmt/dbprogramming/chicago-sql-connections-reporting-services/
 views:

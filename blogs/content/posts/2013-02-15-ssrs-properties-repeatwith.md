@@ -3,6 +3,7 @@ title: SSRS Properties – RepeatWith
 author: Jes Borland
 type: post
 date: 2013-02-15T11:59:00+00:00
+ID: 1996
 excerpt: 'Today I have a special guest blogger: Stacia Misner, blogging about RepeatWith.'
 url: /index.php/datamgmt/ssrs/ssrs-properties-repeatwith/
 views:

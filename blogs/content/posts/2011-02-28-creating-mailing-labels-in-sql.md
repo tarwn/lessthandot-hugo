@@ -3,6 +3,7 @@ title: Creating Mailing Labels in SQL Server Reporting Services
 author: Jes Borland
 type: post
 date: 2011-02-28T14:52:00+00:00
+ID: 1059
 excerpt: Learn how to create mailing labels using existing information in your database and SQL Server Reporting Services!
 url: /index.php/datamgmt/dbprogramming/mssqlserver/creating-mailing-labels-in-sql/
 views:
@@ -36,8 +37,10 @@ I&#8217;m using Avery 5160 labels as an example. Depending on the labels you hav
 
 1. Create a new, blank report. I&#8217;m using the AdventureWorks database. My query is:
 
-<pre>SELECT        FirstName, LastName, AddressLine1, AddressLine2, City, StateProvinceName, PostalCode
-FROM            Sales.vIndividualCustomer</pre>
+```sql
+SELECT        FirstName, LastName, AddressLine1, AddressLine2, City, StateProvinceName, PostalCode
+FROM            Sales.vIndividualCustomer
+```
 
 2. Go to the Report properties.
   

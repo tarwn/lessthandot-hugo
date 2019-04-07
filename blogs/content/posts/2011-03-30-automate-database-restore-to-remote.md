@@ -3,6 +3,7 @@ title: Automate Database Restore to Remote Instance with SSIS
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-03-30T18:32:00+00:00
+ID: 1094
 excerpt: |
   Automate Database Restore to Remote Instance with SSIS
    
@@ -68,7 +69,8 @@ Set variables accordingly based on findings
 
 Log either success or failures
 
-<pre>try
+```csharp
+try
             {
                 string backup_folder = Dts.Variables["SourceBackupFolder"].Value.ToString();
                 string GetFileDate = Dts.Variables["mmddyyyy"].Value.ToString();
@@ -102,7 +104,8 @@ Log either success or failures
                 Dts.Events.FireError(0, "Error setting Full or Differential variables", ex.Message + "r" + ex.StackTrace, String.Empty, 0);
                 Dts.TaskResult = (int)ScriptResults.Failure;
             }
-        }</pre>
+        }
+```
 
  
 
@@ -170,8 +173,9 @@ The expression for the task to restore the differential backup file:
 
 Evaluated, this expression results in:
 
-<pre>RESTORE DATABASE [DBA_DEV] FROM  DISK = N'c:restoresFULL_12122001.BAK’ WITH  FILE = 1,  MOVE N’DBA’ TO N’C:SQL2008R2MSSQL10_50.TK2008R2MSSQLDATADBA_DEV.mdf’, MOVE N’DBA_LOG’ TO N’C:SQL2008R2MSSQL10_50.TK2008R2MSSQLDATADBA_DEV_1.ldf’,  NOUNLOAD, REPLACE,  STATS = 10</pre>
-
+```text
+RESTORE DATABASE [DBA_DEV] FROM  DISK = N'c:restoresFULL_12122001.BAK’ WITH  FILE = 1,  MOVE N’DBA’ TO N’C:SQL2008R2MSSQL10_50.TK2008R2MSSQLDATADBA_DEV.mdf’, MOVE N’DBA_LOG’ TO N’C:SQL2008R2MSSQL10_50.TK2008R2MSSQLDATADBA_DEV_1.ldf’,  NOUNLOAD, REPLACE,  STATS = 10
+```
 SqlStatementSource values are exclusively used on all the T-SQL Tasks in this package.  Again, this allows us to freely change these values at run-time so we can reuse the package on several different database or configurations.
 
  
@@ -205,13 +209,19 @@ Within the script task that searches for the files and also set the variables, l
 
 For informational logging:
 
-<pre>Dts.Log("Successfully set variables for Full or Differential distinction: Backup folder=" + backup_folder + " Pattern search=" + GetFileDate + " Full Backup File=" + Dts.Variables["FullBackup"].Value.ToString() + " Differential backup File=" + Dts.Variables["DiffBackup"].Value.ToString(), 0, emptyBytes);</pre>
+```csharp
+Dts.Log("Successfully set variables for Full or Differential distinction: Backup folder=" + backup_folder + " Pattern search=" + GetFileDate + " Full Backup File=" + Dts.Variables["FullBackup"].Value.ToString() + " Differential backup File=" + Dts.Variables["DiffBackup"].Value.ToString(), 0, emptyBytes);
+```
+
 
  
 
 For error logging:
 
-<pre>Dts.Events.FireError(0, "Error setting Full or Differential variables", ex.Message + "r" + ex.StackTrace, String.Empty, 0);</pre>
+```csharp
+Dts.Events.FireError(0, "Error setting Full or Differential variables", ex.Message + "r" + ex.StackTrace, String.Empty, 0);
+```
+
 
  
 

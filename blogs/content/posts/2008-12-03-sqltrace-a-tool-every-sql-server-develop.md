@@ -3,6 +3,7 @@ title: 'sqltrace: A Tool Every SQL Server Developer Should Have'
 author: SQLDenis
 type: post
 date: 2008-12-03T13:08:11+00:00
+ID: 234
 url: /index.php/datamgmt/datadesign/sqltrace-a-tool-every-sql-server-develop/
 views:
   - 4457

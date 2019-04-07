@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 1: Sizing database files'
 author: SQLDenis
 type: post
 date: 2012-12-01T08:42:00+00:00
+ID: 1813
 excerpt: This post shows how having a database that is not correctly sized will impact performance
 url: /index.php/datamgmt/dbprogramming/sizing-database-files/
 views:
@@ -36,25 +37,29 @@ Here we are creating two databases, one with much bigger files than the other on
 
 This DB is correctly sized for the data that will be inserted
 
-<pre>CREATE DATABASE [TestBigger]
+sql
+CREATE DATABASE [TestBigger]
  ON  PRIMARY 
 ( NAME = N'TestBigger', FILENAME = N'f:TempTestBigger.mdf' , 
 SIZE = 509600KB , FILEGROWTH = 1024KB )
  LOG ON 
 ( NAME = N'TestBigger_log', FILENAME = N'f:TempTestBigger_log.ldf' , 
 SIZE = 502400KB , FILEGROWTH = 10%)
-GO</pre>
+GO
+```
 
 This database is very small and will have to be expanded many times to accommodate all the data I will be inserting later on
 
-<pre>CREATE DATABASE [TestSmaller]
+sql
+CREATE DATABASE [TestSmaller]
  ON  PRIMARY 
 ( NAME = N'TestSmaller', FILENAME = N'f:TempTestSmaller.mdf' , 
 SIZE = 1280KB , FILEGROWTH = 1024KB )
  LOG ON 
 ( NAME = N'TestSmaller_log', FILENAME = N'f:TempTestSmaller_log.ldf' , 
 SIZE = 504KB , FILEGROWTH = 10%)
-GO</pre>
+GO
+```
 
 [edit]
   
@@ -76,7 +81,9 @@ SIZE = **1280KB** , FILEGROWTH = 1024KB</em>
   
 These two stored proc calls are just to verify that the files match with what we specified, you can use sp_helpdb to check the size of a database that you created when you don&#8217;t specify the file sizes
 
-<pre>EXEC sp_helpdb 'TestBigger'</pre>
+sql
+EXEC sp_helpdb 'TestBigger'
+```
 
 <pre>name	        filename	            filegroup	SIZE
 TestBigger	f:TempTestBigger.mdf	     PRIMARY	509632 KB
@@ -84,7 +91,9 @@ TestBigger_log	f:TempTestBigger_log.ldf	NULL	502400 KB</pre>
 
 
 
-<pre>EXEC sp_helpdb 'TestSmaller'</pre>
+sql
+EXEC sp_helpdb 'TestSmaller'
+```
 
 <pre>name	        filename	             filegroup	SIZE
 TestSmaller	f:TempTestSmaller.mdf	     PRIMARY	1280 KB
@@ -92,17 +101,22 @@ TestSmaller_log	f:TempTestSmaller_log.ldf	NULL	 512 KB</pre>
 
 Next, we are creating two identical tables, one in each database
 
-<pre>USE TestSmaller
+sql
+USE TestSmaller
 GO
-CREATE TABLE test (SomeName VARCHAR(100), SomeID VARCHAR(36), SomeOtherID VARCHAR(100), SomeDate DATETIME)</pre>
+CREATE TABLE test (SomeName VARCHAR(100), SomeID VARCHAR(36), SomeOtherID VARCHAR(100), SomeDate DATETIME)
+```
 
-<pre>USE TestBigger
+sql
+USE TestBigger
 GO
-CREATE TABLE test (SomeName VARCHAR(100), SomeID VARCHAR(36), SomeOtherID VARCHAR(100), SomeDate DATETIME)</pre>
+CREATE TABLE test (SomeName VARCHAR(100), SomeID VARCHAR(36), SomeOtherID VARCHAR(100), SomeDate DATETIME)
+```
 
 This query is just used so that the data is cached for the two inserts later on, this way the data doesn&#8217;t have to be fatched from disk for either inserts, you can discard the results after the query is done
 
-<pre>USE master
+sql
+USE master
 GO
 
 
@@ -110,31 +124,37 @@ SELECT TOP 1000000 c1.name,NEWID(),NEWID(),GETDATE()
 FROM sys.sysobjects c1
 CROSS JOIN sys.sysobjects c2
 CROSS JOIN sys.sysobjects c3
-CROSS JOIN sys.sysobjects c4</pre>
+CROSS JOIN sys.sysobjects c4
+```
 
 Here is the first insert into the bigger database
 
-<pre>INSERT TestBigger.dbo.test
+sql
+INSERT TestBigger.dbo.test
 SELECT TOP 1000000 c1.name,NEWID(),NEWID(),GETDATE() 
 FROM sys.sysobjects c1
 CROSS JOIN sys.sysobjects c2
 CROSS JOIN sys.sysobjects c3
-CROSS JOIN sys.sysobjects c4</pre>
+CROSS JOIN sys.sysobjects c4
+```
 
 Here is the second insert into the smaller database
 
-<pre>INSERT TestSmaller.dbo.test
+sql
+INSERT TestSmaller.dbo.test
 SELECT TOP 1000000 c1.name,NEWID(),NEWID(),GETDATE() 
 FROM sys.sysobjects c1
 CROSS JOIN sys.sysobjects c2
 CROSS JOIN sys.sysobjects c3
-CROSS JOIN sys.sysobjects c4</pre>
-
+CROSS JOIN sys.sysobjects c4
+```
 On several machines I tested on, it takes half the time or less to insert the data in the bigger database compared to the smaller database. How about on your machine, do you see that the insert into the bigger database takes less than half the time it takes to insert into the smaller database?
 
 Check the sizes of the databases again
 
-<pre>exec sp_helpdb 'TestBigger'</pre>
+sql
+exec sp_helpdb 'TestBigger'
+```
 
 <pre>name	        filename	           filegroup	size
 TestBigger	f:TempTestBigger.mdf	     PRIMARY	509632 KB
@@ -142,7 +162,9 @@ TestBigger_log	f:TempTestBigger_log.ldf	NULL	502400 KB</pre>
 
 
 
-<pre>exec sp_helpdb 'TestSmaller'</pre>
+sql
+exec sp_helpdb 'TestSmaller'
+```
 
 <pre>name	        filename	             filegroup	size
 TestSmaller	f:TempTestSmaller.mdf	     PRIMARY	215296 KB

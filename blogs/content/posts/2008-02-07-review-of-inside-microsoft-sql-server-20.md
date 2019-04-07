@@ -3,6 +3,7 @@ title: Review of Inside Microsoft SQL Server 2005 Query Tuning and Optimization
 author: SQLDenis
 type: post
 date: 2008-02-08T02:04:36+00:00
+ID: 21
 url: /index.php/datamgmt/datadesign/review-of-inside-microsoft-sql-server-20/
 views:
   - 6603

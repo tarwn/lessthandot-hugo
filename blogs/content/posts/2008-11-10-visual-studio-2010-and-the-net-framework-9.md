@@ -3,6 +3,7 @@ title: Visual Studio 2010 and the .NET Framework 4.0 Week, 12 videos on Channel 
 author: SQLDenis
 type: post
 date: 2008-11-10T13:01:20+00:00
+ID: 200
 url: /index.php/desktopdev/mstech/visual-studio-2010-and-the-net-framework-9/
 views:
   - 5112

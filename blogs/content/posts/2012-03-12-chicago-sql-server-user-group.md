@@ -3,6 +3,7 @@ title: Chicago SQL Server User Group – Filegroups Presentation Material
 author: Jes Borland
 type: post
 date: 2012-03-12T23:03:00+00:00
+ID: 1557
 excerpt: |
   Last week Thursday, I had the pleasure of attending the Chicago SQL Server User Group's monthly meeting and presenting "Filegroups: Putting the Pieces Together". You can download the presentation materials here.
 url: /index.php/itprofessionals/professionaldevelopment/chicago-sql-server-user-group/

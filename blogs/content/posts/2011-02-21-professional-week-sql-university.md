@@ -3,6 +3,7 @@ title: Professional Development Week, An introduction to this week on SQL Univer
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-02-21T12:53:00+00:00
+ID: 1047
 excerpt: 'Welcome to this semester’s Professional Development week at SQL University.  This week long course will dive deep into professional development in order to better build ourselves for the careers we are already far into building.  This week is being taught by Andy Leonard (Twitter | Blog) and Ted Krueger (Twitter | Blog).  Andy is well known for bringing the community together and having the ability to mentor from the individual level to large groups of the community with developing skills to build their careers.  This week will be a collection of both author’s experiences and suggestions that they have built in our own careers over this past decade.  When the week comes to a close, students will take away notes that will assist them with an already well rounded career and start polishing their professional career and start developing it even further.'
 url: /index.php/itprofessionals/professionaldevelopment/professional-week-sql-university/
 views:

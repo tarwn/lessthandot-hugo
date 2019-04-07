@@ -3,6 +3,7 @@ title: SELECT 1 – Column Level Security
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-10-30T11:08:00+00:00
+ID: 1773
 excerpt: 'A few weeks ago I wrote about the comparison of SELECT 1 and SELECT * with use in EXISTS T-SQL statements.  The subject has been discussed plenty of times but with any subject, revisiting the topic and reasons we write things the way we do, is still val&hellip;'
 url: /index.php/datamgmt/dbprogramming/select-column-level-security/
 views:
@@ -24,7 +25,8 @@ This indicated that the metadata was indeed being examined.  What I found is, i
 
 The following example will go over what Laerte Junior pointed out.
 
-<pre>USE master
+sql
+USE master
 GO
 CREATE LOGIN colUser WITH PASSWORD=N'passmein'
 GO
@@ -36,11 +38,12 @@ CREATE USER colUser FOR LOGIN colUser;
 GO
 GRANT SELECT ON tblColPerms(col2) TO colUser
 GO
---Open a new connection with SSMS using colUser</pre>
-
+--Open a new connection with SSMS using colUser
+```
 In the new query window using the context of coluser
 
-<pre>USE AdventureWorks
+sql
+USE AdventureWorks
 GO
 BEGIN TRY
 SELECT col2 FROM tblColPerms
@@ -68,8 +71,8 @@ SELECT col2 FROM tblColPerms WHERE exists (SELECT 1 FROM tblColPerms)
 END TRY
 BEGIN CATCH
     PRINT ERROR_MESSAGE()
-END CATCH;</pre>
-
+END CATCH;
+```
 The first select statement will function correctly. The next statements will result in errors regarding the security level the colUser has to examine all the columns in the table based on the user of SELECT 1 or SELECT on a column the colUser does not have access to.
 
 > (0 row(s) affected)

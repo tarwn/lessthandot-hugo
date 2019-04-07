@@ -3,6 +3,7 @@ title: Silverlight, RIA, Datagrids, and Joins
 author: ThatRickGuy
 type: post
 date: 2010-08-03T13:16:43+00:00
+ID: 860
 url: /index.php/webdev/webdesigngraphicsstyling/silverlight-ria-datagrids-and-joins/
 views:
   - 6760
@@ -49,28 +50,31 @@ Next up, right next to the DomainService1 file should be a file called MyApplica
 
 In my case of League and Owner Player, it looks like this:
 
-<pre>Friend NotInheritable Class LeagueMetadata
+```VB
+Friend NotInheritable Class LeagueMetadata
              
         '...
 
-        <Include()&gt;
-        <Display(AutoGenerateField:=False)&gt;
+        <Include()>
+        <Display(AutoGenerateField:=False)>
         Public Property Player As Player
         '...
-    End Class</pre>
-
+    End Class
+```
 ## And the Grid?
 
 Now that the EF is loading the data we want, and the RIA services are returning the data we want, all we have to do is bind it! And this is the easiest part. It is just like they show in the video, with one minor change. Instead of just binding on the primary object&#8217;s property, we use dot notation to get at the child object&#8217;s property. Shown here as the &#8220;Player.Name&#8221; binding
 
-<pre><sdk:DataGrid x:Name="grdLeagues" Margin="4,20,4,4" Grid.Row="1" ItemsSource="{Binding ElementName=LeagueDomainDataSource, Path=Data}" AutoGenerateColumns="False"&gt;
-    <sdk:DataGrid.Columns&gt;
-        <sdk:DataGridTextColumn Binding="{Binding Path=Name}" Header="Name" /&gt;
-        <sdk:DataGridTextColumn Binding="{Binding Path=Player.Name, Mode=OneWay}" Header="Organizer" /&gt;
-        <sdk:DataGridTextColumn Binding="{Binding Path=Province}" Header="State" /&gt;
-        <sdk:DataGridTextColumn Binding="{Binding Path=City}" Header="City" /&gt;
-        <sdk:DataGridTextColumn Binding="{Binding Path=LGS}" Header="Game Store" /&gt;
-    </sdk:DataGrid.Columns&gt;
-</sdk:DataGrid&gt;</pre>
+```XML
+<sdk:DataGrid x:Name="grdLeagues" Margin="4,20,4,4" Grid.Row="1" ItemsSource="{Binding ElementName=LeagueDomainDataSource, Path=Data}" AutoGenerateColumns="False">
+    <sdk:DataGrid.Columns>
+        <sdk:DataGridTextColumn Binding="{Binding Path=Name}" Header="Name" />
+        <sdk:DataGridTextColumn Binding="{Binding Path=Player.Name, Mode=OneWay}" Header="Organizer" />
+        <sdk:DataGridTextColumn Binding="{Binding Path=Province}" Header="State" />
+        <sdk:DataGridTextColumn Binding="{Binding Path=City}" Header="City" />
+        <sdk:DataGridTextColumn Binding="{Binding Path=LGS}" Header="Game Store" />
+    </sdk:DataGrid.Columns>
+</sdk:DataGrid>
+```
 
 -Rick

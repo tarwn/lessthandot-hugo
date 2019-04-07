@@ -3,6 +3,7 @@ title: Would you be interested in an information section for SQLCop?
 author: SQLDenis
 type: post
 date: 2012-04-09T14:30:00+00:00
+ID: 1591
 excerpt: |
   SQLCop detects the following issues right now. What else would you like to see?
   
@@ -104,7 +105,8 @@ Would you like to know the last time DBCC ran successfully against your database
   
 This code would report that
 
-<pre>CREATE TABLE #Test(ParentObject VARCHAR(500),Object VARCHAR(500),Field  VARCHAR(500),VALUE VARCHAR(500))
+sql
+CREATE TABLE #Test(ParentObject VARCHAR(500),Object VARCHAR(500),Field  VARCHAR(500),VALUE VARCHAR(500))
 
 DECLARE @db VARCHAR(500)
 SELECT @db =  db_name()
@@ -115,7 +117,8 @@ EXEC('DBCC DBINFO (''' + @db + ''') WITH TABLERESULTS')
 SELECT DISTINCT Value FROM #Test
 WHERE field = 'dbi_dbccLastKnownGood'
 
-DROP TABLE #Test</pre>
+DROP TABLE #Test
+```
 
 If we add the configuration section would it be beneficial if we added the min and max values for the following
 
@@ -135,20 +138,25 @@ min server memory (MB)
 
 For example
 
-<pre>SELECT * FROM sys.configurations
+sql
+SELECT * FROM sys.configurations
 WHERE name like( 'max%')
 
 SELECT * FROM sys.configurations
-WHERE name like( 'min%')</pre>
+WHERE name like( 'min%')
+```
 
 What about fillfactor?
 
-<pre>SELECT * FROM sys.configurations
-WHERE name  = 'fill factor (%)'</pre>
+sql
+SELECT * FROM sys.configurations
+WHERE name  = 'fill factor (%)'
+```
 
 How about the 50 most used stored procedures
 
-<pre>SELECT top 50 * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid),'Ad-Hoc') AS ProcName,execution_count,s2.objectid,
+sql
+SELECT top 50 * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid),'Ad-Hoc') AS ProcName,execution_count,s2.objectid,
     (SELECT TOP 1 SUBSTRING(s2.TEXT,statement_start_offset / 2+1 ,
       ( (CASE WHEN statement_end_offset = -1
          THEN (LEN(CONVERT(NVARCHAR(MAX),s2.TEXT)) * 2)
@@ -161,11 +169,13 @@ and OBJECTPROPERTYEX(x.objectid,'IsProcedure') = 1
 and exists (Select 1 from sys.procedures s
 where s.is_ms_shipped = 0
 and s.name = x.ProcName )
-ORDER BY execution_count DESC</pre>
+ORDER BY execution_count DESC
+```
 
 How about stored procedures with the highest average CPU time
 
-<pre>SELECT top 50 * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid),'Ad-Hoc') AS ProcName,execution_count,s2.objectid,
+sql
+SELECT top 50 * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid),'Ad-Hoc') AS ProcName,execution_count,s2.objectid,
     (SELECT TOP 1 SUBSTRING(s2.TEXT,statement_start_offset / 2+1 ,
       ( (CASE WHEN statement_end_offset = -1
          THEN (LEN(CONVERT(NVARCHAR(MAX),s2.TEXT)) * 2)
@@ -178,15 +188,18 @@ and OBJECTPROPERTYEX(x.objectid,'IsProcedure') = 1
 and exists (Select 1 from sys.procedures s
 where s.is_ms_shipped = 0
 and s.name = x.ProcName )
-ORDER BY AverageCPUTime DESC</pre>
+ORDER BY AverageCPUTime DESC
+```
 
 Do you want to see all the different programs connected to your server?
 
-<pre>SELECT COUNT(*) Count,program_name 
+sql
+SELECT COUNT(*) Count,program_name 
 FROM sys.sysprocesses
-WHERE status <&gt; 'background'
+WHERE status <> 'background'
 GROUP BY program_name
-ORDER BY 1 desc</pre>
+ORDER BY 1 desc
+```
 
 This returns something like this on one of my boxes
 
@@ -201,7 +214,8 @@ This returns something like this on one of my boxes
 
 Do you want to know the file size, space used and free space for all of the files for your database?
 
-<pre>select
+sql
+select
     CONVERT(DATE,GETDATE()) AS [Date],
     a.FILEID,
     [FILE_SIZE_MB] =
@@ -213,7 +227,8 @@ Do you want to know the file size, space used and free space for all of the file
     NAME = left(a.NAME,35),
     FILENAME = left(a.FILENAME,60)
 from
-    dbo.sysfiles a</pre>
+    dbo.sysfiles a
+```
 
 Here is what the output would look like
 

@@ -3,6 +3,7 @@ title: Push your DBA skills over the edge by becoming a better developer
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-07-09T12:47:22+00:00
+ID: 500
 url: /index.php/datamgmt/dbprogramming/push-your-dba-skills-over-the-edge-and-b/
 views:
   - 5234
@@ -23,18 +24,20 @@ First warning of this entire process is to find a server that you won&#8217;t di
 
 The code for this type of task is pretty simple. In the OnStart of your windows service you initiate the timer and the call to the method in which you perform your tasks.
 
-<pre>protected override void OnStart(string[] args)
+```CSHARP
+protected override void OnStart(string[] args)
         {
             TimerCallback tmrCallBack = new TimerCallback(MoveBackup);
             oTimer = new Timer(tmrCallBack);
             oTimer.Change(new TimeSpan(0, 0, 1), new TimeSpan(0, 1, 0));
-        }</pre>
-
+        }
+```
 Then in our main method we need to first grab some config values. In this case we need the source and destination directory and we want this to be easily changed so hence the app.config usage. Once we have those values we grab all the files in the directories and then start running through them finding the files that are designated Full and Diff. In most cases log shipping will be going on or some other means so the log backups are unwanted for this operation. The last step in validation is to make sure we don&#8217;t try copying files we already have on the destination. You do that by simply searching the array we filled up with file names. And of course after all this is done we simply copy it over. To better this you can throttle it up by chopping the file up and sending it across in small pieces similar to bringing down large files from HTTP sources. For this case I have the schedules for backups on off peak hours and a few hours of time in which I can do the copy without concern to flooding the pipe. The network is also setup to throw the copy to the back of network traffic so it will not take priority over other things.
 
 So here is that method
 
-<pre>private void MoveBackup(object state)
+```CSHARP
+private void MoveBackup(object state)
         {
             string source = ConfigurationSettings.AppSettings["dirSource"];
             string destination = ConfigurationSettings.AppSettings["dirDestination"];
@@ -79,11 +82,12 @@ So here is that method
                     oTimer.Change(new TimeSpan(0, 0, 1), new TimeSpan(0, 1, 0));
             }
             
-        }</pre>
-
+        }
+```
 And my supporting methods for searching arrays and grabbing the file names are
 
-<pre>private bool SearchArr(string[] arr, string search_string)
+```CSHARP
+private bool SearchArr(string[] arr, string search_string)
         {
             bool match = false;
 
@@ -101,8 +105,8 @@ And my supporting methods for searching arrays and grabbing the file names are
         {
             Regex r = new Regex(@"w+[.]w+$+");
             return r.Match(filepath).Value;
-        }</pre>
-
+        }
+```
 These are nothing special and can be found online in hundreds of different forms. 
 
 After you have that all written this is how you install it if you have never done so.

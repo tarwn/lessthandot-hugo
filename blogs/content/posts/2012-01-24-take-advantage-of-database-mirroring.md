@@ -3,6 +3,7 @@ title: Take advantage of Database Mirroring in your applications
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-01-24T11:47:00+00:00
+ID: 1503
 excerpt: 'In the previous article, "Estimating Mean Uptime for Team-based uptime measurements" uptime planning was discussed in some detail.  The calculation you could use to set team goals was provided.  All of these goals in general are for helping gauge how we&hellip;'
 url: /index.php/datamgmt/dbadmin/take-advantage-of-database-mirroring/
 views:
@@ -39,7 +40,8 @@ The application’s interface consists of a grid view, a button to load the grid
 
 The design of this form allows a connection string with the Failover Partner setting and without.  If the “User Mirror Connection String?” check box is checked, the connection string will use the Failover Partner property.  The code to determine this is as follows.
 
-<pre>string strconn;
+```csharp
+string strconn;
             switch (checkUseMirrorString.Checked)
             {
                 case true:
@@ -48,11 +50,14 @@ The design of this form allows a connection string with the Failover Partner set
                 default:
                     strconn = @"Data Source=ONPNTRC0;Initial Catalog=AdventureWorks;Integrated Security=True;";
                     break;
-            }</pre>
+            }
+```
+
 
 The remaining code in the form handles loading the grid and providing a notification, message box, of the current connection string being used.
 
-<pre>SqlConnection conn = new SqlConnection(strconn);
+```csharp
+SqlConnection conn = new SqlConnection(strconn);
             SqlDataAdapter da = new SqlDataAdapter("select TOP 100 * from Sales.SalesOrderHeader", strconn);
             SqlCommandBuilder cmd = new SqlCommandBuilder(da);
             DataTable dt = new DataTable();
@@ -74,7 +79,9 @@ The remaining code in the form handles loading the grid and providing a notifica
                 conn.Close();
                 dt.Dispose();
                 da.Dispose();
-            }</pre>
+            }
+```
+
 
 This code is not complex and better methods may exist.  For demonstration purposes, this code will help us see the Failover Partner usage in action.
 

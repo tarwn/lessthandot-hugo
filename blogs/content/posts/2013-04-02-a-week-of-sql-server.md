@@ -3,6 +3,7 @@ title: A Week of SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-04-02T19:46:00+00:00
+ID: 2058
 excerpt: 'April 6th starts a week of plenty of great SQL Server content.  Much of which is being handed over to all that attend for free in the form of SQL Saturdays.  If you are near the Chicago, IL, Madison, WI areas, make sure you take advantage of the followi&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/a-week-of-sql-server/
 views:

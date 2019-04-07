@@ -3,6 +3,7 @@ title: Row Overflow Pages – Index Tuning
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-06-28T10:06:00+00:00
+ID: 1657
 excerpt: 'In SQL Server 2005 to 2012, row limits took on a slightly new limit expectation when variable length data types were used: varchar, nvarchar, varbinary, sql_variant or CLR.  Essentially, this is done by the addition of a large object page: Row Overflow&hellip;'
 url: /index.php/datamgmt/dbadmin/performance-impact-of-row-overflow/
 views:
@@ -17,8 +18,10 @@ categories:
 ---
 In SQL Server 2005 to 2012, row limits took on a slightly new limit expectation when variable length data types were used: varchar, nvarchar, varbinary, sql\_variant or CLR. Essentially, this is done by the addition of a large object page: Row Overflow Pages or pages in the ROW\_OVERFLOW\_DATA allocation unit. The row overflow page type allows a row to exceed the 8060 byte row limitation by performing exactly what the name implies by extending the row into an overflow page. In order to accomplish this, a 24 byte pointer is retained on the original pages which still reside in the IN\_ROW_DATA allocation unit. This is also the same when multiple row overflow pages are introduced. The row overflow pages can be another factor when indexing and reviewing existing execution plans. The end result should be to generate a good execution plan while bringing in as few pages as needed to fulfill the needs of the transaction. 
 
-<pre>CREATE TABLE SpanOverFlow (COL1 VARCHAR(8000),COL2 VARCHAR(8000),COL3 VARCHAR(8000),COL4 VARCHAR(8000),COL5 VARCHAR(8000),COL6 VARCHAR(8000),COL7 VARCHAR(8000))
-GO</pre>
+sql
+CREATE TABLE SpanOverFlow (COL1 VARCHAR(8000),COL2 VARCHAR(8000),COL3 VARCHAR(8000),COL4 VARCHAR(8000),COL5 VARCHAR(8000),COL6 VARCHAR(8000),COL7 VARCHAR(8000))
+GO
+```
 
 _Listing 1_
 
@@ -28,8 +31,10 @@ In listing 2, the insert statement greatly exceeds the 8060 byte row limit by 39
 
  
 
-<pre>INSERT INTO SpanOverFlow SELECT REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000)
-GO</pre>
+sql
+INSERT INTO SpanOverFlow SELECT REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000)
+GO
+```
 
 _Listing 2_
 
@@ -39,7 +44,10 @@ To review the current pages for a table, including the row overflow pages, the u
 
  
 
-<pre>DBCC IND('QTuner','SpanOverFlow',1)</pre>
+sql
+DBCC IND('QTuner','SpanOverFlow',1)
+```
+
 
 _Listing 3_
 
@@ -51,14 +59,16 @@ Another, more simplistic method using the DMV (Dynamic Management View) sys.dm\_
 
  
 
-<pre>SELECT 
+sql
+SELECT 
 	object_name(object_id),
 	alloc_unit_type_desc,
 	avg_page_space_used_in_percent,
 	record_count,
 	min_record_size_in_bytes,
 	max_record_size_in_bytes
-FROM sys.dm_db_index_physical_stats(DB_ID(N'QTuner'), OBJECT_ID(N'dbo.SpanOverFlow'), NULL, NULL , 'DETAILED');</pre>
+FROM sys.dm_db_index_physical_stats(DB_ID(N'QTuner'), OBJECT_ID(N'dbo.SpanOverFlow'), NULL, NULL , 'DETAILED');
+```
 
 _Listing 4_
 
@@ -74,11 +84,13 @@ When row overflow pages are created, there is a small amount of overhead that wi
 
 For example, the query in listing 5 shows the creation of a basic table containing a primary key used as the clustered index and 2 more columns that potentially could cause an overflow page to be created.
 
-<pre>IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'OverFlowPages')
+sql
+IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'OverFlowPages')
   BEGIN
 	DROP TABLE OverFlowPages
   END	
-CREATE TABLE OverFlowPages (ID INT IDENTITY(1,1) PRIMARY KEY,BadUseVarcharOne VARCHAR(5000),BadUseVarcharTwo VARCHAR(5000))</pre>
+CREATE TABLE OverFlowPages (ID INT IDENTITY(1,1) PRIMARY KEY,BadUseVarcharOne VARCHAR(5000),BadUseVarcharTwo VARCHAR(5000))
+```
 
 _Listing 5_
 
@@ -88,7 +100,10 @@ To show what we’ve discussed already regarding when a row overflow page would 
 
  
 
-<pre>INSERT INTO OverFlowPages SELECT REPLICATE('0',5000),REPLICATE('0',3000)</pre>
+sql
+INSERT INTO OverFlowPages SELECT REPLICATE('0',5000),REPLICATE('0',3000)
+```
+
 
 _Statsitics IO: Table &#8216;OverFlowPages&#8217;. Scan count 0, logical reads 6, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
@@ -102,9 +117,11 @@ Further investigation of this table is done by using listing 7. This will insert
 
  
 
-<pre>DECLARE @STR DATETIME = GETDATE()
+sql
+DECLARE @STR DATETIME = GETDATE()
 INSERT INTO OverFlowPages SELECT REPLICATE('0',5000),REPLICATE('0',3000)
-SELECT DATEDIFF(ms,@STR,GETDATE())</pre>
+SELECT DATEDIFF(ms,@STR,GETDATE())
+```
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-149.png?mtime=1340765934"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-149.png?mtime=1340765934" width="624" height="47" /></a>
@@ -120,9 +137,11 @@ To see if a performance impact is made by the introduction of an overflow page c
 
  
 
-<pre>DECLARE @STR DATETIME = GETDATE()
+sql
+DECLARE @STR DATETIME = GETDATE()
 INSERT INTO OverFlowPages SELECT REPLICATE('0',5000),REPLICATE('0',4000)
-SELECT DATEDIFF(ms,@STR,GETDATE())</pre>
+SELECT DATEDIFF(ms,@STR,GETDATE())
+```
 
 _Listing 8_
 
@@ -132,7 +151,10 @@ The overall duration is the same even when we exceed the row size and introduce 
 
  
 
-<pre>SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 1</pre>
+sql
+SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 1
+```
+
 
 _Listing 9_
 
@@ -146,7 +168,10 @@ As shown above, the statistics and actual execution plan that were generated fro
 
  
 
-<pre>SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 50</pre>
+sql
+SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 50
+```
+
 
 _Listing 10_
 
@@ -166,13 +191,19 @@ Reducing the IO for this situation is usually done before the situation arises w
 
  
 
-<pre>CREATE NONCLUSTERED INDEX IDX_COVERING_ASC ON OverFlowPages (ID) INCLUDE (BadUseVarcharOne)</pre>
+sql
+CREATE NONCLUSTERED INDEX IDX_COVERING_ASC ON OverFlowPages (ID) INCLUDE (BadUseVarcharOne)
+```
+
 
 _Listing 11_
 
  __
 
-<pre>SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 50</pre>
+sql
+SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 50
+```
+
 
 _Listing 12_
 
@@ -194,7 +225,10 @@ This was a specific situation and query given a fairly basic table.  In the cas
 
  
 
-<pre>SELECT BadUseVarcharOne FROM OverFlowPages WITH (INDEX=IDX_COVERING_ASC) WHERE ID = 50</pre>
+sql
+SELECT BadUseVarcharOne FROM OverFlowPages WITH (INDEX=IDX_COVERING_ASC) WHERE ID = 50
+```
+
 
 _Listing 14_
 

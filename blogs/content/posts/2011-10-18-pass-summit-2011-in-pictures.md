@@ -3,6 +3,7 @@ title: 'PASS Summit 2011: A Picture Book'
 author: Jes Borland
 type: post
 date: 2011-10-18T17:22:00+00:00
+ID: 1350
 excerpt: "A first-time attendee and first-time speaker's view of PASS Summit 2011."
 url: /index.php/datamgmt/dbprogramming/pass-summit-2011-in-pictures/
 views:

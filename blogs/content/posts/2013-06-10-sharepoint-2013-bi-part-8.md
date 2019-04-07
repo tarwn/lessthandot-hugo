@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 8 – Verifying Power
 author: Koen Verbeeck
 type: post
 date: 2013-06-10T12:08:00+00:00
+ID: 2099
 excerpt: 'After configuring SharePoint in the part 7, we will now verify if the configuration was successful and if everything works correctly. The verification process is described in the following MSDN article: Verify a PowerPivot for SharePoint Installation. F&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sharepoint-2013-bi-part-8/
 views:

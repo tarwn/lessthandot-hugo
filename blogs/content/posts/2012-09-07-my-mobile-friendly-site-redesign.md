@@ -3,6 +3,7 @@ title: My Mobile-Friendly Site Redesign
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-09-07T13:01:00+00:00
+ID: 1707
 excerpt: I built my first website for the NCSA Mosaic browser. A lot has changed since then, and the challenges we had with the original browser wars are upon us again as we try and build suites that work equally well on a variety of mobile phones, tablets, and the desktops that originally gave us so much trouble.
 url: /index.php/webdev/webdesigngraphicsstyling/my-mobile-friendly-site-redesign/
 views:
@@ -41,15 +42,16 @@ As the available screen real estate gets larger, the logo size increases, the nu
 
 While my site doesn&#8217;t have a lot of functionality, achieving the layout changes and addition of features at the largest sizes was still a nice challenge. The key to the site is the CSS media queries that alter the visibility of elements and areas, combined with some javascript to load in larger images or additional elements when relevant. In the event that a browser doesn&#8217;t support media queries and javascript, they will receive the smallest possible layout. Though there are workarounds, I purposefully left the IE8/IE7 layout in this mode, which would also be used for most mobile browsers.
 
-If you load the site in the secondary window and drag the width around, you will be able to see the transitions: <a href="http://www.tiernok.com" target="_blank">http://www.tiernok.com</a>
+If you load the site in the secondary window and drag the width around, you will be able to see the transitions: <a href="http://tiernok.com" target="_blank">http://tiernok.com</a>
 
 ### Images
 
 I cheated a bit on images. Any image with the &#8220;imglow&#8221; CSS class will be hidden above 480 px screen width and replaced with ones that with a class &#8220;imghi&#8221;. Since many small browsers would load the large image even if it is hidden, I put the actual image source in a data attribute and use a bit of javascript to populate the src value.
 
-`<br />
+<code lang="html"><br />
 <img src="_n_images/logo_sm.png" alt="Eli Weinstock-Herman | Tarwn" border="0" class="imglow" /><br />
-<img data-fullsrc="_n_images/logo.png" alt="Eli Weinstock-Herman | Tarwn" border="0" class="imghi" /><br />`
+<img data-fullsrc="_n_images/logo.png" alt="Eli Weinstock-Herman | Tarwn" border="0" class="imghi" /><br />
+</code>
 
 The social images at the top of the screen have classes that define whether they are available for small resolution or not and display at half resolution in smaller screens. These don&#8217;t load dynamically at larger size, so all 4 will load on browsers that load hidden images.
 
@@ -97,8 +99,8 @@ Currently a mobile device without javascript will load about 83KB of content (ob
 
 Overall I am very happy with it. The size is usable at every resolution I try and this method doesn&#8217;t rely on the client-side user agent. Additional functionality would be easy to add, as I could use feature detection to add functionality only if the end user&#8217;s browser supported it, regardless of the user agent string. I&#8217;m very happy with the result.
 
- [1]: http://www.tiernok.com/LTDBlog/website/SmallPhone.png
- [2]: http://www.tiernok.com/LTDBlog/website/LargePhone.png
- [3]: http://www.tiernok.com/LTDBlog/website/SmallBrowser.png
- [4]: http://www.tiernok.com/LTDBlog/website/LargeBrowser.png
+ [1]: http://tiernok.com/LTDBlog/website/SmallPhone.png
+ [2]: http://tiernok.com/LTDBlog/website/LargePhone.png
+ [3]: http://tiernok.com/LTDBlog/website/SmallBrowser.png
+ [4]: http://tiernok.com/LTDBlog/website/LargeBrowser.png
  [5]: http://html5boilerplate.com/

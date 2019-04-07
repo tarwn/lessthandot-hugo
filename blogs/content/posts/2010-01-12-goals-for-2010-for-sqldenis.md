@@ -3,6 +3,7 @@ title: 2010 Goals For SQLDenis
 author: SQLDenis
 type: post
 date: 2010-01-12T17:14:04+00:00
+ID: 670
 url: /index.php/itprofessionals/ethicsit/goals-for-2010-for-sqldenis/
 views:
   - 3807

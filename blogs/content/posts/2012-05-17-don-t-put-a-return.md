@@ -3,6 +3,7 @@ title: Don’t put a return statement in a stored procedure inside a transaction
 author: SQLDenis
 type: post
 date: 2012-05-18T00:57:00+00:00
+ID: 1628
 excerpt: |
   I answered the following question earlier this evening: Return an output parameter from SQL Server via a stored procedure and c#
   
@@ -31,7 +32,8 @@ I answered the following question earlier this evening: [Return an output parame
 
 Here is the proc in question, take a good look at it, do you see the problem?
 
-<pre>ALTER PROCEDURE [dbo].[Insert_UnknownCustomer_Quote_Document]
+sql
+ALTER PROCEDURE [dbo].[Insert_UnknownCustomer_Quote_Document]
 -- Add the parameters for the stored procedure here
 @NewDocumentFileName nvarchar(100),
 @NewDocumentWordCount int,
@@ -72,11 +74,13 @@ END TRY
 BEGIN CATCH
 ROLLBACK TRANSACTION
 PRINT 'Transaction rolled back.'
-END CATCH</pre>
+END CATCH
+```
 
 Here is a simplified version
 
-<pre>CREATE proc prTest
+sql
+CREATE proc prTest
 as
 DECLARE @id int
 
@@ -87,7 +91,8 @@ BEGIN TRAN
 
 	RETURN @id
 COMMIT TRAN
-GO</pre>
+GO
+```
 
 Do you see it?
 
@@ -95,12 +100,14 @@ Let&#8217;s see what happens when you try running it
 
 First create this table
 
-<pre>CREATE TABLE TestID (id int identity)
-go</pre>
-
+sql
+CREATE TABLE TestID (id int identity)
+go
+```
 Here is the proc again
 
-<pre>CREATE proc prTest
+sql
+CREATE proc prTest
 as
 DECLARE @id int
 
@@ -111,13 +118,16 @@ BEGIN TRAN
 
 	RETURN @id
 COMMIT TRAN
-GO</pre>
+GO
+```
 
 Go ahead and execute it
 
-<pre>DECLARE @id int
+sql
+DECLARE @id int
 EXEC @id = prTest
-SELECT @id</pre>
+SELECT @id
+```
 
 _Msg 266, Level 16, State 2, Procedure prTest, Line 0
   
@@ -127,7 +137,9 @@ So the stored procedure blew up, no big deal right?
   
 Open a new query window, run this
 
-<pre>SELECT * FROM TestID</pre>
+sql
+SELECT * FROM TestID
+```
 
 Take a note of the SPID in the status bar next to the username
 
@@ -135,9 +147,11 @@ As you can see the query is stuck
   
 Now open yet another window and execute this
 
-<pre>SELECT blocking_session_id,* 
+sql
+SELECT blocking_session_id,* 
 FROM sys.dm_exec_requests
-WHERE blocking_session_id <&gt; 0</pre>
+WHERE blocking_session_id <> 0
+```
 
 You will see that the SPID of the session where the select is running is returned by this query
 
@@ -147,7 +161,8 @@ Go back to the first query window and either run COMMIT or ROLLBACK, the query w
 
 In the stored procedure, the return statement should come after the commit, it should look like this
 
-<pre>ALTER proc prTest
+sql
+ALTER proc prTest
 as
 DECLARE @id int
 
@@ -159,13 +174,16 @@ BEGIN TRAN
 
 COMMIT TRAN
 RETURN @id
-GO</pre>
+GO
+```
 
 Now, you won&#8217;t get an error or a hanging transaction. Run it again
 
-<pre>DECLARE @id int
+sql
+DECLARE @id int
 EXEC @id = prTest
-SELECT @id</pre>
+SELECT @id
+```
 
 It works now
 
@@ -173,7 +191,8 @@ In general, I don&#8217;t like to use return statements to return IDs, I like to
 
 Here is what the proc would look like with an OUTPUT parameter
 
-<pre>ALTER proc prTest @id int OUTPUT
+sql
+ALTER proc prTest @id int OUTPUT
 AS
 
 BEGIN TRAN
@@ -181,13 +200,16 @@ BEGIN TRAN
 
 	SELECT @id  =SCOPE_IDENTITY()
 COMMIT TRAN
-GO</pre>
+GO
+```
 
 Here is how you call it
 
-<pre>DECLARE @id int
+sql
+DECLARE @id int
 EXEC  prTest @id output
-SELECT @id</pre>
+SELECT @id
+```
 
 Do you use a return statement to return identity values or do you use output parameters or do you use a plain vanilla SELECT statement? Leave me a comment and let me know
 

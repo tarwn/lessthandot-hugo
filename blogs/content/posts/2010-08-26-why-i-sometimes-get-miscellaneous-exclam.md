@@ -3,6 +3,7 @@ title: Why I sometimes get miscellaneous exclamation marks (!) in SQL generated 
 author: kaht
 type: post
 date: 2010-08-26T17:28:06+00:00
+ID: 889
 excerpt: |
   Using SQL server to generate automatic emails, I've noticed from time to time that the emails will miscellaneously contain exclamations throughout the mail.
   
@@ -20,7 +21,8 @@ Using SQL server to generate automatic emails, I&#8217;ve noticed from time to t
 
 Here&#8217;s an example to replicate the situation. We&#8217;ll generate a table with multiple rows of the alphabet and email the contents:
 
-<pre>declare @t table (letters varchar(100))
+sql
+declare @t table (letters varchar(100))
 declare @counter int
 declare @string varchar(8000)
 set @counter = 0
@@ -35,7 +37,7 @@ while (@counter < 128) begin
    set @counter = @@rowcount
 end
 
-select @string = @string + letters + '<br&gt;'
+select @string = @string + letters + '<br>'
 from @t
 
 select @string
@@ -49,7 +51,8 @@ exec @hr = sp_OASetProperty @mailObj, 'HTMLBody', @string
 exec @hr = sp_OASetProperty @mailObj, 'Subject', 'test'
 exec @hr = sp_OASetProperty @mailObj, 'To', 'recipient@server.com'
 exec @hr = sp_OAMethod @mailObj, 'Send', NULL
-exec @hr = sp_OADestroy @mailObj</pre>
+exec @hr = sp_OADestroy @mailObj
+```
 
 This should kick out the alphabet repeated 256 times, with a <br> tag after each alphabet. By examining the result in query analyzer, it should look just fine. However, when you go check the email that got sent, you&#8217;ll find parts of the text that look like this:
 
@@ -67,7 +70,8 @@ Fortunately, the solution is fairly simple. Microsoft Outlook seems to insert th
 
 So, stick a line feed after each alphabet and the exclamation marks will disappear from the email:
 
-<pre>select @string = @string + letters + '<br&gt;' + char(10)
-from @t</pre>
-
+sql
+select @string = @string + letters + '<br>' + char(10)
+from @t
+```
 Piece of cake B)

@@ -3,6 +3,7 @@ title: Can’t depend on sp_depends? Try using sp_refreshsqlmodule
 author: SQLDenis
 type: post
 date: 2009-06-26T14:17:48+00:00
+ID: 484
 url: /index.php/datamgmt/datadesign/can-t-depend-on-sp_depends-try-using-sp_/
 views:
   - 16218
@@ -26,14 +27,18 @@ let&#8217;s take a look at how that works
 
 First create this awesome stored procedure
 
-<pre>create procedure prBla
+sql
+create procedure prBla
 as
 select * from Blah 
-go</pre>
+go
+```
 
 Now execute sp_depends
 
-<pre>exec sp_depends 'Blah'</pre>
+sql
+exec sp_depends 'Blah'
+```
 
 Server: Msg 15009, Level 16, State 1, Procedure sp_depends, Line 25
   
@@ -41,22 +46,30 @@ The object &#8216;Blah&#8217; does not exist in database &#8216;tempdb&#8217; or
 
 So that tells us that the table Blah does not exist. Fine, what happens if we run sp_depends for the proc?
 
-<pre>exec sp_depends 'prBla'</pre>
+sql
+exec sp_depends 'prBla'
+```
 
 Object does not reference any object, and no objects reference it.
 
 That makes sense since the table does not exist. Let&#8217;s create this table
 
-<pre>create table Blah
-(SomeCol int)</pre>
+sql
+create table Blah
+(SomeCol int)
+```
 
 Now run sp_depends again for the table and the project
 
-<pre>exec sp_depends 'Blah'</pre>
+sql
+exec sp_depends 'Blah'
+```
 
 Object does not reference any object, and no objects reference it.
 
-<pre>exec sp_depends 'prBla'</pre>
+sql
+exec sp_depends 'prBla'
+```
 
 Object does not reference any object, and no objects reference it.
 
@@ -64,13 +77,19 @@ Okay so SQL server knows that the table Blah has been created but it still does 
 
 Will executing the proc change that perhaps?
 
-<pre>exec  prBla</pre>
+sql
+exec  prBla
+```
 
-<pre>exec sp_depends 'Blah'</pre>
+sql
+exec sp_depends 'Blah'
+```
 
 Object does not reference any object, and no objects reference it.
 
-<pre>exec sp_depends 'prBla'</pre>
+sql
+exec sp_depends 'prBla'
+```
 
 Object does not reference any object, and no objects reference it.
 
@@ -78,11 +97,15 @@ Nope, no such luck, that didn&#8217;t do anything
   
 Now execute the sp_refreshsqlmodule proc
 
-<pre>exec sp_refreshsqlmodule 'prBla'</pre>
+sql
+exec sp_refreshsqlmodule 'prBla'
+```
 
 Execute sp_depends again
 
-<pre>exec sp_depends 'Blah'</pre>
+sql
+exec sp_depends 'Blah'
+```
 
 In the current database, the specified object is referenced by the following:
 
@@ -93,7 +116,9 @@ Yep, now it is showing us that table Blah is used by the stored proc prBla
   
 Will it work when we run sp_depends for the stored procedure?
 
-<pre>exec sp_depends 'prBla'</pre>
+sql
+exec sp_depends 'prBla'
+```
 
 In the current database, the specified object references the following:
 
@@ -104,15 +129,17 @@ And as you can see it also shows that the table is used..like Borat would say &#
 
 Clean up by dropping these sample objects
 
-<pre>drop table Blah
+sql
+drop table Blah
 go
 drop procedure prBla
-go</pre>
+go
+```
 
 
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DataDesign/what-is-deferred-name-resolution-and-why
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

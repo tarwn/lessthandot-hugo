@@ -3,6 +3,7 @@ title: 'SQL Server Management: Compatibility Levels'
 author: Kevin Conan
 type: post
 date: 2013-03-28T11:12:00+00:00
+ID: 2054
 excerpt: 'So you think compatibility levels will solve all your problems?  Think again!'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sql-server-management-compatibility-levels/
 views:

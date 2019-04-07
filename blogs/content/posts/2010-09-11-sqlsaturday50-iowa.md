@@ -3,6 +3,7 @@ title: SQL Saturday Iowa
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-09-11T14:09:16+00:00
+ID: 898
 excerpt: 'Last year I attended SQL Saturday in Iowa and enjoyed it immensely.  I was glad to see a follow up for this year coming this Friday, September 18th.  This year I’m very happy to announce that I will be attending Iowa’s second SQL Saturday and also contributing as a speaker.  If you have never been to a SQL Saturday event, I highly recommend attending this one or another in your area.  These events are free and organized by people just like you and I.'
 url: /index.php/datamgmt/datadesign/sqlsaturday50-iowa/
 views:

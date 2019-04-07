@@ -3,6 +3,7 @@ title: Upgrading the DBA
 author: ptheriault
 type: post
 date: 2010-11-18T12:00:17+00:00
+ID: 951
 excerpt: 'It’s that time of year again to make sure we spend all the money in the training budget. Use it or lose it right!  So, after a quick look at the upcoming projects on the white board, I decided it was time to upgrade my skill set in the area of BI.  I’ve&hellip;'
 url: /index.php/datamgmt/datadesign/upgrading-the-dba/
 views:

@@ -3,6 +3,7 @@ title: 'SQL University – SQL Server Reporting Services: Exploring the RSReport
 author: Jes Borland
 type: post
 date: 2011-02-03T12:46:00+00:00
+ID: 1009
 excerpt: |
   SQL Server 2008 R2 
   

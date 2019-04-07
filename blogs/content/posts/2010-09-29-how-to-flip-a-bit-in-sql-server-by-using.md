@@ -3,6 +3,7 @@ title: How to flip a bit in SQL Server by using the Bitwise NOT operator
 author: SQLDenis
 type: post
 date: 2010-09-29T15:30:45+00:00
+ID: 913
 url: /index.php/datamgmt/dbprogramming/how-to-flip-a-bit-in-sql-server-by-using/
 views:
   - 14123
@@ -35,14 +36,15 @@ In a language like C# you can use ! for a bool to make it become true if it was 
 
 So if you run this
 
-<pre>bool a = true;
+```csharp
+bool a = true;
 a = !a;
 
 Console.WriteLine(a.ToString());
 a = !a;
 Console.WriteLine(a.ToString());
-Console.ReadLine();</pre>
-
+Console.ReadLine();
+```
 The output will be
 
 False
@@ -51,8 +53,10 @@ True
 
 How can you do this in SQL Server? It is pretty easy, take a look
 
-<pre>select ~ CONVERT(bit,0)
-select ~ CONVERT(bit,1)</pre>
+sql
+select ~ CONVERT(bit,0)
+select ~ CONVERT(bit,1)
+```
 
 The ~ symbol is the Bitwise NOT operator, here is what books on line has to say about the Bitwise NOT operator.
 
@@ -60,9 +64,10 @@ The ~ symbol is the Bitwise NOT operator, here is what books on line has to say 
 
 Let&#8217;s take a look at another example. What do you think will happen here?
 
-<pre>select ~ CONVERT(tinyint,0)
-select ~ CONVERT(tinyint,1)</pre>
-
+sql
+select ~ CONVERT(tinyint,0)
+select ~ CONVERT(tinyint,1)
+```
 That actually returns
   
 255
@@ -83,8 +88,10 @@ When you have 1 all bits are turned off except for the first bit, when you flip 
 
 If you want to use tinyint or int you can use the following code
 
-<pre>select  CONVERT(tinyint,0) ^ 1 as [tinyint], 0^1 as [int]
-select  CONVERT(tinyint,1) ^ 1 as [tinyint], 1^1 as [int]</pre>
+sql
+select  CONVERT(tinyint,0) ^ 1 as [tinyint], 0^1 as [int]
+select  CONVERT(tinyint,1) ^ 1 as [tinyint], 1^1 as [int]
+```
 
 The ^ operator is the Bitwise Exclusive OR operator. Here is what books on line has to say about Bitwise Exclusive OR
 
@@ -118,10 +125,12 @@ _If both bits are 0 or both bits are 1, the bit in the result is cleared to a va
 
 So in the end if you want to flip a bit use the Bitwise NOT operator
 
-<pre>select ~ CONVERT(bit,0)
-select ~ CONVERT(bit,1)</pre>
+sql
+select ~ CONVERT(bit,0)
+select ~ CONVERT(bit,1)
+```
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

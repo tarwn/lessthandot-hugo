@@ -3,6 +3,7 @@ title: What is a good developer?
 author: chopstik
 type: post
 date: 2010-08-05T22:43:23+00:00
+ID: 858
 url: /index.php/itprofessionals/professionaldevelopment/what-is-a-good-developer/
 views:
   - 4460

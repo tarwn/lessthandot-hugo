@@ -3,6 +3,7 @@ title: SQL Community Services – Resources everywhere!
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-18T16:37:53+00:00
+ID: 824
 excerpt: 'Welcome to the last day of Community Service week for SQL University.  Before we get started, I’d like to say it has been nothing short of a pleasure writing the last two weeks for SQL University.  All of the discussions and topics we a lot of fun to go over and I’m looking forward to hearing from everyone how they were able to use them.  Don’t forget to pass SQL University and the community itself on to the person to your side that may not be aware of them.  Let’s keep building this community together!'
 url: /index.php/itprofessionals/ethicsit/sql-help-and-resources/
 views:

@@ -3,6 +3,7 @@ title: '#meme15 February 2012 – LinkedIn'
 author: Jes Borland
 type: post
 date: 2012-02-15T11:52:00+00:00
+ID: 1533
 excerpt: In a discussion at work this week, we agreed that no one knows how to use LinkedIn – even LinkedIn.
 url: /index.php/itprofessionals/professionaldevelopment/meme15-february-2012-linkedin/
 views:

@@ -3,6 +3,7 @@ title: WebMatrix – Routing and Magic Pages
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-07-07T09:42:00+00:00
+ID: 1243
 excerpt: "So I've been working on a practice site using WebMatrix. The basic premise was that I would create a site that had some similar functionality to Delicious to help me track the various articles, podcasts, books, and so on. This would also give me something practical to work on as I try to get a handle on this whole WebMatrix thing."
 url: /index.php/webdev/serverprogramming/aspnet/webmatrix-routing-and-magic-pages/
 views:
@@ -70,50 +71,53 @@ Ok, so this part I&#8217;m less enamored of, but there are some good parts. Ther
 
 Layout files allow us to define a common layout that we want to apply to our website, basically a template or master file. Inside the layout file we can define where we want the main body to be rendered (the file that was requested), as well as additional required or optional sections the original page needs to provide. A minimal layout file would look something like this:
 
-<pre><!DOCTYPE html&gt;
-<html&gt;
-  <head&gt;
-	<title&gt; @PageData["Title"] </title&gt;
-  </head&gt;
-  <body&gt;
+```cshtml
+<!DOCTYPE html>
+<html>
+  <head>
+	<title> @PageData["Title"] </title>
+  </head>
+  <body>
 	@RenderPage("~/Shared/_Header.cshtml")
-	<div id="sidepane"&gt;
+	<div id="sidepane">
 		@RenderSection("SidePane", required: false)
-	</div&gt;
-	<div id="main"&gt;
+	</div>
+	<div id="main">
 	  @RenderBody()
-	</div&gt;
-	</div&gt;
+	</div>
+	</div>
 	@RenderPage("~/Shared/_Footer.cshtml")
-</body&gt;
-</html&gt;</pre>
-
+</body>
+</html>
+```
 A basic page that includes a header file, an optional section named &#8220;SidePane&#8221;, and body of the original page, and finally an included footer file. In this sample I am keeping my \_Header, \_Footer, and _MainLayout files in a subfolder called Shared. To use this layout, I could make a sample page like this:
 
-<pre>@{
+```cshtml
+@{
 Layout = "~/Shared/_MainLayout.cshtml";
 PageData["Title"] = "My Awesome Hello World";
 }
-<b&gt;<blink&gt;This stuff is in my main body, Hello!</blink&gt;</b&gt;</pre>
-
+<b><blink>This stuff is in my main body, Hello!</blink></b>
+```
 And if I wanted to both show off the presence of any extra URL data you put in the URL as well as the optional sidepane?
 
-<pre>@{
+```cshtml
+@{
 Layout = "~/Shared/_MainLayout.cshtml";
 PageData["Title"] = "My Awesome Hello World";
 }
-<b&gt;<blink&gt;This stuff is in my main body, Hello!</blink&gt;</b&gt;
+<b><blink>This stuff is in my main body, Hello!</blink></b>
 
 @section SidePane{
-	@if(UrlData.Count &gt; 0){
-        <text&gt;
-		<marquee&gt;Bam!</marquee&gt;
-        First one: @UrlData[0]<br/&gt;
-        All of them: @(String.Join(",",UrlData))<br/&gt;
-        </text&gt;
+	@if(UrlData.Count > 0){
+        <text>
+		<marquee>Bam!</marquee>
+        First one: @UrlData[0]<br/>
+        All of them: @(String.Join(",",UrlData))<br/>
+        </text>
 	}
-}</pre>
-
+}
+```
 Yeah, I just used a blink and a marquee, that&#8217;s how exciting this part is. You&#8217;ll notice I also put a value in the PageData dictionary at the top of the page, which was then regurgitated by the layout and used as the title. When files are being rendered or included, they receive a copy of the PageData and can access the values we squirreled away. Handy.
 
 There&#8217;s also a Page dynamic property in WebBasePage that we can assign stuff to. So far that hasn&#8217;t blown up in my face.
@@ -141,12 +145,13 @@ _And if you are me you will comment them out when you find out your webhosts mac
 
 PageStart is trickier in a couple ways. First, PageStart is a bit of a misnomer. It does execute at the start of the page, but it can also be convinced to encapsulate the execution of the requested page, running both before and after the main page is rendered. 
 
-<pre>@{
-    <b&gt;I'm Before</b&gt;
+```cshtml
+@{
+    <b>I'm Before</b>
     RunPage();
-    <text&gt;I'm after</text&gt;
-}</pre>
-
+    <text>I'm after</text>
+}
+```
 If you specifically include the RunPage() line, then your page will be run in between the code above and below it. If you don&#8217;t include this directive then the entire PageStart file will be run before calling the requested page.
 
 The next trick is that \_PageStart runs in a nested sequence from the root level to the level of the file that has been requested. Basically the engine traverses each directory from the root to the folder your requested file is in and, if a \_PageStart file is present, executes it. It&#8217;s similar to those nesting dolls (or recursion, oohh).

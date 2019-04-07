@@ -3,6 +3,7 @@ title: Speaking at SQL Server Days 2014
 author: Koen Verbeeck
 type: post
 date: 2014-07-04T11:43:36+00:00
+ID: 2810
 url: /index.php/uncategorized/speaking-at-sql-server-days-2014/
 views:
   - 6947

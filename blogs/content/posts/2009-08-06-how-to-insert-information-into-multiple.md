@@ -3,6 +3,7 @@ title: How to insert information into multiple related tables and return ID usin
 author: Naomi Nosonovsky
 type: post
 date: 2009-08-07T00:22:54+00:00
+ID: 533
 excerpt: |
   In the ASP.NET forums I'm frequent the question of inserting information into multiple related tables is asked very often. I want to share my solution of this problem. The answer is based on this thread ASP.NET thread
   
@@ -26,7 +27,8 @@ You can also review this article [Retrieving the Just-Inserted ID of an IDENTITY
 
 First, I show the whole stored procedure code. Don&#8217;t be surprised about the non-normalized data, this is what we were dealing with.
 
-<pre>/****** Object:  StoredProcedure [dbo].[PersonInsert]    Script Date: 06/25/2008 15:38:00 ******/
+sql
+/****** Object:  StoredProcedure [dbo].[PersonInsert]    Script Date: 06/25/2008 15:38:00 ******/
         SET ANSI_NULLS ON
         GO
         SET QUOTED_IDENTIFIER ON
@@ -472,11 +474,13 @@ AS
                         RETURN @@ERROR
                 END
                 GO
-                                </pre>
+                                
+```
 
 And the way to grab the ID of newly inserted person using SQLDataSource:
 
-<pre>#region DataSource Inserted
+```C#
+#region DataSource Inserted
 protected void DataSource_Inserted(object sender, SqlDataSourceStatusEventArgs e) 
 {
 
@@ -487,8 +491,9 @@ else
 
 { this.NewPersonID = 0; } 
 }
-#endregion</pre>
+#endregion
 
+```
 Please also see [How to return Error Messages from the SQL Server to the application][5] for more discussion about actual implementation of this SP in the web application.
 
 I want to also note, that in SQL Server 2008 and up we can simplify the insert into 2 tables by using [composable DML][6].

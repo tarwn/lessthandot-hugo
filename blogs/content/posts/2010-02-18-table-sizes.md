@@ -3,6 +3,7 @@ title: Table sizes
 author: niikola
 type: post
 date: 2010-02-18T15:21:52+00:00
+ID: 706
 excerpt: |
   I do not know if there is already code for table sizes (as used in SQL Server 2008 reports) but what I've seen on the net people are using cursors and  temporary tables (completely unnecessary). 
   
@@ -25,9 +26,10 @@ I do not know if there is already code for table sizes (as used in SQL Server 20
   
 > In order to update table sizes in sys.dm\_db\_partition_stats you can execute next DBCC (all tables for current database):
   
-> `DBCC UPDATEUSAGE (0) WITH NO_INFOMSGS, COUNT_ROWS` 
+> <code lang="SQL">DBCC UPDATEUSAGE (0) WITH NO_INFOMSGS, COUNT_ROWS</code> 
 
-<pre>;WITH SpaceUsage AS 
+```SQL
+;WITH SpaceUsage AS 
 (
    SELECT s.Name + '.' + o.Name as tblName,
           case when i.index_id < 2 Then row_count else 0 end as nRows,
@@ -50,11 +52,12 @@ Select tblName as [Table Name],
        sum(Reserved-used) * 8 as [Unused(KB)]
   from SpaceUsage
  Group By tblName
- Order By [Reserved(KB)] Desc   </pre>
-
+ Order By [Reserved(KB)] Desc   
+```
 Here is a version with more details.
 
-<pre>;WITH SpaceUsage AS 
+```SQL
+;WITH SpaceUsage AS 
 (
    SELECT s.Name + '.' + o.Name as tblName,
           Case When i.index_id = 0 then 0 else 1 end as nInd,
@@ -95,4 +98,5 @@ Select tblName,
        sum(indRsvd)  * 8 as indRsvdKB
   from SpaceUsage
  Group By tblName
- Order By ReservedKB Desc  </pre>
+ Order By ReservedKB Desc  
+```

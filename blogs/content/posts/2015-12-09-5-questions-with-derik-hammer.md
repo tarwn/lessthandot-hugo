@@ -3,6 +3,7 @@ title: 5 Questions with Derik Hammer
 author: Jes Borland
 type: post
 date: 2015-12-09T22:25:00+00:00
+ID: 4278
 url: /index.php/itprofessionals/professionaldevelopment/5-questions-with-derik-hammer/
 views:
   - 3088

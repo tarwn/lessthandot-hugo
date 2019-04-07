@@ -3,6 +3,7 @@ title: 2010.. a year in stats..browsers, smartphones and windows flavors
 author: SQLDenis
 type: post
 date: 2010-12-23T12:48:07+00:00
+ID: 981
 excerpt: 'This post is about stats from hits to this website. I always find this interesting because you can get a feel of what is moving and shaking in the tech industry. Of course the stats on this site are heavily skewed towards technology and although this si&hellip;'
 url: /index.php/webdev/webdesigngraphicsstyling/2010-a-year-in-stats-browsers-smartphone/
 views:

@@ -3,6 +3,7 @@ title: What is going on with Database Mail in SQL Server
 author: SQLDenis
 type: post
 date: 2013-01-15T19:41:00+00:00
+ID: 1919
 excerpt: "Two days ago I wrote a post  Setting up SQL Server Database Mail with gmail, I showed you how to setup SQL Server Database Mail to work with a gmail account. In yesterday's post Database Mail maintenance in SQL Server we looked at some maintenance, toda&hellip;"
 url: /index.php/datamgmt/dbprogramming/what-is-going-on-with/
 views:
@@ -36,8 +37,10 @@ sysmail_mailattachments
 
 The event_type column will have the type of message for each Windows or SQL Server message returned by the Database Mail system. The types of messages are errors, warnings, informational messages, success messages, and additional internal messages. Here is for example a query that brings back the last 100 rows that were generated
 
-<pre>SELECT TOP 100 * FROM msdb.dbo.sysmail_event_log
-ORDER BY last_mod_date DESC </pre>
+sql
+SELECT TOP 100 * FROM msdb.dbo.sysmail_event_log
+ORDER BY last_mod_date DESC 
+```
 
 ## sysmail_faileditems
 
@@ -45,7 +48,9 @@ This view will hold all the messages that did not go out, sent_status will be fa
 
 To see all the failed messages, you can just execute this simple query
 
-<pre>SELECT * FROM msdb.dbo.sysmail_faileditems</pre>
+sql
+SELECT * FROM msdb.dbo.sysmail_faileditems
+```
 
 ## sysmail_sentitems
 
@@ -53,7 +58,9 @@ Database Mail will mark messages as sent when they are successfully submitted to
 
 To see all the items that were sent, you can use the following query
 
-<pre>SELECT * FROM msdb.dbo.sysmail_sentitems</pre>
+sql
+SELECT * FROM msdb.dbo.sysmail_sentitems
+```
 
 ## sysmail_unsentitems
 
@@ -69,7 +76,9 @@ The sent\_status column will be unsent if Database Mail has not attempted to sen
 
 Here is a simple query that will return all unsent items
 
-<pre>SELECT * FROM msdb.dbo.sysmail_unsentitems</pre>
+sql
+SELECT * FROM msdb.dbo.sysmail_unsentitems
+```
 
 ## sysmail_mailattachments
 
@@ -77,12 +86,16 @@ You can use the sysmail_mailattachments view to quickly see who got what attachm
 
 Here is a simple query to get you started
 
-<pre>SELECT * FROM msdb.dbo.sysmail_mailattachments</pre>
+sql
+SELECT * FROM msdb.dbo.sysmail_mailattachments
+```
 
 Of course you can also combine these views by joining on the mailitem_id. here is just one such query
 
-<pre>SELECT * FROM msdb.dbo.sysmail_mailattachments a
-JOIN msdb.dbo.sysmail_unsentitems u ON a.mailitem_id = u.mailitem_id</pre>
+sql
+SELECT * FROM msdb.dbo.sysmail_mailattachments a
+JOIN msdb.dbo.sysmail_unsentitems u ON a.mailitem_id = u.mailitem_id
+```
 
 This was just a short post showing you these five catalog views that might help you with troubleshooting Database Mail. Explore the views and incorporate them in your T-SQL library.
 

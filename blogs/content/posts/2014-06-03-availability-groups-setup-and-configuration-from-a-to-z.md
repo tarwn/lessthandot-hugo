@@ -3,6 +3,7 @@ title: Availability Groups Setup and Configuration from A to Z
 author: Ted Krueger (onpnt)
 type: post
 date: 2014-06-04T01:56:40+00:00
+ID: 2434
 url: /index.php/architect/availability-groups-setup-and-configuration-from-a-to-z/
 views:
   - 18355
@@ -459,7 +460,8 @@ If the listener was not created in the initial wizard setup, perform these steps
   1. Open SSMS 2012
   2. Execute the statement below to assign the listener name and IP to the Availability Group
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 ALTER AVAILABILITY GROUP [SQLAG]
 ADD LISTENER N'SQLAGLISTENER' (
@@ -467,8 +469,8 @@ WITH IP
 ((N'10.2.4.72', N'255.255.255.0')
 )
 , PORT=1433);
-GO</pre>
-
+GO
+```
 Note: Assign the IP as needed in this step.  This is the IP that will translate for any connection being made to the Availability Group containing all databases.
 
 ## Configure Read Routing for Read-Intent Connections
@@ -491,14 +493,15 @@ In the following configuration, the diagram illustrates the 2-node read routing 
 
 Note: Each replica requires the secondary role to be configured in a read-intent configuration.  In this configuration, the primary replica has a secondary role of read-intent.  In the case of the automatic failover to the secondary node, read-intent connections would be routed back to the secondary node.
 
-<pre>ALTER AVAILABILITY GROUP SQLAG
+sql
+ALTER AVAILABILITY GROUP SQLAG
 MODIFY REPLICA ON
 N'NODE1\SHAREPOINT2013' WITH
 (SECONDARY_ROLE (ALLOW_CONNECTIONS = READ_ONLY));
 ALTER AVAILABILITY GROUP SQLAG
 MODIFY REPLICA ON
 N'NODE1\SHAREPOINT2013' WITH
-(SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://NODE1.ONPNT.TedsDomain.com:1433'));</code&gt;
+(SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://NODE1.ONPNT.TedsDomain.com:1433'));</code>
 
 ALTER AVAILABILITY GROUP SQLAG
 MODIFY REPLICA ON
@@ -518,8 +521,8 @@ ALTER AVAILABILITY GROUP SQLAG
 MODIFY REPLICA ON
 N'NODE3\SHAREPOINT2013' WITH
 (PRIMARY_ROLE (READ_ONLY_ROUTING_LIST=('NODE1\SHAREPOINT2013','NODE3\SHAREPOINT2013')));
-GO</pre>
-
+GO
+```
 &nbsp;
 
 ## Connecting to SQL Server and the Availability Group
@@ -648,10 +651,10 @@ To make modifications to the quorum or votes (NodeWeight), use the Failover Clus
 
 [<img class="alignnone size-full wp-image-2687" src="/wp-content/uploads/2014/06/ag46.png" alt="ag46" width="624" height="99" srcset="/wp-content/uploads/2014/06/ag46.png 624w, /wp-content/uploads/2014/06/ag46-300x47.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][46]
 
-<pre>Import-Module FailoverClusters
-(Get-ClusterNode NODE4).NodeWeight=0</pre>
-
-<h2 style="margin: 2pt 0in 0pt">
+```powershell
+Import-Module FailoverClusters
+(Get-ClusterNode NODE4).NodeWeight=0
+```<h2 style="margin: 2pt 0in 0pt">
   <span style="color: #000000;font-family: Calibri Light;font-size: large">What&#8217;s next?</span>
 </h2>
 

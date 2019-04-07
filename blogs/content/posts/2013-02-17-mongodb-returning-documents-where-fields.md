@@ -3,6 +3,7 @@ title: 'MongoDB: Returning documents where fields are null or not existing'
 author: SQLDenis
 type: post
 date: 2013-02-17T16:48:00+00:00
+ID: 2004
 excerpt: |
   In a regular SQL database, you can check if a column is null by using IS NULL
   For example if you wanted to return all rows where the age is null, you would do the following
@@ -31,9 +32,11 @@ In a regular SQL database, you can check if a column is null by using IS NULL
   
 For example if you wanted to return all rows where the age is null, you would do the following
 
-<pre>SELECT * 
+```sql
+SELECT * 
 FROM SomeTable
-WHERE age IS NULL</pre>
+WHERE age IS NULL
+```
 
 In a NoSQL database it is possible that half the documents in a collection are omitted and maybe five are there with the value null. How can you know if the field is missing or has the value null?
 

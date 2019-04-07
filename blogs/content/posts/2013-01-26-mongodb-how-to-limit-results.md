@@ -3,6 +3,7 @@ title: 'MongoDB: How to limit results and how to page through results'
 author: SQLDenis
 type: post
 date: 2013-01-26T12:41:00+00:00
+ID: 1938
 excerpt: 'In this post we are going to take a look at how to limit results in MongoDB as well how to page through results. MongoDB use limit to limit the number of results return, MongoDB use skip to skip a number of records from the results set. Using limit in c&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/mongodb-how-to-limit-results/
 views:

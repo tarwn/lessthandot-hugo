@@ -3,6 +3,7 @@ title: Dynamic SQL Server connections in Reporting Services
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-12-12T12:36:53+00:00
+ID: 649
 url: /index.php/datamgmt/dbprogramming/dynamics-server-connections-in-ssrs/
 views:
   - 16730
@@ -49,7 +50,8 @@ The way this would have been more useful is if the InstanceName always shows as 
 
 To get that working we can do the following&#8230;
 
-<pre>public static string DataRowToString(DataRow dr)
+```csharp
+public static string DataRowToString(DataRow dr)
         {
             if (Convert.ToString(dr[1].ToString()) != "")
             {
@@ -59,8 +61,8 @@ return Convert.ToString(dr[0].ToString()) + "\" + Convert.ToString(dr[1].ToStrin
             {
                 return Convert.ToString(dr[0].ToString());
             }
-        }</pre>
-
+        }
+```
 The DataRowToString is called in the output parameter of Array.ConvertAll.
   
 
@@ -69,7 +71,8 @@ The full code of the class library is below.
   
 
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
@@ -101,7 +104,8 @@ return Convert.ToString(dr[0].ToString()) + "\" + Convert.ToString(dr[1].ToStrin
             }
         }
     }
-}</pre>
+}
+```
 
 To create this library yourself all you need to do is follow the steps outlined
 

@@ -3,6 +3,7 @@ title: SQL Server 2008 Service Pack 2 Released
 author: SQLDenis
 type: post
 date: 2010-09-29T14:39:45+00:00
+ID: 912
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/microsoft-sql-server-2008-service-pack-2/
 views:
   - 7284

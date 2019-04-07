@@ -3,6 +3,7 @@ title: What To Do When Your Identity Column Maxes Out
 author: Erik
 type: post
 date: 2009-03-06T22:27:51+00:00
+ID: 343
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/what-to-do-when-your-identity-column-max/
 views:
   - 13148
@@ -18,7 +19,8 @@ Not yet!
 
 You do something like this:
 
-<pre>--What's the biggest signed four-byte long:
+sql
+--What's the biggest signed four-byte long:
 --select power(convert(bigint, 2), 31) - 1
 --2147483647
  
@@ -67,7 +69,8 @@ SELECT * FROM tester
  
 -- clean up
 DROP TABLE tester
-DROP TABLE oldtester</pre>
+DROP TABLE oldtester
+```
 
 With this solution, you can keep your database going for another few years, or for about as long as it took you to fill up the positive integers. Then you&#8217;ll have to switch to bigints or a decimal data type, though I have to express my disgust for using a packed data type as a clustered index key, especially considering that compared to int or bigint, decimal always uses more bytes of storage for the same precision:
 

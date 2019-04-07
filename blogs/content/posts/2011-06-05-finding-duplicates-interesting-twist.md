@@ -3,6 +3,7 @@ title: Finding Duplicates – Interesting twist
 author: Naomi Nosonovsky
 type: post
 date: 2011-06-05T23:48:00+00:00
+ID: 1203
 excerpt: |
   A recent MSDN thread
   presented a very interesting problem - find duplicates based on any 4 of the 5 columns and eliminate the duplicates.
@@ -25,7 +26,8 @@ A recent [MSDN thread][1] presented a very interesting problem &#8211; find dupl
 
 Here is the data table we will be working with:
 
-<pre>CREATE TABLE tblTEST ( 
+sql
+CREATE TABLE tblTEST ( 
   ID           INT    UNIQUE    NOT NULL, 
   FirstColumn  VARCHAR(50)    NOT NULL, 
   SecondColumn VARCHAR(50)    NOT NULL, 
@@ -47,8 +49,8 @@ VALUES     (1,'value1','value2','value3','value4','value5'),
            (5,'value3','value4','value5','value6','value7'), 
            (6,'value1','value2','value9','value4','value5'), 
            (7,'value2','value3','value4','value5','value11'), 
-           (8,'value4','value5','value3','value9','value1')</pre>
-
+           (8,'value4','value5','value3','value9','value1')
+```
 Our test table:
 
 <div class="tables">
@@ -293,49 +295,57 @@ This problem is different from the typical find the duplicates problem and at fi
 
 The first idea that comes to mind is to UNPIVOT values from these 5 columns into rows. This is simple enough with this code:
 
-<pre>;with UnPvt AS (SELECT ID, ColValue FROM tblTEST 
-UNPIVOT (ColValue FOR ColName IN ([FirstColumn],[SecondColumn],[ThirdColumn],[FourthColumn], [FifthColumn])) unpvt),</pre>
-
+sql
+;with UnPvt AS (SELECT ID, ColValue FROM tblTEST 
+UNPIVOT (ColValue FOR ColName IN ([FirstColumn],[SecondColumn],[ThirdColumn],[FourthColumn], [FifthColumn])) unpvt),
+```
 The second step is also more or less clear &#8211; find possible duplicates by counting IDs partitioned by ColValue
 
-<pre>SameVals as (SELECT * FROM (select *, COUNT(ID) OVER (PARTITION by ColValue) as cntSame from UnPvt) X WHERE cntSame &gt;=2),</pre>
+sql
+SameVals as (SELECT * FROM (select *, COUNT(ID) OVER (PARTITION by ColValue) as cntSame from UnPvt) X WHERE cntSame >=2),
+```
 
 Now, what can we do next? The next step was a road block for me. But then, an Eureka moment &#8211; we can use CROSS APPLY and find all records that have more than 4 values matching the current record values
 
-<pre>DupRecs as (select T.*,S.cntDups, S.ID as DupID
+sql
+DupRecs as (select T.*,S.cntDups, S.ID as DupID
  from tblTEST T CROSS APPLY (select S.ID, COUNT(*) as cntDups from SameVals S
 WHERE T.ID < S.ID and S.ColValue IN (T.FirstColumn,T.SecondColumn,T.ThirdColumn,T.FourthColumn, T.FifthColumn) GROUP BY S.ID) S),
 
-Candidates as (select distinct ID,DupID  from DupRecs where cntDups &gt;=4) </pre>
-
+Candidates as (select distinct ID,DupID  from DupRecs where cntDups >=4) 
+```
 Ok, but do we want to delete all records identified in DupID column? Turned out, that it&#8217;s not even that simple. 
 
 Say, in our sample rows 1 & 2 match. So, do we want to delete the row 2? Well, row 2 matches with the row 5. Which rows of 2/5 we delete and which to keep? That&#8217;s not easy at all.
 
 So, my final select is
 
-<pre>select Distinct DupID from Candidates where DupID not IN (select ID from Candidates)</pre>
-
+sql
+select Distinct DupID from Candidates where DupID not IN (select ID from Candidates)
+```
 This select will only produce real duplicates.
 
 Now, this is the whole solution again as one statement:
 
-<pre>;with UnPvt as (select ID, ColValue from tblTEST 
+sql
+;with UnPvt as (select ID, ColValue from tblTEST 
 UNPIVOT (ColValue for ColName IN ([FirstColumn],[SecondColumn],[ThirdColumn],[FourthColumn], [FifthColumn])) unpvt),
-SameVals as (select * from (select *, COUNT(ID) over (partition by ColValue) as cntSame from UnPvt) X where cntSame &gt;=2),
+SameVals as (select * from (select *, COUNT(ID) over (partition by ColValue) as cntSame from UnPvt) X where cntSame >=2),
 DupRecs as (select T.*,S.cntDups, S.ID as DupID
  from tblTEST T CROSS APPLY (select S.ID, COUNT(*) as cntDups from SameVals S
 WHERE T.ID < S.ID and S.ColValue IN (T.FirstColumn,T.SecondColumn,T.ThirdColumn,T.FourthColumn, T.FifthColumn) GROUP BY S.ID) S),
 
-Candidates as (select distinct ID,DupID  from DupRecs where cntDups &gt;=4) 
+Candidates as (select distinct ID,DupID  from DupRecs where cntDups >=4) 
 
-select Distinct DupID from Candidates where DupID not IN (select ID from Candidates)</pre>
+select Distinct DupID from Candidates where DupID not IN (select ID from Candidates)
 
+```
 Well, even the above solution is not quite right as now it doesn&#8217;t delete all duplicates.
 
 After some more discussion in the mentioned thread and with the help of Peter Larsson, here is the solution that seems to work for the problem:
 
-<pre>DECLARE  @DupLoop INT 
+sql
+DECLARE  @DupLoop INT 
 
 SET @DupLoop = 1 
 
@@ -347,7 +357,7 @@ WHILE @DupLoop = 1
          AS (SELECT DISTINCT a.ID AS DuplicateID 
              FROM   dbo.tblTEST AS t 
                     LEFT JOIN dbo.tblTEST AS a 
-                      ON a.ID &gt; t.ID 
+                      ON a.ID > t.ID 
                          AND a.FirstColumn IN (t.FirstColumn,t.SecondColumn,t.ThirdColumn,t.FourthColumn,
                                                t.FifthColumn) 
                     LEFT JOIN dbo.tblTEST AS b 
@@ -381,7 +391,7 @@ WHILE @DupLoop = 1
                                       END + CASE 
                                               WHEN e.ID IS NULL THEN 0 
                                               ELSE 1 
-                                            END &gt;= 4) 
+                                            END >= 4) 
     DELETE FROM tblTEST 
     WHERE       ID IN (SELECT   TOP ( 1 ) DuplicateID 
                        FROM     Dups 
@@ -391,12 +401,12 @@ WHILE @DupLoop = 1
   END 
 
 SELECT * 
-FROM   tblTest</pre>
-
+FROM   tblTest
+```
 Well, hopefully this was interesting to read as for me trying to solve such problem. Thanks for listening!
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/8ce895b9-11f1-494c-a63e-e25f08f93bd8
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

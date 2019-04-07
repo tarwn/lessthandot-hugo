@@ -3,6 +3,7 @@ title: Be careful when passing around parameters, make sure they are the same si
 author: SQLDenis
 type: post
 date: 2011-04-08T15:33:00+00:00
+ID: 1101
 excerpt: "Someone tried to figure out why his data was showing the next day when he passed in today's date. If you are not careful to use the same data type and this includes scale and precision as well, you can get some strange results. In this post I will take&hellip;"
 url: /index.php/datamgmt/datadesign/be-careful-when-passing-around/
 views:
@@ -32,39 +33,48 @@ When using dates make sure that you are using the same data type, don&#8217;t mi
 
 First create this table with a datetime column
 
-<pre>CREATE TABLE TestDatetime(SomeDate DATETIME)
-GO</pre>
+sql
+CREATE TABLE TestDatetime(SomeDate DATETIME)
+GO
+```
 
 Now create this proc which accepts a smalldatetime
 
-<pre>CREATE PROC prTestDatetime
+sql
+CREATE PROC prTestDatetime
 @SomeDate SMALLDATETIME
 AS 
 
 INSERT TestDatetime VALUES(@SomeDate)
 
-GO</pre>
-
+GO
+```
 Now call the procedure with the following value
 
-<pre>DECLARE @d DATETIME
+sql
+DECLARE @d DATETIME
 SELECT @d = '2011-04-04 23:59:59.000'
 
 
 EXEC prTestDatetime @d
-GO</pre>
+GO
+```
 
 When you check the table now you will see that it has become the next day
 
-<pre>SELECT * FROM TestDatetime</pre>
+sql
+SELECT * FROM TestDatetime
+```
 
 2011-04-05 00:00:00.000
 
 The query below will illustrate the same problem
 
-<pre>DECLARE @d DATETIME
+sql
+DECLARE @d DATETIME
 SELECT @d = '2011-04-04 23:59:59.000'
-SELECT CONVERT(DATETIME,@d), CONVERT(SMALLDATETIME,@d)</pre>
+SELECT CONVERT(DATETIME,@d), CONVERT(SMALLDATETIME,@d)
+```
 
 Output
   
@@ -84,21 +94,25 @@ When dealing with integers, you are in luck because it will just blow up in your
 
 Create this stored procedure
 
-<pre>CREATE PROC prTestInt
+sql
+CREATE PROC prTestInt
 @Someint smallint
 AS 
 
 SELECT @Someint
-GO</pre>
+GO
+```
 
 Run it by passing in something that is greater than the small integer data type can hold
 
-<pre>DECLARE @i int
+sql
+DECLARE @i int
 SELECT @i = 99999
 
 
 EXEC prTestInt @i
-GO</pre>
+GO
+```
 
 And here is the error.
 
@@ -116,21 +130,25 @@ varchar, nvarchar, char and nchar have a bunch of interesting inconsistencies, t
 
 Here is one example, create the following procedure
 
-<pre>CREATE PROC prTestVarchar
+sql
+CREATE PROC prTestVarchar
 @Somevarchar varchar(3)
 AS 
 
 SELECT @Somevarchar
-GO</pre>
+GO
+```
 
 Now run it like this
 
-<pre>DECLARE @v VARCHAR(10)
+sql
+DECLARE @v VARCHAR(10)
 SELECT @v = '9999999999'
 
 
 EXEC prTestVarchar @v
-GO</pre>
+GO
+```
 
 Output
   
@@ -146,21 +164,25 @@ People coming from languages where you define something as a string usually make
 
 Create the following stored procedure
 
-<pre>CREATE PROC prTestVarchar2
+sql
+CREATE PROC prTestVarchar2
 @Somevarchar varchar
 AS 
 
 SELECT @Somevarchar
-GO</pre>
+GO
+```
 
 Run the proc
 
-<pre>DECLARE @v VARCHAR(10)
+sql
+DECLARE @v VARCHAR(10)
 SELECT @v = '9999999999'
 
 
 EXEC prTestVarchar2 @v
-GO</pre>
+GO
+```
 
 Output
   
@@ -170,7 +192,9 @@ Output
 
 In this case SQL Server used a size of 1 since nothing was specified. However when you use varchar in a cast or convert function and you don&#8217;t specify a size, it will default to 30 characters
 
-<pre>SELECT CONVERT(VARCHAR,'1111111111222222222233333333334')</pre>
+sql
+SELECT CONVERT(VARCHAR,'1111111111222222222233333333334')
+```
 
 111111111122222222223333333333
 
@@ -186,13 +210,15 @@ Decimal (or numeric) will round down or up if it can&#8217;t hold the whole valu
   
 Take a look by running this
 
-<pre>DECLARE @d DECIMAL(4,3)
+sql
+DECLARE @d DECIMAL(4,3)
 DECLARE @d2 DECIMAL(4,2)
 SELECT @d = 1.999
 
 SELECT @d2 = @d
 
-SELECT @d,@d2</pre>
+SELECT @d,@d2
+```
 
 Output
   
@@ -216,5 +242,5 @@ Make sure that your data types or data type sizes are the same for variables/par
  [2]: /index.php/DataMgmt/DBProgramming/MSSQLServer/always-include-size-when-using-varchar-n
  [3]: http://sqlblog.com/blogs/aaron_bertrand/archive/2009/10/09/bad-habits-to-kick-declaring-varchar-without-length.aspx
  [4]: /index.php/DataMgmt/DataDesign/decimal-and-numeric-problems-when-you-do
- [5]: http://forum.lessthandot.com/viewforum.php?f=17
- [6]: http://forum.lessthandot.com/viewforum.php?f=22
+ [5]: http://forum.ltd.local/viewforum.php?f=17
+ [6]: http://forum.ltd.local/viewforum.php?f=22

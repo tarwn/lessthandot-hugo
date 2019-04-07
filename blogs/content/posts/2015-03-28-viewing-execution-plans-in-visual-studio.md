@@ -3,6 +3,7 @@ title: Viewing Execution Plans in Visual Studio
 author: Jes Borland
 type: post
 date: 2015-03-28T19:55:17+00:00
+ID: 3320
 url: /index.php/uncategorized/viewing-execution-plans-in-visual-studio/
 views:
   - 5225

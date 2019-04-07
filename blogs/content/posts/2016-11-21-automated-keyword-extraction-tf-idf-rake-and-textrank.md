@@ -3,6 +3,7 @@ title: Automated Keyword Extraction – TF-IDF, RAKE, and TextRank
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-11-21T21:09:50+00:00
+ID: 4819
 url: /index.php/artificial-intelligence/automated-keyword-extraction-tf-idf-rake-and-textrank/
 featured_image: /wp-content/uploads/2016/11/pythoncode.png
 views:
@@ -37,7 +38,7 @@ These results are a subset of a larger set using TF-IDF, RAKE, and TextRank for 
 
 Here are results for two recent posts:
 
-URL: <http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html>
+URL: <http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html>
 
 <pre>RAKE:
  * radiates test statuses directly
@@ -56,9 +57,10 @@ TextRank:
  * wallaby-vscode wallaby
  * install wallaby-vscode
  * continuous javascript
- * development feedback</pre>
+ * development feedback
+</pre>
 
-URL: <http://www.tiernok.com/posts/stop-manually-updating-your-jasmine-specrunner.html>
+URL: <http://tiernok.com/posts/stop-manually-updating-your-jasmine-specrunner.html>
 
 <pre>RAKE:
  * greatly simplify future updates
@@ -77,7 +79,8 @@ TextRank:
  * vanilla bootloader
  * jasmine specrunner
  * custom bootloader
- * similar approach</pre>
+ * similar approach
+</pre>
 
 RAKE optimizes towards long keywords, which provides accurate phrases that aren&#8217;t terribly useful as keywords. TF-IDF has pulled out some viable keywords. TextRank seems to most frequently pull out the best candidate set of the 3 by landing somewhere between the twp.
 
@@ -135,7 +138,8 @@ When called, ContentLoader identifies whether HTML or processed Text content is 
 
 The barebones of my logic to download content and run it through the algorithms above is:
 
-<pre>def execute(cleanse_method, pages):
+```py
+def execute(cleanse_method, pages):
     """Execute RAKE and TF-IDF algorithms on each page and output top scoring phrases"""
 
     #1: Initialize a URL reader with local caching to be kind to the internet
@@ -189,8 +193,8 @@ def get_test_links():
 
 # run algorithms with the cleanse method above for the gathered list of links
 test_links = get_test_links()[:50]
-execute(cleanse_tiernok_html, test_links)</pre>
-
+execute(cleanse_tiernok_html, test_links)
+```
 Compared to my exploratory scripts in the prior version, now I have something easy to read and usable as the base for other projects. The cleanse method is provided as a function so the underlying contentloader isn&#8217;t tied directly to my site&#8217;s page layout and the links are gathered independently for the same reason.
 
 ## Results

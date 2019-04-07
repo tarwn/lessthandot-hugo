@@ -3,6 +3,7 @@ title: I’m Speaking! PASS Summit 2011
 author: Jes Borland
 type: post
 date: 2011-06-17T10:29:00+00:00
+ID: 1224
 excerpt: "I'll be speaking at PASS Summit in October!"
 url: /index.php/datamgmt/dbprogramming/i-m-speaking-pass-summit/
 views:

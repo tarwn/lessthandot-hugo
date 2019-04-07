@@ -3,6 +3,7 @@ title: SSIS Interview questions – Answers
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-11-03T12:09:00+00:00
+ID: 1369
 excerpt: |
   This post will contain the way I would answer the question that were posted in, "SSIS Test yourself with these interview questions".  
   

@@ -3,6 +3,7 @@ title: A New Solution for Monitoring SQL Server
 author: Jes Borland
 type: post
 date: 2013-12-30T14:22:00+00:00
+ID: 2215
 excerpt: Monitoring a SQL Server environment is one of the many tasks a DBA should be performing on a regular basis.
 url: /index.php/datamgmt/dbadmin/a-new-solution-for-monitoring/
 views:

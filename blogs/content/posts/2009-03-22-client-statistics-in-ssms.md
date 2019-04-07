@@ -3,6 +3,7 @@ title: 'Client Statistics in SSMS.  Check execution times'
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-03-22T22:53:17+00:00
+ID: 362
 url: /index.php/datamgmt/datadesign/client-statistics-in-ssms/
 views:
   - 9911
@@ -15,12 +16,13 @@ categories:
 ---
 How many times have you done something like this testing speed
 
-<pre>Declare @cnt_test bigint
+sql
+Declare @cnt_test bigint
 Declare @st datetime
 Set @st = getdate()
 Set @cnt_test = (Select count(*) From dbo.test_scan)
-Select DateDiff(ms,@st,getdate())</pre>
-
+Select DateDiff(ms,@st,getdate())
+```
 Specifically the DateDiff() in milliseconds to see how long the execution took.
 
 There is a nice little option in SSMS that I leave on when working on a query over time. It&#8217;s called Client Statistics. When set on you can get the same results and much more that can help you measure your performance while altering your code. The results will show the same as having the show execution plan on in SSMS as a tab in the results window. The results from client statistics will accumulate over the time you alter your query also. This is a very nice option and valuable when measuring your changes without adding code you will only have to remove. It will even give you an arrow showing in red if your execution time has gone up or green pointing down for improving

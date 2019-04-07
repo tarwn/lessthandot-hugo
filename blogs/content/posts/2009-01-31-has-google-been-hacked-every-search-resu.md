@@ -3,6 +3,7 @@ title: Has Google Been Hacked? Every search result shows This site may harm your
 author: SQLDenis
 type: post
 date: 2009-01-31T12:47:29+00:00
+ID: 306
 excerpt: |
   What is going on with Google today? Every search I do has This site may harm your computer.
   

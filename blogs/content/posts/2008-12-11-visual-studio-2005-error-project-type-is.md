@@ -3,6 +3,7 @@ title: Visual Studio 2005 error – “Project type is not supported by this ins
 author: ca8msm
 type: post
 date: 2008-12-11T09:27:33+00:00
+ID: 246
 excerpt: |
   I recently had to go back and make some changes to a Web Service I'd made a while ago in VS2005. For some reason, when I tried to open the project, Visual Studio gave me this error:
   

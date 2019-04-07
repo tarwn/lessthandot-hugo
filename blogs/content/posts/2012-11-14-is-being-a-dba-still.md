@@ -3,6 +3,7 @@ title: Is being a DBA still sexy?
 author: Jes Borland
 type: post
 date: 2012-11-14T11:46:00+00:00
+ID: 1788
 excerpt: 'I hear more and more emphasis on two things: big data and business intelligence. Companies are investing more and more money in both. Knowing this, are you, a DBA, thinking your job is threatened?'
 url: /index.php/datamgmt/dbadmin/is-being-a-dba-still/
 views:

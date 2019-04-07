@@ -3,6 +3,7 @@ title: 'Microsoft releases Silverlight 2 announces  development capabilities wit
 author: SQLDenis
 type: post
 date: 2008-10-13T14:17:01+00:00
+ID: 174
 url: /index.php/webdev/webdesigngraphicsstyling/microsoft-releases-silverlight-2-announc/
 views:
   - 7537

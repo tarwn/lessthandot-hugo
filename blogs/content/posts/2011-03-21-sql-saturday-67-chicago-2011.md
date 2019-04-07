@@ -3,6 +3,7 @@ title: 'SQL Saturday #67 Chicago 2011: Have Fun Storming the Castle!'
 author: Jes Borland
 type: post
 date: 2011-03-21T18:21:00+00:00
+ID: 1084
 excerpt: |
   On Friday, I'm heading down to the Windy City for one of my favorite events - SQL Saturday #67, Chicago Edition. This event will be held Saturday, March 26, 2011. I'll be presenting "Make Your Voice Heard!" and moderating the WIT lunch panel!
 url: /index.php/datamgmt/dbprogramming/sql-saturday-67-chicago-2011/

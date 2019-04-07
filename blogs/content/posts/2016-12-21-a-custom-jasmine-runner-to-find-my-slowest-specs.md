@@ -3,6 +3,7 @@ title: A Custom Jasmine Runner to find my slowest Specs
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-12-21T13:01:04+00:00
+ID: 4752
 url: /index.php/webdev/a-custom-jasmine-runner-to-find-my-slowest-specs/
 views:
   - 2856
@@ -34,7 +35,8 @@ The sample code uses requirejs, so I&#8217;m passing in an array of specs that w
 
 The results from running this look like:
 
-<pre>jasmine started
+```text
+jasmine started
 suiteDone [0.003s,10/10] : compass
 suiteDone [0.175s,19/19] : tile
 suiteDone [0.003s,8/8] : tree
@@ -48,16 +50,16 @@ Standard Deviation: 0.004s
 15% (10) of the tests account for 50% of the overall time.
 -----------------------------------------------------------------
 Slowest Tests:
- [    0.014s]: tile -&gt; getEvaporationAmount -&gt; should be 0 if there are no trees and the terrain doesn't have dry evaporation
- [    0.010s]: tile -&gt; getEvaporationAmount -&gt; should be the terrain's evaporation if there are no trees
- [    0.010s]: tile -&gt; canSupportAdditionalTrees -&gt; should support additional trees if there is enough average rainfall for grass, existing trees, and a new tree
- [    0.009s]: tile -&gt; onGrow -&gt; should provide full amount of water to trees if available after watering the terrain
- [    0.009s]: tile -&gt; canSupportDryGrass -&gt; should be able to support dry grass when there is enough averageRainfall available
- [    0.009s]: tile -&gt; canSupportGrass -&gt; should be able to support grass when there is enough averageRainfall available
- [    0.009s]: tile -&gt; getPlantConsumptionAmount -&gt; should be 0 when the terrain doesn't require any water and there are no trees
- [    0.009s]: tile -&gt; canSupportAdditionalTrees -&gt; should not support a tree if there is not enough average rainfall for grass and new tree
- [    0.009s]: tile -&gt; onGrow -&gt; should evenly split remainder of water if there is not enough left after watering the terrain</pre>
-
+ [    0.014s]: tile -> getEvaporationAmount -> should be 0 if there are no trees and the terrain doesn't have dry evaporation
+ [    0.010s]: tile -> getEvaporationAmount -> should be the terrain's evaporation if there are no trees
+ [    0.010s]: tile -> canSupportAdditionalTrees -> should support additional trees if there is enough average rainfall for grass, existing trees, and a new tree
+ [    0.009s]: tile -> onGrow -> should provide full amount of water to trees if available after watering the terrain
+ [    0.009s]: tile -> canSupportDryGrass -> should be able to support dry grass when there is enough averageRainfall available
+ [    0.009s]: tile -> canSupportGrass -> should be able to support grass when there is enough averageRainfall available
+ [    0.009s]: tile -> getPlantConsumptionAmount -> should be 0 when the terrain doesn't require any water and there are no trees
+ [    0.009s]: tile -> canSupportAdditionalTrees -> should not support a tree if there is not enough average rainfall for grass and new tree
+ [    0.009s]: tile -> onGrow -> should evenly split remainder of water if there is not enough left after watering the terrain
+```
 So from the top:
 
   * I show the top suite names, so I have feedback on larger codebases
@@ -84,115 +86,130 @@ There are several things we learn from this run:
     
     Here is that runner:
     
-    <pre>var Runner = {
-    execute: function(callback){
-
-        var page = require('webpage').create();
-
-        page.onConsoleMessage = function(msg) {
-            // … handle console output coming back from console worker
-        };
-
-        // build some fake content instead of using a real file/URL
-        var expectedContent = '<html&gt;<head&gt;</head&gt;<body&gt;</body&gt;</html&gt;';
-        var expectedLocation = 'file:///' + fs.workingDirectory + '/';
-        page.setContent(expectedContent, expectedLocation);
-
-        // standard files
-        page.injectJs('town/js/lib/jasmine-2.0.0/jasmine.js');
-        page.injectJs('town/js/lib/jasmine-2.0.0/jasmine-html.js');
-        page.injectJs('jasmine2-runner-boot.js');
-
-        // inject reporter
-        page.injectJs('console_reporter.js');
-        page.evaluate(function(){
-            jasmine.addReporter(new jasmineReporters.ConsoleReporter());
-        });
-
-        // inject additional required files
-        page.injectJs('town/js/lib/require-2.1.11.js');
-
-        // execute provided spec list
-        page.evaluate(function(specs){
-
-            // project's requirejs config for tests
-            require.config({
-                baseUrl: "town/js/src",
-                paths: {
-                    "knockout": "../lib/knockout-3.0.0",
-                    "Squire": "../lib/Squire"
-                }
-            });
-
-            require(specs, function(){
-                window.executeTests();
-            });
-
-        }, files);
-    }
-};</pre>
     
+```
+javascript
+var Runner = {
+        execute: function(callback){
+    
+            var page = require('webpage').create();
+    
+            page.onConsoleMessage = function(msg) {
+                // … handle console output coming back from console worker
+            };
+    
+            // build some fake content instead of using a real file/URL
+            var expectedContent = '';
+            var expectedLocation = 'file:///' + fs.workingDirectory + '/';
+            page.setContent(expectedContent, expectedLocation);
+    
+            // standard files
+            page.injectJs('town/js/lib/jasmine-2.0.0/jasmine.js');
+            page.injectJs('town/js/lib/jasmine-2.0.0/jasmine-html.js');
+            page.injectJs('jasmine2-runner-boot.js');
+    
+            // inject reporter
+            page.injectJs('console_reporter.js');
+            page.evaluate(function(){
+                jasmine.addReporter(new jasmineReporters.ConsoleReporter());
+            });
+    
+            // inject additional required files
+            page.injectJs('town/js/lib/require-2.1.11.js');
+    
+            // execute provided spec list
+            page.evaluate(function(specs){
+    
+                // project's requirejs config for tests
+                require.config({
+                    baseUrl: "town/js/src",
+                    paths: {
+                        "knockout": "../lib/knockout-3.0.0",
+                        "Squire": "../lib/Squire"
+                    }
+                });
+    
+                require(specs, function(){
+                    window.executeTests();
+                });
+    
+            }, files);
+        }
+    };
+    
+```
+
     The statistics form the console runner are passed to a Processor class that flattens out the suite and spec hierarchy, sorts them by execution time, and then calculates the statistics we saw above.
     
-    <pre>var StatsProcessor = {
-    evaluate: function(rawStats){
-        var flatStats = [];
-        var flatSuites = [];
-        StatsProcessor.flattenSpecs("", rawStats, flatStats, flatSuites);
-        var sortedFlatStats = flatStats.sort(function(a,b){
-            // sort descending by execution time
-            return b.executionTime - a.executionTime;
-        });
-
-        var averages = StatsProcessor.getAverages(flatStats);
-        if(averages.total &gt; 0){
-            var fiftyPercentOfTotalIndex = StatsProcessor.getPercentOfTotalIndex(sortedFlatStats, averages, 0.50);
-            var ninetyPercentOfTotalIndex = StatsProcessor.getPercentOfTotalIndex(sortedFlatStats, averages, 0.90);
-
-            return {
-                averageExecutionTime: averages.average,
-                standardDeviation: averages.standardDeviation,
-                totalExecutionTime: averages.total,
-                totalCount: sortedFlatStats.length,
-
-                fiftyPercent: {
-                    numberOfTests: fiftyPercentOfTotalIndex + 1
-                },
-                ninetyPercent: {
-                    numberOfTests: ninetyPercentOfTotalIndex + 1
-                },
-
-                specs: sortedFlatStats          
-            };
-        }
-        else{
-            return 0;
-        }
-    },
-
-    flattenSpecs: function(description, stats, flatStats, flatSuites){
-        // … work …
-    },
-
-    getAverages: function(flatStats){
-        // … calculate avg and stddev …
-    },
-
-    getPercentOfTotalIndex: function(sortedFlatStats, averages, percentage){
-        // … find tests that are responsiblce for _percentage_ of execution time …
-    }
-};</pre>
     
+```
+javascript
+var StatsProcessor = {
+        evaluate: function(rawStats){
+            var flatStats = [];
+            var flatSuites = [];
+            StatsProcessor.flattenSpecs("", rawStats, flatStats, flatSuites);
+            var sortedFlatStats = flatStats.sort(function(a,b){
+                // sort descending by execution time
+                return b.executionTime - a.executionTime;
+            });
+    
+            var averages = StatsProcessor.getAverages(flatStats);
+            if(averages.total > 0){
+                var fiftyPercentOfTotalIndex = StatsProcessor.getPercentOfTotalIndex(sortedFlatStats, averages, 0.50);
+                var ninetyPercentOfTotalIndex = StatsProcessor.getPercentOfTotalIndex(sortedFlatStats, averages, 0.90);
+    
+                return {
+                    averageExecutionTime: averages.average,
+                    standardDeviation: averages.standardDeviation,
+                    totalExecutionTime: averages.total,
+                    totalCount: sortedFlatStats.length,
+    
+                    fiftyPercent: {
+                        numberOfTests: fiftyPercentOfTotalIndex + 1
+                    },
+                    ninetyPercent: {
+                        numberOfTests: ninetyPercentOfTotalIndex + 1
+                    },
+    
+                    specs: sortedFlatStats          
+                };
+            }
+            else{
+                return 0;
+            }
+        },
+    
+        flattenSpecs: function(description, stats, flatStats, flatSuites){
+            // … work …
+        },
+    
+        getAverages: function(flatStats){
+            // … calculate avg and stddev …
+        },
+    
+        getPercentOfTotalIndex: function(sortedFlatStats, averages, percentage){
+            // … find tests that are responsiblce for _percentage_ of execution time …
+        }
+    };
+    
+```
+
     Finally, we glue the two together in a simple statement:
     
-    <pre>Runner.execute(function(result){
-    var stats = StatsProcessor.evaluate(result);
-
-    /* … display stats output … */
-
-    phantom.exit();
-});</pre>
     
+```
+javascript
+Runner.execute(function(result){
+        var stats = StatsProcessor.evaluate(result);
+    
+        /* … display stats output … */
+    
+        phantom.exit();
+    });
+    
+```
+
     Customizing this for other projects is relatively easy, and I&#8217;ll probably work on making it easier to reuse as a I have more time. Right now the main things you need to do are:
     
       * Replace the jasmine paths with ones that make sense for your project

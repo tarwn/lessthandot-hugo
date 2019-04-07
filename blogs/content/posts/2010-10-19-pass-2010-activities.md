@@ -3,6 +3,7 @@ title: PASS Summit is upon us
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-10-19T16:12:06+00:00
+ID: 926
 excerpt: 'PASS is quickly approaching.  That means you have a very small amount of time to convince your manager, director, VP or whomever you call Boss, to send you to the largest annual SQL Server conference.  If you do want to go and putting together a return of investment is not your strong point; PASS has taken into account that many a required to provide an ROI or some sort of documentation that says why the company should spend thousands of dollars for the trip.  Since this is the case, the PASS website has an actual ROI page just to help you compose your own ROI.'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/pass-2010-activities/
 views:

@@ -3,6 +3,7 @@ title: Successful Consulting Series – Consulting vs. Fulltime Employment – M
 author: Jes Borland
 type: post
 date: 2012-12-21T14:44:00+00:00
+ID: 1875
 excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, “Successful Consulting&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/successful-consulting-series-consulting-vs/
 views:

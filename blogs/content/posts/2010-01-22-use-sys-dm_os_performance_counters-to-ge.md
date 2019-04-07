@@ -3,6 +3,7 @@ title: Use sys.dm_os_performance_counters to get your Buffer cache hit ratio and
 author: SQLDenis
 type: post
 date: 2010-01-22T13:23:49+00:00
+ID: 686
 url: /index.php/datamgmt/dbprogramming/use-sys-dm_os_performance_counters-to-ge/
 views:
   - 176593
@@ -39,14 +40,16 @@ In order to calculate the Buffer cache hit ratio we need to query the sys.dm\_os
   
 Here is the query that will do that, this query will only work on SQL Server 2005 and up.
 
-<pre>SELECT (a.cntr_value * 1.0 / b.cntr_value) * 100.0 as BufferCacheHitRatio
+sql
+SELECT (a.cntr_value * 1.0 / b.cntr_value) * 100.0 as BufferCacheHitRatio
 FROM sys.dm_os_performance_counters  a
 JOIN  (SELECT cntr_value,OBJECT_NAME 
 	FROM sys.dm_os_performance_counters  
   	WHERE counter_name = 'Buffer cache hit ratio base'
         AND OBJECT_NAME = 'SQLServer:Buffer Manager') b ON  a.OBJECT_NAME = b.OBJECT_NAME
 WHERE a.counter_name = 'Buffer cache hit ratio'
-AND a.OBJECT_NAME = 'SQLServer:Buffer Manager'</pre>
+AND a.OBJECT_NAME = 'SQLServer:Buffer Manager'
+```
 
 ## Page life expectancy {#PLE}
 
@@ -56,10 +59,12 @@ Page life expectancy is the number of seconds a page will stay in the buffer poo
 
 Here is how to get the Page life expectancy
 
-<pre>SELECT *
+sql
+SELECT *
 FROM sys.dm_os_performance_counters  
 WHERE counter_name = 'Page life expectancy'
-AND OBJECT_NAME = 'SQLServer:Buffer Manager'</pre>
+AND OBJECT_NAME = 'SQLServer:Buffer Manager'
+```
 
 What I currently get for the queries is a Page life expectancy of 470333 and the Buffer cache hit ratio is 100. **What I would like you to do is run these 2 queries on your systems and leave me the results in a comment so that we can compare**
 
@@ -68,5 +73,5 @@ Also take a look at how to capture this info if you prefer to run perfmon (or if
 \*** **Remember, if you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://www.brentozar.com/archive/2006/12/dba-101-using-perfmon-for-sql-performance-tuning/
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

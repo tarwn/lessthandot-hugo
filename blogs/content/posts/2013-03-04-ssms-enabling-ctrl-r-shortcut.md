@@ -3,6 +3,7 @@ title: SSMS – Enabling Ctrl+R Shortcut to show or hide query results/messages 
 author: Kevin Conan
 type: post
 date: 2013-03-04T14:58:00+00:00
+ID: 2022
 excerpt: 'Do you use Ctrl+R to hide or display the query results/messages pane in SSMS?  Have you installed SSMS 2012 and find that it does not work?'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/ssms-enabling-ctrl-r-shortcut/
 views:

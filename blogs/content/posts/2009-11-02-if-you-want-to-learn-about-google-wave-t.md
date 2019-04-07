@@ -3,6 +3,7 @@ title: If you want to learn about Google Wave then check out the book The Comple
 author: SQLDenis
 type: post
 date: 2009-11-02T15:45:27+00:00
+ID: 604
 url: /index.php/itprofessionals/ethicsit/if-you-want-to-learn-about-google-wave-t/
 views:
   - 4747

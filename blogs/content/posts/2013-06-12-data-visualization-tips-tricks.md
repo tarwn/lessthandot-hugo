@@ -3,6 +3,7 @@ title: 'Data Visualization Tips & Tricks at Community Day 2013'
 author: Koen Verbeeck
 type: post
 date: 2013-06-12T12:21:00+00:00
+ID: 2105
 excerpt: 'In exactly one week I’ll be giving a session with my colleague Valentino Vranken (blog | twitter) at the Belgian Community Day. We’ll be talking about Data Visualization. I’ll be talking about the tips: how do you need to visualize your data without the&hellip;'
 url: /index.php/datamgmt/ssrs/data-visualization-tips-tricks/
 views:

@@ -3,6 +3,7 @@ title: Downloading SQL Server Sample Databases much improved with new CodePlex c
 author: SQLDenis
 type: post
 date: 2012-04-03T23:35:00+00:00
+ID: 1585
 excerpt: 'Today Microsoft has improved the experience of downloading the sample databases for SQL server. As you can see from the image above, you can now quickly see all the different versions and all you have to do is click on the database that you are interest&hellip;'
 url: /index.php/datamgmt/datadesign/downloading-sql-server-sample-databases/
 views:

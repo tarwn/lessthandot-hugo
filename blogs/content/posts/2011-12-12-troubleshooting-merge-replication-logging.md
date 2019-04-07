@@ -3,6 +3,7 @@ title: Troubleshooting Merge Replication – Logging
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-12T11:55:00+00:00
+ID: 1430
 excerpt: 'When setting up and designing a merge replication publication that will utilize join filters, logging levels can be vital to determining design issues in the setup.  Logging the synchronizing process quickly identifies points of failure and where to foc&hellip;'
 url: /index.php/datamgmt/dbadmin/troubleshooting-merge-replication-logging/
 views:
@@ -39,7 +40,10 @@ As the error indicates, we need more verbose logging to determine the cause.  T
 
 The complete command
 
-<pre>replmerg.exe -Publisher [ONPNTRC0] -PublisherDB [AdventureWorks] -Publication [SalesBySalesID] -Subscriber [ONPNTRC0] -SubscriberDB [AdventureWorksReplica] -Distributor [ONPNTRC0] -DistributorSecurityMode 1 -SubscriberSecurityMode 1 -OutputVerboseLevel 4 -Output "C:replmerg2.log"</pre>
+```
+replmerg.exe -Publisher [ONPNTRC0] -PublisherDB [AdventureWorks] -Publication [SalesBySalesID] -Subscriber [ONPNTRC0] -SubscriberDB [AdventureWorksReplica] -Distributor [ONPNTRC0] -DistributorSecurityMode 1 -SubscriberSecurityMode 1 -OutputVerboseLevel 4 -Output "C:replmerg2.log"
+```
+
 
 This command generates the file C:replmerg2.log.  Open the file and review the logs.  For the errors that are generated from the example publication, the following was logged after the first SalesOrderDetail operation
 

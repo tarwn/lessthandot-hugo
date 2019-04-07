@@ -3,6 +3,7 @@ title: 'Generating DataSet Definition for ASP.net Client Reports from C#'
 author: Alex Ullrich
 type: post
 date: 2010-05-13T18:45:00+00:00
+ID: 751
 url: /index.php/webdev/webdesigngraphicsstyling/generating-dataset-definition-for-asp-ne/
 views:
   - 17607
@@ -16,7 +17,8 @@ Over the past couple of years, we&#8217;ve been moving from a &#8220;custom-deve
 
 For the uninitiated, when viewing a .rdlc file (or .rdl) as an XML document, the dataset definition looks something like this. Only yours probably have a real datasource 😉
 
-<pre><DataSets>
+```xml
+<DataSets>
     <DataSet Name="ReportData_ReportName">
       <Fields>
         <Field Name="LastName">
@@ -42,13 +44,15 @@ For the uninitiated, when viewing a .rdlc file (or .rdl) as an XML document, the
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
     </DataSet>
-  </DataSets></pre>
+  </DataSets>
+```
 
 Pretty simple stuff, but defining it can make setting up a new report somewhat daunting. As we start getting requests for more and more new reports, automating this process looks more and more appealing, and this morning it was finally looking appealing enough that I dropped everything else for about half an hour to figure it out. It ended up being much easier than I expected.
 
 What makes it so easy is the GetSchemaTable method ([see returned table layout][1]) on the IDataReader interface. The first thing we need to do is get the schema table. In this instance its&#8217; set up to just take a complete query string (parameters and all) &#8211; this is for a command line app used by developers, and SQL injection / plan caching / etc&#8230; is simply not as valuable as the ability to enter whatever query we want into the CLI and have it run. We&#8217;re interested in the ColumnName and DataType columns in this case. Not much to this method: 
 
-<pre>public static DataTable SchemaTable(String source_query)
+```csharp
+public static DataTable SchemaTable(String source_query)
 {
 	using (IDbConnection connection = new SqlConnection(_ConnectionString))
 	{
@@ -62,11 +66,13 @@ What makes it so easy is the GetSchemaTable method ([see returned table layout][
 			return reader.GetSchemaTable();
 		}
 	}
-}</pre>
+}
+```
 
 From there, we need to build up an XML string, similar to what is posted above. It doesn&#8217;t need to be a complete document, just a fragment that can be pasted into our template when creating a new report. I used string manipulation to build it because I didn&#8217;t feel like wrestling with the .net classes to get the namespace &#8220;rd&#8221; defined (it proved tricky since I don&#8217;t want to build the entire document). The formatting is a little funny, just to make the output easy to read:
 
-<pre>/// <summary>Build an XML String representing the data set returned by provided query</summary>
+```csharp
+/// <summary>Build an XML String representing the data set returned by provided query</summary>
 		public static String BuildDefinition(String data_set_name, String source_query)
 		{
 			var data_set_template = @"<DataSets>
@@ -97,11 +103,13 @@ From there, we need to build up an XML string, similar to what is posted above. 
 			}
 
 			return String.Format(data_set_template, data_set_name, nodes.ToString());
-		}</pre>
+		}
+```
 
 Finally, we need to provide a way to take the user input (dataset name and query) and put it someplace the user can get it (text file). This ought to do:
 
-<pre>static void Main(string[] args)
+```csharp
+static void Main(string[] args)
 {
 	Console.Title = "Report Data Set Definition Generator";
 
@@ -132,7 +140,8 @@ Finally, we need to provide a way to take the user input (dataset name and query
 		Console.Write("Would you like to generate another? Press Y if yes, any other key to exit. ");
 	}
 	while (Console.ReadKey().KeyChar.ToString().ToUpper() == "Y");
-}</pre>
+}
+```
 
 You can then use the app like so:
 

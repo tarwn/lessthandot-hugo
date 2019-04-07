@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 12: Proactive notifications'
 author: SQLDenis
 type: post
 date: 2012-12-12T08:42:00+00:00
+ID: 1843
 excerpt: This is day twelve of the SQL Advent 2012 series of blog posts. Today we are going to look at SQL Server proactive notifications
 url: /index.php/datamgmt/dbprogramming/proactive-notifications/
 views:
@@ -45,7 +46,8 @@ You need to scan the errorlog periodically to see if there are errors, you can a
 
 Here is a small example of what you can do if you have this in a SQL Agent job that runs every 5 minutes or so, you can of course email yourself the results, dump the result into a table that is perhaps shown on a dashboard in the office, there are many possibilities.
 
-<pre>--This will hold the rows
+sql
+--This will hold the rows
 CREATE TABLE #ErrorLog (LogDate datetime, ProcessInfo VarChar(10), ErrorMessage VarChar(Max))
 
 -- Dump the errorlog into the table
@@ -75,8 +77,8 @@ SELECT * FROM #ErrorLog
 WHERE ErrorMessage LIKE'The alert for ''unsent log'' has been raised%'
 
 
-DROP TABLE #ErrorLog </pre>
-
+DROP TABLE #ErrorLog 
+```
 Those are just small samples, you might want to look for other kind of messages from the errorlog
 
 ## The transaction log is full
@@ -109,12 +111,14 @@ It could also be that your hardware is having issues, make sure the IOs look goo
 
 The following query will give you for all the databases the last time it was backed up or display NEVER if it wasn&#8217;t backed up
 
-<pre>SELECT s.Name AS DatabaseName,'Database backup was taken on  ' + 
+sql
+SELECT s.Name AS DatabaseName,'Database backup was taken on  ' + 
 CASE WHEN MAX(b.backup_finish_date) IS NULL THEN 'NEVER!!!' ELSE
 CONVERT(VARCHAR(12), (MAX(b.backup_finish_date)), 101) END AS LastBackUpTime
 FROM sys.sysdatabases s
 LEFT OUTER JOIN msdb.dbo.backupset b ON b.database_name = s.name
-GROUP BY s.Name</pre>
+GROUP BY s.Name
+```
 
 Here is what the output will look like
 
@@ -136,21 +140,26 @@ We can easily show what happens when you have an open transaction, btw don&#8217
 
 In 1 query window run this, replace SomeTable with a real table name.
 
-<pre>BEGIN TRAN
+sql
+BEGIN TRAN
 
-SELECT TOP 1 * FROM SomeTable WITH(UPDLOCK, HOLDLOCK)</pre>
+SELECT TOP 1 * FROM SomeTable WITH(UPDLOCK, HOLDLOCK)
+```
 
 You will get a message that the query completed successfully
 
 In another window run this
 
-<pre>SELECT TOP 1 * FROM SomeTable WITH(UPDLOCK, HOLDLOCK)</pre>
+sql
+SELECT TOP 1 * FROM SomeTable WITH(UPDLOCK, HOLDLOCK)
+```
 
 That query won&#8217;t return anything unless the first one is commited or rolled back
   
 Now run this query below, the first column should have the text AWAITING COMMAND
 
-<pre>SELECT   sys.cmd
+sql
+SELECT   sys.cmd
         ,sys.last_batch
         ,lok.resource_type
         ,lok.resource_subtype
@@ -177,13 +186,16 @@ Now run this query below, the first column should have the text AWAITING COMMAND
 FROM    sys.dm_tran_locks lok
 JOIN    sys.dm_os_waiting_tasks wat
 ON      lok.lock_owner_address = wat.resource_address
-JOIN	sys.sysprocesses sys ON wat.blocking_session_id = sys.spid</pre>
+JOIN	sys.sysprocesses sys ON wat.blocking_session_id = sys.spid
+```
 
 As you can see you have a blocking\_session\_id and a session\_id, this will tell you which session\_id is being blocked. You can now verify that the transaction session_id is blocking the other id
 
 Go back to that first command window and execute a rollback
 
-<pre>ROLLBACK</pre>
+sql
+ROLLBACK
+```
 
 The query that had that second select should now be done as well, if you run that query that checks for the waits it should be clean as well.
 

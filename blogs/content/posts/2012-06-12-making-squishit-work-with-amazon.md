@@ -3,6 +3,7 @@ title: SquishIt Integration with Amazon S3 / Cloudfront
 author: Alex Ullrich
 type: post
 date: 2012-06-12T11:00:00+00:00
+ID: 1646
 excerpt: 'For the unfortunate souls not in the know (or is it the fortunate souls using one of the myriad alternatives?), SquishIt is a library used to optimize content delivery at runtime in ASP.net applications.  It combines and minifies javascript files, and a&hellip;'
 url: /index.php/webdev/serverprogramming/making-squishit-work-with-amazon/
 views:
@@ -28,30 +29,35 @@ For a while now, SquishIt has had an IRenderer interface. It has been there, but
 
 SquishIt uses a fluent configuration syntax for setting up individual bundles, and that seemed as good a place to start as any. Typical usage looks something like this:
 
-<pre>Bundle.JavaScript()
+```csharp
+Bundle.JavaScript()
     .WithAttribute("attrName", "attrValue")
     .Add("file1.js")
     .Add("/otherscripts/file2.js")
-    .Render("combinedOutput.js");</pre>
+    .Render("combinedOutput.js");
+```
 
 So the first thing that came to mind was to add something like a &#8220;WithFileRenderer&#8221; method. This would give us a way to inject a renderer into a bundle and have it used to render the combined files. However, we probably don&#8217;t want to render to the CDN while debugging, so &#8220;WithReleaseFileRenderer&#8221; might be more appropriate. Setting up the method went something like this:
 
-<pre>IRenderer releaseFileRenderer;
+```csharp
+IRenderer releaseFileRenderer;
 
 public T WithReleaseFileRenderer(IRenderer renderer)
 {
     this.releaseFileRenderer = renderer;
     return (T)this;
-}</pre>
-
+}
+```
 We also want a way to configure this globally, to do that we needed to add a bit to our configuration class. This was basically the same thing:
 
-<pre>IRenderer _defaultReleaseRenderer;
+```csharp
+IRenderer _defaultReleaseRenderer;
 public Configuration UseReleaseRenderer(IRenderer releaseRenderer)
 {
     _defaultReleaseRenderer = releaseRenderer;
     return this;
-}</pre>
+}
+```
 
 Finally, we need to change the way the file renderer is obtained when we go to render the combined assets. Previously we were instantiating a new FileRenderer or CacheRenderer depending on circumstance, and passing that renderer into the main rendering method. This won&#8217;t cut it anymore, as our needs have gotten significantly more complex. The constraints we have to deal with are as follows:
 
@@ -61,13 +67,15 @@ Finally, we need to change the way the file renderer is obtained when we go to r
 
 So the constructor calls for a new FileRenderer are replaced with calls to this method:
 
-<pre>protected IRenderer GetFileRenderer()
+```csharp
+protected IRenderer GetFileRenderer()
 {
     return debugStatusReader.IsDebuggingEnabled() ? new FileRenderer(fileWriterFactory) :
         bundleState.ReleaseFileRenderer ??
         Configuration.Instance.DefaultReleaseRenderer() ??
         new FileRenderer(fileWriterFactory);
-}</pre>
+}
+```
 
 This is basically all we needed to do to enable us to plug in a custom renderer to use in release mode. Now we can look at how we can make the CDN integration happen.
 
@@ -82,7 +90,8 @@ None of this is terribly difficult &#8211; the main edge cases we need to cover 
 
 To meet these requirements the two pieces of information that we need inside the key builder are the physical application path and virtual directory. Here are some tests:
 
-<pre>[Test]
+```csharp
+[Test]
 public void ReturnToRelative()
 {
     var root = @"C:fakedir";
@@ -114,11 +123,13 @@ public void ReturnToRelative_Only_Replaces_First_Occurrence_Of_Root()
 
     var builder = new KeyBuilder(root, "");
     Assert.AreEqual(expected, builder.GetKeyFor(root + file));
-}</pre>
+}
+```
 
 And the implementation for the KeyBuilder:
 
-<pre>internal class KeyBuilder : IKeyBuilder
+```csharp
+internal class KeyBuilder : IKeyBuilder
 {
     readonly string physicalApplicationPath;
     readonly string virtualDirectory;
@@ -142,7 +153,8 @@ And the implementation for the KeyBuilder:
 
         return virtualDirectory + "/" + path.Replace(@"", "/").TrimStart('/');
     }
-}</pre>
+}
+```
 
 Now that we have a means to build keys we can look at implementing the S3 Renderer.
 
@@ -150,27 +162,30 @@ Now that we have a means to build keys we can look at implementing the S3 Render
 
 The interface for renderers is very simple.
 
-<pre>public interface IRenderer
+```csharp
+public interface IRenderer
 {
     void Render(string content, string outputPath);
-}</pre>
+}
+```
 
 The only things we&#8217;ll need to implement this method are an initialized S3 client, a bucket and the key builder we implemented in the last section. By default, we won&#8217;t want to upload our content if it already exists on the CDN, so we will need to check for existence before uploading the content. This can be done by querying for object metadata using the desired key &#8211; if the file doesn&#8217;t exist we will get a &#8220;not found&#8221; status on the exception thrown by the s3 client. So the most important test will look like this:
 
-<pre>[Test]
+```csharp
+[Test]
 public void Render_Uploads_If_File_Doesnt_Exist()
 {
-    var s3client = new Mock<AmazonS3&gt;();
-    var keyBuilder = new Mock<IKeyBuilder&gt;();
+    var s3client = new Mock<AmazonS3>();
+    var keyBuilder = new Mock<IKeyBuilder>();
 
     var key = "key";
     var bucket = "bucket";
     var path = "path";
     var content = "content";
 
-    keyBuilder.Setup(kb =&gt; kb.GetKeyFor(path)).Returns(key);
+    keyBuilder.Setup(kb => kb.GetKeyFor(path)).Returns(key);
 
-    s3client.Setup(c =&gt; c.GetObjectMetadata(It.Is<GetObjectMetadataRequest&gt;(gomr =&gt; gomr.BucketName == bucket && gomr.Key == key))).
+    s3client.Setup(c => c.GetObjectMetadata(It.Is<GetObjectMetadataRequest>(gomr => gomr.BucketName == bucket && gomr.Key == key))).
         Throws(new AmazonS3Exception("", HttpStatusCode.NotFound));
 
     using(var renderer = S3Renderer.Create(s3client.Object)
@@ -180,15 +195,17 @@ public void Render_Uploads_If_File_Doesnt_Exist()
         renderer.Render(content, path);
     }
 
-    s3client.Verify(c =&gt; c.PutObject(It.Is<PutObjectRequest&gt;(por =&gt; por.Key == key &&
+    s3client.Verify(c => c.PutObject(It.Is<PutObjectRequest>(por => por.Key == key &&
                                                                         por.BucketName == bucket &&
                                                                         por.ContentBody == content &&
                                                                         por.CannedACL == S3CannedACL.NoACL)));
-}</pre>
+}
+```
 
 Note that it is checking the PutObjectRequest to ensure that the ACL used is &#8220;NoACL&#8221;. This is probably not an optimal default (most people will want the &#8220;PublicRead&#8221; ACL I imagine) but I decided to err on the side of caution and force people to opt-in to making their content publicly visible. The implementation for the render method looks something like this:
 
-<pre>public void Render(string content, string outputPath)
+```csharp
+public void Render(string content, string outputPath)
 {
     if(string.IsNullOrEmpty(outputPath) || string.IsNullOrEmpty(content)) throw new InvalidOperationException("Can't render to S3 with missing key/content.");
 
@@ -230,7 +247,8 @@ bool FileExists(string key)
         }
         throw;
     }
-}</pre>
+}
+```
 
 It has gotten slightly more complex since then (I&#8217;ve added configurable headers and an option for forcing overwrite of the existing file) but the core logic remains the same. It&#8217;s a fairly naive implementation but my experience with the Amazon services has been good enough so far that I haven&#8217;t encountered a lot of the exceptions that I hope to add handling for in the future.
 
@@ -238,10 +256,11 @@ It has gotten slightly more complex since then (I&#8217;ve added configurable he
 
 At this point we should be able to render our content directly to S3, but this doesn&#8217;t get us all the way to where we need to be. While hosting static content in S3 offers some advantages over hosting it locally and it **can** work as a CDN, using CloudFront to deliver your S3 content makes more sense if you really want to minimize latency. To make this work we&#8217;ll just need to add an invaliator to the mix. A test for the core usage looks like this:
 
-<pre>[Test]
+```csharp
+[Test]
 public void Invalidate()
 {
-    var cloudfrontClient = new Mock<AmazonCloudFront&gt;();
+    var cloudfrontClient = new Mock<AmazonCloudFront>();
 
     var distributionId = Guid.NewGuid().ToString();
     var bucket = Guid.NewGuid().ToString();
@@ -258,20 +277,22 @@ public void Invalidate()
         }
     });
 
-    cloudfrontClient.Setup(cfc =&gt; cfc.ListDistributions())
+    cloudfrontClient.Setup(cfc => cfc.ListDistributions())
         .Returns(listDistributionsResponse);
 
     var invalidator = new CloudFrontInvalidator(cloudfrontClient.Object);
     invalidator.InvalidateObject(bucket, key);
 
-    cloudfrontClient.Verify(cfc =&gt; cfc.PostInvalidation(It.Is<PostInvalidationRequest&gt;(pir =&gt; pir.DistributionId == distributionId
+    cloudfrontClient.Verify(cfc => cfc.PostInvalidation(It.Is<PostInvalidationRequest>(pir => pir.DistributionId == distributionId
         && pir.InvalidationBatch.Paths.Count == 1
         && pir.InvalidationBatch.Paths.First() == key)));
-}</pre>
+}
+```
 
 The implementation is pretty straightforward, and will look very familiar to anyone who read my post regarding [copying buckets with the S3 API][6]. There are only two changes, first that we only need to invalidate one object at a time, and second that we only want to query for the list of CloudFront distributions once. Code for the CloudFront invalidator looks like this:
 
-<pre>class CloudFrontInvalidator : IDisposable, IInvalidator
+```csharp
+class CloudFrontInvalidator : IDisposable, IInvalidator
 {
     const string amazonBucketUriSuffix = ".s3.amazonaws.com";
     const string dateFormatWithMilliseconds = "yyyy-MM-dd hh:mm:ss.ff";
@@ -289,22 +310,22 @@ The implementation is pretty straightforward, and will look very familiar to any
         {
             var invalidationRequest = new PostInvalidationRequest()
                 .WithDistribtionId(distId)
-                .WithInvalidationBatch(new InvalidationBatch(DateTime.Now.ToString(dateFormatWithMilliseconds), new List<string&gt; { key }));
+                .WithInvalidationBatch(new InvalidationBatch(DateTime.Now.ToString(dateFormatWithMilliseconds), new List<string> { key }));
 
             cloudFrontClient.PostInvalidation(invalidationRequest);
         }
     }
 
-    Dictionary<string, string&gt; distributionNameAndIds;
+    Dictionary<string, string> distributionNameAndIds;
 
     string GetDistributionIdFor(string bucketName)
     {
         distributionNameAndIds = distributionNameAndIds ??
             cloudFrontClient.ListDistributions()
             .Distribution
-            .ToDictionary(cfd =&gt;
+            .ToDictionary(cfd =>
                 cfd.DistributionConfig.S3Origin.DNSName.Replace(amazonBucketUriSuffix, ""),
-                cfd =&gt; cfd.Id);
+                cfd => cfd.Id);
 
         string id = null;
         distributionNameAndIds.TryGetValue(bucketName, out id);
@@ -315,7 +336,8 @@ The implementation is pretty straightforward, and will look very familiar to any
     {
         cloudFrontClient.Dispose();
     }
-}</pre>
+}
+```
 
 As an interesting aside, while I was working on this Amazon released [support for querystring invalidation/versioning][7], which is SquishIt&#8217;s default behavior. I had planned to add a release note telling people that they would need to use squishit&#8217;s &#8220;hash in filename&#8221; option, but it seems like now there won&#8217;t be any need 🙂
 
@@ -323,7 +345,8 @@ As an interesting aside, while I was working on this Amazon released [support fo
 
 It&#8217;s nice that this all works on paper (and in unit tests) but how do we actually tie everything together? One of the key design decisions was that the renderer is instantiated with pre-initialized CloudFront and S3 clients. This way users aren&#8217;t locked into a certain method of getting credentials or anything like that. To use the custom renderer for only a particular bundle usage would be something like this:
 
-<pre>var s3client = new AmazonS3Client("accessKey", "secretKey");
+```csharp
+var s3client = new AmazonS3Client("accessKey", "secretKey");
 var renderer = S3Renderer.Create(s3client)
     .WithBucketName("bucket")
     .WithDefaultKeyBuilder(HttpContext.Current.Request.PhysicalApplicationPath,
@@ -335,11 +358,12 @@ Bundle.JavaScript()
     .WithOutputBaseHref("http://s3.amazonaws.com/bucket")
     .Add("file1.js")
     .Add("file2.js")
-    .Render("combined.js");</pre>
-
+    .Render("combined.js");
+```
 This is nice, but I think the global configuration is probably what people will be using more often. As is common in ASP.net apps a lot of the setup magic for this happens in the app initialization. So you&#8217;d add something like this to your Application_Start method (in Global.asax.cs):
 
-<pre>var s3client = new AmazonS3Client("accessKey", "secretKey");
+```csharp
+var s3client = new AmazonS3Client("accessKey", "secretKey");
 var renderer = S3Renderer.Create(s3client)
     .WithBucketName("bucket")
     .WithDefaultKeyBuilder(HttpContext.Current.Request.PhysicalApplicationPath,
@@ -348,7 +372,8 @@ var renderer = S3Renderer.Create(s3client)
 
 Bundle.ConfigureDefaults()
     .UseReleaseRenderer(renderer)
-    .UseDefaultOutputBaseHref("http://s3.amazonaws.com/bucket");</pre>
+    .UseDefaultOutputBaseHref("http://s3.amazonaws.com/bucket");
+```
 
 I tried to make this something that could be run via WebActivator, but had trouble finding a method to use that would have access to the HttpContext (needed to resolve application path and virtual directory) so for now it needs to be set up manually. This may be for the best though, as it doesn&#8217;t force any particular convention for access key / secret key retrieval. It doesn&#8217;t **feel** like a ton of setup code to me, hopefully others will agree.
 

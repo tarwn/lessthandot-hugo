@@ -3,6 +3,7 @@ title: Mentoring – As I see it
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-04-20T09:40:00+00:00
+ID: 1600
 excerpt: |
   The definition, per the Merriam-Webster dictionary, for mentor is: to teach or give advice or guidance to (someone, such as a less experienced person or a child). 
   This definition is, of course, true.  However, we can dive a bit deeper into the meaning&hellip;

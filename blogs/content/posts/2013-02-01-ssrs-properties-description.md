@@ -3,6 +3,7 @@ title: SSRS Properties – Description
 author: Jes Borland
 type: post
 date: 2013-02-01T12:11:00+00:00
+ID: 1956
 excerpt: The purpose of this property is to provide a description that can appear on the report, and appears in Report Manager when the report is published.
 url: /index.php/datamgmt/ssrs/ssrs-properties-description/
 views:

@@ -3,6 +3,7 @@ title: 'T-SQL Wednesday #21 – T-SQL That Should Have Been Flushed Down the Toi
 author: Jes Borland
 type: post
 date: 2011-08-10T12:18:00+00:00
+ID: 1295
 excerpt: |
   This month's topic, hosted by Adam Machanic, is "Crap Code". We've all seen it, and we've all written it. Even me.
 url: /index.php/datamgmt/dbprogramming/t-sql-wednesday-21-t/

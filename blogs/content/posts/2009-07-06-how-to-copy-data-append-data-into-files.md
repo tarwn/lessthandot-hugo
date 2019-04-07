@@ -3,6 +3,7 @@ title: How to copy data/append data into files from within T-SQL
 author: SQLDenis
 type: post
 date: 2009-07-06T14:17:16+00:00
+ID: 495
 url: /index.php/datamgmt/datadesign/how-to-copy-data-append-data-into-files/
 views:
   - 33800
@@ -24,7 +25,8 @@ To copy data into a new file use BCP (Bulk Copy Program). To append to a file us
 
 Here is some sample code. First create this table
 
-<pre>use tempdb
+sql
+use tempdb
 go
 
 create table TestData(Id int, SomeValue varchar(20),SomeOtherValue Decimal(6,2))
@@ -41,11 +43,14 @@ insert TestData values(8,'abcdefg8',3.38)
 insert TestData values(9,'abcdefg9',3.39)
 insert TestData values(10,'abcdefg10',3.40)
 insert TestData values(11,'abcdefg11',3.41)
-insert TestData values(12,'abcdefg12',3.42)</pre>
+insert TestData values(12,'abcdefg12',3.42)
+```
 
 Now lets&#8217; first use BCP to copy data into a file. Here is what the command will look like
 
-<pre>master..xp_cmdshell 'bcp "SELECT id, CHAR(34) + SomeValue + CHAR(34),SomeOtherValue FROM tempdb..TestData" queryout C:TestData.txt -t, -c -Slocalhost -T'</pre>
+sql
+master..xp_cmdshell 'bcp "SELECT id, CHAR(34) + SomeValue + CHAR(34),SomeOtherValue FROM tempdb..TestData" queryout C:TestData.txt -t, -c -Slocalhost -T'
+```
 
 So what does all this stuff do? 
 
@@ -85,7 +90,8 @@ SQL Server blocked access to procedure &#8216;sys.xp\_cmdshell&#8217; of compone
 
 To enable xp_cmdshell execute the following code
 
-<pre>EXECUTE SP_CONFIGURE 'show advanced options', 1
+sql
+EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
  
@@ -95,7 +101,8 @@ GO
  
 EXECUTE SP_CONFIGURE 'show advanced options', 0
 RECONFIGURE WITH OVERRIDE
-GO</pre>
+GO
+```
 
 **OPENROWSET** 
   
@@ -107,7 +114,8 @@ SQL Server blocked access to STATEMENT &#8216;OpenRowset/OpenDatasource&#8217; o
 
 To enable OPENROWSET and OPENQUERY you can use the previous script but instead of &#8216;xp_cmdshell&#8217; you will use &#8216;Ad Hoc Distributed Queries&#8217;. The script to enable Ad Hoc Distributed Queries is below
 
-<pre>EXECUTE SP_CONFIGURE 'show advanced options', 1
+sql
+EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
  
@@ -117,11 +125,14 @@ GO
  
 EXECUTE SP_CONFIGURE 'show advanced options', 0
 RECONFIGURE WITH OVERRIDE
-GO</pre>
+GO
+```
 
 Now it is time to execute our query, make sure that everything in the code below is on one line in your query window.
 
-<pre>master..xp_cmdshell 'bcp "SELECT id, CHAR(34) + SomeValue + CHAR(34),SomeOtherValue FROM tempdb..TestData ORDER BY id" queryout C:TestData.txt -t, -c -Slocalhost -T'</pre>
+sql
+master..xp_cmdshell 'bcp "SELECT id, CHAR(34) + SomeValue + CHAR(34),SomeOtherValue FROM tempdb..TestData ORDER BY id" queryout C:TestData.txt -t, -c -Slocalhost -T'
+```
 
 You should see the following output
 
@@ -141,28 +152,36 @@ NULL_
 
 Now we will use OPENROWSET to read the file we just created
 
-<pre>select * from OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
-'Text;Database=C:;HDR=No;', 'SELECT * FROM TestData.txt')</pre>
+sql
+select * from OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
+'Text;Database=C:;HDR=No;', 'SELECT * FROM TestData.txt')
+```
 
 If everything is correct and ad-hoc queries are enabled on your instance you should see all the rows we inserted. 
 
 Now let&#8217;s append a row to the file
 
-<pre>INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
+sql
+INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
 'Text;Database=C:;HDR=Yes;', 'SELECT * FROM TestData.txt')
-select 13,'abcdefg13',3.43</pre>
+select 13,'abcdefg13',3.43
+```
 
 Running this query below will now return 13 rows
 
-<pre>INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
+sql
+INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
 'Text;Database=C:;HDR=Yes;', 'SELECT * FROM TestData.txt')
-select 13,'abcdefg13',3.43</pre>
+select 13,'abcdefg13',3.43
+```
 
 What if you want to use OPENROWSET to insert into a file that does not exist yet? Let&#8217;s try it out by changing the name to TestData2.txt.
 
-<pre>INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
+sql
+INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
 'Text;Database=C:;HDR=Yes;', 'SELECT * FROM TestData2.txt')
-select 13,'abcdefg13',3.43</pre>
+select 13,'abcdefg13',3.43
+```
 
 And here is our message
   
@@ -176,7 +195,9 @@ OLE DB error trace [OLE/DB Provider &#8216;Microsoft.Jet.OLEDB.4.0&#8217; IColum
 
 Mmm, what if we create a file from within a shell command?
 
-<pre>master..xp_cmdshell 'copy nul c:TestData2.txt'</pre>
+sql
+master..xp_cmdshell 'copy nul c:TestData2.txt'
+```
 
 _1 file(s) copied.
   
@@ -186,9 +207,11 @@ _
 
 Now that we created the file, let&#8217;s try again
 
-<pre>INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
+sql
+INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
 'Text;Database=C:;HDR=Yes;', 'SELECT * FROM TestData2.txt')
-select * from TestData</pre>
+select * from TestData
+```
 
 _Server: Msg 7357, Level 16, State 2, Line 1
   
@@ -206,5 +229,5 @@ If you need do this kind of thing more than once I would recommend to use SSIS (
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

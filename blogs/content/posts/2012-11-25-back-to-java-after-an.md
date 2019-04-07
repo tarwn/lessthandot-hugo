@@ -3,6 +3,7 @@ title: Back to Java after an eleven year hiatus, what are some good resources yo
 author: SQLDenis
 type: post
 date: 2012-11-25T22:34:00+00:00
+ID: 1800
 excerpt: |
   This week eleven coworkers and myself will be in Java training for most of the time, I haven't touched Java since 2001. I did a bunch of research over the 4 day weekend to get a little head start.
   

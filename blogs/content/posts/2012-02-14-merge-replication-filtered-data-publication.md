@@ -3,6 +3,7 @@ title: Merge Replication – Filtered Data Publication Setup
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-02-14T22:33:00+00:00
+ID: 1528
 excerpt: |
   This article will show you how to use two methods in order to restrict the amount of data that is needed in a Merge Replication setup:  Join and Parameterized Filters.
   Join Filters are exactly what they sound like.  If a Join Filter is configured in a&hellip;
@@ -29,7 +30,8 @@ The following publication and subscription utilize Parameterized and Join filter
 
 If you need to download AdventureWorks, you can find it on [Codeplex][1].  To create the subscriber database, the following script can be executed.
 
-<pre>CREATE DATABASE [AdventureWorksSalesperson]
+sql
+CREATE DATABASE [AdventureWorksSalesperson]
 ON PRIMARY 
 (NAME = N'AdventureWorks2008R2_Data', FILENAME = N'C:SQLRCAdventureWorksSalesperson_Data.mdf' , SIZE = 220928KB , MAXSIZE = UNLIMITED, FILEGROWTH = 102400KB )
  LOG ON 
@@ -37,33 +39,40 @@ ON PRIMARY
 GO
 ALTER DATABASE [AdventureWorksSalesperson] SET RECOVERY SIMPLE
 GO
---change physical file names where required on your systems</pre>
+--change physical file names where required on your systems
+```
 
 > _Note: This database default growth for data and log files has been calculated based on the partition size that will be applied.  You should always estimate the partition size and create databases to follow that size requirement to prevent unwanted data and log growth._</p>
 A good way to prepare for creating a publication that uses filters is to write the query that mimics the same functionality.  In this case, the publication is using parameterized filter SUSER_SNAME() on Person.Person and then Join Filters on Sales.SalesOrderHeader, Sales.SalesOrderDetail and Production.TransactionHistory.
 
-<pre>SELECT 
+sql
+SELECT 
 	1
 FROM Person.Person
 JOIN Sales.SalesOrderHeader ON [Person].[BusinessEntityID] = [SalesOrderHeader].[SalesPersonID]
 JOIN Sales.SalesOrderDetail ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID]
 JOIN Production.TransactionHistory ON [SalesOrderHeader].[SalesOrderID] = [TransactionHistory].[ReferenceOrderID]
-WHERE [Person].[LoginAccount] = SUSER_SNAME()</pre>
+WHERE [Person].[LoginAccount] = SUSER_SNAME()
+```
 
 This query represents the resulting partition of data that will be sent to a subscriber matching the SUSER_SNAME().
 
 In order to utilize AdventureWorks to publish data with parameterized filters, the Person table needs to be altered to include a column that will hold SUSER_SNAME().
 
-<pre>ALTER TABLE Person.Person
-ADD LoginAccount NVARCHAR(128)</pre>
+sql
+ALTER TABLE Person.Person
+ADD LoginAccount NVARCHAR(128)
+```
 
 Update all columns that match a BusinessEntityID of 275 to match your login account.
 
 Example
 
-<pre>UPDATE Person.Person
+sql
+UPDATE Person.Person
 SET LoginAccount = 'ONPNTtkrueger'
-WHERE BusinessEntityID = 275</pre>
+WHERE BusinessEntityID = 275
+```
 
 **Create a Publication**
 
@@ -279,9 +288,11 @@ INSTANCE-database-publication-increment &#8211; Example: ONPNTRC0-AdventureWorks
 
 Test the publication and subscription by altering data in the SalesOrderHeader table on the subscriber database, AdventureWorksSalesperson.
 
-<pre>update Sales.SalesOrderHeader
+sql
+update Sales.SalesOrderHeader
 set ShipDate = getdate(), OrderDate = getdate()-10,DueDate = getdate()-1
-where SalesPersonID = 275</pre>
+where SalesPersonID = 275
+```
 
 Back in the replication monitor, click the All Subscriptions tab.  Right click the subscriber and click Start Synchronizing.
 
@@ -291,7 +302,10 @@ Back in the replication monitor, click the All Subscriptions tab.  Right click 
 
 Check the changes were sent to the publisher by querying the AdventureWorks database.
 
-<pre>select * from Sales.SalesOrderHeader where SalesPersonID = 275</pre>
+sql
+select * from Sales.SalesOrderHeader where SalesPersonID = 275
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/mergesetup_25.gif?mtime=1329263554"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/mergesetup_25.gif?mtime=1329263554" width="624" height="114" /></a>

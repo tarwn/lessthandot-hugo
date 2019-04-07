@@ -3,6 +3,7 @@ title: 2011 Quarter 2 Goal Review
 author: Jes Borland
 type: post
 date: 2011-07-01T11:00:00+00:00
+ID: 1237
 excerpt: 2011 has been an excellent year so far!
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/2011-quarter-2-goal-review/
 views:

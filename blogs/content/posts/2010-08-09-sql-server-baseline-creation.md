@@ -3,6 +3,7 @@ title: Creating a baseline for SQL Server
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-09T09:50:25+00:00
+ID: 864
 excerpt: 'In the last post, "Baseline, Performance Reporting and being a proactive DBA" touched on baselines and using them to set thresholds for actively monitoring performance problems on SQL Server.  From that post we briefly discussed that every database server is unique.  That even being true when the databases we attach to SQL Server are packaged installations from third party applications (like SAP, Dynamics etc...).  I received feedback from my good friend Aaron Lowe (Twitter | Blog) on this topic and a very good conversation on how we create these baselines.  Aaron had a great point regarding there not being much out there on exactly how to do this so I thought I’d write up a follow-up to the article and some points you can use to create your own baselines.'
 url: /index.php/datamgmt/datadesign/sql-server-baseline-creation/
 views:
@@ -41,9 +42,11 @@ Performance Monitor (perfmon) is a tool that you can use not only for baseline c
 
 With the addition of Dynamic Management Views in SQL Server 2005+, we have a completely new way to add to baseline capturing. sys.dm\_os\_performance\_counters alone gives us a vast amount of information to work off of that was only available to perfmon. To see the types of counters that are exposed in performance\_counters, use the following query
 
-<pre>SELECT DISTINCT [object_name]  
+sql
+SELECT DISTINCT [object_name]  
 FROM sys.[dm_os_performance_counters]  
-ORDER BY[object_name]; </pre>
+ORDER BY[object_name]; 
+```
 
 In the list of counters you will see there are quite a few SQL Server counters that we can analyze. The only problem is everything in there is restricted to SQL Server. This means we will still need the help of perfmon and other tools like WMI reads. I mention [Windows Management Instrumentation][4] (WMI) because my own baseline capture process consists of some WMI reads similar to the methods that Jason Massie uses [here][5] and using the WMI reader task in SSIS. WMI can get deep into the hardware and give us information so we can refine our baselines down even further.
 

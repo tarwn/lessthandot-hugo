@@ -3,6 +3,7 @@ title: Continuous Delivery Project – Making MVCMusicStore Testable
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-12-16T11:28:00+00:00
+ID: 1412
 excerpt: "It can be challenging to add unit testing to a project that was built without planning to incorporate it. The ASP.Net MVC Music Store tutorial was not built with unit testing in mind, but today we're going to walk through the addition of Controller unit tests, focusing on a controller that directly references Entity Framework objects and implicitly interacts with ASP.Net Membership objects and Request data from the current HttpContext."
 url: /index.php/enterprisedev/unittest/continuous-delivery-project-making-mvcmusicstore/
 views:
@@ -25,7 +26,7 @@ tags:
 It can be challenging to add unit testing to a project that was built without planning to incorporate it. The ASP.Net MVC Music Store tutorial was not built with unit testing in mind, but today we&#8217;re going to walk through the addition of Controller unit tests, focusing on a controller that directly references Entity Framework objects and implicitly interacts with ASP.Net Membership objects and Request data from the current HttpContext.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Overview_p2.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p2.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
 </div>
 
 This is the third post in a multi-part series on my Continuous Delivery pipeline project. The [previous post][1] followed the setup of the Continuous Integration engine and the CI build job. This post follows the addition of Unit Tests to the ASP.Net MVC Music Store application so those tests can be incorporated in the CI build job (in the next post).
@@ -46,7 +47,8 @@ Before writing the first test, I need to drive a wedge between the Entity Framew
 
 **MVCMusicStore/Controllers/CheckoutController.cs**
 
-<pre>namespace MvcMusicStore.Controllers {
+```csharp
+namespace MvcMusicStore.Controllers {
 
 	[Authorize]
 	public class CheckoutController : Controller {
@@ -58,15 +60,16 @@ Before writing the first test, I need to drive a wedge between the Entity Framew
 		public ActionResult AddressAndPayment() {
 			return View();
 		}
-...</pre>
-
+...
+```
 Replacing this concrete object with an interface will allow the production version of the site to continue working with a live database context while providing the ability to use a fake version for testing. 
 
 To create the replacement, I&#8217;ll start replacing the concrete context with the name of an interface, then use the errors from the compiler to help define the minimum set of interface members required to satisfy the production code.
 
 **MVCMusicStore/Controllers/CheckoutController.cs**
 
-<pre>namespace MvcMusicStore.Controllers {
+```csharp
+namespace MvcMusicStore.Controllers {
 
 	[Authorize]
 	public class CheckoutController : Controller {
@@ -78,56 +81,59 @@ To create the replacement, I&#8217;ll start replacing the concrete context with 
 		public CheckoutController(IMusicStoreEntities storeDb) {
 			this.storeDB = storeDb;
 		}
-...</pre>
-
+...
+```
 _Why define the interface first and debug forward? Why not build a copy of the DbContext first? Starting with a minimal interface like this will help me keep the interface to the minimum necessary functionality. Had I started with the DbContext I could easily start defining methods that seem like they will be useful at some point, but don&#8217;t reflect what I will actually need or may never be used. Extra code is extra maintenance and finding out sooner that something doesn&#8217;t work (or is unnecessary) leads to less wasted effort._
 
 The first error is the attempted assignment of the new MusicStoreEntities to the IMusicStoreEntities constructor. That one is easy enough to resolve:
 
 **MVCMusicStore/Models/MusicStoreEntities.cs**
 
-<pre>namespace MvcMusicStore.Models {
+```csharp
+namespace MvcMusicStore.Models {
 	public class MusicStoreEntities : DbContext, IMusicStoreEntities {
 		// ...
 	}
 
 	public interface IMusicStoreEntities { }
-}</pre>
-
+}
+```
 I&#8217;ve added the interface declaration and the implements statement to MusicStoreEntities. Next I&#8217;ll define the collections and make sure the interface implements IDisposable:
 
 **MVCMusicStore/Models/MusicStoreEntities.cs**
 
-<pre>namespace MvcMusicStore.Models {
+```csharp
+namespace MvcMusicStore.Models {
 	public class MusicStoreEntities : DbContext, IMusicStoreEntities {
-		public IDbSet<Album&gt; Albums { get; set; }
-		public IDbSet<Genre&gt; Genres { get; set; }
+		public IDbSet<Album> Albums { get; set; }
+		public IDbSet<Genre> Genres { get; set; }
 
-		public IDbSet<Artist&gt; Artists { get; set; }
+		public IDbSet<Artist> Artists { get; set; }
 
-		public IDbSet<Cart&gt; Carts { get; set; }
-		public IDbSet<Order&gt; Orders { get; set; }
-		public IDbSet<OrderDetail&gt; OrderDetails { get; set; }
+		public IDbSet<Cart> Carts { get; set; }
+		public IDbSet<Order> Orders { get; set; }
+		public IDbSet<OrderDetail> OrderDetails { get; set; }
 
 	}
 
 	public interface IMusicStoreEntities : IDisposable {
-		IDbSet<Album&gt; Albums { get; set; }
-		IDbSet<Genre&gt; Genres { get; set; }
+		IDbSet<Album> Albums { get; set; }
+		IDbSet<Genre> Genres { get; set; }
 
-		IDbSet<Artist&gt; Artists { get; set; }
+		IDbSet<Artist> Artists { get; set; }
 
-		IDbSet<Cart&gt; Carts { get; set; }
-		IDbSet<Order&gt; Orders { get; set; }
-		IDbSet<OrderDetail&gt; OrderDetails { get; set; }
+		IDbSet<Cart> Carts { get; set; }
+		IDbSet<Order> Orders { get; set; }
+		IDbSet<OrderDetail> OrderDetails { get; set; }
 	}
-}</pre>
-
+}
+```
 At this point I have a couple errors to clean up. In one case the compiler is upset with using Include() off of an IDbSet instance, this is easily solved by adding <code class="codespan">using System.Data.Entity;</code> to the file so the extension will be available. The second error points out a missing SaveChanges call on my interface which I can easily add:
 
 **MVCMusicStore/Models/MusicStoreEntities.cs**
 
-<pre>namespace MvcMusicStore.Models {
+```csharp
+namespace MvcMusicStore.Models {
 	public class MusicStoreEntities : DbContext, IMusicStoreEntities {
 		// ...
 	}
@@ -137,15 +143,16 @@ At this point I have a couple errors to clean up. In one case the compiler is up
 
 		int SaveChanges();
 	}
-}</pre>
-
+}
+```
 With those last couple changes completed, the build is happy and I have a minimal interface. 
 
 Next I want to replace the behavior in the controllers of creating their own local DbContext instance with using one that is provided to them. I started this by defining the two constructors above for my CheckoutController, but rather than copy and paste this new behavior to all of the controllers, I&#8217;ll move the responsibility to a ControllerBase class:
 
 **MVCMusicStore/Controllers/ControllerBase.cs** (New File)
 
-<pre>namespace MvcMusicStore.Controllers {
+```csharp
+namespace MvcMusicStore.Controllers {
 	public class ControllerBase :Controller {
 		private IMusicStoreEntities _storeDB;
 
@@ -157,11 +164,12 @@ Next I want to replace the behavior in the controllers of creating their own loc
 			_storeDB = storeDb;
 		}
 	}
-}</pre>
-
+}
+```
 **MVCMusicStore/Controllers/CheckoutController.cs** (New File)
 
-<pre>namespace MvcMusicStore.Controllers {
+```csharp
+namespace MvcMusicStore.Controllers {
 
 	[Authorize]
 	public class CheckoutController : ControllerBase {
@@ -185,8 +193,8 @@ Next I want to replace the behavior in the controllers of creating their own loc
 
 		// ...
 	}
-}</pre>
-
+}
+```
 After replacing the private variable and constructors from the CheckoutController with inheritance from the ControllerBase, the three places referencing the old variable are showing as errors and I&#8217;ll simply update them to the public property in the ControllerBase. 
 
 The last place I need to change is the ShoppingCart object. Despite being a model object, the ShoppingCart object instantiates it&#8217;s own local instance of the MusicStoreEntities context. The first time I converted the project, I missed this case and had some odd unit test results until I realized the cart was still accessing a real database.
@@ -197,7 +205,8 @@ Just like the Controllers, I&#8217;ll update the ShoppingCart object to use the 
 
 **MVCMusicStore/Models/ShoppingCart.cs** (New File)
 
-<pre>namespace MvcMusicStore.Models {
+```csharp
+namespace MvcMusicStore.Models {
 	public partial class ShoppingCart {
 		IMusicStoreEntities storeDB;
 
@@ -220,8 +229,8 @@ Just like the Controllers, I&#8217;ll update the ShoppingCart object to use the 
 
 		// ...
 	}
-}</pre>
-
+}
+```
 With these changes added, the next build errors direct me to the places that need to pass the extra argument. For the CheckoutController, I&#8217;ll use the public property exposed by the Controllerbase. For the AccountController I need to instantiate a MusicStoreEntities object to pass (or convert it to use ControllerBase), and for the others I can plug in their local storeDb variable.
 
 _Note: In my [implementation][5], I went ahead and converted all of my controllers over to the new ControllerBase. The downside of this method is that the more you convert, the more you have to test. Since I don&#8217;t have unit tests in place, this means a full manual regression test. On a larger project I would limit my changes only to the pieces I was planning on adding unit tests to and had time to manually regression test, but I would build my objects (like the ControllerBase) in such a way that the next conversions could take advantage and extend them when it&#8217;s their turn._
@@ -234,7 +243,8 @@ To get started, I&#8217;ll create the test project and use the package manager t
 
 **MvcMusicStoreTests/Controllers/CheckoutController.cs**
 
-<pre>namespace MvcMusicStoreTests.Controllers {
+```csharp
+namespace MvcMusicStoreTests.Controllers {
 
 	[TestClass]
 	public class CheckoutControllerTests {
@@ -248,22 +258,23 @@ To get started, I&#8217;ll create the test project and use the package manager t
 			Assert.IsNotNull(result);
 		}
 	}
-}</pre>
-
+}
+```
 This test is using the Arrange, Act, Assert (AAA) unit testing pattern and is a basic test that asserts that the CheckoutController returns a result when we call AddressAndPayment. In the first step I call a Factory class to populate the data context of our CheckoutController. I have also started abstracting out obvious resources that will need to be fleshed out later, but haven&#8217;t started to define what those behaviors will be (I&#8217;ll let future tests decide that for me).
 
 _You may also notice that the folder structure for my test matches the structure for the class that is under tests, this makes it easier to keep the project organized and to find matching files across the projects._
 
 **MvcMusicStoreTests/MusicStoreEntitiesFactory.cs**
 
-<pre>namespace MvcMusicStoreTests {
+```csharp
+namespace MvcMusicStoreTests {
 	class MusicStoreEntitiesFactory {
 		public static IMusicStoreEntities GetEmpty() {
-			return MockRepository.GenerateMock<IMusicStoreEntities&gt;();
+			return MockRepository.GenerateMock<IMusicStoreEntities>();
 		}
 	}
-}</pre>
-
+}
+```
 I don&#8217;t actually need any data yet, so I can use RhinoMock&#8217;s MockRepository to automaitcally create a stub implementation of the IMusicStoreEntities interface the controller requires.
 
 ## Fake Db and Http Contexts
@@ -280,7 +291,8 @@ Rather than trying to guess ahead as to what pieces of the package I&#8217;ll ne
 
 **MvcMusicStoreTests/Controllers/CheckoutController.cs**
 
-<pre>namespace MvcMusicStoreTests.Controllers {
+```csharp
+namespace MvcMusicStoreTests.Controllers {
 
 	[TestClass]
 	public class CheckoutControllerTests {
@@ -300,15 +312,16 @@ Rather than trying to guess ahead as to what pieces of the package I&#8217;ll ne
 			Assert.AreNotEqual(0, result.ViewData.ModelState.Count);
 		}
 	}
-}</pre>
-
+}
+```
 I&#8217;m relegating the logic of creating the controller to a local function called <code class="codespan">GetWiredUpController()</code>, trusting it to return a functioning controller. I then create a FormCollection of values and assign it to the controller as if they had been sent from a client browser. The rest of the code is the Act and Assert steps of the test to call the controller and verify the result.
 
 On the first run, the <code class="codespan">GetWiredUpController()</code> method isn&#8217;t giving me everything I need, but I can work through that iteratively until I have all the pieces I need. This took several iterations, so I&#8217;ll skip ahead to the end results. 
 
 **MvcMusicStoreTests/Controllers/CheckoutController.cs**
 
-<pre>namespace MvcMusicStoreTests.Controllers {
+```csharp
+namespace MvcMusicStoreTests.Controllers {
 
 	[TestClass]
 	public class CheckoutControllerTests {
@@ -323,8 +336,8 @@ On the first run, the <code class="codespan">GetWiredUpController()</code> metho
 			return controller;
 		}
 	}
-}</pre>
-
+}
+```
 Like the initial test, I create the controller and populate it with an empty IMusicStoreEntities call from the factory. I then create an instance of the TestControllerBuilder class from the MVCContrib package, which will wire together all the stubs and fakes necessary to present Application, Session, and other necessary HttpContext values to the controller. I&#8217;ll add my own FakeUser object (an implementation of IPrincipal) to the builder, then have it do it&#8217;s magic on the CheckoutController instance. Voila, one fully wired up CheckoutController.
 
 ### Totally Faked Out, Just Add Data&#8230;
@@ -335,28 +348,30 @@ In order to inject some fake data, I need to replace the stubbed out IMusicStore
 
 **MvcMusicStoreTests/MusicStoreEntitiesFactory.cs**
 
-<pre>namespace MvcMusicStoreTests {
+```csharp
+namespace MvcMusicStoreTests {
 	class MusicStoreEntitiesFactory {
 		public static IMusicStoreEntities GetEmpty() {
 			FakeDataStore datastore = new FakeDataStore();
-			datastore.Albums = new FakeDbSet<Album&gt;();
-			datastore.Artists = new FakeDbSet<Artist&gt;();
-			datastore.Carts = new FakeDbSet<Cart&gt;();
-			datastore.Genres = new FakeDbSet<Genre&gt;();
-			datastore.OrderDetails = new FakeDbSet<OrderDetail&gt;();
-			datastore.Orders = new FakeDbSet<Order&gt;();
+			datastore.Albums = new FakeDbSet<Album>();
+			datastore.Artists = new FakeDbSet<Artist>();
+			datastore.Carts = new FakeDbSet<Cart>();
+			datastore.Genres = new FakeDbSet<Genre>();
+			datastore.OrderDetails = new FakeDbSet<OrderDetail>();
+			datastore.Orders = new FakeDbSet<Order>();
 			return datastore;
 		}
 	}
-}</pre>
-
+}
+```
 The fake implementations of the <a href="https://bitbucket.org/tarwn/mvcmusicstore.main/src/8831221efe43/MvcMusicStoreTests/Fakes/FakeDataStore.cs" title="See the FakeDataStore class" target="_blank">datastore</a> exposes collections that implement <a href="https://bitbucket.org/tarwn/mvcmusicstore.main/src/8831221efe43/MvcMusicStoreTests/Fakes/FakeDbSet.cs" title="See the FakeDbSet class" target="_blank">IDbSet</a>. With this setup, it is easy to add test data on a per-test basis and without the overhead of a database (work) or some form of test data management (more work).
 
 Using this new capability, I can start building out more extensive tests.
 
 **MvcMusicStoreTests/Controllers/CheckoutController.cs**
 
-<pre>namespace MvcMusicStoreTests.Controllers {
+```csharp
+namespace MvcMusicStoreTests.Controllers {
 
 	[TestClass]
 	public class CheckoutControllerTests {
@@ -372,8 +387,8 @@ Using this new capability, I can start building out more extensive tests.
 			ViewResult result = controller.Complete(5) as ViewResult;
 
 			Assert.AreEqual(5, result.ViewData.Model);
-		}</pre>
-
+		}
+```
 Without any database or HttpContext, I can now test that a valid user with a valid order id will complete processing successfully. I&#8217;ve extended the WiredUpController to take optional arguments to simplify creating scenarios specific to an individual test, again adding functionality only as we need it to satisfy our tests.
 
 With a working fake data context a working fake HttpContext and sample tests that interact with both, I can make additional tests very easily and have the groundwork in place to start adding test coverage to other controllers.

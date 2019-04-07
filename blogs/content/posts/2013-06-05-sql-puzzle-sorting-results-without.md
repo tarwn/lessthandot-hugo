@@ -3,6 +3,7 @@ title: SQL Puzzle.. Sorting results without using ORDER BY
 author: SQLDenis
 type: post
 date: 2013-06-05T19:25:00+00:00
+ID: 2101
 excerpt: |
   Time for this week's puzzle/teaser. I want to return the results in ascending order but without using ORDER BY
   
@@ -31,7 +32,8 @@ Time for this week&#8217;s puzzle/teaser. I want to return the results in ascend
 
 If you run this code
 
-<pre>CREATE TABLE Puzzle
+sql
+CREATE TABLE Puzzle
      (Col1 varchar(20) NOT NULL PRIMARY KEY CLUSTERED,
       Col2 varchar(20) NOT NULL UNIQUE NONCLUSTERED);
 
@@ -47,7 +49,8 @@ UNION ALL
 SELECT 'M', 'EE';
 
 SELECT Col1 FROM Puzzle;
-DROP TABLE Puzzle;</pre>
+DROP TABLE Puzzle;
+```
 
 you get these results
 
@@ -79,7 +82,9 @@ Z
 
 Without using ORDER BY, how would you make the SELECT query return Col1 in ascending order? You can&#8217;t make changes to the table, all that you are allowed to modify is this part
 
-<pre>SELECT Col1 FROM Puzzle;</pre>
+sql
+SELECT Col1 FROM Puzzle;
+```
 
 **Warning**
   

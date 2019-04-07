@@ -3,6 +3,7 @@ title: Modeling the Agile Data Warehouse with Data Vault – Review
 author: Koen Verbeeck
 type: post
 date: 2014-07-17T11:18:38+00:00
+ID: 2842
 url: /index.php/datamgmt/datadesign/modeling-the-agile-data-warehouse-with-data-vault-review-2/
 views:
   - 39148

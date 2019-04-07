@@ -3,6 +3,7 @@ title: Giving only insert permissions to a table for a new login
 author: SQLDenis
 type: post
 date: 2013-03-04T13:00:00+00:00
+ID: 2021
 excerpt: |
   There was a requirement to create a new user who would have only insert permissions to one table, this user would also have insert and select permissions to another table.
   
@@ -30,7 +31,8 @@ There was [a requirement][1] to create a new user who would have only insert per
 
 This is pretty simple to accomplish. First create this simple database with two tables
 
-<pre>CREATE DATABASE TestPermission
+sql
+CREATE DATABASE TestPermission
 GO
 
 USE TestPermissions
@@ -43,30 +45,37 @@ GO
 
 CREATE TABLE  TestAccess2(id INT)
 INSERT TestAccess2 VALUES (1)
-GO</pre>
+GO
+```
 
 Create the new user
 
-<pre>USE [master]
+sql
+USE [master]
 GO
 CREATE LOGIN [SomeTestUser] WITH PASSWORD=N'TestPAss', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
 GO
 USE [TestPermissions]
 GO
 CREATE USER [SomeTestUser] FOR LOGIN [SomeTestUser]
-GO</pre>
+GO
+```
 
 Now just give the user insert permissions to the TestAccess table
 
-<pre>USE TestPermissions
+sql
+USE TestPermissions
 GO
 
 
-GRANT INSERT ON TestAccess TO SomeTestUser</pre>
+GRANT INSERT ON TestAccess TO SomeTestUser
+```
 
 Login as the newly created user and try to run the following
 
-<pre>SELECT * FROM TestAccess</pre>
+sql
+SELECT * FROM TestAccess
+```
 
 Here is the error message that you will get
 
@@ -76,11 +85,15 @@ The SELECT permission was denied on the object &#8216;TestAccess&#8217;, databas
 
 Running the insert statement is no problem
 
-<pre>INSERT TestAccess VALUES (1)</pre>
+sql
+INSERT TestAccess VALUES (1)
+```
 
 Go back to the admin connection and run the following
 
-<pre>GRANT SELECT,INSERT ON TestAccess2 TO SomeTestUser</pre>
+sql
+GRANT SELECT,INSERT ON TestAccess2 TO SomeTestUser
+```
 
 As you can see you can combine privileges with the GRANT statement, you don&#8217;t have to do the separately
 
@@ -88,16 +101,21 @@ You just gave insert and select permissions to SomeTestUser for the TestAccess2 
 
 Now if you go back to the connection, you can run the following without a problem
 
-<pre>INSERT TestAccess2 VALUES (1)
-SELECT * FROM TestAccess2</pre>
+sql
+INSERT TestAccess2 VALUES (1)
+SELECT * FROM TestAccess2
+```
 
 In general you probably want a user to have read permissions or write permissions for all the tables, in that case you can use a role. The following will give read and write permissions for all the tables in the database
 
-<pre>USE [TestPermissions]
+sql
+USE [TestPermissions]
 GO
 EXEC sp_addrolemember N'db_datareader', N'SomeTestUser'
 GO
 EXEC sp_addrolemember N'db_datawriter', N'SomeTestUser'
-GO</pre>
+GO
+```
+
 
  [1]: http://stackoverflow.com/questions/15204118/how-do-i-create-a-user-in-sql-server-that-only-has-access-to-one-table-and-can

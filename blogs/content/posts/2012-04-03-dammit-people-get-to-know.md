@@ -3,6 +3,7 @@ title: Dammit people, get to know check constraints and use them!
 author: SQLDenis
 type: post
 date: 2012-04-03T23:05:00+00:00
+ID: 1584
 excerpt: "A couple of months back we were interviewing people for 2 positions, one of the questions I like to ask is the following: If you have a column in a table that's an integer data type how can you restrict the values to be between 1 and 10? Most of the peo&hellip;"
 url: /index.php/datamgmt/datadesign/dammit-people-get-to-know/
 views:
@@ -32,18 +33,24 @@ Let&#8217;s look at some examples
 
 First create this table
 
-<pre>create table SomeTable(code char(3) not null)
-GO</pre>
+sql
+create table SomeTable(code char(3) not null)
+GO
+```
 
 Now let&#8217;s say we want to restrict the values that you can insert to only accept characters from a through z, here is what the constraint looks like
 
-<pre>alter table SomeTable add  constraint ck_bla
+sql
+alter table SomeTable add  constraint ck_bla
 check (code like '[a-Z][a-Z][a-Z]' )
-GO</pre>
+GO
+```
 
 If you now run the following insert statement&#8230;.
 
-<pre>insert SomeTable values ('123')</pre>
+sql
+insert SomeTable values ('123')
+```
 
 You get this error message back
 
@@ -55,18 +62,24 @@ The statement has been terminated._
 
 What if you have a tinyint column but you want to make sure that values are less then 100? Easy as well, first create this table
 
-<pre>create table SomeTable2(SomeCol tinyint not null)
-GO</pre>
+sql
+create table SomeTable2(SomeCol tinyint not null)
+GO
+```
 
 Now add this constraint
 
-<pre>alter table SomeTable2 add  constraint ck_SomeTable2
+sql
+alter table SomeTable2 add  constraint ck_SomeTable2
 check (SomeCol < 100 )
-GO</pre>
+GO
+```
 
 Try to insert the value 100
 
-<pre>insert SomeTable2 values ('100')</pre>
+sql
+insert SomeTable2 values ('100')
+```
 
 _Msg 547, Level 16, State 0, Line 2
   
@@ -76,7 +89,9 @@ The statement has been terminated._
 
 Okay, what happens if you try to insert -1?
 
-<pre>insert SomeTable2 values ('-1')</pre>
+sql
+insert SomeTable2 values ('-1')
+```
 
 _Msg 244, Level 16, State 1, Line 1
   

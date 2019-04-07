@@ -3,6 +3,7 @@ title: Modify a Power View Data Source
 author: Koen Verbeeck
 type: post
 date: 2013-05-08T08:11:00+00:00
+ID: 2082
 excerpt: This blog posts explains how you can modify the data source of a Power View report published on SharePoint.
 url: /index.php/webdev/business-intelligence/modify-power-view-data-source/
 views:

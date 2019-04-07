@@ -3,6 +3,7 @@ title: Visual Studio 2010 and .NET 4 release candidates available for download
 author: SQLDenis
 type: post
 date: 2010-02-09T10:02:04+00:00
+ID: 697
 url: /index.php/desktopdev/mstech/visual-studio-2010-and-net-4-release-can/
 views:
   - 3030

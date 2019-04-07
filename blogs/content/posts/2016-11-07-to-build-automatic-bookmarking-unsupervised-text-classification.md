@@ -3,6 +3,7 @@ title: To Build Automatic Bookmarking – Unsupervised Text Classification
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-11-07T13:39:02+00:00
+ID: 4769
 url: /index.php/artificial-intelligence/to-build-automatic-bookmarking-unsupervised-text-classification/
 views:
   - 4040
@@ -43,14 +44,15 @@ TF-IDF stands for Text Frequency Inverse Document Frequency. At a high level, a 
 
 I used a series of 5 of my own blog posts to test with:
 
-<pre>pages = [
-    'http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html',
-    'http://www.tiernok.com/posts/stop-manually-updating-your-jasmine-specrunner.html',
-    'http://www.tiernok.com/posts/self-hosted-web-updating-assets-without-restarting-the-debugger.html',
-    'http://www.tiernok.com/posts/asp-net-single-sign-on-against-office365-with-oauth2.html',
-    'http://www.tiernok.com/posts/improved-teamcity-net-build-warnings.html'
-]</pre>
-
+```py
+pages = [
+    'http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html',
+    'http://tiernok.com/posts/stop-manually-updating-your-jasmine-specrunner.html',
+    'http://tiernok.com/posts/self-hosted-web-updating-assets-without-restarting-the-debugger.html',
+    'http://tiernok.com/posts/asp-net-single-sign-on-against-office365-with-oauth2.html',
+    'http://tiernok.com/posts/improved-teamcity-net-build-warnings.html'
+]
+```
 Starting with a set of my own posts meant the consistent would be in a consistent format, I would have some ideas on what I expected the keywords to be, and I could defer things like local content caching logic without running up someone else&#8217;s bill or messing up their page statistics.
 
 _Please be kind to my site if you run these scripts yourself, btw_
@@ -61,7 +63,8 @@ After a few iterations where I tried to resolve pluralization and grouping thing
 
 **[tfidf.py][9]**
 
-<pre># 1: Get content of site using requests and html2test
+```py
+# 1: Get content of site using requests and html2test
 def get_site_text(url):
     resp = requests.get(url)
     resp.raise_for_status()
@@ -70,7 +73,7 @@ def get_site_text(url):
 
 # 2: Score each word for an individual page against the full set of pages
 def score_page(blob, blobs):
-    scores = {word: tdidf(word, blob, blobs) for word in blob.words if len(word) &gt; 2}
+    scores = {word: tdidf(word, blob, blobs) for word in blob.words if len(word) > 2}
     return sorted(scores.items(), key=lambda x: x[1], reverse=True)
 
 # 3: For each URL in the page list, get the text content and a TextBlob for the content
@@ -89,19 +92,20 @@ for page in completed_pages:
     print('Scoring %s' % page["page"])
     page_scores = score_page(page["blob"], [page["blob"] for page in completed_pages])
     for word, score in page_scores[:5]:
-        print("\rWord: {}, TF-IDF: {}".format(word, round(score, 5)))</pre>
-
+        print("\rWord: {}, TF-IDF: {}".format(word, round(score, 5)))
+```
 I love python for it&#8217;s readability, but documentation and figuring out which library one should be using for basic things like executing web requests ate up a bunch of my time (this is the 3rd web library, 4th HTML to text method, and 2nd library for analyzing content).
 
 This is the top words it gave me for the first entry, a post about a real-time JavaScript test runner using Microsoft&#8217;s VS Code IDE for samples:
 
-<pre>Scoring http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
+```text
+Scoring http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
 Word: wallaby, TF-IDF: 0.01319
 Word: baseurl, TF-IDF: 0.01116
 Word: tests, TF-IDF: 0.00962
 Word: false, TF-IDF: 0.00812
-Word: isusingwallaby, TF-IDF: 0.00609</pre>
-
+Word: isusingwallaby, TF-IDF: 0.00609
+```
 Apparently I didn&#8217;t use explicit &#8220;false&#8221; values frequently enough in the prior posts (or at least not as frequently as I used the word Javascript). 
 
 This bring us to the reasons it won&#8217;t fit for what I&#8217;m doing:
@@ -138,7 +142,8 @@ Luckily, there are a few implementations for RAKE already for python. I&#8217;ll
 
 **[rake.py][15]**
 
-<pre># 1: Method to get content of site using requests and html2test
+```py
+# 1: Method to get content of site using requests and html2test
 def get_site_text(url):
     resp = requests.get(url)
     resp.raise_for_status()
@@ -157,11 +162,11 @@ for page in pages:
         print('Keyword: %s, score: %d' % (keyword, score))
 
 end_time = time.time() - start_time
-print('Done. Elapsed: %d' % end_time)</pre>
-
+print('Done. Elapsed: %d' % end_time)
+```
 And for the first entry in the list of pages, this nets us:
 
-<pre type="text">Processing http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
+<pre type="text">Processing http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
 Keyword: radiates test statuses directly, score: 14
 Keyword: test markers
 turn green/red, score: 13
@@ -186,7 +191,8 @@ Using the [BeautifulSoup][16] module, I can grab just the article from each page
 
 **[betterData.py][17]**
 
-<pre>def get_site_text(url):
+```py
+def get_site_text(url):
     resp = requests.get(url)
     resp.raise_for_status()
     html = resp.text
@@ -204,11 +210,12 @@ Using the [BeautifulSoup][16] module, I can grab just the article from each page
         element.extract()
 
     # lower case for better matching
-    return content.get_text().lower()</pre>
-
+    return content.get_text().lower()
+```
 After adding this little bit of cleanup and running it back through the same logic as above, the results are a lot better:
 
-<pre>Page http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
+```text
+Page http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
     TF-IDF Keywords:
         Word: wallaby, TF-IDF: 0.0133
         Word: test, TF-IDF: 0.00742
@@ -220,8 +227,8 @@ After adding this little bit of cleanup and running it back through the same log
         Keyword: test markers turn green/red, score: 14
         Keyword: continuous javascript test execution, score: 13
         Keyword: test marker turns red, score: 13
-        Keyword: open visual studio code, score: 12</pre>
-
+        Keyword: open visual studio code, score: 12
+```
 Now with a cleaner content to work with, TF-IDF has pulled out a pretty good set of keywords. RAKE has pulled out a good set of phrases from the document, in terms of importance, but not really something I would use for keywords. Neither is knocking it out of the ballpark yet, so more work is needed.
 
 ## And thus it goes…

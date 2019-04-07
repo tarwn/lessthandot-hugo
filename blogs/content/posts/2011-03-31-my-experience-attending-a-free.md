@@ -3,6 +3,7 @@ title: My Experience Attending a Free-Con
 author: Jes Borland
 type: post
 date: 2011-03-31T13:25:00+00:00
+ID: 1093
 excerpt: I got to attend a Brent Ozar Free-Con!
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/my-experience-attending-a-free/
 views:

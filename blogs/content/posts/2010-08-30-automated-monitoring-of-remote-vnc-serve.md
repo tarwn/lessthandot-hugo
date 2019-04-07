@@ -3,6 +3,7 @@ title: Automated Monitoring of Remote VNC Servers
 author: Rob Earl
 type: post
 date: 2010-08-30T10:42:38+00:00
+ID: 891
 excerpt: |
   For the duration of the Edinburgh Festival Fringe I'm responsible for a couple of Samsung MagicNet plasma screens which run 24/7 in the windows outside a venue. They're essentially 32" screens with a built in PC running Windows XP and a VNC server. They&hellip;
 url: /index.php/webdev/serverprogramming/automated-monitoring-of-remote-vnc-serve/
@@ -19,7 +20,8 @@ For the duration of the Edinburgh Festival Fringe I&#8217;m responsible for a co
 
 Unfortunately, they&#8217;re prone to faults and I have no real way of knowing when one occurs until I attempt to VNC into (or walk passed) one of them which brings me to the purpose of this post: How to ensure your remote VNC sessions are doing what they&#8217;re supposed to.
 
-<pre>#!/usr/bin/perl
+```perl
+#!/usr/bin/perl
 
 use Net::VNC;
 use strict;
@@ -30,13 +32,13 @@ my $path = "/home/rob/Desktop";
 #my $path = "/var/www/vnc-monitoring";
 #my $path = "/home/rob/public_html/vnc-monitoring";
 
-open(LOG, "&gt;&gt;monitoring.log"); # Open the log file.
+open(LOG, ">>monitoring.log"); # Open the log file.
 
 open(SERVERS , "vnc-servers"); # Open the list of VNC servers, one IP,password per line:
                                # 192.168.0.2,password
                                # 192.168.0.3
                                # 192.168.0.4,anotherpassword
-while(<SERVERS&gt;)
+while(<SERVERS>)
 {
 	my ($address,$password) = split(/,/,$_);
 	$address =~ s/r//g;
@@ -44,21 +46,21 @@ while(<SERVERS&gt;)
 	$password =~ s/r//g;
 	$password =~ s/n//g;
 
-	$vnc = Net::VNC-&gt;new({hostname =&gt; $address, password =&gt; $password}); # Create a new connection to vnc.
-	$vnc-&gt;depth(24);
+	$vnc = Net::VNC->new({hostname => $address, password => $password}); # Create a new connection to vnc.
+	$vnc->depth(24);
 
 	my $message = "";
 	my $image;
 	eval
 	{
-		$vnc-&gt;login; # Must be within an eval else the script will bail on error.
-		$message = "Connected: ".$address." (".$vnc-&gt;name.")";
-		$image = $vnc-&gt;capture;
+		$vnc->login; # Must be within an eval else the script will bail on error.
+		$message = "Connected: ".$address." (".$vnc->name.")";
+		$image = $vnc->capture;
 	};
 	if ($@)
 	{
 		$message = $@;
-		$image = Image::Imlib2-&gt;new(200, 200); # Create a blank image to indicate a problem. Could also copy a preset "error" image.
+		$image = Image::Imlib2->new(200, 200); # Create a blank image to indicate a problem. Could also copy a preset "error" image.
                 # We could also send out an email here since we definitely have an issue.
 	}
 
@@ -66,12 +68,12 @@ while(<SERVERS&gt;)
 
 	print LOG $message."n";
 
-	$image-&gt;save("$path/$address-capture.png");
+	$image->save("$path/$address-capture.png");
 }
 
 close(LOG);
-close(SERVERS);</pre>
-
+close(SERVERS);
+```
 This Perl script uses [Net::VNC][1] to connect to each specified VNC server, capture a screenshot and save it to the specified directory.
 
 From there all you need to do is add it to a Cron job and decide how you&#8217;re going to monitor the resultant images:

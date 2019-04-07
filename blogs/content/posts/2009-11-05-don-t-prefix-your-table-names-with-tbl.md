@@ -3,6 +3,7 @@ title: Don’t prefix your table names with tbl
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-05T11:29:28+00:00
+ID: 610
 url: /index.php/datamgmt/dbprogramming/don-t-prefix-your-table-names-with-tbl/
 views:
   - 31481
@@ -18,11 +19,12 @@ This is a naming convention issue. Tables should not be prefaced with tbl becaus
 
 **How to detect this problem:**
 
-<pre>Select	* 
+sql
+Select	* 
 From	Information_Schema.tables 
 Where	Table_Type = 'Base Table'
-       	And Table_Name Like 'tbl%'</pre>
-
+       	And Table_Name Like 'tbl%'
+```
 **How to correct it:** Rename the table to remove the prefix. This is not as simple as it seems because this table could be referenced from a number of places, including views, stored procedures, user defined functions, index creation scripts, in-line SQL (embedded within front end applications), etc&#8230;
 
 **Level of severity:** mild

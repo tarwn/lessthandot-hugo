@@ -3,6 +3,7 @@ title: '2010 Goals: 4th Quarter/Year-End Review'
 author: Jes Borland
 type: post
 date: 2010-12-27T17:10:05+00:00
+ID: 982
 excerpt: 'There are five days left yet, but I can say now: 2010 has been the most extraordinary year of my life. 365 days ago, I could not have dreamed the places I would go, the adventures I would have, the things I would do, the races I would run, and, most of&hellip;'
 url: /index.php/datamgmt/datadesign/2010-goals-4th-quarter-year-end-review/
 views:

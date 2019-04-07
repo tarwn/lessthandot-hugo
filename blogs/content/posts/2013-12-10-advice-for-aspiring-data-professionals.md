@@ -3,6 +3,7 @@ title: Advice for Aspiring Data Professionals
 author: Jes Borland
 type: post
 date: 2013-12-10T07:00:00+00:00
+ID: 2199
 excerpt: John Sansom asks, “If you could give an aspiring DBA just one piece of advice what would it be?”
 url: /index.php/itprofessionals/professionaldevelopment/advice-for-aspiring-data-professionals/
 views:

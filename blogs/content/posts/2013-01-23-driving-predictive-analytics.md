@@ -3,6 +3,7 @@ title: Driving Predictive Analytics
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-23T14:31:00+00:00
+ID: 1932
 excerpt: |
   Remember this article, “Comparing the Chicago Highway System to your Disaster/Recovery”?
   

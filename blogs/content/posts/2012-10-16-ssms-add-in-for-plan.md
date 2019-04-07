@@ -3,6 +3,7 @@ title: SSMS Add-in for Plan Explorer Update
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-10-17T00:03:00+00:00
+ID: 1757
 excerpt: |
   It isn’t very often I’m left speechless at the efforts a company and team will go through to make their customers truly, 100% pleased with a product.  Tonight was one of those times.
   Yesterday, October 15th, I published a review of the new Plan Explore&hellip;

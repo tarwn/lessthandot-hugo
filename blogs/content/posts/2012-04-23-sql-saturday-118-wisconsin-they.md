@@ -3,6 +3,7 @@ title: 'SQL Saturday #118 Wisconsin: They Came, They Saw…Did They Tip Cows?'
 author: Jes Borland
 type: post
 date: 2012-04-23T16:32:00+00:00
+ID: 1604
 excerpt: 'I am constantly awed and humbled by the hard work, dedication, generosity, and selflessness of the people I am surrounded with. The SQL Server community is no exception. A few months ago, I had an idea to bring a SQL Saturday to Wisconsin. Two days ago,&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-118-wisconsin-they/
 views:

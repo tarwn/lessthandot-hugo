@@ -3,6 +3,7 @@ title: Presenting at the February WI SSUG Meeting
 author: Jes Borland
 type: post
 date: 2011-02-07T03:34:00+00:00
+ID: 1030
 excerpt: |
   It is the second week of the month, which means two things: T-SQL Tuesday, and the monthly WI SQL Server User Group meeting. 
   

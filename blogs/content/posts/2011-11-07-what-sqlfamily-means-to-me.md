@@ -3,6 +3,7 @@ title: 'What #sqlfamily Means To Me (Or, A Case of the Warm Fuzzies)'
 author: Jes Borland
 type: post
 date: 2011-11-07T15:43:00+00:00
+ID: 1373
 excerpt: "My contribution to Tom LaRock's monthly #mememonday. This month's topic: #sqlfamily."
 url: /index.php/datamgmt/dbadmin/what-sqlfamily-means-to-me/
 views:

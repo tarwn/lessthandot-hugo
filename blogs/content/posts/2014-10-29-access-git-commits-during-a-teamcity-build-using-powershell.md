@@ -3,6 +3,7 @@ title: Access Git Commits during a TeamCity Build using Powershell
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-10-29T19:13:12+00:00
+ID: 3026
 url: /index.php/uncategorized/access-git-commits-during-a-teamcity-build-using-powershell/
 views:
   - 12283
@@ -23,19 +24,21 @@ Recently I needed access to the list of commits that were included with each of 
 
 In this script, I am extracting just the list of authors, dates, and commit messages. I formatted the git log output so I could easily feed it into Powershell&#8217;s [ConvertFrom-StringData][2] method to get an array of objects.
 
-<pre>function Get-CommitsFromGitLog([string] $StartCommit, [string] $EndCommit){
+```powershell
+function Get-CommitsFromGitLog([string] $StartCommit, [string] $EndCommit){
     $Cmd = "git log --pretty=format:""CommitHash=%H :: AuthorEmail=%ae :: AuthorDate=%ad :: Subject=%s"" $StartCommit...$EndCommit"
 
     $Result = Invoke-Expression $Cmd
     $ParsedResult = $Result | %{ ConvertFrom-StringData($_ -replace " :: ", "`n")  }
 
     return $ParsedResult
-}</pre>
-
+}
+```
 TeamCity defines a Build Parameter named [build.vcs.number][3], so we could use this script to get details about that specific commit like so:
 
-<pre>Get-CommitsFromGitLog -StartCommit "%build.vcs.number%^" -EndCommit "%build.vcs.number%"</pre>
-
+```powershell
+Get-CommitsFromGitLog -StartCommit "%build.vcs.number%^" -EndCommit "%build.vcs.number%"
+```
 The net effect is that I&#8217;m asking for all changes starting one commit before the identified one (the ^ at the end) through that identified one. 
 
 Unfortunately, this is only the latest commit. Retrieving the details for a group of commits requires some additional work.
@@ -52,7 +55,8 @@ The API exposes methods to access prior [Build Requests][5]. For what we are doi
 
 Using [Invoke-WebRequest][6], we can write a script that accesses that build information:
 
-<pre>function Get-TeamCityLastSuccessfulRun([string] $TeamCityUrl, [string] $TeamCityBuildTypeId, 
+```powershell
+function Get-TeamCityLastSuccessfulRun([string] $TeamCityUrl, [string] $TeamCityBuildTypeId, 
                                        [string] $TeamCityUsername, [string] $TeamCityPassword){
 
     $Credentials = "$($TeamCityUsername):$($TeamCityPassword)"
@@ -63,11 +67,12 @@ Using [Invoke-WebRequest][6], we can write a script that accesses that build inf
     $Content = Invoke-WebRequest "$Url" -Headers @{"Authorization" = "Basic $AuthString")}
 
     return $Content
-}</pre>
-
+}
+```
 Now I can combine some parameters from TeamCity, [Select-Xml][7], and the first script to get a list of commit information since the last successful TeamCity run.
 
-<pre>$Run = Get-TeamCityLastSuccessfulRun -TeamCityUrl "%teamcity.serverUrl%" 
+```powershell
+$Run = Get-TeamCityLastSuccessfulRun -TeamCityUrl "%teamcity.serverUrl%" 
                                      -TeamCityBuildTypeId "%system.teamcity.buildType.id%" 
                                      -TeamCityUsername "%system.teamcity.auth.userId%"
                                      -TeamCityPassword "%system.teamcity.auth.password%"
@@ -75,8 +80,8 @@ Now I can combine some parameters from TeamCity, [Select-Xml][7], and the first 
 $LatestCommitFromRun = (Select-Xml -Content "$Run" -Xpath "/build/revisions/revision/@version").Node.Value
 
 $CommitsSinceLastSuccess = Get-CommitsFromGitLog -StartCommit "$LatestCommitFromRun" 
-                                                 -EndCommit "%build.vcs.number%"</pre>
-
+                                                 -EndCommit "%build.vcs.number%"
+```
 And there we have it, a cumulative list of authors and commits since the last successful build. You could use similar logic to pass in parameters to get the whole history since the last pinned build, a specific tag in the git repository, etc.
 
 # What Can You Do With This?

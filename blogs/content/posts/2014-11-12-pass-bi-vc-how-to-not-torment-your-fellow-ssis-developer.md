@@ -3,6 +3,7 @@ title: 'PASS BI VC: How to (not) torment your fellow SSIS developer?'
 author: Koen Verbeeck
 type: post
 date: 2014-11-12T11:52:09+00:00
+ID: 3058
 url: /index.php/datamgmt/ssis/pass-bi-vc-how-to-not-torment-your-fellow-ssis-developer/
 views:
   - 7066

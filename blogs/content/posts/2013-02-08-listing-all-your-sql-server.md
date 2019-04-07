@@ -3,6 +3,7 @@ title: Listing all your SQL Server databases ordered by size
 author: SQLDenis
 type: post
 date: 2013-02-08T11:51:00+00:00
+ID: 1978
 excerpt: |
   To see all the databases with their size on an instance, you can use sp_helpdb. That works but returns the results in some random order. In my case I see master, model and
   msdb followed by a couple of user database, then tempdb and then again some user&hellip;
@@ -29,7 +30,8 @@ msdb followed by a couple of user database, then tempdb and then again some user
 
 Here is what the query looks like
 
-<pre>CREATE TABLE #test (name varchar(100), db_size varchar(100),owner varchar(100),db_id int,created varchar(100),status varchar(1000),compatibility_level int)
+sql
+CREATE TABLE #test (name varchar(100), db_size varchar(100),owner varchar(100),db_id int,created varchar(100),status varchar(1000),compatibility_level int)
  
 INSERT #test 
 EXEC sp_helpdb
@@ -38,7 +40,8 @@ SELECT name,db_size,owner,db_id,created,compatibility_level
 FROM #test
 ORDER BY CONVERT(float,REPLACE(db_size,' MB','')) DESC
 
-DROP TABLE #test </pre>
+DROP TABLE #test 
+```
 
 And here is what you would see
 

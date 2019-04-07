@@ -3,6 +3,7 @@ title: Level Up Your SQL Server Index Knowledge
 author: Jes Borland
 type: post
 date: 2015-06-12T15:35:27+00:00
+ID: 3408
 url: /index.php/datamgmt/dbprogramming/level-up-your-sql-server-index-knowledge/
 views:
   - 3240

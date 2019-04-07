@@ -3,6 +3,7 @@ title: Using Selenium for View testing with knockout and RequireJS
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-12-01T14:20:41+00:00
+ID: 3089
 url: /index.php/webdev/using-selenium-for-view-testing-with-knockout-and-requirejs/
 featured_image: /wp-content/uploads/2014/11/SeleniumRequireJsResults.png
 views:
@@ -45,7 +46,8 @@ The fake application looks like this:
 
 The ViewModel behind this view contains all of the properties necessary to display the screen and it&#8217;s actions:
 
-<pre>define(["knockout", 
+```javascript
+define(["knockout", 
         "lodash",
         "app/services/itemService", 
         "app/models/itemSummary",
@@ -86,8 +88,8 @@ function (ko,
 
     return IndexViewModel;
 
-});</pre>
-
+});
+```
 All of the code for the site is located here: [github: tarwn/Blog_RequireJSandSelenium &#8211; /SampleWebSite][10]
 
 <div style="background-color: #FFFFBB; padding: 1em; margin: .25em 1em">
@@ -111,23 +113,24 @@ These tests only cover the case where the HTML page is already a static file. If
 
 My goal was to keep the tests consistent across methods. This is a sample test:
 
-<pre>[Test]
+```csharp
+[Test]
 public void WhenUserSearchesForItemsAndSelectsOne_ThenDetailsAreDisplayedForTheSelectedProduct()
 {
     var indexPage = new IndexPage(_webDriver, _url, "Sample App");
 
     indexPage.SearchButton.Click();
-    Utility.WaitUpTo(5000, () =&gt; Utility.IsElementPresent(indexPage.SearchResultsTable) 
+    Utility.WaitUpTo(5000, () => Utility.IsElementPresent(indexPage.SearchResultsTable) 
 				  && indexPage.SearchResultsTable.Displayed, "Search results");
     Assert.AreNotEqual(0, indexPage.GetNumberOfSearchResults());
 
     indexPage.ClickSearchResults(0);
-    Utility.WaitUpTo(5000, () =&gt; Utility.IsElementPresent(indexPage.ItemDetails) 
+    Utility.WaitUpTo(5000, () => Utility.IsElementPresent(indexPage.ItemDetails) 
 				  && indexPage.ItemDetails.Displayed, "Item Details");
 
     Assert.AreEqual(indexPage.GetSelectedRowItemName(), indexPage.ItemDetailsName.Text);
-}</pre>
-
+}
+```
 Translated into English:
 
   * Open the Index Page
@@ -148,9 +151,10 @@ Rather than go through all of the cases, I&#8217;ll touch on just the basic Full
 
 This method is really slow and you have to have a working web server. The setup is quick and easy though:
 
-<pre>[TestFixture(typeof(ChromeDriver))]
+```csharp
+[TestFixture(typeof(ChromeDriver))]
 [TestFixture(typeof(PhantomJSDriver))]
-public class IndexTests_FullIntegration<TDriver&gt;
+public class IndexTests_FullIntegration<TDriver>
 where TDriver : IWebDriver, new()
 {
 
@@ -171,8 +175,8 @@ where TDriver : IWebDriver, new()
 
 	// ... tests here ...
 
-}</pre>
-
+}
+```
 Besides the performance, the other downside of this method is the hosting. In the [Using SpecFlow to drive Selenium UI Testing][3] post, I already had the steps necessary to deploy a staging site to test against, but this equates to more overhead and could drive where in your build process you perform the tests as well as make it harder to run them locally.
 
 ### IndexTests.Nancy
@@ -181,9 +185,10 @@ In this case, I created a self-hosting Nancy site that copies all of the static 
 
 This second issue actually bothers me a bit, as it means you are creating a fake set of data that all of your tests are going to rely on. Typically when you have one big shared pool of test data, it makes your systems harder to maintain, as that test data turns into a bog of magic values, some of which have to be set just so for tests to succeed. Allowing the tests to define the values that would be returned when they have specific needs would make this a lot more maintainable and help surface those critical data assumptions in the tests.
 
-<pre>[TestFixture(typeof(ChromeDriver))]
+```csharp
+[TestFixture(typeof(ChromeDriver))]
 [TestFixture(typeof(PhantomJSDriver))]
-public class IndexTests_NancyServer<TDriver&gt;
+public class IndexTests_NancyServer<TDriver>
 where TDriver : IWebDriver, new()
 {
 
@@ -234,8 +239,8 @@ where TDriver : IWebDriver, new()
 
 	// ... tests ...
 
-}</pre>
-
+}
+```
 [LocalServerBootstrapper][15] defines the static content folders (in this case, /styles, /Scripts, and the /index.html file). There is a single Module, [LocalServer][16], that serves up the 2 item API endpoints.
 
 In a larger test suite, I would move this test code to a single startup method for the whole assembly.

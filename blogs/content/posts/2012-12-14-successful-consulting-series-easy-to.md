@@ -3,6 +3,7 @@ title: Successful Consulting Series – Easy to Difficult Clients
 author: hopefoley
 type: post
 date: 2012-12-14T12:07:00+00:00
+ID: 1854
 excerpt: |
    
   The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, “Successful Consult&hellip;

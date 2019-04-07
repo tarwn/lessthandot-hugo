@@ -3,6 +3,7 @@ title: A User Group Experiment – Open Mic Night
 author: Jes Borland
 type: post
 date: 2013-04-04T16:04:00+00:00
+ID: 2060
 excerpt: I’ve been running FoxPASS in Appleton, WI for 8 months...
 url: /index.php/itprofessionals/professionaldevelopment/a-user-group-experiment-open/
 views:

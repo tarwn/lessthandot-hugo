@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #016 – TOP N Percent for the group'
 author: Naomi Nosonovsky
 type: post
 date: 2011-03-08T12:28:00+00:00
+ID: 1073
 excerpt: |
   This blog post is participating in the T-SQL Tuesday #016
    hosted by Jes Borland
@@ -33,7 +34,8 @@ The first idea of approaching this problem is in using NTILE() ranking function.
 
 Here is an example that demonstrates discrepancy:
 
-<pre>USE AdventureWorks2008R2 
+sql
+USE AdventureWorks2008R2 
 GO
 ;with cte as (SELECT p.FirstName, p.LastName
     ,ROW_NUMBER() OVER (ORDER BY s.SalesYTD) AS 'Row Number'
@@ -58,8 +60,8 @@ LEFT join (select top 10 percent FirstName as LPFName, LastName as LPLName, Sale
 from cte Order by SalesYTD DESC) LP 
 on cte.FirstName = LP.LPFName  
 and cte.LastName = LP.LPLName 
-order by cte.[Row Number] </pre>
-
+order by cte.[Row Number] 
+```
 As we can see from this example, we get correctly top 10 percent using NTILE(10) and
   
 TOP 10 percent (LEFT JOIN) based on the SalesYTD in the ascending order, but the results from the bottom 10 percent (top 10 percent based on SalesYTD in the descending order) don&#8217;t match.
@@ -70,7 +72,8 @@ As we can see in our small set of only 17 records, first 7 groups have 2 records
 
 On the big enough sets the NTILE() is working correctly. Here is an example suggested by Peter Larsson, that demonstrates it:
 
-<pre>;WITH cteRandomData(Value)
+sql
+;WITH cteRandomData(Value)
 AS (
            SELECT     ABS(CHECKSUM(NEWID())) AS Value
            FROM       master..spt_values
@@ -92,7 +95,8 @@ AS (
 )
 SELECT     *
 FROM       ctePercentile
---WHERE      Percentile = 10</pre>
+--WHERE      Percentile = 10
+```
 
  [1]: /index.php/DataMgmt/DBProgramming/come-one-come-all-to
  [2]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif "T-SQL Tuesday logo"

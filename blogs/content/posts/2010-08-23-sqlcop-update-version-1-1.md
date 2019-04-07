@@ -3,6 +3,7 @@ title: SQLCop update Version 1.1
 author: George Mastros (gmmastros)
 type: post
 date: 2010-08-23T12:51:00+00:00
+ID: 877
 url: /index.php/datamgmt/dbprogramming/sqlcop-update-version-1-1/
 views:
   - 7080

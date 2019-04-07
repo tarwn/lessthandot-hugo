@@ -3,6 +3,7 @@ title: What makes a successful SQL Server Reporting Services implementation?
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-20T20:18:54+00:00
+ID: 392
 url: /index.php/datamgmt/datadesign/what-makes-a-good-sql-server-reporting-s/
 views:
   - 5763

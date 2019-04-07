@@ -3,6 +3,7 @@ title: What I Learned on SQL Cruise 2016
 author: Jes Borland
 type: post
 date: 2016-02-15T15:11:25+00:00
+ID: 4366
 url: /index.php/uncategorized/what-i-learned-on-sql-cruise-2016/
 views:
   - 4370

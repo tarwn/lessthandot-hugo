@@ -3,6 +3,7 @@ title: SQL Server Stored Procedure with nvarchar parameter
 author: George Mastros (gmmastros)
 type: post
 date: 2009-01-31T17:44:29+00:00
+ID: 309
 url: /index.php/datamgmt/datadesign/sql-server-stored-procedure-with-nvarcha/
 views:
   - 30639
@@ -18,26 +19,30 @@ I really wish the T-SQL parser would error when trying to use a string type with
 
 Anyway&#8230; you can test this for yourself by create a stored procedure with an nvarchar parameter without specifying the size. Like this:
 
-<pre>Create Procedure TestParameterLength
+sql
+Create Procedure TestParameterLength
 	@Data nvarchar
 As
-Select @Data As Data</pre>
-
+Select @Data As Data
+```
 Clearly, the stored procedure is rather useless, but you might think that it will return whatever string is passed to it. Not so. Since the @Data parameter does not have a size, it defaults to 1 character and will truncate the data that is passed to it. You can test this by calling the stored procedure like this:
 
-<pre>exec TestParameterLength N'Hello World'</pre>
-
+sql
+exec TestParameterLength N'Hello World'
+```
 The output you get will be:
 
 <pre>Data
 ----
 H
 
-(1 row(s) affected)</pre>
+(1 row(s) affected)
+</pre>
 
 The same problem occurs when you declare a variable within a stored procedure. It defaults to 1 character. However, this is inconsistent with the convert function. If you convert to nvarchar without specifying the size, it defaults to 30 characters. Take a look at the following stored procedure to see what I mean:
 
-<pre>Create Procedure TestVariableLength
+sql
+Create Procedure TestVariableLength
 	@Data nvarchar(100)
 As
 
@@ -49,8 +54,8 @@ Set @AnotherVariable = Convert(nvarchar, @Data)
 
 Select @Data As Data, 
        @LocalVariable as LocalVariable, 
-       @AnotherVariable As AnotherVariable</pre>
-
+       @AnotherVariable As AnotherVariable
+```
 Notice that I am now specifying the size of the parameter as 100 characters. I declare a local variable without specifying the size, and another variable that matches the size of the parameter (100 characters).
 
 When I set @LocalVariable = @Data, it is truncating it to 1 character. 
@@ -59,14 +64,16 @@ Clearly @AnotherVariable is large enough to store anything in @Data, but since I
 
 You can test it like this:
 
-<pre>exec TestVariableLength N'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789'</pre>
-
+sql
+exec TestVariableLength N'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789'
+```
 The output:
 
 <pre>Data                                 LocalVariable AnotherVariable
 ------ ----------------------------- ------------- ------------------------------
 ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789  A             ABCDEFGHIJKLMNOPQRSTUVWXYZ1234
 
-(1 row(s) affected)</pre>
+(1 row(s) affected)
+</pre>
 
 I encourage every developer to get in the habit of ALWAYS specifying the length of your strings. This will prevent you from getting some hard to find bugs. You&#8217;ll be glad you did.

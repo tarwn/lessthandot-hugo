@@ -3,6 +3,7 @@ title: Flash Player 10 has been released
 author: SQLDenis
 type: post
 date: 2008-10-15T11:01:48+00:00
+ID: 177
 url: /index.php/webdev/webdesigngraphicsstyling/flash-player-10-has-been-released/
 views:
   - 6416

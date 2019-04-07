@@ -3,6 +3,7 @@ title: How To Enable GodMode On Windows 7
 author: SQLDenis
 type: post
 date: 2010-01-03T11:57:00+00:00
+ID: 662
 excerpt: |
   Did you know that Windows 7 has a GodMode? What GodMode does is enable you to have a place where you can get to all the settings without having to browse around and click through options and folders in control panel.
   

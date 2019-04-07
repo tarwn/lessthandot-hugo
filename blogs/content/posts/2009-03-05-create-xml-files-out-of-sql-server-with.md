@@ -3,6 +3,7 @@ title: Create XML Files Out Of SQL Server With SSIS And FOR XML Syntax
 author: SQLDenis
 type: post
 date: 2009-03-05T14:06:17+00:00
+ID: 339
 excerpt: |
   So you want to spit out some XML from SQL Server into a file, how can you do that? There are a couple of ways, I will show you how you can do it with SSIS. In the SSIS package you need an Execute SQL Task and a Script Task.
   
@@ -31,7 +32,8 @@ Let&#8217;s get started
 
 First create and populate these two tables in your database
 
-<pre>create table Artist (ArtistID int primary key not null,
+sql
+create table Artist (ArtistID int primary key not null,
 ArtistName varchar(38))
 go
 
@@ -57,11 +59,13 @@ insert into Album values(5,3,'1999',1982)
 
 
 insert into Album values(6,2,'Morning View',2001)
-insert into Album values(7,2,'Light Grenades',2006)</pre>
+insert into Album values(7,2,'Light Grenades',2006)
+```
 
 Now create this proc
 
-<pre>create proc prMusicCollectionXML
+sql
+create proc prMusicCollectionXML
 as
 declare @XmlOutput xml 
 set @XmlOutput = (select ArtistName,AlbumName,YearReleased from Album
@@ -69,15 +73,19 @@ join Artist on Album.ArtistID = Artist.ArtistID
 FOR XML AUTO, ROOT('MusicCollection'), ELEMENTS)
 
 select @XmlOutput
-go</pre>
+go
+```
 
 After executing the proc
 
-<pre>exec prMusicCollectionXML</pre>
+sql
+exec prMusicCollectionXML
+```
 
 you will see the following output
 
-<pre><MusicCollection>
+```xml
+<MusicCollection>
  <Artist>
   <ArtistName>Pink Floyd</ArtistName> 
  <Album>
@@ -115,7 +123,8 @@ you will see the following output
   <YearReleased>2006</YearReleased> 
   </Album>
   </Artist>
-  </MusicCollection></pre>
+  </MusicCollection>
+```
 
 So far so good, so how do we dump that data into a file?
   
@@ -149,7 +158,8 @@ Add a Script Task to the package,double click the Script Task,click on script an
 
 Click the Design Script button, this will open up a code window, replace all the code you see with this
 
-<pre>' Microsoft SQL Server Integration Services Script Task
+```vb
+' Microsoft SQL Server Integration Services Script Task
 ' Write scripts using Microsoft Visual Basic
 ' The ScriptMain class is the entry point of the Script Task.
 
@@ -197,13 +207,15 @@ Public Class ScriptMain
         Dts.TaskResult = Dts.Results.Success
     End Sub
 
-End Class</pre>
+End Class
+```
 
 **SSIS 2008 requires a code change**
   
 Here is what the code should look like if you are running SSIS 2008
 
-<pre>' Microsoft SQL Server Integration Services Script Task
+```vb
+' Microsoft SQL Server Integration Services Script Task
 ' Write scripts using Microsoft Visual Basic 2008.
 ' The ScriptMain is the entry point class of the script.
 
@@ -262,7 +274,8 @@ Partial Public Class ScriptMain
 
     End Sub
 
-End Class</pre>
+End Class
+```
 
 There are a couple of things you need to know, the XML will be generated inside a <ROOT> tag, I am stripping that out on line 23 of the code, on line 24 I am adding <?xml version=&#8221;1.0&#8243; ?> to the file. Line 26 has the location where the file will be written, right now it is C:MusicCollection.xml but you can modify that.
 

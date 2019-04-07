@@ -3,6 +3,7 @@ title: Twitter – I do want to follow you but…
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-02-10T00:11:00+00:00
+ID: 1039
 excerpt: 'I think Twitter is a valued resource and I take it seriously when telling other professionals that they should be utilizing it.  At times, the day requires the comedy and relaxing feel that we can get from people that understand the work that we do day&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/twitter-i-do-want-to/
 views:

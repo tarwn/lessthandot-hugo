@@ -3,6 +3,7 @@ title: SQL Server 2008 R2 to be released in May
 author: SQLDenis
 type: post
 date: 2010-01-19T15:10:42+00:00
+ID: 683
 url: /index.php/datamgmt/datadesign/sql-server-2008-r2-to-be-released-in-may/
 views:
   - 3618

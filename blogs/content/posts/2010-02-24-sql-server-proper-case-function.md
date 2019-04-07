@@ -3,6 +3,7 @@ title: SQL Server Proper Case Function
 author: George Mastros (gmmastros)
 type: post
 date: 2010-02-24T11:34:43+00:00
+ID: 710
 excerpt: "SQL Server (T-SQL specifically) is not usually the best place to write a function for modifying the case of your data. String functions are generally slow and often a bit cumbersome to implement.  That being said, it's not uncommon to have data in your&hellip;"
 url: /index.php/datamgmt/dbprogramming/sql-server-proper-case-function/
 views:
@@ -46,7 +47,8 @@ Select Stuff(&#8216;lower case&#8217;, 7, 1, &#8216;C&#8217;)
 
 Notice how the 7th character (the lower case c) is replaced with an upper case C.
 
-<pre>Create Function dbo.Proper(@Data VarChar(8000))
+sql
+Create Function dbo.Proper(@Data VarChar(8000))
 Returns VarChar(8000)
 As
 Begin
@@ -55,11 +57,11 @@ Begin
   Select @Data = Stuff(Lower(@Data), 1, 1, Upper(Left(@Data, 1))),
          @Position = PatIndex('%[^a-zA-Z][a-z]%', @Data COLLATE Latin1_General_Bin)
 
-  While @Position &gt; 0
+  While @Position > 0
     Select @Data = Stuff(@Data, @Position, 2, Upper(SubString(@Data, @Position, 2))),
            @Position = PatIndex('%[^a-zA-Z][a-z]%', @Data COLLATE Latin1_General_Bin)
 
   Return @Data
-End</pre>
-
+End
+```
 In my opinion, there are several things that make this function better. It will correctly capitalize all words and it minimizes the number of loops. In fact, it will loop just once for each word that needs to be capitalized.

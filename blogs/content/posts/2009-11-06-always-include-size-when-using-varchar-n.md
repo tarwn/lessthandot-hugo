@@ -3,6 +3,7 @@ title: Always include size when using varchar, nvarchar, char and nchar
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-06T13:33:50+00:00
+ID: 613
 url: /index.php/datamgmt/dbprogramming/always-include-size-when-using-varchar-n/
 views:
   - 132341
@@ -20,16 +21,18 @@ There are several string data types in SQL Server. There are varchar, nvarchar, 
 
 SQL 2005 (and up)
 
-<pre>Select  Name 
+sql
+Select  Name 
 From    sys.sysobjects 
 Where   XType = 'P'
         And Object_Definition(ID) Like '%varchar[^(]%'
         And ObjectProperty(ID, N'IsMSShipped') = 0
-Order By Name</pre>
-
+Order By Name
+```
 SQL2000
 
-<pre>Select  Name
+sql
+Select  Name
 From    (
         Select S.Name, C.Text
         From   sysobjects S
@@ -57,8 +60,8 @@ From    (
                    and A.ColId = B.ColId - 1
         ) As A
 Where   Text Like '%varchar[^(]%'
-Order By Name</pre>
-
+Order By Name
+```
 **How to correct it:** To correct this problem, identify where it exists (using the SQL shown above). Then, for each occurrence, identify the size. If the problem occurred when declaring a column in a table and you WANT the size to be 1 character, then specify (1). Other places, you will need to determine the size that it should be. Sometimes this involves looking up the size in the table definition.
 
 **Level of severity:** High, because this problem can corrupt your data.

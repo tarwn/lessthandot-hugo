@@ -3,6 +3,7 @@ title: 'SQL Server Auditing: Managing Your Audits'
 author: SQLArcher
 type: post
 date: 2012-01-02T18:40:00+00:00
+ID: 1471
 excerpt: |
   So far in the SQL Server Audit series we've looked at the different components that make up the auditing feature as well as how to create the audits with specifications specific to databases as well as server level. 
   
@@ -33,11 +34,13 @@ Now that we have set up our audits covering failed logins on instance level and 
 
 First off, let&#8217;s see what views are available at our disposal:
 
-<pre>USE master;
+sql
+USE master;
 GO
 SELECT name,[object_id] FROM [sys].[all_objects]
 WHERE TYPE = 'v' AND NAME LIKE '%audit%';
-GO</pre>
+GO
+```
 
 This returns the following for us:
 
@@ -111,122 +114,123 @@ Below is a test policy I created for the post and will monitor the audits for th
   
 5. Maximum File Size Unit ( MB, GB or TB )
 
-<pre>-- Creates the policy condition
+sql
+-- Creates the policy condition
 
 Declare @condition_id int
-EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'Audit_Policy_Con', @description=N'', @facet=N'Audit', @expression=N'<Operator&gt;
-  <TypeClass&gt;Bool</TypeClass&gt;
-  <OpType&gt;AND</OpType&gt;
-  <Count&gt;2</Count&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;AND</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Operator&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <OpType&gt;AND</OpType&gt;
-      <Count&gt;2</Count&gt;
-      <Operator&gt;
-        <TypeClass&gt;Bool</TypeClass&gt;
-        <OpType&gt;AND</OpType&gt;
-        <Count&gt;2</Count&gt;
-        <Operator&gt;
-          <TypeClass&gt;Bool</TypeClass&gt;
-          <OpType&gt;EQ</OpType&gt;
-          <Count&gt;2</Count&gt;
-          <Attribute&gt;
-            <TypeClass&gt;Numeric</TypeClass&gt;
-            <Name&gt;MaximumFileSize</Name&gt;
-          </Attribute&gt;
-          <Constant&gt;
-            <TypeClass&gt;Numeric</TypeClass&gt;
-            <ObjType&gt;System.Double</ObjType&gt;
-            <Value&gt;100</Value&gt;
-          </Constant&gt;
-        </Operator&gt;
-        <Operator&gt;
-          <TypeClass&gt;Bool</TypeClass&gt;
-          <OpType&gt;EQ</OpType&gt;
-          <Count&gt;2</Count&gt;
-          <Attribute&gt;
-            <TypeClass&gt;Numeric</TypeClass&gt;
-            <Name&gt;OnFailure</Name&gt;
-          </Attribute&gt;
-          <Function&gt;
-            <TypeClass&gt;Numeric</TypeClass&gt;
-            <FunctionType&gt;Enum</FunctionType&gt;
-            <ReturnType&gt;Numeric</ReturnType&gt;
-            <Count&gt;2</Count&gt;
-            <Constant&gt;
-              <TypeClass&gt;String</TypeClass&gt;
-              <ObjType&gt;System.String</ObjType&gt;
-              <Value&gt;Microsoft.SqlServer.Management.Smo.OnFailureAction</Value&gt;
-            </Constant&gt;
-            <Constant&gt;
-              <TypeClass&gt;String</TypeClass&gt;
-              <ObjType&gt;System.String</ObjType&gt;
-              <Value&gt;Continue</Value&gt;
-            </Constant&gt;
-          </Function&gt;
-        </Operator&gt;
-      </Operator&gt;
-      <Operator&gt;
-        <TypeClass&gt;Bool</TypeClass&gt;
-        <OpType&gt;EQ</OpType&gt;
-        <Count&gt;2</Count&gt;
-        <Attribute&gt;
-          <TypeClass&gt;Bool</TypeClass&gt;
-          <Name&gt;ReserveDiskSpace</Name&gt;
-        </Attribute&gt;
-        <Function&gt;
-          <TypeClass&gt;Bool</TypeClass&gt;
-          <FunctionType&gt;False</FunctionType&gt;
-          <ReturnType&gt;Bool</ReturnType&gt;
-          <Count&gt;0</Count&gt;
-        </Function&gt;
-      </Operator&gt;
-    </Operator&gt;
-    <Operator&gt;
-      <TypeClass&gt;Bool</TypeClass&gt;
-      <OpType&gt;EQ</OpType&gt;
-      <Count&gt;2</Count&gt;
-      <Attribute&gt;
-        <TypeClass&gt;Numeric</TypeClass&gt;
-        <Name&gt;MaximumRolloverFiles</Name&gt;
-      </Attribute&gt;
-      <Constant&gt;
-        <TypeClass&gt;Numeric</TypeClass&gt;
-        <ObjType&gt;System.Double</ObjType&gt;
-        <Value&gt;100</Value&gt;
-      </Constant&gt;
-    </Operator&gt;
-  </Operator&gt;
-  <Operator&gt;
-    <TypeClass&gt;Bool</TypeClass&gt;
-    <OpType&gt;EQ</OpType&gt;
-    <Count&gt;2</Count&gt;
-    <Attribute&gt;
-      <TypeClass&gt;Numeric</TypeClass&gt;
-      <Name&gt;MaximumFileSizeUnit</Name&gt;
-    </Attribute&gt;
-    <Function&gt;
-      <TypeClass&gt;Numeric</TypeClass&gt;
-      <FunctionType&gt;Enum</FunctionType&gt;
-      <ReturnType&gt;Numeric</ReturnType&gt;
-      <Count&gt;2</Count&gt;
-      <Constant&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <ObjType&gt;System.String</ObjType&gt;
-        <Value&gt;Microsoft.SqlServer.Management.Smo.AuditFileSizeUnit</Value&gt;
-      </Constant&gt;
-      <Constant&gt;
-        <TypeClass&gt;String</TypeClass&gt;
-        <ObjType&gt;System.String</ObjType&gt;
-        <Value&gt;Mb</Value&gt;
-      </Constant&gt;
-    </Function&gt;
-  </Operator&gt;
-</Operator&gt;', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
+EXEC msdb.dbo.sp_syspolicy_add_condition @name=N'Audit_Policy_Con', @description=N'', @facet=N'Audit', @expression=N'<Operator>
+  <TypeClass>Bool</TypeClass>
+  <OpType>AND</OpType>
+  <Count>2</Count>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>AND</OpType>
+    <Count>2</Count>
+    <Operator>
+      <TypeClass>Bool</TypeClass>
+      <OpType>AND</OpType>
+      <Count>2</Count>
+      <Operator>
+        <TypeClass>Bool</TypeClass>
+        <OpType>AND</OpType>
+        <Count>2</Count>
+        <Operator>
+          <TypeClass>Bool</TypeClass>
+          <OpType>EQ</OpType>
+          <Count>2</Count>
+          <Attribute>
+            <TypeClass>Numeric</TypeClass>
+            <Name>MaximumFileSize</Name>
+          </Attribute>
+          <Constant>
+            <TypeClass>Numeric</TypeClass>
+            <ObjType>System.Double</ObjType>
+            <Value>100</Value>
+          </Constant>
+        </Operator>
+        <Operator>
+          <TypeClass>Bool</TypeClass>
+          <OpType>EQ</OpType>
+          <Count>2</Count>
+          <Attribute>
+            <TypeClass>Numeric</TypeClass>
+            <Name>OnFailure</Name>
+          </Attribute>
+          <Function>
+            <TypeClass>Numeric</TypeClass>
+            <FunctionType>Enum</FunctionType>
+            <ReturnType>Numeric</ReturnType>
+            <Count>2</Count>
+            <Constant>
+              <TypeClass>String</TypeClass>
+              <ObjType>System.String</ObjType>
+              <Value>Microsoft.SqlServer.Management.Smo.OnFailureAction</Value>
+            </Constant>
+            <Constant>
+              <TypeClass>String</TypeClass>
+              <ObjType>System.String</ObjType>
+              <Value>Continue</Value>
+            </Constant>
+          </Function>
+        </Operator>
+      </Operator>
+      <Operator>
+        <TypeClass>Bool</TypeClass>
+        <OpType>EQ</OpType>
+        <Count>2</Count>
+        <Attribute>
+          <TypeClass>Bool</TypeClass>
+          <Name>ReserveDiskSpace</Name>
+        </Attribute>
+        <Function>
+          <TypeClass>Bool</TypeClass>
+          <FunctionType>False</FunctionType>
+          <ReturnType>Bool</ReturnType>
+          <Count>0</Count>
+        </Function>
+      </Operator>
+    </Operator>
+    <Operator>
+      <TypeClass>Bool</TypeClass>
+      <OpType>EQ</OpType>
+      <Count>2</Count>
+      <Attribute>
+        <TypeClass>Numeric</TypeClass>
+        <Name>MaximumRolloverFiles</Name>
+      </Attribute>
+      <Constant>
+        <TypeClass>Numeric</TypeClass>
+        <ObjType>System.Double</ObjType>
+        <Value>100</Value>
+      </Constant>
+    </Operator>
+  </Operator>
+  <Operator>
+    <TypeClass>Bool</TypeClass>
+    <OpType>EQ</OpType>
+    <Count>2</Count>
+    <Attribute>
+      <TypeClass>Numeric</TypeClass>
+      <Name>MaximumFileSizeUnit</Name>
+    </Attribute>
+    <Function>
+      <TypeClass>Numeric</TypeClass>
+      <FunctionType>Enum</FunctionType>
+      <ReturnType>Numeric</ReturnType>
+      <Count>2</Count>
+      <Constant>
+        <TypeClass>String</TypeClass>
+        <ObjType>System.String</ObjType>
+        <Value>Microsoft.SqlServer.Management.Smo.AuditFileSizeUnit</Value>
+      </Constant>
+      <Constant>
+        <TypeClass>String</TypeClass>
+        <ObjType>System.String</ObjType>
+        <Value>Mb</Value>
+      </Constant>
+    </Function>
+  </Operator>
+</Operator>', @is_name_condition=0, @obj_name=N'', @condition_id=@condition_id OUTPUT
 Select @condition_id
 
 GO
@@ -247,8 +251,8 @@ GO
 Declare @policy_id int
 EXEC msdb.dbo.sp_syspolicy_add_policy @name=N'Audit_Policy', @condition_name=N'Audit_Policy_Con', @policy_category=N'', @description=N'', @help_text=N'', @help_link=N'', @schedule_uid=N'00000000-0000-0000-0000-000000000000', @execution_mode=0, @is_enabled=False, @policy_id=@policy_id OUTPUT, @root_condition_name=N'', @object_set=N'Audit_Policy_ObjectSet'
 Select @policy_id
-GO</pre>
-
+GO
+```
 This is just a basic policy using the &#8220;audit&#8221; facet. There are additional facets for Database Audit Specifications as well as Server Audit Specifications.
 
 Additionally if you decide to use the Enterprise Policy Framework, it should be noted that you need an additional condition to be set up on the policy that will only evaluate the policy against SQL Server 2008+.

@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 24: Getting help'
 author: SQLDenis
 type: post
 date: 2012-12-24T12:59:00+00:00
+ID: 1882
 excerpt: This is day twenty-four of the SQL Advent 2012 series of blog posts. Today we are going to look at how to get help
 url: /index.php/datamgmt/dbprogramming/getting-help/
 views:
@@ -117,7 +118,7 @@ That is all for day twenty-four of the [SQL Advent 2012 series][1], come back to
  [2]: http://www.flickr.com/photos/vicky-/7089908693/ "Help! by Vicky! <3, on Flickr"
  [3]: http://www.sqlsaturday.com/
  [4]: http://stackoverflow.com/questions
- [5]: http://forum.lessthandot.com/
+ [5]: http://forum.ltd.local/
  [6]: http://www.sqlservercentral.com/Forums/
  [7]: https://twitter.com/search/realtime?q=%23sqlhelp&src=typd
  [8]: https://twitter.com/hilarycotter

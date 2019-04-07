@@ -3,6 +3,7 @@ title: How to create a simple cross tab report in Reporting Services 2008
 author: David Forck (thirster42)
 type: post
 date: 2012-07-03T16:13:00+00:00
+ID: 1660
 excerpt: |
   I have created several cross tab reports in the last few years.  I have also seen several hacks with different ways to achieve what is actually already built into Reporting Services.  To begin, let’s define what a cross tab report is.
   
@@ -31,7 +32,8 @@ This is a pretty simple and common problem that a lot of people have to solve. L
 
 The key to a good report is great sql code. This simple query will power our cross tab report:
 
-<pre>select 
+sql
+select 
 	it.itName,
 	d.depName,
 	count(i.PK_invID) as Total
@@ -41,8 +43,8 @@ from dbo.Inventory i
 	inner join dbo.Departments d
 		on i.FK_depID=d.PK_depID
 group by it.itName,
-	d.depName</pre>
-
+	d.depName
+```
 This query already exists in the stored procedure dbo.CrossTab that was created in the create script. This is the stored procedure that our report is going to use. If you execute the stored procedure, the numbers should look faintly like the numbers in the above grid, just laid out wrong.
 
 Now that the data is set up and we’ve got our query, we’ll create a Report Server project in BIDS. For simplicity’s sake I’m going to assume you know how to set up a project, set up a data source, set up a new report file, and set up a new dataset (using the stored procedure dbo.CrossTab). If any of these steps have you lost, please ask for guidance on our SQL Server forum.

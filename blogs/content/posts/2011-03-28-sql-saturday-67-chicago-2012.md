@@ -3,6 +3,7 @@ title: 'SQL Saturday #67 Chicago 2011 Wrap-Up'
 author: Jes Borland
 type: post
 date: 2011-03-28T18:39:00+00:00
+ID: 1089
 excerpt: I had an amazing weekend in Chicago attending SQL Saturday 67!
 url: /index.php/datamgmt/dbadmin/sql-saturday-67-chicago-2012/
 views:

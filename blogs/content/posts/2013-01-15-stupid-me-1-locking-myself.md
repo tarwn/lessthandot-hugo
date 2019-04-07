@@ -3,6 +3,7 @@ title: 'Stupid me #1 – Locking myself out of SQL Server'
 author: Koen Verbeeck
 type: post
 date: 2013-01-15T11:07:00+00:00
+ID: 1917
 excerpt: The first blog post of a possible series where I describe a little problem I encountered and how I solved it.
 url: /index.php/datamgmt/dbprogramming/mssqlserver/stupid-me-1-locking-myself/
 views:

@@ -3,6 +3,7 @@ title: FireFox, Chrome and Internet Explorer 8 Memory Usage, IE8 Uses More Memor
 author: SQLDenis
 type: post
 date: 2009-03-02T13:00:22+00:00
+ID: 336
 url: /index.php/webdev/webdesigngraphicsstyling/firefox-chrome-and-internet-explorer-8-m/
 views:
   - 14748
@@ -40,10 +41,12 @@ I did this on Friday and did not look at the memory usage until Monday. After a 
 
 Looking at these numbers makes you think that Google wrote Gmail and Google Reader in such a way that it on purpose made Internet Explorer leak memory like a bucket without a bottom.
 
-<pre>If IE 
+```
+If IE 
    then leak memory 
 else 
-   behave normally</pre>
+   behave normally
+```
 
 I don&#8217;t know but this is just crazy, don&#8217;t come to me either saying that IE8 is beta, so what, this is insane! IE8 uses 362MB while FireFox 3 only uses 100MB. Chrome compared to Firefox uses almost double the memory. Chrome + FireFox combine still use 80MB less than Internet Explorer 8
 

@@ -3,6 +3,7 @@ title: Presenting for PASSMN May 17th
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-06T12:25:00+00:00
+ID: 1159
 excerpt: |
   May 17th I have the distinct pleasure of presenting for one of the strongest SQL Server User Groups around; PASSMN (Minnesota SQL Server User Group).  
    Visiting this user group has an added bonus of me being the Regional Mentor for the area.  It isn’t&hellip;

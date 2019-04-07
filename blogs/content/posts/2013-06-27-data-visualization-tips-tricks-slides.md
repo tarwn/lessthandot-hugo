@@ -3,6 +3,7 @@ title: 'Data Visualization Tips & Tricks  – Slides'
 author: Koen Verbeeck
 type: post
 date: 2013-06-27T12:35:00+00:00
+ID: 2120
 excerpt: The slides of my data visualization session are now available for download.
 url: /index.php/datamgmt/dbprogramming/mssqlserver/data-visualization-tips-tricks-slides/
 views:

@@ -3,6 +3,7 @@ title: How To Unpivot (and pivot) Like a Boss
 author: David Forck (thirster42)
 type: post
 date: 2011-02-08T12:25:00+00:00
+ID: 1031
 excerpt: Pivoting and Unpivoting data has been one of the parts of tsql that has been eluding my grasp for a while now.  I’ve seen plenty of examples for both of these, but none of those examples really helped me in understanding exactly what’s going on.
 url: /index.php/datamgmt/dbprogramming/how-to-unpivot-and-pivot/
 views:
@@ -25,7 +26,8 @@ but again these don’t tell me a whole lot about what’s going on, just the be
 
 At my part time job, we were working on a Workforce Availability study. As part of the study, we hired out to a phone survey company. We created a survey script for their callers and gave it to them. The company made a lot of phone calls and when all was said and done they provided us with a spreadsheet of the answers. Needless to say this spreadsheet was in no way normalized for data import. It looked a something like this: 
 
-<pre>declare @survey table (Respondent int identity(1,1), Q1 int, Q2 int, Q3 int, Q4 int, Q5 int)
+sql
+declare @survey table (Respondent int identity(1,1), Q1 int, Q2 int, Q3 int, Q4 int, Q5 int)
 
 insert into @survey values (1,3,1,5,8)
 insert into @survey values (2,4,1,6,8)
@@ -33,13 +35,14 @@ insert into @survey values (1,4,1,7,9)
 insert into @survey values (2,3,2,6,9)
 insert into @survey values (1,3,1,5,10)
 
-select * from @survey</pre>
-
+select * from @survey
+```
 ![Pivot 1][3]
 
 Well, right now that’s a decent sized mess to clean up using union alls. However, we don’t have to make that big mess thanks to unpivot. Here’s what the unpivot code looks like. 
 
-<pre>select 
+sql
+select 
 	Respondent,
 	Q, 
 	A 
@@ -47,13 +50,14 @@ from @survey
 unpivot
 (
 	A for Q in (Q1, Q2, Q3, Q4, Q5)
-) as u</pre>
-
+) as u
+```
 The way this works is in the unpivot statement, the A for Q statement breaks apart each column you list in the in statement. So for columns Q1, Q2, Q3, Q4, and Q5, the unpivot function breaks it apart, putting the column name in Q, and putting the actual value into A. 
 
 Now that the data’s normalized we can join to it rather easily. 
 
-<pre>declare @survey table (Respondent int identity(1,1), Q1 int, Q2 int, Q3 int, Q4 int, Q5 int)
+sql
+declare @survey table (Respondent int identity(1,1), Q1 int, Q2 int, Q3 int, Q4 int, Q5 int)
 declare @questions table (PK_quID int identity(1,1), quName varchar(255))
 declare @answers table (PK_anID int identity(1,1), anName varchar(255))
 
@@ -99,11 +103,12 @@ from
 	left outer join @questions qu
 		on s.Q=qu.PK_quID
 	left outer join @answers an
-		on s.a = an.PK_anID</pre>
-
+		on s.a = an.PK_anID
+```
 Well, seeing as my data is now normalized I can put it into my responses table. 
 
-<pre>declare @responses table (Respondent int, FK_quID int, FK_anID int)
+sql
+declare @responses table (Respondent int, FK_quID int, FK_anID int)
 
 insert into @responses
 (
@@ -119,11 +124,12 @@ from @survey
 unpivot
 (
 	A for Q in (Q1, Q2, Q3, Q4, Q5)
-) as u</pre>
-
+) as u
+```
 Alright, now I’ve got my survey data stored and I want to run some analytics. One of the ways to analyze the data is to run a crosstab off of the data. Here’s a crosstab using pivot: 
 
-<pre>select
+sql
+select
 *
 from
 (
@@ -153,8 +159,8 @@ pivot
 			[IL],
 			[TN]
 		)
-) as pvt</pre>
-
+) as pvt
+```
 In this I’m joining my response table to my questions and answers table in a subquery. I then pivot all of that data using the pivot function. The pivot function takes an aggregate and applies that across the columns and rows. In this example, I specify count(a.Respondent) as my aggregate, and then I specify that I want that across anName (and I provide a list of values that I want it applied to) on the X axis. Unpivot then takes the last column and applies that to the Y column, and then applies the aggregate data to any pieces of that that match up on the X and Y axis. 
 
 ![Pivot 2][4]

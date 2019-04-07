@@ -3,6 +3,7 @@ title: Database Projects – Setting up Source Control
 author: Axel Achten (axel8s)
 type: post
 date: 2012-12-11T12:38:00+00:00
+ID: 1827
 excerpt: |
   For some time I wanted to document the possibilities of the SQL Server Database Project and how developers and DBA's can benefit from it.
   Problem Statement

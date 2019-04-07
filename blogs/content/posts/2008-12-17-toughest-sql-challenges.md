@@ -3,6 +3,7 @@ title: Toughest SQL Challenges
 author: Alex Ullrich
 type: post
 date: 2008-12-17T14:39:59+00:00
+ID: 255
 url: /index.php/datamgmt/datadesign/toughest-sql-challenges/
 views:
   - 7976

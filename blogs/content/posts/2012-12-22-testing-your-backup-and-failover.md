@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 22: Testing your backup and failover strategy'
 author: SQLDenis
 type: post
 date: 2012-12-22T21:31:00+00:00
+ID: 1879
 excerpt: This is day twenty-two of the SQL Advent 2012 series of blog posts. Today we are going to look at how to test your backup and failover strategy
 url: /index.php/webdev/business-intelligence/testing-your-backup-and-failover/
 views:

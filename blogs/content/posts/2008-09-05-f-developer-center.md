@@ -3,6 +3,7 @@ title: 'F# Developer Center'
 author: SQLDenis
 type: post
 date: 2008-09-05T15:48:45+00:00
+ID: 130
 url: /index.php/desktopdev/mstech/f-developer-center/
 views:
   - 3062

@@ -3,6 +3,7 @@ title: Continuous Javascript Testing with Karma
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-04-03T15:27:39+00:00
+ID: 2483
 url: /index.php/webdev/uidevelopment/javascript/continuous-javascript-testing-with-karma/
 views:
   - 12700
@@ -34,7 +35,8 @@ I created a package.json file for my project:
 
 **package.json:** [townthing/package.json][9]
 
-<pre>{
+```javascript
+{
 	"name": "townthing",
 	"version": "0.1.0",
 	"description": "sample project I'm playing with",
@@ -46,9 +48,8 @@ I created a package.json file for my project:
 		"karma-phantomjs-launcher": "~0.1",
 		"karma-chrome-launcher": "~0.1"
 	}
-}</pre>
-
-<div style="background-color: #eeeeee; padding: .5em;">
+}
+```<div style="background-color: #eeeeee; padding: .5em;">
   <b>Important Note:</b> Be careful with your versions. I&#8217;ve found out the hard way that karma keeps their dependencies wide open &#8220;*&#8221; until they are ready to move versions, then they lock them down to something that may not actually be the latest version. Karma 0.10 worked fine with karma-jasmine 0.2 until they released 0.10.10 which locked in a requirement for karma-jasmine ~0.1. More recently the karma-phantomjs-launcher has revved to 1.3, which somehow broke a perfectly working 0.12 karma against 1.2 despite there being no actual code changes (I suspect a versioning side-effect mixed with their *-version acceptance).
 </div>
 
@@ -56,7 +57,8 @@ And then go through the steps to create my karma configuration:
   
 **karma.conf.js:** [townthing/karma.conf.js][10]
 
-<pre>module.exports = function(config) {
+```javascript
+module.exports = function(config) {
 	config.set({
 		basePath: 'town/js',
 		frameworks: ['jasmine', 'requirejs'],
@@ -75,52 +77,28 @@ And then go through the steps to create my karma configuration:
 		captureTimeout: 60000,
 		singleRun: false
 	});
-};</pre>
-
+};
+```
 I already had a set of 68 specs configured to run from my SpecRunner file, with my Require.js configuration specified inline. Before I co-opted this project as a blog example, the tests were specified in script tags, but I have moved them to a require() statement and used the custom boot script created for my [Jasmine 2.0 and RequireJS post][11].
 
 **SpecRunner:** [townthing/js/test/SpecRunner.json][12]
 
-<pre><!DOCTYPE HTML&gt;
-<html&gt;
-<head&gt;
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-	<title&gt;Jasmine Spec Runner v2.0.0</title&gt;
+```html
 
-	<link rel="shortcut icon" type="image/png" href="../lib/jasmine-2.0.0/jasmine_favicon.png"&gt;
-	<link rel="stylesheet" type="text/css" href="../lib/jasmine-2.0.0/jasmine.css"&gt;
 
-	<script type="text/javascript" src="../lib/jasmine-2.0.0/jasmine.js"&gt;</script&gt;
-	<script type="text/javascript" src="../lib/jasmine-2.0.0/jasmine-html.js"&gt;</script&gt;
-	<script type="text/javascript" src="../lib/jasmine-2.0.0/boot-without-onload.js"&gt;</script&gt;
 
-	<script src="../lib/require-2.1.11.js"&gt;</script&gt;
 
-	<script type="text/javascript"&gt;
-	require.config({
-		baseUrl: "../src",
-		paths: {
-			"knockout": "../lib/knockout-3.0.0",
-			"Squire": "../lib/Squire"
-		}
-	});
 
-	require(['../test/compass.spec', '../test/tile.spec', '../test/tree.spec', '../test/weather.spec'],function(){
-		window.executeTests();
-	});
-	</script&gt;
-</head&gt;
-<body&gt;
-</body&gt;
-</html&gt;</pre>
 
+```
 The folder structure is a little odd, as this was originally just a play project. My test libraries are mixed with the core libraries and my specs and src have a flat structure. Were this a production project, I would also try to find a way to combine this inline config with the one below and generate the list of spec files instead of hand-coding them.
 
 Because I am using RequireJS, I&#8217;ve included that option in my configuration and created a RequireJS configuration based on the one supplied in the [RequireJS instructions][13] on the karma site.
 
 **test-main.js:** [townthing/town/js/test/test-main.js]()
 
-<pre>var tests = [];
+```javascript
+var tests = [];
 for (var file in window.__karma__.files) {
 	if (window.__karma__.files.hasOwnProperty(file)) {
 		if (/spec\.js$/.test(file)) {
@@ -140,8 +118,8 @@ requirejs.config({
 });
 require(tests, function(){
 	window.__karma__.start();
-});</pre>
-
+});
+```
 The biggest difference between my script and the sample one is I am loading the tests and starting karma after the configuration, rather than inside it. I am using Squire to mock several of the RequireJS modules for tests, had I used the configuration to start karma then each time I created a new instal of Squire I would have kicked off conflicting runs when it ran the same configuration.
 
 Running karma locally is then as easy as: `node .\node_modules\karma\bin\karma start karma.conf.js`

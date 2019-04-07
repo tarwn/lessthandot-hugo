@@ -3,6 +3,7 @@ title: Pushing Silverlight for my Company
 author: ThatRickGuy
 type: post
 date: 2009-11-16T20:09:58+00:00
+ID: 631
 excerpt: "It's me again, Rick the Silverlight nut. I've been buried under a pile of work this last month and haven't had a chance to post much of the fun stuff I've been working on. But I've got a few minutes to write about my last big project. So I give you, the story of KBay"
 url: /index.php/webdev/webdesigngraphicsstyling/pushing-silverlight-for-my-company/
 views:

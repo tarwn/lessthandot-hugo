@@ -3,6 +3,7 @@ title: 'Meme Monday: what is the first blogpost you wrote and when did you write
 author: SQLDenis
 type: post
 date: 2012-01-09T09:25:00+00:00
+ID: 1479
 excerpt: |
   What was the first blogpost you wrote? When did you write it and what was it about.
   

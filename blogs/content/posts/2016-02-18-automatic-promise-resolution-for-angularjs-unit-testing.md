@@ -3,6 +3,7 @@ title: Automatic Promise Resolution for AngularJS Unit Testing
 author: Alex Ullrich
 type: post
 date: 2016-02-18T15:39:02+00:00
+ID: 4359
 url: /index.php/webdev/uidevelopment/javascript/automatic-promise-resolution-for-angularjs-unit-testing/
 views:
   - 3064
@@ -18,7 +19,8 @@ We&#8217;ve been using Angular for client-side apps for a couple years now, and 
 
 For us, the first time we were introduced to this stuff was when trying to test controllers using mocks of services that communicate over HTTP. Angular&#8217;s [$http service][1] works asynchronously and returns promises, so by extension our services do as well. Luckily there is a lot of information out there to help with testing this kind of method, and everything we found pointed us to the [$q service][2]. This service is there for working with deferred objects, and is mostly pretty easy to get on with. Here is an example test from that page:
 
-<pre>it('should simulate promise', inject(function($q, $rootScope) {
+```javascript
+it('should simulate promise', inject(function($q, $rootScope) {
   var deferred = $q.defer();
   var promise = deferred.promise;
   var resolvedValue;
@@ -36,8 +38,8 @@ For us, the first time we were introduced to this stuff was when trying to test 
   // Propagate promise resolution to 'then' functions using $apply().
   $rootScope.$apply();
   expect(resolvedValue).toEqual(123);
-}));</pre>
-
+}));
+```
 The main sticking point here is $rootScope.$apply(). We can also call $rootScope.$digest() &#8211; but that method&#8217;s intent might be even less clear. The reason these need to be called is not immediately clear from the code, but answers can be found in Angular&#8217;s [$scope documentation][3]. Particularly
 
 > When an external event (such as a user action, timer or XHR) is received, the associated expression must be applied to the scope through the $apply() method so that all listeners are updated correctly. 
@@ -48,7 +50,8 @@ When running a full blown angular application, we don&#8217;t need to worry abou
 
 What we had our sights on was a way to wrap $q and $rootScope in a single object that would know to call apply after any resolution or rejection. We called it &#8216;autoQ&#8217; and the name stuck. Here is what the example test above looks like when using it:
 
-<pre>it('should simulate promise', inject(function($q, $rootScope) {
+```javascript
+it('should simulate promise', inject(function($q, $rootScope) {
     var deferred = autoQ($q, $rootScope).defer();
     var promise = deferred.promise;
     var resolvedValue;
@@ -86,7 +89,8 @@ function autoQ($q, $rootScope) {
             return deferred;
         }
     }
-}</pre>
+}
+```
 
 So now we don&#8217;t have to call $rootScope.$apply(), but we do have to call the autoQ setup method, which is not ideal.
 
@@ -94,7 +98,8 @@ So now we don&#8217;t have to call $rootScope.$apply(), but we do have to call t
 
 When trying to figure out how to make this available to our tests, a trick we had been using to test the config phase of our application came to mind. Essentially what you do is declare a module upstream from your tests, and you can initialize it to capture dependencies taken in during the config phase (or anywhere in the module initialization process really). That &#8220;anywhere in the module initialization process&#8221; is where this gets interesting for our current problem. Any dependencies mutated or introduced through this dummy module will be available **in their modified state** to modules instantiated downstream. We had primarily done this as a way to set up spies for methods called during the config phase of our application, but the possibilities are endless. What we ended up doing was using this dummy module approach to register an &#8216;autoQ&#8217; service that is only available in tests.
 
-<pre>//need to call angular.module here, NOT the module method exposed by angular mocks
+```javascript
+//need to call angular.module here, NOT the module method exposed by angular mocks
     angular.module('setupAutoQ', [])
             .service('autoQ', function ($q, $rootScope) {
 
@@ -123,11 +128,12 @@ When trying to figure out how to make this available to our tests, a trick we ha
             });
 
     //this is the angular mocks module method - we need to run the module once it has been declared
-    module('setupAutoQ');</pre>
-
+    module('setupAutoQ');
+```
 The last piece of the puzzle was how to run this prior to each test execution. Luckily [this StackOverflow answer][4] showed us that with jasmine you can declare a beforeEach outside any describe blocks, and it will be treated as a global setup method that is run before each test.
 
-<pre>beforeEach(function () {
+```javascript
+beforeEach(function () {
     angular.module('setupAutoQ', [])
             .service('autoQ', function ($q, $rootScope) {
 
@@ -156,13 +162,14 @@ The last piece of the puzzle was how to run this prior to each test execution. L
             });
 
     module('setupAutoQ');
-});</pre>
-
+});
+```
 ## Wrapping it up
 
 So now, we have an &#8220;autoQ&#8221; service that is available for testing. So our example test now looks like this:
 
-<pre>it('should simulate promise', inject(function(autoQ) {
+```javascript
+it('should simulate promise', inject(function(autoQ) {
     var deferred = autoQ.defer();
     var promise = deferred.promise;
     var resolvedValue;
@@ -175,8 +182,8 @@ So now, we have an &#8220;autoQ&#8221; service that is available for testing. So
   
     // promise will be resolved immediately
     expect(resolvedValue).toEqual(123);
-}));</pre>
-
+}));
+```
 This will really improve the signal to noise ratio in our tests, and hopefully help new developers get up to speed more quickly. Another nice benefit of this approach is that it does not modify $q &#8211; or anything in our &#8220;live&#8221; module &#8211; at all. So if we want finer grained control over promise resolution we can simply consume $q and $rootScope in our tests and use them as before. I&#8217;m not sure we&#8217;ll ever need to do this, but its good to know we have the option.
 
  [1]: https://docs.angularjs.org/api/ng/service/$http "$http service"

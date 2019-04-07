@@ -3,6 +3,7 @@ title: 'Stupid me #3 – Building the script component'
 author: Koen Verbeeck
 type: post
 date: 2013-10-01T13:05:00+00:00
+ID: 2162
 excerpt: |
   After over 6 months of silence, it is time again for another Stupid me™®©! For those unfamiliar with the concept:
   Every time I do something “stupid”, which happens from time to time, I’ll do a little blog post on what happened and how I solved it. The&hellip;

@@ -3,6 +3,7 @@ title: What exactly is Fragment_count?
 author: Ramireddy
 type: post
 date: 2010-10-16T05:24:26+00:00
+ID: 923
 excerpt: 'I started to think about this problem, when I saw this question asked by Sankar Reddy in SQL Server Quiz 2010. I have a fair bit of idea about Index fragmentation and defragmentation. I checked fragmentation of some of my table indexes previously and re&hellip;'
 url: /index.php/datamgmt/datadesign/what-exactly-is-fragment_count/
 views:
@@ -16,7 +17,8 @@ categories:
 ---
 I started to think about this problem, when I saw [this][1] question asked by Sankar Reddy in SQL Server Quiz 2010. I have a fair bit of idea about Index fragmentation and defragmentation. I checked fragmentation of some of my table indexes previously and rebuilt the indexes when fragmentation percentage is too high. But I never thought about how exactly these will be calculated. But after looking at this question, I thought of finding how SQL server will calculate this. Let’s have a look at this example.
 
-<pre>create table tblNumbers
+sql
+create table tblNumbers
 (
 	Id int identity(1,1) primary key,
 	Num int
@@ -36,8 +38,9 @@ select rn from Numbers
 
 SELECT page_count, fragment_count
 FROM sys.dm_db_index_physical_stats (DB_ID(), OBJECT_ID('tblnumbers'),NULL, NULL, 'detailed') 
-where index_id = 1 and index_level = 0</pre>
+where index_id = 1 and index_level = 0
 
+```
 In the above example we are inserting 1 Million records and checking the Physical stats of the Clustered index of the table. It shows 3832 pages were allocated to the clustered index in its Leaf Level and shows Fragment count as 17. 
 
 A Fragment is a collection of pages in sequence. Assume there is a page with ID 1000 is allocated to a table, and its sequences are 1001 and 495 instead of 1002, these will be considered as 2 fragments with one fragment having 1000-1001 and other fragment with 495.
@@ -50,7 +53,8 @@ In one way, a Fragment can also be indicated as a part. In our example, the CI h
 
 Let’s try to implement this method. The idea is to first load all the pages allocated to the Clustered Index into a temporary table and assign the sequence number to those pages and join each record with next record and find out the records where the difference is not equal to 1.
 
-<pre>-- Table to hold Pages of the CI,
+sql
+-- Table to hold Pages of the CI,
 CREATE TABLE sp_tablepages
 (
 ID int identity(1,1) primary key,
@@ -76,7 +80,7 @@ INSERT INTO sp_tablepages
 EXEC ('DBCC IND (test, tblNumbers, 1)');  
 
 --delete the pages of non-leaf levels
-delete from sp_tablepages where IndexLevel <&gt; 0 or IndexLevel is null
+delete from sp_tablepages where IndexLevel <> 0 or IndexLevel is null
 
 
 ;with cte as
@@ -85,8 +89,10 @@ delete from sp_tablepages where IndexLevel <&gt; 0 or IndexLevel is null
 )
 select S.PagepID as ThisFragmentEndPage,SN.PagepID as NextFragmentBeginPage
 from cte S
-inner join cte  SN on SN.ID  = S.ID + 1 and SN.PagePID <&gt; S.PagePID + 1</pre>
+inner join cte  SN on SN.ID  = S.ID + 1 and SN.PagePID <> S.PagePID + 1
 
+
+```
 The query might not give the exact count of fragments in the table. In my tests it returned every time 1 or 2 less fragments(probably i am missing something else). This will give the Ending Page Number of the current fragment and First Page Number of Next Fragment. If you look at the values of columns &#8220;ThisFragmentEndPage&#8221;,&#8221;NextFragmentBeginPage&#8221;, for the first few rows they differ by more than 1 page, and for remaining rows, there is exactly one page difference. Interesting fact is that missing one page is actually allocated to table. You can check it in sp_tablepages table. But it is assigned to different Level. 
 
 In the above example, the fragmentation is not because of Page Splits. It is based on he way SQL Storage engine allocates pages while inserting rows.

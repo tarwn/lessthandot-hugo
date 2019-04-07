@@ -3,6 +3,7 @@ title: 'Friday SQL Nugget #1'
 author: George Mastros (gmmastros)
 type: post
 date: 2012-01-13T17:28:00+00:00
+ID: 1492
 excerpt: |
   Ted Krueger tagged me "Deciding I need to delete it all and start over again".
   

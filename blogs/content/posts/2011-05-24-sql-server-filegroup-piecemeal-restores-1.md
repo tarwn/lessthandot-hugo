@@ -3,6 +3,7 @@ title: SQL Server Filegroup Piecemeal Restores
 author: Jes Borland
 type: post
 date: 2011-05-24T11:40:00+00:00
+ID: 1187
 excerpt: Learn how to use multiple filegroups to perform partial restores in a SQL Server database.
 url: /index.php/datamgmt/dbadmin/sql-server-filegroup-piecemeal-restores-1/
 views:
@@ -33,7 +34,8 @@ Ready? Grab a cup of coffee, and let’s go.
 
 First, I’ll create a database with three filegroups, and one file per filegroup. 
 
-<pre>USE master;
+sql
+USE master;
 GO
 CREATE DATABASE FilegroupFull ON PRIMARY
 (NAME = FGFull1_dat,
@@ -46,33 +48,41 @@ FILEGROUP FGFullFG3
  FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGFull3_dat.mdf') 
 LOG ON
 (NAME = FGFull_log,
- FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGFull_log.ldf')</pre>
+ FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGFull_log.ldf')
+```
 
 I want to make sure the database is in FULL recovery model, so I can take transaction log backups and restore them. 
 
-<pre>ALTER DATABASE FilegroupFull SET RECOVERY FULL;
-GO</pre>
+sql
+ALTER DATABASE FilegroupFull SET RECOVERY FULL;
+GO
+```
 
 You can easily add another filegroup and file to an existing database. I’m going to add a fourth. 
 
-<pre>ALTER DATABASE FilegroupFull ADD FILEGROUP FGFullFG4 
+sql
+ALTER DATABASE FilegroupFull ADD FILEGROUP FGFullFG4 
 ALTER DATABASE FilegroupFull ADD FILE
 (NAME = FGFull4_dat,
  FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGFull4_dat.mdf')
-TO FILEGROUP FGFullFG4</pre>
+TO FILEGROUP FGFullFG4
+```
 
 When an object is created in a database, it will be created in the DEFAULT filegroup. Initially, the filegroup PRIMARY is DEFAULT. I am going to change this so FGFullFG2 is DEFAULT. 
 
-<pre>ALTER DATABASE FilegroupFull
-MODIFY FILEGROUP FGFullFG2 DEFAULT</pre>
+sql
+ALTER DATABASE FilegroupFull
+MODIFY FILEGROUP FGFullFG2 DEFAULT
+```
 
 To view my filegroups and files, I can query sys.filegroups. 
 
-<pre>USE FilegroupFull;
+sql
+USE FilegroupFull;
 GO
 SELECT name, data_space_id, type, type_desc, is_default, filegroup_guid, log_filegroup_id, is_read_only
-FROM sys.filegroups;</pre>
-
+FROM sys.filegroups;
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/Filegroup1.JPG?mtime=1306200506"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup1.JPG?mtime=1306200506" width="805" height="131" /></a>
 </div>
@@ -89,22 +99,25 @@ Next is creating tables and adding some orders. I am creating three tables. One 
 
 First, I create the 2011 orders table. (If you are unfamiliar with CTEs, which I use to populate these tables, check out my blog post on [recursive CTEs][2]. 
 
-<pre>USE FilegroupFull;
+sql
+USE FilegroupFull;
 GO
 CREATE TABLE Orders2011 
 (OrderID INT NOT NULL, 
  OrderDate DATETIME NOT NULL 
- CONSTRAINT PKOrders PRIMARY KEY CLUSTERED (OrderID))</pre>
+ CONSTRAINT PKOrders PRIMARY KEY CLUSTERED (OrderID))
+```
 
 Let’s check which filegroup this is created on. Will it be created on PRIMARY? 
 
-<pre>SELECT PA.OBJECT_ID, FG.name
+sql
+SELECT PA.OBJECT_ID, FG.name
 FROM sys.filegroups FG
     INNER JOIN sys.allocation_units AU ON AU.data_space_id = FG.data_space_id
     INNER JOIN sys.partitions PA ON PA.partition_id = AU.container_id
 WHERE PA.OBJECT_ID =
-    (SELECT OBJECT_ID(N'FilegroupFull.dbo.Orders2011'))</pre>
-
+    (SELECT OBJECT_ID(N'FilegroupFull.dbo.Orders2011'))
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/Filegroup3.JPG?mtime=1306200507"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup3.JPG?mtime=1306200507" width="189" height="71" /></a>
 </div>
@@ -113,7 +126,8 @@ Because I specified FGFullF2 as the default, that is where this table is created
 
 Let’s continue creating and populating tables. For my 2010 and 2009 tables, I will specify the filegroups I want them created on. 
 
-<pre>CREATE TABLE Orders2010 
+sql
+CREATE TABLE Orders2010 
 (OrderID INT NOT NULL, 
  OrderDate DATETIME NOT NULL 
  CONSTRAINT PKOrders2010 PRIMARY KEY CLUSTERED (OrderID)) 
@@ -154,43 +168,56 @@ WHERE DATEADD(dd, 1, OrderDate) <= DATEADD(dd, 100, '2009/05/01')
 INSERT INTO Orders2009
 SELECT OrderID, OrderDate
 FROM InsertOrders 
-OPTION (MAXRECURSION 100);</pre>
+OPTION (MAXRECURSION 100);
+```
 
 I’m going to mark FGFullFG4 as read-only, so I can show you the difference between restoring a read-write and a read-only filegroup. 
 
-<pre>ALTER DATABASE FilegroupFull SET RESTRICTED_USER WITH ROLLBACK IMMEDIATE;
+sql
+ALTER DATABASE FilegroupFull SET RESTRICTED_USER WITH ROLLBACK IMMEDIATE;
 GO
 ALTER DATABASE FilegroupFull MODIFY FILEGROUP FGFullFG4 READONLY;
 GO
 ALTER DATABASE FilegroupFull SET MULTI_USER;
-GO</pre>
+GO
+```
 
 **Backing Up, and, More Importantly, Restoring** 
 
 I will start with a full database backup. (You _are_ taking regular full backups of your databases, right?) 
 
-<pre>BACKUP DATABASE FilegroupFull TO DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_full.bak'</pre>
+sql
+BACKUP DATABASE FilegroupFull TO DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_full.bak'
+```
 
 Now, I’ll add a record to my Orders2011 table. 
 
-<pre>USE FilegroupFull;
+sql
+USE FilegroupFull;
 GO
 INSERT INTO Orders2011 
-VALUES(400201, '2011/08/28');</pre>
+VALUES(400201, '2011/08/28');
+```
 
 Then, I perform a transaction log backup. (You _are_ performing regular transaction log backups of your databases in FULL and BULK_LOGGED recovery model, right?) 
 
-<pre>BACKUP LOG FilegroupFull TO DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_tlog1.trn'</pre>
+sql
+BACKUP LOG FilegroupFull TO DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_tlog1.trn'
+```
 
 I’ll add one more record to the table. 
 
-<pre>INSERT INTO Orders2011 
-VALUES(400202, '2011/08/29')</pre>
+sql
+INSERT INTO Orders2011 
+VALUES(400202, '2011/08/29')
+```
 
 Then, I’ll do one more step that you may need to, depending on what scenario you are faced with. I am going to back up the tail of the transaction log. 
 
-<pre>BACKUP LOG FilegroupFull TO DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_tlogtail.trn' 
-WITH NORECOVERY, NO_TRUNCATE;</pre>
+sql
+BACKUP LOG FilegroupFull TO DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_tlogtail.trn' 
+WITH NORECOVERY, NO_TRUNCATE;
+```
 
 Now, let’s talk disaster. You should have, and regularly test, a disaster recovery process. I will simulate a disaster by dropping the database. Then, I will begin the restore. 
 
@@ -198,7 +225,8 @@ The first RESTORE statement in a piecemeal restore, which is known as a _partial
 
 I’m going to begin with a restore of PRIMARY only. Because this database is in FULL recovery mode, I will need to restore the logs with every filegroup that is in read-write mode. 
 
-<pre>RESTORE DATABASE FilegroupFull 
+sql
+RESTORE DATABASE FilegroupFull 
 FILEGROUP = 'Primary'
 FROM DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_full.bak' 
 WITH PARTIAL, NORECOVERY 
@@ -208,33 +236,38 @@ WITH NORECOVERY
 RESTORE LOG FilegroupFull 
 FROM DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_tlogtail.trn' 
 WITH RECOVERY;
-GO</pre>
+GO
+```
 
 I can check the status of each file by querying sys.database_files. 
 
-<pre>SELECT [name], [state_desc] 
+sql
+SELECT [name], [state_desc] 
 FROM FilegroupFull.sys.database_files;
-GO</pre>
-
+GO
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/Filegroup4.JPG?mtime=1306200507"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup4.JPG?mtime=1306200507" width="269" height="141" /></a>
 </div>
 
 At this point, what will happen if I try to select from the Orders2011 table? 
 
-<pre>USE FilegroupFull;
+sql
+USE FilegroupFull;
 GO
 SELECT OrderID, OrderDate
 FROM Orders2011 
-WHERE OrderID = 400189</pre>
+WHERE OrderID = 400189
+```
 
-<pre><span class="MT_red"&gt;Msg 8653, Level 16, State 1, Line 1
+<pre><span class="MT_red">Msg 8653, Level 16, State 1, Line 1
 The query processor is unable to produce a plan for the table or view 'Orders2011'
-because the table resides in a filegroup which is not online.</span&gt;</pre>
+because the table resides in a filegroup which is not online.</span></pre>
 
 I continue with a restore of the FGFullFG2 filegroup. This is a _filegroup-restore sequence_. 
 
-<pre>USE master;
+sql
+USE master;
 GO
 RESTORE DATABASE FilegroupFull 
 FILEGROUP = 'FGFullFG2'
@@ -246,25 +279,28 @@ WITH NORECOVERY
 RESTORE LOG FilegroupFull 
 FROM DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_tlogtail.trn' 
 WITH RECOVERY;
-GO</pre>
+GO
+```
 
 Now, I am able to select from the Orders2011 table. 
 
-<pre>USE FilegroupFull;
+sql
+USE FilegroupFull;
 GO
 SELECT OrderID, OrderDate
 FROM Orders2011 
-WHERE OrderID = 400189</pre>
-
+WHERE OrderID = 400189
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/Filegroup5.JPG?mtime=1306200508"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup5.JPG?mtime=1306200508" width="237" height="69" /></a>
 </div>
 
 I am also able to INSERT. 
 
-<pre>INSERT INTO Orders2011 
-VALUES(400203, '2011/08/30')</pre>
-
+sql
+INSERT INTO Orders2011 
+VALUES(400203, '2011/08/30')
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/Filegroup6.JPG?mtime=1306200508"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup6.JPG?mtime=1306200508" width="225" height="67" /></a>
 </div>
@@ -273,7 +309,8 @@ At this point, my PRIMARY and default filegroups are online. Users could begin w
 
 Next up is a restore of FGFullFG3. This will bring the Orders2010 table online. 
 
-<pre>USE master;
+sql
+USE master;
 GO
 RESTORE DATABASE FilegroupFull 
 FILEGROUP = 'FGFullFG3'
@@ -285,26 +322,30 @@ WITH NORECOVERY
 RESTORE LOG FilegroupFull 
 FROM DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_tlogtail.trn' 
 WITH RECOVERY;
-GO </pre>
+GO 
+```
 
 Last but not least, I will restore FGFullFG4. Remember, this filegroup is in read-only. Because of this, I will only need to restore from the full backup. I do not need to restore any of the log files. 
 
-<pre>USE master;
+sql
+USE master;
 GO
 RESTORE DATABASE FilegroupFull 
 FILEGROUP = 'FGFullFG4'
 FROM DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_full.bak' 
 WITH RECOVERY;
-GO</pre>
+GO
+```
 
 To test this, I will select from the Orders2009 table. 
 
-<pre>USE FilegroupFull;
+sql
+USE FilegroupFull;
 GO
 SELECT OrderID, OrderDate
 FROM Orders2009 
-WHERE OrderID = 200190</pre>
-
+WHERE OrderID = 200190
+```
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/Filegroup7.JPG?mtime=1306200508"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup7.JPG?mtime=1306200508" width="234" height="62" /></a>
 </div>

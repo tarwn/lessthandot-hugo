@@ -3,6 +3,7 @@ title: Index DMV usage considerations
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-03-31T12:56:42+00:00
+ID: 745
 excerpt: 'Index DMV/DMF goodness!  SQL Server 2005 and up has given us the ability to truly be more efficient in gathering information in which we can be more proactive.  With everything these objects give us, a price has to be paid.  We will discuss that price but first, we’ll go over a few major features that DMV/DMF has provided to us in regards to indexes to help us in our daily tasks.'
 url: /index.php/datamgmt/datadesign/think-before-you-f5-on-dmvs/
 views:
@@ -53,13 +54,15 @@ The below charts are from Idera SQLDM and used only to show a high level view of
 
 The query that will be used is below and part from Denis Gobo’s blog referred to above while removing the direct condition to look at only one index.
 
-<pre>SELECT OBJECT_NAME(OBJECT_ID) AS Tablename,s.name AS Indexname
+sql
+SELECT OBJECT_NAME(OBJECT_ID) AS Tablename,s.name AS Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent
 ,page_count
 FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL , NULL, N'LIMITED') d
 join sysindexes s ON d.OBJECT_ID = s.id
-and d.index_id = s.indid</pre>
+and d.index_id = s.indid
+```
 
 Prior to executing this query, our server was running as follows
   

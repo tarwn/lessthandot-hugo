@@ -3,6 +3,7 @@ title: Have you Tried Out Microsoft TFS 2010?
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-05-03T09:56:00+00:00
+ID: 1152
 excerpt: "Several times I found myself wanting to try out different features of TFS 2010, but my only options appeared to be building a virtual machine (time consuming and requires gobs of money or an MSDN/TechNet subscription) or using a live server as a guinea pig (for some reason admins frown on this). Luckily there's an easier option, I just wasn't aware of it until last week."
 url: /index.php/enterprisedev/application-lifecycle-management/have-you-tried-out-tfs2010/
 views:

@@ -3,6 +3,7 @@ title: SMO Script Index and FK’s on a database
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-05-18T18:26:17+00:00
+ID: 435
 url: /index.php/datamgmt/dbprogramming/smo-script-index-and-fk-s-on-a-database/
 views:
   - 12272
@@ -25,7 +26,8 @@ Create a new c# app project in VS.NET (mine is named object scripter). Add the G
 
 Paste the code (not error handled and very quickly written..you&#8217;ve been warned!!!) below in the code view
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections;
 using System.Collections.Specialized;
 using System.Collections.Generic;
@@ -95,8 +97,8 @@ namespace object_scripter
             richTextBox1.AppendText(scripter("CREATE", textBox1.Text, textBox2.Text));
         }
     }
-}</pre>
-
+}
+```
 Save and run. Enter an instance (dev one!!!), DB name and hit Run Me. Should appear as
 
 <div class="image_block">

@@ -3,6 +3,7 @@ title: Automatically create a SQL Server table in a new database.
 author: George Mastros (gmmastros)
 type: post
 date: 2009-07-03T14:53:14+00:00
+ID: 494
 url: /index.php/datamgmt/datadesign/automatically-create-a-sql-server-table/
 views:
   - 10682
@@ -24,33 +25,39 @@ Enough of the chatter, let&#8217;s see how this can be done.
 
 First, create a table in the Model database.
 
-<pre>use Model
+sql
+use Model
 go
 
 Create Table TestAutoDBCreation(Id Int, Color VarChar(20))
 Insert Into TestAutoDBCreation Values(1, 'Red')
-Insert Into TestAutoDBCreation Values(2, 'Blue')</pre>
+Insert Into TestAutoDBCreation Values(2, 'Blue')
+```
 
 Now, let’s create a new database.
 
-<pre>use Master
+sql
+use Master
 go
-Create Database NewDatabaseWithModelTable</pre>
-
+Create Database NewDatabaseWithModelTable
+```
 Now, let&#8217;s make sure the table (and it&#8217;s data) exist in the new database.
 
-<pre>use NewDatabaseWithModelTable
+sql
+use NewDatabaseWithModelTable
 go
-Select * From TestAutoDBCreation</pre>
-
+Select * From TestAutoDBCreation
+```
 As you can see, the table that was created in Model exists in the newly created database. It even has all the data that was loaded in to it. 
 
 Now, let’s clean up after ourselves:
 
-<pre>Use Model
+sql
+Use Model
 go
 Drop Table TestAutoDBCreation
 go
 Use Master
 go
-Drop Database NewDatabaseWithModelTable</pre>
+Drop Database NewDatabaseWithModelTable
+```

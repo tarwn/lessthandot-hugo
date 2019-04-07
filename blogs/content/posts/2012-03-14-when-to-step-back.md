@@ -3,6 +3,7 @@ title: When to step back
 author: chopstik
 type: post
 date: 2012-03-14T22:15:00+00:00
+ID: 1537
 excerpt: 'As I noted previously, I have moved from the world of development over to the world of project management (among other things). And, as I continue to learn and hone my skills in this new world, I will post my thoughts, experiences and observations here.&hellip;'
 url: /index.php/itprofessionals/ethicsit/when-to-step-back/
 views:

@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #67 Extended Events Wrap-up'
 author: Jes Borland
 type: post
 date: 2015-06-17T13:33:38+00:00
+ID: 3413
 url: /index.php/uncategorized/t-sql-tuesday-67-extended-events-target-blog/
 views:
   - 4566

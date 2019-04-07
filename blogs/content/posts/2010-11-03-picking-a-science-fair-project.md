@@ -3,6 +3,7 @@ title: Picking a science fair project
 author: George Mastros (gmmastros)
 type: post
 date: 2010-11-03T10:02:58+00:00
+ID: 932
 excerpt: 'When school started this year, my 7th grade daughter was informed that she is expected to complete a science fair project.  I plan on convincing her to post her final report as a blog on this site, but it’s not scheduled to be completed for a couple mor&hellip;'
 url: /index.php/itstudents/assignments/picking-a-science-fair-project/
 views:

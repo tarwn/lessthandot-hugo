@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 13 – SQL Server built in DR/HA Solutions
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-12T11:25:00+00:00
+ID: 1171
 excerpt: 'SQL Server has several options available for a stable DR/HA solution at a minimal cost.  There is a grey area in which the time to start looking to products from third party vendors may allow more manageable DR/HA solutions.  This grey area typically be&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tips-sql-server-built-in-dr-ha/
 views:

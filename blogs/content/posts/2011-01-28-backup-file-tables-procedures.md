@@ -3,6 +3,7 @@ title: Backup file contents with SSIS – Supporting tables and procedures
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-01-28T13:07:00+00:00
+ID: 1010
 excerpt: 'In part one and two we walked through design and the flow of the loop container for the package that will insert all files we specify into a SQL Server database.  This is being developed to automate the task of backing up and maintaining changes of configuration files that reside on servers.  This provides an easy and fast way to recover lost configuration files or use the configuration files during upgrades or migrations.'
 url: /index.php/datamgmt/datadesign/backup-file-tables-procedures/
 views:
@@ -29,7 +30,8 @@ The master table will hold the primary information about the files. With any tab
 
 The master table, SystemConfigMaster is below
 
-<pre>CREATE TABLE [dbo].[SystemConfigMaster](
+sql
+CREATE TABLE [dbo].[SystemConfigMaster](
 	[ConfigID] [int] IDENTITY(1,1) NOT NULL,
 	[SystemName] [varchar](255) NULL,
 	[ConfigDescription] [varchar](2500) NULL,
@@ -43,11 +45,13 @@ The master table, SystemConfigMaster is below
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO</pre>
+GO
+```
 
 ConfigID will be the primary key that will relate to the next table, ConfigRepository
 
-<pre>CREATE TABLE [dbo].[ConfigRepository](
+sql
+CREATE TABLE [dbo].[ConfigRepository](
 	[ContentConfigID] [int] IDENTITY(1,1) NOT NULL,
 	[SystemConfigID] [int] NULL,
 	[ConfigPath] [varchar](1500) NULL,
@@ -69,7 +73,8 @@ REFERENCES [dbo].[SystemConfigMaster] ([ConfigID])
 GO
 
 ALTER TABLE [dbo].[ConfigRepository] CHECK CONSTRAINT [fk_MasterConfig]
-GO</pre>
+GO
+```
 
 As shown, the ConfigRepository table has a Foreign Key to SystemConfigMaster and the ConfigID column. This requires an ID to be in place in SystemConfigMaster prior to inserting a row into ConfigRepository. 
 
@@ -81,7 +86,8 @@ To get meaningful data into our tables, add two more variables to the package at
   
 To populate these new variables, change the initial script task to take the additional variable FileNameOnly as a ReadWriteVariable. Alter the coding to the following
 
-<pre>if (File.Exists(Dts.Variables["IndexFile"].Value.ToString()))
+```csharp
+if (File.Exists(Dts.Variables["IndexFile"].Value.ToString()))
             {
                 FileInfo file = new FileInfo(Dts.Variables["IndexFile"].Value.ToString());
                 Dts.Variables["FileModDate"].Value = Convert.ToDateTime(File.GetLastWriteTime(Dts.Variables["IndexFile"].Value.ToString()));
@@ -91,13 +97,15 @@ To populate these new variables, change the initial script task to take the addi
             else
             {
                 Dts.TaskResult = (int)ScriptResults.Failure;
-            }</pre>
+            }
+```
 
 Now that the package is altered to process all the data required, create the actual procedures that will handle inserting the data.
 
 **UDATE Procedure**
 
-<pre>CREATE PROCEDURE [dbo].[dba_UpdateNewConfig] (@date datetime, @ConfigID INT,@ConfigContents varchar(max))
+sql
+CREATE PROCEDURE [dbo].[dba_UpdateNewConfig] (@date datetime, @ConfigID INT,@ConfigContents varchar(max))
 AS
 SET NOCOUNT ON
 UPDATE dbo.XMLConfigRepository
@@ -109,11 +117,13 @@ UPDATE dbo.SystemConfigMaster
 SET CreateDate = @date
 WHERE ConfigID = @ConfigID;
 SET NOCOUNT OFF
-GO</pre>
+GO
+```
 
 **INSERT Procedure**
 
-<pre>CREATE PROCEDURE [dbo].[dba_InsertNewConfig] (@date datetime, @ConfigPath varchar(1500),@ConfigContents varchar(max), @Filename varchar(255), @ServerName varchar(255))
+sql
+CREATE PROCEDURE [dbo].[dba_InsertNewConfig] (@date datetime, @ConfigPath varchar(1500),@ConfigContents varchar(max), @Filename varchar(255), @ServerName varchar(255))
 AS
 SET NOCOUNT ON
 DECLARE @IDENT INT
@@ -128,8 +138,8 @@ INSERT INTO dbo.XMLConfigRepository
 SELECT @IDENT, ConfigPath, SUSER_NAME(),@ConfigContents FROM dbo.SystemConfigMaster
 WHERE ConfigID = @IDENT
 SET NOCOUNT OFF
-GO</pre>
-
+GO
+```
 **Closing out the supporting objects**
 
 With these two tables and procedures the Data Flow task development can start. In the last part to this series, Backup file contents with SSIS – INSERT/UPDATE Decisions, we will put together the Data Flow task and an Execute SQL Task to reset things for preparation of the next execution of the package.

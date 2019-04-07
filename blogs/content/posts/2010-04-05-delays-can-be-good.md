@@ -3,6 +3,7 @@ title: Delay Validation with SSIS Tasks
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-04-05T12:10:59+00:00
+ID: 750
 excerpt: 'When setting DelayValidation, also take care in making sure the setting will not have adverse affects on the package.  If another property in the task is critical and should be evaluated prior to the package execution, we can look to other methods to accomplish the same task.'
 url: /index.php/datamgmt/dbprogramming/delays-can-be-good/
 views:

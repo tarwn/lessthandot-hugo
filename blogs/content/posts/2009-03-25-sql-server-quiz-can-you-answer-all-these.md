@@ -3,6 +3,7 @@ title: SQL Server Quiz, Can You Answer All These?
 author: SQLDenis
 type: post
 date: 2009-03-25T12:44:12+00:00
+ID: 364
 url: /index.php/datamgmt/datadesign/sql-server-quiz-can-you-answer-all-these/
 views:
   - 27286
@@ -24,28 +25,32 @@ Here is a quick SQL Server quiz. Do you know the answer to all of these question
 
 2) If your database is in simple recovery model and you run code that looks like this
 
-<pre>BULK INSERT Northwind.dbo.[Order Details]
+sql
+BULK INSERT Northwind.dbo.[Order Details]
    FROM 'f:orderslineitem.tbl'
    WITH 
       (
          FIELDTERMINATOR = '|',
          ROWTERMINATOR = '|n'
-      )</pre>
-
+      )
+```
 Will this be minimally logged?
 
 3) How many flaws/worst practices are in this piece of code
 
-<pre>select * 
+sql
+select * 
 from SomeTable
 Where left(SomeColumn,1) ='A'
 
 print 'query executed'
-select @@rowcount as 'Rows returned'</pre>
+select @@rowcount as 'Rows returned'
+```
 
 4) When we use Try and Catch will the following tran be commited?
 
-<pre>BEGIN TRANSACTION TranA
+sql
+BEGIN TRANSACTION TranA
     BEGIN TRY
      DECLARE  @cond INT;
      SET @cond =  'A';
@@ -53,64 +58,79 @@ select @@rowcount as 'Rows returned'</pre>
     BEGIN CATCH
      PRINT 'Inside catch'
     END CATCH;
-    COMMIT TRAN TranA</pre>
+    COMMIT TRAN TranA
+```
 
 5)Take a look at the code below, what will the last select return?
 
-<pre>declare @SQL varchar(100)
+sql
+declare @SQL varchar(100)
 declare @Val varchar(10)
 
 select @SQL ='The value this item is..'
 
-select @SQL + isnull(@Val,' currently not available')</pre>
+select @SQL + isnull(@Val,' currently not available')
+```
 
 6)What will the returned when you run the following query?
 
-<pre>select 3/2</pre>
+sql
+select 3/2
+```
 
 7)How many rows will the select query return from the table with 3 rows
 
-<pre>CREATE TABLE #testnulls (ID INT)
+sql
+CREATE TABLE #testnulls (ID INT)
 INSERT INTO #testnulls VALUES (1)
 INSERT INTO #testnulls VALUES (2)
 INSERT INTO #testnulls VALUES (null)
 
 select * from #testnulls
-where id <> 1</pre>
+where id <> 1
+```
 
 8)If you run the code below what will the len function return, can you also answer why?
 
-<pre>declare @v varchar(max)
+sql
+declare @v varchar(max)
 select @v =replicate('a',20000)
 
-select len(@v)</pre>
+select len(@v)
+```
 
 9) If you have the following table
 
-<pre>CREATE TABLE #testnulls2 (ID INT)
+sql
+CREATE TABLE #testnulls2 (ID INT)
 INSERT INTO #testnulls2 VALUES (1)
 INSERT INTO #testnulls2 VALUES (2)
-INSERT INTO #testnulls2 VALUES (null)</pre>
-
+INSERT INTO #testnulls2 VALUES (null)
+```
 what will the query below return?
 
-<pre>select count(*), count(id)
-from #testnulls2</pre>
+sql
+select count(*), count(id)
+from #testnulls2
+```
 
 10)If you have the following two tables
 
-<pre>CREATE TABLE TestOne (id INT IDENTITY,SomeDate DATETIME)
+sql
+CREATE TABLE TestOne (id INT IDENTITY,SomeDate DATETIME)
 CREATE TABLE TestTwo (id INT IDENTITY,TestOneID INT,SomeDate DATETIME)
  
     --Let's insert 4 rows into the table
     INSERT TestOne VALUES(GETDATE())
     INSERT TestOne VALUES(GETDATE())
     INSERT TestOne VALUES(GETDATE())
-    INSERT TestOne VALUES(GETDATE())</pre>
+    INSERT TestOne VALUES(GETDATE())
+```
 
 If table TestOne now has the following trigger added to it
 
-<pre>CREATE TRIGGER trTestOne ON [dbo].[TestOne]
+sql
+CREATE TRIGGER trTestOne ON [dbo].[TestOne]
     FOR INSERT
     AS
     DECLARE @CreditUserID INT
@@ -118,12 +138,15 @@ If table TestOne now has the following trigger added to it
     SELECT @CreditUserID = (SELECT ID FROM Inserted)
  
     INSERT TestTwo VALUES(@CreditUserID,GETDATE())
-    GO</pre>
+    GO
+```
 
 What will be the value that the @@identity function returns after a new insert into the TestOne table?
 
-<pre>INSERT TestOne VALUES(GETDATE())
-select @@identity</pre>
+sql
+INSERT TestOne VALUES(GETDATE())
+select @@identity
+```
 
 So those are the 10 questions for this little quiz. I will post the answers/explanations to these tomorrow, if you are still bored here is a bunch of stuff that you should be familiar with as a SQL Server developer
 
@@ -218,5 +241,5 @@ What does trace flag 1204 do_
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DataDesign/answers-to-the-sql-server-quiz-can-you-a
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

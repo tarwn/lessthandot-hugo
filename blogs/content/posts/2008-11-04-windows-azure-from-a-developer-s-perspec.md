@@ -3,6 +3,7 @@ title: Windows Azure From A Developer’s Perspective Post
 author: SQLDenis
 type: post
 date: 2008-11-04T14:00:53+00:00
+ID: 194
 url: /index.php/webdev/webdesigngraphicsstyling/windows-azure-from-a-developer-s-perspec/
 views:
   - 4127

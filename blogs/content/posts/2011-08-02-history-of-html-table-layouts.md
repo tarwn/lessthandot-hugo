@@ -3,6 +3,7 @@ title: The History of HTML Table Layouts
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-08-02T10:01:00+00:00
+ID: 1233
 excerpt: "The argument over table vs non-table layouts has been going on for years. I remember seeing online conversations as far back as ten years ago on the topic, and given my notoriously bad memory that should be taken as a minimum. Along the way we have dealt with partial CSS implementations, inconsistent rendering behavior, slow implementation of standards, competing proprietary implementations...it's been a long road."
 url: /index.php/webdev/uidevelopment/xhtmlcss/history-of-html-table-layouts/
 views:
@@ -16,7 +17,7 @@ tags:
 
 ---
 <div style="float: left; margin: .5em 1em .5em .5em;">
-  <img src="http://www.tiernok.com/LTDBlog/rant.png" alt="Ranting Guy" style="height: 75px; " />
+  <img src="http://tiernok.com/LTDBlog/rant.png" alt="Ranting Guy" style="height: 75px; " />
 </div>
 
 The argument over table vs non-table layouts has been going on for years. I remember seeing online conversations as far back as ten years ago on the topic, and given my notoriously bad memory that should be taken as a minimum. Along the way we have dealt with partial CSS implementations, inconsistent rendering behavior, slow implementation of standards, competing proprietary implementations&#8230;it&#8217;s been a long road.

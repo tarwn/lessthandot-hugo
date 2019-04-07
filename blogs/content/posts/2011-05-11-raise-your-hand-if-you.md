@@ -3,6 +3,7 @@ title: Raise your hand if you have seen code that sends email from within a trig
 author: SQLDenis
 type: post
 date: 2011-05-11T11:19:00+00:00
+ID: 1170
 excerpt: |
   Please leave me a comment if you have written or have seen a trigger that is written in such a way that it will send an email when a value changes in a table.
   
@@ -29,7 +30,8 @@ Please leave me a comment if you have written or have seen a trigger that is wri
 
 I am looking at the following question: [Email trigger when data is changed][1]
 
-<pre>ALTER TRIGGER [dbo].[RVABestellingenAantalWijzigenTrigger]
+sql
+ALTER TRIGGER [dbo].[RVABestellingenAantalWijzigenTrigger]
 ON [dbo].[RVA_Bestellingen]  
 AFTER UPDATE
 AS
@@ -46,7 +48,7 @@ DECLARE @CategorieNaam varchar(255)
 DECLARE @SubCategorieNaam varchar(255)
 DECLARE @Datum datetime
 
-if update(Aantal) /*and (SELECT Datum FROM inserted) = cast(floor(cast(dateadd(day,1,getdate()) as float)) as datetime)  */ and   (convert(varchar,getdate(),108)&gt;'11:00')
+if update(Aantal) /*and (SELECT Datum FROM inserted) = cast(floor(cast(dateadd(day,1,getdate()) as float)) as datetime)  */ and   (convert(varchar,getdate(),108)>'11:00')
 begin
 
     --Zetten aantallen
@@ -92,7 +94,8 @@ begin
             @recipients = 'fake@fake.fake', 
             @message    = @body, 
             @subject    = @LocatieNaam
-end</pre>
+end
+```
 
 And I am just shaking my head, for one it doesn&#8217;t take into account muliple rows being updated, see [Best Practice: Coding SQL Server triggers for multi-row operations][2] for more on that topic
 
@@ -110,5 +113,5 @@ Enough ranting, leave me a comment if you do send emails from withing triggers. 
 
  [1]: http://stackoverflow.com/questions/5964495/email-trigger-when-data-is-changed
  [2]: /index.php/DataMgmt/DBProgramming/MSSQLServer/best-practice-coding-sql-server-triggers
- [3]: http://forum.lessthandot.com/viewforum.php?f=17
- [4]: http://forum.lessthandot.com/viewforum.php?f=22
+ [3]: http://forum.ltd.local/viewforum.php?f=17
+ [4]: http://forum.ltd.local/viewforum.php?f=22

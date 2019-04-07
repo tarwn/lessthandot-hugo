@@ -3,6 +3,7 @@ title: SQL Azure Compatibility Assessment service released
 author: SQLDenis
 type: post
 date: 2012-01-04T08:42:00+00:00
+ID: 1477
 excerpt: 'If you are considering moving your SQL Server databases to SQL Azure, you can use the SQL Azure Compatibility Assessment to check if your database schema is compatible with SQL Azure. This service is very easy to use and does not require an Azure accoun&hellip;'
 url: /index.php/datamgmt/datadesign/sql-azure-compatibility-assessment-service/
 views:

@@ -3,6 +3,7 @@ title: My top ten favorite technologies of this decade.
 author: SQLDenis
 type: post
 date: 2009-12-28T16:35:04+00:00
+ID: 655
 url: /index.php/itprofessionals/ethicsit/my-top-ten-favorite-technologies-of-this/
 views:
   - 5916

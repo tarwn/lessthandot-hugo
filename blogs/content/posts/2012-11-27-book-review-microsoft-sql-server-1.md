@@ -3,6 +3,7 @@ title: 'Book Review: Microsoft SQL Server 2012 T-SQL Fundamentals'
 author: Axel Achten (axel8s)
 type: post
 date: 2012-11-27T17:37:00+00:00
+ID: 1704
 excerpt: "With a basis as a system engineer, I became a DBA. And DBA's don't often write real DML queries. I can read a query, understand what it's doing but when I need to read one I need BOL the help me out. Taking the 070-457 Transition Your MCTS on SQL Server&hellip;"
 url: /index.php/datamgmt/dbprogramming/book-review-microsoft-sql-server-1/
 views:

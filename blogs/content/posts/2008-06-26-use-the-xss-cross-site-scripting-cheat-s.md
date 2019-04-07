@@ -3,6 +3,7 @@ title: Use The XSS (Cross Site Scripting) Cheat Sheet To Check Your Site For Cro
 author: SQLDenis
 type: post
 date: 2008-06-26T11:44:48+00:00
+ID: 76
 url: /index.php/webdev/webdesigngraphicsstyling/use-the-xss-cross-site-scripting-cheat-s/
 views:
   - 33485

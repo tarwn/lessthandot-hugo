@@ -3,6 +3,7 @@ title: There’s Always Something
 author: David Forck (thirster42)
 type: post
 date: 2010-08-24T12:50:16+00:00
+ID: 884
 url: /index.php/webdev/serverprogramming/there-s-always-something/
 views:
   - 2959
@@ -16,7 +17,8 @@ It&#8217;s always amazing to go back and look at code that you wrote just over a
 
 I recently got a request to make a rehash of a report I did a year ago, except that the drill down order is different. Cool. Copy, pase, drag, change a couple things, done. I deployed the new report to the dev server and off it goes. I then decided to go ahead and look at the stored procedure running the report to see exactly what it was doing, since I haven&#8217;t looked at it in about a year. Wow, I was a bit surprised when I opened it. Here&#8217;s what I found.
 
-<pre>ALTER PROCEDURE [rp].[CompanyMoodList] 
+sql
+ALTER PROCEDURE [rp].[CompanyMoodList] 
 AS
 BEGIN
 	SET NOCOUNT ON;
@@ -84,18 +86,19 @@ from dbo.tblENTERPRISE_ISSUES a
 where prProjectStatus='Active'
 
 select * from @projects
-where Light<&gt;'N'
+where Light<>'N'
 order by CompanyName, BusinessUnit, TaskName
 
 
 
 
 
-END</pre>
-
+END
+```
 I decided to clean that up somewhat, since i definately don&#8217;t need those temp tables. Here&#8217;s what I ended up with (note that this is just in a query window on the prod server, I&#8217;m not actually modifying live code, that&#8217;s a No-No!)
 
-<pre>select 
+sql
+select 
 	a.WASSN_ID, 
 	c.WPROJ_ID, 
 	replace(c.TASK_NAME,'.Published','') as TaskName, 
@@ -123,8 +126,8 @@ from dbo.tblENTERPRISE_ISSUES a
 	inner join appdb.DataWarehouse.cube.PWAProjects d
 		on c.WPROJ_ID=d.prWPROJ_ID
 where prProjectStatus='Active'
-	and a.Priority&gt;=1</pre>
-
+	and a.Priority>=1
+```
 So I hit execute, and it works fine, except that it&#8217;s now taking 6 seconds to execute, instead of 1 second like the previous version. I thought to myself &#8220;WTF?! This is better! This should be even faster!&#8221; I looked at the execution plan and see some clustered index scans that are pretty high, so I make a couple of indexes. No dice. 
 
 Now I&#8217;m thinking that there must be something in the new query that I&#8217;m over looking. It then struck me that the main thing I changed was the subquery for the max date. I then take the coalesce statement out of the subquery because there&#8217;s no nulls in that column (I had just carried it over from the last one). I then rerun the query and voila! It ran in about 1 second with the exact same dataset as before.

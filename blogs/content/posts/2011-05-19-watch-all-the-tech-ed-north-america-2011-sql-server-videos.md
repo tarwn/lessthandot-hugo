@@ -3,6 +3,7 @@ title: Watch all the Tech·Ed North America 2011 SQL Server videos
 author: SQLDenis
 type: post
 date: 2011-05-19T16:42:00+00:00
+ID: 1182
 excerpt: |
   If you missed Tech·Ed North America 2011, I have compiled a list of all the SQL Server videos for you.
   

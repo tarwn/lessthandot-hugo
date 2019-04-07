@@ -3,6 +3,7 @@ title: Review Of Beginning Spatial With SQL Server 2008
 author: SQLDenis
 type: post
 date: 2009-06-15T17:54:16+00:00
+ID: 472
 url: /index.php/datamgmt/datadesign/review-of-beginning-spatial-with-sql-ser-2008/
 views:
   - 5690

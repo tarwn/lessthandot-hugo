@@ -3,6 +3,7 @@ title: SQL Server Fabric and DATAllegro demo at PASS, SQL Data Services Public C
 author: SQLDenis
 type: post
 date: 2008-11-19T15:44:56+00:00
+ID: 210
 url: /index.php/datamgmt/datadesign/sql-server-fabric-and-datallegro-demo-at/
 views:
   - 6404

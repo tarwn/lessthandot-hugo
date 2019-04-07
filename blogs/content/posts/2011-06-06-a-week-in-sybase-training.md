@@ -3,6 +3,7 @@ title: A week in Sybase Training, what did I learn, day 1
 author: SQLDenis
 type: post
 date: 2011-06-06T18:12:00+00:00
+ID: 1207
 excerpt: |
   This whole week I am in Sybase training in NYC. I will write down short posts of mostly differences between Sybase and SQL Server each day and also what I have learned.
   

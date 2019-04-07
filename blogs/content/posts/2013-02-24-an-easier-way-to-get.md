@@ -3,6 +3,7 @@ title: 'An easier way to get SQL Server startup parameters: the sys.dm_server_re
 author: SQLDenis
 type: post
 date: 2013-02-24T22:51:00+00:00
+ID: 2011
 excerpt: |
   When you install SQL Server, Setup will write a set of default startup options to the Windows registry. You can use the startup options to specify an alternate master database file, master database log file, or error log file.
   
@@ -94,9 +95,11 @@ Did you know that you can do this in an easier way on SQL Server 2012? No, I am 
 
 Now if I want to see the parameters, all I need is
 
-<pre>SELECT registry_key, value_name, value_data
+sql
+SELECT registry_key, value_name, value_data
 FROM sys.dm_server_registry
-WHERE registry_key LIKE N'%MSSQLServerParameters';</pre>
+WHERE registry_key LIKE N'%MSSQLServerParameters';
+```
 
 Output will be something like the following, I made value\_data shorter and left out registry\_key from the output so that it would fit on one line
 
@@ -107,9 +110,11 @@ SQLArg2	        -lC:MSSQLDATAmastlog.ldf</pre>
 
 There is more that you can do, let&#8217;s see I want to know some stuff about SQL agent
 
-<pre>SELECT  value_name, value_data
+sql
+SELECT  value_name, value_data
 FROM sys.dm_server_registry
-WHERE registry_key LIKE N'%SQLServerAgent%';</pre>
+WHERE registry_key LIKE N'%SQLServerAgent%';
+```
 
 output
 
@@ -125,7 +130,9 @@ WorkingDirectory	C:MSSQLJOBS</pre>
 
 To see all that this dmv returns, execute the following
 
-<pre>SELECT registry_key, value_name, value_data
-FROM sys.dm_server_registry</pre>
+sql
+SELECT registry_key, value_name, value_data
+FROM sys.dm_server_registry
+```
 
 It returns 99 rows on my laptop, most of the stuff is TCP/IP related.

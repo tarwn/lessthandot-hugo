@@ -3,6 +3,7 @@ title: 'SQL Advent 2011 Day 23: OBJECT_DEFINITION'
 author: SQLDenis
 type: post
 date: 2011-12-23T18:24:00+00:00
+ID: 1460
 excerpt: 'Back in the day if you wanted to see the body of a stored procedure you had to use the syscomments table and then concatenate rows because syscomments  only stored 4000 characters per row. You could also have used sp_helptext. SQL Server introduced the OBJECT_DEFINITION function.'
 url: /index.php/datamgmt/datadesign/object_definition-sql-advent-2011-day/
 views:
@@ -52,24 +53,30 @@ So let&#8217;s take a quick look
 
 Here is how you would use sp_helptext 
 
-<pre>EXEC sp_helptext 'uspGetBillOfMaterials'</pre>
+sql
+EXEC sp_helptext 'uspGetBillOfMaterials'
+```
 
 That returns the definition of the stored procedure
 
 Here is how to use the OBJECT_DEFINITION function
 
-<pre>SELECT OBJECT_DEFINITION(OBJECT_ID('uspGetBillOfMaterials'))</pre>
+sql
+SELECT OBJECT_DEFINITION(OBJECT_ID('uspGetBillOfMaterials'))
+```
 
 That also returns the definition of the stored procedure
 
 So you say&#8230;so what, what is the big deal, seems the same to me? I say, hold on, let me show you this&#8230;&#8230;what if I wanted to have the definition of every trigger, stored procedure or function that references the Production.BillOfMaterials table. Here is how simple that is
 
-<pre>SELECT OBJECT_DEFINITION(OBJECT_ID),OBJECT_NAME(OBJECT_ID) AS  NameOfObject
+sql
+SELECT OBJECT_DEFINITION(OBJECT_ID),OBJECT_NAME(OBJECT_ID) AS  NameOfObject
 FROM sys.all_sql_modules a
 JOIN sys.sysobjects  s ON a.object_id = s.id
 AND xtype IN('TR','P','FN','IF','TF')
 WHERE OBJECTPROPERTYEX(OBJECT_ID,'IsMSShipped') =0
-AND REPLACE(REPLACE(OBJECT_DEFINITION(OBJECT_ID),']',''),'[','') like '%Production.BillOfMaterials%'</pre>
+AND REPLACE(REPLACE(OBJECT_DEFINITION(OBJECT_ID),']',''),'[','') like '%Production.BillOfMaterials%'
+```
 
 Notice that I am using a replace statement to filter out brackets
 
@@ -77,28 +84,33 @@ But there is an easier way, you don&#8217;t even need the function in this case,
 
 Here is how you do it
 
-<pre>SELECT definition,OBJECT_NAME(OBJECT_ID) AS  NameOfObject
+sql
+SELECT definition,OBJECT_NAME(OBJECT_ID) AS  NameOfObject
 FROM sys.all_sql_modules a
 JOIN sysobjects  s ON a.object_id = s.id
 AND xtype IN('TR','P','FN','IF','TF')
 WHERE OBJECTPROPERTYEX(OBJECT_ID,'IsMSShipped') =0
-AND REPLACE(REPLACE(definition,']',''),'[','') like '%Production.BillOfMaterials%'</pre>
+AND REPLACE(REPLACE(definition,']',''),'[','') like '%Production.BillOfMaterials%'
+```
 
 Create this simple proc
 
-<pre>CREATE PROCEDURE prTest 
+sql
+CREATE PROCEDURE prTest 
 AS
 SELECT * FROM Production.BillOfMaterials
-GO</pre>
-
+GO
+```
 Run this query again
 
-<pre>SELECT definition,OBJECT_NAME(OBJECT_ID) AS  NameOfObject
+sql
+SELECT definition,OBJECT_NAME(OBJECT_ID) AS  NameOfObject
 FROM sys.all_sql_modules a
 JOIN sysobjects  s ON a.object_id = s.id
 AND xtype IN('TR','P','FN','IF','TF')
 WHERE OBJECTPROPERTYEX(OBJECT_ID,'IsMSShipped') =0
-AND REPLACE(REPLACE(definition,']',''),'[','') like '%Production.BillOfMaterials%'</pre>
+AND REPLACE(REPLACE(definition,']',''),'[','') like '%Production.BillOfMaterials%'
+```
 
 You should see one row more now compared to before.
 

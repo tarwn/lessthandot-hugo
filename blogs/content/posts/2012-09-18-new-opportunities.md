@@ -3,6 +3,7 @@ title: New Opportunities
 author: Kevin Conan
 type: post
 date: 2012-09-18T12:44:00+00:00
+ID: 1727
 excerpt: |
   Over the last year many well known SQL DBAs have either changed companies or changed roles within their companies.  Now it is my turn to announce my change (not that I'm well known or even close the same league as the others!).
   This may seem a bit odd&hellip;

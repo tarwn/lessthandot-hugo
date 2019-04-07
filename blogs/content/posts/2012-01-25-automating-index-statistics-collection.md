@@ -3,6 +3,7 @@ title: Automating Index Statistics Collection
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-01-25T11:26:00+00:00
+ID: 1506
 excerpt: 'Undeniably, the largest impact a database administrator can have on a database server’s performance is with indexing.  One index can mean the difference between a 30 minute overall time of execution or a few seconds overall time of execution.  At the sa&hellip;'
 url: /index.php/datamgmt/dbprogramming/automating-index-statistics-collection/
 views:
@@ -57,7 +58,8 @@ ONPNT
 
 In order to utilize this file and the list, the first task in the package is a script task.  This script task opens the file, reads the contents and populates a data table with them.  This data table is then set to a variable that is an object type.  The code in the demonstration to do this is shown below.
 
-<pre>try
+```csharp
+try
 {
     string Serverlisting;
     DataTable dt = new DataTable();
@@ -83,7 +85,8 @@ catch (Exception ex)
 }
             
 Dts.TaskResult = (int)ScriptResults.Success;
-}</pre>
+}
+```
 
 To complete the shredding of the variable process, a Foreach Loop Container is used with an enumerator, Foreach ADO Enumerator.  This is the same method of parsing record sets used in past years with scripting languages.   Once the Foreach ADO Enumerator is set, the ADO object source variable option is made available.  Select the variable to be read in this drop down list.  The last major configuration is to set one or more variables that will be populated by the enumeration of each row in the object variable.  In the case of the container that will read the server list, only one column per row is available.  So only one variable mapping is required.
 
@@ -109,7 +112,8 @@ Remember to ensure the length and data types of these columns are accurate.  Le
 
 After the output columns are defined, the next step is to add the variables as write available variables to the script component and then add the code needed to move the variables to the output columns or output buffer.
 
-<pre>IDTSVariables100 var = null;
+```csharp
+IDTSVariables100 var = null;
 
 VariableDispenser.LockForWrite("User::buffer_mb");
 VariableDispenser.LockForWrite("User::duplicate_indexes");
@@ -161,7 +165,8 @@ Output0Buffer.usertotalpct = (String)var["User::user_total_pct"].Value;
 Output0Buffer.includedcolumns = (String)var["User::included_columns"].Value;
 
 var.Unlock();
-Output0Buffer.SetEndOfRowset();</pre>
+Output0Buffer.SetEndOfRowset();
+```
 
 The code above locks all the variables and then assigns them accordingly to the output buffer columns.  One completed, the variables are unlocked and the row is sent through.
 

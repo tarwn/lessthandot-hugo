@@ -3,6 +3,7 @@ title: SQL Saturday Speakers – Thoughts when scheduling
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-04-24T13:10:00+00:00
+ID: 1606
 excerpt: 'A conversation came up today on Twitter regarding speaker evaluations and if they should simply be handed over to the speakers or analyzed by the organizers of the event.  I was one of the motivators for SQL Saturday in Madison to hand them over to the&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-speakers-thoughts-when/
 views:

@@ -3,6 +3,7 @@ title: 'Book Review: Troubleshooting SQL Server – A Guide for the Accidental D
 author: Jes Borland
 type: post
 date: 2012-08-01T11:58:00+00:00
+ID: 1685
 excerpt: My latest SQL Server read was Troubleshooting SQL Server – A Guide for the Accidental DBA, by Jonathan Kehayias and Ted Krueger.
 url: /index.php/datamgmt/dbadmin/book-review-troubleshooting-sql-server/
 views:

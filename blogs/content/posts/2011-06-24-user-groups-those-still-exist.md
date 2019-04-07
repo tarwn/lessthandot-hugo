@@ -3,6 +3,7 @@ title: User Groups? Those Still Exist? They Do, and You Should Be Going To One
 author: Jes Borland
 type: post
 date: 2011-06-24T12:15:00+00:00
+ID: 1229
 excerpt: "I've been attending various user groups for years. You should be attending one too. Why?"
 url: /index.php/datamgmt/dbprogramming/user-groups-those-still-exist/
 views:

@@ -3,6 +3,7 @@ title: Writing Perl Tests with Test::More
 author: Rob Earl
 type: post
 date: 2011-01-15T14:29:00+00:00
+ID: 1002
 excerpt: 'Writing tests for code is just as important as writing the code itself. Time spent writing tests is less time spent tracking down and fixing bugs, making it a great investment. Despite knowing this it can sometimes be hard to force yourself to stop codi&hellip;'
 url: /index.php/webdev/serverprogramming/writing-perl-tests-with-test/
 views:
@@ -19,7 +20,8 @@ tags:
 ---
 Writing tests for code is just as important as writing the code itself. Time spent writing tests is less time spent tracking down and fixing bugs, making it a great investment. Despite knowing this it can sometimes be hard to force yourself to stop coding and write tests. Fortunately, Perl has some modules to make it pretty simple. Here&#8217;s the module we&#8217;re going to be testing:
 
-<pre>#!/usr/bin/perl
+```perl
+#!/usr/bin/perl
  
 package MyMaths;
 use strict;
@@ -45,23 +47,24 @@ sub add
         return $total;
 }
  
-1;</pre>
-
+1;
+```
 As you can see, we have a simple class with one method, add, which adds together all the arguments passed to it. We now need to define a test file for this module, called mymaths.t:
 
-<pre>#!/usr/bin/perl
+```perl
+#!/usr/bin/perl
  
-use Test::More tests=&gt;6;
+use Test::More tests=>6;
 use MyMaths;
  
 $mymaths = new MyMaths;
-is( $mymaths-&gt;add(1,2,3), 6, "1 + 2 + 3 = 6");
-is( $mymaths-&gt;add(6,2), 8,"6 + 2 = 8");
-is( $mymaths-&gt;add(1,2,3,4), 10, "1 + 2 + 3 + 4 = 10");
-is( $mymaths-&gt;add(1,2), 3, "1 + 2 = 3");
-is( $mymaths-&gt;add(2), 2, "2 = 2");
-is( $mymaths-&gt;add(2,-1), 1, "2 + -1 = 1");</pre>
-
+is( $mymaths->add(1,2,3), 6, "1 + 2 + 3 = 6");
+is( $mymaths->add(6,2), 8,"6 + 2 = 8");
+is( $mymaths->add(1,2,3,4), 10, "1 + 2 + 3 + 4 = 10");
+is( $mymaths->add(1,2), 3, "1 + 2 = 3");
+is( $mymaths->add(2), 2, "2 = 2");
+is( $mymaths->add(2,-1), 1, "2 + -1 = 1");
+```
 This test file uses the is() method of the builtin Test::More module. This method takes 3 arguments: the test, the expected result and a description. If a test fails, is() will give some feedback on the test.
 
 **edit:** To run the tests use the \`prove\` utility which is part of the Test::Harness package:
@@ -74,17 +77,20 @@ Run all tests in the current directory with:
 
 <del cite="/index.php/WebDev/ServerProgramming/writing-perl-tests-with-test#c7568">To run the tests we use another builtin module, Test::Harness. Create tests.pl:</del>
 
-<pre>#!/usr/bin/perl
+```perl
+#!/usr/bin/perl
  
 use Test::Harness qw(&runtests);
  
-@tests = @ARGV ? @ARGV : <*.t&gt;;
+@tests = @ARGV ? @ARGV : <*.t>;
  
-runtests @tests;</pre>
+runtests @tests;
 
+```
 <del>This script can either be run with a list of test files as arguments, or with no arguments to run all test files. Running the script results in:</del>
 
-<pre>./mymaths.t .. 
+```
+./mymaths.t .. 
 1..6
 ok 1 - 1 + 2 + 3 = 6
 ok 2 - 6 + 2 = 8
@@ -95,11 +101,12 @@ ok 6 - 2 + -1 = 1
 ok
 All tests successful.
 Files=1, Tests=6,  0 wallclock secs ( 0.01 usr  0.02 sys +  0.02 cusr  0.01 csys =  0.06 CPU)
-Result: PASS</pre>
-
+Result: PASS
+```
 Everything went fine, as expected. Now go back to the original class definition and make a typo on line 22, so it reads = instead of += and rerun the tests:
 
-<pre>./mymaths.t .. 
+```
+./mymaths.t .. 
 1..6
 not ok 1 - 1 + 2 + 3 = 6
 not ok 2 - 6 + 2 = 8
@@ -142,8 +149,9 @@ Test Summary Report
   Failed tests:  1-4, 6
   Non-zero exit status: 5
 Files=1, Tests=6,  0 wallclock secs ( 0.03 usr  0.00 sys +  0.03 cusr  0.00 csys =  0.06 CPU)
-Result: FAIL</pre>
+Result: FAIL
 
+```
 Most of the tests failed and gave good feedback to help find the problem.
 
 ## Summary

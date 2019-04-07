@@ -3,6 +3,7 @@ title: SQL Azure Log Space Errors 40552
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-04-15T17:02:00+00:00
+ID: 2068
 excerpt: |
   If you are dealing with SQL Azure and a large data volume, you’re bound to run into this error.
   Msg 40552, Level 20, State 1, Line 1   The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a singl&hellip;
@@ -35,14 +36,16 @@ In this case, the ONLINE operation with a CREATE INDEX statement provides the fu
 
 To create the index with ONLINE, you simply specify the ON value in the options.
 
-<pre>CREATE NONCLUSTERED INDEX [IDX_SalesOrderID_COVER_ASC] ON [dbo].[IndexPageCount]
+sql
+CREATE NONCLUSTERED INDEX [IDX_SalesOrderID_COVER_ASC] ON [dbo].[IndexPageCount]
 (
 	[SalesOrderID] ASC
 )
 INCLUDE ([DueDate],
 	[ShipDate],
 	[SubTotal]) WITH ONLINE = ON)  
-GO</pre>
+GO
+```
 
 This “should” allow the index creation to complete.  It will take longer for the creation but, the importance of having indexing is without a doubt, not something you can give up.  Unless the data is simply a DR strategy or some sort of backup.
 

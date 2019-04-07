@@ -3,6 +3,7 @@ title: Wisconsin SQL Server User Group
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-10-11T10:11:44+00:00
+ID: 921
 excerpt: 'Tomorrow night I will be talking about Execution Plans for the Wisconsin SQL Server User Group.  This is a new session for me and I think the group and I will have a great time discussing how important it is to dig deep into plans.  Execution plans are without a doubt a point in the tuning process in which we can either make a database server live or land face first on the floor.'
 url: /index.php/datamgmt/datadesign/wissug-execution-plans/
 views:

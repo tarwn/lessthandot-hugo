@@ -3,6 +3,7 @@ title: SSRS Properties – Interactive Sort
 author: Jes Borland
 type: post
 date: 2013-02-07T12:39:00+00:00
+ID: 1974
 excerpt: The purpose of this property is to allow you to add interactive sorting capabilities to a textbox in a table or matrix.
 url: /index.php/datamgmt/ssrs/ssrs-properties-interactive-sort/
 views:

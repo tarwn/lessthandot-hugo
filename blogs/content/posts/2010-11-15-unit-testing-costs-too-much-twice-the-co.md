@@ -3,6 +3,7 @@ title: Unit Testing Costs Too Much – Twice The Code = Value?
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-11-15T15:56:09+00:00
+ID: 948
 excerpt: "Last week I had the pleasure of presenting at a .Net Code Camp on the topic of Unit Testing. A key theme of the session was barriers to adoption and the values we can achieve using this tool.The main barrier to my adoption of Unit Testing was the idea that writing twice as much code would increase the value of my work. Twice as much code, as was pointed out in a response to my post two week's ago, sounds like higher maintenance costs, higher initial development costs, and a greater opportunity for bugs."
 url: /index.php/desktopdev/generalpurposelanguages/unit-testing-costs-too-much-twice-the-co/
 views:
@@ -53,7 +54,7 @@ All of these costs have well-defined values in manufacturing environments as wel
 Each step in our sample development process above increases the base cost of producing a working feature. The further a bug makes it without being detected the greater costs it has accrued and the more cost it will take to correct it.
 
 <div style="text-align: center; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/unittesting/UnitTestingGraphs.png" alt="Effort and cost of bugs increase dramatically as time passes" /><br /> Effort and cost from bugs increase dramatically as time passes
+  <img src="http://tiernok.com/LTDBlog/unittesting/UnitTestingGraphs.png" alt="Effort and cost of bugs increase dramatically as time passes" /><br /> Effort and cost from bugs increase dramatically as time passes
 </div>
 
 Costs:

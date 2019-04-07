@@ -3,6 +3,7 @@ title: SQL Server sprawl, heard it twice in one day
 author: SQLDenis
 type: post
 date: 2009-08-05T15:47:40+00:00
+ID: 531
 excerpt: 'Last week on Wednesday I attended a Quest seminar which was hosted by a couple of Quest people, one of them being Brent Ozar. On my way to New York City I was reading a couple of chapters of SQL Server 2008 Administration In Action written by Rod Colled&hellip;'
 url: /index.php/datamgmt/dbprogramming/sql-server-sprawl-heard-it-twice-in-one/
 views:
@@ -36,5 +37,5 @@ If you would like to read a sample chapter of SQL Server 2008 Administration In 
  [2]: http://www.amazon.com/gp/product/193398872X?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=193398872X
  [3]: /index.php/All/?disp=authdir&author=68
  [4]: /index.php/DataMgmt/DBAdmin/scan-network-for-sql-server-instances
- [5]: http://forum.lessthandot.com/viewforum.php?f=17
- [6]: http://forum.lessthandot.com/viewforum.php?f=22
+ [5]: http://forum.ltd.local/viewforum.php?f=17
+ [6]: http://forum.ltd.local/viewforum.php?f=22

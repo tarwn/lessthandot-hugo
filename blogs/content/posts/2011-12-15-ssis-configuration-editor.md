@@ -3,6 +3,7 @@ title: SQL Server Integration Services tools to have – Configuration File Edit
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-15T11:33:00+00:00
+ID: 1435
 excerpt: |
   In a previous post, SQL
   Server Integration Services tools to have – Expression Editor &amp; Tester,

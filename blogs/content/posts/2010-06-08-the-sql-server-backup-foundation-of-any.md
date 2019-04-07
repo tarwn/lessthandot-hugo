@@ -3,6 +3,7 @@ title: The SQL Server backup – foundation of any Disaster / Recovery
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-08T08:39:36+00:00
+ID: 811
 excerpt: 'Welcome to our second class of HA and DR week of SQL University.  Today we are going to focus on the concept, “Backups are for sissies!”  OK, we’re really going to look at backup and restore for Disaster / Recovery (DR) and how being a sissy and always backing up our databases and testing out restores is a proven strategy for DR.   When all else fails and the walls are falling down on the database servers, backups will be your life preserver.  Backups are the foundation for Disaster and Recovery (DR).  Backups can also save you when high Availability (HA) completely fails you.   Let’s get started!'
 url: /index.php/datamgmt/dbprogramming/the-sql-server-backup-foundation-of-any/
 views:
@@ -82,23 +83,29 @@ The [BACKUP DATABASE][4] statement can be daunting at first glance so can the SS
 
 Example: Create a database DBA and we will run a full backup on it
 
-<pre>CREATE DATABASE TEST_DR_BACKUP 
+sql
+CREATE DATABASE TEST_DR_BACKUP 
 GO
 ALTER DATABASE TEST_DR_BACKUP SET RECOVERY FULL
-GO</pre>
+GO
+```
 
 Now that we have a database to backup, let&#8217;s execute a typical full backup statement
 
-<pre>BACKUP DATABASE TEST_DR_BACKUP
+sql
+BACKUP DATABASE TEST_DR_BACKUP
 TO DISK = N'C:TEST_DR_BACKUP.BAK'
-GO</pre>
+GO
+```
 
 This gives us a backup file in the C drive of TEST\_DR\_BACKUP.BAK. The backup contains everything we need to recover the database as is. If you notice, this backup statement was pretty quick. If we add CHECKSUM and the COPY_ONLY option to this statement, the execution time will be slightly longer.
 
-<pre>BACKUP DATABASE TEST_DR_BACKUP
+sql
+BACKUP DATABASE TEST_DR_BACKUP
 TO DISK = N'C:TEST_DR_BACKUP.BAK'
 WITH CHECKSUM,COPY_ONLY
-GO</pre>
+GO
+```
 
 Looking into the statement, we have several options to make our backups, &#8220;smart&#8221;. One method that is extremely useful in DR is the COPY\_ONLY option. By using the COPY\_ONLY option, we can create full backups of a database without affecting the LSN order in other backup strategies. This is a powerful option given the need to get backups offsite while we are using backup strategies locally for other things. 
 
@@ -116,9 +123,11 @@ Example: We have a Full backup located at C:sql\_full\_backupdbadba\_full\_20100
 
 We could test this backup set by issuing the follow RESTORE VERIFYONLY statement
 
-<pre>RESTORE VERIFYONLY
+sql
+RESTORE VERIFYONLY
 FROM DISK = N'C:sql_full_backupdbadba_full_20100606.bak'
-GO </pre>
+GO 
+```
 
 Resulting in the following information if errors are not found
 
@@ -136,10 +145,12 @@ Automating these restore tests can help the process greatly. SQL Server Integrat
 
 Finding backups could be accomplished dynamically with expressions and variables. For example, the backup file naming convention could us YYYYMMDD designating the day the backup was run. A variable expression is used to find the specific file we want as
 
-<pre>"C:\sql_full_backup\dba\dba_full_" +
+```VB
+"C:\sql_full_backup\dba\dba_full_" +
 (DT_STR, 4, 1252)DATEPART("yyyy", @[System::ContainerStartTime]) + 
 RIGHT("0" + (DT_STR, 2, 1252)DATEPART("mm", @[System::ContainerStartTime]), 2) + 
-RIGHT("0" + (DT_STR, 2, 1252)DATEPART("dd", @[System::ContainerStartTime]), 2) + ".bak"</pre>
+RIGHT("0" + (DT_STR, 2, 1252)DATEPART("dd", @[System::ContainerStartTime]), 2) + ".bak"
+```
 
 This can then be added to a File System Task for Copy as the source (as well as used in destinations). 
 

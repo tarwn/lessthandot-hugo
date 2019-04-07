@@ -3,6 +3,7 @@ title: 'What’s the deal with Excel & SSIS?'
 author: Koen Verbeeck
 type: post
 date: 2012-11-27T10:45:00+00:00
+ID: 1803
 excerpt: 'When it comes to importing data from an Excel sheet with SSIS, Excel has quite a reputation. And not a terribly good one. Well deserved, to be honest, because numerous issues can rise when dealing with this piece of software. This blog post will deal wi&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/what-s-the-deal-with/
 views:

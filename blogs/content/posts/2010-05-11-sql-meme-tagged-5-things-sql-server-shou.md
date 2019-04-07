@@ -3,6 +3,7 @@ title: 'SQL Meme: Tagged: 5 things SQL Server should drop'
 author: SQLDenis
 type: post
 date: 2010-05-11T13:42:56+00:00
+ID: 787
 url: /index.php/datamgmt/datadesign/sql-meme-tagged-5-things-sql-server-shou/
 views:
   - 8781
@@ -22,29 +23,37 @@ I have been tagged by [Aaron Bertrand][1] in the latest SQL meme: [Tagged: 5 thi
 
 The isnumeric function is something that can bring you into trouble without you even knowing it, for example run these queries
 
-<pre>select	ISNUMERIC(CHAR(9)),
+sql
+select	ISNUMERIC(CHAR(9)),
 		ISNUMERIC('1D2'),
 		ISNUMERIC('.'),
 		ISNUMERIC('-'),
-		ISNUMERIC('+')</pre>
+		ISNUMERIC('+')
+```
 
 Really a tab (Char(9) is numeric? I would be much better if SQL Server had IsInteger, IsFloat,IsTinyInteger functions or perhaps the ability to pass in the the type to isnumeric
   
 Something like this
 
-<pre>SELECT ISNUMERIC('123', 'TinyInt')</pre>
+sql
+SELECT ISNUMERIC('123', 'TinyInt')
+```
 
 ### Restrictions on Indexed Views
 
 Lookup indexed views and you will see more restrictions than you can fathom, you can&#8217;t memorize these things either, there are too many. First you need a bunch of setting
 
-<pre>SET NUMERIC_ROUNDABORT OFF;
+sql
+SET NUMERIC_ROUNDABORT OFF;
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,
-    QUOTED_IDENTIFIER, ANSI_NULLS ON;</pre>
+    QUOTED_IDENTIFIER, ANSI_NULLS ON;
+```
 
 Why not replace that with
 
-<pre>SET CREATE_INDEXED_VIEW_SETTINGS ON</pre>
+sql
+SET CREATE_INDEXED_VIEW_SETTINGS ON
+```
 
 This would be similar to ANSI_DEFAULTS, that sets 7 other settings to ON or OFF
 
@@ -56,20 +65,23 @@ Take away the ability to create an ordered view since it is ignored anyway.
   
 So for example if you create this view, which was working nicely in SQL Server 2000
 
-<pre>CREATE VIEW vTestSort
+sql
+CREATE VIEW vTestSort
 AS
 SELECT TOP 100 PERCENT id FROM TestSort
-ORDER BY id</pre>
+ORDER BY id
+```
 
 This doesn&#8217;t work in 2005 or 2008
 
 OF course you can do this and it will &#8216;work&#8217; and I wrote about it here: [Create a sorted view in SQL Server 2005 and SQL Server 2008][3]
 
-<pre>CREATE VIEW vTestSort2
+sql
+CREATE VIEW vTestSort2
 AS
 SELECT TOP 99.99 PERCENT  id FROM TestSort
-ORDER BY id</pre>
-
+ORDER BY id
+```
 I say get rid of that, if people want the view to be in a specific order then specify ORDER BY&#8230;how lazy can you be?
 
 ### Unique constraints with one NULL value
@@ -78,8 +90,10 @@ This is a great interview question and that is the only usefulness of this const
   
 Of course you can now use a Filtered Index in 2008 to accomplish this
 
-<pre>create unique nonclustered index IX_LookMaMultipleNullValues on dbo.SomeTable(SomeColumn)
-where SomeColumn is not null;</pre>
+sql
+create unique nonclustered index IX_LookMaMultipleNullValues on dbo.SomeTable(SomeColumn)
+where SomeColumn is not null;
+```
 
 But not everyone is on 2008
 
@@ -97,13 +111,15 @@ Banish GETDATE() and use CURRENT\_TIMESTAMP instead, the only reason people (me 
 
 **User functions**
 
-<pre>SELECT	SYSTEM_USER,
+sql
+SELECT	SYSTEM_USER,
 		SUSER_SNAME(), 
 		USER,
 		USER_NAME(), 
 		CURRENT_USER, 
 		SESSION_USER
-		</pre>
+		
+```
 
 When I tell you to capture a user which of these six will you use?
 

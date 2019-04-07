@@ -3,6 +3,7 @@ title: Presenting “What is Report Builder 3.0?” for OKPASS
 author: Jes Borland
 type: post
 date: 2012-08-22T17:29:00+00:00
+ID: 1699
 excerpt: On Thursday, September 20, 2012, I will be presenting (remotely!) to OKPASS, based in Okanagan, BC, Canada.
 url: /index.php/itprofessionals/professionaldevelopment/presenting-what-is-report-builder/
 views:

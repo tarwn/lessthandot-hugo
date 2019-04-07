@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 3 – Server Configuration – Model Database
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-28T10:18:00+00:00
+ID: 1133
 excerpt: 'The Model database is used as a template for all user databases that are created in SQL Server.  This means the options, tables, routines and many other objects and settings that are in Model, will be in new user databases.  Knowing that Model is utiliz&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-6/
 views:
@@ -21,17 +22,26 @@ The Model database is used as a template for all user databases that are created
 
 A quick view into the value of altering Model to manage new user database creations can be found in pre-setting the recovery model.  On development and some other SQL Server installations that may not require a full recovery model, databases are often changed after they are created to be set in the simple recovery model.  Instead of adding that extra step to new databases or preventing the step from being forgotten all together, change Model to use a simple recovery model.
 
-<pre>ALTER DATABASE MODEL SET RECOVERY SIMPLE</pre>
+sql
+ALTER DATABASE MODEL SET RECOVERY SIMPLE
+```
+
 
 Now create a new database with all defaults set
 
-<pre>CREATE DATABASE DeleteThisTest</pre>
+sql
+CREATE DATABASE DeleteThisTest
+```
+
 
  
 
 To check the recovery model of the new database, DeleteThisTest, run the following query on the sys.databases view.
 
-<pre>select recovery_model_desc from sys.databases where name = 'DeleteThisTest'</pre>
+sql
+select recovery_model_desc from sys.databases where name = 'DeleteThisTest'
+```
+
 
  
 

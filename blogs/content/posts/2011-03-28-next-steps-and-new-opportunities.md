@@ -3,6 +3,7 @@ title: Next Steps (and new Opportunities)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-03-28T10:50:00+00:00
+ID: 1086
 excerpt: "In a week and a half I will be the newest Senior Developer at a local manufacturing company. In a career path where most developers are seeking software development companies, it's probably not surprising that I'm one of the ones going the other direction."
 url: /index.php/itprofessionals/ethicsit/next-steps-and-new-opportunities/
 views:
@@ -27,7 +28,7 @@ It&#8217;s probably more accurate to say I have made a career out of improving p
 
 I like to think I am above average as a developer, but I had been working as a generalist for so long that I felt I needed to sharpen my technical development skills and seek new opportunities to expand architecture and toolset experience. Taking a role as a pure developer in a software development company seemed to be the right move to achieve that goal.
 
-<div style="background-image: url('http://forum.lessthandot.com/styles/microdotprolite/theme/images/quote.gif'); background-repeat: no-repeat; font-size: 12pt; color: #333333; background-position: 10px 10px; padding: 10px 10px 10px 40px; ">
+<div style="background-image: url('http://forum.ltd.local/styles/microdotprolite/theme/images/quote.gif'); background-repeat: no-repeat; font-size: 12pt; color: #333333; background-position: 10px 10px; padding: 10px 10px 10px 40px; ">
   You don&#8217;t want to become an IT generalist. Most companies are look for specialists and after being a generalist you won&#8217;t be skilled enough to work as a specialist. 
   
   <div style="text-align: right; padding: 6px 30px 0px 0px;">

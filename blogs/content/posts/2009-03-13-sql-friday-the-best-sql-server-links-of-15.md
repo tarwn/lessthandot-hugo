@@ -3,6 +3,7 @@ title: SQL Friday, The Best SQL Server Links Of The Past Week Episode 14
 author: SQLDenis
 type: post
 date: 2009-03-13T17:59:08+00:00
+ID: 348
 url: /index.php/datamgmt/datadesign/sql-friday-the-best-sql-server-links-of-15/
 views:
   - 6459
@@ -59,5 +60,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [5]: http://sqlblog.com/blogs/tibor_karaszi/archive/2009/03/09/do-you-have-instant-file-initialization.aspx
  [6]: http://sqlblog.com/blogs/arnie_rowland/archive/2009/03/09/is-it-time-for-sql-server-to-have-isolated-transactions.aspx
  [7]: http://sqlblog.com/blogs/louis_davidson/archive/2009/03/13/granting-rights-to-all-objects-in-a-database.aspx
- [8]: http://forum.lessthandot.com/viewforum.php?f=17
- [9]: http://forum.lessthandot.com/viewforum.php?f=22
+ [8]: http://forum.ltd.local/viewforum.php?f=17
+ [9]: http://forum.ltd.local/viewforum.php?f=22

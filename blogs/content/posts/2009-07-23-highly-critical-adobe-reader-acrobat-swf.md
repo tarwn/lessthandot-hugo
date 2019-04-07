@@ -3,6 +3,7 @@ title: Highly Critical Adobe Reader/Acrobat SWF Content Arbitrary Code Execution
 author: SQLDenis
 type: post
 date: 2009-07-23T15:09:33+00:00
+ID: 521
 url: /index.php/itprofessionals/ethicsit/highly-critical-adobe-reader-acrobat-swf/
 views:
   - 4587

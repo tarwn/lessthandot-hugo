@@ -3,6 +3,7 @@ title: SQL Friday, The Best SQL Server Links Of The Past Week Episode 3
 author: SQLDenis
 type: post
 date: 2008-12-19T15:09:28+00:00
+ID: 257
 url: /index.php/datamgmt/datadesign/sql-friday-the-best-sql-server-links-of-3/
 views:
   - 6162
@@ -78,5 +79,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [10]: http://www.sqlskills.com/BLOGS/BOBB/post/Spatial-Index-Diagnostic-Procs-How-to-specify-query-sample.aspx
  [11]: http://www.sqlskills.com/BLOGS/BOBB/post/Spatial-Index-Diagnostic-Procs-The-Rest-of-the-Story.aspx
  [12]: http://blogs.msdn.com/psssql/archive/2008/12/17/sql-server-2005-and-2008-trace-flag-1118-t1118-usage.aspx
- [13]: http://forum.lessthandot.com/viewforum.php?f=17
- [14]: http://forum.lessthandot.com/viewforum.php?f=22
+ [13]: http://forum.ltd.local/viewforum.php?f=17
+ [14]: http://forum.ltd.local/viewforum.php?f=22

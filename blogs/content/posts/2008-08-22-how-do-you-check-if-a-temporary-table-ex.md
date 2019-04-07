@@ -3,6 +3,7 @@ title: How Do You Check If A Temporary Table Exists In SQL Server
 author: SQLDenis
 type: post
 date: 2008-08-22T12:57:47+00:00
+ID: 112
 url: /index.php/datamgmt/datadesign/how-do-you-check-if-a-temporary-table-ex/
 views:
   - 29906
@@ -23,7 +24,8 @@ I see more and more people asking how to check if a temporary table exists. How 
 
 You can use IF OBJECT_ID(&#8216;tempdb..#temp&#8217;) IS NOT NULL Let&#8217;s see how it works 
 
-<pre>--Create table 
+sql
+--Create table 
 USE Norhtwind 
 GO 
 
@@ -89,11 +91,13 @@ END
 ELSE 
 BEGIN 
 PRINT '#temp does not exist!' 
-END </pre>
+END 
+```
 
 now open a new window from Query Analyzer (CTRL + N) and run this code again 
 
-<pre>--Check if it exists 
+sql
+--Check if it exists 
 IF OBJECT_ID('tempdb..#temp') IS NOT NULL 
 BEGIN 
 PRINT '#temp exists!' 
@@ -101,13 +105,15 @@ END
 ELSE 
 BEGIN 
 PRINT '#temp does not exist!' 
-END </pre>
+END 
+```
 
 It doesn&#8217;t exist and that is correct since it&#8217;s a local temp table not a global temp table 
 
 Well let&#8217;s test that statement 
 
-<pre>--create a global temp table 
+sql
+--create a global temp table 
 CREATE TABLE ##temp(id INT) --Notice the 2 pound signs, that's how you create a global variable 
 
 --Check if it exists 
@@ -118,13 +124,15 @@ END
 ELSE 
 BEGIN 
 PRINT '##temp does not exist!' 
-END </pre>
+END 
+```
 
 It exists, right?
   
 Now run the same code in a new Query Analyzer window (CTRL + N) 
 
-<pre>--Check if it exists 
+sql
+--Check if it exists 
 IF OBJECT_ID('tempdb..##temp') IS NOT NULL 
 BEGIN 
 PRINT '##temp exists!' 
@@ -132,7 +140,8 @@ END
 ELSE 
 BEGIN 
 PRINT '##temp does not exist!' 
-END </pre>
+END 
+```
 
 And yes this time it does exist since it&#8217;s a global table
 

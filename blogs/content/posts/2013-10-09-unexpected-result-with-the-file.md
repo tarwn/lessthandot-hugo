@@ -3,6 +3,7 @@ title: Unexpected result with the File System Task
 author: Koen Verbeeck
 type: post
 date: 2013-10-09T12:22:00+00:00
+ID: 2173
 excerpt: 'Recently I ran across a forum thread where someone encountered an unexpected result when creating a directory using the File System Task in Integration Services. He used a variable to specify the name of the directory to be created and this variable was&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/unexpected-result-with-the-file/
 views:

@@ -3,6 +3,7 @@ title: Concat function in SQL Server Denali CTP3
 author: SQLDenis
 type: post
 date: 2011-07-15T07:53:00+00:00
+ID: 1254
 excerpt: |
   SQL Server Denali CTP3 brings a couple of new functions, one of these is the CONCAT function. The CONCAT  function returns a string that is the result of concatenating two or more string values.
   
@@ -34,7 +35,9 @@ The syntax of the CONCAT function looks like this
 
 You can concatenate between 2 and 254 values, if you use for example only one value, you will get an error
 
-<pre>select CONCAT (1)</pre>
+sql
+select CONCAT (1)
+```
 
 Msg 189, Level 15, State 1, Line 1
   
@@ -46,12 +49,14 @@ _CONCAT takes a variable number of string arguments and concatenates them into a
 
 Let&#8217;s run some code and do some comparison with a regular string concatenation by using the @val + @val2
 
-<pre>declare @i char(1)  ='1'
+sql
+declare @i char(1)  ='1'
 declare @i3 char(1)  ='3'
 
 
 select CONCAT (@i,@i3)
-select @i+  @i3</pre>
+select @i+  @i3
+```
 
 &#8212;&#8212;
   
@@ -63,12 +68,14 @@ As you can see both of these return the value 13
 
 What happens if one of the data type is an integer?
 
-<pre>declare @i char(1)  ='1'
+sql
+declare @i char(1)  ='1'
 declare @i3 int  ='3'
 
 
 select CONCAT(@i,@i3)
-select @i+  @i3</pre>
+select @i+  @i3
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
   
@@ -80,14 +87,16 @@ As you can see CONCAT concatenates the values while the other method does arithm
 
 Here is another example that does the same
 
-<pre>declare @i char(1)  ='1'
+sql
+declare @i char(1)  ='1'
 declare @i2 int  =2
 declare @i3 char(1)  ='3'
 
 
 select CONCAT(@i,@i2,@i3)
 
-select @i+ @i2+ @i3</pre>
+select @i+ @i2+ @i3
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
   
@@ -97,14 +106,16 @@ select @i+ @i2+ @i3</pre>
 
 What happens if one of the values is NULL?
 
-<pre>declare @i char(1)  ='1'
+sql
+declare @i char(1)  ='1'
 declare @i2 int  =null
 declare @i3 char(1)  ='3'
 
 
 select CONCAT(@i,@i2,@i3)
 
-select @i+ @i2+ @i3</pre>
+select @i+ @i2+ @i3
+```
 
 &#8212;&#8212;&#8212;&#8212;&#8211;
   
@@ -116,7 +127,8 @@ As you can see the CONCAT functions makes the NULL an empty string while the oth
 
 In order to get the same output, the old method is a lot more code
 
-<pre>declare @i char(1)  ='1'
+sql
+declare @i char(1)  ='1'
 declare @i2 int  =null
 declare @i3 char(1)  ='3'
 
@@ -124,7 +136,8 @@ declare @i3 char(1)  ='3'
 select CONCAT(@i,@i2,@i3)
 
 
-select isnull(@i,'')+ isnull(convert(varchar(10),@i2),'')+ isnull(@i3,'')</pre>
+select isnull(@i,'')+ isnull(convert(varchar(10),@i2),'')+ isnull(@i3,'')
+```
 
 &#8212;&#8211;
   

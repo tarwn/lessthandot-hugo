@@ -3,6 +3,7 @@ title: Document Your SQL Server Databases with Extended Properties
 author: Jes Borland
 type: post
 date: 2013-11-06T15:08:00+00:00
+ID: 2193
 excerpt: 'How important is database documentation to you? I know you have a hundred “more important” things to do. But consider this: how much time is it going to take you to document the purpose of a constraint right now? How much time will you spend trying to r&hellip;'
 url: /index.php/datamgmt/datadesign/document-your-sql-server-databases/
 views:
@@ -61,7 +62,8 @@ Let’s review the concept of levels – 0, 1, and 2. The highest-level property
 
 The syntax from [Books Online][1] is:
 
-<pre>sp_addextendedproperty
+```sql
+sp_addextendedproperty
     [ @name = ] { 'property_name' }
     [ , [ @value = ] { 'value' } 
         [ , [ @level0type = ] { 'level0_object_type' } 
@@ -74,17 +76,19 @@ The syntax from [Books Online][1] is:
                 ]
         ] 
     ] 
-[;]</pre>
-
+[;]
+```
  
 
 That’s ugly, but let’s walk through it. First are the name and value. You’ll add these for every property. Then, you see a type and name for each level – 0, 1, and 2. If you add a level 0 property, you don’t add any information for 1 or 2. If you add a level 1 property, you add the level 0 and level 1 information. If you want a level 2 property, you enter information for all three levels.
 
 Let’s add a property to the highest level, the database.
 
-<pre>EXEC sp_addextendedproperty 
+```sql
+EXEC sp_addextendedproperty 
 @name = N'Purpose', 
-@value = 'Holds employee, customer, supplier, and order details for the company.';</pre>
+@value = 'Holds employee, customer, supplier, and order details for the company.';
+```
 
  
 
@@ -92,33 +96,36 @@ Note that I only used the @name and @value parameters. There are no level types 
 
 Let’s add a property to a level 0 – a schema.
 
-<pre>EXECUTE sys.sp_addextendedproperty 
+```sql
+EXECUTE sys.sp_addextendedproperty 
 @name = N'Purpose',
 @value = N'Holds info for Jes.',
 	@level0type = N'SCHEMA', 
-	@level0name = 'Jes';</pre>
-
+	@level0name = 'Jes';
+```
  
 
 I find it easiest to start at the bottom to read this. The property is for a Schema, and the schema is Jes.  This property documents the purpose of the schema – it holds information for one user, Jes.
 
 Let’s add to a level 1 – a table.
 
-<pre>EXECUTE sys.sp_addextendedproperty 
+```sql
+EXECUTE sys.sp_addextendedproperty 
 @name = N'Purpose',
 @value = N'Holds running data.',
 	@level0type = N'SCHEMA', 
 	@level0name = 'Jes', 
 		@level1type = N'Table', 
-		@level1name = 'Running';</pre>
-
+		@level1name = 'Running';
+```
  
 
 Let’s start at the bottom. I’m documenting a Table, which is named Running. This is under the type Schema, and the schema name is Jes. I’m documenting the purpose of the table – to hold running data for this user, Jes.
 
 Now let’s add to a level 2, column.
 
-<pre>EXECUTE sys.sp_addextendedproperty 
+```sql
+EXECUTE sys.sp_addextendedproperty 
 @name = 'Measurement', 
 @value = 'Distance run measured in miles.', 
 	@level0type = 'SCHEMA', 
@@ -126,8 +133,8 @@ Now let’s add to a level 2, column.
 		@level1type = 'Table', 
 		@level1name = 'Running', 
 			@level2type = 'Column', 
-			@level2name = 'RunDistance';</pre>
-
+			@level2name = 'RunDistance';
+```
  
 
 Reading up from the bottom, again: this property is for a Column named RunDistance. It’s in the Table Running, which is in the Schema Jes. I’m documenting the measurement, since there are different options – in my case the distance is in miles.
@@ -140,12 +147,13 @@ What if something changes? Maybe a default value changes, or you want to add mor
 
 Let’s say I want to be more specific about the purpose of the schema Jes. I can update the ‘Purpose’ property easily.
 
-<pre>exec sp_updateextendedproperty 
+```sql
+exec sp_updateextendedproperty 
 @name = N'Purpose',
 @value = N'Holds tables created by user Jes.',
 	@level0type = N'SCHEMA', 
-	@level0name = 'Jes';</pre>
-
+	@level0name = 'Jes';
+```
  
 
 ### **Deleting Extended Properties** 
@@ -154,15 +162,16 @@ What if you decide an extended event has outlived its purpose or for some reason
 
 In this example, I’ve added a property, Purpose, to Jes.Running.RunDistance that I want to remove.
 
-<pre>exec sp_dropextendedproperty 
+```sql
+exec sp_dropextendedproperty 
 	@name = 'Purpose', 
 		@level0type = 'SCHEMA', 
 		@level0name = 'Jes', 
 			@level1type = 'Table', 
 			@level1name = 'Running', 
 				@level2type = 'Column', 
-				@level2name = 'RunDistance';</pre>
-
+				@level2name = 'RunDistance';
+```
  
 
 Executing this removes the property from the database.
@@ -179,14 +188,15 @@ For example, I want to view the extended properties for an index on a table in a
 
 Let’s look at this by using only the information available in sys.extended_properties.
 
-<pre>SELECT EP.class_desc AS PropertyOn, 
+```sql
+SELECT EP.class_desc AS PropertyOn, 
 	DB_NAME() AS DatabaseName, 
 	EP.name AS ExtendedPropertyDescription, 
 	EP.value AS ExtendedPropertyValue 
 FROM sys.extended_properties AS EP 
-WHERE EP.name <&gt; 'MS_Description' 
-	AND EP.class = 7; </pre>
-
+WHERE EP.name <> 'MS_Description' 
+	AND EP.class = 7; 
+```
 <p style="text-align: center;">
   <img src="/wp-content/uploads/users/grrlgeek/xp 1.JPG?mtime=1383748570" alt="" />
 </p>
@@ -197,7 +207,8 @@ WHERE EP.name <&gt; 'MS_Description'
 
 The information returned is very basic. I can tell this property is for an index, but I can’t tell for which table or index. I can join this view to others to get more information.
 
-<pre>SELECT EP.class_desc AS PropertyOn, 
+```sql
+SELECT EP.class_desc AS PropertyOn, 
 	DB_NAME() AS DatabaseName, 
 	SCH.name AS SchemaName , 
 	TBL.name AS TableName, 
@@ -209,9 +220,9 @@ FROM sys.extended_properties AS EP
 	LEFT JOIN sys.schemas SCH ON SCH.schema_id = TBL.schema_id 
 	LEFT JOIN sys.indexes IND ON IND.object_id = TBL.object_id 
 		AND IND.index_id = EP.minor_id
-WHERE EP.name <&gt; 'MS_Description' 
-	AND EP.class = 7;  </pre>
-
+WHERE EP.name <> 'MS_Description' 
+	AND EP.class = 7;  
+```
  
 
 The results are much more comprehensive now.
@@ -230,7 +241,8 @@ Let’s look at a few other examples. (Note that our end goal is to have “one 
 
 I added some database-level properties. To query those, I look for class 0. Note that I’m not joining it to any other views – all the information is contained in sys.extended_properties.
 
-<pre>SELECT EP.class_desc AS PropertyOn, 
+```sql
+SELECT EP.class_desc AS PropertyOn, 
 	DB_NAME() AS DatabaseName, 
 	NULL AS SchemaName , 
 	NULL AS TableName, 
@@ -241,10 +253,9 @@ I added some database-level properties. To query those, I look for class 0. Note
 	EP.name AS ExtendedPropertyDescription, 
 	EP.value AS ExtendedPropertyValue
 FROM sys.extended_properties AS EP 
-WHERE EP.name <&gt; 'MS_Description' 
-	AND EP.class = 0; </pre>
-
-<p style="text-align: center;">
+WHERE EP.name <> 'MS_Description' 
+	AND EP.class = 0; 
+```<p style="text-align: center;">
   <img src="/wp-content/uploads/users/grrlgeek/xp 3.JPG?mtime=1383748570" alt="" />
 </p>
 
@@ -254,7 +265,8 @@ WHERE EP.name <&gt; 'MS_Description'
 
 I’ve documented the schemas in the database – remember, these were level 0. To get the properties, I’ll query class 3. Here, I want to join to sys.schemas to get the schema name.
 
-<pre>SELECT EP.class_desc AS PropertyOn, 
+```sql
+SELECT EP.class_desc AS PropertyOn, 
 	DB_NAME() AS DatabaseName, 
 	SCH.name AS SchemaName , 
 	NULL AS TableName, 
@@ -266,10 +278,9 @@ I’ve documented the schemas in the database – remember, these were level 0. 
 	EP.value AS ExtendedPropertyValue
 FROM sys.extended_properties AS EP 
 	LEFT JOIN sys.schemas SCH ON SCH.schema_id = EP.major_id 
-WHERE EP.name <&gt; 'MS_Description' 
-	AND EP.class = 3; </pre>
-
-<p style="text-align: center;">
+WHERE EP.name <> 'MS_Description' 
+	AND EP.class = 3; 
+```<p style="text-align: center;">
   <img src="/wp-content/uploads/users/grrlgeek/xp 4.JPG?mtime=1383748570" alt="" />
 </p>
 
@@ -279,7 +290,8 @@ WHERE EP.name <&gt; 'MS_Description'
 
 I also documented table information – this was a level 1 property, and is a class 1 – and column information, which is a level 2. Much like my index query above, I join to the sys.tables, sys.schemas, and sys.columns view to get additional information about the table and columns.
 
-<pre>SELECT EP.class_desc AS PropertyOn, 
+```sql
+SELECT EP.class_desc AS PropertyOn, 
 	DB_NAME() AS DatabaseName, 
 	SCH.name AS SchemaName , 
 	TBL.name AS TableName, 
@@ -294,10 +306,9 @@ FROM sys.extended_properties AS EP
 	LEFT JOIN sys.schemas SCH ON SCH.schema_id = TBL.schema_id 
 	LEFT JOIN sys.columns COL ON COL.object_id = TBL.object_id 
 		AND COL.column_id = EP.minor_id
-WHERE EP.name <&gt; 'MS_Description' 
-	AND EP.class = 1;  </pre>
-
-<p style="text-align: center;">
+WHERE EP.name <> 'MS_Description' 
+	AND EP.class = 1;  
+```<p style="text-align: center;">
   <img src="/wp-content/uploads/users/grrlgeek/xp 5.JPG?mtime=1383748571" alt="" />
 </p>
 

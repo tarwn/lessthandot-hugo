@@ -3,6 +3,7 @@ title: Financial Functions for .NET released
 author: SQLDenis
 type: post
 date: 2008-12-06T22:37:56+00:00
+ID: 238
 url: /index.php/desktopdev/mstech/financial-functions-for-net-released/
 views:
   - 6113

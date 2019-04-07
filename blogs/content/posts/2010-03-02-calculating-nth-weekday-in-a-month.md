@@ -3,6 +3,7 @@ title: Calculating Nth weekday in a month
 author: Ramireddy
 type: post
 date: 2010-03-02T16:32:30+00:00
+ID: 717
 url: /index.php/datamgmt/dbprogramming/calculating-nth-weekday-in-a-month/
 views:
   - 7949
@@ -33,12 +34,14 @@ Solving this problem comprises the following 3 steps, which logically satisfy ea
   
 1. Get the first date for the provided month and year. E.g., the first date for the specified month (February) and Year (2010) is February 1st 2010.The following query will give you the first date for provided month and year.
 
-<pre>SELECT DATEADD(MONTH,@Month-1,DATEADD(YEAR,@Year-1900,0))</pre>
-
+sql
+SELECT DATEADD(MONTH,@Month-1,DATEADD(YEAR,@Year-1900,0))
+```
 2. Get the first date on which any weekday will occur nth time in the month. i.e. ((N-1)\*7+1)th day of the month will be the first date on which any weekday will occur nth time. In this case, the first date for the specified week (3) is, February 1st 2010 + (3 &#8211; 1)\*7 days = February 15th 2010.
 
-<pre>SELECT DATEADD(DAY,(@Weekno-1)*7 ,DATEADD(MONTH,@Month-1,DATEADD(YEAR,@Year-  1900,0)))</pre>
-
+sql
+SELECT DATEADD(DAY,(@Weekno-1)*7 ,DATEADD(MONTH,@Month-1,DATEADD(YEAR,@Year-  1900,0)))
+```
 3. Now add the number of days required to calculate the specified weekday. This will depend on the weekday specified and the weekday of the first date that came in the above step. These will be based on the weekday specified and the weekday of the first date that came in above step.
   
 Week day Requested is 6 (Sunday) and Weekday of first date that came in above step is 0(Monday).
@@ -55,25 +58,29 @@ In our case, the number of days required to add are 6 &#8211; 0 = 6 days. So, by
   
 So, the final query will become,
 
-<pre>SELECT DATEADD(DAY,((7+@Weekday)-DATEDIFF(dd,0,t.mydate)%7)%7,t.mydate) FROM 
+sql
+SELECT DATEADD(DAY,((7+@Weekday)-DATEDIFF(dd,0,t.mydate)%7)%7,t.mydate) FROM 
 	    (SELECT DATEADD(DAY,(@Weekno-1)*7 ,DATEADD(MONTH,@Month- 
-	1,DATEADD(YEAR,@Year-1900,0))) AS mydate )t)</pre>
+	1,DATEADD(YEAR,@Year-1900,0))) AS mydate )t)
 
+```
 Finally, the function written below is the complete solution that will be useful in calculating Nth weekday of any given month and year.
 
-<pre>CREATE FUNCTION fn_getWeekDay (@YEAR INT,@MONTH INT,@WeekNo INT,@WeekDay INT) 
+sql
+CREATE FUNCTION fn_getWeekDay (@YEAR INT,@MONTH INT,@WeekNo INT,@WeekDay INT) 
 	RETURNS DATETIME 
 	AS 
 	BEGIN 
 	    RETURN (   
 	    SELECT DATEADD(DAY,((7+@Weekday)-DATEDIFF(dd,0,t.mydate)%7)%7,t.mydate) FROM 
 	    (SELECT DATEADD(DAY,(@Weekno-1)*7 ,DATEADD(MONTH,@Month-1,DATEADD(YEAR,@Year-1900,0))) AS mydate )t) 
-	END</pre>
-
+	END
+```
 The above function takes 4 parameters: year, month, week number and weekday (Monday-0, Tuesday-1, Wednesday-2, Thursday-3, Friday-4, Saturday-5, Sunday-6)
   
 So, in order to calculate 3rd Sunday in February 20010, you need to call the function like below.
 
-<pre>SELECT dbo.fn_getWeekDay(2010,2,2,3)</pre>
-
+sql
+SELECT dbo.fn_getWeekDay(2010,2,2,3)
+```
 I hope my function can be useful for you and see you in my next blog.

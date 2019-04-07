@@ -3,6 +3,7 @@ title: Expert Performance Indexing for SQL Server 2012 for $15
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-20T15:05:00+00:00
+ID: 1796
 excerpt: 'I’ve been fortunate to have worked on a few books with some brilliant SQL Server Pros in the past few years.  One of the most recent books with Jason Strate, Expert Performance Indexing for SQL Server 2012, was published by APRESS.  I caught something l&hellip;'
 url: /index.php/datamgmt/dbadmin/expert-performance-indexing-for-sql/
 views:

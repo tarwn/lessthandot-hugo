@@ -3,6 +3,7 @@ title: 'Cheatsheet: Relational Database Management Systems Comparison'
 author: Jes Borland
 type: post
 date: 2012-01-24T12:54:00+00:00
+ID: 1502
 excerpt: This post looks at properties of Microsoft Access, Microsoft SQL Server, SQL Azure, MySQL, and PostgreSQL. Use it to help you determine what might be best for your needs.
 url: /index.php/datamgmt/datadesign/a-comparison-of-relational-database/
 views:

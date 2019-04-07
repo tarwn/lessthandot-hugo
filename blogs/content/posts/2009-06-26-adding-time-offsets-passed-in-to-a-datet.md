@@ -3,6 +3,7 @@ title: Adding time offsets passed in to a datetime to generate localized datetim
 author: SQLDenis
 type: post
 date: 2009-06-26T16:44:46+00:00
+ID: 485
 url: /index.php/datamgmt/datadesign/adding-time-offsets-passed-in-to-a-datet/
 views:
   - 5064
@@ -36,32 +37,40 @@ Here are the answers
   
 The minutes are the last 2 characters
 
-<pre>declare @date varchar(100)
+sql
+declare @date varchar(100)
 select @date = '2009-06-26 14:30:00.000Z+4:30'
 
-select right(@date,2)</pre>
+select right(@date,2)
+```
 
 **2) where is the hour?**
   
 The hour starts after the Z and last for 2 or 3 characters including the sign, we will just grab 3 and replace : with an empty string
 
-<pre>declare @date varchar(100)
+sql
+declare @date varchar(100)
 select @date = '2009-06-26 14:30:00.000Z+4:30'
 select replace(substring(@date,patindex('%z%',@date)+ 1,3),':','')
-go</pre>
+go
+```
 
 +4
 
-<pre>declare @date varchar(100)
+sql
+declare @date varchar(100)
 select @date = '2009-06-26 14:30:00.000Z-4:30'
 select replace(substring(@date,patindex('%z%',@date)+ 1,3),':','')
-go</pre>
+go
+```
 
 -4
 
-<pre>declare @date varchar(100)
+sql
+declare @date varchar(100)
 select @date = '2009-06-26 14:30:00.000Z+14:30'
-select replace(substring(@date,patindex('%z%',@date)+ 1,3),':','')</pre>
+select replace(substring(@date,patindex('%z%',@date)+ 1,3),':','')
+```
 
 +14
 
@@ -69,16 +78,19 @@ select replace(substring(@date,patindex('%z%',@date)+ 1,3),':','')</pre>
   
 That we already grabbed above for the hour, for the minute we need to do something like this
 
-<pre>declare @date varchar(100),@multiplier int
+sql
+declare @date varchar(100),@multiplier int
 
 select @date = '2009-06-26 14:30:00.000Z+4:30'
-select  case when @date like '%+%' then -1 else 1 end</pre>
+select  case when @date like '%+%' then -1 else 1 end
+```
 
 We also need to convert the stuff we did above to integers in order to add
 
 So here is the complete code
 
-<pre>declare @date varchar(100),@multiplier int
+sql
+declare @date varchar(100),@multiplier int
 
 select @date = '2009-06-26 14:30:00.000Z+4:30'
 select @multiplier = case when @date like '%+%' then -1 else 1 end
@@ -126,11 +138,11 @@ select dateadd(mi, @multiplier *convert(int,right(@date,2)),dateadd(hh
     ,left(@date,23)))
 go
 
---2009-06-27 05:00:00.000</pre>
-
+--2009-06-27 05:00:00.000
+```
 
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

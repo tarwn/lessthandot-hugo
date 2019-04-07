@@ -3,6 +3,7 @@ title: ASP.Net WebAPI – Controlling Response Formats
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 1985
 excerpt: 'Recently we were trying to consume a WebAPI call from an application that could only really consume HTML tables and basic XML. Unfortunately, nowhere in the long list of content-types in the Accepts header does the application actually list XML. So WebA&hellip;'
 draft: true
 url: /?p=1985
@@ -26,7 +27,8 @@ Altering the global list of formatters for WebAPI is easy. In the situation abov
 
 **Global.asax**
 
-<pre>protected void Application_Start()
+```csharp
+protected void Application_Start()
 {
 	// ...
 
@@ -35,16 +37,17 @@ Altering the global list of formatters for WebAPI is easy. In the situation abov
 	GlobalConfiguration.Configuration.Formatters.Insert(0, xml);
 
 	// ...
-}</pre>
-
+}
+```
 **Sample Action &#8211; no Extra Code**
 
-<pre>[HttpGet]
-public List<SampleObject&gt; GiveMeData()
+```csharp
+[HttpGet]
+public List<SampleObject> GiveMeData()
 {
 	return _repository.GetData();
-}</pre>
-
+}
+```
 Now when we don&#8217;t find a match for the supplied Accept headers, the XmlFormatter is the first one at bat. Occasionally I would still receive JSON, when the XmlFormatter couldn&#8217;t serialize something, but that&#8217;s why we test our code before releasing.
 
 Critical Note: This method will only work if the requester specifies text/anything or application/anything in the Accepts header. \*/\* and empty values do not work and will instead respond with JSON. I&#8217;ve been digging into the source because this behavior doesn&#8217;t seem correct, but haven&#8217;t found an answer in the source code yet. 
@@ -55,14 +58,15 @@ What if we don&#8217;t want to change the defaults globally just to ensure a cou
 
 **Action with Explicit Formatter**
 
-<pre>[HttpGet]
+```csharp
+[HttpGet]
 public HttpResponseMessage GiveMeDataInJSON()
 {
 	var data = _repository.GetData();
 
-	return Request.CreateResponse<List<SampleObject&gt;&gt;(HttpStatusCode.OK, data, new JsonMediaTypeFormatter());
-}</pre>
-
+	return Request.CreateResponse<List<SampleObject>>(HttpStatusCode.OK, data, new JsonMediaTypeFormatter());
+}
+```
 And there we go, XML on demand every time.
 
 ## Wrapup

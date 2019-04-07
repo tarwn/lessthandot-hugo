@@ -3,6 +3,7 @@ title: How to drop a Temporal Table
 author: Koen Verbeeck
 type: post
 date: 2015-07-03T07:39:59+00:00
+ID: 3465
 url: /index.php/uncategorized/how-to-drop-a-temporal-table/
 views:
   - 8181
@@ -26,16 +27,16 @@ tags:
   Anyway, I was testing this feature a bit (more specifically if they supported computed columns as promised in CTP 2.1) and I created a temporal table with the following query:
 </p>
 
-<pre>CREATE TABLE dbo.TestTemporal
+sql
+CREATE TABLE dbo.TestTemporal
 		(ID int primary key
 		,A int
 		,B int
 		,C AS A * B
 		,SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL
 		,SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL
-		,PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)) WITH(SYSTEM_VERSIONING = ON);</pre>
-
-<p style="text-align: justify">
+		,PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)) WITH(SYSTEM_VERSIONING = ON);
+```<p style="text-align: justify">
   This code only works in CTP2.1, not in earlier versions of SQL 2016 because of the computed column specification.<br /> Anyway, of course I forgot to set my database so this table was created in the master database. I wanted to drop it, but I was greeted with this lovely message:
 </p>
 

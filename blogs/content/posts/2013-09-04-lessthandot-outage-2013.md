@@ -3,6 +3,7 @@ title: LessThanDot Outage – Aug 22, 2013 to Sept 4, 2013
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-09-04T20:38:00+00:00
+ID: 2149
 excerpt: "Over the past couple weeks you may have noticed that LessThanDot was completely down. I know we did. We're working on solutions to our missing DR plan and shoring up some holes we found in our infrastructure (we had backups, they were just a little, er,&hellip;"
 url: /index.php/itprofessionals/itservicemanagement/lessthandot-outage-2013/
 views:

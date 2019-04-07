@@ -3,6 +3,7 @@ title: Script to Populate Date Dimension, without Using a Cursor
 author: Sam Vanga
 type: post
 date: 2013-01-22T13:20:00+00:00
+ID: 1865
 excerpt: "Most of the scripts I've used to populate date dimension uses a cursor. Since data is loaded only once to a date dimension in the ETL life cycle, using a cursor isn't a sin. However, if you want to kick cursors out of the park, here is an alternative using Window Functions."
 url: /index.php/datamgmt/dbprogramming/script-to-populate-date-dimension-sql-server/
 views:
@@ -23,7 +24,8 @@ Still, when I was reviewing my own code the other day, I wanted to get rid of th
 
 Here is a script that uses CTE and Window Functions to populate the date dimension.
 
-<pre>DECLARE @startdate DATE = '20000101'
+sql
+DECLARE @startdate DATE = '20000101'
 	, @enddate DATE = '20301231' ;
 
 WITH c
@@ -37,7 +39,7 @@ AS (
 	SELECT	[date] = DATEADD(day, Num, @startdate)
 			, Num
 	FROM c
-	WHERE Num &gt;= 0
+	WHERE Num >= 0
 		AND Num <= DATEDIFF(day, @startdate, @enddate)
 	)
 SELECT datekey = CAST(CONVERT(VARCHAR(8), DATEADD(day, Num, @startdate), 112) AS INT)
@@ -56,7 +58,8 @@ SELECT datekey = CAST(CONVERT(VARCHAR(8), DATEADD(day, Num, @startdate), 112) AS
 		ELSE YEAR([date]) + 1
 		END
 --Add more columns as needed.
-FROM d</pre>
+FROM d
+```
 
 Let&#8217;s take a closer look:
 

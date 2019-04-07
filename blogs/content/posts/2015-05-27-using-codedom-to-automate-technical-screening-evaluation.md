@@ -3,6 +3,7 @@ title: Using CodeDOM to Automate Technical Screening Evaluation
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2015-05-27T11:20:17+00:00
+ID: 3353
 url: /index.php/itprofessionals/using-codedom-to-automate-technical-screening-evaluation/
 views:
   - 3594
@@ -31,7 +32,8 @@ The sample submissions for this post are intended to answer the following tech s
 
 By the end of this post, we will take a random submission like this:
 
-<pre>public static string FizzBuzz(int number){
+```text
+public static string FizzBuzz(int number){
 	if(number % 3 == 0 && number % 5 == 0){
 		return "FizzBuzz";
 	}
@@ -44,11 +46,12 @@ By the end of this post, we will take a random submission like this:
 	else{
 		return number.ToString();
 	}
-}</pre>
-
+}
+```
 and automatically produce results like this:
 
-<pre>Evaluated File: SamplePassSubmission.txt
+```text
+Evaluated File: SamplePassSubmission.txt
 Evaluation Time: 5/9/2015 12:54:41 PM
 Final Result: 7/7 tests passed.
 
@@ -61,8 +64,8 @@ Individual Results:
 	Pass	- 20 is returned as 'Buzz'
 	Pass	- 30 is returned as 'FizzBuzz'
 
-...</pre>
-
+...
+```
 ## Background
 
 Lately we been doing a lot of screening and interviewing as we grow the development team at [PrecisionLender][2]. Part of our interview process requires candidates to answer a technical screening questionaire with several C# and SQL exercises. Which means that another part of our process is for someone to evaluate those answers. I have a set of unit tests for all of the C# problems, but that doesn&#8217;t solve the part where we have to copy/paste into the tests, modify method names, tweak static/non-static, correct name collisions, etc. 
@@ -71,7 +74,8 @@ CodeDOM has been on my list to play with for a while and seemed like the perfect
 
 The easy part turns out to be the compilation, which we can do like so:
 
-<pre>// assuming a variable with code in it named "code" and inputs as an object[] named inputParameters
+```csharp
+// assuming a variable with code in it named "code" and inputs as an object[] named inputParameters
 
 // 1
 var parameters = new CompilerParameters();
@@ -93,8 +97,8 @@ var assembly = results.CompiledAssembly;
 var type = assembly.GetType("NamespaceName.ClassName");
 var method = type.GetMethods()[0];
 var testObject = type.GetConstructor(new Type[] { }).Invoke(null);
-var output = method.Invoke(testObject, inputParameters);</pre>
-
+var output = method.Invoke(testObject, inputParameters);
+```
 In more detail:
 
   1. Define the [compilation parameters][3], including the referenced assemblies that are needed and that we want to compile the code in memory rather than generating an assembly.
@@ -136,16 +140,18 @@ Breaking this down into pieces:
 
 We need to ensure the first method is an instance method rather than static:
 
-<pre>// instance-ize functions
+```csharp
+// instance-ize functions
 var methodnameRegex = new Regex("(public|private) static (?!class)([^{]+)+{");
 if (methodnameRegex.IsMatch(normalizedSource))
 {
 	normalizedSource = methodnameRegex.Replace(normalizedSource, "$1 $2\n{");
-}</pre>
-
+}
+```
 Add or Normalize the class name to an expected value (IntendedClassName):
 
-<pre>// normalize class name
+```csharp
+// normalize class name
 var classnameRegex = new Regex("(public|private) (static )?class [^{]+{");
 if (classnameRegex.IsMatch(normalizedSource))
 {
@@ -154,11 +160,12 @@ if (classnameRegex.IsMatch(normalizedSource))
 else
 {
 	normalizedSource = String.Format("public class {0}\r\n{{\r\n{1}\r\n\r\n}}", IntendedClassName, normalizedSource);
-}</pre>
-
+}
+```
 Add or Normalize the namespace name to an expected value (IntendedNamespace)
 
-<pre>// normalize namespace
+```csharp
+// normalize namespace
 var namespaceRegex = new Regex("namespace [^\\n{ ]+[^{]+{");
 if (namespaceRegex.IsMatch(normalizedSource))
 {
@@ -167,21 +174,23 @@ if (namespaceRegex.IsMatch(normalizedSource))
 else
 {
 	normalizedSource = String.Format("{0}\r\n\nnamespace {1}\r\n{{\r\n{2}\r\n}}", USING_STATEMENTS, IntendedNamespace, normalizedSource);
-}</pre>
-
+}
+```
 And then add a standard set of using statements (USING_STATEMENTS constant) if they aren&#8217;t present yet:
 
-<pre>// add using statements if not present
+```csharp
+// add using statements if not present
 if (!normalizedSource.Contains("using System"))
 {
 normalizedSource = USING_STATEMENTS + "\r\n" + normalizedSource;
-}</pre>
-
+}
+```
 This will convert a file like the  [sample &#8220;Pass&#8221; submission file][6] like so:
 
 Before:
 
-<pre>public static string FizzBuzz(int number){
+```csharp
+public static string FizzBuzz(int number){
 	if(number % 3 == 0 && number % 5 == 0){
 		return "FizzBuzz";
 	}
@@ -194,11 +203,12 @@ Before:
 	else{
 		return number.ToString();
 	}
-}</pre>
-
+}
+```
 After:
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -226,8 +236,8 @@ public string FizzBuzz(int number)
 }
 
 }
-}</pre>
-
+}
+```
 So now we have consistent code, next up is evaluating the results.
 
 ## Compiling and Evaluating Output
@@ -238,7 +248,8 @@ The Evaluator requires not just an IntendedNamespace and IntendedClassname, but 
   
 **[EvaluateFizzBuzz/Evaluation/TestDefinition.cs][7]**
 
-<pre>public class TestDefinition
+```csharp
+public class TestDefinition
 {
 	...
 
@@ -247,17 +258,18 @@ The Evaluator requires not just an IntendedNamespace and IntendedClassname, but 
             Name = name;
             InputParameters = inputParameters;
             DescriptionOfExpectation = String.Format(expectedOutput.ToString());
-            EvaluateResult = (o) =&gt; new LocalEvaluationResult(expectedOutput.Equals(o), o != null ? o.ToString() : "");
+            EvaluateResult = (o) => new LocalEvaluationResult(expectedOutput.Equals(o), o != null ? o.ToString() : "");
         }
 
 	...
-}</pre>
-
+}
+```
 Here are the TestDefinitions we will evaluate against for the sample problem:
   
 **[EvaluateFizzBuzz/Program.cs][8]**
 
-<pre>new List<TestDefinition&gt;(){
+```csharp
+new List<TestDefinition>(){
 	new TestDefinition("Standard number is returned as string", new object[]{ 1 }, "1"),
 	new TestDefinition("3 is returned as 'Fizz'", new object[]{ 3 }, "Fizz"),
 	new TestDefinition("5 is returned as 'Buzz'", new object[]{ 5 }, "Buzz"),
@@ -265,13 +277,14 @@ Here are the TestDefinitions we will evaluate against for the sample problem:
 	new TestDefinition("9 is returned as 'Fizz'", new object[]{ 9 }, "Fizz"),
 	new TestDefinition("20 is returned as 'Buzz'", new object[]{ 20 }, "Buzz"),
 	new TestDefinition("30 is returned as 'FizzBuzz'", new object[]{ 30 }, "FizzBuzz")
-}</pre>
-
+}
+```
 Now we can expand the compilation code above to compile and then invoke and evaluate against each of these TestDefinitions:
   
 **[EvaluateFizzBuzz/Evaluation/Evaluator.cs][9]**
 
-<pre>var parameters = new CompilerParameters();
+```csharp
+var parameters = new CompilerParameters();
 // ... set up parameters ...
 
 var provider = new CSharpCodeProvider();
@@ -317,12 +330,12 @@ foreach (var test in Tests)
 }
 
 result.Summary = String.Format("{0}/{1} tests passed.",
-			    result.Tests.Where(t =&gt; t.IsPass).Count(),
+			    result.Tests.Where(t => t.IsPass).Count(),
 			    result.Tests.Count);
 // ...
 
-return result;</pre>
-
+return result;
+```
 And there we have it, we start with one randomly submitted code file and end with the results of automated evaluation.
 
 ## But What About&#8230;?

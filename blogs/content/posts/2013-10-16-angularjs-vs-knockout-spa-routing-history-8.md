@@ -3,6 +3,7 @@ title: AngularJS vs Knockout – SPA Routing/History (8 of 9)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-10-16T12:29:00+00:00
+ID: 2179
 excerpt: |
   I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. Let's talk Single Page applications, and more specifically, Routing and History. While AngularJS doesn't have the word "SPA" on their front page, the tutorial jumps straight into building one. How hard is it to give Knockout the same routing capability? Does it end up worse?
 url: /index.php/webdev/uidevelopment/angularjs-vs-knockout-spa-routing-history-8/
@@ -41,7 +42,8 @@ A basic use case for routing would be to provide a listing page where each item 
 
 For the example, we&#8217;ll need a list controller, details controller, and a listing service:
 
-<pre>sampleApp.service('ListOfStuffService', function () {
+```javascript
+sampleApp.service('ListOfStuffService', function () {
     var stuff = [
         { id: 1, name: "First Item", description: "It's the first item, woohoo!" },
         { id: 2, name: "Second Item", description: "Numero Dos!" },
@@ -69,11 +71,13 @@ sampleApp.controller('ListOfStuffController', ['$scope', 'ListOfStuffService', f
 
 sampleApp.controller('StuffDetailController', ['$scope', '$routeParams', 'ListOfStuffService', function ($scope, routeParams, listService) {
     $scope.item = listService.getById(routeParams.id);
-}]);</pre>
+}]);
 
+```
 Implementing the routes is then pretty straightforward:
 
-<pre>sampleApp.config(['$routeProvider', function (routeProvider) {
+```javacript
+sampleApp.config(['$routeProvider', function (routeProvider) {
     // unlike the documentation, I had to put quotes around my controllers - maybe they had global variables?
 
     routeProvider.when('/ListOfStuff', { templateUrl: 'partials/Routing/ListOfStuff.html', controller: 'ListOfStuffController' });
@@ -81,30 +85,32 @@ Implementing the routes is then pretty straightforward:
     routeProvider.when('/StuffDetail/:id', { templateUrl: 'partials/Routing/StuffDetail.html', controller: 'StuffDetailController' });
 
     routeProvider.otherwise({ redirectTo: '/ListOfStuff' });
-}]);</pre>
-
+}]);
+```
 To translate, the URL <code class="codespan">routing.html#/ListOfStuff</code> will show us the ListOfStuff.html template, the URL <code class="codespan">routing.html#/StuffDetail/123</code> will show us the StuffDetail template and pass along a parameter named &#8220;id&#8221; with 123 in it, and if no route matches, redirect to the first one.
 
 The HTML templates then look like this:
 
 [Angular/partials/Routing/ListOfStuff.html][5]
 
-<pre><div&gt;
-    <ul ng-repeat="item in listOfItems"&gt;
-        <li&gt;<a href="#/StuffDetail/{{ item.id }}"&gt;{{ item.name }}</a&gt;</li&gt;
-    </ul&gt;
-</div&gt;</pre>
-
+```html
+<div>
+    <ul ng-repeat="item in listOfItems">
+        <li><a href="#/StuffDetail/{{ item.id }}">{{ item.name }}</a></li>
+    </ul>
+</div>
+```
 [Angular/partials/Routing/StuffDetail.html][6]
 
-<pre><div&gt;
-    <a href="#/ListOfStuff"&gt;Back to list</a&gt;<br /&gt;
-    <br /&gt;
-    <b&gt;Id:</b&gt; {{ item.id }}<br /&gt;
-    <b&gt;Name:</b&gt; {{ item.name }}<br /&gt;
-    <b&gt;Description:</b&gt; {{ item.description }}<br /&gt;
-</div&gt;</pre>
-
+```html
+<div>
+    <a href="#/ListOfStuff">Back to list</a><br />
+    <br />
+    <b>Id:</b> {{ item.id }}<br />
+    <b>Name:</b> {{ item.name }}<br />
+    <b>Description:</b> {{ item.description }}<br />
+</div>
+```
 In contrast to some of the other AngularJS examples in earlier posts, this one just worked. I didn&#8217;t have to worry about how to make hash URLs work, detecting changes and writing code to parse the URLs, or anything, just a few simple, direct rules and a controller and template for each one. 
 
 ## Routing in &#8230; Knockout?
@@ -113,7 +119,8 @@ Well, crap. Up until now there has been some clear, obvious answers when I neede
 
 In all of these examples, we will need a ListOfStuffService, a ListOfStuffViewModel, a StuffDetailViewModel, and an overall viewmodel to represent the page and have these viewmodels (and their associated template) assigned to it. To reduce the amount of necessary example code, I&#8217;ve assigned the template names to the viewmodels.
 
-<pre>// basic fake service with a GetAll and GetById call
+```javascript
+// basic fake service with a GetAll and GetById call
 define("ListOfStuffService", function () {
     var stuff = [
                 { id: 1, name: "First Item", description: "It's the first item, woohoo!" },
@@ -166,34 +173,35 @@ define("StuffDetailViewModel",
             this.item = ko.observable(item);
         }
     }
-);</pre>
-
+);
+```
 And the HTML for the page and the viewmodels looks like this:
 
-<pre><body&gt;
-<!-- ko if: viewmodel() --&gt;
-<div data-bind="template: { name: viewmodel().template, data: viewmodel }"&gt;
-</div&gt;
-<!-- /ko --&gt;
+```html
+<body>
+<!-- ko if: viewmodel() -->
+<div data-bind="template: { name: viewmodel().template, data: viewmodel }">
+</div>
+<!-- /ko -->
 
-<!-- ... --&gt;
+<!-- ... -->
 
-<script type="text/html" id="ListOfStuffViewModel"&gt;
-    <ul data-bind="foreach: listOfItems"&gt;
-        <li&gt;<a data-bind="attr: { href: '#/StuffDetail/' + id }, text: name"&gt;</a&gt;</li&gt;
-    </ul&gt;
-</script&gt;
-<script type="text/html" id="StuffDetailViewModel"&gt;
-    <div&gt;
-        <a href="#/ListOfStuff"&gt;Back to list</a&gt;<br /&gt;
-        <br /&gt;
-        <b&gt;Id:</b&gt; <span data-bind="text: item().id"&gt;</span&gt;<br /&gt;
-        <b&gt;Name:</b&gt; <span data-bind="text: item().name"&gt;</span&gt;<br /&gt;
-        <b&gt;Description:</b&gt; <span data-bind="text: item().description"&gt;</span&gt;<br /&gt;
-    </div&gt;
-</script&gt;
-</body&gt;</pre>
-
+<script type="text/html" id="ListOfStuffViewModel">
+    <ul data-bind="foreach: listOfItems">
+        <li><a data-bind="attr: { href: '#/StuffDetail/' + id }, text: name"></a></li>
+    </ul>
+</script>
+<script type="text/html" id="StuffDetailViewModel">
+    <div>
+        <a href="#/ListOfStuff">Back to list</a><br />
+        <br />
+        <b>Id:</b> <span data-bind="text: item().id"></span><br />
+        <b>Name:</b> <span data-bind="text: item().name"></span><br />
+        <b>Description:</b> <span data-bind="text: item().description"></span><br />
+    </div>
+</script>
+</body>
+```
 So far, the only major addition over the Angular example above is that outer viewmodel and the HTML to conditionally render it above. That &#8220;if&#8221; binding means that Knockout will not evaluate/display that area&#8217;s contents when the bound value is falsey. 
 
 I&#8217;ve made the examples slightly more complex than they needed to be because I&#8217;m still using [RequireJS][9] throughout them. This wasn&#8217;t necessary and probably serves as a little extra noise, but oh well.
@@ -204,7 +212,8 @@ Full source available at [Knockout/Routing.html][10].
 
 So we have our viewmodels, we have a bare app viewmodel they will get socketed into, and we have HTML templates. Let&#8217;s define the routes using the [Sammy.js][8] library:
 
-<pre>// define route and outer ko viewmodel
+```javascript
+// define route and outer ko viewmodel
 require(['knockout', 'ko-app', 'sammy'], function (ko, AppViewModel, sammy) {
     var app = new AppViewModel();
     ko.applyBindings(app);
@@ -231,8 +240,8 @@ require(['knockout', 'ko-app', 'sammy'], function (ko, AppViewModel, sammy) {
 
     });
     routing.run();
-});</pre>
-
+});
+```
 Using the Sammy library, I&#8217;ve defined the same three cases I had in Angular. Each route has a callback that it calls when the route is matched, which I used to create the appropriate ViewModel and assign it to my main &#8220;app&#8221; viewmodel, causing the template to be changed. If the empty route is matched, I explicitly run the ListOfStuff route.
 
 ### Knockout Routing w/ Finch.js
@@ -241,7 +250,8 @@ Full source available at [Knockout/Routing.FinchJS.html][11].
 
 The tagline for [FinchJS][12] is &#8220;Powerfully Simple Javascript Routing&#8221;, and I have to agree that the library meets expectations. Implementing the same routes as the last two exmaples:
 
-<pre>// define route and outer ko viewmodel
+```javascript
+// define route and outer ko viewmodel
 require(['knockout', 'mainApp', 'finch'], function (ko, AppViewModel, finch) {
     var app = new AppViewModel();
 
@@ -263,8 +273,8 @@ require(['knockout', 'mainApp', 'finch'], function (ko, AppViewModel, finch) {
 
     ko.applyBindings(app);
     finch.listen();
-});</pre>
-
+});
+```
 The route logic looks almost the same as Sammy.js, proving that I probably picked too easy of an example for this post. 
 
 ### Knockout Routing w/ flatiron director
@@ -273,7 +283,8 @@ Full source available at [Knockout/Routing.Director.html][13].
 
 One of the key goals for the [flatiron director]() library is to work as seamlessly as possible in both the node.js and browser environments. director has HTML5 History API support, but I&#8217;ve configured it off for this example to match the others:
 
-<pre>require(['knockout', 'mainApp', 'director'], function (ko, AppViewModel, director) {
+```javascript
+require(['knockout', 'mainApp', 'director'], function (ko, AppViewModel, director) {
     var app = new AppViewModel();
 
     var routes = {
@@ -293,8 +304,8 @@ One of the key goals for the [flatiron director]() library is to work as seamles
             .configure({
                 html5history: false
             });
-});</pre>
-
+});
+```
 In this case, the routes are defined as an array and I only define the two real routes. Once I&#8217;ve applied my bindings, I start up the routing by calling init with the default URL to use if there isn&#8217;t a hash address in the path.
 
 This example does have an error, in that it doesn&#8217;t actually work if I load a hashed address from scratch. All three other examples work fine, so I suspect it&#8217;s something I&#8217;ve done wrong.

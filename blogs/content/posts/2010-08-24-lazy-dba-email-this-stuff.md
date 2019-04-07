@@ -3,6 +3,7 @@ title: 'The Lazy DBA Series: Email me,  I’m broke!'
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-24T10:40:42+00:00
+ID: 878
 url: /index.php/datamgmt/datadesign/lazy-dba-email-this-stuff/
 views:
   - 8764
@@ -41,9 +42,12 @@ I think we can mostly agree that bad execution plans cause high and out of contr
 
 The following statement from Paul’s blog shows the test for events and where email notifications come into play 
 
-<pre>SELECT COUNT (*) FROM sys.fn_xe_file_target_read_file
+```SQL
+SELECT COUNT (*) FROM sys.fn_xe_file_target_read_file
    ('C:SQLskillsEE_ExpensiveQueries*.xel', 'C:SQLskillsEE_ExpensiveQueries*.xem', NULL, NULL);
-GO </pre></p> 
+GO 
+```
+</p> 
 
 Can you test this in an Agent job with T-SQL or SSIS package? Yes! And then using sp\_send\_dbmail, you can attach the result from the fn\_xe\_file\_target\_read_file into an email and send it off to the lucky DBA winner of the day. You just found a problem by not even looking at a database server!!! 
 

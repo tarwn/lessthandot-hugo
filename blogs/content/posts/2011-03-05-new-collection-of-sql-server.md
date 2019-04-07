@@ -3,6 +3,7 @@ title: New Collection of SQL Server Videos on Channel 9
 author: SQLDenis
 type: post
 date: 2011-03-05T18:39:00+00:00
+ID: 1063
 excerpt: 'There are 13 new videos on channel 9 posted about SQL Server.  The non-marketing videos (by engineering PMs) give customers peek into the goals and visions why certain SQL Server features were decided and implemented. Below is a list with a little blurb&hellip;'
 url: /index.php/datamgmt/datadesign/new-collection-of-sql-server/
 views:

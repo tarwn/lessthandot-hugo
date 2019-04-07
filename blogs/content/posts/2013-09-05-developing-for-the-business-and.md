@@ -3,6 +3,7 @@ title: Developing for the business and the user
 author: chopstik
 type: post
 date: 2013-09-05T12:10:00+00:00
+ID: 2134
 excerpt: |
   Technology is a wonderful tool that should make all of our lives better - at least until Skynet takes over. But then I am hoping that this article will serve me in good stead with our new superior overlords.  :D
   The problem, as you may have guessed by&hellip;

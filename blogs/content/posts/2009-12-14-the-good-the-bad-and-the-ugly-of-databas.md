@@ -3,6 +3,7 @@ title: The Good, the Bad and the Ugly of Database Design
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-12-14T13:25:14+00:00
+ID: 651
 url: /index.php/datamgmt/datadesign/the-good-the-bad-and-the-ugly-of-databas/
 views:
   - 27015
@@ -36,7 +37,8 @@ So the data I was after was related to customer billing, item long descriptions,
 
 Let’s take a look at my create table statement
 
-<pre>CREATE TABLE FINDME
+sql
+CREATE TABLE FINDME
 (
 KEYS Char(500)
 ,STRINGS Char(3000)
@@ -63,36 +65,43 @@ VALUES(
 	  )
 
 
-SELECT * FROM FINDME</pre>
+SELECT * FROM FINDME
+```
 
 We can already see that the first issue is the CHAR data types. That isn’t really the disturbing part though. Well, CHAR does scare me when I see it but let’s move beyond that for now. The problem is, you can immediately see the storage of dozens of unrelated and unique chunks of data held within the same columns. My career started off in development so I’m no stranger to using fixed field strings in my code. It’s a great way to pass parameters between logic in order to make passing those objects simplified and quickly maintained with a brief key so others know the fixed format and can extract the data as needed. Now put that into a database and we have a serious problem. There is no means to even the first form of normalization and you start to manipulate data not in result sets but case steps that cause performance issues. 
 
 Notice the CUST5 string. This CUST5 related back to CUSTOMER which holds other customer data. How are you going to join these tables? Given a normal primary to foreign relationship you would compose a query such as
 
-<pre>SELECT
+sql
+SELECT
 	a.CUSTID
 	,b.CUSTID
 FROM
 FINDME a
-JOIN CUSTOMER b ON a.CUSTID = b.CUSTID</pre>
+JOIN CUSTOMER b ON a.CUSTID = b.CUSTID
+```
 
 Let’s do it with the data as it is in our FINDME table now though. We’ll assume for this exercise that CUSTID is actually stored in its own column in CUSTOMER
 
-<pre>SELECT
+sql
+SELECT
 	SUBSTRING(a.KEYS,51,5)
 	,b.CUSTID
 FROM
 FINDME a
-JOIN CUSTOMER b ON SUBSTRING(a.KEYS,51,5) = b.CUSTID</pre>
+JOIN CUSTOMER b ON SUBSTRING(a.KEYS,51,5) = b.CUSTID
+```
 
 First query will obtain index seeks given the supporting indexes and even on high count tables will perform in milliseconds for you. Second has no hope whatsoever of being a query that will perform well. It is nonsargable, gives no patter for proper indexing and storage will become an issue across the table. So you are already struggling to just get your data out of the database.
 
 Second problem is the storage of the description in multiple fields. By nature concatenation is slow. For that matter, any string manipulation in any development plan is slower than not. In order to get your long description out of this table you will be forced into the following
 
-<pre>SELECT 
+sql
+SELECT 
 	TXT1 + TXT2
 FROM 
-FINDME</pre>
+FINDME
+```
 
 But wait, how do we know there is a leading space to form this string correctly? You don’t and you’ll have to test for it if you are a good developer.
 

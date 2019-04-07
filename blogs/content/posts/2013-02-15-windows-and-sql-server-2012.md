@@ -3,6 +3,7 @@ title: Windows and SQL Server 2012 Test Setup
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-02-15T23:45:00+00:00
+ID: 2002
 excerpt: |
   SQL Server 2012 Test Setup
   I’m often asked what I would recommend for a development or test area on a local machine for working with SQL Server 2012.  Often, requirements do increase or change with the next, greatest version of SQL Server but when it c&hellip;

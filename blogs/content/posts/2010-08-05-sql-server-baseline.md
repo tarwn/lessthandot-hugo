@@ -3,6 +3,7 @@ title: Baseline, Performance Reporting and being a proactive DBA
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-05T22:42:54+00:00
+ID: 862
 url: /index.php/datamgmt/datadesign/sql-server-baseline/
 views:
   - 12029

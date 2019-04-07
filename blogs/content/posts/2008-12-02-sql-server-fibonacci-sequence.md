@@ -3,6 +3,7 @@ title: SQL Server Fibonacci Sequence
 author: George Mastros (gmmastros)
 type: post
 date: 2008-12-02T19:44:43+00:00
+ID: 230
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sql-server-fibonacci-sequence/
 views:
   - 8511
@@ -18,7 +19,8 @@ Obviously, we cannot store the numbers in any sort of number data type, so we ne
 
 Please understand that this is not production quality code. I&#8217;m not validating the inputs and I&#8217;m being careless about the data type conversions. Also note that I use the varchar(max) data type. This implies SQL2005 code. If you want to test this on SQL2000, then you&#8217;ll need to replace varchar(max) with VarChar(8000). You won&#8217;t be able to calculate as many numbers, but you&#8217;ll still get quite a few.
 
-<pre>Create Function dbo.AddString(@String1 VarChar(8000), @String2 VarChar(8000))
+sql
+Create Function dbo.AddString(@String1 VarChar(8000), @String2 VarChar(8000))
 Returns VarChar(max)
 As
 Begin
@@ -56,11 +58,12 @@ Begin
         Set @Output = '1' + @Output
     
     Return @Output
-End</pre>
-
+End
+```
 The user defined function shown above allows us to add strings as though they were numbers. Now, how do we calculate the fibonacci series? Like this:
 
-<pre>Declare @Temp Table(Id Int Identity(1,1), FIB VarChar(max))
+sql
+Declare @Temp Table(Id Int Identity(1,1), FIB VarChar(max))
 
 Insert Into @Temp(FIB) Values('0')
 Insert Into @Temp(FIB) Values('1')
@@ -78,6 +81,6 @@ While @i < 1000
 
 	End
 
-Select Fib From @Temp Order By Id</pre>
-
+Select Fib From @Temp Order By Id
+```
 That&#8217;s all there is to it!

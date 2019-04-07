@@ -3,6 +3,7 @@ title: SSMS Assembly Error – Microsoft.SqlServer.Sqm.dll
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-10-31T22:52:00+00:00
+ID: 1367
 excerpt: 'SQL Server Management Studio and SQL Server Tools alike can become unusable when other installations, multiple installations or even strange operating system level problems occur that remove critical supporting assemblies.  When these assemblies either&hellip;'
 url: /index.php/datamgmt/dbadmin/ssms-assembly-error-microsoft-sqlserver/
 views:

@@ -3,6 +3,7 @@ title: Changing a column that is already populated into a column that uses a seq
 author: SQLDenis
 type: post
 date: 2013-06-05T19:38:00+00:00
+ID: 2102
 excerpt: |
   Just got a question on my A first look at sequences in SQL Server Denali post.
   
@@ -29,36 +30,44 @@ The question is the following: _How can you add a new column to existing table (
 
 Let&#8217;s take a look. First create this very simple table
 
-<pre>CREATE TABLE bla (id INT)
+sql
+CREATE TABLE bla (id INT)
 INSERT BLA VALUES(1)
 INSERT BLA VALUES(2)
 INSERT BLA VALUES(3)
 INSERT BLA VALUES(4)
-INSERT BLA VALUES(5)</pre>
+INSERT BLA VALUES(5)
+```
 
 What you want to do is have the sequence start at 6, here is how to do that.
 
-<pre>CREATE SEQUENCE GlobalCounter
+sql
+CREATE SEQUENCE GlobalCounter
     AS INT
     MINVALUE 1
     NO MAXVALUE
     START WITH 6;
-GO</pre>
+GO
+```
 
 Use START WITH to indicate that the sequence should start at 6
 
 The next step is to add a default to the column, this default would use the sequence
 
-<pre>ALTER TABLE bla
+sql
+ALTER TABLE bla
 ADD CONSTRAINT id_default_sequence
-DEFAULT NEXT VALUE FOR GlobalCounter FOR ID;</pre>
+DEFAULT NEXT VALUE FOR GlobalCounter FOR ID;
+```
 
 Now if we do an insert, followed by a select
 
-<pre>INSERT bla DEFAULT VALUES
+sql
+INSERT bla DEFAULT VALUES
 
-SELECT * FROM Bla</pre>
+SELECT * FROM Bla
 
+```
 Here are the results
 
 id

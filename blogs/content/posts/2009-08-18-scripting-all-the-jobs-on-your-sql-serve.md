@@ -3,6 +3,7 @@ title: Scripting All The Jobs On Your SQL Server Instance Into Separate Files By
 author: SQLDenis
 type: post
 date: 2009-08-18T14:02:38+00:00
+ID: 540
 url: /index.php/datamgmt/dbprogramming/scripting-all-the-jobs-on-your-sql-serve/
 views:
   - 22912
@@ -30,23 +31,28 @@ Before I show the code I want to point out the code you need to change depending
 
 If you want to do windows authentication then use these 4 lines
 
-<pre>ServerConnection conn = new ServerConnection();
+```csharp
+ServerConnection conn = new ServerConnection();
 conn.LoginSecure = true;
 conn.ServerInstance = "localhost";
-Server srv = new Server(conn);</pre>
+Server srv = new Server(conn);
+```
 
 If you need to use SQL authentication then use the following 6 lines
 
-<pre>ServerConnection conn = new ServerConnection();
+```csharp
+ServerConnection conn = new ServerConnection();
 conn.LoginSecure = false;
 conn.Login = "YourUserName";
 conn.Password = "YourPassword";
 conn.ServerInstance = "localhost";
-Server srv = new Server(conn);</pre>
+Server srv = new Server(conn);
+```
 
 Below is the complete program, it is nothing fancy and you probably want to refactor some stuff out into their own methods.
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -107,8 +113,8 @@ namespace ConsoleApplicationJobs
         }
 
     }
-}</pre>
-
+}
+```
 That is all, you could also use PowerShell combined with SMO to accomplish the same
 
 
@@ -116,5 +122,5 @@ That is all, you could also use PowerShell combined with SMO to accomplish the s
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DBProgramming/scripting-all-jobs-on-sql-server-2005-20
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

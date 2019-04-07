@@ -3,6 +3,7 @@ title: How to capture the error output from a stored procedure when calling anot
 author: SQLDenis
 type: post
 date: 2011-12-01T15:22:00+00:00
+ID: 1403
 excerpt: |
   This is a quick post, this question was asked recently
   
@@ -34,27 +35,32 @@ This is pretty simple to do if you capture the output from the first procedure a
 
 This is our first proc, as you can see I hardcoded the value 1 so that we are sure this is returned from the first proc
 
-<pre>CREATE PROC prtest1
+sql
+CREATE PROC prtest1
 AS
 RETURN 1 --@@error
-GO</pre>
+GO
+```
 
 This is our second proc, as you can see I hardcoded the value 2 so that we are sure this is returned from the first proc. You can also see that I store the return value from the stored procedure prtest1 in the @error and this is an output parameter
 
-<pre>CREATE PROC prtest2 @error INT OUTPUT
+sql
+CREATE PROC prtest2 @error INT OUTPUT
 AS
 EXEC @error = prtest1
 RETURN 2 --@@error
-GO</pre>
-
+GO
+```
 Here is now how you bring both statuses back by using a combination of a return value and an output parameter. this part _EXEC @SecondProc = prtest2_ will get the return value. 
 
 This part _@error = @FirstProc OUTPUT_ will get the value that is returned from the output parameter
 
-<pre>DECLARE @SecondProc INT, @FirstProc INT
+sql
+DECLARE @SecondProc INT, @FirstProc INT
 EXEC @SecondProc = prtest2 @error = @FirstProc   OUTPUT
 
-SELECT @SecondProc  AS [2nd],@FirstProc AS [1st]</pre>
+SELECT @SecondProc  AS [2nd],@FirstProc AS [1st]
+```
 
 Output
   
@@ -65,13 +71,15 @@ Output
 
 I prefer to return errors that I capture from within the proc as output parameters, I will also use the _ERROR_MESSAGE()_ function to return something that makes more sense to the user than a number. Below is an example
 
-<pre>BEGIN TRY
+sql
+BEGIN TRY
      SELECT 1/0
 END TRY
 
 BEGIN CATCH
      SELECT ERROR_MESSAGE(), @@ERROR
-END CATCH</pre>
+END CATCH
+```
 
 Output
   

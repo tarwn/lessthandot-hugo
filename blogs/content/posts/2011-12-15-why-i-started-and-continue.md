@@ -3,6 +3,7 @@ title: 'Why I started and continue to blog – #Meme15 on Blogging'
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-15T14:31:00+00:00
+ID: 1443
 excerpt: 'One of my good friends, Jason Strate (Blog | Twitter) has come up with a new meme topic that we can blog on each month.  The topic revolves around Social Networking each month.  This month’s topic is on blogging.  The questions Jason asked us are, “Why&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/why-i-started-and-continue/
 views:
@@ -47,7 +48,7 @@ I started blogging because I wanted to help in another way other than forums.  
  [2]: http://twitter.com/#!/stratesql
  [3]: http://www.jasonstrate.com/2011/12/the-meme15-on-social-networking/
  [4]: /index.php/WebDev/WebDesignGraphicsStyling/search-the-internet-archive-with-the-way
- [5]: http://forum.lessthandot.com/viewtopic.php?f=17&t=3328&p=17555#p17555
+ [5]: http://forum.ltd.local/viewtopic.php?f=17&t=3328&p=17555#p17555
  [6]: http://weblogs.asp.net/marksmith/
  [7]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/user-to-schema-to-roles-for-controlling-
  [8]: /index.php/All/?disp=authdir&author=420

@@ -3,6 +3,7 @@ title: Debugging In SQL Server Denali
 author: SQLDenis
 type: post
 date: 2010-11-09T16:22:14+00:00
+ID: 944
 url: /index.php/datamgmt/dbprogramming/debugging-in-sql-server-denali/
 views:
   - 3485

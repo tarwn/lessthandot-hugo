@@ -3,6 +3,7 @@ title: 'My Favorite PowerShell Script: Reading Log Files'
 author: Jes Borland
 type: post
 date: 2011-10-28T14:41:00+00:00
+ID: 1363
 excerpt: I’m in love. With a PowerShell script I wrote.
 url: /index.php/datamgmt/dbadmin/my-favorite-powershell-script-reading/
 views:
@@ -24,7 +25,8 @@ I knew there had to be a better way. Once I learned enough about PowerShell to b
 
 > Disclaimer: I know it’s not perfect. Yes, there are probably improvements I could make. It’s a giant step forward for me.
 
-<pre>#Go to a server share, read log 
+```powershell
+#Go to a server share, read log 
 #server
 $server='GRRLGEEK2008R2'
 #instance - if default, enter mssqlserver
@@ -36,7 +38,8 @@ $path='\' + $Server + '' + $instance + '$logs' + $job
 #$path
 #go to server
 Get-ChildItem -Path $Path -Filter *log | Sort-Object -Descending LastWriteTime | Select -First 1 -Property LastWriteTime 
-Get-ChildItem -Path $Path -Filter *log | Sort-Object -Descending LastWriteTime | Select -First 1 | Get-Content</pre>
+Get-ChildItem -Path $Path -Filter *log | Sort-Object -Descending LastWriteTime | Select -First 1 | Get-Content
+```
 
 Breaking it down: 
 

@@ -3,6 +3,7 @@ title: Web API 2 – don’t get caught with your parameters down
 author: Tahir Khalid
 type: post
 date: 2015-08-26T02:51:31+00:00
+ID: 4130
 url: /index.php/webdev/web-api-2-dont-get-caught-with-your-parameters-down/
 views:
   - 4890
@@ -44,14 +45,16 @@ So noting too fancy:
     {
         public string Name{ get; set; }
         public string MessageText { get; set; }
-    }</pre>
+    }
+</pre>
 
 The controller class:
 
 <pre>public IHttpActionResult GetMessage()
 {
    return Ok("{}");
-}</pre>
+}
+</pre>
 
 The little gotcha above btw is that you need a return JSON object or null otherwise you will get a failed response at the client side, not the least of my worries though as I was getting another 404 message:
 
@@ -81,7 +84,8 @@ Yep everything is awesome now so the second part of the solution was to set the 
                 .fail(function (jqXHR, textStatus, err) {
                     $('#message').text('Error: ' + err);
                 });
-        }</pre>
+        }
+</pre>
 
 And hey presto all sorted.   What we did here was to create a complex parameter using a JSON format which is then passed through to the controller action GetMessage.  I expanded on this by making my action more complex using the excellent <a title="Newtonsoft Json.Net" href="http://www.newtonsoft.com/json" target="_blank">Newtonsoft JSON library</a> to assist with deserialising the data, inflating an entity and then building up an email message to send out using the <a title="System.Net.Mail Namespace" href="https://msdn.microsoft.com/en-us/library/system.net.mail(v=vs.110).aspx" target="_blank">System.Net.Mail</a> namespace.
 

@@ -3,6 +3,7 @@ title: '24 Hours of PASS, WIT Edition: Register! Learn! Listen to Me!'
 author: Jes Borland
 type: post
 date: 2011-02-14T17:15:00+00:00
+ID: 1042
 excerpt: 'Last month, I asked a group of amazing women to submit sessions for the Spring 2011 24 Hours of PASS, focusing on Women In Technology (WIT). 24 HOP will take place on Tuesday, March 15 and Wednesday, March 16, 2011. The call for speakers came and went.&hellip;'
 url: /index.php/datamgmt/dbadmin/24-hours-of-pass-wit-1/
 views:

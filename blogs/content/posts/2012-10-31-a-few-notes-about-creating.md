@@ -3,6 +3,7 @@ title: A Few Notes About Creating Custom SSMS Reports
 author: Jes Borland
 type: post
 date: 2012-10-31T11:20:00+00:00
+ID: 1775
 excerpt: A few tips to create custom SQL Server Management Studio reports.
 url: /index.php/datamgmt/dbprogramming/a-few-notes-about-creating/
 views:

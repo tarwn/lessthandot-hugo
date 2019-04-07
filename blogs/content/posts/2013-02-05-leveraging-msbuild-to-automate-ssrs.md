@@ -3,6 +3,7 @@ title: Leveraging MSBUILD to automate SSRS deployments – session material
 author: Koen Verbeeck
 type: post
 date: 2013-02-05T07:28:00+00:00
+ID: 1967
 excerpt: The demo material for my SQLUG session about leveraging MSBUILD to automate SSRS deployments.
 url: /index.php/datamgmt/dbprogramming/mssqlserver/leveraging-msbuild-to-automate-ssrs/
 views:

@@ -3,6 +3,7 @@ title: SQL Saturday in Minnesota down to a few days!
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-11-08T01:35:00+00:00
+ID: 1374
 excerpt: 'SQL Saturday in Minnesota is upon us.  Only a few more days and I’ll be heading to Minnesota and have a chance to hang out with many of my good friends as well as meet hundreds of other SQL Server professionals.  Last year I wasn’t able to make this eve&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/sql-saturday-in-minnesota-is-here/
 views:

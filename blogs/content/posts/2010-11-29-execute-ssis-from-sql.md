@@ -3,6 +3,7 @@ title: Run SSIS Package from Stored Procedure
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-11-29T11:41:31+00:00
+ID: 960
 excerpt: 'There are a few methods to execute a SQL Server Integration Services (SSIS) package from T-SQL.  Very often the use of xp_cmdshell is the first choice to accomplish this task.  Xp_cmdshell has primarily been a system administration extended stored procedure.  Many types of extended stored procedures such as this one are meant for tasks that are either manual or very refined and controlled tasks.  This is all due to the requirements of the levels of sysadmin roles - or CONTROL SERVER to be exact.  Further on this topic, xp_cmdshell is disabled by default because it has been a known attack method.  Having the ability to execute xp_cmdshell exposes operating system level access.  In worst case scenarios, the SQL Server Service account is also a domain account with either Domain Admin rights or rights to other resources on the domain that are sensitive or open to damaging effects to the business.  To expose xp_cmdshell then opens one of the highest security risks relating to SQL Server.'
 url: /index.php/datamgmt/dbprogramming/execute-ssis-from-sql/
 views:
@@ -46,9 +47,11 @@ In preparation for setting the procedure to call the agent job, we need to creat
   
 A credential can be created with SSMS or T-SQL. With T-SQL, the CREATE CREDENTIAL statement is used.
 
-<pre>CREATE CREDENTIAL EmpImportUser WITH IDENTITY ='EmpImportUser'
+sql
+CREATE CREDENTIAL EmpImportUser WITH IDENTITY ='EmpImportUser'
 ,SECRET = 'EmployeeImportAccount'
-GO</pre>
+GO
+```
 
 In SSMS, right click the Credentials tree under Security and select New Credential. 
 
@@ -66,12 +69,14 @@ The Credential is then utilized in the creation of the proxy account so the step
 
 Adding a proxy can be accomplished with SSMS and T-SQL as well. With T-SQL, the sp\_add\_proxy procedure is executed with mapping to the credential.
 
-<pre>EXEC msdb.dbo.sp_add_proxy @proxy_name=N'ImportUser',@credential_name=N'ImportUser', 
+sql
+EXEC msdb.dbo.sp_add_proxy @proxy_name=N'ImportUser',@credential_name=N'ImportUser', 
 		@enabled=1
 GO
 
 EXEC msdb.dbo.sp_grant_proxy_to_subsystem @proxy_name=N'ImportUser', @subsystem_id=11
-GO</pre>
+GO
+```
 
 With SSMS, right click the Proxies tree under the SQL Server Agent section
 
@@ -95,7 +100,8 @@ Another variable will act as the SqlCommand of the source in the data flow task.
 
 The Execute SQL Task will be a direct input of the following statement
 
-<pre>IF OBJECT_ID('dbo.EmpManagers') IS NULL
+sql
+IF OBJECT_ID('dbo.EmpManagers') IS NULL
 BEGIN
 	CREATE TABLE [dbo].[EmpManagers](
 	[RecursionLevel] [int] NULL,
@@ -105,7 +111,8 @@ BEGIN
 	[ManagerID] [int] NULL,
 	[ManagerFirstName] [nvarchar](50) NULL,
 	[ManagerLastName] [nvarchar](50) NULL)
-END</pre>
+END
+```
 
 This statement checks if the table exists. If the table does not, it will be created. So this required CREATE TABLE rights to our user as well. If the create failed for any reason, a failed precedence would be used to handle the event along with event handlers. 
 
@@ -183,7 +190,9 @@ To start a job from T-SQL the system procedure sp\_start\_job is used. Sp\_start
 
 To successfully call sp\_start\_job, we are only required the job name or job id. The remaining parameters can be left NULL. So to call the CallSSIS job the execute statement would be:
 
-<pre>Exec msdb.dbo.sp_start_job @job_name = N'CallSSIS'</pre>
+sql
+Exec msdb.dbo.sp_start_job @job_name = N'CallSSIS'
+```
 
 Note that the parameters are in Unicode and should be converted as such.
 
@@ -191,7 +200,8 @@ With any statement, error handling should be used. In this example, adding the T
 
 The complete stored procedure, CallUpEmpCheck, would be as follows
 
-<pre>CREATE PROCEDURE [dbo].[CallUpEmpCheck] 
+sql
+CREATE PROCEDURE [dbo].[CallUpEmpCheck] 
 (@ID INT = NULL)
 AS
     IF @ID IS NOT NULL  
@@ -204,7 +214,8 @@ AS
 	ELSE
 	 BEGIN
 	    RAISERROR('Send right to catch!',16,1);
-	 END</pre>
+	 END
+```
 
 Once the procedure is created we are ready to execute and test the process completely through. Note that the UPDATE statement has been added to the procedure to ensure the EmplyeeID that we pass is updated in the configuration table.
 
@@ -212,11 +223,13 @@ Once the procedure is created we are ready to execute and test the process compl
 
 Earlier the ImportUser login was created and added to the operator role for SSIS in order to execute SSIS packages. In order to work with the tables in this process further right must be granted.
 
-<pre>GRANT UPDATE ON dbo.[SSIS Configurations] TO [ONPNT_XPSImportUser]
+sql
+GRANT UPDATE ON dbo.[SSIS Configurations] TO [ONPNT_XPSImportUser]
 GRANT INSERT ON dbo.EmpManagers TO [ONPNT_XPSImportUser]
 GRANT SELECT ON dbo.EmpManagers TO [ONPNT_XPSImportUser]
 GRANT CREATE TABLE TO [ONPNT_XPSImportUser]
-GRANT EXECUTE ON dbo.uspGetEmployeeManagers TO [ONPNT_XPSImportUser]</pre>
+GRANT EXECUTE ON dbo.uspGetEmployeeManagers TO [ONPNT_XPSImportUser]
+```
 
 This may seem like a lot of security for this user and in the context of AdventureWorks, CREATE TABLE is a higher level setting. When we put this into perspective to the SQL Server and even the context of AdventureWorks, the security is restricted to the configuration table, which is only damaging on execution of the SSIS package. Then the SELECT rights due to the SSIS processing in the data flow task and the INSERT. These are limited to the EmpManagers table which is related (in our demo) to the one user run processing. The user at that point is owner of that table and process. So we secured to a point much more controlled than the alternatives of SQL Server level rights by moving down to table rights and procedure execution rights.
 
@@ -224,7 +237,10 @@ This may seem like a lot of security for this user and in the context of Adventu
 
 Executing this setup is the final test. Use the following execute procedure statement to start the process
 
-<pre>EXEC dbo.[CallUpEmpCheck] @ID = 5</pre></p> 
+sql
+EXEC dbo.[CallUpEmpCheck] @ID = 5
+```
+</p> 
 
 The resulting message in the query window will be:
 

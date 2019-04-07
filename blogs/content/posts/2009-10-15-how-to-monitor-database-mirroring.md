@@ -3,6 +3,7 @@ title: How to Monitor Database Mirroring
 author: ptheriault
 type: post
 date: 2009-10-15T10:41:06+00:00
+ID: 588
 excerpt: 'This morning I came into work and went through my usual 100 or so emails.  One of the emails was from MSSQLTips.com, it was on how to monitor SQL Server Database mirroring with email alerts. By Alan Cranfield.  While agree with Alan that every DBA shoul&hellip;'
 url: /index.php/datamgmt/dbadmin/how-to-monitor-database-mirroring/
 views:
@@ -230,7 +231,8 @@ So what would be a better way to monitor and alert a DBA when there is a change 
 
 Now that we know the Event and the State here is how to add an Alert to notify you that the state of DB mirroring has changed.
 
-<pre>USE [msdb]
+sql
+USE [msdb]
 GO
 
 /****** Object:  Alert [DBM State Change]    Script Date: 10/15/2009 08:03:20 ******/
@@ -244,8 +246,8 @@ EXEC msdb.dbo.sp_add_alert @name=N'DBM State Change',
 		@wmi_namespace=N'\.rootMicrosoftSqlServerServerEventsMSSQLSERVER', 
 		@wmi_query=N'SELECT * FROM DATABASE_MIRRORING_STATE_CHANGE WHERE State = 6 ', 
 		@job_id=N'00000000-0000-0000-0000-000000000000'
-GO</pre>
-
+GO
+```
 This is an alert that I created on the principal server. I also have created a similar alert on the mirror server where I look for state = 5. These two alerts will notify me if the connection between the Principal and Mirror is lost due to network or some other failure.
   
 To receive notification when this event happens it is simple to just create an operator and have the event email the operator if and when the event conditions are met.
@@ -326,7 +328,8 @@ What other Mirror Events should every DBA monitor? I find the unsent and unresto
 
 You can also script this by using sp\_add\_alert as follows:
 
-<pre>USE [msdb]
+sql
+USE [msdb]
 GO
 
 /****** Object:  Alert [DB Mirroring Unsent Log Warning]    Script Date: 10/15/2009 08:14:29 ******/
@@ -338,6 +341,6 @@ EXEC msdb.dbo.sp_add_alert @name=N'DB Mirroring Unsent Log Warning',
 		@include_event_description_in=1, 
 		@category_name=N'[Uncategorized]', 
 		@job_id=N'00000000-0000-0000-0000-000000000000'
-GO</pre>
-
+GO
+```
 Good Luck and Happy monitoring!

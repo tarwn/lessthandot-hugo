@@ -3,6 +3,7 @@ title: Getting Flexible With NDepend 4 and CQLinq
 author: Alex Ullrich
 type: post
 date: 2012-06-04T10:45:00+00:00
+ID: 1641
 excerpt: "At my last job we had a non-functional attribute that another team used to decorate service methods that they consumed.  The other team was working on an alternative client to our WCF services, and they weren't on the same release schedule they needed t&hellip;"
 url: /index.php/architect/designingsoftware/getting-flexible-with-ndepend-4-and-cqlinq/
 views:
@@ -17,23 +18,28 @@ At my last job we had a non-functional attribute that another team used to decor
 
 In an effort to make communication between teams easier we used a CQL query like this to report changes to these methods as part of our automated builds:
 
-<pre>SELECT METHODS FROM NAMESPACES "Services"
+```SQL
+SELECT METHODS FROM NAMESPACES "Services"
 WHERE HasAttribute "OPTIONAL:Services.KnownExternalClientsAttribute"
-AND CodeWasChanged</pre>
+AND CodeWasChanged
+```
 
 This was nice, but it only got us part of the way there. This would alert us to signature changes or changes to the content of the method, but not necessarily changes to the message contracts passed in to the method. In Pseudo-CQL the query I had in mind looks something like this:
 
-<pre>SELECT TYPES FROM NAMESPACES "Services"
+```SQL
+SELECT TYPES FROM NAMESPACES "Services"
 WHERE CodeWasChanged
 AND IsUsedBy (
     SELECT METHODS FROM NAMESPACES "Services"
     WHERE HasAttribute "OPTIONAL:Services.KnownExternalClientsAttribute"
-)</pre>
+)
+```
 
 This didn&#8217;t work however (CQL doesn&#8217;t really have support for subqueries), and I couldn&#8217;t really find anything in the language that would allow us to achieve what we wanted. NDepend 4 introduces a new linq-based replacement called CQLinq that offers a lot more flexibility, so I figured I would see if I could write the query that we needed using it. It ended up being much easier than I thought &#8211; CQLinq gives us access to most (if not all) of the standard LINQ operators, and the same functions for querying code using attributes and history that we had with CQL. This is the query I came up with:
 
-<pre>// <Name&gt;Test Query for Contract Changes</Name&gt;
-warnif count &gt; 0
+```CSHARP
+// <Name>Test Query for Contract Changes</Name>
+warnif count > 0
 
 let decoratedMethods = from m in JustMyCode.Methods
     where m.HasAttribute("NDependSample.TestAttribute")
@@ -44,7 +50,8 @@ from t in JustMyCode.Types
 where  t.ParentNamespace.Name == "NDependSample.Contracts"
   && t.CodeWasChanged()
   && decoratedMethods.Using(t).Any()
-select t</pre>
+select t
+```
 
 Once we have the query we can mark it as critical, so we will have a failing build after the changes are made. Only the first build after making the changes should fail, but that would be enough to trigger an investigation that would result in communicating the changes to the other team.
 

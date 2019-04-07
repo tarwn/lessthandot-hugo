@@ -3,6 +3,7 @@ title: SSMS Tools PACK 1.1 – now with SQL Server Management Studio 2008 suppor
 author: SQLDenis
 type: post
 date: 2008-10-07T14:31:21+00:00
+ID: 168
 url: /index.php/datamgmt/datadesign/ssms-tools-pack-1-1-now-with-sql-server/
 views:
   - 5111

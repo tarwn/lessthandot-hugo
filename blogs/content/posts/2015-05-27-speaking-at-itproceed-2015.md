@@ -3,6 +3,7 @@ title: Speaking at ITPROceed 2015
 author: Koen Verbeeck
 type: post
 date: 2015-05-27T08:37:56+00:00
+ID: 3383
 url: /index.php/webdev/business-intelligence/speaking-at-itproceed-2015/
 views:
   - 23586

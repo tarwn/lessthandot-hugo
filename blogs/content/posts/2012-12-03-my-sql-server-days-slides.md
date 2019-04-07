@@ -3,6 +3,7 @@ title: My SQL Server Days slides and demos
 author: Koen Verbeeck
 type: post
 date: 2012-12-03T10:16:00+00:00
+ID: 1815
 excerpt: 'Two weeks ago I had the pleasure of giving a session on the Belgian SQL Server Days. My session was about SSIS and the new features of Change Data Capture (CDC). With new features I mean the new SSIS 2012 components made by Attunity who simplify the man&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/my-sql-server-days-slides/
 views:

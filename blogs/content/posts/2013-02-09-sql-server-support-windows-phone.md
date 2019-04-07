@@ -3,6 +3,7 @@ title: SQL Server Support Windows Phone App released
 author: SQLDenis
 type: post
 date: 2013-02-09T22:16:00+00:00
+ID: 1982
 excerpt: |
   A SQL Server Support Windows Phone App has been released to the store. This app will work on Windows Phone 7 as well as Windows Phone 8
   

@@ -3,6 +3,7 @@ title: Beware the defaults! (in windowing functions)
 author: Koen Verbeeck
 type: post
 date: 2014-10-07T12:22:28+00:00
+ID: 3007
 url: /index.php/datamgmt/dbprogramming/mssqlserver/beware-the-defaults-in-windowing-functions/
 views:
   - 6416
@@ -21,7 +22,8 @@ tags:
   Some time ago I was writing some windowing functions on a set of data. Basically I was looking for the last date an event had occurred for each type of event. Let’s illustrate with an example:
 </p>
 
-<pre>CREATE TABLE dbo.TestOver
+sql
+CREATE TABLE dbo.TestOver
 	(ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL
 	,[Group] CHAR(1) NOT NULL
 	,Value INT NOT NULL);
@@ -35,16 +37,15 @@ VALUES	 ('A',1)
 		,('B',6)
 		,('B',7)
 		,('B',8)
-		,('B',9);</pre>
-
-<p style="text-align: justify">
+		,('B',9);
+```<p style="text-align: justify">
   Using the data above, I need to find the value 4 for group A and the value 9 for group B. I first wrote the following T-SQL statement to retrieve the data:
 </p>
 
-<pre>SELECT DISTINCT [Group], MAX(Value) OVER (PARTITION BY [Group] ORDER BY Value)
-FROM dbo.TestOver;</pre>
-
-<p style="text-align: justify">
+sql
+SELECT DISTINCT [Group], MAX(Value) OVER (PARTITION BY [Group] ORDER BY Value)
+FROM dbo.TestOver;
+```<p style="text-align: justify">
   <a href="/wp-content/uploads/2014/10/query1.png"><img class="alignnone size-full wp-image-3013" src="/wp-content/uploads/2014/10/query1.png" alt="query1" width="595" height="290" srcset="/wp-content/uploads/2014/10/query1.png 595w, /wp-content/uploads/2014/10/query1-300x146.png 300w" sizes="(max-width: 595px) 100vw, 595px" /></a>
 </p>
 
@@ -70,10 +71,10 @@ FROM dbo.TestOver;</pre>
   In SQL Server 2005, the <a href="http://msdn.microsoft.com/en-us/library/ms189461(v=sql.90).aspx">OVER clause</a> was introduced and it simplified some aggregations like the one we’re doing here. When using the ranking window functions the ORDER BY clause is mandatory, but when using a regular aggregate window function the ORDER BY clause is not allowed. This gives us the following T-SQL which is the perfect solution for our problem here:
 </p>
 
-<pre>SELECT DISTINCT [Group], MAX(Value) OVER (PARTITION BY [Group])
-FROM dbo.TestOver;</pre>
-
-<p style="text-align: justify">
+sql
+SELECT DISTINCT [Group], MAX(Value) OVER (PARTITION BY [Group])
+FROM dbo.TestOver;
+```<p style="text-align: justify">
   To be honest, I completely forgot aggregate functions could be used this way. The PARTITION BY clause is optional as well, so you can have a completely empty OVER clause.
 </p>
 

@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 9 – Installing Repo
 author: Koen Verbeeck
 type: post
 date: 2013-06-11T11:34:00+00:00
+ID: 2100
 excerpt: 'Finally we are getting to the really sweet stuff: Power View. But first we have to install Reporting Services in SharePoint integrated mode. The steps we are going to follow are described in the following MSDN document: Install Reporting Services ShareP&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sharepoint-2013-bi-part-9/
 views:

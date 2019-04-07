@@ -3,6 +3,7 @@ title: Find Out What Percent Of The Log Is Being Used For Each Database In SQL S
 author: SQLDenis
 type: post
 date: 2010-01-13T15:38:54+00:00
+ID: 673
 url: /index.php/datamgmt/dbprogramming/find-out-what-percent-of-the-log-is-bein-2008/
 views:
   - 6760
@@ -22,11 +23,13 @@ tags:
 ---
 Sometimes you want to quickly see the percentage of log spaced that each database is using on your server. In SQL Server 2005 and 2008 you can use the sys.dm\_os\_performance\_counters dynamic management view to find out this information. The query below will list all database and the percentage of log spaced used. The cntr\_value column will have the percent of the log file that is being used and instance_name will be the database name.
 
-<pre>select instance_name,cntr_value from sys.dm_os_performance_counters
+sql
+select instance_name,cntr_value from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Databases'   
 and counter_name = 'Percent Log Used' 
 and instance_name <> '_Total'                                                                                                                          
-order by   cntr_value desc  </pre>
+order by   cntr_value desc  
+```
 
 Here is the output from that query.
 
@@ -43,10 +46,12 @@ Notice that I filtered out the total with this clause _and instance_name <> &#82
 
 Now let&#8217;s take a look at another query. What if I want to know the size in KB for each log size and also for all of them combined? Here is the query for that.
 
-<pre>select instance_name,cntr_value from sys.dm_os_performance_counters
+sql
+select instance_name,cntr_value from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Databases'   
 and counter_name = 'Log File(s) Size (KB)'   
-order by   cntr_value desc </pre>
+order by   cntr_value desc 
+```
 
 Here is the output from that query.
 
@@ -67,10 +72,12 @@ As you can see _Total is the first thing listed and it is actually a sum of all 
 
 Since I showed you how to do the log files, here is a way how to show the size of all the data files. here is the query for the data files
 
-<pre>select instance_name,cntr_value from sys.dm_os_performance_counters
+sql
+select instance_name,cntr_value from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Databases'   
 and counter_name = 'Data File(s) Size (KB)'   
-order by   cntr_value desc </pre>
+order by   cntr_value desc 
+```
 
 And here is the output
 
@@ -90,5 +97,5 @@ I will be back with another post tomorrow showing you how you can use the sys.dm
 
 \*** **Remember, if you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

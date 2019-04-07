@@ -3,6 +3,7 @@ title: Microsoft Enterprise Developer Conference Overview
 author: SQLDenis
 type: post
 date: 2009-05-07T11:13:16+00:00
+ID: 416
 excerpt: 'This is the second time that I went to the Enterprise Developer Conference. Due to the downturn Microsoft merged the financial and health/live sciences conferences into one. Last years main focus was High Computing, this years main focus was......tada..&hellip;'
 url: /index.php/enterprisedev/appserver/microsoft-enterprise-developer-conferenc/
 views:

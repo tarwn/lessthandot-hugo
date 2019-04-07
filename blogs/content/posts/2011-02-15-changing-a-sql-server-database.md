@@ -3,6 +3,7 @@ title: Changing a SQL Server Database Owner
 author: Jes Borland
 type: post
 date: 2011-02-15T13:37:00+00:00
+ID: 1029
 excerpt: |
   Fact: every SQL Server database has an "owner". Without a database owner, you can't view the database properties. You may run into issues executing sp_helpdb. You may get an error using "EXECUTE AS OWNER". How do you fix this?
 url: /index.php/datamgmt/dbadmin/changing-a-sql-server-database/
@@ -18,9 +19,11 @@ categories:
 ---
 Fact: every SQL Server database has an &#8220;owner&#8221;. You can check the owner of a database by running this query: 
 
-<pre>SELECT NAME, SUSER_SNAME(owner_sid) 
+sql
+SELECT NAME, SUSER_SNAME(owner_sid) 
 FROM   sys.databases 
-WHERE NAME = 'DatabaseName'</pre>
+WHERE NAME = 'DatabaseName'
+```
 
 However, there may come a day when you run into this error: 
 
@@ -60,15 +63,19 @@ The BOL syntax is:
 
 So, to use this: My “class\_type” is DATABASE, my “entity\_name” is the database name, and my “principal name” is my login. My complete statement looks like this:
 
-<pre>ALTER AUTHORIZATION ON DATABASE::AdventureWorks TO grrlgeek</pre>
+sql
+ALTER AUTHORIZATION ON DATABASE::AdventureWorks TO grrlgeek
+```
 
 I ran that successfully, and there are no more errors. 
 
 I can check the owner was changed by running my sys.databases query again. 
 
-<pre>SELECT NAME, SUSER_SNAME(owner_sid) 
+sql
+SELECT NAME, SUSER_SNAME(owner_sid) 
 FROM   sys.databases 
-WHERE NAME = 'DatabaseName'</pre>
+WHERE NAME = 'DatabaseName'
+```
 
 Lesson learned: don&#8217;t be afraid of new things!
 

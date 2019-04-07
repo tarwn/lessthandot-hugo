@@ -3,6 +3,7 @@ title: Getting started with Execution Plans
 author: Axel Achten (axel8s)
 type: post
 date: 2013-01-10T07:52:00+00:00
+ID: 1907
 excerpt: |
   Another document for the customer's DBA checklist. This time we are going to look how we find and read an Execution Plan from a query.
   Showing an Execution Plan
@@ -29,7 +30,9 @@ I will only focus on the graphical Execution Plans and in the examples the Adven
   
 To see a Query Execution plan, you need to create a query:
 
-<pre>SELECT * FROM Sales.vStoreWithContacts</pre>
+sql
+SELECT * FROM Sales.vStoreWithContacts
+```
 
 And then you click the &#8220;Display Estimated Execution Plan&#8221; or the &#8220;Include Actual Execution Plan&#8221; button in the SQL Editor Toolbar of SQL Server Management Studio.
 
@@ -91,9 +94,10 @@ As you can see, the most expensive operation is highlighted in red and the tool 
   
 When executing the following query:
 
-<pre>SELECT * FROM Sales.vStoreWithContacts
-WHERE Firstname = 'Alan'</pre>
-
+sql
+SELECT * FROM Sales.vStoreWithContacts
+WHERE Firstname = 'Alan'
+```
 You’ll see some green text in the top of the Execution Plan:
 
 <div class="image_block">
@@ -106,14 +110,15 @@ This information comes from the Dynamic Management View: sys.dm\_db\_missing\_in
   
 Are you rewriting a query and wondering which one should perform better? You can easily compare the Execution Plans of two queries. Just write these queries in one query window:
 
-<pre>SELECT * FROM Sales.vStoreWithContacts
+sql
+SELECT * FROM Sales.vStoreWithContacts
 WHERE Firstname NOT LIKE 'A%';
 
 select * FROM Sales.vStoreWithContacts
 WHERE FirstName IN (SELECT FirstName FROM Sales.vStoreWithContacts
 WHERE FirstName NOT LIKE 'A%');
-GO</pre>
-
+GO
+```
 When you execute the queries you’ll see they both return the same 70 rows but when you look at the header of the Execution Plans you’ll see that the first query costs less than the second one in this batch:
 
 <div class="image_block">

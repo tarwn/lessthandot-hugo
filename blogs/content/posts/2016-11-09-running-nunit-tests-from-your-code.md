@@ -3,6 +3,7 @@ title: Running Nunit tests from your code
 author: Christiaan Baes (chrissie1)
 type: post
 date: 2016-11-09T11:21:09+00:00
+ID: 4805
 excerpt: "How to run tests in your VB.Net script, and if you ask nicely I'm sure this works in C# too. "
 url: /index.php/uncategorized/running-nunit-tests-from-your-code/
 views:
@@ -17,7 +18,8 @@ So I had this script that makes our dev and test environment and blahblah. In ot
 
 So first of all I wrote some simple tests and found this piece of code on the [StackOverflow site][1] 
 
-<pre>Namespace TestFramework
+```vbnet
+Namespace TestFramework
 
     Public Class AssertAll
 
@@ -43,16 +45,19 @@ So first of all I wrote some simple tests and found this piece of code on the [S
         End Function
 
     End Class
-End Namespace</pre>
+End Namespace
+```
 
 This ofcourse wants you to pass it some actions which are our tests.
 
-<pre>Public Function Execute() As String
+```vbnet
+Public Function Execute() As String
             Console.WriteLine("Running tests for {0}", Me.GetType.Name)
-            Dim methods = Me.GetType().GetMethods().Where(Function(m) m.GetCustomAttributes(GetType(TestAttribute), False).Length &gt; 0)
+            Dim methods = Me.GetType().GetMethods().Where(Function(m) m.GetCustomAttributes(GetType(TestAttribute), False).Length > 0)
             Dim tests = (From t In methods Select [Delegate].CreateDelegate(GetType(Action), Me, t)).Cast(Of Action)().ToList()
             Return AssertAll.Succeed(tests.ToArray)
-        End Function</pre>
+        End Function
+```
 
 Or something like that.
   
@@ -70,7 +75,8 @@ I guess you don&#8217;t need the config or addins file.
 
 After that you can run tests with this.
 
-<pre>Imports System.Reflection
+```vbnet
+Imports System.Reflection
 Imports System.Xml
 Imports NUnit.Engine
 
@@ -123,8 +129,8 @@ Namespace TestFramework
 
     End Class
 
-End Namespace</pre>
-
+End Namespace
+```
 As you can see I have a filter on category for the above.
 
 This might be of use for you

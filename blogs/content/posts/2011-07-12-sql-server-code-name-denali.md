@@ -3,6 +3,7 @@ title: SQL Server Code Name “Denali” CTP3 is available for download
 author: SQLDenis
 type: post
 date: 2011-07-12T12:19:00+00:00
+ID: 1248
 excerpt: |
   SQL Server Code Name "Denali" CTP3 is available for download. You can get it here:
   

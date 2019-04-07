@@ -3,6 +3,7 @@ title: Why there should be SQL Content at Techdays.be
 author: Axel Achten (axel8s)
 type: post
 date: 2013-01-29T07:32:00+00:00
+ID: 1946
 excerpt: |
   On 5,6 and 7 March 2013 Microsoft Belux is organising Techdays 2013, 3 days of sessions for IT Pro's and developpers. But when checking the calendar there are no sessions about SQL Server.
   The reason is that the Belgian SQL Server User Group organises&hellip;

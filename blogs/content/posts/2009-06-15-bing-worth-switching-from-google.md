@@ -3,6 +3,7 @@ title: Bing, worth switching from Google?
 author: SQLDenis
 type: post
 date: 2009-06-15T15:25:23+00:00
+ID: 471
 url: /index.php/itprofessionals/ethicsit/bing-worth-switching-from-google/
 views:
   - 4717

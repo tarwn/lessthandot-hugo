@@ -3,6 +3,7 @@ title: Sharing ASP.net Session State Between Web Applications With SQL Server â€
 author: Alex Ullrich
 type: post
 date: 2009-01-23T17:15:00+00:00
+ID: 282
 excerpt: "I recently needed to implement a shared session between a few different applications, and didn't find a whole lot on the interwebs about how to do this (I'm starting a second life as a web developer though, it could be that I just don't know all the ter&hellip;"
 url: /index.php/webdev/serverprogramming/aspnet/sharing-asp-net-session-state-between-we/
 views:
@@ -44,28 +45,34 @@ First thing we want to do is get the MVC project ready. I got rid of everything 
 
 Next, we want to add a simple form to Index.aspx. This form just has one text input, and a submit button.
 
-<pre><form id="mainForm" runat="server" action="/Home/Entered">
+```html
+<form id="mainForm" runat="server" action="/Home/Entered">
         <p>Give it a try: <input type="text" name="inputValue" /></p>
         <input type="submit" id="submitter" />
-</form></pre>
+</form>
+```
 
 You notice its&#8217; action is the page Home/Entered, which currently does not exist. So we need to add a new MVC Content Page with that name. In the page attributes, set EnableViewStateMac=&#8221;false&#8221;. Within the content place holder, we can add this HTML:
 
-<pre><p>Entered Value was: <%= Session["enteredValue"].ToString() %></p>
+```html
+<p>Entered Value was: <%= Session["enteredValue"].ToString() %></p>
 <p>Try getting it from the service:</p>
 <p><input type="button" id="retrieveButton" text="retrieve it!" onclick="retrieve()" /><input type="text" id="retrievedValue" /></p>
 <script type="text/javascript">
     function retrieve() {
     }
-</script></pre>
+</script>
+```
 
 The javascript is not implemented yet to retrieve the value yet, but at this point there is just one thing we need to do to get the pages working, and that is add a new ActionResult to the HomeController for our new &#8220;Entered&#8221; page. All this action will really be doing is placing the input from the form submission into the session. So, 
 
-<pre>public ActionResult Entered(String inputValue)
+```csharp
+public ActionResult Entered(String inputValue)
 {
     Session["enteredValue"] = inputValue;
     return View();
-}</pre>
+}
+```
 
 Now, you can run the page and you should be able to enter a value in Index, and see it on the &#8220;Entered&#8221; page. So, we can tell that our traditional (in process) session is working. Now let&#8217;s change it to use the database. In the main web.config (not the one in the Views folder) we&#8217;ll need to add a SessionState entry within system.web (I usually do this at the bottom, having a common place to look makes my life easier). So we add this entry:
 
@@ -77,5 +84,5 @@ Stay tuned for the exciting conclusion, where we will set up the webservice and 
 
 Got a question on ASP.net? Check out our [ASP.net Forum][1]!
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=27
+ [1]: http://forum.ltd.local/viewforum.php?f=27
  [2]: /index.php/WebDev/ServerProgramming/ASPNET/sharing-asp-net-session-state-between-ap

@@ -3,6 +3,7 @@ title: What is the Dual table in Oracle and why do I need it?
 author: SQLDenis
 type: post
 date: 2013-01-06T13:36:00+00:00
+ID: 1901
 excerpt: |
   When coming from SQL Server, you might find it weird that you don't see code that looks like this
   
@@ -29,15 +30,18 @@ tags:
 ---
 When coming from SQL Server, you might find it weird that you don&#8217;t see code that looks like this in Oracle&#8217;s PL/SQL
 
-<pre>select 2
+```plsql
+select 2
 
-select sysdate --  getdate()in SQL Server</pre>
-
+select sysdate --  getdate()in SQL Server
+```
 Unlike with SQL Server that code won&#8217;t run in Oracle, Oracle requires the use of the FROM clause in its syntax. This is why Oracle has the DUAL table.
 
 If you try to run something like this
 
-<pre>select 2;</pre>
+sql
+select 2;
+```
 
 you will get the following error
 
@@ -57,7 +61,9 @@ From wikipedia
 
 Running the following code
 
-<pre>select * from dual;</pre>
+```plsql
+select * from dual;
+```
 
 Give you a resultset of 1 row with 1 column named DUMMY with the value X
 
@@ -67,11 +73,15 @@ So there you have it, this is why the Dual table exists.
 
 If you need to do something like this
 
-<pre>SELECT 3/2</pre>
+sql
+SELECT 3/2
+```
 
 in Oracle it needs to be 
 
-<pre>SELECT 3/2 from dual;</pre>
+```plsql
+SELECT 3/2 from dual;
+```
 
 However Oracle returns 1.5 while SQL Server will return 1, SQL Server does integer math and Oracle does not. That is another difference you need to be aware of, this is more problematic when moving from Oracle SQL Server and then wondering where all the decimals went.
 

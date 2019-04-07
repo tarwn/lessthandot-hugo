@@ -3,6 +3,7 @@ title: Metrics as a Service – Librato Metrics
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-08-15T10:06:00+00:00
+ID: 1687
 excerpt: "Several weeks ago I posted a three part series on the ability to use available online logging services for instrumenting applications. None of the services overwhelmed me, but there was an additional service I found that caters specifically to numeric metrics. Given that I've had a tab sitting open on the Librato site for the past several weeks, I thought it was time to actually do the review."
 url: /index.php/enterprisedev/instrumentation/metrics-as-a-service-librato/
 views:
@@ -16,7 +17,7 @@ categories:
 Several weeks ago I posted a [three][1] [part][2] [series][3] on the ability to use available online logging services for instrumenting applications. None of the services overwhelmed me, but there was an additional service I found that caters specifically to numeric metrics. Given that I&#8217;ve had a tab sitting open on the [Librato site][4] for the past several weeks, I thought it was time to actually do the review.
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/instrumentation/metrics_0.png" alt="Sample screenshot from interface" /><br /> Sample screenshot from interface
+  <img src="http://tiernok.com/LTDBlog/instrumentation/metrics_0.png" alt="Sample screenshot from interface" /><br /> Sample screenshot from interface
 </div>
 
 Spoilers: I liked it. A lot.
@@ -57,22 +58,23 @@ After signing in to your account, you can access your account information from t
 
 **sensitive.config**
 
-<pre>MetricProvider = Librato
+```text
+MetricProvider = Librato
 
 Librato.URL = https://metrics-api.librato.com/v1/metrics
 Librato.Email = your-email-here
-Librato.Token = your-token-here</pre>
-
+Librato.Token = your-token-here
+```
 Load up the sample app, click some buttons, then switch over to Metrics to see the results. You should see several new gauges and counters in your Metrics list: 
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/instrumentation/metrics_01.png" alt="Metrics List" /><br /> Metrics List
+  <img src="http://tiernok.com/LTDBlog/instrumentation/metrics_01.png" alt="Metrics List" /><br /> Metrics List
 </div>
 
 Clicking on one of these metrics will open the metric so you can see it&#8217;s display settings and a graph of it&#8217;s recent values:
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://www.tiernok.com/LTDBlog/instrumentation/metrics_2.png" alt="Metric Details" /><br /> Metric Details
+  <img src="http://tiernok.com/LTDBlog/instrumentation/metrics_2.png" alt="Metric Details" /><br /> Metric Details
 </div>
 
 We could spend a lot more time getting into the details of creating instruments, dashboards, alerts and so on, but at this point you should have everything you need to start playing with those on your own.

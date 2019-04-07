@@ -3,6 +3,7 @@ title: Silverlight Partial Classing a Webservice Reference
 author: ThatRickGuy
 type: post
 date: 2009-12-10T13:39:11+00:00
+ID: 644
 url: /index.php/webdev/webdesigngraphicsstyling/silverlight-partial-classing-a-webservic/
 views:
   - 8666
@@ -20,7 +21,8 @@ Hey Folks,
   Just ran into this minor quirk today, figured I&#8217;d share the solution. I have a Webservice that returns an array of a class defined on the server. On the client side, I wanted to extend that class to link it to some GUI elements. Enter the partial class. If you haven&#8217;t played with Partial Classes before, I&#8217;d recommend checking them out. It allows you to build additional functionality into any class. Not by inheriting from a base, but actually extending that class without creating a new one. Anyways, I wound up with the following:
 </p>
 
-<pre>Namespace srAlerts
+```vbnet
+Namespace srAlerts
     Partial Public Class Alert
 
         Private _CommentDisplay As CommentIndicator
@@ -35,8 +37,8 @@ Hey Folks,
         End Property
 
     End Class
-End Namespace</pre>
-
+End Namespace
+```
 <p style="text-indent: 30pt;">
   srAlerts is the namespace of my web service. Alert is the name of the class defined in my web service. CommentIndicatory is the GUI control that I was linking to.
 </p>

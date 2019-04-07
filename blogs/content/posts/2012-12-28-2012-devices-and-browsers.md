@@ -3,6 +3,7 @@ title: 2012 Analytics about Devices, Operating Systems and Browsers
 author: SQLDenis
 type: post
 date: 2012-12-28T12:27:00+00:00
+ID: 1861
 excerpt: "Today we are looking at Devices, Operating Systems and Browsers. Microsoft came out with a new operating system at the end of October. during the month of December, Windows 8 accounted for 7.88% of all Windows visitors. We'll have to see how long it will take before Windows 8 passes Windows XP."
 url: /index.php/itprofessionals/other/2012-devices-and-browsers/
 views:

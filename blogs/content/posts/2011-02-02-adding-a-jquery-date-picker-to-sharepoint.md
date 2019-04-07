@@ -3,6 +3,7 @@ title: Adding a jQuery Date Picker to Sharepoint
 author: ca8msm
 type: post
 date: 2011-02-02T13:58:00+00:00
+ID: 1028
 excerpt: |
   Here's an example of how you can add jQuery date pickers to input fields within your Sharepoint websites.
   First, so go the Site Settings page and select the Master pages link:

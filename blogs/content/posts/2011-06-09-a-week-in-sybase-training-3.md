@@ -3,6 +3,7 @@ title: A week in Sybase Training, what did I learn, day 4
 author: SQLDenis
 type: post
 date: 2011-06-09T17:54:00+00:00
+ID: 1213
 excerpt: |
   This is day 4 of my training and today it is going to focus on Bulk Copy, Automatic Recovery, Checking and Fixing Database Consistency and Planning for Backups
   
@@ -92,7 +93,8 @@ USR		user
 V		view
 WS		user-defined Web service
 WSC		Web service consumer
-XP		extended stored procedure</pre>
+XP		extended stored procedure
+</pre>
 
 Here are two examples. Both of these generate DDL for the primary and unique keys of all the tables in a database that begin with “PK”:
 
@@ -114,8 +116,10 @@ You can use bcp to copy data into partitioned tables by executing in parallel wi
 
 You need these options turned on
 
-<pre>exec sp_dboption MyDb, "select into/bulkcopy/pllsort", true
-exec sp_dboption MyDb, "trunc log on chkpt", true</pre>
+sql
+exec sp_dboption MyDb, "select into/bulkcopy/pllsort", true
+exec sp_dboption MyDb, "trunc log on chkpt", true
+```
 
 The bcp syntax is more or less the same as in SQL Server so I won&#8217;t go into any detail here.
   
@@ -130,7 +134,8 @@ This was mostly about the log, dirty pages, when checkpoints occur, talking abou
 Specifies the order in which user databases are recovered and lists the user-defined recovery order of a database or all databases.
 
 <pre>sp_dbrecovery_order [database_name [, rec_order 
-	[, force [ relax | strict ]]]] </pre>
+	[, force [ relax | strict ]]]] 
+</pre>
 
 Also discussed were full and incremental backups.
 

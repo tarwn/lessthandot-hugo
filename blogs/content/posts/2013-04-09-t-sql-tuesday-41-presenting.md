@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #41 – Presenting'
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-04-09T08:32:00+00:00
+ID: 2062
 excerpt: 'This month’s T-SQL Tuesday topic is all about speaking.  Before getting into the topic, I’d like to thank Bob (Captain Bob as I’ve now seen his license plate) for hosting this month.  T-SQL Tuesday is a great idea, started by Adam Machanic.  It provides&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/t-sql-tuesday-41-presenting/
 views:

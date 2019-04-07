@@ -3,6 +3,7 @@ title: SQL Server DBA Tip 4 – Server Considerations – 32 bit / 64 bit
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-29T10:11:00+00:00
+ID: 1129
 excerpt: |
   Having to make a decision between 32 bit and 64 bit servers is becoming less common.  64 bit servers are the predominant platform when purchasing hardware.  With that said, existing hardware still varies greatly between the two platforms. 
   Purchasing n&hellip;

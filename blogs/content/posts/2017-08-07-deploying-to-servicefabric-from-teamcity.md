@@ -3,6 +3,7 @@ title: Deploying to ServiceFabric from TeamCity
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-08-07T12:30:56+00:00
+ID: 8755
 url: /index.php/enterprisedev/cloud/azure/deploying-to-servicefabric-from-teamcity/
 views:
   - 3252
@@ -100,9 +101,11 @@ I had to do this several times, so I also got to learn how to update versions:
         Option 1: Right click in Visual Studio, select Publish, use the link near the bottom to edit your deployment options and then close the dialog, choose &#8220;yes&#8221; when it asks if you want to save the profile&#8221;
       </li>
       <li>
-        Option 2: Open the relevant PublishProfile XML file and add this to the bottom for the default Unmonitored Upgrade settings <pre><UpgradeDeployment Mode="UnmonitoredAuto" Enabled="true"&gt;
-    <Parameters UpgradeReplicaSetCheckTimeoutSec="1" Force="True" /&gt;
-</UpgradeDeployment&gt;</pre>
+        Option 2: Open the relevant PublishProfile XML file and add this to the bottom for the default Unmonitored Upgrade settings <pre lang="xml">
+<UpgradeDeployment Mode="UnmonitoredAuto" Enabled="true">
+    <Parameters UpgradeReplicaSetCheckTimeoutSec="1" Force="True" />
+</UpgradeDeployment>
+</pre>
       </li>
     </ul>
   </li>
@@ -113,10 +116,10 @@ I had to do this several times, so I also got to learn how to update versions:
   <li>
     Open [YourProject]Pkg\ServiceManifest.xml <ol style="padding-left: 40px">
       <li>
-        Update the version in either <code><CodePackage Name="Code" Version="1.0.3"&gt;</code> or <code><ConfigPackage Name="Config" Version="1.0.4" /&gt;</code>
+        Update the version in either <code><CodePackage Name="Code" Version="1.0.3"></code> or <code><ConfigPackage Name="Config" Version="1.0.4" /></code>
       </li>
       <li>
-        Update the Package version in the <code><ServiceManifest … Version="1.0.2" …&gt;</code> root element
+        Update the Package version in the <code><ServiceManifest … Version="1.0.2" …></code> root element
       </li>
       <li>
         Save
@@ -127,10 +130,10 @@ I had to do this several times, so I also got to learn how to update versions:
   <li>
     Open ApplicationManifest.xml <ol style="padding-left: 40px">
       <li>
-        Find <code><ServiceManifestRef ..&gt;</code> and update ServiceManifestVersion to match the ServiceManifest version above
+        Find <code><ServiceManifestRef ..></code> and update ServiceManifestVersion to match the ServiceManifest version above
       </li>
       <li>
-        Update the ApplicationTypeVersion property in the <code><ApplicationManifest … &gt;</code> root element
+        Update the ApplicationTypeVersion property in the <code><ApplicationManifest … ></code> root element
       </li>
       <li>
         Save
@@ -237,8 +240,9 @@ Now that I have a step building the files I need, I&#8217;ll add a new Build Con
 
 I have one build step, a powershell command that matches the manual one I was running earlier that is set to treat powershell errors as errors (instead of the default, warnings). I run this as a single PowerShell source script so I can use dot notation (ServiceFabric scripts make some assumptions about having the connection variable available):
 
-<pre>Invoke-Expression ". .\Deploy-FabricApplication.ps1 -ApplicationPackagePath ../../../Artifacts -PublishProfileFile ../PublishProfiles/LocalCluster.xml -ApplicationParameter @{PhantomAgent_InstanceCount='1'; CoordinatorURL='http://app.launchready.co'}"</pre>
-
+```text
+Invoke-Expression ". .\Deploy-FabricApplication.ps1 -ApplicationPackagePath ../../../Artifacts -PublishProfileFile ../PublishProfiles/LocalCluster.xml -ApplicationParameter @{PhantomAgent_InstanceCount='1'; CoordinatorURL='http://app.launchready.co'}"
+```
 My build step then runs this command like so:
 
 <div id="attachment_8765" style="width: 1034px" class="wp-caption aligncenter">

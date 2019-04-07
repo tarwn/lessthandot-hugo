@@ -3,6 +3,7 @@ title: Catch my keynote at Chicago Code Camp 2017!
 author: Jes Borland
 type: post
 date: 2017-03-28T20:37:55+00:00
+ID: 8628
 url: /index.php/itprofessionals/professionaldevelopment/catch-my-keynote-at-chicago-code-camp-2017/
 views:
   - 3660

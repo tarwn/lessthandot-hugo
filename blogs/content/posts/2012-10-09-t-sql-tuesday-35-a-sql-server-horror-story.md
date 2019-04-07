@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #35: Soylent Green SQL Server'
 author: Jes Borland
 type: post
 date: 2012-10-09T17:43:00+00:00
+ID: 1749
 excerpt: |
   It’s October. That means fall, colorful leaves on the trees, soups simmering on the stove, and…horror movies. I love a good horror flick.
    

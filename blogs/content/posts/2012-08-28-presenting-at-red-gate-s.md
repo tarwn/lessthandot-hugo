@@ -3,6 +3,7 @@ title: Presenting at Red Gate’s SQL in the City Chicago 2012
 author: Jes Borland
 type: post
 date: 2012-08-28T15:39:00+00:00
+ID: 1702
 excerpt: Red Gate hosts SQL in the City events– a full day of SQL Server sessions, demos from the developers, networking – even snacks! The best part? It’s free!
 url: /index.php/itprofessionals/professionaldevelopment/presenting-at-red-gate-s/
 views:

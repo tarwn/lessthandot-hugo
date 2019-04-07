@@ -3,6 +3,7 @@ title: What does the business want/need?
 author: chopstik
 type: post
 date: -001-11-30T00:00:00+00:00
+ID: 1703
 excerpt: "During a conversation with fellow blogger chrissie1 last year (yes, I'm really behind on this), the topic of technology and ROI (return on investment) and how IT integrates with business came up. It's an interesting subject and something that is likely&hellip;"
 draft: true
 url: /?p=1703

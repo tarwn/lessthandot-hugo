@@ -3,6 +3,7 @@ title: Removing OS Files Through a Stored Procedure
 author: SQLology ~ Kim Tessereau
 type: post
 date: 2011-05-07T13:00:00+00:00
+ID: 1162
 excerpt: |
   Deleting OS files from a stored procedure:  
    

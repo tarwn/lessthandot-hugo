@@ -3,6 +3,7 @@ title: A week in Sybase Training, what did I learn, day 5
 author: SQLDenis
 type: post
 date: 2011-06-10T14:39:00+00:00
+ID: 1214
 excerpt: |
   This is day 4 of my training and today it is going to focus on Backups, Advanced Backup Techniques, Sybase Central and Monitoring the System
   
@@ -32,8 +33,10 @@ This is day 5 of my training and today it is going to focus on Backups, Advanced
 
 Instead of backup and restore Sybase uses the commands dump and load, SQL Server people will be familiar with dump devices and the sp_addumpdevice stored procedure. In order to be able to perform backup, you first need to make sure that the Backup Server is running. You also need to add a dump, device, below is some sample syntax
 
-<pre>sp_addumpdevice "disk", "db_dump_device",
-"/home/usr/u/someserver/sa/db_dump_device.dat"</pre>
+sql
+sp_addumpdevice "disk", "db_dump_device",
+"/home/usr/u/someserver/sa/db_dump_device.dat"
+```
 
 **Database backups**
   
@@ -41,9 +44,11 @@ This is pretty much the same as SQL Server, it is a full database backup. Sybase
 
 Here is a sample dump statement
 
-<pre>dump database pubs2
+sql
+dump database pubs2
     to "/dev/db_dump_device"
-    with init</pre>
+    with init
+```
 
 **Log backups**
   
@@ -103,7 +108,8 @@ Here is the complete syntax
 		retaindays = number_days,
 		[noinit | init],
 		notify = {client | operator_console}, 
-		standby_access }]</pre>
+		standby_access }]
+</pre>
 
 **Restores**
   
@@ -113,8 +119,10 @@ The load syntax is the same as the dump syntax. Instead of _dump_ you use _load_
 
 Example
 
-<pre>load database pubs2 
-    from "/dev/db_dump_device"</pre>
+sql
+load database pubs2 
+    from "/dev/db_dump_device"
+```
 
 ## Advanced Backup Techniques
 
@@ -169,8 +177,10 @@ Worker Process Management	wpm</pre>
 
 Here is a memory sample
 
-<pre>sp_sysmon begin_sample
+sql
+sp_sysmon begin_sample
 go
 -- do something or wait
 sp_sysmon end_sample, memory
-go</pre>
+go
+```

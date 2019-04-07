@@ -3,6 +3,7 @@ title: 'SQL Advent 2011 Day 24: Index REBUILD and REORGANIZE'
 author: SQLDenis
 type: post
 date: 2011-12-24T11:47:00+00:00
+ID: 1463
 excerpt: 'Today we are going to look at how to recreate and defragment indexes. Back in the SQL Server 2000 days you would do a CREATE INDEX WITH DROP_EXISTING/DBCC DBREINDEX  or DBCC INDEXDEFRAG. To check fragmentation, you would use DBCC SHOWCONTIG. To check fragmentation in SQL Server 2005 and up, you now can use the Dynamic Management View sys.dm_db_index_physical_stats.  To rebuild an index, you use ALTER INDEX IndexName REBUILD; to defragment and index, you use ALTER INDEX IndexName REORGANIZE;'
 url: /index.php/datamgmt/datadesign/index-rebuild-and-reorganize-sql/
 views:
@@ -24,33 +25,41 @@ This is the third indexing post in this series, we already looked at [Filtered I
 
 Let&#8217;s write some T-SQL to see this all in action, first create this table.
 
-<pre>CREATE TABLE TestIndex (name1 varchar(500)not null,
+sql
+CREATE TABLE TestIndex (name1 varchar(500)not null,
 id int not null,
 userstat int not null,
 name2 varchar(500) not null,
-SomeVal uniqueidentifier not null)</pre>
+SomeVal uniqueidentifier not null)
+```
 
 Now insert 50000 rows
 
-<pre>INSERT TestIndex
+sql
+INSERT TestIndex
 SELECT top 50000 s.name,s.id,s.userstat,s2.name,newid() 
 FROM master..sysobjects s
-CROSS JOIN master..sysobjects s2</pre>
+CROSS JOIN master..sysobjects s2
+```
 
 Now create this index
 
-<pre>CREATE CLUSTERED INDEX IX_TestIndex_Index ON TestIndex(SomeVal)</pre>
+sql
+CREATE CLUSTERED INDEX IX_TestIndex_Index ON TestIndex(SomeVal)
+```
 
 Now let us look at some data by using the sys.dm\_db\_index\_physical\_stats Dynamic Management View. 
 
-<pre>SELECT Object_name(object_id) as Tablename,s.name as Indexname
+sql
+SELECT Object_name(object_id) as Tablename,s.name as Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent
 ,page_count
 FROM sys.dm_db_index_physical_stats (DB_ID(), NULL, NULL , NULL, N'LIMITED') d
 join sysindexes s on d.object_id = s.id
 and d.index_id = s.indid
-and s.name ='IX_TestIndex_Index'</pre>
+and s.name ='IX_TestIndex_Index'
+```
 
 (Result Set) 
 
@@ -104,8 +113,10 @@ and s.name ='IX_TestIndex_Index'</pre>
 
 That is good, almost no fragmentation, let&#8217;s change that shall we? You remember [not to cluster an index on a uniqueidentifier when using the NEWID function][4] right? That will completely fragment your index because of page splits
 
-<pre>UPDATE TestIndex
-SET SomeVal = NEWID()</pre>
+sql
+UPDATE TestIndex
+SET SomeVal = NEWID()
+```
 
 Okay, now you can see that the index is completely fragmented, we are also using 955 pages to store the data instead of 451
   
@@ -163,8 +174,10 @@ There are two ways to fix fragmentation, one is to reorganize the index and the 
   
 Here is how to do a REORGANIZE
 
-<pre>ALTER INDEX IX_TestIndex_Index ON TestIndex
-REORGANIZE;</pre>
+sql
+ALTER INDEX IX_TestIndex_Index ON TestIndex
+REORGANIZE;
+```
 
 (Result Set) 
 
@@ -220,8 +233,10 @@ As you can see after the reorganize(DBCC INDEXDEFRAG for you SQL Server 2000 fol
 
 Just for fun let&#8217;s also rebuild (Drop and recreate/DBCC REINDEX for you SQL Server 2000 folks) the index
 
-<pre>ALTER INDEX IX_TestIndex_Index ON TestIndex
-REBUILD;</pre>
+sql
+ALTER INDEX IX_TestIndex_Index ON TestIndex
+REBUILD;
+```
 
 (Result Set)
 
@@ -295,7 +310,8 @@ The sys.dm\_db\_index\_usage\_stats dynamic management view is extremely helpful
 
 Run the query below
 
-<pre>SELECT
+sql
+SELECT
 TableName = OBJECT_NAME(s.[OBJECT_ID]),
 IndexName = i.name,
 s.last_user_seek,
@@ -323,7 +339,8 @@ s.[OBJECT_ID] = i.[OBJECT_ID]
 AND s.index_id = i.index_id
 WHERE
 s.database_id = DB_ID()
-AND OBJECTPROPERTY(s.[OBJECT_ID], 'IsMsShipped') = 0;</pre>
+AND OBJECTPROPERTY(s.[OBJECT_ID], 'IsMsShipped') = 0;
+```
 
 Note that every individual seek, scan, lookup, or update on the specified index by one query execution is counted as a use of that index and increments the corresponding counter in this view. Information is reported both for operations caused by user-submitted queries, and for operations caused by internally generated queries, such as scans for gathering statistics.
 

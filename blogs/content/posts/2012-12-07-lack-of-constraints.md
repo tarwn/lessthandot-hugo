@@ -3,6 +3,7 @@ title: 'SQL Advent 2012 Day 7: Lack of constraints'
 author: SQLDenis
 type: post
 date: 2012-12-07T13:20:00+00:00
+ID: 1833
 excerpt: |
   This is day seven of the SQL Advent 2012 series of blog posts. Today we are going to look at constraints
   

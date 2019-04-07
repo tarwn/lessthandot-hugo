@@ -3,6 +3,7 @@ title: 'SQL Server 2008 R2  August Community Technology Preview (CTP) Announced'
 author: SQLDenis
 type: post
 date: 2009-08-10T12:56:00+00:00
+ID: 534
 excerpt: |
   Microsoft has just announced the release of the August Community Technology Preview (CTP) of SQL Server 2008 R2. You might have heard about this before when people talked about Kilimanjaro and Project Gemini.
   
@@ -123,5 +124,5 @@ A data-tier application (DAC) simplifies the development, deployment, and manage
  [2]: http://blogs.technet.com/dataplatforminsider/archive/2009/08/10/download-sql-server-2008-r2-august-ctp-today.aspx
  [3]: http://msdn.microsoft.com/en-us/library/bb500435(SQL.105).aspx
  [4]: http://msdn.microsoft.com/en-us/library/cc645579(SQL.105).aspx
- [5]: http://forum.lessthandot.com/viewforum.php?f=17
- [6]: http://forum.lessthandot.com/viewforum.php?f=22
+ [5]: http://forum.ltd.local/viewforum.php?f=17
+ [6]: http://forum.ltd.local/viewforum.php?f=22

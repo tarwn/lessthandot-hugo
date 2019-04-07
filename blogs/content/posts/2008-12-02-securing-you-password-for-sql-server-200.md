@@ -3,6 +3,7 @@ title: Securing your password for SQL Server 2005 and 2008 and more
 author: Ted Krueger (onpnt)
 type: post
 date: 2008-12-02T12:31:09+00:00
+ID: 229
 url: /index.php/datamgmt/datadesign/securing-you-password-for-sql-server-200/
 views:
   - 26579
@@ -47,7 +48,8 @@ Here are the steps in order
 
 7. You can select on it to see by using the DecryptByKey function and then ALWAYS close your key
 
-<pre>CREATE TABLE SSPasswordList (EncrypPwdPhrase VARBINARY(255),UserN Varchar(255), SystemN Varchar(255), SystemType varchar(3))
+sql
+CREATE TABLE SSPasswordList (EncrypPwdPhrase VARBINARY(255),UserN Varchar(255), SystemN Varchar(255), SystemType varchar(3))
 Go
 CREATE CERTIFICATE PasswordCert 
 ENCRYPTION BY PASSWORD = 'mycert.1'
@@ -69,11 +71,13 @@ INSERT INTO SSPasswordList (EncrypPwdPhrase,UserN,SystemN,SystemType) VALUES (En
 SELECT CONVERT(VARCHAR(20), DecryptByKey(SSPasswordList.EncrypPwdPhrase, 1)) AS Data,* FROM SSPasswordList
 
 CLOSE SYMMETRIC KEY PasswordKey
-Go</pre>
+Go
 
+```
 Let&#8217;s make this easy for us to use now. create these two proc&#8217;s in your DBA database
 
-<pre>Create Proc [dbo].[GrabPassword] (@userN varchar(610))
+sql
+Create Proc [dbo].[GrabPassword] (@userN varchar(610))
 As
 SET NOCOUNT ON
 OPEN SYMMETRIC KEY PasswordKey DECRYPTION BY CERTIFICATE PasswordCert WITH PASSWORD ='mycert.1';
@@ -87,11 +91,12 @@ Go
 
 Create proc [dbo].[GrabNameList](@type varchar(255))
 as 
-select 'User: ' + UserN + ' On: ' + SystemN from SSPasswordList where SystemType = @type</pre>
-
+select 'User: ' + UserN + ' On: ' + SystemN from SSPasswordList where SystemType = @type
+```
 So how can we use this then. Let&#8217;s do this. I&#8217;m not going to talk about how to write ASP.NET or C# or anything on IIS etc&#8230; There are plenty of other things out there to help you with that. I&#8217;m just giving you the code so you can try it out. Create a new web site in VS.NET (I&#8217;m on 2.0 and 2005). In your Default.aspx replace the code with the below
 
-<pre><%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+```html
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 <% @ Import Namespace="System.Data.SqlClient" %>
 <% @ Import Namespace="System.Data" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -279,11 +284,12 @@ break;
 %>
 <script type="text/javascript">selList();</script>
 </body>
-</html></pre>
-
+</html>
+```
 Code behind
 
-<pre>using System;
+```csharp
+using System;
 using System.Data;
 using System.Configuration;
 using System.Web;
@@ -321,8 +327,9 @@ conn.Dispose();
 cmd.Dispose();
 adt.Dispose();
 }
-}</pre>
+}
 
+```
 OK explanations. First I control mostly everything by means of active directory. You probably should as well. This code above will utilize two groups, your typical domain admins group and then a DBA group. All my DBA&#8217;s are in this group (me 😉 right now). If the person executing this is not in the DBA group then they cannot see SQL Server authenticated passwords (type SQL). If they are not in the domain admin group then they can&#8217;t see domain accounts (type ADM). In order to get this code to work you will need to either comment those out or create the groups. I would create the groups and use this correctly as it will be more secure that way to normal users finding the site and checking the passwords out.
 
 Now go delete that excel file and secure your passwords!!!

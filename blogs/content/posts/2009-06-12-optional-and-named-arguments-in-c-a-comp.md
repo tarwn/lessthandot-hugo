@@ -3,6 +3,7 @@ title: 'Optional and named arguments in C# a comparison with SQL Server stored p
 author: SQLDenis
 type: post
 date: 2009-06-12T13:29:57+00:00
+ID: 467
 url: /index.php/desktopdev/mstech/optional-and-named-arguments-in-c-a-comp/
 views:
   - 4627
@@ -24,7 +25,8 @@ So let&#8217;s get started. First the SQL Server version
   
 Create the following stored procedure which has 3 optional parameters
 
-<pre>create procedure OptionalTest
+sql
+create procedure OptionalTest
 @Param1 varchar(10),
 @Param2 varchar(10) = 'Two',
 @Param3 varchar(10) = 'Three',
@@ -36,11 +38,14 @@ begin
 	print '@Param2  = ' + @Param2
 	print '@Param3  = ' + @Param3
 	print '@Param4  = ' + coalesce(@Param4,'')
-end</pre>
+end
+```
 
 Execute it with just the first parameter
 
-<pre>exec OptionalTest 'bla'</pre>
+sql
+exec OptionalTest 'bla'
+```
 
 Here is the output
   
@@ -54,7 +59,9 @@ Here is the output
 
 When executing it with values for the first two parameters the output for the 2nd parameter changes
 
-<pre>exec OptionalTest 'bla' ,'Twelve'</pre>
+sql
+exec OptionalTest 'bla' ,'Twelve'
+```
 
 @Param1 = bla
   
@@ -66,7 +73,9 @@ When executing it with values for the first two parameters the output for the 2n
 
 When executing with three parameters the third value changes
 
-<pre>exec OptionalTest 'bla' ,'Twelve','Thirsty'</pre>
+sql
+exec OptionalTest 'bla' ,'Twelve','Thirsty'
+```
 
 @Param1 = bla
   
@@ -78,7 +87,9 @@ When executing with three parameters the third value changes
 
 And with four parameters all the values that are passed in are printed
 
-<pre>exec OptionalTest 'bla' ,'Twelve','Thirsty','Forty'</pre>
+sql
+exec OptionalTest 'bla' ,'Twelve','Thirsty','Forty'
+```
 
 @Param1 = bla
   
@@ -90,7 +101,9 @@ And with four parameters all the values that are passed in are printed
 
 If we pass in the first parameter and we olso want to pass in the third parameter we need to use named parameters, in this case we do this @Param3 = &#8216;Thirsty&#8217;
 
-<pre>exec OptionalTest 'bla' ,@Param3 = 'Thirsty'</pre>
+sql
+exec OptionalTest 'bla' ,@Param3 = 'Thirsty'
+```
 
 @Param1 = bla
   
@@ -102,7 +115,9 @@ If we pass in the first parameter and we olso want to pass in the third paramete
 
 If you want to pass in the first and the fourt parameter then you need to name the fourth one
 
-<pre>exec OptionalTest 'bla' ,@Param4 = 'Thirsty'</pre>
+sql
+exec OptionalTest 'bla' ,@Param4 = 'Thirsty'
+```
 
 @Param1 = bla
   
@@ -114,7 +129,9 @@ If you want to pass in the first and the fourt parameter then you need to name t
 
 Omitting parameters won&#8217;t run or parse for that matter
 
-<pre>exec OptionalTest 'bla' ,,,'Thirsty'</pre>
+sql
+exec OptionalTest 'bla' ,,,'Thirsty'
+```
 
 Server: Msg 102, Level 15, State 1, Line 1
   
@@ -122,7 +139,9 @@ Incorrect syntax near &#8216;,&#8217;.
 
 You can use nulls but as you can see from the output nothing gets printed at all for paraeter 2 or 3, this is because when you concatenate a NULL value with something else you get nothing back
 
-<pre>exec OptionalTest 'bla' ,null,null,'Thirsty'</pre>
+sql
+exec OptionalTest 'bla' ,null,null,'Thirsty'
+```
 
 @Param1 = bla
 
@@ -130,7 +149,8 @@ You can use nulls but as you can see from the output nothing gets printed at all
 
 Now we can take a look at the c# version, the c# version is almost identical except that the first parameter is optional where this is not the case with the proc
 
-<pre>using System;
+```csharp
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -180,7 +200,8 @@ namespace ConsoleApplication1
             return 0;
         }
     }
-}</pre>
+}
+```
 
 Here is the output from those calls
 
@@ -262,12 +283,16 @@ p.OptionalTest(&#8220;bla&#8221;,param4:&#8221;Thirsty&#8221;)
 
 Now you might ask yourself why do we need this? Have you ever called Office COM components? Here is what you would do now
 
-<pre>word.Documents.Add()</pre>
+```csharp
+word.Documents.Add()
+```
 
 instead of this
 
-<pre>word.Documents.Add(ref oTemplate, ref missing, ref missing, ref
-isVisible);</pre>
+```csharp
+word.Documents.Add(ref oTemplate, ref missing, ref missing, ref
+isVisible);
+```
 
 Some of these things might take up to 50 parameters and most of them might be optional, in a case like that optional and named parameters are great!!
 

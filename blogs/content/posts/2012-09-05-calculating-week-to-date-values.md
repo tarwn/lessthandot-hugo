@@ -3,6 +3,7 @@ title: Calculating Week-To-Date values using DAX
 author: joshuafennessy
 type: post
 date: 2012-09-06T01:17:00+00:00
+ID: 1713
 excerpt: 'The expression language of Tabular Mode SSAS – DAX – provides several great time intelligence functions.  One of those it does not provide though a composite function – like DATESMTD or DATESQTD – is one to calculate Week-To-Date summations.  To calcula&hellip;'
 url: /index.php/datamgmt/datadesign/calculating-week-to-date-values/
 views:

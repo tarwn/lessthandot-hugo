@@ -3,6 +3,7 @@ title: Real World Azure – Queue PopReceiptMismatch Bug
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-09-09T12:41:00+00:00
+ID: 2151
 excerpt: |
   This week I'm starting a new series on "Real World Azure". These are stories or issues I have run into while working with Azure in the "Real World". Today we're looking at a bug in the Azure API for Queue Services that appears to have been around for at&hellip;
 url: /index.php/desktopdev/mstech/real-world-azure-queue-popreceiptmismatch/
@@ -83,14 +84,15 @@ So it makes sense that if we GetMessage and somehow have an out of date PopRecei
 
 **Actual Response:**
 
-<pre><?xml version="1.0" encoding="utf-8"?&gt;
-<Error&gt;
-   <Code&gt;MessageNotFound</Code&gt;
-   <Message&gt;The specified message does not exist.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Error>
+   <Code>MessageNotFound</Code>
+   <Message>The specified message does not exist.
 RequestId:98bd9fb1-d32f-45bd-9159-c900a9b2fed3
-Time:2013-09-07T17:04:30.5469796Z</Message&gt;
-</Error&gt;</pre>
-
+Time:2013-09-07T17:04:30.5469796Z</Message>
+</Error>
+```
 Wait, what? 404, MessageNotFound, &#8220;The specified message does not exist.&#8221;? 
 
 That doesn&#8217;t match the documentation OR sound correct?
@@ -101,7 +103,8 @@ I&#8217;ve written a series of unit tests that show that you receive &#8220;Item
 
 [AzureQueueIssues/PopReceiptMismatchReturnsWrongError.cs][7] (Full code available on Github)
 
-<pre>[Test]
+```csharp
+[Test]
 public void UpdateMessage_UsingIncorrectPopReceipt_Returns400PopReceiptMismatch()
 {
 	// Create the queue client
@@ -146,8 +149,8 @@ public void UpdateMessage_UsingIncorrectPopReceipt_Returns400PopReceiptMismatch(
 	// documented response
 	Assert.AreEqual(Error_PopReceiptMismatchMessage, status);
 	Assert.AreEqual(ErrorCode_PopReceiptMismatch, statusCode);
-}</pre>
-
+}
+```
 By getting a Message, allowing it&#8217;s visibility timeout to expire, and getting it a second time, we can ensure the original popreceipt is no longer valid.
 
 (and that I can&#8217;t spell definitely without spellcheck)
@@ -203,7 +206,7 @@ Why do the PopReceipts change on Updates at all? I can&#8217;t think of a single
 More Real World Azure to come. Technical issues, how to work with support and their limitations, my personal known issues list, and so on.
 
  [1]: http://www.windowsazure.com/en-us/develop/net/how-to-guides/queue-service/ "Azure Queue Service on WindowsAzure.com"
- [2]: http://www.tiernok.com/LTDBlog/RealWorldAzure/TwoStepDequeue.png
+ [2]: http://tiernok.com/LTDBlog/RealWorldAzure/TwoStepDequeue.png
  [3]: http://msdn.microsoft.com/en-us/library/windowsazure/dd179357.aspx
  [4]: http://msdn.microsoft.com/en-us/library/windowsazure/dd179446.aspx
  [5]: http://msdn.microsoft.com/en-us/library/windowsazure/dd179347.aspx

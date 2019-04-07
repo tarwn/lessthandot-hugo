@@ -3,6 +3,7 @@ title: A Communications Hack for Helpful Ideas
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-11-03T17:51:25+00:00
+ID: 4711
 url: /index.php/itprofessionals/helpful-developers-and-angry-coworkers/
 views:
   - 3025

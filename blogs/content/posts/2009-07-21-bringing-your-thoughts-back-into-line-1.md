@@ -3,6 +3,7 @@ title: Bringing your thoughts back into line
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-07-21T12:36:26+00:00
+ID: 517
 url: /index.php/itprofessionals/ethicsit/bringing-your-thoughts-back-into-line-1/
 views:
   - 5491

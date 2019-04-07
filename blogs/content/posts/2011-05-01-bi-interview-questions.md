@@ -3,6 +3,7 @@ title: BI Interview Questions….
 author: SQLology ~ Kim Tessereau
 type: post
 date: 2011-05-01T14:44:00+00:00
+ID: 1153
 excerpt: 'Recently I had to find a BI resource to do some ETL work for me.  I wanted to make sure I had the right person for the job so I came up with a list of interview questions that proved out to be spot on.  It really helped me weed out the folks that knew a&hellip;'
 url: /index.php/datamgmt/datadesign/bi-interview-questions/
 views:

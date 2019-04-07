@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday#15 – Automation with PowerShell (Replace with RegEx)'
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-02-08T11:46:00+00:00
+ID: 1033
 excerpt: 'The big man with the camera, Pat Wright (Blog | Twitter) is holding T-SQL Tuesday this month.  The topic this month is Automation with T-SQL or with PowerShell (or a mix of both).  Most know that when I say automation, SSIS is the first thing to come to mind.  I’ve taken SSIS and abused and tuned it to automate just about every DBA task that is known to SQL Server.  I’ve started to take my own advice over the last year though.  I’ve taken PowerShell to heart on how rapidly you can write, execute and automate scripts to handle some of my SSIS packages.  The ultimate goal is always to spend less time writing these automation initiatives and getting them in place so they are working for us.'
 url: /index.php/datamgmt/dbprogramming/powershell-replace-with-regex/
 views:
@@ -32,11 +33,13 @@ At first thought, the task seemed simple.  Just replace all NOLOCK matches, rig
 
 With AdventureWorks, you could do anyone of the following
 
-<pre>SELECT * FROM HumanResources.Department WITH (NOLOCK,INDEX(AK_Department_Name))
+sql
+SELECT * FROM HumanResources.Department WITH (NOLOCK,INDEX(AK_Department_Name))
 SELECT * FROM HumanResources.Department WITH (INDEX(AK_Department_Name),NOLOCK)
 SELECT * FROM HumanResources.Department NOLOCK
 SELECT * FROM HumanResources.Department (NOLOCK)
-SELECT * FROM HumanResources.Department WITH (NOLOCK)</pre>
+SELECT * FROM HumanResources.Department WITH (NOLOCK)
+```
 
 The RegEx pattern started to get a bit messy to say the least.  When something starts to get overcomplicated and working against me, I like to step back and review the task.  When doing this the simplicity of what needs to happen comes out.  Reviewing the cases that could come up, we see that there are two primary conditions.  The condition in which NOLOCK is in the middle of other hints and the comma is in the pattern.  The other is when NOLOCK is used on its own. 
 
@@ -60,7 +63,8 @@ So this covers the conditions identified so far (until we find more as the case 
 
 To use Posh now to strip these values out, we can do the following
 
-<pre>foreach ($str in Get-Content "C:posh.sql")
+```csharp
+foreach ($str in Get-Content "C:posh.sql")
 {
 if([regex]::IsMatch($str, "((({0,1}NOLOCK,)|(,NOLOCK({0,1}))","IgnoreCase")) 
         {$strReplace = [regex]::replace($str, "((NOLOCK,)|(,NOLOCK({0,1}))" , "")
@@ -68,16 +72,18 @@ if([regex]::IsMatch($str, "((({0,1}NOLOCK,)|(,NOLOCK({0,1}))","IgnoreCase"))
 elseif([regex]::IsMatch($str, "(WITHs(({0,1}NOLOCK){0,1})|({0,1}NOLOCK){0,1})","IgnoreCase")) 
         {$strReplace = [regex]::replace($str, "(WITHs(({0,1}NOLOCK){0,1})|({0,1}NOLOCK){0,1})" , "")
         write $strReplace}
-}</pre>
+}
 
+```
 The file posh.sql contains the T-SQL statements from earlier and outputs the statements as valid SELECT statements shown below.
 
-<pre>SELECT * FROM HumanResources.Department WITH (INDEX(AK_Department_Name))
+sql
+SELECT * FROM HumanResources.Department WITH (INDEX(AK_Department_Name))
 SELECT * FROM HumanResources.Department WITH (INDEX(AK_Department_Name))
 SELECT * FROM HumanResources.Department
 SELECT * FROM HumanResources.Department
-SELECT * FROM HumanResources.Department</pre>
-
+SELECT * FROM HumanResources.Department
+```
 **Conclusion**
 
 Power Shell has added a lot of rapid administration and development power to how you can automate otherwise lengthy tasks.  It took awhile for me to adopt it but once I did, I haven’t looked back in utilizing it fully.  That has made normal tasks that were once thought to be lengthy, more efficient and my Lazy DBA spider senses can be tuned to more important tasks.

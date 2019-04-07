@@ -3,6 +3,7 @@ title: Learning Elixir and Phoenix – Getting a handle on the language
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2017-03-23T12:18:20+00:00
+ID: 8618
 url: /index.php/webdev/learning-elixir-and-phoenix-getting-a-handle-on-the-language/
 views:
   - 2206

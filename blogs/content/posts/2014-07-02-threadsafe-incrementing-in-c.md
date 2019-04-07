@@ -3,6 +3,7 @@ title: 'Threadsafe Incrementing in C#'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-07-02T10:54:49+00:00
+ID: 2799
 url: /index.php/desktopdev/mstech/csharp/threadsafe-incrementing-in-c/
 views:
   - 12172
@@ -23,12 +24,13 @@ So let&#8217;s take a simple code example using ++ and convert it to a threadsaf
 
 This is unrealistic example, I&#8217;m simply taking a list of work and sleeping for a random amount of time as a substitute for some real work. Pretend that it&#8217;s doing something complex like database work, file conversions, or something else useful and time consuming.
 
-<pre>public int DoWorkPoorly(List<string&gt; workToProcess)
+```C#
+public int DoWorkPoorly(List<string> workToProcess)
 {
     int statusCounter = 0;
     int totalCount = workToProcess.Count;
 
-    Parallel.ForEach(workToProcess, (work) =&gt;
+    Parallel.ForEach(workToProcess, (work) =>
     {
         var r = new Random();
         Thread.Sleep((int)(r.NextDouble() * 10));
@@ -44,8 +46,8 @@ This is unrealistic example, I&#8217;m simply taking a list of work and sleeping
                                     totalCount,
                                     Thread.CurrentThread.ManagedThreadId));
     return statusCounter;
-}</pre>
-
+}
+```
 Call this with 10 or 100 items, and you may not see a problem. When I extend this to 1,000 or 10,000 then I start consistently losing up to 1.5% of the increments.
 
 For a progress bar, this is probably ok, but for program logic or attempting to report an accurate number of results, this isn&#8217;t going to work.
@@ -54,12 +56,13 @@ For a progress bar, this is probably ok, but for program logic or attempting to 
 
 Luckily, there is a built in method we can use to safely increment that shared integer.
 
-<pre>public int DoWorkInterlocked(List<string&gt; workToProcess)
+```C#
+public int DoWorkInterlocked(List<string> workToProcess)
 {
     int statusCounter = 0;
     int totalCount = workToProcess.Count;
 
-    Parallel.ForEach(workToProcess, (work) =&gt;
+    Parallel.ForEach(workToProcess, (work) =>
     {
         var r = new Random();
         Thread.Sleep((int)(r.NextDouble() * 10));
@@ -76,8 +79,8 @@ Luckily, there is a built in method we can use to safely increment that shared i
                                     totalCount, 
                                     Thread.CurrentThread.ManagedThreadId));
     return statusCounter;
-}</pre>
-
+}
+```
 Interlocked provides some methods to handle incrementing, decrementing, adding 64-bit values (which also isn&#8217;t threadsafe), and so on. On a similar run of 100,000 items, this method is safe where the first one was not.
 
 ## Decouple Your Output
@@ -86,14 +89,15 @@ There is one final step. The prior examples push status messages to the console 
 
 If we take the responsibility for reporting status out of the parallel action and instead spin it off onto it&#8217;s own task, we preserve our accurate total but have more control over reporting progress at a reasonable pace (and always in order). And in this particular case, as a by product of not fighting over a constrained resource, we gain an absurd amount of performance.
 
-<pre>public int DoWorkInterlockedWithAsyncStatus(List<string&gt; workToProcess)
+```C#
+public int DoWorkInterlockedWithAsyncStatus(List<string> workToProcess)
 {
     var statusCounter = 0;
     int totalCount = workToProcess.Count;
 
     // monitor and output progress
     var cancellationTokenSource = new CancellationTokenSource();
-    var outputTask = Task.Factory.StartNew(() =&gt; {
+    var outputTask = Task.Factory.StartNew(() => {
         while (!cancellationTokenSource.IsCancellationRequested) 
         {
             Console.WriteLine(String.Format("Completed {0} of {1}  items on thread {2}", 
@@ -110,7 +114,7 @@ If we take the responsibility for reporting status out of the parallel action an
                                          Thread.CurrentThread.ManagedThreadId));
     });
 
-    Parallel.ForEach(workToProcess, (work) =&gt;
+    Parallel.ForEach(workToProcess, (work) =>
     {
         var r = new Random();
         Thread.Sleep((int)(r.NextDouble() * 10));
@@ -121,8 +125,8 @@ If we take the responsibility for reporting status out of the parallel action an
     cancellationTokenSource.Cancel();
     outputTask.Wait();
     return statusCounter;
-}</pre>
-
+}
+```
 Separating the two responsibilities nets us a an order of magnitude performance increase, but more importantly it moves that responsibility off to the side where it can be managed independently. If the human needs more or less frequent updates, or if we need to report that update to a specific thread (like the UI thread), we have a single place to manage it from that doesn&#8217;t add drag to the actual work being done.
 
  [1]: http://stackoverflow.com/questions/4628243/is-the-operator-thread-safe "Eric Lippert's explanation on StackOverflow"

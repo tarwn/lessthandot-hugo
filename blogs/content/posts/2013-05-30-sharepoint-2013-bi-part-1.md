@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 1 – Introduction
 author: Koen Verbeeck
 type: post
 date: 2013-05-30T06:45:00+00:00
+ID: 2088
 excerpt: 'Recently I had to give a Power View demo for a client. Giving a demonstration means of course you have a demo environment available. I could’ve simply given a demo on Power View using Office 2013 and call it a day, but I really wanted to show the “conve&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sharepoint-2013-bi-part-1/
 views:

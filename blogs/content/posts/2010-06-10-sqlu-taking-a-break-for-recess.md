@@ -3,6 +3,7 @@ title: 'SQL University –  Recess time!'
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-10T17:10:13+00:00
+ID: 817
 excerpt: 'The recess bell just rang for SQL University HA / DR classrooms.  While all of the SQL kiddies are running around the playground and playing with the things they have learned over this semester, the chalkboard is going to get a workout so when they get back, they can take the notes they slacked on earlier.'
 url: /index.php/datamgmt/dbprogramming/sqlu-taking-a-break-for-recess/
 views:

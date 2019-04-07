@@ -3,6 +3,7 @@ title: Information Unity in the Canonical Form
 author: damber
 type: post
 date: 2008-06-02T06:50:28+00:00
+ID: 37
 url: /index.php/architect/designingmultiapplicationsolutions/information-unity-in-the-canonical-form/
 views:
   - 7059

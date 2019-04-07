@@ -3,6 +3,7 @@ title: 'Operand type clash: date is incompatible with int error when trying to d
 author: SQLDenis
 type: post
 date: 2009-07-15T11:40:06+00:00
+ID: 511
 url: /index.php/datamgmt/datadesign/operand-type-clash-date-is-incompatible-2008/
 views:
   - 73569
@@ -22,19 +23,23 @@ If you don&#8217;t care for the time portion of the date you can now use the dat
 
 So take a look at this code
 
-<pre>declare @d datetime
+sql
+declare @d datetime
 select @d = getdate()
 
 select @d  =@d+1
-select @d</pre>
+select @d
+```
 
 To convert this to SQL Server 2008 logically you would think that all you had to do is change datetime to date. Go ahead&#8230;run it&#8230;make my day
 
-<pre>declare @d date
+sql
+declare @d date
 select @d = getdate()
 
 select @d  =@d+1
-select @d</pre>
+select @d
+```
 
 And here is the message
   
@@ -44,11 +49,13 @@ Operand type clash: date is incompatible with int
 
 Now what you can do is use dateadd instead
 
-<pre>declare @d date
+sql
+declare @d date
 select @d = getdate()
 
 select @d  = dateadd(day,1,@d)
-select @d</pre>
+select @d
+```
 
 So that will work with both date and datetime (should work with all the date datatypes) and it is clear what you are doing.
 
@@ -56,10 +63,12 @@ But wait&#8230;.scroll down in the next 5 seconds and you will get another optio
 
 What about this?
 
-<pre>declare @d date 
+sql
+declare @d date 
 select @d = getdate() +1
 
-select @d  </pre>
+select @d  
+```
 
 That does the addition before assignment.
 
@@ -67,8 +76,10 @@ But wait&#8230;.scroll down in the next 5 seconds and you will get another optio
 
 Here is another version which is a little shorter
 
-<pre>declare @d date = getdate() +1
-select @d </pre>
+sql
+declare @d date = getdate() +1
+select @d 
+```
 
 Even though the last two versions are shorter, I would opt for using dateadd. With dateadd you know what you are doing, what does +1 mean? Are you adding days, hours or what&#8230;it is not clear from just looking at the code without running it
 
@@ -76,5 +87,5 @@ Even though the last two versions are shorter, I would opt for using dateadd. Wi
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

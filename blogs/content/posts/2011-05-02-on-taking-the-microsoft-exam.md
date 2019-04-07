@@ -3,6 +3,7 @@ title: On Taking the Microsoft Exam 70-448
 author: rwaters
 type: post
 date: 2011-05-02T09:40:00+00:00
+ID: 1149
 excerpt: 'You win some, you lose some.  I just took my first Microsoft exam, the 70-448, that covers the BI suite of Analysis Services, Integration Services and Reporting Services for SQL Server 2008.  Wow.  The test was harder than I expected.  Although plenty o&hellip;'
 url: /index.php/webdev/business-intelligence/on-taking-the-microsoft-exam/
 views:

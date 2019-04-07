@@ -3,6 +3,7 @@ title: SSIS runs in BIDS but not with SQL Agent
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-10-06T09:54:16+00:00
+ID: 916
 excerpt: 'The title of this article is one that is asked on many occasions around the forums and SQL Server community.  SQL Server Integration Services (SSIS) is the Extract, Transform and Load (ETL) platform behind SQL Server.  There aren’t many arguments against SSIS as a great tool, and it has the ability to get the job done as an ETL platform.  With the added complexity of any product, pain is involved while becoming familiar with the intricacies of it.  One pain that comes with any development practice that is performed within one set of environment and system variables and later moved to another set (Transport process): a process can execute successfully in one location and fail in another.'
 url: /index.php/datamgmt/dbprogramming/ssis-runs-in-bids-but-not-with-sql-agent/
 views:

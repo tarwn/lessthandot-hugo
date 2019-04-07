@@ -3,6 +3,7 @@ title: Mentoring, Ambition, and Your Career
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-12-10T14:12:00+00:00
+ID: 2204
 excerpt: 'One of the values that BlueMetal holds close to how the team has been and is continually being built encompasses the concept of allowing each individual to succeed.  This success is based on focusing an individual on the key skills they possess, along w&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/mentoring-ambition-and-your-career/
 views:

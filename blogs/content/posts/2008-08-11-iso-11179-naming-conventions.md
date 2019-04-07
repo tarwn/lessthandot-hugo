@@ -3,6 +3,7 @@ title: ISO-11179 Naming Conventions
 author: SQLDenis
 type: post
 date: 2008-08-11T14:43:02+00:00
+ID: 105
 url: /index.php/datamgmt/datadesign/iso-11179-naming-conventions/
 views:
   - 23987

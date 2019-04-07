@@ -3,6 +3,7 @@ title: What does a SQL Server DBA need to check for daily, weekly, monthly, quar
 author: SQLDenis
 type: post
 date: 2011-10-18T17:46:00+00:00
+ID: 1351
 excerpt: |
   I am putting a wiki page together on what a SQL Server DBA needs to monitor daily, weekly, monthly, quarterly and yearly. So far I have created a couple of things here: What does a DBA need to check for daily, weekly, monthly, quarterly and yearly
   

@@ -3,6 +3,7 @@ title: SQL Server 2012 System views poster available for download
 author: SQLDenis
 type: post
 date: 2013-05-31T14:48:00+00:00
+ID: 2092
 excerpt: |
   Microsoft has made available the SQL Server 2012 System Views Maps for download
   

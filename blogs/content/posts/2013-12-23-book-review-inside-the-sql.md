@@ -3,6 +3,7 @@ title: 'Book Review: Inside the SQL Server Query Optimizer'
 author: Jes Borland
 type: post
 date: 2013-12-23T20:36:00+00:00
+ID: 2214
 excerpt: Want to take the "black box" mystique out of the query optimizer?
 url: /index.php/itprofessionals/book-review/book-review-inside-the-sql/
 views:

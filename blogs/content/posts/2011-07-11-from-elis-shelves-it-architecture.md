@@ -3,6 +3,7 @@ title: 'From Eli’s Shelves: Books for IT Architecture'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-07-11T15:54:00+00:00
+ID: 1244
 excerpt: "Most companies reach a point in their lives when they realize that they aren't entirely sure what IT resources they have, how they're deployed, what direction they're headed, or whether they're ready for the next big shift from the business. Some companies visit this point multiple times, either in response to shifts in the company or business landscape or as a result of letting the environment devolve back into it's primordial beginnings."
 url: /index.php/itprofessionals/itservicemanagement/from-elis-shelves-it-architecture/
 views:
@@ -24,7 +25,7 @@ Most companies reach a point in their lives when they realize that they aren&#82
 Today I&#8217;m offering up two books with tools and ideas to help us analyze our environments, align them with the business, and build frameworks or architectures for our environment that enable our business, rather than hold them back. The first book provides a basic framework, while the second communicates the importance of architecture to executive and non-IT personnel.
 
 <div style="float: left; padding: .5em; width: 170px; margin: 0em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <a href="http://www.amazon.com/Architecture-Toolkit-Jane-Carbone/dp/0131473794" title="IT Architecture Toolkit"><img src="http://www.tiernok.com/_n_images/books/at.jpg" alt="IT Architecture Toolkit" /></a><br /> IT Architecture Toolkit
+  <a href="http://www.amazon.com/Architecture-Toolkit-Jane-Carbone/dp/0131473794" title="IT Architecture Toolkit"><img src="http://tiernok.com/_n_images/books/at.jpg" alt="IT Architecture Toolkit" /></a><br /> IT Architecture Toolkit
 </div>
 
 ### [IT Architecture Toolkit][1]  
@@ -37,7 +38,7 @@ The practices and methods described in the book will be familiar to those with m
 <br style="clear: left" />
 
 <div style="float: left; padding: .5em; width: 170px; margin: 0em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <a href="http://www.amazon.com/Enterprise-Architecture-Strategy-Foundation-Execution/dp/1591398398" title="Enterprise Architecture as Strategy at Amazon"><img src="http://www.tiernok.com/_n_images/books/eapas.jpg" alt="Enterprise Architecture as Strategy" /></a><br /> Enterprise Architecture as Strategy
+  <a href="http://www.amazon.com/Enterprise-Architecture-Strategy-Foundation-Execution/dp/1591398398" title="Enterprise Architecture as Strategy at Amazon"><img src="http://tiernok.com/_n_images/books/eapas.jpg" alt="Enterprise Architecture as Strategy" /></a><br /> Enterprise Architecture as Strategy
 </div>
 
 ### [Enterprise Architecture as Strategy][2]  

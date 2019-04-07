@@ -3,6 +3,7 @@ title: Using a Dedicated Administrator Connection via SSMS
 author: SQLDenis
 type: post
 date: 2013-04-07T13:55:00+00:00
+ID: 2061
 excerpt: |
   If you need to use a Dedicated Administrator Connection (DAC) via SSMS, you can't just use the Connect Object Explorer, if you try you will get the following error
   

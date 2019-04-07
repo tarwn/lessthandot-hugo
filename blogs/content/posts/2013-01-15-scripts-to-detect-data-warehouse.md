@@ -3,6 +3,7 @@ title: Scripts to Detect Data Warehouse Issues
 author: Sam Vanga
 type: post
 date: 2013-01-15T12:31:00+00:00
+ID: 1916
 excerpt: "Standards and best practices are like flu shots you take before you're infected; Database best practices protect your databases from bad things. But, we all make mistakes. It could be because we're on a time crunch, or we're lazy (which I'm guilty of by&hellip;"
 url: /index.php/webdev/business-intelligence/scripts-to-detect-data-warehouse/
 views:
@@ -27,24 +28,29 @@ However, there are some issues explicit to data warehouses that SQLCop doesn&#82
 
 Tables in a warehouse are generally prefixed with Dim and Fact for dimensions and fact respectively, to easily distinguish them.
 
-<pre>SELECT  [schema_name] = s.name ,
+sql
+SELECT  [schema_name] = s.name ,
         table_name = t.name
 FROM    sys.tables t
         INNER JOIN sys.schemas s ON s.schema_id = t.schema_id
 WHERE   t.name NOT LIKE 'Dim%'
         AND t.name NOT LIKE 'Fact%'
-        AND t.TYPE = 'U';</pre></p> 
+        AND t.TYPE = 'U';
+```
+</p> 
 
 #### Find tables in a data warehouse that don&#8217;t have a primary key:
 
 Like in OLTP databases, all tables in a data warehouse also should have a primary key defined.
 
-<pre>SELECT  schema_name = SCHEMA_NAME(schema_id) ,
+sql
+SELECT  schema_name = SCHEMA_NAME(schema_id) ,
         table_name = name
 FROM    sys.tables
 WHERE   OBJECTPROPERTY(OBJECT_ID, 'TableHasPrimaryKey') = 0
 ORDER BY SCHEMA_NAME(schema_id) ,
-        name;</pre>
+        name;
+```
 
  
 
@@ -52,7 +58,8 @@ ORDER BY SCHEMA_NAME(schema_id) ,
 
 A composite primary key on a dimension table causes degraded performance. It is best to create a single column primary key.
 
-<pre>SELECT  c.TABLE_NAME ,
+sql
+SELECT  c.TABLE_NAME ,
         COUNT(*)
 FROM    INFORMATION_SCHEMA.TABLE_CONSTRAINTS pk ,
         INFORMATION_SCHEMA.KEY_COLUMN_USAGE c
@@ -61,7 +68,8 @@ WHERE   CONSTRAINT_TYPE = 'PRIMARY KEY'
         AND c.CONSTRAINT_NAME = pk.CONSTRAINT_NAME
         AND c.TABLE_NAME LIKE 'Dim%'
 GROUP BY c.TABLE_NAME
-HAVING  COUNT(*) &gt; 1</pre>
+HAVING  COUNT(*) > 1
+```
 
  
 
@@ -69,7 +77,8 @@ HAVING  COUNT(*) &gt; 1</pre>
 
 Usually, surrogate key is made the primary key of the dimension table. Surrogate key is an auto generated Identity value.
 
-<pre>SELECT  dim_table = t.name ,
+sql
+SELECT  dim_table = t.name ,
         primary_key = c.name ,
         c.is_identity
 FROM    sys.tables t
@@ -83,13 +92,15 @@ FROM    sys.tables t
 WHERE   t.TYPE = 'U'
         AND t.name LIKE 'Dim%'
         AND kc.type_desc = 'PRIMARY_KEY_CONSTRAINT'
-        AND c.is_identity = 0</pre>
+        AND c.is_identity = 0
+```
 
  
 
 #### Detect primary keys that don&#8217;t follow the naming convention:
 
-<pre>SELECT  dim_table = t.name ,
+sql
+SELECT  dim_table = t.name ,
         primary_key = c.name
 FROM    sys.tables t
         INNER JOIN sys.key_constraints kc ON t.OBJECT_ID = kc.parent_object_id
@@ -102,7 +113,8 @@ FROM    sys.tables t
 WHERE   t.TYPE = 'U'
         AND t.name LIKE 'Dim%'
         AND kc.type_desc = 'PRIMARY_KEY_CONSTRAINT'
-        AND c.name <&gt; REPLACE(t.name, 'Dim', '') + 'Key'</pre>
+        AND c.name <> REPLACE(t.name, 'Dim', '') + 'Key'
+```
 
  
 
@@ -110,14 +122,16 @@ WHERE   t.TYPE = 'U'
 
 Without a foreign key, a fact table isn&#8217;t really a fact table.
 
-<pre>SELECT table_name = t.name
+sql
+SELECT table_name = t.name
 		, fk_count = COUNT(*)
     FROM sys.tables t
     INNER JOIN
     sys.foreign_keys fk ON t.OBJECT_ID = fk.parent_object_id
     WHERE  t.name LIKE 'fact%'
     GROUP BY t.name
-    HAVING COUNT(*) < 1  </pre>
+    HAVING COUNT(*) < 1  
+```
 
  
 
@@ -125,13 +139,15 @@ Without a foreign key, a fact table isn&#8217;t really a fact table.
 
 It&#8217;s unlikely to have a fact table related to another fact table.
 
-<pre>SELECT  foreign_key = fk.name ,
+sql
+SELECT  foreign_key = fk.name ,
         child_table = t.name ,
         parent_name = rt.name
 FROM    sys.foreign_keys fk
         INNER JOIN sys.tables rt ON rt.object_id = fk.referenced_object_id
         INNER JOIN sys.tables t ON t.object_id = fk.parent_object_id
-WHERE   rt.name LIKE 'Fact%'</pre>
+WHERE   rt.name LIKE 'Fact%'
+```
 
  
 
@@ -139,7 +155,8 @@ WHERE   rt.name LIKE 'Fact%'</pre>
 
 I stole the following query from [here][3] posted by [George Mastros][4], and replaced ID with Key to use it for data warehouse scenario.
 
-<pre>SELECT  C.TABLE_SCHEMA,C.TABLE_NAME,C.COLUMN_NAME
+sql
+SELECT  C.TABLE_SCHEMA,C.TABLE_NAME,C.COLUMN_NAME
     FROM    INFORMATION_SCHEMA.COLUMNS C          
             INNER Join INFORMATION_SCHEMA.TABLES T            
               ON C.TABLE_NAME = T.TABLE_NAME    
@@ -151,7 +168,8 @@ I stole the following query from [here][3] posted by [George Mastros][4], and re
               And U.TABLE_SCHEMA = C.TABLE_SCHEMA
     WHERE   U.COLUMN_NAME IS Null          
             And C.COLUMN_NAME Like '%Key'
-    ORDER BY C.TABLE_SCHEMA, C.TABLE_NAME, C.COLUMN_NAME</pre>
+    ORDER BY C.TABLE_SCHEMA, C.TABLE_NAME, C.COLUMN_NAME
+```
 
  
 

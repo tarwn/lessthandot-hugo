@@ -3,6 +3,7 @@ title: One Second Caching, Brilliant Or Insane?
 author: SQLDenis
 type: post
 date: 2008-09-14T16:18:00+00:00
+ID: 139
 excerpt: "Let's say you get 1000 hits per second on your website's home page, you want the users to feel that the site is as real time as possible without overloading your database. These hits on your site display some data from the database and are mostly reads;&hellip;"
 url: /index.php/webdev/webdesigngraphicsstyling/one-second-caching-brilliant-or-insane/
 views:

@@ -3,6 +3,7 @@ title: Do not disable foreign keys
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-23T11:28:00+00:00
+ID: 1931
 excerpt: 'Foreign keys and primary keys play a crucial part in all relational databases – referential integrity.  Referential integrity is essentially the glue that holds together one or more columns between two or more tables.  This glue dictates if a value is f&hellip;'
 url: /index.php/datamgmt/dbadmin/do-not-disable-foreign-keys/
 views:
@@ -23,7 +24,8 @@ Focusing on delete events, we can take a look at a common but extremely poor pra
 
 Let’s say a SQL Developer has been tasked with removing outdated records from a database.  This has been found to be safe, provided an archiving strategy is put in place and the items are now archived out to a secondary source.  The archiving strategy, however, did not provide a method to remove the original items.  Given this, the developer has to remove the items manually at a time not within normal operating hours.  The database was designed by the team’s DBA and has implemented a relationship between the table the items need to be removed from and another table for customer ordering details.
 
-<pre>CREATE TABLE item_table (itemnumber int PRIMARY KEY IDENTITY(1,1), itemdesc varchar(10), itemstatus tinyint)
+sql
+CREATE TABLE item_table (itemnumber int PRIMARY KEY IDENTITY(1,1), itemdesc varchar(10), itemstatus tinyint)
 GO
 CREATE TABLE cust_item_ordering (custorder_id BIGINT, itemnumber INT, itemqty INT)
 GO
@@ -31,7 +33,8 @@ ALTER TABLE cust_item_ordering
 ADD CONSTRAINT fk_itemnumber 
 FOREIGN KEY (itemnumber) 
 REFERENCES item_table(itemnumber)
-GO</pre>
+GO
+```
 
  
 
@@ -47,7 +50,10 @@ The developer proceeds to search and finds a solution to get beyond the error. 
 
 Please execute the following on server A in database B.  I’ll let you know when to run the next step when I finish getting something done.
 
-<pre>EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"</pre>
+sql
+EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"
+```
+
 
 We’ll stop here and discuss this situation.
 
@@ -73,7 +79,8 @@ The problem still remains: the items in the item\_table need to be removed.  In
 
 To find all the FK columns that relate to a specific PK, we can look at the catalog view [sys.foreign_keys][2] and [sys.foreign\_key\_columns][3].  Using the two foreign key catalog views with [sys.objects][4] and [sys.columns,][5] we can obtain all the needed information to further review where to look and what to remove prior to the primary key rows.
 
-<pre>SELECT
+sql
+SELECT
  obj_fk.name [Foreign Key Table Name],
  fk_name.name [Foreign Key Column Name],
  fk.name [Foreign Key Constraint Name],
@@ -85,7 +92,8 @@ FROM sys.objects obj_fk
  INNER JOIN sys.columns fk_name ON cols_fk.parent_object_id = fk_name.object_id AND cols_fk.parent_column_id = fk_name.column_id 
  INNER JOIN sys.columns pk_name ON cols_fk.referenced_object_id = pk_name.object_id AND cols_fk.referenced_column_id = pk_name.column_id
  INNER JOIN sys.objects obj_pk ON fk.referenced_object_id = obj_pk.object_id
- WHERE obj_pk.name = 'item_table'</pre>
+ WHERE obj_pk.name = 'item_table'
+```
 
  
 
@@ -95,14 +103,16 @@ In the results, there is another table that has been identified with a foreign k
 
 To remove the data, first identify if the data should be removed.  If the data is passed for removal, remove the foreign key rows and then, last, remove the primary key data.
 
-<pre>BEGIN TRY
+sql
+BEGIN TRY
 	DELETE FROM cust_item_ordering WHERE itemnumber = 99
 	DELETE FROM itemdetail WHERE itemnumber = 99
 	DELETE FROM item_table WHERE itemnumber = 99
 END TRY
 BEGIN CATCH
 	SELECT ERROR_NUMBER() AS ErrorNumber;
-END CATCH</pre>
+END CATCH
+```
 
  
 

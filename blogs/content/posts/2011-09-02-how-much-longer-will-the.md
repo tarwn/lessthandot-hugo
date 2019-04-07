@@ -3,6 +3,7 @@ title: How much longer will the SQL Server database restore take
 author: SQLDenis
 type: post
 date: 2011-09-02T11:12:00+00:00
+ID: 1306
 excerpt: |
   Frequently you will be asked how much longer a restore will take because someone needs to do something with that specific database that is restoring right now
   
@@ -29,7 +30,8 @@ Of course we all know that the RESTORE DATABASE command has the STATS n option, 
 
 Fear not, here is a query that will tell you exactly how long
 
-<pre>SELECT	
+sql
+SELECT	
     d.PERCENT_COMPLETE AS [%Complete],
     d.TOTAL_ELAPSED_TIME/60000 AS ElapsedTimeMin,
     d.ESTIMATED_COMPLETION_TIME/60000	AS TimeRemainingMin,
@@ -39,7 +41,8 @@ Fear not, here is a query that will tell you exactly how long
 FROM	sys.dm_exec_requests d 
 CROSS APPLY sys.dm_exec_sql_text(d.sql_handle)as s
 WHERE  d.COMMAND LIKE 'RESTORE DATABASE%'
-ORDER	BY 2 desc, 3 DESC</pre>
+ORDER	BY 2 desc, 3 DESC
+```
 
 Here is the output for a fairly large database restore that I started last night
 

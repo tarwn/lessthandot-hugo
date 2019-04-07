@@ -3,6 +3,7 @@ title: 'Stupid me #4 – The login is from an untrusted domain'
 author: Koen Verbeeck
 type: post
 date: 2014-08-21T12:37:37+00:00
+ID: 2911
 url: /index.php/datamgmt/ssis/stupid-me-4-the-login-is-from-an-untrusted-domain/
 views:
   - 22818

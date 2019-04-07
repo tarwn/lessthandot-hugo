@@ -3,6 +3,7 @@ title: Project Management Thoughts
 author: chopstik
 type: post
 date: 2012-08-23T19:54:00+00:00
+ID: 1665
 excerpt: 'Project management, unlike development in some ways, is not so much a skill as it is an art. Each project must be managed differently because of the various personalities, skills and requirements needed to complete it. This should seem obvious but, to m&hellip;'
 url: /index.php/itprofessionals/projectmanagement/project-management-thoughts/
 views:

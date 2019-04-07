@@ -3,6 +3,7 @@ title: SQL Server Licensing for Non-Production
 author: Kevin Conan
 type: post
 date: 2013-02-14T12:25:00+00:00
+ID: 1994
 excerpt: 'One of my favorite movie quotes comes from Under Siege 2 (slightly altered to avoid cursing):  “Assumption is the mother of all screw ups”.'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sql-server-licensing-for-non-1/
 views:

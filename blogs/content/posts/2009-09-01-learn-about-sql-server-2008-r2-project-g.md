@@ -3,6 +3,7 @@ title: Learn About SQL Server 2008 R2 Project Gemini And Project Madison By Watc
 author: SQLDenis
 type: post
 date: 2009-09-01T22:53:06+00:00
+ID: 547
 url: /index.php/datamgmt/datadesign/learn-about-sql-server-2008-r2-project-g/
 views:
   - 15602
@@ -43,5 +44,5 @@ The Gemini video is 29 minutes and 17 seconds and you can watch/download it here
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.lessthandot.com/viewforum.php?f=17
- [2]: http://forum.lessthandot.com/viewforum.php?f=22
+ [1]: http://forum.ltd.local/viewforum.php?f=17
+ [2]: http://forum.ltd.local/viewforum.php?f=22

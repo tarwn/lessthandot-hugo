@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #028 – Jack of All Trades, Master of None?'
 author: Jes Borland
 type: post
 date: 2012-03-13T14:58:00+00:00
+ID: 1560
 excerpt: "It's T-SQL Tuesday time! The 28th installment is being hosted by Argenis Fernandez..."
 url: /index.php/itprofessionals/professionaldevelopment/t-sql-tuesday-028-jack/
 views:

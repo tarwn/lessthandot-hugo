@@ -3,6 +3,7 @@ title: Site is no more after they discover they did not have SQL Server backups
 author: SQLDenis
 type: post
 date: 2009-01-04T11:31:37+00:00
+ID: 266
 url: /index.php/datamgmt/datadesign/site-is-no-more-after-they-discover-they/
 views:
   - 6386

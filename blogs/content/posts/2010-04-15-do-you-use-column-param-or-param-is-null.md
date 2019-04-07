@@ -3,6 +3,7 @@ title: 'Do you use  Column=@Param OR @Param IS NULL in your WHERE clause? Don’
 author: SQLDenis
 type: post
 date: 2010-04-15T09:55:44+00:00
+ID: 711
 excerpt: 'You see this kind of question all the time in newsgroups/forums, someone wants to return all the rows if nothing is passed in or just the rows that match the variable when something is passed in. Usually someone will reply with a suggestion to do someth&hellip;'
 url: /index.php/datamgmt/datadesign/do-you-use-column-param-or-param-is-null/
 views:
@@ -28,7 +29,8 @@ WHERE (SomeColumn=@col OR @col IS NULL)
 
 The problem with that approach is that it doesn&#8217;t perform well, let&#8217;s take a look, first create this table
 
-<pre>USE tempdb
+sql
+USE tempdb
 GO
 
 
@@ -41,21 +43,26 @@ WHERE TYPE = 'p'
 
 
 CREATE INDEX ix_test ON Test(Somecol2)
-GO</pre>
+GO
+```
 
 Here is the query that uses the method described before, I am using AND 1=1 so that this query will match the one I will show later
 
-<pre>DECLARE @col INT
+sql
+DECLARE @col INT
 SELECT @col = 1
 
 SELECT SomeCol2 
 FROM Test
 WHERE 1 =1
-AND  (SomeCol2=@col OR @col IS NULL)</pre>
+AND  (SomeCol2=@col OR @col IS NULL)
 
+
+```
 Here is the query using dynamic SQL
 
-<pre>GO
+sql
+GO
 
 DECLARE @col INT
 SELECT @col = 1
@@ -70,11 +77,13 @@ IF @col IS NOT NULL
     
     
     
-EXEC sp_executesql @SQL,N'@InnerParamcol INT',@col</pre>
+EXEC sp_executesql @SQL,N'@InnerParamcol INT',@col
+```
 
 Now let&#8217;s run these queries and take a look at the reads
 
-<pre>SET STATISTICS IO ON
+sql
+SET STATISTICS IO ON
 GO
 
 DECLARE @col INT
@@ -106,7 +115,8 @@ IF @col IS NOT NULL
 EXEC sp_executesql @SQL,N'@InnerParamcol INT',@col
 
 SET STATISTICS IO OFF
-GO</pre>
+GO
+```
 
 _(8 row(s) affected)
   
@@ -130,13 +140,15 @@ As you can see, there is a place for dynamic SQL and if you use it correctly you
 
 Someone on twitter suggested to try this query
 
-<pre>DECLARE @col INT
+sql
+DECLARE @col INT
 SELECT @col = 1
  
 SELECT SomeCol2
 FROM Test
 WHERE 1 =1
-AND  SomeCol2 = isnull(@col,SomeCol2)</pre>
+AND  SomeCol2 = isnull(@col,SomeCol2)
+```
 
 That query also does an index scan.
 
@@ -152,7 +164,8 @@ WHERE:([tempdb].[dbo].[Test].[Somecol2]=[@col] OR [@col] IS NULL))
 
 There was also a comment about recompiles, when you use sp_executesql you should not get recompiles when changing the value that you are passing in. I ran this query
 
-<pre>DECLARE @col INT
+sql
+DECLARE @col INT
 SELECT @col = 1
  
 DECLARE @SQL NVARCHAR(4000)
@@ -195,7 +208,8 @@ IF @col IS NOT NULL
    
    EXEC SP_EXECUTESQL @SQL,N'@InnerParamcol INT',@col 
    Go
-   </pre>
+   
+```
 
 And then I ran a trace checking for SQL:StmtRecompile
 
@@ -210,5 +224,5 @@ Here is the output from that trace
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DataDesign/changing-exec-to-sp_executesql-doesn-t-p
- [2]: http://forum.lessthandot.com/viewforum.php?f=17
- [3]: http://forum.lessthandot.com/viewforum.php?f=22
+ [2]: http://forum.ltd.local/viewforum.php?f=17
+ [3]: http://forum.ltd.local/viewforum.php?f=22

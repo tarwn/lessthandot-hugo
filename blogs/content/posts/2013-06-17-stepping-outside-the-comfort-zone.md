@@ -3,6 +3,7 @@ title: Stepping Outside the Comfort Zone
 author: Jes Borland
 type: post
 date: 2013-06-17T20:39:00+00:00
+ID: 2108
 excerpt: 'I love and am very familiar with SQL Server. But, as a consultant, I need to step outside of that box pretty often, and advise people on applications, storage, and networking. I have general knowledge of those topics, gathered from many years in IT, see&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/stepping-outside-the-comfort-zone/
 views:

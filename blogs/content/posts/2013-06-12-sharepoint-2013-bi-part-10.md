@@ -3,6 +3,7 @@ title: Building a SharePoint 2013 BI Demo Environment Part 10 – Creating a BI 
 author: Koen Verbeeck
 type: post
 date: 2013-06-12T11:59:00+00:00
+ID: 2103
 excerpt: 'In the final part of this series, we will create a BI subsite in our site collection. You can use this site as the starting point for your SharePoint BI demos. Browse to the PowerPivot site we created earlier in part 7 and go to Site Contents. Click on&hellip;'
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sharepoint-2013-bi-part-10/
 views:

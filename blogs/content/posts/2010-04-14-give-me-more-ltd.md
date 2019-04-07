@@ -3,6 +3,7 @@ title: LessThanDot Sponsors SQL Saturday in Chicago
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-04-14T09:47:38+00:00
+ID: 758
 excerpt: 'SQL Saturday in Chicago is only days away now and the excitement is building.  I feel an explanation is in order for my lack of contributions to the SQL community the last few weeks.'
 url: /index.php/itprofessionals/ethicsit/give-me-more-ltd/
 views:

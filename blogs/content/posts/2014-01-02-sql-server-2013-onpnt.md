@@ -3,6 +3,7 @@ title: 2013 – Review of Writing
 author: Ted Krueger (onpnt)
 type: post
 date: 2014-01-02T18:12:00+00:00
+ID: 2216
 excerpt: 'In 2013 I took on a slightly different approach to writing by putting more into each article with content, length and defining either what the topic was on or how the troubleshooting methods are taken. This, of course, meant my average blog count per mo&hellip;'
 url: /index.php/datamgmt/dbprogramming/sql-server-2013-onpnt/
 views:

@@ -3,6 +3,7 @@ title: Adding User Emulation to an Application
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-04-27T12:57:00+00:00
+ID: 1125
 excerpt: "One of the tricks I picked up from my last job (and our forum software, now that I think of it) is the idea of user emulation. I could log into the application, search for a user, and, at the push of a button, temporarily become that user. The only differences between emulating them and actually logging in as them were a black bar that indicated who I am (with a link to stop emulating), all audit records continued to reflect my own user id, and I didn't need to keep track of 30 different sample accounts and passwords."
 url: /index.php/architect/designingsoftware/adding-user-emulation-to-an/
 views:
@@ -39,7 +40,8 @@ So emulation is a useful tool as well as a neat trick. Like many things, it is g
 
 **Sample Session Context Class**
 
-<pre>Public Class SessionContext
+```vbnet
+Public Class SessionContext
 
 	Private Property EmulatedUser As User
 	Private Property LoggedInUser As User
@@ -60,9 +62,9 @@ So emulation is a useful tool as well as a neat trick. Like many things, it is g
 		End Get
 	End Property
 
-	''' <summary&gt;
+	''' <summary>
 	''' Property used for accessing current's users information for auditing
-	''' </summary&gt;
+	''' </summary>
 	Public ReadOnly Property UserIdForAuditing As Integer
 		Get
 			If Me.LoggedInUser IsNot Nothing Then Return Me.LoggedInUser.UserID
@@ -88,8 +90,8 @@ So emulation is a useful tool as well as a neat trick. Like many things, it is g
 	Public Sub StopEmulating()
 		Me.EmulatedUser = Nothing
 	End Sub
-End Class</pre>
-
+End Class
+```
 Altogether not that complex a code construct, although I&#8217;m sure it will grow more so over the lifetime of the application. 
 
 As long as we consistently access user information through the exposed User property in the session and user the exposed UserIdForAuditing property for auditing purposes, then most of the work is done for us. The only other piece we need is a button on the UI to start emulating and some logic to handle the danger below.

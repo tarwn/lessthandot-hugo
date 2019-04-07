@@ -3,6 +3,7 @@ title: Meme Monday for December
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-05T14:04:00+00:00
+ID: 1417
 excerpt: |
   This month's meme, a concept created by Tom LaRock (Blog | Twitter), asks the question "What gift do you want Microsoft to leave for you under the tree this year?" Tom put this question up on the 30th of November so we had some time to think about it.  Today is December 5th, my oldest son’s birthday. Since today is his birthday, I have a hard time thinking of anything for myself.  My mind really is filled with the last 11 years I’ve been lucky enough to have such a great son and family that I have.
 url: /index.php/itprofessionals/professionaldevelopment/meme-monday-for-december/

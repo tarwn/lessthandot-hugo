@@ -3,6 +3,7 @@ title: WHERE not to use FUNCTIONS
 author: Axel Achten (axel8s)
 type: post
 date: 2013-01-24T12:02:00+00:00
+ID: 1935
 excerpt: |
   Functions can be very powerful, but used in the wrong place in a query they can show some unexpected behavior.
   In this post I will be using the AdventureWorks2008R2 database and I will query the Sales.SalesOrderHeader to get all the 2006 OrderDates. A&hellip;
@@ -27,13 +28,14 @@ In this post I will be using the AdventureWorks2008R2 database and I will query 
   
 Take the following query:
 
-<pre>USE AdventureWorks2008R2;
+sql
+USE AdventureWorks2008R2;
 GO
 
 SELECT OrderDate FROM Sales.SalesOrderHeader
 WHERE OrderDate BETWEEN '20060101' AND '20061231';
-GO</pre>
-
+GO
+```
 If we take a look at the execution plan:
 
 <div class="image_block">
@@ -44,27 +46,31 @@ We see that there is a complete scan of the Clustered Index which makes sense si
   
 As the Missing Index Hint suggests, create an index on the OrderDate column:
 
-<pre>CREATE INDEX IX_SalesOrderHeader_OrderDate
+sql
+CREATE INDEX IX_SalesOrderHeader_OrderDate
 	ON Sales.SalesOrderHeader(OrderDate);
-GO</pre>
-
+GO
+```
 Executing our first query again in another form:
 
-<pre>SELECT OrderDate FROM Sales.SalesOrderHeader
-WHERE OrderDate &gt;= '20060101' AND OrderDate <='20061231';
-GO</pre>
-
+sql
+SELECT OrderDate FROM Sales.SalesOrderHeader
+WHERE OrderDate >= '20060101' AND OrderDate <='20061231';
+GO
+```
 Results in the following Execution Plan:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction2.png?mtime=1359036029"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction2.png?mtime=1359036029" width="771" height="143" /></a>
 </div>
 
-You see that the query is internally translated to <code class="codespan">SELECT [OrderDate] FROM [Sales].[SalesOrderHeader] WHERE [OrderDate]<=@1 AND [OrderDate]<=@2&gt;</code> just like the first query using the BETWEEN keyword. The big change is in the execution plan. Since we created an index on the OrderDate column, SQL Server is now using an Index Seek on our index to fetch the results.
+You see that the query is internally translated to <code class="codespan">SELECT [OrderDate] FROM [Sales].[SalesOrderHeader] WHERE [OrderDate]<=@1 AND [OrderDate]<=@2></code> just like the first query using the BETWEEN keyword. The big change is in the execution plan. Since we created an index on the OrderDate column, SQL Server is now using an Index Seek on our index to fetch the results.
 
 Since we are looking for all the dates in 2006, you might want to consider using the YEAR function. The YEAR function returns only the YEAR part of a date(time) value:
 
-<pre>SELECT YEAR('20060127 02:15:59')</pre>
+sql
+SELECT YEAR('20060127 02:15:59')
+```
 
 Results in 
 
@@ -74,10 +80,11 @@ Results in
 
 So the following query should make sense and is more readable then the former 2:
 
-<pre>SELECT OrderDate FROM Sales.SalesOrderHeader
+sql
+SELECT OrderDate FROM Sales.SalesOrderHeader
 WHERE YEAR(OrderDate) = 2006;
-GO</pre>
-
+GO
+```
 And looking at the result set it makes sense:
 
 <div class="image_block">

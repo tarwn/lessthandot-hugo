@@ -3,6 +3,7 @@ title: 'SQL Quiz: Toughest Challenges'
 author: George Mastros (gmmastros)
 type: post
 date: 2008-12-09T19:48:45+00:00
+ID: 242
 url: /index.php/itprofessionals/projectmanagement/sql-quiz-toughest-challenges/
 views:
   - 4240

@@ -3,6 +3,7 @@ title: Restoring multiple transaction log backups
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-07-22T14:56:12+00:00
+ID: 519
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/restoring-multiple-transaction-log-backu/
 views:
   - 12141
@@ -18,7 +19,8 @@ A good tip when you have to do this is to use vbscript or some other scripting t
 
 So for example, I use Quest Litespeed for compression (see [here][1] for more info). This means I have a few procedures at my disposal in which I can use to perform my restores from compressed backups. So given a restore script for [Litespeed][2] like this
 
-<pre>exec master.dbo.xp_restore_log @database = N'dbname' ,
+sql
+exec master.dbo.xp_restore_log @database = N'dbname' ,
 @filename = N'pathbackup.trn',
 @filenumber = 1,
 @with = N'STATS = 10',
@@ -27,11 +29,12 @@ So for example, I use Quest Litespeed for compression (see [here][1] for more in
 @with = N'MOVE N''log.ldf'' TO pathlog.ldf''',
 @affinity = 0,
 @logging = 0
-GO</pre>
-
+GO
+```
 we can take this code and with a little scripting generate a the call on each .trn file found in a particular folder
 
-<pre>Dim fso, folder, files, results,source  
+```VB
+Dim fso, folder, files, results,source  
 Dim db
 
 Set fso = CreateObject("Scripting.FileSystemObject")  
@@ -48,7 +51,7 @@ Set folder = fso.GetFolder(source)
 Set files = folder.Files    
 
 For each f In files   
-     If InStr(f.Name,".trn") &gt; 0 Then
+     If InStr(f.Name,".trn") > 0 Then
 	results.WriteLine("exec master.dbo.xp_restore_log @database = N'" & db & "' , " & _
 			"@filename = N'" & f.Path & "', " & _
 			"@filenumber = 1, " & _
@@ -62,8 +65,8 @@ For each f In files
      End If
 Next  
 
-results.Close</pre>
-
+results.Close
+```
 Now just run that and you&#8217;ll get your .sql you can execute and be done with it. I usually only do this on special occasions so there aren&#8217;t parameters like date range and such passed but you could easily add those in and only grab a certain listing of files.
 
  [1]: /index.php/DataMgmt/DBAdmin/title-8

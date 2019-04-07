@@ -3,6 +3,7 @@ title: Removing replication and handling tables with identity seeds
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-06-04T11:42:51+00:00
+ID: 455
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/removing-replication-and-handling-tables/
 views:
   - 7773
@@ -20,7 +21,8 @@ The second catch is identity_insert issues. If you change the creation command a
 
 To create the scenario I’m trying to show let’s create a few databases and setup replication.
 
-<pre>CREATE DATABASE db1 
+sql
+CREATE DATABASE db1 
 GO
 ALTER DATABASE db1 SET RECOVERY SIMPLE
 GO
@@ -49,13 +51,14 @@ GO
 CREATE TABLE tbl1 (ID INT,CharCol varchar(100))
 GO
 INSERT INTO tbl1
-SELECT * FROM db1.dbo.tbl1</pre>
-
+SELECT * FROM db1.dbo.tbl1
+```
 At this point you do not have a primary key or an identity seed on db2.tbl1. Go into design mode and flip the identity on and make the ID the primary key. This is the quickest way to accomplish that task without much effort for this test. Note: large tables of course this will take some time to run. Use your head when saying yes to those warnings. Leave not for replication to no so we can simulate the null affect of drop.
 
 This was a quick way to get the table setup. You can also create the table with the primary key and identity as
 
-<pre>USE [db2]
+sql
+USE [db2]
 GO
 CREATE TABLE [dbo].[tbl1](
 	[ID] [int] IDENTITY(1,1) NOT FOR REPLICATION NOT NULL,
@@ -66,18 +69,19 @@ CREATE TABLE [dbo].[tbl1](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO</pre>
-
+GO
+```
 Then use identity_insert to bring over the data to sync it up. 
 
 If you run this on db2.tbl1 after the data is in sync
 
-<pre>DBCC CHECKIDENT
+sql
+DBCC CHECKIDENT
 (
   tbl1
   ,NORESEED
-)</pre>
-
+)
+```
 After making all these changes, you will see that 10 is still our seed.
   
 <span class="MT_red"><br /> Checking identity information: current identity value &#8217;10&#8217;, current column value &#8217;10&#8217;.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
@@ -86,7 +90,8 @@ Let’s setup replication and initialize everything to db2.tbl1
 
 To setup the publisher execute the following
 
-<pre>use db1
+sql
+use db1
 GO
 exec sp_replicationdboption @dbname = N'db1', @optname = N'publish', @value = N'true'
 GO
@@ -123,11 +128,13 @@ exec sp_addarticle @publication = N'Tables', @article = N'tbl1', @source_owner =
 GO
 
 exec sp_startpublication_snapshot @publication = 'Tables' 
-GO</pre>
+GO
 
+```
 Now the first test subscriber
 
-<pre>use [db2]
+sql
+use [db2]
 GO
 exec sp_addpullsubscription 
 @publisher = N'LKFW00TK', @publication = N'Tables', @publisher_db = N'db1', 
@@ -151,8 +158,8 @@ exec sp_addsubscription
 @publication = N'Tables', @subscriber = N'LKFW00TK', 
 @destination_db = N'db2', @sync_type = N'automatic', 
 @subscription_type = N'pull', @update_mode = N'read only'
-Go</pre>
-
+Go
+```
 This simulates the drop command and will initilize the subscription.
 
 This gives us the synchronized data and pushing it across. 
@@ -165,21 +172,23 @@ Launching the replication monitor will show the snapshot delivery
 
 Test it out
 
-<pre>INSERT INTO db1.dbo.tbl1 VALUES ('mytest 99')</pre>
-
+sql
+INSERT INTO db1.dbo.tbl1 VALUES ('mytest 99')
+```
 Check db2.tbl1 to ensure your replication is functioning and the transaction pulled over. If you check the design of the table, you will see the drop functioned correctly and reset everything. This included the not for replication setting to yes.
 
 Now check the seed 
 
-<pre>USE db2
+sql
+USE db2
 Go
 
 DBCC CHECKIDENT
 (
   tbl1
   ,NORESEED
-)</pre>
-
+)
+```
 <span class="MT_red">Checking identity information: current identity value &#8216;NULL&#8217;, current column value &#8217;11&#8217;.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
   
 Or
@@ -204,26 +213,28 @@ So now the point of all of this is removing the subscriber. Go ahead and delete 
   
 e.g.
 
-<pre>use [db2]
+sql
+use [db2]
 GO
 exec sp_droppullsubscription @publisher = N'LKFW00TK', @publisher_db = N'db1', @publication = N'Tables'
 GO
 use [db1]
 GO
-exec sp_dropsubscription @publication =N'Tables', @subscriber = N'LKFW00TK', @article = N'all', @destination_db = N'db2'</pre>
-
+exec sp_dropsubscription @publication =N'Tables', @subscriber = N'LKFW00TK', @article = N'all', @destination_db = N'db2'
+```
 Now insert a value into db2.tbl1
   
 <span class="MT_red"><br /> Msg 2627, Level 14, State 1, Line 1<br /> Violation of PRIMARY KEY constraint &#8216;PK_tbl1&#8217;. Cannot insert duplicate key in object &#8216;dbo.tbl1&#8217;.<br /> The statement has been terminated.<br /> </span>
   
 Of course this will happen sense your seed wants to use 27 in my results above. To fix this it’s a very simple change to our DBCC CHECKIDENT command
 
-<pre>DBCC CHECKIDENT
+sql
+DBCC CHECKIDENT
 (
   tbl1
   ,RESEED
-)</pre>
-
+)
+```
 This goes ahead and grabs the highest value in the table and uses it to reseed the identity. Now if you insert into the table it will begin from 30 and you’ll be good to go.
 
 Reality is, you may never have to deal with this. Removing replication typically means the tables on the subscriber are no longer needed. There are cases of it though when the business or projects dictate the sites that you are replicating to for data support to applications become disconnected. That means they are on islands and replication isn’t an option any longer. In order to have the applications function once again as separate entities, these types of modifications have to be accomplished to the tables.

@@ -3,6 +3,7 @@ title: Continuous Delivery – Adding the Load Testing Stage
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-02-17T10:48:00+00:00
+ID: 1524
 excerpt: "Adding load testing to my continuous build process provides several benefits for a fairly cheap entry fee. As the development process progresses, I'll have a baseline and know if I add something to the application that impacts the performance. I'll also be able to accurately discuss it's performance when asked, instead of guessing."
 url: /index.php/enterprisedev/application-lifecycle-management/continuous-delivery-adding-the-load/
 views:
@@ -29,9 +30,10 @@ In the [previous post][1], I walked through using WCAT to define and execute a l
 
 Before I can start configuring my new build step, I need to prep the server. Following the steps in my prior post, I&#8217;ll download the WCAT msi to the build server and install it, then register the build server as a WCAT client:
 
-<pre>cscript //H:cscript
-wcat.wsf –terminate –update –clients localhost</pre>
-
+```text
+cscript //H:cscript
+wcat.wsf –terminate –update –clients localhost
+```
 And, of course, wait for the obligatory reboot to go through.
 
 ## Creating the Build Job
@@ -50,31 +52,31 @@ _While I originally expected the load test portion to be the trickiest, the real
 First up is defining the parameter for the CI build number:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config1.png" title="Load Test Job - Build Parameter" /><br /> Load Test Job &#8211; Build Parameter
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config1.png" title="Load Test Job - Build Parameter" /><br /> Load Test Job &#8211; Build Parameter
 </div>
 
 Then I need to add in the code repository that I&#8217;m hosting the Load Test scripts from the last post in:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config2.png" title="Load Test Job - Load Test Scripts" /><br /> Load Test Job &#8211; Load Test Scripts
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config2.png" title="Load Test Job - Load Test Scripts" /><br /> Load Test Job &#8211; Load Test Scripts
 </div>
 
 I&#8217;ve also added the [EnvFile plugin][3] to allow me to store critical information, like server names and passwords, in an external settings file:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config3.png" title="Load Test Job - External Settings" /><br /> Load Test Job &#8211; External Settings
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config3.png" title="Load Test Job - External Settings" /><br /> Load Test Job &#8211; External Settings
 </div>
 
 Then using the [Copy Artifact][4] plugin, I&#8217;ll add a build step to retrieve the zipped deployable website from the CI build step:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4.png" title="Load Test Job - Copy Artifacts" /><br /> Load Test Job &#8211; Copy Artifacts
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4.png" title="Load Test Job - Copy Artifacts" /><br /> Load Test Job &#8211; Copy Artifacts
 </div>
 
 With those retrieved, I can now deploy them to my remote server using MS Deploy and execute the VBScript file I created to smoke test the deployed site, each as windows batch command steps:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4c.png" title="Load Test Job - Deploy + Smoke Test" /><br /> Load Test Job &#8211; Deploy + Smoke Test
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4c.png" title="Load Test Job - Deploy + Smoke Test" /><br /> Load Test Job &#8211; Deploy + Smoke Test
 </div>
 
 _Note: These commands and scripts are available in the [Deploy and Smoke Test post][5]_
@@ -82,25 +84,25 @@ _Note: These commands and scripts are available in the [Deploy and Smoke Test po
 The actual command to execute the load test is nicely wrapped in a the Run.cmd file, so I can add a batch command to execute that:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4b.png" title="Load Test Job - Run Load Test" /><br /> I only included this screenshot to be consistent with the rest of the steps 🙂
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4b.png" title="Load Test Job - Run Load Test" /><br /> I only included this screenshot to be consistent with the rest of the steps 🙂
 </div>
 
 The last steps archive the log.xml file that WCAT produces, 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config5.png" title="Load Test Job - Archive Log File" /><br /> Load Test Job &#8211; Archive Log File
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config5.png" title="Load Test Job - Archive Log File" /><br /> Load Test Job &#8211; Archive Log File
 </div>
 
 capture the results of the smoke test, 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config6.png" title="Load Test Job - Capture Smoke Test Results" /><br /> Load Test Job &#8211; Capture Smoke Test Results
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config6.png" title="Load Test Job - Capture Smoke Test Results" /><br /> Load Test Job &#8211; Capture Smoke Test Results
 </div>
 
 and clutter up my twitter feed. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config7.png" title="Load Test Job - Twitter Checkbox" /><br /> Twitter Checkbox
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config7.png" title="Load Test Job - Twitter Checkbox" /><br /> Twitter Checkbox
 </div>
 
 With that I have a fully functional build job that deploys a website on demand and load tests it. 
@@ -127,38 +129,40 @@ So after much wrestling, I decided to map the WCAT data to a new XML file purely
 
 **Transform.xsl**
 
-<pre><?xml version="1.0"?&gt;
+```xml
+<?xml version="1.0"?>
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<xsl:template match="/"&gt;
-	<result&gt;
-		<persecond&gt;
-			<TransactionsPerSecond&gt;<xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="tps"]' /&gt;</TransactionsPerSecond&gt;
-			<RequestsPerSecond&gt;<xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="rps"]' /&gt;</RequestsPerSecond&gt;
-		</persecond&gt;
-		<total&gt;
-			<Transactions&gt;<xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="transactions"]' /&gt;</Transactions&gt;
-			<Requests&gt;<xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="requests"]' /&gt;</Requests&gt;
-			<Errors&gt;<xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="terrors"]' /&gt;</Errors&gt;
-		</total&gt;
-		<responsetime&gt;
-			<Average&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_avg"]' /&gt;</Average&gt;
-			<Minimum&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_min"]' /&gt;</Minimum&gt;
-			<NinetyFivePercent&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_95"]' /&gt;</NinetyFivePercent&gt;
-			<NinetyNinePercent&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_99"]' /&gt;</NinetyNinePercent&gt;
-			<Maximum&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_max"]' /&gt;</Maximum&gt;
-		</responsetime&gt;
-	</result&gt;
-</xsl:template&gt;
+<xsl:template match="/">
+	<result>
+		<persecond>
+			<TransactionsPerSecond><xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="tps"]' /></TransactionsPerSecond>
+			<RequestsPerSecond><xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="rps"]' /></RequestsPerSecond>
+		</persecond>
+		<total>
+			<Transactions><xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="transactions"]' /></Transactions>
+			<Requests><xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="requests"]' /></Requests>
+			<Errors><xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="terrors"]' /></Errors>
+		</total>
+		<responsetime>
+			<Average><xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_avg"]' /></Average>
+			<Minimum><xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_min"]' /></Minimum>
+			<NinetyFivePercent><xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_95"]' /></NinetyFivePercent>
+			<NinetyNinePercent><xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_99"]' /></NinetyNinePercent>
+			<Maximum><xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_max"]' /></Maximum>
+		</responsetime>
+	</result>
+</xsl:template>
 
-</xsl:stylesheet&gt;</pre>
-
+</xsl:stylesheet>
+```
 And then I can use a quick VBScript file to execute the XSL against the WCAT log.xml file:
 
 **Transform.vbs**
 
-<pre>Dim xml, xsl
+```vbscript
+Dim xml, xsl
 set xml = CreateObject("Microsoft.XMLDOM")
 xml.async = false
 xml.load("log.xml")
@@ -171,44 +175,45 @@ xsl.load("transform.xsl")
 Dim fso, fs
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set fs = fso.CreateTextFile("result.xml",true)
-fs.Write(Replace(xml.transformNode(xsl),"<?xml version=""1.0"" encoding=""UTF-16""?&gt;",""))
+fs.Write(Replace(xml.transformNode(xsl),"<?xml version=""1.0"" encoding=""UTF-16""?>",""))
 fs.Close
 Set fs = Nothing
-Set fso = Nothing</pre>
-
+Set fso = Nothing
+```
 Which nets me a results file, like so:
 
 **result.xml**
 
-<pre><result&gt;
-	<persecond&gt;
-		<TransactionsPerSecond&gt;1.80</TransactionsPerSecond&gt;
-		<RequestsPerSecond&gt;29.56</RequestsPerSecond&gt;
-	</persecond&gt;
-	<total&gt;
-		<Transactions&gt;216</Transactions&gt;
-		<Requests&gt;3547</Requests&gt;
-		<Errors&gt;3</Errors&gt;
-	</total&gt;
-	<responsetime&gt;
-		<Average&gt;270</Average&gt;
-		<Minimum&gt;0</Minimum&gt;
-		<NinetyFivePercent&gt;912</NinetyFivePercent&gt;
-		<NinetyNinePercent&gt;1536</NinetyNinePercent&gt;
-		<Maximum&gt;2563</Maximum&gt;
-	</responsetime&gt;
-</result&gt;</pre>
-
+```xml
+<result>
+	<persecond>
+		<TransactionsPerSecond>1.80</TransactionsPerSecond>
+		<RequestsPerSecond>29.56</RequestsPerSecond>
+	</persecond>
+	<total>
+		<Transactions>216</Transactions>
+		<Requests>3547</Requests>
+		<Errors>3</Errors>
+	</total>
+	<responsetime>
+		<Average>270</Average>
+		<Minimum>0</Minimum>
+		<NinetyFivePercent>912</NinetyFivePercent>
+		<NinetyNinePercent>1536</NinetyNinePercent>
+		<Maximum>2563</Maximum>
+	</responsetime>
+</result>
+```
 The last piece of the equation is to configure the Plot in the load test job. Here is an example of one graph configuration (the full set is pretty long):
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config8.png" title="Load Test Job - Plot Settings" /><br /> Load Test Job &#8211; Plot Settings
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config8.png" title="Load Test Job - Plot Settings" /><br /> Load Test Job &#8211; Plot Settings
 </div>
 
 Each plot has an XPath statement that corresponds to one of the sections of the result XML file, that way I have unique names for the values when it stores the data and I have labels on the plots. Running the job a few times to build up data and my graph looks like this:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/load_diagram.png" title="Load Test Job - Response Time Diagram" /><br /> Load Test Job &#8211; Response Time Diagram
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/load_diagram.png" title="Load Test Job - Response Time Diagram" /><br /> Load Test Job &#8211; Response Time Diagram
 </div>
 
 _Note: I suspect the fact that I got bored and was watching Netflix for the last few tests had some effect on the values_
@@ -220,13 +225,13 @@ And there we go, I now have a job that I can run on demand that will load test m
 The last step of this whole load test adventure is incorporating the load test job I&#8217;ve created into my build pipeline. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/pipeline_load.png" title="Continuous Delivery Pipeline with Load Test Step" /><br /> Continuous Delivery Pipeline with Load Test Step
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_load.png" title="Continuous Delivery Pipeline with Load Test Step" /><br /> Continuous Delivery Pipeline with Load Test Step
 </div>
 
 The only changes necessary to insert the Load Test job into the pipeline is to modify my &#8220;ASPNet MVC Music Store Interface Tests&#8221; build job to trigger a parametrized build of this new load test and in the load test, check the &#8220;Build Pipeline Plugin -> Manually Execute Downstream Project&#8221; option and specify the &#8220;Deploy to QA&#8221; build step as the target. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/pipeline_wload.png" title="Continuous Delivery Pipeline w/ Load Testing Step" /><br /> Continuous Delivery Pipeline w/ Load Testing Step
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_wload.png" title="Continuous Delivery Pipeline w/ Load Testing Step" /><br /> Continuous Delivery Pipeline w/ Load Testing Step
 </div>
 
 With the steps rewired, the pipeline now incorporates the Load Testing job.

@@ -3,6 +3,7 @@ title: Estimating Mean Uptime for Team-based uptime measurements
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-01-23T11:51:00+00:00
+ID: 1501
 excerpt: 'With high availability, the least amount of time data is unavailable, the higher the up-time percentage that is achieved.  Uptime is a period of time in which equipment is available for use by users.  Even a 5 minute failover time can have a negative im&hellip;'
 url: /index.php/datamgmt/dbprogramming/estimating-mean-uptime-for-team/
 views:

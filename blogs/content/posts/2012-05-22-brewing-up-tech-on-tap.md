@@ -3,6 +3,7 @@ title: Brewing Up Tech on Tap v1.2 SharePoint
 author: Jes Borland
 type: post
 date: 2012-05-22T11:03:00+00:00
+ID: 1633
 excerpt: The first Tech on Tap was so much fun that we decided to do it again! Tech on Tap v1.2 SharePoint will be held Saturday, June 9, 2012, at Stone Cellar Brewpub in Appleton, WI! What’s on tap?
 url: /index.php/itprofessionals/professionaldevelopment/brewing-up-tech-on-tap/
 views:

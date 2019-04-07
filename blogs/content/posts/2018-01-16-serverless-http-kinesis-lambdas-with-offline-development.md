@@ -3,6 +3,7 @@ title: Serverless HTTP + Kinesis Lambdas with Offline Development
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2018-01-16T14:24:20+00:00
+ID: 8865
 url: /index.php/enterprisedev/cloud/serverless-http-kinesis-lambdas-with-offline-development/
 views:
   - 3642
@@ -63,19 +64,21 @@ Next, I define a very simple Http handler for my function:
 
 **OfflineHttp/functions/eventsHttp.js** [(github)][6]
 
-<pre>module.exports.handler = (event, context, callback) =&gt; { 
+```javascript
+module.exports.handler = (event, context, callback) => { 
 	console.log("You POSTed an event!");
 	console.log(event.body);
 	callback(null, { statusCode: 200, body: "Success" });
-};</pre>
-
+};
+```
 Add the serverless-offline package: `npm install serverless-offline --save-dev`
 
 And then configure serverless:
 
 **OfflineHttp/serverless.yaml** [(github)][7]
 
-<pre># the name of my service - used during deployment
+```text
+# the name of my service - used during deployment
 service: example-offline-http
 
 # serverless plugins to use with serverless
@@ -101,26 +104,28 @@ functions:
       - http:
           method: POST
           path: events
-          cors: true</pre>
-
+          cors: true
+```
 Now to test it, we will start serverless and then post some events with curl:
 
 Run `serverless offline`
 
-<pre>Serverless: Starting Offline: dev/us-east-1.
+```text
+Serverless: Starting Offline: dev/us-east-1.
 Serverless: Routes for events:
 Serverless: POST /events
-Serverless: Offline listening on http://localhost:3000</pre>
-
+Serverless: Offline listening on http://localhost:3000
+```
 And now we run `curl -d "{'key1':'value1', 'key2':'value2'}" -H "Content-Type: application/json" -X POST http://localhost:3000/events` 
   
 And serverless processes the response, and sends back a 200 Success:
 
-<pre>Serverless: POST /events (λ: events)
+```text
+Serverless: POST /events (λ: events)
 You POSTed an event!
 {'key1':'value1', 'key2':'value2'}
-Serverless: [200] {"statusCode":200,"body":"Success"}</pre>
-
+Serverless: [200] {"statusCode":200,"body":"Success"}
+```
 To deploy this to real AWS, we run: `serverless deploy`
 
 Serverless creates the stack for us, creates a CloudFormation file to deploy the Lambda, performs the update, then returns information about the environment and the new endpoint it created. Replace the `localhost` entry above with that new endpoint and try it out!
@@ -139,20 +144,22 @@ First, we can use a YAML file to define some environment-specific environment va
 
 **OfflineHttpAndKinesis/config/env.yml** [(github)][9]
 
-<pre>---
+```text
+---
 offline: 
   KINESIS_HOST: 'localhost'
   KINESIS_PORT: 4567
   KINESIS_REGION: 'us-east-1'
-  KINESIS_STREAM_NAME_EVENTS: 'offline-events'</pre>
-
+  KINESIS_STREAM_NAME_EVENTS: 'offline-events'
+```
 Because I don&#8217;t have a Kinesis plugin for serverless, we&#8217;re going to be running the bootstrap.js script prior to starting `serverless offline`, so we can use these environment variables across that bootstrap file, the Kinesis Lambda watcher, and in server less for the HTTP functions to publish to.
 
 This is easy to make available in the serverless config, using a coalesce to look at the set for a stage passed in from the command line or falling back to a default value:
 
 **OfflineHttpAndKinesis/serverless.yml** [(github)][10]
 
-<pre>…
+```text
+…
 
 custom:
   defaults:
@@ -164,8 +171,8 @@ provider:
   region: us-east-1
   environment: ${file(./config/env.yml):${opt:stage, self:custom.defaults.stage}}
 
-…</pre>
-
+…
+```
 As we add the bootstrap and kinesis runner, we&#8217;ll pull these environment variables in as well.
 
 Now we&#8217;ll need to add some additional npm packages:
@@ -183,7 +190,8 @@ Before we run functions to consume events from the stream, we need to make sure 
 
 **OfflineHttpAndKinesis/utility/bootstrap.js** [(github)][11]
 
-<pre>const AWS = require('aws-sdk');
+```javascript
+const AWS = require('aws-sdk');
 const envFromYaml = require('./envFromYaml');
 
 envFromYaml.config('./config/env.yml','offline');
@@ -216,14 +224,15 @@ function ensureStreamExists(kinesis, streamName){
             process.exit(0);
         }
     });
-}</pre>
-
+}
+```
 At the top, we&#8217;re pulling the environment variables from the YAML file and pushing it into process.env. We then use the variables to define our Kinesis connection and call the homegrown `ensureStreamExists` function for each Stream we need to create it if it doesn&#8217;t already exist. My other application has multiple streams, so I have additional KINESIS\_STREAM\_NAME_* environment variables and call `ensureStreamExists` for each one. 
 
 Now to try it out, we can use two console sessions to run kinesalite: `kinesalite` and then the bootstrap: `node utility/bootstrap.js`, and we&#8217;ll know it&#8217;s working when we see this:
 
-<pre>Bootstrap: Success - Kinesis stream 'offline-events' created</pre>
-
+```text
+Bootstrap: Success - Kinesis stream 'offline-events' created
+```
 We&#8217;ll come back and use concurrently to bundle this into a single, easy npm task.
 
 ### 4. Add a Kinesis Function
@@ -234,16 +243,17 @@ Here is the function we&#8217;re adding:
 
 **OfflineHttpAndKinesis/functions/eventsStream.js** [(github)][12]
 
-<pre>'use strict';
+```javascript
+'use strict';
 
-module.exports.handler = (event, context, callback) =&gt; {
-    event.Records.forEach((record) =&gt; {
+module.exports.handler = (event, context, callback) => {
+    event.Records.forEach((record) => {
         const payload = new Buffer(record.kinesis.data, 'base64').toString('ascii');
         console.log("Received an event: " + payload);
     });
     callback(null, `Successfully processed ${event.Records.length} event.`);
-};</pre>
-
+};
+```
 This function accepts a batch of Kinesis events, loops through each to read the contents, and then console.log&#8217;s that event content. In later posts, I&#8217;ll go into more complex cases or you can look at the [serverless/examples][13] for ideas.
 
 Now for the hard part.
@@ -256,7 +266,8 @@ With the package above and the following script, we can bind functions locally t
 
 **OfflineHttpAndKinesis/utility/runOfflineStreamHandlers.js** [(github)][15]
 
-<pre>const AWS = require('aws-sdk');
+```javascript
+const AWS = require('aws-sdk');
 const run = require('@rabblerouser/local-kinesis-lambda-runner');
 const envFromYaml = require('./envFromYaml');
 
@@ -273,8 +284,8 @@ const functions = [
 ];
 initialize(functions);
 
-// … more code …</pre>
-
+// … more code …
+```
 The key part of this file to edit is the names in the array of functions. `funName` is a human-readable name you will see in the console output, `handlerPath` is the relative path to the file the handler is in, `handlerName` is the module. Everything else is read from the environment variables that are pulled in from the env.yml file and you can add as few or as many entries to the functions array as you like. This file also invalidates the require() cache while it&#8217;s running, so you can make changes to functions and fire new events and the new code will be picked up immediately without restarting anything.
 
 We have one more step before we can bring it all together: publishing events.
@@ -287,7 +298,8 @@ Updating the function to publish the events looks like this:
 
 **OfflineHttpAndKinesis/functions/eventsHttp.js** [(github)][16]
 
-<pre>'use strict';
+```javascript
+'use strict';
 
 var AWS = require('aws-sdk');
     
@@ -298,7 +310,7 @@ const kinesis = new AWS.Kinesis({
 	sslEnabled: false
 });
 
-module.exports.handler = (event, context, callback) =&gt; { 
+module.exports.handler = (event, context, callback) => { 
 	console.log("You POSTed an event!");
 
 	var putReq = kinesis.putRecord({
@@ -313,8 +325,8 @@ module.exports.handler = (event, context, callback) =&gt; {
 			callback(null, { statusCode: 200, body: "Ok" } );
 		}
 	});
-};</pre>
-
+};
+```
 Here we&#8217;re initializing the Kinesis connection, then inside the HTTP handler we use `putRecord` to publish the POSTed event to our Kinesis stream.
 
 The first thing to note is that we initialize the kinesis object outside the function call in both functions. AWS will re-use functions if a lot of events are coming in, so this ensures we don&#8217;t lose time on every single call recreating that necessary resource.
@@ -329,10 +341,11 @@ Instead of firing up 4 consoles and running things in the perfect order, we&#821
 
 **OfflineHttpAndKinesis/package.json** [(github)][17]
 
-<pre>"scripts": {
+```javascript
+"scripts": {
     "offline": "concurrently --names \"KNSL,BOOT,HTTP,STRM\" -c \"bgGreen.bold,bgGreen.bold,bgBlue.bold,bgMagenta.bold\" --kill-others-on-fail \"kinesalite\" \"node utility/bootstrap.js\" \"serverless offline start --stage offline\" \"node utility/runOfflineStreamHandlers.js\""
-  },</pre>
-
+  },
+```
 This sets up 4 names to show on console output, each with a different color, and each with a different command. We&#8217;re going to run kinesalite, the bootstrap, serverless offline, and the offline handler script. If we Ctrl+C, it will force a failure and exit them all.
 
 To start, we just need to type `npm run offline`.

@@ -70,7 +70,7 @@ In the last two posts, we laid the groundwork for authentication from the UI dow
   </p>
 </div>
 
-Most of the work is building on the [previous post](/index.php/webdev/serverprogramming/aspnet/adding-twitter-authentication-to-an-asp-net-core-2-site-w-cosmos-db/), the big difference is a new way to authenticate and some middleware to do the work.
+Most of the work is building on the [previous post](), the big difference is a new way to authenticate and some middleware to do the work.
 
 I worked on this in two pieces:
 
@@ -165,12 +165,22 @@ The AddKey view is a basic 1-field form (included more to show you I don&#8217;t
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
+
+
 <div class="box">
-  <h2>AddKey</h2>
+  <h2>
+    AddKey
+  </h2>
+  
+      
+  
+  
 </div>
+
 
 <div>
   <a asp-action="IndexAsync">Back to List</a>
+  
 </div>
 ```
 
@@ -184,21 +194,35 @@ And once it&#8217;s created, we then show it to you with &#8220;ShowKey&#8221;:
     ViewData["Title"] = "ShowKey";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
+
+
+
 <div class="box">
-  <h2>Your New API Key</h2>
+  <h2>
+    Your New API Key
+  </h2>
+      
+  
   <p>
     You will need the API Key Id and API Key Secret to make an API call. Save your API Key Secret now, we won't show it again!
+        
   </p>
-
+  
+      
+  
   <div>
     Name: @Model.Name<br />
-    API Key Id: @Model.Id<br />
-    API Key Secret: @Model.Identity<br />
+            API Key Id: @Model.Id<br />
+            API Key Secret: @Model.Identity<br />
+        
   </div>
+  
 </div>
+
 
 <div>
   <a asp-action="IndexAsync">Back to List</a>
+  
 </div>
 ```
 
@@ -216,12 +240,20 @@ Displaying the index is a little more complex, as there are potentially several 
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2>Your Account</h2>
 
-<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-Username: @Model.User.Username <br/>
-Registered: @Model.User.CreationTime  <br/>
+## Your Account
+
+
+<div asp-validation-summary="ModelOnly" class="text-danger">
+  
+</div>
+
+Username: @Model.User.Username
+
+  
+Registered: @Model.User.CreationTime  
+  
 Twitter Status: @if (Model.UserAuthentications.ContainsKey("Twitter"))
 {
     var twitter = Model.UserAuthentications["Twitter"].Single();
@@ -231,38 +263,84 @@ else
 {
     <text>Not Linked</text>
 }
+  
 
-<h3>API Keys</h3>
+
+### API Keys
+
 
 <table>
   <tr>
-    <th>Created</th>
-    <th>Name</th>
-    <th>API Key Id</th>
-    <th>API Key Secret</th>
-    <th></th>
+    <th>
+      Created
+    </th>
+            
+    
+    <th>
+      Name
+    </th>
+            
+    
+    <th>
+      API Key Id
+    </th>
+            
+    
+    <th>
+      API Key Secret
+    </th>
+            
+    
+    <th>
+      
+    </th>
+        
   </tr>
-  @if (Model.UserAuthentications.ContainsKey("APIKey"))
-  {
-      var keys = Model.UserAuthentications["APIKey"];
-      foreach (var key in keys)
+      @if (Model.UserAuthentications.ContainsKey("APIKey"))
       {
-      <tr>
-        <td>@key.CreationTime</td>
-        <td>@key.Name</td>
-        <td>@key.Id</td>
-        <td>@key.GetMaskedIdentity()</td>    
-        <td>
-          <a asp-action="Revoke" asp-route-id="@key.Id">Revoke</a>
-        </td>
-      </tr>
+          var keys = Model.UserAuthentications["APIKey"];
+          foreach (var key in keys)
+          {
+              
+  
+  <tr>
+    <td>
+      @key.CreationTime
+    </td>
+                    
+    
+    <td>
+      @key.Name
+    </td>
+                    
+    
+    <td>
+      @key.Id
+    </td>
+                    
+    
+    <td>
+      @key.GetMaskedIdentity()
+    </td>
+                    
+    
+    <td>
+      <a asp-action="Revoke" asp-route-id="@key.Id">Revoke</a>
+    </td>
+                
+  </tr>
+          }
       }
-  }
+      
+  
   <tr>
     <td colspan="5">
       <a asp-action="AddKey">Add a key</a>
+              
     </td>
+        
   </tr>
+  
 </table>
 ```
 
@@ -361,6 +439,7 @@ public async Task<RevocationDetails> RevokeAuthenticationAsync(string userId, st
 Now that we have the new `ICustomMembership` behavior, we can add the `UserPersistence` requirements.
 
 
+
 ```csharp
 public enum AuthenticationScheme
 {
@@ -374,6 +453,7 @@ First we add the two new Authentication types to the enum.
 <div class="note-area">
   I really shouldn&#8217;t have named this enum &#8220;AuthenticationScheme&#8221;, since that has a specific meaning for ASP.Net Core 2 already, sorry about that. Future refactor opportunity.
 </div>
+
 
 
 ```csharp

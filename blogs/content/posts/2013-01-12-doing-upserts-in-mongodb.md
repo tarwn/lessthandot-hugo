@@ -3,6 +3,7 @@ title: Doing UPSERTs in MongoDB
 author: SQLDenis
 type: post
 date: 2013-01-12T13:14:00+00:00
+ID: 1911
 excerpt: "This post will explain how to do UPSERT statements in MongoDB. Before we start let's first describe what an UPSERT statement is. An UPSERT statement will insert a row if it doesn't exist already, if the row does exist then it will update the row. In SQL&hellip;"
 url: /index.php/datamgmt/dbprogramming/doing-upserts-in-mongodb/
 views:
@@ -22,11 +23,13 @@ This post will explain how to do UPSERT statements in MongoDB. Before we start l
 
 Open up a new command prompt or shell, connect to MongoDB and either use an existing database or create a new one
 
-<pre>C:UsersDenis&gt;C:NoSQLmongodbbinmongo
+```cmd
+C:UsersDenis>C:NoSQLmongodbbinmongo
 MongoDB shell version: 2.2.2
 connecting to: test
-&gt; use UpsertTest
-switched to db UpsertTest</pre>
+> use UpsertTest
+switched to db UpsertTest
+```
 
 If you need some help with setting up MongoDB on Windows 7 or Windows 8, take a look at [Creating MongoDB as a service on Windows 8][2]
 

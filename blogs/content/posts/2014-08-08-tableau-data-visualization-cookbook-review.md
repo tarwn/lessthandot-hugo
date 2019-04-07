@@ -3,6 +3,7 @@ title: Tableau Data Visualization Cookbook – Review
 author: Koen Verbeeck
 type: post
 date: 2014-08-08T11:48:45+00:00
+ID: 2895
 url: /index.php/datamgmt/tableau-data-visualization-cookbook-review/
 views:
   - 12519

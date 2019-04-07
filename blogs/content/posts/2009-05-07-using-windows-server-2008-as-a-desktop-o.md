@@ -3,6 +3,7 @@ title: Using Windows Server 2008 as a Desktop OS
 author: Alex Ullrich
 type: post
 date: 2009-05-07T12:17:00+00:00
+ID: 410
 url: /index.php/sysadmins/os/using-windows-server-2008-as-a-desktop-o/
 views:
   - 3498

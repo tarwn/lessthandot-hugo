@@ -3,6 +3,7 @@ title: Windows 7 SP1 RTM available for MSDN and TechNet customers
 author: SQLDenis
 type: post
 date: 2011-02-16T16:30:00+00:00
+ID: 1045
 excerpt: |
   If you are a TechNet or MSDN subscriber then you can download Windows 7 Service Pack 1 or Window Server 2008 R2 Service Pack 1 today. 
   

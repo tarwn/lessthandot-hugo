@@ -3,6 +3,7 @@ title: Duplicating LessThanDot on a Vagrant VM
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-01-08T14:43:49+00:00
+ID: 4297
 url: /index.php/webdev/duplicating-lessthandot-on-a-vagrant-vm/
 featured_image: /wp-content/uploads/2016/01/Vagrant.png
 views:
@@ -105,7 +106,8 @@ The local configuration file works like this.
 
 1) Added a vagrant.config file using YAML that looked like this:
 
-<pre>mysql.rootpass:    qwertyissupersafe
+```text
+mysql.rootpass:    qwertyissupersafe
 mysql.webuser:     yourusername
 mysql.webpass:     yourpassword
 mysql.dbprefix:    ltd
@@ -115,11 +117,12 @@ backups.address:   192.168.1.2
 backups.username:  FTPUserNameHere
 backups.password:  PasswordHere
 backups.conf:      lotsostuff.tar.gz
-backups.data:      thedatas.tar.gz</pre>
-
+backups.data:      thedatas.tar.gz
+```
 2) Added logic in the Vagrantfile to parse the config file and later pass values to the bootstrap as args:
 
-<pre># -*- mode: ruby -*-
+```ruby
+# -*- mode: ruby -*-
 # vi: set ft=ruby :
 require 'yaml'
 
@@ -148,14 +151,15 @@ Vagrant.configure(2) do |config|
     settings["backups.conf"], 
     settings["backups.data"]
   ]
-  config.vm.provision :shell, :path =&gt; "vagrant_setup/bootstrap.sh", :args =&gt; settings_array
-end</pre>
-
+  config.vm.provision :shell, :path => "vagrant_setup/bootstrap.sh", :args => settings_array
+end
+```
 I was explicit with the settings array so it would be more obvious to me if I mismatched an arg between the array and the bootstrap script.
 
 3) The bootstrap file then starts like so:
 
-<pre>#!/usr/bin/env bash
+```bash
+#!/usr/bin/env bash
 
 # Settings from Vagrantfile
 SETTINGS_MYSQL_ROOTPASS=$1
@@ -168,8 +172,8 @@ SETTINGS_BACKUPS_ADDRESS=$7
 SETTINGS_BACKUPS_USERNAME=$8
 SETTINGS_BACKUPS_PASSWORD=$9
 SETTINGS_BACKUPS_CONF=${10}
-SETTINGS_BACKUPS_DATA=${11}</pre>
-
+SETTINGS_BACKUPS_DATA=${11}
+```
 4) To prevent the config file from committing, I added it to the gitignore and created a sample file with dummy files that would be added to the git repository.
 
 ### Custom Domains / Hosts file
@@ -182,20 +186,25 @@ To install it:
 
 In my Vagrantfile:
 
-<pre>config.vm.hostname = settings["vagrant.hostname"]
-config.hostsupdater.aliases = ["sqlcop.#{config.vm.hostname}","blogs.#{config.vm.hostname}","wiki.#{config.vm.hostname}","forum.#{config.vm.hostname}","cooking.#{config.vm.hostname}","admin.#{config.vm.hostname}"]</pre>
-
+```ruby
+config.vm.hostname = settings["vagrant.hostname"]
+config.hostsupdater.aliases = ["sqlcop.#{config.vm.hostname}","blogs.#{config.vm.hostname}","wiki.#{config.vm.hostname}","forum.#{config.vm.hostname}","cooking.#{config.vm.hostname}","admin.#{config.vm.hostname}"]
+```
 The plugin, hostsupdater, takes care of adding and removing entries from the hosts files when I &#8220;vagrant up&#8221;.
 
 ### Copying files that already exist
 
 This will get stuck at an &#8220;are you sure&#8221; prompt: 
 
-<pre>cp /vagrant/configs/httpd.conf /etc/httpd/conf/httpd.conf</pre>
+```bash
+cp /vagrant/configs/httpd.conf /etc/httpd/conf/httpd.conf
+```
 
 This will charge ahead without any prompting at all: 
 
-<pre>\cp /vagrant/configs/httpd.conf /etc/httpd/conf/httpd.conf</pre>
+```bash
+\cp /vagrant/configs/httpd.conf /etc/httpd/conf/httpd.conf
+```
 
 Do the second. 🙂
 
@@ -203,7 +212,8 @@ Do the second. 🙂
 
 When you install MySQL, it will suggest you run a command to secure your installation. This script performs the same steps:
 
-<pre>#!/usr/bin/env bash
+```bash
+#!/usr/bin/env bash
 
 SETTINGS_MYSQL_ROOTPASS=$1
 mysqladmin -uroot password "$SETTINGS_MYSQL_ROOTPASS"
@@ -211,35 +221,37 @@ mysql -u root -p"$SETTINGS_MYSQL_ROOTPASS" -e "UPDATE mysql.user SET Password=PA
 mysql -u root -p"$SETTINGS_MYSQL_ROOTPASS" -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1')"
 mysql -u root -p"$SETTINGS_MYSQL_ROOTPASS" -e "DELETE FROM mysql.user WHERE User=''"
 mysql -u root -p"$SETTINGS_MYSQL_ROOTPASS" -e "DELETE FROM mysql.db WHERE Db='test' OR Db='test\_%'"
-mysql -u root -p"$SETTINGS_MYSQL_ROOTPASS" -e "FLUSH PRIVILEGES"</pre>
-
+mysql -u root -p"$SETTINGS_MYSQL_ROOTPASS" -e "FLUSH PRIVILEGES"
+```
 The single parameter for this script is the value from the configuration that I intended the root password to be set to. This is also passed to my later scripts for applying backups and creating a new user.
 
 ### Template for httpd.conf
 
 The z_lessthandot.httpd.conf template is just a copy of the production conf with tokens in all the spots that the IP Address or domain name show up, like so:
 
-<pre>NameVirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80 
+```text
+NameVirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80 
 
 #### Production Sites ####
 ##########################
 
-<VirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80&gt;
+<VirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80>
 	DocumentRoot /vagrant/trunk/www/
 	ServerName %%SETTINGS_VAGRANT_HOSTNAME%%
 	# ... etc ...
-</VirtualHost&gt;
+</VirtualHost>
 
-<VirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80&gt;
+<VirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80>
 	DocumentRoot /vagrant/trunk/forum/
 	ServerName forum.%%SETTINGS_VAGRANT_HOSTNAME%%
 	# ...etc...
-</VirtualHost&gt;</pre>
-
+</VirtualHost>
+```
 To replace the tokens, I use sed and the args passed into the script (originally form the config file):
 
-<pre>sed "s/%%SETTINGS_VAGRANT_IPADDRESS%%/$SETTINGS_VAGRANT_IPADDRESS/g;s/%%SETTINGS_VAGRANT_HOSTNAME%%/$SETTINGS_VAGRANT_HOSTNAME/g" /vagrant/vagrant_setup/z_lessthandot.httpd.conf &gt; /etc/httpd/conf.d/z_lessthandot.httpd.conf</pre>
-
+```bash
+sed "s/%%SETTINGS_VAGRANT_IPADDRESS%%/$SETTINGS_VAGRANT_IPADDRESS/g;s/%%SETTINGS_VAGRANT_HOSTNAME%%/$SETTINGS_VAGRANT_HOSTNAME/g" /vagrant/vagrant_setup/z_lessthandot.httpd.conf > /etc/httpd/conf.d/z_lessthandot.httpd.conf
+```
 And there we go, one customized site httpd.conf.
 
 ## Instant Server, Just Add Water

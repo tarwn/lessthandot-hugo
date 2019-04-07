@@ -3,6 +3,7 @@ title: Solving a slow running query issue with UNION
 author: Koen Verbeeck
 type: post
 date: 2015-02-25T11:38:03+00:00
+ID: 3253
 url: /index.php/datamgmt/dbprogramming/mssqlserver/solving-a-slow-running-query-issue-with-union/
 views:
   - 14757
@@ -26,7 +27,8 @@ I recently encountered a curious issue with a query. The query itself wasn’t e
 
 The query looked something like this:
 
-<pre>WITH CTE_Contracts AS
+sql
+WITH CTE_Contracts AS
 (
 	SELECT
 		 c.ContractID
@@ -40,11 +42,13 @@ SELECT
 	,ContractMonth = d.[Month]
 FROM CTE_Contracts	c
 JOIN dateDim		d ON	d.[Date]	BETWEEN c.ContractFrom AND c.ContractTo
-						AND	d.[Day]		= 1; -- only get the first of the month </pre>
+						AND	d.[Day]		= 1; -- only get the first of the month 
 
+```
 The query is a bit more complex, but you get the idea. On the test server, the query took 1 minute and 24 seconds to return about 90,000 rows. That’s a tad slow if you ask me. I didn’t see anything wrong with the query (and indexes wouldn’t help), so I just blamed it on the server and on the standard edition of SQL Server. That was until I came across a very similar query. That query did about the same thing, but it also fetched data from another table and appended it to the first result set with a UNION. Something like this:
 
-<pre>WITH CTE_Contracts AS
+sql
+WITH CTE_Contracts AS
 (
 	SELECT
 		 c.ContractID
@@ -65,8 +69,9 @@ SELECT
 	,ContractMonth = d.[Month]
 FROM CTE_Contracts	c
 JOIN dateDim		d ON	d.[Date]	BETWEEN c.ContractFrom AND c.ContractTo
-						AND	d.[Day]		= 1; -- only get the first of the month</pre>
+						AND	d.[Day]		= 1; -- only get the first of the month
 
+```
 Now this query returned about 120,000 rows in 6 seconds. What? More rows in less time? How’s that possible? Time to take a look at the execution plans. The execution plan of the second query:
 
 [<img class="alignnone size-full wp-image-3258" src="/wp-content/uploads/2015/02/executionplan_1.png" alt="executionplan_1" width="852" height="511" srcset="/wp-content/uploads/2015/02/executionplan_1.png 852w, /wp-content/uploads/2015/02/executionplan_1-300x179.png 300w" sizes="(max-width: 852px) 100vw, 852px" />][2]
@@ -81,7 +86,8 @@ The nested loops now gives a warning that there is no join predicate. This resul
 
 The question is why does SQL Server change behavior? Well, the second query has a UNION operator in the inner query. This means that SQL Server has to compare the two result sets which each other, so the date columns have to be calculated directly in the inner query. Knowing this, we can easily optimize the first query by adding a “dummy UNION”:
 
-<pre>WITH CTE_Contracts AS
+sql
+WITH CTE_Contracts AS
 (
 	SELECT
 		 c.ContractID
@@ -97,8 +103,9 @@ SELECT
 	,ContractMonth = d.[Month]
 FROM CTE_Contracts	c
 JOIN dateDim		d ON	d.[Date]	BETWEEN c.ContractFrom AND c.ContractTo
-						AND	d.[Day]		= 1; -- only get the first of the month </pre>
+						AND	d.[Day]		= 1; -- only get the first of the month 
 
+```
 This extra row with all NULL values will be filtered out by the INNER JOIN with the date dimension. Now the query runs in 3 seconds!
 
 [<img class="alignnone size-full wp-image-3256" src="/wp-content/uploads/2015/02/executionplan_3.png" alt="executionplan_3" width="769" height="168" srcset="/wp-content/uploads/2015/02/executionplan_3.png 769w, /wp-content/uploads/2015/02/executionplan_3-300x65.png 300w" sizes="(max-width: 769px) 100vw, 769px" />][4]

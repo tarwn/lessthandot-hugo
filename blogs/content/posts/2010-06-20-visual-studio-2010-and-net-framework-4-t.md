@@ -3,6 +3,7 @@ title: Visual Studio 2010 and .NET Framework 4 Training Kit June 2010 Release Av
 author: SQLDenis
 type: post
 date: 2010-06-20T13:05:32+00:00
+ID: 825
 url: /index.php/desktopdev/mstech/visual-studio-2010-and-net-framework-4-t/
 views:
   - 3521

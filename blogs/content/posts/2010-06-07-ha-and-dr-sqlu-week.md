@@ -3,6 +3,7 @@ title: Welcome to HA and DR week!
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-07T08:31:04+00:00
+ID: 807
 excerpt: 'Welcome to SQL University HA and DR week! My name is Ted Krueger and I will be covering various High Availability and Disaster Recovery (HA and DR) strategies and methods.During the week, we will talk about defining HA and DR and introduce some points to consider while putting them into practice in your centers. Next, we will setup a database mirror and discuss the basics of this HA feature, which is available in SQL Server 2005, 2008 and 2008 R2. Finally, we will go over DR. The DR class will be composed of a Log Shipping setup and also a backup/restore setup. The HA and DR will also cover testing your solutions. That is critical to these life saving strategies - we need to know they will work in the time of need!'
 url: /index.php/datamgmt/datadesign/ha-and-dr-sqlu-week/
 views:

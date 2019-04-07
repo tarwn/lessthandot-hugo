@@ -3,6 +3,7 @@ title: Who would benefit from Product Information Management
 author: Axel Achten (axel8s)
 type: post
 date: 2014-01-02T14:50:00+00:00
+ID: 2184
 excerpt: 'A lot of PIM projects start together with an e-commerce project. The e-commerce project will make products available online and to maintain the product information a PIM project is started preceding the e-commerce project. In my previous post "What is P&hellip;'
 url: /index.php/datamgmt/pim/who-would-benefit-from-product/
 views:

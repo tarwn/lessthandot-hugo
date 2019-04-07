@@ -3,6 +3,7 @@ title: Removing old files with SSIS
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-04T12:29:42+00:00
+ID: 809
 excerpt: 'This post will illustrate two methods for removing old files from directories using SSIS.  This task is often used to delete old backup files and other ETL files that are not required any longer.  We’ll step through two methods.  First method uses a script task entirely for the removal and the logging events.  This method will also have some comments in for logging and using the FireInformation method to mimic the normal logging abilities of SSIS.  The FireInformation method didn’t provide much more of a performance boost so it wasn’t used here.  Second method uses a Foreach Loop Container, Script Task for logic and a File System Task for the delete event.  SSIS Logging will be utilized with the OnPreExecute and OnPostExecute events in the second method over the System.IO method of AppendText.'
 url: /index.php/datamgmt/dbprogramming/removing-old-files-with-ssis-sql-server/
 views:
@@ -58,7 +59,8 @@ If anyone has other methods or improvements to these, please feel free to commen
 
   6. Click Edit Script
   7. Add the following code
-<pre>using System;
+```csharp
+using System;
 using System.IO;
 using System.Data;
 using Microsoft.SqlServer.Dts.Runtime;
@@ -125,7 +127,8 @@ namespace ST_aaf20a0bd5b94ad394ab80cf5d585c41.csproj
                 tw.Close();
         }
     }
-}</pre>
+}
+```
 
   8. Close the code editor and click OK to the script task editor.
   9. Right click an empty space in the Control Flow and select Package Configurations
@@ -166,7 +169,8 @@ namespace ST_aaf20a0bd5b94ad394ab80cf5d585c41.csproj
 </div>
 
   5. Click the Edit Script button and add this code
-<pre>using System;
+```csharp
+using System;
 using System.Data;
 using System.IO;
 using Microsoft.SqlServer.Dts.Runtime;
@@ -203,7 +207,8 @@ namespace ST_216af79b563f4866bb64f6043b232b4e.csproj
             }
         }
     }
-}</pre>
+}
+```
 
   6. Close the code editor and hit OK to exit and save the script task settings.
   7. Bring over and drop a File System Task into the Foreach Loop Container

@@ -3,6 +3,7 @@ title: Using schemas to maintain order as a DBA
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-02-26T13:28:54+00:00
+ID: 558
 url: /index.php/datamgmt/datadesign/grouping-dba-junk/
 views:
   - 8736
@@ -45,14 +46,18 @@ We can go much farther than that knowing schemas are available to us by grouping
 
 Let’s say we have two databases on an instance named, ERP and WMS. In our DBA database we can create schemas to match the databases such as WMS\_OBJ and ERP\_OBJ. Now when we create procedures, function, views and so on we can put them into the schema that represents the database they refer to.
 
-<pre>CREATE PROCEDURE WMS_OBJ.GRABAWIDGET
+sql
+CREATE PROCEDURE WMS_OBJ.GRABAWIDGET
 AS
-SELECT WIDGETS FROM WMS.WIDGET_TABLE</pre>
+SELECT WIDGETS FROM WMS.WIDGET_TABLE
+```
 
 Without much thought we can quickly find all our objects 
 
-<pre>SELECT * FROM INFORMATION_SCHEMA.ROUTINES 
-WHERE SPECIFIC_SCHEMA = 'WMS_OBJ'</pre>
+sql
+SELECT * FROM INFORMATION_SCHEMA.ROUTINES 
+WHERE SPECIFIC_SCHEMA = 'WMS_OBJ'
+```
 
 
 

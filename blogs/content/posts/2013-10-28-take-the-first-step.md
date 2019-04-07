@@ -3,6 +3,7 @@ title: Take the First Step
 author: Jes Borland
 type: post
 date: 2013-10-28T12:55:00+00:00
+ID: 2186
 excerpt: |
   Earlier this month I attended PASS Summit 2013 in Charlotte, NC. It was my third, and my favorite so far (I say that every year). Among the many activities I got to participate in, I was interviewed for PASStv. (Look for me on day one!)
   One of the ques&hellip;

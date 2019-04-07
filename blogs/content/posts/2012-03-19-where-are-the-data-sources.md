@@ -3,6 +3,7 @@ title: Where are the Data Sources and Data Source Views in SSIS 2012?
 author: Axel Achten (axel8s)
 type: post
 date: 2012-03-19T12:23:00+00:00
+ID: 1566
 excerpt: "While I'm still preparing to teach a MS6235A SSIS training I use a SQL 2012 RTM environment to test the demo's. One of the demo's is to show how a Connection Manager is made based on a Data Source View. In BIDS 2008 the Data Sources and Data Source View&hellip;"
 url: /index.php/datamgmt/ssis/where-are-the-data-sources/
 views:

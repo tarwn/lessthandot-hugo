@@ -3,6 +3,7 @@ title: Azure Web Sites Deployment and Unit Testing
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-03-10T12:18:26+00:00
+ID: 2354
 url: /index.php/enterprisedev/cloud/azure/azure-web-sites-deployment-and-unit-testing/
 views:
   - 18266
@@ -127,7 +128,8 @@ And now each time I commit new code to master, it runs through the automated dep
 
 So far, the example code just has a single page that doesn&#8217;t really do anything worth unit testing. This isn&#8217;t intended to be a real-world sample, but it does need some simple logic to test.
 
-<pre>public ActionResult Index()
+```c#
+public ActionResult Index()
 {
     return View();
 }
@@ -136,8 +138,8 @@ public ActionResult Text(string text)
 {
     var model = new TextModel(text);
     return View(model);
-}</pre>
-
+}
+```
 Now I&#8217;ve added actions and views for a simple form that asks for a piece of text, submits it, and then shows a response based on whetehr the txt is populated or not.
 
 So we have a form:
@@ -224,15 +226,16 @@ This may no longer be an issue, the Azure team has been updating things frequent
 
 I added the following section to the command file to run my tests:
 
-<pre>:: 2. Tests
+```dos
+:: 2. Tests
 echo 2: Build and execute tests
 
 echo 2a: Executing Unit Tests: CloudSiteTests
 %MSBUILD_PATH% "%DEPLOYMENT_SOURCE%\CloudSiteTests\CloudSiteTests.csproj" /nologo /verbosity:m /t:Build /p:Configuration=Debug
 call "tools/nunit-console.exe" "%DEPLOYMENT_SOURCE%\CloudSiteTests\bin\Debug\CloudSiteTests.dll"
 
-IF !ERRORLEVEL! NEQ 0 goto error</pre>
-
+IF !ERRORLEVEL! NEQ 0 goto error
+```
 Now when I commit all of these changes and the deployment runs in Azure, I get the following result:
 
 <div id="attachment_2384" style="width: 710px" class="wp-caption aligncenter">

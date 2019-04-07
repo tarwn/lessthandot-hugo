@@ -3,6 +3,7 @@ title: 'Book Review: Pro SQL Server 2012 Practices – Indexing Outside the Bubb
 author: Jes Borland
 type: post
 date: 2013-01-14T11:27:00+00:00
+ID: 1914
 excerpt: 'Last year, I had the opportunity to contribute to my first book, Pro SQL Server 2012 Practices. This was a huge honor, and the list of my co-authors is remarkable. What we’ve decided to do is each take one chapter, written by someone else, and post a re&hellip;'
 url: /index.php/itprofessionals/book-review/book-review-pro-sql-server-1/
 views:

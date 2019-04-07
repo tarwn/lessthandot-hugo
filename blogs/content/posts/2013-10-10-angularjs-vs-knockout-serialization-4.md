@@ -3,6 +3,7 @@ title: AngularJS vs Knockout – Serialization (4 of 8)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-10-10T13:05:00+00:00
+ID: 2166
 excerpt: "I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. A key operation will be API GETs and POSTs, so how easy or hard will it be to serialize and send data models? Is my server going to have to wade t&hellip;"
 url: /index.php/webdev/uidevelopment/angularjs-vs-knockout-serialization-4/
 views:
@@ -41,7 +42,8 @@ Serialization is fairly straightforward. In this example I decided I wanted to s
   <strong><span class="MT_red">Warning:</span> </strong>I am only outputting the json to a property for illustration purposes so we can see what the output would be as we make changes. Updating a json property via a watch is not something you would do in a real application.
 </div>
 
-<pre>var sampleApp = angular.module('sampleApp', []);
+```javascript
+var sampleApp = angular.module('sampleApp', []);
 
 sampleApp.controller('SerializationController', function ($scope) {
     $scope.model = {
@@ -64,8 +66,8 @@ sampleApp.controller('SerializationController', function ($scope) {
     $scope.$watch("model", function () {
         $scope.$json = angular.toJson($scope.model);
     }, true);
-});</pre>
-
+});
+```
 The controller and form is based on ones I used in prior examples, but I found I had to make modifications to make the serialization happy. 
 
 The first issue was that it will not serialize $scope, so I had to move the properties I want to serialize to an object inside scope. This seems reasonable, as the top level is unlikely to be an object I have read or want to write over the wire. It&#8217;s likely to have one or more data models attached to it and a variety of front-end specific values, so this limitation shouldn&#8217;t have any real world impact.
@@ -86,7 +88,8 @@ Like the AngularJS example, we&#8217;re serializing a child model with text, an 
   <strong><span class="MT_red">Warning:</span> </strong>I have only included a json computed property for illustration purposes so we can see what the output would be as we make changes. In the real world you would only generate the JSON when you needed it, not in an observable like this.
 </div>
 
-<pre>var SerializationModel = function () {
+```javascript
+var SerializationModel = function () {
     this.model = {
         textValue: ko.observable(""),
         integerValue: ko.observable(0)
@@ -99,8 +102,8 @@ Like the AngularJS example, we&#8217;re serializing a child model with text, an 
     this.json = ko.computed(function () {
         return ko.toJSON(this.model);
     }, this);
-};</pre>
-
+};
+```
 The Knockout example was shorter due to the built-in [computed observable][7]. There weren&#8217;t really any gotchas to this example.
 
 ### Knockout Serialization with Filtering
@@ -109,7 +112,8 @@ Full source available at [Knockout/SerializationWithFiltering.html][8].
 
 Unlike Angular, Knockout&#8217;s toJson method accepts an argument that allows you to filter or transform values as they are serialized. The function accepts a key value pair. Returning the value causes it to be included in the output, while returning undefined causes it to be left out of the serialization.
 
-<pre>var SerializationModel = function () {
+```javascript
+var SerializationModel = function () {
     this.textValue = ko.observable("");
     this.integerValue = ko.observable(0);
     this.soonToBeFake = ko.observable("I will never get transmitted");
@@ -129,8 +133,8 @@ Unlike Angular, Knockout&#8217;s toJson method accepts an argument that allows y
                 return value;
         }, " ");
     }, this);
-};</pre>
-
+};
+```
 In this case I am serializing the top level viewmodel instead of sub-object. I am filtering out the &#8220;json&#8221; property and masking the content of the &#8220;soonToBeFake&#8221; property.
 
 ## Some Difference

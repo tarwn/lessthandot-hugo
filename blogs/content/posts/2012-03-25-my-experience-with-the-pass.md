@@ -3,6 +3,7 @@ title: Why You Should Volunteer for the PASS Summit Program Committee
 author: Jes Borland
 type: post
 date: 2012-03-25T23:38:00+00:00
+ID: 1575
 excerpt: As announced in the March 21, 2012 PASS Community Connector newsletter, PASS is looking for a few good volunteers for the 2012 Summit Program Committee. What is it, what do they do, and why should you care?
 url: /index.php/itprofessionals/professionaldevelopment/my-experience-with-the-pass/
 views:

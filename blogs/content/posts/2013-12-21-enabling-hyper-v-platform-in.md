@@ -3,6 +3,7 @@ title: Enabling Hyper-V Platform in a Windows 8.1 VM
 author: Brian Davis
 type: post
 date: 2013-12-22T03:23:00+00:00
+ID: 2213
 excerpt: 'This weekend I decided to take advantage of the Windows Phone Preview Program for Developers and update my Lumia 920 to Update 3 for WP8.  While Update 3 was downloading and installing on my phone, I decided to install the Windows Phone SDK 8.0 which;'
 url: /index.php/sysadmins/os/windows/enabling-hyper-v-platform-in/
 views:

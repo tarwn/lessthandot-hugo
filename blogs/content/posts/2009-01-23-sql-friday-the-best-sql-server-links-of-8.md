@@ -3,6 +3,7 @@ title: SQL Friday, The Best SQL Server Links Of The Past Week Episode 8
 author: SQLDenis
 type: post
 date: 2009-01-23T14:09:29+00:00
+ID: 295
 url: /index.php/datamgmt/datadesign/sql-friday-the-best-sql-server-links-of-8/
 views:
   - 3398
@@ -81,5 +82,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [9]: http://blogs.msdn.com/psssql/archive/2009/01/21/how-it-works-sys-dm-os-buffer-descriptors.aspx
  [10]: http://blogs.msdn.com/psssql/archive/2009/01/21/prb-rml-utilities-readtrace-and-how-to-workaround-mars.aspx
  [11]: http://itknowledgeexchange.techtarget.com/sql-server/viewing-sql-server-plan-guides/
- [12]: http://forum.lessthandot.com/viewforum.php?f=17
- [13]: http://forum.lessthandot.com/viewforum.php?f=22
+ [12]: http://forum.ltd.local/viewforum.php?f=17
+ [13]: http://forum.ltd.local/viewforum.php?f=22

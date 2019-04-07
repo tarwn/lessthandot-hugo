@@ -3,6 +3,7 @@ title: Add Report Wizard Layout Style (Standard Company Style)
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-14T22:23:06+00:00
+ID: 387
 url: /index.php/datamgmt/datadesign/add-report-wizard-layout-style-standard/
 views:
   - 7446
@@ -27,7 +28,8 @@ Open StyleTemplates.xml for editing.
 
 It&#8217;s pretty straight forward and I bet you already see what to do. For this example I&#8217;ll add a simple style
 
-<pre><StyleTemplate Name="CompanyStandard">
+```xml
+<StyleTemplate Name="CompanyStandard">
 		<Label>Company Standard Format</Label>
 		<Styles>
 			<Style Name="Title">
@@ -61,8 +63,8 @@ It&#8217;s pretty straight forward and I bet you already see what to do. For thi
 				</BorderColor>
 			</Style>
 		</Styles>
-	</StyleTemplate></pre>
-
+	</StyleTemplate>
+```
 Save that in there and close the XML file.
 
 Now open up Visual Studio and create a new report server project. Create a new report from the wizard and get to the layout style section. You should see Company Standard Format listed now. Thing about this is, I don&#8217;t know about getting a preview. I never spent the time to find out where the configuration was to add this layout to be interrupted. Honestly don&#8217;t think it&#8217;s that important. You&#8217;ll need to test the layout pretty well to get it perfect in order to make it your standard. Once you do though it will save a lot of time editing layouts.

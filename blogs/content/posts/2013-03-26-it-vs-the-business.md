@@ -3,6 +3,7 @@ title: IT vs The Business
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-03-26T07:36:00+00:00
+ID: 2053
 excerpt: |
   A business person is asking an IT person to implement a blog using XYZ NoSQL database and the IT person pushes back, but by the way here's this business opportunity I thought of.
   

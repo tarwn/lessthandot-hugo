@@ -3,6 +3,7 @@ title: Windows Azure Training Kit April 2013 Released
 author: SQLDenis
 type: post
 date: 2013-04-29T18:28:00+00:00
+ID: 2076
 excerpt: |
   Miscrosoft has released the Windows Azure Training Kit April 2013.
   

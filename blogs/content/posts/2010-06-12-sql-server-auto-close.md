@@ -3,6 +3,7 @@ title: SQL Server and the Auto Close Setting
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-12T10:26:29+00:00
+ID: 819
 excerpt: 'Today I woke up to a little over a hundred emails from one of my database servers letting me know that my resources were jumping around like a kangaroo.  In the mix of those emails I also had alerts thrown stating, [database_name_withheld] has a status of Suspect, Cleanly Shutdown.  I actively monitor the state of the database being open or closed (which also shows status of suspect, recovering etc...)   I recommend the same so you catch these situations.  When I read the emails, I knew exactly what the setting was that had been set to true.  "Auto Close"'
 url: /index.php/datamgmt/dbprogramming/sql-server-auto-close/
 views:

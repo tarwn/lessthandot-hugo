@@ -3,6 +3,7 @@ title: Rebuild master and restore system databases from complete disk failure
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-04-14T16:43:54+00:00
+ID: 386
 url: /index.php/datamgmt/dbadmin/rebuild-master-and-restore-system-databa/
 views:
   - 20147
@@ -19,8 +20,9 @@ I’m going to break my favorite installation of SQL Server 2005 so you can see 
 
 First to show the status of master we run
 
-<pre>SELECT DATABASEPROPERTYEX('master','Status')</pre>
-
+sql
+SELECT DATABASEPROPERTYEX('master','Status')
+```
 So master is online. Not for long! Easiest way I can break this thing is to stop SQL Server Services and delete master.mdf. Essentially this can replicate a complete loss of disk and the system databases. I’m hoping you configured these data files on drives that only consist of them. If you have binary there then you’ll be up awhile installing everything and hope you remember your configuration changes. Before you do anything more with this blog, backup the system databases. That includes master, msdb and model. Model is not so important but you should be backing these up on any instance. So if you are not, do it! Trust me; you don’t want to attempt a recovery without them. You will lose plenty of sleep and possibly your job. I use model for default database settings. This makes creating new databases a bit faster when you know what you standard database settings are. 
 
 Right click your instance and hit stop. Navigate to the data directory. Mine is

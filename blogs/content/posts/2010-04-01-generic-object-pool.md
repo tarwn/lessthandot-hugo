@@ -3,6 +3,7 @@ title: Generic Object Pool
 author: chaospandion
 type: post
 date: 2010-04-01T23:08:41+00:00
+ID: 748
 url: /index.php/desktopdev/mstech/generic-object-pool/
 views:
   - 10684
@@ -20,7 +21,8 @@ tags:
 ---
 Recently I was working with some socket programming using the SocketAsyncEventArgs class. When writing high performance .NET code it is a good idea to keep object creation to a minimum. Instead of creating a new SocketAsyncEventArgs instance every time an action was performed I decided to put together a simple generic object pool. I hope you&#8217;ll try it out and leave me some feedback. 
 
-<pre>/// <summary>
+```CSharp
+/// <summary>
 /// Represents a pool of objects with a size limit.
 /// </summary>
 /// <typeparam name="T">The type of object in the pool.</typeparam>
@@ -108,4 +110,5 @@ public sealed class ObjectPool<T> : IDisposable
 			}
 		}
 	}
-}</pre>
+}
+```

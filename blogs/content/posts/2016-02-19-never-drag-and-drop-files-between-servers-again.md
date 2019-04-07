@@ -3,6 +3,7 @@ title: Never drag and drop files between servers again!
 author: Jes Borland
 type: post
 date: 2016-02-19T15:22:55+00:00
+ID: 4388
 url: /index.php/uncategorized/never-drag-and-drop-files-between-servers-again/
 views:
   - 7093
@@ -22,7 +23,7 @@ Oh, and there&#8217;s a really easy tool to copy files built into Windows &#8211
 
 Here&#8217;s the basic premise: you open a PowerShell window (or command prompt, but let&#8217;s join the 21st century), and enter
 
-<pre>robocopy <source directory&gt; <destination directory&gt; <optional: file name&gt; /<options&gt;</pre>
+<pre>robocopy <source directory> <destination directory> <optional: file name> /<options></pre>
 
 The file(s) are copied, with progress shown. A few things I love about this:
 
@@ -49,7 +50,9 @@ I want to move the files from my Extended Events folder on AG1 to AG 2. Command:
 
 Let&#8217;s say I wanted to move all the .xml.gz files from one directory to another. Command:
 
-<pre>robocopy "C:\Users\a-jes\Documents" "\\SQL2014AG2\C$\Users\a-jes\Documents" *.xml.gz /z </pre>
+<pre>robocopy "C:\Users\a-jes\Documents" "\\SQL2014AG2\C$\Users\a-jes\Documents" *.xml.gz /z 
+
+</pre>
 
 <img class="aligncenter wp-image-4390 size-full" src="/wp-content/uploads/2016/02/robocopy-2.png" alt="robocopy 2" width="883" height="645" srcset="/wp-content/uploads/2016/02/robocopy-2.png 883w, /wp-content/uploads/2016/02/robocopy-2-300x219.png 300w" sizes="(max-width: 883px) 100vw, 883px" />
 

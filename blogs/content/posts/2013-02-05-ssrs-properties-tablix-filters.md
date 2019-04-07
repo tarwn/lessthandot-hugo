@@ -3,6 +3,7 @@ title: SSRS Properties – Tablix Filters
 author: Jes Borland
 type: post
 date: 2013-02-05T11:36:00+00:00
+ID: 1970
 excerpt: The purpose of this property is to allow you to filter the results of a dataset shown in a tablix.
 url: /index.php/datamgmt/ssrs/ssrs-properties-tablix-filters/
 views:

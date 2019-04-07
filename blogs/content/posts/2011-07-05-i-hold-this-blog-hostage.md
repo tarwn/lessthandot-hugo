@@ -3,6 +3,7 @@ title: I hold this blog hostage for 1 million views mahaaahaha mahahaha….
 author: SQLDenis
 type: post
 date: 2011-07-05T10:54:00+00:00
+ID: 1242
 excerpt: |
   So, I made it to 1 million views just for my blogs on this site in a little more than 3 years.
   

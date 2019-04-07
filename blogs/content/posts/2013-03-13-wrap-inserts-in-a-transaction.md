@@ -3,6 +3,7 @@ title: Wrap inserts in a transaction for faster performance
 author: SQLDenis
 type: post
 date: 2013-03-13T13:54:00+00:00
+ID: 2032
 excerpt: "Sometimes you have to insert a bunch of data and you can't use BCP or another bulk load method. When you do single row inserts, SQL Server wraps these inserts inside an implicit transaction. Did you know that if you use an explicit transaction that the&hellip;"
 url: /index.php/datamgmt/dbprogramming/wrap-inserts-in-a-transaction/
 views:
@@ -26,13 +27,16 @@ Sometimes you have to insert a bunch of data and you can&#8217;t use BCP or anot
 
 Let&#8217;s take a look. first create the following table
 
-<pre>CREATE TABLE Sometest(id INT PRIMARY KEY, SomeCol VARCHAR(200), SomeDate DATETIME,SomeCol2 VARCHAR(200), SomeDate2 DATETIME,
+sql
+CREATE TABLE Sometest(id INT PRIMARY KEY, SomeCol VARCHAR(200), SomeDate DATETIME,SomeCol2 VARCHAR(200), SomeDate2 DATETIME,
 SomeCol3 VARCHAR(200), SomeDate3 DATETIME,SomeCol4 VARCHAR(200), SomeDate4 DATETIME)
-GO</pre>
+GO
+```
 
 Now run the following code
 
-<pre>TRUNCATE TABLE Sometest
+sql
+TRUNCATE TABLE Sometest
 DECLARE @start DATETIME = GETDATE()
 SET NOCOUNT ON
 --BEGIN TRAN
@@ -48,13 +52,15 @@ SET @id+=1
 END
 --COMMIT
 SELECT DATEDIFF(ms,@start,GETDATE())
-SELECT COUNT(*) FROM Sometest</pre>
+SELECT COUNT(*) FROM Sometest
+```
 
 That takes 1153 milliseconds on my machine
 
 Run the same code but now uncomment the transaction
 
-<pre>TRUNCATE TABLE Sometest
+sql
+TRUNCATE TABLE Sometest
 DECLARE @start DATETIME = GETDATE()
 SET NOCOUNT ON
 BEGIN TRAN
@@ -70,7 +76,8 @@ SET @id+=1
 END
 COMMIT
 SELECT DATEDIFF(ms,@start,GETDATE())
-SELECT COUNT(*) FROM Sometest</pre>
+SELECT COUNT(*) FROM Sometest
+```
 
 That is almost twice as fast (or almost half as slow), it takes 673 milliseconds
 

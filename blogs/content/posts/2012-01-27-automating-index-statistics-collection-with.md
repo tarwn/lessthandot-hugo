@@ -3,6 +3,7 @@ title: Automating Index Statistics Collection with SSIS – The fast one
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-01-27T12:28:00+00:00
+ID: 1510
 excerpt: 'Article, Automating Index Statistics Collection, went over a method to automate running a script authored by Jason Strate.  The script is a comprehensive collection of index statistics and usage details that allows a DBA or designated administrator of S&hellip;'
 url: /index.php/datamgmt/dbprogramming/automating-index-statistics-collection-with/
 views:
@@ -57,8 +58,11 @@ The BypassPrepare is still required in the Execute SQL Task because the temporar
 
 In order to take into account the multiple databases that index statistics should be collected from, pass a parameter into the SQLStatement.  This is done by altering the statement to use a variable in T-SQL instead of the DB_ID() function.
 
-<pre>DECLARE @RunTimeDB VARCHAR(128)
-SELECT @RunTimeDB = [Name] FROM sys.databases WHERE [name] = ?</pre>
+sql
+DECLARE @RunTimeDB VARCHAR(128)
+SELECT @RunTimeDB = [Name] FROM sys.databases WHERE [name] = ?
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-33.png?mtime=1327674102"><img alt="" src="/wp-content/uploads/blogs/All/-33.png?mtime=1327674102" width="508" height="318" /></a>
@@ -74,10 +78,13 @@ Finally, add a task to clean up the temporary table. Normally, the temporary tab
 
 To do this, we check to ensure the table exists before calling a DROP TABLE statement.
 
-<pre>IF OBJECT_ID('tempdb..##IndexBaseLine') IS NOT NULL
+sql
+IF OBJECT_ID('tempdb..##IndexBaseLine') IS NOT NULL
 BEGIN
     DROP TABLE ##IndexBaseLine
-END</pre>
+END
+```
+
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-35.png?mtime=1327674287"><img alt="" src="/wp-content/uploads/blogs/All/-35.png?mtime=1327674287" width="624" height="441" /></a>

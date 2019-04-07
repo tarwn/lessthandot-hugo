@@ -3,6 +3,7 @@ title: 'T-SQL Tuesday #35 – Horrify Me!'
 author: Ted Krueger (onpnt)
 type: post
 date: 2012-10-09T10:57:00+00:00
+ID: 1748
 excerpt: |
   This month’s T-SQL Tuesday (#TSql2sday) is being hosted by Nick Haslam (B | T).  Nick has a great topic this month.  “What is your most horrifying discovery from your work with SQL Server?”
   I thought about this for a while and even considered bugs that&hellip;
