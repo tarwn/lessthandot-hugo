@@ -123,18 +123,18 @@ Append to the CommandLine Input: %MSBuildLogClause%
 
 <pre>Type: Powershell
 Name: Generate Build Warnings Report
-Working Dir: &lt;working dir the powershell script is in&gt;
+Working Dir: <working dir the powershell script is in&gt;
 Script: Source code
 Source:</pre>
 
 <pre>if(test-path .\BuildWarningReportGenerator.ps1){
-   .\BuildWarningReportGenerator.ps1 -BuildLogPath "&lt;path to your MS Build working dir&gt;\%BuildLogFile%" -BuildCheckoutDirectoryPath "&lt;path from script directory to build checkout directory&gt;\" -BuildArtifactRepositoryUrl "%teamcity.serverUrl%/repository/download/%system.teamcity.buildType.id%/"
+   .\BuildWarningReportGenerator.ps1 -BuildLogPath "<path to your MS Build working dir&gt;\%BuildLogFile%" -BuildCheckoutDirectoryPath "<path from script directory to build checkout directory&gt;\" -BuildArtifactRepositoryUrl "%teamcity.serverUrl%/repository/download/%system.teamcity.buildType.id%/"
 }
 
 # ** Requires two trailing lines to work correctly</pre>
 
 <pre>Mode: Put Script into PowerShell stdin with "-Command =" argument
-Advanced Settings: &lt;input type="checkbox" checked&gt; Add -NoProfile argument</pre>
+Advanced Settings: <input type="checkbox" checked&gt; Add -NoProfile argument</pre>
 
 
 
@@ -161,13 +161,13 @@ You can add a chart to an individual build configuration via the UI, but you hav
 
 Edit config/projects/[your project folder]/pluginData/plugin-settings.xml, and merge in these settings:
 
-<pre>&lt;settings&gt;
-	&lt;buildtype-graphs&gt;
-		&lt;graph title="Build Warnings" defaultFilters="" hideFilters="" id="customGraph1" seriesTitle="Serie"&gt;
-			&lt;valueType key="buildWarnings" title="buildWarnings" color="#ffcc00" /&gt;
-		&lt;/graph&gt;
-	&lt;/buildtype-graphs&gt;
-&lt;/settings&gt;</pre>
+<pre><settings&gt;
+	<buildtype-graphs&gt;
+		<graph title="Build Warnings" defaultFilters="" hideFilters="" id="customGraph1" seriesTitle="Serie"&gt;
+			<valueType key="buildWarnings" title="buildWarnings" color="#ffcc00" /&gt;
+		</graph&gt;
+	</buildtype-graphs&gt;
+</settings&gt;</pre>
 
 
 
@@ -177,11 +177,11 @@ Recording the warning count in a custom metric will enable you to create a custo
 
 Edit config/main-config.xml, and merge in these settings
 
-<pre>&lt;server&gt;
-	&lt;build-metrics&gt;
-		&lt;statisticValue key="buildWarnings" description="number of build warnings"/&gt;
-	&lt;/build-metrics&gt;
-&lt;/server&gt;</pre>
+<pre><server&gt;
+	<build-metrics&gt;
+		<statisticValue key="buildWarnings" description="number of build warnings"/&gt;
+	</build-metrics&gt;
+</server&gt;</pre>
 
 
 

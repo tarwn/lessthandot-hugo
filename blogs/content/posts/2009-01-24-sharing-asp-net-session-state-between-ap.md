@@ -32,7 +32,7 @@ Its&#8217; important to note the &#8220;EnableSession&#8221; attribute here, thi
 
 Another thing you will need to do is set your webservice to allow POSTs, like so:
 
-<pre>&lt;add verb="GET,HEAD, POST" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/&gt;</pre>
+<pre><add verb="GET,HEAD, POST" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/></pre>
 
 (this is found in the &#8220;httpHandlers&#8221; section of the web.config)
 
@@ -42,7 +42,7 @@ To call the webservice we&#8217;ll use a bit of jquery goodness. Its&#8217; easy
 
 Here&#8217;s the javascript to replace the stub we set up in part I:
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre><script type="text/javascript">
     function retrieve() {
         $.ajax({
             type: 'POST',
@@ -56,7 +56,7 @@ Here&#8217;s the javascript to replace the stub we set up in part I:
             }
         });
     }
-&lt;/script&gt;</pre>
+</script></pre>
 
 You will need to replace the URL with whatever the VS debugger has assigned to your service (or the URL of an actual service even!).
 
@@ -64,7 +64,7 @@ Now, when you try to run this (make sure that you start the webservice project f
 
 In our connection string, we just need to add the Application Name property. So our web.config entry becomes: 
 
-<pre>&lt;sessionState mode="SQLServer" sqlConnectionString="Data Source=127.0.0.1; Integrated Security=SSPI; Application Name=TEST" cookieless="false" timeout="20"/&gt;</pre>
+<pre><sessionState mode="SQLServer" sqlConnectionString="Data Source=127.0.0.1; Integrated Security=SSPI; Application Name=TEST" cookieless="false" timeout="20"/></pre>
 
 So how can we use this then? Lets check out the stored procedure change (found at [sneal.net][2]). There&#8217;s a proc called &#8220;TempGetAppID&#8221; in the ASP state database. I don&#8217;t know all the inner workings of this database, but its used within the database to identify the application connecting to it. So we can alter the proc to include the kind Mr. (or Mrs.) Sneal&#8217;s change:
 
@@ -77,7 +77,7 @@ So how can we use this then? Lets check out the stored procedure change (found a
     SET @connStrAppName = APP_NAME()
 
     -- .NET SQLClient Data Provider is the default application name for .NET apps
-    IF (@connStrAppName &lt;&gt; '.NET SQLClient Data Provider')
+    IF (@connStrAppName <> '.NET SQLClient Data Provider')
         SET @appName = @connStrAppName
 
     -- end change</pre>

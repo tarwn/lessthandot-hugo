@@ -41,7 +41,7 @@ Declare @query varchar(3000)
 Set @int = 1
 Set @date = getdate()
 
-While @int &lt;= 52
+While @int <= 52
 Begin
 	Insert Into @weeks Values (@int)
 	Set @int = @int + 1
@@ -53,7 +53,7 @@ Select
 wk
 from @weeks
 Order By
-case When DatePart(wk,@date) - wk &lt; 0
+case When DatePart(wk,@date) - wk < 0
 then DatePart(wk,@date) - wk + 53
 Else DatePart(wk,@date) - wk
 End Desc
@@ -96,7 +96,7 @@ Inner Join Sales.SalesOrderDetail det on hdr.SalesOrderID = det.SalesOrderID
 Inner Join Production.Product items on det.ProductID = items.ProductID
 Inner Join Sales.Customer cust on hdr.CustomerID = cust.CustomerID
 Inner Join @weeks ord on DatePart(wk,ShipDate) = wk
-Where ShipDate &gt;= dateadd(wk,-52,'2004-06-01')
+Where ShipDate >= dateadd(wk,-52,'2004-06-01')
 Group By
 	cust.AccountNumber
 	,items.ProductNumber
@@ -104,7 +104,7 @@ Group By
 	,DatePart(wk,hdr.ShipDate)
 	,wk
 Order By
-case When DatePart(wk,ShipDate) - wk &lt; 0
+case When DatePart(wk,ShipDate) - wk < 0
 then DatePart(wk,ShipDate) - wk + 53
 Else DatePart(wk,ShipDate) - wk
 End

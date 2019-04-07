@@ -40,7 +40,7 @@ Numbers as
 	select row_number() over (order by (select null)) as Number from N N,N N1,N N2,N N3,N N4,N N5,N N6
 )
 insert into AuxCalendarDates
-select dateadd(day,Number - 1,'1/1/1753') from Numbers where Number &lt;= 3012154</pre>
+select dateadd(day,Number - 1,'1/1/1753') from Numbers where Number <= 3012154</pre>
 
 3012154 is the Total number of days sql can recognize.
 

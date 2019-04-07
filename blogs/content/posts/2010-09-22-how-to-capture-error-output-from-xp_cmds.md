@@ -63,7 +63,7 @@ INSERT #temp
 EXEC @ReturnCode = master.dbo.xp_cmdshell @cmdline
 
 -- If we have an error populate variable
-IF @ReturnCode &lt;&gt; 0
+IF @ReturnCode <&gt; 0
 BEGIN
 	SELECT @ErrorMessage = @ErrorMessage + SomeCol   
 	FROM #temp

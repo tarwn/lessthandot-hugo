@@ -29,7 +29,7 @@ The hardship to this task is, two machines can’t have the same name on the net
 
 Note: if you are unsure which mdf and ldf files are being used for the subscriber database, use the following query either in SSMS or SQLCMD to return the files and paths.
 
-<pre>SELECT physical_name FROM sys.master_files WHERE name = '&lt;db name&gt;'</pre>
+<pre>SELECT physical_name FROM sys.master_files WHERE name = '<db name&gt;'</pre>
 
  
 
@@ -46,8 +46,8 @@ Once you’ve renamed the new machine to the same as the old machine, attach the
 <pre>USE [master]
 GO
 CREATE DATABASE [SalesMan] ON
-( FILENAME = N’&lt;path to mdf you copied&gt;’),
-( FILENAME = N’&lt;path to ldf you copied&gt;’)
+( FILENAME = N’<path to mdf you copied&gt;’),
+( FILENAME = N’<path to ldf you copied&gt;’)
 FOR ATTACH
 GO</pre>
 

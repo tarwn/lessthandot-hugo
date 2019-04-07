@@ -41,7 +41,7 @@ I was happy to see the first thing Red Gate does is weed out system databases, b
      , database_id AS databaseId
 FROM master.sys.databases
 WHERE name NOT IN ('master', 'msdb', 'tempdb', 'model')   
-  AND is_in_standby &lt;&gt; 1                                 
+  AND is_in_standby <&gt; 1                                 
   AND state_desc = 'ONLINE'                              
   AND source_database_id IS NULL</pre>
 

@@ -31,9 +31,9 @@ This certainly looked promising, so I set up a WinForms project to try it out. S
 
 The main calls to the static &#8220;Razor&#8221; class that we&#8217;re concerned with are:
 
-<pre>string Parse&lt;T&gt; (template, model);
+<pre>string Parse<T&gt; (template, model);
 void Compile (template, type, name);
-string Run&lt;T&gt; (model, name);</pre>
+string Run<T&gt; (model, name);</pre>
 
 These methods don&#8217;t include everything available (such as the non-generic parse method used above) but everything we&#8217;ll need. As I think the quoted example above shows, Razor.Parse compiles the supplied template and processes it using the model supplied. The generic version does the same thing, only with a strongly-typed model. Compile and Run are provided for more complex views, where it makes sense to compile once and run several times. As easy as this all is, we can&#8217;t have static calls to Razor throughout our codebase. This post will mainly cover a bit of infrastructure I put around the Razor engine to make it a bit more user friendly.
 
@@ -44,17 +44,17 @@ I wanted this code to be at least a bit testable, so I put an interface comprise
 <pre>using RazorEngine;
 
 namespace RazorReport {
-    public class Engine&lt;T&gt; : IEngine&lt;T&gt; {
+    public class Engine<T&gt; : IEngine<T&gt; {
         public void Compile (string preparedTemplate, string name) {
             Razor.Compile (preparedTemplate, typeof (T), name);
         }
 
         public string Run (T model, string name) {
-            return Razor.Run&lt;T&gt; (model, name);
+            return Razor.Run<T&gt; (model, name);
         }
 
         public string Parse (string template, T model) {
-            return Razor.Parse&lt;T&gt; (template, model);
+            return Razor.Parse<T&gt; (template, model);
         }
     }
 }</pre>
@@ -64,7 +64,7 @@ This makes it easy to confirm that the report building classes we&#8217;ll imple
 <pre>[Test]
 public void Recompiles_If_Stylesheet_Changed () {
     var mockery = new MockRepository ();
-    var engine = mockery.StrictMock&lt;IEngine&lt;Example&gt;&gt; ();
+    var engine = mockery.StrictMock<IEngine<Example&gt;&gt; ();
 
     var templateName = "recompileIfChange";
     var template = "template";
@@ -79,7 +79,7 @@ public void Recompiles_If_Stylesheet_Changed () {
     }
 
     using (mockery.Playback ()) {
-        var builder = ReportBuilder&lt;Example&gt;.CreateWithEngineInstance (templateName, engine)
+        var builder = ReportBuilder<Example&gt;.CreateWithEngineInstance (templateName, engine)
             .WithTemplate (template)
             .WithPrecompilation ();
 
@@ -122,7 +122,7 @@ I guess you could argue that this needs to be a non-static class with an interfa
 
 I think the idea of using a fluent interface for report builder configuration came up in a conversation with my usual [remote pairing partner][2]. The idea is that you would set up a report builder like this:
 
-<pre>var builder = ReportBuilder.Create&lt;Foo&gt;()
+<pre>var builder = ReportBuilder.Create<Foo&gt;()
                   .WithTemplate("template")
                   .WithStylesheet("stylesheet")
                   .WithPrecompilation();</pre>
@@ -132,14 +132,14 @@ Or something along those lines. It seemed to work well enough so I rolled with i
 <pre>using System.Reflection;
 
 namespace RazorReport {
-    public interface IReportBuilder&lt;T&gt; {
-        IReportBuilder&lt;T&gt; WithTemplate (string template);
-        IReportBuilder&lt;T&gt; WithCss (string css);
-        IReportBuilder&lt;T&gt; WithTemplateFromFileSystem (string templatePath);
-        IReportBuilder&lt;T&gt; WithCssFromFileSystem (string cssPath);
-        IReportBuilder&lt;T&gt; WithTemplateFromResource (string resourceName, Assembly assembly);
-        IReportBuilder&lt;T&gt; WithCssFromResource (string resourceName, Assembly assembly);
-        IReportBuilder&lt;T&gt; WithPrecompilation ();
+    public interface IReportBuilder<T&gt; {
+        IReportBuilder<T&gt; WithTemplate (string template);
+        IReportBuilder<T&gt; WithCss (string css);
+        IReportBuilder<T&gt; WithTemplateFromFileSystem (string templatePath);
+        IReportBuilder<T&gt; WithCssFromFileSystem (string cssPath);
+        IReportBuilder<T&gt; WithTemplateFromResource (string resourceName, Assembly assembly);
+        IReportBuilder<T&gt; WithCssFromResource (string resourceName, Assembly assembly);
+        IReportBuilder<T&gt; WithPrecompilation ();
 
         string BuildReport (T model);
     }

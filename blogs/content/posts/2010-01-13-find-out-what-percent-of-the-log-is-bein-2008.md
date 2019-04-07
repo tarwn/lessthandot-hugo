@@ -25,12 +25,12 @@ Sometimes you want to quickly see the percentage of log spaced that each databas
 <pre>select instance_name,cntr_value from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Databases'   
 and counter_name = 'Percent Log Used' 
-and instance_name &lt;&gt; '_Total'                                                                                                                          
+and instance_name <> '_Total'                                                                                                                          
 order by   cntr_value desc  </pre>
 
 Here is the output from that query.
 
-<pre>&lt;strong&gt;instance_name       cntr_value&lt;/strong&gt;
+<pre><strong>instance_name       cntr_value</strong>
 model		    90
 ReportServerTempDB  66
 master              65
@@ -50,7 +50,7 @@ order by   cntr_value desc </pre>
 
 Here is the output from that query.
 
-<pre>&lt;strong&gt;instance_name		cntr_value&lt;/strong&gt;
+<pre><strong>instance_name		cntr_value</strong>
 _Total			37524936
 iSource_Report		14539576
 iSource_Distribution	13217784
@@ -74,7 +74,7 @@ order by   cntr_value desc </pre>
 
 And here is the output
 
-<pre>&lt;strong&gt;instance_name		cntr_value&lt;/strong&gt;
+<pre><strong>instance_name		cntr_value</strong>
 _Total			58232704
 msdb                    13512512
 tempdb                  1542720

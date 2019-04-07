@@ -79,7 +79,7 @@ EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'Capacity Restriction Monitor
 		@description=N'Monitors the levels of units allowe to be manufactured in plant 01.', 
 		@category_name=N'[Uncategorized (Local)]', 
 		@owner_login_name=N'{user}', @job_id = @jobId OUTPUT
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 /****** Object:  Step [caller]    Script Date: 03/26/2009 08:31:35 ******/
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'caller', 
 		@step_id=1, 
@@ -91,7 +91,7 @@ EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'caller',
 		@retry_attempts=0, 
 		@retry_interval=0, 
 		@os_run_priority=0, @subsystem=N'TSQL', 
-		@command=N'if (select vol_status from VOL_MONITOR) &lt;= 2000
+		@command=N'if (select vol_status from VOL_MONITOR) <= 2000
 		  Begin
 			EXEC msdb.dbo.sp_send_dbmail @recipients=''manager_group@companym.com'',
 				@subject = ''Plant 01 volume reaching maximum capacity'',
@@ -101,9 +101,9 @@ EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'caller',
 		  End', 
 		@database_name=N'DBA05', 
 		@flags=0
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 EXEC @ReturnCode = msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id=@jobId, @name=N'30 minutes', 
 		@enabled=1, 
 		@freq_type=4, 
@@ -116,13 +116,13 @@ EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id=@jobId, @name=N'30 minute
 		@active_end_date=99991231, 
 		@active_start_time=0, 
 		@active_end_time=235959
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 COMMIT TRANSACTION
 GOTO EndSave
 QuitWithRollback:
-    IF (@@TRANCOUNT &gt; 0) ROLLBACK TRANSACTION
+    IF (@@TRANCOUNT > 0) ROLLBACK TRANSACTION
 EndSave:</pre>
 
 So far we have successfully created a table to hold our capacity values that we negate based on units

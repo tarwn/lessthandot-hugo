@@ -127,7 +127,7 @@ At this point, replication can be started again.  Perform a basic test to ensur
 Given the table structure, the below statement can be used to put a small load on the table and replication.
 
 <pre>DECLARE @ID INT = 1013
-WHILE @ID &lt;= 10000
+WHILE @ID <= 10000
  BEGIN
   INSERT INTO ShippingDelays
   SELECT @ID, GETDATE(), GETDATE(), GETDATE()

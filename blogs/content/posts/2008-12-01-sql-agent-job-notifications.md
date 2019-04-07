@@ -68,7 +68,7 @@ SELECT @ReturnCode = 0
 IF NOT EXISTS (SELECT name FROM msdb.dbo.syscategories WHERE name=N'[Uncategorized (Local)]' AND category_class=1)
 BEGIN
 EXEC @ReturnCode = msdb.dbo.sp_add_category @class=N'JOB', @type=N'LOCAL', @name=N'[Uncategorized (Local)]'
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 
 END
 
@@ -83,7 +83,7 @@ EXEC @ReturnCode = msdb.dbo.sp_add_job @job_name=N'Test Notifications',
   @description=N'Delete this sometime soon to clean up', 
   @category_name=N'[Uncategorized (Local)]', 
   @owner_login_name=N'{owner}', @job_id = @jobId OUTPUT
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Caller Task', 
   @step_id=1, 
@@ -98,7 +98,7 @@ EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Caller T
   @command=N'Select 1', 
   @database_name=N'DBA', 
   @flags=0
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Success Caller', 
   @step_id=2, 
@@ -123,7 +123,7 @@ EXEC msdb.dbo.sp_send_dbmail @recipients=''you@yourcompany.com'',
 ', 
   @database_name=N'msdb', 
   @flags=0
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Failure Caller', 
   @step_id=3, 
@@ -147,15 +147,15 @@ EXEC msdb.dbo.sp_send_dbmail @recipients=''you@yourcompany.com'',
 @profile_name = ''SQL DBA''', 
   @database_name=N'msdb', 
   @flags=0
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 EXEC @ReturnCode = msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 COMMIT TRANSACTION
 GOTO EndSave
 QuitWithRollback:
-IF (@@TRANCOUNT &gt; 0) ROLLBACK TRANSACTION
+IF (@@TRANCOUNT > 0) ROLLBACK TRANSACTION
 EndSave:</pre>
 
 You can test this job to see how it works by running as is and also changing the mail &#8220;Caller Task&#8221; so something like select 1/0.

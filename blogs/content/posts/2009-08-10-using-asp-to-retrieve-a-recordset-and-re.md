@@ -53,7 +53,7 @@ oCmd.CommandType = adCmdStoredProc;
 oCmd.CommandText = "TestProcedure";
 var oRS = oCmd.Execute();  //oRS will contain the recordset returned from the stored procedure
 while (!oRS.EOF) {
-   Response.Write(oRS.Fields("testValue").value + "&lt;br /&gt;");
+   Response.Write(oRS.Fields("testValue").value + "<br />");
    oRS.MoveNext();
 }
 oRS.Close();

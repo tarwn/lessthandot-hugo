@@ -136,14 +136,14 @@ Based on coding up several earlier SpecFlow steps, I ended up with a base class 
 
                 #region Properties for Readability
 
-                /// &lt;summary&gt;
+                /// <summary&gt;
                 /// Shortcut property to Settings.CurrentSettings.Defaults for readability
-                /// &lt;/summary&gt;
+                /// </summary&gt;
                 protected DefaultValues Default { get { return Settings.CurrentSettings.Defaults; } }
 
-                /// &lt;summary&gt;
+                /// <summary&gt;
                 /// Sets the Current page to the specified value - provided to help readability
-                /// &lt;/summary&gt;
+                /// </summary&gt;
                 protected PageBase NextPage { set { CurrentPage = value; } }
 
                 #endregion
@@ -242,7 +242,7 @@ Once I have the genre page open, I can select an album that I intend to add to t
 
 <pre>[Given(@"I select an album from the genre page")]
 public void GivenISelectAnAlbumFromTheGenrePage() {
-	NextPage = CurrentPage.As&lt;BrowsePage&gt;().SelectAlbum(Default.Album.Name);
+	NextPage = CurrentPage.As<BrowsePage&gt;().SelectAlbum(Default.Album.Name);
 }</pre>
 
 One of the downsides of having a single property to track the current page is that it is typed as a PageBase object. I could add cast statements to each line, but by adding a generic method to handle the cast, I preserve the left-to-right reading order of the statement. Had I used an inline cast, we would be looking at:
@@ -262,7 +262,7 @@ I&#8217;ve added the generic cast method to the PageBase method to make it easil
 
 	//...
 	
-	public TPage As&lt;TPage&gt;() where TPage : PageBase, new() {
+	public TPage As<TPage&gt;() where TPage : PageBase, new() {
 		return (TPage)this;
 	}
 }</pre>
@@ -275,7 +275,7 @@ If you remember, the original scenario we listed above was &#8220;When I add an 
 
 <pre>[When(@"I add the album to my cart")]
 public void WhenIAddTheAlbumToMyCart() {
-	NextPage = CurrentPage.As&lt;AlbumDetailPage&gt;().AddToCart();
+	NextPage = CurrentPage.As<AlbumDetailPage&gt;().AddToCart();
 }</pre>
 
 As you can tell by now, the actual logic that goes into the step definition files is fairly minimal. This is by design and is similar to the MVC concept of a thin controller. By keeping the page behavior in the page objects, we&#8217;re attempting to minimize the brittleness of our test code.

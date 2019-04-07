@@ -19,52 +19,52 @@ I suppose a little background on our application is in order. It was originally 
 
 Because I&#8217;m not too familiar with XSL, the first thing I wanted to figure out was how to display this stuff. I&#8217;m comfortable enough modifying an existing template, but not so much with the creation of a new one. After a quick talk with [ChaosPandion][1] I knew the basic structure for the template, and building on it I came up with something like this:
 
-<pre>&lt;xsl:template match="CustomFieldList"&gt;
-		&lt;xsl:if test="count(CustomerFields/Field) &gt; 0"&gt;
-			&lt;div class="SectionTitle" style="margin-bottom:20px;"&gt;
+<pre><xsl:template match="CustomFieldList">
+		<xsl:if test="count(CustomerFields/Field) > 0">
+			<div class="SectionTitle" style="margin-bottom:20px;">
 				Customer Defined Fields
-			&lt;/div&gt;
-		&lt;/xsl:if&gt;
-		&lt;xsl:for-each select="CustomerFields"&gt;
-			&lt;xsl:if test="count(Field) &gt; 0"&gt;
-				&lt;p&gt;
-					&lt;xsl:value-of select="concat(@name, ' (', @associationtypename, ')')"/&gt;
-				&lt;/p&gt;
-				&lt;xsl:for-each select="field"&gt;
-					&lt;label&gt;
-						&lt;xsl:value-of select="@name"/&gt;
-					&lt;/label&gt;
-					&lt;br/&gt;
-					&lt;xsl:choose&gt;
-						&lt;xsl:when test="@type = 'Decimal'"&gt;
-							&lt;input id="{@name}" name="udf_{@typeid}_{../@custid}_{@id}" size="30" type="text" value="{@value}" title="{@name}" onblur="ValidateDecimalInput(this)" /&gt;
-						&lt;/xsl:when&gt;
-						&lt;xsl:when test="@type = 'Integer'"&gt;
-							&lt;input id="{@name}" name="udf_{@typeid}_{../@custid}_{@id}" size="30" type="text" value="{@value}" title="{@name}" onblur="ValidateIntegerInput(this)" /&gt;
-						&lt;/xsl:when&gt;
-						&lt;!-- Other Types --&gt;
-						&lt;xsl:otherwise&gt;
-							&lt;input id="{@name}" name="udf_{@typeid}_{../@custid}_{@id}" size="30" type="text" value="{@value}" /&gt;
-						&lt;/xsl:otherwise&gt;
-					&lt;/xsl:choose&gt;
-					&lt;br/&gt;
-				&lt;/xsl:for-each&gt;
-			&lt;/xsl:if&gt;
-		&lt;/xsl:for-each&gt;
-	&lt;/xsl:template&gt;</pre>
+			</div>
+		</xsl:if>
+		<xsl:for-each select="CustomerFields">
+			<xsl:if test="count(Field) > 0">
+				<p>
+					<xsl:value-of select="concat(@name, ' (', @associationtypename, ')')"/>
+				</p>
+				<xsl:for-each select="field">
+					<label>
+						<xsl:value-of select="@name"/>
+					</label>
+					<br/>
+					<xsl:choose>
+						<xsl:when test="@type = 'Decimal'">
+							<input id="{@name}" name="udf_{@typeid}_{../@custid}_{@id}" size="30" type="text" value="{@value}" title="{@name}" onblur="ValidateDecimalInput(this)" />
+						</xsl:when>
+						<xsl:when test="@type = 'Integer'">
+							<input id="{@name}" name="udf_{@typeid}_{../@custid}_{@id}" size="30" type="text" value="{@value}" title="{@name}" onblur="ValidateIntegerInput(this)" />
+						</xsl:when>
+						<!-- Other Types -->
+						<xsl:otherwise>
+							<input id="{@name}" name="udf_{@typeid}_{../@custid}_{@id}" size="30" type="text" value="{@value}" />
+						</xsl:otherwise>
+					</xsl:choose>
+					<br/>
+				</xsl:for-each>
+			</xsl:if>
+		</xsl:for-each>
+	</xsl:template></pre>
 
 Basically, we needed the customer-defined fields shown on the page grouped by the relationship said customer had with the case in question (there are 6 different relationship types, I won&#8217;t bore you with the details). Once I had the template, I knew what the data I had to provide it looked like, and it wasn&#8217;t too complicated.
 
-<pre>&lt;CustomFieldList&gt;
-  &lt;CustomerFields custid="NULL" name="LessThanDot" associationtypeid="1" associationtypename="Awesome Blogs"&gt;
-    &lt;Field id="16" name="TextOne" type="Text" typeid="1" value="different value" /&gt;
-  &lt;/CustomerFields&gt;
-  &lt;CustomerFields custid="NULL" name="alexcuse.com" associationtypeid="2" associationtypename="Crummy Web Page"&gt;
-    &lt;Field id="4" name="TextOne" type="Text" typeid="1" value="chchchchchanges" /&gt;
-    &lt;Field id="13" name="Field3" type="Decimal" typeid="3" /&gt;
-    &lt;Field id="18" name="Integer Test" type="Integer" typeid="4" value="15" /&gt;
-  &lt;/CustomerFields&gt;
-&lt;/CustomFieldList&gt;</pre>
+<pre><CustomFieldList>
+  <CustomerFields custid="NULL" name="LessThanDot" associationtypeid="1" associationtypename="Awesome Blogs">
+    <Field id="16" name="TextOne" type="Text" typeid="1" value="different value" />
+  </CustomerFields>
+  <CustomerFields custid="NULL" name="alexcuse.com" associationtypeid="2" associationtypename="Crummy Web Page">
+    <Field id="4" name="TextOne" type="Text" typeid="1" value="chchchchchanges" />
+    <Field id="13" name="Field3" type="Decimal" typeid="3" />
+    <Field id="18" name="Integer Test" type="Integer" typeid="4" value="15" />
+  </CustomerFields>
+</CustomFieldList></pre>
 
 In the framework that was developed to support the older bits of our application (bites tongue), there are at least two ways (probably more) to dump a normal ADO recordset into a node of the XML document used to render the page, but that wouldn&#8217;t help because I needed a bit of structure to the data (I suppose that I could have made everything completely flat, but being as unskilled as I am with XSL I wanted to minimize the room for me to mess something up). Coding the transformation in VB6 wasn&#8217;t really a valid option either because it would require untangling the rat&#8217;s nest of existing VB6 code, and there just wasn&#8217;t any time. Enter &#8220;For Xml&#8221;.
 

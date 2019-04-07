@@ -76,7 +76,7 @@ From   @Temp</pre>
 
 The results are:
 
-<pre>&lt;span style="color:blue;"&gt;
+<pre><span style="color:blue;">
 Data                                     Numbers
 ---------------------------------------- -------
 2.1 miles                                2.1
@@ -88,6 +88,6 @@ Approximately 6.5 miles                  6.5
 NULL                                     NULL
 No Numbers Here                          
 approximately 2.5 miles, but less than 3 2.5
-&lt;/span&gt;</pre>
+</span></pre>
 
 I wish we could count on our data being perfect, but we really can&#8217;t. The best we can do is to use the data we are given in a way that works.

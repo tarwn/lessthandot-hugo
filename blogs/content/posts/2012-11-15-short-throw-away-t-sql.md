@@ -38,7 +38,7 @@ declare @cmd nvarchar(1500)
 declare @tbl table (id int identity(1,1),name sysname)
 insert into @tbl select name from sys.tables where type = N'U'
 
-while @int &lt;= (Select count(*) from @tbl)
+while @int <= (Select count(*) from @tbl)
  begin
   
    set @cmd = 'select @cnt=count(*) from ' + (select name from @tbl where id = @int)

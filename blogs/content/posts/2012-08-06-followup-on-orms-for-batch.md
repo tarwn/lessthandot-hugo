@@ -77,7 +77,7 @@ But the important item on this graph really is Simple.Data. There are many that 
 
 <pre>public BatchConfiguration(IConnectionString connectionString) {
 	_db = Database.OpenConnection(connectionString.FormattedConnectionString);
-	_entitiesToInsert = new List&lt;TestEntity&gt;();
+	_entitiesToInsert = new List<TestEntity&gt;();
 }
 
 public void Add(TestEntity entity) {

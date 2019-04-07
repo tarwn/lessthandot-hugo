@@ -111,7 +111,7 @@ namespace ST_aaf20a0bd5b94ad394ab80cf5d585c41.csproj
                 FileInfo[] files = dirInfo.GetFiles();
                 foreach (FileInfo file in files)
                 {
-                    if (file.LastWriteTime &lt; olderThanDate)
+                    if (file.LastWriteTime < olderThanDate)
                     {
                         //or use Dts.Events.FireInformation(0, "", "File Deleted Succesfully", "", 0, True)
                         //with a logging file destination setup
@@ -192,7 +192,7 @@ namespace ST_216af79b563f4866bb64f6043b232b4e.csproj
             {
                 FileInfo fi = new FileInfo(Dts.Variables["User::filefocus"].Value.ToString());
 
-                if (fi.LastWriteTime &lt; (DateTime)Dts.Variables["User::daysback"].Value)
+                if (fi.LastWriteTime < (DateTime)Dts.Variables["User::daysback"].Value)
                 {
                     Dts.TaskResult = (int)ScriptResults.Success;
                 }

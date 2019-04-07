@@ -25,7 +25,7 @@ So you can start some e-mail ping pong to get the instance name, open the server
   
 First step getting remote services information:
 
-<pre>Get-Service -ComputerName &lt;SQLServerHostName&gt;</pre>
+<pre>Get-Service -ComputerName <SQLServerHostName&gt;</pre>
 
 This gives you all the information you need:
 
@@ -35,7 +35,7 @@ This gives you all the information you need:
 
 But since I only need SQL Server information I will filter out all the other services using the Where-Object and the like operator:
 
-<pre>Get-Service -ComputerName &lt;SQLServerHostName&gt; -name "MSSQL*"</pre>
+<pre>Get-Service -ComputerName <SQLServerHostName&gt; -name "MSSQL*"</pre>
 
 As you can see we can now see the installed instances of SQL Server on our remote server. Only if the Instance name is too long you will see &#8230; at some point:
 
@@ -45,7 +45,7 @@ As you can see we can now see the installed instances of SQL Server on our remot
 
 Since we only need the Name and ass a surplus the Status of our SQL Server Services we can format the output:
 
-<pre>Get-Service -ComputerName &lt;SQLServerHostName&gt; -name "MSSQL*"|Format-Table -Property Name, Status</pre>
+<pre>Get-Service -ComputerName <SQLServerHostName&gt; -name "MSSQL*"|Format-Table -Property Name, Status</pre>
 
 And now we have only the information we need:
 

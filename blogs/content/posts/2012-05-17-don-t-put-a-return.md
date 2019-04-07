@@ -137,7 +137,7 @@ Now open yet another window and execute this
 
 <pre>SELECT blocking_session_id,* 
 FROM sys.dm_exec_requests
-WHERE blocking_session_id &lt;&gt; 0</pre>
+WHERE blocking_session_id <&gt; 0</pre>
 
 You will see that the SPID of the session where the select is running is returned by this query
 

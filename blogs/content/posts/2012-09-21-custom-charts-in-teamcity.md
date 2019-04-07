@@ -33,27 +33,27 @@ In the Jenkins build I had graphed the following data from the WCAT run:
 
 To match this in TeamCity I created the project-wide graph settings like so:
 
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;settings&gt;
-  &lt;custom-graphs&gt;
-   &lt;graph title="Rate" hideFilters="showFailed" seriesTitle="some key" format=""&gt;
-      &lt;valueType key="TransactionsPerSecond" title="Transactions/s" buildTypeId="bt4"/&gt;
-      &lt;valueType key="RequestsPerSecond" title="Requests/s" buildTypeId="bt4"/&gt;
-    &lt;/graph&gt;
-   &lt;graph title="Totals" hideFilters="showFailed" seriesTitle="some key" format=""&gt;
-      &lt;valueType key="TotalTransactions" title="Total Transactions" buildTypeId="bt4"/&gt;
-      &lt;valueType key="TotalRequests" title="Total Requests" buildTypeId="bt4"/&gt;
-      &lt;valueType key="TotalErrors" title="Total Errors" buildTypeId="bt4"/&gt;
-    &lt;/graph&gt;
-   &lt;graph title="Response Time (to Last Byte)" hideFilters="showFailed" seriesTitle="some key" format="duration"&gt;
-      &lt;valueType key="ResponseTimeAverage" title="Average" buildTypeId="bt4"/&gt;
-      &lt;valueType key="ResponseTimeMinimum" title="Minimum" buildTypeId="bt4"/&gt;
-      &lt;valueType key="ResponseTimeNinetyFivePercent" title="Ninety Fifth Percent" buildTypeId="bt4"/&gt;
-      &lt;valueType key="ResponseTimeNinetyNinePercent" title="Ninety Nineth Percent" buildTypeId="bt4"/&gt;
-      &lt;valueType key="ResponseTimeMaximum" title="Maximum" buildTypeId="bt4"/&gt;
-    &lt;/graph&gt;
-  &lt;/custom-graphs&gt;
-&lt;/settings&gt;</pre>
+<pre><?xml version="1.0" encoding="UTF-8"?&gt;
+<settings&gt;
+  <custom-graphs&gt;
+   <graph title="Rate" hideFilters="showFailed" seriesTitle="some key" format=""&gt;
+      <valueType key="TransactionsPerSecond" title="Transactions/s" buildTypeId="bt4"/&gt;
+      <valueType key="RequestsPerSecond" title="Requests/s" buildTypeId="bt4"/&gt;
+    </graph&gt;
+   <graph title="Totals" hideFilters="showFailed" seriesTitle="some key" format=""&gt;
+      <valueType key="TotalTransactions" title="Total Transactions" buildTypeId="bt4"/&gt;
+      <valueType key="TotalRequests" title="Total Requests" buildTypeId="bt4"/&gt;
+      <valueType key="TotalErrors" title="Total Errors" buildTypeId="bt4"/&gt;
+    </graph&gt;
+   <graph title="Response Time (to Last Byte)" hideFilters="showFailed" seriesTitle="some key" format="duration"&gt;
+      <valueType key="ResponseTimeAverage" title="Average" buildTypeId="bt4"/&gt;
+      <valueType key="ResponseTimeMinimum" title="Minimum" buildTypeId="bt4"/&gt;
+      <valueType key="ResponseTimeNinetyFivePercent" title="Ninety Fifth Percent" buildTypeId="bt4"/&gt;
+      <valueType key="ResponseTimeNinetyNinePercent" title="Ninety Nineth Percent" buildTypeId="bt4"/&gt;
+      <valueType key="ResponseTimeMaximum" title="Maximum" buildTypeId="bt4"/&gt;
+    </graph&gt;
+  </custom-graphs&gt;
+</settings&gt;</pre>
 
 Besides the key in each valueType tag, I also include a buildTypeid that is the internal build ID for my automated load test build. I found this in the address bar after clicking the build&#8217;s link on the dashboard:
 
@@ -67,42 +67,42 @@ Once I have the definitions roughly the way I want them, I need to make the data
 
 The WCAT results take some work to decode, as they are stored in XML that is halfway to presentation format. Luckily I have already done this once, so creating a new XSL is fairly easy:
 
-<pre>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
-&lt;xsl:template match="/"&gt;
-	&lt;build&gt;
-		&lt;statisticValue key="TransactionsPerSecond"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="tps"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-		&lt;statisticValue key="RequestsPerSecond"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="rps"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-		&lt;statisticValue key="TotalTransactions"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="transactions"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-		&lt;statisticValue key="TotalRequests"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="requests"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-		&lt;statisticValue key="TotalErrors"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="terrors"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-		&lt;statisticValue key="ResponseTimeAverage"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_avg"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-		&lt;statisticValue key="ResponseTimeMinimum"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_min"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-		&lt;statisticValue key="ResponseTimeNinetyFivePercent"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_95"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-		&lt;statisticValue key="ResponseTimeNinetyNinePercent"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_99"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-		&lt;statisticValue key="ResponseTimeMaximum"&gt;
-			&lt;xsl:attribute name="value"&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_max"]' /&gt;&lt;/xsl:attribute&gt;
-		&lt;/statisticValue&gt;
-	&lt;/build&gt;
-&lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</pre>
+<pre><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+<xsl:template match="/"&gt;
+	<build&gt;
+		<statisticValue key="TransactionsPerSecond"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="tps"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+		<statisticValue key="RequestsPerSecond"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="rps"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+		<statisticValue key="TotalTransactions"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="transactions"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+		<statisticValue key="TotalRequests"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="requests"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+		<statisticValue key="TotalErrors"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="terrors"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+		<statisticValue key="ResponseTimeAverage"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_avg"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+		<statisticValue key="ResponseTimeMinimum"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_min"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+		<statisticValue key="ResponseTimeNinetyFivePercent"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_95"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+		<statisticValue key="ResponseTimeNinetyNinePercent"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_99"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+		<statisticValue key="ResponseTimeMaximum"&gt;
+			<xsl:attribute name="value"&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_max"]' /&gt;</xsl:attribute&gt;
+		</statisticValue&gt;
+	</build&gt;
+</xsl:template&gt;
+</xsl:stylesheet&gt;</pre>
 
 (The final XSL is located on [bitbucket][1] in the event that I make any future changes).
 

@@ -40,24 +40,24 @@ First thing to do here is add a reference to your class library project to both 
 
 First thing we want to do is get the MVC project ready. I got rid of everything in the Views folder except for the About and Index pages in Views/Home. I also got rid of the Account controller. Feel free to do this if you want, but I suppose it isn&#8217;t necessary. One thing that is necessary, since we want to use jQuery to get the webservice value eventually, is to reference the jQuery script. So just add this to the bottom of the page called Site.Master (before the closing html tag):
 
-<code class="codespan">&lt;script type="text/javascript" src="../../Scripts/jquery-1.2.6.min.js" /&gt;</code>
+<code class="codespan"><script type="text/javascript" src="../../Scripts/jquery-1.2.6.min.js" /></code>
 
 Next, we want to add a simple form to Index.aspx. This form just has one text input, and a submit button.
 
-<pre>&lt;form id="mainForm" runat="server" action="/Home/Entered"&gt;
-        &lt;p&gt;Give it a try: &lt;input type="text" name="inputValue" /&gt;&lt;/p&gt;
-        &lt;input type="submit" id="submitter" /&gt;
-&lt;/form&gt;</pre>
+<pre><form id="mainForm" runat="server" action="/Home/Entered">
+        <p>Give it a try: <input type="text" name="inputValue" /></p>
+        <input type="submit" id="submitter" />
+</form></pre>
 
 You notice its&#8217; action is the page Home/Entered, which currently does not exist. So we need to add a new MVC Content Page with that name. In the page attributes, set EnableViewStateMac=&#8221;false&#8221;. Within the content place holder, we can add this HTML:
 
-<pre>&lt;p&gt;Entered Value was: &lt;%= Session["enteredValue"].ToString() %&gt;&lt;/p&gt;
-&lt;p&gt;Try getting it from the service:&lt;/p&gt;
-&lt;p&gt;&lt;input type="button" id="retrieveButton" text="retrieve it!" onclick="retrieve()" /&gt;&lt;input type="text" id="retrievedValue" /&gt;&lt;/p&gt;
-&lt;script type="text/javascript"&gt;
+<pre><p>Entered Value was: <%= Session["enteredValue"].ToString() %></p>
+<p>Try getting it from the service:</p>
+<p><input type="button" id="retrieveButton" text="retrieve it!" onclick="retrieve()" /><input type="text" id="retrievedValue" /></p>
+<script type="text/javascript">
     function retrieve() {
     }
-&lt;/script&gt;</pre>
+</script></pre>
 
 The javascript is not implemented yet to retrieve the value yet, but at this point there is just one thing we need to do to get the pages working, and that is add a new ActionResult to the HomeController for our new &#8220;Entered&#8221; page. All this action will really be doing is placing the input from the form submission into the session. So, 
 
@@ -69,7 +69,7 @@ The javascript is not implemented yet to retrieve the value yet, but at this poi
 
 Now, you can run the page and you should be able to enter a value in Index, and see it on the &#8220;Entered&#8221; page. So, we can tell that our traditional (in process) session is working. Now let&#8217;s change it to use the database. In the main web.config (not the one in the Views folder) we&#8217;ll need to add a SessionState entry within system.web (I usually do this at the bottom, having a common place to look makes my life easier). So we add this entry:
 
-<code class="codespan">&lt;sessionState mode="SQLServer" sqlConnectionString="Data Source=127.0.0.1; Integrated Security=SSPI" cookieless="false" timeout="20"/&gt;</code>
+<code class="codespan"><sessionState mode="SQLServer" sqlConnectionString="Data Source=127.0.0.1; Integrated Security=SSPI" cookieless="false" timeout="20"/></code>
 
 Now, as long as your local SQL Server instance is accepting TCP/IP connections, it should work just as before. And this post is getting long, so this will be the end of part I.
 

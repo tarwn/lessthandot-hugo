@@ -41,13 +41,13 @@ asm.GetTypes()
 For the purposes of this example, I know all of my MVC actions will have either an Authorization attribute implementing IAuthorizationFilter or the AllowAnonymous Attribute, so I can write a test that loops through each controller and then each action capturing a list of Actions that do not have one of these:
 
 <pre>// 0
-Func&lt;object, bool&gt; IsMVCAttributeAuth = (o) =&gt; (o is System.Web.Mvc.IAuthorizationFilter || 
+Func<object, bool&gt; IsMVCAttributeAuth = (o) =&gt; (o is System.Web.Mvc.IAuthorizationFilter || 
                                                 o is System.Web.Mvc.AllowAnonymousAttribute);
 
 [Test]
 public void AllMvcActionsHaveExplicitAuthorizationDefined_UsingStandardReflection()
 {
-    var actionsMissingAuth = new List&lt;string&gt;();
+    var actionsMissingAuth = new List<string&gt;();
 
     // 1
     var controllers = Assembly.GetAssembly(typeof(HomeController)).GetTypes()
@@ -142,7 +142,7 @@ The output is the same:
 While we could use a reflection method for WebAPI also, there is actually a much better option available. WebAPI includes an [APIExplorer][5] object that provides programmatic access to your WebAPI actions. It was built with documentation in mind, but also gives us exactly what we need to build an authentication verification test.
 
 <pre>// 0
-Func&lt;object, bool&gt; IsAPIAttributeAuth = (o) =&gt; (o is System.Web.Http.Filters.IAuthorizationFilter || 
+Func<object, bool&gt; IsAPIAttributeAuth = (o) =&gt; (o is System.Web.Http.Filters.IAuthorizationFilter || 
                                                 o is System.Web.Http.AllowAnonymousAttribute);
 
 [Test]
@@ -155,7 +155,7 @@ public void AllApiActionsHaveExplicitAuthorizationDefined()
     var explorer = httpConfiguration.Services.GetApiExplorer();
 
     // 2
-    var actionsMissingAuth = explorer.ApiDescriptions.Where(a =&gt; !a.ActionDescriptor.GetCustomAttributes&lt;object&gt;(true)
+    var actionsMissingAuth = explorer.ApiDescriptions.Where(a =&gt; !a.ActionDescriptor.GetCustomAttributes<object&gt;(true)
                                                                                     .Any(o =&gt; IsAPIAttributeAuth(o))
                                                               && !a.ActionDescriptor.ControllerDescriptor.ControllerType.GetCustomAttributes(true)
                                                                                      .Any(o =&gt; IsAPIAttributeAuth(o)));

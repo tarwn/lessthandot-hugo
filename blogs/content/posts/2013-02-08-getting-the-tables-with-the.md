@@ -50,7 +50,7 @@ DECLARE @TableName varchar(1000)
 SELECT @LoopId= 1
 SELECT @MaxID = max(id) from #loop
 
-WHILE @LoopId &lt;= @MaxID
+WHILE @LoopId <= @MaxID
 BEGIN
 	SELECT @cmd = 'insert #temp exec sp_spaceused '''
 	SELECT @TableName = name from #loop where id = @LoopId

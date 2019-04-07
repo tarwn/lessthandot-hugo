@@ -20,26 +20,26 @@ tags:
 ---
 Recently I was working with some socket programming using the SocketAsyncEventArgs class. When writing high performance .NET code it is a good idea to keep object creation to a minimum. Instead of creating a new SocketAsyncEventArgs instance every time an action was performed I decided to put together a simple generic object pool. I hope you&#8217;ll try it out and leave me some feedback. 
 
-<pre>/// &lt;summary&gt;
+<pre>/// <summary>
 /// Represents a pool of objects with a size limit.
-/// &lt;/summary&gt;
-/// &lt;typeparam name="T"&gt;The type of object in the pool.&lt;/typeparam&gt;
-public sealed class ObjectPool&lt;T&gt; : IDisposable
+/// </summary>
+/// <typeparam name="T">The type of object in the pool.</typeparam>
+public sealed class ObjectPool<T> : IDisposable
 	where T : new()
 {
 	private readonly int size;
 	private readonly object locker;
-	private readonly Queue&lt;T&gt; queue;
+	private readonly Queue<T> queue;
 	private int count;
 
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Initializes a new instance of the ObjectPool class.
-	/// &lt;/summary&gt;
-	/// &lt;param name="size"&gt;The size of the object pool.&lt;/param&gt;
+	/// </summary>
+	/// <param name="size">The size of the object pool.</param>
 	public ObjectPool(int size)
 	{
-        if (size &lt;= 0)
+        if (size <= 0)
         {
             const string message = "The size of the pool must be greater than zero.";
             throw new ArgumentOutOfRangeException("size", size, message);
@@ -47,19 +47,19 @@ public sealed class ObjectPool&lt;T&gt; : IDisposable
 
 		this.size = size;
 		locker = new object();
-		queue = new Queue&lt;T&gt;();
+		queue = new Queue<T>();
 	}
 
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Retrieves an item from the pool. 
-	/// &lt;/summary&gt;
-	/// &lt;returns&gt;The item retrieved from the pool.&lt;/returns&gt;
+	/// </summary>
+	/// <returns>The item retrieved from the pool.</returns>
 	public T Get()
 	{
 		lock (locker)
 		{
-			if (queue.Count &gt; 0)
+			if (queue.Count > 0)
 			{
 				return queue.Dequeue();
 			}
@@ -69,15 +69,15 @@ public sealed class ObjectPool&lt;T&gt; : IDisposable
 		}
 	}
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Places an item in the pool.
-	/// &lt;/summary&gt;
-	/// &lt;param name="item"&gt;The item to place to the pool.&lt;/param&gt;
+	/// </summary>
+	/// <param name="item">The item to place to the pool.</param>
 	public void Put(T item)
 	{
 		lock (locker)
 		{
-			if (count &lt; size)
+			if (count < size)
 			{
 				queue.Enqueue(item);
 			}
@@ -91,15 +91,15 @@ public sealed class ObjectPool&lt;T&gt; : IDisposable
 		}
 	}
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Disposes of items in the pool that implement IDisposable.
-	/// &lt;/summary&gt;
+	/// </summary>
 	public void Dispose()
 	{
 		lock (locker)
 		{
             count = 0;
-			while (queue.Count &gt; 0)
+			while (queue.Count > 0)
 			{
 				using (queue.Dequeue() as IDisposable)
 				{

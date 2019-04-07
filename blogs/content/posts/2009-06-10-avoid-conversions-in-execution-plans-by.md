@@ -164,8 +164,8 @@ As you can see there were no conversions.
     </p>
     
     <pre>   select @SQL = 'select * from dbo.TestPerf
-   where &lt;strong&gt;SomeCol1 = @InnerSomeCol1&lt;/strong&gt; 
-   and &lt;strong&gt;SomeValue =  @InnerSomeValue'&lt;/strong&gt; </pre>
+   where <strong>SomeCol1 = @InnerSomeCol1</strong> 
+   and <strong>SomeValue =  @InnerSomeValue'</strong> </pre>
     
     <p>
       The SomeCol1 column and the @InnerSomeCol1 param/variable have to be of the same datatype,<br /> the SomeValue column and the @InnerSomeValue param/variable also have to be of the same datatype in order to prevent conversions

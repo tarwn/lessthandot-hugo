@@ -159,7 +159,7 @@ If you use >= and < then you get exactly what you need
 
 <pre>SELECT *
 FROM SomeDates
-WHERE DateColumn &gt;= '20081001' AND DateColumn &lt; '20081003'
+WHERE DateColumn >= '20081001' AND DateColumn < '20081003'
 ORDER BY DateColumn</pre>
 
 (results)
@@ -244,7 +244,7 @@ DECLARE @ISDATE BIT
 		AND C.TABLE_SCHEMA = T.TABLE_SCHEMA
     WHERE   Table_Type = 'Base Table'
             And (Data_Type = 'DateTime'
-            Or (Data_Type = 'SmallDateTime' And @DataToFind &gt;= '19000101' And @DataToFind &lt; '20790607'))
+            Or (Data_Type = 'SmallDateTime' And @DataToFind >= '19000101' And @DataToFind < '20790607'))
  
 DECLARE @i INT
 DECLARE @MAX INT
@@ -270,7 +270,7 @@ SELECT  @SQLTemplate = 'If Exists(Select *
 SELECT @i = 1, @MAX = MAX(RowId)
 FROM   @Temp
  
-WHILE @i &lt;= @MAX
+WHILE @i <= @MAX
     BEGIN
         SELECT  @SQL = REPLACE(REPLACE(@SQLTemplate, 'ReplaceTableName', QUOTENAME(SchemaName) + '.' + QUOTENAME(TableName)), 'ReplaceColumnName', ColumnName)
         FROM    @Temp
@@ -350,7 +350,7 @@ SELECT  @SQLTemplate = CASE WHEN @ExactMatch = 1
 SELECT @i = 1, @MAX = MAX(RowId)
 FROM   @Temp
  
-WHILE @i &lt;= @MAX
+WHILE @i <= @MAX
     BEGIN
         SELECT  @SQL = REPLACE(REPLACE(@SQLTemplate, 'ReplaceTableName', QUOTENAME(SchemaName) + '.' + QUOTENAME(TableName)), 'ReplaceColumnName', ColumnName)
         FROM    @Temp
@@ -435,7 +435,7 @@ SELECT  @SQLTemplate = CASE WHEN @ExactMatch = 1
 SELECT @i = 1, @MAX = MAX(RowId)
 FROM   @Temp
  
-WHILE @i &lt;= @MAX
+WHILE @i <= @MAX
     BEGIN
         SELECT  @SQL = REPLACE(REPLACE(@SQLTemplate, 'ReplaceTableName', QUOTENAME(SchemaName) + '.' + QUOTENAME(TableName)), 'ReplaceColumnName', ColumnName)
 	FROM    @Temp
@@ -513,7 +513,7 @@ Now you can run the following code to return each of the values in the comma del
     SELECT SUBSTRING(',' + @SplitString + ',', NumberID + 1,
     CHARINDEX(',', ',' + @SplitString + ',', NumberID + 1) - NumberID -1)AS VALUE
     FROM NumberPivot
-    WHERE NumberID &lt;= LEN(',' + @SplitString + ',') - 1
+    WHERE NumberID <= LEN(',' + @SplitString + ',') - 1
     AND SUBSTRING(',' + @SplitString + ',', NumberID, 1) = ','
     GO</pre>
 
@@ -525,7 +525,7 @@ You can also return distinct values by using DISTINCT
     SELECT DISTINCT SUBSTRING(',' + @SplitString + ',', NumberID + 1,
     CHARINDEX(',', ',' + @SplitString + ',', NumberID + 1) - NumberID -1)AS VALUE
     FROM NumberPivot
-    WHERE NumberID &lt;= LEN(',' + @SplitString + ',') - 1
+    WHERE NumberID <= LEN(',' + @SplitString + ',') - 1
     AND SUBSTRING(',' + @SplitString + ',', NumberID, 1) = ','</pre>
 
 You now can dump the result into a table and then you can join one of your real tables with that table which will execute much faster

@@ -44,7 +44,7 @@ Now instead of a megabyte capped collection, we are going to create a kilobyte c
 
 Time to insert some data, we will make it simple by using a loop to insert 2000 items
 
-<pre>for (var i = 1; i &lt;= 2000; i++) db.TestSize.insert( { name : "denis" + i , age : i } )</pre>
+<pre>for (var i = 1; i <= 2000; i++) db.TestSize.insert( { name : "denis" + i , age : i } )</pre>
 
 Time to check what is in the collection, you can use `db.collection.find()` to iterate through the collection, it will return you 20 items, if you press `it` it will give you the next 20 items
 

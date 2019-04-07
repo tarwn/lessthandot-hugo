@@ -23,7 +23,7 @@ Imagine you were given a directory full of files that did not have any file exte
 Notice how we don't need to specify the type for filePaths?
 The compiler will infer the type based off how we use the parameter.
 When we call File.OpenRead the compiler will know that filePaths has to be a
-string seq or IEnumerable&lt;string&gt; in C# speak.
+string seq or IEnumerable<string&gt; in C# speak.
 *)
 let getUnknownFileExtensions filePaths =
     filePaths

@@ -142,31 +142,31 @@ SET STATISTICS TIME OFF</pre>
 
 With the results
   
-<code class="codespan">&lt;/p>
-&lt;p>(19127 row(s) affected)&lt;/p>
-&lt;p>(1 row(s) affected)&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 327 ms,  elapsed time = 825 ms.&lt;/p>
-&lt;p>(19119 row(s) affected)&lt;/p>
-&lt;p>(1 row(s) affected)&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 578 ms,  elapsed time = 1261 ms.&lt;/p>
-&lt;p>(19127 row(s) affected)&lt;/p>
-&lt;p>(1 row(s) affected)&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 265 ms,  elapsed time = 810 ms.&lt;/p>
-&lt;p>(19119 row(s) affected)&lt;/p>
-&lt;p>(1 row(s) affected)&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 359 ms,  elapsed time = 865 ms.&lt;/p>
-&lt;p>(19119 row(s) affected)&lt;/p>
-&lt;p>(1 row(s) affected)&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 436 ms,  elapsed time = 972 ms.&lt;/p>
-&lt;p>(19119 row(s) affected)&lt;/p>
-&lt;p>(1 row(s) affected)&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 375 ms,  elapsed time = 778 ms.&lt;br />
+<code class="codespan"></p>
+<p>(19127 row(s) affected)</p>
+<p>(1 row(s) affected)</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 327 ms,  elapsed time = 825 ms.</p>
+<p>(19119 row(s) affected)</p>
+<p>(1 row(s) affected)</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 578 ms,  elapsed time = 1261 ms.</p>
+<p>(19127 row(s) affected)</p>
+<p>(1 row(s) affected)</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 265 ms,  elapsed time = 810 ms.</p>
+<p>(19119 row(s) affected)</p>
+<p>(1 row(s) affected)</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 359 ms,  elapsed time = 865 ms.</p>
+<p>(19119 row(s) affected)</p>
+<p>(1 row(s) affected)</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 436 ms,  elapsed time = 972 ms.</p>
+<p>(19119 row(s) affected)</p>
+<p>(1 row(s) affected)</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 375 ms,  elapsed time = 778 ms.<br />
 </code>
 
 The execution plans 
@@ -217,14 +217,14 @@ Declare @j int
 Declare @r int
 
 Set @i=2000
-While @i&lt;=100000 Begin
+While @i<=100000 Begin
    Insert Into Items( ItemId, ItemName, ItemDesciption, ItemValue )
    Select @i,
           'Item' + Right('0000'+ Cast(@i as varchar(5)),5),
           'Desc' + Right('0000'+ Cast(@i as varchar(5)),5),
           cast(Rand()*1000. as numeric(10,2))
    Select @r = Rand()*10, @j=1
-   While @j&lt;=@r Begin
+   While @j<=@r Begin
        Insert Into Bid(ItemId, BidAmount, BidDateTime)
        Select @i, 
               cast(Rand()*1000. as numeric(10,2)),
@@ -353,33 +353,33 @@ set statistics time off
 
 ### Test results in SQL Server 2008 Express
 
-<code class="codespan">&lt;br />
-Test case - Number of Items - 100000 Bids count - 497381&lt;br />
---------------------------------------------------&lt;br />
-Nikola's solution - TOP clause &lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 842 ms,  elapsed time = 1904 ms.&lt;br />
---------------------------------------------------&lt;br />
-Derived table solution - can have duplicates &lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 624 ms,  elapsed time = 2734 ms.&lt;br />
---------------------------------------------------&lt;br />
-Correlated subquery solution &lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 3729 ms,  elapsed time = 6418 ms.&lt;br />
---------------------------------------------------&lt;br />
-ROW_NUMBER() solution &lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 1342 ms,  elapsed time = 4175 ms.&lt;br />
---------------------------------------------------&lt;br />
-Row_number() - slight variation &lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 2137 ms,  elapsed time = 4633 ms.&lt;br />
---------------------------------------------------&lt;br />
-Finally - compound key solution &lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 1108 ms,  elapsed time = 2742 ms.&lt;/p>
-&lt;p></code>
+<code class="codespan"><br />
+Test case - Number of Items - 100000 Bids count - 497381<br />
+--------------------------------------------------<br />
+Nikola's solution - TOP clause </p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 842 ms,  elapsed time = 1904 ms.<br />
+--------------------------------------------------<br />
+Derived table solution - can have duplicates </p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 624 ms,  elapsed time = 2734 ms.<br />
+--------------------------------------------------<br />
+Correlated subquery solution </p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 3729 ms,  elapsed time = 6418 ms.<br />
+--------------------------------------------------<br />
+ROW_NUMBER() solution </p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 1342 ms,  elapsed time = 4175 ms.<br />
+--------------------------------------------------<br />
+Row_number() - slight variation </p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 2137 ms,  elapsed time = 4633 ms.<br />
+--------------------------------------------------<br />
+Finally - compound key solution </p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 1108 ms,  elapsed time = 2742 ms.</p>
+<p></code>
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][7] forum or our [Microsoft SQL Server Admin][8] forum**<ins></ins>
 

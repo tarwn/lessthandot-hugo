@@ -40,15 +40,15 @@ Make sure to change Your.Account@gmail.com to what your gmail account is, also n
     
     EXECUTE msdb.dbo.sysmail_add_account_sp
     @account_name            = 'GmailDBMail',
-    @email_address           = 'Your.Account@gmail.com', -- &lt;-- change this
+    @email_address           = 'Your.Account@gmail.com', -- <-- change this
     @display_name            = 'GmailDBMail',
-    @replyto_address         = 'Your.Account@gmail.com', -- &lt;-- change this
+    @replyto_address         = 'Your.Account@gmail.com', -- <-- change this
     @description             = '',
     @mailserver_name         = 'smtp.gmail.com',
     @mailserver_type         = 'SMTP',
     @port                    = '587',
-    @username                = 'Your.Account@gmail.com', -- &lt;-- change this
-    @password                = 'yourpassword', -- &lt;-- change this
+    @username                = 'Your.Account@gmail.com', -- <-- change this
+    @password                = 'yourpassword', -- <-- change this
     @use_default_credentials =  0 ,
     @enable_ssl              =  1 ;
   END --IF EXISTS  account

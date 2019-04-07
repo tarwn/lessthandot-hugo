@@ -19,11 +19,11 @@ Have you ever needed to remove the time part of a date variable, or remove the d
 
 First, the format method for removing the time part.
 
-<pre>&lt;span class="MT_blue"&gt;Debug.Print Format(Now, "Short Date")
+<pre><span class="MT_blue">Debug.Print Format(Now, "Short Date")
 4/1/2009
 
 Debug.Print Format(Now, "Short Time")
-09:16&lt;/span&gt; </pre>
+09:16</span> </pre>
 
 Seems simple enough to remove the date and/or time portion of a date variable, but is it the best way? If you only want to display it, it probably is, but if you need to use the values for calculations, it is not the best way to remove the date or time portions.
 
@@ -31,21 +31,21 @@ Instead, you can use the Int function.
 
 The Int function performs a simple truncate on a number. Note: this does not do rounding. Also significant is that Int will return whatever data is sent to it. If the parameter is a double, int will return a double. If the parameter is a single, Int returns a single, if the parameter is a date, Int returns a date.
 
-<pre>&lt;span class="MT_blue"&gt;Debug.Print Int(Now)
+<pre><span class="MT_blue">Debug.Print Int(Now)
 4/1/2009 
 
 Debug.Print Now - Int(Now)
-0.390729166669189 &lt;/span&gt; </pre>
+0.390729166669189 </span> </pre>
 
 Surprised to see a number instead of a time? Me too. But&#8230; in VB6, when you subtract dates, the resulting data type is a double.
 
-<pre>&lt;span class="MT_blue"&gt;Debug.Print TypeName(Now - Int(Now))
-Double&lt;/span&gt; </pre>
+<pre><span class="MT_blue">Debug.Print TypeName(Now - Int(Now))
+Double</span> </pre>
 
 However, this double can be converted back to a Date variable type like this.
 
-<pre>&lt;span class="MT_blue"&gt;Debug.Print cDate(Now - Int(Now))
-9:25:40 AM&lt;/span&gt; </pre>
+<pre><span class="MT_blue">Debug.Print cDate(Now - Int(Now))
+9:25:40 AM</span> </pre>
 
 Clearly, there are 2 different methods for separating the date from the time in a Date variable. Which is better? They both return the correct value, so now it&#8217;s up to performance.
 

@@ -110,7 +110,7 @@ WHERE DRIVE = 'E'
 
 DROP TABLE #FixedDrives
 
-IF @MBFreeD &lt; 30000 OR @MBFreeE &lt; 10000
+IF @MBFreeD < 30000 OR @MBFreeE < 10000
 BEGIN
       DECLARE @Recipients VARCHAR(8000)
 	  SELECT @Recipients ='SomeGroup@SomeEmail.com'
@@ -118,8 +118,8 @@ BEGIN
 		DECLARE @p_body AS NVARCHAR(MAX), @p_subject AS NVARCHAR(MAX), @p_profile_name AS NVARCHAR(MAX)
 
 		SET @p_subject = @@SERVERNAME + N'  Drive Space is running low'
-		SET @p_body = ' Drive Space is running low &lt;br&gt;&lt;br&gt;&lt;br&gt;' + CHAR(13) + CHAR(10) + 'Drive D has ' 
-		+ CONVERT(VARCHAR(20),@MBFreeD) + ' MB left &lt;br&gt;' + CHAR(13) + CHAR(10) + 'Drive E has ' 
+		SET @p_body = ' Drive Space is running low <br&gt;<br&gt;<br&gt;' + CHAR(13) + CHAR(10) + 'Drive D has ' 
+		+ CONVERT(VARCHAR(20),@MBFreeD) + ' MB left <br&gt;' + CHAR(13) + CHAR(10) + 'Drive E has ' 
 		+ CONVERT(VARCHAR(20),@MBFreeE) + ' MB left'
 
 		EXEC msdb.dbo.sp_send_dbmail

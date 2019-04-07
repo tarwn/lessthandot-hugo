@@ -30,14 +30,14 @@ To check the logins with an invalid default database:
 FROM	master.sys.syslogins L
 		Inner Join sys.databases D
 			On L.dbname = d.name
-WHERE	L.dbname &lt;&gt; 'master'
-		And D.state_desc &lt;&gt; 'ONLINE'</pre>
+WHERE	L.dbname <&gt; 'master'
+		And D.state_desc <&gt; 'ONLINE'</pre>
 
 To check the logins that have a database other than master:
 
 <pre>SELECT	L.name, L.dbName
 FROM	master.sys.syslogins L
-WHERE	L.dbname &lt;&gt; 'master'</pre>
+WHERE	L.dbname <&gt; 'master'</pre>
 
 To change the default database to master:
 

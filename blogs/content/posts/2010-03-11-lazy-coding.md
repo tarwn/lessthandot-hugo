@@ -21,20 +21,20 @@ Are you waiting for .NET 4.0 to take advantage of lazy initialization? Now you d
 
 _Aren&#8217;t we all a little lazy?_
 
-<pre>/// &lt;summary&gt;
+<pre>/// <summary>
 /// Provides support for lazy initialization.
-/// &lt;/summary&gt;
-/// &lt;typeparam name="T"&gt;Specifies the type of object that is being lazily initialized.&lt;/typeparam&gt;
-public sealed class Lazy&lt;T&gt;
+/// </summary>
+/// <typeparam name="T">Specifies the type of object that is being lazily initialized.</typeparam>
+public sealed class Lazy<T>
 {
-	private readonly Func&lt;T&gt; createValue;
+	private readonly Func<T> createValue;
 	private volatile bool isValueCreated;
 	private T value;
 
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Gets the lazily initialized value of the current Lazy{T} instance.
-	/// &lt;/summary&gt;
+	/// </summary>
 	public T Value
 	{
 		get
@@ -54,9 +54,9 @@ public sealed class Lazy&lt;T&gt;
 		}
 	}		
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Gets a value that indicates whether a value has been created for this Lazy{T} instance.
-	/// &lt;/summary&gt;
+	/// </summary>
 	public bool IsValueCreated
 	{
 		get 
@@ -69,11 +69,11 @@ public sealed class Lazy&lt;T&gt;
 	}
 
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Initializes a new instance of the Lazy{T} class.
-	/// &lt;/summary&gt;
-	/// &lt;param name="createValue"&gt;The delegate that produces the value when it is needed.&lt;/param&gt;
-	public Lazy(Func&lt;T&gt; createValue)
+	/// </summary>
+	/// <param name="createValue">The delegate that produces the value when it is needed.</param>
+	public Lazy(Func<T> createValue)
 	{
 		if (createValue == null) throw new ArgumentNullException("createValue");
 
@@ -81,10 +81,10 @@ public sealed class Lazy&lt;T&gt;
 	}
 
 
-	/// &lt;summary&gt;
+	/// <summary>
 	/// Creates and returns a string representation of the Lazy{T}.Value.
-	/// &lt;/summary&gt;
-	/// &lt;returns&gt;The string representation of the Lazy{T}.Value property.&lt;/returns&gt;
+	/// </summary>
+	/// <returns>The string representation of the Lazy{T}.Value property.</returns>
 	public override string ToString()
 	{
 		return Value.ToString();
@@ -97,4 +97,4 @@ public sealed class Lazy&lt;T&gt;
 {
     get { return myProperty.Value; }
 }
-private readonly Lazy&lt;int&gt; myProperty = new Lazy&lt;int&gt;(() =&gt; 2);</pre>
+private readonly Lazy<int> myProperty = new Lazy<int>(() => 2);</pre>

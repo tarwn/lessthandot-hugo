@@ -21,7 +21,7 @@ Under normal circumstances, it is best if all your collations match. This includ
 **How to detect this problem:**
 
 <pre>Select	'Warning: Collation conflict between user database and TempDB' As Warning
-Where	DatabasePropertyEx('TempDB', 'Collation') &lt;&gt; DatabasePropertyEx(db_name(), 'Collation')</pre>
+Where	DatabasePropertyEx('TempDB', 'Collation') <> DatabasePropertyEx(db_name(), 'Collation')</pre>
 
 **How to correct it:** There are several ways to correct this problem. The long term solution is to change the default collation for your database (affecting new string columns) and then change the collation for your existing columns. Alternatively, you could modify any code that creates a temp table or table variable so that it specifies a collation on your string columns. You can hard code the collation or use the default database collation.
 

@@ -155,7 +155,7 @@ set @dest = @dest + @year + '' + @month + ''
 set @loop = (select count(*) from [XMLImportWT])
 set @int = 1
 
-While @int &lt;= @loop
+While @int <= @loop
  begin
    set @filename = (select filenm from [XMLImportWT] where rownum = @int);
    declare @SQLString nvarchar(max);
@@ -218,7 +218,7 @@ set @dest = @dest + @year + '' + @month + ''
 set @loop = (select count(*) from [XMLImportWT])
 set @int = 1
 
-While @int &lt;= @loop
+While @int <= @loop
  begin
    set @filename = (select filenm from [XMLImportWT] where rownum = @int);
    declare @SQLString nvarchar(max);

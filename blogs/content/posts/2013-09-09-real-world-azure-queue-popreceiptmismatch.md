@@ -83,13 +83,13 @@ So it makes sense that if we GetMessage and somehow have an out of date PopRecei
 
 **Actual Response:**
 
-<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Error&gt;
-   &lt;Code&gt;MessageNotFound&lt;/Code&gt;
-   &lt;Message&gt;The specified message does not exist.
+<pre><?xml version="1.0" encoding="utf-8"?&gt;
+<Error&gt;
+   <Code&gt;MessageNotFound</Code&gt;
+   <Message&gt;The specified message does not exist.
 RequestId:98bd9fb1-d32f-45bd-9159-c900a9b2fed3
-Time:2013-09-07T17:04:30.5469796Z&lt;/Message&gt;
-&lt;/Error&gt;</pre>
+Time:2013-09-07T17:04:30.5469796Z</Message&gt;
+</Error&gt;</pre>
 
 Wait, what? 404, MessageNotFound, &#8220;The specified message does not exist.&#8221;? 
 

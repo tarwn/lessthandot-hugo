@@ -60,45 +60,45 @@ FOR XML AUTO, ELEMENTS</pre>
 
 Here is what the XML will look like.
 
-<pre>&lt;Customer&gt;
-	&lt;CustomerID&gt;1&lt;/CustomerID&gt;
-	&lt;Address&gt;
-		&lt;FullAddress&gt;Some Address&lt;/FullAddress&gt;
-		&lt;Phone&gt;
-			&lt;PhoneNumber&gt;212-111-2222&lt;/PhoneNumber&gt;
-		&lt;/Phone&gt;
-	&lt;/Address&gt;
-&lt;/Customer&gt;
-&lt;Customer&gt;
-	&lt;CustomerID&gt;2&lt;/CustomerID&gt;
-	&lt;Address&gt;
-		&lt;FullAddress&gt;Other Address&lt;/FullAddress&gt;
-		&lt;Phone&gt;
-			&lt;PhoneNumber&gt;212-777-8888&lt;/PhoneNumber&gt;
-		&lt;/Phone&gt;
-	&lt;/Address&gt;
-&lt;/Customer&gt;</pre>
+<pre><Customer>
+	<CustomerID>1</CustomerID>
+	<Address>
+		<FullAddress>Some Address</FullAddress>
+		<Phone>
+			<PhoneNumber>212-111-2222</PhoneNumber>
+		</Phone>
+	</Address>
+</Customer>
+<Customer>
+	<CustomerID>2</CustomerID>
+	<Address>
+		<FullAddress>Other Address</FullAddress>
+		<Phone>
+			<PhoneNumber>212-777-8888</PhoneNumber>
+		</Phone>
+	</Address>
+</Customer></pre>
 
 Do you notice that the Phone is inside Address? What if I want this output?
 
-<pre>&lt;Customer&gt;
-	&lt;CustomerID&gt;1&lt;/CustomerID&gt;
-	&lt;Address&gt;
-		&lt;FullAddress&gt;Some Address&lt;/FullAddress&gt;
-	&lt;/Address&gt;
-	&lt;Phone&gt;
-		&lt;PhoneNumber&gt;212-111-2222&lt;/PhoneNumber&gt;
-	&lt;/Phone&gt;
-&lt;/Customer&gt;
-&lt;Customer&gt;
-	&lt;CustomerID&gt;2&lt;/CustomerID&gt;
-	&lt;Address&gt;
-		&lt;FullAddress&gt;Other Address&lt;/FullAddress&gt;
-	&lt;/Address&gt;
-	&lt;Phone&gt;
-		&lt;PhoneNumber&gt;212-777-8888&lt;/PhoneNumber&gt;
-	&lt;/Phone&gt;
-&lt;/Customer&gt;</pre>
+<pre><Customer>
+	<CustomerID>1</CustomerID>
+	<Address>
+		<FullAddress>Some Address</FullAddress>
+	</Address>
+	<Phone>
+		<PhoneNumber>212-111-2222</PhoneNumber>
+	</Phone>
+</Customer>
+<Customer>
+	<CustomerID>2</CustomerID>
+	<Address>
+		<FullAddress>Other Address</FullAddress>
+	</Address>
+	<Phone>
+		<PhoneNumber>212-777-8888</PhoneNumber>
+	</Phone>
+</Customer></pre>
 
 As you can see Phone and Address are on the same level
 
@@ -144,20 +144,20 @@ FOR XML AUTO, ELEMENTS</pre>
 
 Here is the output
 
-<pre>&lt;Customer&gt;
-	&lt;CustomerID&gt;1&lt;/CustomerID&gt;
-	&lt;Address&gt;
-		&lt;FullAddress&gt;Some Address&lt;/FullAddress&gt;
+<pre><Customer>
+	<CustomerID>1</CustomerID>
+	<Address>
+		<FullAddress>Some Address</FullAddress>
 		&lt ;Phone&gt ;&lt ;PhoneNumber&gt ;212-111-2222&lt ;/PhoneNumber&gt ;&lt ;/Phone&gt ;
-	&lt;/Address&gt;
-&lt;/Customer&gt;
-&lt;Customer&gt;
-	&lt;CustomerID&gt;2&lt;/CustomerID&gt;
-	&lt;Address&gt;
-		&lt;FullAddress&gt;Other Address&lt;/FullAddress&gt;
-		&lt ;Phone&gt ;&lt ;PhoneNumber&gt ;212-777-8888&lt ;/PhoneNumber&gt ;&lt;/Phone&gt ;
-	&lt;/Address&gt;
-&lt;/Customer&gt;</pre>
+	</Address>
+</Customer>
+<Customer>
+	<CustomerID>2</CustomerID>
+	<Address>
+		<FullAddress>Other Address</FullAddress>
+		&lt ;Phone&gt ;&lt ;PhoneNumber&gt ;212-777-8888&lt ;/PhoneNumber&gt ;</Phone&gt ;
+	</Address>
+</Customer></pre>
 
 
 

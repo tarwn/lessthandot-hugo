@@ -48,7 +48,7 @@ DEFINE CLASS grdSorting AS grid
 	*-- If this property is set to false, then the Initialize code is not called
 	lsortheaders = .T.
 	*-- XML Metadata for customizable properties
-	_memberdata = [&lt;VFPData&gt;&lt;memberdata name="lsortheaders" display="lSortHeaders"/&gt;&lt;memberdata name="cgridscript" display="cGridScript"/&gt;&lt;memberdata name="headerclick" display="HeaderClick"/&gt;&lt;memberdata name="gettagname" display="GetTagName"/&gt;&lt;memberdata name="createtag" display="CreateTag"/&gt;&lt;memberdata name="clearheaderpictures" display="ClearHeaderPictures"/&gt;&lt;memberdata name="setorder" display="SetOrder"/&gt;&lt;/VFPData&gt;]
+	_memberdata = [<VFPData><memberdata name="lsortheaders" display="lSortHeaders"/><memberdata name="cgridscript" display="cGridScript"/><memberdata name="headerclick" display="HeaderClick"/><memberdata name="gettagname" display="GetTagName"/><memberdata name="createtag" display="CreateTag"/><memberdata name="clearheaderpictures" display="ClearHeaderPictures"/><memberdata name="setorder" display="SetOrder"/></VFPData>]
 	Name = "grid_"
 
 	*-- If this property is set, use DynamicBackColor to set highlight
@@ -75,7 +75,7 @@ DEFINE CLASS grdSorting AS grid
 			this.SetOrder(m.loCalledBy.parent.cOriginalControlSource, m.loCalledBy.CurrentTag, m.loCalledBy)
 			if this.lShowSortingArrows
 		* Check, if we changed the order
-				if not order(m.lcRecSource)== m.lcOrder or m.llDirection &lt;&gt; this.lAscending
+				if not order(m.lcRecSource)== m.lcOrder or m.llDirection <> this.lAscending
 		** Clear the picture of the previously sorted column
 					loCalledBy.CurrentTag = this.cTagName
 					this.ClearHeaderPictures()
@@ -115,7 +115,7 @@ DEFINE CLASS grdSorting AS grid
 		*----------------------------------------------------------------
 		lparameters toHeader, tcPicture
 
-		if vartype(m.toHeader) &lt;&gt; "O"
+		if vartype(m.toHeader) <> "O"
 			return .f.
 		endif
 		if toHeader.alignment = 0 && Default
@@ -168,7 +168,7 @@ WITH toHeader
 	lcType = TYPE(m.lc__SortExpr)
 	llIsField = '.' $ m.lc__SortExpr AND ;
 		USED(LEFT(m.lc__SortExpr,AT('.',m.lc__SortExpr)-1)) AND ;
-		FSIZE(SUBSTR(m.lc__SortExpr,AT('.',m.lc__SortExpr)+1),LEFT(m.lc__SortExpr,AT('.',m.lc__SortExpr)-1)) &gt; 0
+		FSIZE(SUBSTR(m.lc__SortExpr,AT('.',m.lc__SortExpr)+1),LEFT(m.lc__SortExpr,AT('.',m.lc__SortExpr)-1)) > 0
 
 	lcTag = ""
 
@@ -221,7 +221,7 @@ WITH toHeader
 			lnRestoreBuffering = CURSORGETPROP('Buffering')
 
 			TRY
-				IF m.lnRestoreBuffering &gt;= 4
+				IF m.lnRestoreBuffering >= 4
 && OOPS - cannot index cursors in 5 buffering mode.
 && check that it does not contain modified records
 					IF GETNEXTMODIFIED(0) = 0
@@ -254,7 +254,7 @@ WITH toHeader
 					ENDIF
 
 * restore record number
-					IF m.lnOldRecNo &lt;&gt; RECNO()
+					IF m.lnOldRecNo <> RECNO()
 						IF m.lnOldRecNo = 0
 							GO BOTTOM
 							IF !EOF()
@@ -265,7 +265,7 @@ WITH toHeader
 						ENDIF
 					ENDIF
 
-					IF m.lnRestoreBuffering &gt;= 4
+					IF m.lnRestoreBuffering >= 4
 						CURSORSETPROP('Buffering', m.lnRestoreBuffering)
 					ENDIF
 				ENDIF
@@ -356,11 +356,11 @@ ENDIF
 			set textmerge on
 			set textmerge to memvar lcGridScript noshow && TEXTMERGE begins on the next line.
 
-		With &lt;&lt;m.lcReference&gt;&gt;
+		With <<m.lcReference>>
 			for each loColumn in this.columns
 
-		        .&lt;&lt;loColumn.name&gt;&gt;.ControlSource = "&lt;&lt;m.loColumn.ControlSource&gt;&gt;"
-		        .&lt;&lt;loColumn.name&gt;&gt;.width = &lt;&lt;m.loColumn.width&gt;&gt;
+		        .<<loColumn.name>>.ControlSource = "<<m.loColumn.ControlSource>>"
+		        .<<loColumn.name>>.width = <<m.loColumn.width>>
 			next
 		endwith
 			set textmerge to
@@ -514,7 +514,7 @@ ENDIF
 
 		TRY
 
-		IF PCOUNT() &lt; 2 OR EMPTY(m.tcTagName)
+		IF PCOUNT() < 2 OR EMPTY(m.tcTagName)
 
 		*----------------------------------------------
 		*--- A tag name was not passed. Try to find a
@@ -583,7 +583,7 @@ ENDIF
 			IF THIS.lGoTopAfterSorting
 				GO TOP IN (m.lcCursor)
 			ELSE
-				IF RECCOUNT(m.lcCursor) &gt; 0
+				IF RECCOUNT(m.lcCursor) > 0
 					GOTO m.lnRecNo IN (m.lcCursor) && This causes automatic save of the record in the record-buffered table
 				ENDIF
 			ENDIF
@@ -625,7 +625,7 @@ ENDIF
 
 
 	PROCEDURE Resize
-		IF THIS.nOriginalWidth &gt; 0 && The grid's Init has been run already
+		IF THIS.nOriginalWidth > 0 && The grid's Init has been run already
 			LOCAL lnRatio, loColumn
 			lnRatio = THIS.WIDTH / THIS.nOriginalWidth
 

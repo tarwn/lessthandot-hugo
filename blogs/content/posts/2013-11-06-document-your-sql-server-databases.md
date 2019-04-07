@@ -184,7 +184,7 @@ Let’s look at this by using only the information available in sys.extended_pro
 	EP.name AS ExtendedPropertyDescription, 
 	EP.value AS ExtendedPropertyValue 
 FROM sys.extended_properties AS EP 
-WHERE EP.name &lt;&gt; 'MS_Description' 
+WHERE EP.name <&gt; 'MS_Description' 
 	AND EP.class = 7; </pre>
 
 <p style="text-align: center;">
@@ -209,7 +209,7 @@ FROM sys.extended_properties AS EP
 	LEFT JOIN sys.schemas SCH ON SCH.schema_id = TBL.schema_id 
 	LEFT JOIN sys.indexes IND ON IND.object_id = TBL.object_id 
 		AND IND.index_id = EP.minor_id
-WHERE EP.name &lt;&gt; 'MS_Description' 
+WHERE EP.name <&gt; 'MS_Description' 
 	AND EP.class = 7;  </pre>
 
  
@@ -241,7 +241,7 @@ I added some database-level properties. To query those, I look for class 0. Note
 	EP.name AS ExtendedPropertyDescription, 
 	EP.value AS ExtendedPropertyValue
 FROM sys.extended_properties AS EP 
-WHERE EP.name &lt;&gt; 'MS_Description' 
+WHERE EP.name <&gt; 'MS_Description' 
 	AND EP.class = 0; </pre>
 
 <p style="text-align: center;">
@@ -266,7 +266,7 @@ I’ve documented the schemas in the database – remember, these were level 0. 
 	EP.value AS ExtendedPropertyValue
 FROM sys.extended_properties AS EP 
 	LEFT JOIN sys.schemas SCH ON SCH.schema_id = EP.major_id 
-WHERE EP.name &lt;&gt; 'MS_Description' 
+WHERE EP.name <&gt; 'MS_Description' 
 	AND EP.class = 3; </pre>
 
 <p style="text-align: center;">
@@ -294,7 +294,7 @@ FROM sys.extended_properties AS EP
 	LEFT JOIN sys.schemas SCH ON SCH.schema_id = TBL.schema_id 
 	LEFT JOIN sys.columns COL ON COL.object_id = TBL.object_id 
 		AND COL.column_id = EP.minor_id
-WHERE EP.name &lt;&gt; 'MS_Description' 
+WHERE EP.name <&gt; 'MS_Description' 
 	AND EP.class = 1;  </pre>
 
 <p style="text-align: center;">

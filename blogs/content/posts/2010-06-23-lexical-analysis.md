@@ -64,7 +64,7 @@ public enum TokenType
 
 Now that we have our Token struct we can write our method to tokenize the input string.
 
-<pre>public static IEnumerable&lt;Token&gt; Tokenize(string input)
+<pre>public static IEnumerable<Token> Tokenize(string input)
 {
     var st = new StringTraverser(input);
     var c = default(char?);
@@ -82,10 +82,10 @@ Now that we have our Token struct we can write our method to tokenize the input 
         {
             yield return new Token("-", TokenType.Dash);
         }
-        else if (c &gt;= '0' && c &lt;= '9')
+        else if (c >= '0' && c <= '9')
         {
             var s = c.ToString();
-            while ((c = st.Next()) != null && c &gt;= '0' && c &lt;= '9')
+            while ((c = st.Next()) != null && c >= '0' && c <= '9')
             {
                 s += c;
             }
@@ -145,12 +145,12 @@ The following code is what makes up the StringTraverser object.
 
     public string Next(int count)
     {
-        if (count &lt;= 0)
+        if (count <= 0)
         {
             throw new ArgumentOutOfRangeException("count", count, "The count must be greater than zero.");
         }
 
-        if (_index + count &gt; _length)
+        if (_index + count > _length)
         {
             return null;
         }
@@ -160,7 +160,7 @@ The following code is what makes up the StringTraverser object.
         return result;
     }
 
-    public string Next(IEnumerable&lt;char&gt; chars)
+    public string Next(IEnumerable<char> chars)
     {
         if (chars == null)
         {
@@ -187,7 +187,7 @@ The following code is what makes up the StringTraverser object.
         return result;
     }
 
-    public string NextWhile(Func&lt;char, bool&gt; predicate)
+    public string NextWhile(Func<char, bool> predicate)
     {
         if (predicate == null)
         {
@@ -219,7 +219,7 @@ The following code is what makes up the StringTraverser object.
         return result;
     }
 
-    public string PeekNext(IEnumerable&lt;char&gt; chars)
+    public string PeekNext(IEnumerable<char> chars)
     {
         var startIndex = _index;
         var result = Next(chars);
@@ -239,12 +239,12 @@ The following code is what makes up the StringTraverser object.
 
     public string Previous(int count)
     {
-        if (count &lt;= 0)
+        if (count <= 0)
         {
             throw new ArgumentOutOfRangeException("count", count, "The count must be greater than zero.");
         }
 
-        if (_index - count &lt; 0)
+        if (_index - count < 0)
         {
             return null;
         }
@@ -253,7 +253,7 @@ The following code is what makes up the StringTraverser object.
         return _value.Substring(_index, count);
     }
 
-    public string Previous(IEnumerable&lt;char&gt; chars)
+    public string Previous(IEnumerable<char> chars)
     {
         if (chars == null)
         {
@@ -300,7 +300,7 @@ The following code is what makes up the StringTraverser object.
         return result;
     }
 
-    public string PeekPrevious(IEnumerable&lt;char&gt; chars)
+    public string PeekPrevious(IEnumerable<char> chars)
     {
         var startIndex = _index;
         var result = Previous(chars);
@@ -316,7 +316,7 @@ The following code is what makes up the StringTraverser object.
 
     public void Forward(int count)
     {
-        if (count &lt;= 0)
+        if (count <= 0)
         {
             throw new ArgumentOutOfRangeException("count", count, "The count must be greater than zero.");
         }
@@ -324,7 +324,7 @@ The following code is what makes up the StringTraverser object.
         _index = Math.Min(_length, _index + count);
     }
 
-    public void ForwardWhile(Func&lt;char, bool&gt; predicate)
+    public void ForwardWhile(Func<char, bool> predicate)
     {
         if (predicate == null)
         {
@@ -344,7 +344,7 @@ The following code is what makes up the StringTraverser object.
 
     public void Back(int count)
     {
-        if (count &lt;= 0)
+        if (count <= 0)
         {
             throw new ArgumentOutOfRangeException("count", count, "The count must be greater than zero.");
         }
@@ -357,7 +357,7 @@ The following code is what makes up the StringTraverser object.
         _index = Math.Max(0, _index - count);
     }
 
-    public void BackWhile(Func&lt;char, bool&gt; predicate)
+    public void BackWhile(Func<char, bool> predicate)
     {
         if (predicate == null)
         {

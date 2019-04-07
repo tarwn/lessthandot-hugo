@@ -38,7 +38,7 @@ SELECT @WrappedList = @Del + @List + @Del, @MaxItems = LEN(@List)
 INSERT INTO @T (Item) 
 SELECT SUBSTRING(@WrappedList, Number + 1, CHARINDEX(@Del, @WrappedList, Number + 1) - Number - 1) 
 FROM dbo.Numbers n 
-WHERE n.Number &lt;= LEN(@WrappedList) - 1 
+WHERE n.Number <= LEN(@WrappedList) - 1 
 AND SUBSTRING(@WrappedList, n.Number, 1) = @Del 
 
 RETURN 

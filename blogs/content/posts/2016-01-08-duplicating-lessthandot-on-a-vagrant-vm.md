@@ -224,17 +224,17 @@ The z_lessthandot.httpd.conf template is just a copy of the production conf with
 #### Production Sites ####
 ##########################
 
-&lt;VirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80&gt;
+<VirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80&gt;
 	DocumentRoot /vagrant/trunk/www/
 	ServerName %%SETTINGS_VAGRANT_HOSTNAME%%
 	# ... etc ...
-&lt;/VirtualHost&gt;
+</VirtualHost&gt;
 
-&lt;VirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80&gt;
+<VirtualHost %%SETTINGS_VAGRANT_IPADDRESS%%:80&gt;
 	DocumentRoot /vagrant/trunk/forum/
 	ServerName forum.%%SETTINGS_VAGRANT_HOSTNAME%%
 	# ...etc...
-&lt;/VirtualHost&gt;</pre>
+</VirtualHost&gt;</pre>
 
 To replace the tokens, I use sed and the args passed into the script (originally form the config file):
 

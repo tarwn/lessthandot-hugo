@@ -16,33 +16,33 @@ Over the past couple of years, we&#8217;ve been moving from a &#8220;custom-deve
 
 For the uninitiated, when viewing a .rdlc file (or .rdl) as an XML document, the dataset definition looks something like this. Only yours probably have a real datasource 😉
 
-<pre>&lt;DataSets&gt;
-    &lt;DataSet Name="ReportData_ReportName"&gt;
-      &lt;Fields&gt;
-        &lt;Field Name="LastName"&gt;
-          &lt;DataField&gt;LastName&lt;/DataField&gt;
-          &lt;rd:TypeName&gt;System.String&lt;/rd:TypeName&gt;
-        &lt;/Field&gt;
-        &lt;Field Name="FirstName"&gt;
-          &lt;DataField&gt;FirstName&lt;/DataField&gt;
-          &lt;rd:TypeName&gt;System.String&lt;/rd:TypeName&gt;
-        &lt;/Field&gt;
-        &lt;Field Name="LicenseNumber"&gt;
-          &lt;DataField&gt;LicenseNumber&lt;/DataField&gt;
-          &lt;rd:TypeName&gt;System.Int32&lt;/rd:TypeName&gt;
-        &lt;/Field&gt;
-        &lt;Field Name="LicenseExpirationDate"&gt;
-          &lt;DataField&gt;LicenseExpirationDate&lt;/DataField&gt;
-          &lt;rd:TypeName&gt;System.DateTime&lt;/rd:TypeName&gt;
-        &lt;/Field&gt;
-      &lt;/Fields&gt;
-      &lt;Query&gt;
-        &lt;DataSourceName&gt;DummyDataSource&lt;/DataSourceName&gt;
-        &lt;CommandText /&gt;
-        &lt;rd:UseGenericDesigner&gt;true&lt;/rd:UseGenericDesigner&gt;
-      &lt;/Query&gt;
-    &lt;/DataSet&gt;
-  &lt;/DataSets&gt;</pre>
+<pre><DataSets>
+    <DataSet Name="ReportData_ReportName">
+      <Fields>
+        <Field Name="LastName">
+          <DataField>LastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LicenseNumber">
+          <DataField>LicenseNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LicenseExpirationDate">
+          <DataField>LicenseExpirationDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets></pre>
 
 Pretty simple stuff, but defining it can make setting up a new report somewhat daunting. As we start getting requests for more and more new reports, automating this process looks more and more appealing, and this morning it was finally looking appealing enough that I dropped everything else for about half an hour to figure it out. It ended up being much easier than I expected.
 
@@ -66,26 +66,26 @@ What makes it so easy is the GetSchemaTable method ([see returned table layout][
 
 From there, we need to build up an XML string, similar to what is posted above. It doesn&#8217;t need to be a complete document, just a fragment that can be pasted into our template when creating a new report. I used string manipulation to build it because I didn&#8217;t feel like wrestling with the .net classes to get the namespace &#8220;rd&#8221; defined (it proved tricky since I don&#8217;t want to build the entire document). The formatting is a little funny, just to make the output easy to read:
 
-<pre>/// &lt;summary&gt;Build an XML String representing the data set returned by provided query&lt;/summary&gt;
+<pre>/// <summary>Build an XML String representing the data set returned by provided query</summary>
 		public static String BuildDefinition(String data_set_name, String source_query)
 		{
-			var data_set_template = @"&lt;DataSets&gt;
-	&lt;DataSet Name=""{0}""&gt;
-		&lt;Fields&gt;
+			var data_set_template = @"<DataSets>
+	<DataSet Name=""{0}"">
+		<Fields>
 {1}
-		&lt;/Fields&gt;
-		&lt;Query&gt;
-			&lt;DataSourceName&gt;DummyDataSource&lt;/DataSourceName&gt;
-			&lt;CommandText /&gt;
-			&lt;rd:UseGenericDesigner&gt;true&lt;/rd:UseGenericDesigner&gt;
-		&lt;/Query&gt;
-	&lt;/DataSet&gt;
-&lt;/DataSets&gt;";
+		</Fields>
+		<Query>
+			<DataSourceName>DummyDataSource</DataSourceName>
+			<CommandText />
+			<rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+		</Query>
+	</DataSet>
+</DataSets>";
 
-			var node_template = @"		        &lt;Field Name=""{0}""&gt;
-				&lt;DataField&gt;{0}&lt;/DataField&gt;
-				&lt;rd:TypeName&gt;{1}&lt;/rd:TypeName&gt;
-			&lt;/Field&gt;";
+			var node_template = @"		        <Field Name=""{0}"">
+				<DataField>{0}</DataField>
+				<rd:TypeName>{1}</rd:TypeName>
+			</Field>";
 
 			var nodes = new System.Text.StringBuilder();
 

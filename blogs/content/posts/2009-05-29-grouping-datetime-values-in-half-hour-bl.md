@@ -98,11 +98,11 @@ insert #temp values ( '2009-05-12 15:23:19.667')</pre>
 
 Here is what the select statement looks like
 
-<pre>select count(*) as vCount,case when datepart(mi,Somedate) &lt; 30 
+<pre>select count(*) as vCount,case when datepart(mi,Somedate) < 30 
 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
 else dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end as time
 from #temp
-group by case when datepart(mi,Somedate) &lt; 30 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
+group by case when datepart(mi,Somedate) < 30 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
  else dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end</pre>
 
 As you can see we look at the minutes, if it is below 30 we make it 0 otherwise we make it 30.
@@ -129,7 +129,7 @@ vCount time
 
 Here is what the data looks side by side if you run the following query
 
-<pre>select Somedate,case when datepart(mi,Somedate) &lt; 30 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
+<pre>select Somedate,case when datepart(mi,Somedate) < 30 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
  else dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end
 from #temp</pre>
 
@@ -171,7 +171,7 @@ To do the same for 15 minute blocks is just adding 2 more CASE statements
 
 Here is what that looks like
 
-<pre>select count(*) as vCount,case when datepart(mi,Somedate) &lt; 15 
+<pre>select count(*) as vCount,case when datepart(mi,Somedate) < 15 
 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
 when datepart(mi,Somedate) between 15 and 29
 then dateadd(mi,15,dateadd(hh, datediff(hh, 0, Somedate)+0, 0))
@@ -179,7 +179,7 @@ when datepart(mi,Somedate) between 30 and 44
 then dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0))
 else dateadd(mi,45,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end as time
 from #temp
-group by case when datepart(mi,Somedate) &lt; 15 
+group by case when datepart(mi,Somedate) < 15 
 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
 when datepart(mi,Somedate) between 15 and 29
 then dateadd(mi,15,dateadd(hh, datediff(hh, 0, Somedate)+0, 0))

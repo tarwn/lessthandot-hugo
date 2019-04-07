@@ -150,7 +150,7 @@ This method is really slow and you have to have a working web server. The setup 
 
 <pre>[TestFixture(typeof(ChromeDriver))]
 [TestFixture(typeof(PhantomJSDriver))]
-public class IndexTests_FullIntegration&lt;TDriver&gt;
+public class IndexTests_FullIntegration<TDriver&gt;
 where TDriver : IWebDriver, new()
 {
 
@@ -183,7 +183,7 @@ This second issue actually bothers me a bit, as it means you are creating a fake
 
 <pre>[TestFixture(typeof(ChromeDriver))]
 [TestFixture(typeof(PhantomJSDriver))]
-public class IndexTests_NancyServer&lt;TDriver&gt;
+public class IndexTests_NancyServer<TDriver&gt;
 where TDriver : IWebDriver, new()
 {
 

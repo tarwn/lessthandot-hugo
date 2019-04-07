@@ -101,7 +101,7 @@ JOIN sys.objects obj ON list.TableName = obj.Name
 JOIN sys.columns cols ON obj.object_id = cols.object_id
 WHERE cols.Name = 'rowguid'  
 
-WHILE @int &lt;= (SELECT COUNT(*) FROM @tblList)
+WHILE @int <= (SELECT COUNT(*) FROM @tblList)
  BEGIN
   IF EXISTS (SELECT 1 FROM @tblList WHERE ROWID = @int AND SQLCMD IS NOT NULL)
 	 BEGIN
@@ -124,7 +124,7 @@ INNER JOIN sys.all_columns colName ON cols.object_id = colName.object_id AND col
 JOIN @idxList list ON idx.object_id = object_id(list.TableName)
 WHERE colName.name = 'rowguid' 
 
-WHILE @int &lt;= (SELECT COUNT(*) FROM @idxList)
+WHILE @int <= (SELECT COUNT(*) FROM @idxList)
  BEGIN
   IF EXISTS (SELECT 1 FROM @idxList WHERE ROWID = @int AND SQLCMD IS NOT NULL)
 	 BEGIN
@@ -137,7 +137,7 @@ WHILE @int &lt;= (SELECT COUNT(*) FROM @idxList)
 
 SET @int = 1
 
-WHILE @int &lt;= (SELECT COUNT(*) FROM @idxList)
+WHILE @int <= (SELECT COUNT(*) FROM @idxList)
  BEGIN
 	SET @CMD = (SELECT 'ALTER TABLE ' + TableName + ' DROP COLUMN rowguid' FROM @idxList WHERE ROWID = @int)
 	--EXEC (@CMD)

@@ -95,7 +95,7 @@ Using this stored procedure, it is easy to run a package multiple times in a row
 
 <pre>DECLARE @RunID INT = 1;
 
-WHILE (@RunID &lt;= 10)
+WHILE (@RunID <= 10)
 BEGIN
 	EXEC dbo.RunPackage @RunID, 'myPackage.dtsx', 'myFolder', 'myProject', 1;
 	SET @RunID += 1;

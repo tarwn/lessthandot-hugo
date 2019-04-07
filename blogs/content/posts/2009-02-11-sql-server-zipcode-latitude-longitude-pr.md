@@ -80,9 +80,9 @@ Declare @Temp Float
 
 Set @Temp = sin(@Latitude1/57.2957795130823) * sin(@Latitude2/57.2957795130823) + cos(@Latitude1/57.2957795130823) * cos(@Latitude2/57.2957795130823) * cos(@Longitude2/57.2957795130823 - @Longitude1/57.2957795130823)
 
-if @Temp &gt; 1 
+if @Temp > 1 
 	Set @Temp = 1
-Else If @Temp &lt; -1
+Else If @Temp < -1
 	Set @Temp = -1
 
 Return (3958.75586574 * acos(@Temp)	) 
@@ -134,7 +134,7 @@ Select ZipCode
 From   ZipCodes
 Where  Longitude Between @MinLongitude And @MaxLongitude
        And Latitude Between @MinLatitude And @MaxLatitude
-       And dbo.CalculateDistance(@Longitude, @Latitude, Longitude, Latitude) &lt;= 20</pre>
+       And dbo.CalculateDistance(@Longitude, @Latitude, Longitude, Latitude) <= 20</pre>
 
 You could also use this for a &#8220;store locator&#8221;. On a website, potential customers could enter their zipcode and you could present a list of top 5 closest stores.
   

@@ -24,7 +24,7 @@ Hey Folks,
     Partial Public Class Alert
 
         Private _CommentDisplay As CommentIndicator
-        &lt;System.Xml.Serialization.XmlIgnore()&gt; _
+        <System.Xml.Serialization.XmlIgnore()> _
         Public Property CommentDisplay() As CommentIndicator
             Get
                 Return _CommentDisplay

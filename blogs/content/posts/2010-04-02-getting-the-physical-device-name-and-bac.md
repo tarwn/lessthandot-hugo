@@ -62,7 +62,7 @@ ORDER BY backup_finish_date DESC</pre>
 
 Output
 
-<pre>&lt;strong&gt;physical_device_name	backup_start_date	backup_finish_date	BackupSizeKB&lt;/strong&gt;
+<pre><strong>physical_device_name	backup_start_date	backup_finish_date	BackupSizeKB</strong>
 C:JunkdrawTest2.bak	2010-03-24 12:43:43.000	2010-03-24 12:43:43.000	1483.000000
 C:JunkdrawTest.bak	2010-03-24 12:43:33.000	2010-03-24 12:43:33.000	1482.000000</pre>
 

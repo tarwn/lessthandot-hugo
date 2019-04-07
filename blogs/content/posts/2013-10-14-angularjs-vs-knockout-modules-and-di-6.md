@@ -40,21 +40,21 @@ Angular modules are collections of functionality with a shared configuration blo
 
 Here is an example based on the earlier sample for data binding, except our controller has a dependency on the &#8220;sampleServices/ListOfItemsService&#8221; service and when we push the button it will call this service to obtain the list of items to be displayed.
 
-<pre>&lt;html ng-app="sampleApp"&gt;
-&lt;head&gt;
-    &lt;!-- ... --&gt;
-    &lt;script type="text/javascript" src="js/lib/angular-1.0.8.min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div ng-controller="ModuleDIController"&gt;
+<pre><html ng-app="sampleApp"&gt;
+<head&gt;
+    <!-- ... --&gt;
+    <script type="text/javascript" src="js/lib/angular-1.0.8.min.js"&gt;</script&gt;
+</head&gt;
+<body&gt;
+<div ng-controller="ModuleDIController"&gt;
 	
-    Text Value: {{ textValue }}&lt;br /&gt;
-    List Of Items: &lt;ul ng-repeat="item in listOfItems"&gt;
-                        &lt;li&gt;{{ item.number }} - {{ item.name }}&lt;/li&gt;
-                   &lt;/ul&gt;&lt;br /&gt;
+    Text Value: {{ textValue }}<br /&gt;
+    List Of Items: <ul ng-repeat="item in listOfItems"&gt;
+                        <li&gt;{{ item.number }} - {{ item.name }}</li&gt;
+                   </ul&gt;<br /&gt;
 
-    &lt;input type="button" ng-click="fillItems()" value="Call Service"/&gt;
-&lt;/div&gt;</pre>
+    <input type="button" ng-click="fillItems()" value="Call Service"/&gt;
+</div&gt;</pre>
 
 And the module, controller, and service:
 
@@ -111,22 +111,22 @@ By default, Angular does not include a method for loading scripts. The documenta
 
 Using script.js, I remove the ng-app attribute and instead bootstrap the document to use the sampleApp module once the two files are loaded.
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-    &lt;!-- ... --&gt;
-    &lt;script type="text/javascript" src="js/lib/angular-1.0.8.min.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="js/lib/script.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div ng-controller="ModuleDIController"&gt;
+<pre><html&gt;
+<head&gt;
+    <!-- ... --&gt;
+    <script type="text/javascript" src="js/lib/angular-1.0.8.min.js"&gt;</script&gt;
+    <script type="text/javascript" src="js/lib/script.js"&gt;</script&gt;
+</head&gt;
+<body&gt;
+<div ng-controller="ModuleDIController"&gt;
 	
-    Text Value: {{ textValue }}&lt;br /&gt;
-    List Of Items: &lt;ul ng-repeat="item in listOfItems"&gt;
-                        &lt;li&gt;{{ item.number }} - {{ item.name }}&lt;/li&gt;
-                   &lt;/ul&gt;&lt;br /&gt;
+    Text Value: {{ textValue }}<br /&gt;
+    List Of Items: <ul ng-repeat="item in listOfItems"&gt;
+                        <li&gt;{{ item.number }} - {{ item.name }}</li&gt;
+                   </ul&gt;<br /&gt;
 
-    &lt;input type="button" ng-click="fillItems()" value="Call Service" /&gt;
-&lt;/div&gt;</pre>
+    <input type="button" ng-click="fillItems()" value="Call Service" /&gt;
+</div&gt;</pre>
 
 And the javascript section of the page is reduced to defining the path that the scripts should be loaded from, and the bootstrap code that replaces the ngApp directive.
 
@@ -147,20 +147,20 @@ Full source available at [Knockout/SimpleDI.html][10].
 
 Using the simple databinding example as a base, here is an example of using RequireJS modules to define a module and a service in seperate modules, then using require to ensure the module with the viewmodel is loaded prior to instantiating and binding it:
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-	&lt;!-- ... --&gt;
-	&lt;script type="text/javascript" src="js/lib/knockout-2.3.0.min.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="js/lib/require-2.1.8.min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div&gt;
-    Text Value: &lt;span data-bind="text: textValue"&gt;&lt;/span&gt;&lt;br /&gt;
-    List Of Items: &lt;ul data-bind="foreach: listOfItems"&gt;
-		                &lt;li data-bind="text: number + ' - ' + name"&gt;&lt;/li&gt;
-                   &lt;/ul&gt;&lt;br /&gt;
-    &lt;input type="button" data-bind="click: fillItems" value="Call Service"/&gt;
-&lt;/div&gt;</pre>
+<pre><html&gt;
+<head&gt;
+	<!-- ... --&gt;
+	<script type="text/javascript" src="js/lib/knockout-2.3.0.min.js"&gt;</script&gt;
+	<script type="text/javascript" src="js/lib/require-2.1.8.min.js"&gt;</script&gt;
+</head&gt;
+<body&gt;
+<div&gt;
+    Text Value: <span data-bind="text: textValue"&gt;</span&gt;<br /&gt;
+    List Of Items: <ul data-bind="foreach: listOfItems"&gt;
+		                <li data-bind="text: number + ' - ' + name"&gt;</li&gt;
+                   </ul&gt;<br /&gt;
+    <input type="button" data-bind="click: fillItems" value="Call Service"/&gt;
+</div&gt;</pre>
 
 And the javascript driving the form:
 

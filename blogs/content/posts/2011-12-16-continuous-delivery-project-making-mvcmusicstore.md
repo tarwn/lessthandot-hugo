@@ -100,26 +100,26 @@ I&#8217;ve added the interface declaration and the implements statement to Music
 
 <pre>namespace MvcMusicStore.Models {
 	public class MusicStoreEntities : DbContext, IMusicStoreEntities {
-		public IDbSet&lt;Album&gt; Albums { get; set; }
-		public IDbSet&lt;Genre&gt; Genres { get; set; }
+		public IDbSet<Album&gt; Albums { get; set; }
+		public IDbSet<Genre&gt; Genres { get; set; }
 
-		public IDbSet&lt;Artist&gt; Artists { get; set; }
+		public IDbSet<Artist&gt; Artists { get; set; }
 
-		public IDbSet&lt;Cart&gt; Carts { get; set; }
-		public IDbSet&lt;Order&gt; Orders { get; set; }
-		public IDbSet&lt;OrderDetail&gt; OrderDetails { get; set; }
+		public IDbSet<Cart&gt; Carts { get; set; }
+		public IDbSet<Order&gt; Orders { get; set; }
+		public IDbSet<OrderDetail&gt; OrderDetails { get; set; }
 
 	}
 
 	public interface IMusicStoreEntities : IDisposable {
-		IDbSet&lt;Album&gt; Albums { get; set; }
-		IDbSet&lt;Genre&gt; Genres { get; set; }
+		IDbSet<Album&gt; Albums { get; set; }
+		IDbSet<Genre&gt; Genres { get; set; }
 
-		IDbSet&lt;Artist&gt; Artists { get; set; }
+		IDbSet<Artist&gt; Artists { get; set; }
 
-		IDbSet&lt;Cart&gt; Carts { get; set; }
-		IDbSet&lt;Order&gt; Orders { get; set; }
-		IDbSet&lt;OrderDetail&gt; OrderDetails { get; set; }
+		IDbSet<Cart&gt; Carts { get; set; }
+		IDbSet<Order&gt; Orders { get; set; }
+		IDbSet<OrderDetail&gt; OrderDetails { get; set; }
 	}
 }</pre>
 
@@ -259,7 +259,7 @@ _You may also notice that the folder structure for my test matches the structure
 <pre>namespace MvcMusicStoreTests {
 	class MusicStoreEntitiesFactory {
 		public static IMusicStoreEntities GetEmpty() {
-			return MockRepository.GenerateMock&lt;IMusicStoreEntities&gt;();
+			return MockRepository.GenerateMock<IMusicStoreEntities&gt;();
 		}
 	}
 }</pre>
@@ -339,12 +339,12 @@ In order to inject some fake data, I need to replace the stubbed out IMusicStore
 	class MusicStoreEntitiesFactory {
 		public static IMusicStoreEntities GetEmpty() {
 			FakeDataStore datastore = new FakeDataStore();
-			datastore.Albums = new FakeDbSet&lt;Album&gt;();
-			datastore.Artists = new FakeDbSet&lt;Artist&gt;();
-			datastore.Carts = new FakeDbSet&lt;Cart&gt;();
-			datastore.Genres = new FakeDbSet&lt;Genre&gt;();
-			datastore.OrderDetails = new FakeDbSet&lt;OrderDetail&gt;();
-			datastore.Orders = new FakeDbSet&lt;Order&gt;();
+			datastore.Albums = new FakeDbSet<Album&gt;();
+			datastore.Artists = new FakeDbSet<Artist&gt;();
+			datastore.Carts = new FakeDbSet<Cart&gt;();
+			datastore.Genres = new FakeDbSet<Genre&gt;();
+			datastore.OrderDetails = new FakeDbSet<OrderDetail&gt;();
+			datastore.Orders = new FakeDbSet<Order&gt;();
 			return datastore;
 		}
 	}

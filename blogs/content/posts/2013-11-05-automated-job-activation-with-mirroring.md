@@ -79,7 +79,7 @@ WHERE mirroring_guid IS NOT NULL
 
 IF EXISTS(SELECT 1 FROM #Review WHERE mirroring_role_desc = 'PRINCIPAL' AND [Role] = 'MIRROR' AND RunStatus = 1 AND Active = 1)
  BEGIN
-	WHILE (@Loop &lt;= (SELECT COUNT(*) FROM #Review WHERE mirroring_role_desc = 'PRINCIPAL' AND [Role] = 'MIRROR' AND RunStatus = 1 AND Active = 1))
+	WHILE (@Loop <= (SELECT COUNT(*) FROM #Review WHERE mirroring_role_desc = 'PRINCIPAL' AND [Role] = 'MIRROR' AND RunStatus = 1 AND Active = 1))
 	 BEGIN
 		SET @CMD = 'EXEC msdb.dbo.sp_update_job @job_name = N''' + (SELECT jobName FROM #Review WHERE ROWID = @Loop) + ''',@enabled = 1'
 		EXEC (@CMD)
@@ -91,7 +91,7 @@ IF EXISTS(SELECT 1 FROM #Review WHERE mirroring_role_desc = 'PRINCIPAL' AND [Rol
 
 IF EXISTS(SELECT 1 FROM #Review WHERE mirroring_role_desc = 'MIRROR' AND [Role] = 'MIRROR' AND RunStatus = 1 AND Active = 1)
  BEGIN
-	WHILE (@Loop &lt;= (SELECT COUNT(*) FROM #Review WHERE mirroring_role_desc = 'MIRROR' AND [Role] = 'MIRROR' AND RunStatus = 1 AND Active = 1))
+	WHILE (@Loop <= (SELECT COUNT(*) FROM #Review WHERE mirroring_role_desc = 'MIRROR' AND [Role] = 'MIRROR' AND RunStatus = 1 AND Active = 1))
 	 BEGIN
 		IF EXISTS (SELECT 1 FROM msdb..sysjobs WHERE name =  (SELECT jobName FROM #Review WHERE ROWID = @Loop) AND enabled = 1)
 			BEGIN

@@ -37,36 +37,36 @@ This is a sample of retrieving an output parameter&#8217;s value in Inserted eve
 
 where SQLDataSource definition in ASPX page looks like
 
-<pre>&lt;asp:SqlDataSource runat="server" ID="PeopleNoneDataSource" ConnectionString="&lt;%$ ConnectionStrings:FCCMSConnectionString %&gt;"
-                InsertCommand="PersonInsert" InsertCommandType="StoredProcedure" OnInserted="DataSource_Inserted"&gt;
-                &lt;InsertParameters&gt;
-                    &lt;asp:Parameter Name="NewPersonID" Direction="Output" Type="Int32" /&gt;
-                    &lt;asp:ProfileParameter Name="SiteID" PropertyName="SiteID" Type="Int32" /&gt;
-                    &lt;asp:QueryStringParameter Name="PersonType" QueryStringField="ptype" Type="Char"
-                        DefaultValue="N" /&gt;
-                    &lt;asp:Parameter Name="Title" /&gt;
-                    &lt;asp:Parameter Name="Occupation" /&gt;
-                    &lt;asp:Parameter Name="BusinessName" /&gt;
-                    &lt;asp:Parameter Name="BusAdd1" /&gt;
-                    &lt;asp:Parameter Name="BusAdd2" /&gt;
-                    &lt;asp:Parameter Name="BusCity" /&gt;
-                    &lt;asp:Parameter Name="BusState" /&gt;
-                    &lt;asp:Parameter Name="BusZip" /&gt;
-                    &lt;asp:Parameter Name="BusEMail" /&gt;
-                    &lt;asp:Parameter Name="Pager" /&gt;
-                    &lt;asp:Parameter Name="Fax" /&gt;
-                    &lt;asp:Parameter Name="BusinessPhone" /&gt;
-                    &lt;asp:Parameter Name="SpouseFN" /&gt;
-                    &lt;asp:Parameter Name="SpouseLN" /&gt;
-                    &lt;asp:Parameter Name="SpouseID" /&gt;
-                    &lt;asp:Parameter Name="Anniversary" /&gt;
-                &lt;/InsertParameters&gt;
-            &lt;/asp:SqlDataSource&gt;</pre>
+<pre><asp:SqlDataSource runat="server" ID="PeopleNoneDataSource" ConnectionString="<%$ ConnectionStrings:FCCMSConnectionString %>"
+                InsertCommand="PersonInsert" InsertCommandType="StoredProcedure" OnInserted="DataSource_Inserted">
+                <InsertParameters>
+                    <asp:Parameter Name="NewPersonID" Direction="Output" Type="Int32" />
+                    <asp:ProfileParameter Name="SiteID" PropertyName="SiteID" Type="Int32" />
+                    <asp:QueryStringParameter Name="PersonType" QueryStringField="ptype" Type="Char"
+                        DefaultValue="N" />
+                    <asp:Parameter Name="Title" />
+                    <asp:Parameter Name="Occupation" />
+                    <asp:Parameter Name="BusinessName" />
+                    <asp:Parameter Name="BusAdd1" />
+                    <asp:Parameter Name="BusAdd2" />
+                    <asp:Parameter Name="BusCity" />
+                    <asp:Parameter Name="BusState" />
+                    <asp:Parameter Name="BusZip" />
+                    <asp:Parameter Name="BusEMail" />
+                    <asp:Parameter Name="Pager" />
+                    <asp:Parameter Name="Fax" />
+                    <asp:Parameter Name="BusinessPhone" />
+                    <asp:Parameter Name="SpouseFN" />
+                    <asp:Parameter Name="SpouseLN" />
+                    <asp:Parameter Name="SpouseID" />
+                    <asp:Parameter Name="Anniversary" />
+                </InsertParameters>
+            </asp:SqlDataSource></pre>
 
 Same code by limno for VB.NET (see [ASP.NET forum&#8217;s thread][3])
 
 <pre>Protected Sub SqlDataSource1_Inserted(ByVal sender As Object, ByVal e As   System.Web.UI.WebControls.SqlDataSourceStatusEventArgs)
-  Response.Write("Record Inserted: " + Server.HtmlEncode(e.Command.Parameters("@ContactID").Value.ToString()) + "&lt;br/&gt;")   
+  Response.Write("Record Inserted: " + Server.HtmlEncode(e.Command.Parameters("@ContactID").Value.ToString()) + "<br/>")   
  End Sub  </pre>
 
 Here is the sample I found of setting parameter in Inserting event

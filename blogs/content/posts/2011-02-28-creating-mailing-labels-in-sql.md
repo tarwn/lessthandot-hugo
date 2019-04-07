@@ -75,8 +75,8 @@ B. You&#8217;ll also need to adjust the Padding. Remember, this box is slightly 
 
 6. Go to your textbox and build an expression for your labels. My expression is: 
 
-<code class="codespan">=Fields!FirstName.Value &amp; " " &amp; Fields!LastName.Value &amp; vbcrlf&lt;br />
-&amp; Fields!AddressLine1.Value &amp; " " &amp; IIF(NOT(Fields!AddressLine2.Value) = "Nothing", vbcrlf &amp; Fields!AddressLine2.Value, vbcrlf)&lt;br />
+<code class="codespan">=Fields!FirstName.Value &amp; " " &amp; Fields!LastName.Value &amp; vbcrlf<br />
+&amp; Fields!AddressLine1.Value &amp; " " &amp; IIF(NOT(Fields!AddressLine2.Value) = "Nothing", vbcrlf &amp; Fields!AddressLine2.Value, vbcrlf)<br />
 &amp; Fields!City.Value &amp; ", " &amp; Fields!StateProvinceName.Value &amp; " " &amp; Fields!PostalCode.Value</code>
 
 7. At this point, Design looks like this: 

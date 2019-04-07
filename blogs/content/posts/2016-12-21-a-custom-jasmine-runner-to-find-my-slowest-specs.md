@@ -94,7 +94,7 @@ There are several things we learn from this run:
         };
 
         // build some fake content instead of using a real file/URL
-        var expectedContent = '&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;';
+        var expectedContent = '<html&gt;<head&gt;</head&gt;<body&gt;</body&gt;</html&gt;';
         var expectedLocation = 'file:///' + fs.workingDirectory + '/';
         page.setContent(expectedContent, expectedLocation);
 

@@ -23,7 +23,7 @@ So let&#8217;s take a simple code example using ++ and convert it to a threadsaf
 
 This is unrealistic example, I&#8217;m simply taking a list of work and sleeping for a random amount of time as a substitute for some real work. Pretend that it&#8217;s doing something complex like database work, file conversions, or something else useful and time consuming.
 
-<pre>public int DoWorkPoorly(List&lt;string&gt; workToProcess)
+<pre>public int DoWorkPoorly(List<string&gt; workToProcess)
 {
     int statusCounter = 0;
     int totalCount = workToProcess.Count;
@@ -54,7 +54,7 @@ For a progress bar, this is probably ok, but for program logic or attempting to 
 
 Luckily, there is a built in method we can use to safely increment that shared integer.
 
-<pre>public int DoWorkInterlocked(List&lt;string&gt; workToProcess)
+<pre>public int DoWorkInterlocked(List<string&gt; workToProcess)
 {
     int statusCounter = 0;
     int totalCount = workToProcess.Count;
@@ -86,7 +86,7 @@ There is one final step. The prior examples push status messages to the console 
 
 If we take the responsibility for reporting status out of the parallel action and instead spin it off onto it&#8217;s own task, we preserve our accurate total but have more control over reporting progress at a reasonable pace (and always in order). And in this particular case, as a by product of not fighting over a constrained resource, we gain an absurd amount of performance.
 
-<pre>public int DoWorkInterlockedWithAsyncStatus(List&lt;string&gt; workToProcess)
+<pre>public int DoWorkInterlockedWithAsyncStatus(List<string&gt; workToProcess)
 {
     var statusCounter = 0;
     int totalCount = workToProcess.Count;

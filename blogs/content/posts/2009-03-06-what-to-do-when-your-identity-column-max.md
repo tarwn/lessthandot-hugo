@@ -32,7 +32,7 @@ DBCC checkident(tester, reseed, 2147483616)
  
 -- push the identity column to its absolute limit
 INSERT tester SELECT CONVERT(VARCHAR(100), newid())
-WHILE @@ROWCOUNT &lt; 16
+WHILE @@ROWCOUNT < 16
     INSERT tester SELECT CONVERT(VARCHAR(100), newid()) FROM tester
 SELECT * FROM tester
  

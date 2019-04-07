@@ -30,7 +30,7 @@ This is by no means a polished, automated process, but here is how I converted W
 First I queried MySQL for the post data:
 
 <pre>SELECT 
-   UNIX_TIMESTAMP(CASE WHEN P.post_date_gmt &lt; '2001-1-1' THEN P.post_date ELSE P.post_date_gmt END) AS "timestamp",
+   UNIX_TIMESTAMP(CASE WHEN P.post_date_gmt < '2001-1-1' THEN P.post_date ELSE P.post_date_gmt END) AS "timestamp",
    U.display_name, 
    (CASE post_type WHEN 'post' THEN 'A' WHEN 'revision' THEN 'M' ELSE post_type END) as "change", 
    P.post_title,
@@ -39,10 +39,10 @@ FROM wp_posts P
    INNER JOIN wp_users U ON P.post_author = U.ID
    INNER JOIN wp_term_relationships TR ON TR.object_id = P.ID
    INNER JOIN wp_term_taxonomy TT ON TT.term_taxonomy_id = TR.term_taxonomy_id
-   LEFT JOIN wp_term_relationships TR2 ON TR2.object_id = P.ID AND TR2.term_taxonomy_id &lt; TR.term_taxonomy_id
+   LEFT JOIN wp_term_relationships TR2 ON TR2.object_id = P.ID AND TR2.term_taxonomy_id < TR.term_taxonomy_id
 WHERE P.post_type IN ('post','revision')
-   AND P.post_status &lt;&gt; 'auto-draft'
-   AND post_title &lt;&gt; ''
+   AND P.post_status <&gt; 'auto-draft'
+   AND post_title <&gt; ''
    AND TT.taxonomy = 'category'
    AND TR2.term_taxonomy_id IS NULL
 ORDER BY P.post_date</pre>

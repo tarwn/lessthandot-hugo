@@ -57,7 +57,7 @@ Here is an example of one of those calls and the synchronous method it uses inte
 
 	private ServiceResponse SendRequest(WebRequest request)
 	{
-		return _retryPolicy.ExecuteAction&lt;ServiceResponse&gt;(() =&gt;
+		return _retryPolicy.ExecuteAction<ServiceResponse&gt;(() =&gt;
 		{
 			try
 			{

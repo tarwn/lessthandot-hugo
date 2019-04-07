@@ -91,7 +91,7 @@ categories:
 
 <pre>' cubes/perspectives in the same SSAS database.</pre>
 
-<pre>&lt;br /&gt;' We want this code to fire with an object connected to our slicer</pre>
+<pre><br /&gt;' We want this code to fire with an object connected to our slicer</pre>
 
 <pre>' is updated.  This means that the slicer was likely interacted with.</pre>
 
@@ -211,7 +211,7 @@ categories:
 
 <pre>        'objField.CurrentPageList = strValues()</pre>
 
-<pre>&lt;br /&gt;    End If</pre>
+<pre><br /&gt;    End If</pre>
 
 <pre>    </pre>
 

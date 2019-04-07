@@ -38,12 +38,12 @@ _
 
 **Code**
 
-<pre>private Expression&lt;IsWordChar&gt; CreateIsWordCharExpression()
+<pre>private Expression<IsWordChar> CreateIsWordCharExpression()
 {
     var e = Expression.Parameter(typeof(int), "e");
     var c = Expression.Variable(typeof(char), "c");
     var returnLabel = Expression.Label(Expression.Label(typeof(bool)), _falseConstant);
-    var lambda = Expression.Lambda&lt;IsWordChar&gt;(
+    var lambda = Expression.Lambda<IsWordChar>(
         Expression.Block(
             new[] { c },
             Expression.IfThen(

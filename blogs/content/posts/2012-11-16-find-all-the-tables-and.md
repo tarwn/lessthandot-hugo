@@ -90,7 +90,7 @@ JOIN sys.indexes i
 ON p.object_id = i.object_id
 AND i.index_id = p.index_id
 WHERE p.data_compression &gt; 0 
-AND SCHEMA_NAME(o.schema_id) &lt;&gt; 'SYS' </pre>
+AND SCHEMA_NAME(o.schema_id) <&gt; 'SYS' </pre>
 
 Here is the output of that query
 

@@ -34,7 +34,7 @@ This isn&#8217;t too bad thanks to the lambda expression, but it is important to
 <pre>[Test]
 public void Send() {
 	var mockery = new MockRepository();
-	var subscriber = mockery.StrictMock&lt;IObserver&lt;string&gt;&gt;();
+	var subscriber = mockery.StrictMock<IObserver<string&gt;&gt;();
 
 	var message = "test message";
 
@@ -57,10 +57,10 @@ From the other side of the relationship, the testing approach is almost identica
 <pre>[Test]
 public void Subscribe_And_Unsubscribe_On_Complete() {
 	var mockery = new MockRepository();
-	var subject = mockery.StrictMock&lt;IWatched&lt;string&gt;&gt;();
-	var unsubscriber = mockery.StrictMock&lt;IDisposable&gt;();
+	var subject = mockery.StrictMock<IWatched<string&gt;&gt;();
+	var unsubscriber = mockery.StrictMock<IDisposable&gt;();
 
-	var watcher = new Watcher&lt;string&gt;();
+	var watcher = new Watcher<string&gt;();
 
 	using (mockery.Record()) {
 		Expect.Call(subject.Subscribe(watcher)).Return(unsubscriber);
@@ -78,8 +78,8 @@ Not too complicated. We just want to make sure that subscribe works as expected,
 <pre>[Test]
 public void Subscribe() {
 	var mockery = new MockRepository();
-	var subject = mockery.StrictMock&lt;IObservable&lt;string&gt;&gt;();
-	var disposable = mockery.StrictMock&lt;IDisposable&gt;();
+	var subject = mockery.StrictMock<IObservable<string&gt;&gt;();
+	var disposable = mockery.StrictMock<IDisposable&gt;();
 
 	var watcher = new Watcher();
 

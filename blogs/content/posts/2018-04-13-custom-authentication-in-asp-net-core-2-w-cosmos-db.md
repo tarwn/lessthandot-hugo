@@ -109,12 +109,12 @@ The concrete `CosmosDBMembership` object will be responsible for creating and va
 {
 	CustomMembershipOptions Options { get; }
 
-	Task&lt;RegisterResult&gt; RegisterAsync(string userName, string email, string password);
-	Task&lt;LoginResult&gt; LoginAsync(string userName, string password);
+	Task<RegisterResult&gt; RegisterAsync(string userName, string email, string password);
+	Task<LoginResult&gt; LoginAsync(string userName, string password);
 	Task LogoutAsync();
-	Task&lt;bool&gt; ValidateLoginAsync(ClaimsPrincipal principal);
+	Task<bool&gt; ValidateLoginAsync(ClaimsPrincipal principal);
 
-	Task&lt;SessionDetails&gt; GetSessionDetailsAsync(ClaimsPrincipal principal);
+	Task<SessionDetails&gt; GetSessionDetailsAsync(ClaimsPrincipal principal);
 }</pre>
 
 This reflects the basic set of behaviors we intend to perform, with an options object that includes a `DefaultPathAfterLogin` and `AuthenticationType` to use when interacting with Claims and HttpContext SignIn/SignOut methods.
@@ -130,7 +130,7 @@ Next, we switch to the `Startup.cs` and register the concrete `CosmosDBMembershi
 	// ...
 
 	// #1
-	services.AddCustomMembership&lt;CosmosDBMembership&gt;((options) =&gt; {
+	services.AddCustomMembership<CosmosDBMembership&gt;((options) =&gt; {
 		options.AuthenticationType = CookieAuthenticationDefaults.AuthenticationScheme;
 		options.DefaultPathAfterLogin = "/";
 	});
@@ -147,7 +147,7 @@ Next, we switch to the `Startup.cs` and register the concrete `CosmosDBMembershi
 			// #3
 			OnValidatePrincipal = async (c) =&gt;
 			{
-				var membership = c.HttpContext.RequestServices.GetRequiredService&lt;ICustomMembership&gt;();
+				var membership = c.HttpContext.RequestServices.GetRequiredService<ICustomMembership&gt;();
 				var isValid = await membership.ValidateLoginAsync(c.Principal);
 				if (!isValid)
 				{
@@ -257,7 +257,7 @@ Next, we&#8217;ll stop calling the `EnsureSetupAsync` method on every persistenc
 {
 	// ...
 
-	services.AddSingleton&lt;Persistence&gt;((s) =&gt;
+	services.AddSingleton<Persistence&gt;((s) =&gt;
 	{
 		var p = new Persistence(
 			new Uri(Configuration["CosmosDB:URL"]),
@@ -285,7 +285,7 @@ We have an Interface defined above and the `Persistence` class has been refactor
 
 [Membership/CosmosDBMembership.cs &#8211; RegisterAsync][11]
 
-<pre>public async Task&lt;RegisterResult&gt; RegisterAsync(string userName, string email, string password)
+<pre>public async Task<RegisterResult&gt; RegisterAsync(string userName, string email, string password)
 {
 	var user = new LoginUser()
 	{
@@ -313,7 +313,7 @@ Registration is pretty straightforward. Take the 3 required properties, load the
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; LoginAsync][12]
 
-<pre>public async Task&lt;LoginResult&gt; LoginAsync(string userName, string password)
+<pre>public async Task<LoginResult&gt; LoginAsync(string userName, string password)
 {
 	var user = await _persistence.Users.GetUserByUsernameAsync(userName);
 	if (user == null)
@@ -356,7 +356,7 @@ Behind the scenes, ASP.Net is calling the `SignIn` method on the &#8220;Cookies&
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; ValidateLoginAsync][14]
 
-<pre>public async Task&lt;bool&gt; ValidateLoginAsync(ClaimsPrincipal principal)
+<pre>public async Task<bool&gt; ValidateLoginAsync(ClaimsPrincipal principal)
 {
 	var sessionId = principal.FindFirstValue("sessionId");
 	if (sessionId == null)
@@ -424,9 +424,9 @@ The setup logic has two points of interest. The first is that we make sure we st
 		users.Id = USERS_DOCUMENT_COLLECTION_ID;
 		users.UniqueKeyPolicy = new UniqueKeyPolicy()
 		{
-			UniqueKeys = new Collection&lt;UniqueKey&gt;()
+			UniqueKeys = new Collection<UniqueKey&gt;()
 			{
-				new UniqueKey{ Paths = new Collection&lt;string&gt;{ "/Username" } }
+				new UniqueKey{ Paths = new Collection<string&gt;{ "/Username" } }
 			}
 		};
 		await _client.CreateDocumentCollectionIfNotExistsAsync(databaseUri, users);
@@ -445,21 +445,21 @@ With the setup out of the way, now we can concentrate on supplying the necessary
 {
 	// ... ctor, EnsureSetupAsync ...
 
-	public async Task&lt;LoginUser&gt; CreateUserAsync(LoginUser user)
+	public async Task<LoginUser&gt; CreateUserAsync(LoginUser user)
 	{
 		var result = await _client.CreateDocumentAsync(GetUsersCollectionUri(), user, new RequestOptions() { });
-		return JsonConvert.DeserializeObject&lt;LoginUser&gt;(result.Resource.ToString());
+		return JsonConvert.DeserializeObject<LoginUser&gt;(result.Resource.ToString());
 	}
 
-	public async Task&lt;LoginUser&gt; GetUserAsync(string userId)
+	public async Task<LoginUser&gt; GetUserAsync(string userId)
 	{
-		var result = await _client.ReadDocumentAsync&lt;LoginUser&gt;(UriFactory.CreateDocumentUri(_databaseId, USERS_DOCUMENT_COLLECTION_ID, userId));
+		var result = await _client.ReadDocumentAsync<LoginUser&gt;(UriFactory.CreateDocumentUri(_databaseId, USERS_DOCUMENT_COLLECTION_ID, userId));
 		return result.Document;
 	}
 
-	public async Task&lt;LoginUser&gt; GetUserByUsernameAsync(string userName)
+	public async Task<LoginUser&gt; GetUserByUsernameAsync(string userName)
 	{
-		var query = _client.CreateDocumentQuery&lt;LoginUser&gt;(GetUsersCollectionUri(), new SqlQuerySpec()
+		var query = _client.CreateDocumentQuery<LoginUser&gt;(GetUsersCollectionUri(), new SqlQuerySpec()
 		{
 			QueryText = "SELECT * FROM Users U WHERE U.Username = @username",
 			Parameters = new SqlParameterCollection()
@@ -468,19 +468,19 @@ With the setup out of the way, now we can concentrate on supplying the necessary
 		   }
 		});
 		var results = await query.AsDocumentQuery()
-								 .ExecuteNextAsync&lt;LoginUser&gt;();
+								 .ExecuteNextAsync<LoginUser&gt;();
 		return results.FirstOrDefault();
 	}
 
-	public async Task&lt;LoginSession&gt; CreateSessionAsync(LoginSession session)
+	public async Task<LoginSession&gt; CreateSessionAsync(LoginSession session)
 	{
 		var result = await _client.CreateDocumentAsync(GetSessionsCollectionUri(), session);
-		return JsonConvert.DeserializeObject&lt;LoginSession&gt;(result.Resource.ToString());
+		return JsonConvert.DeserializeObject<LoginSession&gt;(result.Resource.ToString());
 	}
 
-	public async Task&lt;LoginSession&gt; GetSessionAsync(string sessionId)
+	public async Task<LoginSession&gt; GetSessionAsync(string sessionId)
 	{
-		var result = await _client.ReadDocumentAsync&lt;LoginSession&gt;(UriFactory.CreateDocumentUri(_databaseId, SESSIONS_DOCUMENT_COLLECTION_ID, sessionId));
+		var result = await _client.ReadDocumentAsync<LoginSession&gt;(UriFactory.CreateDocumentUri(_databaseId, SESSIONS_DOCUMENT_COLLECTION_ID, sessionId));
 		return result.Document;
 	}
 
@@ -535,7 +535,7 @@ public class AccountController : Controller
 	[HttpPost("register")]
 	[AllowAnonymous]
 	[ValidateAntiForgeryToken]
-	public async Task&lt;IActionResult&gt; RegisterPostAsync(RegisterModel model)
+	public async Task<IActionResult&gt; RegisterPostAsync(RegisterModel model)
 	{
 		if (!ModelState.IsValid)
 		{
@@ -567,29 +567,29 @@ Add a new "Account" folder to "Views", then add a new "Register.cshtml" view to 
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-&lt;h2&gt;Register&lt;/h2&gt;
+<h2&gt;Register</h2&gt;
 
-&lt;form asp-action="Register" method="post"&gt;
-    &lt;div asp-validation-summary="ModelOnly" class="text-danger"&gt;&lt;/div&gt;
-    &lt;div class="form-group"&gt;
-        &lt;label asp-for="UserName" class="control-label"&gt;&lt;/label&gt;
-        &lt;input asp-for="UserName" class="form-control" /&gt;
-        &lt;span asp-validation-for="UserName" class="text-danger"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group"&gt;
-        &lt;label asp-for="Password" class="control-label"&gt;&lt;/label&gt;
-        &lt;input asp-for="Password" class="form-control" /&gt;
-        &lt;span asp-validation-for="Password" class="text-danger"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group"&gt;
-        &lt;label asp-for="Email" class="control-label"&gt;&lt;/label&gt;
-        &lt;input asp-for="Email" class="form-control" /&gt;
-        &lt;span asp-validation-for="Email" class="text-danger"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group"&gt;
-        &lt;input type="submit" value="Register" class="btn btn-default" /&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</pre>
+<form asp-action="Register" method="post"&gt;
+    <div asp-validation-summary="ModelOnly" class="text-danger"&gt;</div&gt;
+    <div class="form-group"&gt;
+        <label asp-for="UserName" class="control-label"&gt;</label&gt;
+        <input asp-for="UserName" class="form-control" /&gt;
+        <span asp-validation-for="UserName" class="text-danger"&gt;</span&gt;
+    </div&gt;
+    <div class="form-group"&gt;
+        <label asp-for="Password" class="control-label"&gt;</label&gt;
+        <input asp-for="Password" class="form-control" /&gt;
+        <span asp-validation-for="Password" class="text-danger"&gt;</span&gt;
+    </div&gt;
+    <div class="form-group"&gt;
+        <label asp-for="Email" class="control-label"&gt;</label&gt;
+        <input asp-for="Email" class="form-control" /&gt;
+        <span asp-validation-for="Email" class="text-danger"&gt;</span&gt;
+    </div&gt;
+    <div class="form-group"&gt;
+        <input type="submit" value="Register" class="btn btn-default" /&gt;
+    </div&gt;
+</form&gt;</pre>
 
 And there we go!
 
@@ -621,7 +621,7 @@ public class AccountController : Controller
 	[HttpPost("login")]
 	[AllowAnonymous]
 	[ValidateAntiForgeryToken]
-	public async Task&lt;IActionResult&gt; LoginPostAsync(LoginModel user,  string returnUrl = null)
+	public async Task<IActionResult&gt; LoginPostAsync(LoginModel user,  string returnUrl = null)
 	{
 		if (!ModelState.IsValid) {
 			ModelState.AddModelError("", "Username or password is incorrect");
@@ -656,25 +656,25 @@ Next, create a "Login" view in the Views/Account folder like we did with the "Re
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-&lt;h2&gt;Login&lt;/h2&gt;
+<h2&gt;Login</h2&gt;
 
-&lt;form asp-action="Login" method="post"&gt;
-    &lt;div asp-validation-summary="ModelOnly" class="text-danger"&gt;&lt;/div&gt;
-    &lt;div class="form-group"&gt;
-        &lt;label asp-for="UserName" class="control-label"&gt;&lt;/label&gt;
-        &lt;input asp-for="UserName" class="form-control" /&gt;
-        &lt;span asp-validation-for="UserName" class="text-danger"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group"&gt;
-        &lt;label asp-for="Password" class="control-label"&gt;&lt;/label&gt;
-        &lt;input asp-for="Password" class="form-control" /&gt;
-        &lt;span asp-validation-for="Password" class="text-danger"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group"&gt;
-        &lt;input type="submit" value="Login" class="btn btn-default" /&gt;
-        &lt;a asp-action="Register"&gt;Register&lt;/a&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</pre>
+<form asp-action="Login" method="post"&gt;
+    <div asp-validation-summary="ModelOnly" class="text-danger"&gt;</div&gt;
+    <div class="form-group"&gt;
+        <label asp-for="UserName" class="control-label"&gt;</label&gt;
+        <input asp-for="UserName" class="form-control" /&gt;
+        <span asp-validation-for="UserName" class="text-danger"&gt;</span&gt;
+    </div&gt;
+    <div class="form-group"&gt;
+        <label asp-for="Password" class="control-label"&gt;</label&gt;
+        <input asp-for="Password" class="form-control" /&gt;
+        <span asp-validation-for="Password" class="text-danger"&gt;</span&gt;
+    </div&gt;
+    <div class="form-group"&gt;
+        <input type="submit" value="Login" class="btn btn-default" /&gt;
+        <a asp-action="Register"&gt;Register</a&gt;
+    </div&gt;
+</form&gt;</pre>
 
 And there we go, a new login form!
 
@@ -696,7 +696,7 @@ Finally we need a way for the user to logout and a protected endpoint to test ag
 
 	[HttpGet("logout")]
 	[Authorize]
-	public async Task&lt;IActionResult&gt; LogoutAsync()
+	public async Task<IActionResult&gt; LogoutAsync()
 	{
 		await _membership.LogoutAsync();
 		return RedirectToAction("login");
@@ -704,7 +704,7 @@ Finally we need a way for the user to logout and a protected endpoint to test ag
 
 	[HttpGet("protected")]
 	[Authorize]
-	public async Task&lt;IActionResult&gt; Protected()
+	public async Task<IActionResult&gt; Protected()
 	{
 		// ... get some session details and return the view
 	}
@@ -746,7 +746,7 @@ Now we just have to make two small changes to implement it during registration a
 {
 	// ...
 
-	public async Task&lt;LoginResult&gt; LoginAsync(string userName, string password)
+	public async Task<LoginResult&gt; LoginAsync(string userName, string password)
 	{
 		var user = await _persistence.Users.GetUserByUsernameAsync(userName);
 		if (user == null)
@@ -767,7 +767,7 @@ Now we just have to make two small changes to implement it during registration a
 	
 	// ...
 	
-	public async Task&lt;RegisterResult&gt; RegisterAsync(string userName, string email, string password)
+	public async Task<RegisterResult&gt; RegisterAsync(string userName, string email, string password)
 	{
 		// CHANGE #2
 		var passwordHash = BCrypt.Net.BCrypt.HashPassword(password);

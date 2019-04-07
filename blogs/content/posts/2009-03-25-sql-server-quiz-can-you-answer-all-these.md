@@ -76,7 +76,7 @@ INSERT INTO #testnulls VALUES (2)
 INSERT INTO #testnulls VALUES (null)
 
 select * from #testnulls
-where id &lt;&gt; 1</pre>
+where id <> 1</pre>
 
 8)If you run the code below what will the len function return, can you also answer why?
 

@@ -263,7 +263,7 @@ The examples did not fit well with what I already know about the mechanics of OA
 	    }
 	}
 
-	var response = JsonConvert.DeserializeObject&lt;Office365TokenResponse&gt;(tokenResponse);
+	var response = JsonConvert.DeserializeObject<Office365TokenResponse&gt;(tokenResponse);
 	response.ParseToken();
 
 	return View(response);

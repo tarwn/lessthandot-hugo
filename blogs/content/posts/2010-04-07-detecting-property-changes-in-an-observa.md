@@ -36,13 +36,13 @@ One of the things I needed to do though, was to detect when the user selected an
 
 For this demo app, the UI is pretty simple. I just have two list boxes. Each list box has a DataTemplate with a CheckBox in it. The CheckBox has its Content bound to the &#8220;Text&#8221; member and IsChecked is bound to a like named member. The IsChecked property is also set to TwoWay mode. This means that when the user changes its checked state, it will update the underlying collection.
 
-<pre>&lt;ListBox x:Name="lst1" Grid.Column="0" &gt;
-            &lt;ListBox.ItemTemplate &gt;
-                &lt;DataTemplate&gt;
-                    &lt;CheckBox Content="{Binding Text}" IsChecked="{Binding IsChecked, Mode=TwoWay}" /&gt;
-                &lt;/DataTemplate&gt;
-            &lt;/ListBox.ItemTemplate&gt;
-        &lt;/ListBox&gt;</pre>
+<pre><ListBox x:Name="lst1" Grid.Column="0" >
+            <ListBox.ItemTemplate >
+                <DataTemplate>
+                    <CheckBox Content="{Binding Text}" IsChecked="{Binding IsChecked, Mode=TwoWay}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox></pre>
 
 ### On to the Items
 
@@ -60,7 +60,7 @@ Also in the item class we need to tweak the properties a bit. For instance:
                 Return _IsChecked
             End Get
             Set(ByVal value As Boolean)
-                If value &lt;&gt; _IsChecked Then
+                If value <> _IsChecked Then
                     _IsChecked = value
                     onPropertyChanged("IsChecked")
                 End If

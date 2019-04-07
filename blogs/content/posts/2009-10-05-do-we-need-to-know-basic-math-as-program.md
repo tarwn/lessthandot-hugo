@@ -27,7 +27,7 @@ Take a look at this function that someone created on [StackOverflow][1]
 
 <pre>private function opposite(number:Number):Number
         {
-                if (number &lt; 0)
+                if (number < 0)
                 {
                         number = Math.abs(number);
                 }
@@ -51,8 +51,8 @@ If we visit the Java forums it doesn&#8217;t get any better, take a look at this
 Here is one &#8216;solution&#8217;
 
 <pre>int x = numberToInvertSign;
-boolean pos = x &gt; 0;
-for(int i = 0; i &lt; 2*Math.abs(x); i++){
+boolean pos = x > 0;
+for(int i = 0; i < 2*Math.abs(x); i++){
    if(pos){
       numberToInvertSign--;
    }

@@ -26,7 +26,7 @@ tags:
 ---
 In a previous post I showed how to [get remote disk information with PowerShell][1]. The script works nice until you execute it on a server with Mount Points. When executing the following script on a server with Mount Points:
 
-<pre>Get-WmiObject win32_logicaldisk -computer &lt;computername&gt; | 
+<pre>Get-WmiObject win32_logicaldisk -computer <computername&gt; | 
 select-object DeviceID, VolumeName, @{Name="Size";Expression={$_.Size/1GB}},@{Name="FreeSpace";Expression={$_.FreeSpace/1GB}},
 @{Name="PCTFreeSpace";Expression={
 $_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table</pre>
@@ -47,7 +47,7 @@ At that moment I realized I wasn&#8217;t getting the information from the Mount 
   
 So let&#8217;s find out how we can get that information with Windows PowerShell. I still need the wmiobject but instead of the win32\_logicaldisk I&#8217;m going to use the win32\_volume. I also replace the DeviceID and VolumeName objects with Name and Label:
 
-<pre>get-wmiobject win32_volume -computer &lt;computername|
+<pre>get-wmiobject win32_volume -computer <computername|
 select name, label, driveletter</pre>
 
 The result looks like this:
@@ -60,7 +60,7 @@ As you can see, the drive letter properties are empty for my Mount Points and in
   
 So let&#8217;s find the space, free space and percentage free space of the volumes. I can use the calculations from my previous script only Size needs to be replaced with Capacity:
 
-<pre>get-wmiobject win32_volume -computer &lt;computername|
+<pre>get-wmiobject win32_volume -computer <computername|
 select name, label, @{Name="Capacity (GB)";Expression={$_.Capacity/1GB}},@{Name="FreeSpace (GB)";Expression={$_.FreeSpace/1GB}},
 @{Name="FreeSpace (PCT)";Expression={$_.FreeSpace/$_.Capacity*100}} |
 format-table</pre>

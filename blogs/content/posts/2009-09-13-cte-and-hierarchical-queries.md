@@ -217,7 +217,7 @@ Below I describe few recent problems I solved using recursive CTE technique:
 
 Problem definition:
 
-<code class="codespan">&lt;br />
+<code class="codespan"><br />
 I use SQL Server 2005 and I have a list of appr. 7700 items. In the list there is the complete stock quantity for each item and I also have the typical amount for each pallet. I need a list with all individual pallets and its stock</code>
 
 <div class="tables">
@@ -305,12 +305,12 @@ insert into @t values('100-003',   2000,    400)
 
 ;with cte_toInsert as 
 (select Item, Pallet, Amount, Original_Stock, Stock - Amount as Stock 
-from (select Item, Pallet, Stock as Original_Stock, Stock, case when Stock-Pallet &gt; 0 then Pallet else Stock end as Amount from @t) X 
-where Stock = 0 or (Stock &gt;=0 and Amount &gt; 0) 
+from (select Item, Pallet, Stock as Original_Stock, Stock, case when Stock-Pallet > 0 then Pallet else Stock end as Amount from @t) X 
+where Stock = 0 or (Stock >=0 and Amount > 0) 
 union all select Item, Pallet, Amount, Original_Stock, Stock - Amount as Stock 
 from (select Item, Pallet, Original_Stock, Stock, 
-case when Stock-Pallet &gt; 0 then Pallet else Stock end as Amount from cte_toInsert) X 
-where (Stock = 0 and Amount &gt; 0) OR Stock &gt; 0 )
+case when Stock-Pallet > 0 then Pallet else Stock end as Amount from cte_toInsert) X 
+where (Stock = 0 and Amount > 0) OR Stock > 0 )
 
 select * from cte_toInsert order by Item, Amount DESC OPTION (MAXRECURSION 10) </pre>
     

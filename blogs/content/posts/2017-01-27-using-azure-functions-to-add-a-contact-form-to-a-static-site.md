@@ -78,7 +78,7 @@ The function starts with some generated code that matches the variable names in 
 
 <pre>using System.Net;
 
-public static async Task&lt;HttpResponseMessage&gt; Run(HttpRequestMessage req, TraceWriter log)
+public static async Task<HttpResponseMessage&gt; Run(HttpRequestMessage req, TraceWriter log)
 {
     // ... sample code we don't need that pulls name from querystring ...
 
@@ -126,13 +126,13 @@ using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 
-public static async Task&lt;HttpResponseMessage&gt; Run(HttpRequestMessage req, TraceWriter log)
+public static async Task<HttpResponseMessage&gt; Run(HttpRequestMessage req, TraceWriter log)
 {
     log.Info("C# HTTP trigger function processed a request.");
 
     // 1: Get request body + validate required content is available
     var postData = await req.Content.ReadAsFormDataAsync();
-    var missingFields = new List&lt;string&gt;();
+    var missingFields = new List<string&gt;();
     if(postData["fromEmail"] == null)
         missingFields.Add("fromEmail");
     if(postData["message"] == null)
@@ -224,17 +224,17 @@ Success!
 
 Now we just need to switch from Postman to using an HTML form. Here&#8217;s a quick sample:
 
-<pre>&lt;h1&gt;Contact Form&lt;/h1&gt;
+<pre><h1&gt;Contact Form</h1&gt;
 Send me a message! (Congratulations for finding this, it's not an official part of the site!)
-&lt;div id="contactForm"&gt;
-    Your Email: &lt;input type="text" name="fromEmail" /&gt;&lt;br /&gt;
-    Message: &lt;br /&gt;
-    &lt;textarea cols="60" rows="4" name="message"&gt;&lt;/textarea&gt;&lt;br /&gt;
-    &lt;input type="submit" value="Send!" /&gt;
-&lt;/div&gt;
+<div id="contactForm"&gt;
+    Your Email: <input type="text" name="fromEmail" /&gt;<br /&gt;
+    Message: <br /&gt;
+    <textarea cols="60" rows="4" name="message"&gt;</textarea&gt;<br /&gt;
+    <input type="submit" value="Send!" /&gt;
+</div&gt;
 
-&lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;</script&gt;
+<script type="text/javascript"&gt;
     var url = "https://eli-contactform.azurewebsites.net/api/contact?code=1pabaq6cdy2tt3f43t4uuqsemi8429ygl2n4ca6m9utugoz2gldiw15i5t61ew3pzzb7n60mb1emi";
     $("form").on('submit', function (event) {
         event.preventDefault();
@@ -255,17 +255,17 @@ Send me a message! (Congratulations for finding this, it's not an official part 
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             success: function (respData) {
                 // Yay, success!!
-                $("#contactForm").html("&lt;div style='padding: 5em 1em; text-align: center; color: #008800'&gt;" + respData + "&lt;/div&gt;");
+                $("#contactForm").html("<div style='padding: 5em 1em; text-align: center; color: #008800'&gt;" + respData + "</div&gt;");
             },
             error: function (jqXHR) {
                 // Boo, error...
-                $("#contactFormError").html("&lt;div style='padding: 1em; text-align: center; color: #660000'&gt;Sorry, an error occurred: " + jqXHR.responseText + "&lt;/div&gt;");
+                $("#contactFormError").html("<div style='padding: 1em; text-align: center; color: #660000'&gt;Sorry, an error occurred: " + jqXHR.responseText + "</div&gt;");
                 $("#contactFormError").show();
                 $("#contactForm input").prop('disabled', false);
             }
         });
     });
-&lt;/script&gt;</pre>
+</script&gt;</pre>
 
 I use jQuery to post the form content because the Azure Function isn&#8217;t going to return a pretty HTML page. This way I can capture the output and use jQuery to tel the user whether it was successful or not.
 

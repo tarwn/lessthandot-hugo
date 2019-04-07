@@ -79,11 +79,11 @@ ASP.Net Core has Cookie Middleware we can use out of the box: [Using Cookie Auth
 				if (ctx.Request.Path.StartsWithSegments("/api") && ctx.Response.StatusCode == 200)
 				{
 					ctx.Response.StatusCode = 401;
-					return Task.FromResult&lt;object&gt;(null);
+					return Task.FromResult<object&gt;(null);
 				}
 
 				ctx.Response.Redirect(ctx.RedirectUri);
-				return Task.FromResult&lt;object&gt;(null);
+				return Task.FromResult<object&gt;(null);
 			},
 
 		}
@@ -113,7 +113,7 @@ ASP.Net Core has Cookie Middleware we can use out of the box: [Using Cookie Auth
 public class InteractiveAccountController : Controller
 {
 	[HttpGet("Unauthorized")]
-	public async Task&lt;string&gt; GetUnauthorizedAsync(string returnUrl)
+	public async Task<string&gt; GetUnauthorizedAsync(string returnUrl)
 	{
 		return "You really should login first.";
 	}
@@ -131,7 +131,7 @@ public class InteractiveAccountController : Controller
 	}
 
 	[HttpGet("Login")]
-	public async Task&lt;string&gt; GetLogin()
+	public async Task<string&gt; GetLogin()
 	{
 		var principal = new ClaimsPrincipal(new StandardUser());
 		await HttpContext.Authentication.SignInAsync("NAME_OF_YOUR_COOKIE_SCHEME", principal);
@@ -139,7 +139,7 @@ public class InteractiveAccountController : Controller
 	}
 
 	[HttpGet("Logout")]
-	public async Task&lt;string&gt; GetLogout()
+	public async Task<string&gt; GetLogout()
 	{
 		await HttpContext.Authentication.SignOutAsync("NAME_OF_YOUR_COOKIE_SCHEME");
 		// TODO replace with redirect to login once it exists
@@ -182,12 +182,12 @@ public class InteractiveAccountController : Controller
     <pre>    [TestFixture]
     public class SecurityTests
     {
-        Func&lt;object, bool&gt; IsMVCAttributeAuth = (o) =&gt; (o is AuthorizeAttribute || o is AllowAnonymousAttribute);
+        Func<object, bool&gt; IsMVCAttributeAuth = (o) =&gt; (o is AuthorizeAttribute || o is AllowAnonymousAttribute);
 
         [Test]
         public void AllMvcActionsHaveExplicitAuthorizationDefined_UsingStandardReflection()
         {
-            var actionsMissingAuth = new List&lt;string&gt;();
+            var actionsMissingAuth = new List<string&gt;();
 
             // 1
             var controllers = Assembly.GetAssembly(typeof(InteractiveAccountController)).GetLoadableTypes()
@@ -228,7 +228,7 @@ public class InteractiveAccountController : Controller
 
     public static class AssemblyExtensions
     {
-        public static IEnumerable&lt;Type&gt; GetLoadableTypes(this Assembly assembly)
+        public static IEnumerable<Type&gt; GetLoadableTypes(this Assembly assembly)
         {
             try
             {
@@ -251,14 +251,14 @@ public class InteractiveAccountController : Controller
     
     <pre>public interface IUserStorage
 {
-    Task&lt;User&gt; GetUserByUsernameAsync(string username);
-    Task&lt;User&gt; GetUserAsync(Guid userId);
+    Task<User&gt; GetUserByUsernameAsync(string username);
+    Task<User&gt; GetUserAsync(Guid userId);
 }
 
 public interface ISessionManager
 {
-    Task&lt;IPrincipal&gt; CreateSessionAsync(Guid userId);
-    Task&lt;bool&gt; IsSessionValidAsync(IPrincipal principal);
+    Task<IPrincipal&gt; CreateSessionAsync(Guid userId);
+    Task<bool&gt; IsSessionValidAsync(IPrincipal principal);
     bool IsUserValidForSession(User user);
 }</pre>
     
@@ -273,13 +273,13 @@ public interface ISessionManager
     <pre>...
 
 [HttpGet("Login")]
-public async Task&lt;IActionResult&gt; GetLoginAsync(string returnUrl)
+public async Task<IActionResult&gt; GetLoginAsync(string returnUrl)
 {
     return View("Login", new LoginModel() { ReturnURL = returnUrl });
 }
 
 [HttpPost("Login")]
-public async Task&lt;IActionResult&gt; PostLoginAsync(string username, string password, string returnUrl)
+public async Task<IActionResult&gt; PostLoginAsync(string username, string password, string returnUrl)
 {
     // Did they provide all the details?
     if (string.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
@@ -306,7 +306,7 @@ public async Task&lt;IActionResult&gt; PostLoginAsync(string username, string pa
 }
 
 [HttpGet("Logout")]
-public async Task&lt;IActionResult&gt; GetLogout()
+public async Task<IActionResult&gt; GetLogout()
 {
     await HttpContext.Authentication.SignOutAsync("NAME_OF_YOUR_COOKIE_SCHEME");
     return Redirect("/account/login");
@@ -336,7 +336,7 @@ public async Task&lt;IActionResult&gt; GetLogout()
 
 		// Use my ISessionManager to ensure session is still valid (user not disabled) or reject the principal if it is no longer valid
 		OnValidatePrincipal = async (ctx) =&gt; {
-			var sessionManager = ctx.HttpContext.RequestServices.GetRequiredService&lt;ISessionManager&gt;();
+			var sessionManager = ctx.HttpContext.RequestServices.GetRequiredService<ISessionManager&gt;();
 			var isSessionValid = await sessionManager.IsSessionValidAsync(ctx.Principal);
 			if (!isSessionValid) {
 				ctx.RejectPrincipal();

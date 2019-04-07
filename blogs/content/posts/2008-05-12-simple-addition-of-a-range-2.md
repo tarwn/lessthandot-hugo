@@ -19,11 +19,11 @@ Adding numbers is easy. Very easy for programs, right? How about adding up a ran
 What about adding up 1 to 100 ? not so easy in your head, but with a little code this shouldn&#8217;t be a problem. In fact a lot of programmers would approach it like the following:
 
 <pre>var sumOfRangeLoop = 0;
-for (i=1;i&lt;=100;i++)
+for (i=1;i<=100;i++)
 {
 	sumOfRangeLoop += i;
 }
-document.write("Loop: " + sumOfRangeLoop + "&lt;br/&gt;");	</pre>
+document.write("Loop: " + sumOfRangeLoop + "<br/>");	</pre>
 
 Great &#8211; it gets you the answer that you wanted. Now what about 25 to 25,000,000 ? OK, that takes a while to run&#8230;. What if I tried 234 to 435,657,123 ? Mmmm&#8230; ouch. This doesn&#8217;t work too well does it ? 
 
@@ -38,7 +38,7 @@ var rangeEnd = 435657123;
 var rangeStep = 1;
 var digitCount = ((rangeEnd - rangeStart)+rangeStep)/rangeStep;
 var sumOfRangeCalc = ((digitCount * (rangeEnd+rangeStart) ) / 2);	
-document.write("Sum of Range: " + sumOfRangeCalc + "&lt;br/&gt;");	</pre>
+document.write("Sum of Range: " + sumOfRangeCalc + "<br/>");	</pre>
 
 This runs almost instantly, compared to the hung browser effect of the loop approach for this scale of numbers. 
 
@@ -46,12 +46,12 @@ This runs almost instantly, compared to the hung browser effect of the loop appr
 
 To see just how different the performance is, here is a complete working example testing both methods over multiple iterations of the same moderately sized range
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;test&lt;/test&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;script type="text/javascript"&gt;
+<pre><html>
+<head>
+<title>test</test>
+</head>
+<body>
+<script type="text/javascript">
 
 	var rangeStart = 150;
 	var rangeEnd = 25000;
@@ -63,43 +63,43 @@ To see just how different the performance is, here is a complete working example
 	
 	document.write("Testing Calc:  ");
 	ts = new Date();
-	for (j=0;j&lt;iterations;j++)
+	for (j=0;j<iterations;j++)
 	{
 		sumByCalc();
 	}
 	te = new Date();
-	document.write(((te - ts)/1000) + " seconds&lt;br/&gt;");
+	document.write(((te - ts)/1000) + " seconds<br/>");
 
 	document.write("Testing Loop:  ");
 	ts = new Date();
-	for (j=0;j&lt;iterations;j++)
+	for (j=0;j<iterations;j++)
 	{
 		sumByLoop();
 	}
 	te = new Date();
-	document.write(((te - ts)/1000) + " seconds&lt;br/&gt;");
+	document.write(((te - ts)/1000) + " seconds<br/>");
 
 	
 	function sumByCalc()
 	{
 		var digitCount = ((rangeEnd - rangeStart)+rangeStep)/rangeStep;
 		var sumOfRangeCalc = ((digitCount * (rangeEnd+rangeStart) ) / 2);	
-//		document.write("Equation: " + sumOfRangeCalc + "&lt;br/&gt;");	
+//		document.write("Equation: " + sumOfRangeCalc + "<br/>");	
 	}
 
 	function sumByLoop()
 	{
 		var sumOfRangeLoop = 0;
-		for (i=rangeStart;i&lt;=rangeEnd;i+=rangeStep)
+		for (i=rangeStart;i<=rangeEnd;i+=rangeStep)
 		{
 			sumOfRangeLoop += i;
 		}
-//		document.write("Loop: " + sumOfRangeLoop + "&lt;br/&gt;");	
+//		document.write("Loop: " + sumOfRangeLoop + "<br/>");	
 	}
 		
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</script>
+</body>
+</html></pre>
 
 ##### Results:
 

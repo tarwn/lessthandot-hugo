@@ -46,36 +46,36 @@ namespace excelGridlineTest
       {
          Response.ContentType = "application/ms-excel";
          Response.AddHeader("content-disposition", "attachment; filename=test.xls");
-         Response.Write("&lt;html xmlns:x="urn:schemas-microsoft-com:office:excel"&gt;");
-         Response.Write("&lt;head&gt;");
-         Response.Write("&lt;meta http-equiv="Content-Type" content="text/html;charset=windows-1252"&gt;");
-         Response.Write("&lt;!--[if gte mso 9]&gt;");
-         Response.Write("&lt;xml&gt;");
-         Response.Write("&lt;x:ExcelWorkbook&gt;");
-         Response.Write("&lt;x:ExcelWorksheets&gt;");
-         Response.Write("&lt;x:ExcelWorksheet&gt;");
+         Response.Write("<html xmlns:x="urn:schemas-microsoft-com:office:excel">");
+         Response.Write("<head>");
+         Response.Write("<meta http-equiv="Content-Type" content="text/html;charset=windows-1252">");
+         Response.Write("<!--[if gte mso 9]>");
+         Response.Write("<xml>");
+         Response.Write("<x:ExcelWorkbook>");
+         Response.Write("<x:ExcelWorksheets>");
+         Response.Write("<x:ExcelWorksheet>");
          //this line names the worksheet
-         Response.Write("&lt;x:Name&gt;gridlineTest&lt;/x:Name&gt;");
-         Response.Write("&lt;x:WorksheetOptions&gt;");
+         Response.Write("<x:Name>gridlineTest</x:Name>");
+         Response.Write("<x:WorksheetOptions>");
          //these 2 lines are what works the magic
-         Response.Write("&lt;x:Panes&gt;");
-         Response.Write("&lt;/x:Panes&gt;");
-         Response.Write("&lt;/x:WorksheetOptions&gt;");
-         Response.Write("&lt;/x:ExcelWorksheet&gt;");
-         Response.Write("&lt;/x:ExcelWorksheets&gt;");
-         Response.Write("&lt;/x:ExcelWorkbook&gt;");
-         Response.Write("&lt;/xml&gt;");
-         Response.Write("&lt;![endif]--&gt;");
-         Response.Write("&lt;/head&gt;");
-         Response.Write("&lt;body&gt;");
-         Response.Write("&lt;table&gt;");
-         Response.Write("&lt;tr&gt;&lt;td&gt;ID&lt;/td&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Balance&lt;/td&gt;&lt;/tr&gt;");
-         Response.Write("&lt;tr&gt;&lt;td&gt;1234&lt;/td&gt;&lt;td&gt;Al Bundy&lt;/td&gt;&lt;td&gt;45&lt;/td&gt;&lt;/tr&gt;");
-         Response.Write("&lt;tr&gt;&lt;td&gt;9876&lt;/td&gt;&lt;td&gt;Homer Simpson&lt;/td&gt;&lt;td&gt;-129&lt;/td&gt;&lt;/tr&gt;");
-         Response.Write("&lt;tr&gt;&lt;td&gt;5555&lt;/td&gt;&lt;td&gt;Peter Griffin&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;/tr&gt;");
-         Response.Write("&lt;/table&gt;");
-         Response.Write("&lt;/body&gt;");
-         Response.Write("&lt;/html&gt;");
+         Response.Write("<x:Panes>");
+         Response.Write("</x:Panes>");
+         Response.Write("</x:WorksheetOptions>");
+         Response.Write("</x:ExcelWorksheet>");
+         Response.Write("</x:ExcelWorksheets>");
+         Response.Write("</x:ExcelWorkbook>");
+         Response.Write("</xml>");
+         Response.Write("<![endif]-->");
+         Response.Write("</head>");
+         Response.Write("<body>");
+         Response.Write("<table>");
+         Response.Write("<tr><td>ID</td><td>Name</td><td>Balance</td></tr>");
+         Response.Write("<tr><td>1234</td><td>Al Bundy</td><td>45</td></tr>");
+         Response.Write("<tr><td>9876</td><td>Homer Simpson</td><td>-129</td></tr>");
+         Response.Write("<tr><td>5555</td><td>Peter Griffin</td><td>0</td></tr>");
+         Response.Write("</table>");
+         Response.Write("</body>");
+         Response.Write("</html>");
       }
    }
 }</pre>

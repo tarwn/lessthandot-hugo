@@ -25,12 +25,12 @@ The problem is that RequireJS loads the dependencies asynchronously, but the sta
 
 One option to solve this is to simply call window.onload again:
 
-<pre>&lt;script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine-html.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="tests/lib/jasmine-2.0.0/boot.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="lib/require-2.1.8.min.js" data-main="test-main"&gt;&lt;/script&gt;
+<pre><script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine.js"&gt;</script&gt;
+<script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine-html.js"&gt;</script&gt;
+<script type="text/javascript" src="tests/lib/jasmine-2.0.0/boot.js"&gt;</script&gt;
+<script type="text/javascript" src="lib/require-2.1.8.min.js" data-main="test-main"&gt;</script&gt;
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript"&gt;
 	// list spec files here
 	require([
 		"spec/someAwesomeProcess.spec",
@@ -39,7 +39,7 @@ One option to solve this is to simply call window.onload again:
 	], function () {
 		window.onload();
 	});
-&lt;/script&gt;</pre>
+</script&gt;</pre>
 
 But that&#8217;s icky and causes you to have two test bars across the screen (and probably doesn&#8217;t work well with other reporters either).
 
@@ -66,12 +66,12 @@ Or we can fix the root cause, the fact that the tests are running on window.onlo
 
 And then update our SpecRunner to include this replacement boot script and require the test files prior to executing the tests:
 
-<pre>&lt;script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine-html.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="tests/lib/jasmine-2.0.0/boot-without-onload.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="lib/require-2.1.8.min.js" data-main="test-main"&gt;&lt;/script&gt;
+<pre><script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine.js"&gt;</script&gt;
+    <script type="text/javascript" src="tests/lib/jasmine-2.0.0/jasmine-html.js"&gt;</script&gt;
+    <script type="text/javascript" src="tests/lib/jasmine-2.0.0/boot-without-onload.js"&gt;</script&gt;
+    <script type="text/javascript" src="lib/require-2.1.8.min.js" data-main="test-main"&gt;</script&gt;
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript"&gt;
         // list spec files here
         require([
             "spec/someAwesomeProcess.spec",
@@ -80,7 +80,7 @@ And then update our SpecRunner to include this replacement boot script and requi
         ], function () {
             window.executeTests();
         });
-    &lt;/script&gt;</pre>
+    </script&gt;</pre>
 
 And there we go, Jasmine is now working exactly the same as if we were running without RequireJS (and had pasted 500 script tags in the file).
 

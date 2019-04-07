@@ -22,5 +22,5 @@ For Example:
 
 <pre>DECLARE @Timestamp datetime
 DELETE TOP (10000) from  Log With (tablockx, holdlock)
-WHERE Timestamp &lt; @Timestamp
+WHERE Timestamp < @Timestamp
 GO 500</pre>

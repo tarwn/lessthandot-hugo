@@ -22,7 +22,7 @@ A complex web application can end up passing object id&#8217;s through any numbe
 
 Here&#8217;s an example Identity object (T4 generated):
 
-<pre>public class OrganizationId : IIdentity&lt;int&gt;
+<pre>public class OrganizationId : IIdentity<int&gt;
 {	
 [Obsolete("Serialization use only", true)]
 public OrganizationId() { }
@@ -60,9 +60,9 @@ Here&#8217;s an Application object (also T4 generated) that references an AppId 
 
 Fetching these objects from the database requires no special markup over standard PetaPoco code, even though there are two int columns in the database that need to be expanded into very specific OrganizationId and AppId types in my ApplicationDTO object:
 
-<pre>public async Task&lt;List&lt;ApplicationDTO&gt;&gt; GetAllAsync(OrganizationId organizationId)
+<pre>public async Task<List<ApplicationDTO&gt;&gt; GetAllAsync(OrganizationId organizationId)
     using(var db = new AsyncPoco.Database(_connection)){
-        return await db.FetchAsync&lt;ApplicationDTO&gt;("SELECT * FROM Applications WHERE OrganizationId = @0;", organizationId.RawValue);
+        return await db.FetchAsync<ApplicationDTO&gt;("SELECT * FROM Applications WHERE OrganizationId = @0;", organizationId.RawValue);
     }
 }</pre>
 
@@ -137,10 +137,10 @@ This is my IMapper implementation for reading and writing the two cases above:
         return standardMapper.GetColumnInfo(pocoProperty);
     }
 
-    public Func&lt;object, object&gt; GetFromDbConverter(PropertyInfo targetProperty, Type sourceType)
+    public Func<object, object&gt; GetFromDbConverter(PropertyInfo targetProperty, Type sourceType)
     {
         var t = targetProperty.PropertyType;
-        if (typeof(IIdentity&lt;int&gt;).IsAssignableFrom(t))
+        if (typeof(IIdentity<int&gt;).IsAssignableFrom(t))
         {
             var ctor = t.GetConstructor(new Type[] { typeof(Int32) });
             return (x) =&gt; ctor.Invoke(new object[] { (int)x });
@@ -160,15 +160,15 @@ This is my IMapper implementation for reading and writing the two cases above:
         return standardMapper.GetTableInfo(pocoType);
     }
 
-    public Func&lt;object, object&gt; GetToDbConverter(PropertyInfo sourceProperty)
+    public Func<object, object&gt; GetToDbConverter(PropertyInfo sourceProperty)
     {
-        if (typeof(IIdentity&lt;int&gt;).IsAssignableFrom(sourceProperty.PropertyType))
+        if (typeof(IIdentity<int&gt;).IsAssignableFrom(sourceProperty.PropertyType))
         {
             return (x) =&gt; {
                 if (x == null)
                     return null;
-                else if (typeof(IIdentity&lt;int&gt;).IsAssignableFrom(x.GetType()))
-                    return ((IIdentity&lt;int&gt;)x).RawValue;
+                else if (typeof(IIdentity<int&gt;).IsAssignableFrom(x.GetType()))
+                    return ((IIdentity<int&gt;)x).RawValue;
                 else
                     return x;
                 };

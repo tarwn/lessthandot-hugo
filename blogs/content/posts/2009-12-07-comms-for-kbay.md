@@ -34,12 +34,12 @@ Hey everyone,
   First off, the actual code behind on the web services:
 </p>
 
-<pre>&lt;WebMethod(Description:="Returns a set of data required at application startup.")&gt; _
+<pre><WebMethod(Description:="Returns a set of data required at application startup.")> _
     Public Function GetInit(ByVal Request As GetInitRequest) As GetInitResponse
         Return Request.FillRequest()
     End Function
 
-    &lt;WebMethod(Description:="Returns a list of Alert Data based on the filter criteria set in the request.")&gt; _
+    <WebMethod(Description:="Returns a list of Alert Data based on the filter criteria set in the request.")> _
     Public Function GetAlertData(ByVal Request As GetAlertDataRequest) As GetAlertDataResponse
         Return Request.FillRequest()
     End Function</pre>
@@ -55,7 +55,7 @@ Hey everyone,
 </p>
 
 <pre>Namespace Implementation
-    &lt;ServiceManager.AutoCreateSessionId()&gt; _
+    <ServiceManager.AutoCreateSessionId()> _
     Public Class GetInitRequest
         Inherits ServiceManager.BaseRequest(Of GetInitRequest, GetInitResponse)
 
@@ -64,7 +64,7 @@ Hey everyone,
 
             Dim env = Utility.GetEnvironement("Alerts|Development")
             Dim Statuses As String = Utility.GetEnvironmentSetting("Alerts|Development", "StartupMessage").ToString
-            If Statuses &lt;&gt; String.Empty Then
+            If Statuses <> String.Empty Then
                 output.Statuses.AddRange(Statuses.Split(","c))
             End If
 
@@ -141,16 +141,16 @@ End Namespace</pre>
         End Property
 
 
-        ''' &lt;summary&gt;
+        ''' <summary>
         ''' This procedure forms a response object and deals with any errors that take place while
         ''' that response is being created.
-        ''' &lt;/summary&gt;
-        ''' &lt;typeparam name="Req"&gt;&lt;/typeparam&gt;
-        ''' &lt;typeparam name="Res"&gt;&lt;/typeparam&gt;
-        ''' &lt;param name="Request"&gt;&lt;/param&gt;
-        ''' &lt;param name="RunAction"&gt;&lt;/param&gt;
-        ''' &lt;returns&gt;&lt;/returns&gt;
-        ''' &lt;remarks&gt;&lt;/remarks&gt;
+        ''' </summary>
+        ''' <typeparam name="Req"></typeparam>
+        ''' <typeparam name="Res"></typeparam>
+        ''' <param name="Request"></param>
+        ''' <param name="RunAction"></param>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
         Public Function FillRequest() As Res
             '// create a place holder for the output response object
             Dim Output As Res = Nothing
@@ -161,14 +161,14 @@ End Namespace</pre>
                 '// if this request type implements the AutoCreateSessionIdAttribute AND the user has
                 '// not given a session ID then create a session ID.
                 Dim Atts = Me.GetType.GetCustomAttributes(GetType(AutoCreateSessionIdAttribute), True)
-                If Atts IsNot Nothing AndAlso Atts.Count &gt; 0 Then
-                    If Me.SessionId &lt;= 0 Then
+                If Atts IsNot Nothing AndAlso Atts.Count > 0 Then
+                    If Me.SessionId <= 0 Then
                         Me.SessionId = Utility.LogApplicationStartup()
                     End If
                 End If
 
                 '// if at this point there is no session ID, throw an exception
-                If Me.SessionId &lt;= 0 Then
+                If Me.SessionId <= 0 Then
                     Throw New ApplicationException("Invalid session ID given. Ensure you pass the session ID to every service call.")
                 End If
 
@@ -217,13 +217,13 @@ End Namespace</pre>
         Public MustOverride Function innerFillRequest() As Res
 
 
-        ''' &lt;summary&gt;
+        ''' <summary>
         ''' This procedure will take the given object and create an XML string representing the
         ''' public properties of the given object.
-        ''' &lt;/summary&gt;
-        ''' &lt;param name="Obj"&gt;&lt;/param&gt;
-        ''' &lt;returns&gt;&lt;/returns&gt;
-        ''' &lt;remarks&gt;&lt;/remarks&gt;
+        ''' </summary>
+        ''' <param name="Obj"></param>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
         Private Function CreateXML(ByVal Obj As Object) As String
             Dim XML As String
 
@@ -243,12 +243,12 @@ End Namespace</pre>
             Return XMLElements.ToString
         End Function
 
-        ''' &lt;summary&gt;
+        ''' <summary>
         ''' This procedure should be modified to remove any tags you do not want to send to the log. 
         ''' Tags that hold byte arrays are good candidates for removal.
-        ''' &lt;/summary&gt;
-        ''' &lt;param name="Source"&gt;&lt;/param&gt;
-        ''' &lt;remarks&gt;&lt;/remarks&gt;
+        ''' </summary>
+        ''' <param name="Source"></param>
+        ''' <remarks></remarks>
         Private Sub ReplaceInvalidTags(ByVal Source As XElement)
             Dim Nodes = (From e In Source.Elements Select e).ToArray
             For Each n In Nodes

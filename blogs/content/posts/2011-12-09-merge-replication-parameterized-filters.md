@@ -29,7 +29,7 @@ For instance, if we altered the table Person.Person in the database AdventureWor
 
 With the column addition made to Person.Person, a publication could be set up to use the SUSER\_SNAME() as a parameterized filter on Person.Person.  This would be done in the setup by adding a filter to the table Person.Person and adding a WHERE LoginAccount = SUSER\_SNAME()
 
-<pre>SELECT &lt;published_columns&gt; FROM [Person].[Person] WHERE [LoginAccount] = SUSER_SNAME()</pre>
+<pre>SELECT <published_columns&gt; FROM [Person].[Person] WHERE [LoginAccount] = SUSER_SNAME()</pre>
 
 This configuration in the publication will automatically or manually force a data partition to be generated for any valid domain user with a listing in the publication access list when they initially connect to the publication.  For example, a publication that is based on Person.Person with a filter on SUSER_SNAME() and setting of “A row from this table will go to only one subscription” would reveal the Data Partitions page in the publications properties.  Note: Selecting either one or multiple subscriptions availability for partitions will be discussed later.  The data partitions page shows all data partitions that have been created manually or by a subscriber that has connected to the publication.
 

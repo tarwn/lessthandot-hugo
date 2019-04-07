@@ -51,7 +51,7 @@ With the availability group mentioned previously and the publication, the follow
 
 <pre>DECLARE @LOOP INT = 1
 
-WHILE @LOOP &lt;= 100000
+WHILE @LOOP <= 100000
  BEGIN
 	UPDATE Person.Address
 	SET AddressLine2 = AddressLine2 + CAST(RAND() AS VARCHAR) + ' These are tests'

@@ -33,7 +33,7 @@ GO</pre>
 Now let&#8217;s insert some data. Note that there are several courses with the different start dates. This was how the excel was given to me.
 
 <pre>DECLARE @i int = 1
-WHILE @i &lt; 4
+WHILE @i < 4
 BEGIN
 INSERT INTO CourseData
 	VALUES ('10775A','Administering Microsoft SQL Server 2012 Databases',DATEADD(m,@i,getdate())),

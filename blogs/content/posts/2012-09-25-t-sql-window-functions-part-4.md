@@ -17,28 +17,28 @@ In the final installment of my series on SQL window functions, we will explore u
   
 Once again, the following CTE will be used as the query in all examples throughout the post:
 
-<code class="codespan">with CTEOrders as&lt;br />
-	(select cast(1 as int) as OrderID, cast('3/1/2012' as date) as OrderDate, cast(10.00 as money) as OrderAmt, 'Joe' as CustomerName&lt;br />
-	union select 2, '3/1/2012', 11.00, 'Sam'&lt;br />
-	union select 3, '3/2/2012', 10.00, 'Beth'&lt;br />
-	union select 4, '3/2/2012', 15.00, 'Joe'&lt;br />
-	union select 5, '3/2/2012', 17.00, 'Sam'&lt;br />
-	union select 6, '3/3/2012', 12.00, 'Joe'&lt;br />
-	union select 7, '3/4/2012', 10.00, 'Beth'&lt;br />
-	union select 8, '3/4/2012', 18.00, 'Sam'&lt;br />
-	union select 9, '3/4/2012', 12.00, 'Joe'&lt;br />
-	union select 10, '3/4/2012', 11.00, 'Beth'&lt;br />
-	union select 11, '3/5/2012', 14.00, 'Sam'&lt;br />
-	union select 12, '3/6/2012', 17.00, 'Beth'&lt;br />
-	union select 13, '3/6/2012', 19.00, 'Joe'&lt;br />
-	union select 14, '3/7/2012', 13.00, 'Beth'&lt;br />
-	union select 15, '3/7/2012', 16.00, 'Sam'&lt;br />
-	)&lt;br />
-select OrderID&lt;br />
-	,OrderDate&lt;br />
-	,OrderAmt&lt;br />
-	,CustomerName&lt;br />
-   from CTEOrders;&lt;br />
+<code class="codespan">with CTEOrders as<br />
+	(select cast(1 as int) as OrderID, cast('3/1/2012' as date) as OrderDate, cast(10.00 as money) as OrderAmt, 'Joe' as CustomerName<br />
+	union select 2, '3/1/2012', 11.00, 'Sam'<br />
+	union select 3, '3/2/2012', 10.00, 'Beth'<br />
+	union select 4, '3/2/2012', 15.00, 'Joe'<br />
+	union select 5, '3/2/2012', 17.00, 'Sam'<br />
+	union select 6, '3/3/2012', 12.00, 'Joe'<br />
+	union select 7, '3/4/2012', 10.00, 'Beth'<br />
+	union select 8, '3/4/2012', 18.00, 'Sam'<br />
+	union select 9, '3/4/2012', 12.00, 'Joe'<br />
+	union select 10, '3/4/2012', 11.00, 'Beth'<br />
+	union select 11, '3/5/2012', 14.00, 'Sam'<br />
+	union select 12, '3/6/2012', 17.00, 'Beth'<br />
+	union select 13, '3/6/2012', 19.00, 'Joe'<br />
+	union select 14, '3/7/2012', 13.00, 'Beth'<br />
+	union select 15, '3/7/2012', 16.00, 'Sam'<br />
+	)<br />
+select OrderID<br />
+	,OrderDate<br />
+	,OrderAmt<br />
+	,CustomerName<br />
+   from CTEOrders;<br />
 </code>
 
 # Position Value Functions: LAG, LEAD, FIRST\_VALUE, LAST\_VALUE
@@ -51,15 +51,15 @@ The following example illustrates all of the functions with various variations o
 
 _Update 10/19/2012: One of the readers pointed out confusion between column names in the results and the functions used. This discrepancy has been resolved._
 
-<code class="codespan">select OrderID&lt;br />
-	,OrderDate&lt;br />
-	,OrderAmt&lt;br />
-	,CustomerName&lt;br />
-	,LAG(OrderAmt) OVER (PARTITION BY CustomerName ORDER BY OrderID) as PrevOrdAmt&lt;br />
-	,LEAD(OrderAmt, 2) OVER (PARTITION BY CustomerName ORDER BY OrderID) as NextTwoOrdAmt&lt;br />
-	,LEAD(OrderDate, 2, '9999-12-31') OVER (PARTITION BY CustomerName ORDER BY OrderID) as NextTwoOrdDtNoNull&lt;br />
-	,FIRST_VALUE(OrderDate) OVER (ORDER BY OrderID) as FirstOrdDt&lt;br />
-	,LAST_VALUE(CustomerName) OVER (PARTITION BY OrderDate ORDER BY OrderID) as LastCustToOrdByDay&lt;br />
+<code class="codespan">select OrderID<br />
+	,OrderDate<br />
+	,OrderAmt<br />
+	,CustomerName<br />
+	,LAG(OrderAmt) OVER (PARTITION BY CustomerName ORDER BY OrderID) as PrevOrdAmt<br />
+	,LEAD(OrderAmt, 2) OVER (PARTITION BY CustomerName ORDER BY OrderID) as NextTwoOrdAmt<br />
+	,LEAD(OrderDate, 2, '9999-12-31') OVER (PARTITION BY CustomerName ORDER BY OrderID) as NextTwoOrdDtNoNull<br />
+	,FIRST_VALUE(OrderDate) OVER (ORDER BY OrderID) as FirstOrdDt<br />
+	,LAST_VALUE(CustomerName) OVER (PARTITION BY OrderDate ORDER BY OrderID) as LastCustToOrdByDay<br />
 FROM CTEOrders</code>
 
 ### Results (with shortened column names):
@@ -964,15 +964,15 @@ FROM CTEOrders</code>
 
 If you really like subselects, you can also mix in some subselects and have a very creative SQL statement. The following statement uses LAG and a subselect to find the first value in a partition. I am showing this to illustrate some more of the capabilities of the function in case you have a solution that requires this level of complexity.
 
-<code class="codespan">select OrderID&lt;br />
-	,OrderDate&lt;br />
-	,OrderAmt&lt;br />
-	,CustomerName&lt;br />
-	,LAG(OrderAmt,(select count(*)-1&lt;br />
-from CTEOrders c&lt;br />
-where c.CustomerName = CTEOrders.CustomerName&lt;br />
- and c.OrderID &lt;= CTEOrders.OrderID) , 0)&lt;br />
-OVER (PARTITION BY CustomerName ORDER BY OrderDate, OrderID) as FirstOrderAmt&lt;br />
+<code class="codespan">select OrderID<br />
+	,OrderDate<br />
+	,OrderAmt<br />
+	,CustomerName<br />
+	,LAG(OrderAmt,(select count(*)-1<br />
+from CTEOrders c<br />
+where c.CustomerName = CTEOrders.CustomerName<br />
+ and c.OrderID <= CTEOrders.OrderID) , 0)<br />
+OVER (PARTITION BY CustomerName ORDER BY OrderDate, OrderID) as FirstOrderAmt<br />
 from CTEOrders</code>
 
 # Percentile Functions: CUME\_DIST, PERCENT\_RANK, PERCENTILE\_CONT, PERCENTILE\_DISC
@@ -981,12 +981,12 @@ As I wrap up my discussion on window functions, the percentile based functions w
 
 The key differences in the four function have to do with ranks and values. CUME\_DIST and PERCENT\_RANK return a ranking value while PERCENTILE\_CONT and PERCENTILE\_DISC return data values. 
 
-CUME_DIST returns a value that is greater than zero and lest than or equal to one (>0 and <=1) and represents the percentage group that the value falls into based on the order specified. PERCENT_RANK returns a value between zero and one as well (>= 0 and <=1). However, in PERCENT\_RANK the first group is always represented as 0 whereas in CUME\_DIST it represents the percentage of the group. Both functions return the last percent group as 1. In both cases, as the ranking percentages move from lowest to highest, each group’s percent value includes all of the earlier values in the calculation as well. The following statement shows both of the functions using the default partition to determine the rankings of order amounts within our dataset. <code class="codespan">select OrderID&lt;br />
-	,OrderDate&lt;br />
-	,OrderAmt&lt;br />
-	,CustomerName&lt;br />
-	,CUME_DIST() OVER (ORDER BY OrderAmt) CumDist&lt;br />
-	,PERCENT_RANK() OVER (ORDER BY OrderAmt) PctRank&lt;br />
+CUME_DIST returns a value that is greater than zero and lest than or equal to one (>0 and <=1) and represents the percentage group that the value falls into based on the order specified. PERCENT_RANK returns a value between zero and one as well (>= 0 and <=1). However, in PERCENT\_RANK the first group is always represented as 0 whereas in CUME\_DIST it represents the percentage of the group. Both functions return the last percent group as 1. In both cases, as the ranking percentages move from lowest to highest, each group’s percent value includes all of the earlier values in the calculation as well. The following statement shows both of the functions using the default partition to determine the rankings of order amounts within our dataset. <code class="codespan">select OrderID<br />
+	,OrderDate<br />
+	,OrderAmt<br />
+	,CustomerName<br />
+	,CUME_DIST() OVER (ORDER BY OrderAmt) CumDist<br />
+	,PERCENT_RANK() OVER (ORDER BY OrderAmt) PctRank<br />
 from CTEOrders</code>
 
 ### Results:
@@ -1602,15 +1602,15 @@ The last two functions, PERCENTILE\_CONT and PERCENTILE\_DISC, return the value 
 
 The following script illustrates a couple of variations. The first two functions return the median of the default partition. Then next two return the median value for each day. Finally, the last two functions return the low and high values within the partition. The values segmented by the date partition highlight the key difference between the two functions.
 
-<code class="codespan">select OrderID as ID&lt;br />
-	,OrderDate as ODt&lt;br />
-	,OrderAmt as OAmt&lt;br />
-	,CustomerName as CName&lt;br />
-	,PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY OrderAmt) OVER () PerCont05&lt;br />
-	,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY OrderAmt) OVER () PerDisc05&lt;br />
-	,PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY OrderAmt) OVER (PARTITION BY OrderDate) PerContDt&lt;br />
-	,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY OrderAmt) OVER (PARTITION BY OrderDate) PerDiscDt&lt;br />
-	,PERCENTILE_CONT(0) WITHIN GROUP (ORDER BY OrderAmt) OVER() PerCont0&lt;br />
+<code class="codespan">select OrderID as ID<br />
+	,OrderDate as ODt<br />
+	,OrderAmt as OAmt<br />
+	,CustomerName as CName<br />
+	,PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY OrderAmt) OVER () PerCont05<br />
+	,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY OrderAmt) OVER () PerDisc05<br />
+	,PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY OrderAmt) OVER (PARTITION BY OrderDate) PerContDt<br />
+	,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY OrderAmt) OVER (PARTITION BY OrderDate) PerDiscDt<br />
+	,PERCENTILE_CONT(0) WITHIN GROUP (ORDER BY OrderAmt) OVER() PerCont0<br />
 from CTEOrders</code>
 
 ### Results

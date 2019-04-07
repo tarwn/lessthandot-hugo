@@ -35,10 +35,10 @@ DECLARE @LongName varchar(max)
 
 SELECT @lnMax = MAX(Id) FROM @Test
 SET @lnCurrent = 1
-WHILE @lnCurrent &lt;= @lnMax
+WHILE @lnCurrent <= @lnMax
       BEGIN
             SELECT @LongName = Code FROM @Test WHERE Id = @lnCurrent
-            WHILE @LongName &lt;&gt; ''
+            WHILE @LongName <> ''
                BEGIN
                    print LEFT(@LongName,8000)
                    SET @LongName = SUBSTRING(@LongName, 8001, LEN(@LongName))

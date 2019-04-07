@@ -40,95 +40,95 @@ Another thing to note here is that I added a column for parameter name/value com
 
 Next is to configure log4net. Added an xml file called log4net.config to the top-level directory in the project. Something like this ought to do:
 
-<pre>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;log4net&gt;
-  &lt;!-- How to set up secondary appender (bufferless) for Exceptions only? --&gt;
-  &lt;!-- Log4Net Appender Settings--&gt;
-  &lt;root&gt;
-    &lt;level value="All" /&gt;
-    &lt;appender-ref ref="ADONetAppender" /&gt;
-  &lt;/root&gt;
-  &lt;appender name="ADONetAppender" type="log4net.Appender.ADONetAppender"&gt;
-    &lt;bufferSize value="10"/&gt;
-    &lt;lossy value="false"/&gt;
-    &lt;connectionType value="MySql.Data.MySqlClient.MySqlConnection, MySql.Data"/&gt;
-    &lt;connectionString value="Server=999.99.443.206;Database=my_site; Uid=someuser;Pwd=welcome1;"/&gt;
-    &lt;commandText value="INSERT INTO Log (Date,Thread,Level,Logger,Message,Method,Parameters,Exception,Context,ExecutionTime) VALUES (?log_date, ?thread, ?log_level, ?logger, ?message, ?method_name, ?parameters, ?exception, ?context, ?execution_time)"/&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="log_date"/&gt;
-      &lt;dbType value="DateTime"/&gt;
-      &lt;layout type="log4net.Layout.RawTimeStampLayout"/&gt;
-    &lt;/parameter&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="thread"/&gt;
-      &lt;dbType value="String"/&gt;
-      &lt;size value="32"/&gt;
-      &lt;layout type="log4net.Layout.PatternLayout"&gt;
-        &lt;conversionPattern value="%t"/&gt;
-      &lt;/layout&gt;
-    &lt;/parameter&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="log_level"/&gt;
-      &lt;dbType value="String"/&gt;
-      &lt;size value="512"/&gt;
-      &lt;layout type="log4net.Layout.PatternLayout"&gt;
-        &lt;conversionPattern value="%p"/&gt;
-      &lt;/layout&gt;
-    &lt;/parameter&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="context"/&gt;
-      &lt;dbType value="String"/&gt;
-      &lt;size value="512"/&gt;
-      &lt;layout type="log4net.Layout.PatternLayout"&gt;
-        &lt;conversionPattern value="%x"/&gt;
-      &lt;/layout&gt;
-    &lt;/parameter&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="logger"/&gt;
-      &lt;dbType value="String"/&gt;
-      &lt;size value="512"/&gt;
-      &lt;layout type="log4net.Layout.PatternLayout"&gt;
-        &lt;conversionPattern value="%c"/&gt;
-      &lt;/layout&gt;
-    &lt;/parameter&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="message"/&gt;
-      &lt;dbType value="String"/&gt;
-      &lt;size value="1000"/&gt;
-      &lt;layout type="log4net.Layout.PatternLayout"&gt;
-        &lt;conversionPattern value="%m"/&gt;
-      &lt;/layout&gt;
-    &lt;/parameter&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="exception"/&gt;
-      &lt;dbType value="String"/&gt;
-      &lt;size value="4000"/&gt;
-      &lt;layout type="log4net.Layout.ExceptionLayout"/&gt;
-    &lt;/parameter&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="method_name"/&gt;
-      &lt;dbType value="String"/&gt;
-      &lt;size value="200"/&gt;
-      &lt;layout type="log4net.Layout.PatternLayout"&gt;
-        &lt;conversionPattern value="%property{method_name}"/&gt;
-      &lt;/layout&gt;
-    &lt;/parameter&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="execution_time"/&gt;
-      &lt;dbType value="Decimal"/&gt;
-      &lt;layout type="log4net.Layout.PatternLayout"&gt;
-        &lt;conversionPattern value="%property{execution_time}"/&gt;
-      &lt;/layout&gt;
-    &lt;/parameter&gt;
-    &lt;parameter&gt;
-      &lt;parameterName value="parameters"/&gt;
-      &lt;dbType value="String"/&gt;
-      &lt;layout type="log4net.Layout.PatternLayout"&gt;
-        &lt;conversionPattern value="%property{parameters}"/&gt;
-      &lt;/layout&gt;
-    &lt;/parameter&gt;
-  &lt;/appender&gt;
-&lt;/log4net&gt;</pre>
+<pre><?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+  <!-- How to set up secondary appender (bufferless) for Exceptions only? -->
+  <!-- Log4Net Appender Settings-->
+  <root>
+    <level value="All" />
+    <appender-ref ref="ADONetAppender" />
+  </root>
+  <appender name="ADONetAppender" type="log4net.Appender.ADONetAppender">
+    <bufferSize value="10"/>
+    <lossy value="false"/>
+    <connectionType value="MySql.Data.MySqlClient.MySqlConnection, MySql.Data"/>
+    <connectionString value="Server=999.99.443.206;Database=my_site; Uid=someuser;Pwd=welcome1;"/>
+    <commandText value="INSERT INTO Log (Date,Thread,Level,Logger,Message,Method,Parameters,Exception,Context,ExecutionTime) VALUES (?log_date, ?thread, ?log_level, ?logger, ?message, ?method_name, ?parameters, ?exception, ?context, ?execution_time)"/>
+    <parameter>
+      <parameterName value="log_date"/>
+      <dbType value="DateTime"/>
+      <layout type="log4net.Layout.RawTimeStampLayout"/>
+    </parameter>
+    <parameter>
+      <parameterName value="thread"/>
+      <dbType value="String"/>
+      <size value="32"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%t"/>
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="log_level"/>
+      <dbType value="String"/>
+      <size value="512"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%p"/>
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="context"/>
+      <dbType value="String"/>
+      <size value="512"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%x"/>
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="logger"/>
+      <dbType value="String"/>
+      <size value="512"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%c"/>
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="message"/>
+      <dbType value="String"/>
+      <size value="1000"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%m"/>
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="exception"/>
+      <dbType value="String"/>
+      <size value="4000"/>
+      <layout type="log4net.Layout.ExceptionLayout"/>
+    </parameter>
+    <parameter>
+      <parameterName value="method_name"/>
+      <dbType value="String"/>
+      <size value="200"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%property{method_name}"/>
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="execution_time"/>
+      <dbType value="Decimal"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%property{execution_time}"/>
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="parameters"/>
+      <dbType value="String"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%property{parameters}"/>
+      </layout>
+    </parameter>
+  </appender>
+</log4net></pre>
 
 Nothing really special there, except for the additional parameters we added that I didn&#8217;t see on most of the vanilla demos. One thing to note is the conversionPattern we used for the custom properties, &#8220;%property{PROPERTY_NAME}&#8221; as it can be very handy if you want to set custom parameters. There&#8217;s also a special &#8220;ErrorLog&#8221; that writes to a flat file without using a buffer, for errors only. This is so that if there is a fatal error in the application, the exceptions leading up to it are not lost. Onward. Next thing we need to do is ensure that log4net is configured when we start up the application. There are two ways to do this:
 
@@ -157,50 +157,50 @@ using log4net;
 [System.Diagnostics.DebuggerStepThrough]
 public static class Logging
 {
-    /// &lt;summary&gt;Log an Informational Message&lt;/summary&gt;
+    /// <summary>Log an Informational Message</summary>
     public static void Info(String message)
     {
         LogManager.GetLogger("root").Info(message);
     }
 
-    /// &lt;summary&gt;Log an Error Message&lt;/summary&gt;
+    /// <summary>Log an Error Message</summary>
     public static void Error(String message, Exception ex)
     {
         //for errors, use the ErrorLog that will write to a flat file (bufferless) rather than database (buffered)
         LogManager.GetLogger("ErrorLogger").Error(message, ex);
     }
 
-    /// &lt;summary&gt;Insert a parameter to MDC&lt;/summary&gt;
+    /// <summary>Insert a parameter to MDC</summary>
     public static void SetParameter(String name, String value)
     {
         ThreadContext.Properties[name] = value;
     }
 
-    /// &lt;summary&gt;Remove parameter from MDC&lt;/summary&gt;
+    /// <summary>Remove parameter from MDC</summary>
     public static void RemoveParameter(String name)
     {
         ThreadContext.Properties.Remove(name);
     }
 
-    /// &lt;summary&gt;Add another context to NDC&lt;/summary&gt;
+    /// <summary>Add another context to NDC</summary>
     public static void PushContext(Object obj)
     {
         ThreadContext.Stacks["NDC"].Push(obj.ToString());
     }
 
-    /// &lt;summary&gt;Clear all contexts from NDC&lt;/summary&gt;
+    /// <summary>Clear all contexts from NDC</summary>
     public static void ClearContext()
     {
         ThreadContext.Stacks["NDC"].Clear();
     }
 
-    /// &lt;summary&gt;Remove top context from NDC&lt;/summary&gt;
+    /// <summary>Remove top context from NDC</summary>
     public static void PopContext()
     {
         ThreadContext.Stacks["NDC"].Pop();
     }
 
-    /// &lt;summary&gt;Set Execution time parameter (null for zero)&lt;/summary&gt;
+    /// <summary>Set Execution time parameter (null for zero)</summary>
     public static void SetExecutionTime(DateTime? current)
     {
         Double execution_time_milliseconds = 0;
@@ -216,7 +216,7 @@ public static class Logging
         ThreadContext.Properties["execution_time"] = execution_time_milliseconds;
     }
 
-    /// &lt;summary&gt;Store context-specific start time for sharing across methods (within a thread)&lt;/summary&gt;
+    /// <summary>Store context-specific start time for sharing across methods (within a thread)</summary>
     public static void SetStartTime()
     {
         ThreadContext.Properties["start_time"] = DateTime.Now.ToString();
@@ -279,7 +279,7 @@ public class LoggableAttribute : OnMethodBoundaryAspect
         String output = "";
         if (event_args.GetReadOnlyArgumentArray() != null)
         {
-            for (int i = 0; i &lt; event_args.GetReadOnlyArgumentArray().Length; i++)
+            for (int i = 0; i < event_args.GetReadOnlyArgumentArray().Length; i++)
             {
                 output += String.Format("[{0} = {1}]", event_args.Method.GetParameters()[i].Name, event_args.GetReadOnlyArgumentArray()[i]);
             }

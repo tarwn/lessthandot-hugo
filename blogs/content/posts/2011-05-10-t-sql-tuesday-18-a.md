@@ -192,7 +192,7 @@ My solution is to set a WHERE clause in the recursive query, limiting the number
 	DATEPART(DD, DATEADD(DD, 1, CalendarDate)), 
 	DATEPART(DY, DATEADD(DD, 1, CalendarDate)) 
   FROM DateCTE 
-  WHERE DATEADD(DD, 1, CalendarDate) &lt;= DATEADD(DD, 365, @GoDate)
+  WHERE DATEADD(DD, 1, CalendarDate) <= DATEADD(DD, 365, @GoDate)
 )
 INSERT INTO Dates 
 SELECT CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear

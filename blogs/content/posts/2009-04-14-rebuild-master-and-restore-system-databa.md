@@ -45,8 +45,8 @@ So hopefully you can find the media for SQL Server. It also has to be the same e
 
 The command we need is
   
-<code class="codespan">&lt;br />
-start /wait E:ServersSetupsetup.exe /qn INSTANCENAME=MSSQLSERVER REINSTALL=SQL_Engine REBUILDDATABASE=1 SAPWD=really%strong_p@$$w0rD&lt;br />
+<code class="codespan"><br />
+start /wait E:ServersSetupsetup.exe /qn INSTANCENAME=MSSQLSERVER REINSTALL=SQL_Engine REBUILDDATABASE=1 SAPWD=really%strong_p@$$w0rD<br />
 </code>
   
 I won’t go into this much more than MSSQLSERVER is for default instances, the /qn is to not show me setup boxes and status, REBUILDDATABASES switch is the key and the SAPWD is what it sounds like, you need to give a new sa password. DON’T FORGET THIS PASSWORD!!! Although you can recover from it if you have BUILTIN/ADMINS enabled after you restore msdb.

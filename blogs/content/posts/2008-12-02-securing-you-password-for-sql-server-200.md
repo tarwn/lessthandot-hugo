@@ -91,15 +91,15 @@ select 'User: ' + UserN + ' On: ' + SystemN from SSPasswordList where SystemType
 
 So how can we use this then. Let&#8217;s do this. I&#8217;m not going to talk about how to write ASP.NET or C# or anything on IIS etc&#8230; There are plenty of other things out there to help you with that. I&#8217;m just giving you the code so you can try it out. Create a new web site in VS.NET (I&#8217;m on 2.0 and 2005). In your Default.aspx replace the code with the below
 
-<pre>&lt;%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %&gt;
-&lt;% @ Import Namespace="System.Data.SqlClient" %&gt;
-&lt;% @ Import Namespace="System.Data" %&gt;
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+<pre><%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+<% @ Import Namespace="System.Data.SqlClient" %>
+<% @ Import Namespace="System.Data" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
-&lt;head id="Head1" runat="server"&gt;
-&lt;title&gt;Password Manager&lt;/title&gt;
-&lt;style type="text/css"&gt;
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+<title>Password Manager</title>
+<style type="text/css">
 Body {
 background-color: #666666;
 }
@@ -133,13 +133,13 @@ TD {
  width:90%;
  height:400px;
 }
-&lt;/style&gt;
-&lt;script language="javascript" type="text/javascript"&gt;
+</style>
+<script language="javascript" type="text/javascript">
 
 function onSelType()
 {
  var obj = document.getElementById('types');
- if(obj.options[obj.selectedIndex].value &gt; 0)
+ if(obj.options[obj.selectedIndex].value > 0)
  {
   if(window.location.href.indexOf("?") == -1)
   {
@@ -162,53 +162,53 @@ window.location.href=window.location.href.substring(0,window.location.href.index
 }
 function selList()
 {
-var sel = &lt;%
+var sel = <%
 if(Convert.ToString(Request.QueryString["types"]) == null)
 {
 Response.Write("0");
 } else { 
 Response.Write(Convert.ToString(Request.QueryString["types"]));
-} %&gt;;
+} %>;
 
-if(sel &gt; 0)
+if(sel > 0)
 {
 var selObj = document.getElementById("types");
 selObj.options[sel].selected = true;
 }
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class="wrap"&gt;
-&lt;div class="mid"&gt;
- &lt;form method="post" action="Default.aspx" id="frm" runat="server"&gt;
-  &lt;input type="hidden" value="" name="status" /&gt;
-  &lt;table cellpadding="10" cellspacing="0"&gt;
-  &lt;tr&gt;
-  &lt;td colspan="2" style="font-weight:bolder;font-size:xx-large;"&gt;
-&lt;asp:Label ID="password" runat="server" Text=""&gt;&lt;/asp:Label&gt;
-&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-  &lt;td style="text-align:left;"&gt;
-  Select Account Type:&lt;br /&gt;
-  &lt;/td&gt;
-  &lt;td style="text-align:left;"&gt;
-  &lt;select id="types" name="types" onchange="onSelType();"&gt;
-   &lt;option&gt;-- select password type --&lt;/option&gt;
-   &lt;option value="1"&gt;SQL Server Passwords&lt;/option&gt;
-   &lt;option value="2"&gt;Network Passwords&lt;/option&gt;
-  &lt;/select&gt;
-  &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-  &lt;td style="text-align:left;"&gt; 
-  Select Account:&lt;br /&gt;
-  &lt;/td&gt;
-  &lt;td style="text-align:left;"&gt;
-  &lt;select name="accounts" onchange="onSelUser();"&gt;
+</script>
+</head>
+<body>
+<div class="wrap">
+<div class="mid">
+ <form method="post" action="Default.aspx" id="frm" runat="server">
+  <input type="hidden" value="" name="status" />
+  <table cellpadding="10" cellspacing="0">
+  <tr>
+  <td colspan="2" style="font-weight:bolder;font-size:xx-large;">
+<asp:Label ID="password" runat="server" Text=""></asp:Label>
+</td>
+  </tr>
+  <tr>
+  <td style="text-align:left;">
+  Select Account Type:<br />
+  </td>
+  <td style="text-align:left;">
+  <select id="types" name="types" onchange="onSelType();">
+   <option>-- select password type --</option>
+   <option value="1">SQL Server Passwords</option>
+   <option value="2">Network Passwords</option>
+  </select>
+  </td>
+  </tr>
+  <tr>
+  <td style="text-align:left;"> 
+  Select Account:<br />
+  </td>
+  <td style="text-align:left;">
+  <select name="accounts" onchange="onSelUser();">
    
-  &lt;%
+  <%
 SqlConnection conn = new SqlConnection("Data Source={instance};Initial Catalog=DBA;User Id=userid;Password=userpwd;");
 SqlCommand cmd = new SqlCommand();
 SqlDataAdapter adt = new SqlDataAdapter(cmd);
@@ -216,17 +216,17 @@ DataTable dt = new DataTable();
   int i = 0;
   if(Convert.ToString(Request.QueryString["userStr"]) == null)
   {
-  Response.Write("&lt;option&gt;-- accounts available --&lt;/option&gt;");
+  Response.Write("<option>-- accounts available --</option>");
   }
   else
   {
-  Response.Write("&lt;option&gt;" + Convert.ToString(Request.QueryString["userStr"]) + "&lt;/option&gt;");
+  Response.Write("<option>" + Convert.ToString(Request.QueryString["userStr"]) + "</option>");
   }
 string types = Convert.ToString(Request.QueryString["types"]);
 string userStr = Convert.ToString(Request.QueryString["userStr"]);
 if (types != null && types != "" && userStr == null)
 {
-if (Convert.ToInt32(types) &gt; 0)
+if (Convert.ToInt32(types) > 0)
 {
 switch (types)
 {
@@ -240,9 +240,9 @@ cmd.Connection = conn;
 cmd.CommandText = "Exec GrabNameList 'SQL'";
 adt.Fill(dt);
 
-while (i &lt; dt.Rows.Count)
+while (i < dt.Rows.Count)
 {
-Response.Write("&lt;option value='" + dt.Rows[i].ItemArray[0].ToString().Trim()+"'&gt;" + dt.Rows[i].ItemArray[0].ToString().Trim() + "&lt;/option&gt;");
+Response.Write("<option value='" + dt.Rows[i].ItemArray[0].ToString().Trim()+"'>" + dt.Rows[i].ItemArray[0].ToString().Trim() + "</option>");
 i++;
 }
 }
@@ -255,9 +255,9 @@ cmd.Connection = conn;
 cmd.CommandText = "Exec GrabNameList 'ADM'";
 adt.Fill(dt);
 
-while (i &lt; dt.Rows.Count)
+while (i < dt.Rows.Count)
 {
-Response.Write("&lt;option value='"+ dt.Rows[i].ItemArray[0].ToString().Trim()+"'&gt;" + dt.Rows[i].ItemArray[0].ToString().Trim() + "&lt;/option&gt;");
+Response.Write("<option value='"+ dt.Rows[i].ItemArray[0].ToString().Trim()+"'>" + dt.Rows[i].ItemArray[0].ToString().Trim() + "</option>");
 i++;
 }
 }
@@ -265,21 +265,21 @@ break;
 }
 }
 } 
-  %&gt;
-  &lt;/select&gt;
-  &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;asp:HiddenField ID="loader" runat="server" /&gt;
- &lt;/form&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;%
+  %>
+  </select>
+  </td>
+  </tr>
+  </table>
+<asp:HiddenField ID="loader" runat="server" />
+ </form>
+</div>
+</div>
+<%
 //Response.Write(loader.Value); 
-%&gt;
-&lt;script type="text/javascript"&gt;selList();&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+%>
+<script type="text/javascript">selList();</script>
+</body>
+</html></pre>
 
 Code behind
 

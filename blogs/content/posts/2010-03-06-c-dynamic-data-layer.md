@@ -35,7 +35,7 @@ With the upcoming release of .NET 4.0 we will be seeing the new dynamic type int
         connection.Open();
     }
 
-    public IEnumerable&lt;dynamic&gt; ExecuteText(string text, params KeyValuePair&lt;string, object&gt;[] parameters)
+    public IEnumerable<dynamic> ExecuteText(string text, params KeyValuePair<string, object>[] parameters)
     {
         Contract.Requires(!string.IsNullOrWhiteSpace(text));
         Contract.Requires(parameters != null);
@@ -57,8 +57,8 @@ With the upcoming release of .NET 4.0 we will be seeing the new dynamic type int
                     while (reader.Read())
                     {
                         dynamic record = new ExpandoObject();
-                        var recordMembers = (IDictionary&lt;string, object&gt;)record;
-                        for (int i = 0; i &lt; reader.FieldCount; i++)
+                        var recordMembers = (IDictionary<string, object>)record;
+                        for (int i = 0; i < reader.FieldCount; i++)
                         {
                             recordMembers.Add(reader.GetName(i), GetDefaultIfDBNull(reader.GetValue(i), reader.GetFieldType(i)));
                         }

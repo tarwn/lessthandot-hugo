@@ -158,8 +158,8 @@ The first thing we will do is extract that logic out of the code behind and put 
 
             lblID.Text = dr["Customer_ID"].ToString();
             lblName.Text = dr["Name"].ToString();
-            lblAddress.Text = dr["Address_1"].ToString() + "&lt;br/&gt;" +
-                   (!string.IsNullOrEmpty(dr["Address_2"].ToString()) ? dr["Address_2"].ToString() + "&lt;br/&gt;" : "") +
+            lblAddress.Text = dr["Address_1"].ToString() + "<br/&gt;" +
+                   (!string.IsNullOrEmpty(dr["Address_2"].ToString()) ? dr["Address_2"].ToString() + "<br/&gt;" : "") +
                    dr["City"].ToString() + " " +
                    dr["State"].ToString() + ", " +
                    dr["Zip"].ToString();
@@ -182,14 +182,14 @@ And the new class and method look like:
 
 <pre>public class CustomerInformation {
 		public static string GetFormattedAddress(string address1, string address2, string city, string state, string zip) {
-			//lblAddress.Text = dr["Address_1"].ToString() + "&lt;br/&gt;" +
-			//               (!string.IsNullOrEmpty(dr["Address_2"].ToString()) ? dr["Address_2"].ToString() + "&lt;br/&gt;" : "") +
+			//lblAddress.Text = dr["Address_1"].ToString() + "<br/&gt;" +
+			//               (!string.IsNullOrEmpty(dr["Address_2"].ToString()) ? dr["Address_2"].ToString() + "<br/&gt;" : "") +
 			//               dr["City"].ToString() + " " +
 			//               dr["State"].ToString() + ", " +
 			//               dr["Zip"].ToString();
 
-			return address1 + "&lt;br/&gt;" +
-			(!string.IsNullOrEmpty(address2) ? address2 + "&lt;br/&gt;" : "") +
+			return address1 + "<br/&gt;" +
+			(!string.IsNullOrEmpty(address2) ? address2 + "<br/&gt;" : "") +
 			city + " " +
 			state + ", " +
 			zip;
@@ -221,14 +221,14 @@ public void GetFormattedText_Address2EmptyString_ReturnsTwoHtmlLines() {
     string result = CustomerInformation.GetFormattedAddress("a", "", "b", "c", "d");
 
     // assert - test our expectations
-    Assert.AreEqual&lt;string&gt;("a&lt;br/&gt;b c, d", result);
+    Assert.AreEqual<string&gt;("a<br/&gt;b c, d", result);
 }</pre>
 
 <div class="note">
   Note: The code in this function follows a common pattern for creating tests, called the <a href="http://c2.com/cgi/wiki?ArrangeActAssert" title="Read about the AAA pattern">AAA (Arrange, Act, Assert) pattern</a>. This is one more method I use to keep my tests consistent (and consistency improves maintainability and readability), though I usually do not include the comments.
 </div>
 
-Our test method calls the new GetFormattedAddress method with values for all of the arguments but address2, which is passed as an empty string. Then we use the Assert.AreEqual(_expected_,_actual_) method to tell the test framework that we expect the result to match the string <code class="codespan">"a&lt;br /&gt;b c, d"</code>. On running this test (Ctrl+R, A), Visual Studio will give us a little green checkmark to indicate that the code met our expectations (no Assertions were in error).
+Our test method calls the new GetFormattedAddress method with values for all of the arguments but address2, which is passed as an empty string. Then we use the Assert.AreEqual(_expected_,_actual_) method to tell the test framework that we expect the result to match the string <code class="codespan">"a<br /&gt;b c, d"</code>. On running this test (Ctrl+R, A), Visual Studio will give us a little green checkmark to indicate that the code met our expectations (no Assertions were in error).
 
 _Note: if you are following along with this project in Visual Studio, you will need to add a &#8220;using UnitTestPresentation;&#8221; to the top of your test class_
 
@@ -250,7 +250,7 @@ public void GetFormattedText_Address2Null_ReturnsTwoHtmlLines() {
 
     string result = CustomerInformation.GetFormattedAddress("a", null, "b", "c", "d");
 
-    Assert.AreEqual&lt;string&gt;("a&lt;br/&gt;b c, d", result);
+    Assert.AreEqual<string&gt;("a<br/&gt;b c, d", result);
 }
 
 [TestMethod]
@@ -258,7 +258,7 @@ public void GetFormattedText_Address2Whitespace_ReturnsTwoHtmlLines() {
 
     string result = CustomerInformation.GetFormattedAddress("a", "  ", "b", "c", "d");
 
-    Assert.AreEqual&lt;string&gt;("a&lt;br/&gt;b c, d", result);
+    Assert.AreEqual<string&gt;("a<br/&gt;b c, d", result);
 }</pre>
 
 And when we run our tests this time, we can see that the last one is the case where our function isn&#8217;t working correctly.

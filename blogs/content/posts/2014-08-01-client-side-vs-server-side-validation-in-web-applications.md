@@ -24,22 +24,22 @@ When we start out adding validation, we want to make it as easy as possible for 
 
 Here&#8217;s a sample form using ASP.Net and Razor:
 
-<pre>&lt;form method="post" action="/default/saveRecord"&gt;
-	Id: @Model.Id &lt;input type="hidden" name="recordId" value="@Model.Id" /&gt;&lt;br /&gt;
-	Content: &lt;input type="text" name="recordValue" value="@Model.RecordValue" /&gt;&lt;br /&gt;
-	&lt;input type="submit" value="Save Changes" /&gt;
-&lt;/form&gt;</pre>
+<pre><form method="post" action="/default/saveRecord"&gt;
+	Id: @Model.Id <input type="hidden" name="recordId" value="@Model.Id" /&gt;<br /&gt;
+	Content: <input type="text" name="recordValue" value="@Model.RecordValue" /&gt;<br /&gt;
+	<input type="submit" value="Save Changes" /&gt;
+</form&gt;</pre>
 
 We want to make the text input required, so with a little jQuery Validation, we now have:
 
-<pre>&lt;form method="post" action="/default/saveRecord" id="recordForm"&gt;
-	Id: @Model.Id &lt;input type="hidden" name="recordId" value="@Model.Id" /&gt;&lt;br /&gt;
-	Content: &lt;input type="text" name="recordValue" value="@Model.RecordValue" required/&gt;&lt;br /&gt;
-	&lt;input type="submit" value="Save Changes" /&gt;
-&lt;/form&gt;
-&lt;script type="text/javascript"&gt;
+<pre><form method="post" action="/default/saveRecord" id="recordForm"&gt;
+	Id: @Model.Id <input type="hidden" name="recordId" value="@Model.Id" /&gt;<br /&gt;
+	Content: <input type="text" name="recordValue" value="@Model.RecordValue" required/&gt;<br /&gt;
+	<input type="submit" value="Save Changes" /&gt;
+</form&gt;
+<script type="text/javascript"&gt;
 	$('#recordForm').validate();
-&lt;/script&gt;</pre>
+</script&gt;</pre>
 
 That was an easy sample to write and more realistic forms aren&#8217;t much more challenging. It stops the user from submitting invalid data and helps them correct it.
 
@@ -61,12 +61,12 @@ On the server, we can perform the same checks we did on the client to ensure the
 
 Client:
 
-<pre>&lt;form method="post" action="/default/saveRecord"&gt;
+<pre><form method="post" action="/default/saveRecord"&gt;
 	@Html.AntiForgeryToken()
-	Id: @Model.Id &lt;input type="hidden" name="recordId" value="@Model.Id" /&gt;&lt;br /&gt;
-	Content: &lt;input type="text" name="recordValue" value="@Model.RecordValue"/&gt;&lt;br /&gt;
-	&lt;input type="submit" value="Save Changes" /&gt;
-&lt;/form&gt;</pre>
+	Id: @Model.Id <input type="hidden" name="recordId" value="@Model.Id" /&gt;<br /&gt;
+	Content: <input type="text" name="recordValue" value="@Model.RecordValue"/&gt;<br /&gt;
+	<input type="submit" value="Save Changes" /&gt;
+</form&gt;</pre>
 
 Server:
 
@@ -74,7 +74,7 @@ Server:
 [ValidateAntiForgeryToken]
 public ActionResult SaveRecord(int recordId, string recordValue)
 {
-    var errors = new List&lt;string&gt;();
+    var errors = new List<string&gt;();
     if (!_backendLogic.IsRecordIdValid(recordId))
         errors.Add("The specified record id is not valid");
     if (string.IsNullOrWhiteSpace(recordValue))

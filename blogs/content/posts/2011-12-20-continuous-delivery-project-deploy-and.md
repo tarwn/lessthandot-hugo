@@ -121,10 +121,10 @@ With the version number stored in my application, I can output that value in the
 **MVCMusicStore/Views/Shared/_Layout.cshtml**
 
 <pre>...
-&lt;div id="footer"&gt;
-	&lt;span class="version"&gt;Version: @HttpContext.Current.Application["BuildVersion"]&lt;/span&gt;
-	built with &lt;a href="http://asp.net/mvc"&gt;ASP.NET MVC 3&lt;/a&gt;
-&lt;/div&gt;
+<div id="footer"&gt;
+	<span class="version"&gt;Version: @HttpContext.Current.Application["BuildVersion"]</span&gt;
+	built with <a href="http://asp.net/mvc"&gt;ASP.NET MVC 3</a&gt;
+</div&gt;
 ...</pre>
 
 With the application will displaying the value from the BuildVersion file, all that is left is to insert a step in my job to write the current build number to the file before the project is built and packaged up.
@@ -153,11 +153,11 @@ A recent sample of the output looks like this:
   
 **SmokeTestResults.xml**
 
-<pre>&lt;testsuite classname="SmokeTests.BasicTests" failures="0" name="SmokeTests.BasicTests" skipped="0" tests="3" time="40.5312"&gt;
-	&lt;testcase name="BasicGet" time="40.4375"&gt;&lt;/testcase&gt;
-	&lt;testcase name="VersionStamp" time="0.0625"&gt;&lt;/testcase&gt;
-	&lt;testcase name="Genre Content" time="0"&gt;&lt;/testcase&gt;
-&lt;/testsuite&gt;</pre>
+<pre><testsuite classname="SmokeTests.BasicTests" failures="0" name="SmokeTests.BasicTests" skipped="0" tests="3" time="40.5312"&gt;
+	<testcase name="BasicGet" time="40.4375"&gt;</testcase&gt;
+	<testcase name="VersionStamp" time="0.0625"&gt;</testcase&gt;
+	<testcase name="Genre Content" time="0"&gt;</testcase&gt;
+</testsuite&gt;</pre>
 
 With the script built, all I need to do is add a final &#8220;Windows Batch Command&#8221; step to my job to execute this script.
 

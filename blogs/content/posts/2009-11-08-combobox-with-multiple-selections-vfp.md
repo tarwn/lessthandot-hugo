@@ -42,7 +42,7 @@ DEFINE CLASS listbox_collapsable AS listbox
 	*-- Height of the listbox in its closed state
 	noriginalheight = 22
 	*-- XML Metadata for customizable properties
-	_memberdata = [&lt;vfpdata&gt;&lt;memberdata name="noriginalheight" display="nOriginalHeight"&gt;&lt;memberdata name="cselecteditems" display="cSelectedItems"&gt;&lt;memberdata name="cselecteditemslist" display="cSelectedItemsList"&gt;&lt;memberdata name="ccurrentlyselected" display="cCurrentlySelected"&gt;&lt;memberdata name="refreshdependents" display="RefreshDependents"&gt;&lt;memberdata name="openlist" display="OpenList"&gt;&lt;memberdata name="closelist" display="CloseList"&gt;&lt;memberdata name="nselecteditemforecolor" display="nSelectedItemForeColor"&gt;&lt;memberdata name="nselecteditembackcolor" display="nSelectedItemBackColor"&gt;&lt;memberdata name="restoreselections" display="RestoreSelections"&gt;&lt;memberdata name="arrrowsource" display="arrRowSource"&gt;&lt;memberdata name="clearselections" display="ClearSelections"&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/memberdata&gt;&lt;/vfpdata&gt;]
+	_memberdata = [<vfpdata><memberdata name="noriginalheight" display="nOriginalHeight"><memberdata name="cselecteditems" display="cSelectedItems"><memberdata name="cselecteditemslist" display="cSelectedItemsList"><memberdata name="ccurrentlyselected" display="cCurrentlySelected"><memberdata name="refreshdependents" display="RefreshDependents"><memberdata name="openlist" display="OpenList"><memberdata name="closelist" display="CloseList"><memberdata name="nselecteditemforecolor" display="nSelectedItemForeColor"><memberdata name="nselecteditembackcolor" display="nSelectedItemBackColor"><memberdata name="restoreselections" display="RestoreSelections"><memberdata name="arrrowsource" display="arrRowSource"><memberdata name="clearselections" display="ClearSelections"></memberdata></memberdata></memberdata></memberdata></memberdata></memberdata></memberdata></memberdata></memberdata></memberdata></memberdata></memberdata></vfpdata>]
 	*-- Comma Delimited list of selected items
 	cselecteditems = ""
 	*-- Comma-delimited list of selected items. The difference with the cSelectedItems is that items are put in quotes for character values
@@ -135,7 +135,7 @@ DEFINE CLASS listbox_collapsable AS listbox
 		IF NOT EMPTY(taSelectedItems[1])
 		  FOR lnI = 1 TO ALEN(taSelectedItems,1)
 		     lnIndex = ASCAN(this.arrRowSource, taSelectedItems[m.lnI],1,this.ListCount,1,8) 
-		     IF m.lnIndex &gt; 0
+		     IF m.lnIndex > 0
 		        this.Selected(m.lnIndex,1) = .T.
 		     ENDIF
 		  NEXT
@@ -222,7 +222,7 @@ DEFINE CLASS listbox_collapsable AS listbox
 
 			.TOP = THIS.TOP+INT((THIS.HEIGHT-20)/2)
 
-			IF THIS.ANCHOR &lt;&gt; 0
+			IF THIS.ANCHOR <> 0
 				.ANCHOR = 8 && move to the right
 			ENDIF
 

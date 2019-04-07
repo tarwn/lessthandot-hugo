@@ -36,7 +36,7 @@ Beyond the basics of her blog post, here are the steps I went through to view a 
 
 I issue DBCC IND to view a list of pages that belong to a table or index. The syntax for the command is:
 
-<pre>DBCC IND ('DBName', 'TableName', &lt;indexnumber&gt;);</pre>
+<pre>DBCC IND ('DBName', 'TableName', <indexnumber&gt;);</pre>
 
 I run the command:
 

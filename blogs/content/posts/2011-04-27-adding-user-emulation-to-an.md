@@ -60,9 +60,9 @@ So emulation is a useful tool as well as a neat trick. Like many things, it is g
 		End Get
 	End Property
 
-	''' &lt;summary&gt;
+	''' <summary&gt;
 	''' Property used for accessing current's users information for auditing
-	''' &lt;/summary&gt;
+	''' </summary&gt;
 	Public ReadOnly Property UserIdForAuditing As Integer
 		Get
 			If Me.LoggedInUser IsNot Nothing Then Return Me.LoggedInUser.UserID

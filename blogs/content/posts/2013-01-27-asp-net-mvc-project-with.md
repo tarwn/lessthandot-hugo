@@ -162,9 +162,9 @@ namespace CardNumbers.Objects
           }
       }
 
-/// &lt;summary&gt;
+/// <summary&gt;
 /// Client class (Client No, Client Name, Address, Contact1, Contact2 info, Created By, Modified By (operator and date)
-/// &lt;/summary&gt;
+/// </summary&gt;
     public class Client
     {
         public Client()
@@ -217,9 +217,9 @@ namespace CardNumbers.Objects
         [DisplayName("Modified on")]
         public DateTime? ModifiedOn { get; set; }
 
-        public virtual ICollection&lt;ClientOrder&gt; ClientOrders { get; set; }
+        public virtual ICollection<ClientOrder&gt; ClientOrders { get; set; }
         
-        public virtual ICollection&lt;Reorder&gt; Reorders { get; set; }
+        public virtual ICollection<Reorder&gt; Reorders { get; set; }
     }
 }</pre>
 
@@ -240,7 +240,7 @@ namespace CardNumbers.Data
 {
     public interface IClientRepository:IDisposable
     {
-        IQueryable&lt;Client&gt; Clients { get; }
+        IQueryable<Client&gt; Clients { get; }
         Client GetClientById(int clientId);
         void Commit();
 
@@ -274,7 +274,7 @@ namespace CardNumbers.Data
             this.context = context;
         }        
 
-        IQueryable&lt;Client&gt; IClientRepository.Clients
+        IQueryable<Client&gt; IClientRepository.Clients
         {
             get { return this.context.Clients; }
         }
@@ -352,10 +352,10 @@ namespace CardNumbers.Data
     public class CardNumbersContext : DbContext
 
     {
-        public DbSet&lt;Client&gt; Clients { get; set; }
-        public DbSet&lt;Operator&gt; Operators { get; set; }
-        public DbSet&lt;Reorder&gt; Reorders { get; set; }
-        public DbSet&lt;ClientOrder&gt; ClientOrders { get; set; }
+        public DbSet<Client&gt; Clients { get; set; }
+        public DbSet<Operator&gt; Operators { get; set; }
+        public DbSet<Reorder&gt; Reorders { get; set; }
+        public DbSet<ClientOrder&gt; ClientOrders { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -383,26 +383,26 @@ So, I will show you how my Client View now looks and the relevant portions of Cl
 <pre>@model CardNumbers.Models.ClientViewModel
 
 @section scripts {
-    &lt;script src="@Url.Content("~/Scripts/Clients.js")" type="text/javascript" &gt;&lt;/script&gt;
+    <script src="@Url.Content("~/Scripts/Clients.js")" type="text/javascript" &gt;</script&gt;
 }
 
-&lt;form id="frmClientsSearch"&gt;
-    &lt;label for="clientNo"&gt;Client No: &lt;/label&gt;
-    &lt;input type="number" name="searchClientNo" class="numericOnly" /&gt;&lt;br /&gt;
-    &lt;label for="clientName"&gt;Client Name: &lt;/label&gt;
-    &lt;input type="search" size="25" value="Please enter the search value" class="SelectOnEntry"
+<form id="frmClientsSearch"&gt;
+    <label for="clientNo"&gt;Client No: </label&gt;
+    <input type="number" name="searchClientNo" class="numericOnly" /&gt;<br /&gt;
+    <label for="clientName"&gt;Client Name: </label&gt;
+    <input type="search" size="25" value="Please enter the search value" class="SelectOnEntry"
         name="searchClientName" /&gt;
 
-    &lt;input type="button" id="btnClientsSearch" value="Find / Refresh" /&gt;
-&lt;/form&gt;
-&lt;div style="padding-left: 150px; padding-top: 50px; padding-bottom: 50px;" id="ClientsResults"&gt;
-    &lt;table id="flexClients" style="display: none"&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
+    <input type="button" id="btnClientsSearch" value="Find / Refresh" /&gt;
+</form&gt;
+<div style="padding-left: 150px; padding-top: 50px; padding-bottom: 50px;" id="ClientsResults"&gt;
+    <table id="flexClients" style="display: none"&gt;
+    </table&gt;
+</div&gt;
 
- &lt;div id="add-edit-dialog" style="display: none" title="Add / Edit Client"&gt; 
+ <div id="add-edit-dialog" style="display: none" title="Add / Edit Client"&gt; 
     @Html.Partial("_ClientForm", Model)
-&lt;/div&gt;</pre>
+</div&gt;</pre>
 
 As you can see, this main view has just few controls and lines of code. At the top I display two search controls and at the bottom the flexigrid placeholder and the dialog (invisible initially) for my modal Add/Edit dialogs.
 
@@ -474,7 +474,7 @@ And this is how Client method of the controller looks like (I separated this met
         public ActionResult Client(FormCollection formValues)
         {
             // Assume we want to select everything
-            var clients = Db.Clients; // Should set type of clients to IQueryable&lt;Clients&gt;
+            var clients = Db.Clients; // Should set type of clients to IQueryable<Clients&gt;
             int searchClientNo = 0;
             
             int.TryParse(formValues["searchClientNo"], out searchClientNo );
@@ -519,7 +519,7 @@ And this is how Client method of the controller looks like (I separated this met
 
         }
 
-        private JsonResult CreateFlexiJson(IEnumerable&lt;Client&gt; items, int page, int total)
+        private JsonResult CreateFlexiJson(IEnumerable<Client&gt; items, int page, int total)
         {
             return Json(
                     new
@@ -544,13 +544,13 @@ First I want to show the partial view _ClientForm. There is nothing too interest
 
 <pre>@using CardNumbers.Helper
 @model CardNumbers.Models.ClientViewModel
-  &lt;form id="add-edit-form"&gt;
-    &lt;fieldset&gt;
-        &lt;legend&gt;Client Info&lt;/legend&gt;
+  <form id="add-edit-form"&gt;
+    <fieldset&gt;
+        <legend&gt;Client Info</legend&gt;
 
         @Html.ValidationSummary(true)
        
-        &lt;input type="hidden" id="fntype" name="fntype"&gt;
+        <input type="hidden" id="fntype" name="fntype"&gt;
 
         @Html.HiddenFor(m =&gt; m.ClientId)
         @Html.EditorFor(m =&gt; m.ClientNumber, EditorTemplate.TextBox)
@@ -559,27 +559,27 @@ First I want to show the partial view _ClientForm. There is nothing too interest
 
         @Html.EditorFor(m =&gt; m.Client.Address, EditorTemplate.EditBox)
 
-        &lt;div id="ContactsInfo"&gt;
+        <div id="ContactsInfo"&gt;
 
-            &lt;div id="Contact1"&gt;
+            <div id="Contact1"&gt;
 
                 @Html.EditorFor(m =&gt; m.Client.Contact1)
 
-            &lt;/div&gt;
+            </div&gt;
 
-            &lt;div id="Contact2"&gt;
+            <div id="Contact2"&gt;
 
                 @Html.EditorFor(m =&gt; m.Client.Contact2)
-            &lt;/div&gt;
-        &lt;/div&gt;
+            </div&gt;
+        </div&gt;
 
-       @* &lt;div id="SaveCancel" class="float-right"&gt;
-            &lt;button id="btnSave"&gt;Save&lt;/button&gt;
-            &lt;button type="reset" id ="btnCancel" name="Reset"&gt;Cancel&lt;/button&gt;
-        &lt;/div&gt;*@
-    &lt;/fieldset&gt;
+       @* <div id="SaveCancel" class="float-right"&gt;
+            <button id="btnSave"&gt;Save</button&gt;
+            <button type="reset" id ="btnCancel" name="Reset"&gt;Cancel</button&gt;
+        </div&gt;*@
+    </fieldset&gt;
 
- &lt;/form&gt;</pre>
+ </form&gt;</pre>
 
 This is the Clients.js relevant code which drives that Add, Edit and Delete (for completeness) buttons:
 

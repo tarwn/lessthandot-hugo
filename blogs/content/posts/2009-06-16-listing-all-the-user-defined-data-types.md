@@ -22,7 +22,7 @@ If you have a bunch of User-Defined Data Types in your databases and you would l
 On SQL Server 2000 and up
 
 <pre>select * from systypes
-where xusertype &gt; 256</pre>
+where xusertype > 256</pre>
 
 or
 
@@ -74,8 +74,8 @@ We can also use the SysTypes (SQL Server 2000 and up) and Sys.Types system table
 <pre>SELECT s.name,s2.name,s2.length
  FROM SysTypes s
 join SysTypes s2 on s.xtype = s2.xtype
-WHERE s.xusertype &gt; 256
-and s2.xusertype &lt;= 256</pre>
+WHERE s.xusertype > 256
+and s2.xusertype <= 256</pre>
 
 output
 

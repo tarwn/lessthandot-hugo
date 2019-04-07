@@ -74,7 +74,7 @@ If you use >= and < then you get exactly what you need
 
 <pre>SELECT * 
 FROM SomeDates 
-WHERE DateColumn &gt;= '20061001' AND DateColumn &lt; '20061003' 
+WHERE DateColumn >= '20061001' AND DateColumn < '20061003' 
 ORDER BY DateColumn </pre>
 
 <pre>--Clean up 

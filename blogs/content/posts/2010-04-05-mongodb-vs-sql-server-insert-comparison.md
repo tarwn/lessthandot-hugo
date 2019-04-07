@@ -30,7 +30,7 @@ GO</pre>
 Here is the script he used.
 
 <pre>DECLARE @id int = 1
-WHILE (@id &lt; 500001)
+WHILE (@id < 500001)
 BEGIN
     INSERT INTO MongoCompare VALUES (newid(), @id)
     SET @id+=1
@@ -42,7 +42,7 @@ Now if I was to write that code I would write it with an explicit transaction an
 <pre>SET NOCOUNT ON
 BEGIN TRAN
 DECLARE @id int = 1
-WHILE (@id &lt; 500001)
+WHILE (@id < 500001)
 BEGIN
     INSERT INTO MongoCompare VALUES (newid(), @id)
     SET @id+=1

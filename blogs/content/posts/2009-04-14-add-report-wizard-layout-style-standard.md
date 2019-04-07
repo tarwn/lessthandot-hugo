@@ -27,41 +27,41 @@ Open StyleTemplates.xml for editing.
 
 It&#8217;s pretty straight forward and I bet you already see what to do. For this example I&#8217;ll add a simple style
 
-<pre>&lt;StyleTemplate Name="CompanyStandard"&gt;
-		&lt;Label&gt;Company Standard Format&lt;/Label&gt;
-		&lt;Styles&gt;
-			&lt;Style Name="Title"&gt;
-				&lt;BackgroundColor&gt;DarkGray&lt;/BackgroundColor&gt;
-				&lt;FontFamily&gt;Verdana&lt;/FontFamily&gt;
-				&lt;FontSize&gt;18pt&lt;/FontSize&gt;
-				&lt;Color&gt;#000000&lt;/Color&gt;
-			&lt;/Style&gt;
-			&lt;Style Name="Table"&gt;&lt;/Style&gt;
-			&lt;Style Name="Table Header"&gt;
-				&lt;BackgroundColor&gt;Gainsboro&lt;/BackgroundColor&gt;
-				&lt;FontFamily&gt;Verdana&lt;/FontFamily&gt;
-				&lt;FontSize&gt;10pt&lt;/FontSize&gt;
-				&lt;FontWeight&gt;Bold&lt;/FontWeight&gt;
-				&lt;Color&gt;#000000&lt;/Color&gt;
-				&lt;BorderStyle&gt;
-					&lt;Default&gt;Solid&lt;/Default&gt;
-				&lt;/BorderStyle&gt;
-				&lt;BorderColor&gt;
-					&lt;Default&gt;DarkGray&lt;/Default&gt;
-				&lt;/BorderColor&gt;
-			&lt;/Style&gt;
-			&lt;Style Name="Detail"&gt;
-				&lt;FontFamily&gt;Verdana&lt;/FontFamily&gt;
-				&lt;FontSize&gt;9pt&lt;/FontSize&gt;
-				&lt;BorderStyle&gt;
-					&lt;Default&gt;Solid&lt;/Default&gt;
-				&lt;/BorderStyle&gt;
-				&lt;BorderColor&gt;
-					&lt;Default&gt;DarkGray&lt;/Default&gt;
-				&lt;/BorderColor&gt;
-			&lt;/Style&gt;
-		&lt;/Styles&gt;
-	&lt;/StyleTemplate&gt;</pre>
+<pre><StyleTemplate Name="CompanyStandard">
+		<Label>Company Standard Format</Label>
+		<Styles>
+			<Style Name="Title">
+				<BackgroundColor>DarkGray</BackgroundColor>
+				<FontFamily>Verdana</FontFamily>
+				<FontSize>18pt</FontSize>
+				<Color>#000000</Color>
+			</Style>
+			<Style Name="Table"></Style>
+			<Style Name="Table Header">
+				<BackgroundColor>Gainsboro</BackgroundColor>
+				<FontFamily>Verdana</FontFamily>
+				<FontSize>10pt</FontSize>
+				<FontWeight>Bold</FontWeight>
+				<Color>#000000</Color>
+				<BorderStyle>
+					<Default>Solid</Default>
+				</BorderStyle>
+				<BorderColor>
+					<Default>DarkGray</Default>
+				</BorderColor>
+			</Style>
+			<Style Name="Detail">
+				<FontFamily>Verdana</FontFamily>
+				<FontSize>9pt</FontSize>
+				<BorderStyle>
+					<Default>Solid</Default>
+				</BorderStyle>
+				<BorderColor>
+					<Default>DarkGray</Default>
+				</BorderColor>
+			</Style>
+		</Styles>
+	</StyleTemplate></pre>
 
 Save that in there and close the XML file.
 

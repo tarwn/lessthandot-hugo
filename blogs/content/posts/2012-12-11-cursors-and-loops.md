@@ -172,7 +172,7 @@ FROM sys.tables
 
 DECLARE @TableName VARCHAR(300)
 DECLARE @loopid INT = 1, @maxID int = (SELECT MAX(id) FROM #temp)
-WHILE @loopid &lt;= @maxID
+WHILE @loopid <= @maxID
 BEGIN
 
 SELECT @TableName = name FROM #temp WHERE id = @loopid

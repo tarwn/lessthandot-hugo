@@ -51,7 +51,7 @@ GO</pre>
 Executing our first query again in another form:
 
 <pre>SELECT OrderDate FROM Sales.SalesOrderHeader
-WHERE OrderDate &gt;= '20060101' AND OrderDate &lt;='20061231';
+WHERE OrderDate &gt;= '20060101' AND OrderDate <='20061231';
 GO</pre>
 
 Results in the following Execution Plan:
@@ -60,7 +60,7 @@ Results in the following Execution Plan:
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction2.png?mtime=1359036029"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction2.png?mtime=1359036029" width="771" height="143" /></a>
 </div>
 
-You see that the query is internally translated to <code class="codespan">SELECT [OrderDate] FROM [Sales].[SalesOrderHeader] WHERE [OrderDate]&lt;=@1 AND [OrderDate]&lt;=@2&gt;</code> just like the first query using the BETWEEN keyword. The big change is in the execution plan. Since we created an index on the OrderDate column, SQL Server is now using an Index Seek on our index to fetch the results.
+You see that the query is internally translated to <code class="codespan">SELECT [OrderDate] FROM [Sales].[SalesOrderHeader] WHERE [OrderDate]<=@1 AND [OrderDate]<=@2&gt;</code> just like the first query using the BETWEEN keyword. The big change is in the execution plan. Since we created an index on the OrderDate column, SQL Server is now using an Index Seek on our index to fetch the results.
 
 Since we are looking for all the dates in 2006, you might want to consider using the YEAR function. The YEAR function returns only the YEAR part of a date(time) value:
 

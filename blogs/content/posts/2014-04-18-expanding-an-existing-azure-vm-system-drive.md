@@ -33,7 +33,7 @@ So, with a big fat &#8220;this worked on my machine and might blow up yours&#822
   3. Backup the drive 
       * Get azure-cli
       * use the following command to copy the existing VHD into a new location super-fast: 
-        <pre>azure vm disk upload &lt;source-path&gt; &lt;target-blob-url&gt; &lt;target-storage-account-key&gt;</pre>
+        <pre>azure vm disk upload <source-path&gt; <target-blob-url&gt; <target-storage-account-key&gt;</pre>
         
         _Reference: <http://michaelwasham.com/2012/08/07/copying-vhds-and-other-blobs-between-storage-accounts/>_ </li> </ul> </li> 
         
@@ -47,7 +47,7 @@ So, with a big fat &#8220;this worked on my machine and might blow up yours&#822
 		  
                 <http://blog.maartenballiauw.be/post/2013/01/07/Tales-from-the-trenches-resizing-a-Windows-Azure-virtual-disk-the-smooth-way.aspx>
               * Use the WindowsAzureDiskResizer with a command like: 
-                <pre>E:\Downloads\WindowsAzureDiskResizer-1.0.0.0&gt;WindowsAzureDiskResizer.exe 120 "&lt;URL for blob here&gt;"</pre>
+                <pre>E:\Downloads\WindowsAzureDiskResizer-1.0.0.0&gt;WindowsAzureDiskResizer.exe 120 "<URL for blob here&gt;"</pre>
                 
                 Output will look like:
                 

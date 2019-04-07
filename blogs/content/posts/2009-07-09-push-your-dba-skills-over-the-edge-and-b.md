@@ -52,14 +52,14 @@ So here is that method
                 string[] files = Directory.GetFiles(source);
                 string[] destfiles = Directory.GetFiles(destination);
 
-                for (int i = 0; i &lt; files.Length; i++)
+                for (int i = 0; i < files.Length; i++)
                 {
                     FileInfo f = new FileInfo(files[i]);
 
 
-                    if (((f.ToString().IndexOf("Full") &gt; 0) || (f.ToString().IndexOf("Diff") &gt; 0)) 
+                    if (((f.ToString().IndexOf("Full") > 0) || (f.ToString().IndexOf("Diff") > 0)) 
                                     && (SearchArr(destfiles, f.Name.ToString()) == false)
-                                    && (f.CreationTime &gt;= System.DateTime.Now.AddDays(-7)))
+                                    && (f.CreationTime >= System.DateTime.Now.AddDays(-7)))
                     {
                         File.Copy(files[i], destination + f.Name);
                         if (!EventLog.SourceExists(sSource))
@@ -87,7 +87,7 @@ And my supporting methods for searching arrays and grabbing the file names are
         {
             bool match = false;
 
-            for (int i = 0; i &lt; arr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
                 if (GetFileName(arr[i].ToString()) == search_string)
                 {

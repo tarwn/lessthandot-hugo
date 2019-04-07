@@ -127,32 +127,32 @@ So after much wrestling, I decided to map the WCAT data to a new XML file purely
 
 **Transform.xsl**
 
-<pre>&lt;?xml version="1.0"?&gt;
+<pre><?xml version="1.0"?&gt;
 
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
-&lt;xsl:template match="/"&gt;
-	&lt;result&gt;
-		&lt;persecond&gt;
-			&lt;TransactionsPerSecond&gt;&lt;xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="tps"]' /&gt;&lt;/TransactionsPerSecond&gt;
-			&lt;RequestsPerSecond&gt;&lt;xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="rps"]' /&gt;&lt;/RequestsPerSecond&gt;
-		&lt;/persecond&gt;
-		&lt;total&gt;
-			&lt;Transactions&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="transactions"]' /&gt;&lt;/Transactions&gt;
-			&lt;Requests&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="requests"]' /&gt;&lt;/Requests&gt;
-			&lt;Errors&gt;&lt;xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="terrors"]' /&gt;&lt;/Errors&gt;
-		&lt;/total&gt;
-		&lt;responsetime&gt;
-			&lt;Average&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_avg"]' /&gt;&lt;/Average&gt;
-			&lt;Minimum&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_min"]' /&gt;&lt;/Minimum&gt;
-			&lt;NinetyFivePercent&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_95"]' /&gt;&lt;/NinetyFivePercent&gt;
-			&lt;NinetyNinePercent&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_99"]' /&gt;&lt;/NinetyNinePercent&gt;
-			&lt;Maximum&gt;&lt;xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_max"]' /&gt;&lt;/Maximum&gt;
-		&lt;/responsetime&gt;
-	&lt;/result&gt;
-&lt;/xsl:template&gt;
+<xsl:template match="/"&gt;
+	<result&gt;
+		<persecond&gt;
+			<TransactionsPerSecond&gt;<xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="tps"]' /&gt;</TransactionsPerSecond&gt;
+			<RequestsPerSecond&gt;<xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="rps"]' /&gt;</RequestsPerSecond&gt;
+		</persecond&gt;
+		<total&gt;
+			<Transactions&gt;<xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="transactions"]' /&gt;</Transactions&gt;
+			<Requests&gt;<xsl:value-of select='//section[@name="details"]/table[@name="requeststats"]/item[1]/data[@name="requests"]' /&gt;</Requests&gt;
+			<Errors&gt;<xsl:value-of select='//section[@name="summary"]/table[@name="summarydata"]/item/data[@name="terrors"]' /&gt;</Errors&gt;
+		</total&gt;
+		<responsetime&gt;
+			<Average&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_avg"]' /&gt;</Average&gt;
+			<Minimum&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_min"]' /&gt;</Minimum&gt;
+			<NinetyFivePercent&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_95"]' /&gt;</NinetyFivePercent&gt;
+			<NinetyNinePercent&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_99"]' /&gt;</NinetyNinePercent&gt;
+			<Maximum&gt;<xsl:value-of select='//section[@name="details"]/table[@name="histogram"]/item[2]/data[@name="response_time_max"]' /&gt;</Maximum&gt;
+		</responsetime&gt;
+	</result&gt;
+</xsl:template&gt;
 
-&lt;/xsl:stylesheet&gt;</pre>
+</xsl:stylesheet&gt;</pre>
 
 And then I can use a quick VBScript file to execute the XSL against the WCAT log.xml file:
 
@@ -171,7 +171,7 @@ xsl.load("transform.xsl")
 Dim fso, fs
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set fs = fso.CreateTextFile("result.xml",true)
-fs.Write(Replace(xml.transformNode(xsl),"&lt;?xml version=""1.0"" encoding=""UTF-16""?&gt;",""))
+fs.Write(Replace(xml.transformNode(xsl),"<?xml version=""1.0"" encoding=""UTF-16""?&gt;",""))
 fs.Close
 Set fs = Nothing
 Set fso = Nothing</pre>
@@ -180,24 +180,24 @@ Which nets me a results file, like so:
 
 **result.xml**
 
-<pre>&lt;result&gt;
-	&lt;persecond&gt;
-		&lt;TransactionsPerSecond&gt;1.80&lt;/TransactionsPerSecond&gt;
-		&lt;RequestsPerSecond&gt;29.56&lt;/RequestsPerSecond&gt;
-	&lt;/persecond&gt;
-	&lt;total&gt;
-		&lt;Transactions&gt;216&lt;/Transactions&gt;
-		&lt;Requests&gt;3547&lt;/Requests&gt;
-		&lt;Errors&gt;3&lt;/Errors&gt;
-	&lt;/total&gt;
-	&lt;responsetime&gt;
-		&lt;Average&gt;270&lt;/Average&gt;
-		&lt;Minimum&gt;0&lt;/Minimum&gt;
-		&lt;NinetyFivePercent&gt;912&lt;/NinetyFivePercent&gt;
-		&lt;NinetyNinePercent&gt;1536&lt;/NinetyNinePercent&gt;
-		&lt;Maximum&gt;2563&lt;/Maximum&gt;
-	&lt;/responsetime&gt;
-&lt;/result&gt;</pre>
+<pre><result&gt;
+	<persecond&gt;
+		<TransactionsPerSecond&gt;1.80</TransactionsPerSecond&gt;
+		<RequestsPerSecond&gt;29.56</RequestsPerSecond&gt;
+	</persecond&gt;
+	<total&gt;
+		<Transactions&gt;216</Transactions&gt;
+		<Requests&gt;3547</Requests&gt;
+		<Errors&gt;3</Errors&gt;
+	</total&gt;
+	<responsetime&gt;
+		<Average&gt;270</Average&gt;
+		<Minimum&gt;0</Minimum&gt;
+		<NinetyFivePercent&gt;912</NinetyFivePercent&gt;
+		<NinetyNinePercent&gt;1536</NinetyNinePercent&gt;
+		<Maximum&gt;2563</Maximum&gt;
+	</responsetime&gt;
+</result&gt;</pre>
 
 The last piece of the equation is to configure the Plot in the load test job. Here is an example of one graph configuration (the full set is pretty long):
 

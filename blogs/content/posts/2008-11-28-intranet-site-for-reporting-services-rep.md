@@ -28,24 +28,24 @@ Change the web reference name say ReportingService and click Add Web Reference. 
 
 Once the reference is added,open the web.config file. You’ll notice a new section has been added the web.config
 
-<pre>&lt;appSettings&gt;
-	&lt;add key="Reporting.ReportService" value="http://reportservername/ReportServer/ReportService.asmx"/&gt;
-	&lt;/appSettings&gt;</pre>
+<pre><appSettings>
+	<add key="Reporting.ReportService" value="http://reportservername/ReportServer/ReportService.asmx"/>
+	</appSettings></pre>
 
 3. Next, we need add reference to the Microsoft.ReportViewer.WebForms inorder to use the Report Viewer.Go to Website. Add Reference. Select
   
 Microsoft.ReportViewer.WebForms. Click Add. This would add the Report Viewer to the toolbox and new sections to the web.config.
 
-<pre>&lt;assemblies&gt;
-				&lt;add assembly="Microsoft.ReportViewer.WebForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/&gt;
-			&lt;/assemblies&gt;
-			&lt;buildProviders&gt;
-				&lt;add extension=".rdlc" type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/&gt;
-			&lt;/buildProviders&gt;
+<pre><assemblies>
+				<add assembly="Microsoft.ReportViewer.WebForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+			</assemblies>
+			<buildProviders>
+				<add extension=".rdlc" type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+			</buildProviders>
 
-&lt;httpHandlers&gt;
-			&lt;add verb="*" path="Reserved.ReportViewerWebControl.axd" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/&gt;
-		&lt;/httpHandlers&gt;</pre>
+<httpHandlers>
+			<add verb="*" path="Reserved.ReportViewerWebControl.axd" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+		</httpHandlers></pre>
 
 4. Now we move on to creating a new page and designing the layout of the page. Typically the design would be given by user group but in my case I had to create a layout and present it for approval. As I browsed the report manager, I realized that we had several folders and each folder had reports related to a department or task. I had to organize the reports in such a way it would be easy for novice users to use it without any help. I cannot list all the reports as that would show too many reports to the user (depending on their access level of course) and that can be overwhelming!! Therefore I decided to use 2 combo boxes, one to list the folders and the second to list the reports in each folder. I also have a Run Report button the page. User can select a report in the combo box and click Run Report. This would display the in a new window.
 
@@ -97,7 +97,7 @@ The method returns an array of catalogitem objects based on the user permissions
                 lbReports.Items.Add(new ListItem(item.Name, item.Path));
         }
 
-        if (lbReports.Items.Count &gt; 0)
+        if (lbReports.Items.Count > 0)
             lbReports.Visible = true;
     }
 }</pre>
@@ -143,13 +143,13 @@ Deployment -Where to host?
 
 The simplest way to deploy the application on your intranet is by hosting the site on the reporting server. When the application and the reporting server are on the same machine, enable impersonation in web config file. Doing so will pass the user credentials directly to the report server.
 
-<pre>&lt;authentication mode="Windows"/&gt;
-&lt;identity impersonate="true"/&gt;
-&lt;--To allow only authorized users to access the intranet site, include--&gt;
-&lt;authorization&gt;
-	&lt;allow users="*"/&gt;
-	&lt;deny users="?"/&gt;
-&lt;/authorization&gt;</pre>
+<pre><authentication mode="Windows"/>
+<identity impersonate="true"/>
+<--To allow only authorized users to access the intranet site, include-->
+<authorization>
+	<allow users="*"/>
+	<deny users="?"/>
+</authorization></pre>
 
 When the reporting server and web server are on different machines, Kerberos authenication protocol is required to pass the user credentails from web server to reporting server.
 

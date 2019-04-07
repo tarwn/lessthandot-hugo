@@ -356,7 +356,7 @@ Rather than repetitively initializing page objects in each test and and adding t
 
 	// ... unchanged code ...
 
-	public static TPage GetInstance&lt;TPage&gt;(RemoteWebDriver driver, string expectedTitle) where TPage : PageBase, new() {
+	public static TPage GetInstance<TPage&gt;(RemoteWebDriver driver, string expectedTitle) where TPage : PageBase, new() {
 		TPage pageInstance = new TPage() { 
 			ExpectedTitle = expectedTitle,
 			Driver = driver
@@ -376,7 +376,7 @@ Now we have a single generic call that can create a Page (provided it inherits f
 
 	public ContactPage NavigateContactLink() {
 		ContactLink.Click();
-		return GetInstance&lt;ContactPage&gt;(Driver, "Eli Weinstock-Herman | Tarwn - Contact");
+		return GetInstance<ContactPage&gt;(Driver, "Eli Weinstock-Herman | Tarwn - Contact");
 	}
 
 	// ... unchanged ...
@@ -389,7 +389,7 @@ public void ContactPageReturnsErrorWhenEmailFieldEmpty_PageObjectVersion() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
 		driver.Navigate().GoToUrl("http://www.tiernok.com/");
 
-		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 		
 		contactPage.SendEmail("Selenium Test", "", "This is my Selenium Test Message");
@@ -408,7 +408,7 @@ Converting the remining tests is a straightforward exercise.
 public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
 		driver.Navigate().GoToUrl("http://www.tiernok.com/");
-		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
 		contactPage.SendEmail("Selenium Test", "", "This is my Selenium Test Message");
@@ -421,7 +421,7 @@ public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
 		driver.Navigate().GoToUrl("http://www.tiernok.com/");
-		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
 		contactPage.SendEmail("", EmailAddress, "This is my Selenium Test Message");
@@ -434,7 +434,7 @@ public void ContactPageReturnsErrorWhenNameFieldEmpty() {
 public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
 		driver.Navigate().GoToUrl("http://www.tiernok.com/");
-		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
 		contactPage.SendEmail("Selenium Test", EmailAddress, "");
@@ -447,7 +447,7 @@ public void ContactPageReturnsErrorWhenMessageFieldEmpty() {
 public void ContactPageReturnsSuccessWhenAllFieldsProvided() {
 	using (FirefoxDriver driver = new FirefoxDriver()) {
 		driver.Navigate().GoToUrl("http://www.tiernok.com/");
-		PageBase homepage = PageBase.GetInstance&lt;PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
+		PageBase homepage = PageBase.GetInstance<PageBase&gt;(driver, "Eli Weinstock-Herman | Tarwn");
 		ContactPage contactPage = homepage.NavigateContactLink();
 
 		contactPage.SendEmail("Selenium Test", EmailAddress, "This is my Selenium Message");

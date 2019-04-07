@@ -32,7 +32,7 @@ SquishIt&#8217;s default versioning behavior is to append the versioning hash to
 
 Would render a script tag like this:
 
-<pre>&lt;script type="text/javascript" src="/output/minifyjs_test_output.js?{hashKeyName}={invalidationHash}"&gt;&lt;/script&gt;</pre>
+<pre><script type="text/javascript" src="/output/minifyjs_test_output.js?{hashKeyName}={invalidationHash}"&gt;</script&gt;</pre>
 
 The main disadvantage of this is that it doesn&#8217;t work with all caching proxies, though it seems to be pretty consistently supported in modern browsers. The advantage is that it only requires one set of combined files to be stored on the server. This is usually the best choice for files served locally because it doesn&#8217;t require any cleanup of old files on the server.
 
@@ -48,7 +48,7 @@ When using this strategy, hashes are written directly into the filename. So a bu
 
 Would render a script tag like this:
 
-<pre>&lt;script type="text/javascript" src="/output/minifyjs_test_output{invalidationHash}.js"&gt;&lt;/script&gt;</pre>
+<pre><script type="text/javascript" src="/output/minifyjs_test_output{invalidationHash}.js"&gt;</script&gt;</pre>
 
 The main disadvantage of this strategy is that it tends to accumulate files over time. Because the hash is generated off of the combined file&#8217;s contents, every time a bundled script file or stylesheet changes, a new combined file is created. It eventually becomes necessary to clean this stuff up (The easiest way is to delete all files and reset the app pool, otherwise its usually safe to delete all but the most recent version for each combined file). The main advantage is that it is supported by all caching proxies &#8211; this consistent behavior makes it a good choice for CDN environments where you typically need to manage multiple versions of files anyway.
 
@@ -65,23 +65,23 @@ This new strategy is similar to the filename invalidation strategy when it comes
 
 Would render a script tag like this:
 
-<pre>&lt;script type="text/javascript" src="/output/{invalidationHash}/minifyjs_test_output.js"&gt;&lt;/script&gt;</pre>
+<pre><script type="text/javascript" src="/output/{invalidationHash}/minifyjs_test_output.js"&gt;</script&gt;</pre>
 
 From looking at these URLs it is clear that caching agents will handle this the same way they handled the URLs built with the filename invalidation strategy. But the strategy actually scrubs the hash from the disk location for the bundle, meaning that only one file is generated. We can then set up a rewrite rule to scrub the hash out of the URL for incoming requests like so.
 
 So for IIS we could do something like this in our web.config:
 
-<pre>&lt;system.webServer&gt;
-    &lt;!-- snip --&gt;
-    &lt;rewrite&gt;
-      &lt;rules&gt;
-        &lt;rule name="squishit"&gt;
-          &lt;match url="([S]+)(/r-[w]+/)([S]+)"  /&gt;
-          &lt;action type="Rewrite" url="{R:1}/{R:3}" /&gt;
-        &lt;/rule&gt;
-      &lt;/rules&gt;
-    &lt;/rewrite&gt;
-  &lt;/system.webServer&gt;</pre>
+<pre><system.webServer&gt;
+    <!-- snip --&gt;
+    <rewrite&gt;
+      <rules&gt;
+        <rule name="squishit"&gt;
+          <match url="([S]+)(/r-[w]+/)([S]+)"  /&gt;
+          <action type="Rewrite" url="{R:1}/{R:3}" /&gt;
+        </rule&gt;
+      </rules&gt;
+    </rewrite&gt;
+  </system.webServer&gt;</pre>
 
 To configure these options globally we can add the following in Application_Start:
 

@@ -27,76 +27,76 @@ You will need to create a directory testxml on the c drive and put a bunch of XM
 
 file1.xml
 
-<pre>&lt;MusicCollection&gt;
- &lt;Artist&gt;
-  &lt;ArtistName&gt;Pink Floyd&lt;/ArtistName&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;Wish You Were Here&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;1975&lt;/YearReleased&gt;
-  &lt;/Album&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;The Wall&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;1979&lt;/YearReleased&gt;
-  &lt;/Album&gt;
-  &lt;/Artist&gt;
- &lt;Artist&gt;
-  &lt;ArtistName&gt;Prince&lt;/ArtistName&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;Purple Rain&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;1984&lt;/YearReleased&gt;
-  &lt;/Album&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;Lotusflow3r&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;2009&lt;/YearReleased&gt;
-  &lt;/Album&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;1999&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;1982&lt;/YearReleased&gt;
-  &lt;/Album&gt;
-  &lt;/Artist&gt;
- &lt;Artist&gt;
-  &lt;ArtistName&gt;Incubus&lt;/ArtistName&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;Morning View&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;2001&lt;/YearReleased&gt;
-  &lt;/Album&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;Light Grenades&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;2006&lt;/YearReleased&gt;
-  &lt;/Album&gt;
-  &lt;/Artist&gt;
-  &lt;/MusicCollection&gt;</pre>
+<pre><MusicCollection>
+ <Artist>
+  <ArtistName>Pink Floyd</ArtistName>
+ <Album>
+  <AlbumName>Wish You Were Here</AlbumName>
+  <YearReleased>1975</YearReleased>
+  </Album>
+ <Album>
+  <AlbumName>The Wall</AlbumName>
+  <YearReleased>1979</YearReleased>
+  </Album>
+  </Artist>
+ <Artist>
+  <ArtistName>Prince</ArtistName>
+ <Album>
+  <AlbumName>Purple Rain</AlbumName>
+  <YearReleased>1984</YearReleased>
+  </Album>
+ <Album>
+  <AlbumName>Lotusflow3r</AlbumName>
+  <YearReleased>2009</YearReleased>
+  </Album>
+ <Album>
+  <AlbumName>1999</AlbumName>
+  <YearReleased>1982</YearReleased>
+  </Album>
+  </Artist>
+ <Artist>
+  <ArtistName>Incubus</ArtistName>
+ <Album>
+  <AlbumName>Morning View</AlbumName>
+  <YearReleased>2001</YearReleased>
+  </Album>
+ <Album>
+  <AlbumName>Light Grenades</AlbumName>
+  <YearReleased>2006</YearReleased>
+  </Album>
+  </Artist>
+  </MusicCollection></pre>
 
 file2.xml
 
-<pre>&lt;MusicCollection&gt;
- &lt;Artist&gt;
-  &lt;ArtistName&gt;Pink Floyd&lt;/ArtistName&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;Wish You Were Here&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;1975&lt;/YearReleased&gt;
-  &lt;/Album&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;The Wall&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;1979&lt;/YearReleased&gt;
-  &lt;/Album&gt;
-  &lt;/Artist&gt;
- &lt;Artist&gt;
-  &lt;ArtistName&gt;Prince&lt;/ArtistName&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;Purple Rain&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;1984&lt;/YearReleased&gt;
-  &lt;/Album&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;Lotusflow3r&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;2009&lt;/YearReleased&gt;
-  &lt;/Album&gt;
- &lt;Album&gt;
-  &lt;AlbumName&gt;1999&lt;/AlbumName&gt;
-  &lt;YearReleased&gt;1982&lt;/YearReleased&gt;
-  &lt;/Album&gt;
-  &lt;/Artist&gt;
-&lt;/MusicCollection&gt;</pre>
+<pre><MusicCollection>
+ <Artist>
+  <ArtistName>Pink Floyd</ArtistName>
+ <Album>
+  <AlbumName>Wish You Were Here</AlbumName>
+  <YearReleased>1975</YearReleased>
+  </Album>
+ <Album>
+  <AlbumName>The Wall</AlbumName>
+  <YearReleased>1979</YearReleased>
+  </Album>
+  </Artist>
+ <Artist>
+  <ArtistName>Prince</ArtistName>
+ <Album>
+  <AlbumName>Purple Rain</AlbumName>
+  <YearReleased>1984</YearReleased>
+  </Album>
+ <Album>
+  <AlbumName>Lotusflow3r</AlbumName>
+  <YearReleased>2009</YearReleased>
+  </Album>
+ <Album>
+  <AlbumName>1999</AlbumName>
+  <YearReleased>1982</YearReleased>
+  </Album>
+  </Artist>
+</MusicCollection></pre>
 
 Now that we have our files we are ready to grab all the files in the directory. We will use a plain vanilla DOS dir command for this with the B switch so that we don&#8217;t get a lot of garbage returned. Here is what this block of code looks like
 
@@ -161,7 +161,7 @@ FROM #tempList
 
 
 
-WHILE @LoopID &lt;= @MaxID
+WHILE @LoopID <= @MaxID
 BEGIN
 
 	SELECT @FileNAme = filename
@@ -196,7 +196,7 @@ BEGIN
 	--Get the next id, instead of +1 we grab the next value in case of skipped id values
 	SELECT @LoopID = min(id)
 	FROM #tempList
-	where id &gt; @LoopID
+	where id > @LoopID
 END</pre>
 
 So that is all the code that you need to make this happen, let&#8217;s see what is actually inserted into the table
@@ -208,8 +208,8 @@ output
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
 
 <pre>filename	timecreated		xmldata
-file1.xml	2009-04-29 09:18:42.313	&lt;MusicCollection&gt;&lt;Artist&gt;&lt;ArtistName&gt;Pink Floyd....
-file2.xml	2009-04-29 09:18:42.330	&lt;MusicCollection&gt;&lt;Artist&gt;&lt;ArtistName&gt;Pink Floyd....</pre>
+file1.xml	2009-04-29 09:18:42.313	<MusicCollection><Artist><ArtistName>Pink Floyd....
+file2.xml	2009-04-29 09:18:42.330	<MusicCollection><Artist><ArtistName>Pink Floyd....</pre>
 
 
 

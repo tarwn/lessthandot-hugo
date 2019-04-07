@@ -51,32 +51,32 @@ Eclipse will then generate a Web Service client and sample JSP files to test it.
 
 Below is an example JSP file which will call the Web Service Client and lookup the current time in New York.
 
-<pre>&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-&lt;title&gt;The Time in New York!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;jsp:useBean id="localTimeSoapProxy" scope="session" class="com.ripedev.www.LocalTimeSoapProxy" /&gt;
-&lt;%
+<pre><%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+<html&gt;
+<head&gt;
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+<title&gt;The Time in New York!</title&gt;
+</head&gt;
+<body&gt;
+<jsp:useBean id="localTimeSoapProxy" scope="session" class="com.ripedev.www.LocalTimeSoapProxy" /&gt;
+<%
 try
 {
 	String newYorkTime = localTimeSoapProxy.localTimeByZipCode("10001"); // Pass a New York zipcode.
-	%&gt;The Time in New York is: &lt;%=newYorkTime %&gt;
+	%&gt;The Time in New York is: <%=newYorkTime %&gt;
 	
-&lt;%
+<%
 }
 catch(Exception e)
 {
 %&gt; 
-	Exception: &lt;%=e.getMessage() %&gt;
-&lt;%	
+	Exception: <%=e.getMessage() %&gt;
+<%	
 }
 %&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body&gt;
+</html&gt;</pre>
 
 Save this file to WebContent/NewYorkTime.jsp then navigate to http://localhost:8080/NewYorkTime.jsp and you should see something like:
 

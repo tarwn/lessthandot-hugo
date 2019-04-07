@@ -665,7 +665,7 @@ FROM   (SELECT   COUNT(* ) AS MaxRow,
 
 SET @Loop = 1 
 
-WHILE @Loop &lt;= @MaxRows 
+WHILE @Loop <= @MaxRows 
   BEGIN 
     SELECT @SQL = @SQL + ',     SUM(CASE WHEN Row = ' + CAST(@Loop AS VARCHAR(10)) + ' THEN ' + QUOTENAME(Column_Name) + ' END) AS [' + COLUMN_NAME + CAST(@Loop AS VARCHAR(10)) + ']'
     FROM   INFORMATION_SCHEMA.COLUMNS 

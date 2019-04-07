@@ -50,28 +50,28 @@ $scope.aValue = "some text";
 
 On the HTML side, the ng-app attribute defines the main module for the page and the ng-controller attribute tells Angular which controller to bind to that section of HTML. Using the controller above, here is an example of outputting a value, binding to an input, using radio buttons to select a value, conditional CSS based on a value, and a loop through an array.
 
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html ng-app="sampleApp"&gt;
-&lt;head&gt;
-    &lt;!-- ... --&gt;
-    &lt;script type="text/javascript" src="js/lib/angular-1.0.8.min.js"&gt;&lt;/script&gt;
-    &lt;!-- ... --&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div ng-controller="SimpleBindingController"&gt;
-	Displaying a value: {{ aValue }} &lt;br /&gt;
-	Editing a value: &lt;input type="text" ng-model="aValue" /&gt;&lt;br /&gt;
-	Editing with radio buttons: &lt;br /&gt;
-	&lt;input type="radio" ng-model="radioValue" value="red"&gt; red &lt;br /&gt;
-	&lt;input type="radio" ng-model="radioValue" value="blue"&gt; blue &lt;br /&gt;
+<pre><!DOCTYPE html&gt;
+<html ng-app="sampleApp"&gt;
+<head&gt;
+    <!-- ... --&gt;
+    <script type="text/javascript" src="js/lib/angular-1.0.8.min.js"&gt;</script&gt;
+    <!-- ... --&gt;
+</head&gt;
+<body&gt;
+<div ng-controller="SimpleBindingController"&gt;
+	Displaying a value: {{ aValue }} <br /&gt;
+	Editing a value: <input type="text" ng-model="aValue" /&gt;<br /&gt;
+	Editing with radio buttons: <br /&gt;
+	<input type="radio" ng-model="radioValue" value="red"&gt; red <br /&gt;
+	<input type="radio" ng-model="radioValue" value="blue"&gt; blue <br /&gt;
 
-	&lt;div ng-class="{ redClass: radioValue == 'red', blueClass: radioValue == 'blue' }"&gt;CSS Based on a value (border changes color)&lt;/div&gt;
+	<div ng-class="{ redClass: radioValue == 'red', blueClass: radioValue == 'blue' }"&gt;CSS Based on a value (border changes color)</div&gt;
 	
-	Looping through an array of values: &lt;br/&gt;
-	&lt;ul ng-repeat="item in listOfItems"&gt;
-		&lt;li&gt;#{{ $index }}: {{ item.number }} - {{ item.name }}&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;</pre>
+	Looping through an array of values: <br/&gt;
+	<ul ng-repeat="item in listOfItems"&gt;
+		<li&gt;#{{ $index }}: {{ item.number }} - {{ item.name }}</li&gt;
+	</ul&gt;
+</div&gt;</pre>
 
 As I modify an input wired to a property in $scope, other elements bound to the same property update automatically (as will the property itself). Besides the straightforward &#8220;for loop&#8221;-like behavior of ng-repeat in this example, they also offer other variants, which are covered in detail in the [documentation][3]. 
 
@@ -87,7 +87,7 @@ Full source available at [Knockout/SimpleBinding.html][6].
 
 For Knockout we define a ViewModel object to bind to. In this case the properties are defined as ko.observable objects so we can have change tracking. To initialize the page, we instantiate the ViewModel and call ko.applyBindings(_viewmodel_).
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre><script type="text/javascript"&gt;
 var SimpleBindingModel = function () {
 	this.aValue = ko.observable("some text");
 	this.radioValue = ko.observable('red');
@@ -103,31 +103,31 @@ ko.applyBindings(viewmodel)</pre>
 
 As I mentioned above, bindings are defined in data-bind properties on HTML elements. Just like the Angular example, there is a displayed and editable version of a value, radio button selections, conditional CSS, and a loop through an array.
 
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;!-- ... --&gt;
-	&lt;script type="text/javascript" src="js/lib/knockout-2.3.0.min.js"&gt;&lt;/script&gt;
-	&lt;!-- ... --&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div&gt;
-	Displaying a value: &lt;span data-bind="text: aValue"&gt;&lt;/span&gt;&lt;br /&gt;
-	Editing a value: &lt;input type="text" data-bind="value: aValue" /&gt;&lt;br /&gt;
-	Editing with radio buttons: &lt;br /&gt;
-	&lt;input type="radio" data-bind="checked: radioValue" value="red"&gt; red &lt;br /&gt;
-	&lt;input type="radio" data-bind="checked: radioValue" value="blue"&gt; blue &lt;br /&gt;
+<pre><!DOCTYPE html&gt;
+<html&gt;
+<head&gt;
+	<!-- ... --&gt;
+	<script type="text/javascript" src="js/lib/knockout-2.3.0.min.js"&gt;</script&gt;
+	<!-- ... --&gt;
+</head&gt;
+<body&gt;
+<div&gt;
+	Displaying a value: <span data-bind="text: aValue"&gt;</span&gt;<br /&gt;
+	Editing a value: <input type="text" data-bind="value: aValue" /&gt;<br /&gt;
+	Editing with radio buttons: <br /&gt;
+	<input type="radio" data-bind="checked: radioValue" value="red"&gt; red <br /&gt;
+	<input type="radio" data-bind="checked: radioValue" value="blue"&gt; blue <br /&gt;
 
-	&lt;div data-bind="css: { redClass: radioValue() == 'red', blueClass: radioValue() == 'blue' }"&gt;CSS Based on a value (border changes color)&lt;/div&gt;
+	<div data-bind="css: { redClass: radioValue() == 'red', blueClass: radioValue() == 'blue' }"&gt;CSS Based on a value (border changes color)</div&gt;
 	
-	Looping through an array of values: &lt;br/&gt;
-	&lt;ul data-bind="foreach: listOfItems"&gt;
-		&lt;li&gt;
-			#&lt;span data-bind="text: $index"&gt;&lt;/span&gt;:
-			&lt;span data-bind="text: number"&gt;&lt;/span&gt; - &lt;span data-bind="text: name"&gt;&lt;/span&gt;
-		&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;</pre>
+	Looping through an array of values: <br/&gt;
+	<ul data-bind="foreach: listOfItems"&gt;
+		<li&gt;
+			#<span data-bind="text: $index"&gt;</span&gt;:
+			<span data-bind="text: number"&gt;</span&gt; - <span data-bind="text: name"&gt;</span&gt;
+		</li&gt;
+	</ul&gt;
+</div&gt;</pre>
 
 Unlike Angular, knockout bindings are much more specific. In the example above, we bound specifically to the text attribute of the span but to the value attribute of the input.
 

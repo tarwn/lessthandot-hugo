@@ -35,7 +35,7 @@ Then, if we wanted to do the same thing in a reactive way:
 <pre>public partial class ReactiveMouseWatcherForm : Form {
 	public ReactiveMouseWatcherForm() {
 		InitializeComponent();
-		var mouseMoveEvent = Observable.FromEvent&lt;MouseEventArgs&gt;(this, "MouseMove");
+		var mouseMoveEvent = Observable.FromEvent<MouseEventArgs&gt;(this, "MouseMove");
 
 		var selectedMovementEvents = from pos in mouseMoveEvent
 					 .Where(x =&gt; (x.EventArgs.X % 10 == 0 || x.EventArgs.Y % 10 == 0)
@@ -91,9 +91,9 @@ However, because we can apply linq queries to streams of events using Rx, someth
 <pre>public partial class ReactiveDrawingForm : Form {
 	public ReactiveDrawingForm() {
 		InitializeComponent();
-		var mouseMove = Observable.FromEvent&lt;MouseEventArgs&gt;(this, "MouseMove");
-		var mouseDown = Observable.FromEvent&lt;MouseEventArgs&gt;(this, "MouseDown");
-		var mouseUp = Observable.FromEvent&lt;MouseEventArgs&gt;(this, "MouseUp");
+		var mouseMove = Observable.FromEvent<MouseEventArgs&gt;(this, "MouseMove");
+		var mouseDown = Observable.FromEvent<MouseEventArgs&gt;(this, "MouseDown");
+		var mouseUp = Observable.FromEvent<MouseEventArgs&gt;(this, "MouseUp");
 
 		var selectedMovementEvents = from pair in mouseMove
 					 .SkipUntil(mouseDown)

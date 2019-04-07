@@ -42,7 +42,7 @@ After adding this additional column, we can still use the original POCO as PetaP
 <pre>// SQL = SELECT [Person].[LastName], [Person].[FirstName] FROM [Person] WHERE lastname=@0
 private void SelectDecoratedRecords() {
 	using (var db = GetDatabase()) {
-		var results = db.Query&lt;DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
+		var results = db.Query<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
 	}
 }</pre>
 
@@ -67,14 +67,14 @@ Without changing of the logic, the function from above will populate the extra c
 <pre>//SQL: SELECT * FROM Person WHERE lastname=@0
 private void SelectRecords() {
 	using (var db = GetDatabase()) {
-		var results = db.Query&lt;Person&gt;("SELECT * FROM Person WHERE lastname=@0", "lastname1");
+		var results = db.Query<Person&gt;("SELECT * FROM Person WHERE lastname=@0", "lastname1");
 	}
 }
 
 //SQL: SELECT [Person].[Id], [Person].[LastName], [Person].[FirstName] FROM [Person] WHERE lastname=@0
 private void SelectDecoratedRecords() {
 	using (var db = GetDatabase()) {
-		var results = db.Query&lt;DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
+		var results = db.Query<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
 	}
 }</pre>
 
@@ -125,14 +125,14 @@ Following Chrissie&#8217;s lead, I&#8217;ll query for the related records separa
 		db.Insert(new Person() { LastName = "lastname1", FirstName = "firstname1", AddressId = 1 });
 		db.Insert(new Person() { LastName = "lastname2", FirstName = "firstname2", AddressId = 1 });
 
-		var results = db.Query&lt;Person&gt;("WHERE LastName=@0", "lastname1");
+		var results = db.Query<Person&gt;("WHERE LastName=@0", "lastname1");
 		foreach (var person in results) {
 			Console.WriteLine("Person: {0} {1} {2}", person.Id, person.LastName, person.FirstName);
-			var address = db.Single&lt;Address&gt;("Where Id=@0", person.AddressId);
+			var address = db.Single<Address&gt;("Where Id=@0", person.AddressId);
 			Console.WriteLine("Address: {0} {1}", address.Street, address.HouseNumber);
 		}
 
-		int count = db.ExecuteScalar&lt;int&gt;("SELECT COUNT(*) FROM Person WHERE LastName=@0", "lastname1");
+		int count = db.ExecuteScalar<int&gt;("SELECT COUNT(*) FROM Person WHERE LastName=@0", "lastname1");
 		Console.WriteLine("Count: " + count.ToString());
 	}
 }</pre>
@@ -147,7 +147,7 @@ As he pointed out, this method doesn&#8217;t perform well. We can replace this w
 		db.Insert(new Person() { LastName = "lastname1", FirstName = "firstname1", AddressId = 1 });
 		db.Insert(new Person() { LastName = "lastname1", FirstName = "firstname2", AddressId = 1 });
 
-		var results = db.Query&lt;Person, Address&gt;(@"
+		var results = db.Query<Person, Address&gt;(@"
 							  SELECT Person.*, Address.* 
 							  FROM Person 
 								INNER JOIN Address ON Person.AddressId = Address.Id 

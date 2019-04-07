@@ -194,7 +194,7 @@ BEGIN
  
     SET @Num = 0
     SET @Pos = 1
-    WHILE(@Pos &lt;= LEN(@RoleNames))
+    WHILE(@Pos <= LEN(@RoleNames))
     BEGIN
         SELECT @NextPos = CHARINDEX(N',', @RoleNames,  @Pos)
         IF (@NextPos = 0 OR @NextPos IS NULL)
@@ -212,7 +212,7 @@ BEGIN
       WHERE  LOWER(t.Name) = ar.LoweredRoleName AND ar.ApplicationId = @AppId
     SELECT @CountR = @@ROWCOUNT
  
-    IF (@CountR &lt;&gt; @Num)
+    IF (@CountR <> @Num)
     BEGIN
         SELECT TOP 1 N'', Name
         FROM   @tbNames
@@ -228,7 +228,7 @@ BEGIN
     SET @Pos = 1
  
  
-    WHILE(@Pos &lt;= LEN(@UserNames))
+    WHILE(@Pos <= LEN(@UserNames))
     BEGIN
         SELECT @NextPos = CHARINDEX(N',', @UserNames,  @Pos)
         IF (@NextPos = 0 OR @NextPos IS NULL)
@@ -246,7 +246,7 @@ BEGIN
       WHERE  LOWER(t.Name) = ar.LoweredUserName AND ar.ApplicationId = @AppId
  
     SELECT @CountU = @@ROWCOUNT
-    IF (@CountU &lt;&gt; @Num)
+    IF (@CountU <> @Num)
     BEGIN
         SELECT TOP 1 Name, N''
         FROM   @tbNames
@@ -261,7 +261,7 @@ BEGIN
     FROM    dbo.aspnet_UsersInRoles ur, @tbUsers u, @tbRoles r
     WHERE   ur.UserId = u.UserId AND ur.RoleId = r.RoleId
  
-    IF (@CountAll &lt;&gt; @CountU * @CountR)
+    IF (@CountAll <> @CountU * @CountR)
     BEGIN
         SELECT TOP 1 UserName, RoleName
         FROM         @tbUsers tu, @tbRoles tr, dbo.aspnet_Users u, dbo.aspnet_Roles r

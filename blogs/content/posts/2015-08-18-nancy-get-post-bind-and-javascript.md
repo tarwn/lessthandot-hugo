@@ -71,29 +71,29 @@ In simple html (a razor view here) we can call both methods in our form by just 
     Layout = Nothing
 End Code
 
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html&gt;
 
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;&lt;/title&gt;
+<html&gt;
+<head&gt;
+    <title&gt;</title&gt;
     
 
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div&gt;
-        &lt;form action="/persons" method="GET"&gt;
-            &lt;input type="text" name="FirstName" value="testfirstnameget" /&gt;
-            &lt;input type="text" name="LastName" value="testlastnameget" /&gt;
-            &lt;button&gt;Submit&lt;/button&gt;
-        &lt;/form&gt;
-        &lt;form action="/persons" method="POST"&gt;
-            &lt;input type="text" name="FirstName" value="testfirstnamepost" /&gt;
-            &lt;input type="text" name="LastName" value="testlastnamepost" /&gt;
-            &lt;button&gt;Submit&lt;/button&gt;
-        &lt;/form&gt;   
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</head&gt;
+<body&gt;
+    <div&gt;
+        <form action="/persons" method="GET"&gt;
+            <input type="text" name="FirstName" value="testfirstnameget" /&gt;
+            <input type="text" name="LastName" value="testlastnameget" /&gt;
+            <button&gt;Submit</button&gt;
+        </form&gt;
+        <form action="/persons" method="POST"&gt;
+            <input type="text" name="FirstName" value="testfirstnamepost" /&gt;
+            <input type="text" name="LastName" value="testlastnamepost" /&gt;
+            <button&gt;Submit</button&gt;
+        </form&gt;   
+    </div&gt;
+</body&gt;
+</html&gt;</pre>
 
 These days of course nobody uses the plain old submit anymore since it reloads your page, which apparently is very bad.
   
@@ -107,30 +107,30 @@ And see the code below with added javascript.
     Layout = Nothing
 End Code
 
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html&gt;
 
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;&lt;/title&gt;
+<html&gt;
+<head&gt;
+    <title&gt;</title&gt;
     
 
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div&gt;
-        &lt;form&gt;
-            &lt;input id="firstnameget" type="text" name="FirstName" value="testfirstnamegetjs" /&gt;
-            &lt;input id="lastnameget" type="text" name="LastName" value="testlastnamegetjs" /&gt;
-            &lt;button type="button" onclick="getjs()"&gt;Submit&lt;/button&gt;
-        &lt;/form&gt;
-        &lt;form&gt;
-            &lt;input id="firstnamepost" type="text" name="FirstName" value="testfirstnamepostjs" /&gt;
-            &lt;input id="lastnamepost" type="text" name="LastName" value="testlastnamepostjs" /&gt;
-            &lt;button type="button" onclick="postjs()"&gt;Submit&lt;/button&gt;
-        &lt;/form&gt; 
-        &lt;div&gt;&lt;ul id="result"&gt;&lt;/ul&gt;&lt;/div&gt;       
-    &lt;/div&gt;
-    &lt;script src="@Url.Content("~/Content/Scripts/jquery-2.1.4.min.js")" type="text/javascript"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript"&gt;
+</head&gt;
+<body&gt;
+    <div&gt;
+        <form&gt;
+            <input id="firstnameget" type="text" name="FirstName" value="testfirstnamegetjs" /&gt;
+            <input id="lastnameget" type="text" name="LastName" value="testlastnamegetjs" /&gt;
+            <button type="button" onclick="getjs()"&gt;Submit</button&gt;
+        </form&gt;
+        <form&gt;
+            <input id="firstnamepost" type="text" name="FirstName" value="testfirstnamepostjs" /&gt;
+            <input id="lastnamepost" type="text" name="LastName" value="testlastnamepostjs" /&gt;
+            <button type="button" onclick="postjs()"&gt;Submit</button&gt;
+        </form&gt; 
+        <div&gt;<ul id="result"&gt;</ul&gt;</div&gt;       
+    </div&gt;
+    <script src="@Url.Content("~/Content/Scripts/jquery-2.1.4.min.js")" type="text/javascript"&gt;</script&gt;
+    <script type="text/javascript"&gt;
         function postjs() {
             var xhr = new XMLHttpRequest();
             var data = { FirstName: $("#firstnamepost").val(), LastName: $("#lastnamepost").val() };
@@ -139,7 +139,7 @@ End Code
             xhr.send(JSON.stringify(data));
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    $("#result").append("&lt;li&gt;" + xhr.responseText + "&lt;/li&gt;");
+                    $("#result").append("<li&gt;" + xhr.responseText + "</li&gt;");
                 };
             }
         }
@@ -151,13 +151,13 @@ End Code
             xhr.send();
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    $("#result").append("&lt;li&gt;" + xhr.responseText + "&lt;/li&gt;");
+                    $("#result").append("<li&gt;" + xhr.responseText + "</li&gt;");
                 };
             }
         }
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script&gt;
+</body&gt;
+</html&gt;</pre>
 
 I used some jquery magic to make the making of the queryparameters easier. 
 

@@ -65,7 +65,7 @@ mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&
 gpgcheck=1
 gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-5
 priority=1
-exclude=kernel* posfix*   &lt;&lt;&lt;&lt;&lt;&lt;------looky at what we have here..
+exclude=kernel* posfix*   <<<<<<------looky at what we have here..
 ...
 ...
 [centosplus]

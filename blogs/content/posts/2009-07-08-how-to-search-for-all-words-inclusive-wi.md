@@ -124,7 +124,7 @@ DECLARE @WordsToExclude TABLE (Word VARCHAR(200), WordID INT IDENTITY(1,1))
 DECLARE @I INT = 1
 SET NOCOUNT ON
 select COUNT(*) from RealTest  
-WHILE @I&lt;10000 
+WHILE @I<10000 
 BEGIN
 INSERT INTO RealTest  VALUES ('Mother Father Daughter Son iteration' + CAST(@i AS VARCHAR(10)))
 INSERT INTO RealTest VALUES ('Mother Daughter Son iteration' + CAST(@i AS VARCHAR(10)))
@@ -219,20 +219,20 @@ SET STATISTICS TIME OFF</pre>
 
 with the result on my PC
   
-<code class="codespan">SQL Server Execution Times:&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 6599 ms,  elapsed time = 9802 ms.&lt;br />
-Regular INNER JOIN 79992&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 4961 ms,  elapsed time = 6697 ms.&lt;br />
-Subquery solution 79992&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 5366 ms,  elapsed time = 6716 ms.&lt;br />
-Optimized Nikola's  solution #1 79992&lt;/p>
-&lt;p> SQL Server Execution Times:&lt;br />
-   CPU time = 2901 ms,  elapsed time = 3670 ms.&lt;br />
-Optimized Nikola's  solution #2 79992&lt;/p>
-&lt;p></code>
+<code class="codespan">SQL Server Execution Times:</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 6599 ms,  elapsed time = 9802 ms.<br />
+Regular INNER JOIN 79992</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 4961 ms,  elapsed time = 6697 ms.<br />
+Subquery solution 79992</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 5366 ms,  elapsed time = 6716 ms.<br />
+Optimized Nikola's  solution #1 79992</p>
+<p> SQL Server Execution Times:<br />
+   CPU time = 2901 ms,  elapsed time = 3670 ms.<br />
+Optimized Nikola's  solution #2 79992</p>
+<p></code>
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 

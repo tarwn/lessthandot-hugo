@@ -200,17 +200,17 @@ I quickly started branching out as I followed the tutorial, and before long I re
         Example:
       </p>
       
-      <pre>&lt;?php
+      <pre><?php
 require('/the/path/to/your/wp-blog-header.php');
 ?&gt;
 
-&lt;?php
+<?php
 $posts = get_posts('numberposts=10&order=ASC&orderby=post_title');
 foreach ($posts as $post) : setup_postdata( $post ); ?&gt;
-&lt;?php the_date(); echo "&lt;br /&gt;"; ?&gt;
-&lt;?php the_title(); ?&gt;    
-&lt;?php the_excerpt(); ?&gt; 
-&lt;?php
+<?php the_date(); echo "<br /&gt;"; ?&gt;
+<?php the_title(); ?&gt;    
+<?php the_excerpt(); ?&gt; 
+<?php
 endforeach;
 ?&gt;</pre>
       

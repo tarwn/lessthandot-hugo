@@ -157,19 +157,19 @@ Here is a way that will take a long time since it is not sargable, this will tak
 
 <pre>SELECT h.* 
 FROM zipcodes g 
-JOIN zipcodes h on g.zipcode &lt;&gt; h.zipcode
+JOIN zipcodes h on g.zipcode <> h.zipcode
 AND g.zipcode = '10028'
-AND h.zipcode &lt;&gt; '10028'
-WHERE g.GeogCol1.STDistance(h.GeogCol1)/1609.344 &lt;= 20</pre>
+AND h.zipcode <> '10028'
+WHERE g.GeogCol1.STDistance(h.GeogCol1)/1609.344 <= 20</pre>
 
 Now we all know functions on the left side of the operator are bad, here is how this is optimized, we switch the calculation to the right side of the = sign
 
 <pre>SELECT h.* 
 FROM zipcodes g 
-JOIN zipcodes h on g.zipcode &lt;&gt; h.zipcode
+JOIN zipcodes h on g.zipcode <> h.zipcode
 AND g.zipcode = '10028'
-AND h.zipcode &lt;&gt; '10028'
-WHERE g.GeogCol1.STDistance(h.GeogCol1)&lt;=(20 * 1609.344)</pre>
+AND h.zipcode <> '10028'
+WHERE g.GeogCol1.STDistance(h.GeogCol1)<=(20 * 1609.344)</pre>
 
 that ran in between 15 and 60 milliseconds
 
@@ -177,11 +177,11 @@ To find everything between 10 and 20 miles you can use this
 
 <pre>SELECT h.* 
 FROM zipcodes g 
-JOIN zipcodes h on g.zipcode &lt;&gt; h.zipcode
+JOIN zipcodes h on g.zipcode <> h.zipcode
 AND g.zipcode = '10028'
-AND h.zipcode &lt;&gt; '10028'
-WHERE g.GeogCol1.STDistance(h.GeogCol1)&lt;=(20 * 1609.344)
-AND g.GeogCol1.STDistance(h.GeogCol1)&gt;= (10 * 1609.344)</pre>
+AND h.zipcode <> '10028'
+WHERE g.GeogCol1.STDistance(h.GeogCol1)<=(20 * 1609.344)
+AND g.GeogCol1.STDistance(h.GeogCol1)>= (10 * 1609.344)</pre>
 
 As you can see doing stuff like this on SQL Server 2008 is fairly easy because of the geograpy data type
 

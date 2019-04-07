@@ -47,16 +47,16 @@ from dbo.DestinationTable d
 	inner join dbo.SourceTable s
 		on d.ID=s.ID	
 where
-	isnull(d.Column1,'null') &lt;&gt; isnull(s.Column1,'null')	or
-	isnull(d.Column2,'null') &lt;&gt; isnull(s.Column2,'null')	or
-	isnull(d.Column3,'null') &lt;&gt; isnull(s.Column3,'null')	or
-	isnull(d.Column4,'null') &lt;&gt; isnull(s.Column4,'null')	or
-	isnull(d.Column5,'null') &lt;&gt; isnull(s.Column5,'null')	or
-	isnull(d.Column6,'null') &lt;&gt; isnull(s.Column6,'null')	or
-	isnull(d.Column7,'null') &lt;&gt; isnull(s.Column7,'null')	or
-	isnull(d.Column8,'null') &lt;&gt; isnull(s.Column8,'null')	or
-	isnull(d.Column9,'null') &lt;&gt; isnull(s.Column9,'null')	or
-	isnull(d.Column10,'null') &lt;&gt; isnull(s.Column10,'null')</pre>
+	isnull(d.Column1,'null') <&gt; isnull(s.Column1,'null')	or
+	isnull(d.Column2,'null') <&gt; isnull(s.Column2,'null')	or
+	isnull(d.Column3,'null') <&gt; isnull(s.Column3,'null')	or
+	isnull(d.Column4,'null') <&gt; isnull(s.Column4,'null')	or
+	isnull(d.Column5,'null') <&gt; isnull(s.Column5,'null')	or
+	isnull(d.Column6,'null') <&gt; isnull(s.Column6,'null')	or
+	isnull(d.Column7,'null') <&gt; isnull(s.Column7,'null')	or
+	isnull(d.Column8,'null') <&gt; isnull(s.Column8,'null')	or
+	isnull(d.Column9,'null') <&gt; isnull(s.Column9,'null')	or
+	isnull(d.Column10,'null') <&gt; isnull(s.Column10,'null')</pre>
 
 Building an update statement like this can get pretty tiring, especially if you’ve got several that you need to write. A way to speed up this process is by copying the list of columns (which can be gotten using the steps outlined in “You don’t have to type out the columns”) into a premade spreadsheet that looks like this:
 

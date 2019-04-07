@@ -22,7 +22,7 @@ A couple of weeks ago someone asked me why they should upgrade to MS SQL Server 
   
 To get information about disks we use the win32_logicaldisk wmiobject and with the -computer parameter we specify our server name:
 
-<pre>GET-WmiObject win32_logicaldisk -computer &lt;computername&gt;</pre>
+<pre>GET-WmiObject win32_logicaldisk -computer <computername&gt;</pre>
 
 The result looks like this:
 
@@ -34,7 +34,7 @@ As you can see, the requested information is there and if I only need to do this
   
 First things first, let&#8217;s just select the data I need, with a pipe I pass the input from the Get-WmiObject to the second part of my command and there I use the Select-Object to specify the object that I want:
 
-<pre>Get-WmiObject win32_logicaldisk -computer &lt;computername&gt; | select-object DeviceID, VolumeName,Size,FreeSpace</pre>
+<pre>Get-WmiObject win32_logicaldisk -computer <computername&gt; | select-object DeviceID, VolumeName,Size,FreeSpace</pre>
 
 This looks better:
 
@@ -44,7 +44,7 @@ This looks better:
 
 Next step is to see the percentage free space. Using @{Name=&#8221;&#8221;,Expression={}}:
 
-<pre>Get-WmiObject win32_logicaldisk -computer &lt;computername&gt; | select-object DeviceID, VolumeName,Size,FreeSpace,@{Name="PCTFreeSpace";Expression={$_.FreeSpace/$_.Size*100}}</pre>
+<pre>Get-WmiObject win32_logicaldisk -computer <computername&gt; | select-object DeviceID, VolumeName,Size,FreeSpace,@{Name="PCTFreeSpace";Expression={$_.FreeSpace/$_.Size*100}}</pre>
 
 The code works but now I have to scroll again to see all the disk info:
 
@@ -54,7 +54,7 @@ The code works but now I have to scroll again to see all the disk info:
 
 I add a second pipe and specify that I want my result formatted as a table, I also make sure the size and free space make more sense:
 
-<pre>Get-WmiObject win32_logicaldisk -computer &lt;computername&gt; | 
+<pre>Get-WmiObject win32_logicaldisk -computer <computername&gt; | 
 select-object DeviceID, VolumeName, @{Name="Size";Expression={$_.Size/1GB}},@{Name="FreeSpace";Expression={$_.FreeSpace/1GB}},
 @{Name="PCTFreeSpace";Expression={
 $_.FreeSpace/$_.Size*100}}|format-table</pre>
@@ -69,14 +69,14 @@ Now you can save this script to a text file, rename the file extension to .ps1 a
 
 <pre>param(
 	[string] $compname )
-Get-WmiObject win32_logicaldisk -computer &lt;computername&gt; | 
+Get-WmiObject win32_logicaldisk -computer <computername&gt; | 
 select-object DeviceID, VolumeName, @{Name="Size";Expression={$_.Size/1GB}},@{Name="FreeSpace";Expression={$_.FreeSpace/1GB}},
 @{Name="PCTFreeSpace";Expression={
 $_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table</pre>
 
 Now I can execute the script with the following command:
 
-<pre>.Getdiskusage &lt;Computername&gt;</pre>
+<pre>.Getdiskusage <Computername&gt;</pre>
 
 Notice that I also added a Sort-Object before the format to be able to see what disk has the most available free space first:
 
@@ -88,7 +88,7 @@ To finish things up a use a Throw in my parameter definition to avoid an ugly er
 
 <pre>param(
 	[string] $compname = $(Throw "Provide a Server name as first parameter") )
-Get-WmiObject win32_logicaldisk -computer &lt;computername&gt; | 
+Get-WmiObject win32_logicaldisk -computer <computername&gt; | 
 select-object DeviceID, VolumeName, @{Name="Size";Expression={$_.Size/1GB}},@{Name="FreeSpace";Expression={$_.FreeSpace/1GB}},
 @{Name="PCTFreeSpace";Expression={
 $_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table</pre>

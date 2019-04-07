@@ -318,7 +318,7 @@ CREATE TABLE dbo.CharTypeTest(
 WITH SampleData AS(
       SELECT CAST(NEWID() as CHAR(36)) AS SampleText
       FROM Numbers N1, Numbers N2           -- 50,000 * 20 = 1,000,000
-      WHERE N1.Number &lt; 50000 AND N2.Number &lt; 20
+      WHERE N1.Number < 50000 AND N2.Number < 20
 )
 
 
@@ -338,7 +338,7 @@ CREATE TABLE #Results (name varchar(30), elapsed int, run int);
 DECLARE @StartTime DateTime, @run int;
 SELECT @run = 1;
 
-WHILE (SELECT COUNT(1) FROM #Results WHERE name = 'Char(36) - Equals') &lt; 2
+WHILE (SELECT COUNT(1) FROM #Results WHERE name = 'Char(36) - Equals') < 2
 BEGIN
 
 	SET @StartTime = GETDATE();

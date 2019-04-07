@@ -55,23 +55,23 @@ The tuple returned contains the cycle length (lam) and the point at which the cy
 
     while not (tortoise = hare) do
         if power = lam then
-            tortoise &lt;- hare
-            power &lt;- power * 2
-            lam &lt;- 0
-        hare &lt;- f hare
-        lam &lt;- lam + 1
+            tortoise <- hare
+            power <- power * 2
+            lam <- 0
+        hare <- f hare
+        lam <- lam + 1
 
     let mutable mu = 0
-    tortoise &lt;- x
-    hare &lt;- x
+    tortoise <- x
+    hare <- x
 
     for i in [1 .. lam] do
-        hare &lt;- f hare
+        hare <- f hare
 
     while not (tortoise = hare) do
-        tortoise &lt;- f tortoise
-        hare &lt;- f hare
-        mu &lt;- mu + 1
+        tortoise <- f tortoise
+        hare <- f hare
+        mu <- mu + 1
 
     lam, mu</pre>
 
@@ -117,7 +117,7 @@ This sure does look simpler, but surprisingly free of any interesting logic. As 
     else 
         (power, lam + 1, mu, tortoise, (f hare))
 
-let phaseOneResult = applyUntilEqual func (&lt;tuple containing data&gt;)</pre>
+let phaseOneResult = applyUntilEqual func (<tuple containing data&gt;)</pre>
 
 Because we don&#8217;t need to check whether tortoise and hare are equal, we can write this in a single if statement. This frees us to short-circuit things a little bit, accomplishing both the pre and post processing in the (power = lam) condition, so this could save us a few passes through the function. Notice this function includes the &#8216;mu&#8217; parameter, even though it is not used yet. This is because by adding that parameter, we can use the same &#8216;loop&#8217; function for both of the main loops in the algorithm. 
 

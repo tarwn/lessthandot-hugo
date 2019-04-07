@@ -42,31 +42,31 @@ There is another way, that is even more simple, but it appears to not be working
 
 Start by going into the XAML and finding the Storyboard in the Visual State you are trying to work with. Once you&#8217;ve found it, give the Storyboard a name (x:Name=&#8221;sbSearchOpen&#8221; on line 11 in the following example)
 
-<pre>&lt;VisualStateManager.VisualStateGroups&gt;
-	&lt;VisualStateGroup x:Name="SearchBox"&gt;
-		&lt;VisualStateGroup.Transitions&gt;
-			&lt;VisualTransition GeneratedDuration="00:00:00.6000000"&gt;
-				&lt;VisualTransition.GeneratedEasingFunction&gt;
-					&lt;CubicEase EasingMode="EaseOut"/&gt;
-				&lt;/VisualTransition.GeneratedEasingFunction&gt;
-			&lt;/VisualTransition&gt;
-		&lt;/VisualStateGroup.Transitions&gt;
-		&lt;VisualState x:Name="SearchOpen"&gt;
-			&lt;Storyboard x:Name="sbSearchOpen"&gt;
-				&lt;DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="grdSearch" Storyboard.TargetProperty="(FrameworkElement.Height)"&gt;
-					&lt;EasingDoubleKeyFrame KeyTime="00:00:00" Value="85"/&gt;
-				&lt;/DoubleAnimationUsingKeyFrames&gt;
-				&lt;ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="grdNavSearch" Storyboard.TargetProperty="(FrameworkElement.Margin)"&gt;
-					&lt;DiscreteObjectKeyFrame KeyTime="00:00:00"&gt;
-						&lt;DiscreteObjectKeyFrame.Value&gt;
-							&lt;Thickness&gt;0,0,0,85&lt;/Thickness&gt;
-						&lt;/DiscreteObjectKeyFrame.Value&gt;
-					&lt;/DiscreteObjectKeyFrame&gt;
-				&lt;/ObjectAnimationUsingKeyFrames&gt;
-			&lt;/Storyboard&gt;
-		&lt;/VisualState&gt;
-	&lt;/VisualStateGroup&gt;
-&lt;/VisualStateManager.VisualStateGroups&gt;</pre>
+<pre><VisualStateManager.VisualStateGroups>
+	<VisualStateGroup x:Name="SearchBox">
+		<VisualStateGroup.Transitions>
+			<VisualTransition GeneratedDuration="00:00:00.6000000">
+				<VisualTransition.GeneratedEasingFunction>
+					<CubicEase EasingMode="EaseOut"/>
+				</VisualTransition.GeneratedEasingFunction>
+			</VisualTransition>
+		</VisualStateGroup.Transitions>
+		<VisualState x:Name="SearchOpen">
+			<Storyboard x:Name="sbSearchOpen">
+				<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="grdSearch" Storyboard.TargetProperty="(FrameworkElement.Height)">
+					<EasingDoubleKeyFrame KeyTime="00:00:00" Value="85"/>
+				</DoubleAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="grdNavSearch" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00">
+						<DiscreteObjectKeyFrame.Value>
+							<Thickness>0,0,0,85</Thickness>
+						</DiscreteObjectKeyFrame.Value>
+					</DiscreteObjectKeyFrame>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+		</VisualState>
+	</VisualStateGroup>
+</VisualStateManager.VisualStateGroups></pre>
 
 Then we can switch to the code behind and in the object list select the sbSearchOpen story board, and in the event list select Completed. This will generate the sbSearchOpen_Completed event:
 

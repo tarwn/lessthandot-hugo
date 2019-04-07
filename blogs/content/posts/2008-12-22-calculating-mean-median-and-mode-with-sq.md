@@ -47,7 +47,7 @@ Median represents the &#8216;middle&#8217; value. To calculate the median by han
 5
 5
 5
-&lt;span style="color:red;"&gt;6&lt;/span&gt;
+<span style="color:red;">6</span>
 6
 6
 7
@@ -61,8 +61,8 @@ Since there is an odd number of rows, the row appearing in the middle of the lis
 2
 5
 5
-&lt;span style="color:red;"&gt;5
-6&lt;/span&gt;
+<span style="color:red;">5
+6</span>
 6
 6
 7
@@ -78,8 +78,8 @@ The mode for a data set is the item(s) that appear most frequently. To calculate
 ----    ---------
 1	1
 2	1
-&lt;span style="color:red;"&gt;5	3
-6	3&lt;/span&gt;
+<span style="color:red;">5	3
+6	3</span>
 7	1
 9	1
 10	1</pre>

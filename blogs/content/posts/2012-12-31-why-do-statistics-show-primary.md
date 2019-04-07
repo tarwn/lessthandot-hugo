@@ -33,14 +33,14 @@ Col_BIT BIT DEFAULT (0)
 );
 
 DECLARE @LOOP INT = 1
-WHILE @LOOP &lt;= 1000
+WHILE @LOOP <= 1000
 BEGIN
 	INSERT INTO SelectivityIndexOrder (Col_String,Col_TinyInt)
 	SELECT 'String value for row ' + CAST(@LOOP AS VARCHAR(4)), 2
   SET @LOOP += 1
 END
 
-WHILE @LOOP &lt;= 2001
+WHILE @LOOP <= 2001
 BEGIN
 	INSERT INTO SelectivityIndexOrder (Col_String,Col_TinyInt)
 	SELECT 'String value for row ' + CAST(@LOOP AS VARCHAR(4)), 3
@@ -111,14 +111,14 @@ Col_BIT BIT DEFAULT (0)
 );
 
 DECLARE @LOOP INT = 1
-WHILE @LOOP &lt;= 1000
+WHILE @LOOP <= 1000
 BEGIN
 	INSERT INTO SelectivityIndexOrderHeap (Col_String,Col_TinyInt)
 	SELECT 'String value for row ' + CAST(@LOOP AS VARCHAR(4)), 2
   SET @LOOP += 1
 END
 
-WHILE @LOOP &lt;= 2001
+WHILE @LOOP <= 2001
 BEGIN
 	INSERT INTO SelectivityIndexOrderHeap (Col_String,Col_TinyInt)
 	SELECT 'String value for row ' + CAST(@LOOP AS VARCHAR(4)), 3

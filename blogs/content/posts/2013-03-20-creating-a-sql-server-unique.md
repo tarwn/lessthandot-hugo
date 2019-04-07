@@ -55,7 +55,7 @@ WHERE ID IS NULL</pre>
 Now what do you think this will return? 🙂
 
 <pre>SELECT ID from TestUnique
-WHERE ID &lt;&gt;1</pre>
+WHERE ID <&gt;1</pre>
 
 If you want to know why, look at number 7 here: [SQL Server Quiz, Can You Answer All These?][2]
 

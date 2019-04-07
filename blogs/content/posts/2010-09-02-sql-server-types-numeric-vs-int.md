@@ -305,7 +305,7 @@ There are two options for finding these columns, using a SQL query like the one 
 
 <pre>SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, DATA_TYPE, NUMERIC_PRECISION, NUMERIC_SCALE
 FROM INFORMATION_SCHEMA.COLUMNS C
-WHERE C.DATA_TYPE IN ('numeric','decimal') AND NUMERIC_SCALE = 0 AND NUMERIC_PRECISION &lt;= 18</pre>
+WHERE C.DATA_TYPE IN ('numeric','decimal') AND NUMERIC_SCALE = 0 AND NUMERIC_PRECISION <= 18</pre>
 
  [1]: http://msdn.microsoft.com/en-us/library/ms187745.aspx "Int reference on MSDN"
  [2]: http://msdn.microsoft.com/en-us/library/ms187746.aspx "Numeric/Decimal reference on MSDN"

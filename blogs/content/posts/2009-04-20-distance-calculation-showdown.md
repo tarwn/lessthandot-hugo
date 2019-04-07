@@ -36,9 +36,9 @@ SELECT top ( @Quantity ) h.ZipCode
 	, h.Longitude
 	, dbo.clrDistCalc(h.Longitude, h.Latitude, g.Longitude, g.Latitude) as Distance 
 FROM zipcodes g
-JOIN zipcodes h ON g.zipcode &lt;&gt; h.zipcode
+JOIN zipcodes h ON g.zipcode <> h.zipcode
 	AND g.ZipCode = @ZipCode
-WHERE dbo.tsqlDistCalc(h.Longitude, h.Latitude, g.Longitude, g.Latitude)&lt;=(200 * 1609.344)
+WHERE dbo.tsqlDistCalc(h.Longitude, h.Latitude, g.Longitude, g.Latitude)<=(200 * 1609.344)
 ORDER BY dbo.tsqlDistCalc(h.Longitude, h.Latitude, g.Longitude, g.Latitude)
 
 end</pre>

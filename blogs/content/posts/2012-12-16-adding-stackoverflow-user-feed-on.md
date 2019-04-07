@@ -26,7 +26,7 @@ my $feed = XML::Feed-&gt;parse(URI-&gt;new('http://stackoverflow.com/feeds/user/
 
 We need to adapt the template to account for XML::Feed&#8217;s differences: 
 
-<pre>my $template = &lt;&lt;"TEMPLATE";
+<pre>my $template = <<"TEMPLATE";
 [% feed.title %]
  
 Activity:
@@ -53,7 +53,7 @@ use Template;
 my $stackoverflow_id = 1691146;
 my $stackoverflow_url = "http://stackoverflow.com/feeds/user/$stackoverflow_id";
 
-my $template = &lt;&lt;"TEMPLATE";
+my $template = <<"TEMPLATE";
 [% feed.title %]
  
 Activity:

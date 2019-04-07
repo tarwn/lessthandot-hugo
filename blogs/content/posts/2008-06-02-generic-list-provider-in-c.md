@@ -33,9 +33,9 @@ using System.Data;
 
 namespace MyApp.Utilities
 {
-    public class ListProvider&lt;T&gt; where T: new()
+    public class ListProvider<T> where T: new()
     {
-        public List&lt;T&gt; FindAll(IDbCommand com, IDbConnection con)
+        public List<T> FindAll(IDbCommand com, IDbConnection con)
         {
             //ensure that command object's connection is set, open connection
             com.Connection = con;
@@ -44,14 +44,14 @@ namespace MyApp.Utilities
             //create data reader used in filling objects
             IDataReader rdr = com.ExecuteReader();
 
-            //instantiate new list of &lt;T&gt; that will be returned
-            List&lt;T&gt; returnList = new List&lt;T&gt;();
+            //instantiate new list of <T> that will be returned
+            List<T> returnList = new List<T>();
 
             //need a Type and PropertyInfo object to set properties via reflection
             Type tType = new T().GetType();
             PropertyInfo pInfo;
 
-            //x will hold the instance of &lt;T&gt; until it is added to the list
+            //x will hold the instance of <T> until it is added to the list
             T x;
 
             //use reader to populate list of objects
@@ -60,14 +60,14 @@ namespace MyApp.Utilities
                 x = new T();
 
                 //set property values
-                //for this to work, command's column names must match property names in object &lt;T&gt;
-                for (int i = 0; i&lt;rdr.FieldCount; i++)
+                //for this to work, command's column names must match property names in object <T>
+                for (int i = 0; i<rdr.FieldCount; i++)
                 {
                     pInfo = tType.GetProperty(rdr.GetName(i));
                     pInfo.SetValue(x, rdr[i], null);
                 }
 
-                //once instance of &lt;T&gt; is populated, add to list
+                //once instance of <T> is populated, add to list
                 returnList.Add(x);
             }
 

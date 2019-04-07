@@ -85,7 +85,7 @@ namespace ClassLibrary1
 
             DataRow[] dr = new DataRow[dt.Rows.Count];
             dt.Rows.CopyTo(dr, 0);
-string[] strinstances = Array.ConvertAll(dr, new Converter&lt;DataRow, String&gt;(DataRowToString));
+string[] strinstances = Array.ConvertAll(dr, new Converter<DataRow, String>(DataRowToString));
             return strinstances;
         }
 

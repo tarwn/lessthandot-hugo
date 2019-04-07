@@ -19,44 +19,44 @@ categories:
 ---
 Xml, as we all know, has a drawback, being the potential growth in size, characteristical to the format , especially when dealing with complex types and collections of complex types. Let&#8217;s take a look at a classic example, taken from Wikipedia. 
 
-<pre>&lt;person&gt;
-  &lt;firstName&gt;John&lt;/firstName&gt;
-  &lt;lastName&gt;Smith&lt;/lastName&gt;
-  &lt;age&gt;25&lt;/age&gt;
-  &lt;address&gt;
-    &lt;streetAddress&gt;21 2nd Street&lt;/streetAddress&gt;
-    &lt;city&gt;New York&lt;/city&gt;
-    &lt;state&gt;NY&lt;/state&gt;
-    &lt;postalCode&gt;10021&lt;/postalCode&gt;
-  &lt;/address&gt;
-  &lt;phoneNumbers&gt;
-    &lt;phoneNumber type="home"&gt;212 555-1234&lt;/phoneNumber&gt;
-    &lt;phoneNumber type="fax"&gt;646 555-4567&lt;/phoneNumber&gt;
-  &lt;/phoneNumbers&gt;
-&lt;/person&gt;</pre>
+<pre><person&gt;
+  <firstName&gt;John</firstName&gt;
+  <lastName&gt;Smith</lastName&gt;
+  <age&gt;25</age&gt;
+  <address&gt;
+    <streetAddress&gt;21 2nd Street</streetAddress&gt;
+    <city&gt;New York</city&gt;
+    <state&gt;NY</state&gt;
+    <postalCode&gt;10021</postalCode&gt;
+  </address&gt;
+  <phoneNumbers&gt;
+    <phoneNumber type="home"&gt;212 555-1234</phoneNumber&gt;
+    <phoneNumber type="fax"&gt;646 555-4567</phoneNumber&gt;
+  </phoneNumbers&gt;
+</person&gt;</pre>
 
 Try to imagine a collection of 1000 persons, each with 4 possible addresses and up to 10 telephonenumbers and having to transport this over a wire, and it all becomes clear instantly. 
 
 But is XML really less performant sizewise ? We could use XML-attributes and easily serialize an object like this : 
 
-<pre>&lt;person firstName="John" lastName="Smith" age="25" /&gt;</pre>
+<pre><person firstName="John" lastName="Smith" age="25" /&gt;</pre>
 
 Based on this example it would seem that attribute-only XML outperforms about anything. But does it realy ? The minute complex types and certainly collections are involved, maintaining that advantage becomes difficult, if not impossible, as you can see here: 
 
-<pre>&lt;person firstName="John" lastName="Smith" age="25"&gt;
-  &lt;address streetAddress="21 2nd Street" city="New York" state="NY" postalCode="10021" /&gt;
-  &lt;phoneNumbers&gt;
-    &lt;phoneNumber type="home" number="212 555-1234"/&gt;
-    &lt;phoneNumber type="fax"  number="646 555-4567"/&gt;
-  &lt;/phoneNumbers&gt;
-&lt;/person&gt;</pre>
+<pre><person firstName="John" lastName="Smith" age="25"&gt;
+  <address streetAddress="21 2nd Street" city="New York" state="NY" postalCode="10021" /&gt;
+  <phoneNumbers&gt;
+    <phoneNumber type="home" number="212 555-1234"/&gt;
+    <phoneNumber type="fax"  number="646 555-4567"/&gt;
+  </phoneNumbers&gt;
+</person&gt;</pre>
 
 This is quite an improvement if we still imagine those same 1000 persons. Nevertheless, as JSON demonstrates : complex types and collections can be handled in a more intelligent way when it comes to limiting growth in size where serialization is involved. 
 
 That said, we can still tweak serialization from within our code, of course. By using attributes in our classes we can limit the length of the tagnames or prevent properties we don&#8217;t want to be serialized from appearing within the resulting XML, and thus adding to the total size. 
 
 <pre>Public Class Address
-    &lt;XmlIgnore&gt;
+    <XmlIgnore&gt;
     Public Property ID As Integer
     Public Property Street As String
     Public Property City As String
@@ -66,7 +66,7 @@ That said, we can still tweak serialization from within our code, of course. By 
 This gives us the means to trim resulting XML in such a way that the final result may feel like being &#8220;acceptable&#8221;. Our classes we could then expand with functionality to serialize any instance at any moment as well as deserialize back into them. Typically we use XmlSerializer objects for this. 
 
 <pre>Public Class Address
-    &lt;XmlIgnore&gt;
+    <XmlIgnore&gt;
     Public Property ID As Integer
     Public Property Street As String
     Public Property City As String
@@ -104,10 +104,10 @@ Now, there&#8217;s a reason I have used VB as PL here, instead of C# or C++. Fro
 
     Public ReadOnly Property AsXML As XElement
         Get
-            Return &lt;Address Street=&lt;%= Street %&gt;
-                       City=&lt;%= City %&gt;
-                       Code=&lt;%= Code %&gt;
-                       State=&lt;%= State %&gt;
+            Return <Address Street=<%= Street %&gt;
+                       City=<%= City %&gt;
+                       Code=<%= Code %&gt;
+                       State=<%= State %&gt;
                    /&gt;
         End Get
     End Property
@@ -138,7 +138,7 @@ Consuming this functionality is just as easy.
 
         Console.WriteLine(someAddress.AsXML.ToString)
 
-        Dim anAddress As Address = Address.FromXML(&lt;Address Street="21 2nd Street"
+        Dim anAddress As Address = Address.FromXML(<Address Street="21 2nd Street"
                                                        City="New York"
                                                        State="NY"
                                                        Code="10021"
@@ -153,7 +153,7 @@ Now, at least, we are somewhere. With a relative small overhead we can use extra
 
 We haven&#8217;t gone to the bottom yet though, where XML is concerned. There still is one option whe haven&#8217;t explored. What we can do is **_denormalising_** our XML. So instead of composing elements we place all their attributes in 1 big root tag. Sort of like denormalising a table model of a database. The **_<Person><Address /><Phonenumbers><Phonenumber /><Phonenumber /></Phonenumbers></Person>_** example above would look in a denormalised form like this : 
 
-<pre>&lt;person firstName="John"
+<pre><person firstName="John"
         lastName="Smith"
         age="25"
         A.Street="21 2nd Street"
@@ -184,14 +184,14 @@ OK, so far the theory. But will this all work ? When I tried this out, I found i
 
     Public ReadOnly Property AsXML As XElement
         Get
-            Return &lt;Person FirstName=&lt;%= FirstName %&gt;
-                       LastName=&lt;%= LastName %&gt;
-                       Age=&lt;%= Age.ToString %&gt;
-                       A.Street=&lt;%= Address.Street %&gt;
-                       A.City=&lt;%= Address.City %&gt;
-                       A.Code=&lt;%= Address.Code %&gt;
-                       A.State=&lt;%= Address.State %&gt;
-                       &lt;%=
+            Return <Person FirstName=<%= FirstName %&gt;
+                       LastName=<%= LastName %&gt;
+                       Age=<%= Age.ToString %&gt;
+                       A.Street=<%= Address.Street %&gt;
+                       A.City=<%= Address.City %&gt;
+                       A.Code=<%= Address.Code %&gt;
+                       A.State=<%= Address.State %&gt;
+                       <%=
                            From nbr In PhoneNumbers
                            Select {
                            New XAttribute("P" & nbr.SequenceID & ".Type", nbr.Type),
@@ -216,11 +216,11 @@ As for the FromXML method, here we do pay the price for denormalization. We have
       Dim phonenumbers = (From item In phonenumberdata
                           Join item2 In phonenumberdata
                           On item(0) Equals item2(0)
-                          Where item(1) &lt;&gt; item2(2)
+                          Where item(1) <&gt; item2(2)
                           Select {item(1), item(2), item2(1), item2(2)}
                          ).Where(
                                  Function(o) o(0) = "Type" And
-                                             o(0) &lt;&gt; o(2)).ToList
+                                             o(0) <&gt; o(2)).ToList
       Dim addressprops = xml.Attributes.Where(
                                 Function(a) a.Name.LocalName.Split("."c)(0) = "A"
                                 ).Select(
@@ -255,20 +255,20 @@ As for the FromXML method, here we do pay the price for denormalization. We have
 There’s one extra which is not related to XML serialization but which I do want to mention here. We have seen the power of XML literals in VB. Well, this feature can very handily be used for overrides of ToString functions. Which we will do here. 
 
 <pre>Public Overrides Function ToString() As String
-        Return &lt;String&gt;
-                   FirstName : &lt;%= FirstName %&gt;
-                   LastName  : &lt;%= LastName %&gt;
-                   Age       : &lt;%= Age %&gt;
+        Return <String&gt;
+                   FirstName : <%= FirstName %&gt;
+                   LastName  : <%= LastName %&gt;
+                   Age       : <%= Age %&gt;
                    Address     
-                   Street    : &lt;%= Address.Street %&gt;
-                   City      : &lt;%= Address.City %&gt;
-                   Code      : &lt;%= Address.Code %&gt;
-                   State     : &lt;%= Address.State %&gt;
-                   Phonenumbers&lt;%= Environment.NewLine %&gt;
-                   &lt;%= From nbr In PhoneNumbers
+                   Street    : <%= Address.Street %&gt;
+                   City      : <%= Address.City %&gt;
+                   Code      : <%= Address.Code %&gt;
+                   State     : <%= Address.State %&gt;
+                   Phonenumbers<%= Environment.NewLine %&gt;
+                   <%= From nbr In PhoneNumbers
                        Select "                   " & nbr.Type & " : " & nbr.Value & Environment.NewLine
                    %&gt;
-               &lt;/String&gt;.Value
+               </String&gt;.Value
     End Function
 
 End Class</pre>
@@ -304,7 +304,7 @@ Now we can consume this class to serialize and deserialize instances into and fr
 
             Console.WriteLine(aPerson.AsXML.ToString)
 
-            aPerson = Person.FromXML(&lt;person FirstName="John"
+            aPerson = Person.FromXML(<person FirstName="John"
                                          LastName="Smith"
                                          Age="25"
                                          A.Street="21 2nd Street"

@@ -74,8 +74,8 @@ foreach my $file (@files) {
                      'link'     =&gt; "src/$file_safe.html",
                      'stats'    =&gt; $critic-&gt;statistics() };
 
-    open my $FH, '&lt;', $file;
-    my @lines = &lt;$FH&gt;;
+    open my $FH, '<', $file;
+    my @lines = <$FH&gt;;
     close $FH;
 
     # Attach all violations to the line they were found on.

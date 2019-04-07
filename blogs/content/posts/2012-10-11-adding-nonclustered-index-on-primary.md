@@ -39,7 +39,7 @@ SELECT
 	,SUM(SubTotal) AS SubTotals
 FROM
 dbo.IndexPageCount hdr 
-WHERE hdr.SalesOrderID &lt; 50000
+WHERE hdr.SalesOrderID < 50000
 GROUP BY 
 	 hdr.DueDate
 	,hdr.ShipDate</pre>
@@ -114,7 +114,7 @@ Execute the previously used query
 	,SUM(SubTotal) AS SubTotals
 FROM
 dbo.IndexPageCount hdr 
-WHERE hdr.SalesOrderID &lt; 50000
+WHERE hdr.SalesOrderID < 50000
 GROUP BY 
 	 hdr.DueDate
 	,hdr.ShipDate</pre>

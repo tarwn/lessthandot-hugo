@@ -115,11 +115,11 @@ AS
     INSERT INTO [|schema|].[|tableName|] (|insertColumnList|)
     SELECT |values|
    
-    -- Begin Return Select &lt;- do not remove
+    -- Begin Return Select <- do not remove
     SELECT |selectColumnList|
     FROM   [|schema|].[|tableName|]
     WHERE  |whereStatement|
-    -- End Return Select &lt;- do not remove
+    -- End Return Select <- do not remove
                
     COMMIT
 GO</pre>
@@ -197,11 +197,11 @@ AS
     INSERT INTO [dbo].[Test] ([FirstName], [InsertedDate], [LastName], [LastUpdatedDate], [MiddleInitial], [Salutation])
     SELECT @FirstName, @InsertedDate, @LastName, @LastUpdatedDate, @MiddleInitial, @Salutation
    
-    -- Begin Return Select &lt;- do not remove
+    -- Begin Return Select <- do not remove
     SELECT [ID], [FirstName], [InsertedDate], [LastName], [LastUpdatedDate], [MiddleInitial], [Salutation]
     FROM   [dbo].[Test]
     WHERE  [ID] = SCOPE_IDENTITY()
-    -- End Return Select &lt;- do not remove
+    -- End Return Select <- do not remove
                
     COMMIT
 GO
@@ -236,11 +236,11 @@ AS
     SET    [FirstName] = @FirstName, [InsertedDate] = @InsertedDate, [LastName] = @LastName, [LastUpdatedDate] = @LastUpdatedDate, [MiddleInitial] = @MiddleInitial, [Salutation] = @Salutation
     WHERE  [ID] = @ID
    
-    -- Begin Return Select &lt;- do not remove
+    -- Begin Return Select <- do not remove
     SELECT [ID], [FirstName], [InsertedDate], [LastName], [LastUpdatedDate], [MiddleInitial], [Salutation]
     FROM   [dbo].[Test]
     WHERE  [ID] = @ID   
-    -- End Return Select &lt;- do not remove
+    -- End Return Select <- do not remove
  
     COMMIT TRAN
 GO

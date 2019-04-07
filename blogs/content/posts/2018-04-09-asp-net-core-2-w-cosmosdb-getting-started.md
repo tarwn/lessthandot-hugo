@@ -133,17 +133,17 @@ Once created, edit the `Layout.cshtml` file to look like this:
 
 [SampleCosmosCore2App/Views/_Shared/Layout.cshtml][4]
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre><!DOCTYPE html&gt;
 
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta name="viewport" content="width=device-width" /&gt;
-    &lt;title&gt;Layout&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+<html&gt;
+<head&gt;
+    <meta name="viewport" content="width=device-width" /&gt;
+    <title&gt;Layout</title&gt;
+</head&gt;
+<body&gt;
     @RenderBody()
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body&gt;
+</html&gt;</pre>
 
 Finally, we&#8217;ll create the first view for `HomeController`. Create a `Home` subfolder under `Views`, then right-click and &#8220;Add View&#8221; again. This time select &#8220;Layout.cshtml&#8221; as the layout, but continue to leave Model empty.
 
@@ -164,7 +164,7 @@ Here we go:
     Layout = "~/Views/_Shared/Layout.cshtml";
 }
 
-&lt;h2&gt;Home&lt;/h2&gt;</pre>
+<h2&gt;Home</h2&gt;</pre>
 
 Time to lock in our winnings again before we move on. Hit F5 and visit the root URL (http://localhost:????/) to verify we have the first task completed successfully.
 
@@ -341,16 +341,16 @@ public async Task SaveSampleAsync(Sample sample)
     await _client.UpsertDocumentAsync(documentCollectionUri, sample);
 }
 
-public async Task&lt;Sample&gt; GetSampleAsync(string Id)
+public async Task<Sample&gt; GetSampleAsync(string Id)
 {
     await EnsureSetupAsync();
 
     var documentUri = UriFactory.CreateDocumentUri(_databaseId, "SamplesCollection", Id);
-    var result = await _client.ReadDocumentAsync&lt;Sample&gt;(documentUri);
+    var result = await _client.ReadDocumentAsync<Sample&gt;(documentUri);
     return result.Document;
 }
 
-public async Task&lt;List&lt;Sample&gt;&gt; GetSamplesAsync()
+public async Task<List<Sample&gt;&gt; GetSamplesAsync()
 {
     await EnsureSetupAsync();
 
@@ -358,13 +358,13 @@ public async Task&lt;List&lt;Sample&gt;&gt; GetSamplesAsync()
 
     // build the query
     var feedOptions = new FeedOptions() { MaxItemCount = -1 };
-    var query = _client.CreateDocumentQuery&lt;Sample&gt;(documentCollectionUri, "SELECT * FROM Sample", feedOptions);
+    var query = _client.CreateDocumentQuery<Sample&gt;(documentCollectionUri, "SELECT * FROM Sample", feedOptions);
     var queryAll = query.AsDocumentQuery();
 
     // combine the results
-    var results = new List&lt;Sample&gt;();
+    var results = new List<Sample&gt;();
     while (queryAll.HasMoreResults) {
-        results.AddRange(await queryAll.ExecuteNextAsync&lt;Sample&gt;());
+        results.AddRange(await queryAll.ExecuteNextAsync<Sample&gt;());
     }
 
     return results;
@@ -378,7 +378,7 @@ This provides all the persistence methods we need, now we can move up to the ASP
 
 [SampleCosmosCore2App/Startup.cs][15]
 
-<pre>services.AddScoped&lt;Persistence&gt;((s) =&gt;
+<pre>services.AddScoped<Persistence&gt;((s) =&gt;
 {
     return new Persistence(
         new Uri(Configuration["CosmosDB:URL"]),
@@ -419,7 +419,7 @@ public class HomeController : Controller
     }
 
     [HttpGet()]
-    public async Task&lt;IActionResult&gt; IndexAsync()
+    public async Task<IActionResult&gt; IndexAsync()
     {
         var samples = await _persistence.GetSamplesAsync();
         return View("Index", samples);
@@ -433,14 +433,14 @@ public class HomeController : Controller
     }
 
     [HttpGet("{id}")]
-    public async Task&lt;IActionResult&gt; GetAsync(string id)
+    public async Task<IActionResult&gt; GetAsync(string id)
     {
         var sample = await _persistence.GetSampleAsync(id);
         return View("Get", sample);
     }
 
     [HttpPost()]
-    public async Task&lt;IActionResult&gt; PostAsync([FromForm] Sample sample)
+    public async Task<IActionResult&gt; PostAsync([FromForm] Sample sample)
     {
         await _persistence.SaveSampleAsync(sample);
         return RedirectToAction("IndexAsync");
@@ -475,59 +475,59 @@ The scaffolded views also assume we&#8217;re using bootstrap and include 2-3x mo
     Layout = "~/Views/_Shared/Layout.cshtml";
 }
 
-&lt;h2&gt;Sample&lt;/h2&gt;
+<h2&gt;Sample</h2&gt;
 
-&lt;form asp-action="PostAsync"&gt;
-    Id:  @Model.Id &lt;input asp-for="Id" type="hidden" /&gt;&lt;br /&gt;
-    Content: &lt;input asp-for="Content" /&gt;&lt;br /&gt;
-    &lt;input type="submit" value="Save" /&gt;
-&lt;/form&gt;
+<form asp-action="PostAsync"&gt;
+    Id:  @Model.Id <input asp-for="Id" type="hidden" /&gt;<br /&gt;
+    Content: <input asp-for="Content" /&gt;<br /&gt;
+    <input type="submit" value="Save" /&gt;
+</form&gt;
 
-&lt;a asp-action="IndexAsync"&gt;Back to List&lt;/a&gt;</pre>
+<a asp-action="IndexAsync"&gt;Back to List</a&gt;</pre>
 
 [SampleCosmosCore2App/Views/Index.cshtml][5]
 
-<pre>@model IEnumerable&lt;SampleCosmosCore2App.Core.Sample&gt;
+<pre>@model IEnumerable<SampleCosmosCore2App.Core.Sample&gt;
 
 @{
     ViewData["Title"] = "View";
     Layout = "~/Views/_Shared/Layout.cshtml";
 }
 
-&lt;h2&gt;View&lt;/h2&gt;
+<h2&gt;View</h2&gt;
 
-&lt;p&gt;
-    &lt;a asp-action="Create"&gt;Create New&lt;/a&gt;
-&lt;/p&gt;
-&lt;table class="table"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;
+<p&gt;
+    <a asp-action="Create"&gt;Create New</a&gt;
+</p&gt;
+<table class="table"&gt;
+    <thead&gt;
+        <tr&gt;
+            <th&gt;
                 @Html.DisplayNameFor(model =&gt; model.Id)
-            &lt;/th&gt;
-            &lt;th&gt;
+            </th&gt;
+            <th&gt;
                 @Html.DisplayNameFor(model =&gt; model.Content)
-            &lt;/th&gt;
-            &lt;th&gt;&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
+            </th&gt;
+            <th&gt;</th&gt;
+        </tr&gt;
+    </thead&gt;
+    <tbody&gt;
         @foreach (var item in Model)
         {
-            &lt;tr&gt;
-                &lt;td&gt;
+            <tr&gt;
+                <td&gt;
                     @Html.DisplayFor(modelItem =&gt; item.Id)
-                &lt;/td&gt;
-                &lt;td&gt;
+                </td&gt;
+                <td&gt;
                     @Html.DisplayFor(modelItem =&gt; item.Content)
-                &lt;/td&gt;
-                &lt;td&gt;
+                </td&gt;
+                <td&gt;
                     @Html.ActionLink("Edit", "GetAsync", new { id=item.Id })
-                &lt;/td&gt;
-            &lt;/tr&gt;
+                </td&gt;
+            </tr&gt;
         }
-    &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+    </tbody&gt;
+</table&gt;</pre>
 
 And now we have a very simple CRUD interface:
 

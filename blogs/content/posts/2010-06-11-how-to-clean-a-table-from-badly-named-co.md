@@ -55,7 +55,7 @@ DECLARE  @columnName VARCHAR(100)
 DECLARE  @TableColumnNAme VARCHAR(100)
 
 --loop until the end
-WHILE @loopid &lt;= @maxID
+WHILE @loopid <= @maxID
 BEGIN
 
 --populate variables and take % and _ out from the column name

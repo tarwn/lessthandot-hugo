@@ -177,8 +177,8 @@ FROM Entries E1
 	INNER JOIN Entries E2 ON E1.ObjectId = E2.ObjectId
 WHERE E1.Num = 1 
 	AND E2.num = 2
-	AND E2.SizeInMb &lt;&gt; 0
-	AND E1.SizeInMb &lt; E2.SizeInMb - (.10 * E2.SizeInMb);</pre>
+	AND E2.SizeInMb <&gt; 0
+	AND E1.SizeInMb < E2.SizeInMb - (.10 * E2.SizeInMb);</pre>
 
 ## And more
 

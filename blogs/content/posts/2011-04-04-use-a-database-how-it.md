@@ -35,9 +35,9 @@ BEGIN
     IF  (@set = 'tall')
          SELECT * from player where height &gt; 180
     ELSE IF (@set = 'average')
-         SELECT * from player where height &gt;= 155 and height &lt;=175
+         SELECT * from player where height &gt;= 155 and height <=175
     ELSE IF (@set = 'low')
-         SELECT * from player where height &lt; 155
+         SELECT * from player where height < 155
 END</pre>
 
 If you are thinking _silly you, you can&#8217;t have an IF statement like that in a function_, then you have disappointed me. What you really should be saying is the following: [why are you hardcoding this, create a heights table and then grab all the heights that are valid for the range][1]

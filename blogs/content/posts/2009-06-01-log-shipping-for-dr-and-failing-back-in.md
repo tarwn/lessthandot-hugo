@@ -48,7 +48,7 @@ SELECT @ReturnCode = 0
 IF NOT EXISTS (SELECT name FROM msdb.dbo.syscategories WHERE name=N''Database Maintenance'' AND category_class=1)
 BEGIN
 EXEC @ReturnCode = msdb.dbo.sp_add_category @class=N''JOB'', @type=N''LOCAL'', @name=N''Database Maintenance''
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 
 END
 
@@ -63,7 +63,7 @@ EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N''DBA05 DR Full Backp Set'',
 		@description=N''This job was scripted automatically to start ful lbackups on the database DBA05.'', 
 		@category_name=N''Database Maintenance'', 
 		@owner_login_name=N''someonewithrights'', @job_id = @jobId OUTPUT
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N''Execute Full Backup Command'', 
 		@step_id=1, 
 		@cmdexec_success_code=0, 
@@ -81,9 +81,9 @@ EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N''Execute
 				TO DISK = @BACKUPSET'', 
 		@database_name=N''tempdb'', 
 		@flags=4
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 EXEC @ReturnCode = msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id=@jobId, @name=N''Hourly Full Backup'', 
 		@enabled=1, 
 		@freq_type=8, 
@@ -96,13 +96,13 @@ EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id=@jobId, @name=N''Hourly F
 		@active_end_date=99991231, 
 		@active_start_time=23000, 
 		@active_end_time=235959
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N''(local)''
-IF (@@ERROR &lt;&gt; 0 OR @ReturnCode &lt;&gt; 0) GOTO QuitWithRollback
+IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
 COMMIT TRANSACTION
 GOTO EndSave
 QuitWithRollback:
-    IF (@@TRANCOUNT &gt; 0) ROLLBACK TRANSACTION
+    IF (@@TRANCOUNT > 0) ROLLBACK TRANSACTION
 EndSave:',
 0)</pre>
 
@@ -136,7 +136,7 @@ If Exists(SELECT 1
 
 	SET @loop = 1
 
-	WHILE @loop &lt;= (Select Count(*) From #dbs)
+	WHILE @loop <= (Select Count(*) From #dbs)
 		BEGIN
 			Select 
 				@cmd = AGENT_SCRIPT,
@@ -166,7 +166,7 @@ If Exists(SELECT 1
    COMMIT
 END TRY
 BEGIN CATCH
-  IF @@TRANCOUNT &gt; 0
+  IF @@TRANCOUNT > 0
      ROLLBACK
 
   DECLARE @ErrMsg nvarchar(4000), @ErrSeverity int

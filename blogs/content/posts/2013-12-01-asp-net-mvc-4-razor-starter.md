@@ -70,7 +70,7 @@ Once the package has been downloaded you will need to configure your <span style
 
 Open up your root Web.config file and add the following line below the other namespaces (in the pages > namespaces section):
 
-<pre style="font-family: Consolas; font-size: 13; color: #dfdfbf; background: #333333;"><span style="font-size: small;">&lt;<span style="color: #efc986;">add</span> namespace="<span style="color: #dfaf8f;">System.Web.WebPages</span>" /&gt;</span><span style="font-family: Consolas;">
+<pre style="font-family: Consolas; font-size: 13; color: #dfdfbf; background: #333333;"><span style="font-size: small;"><<span style="color: #efc986;">add</span> namespace="<span style="color: #dfaf8f;">System.Web.WebPages</span>" /&gt;</span><span style="font-family: Consolas;">
 </span></pre>
 
 You will also need to do the same for your other web.config file located in the root of the Views folder.
@@ -131,27 +131,27 @@ Modify the contents of the file to look like this:
 }
 @<span style="color: #efc986;">using</span> (Html.BeginForm())
 {
-     &lt;<span style="color: #efc986;">h1</span>&gt;Hello, World!&lt;/<span style="color: #efc986;">h1</span>&gt;
+     <<span style="color: #efc986;">h1</span>&gt;Hello, World!</<span style="color: #efc986;">h1</span>&gt;
 }</span></pre>
 
 Finally you need to create the shared layout view page, right-click the <span style="background-color: #99ccff;">Shared</span> folder and left-click <span style="background-color: #99ccff;">Add > View&#8230;</span> to display the Add View dialog box, label the view page as <span style="background-color: #99ccff;">_Layout</span> and ensure as with the previous pages the &#8220;Use a layout or master page&#8221; checkbox is un-ticked.
 
 Modify the <span style="background-color: #99ccff;">_Layout.cshtml</span> view page to look like this:
 
-<pre style="color: #dfdfbf; background-color: #333333; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: small;">&lt;!<span style="color: #efc986;">DOCTYPE</span> html&gt;
-&lt;<span style="color: #efc986;">html</span> lang=<span style="color: #dfaf8f;">"en"</span>&gt;
-&lt;<span style="color: #efc986;">head</span>&gt;
-    &lt;<span style="color: #efc986;">meta</span> name=<span style="color: #dfaf8f;">"viewport"</span> content=<span style="color: #dfaf8f;">"width=device-width"</span> /&gt;
-    &lt;<span style="color: #efc986;">title</span>&gt;@ViewBag.Title&lt;/<span style="color: #efc986;">title</span>&gt;
-&lt;/<span style="color: #efc986;">head</span>&gt;
-&lt;<span style="color: #efc986;">body</span>&gt;
-    &lt;<span style="color: #efc986;">div</span>&gt;
+<pre style="color: #dfdfbf; background-color: #333333; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: small;"><!<span style="color: #efc986;">DOCTYPE</span> html&gt;
+<<span style="color: #efc986;">html</span> lang=<span style="color: #dfaf8f;">"en"</span>&gt;
+<<span style="color: #efc986;">head</span>&gt;
+    <<span style="color: #efc986;">meta</span> name=<span style="color: #dfaf8f;">"viewport"</span> content=<span style="color: #dfaf8f;">"width=device-width"</span> /&gt;
+    <<span style="color: #efc986;">title</span>&gt;@ViewBag.Title</<span style="color: #efc986;">title</span>&gt;
+</<span style="color: #efc986;">head</span>&gt;
+<<span style="color: #efc986;">body</span>&gt;
+    <<span style="color: #efc986;">div</span>&gt;
         @RenderBody()
-    &lt;/<span style="color: #efc986;">div</span>&gt;
+    </<span style="color: #efc986;">div</span>&gt;
     @<span style="color: #8acccf;">Scripts</span>.Render(<span style="color: #dfaf8f;">"~/bundles/jquery"</span>)
     @RenderSection(<span style="color: #dfaf8f;">"scripts"</span>, required: <span style="color: #efc986;">false</span>)
-&lt;/<span style="color: #efc986;">body</span>&gt;
-&lt;/<span style="color: #efc986;">html</span>&gt;</span></pre>
+</<span style="color: #efc986;">body</span>&gt;
+</<span style="color: #efc986;">html</span>&gt;</span></pre>
 
 This should be enough for you to compile the project however it will still cause you pain unless you save your project and restart Visual Studio 2012, after which the references and page helpers should kick into life.
 

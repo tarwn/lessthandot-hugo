@@ -28,7 +28,7 @@ From    Information_Schema.Columns C
         Inner Join Information_Schema.Tables T
           On C.Table_Name = T.Table_Name
 Where   T.Table_Type = 'Base Table'
-        And Collation_Name &lt;&gt; DatabasePropertyEx(db_name(), 'Collation')
+        And Collation_Name <> DatabasePropertyEx(db_name(), 'Collation')
         And ColumnProperty(Object_id(C.Table_Name), Column_Name, 'IsComputed') = 0
 Order By C.Table_Name, C.Column_Name</pre>
 

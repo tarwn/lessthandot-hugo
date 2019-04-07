@@ -68,18 +68,18 @@ After adding the references, we can then add RoleEntryPoint inheritance to the P
 
 The last thing we need to do is add some information to the project file. I can open the file in Visual Studio by right clicking and selecting &#8220;Unload Project&#8221;, then right clicking again and selecting &#8220;Edit _project name_&#8220;. In the Property Group I need to add a single property named &#8220;RoleType&#8221; to identify this as a Worker (see the last entry):
 
-<pre>&lt;PropertyGroup&gt;
-	&lt;Configuration Condition=" '$(Configuration)' == '' "&gt;Debug&lt;/Configuration&gt;
-	&lt;Platform Condition=" '$(Platform)' == '' "&gt;AnyCPU&lt;/Platform&gt;
-	&lt;ProjectGuid&gt;{4B7C48CB-9899-47D0-95AB-2FD3C3B739CF}&lt;/ProjectGuid&gt;
-	&lt;OutputType&gt;Exe&lt;/OutputType&gt;
-	&lt;AppDesignerFolder&gt;Properties&lt;/AppDesignerFolder&gt;
-	&lt;RootNamespace&gt;ExistingConsoleApplication&lt;/RootNamespace&gt;
-	&lt;AssemblyName&gt;ExistingConsoleApplication&lt;/AssemblyName&gt;
-	&lt;TargetFrameworkVersion&gt;v4.5&lt;/TargetFrameworkVersion&gt;
-	&lt;FileAlignment&gt;512&lt;/FileAlignment&gt;
-	&lt;RoleType&gt;Worker&lt;/RoleType&gt;
-&lt;/PropertyGroup&gt;</pre>
+<pre><PropertyGroup&gt;
+	<Configuration Condition=" '$(Configuration)' == '' "&gt;Debug</Configuration&gt;
+	<Platform Condition=" '$(Platform)' == '' "&gt;AnyCPU</Platform&gt;
+	<ProjectGuid&gt;{4B7C48CB-9899-47D0-95AB-2FD3C3B739CF}</ProjectGuid&gt;
+	<OutputType&gt;Exe</OutputType&gt;
+	<AppDesignerFolder&gt;Properties</AppDesignerFolder&gt;
+	<RootNamespace&gt;ExistingConsoleApplication</RootNamespace&gt;
+	<AssemblyName&gt;ExistingConsoleApplication</AssemblyName&gt;
+	<TargetFrameworkVersion&gt;v4.5</TargetFrameworkVersion&gt;
+	<FileAlignment&gt;512</FileAlignment&gt;
+	<RoleType&gt;Worker</RoleType&gt;
+</PropertyGroup&gt;</pre>
 
 Save and reload the project, and now when we right click on the Azure Cloud Project Roles, the option to associate and existing project is available.
 

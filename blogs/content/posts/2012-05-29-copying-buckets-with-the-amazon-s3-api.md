@@ -60,9 +60,9 @@ public virtual bool BucketExists(string bucketName)
 
 Listing objects in an S3 bucket is very easy. You just need to issue a signed GET request to myBucket.s3.amazonaws.com. The only gotcha is it only returns up to 1000 objects in a single response, so getting a complete list can take multiple requests. It helps to know a few things when putting this together &#8211; first that objects are listed in alphabetical order, second that we can include a &#8220;marker&#8221; parameter in our request telling AWS what key to start with, and third that the response from this method includes an &#8220;IsTruncated&#8221; flag. The C# code to list objects looks like this:
 
-<pre>IEnumerable&lt;S3Object&gt; ObjectsFor(string bucketName)
+<pre>IEnumerable<S3Object&gt; ObjectsFor(string bucketName)
 {
-    var result = new List&lt;S3Object&gt;();
+    var result = new List<S3Object&gt;();
 
     var response = new ListObjectsResponse();
     do
@@ -95,7 +95,7 @@ C# helps us out a bit here, as LINQ makes it easy to do these comparisons withou
 
 Code to identify these sets of objects can be found here:
 
-<pre>IEnumerable&lt;S3Object&gt; ObjectsToUpdate(IEnumerable&lt;S3Object&gt; sourceObjects, IEnumerable&lt;S3Object&gt; destinationObjects)
+<pre>IEnumerable<S3Object&gt; ObjectsToUpdate(IEnumerable<S3Object&gt; sourceObjects, IEnumerable<S3Object&gt; destinationObjects)
 {
     return from src in sourceObjects
            join dest in destinationObjects
@@ -104,7 +104,7 @@ Code to identify these sets of objects can be found here:
            select src;
 }
 
-IEnumerable&lt;S3Object&gt; ObjectsToInsert(IEnumerable&lt;S3Object&gt; sourceObjects, IEnumerable&lt;S3Object&gt; destinationObjects)
+IEnumerable<S3Object&gt; ObjectsToInsert(IEnumerable<S3Object&gt; sourceObjects, IEnumerable<S3Object&gt; destinationObjects)
 {
     return from src in sourceObjects
            join dest in destinationObjects
@@ -114,7 +114,7 @@ IEnumerable&lt;S3Object&gt; ObjectsToInsert(IEnumerable&lt;S3Object&gt; sourceOb
            select src;
 }
 
-IEnumerable&lt;S3Object&gt; ObjectsToDelete(IEnumerable&lt;S3Object&gt; sourceObjects, IEnumerable&lt;S3Object&gt; destinationObjects)
+IEnumerable<S3Object&gt; ObjectsToDelete(IEnumerable<S3Object&gt; sourceObjects, IEnumerable<S3Object&gt; destinationObjects)
 {
     return from dest in destinationObjects
            join src in sourceObjects
@@ -130,9 +130,9 @@ Inserts and deletes are the easy part. We just need to process the list of objec
 
 The inserts are the easiest part:
 
-<pre>void CopyObjects(IEnumerable&lt;S3Object&gt; items, Func&lt;S3Object, CopyObjectRequest&gt; requestBuilder)
+<pre>void CopyObjects(IEnumerable<S3Object&gt; items, Func<S3Object, CopyObjectRequest&gt; requestBuilder)
 {
-    var exceptions = new ConcurrentQueue&lt;Exception&gt;();
+    var exceptions = new ConcurrentQueue<Exception&gt;();
     Parallel.ForEach(items, obj =&gt;
     {
         try
@@ -172,9 +172,9 @@ This step is not really anything special but it is different enough for me to ex
 
 So we can change the code for copy to something like this, taking an optional parameter containing a function to add the object&#8217;s key to a list of keys to be invalidated:
 
-<pre>void CopyObjects(IEnumerable&lt;S3Object&gt; items, Func&lt;S3Object, CopyObjectRequest&gt; requestBuilder, Action&lt;string&gt; addToInvalidationList = null)
+<pre>void CopyObjects(IEnumerable<S3Object&gt; items, Func<S3Object, CopyObjectRequest&gt; requestBuilder, Action<string&gt; addToInvalidationList = null)
 {
-    var exceptions = new ConcurrentQueue&lt;Exception&gt;();
+    var exceptions = new ConcurrentQueue<Exception&gt;();
     Parallel.ForEach(items, obj =&gt;
     {
         try
@@ -202,7 +202,7 @@ The code for invalidation looks like this:
 
 <pre>const string dateFormatWithMilliseconds = "yyyy-MM-dd hh:mm:ss.ff";
 
-void InvalidateObjects(string destinationBucket, List&lt;string&gt; keysToInvalidate)
+void InvalidateObjects(string destinationBucket, List<string&gt; keysToInvalidate)
 {
     if(keysToInvalidate.Count &gt; 0)
     {
@@ -257,7 +257,7 @@ OK so we have all these methods to facilitate copying buckets but how do we actu
         toDelete.RemoveRange(0, toDelete.Count &gt; 1000 ? 1000 : toDelete.Count);
     }
 
-    var buildCopyRequest = new Func&lt;S3Object, CopyObjectRequest&gt;(s3obj =&gt; new CopyObjectRequest()
+    var buildCopyRequest = new Func<S3Object, CopyObjectRequest&gt;(s3obj =&gt; new CopyObjectRequest()
         .WithSourceBucket(sourceBucket)
         .WithDestinationBucket(destinationBucket)
         .WithSourceKey(s3obj.Key)
@@ -266,7 +266,7 @@ OK so we have all these methods to facilitate copying buckets but how do we actu
 
     CopyObjects(ObjectsToInsert(sourceObjects, destinationObjects), buildCopyRequest);
 
-    var keysToInvalidate = new ConcurrentBag&lt;string&gt;();
+    var keysToInvalidate = new ConcurrentBag<string&gt;();
 
     CopyObjects(ObjectsToUpdate(sourceObjects, destinationObjects), buildCopyRequest, keysToInvalidate.Add);
 

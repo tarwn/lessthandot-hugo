@@ -60,7 +60,7 @@ Column ordering for include columns does not matter, but which columns are inclu
 	From	sys.indexes As I
 			Inner Join sys.Tables As T
 				On I.object_id = T.object_id
-	Where	I.type_desc &lt;&gt; 'Clustered'
+	Where	I.type_desc <&gt; 'Clustered'
 			And T.is_ms_shipped = 0
 )
 Select  Object_Name(AIndex.object_id) As TableName,
@@ -70,7 +70,7 @@ Select  Object_Name(AIndex.object_id) As TableName,
 From	IndexColumns As A
 		Inner Join IndexColumns  As B
 			On A.object_id = B.object_id
-			And A.index_id &lt; B.index_id
+			And A.index_id < B.index_id
 			And A.KeyColumns = B.KeyColumns
 			And A.IncludeColumns = B.IncludeColumns
 		Inner Join sys.indexes As AIndex

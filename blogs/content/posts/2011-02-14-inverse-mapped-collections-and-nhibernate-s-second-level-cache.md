@@ -21,7 +21,7 @@ This can make things a little weird &#8211; the primary difference is that both 
 <pre>class Recipe {
     public long Id { get; set; }
     public string Name { get; set; }
-    IList&lt;IngredientUse&gt; IngredientsUsed { get; set; }
+    IList<IngredientUse&gt; IngredientsUsed { get; set; }
 }
 
 class IngredientUse {
@@ -30,13 +30,13 @@ class IngredientUse {
     public Ingredient Ingredient { get; set; }
 }
 
-class RecipeMap : ClassMap&lt;Recipe&gt; {
+class RecipeMap : ClassMap<Recipe&gt; {
     Id (r =&gt; r.Id);
     Map (r =&gt; r.Name);
     HasMany (i =&gt; i.IngredientsUsed);
 }
 
-class IngredientUseMap : ClassMap&lt;IngredientUse&gt; {
+class IngredientUseMap : ClassMap<IngredientUse&gt; {
     Id (iu =&gt; iu.Id);
     Map (iu =&gt; iu.Quantity);
     References (iu =&gt; iu.Ingredient);
@@ -49,7 +49,7 @@ When using an inverse relationship, a few changes are needed. First, you map the
 <pre>class Recipe {
     public long Id { get; set; }
     public string Name { get; set; }
-    IList&lt;IngredientUse&gt; IngredientsUsed { get; set; }
+    IList<IngredientUse&gt; IngredientsUsed { get; set; }
 }
 
 class IngredientUse {
@@ -59,13 +59,13 @@ class IngredientUse {
     public Recipe Recipe { get; set; }
 }
 
-class RecipeMap : ClassMap&lt;Recipe&gt; {
+class RecipeMap : ClassMap<Recipe&gt; {
     Id (r =&gt; r.Id);
     Map (r =&gt; r.Name);
     HasMany (i =&gt; i.IngredientsUsed).Inverse ();
 }
 
-class RecipeMap : ClassMap&lt;IngredientUse&gt; {
+class RecipeMap : ClassMap<IngredientUse&gt; {
     Id (iu =&gt; iu.Id);
     Map (iu =&gt; iu.Quantity);
     References (iu =&gt; iu.Ingredient);
@@ -75,7 +75,7 @@ class RecipeMap : ClassMap&lt;IngredientUse&gt; {
 It&#8217;s important to note that the updated mapping expects the exact same underlying DB structure. So the model is starting to look a bit more like the database. What this gets you is the ability to save an IngredientUse without first needing to retrieve the recipe you want to add it to. So instead of saving it like this:
 
 <pre>void Save (IngredientUse ingredientUse, long recipeId) {
-    var recipe = session.Get&lt;Recipe&gt; (recipeId);
+    var recipe = session.Get<Recipe&gt; (recipeId);
     recipe.AddIngredientUse (ingredientUse);
     session.SaveOrUpdate (recipe);
 }</pre>
@@ -83,7 +83,7 @@ It&#8217;s important to note that the updated mapping expects the exact same und
 You now save it like this:
 
 <pre>void Save (IngredientUse ingredientUse, long recipeId) {
-    ingredientUse.Recipe = session.Load&lt;Recipe&gt; (recipeId);
+    ingredientUse.Recipe = session.Load<Recipe&gt; (recipeId);
     session.SaveOrUpdate (ingredientUse);
 }</pre>
 
@@ -101,7 +101,7 @@ Easy enough, but the approach leaves a bit to be desired. Because of the magical
 public void Evict ()
 {
     var mockery = new MockRepository ();
-    var sessionFactory = mockery.StrictMock&lt;ISessionFactory&gt; ();
+    var sessionFactory = mockery.StrictMock<ISessionFactory&gt; ();
 
     var ingredientUse = new IngredientUse {
         Recipe = new Recipe { Id = 1 }
@@ -112,7 +112,7 @@ public void Evict ()
     }
             
     using (mockery.Playback ()) {
-        var evictor = new CollectionEvictor&lt;IngredientUse&gt; (
+        var evictor = new CollectionEvictor<IngredientUse&gt; (
             x =&gt; x.Recipe.IngredientsUsed,
             x =&gt; x.Recipe.Id,
             sessionFactory);
@@ -123,16 +123,16 @@ public void Evict ()
 
 And the class is pretty straight forward as well:
 
-<pre>public class CollectionEvictor&lt;T&gt; where T : class
+<pre>public class CollectionEvictor<T&gt; where T : class
 {
     readonly MemberExpression collectionProperty;
-    readonly Func&lt;T, object&gt; idFunction;
+    readonly Func<T, object&gt; idFunction;
     readonly ISessionFactory sessionFactory;
 
-    public CollectionEvictor (Expression&lt;Func&lt;T, object&gt;&gt; collectionProperty, Func&lt;T, object&gt; idFunction)
-        : this (collectionProperty, idFunction, ObjectFactory.GetInstance&lt;ISessionFactory&gt; ()){ }
+    public CollectionEvictor (Expression<Func<T, object&gt;&gt; collectionProperty, Func<T, object&gt; idFunction)
+        : this (collectionProperty, idFunction, ObjectFactory.GetInstance<ISessionFactory&gt; ()){ }
 
-    public CollectionEvictor (Expression&lt;Func&lt;T, object&gt;&gt; collectionProperty, Func&lt;T, object&gt; idFunction, ISessionFactory sessionFactory)
+    public CollectionEvictor (Expression<Func<T, object&gt;&gt; collectionProperty, Func<T, object&gt; idFunction, ISessionFactory sessionFactory)
     {
         this.collectionProperty = collectionProperty.Body as MemberExpression;
         this.idFunction = idFunction;
@@ -150,9 +150,9 @@ And now we&#8217;ve got something that&#8217;s a bit awkward, but at least check
 
 Assuming there&#8217;s already a base repository defined, it can be extended like this:
 
-<pre>public abstract class CollectionEvictingRepository&lt;T&gt; : BaseRepository&lt;T&gt; where T : class, new ()
+<pre>public abstract class CollectionEvictingRepository<T&gt; : BaseRepository<T&gt; where T : class, new ()
 {
-    protected readonly IList&lt;CollectionEvictor&lt;T&gt;&gt; evictors = new List&lt;CollectionEvictor&lt;T&gt;&gt; ();
+    protected readonly IList<CollectionEvictor<T&gt;&gt; evictors = new List<CollectionEvictor<T&gt;&gt; ();
 
     public override void Save (T toSave)
     {
@@ -176,11 +176,11 @@ Assuming there&#8217;s already a base repository defined, it can be extended lik
 
 As you can see, this calls the standard Save/Delete behavior, then evicts any collections that have been invalidated as a result of the operation. Implementations can then look like this:
 
-<pre>public sealed class AdditionUseRepository : CollectionEvictingRepository&lt;AdditionUse&gt;
+<pre>public sealed class AdditionUseRepository : CollectionEvictingRepository<AdditionUse&gt;
 {
 	public AdditionUseRepository() 
 	{
-	    evictors.Add(new CollectionEvictor&lt;IngredientUse&gt;(
+	    evictors.Add(new CollectionEvictor<IngredientUse&gt;(
                 instance =&gt; instance.Recipe.IngredientsUsed,
 	        instance =&gt; instance.Recipe.Id));
 	}

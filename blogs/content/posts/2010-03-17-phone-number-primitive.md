@@ -20,7 +20,7 @@ tags:
 I don&#8217;t know how many times I&#8217;ve put together the same slow regexp to check if the user input is a valid phone number. I decided that this cannot go on and developed a simple phone number primitive. Now our main concern here is the performance of TryParse since it will be used the most. After running some performance tests the median timing was 400ns on a 3Ghz machine.
 
 <pre>[Serializable]
-public struct PhoneNumber : IEquatable&lt;PhoneNumber&gt;
+public struct PhoneNumber : IEquatable<PhoneNumber>
 {
     private const int AreaCodeShift = 54;
     private const int CentralOfficeCodeShift = 44;
@@ -76,36 +76,36 @@ public struct PhoneNumber : IEquatable&lt;PhoneNumber&gt;
     {
         value = 0;
 
-        if (areaCode &lt; 200 || areaCode &gt; 989)
+        if (areaCode < 200 || areaCode > 989)
         {
             if (!throwException) return;
             throw new ArgumentOutOfRangeException("areaCode", areaCode, @"The area code portion must fall between 200 and 989.");
         }
-        else if (centralOfficeCode &lt; 200 || centralOfficeCode &gt; 999)
+        else if (centralOfficeCode < 200 || centralOfficeCode > 999)
         {
             if (!throwException) return;
             throw new ArgumentOutOfRangeException("centralOfficeCode", centralOfficeCode, @"The central office code portion must fall between 200 and 999.");
         }
-        else if (subscriberNumber &lt; 0 || subscriberNumber &gt; 9999)
+        else if (subscriberNumber < 0 || subscriberNumber > 9999)
         {
             if (!throwException) return;
             throw new ArgumentOutOfRangeException("subscriberNumber", subscriberNumber, @"The subscriber number portion must fall between 0 and 9999.");
         }
-        else if (extension &lt; 0 || extension &gt; 1073741824)
+        else if (extension < 0 || extension > 1073741824)
         {
             if (!throwException) return;
             throw new ArgumentOutOfRangeException("extension", extension, @"The extension portion must fall between 0 and 1073741824.");
         }
-        else if (areaCode.ToString()[1] - 48 &gt; 8)
+        else if (areaCode.ToString()[1] - 48 > 8)
         {
             if (!throwException) return;
             throw new ArgumentOutOfRangeException("areaCode", areaCode, @"The second digit of the area code cannot be greater than 8.");
         }
         else
         {
-            value |= ((ulong)(uint)areaCode &lt;&lt; AreaCodeShift);
-            value |= ((ulong)(uint)centralOfficeCode &lt;&lt; CentralOfficeCodeShift);
-            value |= ((ulong)(uint)subscriberNumber &lt;&lt; SubscriberNumberShift);
+            value |= ((ulong)(uint)areaCode << AreaCodeShift);
+            value |= ((ulong)(uint)centralOfficeCode << CentralOfficeCodeShift);
+            value |= ((ulong)(uint)subscriberNumber << SubscriberNumberShift);
             value |= ((ulong)(uint)extension);
         }
     }
@@ -179,7 +179,7 @@ public struct PhoneNumber : IEquatable&lt;PhoneNumber&gt;
             }
         }
 
-        if (index &lt; 9)
+        if (index < 9)
         {
             return false;
         }
@@ -190,7 +190,7 @@ public struct PhoneNumber : IEquatable&lt;PhoneNumber&gt;
         var subscriberNumber = int.Parse(numericString.Substring(6, 4));
         var extension = 0;
 
-        if (numericString.Length &gt; 10)
+        if (numericString.Length > 10)
         {
             extension = int.Parse(numericString.Substring(10));
         }
@@ -218,17 +218,17 @@ public struct PhoneNumber : IEquatable&lt;PhoneNumber&gt;
 
     private static int UnmaskAreaCode(ulong value)
     {
-        return (int)(value &gt;&gt; AreaCodeShift);
+        return (int)(value >> AreaCodeShift);
     }
 
     private static int UnmaskCentralOfficeCode(ulong value)
     {
-        return (int)((value &gt;&gt; CentralOfficeCodeShift) & CentralOfficeCodeMask);
+        return (int)((value >> CentralOfficeCodeShift) & CentralOfficeCodeMask);
     }
 
     private static int UnmaskSubscriberNumber(ulong value)
     {
-        return (int)((value &gt;&gt; SubscriberNumberShift) & SubscriberNumberMask);
+        return (int)((value >> SubscriberNumberShift) & SubscriberNumberMask);
     }
 
     private static int UnmaskExtension(ulong value)

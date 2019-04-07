@@ -46,7 +46,7 @@ Here is the code that will return the gaps (the values 3,6,7,8,10,11) from the t
 <pre>select number 
 from Numbers n
 left join #bla b on n.number = b.id
-where n.number &lt; (select MAX(id) from #bla)
+where n.number < (select MAX(id) from #bla)
 and  b.id is null</pre>
 
 As you can see it is a simple left join, we also check for the max value otherwise you would get everything back that is greater than the max value in the #bla table.

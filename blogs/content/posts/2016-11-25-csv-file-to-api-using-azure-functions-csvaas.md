@@ -230,8 +230,8 @@ public static void Run(Stream input, string name, CloudBlockBlob jsonFile, Trace
     var csv = new CsvReader(reader);
     csv.Configuration.HasHeaderRecord = false;
 
-    var headers = new List&lt;string&gt;();
-    var rows = new List&lt;List&lt;string&gt;&gt;();
+    var headers = new List<string&gt;();
+    var rows = new List<List<string&gt;&gt;();
     InspectedType[] types = null;
     int rowCount = 0;
     string stringValue;
@@ -239,7 +239,7 @@ public static void Run(Stream input, string name, CloudBlockBlob jsonFile, Trace
     {
         if(rowCount == 0)
         {
-            for(int i=0; csv.TryGetField&lt;string&gt;(i, out stringValue); i++) 
+            for(int i=0; csv.TryGetField<string&gt;(i, out stringValue); i++) 
             {
                 headers.Add(stringValue);
             }
@@ -248,8 +248,8 @@ public static void Run(Stream input, string name, CloudBlockBlob jsonFile, Trace
         }
         else
         {
-            var row = new List&lt;string&gt;();
-            for(int i=0; csv.TryGetField&lt;string&gt;(i, out stringValue); i++) 
+            var row = new List<string&gt;();
+            for(int i=0; csv.TryGetField<string&gt;(i, out stringValue); i++) 
             {
                 row.Add(stringValue);
                 if(rowCount == 1)
@@ -305,7 +305,7 @@ public static void Run(Stream input, string name, CloudBlockBlob jsonFile, Trace
         }
         isFirstRow = false;
 
-        for(var i = 0; i &lt; columnCount; i++)
+        for(var i = 0; i < columnCount; i++)
         {
             var value = row[i];
             if(types[i] == InspectedType.Boolean)
@@ -365,7 +365,7 @@ public static void Run(Stream triggerBlob, string name, string listBlobIn, Cloud
     CSVList list;
     if(!String.IsNullOrEmpty(listBlobIn))
     {
-        list = JsonConvert.DeserializeObject&lt;CSVList&gt;(listBlobIn);
+        list = JsonConvert.DeserializeObject<CSVList&gt;(listBlobIn);
     }
     else{
         list = new CSVList();
@@ -383,11 +383,11 @@ public class CSVList
 {
     public CSVList() 
     {
-        Items = new List&lt;string&gt;();
+        Items = new List<string&gt;();
     }
 
     public DateTime LatestUpdate { get;set; }
-    public List&lt;string&gt; Items { get;set; }    
+    public List<string&gt; Items { get;set; }    
 }</pre>
 
 And there we have it, a CSV-powered API with full documentation, authentication via Microsoft as a single-sign on source, analytics, rate limits, and an interface that requires me to do nothing more than save my file in a folder and pay an extremely low consumption bill based on usage.

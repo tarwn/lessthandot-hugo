@@ -29,13 +29,13 @@ set @string = ''
 insert into @t
 select 'abcdefghijklmnopqrstuvwxyz'
 
-while (@counter &lt; 128) begin
+while (@counter < 128) begin
    insert into @t
    select letters from @t
    set @counter = @@rowcount
 end
 
-select @string = @string + letters + '&lt;br&gt;'
+select @string = @string + letters + '<br&gt;'
 from @t
 
 select @string
@@ -53,21 +53,21 @@ exec @hr = sp_OADestroy @mailObj</pre>
 
 This should kick out the alphabet repeated 256 times, with a <br> tag after each alphabet. By examining the result in query analyzer, it should look just fine. However, when you go check the email that got sent, you&#8217;ll find parts of the text that look like this:
 
-<code class="codespan">abcdefghijklmnopqrstuvwxyz&lt;br />
-abcdefghijklmnopqrstuvwxyzabcdef! ghijklmnopqrstuvwxyz&lt;br />
-abcdefghijklmnopqrstuvwxyz&lt;br />
-.&lt;br />
-.&lt;br />
-.&lt;br />
-abcdefghijklmnopqrstuvwxyz&lt;br />
-abcd! efghijklm! nopqrstuvwxyz&lt;br />
+<code class="codespan">abcdefghijklmnopqrstuvwxyz<br />
+abcdefghijklmnopqrstuvwxyzabcdef! ghijklmnopqrstuvwxyz<br />
+abcdefghijklmnopqrstuvwxyz<br />
+.<br />
+.<br />
+.<br />
+abcdefghijklmnopqrstuvwxyz<br />
+abcd! efghijklm! nopqrstuvwxyz<br />
 abcdefghijklmnopqrstuvwxyz</code>
 
 Fortunately, the solution is fairly simple. Microsoft Outlook seems to insert these exclamation marks randomly throughout the email when the mail contains no line feeds.
 
 So, stick a line feed after each alphabet and the exclamation marks will disappear from the email:
 
-<pre>select @string = @string + letters + '&lt;br&gt;' + char(10)
+<pre>select @string = @string + letters + '<br&gt;' + char(10)
 from @t</pre>
 
 Piece of cake B)

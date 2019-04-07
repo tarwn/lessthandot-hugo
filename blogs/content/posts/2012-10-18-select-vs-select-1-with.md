@@ -54,7 +54,7 @@ Now, the impact of .0190 is extremely low.  In order to really see if the metad
 <pre>DECLARE @int int = 1
 DECLARE @cmd VARCHAR(max) = ''
 
-WHILE @int &lt;= 1000
+WHILE @int <= 1000
  BEGIN
    SET @cmd = @cmd + ' col' + CAST(@int AS varchar(4)) + ' tinyint, '
   SET @int += 1

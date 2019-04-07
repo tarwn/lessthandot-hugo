@@ -37,7 +37,7 @@ WHERE OrderID * 3 = 33000</pre>
 Those three should be rewritten like this in order to become sargable 
 
 <pre>WHERE Name LIKE 'S%'
-WHERE SomeDate &gt;= '20120101' AND SomeDate &lt; '20130101'
+WHERE SomeDate &gt;= '20120101' AND SomeDate < '20130101'
 WHERE OrderID = 33000/3</pre>
 
 Let&#8217;s create a table, insert some data so that we can look at the execution plan

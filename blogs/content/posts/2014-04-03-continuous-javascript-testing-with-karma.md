@@ -81,22 +81,22 @@ I already had a set of 68 specs configured to run from my SpecRunner file, with 
 
 **SpecRunner:** [townthing/js/test/SpecRunner.json][12]
 
-<pre>&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-	&lt;title&gt;Jasmine Spec Runner v2.0.0&lt;/title&gt;
+<pre><!DOCTYPE HTML&gt;
+<html&gt;
+<head&gt;
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	<title&gt;Jasmine Spec Runner v2.0.0</title&gt;
 
-	&lt;link rel="shortcut icon" type="image/png" href="../lib/jasmine-2.0.0/jasmine_favicon.png"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="../lib/jasmine-2.0.0/jasmine.css"&gt;
+	<link rel="shortcut icon" type="image/png" href="../lib/jasmine-2.0.0/jasmine_favicon.png"&gt;
+	<link rel="stylesheet" type="text/css" href="../lib/jasmine-2.0.0/jasmine.css"&gt;
 
-	&lt;script type="text/javascript" src="../lib/jasmine-2.0.0/jasmine.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="../lib/jasmine-2.0.0/jasmine-html.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="../lib/jasmine-2.0.0/boot-without-onload.js"&gt;&lt;/script&gt;
+	<script type="text/javascript" src="../lib/jasmine-2.0.0/jasmine.js"&gt;</script&gt;
+	<script type="text/javascript" src="../lib/jasmine-2.0.0/jasmine-html.js"&gt;</script&gt;
+	<script type="text/javascript" src="../lib/jasmine-2.0.0/boot-without-onload.js"&gt;</script&gt;
 
-	&lt;script src="../lib/require-2.1.11.js"&gt;&lt;/script&gt;
+	<script src="../lib/require-2.1.11.js"&gt;</script&gt;
 
-	&lt;script type="text/javascript"&gt;
+	<script type="text/javascript"&gt;
 	require.config({
 		baseUrl: "../src",
 		paths: {
@@ -108,11 +108,11 @@ I already had a set of 68 specs configured to run from my SpecRunner file, with 
 	require(['../test/compass.spec', '../test/tile.spec', '../test/tree.spec', '../test/weather.spec'],function(){
 		window.executeTests();
 	});
-	&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+	</script&gt;
+</head&gt;
+<body&gt;
+</body&gt;
+</html&gt;</pre>
 
 The folder structure is a little odd, as this was originally just a play project. My test libraries are mixed with the core libraries and my specs and src have a flat structure. Were this a production project, I would also try to find a way to combine this inline config with the one below and generate the list of spec files instead of hand-coding them.
 

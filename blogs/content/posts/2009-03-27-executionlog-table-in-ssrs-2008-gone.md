@@ -21,8 +21,8 @@ This table was the bread and butter of trending for administrators. If you weren
 from executionlog a
 join catalog b on a.reportid = b.itemid
 Where 
-	convert(varchar(10),timeend,101) &gt;= @st 
-	And convert(varchar(10),timeend,101) &lt;= @end
+	convert(varchar(10),timeend,101) >= @st 
+	And convert(varchar(10),timeend,101) <= @end
 	And [Status] = 'rsSuccess'
 group by reportid,[Name]
 order by [name]</pre>

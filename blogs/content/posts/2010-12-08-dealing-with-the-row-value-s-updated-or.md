@@ -26,8 +26,8 @@ First create the following table.
 
 <pre>CREATE TABLE Test(col1 VARCHAR(200));
 go
-INSERT INTO Test (col1) VALUES('&lt;ccc&gt;ddd&lt;/ccc&gt;')
-INSERT INTO Test (col1) VALUES('&lt;ccc&gt;ddd&lt;/ccc&gt;')</pre>
+INSERT INTO Test (col1) VALUES('<ccc&gt;ddd</ccc&gt;')
+INSERT INTO Test (col1) VALUES('<ccc&gt;ddd</ccc&gt;')</pre>
 
 Now, do the following, navigate to this table in Object Explorer, right click on the table, select the &#8220;Edit top 200 rows&#8221; option (see also below for image)
 
@@ -67,7 +67,7 @@ What can we do to resolve this? Easy, stop using the wizard and get familiar wit
 
 <pre>DELETE TOP (1)
 FROM Test
-WHERE col1 = '&lt;ccc&gt;ddd&lt;/ccc&gt;'</pre>
+WHERE col1 = '<ccc&gt;ddd</ccc&gt;'</pre>
 
 The query above uses the TOP operator
 
@@ -75,7 +75,7 @@ The query above uses the TOP operator
    
 DELETE
 FROM Test
-WHERE col1 = '&lt;ccc&gt;ddd&lt;/ccc&gt;'
+WHERE col1 = '<ccc&gt;ddd</ccc&gt;'
    
 SET rowcount 0</pre>
 

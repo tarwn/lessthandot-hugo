@@ -29,11 +29,11 @@ I really struggled to think of a simple, &#8220;hello world&#8221; type applicat
 
 We&#8217;ll start with the observable. In this case it is just a class that sends time updates to any subscribers. I called it the Atomic Clock because it sounds cool. The Subscribe method is the most important here.
 
-<pre>class AtomicClock : IObservable&lt;DateTime&gt; {
-	IList&lt;IObserver&lt;DateTime&gt;&gt; observers = new List&lt;IObserver&lt;DateTime&gt;&gt;();
+<pre>class AtomicClock : IObservable<DateTime&gt; {
+	IList<IObserver<DateTime&gt;&gt; observers = new List<IObserver<DateTime&gt;&gt;();
 	bool keepRunning;
 
-	public IDisposable Subscribe(IObserver&lt;DateTime&gt; observer) {
+	public IDisposable Subscribe(IObserver<DateTime&gt; observer) {
 		observers.Add(observer);
 		return observer as IDisposable;
 	}
@@ -64,7 +64,7 @@ The most fun we&#8217;re having here is probably SendTime method. It is not that
 
 Now to set up the observers. In this case, I&#8217;m just implementing the IObserver interface on a winforms control that contains a couple of labels (city name and time). They also take an offset property, which is used to localize the UTC time received from the atomic clock (as long as we are willing to pretend there is no such thing as daylight savings). There is some cruft in there to handle crossthread calls on controls, but it could be worse.
 
-<pre>public partial class Clock : UserControl, IObserver&lt;DateTime&gt; {
+<pre>public partial class Clock : UserControl, IObserver<DateTime&gt; {
 	public Clock() {
 		InitializeComponent();
 	}
@@ -89,7 +89,7 @@ Now to set up the observers. In this case, I&#8217;m just implementing the IObse
 		SetTimeText(time, "Error reaching time service");
 	}
 
-	Action&lt;Label, string&gt; setterCallback = (toSet, text) =&gt; toSet.Text = text;
+	Action<Label, string&gt; setterCallback = (toSet, text) =&gt; toSet.Text = text;
 
 	void SetTimeText(Label toSet, string text) {
 		if (time.InvokeRequired) {
@@ -112,7 +112,7 @@ We can throw a few of these on a form, set up the correct city names and offsets
 		InitializeComponent();
 		foreach (var control in this.Controls) {
 			if (control.GetType() == typeof(MasterClock.Clock)) {
-				atomicClock.Subscribe(control as IObserver&lt;DateTime&gt;);
+				atomicClock.Subscribe(control as IObserver<DateTime&gt;);
 			}
 		}
 		this.FormClosing += OnClosing;

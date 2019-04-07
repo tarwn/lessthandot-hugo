@@ -33,26 +33,26 @@ Download and install Apache Ant: http://ant.apache.org/ (\`apt-get install ant\`
 
 It&#8217;s fairly straightforward to build a jNEAT library using Ant. Extract the archive somewhere and place the following code into build.xml in the root directory.
 
-<pre>&lt;project name="jneat" default="jar" basedir="."&gt;
-  &lt;property name="src" value="."/&gt;
+<pre><project name="jneat" default="jar" basedir="."&gt;
+  <property name="src" value="."/&gt;
 
-  &lt;target name="compile"&gt;
-    &lt;javac srcdir="${src}"/&gt;
-  &lt;/target&gt;
+  <target name="compile"&gt;
+    <javac srcdir="${src}"/&gt;
+  </target&gt;
 
-  &lt;target name="compile-debug"&gt;
-    &lt;javac debug="on" srcdir="${src}"/&gt;
-  &lt;/target&gt;
+  <target name="compile-debug"&gt;
+    <javac debug="on" srcdir="${src}"/&gt;
+  </target&gt;
 
-  &lt;target name="jar" depends="compile"&gt;
-    &lt;jar jarfile="jneat.jar" basedir="${src}"&gt;
-       &lt;include name="gui/*.class"/&gt;
-       &lt;include name="jneat/*.class"/&gt;
-       &lt;include name="jNeatCommon/*.class"/&gt;
-       &lt;include name="log/*.class"/&gt;
-    &lt;/jar&gt;
-  &lt;/target&gt;
-&lt;/project&gt;</pre>
+  <target name="jar" depends="compile"&gt;
+    <jar jarfile="jneat.jar" basedir="${src}"&gt;
+       <include name="gui/*.class"/&gt;
+       <include name="jneat/*.class"/&gt;
+       <include name="jNeatCommon/*.class"/&gt;
+       <include name="log/*.class"/&gt;
+    </jar&gt;
+  </target&gt;
+</project&gt;</pre>
 
 Running \`ant\` from a command line in the jNEAT root directory will produce jneat.jar which can be added to your development environment such as:
 
@@ -81,7 +81,7 @@ Evaluate the population by running your simulation for a set period of time, que
 
 Vector neatOrgs = neatPop.getOrganisms();
 
-for(int i=0;i&lt;neatOrgs.size();i++)
+for(int i=0;i<neatOrgs.size();i++)
 {
   // Extract the neural network from the jNEAT organism.
   Network brain = ((Organism)neatOrgs.get(i)).getNet();
@@ -101,7 +101,7 @@ for(int i=0;i&lt;neatOrgs.size();i++)
   brain.activate();
 
   // next activate each layer until the last level is reached
-  for (int relax = 0; relax &lt;= net_depth; relax++)
+  for (int relax = 0; relax <= net_depth; relax++)
   {
       brain.activate();
   }
@@ -122,7 +122,7 @@ After this evaluation process has run for enough iterations, assign each member 
 
 <pre>Vector neatOrgs = neatPop.getOrganisms();
 
-for(int i=0;i&lt;neatOrgs.size();i++)
+for(int i=0;i<neatOrgs.size();i++)
 {
   // Assign each organism a "fitness". A measure of how well the organism performed since the last evolution.
   ((Organism)neatOrgs.get(i)).setFitness(fitness);

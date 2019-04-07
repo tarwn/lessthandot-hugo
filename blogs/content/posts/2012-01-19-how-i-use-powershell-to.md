@@ -158,7 +158,7 @@ What I want is a table, here is what that looks like
 
 In order to accomplish that, I can grab the query result and put TD and TR tags around the columns and rows. I can also do something like the following
 
-<pre>SELECT TOP 10 '&lt;tr&gt;&lt;td&gt;',name,'&lt;/td&gt;&lt;td&gt;',create_date,'&lt;/td&gt;&lt;/tdr&gt;'
+<pre>SELECT TOP 10 '<tr&gt;<td&gt;',name,'</td&gt;<td&gt;',create_date,'</td&gt;</tdr&gt;'
 FROM msdb.sys.procedures
 ORDER BY create_date</pre>
 
@@ -205,57 +205,57 @@ You can run it from a command prompt or from the PowerShell Integrated Scripting
 
 Now go in your folder where the file has been created, if you open it in notepad or if you do view source when you open it in a browser, you will see something like this
 
-<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head&gt;
-&lt;title&gt;localhost FreeSpace&lt;/title&gt;
-&lt;/head&gt;&lt;body&gt;
-&lt;table&gt;
-&lt;colgroup&gt;
-&lt;col/&gt;
-&lt;col/&gt;
-&lt;/colgroup&gt;
-&lt;tr&gt;&lt;th&gt;name&lt;/th&gt;&lt;th&gt;create_date&lt;/th&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_sqlagent_is_srvrolemember&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:10 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_category_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:10 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_proxy_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:10 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_credential_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:10 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_subsystems&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_subsystem_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_login_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_proxy&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_add_proxy&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_delete_proxy&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/body&gt;&lt;/html&gt;</pre>
+<pre><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+<html xmlns="http://www.w3.org/1999/xhtml"&gt;
+<head&gt;
+<title&gt;localhost FreeSpace</title&gt;
+</head&gt;<body&gt;
+<table&gt;
+<colgroup&gt;
+<col/&gt;
+<col/&gt;
+</colgroup&gt;
+<tr&gt;<th&gt;name</th&gt;<th&gt;create_date</th&gt;</tr&gt;
+<tr&gt;<td&gt;sp_sqlagent_is_srvrolemember</td&gt;<td&gt;9/29/2010 10:13:10 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_category_identifiers</td&gt;<td&gt;9/29/2010 10:13:10 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_proxy_identifiers</td&gt;<td&gt;9/29/2010 10:13:10 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_credential_identifiers</td&gt;<td&gt;9/29/2010 10:13:10 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_subsystems</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_subsystem_identifiers</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_login_identifiers</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_proxy</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_add_proxy</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_delete_proxy</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+</table&gt;
+</body&gt;</html&gt;</pre>
 
 All I have to do now is create this part of the code in my blogpost
 
-<pre>&lt;div class="tables"&gt;
-&lt;table&gt;
-&lt;! Paste stuff here  !&gt;
-&lt;/table&gt;
-&lt;/div&gt;</pre>
+<pre><div class="tables"&gt;
+<table&gt;
+<! Paste stuff here  !&gt;
+</table&gt;
+</div&gt;</pre>
 
 I then copy and paste the rows from the html table between the table tags on line 3 in the previous code example
 
 Here is what I end up with
 
-<pre>&lt;div class="tables"&gt;
-&lt;table&gt;
-&lt;tr&gt;&lt;th&gt;name&lt;/th&gt;&lt;th&gt;create_date&lt;/th&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_sqlagent_is_srvrolemember&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:10 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_category_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:10 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_proxy_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:10 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_credential_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:10 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_subsystems&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_subsystem_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_login_identifiers&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_verify_proxy&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_add_proxy&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;sp_delete_proxy&lt;/td&gt;&lt;td&gt;9/29/2010 10:13:11 AM&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;</pre>
+<pre><div class="tables"&gt;
+<table&gt;
+<tr&gt;<th&gt;name</th&gt;<th&gt;create_date</th&gt;</tr&gt;
+<tr&gt;<td&gt;sp_sqlagent_is_srvrolemember</td&gt;<td&gt;9/29/2010 10:13:10 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_category_identifiers</td&gt;<td&gt;9/29/2010 10:13:10 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_proxy_identifiers</td&gt;<td&gt;9/29/2010 10:13:10 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_credential_identifiers</td&gt;<td&gt;9/29/2010 10:13:10 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_subsystems</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_subsystem_identifiers</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_login_identifiers</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_verify_proxy</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_add_proxy</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+<tr&gt;<td&gt;sp_delete_proxy</td&gt;<td&gt;9/29/2010 10:13:11 AM</td&gt;</tr&gt;
+</table&gt;
+</div&gt;</pre>
 
 And that will then look like this
 

@@ -33,7 +33,7 @@ I want a strongly typed Identity object in my API backend that transparently con
 This is what my ASP.Net MVC Method looks like:
 
 <pre>[HttpGet()]
-public async Task&lt;List&lt;ApplicationDTO&gt;&gt; GetAllAsync()
+public async Task<List<ApplicationDTO&gt;&gt; GetAllAsync()
 {
 	return await _databaseStore.Applications.GetAllAsync();
 }</pre>
@@ -67,7 +67,7 @@ Here is the definition of the ApplicationDTO object:
 
 Here is the definition of the OrganizationId Identity:
 
-<pre>public class OrganizationId : IIdentity&lt;int&gt;
+<pre>public class OrganizationId : IIdentity<int&gt;
 {   
 	[Obsolete("Serialization use only", true)]
 	public OrganizationId() { }
@@ -86,11 +86,11 @@ These are both generated code, with some of the extras left out (potentially a f
 
 JSON.Net supports custom JsonConverter implementations that will let us transparently convert between IIdentity<int> objects in C# and int values JSON:
 
-<pre>public class IdentityJsonConverter&lt;T&gt; : JsonConverter
+<pre>public class IdentityJsonConverter<T&gt; : JsonConverter
 {
     public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
     {
-        writer.WriteValue(((IIdentity&lt;T&gt;)value).RawValue);
+        writer.WriteValue(((IIdentity<T&gt;)value).RawValue);
     }
 
     public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
@@ -109,7 +109,7 @@ JSON.Net supports custom JsonConverter implementations that will let us transpar
 
     public override bool CanConvert(Type objectType)
     {
-        return typeof(IIdentity&lt;T&gt;).IsAssignableFrom(objectType);
+        return typeof(IIdentity<T&gt;).IsAssignableFrom(objectType);
     }
 }</pre>
 
@@ -134,7 +134,7 @@ To use this custom JSONConverter when ASP.Net is serializing/deserializing Actio
     // Add framework services.
     services.AddMvc()
             .AddJsonOptions(options =&gt; {
-                options.SerializerSettings.Converters.Add(new IdentityJsonConverter&lt;Int32&gt;());
+                options.SerializerSettings.Converters.Add(new IdentityJsonConverter<Int32&gt;());
             });
 
    // ...

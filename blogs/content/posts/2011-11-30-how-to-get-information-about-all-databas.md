@@ -274,7 +274,7 @@ FILEPROPERTY (AF.name, ''spaceused'')*8 as used,
 from sys.sysALTfiles AF 
 inner join sys.sysfiles ssf on ssf.name=AF.name COLLATE SQL_Latin1_General_CP1_CI_AS
 INNER JOIN sys.databases DB ON AF.dbid=DB.database_id 
-where ssf.groupid&lt;&gt;1' from sys.databases
+where ssf.groupid<&gt;1' from sys.databases
 
 execute(@SQL)
 
@@ -396,7 +396,7 @@ quotename(name,'''') +'  as DatabaseName,
         +
         CASE
             WHEN (status & 0x100000 = 0 AND CEILING((growth * 8192.0) / (1024.0 * 1024.0)) = 0.00) OR growth = 0 THEN ''''
-            WHEN CAST([maxsize] * 8.0 / 1024 AS DEC(20,2)) &lt;= 0.00 THEN '', unrestricted growth''
+            WHEN CAST([maxsize] * 8.0 / 1024 AS DEC(20,2)) <= 0.00 THEN '', unrestricted growth''
             ELSE '', restricted growth to '' + CAST(CAST([maxsize] * 8.0 / 1024 AS DEC(20)) AS VARCHAR) + '' MB''
         END
 FROM '  + quotename(name) + '.sys.sysfiles  s'

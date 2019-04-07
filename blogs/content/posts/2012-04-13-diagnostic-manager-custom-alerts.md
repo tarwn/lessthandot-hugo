@@ -65,7 +65,7 @@ On the next screen we add the SQL Query.
 
 <!-- codeblock="tsql" -->
 
-<pre>&lt;code&gt;
+<pre><code&gt;
 SELECT ROUND(MAX(DATEDIFF(MINUTE,LastBackUpTaken,GETDATE()))/60.0,2)  
 FROM  
 ( 

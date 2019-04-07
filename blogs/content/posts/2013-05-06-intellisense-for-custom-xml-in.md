@@ -28,45 +28,45 @@ So let&#8217;s assume for the moment that you have the following sample files:
 
 **AwesomeFile.xml**
 
-<pre>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;AwesomeList&gt;
-	&lt;AwesomeItem AwesomenessFactor="11"&gt;
-		&lt;AwesomeType&gt;Is Awesome&lt;/AwesomeType&gt;
-	&lt;/AwesomeItem&gt;
-&lt;/AwesomeList&gt;</pre>
+<pre><?xml version="1.0" encoding="utf-8" ?&gt;
+<AwesomeList&gt;
+	<AwesomeItem AwesomenessFactor="11"&gt;
+		<AwesomeType&gt;Is Awesome</AwesomeType&gt;
+	</AwesomeItem&gt;
+</AwesomeList&gt;</pre>
 
 **Awesome.xsd**
 
-<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;xs:schema id="MyAwesomeSchema"
+<pre><?xml version="1.0" encoding="utf-8"?&gt;
+<xs:schema id="MyAwesomeSchema"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
 
-	&lt;xs:simpleType name="AwesomeLevel"&gt;
-		&lt;xs:restriction base="xs:integer"&gt;
-			&lt;xs:enumeration value="1"&gt;&lt;/xs:enumeration&gt;
-			&lt;xs:enumeration value="5"&gt;&lt;/xs:enumeration&gt;
-			&lt;xs:enumeration value="10"&gt;&lt;/xs:enumeration&gt;
-			&lt;xs:enumeration value="11"&gt;&lt;/xs:enumeration&gt;
-		&lt;/xs:restriction&gt;
-	&lt;/xs:simpleType&gt;
+	<xs:simpleType name="AwesomeLevel"&gt;
+		<xs:restriction base="xs:integer"&gt;
+			<xs:enumeration value="1"&gt;</xs:enumeration&gt;
+			<xs:enumeration value="5"&gt;</xs:enumeration&gt;
+			<xs:enumeration value="10"&gt;</xs:enumeration&gt;
+			<xs:enumeration value="11"&gt;</xs:enumeration&gt;
+		</xs:restriction&gt;
+	</xs:simpleType&gt;
 
-	&lt;xs:complexType name="AwesomeElement"&gt;
-		&lt;xs:sequence&gt;
-			&lt;xs:element name="AwesomeType" type="xs:string"&gt;&lt;/xs:element&gt;
-		&lt;/xs:sequence&gt;
-		&lt;xs:attribute name="AwesomenessFactor" type="AwesomeLevel" use="required"&gt;&lt;/xs:attribute&gt;
-	&lt;/xs:complexType&gt;
+	<xs:complexType name="AwesomeElement"&gt;
+		<xs:sequence&gt;
+			<xs:element name="AwesomeType" type="xs:string"&gt;</xs:element&gt;
+		</xs:sequence&gt;
+		<xs:attribute name="AwesomenessFactor" type="AwesomeLevel" use="required"&gt;</xs:attribute&gt;
+	</xs:complexType&gt;
 
-	&lt;xs:element name="AwesomeList"&gt;
-		&lt;xs:complexType&gt;
-			&lt;xs:sequence&gt;
-				&lt;xs:element name="AwesomeItem" type="AwesomeElement" minOccurs="0" maxOccurs="unbounded"&gt;
-				&lt;/xs:element&gt;
-			&lt;/xs:sequence&gt;
-		&lt;/xs:complexType&gt;
-	&lt;/xs:element&gt;
+	<xs:element name="AwesomeList"&gt;
+		<xs:complexType&gt;
+			<xs:sequence&gt;
+				<xs:element name="AwesomeItem" type="AwesomeElement" minOccurs="0" maxOccurs="unbounded"&gt;
+				</xs:element&gt;
+			</xs:sequence&gt;
+		</xs:complexType&gt;
+	</xs:element&gt;
 	
-&lt;/xs:schema&gt;</pre>
+</xs:schema&gt;</pre>
 
 Visual Studio gives us handy intellisense suggestions and warnings when we&#8217;re writing the schema because we have specified a namespace it knows, but how do we get that usefulness when we&#8217;re adding more content to our awesome XML file?
 
@@ -87,49 +87,49 @@ Updating our files (and adding comments to reflect the list above), we have:
 
 **AwesomeFile.xml**
 
-<pre>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;AwesomeList xmlns="my://awesomeness"&gt; &lt;!-- (4) --&gt;
-	&lt;AwesomeItem AwesomenessFactor="11"&gt;
-		&lt;AwesomeType&gt;Is Awesome&lt;/AwesomeType&gt;
-	&lt;/AwesomeItem&gt;
-&lt;/AwesomeList&gt;</pre>
+<pre><?xml version="1.0" encoding="utf-8" ?&gt;
+<AwesomeList xmlns="my://awesomeness"&gt; <!-- (4) --&gt;
+	<AwesomeItem AwesomenessFactor="11"&gt;
+		<AwesomeType&gt;Is Awesome</AwesomeType&gt;
+	</AwesomeItem&gt;
+</AwesomeList&gt;</pre>
 
 **Awesome.xsd**
 
-<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;xs:schema id="MyAwesomeSchema"
+<pre><?xml version="1.0" encoding="utf-8"?&gt;
+<xs:schema id="MyAwesomeSchema"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		targetNamespace="my://awesomeness" &lt;!-- (1) --&gt;
-		xmlns="my://awesomeness" &lt;!-- (2) --&gt;
-		attributeFormDefault="unqualified" &lt;!-- (3) --&gt;
+		targetNamespace="my://awesomeness" <!-- (1) --&gt;
+		xmlns="my://awesomeness" <!-- (2) --&gt;
+		attributeFormDefault="unqualified" <!-- (3) --&gt;
 		elementFormDefault="qualified"&gt;
 
-	&lt;xs:simpleType name="AwesomeLevel"&gt;
-		&lt;xs:restriction base="xs:integer"&gt;
-			&lt;xs:enumeration value="1"&gt;&lt;/xs:enumeration&gt;
-			&lt;xs:enumeration value="5"&gt;&lt;/xs:enumeration&gt;
-			&lt;xs:enumeration value="10"&gt;&lt;/xs:enumeration&gt;
-			&lt;xs:enumeration value="11"&gt;&lt;/xs:enumeration&gt;
-		&lt;/xs:restriction&gt;
-	&lt;/xs:simpleType&gt;
+	<xs:simpleType name="AwesomeLevel"&gt;
+		<xs:restriction base="xs:integer"&gt;
+			<xs:enumeration value="1"&gt;</xs:enumeration&gt;
+			<xs:enumeration value="5"&gt;</xs:enumeration&gt;
+			<xs:enumeration value="10"&gt;</xs:enumeration&gt;
+			<xs:enumeration value="11"&gt;</xs:enumeration&gt;
+		</xs:restriction&gt;
+	</xs:simpleType&gt;
 
-	&lt;xs:complexType name="AwesomeElement"&gt;
-		&lt;xs:sequence&gt;
-			&lt;xs:element name="AwesomeType" type="xs:string"&gt;&lt;/xs:element&gt;
-		&lt;/xs:sequence&gt;
-		&lt;xs:attribute name="AwesomenessFactor" type="AwesomeLevel" use="required"&gt;&lt;/xs:attribute&gt;
-	&lt;/xs:complexType&gt;
+	<xs:complexType name="AwesomeElement"&gt;
+		<xs:sequence&gt;
+			<xs:element name="AwesomeType" type="xs:string"&gt;</xs:element&gt;
+		</xs:sequence&gt;
+		<xs:attribute name="AwesomenessFactor" type="AwesomeLevel" use="required"&gt;</xs:attribute&gt;
+	</xs:complexType&gt;
 
-	&lt;xs:element name="AwesomeList"&gt;
-		&lt;xs:complexType&gt;
-			&lt;xs:sequence&gt;
-				&lt;xs:element name="AwesomeItem" type="AwesomeElement" minOccurs="0" maxOccurs="unbounded"&gt;
-				&lt;/xs:element&gt;
-			&lt;/xs:sequence&gt;
-		&lt;/xs:complexType&gt;
-	&lt;/xs:element&gt;
+	<xs:element name="AwesomeList"&gt;
+		<xs:complexType&gt;
+			<xs:sequence&gt;
+				<xs:element name="AwesomeItem" type="AwesomeElement" minOccurs="0" maxOccurs="unbounded"&gt;
+				</xs:element&gt;
+			</xs:sequence&gt;
+		</xs:complexType&gt;
+	</xs:element&gt;
 
-&lt;/xs:schema&gt;</pre>
+</xs:schema&gt;</pre>
 
 And there we have it.
 

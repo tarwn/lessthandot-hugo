@@ -61,7 +61,7 @@ GO</pre>
 Now add this constraint
 
 <pre>alter table SomeTable2 add  constraint ck_SomeTable2
-check (SomeCol &lt; 100 )
+check (SomeCol < 100 )
 GO</pre>
 
 Try to insert the value 100

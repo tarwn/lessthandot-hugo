@@ -61,7 +61,7 @@ Namespace Resources
                 For Each pair In entries
                     Dim languageName = pair.Key
                     If String.IsNullOrEmpty(languageName) Then
-                        languageName = "&lt;neutral language&gt;"
+                        languageName = "<neutral language&gt;"
                     End If
                     Dim line = String.Format("  Language: {0}  ", languageName)
                     message.AppendLine(line)
@@ -91,7 +91,7 @@ Namespace Resources
                 Const resourcesEnding As String = ".resources"
                 For i = 0 To names.Length - 1
                     Dim name = names(i)
-                    If String.IsNullOrWhiteSpace(name) OrElse name.Length &lt;= resourcesEnding.Length OrElse Not name.EndsWith(resourcesEnding, StringComparison.InvariantCultureIgnoreCase) Then
+                    If String.IsNullOrWhiteSpace(name) OrElse name.Length <= resourcesEnding.Length OrElse Not name.EndsWith(resourcesEnding, StringComparison.InvariantCultureIgnoreCase) Then
                         Continue For
                     End If
                     name = name.Remove(name.Length - resourcesEnding.Length, resourcesEnding.Length)
@@ -206,7 +206,7 @@ ANd now my test looks like this.
 Namespace Resources
     Public Class TestReportResource
 
-        &lt;Test&gt;
+        <Test&gt;
         Public Sub TestResx
             ResourceTester.TestResxForInconsistencies(Gettype(BI.My.Resources.Report), BI.My.Resources.Report.ResourceManager)
         End Sub

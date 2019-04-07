@@ -53,8 +53,8 @@ As
 Begin
   
   Return IsNull(
-     (Select Case When CharIndex('.', @Value) &gt; 0 
-                  Then Case When Convert(int, ParseName(@Value, 1)) &lt;&gt; 0
+     (Select Case When CharIndex('.', @Value) > 0 
+                  Then Case When Convert(int, ParseName(@Value, 1)) <> 0
                             Then 0
                             Else 1
                             End

@@ -14,13 +14,13 @@ categories:
 ---
 Read something just now (I&#8217;ll leave that link out in respect for others) where a individual asked how they can reboot a server without having to manually fail-back all the mirrored databases once it is back up. The type of mirroring was high availability so the witness would of course fail the principle to the mirror if the decided the server had to be restarted. The answer that seemed to be accepted was to 
 
-<pre>ALTER DATABASE &lt;database_name&gt; SET PARTNER OFF;</pre>
+<pre>ALTER DATABASE <database_name> SET PARTNER OFF;</pre>
 
 Honestly I was surprised the author of the question didn&#8217;t come back in a flaming fury once he had to set his mirrors all back up sense that statement removes mirroring. I was curious so I google&#8217;d the SET PARTNER OFF and this seems to be a common answer to it. Wow! All I could come up with. Either the DB&#8217;s are so small it wasn&#8217;t an issue or the transactions out of sync were so small the mirroring simply started back up after reconfiguring it.
 
 For anyone that finds this and wants to know, you should pause mirroring
 
-<pre>ALTER DATABASE &lt;database_name&gt; SET PARTNER SUSPEND</pre>
+<pre>ALTER DATABASE <database_name> SET PARTNER SUSPEND</pre>
 
 Then use the RESUME to start mirroring back up. Really, I almost feel like this is a copy/paste from BOL. It&#8217;s pretty well documented [SQL Server 2005][1] and for [SQL Server 2008][2]. 
 

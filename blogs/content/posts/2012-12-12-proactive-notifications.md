@@ -55,7 +55,7 @@ EXEC master.dbo.xp_readerrorlog
 -- Delete everything older than 5 minutes
 -- ideally you will store the max date when it ran last
 DELETE #ErrorLog
-WHERE LogDate &lt;  DATEADD(mi,-5,GETDATE())
+WHERE LogDate <  DATEADD(mi,-5,GETDATE())
 
 -- Some stuff you want to check for
 -- Failed backups...you want to know this

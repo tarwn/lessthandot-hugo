@@ -27,14 +27,14 @@ Here is an example
 
 Retrieve all RSS Feeds from NY Times and save those entries containing the word oil in a MySQL database titled oil_news:
 
-<pre>&lt;xsp:append-child target="document('xdbc:mysql://192.168.1.27:3306/maindb')/oil_news"&gt;  
-       &lt;xsp:for-each select="(document('http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml')/text() &gt;&gt; /library/xml/pi('import'))/channel/item[contains(title,'oil')]"&gt;  
-            &lt;row&gt;  
-                &lt;title&gt;&lt;xsp:text value="{title}"/&gt;&lt;/title&gt;  
-               &lt;description&gt;&lt;xsp:text value="{description}"/&gt;&lt;/description&gt;  
-                &lt;link&gt;&lt;xsp:text value="{link}"/&gt;&lt;/link&gt;  
-            &lt;/row&gt;  
-        &lt;/xsp:for-each&gt;  
-    &lt;/xsp:append-child&gt;  </pre>
+<pre><xsp:append-child target="document('xdbc:mysql://192.168.1.27:3306/maindb')/oil_news">  
+       <xsp:for-each select="(document('http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml')/text() >> /library/xml/pi('import'))/channel/item[contains(title,'oil')]">  
+            <row>  
+                <title><xsp:text value="{title}"/></title>  
+               <description><xsp:text value="{description}"/></description>  
+                <link><xsp:text value="{link}"/></link>  
+            </row>  
+        </xsp:for-each>  
+    </xsp:append-child>  </pre>
 
 Some samples are here http://www.xsharp.org/samples/ and the main site is here: http://www.xsharp.org/

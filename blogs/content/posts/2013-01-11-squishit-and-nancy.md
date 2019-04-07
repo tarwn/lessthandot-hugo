@@ -30,18 +30,18 @@ Once installed, there is a little bit of setup work we need to do.
 
 This was infinitely more complex than using a referenced library in a razor view with MVC. Translation: this was as simple as adding a &#8220;razor&#8221; section to the web.config:
 
-<pre>&lt;configSections&gt;
-    &lt;section name="razor" type="Nancy.ViewEngines.Razor.RazorConfigurationSection, Nancy.ViewEngines.Razor" /&gt;
-  &lt;/configSections&gt;
-  &lt;razor disableAutoIncludeModelNamespace="false"&gt;
-    &lt;assemblies&gt;
-      &lt;add assembly="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /&gt;
-      &lt;add assembly="SquishIt.Framework" /&gt;
-    &lt;/assemblies&gt;
-    &lt;namespaces&gt;
-      &lt;add namespace="SquishIt.Framework" /&gt;
-    &lt;/namespaces&gt;
-  &lt;/razor&gt;</pre>
+<pre><configSections&gt;
+    <section name="razor" type="Nancy.ViewEngines.Razor.RazorConfigurationSection, Nancy.ViewEngines.Razor" /&gt;
+  </configSections&gt;
+  <razor disableAutoIncludeModelNamespace="false"&gt;
+    <assemblies&gt;
+      <add assembly="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /&gt;
+      <add assembly="SquishIt.Framework" /&gt;
+    </assemblies&gt;
+    <namespaces&gt;
+      <add namespace="SquishIt.Framework" /&gt;
+    </namespaces&gt;
+  </razor&gt;</pre>
 
 Its worth noting that when I added SquishIt.Framework to the namespaces section it **worked**, but didn&#8217;t help with intellisense. So I ended up adding the @using directives in my views anyway. So if you want intellisense, don&#8217;t bother with the namespaces if redundancy bothers you.
 
@@ -65,23 +65,23 @@ namespace SquishIt.NancySample.Modules
 By convention, Nancy locates the view in Views/Home. I assume it would look in Views/Shared next, but didn&#8217;t bother to confirm. So I added couple javascript files in Content/js, and then added a view with a bundle:
 
 <pre>@using SquishIt.Framework
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html&gt;
 
-&lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="utf-8" /&gt;
-        &lt;title&gt;Hello World Page&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Hello World Page&lt;/h1&gt;
-        &lt;p&gt;Hello World!&lt;/p&gt;
-        &lt;p&gt;This page will include a javascript bundle that is rendered to the file system and served as a static asset.&lt;/p&gt;
+<html lang="en"&gt;
+    <head&gt;
+        <meta charset="utf-8" /&gt;
+        <title&gt;Hello World Page</title&gt;
+    </head&gt;
+    <body&gt;
+        <h1&gt;Hello World Page</h1&gt;
+        <p&gt;Hello World!</p&gt;
+        <p&gt;This page will include a javascript bundle that is rendered to the file system and served as a static asset.</p&gt;
         @Html.Raw(Bundle.JavaScript()
             .Add("~/Content/js/js1.js")
             .Add("~/Content/js/js2.js")
             .Render("~/Content/combined/bundle.js"))
-    &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </body&gt;
+</html&gt;</pre>
 
 As long as I disabled debugging, a single tag was rendered into my page for bundle.js. That was easy.
 
@@ -131,21 +131,21 @@ The second parameter here is called filePath, but actually represents the path t
 Finally we can add a view. Note that the cached bundle is rendered by name into the page:
 
 <pre>@using SquishIt.Framework
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html&gt;
 
-&lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="utf-8" /&gt;
-        &lt;title&gt;Hello World Page&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Hello World Page&lt;/h1&gt;
-        &lt;p&gt;Hello World!&lt;/p&gt;
-        &lt;p&gt;This page will include a javascript bundle that is rendered into memory in Global.asax and served through the Assets Module&lt;/p&gt;
+<html lang="en"&gt;
+    <head&gt;
+        <meta charset="utf-8" /&gt;
+        <title&gt;Hello World Page</title&gt;
+    </head&gt;
+    <body&gt;
+        <h1&gt;Hello World Page</h1&gt;
+        <p&gt;Hello World!</p&gt;
+        <p&gt;This page will include a javascript bundle that is rendered into memory in Global.asax and served through the Assets Module</p&gt;
         @Html.Raw(Bundle.JavaScript()
             .RenderCachedAssetTag("hello"))
-    &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </body&gt;
+</html&gt;</pre>
 
 and change our HomeModule to serve the route:
 

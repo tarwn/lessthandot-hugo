@@ -20,7 +20,7 @@ Server.GetLastError() is accessible only at two places – 1. Page\_Error event 
 
 In this article, we’ll trap the unhandled errors in Application_Error event.
 
-<pre>&lt;%Import Namespace= “System.Diagnostics”%&gt;
+<pre><%Import Namespace= “System.Diagnostics”%>
 
 void Application_Error(object sender, EventArgs e) 
     { 
@@ -32,8 +32,8 @@ void Application_Error(object sender, EventArgs e)
         HttpContext ctx = HttpContext.Current;
         Exception ex = ctx.Server.GetLastError().GetBaseException();
    
-        string errorInfo = "&lt;br&gt;Offending URL: " + ctx.Request.Url.ToString();
-        errorInfo += "&lt;br&gt;Exception Details: " + ex.Message.ToString();
+        string errorInfo = "<br>Offending URL: " + ctx.Request.Url.ToString();
+        errorInfo += "<br>Exception Details: " + ex.Message.ToString();
 
        // ctx.Server.ClearError();
 
@@ -53,7 +53,7 @@ void Application_Error(object sender, EventArgs e)
 
 Note in the above code, Server.ClearError() is commented. This brings the customErrors section of the web.config into play. Once the error occurs, the error is logged into the event log and then redirected to a custom error page. Therefore make sure the customErrors section of the web.config file has an entry like this
 
-<pre>&lt;customErrors mode= “On” defaultRedirect= “AppError.htm”&gt;&lt;/customErrors&gt;</pre>
+<pre><customErrors mode= “On” defaultRedirect= “AppError.htm”></customErrors></pre>
 
 Continuing with the creation of Eventlog, create a sample page on your site to generate application error and then follow the below steps.
 
@@ -77,7 +77,7 @@ Continuing with the creation of Eventlog, create a sample page on your site to g
 
 The only drawback to create to an application specific event log is that you need admin rights on the web server. If that’s not possible, you can send out an email or write to a log file on the server. Code to send email &#8211;
 
-<pre>&lt;%Import System.Web.Mail%&gt;
+<pre><%Import System.Web.Mail%>
  MailMessage  errMail = new MailMessage();
 errMail.To= "ITgroup@company.com";
 errMail.From= "web@company.com"; 

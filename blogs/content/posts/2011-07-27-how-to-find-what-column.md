@@ -217,7 +217,7 @@ select @sql +=   '' + 'case when  t.' + column_name + ' &gt; tt.' + column_name
 + ',' 
 from information_schema.columns
 where table_name = 'MaxLengths'
-and column_name &lt;&gt; '_col0'
+and column_name <&gt; '_col0'
 select @sql = left(@sql,len(@sql) -1)
 select @sql +='  from MaxLengths t
 join TempTrunc tt on t._col0 = tt._col0 '
@@ -288,7 +288,7 @@ select @sql +=   '' + 'case when  t.' + column_name + ' &gt; tt.' + column_name
 + ',' 
 from information_schema.columns
 where table_name = @ImportTableCompare
-and column_name &lt;&gt; '_col0'
+and column_name <&gt; '_col0'
 select @sql = left(@sql,len(@sql) -1)
 select @sql +='  from ' + @ImportTableCompare + ' t
 join ' + @DestinationTableCompare + ' tt on t._col0 = tt._col0 '

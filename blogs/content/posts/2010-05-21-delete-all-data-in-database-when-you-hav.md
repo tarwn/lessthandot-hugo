@@ -95,7 +95,7 @@ Select 'USE [' + db_name() +']';
      from a
     inner join sys.foreign_keys f 
        on a.tblId=f.parent_object_id 
-      and a.tblID&lt;&gt;f.referenced_object_id
+      and a.tblID<>f.referenced_object_id
 )
 Select 'Delete from ['+ object_schema_name(tblID) + '].[' + object_name(tblId) + ']' 
   from a

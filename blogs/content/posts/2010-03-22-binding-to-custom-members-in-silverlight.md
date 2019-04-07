@@ -57,18 +57,18 @@ End Class</pre>
 
 Then, in the XAML of the data grid:
 
-<pre>&lt;data:DataGrid.Columns&gt;
-	&lt;data:DataGridTextColumn x:Name="dgcOrderNumber" CanUserReorder="False" CanUserSort="True" Header="Order Number" SortMemberPath="OrderNumber" Binding="{Binding OrderNumber}" Width="118"/&gt;
-	&lt;data:DataGridTextColumn CanUserReorder="False" CanUserSort="True" Header="Request Date" SortMemberPath="RequestDate" Binding="{Binding RequestDate, Converter={StaticResource DateConverter}}" Width="110"/&gt;
-	&lt;data:DataGridTextColumn CanUserReorder="False" CanUserSort="True" Header="Status" SortMemberPath="Status" Binding="{Binding Status}" Width="100"/&gt;
-	&lt;data:DataGridTemplateColumn CanUserSort="True" CanUserReorder="False" IsReadOnly="True" SortMemberPath="Comment" Width="26" &gt;
-		&lt;data:DataGridTemplateColumn.CellTemplate&gt; 
-			&lt;DataTemplate&gt; 
-                        	&lt;Local:CommentIndicator MyToolTip="{Binding Comment}"  Width="15" Height="17"  /&gt;
-			&lt;/DataTemplate&gt; 
-		&lt;/data:DataGridTemplateColumn.CellTemplate&gt; 
-	&lt;/data:DataGridTemplateColumn&gt;               
-&lt;/data:DataGrid.Columns&gt;</pre>
+<pre><data:DataGrid.Columns>
+	<data:DataGridTextColumn x:Name="dgcOrderNumber" CanUserReorder="False" CanUserSort="True" Header="Order Number" SortMemberPath="OrderNumber" Binding="{Binding OrderNumber}" Width="118"/>
+	<data:DataGridTextColumn CanUserReorder="False" CanUserSort="True" Header="Request Date" SortMemberPath="RequestDate" Binding="{Binding RequestDate, Converter={StaticResource DateConverter}}" Width="110"/>
+	<data:DataGridTextColumn CanUserReorder="False" CanUserSort="True" Header="Status" SortMemberPath="Status" Binding="{Binding Status}" Width="100"/>
+	<data:DataGridTemplateColumn CanUserSort="True" CanUserReorder="False" IsReadOnly="True" SortMemberPath="Comment" Width="26" >
+		<data:DataGridTemplateColumn.CellTemplate> 
+			<DataTemplate> 
+                        	<Local:CommentIndicator MyToolTip="{Binding Comment}"  Width="15" Height="17"  />
+			</DataTemplate> 
+		</data:DataGridTemplateColumn.CellTemplate> 
+	</data:DataGridTemplateColumn>               
+</data:DataGrid.Columns></pre>
 
 Everything looks good, but running the app will pop one of Silverlight completely unenlightening errors.
 

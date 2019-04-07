@@ -97,10 +97,10 @@ EXEC SP_CHANGE_USERS_LOGIN 'report';
 IF(SELECT COUNT(*) FROM #Orphaned) &gt; 0
 BEGIN
  SET @loop = 1
- WHILE @loop &lt;= (SELECT MAX(IDENT) FROM #Orphaned)
+ WHILE @loop <= (SELECT MAX(IDENT) FROM #Orphaned)
   BEGIN
     SET @USER = (SELECT UserName FROM #Orphaned WHERE IDENT = @loop)
-    IF(SELECT COUNT(*) FROM sys.server_principals WHERE [Name] = @USER) &lt;= 0
+    IF(SELECT COUNT(*) FROM sys.server_principals WHERE [Name] = @USER) <= 0
      BEGIN
         EXEC SP_ADDLOGIN @USER,'password'
      END
@@ -134,10 +134,10 @@ SELECT [name] FROM sys.database_principals WHERE [type] IN ('U','S') AND is_fixe
 IF(SELECT COUNT(*) FROM #Orphaned) &gt; 0
 BEGIN
  SET @loop = 1
- WHILE @loop &lt;= (SELECT MAX(IDENT) FROM #Orphaned)
+ WHILE @loop <= (SELECT MAX(IDENT) FROM #Orphaned)
   BEGIN
     SET @USER = (SELECT UserName FROM #Orphaned WHERE IDENT = @loop)
-    IF(SELECT COUNT(*) FROM sys.server_principals WHERE [Name] = @USER) &lt;= 0
+    IF(SELECT COUNT(*) FROM sys.server_principals WHERE [Name] = @USER) <= 0
      BEGIN
 		IF EXISTS(SELECT 1 FROM sys.database_principals WHERE [Name] = @USER AND type_desc = 'WINDOWS_USER')
 		 BEGIN

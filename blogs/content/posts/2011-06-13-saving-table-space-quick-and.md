@@ -32,7 +32,7 @@ where TABLE_TYPE='base table'
 select @count=count(*) from @tables
 set @i=1
 
-while @i&lt;=@count
+while @i<=@count
 begin
 
 	create table #temp

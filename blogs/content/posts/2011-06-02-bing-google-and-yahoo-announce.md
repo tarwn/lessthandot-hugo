@@ -47,51 +47,51 @@ An example
 Orginal HTML
 
 <pre>Jane Doe
-&lt;img src="janedoe.jpg" /&gt;
+<img src="janedoe.jpg" /&gt;
 
 Professor
 20341 Whitworth Institute
 405 Whitworth
 Seattle WA 98052
 (425) 123-4567
-&lt;a href="mailto:jane-doe@xyz.edu"&gt;jane-doe@illinois.edu&lt;/a&gt;
+<a href="mailto:jane-doe@xyz.edu"&gt;jane-doe@illinois.edu</a&gt;
 
 Jane's home page:
-&lt;a href="www.janedoe.com"&gt;janedoe.com&lt;/a&gt;
+<a href="www.janedoe.com"&gt;janedoe.com</a&gt;
 
 Graduate students:
-&lt;a href="www.xyz.edu/students/alicejones.html"&gt;Alice Jones&lt;/a&gt;
-&lt;a href="www.xyz.edu/students/bobsmith.html"&gt;Bob Smith&lt;/a&gt;</pre>
+<a href="www.xyz.edu/students/alicejones.html"&gt;Alice Jones</a&gt;
+<a href="www.xyz.edu/students/bobsmith.html"&gt;Bob Smith</a&gt;</pre>
 
 With MicroData
 
-<pre>&lt;div itemscope itemtype="http://schema.org/Person"&gt;
-  &lt;span itemprop="name"&gt;Jane Doe&lt;/span&gt;
-  &lt;img src="janedoe.jpg" itemprop="image" /&gt;
+<pre><div itemscope itemtype="http://schema.org/Person"&gt;
+  <span itemprop="name"&gt;Jane Doe</span&gt;
+  <img src="janedoe.jpg" itemprop="image" /&gt;
 
-  &lt;span itemprop="jobTitle"&gt;Professor&lt;/span&gt;
-  &lt;div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"&gt;
-    &lt;span itemprop="streetAddress"&gt;
+  <span itemprop="jobTitle"&gt;Professor</span&gt;
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"&gt;
+    <span itemprop="streetAddress"&gt;
       20341 Whitworth Institute
       405 N. Whitworth
-    &lt;/span&gt;
-    &lt;span itemprop="addressLocality"&gt;Seattle&lt;/span&gt;,
-    &lt;span itemprop="addressRegion"&gt;WA&lt;/span&gt;
-    &lt;span itemprop="postalCode"&gt;98052&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;span itemprop="telephone"&gt;(425) 123-4567&lt;/span&gt;
-  &lt;a href="mailto:jane-doe@xyz.edu" itemprop="email"&gt;
-    jane-doe@xyz.edu&lt;/a&gt;
+    </span&gt;
+    <span itemprop="addressLocality"&gt;Seattle</span&gt;,
+    <span itemprop="addressRegion"&gt;WA</span&gt;
+    <span itemprop="postalCode"&gt;98052</span&gt;
+  </div&gt;
+  <span itemprop="telephone"&gt;(425) 123-4567</span&gt;
+  <a href="mailto:jane-doe@xyz.edu" itemprop="email"&gt;
+    jane-doe@xyz.edu</a&gt;
 
   Jane's home page:
-  &lt;a href="www.janedoe.com" itemprop="url"&gt;janedoe.com&lt;/a&gt;
+  <a href="www.janedoe.com" itemprop="url"&gt;janedoe.com</a&gt;
 
   Graduate students:
-  &lt;a href="www.xyz.edu/students/alicejones.html" itemprop="colleagues"&gt;
-    Alice Jones&lt;/a&gt;
-  &lt;a href="www.xyz.edu/students/bobsmith.html" itemprop="colleagues"&gt;
-    Bob Smith&lt;/a&gt;
-&lt;/div&gt;</pre>
+  <a href="www.xyz.edu/students/alicejones.html" itemprop="colleagues"&gt;
+    Alice Jones</a&gt;
+  <a href="www.xyz.edu/students/bobsmith.html" itemprop="colleagues"&gt;
+    Bob Smith</a&gt;
+</div&gt;</pre>
 
 What do you think, will you start implementing this?
 

@@ -61,17 +61,17 @@ and the Enum (pretty straightforward, but just in case):
 
 <pre>public enum TransactionState
 {
-    /// &lt;summary&gt;
+    /// <summary>
     /// Open a new transaction
-    /// &lt;/summary&gt;
+    /// </summary>
     Begin,
-    /// &lt;summary&gt;
+    /// <summary>
     /// Continue using open transaction
-    /// &lt;/summary&gt;
+    /// </summary>
     Continue,
-    /// &lt;summary&gt;
+    /// <summary>
     /// Commit transaction when finished
-    /// &lt;/summary&gt;
+    /// </summary>
     Commit
 }</pre>
 

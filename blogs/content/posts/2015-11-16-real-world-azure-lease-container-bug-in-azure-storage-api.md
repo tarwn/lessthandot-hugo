@@ -53,10 +53,10 @@ A test for the [Lease Container Operation][3] can be implemented using the SDK l
 
 [ContainerNotFoundReturnsWrongError.cs][4]
 
-<pre>/// &lt;summary&gt;
+<pre>/// <summary&gt;
 /// Emulator: Returns 404 Container Not Found (tested with 3.3 and other versions)
 /// Azure API: Returns 404 Blob Not Found (tested with 3.3 and other versions)
-/// &lt;/summary&gt;
+/// </summary&gt;
 [Test]
 public void AcquireLease_NonExistentContainer_ReturnsContainerNotFoundError()
 {

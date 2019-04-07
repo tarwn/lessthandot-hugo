@@ -179,7 +179,7 @@ INTO #viewnames
 FROM sys.views v
 JOIN sys.schemas s ON v.schema_id = s.schema_id
 WHERE OBJECTPROPERTY(OBJECT_ID, 'IsSchemaBound') = 0
-WHILE @looper &lt;= (SELECT COUNT(*) FROM #viewnames)
+WHILE @looper <= (SELECT COUNT(*) FROM #viewnames)
 BEGIN
 SET @viewname = (SELECT vname FROM #viewnames WHERE ID = @looper)
 EXEC SP_REFRESHVIEW @viewname

@@ -64,7 +64,7 @@ cross join (
 select dateadd(dd,number,'20010101') as SomeDate
 from master..spt_values
 where type = 'p'
-and number &lt; 1150) x</pre>
+and number < 1150) x</pre>
 
 This will be our small table and will have 115456 rows
 

@@ -23,26 +23,26 @@ We first tried updating our references to use the 2008 version, and this seemed 
 
 Eventually we came across the idea of a [Binding Redirect][1] and thought this might be helpful. It seems like the redirect only works when pointing to a newer version of a referenced DLL, so we first changed our references to use the 1.0 version of AzMan (from windows 2000) and kicked of a fresh build of the installer. We set up our redirects like so:
 
-<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;configuration&gt;
-  &lt;configSections&gt;
-    &lt;!-- snip --&gt;
-  &lt;/configSections&gt;
-    &lt;runtime&gt;
-        &lt;assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1"&gt;
-            &lt;dependentAssembly&gt;
-                &lt;assemblyIdentity name="Microsoft.Interop.Security.AzRoles"
+<pre><?xml version="1.0" encoding="utf-8"?&gt;
+<configuration&gt;
+  <configSections&gt;
+    <!-- snip --&gt;
+  </configSections&gt;
+    <runtime&gt;
+        <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1"&gt;
+            <dependentAssembly&gt;
+                <assemblyIdentity name="Microsoft.Interop.Security.AzRoles"
                               publicKeyToken="31bf3856ad364e35"
                               culture="neutral" /&gt;
-                &lt;bindingRedirect oldVersion="1.0.0.0"
+                <bindingRedirect oldVersion="1.0.0.0"
                                                  newVersion="2.0.0.0"/&gt;
-                &lt;bindingRedirect oldVersion="1.0.0.0"
+                <bindingRedirect oldVersion="1.0.0.0"
                                                  newVersion="1.2.0.0"/&gt;
-            &lt;/dependentAssembly&gt;
-        &lt;/assemblyBinding&gt;
-    &lt;/runtime&gt;
-    &lt;!-- snip --&gt;
-&lt;configuration&gt;</pre>
+            </dependentAssembly&gt;
+        </assemblyBinding&gt;
+    </runtime&gt;
+    <!-- snip --&gt;
+<configuration&gt;</pre>
 
 At first it didn&#8217;t work, but looking at the error we noticed that the app was looking for the 2.0 version of AzMan (on a 2003 box where we were expecting 1.2). Wondering if the ordering of the redirects matters, we switched the two redirect lines and restarted IIS. Lucky for us, it worked (on Windows 2008 R2, 2008 and 2003 sp2 boxes). 
 

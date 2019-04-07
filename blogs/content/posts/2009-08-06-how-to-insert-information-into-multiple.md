@@ -349,7 +349,7 @@ AS
                                 ELSE -- Regular Person / Donors / Adult Volunteer
                                 BEGIN
                                         -- First we update Spouse's information with this new PersonID
-                                        IF COALESCE(@SpouseID,0) &gt; 0 -- we're trying to set new SpouseID
+                                        IF COALESCE(@SpouseID,0) > 0 -- we're trying to set new SpouseID
                                         UPDATE AdultInfo
                                         SET     SpouseID = @NewPersonID
                                         WHERE   PersonID =
@@ -365,8 +365,8 @@ AS
                                                 SELECT  SpouseID
                                                 FROM    AdultInfo
                                                 WHERE   PersonID             = @SpouseID
-                                                    AND COALESCE(SpouseID,0) &gt; 0
-                                                    AND SpouseID            &lt;&gt; @NewPersonID
+                                                    AND COALESCE(SpouseID,0) > 0
+                                                    AND SpouseID            <> @NewPersonID
                                         )
                                         BEGIN
                                                 -- THROW an Error here
@@ -422,7 +422,7 @@ AS
                                         END
                                 END
                                 --All person's types processed
-                                IF @SiteID = 1 AND COALESCE(@IsMember,0) &gt; 0
+                                IF @SiteID = 1 AND COALESCE(@IsMember,0) > 0
                                 INSERT
                                 INTO    MEMBERSHIP
                                         (
@@ -462,7 +462,7 @@ AS
                                 IF @ErrorState  = 0
                                 SET @ErrorState = 1
                                 -- If the error renders the transaction as uncommittable or we have open transactions, we may want to rollback
-                                IF @@TRANCOUNT &gt; 0
+                                IF @@TRANCOUNT > 0
                                 BEGIN
                                         --print 'Rollback transaction'
                                         ROLLBACK TRANSACTION

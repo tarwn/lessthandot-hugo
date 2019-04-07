@@ -37,7 +37,7 @@ GO
 DECLARE @loop INT
 SET @loop = 1
 
-WHILE @loop &lt;= 10
+WHILE @loop <= 10
   BEGIN
 	INSERT INTO tbl1 (CharCol) VALUES ('Some Text' + CAST(@loop as VarChar(6)))
 	SET @loop = @loop + 1

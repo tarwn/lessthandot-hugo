@@ -5,7 +5,7 @@ type: post
 date: 2010-04-01T12:25:00+00:00
 excerpt: |
   In an application I'm working on, I had a need for a method to write a single object to several Lucene indexes in order to support different types of searches.  I ended up with a method that looks like this:
-  public static void Accept&lt;T&gt;(T to_be_i&hellip;
+  public static void Accept<T>(T to_be_i&hellip;
 url: /index.php/webdev/serverprogramming/a-simple-parallel-foreach-implementation-5/
 views:
   - 19215
@@ -23,9 +23,9 @@ tags:
 ---
 In an application I&#8217;m working on, I had a need for a method to write a single object to several [Lucene][1] indexes in order to support different types of searches. I ended up with a method that looks like this:
 
-<pre>public static void Accept&lt;T&gt;(T to_be_indexed) 
+<pre>public static void Accept<T>(T to_be_indexed) 
 {
-	var indexers = StructureMap.ObjectFactory.GetAllInstances&lt;Indexer&lt;T&gt;&gt;();
+	var indexers = StructureMap.ObjectFactory.GetAllInstances<Indexer<T>>();
 	
 	foreach (var x in indexers)
 	{
@@ -50,7 +50,7 @@ Simple enough. Because of all the disk I/O involved, it seemed like this would b
     {
         lock (done)
         {
-            if (current &gt; 0 && --current == 0)
+            if (current > 0 && --current == 0)
                 done.Set();
         }
     }
@@ -68,16 +68,16 @@ Simple enough. Because of all the disk I/O involved, it seemed like this would b
 
 I found this class **much** more predictable and easier to work with than a bunch of ManualResetEvents, so we started looking at how it could be used to solve the problem at hand. It was remarkably easy, and I can only recall one issue that we ran into. The end result looked like this:
 
-<pre>public static void Accept&lt;T&gt;(T to_be_indexed) 
+<pre>public static void Accept<T>(T to_be_indexed) 
 {
-	var indexers = StructureMap.ObjectFactory.GetAllInstances&lt;Indexer&lt;T&gt;&gt;();
+	var indexers = StructureMap.ObjectFactory.GetAllInstances<Indexer<T>>();
 	
 	using (var cd = new Countdown( indexers.Count ))
     {
         foreach (var current in indexers)
         {
             var captured = current;
-            ThreadPool.QueueUserWorkItem(x =&gt;
+            ThreadPool.QueueUserWorkItem(x =>
                 {
                     captured.Index(to_be_indexed);
                     cd.Signal();
@@ -93,14 +93,14 @@ The problem we ran into was the lambda expression grabbing whatever &#8220;curre
   
 and use captured rather than current within the lambda. I&#8217;ve gotta say, I **really** like the all the code in that using block for the countdown. It may be because I set rather low expectations with my hackish early attempts to get this done, but I like things very simple and this definitely fits the bill. But, as beautiful / simple as the code may be, I still don&#8217;t want to write it multiple times if I can avoid it. So I took a look at the signature for Parallel.ForEach in .net 4 and threw together a version that would work with my system (running on mono 2.4.2.3, mostly equivalent to .net 3.5). Here that is:
 
-<pre>public static void ForEach&lt;T&gt;(IEnumerable&lt;T&gt; enumerable, Action&lt;T&gt; action)
+<pre>public static void ForEach<T>(IEnumerable<T> enumerable, Action<T> action)
 {
     using (var cd = new Countdown( enumerable.Count() ))
     {
         foreach (var current in enumerable)
         {
             var captured = current;
-            ThreadPool.QueueUserWorkItem(x =&gt;
+            ThreadPool.QueueUserWorkItem(x =>
                 {
                     action.Invoke(captured);
                     cd.Signal();
@@ -122,11 +122,11 @@ to allow execution of whatever method was passed in.
 
 Then, the Accept method can be changed to look like this:
 
-<pre>public static void Accept&lt;T&gt;(T to_be_indexed) 
+<pre>public static void Accept<T>(T to_be_indexed) 
 {
-	var indexers = StructureMap.ObjectFactory.GetAllInstances&lt;Indexer&lt;T&gt;&gt;();
+	var indexers = StructureMap.ObjectFactory.GetAllInstances<Indexer<T>>();
 	
-	Parallel.ForEach(indexers, x =&gt; {
+	Parallel.ForEach(indexers, x => {
 		x.Index(to_be_indexed);	
 	});
 }</pre>

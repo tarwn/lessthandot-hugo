@@ -128,7 +128,7 @@ UNION ALL
 SELECT OrderID + 1, 
 	DATEADD(dd, 1, OrderDate)
 FROM InsertOrders 
-WHERE DATEADD(dd, 1, OrderDate) &lt;= DATEADD(dd, 100, '2010/05/01')
+WHERE DATEADD(dd, 1, OrderDate) <= DATEADD(dd, 100, '2010/05/01')
 )
 INSERT INTO Orders2010 
 SELECT OrderID, OrderDate
@@ -149,7 +149,7 @@ UNION ALL
 SELECT OrderID + 1, 
 	DATEADD(dd, 1, OrderDate)
 FROM InsertOrders 
-WHERE DATEADD(dd, 1, OrderDate) &lt;= DATEADD(dd, 100, '2009/05/01')
+WHERE DATEADD(dd, 1, OrderDate) <= DATEADD(dd, 100, '2009/05/01')
 )
 INSERT INTO Orders2009
 SELECT OrderID, OrderDate
@@ -228,9 +228,9 @@ SELECT OrderID, OrderDate
 FROM Orders2011 
 WHERE OrderID = 400189</pre>
 
-<pre>&lt;span class="MT_red"&gt;Msg 8653, Level 16, State 1, Line 1
+<pre><span class="MT_red"&gt;Msg 8653, Level 16, State 1, Line 1
 The query processor is unable to produce a plan for the table or view 'Orders2011'
-because the table resides in a filegroup which is not online.&lt;/span&gt;</pre>
+because the table resides in a filegroup which is not online.</span&gt;</pre>
 
 I continue with a restore of the FGFullFG2 filegroup. This is a _filegroup-restore sequence_. 
 

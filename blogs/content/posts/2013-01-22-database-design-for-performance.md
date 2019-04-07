@@ -76,7 +76,7 @@ from sys.objects obj
   inner join sys.partitions parts on obj.object_id = parts.object_id
   inner join sys.allocation_units all_units on all_units.container_id = parts.hobt_id
   inner join sys.indexes idx on parts.index_id = idx.index_id and obj.object_id = idx.object_id
-where obj.type = 'U' and obj.name &lt;&gt; 'sysdiagrams'
+where obj.type = 'U' and obj.name <&gt; 'sysdiagrams'
 order by obj.name</pre>
 
 <div class="image_block">

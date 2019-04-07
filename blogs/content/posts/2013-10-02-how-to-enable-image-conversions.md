@@ -50,7 +50,7 @@ Open the localextensions.xml file in &#8216;hybris\_install\_dir&#8217;config an
 
 Uncomment the tag and add the location of the mediaconversion extension:
 
-<pre>&lt;extension name="mediaconversion" /&gt;</pre>
+<pre><extension name="mediaconversion" /&gt;</pre>
 
 
 

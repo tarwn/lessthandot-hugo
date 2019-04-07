@@ -100,22 +100,22 @@ select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank
 from TestTies)
 
 select id, SomeValue from rankings
-where Rank &lt;=2</pre>
+where Rank <=2</pre>
 
 <pre>--query 2
 select id, SomeValue from   (
 select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank 
 from TestTies) x
-where Rank &lt;=2</pre>
+where Rank <=2</pre>
 
 We can also use the MAX function twice like in the query below
 
 <pre>--query 3
 select *
 from TestTies
-where SomeValue &gt;= (select max(SomeValue) 
+where SomeValue >= (select max(SomeValue) 
 			from TestTies
-			where SomeValue &lt; (select max(SomeValue) 
+			where SomeValue < (select max(SomeValue) 
 			from TestTies))</pre>
 
 Another option is to use distinct top 2 in a sub query
@@ -135,9 +135,9 @@ select l.id, l.SomeValue
 from(select v.SomeValue, v.id,
 	Ranking =       (select count(distinct SomeValue) 
 		   	from TestTies a
-			where v.SomeValue &lt;= a.SomeValue)
+			where v.SomeValue <= a.SomeValue)
 	from TestTies v) l
-where l.Ranking &lt;=2
+where l.Ranking <=2
 order by l.Ranking </pre>
 
 So how do these queries perform in regards to each other?
@@ -150,22 +150,22 @@ select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank
 from TestTies)
 
 select id, SomeValue from rankings
-where Rank &lt;=2
+where Rank <=2
 
 --query 2
 select id, SomeValue from   (
 select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank 
 from TestTies) x
-where Rank &lt;=2
+where Rank <=2
 
 
 
 --query 3
 select *
 from TestTies
-where SomeValue &gt;= (select max(SomeValue) 
+where SomeValue >= (select max(SomeValue) 
 			from TestTies
-			where SomeValue &lt; (select max(SomeValue) 
+			where SomeValue < (select max(SomeValue) 
 			from TestTies))
 
 
@@ -184,9 +184,9 @@ select l.id, l.SomeValue
 from(select v.SomeValue, v.id,
 	Ranking =       (select count(distinct SomeValue) 
 		   	from TestTies a
-			where v.SomeValue &lt;= a.SomeValue)
+			where v.SomeValue <= a.SomeValue)
 	from TestTies v) l
-where l.Ranking &lt;=2
+where l.Ranking <=2
 order by l.Ranking </pre>
 
 Here is the result

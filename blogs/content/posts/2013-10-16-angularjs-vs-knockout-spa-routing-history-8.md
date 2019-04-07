@@ -89,21 +89,21 @@ The HTML templates then look like this:
 
 [Angular/partials/Routing/ListOfStuff.html][5]
 
-<pre>&lt;div&gt;
-    &lt;ul ng-repeat="item in listOfItems"&gt;
-        &lt;li&gt;&lt;a href="#/StuffDetail/{{ item.id }}"&gt;{{ item.name }}&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</pre>
+<pre><div&gt;
+    <ul ng-repeat="item in listOfItems"&gt;
+        <li&gt;<a href="#/StuffDetail/{{ item.id }}"&gt;{{ item.name }}</a&gt;</li&gt;
+    </ul&gt;
+</div&gt;</pre>
 
 [Angular/partials/Routing/StuffDetail.html][6]
 
-<pre>&lt;div&gt;
-    &lt;a href="#/ListOfStuff"&gt;Back to list&lt;/a&gt;&lt;br /&gt;
-    &lt;br /&gt;
-    &lt;b&gt;Id:&lt;/b&gt; {{ item.id }}&lt;br /&gt;
-    &lt;b&gt;Name:&lt;/b&gt; {{ item.name }}&lt;br /&gt;
-    &lt;b&gt;Description:&lt;/b&gt; {{ item.description }}&lt;br /&gt;
-&lt;/div&gt;</pre>
+<pre><div&gt;
+    <a href="#/ListOfStuff"&gt;Back to list</a&gt;<br /&gt;
+    <br /&gt;
+    <b&gt;Id:</b&gt; {{ item.id }}<br /&gt;
+    <b&gt;Name:</b&gt; {{ item.name }}<br /&gt;
+    <b&gt;Description:</b&gt; {{ item.description }}<br /&gt;
+</div&gt;</pre>
 
 In contrast to some of the other AngularJS examples in earlier posts, this one just worked. I didn&#8217;t have to worry about how to make hash URLs work, detecting changes and writing code to parse the URLs, or anything, just a few simple, direct rules and a controller and template for each one. 
 
@@ -170,29 +170,29 @@ define("StuffDetailViewModel",
 
 And the HTML for the page and the viewmodels looks like this:
 
-<pre>&lt;body&gt;
-&lt;!-- ko if: viewmodel() --&gt;
-&lt;div data-bind="template: { name: viewmodel().template, data: viewmodel }"&gt;
-&lt;/div&gt;
-&lt;!-- /ko --&gt;
+<pre><body&gt;
+<!-- ko if: viewmodel() --&gt;
+<div data-bind="template: { name: viewmodel().template, data: viewmodel }"&gt;
+</div&gt;
+<!-- /ko --&gt;
 
-&lt;!-- ... --&gt;
+<!-- ... --&gt;
 
-&lt;script type="text/html" id="ListOfStuffViewModel"&gt;
-    &lt;ul data-bind="foreach: listOfItems"&gt;
-        &lt;li&gt;&lt;a data-bind="attr: { href: '#/StuffDetail/' + id }, text: name"&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/script&gt;
-&lt;script type="text/html" id="StuffDetailViewModel"&gt;
-    &lt;div&gt;
-        &lt;a href="#/ListOfStuff"&gt;Back to list&lt;/a&gt;&lt;br /&gt;
-        &lt;br /&gt;
-        &lt;b&gt;Id:&lt;/b&gt; &lt;span data-bind="text: item().id"&gt;&lt;/span&gt;&lt;br /&gt;
-        &lt;b&gt;Name:&lt;/b&gt; &lt;span data-bind="text: item().name"&gt;&lt;/span&gt;&lt;br /&gt;
-        &lt;b&gt;Description:&lt;/b&gt; &lt;span data-bind="text: item().description"&gt;&lt;/span&gt;&lt;br /&gt;
-    &lt;/div&gt;
-&lt;/script&gt;
-&lt;/body&gt;</pre>
+<script type="text/html" id="ListOfStuffViewModel"&gt;
+    <ul data-bind="foreach: listOfItems"&gt;
+        <li&gt;<a data-bind="attr: { href: '#/StuffDetail/' + id }, text: name"&gt;</a&gt;</li&gt;
+    </ul&gt;
+</script&gt;
+<script type="text/html" id="StuffDetailViewModel"&gt;
+    <div&gt;
+        <a href="#/ListOfStuff"&gt;Back to list</a&gt;<br /&gt;
+        <br /&gt;
+        <b&gt;Id:</b&gt; <span data-bind="text: item().id"&gt;</span&gt;<br /&gt;
+        <b&gt;Name:</b&gt; <span data-bind="text: item().name"&gt;</span&gt;<br /&gt;
+        <b&gt;Description:</b&gt; <span data-bind="text: item().description"&gt;</span&gt;<br /&gt;
+    </div&gt;
+</script&gt;
+</body&gt;</pre>
 
 So far, the only major addition over the Angular example above is that outer viewmodel and the HTML to conditionally render it above. That &#8220;if&#8221; binding means that Knockout will not evaluate/display that area&#8217;s contents when the bound value is falsey. 
 

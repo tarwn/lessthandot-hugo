@@ -37,12 +37,12 @@ I prefix my common javascript files with a 2-digit number so I can include them 
 
 **CommonJS.tt**
 
-<pre>&lt;#@ template language="C#" hostspecific="True" #&gt;
-&lt;#@ import namespace="System" #&gt;
-&lt;#@ import namespace="System.IO" #&gt;
-&lt;#@ import namespace="Microsoft.VisualStudio.TextTemplating" #&gt;
-&lt;#@ Output Extension=".js" #&gt;
-&lt;#
+<pre><#@ template language="C#" hostspecific="True" #&gt;
+<#@ import namespace="System" #&gt;
+<#@ import namespace="System.IO" #&gt;
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #&gt;
+<#@ Output Extension=".js" #&gt;
+<#
 /*-------------------------------------------------*/
 // Settings      
 /*-------------------------------------------------*/
@@ -55,11 +55,11 @@ var files = Directory.GetFiles(".",filespec);
 #&gt;
 /*
 CommandJavascript.js
-Converted at: &lt;#= DateTime.Now.ToShortDateString() #&gt; &lt;#= DateTime.Now.ToShortTimeString() #&gt;
-File List (&lt;#= files.Length #&gt; Found):
-&lt;#= "t" + String.Join("nt", files) #&gt;
+Converted at: <#= DateTime.Now.ToShortDateString() #&gt; <#= DateTime.Now.ToShortTimeString() #&gt;
+File List (<#= files.Length #&gt; Found):
+<#= "t" + String.Join("nt", files) #&gt;
 */
-&lt;#
+<#
 foreach(var jsFile in files) 
 {
 	Write("/* ----------- " + jsFile + " ----------- */n");

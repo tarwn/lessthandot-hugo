@@ -47,9 +47,9 @@ What you really wanted is the following
 2013-01-01	2
 2013-01-02	2
 2013-01-03	1
-&lt;strong&gt;2013-01-04	0&lt;/strong&gt;
+<strong&gt;2013-01-04	0</strong&gt;
 2013-01-05	2
-&lt;strong&gt;2013-01-06	0&lt;/strong&gt;
+<strong&gt;2013-01-06	0</strong&gt;
 2013-01-07	1
 2013-01-08	1
 2013-01-09	2</pre>
@@ -66,7 +66,7 @@ cross join sysobjects s2)
 
 
 select  dateadd(day,Row,'20091231') from cte
-where Row &lt; 5114</pre>
+where Row < 5114</pre>
 
 That will return dates between 2010-01-01 and 2023-12-31
 
@@ -81,7 +81,7 @@ cross join sysobjects s2)
 
 INSERT Calendar
 select  dateadd(day,Row,'20091231') from cte
-where Row &lt; 5114</pre>
+where Row < 5114</pre>
 
 You might want to adjust the range to start earlier or end later for your purpose
 

@@ -41,7 +41,7 @@ Rem      This script will determine the tool directory, cd to it and call the
 Rem      deinstall.pl script
 Rem
 Rem    NOTES
-Rem      &lt;other useful comments, qualifications, etc.&gt;
+Rem      <other useful comments, qualifications, etc.&gt;
 Rem
 Rem    MODIFIED   (MM/DD/YY)
 Rem    ssampath    01/18/10 - Pass bootstrap location to bootstrap.pl and

@@ -19,7 +19,7 @@ Folks, please remember to refactor early and often&#8230;
 
 <pre>private Element ReadMemberExpression()
 {
-    var queue = new Queue&lt;Element[]&gt;();
+    var queue = new Queue<Element[]&gt;();
     var newDepth = 0;
     var argsCount = 0;
     _scanner.CreateRestorePoint();

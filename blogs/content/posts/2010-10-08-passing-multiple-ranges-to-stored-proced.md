@@ -50,14 +50,14 @@ FROM 	 (
     SELECT number
     FROM  master..spt_values
     WHERE type = 'P'
-    AND  number &lt;= 255
+    AND  number <= 255
     ) As a
  CROSS
  JOIN (
     SELECT number
     FROM  master..spt_values
     WHERE type = 'P'
-    AND  number &lt;= 255
+    AND  number <= 255
     ) As b
 GO
 
@@ -113,7 +113,7 @@ AS
        FROM
            dbo.Numbers WITH (NOLOCK)
        WHERE
-           Number &lt;= CONVERT(INT, LEN(@List))
+           Number <= CONVERT(INT, LEN(@List))
            AND SUBSTRING(@Delimiter + @List, Number, LEN(@Delimiter)) = @Delimiter
    );
 GO</pre>
@@ -191,7 +191,7 @@ DECLARE	@ID INT = 1
 ;WITH cteSource(ID, Data)
 AS (
 	SELECT	ID,
-		CAST('&lt;v&gt;&lt;i&gt;' + REPLACE(REPLACE(Data, '|', '&lt;/i&gt;&lt;/v&gt;&lt;v&gt;&lt;i&gt;'), '..', '&lt;/i&gt;&lt;i&gt;') + '&lt;/i&gt;&lt;/v&gt;' AS XML) AS Data
+		CAST('<v&gt;<i&gt;' + REPLACE(REPLACE(Data, '|', '</i&gt;</v&gt;<v&gt;<i&gt;'), '..', '</i&gt;<i&gt;') + '</i&gt;</v&gt;' AS XML) AS Data
 	FROM	@Sample
 	WHERE	ID = @ID
 )

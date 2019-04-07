@@ -51,7 +51,7 @@ The next feature, Full Query Call Stack, is something I’ve been hoping for in 
 DECLARE @DueDate DATETIME
 SET @DueDate = (SELECT MAX(DueDate) FROM Sales.SalesOrderHeader)
 
-WHILE @LOOP &lt; 100
+WHILE @LOOP < 100
  BEGIN
 	SELECT DueDate, ShipDate FROM Sales.SalesOrderHeader WHERE DueDate = @DueDate 
   SET @LOOP += 1
@@ -96,7 +96,7 @@ For example, changing the statement that has been used to perform and table wide
 DECLARE @DueDate DATETIME
 SET @DueDate = (SELECT MAX(DueDate) FROM Sales.SalesOrderHeader)
 
-WHILE @LOOP &lt; 100
+WHILE @LOOP < 100
  BEGIN
 	UPDATE Sales.SalesOrderHeader 
 	SET DueDate = @DueDate

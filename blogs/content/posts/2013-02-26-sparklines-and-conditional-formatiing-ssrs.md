@@ -111,7 +111,7 @@ Click on Sales from values and choose series properties.
 
 From the series properties page, choose fill and type the following expression
   
-<code class="codespan">iif(Fields!Sales.Value&lt;Fields!Quota.Value,“red”,”green”)</code>
+<code class="codespan">iif(Fields!Sales.Value<Fields!Quota.Value,“red”,”green”)</code>
 
 Finally, drag and drop Sparkline to a cell next to Employee in the table we created earlier.
 

@@ -36,7 +36,7 @@ open(SERVERS , "vnc-servers"); # Open the list of VNC servers, one IP,password p
                                # 192.168.0.2,password
                                # 192.168.0.3
                                # 192.168.0.4,anotherpassword
-while(&lt;SERVERS&gt;)
+while(<SERVERS&gt;)
 {
 	my ($address,$password) = split(/,/,$_);
 	$address =~ s/r//g;

@@ -149,24 +149,24 @@ Because Qunit will run in our browser, there are relatively few requirements and
 
 The empty file will be our test runner. Update the file to look like this:
 
-<pre>&lt;DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"&gt;&lt;/script&gt;
-	&lt;script src="qunit.js" type="text/javascript"&gt;&lt;/script&gt;
-	&lt;link rel="stylesheet" media="all" href="qunit.css" /&gt;
+<pre><DOCTYPE html&gt;
+<html&gt;
+<head&gt;
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"&gt;</script&gt;
+	<script src="qunit.js" type="text/javascript"&gt;</script&gt;
+	<link rel="stylesheet" media="all" href="qunit.css" /&gt;
 
-	&lt;script src="src/mystuff.js" type="text/javascript"&gt;&lt;/script&gt;
-	&lt;script src="src-test/mystuff_qunit.js" type="text/javascript"&gt;&lt;/script&gt;
+	<script src="src/mystuff.js" type="text/javascript"&gt;</script&gt;
+	<script src="src-test/mystuff_qunit.js" type="text/javascript"&gt;</script&gt;
 
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;h1 id="qunit-header"&gt;MyStuff&lt;/h1&gt;
-	&lt;h2 id="qunit-banner"&gt;&lt;/h2&gt;
-	&lt;h2 id="qunit-userAgent"&gt;&lt;/h2&gt;
-	&lt;ol id="qunit-tests"&gt;&lt;/ol&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</head&gt;
+<body&gt;
+	<h1 id="qunit-header"&gt;MyStuff</h1&gt;
+	<h2 id="qunit-banner"&gt;</h2&gt;
+	<h2 id="qunit-userAgent"&gt;</h2&gt;
+	<ol id="qunit-tests"&gt;</ol&gt;
+</body&gt;
+</html&gt;</pre>
 
 As you can see, we are referencing a CDNed version of jQuery, the local qunit files we downloaded, our source file, and a test js file we haven&#8217;t created yet. The remainder of the HTML will be used by Qunit to display the results.
 
@@ -243,24 +243,24 @@ function fail(msg){
 
 And update the testrunner HTML file we created to look like this:
 
-<pre>&lt;DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"&gt;&lt;/script&gt;
-	&lt;script src="qunit.js" type="text/javascript"&gt;&lt;/script&gt;
-	&lt;script src="jsTestDriverInQunit.js" type="text/javascript"&gt;&lt;/script&gt;
-	&lt;link rel="stylesheet" media="all" href="qunit.css" /&gt;
+<pre><DOCTYPE html&gt;
+<html&gt;
+<head&gt;
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"&gt;</script&gt;
+	<script src="qunit.js" type="text/javascript"&gt;</script&gt;
+	<script src="jsTestDriverInQunit.js" type="text/javascript"&gt;</script&gt;
+	<link rel="stylesheet" media="all" href="qunit.css" /&gt;
 
-	&lt;script src="src/mystuff.js" type="text/javascript"&gt;&lt;/script&gt;
-	&lt;script src="src-test/mystuff.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;h1 id="qunit-header"&gt;MyStuff&lt;/h1&gt;
-	&lt;h2 id="qunit-banner"&gt;&lt;/h2&gt;
-	&lt;h2 id="qunit-userAgent"&gt;&lt;/h2&gt;
-	&lt;ol id="qunit-tests"&gt;&lt;/ol&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+	<script src="src/mystuff.js" type="text/javascript"&gt;</script&gt;
+	<script src="src-test/mystuff.js" type="text/javascript"&gt;</script&gt;
+</head&gt;
+<body&gt;
+	<h1 id="qunit-header"&gt;MyStuff</h1&gt;
+	<h2 id="qunit-banner"&gt;</h2&gt;
+	<h2 id="qunit-userAgent"&gt;</h2&gt;
+	<ol id="qunit-tests"&gt;</ol&gt;
+</body&gt;
+</html&gt;</pre>
 
 And now whether we run the jsTestDriver client/server or open the Qunit file, we will be running the same exact set of tests.
 

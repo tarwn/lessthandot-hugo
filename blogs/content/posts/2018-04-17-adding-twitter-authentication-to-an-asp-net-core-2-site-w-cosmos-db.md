@@ -112,14 +112,15 @@ To bridge the gap between receiving the Twitter information and being able to us
 
 [SampleCosmosCore2App/Startup.cs][4]
 
-<pre>public void ConfigureServices(IServiceCollection services)
+```csharp
+public void ConfigureServices(IServiceCollection services)
 {
    // ... MVC, Membership
 
     services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
         /* External Auth Providers */
         .AddCookie("ExternalCookie")
-        .AddTwitter("Twitter", options =&gt;
+        .AddTwitter("Twitter", options =>
         {
             options.SignInScheme = "ExternalCookie";
 
@@ -127,11 +128,12 @@ To bridge the gap between receiving the Twitter information and being able to us
             options.ConsumerSecret = Configuration["Authentication:Twitter:ConsumerSecret"];
         })
         /* 'Session' Cookie Provider */
-        .AddCookie((options) =&gt;
+        .AddCookie((options) =>
         {
             // ...
         });
-}</pre>
+}
+```
 
 So the only three configurations we need here are the new Cookie provider with an explicit `AuthenticationScheme`, configuring Twitter to Sign In via that `AuthenticationScheme`, and then adding our Twitter Key and Secret via the appsettings.json file.
 
@@ -151,20 +153,19 @@ We&#8217;ll add a new `/account/login/twitter` endpoint with a final callback of
 
 [SampleCosmosCore2App/Views/Account/Login.cshtml][5]
 
-<pre>...
-&lt;div class="box"&gt;
-    &lt;h2&gt;Login&lt;/h2&gt;
-
-    &lt;a asp-action="LoginWithTwitter" asp-route-returnUrl="@TempData["returnUrl"]" class="btn-white"&gt;Login with Twitter&lt;/a&gt;
-
+```html
+...
+<div class="box">
+    <h2>Login</h2>
+    <a asp-action="LoginWithTwitter" asp-route-returnUrl="@TempData["returnUrl"]" class="btn-white">Login with Twitter</a>
     ...
-&lt;/div&gt;</pre>
+</div>
+```
 
 Then we add the endpoints to the Account controller to start the Twitter authentication process and capture the callback values at the end to start a new login session.
 
-[]()
-
-<pre>[HttpGet("login/twitter")]
+```csharp
+[HttpGet("login/twitter")]
 [AllowAnonymous]
 public IActionResult LoginWithTwitter(string returnUrl = null)
 {
@@ -177,7 +178,7 @@ public IActionResult LoginWithTwitter(string returnUrl = null)
 
 [HttpGet("login/twitter/continue")]
 [AllowAnonymous]
-public async Task&lt;IActionResult&gt; LoginWithTwitterContinueAsync(string returnUrl = null)
+public async Task<IActionResult> LoginWithTwitterContinueAsync(string returnUrl = null)
 {
     // use twitter info to create a session
     var cookie = await HttpContext.AuthenticateAsync("ExternalCookie");
@@ -193,7 +194,8 @@ public async Task&lt;IActionResult&gt; LoginWithTwitterContinueAsync(string retu
     await HttpContext.SignOutAsync("ExternalCookie");
 
     return LocalRedirect(returnUrl ?? _membership.Options.DefaultPathAfterLogin);
-}</pre>
+}
+```
 
 The Twitter information comes back in the &#8220;ExternalCookie&#8221; we registered in the Startup configuration. We&#8217;ll add a method to `CosmosDBMembership` to create a `LoginSession` just like we do with a username/password, except for a third-party identity instead. The last step is to clean up the &#8220;External Cookie&#8221; using it&#8217;s `SignOut` method.
 
@@ -223,15 +225,14 @@ The registration flow is similar to the login flow, but we need one additional e
 
 [SampleCosmosCore2App/Views/Account/Register.cshtml][6]
 
-<pre>...
-
-&lt;div class="box"&gt;
-    &lt;h2&gt;Create Account&lt;/h2&gt;
-
-    &lt;a asp-action="RegisterWithTwitter" class="btn-white"&gt;Continue with Twitter&lt;/a&gt;
+```html
+<div class="box">
+    <h2>Create Account</h2>
+    <a asp-action="RegisterWithTwitter" class="btn-white">Continue with Twitter</a>
 
     ...
-&lt;/div&gt;</pre>
+</div>
+```
 
 Like the Login form, we add a link to the Registration form.
 
@@ -244,31 +245,31 @@ Like the Login form, we add a link to the Registration form.
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-&lt;div class="box"&gt;
-    &lt;h2&gt;Create Account&lt;/h2&gt;
+<div class="box">
+    <h2>Create Account</h2>
 
-    &lt;form asp-action="RegisterWithTwitterContinueAsync" method="post"&gt;
-        &lt;div asp-validation-summary="ModelOnly" class="text-danger"&gt;&lt;/div&gt;
-        &lt;div class="form-group"&gt;
-            Welcome &lt;span&gt;@Model.TwitterUsername&lt;/span&gt;!
-            &lt;input asp-for="TwitterUsername" type="hidden" /&gt;
-            &lt;input asp-for="TwitterId" type="hidden" /&gt;
-        &lt;/div&gt;
-        &lt;div class="form-group"&gt;
-            &lt;label asp-for="UserName" class="control-label"&gt;&lt;/label&gt;
-            &lt;input asp-for="UserName" class="form-control" /&gt;
-            &lt;span asp-validation-for="UserName" class="text-danger"&gt;&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="form-group"&gt;
-            &lt;label asp-for="Email" class="control-label"&gt;&lt;/label&gt;
-            &lt;input asp-for="Email" class="form-control" /&gt;
-            &lt;span asp-validation-for="Email" class="text-danger"&gt;&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="form-group"&gt;
-            &lt;input type="submit" value="Register" class="btn btn-default" /&gt;
-        &lt;/div&gt;
-    &lt;/form&gt;
-&lt;/div&gt;</pre>
+    <form asp-action="RegisterWithTwitterContinueAsync" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            Welcome <span>@Model.TwitterUsername</span>!
+            <input asp-for="TwitterUsername" type="hidden" />
+            <input asp-for="TwitterId" type="hidden" />
+        </div>
+        <div class="form-group">
+            <label asp-for="UserName" class="control-label"></label>
+            <input asp-for="UserName" class="form-control" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Register" class="btn btn-default" />
+        </div>
+    </form>
+</div></pre>
 
 And a view that collects a username (for display purposes) once they&#8217;ve authenticated with Twitter.
 
@@ -289,7 +290,7 @@ public IActionResult RegisterWithTwitter()
 
 [HttpGet("register/twitter/continue")]
 [AllowAnonymous]
-public async Task&lt;IActionResult&gt; RegisterWithTwitterContinueAsync()
+public async Task<IActionResult> RegisterWithTwitterContinueAsync()
 {
     // use twitter info to set some sensible defaults
     var cookie = await HttpContext.AuthenticateAsync("ExternalCookie");
@@ -315,7 +316,7 @@ public async Task&lt;IActionResult&gt; RegisterWithTwitterContinueAsync()
 }
 
 [HttpPost("register/twitter/continue")]
-public async Task&lt;IActionResult&gt; RegisterWithTwitterContinueAsync(RegisterWithTwitterModel model)
+public async Task<IActionResult> RegisterWithTwitterContinueAsync(RegisterWithTwitterModel model)
 {
     if (!ModelState.IsValid)
     {
@@ -351,7 +352,7 @@ These will expose the new Persistence methods we need against Cosmos DB.
 {
     // ...
 
-    public async Task&lt;LoginResult&gt; LoginExternalAsync(string scheme, string identity)
+    public async Task<LoginResult> LoginExternalAsync(string scheme, string identity)
     {
         var authScheme = StringToScheme(scheme);
         var user = await _persistence.Users.GetUserByAuthenticationAsync(authScheme, identity);
@@ -365,7 +366,7 @@ These will expose the new Persistence methods we need against Cosmos DB.
         return LoginResult.GetSuccess();
     }
 
-    public async Task&lt;RegisterResult&gt; RegisterExternalAsync(string username, string email, string scheme, string identity)
+    public async Task<RegisterResult> RegisterExternalAsync(string username, string email, string scheme, string identity)
     {
         var user = new LoginUser()
         {
@@ -405,7 +406,7 @@ These will expose the new Persistence methods we need against Cosmos DB.
         return RegisterResult.GetSuccess();
     }
 
-    public async Task&lt;bool&gt; IsAlreadyRegisteredAsync(string scheme, string identity)
+    public async Task<bool> IsAlreadyRegisteredAsync(string scheme, string identity)
     {
         return await _persistence.Users.IsIdentityRegisteredAsync(StringToScheme(scheme), identity);
     }
@@ -441,9 +442,9 @@ Persistence needs some additional setup to create the new DocumentCollection, a 
 
     // ...
         
-    public async Task&lt;LoginUser&gt; GetUserByAuthenticationAsync(AuthenticationScheme authenticationScheme, string identity)
+    public async Task<LoginUser> GetUserByAuthenticationAsync(AuthenticationScheme authenticationScheme, string identity)
     {
-        var query = _client.CreateDocumentQuery&lt;LoginUserAuthentication&gt;(GetAuthenticationsCollectionUri(), new SqlQuerySpec()
+        var query = _client.CreateDocumentQuery<LoginUserAuthentication>(GetAuthenticationsCollectionUri(), new SqlQuerySpec()
         {
             QueryText = "SELECT * FROM UserAuthentications UA WHERE UA.Scheme = @scheme AND UA.Identity = @identity",
             Parameters = new SqlParameterCollection()
@@ -453,7 +454,7 @@ Persistence needs some additional setup to create the new DocumentCollection, a 
             }
         });
         var results = await query.AsDocumentQuery()
-                                    .ExecuteNextAsync&lt;LoginUserAuthentication&gt;();
+                                    .ExecuteNextAsync<LoginUserAuthentication>();
         if (results.Count == 0)
         {
             return null;
@@ -475,16 +476,16 @@ Persistence needs some additional setup to create the new DocumentCollection, a 
 
     #region Additional Authentication Methods
 
-    public async Task&lt;LoginUserAuthentication&gt; CreateUserAuthenticationAsync(LoginUserAuthentication userAuth)
+    public async Task<LoginUserAuthentication> CreateUserAuthenticationAsync(LoginUserAuthentication userAuth)
     {
         var result = await _client.CreateDocumentAsync(GetAuthenticationsCollectionUri(), userAuth, new RequestOptions() { });
-        return JsonConvert.DeserializeObject&lt;LoginUserAuthentication&gt;(result.Resource.ToString());
+        return JsonConvert.DeserializeObject<LoginUserAuthentication>(result.Resource.ToString());
     }
 
 
-    public async Task&lt;bool&gt; IsIdentityRegisteredAsync(AuthenticationScheme authenticationScheme, string identity)
+    public async Task<bool> IsIdentityRegisteredAsync(AuthenticationScheme authenticationScheme, string identity)
     {
-        var query = _client.CreateDocumentQuery&lt;int&gt;(GetAuthenticationsCollectionUri(), new SqlQuerySpec()
+        var query = _client.CreateDocumentQuery<int>(GetAuthenticationsCollectionUri(), new SqlQuerySpec()
         {
             QueryText = "SELECT VALUE COUNT(1) FROM UserAuthentications UA WHERE UA.Scheme = @scheme AND UA.Identity = @identity",
             Parameters = new SqlParameterCollection()
@@ -494,7 +495,7 @@ Persistence needs some additional setup to create the new DocumentCollection, a 
             }
         });
         var result = await query.AsDocumentQuery()
-                                .ExecuteNextAsync&lt;int&gt;();
+                                .ExecuteNextAsync<int>();
         return result.Single() == 1;
     }
 

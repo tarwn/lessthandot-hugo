@@ -35,13 +35,13 @@ Full source available at [Angular/SimpleTemplating.html][3].
 
 Taking a username and turning it into a full twitter button seems like it could be a good case for templating. Creating a replacement element will move the actual code for the twitter button out of the flow, reducing repetition of the mess while making the original code just as readable (or even more so).
 
-<pre>&lt;div ng-controller="TemplatingController"&gt;
-    &lt;h1&gt;As an Element&lt;/h1&gt;
-    &lt;twitter uservalue="{{ username }}"&gt;&lt;/twitter&gt;
+<pre><div ng-controller="TemplatingController"&gt;
+    <h1&gt;As an Element</h1&gt;
+    <twitter uservalue="{{ username }}"&gt;</twitter&gt;
 
-    &lt;!-- ... attribute example, see source ... --&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
+    <!-- ... attribute example, see source ... --&gt;
+</div&gt;
+<script type="text/javascript"&gt;
 
 // ...
 
@@ -56,12 +56,12 @@ sampleApp.directive('twitter', function(){
             user: '@uservalue'
         },
         // just a basic div instead of pulling 
-        template: '&lt;iframe allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/follow_button.html?screen_name={{ user }}"  style="width:300px; height:20px;"&gt;&lt;/iframe&gt;'
+        template: '<iframe allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/follow_button.html?screen_name={{ user }}"  style="width:300px; height:20px;"&gt;</iframe&gt;'
     }
 });
 
 // ... 
-&lt;/script&gt;</pre>
+</script&gt;</pre>
 
 The element is straightforward and readable. The directive will replace the custom element, pulling the value of the uservalue attribute in and adding that to the template HTML that will produce a twitter button when displayed.
 
@@ -71,13 +71,13 @@ Full source available at [Angular/TransclusionTemplating.html][4].
 
 Angular directives provide the ability to [transclude][5] content, inserting content from a custom element into the template in a directive. I&#8217;ve worked with a number of layouts over the years that have container elements, transclusion is a great tool to replace this repetitive (and occasionally fragile) code with a more readable and less repetitive element that provides the same final product. Here I&#8217;ve defined a basic Directive that for a container with a title and transcluded content.
 
-<pre>&lt;div ng-controller="TransclusionTemplatingController"&gt;
-    &lt;!-- don't try to use myAwesomeContainer, it won't work --&gt;
-    &lt;my-awesome-container h1-title="{{ title }}"&gt;
+<pre><div ng-controller="TransclusionTemplatingController"&gt;
+    <!-- don't try to use myAwesomeContainer, it won't work --&gt;
+    <my-awesome-container h1-title="{{ title }}"&gt;
         Here is my content: "{{ content }}"
-    &lt;/my-awesome-container&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
+    </my-awesome-container&gt;
+</div&gt;
+<script type="text/javascript"&gt;
     var sampleApp = angular.module('sampleApp', []);
 
     sampleApp.directive('myAwesomeContainer', function () {
@@ -93,7 +93,7 @@ Angular directives provide the ability to [transclude][5] content, inserting con
                 titleValue: "@h1Title"
             },
             // pretending we have a fancy set of HTML for the container
-            template: '&lt;div class="fancy-pants"&gt;&lt;h1&gt;{{ titleValue }}&lt;/h1&gt;&lt;div ng-transclude&gt;&lt;/div&gt;&lt;/div&gt;'
+            template: '<div class="fancy-pants"&gt;<h1&gt;{{ titleValue }}</h1&gt;<div ng-transclude&gt;</div&gt;</div&gt;'
         }
     });
 
@@ -101,7 +101,7 @@ Angular directives provide the ability to [transclude][5] content, inserting con
         $scope.content = "Some Dynamic Content";
         $scope.title = "A Dynamic Title";
     });
-&lt;/script&gt;</pre>
+</script&gt;</pre>
 
 Defining dialogs, containers, and so on as standard templates could take a lot of repetitive code out of the source, provide a single touch point to modify the code for those containers, and reduce the size of the HTML file the end user is downloading. 
 
@@ -111,12 +111,12 @@ Full source available at [Angular/BehaviorTemplating.html][6].
 
 In the [validation post][7], I used the linking method of a Directive to build validation. With templates, we can use that same linking method to add behavior to the template. Taking the transcluded container one step further, I&#8217;m going to provide the ability to hide or show the content by clicking on the title of the container.
 
-<pre>&lt;div ng-controller="BehaviorTemplatingController"&gt;
-    &lt;expanding-container clickable-title="{{ title }}"&gt;
+<pre><div ng-controller="BehaviorTemplatingController"&gt;
+    <expanding-container clickable-title="{{ title }}"&gt;
         Here is my content: "{{ content }}"
-    &lt;/expanding-container&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
+    </expanding-container&gt;
+</div&gt;
+<script type="text/javascript"&gt;
     var sampleApp = angular.module('sampleApp', []);
 
     sampleApp.directive('expandingContainer', function () {
@@ -132,7 +132,7 @@ In the [validation post][7], I used the linking method of a Directive to build v
                 titleValue: "@clickableTitle"
             },
             // pretending we have a fancy set of HTML for the container
-            template: '&lt;div class="fancy-pants"&gt;&lt;div&gt;{{ titleValue }}&lt;/div&gt;&lt;div ng-transclude class="box-to-hide"&gt;&lt;/div&gt;&lt;/div&gt;',
+            template: '<div class="fancy-pants"&gt;<div&gt;{{ titleValue }}</div&gt;<div ng-transclude class="box-to-hide"&gt;</div&gt;</div&gt;',
             link: function (scope, element, attributes) {
                 // copied and reformatted from doc examples here: http://docs.angularjs.org/guide/directive
                 var opened = true;
@@ -155,7 +155,7 @@ In the [validation post][7], I used the linking method of a Directive to build v
         $scope.content = "Some Dynamic Content";
         $scope.title = "Click title to toggle visibility";
     });
-&lt;/script&gt;</pre>
+</script&gt;</pre>
 
 Ten to eleven years ago, this would have been an ASP or PHP function that took content, wrapped it in some HTML, then slathered on some cross-browser javascript. The combination of transclusion and linking script is pretty powerful, providing an easy way to create dialog, container control, or panel logic in a single place with behavior, then re-use it in a readable format via custom tags.
 
@@ -173,16 +173,16 @@ Full source available at [Knockout/SimpleTemplating.html][9].
 
 Just as I did in the AngularJS example above, I&#8217;m going to start with a simple template that turns a username into a twitter button.
 
-<pre>&lt;div&gt;
-    &lt;h1&gt;Inside an Element&lt;/h1&gt;
-    &lt;div data-bind="template: { name: 'twitter-template', data: { user: username }}"&gt;&lt;/div&gt;
-    &lt;!-- ... --&gt;
-&lt;/div&gt;
-&lt;script type="text/html" id="twitter-template"&gt;
-    &lt;iframe allowtransparency="true" frameborder="0" scrolling="no"
+<pre><div&gt;
+    <h1&gt;Inside an Element</h1&gt;
+    <div data-bind="template: { name: 'twitter-template', data: { user: username }}"&gt;</div&gt;
+    <!-- ... --&gt;
+</div&gt;
+<script type="text/html" id="twitter-template"&gt;
+    <iframe allowtransparency="true" frameborder="0" scrolling="no"
         data-bind="attr: { src: '//platform.twitter.com/widgets/follow_button.html?screen_name=' + user() }"
-        style="width:300px; height:20px;"&gt;&lt;/iframe&gt;
-&lt;/script&gt;</pre>
+        style="width:300px; height:20px;"&gt;</iframe&gt;
+</script&gt;</pre>
 
 Templates in knockout fill the container they are defined on rather than replacing it. The data bind specifies the template name, which corresponds to a text/html block with the same id. The template binding specifies an anonymous object with the property as the viewmodel. This could as easily have been just the individual property, but I thought the anonymous object made it more similar to the Angular directive.
 
@@ -192,21 +192,21 @@ Full source available at [Knockout/NestedTemplating.html][10].
 
 While knockout does not have the concept of tranclusion, it does have the ability to define templates dynamically using an observable or computed value for the template name. So, while knockout does not have a built-in ability to do transclusion, you can very easily pass along a sub-template name and viewmodel to render a nested template.
 
-<pre>&lt;div data-bind="template: { name: 'container-template', data: { title: title, subtemplate: 'sample-contents', submodel: { content: content }}}"&gt;&lt;/div&gt;
+<pre><div data-bind="template: { name: 'container-template', data: { title: title, subtemplate: 'sample-contents', submodel: { content: content }}}"&gt;</div&gt;
 
-&lt;script type="text/html" id="container-template"&gt;
-    &lt;div class="fancy-pants"&gt;
-        &lt;h1 data-bind="text: title"&gt;&lt;/h1&gt;
-        &lt;div data-bind="template: { name: subtemplate, data: submodel}"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/script&gt;
+<script type="text/html" id="container-template"&gt;
+    <div class="fancy-pants"&gt;
+        <h1 data-bind="text: title"&gt;</h1&gt;
+        <div data-bind="template: { name: subtemplate, data: submodel}"&gt;</div&gt;
+    </div&gt;
+</script&gt;
    
-&lt;script type="text/html" id="sample-contents"&gt;
-    &lt;div data-bind="text: content"&gt;        
-    &lt;/div&gt;
-&lt;/script&gt;
+<script type="text/html" id="sample-contents"&gt;
+    <div data-bind="text: content"&gt;        
+    </div&gt;
+</script&gt;
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript"&gt;
 var SimpleTemplatingModel = function () {
     this.title = ko.observable("A Dynamic Title");
     this.content = ko.observable("Some Dynamic Content");
@@ -222,15 +222,15 @@ Full source available at [Knockout/BehaviorTemplating.html][11].
 
 Like Angular, knockout templates provide a mechanism to add behavior when they are applied. The template binding in knockout has [additional properties][12] that can be run as post-processing steps.
 
-<pre>&lt;div data-bind="template: { name: 'container-template', data: { title: title, content: content }, afterRender: makeItToggly }"&gt;&lt;/div&gt;
+<pre><div data-bind="template: { name: 'container-template', data: { title: title, content: content }, afterRender: makeItToggly }"&gt;</div&gt;
 
-&lt;script type="text/html" id="container-template"&gt;
-    &lt;div class="fancy-pants"&gt;
-        &lt;h1 data-bind="text: title"&gt;&lt;/h1&gt;
-        &lt;div data-bind="text: content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
+<script type="text/html" id="container-template"&gt;
+    <div class="fancy-pants"&gt;
+        <h1 data-bind="text: title"&gt;</h1&gt;
+        <div data-bind="text: content"&gt;</div&gt;
+    </div&gt;
+</script&gt;
+<script type="text/javascript"&gt;
     var SimpleTemplatingModel = function () {
         this.title = ko.observable("A Dynamic Title");
         this.content = ko.observable("Click title to toggle visibility");
@@ -245,7 +245,7 @@ Like Angular, knockout templates provide a mechanism to add behavior when they a
             $(elem).find('div').toggle();
         });
     }
-&lt;/script&gt;</pre>
+</script&gt;</pre>
 
 For this example, I&#8217;ve returned to the container that hides it&#8217;s content when the title is clicked. Knockout does not include DOM manipulation methods, so I&#8217;ve reached out to [jQuery][13] for the click handling and toggling (though if the library size worries you, I could have also gone to [Zepto.js][14], a lighter weight alternative).
 

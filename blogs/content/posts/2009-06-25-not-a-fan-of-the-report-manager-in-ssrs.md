@@ -63,19 +63,19 @@ Set @now = getdate()
 Set @me = SUSER_NAME()
 Set @my_usersid = (Select [SID] From ReportServer.dbo.Users Where UserName = suser_name())
 Set @time_send = (Select dbo.DateTimeTimeZoneOffset(Cast('2009-06-25 08:00:00' as datetime)))
-Set @schedule = '&lt;ScheduleDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-							&lt;StartDateTime xmlns="http://schemas.microsoft.com/sqlserver/2006/03/15/reporting/reportingservices"&gt;' + @time_send  + '&lt;/StartDateTime&gt;
-							&lt;WeeklyRecurrence xmlns="http://schemas.microsoft.com/sqlserver/2006/03/15/reporting/reportingservices"&gt;
-								&lt;WeeksInterval&gt;1&lt;/WeeksInterval&gt;
-								&lt;DaysOfWeek&gt;
-									&lt;Monday&gt;true&lt;/Monday&gt;
-									&lt;Tuesday&gt;true&lt;/Tuesday&gt;
-									&lt;Wednesday&gt;true&lt;/Wednesday&gt;
-									&lt;Thursday&gt;true&lt;/Thursday&gt;
-									&lt;Friday&gt;true&lt;/Friday&gt;
-								&lt;/DaysOfWeek&gt;
-							&lt;/WeeklyRecurrence&gt;
-							 &lt;/ScheduleDefinition&gt;'
+Set @schedule = '<ScheduleDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+							<StartDateTime xmlns="http://schemas.microsoft.com/sqlserver/2006/03/15/reporting/reportingservices">' + @time_send  + '</StartDateTime>
+							<WeeklyRecurrence xmlns="http://schemas.microsoft.com/sqlserver/2006/03/15/reporting/reportingservices">
+								<WeeksInterval>1</WeeksInterval>
+								<DaysOfWeek>
+									<Monday>true</Monday>
+									<Tuesday>true</Tuesday>
+									<Wednesday>true</Wednesday>
+									<Thursday>true</Thursday>
+									<Friday>true</Friday>
+								</DaysOfWeek>
+							</WeeklyRecurrence>
+							 </ScheduleDefinition>'
 
 exec CreateSubscription @Report_Name=@report_name,
 			@id=@report_id,
@@ -85,40 +85,40 @@ exec CreateSubscription @Report_Name=@report_name,
 			@Locale=N'en-US',
 			@DeliveryExtension=N'Report Server Email',
 			@InactiveFlags=0,
-			@ExtensionSettings=N'&lt;ParameterValues&gt;
-						&lt;ParameterValue&gt;
-							&lt;Name&gt;TO&lt;/Name&gt;
-							&lt;Value&gt;enduser@emails.com&lt;/Value&gt;
-						&lt;/ParameterValue&gt;
-						&lt;ParameterValue&gt;
-							&lt;Name&gt;BCC&lt;/Name&gt;
-							&lt;Value&gt;system_retention@dba.com&lt;/Value&gt;
-						&lt;/ParameterValue&gt;
-						&lt;ParameterValue&gt;
-							&lt;Name&gt;ReplyTo&lt;/Name&gt;
-							&lt;Value&gt;NoReply@company.com&lt;/Value&gt;
-						&lt;/ParameterValue&gt;
-						&lt;ParameterValue&gt;
-							&lt;Name&gt;IncludeReport&lt;/Name&gt;
-							&lt;Value&gt;True&lt;/Value&gt;
-						&lt;/ParameterValue&gt;
-						&lt;ParameterValue&gt;
-							&lt;Name&gt;RenderFormat&lt;/Name&gt;
-							&lt;Value&gt;EXCEL&lt;/Value&gt;
-						&lt;/ParameterValue&gt;
-						&lt;ParameterValue&gt;
-							&lt;Name&gt;Subject&lt;/Name&gt;
-							&lt;Value&gt;@ReportName was executed at @ExecutionTime&lt;/Value&gt;
-						&lt;/ParameterValue&gt;
-						&lt;ParameterValue&gt;
-							&lt;Name&gt;IncludeLink&lt;/Name&gt;
-							&lt;Value&gt;True&lt;/Value&gt;
-						&lt;/ParameterValue&gt;
-						&lt;ParameterValue&gt;
-							&lt;Name&gt;Priority&lt;/Name&gt;
-							&lt;Value&gt;NORMAL&lt;/Value&gt;
-						&lt;/ParameterValue&gt;
-					     &lt;/ParameterValues&gt;',
+			@ExtensionSettings=N'<ParameterValues>
+						<ParameterValue>
+							<Name>TO</Name>
+							<Value>enduser@emails.com</Value>
+						</ParameterValue>
+						<ParameterValue>
+							<Name>BCC</Name>
+							<Value>system_retention@dba.com</Value>
+						</ParameterValue>
+						<ParameterValue>
+							<Name>ReplyTo</Name>
+							<Value>NoReply@company.com</Value>
+						</ParameterValue>
+						<ParameterValue>
+							<Name>IncludeReport</Name>
+							<Value>True</Value>
+						</ParameterValue>
+						<ParameterValue>
+							<Name>RenderFormat</Name>
+							<Value>EXCEL</Value>
+						</ParameterValue>
+						<ParameterValue>
+							<Name>Subject</Name>
+							<Value>@ReportName was executed at @ExecutionTime</Value>
+						</ParameterValue>
+						<ParameterValue>
+							<Name>IncludeLink</Name>
+							<Value>True</Value>
+						</ParameterValue>
+						<ParameterValue>
+							<Name>Priority</Name>
+							<Value>NORMAL</Value>
+						</ParameterValue>
+					     </ParameterValues>',
 			@ModifiedBySid = @my_usersid,
 			@ModifiedByName=@me,
 			@ModifiedByAuthType=1,
@@ -127,7 +127,7 @@ exec CreateSubscription @Report_Name=@report_name,
 			@LastStatus=N'New Subscription',
 			@EventType=N'TimedSubscription',
 			@MatchData=@schedule,
-			@Parameters=N'&lt;ParameterValues /&gt;',
+			@Parameters=N'<ParameterValues />',
 			@Version=3</pre>
 
 With all of this you can now create multiple subscriptions for the same report to run through the day while only changing the time entered. You can also modify this easily to utilize the method in a procedure. This makes it much cleaner and easier to dynamically send multiple times and multiple reports so you can create mass subscriptions with one call. I will try to get a well error handled and procedure like that up in the next few days for download.

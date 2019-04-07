@@ -62,7 +62,7 @@ Here is the code for the different ways of calculating Pi which is part of the C
     {
         double sum = 0.0;
         double step = 1.0 / (double)num_steps;
-        for (int i = 0; i &lt; num_steps; i++)
+        for (int i = 0; i < num_steps; i++)
         {
             double x = (i + 0.5) * step;
             sum = sum + 4.0 / (1.0 + x * x);
@@ -77,11 +77,11 @@ Here is the code for the different ways of calculating Pi which is part of the C
         double sum = 0.0;
         double step = 1.0 / (double)num_steps;
         object monitor = new object();
-        Parallel.For(0, num_steps, () =&gt; 0.0, (i, state, local) =&gt;
+        Parallel.For(0, num_steps, () => 0.0, (i, state, local) =>
         {
             double x = (i + 0.5) * step;
             return local + 4.0 / (1.0 + x * x);
-        }, local =&gt; { lock (monitor) sum += local; });
+        }, local => { lock (monitor) sum += local; });
         return step * sum;
     }</pre>
 
@@ -92,15 +92,15 @@ Here is the code for the different ways of calculating Pi which is part of the C
         double sum = 0.0;
         double step = 1.0 / (double)num_steps;
         object monitor = new object();
-        Parallel.ForEach(Partitioner.Create(0, num_steps), () =&gt; 0.0, (range, state, local) =&gt;
+        Parallel.ForEach(Partitioner.Create(0, num_steps), () => 0.0, (range, state, local) =>
         {
-            for (int i = range.Item1; i &lt; range.Item2; i++)
+            for (int i = range.Item1; i < range.Item2; i++)
             {
                 double x = (i + 0.5) * step;
                 local += 4.0 / (1.0 + x * x);
             }
             return local;
-        }, local =&gt; { lock (monitor) sum += local; });
+        }, local => { lock (monitor) sum += local; });
         return step * sum;
     }
 }</pre>

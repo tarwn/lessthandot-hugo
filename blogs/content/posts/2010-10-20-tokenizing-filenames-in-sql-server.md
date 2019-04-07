@@ -335,7 +335,7 @@ SELECT @FilePath as FilePath, SUBSTRING('_' + @FilePath + '_', Number + 1,
     CHARINDEX('_', '_' + @FilePath + '_', Number + 1) - Number -1)AS VALUE
     FROM master..spt_values v
     WHERE TYPE = 'P'
-    AND Number &lt;= LEN('_' + @FilePath  + '_') - 1
+    AND Number <= LEN('_' + @FilePath  + '_') - 1
     AND SUBSTRING('_' + @FilePath  + '_', Number, 1) = '_'</pre>
 
 This is the output
@@ -435,7 +435,7 @@ Run this to see what we have so far
     CROSS JOIN (SELECT id,RIGHT(REPLACE(PATH,'.','_'),PATINDEX('%%',REVERSE(PATH))-1) AS PATH  
     FROM #test ) AS #test
     WHERE TYPE = 'P'
-    AND Number &lt;= LEN('_' + PATH  + '_') - 1
+    AND Number <= LEN('_' + PATH  + '_') - 1
     AND SUBSTRING('_' + PATH  + '_', Number, 1) = '_'
     </pre>
 
@@ -960,7 +960,7 @@ The missing piece is transposing the columns, this is easily accomplished by usi
     CROSS JOIN (SELECT id,RIGHT(REPLACE(PATH,'.','_'),PATINDEX('%%',REVERSE(PATH))-1) AS PATH  
     FROM #test ) AS #test
     WHERE TYPE = 'P'
-    AND Number &lt;= LEN('_' + PATH  + '_') - 1
+    AND Number <= LEN('_' + PATH  + '_') - 1
     AND SUBSTRING('_' + PATH  + '_', Number, 1) = '_') AS pivTemp
     PIVOT
 (   MAX(VALUE)

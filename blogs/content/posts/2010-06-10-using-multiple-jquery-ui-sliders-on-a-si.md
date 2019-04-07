@@ -15,11 +15,11 @@ categories:
 ---
 I had a bit of frustration lately when dealing with jQuery UI&#8217;s slider widget, more specifically when trying to deal with many on the same page. I wanted to follow the same pattern shown in the example for [snap to increments][1] where I have a div for the slider, and the value is actually set to a text input for easy form submission. The individual elements look something like this:
 
-<pre>&lt;div class="SliderControl"&gt;
-	&lt;label for="clarity"&gt;Clarity:&lt;/label&gt;
-	&lt;input type="text" class="SliderText" readonly="readonly" id="clarity" name="clarity"/&gt;
-	&lt;div class="RatingSlider" id="claritySlider"&gt;&lt;/div&gt;	
-&lt;/div&gt;</pre>
+<pre><div class="SliderControl"&gt;
+	<label for="clarity"&gt;Clarity:</label&gt;
+	<input type="text" class="SliderText" readonly="readonly" id="clarity" name="clarity"/&gt;
+	<div class="RatingSlider" id="claritySlider"&gt;</div&gt;	
+</div&gt;</pre>
 
 Basically there&#8217;s an input, and a single slider per input. The slider&#8217;s name is {input name}Slider. I had some trouble reconciling this setup with the way that the example on the jQuery site is laid out:
 

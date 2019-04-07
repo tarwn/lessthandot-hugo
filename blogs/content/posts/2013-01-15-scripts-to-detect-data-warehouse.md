@@ -102,7 +102,7 @@ FROM    sys.tables t
 WHERE   t.TYPE = 'U'
         AND t.name LIKE 'Dim%'
         AND kc.type_desc = 'PRIMARY_KEY_CONSTRAINT'
-        AND c.name &lt;&gt; REPLACE(t.name, 'Dim', '') + 'Key'</pre>
+        AND c.name <&gt; REPLACE(t.name, 'Dim', '') + 'Key'</pre>
 
  
 
@@ -117,7 +117,7 @@ Without a foreign key, a fact table isn&#8217;t really a fact table.
     sys.foreign_keys fk ON t.OBJECT_ID = fk.parent_object_id
     WHERE  t.name LIKE 'fact%'
     GROUP BY t.name
-    HAVING COUNT(*) &lt; 1  </pre>
+    HAVING COUNT(*) < 1  </pre>
 
  
 

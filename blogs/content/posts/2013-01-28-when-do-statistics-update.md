@@ -156,7 +156,7 @@ Next, execute an update to alter 2699 rows in the statsupdate table (1 row under
 
 <pre>UPDATE statsupdate 
 	SET col1 = REPLICATE('a',10)
-WHERE id &lt;= 2699</pre>
+WHERE id <= 2699</pre>
 
  
 
@@ -183,7 +183,7 @@ Execute the following to update one more row.
 
 <pre>UPDATE statsupdate 
 	SET col1 = REPLICATE('a',10)
-WHERE id &gt; 2699 AND id &lt;= 2700</pre>
+WHERE id &gt; 2699 AND id <= 2700</pre>
 
  
 

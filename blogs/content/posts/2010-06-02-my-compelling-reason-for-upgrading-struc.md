@@ -28,12 +28,12 @@ And it does just what it says it does. This could really help in one particular 
 	public override void OnActionExecuted (ActionExecutedContext filterContext)
 	{
 		// for when session doesn't need to remain open for view rendering
-		//StructureMap.ObjectFactory.GetInstance&lt;NHibernate.ISession&gt;().Dispose();
+		//StructureMap.ObjectFactory.GetInstance<NHibernate.ISession>().Dispose();
 	}
 
 	public override void OnResultExecuted (ResultExecutedContext filterContext)
 	{
-		StructureMap.ObjectFactory.GetInstance&lt;NHibernate.ISession&gt;().Dispose();
+		StructureMap.ObjectFactory.GetInstance<NHibernate.ISession>().Dispose();
 	}
 }</pre>
 

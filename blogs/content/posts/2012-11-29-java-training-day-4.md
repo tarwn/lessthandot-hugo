@@ -259,11 +259,11 @@ The general purpose implementations are summarized in the table below:
 
 Code to the interface, not to the class, you can now change the container without having to make code changes
 
-<pre>ArrayList&lt;Integer&gt;   list  = new ArrayList&lt;Integer&gt;();
-LinkedList&lt;Integer&gt;  list =  new LinkedList&lt;Integer&gt;();</pre>
+<pre>ArrayList<Integer&gt;   list  = new ArrayList<Integer&gt;();
+LinkedList<Integer&gt;  list =  new LinkedList<Integer&gt;();</pre>
 
-<pre>List&lt;Integer&gt; list  = new ArrayList&lt;Integer&gt;();
-List&lt;Integer&gt; list =  new LinkedList&lt;Integer&gt;();</pre>
+<pre>List<Integer&gt; list  = new ArrayList<Integer&gt;();
+List<Integer&gt; list =  new LinkedList<Integer&gt;();</pre>
 
 There is a tutorial availabe on the Oracle website here: http://docs.oracle.com/javase/tutorial/collections/index.html
 

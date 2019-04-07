@@ -38,7 +38,7 @@ AS (
 			, Num
 	FROM c
 	WHERE Num &gt;= 0
-		AND Num &lt;= DATEDIFF(day, @startdate, @enddate)
+		AND Num <= DATEDIFF(day, @startdate, @enddate)
 	)
 SELECT datekey = CAST(CONVERT(VARCHAR(8), DATEADD(day, Num, @startdate), 112) AS INT)
 	, [date]
@@ -51,7 +51,7 @@ SELECT datekey = CAST(CONVERT(VARCHAR(8), DATEADD(day, Num, @startdate), 112) AS
 	, [QuarterNumber] = DATEPART(quarter, [Date])
 	, [Year] = YEAR([date])
 	, [FiscalYear] = CASE 
-		WHEN DATEPART(month, [Date]) &lt; 7
+		WHEN DATEPART(month, [Date]) < 7
 			THEN YEAR([date])
 		ELSE YEAR([date]) + 1
 		END

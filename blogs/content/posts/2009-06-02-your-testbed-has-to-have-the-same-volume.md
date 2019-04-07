@@ -48,7 +48,7 @@ select convert(varchar(36),newid())
  + convert(varchar(36),newid())
  + convert(varchar(36),newid()),newid() from master..spt_values t1
 where t1.type = 'p'
-and t1.number &lt; 256
+and t1.number < 256
 go
 
 --65536 rows
@@ -58,9 +58,9 @@ select convert(varchar(36),newid())
  + convert(varchar(36),newid()),newid() from master..spt_values t1
 outer apply master..spt_values t2
 where t1.type = 'p'
-and t1.number &lt; 256
+and t1.number < 256
 and t2.type = 'p'
-and t2.number &lt; 256
+and t2.number < 256
 go</pre>
 
 Now we will create a clustered index on each table

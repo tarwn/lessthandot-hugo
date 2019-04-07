@@ -184,7 +184,7 @@ Do you want to see all the different programs connected to your server?
 
 <pre>SELECT COUNT(*) Count,program_name 
 FROM sys.sysprocesses
-WHERE status &lt;&gt; 'background'
+WHERE status <&gt; 'background'
 GROUP BY program_name
 ORDER BY 1 desc</pre>
 

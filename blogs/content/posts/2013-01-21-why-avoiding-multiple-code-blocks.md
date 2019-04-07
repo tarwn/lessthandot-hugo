@@ -121,30 +121,30 @@ Now click the XML link in the query_plan column. A new tab will open in SSMS sho
 You can now read the XML plan and you will find both the statements in the query plan:
 
 <pre>ShowPlanXML xmlns="http://schemas.microsoft.com/sqlserver/2004/07/showplan" Version="1.1" Build="10.50.2500.0"&gt;
-  &lt;BatchSequence&gt;
-    &lt;Batch&gt;
-      &lt;Statements&gt;
-        &lt;StmtSimple StatementText="CREATE procedure TwoPlans&#xD;&#xA;&#x9;@IfParameter int&#xD;&#xA;as&#xD;&#xA;&#x9;SET NOCOUNT ON;&#xD;&#xA;" StatementId="1" StatementCompId="3" StatementType="SET ON/OFF" /&gt;
-        &lt;StmtCond StatementText="&#x9;If @IfParameter = 1&#xD;&#xA;&#x9;" StatementId="2" StatementCompId="4" StatementType="COND"&gt;
-          &lt;Condition /&gt;
-          &lt;Then&gt;
-            &lt;Statements&gt;
-              &lt;StmtSimple StatementText="&#x9;SELECT a.City, COUNT(bea.AddressID) EmployeeCount&#xD;&#xA;&#x9;&#x9;FROM Person.BusinessEntityAddress bea &#xD;&#xA;&#x9;&#x9;&#x9;INNER JOIN Person.Address a&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;ON bea.AddressID = a.AddressID&#xD;&#xA;&#x9;&#x9;GROUP BY a.City&#xD;&#xA;&#x9;&#x9;ORDER BY a.City&#xD;&#xA;" StatementId="3" StatementCompId="5" StatementType="SELECT" StatementSubTreeCost="0.604708" StatementEstRows="574.696" StatementOptmLevel="FULL" QueryHash="0x03E92D79FC617C86" QueryPlanHash="0xED13B89036D1A5E6" StatementOptmEarlyAbortReason="GoodEnoughPlanFound"&gt;
-                &lt;StatementSetOptions QUOTED_IDENTIFIER="true" ARITHABORT="true" CONCAT_NULL_YIELDS_NULL="true" ANSI_NULLS="true" ANSI_PADDING="true" ANSI_WARNINGS="true" NUMERIC_ROUNDABORT="false" /&gt;
-                &lt;QueryPlan CachedPlanSize="32" CompileTime="7" CompileCPU="7" CompileMemory="344"&gt;…
-             &lt;/StmtSimple&gt;
-            &lt;/Statements&gt;
-          &lt;/Then&gt;
-          &lt;Else&gt;
-            &lt;Statements&gt;
-              &lt;StmtSimple StatementText="&#x9;Else&#xD;&#xA;&#x9;&#x9;SELECT DATEPART(yyyy,OrderDate) AS N'Year'&#xD;&#xA;&#x9;&#x9;&#x9;,SUM(TotalDue) AS N'Total Order Amount'&#xD;&#xA;&#x9;&#x9;FROM Sales.SalesOrderHeader&#xD;&#xA;&#x9;&#x9;GROUP BY DATEPART(yyyy,OrderDate)&#xD;&#xA;&#x9;&#x9;ORDER BY DATEPART(yyyy,OrderDate);&#xD;" StatementId="4" StatementCompId="8" StatementType="SELECT" StatementSubTreeCost="0.780189" StatementEstRows="4" StatementOptmLevel="FULL" QueryHash="0xA73814A2D4649412" QueryPlanHash="0x7A5BDE1102728DAA" StatementOptmEarlyAbortReason="GoodEnoughPlanFound"&gt;…
-            &lt;/Statements&gt;
-          &lt;/Else&gt;
-        &lt;/StmtCond&gt;
-      &lt;/Statements&gt;
-    &lt;/Batch&gt;
-  &lt;/BatchSequence&gt;
-&lt;/ShowPlanXML&gt;</pre>
+  <BatchSequence&gt;
+    <Batch&gt;
+      <Statements&gt;
+        <StmtSimple StatementText="CREATE procedure TwoPlans&#xD;&#xA;&#x9;@IfParameter int&#xD;&#xA;as&#xD;&#xA;&#x9;SET NOCOUNT ON;&#xD;&#xA;" StatementId="1" StatementCompId="3" StatementType="SET ON/OFF" /&gt;
+        <StmtCond StatementText="&#x9;If @IfParameter = 1&#xD;&#xA;&#x9;" StatementId="2" StatementCompId="4" StatementType="COND"&gt;
+          <Condition /&gt;
+          <Then&gt;
+            <Statements&gt;
+              <StmtSimple StatementText="&#x9;SELECT a.City, COUNT(bea.AddressID) EmployeeCount&#xD;&#xA;&#x9;&#x9;FROM Person.BusinessEntityAddress bea &#xD;&#xA;&#x9;&#x9;&#x9;INNER JOIN Person.Address a&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;ON bea.AddressID = a.AddressID&#xD;&#xA;&#x9;&#x9;GROUP BY a.City&#xD;&#xA;&#x9;&#x9;ORDER BY a.City&#xD;&#xA;" StatementId="3" StatementCompId="5" StatementType="SELECT" StatementSubTreeCost="0.604708" StatementEstRows="574.696" StatementOptmLevel="FULL" QueryHash="0x03E92D79FC617C86" QueryPlanHash="0xED13B89036D1A5E6" StatementOptmEarlyAbortReason="GoodEnoughPlanFound"&gt;
+                <StatementSetOptions QUOTED_IDENTIFIER="true" ARITHABORT="true" CONCAT_NULL_YIELDS_NULL="true" ANSI_NULLS="true" ANSI_PADDING="true" ANSI_WARNINGS="true" NUMERIC_ROUNDABORT="false" /&gt;
+                <QueryPlan CachedPlanSize="32" CompileTime="7" CompileCPU="7" CompileMemory="344"&gt;…
+             </StmtSimple&gt;
+            </Statements&gt;
+          </Then&gt;
+          <Else&gt;
+            <Statements&gt;
+              <StmtSimple StatementText="&#x9;Else&#xD;&#xA;&#x9;&#x9;SELECT DATEPART(yyyy,OrderDate) AS N'Year'&#xD;&#xA;&#x9;&#x9;&#x9;,SUM(TotalDue) AS N'Total Order Amount'&#xD;&#xA;&#x9;&#x9;FROM Sales.SalesOrderHeader&#xD;&#xA;&#x9;&#x9;GROUP BY DATEPART(yyyy,OrderDate)&#xD;&#xA;&#x9;&#x9;ORDER BY DATEPART(yyyy,OrderDate);&#xD;" StatementId="4" StatementCompId="8" StatementType="SELECT" StatementSubTreeCost="0.780189" StatementEstRows="4" StatementOptmLevel="FULL" QueryHash="0xA73814A2D4649412" QueryPlanHash="0x7A5BDE1102728DAA" StatementOptmEarlyAbortReason="GoodEnoughPlanFound"&gt;…
+            </Statements&gt;
+          </Else&gt;
+        </StmtCond&gt;
+      </Statements&gt;
+    </Batch&gt;
+  </BatchSequence&gt;
+</ShowPlanXML&gt;</pre>
 
 An easier trick to see the Graphical Execution Plans is to open [SQL Sentry Plan Explorer][4] and copy the XML into the Plan XML tab:
 

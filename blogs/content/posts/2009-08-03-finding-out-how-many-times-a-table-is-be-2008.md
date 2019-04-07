@@ -51,7 +51,7 @@ Run this query 7 times
 
 Run this query 8 times
 
-<pre>select count(*) from master..spt_values where type &lt;&gt; 'P'</pre>
+<pre>select count(*) from master..spt_values where type <> 'P'</pre>
 
 Run this stored procedure 9 times
 
@@ -75,7 +75,7 @@ Here is the output
 
 <pre>ProcName	execution_count	sql_statement							last_execution_time
 prTestProc	9		select * from master..spt_values where type = 'P'  		2009-08-03 10:11:38.810
-Ad-Hoc		8		SELECT COUNT(*) FROM [master]..[spt_values] WHERE [type]&lt;&gt;@1	2009-08-03 10:11:22.857
+Ad-Hoc		8		SELECT COUNT(*) FROM [master]..[spt_values] WHERE [type]<>@1	2009-08-03 10:11:22.857
 Ad-Hoc		7		select count(*) from master..spt_values   			2009-08-03 10:11:19.107
 Ad-Hoc		6		select count(*) from master..spt_values where type = 'P'  	2009-08-03 10:11:15.760
 Ad-Hoc		5		select * from master..spt_values where type = 'P'  		2009-08-03 10:11:12.280</pre>

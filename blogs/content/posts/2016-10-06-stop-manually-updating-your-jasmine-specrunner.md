@@ -30,33 +30,33 @@ Here&#8217;s a sample SpecRunner file that&#8217;s relying on RequireJS to defin
 
 **SpecRunner.html**
 
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Jasmine Spec Runner v2.4.1&lt;/title&gt;
+<pre><!DOCTYPE html&gt;
+<html&gt;
+<head&gt;
+  <meta charset="utf-8"&gt;
+  <title&gt;Jasmine Spec Runner v2.4.1</title&gt;
 
-  &lt;link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png"&gt;
-  &lt;link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css"&gt;
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png"&gt;
+  <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css"&gt;
 
-  &lt;script src="lib/jasmine-2.4.1/jasmine.js"&gt;&lt;/script&gt;
-  &lt;script src="lib/jasmine-2.4.1/jasmine-html.js"&gt;&lt;/script&gt;
-  &lt;script src="lib/jasmine-2.4.1/boot-without-onload.js"&gt;&lt;/script&gt;
+  <script src="lib/jasmine-2.4.1/jasmine.js"&gt;</script&gt;
+  <script src="lib/jasmine-2.4.1/jasmine-html.js"&gt;</script&gt;
+  <script src="lib/jasmine-2.4.1/boot-without-onload.js"&gt;</script&gt;
 
-  &lt;script src="../libs/require.js"&gt;&lt;/script&gt;
-  &lt;script src="main.js"&gt;&lt;/script&gt;
+  <script src="../libs/require.js"&gt;</script&gt;
+  <script src="main.js"&gt;</script&gt;
 
-  &lt;script type="text/javascript"&gt;
+  <script type="text/javascript"&gt;
       // import the specs list
       require(["../tests/allSpecs"], function () {
           window.executeTests();
       });
-  &lt;/script&gt;
+  </script&gt;
 
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</head&gt;
+<body&gt;
+</body&gt;
+</html&gt;</pre>
 
 This SpecRunner directly includes only Jasmine, RequireJS, and a set of Require configs in main.js, everything else is loaded from the &#8220;allSpecs.js&#8221; file. The custom bootloader and window.executeTests() method replace the vanilla bootloader so we can make sure we load our spec files and their dependencies before running the tests (see [Unit Testing with Jasmine 2.0 and Require.JS][2] for more info).
 

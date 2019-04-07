@@ -53,8 +53,8 @@ In my case of League and Owner Player, it looks like this:
              
         '...
 
-        &lt;Include()&gt;
-        &lt;Display(AutoGenerateField:=False)&gt;
+        <Include()&gt;
+        <Display(AutoGenerateField:=False)&gt;
         Public Property Player As Player
         '...
     End Class</pre>
@@ -63,14 +63,14 @@ In my case of League and Owner Player, it looks like this:
 
 Now that the EF is loading the data we want, and the RIA services are returning the data we want, all we have to do is bind it! And this is the easiest part. It is just like they show in the video, with one minor change. Instead of just binding on the primary object&#8217;s property, we use dot notation to get at the child object&#8217;s property. Shown here as the &#8220;Player.Name&#8221; binding
 
-<pre>&lt;sdk:DataGrid x:Name="grdLeagues" Margin="4,20,4,4" Grid.Row="1" ItemsSource="{Binding ElementName=LeagueDomainDataSource, Path=Data}" AutoGenerateColumns="False"&gt;
-    &lt;sdk:DataGrid.Columns&gt;
-        &lt;sdk:DataGridTextColumn Binding="{Binding Path=Name}" Header="Name" /&gt;
-        &lt;sdk:DataGridTextColumn Binding="{Binding Path=Player.Name, Mode=OneWay}" Header="Organizer" /&gt;
-        &lt;sdk:DataGridTextColumn Binding="{Binding Path=Province}" Header="State" /&gt;
-        &lt;sdk:DataGridTextColumn Binding="{Binding Path=City}" Header="City" /&gt;
-        &lt;sdk:DataGridTextColumn Binding="{Binding Path=LGS}" Header="Game Store" /&gt;
-    &lt;/sdk:DataGrid.Columns&gt;
-&lt;/sdk:DataGrid&gt;</pre>
+<pre><sdk:DataGrid x:Name="grdLeagues" Margin="4,20,4,4" Grid.Row="1" ItemsSource="{Binding ElementName=LeagueDomainDataSource, Path=Data}" AutoGenerateColumns="False"&gt;
+    <sdk:DataGrid.Columns&gt;
+        <sdk:DataGridTextColumn Binding="{Binding Path=Name}" Header="Name" /&gt;
+        <sdk:DataGridTextColumn Binding="{Binding Path=Player.Name, Mode=OneWay}" Header="Organizer" /&gt;
+        <sdk:DataGridTextColumn Binding="{Binding Path=Province}" Header="State" /&gt;
+        <sdk:DataGridTextColumn Binding="{Binding Path=City}" Header="City" /&gt;
+        <sdk:DataGridTextColumn Binding="{Binding Path=LGS}" Header="Game Store" /&gt;
+    </sdk:DataGrid.Columns&gt;
+</sdk:DataGrid&gt;</pre>
 
 -Rick

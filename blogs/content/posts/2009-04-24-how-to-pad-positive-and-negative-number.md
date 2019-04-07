@@ -124,7 +124,7 @@ Here is what those 4 rows look like that we just inserted
 
 That is not good. Here is what we will do, if the number is negative we will start with a minus sign otherwise we will use a blank and then we will concatenate and replace the minus sign with a blank. This is what it looks like in SQL
 
-<pre>SELECT CASE  WHEN Num &lt; 0
+<pre>SELECT CASE  WHEN Num < 0
 THEN '-' ELSE '' END + RIGHT('000000000' + REPLACE(Num,'-',''), 9)
  FROM #Numbers</pre>
 

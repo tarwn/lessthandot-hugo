@@ -58,7 +58,7 @@ We are going to jump right into setting the mirror up. Our first configuration w
 
 In order to ensure the databases we want to mirror are ready for mirroring itself, we need to check a few things first. Full recovery is a requirement of mirroring. This is required for logging purposes. To check that the AdventureWorks database is in Full Recovery, we can run the following
 
-<pre>IF (DATABASEPROPERTYEX('AdventureWorks', 'RECOVERY') &lt;&gt; 'FULL')
+<pre>IF (DATABASEPROPERTYEX('AdventureWorks', 'RECOVERY') <> 'FULL')
  BEGIN
   ALTER DATABASE AdventureWorks SET RECOVERY FULL
  END;

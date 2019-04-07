@@ -131,7 +131,7 @@ The information above has all been based on a 10 million row table that is archi
 Above is what this type of processing table would appear as.  With this, the initial load for any data older than the most recent 2 years, appears as follows.
 
 <pre>INSERT INTO ArchiveTemp (ID,TABLENAME)
-SELECT ID,'MyTable' FROM 'MyTable' WHERE TRANSACTIONDATE &lt;= (SELECT DATEADD(Year,-2,MAX(TRANSACTIONDATE)) FROM TRANFILE)
+SELECT ID,'MyTable' FROM 'MyTable' WHERE TRANSACTIONDATE <= (SELECT DATEADD(Year,-2,MAX(TRANSACTIONDATE)) FROM TRANFILE)
 AND ID NOT IN (SELECT ID FROM ArchiveTemp WHERE TABLENAME = 'MyTable')</pre>
 
  

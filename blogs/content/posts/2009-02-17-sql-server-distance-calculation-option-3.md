@@ -75,10 +75,10 @@ You can test it by writing some queries against the same table used for Denis&#8
 
 <pre>SELECT h.*
    FROM zipcodes g
-   INNER JOIN zipcodes h ON g.zipcode &lt;&gt; h.zipcode
+   INNER JOIN zipcodes h ON g.zipcode <> h.zipcode
    AND g.zipcode = '10028'
-   AND h.zipcode &lt;&gt; '10028'
-   WHERE dbo.clrDistCalc(g.Longitude, g.Latitude, h.Longitude, h.Latitude) &lt;= (20 * 1609.344)</pre>
+   AND h.zipcode <> '10028'
+   WHERE dbo.clrDistCalc(g.Longitude, g.Latitude, h.Longitude, h.Latitude) <= (20 * 1609.344)</pre>
 
 If I know those guys like I think I do, the indexes and everything will be sufficient! 
 

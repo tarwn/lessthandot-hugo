@@ -41,7 +41,7 @@ SELECT SOH.SalesOrderID, SOH.OrderDate, SOH.SalesPersonID, SOH.CustomerID, SUM(S
 FROM Sales.SalesOrderHeader AS SOH 
 	INNER JOIN Sales.SalesOrderDetail AS SOD ON SOD.SalesOrderID = SOH.SalesOrderID
 WHERE SOH.OrderDate &gt;= '20080101' 
-	AND SOH.OrderDate &lt; '20090101'
+	AND SOH.OrderDate < '20090101'
 	AND NOT(SalesPersonID IS NULL)
 GROUP BY SOH.SalesOrderID, SOH.OrderDate, SOH.SalesPersonID, SOH.CustomerID;</pre>
 
@@ -154,7 +154,7 @@ To translate this into T-SQL, let&#8217;s look at the quantities of an item sold
 FROM Sales.SalesOrderHeader AS SOH 
 	INNER JOIN Sales.SalesOrderDetail AS SOD ON SOD.SalesOrderID = SOH.SalesOrderID
 WHERE SOH.OrderDate &gt;= '20080101' 
-	AND SOH.OrderDate &lt; '20090101' 
+	AND SOH.OrderDate < '20090101' 
 	AND NOT(SOH.SalesPersonID IS NULL) 
 		AND SOD.ProductID IN (864) 
 GROUP BY SOD.OrderQty
@@ -168,7 +168,7 @@ Now, we will use the TOP clause to get the most-frequently-ordered quantity. Mak
 FROM Sales.SalesOrderHeader AS SOH 
 	INNER JOIN Sales.SalesOrderDetail AS SOD ON SOD.SalesOrderID = SOH.SalesOrderID
 WHERE SOH.OrderDate &gt;= '20080101' 
-	AND SOH.OrderDate &lt; '20090101'  
+	AND SOH.OrderDate < '20090101'  
 	AND NOT(SOH.SalesPersonID IS NULL) 
 		AND SOD.ProductID IN (864) 
 GROUP BY SOD.OrderQty

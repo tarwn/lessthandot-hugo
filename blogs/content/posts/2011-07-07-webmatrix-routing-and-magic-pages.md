@@ -70,23 +70,23 @@ Ok, so this part I&#8217;m less enamored of, but there are some good parts. Ther
 
 Layout files allow us to define a common layout that we want to apply to our website, basically a template or master file. Inside the layout file we can define where we want the main body to be rendered (the file that was requested), as well as additional required or optional sections the original page needs to provide. A minimal layout file would look something like this:
 
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-	&lt;title&gt; @PageData["Title"] &lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+<pre><!DOCTYPE html&gt;
+<html&gt;
+  <head&gt;
+	<title&gt; @PageData["Title"] </title&gt;
+  </head&gt;
+  <body&gt;
 	@RenderPage("~/Shared/_Header.cshtml")
-	&lt;div id="sidepane"&gt;
+	<div id="sidepane"&gt;
 		@RenderSection("SidePane", required: false)
-	&lt;/div&gt;
-	&lt;div id="main"&gt;
+	</div&gt;
+	<div id="main"&gt;
 	  @RenderBody()
-	&lt;/div&gt;
-	&lt;/div&gt;
+	</div&gt;
+	</div&gt;
 	@RenderPage("~/Shared/_Footer.cshtml")
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body&gt;
+</html&gt;</pre>
 
 A basic page that includes a header file, an optional section named &#8220;SidePane&#8221;, and body of the original page, and finally an included footer file. In this sample I am keeping my \_Header, \_Footer, and _MainLayout files in a subfolder called Shared. To use this layout, I could make a sample page like this:
 
@@ -94,7 +94,7 @@ A basic page that includes a header file, an optional section named &#8220;SideP
 Layout = "~/Shared/_MainLayout.cshtml";
 PageData["Title"] = "My Awesome Hello World";
 }
-&lt;b&gt;&lt;blink&gt;This stuff is in my main body, Hello!&lt;/blink&gt;&lt;/b&gt;</pre>
+<b&gt;<blink&gt;This stuff is in my main body, Hello!</blink&gt;</b&gt;</pre>
 
 And if I wanted to both show off the presence of any extra URL data you put in the URL as well as the optional sidepane?
 
@@ -102,15 +102,15 @@ And if I wanted to both show off the presence of any extra URL data you put in t
 Layout = "~/Shared/_MainLayout.cshtml";
 PageData["Title"] = "My Awesome Hello World";
 }
-&lt;b&gt;&lt;blink&gt;This stuff is in my main body, Hello!&lt;/blink&gt;&lt;/b&gt;
+<b&gt;<blink&gt;This stuff is in my main body, Hello!</blink&gt;</b&gt;
 
 @section SidePane{
 	@if(UrlData.Count &gt; 0){
-        &lt;text&gt;
-		&lt;marquee&gt;Bam!&lt;/marquee&gt;
-        First one: @UrlData[0]&lt;br/&gt;
-        All of them: @(String.Join(",",UrlData))&lt;br/&gt;
-        &lt;/text&gt;
+        <text&gt;
+		<marquee&gt;Bam!</marquee&gt;
+        First one: @UrlData[0]<br/&gt;
+        All of them: @(String.Join(",",UrlData))<br/&gt;
+        </text&gt;
 	}
 }</pre>
 
@@ -142,9 +142,9 @@ _And if you are me you will comment them out when you find out your webhosts mac
 PageStart is trickier in a couple ways. First, PageStart is a bit of a misnomer. It does execute at the start of the page, but it can also be convinced to encapsulate the execution of the requested page, running both before and after the main page is rendered. 
 
 <pre>@{
-    &lt;b&gt;I'm Before&lt;/b&gt;
+    <b&gt;I'm Before</b&gt;
     RunPage();
-    &lt;text&gt;I'm after&lt;/text&gt;
+    <text&gt;I'm after</text&gt;
 }</pre>
 
 If you specifically include the RunPage() line, then your page will be run in between the code above and below it. If you don&#8217;t include this directive then the entire PageStart file will be run before calling the requested page.

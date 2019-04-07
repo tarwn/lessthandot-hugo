@@ -68,7 +68,7 @@ SELECT  @SQLTemplate = 'If Exists(Select 1
 SELECT @i = 1, @MAX = MAX(RowId)
 FROM   @Temp
  --loop over all the columns 
-WHILE @i &lt;= @MAX
+WHILE @i <= @MAX
     BEGIN
         --change the place holder with the real name 
         SELECT  @SQL = REPLACE(REPLACE(@SQLTemplate, 'ReplaceTableName', 

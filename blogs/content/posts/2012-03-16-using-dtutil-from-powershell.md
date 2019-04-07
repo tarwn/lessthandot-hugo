@@ -5,7 +5,7 @@ type: post
 date: 2012-03-16T09:43:00+00:00
 excerpt: |
   I'm preparing my demo's for a MS6235A SSIS training I will be teaching in a couple of days. In one of the demo's I just copy a SSIS package from the file system to SQL Server using the DTUtil from the command prompt with this command:
-  DTUTIL /FILE &lt;&hellip;
+  DTUTIL /FILE <&hellip;
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/using-dtutil-from-powershell/
 views:
   - 8747
@@ -23,7 +23,7 @@ tags:
 ---
 I&#8217;m preparing my demo&#8217;s for a [MS6235A SSIS training][1] I will be teaching in a couple of days. In one of the demo&#8217;s I just copy a SSIS package from the file system to SQL Server using the DTUtil from the command prompt with this command:
 
-<pre>DTUTIL /FILE &lt;Path to package&gt;.dtsx /COPY SQL;&lt;Packagename&gt;</pre>
+<pre>DTUTIL /FILE <Path to package&gt;.dtsx /COPY SQL;<Packagename&gt;</pre>
 
 As expected this works like a charm:
 
@@ -43,7 +43,7 @@ And seeing the output it is:
 
 So I used the same command as in the CMD-prompt to copy the package:
 
-<pre>DTUTIL /FILE &lt;Path to package&gt;.dtsx /COPY SQL;&lt;Packagename&gt;</pre>
+<pre>DTUTIL /FILE <Path to package&gt;.dtsx /COPY SQL;<Packagename&gt;</pre>
 
 But now I got the error message that &#8220;Packagename&#8221; was not recognized as the name of a cmdlet, function, script file, or operable program.
 
@@ -55,7 +55,7 @@ Looking at the code I realized that there was a semicolon right before the &#822
   
 So when I put the DTUtil parameters between double quotes it should work:
 
-<pre>DTUTIL "/FILE &lt;Path to package&gt;.dtsx /COPY SQL;&lt;Packagename&gt;"</pre>
+<pre>DTUTIL "/FILE <Path to package&gt;.dtsx /COPY SQL;<Packagename&gt;"</pre>
 
 And it does:
 

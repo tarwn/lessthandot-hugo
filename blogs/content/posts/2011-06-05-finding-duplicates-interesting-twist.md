@@ -304,7 +304,7 @@ Now, what can we do next? The next step was a road block for me. But then, an Eu
 
 <pre>DupRecs as (select T.*,S.cntDups, S.ID as DupID
  from tblTEST T CROSS APPLY (select S.ID, COUNT(*) as cntDups from SameVals S
-WHERE T.ID &lt; S.ID and S.ColValue IN (T.FirstColumn,T.SecondColumn,T.ThirdColumn,T.FourthColumn, T.FifthColumn) GROUP BY S.ID) S),
+WHERE T.ID < S.ID and S.ColValue IN (T.FirstColumn,T.SecondColumn,T.ThirdColumn,T.FourthColumn, T.FifthColumn) GROUP BY S.ID) S),
 
 Candidates as (select distinct ID,DupID  from DupRecs where cntDups &gt;=4) </pre>
 
@@ -325,7 +325,7 @@ UNPIVOT (ColValue for ColName IN ([FirstColumn],[SecondColumn],[ThirdColumn],[Fo
 SameVals as (select * from (select *, COUNT(ID) over (partition by ColValue) as cntSame from UnPvt) X where cntSame &gt;=2),
 DupRecs as (select T.*,S.cntDups, S.ID as DupID
  from tblTEST T CROSS APPLY (select S.ID, COUNT(*) as cntDups from SameVals S
-WHERE T.ID &lt; S.ID and S.ColValue IN (T.FirstColumn,T.SecondColumn,T.ThirdColumn,T.FourthColumn, T.FifthColumn) GROUP BY S.ID) S),
+WHERE T.ID < S.ID and S.ColValue IN (T.FirstColumn,T.SecondColumn,T.ThirdColumn,T.FourthColumn, T.FifthColumn) GROUP BY S.ID) S),
 
 Candidates as (select distinct ID,DupID  from DupRecs where cntDups &gt;=4) 
 

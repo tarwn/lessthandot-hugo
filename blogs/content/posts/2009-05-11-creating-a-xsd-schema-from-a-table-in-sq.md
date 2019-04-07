@@ -36,32 +36,32 @@ SELECT @XsdSchema</pre>
 
 This is the schema that gets generated
 
-<pre>&lt;xsd:schema targetNamespace="TestXsdSchema" elementFormDefault="qualified"&gt;
- &lt;xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd"/&gt;
-&lt;xsd:element name="Test"&gt;
-&lt;xsd:complexType&gt;
-&lt;xsd:sequence&gt;
- &lt;xsd:element name="id" type="sqltypes:int"/&gt;
-&lt;xsd:element name="SomeName"&gt;
-&lt;xsd:simpleType&gt;
-&lt;xsd:restriction base="sqltypes:varchar" sqltypes:localeId="1033" sqltypes:sqlCompareOptions="IgnoreCase IgnoreKanaType IgnoreWidth" sqltypes:sqlSortId="52"&gt;
- &lt;xsd:maxLength value="53"/&gt;
- &lt;/xsd:restriction&gt;
- &lt;/xsd:simpleType&gt;
- &lt;/xsd:element&gt;
-&lt;xsd:element name="SomeValue"&gt;
-&lt;xsd:simpleType&gt;
-&lt;xsd:restriction base="sqltypes:decimal"&gt;
- &lt;xsd:totalDigits value="20"/&gt;
- &lt;xsd:fractionDigits value="10"/&gt;
- &lt;/xsd:restriction&gt;
- &lt;/xsd:simpleType&gt;
- &lt;/xsd:element&gt;
- &lt;xsd:element name="SomeGuid" type="sqltypes:uniqueidentifier"/&gt;
- &lt;/xsd:sequence&gt;
- &lt;/xsd:complexType&gt;
- &lt;/xsd:element&gt;
- &lt;/xsd:schema&gt;</pre>
+<pre><xsd:schema targetNamespace="TestXsdSchema" elementFormDefault="qualified">
+ <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd"/>
+<xsd:element name="Test">
+<xsd:complexType>
+<xsd:sequence>
+ <xsd:element name="id" type="sqltypes:int"/>
+<xsd:element name="SomeName">
+<xsd:simpleType>
+<xsd:restriction base="sqltypes:varchar" sqltypes:localeId="1033" sqltypes:sqlCompareOptions="IgnoreCase IgnoreKanaType IgnoreWidth" sqltypes:sqlSortId="52">
+ <xsd:maxLength value="53"/>
+ </xsd:restriction>
+ </xsd:simpleType>
+ </xsd:element>
+<xsd:element name="SomeValue">
+<xsd:simpleType>
+<xsd:restriction base="sqltypes:decimal">
+ <xsd:totalDigits value="20"/>
+ <xsd:fractionDigits value="10"/>
+ </xsd:restriction>
+ </xsd:simpleType>
+ </xsd:element>
+ <xsd:element name="SomeGuid" type="sqltypes:uniqueidentifier"/>
+ </xsd:sequence>
+ </xsd:complexType>
+ </xsd:element>
+ </xsd:schema></pre>
 
 See, that was pretty simple wasn&#8217;t it?
 

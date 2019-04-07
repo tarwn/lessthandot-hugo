@@ -16,7 +16,7 @@ categories:
 ---
 I ran into a funny issue recently using Fluent NHibernate. Saw that it was storing enums as Strings in the database, or more accurately storing them as MySQL&#8217;s [Enum Data Type][1]. I would prefer to store them as integers so that behavior is the same as other databases, and refactoring gets easier. Hacking around in Fluent NHibernate I found the following:
 
-<pre>Map(x =&gt; x.Property).CustomType&lt;SomeType&gt;();</pre>
+<pre>Map(x => x.Property).CustomType<SomeType>();</pre>
 
 It had a slightly different name in the previous versions (I think it was CustomTypeIs), not sure if the same thing happened there (I did not notice it until using the latest). Anyway I was mapping my properties like shown above, and it seemed all was well. Until I noticed a strange thing in the SQL written to the output window. What I was expecting to see was a single select statement for the primary entity, and another three select statements to fill a couple of collections contained in the object. I saw these, and one unwelcome guest.
 
@@ -32,7 +32,7 @@ That&#8217;s all well and good, but how to fix it? The first thing that came to 
 
 I didn&#8217;t want to have to do this for every enum in the application &#8211; something I could use more widely was in order. Unable to find any examples (could be weak google-fu) I decided to try my own. I ended up with a generic class called &#8220;EnumMapper&#8221; implementing the IUserType interface, that looks awfully similar to Ray Houston&#8217;s example cited above. It isn&#8217;t perfect (I think I might be able to go back and clean it up some) but its not too awful I don&#8217;t think. It might just be getting too late for me, but I couldn&#8217;t think of a good way to limit it to enums. Anyway, it does its job as long as I don&#8217;t give it a bad parameter. Here it is in all its ugliness:
 
-<pre>public class EnumMapper&lt;T&gt; : IUserType
+<pre>public class EnumMapper<T> : IUserType
 {
     public Boolean IsMutable { get { return false; } }
     public Type ReturnedType { get { return typeof(T); } }
@@ -100,7 +100,7 @@ I didn&#8217;t want to have to do this for every enum in the application &#8211;
 
 I hope to clean this up eventually, but it looks like it will work for now. The mapping was changed to look like this:
 
-<pre>Map(x =&gt; x.Property).CustomType&lt;EnumMapper&lt;SomeType&gt;&gt;();</pre>
+<pre>Map(x => x.Property).CustomType<EnumMapper<SomeType>>();</pre>
 
 I started up the app and checked the output again, and saw just what I was looking for:
 

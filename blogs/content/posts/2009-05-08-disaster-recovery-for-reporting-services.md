@@ -50,21 +50,21 @@ c:tempreportsrsscriptercmd /s:http://localhost/ReportServer/ReportService2005.as
 
 You&#8217;re Catalog.xml file should look like this
 
-<pre>&lt;?xml version="1.0" ?&gt;
-&lt;RSCatalog&gt;
-	&lt;CatalogItems&gt;
-		&lt;CatalogItem Path="/" Recursive="True" /&gt;
-  &lt;/CatalogItems&gt;
-	&lt;Roles /&gt;
-	&lt;Schedules /&gt;
-&lt;/RSCatalog&gt;</pre>
+<pre><?xml version="1.0" ?>
+<RSCatalog>
+	<CatalogItems>
+		<CatalogItem Path="/" Recursive="True" />
+  </CatalogItems>
+	<Roles />
+	<Schedules />
+</RSCatalog></pre>
 
 Also you can replace the URL to the instance with editing the Server.xml like this and then call it as /S:SQL2005
 
-<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;servers&gt;
-	&lt;server label="SQL2005" reportservice="http://localhost/ReportServer/ReportService2005.asmx" /&gt;
-&lt;/servers&gt;</pre>
+<pre><?xml version="1.0" encoding="utf-8"?>
+<servers>
+	<server label="SQL2005" reportservice="http://localhost/ReportServer/ReportService2005.asmx" />
+</servers></pre>
 
 If you run this after placing all your required files into the tempreports folder, you will get everything off the local instance scripted to the tempreports folder. The other thing that is scripted is a bat file already preformatted to reload all the objects to the report server you just backed up. This is really nice for quick recovery of the local instance. The other thing this is nice for is seeing a perfect example of how to remote deploy the backup.
 
@@ -87,16 +87,16 @@ SET TIMEOUT=60
 IF EXIST %logfile% DEL %logfile%
 
 ::Write Log Header
-ECHO Reporting Services Scripter Load Log 2.0.0.16 &gt;&gt;%LOGFILE%
-ECHO. &gt;&gt;%LOGFILE%
-ECHO Starting Load at %DATE% %TIME% &gt;&gt;%LOGFILE%
-ECHO SCRIPTLOCATION = %SCRIPTLOCATION% &gt;&gt;%LOGFILE%
-ECHO REPORTSERVER   = %REPORTSERVER% &gt;&gt;%LOGFILE%
-ECHO BACKUPLOCATION = %BACKUPLOCATION% &gt;&gt;%LOGFILE%
-ECHO SCRIPTLEVEL    = SQL2005 &gt;&gt;%LOGFILE%
-ECHO TIMEOUT        = %TIMEOUT% &gt;&gt;%LOGFILE%
-ECHO RS             = %RS% &gt;&gt;%LOGFILE%
-ECHO. &gt;&gt;%LOGFILE%</pre>
+ECHO Reporting Services Scripter Load Log 2.0.0.16 >>%LOGFILE%
+ECHO. >>%LOGFILE%
+ECHO Starting Load at %DATE% %TIME% >>%LOGFILE%
+ECHO SCRIPTLOCATION = %SCRIPTLOCATION% >>%LOGFILE%
+ECHO REPORTSERVER   = %REPORTSERVER% >>%LOGFILE%
+ECHO BACKUPLOCATION = %BACKUPLOCATION% >>%LOGFILE%
+ECHO SCRIPTLEVEL    = SQL2005 >>%LOGFILE%
+ECHO TIMEOUT        = %TIMEOUT% >>%LOGFILE%
+ECHO RS             = %RS% >>%LOGFILE%
+ECHO. >>%LOGFILE%</pre>
 
 Really the only thing you would need to do is change the REPORTSERVER variable to the remote instance and run this batch file. It will deploy based on the RSS scripts in each directory the objects in the order they are required. This is typically, Folder, Data Source and Report at a minimum. I&#8217;m not all that great with recursive loops through directories in batch so I wrote a VBScript script to handle the replace. Why not really? The file is created already and we can simply read the contents in, replace the path and then run the cmd. If you want to write some other method to simplify the number of objects being called, then go for it. This to me just seemed as simple sense the work has already been done.
 

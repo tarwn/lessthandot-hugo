@@ -84,7 +84,7 @@ from dbo.tblENTERPRISE_ISSUES a
 where prProjectStatus='Active'
 
 select * from @projects
-where Light&lt;&gt;'N'
+where Light<&gt;'N'
 order by CompanyName, BusinessUnit, TaskName
 
 

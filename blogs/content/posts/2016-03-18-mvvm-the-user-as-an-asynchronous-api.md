@@ -42,21 +42,21 @@ Let&#8217;s start with a sample of what it looks like when we call a regular ser
   </p>
 </div>
 
-<pre>&lt;h1&gt;A Basic Form + Fake API Call (Save Button)&lt;/h1&gt;
-&lt;div class="form-area" data-bind="with: shippingForm"&gt;
-	&lt;h3&gt;Shipping Information&lt;/h3&gt;
+<pre><h1&gt;A Basic Form + Fake API Call (Save Button)</h1&gt;
+<div class="form-area" data-bind="with: shippingForm"&gt;
+	<h3&gt;Shipping Information</h3&gt;
 
-	&lt;label for="txtName"&gt;Name&lt;/label&gt;
-		&lt;input type="text" id="txtName" data-bind="value: newEntry().name" /&gt;&lt;br /&gt;
+	<label for="txtName"&gt;Name</label&gt;
+		<input type="text" id="txtName" data-bind="value: newEntry().name" /&gt;<br /&gt;
 
-	&lt;!-- ... etc ... --&gt;
+	<!-- ... etc ... --&gt;
 
-	&lt;div class="button-strip"&gt;
-		&lt;input type="button" data-bind="click: save, disable: isSaving, value: saveText" /&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
+	<div class="button-strip"&gt;
+		<input type="button" data-bind="click: save, disable: isSaving, value: saveText" /&gt;
+	</div&gt;
+</div&gt;
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript"&gt;
 
 //- Shipping Form Example
 function ShippingFormViewModel(dataService){
@@ -81,7 +81,7 @@ function ShippingFormViewModel(dataService){
 	};
 }
 
-&lt;/script&gt;</pre>
+</script&gt;</pre>
 
 Clicking the &#8220;Save&#8221; button updates some local values that will be used to modify the display, then calls saveShippingAddress on the service, which returns a promise. Once that service call is complete and the promise is resolved successfully, the display is updated again accordingly. 
 

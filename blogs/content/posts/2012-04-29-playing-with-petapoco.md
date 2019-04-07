@@ -89,20 +89,20 @@ And last, if we want to keep our table and object names in sync, we can let refl
 Now that we have some data in our database, lets look at a few ways to get it out.
 
 <pre>// select statement
-var results = db.Query&lt;Person&gt;("SELECT * FROM Person WHERE lastname=@0", "lastname1");
+var results = db.Query<Person&gt;("SELECT * FROM Person WHERE lastname=@0", "lastname1");
 // let PetaPoco generate the SELECT portion 
-var results = db.Query&lt;DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");</pre>
+var results = db.Query<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");</pre>
 
 We can execute a parameterized SQL statement fairly easily by using numbered parameters that will line up with the additional arguments we provide. In the second case we&#8217;re actually letting PetaPoco generate the SELECT portion of the statement for us, which will resolve to: <code class="codespan">SELECT [Person].[LastName], [Person].[FirstName] FROM [Person] WHERE lastname=@0</code>.
 
 Executing specifically for a single record instead of querying for a collection is similarly straight forward:
 
 <pre>// select statement
-var result = db.Single&lt;Person&gt;("SELECT * FROM Person WHERE lastname=@0", "lastname1");
+var result = db.Single<Person&gt;("SELECT * FROM Person WHERE lastname=@0", "lastname1");
 Console.WriteLine(String.Format("{0}: {1}", result.GetType(), result));
 
 // let PetaPoco generate the SELECT portion 
-var result = db.Single&lt;DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
+var result = db.Single<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
 Console.WriteLine(String.Format("{0}: {1}", result.GetType(), result));</pre>
 
 And if we examine the output we&#8217;ll see they are concrete instances of our POCOs, not dynamics or proxies:
@@ -115,18 +115,18 @@ PetaPocoSample.DecoratedPerson: lastname1, firstname1
   
 </monospace>
 
-If we then follow Chrissie&#8217;s lead and add two records into the database that will match this criteria, we&#8217;ll receive an exception, as we would expect from a Single call. PetaPoco also offers a <code class="codespan">First&lt;T&gt;</code> implementation we could use in this situation, a <code class="codespan">SkipTake&lt;T&gt;</code> we could use to get the 2nd record, and a number of different ways to query multiple records out of the database:
+If we then follow Chrissie&#8217;s lead and add two records into the database that will match this criteria, we&#8217;ll receive an exception, as we would expect from a Single call. PetaPoco also offers a <code class="codespan">First<T&gt;</code> implementation we could use in this situation, a <code class="codespan">SkipTake<T&gt;</code> we could use to get the 2nd record, and a number of different ways to query multiple records out of the database:
 
 <pre>// T
-var result = db.First&lt;DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
-// List&lt;T&gt;
-var results = db.SkipTake&lt;DecoratedPerson&gt;(1, 1, "WHERE lastname=@0", "lastname1");
-//IEnumerable&lt;T&gt;
-var results2 = db.Query&lt;DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
-//List&lt;T&gt;
-var results3 = db.Fetch&lt;DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
-//Page&lt;T&gt; - page #2 and page size of 1
-var results4 = db.Page&lt;DecoratedPerson&gt;(2, 1, "WHERE lastname=@0", "lastname1");</pre>
+var result = db.First<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
+// List<T&gt;
+var results = db.SkipTake<DecoratedPerson&gt;(1, 1, "WHERE lastname=@0", "lastname1");
+//IEnumerable<T&gt;
+var results2 = db.Query<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
+//List<T&gt;
+var results3 = db.Fetch<DecoratedPerson&gt;("WHERE lastname=@0", "lastname1");
+//Page<T&gt; - page #2 and page size of 1
+var results4 = db.Page<DecoratedPerson&gt;(2, 1, "WHERE lastname=@0", "lastname1");</pre>
 
 ## Conclusion
 

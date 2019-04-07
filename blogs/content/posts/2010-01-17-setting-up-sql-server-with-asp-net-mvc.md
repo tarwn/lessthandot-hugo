@@ -44,20 +44,20 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
   So I don&#8217;t have the Express version of SQL Server on my machine. The first thing I have to do is open the Web.config file and change the connection string from this
 </p>
 
-<pre>&lt;connectionStrings&gt;
-		&lt;add name="ApplicationServices" 
+<pre><connectionStrings>
+		<add name="ApplicationServices" 
 			connectionString="data source=.SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|aspnetdb.mdf;
-		User Instance=true" providerName="System.Data.SqlClient"/&gt;
-	&lt;/connectionStrings&gt;</pre>
+		User Instance=true" providerName="System.Data.SqlClient"/>
+	</connectionStrings></pre>
 
 <p>
   to this
 </p>
 
-<pre>&lt;connectionStrings&gt;
-		&lt;add name="ApplicationServices" 
-			connectionString="data source=.;Integrated Security=SSPI;Initial Catalog=aspnetdb"/&gt;
-	&lt;/connectionStrings&gt;</pre>
+<pre><connectionStrings>
+		<add name="ApplicationServices" 
+			connectionString="data source=.;Integrated Security=SSPI;Initial Catalog=aspnetdb"/>
+	</connectionStrings></pre>
 
 <p>
   Now let&#8217;s try again by clicking on the login page. Still a problem for me, now I get the following error

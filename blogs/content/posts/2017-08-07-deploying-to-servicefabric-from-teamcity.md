@@ -100,9 +100,9 @@ I had to do this several times, so I also got to learn how to update versions:
         Option 1: Right click in Visual Studio, select Publish, use the link near the bottom to edit your deployment options and then close the dialog, choose &#8220;yes&#8221; when it asks if you want to save the profile&#8221;
       </li>
       <li>
-        Option 2: Open the relevant PublishProfile XML file and add this to the bottom for the default Unmonitored Upgrade settings <pre>&lt;UpgradeDeployment Mode="UnmonitoredAuto" Enabled="true"&gt;
-    &lt;Parameters UpgradeReplicaSetCheckTimeoutSec="1" Force="True" /&gt;
-&lt;/UpgradeDeployment&gt;</pre>
+        Option 2: Open the relevant PublishProfile XML file and add this to the bottom for the default Unmonitored Upgrade settings <pre><UpgradeDeployment Mode="UnmonitoredAuto" Enabled="true"&gt;
+    <Parameters UpgradeReplicaSetCheckTimeoutSec="1" Force="True" /&gt;
+</UpgradeDeployment&gt;</pre>
       </li>
     </ul>
   </li>
@@ -113,10 +113,10 @@ I had to do this several times, so I also got to learn how to update versions:
   <li>
     Open [YourProject]Pkg\ServiceManifest.xml <ol style="padding-left: 40px">
       <li>
-        Update the version in either <code>&lt;CodePackage Name="Code" Version="1.0.3"&gt;</code> or <code>&lt;ConfigPackage Name="Config" Version="1.0.4" /&gt;</code>
+        Update the version in either <code><CodePackage Name="Code" Version="1.0.3"&gt;</code> or <code><ConfigPackage Name="Config" Version="1.0.4" /&gt;</code>
       </li>
       <li>
-        Update the Package version in the <code>&lt;ServiceManifest … Version="1.0.2" …&gt;</code> root element
+        Update the Package version in the <code><ServiceManifest … Version="1.0.2" …&gt;</code> root element
       </li>
       <li>
         Save
@@ -127,10 +127,10 @@ I had to do this several times, so I also got to learn how to update versions:
   <li>
     Open ApplicationManifest.xml <ol style="padding-left: 40px">
       <li>
-        Find <code>&lt;ServiceManifestRef ..&gt;</code> and update ServiceManifestVersion to match the ServiceManifest version above
+        Find <code><ServiceManifestRef ..&gt;</code> and update ServiceManifestVersion to match the ServiceManifest version above
       </li>
       <li>
-        Update the ApplicationTypeVersion property in the <code>&lt;ApplicationManifest … &gt;</code> root element
+        Update the ApplicationTypeVersion property in the <code><ApplicationManifest … &gt;</code> root element
       </li>
       <li>
         Save

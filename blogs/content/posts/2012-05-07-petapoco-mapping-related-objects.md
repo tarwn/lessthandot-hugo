@@ -36,7 +36,7 @@ As we saw in the prior post, using a pair of decorated objects makes it pretty e
 
 <pre>public void SelectUsingDecoratedClasses() {
 	using (var db = GetDatabase()) {
-		var results = db.Query&lt;DecoratedPerson, DecoratedAddress&gt;(
+		var results = db.Query<DecoratedPerson, DecoratedAddress&gt;(
 					@"SELECT Person.*, Address.* 
 					  FROM Person 
 						INNER JOIN Address ON Person.AddressId = Address.Id 
@@ -79,7 +79,7 @@ While the previous example handled the mapping automatically and assigned the Ad
 
 <pre>public void SelectUsingMappingAndPOCO() {
 	using (var db = GetDatabase()) {
-		var results = db.Query&lt;Person, Address, Person&gt;(
+		var results = db.Query<Person, Address, Person&gt;(
 					(p, a) =&gt; { p.Address = a; return p; },
 					@"SELECT Person.*, Address.* 
 						FROM Person 
@@ -101,7 +101,7 @@ Of course PetaPoco also handles dynamics, however this is limited to outputting 
 
 <pre>public void SelectWithDynamics() {
 	using (var db = GetDatabase()) {
-		var results = db.Query&lt;dynamic&gt;(
+		var results = db.Query<dynamic&gt;(
 					@"SELECT Person.*, Address.Street, Address.HouseNumber 
 						FROM Person 
 						INNER JOIN Address ON Person.AddressId = Address.Id 
@@ -121,14 +121,14 @@ Instead of a dynamic, we could just as easily create a POCO for this report view
 Switching directions for a moment, let&#8217;s instead query for an address and all of it&#8217;s associated persons. First we&#8217;ll need an updated POCO:
 
 <pre>public class AddressWithPeople : Address { 
-	public List&lt;Person&gt; Persons { get; set; }
+	public List<Person&gt; Persons { get; set; }
 }</pre>
 
 Then with a slightly more complex mapping method, we can map a one-to-many to our new AddressWithPeople and existing Person POCOs:
 
 <pre>public void SelectOneToMany() {
 	using (var db = GetDatabase()) {
-		var results = db.Query&lt;AddressWithPeople, Person, AddressWithPeople&gt;(
+		var results = db.Query<AddressWithPeople, Person, AddressWithPeople&gt;(
 					new AddressToPersonRelator().MapIt,
 					@"SELECT Address.*, Person.*
 						FROM Person 
@@ -159,7 +159,7 @@ Of course, the magic in this case is the tricky part. In order to map the object
 
 		var prev = current;
 		current = a;
-		current.Persons = new List&lt;Person&gt;() { p };
+		current.Persons = new List<Person&gt;() { p };
 
 		return prev;
 	}

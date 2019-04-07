@@ -151,9 +151,9 @@ TeamCity also provides the ability to add custom charts based on either built-in
 
 Adding a [custom chart][5] requires us to dig into the configurations of TeamCity. I&#8217;m going to add a chart that will be displayed for any build that provides the warning count number above, so I&#8217;ll open the <code class="codespan">[teamCity data dir]/config/main-config.xml</code> file and add the following section:
 
-<pre>&lt;graph title="Build Warnings" hideFilters="showFailed" seriesTitle="Warning" format=""&gt;
-    &lt;valueType key="buildWarnings" title="Warnings"/&gt;
-&lt;/graph&gt;</pre>
+<pre><graph title="Build Warnings" hideFilters="showFailed" seriesTitle="Warning" format=""&gt;
+    <valueType key="buildWarnings" title="Warnings"/&gt;
+</graph&gt;</pre>
 
 This will add a chart to the Statistics tab of the build. After a few builds this is what I have:
 
@@ -177,11 +177,11 @@ if($check -eq $false){
     New-Item 'BuildWarningReport' -type Directory
 }
 $stream = [System.IO.StreamWriter] "BuildWarningReport/index.html"
-$stream.WriteLine("&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;$count Build Warnings&lt;/h1&gt;")
-$stream.WriteLine("&lt;ul&gt;")
-$warnings | % { $stream.WriteLine("&lt;li&gt;$_&lt;/li&gt;") }
-$stream.WriteLine("&lt;/ul&gt;")
-$stream.WriteLine("&lt;/body&gt;&lt;/html&gt;")
+$stream.WriteLine("<html&gt;<head&gt;</head&gt;<body&gt;<h1&gt;$count Build Warnings</h1&gt;")
+$stream.WriteLine("<ul&gt;")
+$warnings | % { $stream.WriteLine("<li&gt;$_</li&gt;") }
+$stream.WriteLine("</ul&gt;")
+$stream.WriteLine("</body&gt;</html&gt;")
 $stream.Close()</pre>
 
 I&#8217;ve added HTML output to the script with a hardcoded output location that ensures the report directory exists before writing the index.html page. I&#8217;ve hardcoded this value to reduce the amount of thinking &#8216;ll need to do as I add this to other projects (keeps it consistent from output name to artifact setting to report tab configuration).
@@ -194,7 +194,7 @@ The next step is to configure the project to capture the folder as an artifact:
 
 Then the last step is to modify the TeamCity configuration to recognize that when I output archives like that, I want to treat them as a report. To do this I add the following chunk of XML to my <code class="codespan">[TeamCity data directory]/config/main-config.xml</code> file (per the documentation link above):
 
-<pre>&lt;report-tab title="Build Warnings" basePath="BuildWarningReport" startPage="index.html" /&gt;</pre>
+<pre><report-tab title="Build Warnings" basePath="BuildWarningReport" startPage="index.html" /&gt;</pre>
 
 And there we go, the custom report tab is available in the build results:
 
@@ -250,11 +250,11 @@ if($check -eq $false){
     New-Item 'BuildWarningReport' -type Directory
 }
 $stream = [System.IO.StreamWriter] "BuildWarningReport/index.html"
-$stream.WriteLine("&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;$count Build Warnings&lt;/h1&gt;")
-$stream.WriteLine("&lt;ul&gt;")
-$warnings | % { $stream.WriteLine("&lt;li&gt;$_&lt;/li&gt;") }
-$stream.WriteLine("&lt;/ul&gt;")
-$stream.WriteLine("&lt;/body&gt;&lt;/html&gt;")
+$stream.WriteLine("<html&gt;<head&gt;</head&gt;<body&gt;<h1&gt;$count Build Warnings</h1&gt;")
+$stream.WriteLine("<ul&gt;")
+$warnings | % { $stream.WriteLine("<li&gt;$_</li&gt;") }
+$stream.WriteLine("</ul&gt;")
+$stream.WriteLine("</body&gt;</html&gt;")
 $stream.Close()</pre>
 
 To recap, we started with some warning messages randomly scattered across the build log. We ended with the warning count automatically showing in the build status on the dashboard, a nice chart of the number over time, and three different ways to view the detailed list. I hope this proves useful to others as well, now I have to go and fix the sample warnings I added before I forget about them. 🙂

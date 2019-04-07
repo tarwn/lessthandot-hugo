@@ -78,7 +78,7 @@ Run all tests in the current directory with:
  
 use Test::Harness qw(&runtests);
  
-@tests = @ARGV ? @ARGV : &lt;*.t&gt;;
+@tests = @ARGV ? @ARGV : <*.t&gt;;
  
 runtests @tests;</pre>
 

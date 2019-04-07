@@ -242,9 +242,9 @@ There is an example for connecting via X509 certificates in a comment in the xml
 
 My file now looks like this:
 
-<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;PublishProfile xmlns="http://schemas.microsoft.com/2015/05/fabrictools"&gt;
-       &lt;ClusterConnectionParameters ConnectionEndpoint="192.168.173.200:19000"
+<pre><?xml version="1.0" encoding="utf-8"?&gt;
+<PublishProfile xmlns="http://schemas.microsoft.com/2015/05/fabrictools"&gt;
+       <ClusterConnectionParameters ConnectionEndpoint="192.168.173.200:19000"
                                     X509Credential="true"
                                     ServerCertThumbprint="E798126C5C044655EFADF7E399880A82E787C86F"
                                     FindType="FindByThumbprint"
@@ -252,8 +252,8 @@ My file now looks like this:
                                     StoreLocation="CurrentUser"
                                     StoreName="My" /&gt;
 
-  &lt;ApplicationParameterFile Path="..\ApplicationParameters\LocalCluster.xml" /&gt;
-&lt;/PublishProfile&gt;</pre>
+  <ApplicationParameterFile Path="..\ApplicationParameters\LocalCluster.xml" /&gt;
+</PublishProfile&gt;</pre>
 
 Add the new profile file to the project in Visual Studio.
 

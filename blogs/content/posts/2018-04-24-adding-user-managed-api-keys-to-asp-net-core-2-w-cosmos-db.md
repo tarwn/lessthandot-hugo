@@ -70,7 +70,7 @@ In the last two posts, we laid the groundwork for authentication from the UI dow
   </p>
 </div>
 
-Most of the work is building on the [previous post](), the big difference is a new way to authenticate and some middleware to do the work.
+Most of the work is building on the [previous post](/index.php/webdev/serverprogramming/aspnet/adding-twitter-authentication-to-an-asp-net-core-2-site-w-cosmos-db/), the big difference is a new way to authenticate and some middleware to do the work.
 
 I worked on this in two pieces:
 
@@ -95,7 +95,7 @@ Let&#8217;s start with the screens and work down the stack. I&#8217;ve created a
 
 ```csharp
 [HttpGet("")]
-public async Task&lt;IActionResult> IndexAsync(string error)
+public async Task<IActionResult> IndexAsync(string error)
 {
 	var sessionId = _membership.GetSessionId(HttpContext.User);
 	var user = await _persistence.Users.GetUserBySessionIdAsync(sessionId);
@@ -114,7 +114,7 @@ public IActionResult AddKey()
 }
 
 [HttpPost("addKey")]
-public async Task&lt;IActionResult> PostAddKeyAsync(NewKeyModel model)
+public async Task<IActionResult> PostAddKeyAsync(NewKeyModel model)
 {
 	if (!ModelState.IsValid)
 	{
@@ -132,7 +132,7 @@ public async Task&lt;IActionResult> PostAddKeyAsync(NewKeyModel model)
 }
 
 [HttpGet("revoke")]
-public async Task&lt;IActionResult> Revoke(string id)
+public async Task<IActionResult> Revoke(string id)
 {
 	var sessionId = _membership.GetSessionId(HttpContext.User);
 	var user = await _persistence.Users.GetUserBySessionIdAsync(sessionId);
@@ -165,22 +165,12 @@ The AddKey view is a basic 1-field form (included more to show you I don&#8217;t
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-
-
 <div class="box">
-  <h2>
-    AddKey
-  </h2>
-  
-      
-  
-  
+  <h2>AddKey</h2>
 </div>
-
 
 <div>
   <a asp-action="IndexAsync">Back to List</a>
-  
 </div>
 ```
 
@@ -194,35 +184,21 @@ And once it&#8217;s created, we then show it to you with &#8220;ShowKey&#8221;:
     ViewData["Title"] = "ShowKey";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-
-
-
 <div class="box">
-  <h2>
-    Your New API Key
-  </h2>
-      
-  
+  <h2>Your New API Key</h2>
   <p>
     You will need the API Key Id and API Key Secret to make an API call. Save your API Key Secret now, we won't show it again!
-        
   </p>
-  
-      
-  
+
   <div>
     Name: @Model.Name<br />
-            API Key Id: @Model.Id<br />
-            API Key Secret: @Model.Identity<br />
-        
+    API Key Id: @Model.Id<br />
+    API Key Secret: @Model.Identity<br />
   </div>
-  
 </div>
-
 
 <div>
   <a asp-action="IndexAsync">Back to List</a>
-  
 </div>
 ```
 
@@ -240,107 +216,53 @@ Displaying the index is a little more complex, as there are potentially several 
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
+<h2>Your Account</h2>
 
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-## Your Account
-
-
-<div asp-validation-summary="ModelOnly" class="text-danger">
-  
-</div>
-
-Username: @Model.User.Username
-
-  
-Registered: @Model.User.CreationTime  
-  
+Username: @Model.User.Username <br/>
+Registered: @Model.User.CreationTime  <br/>
 Twitter Status: @if (Model.UserAuthentications.ContainsKey("Twitter"))
 {
     var twitter = Model.UserAuthentications["Twitter"].Single();
-    &lt;text>@twitter.Name at @twitter.CreationTime&lt;/text>
+    <text>@twitter.Name at @twitter.CreationTime</text>
 }
 else
 {
-    &lt;text>Not Linked&lt;/text>
+    <text>Not Linked</text>
 }
-  
 
-
-### API Keys
-
+<h3>API Keys</h3>
 
 <table>
   <tr>
-    <th>
-      Created
-    </th>
-            
-    
-    <th>
-      Name
-    </th>
-            
-    
-    <th>
-      API Key Id
-    </th>
-            
-    
-    <th>
-      API Key Secret
-    </th>
-            
-    
-    <th>
-      
-    </th>
-        
+    <th>Created</th>
+    <th>Name</th>
+    <th>API Key Id</th>
+    <th>API Key Secret</th>
+    <th></th>
   </tr>
-      @if (Model.UserAuthentications.ContainsKey("APIKey"))
+  @if (Model.UserAuthentications.ContainsKey("APIKey"))
+  {
+      var keys = Model.UserAuthentications["APIKey"];
+      foreach (var key in keys)
       {
-          var keys = Model.UserAuthentications["APIKey"];
-          foreach (var key in keys)
-          {
-              
-  
-  <tr>
-    <td>
-      @key.CreationTime
-    </td>
-                    
-    
-    <td>
-      @key.Name
-    </td>
-                    
-    
-    <td>
-      @key.Id
-    </td>
-                    
-    
-    <td>
-      @key.GetMaskedIdentity()
-    </td>
-                    
-    
-    <td>
-      <a asp-action="Revoke" asp-route-id="@key.Id">Revoke</a>
-    </td>
-                
-  </tr>
-          }
+      <tr>
+        <td>@key.CreationTime</td>
+        <td>@key.Name</td>
+        <td>@key.Id</td>
+        <td>@key.GetMaskedIdentity()</td>    
+        <td>
+          <a asp-action="Revoke" asp-route-id="@key.Id">Revoke</a>
+        </td>
+      </tr>
       }
-      
-  
+  }
   <tr>
     <td colspan="5">
       <a asp-action="AddKey">Add a key</a>
-              
     </td>
-        
   </tr>
-  
 </table>
 ```
 
@@ -378,7 +300,7 @@ public string GenerateAPIKey(string userId)
 `GenerateAPIKey` is starting with a simple random generator scheme to generate new keys.
 
 ```csharp
-public async Task&lt;AuthenticationDetails> AddAuthenticationAsync(string userId, string scheme, string identity, string identityName)
+public async Task<AuthenticationDetails> AddAuthenticationAsync(string userId, string scheme, string identity, string identityName)
 {
     var userAuth = new LoginUserAuthentication()
     {
@@ -396,7 +318,7 @@ public async Task&lt;AuthenticationDetails> AddAuthenticationAsync(string userId
 `AddAuthenticationAsync` is just a CRUD method to write the new data and return the results.
 
 ```csharp
-public async Task&lt;RevocationDetails> RevokeAuthenticationAsync(string userId, string identity)
+public async Task<RevocationDetails> RevokeAuthenticationAsync(string userId, string identity)
 {
     var userAuth = await _persistence.Users.GetUserAuthenticationAsync(identity);
     if (!userAuth.UserId.Equals(userId))
@@ -438,7 +360,6 @@ public async Task&lt;RevocationDetails> RevokeAuthenticationAsync(string userId,
 
 Now that we have the new `ICustomMembership` behavior, we can add the `UserPersistence` requirements.
 
-[]()
 
 ```csharp
 public enum AuthenticationScheme
@@ -454,14 +375,13 @@ First we add the two new Authentication types to the enum.
   I really shouldn&#8217;t have named this enum &#8220;AuthenticationScheme&#8221;, since that has a specific meaning for ASP.Net Core 2 already, sorry about that. Future refactor opportunity.
 </div>
 
-[]()
 
 ```csharp
 // ...
 
-public async Task&lt;LoginUserAuthentication> GetUserAuthenticationAsync(string id)
+public async Task<LoginUserAuthentication> GetUserAuthenticationAsync(string id)
 {
-    var query = _client.CreateDocumentQuery&lt;LoginUserAuthentication>(GetAuthenticationsCollectionUri(), new SqlQuerySpec()
+    var query = _client.CreateDocumentQuery<LoginUserAuthentication>(GetAuthenticationsCollectionUri(), new SqlQuerySpec()
     {
         QueryText = "SELECT * FROM UserAuthentications UA WHERE UA.id = @id",
         Parameters = new SqlParameterCollection()
@@ -471,7 +391,7 @@ public async Task&lt;LoginUserAuthentication> GetUserAuthenticationAsync(string 
     });
 
     var result = await query.AsDocumentQuery()
-                            .ExecuteNextAsync&lt;LoginUserAuthentication>();
+                            .ExecuteNextAsync<LoginUserAuthentication>();
     return result.SingleOrDefault();
 }
 
@@ -564,11 +484,11 @@ For this case, we&#8217;re going to expect an `Authorization` header on requests
 [SampleCosmosCore2App/Membership/CustomMembershipAPIAuthHandler.cs][10] (HandleAuthenticateAsync)
 
 ```csharp
-public class CustomMembershipAPIAuthHandler : AuthenticationHandler&lt;CustomMembershipAPIOptions>
+public class CustomMembershipAPIAuthHandler : AuthenticationHandler<CustomMembershipAPIOptions>
 {
     // ...
 
-    protected override async Task&lt;AuthenticateResult> HandleAuthenticateAsync()
+    protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
     {
         // Is this relevant to us?
         if (!Request.Headers.TryGetValue(HeaderNames.Authorization, out var authorization))
@@ -610,7 +530,7 @@ On top of having logic to look at handle Authenticate requests, we also want to 
 [SampleCosmosCore2App/Membership/CustomMembershipAPIAuthHandler.cs][10] (HandleAuthenticateAsync)
 
 ```csharp
-public class CustomMembershipAPIAuthHandler : AuthenticationHandler&lt;CustomMembershipAPIOptions>
+public class CustomMembershipAPIAuthHandler : AuthenticationHandler<CustomMembershipAPIOptions>
 {
     // ...
 
@@ -670,7 +590,7 @@ To support the middleware above, we need a `GetOneTimeLoginAsync` method in memb
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs][14]
 
 ```csharp
-public async Task&lt;ClaimsPrincipal> GetOneTimeLoginAsync(string scheme, string userAuthId, string identity, string authenticationScheme)
+public async Task<ClaimsPrincipal> GetOneTimeLoginAsync(string scheme, string userAuthId, string identity, string authenticationScheme)
 {
     var authScheme = StringToScheme(scheme);
     var userAuth = await _persistence.Users.GetUserAuthenticationAsync(userAuthId);

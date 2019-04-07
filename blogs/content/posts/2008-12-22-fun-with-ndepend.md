@@ -29,14 +29,14 @@ My favorite feature (by far) in working on this project was its&#8217; &#8220;Co
 
 An example query would look something like this:
 
-<pre>// &lt;Name&gt;Most Complex Methods used by Type X&lt;/Name&gt;
+<pre>// <Name>Most Complex Methods used by Type X</Name>
 SELECT TOP 10 METHODS 
 WHERE IsUsedBy "AssemblyX.NamespaceY.TypeZ" 
 ORDER BY CyclomaticComplexity DESC</pre>
 
 In a larger project, you can use the FROM clause to limit what you bring back to methods from a particular assembly or namespace, like so:
 
-<pre>// &lt;Name&gt;Most Complex Methods from Assembly Q used by Type X&lt;/Name&gt;
+<pre>// <Name>Most Complex Methods from Assembly Q used by Type X</Name>
 SELECT TOP 10 METHODS 
 FROM ASSEMBLIES "AssemblyQ"
 WHERE IsUsedBy "AssemblyX.NamespaceY.TypeZ" 
@@ -44,8 +44,8 @@ ORDER BY CyclomaticComplexity DESC</pre>
 
 Another cool thing about CQL is the ability to add constraints. So you could set it up to be warned whenever you run analysis if you had a method with over 200 lines of code, or methods with excessive complexity and an insufficient number of comments. Here is an example of a constraint that ships with NDepend, meant to warn the user if any fields break encapsulation.
 
-<pre>// &lt;Name&gt;Fields should be declared as private&lt;/Name&gt;
-WARN IF Count &gt; 0 IN SELECT TOP 10 FIELDS WHERE 
+<pre>// <Name>Fields should be declared as private</Name>
+WARN IF Count > 0 IN SELECT TOP 10 FIELDS WHERE 
  !IsPrivate AND 
  // These conditions filter cases where fields doesn't represent state that should be encapsulated. 
  !IsInFrameworkAssembly AND 

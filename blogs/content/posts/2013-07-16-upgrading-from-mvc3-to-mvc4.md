@@ -64,17 +64,17 @@ namespace MvcMusicStore.Controllers {
 
                 //
                 // GET: /Home/
-                public async Task&lt;ActionResult&gt; IndexAsync() {
+                public async Task<ActionResult&gt; IndexAsync() {
                         // Get most popular albums
                         var albums = await GetTopSellingAlbumsAsync(5);
                         
                         return View(albums);
                 }
 
-                private async Task&lt;List&lt;Album&gt;&gt; GetTopSellingAlbumsAsync(int count) {
+                private async Task<List<Album&gt;&gt; GetTopSellingAlbumsAsync(int count) {
                         // Group the order details by album and return
                         // the albums with the highest count
-                        return await Task.Factory.StartNew&lt;List&lt;Album&gt;&gt;(() =&gt;
+                        return await Task.Factory.StartNew<List<Album&gt;&gt;(() =&gt;
                         {
                                 return StoreDB.Albums
                                                                 .OrderByDescending(a =&gt; a.OrderDetails.Count())

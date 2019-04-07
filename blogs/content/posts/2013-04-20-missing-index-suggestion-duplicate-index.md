@@ -41,7 +41,7 @@ For example, the table the example below is based on is a 290 million row table,
 
 **The missing index details** 
 
-<pre>CREATE NONCLUSTERED INDEX [&lt;Name of Missing Index, sysname,&gt;]
+<pre>CREATE NONCLUSTERED INDEX [<Name of Missing Index, sysname,&gt;]
 ON [dbo].[myTable] ([recordid])
 GO</pre>
 

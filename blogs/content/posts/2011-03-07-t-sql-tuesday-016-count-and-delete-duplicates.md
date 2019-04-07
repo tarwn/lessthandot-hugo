@@ -84,7 +84,7 @@ GO
 DECLARE @LOOP INT
 SET @LOOP = 1
 
-WHILE @LOOP &lt;= 10000
+WHILE @LOOP <= 10000
  BEGIN
 	INSERT INTO DUPS
 	SELECT 'Customer ' + CAST(@LOOP as VARCHAR(5)),
@@ -94,7 +94,7 @@ WHILE @LOOP &lt;= 10000
 
 SET @LOOP = 1
 
-WHILE @LOOP &lt;= 10000
+WHILE @LOOP <= 10000
  BEGIN
 	IF (@LOOP % 2 &gt; 0)
 	 BEGIN
@@ -165,7 +165,7 @@ The MIN can also be used if the first inserted row is to be retained.  The othe
 SELECT ORDERNUM,ROW_NUMBER() OVER (PARTITION BY ORDERNUM ORDER BY (SELECT 0)) RN FROM DUPS 
 )
 DELETE FROM DUP_CTE
-WHERE RN &lt;&gt; 1</pre>
+WHERE RN <&gt; 1</pre>
 
 This allows more selectivity to the row ranking and removal process. 
 

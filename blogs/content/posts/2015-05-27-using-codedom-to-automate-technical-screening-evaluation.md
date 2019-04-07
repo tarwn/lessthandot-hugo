@@ -257,7 +257,7 @@ Here are the TestDefinitions we will evaluate against for the sample problem:
   
 **[EvaluateFizzBuzz/Program.cs][8]**
 
-<pre>new List&lt;TestDefinition&gt;(){
+<pre>new List<TestDefinition&gt;(){
 	new TestDefinition("Standard number is returned as string", new object[]{ 1 }, "1"),
 	new TestDefinition("3 is returned as 'Fizz'", new object[]{ 3 }, "Fizz"),
 	new TestDefinition("5 is returned as 'Buzz'", new object[]{ 5 }, "Buzz"),

@@ -34,7 +34,7 @@ To get started I need a table with a large number of columns, data is not necess
 <pre>DECLARE @colnumber int = 1
 DECLARE @command VARCHAR(4000) =''
 
-WHILE @colnumber &lt;= 125
+WHILE @colnumber <= 125
 	BEGIN
 		SET @command = @command + ' col' + CAST(@colnumber AS varchar(3)) + ' int, '
 		SET @colnumber += 1

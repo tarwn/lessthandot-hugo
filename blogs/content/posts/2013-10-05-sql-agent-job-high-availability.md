@@ -42,13 +42,13 @@ In the above case, NODE1 and NODE2 are set for automatic failover and NODE2 is t
 Let’s say you have a job that checks orders in AdventureWorks database.  If the ship dates of orders are NULL and the due date of that order is in the past, those orders should be sent as a notification or some sort of daily reporting.  In AG, setting a replica that is set for preferred backups and the database you are looking at is set for reading, you could run the following query on that replica.
 
 <pre>IF EXISTS(SELECT 1 FROM AdventureWorks2008.[Sales].[SalesOrderHeader]
-				WHERE DueDate &lt;= GETDATE()
+				WHERE DueDate <= GETDATE()
 						AND ShipDate IS NULL)
 		BEGIN
 			INSERT INTO DBA.dbo.ShippingDelays 
 SELECT SalesOrderID,OrderDate,DueDate,ShipDate 
 FROM AdventureWorks2008.[Sales].[SalesOrderHeader]
-				WHERE DueDate &lt;= GETDATE()
+				WHERE DueDate <= GETDATE()
 						AND ShipDate IS NULL 
 		END</pre>
 
@@ -57,12 +57,12 @@ This query will check for past due orders and then insert them into a table that
 <pre>IF sys.fn_hadr_backup_is_preferred_replica('AdventureWorks2008') = 1
  BEGIN
 	IF EXISTS(SELECT 1 FROM AdventureWorks2008.[Sales].[SalesOrderHeader]
-				WHERE DueDate &lt;= GETDATE()
+				WHERE DueDate <= GETDATE()
 						AND ShipDate IS NULL)
 		BEGIN
 			INSERT INTO DBA.dbo.ShippingDelays 
 			SELECT SalesOrderID,OrderDate,DueDate,ShipDate FROM AdventureWorks2008.[Sales].[SalesOrderHeader]
-				WHERE DueDate &lt;= GETDATE()
+				WHERE DueDate <= GETDATE()
 						AND ShipDate IS NULL 
 		END
  END</pre>

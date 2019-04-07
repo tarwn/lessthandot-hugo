@@ -84,8 +84,8 @@ and month(payment_dt) = month(getDate())</pre>
 
 You would change it to this:
 
-<pre>where payment_dt &gt;= dateadd(mm, datediff(mm, 0, getdate())+0, 0)
-and payment_dt &lt; dateadd(mm, datediff(mm, 0, getdate())+1, 0)</pre>
+<pre>where payment_dt >= dateadd(mm, datediff(mm, 0, getdate())+0, 0)
+and payment_dt < dateadd(mm, datediff(mm, 0, getdate())+1, 0)</pre>
 
 You can see the complete question on the MSDN forum site here:
   
@@ -97,22 +97,22 @@ The same exact day I answered a very similar question, take a look here: http://
 
 The person had this
 
-<pre>AND DATEDIFF(d, '08/10/2008', DateCreated) &gt;= 0
-AND DATEDIFF(d, DateCreated, '08/15/2008') &gt;= 0</pre>
+<pre>AND DATEDIFF(d, '08/10/2008', DateCreated) >= 0
+AND DATEDIFF(d, DateCreated, '08/15/2008') >= 0</pre>
 
 I told him to change it to this
 
-<pre>AND DateCreated &gt;= '08/10/2008'
-and DateCreated &lt; '08/16/2008'</pre>
+<pre>AND DateCreated >= '08/10/2008'
+and DateCreated < '08/16/2008'</pre>
 
 And that solved that query. If you are interested in some more performance, I have written some [Query Optimization][1] items on the LessThanDot Wiki. Below are some direct links
 
-<pre>&lt;a href="http://wiki.ltd.local/index.php/Case_Sensitive_Search" title="Case Sensitive Search"&gt;Case Sensitive Search&lt;/a&gt;
-&lt;a href="http://wiki.ltd.local/index.php/No_Functions_on_Left_Side_of_Operator" title="No Functions on Left Side of Operator"&gt;No Functions on Left Side of Operator&lt;/a&gt;
-&lt;a href="http://wiki.ltd.local/index.php/Query_Optimizations_With_Dates" title="Query Optimizations With Dates"&gt;Query Optimizations With Dates&lt;/a&gt;
-&lt;a href="http://wiki.ltd.local/index.php/Optimization:_Set_Nocount_On" title="Optimization: Set Nocount On"&gt;Optimization: Set Nocount On&lt;/a&gt;
-&lt;a href="http://wiki.ltd.local/index.php/No_Math_In_Where_Clause" title="No Math In Where Clause"&gt;No Math In Where Clause&lt;/a&gt;
-&lt;a href="http://wiki.ltd.local/index.php/Don%27t_Use_%28select_%2A%29%2C_but_List_Columns" title="Don't Use (select *), but List Columns"&gt;Don't Use (select *), but List Columns&lt;/a&gt;</pre>
+<pre><a href="http://wiki.ltd.local/index.php/Case_Sensitive_Search" title="Case Sensitive Search">Case Sensitive Search</a>
+<a href="http://wiki.ltd.local/index.php/No_Functions_on_Left_Side_of_Operator" title="No Functions on Left Side of Operator">No Functions on Left Side of Operator</a>
+<a href="http://wiki.ltd.local/index.php/Query_Optimizations_With_Dates" title="Query Optimizations With Dates">Query Optimizations With Dates</a>
+<a href="http://wiki.ltd.local/index.php/Optimization:_Set_Nocount_On" title="Optimization: Set Nocount On">Optimization: Set Nocount On</a>
+<a href="http://wiki.ltd.local/index.php/No_Math_In_Where_Clause" title="No Math In Where Clause">No Math In Where Clause</a>
+<a href="http://wiki.ltd.local/index.php/Don%27t_Use_%28select_%2A%29%2C_but_List_Columns" title="Don't Use (select *), but List Columns">Don't Use (select *), but List Columns</a></pre>
 
 If you are interested in some blogposts about dates, take a look at these two which I wrote earlier
   

@@ -40,7 +40,7 @@ Altering the global list of formatters for WebAPI is easy. In the situation abov
 **Sample Action &#8211; no Extra Code**
 
 <pre>[HttpGet]
-public List&lt;SampleObject&gt; GiveMeData()
+public List<SampleObject&gt; GiveMeData()
 {
 	return _repository.GetData();
 }</pre>
@@ -60,7 +60,7 @@ public HttpResponseMessage GiveMeDataInJSON()
 {
 	var data = _repository.GetData();
 
-	return Request.CreateResponse&lt;List&lt;SampleObject&gt;&gt;(HttpStatusCode.OK, data, new JsonMediaTypeFormatter());
+	return Request.CreateResponse<List<SampleObject&gt;&gt;(HttpStatusCode.OK, data, new JsonMediaTypeFormatter());
 }</pre>
 
 And there we go, XML on demand every time.

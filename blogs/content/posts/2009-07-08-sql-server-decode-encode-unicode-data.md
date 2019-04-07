@@ -32,7 +32,7 @@ Begin
   Declare @Start Int
   Declare @End Int
 
-  While CharIndex(@Prefix, @Data) &gt; 0
+  While CharIndex(@Prefix, @Data) > 0
     Begin
       Set @Start = CharIndex(@Prefix, @Data)
       Set @End = CharIndex(@Suffix, @Data, @Start)
@@ -60,9 +60,9 @@ Begin
   Set @i = 1
   Set @Output = ''
 
-  While @i &lt;= Len(@Data)	
+  While @i <= Len(@Data)	
     Begin
-      If Unicode(SubString(@Data, @i, 1)) &gt; 255
+      If Unicode(SubString(@Data, @i, 1)) > 255
         Set @Output = @Output + @Prefix + Convert(VarChar(5),Unicode(SubString(@Data, @i, 1))) + @Suffix
       Else
         Set @Output = @Output + SubString(@Data, @i, 1)

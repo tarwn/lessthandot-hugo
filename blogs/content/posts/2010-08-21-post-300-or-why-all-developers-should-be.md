@@ -32,7 +32,7 @@ This one can be pretty harsh, you wrote that awesome 50 line piece of code, you 
 
 <pre>int x = numberToInvertSign;
 boolean pos = x &gt; 0;
-for(int i = 0; i &lt; 2*Math.abs(x); i++){
+for(int i = 0; i < 2*Math.abs(x); i++){
    if(pos){
       numberToInvertSign--;
    }
@@ -76,7 +76,7 @@ class WindowsVista extends WindowsXP implements Nothing
   {
    if (first_time_install)
    {
-    if (installed RAM &lt; 2GB || processorSpeed &lt; 4GHz)
+    if (installed RAM < 2GB || processorSpeed < 4GHz)
     {
      MessageBox("Hardware incompatibity error.");
      GetKeyPress ();

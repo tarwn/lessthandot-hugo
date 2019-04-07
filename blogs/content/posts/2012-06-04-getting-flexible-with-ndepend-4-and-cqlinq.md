@@ -32,7 +32,7 @@ AND IsUsedBy (
 
 This didn&#8217;t work however (CQL doesn&#8217;t really have support for subqueries), and I couldn&#8217;t really find anything in the language that would allow us to achieve what we wanted. NDepend 4 introduces a new linq-based replacement called CQLinq that offers a lot more flexibility, so I figured I would see if I could write the query that we needed using it. It ended up being much easier than I thought &#8211; CQLinq gives us access to most (if not all) of the standard LINQ operators, and the same functions for querying code using attributes and history that we had with CQL. This is the query I came up with:
 
-<pre>// &lt;Name&gt;Test Query for Contract Changes&lt;/Name&gt;
+<pre>// <Name&gt;Test Query for Contract Changes</Name&gt;
 warnif count &gt; 0
 
 let decoratedMethods = from m in JustMyCode.Methods

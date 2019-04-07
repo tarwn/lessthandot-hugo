@@ -63,7 +63,7 @@ $rss-&gt;parse($feed);</pre>
 [Template::Toolkit][3] can take in a [template][4] and a hash reference of values to substitute into the template.
 
 <pre># Define a template
-my $template = &lt;&lt;"TEMPLATE";
+my $template = <<"TEMPLATE";
 [% channel.title %]
 
 Headlines:
@@ -98,7 +98,7 @@ use Template;
 #
 ##################
 my $feed_url = 'http://feeds.bbci.co.uk/news/rss.xml';
-my $template = &lt;&lt;"TEMPLATE";
+my $template = <<"TEMPLATE";
 [% channel.title %]
 
 Headlines:

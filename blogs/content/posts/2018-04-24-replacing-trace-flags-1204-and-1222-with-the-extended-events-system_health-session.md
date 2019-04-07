@@ -29,7 +29,7 @@ In my instance, I have TF 1222 enabled.
 
 I have simple code to create a deadlock. You can use this as an example in a test environment to replicate it.
 
-<pre style="padding-left: 30px">/* Create deadlock - query 1 */
+<pre><code lang="tsql">/* Create deadlock - query 1 */
 
 USE tempdb;
 GO
@@ -50,7 +50,7 @@ INSERT INTO tbl2 VALUES (111, 2); 
 
 /* Come back here and execute this */
 INSERT INTO tbl2 VALUES (111, 555);
-COMMIT TRAN</pre>
+COMMIT TRAN</code></pre>
 
 When I run the last statement, I receive an error that one of the processes was the deadlock victim.
 

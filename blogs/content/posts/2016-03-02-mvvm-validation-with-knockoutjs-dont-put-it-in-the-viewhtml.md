@@ -29,14 +29,14 @@ Here are a couple examples of what I mean when I say &#8220;validation defined i
 
 AngularJS Documentation: <a href="https://docs.angularjs.org/guide/forms" title="AngularJS Documentation / Forms / Custom Validation" target="_blank">https://docs.angularjs.org/guide/forms</a>
 
-<pre>&lt;input type="number" ng-model="size" name="size" min="0" max="10" integer /&gt;{{size}}&lt;br /&gt;</pre>
+<pre><input type="number" ng-model="size" name="size" min="0" max="10" integer /&gt;{{size}}<br /&gt;</pre>
 
 jQuery Validation: <a href="http://jqueryvalidation.org/documentation/" title="jQuery Validation Plugin" target="_blank">http://jqueryvalidation.org/documentation/</a>
 
-<pre>&lt;p&gt;
-  &lt;label for="cname"&gt;Name (required, at least 2 characters)&lt;/label&gt;
-  &lt;input id="cname" name="name" minlength="2" type="text" required&gt;
-&lt;/p&gt;</pre>
+<pre><p&gt;
+  <label for="cname"&gt;Name (required, at least 2 characters)</label&gt;
+  <input id="cname" name="name" minlength="2" type="text" required&gt;
+</p&gt;</pre>
 
 So what&#8217;s wrong with this approach?
 
@@ -204,7 +204,7 @@ Adding types is then fairly simple, they just need to implement the parse, valid
 		}
 	},
 	tryValidate: function(value, options){
-		if(options.min != undefined && value &lt; options.min){
+		if(options.min != undefined && value < options.min){
 			return failedInput("'" + value + "' is less than the supported minimum of '" + options.min + "'");
 		}
 

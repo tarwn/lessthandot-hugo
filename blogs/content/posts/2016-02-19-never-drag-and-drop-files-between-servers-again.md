@@ -22,7 +22,7 @@ Oh, and there&#8217;s a really easy tool to copy files built into Windows &#8211
 
 Here&#8217;s the basic premise: you open a PowerShell window (or command prompt, but let&#8217;s join the 21st century), and enter
 
-<pre>robocopy &lt;source directory&gt; &lt;destination directory&gt; &lt;optional: file name&gt; /&lt;options&gt;</pre>
+<pre>robocopy <source directory&gt; <destination directory&gt; <optional: file name&gt; /<options&gt;</pre>
 
 The file(s) are copied, with progress shown. A few things I love about this:
 

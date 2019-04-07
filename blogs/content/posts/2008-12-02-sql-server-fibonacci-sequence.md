@@ -28,7 +28,7 @@ Begin
 	Declare @Digit1 Int
 	Declare @Digit2 int
 
-    If Len(@String1) &lt; Len(@String2) 
+    If Len(@String1) < Len(@String2) 
         select @String1 = Replace(Right(Space(Len(@String2)) + @String1, Len(@String2)), ' ', '0')
     Else
         select @String2 = Replace(Right(Space(Len(@String1)) + @String2, Len(@String1)), ' ', '0')
@@ -37,13 +37,13 @@ Begin
 	Set @i = 0
 	Set @Output = ''
 
-	While @i &lt; Len(@String1)
+	While @i < Len(@String1)
 		Begin
 			Set @Digit1 = SubString(@String1, Len(@String1) - @i, 1)
 			Set @Digit2 = SubString(@String2, Len(@String1) - @i, 1)
 	       
 			Select @Output = Convert(VarChar(max), (@Digit1 + @Digit2 + @CarryTheOne) % 10) + @Output
-			If @Digit1 + @Digit2 + @CarryTheOne &gt; 9
+			If @Digit1 + @Digit2 + @CarryTheOne > 9
 				Set @CarryTheOne = 1
 			Else
 				Set @CarryTheOne = 0
@@ -68,7 +68,7 @@ Insert Into @Temp(FIB) Values('1')
 Declare @i Int
 Select @i = Max(Id) From @Temp
 
-While @i &lt; 1000
+While @i < 1000
 	Begin
 	
 		Insert Into @Temp(FIB)

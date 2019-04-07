@@ -37,8 +37,8 @@ namespace RecipeTracker.Interfaces
         void Update(Recipe recipe);
         void Remove(Recipe recipe);
         Recipe GetByID(int id);
-        ICollection&lt;Recipe&gt; GetByFamily(string family);
-        ICollection&lt;Recipe&gt; GetAll();
+        ICollection<Recipe> GetByFamily(string family);
+        ICollection<Recipe> GetAll();
         void Dispose();
     }
 }</pre>
@@ -51,7 +51,7 @@ using NHibernate.Cfg;
 
 namespace RecipeTracker.Repositories
 {
-    public class SessionProvider&lt;T&gt; where T:new()
+    public class SessionProvider<T> where T:new()
     {
         private static ISessionFactory _sessionFactory;
 
@@ -89,20 +89,20 @@ using NHibernate.Cfg;
 
 namespace RecipeTracker.Repositories
 {
-    public abstract class BaseRepository&lt;T&gt; where T: new()
+    public abstract class BaseRepository<T> where T: new()
     {
-        protected ISession _session = SessionProvider&lt;T&gt;.OpenSession();
+        protected ISession _session = SessionProvider<T>.OpenSession();
 
         public T GetByID(int id)
         {
-            return _session.Get&lt;T&gt;(id);
+            return _session.Get<T>(id);
         }
 
-        public ICollection&lt;T&gt; GetAll()
+        public ICollection<T> GetAll()
         {
             var products = _session
                 .CreateCriteria(typeof(T))
-                .List&lt;T&gt;();
+                .List<T>();
             return products;
         }
 
@@ -152,14 +152,14 @@ using NHibernate;
 
 namespace RecipeTracker.Repositories
 {
-    public class RecipeRepository : BaseRepository&lt;Recipe&gt;, Interfaces.IRecipeRepository, IDisposable
+    public class RecipeRepository : BaseRepository<Recipe>, Interfaces.IRecipeRepository, IDisposable
     {
-        public ICollection&lt;Recipe&gt; GetByFamily(string family)
+        public ICollection<Recipe> GetByFamily(string family)
         {
                 var products = _session
                     .CreateCriteria(typeof(Recipe))
                     .Add(NHibernate.Criterion.Expression.Eq("Family", family))
-                    .List&lt;Recipe&gt;();
+                    .List<Recipe>();
                 return products;
         }
     }
@@ -167,7 +167,7 @@ namespace RecipeTracker.Repositories
 
 This is some wacky looking code at first. It kind of reminds me of Linq, but what its&#8217; called is HQL (Hibernate Query Language). I haven&#8217;t really gotten into it all that much, so I don&#8217;t feel qualified to speak about it in detail, but I do find it kinda cool. It may not be as easy as Linq, where you could do a nice Linq query such as
 
-<code class="codespan">recipeList.Where(n =&gt; n.Family = family)</code>
+<code class="codespan">recipeList.Where(n => n.Family = family)</code>
 
 But remember this needs to work on older framework versions as well. I think the HQL is reasonably succinct, and even somewhat elegant. After all reading that you can just about instantly tell what it does. It just creates a criteria on the session for Recipes, and then defines the expression to be evaluated (table.Family = family). Pretty cool. We could probably figure out how to do this with generics pretty easily, but I figure this kind of method is going to be tied to your specific type, and you want to have a descriptive name, and all that.
 
@@ -248,8 +248,8 @@ A few new things to note here. First, the [TestFixtureSetUp] attribute tag. This
 
 Now we are ready to fire up NUnit and run our tests. And now is when we&#8217;ll see that beautiful red bar (trust me it is beautiful, it means that you designed a test that will fail when its&#8217; supposed to!). When it fails you&#8217;ll see something like this:
 
-<code class="codespan">RecipeTracker.Tests.ImpressionRepository_Fixture (TestFixtureSetUp):&lt;br />
-NHibernate.InvalidProxyTypeException : The following types may not be used as proxies:&lt;br />
+<code class="codespan">RecipeTracker.Tests.ImpressionRepository_Fixture (TestFixtureSetUp):<br />
+NHibernate.InvalidProxyTypeException : The following types may not be used as proxies:<br />
 RecipeTracker.Model.Recipe: method AlcoholByWeight should be virtual</code>
 
 As it turns out we need to implement all of the methods and properties as virtual so that NHibernate can create subclasses from our object. Well, we can do this or specify lazy = &#8220;false&#8221; for our classes. But I like the lazy initialization, so I will make them virtual. After doing this, the tests should run just fine.

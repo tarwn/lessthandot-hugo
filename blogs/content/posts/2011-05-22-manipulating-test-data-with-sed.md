@@ -15,10 +15,10 @@ categories:
 ---
 Following on from my [previous blog about sed][1], this blog will detail how I use sed most often: manipulating test data when running demonstrations of new features. Let&#8217;s say we&#8217;ve developed a web service which creates users from the following XML document:
 
-<pre>&lt;user&gt;
-    &lt;username&gt;USERNAME&lt;/username&gt;
-    &lt;password&gt;PASSWORD&lt;/password&gt;
-&lt;/user&gt;</pre>
+<pre><user&gt;
+    <username&gt;USERNAME</username&gt;
+    <password&gt;PASSWORD</password&gt;
+</user&gt;</pre>
 
 We might want to demonstrate this web service using a number of combinations of usernames and passwords, for instance:
 
@@ -32,7 +32,7 @@ To do these tests we might create four XML documents containing each username/pa
 
 Instead, we can use sed. Create a single document like the one above and pass it through sed to replace the variables before passing it to the web service using curl:
 
-<pre>cat single_document.xml | sed -e 's/USERNAME/robearl/' -e 's/PASSWORD/password/' | curl &lt;options&gt; -d @- &lt;web service&gt;</pre>
+<pre>cat single_document.xml | sed -e 's/USERNAME/robearl/' -e 's/PASSWORD/password/' | curl <options&gt; -d @- <web service&gt;</pre>
 
 Using this technique, we avoid having to create lots of XML documents and it&#8217;s obvious what data is being passed without having to open up each document during the demonstration.
 

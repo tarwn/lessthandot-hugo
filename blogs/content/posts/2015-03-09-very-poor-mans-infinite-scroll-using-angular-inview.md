@@ -31,7 +31,7 @@ app.controller('exampleController', function($scope, $timeout) {
   
   $scope.items = [];
   
-  for(var i = 0; i &lt; 500; i++){
+  for(var i = 0; i < 500; i++){
     $scope.items.push({ value: i });
   }
   
@@ -46,16 +46,16 @@ app.controller('exampleController', function($scope, $timeout) {
 
 And some HTML:
 
-<pre>&lt;body ng-controller="exampleController"&gt;
-    &lt;h1&gt;Homeless Man's Infinite Scroll&lt;/h1&gt;
+<pre><body ng-controller="exampleController"&gt;
+    <h1&gt;Homeless Man's Infinite Scroll</h1&gt;
     
-    &lt;div in-view-container class="container"&gt;
-      &lt;div ng-repeat="item in items | limitTo: limit"&gt;
-        &lt;input type="text" ng-model="item.value" /&gt;&lt;/textbox&gt;
-      &lt;/div&gt;
-      &lt;span in-view="increaseLimit($inview)" ng-show="limit &lt; items.length"&gt;Loading more...&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;</pre>
+    <div in-view-container class="container"&gt;
+      <div ng-repeat="item in items | limitTo: limit"&gt;
+        <input type="text" ng-model="item.value" /&gt;</textbox&gt;
+      </div&gt;
+      <span in-view="increaseLimit($inview)" ng-show="limit < items.length"&gt;Loading more...</span&gt;
+    </div&gt;
+  </body&gt;</pre>
 
 So on initial load 0-19 will be displayed. The span positioned outside the repeater is the element we will use to trigger expanding the limit (causing more items to be rendered / bound). This will pass the value $inview to our expansion method, and when true the limit will be increased, causing more items to be rendered. Once the limit is greater than or equal to the number of items we have, there is no need to show the trigger element anymore.
 

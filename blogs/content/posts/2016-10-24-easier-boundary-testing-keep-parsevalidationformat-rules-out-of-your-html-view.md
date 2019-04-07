@@ -122,7 +122,7 @@ Here is what one of those &#8220;type&#8221; objects looks like as a literal:
 		}
 	},
 	tryValidate: function(value, options){
-		if(options.min != undefined && value &lt; options.min){
+		if(options.min != undefined && value < options.min){
 			return inputResult.failedInput("'" + value + "' is less than the supported minimum of '" + options.min + "'");
 		}
 

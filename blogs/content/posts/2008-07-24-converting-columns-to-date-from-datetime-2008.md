@@ -88,8 +88,8 @@ Here is the plan
 | |--Compute Scalar(DEFINE:(([Expr1007],[Expr1008],[Expr1006])=GetRangeThroughConvert('2008-01-03','2008-01-03',(62))))
 | | |--Constant Scan
 | |--Index Seek(OBJECT:([tempdb].[dbo].[TestDatetimePerf].[ix_Date]), 
---SEEK:([tempdb].[dbo].[TestDatetimePerf].[SomeCol] &gt; [Expr1007] 
---AND [tempdb].[dbo].[TestDatetimePerf].[SomeCol] &lt; [Expr1008]), 
+--SEEK:([tempdb].[dbo].[TestDatetimePerf].[SomeCol] > [Expr1007] 
+--AND [tempdb].[dbo].[TestDatetimePerf].[SomeCol] < [Expr1008]), 
 --WHERE:(CONVERT(date,[tempdb].[dbo].[TestDatetimePerf].[SomeCol],0)='2008-01-03') ORDERED FORWARD)
 |--RID Lookup(OBJECT:([tempdb].[dbo].[TestDatetimePerf]), SEEK:([Bmk1000]=[Bmk1000]) LOOKUP ORDERED FORWARD)</pre>
 

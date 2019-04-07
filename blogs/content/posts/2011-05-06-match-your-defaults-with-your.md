@@ -325,14 +325,14 @@ Here is the 2000 version by using showcontig
 <pre>DBCC SHOWCONTIG scanning 'TestFrag' table...
 Table: 'TestFrag' (933578364); index ID: 1, database ID: 14
 TABLE level scan performed.
-- Pages Scanned................................: &lt;strong&gt;5883&lt;/strong&gt;
+- Pages Scanned................................: <strong&gt;5883</strong&gt;
 - Extents Scanned..............................: 738
 - Extent Switches..............................: 5879
 - Avg. Pages per Extent........................: 8.0
 - Scan Density [Best Count:Actual Count].......: 12.52% [736:5880]
-- Logical Scan Fragmentation ..................: &lt;strong&gt;99.42%&lt;/strong&gt;
+- Logical Scan Fragmentation ..................: <strong&gt;99.42%</strong&gt;
 - Extent Scan Fragmentation ...................: 0.27%
-- Avg. Bytes Free per Page.....................: &lt;strong&gt;3234.5&lt;/strong&gt;
+- Avg. Bytes Free per Page.....................: <strong&gt;3234.5</strong&gt;
 - Avg. Page Density (full).....................: 60.04%
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 
@@ -340,14 +340,14 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC SHOWCONTIG scanning 'TestFrag2' table...
 Table: 'TestFrag2' (1205579333); index ID: 1, database ID: 14
 TABLE level scan performed.
-- Pages Scanned................................: &lt;strong&gt;3572&lt;/strong&gt;
+- Pages Scanned................................: <strong&gt;3572</strong&gt;
 - Extents Scanned..............................: 450
 - Extent Switches..............................: 449
 - Avg. Pages per Extent........................: 7.9
 - Scan Density [Best Count:Actual Count].......: 99.33% [447:450]
-- Logical Scan Fragmentation ..................: &lt;strong&gt;0.34%&lt;/strong&gt;
+- Logical Scan Fragmentation ..................: <strong&gt;0.34%</strong&gt;
 - Extent Scan Fragmentation ...................: 0.44%
-- Avg. Bytes Free per Page.....................: &lt;strong&gt;89.3&lt;/strong&gt;
+- Avg. Bytes Free per Page.....................: <strong&gt;89.3</strong&gt;
 - Avg. Page Density (full).....................: 98.90%
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.</pre>
 

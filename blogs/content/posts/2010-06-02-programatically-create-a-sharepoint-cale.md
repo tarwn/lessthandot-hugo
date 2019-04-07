@@ -51,19 +51,19 @@ and then we&#8217;ll create a function that builds an XML string ready to be pas
         listService.Credentials = System.Net.CredentialCache.DefaultCredentials
 
         ' Create the XML to be passed to the calendar
-        sBatch.Append("&lt;Method ID='1' Cmd='New'&gt;")
-        sBatch.Append("&lt;Field Name='Title'&gt;" & Title & "&lt;/Field&gt;")
+        sBatch.Append("<Method ID='1' Cmd='New'>")
+        sBatch.Append("<Field Name='Title'>" & Title & "</Field>")
         If FullDay = True Then
-            sBatch.Append("&lt;Field Name='EventDate'&gt;" & AddToDate.ToString("yyyy-MM-dd") & "&lt;/Field&gt;")
-            sBatch.Append("&lt;Field Name='EndDate'&gt;" & AddToDate.ToString("yyyy-MM-dd") & "&lt;/Field&gt;")
-            sBatch.Append("&lt;Field Name='fAllDayEvent'&gt;1&lt;/Field&gt;")
+            sBatch.Append("<Field Name='EventDate'>" & AddToDate.ToString("yyyy-MM-dd") & "</Field>")
+            sBatch.Append("<Field Name='EndDate'>" & AddToDate.ToString("yyyy-MM-dd") & "</Field>")
+            sBatch.Append("<Field Name='fAllDayEvent'>1</Field>")
         Else
-            sBatch.Append("&lt;Field Name='EventDate'&gt;" & AddToDate.ToString("yyyy-MM-ddTHH:mm:ssZ") & "&lt;/Field&gt;")
-            sBatch.Append("&lt;Field Name='EndDate'&gt;" & AddToDate.AddMinutes(LengthInMinutes).ToString("yyyy-MM-ddTHH:mm:ssZ") & "&lt;/Field&gt;")
-            sBatch.Append("&lt;Field Name='fAllDayEvent'&gt;0&lt;/Field&gt;")
+            sBatch.Append("<Field Name='EventDate'>" & AddToDate.ToString("yyyy-MM-ddTHH:mm:ssZ") & "</Field>")
+            sBatch.Append("<Field Name='EndDate'>" & AddToDate.AddMinutes(LengthInMinutes).ToString("yyyy-MM-ddTHH:mm:ssZ") & "</Field>")
+            sBatch.Append("<Field Name='fAllDayEvent'>0</Field>")
         End If
-        sBatch.Append("&lt;Field Name='Description'&gt;" & Description & "&lt;/Field&gt;")
-        sBatch.Append("&lt;/Method&gt;")
+        sBatch.Append("<Field Name='Description'>" & Description & "</Field>")
+        sBatch.Append("</Method>")
 
         ' Add the calendar XML to a batch
         Dim xmlDoc2 As New System.Xml.XmlDocument()

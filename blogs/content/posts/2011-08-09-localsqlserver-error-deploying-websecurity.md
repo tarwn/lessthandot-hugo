@@ -31,14 +31,14 @@ Today I managed to solve it based on an [archived forum post][1] I found through
 
 The solution is to add the following section to your web.config:
 
-<pre>&lt;!-- Added in an attempt to make simple security work --&gt;
-&lt;connectionStrings&gt;
-	&lt;remove name="LocalSqlServer" /&gt;
-	&lt;add name="LocalSqlServer" connectionString="Data Source=.App_DataMyJunk.sdf" providerName="System.Data.SqlServerCe.4.0" /&gt;
-&lt;/connectionStrings&gt;
-&lt;appSettings&gt;
-	&lt;add key="enableSimpleMembership" value="true" /&gt;
-&lt;/appSettings&gt;</pre>
+<pre><!-- Added in an attempt to make simple security work --&gt;
+<connectionStrings&gt;
+	<remove name="LocalSqlServer" /&gt;
+	<add name="LocalSqlServer" connectionString="Data Source=.App_DataMyJunk.sdf" providerName="System.Data.SqlServerCe.4.0" /&gt;
+</connectionStrings&gt;
+<appSettings&gt;
+	<add key="enableSimpleMembership" value="true" /&gt;
+</appSettings&gt;</pre>
 
 Basically what is happening is that my web host has a machine.config with a SQL Connection string called &#8220;LocalSqlServer&#8221; (it&#8217;s created by default by the .Net framework). For some reason when we use anything Membership related, it attempts to access the configured connection string for Membership, even though WebSecurity is provided it&#8217;s own connection string on initialization.
 

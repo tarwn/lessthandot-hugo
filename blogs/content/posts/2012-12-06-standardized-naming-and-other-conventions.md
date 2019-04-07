@@ -92,15 +92,15 @@ The basic stored procedure template looks like this
 IF EXISTS (
   SELECT * 
     FROM INFORMATION_SCHEMA.ROUTINES 
-   WHERE SPECIFIC_SCHEMA = N'&lt;Schema_Name, sysname, Schema_Name&gt;'
-     AND SPECIFIC_NAME = N'&lt;Procedure_Name, sysname, Procedure_Name&gt;' 
+   WHERE SPECIFIC_SCHEMA = N'<Schema_Name, sysname, Schema_Name&gt;'
+     AND SPECIFIC_NAME = N'<Procedure_Name, sysname, Procedure_Name&gt;' 
 )
-   DROP PROCEDURE &lt;Schema_Name, sysname, Schema_Name&gt;.&lt;Procedure_Name, sysname, Procedure_Name&gt;
+   DROP PROCEDURE <Schema_Name, sysname, Schema_Name&gt;.<Procedure_Name, sysname, Procedure_Name&gt;
 GO
 
-CREATE PROCEDURE &lt;Schema_Name, sysname, Schema_Name&gt;.&lt;Procedure_Name, sysname, Procedure_Name&gt;
-	&lt;@param1, sysname, @p1&gt; &lt;datatype_for_param1, , int&gt; = &lt;default_value_for_param1, , 0&gt;, 
-	&lt;@param2, sysname, @p2&gt; &lt;datatype_for_param2, , int&gt; = &lt;default_value_for_param2, , 0&gt;
+CREATE PROCEDURE <Schema_Name, sysname, Schema_Name&gt;.<Procedure_Name, sysname, Procedure_Name&gt;
+	<@param1, sysname, @p1&gt; <datatype_for_param1, , int&gt; = <default_value_for_param1, , 0&gt;, 
+	<@param2, sysname, @p2&gt; <datatype_for_param2, , int&gt; = <default_value_for_param2, , 0&gt;
 AS
 	SELECT @p1, @p2
 GO
@@ -108,7 +108,7 @@ GO
 -- =============================================
 -- Example to execute the stored procedure
 -- =============================================
-EXECUTE &lt;Schema_Name, sysname, Schema_Name&gt;.&lt;Procedure_Name, sysname, Procedure_Name&gt; &lt;value_for_param1, , 1&gt;, &lt;value_for_param2, , 2&gt;
+EXECUTE <Schema_Name, sysname, Schema_Name&gt;.<Procedure_Name, sysname, Procedure_Name&gt; <value_for_param1, , 1&gt;, <value_for_param2, , 2&gt;
 GO</pre>
 
 You can modify this template, give it to every developer and now you all have the same template. What can be done with templates can also be done with snippets, if you do Tools&#8211;>Code Snippets Manager, you can see all the snippets that are available, you can add your own snippets so that all developers will have the same snippets for comment tasks.

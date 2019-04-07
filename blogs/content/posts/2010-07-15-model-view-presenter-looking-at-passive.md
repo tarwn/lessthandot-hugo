@@ -123,9 +123,9 @@ For the purposes of the example project, my view has properties for Search Text,
             set { lblResultCount.Text = value.ToString(); }
         }
 
-        List&lt;Model.Entities.Product&gt; Presenter.Views.IProductSearchView.SearchResults {
+        List<Model.Entities.Product> Presenter.Views.IProductSearchView.SearchResults {
             set {
-                if (value != null && value.Count &gt; 0) {
+                if (value != null && value.Count > 0) {
                     rptProducts.DataSource = value;
                     rptProducts.DataBind();
                 }
@@ -150,9 +150,9 @@ As the presenter populates properties in the view, the information is automatica
         }
 
         public void ExecuteProductSearch() {
-            List&lt;Model.Entities.Product&gt; results;
+            List<Model.Entities.Product> results;
             results = this._model.SearchProduct(this._view.SearchText);
-            if (results.Count &gt; 0) {
+            if (results.Count > 0) {
                 this._view.ResultCount = results.Count;
                 this._view.DisplayResults = true;
                 this._view.SearchResults = results;

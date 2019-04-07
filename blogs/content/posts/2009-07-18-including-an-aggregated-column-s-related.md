@@ -139,7 +139,7 @@ Another variation of this query is (suggested by Alejandro Mesa (Hunchback) in t
 FROM
    Sales.Customer C
    INNER JOIN Sales.SalesOrderHeader O1 ON C.CustomerID = O1.CustomerID 
-WHERE not exists (select 1 from Sales.SalesOrderHeader O2 where O2.CustomerID = O1.CustomerID and O1.OrderDate &lt; O2.OrderDate)</pre>
+WHERE not exists (select 1 from Sales.SalesOrderHeader O2 where O2.CustomerID = O1.CustomerID and O1.OrderDate < O2.OrderDate)</pre>
 
 Note, that the first variation of this query may return duplicate rows, but the second will always return only one row per group (with the latest OrderID).
 
@@ -152,8 +152,8 @@ The third variation of this query with NOT EXISTS will produce duplicates in cas
 FROM
    Sales.Customer C
    INNER JOIN Sales.SalesOrderHeader O1 ON C.CustomerID = O1.CustomerID 
-WHERE not exists (select 1 from Sales.SalesOrderHeader O2 where O2.CustomerID = O1.CustomerID and (O1.OrderDate &lt; O2.OrderDate OR 
-(O1.OrderDate = O2.OrderDate and O1.OrderID &lt; O2.OrderID)))</pre></p> 
+WHERE not exists (select 1 from Sales.SalesOrderHeader O2 where O2.CustomerID = O1.CustomerID and (O1.OrderDate < O2.OrderDate OR 
+(O1.OrderDate = O2.OrderDate and O1.OrderID < O2.OrderID)))</pre></p> 
 
 ### 2. Derived Table</p> 
 

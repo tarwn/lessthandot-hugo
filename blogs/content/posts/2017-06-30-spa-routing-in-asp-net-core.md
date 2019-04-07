@@ -39,7 +39,7 @@ In my Program.cs file, I renamed wwwroot to Assets:
         .UseContentRoot(Directory.GetCurrentDirectory())
         .UseWebRoot("Assets")
         .UseIISIntegration()
-        .UseStartup&lt;Startup&gt;()
+        .UseStartup<Startup&gt;()
         .UseApplicationInsights()
         .Build();
 
@@ -64,7 +64,7 @@ Then in my Startup.cs file I added configuration to load &#8220;index.html&#8221
     // index.html is the default if a file isn't asked for
     app.UseDefaultFiles(new DefaultFilesOptions()
     {
-        DefaultFileNames = new List&lt;string&gt;() { "index.html" },
+        DefaultFileNames = new List<string&gt;() { "index.html" },
         FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Assets")),
         RequestPath = new PathString("")
     });

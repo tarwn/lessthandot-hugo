@@ -42,20 +42,20 @@ In the [previous post][8], we had sampleApp and sampleServices modules that we m
 
 Relevant sections of [SpecRunner.html][6]
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-    &lt;!-- ... --&gt;
+<pre><html&gt;
+<head&gt;
+    <!-- ... --&gt;
 
-    &lt;!-- Angular files libraries --&gt;
-    &lt;script src="Angular/js/lib/angular-1.0.8.min.js"&gt;&lt;/script&gt;
-    &lt;script src="Angular/js/lib/angular-mocks.js"&gt;&lt;/script&gt;
-    &lt;!-- Angular source files --&gt;
-    &lt;script src="Angular/js/UnitTesting/sampleApp.js"&gt;&lt;/script&gt;
-    &lt;script src="Angular/js/UnitTesting/sampleServices.js"&gt;&lt;/script&gt;
-    &lt;!-- Angular specs --&gt;
-    &lt;script src="Angular/UnitTestingSpecs.js"&gt;&lt;/script&gt;
+    <!-- Angular files libraries --&gt;
+    <script src="Angular/js/lib/angular-1.0.8.min.js"&gt;</script&gt;
+    <script src="Angular/js/lib/angular-mocks.js"&gt;</script&gt;
+    <!-- Angular source files --&gt;
+    <script src="Angular/js/UnitTesting/sampleApp.js"&gt;</script&gt;
+    <script src="Angular/js/UnitTesting/sampleServices.js"&gt;</script&gt;
+    <!-- Angular specs --&gt;
+    <script src="Angular/UnitTestingSpecs.js"&gt;</script&gt;
 
-    &lt;!-- ... --&gt;</pre>
+    <!-- ... --&gt;</pre>
 
 The specs file then handles mocking the service for the controller and defines the tests I want to run:
 
@@ -113,22 +113,22 @@ In the [previous post][8], we had sampleApp/ModuleDIModel and sampleServices/Lis
 
 Relevant sections of [SpecRunner.html][6]
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-    &lt;!-- ... --&gt;
+<pre><html&gt;
+<head&gt;
+    <!-- ... --&gt;
 
-    &lt;!-- Knockout + RequireJS files --&gt;
-    &lt;script src="Knockout/js/lib/knockout-2.3.0.min.js"&gt;&lt;/script&gt;
-    &lt;script src="Knockout/js/lib/require-2.1.8.min.js"&gt;&lt;/script&gt;
-    &lt;!-- Knockout specs --&gt;    
-    &lt;script src="Knockout/UnitTestingSpecs.js"&gt;&lt;/script&gt;
+    <!-- Knockout + RequireJS files --&gt;
+    <script src="Knockout/js/lib/knockout-2.3.0.min.js"&gt;</script&gt;
+    <script src="Knockout/js/lib/require-2.1.8.min.js"&gt;</script&gt;
+    <!-- Knockout specs --&gt;    
+    <script src="Knockout/UnitTestingSpecs.js"&gt;</script&gt;
 
-    &lt;!-- ... --&gt;
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    <!-- ... --&gt;
+  </script&gt;
+</head&gt;
+<body&gt;
+</body&gt;
+</html&gt;</pre>
 
 Like the AngularJS example, the specs file is responsible for supplying the mocks and defining the tests:
 

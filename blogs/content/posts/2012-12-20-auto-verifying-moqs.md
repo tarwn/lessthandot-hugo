@@ -31,11 +31,11 @@ namespace Project.Tests
 {
     public abstract class MockVerifyingTest
     {
-        readonly List&lt;Mock&gt; _trackedMocks = new List&lt;Mock&gt;();
+        readonly List<Mock&gt; _trackedMocks = new List<Mock&gt;();
 
-        protected Mock&lt;T&gt; GenerateTrackedMock&lt;T&gt;(MockBehavior mockBehavior = MockBehavior.Default) where T : class
+        protected Mock<T&gt; GenerateTrackedMock<T&gt;(MockBehavior mockBehavior = MockBehavior.Default) where T : class
         {
-            var mock = new Mock&lt;T&gt;(mockBehavior);
+            var mock = new Mock<T&gt;(mockBehavior);
             _trackedMocks.Add(mock);
             return mock;
         }
@@ -63,7 +63,7 @@ So now instead of something like this:
 <pre>[Test]
 public void ATest() 
 {
-    var foo = new Mock&lt;IFoo&gt;(MockBehavior.Strict);
+    var foo = new Mock<IFoo&gt;(MockBehavior.Strict);
 
     foo.Setup(f =&gt; f.GetSomething()).Returns(new Something());
 
@@ -81,7 +81,7 @@ I can have my fixture inherit from MockVerifyingTest and write it like this:
 <pre>[Test]
 public void ATest() 
 {
-    var foo = GenerateTrackedMock&lt;IFoo&gt;(MockBehavior.Strict);
+    var foo = GenerateTrackedMock<IFoo&gt;(MockBehavior.Strict);
 
     foo.Setup(f =&gt; f.GetSomething()).Returns(new Something());
 

@@ -61,7 +61,7 @@ Our global connections for the package will be one flat file connection named, â
   
 
 
-<pre>header &lt;grab me&gt; string
+<pre>header <grab me> string
 test
 test
 test
@@ -121,12 +121,12 @@ Public Class ScriptMain
     Inherits UserComponent
 
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
-        If Regex.IsMatch(Row.Column0, "&lt;[w]{4}s[w]{2}&gt;") Then
+        If Regex.IsMatch(Row.Column0, "<[w]{4}s[w]{2}>") Then
             Dim mismatch As Match
-            Dim pattern As New Regex("&lt;[w]{4}s[w]{2}&gt;")
+            Dim pattern As New Regex("<[w]{4}s[w]{2}>")
             mismatch = pattern.Match(Row.Column0)
 
-            If mismatch.Length &gt; 0 Then
+            If mismatch.Length > 0 Then
                 Dim var As IDTSVariables90
                 Me.VariableDispenser.LockOneForWrite("global", var)
                 var("global").Value = mismatch.Value

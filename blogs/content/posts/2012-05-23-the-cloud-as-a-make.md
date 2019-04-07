@@ -124,9 +124,9 @@ public void StoreFinishedItem(FullItem item) { /* More Code */ }</pre>
 
 And a pair of methods for visibility:
 
-<pre>public IEnumerable&lt;ItemBase&gt; GetUnprocessedList() { /* More Code */ }
+<pre>public IEnumerable<ItemBase&gt; GetUnprocessedList() { /* More Code */ }
 
-public IEnumerable&lt;ItemBase&gt; GetProcessedList() { /* More Code */ }</pre>
+public IEnumerable<ItemBase&gt; GetProcessedList() { /* More Code */ }</pre>
 
 Windows Azure offers a number of storage options, each with their own benefits and constraints. For this process I decided to use [table storage][1] to track the summary level information about each file processing job, [blob storage][2] to store the actual file, and the [queue service][3] for managing task execution. 
 
@@ -154,11 +154,11 @@ Windows Azure offers a number of storage options, each with their own benefits a
 		_table.Create(item.AsSummary());
 	}
 
-	public IEnumerable&lt;ItemBase&gt; GetUnprocessedList() {
+	public IEnumerable<ItemBase&gt; GetUnprocessedList() {
 		return _table.GetUnprocessedItems().ToList();
 	}
 
-	public IEnumerable&lt;ItemBase&gt; GetProcessedList() {
+	public IEnumerable<ItemBase&gt; GetProcessedList() {
 		// ?
 		return _table.GetProcessedItems().ToList();
 	}
@@ -189,45 +189,45 @@ With all of the pieces defined, we use a pair of configurations to tell Azure ho
 
 The first configuration defines the services we intend to package and deploy as well as the instance size and any endpoints:
 
-<pre>&lt;ServiceDefinition name="CloudFileProcessorService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition"&gt;
-  &lt;WebRole name="Processor_WebRole" vmsize="Small"&gt;
-    &lt;Sites&gt;
-      &lt;Site name="Web"&gt;
-        &lt;Bindings&gt;
-          &lt;Binding name="Endpoint1" endpointName="Endpoint1" /&gt;
-        &lt;/Bindings&gt;
-      &lt;/Site&gt;
-    &lt;/Sites&gt;
-    &lt;Endpoints&gt;
-      &lt;InputEndpoint name="Endpoint1" protocol="http" port="80" /&gt;
-    &lt;/Endpoints&gt;
-    &lt;Imports&gt;
-      &lt;Import moduleName="Diagnostics" /&gt;
-    &lt;/Imports&gt;
-  &lt;/WebRole&gt;
-  &lt;WorkerRole name="Processor_WorkerRole" vmsize="Small"&gt;
-    &lt;Imports&gt;
-      &lt;Import moduleName="Diagnostics" /&gt;
-    &lt;/Imports&gt;
-  &lt;/WorkerRole&gt;
-&lt;/ServiceDefinition&gt;</pre>
+<pre><ServiceDefinition name="CloudFileProcessorService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition"&gt;
+  <WebRole name="Processor_WebRole" vmsize="Small"&gt;
+    <Sites&gt;
+      <Site name="Web"&gt;
+        <Bindings&gt;
+          <Binding name="Endpoint1" endpointName="Endpoint1" /&gt;
+        </Bindings&gt;
+      </Site&gt;
+    </Sites&gt;
+    <Endpoints&gt;
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" /&gt;
+    </Endpoints&gt;
+    <Imports&gt;
+      <Import moduleName="Diagnostics" /&gt;
+    </Imports&gt;
+  </WebRole&gt;
+  <WorkerRole name="Processor_WorkerRole" vmsize="Small"&gt;
+    <Imports&gt;
+      <Import moduleName="Diagnostics" /&gt;
+    </Imports&gt;
+  </WorkerRole&gt;
+</ServiceDefinition&gt;</pre>
 
 The second configuration is applied when we deploy the instances above and tells Azure that I want to deploy 1 Processor\_WebRole instance and 2 Processor\_WorkerRole instances:
 
-<pre>&lt;ServiceConfiguration serviceName="CloudFileProcessorService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*"&gt;
-  &lt;Role name="Processor_WebRole"&gt;
-    &lt;Instances count="1" /&gt;
-    &lt;ConfigurationSettings&gt;
-      &lt;Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" /&gt;
-    &lt;/ConfigurationSettings&gt;
-  &lt;/Role&gt;
-  &lt;Role name="Processor_WorkerRole"&gt;
-    &lt;Instances count="2" /&gt;
-    &lt;ConfigurationSettings&gt;
-      &lt;Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" /&gt;
-    &lt;/ConfigurationSettings&gt;
-  &lt;/Role&gt;
-&lt;/ServiceConfiguration&gt;</pre>
+<pre><ServiceConfiguration serviceName="CloudFileProcessorService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*"&gt;
+  <Role name="Processor_WebRole"&gt;
+    <Instances count="1" /&gt;
+    <ConfigurationSettings&gt;
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" /&gt;
+    </ConfigurationSettings&gt;
+  </Role&gt;
+  <Role name="Processor_WorkerRole"&gt;
+    <Instances count="2" /&gt;
+    <ConfigurationSettings&gt;
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" /&gt;
+    </ConfigurationSettings&gt;
+  </Role&gt;
+</ServiceConfiguration&gt;</pre>
 
 Note that I&#8217;m telling it to use the local development storage, which is supported by a local storage emulator. In a production configuration I would enter the service location and a generated token.
 

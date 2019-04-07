@@ -47,7 +47,7 @@ The colors of the matrix are assigned according to the values in the source quer
 
 Now we can create one single expression for all of the cells using the **Me** placeholder.
 
-<pre>=iif(Me.Value &lt;= Fields!BottomEnd.Value,"#CD2027",iif(Me.Value &gt;= Fields!MiddleStart.Value And Me.Value &lt;= Fields!MiddleEnd.Value,"#DEDEDF","#9FC9EB"))</pre>
+<pre>=iif(Me.Value <= Fields!BottomEnd.Value,"#CD2027",iif(Me.Value &gt;= Fields!MiddleStart.Value And Me.Value <= Fields!MiddleEnd.Value,"#DEDEDF","#9FC9EB"))</pre>
 
 The hexadecimal values are the colors I extracted from the FiveThirtyEight tweet using a [color picker][10]. When we run the report we get our result:
 

@@ -20,7 +20,7 @@ categories:
 When setting up and designing a merge replication publication that will utilize join filters, indexing strategies can be vital to determining design issues in the setup.  Take the below query on the AdventureWorks database.
 
 <pre>SELECT 
-	&lt;columns&gt;
+	<columns&gt;
 FROM Person.Person
 JOIN Sales.SalesOrderHeader ON Person.BusinessEntityID = SalesOrderHeader.SalesPersonID
 JOIN Sales.SalesOrderDetail ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID]

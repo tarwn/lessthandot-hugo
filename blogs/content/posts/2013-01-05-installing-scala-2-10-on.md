@@ -125,7 +125,7 @@ Role is blogger
 
 Why don&#8217;t we add a simple loop to our code? Here is what needs to be added
 
-<pre>for (i &lt;- 1 to 3) {
+<pre>for (i <- 1 to 3) {
 		print(i + ",")
 	}
 	println(" Testing 1,2,3.....")</pre>
@@ -141,7 +141,7 @@ Here is the whole code
 	println("Site is " + site)
 	println("Role is " + role)
 	
-	for (i &lt;- 1 to 3) {
+	for (i <- 1 to 3) {
 		print(i + ",")
 	}
 	println(" Testing 1,2,3.....")

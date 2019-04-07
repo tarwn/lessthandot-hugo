@@ -76,7 +76,7 @@ INSERT INTO sp_tablepages
 EXEC ('DBCC IND (test, tblNumbers, 1)');  
 
 --delete the pages of non-leaf levels
-delete from sp_tablepages where IndexLevel &lt;&gt; 0 or IndexLevel is null
+delete from sp_tablepages where IndexLevel <&gt; 0 or IndexLevel is null
 
 
 ;with cte as
@@ -85,7 +85,7 @@ delete from sp_tablepages where IndexLevel &lt;&gt; 0 or IndexLevel is null
 )
 select S.PagepID as ThisFragmentEndPage,SN.PagepID as NextFragmentBeginPage
 from cte S
-inner join cte  SN on SN.ID  = S.ID + 1 and SN.PagePID &lt;&gt; S.PagePID + 1</pre>
+inner join cte  SN on SN.ID  = S.ID + 1 and SN.PagePID <&gt; S.PagePID + 1</pre>
 
 The query might not give the exact count of fragments in the table. In my tests it returned every time 1 or 2 less fragments(probably i am missing something else). This will give the Ending Page Number of the current fragment and First Page Number of Next Fragment. If you look at the values of columns &#8220;ThisFragmentEndPage&#8221;,&#8221;NextFragmentBeginPage&#8221;, for the first few rows they differ by more than 1 page, and for remaining rows, there is exactly one page difference. Interesting fact is that missing one page is actually allocated to table. You can check it in sp_tablepages table. But it is assigned to different Level. 
 

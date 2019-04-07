@@ -42,7 +42,7 @@ The singleton can be setup with any implementation of an ILogProvider. It provid
 		_logProvider = logProvider;
 	}
 
-	public void LogMessage(Dictionary&lt;string, string&gt; message, Action&lt;Result&gt; callback) {
+	public void LogMessage(Dictionary<string, string&gt; message, Action<Result&gt; callback) {
 		_logProvider.Log(message, callback);
 	}
 
@@ -59,11 +59,11 @@ The singleton can be setup with any implementation of an ILogProvider. It provid
 		}
 	}
 
-	public static void Log(Dictionary&lt;string, string&gt; message, Action&lt;Result&gt; callback) {
+	public static void Log(Dictionary<string, string&gt; message, Action<Result&gt; callback) {
 		GetDefaultLogger().LogMessage(message, callback);
 	}
 
-	public static LoggerWithElapsedTime CaptureElapsedTime(Dictionary&lt;System.String, System.String&gt; message, Action&lt;Result&gt; callback) {
+	public static LoggerWithElapsedTime CaptureElapsedTime(Dictionary<System.String, System.String&gt; message, Action<Result&gt; callback) {
 		return new LoggerWithElapsedTime(GetDefaultLogger(), message, callback);
 	}
 }</pre>
@@ -76,23 +76,23 @@ To support the ILogProvider implementation, I created an [HttpJsonPost class][1]
 
 <pre>public class HttpJsonPost {
 
-	Dictionary&lt;string,string&gt; _message;
+	Dictionary<string,string&gt; _message;
 	NetworkCredential _credentials;
 	bool _useJson;
 
-	public HttpJsonPost(Dictionary&lt;string, string&gt; message, NetworkCredential credentials = null, bool useJson = true) { /* ... */ }
+	public HttpJsonPost(Dictionary<string, string&gt; message, NetworkCredential credentials = null, bool useJson = true) { /* ... */ }
 
 	private HttpWebRequest InitializeRequest(string url, string method) { /* ... */ }
 
-	public void Send(string url, string method, Action&lt;Result&gt; callback, bool processResponse = true) { /* ... */ }
+	public void Send(string url, string method, Action<Result&gt; callback, bool processResponse = true) { /* ... */ }
 
-	public void SendAsync(string url, string method, Action&lt;Result&gt; callback, bool processResponse = true) { /* ... */ }
+	public void SendAsync(string url, string method, Action<Result&gt; callback, bool processResponse = true) { /* ... */ }
 
 	private void GetRequestStream(IAsyncResult result) { /* ... */ }
 
 	private void GetResponseStream(IAsyncResult result) { /* ... */ }
 
-	private void ProcessResponse(Func&lt;WebResponse&gt; getResponse, Action&lt;Result&gt; callback) { /* ... */ }
+	private void ProcessResponse(Func<WebResponse&gt; getResponse, Action<Result&gt; callback) { /* ... */ }
 
 	private void WriteMessage(Stream stream) { /* ... */ }
 }</pre>
@@ -114,18 +114,18 @@ The sample website contains very little code that I added. The majority of the c
 
 		ILogProvider provider = GetProviderFromSettings();
 		Logger.SetDefaultLogger(provider);
-		Logger.Log(new Dictionary&lt;string, string&gt;() { { "Type", "ApplicationStartup" }, { "Time", DateTime.UtcNow.ToString() } }, null);
+		Logger.Log(new Dictionary<string, string&gt;() { { "Type", "ApplicationStartup" }, { "Time", DateTime.UtcNow.ToString() } }, null);
 	}
 
 	protected void Application_BeginRequest() {
-		Logger.Log(new Dictionary&lt;string, string&gt;() { { "Type", "ApplicationRequest" }, { "UserAgent", Request.UserAgent }, { "Time", DateTime.UtcNow.ToString() } }, null);
+		Logger.Log(new Dictionary<string, string&gt;() { { "Type", "ApplicationRequest" }, { "UserAgent", Request.UserAgent }, { "Time", DateTime.UtcNow.ToString() } }, null);
 	}
 
 	protected void Application_Error(Object sender, System.EventArgs e) {
 		System.Web.HttpContext context = HttpContext.Current;
 		System.Exception exc = Context.Server.GetLastError();
 
-		Logger.Log(new Dictionary&lt;string, string&gt;() { { "Type", "ApplicationError" }, { "Exception", exc.ToString() }, { "Time", DateTime.UtcNow.ToString() } }, null);
+		Logger.Log(new Dictionary<string, string&gt;() { { "Type", "ApplicationError" }, { "Exception", exc.ToString() }, { "Time", DateTime.UtcNow.ToString() } }, null);
 	}
 
 	protected ILogProvider GetProviderFromSettings() {
@@ -161,13 +161,13 @@ Elsewhere in our application we can use those same one line calls to pass inform
 	}
 
 	public ActionResult ShortOperation() {
-		using (var log = Logging.Logger.CaptureElapsedTime(new Dictionary&lt;string, string&gt; { { "Type", "SiteHit" }, { "Area", "HomeController" }, { "Method", "ShortOperation" } }, null)) {
+		using (var log = Logging.Logger.CaptureElapsedTime(new Dictionary<string, string&gt; { { "Type", "SiteHit" }, { "Area", "HomeController" }, { "Method", "ShortOperation" } }, null)) {
 			return View("Index");
 		}
 	}
 
 	public ActionResult LongOperation() {
-		using (var log = Logging.Logger.CaptureElapsedTime(new Dictionary&lt;string, string&gt; { { "Type", "SiteHit" }, { "Area", "HomeController" }, { "Method", "LongOperation" } }, null)) {
+		using (var log = Logging.Logger.CaptureElapsedTime(new Dictionary<string, string&gt; { { "Type", "SiteHit" }, { "Area", "HomeController" }, { "Method", "LongOperation" } }, null)) {
 			Thread.Sleep((int)(3000 * new Random().NextDouble()));
 			return View("Index");
 		}

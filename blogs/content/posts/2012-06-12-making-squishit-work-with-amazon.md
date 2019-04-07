@@ -160,8 +160,8 @@ The only things we&#8217;ll need to implement this method are an initialized S3 
 <pre>[Test]
 public void Render_Uploads_If_File_Doesnt_Exist()
 {
-    var s3client = new Mock&lt;AmazonS3&gt;();
-    var keyBuilder = new Mock&lt;IKeyBuilder&gt;();
+    var s3client = new Mock<AmazonS3&gt;();
+    var keyBuilder = new Mock<IKeyBuilder&gt;();
 
     var key = "key";
     var bucket = "bucket";
@@ -170,7 +170,7 @@ public void Render_Uploads_If_File_Doesnt_Exist()
 
     keyBuilder.Setup(kb =&gt; kb.GetKeyFor(path)).Returns(key);
 
-    s3client.Setup(c =&gt; c.GetObjectMetadata(It.Is&lt;GetObjectMetadataRequest&gt;(gomr =&gt; gomr.BucketName == bucket && gomr.Key == key))).
+    s3client.Setup(c =&gt; c.GetObjectMetadata(It.Is<GetObjectMetadataRequest&gt;(gomr =&gt; gomr.BucketName == bucket && gomr.Key == key))).
         Throws(new AmazonS3Exception("", HttpStatusCode.NotFound));
 
     using(var renderer = S3Renderer.Create(s3client.Object)
@@ -180,7 +180,7 @@ public void Render_Uploads_If_File_Doesnt_Exist()
         renderer.Render(content, path);
     }
 
-    s3client.Verify(c =&gt; c.PutObject(It.Is&lt;PutObjectRequest&gt;(por =&gt; por.Key == key &&
+    s3client.Verify(c =&gt; c.PutObject(It.Is<PutObjectRequest&gt;(por =&gt; por.Key == key &&
                                                                         por.BucketName == bucket &&
                                                                         por.ContentBody == content &&
                                                                         por.CannedACL == S3CannedACL.NoACL)));
@@ -241,7 +241,7 @@ At this point we should be able to render our content directly to S3, but this d
 <pre>[Test]
 public void Invalidate()
 {
-    var cloudfrontClient = new Mock&lt;AmazonCloudFront&gt;();
+    var cloudfrontClient = new Mock<AmazonCloudFront&gt;();
 
     var distributionId = Guid.NewGuid().ToString();
     var bucket = Guid.NewGuid().ToString();
@@ -264,7 +264,7 @@ public void Invalidate()
     var invalidator = new CloudFrontInvalidator(cloudfrontClient.Object);
     invalidator.InvalidateObject(bucket, key);
 
-    cloudfrontClient.Verify(cfc =&gt; cfc.PostInvalidation(It.Is&lt;PostInvalidationRequest&gt;(pir =&gt; pir.DistributionId == distributionId
+    cloudfrontClient.Verify(cfc =&gt; cfc.PostInvalidation(It.Is<PostInvalidationRequest&gt;(pir =&gt; pir.DistributionId == distributionId
         && pir.InvalidationBatch.Paths.Count == 1
         && pir.InvalidationBatch.Paths.First() == key)));
 }</pre>
@@ -289,13 +289,13 @@ The implementation is pretty straightforward, and will look very familiar to any
         {
             var invalidationRequest = new PostInvalidationRequest()
                 .WithDistribtionId(distId)
-                .WithInvalidationBatch(new InvalidationBatch(DateTime.Now.ToString(dateFormatWithMilliseconds), new List&lt;string&gt; { key }));
+                .WithInvalidationBatch(new InvalidationBatch(DateTime.Now.ToString(dateFormatWithMilliseconds), new List<string&gt; { key }));
 
             cloudFrontClient.PostInvalidation(invalidationRequest);
         }
     }
 
-    Dictionary&lt;string, string&gt; distributionNameAndIds;
+    Dictionary<string, string&gt; distributionNameAndIds;
 
     string GetDistributionIdFor(string bucketName)
     {

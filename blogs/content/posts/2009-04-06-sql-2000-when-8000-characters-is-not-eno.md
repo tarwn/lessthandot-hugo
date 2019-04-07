@@ -38,8 +38,8 @@ Here&#8217;s an example of putting more than 8000 characters into a column in an
    longdata text
 )
 
-INSERT #Table (longdata) VALUES ('data to be added to-&gt;')
-INSERT #Table (longdata) VALUES ('more data-&gt;')
+INSERT #Table (longdata) VALUES ('data to be added to->')
+INSERT #Table (longdata) VALUES ('more data->')
 
 DECLARE
    @id int,
@@ -48,10 +48,10 @@ DECLARE
    @textchunk varchar(8000)
 SET @id = 0
 WHILE 1 = 1 BEGIN
-   SELECT TOP 1 @id = id, @ptr = TextPtr(longdata) FROM #Table WHERE id &gt; @id ORDER BY id
+   SELECT TOP 1 @id = id, @ptr = TextPtr(longdata) FROM #Table WHERE id > @id ORDER BY id
    IF @@RowCount = 0 BREAK
    SET @chunknum = 1
-   WHILE @chunknum &lt;= 5 BEGIN
+   WHILE @chunknum <= 5 BEGIN
       SET @textchunk = Replicate(Char(96 + @chunknum), 8000)
       UPDATETEXT #Table.longdata @ptr NULL NULL @textchunk
       SET @chunknum = @chunknum + 1
@@ -67,7 +67,7 @@ Now you know the basics of handling more than 8000 characters in SQL 2000. But t
 
 • The 8000-character limitation does not apply to literal strings, just variables and rowsets. This means that with the DisplayText stored procedure above you can put in more than 8000 characters like so:
 
-<pre>EXEC DisplayText '&lt;more than 8000 characters here&gt;'</pre>
+<pre>EXEC DisplayText '<more than 8000 characters here>'</pre>
 
 This does not mean you can somehow exceed 8000 characters with a commonly-tried but mistaken method such as
 
@@ -95,7 +95,7 @@ While I can&#8217;t really recommend this method, if you are desperate and this 
 • SQL 2005 has a new &#8216;max&#8217; keyword for the length of the (n)var/char data types that allows variables to be as big as the (n)text datatype can be. You can do anything to them that you could with regular varchar types, but behind the scenes they function like the text data type with values less than 8000 characters in-row and values greater than 8000 characters stored in out-of-row pages.
 
 <pre>DECLARE @longdata varchar(max)
-SET @longdata = '&lt;more than 8000 characters here&gt;'</pre>
+SET @longdata = '<more than 8000 characters here>'</pre>
 
 Max here simply means that the data type can go up to the maximum storage size allowed, which is 2^31-1 bytes (minus 2 more bytes for presumably a length value). Note that you can&#8217;t specify varchar(16000) or some value over 8000. You only get between 1 and 8000, or the special identifier _max_.
 
@@ -118,46 +118,46 @@ DECLARE
 SET @ReturnCode = 0 
 
 EXEC @ReturnCode = SP_OACREATE 'CDO.Message', @CDOMessage OUT
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'CDO.Message', NULL, NULL) GOTO Err END
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'CDO.Message', NULL, NULL) GOTO Err END
 
 EXEC @ReturnCode = SP_OASETPROPERTY @CDOMessage, 'From', @From
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'From', 'CDO.Message', @From) GOTO Err END
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'From', 'CDO.Message', @From) GOTO Err END
 
 EXEC @ReturnCode = SP_OASETPROPERTY @CDOMessage, 'To', @To
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'To', 'CDO.Message', @To) GOTO Err END
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'To', 'CDO.Message', @To) GOTO Err END
 
 EXEC @ReturnCode = SP_OASETPROPERTY @CDOMessage, 'Subject', @Subject
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Subject', 'CDO.Message', @Subject) GOTO Err END
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Subject', 'CDO.Message', @Subject) GOTO Err END
 
 IF @TextBody IS NOT NULL BEGIN
    EXEC @ReturnCode = SP_OASETPROPERTY @CDOMessage, 'TextBody', @TextBody
-   IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'TextBody', 'CDO.Message', Convert(varchar(8000), @TextBody)) GOTO Err END
+   IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'TextBody', 'CDO.Message', Convert(varchar(8000), @TextBody)) GOTO Err END
 END
 
 IF @HtmlBody IS NOT NULL BEGIN
    EXEC @ReturnCode = SP_OASETPROPERTY @CDOMessage, 'HtmlBody', @HtmlBody
-   IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'HtmlBody', 'CDO.Message', Convert(varchar(8000), @HtmlBody)) GOTO Err END
+   IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'HtmlBody', 'CDO.Message', Convert(varchar(8000), @HtmlBody)) GOTO Err END
 END
 
 EXEC @ReturnCode = SP_OASETPROPERTY @CDOMessage, 'Configuration.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing").Value', '2'
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Configuration.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing").Value', 'CDO.Message', '2') GOTO Err END
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Configuration.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing").Value', 'CDO.Message', '2') GOTO Err END
 
 EXEC @ReturnCode = SP_OASETPROPERTY @CDOMessage, 'Configuration.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserver").Value', 'YourMailServerName'
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Configuration.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserver").Value', 'CDO.Message', 'YourMailServerName') GOTO Err END
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Configuration.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserver").Value', 'CDO.Message', 'YourMailServerName') GOTO Err END
 
 EXEC @ReturnCode = SP_OASETPROPERTY @CDOMessage, 'Configuration.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserverport").Value', '25'
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Configuration.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserverport").Value', 'CDO.Message', '25') GOTO Err END
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Configuration.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserverport").Value', 'CDO.Message', '25') GOTO Err END
 
 EXEC @ReturnCode = SP_OAMETHOD @CDOMessage, 'Configuration.Fields.Update'
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Configuration.Fields.Update', 'CDO.Message', NULL) GOTO Err END
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Configuration.Fields.Update', 'CDO.Message', NULL) GOTO Err END
 
 EXEC @ReturnCode = SP_OAMETHOD @CDOMessage, 'Send'
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Send', 'CDO.Message', NULL) GOTO Err END
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'Send', 'CDO.Message', NULL) GOTO Err END
 
 Err:
 SET @ReturnCode = 0
-IF @CDOMessage &lt;&gt; 0 EXEC @ReturnCode = SP_OADESTROY @CDOMessage
-IF @ReturnCode &lt;&gt; 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'CDO.Message', NULL, NULL) END</pre>
+IF @CDOMessage <> 0 EXEC @ReturnCode = SP_OADESTROY @CDOMessage
+IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'CDO.Message', NULL, NULL) END</pre>
 
 The error handling here after each SP\_OA SP call uses a custom function I wrote. I found it to be invaluable when debugging problems with OLE calls to various objects from SQL Server. You may either tear out this error handling, call the sp\_OAGetErrorInfo procedure yourself, or use mine, which is below (plus a couple of dependent functions that you may want to rewrite/modify/reimplement/stop using).
 
@@ -213,7 +213,7 @@ BEGIN
             UNION ALL SELECT 0x80040154, 'Class ''' + @Context + ''' not registered.'
             UNION ALL SELECT 0x800401F3, 'Invalid class string: OLE object ProgID/CLSID ''' + @Context + ''' is not registered on Server ''' + @@ServerName + '''. OLE automation servers need to be registered before they can be instantiated using sp_OACreate. This can be done using regsvr32.exe for inprocess (.dll) servers, or the /REGSERVER command-line switch for local (.exe) servers.'
             UNION ALL SELECT 0x8004275B, 'sp_OACreate - data type (' + @Context + ') or value ' + IsNull('(' + Convert(varchar(8000), @Value) + ')', '') + ' of parameter ''context'' is invalid. Valid context parameter values are 1, 4, and 5.'
-            UNION ALL SELECT 0x80042727, 'sp_OASetProperty - improper usage: parameters are ObjPointer int IN, PropertyName varchar IN, @setval &lt;any&gt; IN [, additional indexing IN params].'
+            UNION ALL SELECT 0x80042727, 'sp_OASetProperty - improper usage: parameters are ObjPointer int IN, PropertyName varchar IN, @setval <any> IN [, additional indexing IN params].'
             UNION ALL SELECT 0x80042731, 'Output values of type Object require output parameters of type int.'
             UNION ALL SELECT 0x80042732, 'Output values of type Object are not allowed in result sets. Use a variable for parameter ''returnvalue'' with the OUTPUT keyword in order to return a handle to an object.'
             UNION ALL SELECT 0x80042742, 'Traversal string:  Bad whitespace: Error parsing method or property specification string ''' + @Context + '.'''
@@ -235,9 +235,9 @@ BEGIN
       @HexChar tinyint
    SET @Pos = DataLength(@Number) * 2
    SET @Num = convert(decimal(38,0), @Number)
-   WHILE @Pos &gt; 0 BEGIN
+   WHILE @Pos > 0 BEGIN
       SET @HexChar = @Num - (Floor(@Num / Convert(decimal(38, 0), 16)) * Convert(decimal(38, 0), 16)) + 48
-      SET @Hex = Char(@HexChar + CASE WHEN @HexChar &gt;= 58 THEN 7 ELSE 0 END) + IsNull(@Hex, '')
+      SET @Hex = Char(@HexChar + CASE WHEN @HexChar >= 58 THEN 7 ELSE 0 END) + IsNull(@Hex, '')
       SET @Num = Floor(@Num / 16)
       SET @Pos = @Pos - 1
    END
@@ -255,7 +255,7 @@ END</pre>
 
 Here&#8217;s a sample execution of SendMail for you:
 
-<pre>EXEC SendMail 'emtucifor@example.com', 'emtucifor@example.com', 'This is a test email', @HTMLBody = '&lt;8000 characters here&gt;'</pre>
+<pre>EXEC SendMail 'emtucifor@example.com', 'emtucifor@example.com', 'This is a test email', @HTMLBody = '<8000 characters here>'</pre>
 
 If you are sending email to someone who uses Outlook, it helps to provide both TextBody and HTMLBody, because the TextBody is used in the pop-up preview window of the content, so if the person is present when the email arrives, the preview will work correctly.
 

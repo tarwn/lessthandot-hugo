@@ -170,7 +170,7 @@ INSERT INTO #testnulls VALUES (2)
 INSERT INTO #testnulls VALUES (null)
 
 select * from #testnulls
-where id &lt;&gt; 1</pre>
+where id <> 1</pre>
 
 The answer is one row, the reason for that is that a null is not equal to anything not even another null
 
