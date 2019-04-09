@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "LessThanDot Archive"
 theme = "lessthandot"
 
+disableKinds = ["RSS"]
+
 [taxonomies]
   author = "author"
   tag = "tags"
@@ -10,3 +12,4 @@ theme = "lessthandot"
 
 [params]
 googleAnalytics = ""
+
