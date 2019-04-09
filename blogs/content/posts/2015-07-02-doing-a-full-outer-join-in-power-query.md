@@ -19,15 +19,15 @@ tags:
 
 ---
 <p style="text-align: justify">
-  A while back a give a session at the <a href="http://www.element61.be/">element61 </a>Microsoft Business Analytics Day, a free event where the capabilities of  the Microsoft BI platform is demonstrated alongside client testimonials. I gave a session called &#8220;Drilling across Analysis Services cubes using Power Query&#8221;, which talked about how you can use Power Query to do a <em>drill across</em> analysis over multiple SSAS cubes. Drilling across combines facts from multiple fact tables through their conformed dimensions, something that is not possible if your data is split up against multiple cubes. I even wrote an article about it: <a href="http://www.element61.be/e/resourc-detail.asp?ResourceId=876">Drilling across Analysis Services cubes using Power Query</a>.
+  A while back a give a session at the <a href="http://www.element61.be/">element61 </a>Microsoft Business Analytics Day, a free event where the capabilities of  the Microsoft BI platform is demonstrated alongside client testimonials. I gave a session called “Drilling across Analysis Services cubes using Power Query”, which talked about how you can use Power Query to do a <em>drill across</em> analysis over multiple SSAS cubes. Drilling across combines facts from multiple fact tables through their conformed dimensions, something that is not possible if your data is split up against multiple cubes. I even wrote an article about it: <a href="http://www.element61.be/e/resourc-detail.asp?ResourceId=876">Drilling across Analysis Services cubes using Power Query</a>.
 </p>
 
 <p style="text-align: justify">
-  Basically the solution is to create a query for each fact table and then combine them using the Merge transformation in Power Query, which basically is a Left or Inner Join. At the end of the session, I got the question if it&#8217;s possible to do a Full Outer Join instead, to which my initial response was &#8220;Ehrmmm&#8230;&#8221;. It&#8217;s not possible through the user interface, so I gave the advice to create a query that contains the cross join of the dimensions you want to use, then left join all the fact tables against that query and at the end filter out any rows where all the facts are empty. This advice still stands for people who do not want to write a single line of code in Power Query. However, when reading Chris Webbs <a href="http://www.amazon.com/Power-Query-BI-Excel/dp/1430266910/ref=sr_1_1?s=books&ie=UTF8&qid=1435817503&sr=1-1">excellent book about Power Query</a> and more specifically the chapter about M, I realized there is a more elegant solution out there.
+  Basically the solution is to create a query for each fact table and then combine them using the Merge transformation in Power Query, which basically is a Left or Inner Join. At the end of the session, I got the question if it's possible to do a Full Outer Join instead, to which my initial response was “Ehrmmm…”. It's not possible through the user interface, so I gave the advice to create a query that contains the cross join of the dimensions you want to use, then left join all the fact tables against that query and at the end filter out any rows where all the facts are empty. This advice still stands for people who do not want to write a single line of code in Power Query. However, when reading Chris Webbs <a href="http://www.amazon.com/Power-Query-BI-Excel/dp/1430266910/ref=sr_1_1?s=books&ie=UTF8&qid=1435817503&sr=1-1">excellent book about Power Query</a> and more specifically the chapter about M, I realized there is a more elegant solution out there.
 </p>
 
 <p style="text-align: justify">
-  In this blog post, I&#8217;ll use the following data as a source:
+  In this blog post, I'll use the following data as a source:
 </p>
 
 <p style="text-align: justify">
@@ -98,5 +98,5 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Doing a Full Outer Join in Power Query is really straight forward and you don&#8217;t have to be an M guru to adapt the code.
+  Doing a Full Outer Join in Power Query is really straight forward and you don't have to be an M guru to adapt the code.
 </p>

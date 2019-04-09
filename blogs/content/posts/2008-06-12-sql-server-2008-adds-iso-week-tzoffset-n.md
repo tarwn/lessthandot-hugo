@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-I saw microsecond and nanosecond already in CTP5 but this is the first time I have seen ISO Week (ISO_WEEK) and Time Zone Offset(TZoffset), maybe I haven&#8217;t looked hard enough 🙂
+I saw microsecond and nanosecond already in CTP5 but this is the first time I have seen ISO Week (ISO_WEEK) and Time Zone Offset(TZoffset), maybe I haven't looked hard enough 🙂
 
 Here are the datepart and abbreviations you have to use for the 4 new oness 
 

@@ -22,11 +22,11 @@ tags:
 ---
 Do you benefit from compressed backups if your data is compressed already? This was a question that was asked recently; I thought that the question was interesting and decided to do some testing.
 
-Here is what we will do; we will create two databases with only one table. In one database we will use page level compression and in the other database we won&#8217;t use compression. After that we will backup each database twice, once with backup compression and once without backup compression. After that, we will do restore from these backups. After doing all these, we will find out if data compression makes backup compression faster. We will also find out if using backup compression on a database that uses data compression will result in a smaller backup file. At the bottom of this post you will see a table that has all these numbers in one spot.
+Here is what we will do; we will create two databases with only one table. In one database we will use page level compression and in the other database we won't use compression. After that we will backup each database twice, once with backup compression and once without backup compression. After that, we will do restore from these backups. After doing all these, we will find out if data compression makes backup compression faster. We will also find out if using backup compression on a database that uses data compression will result in a smaller backup file. At the bottom of this post you will see a table that has all these numbers in one spot.
 
 # Setup scripts
 
-Let&#8217;s get started, first we will create the database that will not use compression
+Let's get started, first we will create the database that will not use compression
 
 sql
 USE [master]
@@ -135,18 +135,18 @@ GO
 
 Here are the times that each backup took.
   
-<span class="MT_smaller"><em>Processed 11640 pages FOR DATABASE &#8216;TestCompressed&#8217;, FILE &#8216;TestCompressed_Data&#8217; ON FILE 1.<br /> Processed 2 pages FOR DATABASE &#8216;TestCompressed&#8217;, FILE &#8216;TestCompressed_Log&#8217; ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 11642 pages IN 5.483 seconds (16.587 MB/sec).</strong></p> 
+<span class="MT_smaller"><em>Processed 11640 pages FOR DATABASE &#8216;TestCompressed', FILE &#8216;TestCompressed_Data' ON FILE 1.<br /> Processed 2 pages FOR DATABASE &#8216;TestCompressed', FILE &#8216;TestCompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 11642 pages IN 5.483 seconds (16.587 MB/sec).</strong></p> 
 
 <p>
-  Processed 11640 pages FOR DATABASE &#8216;TestCompressed&#8217;, FILE &#8216;TestCompressed_Data&#8217; ON FILE 1.<br /> Processed 1 pages FOR DATABASE &#8216;TestCompressed&#8217;, FILE &#8216;TestCompressed_Log&#8217; ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 11641 pages IN 6.461 seconds (14.076 MB/sec).</strong>
+  Processed 11640 pages FOR DATABASE &#8216;TestCompressed', FILE &#8216;TestCompressed_Data' ON FILE 1.<br /> Processed 1 pages FOR DATABASE &#8216;TestCompressed', FILE &#8216;TestCompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 11641 pages IN 6.461 seconds (14.076 MB/sec).</strong>
 </p>
 
 <p>
-  Processed 25496 pages FOR DATABASE &#8216;TestUncompressed&#8217;, FILE &#8216;TestUncompressed_Data&#8217; ON FILE 1.<br /> Processed 2 pages FOR DATABASE &#8216;TestUncompressed&#8217;, FILE &#8216;TestUncompressed_Log&#8217; ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 25498 pages IN 9.167 seconds (21.729 MB/sec).</strong>
+  Processed 25496 pages FOR DATABASE &#8216;TestUncompressed', FILE &#8216;TestUncompressed_Data' ON FILE 1.<br /> Processed 2 pages FOR DATABASE &#8216;TestUncompressed', FILE &#8216;TestUncompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 25498 pages IN 9.167 seconds (21.729 MB/sec).</strong>
 </p>
 
 <p>
-  Processed 25496 pages FOR DATABASE &#8216;TestUncompressed&#8217;, FILE &#8216;TestUncompressed_Data&#8217; ON FILE 1.<br /> Processed 1 pages FOR DATABASE &#8216;TestUncompressed&#8217;, FILE &#8216;TestUncompressed_Log&#8217; ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 25497 pages IN 14.243 seconds (13.985 MB/sec).</strong><br /> </em></span>
+  Processed 25496 pages FOR DATABASE &#8216;TestUncompressed', FILE &#8216;TestUncompressed_Data' ON FILE 1.<br /> Processed 1 pages FOR DATABASE &#8216;TestUncompressed', FILE &#8216;TestUncompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 25497 pages IN 14.243 seconds (13.985 MB/sec).</strong><br /> </em></span>
 </p>
 
 <p>
@@ -167,7 +167,7 @@ Here are the times that each backup took.
   </h1>
   
   <p>
-    Now let&#8217;s do the restores.
+    Now let's do the restores.
   </p>
   
   <pre lang="tsql">USE master 

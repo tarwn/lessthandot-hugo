@@ -49,7 +49,7 @@ Once we have a plan, we need to be able to execute it. Having tools to help us e
     Jes Borland (<a href="http://jesborland.wordpress.com/" title="Jes Borland's blog">blog</a> | <a href="http://twitter.com/grrl_geek" title="Jes Borland on Twitter">twitter</a>) helps track her progress by reporting a <a href="http://jesborland.wordpress.com/2010/07/08/2010-quarter-2-goal-review/" title="2010 Quarter 2 Goal Review by Jes Borland">Quarterly Status</a> to her friends and the wider community
   </li>
   <li>
-    And <a href="http://www.openforum.com/idea-hub/topics/lifestyle/article/80-ways-to-steal-valuable-minutes-for-your-work-day-glen-stansberry" title="Read 80 Ways to Steal Valuable Minutes for Your Work Day">American Express&#8217;s OPEN Forum </a> has a number of ideas on where we can find time to execute
+    And <a href="http://www.openforum.com/idea-hub/topics/lifestyle/article/80-ways-to-steal-valuable-minutes-for-your-work-day-glen-stansberry" title="Read 80 Ways to Steal Valuable Minutes for Your Work Day">American Express's OPEN Forum </a> has a number of ideas on where we can find time to execute
   </li>
 </ul>
 
@@ -57,11 +57,11 @@ Once we have a plan, we need to be able to execute it. Having tools to help us e
 
 Not all development costs money. My own plan includes a certain amount of blog writing (free), reading a certain number of articles each week (free), an ongoing effort to keep up to date with webinars and webcasts (free), and attendance (and beginning to speak) at user groups and events (the free kind).
 
-I can&#8217;t afford Tech-Ed or the PASS Summit, but I can afford:
+I can't afford Tech-Ed or the PASS Summit, but I can afford:
 
 <ul style="margin: 1em 2em;">
   <li>
-    Watching the <a href="http://www.msteched.com/" title="Watch recorded Tech-Ed sessions">recorded Tech-Ed sessions</a> for free at MSDN (I&#8217;ve had over <a href="http://delicious.com/tarwn/tech-ed" title="Eli's Tech-Ed Delicious bookmarks">11 hours</a> of free training so far)
+    Watching the <a href="http://www.msteched.com/" title="Watch recorded Tech-Ed sessions">recorded Tech-Ed sessions</a> for free at MSDN (I've had over <a href="http://delicious.com/tarwn/tech-ed" title="Eli's Tech-Ed Delicious bookmarks">11 hours</a> of free training so far)
   </li>
   <li>
     Watching the <a href="http://www.sqlpass.org/LearningCenter/SummitOnDemand/Summit2008.aspx" title="2008 PASS Summmit recordings">2008 PASS Summit recordings</a> for free (requires login)
@@ -71,11 +71,11 @@ I can&#8217;t afford Tech-Ed or the PASS Summit, but I can afford:
   </li>
 </ul>
 
-Plus there are events like [SQLSaturday][1], [Code Camps][2], and user groups galore that don&#8217;t cost $1000&#8217;s to attend.
+Plus there are events like [SQLSaturday][1], [Code Camps][2], and user groups galore that don't cost $1000's to attend.
 
-If you need more ideas, Ted ([blog][3] | [twitter][4]) posted an article with more SQL Resources [here][5] and I presented a list of ideas in <a href="/index.php/ITProfessionals/ITProcesses/there-is-never-time-for-part-1" title="Read Part 1 of the "There is Never Time For..." series">Part 1</a> of the &#8220;There is Never Time For&#8230;&#8221; series.
+If you need more ideas, Ted ([blog][3] | [twitter][4]) posted an article with more SQL Resources [here][5] and I presented a list of ideas in <a href="/index.php/ITProfessionals/ITProcesses/there-is-never-time-for-part-1" title="Read Part 1 of the "There is Never Time For..." series">Part 1</a> of the “There is Never Time For…” series.
 
-Have more ideas or links for resources? Add them to the comments below. I&#8217;m always on the lookout for more ideas and I&#8217;m sure others would appreciate them as well.
+Have more ideas or links for resources? Add them to the comments below. I'm always on the lookout for more ideas and I'm sure others would appreciate them as well.
 
  [1]: http://www.sqlsaturday.com/ "SQLSaturday website"
  [2]: http://www.google.com/search?q=code+camp "Search for Code Camps"

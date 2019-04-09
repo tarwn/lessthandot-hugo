@@ -24,9 +24,9 @@ tags:
   - sql server 2008
 
 ---
-In my last post, &#8220;[Baseline, Performance Reporting and being a proactive DBA][1]&#8220;, I touched on baselines and using them to set thresholds for actively monitoring performance problems on SQL Server. I briefly discussed that every database server is unique when the databases we attach to SQL Server are packaged installations from third party applications (like SAP, Dynamics etc&#8230;). I received feedback from my good friend Aaron Lowe ([Twitter][2] | [Blog][3]) on this topic and had a very good conversation on how we create these baselines. Aaron had a great point regarding there not being much out there on exactly how to do this so I thought I’d write up a follow-up to the article and some points you can use to create your own baselines.
+In my last post, “[Baseline, Performance Reporting and being a proactive DBA][1]“, I touched on baselines and using them to set thresholds for actively monitoring performance problems on SQL Server. I briefly discussed that every database server is unique when the databases we attach to SQL Server are packaged installations from third party applications (like SAP, Dynamics etc…). I received feedback from my good friend Aaron Lowe ([Twitter][2] | [Blog][3]) on this topic and had a very good conversation on how we create these baselines. Aaron had a great point regarding there not being much out there on exactly how to do this so I thought I’d write up a follow-up to the article and some points you can use to create your own baselines.
 
-**So why aren&#8217;t there a ton of posts on creating baselines?**
+**So why aren't there a ton of posts on creating baselines?**
 
 Here are my two bits on the topic. Creating a baseline is almost as unique as every business and processing model. In saying that, creating a baseline and what you capture will vary slightly. A lot of variables like the hardware you’ve purchased, the storage type, the server technology, OS versions/editions and even SQL Server editions affect the process. Even with these variables and the unique nature of business, we can set some guidelines of where to start and how to make our baseline. 
 
@@ -78,7 +78,7 @@ Executing all of the WMI reads then sets them into a Data Flow task that will co
   <img src="/wp-content/uploads/blogs/DataMgmt/create_base_3.gif" alt="" title="" width="331" height="217" />
 </div>
 
-Collecting perfmon will already have a set file given the perfmon setup done outside of SSIS. I recommend going over to Brent Ozar&#8217;s ([Twitter][7] | [Blog][8]) blog on [perfmon setup][9]. It’s detailed and well drawn up to get collection of the information going. 
+Collecting perfmon will already have a set file given the perfmon setup done outside of SSIS. I recommend going over to Brent Ozar's ([Twitter][7] | [Blog][8]) blog on [perfmon setup][9]. It’s detailed and well drawn up to get collection of the information going. 
 
 Last, but definitely something that makes this easier, the execution of dm\_os\_performance_counters. Since this DMV does not have a timestamp associated with it, add getdate() to the select so you can successfully pivot the data and read it for later use. 
 
@@ -90,7 +90,7 @@ Once the baseline data is collected (typically a week during all hours of operat
 
 **Estimating, requesting and begging for more**
 
-When creating a baseline and then further estimating the resources you need to maintain that level of performance, overestimating is your best friend. There is a reason when you ask a DBA, &#8220;How much disk space do you need?&#8221; you will always be given the answer, &#8220;All of it&#8221;. This is because, before the database server is set in place and growth analytics have been collected, we’re planning for the worst and fastest growth path. There is nothing wrong with that method of going about resources other than budget planning.
+When creating a baseline and then further estimating the resources you need to maintain that level of performance, overestimating is your best friend. There is a reason when you ask a DBA, “How much disk space do you need?” you will always be given the answer, “All of it”. This is because, before the database server is set in place and growth analytics have been collected, we’re planning for the worst and fastest growth path. There is nothing wrong with that method of going about resources other than budget planning.
 
 Baseline should give you the starting point to also base your reporting performance over time and estimating resources required for growth and scaling the database server.
 
@@ -98,7 +98,7 @@ Once all of this information is collected, thresholds are set and you know where
 
 **The meat of third party tools**
 
-Now that we have shown we can do all this work on our own, we can&#8217;t end without mentioning the tools that are out there to help us accomplish the same thing. Anyone that has read my articles in the past knows that I am an advocate for being a lazy DBA. This really has nothing to do with being lazy but means using everything and anything in order to make our jobs more efficient. SSIS is great and something I’ve taken on full speed since SQL Server 2005.
+Now that we have shown we can do all this work on our own, we can't end without mentioning the tools that are out there to help us accomplish the same thing. Anyone that has read my articles in the past knows that I am an advocate for being a lazy DBA. This really has nothing to do with being lazy but means using everything and anything in order to make our jobs more efficient. SSIS is great and something I’ve taken on full speed since SQL Server 2005.
 
 With that said, Quest, Red Gate, Idera and a few others have this capability in their products. Idera SQL Diagnostic Manager in the newer version has a baseline option that captures performance at a time requested and sets thresholds to it. Quest and the others have similar baseline functionality.
 

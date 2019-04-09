@@ -103,7 +103,7 @@ sql
 SET DATEFIRST 1;
 ```
 
-So DATEPART(dw, Date) will return 7 for Sunday and 1 for Saturday in the US, in order to use this we need to add it like this in SQL&#8230; DATEPART(dw,SomeDate) IN(1,7). If you are not living where the week starts on a Sunday then modify the IN(1,7) part
+So DATEPART(dw, Date) will return 7 for Sunday and 1 for Saturday in the US, in order to use this we need to add it like this in SQL… DATEPART(dw,SomeDate) IN(1,7). If you are not living where the week starts on a Sunday then modify the IN(1,7) part
 
 Finally the query looks like this if you are not on SQL Server 2008 yet
 
@@ -125,7 +125,7 @@ Below are the execution plans, as you can see both queries result in an index se
 
 <img src="/wp-content/uploads/blogs/DataMgmt//Execution plan.PNG" alt="" title="" width="855" height="536" />
 
-Why the top query takes 60% and the bottom one 40% is a little strange to me, I know that they did some optimizations where CONVERT(DATE, Column) &#8230;. is now SARGAble but this should be executed only once
+Why the top query takes 60% and the bottom one 40% is a little strange to me, I know that they did some optimizations where CONVERT(DATE, Column) …. is now SARGAble but this should be executed only once
 
 I will investigate that part further
 

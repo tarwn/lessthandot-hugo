@@ -15,15 +15,15 @@ categories:
 ---
 With the type of databases that can be set to nightly or even weekly recovery points, the copy database task is ideal and a quick way to setup you DR services.
 
-Many times the copy database task is overlooked for tasks such as disaster/recovery and test or development resources. This task available is very useful for databases that primarily hold meta data or are relatively small in size. The company I am with now has 3 primary third party installations that have databases in size ranging from 500MB to only 2GB. These are meta data and logging databases installed with the third party applications. It&#8217;s almost not worth the resources and monitoring efforts to have these databases setup for log shipping, mirroring etc.. for DR purposes. The databases only consist of configurations for the software and key recovery points rarely change.
+Many times the copy database task is overlooked for tasks such as disaster/recovery and test or development resources. This task available is very useful for databases that primarily hold meta data or are relatively small in size. The company I am with now has 3 primary third party installations that have databases in size ranging from 500MB to only 2GB. These are meta data and logging databases installed with the third party applications. It's almost not worth the resources and monitoring efforts to have these databases setup for log shipping, mirroring etc.. for DR purposes. The databases only consist of configurations for the software and key recovery points rarely change.
 
-There are two primary ways to set this task up in SSIS. One is the Copy Database Wizard. This is an easy way for either a quick solution or someone that hasn&#8217;t been in SSIS as much. In order to do this you need SSIS services installed and SQL Agent running. The other option is to create your own SSIS package while utilizing the &#8220;Transfer Database Task&#8221;. This is almost as easy as the wizard in respect to the setup. There is no scripting required. I&#8217;m sure more than a few DBA&#8217;s just got happy on that note. 
+There are two primary ways to set this task up in SSIS. One is the Copy Database Wizard. This is an easy way for either a quick solution or someone that hasn't been in SSIS as much. In order to do this you need SSIS services installed and SQL Agent running. The other option is to create your own SSIS package while utilizing the “Transfer Database Task”. This is almost as easy as the wizard in respect to the setup. There is no scripting required. I'm sure more than a few DBA's just got happy on that note. 
 
 Below you can see both methods and how to set them up quickly.
 
 Copy Database Wizard
 
-1) Connect to the instance using SSMS. Right click the database you want to copy. Scroll to Tasks and select &#8220;Copy Database&#8230;&#8221;
+1) Connect to the instance using SSMS. Right click the database you want to copy. Scroll to Tasks and select “Copy Database…”
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//copydb_1.gif" alt="" title="" />
@@ -85,4 +85,4 @@ Second option is to create the job in SSIS yourself. This can be useful if you h
   <img src="/wp-content/uploads/blogs/DataMgmt//copydb_7.gif" alt="" title="" />
 </div>
 
-Save your package and upload it to your SSIS instance. Schedule a job off the SSIS package you just created and again, we’re done. Good luck and please, always test your DR systems with a simulated LIVE disaster scenario. Don&#8217;t want to find out they don&#8217;t work when you really need them 🙂
+Save your package and upload it to your SSIS instance. Schedule a job off the SSIS package you just created and again, we’re done. Good luck and please, always test your DR systems with a simulated LIVE disaster scenario. Don't want to find out they don't work when you really need them 🙂

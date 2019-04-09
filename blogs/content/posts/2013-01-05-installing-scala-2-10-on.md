@@ -34,7 +34,7 @@ The first thing you have to do is downloading version 2.10 of Scala, you can dow
 
 After it is downloaded and installed, it is time to get the Eclipse plugin for Scala 2.10
 
-The way you do this is you click on Help followed by Install New Software&#8230; from the menu in Eclipse
+The way you do this is you click on Help followed by Install New Software… from the menu in Eclipse
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno2.PNG?mtime=1357398056"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno2.PNG?mtime=1357398056" width="552" height="169" /></a>
@@ -76,7 +76,7 @@ From the menu go to File and then select New Project. Navigate to Scala Wizards 
   <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno6.PNG?mtime=1357398099"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno6.PNG?mtime=1357398099" width="562" height="361" /></a>
 </div>
 
-Now that the project is created let&#8217;s create a simple object
+Now that the project is created let's create a simple object
 
 Right click on the Scala Project from the package Explorer and select New&#8211;> Scala Object
 
@@ -96,7 +96,7 @@ object Test2 {
 }
 ```
 
-Let&#8217;s make it more interesting by generating some output
+Let's make it more interesting by generating some output
 
 ```scala
 object Test2 {
@@ -127,7 +127,7 @@ Site is LessThanDot
   
 Role is blogger
 
-Why don&#8217;t we add a simple loop to our code? Here is what needs to be added
+Why don't we add a simple loop to our code? Here is what needs to be added
 
 ```Scala
 for (i <- 1 to 3) {
@@ -167,7 +167,7 @@ Site is LessThanDot
   
 Role is blogger
   
-1,2,3, Testing 1,2,3&#8230;..
+1,2,3, Testing 1,2,3…..
   
 Here is what my Eclipse window looks like
 
@@ -240,7 +240,7 @@ The following exciting &#8212; experimental &#8212; features are part of 2.10.0:
 
 * * *That is all for this post, Scala is just one of the languages I will explore in my quest to be more of a polyglot this year. Have you looked at Scala or some other functional language like F#?
 
-Edit&#8230;&#8230;.
+Edit…….
 
 And I played a little more with this and decided to do one of our [Friday the Thirteenths][4]
 
@@ -274,7 +274,7 @@ public class Test
 }
 ```
 
-In Scala you don&#8217;t have to change that much, you can leave or take out the semicolons, here is the code
+In Scala you don't have to change that much, you can leave or take out the semicolons, here is the code
 
 ```scala
 object Test2 {
@@ -347,7 +347,7 @@ SELECT DATEADD(m, number,'1998-01-13')
 and DATENAME(dw,DATEADD(m, number,'1998-01-13')) = 'friday'
 ```
 
-That is really it for this post&#8230;
+That is really it for this post…
 
  [1]: /index.php/ITProfessionals/ProfessionalDevelopment/ah-yes-those-pesky-resolutions
  [2]: https://issues.scala-lang.org/browse/SI-1133

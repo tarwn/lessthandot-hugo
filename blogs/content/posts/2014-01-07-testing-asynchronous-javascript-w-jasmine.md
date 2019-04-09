@@ -30,7 +30,7 @@ Jasmine Links: http://jasmine.github.io/
 
 Prior to the 2.0 release, Jasmine used a pair of functions for latching to ensure the test fully executed before exiting. The latching method provides a runs() function for executing potentially asynchronous code and a waitsFor() function that polls a provided latch condition until it returns true (ready to continue). This works, but visually adds a bunch of noise to the test.
 
-Here is what it looks like when we write a test against asynchronous code that isn&#8217;t waiting for asynchronous operations:
+Here is what it looks like when we write a test against asynchronous code that isn't waiting for asynchronous operations:
 
 ```javascript
 it("won't be detected. It's executed without waiting for the asynchronous result", function(){
@@ -72,9 +72,9 @@ it("will be detected. It uses the runs() and waitsFor latch to wait for the asyn
 	});
 });
 ```
-Now the test will wait until we set our &#8220;done&#8221; variable to true (or 5000ms, the default timeout that I didn&#8217;t override on the waitsFor() call). As you can see, though, this also added some extra noise to the test, both in terms of extra characters to visually parse and extra function layers. It&#8217;s also quite a bit different then the pattern mocha follows, and if you&#8217;re going back and forth between mocha and jasmine you&#8217;ll have that moment where you have to shift mental gears.
+Now the test will wait until we set our “done” variable to true (or 5000ms, the default timeout that I didn't override on the waitsFor() call). As you can see, though, this also added some extra noise to the test, both in terms of extra characters to visually parse and extra function layers. It's also quite a bit different then the pattern mocha follows, and if you're going back and forth between mocha and jasmine you'll have that moment where you have to shift mental gears.
 
-This is was an excellent time to add [jasmine.async][3]. Jasmine.async introduces an AsyncSpec object with beforeEach(), it(), and afterEach() calls with a &#8220;done&#8221; wait handle parameter:
+This is was an excellent time to add [jasmine.async][3]. Jasmine.async introduces an AsyncSpec object with beforeEach(), it(), and afterEach() calls with a “done” wait handle parameter:
 
 ```javascript
 var async = new AsyncSpec(this);
@@ -91,13 +91,13 @@ async.it("will be detected. It uses the jasmine.async library to wait for the re
 	.always(done);
 });
 ```
-This looks very much like the initial, flawed version as we would implement it in mocha. The only change to the test logic is the single always() call at the end that will execute the &#8220;done&#8221; wait handle that the async.it() call provided. The test logic is still just as clean as the original at the cost of a single additional script include.
+This looks very much like the initial, flawed version as we would implement it in mocha. The only change to the test logic is the single always() call at the end that will execute the “done” wait handle that the async.it() call provided. The test logic is still just as clean as the original at the cost of a single additional script include.
 
 ## Async in Jasmine 2.0.0
 
 Jasmine 2.0.0 has updated the [async syntax][4] to work similar to Mocha right out of the box. The beforeEach(), it(), and afterEach() methods now take an optional parameter just like the wait handle parameter in Mocha and the jasmine.async library above.
 
-Now it&#8217;s an even easier path from a flawed test like this:
+Now it's an even easier path from a flawed test like this:
 
 ```javascript
 it("won't be detected. It's executed without waiting for the asynchronous result", function(){
@@ -128,11 +128,11 @@ it("will be detected. It uses the new jasmine async syntax", function(done){
 	.always(done);
 });
 ```
-Like the jasmine.async test in the 1.3.1 examples, the changes are minimal and don&#8217;t impact the flow of actually reading the test. 
+Like the jasmine.async test in the 1.3.1 examples, the changes are minimal and don't impact the flow of actually reading the test. 
 
 ## Upgrade right now!
 
-Or not. Projects I&#8217;m starting from scratch are definitely getting 2.0.0. If you have an existing project on 1.3.1, there&#8217;s going to be some other inconsistencies between that and 2.0.0 (it is a major version upgrade, after all), but I think the improvements are worth at least taking it for a test drive.
+Or not. Projects I'm starting from scratch are definitely getting 2.0.0. If you have an existing project on 1.3.1, there's going to be some other inconsistencies between that and 2.0.0 (it is a major version upgrade, after all), but I think the improvements are worth at least taking it for a test drive.
 
  [1]: http://requirejs.org/
  [2]: http://pivotallabs.com/jasmine-2-release/ "2.0 release announcement at Pivotal Labs"

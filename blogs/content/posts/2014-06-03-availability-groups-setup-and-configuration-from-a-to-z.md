@@ -95,7 +95,7 @@ Setup of the Availability Groups in the structure covers one or more databases.�
       * KB2494036 
           * A hotfix is available to let you configure a cluster node that does not have quorum votes in Windows Server 2008 and in Windows Server 2008 R2
       * KB2687741 
-          * A hotfix that improves the performance of the &#8220;AlwaysOn Availability Group&#8221; feature in SQL Server 2012 is available for Windows Server 2008 R2
+          * A hotfix that improves the performance of the “AlwaysOn Availability Group” feature in SQL Server 2012 is available for Windows Server 2008 R2
 
 <h3 style="padding-left: 30px">
   Server names
@@ -655,7 +655,7 @@ To make modifications to the quorum or votes (NodeWeight), use the Failover Clus
 Import-Module FailoverClusters
 (Get-ClusterNode NODE4).NodeWeight=0
 ```<h2 style="margin: 2pt 0in 0pt">
-  <span style="color: #000000;font-family: Calibri Light;font-size: large">What&#8217;s next?</span>
+  <span style="color: #000000;font-family: Calibri Light;font-size: large">What's next?</span>
 </h2>
 
 <p style="margin: 0in 0in 8pt">

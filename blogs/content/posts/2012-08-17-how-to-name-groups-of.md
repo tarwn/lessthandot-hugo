@@ -63,7 +63,7 @@ Back to the image where you can see how I named my groups of tiles
 
 You can move groups around once you are in the minimized view mode, just click on a group and drag it where you want to place it
 
-I installed the RTM version of Windows 8 less than 48 hours ago and I can tell you that I will never want to go back to Windows 7, Windows 8 is noticeable faster than Windows 7 and I think the changes are for the better. There is no real need for a start menu, whenever you need something just start typing. If I want to run Excel, all I have to do is type _exc_ and hit enter. If you don&#8217;t hit enter, you will see something like the following
+I installed the RTM version of Windows 8 less than 48 hours ago and I can tell you that I will never want to go back to Windows 7, Windows 8 is noticeable faster than Windows 7 and I think the changes are for the better. There is no real need for a start menu, whenever you need something just start typing. If I want to run Excel, all I have to do is type _exc_ and hit enter. If you don't hit enter, you will see something like the following
 
 [<img alt="" src="/wp-content/uploads/blogs/SysAdmins/StartExcel.png?mtime=1345254983" width="425" height="191" />][7]
 

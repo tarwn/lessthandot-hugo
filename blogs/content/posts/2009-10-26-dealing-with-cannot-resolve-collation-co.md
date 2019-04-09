@@ -28,7 +28,7 @@ tags:
 ---
 This was asked on twitter recently and I gave the answer there. I decided to write a blog post about this because I can use over 140 charaters here instead.
   
-You will see the Cannot resolve collation conflict for equal to operation error when you try to join 2 tables. let&#8217;s take a look at what we need to do to resolve this. First create and populate these two tables
+You will see the Cannot resolve collation conflict for equal to operation error when you try to join 2 tables. let's take a look at what we need to do to resolve this. First create and populate these two tables
 
 sql
 use tempdb
@@ -65,7 +65,7 @@ select * from Test t1
 join Test2 t2 on t1.SomeColumn = t2.SomeColumn collate Traditional_Spanish_CI_AI
 ```
 
-You can also apply collate on the other column&#8230;first we need to know what the default was in your database. We can use the ANSI information\_schema.columns view to get this info, we need to use the collation\_name column. Run the following query to grab it
+You can also apply collate on the other column…first we need to know what the default was in your database. We can use the ANSI information\_schema.columns view to get this info, we need to use the collation\_name column. Run the following query to grab it
 
 sql
 select column_name,collation_name
@@ -80,7 +80,7 @@ select * from Test t1
 join Test2 t2 on t1.SomeColumn collate SQL_Latin1_General_CP1_CI_AS = t2.SomeColumn
 ```
 
-Just for fun let&#8217;s see what the collation is for the column in the Test2 table
+Just for fun let's see what the collation is for the column in the Test2 table
 
 sql
 select column_name,collation_name
@@ -99,11 +99,11 @@ select * from ::fn_helpcollations()
 where name ='Traditional_Spanish_CI_AI'
 ```
 
-The query returns the following description for Traditional\_Spanish\_CI_AI&#8217;
+The query returns the following description for Traditional\_Spanish\_CI_AI'
 
 Traditional-Spanish, case-insensitive, accent-insensitive, kanatype-insensitive, width-insensitive
 
-One thing to be aware of is that when using collate it needs to do a conversion so you might get performance problems&#8230;make sure to check those execution plans.
+One thing to be aware of is that when using collate it needs to do a conversion so you might get performance problems…make sure to check those execution plans.
 
 Hopefully this will help some person when dealing with this in the future.
 

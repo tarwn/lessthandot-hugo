@@ -15,7 +15,7 @@ categories:
 ---
 For all you LiteSpeed users out there Quest released version 5.0.2 late yesterday. There are key features and problems addressed in this release. One of the largest is the recent release had problems with log shipping on standard edition.
 
-Another key note: &#8220;Advanced Compression was removed from LiteSpeed 5.0.2 to mitigate any possible, future Microsoft support issues with the proprietary format. Any jobs containing the parameter will continue to run successfully, but the engine will ignore the parameter. Any existing backups created with the Advanced Compression option will continue to restore successfully in 5.0.2.&#8221;
+Another key note: “Advanced Compression was removed from LiteSpeed 5.0.2 to mitigate any possible, future Microsoft support issues with the proprietary format. Any jobs containing the parameter will continue to run successfully, but the engine will ignore the parameter. Any existing backups created with the Advanced Compression option will continue to restore successfully in 5.0.2.”
 
 features.
   

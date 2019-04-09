@@ -21,11 +21,11 @@ In the ASP.NET forums I am frequent the question of inserting information into m
 
 Please also take a look at this [article][2] showing how to get ID of the newly inserted record.
 
-Also, one more word about TRY/CATCH logic in this procedure. I took this idea from [Kevin Goff&#8217;s article][3] Touch/Peel/Stand, then Try/Catch/Raise<!--more-->
+Also, one more word about TRY/CATCH logic in this procedure. I took this idea from [Kevin Goff's article][3] Touch/Peel/Stand, then Try/Catch/Raise<!--more-->
 
 You can also review this article [Retrieving the Just-Inserted ID of an IDENTITY Column Using a SqlDataSource Control][4] dealing with the similar problem.
 
-First, I show the whole stored procedure code. Don&#8217;t be surprised about the non-normalized data, this is what we were dealing with.
+First, I show the whole stored procedure code. Don't be surprised about the non-normalized data, this is what we were dealing with.
 
 sql
 /****** Object:  StoredProcedure [dbo].[PersonInsert]    Script Date: 06/25/2008 15:38:00 ******/

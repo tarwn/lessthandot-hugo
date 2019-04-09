@@ -29,7 +29,7 @@ tags:
   - tables
 
 ---
-I decided to do a SQL Advent series of posts this year as well, this year I will focus on best practices. In case you are interested in last year&#8217;s posts, all of them are listed here: [SQL Advent 2011 Recap][1]
+I decided to do a SQL Advent series of posts this year as well, this year I will focus on best practices. In case you are interested in last year's posts, all of them are listed here: [SQL Advent 2011 Recap][1]
 
 Here is what the 25 posts will look like, the order that the posts are listed is not the same that they will be posted, I will randomly pick and choose
 

@@ -19,9 +19,9 @@ Recently I was working on an application with rich C# objects that I wanted to s
 
 ## Case 1: Strongly Typed Identities to SQL ints
 
-A complex web application can end up passing object id&#8217;s through any number of controller methods, business functions, or storage calls. It&#8217;s not hard to end up with a smattering of integer or GUIDs in the application to represent the id values, with limited meaning when appended to error messages, serialized, or represented in tests. Though it&#8217;s nice to see functions with strongly types ID objects (and error messages that don&#8217;t tell you &#8220;4 could not be found&#8221;), this can switch to a nuisance at API and database borders when it comes time to save or communicate those complex types.
+A complex web application can end up passing object id's through any number of controller methods, business functions, or storage calls. It's not hard to end up with a smattering of integer or GUIDs in the application to represent the id values, with limited meaning when appended to error messages, serialized, or represented in tests. Though it's nice to see functions with strongly types ID objects (and error messages that don't tell you “4 could not be found”), this can switch to a nuisance at API and database borders when it comes time to save or communicate those complex types.
 
-Here&#8217;s an example Identity object (T4 generated):
+Here's an example Identity object (T4 generated):
 
 ```csharp
 public class OrganizationId : IIdentity<int>
@@ -38,7 +38,7 @@ public int RawValue { get; set; }
 
 }
 ```
-Here&#8217;s an Application object (also T4 generated) that references an AppId and OrganizationId:
+Here's an Application object (also T4 generated) that references an AppId and OrganizationId:
 
 ```csharp
 public class ApplicationDTO
@@ -77,7 +77,7 @@ This logic looks exactly the same as if I had two int properties on my object in
 
 In the second case, I have a workflow composed of steps, each described as an object Array (a parsed statement in a custom grammar). The database doesn’t need to know the details of the step beyond the fact that it hs an id, and order number, and that chunk of grammar representing the work fo the step. So in this case, I chose to map the step details from to a basic CSV value and store it in a varchar column.
 
-This is the child-child-child class of the object I&#8217;m loading, UserStep:
+This is the child-child-child class of the object I'm loading, UserStep:
 
 ```csharp
 public class UserStepDTO
@@ -117,9 +117,9 @@ The actual query ends up being fairly complex, due to the upper layers of parent
 
 ## Registering Type Mapping with PetaPoco
 
-Even though I&#8217;m using AsyncPoco, a fork of PetaPoco that adds await/async capabilities, the method of defining and registering type mappers is the same.
+Even though I'm using AsyncPoco, a fork of PetaPoco that adds await/async capabilities, the method of defining and registering type mappers is the same.
 
-I&#8217;m using the singleton registration method to register my mapper:
+I'm using the singleton registration method to register my mapper:
 
 ```csharp
 lock (_lock)
@@ -130,9 +130,9 @@ lock (_lock)
     }
 }
 ```
-I can only register a mapper for a given type once, so I use a lock statement and see if my custom type is registered before attempting to register my increasingly poorly named &#8220;IdentityMapper&#8221;. I am actually registering this for anything that we attempt to load or save from that Assembly, which also includes objects like the UserStep one above. 
+I can only register a mapper for a given type once, so I use a lock statement and see if my custom type is registered before attempting to register my increasingly poorly named “IdentityMapper”. I am actually registering this for anything that we attempt to load or save from that Assembly, which also includes objects like the UserStep one above. 
 
-_Note: There are overloads to register for specific types instead of an entire assembly, but they weren&#8217;t working for me and I didn&#8217;t dig deep enough to determine what I had done wrong since I ended up wanting custom mapping for other objects in that assembly also._
+_Note: There are overloads to register for specific types instead of an entire assembly, but they weren't working for me and I didn't dig deep enough to determine what I had done wrong since I ended up wanting custom mapping for other objects in that assembly also._
 
 This is my IMapper implementation for reading and writing the two cases above:
 
@@ -198,11 +198,11 @@ Reading Case 1 (Identity): The GetFromDbConverter looks for IIdentity<int> and m
 
 Writing Case 1 (Identity): The GetToDbConverter extracts the inner raw value and hands that off to store in the database.
 
-Reading Case 2 (CSV): The GetFromFbConverter&#8217;s second case will perform a CSV parse to map a basic varchar(MAX) value to an object array, preserving string, date, and numeric values from the original.
+Reading Case 2 (CSV): The GetFromFbConverter's second case will perform a CSV parse to map a basic varchar(MAX) value to an object array, preserving string, date, and numeric values from the original.
 
 Writing Case 2 (CSV): The GetToDbConverte ruses a simplistic CSV encoder to produce a value that can be consistently read by the prior method, without overhead for edge cases.
 
-Note: I have found one exceptional case where this doesn&#8217;t work well. There are a couple cases where Petapoco assumes that it can use Convert.ChangeType on a value from the database to cast it into the expected value in your object, such as [autogenerated Identity fields during INSERTs][3]. Because it skips the use of mappers, you will receive a cast exception if you use a complex type for your identity field. If I find time, i&#8217;m going to dig in and write a patch for it.
+Note: I have found one exceptional case where this doesn't work well. There are a couple cases where Petapoco assumes that it can use Convert.ChangeType on a value from the database to cast it into the expected value in your object, such as [autogenerated Identity fields during INSERTs][3]. Because it skips the use of mappers, you will receive a cast exception if you use a complex type for your identity field. If I find time, i'm going to dig in and write a patch for it.
 
  [1]: https://github.com/tmenier/AsyncPoco
  [2]: http://www.toptensoftware.com/petapoco/

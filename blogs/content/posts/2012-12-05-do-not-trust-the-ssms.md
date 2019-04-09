@@ -40,7 +40,7 @@ Question: How do you add a primary key to a table?
   
 Answer: I click on the yellow key icon in SSMS!
 
-Technically, yes, that will create a primary key on the table but what will happen when you do that? Let&#8217;s take a look at some examples.
+Technically, yes, that will create a primary key on the table but what will happen when you do that? Let's take a look at some examples.
 
 First create this very simple table
 
@@ -103,14 +103,14 @@ That is right, it will create a new table, dump all the rows into this table, dr
 
 What about adding some defaults to the table, if you use the SSMS table designer, it will just create those and you have no way to specify a name for the default.
 
-Here is how to create a default with T-SQL, now you can specify a name and make sure it matches your shop&#8217;s naming convention
+Here is how to create a default with T-SQL, now you can specify a name and make sure it matches your shop's naming convention
 
 sql
 ALTER TABLE dbo.TestInt ADD CONSTRAINT
 	DF_TestInt_Col1 DEFAULT 1 FOR Col1
 ```
 
-About that yellow key icon, let&#8217;s add a primary key to our table, I can do the following with T-SQL, I can also make it non clustered if I want to
+About that yellow key icon, let's add a primary key to our table, I can do the following with T-SQL, I can also make it non clustered if I want to
 
 sql
 ALTER TABLE dbo.TestInt ADD CONSTRAINT
@@ -162,9 +162,9 @@ ALTER TABLE dbo.TestInt ADD CONSTRAINT
 GO
 COMMIT
 ```
-You might ask yourself why you should care, all the tables are small, this is not a big issue. This might be true now, what if you start a new job and now you have to supply alter, delete and create scripts? Now you are in trouble. I used to do the same when I started, I used the designers for everything, I didn&#8217;t even know Query Analyzer existed when I started, I created and modified the stored procedures straight inside Enterprise Manager. Trying to modify a view that had a CASE statement in Enterprise Manager from the designer&#8230;.yeah good luck with that one&#8230;.you would get some error that it wasn&#8217;t supported, I believe it also injected TOP 100 PERCENT ORDER BY in the view as well
+You might ask yourself why you should care, all the tables are small, this is not a big issue. This might be true now, what if you start a new job and now you have to supply alter, delete and create scripts? Now you are in trouble. I used to do the same when I started, I used the designers for everything, I didn't even know Query Analyzer existed when I started, I created and modified the stored procedures straight inside Enterprise Manager. Trying to modify a view that had a CASE statement in Enterprise Manager from the designer….yeah good luck with that one….you would get some error that it wasn't supported, I believe it also injected TOP 100 PERCENT ORDER BY in the view as well
 
-I don&#8217;t miss those days at all. Get to learn T-SQL and get to love it, you might suffer when you start but you will become a better database developer.
+I don't miss those days at all. Get to learn T-SQL and get to love it, you might suffer when you start but you will become a better database developer.
 
 Aaron Bertrand also has a post that you should read about the designers: [Bad habits to kick : using the visual designers][2]
 

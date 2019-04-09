@@ -26,7 +26,7 @@ tags:
 ---
 Frequently you will be asked how much longer a restore will take because someone needs to do something with that specific database that is restoring right now
 
-Of course we all know that the RESTORE DATABASE command has the STATS n option, this will give you the percentage completed. This is nice but it doesn&#8217;t tell you when it will complete and if someone else started the restore how will you know how long it will take in that case?
+Of course we all know that the RESTORE DATABASE command has the STATS n option, this will give you the percentage completed. This is nice but it doesn't tell you when it will complete and if someone else started the restore how will you know how long it will take in that case?
 
 Fear not, here is a query that will tell you exactly how long
 
@@ -106,4 +106,4 @@ Here is the output for a fairly large database restore that I started last night
       </p>
       
       <p>
-        Hopefully this will help you with those nagging types&#8230;&#8230;.<br /> </table> </table> </div>
+        Hopefully this will help you with those nagging types…….<br /> </table> </table> </div>

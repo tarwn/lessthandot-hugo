@@ -23,7 +23,7 @@ The differences between LEN and DATALENGTH in SQL Server!
   
 I have seen a bunch of questions about this recently and decided to do a little post to clear up the confusion.
   
-First let&#8217;s take a look what Books On Line has to say about these two functions
+First let's take a look what Books On Line has to say about these two functions
 
 **LEN**
   
@@ -47,7 +47,7 @@ select len(@v),datalength(@v)
 
 The output for len is 3 while the output for datalength =10. The reason that datalength returns the value 10 is because nvarchar uses 2 bytes to store 1 character by using unicode while varchar is using ascii which requires 1 byte per charaters
 
-Let&#8217;s take a look at some more data, first create this table
+Let's take a look at some more data, first create this table
 
 sql
 create table #TeslLen (	CharCol char(5), 

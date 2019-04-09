@@ -83,7 +83,7 @@ Once we’ve set the variable as needed and create a connection, you can dictate
 
 ## Data Flow Setup
 
-Create a new connection by right clicking the connection managers area and select OLE DB connection. Click the New button to create a new connection and put &#8220;destination&#8221; in the server name of the connection and click OK to close it. This creates a connection to basically nothing at this point but gives us a shell to work with dynamically. 
+Create a new connection by right clicking the connection managers area and select OLE DB connection. Click the New button to create a new connection and put “destination” in the server name of the connection and click OK to close it. This creates a connection to basically nothing at this point but gives us a shell to work with dynamically. 
 
 Create two new variables in the package container named, dest\_conn and dest\_db. Set these variables to string data types and enter static values for the instance and the initial catalog we want to connect to. Highlight the destination connection in the connection managers area to expose the properties of the connection in the properties window. In the properties window, click the browse button for expressions to open the property expression editor. Here we can set the connection string to what we want based on a real-time validated expression. To set a trusted connection we can build a connection string such as
 

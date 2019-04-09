@@ -16,11 +16,11 @@ tags:
   - unicode
 
 ---
-Not all systems can correctly accommodate Unicode data. Therefore, it&#8217;s not uncommon to receive data that is encoded in such a way that it can be stored in an ASCII format. Of course, SQL Server can store Unicode data easily if you use the nvarchar data type. Converting to and from Unicode data can be time consuming. When you receive data that is Unicode encoded, I suggest you decode it and store it in an nvarchar column. This will result in better performance.
+Not all systems can correctly accommodate Unicode data. Therefore, it's not uncommon to receive data that is encoded in such a way that it can be stored in an ASCII format. Of course, SQL Server can store Unicode data easily if you use the nvarchar data type. Converting to and from Unicode data can be time consuming. When you receive data that is Unicode encoded, I suggest you decode it and store it in an nvarchar column. This will result in better performance.
 
 Usually, when Unicode is encoded in an ASCII format, the Unicode value is somehow embedded within it. For example, the Greek letter Omega &#937;, has a Unicode value of 937. It may be encoded like this: &#937;
 
-Usually, non Unicode data will not be encoded. So you may see a string like this: &#8220;&#937;mega&#8221;
+Usually, non Unicode data will not be encoded. So you may see a string like this: “&#937;mega”
 
 Converting from an encoded string to a real Unicode string is more difficult than it may seem. There are 65,535 possible Unicode characters (the first 255 match ASCII characters). The example I showed has 3 digit Unicode values, but we should also be able to accommodate 4 and 5 digit Unicode characters too.
 
@@ -53,7 +53,7 @@ sql
 Select dbo.DecodeUnicodeData('&#937;mega', '&#', ';')
 ```
 
-This blog wouldn&#8217;t be complete if I didn&#8217;t also give you a function for encoding data, too. What I mean is, suppose you need to supply data in this format. How would you do it?
+This blog wouldn't be complete if I didn't also give you a function for encoding data, too. What I mean is, suppose you need to supply data in this format. How would you do it?
 
 sql
 Create Function EncodeUnicodeData(@Data NVarChar(4000), @Prefix VarChar(20), @Suffix VarChar(20))

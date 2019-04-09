@@ -18,7 +18,7 @@ tags:
   - output clause
 
 ---
-Suppose you need to log the old and new version of the data you change in a table in your database. If you ask a DBA how this could be done, I guess 80% will tell you to do it with an after trigger (the number is going down because every new edition of SQL Server comes with new features to do this). If you ask a DBA what he thinks of triggers, 95% will tell you to avoid them as much as possible&#8230; So what should you do? Well it all depends on the requirements you have and how you&#8217;re data is saved. If you need to be sure that all changes are logged, also the direct changes not coming from a business application you&#8217;d better be looking at triggers and/or audits. If you just want to log from within your application you can consume the OUTPUT directly from your INSERT, UPDATE, DELETE or MERGE statement. Let&#8217;s see how it works. First of all gather some data to work with; I&#8217;ll use some data from the AdventureWorks database:
+Suppose you need to log the old and new version of the data you change in a table in your database. If you ask a DBA how this could be done, I guess 80% will tell you to do it with an after trigger (the number is going down because every new edition of SQL Server comes with new features to do this). If you ask a DBA what he thinks of triggers, 95% will tell you to avoid them as much as possible… So what should you do? Well it all depends on the requirements you have and how you're data is saved. If you need to be sure that all changes are logged, also the direct changes not coming from a business application you'd better be looking at triggers and/or audits. If you just want to log from within your application you can consume the OUTPUT directly from your INSERT, UPDATE, DELETE or MERGE statement. Let's see how it works. First of all gather some data to work with; I'll use some data from the AdventureWorks database:
 
 sql
 SELECT TOP (10) ProductID, Name, ListPrice, ModifiedDate
@@ -96,4 +96,4 @@ And check to see if the change is stored in the PriceLog table:
   <a href="/wp-content/uploads/users/axel8s/OUTPUT2.png?mtime=1337954220"><img alt="" src="/wp-content/uploads/users/axel8s/OUTPUT2.png?mtime=1337954220" width="621" height="84" /></a>
 </div>
 
-So as you can see, using the OUTPUT clause can be a very effective way of logging changes to the data. The biggest disadvantage is when somebody is updating the data with a direct query. But in a production system this shouldn&#8217;t be the case.
+So as you can see, using the OUTPUT clause can be a very effective way of logging changes to the data. The biggest disadvantage is when somebody is updating the data with a direct query. But in a production system this shouldn't be the case.

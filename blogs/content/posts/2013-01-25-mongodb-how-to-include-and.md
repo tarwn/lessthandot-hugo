@@ -23,7 +23,7 @@ tags:
   - sorting
 
 ---
-In this MongoDB post we are going to look at how to return only the fields you want. We already looked at how to sort the results in the [MongoDB, how to sort results][1] post but we didn&#8217;t show you how to return just the fields you want.
+In this MongoDB post we are going to look at how to return only the fields you want. We already looked at how to sort the results in the [MongoDB, how to sort results][1] post but we didn't show you how to return just the fields you want.
 
 To get started insert the following into your MongoDB database
 
@@ -95,7 +95,7 @@ Here are the results
 { "name" : "Xavier", "age" : 10 }
 { "name" : "Zen", "age" : 50 }</pre>
 
-As you can see this is a little different from SQL, if you in SQL do something like `SELECT name, age FROM Table`, you won&#8217;t get the id or primary key back in the results by default
+As you can see this is a little different from SQL, if you in SQL do something like `SELECT name, age FROM Table`, you won't get the id or primary key back in the results by default
 
 If you are interested in my other MongoDB posts, you can find them here:
   

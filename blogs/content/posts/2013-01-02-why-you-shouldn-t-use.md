@@ -20,13 +20,13 @@ tags:
   - t-sql
 
 ---
-A customer&#8217;s DBA team created a checklist for the development teams with some best practices for writing proper T-SQL and asked me to write some contributions for their tips document library. So if I do the research and write the documents I might as well post them here. The content may not be all sparkling and new but since there is a demand from customers, there are still people out there having trouble finding the correct information.
+A customer's DBA team created a checklist for the development teams with some best practices for writing proper T-SQL and asked me to write some contributions for their tips document library. So if I do the research and write the documents I might as well post them here. The content may not be all sparkling and new but since there is a demand from customers, there are still people out there having trouble finding the correct information.
   
-So let&#8217;s get started. The first document is why you should avoid SELECT * in your queries:
+So let's get started. The first document is why you should avoid SELECT * in your queries:
 
 **For performance reasons**
 
-To be honest this part of the post is based on Ted&#8217;s post: [SELECT * vs SELECT 1 with EXISTS][1].
+To be honest this part of the post is based on Ted's post: [SELECT * vs SELECT 1 with EXISTS][1].
   
 To check the performance impact I use a tool called [SQLQueryStress][2] to execute my queries and see how much time elapsed.
   

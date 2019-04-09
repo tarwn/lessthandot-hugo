@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-I encountered this question last October in one of the forums I&#8217;m frequent. The question was: given the table with the keywords, find all records from some table which would include all these words (Implementing search with AND keyword). <!--more-->From the first glance the problem looks trivial, but for me the solution was not very obvious and I used Borislav Borissov&#8217;s help in solving it.
+I encountered this question last October in one of the forums I'm frequent. The question was: given the table with the keywords, find all records from some table which would include all these words (Implementing search with AND keyword). <!--more-->From the first glance the problem looks trivial, but for me the solution was not very obvious and I used Borislav Borissov's help in solving it.
 
 I want to also note, that we can pass the list of keywords as a delimited list and split into table using any of the available splitting functions (you can explore this problem at [Arrays and Lists in SQL Server][1] blog)
 
@@ -60,7 +60,7 @@ INNER JOIN (SELECT MyTable.Id
 
 The above is the original test case and the solution we implemented with Borislav.
 
-Based on Nikola&#8217;s comments I re-worked the test case. The last suggestion performs the best. We can get further improvement if we include &#8216;% &#8216; in our Keys and WordsToExclude tables. For the explanation of the last Nikola&#8217;s query see http://msdn.microsoft.com/en-us/library/ms178543.aspx
+Based on Nikola's comments I re-worked the test case. The last suggestion performs the best. We can get further improvement if we include &#8216;% &#8216; in our Keys and WordsToExclude tables. For the explanation of the last Nikola's query see http://msdn.microsoft.com/en-us/library/ms178543.aspx
 
 See also this blog [ALL, ANY and SOME: The Three Stooges][2] 
 

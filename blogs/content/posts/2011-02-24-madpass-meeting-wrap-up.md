@@ -17,9 +17,9 @@ categories:
   - Database Administration
 
 ---
-Last night, I had a mad, mad evening at the inaugural Madison, WI SQL Server User Group, [MADPASS][1]. I think that was one of the best user group meetings I&#8217;ve ever attended!
+Last night, I had a mad, mad evening at the inaugural Madison, WI SQL Server User Group, [MADPASS][1]. I think that was one of the best user group meetings I've ever attended!
 
-First, I&#8217;d like to thank the organizers, volunteers and the interim board of directors. Putting together a new group is hard work, and requires time, dedication and passion. The only thing we lack: more time! Our interim board is:
+First, I'd like to thank the organizers, volunteers and the interim board of directors. Putting together a new group is hard work, and requires time, dedication and passion. The only thing we lack: more time! Our interim board is:
   
 President &#8211; Tim Benninghoff ([Twitter][2] | [Blog][3])
   
@@ -35,17 +35,17 @@ Permanent first-term elections will be held in August, so start thinking about h
 
 **The Setup** 
 
-The meeting space was easy-to-find, convenient, and dare I say: not big enough? We crowded 31 people into the room. The turnout was better than we could have imagined! Thank you to everyone that attended. I hope you got a lot of value out of the meeting, both from the presentation and from networking. Don&#8217;t forget to come next month, and bring a guest! 
+The meeting space was easy-to-find, convenient, and dare I say: not big enough? We crowded 31 people into the room. The turnout was better than we could have imagined! Thank you to everyone that attended. I hope you got a lot of value out of the meeting, both from the presentation and from networking. Don't forget to come next month, and bring a guest! 
 
 We started with a welcome from our President, Tim, and an introduction of all our board members. Then, rather than a 30-minute presentation and dinner, we had networking time and dinner. I think this was invaluable for the first meeting. 
 
-The excellent presentation we had was &#8220;Microsoft BI Overview&#8221;, by Dave DuVarney. He covered the history of Microsoft and its BI tools, the current offerings, and the future. Things that he mentioned which I am excited about: SSRS subscriptions being available as Atom feeds, the awesomeness that is known as PowerPivot, and SharePoint 2010 Fast Search. 
+The excellent presentation we had was “Microsoft BI Overview”, by Dave DuVarney. He covered the history of Microsoft and its BI tools, the current offerings, and the future. Things that he mentioned which I am excited about: SSRS subscriptions being available as Atom feeds, the awesomeness that is known as PowerPivot, and SharePoint 2010 Fast Search. 
 
 The meeting concluded with a rundown of the upcoming PASS events, a raffle for swag, and having to actually leave. This meeting was definitely worth the hour-and-a-half drive! 
 
 **Thank You!** 
 
-A huge shout-out goes to our sponsors: PASS, Maximum ASP, Microsoft, Wrox, O&#8217;Reilly, Apress, CA, and Tushaus. Without their support, we wouldn&#8217;t have had the great location, excellent food, and swag (how could I forget to mention the swag?!). 
+A huge shout-out goes to our sponsors: PASS, Maximum ASP, Microsoft, Wrox, O'Reilly, Apress, CA, and Tushaus. Without their support, we wouldn't have had the great location, excellent food, and swag (how could I forget to mention the swag?!). 
 
 Please follow us online! You can register on our website, <http://madpass.org>; follow us on [Twitter][9]; and become part of our [LinkedIn group][10]. We want to keep you informed of our upcoming meetings and other events. 
 

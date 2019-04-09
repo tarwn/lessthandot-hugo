@@ -25,4 +25,4 @@ Microsoft just announced that Microsoft Security Essentials will be available fo
 
 Some more info can be found here: http://www.microsoft.com/Presspass/press/2009/sep09/09-28SecurityEssentialsPR.mspx?rss_fdn=Press%20Releases
 
-And don&#8217;t forget to check back tomorrow to download Microsoft Security Essentials here: http://www.microsoft.com/security_essentials/
+And don't forget to check back tomorrow to download Microsoft Security Essentials here: http://www.microsoft.com/security_essentials/

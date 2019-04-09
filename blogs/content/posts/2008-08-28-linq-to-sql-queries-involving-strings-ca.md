@@ -35,6 +35,6 @@ var p =
 
 _If both of these queries are run, we will see two entries in the SQL Server procedure cache: One bound with an NVARCHAR(7), and the other with an NVARCHAR(11). Now imagine if there were hundreds or thousands of different input strings, all with different lengths. The procedure cache would become unnecessarily filled with all sorts of different plans for the exact same query. Even worse, imagine if a query used two or three different string parameters. The procedure cache could end up with hundreds of thousands or even millions of entries, the only differences being the variable lengths_
 
-Wow that is bad indeed, please go to the connect site and vote for this so that Microsoft &#8216;fixes&#8217; this. Here is the URL: <https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=363290>
+Wow that is bad indeed, please go to the connect site and vote for this so that Microsoft &#8216;fixes' this. Here is the URL: <https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=363290>
 
  [1]: http://sqlblog.com/blogs/adam_machanic/default.aspx

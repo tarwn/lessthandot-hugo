@@ -36,7 +36,7 @@ When running this, the error returned is
 
 > Msg 201, Level 16, State 4, Procedure uspGetEmployeeManagers, Line 0
   
-> Procedure or function &#8216;uspGetEmployeeManagers&#8217; expects parameter &#8216;@EmployeeID&#8217;, which was not supplied.
+> Procedure or function &#8216;uspGetEmployeeManagers' expects parameter &#8216;@EmployeeID', which was not supplied.
 
 Looking at the statement closer and verifying with BOL sp_executesql syntax, the parameter mapping is not completely set. The proper statement should be called as follows
 

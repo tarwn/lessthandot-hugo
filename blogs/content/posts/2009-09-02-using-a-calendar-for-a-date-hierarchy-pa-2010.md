@@ -19,21 +19,21 @@ However, when it comes to SSAS, if a developer chooses to add a parameter agains
 
 That being said, many times reports are more narrowly focused and constrained to a date granularity. In this case, it may be more desirable to allow the user to pick their date with the calendar control. Again, the default behavior when designing the MDX query will present the user with a drop-down containing the members of the date hierarchy. We can change this behavior to present the user with a calendar control instead of a drop-down list.
 
-I&#8217;m working with the Adventure Works 2008 SSAS sample project. In a new SSRS 2008 project, I have added a report to display the Internet Sales Amount by Country, with Date.Date as a parameter. By default, the user interface will look like the image below.
+I'm working with the Adventure Works 2008 SSAS sample project. In a new SSRS 2008 project, I have added a report to display the Internet Sales Amount by Country, with Date.Date as a parameter. By default, the user interface will look like the image below.
 
 ![Image1][1]
 
-Obviously, this is not a very easy user interface to work with. If we right-click on our data source in the Report Data tab, we can see we have an option to &#8220;Show Hidden DataSets.&#8221; This will give us the definition for the hidden dataset which populates our Date.Date parameter. If we copy the query text and paste it into SQL Server Management Studio, we can see that in this case, our parameter&#8217;s value takes on the format of [Date].[Date].&[yyyyMMdd]. The format may be different depending on the individual Date hierarchy setup. So, what we need to do is use a calendar control yet still supply a proper string to our main dataset as a parameter value. We can accomplish this with a VB function within the report.
+Obviously, this is not a very easy user interface to work with. If we right-click on our data source in the Report Data tab, we can see we have an option to “Show Hidden DataSets.” This will give us the definition for the hidden dataset which populates our Date.Date parameter. If we copy the query text and paste it into SQL Server Management Studio, we can see that in this case, our parameter's value takes on the format of [Date].[Date].&[yyyyMMdd]. The format may be different depending on the individual Date hierarchy setup. So, what we need to do is use a calendar control yet still supply a proper string to our main dataset as a parameter value. We can accomplish this with a VB function within the report.
 
 Add a new parameter to the report named Date. This parameter should have a Data type of Date/Time to ensure that it is rendered to the user as a calendar control. In the properties pane of our Report, we can add the following VB function in the Code window:
 
 _Function GetDateMemberString(DateValue As DateTime) As String
        
-Dim RetVal As String = &#8220;&#8221;
+Dim RetVal As String = “”
        
-RetVal = &#8220;[Date].[Calendar].[Date].&[&#8221;
+RetVal = “[Date].[Calendar].[Date].&[”
        
-RetVal &= Format(DateValue, &#8220;yyyyMMdd&#8221;).ToString & &#8220;]&#8221;
+RetVal &= Format(DateValue, “yyyyMMdd”).ToString & “]”
        
 Return RetVal
   

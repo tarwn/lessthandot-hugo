@@ -23,9 +23,9 @@ tags:
   - triggers
 
 ---
-Here is a quick demonstration that shows you what can happen when you use defaults that are much shorter than the value that is updated from an insert trigger. The ModifiedBy column has a default of &#8221; but in the trigger it gets updated to &#8216;SomeapplicationName used by &#8216; +SUSER\_NAME(). Ideally you want the default to also be &#8216;SomeapplicationName used by &#8216; +SUSER\_NAME()
+Here is a quick demonstration that shows you what can happen when you use defaults that are much shorter than the value that is updated from an insert trigger. The ModifiedBy column has a default of ” but in the trigger it gets updated to &#8216;SomeapplicationName used by &#8216; +SUSER\_NAME(). Ideally you want the default to also be &#8216;SomeapplicationName used by &#8216; +SUSER\_NAME()
 
-Let&#8217;s take a look, first create the following table
+Let's take a look, first create the following table
 
 sql
 CREATE TABLE TestFrag (
@@ -72,7 +72,7 @@ UPDATE t
 GO
 ```
 
-Now let&#8217;s pump 100000 rows into both tables
+Now let's pump 100000 rows into both tables
 
 sql
 INSERT TestFrag(Somedate)
@@ -97,7 +97,7 @@ SELECT TOP 10 * FROM TestFrag
 SELECT TOP 10 * FROM TestFrag2
 ```
 
-Now let&#8217;s look how much space each table is using
+Now let's look how much space each table is using
 
 sql
 EXEC sp_spaceused 'TestFrag'
@@ -112,7 +112,7 @@ TestFrag2	100000     	28744 KB	28576 KB	112 KB		56 KB</pre>
 
 See that, the table with the same default as in the trigger is using a lot less data?
 
-Now let&#8217;s see how bad the fragmentation is. Here is the 2005 and up version
+Now let's see how bad the fragmentation is. Here is the 2005 and up version
 
 sql
 SELECT  

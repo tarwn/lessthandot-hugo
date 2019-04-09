@@ -19,11 +19,11 @@ tags:
   - ssds
 
 ---
-This is the second time that I went to the Enterprise Developer Conference. Due to the downturn Microsoft merged the financial and health/live sciences conferences into one. Last years main focus was High Computing, this years main focus was&#8230;&#8230;tada&#8230;..drumroll&#8230;..Cloud Computing. No big surprise of course. There were always 5 sessions at the same time so I can only report on the ones that I attended. The SQL Server Data Services session was in my opinion the best one but then again I am biased. You can actually watch all the session at the following site [entdevcon.com][1] Right now only the day 1 sessions are up there
+This is the second time that I went to the Enterprise Developer Conference. Due to the downturn Microsoft merged the financial and health/live sciences conferences into one. Last years main focus was High Computing, this years main focus was……tada…..drumroll…..Cloud Computing. No big surprise of course. There were always 5 sessions at the same time so I can only report on the ones that I attended. The SQL Server Data Services session was in my opinion the best one but then again I am biased. You can actually watch all the session at the following site [entdevcon.com][1] Right now only the day 1 sessions are up there
 
 **The Keynote**
   
-The keynote was all about Azure and Cloud Services. Explained was the roadmap that led to Azure, what Azure is and where it is going. I have to agree for the most part that it really doesn&#8217;t make a whole lot of sense to manage your own infrastructure. Have it done by someone who can provide this with a nice SLA and you have a lot less headaches and costs
+The keynote was all about Azure and Cloud Services. Explained was the roadmap that led to Azure, what Azure is and where it is going. I have to agree for the most part that it really doesn't make a whole lot of sense to manage your own infrastructure. Have it done by someone who can provide this with a nice SLA and you have a lot less headaches and costs
 
 **Azure**
   

@@ -20,11 +20,11 @@ tags:
   - sql server
 
 ---
-Straight from the man himself comes this statement posted in the [microsoft.public.sqlserver.programming forum][1]: &#8220;_You need to read ISO-11179 so you use proper data element names. You
+Straight from the man himself comes this statement posted in the [microsoft.public.sqlserver.programming forum][1]: “_You need to read ISO-11179 so you use proper data element names. You
   
-actually had &#8220;tbl-&#8220;on the table names! Sometimes &#8220;id&#8221; id a
+actually had “tbl-“on the table names! Sometimes “id” id a
   
-prefix and sometimes it is a postfix._&#8221;
+prefix and sometimes it is a postfix._”
 
 Of course you know who I am talking about? No? Joe Celko of course. So what is ISO-11179?
 
@@ -48,7 +48,7 @@ The 11179 standard is a multipart standard that includes the following parts:
 
 [11179-5][6]
   
-**Part 5: Naming and Identification Principles**, provides guidance for the identification of administered items. Identification is a broad term for designating, or identifying, a particular data item. Identification can be accomplished in various ways, depending upon the use of the identifier. Identification includes the assignment of numerical identifiers that have no inherent meanings to humans; icons (graphic symbols to which meaning has been assigned); and names with embedded meaning, usually for human understanding, that are associated with the data item&#8217;s definition and value domain.
+**Part 5: Naming and Identification Principles**, provides guidance for the identification of administered items. Identification is a broad term for designating, or identifying, a particular data item. Identification can be accomplished in various ways, depending upon the use of the identifier. Identification includes the assignment of numerical identifiers that have no inherent meanings to humans; icons (graphic symbols to which meaning has been assigned); and names with embedded meaning, usually for human understanding, that are associated with the data item's definition and value domain.
 
 [11179-6][7]
   

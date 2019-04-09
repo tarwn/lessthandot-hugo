@@ -24,10 +24,10 @@ Model-View-Presenter is an architecture pattern that defines a structure for beh
 
 I often build small projects to help understand and grow my skills as a developer, architect, and all-around technologist (as may be apparent from the <a href="/index.php/All/?disp=authdir&author=9" target="_blank" title="See all of my posts at LTD">wide range of topics I post on</a>). Today I worked with a combination of Visio and Visual Studio to build a sample project to play with the Passive View concept and to help grow my own understanding of the concept. This post will cover the Visio side of my learning-curve.
 
-You can read more about Model View Presenter at <a href="http://en.wikipedia.org/wiki/Model-view-presenter" target="_blank" title="Model-View-Presenter at Wikipedia">Wikipedia</a> and <a href=http://msdn.microsoft.com/en-us/magazine/cc188690.aspx"" target="_blank" title="Model View Presenter by Jean-Paul Boodhoo on MSDN">MSDN</a>. Perhaps the best information can be found on Martin Fowler&#8217;s site, where he has separate write-ups on <a href="http://www.martinfowler.com/eaaDev/PassiveScreen.html" target=_blank" title="Passive View pattern">Passive View</a> and <a href="http://www.martinfowler.com/eaaDev/SupervisingPresenter.html" target=_blank" title="Supervising Controller Pattern">Supervising Controller</a>.
+You can read more about Model View Presenter at <a href="http://en.wikipedia.org/wiki/Model-view-presenter" target="_blank" title="Model-View-Presenter at Wikipedia">Wikipedia</a> and <a href=http://msdn.microsoft.com/en-us/magazine/cc188690.aspx"" target="_blank" title="Model View Presenter by Jean-Paul Boodhoo on MSDN">MSDN</a>. Perhaps the best information can be found on Martin Fowler's site, where he has separate write-ups on <a href="http://www.martinfowler.com/eaaDev/PassiveScreen.html" target=_blank" title="Passive View pattern">Passive View</a> and <a href="http://www.martinfowler.com/eaaDev/SupervisingPresenter.html" target=_blank" title="Supervising Controller Pattern">Supervising Controller</a>.
 
 <div style="background-color:#FFFFCC; padding: .5em; margin: .5em; border: 1px solid #DDDDAA; color: #333333; font-size: 80%;">
-  Note: I know some people were waiting for another Virtual Lab entry this week, and here I am writing about Architecture instead. Don&#8217;t worry, the virtual lab series will continue, I just felt like doing a write-up while I was playing this past weekend.
+  Note: I know some people were waiting for another Virtual Lab entry this week, and here I am writing about Architecture instead. Don't worry, the virtual lab series will continue, I just felt like doing a write-up while I was playing this past weekend.
 </div>
 
 ## Passive View
@@ -61,7 +61,7 @@ My example application has several functional and non-functional requirements:
   5. Non-Functional &#8211; Build with the idea that we will later create a Silverlight or WPF front-end
   6. Non-Functional &#8211; Make pretty pictures for article
 
-_My unwritten, final requirement was to finish the whole thing in half a day, though luckily I didn&#8217;t define whether I intended that to mean 4 hours or 12._
+_My unwritten, final requirement was to finish the whole thing in half a day, though luckily I didn't define whether I intended that to mean 4 hours or 12._
 
 ### Initial Architecture
 
@@ -176,4 +176,4 @@ Extending the application to display product search in a different manner would 
 
 ## Your Turn
 
-Getting this much of the architecture working is a good first step. I took a number of shortcuts on the BasicModel class in my example, but I now have a functional Model-View-Presenter application to play with. Hopefully there was enough information in the article to interest you in trying this out on your own. I urge you to read the articles linked in the top of the post (or several more in my <a href="http://delicious.com/tarwn/model-view-presenter" title="Eli's Delicious bookmarks for M-V-P" target="_blank">Model-View-Presentation bookmarks</a>) and come up with your own diagrams and sample project. Even doing a small project will force you to run into questions and considerations you wouldn&#8217;t have had by simply reading about it, not to mention unrelated tidbits you will pick up along the way (for instance, I also learned about <a href="http://msdn.microsoft.com/en-us/library/ms668604.aspx" title="ObservableCollection at MSDN" target="_blank">ObservableCollections</a> today).
+Getting this much of the architecture working is a good first step. I took a number of shortcuts on the BasicModel class in my example, but I now have a functional Model-View-Presenter application to play with. Hopefully there was enough information in the article to interest you in trying this out on your own. I urge you to read the articles linked in the top of the post (or several more in my <a href="http://delicious.com/tarwn/model-view-presenter" title="Eli's Delicious bookmarks for M-V-P" target="_blank">Model-View-Presentation bookmarks</a>) and come up with your own diagrams and sample project. Even doing a small project will force you to run into questions and considerations you wouldn't have had by simply reading about it, not to mention unrelated tidbits you will pick up along the way (for instance, I also learned about <a href="http://msdn.microsoft.com/en-us/library/ms668604.aspx" title="ObservableCollection at MSDN" target="_blank">ObservableCollections</a> today).

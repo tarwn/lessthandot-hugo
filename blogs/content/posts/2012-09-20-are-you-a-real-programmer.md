@@ -23,7 +23,7 @@ tags:
 ---
 So I am going through the book [The Clean Coder: A Code of Conduct for Professional Programmers][1] by Robert C. Martin (AKA Uncle Bob)
 
-In chapter 1, section _know your field_, a list of artifacts is mentioned that you should know as a programmer. If you don&#8217;t know these things then apparently you suck, so let&#8217;s see how many of these do you know?
+In chapter 1, section _know your field_, a list of artifacts is mentioned that you should know as a programmer. If you don't know these things then apparently you suck, so let's see how many of these do you know?
 
   * Parnas Tables
   * Nassi-Schneiderman Charts

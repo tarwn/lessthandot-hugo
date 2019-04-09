@@ -57,7 +57,7 @@ To match this in TeamCity I created the project-wide graph settings like so:
   </custom-graphs>
 </settings>
 ```
-Besides the key in each valueType tag, I also include a buildTypeid that is the internal build ID for my automated load test build. I found this in the address bar after clicking the build&#8217;s link on the dashboard:
+Besides the key in each valueType tag, I also include a buildTypeid that is the internal build ID for my automated load test build. I found this in the address bar after clicking the build's link on the dashboard:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCityCharts_link.png" alt="TeamCity - Build URL" /><br /> Team City &#8211; Build URL
@@ -65,7 +65,7 @@ Besides the key in each valueType tag, I also include a buildTypeid that is the 
 
 ## Defining the Data
 
-Once I have the definitions roughly the way I want them, I need to make the data available from the WCAT run. WCAT already produces it&#8217;s results in XML and for Jenkins I created an XSL to transform the results into a new XML file that would be easier to plot in Jenkins. For TeamCity I&#8217;ll do the same, but this time I decided to use powershell to execute the transformation.
+Once I have the definitions roughly the way I want them, I need to make the data available from the WCAT run. WCAT already produces it's results in XML and for Jenkins I created an XSL to transform the results into a new XML file that would be easier to plot in Jenkins. For TeamCity I'll do the same, but this time I decided to use powershell to execute the transformation.
 
 The WCAT results take some work to decode, as they are stored in XML that is halfway to presentation format. Luckily I have already done this once, so creating a new XSL is fairly easy:
 
@@ -116,11 +116,11 @@ $xsl = (New-Object System.Xml.Xsl.XslCompiledTransform)
 $xsl.Load('%system.teamcity.build.workingDir%/TransformForTeamCity.xsl')
 $xsl.Transform('%system.teamcity.build.workingDir%/log.xml','%system.teamcity.build.workingDir%/teamcity-info.xml')
 ```
-TeamCity replaces the variables with the correct values and transforms the generated log into the specially named &#8220;teamcity-info.xml&#8221; file.
+TeamCity replaces the variables with the correct values and transforms the generated log into the specially named “teamcity-info.xml” file.
 
 ## Done
 
-I wasn&#8217;t happy about editing settings file in TeamCity directly, especially given the implications this has in a real environment (how many people would need to be involved to do this in a heavily audited environment?). However that was the only issue I had and I am happy with the results (the build versions are the same because I rebuilt several times so I would have a decent chart):
+I wasn't happy about editing settings file in TeamCity directly, especially given the implications this has in a real environment (how many people would need to be involved to do this in a heavily audited environment?). However that was the only issue I had and I am happy with the results (the build versions are the same because I rebuilt several times so I would have a decent chart):
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <a href="http://tiernok.com/LTDBLog/ContinuousDelivery/TeamCityCharts.png" target="_blank"><br /> <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCityCharts_sm.png" alt="TeamCity - Finished Charts" /><br /> </a><br /> Team City &#8211; Finished Charts

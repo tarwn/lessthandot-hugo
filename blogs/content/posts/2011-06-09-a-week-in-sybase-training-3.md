@@ -108,7 +108,7 @@ _ddlgen -Ulogin -Ppassword -TKC -N%.%.PK% -Ddbname_
   
 This should look familiar if you have used bcp on SQL Server. Bcp has two speeds in Sybase.
   
-Fast bcp, better performance but no recovery, used when a table doesn&#8217;t have indexes or triggers (or triggers have been disabled), you also have to have the minimally-logged operations enabled on the database
+Fast bcp, better performance but no recovery, used when a table doesn't have indexes or triggers (or triggers have been disabled), you also have to have the minimally-logged operations enabled on the database
   
 Slow bcp, slower performance but has better recovery, used when a table has at least one indexes or trigger
   
@@ -121,13 +121,13 @@ exec sp_dboption MyDb, "select into/bulkcopy/pllsort", true
 exec sp_dboption MyDb, "trunc log on chkpt", true
 ```
 
-The bcp syntax is more or less the same as in SQL Server so I won&#8217;t go into any detail here.
+The bcp syntax is more or less the same as in SQL Server so I won't go into any detail here.
   
 One thing that bcp does not have in Sybase is the _queryout_, you can however create a view and do it that way
 
 ## Automatic Recovery
 
-This was mostly about the log, dirty pages, when checkpoints occur, talking about the &#8220;trunc log on chkpt&#8221; option. Discussed was what happens when recovery kicks in, what happens to committed and uncommitted transaction, how to make recovery less long. Sybase doesn&#8217;t have the concept of fast recovery, the database is not available until all the transactions have been rolled forward or rolled back. There is a way to specify which databases you want recovered first after the system databases have been recovered, you do this with the sp\_dbrecovery\_order proc
+This was mostly about the log, dirty pages, when checkpoints occur, talking about the “trunc log on chkpt” option. Discussed was what happens when recovery kicks in, what happens to committed and uncommitted transaction, how to make recovery less long. Sybase doesn't have the concept of fast recovery, the database is not available until all the transactions have been rolled forward or rolled back. There is a way to specify which databases you want recovered first after the system databases have been recovered, you do this with the sp\_dbrecovery\_order proc
 
 **sp\_dbrecovery\_order**
 
@@ -147,15 +147,15 @@ Here are some of them and what they call under the hood
 
 dbcc checkdb, this calls the following dbcc command for every table
   
-&#8230;dbcc checktable
+…dbcc checktable
 
 dbcc checkalloc, this one will call these 3
   
-&#8230;.dbcc tablealloc
+….dbcc tablealloc
   
-&#8230;.dbcc indexalloc
+….dbcc indexalloc
   
-&#8230;.dbcc textalloc
+….dbcc textalloc
 
 dbcc checkcatalog, this one checks the catalogs
 

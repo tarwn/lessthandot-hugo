@@ -21,7 +21,7 @@ This is a problem I ran into recently. I have a 64-bit operating system.
 
 ![][1]
 
-I&#8217;m running Excel 2010, which is 32-bit. There is also a 64-bit version. (You can get this information by going to File > Help.)
+I'm running Excel 2010, which is 32-bit. There is also a 64-bit version. (You can get this information by going to File > Help.)
 
 ![][2]
 

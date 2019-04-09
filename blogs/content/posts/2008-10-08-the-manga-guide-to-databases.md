@@ -22,7 +22,7 @@ tags:
 
 > Want to learn about databases without the tedium? With its unique combination of Japanese-style comics and serious educational content, The Manga Guide to Databases is just the book for you.
 > 
-> Princess Ruruna is stressed out. With the king and queen away, she has to manage the Kingdom of Kod&#8217;s humongous fruit-selling empire. Overseas departments, scads of inventory, conflicting prices, and so many customers! It&#8217;s all such a confusing mess. But a mysterious book and a helpful fairy promise to solve her organizational problems—with the practical magic of databases. 
+> Princess Ruruna is stressed out. With the king and queen away, she has to manage the Kingdom of Kod's humongous fruit-selling empire. Overseas departments, scads of inventory, conflicting prices, and so many customers! It's all such a confusing mess. But a mysterious book and a helpful fairy promise to solve her organizational problems—with the practical magic of databases. 
 
 What the heck is this? Who comes up with this stuff?
 

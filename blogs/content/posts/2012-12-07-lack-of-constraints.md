@@ -48,21 +48,21 @@ Only 25% of the people will tell you to use something that you can use from with
 
 ## Why do we need constraints at all?
 
-So why do we need constraints? To answer that question, first you have to answer another question: how important is it that the data in your database is correct? I would say that that is most important, after all you can have all the data in the world but if it is wrong it is useless or it might even ending up costing you money. To make sure that you don&#8217;t get invalid data, you use constraints. Constraints work at the database level, it doesn&#8217;t matter if you do the data checking from the app or web front-end, there could be someone modifying the data from SSMS. If you are importing files, constraints will prevent invalid data from making it into the tables.
+So why do we need constraints? To answer that question, first you have to answer another question: how important is it that the data in your database is correct? I would say that that is most important, after all you can have all the data in the world but if it is wrong it is useless or it might even ending up costing you money. To make sure that you don't get invalid data, you use constraints. Constraints work at the database level, it doesn't matter if you do the data checking from the app or web front-end, there could be someone modifying the data from SSMS. If you are importing files, constraints will prevent invalid data from making it into the tables.
 
-Constraints don&#8217;t just have to have a range, constraints can handle complex validations. You can have regular expressions in check constraints as well, check out [SQL Server does support regular expressions in check constraints, triggers are not always needed][3] for some examples
+Constraints don't just have to have a range, constraints can handle complex validations. You can have regular expressions in check constraints as well, check out [SQL Server does support regular expressions in check constraints, triggers are not always needed][3] for some examples
 
 ## Constraints are faster than triggers
 
-The reason that check constraints are preferable over triggers is that they are not as expensive as triggers, you also don&#8217;t need an update and an insert trigger, one constraint is enough to handle both updates and inserts.
+The reason that check constraints are preferable over triggers is that they are not as expensive as triggers, you also don't need an update and an insert trigger, one constraint is enough to handle both updates and inserts.
 
 ## Constraints are making it hard for us to keep our database scripts from blowing up
 
-This is a common complaint, when you script out the databases and the primary and foreign key tables are not in the correct order you will get errors. Luckily the tools these days are much better than they were 10 years ago. If you do it by hand just make sure that it is all in the correct order. Another complaint is that constraints are wasting developers time, they can&#8217;t just populate the tables at random but have to go in the correct order as well. 
+This is a common complaint, when you script out the databases and the primary and foreign key tables are not in the correct order you will get errors. Luckily the tools these days are much better than they were 10 years ago. If you do it by hand just make sure that it is all in the correct order. Another complaint is that constraints are wasting developers time, they can't just populate the tables at random but have to go in the correct order as well. 
 
 ## Some examples of constraints
 
-Since I like the DRY principle, I won&#8217;t just copy and paste some examples that lready exist in a post I wrote a while back, take a look at this post [Dammit people, get to know check constraints and use them!][4] to see some examples of check constraints
+Since I like the DRY principle, I won't just copy and paste some examples that lready exist in a post I wrote a while back, take a look at this post [Dammit people, get to know check constraints and use them!][4] to see some examples of check constraints
 
 That is all for day seven of the [SQL Advent 2012 series][1], come back tomorrow for the next one, you can also check out all the posts from last year here: [SQL Advent 2011 Recap][5]
 

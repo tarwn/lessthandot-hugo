@@ -20,7 +20,7 @@ categories:
   <img src="http://sqlblog.com/blogs/argenis_fernandez/TSQL2sDay150x150_thumb_2AA4EA0F.jpg" alt="" />
 </p>
 
-It’s T-SQL Tuesday! This month’s topic, A Day in the Life, is hosted by my friend Erin Stellato ([blog][2] | [twitter][3]).  She wanted each of us to track what we do for a day. I can attest that she will ask you, &#8220;What do you _do_?&#8221;, earnestly – she did when I went to the 2011 Columbus, OH SQL Saturday.
+It’s T-SQL Tuesday! This month’s topic, A Day in the Life, is hosted by my friend Erin Stellato ([blog][2] | [twitter][3]).  She wanted each of us to track what we do for a day. I can attest that she will ask you, “What do you _do_?”, earnestly – she did when I went to the 2011 Columbus, OH SQL Saturday.
 
 What do I _do_? As of May 8, 2012, I’m a Consultant with Brent Ozar PLF. Consultant. One of _those_ people. Yes, I am one! I perform health checks on client servers, recommend changes, and do training. I also get to blog and present a lot (which I love). Thankfully, Erin asked me to capture a fairly typical day.
 
@@ -72,7 +72,7 @@ Then, there are training opportunities. I talk through SQL Server Agent and auto
 
 I’m not done for the day, but I’m done for the day. I still need to finish up the findings slide deck for the client. I do that from about 9:00 – 10:00. Then it’s time to shut down the laptop and relax for a bit.
 
-And that&#8217;s what I _do_.
+And that's what I _do_.
 
  [1]: http://erinstellato.com/2012/07/invitation-for-tsql-tuesday-day-life/
  [2]: http://erinstellato.com/

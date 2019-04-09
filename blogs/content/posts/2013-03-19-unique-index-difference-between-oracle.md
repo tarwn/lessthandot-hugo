@@ -36,7 +36,7 @@ When working with different database systems you have to be aware that some thin
 
 Today we are going to look at the difference between a unique index in Oracle and in SQL Server.
 
-Let&#8217;s start with SQL Server. First create this table and also this index
+Let's start with SQL Server. First create this table and also this index
 
 sql
 CREATE TABLE TestUnique (Id int)
@@ -52,7 +52,7 @@ INSERT INTO TestUnique VALUES(1);
 INSERT INTO TestUnique VALUES(null);
 ```
 
-Now let&#8217;s insert one more NULL
+Now let's insert one more NULL
 
 sql
 INSERT INTO TestUnique VALUES(null);
@@ -62,13 +62,13 @@ Here is the error
   
 _Msg 2601, Level 14, State 1, Line 1
   
-Cannot insert duplicate key row in object &#8216;dbo.TestUnique&#8217; with unique index &#8216;SomeIndex&#8217;. The duplicate key value is (<null>).
+Cannot insert duplicate key row in object &#8216;dbo.TestUnique' with unique index &#8216;SomeIndex'. The duplicate key value is (<null>).
   
 The statement has been terminated.</null>_
 
 As you can see you can only have one NULL value in the table
 
-What about Oracle? Let&#8217;s take a look. Run this whole block, it will create a table, a unique index and will insert the same data
+What about Oracle? Let's take a look. Run this whole block, it will create a table, a unique index and will insert the same data
   
 
 

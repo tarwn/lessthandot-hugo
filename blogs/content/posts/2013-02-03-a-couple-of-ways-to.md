@@ -28,7 +28,7 @@ tags:
 ---
 I answered this question from a person who had to convert coordinates stored as an integer to a float
 
-> I&#8217;m receiving data on coordinates as 115949833 and I need it to output as 115.949833 because I need to be able to calculate the mileage between the latitude and longitude coordinates. Both the longitude and latitude values are saved as integers with no decimal places
+> I'm receiving data on coordinates as 115949833 and I need it to output as 115.949833 because I need to be able to calculate the mileage between the latitude and longitude coordinates. Both the longitude and latitude values are saved as integers with no decimal places
 
 There are several things you can do to accomplish this:
   
@@ -40,7 +40,7 @@ LEFT and RIGHT
   
 Arithmetic
 
-Let&#8217;s take a look at how each of them work
+Let's take a look at how each of them work
 
 **Arithmetic multiplication** 
   
@@ -80,16 +80,16 @@ DECLARE @s varchar(100) = '1111122222'
 SELECT STUFF(@S,6,0,'.....')
 ```
 
-11111&#8230;..22222
+11111…..22222
 
-One or more characters doesn&#8217;t make a difference, the rest still gets shifted to the right
+One or more characters doesn't make a difference, the rest still gets shifted to the right
 
 sql
 DECLARE @s varchar(100) = '1111122222'
 SELECT STUFF(@S,6,5,'.....')
 ```
 
-11111&#8230;..
+11111…..
 
 Since we used 5, the 5 left most characters after position 6 get replaced by our dots
 
@@ -98,7 +98,7 @@ DECLARE @s varchar(100) = '1111122222'
 SELECT STUFF(@S,6,2,'.....')
 ```
 
-11111&#8230;..222
+11111…..222
 
 Now we used 2 instead of 5, as you can see 3 (5-2) are still there from the original value
 
@@ -122,7 +122,7 @@ SELECT LEFT(@pos,3) +'.' + RIGHT(@pos,6)--115.949833
 
 **SUBSTRING**
   
-Substring is similar to using left and right but you need to give it a start position and end position. You need first to convert to char or vachar because substring can&#8217;t be used on an integer data type directly
+Substring is similar to using left and right but you need to give it a start position and end position. You need first to convert to char or vachar because substring can't be used on an integer data type directly
 
 sql
 DECLARE @pos int = 115949833 

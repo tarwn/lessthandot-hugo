@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-In the ridiculously titled post [I hold this blog hostage for 1 million views mahaaahaha mahahaha&#8230;.][1] I told you that it took me a little over 3 years to reach 1 million views. I also said that I hoped to get the next million within 2 years, it actually took 1 year and 8 months. In between I have added 186 posts, the average views per post went from 2,739 to 3,629
+In the ridiculously titled post [I hold this blog hostage for 1 million views mahaaahaha mahahaha….][1] I told you that it took me a little over 3 years to reach 1 million views. I also said that I hoped to get the next million within 2 years, it actually took 1 year and 8 months. In between I have added 186 posts, the average views per post went from 2,739 to 3,629
 
 If this trend continues then I should hit 3 million views by next February, it should take between 11 and 12 months
 

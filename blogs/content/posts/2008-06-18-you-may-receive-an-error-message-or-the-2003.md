@@ -33,7 +33,7 @@ Server Application Unavailable
 
 **And here is why**
   
-These issues occur because the Microsoft .NET Framework common language runtime (CLR) uses the Server garbage collector (GC) on multiprocessor computers. This is the default behavior. The Server garbage collector is optimized for scalable throughput on multiprocessor computers. To reduce contention and to improve garbage collector performance on multiprocessor computers, the Server garbage collector creates one heap per processor for parallel collections. Therefore, the Server garbage collector consumes lots of memory when you host multiple ASP.NET worker processes. This behavior may cause the issues that are described in the &#8220;Symptoms&#8221; section.
+These issues occur because the Microsoft .NET Framework common language runtime (CLR) uses the Server garbage collector (GC) on multiprocessor computers. This is the default behavior. The Server garbage collector is optimized for scalable throughput on multiprocessor computers. To reduce contention and to improve garbage collector performance on multiprocessor computers, the Server garbage collector creates one heap per processor for parallel collections. Therefore, the Server garbage collector consumes lots of memory when you host multiple ASP.NET worker processes. This behavior may cause the issues that are described in the “Symptoms&#8221; section.
 
 Microsoft has published a knowledge base article, you can read the article here: http://support.microsoft.com/kb/911716
 

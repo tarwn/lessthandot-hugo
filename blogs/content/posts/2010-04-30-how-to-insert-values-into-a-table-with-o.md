@@ -54,7 +54,7 @@ You get these 3 rows as output
 
 So the dummy value is there so that they can insert into the table. Even though the dummy column is not big it still takes up space and it was also nullable which also takes up some space.
   
-Let&#8217;s do this a different way. First drop the table we created before.
+Let's do this a different way. First drop the table we created before.
 
 sql
 DROP TABLE Sequence
@@ -89,7 +89,7 @@ FROM  Sequence
 3
 4</pre>
 
-Let&#8217;s take a look at another example, what if we had two other columns and they had defaults on them? First create this table.
+Let's take a look at another example, what if we had two other columns and they had defaults on them? First create this table.
 
 sql
 CREATE TABLE Sequence2 (ID int identity not null primary key, 
@@ -107,7 +107,7 @@ INSERT INTO Sequence2 DEFAULT VALUES
 INSERT INTO Sequence2 DEFAULT VALUES
 ```
 
-Now let&#8217;s look what is in the table
+Now let's look what is in the table
 
 sql
 SELECT * FROM  Sequence2

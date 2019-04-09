@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-[<img style="float: left;" src="/wp-content/uploads/users/grrlgeek/TSQL2sDay150x150.jpg?mtime=1365451350" alt="" />][1]It&#8217;s the second Tuesday of the month, and you know what that means: it&#8217;s T-SQL Tuesday! This is a monthly blog series with a different topic each month. This month, our host, Bradley Ball ([blog][2] | [twitter][3]), wants to hear about at least one moment in SQL time that I would like back. (You can write about your moment, too – [the information you need is here][1]!)
+[<img style="float: left;" src="/wp-content/uploads/users/grrlgeek/TSQL2sDay150x150.jpg?mtime=1365451350" alt="" />][1]It's the second Tuesday of the month, and you know what that means: it's T-SQL Tuesday! This is a monthly blog series with a different topic each month. This month, our host, Bradley Ball ([blog][2] | [twitter][3]), wants to hear about at least one moment in SQL time that I would like back. (You can write about your moment, too – [the information you need is here][1]!)
 
 _Remember that time I didn’t know how to configure a cluster?_
 

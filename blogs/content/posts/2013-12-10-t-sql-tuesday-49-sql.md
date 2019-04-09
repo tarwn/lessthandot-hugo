@@ -14,7 +14,7 @@ categories:
   - Business Intelligence
 
 ---
-It&#8217;s the monthly blog challenge known as T-SQL Tuesday! <a href="http://www.sqlsoldier.com/wp/sqlserver/tsqltuesday49topiciswaitforit" target="_blank">Edition 49 is being hosted by Robert Davis</a>, and he wants us to wait around. No, that&#8217;s not right &#8211; he wants us to write about waiting. Yeah, that&#8217;s it. <img style="float: right;" src="/wp-content/uploads/users/grrlgeek/TSQL2sDay150x150.jpg?mtime=1365451350" alt="" width="150" height="150" />
+It's the monthly blog challenge known as T-SQL Tuesday! <a href="http://www.sqlsoldier.com/wp/sqlserver/tsqltuesday49topiciswaitforit" target="_blank">Edition 49 is being hosted by Robert Davis</a>, and he wants us to wait around. No, that's not right &#8211; he wants us to write about waiting. Yeah, that's it. <img style="float: right;" src="/wp-content/uploads/users/grrlgeek/TSQL2sDay150x150.jpg?mtime=1365451350" alt="" width="150" height="150" />
 
 You’ve read a lot about wait statistics. You know your servers have wait statistics on them. You know your applications and queries are waiting on something. Before you panic, before you go changing maxdop or rewriting queries, remember one thing: every system is going to have waits recorded. It’s the nature of computing. The chance that every resource a query needs is available at the exact millisecond it needs it is nonexistent. It takes time to read data from storage to memory. It takes time to write data to storage. It takes time to send results across the network to the client.
 

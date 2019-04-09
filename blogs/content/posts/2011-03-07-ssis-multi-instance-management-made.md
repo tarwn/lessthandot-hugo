@@ -84,4 +84,4 @@ Now we will see the following:
   <a href="/media/users/sqlarcher/SSIS_Post/SSIS Folders.jpg?mtime=1299482416"><img src="/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS Folders.jpg?mtime=1299482416" alt="" width="445" height="130" /></a>
 </div>
 
-Thanks to this handy configuration, all of your SSIS packages can be saved to their respective instance MSDBs&#8217; and management will be easier due to a centralized access point and no need of guessing where your packages are being saved.
+Thanks to this handy configuration, all of your SSIS packages can be saved to their respective instance MSDBs' and management will be easier due to a centralized access point and no need of guessing where your packages are being saved.

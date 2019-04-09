@@ -21,7 +21,7 @@ tags:
   - profiling
 
 ---
-Visual Studio 2010 and .NET 4.0 are almost released, one of the new things that ship with this release is Parallel Programming. Since you can&#8217;t buy a machine anymore with just one core it is time that we developers get intimate with concurrent programming. I decided to play around with this a little today, this is not a real technical post, I mostly show you how you can get started and what new tools are available.
+Visual Studio 2010 and .NET 4.0 are almost released, one of the new things that ship with this release is Parallel Programming. Since you can't buy a machine anymore with just one core it is time that we developers get intimate with concurrent programming. I decided to play around with this a little today, this is not a real technical post, I mostly show you how you can get started and what new tools are available.
 
 ## Getting to know Parallel Programming with the .NET Framework 4
 
@@ -141,9 +141,9 @@ Pick concurrency and visualize the behaviour of a multithreaded application.
 
 After you are done, start your app and when you close the app, reports will be generated.
   
-If you don&#8217;t see the reports then do the following; click on View&#8211;>Other Windows&#8211;>Performance Explorer. 
+If you don't see the reports then do the following; click on View&#8211;>Other Windows&#8211;>Performance Explorer. 
 
-FYI, You need to run as admin to generate these report and if you are on a 64bit machine then you need to set the platform target to x86 in order to be able to generate these reports. I was greeted with the following message: _To enable complete call stacks on x64 platforms, executive paging must be disabled. A reboot is then required. To make this change, click &#8220;Yes&#8221;, save your work, and then reboot. For more information, see http://go.microsoft.com/fwlink/?LinkId=157265_ . After I rebooted everything worked.
+FYI, You need to run as admin to generate these report and if you are on a 64bit machine then you need to set the platform target to x86 in order to be able to generate these reports. I was greeted with the following message: _To enable complete call stacks on x64 platforms, executive paging must be disabled. A reboot is then required. To make this change, click “Yes”, save your work, and then reboot. For more information, see http://go.microsoft.com/fwlink/?LinkId=157265_ . After I rebooted everything worked.
 
 There are 3 types of reports that you will see. Here is what the CPU Utilization report looks like.
   
@@ -199,7 +199,7 @@ Below is a 10 part blog post series by Reed Copsey, Jr about parallelism in .net
 
 So hopefully this post will spark your interest and you will take a look at these interesting technologies and tools.
 
-Happy &#960; day ,and today is also Albert Einstein&#8217;s birthday.
+Happy &#960; day ,and today is also Albert Einstein's birthday.
 
 <img src="/wp-content/uploads/blogs/Architect//Pi_Pie.jpg" alt="" title="" width="577" height="576" />
 

@@ -49,7 +49,7 @@ from sysobjects where name = 'sysobjects'
 select @id ,@xtype ,@uid ,@info ,@status
 ```
 
-Let&#8217;s take a look at another example.
+Let's take a look at another example.
 
 What we want to do is display a row of counts for 4 xtypes from the sysobjects table, here is an example
 

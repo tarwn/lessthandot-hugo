@@ -126,13 +126,13 @@ This will allow the mappings to be performed before we add the expression to bui
   <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_8.gif" alt="" title="" width="387" height="278" />
 </div>
 
-The ADO.NET Destination now can point directly to the table, &#8220;dbo&#8221;.&#8221;EmpManagers&#8221;.
+The ADO.NET Destination now can point directly to the table, “dbo”.”EmpManagers”.
   
 Once the Execute SQL Task and Data Flow Task are completed, move to create the variables for EmployeeID and SqlCmd.
   
 EmployeeID will be named ID and a data type of Int32 matching the INT parameter data type in the procedure uspGetExployeeManagers. The SqlCmd variable will be a string data type and hold the following expression:
   
-&#8220;EXEC dbo.uspGetEmployeeManagers @EmployeeID=&#8221; + (DT_WSTR, 10) @[User::ID]
+“EXEC dbo.uspGetEmployeeManagers @EmployeeID=” + (DT_WSTR, 10) @[User::ID]
   
 If the variable has the value 4 preset, this expression evaluated will result in:
   
@@ -176,15 +176,15 @@ To start a job from T-SQL the system procedure sp\_start\_job is used. Sp\_start
 
 > Execute sp\_start\_job
        
-> { [@job\_name =] &#8216;job\_name&#8217;
+> { [@job\_name =] &#8216;job\_name'
          
 > | [@job\_id =] job\_id }
        
 > [ , [@error\_flag =] error\_flag]
        
-> [ , [@server\_name =] &#8216;server\_name&#8217;]
+> [ , [@server\_name =] &#8216;server\_name']
        
-> [ , [@step\_name =] &#8216;step\_name&#8217;]
+> [ , [@step\_name =] &#8216;step\_name']
        
 > [ , [@output\_flag =] output\_flag]
 
@@ -246,7 +246,7 @@ The resulting message in the query window will be:
 
 > (1 row(s) affected)
   
-> Job &#8216;CallSSIS&#8217; started successfully.
+> Job &#8216;CallSSIS' started successfully.
 
 The first message is from the update to the configuration table and the second message is returned from the sp\_start\_job execution.
 

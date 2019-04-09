@@ -21,9 +21,9 @@ This will not work on SQL Server 2000 since the sp_refreshsqlmodule does not exi
 
 A while back in the [What is deferred name resolution and why do you need to care?][1] blogpost I showed you that sp_depens is not reliable because you can create procedures that reference objects that have not been created yet.
 
-You can use sp_refreshsqlmodule to help &#8216;fix&#8217; that
+You can use sp_refreshsqlmodule to help &#8216;fix' that
   
-let&#8217;s take a look at how that works
+let's take a look at how that works
 
 First create this awesome stored procedure
 
@@ -42,7 +42,7 @@ exec sp_depends 'Blah'
 
 Server: Msg 15009, Level 16, State 1, Procedure sp_depends, Line 25
   
-The object &#8216;Blah&#8217; does not exist in database &#8216;tempdb&#8217; or is invalid for this operation.
+The object &#8216;Blah' does not exist in database &#8216;tempdb' or is invalid for this operation.
 
 So that tells us that the table Blah does not exist. Fine, what happens if we run sp_depends for the proc?
 
@@ -52,7 +52,7 @@ exec sp_depends 'prBla'
 
 Object does not reference any object, and no objects reference it.
 
-That makes sense since the table does not exist. Let&#8217;s create this table
+That makes sense since the table does not exist. Let's create this table
 
 sql
 create table Blah
@@ -93,7 +93,7 @@ exec sp_depends 'prBla'
 
 Object does not reference any object, and no objects reference it.
 
-Nope, no such luck, that didn&#8217;t do anything
+Nope, no such luck, that didn't do anything
   
 Now execute the sp_refreshsqlmodule proc
 
@@ -125,7 +125,7 @@ In the current database, the specified object references the following:
 <pre>name		type		updated	selected	column
 dbo.Blah	user table	no	yes		SomeCol</pre>
 
-And as you can see it also shows that the table is used..like Borat would say &#8220;Very Nice&#8221;
+And as you can see it also shows that the table is used..like Borat would say “Very Nice”
 
 Clean up by dropping these sample objects
 

@@ -25,7 +25,7 @@ tags:
 ---
 As database professionals, our intent is to be as proactive as possible when it comes to delivering data with security, stability and speed in mind. Being proactive means active monitoring, reporting performance variations and most important, baseline capture. Adding to these three objectives, we can add Performance Notes to also provide key points of long term and short term performance problems. 
 
-Let&#8217;s take a minute to discuss the three key points (Baselines, Active Monitoring and Reporting Performance)
+Let's take a minute to discuss the three key points (Baselines, Active Monitoring and Reporting Performance)
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/sbTightRope.jpg" alt="" title="" width="455" height="320" />
@@ -77,7 +77,7 @@ We can see that the spikes occur in both days and similar times.
   
 These performance notes should be looked into closely to determine what is impacting the CPU usage during the time of the spikes. Often the spikes are found to be normal business operations but in some cases they are found to be performance problems that should be resolved.
 
-With this we can put perfmon/profiler and other tools at our disposal to work by collecting more detailed information during and around the spike in resource consumption. For example, if we see Processor Time counter high and correlate that to other common CPU counters and SQL counters, we can determine if we have common CPU bottlenecks like compilations, recompilation, parameterization etc&#8230; issues or simply a query that was introduced to the database server without our knowledge. Then we can act quickly on it by optimization of resources or the query(s) taking part in the spikes.
+With this we can put perfmon/profiler and other tools at our disposal to work by collecting more detailed information during and around the spike in resource consumption. For example, if we see Processor Time counter high and correlate that to other common CPU counters and SQL counters, we can determine if we have common CPU bottlenecks like compilations, recompilation, parameterization etc… issues or simply a query that was introduced to the database server without our knowledge. Then we can act quickly on it by optimization of resources or the query(s) taking part in the spikes.
 
 **Conclusion**
 

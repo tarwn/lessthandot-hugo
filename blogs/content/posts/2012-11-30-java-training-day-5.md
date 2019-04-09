@@ -34,7 +34,7 @@ tags:
   - sockets
 
 ---
-Last day of the training and I am glad it is over&#8230;this stuff is draining
+Last day of the training and I am glad it is over…this stuff is draining
 
 Here is what was covered today
 
@@ -152,4 +152,4 @@ WE covered the regular DB related stuff, how to connect to a DB, explanation wha
 
 **Web programming**
   
-We covered servlets, JSP, javabeans, struts, mvc&#8230;pretty much similar stuff I was doing in 2001 but now we have many more frameworks to makes things easier
+We covered servlets, JSP, javabeans, struts, mvc…pretty much similar stuff I was doing in 2001 but now we have many more frameworks to makes things easier

@@ -16,7 +16,7 @@ tags:
   - temp table
 
 ---
-A query in a stored procedures I&#8217;m developing had low CPU and reads, but was unexplainedly taking a very long time to complete. The execution plan was also really great, even after exerting all my query-tuning might and playing with many different join orders and doing a CROSS APPLY to force a pseudo skip-scan.
+A query in a stored procedures I'm developing had low CPU and reads, but was unexplainedly taking a very long time to complete. The execution plan was also really great, even after exerting all my query-tuning might and playing with many different join orders and doing a CROSS APPLY to force a pseudo skip-scan.
 
 After wrestling with it over several days I finally discovered that the problem was having used a table variable! After switching to a temp table, I got a crazy performance improvement and everything settled back to normal. Here are the numbers:
 
@@ -158,6 +158,6 @@ The weird thing is that while trying all my variations and different JOIN strate
 
 But 20 seconds was still not acceptable.
 
-I&#8217;m so glad I figured this out as it was not going to be nice for users to sit and wait for 20 seconds just to pull in a few hundred orders.
+I'm so glad I figured this out as it was not going to be nice for users to sit and wait for 20 seconds just to pull in a few hundred orders.
 
-So put a little note in your mental toolbox on the &#8220;table variable&#8221; slot: Note: this tool can occasionally cause terrible performance. Try a regular temp table if you have problems.
+So put a little note in your mental toolbox on the “table variable” slot: Note: this tool can occasionally cause terrible performance. Try a regular temp table if you have problems.

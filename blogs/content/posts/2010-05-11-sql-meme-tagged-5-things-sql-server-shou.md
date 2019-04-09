@@ -17,7 +17,7 @@ tags:
   - tagged
 
 ---
-I have been tagged by [Aaron Bertrand][1] in the latest SQL meme: [Tagged: 5 things SQL Server should drop][2]. This meme is about five thing that you wished that were dropped from SQL Server. Actually I prefer that SQL Server adds stuff instead of removes stuff, I can always ingore the things I don&#8217;t like. Anyhow since this is about things that should be removed, here is my list.
+I have been tagged by [Aaron Bertrand][1] in the latest SQL meme: [Tagged: 5 things SQL Server should drop][2]. This meme is about five thing that you wished that were dropped from SQL Server. Actually I prefer that SQL Server adds stuff instead of removes stuff, I can always ingore the things I don't like. Anyhow since this is about things that should be removed, here is my list.
 
 ### Isnumeric
 
@@ -41,7 +41,7 @@ SELECT ISNUMERIC('123', 'TinyInt')
 
 ### Restrictions on Indexed Views
 
-Lookup indexed views and you will see more restrictions than you can fathom, you can&#8217;t memorize these things either, there are too many. First you need a bunch of setting
+Lookup indexed views and you will see more restrictions than you can fathom, you can't memorize these things either, there are too many. First you need a bunch of setting
 
 sql
 SET NUMERIC_ROUNDABORT OFF;
@@ -57,7 +57,7 @@ SET CREATE_INDEXED_VIEW_SETTINGS ON
 
 This would be similar to ANSI_DEFAULTS, that sets 7 other settings to ON or OFF
 
-After you are done with all these settings you have a whole laundry list of restrictions. Some of these restriction seems a little restricting to me, I have heard that other RDBMS vendors don&#8217;t have some of these restrictions in their materialized views.
+After you are done with all these settings you have a whole laundry list of restrictions. Some of these restriction seems a little restricting to me, I have heard that other RDBMS vendors don't have some of these restrictions in their materialized views.
 
 ### Ordered views
 
@@ -72,9 +72,9 @@ SELECT TOP 100 PERCENT id FROM TestSort
 ORDER BY id
 ```
 
-This doesn&#8217;t work in 2005 or 2008
+This doesn't work in 2005 or 2008
 
-OF course you can do this and it will &#8216;work&#8217; and I wrote about it here: [Create a sorted view in SQL Server 2005 and SQL Server 2008][3]
+OF course you can do this and it will &#8216;work' and I wrote about it here: [Create a sorted view in SQL Server 2005 and SQL Server 2008][3]
 
 sql
 CREATE VIEW vTestSort2
@@ -82,7 +82,7 @@ AS
 SELECT TOP 99.99 PERCENT  id FROM TestSort
 ORDER BY id
 ```
-I say get rid of that, if people want the view to be in a specific order then specify ORDER BY&#8230;how lazy can you be?
+I say get rid of that, if people want the view to be in a specific order then specify ORDER BY…how lazy can you be?
 
 ### Unique constraints with one NULL value
 
@@ -103,11 +103,11 @@ Aaron already touched upon this with timestamp and rowversion in his post. SQL S
 
 **ISNULL and COALESCE**
   
-Those are not really the same, COALESCE allows for more than 1 expressions, preserves the datatype and is ANSI standard. So why do we need ISNULL? I know, I know..someone will post that ISNULL performs better&#8230;&#8230;..
+Those are not really the same, COALESCE allows for more than 1 expressions, preserves the datatype and is ANSI standard. So why do we need ISNULL? I know, I know..someone will post that ISNULL performs better……..
 
 **CURRENT_TIMESTAMP and GETDATE()**
   
-Banish GETDATE() and use CURRENT\_TIMESTAMP instead, the only reason people (me included) use GETDATE() is because we are lazy and it is shorter. As a matter of fact use CURRENT\_TIMESTAMP when you create a table and then script the table out&#8230;what do you see? It will be GETDATE()
+Banish GETDATE() and use CURRENT\_TIMESTAMP instead, the only reason people (me included) use GETDATE() is because we are lazy and it is shorter. As a matter of fact use CURRENT\_TIMESTAMP when you create a table and then script the table out…what do you see? It will be GETDATE()
 
 **User functions**
 

@@ -47,7 +47,7 @@ Some of the things that come to mind to think about when deciding which tools fi
 
 These rolled off just while writing this. You’ve probably gotten the point that it’s not just a matter of downloading a trial version of something along with becoming its slave in doing exactly what it needs you to do in order to get it to work simply because it gives you cool dashboard pictures. That doesn’t make it right for your instances. It really is as complex implementation and requires planning as does implementing any software package into your environment.
 
-I&#8217;m not going to plug anything that I use personally in this but if you are interested in landscape to what I use go ahead and comment or better yet, start up a thread in the [DB related forums][7].
+I'm not going to plug anything that I use personally in this but if you are interested in landscape to what I use go ahead and comment or better yet, start up a thread in the [DB related forums][7].
 
  [1]: http://www.youtube.com/watch?v=F63tYLhiqZ8&feature=related
  [2]: http://www.idera.com/Products/SQL-Server/SQL-diagnostic-manager/

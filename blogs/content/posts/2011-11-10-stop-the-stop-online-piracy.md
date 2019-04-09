@@ -21,11 +21,11 @@ Anyone from outside the US can safely ignore this post, though the details may p
 
 > To promote prosperity, creativity, entrepreneurship, and innovation by combating the theft of U.S. property, and for other purposes.
 
-You can see the full text of the bill at [OpenCongress][1]. The language of the bill is very vague (the cynic in me suspects intentionally so) but seems it would grant fairly sweeping powers to the government (and to &#8216;qualifying plaintiffs&#8217;) when it comes to dealing with alleged perpetrators of copyright infringement.
+You can see the full text of the bill at [OpenCongress][1]. The language of the bill is very vague (the cynic in me suspects intentionally so) but seems it would grant fairly sweeping powers to the government (and to &#8216;qualifying plaintiffs') when it comes to dealing with alleged perpetrators of copyright infringement.
 
-If you don&#8217;t have time to wade through it, you might be interested in what the [Electronic Frontier Foundation][2] has to say. Or maybe [Justin Bieber&#8217;s][3] take will be more to your liking. [Mike Masnick][4] has also had quite a bit to say, including an [open letter to Chris Dodd][5] that&#8217;s co-signed by some prominent internet developers and venture capitalists.
+If you don't have time to wade through it, you might be interested in what the [Electronic Frontier Foundation][2] has to say. Or maybe [Justin Bieber's][3] take will be more to your liking. [Mike Masnick][4] has also had quite a bit to say, including an [open letter to Chris Dodd][5] that's co-signed by some prominent internet developers and venture capitalists.
 
-That&#8217;s all I really have to say. I strongly believe anyone who works in the information technology industry should read as much as they can about this bill, and form their own opinion. And if it&#8217;s not a favorable opinion, you can participate in [American Censorship Day][6] on 11/16.
+That's all I really have to say. I strongly believe anyone who works in the information technology industry should read as much as they can about this bill, and form their own opinion. And if it's not a favorable opinion, you can participate in [American Censorship Day][6] on 11/16.
 
  [1]: http://www.opencongress.org/bill/112-h3261/text
  [2]: https://www.eff.org/deeplinks/2011/11/stop-online-piracy-act-blacklist-any-other-name-still-blacklist

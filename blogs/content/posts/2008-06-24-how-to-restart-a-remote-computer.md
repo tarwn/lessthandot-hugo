@@ -13,7 +13,7 @@ categories:
   - Operating Systems
 
 ---
-Sometimes you have to login to your work PC from home over the VPN and after a while for some reason or another you want to restart your PC. How can you do that? You can&#8217;t use the start menu because only the log off button is displayed
+Sometimes you have to login to your work PC from home over the VPN and after a while for some reason or another you want to restart your PC. How can you do that? You can't use the start menu because only the log off button is displayed
   
 Well one way is to open a command window and executing **shutdown -r** 
   
@@ -21,7 +21,7 @@ That will restart your computer
 
 Here is the basic usage of the shutdown command 
 
-Usage: shutdown \[-i -l -s -r -a\] \[-f\] \[-m \computername\] \[-t xx\] \[-c &#8220;comment&#8221;\] \[-d up:xx:yy\] 
+Usage: shutdown \[-i -l -s -r -a\] \[-f\] \[-m \computername\] \[-t xx\] \[-c “comment”\] \[-d up:xx:yy\] 
 
 No args Display this message (same as -?)
   
@@ -39,7 +39,7 @@ No args Display this message (same as -?)
   
 -t xx Set timeout for shutdown to xx seconds
   
--c &#8220;comment&#8221; Shutdown comment (maximum of 127 characters)
+-c “comment” Shutdown comment (maximum of 127 characters)
   
 -f Forces running applications to close without warning
   

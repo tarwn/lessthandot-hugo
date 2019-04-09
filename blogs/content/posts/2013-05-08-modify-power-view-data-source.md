@@ -26,7 +26,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <em>An error occurred while loading the model for the item or data source &#8216;EntityDataSource&#8217;. Verify that the connection information is correct and that you have permissions to access the data source.</em>
+  <em>An error occurred while loading the model for the item or data source &#8216;EntityDataSource'. Verify that the connection information is correct and that you have permissions to access the data source.</em>
 </p>
 
 [<img src="/wp-content/uploads/users/koenverbeeck/PowerViewDataSource/errorbis.png?mtime=1367999572" alt="" width="802" height="361" />][1]

@@ -18,7 +18,7 @@ tags:
   - programming
 
 ---
-Feelings about programming katas tend to fall into one of 3 buckets; disdain, indifference, or appreciation. The indifferent crowd generally doesn&#8217;t see what you learn from repeating the same coding exercise, while the disdainful crowd feels the same way, but at a much louder (and of course disdainful) volume. That leaves the group that feel there is value in repetitively coding the same exercise or coding numerous small code examples.
+Feelings about programming katas tend to fall into one of 3 buckets; disdain, indifference, or appreciation. The indifferent crowd generally doesn't see what you learn from repeating the same coding exercise, while the disdainful crowd feels the same way, but at a much louder (and of course disdainful) volume. That leaves the group that feel there is value in repetitively coding the same exercise or coding numerous small code examples.
 
 I was in the indifferent group, but then I tried it.
 
@@ -28,9 +28,9 @@ I was in the indifferent group, but then I tried it.
 
 After finishing [The Clean Coder][1] recently, I decided to give this kata thing a try. I started out with a fairly simple problem in a language I was comfortable with and spent 15-30 minutes each night trying a different variant or constraint. What I found was that even the act of setting up for a kata was a learning experience, in one case learning an entirely new unit test framework before I could even begin.
 
-Fast forward a couple weeks and I think this is becoming a regular part of my ongoing development. I&#8217;ve even taken to synching my local mercurial repositories up to [my BitBucket account][2] so that others can take advantage of the pre-setup projects and test scenarios. (I haven&#8217;t quite embraced the throw-away aspect yet, but I suspect I won&#8217;t be keeping all of my repetitive attempts.)
+Fast forward a couple weeks and I think this is becoming a regular part of my ongoing development. I've even taken to synching my local mercurial repositories up to [my BitBucket account][2] so that others can take advantage of the pre-setup projects and test scenarios. (I haven't quite embraced the throw-away aspect yet, but I suspect I won't be keeping all of my repetitive attempts.)
 
-In the past several weeks I&#8217;ve gained a lot more practice with mercurial, played with some concepts in C# (like Continuation Passing Style), and started digging into unit testing JavaScript. I&#8217;ve learned markdown simply by spending an hour or two formatting a series of text documents (an uninspired exercise, I&#8217;ll admit) and .. well, for the not much time investment I can already see that this will be a good habit to add.
+In the past several weeks I've gained a lot more practice with mercurial, played with some concepts in C# (like Continuation Passing Style), and started digging into unit testing JavaScript. I've learned markdown simply by spending an hour or two formatting a series of text documents (an uninspired exercise, I'll admit) and .. well, for the not much time investment I can already see that this will be a good habit to add.
 
 ## Why (or How) it Works
 
@@ -52,7 +52,7 @@ By selecting a fairly simple problem, we can choose to focus on any other aspect
 
 ### No Loss
 
-The last benefit to a programming kata is we can throw it away when we&#8217;re done or even stop it halfway and simply delete it. Whatever aspect we have chosen to focus on or challenge ourselves with, this is still a small bit of practice code. Rather than trying to learn something new with a piece of code we will eventually have to support, we can play in a sandbox and put it away when we&#8217;re done.
+The last benefit to a programming kata is we can throw it away when we're done or even stop it halfway and simply delete it. Whatever aspect we have chosen to focus on or challenge ourselves with, this is still a small bit of practice code. Rather than trying to learn something new with a piece of code we will eventually have to support, we can play in a sandbox and put it away when we're done.
 
 ## Where Can You Start
 
@@ -65,7 +65,7 @@ So, if you wanted to try this out, where could you start?
   * [TopCoder][8] &#8211; Though it exists as a programming competition, the sample and practice problems at TopCoder make good katas (if you can get the crash-friendly interface to work and find them, that is)
   * Blogging &#8211; Writing about a topic forces us to explore and better define or communicate it
 
-The best way to start is to pick something you feel like you can finish in 15-30 minutes and try to do a variant of it every day or two. If you feel like you&#8217;re not getting any value out of it after a week or two, you can stop; your time investment has been low. If you do start seeing some value in it, though, you have another tool for keeping your skills relevant and sharp.
+The best way to start is to pick something you feel like you can finish in 15-30 minutes and try to do a variant of it every day or two. If you feel like you're not getting any value out of it after a week or two, you can stop; your time investment has been low. If you do start seeing some value in it, though, you have another tool for keeping your skills relevant and sharp.
 
  [1]: http://www.amazon.com/gp/product/0137081073 "The Clean Coder at Amazon"
  [2]: http://bitbucket.org/tarwn "Go to my BitBucket account"

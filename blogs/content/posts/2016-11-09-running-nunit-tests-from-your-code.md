@@ -14,7 +14,7 @@ categories:
   - Uncategorized
 
 ---
-So I had this script that makes our dev and test environment and blahblah. In other words I needed to verify that what I had was good before starting the process and that checked if everything succeeded as it was supposed to after the script runs. Seems like what I needed were a bunch of tests. First to check no one tampered with the bits I needed to make this work and in the end see if the things I did worked. I repeated myself didn&#8217;t I? Good.
+So I had this script that makes our dev and test environment and blahblah. In other words I needed to verify that what I had was good before starting the process and that checked if everything succeeded as it was supposed to after the script runs. Seems like what I needed were a bunch of tests. First to check no one tampered with the bits I needed to make this work and in the end see if the things I did worked. I repeated myself didn't I? Good.
 
 So first of all I wrote some simple tests and found this piece of code on the [StackOverflow site][1] 
 
@@ -63,15 +63,15 @@ Or something like that.
   
 This was in a baseclass from which testclasses inherit (so you can pass some much needed parameters to them and then you just call execute and BAM! tests run. 
 
-This however only works for &#8220;simple&#8221; tests. As soon as you start to use testcase you are in trouble and a world of much code. Much code means much work and I don&#8217;t like to work. But I don&#8217;t have too. Because I can run the tests another way, with nunit.engine. 
+This however only works for “simple” tests. As soon as you start to use testcase you are in trouble and a world of much code. Much code means much work and I don't like to work. But I don't have too. Because I can run the tests another way, with nunit.engine. 
 
 Just nuget the NUnit.Engine package and make sure everyone of those files is in your outputfolder
 
 [<img src="/wp-content/uploads/2016/11/nunitengine.png" alt="nunitengine" width="184" height="184" class="alignnone size-full wp-image-4806" />][2]
 
-(I don&#8217;t care how you do this just make it happen, no need to kill kittens for this, but if you must). 
+(I don't care how you do this just make it happen, no need to kill kittens for this, but if you must). 
 
-I guess you don&#8217;t need the config or addins file. 
+I guess you don't need the config or addins file. 
 
 After that you can run tests with this.
 
@@ -140,7 +140,7 @@ This might be of use for you
   * [The testresults xml format][5]
   * [One of the errors you might get and a solution][6]
 
-And that&#8217;s it. Any questions?
+And that's it. Any questions?
 
  [1]: http://stackoverflow.com/questions/2834717/nunit-is-it-possible-to-continue-executing-test-after-assert-fails
  [2]: /wp-content/uploads/2016/11/nunitengine.png

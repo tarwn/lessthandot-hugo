@@ -48,7 +48,7 @@ _This session discusses what is needed to install, develop, and execute a basic 
   * Differentiating various package storage methods 
   * Running packages manually or on a schedule
 
-I will also be giving away a free licensed for [Gerasus&#8217;s SSIS-DTS Package Search 2.0][2]. Very cool and useful product! 
+I will also be giving away a free licensed for [Gerasus's SSIS-DTS Package Search 2.0][2]. Very cool and useful product! 
 
 I look forward to this event and getting into some great conversations with the attendees as well as having the opportunity to sit in on the other great sessions that are scheduled.
 

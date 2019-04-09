@@ -22,7 +22,7 @@ categories:
   <a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"><img alt="" src="/wp-content/uploads/users/grrlgeek/TSQLWednesday_thumb_578C7A06.jpg?mtime=1312985179" width="244" height="244" /></a>
 </div>
 
-It&#8217;s T-SQL <del>Tuesday </del>Wednesday again! This month&#8217;s topic, hosted by Adam Machanic, is &#8220;Crap Code&#8221;. We&#8217;ve all seen it, and we&#8217;ve all written it. Even me. Here&#8217;s one of my stories. 
+It's T-SQL <del>Tuesday </del>Wednesday again! This month's topic, hosted by Adam Machanic, is “Crap Code”. We've all seen it, and we've all written it. Even me. Here's one of my stories. 
 
 **The Code** 
 

@@ -517,9 +517,9 @@ SET DATEFORMAT  mdy
 SELECT * 
 FROM   team
 ```
-This problem is known as &#8216;finding islands of data&#8217;, and I always refer to this blog by Plamen Ratchev [Refactoring Ranges][2] when I am facing such scenario.
+This problem is known as &#8216;finding islands of data', and I always refer to this blog by Plamen Ratchev [Refactoring Ranges][2] when I am facing such scenario.
 
-The idea of a solution is to first identify the blocks of consecutive wins or loses by each team. Applying the idea from Plamen&#8217;s blog first step will be
+The idea of a solution is to first identify the blocks of consecutive wins or loses by each team. Applying the idea from Plamen's blog first step will be
 
 sql
 ;WITH cte AS (SELECT *, 

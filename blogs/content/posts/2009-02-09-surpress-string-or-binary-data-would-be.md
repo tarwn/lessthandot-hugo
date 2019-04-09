@@ -40,7 +40,7 @@ String or binary data would be truncated.
   
 The statement has been terminated.
 
-But what if you don&#8217;t care about if data is truncated, what if you want to store only what fits? You could do something like this
+But what if you don't care about if data is truncated, what if you want to store only what fits? You could do something like this
 
 sql
 insert bla values (left('123',2))

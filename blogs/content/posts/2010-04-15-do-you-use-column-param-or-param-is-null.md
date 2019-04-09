@@ -27,7 +27,7 @@ You see this kind of question all the time in newsgroups/forums, someone wants t
 
 WHERE (SomeColumn=@col OR @col IS NULL)
 
-The problem with that approach is that it doesn&#8217;t perform well, let&#8217;s take a look, first create this table
+The problem with that approach is that it doesn't perform well, let's take a look, first create this table
 
 sql
 USE tempdb
@@ -80,7 +80,7 @@ IF @col IS NOT NULL
 EXEC sp_executesql @SQL,N'@InnerParamcol INT',@col
 ```
 
-Now let&#8217;s run these queries and take a look at the reads
+Now let's run these queries and take a look at the reads
 
 sql
 SET STATISTICS IO ON
@@ -120,11 +120,11 @@ GO
 
 _(8 row(s) affected)
   
-Table &#8216;Test&#8217;. Scan count 1, logical reads 6, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p> 
+Table &#8216;Test'. Scan count 1, logical reads 6, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p> 
 
 (8 row(s) affected)
   
-Table &#8216;Test&#8217;. Scan count 1, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</em>
+Table &#8216;Test'. Scan count 1, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</em>
 
 As you can see the dynamic SQL query only uses 2 reads where the other solution uses 6 reads.
 
@@ -134,7 +134,7 @@ Here is an image of the execution plan for both queries.
 
 The execution plan show that the dynamic SQL is using a seek where the other query is using a scan
 
-As you can see, there is a place for dynamic SQL and if you use it correctly you will also get plan reuse, take a look at the post [Changing exec to sp_executesql doesn&#8217;t provide any benefit if you are not using parameters correctly][1] to find out how to use dynamic SQL correctly
+As you can see, there is a place for dynamic SQL and if you use it correctly you will also get plan reuse, take a look at the post [Changing exec to sp_executesql doesn't provide any benefit if you are not using parameters correctly][1] to find out how to use dynamic SQL correctly
 
 **[EDIT]**
 

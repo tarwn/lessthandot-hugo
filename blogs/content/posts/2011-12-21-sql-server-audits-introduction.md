@@ -15,13 +15,13 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Previously DBA&#8217;s and in some cases even developers had to write custom triggers or set up various profiler traces to monitor what was happening in their SQL Server instances. When measures like this were left to the junior staff joining the company, it held potential disastrous complications in various forms ranging from bad performance due to the overhead or storage issues when traces are not monitored and archived. Some of these issues could take hours to resolve when the steps taken to audit the system is not documented and the root cause obscured in the form of witty triggers firing relentlessly.
+Previously DBA's and in some cases even developers had to write custom triggers or set up various profiler traces to monitor what was happening in their SQL Server instances. When measures like this were left to the junior staff joining the company, it held potential disastrous complications in various forms ranging from bad performance due to the overhead or storage issues when traces are not monitored and archived. Some of these issues could take hours to resolve when the steps taken to audit the system is not documented and the root cause obscured in the form of witty triggers firing relentlessly.
 
-Then came SQL Server 2008&#8230; One of the numerous &#8220;enhancements&#8221; or features introduced in SQL Server 2008 are the Audit Specifications. The new component is built on top of the extended events feature, and there for provides a lightweight auditing mechanism.
+Then came SQL Server 2008… One of the numerous “enhancements” or features introduced in SQL Server 2008 are the Audit Specifications. The new component is built on top of the extended events feature, and there for provides a lightweight auditing mechanism.
 
 In this series which will continue over the next few days, I will cover some of the basics to set up auditing such as requirements, use cases, and some general audits that will poke their heads out in the environment. 
 
-To start the series off, let&#8217;s look at the components that makes up the auditing feature.
+To start the series off, let's look at the components that makes up the auditing feature.
 
 Both the target and server specification can be found under the instance security list, and the database level specification can be found under the security lists for the various individual databases.
 

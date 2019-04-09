@@ -35,7 +35,7 @@ We had a lot of blog posts in 2011, I blogged 105 times the last year. Here is a
   5. [6 ways to import data into SQL Server][5]
   6. [SQL Server Zipcode Latitude/Longitude proximity distance search][6]
   7. [How to enable xp_cmdshell and Ad Hoc Distributed Queries on SQL Server 2005][7]
-  8. [VB.Net isn&#8217;t C#][8]
+  8. [VB.Net isn't C#][8]
   9. [Trying the Stand-Up Desk][9]
  10. [Suppress string or binary data would be truncated messages with the ANSI WARNINGS setting][10]
 
@@ -365,7 +365,7 @@ Here is what people searched for most when they visited our site from a search e
         </td>
         
         <td>
-          ole db provider &#8216;microsoft.jet.oledb.4.0&#8217; cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.
+          ole db provider &#8216;microsoft.jet.oledb.4.0' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.
         </td>
       </tr>
       
@@ -525,7 +525,7 @@ Here is what people searched for most when they visited our site from a search e
         </td>
         
         <td>
-          ole db provider &#8216;microsoft.ace.oledb.12.0&#8217; cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.
+          ole db provider &#8216;microsoft.ace.oledb.12.0' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.
         </td>
       </tr>
       
@@ -572,7 +572,7 @@ Here is what people searched for most when they visited our site from a search e
   </table>
 </div>
 
-That&#8217;s all for this post, see you next year
+That's all for this post, see you next year
 
  [1]: /index.php/ITProfessionals/ProfessionalDevelopment/should-i-abandon-vb-net
  [2]: /index.php/DataMgmt/DataDesign/calculating-mean-median-and-mode-with-sq

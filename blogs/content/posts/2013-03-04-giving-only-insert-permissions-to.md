@@ -81,7 +81,7 @@ Here is the error message that you will get
 
 _Msg 229, Level 14, State 5, Line 1
   
-The SELECT permission was denied on the object &#8216;TestAccess&#8217;, database &#8216;TestPermissions&#8217;, schema &#8216;dbo&#8217;._
+The SELECT permission was denied on the object &#8216;TestAccess', database &#8216;TestPermissions', schema &#8216;dbo'._
 
 Running the insert statement is no problem
 
@@ -95,7 +95,7 @@ sql
 GRANT SELECT,INSERT ON TestAccess2 TO SomeTestUser
 ```
 
-As you can see you can combine privileges with the GRANT statement, you don&#8217;t have to do the separately
+As you can see you can combine privileges with the GRANT statement, you don't have to do the separately
 
 You just gave insert and select permissions to SomeTestUser for the TestAccess2 table
 

@@ -21,13 +21,13 @@ tags:
   - s3
 
 ---
-One of the projects I have been working on is a system for managing content on our network of websites. One of our requirements is that changes don&#8217;t take effect immediately, but on a separate preview network where our customer can look to see that her changes show the way she expected before pushing them into the production environment. Because of this requirement, we need to maintain 2 separate sets of product images (hosted on Amazon S3, with their CloudFront CDN used for the production sites).
+One of the projects I have been working on is a system for managing content on our network of websites. One of our requirements is that changes don't take effect immediately, but on a separate preview network where our customer can look to see that her changes show the way she expected before pushing them into the production environment. Because of this requirement, we need to maintain 2 separate sets of product images (hosted on Amazon S3, with their CloudFront CDN used for the production sites).
 
 Allowing our content management system to save image changes to Amazon and render their locations in our app was trivial, but we found the push mechanism for moving changes into the live environment a bit challenging. The work for moving database changes was already done when I started on the project, so most of the challenges I saw were in relation to copying the images. What we really wanted was a true bucket copy (emptying the destination bucket altogether and replacing its content with that of the source bucket) &#8211; but the [REST API for S3][1] does not support copy at the bucket level currently.
 
-When designing our solution we needed to optimize not only on performance and maintainability, but on cost. The [pricing model for S3][2] has charges associated with most request types so it&#8217;s not efficient to simply copy all the items in the source bucket to the destination. In addition, this wouldn&#8217;t handle deleting objects that have been removed in the source bucket. So the naive solution becomes a two step process of deleting all of a bucket&#8217;s content, then copying over all the content from the other bucket. In a scenario where the actual degree of change is likely to be minimal incurring this kind of cost is not a great option (and it&#8217;s likely to perform poorly as well). When you add the challenge of CDN cache invalidation and [pricing for CloudFront][3] to the equation this looks even less attractive.
+When designing our solution we needed to optimize not only on performance and maintainability, but on cost. The [pricing model for S3][2] has charges associated with most request types so it's not efficient to simply copy all the items in the source bucket to the destination. In addition, this wouldn't handle deleting objects that have been removed in the source bucket. So the naive solution becomes a two step process of deleting all of a bucket's content, then copying over all the content from the other bucket. In a scenario where the actual degree of change is likely to be minimal incurring this kind of cost is not a great option (and it's likely to perform poorly as well). When you add the challenge of CDN cache invalidation and [pricing for CloudFront][3] to the equation this looks even less attractive.
 
-This post will go over the implementation we came up with for bucket copying. Code is written in C# using the [AWS SDK for .net][4], but it is all possible using the REST API directly. I will add that the AWS SDK is a very nice tool &#8211; typically I would choose to use [RestSharp][5] to go directly at the REST API, but Amazon has taken a lot of time to build a nice fluent syntax for building requests and some helper functions that make life easy enough to make it worth a look &#8211; it is far nicer than some of the other client libraries out there, in large part because it doesn&#8217;t try to hide the fact that you&#8217;re working with a set of webservices. But I digress. The process for copying a bucket is pretty straightforward:
+This post will go over the implementation we came up with for bucket copying. Code is written in C# using the [AWS SDK for .net][4], but it is all possible using the REST API directly. I will add that the AWS SDK is a very nice tool &#8211; typically I would choose to use [RestSharp][5] to go directly at the REST API, but Amazon has taken a lot of time to build a nice fluent syntax for building requests and some helper functions that make life easy enough to make it worth a look &#8211; it is far nicer than some of the other client libraries out there, in large part because it doesn't try to hide the fact that you're working with a set of webservices. But I digress. The process for copying a bucket is pretty straightforward:
 
   1. Check for destination bucket existence, create if needed
   2. List Objects in Both Buckets
@@ -39,7 +39,7 @@ So here we go.</p>
 
 ### Check for Bucket Existence
 
-Checking for bucket existence is a piece of cake, thanks to a static helper function in the .net SDK that takes a bucket name and an s3 client. I chose to hide this call behind an instance method so that I could mock it during unit tests, but this is not strictly necessary. I think that behind the scenes this method simply issues a HEAD request on a bucket and returns false if a 404 is encountered. As you&#8217;d expect creating the bucket is done via a PUT request on the bucket resource. Code is as follows:
+Checking for bucket existence is a piece of cake, thanks to a static helper function in the .net SDK that takes a bucket name and an s3 client. I chose to hide this call behind an instance method so that I could mock it during unit tests, but this is not strictly necessary. I think that behind the scenes this method simply issues a HEAD request on a bucket and returns false if a 404 is encountered. As you'd expect creating the bucket is done via a PUT request on the bucket resource. Code is as follows:
 
 ```csharp
 void CreateDestinationBucketIfNeeded(string bucketName)
@@ -61,7 +61,7 @@ public virtual bool BucketExists(string bucketName)
 
 ### List Objects in a Bucket
 
-Listing objects in an S3 bucket is very easy. You just need to issue a signed GET request to myBucket.s3.amazonaws.com. The only gotcha is it only returns up to 1000 objects in a single response, so getting a complete list can take multiple requests. It helps to know a few things when putting this together &#8211; first that objects are listed in alphabetical order, second that we can include a &#8220;marker&#8221; parameter in our request telling AWS what key to start with, and third that the response from this method includes an &#8220;IsTruncated&#8221; flag. The C# code to list objects looks like this:
+Listing objects in an S3 bucket is very easy. You just need to issue a signed GET request to myBucket.s3.amazonaws.com. The only gotcha is it only returns up to 1000 objects in a single response, so getting a complete list can take multiple requests. It helps to know a few things when putting this together &#8211; first that objects are listed in alphabetical order, second that we can include a “marker” parameter in our request telling AWS what key to start with, and third that the response from this method includes an “IsTruncated” flag. The C# code to list objects looks like this:
 
 ```csharp
 IEnumerable<S3Object> ObjectsFor(string bucketName)
@@ -94,9 +94,9 @@ IEnumerable<S3Object> ObjectsFor(string bucketName)
 
 Once we have the contents of both buckets, we need to determine which objects need to be inserted to, updated in, and deleted from the destination bucket. For deleted objects we will be issuing DELETE requests, and for Inserts and Updates we will be copying objects across using a special PUT request. The DELETE requests can be batched, supporting up to 1000 deletions in a single request, while the PUT requests need to be issued on an object by object basis.
 
-These subsets of can be identified by comparing the objects in source and destination bucket. Deletes will include all objects in the destination that aren&#8217;t in the source. Updates will include all objects present in both buckets that have changed (this can be determined by comparing the ETags on the objects). Inserts will of course contain all objects that exist in the source but not the destination.
+These subsets of can be identified by comparing the objects in source and destination bucket. Deletes will include all objects in the destination that aren't in the source. Updates will include all objects present in both buckets that have changed (this can be determined by comparing the ETags on the objects). Inserts will of course contain all objects that exist in the source but not the destination.
 
-C# helps us out a bit here, as LINQ makes it easy to do these comparisons without having to do any nasty looping. For the inserts and deletes we need to spoof an outer join which LINQ doesn&#8217;t really have a great API for, but I still find it helpful to be able to think about these operations in set-based terms instead of in terms of the tedious iterative comparison that actually gets done behind all the LINQ magic.
+C# helps us out a bit here, as LINQ makes it easy to do these comparisons without having to do any nasty looping. For the inserts and deletes we need to spoof an outer join which LINQ doesn't really have a great API for, but I still find it helpful to be able to think about these operations in set-based terms instead of in terms of the tedious iterative comparison that actually gets done behind all the LINQ magic.
 
 Code to identify these sets of objects can be found here:
 
@@ -179,9 +179,9 @@ while(toDelete.Count > 0)
 
 ### Perform Updates
 
-This step is not really anything special but it is different enough for me to exclude it from it&#8217;s counterparts in step 3. We are basically doing the same copy operation for each object that we did for the inserts, but we also need to worry about cache invalidation on the CloudFront CDN. The invalidation can be batched, so it makes sense to build the list of keys updated while we do the copy, then send a single invalidation request.
+This step is not really anything special but it is different enough for me to exclude it from it's counterparts in step 3. We are basically doing the same copy operation for each object that we did for the inserts, but we also need to worry about cache invalidation on the CloudFront CDN. The invalidation can be batched, so it makes sense to build the list of keys updated while we do the copy, then send a single invalidation request.
 
-So we can change the code for copy to something like this, taking an optional parameter containing a function to add the object&#8217;s key to a list of keys to be invalidated:
+So we can change the code for copy to something like this, taking an optional parameter containing a function to add the object's key to a list of keys to be invalidated:
 
 ```csharp
 void CopyObjects(IEnumerable<S3Object> items, Func<S3Object, CopyObjectRequest> requestBuilder, Action<string> addToInvalidationList = null)
@@ -207,9 +207,9 @@ void CopyObjects(IEnumerable<S3Object> items, Func<S3Object, CopyObjectRequest> 
 }
 ```
 
-I&#8217;ll concede that this is not the simplest possible thing &#8211; it would probably be easier to call the old copy code and then pass the keys from the updated objects collection, but I do like that it captures the keys of the objects that are actually copied. If we changed the approach to do something like what is happening with the delete operation that trims the collection while processing, the keys collection we pass for invalidation would end up empty. I could also just have too much functional programming on the brain I guess 😉
+I'll concede that this is not the simplest possible thing &#8211; it would probably be easier to call the old copy code and then pass the keys from the updated objects collection, but I do like that it captures the keys of the objects that are actually copied. If we changed the approach to do something like what is happening with the delete operation that trims the collection while processing, the keys collection we pass for invalidation would end up empty. I could also just have too much functional programming on the brain I guess 😉
 
-Once we have the list of keys, performing the actual invalidation is relatively simple. We do need to generate a unique &#8220;caller reference&#8221; that amazon uses to ensure that duplicate requests aren&#8217;t processed (remember, each object invalidated triggers some kind of action on potentially hundreds of servers, so this is not a cheap operation for you OR for Amazon). The hardest part is probably identifying whether there is a CloudFront distribution to worry about in the first place. The key to finding whether there is a distribution attached to a bucket or not relies on the knowledge that for an s3 origin, the DNSName property will be &#8220;bucketname.s3.amazonaws.com&#8221; &#8211; so by stripping out &#8220;.s3.amazonaws.com&#8221; from our available distributions&#8217; DNS names we can find if one matches our bucket.
+Once we have the list of keys, performing the actual invalidation is relatively simple. We do need to generate a unique “caller reference” that amazon uses to ensure that duplicate requests aren't processed (remember, each object invalidated triggers some kind of action on potentially hundreds of servers, so this is not a cheap operation for you OR for Amazon). The hardest part is probably identifying whether there is a CloudFront distribution to worry about in the first place. The key to finding whether there is a distribution attached to a bucket or not relies on the knowledge that for an s3 origin, the DNSName property will be “bucketname.s3.amazonaws.com” &#8211; so by stripping out “.s3.amazonaws.com” from our available distributions' DNS names we can find if one matches our bucket.
 
 The code for invalidation looks like this:
 
@@ -250,7 +250,7 @@ string GetDistributionIdFor(string bucketName)
 
 ### Tying it All Together
 
-OK so we have all these methods to facilitate copying buckets but how do we actually do it? I&#8217;m glad you asked.
+OK so we have all these methods to facilitate copying buckets but how do we actually do it? I'm glad you asked.
 
 ```csharp
 public void Copy(string sourceBucket, string destinationBucket)
@@ -290,9 +290,9 @@ public void Copy(string sourceBucket, string destinationBucket)
 }
 ```
 
-Note that the delete happens inline instead of in a separate method as with the copies. This is because it wasn&#8217;t reusable, and because the act of deleting the items changes the collection. As a result it seemed cleaner to just do it inline.
+Note that the delete happens inline instead of in a separate method as with the copies. This is because it wasn't reusable, and because the act of deleting the items changes the collection. As a result it seemed cleaner to just do it inline.
 
-This is really all there is to it. Hopefully copying buckets in this manner is something that finds its way into the REST API for S3 at some point, but in the meantime this process seems to be working pretty well. It is not the prettiest code, but it runs reasonably fast for our smallish buckets, and I think it is doing a good job minimizing what our customer has to pay for the service each month. It was interesting working on this problem, because it forced thinking about the problem in terms of Amazon&#8217;s pricing structure (though because Amazon doesn&#8217;t charge for data transfer within s3 regions it really becomes the same as thinking in terms of minimizing http requests). This kind of thing isn&#8217;t always a driver of implementation so it was a nice mental exercise. Now we just have to hope they never change their pricing structure 😉
+This is really all there is to it. Hopefully copying buckets in this manner is something that finds its way into the REST API for S3 at some point, but in the meantime this process seems to be working pretty well. It is not the prettiest code, but it runs reasonably fast for our smallish buckets, and I think it is doing a good job minimizing what our customer has to pay for the service each month. It was interesting working on this problem, because it forced thinking about the problem in terms of Amazon's pricing structure (though because Amazon doesn't charge for data transfer within s3 regions it really becomes the same as thinking in terms of minimizing http requests). This kind of thing isn't always a driver of implementation so it was a nice mental exercise. Now we just have to hope they never change their pricing structure 😉
 
  [1]: http://docs.amazonwebservices.com/AmazonS3/latest/API/RESTBucketOps.html
  [2]: http://aws.amazon.com/s3/pricing/

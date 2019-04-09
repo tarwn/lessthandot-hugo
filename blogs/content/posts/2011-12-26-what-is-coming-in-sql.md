@@ -78,7 +78,7 @@ Before converting, use TRY_CONVERT that will tell you if the value can be conver
   
 There is some cool documentation available, this includes white papers and videos
 
-[Microsoft SQL Server, codename &#8220;Denali&#8221;, will be the last release to support OLE DB, ODBC is the new new thing][17]
+[Microsoft SQL Server, codename “Denali”, will be the last release to support OLE DB, ODBC is the new new thing][17]
   
 Looks like OLE DB has run its course, ODBC is the new thing
 

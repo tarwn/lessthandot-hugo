@@ -27,15 +27,15 @@ I toyed around with a few different options, and debated some of them out with A
 
 ### Everything is better with LINQ
 
-One of the great things about observable collections is that you can pass them around like candy, make a change to it from any number of locations, and it will update all of the controls bound to it. Mix in a little LINQ and you&#8217;ve got some awesome functionality with very little code.
+One of the great things about observable collections is that you can pass them around like candy, make a change to it from any number of locations, and it will update all of the controls bound to it. Mix in a little LINQ and you've got some awesome functionality with very little code.
 
-### What Do You Mean CollectionChanged Doesn&#8217;t Fire?
+### What Do You Mean CollectionChanged Doesn't Fire?
 
 One of the things I needed to do though, was to detect when the user selected an item from the collection. When the IsChecked flag was flipped, I needed to go to the server to get any child items. But the Observable Collection does not expose property changed events, which started me down this path. 
 
 ### The User Interface
 
-For this demo app, the UI is pretty simple. I just have two list boxes. Each list box has a DataTemplate with a CheckBox in it. The CheckBox has its Content bound to the &#8220;Text&#8221; member and IsChecked is bound to a like named member. The IsChecked property is also set to TwoWay mode. This means that when the user changes its checked state, it will update the underlying collection.
+For this demo app, the UI is pretty simple. I just have two list boxes. Each list box has a DataTemplate with a CheckBox in it. The CheckBox has its Content bound to the “Text” member and IsChecked is bound to a like named member. The IsChecked property is also set to TwoWay mode. This means that when the user changes its checked state, it will update the underlying collection.
 
 ```XAML
 <ListBox x:Name="lst1" Grid.Column="0" >
@@ -49,7 +49,7 @@ For this demo app, the UI is pretty simple. I just have two list boxes. Each lis
 
 ### On to the Items
 
-For the most part the Item class just contains our properties, but we have to beef it up just a bit. First, it needs <code class="codespan">Implements System.ComponentModel.INotifyPropertyChanged</code>. INotifyPropertyChanged will create a public event called &#8220;PropertyChanged&#8221;. In order to save ourselves a bit of repeating code, we can make a method called _onPropertyChanged_ that raises that event for us:
+For the most part the Item class just contains our properties, but we have to beef it up just a bit. First, it needs <code class="codespan">Implements System.ComponentModel.INotifyPropertyChanged</code>. INotifyPropertyChanged will create a public event called “PropertyChanged”. In order to save ourselves a bit of repeating code, we can make a method called _onPropertyChanged_ that raises that event for us:
 
 ```VB.Net
 Private Sub onPropertyChanged(ByVal PropertyName As String)
@@ -74,11 +74,11 @@ Private _IsChecked As Boolean
         End Property
 ```
 
-Note that we are only calling the onPropertyChanged event when the value has indeed changed. Also, ensure that the underlying value has changed BEFORE you call the onPropertyChanged, otherwise you&#8217;ll wind up with some really interesting behavior.
+Note that we are only calling the onPropertyChanged event when the value has indeed changed. Also, ensure that the underlying value has changed BEFORE you call the onPropertyChanged, otherwise you'll wind up with some really interesting behavior.
 
 ### The Collection
 
-The Observable collection doesn&#8217;t expose the PropertyChanged event by default, so we have to bubble it up ourselves. That means we need to make a new class that inherits from ObservableCollection. In order to get a handler on the Items PropertyChanged events, we need to override the InsertItem and RemoveItem methods. Inside them we Add and Remove an event handler for the Property Changed event. And in the procedure that handles that event, all we need to do is to raise our new public event.
+The Observable collection doesn't expose the PropertyChanged event by default, so we have to bubble it up ourselves. That means we need to make a new class that inherits from ObservableCollection. In order to get a handler on the Items PropertyChanged events, we need to override the InsertItem and RemoveItem methods. Inside them we Add and Remove an event handler for the Property Changed event. And in the procedure that handles that event, all we need to do is to raise our new public event.
 
 ### Back to the MainPage
 

@@ -45,7 +45,7 @@ The enhanced for loop looks like this: `for(Number n : Numbers.getList())`
   
 In C# the foreach loop looks like this: `foreach (Number n in Numbers.getList())`
 
-Java doesn&#8217;t have a goto statement but you can accomplish the same thing by using a label&#8230;see you can still write spaghetti code 🙂
+Java doesn't have a goto statement but you can accomplish the same thing by using a label…see you can still write spaghetti code 🙂
 
 **Switch statement**
   
@@ -91,22 +91,22 @@ That will print
   
 -128
 
-Java doesn&#8217;t have the checked keyword like in c#, you need to roll your own if you want to prevent this kind of stuff
+Java doesn't have the checked keyword like in c#, you need to roll your own if you want to prevent this kind of stuff
 
-If you try assigning 128 to a byte, you will get an error, it won&#8217;t become -128
+If you try assigning 128 to a byte, you will get an error, it won't become -128
 
 ```java
 byte x =128;
 System.out.println(x);
 ```
 
-Exception in thread &#8220;main&#8221; java.lang.Error: Unresolved compilation problem:
+Exception in thread “main” java.lang.Error: Unresolved compilation problem:
   
 Type mismatch: cannot convert from int to byte
   
 at com.denis.MainClass.main(MainClass.java:12)
 
-You also can&#8217;t convert straight from an int to a string
+You also can't convert straight from an int to a string
 
 ```java
 String s = "123";
@@ -114,7 +114,7 @@ int z = s;
 System.out.println(z);
 ```
 
-Exception in thread &#8220;main&#8221; java.lang.Error: Unresolved compilation problem:
+Exception in thread “main” java.lang.Error: Unresolved compilation problem:
   
 Type mismatch: cannot convert from String to int
 
@@ -126,7 +126,7 @@ int z = Integer.parseInt(s);
 System.out.println(z);
 ```
 
-Looks like Java doesn&#8217;t have TryParse like c#
+Looks like Java doesn't have TryParse like c#
 
 To test if strings are the same use equals or equalsIgnoreCase
   
@@ -170,12 +170,12 @@ varargs is a variable-length argument list
 
 public static void main(String[] args)
   
-public static void main(String&#8230; args)
+public static void main(String… args)
 
-public static void main(String&#8230; args){
+public static void main(String… args){
       
 for (String s: args ) System.out.println(s);
     
 }
 
-Arrays and Objects instantiation, constructors, default constructors were also covered. We covered much more than I wrote down, I was busy with listening and doing the labs so didn&#8217;t have the opportunity to write it all down
+Arrays and Objects instantiation, constructors, default constructors were also covered. We covered much more than I wrote down, I was busy with listening and doing the labs so didn't have the opportunity to write it all down

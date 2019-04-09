@@ -31,7 +31,7 @@ tags:
 
 <img src="/wp-content/uploads/blogs/DataMgmt/sqlu_logo.gif" alt="" title="" width="150" height="166" align="left" /> 
 
-Welcome to the last class of HA / DR week for SQL University. It has been a great week discussing these topics with all of you. We [recapped][1] those classes in order to highlight the key points over the week yesterday. So far we&#8217;ve covered a great deal but really have only scratched the surface of SQL Server features for HA and DR. Today will be another scratch in the surface regarding the High Availability points for SQL Server. Be sure to check the resources links through this article. They will greatly add an extension to today and further build your knowledge of the vast amount of abilities we have at our disposal. 
+Welcome to the last class of HA / DR week for SQL University. It has been a great week discussing these topics with all of you. We [recapped][1] those classes in order to highlight the key points over the week yesterday. So far we've covered a great deal but really have only scratched the surface of SQL Server features for HA and DR. Today will be another scratch in the surface regarding the High Availability points for SQL Server. Be sure to check the resources links through this article. They will greatly add an extension to today and further build your knowledge of the vast amount of abilities we have at our disposal. 
 
 Now that HA / DR week is completed, please take a moment to rate this week (and others) by filling out the [SQL University Course Evaluation][2] and select HA/DR Week. 
 
@@ -39,7 +39,7 @@ Now that HA / DR week is completed, please take a moment to rate this week (and 
 
 High Availability (HA) for SQL Server can be defined in one sentence: Keep data available 100% of the time. That really is the objective of HA and nothing short of that.
 
-Realistically, 100% is unachievable given the nature of computing. There are needs for a SQL Server and Windows Server to be rebooted at least once a year. This is to allow for updates on both SQL Server and Windows to be maintained. So the ranking method we use for measuring high availability is the &#8220;nines&#8221; scale. The five nines is a goal that most database
+Realistically, 100% is unachievable given the nature of computing. There are needs for a SQL Server and Windows Server to be rebooted at least once a year. This is to allow for updates on both SQL Server and Windows to be maintained. So the ranking method we use for measuring high availability is the “nines” scale. The five nines is a goal that most database
   
 administrators and teams set for their standards. The five nines level is a height of availability that is truly an achievement and one to be proud of. 
 

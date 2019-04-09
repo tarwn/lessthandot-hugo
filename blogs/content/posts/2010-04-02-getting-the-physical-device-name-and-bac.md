@@ -24,7 +24,7 @@ tags:
 ---
 There was a need to create a job that would take the last backup from one server and restore it on another server every day at 5 AM. There are a couple of things you need to know before you do that; some of these things are: permissions, what is the file name of the last backup, are there any jobs that need to be stopped and disabled before you restore etc etc.
 
-This post will focus on getting the physical name for the last backup for a database. Let&#8217;s look at some code.
+This post will focus on getting the physical name for the last backup for a database. Let's look at some code.
 
 Create a test database
 

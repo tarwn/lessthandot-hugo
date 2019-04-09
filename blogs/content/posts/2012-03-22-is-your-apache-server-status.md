@@ -73,7 +73,7 @@ CPU Usage: u1734.41 s1457.05 cu0 cs0 &#8211; 1.59% CPU load
 
 This will be followed by a list of IP addresses and pages that were served.
 
-This can potentially be dangerous, it doesn&#8217;t long to write a program that will crawl the web and checking if it gets anything back when hitting domains with server-status appended
+This can potentially be dangerous, it doesn't long to write a program that will crawl the web and checking if it gets anything back when hitting domains with server-status appended
 
 Several high traffic site have this enabled, just hit http://www.washingtonpost.com/ or http://boston.com/ and add server-status
 
@@ -85,6 +85,6 @@ And it seems that washingtonpost.com disabled it. As of this morning you see thi
 
 _Forbidden</p> 
 
-You don&#8217;t have permission to access /server-status on this server.
+You don't have permission to access /server-status on this server.
 
 Apache Server at failover.washingtonpost.com Port 80</em>

@@ -26,7 +26,7 @@ It looks like Visual Studio 2010 Service Pack 1 is available on MSDN, the files 
 
 I have been running the beta for a couple of weeks at home, finally I can install this at work.
 
-If you don&#8217;t have a msdn subscription, then you can download Visual Studio 2010 Service Pack 1 here: http://www.microsoft.com/downloads/en/details.aspx?FamilyID=75568aa6-8107-475d-948a-ef22627e57a5&displaylang=en
+If you don't have a msdn subscription, then you can download Visual Studio 2010 Service Pack 1 here: http://www.microsoft.com/downloads/en/details.aspx?FamilyID=75568aa6-8107-475d-948a-ef22627e57a5&displaylang=en
 
 ![][1]
 

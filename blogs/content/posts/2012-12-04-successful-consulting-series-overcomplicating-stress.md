@@ -34,7 +34,7 @@ Let’s break things down into distinct topics and then pull them together to se
 
 **Over Complication**
 
-_It&#8217;s just a computer connected to another computer. Some are connected a little differently and some are just a little bigger. Some have one piece, some have a few more. That&#8217;s it! Simplifying them clears the view of how they work and how to make them work better._ __
+_It's just a computer connected to another computer. Some are connected a little differently and some are just a little bigger. Some have one piece, some have a few more. That's it! Simplifying them clears the view of how they work and how to make them work better._ __
 
 The above quote has a lot of merit to it.  Computing has evolved farther than I’d expect a lot have thought it would.  We still face the same challenges with computing and technology that we always have; system communications on unlike platforms and so on.  Although those challenges exist, they are simply challenges in an equation, and we have choices to make on how we manage them.  In reality, even when a mainframe was the big beastly monster filling half the building, the same fundamental situation existed with a few moving pieces added to the stream.
 

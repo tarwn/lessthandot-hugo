@@ -97,7 +97,7 @@ ASP.Net Core has Cookie Middleware we can use out of the box: [Using Cookie Auth
 
 
 <p>
-  <i>Note the OnRedirectToLogin logic, this causes the middleware to return basic 401 HTTP errors for calls through the &#8220;/api&#8221; path instead of redirects to the login page</i>
+  <i>Note the OnRedirectToLogin logic, this causes the middleware to return basic 401 HTTP errors for calls through the “/api” path instead of redirects to the login page</i>
 </p>
 
 
@@ -164,13 +164,13 @@ public class InteractiveAccountController : Controller
 
 
 <p>
-  Once we have an authenticated user, we can add the standard <code>[Authorize]</code> attribute on any controllers or methods to ensure access will require authentication (or challenge if it&#8217;s not present). If we had multiple methods of authentication (interactive user, some API access, etc), we could further restrict these actions to just the cookie-based authenticated requests by specifying that authentication scheme in the attribute:<br />
+  Once we have an authenticated user, we can add the standard <code>[Authorize]</code> attribute on any controllers or methods to ensure access will require authentication (or challenge if it's not present). If we had multiple methods of authentication (interactive user, some API access, etc), we could further restrict these actions to just the cookie-based authenticated requests by specifying that authentication scheme in the attribute:<br />
   <code>[Authorize(ActiveAuthenticationSchemes = "NAME_OF_YOUR_COOKIE_SCHEME")]</code>
 </p>
 
 
 <p>
-  An easy way to verify things are in working order is to decorate another Controller/Action with Authorize and attempt to visit it. We should get redirected to <code>Unauthorized</code> on the Account controller above. If we visit <code>Login</code> first, then visit our sample Action we should be allowed in. Visit <code>Logout</code> and then our sample Action, we&#8217;re back at Unauthorized.
+  An easy way to verify things are in working order is to decorate another Controller/Action with Authorize and attempt to visit it. We should get redirected to <code>Unauthorized</code> on the Account controller above. If we visit <code>Login</code> first, then visit our sample Action we should be allowed in. Visit <code>Logout</code> and then our sample Action, we're back at Unauthorized.
 </p>
 
 
@@ -180,7 +180,7 @@ public class InteractiveAccountController : Controller
 
 
 <p>
-  Now that we have the middleware in place, the Account pages, and a sample page, we should add some protection to make sure we don&#8217;t leave any pages exposed accidentally. This step is optional, but it&#8217;s something I prefer to do for every application I work on. 
+  Now that we have the middleware in place, the Account pages, and a sample page, we should add some protection to make sure we don't leave any pages exposed accidentally. This step is optional, but it's something I prefer to do for every application I work on. 
 </p>
 
 
@@ -270,7 +270,7 @@ public static class AssemblyExtensions
 
 
 <p>
-  I&#8217;m not going to push a particular storage solution on you, so I have two interfaces I&#8217;ll be using as stand-ins for all of my &#8220;storage&#8221; needs:
+  I'm not going to push a particular storage solution on you, so I have two interfaces I'll be using as stand-ins for all of my “storage” needs:
 </p>
 
 
@@ -348,7 +348,7 @@ public async Task<IActionResult> GetLogout()
 
 
 <p>
-  Inside the <code>ISessionManager.CreateSessionAsync</code>, we create a session in storage with an id and then when the Principal is created we add that Id as a claim in the Principal. This is how we&#8217;ll look up the session on later requests to get the user information.
+  Inside the <code>ISessionManager.CreateSessionAsync</code>, we create a session in storage with an id and then when the Principal is created we add that Id as a claim in the Principal. This is how we'll look up the session on later requests to get the user information.
 </p>
 
 
@@ -395,7 +395,7 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions() {
 
 
 <p>
-  The last step is to the ability to access the User in other controllers. Controllers have a <code>User</code> property that grants access to the ClaimsPrincipal created during login. Assuming we had also stored a property like &#8220;UserId&#8221; in <code>ISessionManager.CreateSessionAsync</code> then we can access it like this:
+  The last step is to the ability to access the User in other controllers. Controllers have a <code>User</code> property that grants access to the ClaimsPrincipal created during login. Assuming we had also stored a property like “UserId” in <code>ISessionManager.CreateSessionAsync</code> then we can access it like this:
 </p>
 
 
@@ -436,7 +436,7 @@ var user = await _sessionManager.GetCurrentUserAsync(this);
 
 
 <p>
-  If you&#8217;re using this to follow along and implement, here are the pieces you should have:
+  If you're using this to follow along and implement, here are the pieces you should have:
 </p>
 
 

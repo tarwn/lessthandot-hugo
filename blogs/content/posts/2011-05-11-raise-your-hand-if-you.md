@@ -97,9 +97,9 @@ begin
 end
 ```
 
-And I am just shaking my head, for one it doesn&#8217;t take into account muliple rows being updated, see [Best Practice: Coding SQL Server triggers for multi-row operations][2] for more on that topic
+And I am just shaking my head, for one it doesn't take into account muliple rows being updated, see [Best Practice: Coding SQL Server triggers for multi-row operations][2] for more on that topic
 
-The second bad thing is of course that you want your trigger to complete as fast as possible, you don&#8217;t want it to email a bunch of people. What if the email blows up?
+The second bad thing is of course that you want your trigger to complete as fast as possible, you don't want it to email a bunch of people. What if the email blows up?
   
 Ideally you would write a query inside the trigger that dumps the desired results into another table, then you would have a job that checks that table every minute or so and does the emailing.
 

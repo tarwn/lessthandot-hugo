@@ -38,6 +38,6 @@ The CTP of Hadoop on Windows Azure will be available by the end of the year
 
 I wonder if it will get integrated with Dryad in some form or another
 
-SQL Crescent will be called PowerView&#8230;.I don&#8217;t know about that PowerView sounds too close to PowerPivot. PowerView will run on a Windows Phone, iPad2, Android tablet
+SQL Crescent will be called PowerView….I don't know about that PowerView sounds too close to PowerPivot. PowerView will run on a Windows Phone, iPad2, Android tablet
 
 SQL Server code-named Data Explorer was also announced, it will be available by the end of this year. Data Explorer is self-service BI

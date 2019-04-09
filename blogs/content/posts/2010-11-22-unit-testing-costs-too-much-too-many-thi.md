@@ -19,17 +19,17 @@ tags:
   - visual studio
 
 ---
-For someone that is just interested in trying out Unit Testing the number of topics out there can seem overwhelming. From passionate articles about using TDD, to deeply technical articles around the differences in mocking frameworks, to complete sidetracks into architecture theory and how to make code more testable&#8230;just learning enough to get started and try out Unit Testing can seem like you need weeks of classes.
+For someone that is just interested in trying out Unit Testing the number of topics out there can seem overwhelming. From passionate articles about using TDD, to deeply technical articles around the differences in mocking frameworks, to complete sidetracks into architecture theory and how to make code more testable…just learning enough to get started and try out Unit Testing can seem like you need weeks of classes.
 
-If you&#8217;re just catching up, I&#8217;ve been sharing commentary on the costs (and value) of Unit Testing, starting with [a brief (intended to be humorous) post][1], a presentation at the [Raleigh CodeCamp][2], and last weeks discussion of the [&#8220;Twice as Much Code&#8221;][3] issue.
+If you're just catching up, I've been sharing commentary on the costs (and value) of Unit Testing, starting with [a brief (intended to be humorous) post][1], a presentation at the [Raleigh CodeCamp][2], and last weeks discussion of the [“Twice as Much Code”][3] issue.
 
 This article will try to convey the ease with which you can add Unit Testing to a current project without (in the case of visual studio) extra downloads, installs, or configurations. Costing only a few minutes, and without any of the other terminology, products, or theory, we can get started trying out this Unit Testing concept in our own environment.
 
-## TDD, Mocks, Testability&#8230;
+## TDD, Mocks, Testability…
 
 Automated unit testing has been around for a while and, as such, there has been time for people to define common methods to help make code more testable, components to help reduce the burden of testing certain complex interactions, and processes whose value we may not currently have the context with which to understand.
 
-But we don&#8217;t need any of it to get started.
+But we don't need any of it to get started.
 
 The only thing we need to get started with Unit Testing is some source code and a Unit Testing framework. This post uses a Microsoft .Net environment with Visual Studio 2010. This actually makes my life even easier because a testing framework is included with Visual Studio, meaning there are no extra downloads, installs, or configurations required; We can start trying it out right now.
 
@@ -37,7 +37,7 @@ The only thing we need to get started with Unit Testing is some source code and 
 
 The project we are working with is a basic ASP.Net web application project that I built very quickly for sample purposes. This project can be [downloaded here][4] and includes the sample project and a backup of the SQL database. Feel free to download and follow along, or simply read the post.
 
-Our goal is to quickly add Unit Testing to a pseudo &#8216;existing&#8217; application and position ourselves to take advantage of Unit Testing as we continue to maintain or work on this &#8216;existing&#8217; application.
+Our goal is to quickly add Unit Testing to a pseudo &#8216;existing' application and position ourselves to take advantage of Unit Testing as we continue to maintain or work on this &#8216;existing' application.
 
 ### Adding the Unit Testing Project
 
@@ -63,14 +63,14 @@ Next we need to add a reference to the Unit Test project, allowing it to referen
   <a href="http://tiernok.com/LTDBlog/unittesting/orig/AddReference2.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/AddReference2.png" alt="Reference the Project to Test" /></a><br /> Reference the Project to Test
 </div>
 
-We&#8217;ve now added Unit Testing to the solution. In doing so, Visual Studio has done a few extra steps for us, adding a toolbar as well as some generated files.
+We've now added Unit Testing to the solution. In doing so, Visual Studio has done a few extra steps for us, adding a toolbar as well as some generated files.
 
 ### The New Toolbar
 
 The new toolbar in Visual Studio will helps us easily manage and run our tests. 
 
 <div class="imgBox">
-  <a href="http://tiernok.com/LTDBlog/unittesting/orig/UnitTestToolbar.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/UnitTestToolbar.png" alt="Unit Test Toolbar" /></a><br /> Visual Studio&#8217;s Unit Test Toolbar
+  <a href="http://tiernok.com/LTDBlog/unittesting/orig/UnitTestToolbar.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/UnitTestToolbar.png" alt="Unit Test Toolbar" /></a><br /> Visual Studio's Unit Test Toolbar
 </div>
 
 From left to right:
@@ -100,7 +100,7 @@ Some of these tools also show up in the right click context menu (like Create Un
 
 ### The First Generated Test Class
 
-Back to the test project for a moment. When we added our new test project, Visual Studio gave us our first Test Class file, complete with some content. Normally I delete most of this and write it myself, if I need it, but it&#8217;s useful while you are still learning what&#8217;s available and the syntax to take advantage of it.
+Back to the test project for a moment. When we added our new test project, Visual Studio gave us our first Test Class file, complete with some content. Normally I delete most of this and write it myself, if I need it, but it's useful while you are still learning what's available and the syntax to take advantage of it.
 
 <div class="imgBox">
   <a href="http://tiernok.com/LTDBlog/unittesting/orig/GeneratedCode.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/GeneratedCode.png" alt="Generated Code" /></a><br /> Generated Test Code
@@ -121,7 +121,7 @@ Back to the test project for a moment. When we added our new test project, Visua
   </li>
 </ol>
 
-For this example we&#8217;re going to cut out most of the clutter and start with this:
+For this example we're going to cut out most of the clutter and start with this:
 
 ```csharp
 using System;
@@ -141,11 +141,11 @@ namespace MyFirstTestProject {
 	}
 }
 ```
-Now that we&#8217;ve looked around, lets go ahead and make our first test.
+Now that we've looked around, lets go ahead and make our first test.
 
 ## Our First Unit Test
 
-The sample project has all of it&#8217;s logic and code written directly in the code behind. For the purposes of this example we would like to debug and correct the address formatting. Occasionally it appears to output an extra address 2 line when it shouldn&#8217;t and, instead of manually troubleshooting, we will be using Unit Tests to troubleshoot and correct the error.
+The sample project has all of it's logic and code written directly in the code behind. For the purposes of this example we would like to debug and correct the address formatting. Occasionally it appears to output an extra address 2 line when it shouldn't and, instead of manually troubleshooting, we will be using Unit Tests to troubleshoot and correct the error.
 
 ### Extract Logic to Test
 
@@ -217,7 +217,7 @@ Part of keeping our tests simple is using a good, consistent naming pattern. I r
 [TestMethod]
 public void MethodUnderTest_Scenario_Expectation() {}
 ```
-It is a long name pattern, but it reduces the need to add commenting, communicates the purpose and expectation of the test succinctly, and helps force me to keep my tests simpler. If I can&#8217;t communicate the full intent of the test in this simple manner, then I know I have made them overly complex. Communicating the intent is useful when we see a list of tests after a test run or as part of a build.
+It is a long name pattern, but it reduces the need to add commenting, communicates the purpose and expectation of the test succinctly, and helps force me to keep my tests simpler. If I can't communicate the full intent of the test in this simple manner, then I know I have made them overly complex. Communicating the intent is useful when we see a list of tests after a test run or as part of a build.
 
 In this case we are testing the new GetFormattedText method, the scenario is that our address 2 field is empty, and our expectation is that we will receive back two lines of formatted HTML:
 
@@ -238,17 +238,17 @@ public void GetFormattedText_Address2EmptyString_ReturnsTwoHtmlLines() {
 
 Our test method calls the new GetFormattedAddress method with values for all of the arguments but address2, which is passed as an empty string. Then we use the Assert.AreEqual(_expected_,_actual_) method to tell the test framework that we expect the result to match the string <code class="codespan">"a<br />b c, d"</code>. On running this test (Ctrl+R, A), Visual Studio will give us a little green checkmark to indicate that the code met our expectations (no Assertions were in error).
 
-_Note: if you are following along with this project in Visual Studio, you will need to add a &#8220;using UnitTestPresentation;&#8221; to the top of your test class_
+_Note: if you are following along with this project in Visual Studio, you will need to add a “using UnitTestPresentation;” to the top of your test class_
 
 <div class="imgBox">
   <a href="http://tiernok.com/LTDBlog/unittesting/orig/TestRun1.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/TestRun1.png" alt="Test Run results" /></a><br /> Viewing Test Run Results
 </div>
 
-Technically we could list as many assert statements as we want in the function, but this contradicts our Keep-it-Simple philosophy above and Visual Studio stops evaluating assertions in an individual method after the first one fails. It&#8217;s a good practice to try and limit the number Asserts so that each test method is testing one expectation and, when the customer&#8217;s expectations change, it is obvious where we have to make updates and what is impacted.
+Technically we could list as many assert statements as we want in the function, but this contradicts our Keep-it-Simple philosophy above and Visual Studio stops evaluating assertions in an individual method after the first one fails. It's a good practice to try and limit the number Asserts so that each test method is testing one expectation and, when the customer's expectations change, it is obvious where we have to make updates and what is impacted.
 
 ### Flushing Out the Problem
 
-Well, we have our first test and it doesn&#8217;t appear to have found the problem. However we can quickly add additional tests by copying that initial test, creating new method names, and tweaking the arguments we are testing.
+Well, we have our first test and it doesn't appear to have found the problem. However we can quickly add additional tests by copying that initial test, creating new method names, and tweaking the arguments we are testing.
 
 Here I have created two additional tests:    
 <code class="codespan">GetFormattedText_Address2Null_ReturnsTwoHtmlLines()</code> and <code class="codespan">GetFormattedText_Address2Whitespace_ReturnsTwoHtmlLines()</code>
@@ -270,17 +270,17 @@ public void GetFormattedText_Address2Whitespace_ReturnsTwoHtmlLines() {
     Assert.AreEqual<string>("a<br/>b c, d", result);
 }
 ```
-And when we run our tests this time, we can see that the last one is the case where our function isn&#8217;t working correctly.
+And when we run our tests this time, we can see that the last one is the case where our function isn't working correctly.
 
 <div class="imgBox">
   <a href="http://tiernok.com/LTDBlog/unittesting/orig/TestRun2.png" title="See larger image size"><img src="http://tiernok.com/LTDBlog/unittesting/TestRun2.png" alt="Test Run results" /></a><br /> Viewing Test Run Results
 </div>
 
-So apparently when we have whitespace in Address Line 2, the formatting function wasn&#8217;t smart enough to ignore it. This is easy to fix and we now have 3 tests that can verify our fix will works properly.
+So apparently when we have whitespace in Address Line 2, the formatting function wasn't smart enough to ignore it. This is easy to fix and we now have 3 tests that can verify our fix will works properly.
 
 ## Wrapping Up
 
-And that&#8217;s all it takes. 
+And that's all it takes. 
 
 During the CodeCamp presentation we were able to extract, repair, and extend the validation logic for the save button on this form in a similar time period and, later in the session, someone suggested an improvement to the corrected formatting function that took less than 30 seconds to add and verify (shorter than even pulling up the website).
 
@@ -288,7 +288,7 @@ Hopefully this shows how easy it would be to get started with Unit Testing on an
 
 Sample code and previous articles in this unplanned series:
 
-  * Initial &#8220;Unit Testing Costs Too Much&#8221; post: [Unit Testing Costs Too Much][1]
+  * Initial “Unit Testing Costs Too Much” post: [Unit Testing Costs Too Much][1]
   * Code camp review and links for slides: [Raleigh Code Camp Followup][8]
   * 2x Code Followup: [Unit Testing Costs Too Much &#8211; Twice The Code = Value?][9]
   * Sample Code: [ZIP Archive of Sample Project and Database Backup][4]

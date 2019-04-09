@@ -16,13 +16,13 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-I&#8217;ll be attending my first SQL Saturday in October. The event is the [East Iowa SQL Saturday][1]. 
+I'll be attending my first SQL Saturday in October. The event is the [East Iowa SQL Saturday][1]. 
 
-I&#8217;m excited about having the chance to go to one finally. Over the years I&#8217;ve found it very important to stay current with the SQL Server community. 
+I'm excited about having the chance to go to one finally. Over the years I've found it very important to stay current with the SQL Server community. 
 
 One of the [goals][2] I set way back in the beginning of the year was to start teaching and sharing what I know about SQL Server and development on the many services we have at our disposal. Work has taken a toll on that goal being accomplished as many of you know. 
 
-I&#8217;m mostly looking forward to this event to get a feel of the speakers and the process so I may one day jump in as one myself. If you are near to this event I would recommend it. So far the list of speakers is really good and I&#8217;m looking forward to all the sessions being held. 
+I'm mostly looking forward to this event to get a feel of the speakers and the process so I may one day jump in as one myself. If you are near to this event I would recommend it. So far the list of speakers is really good and I'm looking forward to all the sessions being held. 
 
 You can find all of the details on [sqlfool][3]&#8216;s (Michelle Ufford) [site][4].
 

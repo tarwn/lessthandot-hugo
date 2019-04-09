@@ -20,13 +20,13 @@ tags:
 ---
 Last week we created a pair of smoke tests with the [Selenium IDE][1] tool. Several people commented, with varying levels of politeness, about the downsides of Selenium IDE. There are even those that will tell you not to use it at all, to immediately bypass Selenium IDE and go straight to code. My opinion is that this is a matter of context. 
 
-Today we are going to get into the nuts and bolts of coding automated tests against the WebDriver library. Before we get into that, however, let&#8217;s discuss when it is appropriate to make this transition.
+Today we are going to get into the nuts and bolts of coding automated tests against the WebDriver library. Before we get into that, however, let's discuss when it is appropriate to make this transition.
 
 ## Context and When to Transition
 
 Most projects that are using browser automation are large and require a fairly complex set of tests. The solutions they are using are at least at the level we will be working at today, if not further down the road to automated acceptance testing. A higher level of complexity across a much larger project is just not manageable with Selenium IDE, so many people are used to bypassing it immediately and going straight to a code solution.
 
-Context is king. For small teams or sites, there is value in being able to put together some quick tests that can be run regularly without making an investment in creating a custom framework. It can also be a useful tool when you have a legacy site and just want to make sure it hasn&#8217;t fallen over.
+Context is king. For small teams or sites, there is value in being able to put together some quick tests that can be run regularly without making an investment in creating a custom framework. It can also be a useful tool when you have a legacy site and just want to make sure it hasn't fallen over.
 
 Not everyone has worked in the context of these larger projects or has worked extensively with Selenium. If you are getting started for the first time or currently using Selenium IDE, here are some signs to consider moving to a custom solution:
 
@@ -37,7 +37,7 @@ Not everyone has worked in the context of these larger projects or has worked ex
   * You are starting to build tests for every feature you add to the software
   * You want to tie the tests into the automated build system for your software
 
-In these cases, you have likely scaled past the point where Selenium IDE is enabling you, into a range where it&#8217;s costs outweigh it&#8217;s gains.
+In these cases, you have likely scaled past the point where Selenium IDE is enabling you, into a range where it's costs outweigh it's gains.
 
 ## The Next Step for Web Automation
 
@@ -49,9 +49,9 @@ Cons: Increased cost, Increased risk due to code errors, Increased complexity
   
 Neutral: Level of fragility depends on level of developer
 
-There are Selenium WebDriver libraries for Java, Python, Ruby, and .Net. By using an existing Unit testing framework we don&#8217;t have to write our own Test Runner and it is likely to have documentation and/or plugins for integrating into most of the popular build engines.
+There are Selenium WebDriver libraries for Java, Python, Ruby, and .Net. By using an existing Unit testing framework we don't have to write our own Test Runner and it is likely to have documentation and/or plugins for integrating into most of the popular build engines.
 
-For the purpose of this post, we are again going to create tests against my contact page, but we&#8217;ll be increasing the number of tests. We will be using the .Net driver, C#, and the MS Test framework.
+For the purpose of this post, we are again going to create tests against my contact page, but we'll be increasing the number of tests. We will be using the .Net driver, C#, and the MS Test framework.
 
 _Note: I would advise this unit test project be separate from the overall solution for your application. Keeping it separate means you can version it separately, build and run it separately, and easily run the real unit tests in your product solution without accidentally running the interface ones as well.</p> 
 
@@ -69,9 +69,9 @@ After creating our .Net solution to house the test project, we need to add a ref
   </div>
 </div>
 
-_Note: If you don&#8217;t have NuGet installed, I highly recommend you go check it out at [http://nuget.org/][3] or read more about it in [this recent MSDN article][4]. NuGet is a package manager that allows us to quickly download, install, and update 3rd party packages in Visual Studio. It not only makes it easier to keep 3rd party libraries up to date, but also makes a number of packages more accessible, since they generally install the appropriate settings and references to easily get us started._
+_Note: If you don't have NuGet installed, I highly recommend you go check it out at [http://nuget.org/][3] or read more about it in [this recent MSDN article][4]. NuGet is a package manager that allows us to quickly download, install, and update 3rd party packages in Visual Studio. It not only makes it easier to keep 3rd party libraries up to date, but also makes a number of packages more accessible, since they generally install the appropriate settings and references to easily get us started._
 
-Once we have all of that set up, we can create a single class file with a quick test function to verify we&#8217;re ready to go:
+Once we have all of that set up, we can create a single class file with a quick test function to verify we're ready to go:
 
 ```csharp
 using System;
@@ -97,13 +97,13 @@ namespace SampleWebDriverUnitTest {
 	}
 }
 ```
-This is all it takes to get our first test. Create the solution, add the reference, create the test class and method. Since it&#8217;s MS Test, Ctrl+R, A will run all of our tests in the integrated test runner.
+This is all it takes to get our first test. Create the solution, add the reference, create the test class and method. Since it's MS Test, Ctrl+R, A will run all of our tests in the integrated test runner.
 
-Selenium WebDriver is written in a somewhat fluent syntax, so for the rest of the post we will combine the URL and navigation into a single statement: driver.Navigate().GoToUrl(&#8220;http://tiernok.com&#8221;);
+Selenium WebDriver is written in a somewhat fluent syntax, so for the rest of the post we will combine the URL and navigation into a single statement: driver.Navigate().GoToUrl(“http://tiernok.com”);
 
 ## The First Test Cases
 
-Last time we started off by testing navigation to the home page and the presence of two books, then we tested submitting a form would correctly fail validation when it was missing a required field. Today we&#8217;re going to extend that form validation check, a more complex example in Selenium IDE that will be handled fairly easily in our new framework.
+Last time we started off by testing navigation to the home page and the presence of two books, then we tested submitting a form would correctly fail validation when it was missing a required field. Today we're going to extend that form validation check, a more complex example in Selenium IDE that will be handled fairly easily in our new framework.
 
 ### The Email Form
 
@@ -139,7 +139,7 @@ public void TheContactPageReturnsErrorWhenEmailFieldEmptyTest()
 ```
 Initially this may look more complicated then the Selenium IDE command steps, but really the only difference is that we are explicitly finding the elements we want to act on before acting, which was was more implicit in Selenium IDE. 
 
-Converting this to an MS Test is not difficult, but we will want to wrap the tests in a using statement so that driver gets properly disposed (MS Test doesn&#8217;t run cleanup properly when an exception occurs).
+Converting this to an MS Test is not difficult, but we will want to wrap the tests in a using statement so that driver gets properly disposed (MS Test doesn't run cleanup properly when an exception occurs).
 
 ```csharp
 [TestMethod]
@@ -156,7 +156,7 @@ public void ContactPageReturnsErrorWhenEmailFieldEmpty() {
 	}
 }
 ```
-The only real changes have been the addition of the using statement and changing the decorated attribute from NUnit&#8217;s Test to MS Test&#8217;s TestMethod. 
+The only real changes have been the addition of the using statement and changing the decorated attribute from NUnit's Test to MS Test's TestMethod. 
 
 ### The Rest of the Test Cases
 
@@ -207,13 +207,13 @@ public void ContactPageReturnsSuccessWhenAllFieldsProvided() {
 	}
 }
 ```
-Theoretically we&#8217;re done, if we had a few more cases we could keep copying and pasting our way to the finish line. If you recall, however, one of the goals of moving from Selenium IDE method to a custom solution was to reduce the amount of duplication and the fragility that duplication causes. So far all we have done is transfer that fragility from a series of test cases in the IDE to a series of unit tests in C#.
+Theoretically we're done, if we had a few more cases we could keep copying and pasting our way to the finish line. If you recall, however, one of the goals of moving from Selenium IDE method to a custom solution was to reduce the amount of duplication and the fragility that duplication causes. So far all we have done is transfer that fragility from a series of test cases in the IDE to a series of unit tests in C#.
 
 ## Reducing Test Fragility
 
-When we start writing more than basic smoke tests, we are going to be accessing items repetitively and duplicating ourselves more often. Switching to code has allowed us to create additional tests very quickly, but we haven&#8217;t really solved the duplication issue yet.
+When we start writing more than basic smoke tests, we are going to be accessing items repetitively and duplicating ourselves more often. Switching to code has allowed us to create additional tests very quickly, but we haven't really solved the duplication issue yet.
 
-There&#8217;s two approaches we can take at this point, abstracting the duplication on our own or using the Page Factory from the Support library to implement the [Page Object][5] pattern. 
+There's two approaches we can take at this point, abstracting the duplication on our own or using the Page Factory from the Support library to implement the [Page Object][5] pattern. 
 
 The idea of the Page Object pattern is to represent each page in our target application as a class in our test framework. This allows us to reflect functionality and changes in the real page with functionality or changes in our class. Rather than locating and interacting with individual controls in a browser, our tests than interact with these Page Object classes as representations of what the browser should be seeing. 
 
@@ -231,7 +231,7 @@ Before we start making code changes, we need to get the Support library. As befo
   </div>
 </div>
 
-Next we are going to start modeling our page. Since there is a common layout throughout the site, I&#8217;ll first create a base page object to represent the common elements (like navigation menu items) we will be interacting with:
+Next we are going to start modeling our page. Since there is a common layout throughout the site, I'll first create a base page object to represent the common elements (like navigation menu items) we will be interacting with:
 
 ```csharp
 namespace SampleWebDriverUnitTest.Pages {
@@ -316,7 +316,7 @@ namespace SampleWebDriverUnitTest.Pages {
 	}
 }
 ```
-The PageFactory object is responsible for wiring our page objects to the actual page displayed in the browser. It attempts to match each IWebElement in the class to an element in the web page. By default, if you do not decorate the field with the FindsBy decorator then it will search for an element who&#8217;s ID matches the variable name. I prefer to explicitly specify the find criteria, though, as this lets me name my variables consistently and limits the impact of an HTML change to a single decorator instead of causing a property name change.
+The PageFactory object is responsible for wiring our page objects to the actual page displayed in the browser. It attempts to match each IWebElement in the class to an element in the web page. By default, if you do not decorate the field with the FindsBy decorator then it will search for an element who's ID matches the variable name. I prefer to explicitly specify the find criteria, though, as this lets me name my variables consistently and limits the impact of an HTML change to a single decorator instead of causing a property name change.
 
 ```csharp
 [TestMethod]
@@ -354,7 +354,7 @@ However, this code still has problems.
 
 ### Refining and Correcting the First Test
 
-The current code, in my opinion, doesn&#8217;t fail soon enough if it is on the wrong page. In addition, this first test we&#8217;ve converted is not very readable and I can already tell there is going to be a lot of duplication in later tests. Let&#8217;s do some refactoring.
+The current code, in my opinion, doesn't fail soon enough if it is on the wrong page. In addition, this first test we've converted is not very readable and I can already tell there is going to be a lot of duplication in later tests. Let's do some refactoring.
 
 Rather than repetitively initializing page objects in each test and and adding title verification to each test, lets move that behavior to the PageBase so we can easily do it for every page we load.
 
@@ -378,7 +378,7 @@ class PageBase {
 	}
 }
 ```
-Now we have a single generic call that can create a Page (provided it inherits from PageBase and has a constructor) and execute an assertion on it&#8217;s title. Lets update the NavigateContactLink method to return an initialized ContactPage instance, since this will be a consistent next step each time we navigate to a new page. This reduces the amount of code in the test and adds an automatic check to ensure we have reached the page we were expecting.
+Now we have a single generic call that can create a Page (provided it inherits from PageBase and has a constructor) and execute an assertion on it's title. Lets update the NavigateContactLink method to return an initialized ContactPage instance, since this will be a consistent next step each time we navigate to a new page. This reduces the amount of code in the test and adds an automatic check to ensure we have reached the page we were expecting.
 
 ```csharp
 class PageBase {
@@ -488,7 +488,7 @@ From automating basic smoke tests and HTML element interactions we have moved in
 
 ### Finishing Up
 
-The Selenium WebDriver library offers some great capabilities. Using a handy Unit Testing framework and Test Runner can help give us a solution that is halfway between automated acceptance testing and Selenium IDE in a fairly short period of time. There are still a lot of areas we haven&#8217;t discussed, such as integrating with a build server or tying into multiple browser drivers, but this post has already run a bit longer than the prior one. If you are interested, the code for this post is in a [mercurial repository on bitbucket][6] and as always we can continue discussing any of the points in the post in the comments here or in the forum area.
+The Selenium WebDriver library offers some great capabilities. Using a handy Unit Testing framework and Test Runner can help give us a solution that is halfway between automated acceptance testing and Selenium IDE in a fairly short period of time. There are still a lot of areas we haven't discussed, such as integrating with a build server or tying into multiple browser drivers, but this post has already run a bit longer than the prior one. If you are interested, the code for this post is in a [mercurial repository on bitbucket][6] and as always we can continue discussing any of the points in the post in the comments here or in the forum area.
 
  [1]: /index.php/WebDev/UIDevelopment/automated-web-testing-with-selenium "Read last week's post"
  [2]: http://seleniumhq.org/download/ "Selenium WebDriver download page"

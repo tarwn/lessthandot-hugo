@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-Books are not a substitute for personal experience, but neither is the world a boolean place. Ignoring the experiences of others is akin to re-inventing the wheel just so we can learn how to drive. Given how long it took to develop the wheel the first time, there&#8217;s probably more productive ways we could spend our time. The combination of good books and our own experiences can help us advance our skillset, understand common methods instead of having to reinvent them, and learn a common language and terminology that other will be able to understand.
+Books are not a substitute for personal experience, but neither is the world a boolean place. Ignoring the experiences of others is akin to re-inventing the wheel just so we can learn how to drive. Given how long it took to develop the wheel the first time, there's probably more productive ways we could spend our time. The combination of good books and our own experiences can help us advance our skillset, understand common methods instead of having to reinvent them, and learn a common language and terminology that other will be able to understand.
 
 Last week[-ish] I published a pair of books for [software developers][1], this week is software architects, next week is next week. 
 
@@ -57,7 +57,7 @@ Martin Fowler
 
 PEAA is part reference and part information on architecture; what it is, how to define it, and what purpose it serves. The first 1/3 of the book is an 8 chapter introduction that covers everything from what a pattern is to the type and groupings of patterns in the book, from the need for architecture to the purpose of layered design, and from the individual components to how to put them together. This book will not make you an instant expert, nor will you suddenly have the ability to elicit requirements and design a framework to meet them, what it will do is provide you with a broad base of understanding of common terminology and concepts that are commonly used in our field and pointers on when and how to use those concepts. <br style="clear: left" />
 
-These aren&#8217;t the only books on software architecture, or even the only books that I have read, but I do think that these three form a good foundation for understanding the technical skills, communications, and purpose of architecture.
+These aren't the only books on software architecture, or even the only books that I have read, but I do think that these three form a good foundation for understanding the technical skills, communications, and purpose of architecture.
 
  [1]: /index.php/ITProfessionals/ProfessionalDevelopment/from-elis-shelves-developers "Visit last weeks post"
  [2]: http://msdn.microsoft.com/en-us/library/ff650706.aspx "Microsoft Application Architecture Guide as MSDN"

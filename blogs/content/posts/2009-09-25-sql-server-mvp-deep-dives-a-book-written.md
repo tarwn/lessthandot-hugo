@@ -33,7 +33,7 @@ All the chapters are listed below
   
 Paul Nielsen, Editor 
 
-1. Louis and Paul&#8217;s 10 relational database design rules by Paul Nielsen and Louis Davidson
+1. Louis and Paul's 10 relational database design rules by Paul Nielsen and Louis Davidson
    
 2. SQL Server tools for maintaining data integrity by Louis Davidson
    
@@ -109,7 +109,7 @@ Kimberly L. Tripp and Paul S. Randal, Editors
   
 34. Using database mirroring to become a superhero! by Glenn Berry
   
-35. The poor man&#8217;s SQL Server log shipping by Edwin Sarmiento
+35. The poor man's SQL Server log shipping by Edwin Sarmiento
   
 36. Some understated changes found in SQL Server 2005 replication by Paul Ibison
   

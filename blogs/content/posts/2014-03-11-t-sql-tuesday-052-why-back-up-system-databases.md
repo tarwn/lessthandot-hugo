@@ -15,7 +15,7 @@ categories:
   - Uncategorized
 
 ---
-[<img class="alignleft size-full wp-image-2241" alt="TSQL2sday" src="/wp-content/uploads/2014/01/TSQL2sday.png" width="133" height="134" />][1]It&#8217;s T-SQL Tuesday! This month, <a href="http://michaeljswart.com/2014/03/argue_against_a_popular_opinion/" target="_blank">Michael Swart has challenged us to argue against a popularly-held opinion about SQL Server</a>. “Arguing Against Popular Opinion” sounds like the title of my autobiography.
+[<img class="alignleft size-full wp-image-2241" alt="TSQL2sday" src="/wp-content/uploads/2014/01/TSQL2sday.png" width="133" height="134" />][1]It's T-SQL Tuesday! This month, <a href="http://michaeljswart.com/2014/03/argue_against_a_popular_opinion/" target="_blank">Michael Swart has challenged us to argue against a popularly-held opinion about SQL Server</a>. “Arguing Against Popular Opinion” sounds like the title of my autobiography.
 
 You’ve been told time and again to back up your SQL Server system databases – master, msdb, and model. I’m here to tell you it’s not that important, especially if you have a large number of SQL Server instances. The information in those databases should be documented, scripted, and available in other locations, not just contained here.
 
@@ -47,7 +47,7 @@ You need to consider the process of [restoring these system databases][2]. Have 
 
 This is a situation you should test at least once – before you need to do it in an emergency. In your sandbox environment, take backups of those databases and try to restore them. Run through the steps in the article listed above. How long does it take? Do you have all the information you need? Is it easier to stand up a new server and apply settings and scripts?
 
-Like many things in SQL Server, there is more than one way to approach this problem. Make sure you&#8217;ve looked at all of them, so you know what is appropriate for your environment!
+Like many things in SQL Server, there is more than one way to approach this problem. Make sure you've looked at all of them, so you know what is appropriate for your environment!
 
  [1]: http://michaeljswart.com/2014/03/argue_against_a_popular_opinion/
  [2]: http://technet.microsoft.com/en-us/library/dd207003.aspx

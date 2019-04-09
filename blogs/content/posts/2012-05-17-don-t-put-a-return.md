@@ -96,7 +96,7 @@ GO
 
 Do you see it?
 
-Let&#8217;s see what happens when you try running it
+Let's see what happens when you try running it
 
 First create this table
 
@@ -177,7 +177,7 @@ RETURN @id
 GO
 ```
 
-Now, you won&#8217;t get an error or a hanging transaction. Run it again
+Now, you won't get an error or a hanging transaction. Run it again
 
 sql
 DECLARE @id int
@@ -187,7 +187,7 @@ SELECT @id
 
 It works now
 
-In general, I don&#8217;t like to use return statements to return IDs, I like to use OUTPUT parameters instead, return statements in my opinion are to be used to return a status code
+In general, I don't like to use return statements to return IDs, I like to use OUTPUT parameters instead, return statements in my opinion are to be used to return a status code
 
 Here is what the proc would look like with an OUTPUT parameter
 

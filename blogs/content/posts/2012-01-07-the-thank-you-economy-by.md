@@ -31,15 +31,15 @@ If your company is thinking about jumping on the social media bandwagon then thi
 
 The book is filled with useful information about how companies use social media to engage their clientele, how they win new customers and how they can get back customers after they messed up.
 
-I like the chapter that showed how Avaya was monitoring twitter and heled someone out who had some problems with communication systems, that person bought $250K equipment from Avaya. If Avaya only used twitter to blast out press release they would have never made this sale. This is one of the main points that I took away from the book, engage with the people that follow you&#8230;don&#8217;t become just a RSS feed. A customer who complains on twitter is better than one who complains and you don&#8217;t know about it, you can do something about the one on twitter, engage with him/her, find out why he/she is dissatisfied and fix the problem. Changes are this customer will be as vocal if you provide a good service, it is better to engage than to ignore this person.
+I like the chapter that showed how Avaya was monitoring twitter and heled someone out who had some problems with communication systems, that person bought $250K equipment from Avaya. If Avaya only used twitter to blast out press release they would have never made this sale. This is one of the main points that I took away from the book, engage with the people that follow you…don't become just a RSS feed. A customer who complains on twitter is better than one who complains and you don't know about it, you can do something about the one on twitter, engage with him/her, find out why he/she is dissatisfied and fix the problem. Changes are this customer will be as vocal if you provide a good service, it is better to engage than to ignore this person.
 
 Another good point that Gary Vaynerchuk is making is that we have metrics now with social media, if you had an ad in a magazine or on television then you would never know how many people actually saw the ad. With social media, you can see retweets, likes and plusses, you can also see how many followers you have. All this is powerful stuff that will help you build your brand by focusing on the stuff that works.
 
-If your company doesn&#8217;t know what twitter or facebook is then this book alone will not help them, this book is not technical in nature, it is geared towards business people. You will need to educate them on how to set this all up.
+If your company doesn't know what twitter or facebook is then this book alone will not help them, this book is not technical in nature, it is geared towards business people. You will need to educate them on how to set this all up.
 
 **Who this book is not (really) for.**
   
-If you are already a twitter/facebook/Google+ user who doesn&#8217;t use it as a glorified pr news outlet to only do one way communication by never engaging with your user, this is not really the book for you. You might pick up some ideas here and there and learn how some companies learned from their mistakes but in general you are using social media as it should be used.
+If you are already a twitter/facebook/Google+ user who doesn't use it as a glorified pr news outlet to only do one way communication by never engaging with your user, this is not really the book for you. You might pick up some ideas here and there and learn how some companies learned from their mistakes but in general you are using social media as it should be used.
 
 **Conclusion**
   

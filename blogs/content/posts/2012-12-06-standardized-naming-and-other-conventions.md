@@ -74,11 +74,11 @@ sql
 declare @EmployeeSalary decimal(20,2)
 ```
 
-Now I don&#8217;t have to scroll all the way to the top to figure out what is actually stored in this variable, EmployeeSalary pretty much describes what it is and I can also pretty much assume that this will be some amount and not a date as well
+Now I don't have to scroll all the way to the top to figure out what is actually stored in this variable, EmployeeSalary pretty much describes what it is and I can also pretty much assume that this will be some amount and not a date as well
 
 ## The layout of code including comments
 
-I have worked with code that was all in lowercase and all in uppercase. I have no problem with either but if you at least standardize on one or the other it will be a little easier to jump from your code to someone else&#8217;s code
+I have worked with code that was all in lowercase and all in uppercase. I have no problem with either but if you at least standardize on one or the other it will be a little easier to jump from your code to someone else's code
   
 You can setup standard templates in SSMS for your organization, you can get to it from the menu bar, View&#8211;> Template Explorer or hit CTRL + ALT + T
 

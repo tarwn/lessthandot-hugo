@@ -14,11 +14,11 @@ categories:
   - Data Modelling and Design
 
 ---
-In this blog post I would like to touch a very common problem which often trips up newbies and even serious SQL Professionals. I wanted to write this blog post for quite some time, but always put it aside. However, just a few days ago I have been dealing with this problem at my work place, so I believe it&#8217;s time to discuss the problem.
+In this blog post I would like to touch a very common problem which often trips up newbies and even serious SQL Professionals. I wanted to write this blog post for quite some time, but always put it aside. However, just a few days ago I have been dealing with this problem at my work place, so I believe it's time to discuss the problem.
 
-For the discussion let&#8217;s consider AdventureWorks database SalesOrderHeader and SalesOrderDetail tables. To illustrate the problem, let&#8217;s assume that returns are handled in a different table with a structure very similar to SalesOrderDetail. And let&#8217;s assume there are about 20 percent of returns (the business must not be doing too well!).
+For the discussion let's consider AdventureWorks database SalesOrderHeader and SalesOrderDetail tables. To illustrate the problem, let's assume that returns are handled in a different table with a structure very similar to SalesOrderDetail. And let's assume there are about 20 percent of returns (the business must not be doing too well!).
 
-Ok, to create the returns table in the Sales schema let&#8217;s use the following code:
+Ok, to create the returns table in the Sales schema let's use the following code:
 
 ```sql
 SELECT IDENTITY(INT) AS ReturnID, D.LineTotal AS ReturnTotal, D.ProductID, D.OrderQty, D.UnitPrice, D.SalesOrderID
@@ -26,7 +26,7 @@ INTO Sales.SalesReturns
 FROM Sales.SalesOrderDetail D TABLESAMPLE (20 PERCENT)
 ```
 
-Now, suppose we need to get quantity ordered and quantity returned as well as line total for both quantity and returned grouped by Customer ID. Let&#8217;s write the most intuitive query:
+Now, suppose we need to get quantity ordered and quantity returned as well as line total for both quantity and returned grouped by Customer ID. Let's write the most intuitive query:
 
 ```sql
 SELECT OH.CustomerID, 
@@ -182,11 +182,11 @@ Returned
 </center> </div> 
 
 <p>
-Now, let&#8217;s verify these results by only running Ordered amounts.
+Now, let's verify these results by only running Ordered amounts.
 </p>
 
 <p>
-Let&#8217;s run this query (I re-wrote using CTE for simplicity):
+Let's run this query (I re-wrote using CTE for simplicity):
 </p>
 
 <pre lang="tsql">

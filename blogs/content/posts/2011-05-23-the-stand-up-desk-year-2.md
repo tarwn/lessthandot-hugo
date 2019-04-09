@@ -32,9 +32,9 @@ In addition to the dullness and lack of focus was the sudden attack on my vision
 
 The new workplace is making strides towards greater comfort and gave me permission to pick out a desk to replace my cubicle desk. My personal requirements were simple, I wanted a real desk this time around and it needed to have room for a pair of monitors and a stool.
 
-What I found is that there are a lot of standing desks in the $1500-$3000 range, and a number of desks in the $400-$1500 range that were either cheap or of questionable height (listing the height of the keyboard surface is only helpful if you tell us which of the 5 surfaces is the keyboard surface). I believe a few of the Amazon desks would have worked out fine, but luckily I didn&#8217;t&#8217; have to try playing desk roulette. 
+What I found is that there are a lot of standing desks in the $1500-$3000 range, and a number of desks in the $400-$1500 range that were either cheap or of questionable height (listing the height of the keyboard surface is only helpful if you tell us which of the 5 surfaces is the keyboard surface). I believe a few of the Amazon desks would have worked out fine, but luckily I didn't' have to try playing desk roulette. 
 
-In the smaller price point there was one name that stood out. <a href="http://www.geekdesk.com/" title="Visit GeekDesk" target="_blank">GeekDesk</a> produces a desk that is sturdy, motorized, and lives at the $800 price point. I decided to order [the mini][2], though now that I have the original desk removed from my cube I can tell the full size would have fit easily. Though I didn&#8217;t intend to raise and lower the desk during the day, the motorized feature was nice because it allowed me to easily tweak and customize the standing height of the desk over the course of the first week.
+In the smaller price point there was one name that stood out. <a href="http://www.geekdesk.com/" title="Visit GeekDesk" target="_blank">GeekDesk</a> produces a desk that is sturdy, motorized, and lives at the $800 price point. I decided to order [the mini][2], though now that I have the original desk removed from my cube I can tell the full size would have fit easily. Though I didn't intend to raise and lower the desk during the day, the motorized feature was nice because it allowed me to easily tweak and customize the standing height of the desk over the course of the first week.
 
 <div style="font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 1em;">
   <img src="http://tiernok.com/LTDBlog/20110519_538_th.jpg" alt="Standing Desk, V2" style="padding-bottom: 5px;" /><br /> My New Stand-up Desk
@@ -50,27 +50,27 @@ There were a number of questions in the old post (and in person), here are the m
   
 Unfortunately this product appears to have been discontinued, but on the offchance it still exists in your area, here are the details (also let me know if you find a supply).
 
-The parts were all under the brand of Real Organized and unfortunately were not on the Lowes website. Here&#8217;s a breakdown of what I used:
+The parts were all under the brand of Real Organized and unfortunately were not on the Lowes website. Here's a breakdown of what I used:
   
 12&#8243; x 1.5&#8243; Black Legs &#8211; #253656
   
 16&#8243; x 1.5&#8243; Black Legs &#8211; #253660
 
-I don&#8217;t have part #&#8217;s for the wood, sorry. For reference I used 4 16&#8243;x16&#8243; for the monitor stands and 2 12&#8243; x 24&#8243; for the front one.
+I don't have part #'s for the wood, sorry. For reference I used 4 16&#8243;x16&#8243; for the monitor stands and 2 12&#8243; x 24&#8243; for the front one.
 
 Another option would be to look at legs from Ikea, as they seem to have several different lengths of table and shelf legs that might be usable for something like this.
 
-**Don&#8217;t you get tired?**
+**Don't you get tired?**
   
 There was definitely some muscle soreness the first week and I was tired, but every time someone stopped by to laugh at my desk I had a little extra resolve. Looking back, I probably should have gone the stool route to start with. This would have helped me transition to standing a little easier.
 
 **Do you stand at home?**
   
-I don&#8217;t have a standing setup at home. I have considered it, but a standing setup at home would be more complex. I play computer games in my spare time, so I have a 5. sound setup, steering wheel and pedals, and various other things that would make building a standup environment more challenging.
+I don't have a standing setup at home. I have considered it, but a standing setup at home would be more complex. I play computer games in my spare time, so I have a 5. sound setup, steering wheel and pedals, and various other things that would make building a standup environment more challenging.
 
 And did I mention new baby? 🙂
 
-Feel free to keep asking me more questions, I&#8217;ll try to answer them as best as I can.
+Feel free to keep asking me more questions, I'll try to answer them as best as I can.
 
  [1]: /index.php/ITProfessionals/ITProcesses/trying-the-stand-up-desk "Read the original post"
  [2]: http://www.geekdesk.com/default.asp?contentID=606 "The Mini GeekDesk"

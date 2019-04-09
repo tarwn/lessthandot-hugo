@@ -58,7 +58,7 @@ To show the tuning steps, the plan below is a plan based off the query shown ear
 
 The IO Statistics that we generate from this query
 
-<span style="font-size: x-small;"><span class="MT_red"><br /> Table &#8216;SalesOrderDetail&#8217;. Scan count 450, logical reads 1545, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.<br /> Table &#8216;SalesOrderHeader&#8217;. Scan count 1, logical reads 1390, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.<br /> Table &#8216;Person&#8217;. Scan count 1, logical reads 3816, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.<br /> </span></span>
+<span style="font-size: x-small;"><span class="MT_red"><br /> Table &#8216;SalesOrderDetail'. Scan count 450, logical reads 1545, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.<br /> Table &#8216;SalesOrderHeader'. Scan count 1, logical reads 1390, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.<br /> Table &#8216;Person'. Scan count 1, logical reads 3816, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.<br /> </span></span>
 
 The index on LoginAccount is already required due to the parameterized filter.  Add this index back so the predicate usage of LoginAccount prevents poor performance.  Refer back to [parameterized filters][1] for more details on this tuning method.
 
@@ -82,7 +82,7 @@ BusinessEntityID is a primary key on Person.Person so there is no need to alter 
 
 For Person.Person, the table is very small, both in width and rows.  This means the Key lookup on this table will not be a large hit on performance.  The Key Lookup performance being less of a performance hit can be seen quickly in the IO Statistics.
 
-<span style="font-size: x-small;"><span class="MT_red">Table &#8216;Person&#8217;. Scan count 1, logical reads 5, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</span></span>
+<span style="font-size: x-small;"><span class="MT_red">Table &#8216;Person'. Scan count 1, logical reads 5, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</span></span>
 
 What happens if your company buys another company and triples the head count though?  With this planning, an index may be a good idea.  What should be considered however is the number of indexes on the table already.  As more indexes are created, the possibility for INSERT, UPDATE and DELETE transactions to be slower increases.  There are also effects on maintenance.  More indexes means longer and more resource-intensive maintenance tasks.  Take all these pieces into account when planning indexing.  For this case, the Key Lookup will be resolvee with a change to the existing index, IDX\_PARTITION\_LOGIN\_GUID\_ASC that was created earlier to support the parameterized filter on LoginAccount.
 

@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-Something that always seemed to lack a bit of documentation was the Bind method. I know it works with a Post but it also works with a Get. Both are slightly different in how they pass their information to the server. You don&#8217;t see it when you have a form and do a normal submit though.
+Something that always seemed to lack a bit of documentation was the Bind method. I know it works with a Post but it also works with a Get. Both are slightly different in how they pass their information to the server. You don't see it when you have a form and do a normal submit though.
   
 In a RESTfull application you would use a POST to create a new object and a GET for getting information and not changing anything serverside.
 
@@ -21,7 +21,7 @@ Of course there are many other reasons when you should use POST over GET or vice
 
 [W3Schools][1]
 
-For this we need some code. In the following example I&#8217;m using GET and POST wrong since the POST doesn&#8217;t create anything, but I&#8217;m just making a point. 
+For this we need some code. In the following example I'm using GET and POST wrong since the POST doesn't create anything, but I'm just making a point. 
 
 Here is a very simple module.
 
@@ -90,7 +90,7 @@ End Code
 
 These days of course nobody uses the plain old submit anymore since it reloads your page, which apparently is very bad.
   
-So we can change our code to no longer submit but to react to an onclick event of the buttons. Don&#8217;t forget to make your buttons of type button so they don&#8217;t submit the form anymore.
+So we can change our code to no longer submit but to react to an onclick event of the buttons. Don't forget to make your buttons of type button so they don't submit the form anymore.
   
 And see the code below with added javascript.
 

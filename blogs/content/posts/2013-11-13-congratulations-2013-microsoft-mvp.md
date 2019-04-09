@@ -22,7 +22,7 @@ First of all, let me assure you that I did not fall prey to some sort of SPAM. I
   
 
   
-Although I had known since about the middle of September, it all became real about mid-morning on October 1st when I received the official email with the subject line &#8220;**Congratulations 2013 Microsoft MVP!**&#8220;. 
+Although I had known since about the middle of September, it all became real about mid-morning on October 1st when I received the official email with the subject line “**Congratulations 2013 Microsoft MVP!**“. 
 
 So me, a Microsoft SQL Server MVP? To be honest, it’s still a little weird to say and even weirder to be introduced as such. I knew that I had been nominated and had already been through a number of award cycles without hearing from Microsoft. My nomination was not something I shared with anyone other than my wife, and although it sounds cliché, it really was an amazing honor to have just been nominated. When I looked at the list of current MVPs and those who everyone thinks are/should be, well, it is humbling to even be thought of in that same light.
 
@@ -46,4 +46,4 @@ When I was contacted over the summer by Microsoft and asked to submit a list of 
 
 There are many other people I could add to this list, but think I can summarize it best by saying the SQL Server Community is the best, most supportive technical community there is.
 
-I now commonly get asked what I am going to do to stay an MVP. I haven’t given it a lot of thought and not sure that I will, but I would assume the answer is &#8220;more of the same&#8221;. Sure there will be a little more of some things and maybe a little less of others, but I remain committed to giving back to this community that has given me so much, regardless of my award status.
+I now commonly get asked what I am going to do to stay an MVP. I haven’t given it a lot of thought and not sure that I will, but I would assume the answer is “more of the same”. Sure there will be a little more of some things and maybe a little less of others, but I remain committed to giving back to this community that has given me so much, regardless of my award status.

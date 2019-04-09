@@ -18,7 +18,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Continuing onwards with the SQL Server auditing feature, let&#8217;s start off by creating a simple audit that will capture some database level events.
+Continuing onwards with the SQL Server auditing feature, let's start off by creating a simple audit that will capture some database level events.
 
 Previously we looked at how to create a Server Audit Specification and creating a Database Specification follows the same steps. The main difference is the location, as well as the objects to capture. In the following example we will look at capturing delete statements on a database.
 
@@ -88,7 +88,7 @@ I receive the following results:
   <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result2.jpg?mtime=1325057650"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result2.jpg?mtime=1325057650" width="1099" height="130" /></a>
 </div>
 
-_One thing to note on the output is under &#8220;audit\_file\_offset&#8221;. All three values are 6144, which indicates that the three statements where executed in the same query._
+_One thing to note on the output is under “audit\_file\_offset”. All three values are 6144, which indicates that the three statements where executed in the same query._
 
 As with the Server Audits, use the following query to retrieve the audit information as it is displayed above:
 
@@ -240,7 +240,7 @@ GO
 ```
 ### Final Thoughts
 
-Just based on auditing for delete statements on database can prove to be very dynamic when using the auditing feature. It doesn&#8217;t even stop here, as this was only a demo, there are a lot more you can audit like stored procedures, functions, views, etc. This is a powerful feature especially for monitoring critical and highly sensitive databases.
+Just based on auditing for delete statements on database can prove to be very dynamic when using the auditing feature. It doesn't even stop here, as this was only a demo, there are a lot more you can audit like stored procedures, functions, views, etc. This is a powerful feature especially for monitoring critical and highly sensitive databases.
 
 To see what else you can audit with the Database Specifications go [here][1] and skip down to Database-Level Audit Action Groups.
 

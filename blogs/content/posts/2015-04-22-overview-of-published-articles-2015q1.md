@@ -36,7 +36,7 @@ categories:
 </p>
 
 <p style="color: #2f2f2f">
-  But on the other hand, I&#8217;ve doubled my efforts for MSSQLTips.com:
+  But on the other hand, I've doubled my efforts for MSSQLTips.com:
 </p>
 
 <ul style="color: #2f2f2f">

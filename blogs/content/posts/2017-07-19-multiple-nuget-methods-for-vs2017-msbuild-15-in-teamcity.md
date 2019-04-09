@@ -25,7 +25,7 @@ It turns out I have 3 situations:
   * Other C# Projects still use the packages.json method for packages
   * Solution packages (great for tooling) are (still) not supported after VS 2013 ([NuGet #522][2])
 
-(the last couple years also saw the ill-fated project.json, which isn&#8217;t represented here and may or may not be covered by one of these methods)
+(the last couple years also saw the ill-fated project.json, which isn't represented here and may or may not be covered by one of these methods)
 
 The software versions I am working with are:
 
@@ -34,7 +34,7 @@ The software versions I am working with are:
   * Visual Studio 2017 Community
   * MS Build Tools 2017 (MSBuild 15)
 
-I&#8217;ve outlined the issues I ran into and the individual Build Steps I used to workaround them.
+I've outlined the issues I ran into and the individual Build Steps I used to workaround them.
 
 ## Some of the issues
 
@@ -48,15 +48,15 @@ It is possible to [use PackageReference with other project types][4], but you ha
 
 **Issue #2: MSBuild install location has moved**
   
-MSBuild installs to a new folder with 2017 (`C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild`), which means for a while my NuGet Restore commands were defaulting to MSBuild 14. The `-MsBuildPath` parameter let&#8217;s you provide a path to a specific install, so we can at MSBuild 15 via it&#8217;s new path. 
+MSBuild installs to a new folder with 2017 (`C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild`), which means for a while my NuGet Restore commands were defaulting to MSBuild 14. The `-MsBuildPath` parameter let's you provide a path to a specific install, so we can at MSBuild 15 via it's new path. 
 
 **Issue #3: Regular Package.json files plus Solution Package.son File**
 
-When we run it against a `*.sln` file, NuGet.exe will find and run against each project&#8217;s `package.json` file. Alternatively, you can also point NuGet.exe directly at a package.json file to install that specific file, which is a workaround for the no longer support solution packages. There is not an option (that I could find) to combine these into a single call.
+When we run it against a `*.sln` file, NuGet.exe will find and run against each project's `package.json` file. Alternatively, you can also point NuGet.exe directly at a package.json file to install that specific file, which is a workaround for the no longer support solution packages. There is not an option (that I could find) to combine these into a single call.
 
 **Issue #4: TeamCity only supports NuGet Restore of *.sln files**
 
-TeamCity restricts the built-in NuGet Restore command to only run against files that end in &#8220;.sln&#8221;. A separate flaw in this restriction was [pointed out to JetBrains in 2015][5], but has not been fixed as of TeamCity 2017.1.
+TeamCity restricts the built-in NuGet Restore command to only run against files that end in “.sln”. A separate flaw in this restriction was [pointed out to JetBrains in 2015][5], but has not been fixed as of TeamCity 2017.1.
 
 This restriction prevents me from doing a clean NuGet Restore of my solution-level packages.json from issue #3.
 
@@ -82,11 +82,11 @@ I used the built-in Nuget Installer with the Restore option and the name of my s
 
 **2. Restore from PackageReferences**
 
-For PackageReference, I used the MSBuild task in TeamCity with my Solution file as the Build file path and a target of &#8220;Restore&#8221; (same as running `msbuild /t:Restore`).
+For PackageReference, I used the MSBuild task in TeamCity with my Solution file as the Build file path and a target of “Restore” (same as running `msbuild /t:Restore`).
 
 **3. Restore Solution-level packages**
 
-A solution-level packages file is useful for solution-level build and deploy tools that aren&#8217;t needed locally. Because TeamCity has an artifical constraint on only accepting *.sln files, I solved this with a `Command Line` runner type with the following script:
+A solution-level packages file is useful for solution-level build and deploy tools that aren't needed locally. Because TeamCity has an artifical constraint on only accepting *.sln files, I solved this with a `Command Line` runner type with the following script:
 
 `%teamcity.tool.NuGet.CommandLine.DEFAULT%\\tools\\nuget.exe restore Deployment/packages.config -PackagesDirectory packages`
 
@@ -94,7 +94,7 @@ Deployment/packages.config is my solution-level packages file. The TeamCity vari
 
 ## Final Words
 
-This experience was roughly 3-5 times longer than I expected, given the number of ASP.Net deployments, TeamCity setups, and so on I&#8217;ve done over the years. The playing field feels littered with half-baked solutions that not only break backwards compatibility, but break compatibility across projects in the same solution using vanilla Visual Studio project templates.
+This experience was roughly 3-5 times longer than I expected, given the number of ASP.Net deployments, TeamCity setups, and so on I've done over the years. The playing field feels littered with half-baked solutions that not only break backwards compatibility, but break compatibility across projects in the same solution using vanilla Visual Studio project templates.
 
  [1]: http://blog.nuget.org/20170316/NuGet-now-fully-integrated-into-MSBuild.html
  [2]: https://github.com/NuGet/Home/issues/522

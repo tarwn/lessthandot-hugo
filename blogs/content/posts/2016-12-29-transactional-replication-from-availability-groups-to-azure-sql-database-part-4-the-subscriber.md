@@ -97,7 +97,7 @@ Click Finish. All steps should have a green checkmark next to them.
 
 [<img class="aligncenter size-full wp-image-4958" src="/wp-content/uploads/2016/12/subscription-12.png" alt="subscription 12" width="573" height="456" srcset="/wp-content/uploads/2016/12/subscription-12.png 573w, /wp-content/uploads/2016/12/subscription-12-300x238.png 300w" sizes="(max-width: 573px) 100vw, 573px" />][12]
 
-To verify it&#8217;s working, expand Replication > Local Publications > Publication Name, and you should see your subscription. Right-click and select View Synchronization Status to confirm it&#8217;s applying the snapshot.
+To verify it's working, expand Replication > Local Publications > Publication Name, and you should see your subscription. Right-click and select View Synchronization Status to confirm it's applying the snapshot.
 
 Your replication subscriber is now set up. The next step is to verify that all the pieces work by testing both replication and AG failover.
 

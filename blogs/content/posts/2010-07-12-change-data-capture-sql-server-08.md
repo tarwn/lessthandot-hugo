@@ -25,17 +25,17 @@ tags:
   - tracking data
 
 ---
-Many times as a database administrator, you&#8217;re going to find yourself being asked, &#8220;When did this change?&#8221; In fact, it is a common question that can come in so often, if you don&#8217;t have the answer readily available, the business will quickly become frustrated with you. This can have an adverse effect on your reputation of being able to manage the databases in question. 
+Many times as a database administrator, you're going to find yourself being asked, “When did this change?” In fact, it is a common question that can come in so often, if you don't have the answer readily available, the business will quickly become frustrated with you. This can have an adverse effect on your reputation of being able to manage the databases in question. 
 
-Some databases (and software packages) simply do not track changes in the database. The job of the system is to do what the business wants and that typically does not initially include data tracking. Logging takes time and precious performance away from the systems. That performance hit can make a software vendor look bad. Is it worth the performance cost and cost to develop the tracking solution to them? I think we know the answer to that question in most cases. I&#8217;m on their side in the case of where you put your money for the product you provide to a point. 
+Some databases (and software packages) simply do not track changes in the database. The job of the system is to do what the business wants and that typically does not initially include data tracking. Logging takes time and precious performance away from the systems. That performance hit can make a software vendor look bad. Is it worth the performance cost and cost to develop the tracking solution to them? I think we know the answer to that question in most cases. I'm on their side in the case of where you put your money for the product you provide to a point. 
 
-Putting all of the bickering with why or why not vendors add data tracking to overall system features aside, let&#8217;s look at how we can manage data tracking with SQL Server and leave the vendor to do what the business asks of them; provide the solution to keep the business running.
+Putting all of the bickering with why or why not vendors add data tracking to overall system features aside, let's look at how we can manage data tracking with SQL Server and leave the vendor to do what the business asks of them; provide the solution to keep the business running.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/cdc.gif" alt="" title="" width="384" height="304" />
 </div>
 
-In SQL Server 2008, Change Data Capture was introduced. Oh, that sounds interesting and something you can use! Well, there is a cost just like most features have cost that go with them. Remember the performance issue with the vendor doing data tracking? It comes with CDC as well. As with everything, performance can take a back seat to providing the business with what they need, so we&#8217;re going to show you how to set CDC up as a base data tracking process in your databases.
+In SQL Server 2008, Change Data Capture was introduced. Oh, that sounds interesting and something you can use! Well, there is a cost just like most features have cost that go with them. Remember the performance issue with the vendor doing data tracking? It comes with CDC as well. As with everything, performance can take a back seat to providing the business with what they need, so we're going to show you how to set CDC up as a base data tracking process in your databases.
 
 **Setup CDC**
 
@@ -76,7 +76,7 @@ If you run into a failure to authenticate:
 
 > Msg 22830, Level 16, State 1, Procedure sp\_cdc\_enable\_db\_internal, Line 186
   
-> Could not update the metadata that indicates database AdventureWorks is enabled for Change Data Capture. The failure occurred when executing the command &#8216;SetCDCTracked(Value = 1)&#8217;. The error returned was 15404: &#8216;Could not obtain information about Windows NT group/user &#8216;PMHCtkrueger&#8217;, error code 0x54b.&#8217;. Use the action and error to determine the cause of the failure and resubmit the request.
+> Could not update the metadata that indicates database AdventureWorks is enabled for Change Data Capture. The failure occurred when executing the command &#8216;SetCDCTracked(Value = 1)'. The error returned was 15404: &#8216;Could not obtain information about Windows NT group/user &#8216;PMHCtkrueger', error code 0x54b.'. Use the action and error to determine the cause of the failure and resubmit the request.
   
 > Msg 266, Level 16, State 2, Procedure sp\_cdc\_enable\_db\_internal, Line 0
   
@@ -102,7 +102,7 @@ CDC can track an entire table or specific columns in a table. You can use the @c
 
 BOL best practice suggests putting the CDC tables (instances) into a designated filegroup. I can see this benefiting performance and not affecting the tables under the CDC monitoring. This does add a structure change to the database so plan this out as well. Move the filegroup to a designated disk when possible. IO is always an important consideration. If IO becomes a problem later on, it is one of the harder to fix performance issues. This is because it requires moving files while working on the disk, which entails downtime on the database. 
 
-We will show the filegroup practice so let&#8217;s create a filegroup for our CDC instance.
+We will show the filegroup practice so let's create a filegroup for our CDC instance.
 
 **Create a filegroup** 
 
@@ -173,7 +173,7 @@ select * from cdc.fn_cdc_get_all_changes_HumanResources_Employee(@begin,@end,'al
 go
 ```
 
-Time to play with what we&#8217;ve setup on the Employee table. Let&#8217;s break login id for employeeid 1
+Time to play with what we've setup on the Employee table. Let's break login id for employeeid 1
 
 sql
 select * from HumanResources.Employee
@@ -198,7 +198,7 @@ Now the performance hit is imaginable already.
   1. Logging the before 
   2. Logging the after
 
-But we should really test that. We&#8217;ll do that with simply logging the times from client statistics to show a rough estimation of performance between a CDC enabled data change and a non-CDC table enabled data change.
+But we should really test that. We'll do that with simply logging the times from client statistics to show a rough estimation of performance between a CDC enabled data change and a non-CDC table enabled data change.
 
 We already have CDC enabled, so executing the Update statement again, the cost is 29ms on average of 15 executions. 
 
@@ -219,7 +219,7 @@ Putting that into perspective: almost triple the cost!
   <img src="/wp-content/uploads/blogs/DataMgmt/cdc_4.gif" alt="" title="" width="486" height="348" />
 </div>
 
-So CDC has an enormous cost with it, but in a database where logging is absent and development is out of our hands along with the question of, &#8220;Why and who changed this?&#8221; being asked often, CDC will be an option that should be brought into play to manage the change control of the database.
+So CDC has an enormous cost with it, but in a database where logging is absent and development is out of our hands along with the question of, “Why and who changed this?” being asked often, CDC will be an option that should be brought into play to manage the change control of the database.
 
 Some things that should be considered are ETL loads. I would absolutely disable CDC on tables where you load large amounts of data and then enable it after the load is completed. The time for loading could be double to triple after enabling tables for CDC. That may not be acceptable in the activity of the table. 
 

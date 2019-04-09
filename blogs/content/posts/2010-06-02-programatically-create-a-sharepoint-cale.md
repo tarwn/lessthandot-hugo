@@ -20,11 +20,11 @@ tags:
 ---
 We recently had a requirement to programatically create an entry in an existing Sharepoint calendar, so here is an example of how we went about doing this.
 
-I&#8217;ll be using Visual Studio 2008 for this, but the process will be similar for any other versions you are using. First of all, you will need to add a reference to one of the Sharepoint web references, so right-click your project and select Add Web Reference. You&#8217;ll then be presented with a screen that asks you for a URL for that web service, so go ahead and write it in the following format:
+I'll be using Visual Studio 2008 for this, but the process will be similar for any other versions you are using. First of all, you will need to add a reference to one of the Sharepoint web references, so right-click your project and select Add Web Reference. You'll then be presented with a screen that asks you for a URL for that web service, so go ahead and write it in the following format:
 
 http://nis/\_vti\_bin/lists.asmx
 
-NOTE: You&#8217;ll need to replace the &#8220;nis&#8221; section with the path to your own Sharepoint website.
+NOTE: You'll need to replace the “nis” section with the path to your own Sharepoint website.
 
 The following screen will then be presented displaying the list of available methods:
 
@@ -32,9 +32,9 @@ The following screen will then be presented displaying the list of available met
   <img src="/wp-content/uploads/blogs/WebDev/SharepointCalendars/AddWebReference.png" alt="" title="" width="817" height="563" />
 </div>
 
-Change the Web Reference Name to &#8220;Sharepoint.Lists&#8221; and click the &#8220;Add Reference&#8221; button to add it to your project.
+Change the Web Reference Name to “Sharepoint.Lists” and click the “Add Reference” button to add it to your project.
 
-Next, you&#8217;ll need to open up a new form/page/module (whichever is appropriate to your solution), add a few imports:
+Next, you'll need to open up a new form/page/module (whichever is appropriate to your solution), add a few imports:
 
 ```vbnet
 Imports Sharepoint
@@ -42,7 +42,7 @@ Imports System.Text
 Imports System.XML
 ```
 
-and then we&#8217;ll create a function that builds an XML string ready to be passed to the Sharepoint web service:
+and then we'll create a function that builds an XML string ready to be passed to the Sharepoint web service:
 
 ```vbnet
 Public Function CreateCalendarEntry(ByVal CalendarName As String, ByVal Title As String, ByVal Description As String, ByVal AddToDate As DateTime, ByVal FullDay As Boolean, ByVal LengthInMinutes As Double) As XmlNode
@@ -90,7 +90,7 @@ As you can see from the above, we build an XML string based upon:
   
 4. When it needs to be entered into the calendar (i.e on a certain date, for a full day or a certain amount of hours)
 
-We then pass the XML to the web service which will then insert the calendar entry and return a resulting XML string for you to check it&#8217;s success.
+We then pass the XML to the web service which will then insert the calendar entry and return a resulting XML string for you to check it's success.
 
 So, as an example call to the service, if you pass in some test data:
 

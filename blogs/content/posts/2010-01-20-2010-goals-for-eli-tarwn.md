@@ -27,7 +27,7 @@ I believe the common career paths that would allow me to reach this vision are t
 
 ## Strategic Goals for 2010
 
-I&#8217;m not going to come up with a plan on a Sunday morning while typing a blog article, and randomly creating strategic goals does not help me any more than it did the dozens of companies that have gone out of business recently. Instead I am going to focus on building the steps I need to better understand my vision, my current state, and some potential strategic goals that would help me achieve that clearer state from where I am now. In short, I am going to build the plan I should have built but haven&#8217;t.
+I'm not going to come up with a plan on a Sunday morning while typing a blog article, and randomly creating strategic goals does not help me any more than it did the dozens of companies that have gone out of business recently. Instead I am going to focus on building the steps I need to better understand my vision, my current state, and some potential strategic goals that would help me achieve that clearer state from where I am now. In short, I am going to build the plan I should have built but haven't.
 
 ### 2010 Strategic Goals: Analysis and Planning
 
@@ -44,7 +44,7 @@ By accomplishing these goals I feel that I will be making a major step towards m
 
 ## Process Changes for 2010
 
-An article I read recently describes the importance of staying &#8220;tech savvy&#8221; as an IT Executive ([Fits and starts: staying “tech savvy” as a CIO][4] by [Peter Kretzman][5]). I believe this carries further than the IT executive role and really includes any technology role in an organization. Technology is a major business driver and, if your role is to communicate or provide technology solutions, than staying up to date on technology is critical. I also believe that the concepts of Process Improvement, Business Analysis and Business Architecture are important to achieving and executing my goals. My current position has a much narrower scope and area of responsibility (for the moment, at least) than prior positions, allowing me to focus on career and life goals, but I cannot allow myself to stop practicing skills that were once part of my day-to-day environment.
+An article I read recently describes the importance of staying “tech savvy” as an IT Executive ([Fits and starts: staying “tech savvy” as a CIO][4] by [Peter Kretzman][5]). I believe this carries further than the IT executive role and really includes any technology role in an organization. Technology is a major business driver and, if your role is to communicate or provide technology solutions, than staying up to date on technology is critical. I also believe that the concepts of Process Improvement, Business Analysis and Business Architecture are important to achieving and executing my goals. My current position has a much narrower scope and area of responsibility (for the moment, at least) than prior positions, allowing me to focus on career and life goals, but I cannot allow myself to stop practicing skills that were once part of my day-to-day environment.
 
 Areas of focus: Business and Enterprise Architecture, Lean and Process Improvement, Business Analysis, IT Management, Management and Leadership
 	  
@@ -60,7 +60,7 @@ The last part is the hardest to consider. If I build some measurements around th
 
 ## Outgoing Challenges
 
-I am going to challenge Alex ([blog | [Twitter][6]) and Remou ([blog][7]) to follow back up with their 2010 goals. I expect to see plans for doctorates and MS Access world domination, so hopefully they won&#8217;t let us down.][8]
+I am going to challenge Alex ([blog | [Twitter][6]) and Remou ([blog][7]) to follow back up with their 2010 goals. I expect to see plans for doctorates and MS Access world domination, so hopefully they won't let us down.][8]
 
  [1]: /index.php/All/?disp=authdir&author=68 "Posts by Ted"
  [2]: http://twitter.com/onpnt "Ted's Tweets"

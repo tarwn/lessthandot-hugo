@@ -165,7 +165,7 @@ You can setup alarms as well, here is what that looks like
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSAlarms.PNG?mtime=1363856013"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSAlarms.PNG?mtime=1363856013" width="648" height="362" /></a>
 </div>
 
-Run some queries, see what works what doesn&#8217;t. I decided to run sp_helpdb
+Run some queries, see what works what doesn't. I decided to run sp_helpdb
 
 sql
 sp_helpdb
@@ -173,7 +173,7 @@ sp_helpdb
 
 Here is what I see
 
-No permission to access database &#8216;model&#8217;.
+No permission to access database &#8216;model'.
 
 <pre>name	     db_size	owner	dbid	created
 master	      4.75 MB	rdsa	1	Apr  8 2003

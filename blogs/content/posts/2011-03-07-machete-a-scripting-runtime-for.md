@@ -27,7 +27,7 @@ tags:
   - scripting
 
 ---
-In an attempt to overcome my perfectionism I&#8217;ve decided to open source my long term side project Machete for the world to see. Machete is my own dialect of the ECMAScript 5 standard or as it is more commonly called JavaScript.
+In an attempt to overcome my perfectionism I've decided to open source my long term side project Machete for the world to see. Machete is my own dialect of the ECMAScript 5 standard or as it is more commonly called JavaScript.
 
 # Features
 

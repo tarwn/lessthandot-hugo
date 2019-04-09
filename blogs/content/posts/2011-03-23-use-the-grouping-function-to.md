@@ -23,7 +23,7 @@ tags:
   - sql server 2008
 
 ---
-If you have been writing queries that use ROLLUP, you are probably aware that the aggregated rows return NULL for the column that you are grouping by. What if you already have a NULL value in that column, how can you know which row is the aggregated row? Let&#8217;s take a look, first create this table
+If you have been writing queries that use ROLLUP, you are probably aware that the aggregated rows return NULL for the column that you are grouping by. What if you already have a NULL value in that column, how can you know which row is the aggregated row? Let's take a look, first create this table
 
 sql
 CREATE TABLE TestRollup(Country VARCHAR(20),Col1 INT, col2 INT)
@@ -39,7 +39,7 @@ INSERT TestRollup VALUES('Zimbabwe',20,1000)
 INSERT TestRollup VALUES('Zimbabwe',2000,10)
 ```
 
-Now let&#8217;s do our simple ROLLUP query
+Now let's do our simple ROLLUP query
 
 sql
 SELECT Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum
@@ -238,7 +238,7 @@ Indicates whether a specified column expression in a GROUP BY list is aggregated
 
 GROUPING is used to distinguish the null values that are returned by ROLLUP, CUBE or GROUPING SETS from standard null values. The NULL returned as the result of a ROLLUP, CUBE or GROUPING SETS operation is a special use of NULL. This acts as a column placeholder in the result set and means all.</em>
 
-Now, let&#8217;s add GROUPING(Country) to our query
+Now, let's add GROUPING(Country) to our query
 
 sql
 SELECT Country, SUM(Col1) Col1Sum, SUM(col2) AS Col2Sum, GROUPING(Country) AS GroupingCountry

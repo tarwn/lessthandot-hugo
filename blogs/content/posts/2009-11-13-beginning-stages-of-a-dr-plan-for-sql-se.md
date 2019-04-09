@@ -19,7 +19,7 @@ categories:
 ---
 I’ve found that many companies find out what true Disaster Recovery is only in the presence of a true disaster. Obviously this is not a very optimal time to start thinking about what could have done to keep the money flowing through the veins of the company. 
 
-In the near future I will be writing a series based around DR. The series will be mostly geared towards your SQL Server instances and some tricks and tips to make recovery quicker for you. I&#8217;ll also be touching on some important factors that are not commonly part of planning. Some of those are
+In the near future I will be writing a series based around DR. The series will be mostly geared towards your SQL Server instances and some tricks and tips to make recovery quicker for you. I'll also be touching on some important factors that are not commonly part of planning. Some of those are
 
   * DBA object recovery. Includes the objects you use to do your job
   * The decision to failover
@@ -32,7 +32,7 @@ However before we get into these details we need to cover a more important topic
 
 ## The DBA &#8211; The Most Critical DR Ingredient
 
-DBAs are the most critical part of a disaster recovery plan. As DBA&#8217;s, we are entrusted to make sure the data is secure on not only the primary sites but also the recovery sites. There are many ways in which we can be successful in that goal and many are already native to SQL Server. Log shipping, replication, snapshots, backup and restore and even scripting abilities are all part of native capabilities you can use to secure an offsite solution. Some of the these features are limited to Enterprise edition but, even with Standard edition, we have enough options to cover our bases. The DBAs knowledge and analytical skills are the foundation that the DR plan is built upon, so we will look first at some of the built-in features and how they can help build out that foundation.
+DBAs are the most critical part of a disaster recovery plan. As DBA's, we are entrusted to make sure the data is secure on not only the primary sites but also the recovery sites. There are many ways in which we can be successful in that goal and many are already native to SQL Server. Log shipping, replication, snapshots, backup and restore and even scripting abilities are all part of native capabilities you can use to secure an offsite solution. Some of the these features are limited to Enterprise edition but, even with Standard edition, we have enough options to cover our bases. The DBAs knowledge and analytical skills are the foundation that the DR plan is built upon, so we will look first at some of the built-in features and how they can help build out that foundation.
 
 ## What type of disaster is it?
 
@@ -98,7 +98,7 @@ High level can fall into disabling disasters or exposure disaster. Disabling dis
   <i><b>Point of failure recovery</b></i>
 </h2>
 
-This is a very high-level object recovery plan. This includes entire databases, instances, replication subscriptions and even entire facilities &#8211; but does not specifically stop the flow of money through the company. This recovery may simply mean you fail portions of your systems to your offsite DR location. This is a Disaster Recovery level but also can be blurred into HA (High Availability). The defining line between the two is that, in the case of a high recovery event, HA is typically part of the disaster and immediate loss. Essentially, this becomes a recovery point in your DR plans when HA strategies fail or are not in place at all. The largest object defined in this level is an entire manufacturing location or hub in the company’s infrastructure. One prime example is a case I went through last year when a hurricane hit our Texas facility. DR strategy&#8217;s part in the high level recovery went into effect to recover from the complete loss of communication with the facility. In my experience, this can be the most time-consuming recovery point if you don’t think about it before it happens. 
+This is a very high-level object recovery plan. This includes entire databases, instances, replication subscriptions and even entire facilities &#8211; but does not specifically stop the flow of money through the company. This recovery may simply mean you fail portions of your systems to your offsite DR location. This is a Disaster Recovery level but also can be blurred into HA (High Availability). The defining line between the two is that, in the case of a high recovery event, HA is typically part of the disaster and immediate loss. Essentially, this becomes a recovery point in your DR plans when HA strategies fail or are not in place at all. The largest object defined in this level is an entire manufacturing location or hub in the company’s infrastructure. One prime example is a case I went through last year when a hurricane hit our Texas facility. DR strategy's part in the high level recovery went into effect to recover from the complete loss of communication with the facility. In my experience, this can be the most time-consuming recovery point if you don’t think about it before it happens. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/rip.gif" alt="" title="" width="134" height="132" />

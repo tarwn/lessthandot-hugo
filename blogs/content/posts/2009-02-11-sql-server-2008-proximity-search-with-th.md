@@ -111,15 +111,15 @@ WHERE spatial_reference_id = 4326
 
 Here is the meta data
 
-GEOGCS[&#8220;WGS 84&#8221;, DATUM[&#8220;World Geodetic System 1984&#8221;,
+GEOGCS[“WGS 84”, DATUM[“World Geodetic System 1984”,
   
-ELLIPSOID[&#8220;WGS 84&#8221;, 6378137, 298.257223563]], PRIMEM[&#8220;Greenwich&#8221;, 0],
+ELLIPSOID[“WGS 84”, 6378137, 298.257223563]], PRIMEM[“Greenwich”, 0],
   
-UNIT[&#8220;Degree&#8221;, 0.0174532925199433]]
+UNIT[“Degree”, 0.0174532925199433]]
 
 Back to our code, in order to have this data in our table
 
-SET @h = geography::STGeomFromText(&#8216;POINT(-77.36750 38.98390)&#8217;, 4326);
+SET @h = geography::STGeomFromText(&#8216;POINT(-77.36750 38.98390)', 4326);
 
 We need to do some things, first we update our temp column
 
@@ -142,11 +142,11 @@ sql
 ALTER TABLE zipcodes DROP COLUMN GeogColTemp
 ```
 
-Now we have to add a primary key, this is needed because otherwise we won&#8217;t be able to create our spatial index and the following message would be displayed
+Now we have to add a primary key, this is needed because otherwise we won't be able to create our spatial index and the following message would be displayed
 
 Server: Msg 12008, Level 16, State 1, Line 1
   
-Table &#8216;zipcodes&#8217; does not have a clustered primary key as required by the spatial index. Make sure that the primary key column exists on the table before creating a spatial index.
+Table &#8216;zipcodes' does not have a clustered primary key as required by the spatial index. Make sure that the primary key column exists on the table before creating a spatial index.
 
 sql
 ALTER TABLE zipcodes ADD 

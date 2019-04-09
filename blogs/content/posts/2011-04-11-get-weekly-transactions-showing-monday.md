@@ -19,7 +19,7 @@ categories:
 ---
 This [recent MSDN thread][1] presented an interesting, I believe, question:
 
-For a predefined set of the Application IDs show the weekly transactions and display Monday&#8217;s day for each week. The interesting twist in this common PIVOT query is to display a Monday&#8217;s date for a week.
+For a predefined set of the Application IDs show the weekly transactions and display Monday's day for each week. The interesting twist in this common PIVOT query is to display a Monday's date for a week.
 
 Rather than showing a solution for that particular thread, I show an AdventureWorks sample query. This query will return top 5 total amounts for each week by Customer (using SalesOrderHeader table).
 
@@ -51,7 +51,7 @@ FROM   cte2
        (SUM(Total) 
         FOR Row IN ( [1],[2],[3],[4],[5],[6] ) ) pvt
 ```
-The interesting part here is in determining the Monday&#8217;s day for each week. I decided to use a solution presented in SQL Server Forums [topic][2].
+The interesting part here is in determining the Monday's day for each week. I decided to use a solution presented in SQL Server Forums [topic][2].
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 

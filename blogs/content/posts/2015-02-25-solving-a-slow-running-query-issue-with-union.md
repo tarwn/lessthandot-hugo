@@ -19,7 +19,7 @@ tags:
   - t-sql
 
 ---
-That&#8217;s right! I will solve a performance issue by adding a UNION into the query. Interested? Read on!
+That's right! I will solve a performance issue by adding a UNION into the query. Interested? Read on!
 
 I recently encountered a curious issue with a query. The query itself wasn’t exactly rocket science: it read data from a few tables and calculated the start and the end dates of a contract in the SELECT statement. In an outer query there’s a range join with a date dimension to explode the data over the different months. Let me explain that last part. Suppose we have a contract with ID 5 that is valid between January 2015 and March 2015. The range join with the date dimension would thus return 3 rows:
 

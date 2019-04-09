@@ -30,11 +30,11 @@ WHERE OBJECT_DEFINITION(object_id) LIKE '%ntile%'
   
 (0 row(s) affected)
 
-Doesn&#8217;t exist. I also have a hard time figuring out where I would use it, maybe if I want to put an equal number or rows in a bunch of buckets, maybe then this will be used to call another process asynchronously?
+Doesn't exist. I also have a hard time figuring out where I would use it, maybe if I want to put an equal number or rows in a bunch of buckets, maybe then this will be used to call another process asynchronously?
 
-For you that don&#8217;t know what NTILE() does it basically distributes the rows in a bunch of groups. If you specify 2 groups and you have 10 rows then each group will have 5 rows.
+For you that don't know what NTILE() does it basically distributes the rows in a bunch of groups. If you specify 2 groups and you have 10 rows then each group will have 5 rows.
 
-Let&#8217;s look at some code to understand how it works, first create this simple table
+Let's look at some code to understand how it works, first create this simple table
 
 sql
 CREATE TABLE  #temp(StudentID CHAR(2),  Score  INT) 
@@ -65,13 +65,13 @@ Here are the results:
 
 Since the number of rows are not even, the first bucket will have three rows and the second bucket will have two rows
 
-Let&#8217;s add one more row to this table
+Let's add one more row to this table
 
 sql
 INSERT #temp  VALUES('S6',92 ) 
 ```
 
-Now let&#8217;s run the same query as before
+Now let's run the same query as before
 
 sql
 SELECT NTILE(2) OVER(ORDER BY Score) AS NtileValue,*

@@ -24,7 +24,7 @@ tags:
 </p>
 
 <p style="text-align: left;">
-  This month&#8217;s #Meme15 topic is on Facebook and people balance mixing family, friends, peers and co-workers.
+  This month's #Meme15 topic is on Facebook and people balance mixing family, friends, peers and co-workers.
 </p>
 
 <p style="text-align: left;">
@@ -50,7 +50,7 @@ tags:
 </p>
 
 <p style="text-align: left;">
-  The biggest thing that Facebook gave me was the ability to easily stay in contact with people who now lived hundreds of miles away.  Like most people at the time, I was fascinated with finding people who I hadn&#8217;t talked to over 10 years.  People such as those I went to <span style="font-size: 10pt; line-height: 115%; font-family: Georgia, serif;">elementary </span>school with or worked with at my first few jobs.  It was really cool to be able to catch up and reconnect with these people.
+  The biggest thing that Facebook gave me was the ability to easily stay in contact with people who now lived hundreds of miles away.  Like most people at the time, I was fascinated with finding people who I hadn't talked to over 10 years.  People such as those I went to <span style="font-size: 10pt; line-height: 115%; font-family: Georgia, serif;">elementary </span>school with or worked with at my first few jobs.  It was really cool to be able to catch up and reconnect with these people.
 </p>
 
 <p style="text-align: left;">
@@ -80,7 +80,7 @@ tags:
 </p>
 
 <p style="text-align: left;">
-  Today I am down to 184 friends and I will not let just anyone be a friends with me on Facebook.  This was probably the best thing I could to do to keep using Facebook.  Now when I look at the newsfeed, it&#8217;s full of things that I am really interested in seeing.  I&#8217;m also far less concerned about my privacy because these are all people that I trust.  (Facebook themselves privacy issues are another subject all together).
+  Today I am down to 184 friends and I will not let just anyone be a friends with me on Facebook.  This was probably the best thing I could to do to keep using Facebook.  Now when I look at the newsfeed, it's full of things that I am really interested in seeing.  I'm also far less concerned about my privacy because these are all people that I trust.  (Facebook themselves privacy issues are another subject all together).
 </p>
 
 <p style="text-align: left;">

@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-When SQL Server executes a stored procedure, it first checks to see if it is a built-in stored procedure (system supplied). It checks the master database for the existence of this procedure. If the procedure is not found, it will search the user database. It doesn&#8217;t sound like much, but in a high transaction environment, the slight performance hit will add up.
+When SQL Server executes a stored procedure, it first checks to see if it is a built-in stored procedure (system supplied). It checks the master database for the existence of this procedure. If the procedure is not found, it will search the user database. It doesn't sound like much, but in a high transaction environment, the slight performance hit will add up.
 
 Also, consider what would happen if Microsoft decides to ship a system stored procedure with the same name as the procedure you wrote. Suddenly, your procedure will stop working and the one supplied by Microsoft will be executed instead. To see what I mean, try creating a stored procedure in your database named sp_help. When you execute this stored procedure, SQL will actually execute the one in the master database instead.
 

@@ -28,14 +28,14 @@ tags:
   - tip
 
 ---
-When coming from SQL Server, you might find it weird that you don&#8217;t see code that looks like this in Oracle&#8217;s PL/SQL
+When coming from SQL Server, you might find it weird that you don't see code that looks like this in Oracle's PL/SQL
 
 ```plsql
 select 2
 
 select sysdate --  getdate()in SQL Server
 ```
-Unlike with SQL Server that code won&#8217;t run in Oracle, Oracle requires the use of the FROM clause in its syntax. This is why Oracle has the DUAL table.
+Unlike with SQL Server that code won't run in Oracle, Oracle requires the use of the FROM clause in its syntax. This is why Oracle has the DUAL table.
 
 If you try to run something like this
 
@@ -47,7 +47,7 @@ you will get the following error
 
 _ORA-00923: FROM keyword not found where expected
   
-00923. 00000 &#8211; &#8220;FROM keyword not found where expected&#8221;_
+00923. 00000 &#8211; “FROM keyword not found where expected”_
 
 I decided to see where the Dual table came from.
 

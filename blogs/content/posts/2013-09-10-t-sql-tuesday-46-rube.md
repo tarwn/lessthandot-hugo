@@ -46,7 +46,7 @@ My story is not about a hack in its purest definition, but it is about a nice al
 </p>
 
 <p style="text-align: justify;">
-  <em>=iif((Fields!Result) < 70,&#8221;O&#8221;,&#8221;P&#8221;))</em>
+  <em>=iif((Fields!Result) < 70,”O”,”P”))</em>
 </p>
 
 <p style="text-align: justify;">

@@ -16,7 +16,7 @@ categories:
   - Professional Development
 
 ---
-It&#8217;s the second Tuesday of the month, and you know what that means: it&#8217;s <a href="http://www.bobpusateri.com/archive/2013/04/invitation-to-t-sql-tuesday-41-presenting-and-loving-it/" target="_blank">T-SQL Tuesday</a>! This is a monthly blog series with a different topic each time. This month, our host, Bob Pusateri (<a href="http://www.bobpusateri.com/" target="_blank">blog </a>| <a href="https://twitter.com/SQLBob" target="_blank">twitter</a>), wants to know more about presenting.
+It's the second Tuesday of the month, and you know what that means: it's <a href="http://www.bobpusateri.com/archive/2013/04/invitation-to-t-sql-tuesday-41-presenting-and-loving-it/" target="_blank">T-SQL Tuesday</a>! This is a monthly blog series with a different topic each time. This month, our host, Bob Pusateri (<a href="http://www.bobpusateri.com/" target="_blank">blog </a>| <a href="https://twitter.com/SQLBob" target="_blank">twitter</a>), wants to know more about presenting.
 
 <a href="http://www.bobpusateri.com/archive/2013/04/invitation-to-t-sql-tuesday-41-presenting-and-loving-it/" target="_blank"><img style="float: right;" src="/wp-content/uploads/users/grrlgeek/TSQL2sDay150x150.jpg?mtime=1365451350" alt="" width="150" height="150" /></a>
 

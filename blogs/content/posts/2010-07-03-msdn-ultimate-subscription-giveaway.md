@@ -27,7 +27,7 @@ Microsoft was kind enough to give me 3 MSDN Ultimate Subscriptions. I gave two o
 
 **Update
   
-[Ted Krueger][2] decided to add one of his, so now there will be two that we will be giving away&#8230;&#8230;that just doubled your chances** 
+[Ted Krueger][2] decided to add one of his, so now there will be two that we will be giving away……that just doubled your chances** 
 
 **Update 2
   
@@ -37,7 +37,7 @@ The list price for this is $11,899, you can see what is all included here: http:
 
 So what do you need to do to win this? Here is the deal, you will have to answer 3 question in order to win this.
 
-1) Why do you need this, what are you going to build with this, will it help other people&#8217;s lives?
+1) Why do you need this, what are you going to build with this, will it help other people's lives?
   
 2) What specific functionality that is only part of Ultimate are you going to use?
   

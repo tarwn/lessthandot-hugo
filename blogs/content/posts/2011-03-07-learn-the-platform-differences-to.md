@@ -28,15 +28,15 @@ A couple of minutes ago I saw this question on StackOverflow: [SQL Server equiva
 
 The person wanted the following
 
-> I have an application that uses a SQL Server database with several instances of the database&#8230;test, prod, etc&#8230; I am making some application changes and one of the changes involves changing a column from a nvarchar(max) to a nvarchar(200) so that I can add a unique constraint on it. SQL Server tells me that this requires dropping the table and recreating it.
+> I have an application that uses a SQL Server database with several instances of the database…test, prod, etc… I am making some application changes and one of the changes involves changing a column from a nvarchar(max) to a nvarchar(200) so that I can add a unique constraint on it. SQL Server tells me that this requires dropping the table and recreating it.
 > 
 > I want to put together a script that will do the table drop, recreate it with the new schema, and then reinsert the data that was there previously all in one go, if possible, just to keep things simple for use when I migrate this change to production.
 > 
-> There is probably a good SQL Server way to do this but I&#8217;m just not aware of it. If I was using Mysql I would mysqldump the table and its contents, and use that as my script for applying that change to production. I can&#8217;t find any export functionality in SQL server that will give me a text file consisting of inserts for all data in a table.
+> There is probably a good SQL Server way to do this but I'm just not aware of it. If I was using Mysql I would mysqldump the table and its contents, and use that as my script for applying that change to production. I can't find any export functionality in SQL server that will give me a text file consisting of inserts for all data in a table.
 
 Of course I could have told him/her to use the scripting functionality in SQL Server or even use the scripting functionality in SSMS Toolpack. But there is of course a better (my opinion) way
 
-Let&#8217;s take a look
+Let's take a look
 
 If I have this table
 
@@ -60,10 +60,10 @@ CREATE INDEX ix_test ON Test(ID,SomeColumn)
 Here is the error that is raised
 
 <div style="border:1px solid black;background-color:#444;color:white;margin:0 20px;padding:0 5px 0 5px;">
-  Msg 1919, Level 16, State 1, Line 1<br /> Column &#8216;SomeColumn&#8217; in table &#8216;Test&#8217; is of a type that is invalid for use as a key column in an index.
+  Msg 1919, Level 16, State 1, Line 1<br /> Column &#8216;SomeColumn' in table &#8216;Test' is of a type that is invalid for use as a key column in an index.
 </div>
 
-Now, let&#8217;s change the column to nvarchar(200). You can do this by using the ALTER TABLE&#8230;ALTER COLUMN syntax. Here is what it looks like for this table
+Now, let's change the column to nvarchar(200). You can do this by using the ALTER TABLE…ALTER COLUMN syntax. Here is what it looks like for this table
 
 sql
 ALTER TABLE Test ALTER COLUMN SomeColumn NVARCHAR(200)
@@ -82,7 +82,7 @@ sql
 SELECT * FROM Test
 ```
 
-Now, let&#8217;s drop the table and take a look at what happens when the length of the data is more than the column size we want
+Now, let's drop the table and take a look at what happens when the length of the data is more than the column size we want
   
 Drop the table
 

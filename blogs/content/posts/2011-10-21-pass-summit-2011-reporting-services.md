@@ -16,7 +16,7 @@ categories:
   - SSRS
 
 ---
-I managed to survive my first PASS Summit speaking engagement! That was exhilarating, and I think it went very well! Thank you to everyone that attended my session, &#8220;Reporting Services 201: From Basic to WOW!&#8221; 
+I managed to survive my first PASS Summit speaking engagement! That was exhilarating, and I think it went very well! Thank you to everyone that attended my session, “Reporting Services 201: From Basic to WOW!” 
 
 I covered a few of my favorite RS features that I think can make your reports stand out: 
 
@@ -29,7 +29,7 @@ I covered a few of my favorite RS features that I think can make your reports st
 
 My presentation materials &#8211; PowerPoint and .rdls &#8211; are available for download at <http://www.sqlpass.org/summit/2011/Speakers/CallForSpeakers/SessionDetail.aspx?sid=1004>. 
 
-I love presenting this session and can&#8217;t wait to do it again! 
+I love presenting this session and can't wait to do it again! 
 
 My full PASS Summit wrap-up can be found [here][1]!
 

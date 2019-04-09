@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-So today I was working on setting up DB Mail on our new dev box (MS SQL 2008), but I ran into a little snag. Emails were sending fine to my email address, but all attempts to email our developers distribution group failed to be delivered. These was no sign on SQL Server that the email wasn&#8217;t delivered, it just didn&#8217;t appear in my inbox.
+So today I was working on setting up DB Mail on our new dev box (MS SQL 2008), but I ran into a little snag. Emails were sending fine to my email address, but all attempts to email our developers distribution group failed to be delivered. These was no sign on SQL Server that the email wasn't delivered, it just didn't appear in my inbox.
 
 I got to talking with my network admin, and he said that unauthenticated emails are blocked on distributions groups in the company (spam reasons). This got me to thinking. I had set up the profile on the server to use anonymous authentication! 
 

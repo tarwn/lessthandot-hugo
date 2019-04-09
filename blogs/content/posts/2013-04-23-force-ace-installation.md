@@ -98,6 +98,6 @@ What’s interesting is that on my new laptop, which has Office 2013 64-bit inst
 
 This blog post shows a very simple solution on how to solve a very common problem with SSIS and Excel. I’d like to thank Lowell for pointing me out to this solution in the thread I mentioned earlier.
 
-_Update: Installing both the providers on the same machine with Office components installed doesn&#8217;t mean your life is issue-free from now on. Apparently this set-up can cause issues in other places. Check out the comments for more details._
+_Update: Installing both the providers on the same machine with Office components installed doesn't mean your life is issue-free from now on. Apparently this set-up can cause issues in other places. Check out the comments for more details._
 
  [1]: http://www.sqlservercentral.com/Forums/Topic1407044-391-1.aspx

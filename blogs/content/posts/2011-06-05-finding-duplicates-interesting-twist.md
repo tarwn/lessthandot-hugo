@@ -314,9 +314,9 @@ WHERE T.ID < S.ID and S.ColValue IN (T.FirstColumn,T.SecondColumn,T.ThirdColumn,
 
 Candidates as (select distinct ID,DupID  from DupRecs where cntDups >=4) 
 ```
-Ok, but do we want to delete all records identified in DupID column? Turned out, that it&#8217;s not even that simple. 
+Ok, but do we want to delete all records identified in DupID column? Turned out, that it's not even that simple. 
 
-Say, in our sample rows 1 & 2 match. So, do we want to delete the row 2? Well, row 2 matches with the row 5. Which rows of 2/5 we delete and which to keep? That&#8217;s not easy at all.
+Say, in our sample rows 1 & 2 match. So, do we want to delete the row 2? Well, row 2 matches with the row 5. Which rows of 2/5 we delete and which to keep? That's not easy at all.
 
 So, my final select is
 
@@ -340,7 +340,7 @@ Candidates as (select distinct ID,DupID  from DupRecs where cntDups >=4)
 select Distinct DupID from Candidates where DupID not IN (select ID from Candidates)
 
 ```
-Well, even the above solution is not quite right as now it doesn&#8217;t delete all duplicates.
+Well, even the above solution is not quite right as now it doesn't delete all duplicates.
 
 After some more discussion in the mentioned thread and with the help of Peter Larsson, here is the solution that seems to work for the problem:
 

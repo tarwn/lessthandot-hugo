@@ -62,7 +62,7 @@ The ~ symbol is the Bitwise NOT operator, here is what books on line has to say 
 
 > The ~ bitwise operator performs a bitwise logical NOT for the expression, taking each bit in turn. If expression has a value of 0, the bits in the result set are set to 1; otherwise, the bit in the result is cleared to a value of 0. In other words, ones are changed to zeros and zeros are changed to ones.
 
-Let&#8217;s take a look at another example. What do you think will happen here?
+Let's take a look at another example. What do you think will happen here?
 
 sql
 select ~ CONVERT(tinyint,0)
@@ -97,7 +97,7 @@ The ^ operator is the Bitwise Exclusive OR operator. Here is what books on line 
 
 > The ^ bitwise operator performs a bitwise logical exclusive OR between the two expressions, taking each corresponding bit for both expressions. The bits in the result are set to 1 if either (but not both) bits (for the current bit being resolved) in the input expressions have a value of 1. If both bits are 0 or both bits are 1, the bit in the result is cleared to a value of 0. 
 
-Let&#8217;s take a closer look
+Let's take a closer look
 
 _The bits in the result are set to 1 if either (but not both) bits (for the current bit being resolved) in the input expressions have a value of 1._
 

@@ -42,7 +42,7 @@ _Ted Krueger is a SQL Server MVP and has been working in development and databas
 
 Ted blogs and is also one of the founders of LessThanDot.com technology community. Some of the articles focused on are Backup / Recovery, Security, SSIS and working on SQL Server and using all of the SQL Server features available to create stable and scalable database services.
 
-Recent publication include co-authoring of the Red Gate book, &#8220;Troubleshooting SQL Server: A Guide for the Accidental DBA&#8221; and &#8220;SQL Server Deep Dives Volume 2&#8221;
+Recent publication include co-authoring of the Red Gate book, “Troubleshooting SQL Server: A Guide for the Accidental DBA” and “SQL Server Deep Dives Volume 2”
 
 Speaking Engagements in the last year include SQL Saturdays in Pensacola, Minnesota, Iowa and SQL Server User Groups in Wisconsin and Illinois.
 

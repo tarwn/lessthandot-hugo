@@ -40,11 +40,11 @@ tags:
   Here are the official abstracts:
 </p>
 
-_You have just finished your dazzling SSRS report project and you can&#8217;t wait to show your visual cleverness to the users. But, the DBA hasn&#8217;t given you permission to directly deploy to the production server! Instead, this paranoia person asked you to deliver him deployment scripts! What are you supposed to do? In the following two sessions, Valentino and Koen will show you two different methods to get the job done._
+_You have just finished your dazzling SSRS report project and you can't wait to show your visual cleverness to the users. But, the DBA hasn't given you permission to directly deploy to the production server! Instead, this paranoia person asked you to deliver him deployment scripts! What are you supposed to do? In the following two sessions, Valentino and Koen will show you two different methods to get the job done._
 
 **Automating SSRS deployment using built-in SQL Server tools** 
 
-Have you always wanted to find out what the RS Utility is all about but never dared to ask? Then this session is what you&#8217;ve been waiting for!
+Have you always wanted to find out what the RS Utility is all about but never dared to ask? Then this session is what you've been waiting for!
 
 Join Valentino to discover how rs.exe can be used to automate SSRS report deployment!
 
@@ -53,7 +53,7 @@ Join Valentino to discover how rs.exe can be used to automate SSRS report deploy
 
 **Leveraging MSBUILD to automate SSRS deployments.** 
 
-Unlike SSIS and SSAS, Reporting Services doesn&#8217;t have an easy way to automate deployments. You can work your way around with VBScripts, but isn&#8217;t there an alternative?
+Unlike SSIS and SSAS, Reporting Services doesn't have an easy way to automate deployments. You can work your way around with VBScripts, but isn't there an alternative?
 
 Yes there is! Koen Verbeeck will show you in this session how the MSBUILD platform can be used to deploy your SSRS projects to the server.
 

@@ -95,17 +95,17 @@ select count(*) from TestIndex
 set statistics io off
 ```
 
-_Table &#8216;TestIndex&#8217;. Scan count 1, logical reads 2491, physical reads 0,
+_Table &#8216;TestIndex'. Scan count 1, logical reads 2491, physical reads 0,
   
 read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p> 
 
-Table &#8216;TestIndex&#8217;. Scan count 1, logical reads 2491, physical reads 0,
+Table &#8216;TestIndex'. Scan count 1, logical reads 2491, physical reads 0,
   
 read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</em>
 
 Looks the same to me
 
-Now let&#8217;s take a look at the time it takes to run this
+Now let's take a look at the time it takes to run this
 
 sql
 set nocount on
@@ -139,7 +139,7 @@ where Value > ''
 
 So there you have it, a seek is not always faster than a scan. And yes, I know that this is a silly example
 
-Okay just for fun now let&#8217;s insert another million rows with the value B
+Okay just for fun now let's insert another million rows with the value B
 
 sql
 insert TestIndex
@@ -180,7 +180,7 @@ Here is the text version of the execution plan
                         
 |&#8211;Clustered Index Seek(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]),
 	  
-SEEK:([Test].[dbo].[TestIndex].[Value]=&#8217;A&#8217; OR [Test].[dbo].[TestIndex].[Value]=&#8217;B&#8217;) ORDERED FORWARD)</p> 
+SEEK:([Test].[dbo].[TestIndex].[Value]='A' OR [Test].[dbo].[TestIndex].[Value]='B') ORDERED FORWARD)</p> 
 
 |&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[globalagg1006],0)))
          
@@ -220,7 +220,7 @@ _|&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))
               
 |&#8211;Clustered Index Seek(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]),
 	  
-SEEK:([Test].[dbo].[TestIndex].[Value]=&#8217;A&#8217;) ORDERED FORWARD)</p> 
+SEEK:([Test].[dbo].[TestIndex].[Value]='A') ORDERED FORWARD)</p> 
 
 |&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1007],0)))
          

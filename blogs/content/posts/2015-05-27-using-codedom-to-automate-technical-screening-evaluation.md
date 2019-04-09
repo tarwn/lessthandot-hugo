@@ -26,7 +26,7 @@ To download and run the code yourself, you will need git and VisualSudion 2013 o
 
 The sample submissions for this post are intended to answer the following tech screening question:
 
-> Write a function that accepts an integer and outputs a string with: &#8220;Fizz&#8221; if it is divisible by 3, &#8220;Buzz&#8221; if it is divisible by 5, &#8220;FizzBuzz&#8221; if it is divisible by both, or the number if it is divisible by neither.
+> Write a function that accepts an integer and outputs a string with: “Fizz” if it is divisible by 3, “Buzz” if it is divisible by 5, “FizzBuzz” if it is divisible by both, or the number if it is divisible by neither.
 
 (this is not a real question from our tech screening)
 
@@ -68,7 +68,7 @@ Individual Results:
 ```
 ## Background
 
-Lately we been doing a lot of screening and interviewing as we grow the development team at [PrecisionLender][2]. Part of our interview process requires candidates to answer a technical screening questionaire with several C# and SQL exercises. Which means that another part of our process is for someone to evaluate those answers. I have a set of unit tests for all of the C# problems, but that doesn&#8217;t solve the part where we have to copy/paste into the tests, modify method names, tweak static/non-static, correct name collisions, etc. 
+Lately we been doing a lot of screening and interviewing as we grow the development team at [PrecisionLender][2]. Part of our interview process requires candidates to answer a technical screening questionaire with several C# and SQL exercises. Which means that another part of our process is for someone to evaluate those answers. I have a set of unit tests for all of the C# problems, but that doesn't solve the part where we have to copy/paste into the tests, modify method names, tweak static/non-static, correct name collisions, etc. 
 
 CodeDOM has been on my list to play with for a while and seemed like the perfect answer.
 
@@ -105,15 +105,15 @@ In more detail:
   2. Compile the code and verify it built without errors
   3. Use reflection to get the object and method, instantiate the object, and invoke the method with the test inputs
 
-When we ask people to submit code exercise answers, there is no guarantee that it will or won&#8217;t have using statements, a namespace, a class name, or static keywords where I do or don&#8217;t expect them. Even if they are present, there is no guarantee they will have the naming I expect, such as the &#8220;namespaceName&#8221; and &#8220;ClassName&#8221; values I hardcoded above. 
+When we ask people to submit code exercise answers, there is no guarantee that it will or won't have using statements, a namespace, a class name, or static keywords where I do or don't expect them. Even if they are present, there is no guarantee they will have the naming I expect, such as the “namespaceName” and “ClassName” values I hardcoded above. 
 
-Also, ignore the fact that I grab the first method and assume it&#8217;s the one I want. This works often enough that I don&#8217;t mind rearranging a bit in the one or two exceptional cases.
+Also, ignore the fact that I grab the first method and assume it's the one I want. This works often enough that I don't mind rearranging a bit in the one or two exceptional cases.
 
 ## Normalizing the Code
 
 To test consistently and automatically, we need to solve the following problems:
 
-  * Remove the &#8220;static&#8221; keyword from the method we intend to execute
+  * Remove the “static” keyword from the method we intend to execute
   * Add or rename the class name to an expected value
   * Add or rename the namespace name to an expected value
   * Add using statements if they are not present
@@ -176,7 +176,7 @@ else
 	normalizedSource = String.Format("{0}\r\n\nnamespace {1}\r\n{{\r\n{2}\r\n}}", USING_STATEMENTS, IntendedNamespace, normalizedSource);
 }
 ```
-And then add a standard set of using statements (USING_STATEMENTS constant) if they aren&#8217;t present yet:
+And then add a standard set of using statements (USING_STATEMENTS constant) if they aren't present yet:
 
 ```csharp
 // add using statements if not present
@@ -185,7 +185,7 @@ if (!normalizedSource.Contains("using System"))
 normalizedSource = USING_STATEMENTS + "\r\n" + normalizedSource;
 }
 ```
-This will convert a file like the  [sample &#8220;Pass&#8221; submission file][6] like so:
+This will convert a file like the  [sample “Pass” submission file][6] like so:
 
 Before:
 
@@ -338,9 +338,9 @@ return result;
 ```
 And there we have it, we start with one randomly submitted code file and end with the results of automated evaluation.
 
-## But What About&#8230;?
+## But What About…?
 
-This is only one small part of our interview process and, before anyone brings it up, we do also evaluate for things the computer can&#8217;t, such as readability of the code. While I have considered some options like incorporating NDepend evaluation, we&#8217;ll likely never be able to completely automate this. That being said, having this portion automated does reduce the amount of manual evaluation we do, so overall we still save quite a bit of effort.
+This is only one small part of our interview process and, before anyone brings it up, we do also evaluate for things the computer can't, such as readability of the code. While I have considered some options like incorporating NDepend evaluation, we'll likely never be able to completely automate this. That being said, having this portion automated does reduce the amount of manual evaluation we do, so overall we still save quite a bit of effort.
 
  [1]: https://github.com/tarwn/Blog_CodeDom "tarwn/Blog_CodeDom on github"
  [2]: http://precisionlender.com/about-us/?utm_source=nav&utm_medium=topnav&utm_campaign=website#team

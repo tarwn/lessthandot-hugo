@@ -128,7 +128,7 @@ By default, Log Shipping is disabled on each database. In order to go further, w
 
 > <span class="MT_red">Note: If you have other transaction log backups running, they should be turned off prior to starting the new Log Shipping plans.</span>
 
-  4. Click the &#8220;Backup Settings&#8221; button to open the configuration wizard.
+  4. Click the “Backup Settings” button to open the configuration wizard.
 Earlier we mentioned preparing for Log Shipping and the shares required. You can use admin shares (e.g. \onpnt_xpsd$) but this isn’t recommended as the admin shares should be for administrative purposes only. For our setup we will be using the following for processing backups:
 
 \onpnt\_xpspub\_logs
@@ -148,7 +148,7 @@ The next step is to determine the interval of the log backups. The default 15 mi
 
 Leave the default 15 minutes for now. If you want to alter this schedule, click the Schedule button and the SQL Agent scheduling window will come up. 
 
-To show compression, next to &#8220;Set backup compression&#8221;, select Compress Backup. If you are on an earlier version than 2008 R2 and any edition other than Enterprise or Developer, this option will not be available. SQL Server 2008 R2 allows compression in Standard and Enterprise (including Developer). Pre-R2, only Enterprise and Developer have this option. 
+To show compression, next to “Set backup compression”, select Compress Backup. If you are on an earlier version than 2008 R2 and any edition other than Enterprise or Developer, this option will not be available. SQL Server 2008 R2 allows compression in Standard and Enterprise (including Developer). Pre-R2, only Enterprise and Developer have this option. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/logship_2.gif" alt="" title="" width="628" height="646" />
@@ -159,7 +159,7 @@ The next step in the process is to set any subscribers and monitoring servers if
 
   7. Click Add under the Secondary databases
   8. Click Connect and connect to the instance you want to Log Ship to
-  9. On the Initialize Secondary Database tab, select &#8220;Yes, generate a full backup of the primary…&#8221;
+  9. On the Initialize Secondary Database tab, select “Yes, generate a full backup of the primary…”
 This will back the AdventureWorks database up and restore it as the database we specify to be the subscriber. Ensure if you do this lab on a single SQL Server to change the name of the Secondary database to something other than the default of the primary. 
 
  10. Click the restore options and ensure the data and log files go into the correct directories per your disk configurations. 
@@ -196,21 +196,21 @@ select [message] from log_shipping_monitor_history_detail
 
 Results:
 
-> Starting transaction log copy. Secondary ID: &#8217;07af9839-f962-40db-9392-2107e9cc2053&#8242;
+> Starting transaction log copy. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;
   
-> Retrieving copy settings. Secondary ID: &#8217;07af9839-f962-40db-9392-2107e9cc2053&#8242;
+> Retrieving copy settings. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;
   
-> Retrieved copy settings. Primary Server: &#8216;ONPNT\_XPS&#8217;, Primary Database: &#8216;AdventureWorks&#8217;, Backup Source Directory: &#8216;\onpnt\_xpspub\_logs&#8217;, Backup Destination Directory: &#8216;\onpnt\_xpssub_logs&#8217;, Last Copied File: &#8216;<none>&#8216;
+> Retrieved copy settings. Primary Server: &#8216;ONPNT\_XPS', Primary Database: &#8216;AdventureWorks', Backup Source Directory: &#8216;\onpnt\_xpspub\_logs', Backup Destination Directory: &#8216;\onpnt\_xpssub_logs', Last Copied File: &#8216;<none>&#8216;
   
-> Copying log backup files. Primary Server: &#8216;ONPNT\_XPS&#8217;, Primary Database: &#8216;AdventureWorks&#8217;, Backup Source Directory: &#8216;\onpnt\_xpspub\_logs&#8217;, Backup Destination Directory: &#8216;\onpnt\_xpssub_logs&#8217;
+> Copying log backup files. Primary Server: &#8216;ONPNT\_XPS', Primary Database: &#8216;AdventureWorks', Backup Source Directory: &#8216;\onpnt\_xpspub\_logs', Backup Destination Directory: &#8216;\onpnt\_xpssub_logs'
   
-> Checking to see if any previously copied log backup files that are required by the restore operation are missing. Secondary ID: &#8217;07af9839-f962-40db-9392-2107e9cc2053&#8242;
+> Checking to see if any previously copied log backup files that are required by the restore operation are missing. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;
   
-> The copy operation was successful. Secondary ID: &#8217;07af9839-f962-40db-9392-2107e9cc2053&#8242;, Number of log backup files copied: 0
+> The copy operation was successful. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;, Number of log backup files copied: 0
   
-> Starting transaction log copy. Secondary ID: &#8217;07af9839-f962-40db-9392-2107e9cc2053&#8242;</none>
+> Starting transaction log copy. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;</none>
 
-Another extremely practical usage of these tables is, in the event of a disaster, being able to later analyze data that may have been lost in log backups that did not get copied to secondary servers. The log\_shipping\_secondary has a column, &#8220;last\_copied\_file&#8221;. This column has helped me determine exactly where a subscribing database is at in the restores several times in the past. 
+Another extremely practical usage of these tables is, in the event of a disaster, being able to later analyze data that may have been lost in log backups that did not get copied to secondary servers. The log\_shipping\_secondary has a column, “last\_copied\_file”. This column has helped me determine exactly where a subscribing database is at in the restores several times in the past. 
 
 SSMS and built in reporting already available also provides us with a great way to monitor conditions of log shipping. Right click the database server in SSMS, scroll to reports and in standard reports, click the Transaction Log Shipping Status.
 

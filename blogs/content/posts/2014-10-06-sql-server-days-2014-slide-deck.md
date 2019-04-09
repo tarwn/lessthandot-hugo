@@ -21,11 +21,11 @@ tags:
   - ssis
 
 ---
-SQL Server Days 2014 is over, but it has been one great event. A very big thanks to the organizers! My session went pretty well, somewhere around 60 attendees I would guess and they didn&#8217;t seem too bored. I saw some other great sessions as well, such as Buck Woody ([twitter][1]) on Big Data (and a fantastic keynote) and a demo session on Azure ML. I also attended Grants ([twitter][2] | [blog][3]) precon on execution plans and I definitely learned a lot.
+SQL Server Days 2014 is over, but it has been one great event. A very big thanks to the organizers! My session went pretty well, somewhere around 60 attendees I would guess and they didn't seem too bored. I saw some other great sessions as well, such as Buck Woody ([twitter][1]) on Big Data (and a fantastic keynote) and a demo session on Azure ML. I also attended Grants ([twitter][2] | [blog][3]) precon on execution plans and I definitely learned a lot.
 
-It was great to meet up with the #sqlfamily and I can&#8217;t wait for next years edition.
+It was great to meet up with the #sqlfamily and I can't wait for next years edition.
 
-I have uploaded my slides to [Slideshare][4], in case you&#8217;re interested.
+I have uploaded my slides to [Slideshare][4], in case you're interested.
 
  [1]: https://twitter.com/buckwoody
  [2]: https://twitter.com/GFritchey

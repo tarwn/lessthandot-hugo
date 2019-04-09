@@ -14,7 +14,7 @@ categories:
   - Book Review
 
 ---
-Despite having worked with SQL Server clusters for years, I didn&#8217;t pick up the book [Pro SQL Server 2008 Failover Clustering][1] and read it cover-to-cover until recently. This is the most comprehensive look at Windows and SQL Server failover clustering that exists. In this book, Allan Hirt ([b][2] | [t][3]), a clustering expert and Microsoft MVP, lays a solid foundation for all aspects of clustering.
+Despite having worked with SQL Server clusters for years, I didn't pick up the book [Pro SQL Server 2008 Failover Clustering][1] and read it cover-to-cover until recently. This is the most comprehensive look at Windows and SQL Server failover clustering that exists. In this book, Allan Hirt ([b][2] | [t][3]), a clustering expert and Microsoft MVP, lays a solid foundation for all aspects of clustering.
 
 <p style="text-align: center;">
   <img src="http://ecx.images-amazon.com/images/I/51ET4iyVwSL.jpg" alt="" width="185" height="250" />

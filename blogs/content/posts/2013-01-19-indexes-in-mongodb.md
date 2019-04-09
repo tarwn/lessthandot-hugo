@@ -41,15 +41,15 @@ Before you go crazy and start adding indexes on every possible field in your col
 
 Some limitations:
   
-A collection can&#8217;t have more than 64 indexes.
+A collection can't have more than 64 indexes.
   
-Index keys can&#8217;t be larger than 1024 bytes. This includes the field value or values, the field name or names, and the namespace.
+Index keys can't be larger than 1024 bytes. This includes the field value or values, the field name or names, and the namespace.
 
-Let&#8217;s go take a look at some of these indexes
+Let's go take a look at some of these indexes
 
 ## Creating A Simple Index in MongoDB
 
-Let&#8217;s insert some data before we create the index
+Let's insert some data before we create the index
 
 <pre>db.Indexing.insert( { name : "Denis", age : 20 } )
 db.Indexing.insert( { name : "Abe", age : 30 } )
@@ -57,7 +57,7 @@ db.Indexing.insert( { name : "John", age : 40 } )
 db.Indexing.insert( { name : "Xavier", age : 10 } )
 db.Indexing.insert( { name : "Zen", age : 50 } )</pre>
 
-Now let&#8217;s run a simple query that will return all rows where the name is Denis and we want to see what the engine is doing. You can use explain to return the plan
+Now let's run a simple query that will return all rows where the name is Denis and we want to see what the engine is doing. You can use explain to return the plan
 
 <pre>db.Indexing.find({name: "Denis"}).explain()</pre>
 
@@ -82,7 +82,7 @@ Here is what you get back
         "server" : "Denis:27017"
 }</pre>
 
-Let&#8217;s add an index
+Let's add an index
 
 <pre>db.Indexing.ensureIndex({name: 1});</pre>
 
@@ -159,13 +159,13 @@ Here is the output
         "ok" : 1
 }</pre>
 
-As we mentioned before all _id fields have an index by default and those don&#8217;t get dropped
+As we mentioned before all _id fields have an index by default and those don't get dropped
 
 ## Creating A Unique Index in MongoDB
 
-Let&#8217;s now create an index on name again but this time we will make it unique., The syntax is the same as with the index we created before with the addition _unique: true_
+Let's now create an index on name again but this time we will make it unique., The syntax is the same as with the index we created before with the addition _unique: true_
   
-If you didn&#8217;t drop the index we created before, drop it first and then execute the following
+If you didn't drop the index we created before, drop it first and then execute the following
 
 <pre>db.Indexing.ensureIndex({name: 1}, {unique: true});</pre>
 
@@ -175,7 +175,7 @@ Now if we try to insert the same name again, you will see that we get an error
 
 Here is the output
   
-_E11000 duplicate key error index: Indexing.Indexing.$name_1 dup key: { : &#8220;Denis&#8221; }_
+_E11000 duplicate key error index: Indexing.Indexing.$name_1 dup key: { : “Denis” }_
 
 As you can see it is pretty easy to create a unique index
 
@@ -262,7 +262,7 @@ As you can see, no index was used
 
 * * *
 
-If you want to dive deeper into Indexing in MongoDB I would suggest you take a look at the documentation on the MongoDB site, they have an excellent section on Indexing with many more examples than I have given here. I didn&#8217;t cover Sparse Indexes, Indexes on Embedded Fields, Multikey Indexes, TTL Indexes, Geospatial Indexes or Geohaystack Indexes. You can find the documentation here: http://docs.mongodb.org/manual/core/indexes/
+If you want to dive deeper into Indexing in MongoDB I would suggest you take a look at the documentation on the MongoDB site, they have an excellent section on Indexing with many more examples than I have given here. I didn't cover Sparse Indexes, Indexes on Embedded Fields, Multikey Indexes, TTL Indexes, Geospatial Indexes or Geohaystack Indexes. You can find the documentation here: http://docs.mongodb.org/manual/core/indexes/
 
  [1]: /index.php/DataMgmt/DBProgramming/creating-mongodb-as-a-service
  [2]: /index.php/DataMgmt/DBProgramming/doing-upserts-in-mongodb

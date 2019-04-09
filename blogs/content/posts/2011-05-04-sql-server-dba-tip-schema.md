@@ -47,7 +47,7 @@ GO
 
 Resulting error message:
 
-<span class="MT_red">Msg 2760, Level 16, State 1, Line 1<br /> The specified schema name &#8220;dbo&#8221; either does not exist or you do not have permission to use it.</span>
+<span class="MT_red">Msg 2760, Level 16, State 1, Line 1<br /> The specified schema name “dbo” either does not exist or you do not have permission to use it.</span>
 
 schema to FinanceTables and attempt to run the statement again.
 

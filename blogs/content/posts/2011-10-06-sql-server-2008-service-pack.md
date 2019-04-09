@@ -25,7 +25,7 @@ tags:
   - sql server 2008
 
 ---
-SQL Server 2008 Service Pack 3 has been released. be aware that you can&#8217;t use this for SQL Server 2008 R2
+SQL Server 2008 Service Pack 3 has been released. be aware that you can't use this for SQL Server 2008 R2
 
 A couple of enhancements in Microsoft SQL Server 2008 Service Pack 3 are :
 

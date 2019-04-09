@@ -48,11 +48,11 @@ I admit I am not nearly as good in C# as in SQL; this is of course because 90% o
 
 **Finishing the SQL admin hacks** 
   
-This is another thing I just can’t seem to finish, I wrote the [SQL Server Programming Hacks][6] in the first half of this year; I started the [SQL Server Admin Hacks][7] the second half of this year but I am just pushing it off. just like Peter in Office Space I am thinking &#8220;Where is the motivation Bob?&#8221;
+This is another thing I just can’t seem to finish, I wrote the [SQL Server Programming Hacks][6] in the first half of this year; I started the [SQL Server Admin Hacks][7] the second half of this year but I am just pushing it off. just like Peter in Office Space I am thinking “Where is the motivation Bob?”
 
 That is it for me, I will add some personal stuff to this on my [personal blog][8]
 
-Who to tag, who to tag? Mmmm, can&#8217;t tag Chrissie1 since he is perfect, let me try the following people:
+Who to tag, who to tag? Mmmm, can't tag Chrissie1 since he is perfect, let me try the following people:
   
 [Brent Ozar][9]
   

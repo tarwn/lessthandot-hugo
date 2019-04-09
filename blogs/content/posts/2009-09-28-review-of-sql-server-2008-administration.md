@@ -94,7 +94,7 @@ Sample chapter 4 [Installing and upgrading SQL Server 2008][2]
   
 Sample chapter 10 [Backup and recovery][3]
 
-There is some more info about the book on the publisher&#8217;s website: http://www.manning.com/colledge/
+There is some more info about the book on the publisher's website: http://www.manning.com/colledge/
 
 You can also checkout the book on Amazon for more reviews: [SQL Server 2008 Administration in Action][1]
 

@@ -88,7 +88,7 @@ SELECT * FROM HumanResources.Department
 
 Power Shell has added a lot of rapid administration and development power to how you can automate otherwise lengthy tasks.  It took awhile for me to adopt it but once I did, I haven’t looked back in utilizing it fully.  That has made normal tasks that were once thought to be lengthy, more efficient and my Lazy DBA spider senses can be tuned to more important tasks.
 
-With regular Expressions, patterns can always be improved on and bugs uncovered for what they may cover or may not. I would very much like to see better patterns to the above. I attempted to perform the match and replace in one pattern but could not get it to function correctly. So here is your challenge to keep you busy today. I&#8217;m fully confident my developer counterparts will show me a much better pattern.
+With regular Expressions, patterns can always be improved on and bugs uncovered for what they may cover or may not. I would very much like to see better patterns to the above. I attempted to perform the match and replace in one pattern but could not get it to function correctly. So here is your challenge to keep you busy today. I'm fully confident my developer counterparts will show me a much better pattern.
 
  [1]: http://sqlasylum.wordpress.com/2011/02/01/invitation-to-t-sql-tuesday-15-automation-in-sql-server/
  [2]: http://twitter.com/sqlasylum

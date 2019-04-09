@@ -25,11 +25,11 @@ _Note: Chrissie has also covered [one-to-many][3] since I wrote this post the ot
 
 ## Many flavors of Mapping Related Objects
 
-PetaPoco doesn&#8217;t offer the instrumentation for lazy loading, though it wouldn&#8217;t be too hard to add it to the T4 template that is provided to automatically generate POCOs from the database. Of course the POCOs would stop being POCOs at this point and I&#8217;d be showing off my ability to write lazy loading rather than the library at hand, so lets stick to what PetaPoco does out of the box.
+PetaPoco doesn't offer the instrumentation for lazy loading, though it wouldn't be too hard to add it to the T4 template that is provided to automatically generate POCOs from the database. Of course the POCOs would stop being POCOs at this point and I'd be showing off my ability to write lazy loading rather than the library at hand, so lets stick to what PetaPoco does out of the box.
 
 That said, we still have a number of ways to map data from multi-table queries into objects.
 
-_Note: I am using the same tables and insert statements I used in the prior post to create the Person and Address table, so I&#8217;ve left those out of the examples below to reduce the noise a bit_
+_Note: I am using the same tables and insert statements I used in the prior post to create the Person and Address table, so I've left those out of the examples below to reduce the noise a bit_
 
 ### Automatic Mapping w/ Decorated Objects
 
@@ -100,7 +100,7 @@ While this example achieves the same outcome as the prior one, the ability to pr
 
 ### Dynamics
 
-Of course PetaPoco also handles dynamics, however this is limited to outputting a single object to represent the results. This works well if we wanted to present a report view of the data and didn&#8217;t have any column names that repeat:
+Of course PetaPoco also handles dynamics, however this is limited to outputting a single object to represent the results. This works well if we wanted to present a report view of the data and didn't have any column names that repeat:
 
 ```csharp
 public void SelectWithDynamics() {
@@ -122,7 +122,7 @@ Instead of a dynamic, we could just as easily create a POCO for this report view
 
 ### One-to-Many
 
-Switching directions for a moment, let&#8217;s instead query for an address and all of it&#8217;s associated persons. First we&#8217;ll need an updated POCO:
+Switching directions for a moment, let's instead query for an address and all of it's associated persons. First we'll need an updated POCO:
 
 ```csharp
 public class AddressWithPeople : Address { 
@@ -172,11 +172,11 @@ public class AddressToPersonRelator {
 	}
 }
 ```
-Even though I mostly copied this code from the official blogs, it was still more work than I would have liked just to map the records. However it wouldn&#8217;t be hard to convert this method to use generics and accept arguments for ID comparison and adding child record to the parent&#8217;s collection. Another option would be to use the [PetaPoco.RelationExtensions nuget][4] package, which offers simplified methods for one-to-many and many-to-one mappings.
+Even though I mostly copied this code from the official blogs, it was still more work than I would have liked just to map the records. However it wouldn't be hard to convert this method to use generics and accept arguments for ID comparison and adding child record to the parent's collection. Another option would be to use the [PetaPoco.RelationExtensions nuget][4] package, which offers simplified methods for one-to-many and many-to-one mappings.
 
 ## Conclusion
 
-Although Chrissie and I have been posting in parallel, I think we&#8217;ve reached the point where the feature sets diverge. Simple.Data obviously offers a simpler looking syntax for more complex JOINs (especially if we start looking at one-to-many) and offers fluent, LINQ-based syntax. PetaPoco offers a very clean, very simple way to continue to use SQL to get our data and map it into POCOs or dynamics, with the flexibility to do it for us automatically, with help from decorators, or via specified mapping functions (not to mention the blazing performance). Hopefully seeing us play back and forth a bit will have inspired you to play with one or both of these in the future, and don&#8217;t be surprised if you see them reused in some of my future projects as well.
+Although Chrissie and I have been posting in parallel, I think we've reached the point where the feature sets diverge. Simple.Data obviously offers a simpler looking syntax for more complex JOINs (especially if we start looking at one-to-many) and offers fluent, LINQ-based syntax. PetaPoco offers a very clean, very simple way to continue to use SQL to get our data and map it into POCOs or dynamics, with the flexibility to do it for us automatically, with help from decorators, or via specified mapping functions (not to mention the blazing performance). Hopefully seeing us play back and forth a bit will have inspired you to play with one or both of these in the future, and don't be surprised if you see them reused in some of my future projects as well.
 
 The examples above and several related ones are available in the [source on GitHub][5] as well as examples of the methods for updates and the upserting Save() method.
 

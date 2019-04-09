@@ -16,7 +16,7 @@ tags:
   - real world azure
 
 ---
-Recently we&#8217;ve been working with the raw Azure Storage API to try and get to a more stable solution then the far more aggressively changing Azure Storage SDK. One of the goals is to be able to work equally well locally, against the emulator, and in production. We&#8217;re used to cases where the Emulator diverges from production or the documentation, but recently we found a case where the emulator and documentation match, but the production services appear to be wrong.
+Recently we've been working with the raw Azure Storage API to try and get to a more stable solution then the far more aggressively changing Azure Storage SDK. One of the goals is to be able to work equally well locally, against the emulator, and in production. We're used to cases where the Emulator diverges from production or the documentation, but recently we found a case where the emulator and documentation match, but the production services appear to be wrong.
 
 <div style="background-color: #ffff99; padding: .5em; margin: 1em;">
   <h2 style="margin: .5em 0px;">
@@ -32,9 +32,9 @@ Recently we&#8217;ve been working with the raw Azure Storage API to try and get 
   </p>
 </div>
 
-The prior &#8220;real world azure&#8221; post (September 2013) was a [Azure API Queue bug][1] that is still present today. 
+The prior “real world azure” post (September 2013) was a [Azure API Queue bug][1] that is still present today. 
 
-This newer bug is more minor, unless you are relying on the error codes to be correct, in which case it&#8217;s kind of painful. It&#8217;s also concerning because, while we don&#8217;t build Storage APIs and SDKs for a living, we caught this in our integration tests relatively quickly, but it appears to have been missed in Microsoft testing thus far.
+This newer bug is more minor, unless you are relying on the error codes to be correct, in which case it's kind of painful. It's also concerning because, while we don't build Storage APIs and SDKs for a living, we caught this in our integration tests relatively quickly, but it appears to have been missed in Microsoft testing thus far.
 
 # What is Azure Blob Storage?
 
@@ -81,7 +81,7 @@ public void AcquireLease_NonExistentContainer_ReturnsContainerNotFoundError()
     Assert.AreEqual(ErrorStatus_ContainerNotFound, status);
 }
 ```
-_(There are also examples of raw HTTP implementations in that same test file to verify it is not an SDK error, which is also why we&#8217;ll look at the response at the network level using fiddler)._
+_(There are also examples of raw HTTP implementations in that same test file to verify it is not an SDK error, which is also why we'll look at the response at the network level using fiddler)._
 
 On the local emulator, this will return the following details (fiddler):
 

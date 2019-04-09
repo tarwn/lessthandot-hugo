@@ -23,7 +23,7 @@ tags:
   - unit testing
 
 ---
-It can be challenging to add unit testing to a project that was built without planning to incorporate it. The ASP.Net MVC Music Store tutorial was not built with unit testing in mind, but today we&#8217;re going to walk through the addition of Controller unit tests, focusing on a controller that directly references Entity Framework objects and implicitly interacts with ASP.Net Membership objects and Request data from the current HttpContext.
+It can be challenging to add unit testing to a project that was built without planning to incorporate it. The ASP.Net MVC Music Store tutorial was not built with unit testing in mind, but today we're going to walk through the addition of Controller unit tests, focusing on a controller that directly references Entity Framework objects and implicitly interacts with ASP.Net Membership objects and Request data from the current HttpContext.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p2.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
@@ -33,17 +33,17 @@ This is the third post in a multi-part series on my Continuous Delivery pipeline
 
 ## Adding the Unit Tests
 
-I chose to use MS Test for the Unit Test project due to it&#8217;s integration into Visual Studio. Later I&#8217;ll use Nunit for the automated interface testing where that integration is not as useful. This will also let us see both integrated into the build engine as we add those portions in.
+I chose to use MS Test for the Unit Test project due to it's integration into Visual Studio. Later I'll use Nunit for the automated interface testing where that integration is not as useful. This will also let us see both integrated into the build engine as we add those portions in.
 
 The first step to adding Unit Testing to an existing project is picking a place to start. I selected the CheckoutController, as it is one of the more complex controllers in the project and will provide the best set of examples. Besides the implicit access of HttpContext data and instantiating the MusicStoreEntities DbContext directly, the Checkout Controller interacts with a cart model object that also interacts with HttpContext and it own instance of the DbContext.
 
-_Note: There is a [MSDN Hands On Lab][2] to add &#8220;Unit Tests&#8221; to the MVCMusicStore site. The methods outlined in that post are lower impact to the production code (little or no changes required), but is actually Integration Testing, since the tests are executing across more than one unit of code and across application boundaries to a database. Integration Tests are useful, but typically more costly to maintain, provide less specific information, take longer to run, and are more fragile than unit tests. This is not to say that they aren&#8217;t useful, just that they are different._
+_Note: There is a [MSDN Hands On Lab][2] to add “Unit Tests” to the MVCMusicStore site. The methods outlined in that post are lower impact to the production code (little or no changes required), but is actually Integration Testing, since the tests are executing across more than one unit of code and across application boundaries to a database. Integration Tests are useful, but typically more costly to maintain, provide less specific information, take longer to run, and are more fragile than unit tests. This is not to say that they aren't useful, just that they are different._
 
 The code for this project is available in a [BitBucket repository][3], but the order I follow here will be somewhat different than the actual order of the changesets, as the changes for this post overlapped some with the content of the next post.
 
 ## Testable Entity Framework
 
-Before writing the first test, I need to drive a wedge between the Entity Framework DbContext and the Controllers so I can give the controller a data context that doesn&#8217;t really talk to a database. Currently the CheckoutController creates an instance of the MusicStoreEntities object when it is instantiated, and that instantiated MusicStoreEntities object gets it&#8217;s connection information from the web.config:
+Before writing the first test, I need to drive a wedge between the Entity Framework DbContext and the Controllers so I can give the controller a data context that doesn't really talk to a database. Currently the CheckoutController creates an instance of the MusicStoreEntities object when it is instantiated, and that instantiated MusicStoreEntities object gets it's connection information from the web.config:
 
 **MVCMusicStore/Controllers/CheckoutController.cs**
 
@@ -64,7 +64,7 @@ namespace MvcMusicStore.Controllers {
 ```
 Replacing this concrete object with an interface will allow the production version of the site to continue working with a live database context while providing the ability to use a fake version for testing. 
 
-To create the replacement, I&#8217;ll start replacing the concrete context with the name of an interface, then use the errors from the compiler to help define the minimum set of interface members required to satisfy the production code.
+To create the replacement, I'll start replacing the concrete context with the name of an interface, then use the errors from the compiler to help define the minimum set of interface members required to satisfy the production code.
 
 **MVCMusicStore/Controllers/CheckoutController.cs**
 
@@ -83,7 +83,7 @@ namespace MvcMusicStore.Controllers {
 		}
 ...
 ```
-_Why define the interface first and debug forward? Why not build a copy of the DbContext first? Starting with a minimal interface like this will help me keep the interface to the minimum necessary functionality. Had I started with the DbContext I could easily start defining methods that seem like they will be useful at some point, but don&#8217;t reflect what I will actually need or may never be used. Extra code is extra maintenance and finding out sooner that something doesn&#8217;t work (or is unnecessary) leads to less wasted effort._
+_Why define the interface first and debug forward? Why not build a copy of the DbContext first? Starting with a minimal interface like this will help me keep the interface to the minimum necessary functionality. Had I started with the DbContext I could easily start defining methods that seem like they will be useful at some point, but don't reflect what I will actually need or may never be used. Extra code is extra maintenance and finding out sooner that something doesn't work (or is unnecessary) leads to less wasted effort._
 
 The first error is the attempted assignment of the new MusicStoreEntities to the IMusicStoreEntities constructor. That one is easy enough to resolve:
 
@@ -98,7 +98,7 @@ namespace MvcMusicStore.Models {
 	public interface IMusicStoreEntities { }
 }
 ```
-I&#8217;ve added the interface declaration and the implements statement to MusicStoreEntities. Next I&#8217;ll define the collections and make sure the interface implements IDisposable:
+I've added the interface declaration and the implements statement to MusicStoreEntities. Next I'll define the collections and make sure the interface implements IDisposable:
 
 **MVCMusicStore/Models/MusicStoreEntities.cs**
 
@@ -147,7 +147,7 @@ namespace MvcMusicStore.Models {
 ```
 With those last couple changes completed, the build is happy and I have a minimal interface. 
 
-Next I want to replace the behavior in the controllers of creating their own local DbContext instance with using one that is provided to them. I started this by defining the two constructors above for my CheckoutController, but rather than copy and paste this new behavior to all of the controllers, I&#8217;ll move the responsibility to a ControllerBase class:
+Next I want to replace the behavior in the controllers of creating their own local DbContext instance with using one that is provided to them. I started this by defining the two constructors above for my CheckoutController, but rather than copy and paste this new behavior to all of the controllers, I'll move the responsibility to a ControllerBase class:
 
 **MVCMusicStore/Controllers/ControllerBase.cs** (New File)
 
@@ -195,13 +195,13 @@ namespace MvcMusicStore.Controllers {
 	}
 }
 ```
-After replacing the private variable and constructors from the CheckoutController with inheritance from the ControllerBase, the three places referencing the old variable are showing as errors and I&#8217;ll simply update them to the public property in the ControllerBase. 
+After replacing the private variable and constructors from the CheckoutController with inheritance from the ControllerBase, the three places referencing the old variable are showing as errors and I'll simply update them to the public property in the ControllerBase. 
 
-The last place I need to change is the ShoppingCart object. Despite being a model object, the ShoppingCart object instantiates it&#8217;s own local instance of the MusicStoreEntities context. The first time I converted the project, I missed this case and had some odd unit test results until I realized the cart was still accessing a real database.
+The last place I need to change is the ShoppingCart object. Despite being a model object, the ShoppingCart object instantiates it's own local instance of the MusicStoreEntities context. The first time I converted the project, I missed this case and had some odd unit test results until I realized the cart was still accessing a real database.
 
-_In larger projects it can be common to have components separately instantiated in random nooks and crannies, not only making it tricky to convert for unit testing but also making the production code more fragile and harder to change and troubleshoot. After replacing the local ones, it&#8217;s a good idea to execute some searches through the codebase to find other references to the concrete classes._
+_In larger projects it can be common to have components separately instantiated in random nooks and crannies, not only making it tricky to convert for unit testing but also making the production code more fragile and harder to change and troubleshoot. After replacing the local ones, it's a good idea to execute some searches through the codebase to find other references to the concrete classes._
 
-Just like the Controllers, I&#8217;ll update the ShoppingCart object to use the interface and use [Dependancy Injection][4] to pass in the context I expect it to use. Besides updating the constructor to require an IMusicStoreEntities context, I&#8217;ll also need to update the static methods that return instances of the cart:
+Just like the Controllers, I'll update the ShoppingCart object to use the interface and use [Dependancy Injection][4] to pass in the context I expect it to use. Besides updating the constructor to require an IMusicStoreEntities context, I'll also need to update the static methods that return instances of the cart:
 
 **MVCMusicStore/Models/ShoppingCart.cs** (New File)
 
@@ -231,15 +231,15 @@ namespace MvcMusicStore.Models {
 	}
 }
 ```
-With these changes added, the next build errors direct me to the places that need to pass the extra argument. For the CheckoutController, I&#8217;ll use the public property exposed by the Controllerbase. For the AccountController I need to instantiate a MusicStoreEntities object to pass (or convert it to use ControllerBase), and for the others I can plug in their local storeDb variable.
+With these changes added, the next build errors direct me to the places that need to pass the extra argument. For the CheckoutController, I'll use the public property exposed by the Controllerbase. For the AccountController I need to instantiate a MusicStoreEntities object to pass (or convert it to use ControllerBase), and for the others I can plug in their local storeDb variable.
 
-_Note: In my [implementation][5], I went ahead and converted all of my controllers over to the new ControllerBase. The downside of this method is that the more you convert, the more you have to test. Since I don&#8217;t have unit tests in place, this means a full manual regression test. On a larger project I would limit my changes only to the pieces I was planning on adding unit tests to and had time to manually regression test, but I would build my objects (like the ControllerBase) in such a way that the next conversions could take advantage and extend them when it&#8217;s their turn._
+_Note: In my [implementation][5], I went ahead and converted all of my controllers over to the new ControllerBase. The downside of this method is that the more you convert, the more you have to test. Since I don't have unit tests in place, this means a full manual regression test. On a larger project I would limit my changes only to the pieces I was planning on adding unit tests to and had time to manually regression test, but I would build my objects (like the ControllerBase) in such a way that the next conversions could take advantage and extend them when it's their turn._
 
 ## Adding a Test Project
 
-After manually regression testing my changes to ensure they work, I&#8217;ll add the test project and create the first test class.
+After manually regression testing my changes to ensure they work, I'll add the test project and create the first test class.
 
-To get started, I&#8217;ll create the test project and use the package manager to get the RhinoMocks package. This will allow me to mock some of the resources the controller requires. With the project and resuorces ready, I can create the first CheckoutController test.
+To get started, I'll create the test project and use the package manager to get the RhinoMocks package. This will allow me to mock some of the resources the controller requires. With the project and resuorces ready, I can create the first CheckoutController test.
 
 **MvcMusicStoreTests/Controllers/CheckoutController.cs**
 
@@ -260,7 +260,7 @@ namespace MvcMusicStoreTests.Controllers {
 	}
 }
 ```
-This test is using the Arrange, Act, Assert (AAA) unit testing pattern and is a basic test that asserts that the CheckoutController returns a result when we call AddressAndPayment. In the first step I call a Factory class to populate the data context of our CheckoutController. I have also started abstracting out obvious resources that will need to be fleshed out later, but haven&#8217;t started to define what those behaviors will be (I&#8217;ll let future tests decide that for me).
+This test is using the Arrange, Act, Assert (AAA) unit testing pattern and is a basic test that asserts that the CheckoutController returns a result when we call AddressAndPayment. In the first step I call a Factory class to populate the data context of our CheckoutController. I have also started abstracting out obvious resources that will need to be fleshed out later, but haven't started to define what those behaviors will be (I'll let future tests decide that for me).
 
 _You may also notice that the folder structure for my test matches the structure for the class that is under tests, this makes it easier to keep the project organized and to find matching files across the projects._
 
@@ -275,19 +275,19 @@ namespace MvcMusicStoreTests {
 	}
 }
 ```
-I don&#8217;t actually need any data yet, so I can use RhinoMock&#8217;s MockRepository to automaitcally create a stub implementation of the IMusicStoreEntities interface the controller requires.
+I don't actually need any data yet, so I can use RhinoMock's MockRepository to automaitcally create a stub implementation of the IMusicStoreEntities interface the controller requires.
 
 ## Fake Db and Http Contexts
 
 Now that I have a basic unit test working, I can start moving into more complex (and useful) tests. This is where things start to get challenging. The data context is already abstracted from the controllers, but the framework also depends heavily on the web server context, including bits like querystring and form post variables from the client browser, session and cookie state containers, and additional context for Membership information.
 
-While it is possible to start mocking or stubbing our way through this whole list, it can be pretty painful and isn&#8217;t really necessary. This particular problem has already been solved before, so I&#8217;ll import the MVC3 TestHelper package ([Install-Package MvcContrib.Mvc3.TestHelper-ci][6]) to do the work for me.
+While it is possible to start mocking or stubbing our way through this whole list, it can be pretty painful and isn't really necessary. This particular problem has already been solved before, so I'll import the MVC3 TestHelper package ([Install-Package MvcContrib.Mvc3.TestHelper-ci][6]) to do the work for me.
 
 ### Initial Data-Free Tests
 
-I&#8217;m going to continue to ease into making this controller testable by choosing an action that has minimal data store interactions. This will allow me to focus on getting the HttpContext work out of the way first, instead of trying to do both at the same time.
+I'm going to continue to ease into making this controller testable by choosing an action that has minimal data store interactions. This will allow me to focus on getting the HttpContext work out of the way first, instead of trying to do both at the same time.
 
-Rather than trying to guess ahead as to what pieces of the package I&#8217;ll need, I&#8217;m going to create an instance of the test and build out just the logic I need to make it pass (Test Driven Test Development?). Here is that test:
+Rather than trying to guess ahead as to what pieces of the package I'll need, I'm going to create an instance of the test and build out just the logic I need to make it pass (Test Driven Test Development?). Here is that test:
 
 **MvcMusicStoreTests/Controllers/CheckoutController.cs**
 
@@ -314,9 +314,9 @@ namespace MvcMusicStoreTests.Controllers {
 	}
 }
 ```
-I&#8217;m relegating the logic of creating the controller to a local function called <code class="codespan">GetWiredUpController()</code>, trusting it to return a functioning controller. I then create a FormCollection of values and assign it to the controller as if they had been sent from a client browser. The rest of the code is the Act and Assert steps of the test to call the controller and verify the result.
+I'm relegating the logic of creating the controller to a local function called <code class="codespan">GetWiredUpController()</code>, trusting it to return a functioning controller. I then create a FormCollection of values and assign it to the controller as if they had been sent from a client browser. The rest of the code is the Act and Assert steps of the test to call the controller and verify the result.
 
-On the first run, the <code class="codespan">GetWiredUpController()</code> method isn&#8217;t giving me everything I need, but I can work through that iteratively until I have all the pieces I need. This took several iterations, so I&#8217;ll skip ahead to the end results. 
+On the first run, the <code class="codespan">GetWiredUpController()</code> method isn't giving me everything I need, but I can work through that iteratively until I have all the pieces I need. This took several iterations, so I'll skip ahead to the end results. 
 
 **MvcMusicStoreTests/Controllers/CheckoutController.cs**
 
@@ -338,9 +338,9 @@ namespace MvcMusicStoreTests.Controllers {
 	}
 }
 ```
-Like the initial test, I create the controller and populate it with an empty IMusicStoreEntities call from the factory. I then create an instance of the TestControllerBuilder class from the MVCContrib package, which will wire together all the stubs and fakes necessary to present Application, Session, and other necessary HttpContext values to the controller. I&#8217;ll add my own FakeUser object (an implementation of IPrincipal) to the builder, then have it do it&#8217;s magic on the CheckoutController instance. Voila, one fully wired up CheckoutController.
+Like the initial test, I create the controller and populate it with an empty IMusicStoreEntities call from the factory. I then create an instance of the TestControllerBuilder class from the MVCContrib package, which will wire together all the stubs and fakes necessary to present Application, Session, and other necessary HttpContext values to the controller. I'll add my own FakeUser object (an implementation of IPrincipal) to the builder, then have it do it's magic on the CheckoutController instance. Voila, one fully wired up CheckoutController.
 
-### Totally Faked Out, Just Add Data&#8230;
+### Totally Faked Out, Just Add Data…
 
 Now that I have the controller logic able to run independently from a real HTTP request, I can return to finish work on the methods that interact more heavily with the data store.
 
@@ -389,19 +389,19 @@ namespace MvcMusicStoreTests.Controllers {
 			Assert.AreEqual(5, result.ViewData.Model);
 		}
 ```
-Without any database or HttpContext, I can now test that a valid user with a valid order id will complete processing successfully. I&#8217;ve extended the WiredUpController to take optional arguments to simplify creating scenarios specific to an individual test, again adding functionality only as we need it to satisfy our tests.
+Without any database or HttpContext, I can now test that a valid user with a valid order id will complete processing successfully. I've extended the WiredUpController to take optional arguments to simplify creating scenarios specific to an individual test, again adding functionality only as we need it to satisfy our tests.
 
 With a working fake data context a working fake HttpContext and sample tests that interact with both, I can make additional tests very easily and have the groundwork in place to start adding test coverage to other controllers.
 
 ## Finishing Up
 
-The source code is available [on BitBucket][7]. Initially I went down a number of blind alleys before I started using the MVC3 Contrib package, that one decision greatly simplified seperating the test code from it&#8217;s expectations of a real HttpContext. I tried to cover the most important parts and this same process should be applicable to other projects as well. If you have any questions about how I got from one step to the next, or what happened between changesets in the source repository, please don&#8217;t hesitate to ask here, in the forum, or via the contact form on my website.
+The source code is available [on BitBucket][7]. Initially I went down a number of blind alleys before I started using the MVC3 Contrib package, that one decision greatly simplified seperating the test code from it's expectations of a real HttpContext. I tried to cover the most important parts and this same process should be applicable to other projects as well. If you have any questions about how I got from one step to the next, or what happened between changesets in the source repository, please don't hesitate to ask here, in the forum, or via the contact form on my website.
 
 Creating the tests incrementally and writing only the minimum code necessary may have looked longer, but it actually helped create a pretty tight codebase for the testing and helped to uncover the lack of server-side validation in the checkout routine, a bug in the tutorial code. Had I tried to build everything I needed up front, I probably would have gone further down several blind alleys and ended up with a much larger codebase then I actually needed.
 
 ## Next Steps
 
-The project now has the beginning of unit test coverage and the tools necessary to start spreading those tests to the rest of our controllers. In the next post I&#8217;ll incorporate these test into the build process, running and capturing the test results as part of the CI build job.
+The project now has the beginning of unit test coverage and the tools necessary to start spreading those tests to the rest of our controllers. In the next post I'll incorporate these test into the build process, running and capturing the test results as part of the CI build job.
 
 <ul class="thelist">
   <li>

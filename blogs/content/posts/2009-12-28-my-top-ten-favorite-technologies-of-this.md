@@ -33,7 +33,7 @@ The personal media player has come a long way. In the 80s I got the [WM-1][1] by
 
 In the 90s I bought the [Rio PMP300][2]. This was the first available mp3 player in the US after Creative won the lawsuit against the RIAA who claimed claiming the player violated the 1992 Audio Home Recording Act. This player had a whopping 32MB (yes that is megabyte) of internal memory and also had a smartmedia slot. I remember encoding songs at 64 kb/s so that I could fit more than 10 songs on the device. Over the years I had a plethora of devices and my current device is a Zune HD. 
 
-The devices that you can buy these days are so much better than that first MP3 player, you can&#8217;t compare this at all. These devices do a lot more than just play songs, they will play video, they have apps a wireless connection and some of them can even output to a HDTV screen. Of course everyone knows that Apple owns this market now with the iPod and the iPod Touch.
+The devices that you can buy these days are so much better than that first MP3 player, you can't compare this at all. These devices do a lot more than just play songs, they will play video, they have apps a wireless connection and some of them can even output to a HDTV screen. Of course everyone knows that Apple owns this market now with the iPod and the iPod Touch.
 
 **Smart phones**
   

@@ -23,9 +23,9 @@ tags:
   - perlcritic
 
 ---
-[Perl::Critic][1] is great. If you haven&#8217;t tried it, you should. It can help you improve the quality of your code no end.
+[Perl::Critic][1] is great. If you haven't tried it, you should. It can help you improve the quality of your code no end.
 
-I wrote this script to make it easier to view the feedback in the context of the code itself. When run in a directory containing Perl code it&#8217;ll create a critic_html directory containing index.html summarizing the results:
+I wrote this script to make it easier to view the feedback in the context of the code itself. When run in a directory containing Perl code it'll create a critic_html directory containing index.html summarizing the results:
 
 ![critic_html/index.html][2]
 

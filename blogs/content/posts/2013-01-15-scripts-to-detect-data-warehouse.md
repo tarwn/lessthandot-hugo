@@ -18,13 +18,13 @@ tags:
   - t-sql
 
 ---
-Standards and best practices are like flu shots you take before you&#8217;re infected; Database best practices protect your databases from bad things. But, we all make mistakes. It could be because we&#8217;re on a time crunch, or we&#8217;re lazy (which I&#8217;m guilty of by the way), or maybe it&#8217;s part of being a developer.
+Standards and best practices are like flu shots you take before you're infected; Database best practices protect your databases from bad things. But, we all make mistakes. It could be because we're on a time crunch, or we're lazy (which I'm guilty of by the way), or maybe it's part of being a developer.
 
-Common mistakes include: tables without a primary key, column name problems, missing foreign keys, etc., This is where I love LTD&#8217;s very own [SQLCop][1]. I can quickly go on with my database development and rely on SQLCop to [detect the issues][2]. It saves time and ensures that database standards are met.
+Common mistakes include: tables without a primary key, column name problems, missing foreign keys, etc., This is where I love LTD's very own [SQLCop][1]. I can quickly go on with my database development and rely on SQLCop to [detect the issues][2]. It saves time and ensures that database standards are met.
 
-However, there are some issues explicit to data warehouses that SQLCop doesn&#8217;t look for. I list those issues below and provide scripts to detect them. I use these scripts in conjunction with SQLCop.
+However, there are some issues explicit to data warehouses that SQLCop doesn't look for. I list those issues below and provide scripts to detect them. I use these scripts in conjunction with SQLCop.
 
-#### Detect tables in a data warehouse that aren&#8217;t prefixed with either Dim or Fact:
+#### Detect tables in a data warehouse that aren't prefixed with either Dim or Fact:
 
 Tables in a warehouse are generally prefixed with Dim and Fact for dimensions and fact respectively, to easily distinguish them.
 
@@ -39,7 +39,7 @@ WHERE   t.name NOT LIKE 'Dim%'
 ```
 </p> 
 
-#### Find tables in a data warehouse that don&#8217;t have a primary key:
+#### Find tables in a data warehouse that don't have a primary key:
 
 Like in OLTP databases, all tables in a data warehouse also should have a primary key defined.
 
@@ -73,7 +73,7 @@ HAVING  COUNT(*) > 1
 
  
 
-#### Detect dimension tables that don&#8217;t have Identity column as a primary key:
+#### Detect dimension tables that don't have Identity column as a primary key:
 
 Usually, surrogate key is made the primary key of the dimension table. Surrogate key is an auto generated Identity value.
 
@@ -97,7 +97,7 @@ WHERE   t.TYPE = 'U'
 
  
 
-#### Detect primary keys that don&#8217;t follow the naming convention:
+#### Detect primary keys that don't follow the naming convention:
 
 sql
 SELECT  dim_table = t.name ,
@@ -120,7 +120,7 @@ WHERE   t.TYPE = 'U'
 
 #### Detect fact tables that have no foreign keys:
 
-Without a foreign key, a fact table isn&#8217;t really a fact table.
+Without a foreign key, a fact table isn't really a fact table.
 
 sql
 SELECT table_name = t.name
@@ -137,7 +137,7 @@ SELECT table_name = t.name
 
 #### Detect fact tables that have foreign key(s) to another fact table:
 
-It&#8217;s unlikely to have a fact table related to another fact table.
+It's unlikely to have a fact table related to another fact table.
 
 sql
 SELECT  foreign_key = fk.name ,
@@ -151,7 +151,7 @@ WHERE   rt.name LIKE 'Fact%'
 
  
 
-#### Detect missing foreign key(s) in fact tables &#8211; Columns suffixed with Key, but don&#8217;t have foreign key constraint:
+#### Detect missing foreign key(s) in fact tables &#8211; Columns suffixed with Key, but don't have foreign key constraint:
 
 I stole the following query from [here][3] posted by [George Mastros][4], and replaced ID with Key to use it for data warehouse scenario.
 
@@ -173,7 +173,7 @@ SELECT  C.TABLE_SCHEMA,C.TABLE_NAME,C.COLUMN_NAME
 
  
 
-Results of above queries aren&#8217;t always issues. They are just rare, you&#8217;ve to look at them closely and make sure there is a reason for each choice. Also, you may use different naming conventions that make these queries void. In that case, I hope you&#8217;re able to alter them to your needs.
+Results of above queries aren't always issues. They are just rare, you've to look at them closely and make sure there is a reason for each choice. Also, you may use different naming conventions that make these queries void. In that case, I hope you're able to alter them to your needs.
 
 Follow me on Twitter! @[SamuelVanga][5]
 

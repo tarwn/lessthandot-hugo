@@ -20,25 +20,25 @@ tags:
 ---
 _This is the fifth and final article in a multi-article set that describes the basics of Kanban and explores applying Kanban to IT Processes. [Part one][1] provides a basic overview of Kanban and how it is used in manufacturing. The remaining parts explore sample scenarios to help generate ideas for your own environment._
 
-The first four articles discuss the basics of Kanban and follow it&#8217;s application in three fictional environments. In each of these stories the implementation is successful and there are positive improvements in a fairly short period of time. This final article briefly discusses some common challenges and the concept of continuous improvement. Unlike previous articles in the series, this one does not have illustrations, so I apologize in advance to those of our members that prefer a higher picture-to-text ratio in their reading material (\*cough\* George).
+The first four articles discuss the basics of Kanban and follow it's application in three fictional environments. In each of these stories the implementation is successful and there are positive improvements in a fairly short period of time. This final article briefly discusses some common challenges and the concept of continuous improvement. Unlike previous articles in the series, this one does not have illustrations, so I apologize in advance to those of our members that prefer a higher picture-to-text ratio in their reading material (\*cough\* George).
 
 ## Implementing Kanban
 
-The fictional stories in previous articles all followed a common theme, successful improvement of the process with few or no challenges. However for those of us working in the real world, we are all too aware that no plan or process can be launched without challenges. While addressing all of the potential challenges in each reader&#8217;s environment may be well beyond the scope of both my skill and this article, there are two common challenges to Kanban that most of us will face in IT environments.
+The fictional stories in previous articles all followed a common theme, successful improvement of the process with few or no challenges. However for those of us working in the real world, we are all too aware that no plan or process can be launched without challenges. While addressing all of the potential challenges in each reader's environment may be well beyond the scope of both my skill and this article, there are two common challenges to Kanban that most of us will face in IT environments.
 
 ### Changing Habits
 
 In addition to the challenges of defining our processes and attempting to standardize tasks that are often the exceptions to standards, following a Kanban process will also force us to challenge some ingrained habits. The idea of limiting the amount of Work in Process (WIP) in a step may sound good in an article, but actually submitting to limits is challenging the first few times . Many management styles have a tendency to focus on how much time is spent working or how many tasks an individual is completing and, with these styles, stopping work in a single step is akin to putting your feet up on your desk and taking a nap.
   
-Kanban forces us to face these measurement systems and correct some of the flaws they drive into our processes. Rather than measure how hard an individual is working in a single step, we measure how well we deliver through the entire process. Rather than measure how many hours an individual is working, we can measure how many hours of work we have removed from the process. Where the old measurement system is asking why we aren&#8217;t piling up more work in between development and QA, Kanban is forcing us to question how we can improve the throughput or decrease the rework rate.
+Kanban forces us to face these measurement systems and correct some of the flaws they drive into our processes. Rather than measure how hard an individual is working in a single step, we measure how well we deliver through the entire process. Rather than measure how many hours an individual is working, we can measure how many hours of work we have removed from the process. Where the old measurement system is asking why we aren't piling up more work in between development and QA, Kanban is forcing us to question how we can improve the throughput or decrease the rework rate.
   
 Ingrained habits are difficult to change. Instead of challenging these beliefs directly, start by modeling the process and tasks that are flowing through them. There are separate challenges in this modeling process, but once the visualization is in place and you start getting others involved in refining that visualization and tracking tasks through it, many of these challenges will go away. The ability to see the tasks flow through the process fulfills a need that many people have, providing visibility and insight into the process that previously was ruled by estimation and occasional guesswork.
 
-### &#8220;IT is not Manufacturing&#8221;
+### “IT is not Manufacturing”
 
 Another common challenge to Kanban is the fact that, having originated in Manufacturing environments, it is not suitable for an IT environment. This is a widely stated argument against Kanban (and Lean principles in general) and it has been soundly disproved in a wide number of industries. The idea that practices or knowledge from one industry cannot be used to further our understanding in others seems a bit egotistical, especially when coupled with arguments that any one area is too specialized to learn anything from others. If this were truly the case then the medical advances we gain from the space program would never have occurred, and neither would hundreds of other concepts and ideas that have crossed industry boundaries to breed new ideas or products in other, dissimilar industries.
   
-Occasionally the argument is couched in less direct terms, citing the difference between manufacturing plants producing discrete, repetitive parts and the constantly changing tasks in an IT environment. Given a few minutes with your favorite search engine, you will find examples in a number of industries, including software development, where Kanban has not only been implemented successfully, but has led the way for continuous improvement and other practices with roots in Manufacturing. While that may not be the most philosophical answer to the challenge, I don&#8217;t see where out time is well spent formulating a logical proof for something so easily observed.
+Occasionally the argument is couched in less direct terms, citing the difference between manufacturing plants producing discrete, repetitive parts and the constantly changing tasks in an IT environment. Given a few minutes with your favorite search engine, you will find examples in a number of industries, including software development, where Kanban has not only been implemented successfully, but has led the way for continuous improvement and other practices with roots in Manufacturing. While that may not be the most philosophical answer to the challenge, I don't see where out time is well spent formulating a logical proof for something so easily observed.
 
 Applying Kanban is not rocket science, but it does require thought and it does require time. Luckily there are whole communities of people out there who are willing to answer questions, refer experts, and suggest good books. 
 
@@ -50,7 +50,7 @@ As we implement Kanban, we begin to complete tasks in a consistent manner. This 
 
 ### Continuous Improvement
 
-The term &#8216;Continuous Improvement&#8217; shows up in several of the articles and the concept is present in all of them. The principle of continuous improvement is to make small, incremental improvements to a process that, over a long term, build towards great savings and quality improvements. Individual improvements are made by finding and analyzing a waste in the process (such as wasted material, movement, safety hazards) or many wastes in a single step of the process (such as the defect testing in the software development article). By determining the root cause of the waste or wastes, and making small process improvements to reduce or remove that waste, targets or methods for improvement become available. By slowly paring away at the wastes in our processes, we improve the quality, cost, and timing characteristics of our process. 
+The term &#8216;Continuous Improvement' shows up in several of the articles and the concept is present in all of them. The principle of continuous improvement is to make small, incremental improvements to a process that, over a long term, build towards great savings and quality improvements. Individual improvements are made by finding and analyzing a waste in the process (such as wasted material, movement, safety hazards) or many wastes in a single step of the process (such as the defect testing in the software development article). By determining the root cause of the waste or wastes, and making small process improvements to reduce or remove that waste, targets or methods for improvement become available. By slowly paring away at the wastes in our processes, we improve the quality, cost, and timing characteristics of our process. 
 
 Kanban helps Continuous Improvement efforts by providing a consistent flow and visualization of our process. The visualization and standardization of the process cause exceptions and bottlenecks to become more visible, giving us focal points for our improvement efforts. Once improvements have been made, the Kanban board can then show us how those changes affect the greater process and if the improvements have improved the overall process, uncovered new issues, or failed to solve the root problem.
 
@@ -95,15 +95,15 @@ I would like to thank everyone that has helped me review and edit these articles
 
 If you have missed prior articles in the series you can find them here:
   
-Applying Kanban &#8230; Part 1: [Kanban Overview][2]
+Applying Kanban … Part 1: [Kanban Overview][2]
   
-Applying Kanban &#8230; Part 2: [Kanban applied to Tech Support][3]
+Applying Kanban … Part 2: [Kanban applied to Tech Support][3]
   
-Applying Kanban &#8230; Part 3: [Kanban applied to PC Deployment][4]
+Applying Kanban … Part 3: [Kanban applied to PC Deployment][4]
   
-Applying Kanban &#8230; Part 4: [Kanban applied to a Development Group][5]
+Applying Kanban … Part 4: [Kanban applied to a Development Group][5]
   
-_Applying Kanban &#8230; Part 5: Challenges, Additional Concepts, and Wrapup_
+_Applying Kanban … Part 5: Challenges, Additional Concepts, and Wrapup_
 
  [1]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-1
  [2]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-1 "Read the first article"

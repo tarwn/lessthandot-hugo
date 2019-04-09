@@ -28,7 +28,7 @@ tags:
   - teaser
 
 ---
-Time for this week&#8217;s puzzle/teaser. I want to return the results in ascending order but without using ORDER BY
+Time for this week's puzzle/teaser. I want to return the results in ascending order but without using ORDER BY
 
 If you run this code
 
@@ -80,7 +80,7 @@ M
   
 Z
 
-Without using ORDER BY, how would you make the SELECT query return Col1 in ascending order? You can&#8217;t make changes to the table, all that you are allowed to modify is this part
+Without using ORDER BY, how would you make the SELECT query return Col1 in ascending order? You can't make changes to the table, all that you are allowed to modify is this part
 
 sql
 SELECT Col1 FROM Puzzle;

@@ -16,7 +16,7 @@ tags:
   - sql server community
 
 ---
-This will be a short post but nonetheless a very important one to me. A good friend of mine, Jason Strate ([Blog][1] | [Twitter][2]), posted a blog, &#8220;[What are you thankful for][3]?&#8221; In this post he asked all of his readers to also take a few moments and blog about the same. So here we go…
+This will be a short post but nonetheless a very important one to me. A good friend of mine, Jason Strate ([Blog][1] | [Twitter][2]), posted a blog, “[What are you thankful for][3]?” In this post he asked all of his readers to also take a few moments and blog about the same. So here we go…
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/ITProfessionals/thankssqlstyle.gif" alt="" title="" width="264" height="199" align="left" />
@@ -30,7 +30,7 @@ Most know that I recently changed jobs. This change was pretty big for me. The r
 
 **SQL Community is a family**. The community may be a different type of family but a family, it is. One that I’m still astonished by how many people involved in it will drop everything to lend a hand to those in need or those just simply looking for a place to vent, praise or congratulate accomplishments. Over the years, everything that I have accomplished I sincerely thank the community for helping me with. The community isn’t just a cool social gathering like twitter and a hash tag or a SQL list; the SQL Community is a cloud that follows the ones that embrace it and accept it as a place of vast knowledge, extraordinary offering without expectations of payment and exceptional respect for our specific technology we all hold so close to our hearts. 
 
-That is what I&#8217;m thankful for (abbreviated list). I hope you find yourself thankful for the same things and many more. In my eyes, to be thankful for anything means you are using everything around you to better yourself.
+That is what I'm thankful for (abbreviated list). I hope you find yourself thankful for the same things and many more. In my eyes, to be thankful for anything means you are using everything around you to better yourself.
   
 Happy Thanksgiving to those that celebrate it! I hope to see you all out there in the community soon. 
 

@@ -23,7 +23,7 @@ tags:
   - ssrs
 
 ---
-I&#8217;m delighted to announce I will be giving a session at [ITPROceed][1], a new event in Belgium for the IT Professional. From their website:
+I'm delighted to announce I will be giving a session at [ITPROceed][1], a new event in Belgium for the IT Professional. From their website:
 
 > ITPROceed is a joint effort between the ITProfessional User Groups with the strong support of Microsoft to bring you the best on the Cloud OS, System Center, SQL, Office 365, Windows 8, Unified Communications, Lync, Azure and SharePoint.
 
@@ -31,7 +31,7 @@ My session is titled _Get More Out Of Your Data Visualizations_. The abstract is
 
 _With data you can tell important and compelling stories, if done right. In this session, we will review a few guidelines on how to create communicative visualizations and how this can be implemented in Excel and Reporting Services.
   
-Because SSRS is often underestimated, we&#8217;ll finish off with some eye-catchers._
+Because SSRS is often underestimated, we'll finish off with some eye-catchers._
 
 There are other excellent sessions about SQL Server and Business Intelligence, so make sure to check out the [agenda][2]!
   

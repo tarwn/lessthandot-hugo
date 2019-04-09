@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-Occasionally, it&#8217;s necessary to convert character data (char, nchar, varchar, nvarchar) to a number. Before doing so, it is best to make sure that the value can be converted to a number.
+Occasionally, it's necessary to convert character data (char, nchar, varchar, nvarchar) to a number. Before doing so, it is best to make sure that the value can be converted to a number.
 
 IsNumeric would be the obvious choice, but has some problems because it allows for unexpected characters during the conversion. For example, the following strings will return true from the IsNumeric function.
 
@@ -32,7 +32,7 @@ Select Convert(Float, '1.4e3')
 Select Convert(Float, '2d4')
 ```
 
-Often times, we don&#8217;t want to allow the dollar sign or scientific notation. 
+Often times, we don't want to allow the dollar sign or scientific notation. 
 
 To make sure a value can be converted to an integer, you can append .0e0 to the end of the string before checking. If the original value had a decimal point, then adding another decimal point will cause the value to not be numeric. Similarly, adding e0 to a value that is already expressed in scientific notation will cause IsNumeric to return false.
 

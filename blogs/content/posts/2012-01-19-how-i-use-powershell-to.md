@@ -21,7 +21,7 @@ tags:
 ---
 If you are a blogger, you want to spend time on writing the content not on formatting tables and prettifying syntax so that it looks nice. The syntax is taken care of because we use the [GeSHi][1] syntax highlighter. formatted output is another story
 
-If you want to show the output of a query in a html table you have a couple of options. Let&#8217;s first take a look at a simple query
+If you want to show the output of a query in a html table you have a couple of options. Let's first take a look at a simple query
 
 sql
 SELECT TOP 10 name,create_date
@@ -393,7 +393,7 @@ Pretty cool and simple
   
 I am no PowerShell expert and I am sure that the script in this post can be improved, leave me a comment if you see a major mistake
 
-Of course you don&#8217;t want to hard code the query either, you could make the script generic so that you can supply the query as a parameter instead
+Of course you don't want to hard code the query either, you could make the script generic so that you can supply the query as a parameter instead
 
  [1]: http://qbnz.com/highlighter/index.php
  [2]: http://technet.microsoft.com/en-us/library/ee156817.aspx

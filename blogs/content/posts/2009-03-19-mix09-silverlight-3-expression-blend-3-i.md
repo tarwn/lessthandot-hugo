@@ -23,7 +23,7 @@ Mix 09 really turned out to be quite an event, a lot of cool new stuff was annou
 
 ## ASP.NET MVC 1.0
 
-The first thing I saw was ASP.NET MVC 1.0. I have been waiting for this for a while now since I want to do a MVC site for some stuff at work and don&#8217;t want to deal with CTP or RC releases. Now that it is finalized I finally can start working on that. You can download ASP.NET MVC 1.0 here: http://www.microsoft.com/downloads/details.aspx?FamilyID=53289097-73ce-43bf-b6a6-35e00103cb4b&displaylang=en
+The first thing I saw was ASP.NET MVC 1.0. I have been waiting for this for a while now since I want to do a MVC site for some stuff at work and don't want to deal with CTP or RC releases. Now that it is finalized I finally can start working on that. You can download ASP.NET MVC 1.0 here: http://www.microsoft.com/downloads/details.aspx?FamilyID=53289097-73ce-43bf-b6a6-35e00103cb4b&displaylang=en
 
 ## Silverlight 3
 

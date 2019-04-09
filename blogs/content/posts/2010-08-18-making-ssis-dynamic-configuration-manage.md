@@ -25,7 +25,7 @@ tags:
   - ssis
 
 ---
-Every task that is out there to enable SSIS to be more, &#8216;dynamic&#8217;, ensures that we can develop reusable and more manageable solutions. Variables and configuration files along with package configurations are all part in allowing packages to become dynamic in this way. You may be thinking right now that it would be cool to have something like a date variable so you could use it in an Execute SQL Statement or such. That and a lot of other common uses are indeed, part of making a package dynamic. However, we can push this much further and bring out the essential foundation of configurations and variables in working freely from environment to environment.
+Every task that is out there to enable SSIS to be more, &#8216;dynamic', ensures that we can develop reusable and more manageable solutions. Variables and configuration files along with package configurations are all part in allowing packages to become dynamic in this way. You may be thinking right now that it would be cool to have something like a date variable so you could use it in an Execute SQL Statement or such. That and a lot of other common uses are indeed, part of making a package dynamic. However, we can push this much further and bring out the essential foundation of configurations and variables in working freely from environment to environment.
 
 To get going, let’s look at one of the most common settings you will have internal to your packages: database connections. The connection management in SSIS allows us to completely set all the key properties of the connections internally from the use of configuration management.
 
@@ -37,7 +37,7 @@ Create a new package to start adding and editing some tasks. In the package, cre
   <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_1.gif" alt="" title="" width="319" height="227" />
 </div>
 
-Click the check box to &#8220;Enable package configurations&#8221; and then click, Add.
+Click the check box to “Enable package configurations” and then click, Add.
 
 Clicking the add button will launch the Package Configuration Wizard (PCW). The Wizard and many others in SSIS cover all the settings very well without having to go through a lot of manual work. Remember, we want to be efficient. Don’t be afraid of using the wizards for configuring SSIS. 
 
@@ -73,7 +73,7 @@ There is one catch here we need to go over. Configuration files can be wrong whi
 
 **Showing Execution**
 
-Of course we want to make sure this is all reading from the configuration file, so let&#8217;s enter an incorrect database in the configuration file to show a failure. 
+Of course we want to make sure this is all reading from the configuration file, so let's enter an incorrect database in the configuration file to show a failure. 
 
 In your configuration file, enter a database that does not exist.
 

@@ -23,7 +23,7 @@ In my [Are you ready for SQL Server 2012 or are you still partying like it is 19
 
 This is the third indexing post in this series, we already looked at [Filtered Indexes][2] and [Indexes with Included Columns][3]. Today we are going to look at how to recreate and defragment indexes. Back in the SQL Server 2000 days you would do a CREATE INDEX WITH DROP\_EXISTING/DBCC DBREINDEX or DBCC INDEXDEFRAG. To check fragmentation, you would use DBCC SHOWCONTIG. To check fragmentation in SQL Server 2005 and up, you now can use the Dynamic Management View sys.dm\_db\_index\_physical_stats. To rebuild an index, you use _ALTER INDEX IndexName REBUILD;_ to defragment and index, you use _ALTER INDEX IndexName REORGANIZE_;
 
-Let&#8217;s write some T-SQL to see this all in action, first create this table.
+Let's write some T-SQL to see this all in action, first create this table.
 
 sql
 CREATE TABLE TestIndex (name1 varchar(500)not null,
@@ -111,7 +111,7 @@ and s.name ='IX_TestIndex_Index'
   </table>
 </div>
 
-That is good, almost no fragmentation, let&#8217;s change that shall we? You remember [not to cluster an index on a uniqueidentifier when using the NEWID function][4] right? That will completely fragment your index because of page splits
+That is good, almost no fragmentation, let's change that shall we? You remember [not to cluster an index on a uniqueidentifier when using the NEWID function][4] right? That will completely fragment your index because of page splits
 
 sql
 UPDATE TestIndex
@@ -231,7 +231,7 @@ REORGANIZE;
 
 As you can see after the reorganize(DBCC INDEXDEFRAG for you SQL Server 2000 folks) fragmentation levels dropped to less than 3 percent.
 
-Just for fun let&#8217;s also rebuild (Drop and recreate/DBCC REINDEX for you SQL Server 2000 folks) the index
+Just for fun let's also rebuild (Drop and recreate/DBCC REINDEX for you SQL Server 2000 folks) the index
 
 sql
 ALTER INDEX IX_TestIndex_Index ON TestIndex

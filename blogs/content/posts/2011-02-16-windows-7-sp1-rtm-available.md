@@ -39,4 +39,4 @@ Below is an image of what is available
 
 If you are a not a TechNet or MSDN subscriber, you have to wait until February 22nd to download yours. 
 
-If you have been patching your Windows 7 machine then you already have most of what is in the service pack, the service pack is just a rollup of all the patches that have been issued since Windows 7 was released. It is still handy if you have a new machine since you don&#8217;t need to then download all the patches
+If you have been patching your Windows 7 machine then you already have most of what is in the service pack, the service pack is just a rollup of all the patches that have been issued since Windows 7 was released. It is still handy if you have a new machine since you don't need to then download all the patches

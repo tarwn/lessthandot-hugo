@@ -23,7 +23,7 @@ tags:
 
 My session went pretty well, at least from my point of view, although I had to rush my demos a bit since there was only a 50 minute time slot. I prepared for 1 hour of course 🙂
   
-I saw some pretty interesting stuff about Azure SQL DB and I really liked the session about Azure Stream Analytics. And I won a Bose headphone, so that&#8217;s nice as well 😀
+I saw some pretty interesting stuff about Azure SQL DB and I really liked the session about Azure Stream Analytics. And I won a Bose headphone, so that's nice as well 😀
 
 <blockquote class="twitter-tweet">
   <p lang="en" dir="ltr">

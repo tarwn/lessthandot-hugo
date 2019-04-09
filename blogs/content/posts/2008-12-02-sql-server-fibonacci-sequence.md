@@ -13,11 +13,11 @@ categories:
   - Microsoft SQL Server
 
 ---
-This probably falls under the category of &#8216;Why bother&#8217;. However, there has been some recent interest in calculating arbitrarily large fibonacci numbers. There is nothing particularly difficult about calculating these numbers until you reach the maximum number that a bigint (or decimal) can hold. With Fibonacci numbers, you reach this limit pretty fast. There&#8217;s nothing particularly difficult about calculating this sequence, it merely involves adding 2 numbers together. But, since we run in to the data type limit, we need to start thinking outside the box. 
+This probably falls under the category of &#8216;Why bother'. However, there has been some recent interest in calculating arbitrarily large fibonacci numbers. There is nothing particularly difficult about calculating these numbers until you reach the maximum number that a bigint (or decimal) can hold. With Fibonacci numbers, you reach this limit pretty fast. There's nothing particularly difficult about calculating this sequence, it merely involves adding 2 numbers together. But, since we run in to the data type limit, we need to start thinking outside the box. 
 
-Obviously, we cannot store the numbers in any sort of number data type, so we need to use strings instead. Then, we need to create a way to add strings together as though they were numbers. This is the real challenge with calculating large numbers, but it&#8217;s really not that difficult either. We&#8217;ll simply write a function that adds 2 strings together as though they were numbers.
+Obviously, we cannot store the numbers in any sort of number data type, so we need to use strings instead. Then, we need to create a way to add strings together as though they were numbers. This is the real challenge with calculating large numbers, but it's really not that difficult either. We'll simply write a function that adds 2 strings together as though they were numbers.
 
-Please understand that this is not production quality code. I&#8217;m not validating the inputs and I&#8217;m being careless about the data type conversions. Also note that I use the varchar(max) data type. This implies SQL2005 code. If you want to test this on SQL2000, then you&#8217;ll need to replace varchar(max) with VarChar(8000). You won&#8217;t be able to calculate as many numbers, but you&#8217;ll still get quite a few.
+Please understand that this is not production quality code. I'm not validating the inputs and I'm being careless about the data type conversions. Also note that I use the varchar(max) data type. This implies SQL2005 code. If you want to test this on SQL2000, then you'll need to replace varchar(max) with VarChar(8000). You won't be able to calculate as many numbers, but you'll still get quite a few.
 
 sql
 Create Function dbo.AddString(@String1 VarChar(8000), @String2 VarChar(8000))
@@ -83,4 +83,4 @@ While @i < 1000
 
 Select Fib From @Temp Order By Id
 ```
-That&#8217;s all there is to it!
+That's all there is to it!

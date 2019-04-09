@@ -154,7 +154,7 @@ Nothing is jumping out until we look at the system view sysdepends and the resul
 
 Now, run the sysdepends check again
   
-e.g. SELECT * FROM sysdepends where id = OBJECT_ID(&#8216;dbo.vTbl&#8217;)
+e.g. SELECT * FROM sysdepends where id = OBJECT_ID(&#8216;dbo.vTbl')
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-27.png?mtime=1317908836"><img alt="" src="/wp-content/uploads/blogs/All/-27.png?mtime=1317908836" width="589" height="156" /></a>

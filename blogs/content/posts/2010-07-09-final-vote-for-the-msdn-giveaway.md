@@ -33,9 +33,9 @@ Here are the candidates and their replies
 
 **Shawson**
   
-1) I will build games with it. I am getting into indie game development with a view to moving from my current profession of web development into games development. I&#8217;m just completing a browser game using just javascript and the new html5 media and canvas elements, to see whats possible in the near future without flash! So i will be using it for c# xna, as well as javascript and html. I also wish to do some work with the new odata stuff, to deal with the highscores, as well as a chance to use the latest iteration of the entity framework. 
+1) I will build games with it. I am getting into indie game development with a view to moving from my current profession of web development into games development. I'm just completing a browser game using just javascript and the new html5 media and canvas elements, to see whats possible in the near future without flash! So i will be using it for c# xna, as well as javascript and html. I also wish to do some work with the new odata stuff, to deal with the highscores, as well as a chance to use the latest iteration of the entity framework. 
 
-2) The historical debugger would be awesome, especially when debugging realtime code which is changing all the time, as you see in game loops. I&#8217;m also interested to see the designer tools letting you visually build systems with UML and have the basic structural code generated for you. 
+2) The historical debugger would be awesome, especially when debugging realtime code which is changing all the time, as you see in game loops. I'm also interested to see the designer tools letting you visually build systems with UML and have the basic structural code generated for you. 
 
 3) http://www.shawson.co.uk/codeblog
   
@@ -79,7 +79,7 @@ tek-ips.com
   
 1. I am working on a startup idea. Currently using ASP.NET MVC 1, VS 2008. Would love to move up to VS 2010 / .NET 4 and latest MVC version. Idea is around helping people find great deals on products/services.
 
-2. I could certainly use the feature packs / architecture / modeling tools and the latest Visual Studio 2010. I&#8217;d also be interested in playing with Expression Studio Ultimate. Any Windows Phone 7 stuff (if available) would be nice to experiment with as well.
+2. I could certainly use the feature packs / architecture / modeling tools and the latest Visual Studio 2010. I'd also be interested in playing with Expression Studio Ultimate. Any Windows Phone 7 stuff (if available) would be nice to experiment with as well.
 
 3. http://www.dennydotnet.com
   
@@ -89,7 +89,7 @@ http://forums.asp.net/members/superghost.aspx
 
 **Meile Zetstra**
   
-1) I&#8217;m currently running VS2010 Premium, but it just lacks the of all the architectural stuff that&#8217;s in the Ultimate version. I&#8217;d use that to build some tooling or VS extension that revolves arround code inspection, code reflection and generations of diagrams from existing assemblies.
+1) I'm currently running VS2010 Premium, but it just lacks the of all the architectural stuff that's in the Ultimate version. I'd use that to build some tooling or VS extension that revolves arround code inspection, code reflection and generations of diagrams from existing assemblies.
 
 2) The architecture and modeling stuff. Also the use of the just released Visualization and Modeling Feature Pack is on my wish-to-use list.
 

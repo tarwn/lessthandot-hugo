@@ -16,7 +16,7 @@ tags:
   - unicode
 
 ---
-I&#8217;ve tripped over this on 2 machines now and end up at the same out of date StackOverflow post, so maybe this will help someone else.
+I've tripped over this on 2 machines now and end up at the same out of date StackOverflow post, so maybe this will help someone else.
 
 <div style="border: #FFCCCC 2px solid; background-color: #FFDDDD; padding: 1em;">
   Python 3.5, not 3.6, I had that wrong initially 🙂

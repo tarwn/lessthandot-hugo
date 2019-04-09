@@ -21,7 +21,7 @@ categories:
 
 I am honored to have been selected to speak at this event and am very much looking forward to it. I have never been to the East Iowa SQL Saturday but everyone I know who has, simply raves about the manner in which it is run.
 
-I will be presenting <a href="http://www.sqlsaturday.com/viewsession.aspx?sat=239&sessionid=15737" target="_blank">An Optimistic Approach: Snapshot Isolation in SQL</a>. If you would like to learn about one of the more powerful, but least understood, aspects of SQL Server, I&#8217;ll be in Room 2520B starting at 4PM!
+I will be presenting <a href="http://www.sqlsaturday.com/viewsession.aspx?sat=239&sessionid=15737" target="_blank">An Optimistic Approach: Snapshot Isolation in SQL</a>. If you would like to learn about one of the more powerful, but least understood, aspects of SQL Server, I'll be in Room 2520B starting at 4PM!
 
 > **An Optimistic Approach: Snapshot Isolation in SQL**
 > 
@@ -31,6 +31,6 @@ I will be presenting <a href="http://www.sqlsaturday.com/viewsession.aspx?sat=23
 
 In addition to my session, take a moment and check out all of the other <a href="http://www.sqlsaturday.com/239/schedule.aspx" target="_blank">great topics</a> being presented throughout the day. I am thrilled to see strong <a href="http://minnesota.sqlpass.org/" target="_blank">PASSMN</a> contingent on the schedule!
 
-East Iowa will be the last stop on my 2013 Upper Midwest SQL Saturday speaking tour. So far this year I have spoken in Minnesota, Madison, Chicago, Fargo, and now Iowa City. It&#8217;s been a busy couple of months, but an experience I would not trade for anything.
+East Iowa will be the last stop on my 2013 Upper Midwest SQL Saturday speaking tour. So far this year I have spoken in Minnesota, Madison, Chicago, Fargo, and now Iowa City. It's been a busy couple of months, but an experience I would not trade for anything.
 
-If you&#8217;re local, or in the surrounding area, I hope you&#8217;ll take advantage of this great free training opportunity! I hope to see you there!
+If you're local, or in the surrounding area, I hope you'll take advantage of this great free training opportunity! I hope to see you there!

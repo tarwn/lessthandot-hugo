@@ -108,7 +108,7 @@ SQLArg0	        -dC:MSSQLDATAmaster.mdf
 SQLArg1	        -eC:MSSQLLogERRORLOG
 SQLArg2	        -lC:MSSQLDATAmastlog.ldf</pre>
 
-There is more that you can do, let&#8217;s see I want to know some stuff about SQL agent
+There is more that you can do, let's see I want to know some stuff about SQL agent
 
 sql
 SELECT  value_name, value_data

@@ -487,7 +487,7 @@ Reviewing the execution plan, the RID Lookup has been resolved.
 
 Sorting, in general, is an expensive operation as it relates to resources. Order By and Group By forces a sort of the data. Sorting can be ok in execution plans but can also cause a severe performance problem. Since sorting is done in memory, the operation can be fast. However, if memory is not available, the sorting operation can go to the tempdb to accomplish the task which would affect the performance greatly – in a negative way.
 
-In some cases, sorting may not be needed at all in statements. Even in cases when data is required to be sorted, letting front end applications and reporting do this operation may be a better option. With the queries that were used in this article, we can&#8217;t fix the sort operation because of the SUM() on LineTotal is required forcing us to use a GROUP BY. 
+In some cases, sorting may not be needed at all in statements. Even in cases when data is required to be sorted, letting front end applications and reporting do this operation may be a better option. With the queries that were used in this article, we can't fix the sort operation because of the SUM() on LineTotal is required forcing us to use a GROUP BY. 
 
 Running the example below will show how we could return the results without the SUM(LineTotal) while utilizing something like SSRS functions and expressions to add the SUM(LineTotal) on a grouped result set directly to the dataset at the time the report is rendered.
 
@@ -507,7 +507,7 @@ WHERE   customerid = 11091
 
 **Wrapping up**
 
-In the tuning exercises so far, we’ve created 3 indexes to tune the query. However, we could accomplish this with two indexes. The clustered index could be removed and create another HEAP table situation. This situation is also common when the primary key (or clustered index) is another column on the table that isn&#8217;t part of the query and thus does not assist in improving performance of the statement. 
+In the tuning exercises so far, we’ve created 3 indexes to tune the query. However, we could accomplish this with two indexes. The clustered index could be removed and create another HEAP table situation. This situation is also common when the primary key (or clustered index) is another column on the table that isn't part of the query and thus does not assist in improving performance of the statement. 
 
 To show this, drop the clustered index SalesOrderHeader.IDX_UNIQUEKEY
 

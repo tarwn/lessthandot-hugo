@@ -21,9 +21,9 @@ tags:
 ---
 _This is the third article in a multi-article set that describes the basics of Kanban and explores applying Kanban to IT Processes. [Part one][1] provides a basic overview of Kanban and how it is used in manufacturing. The remaining parts explore sample scenarios to help generate ideas for your own environment._
 
-In this, part 3 of the &#8220;Applying Kanban to IT Processes&#8221; series, we are exploring the use of Kanban to manage a short-term functional project. This example focuses on using Kanban to create a transparent process to track the flow of equipment through a number of complex steps, without incurring additional costs for tracking software, complex processes and training, or duplication of effort. Improved uniformity or quality of the deployment process will also help improve efficiencies in troubleshooting and repair times as well as ensure a document-ably high level of conformance to software and licensing standards.
+In this, part 3 of the “Applying Kanban to IT Processes” series, we are exploring the use of Kanban to manage a short-term functional project. This example focuses on using Kanban to create a transparent process to track the flow of equipment through a number of complex steps, without incurring additional costs for tracking software, complex processes and training, or duplication of effort. Improved uniformity or quality of the deployment process will also help improve efficiencies in troubleshooting and repair times as well as ensure a document-ably high level of conformance to software and licensing standards.
 
-## Welcome to DEF&#8217;s Annual PC Deployment
+## Welcome to DEF's Annual PC Deployment
 
 DEF Inc is a small to medium company with roughly 1000 PCs and laptops actively deployed. Their IT group works like most groups this size, with a high level of individual management, strong team ties, and a relatively small number of IT personnel covering a wide variety of roles. Of the 15 active IT people, only 2 will be working on the PC deployment, and they have been given a high level of latitude in creating a process to get the work done. Clear, simple reporting of progress and successes is determined to be a requirement by the team, to prevent their hard work from being an [invisible project][2]. Finally, there is limited space for undeployed systems, so the team will need to carefully manage the number of undeployed systems and purchase orders for new systems.
 
@@ -38,15 +38,15 @@ The annual PC deployment is expected to account for the following equipment:
 Software imaging is available to install a base operating system and set of drivers on each PC, reducing the variability in initial install process. Tasks like domain registration, utility software, office software, and IT software installations will be standard for every system, but there will also be some customized software installation based on the final user or area the equipment will be assigned to. Refreshing an existing PC requires the same steps with the addition of an extra task in the audit system to link the old and new use of the system. Based on stories from prior years it is clear that one of the most disruptive issues was when a system required *rework due to a missing software installation or configuration, so the team decides to add some verifications to the process to limit opportunities to miss software installs or configurations.
 
 <div style="background-color: #eeeeee; padding: 1em; font-style: italic">
-  Rework is a name for the process of taking a completed part and sending it back through a portion of the process to correct an incomplete or missed production step. In the case of deploying a PC this could be a missing piece of software during the setup process, improper permissions, or any of a dozen other items that would require a technician to return to a previously &#8216;completed&#8217; PC in order to finish working on it. Costs from rework include the cost of executing a step a second time, executing later steps a second time, changeover between the current work and the item to be reworked, and delays in completing the current work against the original estimate or deadline.
+  Rework is a name for the process of taking a completed part and sending it back through a portion of the process to correct an incomplete or missed production step. In the case of deploying a PC this could be a missing piece of software during the setup process, improper permissions, or any of a dozen other items that would require a technician to return to a previously &#8216;completed' PC in order to finish working on it. Costs from rework include the cost of executing a step a second time, executing later steps a second time, changeover between the current work and the item to be reworked, and delays in completing the current work against the original estimate or deadline.
 </div>
 
 ### First Visual Board
 
 After discussing the requirements and steps in the process, the technicians have created a common process for all equipment:
 
-  * Receiving &#8211; New equipment and equipment for re-deployment that has not yet been &#8216;tagged&#8217;
-  * Inventory &#8211; New equipment and equipment for re-deployment that has a &#8216;tag&#8217; applied
+  * Receiving &#8211; New equipment and equipment for re-deployment that has not yet been &#8216;tagged'
+  * Inventory &#8211; New equipment and equipment for re-deployment that has a &#8216;tag' applied
   * Imaging &#8211; Applying basic OS, driver, and software images to the systems
   * Customization Analysis &#8211; Building a list of customer software and/or settings for the intended end-user
   * Office Software &#8211; Installation and initial configuration of office software and company templates</li? 
@@ -55,13 +55,13 @@ After discussing the requirements and steps in the process, the technicians have
       * Audit &#8211; Running the first Audit of a PC and linking assignments for re-deployed PCs
       * Deployment &#8211; deploying the hardware to the end user
 
-To manage PCs through this process, the team has invented a system of &#8216;tagging&#8217; the equipment. The technicians have designed a combination check-list and worksheet that is copied and filled out for each PC. The top corner of the document becomes the Kanban card, while the rest serves as a checklist that will be used to verify the previous step of each deployment stage as the equipment progresses through the process. In prior years the team determined there was an average of 5% rework required to correct missing configurations or software.
+To manage PCs through this process, the team has invented a system of &#8216;tagging' the equipment. The technicians have designed a combination check-list and worksheet that is copied and filled out for each PC. The top corner of the document becomes the Kanban card, while the rest serves as a checklist that will be used to verify the previous step of each deployment stage as the equipment progresses through the process. In prior years the team determined there was an average of 5% rework required to correct missing configurations or software.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <img src="http://www.tiernok.com/LTDBLog/Pt_3_Tag.png" alt="example worksheet" title="Example Worksheet" /><br /> Example worksheet with cut-out for Kanban card
 </div>
 
-Rather than putting a QA step at the end of their deployment process, they have chosen to start each step by verifying the task from the previous step. By verifying sooner they hope to prevent the need for a long QA process, reduce the amount of rework, and catch and correct issues earlier to prevent repetition of later tasks (such as running the audit software). Check boxes for &#8216;execute&#8217; and &#8216;verify&#8217; are available for each line on the tag.
+Rather than putting a QA step at the end of their deployment process, they have chosen to start each step by verifying the task from the previous step. By verifying sooner they hope to prevent the need for a long QA process, reduce the amount of rework, and catch and correct issues earlier to prevent repetition of later tasks (such as running the audit software). Check boxes for &#8216;execute' and &#8216;verify' are available for each line on the tag.
 
 Now that the tasks have been defined, the first visual board is put together using tape and labels on a corkboard. Thumbtacks will be used to attach the Kanban cards for each piece of equipment to the appropriate step on the board. 
 
@@ -69,7 +69,7 @@ Now that the tasks have been defined, the first visual board is put together usi
   <img src="http://www.tiernok.com/LTDBLog/KanbanPt3_VisBoard_1.png" alt="Kanban board" title="Kanban Board" /><br /> Kanban board with some example cards on it
 </div>
 
-The Kanban limits at each stage are based on the available workspace and the desire to keep equipment flowing regularly through the processes. The team has decided that to balance between consistent flow (small limits) and the additional effectiveness of running installers in parallel (larger limits), they will define limits based on the length of the software installs in order to ensure the longest steps also have the highest throughput and don&#8217;t become delays for later steps. Imaging, office software, and auditing require little human involvement but large amounts of time, while Customization Analysis, Deployment, and the remaining two software installation steps require higher levels of interaction and attention from the installer. 
+The Kanban limits at each stage are based on the available workspace and the desire to keep equipment flowing regularly through the processes. The team has decided that to balance between consistent flow (small limits) and the additional effectiveness of running installers in parallel (larger limits), they will define limits based on the length of the software installs in order to ensure the longest steps also have the highest throughput and don't become delays for later steps. Imaging, office software, and auditing require little human involvement but large amounts of time, while Customization Analysis, Deployment, and the remaining two software installation steps require higher levels of interaction and attention from the installer. 
 
 ### Creating a Report
 
@@ -113,15 +113,15 @@ In the next article we will explore the usage of Kanban by a software developmen
 
 If you have missed prior articles in the series you can find them here:
   
-Applying Kanban &#8230; Part 1: [Kanban Overview][4]
+Applying Kanban … Part 1: [Kanban Overview][4]
   
-Applying Kanban &#8230; Part 2: [Kanban applied to Tech Support][5]
+Applying Kanban … Part 2: [Kanban applied to Tech Support][5]
   
-_Applying Kanban &#8230; Part 3: Kanban applied to PC Deployment_
+_Applying Kanban … Part 3: Kanban applied to PC Deployment_
   
-Applying Kanban &#8230; Part 4: [Kanban applied to a Development Group][6]
+Applying Kanban … Part 4: [Kanban applied to a Development Group][6]
   
-Applying Kanban &#8230; Part 5: [Challenges, Additional Concepts, and Wrapup][7]
+Applying Kanban … Part 5: [Challenges, Additional Concepts, and Wrapup][7]
 
  [1]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-1
  [2]: /index.php/ITProfessionals/ProjectManagement/an-invisible-project-is-a-failed-project

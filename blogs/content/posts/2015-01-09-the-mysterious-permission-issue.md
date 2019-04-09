@@ -21,19 +21,19 @@ tags:
   - syndicated
 
 ---
-[<img style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2015/01/poirot-150x150.jpg" alt="poirot" width="100" height="100" />][1]As you might have realized, this is not the title of an Agatha Christie book, but rather about some nasty permission issue I encountered with SSIS. At a new project, someone mentioned me that a scheduled job has been failing for quite some time now (actually since they created the job, yay for testing!). So I put my detective hat on (with my fake Poirot&#8217;stache) and started investigating.
+[<img style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2015/01/poirot-150x150.jpg" alt="poirot" width="100" height="100" />][1]As you might have realized, this is not the title of an Agatha Christie book, but rather about some nasty permission issue I encountered with SSIS. At a new project, someone mentioned me that a scheduled job has been failing for quite some time now (actually since they created the job, yay for testing!). So I put my detective hat on (with my fake Poirot'stache) and started investigating.
 
 The SSIS catalog report _All Executions_ gave me the following wonderfull error messages:
 
 > Error: FF_DST Write to Flat file failed the pre-execute phase and returned error code 0xC020200E.
   
-> DFT Export to Flat File:Error: Cannot open the datafile &#8220;\\myServer\c$\rootfolder\myExport\myFlatFile.txt&#8221;.
+> DFT Export to Flat File:Error: Cannot open the datafile “\\myServer\c$\rootfolder\myExport\myFlatFile.txt”.
 
 There was also a little warning with a more useful message:
 
 > DFT Export to Flat File:Warning: Access is denied.
 
-I immediately thought: &#8220;Haha, no proxy is used in the SQL Server Agent job step!&#8221;
+I immediately thought: “Haha, no proxy is used in the SQL Server Agent job step!”
   
 However, when I checked the job step there was a proxy configured. OK then, they must have forgot to assign permissions to the folder. Alas, permissions were correctly set as well. The plot thickens!
 

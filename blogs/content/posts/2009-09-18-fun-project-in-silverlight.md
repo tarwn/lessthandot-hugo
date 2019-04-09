@@ -13,17 +13,17 @@ categories:
   - Web Design, Graphics and Styling
 
 ---
-So I&#8217;m finally writing a blog post. Not that I&#8217;m a lazy guy or anything, but I doubt anyone here wants to read about the stupid things my wife&#8217;s cats do or what I thought of the last block buster movie that came out. But I finally have a few things that I think raise to the bar of &#8216;worth showing other people&#8217;.
+So I'm finally writing a blog post. Not that I'm a lazy guy or anything, but I doubt anyone here wants to read about the stupid things my wife's cats do or what I thought of the last block buster movie that came out. But I finally have a few things that I think raise to the bar of &#8216;worth showing other people'.
 
-I&#8217;ve been lucky, in my current environment I have a pretty loose leash and I get to push different technologies that would otherwise be ignored. And for the last 2 years I&#8217;ve been following and pushing for traction on Silverlight. To put it bluntly, I love Silverlight. Oh sure, it&#8217;s got its fair share of faults. But it is an amazing platform and keeps getting better. 
+I've been lucky, in my current environment I have a pretty loose leash and I get to push different technologies that would otherwise be ignored. And for the last 2 years I've been following and pushing for traction on Silverlight. To put it bluntly, I love Silverlight. Oh sure, it's got its fair share of faults. But it is an amazing platform and keeps getting better. 
 
-This post though, is just for fun. A few days ago, Denis started a discussion about [35 Examples of Masterful Lighting Effects in Web Design][1]. One of the sites from the contained link is <http://www.rareview.com/>. I was rather impressed by their flash banner, so I figured I&#8217;d try to make something similar in Silverlight. 
+This post though, is just for fun. A few days ago, Denis started a discussion about [35 Examples of Masterful Lighting Effects in Web Design][1]. One of the sites from the contained link is <http://www.rareview.com/>. I was rather impressed by their flash banner, so I figured I'd try to make something similar in Silverlight. 
 
 After about 2 hours of work (a lunch and some free time), I came up this:
 
 [![][2]][3]
 
-It&#8217;s not nearly as refined as theirs, but it has all the same concepts. 
+It's not nearly as refined as theirs, but it has all the same concepts. 
 
 The imagery is actually pretty simple. I have three PNGs I created in photoshop. The color layer and two cloud layers. The color layer was made by putting bold colors in vertical stripes on an 800&#215;800 canvas, then applying a horizontal motion blur and cropping it down to a circle. 
 

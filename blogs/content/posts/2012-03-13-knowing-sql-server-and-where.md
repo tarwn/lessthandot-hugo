@@ -36,7 +36,7 @@ I never look at anything as it pertains to today when it comes to skills and I p
 
 <blockquote>
   <p>
-    &#8220;I’ve always been an advocate of teaching others coming up in this field that knowing all the variables in a system is a critical step in gaining the true ability to be capable at a principal level&#8221;
+    “I’ve always been an advocate of teaching others coming up in this field that knowing all the variables in a system is a critical step in gaining the true ability to be capable at a principal level”
   </p>
 </blockquote>
 

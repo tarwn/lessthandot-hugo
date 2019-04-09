@@ -17,7 +17,7 @@ tags:
   - video
 
 ---
-So you think you missed out because you were not able to go to the Microsoft Professional Developers Conference, think again, the only thing you won&#8217;t get by visiting these two links is the hard drive that they gave to the attendees
+So you think you missed out because you were not able to go to the Microsoft Professional Developers Conference, think again, the only thing you won't get by visiting these two links is the hard drive that they gave to the attendees
 
 There are 16 pages of videos on Channel 9
   

@@ -25,7 +25,7 @@ Attend your local usergroup meetings, there is always some expert that comes to 
 
 I still think answering questions is one of the best ways to improve your skill. Join a QA site like [stackoverflow][3], head on to a specialized site on stackexchange, here is a list of all of them http://stackexchange.com/sites You can hit some of the [forums][4] on this site. For SQL server, you can also try [SQLServerCentral][5]
   
-If you are not comfortable with answering yet or if you realize that the questions are too difficult, don&#8217;t worry about, just start by lurking. What you will find out over time is that every month you will be able to answer more and more of these question. This is because the questions are pretty much the same but some little detail might be different. Take a look at [the ten most asked sql server questions and
+If you are not comfortable with answering yet or if you realize that the questions are too difficult, don't worry about, just start by lurking. What you will find out over time is that every month you will be able to answer more and more of these question. This is because the questions are pretty much the same but some little detail might be different. Take a look at [the ten most asked sql server questions and
   
 their answer][6], these 10 questions pop up on a daily basis, after a while you will be able to answer these in your sleep
 
@@ -69,7 +69,7 @@ Here is just a small list that you can choose from, I grabbed this from [stackov
   
 [Practices of an Agile Developer][20]
   
-[Don&#8217;t Make Me Think][21]
+[Don't Make Me Think][21]
   
 [Agile Software Development, Principles, Patterns, and Practices][22] by Robert C. Martin
   
@@ -97,7 +97,7 @@ Here is just a small list that you can choose from, I grabbed this from [stackov
 
 Reading code is also a good way to improve your skills, head over to the frameworks you use the most and start digging around in the API, look at the example code.
   
-Read blogs of subject expert, study their code and techniques, if something is not clear don&#8217;t hesitate to leave a comment asking for some info or further explanation
+Read blogs of subject expert, study their code and techniques, if something is not clear don't hesitate to leave a comment asking for some info or further explanation
 
 ## Practice by doing katas
 
@@ -111,7 +111,7 @@ An added bonus is that I have a code library that I can access anytime I want.
 
 ## Write a book
 
-If you are a masochistic type of person then I recommend you write a book, almost everybody in the tech world that I know swore that they would never write a book again when they were done&#8230;&#8230;.and yet they did. In order to write a book you have to spend a LOT of time doing research, making sure your code is correct and much more. Once you are done with this if you were not a subject expert you will be now. The worst part of writing a book is the initial feedback you get pointing out all your mistakes, if you are not thick skinned this could become a problem.
+If you are a masochistic type of person then I recommend you write a book, almost everybody in the tech world that I know swore that they would never write a book again when they were done…….and yet they did. In order to write a book you have to spend a LOT of time doing research, making sure your code is correct and much more. Once you are done with this if you were not a subject expert you will be now. The worst part of writing a book is the initial feedback you get pointing out all your mistakes, if you are not thick skinned this could become a problem.
 
 ## Listen to podcast, watch webinars
 

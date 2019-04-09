@@ -24,7 +24,7 @@ tags:
 ---
 I was browsing around last night on the internet and a person wanted to know what data type to use to store a course name. Here is an answer he got:
 
-> I would recommend nvarchar or varchar for the name. Use nvarchar if you anticipate there ever being a point in the future that you will need to support foreign languages that might contain unicode characters that are not supported by varchar. **I would look at the longest name I anticipate needing, double it&#8217;s length and then round up to the nearest 50. So if &#8220;Introduction to Partial Differential Equations&#8221; at 48 then I would make it varchar(100)**
+> I would recommend nvarchar or varchar for the name. Use nvarchar if you anticipate there ever being a point in the future that you will need to support foreign languages that might contain unicode characters that are not supported by varchar. **I would look at the longest name I anticipate needing, double it's length and then round up to the nearest 50. So if “Introduction to Partial Differential Equations” at 48 then I would make it varchar(100)**
 
 Okay so that part in bold is completely wrong, Nvarchar uses 2 bytes per character for storage but you do not specify that. So if you want to store the character &#25991; you need nchar(1) not nchar(2).
 
@@ -40,9 +40,9 @@ select @n</pre>
 
 </strong>
 
-_And no, there is no mistake, the reason I didn&#8217;t use the codeblock that I use for the rest of this post is that the &#25991; character gets changed to `&#25991 so the SQL would be incorrect`_
+_And no, there is no mistake, the reason I didn't use the codeblock that I use for the rest of this post is that the &#25991; character gets changed to `&#25991 so the SQL would be incorrect`_
 
-Also be aware that you need to have the N in front of the string, this tells SQL Server that it has to treat it as unicode. If you do this &#8216;&#25991;&#8217; instead of N&#8217;&#25991;&#8217; you will get a question mark in the output.
+Also be aware that you need to have the N in front of the string, this tells SQL Server that it has to treat it as unicode. If you do this &#8216;&#25991;' instead of N'&#25991;' you will get a question mark in the output.
 
 What if you wanted to store over 4000 characters in a nvarchar? Varchar goes up to 8000 characters but nvarchar only goes up to 4000 characters, take a look and run the statement below.
 
@@ -54,7 +54,7 @@ Below is the error that you will get.
   
 _Msg 2717, Level 16, State 2, Line 1
   
-The size (4001) given to the parameter &#8216;@n&#8217; exceeds the maximum allowed (4000)._
+The size (4001) given to the parameter &#8216;@n' exceeds the maximum allowed (4000)._
 
 But there is hope, you can use NVARCHAR(max) to store up to 2GB of data, so about a billion characters or so
 

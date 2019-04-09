@@ -68,7 +68,7 @@ Here is what Books On Line has on the use of wild cards
       
       <td>
         <p>
-          WHERE title LIKE &#8216;%computer%&#8217; finds all book titles with the word &#8216;computer&#8217; anywhere in the book title.
+          WHERE title LIKE &#8216;%computer%' finds all book titles with the word &#8216;computer' anywhere in the book title.
         </p>
       </td>
     </tr>
@@ -88,7 +88,7 @@ Here is what Books On Line has on the use of wild cards
       
       <td>
         <p>
-          WHERE au_fname LIKE &#8216;_ean&#8217; finds all four-letter first names that end with ean (Dean, Sean, and so on).
+          WHERE au_fname LIKE &#8216;_ean' finds all four-letter first names that end with ean (Dean, Sean, and so on).
         </p>
       </td>
     </tr>
@@ -108,7 +108,7 @@ Here is what Books On Line has on the use of wild cards
       
       <td>
         <p>
-          WHERE au_lname LIKE &#8216;[C-P]arsen&#8217; finds author last names ending with arsen and starting with any single character between C and P, for example Carsen, Larsen, Karsen, and so on. In range searches, the characters included in the range may vary depending on the sorting rules of the collation.
+          WHERE au_lname LIKE &#8216;[C-P]arsen' finds author last names ending with arsen and starting with any single character between C and P, for example Carsen, Larsen, Karsen, and so on. In range searches, the characters included in the range may vary depending on the sorting rules of the collation.
         </p>
       </td>
     </tr>
@@ -128,14 +128,14 @@ Here is what Books On Line has on the use of wild cards
       
       <td>
         <p>
-          WHERE au_lname LIKE &#8216;de[^l]%&#8217; all author last names starting with de and where the following letter is not l.
+          WHERE au_lname LIKE &#8216;de[^l]%' all author last names starting with de and where the following letter is not l.
         </p>
       </td>
     </tr>
   </table>
 </div>
 
-Let&#8217;s take a look at some examples, first create this table and insert some data.
+Let's take a look at some examples, first create this table and insert some data.
 
 sql
 CREATE TABLE TestLike (SomeCol VARCHAR(200))
@@ -189,7 +189,7 @@ abc_bb
   
 abc\___\___bb
 
-Let&#8217;s take a look at another example, what if you want to search for the left bracket [?
+Let's take a look at another example, what if you want to search for the left bracket [?
 
 First insert the following row
 
@@ -217,7 +217,7 @@ output
   
 2222[2222
 
-Brackets are also required for ranges. If you want to return all the rows where any of characters is 2 or 3, you can&#8217;t do this
+Brackets are also required for ranges. If you want to return all the rows where any of characters is 2 or 3, you can't do this
 
 sql
 SELECT * FROM TestLike

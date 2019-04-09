@@ -27,7 +27,7 @@ This past weekend, work was being done on our exchange server, so e-mail was dow
 
 So Monday morning, I got an e-mail asking about which reports should have ran on the Saturday and who they would have gone to.
 
-It sounds like such a simple request that I figured it couldn&#8217;t be that hard to figure it out. I was dead wrong. 
+It sounds like such a simple request that I figured it couldn't be that hard to figure it out. I was dead wrong. 
 
 ## The Hurdles
 
@@ -35,11 +35,11 @@ It sounds like such a simple request that I figured it couldn&#8217;t be that ha
   <a href="/wp-content/uploads/users/kconan/hurdles.jpg?mtime=1353450411"><img alt="" src="/wp-content/uploads/users/kconan/hurdles.jpg?mtime=1353450411" width="400" height="338" /></a>
 </div>
 
-After poking around in SSRS Web Interface, I quickly found that short of opening each and every subscription there was no way to find this information. Next I took a peek in the ReportServer database where SSRS is hosted and it looked pretty simple. I peeked in a few tables and the column names all lined up nice for joining to the other tables. But then I saw the first of two hurdles that wouldn&#8217;t be so easy to get past.
+After poking around in SSRS Web Interface, I quickly found that short of opening each and every subscription there was no way to find this information. Next I took a peek in the ReportServer database where SSRS is hosted and it looked pretty simple. I peeked in a few tables and the column names all lined up nice for joining to the other tables. But then I saw the first of two hurdles that wouldn't be so easy to get past.
 
 ## Subscriptions.ExtensionSettings
 
-I found the e-mail addresses that each Subscription is e-mailed to. The problem (or opportunity) is that it is buried in an XML field &#8211; Subscriptions.ExtensionSettings. This is the first opportunity that I&#8217;ve really had to mess with XML in SQL in a long time so I figured it wouldn&#8217;t be too bad and I could figure out how to pluck what I needed.
+I found the e-mail addresses that each Subscription is e-mailed to. The problem (or opportunity) is that it is buried in an XML field &#8211; Subscriptions.ExtensionSettings. This is the first opportunity that I've really had to mess with XML in SQL in a long time so I figured it wouldn't be too bad and I could figure out how to pluck what I needed.
 
 However, my heart sank when I hit the second hurdle. 
 
@@ -49,15 +49,15 @@ However, my heart sank when I hit the second hurdle.
   <a href="/wp-content/uploads/users/kconan/SSRS_Schedule.JPG?mtime=1353450271"><img alt="" src="/wp-content/uploads/users/kconan/SSRS_Schedule.JPG?mtime=1353450271" width="505" height="136" /></a>
 </div>
 
-The Schedule table has a series of fields where it stores the schedule &#8211; Schedule.RecurrenceType, Schedule.DaysOfWeek and Schedule.DaysOfMonth. This one wasn&#8217;t going to be as straight forward to get past. I remember something in the back of my mind about taking a number have to square it or something or another but it was all really fuzzy.
+The Schedule table has a series of fields where it stores the schedule &#8211; Schedule.RecurrenceType, Schedule.DaysOfWeek and Schedule.DaysOfMonth. This one wasn't going to be as straight forward to get past. I remember something in the back of my mind about taking a number have to square it or something or another but it was all really fuzzy.
 
-## This can&#8217;t be the first time someone has had to solve this issue, who&#8217;s got a blog or forum post about it?!?!
+## This can't be the first time someone has had to solve this issue, who's got a blog or forum post about it?!?!
 
-At this point, I figured it was time to turn to the web. This has to be an issue that others have come across, so how did they solve it? After searching around for a while, I wasn&#8217;t able to find anyone who broke down the schedule fields. In fact, the only responses from Microsoft on their forums was that they don&#8217;t support querying them! It was time for some bigger guns so I turned to twitter and posted on #SQLHELP and #SSRSHELP. 
+At this point, I figured it was time to turn to the web. This has to be an issue that others have come across, so how did they solve it? After searching around for a while, I wasn't able to find anyone who broke down the schedule fields. In fact, the only responses from Microsoft on their forums was that they don't support querying them! It was time for some bigger guns so I turned to twitter and posted on #SQLHELP and #SSRSHELP. 
 
 After a little while and a couple of conversations, people gave me the idea of linking the Schedules to their jobs and pulling the schedules that way. Linking the Schedules to their Jobs was easy. However, the job schedules are also difficult to figure out because they are done in a similar way.
 
-## Ah, there&#8217;s light at the end of this tunnel!
+## Ah, there's light at the end of this tunnel!
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/kconan/tunnel.jpg?mtime=1353450579"><img alt="" src="/wp-content/uploads/users/kconan/tunnel.jpg?mtime=1353450579" width="300" height="224" /></a>
@@ -75,11 +75,11 @@ Schedule.RecurrenceType had 3 values that I needed:
   
 5 &#8211; The subscription runs on specific days of the month. This is used in conjunction with Schedule.DaysOfMonth.
 
-I&#8217;m not going to explain bit wise, but here is a link to a BOL Article:
+I'm not going to explain bit wise, but here is a link to a BOL Article:
 
 <http://msdn.microsoft.com/en-us/library/ms174965.aspx>
 
-Schedule.DaysOfWeek and Schedule.DaysOfMonth work off a bit checker (bit wise). It&#8217;ll help if you think of the day of the week in terms of what number it is. For example, Sunday = 1, Monday = 2, Tuesday = 3 etc.
+Schedule.DaysOfWeek and Schedule.DaysOfMonth work off a bit checker (bit wise). It'll help if you think of the day of the week in terms of what number it is. For example, Sunday = 1, Monday = 2, Tuesday = 3 etc.
 
 The first value (Sunday and the first of the month) use a bit value of 1. After that you can figure out the bit value by taking 2 the power of the number you are looking for minus 1. For example, for the 3rd, it would be 2 to the power of (3 &#8211; 1) which is 2 to the power of 2 which equals 4.
 

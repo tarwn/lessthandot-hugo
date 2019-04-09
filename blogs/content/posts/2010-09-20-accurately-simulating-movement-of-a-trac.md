@@ -20,19 +20,19 @@ tags:
   - tracking
 
 ---
-<img align="right" src="/wp-content/uploads/users/robearl/TankMovement-Simplified.png" alt="Basic Tracked Movement" title="" />As part of a simulation I&#8217;ve been developing I recently had to decide how to model movement of vehicles within a 2D space. To keep things simple I settled on a tracked vehicle. Each time the simulation updates I calculate how much the vehicle rotates and how far it moves based on the speed of it&#8217;s tracks. From there I calculate the new coordinates for redrawing the vehicle.
+<img align="right" src="/wp-content/uploads/users/robearl/TankMovement-Simplified.png" alt="Basic Tracked Movement" title="" />As part of a simulation I've been developing I recently had to decide how to model movement of vehicles within a 2D space. To keep things simple I settled on a tracked vehicle. Each time the simulation updates I calculate how much the vehicle rotates and how far it moves based on the speed of it's tracks. From there I calculate the new coordinates for redrawing the vehicle.
 
-Knowing the current location (**x,y**) and heading (**h**) I initially adopted a simplified way to calculate the rotation (**g**) and speed (**s**) based on the speed of the vehicle&#8217;s tracks (**T<span class="MT_smaller">1</span>** and **T<span class="MT_smaller">2</span>**) (Figure 1). With these variables I create a right angled triangle and use [maths][1] to calculate how far the vehicle moves in the x and y coordinates in order to find it&#8217;s finishing location (**x&#8217;,y&#8217;**).
+Knowing the current location (**x,y**) and heading (**h**) I initially adopted a simplified way to calculate the rotation (**g**) and speed (**s**) based on the speed of the vehicle's tracks (**T<span class="MT_smaller">1</span>** and **T<span class="MT_smaller">2</span>**) (Figure 1). With these variables I create a right angled triangle and use [maths][1] to calculate how far the vehicle moves in the x and y coordinates in order to find it's finishing location (**x',y'**).
 
 ```
 x' = x + s * sin(h + g)
 y' = y + s * cos(h + g)
 ```
-This method is a reasonable approximation for the movement of a tracked vehicle: It&#8217;ll move faster when you expect it to and it&#8217;ll turn faster when you expect it to. However, as a [stand up mathematician][2] pointed out to me, it&#8217;s not an accurate representation of what should actually be happening. I had also observed vehicles having problems turning to face something close to and behind them resulting in endless circling of the target.
+This method is a reasonable approximation for the movement of a tracked vehicle: It'll move faster when you expect it to and it'll turn faster when you expect it to. However, as a [stand up mathematician][2] pointed out to me, it's not an accurate representation of what should actually be happening. I had also observed vehicles having problems turning to face something close to and behind them resulting in endless circling of the target.
 
 # Improving Accuracy
 
-A more accurate representation is the vehicle travelling a distance, **s**, along the circumference of a circle who&#8217;s radius can be calculated based on **T<span class="MT_smaller">1</span>**, **T<span class="MT_smaller">2</span>** and the distance between the tracks (**2d**) (Figure 2).
+A more accurate representation is the vehicle travelling a distance, **s**, along the circumference of a circle who's radius can be calculated based on **T<span class="MT_smaller">1</span>**, **T<span class="MT_smaller">2</span>** and the distance between the tracks (**2d**) (Figure 2).
 
 <img align="right" src="/wp-content/uploads/users/robearl/TankMovement-Complex-bare3.png" alt="Figure 2: More Accurate Movement" title="" />If **T<span class="MT_smaller">2</span>** traces a circle of radius **r** then **T<span class="MT_smaller">1</span>** traces a circle of radius **r + 2d**. Since **d** is static we can say that the ratio of **T<span class="MT_smaller">1</span>** to **T<span class="MT_smaller">2</span>** is proportional to the ratio of the radii. This gives us the following equation to solve:
 
@@ -92,7 +92,7 @@ Which is a fairly simple calculation that scales by the size of the organism. Th
 
 ## Distance
 
-Now that we know the angles we can use the [Law of Sines][3] to calculate the straight line distance, **t**, between our vehicle&#8217;s start and end points. 
+Now that we know the angles we can use the [Law of Sines][3] to calculate the straight line distance, **t**, between our vehicle's start and end points. 
 
 ```
 r + d        t / 2
@@ -122,16 +122,16 @@ y' = y + t * cos(h + g)
 ```
 ## Applying Our Findings
 
-So far we&#8217;ve seen a lot of (possibly confusing) numbers and symbols but what do we actually have to do do add this to a simulation? Each time our vehicle updates we need to:
+So far we've seen a lot of (possibly confusing) numbers and symbols but what do we actually have to do do add this to a simulation? Each time our vehicle updates we need to:
 
   1. Calculate **g**.
   2. Calculate **t**.
-  3. Calculate **x&#8217;**.
-  4. Calculate **y&#8217;**.
-  5. Adjust the vehicle&#8217;s coordinates to **x&#8217;,y&#8217;**.
-  6. Adjust the vehicle&#8217;s heading (**h**) by **2g**.
+  3. Calculate **x'**.
+  4. Calculate **y'**.
+  5. Adjust the vehicle's coordinates to **x',y'**.
+  6. Adjust the vehicle's heading (**h**) by **2g**.
 
-You may have noticed there&#8217;s a possible division by zero error when **T<span class="MT_smaller">1</span>** equals **T<span class="MT_smaller">2</span>**. To protect against this we can check if they&#8217;re equal (or catch the exception) and use the calculation:
+You may have noticed there's a possible division by zero error when **T<span class="MT_smaller">1</span>** equals **T<span class="MT_smaller">2</span>**. To protect against this we can check if they're equal (or catch the exception) and use the calculation:
 
 ```
 x' = x + T1 * sin(h)
@@ -139,7 +139,7 @@ y' = y + T1 * cos(h)
 ```
 ## Example
 
-Let&#8217;s say our vehicle has the properties:
+Let's say our vehicle has the properties:
 
 T<span class="MT_smaller">1</span> = 1.0 (Track 1 Speed)
   
@@ -174,7 +174,7 @@ t = d(T1 + T2)
 = 0.37476 * 2
 = 0.74951
 ```
-3. Calculate **x&#8217;**.
+3. Calculate **x'**.
 
 ```
 x' = x + t * sin(h + g)
@@ -182,7 +182,7 @@ x' = x + t * sin(h + g)
 = 0.66072
 
 ```
-4. Calculate **y&#8217;**.
+4. Calculate **y'**.
 
 ```
 y' = y + t * cos(h + g)
@@ -204,7 +204,7 @@ y = -0.35387
   
 h = 2.125
 
-In the following Java example the Vehicle&#8217;s update method would be called from the main program loop.
+In the following Java example the Vehicle's update method would be called from the main program loop.
 
 ```java
 public class Vehicle
@@ -263,7 +263,7 @@ The accuracy of the basic method decreases as the section of the circle traverse
   * Speed increases.
   * Turning circle decreases.
 
-To demonstrate just how much difference there can be I&#8217;ve used a fairly extreme case to produce the charts opposite:
+To demonstrate just how much difference there can be I've used a fairly extreme case to produce the charts opposite:
 
 T<span class="MT_smaller">1</span> = 10
   
@@ -273,7 +273,7 @@ d = 2
 
 As we can see a vehicle turning in a tight circle at a fairly high speed has a much bigger turning circle using the approximate movement calculations than when using the improved calculations.
 
-As the size of the vehicle is now taken into account we can make a vehicle less nimble with a larger turning circle simply by increasing it&#8217;s size. We can get a turning circle like the one below by increasing **d** to 60 without any need to introduce extra variables to clamp the rotation rate.
+As the size of the vehicle is now taken into account we can make a vehicle less nimble with a larger turning circle simply by increasing it's size. We can get a turning circle like the one below by increasing **d** to 60 without any need to introduce extra variables to clamp the rotation rate.
 
 <center>
   <img src="/wp-content/uploads/users/robearl/Bigger.png" alt="Larger Vehicle" title="" />

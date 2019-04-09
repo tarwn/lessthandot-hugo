@@ -32,7 +32,7 @@ In order to work around this problem with proxy servers there is one of two thin
   1. Ask the network administrator to add the changes to the proxy
   2. Download two XML files from LessThanDot that are required by SQLCop
 
-> The two files are very lightweight! So don&#8217;t be scared. They really won&#8217;t bite.
+> The two files are very lightweight! So don't be scared. They really won't bite.
 
 The first is the **[SQLCop.xml][4]**. This file holds all of the checks and links to resources that SQLCop uses. 
 
@@ -44,7 +44,7 @@ Place these two files in the same directory as the SQLCop.exe and SQLCop will ru
   <img src="/wp-content/uploads/blogs/DataMgmt/sqlcop_programfiles.gif" alt="" title="" width="353" height="167" />
 </div>
 
-We appreciate everyone&#8217;s feedback on SQLCop and any problems or suggestions that you have are always welcome. You can post [forum topics on LessThanDot][6] to let us know. Also, SQLCop and LessThanDot is run and maintained from [donations][7]. If you can help, we greatly appreciate it. 🙂
+We appreciate everyone's feedback on SQLCop and any problems or suggestions that you have are always welcome. You can post [forum topics on LessThanDot][6] to let us know. Also, SQLCop and LessThanDot is run and maintained from [donations][7]. If you can help, we greatly appreciate it. 🙂
 
  [1]: http://www.aaronlowe.net/
  [2]: http://twitter.com/Vendoran

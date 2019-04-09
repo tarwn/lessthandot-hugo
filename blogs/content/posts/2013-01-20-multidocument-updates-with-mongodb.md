@@ -37,11 +37,11 @@ db.Indexing.insert( { name : "Abe", age : 20 } )
 db.Indexing.insert( { name : "Abe", age : 30 } )
 </pre>
 
-Now let&#8217;s say I want to update the age for all documents that have the name Denis to 40. You would think it would be this
+Now let's say I want to update the age for all documents that have the name Denis to 40. You would think it would be this
 
 <pre>db.Indexing.update({name: "Denis"}, {age: 40})</pre>
 
-Execute that and let&#8217;s bring back all the documents with the name Denis
+Execute that and let's bring back all the documents with the name Denis
 
 <pre>db.Indexing.find({name: "Denis"})</pre>
 
@@ -50,7 +50,7 @@ Here are the results
 <pre>{ "_id" : ObjectId("50fc234dfda7317c756fb846"), "name" : "Denis", "age" : 20 }
 { "_id" : ObjectId("50fc234dfda7317c756fb847"), "name" : "Denis", "age" : 30 }</pre>
 
-Where is the the document with the name Denis for which I changed the age to 40? Let&#8217;s bring back all documents in this collection to find out
+Where is the the document with the name Denis for which I changed the age to 40? Let's bring back all documents in this collection to find out
 
 <pre>db.Indexing.find()</pre>
 
@@ -69,11 +69,11 @@ The syntax looks like this
 
 <pre>db.collection.update( { field: value1 }, { $set: { field1: value2 } } );</pre>
 
-Let&#8217;s try again
+Let's try again
 
 <pre>db.Indexing.update({name: "Denis"}, {$set: {age: 40}})</pre>
 
-Let&#8217;s bring back both of the documents where the name is Denis
+Let's bring back both of the documents where the name is Denis
 
 <pre>db.Indexing.find({name: "Denis"})</pre>
 
@@ -88,7 +88,7 @@ All we have to add is multi: true, here is how we would have to rewrite our upda
 
 <pre>db.Indexing.update({name: "Denis"}, {$set: {age: 42}},{ multi: true })</pre>
 
-Let&#8217;s bring back both of the documents where the name is Denis again
+Let's bring back both of the documents where the name is Denis again
 
 <pre>db.Indexing.find({name: "Denis"})</pre>
 
@@ -99,6 +99,6 @@ Here are the results
 
 As you can see both have now 42 for age
 
-Be aware of these differences compared to traditional RDBMS systems when doing updates, you might be wrecking your data without realizing it immediately&#8230;&#8230;&#8230; and when you do realize it, it might be too late 🙁
+Be aware of these differences compared to traditional RDBMS systems when doing updates, you might be wrecking your data without realizing it immediately……… and when you do realize it, it might be too late 🙁
 
  [1]: /index.php/DataMgmt/DBProgramming/doing-upserts-in-mongodb

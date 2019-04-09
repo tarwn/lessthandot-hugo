@@ -34,14 +34,14 @@ and db1Alias.IndividualId = db2Alias.IndividualId
 Can you tell what is wrong with the code? If you try to run that you will get the following error
 
 <div style="border:1px solid black;background-color:#444;color:white;margin:0 20px;padding:0 5px 0 5px;">
-  Msg 4104, Level 16, State 1, Line 2<br /> The multi-part identifier &#8220;DB2.dbo.Table1.Column1&#8221; could not be bound.
+  Msg 4104, Level 16, State 1, Line 2<br /> The multi-part identifier “DB2.dbo.Table1.Column1” could not be bound.
 </div>
 
 
 
 The problem is that aliases are defined for the tables but not used in the column part.
 
-Let&#8217;s take a closer look with some code that you can actually run. First create these two tables
+Let's take a closer look with some code that you can actually run. First create these two tables
 
 sql
 use tempdb
@@ -68,7 +68,7 @@ JOIN tempdb.dbo.BlaTest2 a on b.id =a.id
 Here is the error
 
 <div style="border:1px solid black;background-color:#444;color:white;margin:0 20px;padding:0 5px 0 5px;">
-  Msg 4104, Level 16, State 1, Line 2<br /> The multi-part identifier &#8220;tempdb.dbo.BlaTest2.id&#8221; could not be bound.
+  Msg 4104, Level 16, State 1, Line 2<br /> The multi-part identifier “tempdb.dbo.BlaTest2.id” could not be bound.
 </div>
 
 
@@ -93,7 +93,7 @@ from tempdb.dbo.BlaTest b
 JOIN tempdb.dbo.BlaTest2 a on b.id =a.id
 ```
 
-The important thing to remember is that you have to use the alias in the table that you are not updating, to be safe just use the alias all over, that way you don&#8217;t have to think whether to use the alias or not.
+The important thing to remember is that you have to use the alias in the table that you are not updating, to be safe just use the alias all over, that way you don't have to think whether to use the alias or not.
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 

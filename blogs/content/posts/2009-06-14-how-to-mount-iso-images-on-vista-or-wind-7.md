@@ -34,7 +34,7 @@ Visual Studio 2010 (to run inside the Win 7 virtual machine)
   
 Office 2007 Ultimate_
 
-The nice thing about Virtual machines is that you can mount an ISO right inside the machine, this way you don&#8217;t have to burn a CD or install a ISO mounter inside the virtual machine itself
+The nice thing about Virtual machines is that you can mount an ISO right inside the machine, this way you don't have to burn a CD or install a ISO mounter inside the virtual machine itself
 
 If you upgraded from Windows XP to Vista you probably wonder how to mount images. On XP you might have used alcohol or the VCdControlTool provided (but unsupported) by Microsoft. On Vista (and I am running the 64 bit version) you can use [MagicISO][1]. If you end up using this tool on a regular basis the I would suggest paying the $29 for it otherwise companies will stop making tools like this.
   

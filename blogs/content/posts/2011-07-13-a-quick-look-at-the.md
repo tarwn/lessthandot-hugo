@@ -46,7 +46,7 @@ SELECT IIF(1=2,'equal','not equal') as Comp
 
 Both of those will return not equal
 
-Be aware that you can&#8217;t use NULL like in the example below
+Be aware that you can't use NULL like in the example below
 
 sql
 SELECT IIF(1=2,NULL ,NULL ) as calc

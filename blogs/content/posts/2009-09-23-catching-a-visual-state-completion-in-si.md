@@ -21,11 +21,11 @@ tags:
 ---
 Just a quickie from the Silverlight front today. 
 
-Visual States and the VSM are awesome tools to handling most of your application&#8217;s animations. One annoyance though, Visual States do not have a .Completed event!
+Visual States and the VSM are awesome tools to handling most of your application's animations. One annoyance though, Visual States do not have a .Completed event!
 
 Luckily for us, Visual States are composed of Story Boards. Story Boards DO have .Completed events 🙂
 
-To get it to work, it&#8217;s really simple. First, create your event handling method:
+To get it to work, it's really simple. First, create your event handling method:
 
 ```VB.Net
 Private Sub SomeStoryBoard_Completed(ByVal sender As Object, ByVal e As System.EventArgs) 
@@ -39,13 +39,13 @@ Next, in your LayoutRoot_Loaded method, add a handler:
 AddHandler Me.MyVisualState.Storyboard.Completed, AddressOf SomeStoryBoard_Completed
 ```
 
-Where &#8220;MyVisualState&#8221; is the name of the visual state you are trying to work with.
+Where “MyVisualState” is the name of the visual state you are trying to work with.
 
-Nothing too fancy there. You just have to know that a VisualState contains a story board and that you can wire up that story board&#8217;s completed event. 
+Nothing too fancy there. You just have to know that a VisualState contains a story board and that you can wire up that story board's completed event. 
 
-There is another way, that is even more simple, but it appears to not be working as intended. If you have any idea&#8217;s why the following doesn&#8217;t work, I&#8217;d love to hear about it.
+There is another way, that is even more simple, but it appears to not be working as intended. If you have any idea's why the following doesn't work, I'd love to hear about it.
 
-Start by going into the XAML and finding the Storyboard in the Visual State you are trying to work with. Once you&#8217;ve found it, give the Storyboard a name (x:Name=&#8221;sbSearchOpen&#8221; on line 11 in the following example)
+Start by going into the XAML and finding the Storyboard in the Visual State you are trying to work with. Once you've found it, give the Storyboard a name (x:Name=”sbSearchOpen” on line 11 in the following example)
 
 ```XAML
 <VisualStateManager.VisualStateGroups>
@@ -82,6 +82,6 @@ Private Sub sbSearchOpen_Completed(ByVal sender As Object, ByVal e As System.Eve
     End Sub
 ```
 
-Totally an easy and intuitive way of catching the end of a story board. Unfortunately, it doesn&#8217;t work. The IDE acts like it expects it to work, but for some reason, at run time, the sbSearchOpen_Completed method will never fire.
+Totally an easy and intuitive way of catching the end of a story board. Unfortunately, it doesn't work. The IDE acts like it expects it to work, but for some reason, at run time, the sbSearchOpen_Completed method will never fire.
 
 -Rick

@@ -18,9 +18,9 @@ tags:
   - lazy
 
 ---
-Are you waiting for .NET 4.0 to take advantage of lazy initialization? Now you don&#8217;t have to. The question you need to ask yourself is why haven&#8217;t I already made this myself?
+Are you waiting for .NET 4.0 to take advantage of lazy initialization? Now you don't have to. The question you need to ask yourself is why haven't I already made this myself?
 
-_Aren&#8217;t we all a little lazy?_
+_Aren't we all a little lazy?_
 
 ```CSharp
 /// <summary>

@@ -17,17 +17,17 @@ tags:
 ---
 My personal website is a static site: 100% HTML, JS, and CSS files with no server-side processing. I have custom code that pulls data from a variety of sources and builds updated versions of the files from templates, which are then deployed to the host. I do this to move the CPU latency of building the pages to my time, instead of charging it to visitors on each page hit. While I have a host, a strategy like this means I could also choose to host for free via github or similar services.
 
-So there&#8217;s a great benefit to the reader and our wallet, but no server-side execution makes things like contact forms trickier. Luckily, Azure Functions or AWS Lambda can be used as a webhook to receive the form post and process it, costing nothing near nothing to use (AWS and Azure both offer a free tier for 1M requests/month and 400,000 GB-seconds of compute time).
+So there's a great benefit to the reader and our wallet, but no server-side execution makes things like contact forms trickier. Luckily, Azure Functions or AWS Lambda can be used as a webhook to receive the form post and process it, costing nothing near nothing to use (AWS and Azure both offer a free tier for 1M requests/month and 400,000 GB-seconds of compute time).
 
 So we swap out a hosted server at $x/month for free static page hosting and free contact form (and similar services), it just takes a little different type of work then building the standard PHP, ASP.Net, etc site.
 
 ## Creating the Azure Function
 
-First up, let&#8217;s build out an Azure Function to accept a form post and convert it to an email.
+First up, let's build out an Azure Function to accept a form post and convert it to an email.
 
 ### Setting up the function
 
-From the Azure Dashboard, create a new &#8220;Azure Function App&#8221;.
+From the Azure Dashboard, create a new “Azure Function App”.
 
 <div id="attachment_4981" style="width: 810px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_0.png"><img src="/wp-content/uploads/2017/01/Azure_0.png" alt="Azure Function App - Getting Started" width="800" height="467" class="size-full wp-image-4981" srcset="/wp-content/uploads/2017/01/Azure_0.png 800w, /wp-content/uploads/2017/01/Azure_0-300x175.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
@@ -37,7 +37,7 @@ From the Azure Dashboard, create a new &#8220;Azure Function App&#8221;.
   </p>
 </div>
 
-The Azure Portal offers us a few options to get started quickly. Pick the one on the right &#8220;Webhook + API&#8221; to get a function set up with the trigger and output we need out of the box.
+The Azure Portal offers us a few options to get started quickly. Pick the one on the right “Webhook + API” to get a function set up with the trigger and output we need out of the box.
 
 The trigger for the Azure Function is the Webhook endpoint:
 
@@ -61,7 +61,7 @@ We can customize this to listen only to the /contact route and POST messages:
 
 There are other details we could configure, so as you do this you might start getting all kinds of other ideas (remember, 1M requests/month and 400,000 GB-seconds of compute time for FREE!).
 
-We don&#8217;t have an input for this Azure Function, and the return value is simply the HTTP Response we&#8217;ll return form the trigger, so no further configuration to do:
+We don't have an input for this Azure Function, and the return value is simply the HTTP Response we'll return form the trigger, so no further configuration to do:
 
 <div id="attachment_4984" style="width: 401px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_3.png"><img src="/wp-content/uploads/2017/01/Azure_3.png" alt="Azure Function - Return Value" width="391" height="278" class="size-full wp-image-4984" srcset="/wp-content/uploads/2017/01/Azure_3.png 391w, /wp-content/uploads/2017/01/Azure_3-300x213.png 300w" sizes="(max-width: 391px) 100vw, 391px" /></a>
@@ -71,11 +71,11 @@ We don&#8217;t have an input for this Azure Function, and the return value is si
   </p>
 </div>
 
-We now have the &#8220;hello world&#8221; version of a webhook, let&#8217;s add more code.
+We now have the “hello world” version of a webhook, let's add more code.
 
 ### Coding the Contact Email and Response
 
-The function starts with some generated code that matches the variable names in the Trigger and Output (I picked C#, JavaScript is also an option), attempts to pull a value out of the querystring, and returns a &#8220;Hello&#8221; response:
+The function starts with some generated code that matches the variable names in the Trigger and Output (I picked C#, JavaScript is also an option), attempts to pull a value out of the querystring, and returns a “Hello” response:
 
 ```csharp
 using System.Net;
@@ -89,7 +89,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
         : req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
 }
 ```
-Before we start in on the email code, let&#8217;s start by not putting the secrets right in the code. Functions have a built in method to manage secrets, but they&#8217;re not terribly easy to find. Click the &#8220;Function app settings&#8221; menu option at the bottom left to get to this screen:
+Before we start in on the email code, let's start by not putting the secrets right in the code. Functions have a built in method to manage secrets, but they're not terribly easy to find. Click the “Function app settings” menu option at the bottom left to get to this screen:
   
 
 
@@ -101,7 +101,7 @@ Before we start in on the email code, let&#8217;s start by not putting the secre
   </p>
 </div>
 
-Then click the &#8220;App Settings&#8221; button:
+Then click the “App Settings” button:
 
 <div id="attachment_4986" style="width: 420px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_5.png"><img src="/wp-content/uploads/2017/01/Azure_5.png" alt="Finding the App Settings, Step 2" width="410" height="249" class="size-full wp-image-4986" srcset="/wp-content/uploads/2017/01/Azure_5.png 410w, /wp-content/uploads/2017/01/Azure_5-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
@@ -111,7 +111,7 @@ Then click the &#8220;App Settings&#8221; button:
   </p>
 </div>
 
-This will open another blade to the right. One of the sections is the &#8220;App settings&#8221; section. You can enter AppSettings key/value configurations here that will be available to your function code. In my case, I&#8217;m going to add in all of my SMTP settings so I don&#8217;t have them stored in the code when I later hook this to a git repository.
+This will open another blade to the right. One of the sections is the “App settings” section. You can enter AppSettings key/value configurations here that will be available to your function code. In my case, I'm going to add in all of my SMTP settings so I don't have them stored in the code when I later hook this to a git repository.
 
 <div id="attachment_4987" style="width: 378px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_6.png"><img src="/wp-content/uploads/2017/01/Azure_6.png" alt="Adding SMTP AppSettings" width="368" height="459" class="size-full wp-image-4987" srcset="/wp-content/uploads/2017/01/Azure_6.png 368w, /wp-content/uploads/2017/01/Azure_6-240x300.png 240w" sizes="(max-width: 368px) 100vw, 368px" /></a>
@@ -121,7 +121,7 @@ This will open another blade to the right. One of the sections is the &#8220;App
   </p>
 </div>
 
-Now we can add some basic validation and some fairly standard &#8220;send an email&#8221; code. I&#8217;m accessing the stored secrets above via ConfigurationManager.AppSettings, as I would if you were writing a .Net application with an app.config. 
+Now we can add some basic validation and some fairly standard “send an email” code. I'm accessing the stored secrets above via ConfigurationManager.AppSettings, as I would if you were writing a .Net application with an app.config. 
 
 ```csharp
 using System.Configuration;
@@ -181,7 +181,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 ```
 With the code in place, we can use a tool like Postman to fire off some test POSTs and verify all the pieces are connected.
 
-Don&#8217;t grab the URL above your code screen yet, it probably has an Administrative key coded into it. Open the &#8220;Keys&#8221; panel from the button (#1 below) in the top right and select the &#8220;default&#8221; key in the &#8220;Function Keys&#8221; list. When you do this, it will update the Function Url (#3) above the code panel to include this key instead of one of the Admin keys. As a final step, click the &#8220;Logs&#8221; (#2) button to open the log so you can see compile and run logs when it builds or is triggered. Now copy the Function URL (#3) so we can paste it into Postman to start testing.
+Don't grab the URL above your code screen yet, it probably has an Administrative key coded into it. Open the “Keys” panel from the button (#1 below) in the top right and select the “default” key in the “Function Keys” list. When you do this, it will update the Function Url (#3) above the code panel to include this key instead of one of the Admin keys. As a final step, click the “Logs” (#2) button to open the log so you can see compile and run logs when it builds or is triggered. Now copy the Function URL (#3) so we can paste it into Postman to start testing.
 
 <div id="attachment_4999" style="width: 810px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_7.png"><img src="/wp-content/uploads/2017/01/Azure_7.png" alt="Azure Functions - Key, Logs, and URL" width="800" height="131" class="size-full wp-image-4999" srcset="/wp-content/uploads/2017/01/Azure_7.png 800w, /wp-content/uploads/2017/01/Azure_7-300x49.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
@@ -191,7 +191,7 @@ Don&#8217;t grab the URL above your code screen yet, it probably has an Administ
   </p>
 </div>
 
-In a new Postman request, enter the URL at the top, select &#8220;Post&#8221; as the method, and add in key/value pairs for the fromEmail and the message. Of course we expect this to fail the first time:
+In a new Postman request, enter the URL at the top, select “Post” as the method, and add in key/value pairs for the fromEmail and the message. Of course we expect this to fail the first time:
 
 <div id="attachment_5000" style="width: 810px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_8.png"><img src="/wp-content/uploads/2017/01/Azure_8.png" alt="Azure Function - First Call Failed" width="800" height="385" class="size-full wp-image-5000" srcset="/wp-content/uploads/2017/01/Azure_8.png 800w, /wp-content/uploads/2017/01/Azure_8-300x144.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
@@ -211,7 +211,7 @@ Fixing the code then nets us:
   </p>
 </div>
 
-Because my code is expecting urlencoded form data and wasn&#8217;t able to parse any from the body. Once we switch that, we get:
+Because my code is expecting urlencoded form data and wasn't able to parse any from the body. Once we switch that, we get:
 
 <div id="attachment_5002" style="width: 810px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_10.png"><img src="/wp-content/uploads/2017/01/Azure_10.png" alt="Azure Function - Success" width="800" height="290" class="size-full wp-image-5002" srcset="/wp-content/uploads/2017/01/Azure_10.png 800w, /wp-content/uploads/2017/01/Azure_10-300x108.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
@@ -225,7 +225,7 @@ Success!
 
 ### Building the HTML form
 
-Now we just need to switch from Postman to using an HTML form. Here&#8217;s a quick sample:
+Now we just need to switch from Postman to using an HTML form. Here's a quick sample:
 
 ```csharp
 # Contact Form
@@ -244,9 +244,9 @@ Send me a message! (Congratulations for finding this, it's not an official part 
 
 ```
 
-I use jQuery to post the form content because the Azure Function isn&#8217;t going to return a pretty HTML page. This way I can capture the output and use jQuery to tel the user whether it was successful or not.
+I use jQuery to post the form content because the Azure Function isn't going to return a pretty HTML page. This way I can capture the output and use jQuery to tel the user whether it was successful or not.
 
-There was one more catch the first time I tried this. Because I&#8217;m posting from my a page from my personal page to a domain in Azure, the calls initially fails with a Cross-Origin error. To enable Cross-Origin calls from your domain, go back to the Azure Functions interface in the App Settings section and open the CORS page:
+There was one more catch the first time I tried this. Because I'm posting from my a page from my personal page to a domain in Azure, the calls initially fails with a Cross-Origin error. To enable Cross-Origin calls from your domain, go back to the Azure Functions interface in the App Settings section and open the CORS page:
 
 <div id="attachment_4992" style="width: 420px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_11.png"><img src="/wp-content/uploads/2017/01/Azure_11.png" alt="Azure Function - CORS Config" width="410" height="249" class="size-full wp-image-4992" srcset="/wp-content/uploads/2017/01/Azure_11.png 410w, /wp-content/uploads/2017/01/Azure_11-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
@@ -280,4 +280,4 @@ And there we go, successful contact emails on the static page.
 
 Besides making a nicer user experience than the one I hacked together there, one last step you should also take is to enter in a value for the maximum daily usage quota just to ensure no one finds your form and tries to DOS your credit card. 
 
-So there we go, a contact form for a static website that should run absolutely free. This is easily extended to other features when you take into account that you could also be dropping messages in a queue, saving to blobs, etc and then using an AJAX GET call to a webhook like this to get that stored content (basically a free, trigger-based API service). There&#8217;s all kinds of options you can fit inside the free level of these services that frees you from having to pay for a full web host.
+So there we go, a contact form for a static website that should run absolutely free. This is easily extended to other features when you take into account that you could also be dropping messages in a queue, saving to blobs, etc and then using an AJAX GET call to a webhook like this to get that stored content (basically a free, trigger-based API service). There's all kinds of options you can fit inside the free level of these services that frees you from having to pay for a full web host.

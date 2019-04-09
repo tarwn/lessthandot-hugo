@@ -16,7 +16,7 @@ categories:
   - Data Modelling and Design
 
 ---
-This month&#8217;s T-SQL Tuesday is hosted by [Jes Borland][1] and it is all about grouping and aggregate functions.
+This month's T-SQL Tuesday is hosted by [Jes Borland][1] and it is all about grouping and aggregate functions.
 
  ![T-SQL Tuesday logo][2]
 
@@ -30,7 +30,7 @@ You may find an article by Itzik Ben-Gan on this topic [Calculate Percentiles][7
 
 I become interested in the problem of finding N percent of the group after reading this thread in tek-tips forum [SQL Min 1 of Top 10% and Max 1 of Bottom 10%???][8]
 
-The first idea of approaching this problem is in using NTILE() ranking function. It is as close as we can get, but yet it&#8217;s not an exactly percentage.
+The first idea of approaching this problem is in using NTILE() ranking function. It is as close as we can get, but yet it's not an exactly percentage.
 
 Here is an example that demonstrates discrepancy:
 
@@ -64,11 +64,11 @@ order by cte.[Row Number]
 ```
 As we can see from this example, we get correctly top 10 percent using NTILE(10) and
   
-TOP 10 percent (LEFT JOIN) based on the SalesYTD in the ascending order, but the results from the bottom 10 percent (top 10 percent based on SalesYTD in the descending order) don&#8217;t match.
+TOP 10 percent (LEFT JOIN) based on the SalesYTD in the ascending order, but the results from the bottom 10 percent (top 10 percent based on SalesYTD in the descending order) don't match.
   
 For the small result sets we can not really get a correct match using [NTILE()][9] as indicated in the Remarks section in BOL.
 
-As we can see in our small set of only 17 records, first 7 groups have 2 records and last 3 groups have only 1 record, that&#8217;s why our top 10 percent in descending order didn&#8217;t match.
+As we can see in our small set of only 17 records, first 7 groups have 2 records and last 3 groups have only 1 record, that's why our top 10 percent in descending order didn't match.
 
 On the big enough sets the NTILE() is working correctly. Here is an example suggested by Peter Larsson, that demonstrates it:
 

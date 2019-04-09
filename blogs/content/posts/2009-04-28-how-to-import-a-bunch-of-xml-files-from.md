@@ -24,7 +24,7 @@ A couple of days ago onpnt posted the following blogpost: [Import directory of X
   
 In that post he was using SQLCLR to import a bunch of files. Some of you might not be so familiar with .NET so I am providing a T-SQL way to do something similar
 
-You will need to create a directory testxml on the c drive and put a bunch of XML files in there. If you don&#8217;t have any XML files then save the following two as file1.xml and file2.xml
+You will need to create a directory testxml on the c drive and put a bunch of XML files in there. If you don't have any XML files then save the following two as file1.xml and file2.xml
 
 file1.xml
 
@@ -103,7 +103,7 @@ file2.xml
 </MusicCollection>
 ```
 
-Now that we have our files we are ready to grab all the files in the directory. We will use a plain vanilla DOS dir command for this with the B switch so that we don&#8217;t get a lot of garbage returned. Here is what this block of code looks like
+Now that we have our files we are ready to grab all the files in the directory. We will use a plain vanilla DOS dir command for this with the B switch so that we don't get a lot of garbage returned. Here is what this block of code looks like
 
 sql
 IF OBJECT_ID('tempdb..#tempList') IS NOT NULL
@@ -127,7 +127,7 @@ alter table #tempList add id int identity
 go
 ```
 
-Now let&#8217;s see what has actually been inserted into the table
+Now let's see what has actually been inserted into the table
 
 sql
 select * from #tempList
@@ -212,7 +212,7 @@ BEGIN
 END
 ```
 
-So that is all the code that you need to make this happen, let&#8217;s see what is actually inserted into the table
+So that is all the code that you need to make this happen, let's see what is actually inserted into the table
 
 sql
 select * from XMLImport
@@ -238,7 +238,7 @@ It is not a best practice to have xp\_cmdshell enabled. As a matter of fact begi
   
 Server: Msg 15281, Level 16, State 1, Procedure xp_cmdshell, Line 1
 
-SQL Server blocked access to procedure &#8216;sys.xp\_cmdshell&#8217; of component &#8216;xp\_cmdshell&#8217; because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;xp\_cmdshell&#8217; by using sp\_configure. For more information about enabling &#8216;xp_cmdshell&#8217;, see &#8220;Surface Area Configuration&#8221; in SQL Server Books Online.
+SQL Server blocked access to procedure &#8216;sys.xp\_cmdshell' of component &#8216;xp\_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;xp\_cmdshell' by using sp\_configure. For more information about enabling &#8216;xp_cmdshell', see “Surface Area Configuration” in SQL Server Books Online.
 
 To enable xp_cmdshell execute the following code
 
@@ -262,9 +262,9 @@ In SQL Server 2005 and 2008 OPENROWSET is also disabled by default, if you try t
 
 Server: Msg 15281, Level 16, State 1, Line 1
   
-SQL Server blocked access to STATEMENT &#8216;OpenRowset/OpenDatasource&#8217; of component &#8216;Ad Hoc Distributed Queries&#8217; because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;Ad Hoc Distributed Queries&#8217; by using sp_configure. For more information about enabling &#8216;Ad Hoc Distributed Queries&#8217;, see &#8220;Surface Area Configuration&#8221; in SQL Server Books Online.
+SQL Server blocked access to STATEMENT &#8216;OpenRowset/OpenDatasource' of component &#8216;Ad Hoc Distributed Queries' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;Ad Hoc Distributed Queries' by using sp_configure. For more information about enabling &#8216;Ad Hoc Distributed Queries', see “Surface Area Configuration” in SQL Server Books Online.
 
-To enable OPENROWSET and OPENQUERY you can use the previous script but instead of &#8216;xp_cmdshell&#8217; you will use &#8216;Ad Hoc Distributed Queries&#8217;. The script to enable Ad Hoc Distributed Queries is below
+To enable OPENROWSET and OPENQUERY you can use the previous script but instead of &#8216;xp_cmdshell' you will use &#8216;Ad Hoc Distributed Queries'. The script to enable Ad Hoc Distributed Queries is below
 
 sql
 EXECUTE SP_CONFIGURE 'show advanced options', 1

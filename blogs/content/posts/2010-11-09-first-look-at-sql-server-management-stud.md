@@ -26,7 +26,7 @@ Here is an example, of three query windows which are floating, you can easily dr
 
 [<img src="http://farm2.static.flickr.com/1426/5152114670_ee88704e09.jpg" width="461" height="500" alt="SSMS Docked Query Windows" />][2]
 
-One thing that currently doesn&#8217;t work is that if you have a syntax error, you can&#8217;t click on the error in the messages tab anymore to jump to the line that caused the error. The closest thing you now have is the Error List, press on CTRL + , E to see it
+One thing that currently doesn't work is that if you have a syntax error, you can't click on the error in the messages tab anymore to jump to the line that caused the error. The closest thing you now have is the Error List, press on CTRL + , E to see it
 
 [<img src="http://farm2.static.flickr.com/1340/5152114370_fd77c1caf7.jpg" width="500" height="237" alt="SSMS ErrorList" />][3]
 

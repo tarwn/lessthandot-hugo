@@ -23,7 +23,7 @@ This isn’t about how much faster Windows 8 can make you though.  Well, in a w
 
 [BlueMetal in Chicago][1] is on the front lines of Window 8 development.  Some of the most effective, efficient and promising business-impacting solutions are coming from BlueMetal in the form of Windows 8 development.  This has been around much tablet work as well.  It takes a lot to impress me, given how many applications or systems I’ve seen that promise to fix the world of computing.  I can honestly say, the Windows 8 development coming from BlueMetal will make businesses function more effectively.
 
-To find out how this all happens, evolves and is put to work, attend this event.  BTW&#8230;It&#8217;s FREE and all are welcome!
+To find out how this all happens, evolves and is put to work, attend this event.  BTW…It's FREE and all are welcome!
 
 Below is the link to register and the event details &#8211; click the image to register.
 

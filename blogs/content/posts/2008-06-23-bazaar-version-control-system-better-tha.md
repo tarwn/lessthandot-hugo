@@ -25,7 +25,7 @@ What is sometimes an issue with SVN is the ability to do local commits for each 
 
 One VCS tool that tackles this problem is [Bazaar][3], which offers no less than [7 different Version Control workflows][4] depending on your particular scenario. 
 
-Bazaar is developed and used by [Canonical][5] (the Ubuntu people), and has recently [claimed Sun&#8217;s MySQL as a new user][6]. Bazaar is one of many VCS tools, but it&#8217;s flexibility in workflow patterns is certainly something that makes it an interesting tool to consider. 
+Bazaar is developed and used by [Canonical][5] (the Ubuntu people), and has recently [claimed Sun's MySQL as a new user][6]. Bazaar is one of many VCS tools, but it's flexibility in workflow patterns is certainly something that makes it an interesting tool to consider. 
 
 ## Further Info
 

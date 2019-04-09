@@ -24,7 +24,7 @@ sql
 SELECT * FROM Test FOR XML AUTO, ELEMENTS, XMLSCHEMA('TestXsdSchema')
 ```
 
-Let&#8217;s look at a complete example. First create the table below
+Let's look at a complete example. First create the table below
 
 sql
 create table Test(id int identity,
@@ -71,7 +71,7 @@ This is the schema that gets generated
  </xsd:schema>
 ```
 
-See, that was pretty simple wasn&#8217;t it?
+See, that was pretty simple wasn't it?
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 

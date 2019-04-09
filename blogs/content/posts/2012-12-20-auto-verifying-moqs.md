@@ -18,9 +18,9 @@ tags:
   - tdd
 
 ---
-After years of only being familiar with Rhino mocks, I have been using Moq for the last 10 months or so. For the most part, I like it better. The syntax seems easier to get people up to speed on, and there are situations where it really cuts down on the amount of test code you have to write. This is about one of the situations where it doesn&#8217;t.
+After years of only being familiar with Rhino mocks, I have been using Moq for the last 10 months or so. For the most part, I like it better. The syntax seems easier to get people up to speed on, and there are situations where it really cuts down on the amount of test code you have to write. This is about one of the situations where it doesn't.
 
-One of the things I always liked about Rhino Mocks was the idea of the mock repository, and the fact that when disposing of a mock repository all of your setups get verified automagically. I have a lot of trouble remembering to add calls to VerifyAll when I&#8217;m adding functionality to existing tests because I got so used to this behavior in the past. When I noticed some tests where I had unnecessary mocks setup today I decided to do something about it. Its not really anything special but figued I&#8217;d share since I haven&#8217;t posted for a while.
+One of the things I always liked about Rhino Mocks was the idea of the mock repository, and the fact that when disposing of a mock repository all of your setups get verified automagically. I have a lot of trouble remembering to add calls to VerifyAll when I'm adding functionality to existing tests because I got so used to this behavior in the past. When I noticed some tests where I had unnecessary mocks setup today I decided to do something about it. Its not really anything special but figued I'd share since I haven't posted for a while.
 
 Basically I added a base test fixture to the project that provides a means to create tracked mocks (similar to the MockRepository concept in Rhino). It provides a method for mock creation, and adds all created mocks to a list that is then verified in the teardown method. Pretty simple stuff but I found it handy.
 
@@ -97,4 +97,4 @@ public void ATest()
 }
 ```
 
-It only saves one line of test code in this example, but it can add up when dealing with tests that have several mocks. I realize having this many mocks in play for a test is just asking for trouble, but I am dealing with a legacy system without any test coverage, so working in test coverage without any sweeping refactorings is imperative at this point. We can make those changes later once we&#8217;ve gotten through a release or two with the code that is now under test 🙂
+It only saves one line of test code in this example, but it can add up when dealing with tests that have several mocks. I realize having this many mocks in play for a test is just asking for trouble, but I am dealing with a legacy system without any test coverage, so working in test coverage without any sweeping refactorings is imperative at this point. We can make those changes later once we've gotten through a release or two with the code that is now under test 🙂

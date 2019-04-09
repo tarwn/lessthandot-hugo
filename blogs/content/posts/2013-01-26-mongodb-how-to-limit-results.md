@@ -22,7 +22,7 @@ tags:
 ---
 In this post we are going to take a look at how to limit results in MongoDB as well how to page through results. MongoDB use limit to limit the number of results return, MongoDB use skip to skip a number of records from the results set. Using limit in conjunction with skip enables you to do paging in MongoDB.
 
-Let&#8217;s take a look at how this works
+Let's take a look at how this works
 
 To get started insert the following into your MongoDB database
 
@@ -79,7 +79,7 @@ Here are the results
 
 ## Paging in MongoDB
 
-Now, let&#8217;s take a look at how we can return items 3 and 4, this would be John and Xavier. In this case we need to use skip, all we have to add is skip(2)
+Now, let's take a look at how we can return items 3 and 4, this would be John and Xavier. In this case we need to use skip, all we have to add is skip(2)
 
 Here is what the command looks like, run the following
 
@@ -90,7 +90,7 @@ And here are the results
 <pre>{ "name" : "John" }
 { "name" : "Xavier" }</pre>
 
-If you pass in values that are outside of the number of items in the collection, you won&#8217;t get an error but neither will you get results. If you were to skip 6 items, you won&#8217;t get anything back
+If you pass in values that are outside of the number of items in the collection, you won't get an error but neither will you get results. If you were to skip 6 items, you won't get anything back
 
 <pre>db.Blog.find(null, {name: 1, _id: 0}).sort({name: 1}).limit(2).skip(6)</pre>
 

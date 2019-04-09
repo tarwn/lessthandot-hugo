@@ -16,7 +16,7 @@ categories:
 Hey everyone, 
 
 <p style="text-indent: 30pt;">
-  Sorry this post has been so delayed. I was wiped out last week and a half with a nasty cold that I am still recovering from. I missed my entire Thanksgiving break, curled up under blankets and coughing my lungs up. Anyway, I&#8217;m finally back on my feet, albeit completely buried under catch up work and a new project. But as promised, nuts and bolts from KBay!
+  Sorry this post has been so delayed. I was wiped out last week and a half with a nasty cold that I am still recovering from. I missed my entire Thanksgiving break, curled up under blankets and coughing my lungs up. Anyway, I'm finally back on my feet, albeit completely buried under catch up work and a new project. But as promised, nuts and bolts from KBay!
 </p>
 
 ### The Power of Communication
@@ -26,7 +26,7 @@ Hey everyone,
 </p>
 
 <p style="text-indent: 30pt;">
-  Some of the awesomeness behind this pattern includes:<br /> 1) Client side, you can hang on to a request and populated it as needed. No more piles of variables to pass in, just set up the single request object, it&#8217;s all nice and self contained.<br /> 2) Super easy logging/debugging. At any point in time we can serialize the request/response objects to see what&#8217;s in them. Even using a tool like Fiddler you can see a nicely formatted data layout of your parameters.<br /> 3) Server side additions will not break functionality. So long as the server side checks the value it wants to use before using it, the client side will continue to function. This was great for us as we had 2+ developers on the project the whole time. If Adam was adding more parameters and functionality server side, I could continue hitting the dev server with out having to rebind or implement any changes.
+  Some of the awesomeness behind this pattern includes:<br /> 1) Client side, you can hang on to a request and populated it as needed. No more piles of variables to pass in, just set up the single request object, it's all nice and self contained.<br /> 2) Super easy logging/debugging. At any point in time we can serialize the request/response objects to see what's in them. Even using a tool like Fiddler you can see a nicely formatted data layout of your parameters.<br /> 3) Server side additions will not break functionality. So long as the server side checks the value it wants to use before using it, the client side will continue to function. This was great for us as we had 2+ developers on the project the whole time. If Adam was adding more parameters and functionality server side, I could continue hitting the dev server with out having to rebind or implement any changes.
 </p>
 
 ### The Simplest Web Methods Ever
@@ -46,13 +46,13 @@ Hey everyone,
         Return Request.FillRequest()
     End Function
 ```<p style="text-indent: 30pt;">
-  This code is actually for a different project, but it&#8217;s what I had handy. All of the functions follow the same pattern as the ones you can see here. They take a custom Request object and return a custom Response object (both named after the method). Inside the method, they call the Request.FillRequest method.
+  This code is actually for a different project, but it's what I had handy. All of the functions follow the same pattern as the ones you can see here. They take a custom Request object and return a custom Response object (both named after the method). Inside the method, they call the Request.FillRequest method.
 </p>
 
-### Where&#8217;s the beef?
+### Where's the beef?
 
 <p style="text-indent: 30pt;">
-  So let&#8217;s keep digging. Here is the GetInit.vb file that contains the functionality for the GetInit method:
+  So let's keep digging. Here is the GetInit.vb file that contains the functionality for the GetInit method:
 </p>
 
 ```VB.Net
@@ -98,7 +98,7 @@ Namespace Implementation
 End Namespace
 ```
 <p style="text-indent: 30pt;">
-  A couple of things to notice here. First, there are two classes in this file, both the request and the response. This is just for organizational purposes. You&#8217;ll also want to note the &#8220;servicemanager.AutoCreateSessionId()&#8221; attribute on the Request class. We&#8217;ll use this again later.
+  A couple of things to notice here. First, there are two classes in this file, both the request and the response. This is just for organizational purposes. You'll also want to note the “servicemanager.AutoCreateSessionId()” attribute on the Request class. We'll use this again later.
 </p>
 
 <p style="text-indent: 30pt;">
@@ -106,17 +106,17 @@ End Namespace
 </p>
 
 <p style="text-indent: 30pt;">
-  The &#8220;innerFillRequest&#8221; method is where the actual functionality of this web method takes place. In the case of GetInit, it grabs a string from the Environment Provider, splits it, and adds it to a member on the Response object.
+  The “innerFillRequest” method is where the actual functionality of this web method takes place. In the case of GetInit, it grabs a string from the Environment Provider, splits it, and adds it to a member on the Response object.
 </p>
 
 <p style="text-indent: 30pt;">
-  Below that is the GetInitResponse class, which in this case is pretty simple and just contains a property that exposes a list of strings. The same property that is populated in the Request object&#8217;s innerFillRequest method.
+  Below that is the GetInitResponse class, which in this case is pretty simple and just contains a property that exposes a list of strings. The same property that is populated in the Request object's innerFillRequest method.
 </p>
 
 ### Strange Child, Who is your Parent?
 
 <p style="text-indent: 30pt;">
-  While these derived classes show us what the method does, it doesn&#8217;t show us how they are called. The web methods called Request.FillRequest, not InnerFillRequest. So lets look at the class that the request inherits from, BaseRequest:
+  While these derived classes show us what the method does, it doesn't show us how they are called. The web methods called Request.FillRequest, not InnerFillRequest. So lets look at the class that the request inherits from, BaseRequest:
 </p>
 
 ```VB.Net
@@ -275,7 +275,7 @@ Namespace ServiceManager
 End Namespace
 ```
 <p style="text-indent: 30pt;">
-  The BaseRequest class is abstract, it must be inherited. But even cooler, it is a generic class. We can define it&#8217;s type dynamically. It implements iRequest, which just guarantees it some basic members:
+  The BaseRequest class is abstract, it must be inherited. But even cooler, it is a generic class. We can define it's type dynamically. It implements iRequest, which just guarantees it some basic members:
 </p>
 
 ```VB.Net
@@ -287,7 +287,7 @@ Namespace ServiceManager
 End Namespace
 ```
 <p style="text-indent: 30pt;">
-  The &#8220;FillRequest&#8221; method is the conductor of this train. This is the method that the web services are actually calling. Right off the bat, if starts up a stop watch, so we can get performance indicators off of every web service call.
+  The “FillRequest” method is the conductor of this train. This is the method that the web services are actually calling. Right off the bat, if starts up a stop watch, so we can get performance indicators off of every web service call.
 </p>
 
 <p style="text-indent: 30pt;">
@@ -299,13 +299,13 @@ End Namespace
 </p>
 
 <p style="text-indent: 30pt;">
-  The &#8220;GetLoggingReplacement&#8221; is a block we use to replace chunks of text we don&#8217;t want to log. For instance, if the request contains large binary blocks (like uploading files) or sensitive information, we can set up string manipulations here to remove those items from the serialized request before it gets logged. This sub is usually overridden by the derived classes to add more method specific replacements.
+  The “GetLoggingReplacement” is a block we use to replace chunks of text we don't want to log. For instance, if the request contains large binary blocks (like uploading files) or sensitive information, we can set up string manipulations here to remove those items from the serialized request before it gets logged. This sub is usually overridden by the derived classes to add more method specific replacements.
 </p>
 
 ### Until Next Time
 
 <p style="text-indent: 30pt;">
-  The projects continue to pile up. Everyone is trying to wrap stuff up before the holidays and new year, so I&#8217;ve got a lot on my plate. As I get more time, I&#8217;ll try to put up more on some of the other technical tricks we used inside of Silverlight. But this communication system, in conjunction with our Logging system, Unit tests, and having 2 developers on each project has dramatically helped us cut down on development time, reduce released bugs, and improved user acceptance of the applications.
+  The projects continue to pile up. Everyone is trying to wrap stuff up before the holidays and new year, so I've got a lot on my plate. As I get more time, I'll try to put up more on some of the other technical tricks we used inside of Silverlight. But this communication system, in conjunction with our Logging system, Unit tests, and having 2 developers on each project has dramatically helped us cut down on development time, reduce released bugs, and improved user acceptance of the applications.
 </p>
 
 -Rick

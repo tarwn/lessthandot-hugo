@@ -103,7 +103,7 @@ BEGIN
 END
 ```
 
-Now let&#8217;s try this out, first run this
+Now let's try this out, first run this
 
 sql
 select dbo.IPAddressToInteger('127.0.0.1')

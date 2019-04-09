@@ -27,7 +27,7 @@ tags:
   - sql server denali
 
 ---
-According to the Microsoft SQLNCli team blog, SQL Server, codename &#8220;Denali&#8221;, will be the last release to support OLE DB.
+According to the Microsoft SQLNCli team blog, SQL Server, codename “Denali”, will be the last release to support OLE DB.
 
 Here is what they are currently saying
 
@@ -39,8 +39,8 @@ And
 
 > ODBC is the de-facto industry standard for native relational data access, which is supported on all platforms including SQL Azure. Cloud is universal and in order to support all client applications connecting from any platform to the cloud, Microsoft has been fully aligned with ODBC on SQL Azure, as ODBC is the only set of APIs that are available on all platforms including non-Windows platforms.
 
-Mmmm..it looks like ODBC is back from the dead&#8230;&#8230;.
+Mmmm..it looks like ODBC is back from the dead…….
 
-What do you think&#8230;how will this impact you? Leave a comment if this affects you or if you have been using ODBC all along
+What do you think…how will this impact you? Leave a comment if this affects you or if you have been using ODBC all along
 
 More details including information on how to migrate your applications can be found here: http://blogs.msdn.com/b/sqlnativeclient/archive/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access.aspx

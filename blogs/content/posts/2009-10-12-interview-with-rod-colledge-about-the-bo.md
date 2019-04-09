@@ -30,7 +30,7 @@ Below is the interview.
 
 **What level of competence should a reader have before reading this book? Is this book good for accidental DBAs?**
 
-It’s interesting that you ask about the &#8220;accidental DBA&#8221;. I recently blogged [The Great DBA Schism][3] in which I noted that these types of DBAs are becoming much more common. My book is perfect for these DBAs as they’re typically bright people with experience in other areas who want to quickly learn DBA best practices without having to wade through lots of text. 
+It’s interesting that you ask about the “accidental DBA”. I recently blogged [The Great DBA Schism][3] in which I noted that these types of DBAs are becoming much more common. My book is perfect for these DBAs as they’re typically bright people with experience in other areas who want to quickly learn DBA best practices without having to wade through lots of text. 
 
 A lot of books patronize their readers and drag them through painful reproductions of simple tasks. Worse still, these books often reproduce information that is easily accessible from other free sources, for example, Books Online. As a result, the page count blows out, and most of the book goes unread.
 
@@ -76,7 +76,7 @@ At the close of each chapter, I’ve got a summarized list of best practice bull
 
 For experienced DBAs that haven’t yet upgraded to SQL Server 2008, I’ve made sure that new 2008 features are clearly marked, so they can target-read those sections. I’ve also spent a bit of time on the 2008 upgrade process in the installation chapter, including different techniques to minimize the upgrade time, such as using transaction log shipping.
 
-**What&#8217;s the next step for a DBA after reading this book?**
+**What's the next step for a DBA after reading this book?**
 
 Each chapter has a link to a specific page on [SQLCrunch.com][6], the website I created and run. This site includes summarized links to best practice articles, whitepapers and blogs from Microsoft and other SQL Server MVPs. This is a great way to obtain further information on topics of interest.
 
@@ -118,7 +118,7 @@ Sample chapter 4 [Installing and upgrading SQL Server 2008][8]
   
 Sample chapter 10 [Backup and recovery][9]
 
-There is some more info about the book on the publisher&#8217;s website: http://www.manning.com/colledge/
+There is some more info about the book on the publisher's website: http://www.manning.com/colledge/
 
 You can also checkout the book on Amazon for more reviews: [SQL Server 2008 Administration in Action][1]
 

@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-In yesterday&#8217;s post [Unique index difference between Oracle and SQL Server][1] , I showed you that SQL Server only allows one NULL value in an unique index while Oracle allows multiple NULL values. Today we are going to look how we can allow multiple NULL values as well in a SQL Server unique index. I am going to show you two techniques. The first technique is known as a nullbuster, this was first demonstrated I believe by former SQl Server MVP Steve Kass. Basically you use a computed column to allow for multiple NULLs. Here is an example
+In yesterday's post [Unique index difference between Oracle and SQL Server][1] , I showed you that SQL Server only allows one NULL value in an unique index while Oracle allows multiple NULL values. Today we are going to look how we can allow multiple NULL values as well in a SQL Server unique index. I am going to show you two techniques. The first technique is known as a nullbuster, this was first demonstrated I believe by former SQl Server MVP Steve Kass. Basically you use a computed column to allow for multiple NULLs. Here is an example
 
 sql
 CREATE TABLE TestUnique (
@@ -35,7 +35,7 @@ INSERT TestUnique VALUES(null)
 INSERT TestUnique VALUES(null)
 ```
 
-That worked without a problem. Now let&#8217;s insert the value 1 again
+That worked without a problem. Now let's insert the value 1 again
 
 sql
 INSERT TestUnique VALUES(1)
@@ -45,7 +45,7 @@ As expected that blows up
 
 Msg 2627, Level 14, State 1, Line 1
   
-Violation of UNIQUE KEY constraint &#8216;uc_TestUnique&#8217;. Cannot insert duplicate key in object &#8216;dbo.TestUnique&#8217;. The duplicate key value is (1, 0).
+Violation of UNIQUE KEY constraint &#8216;uc_TestUnique'. Cannot insert duplicate key in object &#8216;dbo.TestUnique'. The duplicate key value is (1, 0).
   
 The statement has been terminated.
 
@@ -79,7 +79,7 @@ DROP TABLE TestUnique
 ```
 The second way we can add an index with multiple NULL values is by using a filtered index. I already covered filtered indexes in this post [Filtered Indexes][3] as part of the [SQL Advent 2011 calendar][4]
 
-Let&#8217;s see how we can do this. Create the unique table again
+Let's see how we can do this. Create the unique table again
 
 sql
 CREATE TABLE TestUnique (Id int)
@@ -110,11 +110,11 @@ INSERT INTO TestUnique VALUES(1);
 
 _Msg 2601, Level 14, State 1, Line 1
   
-Cannot insert duplicate key row in object &#8216;dbo.TestUnique&#8217; with unique index &#8216;SomeIndex&#8217;. The duplicate key value is (1).
+Cannot insert duplicate key row in object &#8216;dbo.TestUnique' with unique index &#8216;SomeIndex'. The duplicate key value is (1).
   
 The statement has been terminated._
 
-Now let&#8217;s select from the table
+Now let's select from the table
 
 sql
 SELECT * FROM TestUnique;

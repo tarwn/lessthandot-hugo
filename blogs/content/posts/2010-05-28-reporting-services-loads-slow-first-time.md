@@ -23,9 +23,9 @@ tags:
   - ssrs
 
 ---
-I&#8217;ve been approached on the web, in the SQL Community and in person several times with the question: &#8220;My Reporting Services instance loads Report Manager extremely slow. Why?&#8221;
+I've been approached on the web, in the SQL Community and in person several times with the question: “My Reporting Services instance loads Report Manager extremely slow. Why?”
 
-There are a few common primary causes of this. One is the instance being located on a DMZ and behind policies that cause the slow load times. I’m not a network guru and haven’t played in that field for 7-8 years so I can&#8217;t give you a lot of ideas to fix it. I can say, check it if you are on that landscape and getting the slow load times.
+There are a few common primary causes of this. One is the instance being located on a DMZ and behind policies that cause the slow load times. I’m not a network guru and haven’t played in that field for 7-8 years so I can't give you a lot of ideas to fix it. I can say, check it if you are on that landscape and getting the slow load times.
 
 The other cause comes down to locally installed firewalls and virus scan programs on the server (or machine you have SSRS installed on) blocking some or all access for Reporting Services, certain ports and ASP.NET. Firewalls are the devil from the inside out. I hate to say it, being the security crazed DBA I am but they do cause some headaches when working with features like Reporting Services that look to Internet Explorer for assistance in loading. 
 
@@ -33,9 +33,9 @@ I was fortunate enough to purchase a new laptop recently and installed my usual 
 
 ## _So let’s fix it together_
 
-On my new Dell XPS I have McAfee Security installed. It came with the laptop and isn’t all that bad. Does the job! But, when I open my Report Manager session, it takes around 5 minutes to load. Wow! I’m not a patient DBA. I like measuring things in nanoseconds. It is the foundation of why I purchase hardware at work that is way overboard and scalable. So my first inclination is to turn to the Windows Firewall. I know a lot of people may disagree with me, but I turn it off. It is good and I understand the concept behind it, but in our world, it can cause more problems than it&#8217;s worth. I’m behind my Cisco firewall and the McAfee firewall. I think I’m ok for now until a script kiddy reads this 😉
+On my new Dell XPS I have McAfee Security installed. It came with the laptop and isn’t all that bad. Does the job! But, when I open my Report Manager session, it takes around 5 minutes to load. Wow! I’m not a patient DBA. I like measuring things in nanoseconds. It is the foundation of why I purchase hardware at work that is way overboard and scalable. So my first inclination is to turn to the Windows Firewall. I know a lot of people may disagree with me, but I turn it off. It is good and I understand the concept behind it, but in our world, it can cause more problems than it's worth. I’m behind my Cisco firewall and the McAfee firewall. I think I’m ok for now until a script kiddy reads this 😉
 
-I opened the McAfee Security Center and navigated to the location I assume will be causing the problem &#8212; the firewall configuration. In this configuration I see that the Firewall protection is enabled and the option for configuring it is there. Upon opening this configuration I am presented with a listing of programs/files that have particular &#8220;access&#8221; settings. 
+I opened the McAfee Security Center and navigated to the location I assume will be causing the problem &#8212; the firewall configuration. In this configuration I see that the Firewall protection is enabled and the option for configuring it is there. Upon opening this configuration I am presented with a listing of programs/files that have particular “access” settings. 
 
 In this listing I quickly notice that my SQL Server Analysis Service instance is blocked. Fixed that! 
 
@@ -57,7 +57,7 @@ You can see there is an option to, “Allow Access” in the Action window. I se
 
 The largest problem is the firewall not allowing the action to be performed entirely. 
 
-I also found that port 1433 was being heavily scanned along with port 80. Next I found the &#8220;real-time&#8221; scanning settings and had to set the required files and services to Trusted. I basically found a few odds and ends just short of completely turning it off. I’m not recommending that of course. I’m recommending finding the setting your exact situation requires. All virus and firewalls are different and it isn’t feasible to cover them all here. 
+I also found that port 1433 was being heavily scanned along with port 80. Next I found the “real-time” scanning settings and had to set the required files and services to Trusted. I basically found a few odds and ends just short of completely turning it off. I’m not recommending that of course. I’m recommending finding the setting your exact situation requires. All virus and firewalls are different and it isn’t feasible to cover them all here. 
 
 Again, another reboot is required to determine if the settings fixed my problem 
 

@@ -70,7 +70,7 @@ Output is the same
   
 2010-05-18 12:36:51.010 Server Command Line Startup Parameters: /c
 
-Now, let&#8217;s stop the SQL Server instance, type this in a command window: _NET STOP MSSQLSERVER_ 
+Now, let's stop the SQL Server instance, type this in a command window: _NET STOP MSSQLSERVER_ 
 
 Your output should look like this 
 
@@ -92,7 +92,7 @@ Your output should look like this
 <pre>The SQL Server (MSSQLSERVER) service is starting.
 The SQL Server (MSSQLSERVER) service was started successfully.</pre>
 
-Now let&#8217;s run the same stored procedure from before
+Now let's run the same stored procedure from before
 
 sql
 EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters'
@@ -116,7 +116,7 @@ sql
 EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/g'
 ```
 
-So there you have it EXEC sp_readerrorlog 0, 1, &#8216;Command Line Startup Parameters&#8217; is a quick way to check how SQL Server was started without looking through your error log
+So there you have it EXEC sp_readerrorlog 0, 1, &#8216;Command Line Startup Parameters' is a quick way to check how SQL Server was started without looking through your error log
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 

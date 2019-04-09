@@ -29,7 +29,7 @@ The Series Titles
   * [Technical Aptitude][6]
   * [Knowing Everything but Not Knowing a thing][7]
   * [Travel, Expenses, Pain][8]
-  * [Overcomplicating, Stress&#8230;Freaking Out!][9]
+  * [Overcomplicating, Stress…Freaking Out!][9]
   * [Family Balance][10]
   * [Work Ethics as a Consultant][11]
   * [Estimating Work][12]
@@ -47,7 +47,7 @@ As the posts become available, reviewed, and edited by my awesome reviewer, I’
 
 <hr size="1" />
 
-Upon completing this series, we&#8217;ve taken all the articles and combined them into a PDF file. We hope this will make it easier for you to utilize these tips and experiences from Ted, Hope and Jes.
+Upon completing this series, we've taken all the articles and combined them into a PDF file. We hope this will make it easier for you to utilize these tips and experiences from Ted, Hope and Jes.
 
 You can download the complete series here: [The Successful Consultant][19]
 

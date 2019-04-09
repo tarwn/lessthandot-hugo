@@ -40,7 +40,7 @@ GO
 
 The customer ordering details table holds data that is automatically inserted and is then replicated to another source for reporting.  The developer does not really care too much about the customer ordering details because that data is for reporting and if it doesn’t go over, it simply will not replicate.  However, the developer runs a DELETE FROM item_table WHERE itemnumber in (item1, item2) and receives the following error.
 
-<span class="MT_red">Msg 547, Level 16, State 0, Line 1<br /> The DELETE statement conflicted with the REFERENCE constraint &#8220;fk_itemnumber&#8221;. The conflict occurred in database &#8220;QTuner_Design&#8221;, table &#8220;dbo.cust_item_ordering&#8221;, column &#8216;itemnumber&#8217;.<br /> </span>
+<span class="MT_red">Msg 547, Level 16, State 0, Line 1<br /> The DELETE statement conflicted with the REFERENCE constraint “fk_itemnumber”. The conflict occurred in database “QTuner_Design”, table “dbo.cust_item_ordering”, column &#8216;itemnumber'.<br /> </span>
 
 The statement has been terminated.
 

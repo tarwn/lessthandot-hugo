@@ -42,7 +42,7 @@ Duplicati 1.3.2 &#8211; (Binaries, zip)
   
 Duplicati 1.3.2 &#8211; (Linux binary, tgz)
 
-Let&#8217;s take a look at how easy it is to use. After you install Duplicati, run it. When you run it the first time a wizard will pop up. Pick select a new backup
+Let's take a look at how easy it is to use. After you install Duplicati, run it. When you run it the first time a wizard will pop up. Pick select a new backup
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati01.PNG?mtime=1337909180"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati01.PNG?mtime=1337909180" width="506" height="379" /></a>
@@ -84,7 +84,7 @@ On the next page you can now fill the details in for the stuff you picked in the
   <a href="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati07.PNG?mtime=1337909236"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati07.PNG?mtime=1337909236" width="505" height="377" /></a>
 </div>
 
-Backup is running&#8230;.and it is done
+Backup is running….and it is done
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati08.PNG?mtime=1337909236"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati08.PNG?mtime=1337909236" width="472" height="412" /></a>

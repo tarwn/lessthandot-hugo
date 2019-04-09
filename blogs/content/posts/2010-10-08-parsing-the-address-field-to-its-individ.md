@@ -55,7 +55,7 @@ Please, note, that I used CROSS APPLY technique to divide the parsing job into s
 
 I learned this CROSS APPLY technique from this excellent blog post by Brad Schulz
   
-[Cool CROSS APPLY tricks &#8211; part 2][2] That&#8217;s when this technique finally became very familiar for me. I want to tell here that I always enjoy reading Brad&#8217;s blogs because of the humorous style of his writing.
+[Cool CROSS APPLY tricks &#8211; part 2][2] That's when this technique finally became very familiar for me. I want to tell here that I always enjoy reading Brad's blogs because of the humorous style of his writing.
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 

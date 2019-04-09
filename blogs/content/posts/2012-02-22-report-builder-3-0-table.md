@@ -24,7 +24,7 @@ This is part two of a series about Report Builder 3.0.
   * <a title="Report Builder 3.0 – Map Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-map/" target="_blank">Report Builder 3.0 – Map Wizard</a>
   * <a title="Report Builder 3.0 – Report Parts" href="/index.php/datamgmt/dbprogramming/mssqlserver/report-builder-3-0-report/" target="_blank">Report Builder 3.0 – Report Parts</a>
 
-In this post, I&#8217;m going to introduce you to one the Table or Matrix Wizard.
+In this post, I'm going to introduce you to one the Table or Matrix Wizard.
 
 <p style="text-align: center">
   <img style="vertical-align: middle" src="/wp-content/uploads/users/grrlgeek/Wizard.jpg?mtime=1329921629" alt="" width="196" height="225" />

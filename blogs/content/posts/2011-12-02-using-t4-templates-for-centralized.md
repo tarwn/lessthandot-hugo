@@ -22,7 +22,7 @@ In my previous post I mentioned that I was looking for an answer to the age-old 
 
 But we left JavaScript out of the equation.
 
-## T4&#8217;ing the JavaScript
+## T4'ing the JavaScript
 
 As a reminder, I am looking for a clean way to store shared JavaScript and CSS in a single place so I share it amongst several web projects and also make changes to the files on the fly and see them in the browser without a costly solution rebuild.
 

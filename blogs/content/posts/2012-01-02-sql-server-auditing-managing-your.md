@@ -18,7 +18,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-So far in the SQL Server Audit series we&#8217;ve looked at the different components that make up the auditing feature as well as how to create the audits with specifications specific to databases as well as server level. 
+So far in the SQL Server Audit series we've looked at the different components that make up the auditing feature as well as how to create the audits with specifications specific to databases as well as server level. 
 
 Here is the links to the posts covering the topics:
 
@@ -28,11 +28,11 @@ Here is the links to the posts covering the topics:
   
 [SQL Server Auditing: Creating a Database Specification][3]
 
-Now that we have set up our audits covering failed logins on instance level and deletes on database level, let&#8217;s take a look at how we can see what audits are on a server as well as some views to make your life easier with reading the audit files.
+Now that we have set up our audits covering failed logins on instance level and deletes on database level, let's take a look at how we can see what audits are on a server as well as some views to make your life easier with reading the audit files.
 
-### DMV&#8217;s and Views
+### DMV's and Views
 
-First off, let&#8217;s see what views are available at our disposal:
+First off, let's see what views are available at our disposal:
 
 sql
 USE master;
@@ -48,9 +48,9 @@ This returns the following for us:
   <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/Management/Results.jpg?mtime=1325273512"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/Management/Results.jpg?mtime=1325273512" width="307" height="192" /></a>
 </div>
 
-#### DMV&#8217;s
+#### DMV's
 
-So what does the audit DMV&#8217;s do? Let&#8217;s take a look:
+So what does the audit DMV's do? Let's take a look:
 
 _sys.dm\_audit\_actions_
 
@@ -68,7 +68,7 @@ _Sys.dm\_audit\_class\_type\_map and sys.dm\_audit\_actions are especially usefu
 
 #### Server Views
 
-The server views are split up into two &#8220;sections&#8221;, one for the audits, and the second for the server specification details.
+The server views are split up into two “sections”, one for the audits, and the second for the server specification details.
 
 Audits:
   
@@ -76,7 +76,7 @@ _sys.server_audits_
   
 _sys.server\_file\_audits_
 
-These views contain details about the server level audits defined on the server, This returns information such as audit names, file names and paths, audit id&#8217;s, statuses, etc.
+These views contain details about the server level audits defined on the server, This returns information such as audit names, file names and paths, audit id's, statuses, etc.
 
 Specification:
   
@@ -88,7 +88,7 @@ These views are very helpful when you have multiple audits on a server, and matc
 
 #### Database Views
 
-The database views available are almost identical to the server level ones, except the fact that it&#8217;s specific to databases, and that there are no &#8220;audit&#8221; views; only for database specifications. Another thing to note is, that these views won&#8217;t return information across databases on an instance, this needs to be executed per database.
+The database views available are almost identical to the server level ones, except the fact that it's specific to databases, and that there are no “audit” views; only for database specifications. Another thing to note is, that these views won't return information across databases on an instance, this needs to be executed per database.
 
 _sys.database\_audit\_specification_details_
   
@@ -96,9 +96,9 @@ _sys.database\_audit\_specifications_
 
 The views return the specification names, enabled audit actions, audit results, etc.
 
-Now that we&#8217;ve got the views covered, a question still lingers&#8230; &#8220;How do we manage audits across multiple servers?&#8221; Well the answer is quite simple, we make use of another new feature introduced in SQL Server 2008 which is Policy Based Management, otherwise known as PBM.
+Now that we've got the views covered, a question still lingers… “How do we manage audits across multiple servers?” Well the answer is quite simple, we make use of another new feature introduced in SQL Server 2008 which is Policy Based Management, otherwise known as PBM.
 
-So PBM is a subject on it&#8217;s own, so I will not go in depth into this topic.
+So PBM is a subject on it's own, so I will not go in depth into this topic.
 
 A key resource required for monitoring your environment is the [Enterprise Policy Framework][4].
 
@@ -253,7 +253,7 @@ EXEC msdb.dbo.sp_syspolicy_add_policy @name=N'Audit_Policy', @condition_name=N'A
 Select @policy_id
 GO
 ```
-This is just a basic policy using the &#8220;audit&#8221; facet. There are additional facets for Database Audit Specifications as well as Server Audit Specifications.
+This is just a basic policy using the “audit” facet. There are additional facets for Database Audit Specifications as well as Server Audit Specifications.
 
 Additionally if you decide to use the Enterprise Policy Framework, it should be noted that you need an additional condition to be set up on the policy that will only evaluate the policy against SQL Server 2008+.
 

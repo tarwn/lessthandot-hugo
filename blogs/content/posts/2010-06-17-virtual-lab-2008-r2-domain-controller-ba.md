@@ -24,25 +24,25 @@ This post picks up where the [Virtual Lab: Creating a 2008 R2 Domain Controller]
 
 ## Creating Accounts
 
-After installing the Active Directory Directory Services role, there are several new tools available from the Administrative Tools section of the Start menu. Throughout the remainder of the article we will be working through the &#8220;Active Directory Users and Computers&#8221; tool.
+After installing the Active Directory Directory Services role, there are several new tools available from the Administrative Tools section of the Start menu. Throughout the remainder of the article we will be working through the “Active Directory Users and Computers” tool.
 
 ### Domain Administrator Account
 
-The first account we are going to create on the new domain is a Domain Administrator account. Even though this is a virtual lab environment, we don&#8217;t want to get in the habit of using the built-in administrator account. 
+The first account we are going to create on the new domain is a Domain Administrator account. Even though this is a virtual lab environment, we don't want to get in the habit of using the built-in administrator account. 
 
-Open the &#8220;Active Directory User and Computers&#8221; screen and explore the default groups that have been created. As this is our first visit, there are no custom folders in our tree.
+Open the “Active Directory User and Computers” screen and explore the default groups that have been created. As this is our first visit, there are no custom folders in our tree.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/0_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/0_config.png" alt="AD Users and Computers" /></a><br /> AD &#8211; Users and Computers
 </div>
 
-To add a new user to the default &#8220;Users&#8221; folder we will right-click on the folder, select &#8220;New&#8221;, and select &#8220;User&#8221;. This provides us with a dialog to enter the basic user information.
+To add a new user to the default “Users” folder we will right-click on the folder, select “New”, and select “User”. This provides us with a dialog to enter the basic user information.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/1_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/1_config.png" alt="AD Adding a User" /></a><br /> AD &#8211; Adding a User
 </div>
 
-After entering the general user information and pressing next, we are presented with a request for the user&#8217;s password and password options. As we have not yet configured the password policy, the <a href="http://technet.microsoft.com/en-us/library/cc264456.aspx" title="Windows 2008 Password Policy Settings" target="_blank">default policy</a> is still in place.
+After entering the general user information and pressing next, we are presented with a request for the user's password and password options. As we have not yet configured the password policy, the <a href="http://technet.microsoft.com/en-us/library/cc264456.aspx" title="Windows 2008 Password Policy Settings" target="_blank">default policy</a> is still in place.
 
 Completing the wizard gives us a brand new member with basic Domain User permissions.
 
@@ -50,7 +50,7 @@ Completing the wizard gives us a brand new member with basic Domain User permiss
   <a href="http://tiernok.com/LTDBlog/BasicDC/2_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/2_config.png" alt="AD Adding a User" /></a><br /> AD &#8211; Adding a User
 </div>
 
-To elevate the permissions of the user across the domain, we will assign them membership to the Domain Admins group. Open the user&#8217;s properties panel (right-clicking the user and select &#8220;Properties&#8221;) and select the &#8220;Member Of&#8221; tab.
+To elevate the permissions of the user across the domain, we will assign them membership to the Domain Admins group. Open the user's properties panel (right-clicking the user and select “Properties”) and select the “Member Of” tab.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/3_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/3_config.png" alt="AD Configuring a User" /></a><br /> AD &#8211; Configuring a User
@@ -60,7 +60,7 @@ To elevate the permissions of the user across the domain, we will assign them me
   There are several default groups created when you install AD DS with default levels of permissions across the domain. There is a pretty good reference on the default groups available <a href="http://ss64.com/nt/syntax-security_groups.html" title="AD Security Groups" target="_blank">here</a>.
 </div>
 
-Pressing the &#8220;Add&#8221; button brings up the search dialog. Enter &#8220;Domain Admins&#8221; and press &#8220;Check Names&#8221; to quickly find and select the Domain Admins group.
+Pressing the “Add” button brings up the search dialog. Enter “Domain Admins” and press “Check Names” to quickly find and select the Domain Admins group.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/4_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/4_config.png" alt="AD Configuring a User" /></a><br /> AD &#8211; Configuring a User
@@ -77,7 +77,7 @@ Service accounts are an important part of a network. Many companies will rely on
   * Documentation &#8211; using a single account for multiple services requires either good documentation, good guessing, or a lot of overtime
   * Security &#8211; providing an account with too much security is a potential security hole, a virus that uses a single application as an entry point suddenly has rights to everything on the network
 
-In order to make management of service accounts (and services) clearer, I suggest each service account only have the level of permission on the domain it absolutely needs and that it only be used for a single service or application. This requires more work up front, as you have to not only create individual accounts for each application and service, but more importantly determine what &#8220;minimum requirements&#8221; means for each one. On the other hand, minimizing planned and unplanned system outages in the future is worth a little extra time.
+In order to make management of service accounts (and services) clearer, I suggest each service account only have the level of permission on the domain it absolutely needs and that it only be used for a single service or application. This requires more work up front, as you have to not only create individual accounts for each application and service, but more importantly determine what “minimum requirements” means for each one. On the other hand, minimizing planned and unplanned system outages in the future is worth a little extra time.
 
 <div class="hint">
   Sometimes multiple services need access to a common resource, or a common service needs a few different permission profiles based on the use of the system (for instance, qa versus production SQL Server instances). Rather than add these permissions to each individual service account, consider creating a group that outlines the permissions and then give the service accounts membership in the group. Our goal is to minimize the number of configuration changes we will have to make when that configuration needs to change in the future.
@@ -91,23 +91,23 @@ Our guinea pig in this section will be the basic SQL install from a [previous ar
   Larger networks may want to create groups to handle permissions and then create accounts for individual servers and assign them the correct group membership. This second route reduces risk but heightens the level of work necessary to manage the accounts. In this situation, I would suggest using Managed Service accounts rather than standard user accounts, as they can be assigned the same types of group permissions but reduce a portion of the overhead in administering the accounts.
 </div>
 
-On the AD DS server open the &#8220;Active Directory User and Computers&#8221; screen again. While there is a &#8220;Users&#8221; container already available in the interface, we&#8217;re going to create a new Organizational Unit (OU) named &#8220;Service Accounts&#8221; to store these accounts.
+On the AD DS server open the “Active Directory User and Computers” screen again. While there is a “Users” container already available in the interface, we're going to create a new Organizational Unit (OU) named “Service Accounts” to store these accounts.
 
-To create the new OU, we right-click the Domain (in my case _avl.local_) and select New -> Organizational Unit. In the dialog we enter the name, in my case &#8220;Service Accounts&#8221;, and press Ok.
+To create the new OU, we right-click the Domain (in my case _avl.local_) and select New -> Organizational Unit. In the dialog we enter the name, in my case “Service Accounts”, and press Ok.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/5_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/5_config.png" alt="Creating a new OU" /></a><br /> AD &#8211; Creating a new OU
 </div>
 
-Right clicking the new &#8220;Service Accounts&#8221; container and selecting New > User opens the new user dialog.
+Right clicking the new “Service Accounts” container and selecting New > User opens the new user dialog.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/6_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/6_config.png" alt="Creating a new Service User" /></a><br /> AD &#8211; Creating a new Service User
 </div>
 
-As this is the domain account for our SQL Server services, I have chosen the name &#8220;SQL Server Service Account&#8221; and a username of &#8220;sqladmin&#8221;.
+As this is the domain account for our SQL Server services, I have chosen the name “SQL Server Service Account” and a username of “sqladmin”.
 
-On the next step we will also ensure that our password won&#8217;t expire in the middle of the night by verifying the checked defaults and modifying a few.
+On the next step we will also ensure that our password won't expire in the middle of the night by verifying the checked defaults and modifying a few.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/7_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/7_config.png" alt="Creating a new Service User" /></a><br /> AD &#8211; Creating a new Service User
@@ -125,86 +125,86 @@ The first step will be to change the network properties of the virtual server. W
   In my personal lab I am still serving DHCP requests from my core switch and have not configured it to direct DNS requests at my virtual DC because there is no guarantee that the DC will be on and later on it will be moved behind a virtual firewall and will be inaccessible to the other physical systems on my network.
 </div>
 
-On the SQL Server machine we open the network settings for our adapter, select the &#8220;Internet Protocol Version 4 (TCP/IPv4)&#8221; value, and press &#8220;Properties&#8221;. 
+On the SQL Server machine we open the network settings for our adapter, select the “Internet Protocol Version 4 (TCP/IPv4)” value, and press “Properties”. 
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/8_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/8_config.png" alt="SQL Server VM - Network Settings" /></a><br /> SQL Server VM &#8211; Network Settings
 </div>
 
-Assign the server a static IP address on the network and point the DNS settings to the DC. At this point it would also be a good idea to check the &#8220;Validate&#8221; button to let Windows test the settings when you press Ok.
+Assign the server a static IP address on the network and point the DNS settings to the DC. At this point it would also be a good idea to check the “Validate” button to let Windows test the settings when you press Ok.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/9_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/9_config.png" alt="SQL Server VM - Network Settings" /></a><br /> SQL Server VM &#8211; Network Settings
 </div>
 
-In my server the validation resulted in a message indicating that Windows couldn&#8217;t identify the problem, this translates to &#8220;Yes It Works&#8221;.
+In my server the validation resulted in a message indicating that Windows couldn't identify the problem, this translates to “Yes It Works”.
 
 Next we will open the System Properties. 
 
 <div class="hint">
-  One of the 90 ways you can get to the System Properties panel is to press the &#8220;Server Manager&#8221; icon that is pinned to the toolbar, then in the console highlight &#8220;Server manager&#8221; in the left side to display the high level dashboard on the right, followed by selecting &#8220;Change System Properties&#8221; on the right side of that dash.
+  One of the 90 ways you can get to the System Properties panel is to press the “Server Manager” icon that is pinned to the toolbar, then in the console highlight “Server manager” in the left side to display the high level dashboard on the right, followed by selecting “Change System Properties” on the right side of that dash.
 </div>
 
-Now we want to press the &#8220;Change&#8221; button on the &#8220;Computer Name&#8221; tab. Select the &#8220;Domain&#8221; radio button and type in the name of the domain from your domain controller.
+Now we want to press the “Change” button on the “Computer Name” tab. Select the “Domain” radio button and type in the name of the domain from your domain controller.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/10_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/10_config.png" alt="SQL Server VM - Join Domain" /></a><br /> SQL Server VM &#8211; Join Domain
 </div>
 
-On pressing &#8220;Ok&#8221; we are asked to enter domain credentials with permission to join the network. 
+On pressing “Ok” we are asked to enter domain credentials with permission to join the network. 
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/11_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/11_config.png" alt="SQL Server VM - Join Domain" /></a><br /> SQL Server VM &#8211; Join Domain
 </div>
 
-Once we enter our credentials and press &#8220;Ok&#8221; the system is accepted to the Domain and provides us with the customary reboot request.
+Once we enter our credentials and press “Ok” the system is accepted to the Domain and provides us with the customary reboot request.
 
-back on the Domain Controller in the &#8220;Users and Computers&#8221; console, the server has been automatically added under the &#8220;Computers&#8221; container. This being a simple setup, we have not created our own containers to store our servers in, so we will leave it in the default one (for now).
+back on the Domain Controller in the “Users and Computers” console, the server has been automatically added under the “Computers” container. This being a simple setup, we have not created our own containers to store our servers in, so we will leave it in the default one (for now).
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/12_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/12_config.png" alt="SQL Server VM - Join Domain" /></a><br /> SQL Server VM &#8211; Join Domain
 </div>
 
-When the SQL Server has finished rebooting we will log in for the first time with our Domain credentials. In the &#8220;Server Manager&#8221; we now see that the full computer name and Domain entries reflect the name of the domain.
+When the SQL Server has finished rebooting we will log in for the first time with our Domain credentials. In the “Server Manager” we now see that the full computer name and Domain entries reflect the name of the domain.
 
 ## Applying the SQL Service Account
 
-The last step after adding a database server to the domain is to reconfigure it&#8217;s services to use the domain service account we created above. This will allow us to later create domain resourcs that all of our SQL Server systems need to access without having to manage each one individually.
+The last step after adding a database server to the domain is to reconfigure it's services to use the domain service account we created above. This will allow us to later create domain resourcs that all of our SQL Server systems need to access without having to manage each one individually.
 
 Currently our service account has no permissions on the server, other than as a basic Domain User (and for some of you, it may not even have that level). So the first step is to provide that domain account with local administrator permissions on our database server.
 
 <div class="hint">
-  Before continuing further make sure you log into the server once with the service account above. Several folders and files are created when the account logs in and not doing so (or not manually doing some trickery with the Users sub-directory and an NTLog file) appears to upset WMI when your assigning users to the services. Don&#8217;t stay logged in as this user, as you will then end up battling UAC the rest of the day.
+  Before continuing further make sure you log into the server once with the service account above. Several folders and files are created when the account logs in and not doing so (or not manually doing some trickery with the Users sub-directory and an NTLog file) appears to upset WMI when your assigning users to the services. Don't stay logged in as this user, as you will then end up battling UAC the rest of the day.
 </div>
 
-From the open &#8220;Server Manager&#8221; console, expand the &#8220;Configuration&#8221; and then &#8220;Local Users and Groups&#8221; containers, selecting the &#8220;Groups&#8221; folder. Right click the &#8220;Administartors&#8221; group on the right side and select &#8220;Properties&#8221;.
+From the open “Server Manager” console, expand the “Configuration” and then “Local Users and Groups” containers, selecting the “Groups” folder. Right click the “Administartors” group on the right side and select “Properties”.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/13_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/13_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Service Account
 </div>
 
-We enter the name of the domain account (in this case AVLsqladmin) and press the &#8220;Check Names&#8221; button to ensure the account could be found.
+We enter the name of the domain account (in this case AVLsqladmin) and press the “Check Names” button to ensure the account could be found.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/14_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/14_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Service Account
 </div>
 
-Press &#8220;Ok&#8221; and &#8220;Ok&#8221; and we are back in the Server Manager again.
+Press “Ok” and “Ok” and we are back in the Server Manager again.
 
 The last step is to configure our services to use the Domain account, however this is done a little differently for SQL Server than you might expect.
 
 <div class="hint">
-  While it is technically possible to change the service accounts directly from the Windows &#8220;Services&#8221; console, there are a number of extra steps that have to be completed in order for it to work properly, as there are also various registry and application settings that have to be set outside of the Services console. Microsoft has published a <a href="http://support.microsoft.com/kb/283811" title="Read the KB article" target="_blank">knowledge base article</a> on this for 2005, I have not been able to locate a similar document for 2008.
+  While it is technically possible to change the service accounts directly from the Windows “Services” console, there are a number of extra steps that have to be completed in order for it to work properly, as there are also various registry and application settings that have to be set outside of the Services console. Microsoft has published a <a href="http://support.microsoft.com/kb/283811" title="Read the KB article" target="_blank">knowledge base article</a> on this for 2005, I have not been able to locate a similar document for 2008.
 </div>
 
-Open the &#8220;SQL Server Configuration Manager&#8221; from the Start Menu (this would also be a good time to pin it to the taskbar).
+Open the “SQL Server Configuration Manager” from the Start Menu (this would also be a good time to pin it to the taskbar).
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/15_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/15_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Service Account
 </div>
 
 <div class="hint">
-  Ah, the wonders of UAC. Don&#8217;t get me wrong, I actually like the concept, unfortunately the implementation leaves a little to be desired in Enterprise or Domain setups. Accounts in the Domain Admins (and a few others?) groups don&#8217;t receive the level of rights you would expect and, in fact, it doesn&#8217;t seem possible to grant them the abilities of the built-in administrator, which has strange and mystical powers that are turned on by default and can only be turned off in the policy settings, not applied to other accounts. You will receive a number of errors when you try to escalate with a variety of different settings, and all of the recommendations [I have found] end with either turning off UAC, using the Right-Click &#8220;Run As Administrator&#8221;, or appear to have been written by people logged in as a Local Administrator.<br /> To make matters worse, file access escalation (if it works) creates a mess of local folder permissions, so it&#8217;s highly suggested that you read <a href="http://blog.akinstech.com/understanding-windows-7-and-2008-r2-uac-and-permissions" title="Read this post on making your own Local Admin group for file access" target="_blank">this workaround</a>.
+  Ah, the wonders of UAC. Don't get me wrong, I actually like the concept, unfortunately the implementation leaves a little to be desired in Enterprise or Domain setups. Accounts in the Domain Admins (and a few others?) groups don't receive the level of rights you would expect and, in fact, it doesn't seem possible to grant them the abilities of the built-in administrator, which has strange and mystical powers that are turned on by default and can only be turned off in the policy settings, not applied to other accounts. You will receive a number of errors when you try to escalate with a variety of different settings, and all of the recommendations [I have found] end with either turning off UAC, using the Right-Click “Run As Administrator”, or appear to have been written by people logged in as a Local Administrator.<br /> To make matters worse, file access escalation (if it works) creates a mess of local folder permissions, so it's highly suggested that you read <a href="http://blog.akinstech.com/understanding-windows-7-and-2008-r2-uac-and-permissions" title="Read this post on making your own Local Admin group for file access" target="_blank">this workaround</a>.
 </div>
 
 In the [Basic SQL Server Virtual Lab post][2] we only installed a few services and configured SQL Server and SQL Agent to use a local account.
@@ -213,7 +213,7 @@ In the [Basic SQL Server Virtual Lab post][2] we only installed a few services a
   <a href="http://tiernok.com/LTDBlog/BasicDC/16_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/16_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Server Configuration Manager
 </div>
 
-Right-click on each service and select Properties to open the properties panel. Enter the domain account we created above in the Service Accounts section and it&#8217;s password, then press Apply. The system will then warn us that a restart to the services is required to continue.
+Right-click on each service and select Properties to open the properties panel. Enter the domain account we created above in the Service Accounts section and it's password, then press Apply. The system will then warn us that a restart to the services is required to continue.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/17_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/17_config.png" alt="SQL Server VM - Service Account" /></a><br /> SQL Server VM &#8211; Changing the Account
@@ -227,7 +227,7 @@ Follow the same instructions for each of the services and we son have all of our
 
 ## Wrapping Up
 
-Now that we have the Domain Controller running, we&#8217;ve created some accounts, and we have joined our first database server to the domain, it&#8217;s time to switch focus back to our database server for a while. Upcoming weeks will focus on some administrative tasks, such as configuring database mail and alerts and building out some scripts to monitor current state and state-over-time values for a few critical performance indicators.
+Now that we have the Domain Controller running, we've created some accounts, and we have joined our first database server to the domain, it's time to switch focus back to our database server for a while. Upcoming weeks will focus on some administrative tasks, such as configuring database mail and alerts and building out some scripts to monitor current state and state-over-time values for a few critical performance indicators.
 
 <label>Additional Articles:</label>[Virtual Lab entry on the LTD Wiki][3]
 

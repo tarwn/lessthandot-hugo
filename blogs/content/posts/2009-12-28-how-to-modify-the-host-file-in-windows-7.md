@@ -23,7 +23,7 @@ tags:
   - spyware
 
 ---
-One way I stay protected from bad sites is that I use a modified host file. In Vista and Windows 7 you cannot just open the file in notepad and save it anymore, you will get an error. Someone had this happen at work on Windows Server 2008 last week and just today someone asked about it in our forums here: [Can&#8217;t modify the host file on Windows 7][1] 
+One way I stay protected from bad sites is that I use a modified host file. In Vista and Windows 7 you cannot just open the file in notepad and save it anymore, you will get an error. Someone had this happen at work on Windows Server 2008 last week and just today someone asked about it in our forums here: [Can't modify the host file on Windows 7][1] 
 
 I decided to create a short little blog post explaining how you can modify this file.
 

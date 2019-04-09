@@ -19,11 +19,11 @@ tags:
   - screamy people
 
 ---
-Measurements have value. Measure something over time and we have a baseline. Monitor that measurement and we can see problems before they become obvious. Experiment with minor changes, and we can compare to the baseline to tell if we have improved or hurt our performance. Collect enough measurements and trends will emerge, exposing a layer of information we didn&#8217;t have access to before.
+Measurements have value. Measure something over time and we have a baseline. Monitor that measurement and we can see problems before they become obvious. Experiment with minor changes, and we can compare to the baseline to tell if we have improved or hurt our performance. Collect enough measurements and trends will emerge, exposing a layer of information we didn't have access to before.
 
-<quote style="text-align: center; display: block; font-size: 110%">&#8220;If you cannot measure it, you cannot improve it&#8221; &#8211; Lord Kelvin</quote>
+<quote style="text-align: center; display: block; font-size: 110%">“If you cannot measure it, you cannot improve it” &#8211; Lord Kelvin</quote>
 
-But this isn&#8217;t just relevant to our servers, our software, and our support systems, it&#8217;s also relevant to ourselves and our work.
+But this isn't just relevant to our servers, our software, and our support systems, it's also relevant to ourselves and our work.
 
 ## Ongoing Measurements
 
@@ -31,7 +31,7 @@ Often the first measurement we consider, when looking to measure our work, is a 
 
 ### Productivity
 
-The overwhelming positive for measuring productivity is that everyone will understand what we&#8217;re measuring. They may argue the unit, the targets we chose, the brand of graph paper we drew on, but they understand that we are attempting to show a number that represents how much we are working and getting done.
+The overwhelming positive for measuring productivity is that everyone will understand what we're measuring. They may argue the unit, the targets we chose, the brand of graph paper we drew on, but they understand that we are attempting to show a number that represents how much we are working and getting done.
 
 **Examples:**
 
@@ -60,7 +60,7 @@ Productivity is the easiest measure.
 
 ### Effectiveness
 
-What&#8217;s a better measure than how much work we get done? How about the amount of work that was completed the first time? Or the amount of work that went beyond the surface problems? Or the effect that prior work has? Measuring effectiveness can be tricky, but it&#8217;s basically the opposite of busy work and in some cases it might even be a measure of several ongoing types of work.
+What's a better measure than how much work we get done? How about the amount of work that was completed the first time? Or the amount of work that went beyond the surface problems? Or the effect that prior work has? Measuring effectiveness can be tricky, but it's basically the opposite of busy work and in some cases it might even be a measure of several ongoing types of work.
 
 **Examples:**
 
@@ -82,11 +82,11 @@ What&#8217;s a better measure than how much work we get done? How about the amou
   </li>
 </ul>
 
-When we measure effectiveness, we look at the result instead of the work. We create a definition for positive results (fewer outages/server, fewer tickets/problem, less rework and higher customer acceptance, etc) and then measure our impact against those goals. It&#8217;s a shift from measuring what we&#8217;re doing to measuring what we&#8217;re achieving.
+When we measure effectiveness, we look at the result instead of the work. We create a definition for positive results (fewer outages/server, fewer tickets/problem, less rework and higher customer acceptance, etc) and then measure our impact against those goals. It's a shift from measuring what we're doing to measuring what we're achieving.
 
 ### Estimate Variability
 
-What&#8217;s the impact of taking twice as long as originally estimated to get a task done? Yeah, screamy people. When we provide estimates for people, they have a tendency to make their own plans based on those estimates. The further from the estimate we get, the more it costs for them to change their plans, disrupting estimates they provided to others. On-time delivery is not just a FedEx measure, it&#8217;s also a measure of how well we work to our own estimates and reinforces the trust the receiver extended to us.
+What's the impact of taking twice as long as originally estimated to get a task done? Yeah, screamy people. When we provide estimates for people, they have a tendency to make their own plans based on those estimates. The further from the estimate we get, the more it costs for them to change their plans, disrupting estimates they provided to others. On-time delivery is not just a FedEx measure, it's also a measure of how well we work to our own estimates and reinforces the trust the receiver extended to us.
 
 **Examples:**
 
@@ -142,10 +142,10 @@ Lead time is the average time elapsed from receiving a request to delivering the
 
 Lead time measures how quickly we respond and is an excellent number to use when it comes to improvement measures. When lead times get long, you start hearing about how unresponsive the IT department is, how they never get anything done. Short lead times and the IT department is responsive, friendly, busy. Quick lead times also reduce the occurrences of shadow IT and prevalence of do-it-yourself-ers. 
 
-## Measure twice&#8230;
+## Measure twice…
 
-Often when we decide we need measurements, we stop at &#8220;how much work is getting done&#8221;, but Productivity is not the only measure. Selecting the right measurements depends on our environment, business, and what we intend to achieve.
+Often when we decide we need measurements, we stop at “how much work is getting done”, but Productivity is not the only measure. Selecting the right measurements depends on our environment, business, and what we intend to achieve.
 
-<quote style="text-align: center; display: block; font-size: 110%">&#8220;What gets measured, gets managed&#8221; &#8211; Peter Drucker</quote>
+<quote style="text-align: center; display: block; font-size: 110%">“What gets measured, gets managed” &#8211; Peter Drucker</quote>
 
-Measuring our progress or current state can be difficult, often those numbers are less than spectacular. Poor numbers can make us feel worse about the current state. The state hasn&#8217;t changed, we&#8217;ve simply gotten a clearer picture of it. All of the area above that measurement is opportunity.
+Measuring our progress or current state can be difficult, often those numbers are less than spectacular. Poor numbers can make us feel worse about the current state. The state hasn't changed, we've simply gotten a clearer picture of it. All of the area above that measurement is opportunity.

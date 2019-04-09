@@ -1103,7 +1103,7 @@ The massive lead the iPhone had last year is eroding, by next year Android will 
       </td>
       
       <td>
-        <a href="/index.php?p=760">Do you use Column=@Param OR @Param IS NULL in your WHERE clause? Don&#8217;t, it doesn&#8217;t perform</a>
+        <a href="/index.php?p=760">Do you use Column=@Param OR @Param IS NULL in your WHERE clause? Don't, it doesn't perform</a>
       </td>
       
       <td>
@@ -1301,7 +1301,7 @@ The massive lead the iPhone had last year is eroding, by next year Android will 
       </td>
       
       <td>
-        <a href="/index.php?p=27">Good SQL Articles To Read If You Can&#8217;t Afford Books</a>
+        <a href="/index.php?p=27">Good SQL Articles To Read If You Can't Afford Books</a>
       </td>
       
       <td>
@@ -1478,4 +1478,4 @@ The pages with the hacks, tips and tricks are still number two behind the main w
   </li>
 </ol>
 
-That&#8217;s it in terms of stats, we will bring you more content this year and it will be interesting how the stats will shift into mobile in the next couple of years.
+That's it in terms of stats, we will bring you more content this year and it will be interesting how the stats will shift into mobile in the next couple of years.

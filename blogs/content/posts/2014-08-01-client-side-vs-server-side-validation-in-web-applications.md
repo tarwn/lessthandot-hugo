@@ -13,9 +13,9 @@ categories:
   - Web Developer
 
 ---
-Validation exists to &#8220;ensure that the application is robust against all forms of input data&#8221; ([owasp.org][1]). Invalid data can cause unexpected execution errors, break assumptions elsewhere in your application, introduce errors into reporting, and even let someone hijack your service to attack others ([script injection][2], sending spam, etc). 
+Validation exists to “ensure that the application is robust against all forms of input data” ([owasp.org][1]). Invalid data can cause unexpected execution errors, break assumptions elsewhere in your application, introduce errors into reporting, and even let someone hijack your service to attack others ([script injection][2], sending spam, etc). 
 
-When we&#8217;re talking about web form submission, the majority of invalid data tends to be users that missed a required field or mis-entered a strict value, like a phone number. So we have a high focus on helping the user understand and correct their input. The common question when we&#8217;re building new sites is whether we build our validation on the server-side, client-side, or both. If the deadline is tight enough, it may only be a question of client-side or server-side. 
+When we're talking about web form submission, the majority of invalid data tends to be users that missed a required field or mis-entered a strict value, like a phone number. So we have a high focus on helping the user understand and correct their input. The common question when we're building new sites is whether we build our validation on the server-side, client-side, or both. If the deadline is tight enough, it may only be a question of client-side or server-side. 
 
 So which do we choose?
 
@@ -23,7 +23,7 @@ So which do we choose?
 
 When we start out adding validation, we want to make it as easy as possible for the user to fix the problem with the least additional load on our servers. This leans towards doing the client-size validation first, then server-side later if we have time. Client-side validation is faster, typically looks prettier, often has better association between messages and inputs, and just generally looks like the better choice from the product owner or customer perspective.
 
-Here&#8217;s a sample form using ASP.Net and Razor:
+Here's a sample form using ASP.Net and Razor:
 
 ```html
 ```
@@ -31,7 +31,7 @@ We want to make the text input required, so with a little jQuery Validation, we 
 
 ```html
 ```
-That was an easy sample to write and more realistic forms aren&#8217;t much more challenging. It stops the user from submitting invalid data and helps them correct it.
+That was an easy sample to write and more realistic forms aren't much more challenging. It stops the user from submitting invalid data and helps them correct it.
 
 But when we look at how well it achieves the purpose, we find it has a lot of gaps:
 
@@ -43,7 +43,7 @@ But when we look at how well it achieves the purpose, we find it has a lot of ga
   * No &#8211; It prevents bad values when accessed in [frames][4]
   * No &#8211; It prevents bad values when data is altered via a [Man-in-the-middle attack][5]
 
-When we&#8217;re working in authenticated areas, the risk for some of these is reduced, but reduced is not the same as robust.
+When we're working in authenticated areas, the risk for some of these is reduced, but reduced is not the same as robust.
 
 ## Server-Side
 
@@ -89,13 +89,13 @@ So how does this stack up against the client-side method?
   * Yes &#8211; It prevents bad values when accessed in [frames][4]
   * Yes &#8211; It prevents bad values when data is altered via a [Man-in-the-middle attack][5]
 
-Note: Keep in mind some of these also require other corrective or protective actions (like framebusting to combat Cross Frame Scripting), I&#8217;m just focusing on the validation aspects.
+Note: Keep in mind some of these also require other corrective or protective actions (like framebusting to combat Cross Frame Scripting), I'm just focusing on the validation aspects.
 
 ## The Answer
 
-The best answer is to use both. Server-side validation treats all incoming data as untrusted, it&#8217;s the gateway into the rest of the system. Client-side validation helps make the experience smooth for an end user and attempt to reduce some load from the server. With both in place, you hit the whole punch-list of options above.
+The best answer is to use both. Server-side validation treats all incoming data as untrusted, it's the gateway into the rest of the system. Client-side validation helps make the experience smooth for an end user and attempt to reduce some load from the server. With both in place, you hit the whole punch-list of options above.
 
-If you have to sacrifice one, however, client-side validation should be the one to go. Client-side offers a better user experience and slightly less server load, but it&#8217;s at the expense of all of the security concerns that server-side validation addresses. looked at another way, Server-side validation prevents the type of issues that could put you out of business, client-side validation improves the experience.
+If you have to sacrifice one, however, client-side validation should be the one to go. Client-side offers a better user experience and slightly less server load, but it's at the expense of all of the security concerns that server-side validation addresses. looked at another way, Server-side validation prevents the type of issues that could put you out of business, client-side validation improves the experience.
 
 ## My Single Page Application Makes This Easier
 

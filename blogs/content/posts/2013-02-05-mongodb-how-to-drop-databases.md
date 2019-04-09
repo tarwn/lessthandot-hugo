@@ -26,7 +26,7 @@ tags:
 ---
 In this post we are going to look at how to drop database and collections. We already covered backup and restores, now that you know how to do that, it is safe to cover dropping collections and databases
 
-Execute the following command, it will create the MultiCollection database if it doesn&#8217;t exist already
+Execute the following command, it will create the MultiCollection database if it doesn't exist already
 
 <pre>use MultiCollection</pre>
 
@@ -53,11 +53,11 @@ Time to try it out, run the following
 
 The output you get back is `true`
 
-Now if you do a find on the collection, you won&#8217;t get anything back
+Now if you do a find on the collection, you won't get anything back
 
 <pre>db.Blog.find()</pre>
 
-That was pretty simple. Now let&#8217;s see how to drop a database. This is pretty easy as well, it is just `db.dropDatabase()`. I wished you had to specify the name of the database because you could be in the wrong database when executing the command
+That was pretty simple. Now let's see how to drop a database. This is pretty easy as well, it is just `db.dropDatabase()`. I wished you had to specify the name of the database because you could be in the wrong database when executing the command
 
 Execute this
 
@@ -75,7 +75,7 @@ And here is the output
 
 <pre>MultiCollection</pre>
 
-If you now try to do a find for either collection that existed before you won&#8217;t get anything back
+If you now try to do a find for either collection that existed before you won't get anything back
 
 <pre>db.People.find()
 db.Blog.find()</pre>

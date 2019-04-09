@@ -27,7 +27,7 @@ Topics that are covered include disk I/O configuration, CPU, memory, indexes, bl
 
 **The Good** 
 
-This isn&#8217;t an in-depth look into how SQL Server works. (If that is what you’re looking for, I recommend [SQL Server 2008 Internals][6].) It&#8217;s a high-level overview of what you need to know right now to keep SQL Server instances and databases running. It&#8217;s well written and to the point. Each chapter includes a list of additional resources, which is invaluable.
+This isn't an in-depth look into how SQL Server works. (If that is what you’re looking for, I recommend [SQL Server 2008 Internals][6].) It's a high-level overview of what you need to know right now to keep SQL Server instances and databases running. It's well written and to the point. Each chapter includes a list of additional resources, which is invaluable.
 
 After reading it, I can honestly say I wish I’d had it five years ago, when the DBA left my company and the reins were handed to me. I was a decent report writer, but didn’t know nearly enough about SQL Server administration to handle some of the problems I faced. I’m going to recommend this book to anyone just getting started as a DBA, or to anyone who has to deal with SQL Server part time. It’s a great reference.
 
@@ -39,9 +39,9 @@ This book is administration-focused. It does not cover any T-SQL or programming 
 
 **Chapter 1 – Troubleshooting** 
 
-The troubleshooting method laid out begins with wait stats, and I agree that&#8217;s a good place to start for most issues. What is mentioned at the end of the book, but not in this section, is that when things go wrong, the first thing to do is remain calm.
+The troubleshooting method laid out begins with wait stats, and I agree that's a good place to start for most issues. What is mentioned at the end of the book, but not in this section, is that when things go wrong, the first thing to do is remain calm.
 
-Under Plan Cache Usage, Jonathan states, &#8220;In my experience, the Plan Cache in SQL Server 2005 and 2008 is one of the most underused assets for troubleshooting performance problems in SQL Server.&#8221; This is true. You can view the most CPU- and disk-intensive queries, historically.
+Under Plan Cache Usage, Jonathan states, “In my experience, the Plan Cache in SQL Server 2005 and 2008 is one of the most underused assets for troubleshooting performance problems in SQL Server.” This is true. You can view the most CPU- and disk-intensive queries, historically.
 
 **Chapter 2 – Disk I/O Configuration** 
 
@@ -51,13 +51,13 @@ First, a thorough, easy-to-understand overview of RAID levels is presented. This
 
 This chapter describes what happens when you have CPU pressure in your system. Perfmon, SQL Trace, and DMVs are used as troubleshooting tools. There are great sample queries to have in your DBA tool belt, such as “finding the top 10 CPU-consuming queries”. Problems that can cause high CPU usage, such as missing indexes and parameter sniffing, are a good take-away. How to deal with them is even better.
 
-&#8220;Inappropriate parallelism&#8221; made me giggle.
+“Inappropriate parallelism” made me giggle.
 
 **Chapter 4 – Memory Management** 
 
-The memory section starts off talking about 32-bit architecture. I am really glad I don&#8217;t have to support a lot of those systems, because I just don&#8217;t get it. This was a perfect reference for me last week, too, as I worked with a client that was running a 32-bit SQL Server with 4 GB of RAM and was experiencing memory pressure.
+The memory section starts off talking about 32-bit architecture. I am really glad I don't have to support a lot of those systems, because I just don't get it. This was a perfect reference for me last week, too, as I worked with a client that was running a 32-bit SQL Server with 4 GB of RAM and was experiencing memory pressure.
 
-How SQL Server, the OS, and memory interact is complicated to understand. One of the biggest things I&#8217;ve learned is how to monitor memory usage, which is covered nicely here. That is more important than anything else related to memory management.
+How SQL Server, the OS, and memory interact is complicated to understand. One of the biggest things I've learned is how to monitor memory usage, which is covered nicely here. That is more important than anything else related to memory management.
 
 **Chapter 5 – Missing Indexes** 
 
@@ -65,7 +65,7 @@ There is a good review of index basics, stressing the difference between key col
 
 **Chapter 6 &#8211; Blocking** 
 
-When first starting as a DBA, it was hard to understand the difference between latches and locks, necessary to the operation of SQL Server, and blocking, which happens but isn’t desirable. This chapter covers the basics of the types of locks and latches, which is all an accidental DBA really needs to understand at first. Queries using DMVs are given to help troubleshoot what tasks are blocked or waiting. The part I was most interested in was automatic detection and notification. In particular, I&#8217;ve started learning more about the blocked process report recently, and was happy to see information about it. Other topics like event notifications using Service Broker and Extended Events in SQL Server 2012 are covered.
+When first starting as a DBA, it was hard to understand the difference between latches and locks, necessary to the operation of SQL Server, and blocking, which happens but isn’t desirable. This chapter covers the basics of the types of locks and latches, which is all an accidental DBA really needs to understand at first. Queries using DMVs are given to help troubleshoot what tasks are blocked or waiting. The part I was most interested in was automatic detection and notification. In particular, I've started learning more about the blocked process report recently, and was happy to see information about it. Other topics like event notifications using Service Broker and Extended Events in SQL Server 2012 are covered.
 
 **Chapter 7 – Handling Deadlocks** 
 

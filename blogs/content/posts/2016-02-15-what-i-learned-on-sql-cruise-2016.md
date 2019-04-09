@@ -28,7 +28,7 @@ categories:
   </p>
 </div>
 
-4. <a href="https://twitter.com/GFritchey" target="_blank">Grant Fritchey</a> from <a href="http://www.red-gate.com/" target="_blank">Red Gate</a> brought his A game to talk about Query Store, a new feature in SQL Server 2016&#8230;but already available in Azure SQL Database. Red Gate continues to be an awesome sponsor of the cruise, and I&#8217;m thrilled they sent Grant to speak.
+4. <a href="https://twitter.com/GFritchey" target="_blank">Grant Fritchey</a> from <a href="http://www.red-gate.com/" target="_blank">Red Gate</a> brought his A game to talk about Query Store, a new feature in SQL Server 2016…but already available in Azure SQL Database. Red Gate continues to be an awesome sponsor of the cruise, and I'm thrilled they sent Grant to speak.
 
 <div id="attachment_4368" style="width: 310px" class="wp-caption aligncenter">
   <img class="size-medium wp-image-4368" src="/wp-content/uploads/2016/02/IMAG1840-300x168.jpg" alt="Listening to Grant talk. " width="300" height="168" srcset="/wp-content/uploads/2016/02/IMAG1840-300x168.jpg 300w, /wp-content/uploads/2016/02/IMAG1840-1024x576.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />
@@ -40,7 +40,7 @@ categories:
 
 5. <a href="https://twitter.com/sqllensman" target="_blank">Patrick Flynn</a> is an Ironman!
 
-6. During Office Hours, one cruiser asked, &#8220;How do you do \*it\* &#8211; keeping up with the community/speaking/blogging, while having a family and a job?&#8221; That turned into one of the most honest discussions I&#8217;ve been part of on that topic. It&#8217;s not easy &#8211; for any of us. It requires balance. Those conversations are what Office Hours is all about.
+6. During Office Hours, one cruiser asked, “How do you do \*it\* &#8211; keeping up with the community/speaking/blogging, while having a family and a job?” That turned into one of the most honest discussions I've been part of on that topic. It's not easy &#8211; for any of us. It requires balance. Those conversations are what Office Hours is all about.
 
 7. Running a 5K in Charlotte Amalie, St Thomas, is a lot of work. Those hills! Those 99 Stairs! But having two fellow cruisers along makes it a lot more fun. (Thanks Jared and Drew!)
 
@@ -52,18 +52,18 @@ categories:
   </p>
 </div>
 
-8. The rum at John Watling&#8217;s Distillery in Nassau is amazing. Belly up to the bar for a tasting and one of their house cocktails.
+8. The rum at John Watling's Distillery in Nassau is amazing. Belly up to the bar for a tasting and one of their house cocktails.
 
 <div id="attachment_4370" style="width: 310px" class="wp-caption aligncenter">
   <img class="size-medium wp-image-4370" src="/wp-content/uploads/2016/02/IMAG1862-300x169.jpg" alt="A class in how rum is distilled, stored, and bottled at John Watling's. " width="300" height="169" srcset="/wp-content/uploads/2016/02/IMAG1862-300x169.jpg 300w, /wp-content/uploads/2016/02/IMAG1862-1024x579.jpg 1024w, /wp-content/uploads/2016/02/IMAG1862.jpg 1344w" sizes="(max-width: 300px) 100vw, 300px" />
   
   <p class="wp-caption-text">
-    A class in how rum is distilled, stored, and bottled at John Watling&#8217;s.
+    A class in how rum is distilled, stored, and bottled at John Watling's.
   </p>
 </div>
 
 9. <a href="https://twitter.com/kleegeek" target="_blank">David Klee</a> of <a href="http://heraflux.com/" target="_blank">Heraflux Technologies </a>is an amazing resource for anything infrastructure related, and has great resources on his website.
 
-10. Not that we didn&#8217;t know, but <a href="https://twitter.com/DBArgenis" target="_blank">Argenis Fernandez</a> reminded us, &#8220;Security is not easy&#8221;&#8230;as he hacked SQL Server data from packets and read through dlls for dangerous data.
+10. Not that we didn't know, but <a href="https://twitter.com/DBArgenis" target="_blank">Argenis Fernandez</a> reminded us, “Security is not easy”…as he hacked SQL Server data from packets and read through dlls for dangerous data.
 
 11. The 2017 itineraries are going to be amazing. Keep an eye on <a href="http://sqlcruise.com/" target="_blank">http://sqlcruise.com/</a> for the details!

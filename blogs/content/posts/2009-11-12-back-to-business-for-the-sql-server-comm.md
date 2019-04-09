@@ -49,7 +49,7 @@ The call for speakers is open so get out there and submit an abstract. The line 
 
 One and still an awesome compilation of blogs, is Aaron Bertrand’s ([@AaronBertrand][1]) listing of bad habits to kick. I’d review them again just to make sure you didn’t ignore at least one that you may be doing.
 
-[Series of &#8220;Bad habits to kick&#8221; by Aaron Bertrand][2]
+[Series of “Bad habits to kick” by Aaron Bertrand][2]
   
 
 
@@ -86,9 +86,9 @@ George over here at LessThanDot has been putting together a “best Practices”
   
 [Always include size when using varchar, nvarchar, char and nchar][8] 
   
-[Don&#8217;t prefix your table names with tbl][9] 
+[Don't prefix your table names with tbl][9] 
   
-[Don&#8217;t start your procedures with SP_][10] 
+[Don't start your procedures with SP_][10] 
   
 
 

@@ -38,6 +38,6 @@ So I took on a position with a company to tear the SQL Server landscape apart an
 
 So there is how and why I managed to fall into SQL Server. Probably boring and you may not even be reading this closing line. Next time I’ll tell you the truth of how aliens abducted me and forced me to fix their SQL Server instance that was always getting blocking events when they tried to shoot their ray guns at the evil and dreaded sister planet. Damn aliens!!!
 
-Late tag on [Wendy Pastrick][1] even if it&#8217;s against the rules.
+Late tag on [Wendy Pastrick][1] even if it's against the rules.
 
  [1]: http://www.wendyverse.blogspot.com/

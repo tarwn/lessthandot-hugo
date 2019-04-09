@@ -20,7 +20,7 @@ Sybase announced that they have [Set Guinness World Record for World’s Largest
 
 > Powered by the category-leading column-oriented database Sybase IQ, the data warehouse is certified to support a record-breaking one petabyte of mixed relational and unstructured data—more than 34 times larger than the largest industry standard benchmark1 and twice the size of the largest commercial data warehouse known to date2. In total, the data warehouse contains six trillion rows of transactional data and more than 185 million content-searchable documents, such as emails, reports, spreadsheets and other multimedia objects. 
 
-I have been using Sybase IQ for about 6 months now, I am not impressed with the way the tools look, hey I&#8217;ll take performance over tools any day 🙂
+I have been using Sybase IQ for about 6 months now, I am not impressed with the way the tools look, hey I'll take performance over tools any day 🙂
 
 In SQL Server you have 2 types of indexes (not counting XML indexes) clustered and non clustered. Well Sybase IQ has a lot more
 

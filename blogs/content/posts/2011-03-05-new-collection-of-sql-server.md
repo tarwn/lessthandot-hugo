@@ -46,7 +46,7 @@ Learn improvements/enhancements on upgrade experience for SQL Server from Joe Yo
   
 Krzysztof Kozielczyk
   
-Learn about the vision of database programmability tools for SQL Server &#8220;Denali&#8221; from Krzysztof Kozielczyk, Program Manager from SQL Server Programmability team.
+Learn about the vision of database programmability tools for SQL Server “Denali” from Krzysztof Kozielczyk, Program Manager from SQL Server Programmability team.
 
 **[SQL Server appliance][3]**
   
@@ -88,7 +88,7 @@ Learn about the choices made for SQL Server backup compression from Kevin Farlee
   
 Kevin McGuire
   
-Learn improvements/enhancements on SQL Server &#8220;Denali&#8221; Integration Services from Kevin McGuire, Principal Architect from SQL Server Integration Services team.
+Learn improvements/enhancements on SQL Server “Denali” Integration Services from Kevin McGuire, Principal Architect from SQL Server Integration Services team.
 
 **[SQL Server Non-Relational][10]**
   

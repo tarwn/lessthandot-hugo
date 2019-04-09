@@ -49,7 +49,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  And then it hit me: the destination table had some columns with a greater length than the source column. For example varchar(250) instead of varchar(213). I enlarged them to deal with the risk of other sources being added with larger columns. In the SSIS data flow, the metadata of the columns is derived from the columns returned by the source query. However, in the script component I specified the metadata of the destination columns, all having another length. I changed the lengths of the destination columns, lo and behold, the BIML script compiled successfully. Apparently SSIS (or BIML) has some serious issues of the metadata of an input column doesn&#8217;t match 100% the metadata of the output column of the previous component.
+  And then it hit me: the destination table had some columns with a greater length than the source column. For example varchar(250) instead of varchar(213). I enlarged them to deal with the risk of other sources being added with larger columns. In the SSIS data flow, the metadata of the columns is derived from the columns returned by the source query. However, in the script component I specified the metadata of the destination columns, all having another length. I changed the lengths of the destination columns, lo and behold, the BIML script compiled successfully. Apparently SSIS (or BIML) has some serious issues of the metadata of an input column doesn't match 100% the metadata of the output column of the previous component.
 </p>
 
 <p style="text-align: justify">

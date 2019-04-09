@@ -69,7 +69,7 @@ order by customer_id, record_type
 
 Can you see the problem?
   
-A person had this query, it would run for over 24 hours. Wow, that is pretty bad, I don&#8217;t think I had ever written something that ran over an hour, and the ones I did were mostly defragmentation and update statistics jobs.
+A person had this query, it would run for over 24 hours. Wow, that is pretty bad, I don't think I had ever written something that ran over an hour, and the ones I did were mostly defragmentation and update statistics jobs.
 
 The problem is that the following piece of code
 
@@ -82,7 +82,7 @@ is not sargable. First what does it mean to be sargable? A query is said to be s
 
 This query is not sargable because there is a function on the column, whenever you use a function on the column you will not get an index seek but an index scan. The difference between an index seek and an index scan can be explained like this: when searching for something in a book, you go to the index in the back find the page number and go to the page, that is an index seek. When looking for something in a book you go from page one until the last page, read all the words on all the ages and get what you need, that was an index scan. Do you see how much more expensive in terms of performance that was?
 
-Let&#8217;s get back to the query, what can we do to make this piece of code use an index seek?
+Let's get back to the query, what can we do to make this piece of code use an index seek?
 
 ```sql
 where year(payment_dt) = year(getDate())

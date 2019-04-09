@@ -121,7 +121,7 @@ I cannot tell you how many times I search my old blog posts for either myself or
   
 Whenever I interview people for a position I ask them if they have a blog so that I can check it out. The code that you have on your blog will give prospective employers some sense of your coding capabilities. Yes, you can have that fancy schmancy title on your business card but it does not really tell me anything. I worked at a company with 5 employees once, one was CEO, the other CTO, the third an Art Director and the other two programmers, in reality the _CTO_ was more like a mid level programmer, it is just that he knew where all the servers were and what the passwords were. 
 
-Usually if someone has a blog it means that he enjoys programming and is not a person who hates coding. He/she might hate the framework/language he is stuck with at work, but he might be able to convince management to use something better that he discovered in his own time while blogging about it. A person who has a blog is also not the 9 to 5 coder. who when getting home never looks at code and doesn&#8217;t do any research on the weekends.
+Usually if someone has a blog it means that he enjoys programming and is not a person who hates coding. He/she might hate the framework/language he is stuck with at work, but he might be able to convince management to use something better that he discovered in his own time while blogging about it. A person who has a blog is also not the 9 to 5 coder. who when getting home never looks at code and doesn't do any research on the weekends.
 
 # What to blog about and how to keep the ideas coming
 
@@ -139,7 +139,7 @@ I reviewed the book here: [Review of SQL Server 2008 Administration in Action][8
 
 # Conclusion
 
-Blogging is an excellent way to get your name out there and to show the world some of the code that you write. It also will help you become a programmer who takes less time to write code at work, this is especially true if you are already blogging about the current version of a product but you are just about to start using that product at work. The best part about blogging is that it doesn&#8217;t cost you anything, go to [blogger][10], [wordpress][11] or any of the other blogging sites, pick a name, a template and you are ready to go
+Blogging is an excellent way to get your name out there and to show the world some of the code that you write. It also will help you become a programmer who takes less time to write code at work, this is especially true if you are already blogging about the current version of a product but you are just about to start using that product at work. The best part about blogging is that it doesn't cost you anything, go to [blogger][10], [wordpress][11] or any of the other blogging sites, pick a name, a template and you are ready to go
 
 **Finally I want to ask you, are you blogging, and if you are is it helping you becoming a better developer?**
 

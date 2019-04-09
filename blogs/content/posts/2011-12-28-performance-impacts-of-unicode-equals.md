@@ -20,13 +20,13 @@ After reading this, I was curious. Does that follow with char and nchar also? Ho
 
 ## Results
 
-The results are based on 4 runs of each query against 1,000,000 rows with explicitly limited parallelism. The name identifies the type, which operation was used (equals or LIKE), and the size of the field. All data was 36 characters, so &#8220;(36)&#8221; tests are fully populated values and &#8220;(72)&#8221; tests are half-full values.
+The results are based on 4 runs of each query against 1,000,000 rows with explicitly limited parallelism. The name identifies the type, which operation was used (equals or LIKE), and the size of the field. All data was 36 characters, so “(36)” tests are fully populated values and “(72)” tests are half-full values.
 
 <div style="font-size: 80%; color: #666666; text-align: center">
   <img src="http://tiernok.com/LTDBlog/nchar_all.png" title="Graph of all Results" /><br /> All Results, Normalized to Shortest Value (Char 32 &#8211; Equals)
 </div>
 
-This graph shows the average for each type as a percentage of the smallest value, &#8216;Char(72) &#8211; Equals&#8217;. What&#8217;s immediately obvious is the level of difference between an equals operation and a LIKE, especially when we get to the trailing, partially filed NCHAR field (wow!).
+This graph shows the average for each type as a percentage of the smallest value, &#8216;Char(72) &#8211; Equals'. What's immediately obvious is the level of difference between an equals operation and a LIKE, especially when we get to the trailing, partially filed NCHAR field (wow!).
 
 The data was pretty consistent across the 4 runs used for these graphs:
 
@@ -278,7 +278,7 @@ It is interesting to note that there is a pretty consistent 20% gap between fixe
 
 ### Comparing LIKE statements
 
-There is a much broader impact when we start looking at the LIKE statement comparisons. Like Michael&#8217;s post above, there is a noticeable difference (on my system, ~650%) between searching a varchar and an nvarchar column.
+There is a much broader impact when we start looking at the LIKE statement comparisons. Like Michael's post above, there is a noticeable difference (on my system, ~650%) between searching a varchar and an nvarchar column.
 
 <div style="font-size: 80%; color: #666666; text-align: center">
   <img src="http://tiernok.com/LTDBlog/nchar_like.png" title="Graph of LIKE Results" /><br /> LIKE Results, Normalized to Shortest Value (Char 32 &#8211; Like)
@@ -295,7 +295,7 @@ Poorly sized nchar seems to be the real winner.
 
 ## Scripts
 
-The script for these results was heavily based on the one in Michael&#8217;s post above. The prep script assumes you have a numbers table ([here is a script for one][4]).
+The script for these results was heavily based on the one in Michael's post above. The prep script assumes you have a numbers table ([here is a script for one][4]).
 
 **Setup Sample Data Table**
 

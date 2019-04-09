@@ -20,13 +20,13 @@ tags:
   - ssis
 
 ---
-If you are installing SQL Server Denali CTP 1 on a computer which already has SQL Server 2008 or 2008 R2 installed, please read: [Don’t install Denali BIDS side by side with a 2008 instance][1]. For CTP 1 BIDS is still based on VS 2008 once they switch to 2010 this won&#8217;t be a problem.
+If you are installing SQL Server Denali CTP 1 on a computer which already has SQL Server 2008 or 2008 R2 installed, please read: [Don’t install Denali BIDS side by side with a 2008 instance][1]. For CTP 1 BIDS is still based on VS 2008 once they switch to 2010 this won't be a problem.
 
 The first thing you will notice is that the icons are new, here is just a simple package that shows some of these icons
   
 [<img src="http://farm2.static.flickr.com/1222/5152114618_da34b86292.jpg" width="500" height="445" alt="SSIS Designer" />][2]
 
-The toolbox will show you different icons depending on where you are in the designer. If you are in the data flow task you will see these icons, I have split int into 2 images because I couldn&#8217;t fit it on my laptop screen
+The toolbox will show you different icons depending on where you are in the designer. If you are in the data flow task you will see these icons, I have split int into 2 images because I couldn't fit it on my laptop screen
   
 [<img src="http://farm2.static.flickr.com/1252/5151504507_e6e261b18a.jpg" width="286" height="465" alt="SSIS ToolBox DataFlow 1" />][3]
 

@@ -20,9 +20,9 @@ categories:
   <img src="http://sqlblog.com/blogs/argenis_fernandez/TSQL2sDay150x150_thumb_2AA4EA0F.jpg" alt="" />
 </p>
 
-It&#8217;s T-SQL Tuesday time! The 28th installment is being hosted by Argenis Fernandez ([blog][2] | [twitter][3]), and his chosen topic is &#8220;Jack of All Trades, Master of None?&#8221;. He asks us, &#8220;Are you specialized? On something? Or anything at all? Has that been a good or a bad thing? Why? Are you the SQL guy at work? Or the one who does everything? Do you code? And configure wireless routers at work also? If you had to pick one thing to specialize on, what would it be?&#8221;
+It's T-SQL Tuesday time! The 28th installment is being hosted by Argenis Fernandez ([blog][2] | [twitter][3]), and his chosen topic is “Jack of All Trades, Master of None?”. He asks us, “Are you specialized? On something? Or anything at all? Has that been a good or a bad thing? Why? Are you the SQL guy at work? Or the one who does everything? Do you code? And configure wireless routers at work also? If you had to pick one thing to specialize on, what would it be?”
 
-(First, I&#8217;d like to congratulate Argenis on asking as many questions in one paragraph as I usually do.)
+(First, I'd like to congratulate Argenis on asking as many questions in one paragraph as I usually do.)
 
 Second, I don’t think I’m special. I mean, specialized. _Yes, that’s what I meant._
 

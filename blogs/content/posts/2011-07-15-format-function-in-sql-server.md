@@ -43,7 +43,7 @@ Expression of a supported data type to format.</p>
   
 nvarchar format pattern.
 
-The format argument must contain a valid .NET Framework format string, either as a standard format string (for example, &#8220;C&#8221; or &#8220;D&#8221;), or as a pattern of custom characters for dates and numeric values (for example, &#8220;MMMM dd, yyyy (dddd)&#8221;). Composite formatting is not supported. For a full explanation of these formatting patterns, please consult the.NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, &#8220;[Formatting Types.][1]&#8221;
+The format argument must contain a valid .NET Framework format string, either as a standard format string (for example, “C” or “D”), or as a pattern of custom characters for dates and numeric values (for example, “MMMM dd, yyyy (dddd)”). Composite formatting is not supported. For a full explanation of these formatting patterns, please consult the.NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, “[Formatting Types.][1]”
 
 **culture**
   
@@ -55,7 +55,7 @@ Before we continue, I recommend that you visit the [National Language Support (N
 
 If you are a .NET programmer then this function should look very familiar to you
 
-Let&#8217;s take a look at how it all works, first let&#8217;s create a table and inserts some locales info so that it will be easier to show the different output later
+Let's take a look at how it all works, first let's create a table and inserts some locales info so that it will be easier to show the different output later
 
 sql
 CREATE TABLE Locales(locale varchar(100))
@@ -73,7 +73,7 @@ union
 select 'ru' --Russia
 ```
 
-Now, let&#8217;s format some dates
+Now, let's format some dates
 
 sql
 DECLARE @d DATETIME = '01/01/2011';
@@ -187,7 +187,7 @@ Here is what the output looks like, as you can see if you use specific formattin
   </table>
 </div>
 
-Let&#8217;s look at another example, this one will format currency
+Let's look at another example, this one will format currency
 
 sql
 select locale,FORMAT ( 100, 'c', locale ) AS Result

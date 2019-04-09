@@ -17,21 +17,21 @@ tags:
   - webmatrix
 
 ---
-So I&#8217;ve been working on a practice site using WebMatrix. The basic premise was that I would create a site that had some similar functionality to Delicious to help me track the various articles, podcasts, books, and so on. This would also give me something practical to work on as I try to get a handle on this whole WebMatrix thing.
+So I've been working on a practice site using WebMatrix. The basic premise was that I would create a site that had some similar functionality to Delicious to help me track the various articles, podcasts, books, and so on. This would also give me something practical to work on as I try to get a handle on this whole WebMatrix thing.
 
-So here&#8217;s a couple tips, tricks, and the occasional slip in the mud I picked up along the way.
+So here's a couple tips, tricks, and the occasional slip in the mud I picked up along the way.
 
-Chrissie started us off with [this post][1], so I&#8217;m skipping right past the making of files and digging into the first layer of how things work (and/or how I broke them).
+Chrissie started us off with [this post][1], so I'm skipping right past the making of files and digging into the first layer of how things work (and/or how I broke them).
 
-_Note: I know in my [last post][2] I said the application was WebMatrix and the programming framework was WebPages, but no one calls it WebPages (apparently that name is hard to search for or something), so for the remainder of this post I&#8217;ll call it WebMatrix. Feel free to call me names later._
+_Note: I know in my [last post][2] I said the application was WebMatrix and the programming framework was WebPages, but no one calls it WebPages (apparently that name is hard to search for or something), so for the remainder of this post I'll call it WebMatrix. Feel free to call me names later._
 
 ## Magic Routing
 
-The first problem I had when I deployed my site to a live host was getting the darn pages to work. No matter how I typed the paths, the cshtml pages wouldn&#8217;t stop reporting a 404. So of course I started digging into the IIS settings. And fixed the meta settings. And fixed the extension. And fixed something else. And then found out I wasn&#8217;t supposed to fix it and the real problem was the guy sitting behind my keyboard typing instead of reading the manual. Oops.
+The first problem I had when I deployed my site to a live host was getting the darn pages to work. No matter how I typed the paths, the cshtml pages wouldn't stop reporting a 404. So of course I started digging into the IIS settings. And fixed the meta settings. And fixed the extension. And fixed something else. And then found out I wasn't supposed to fix it and the real problem was the guy sitting behind my keyboard typing instead of reading the manual. Oops.
 
-When we build a razor site (or is it a WebPages site? WebMatrix site? argh&#8230;), it takes advantage of additions in the 4.0 Framework to provide routing automatically. Every cshtml file we create automatically becomes part of the route check when a request comes into IIS. This is similar to the ASP.Net MVC routing, but instead requires no up front work, running 100% on pixie dust.
+When we build a razor site (or is it a WebPages site? WebMatrix site? argh…), it takes advantage of additions in the 4.0 Framework to provide routing automatically. Every cshtml file we create automatically becomes part of the route check when a request comes into IIS. This is similar to the ASP.Net MVC routing, but instead requires no up front work, running 100% on pixie dust.
 
-Say I ask for http://MyAwesomeSite.com/blueberries/and/cream. Note that we don&#8217;t include the .cshtml extension. Behind the scenes, my webserver basically has this conversation with itself:
+Say I ask for http://MyAwesomeSite.com/blueberries/and/cream. Note that we don't include the .cshtml extension. Behind the scenes, my webserver basically has this conversation with itself:
 
 > Do I have a file named /blueberries/and/cream.cshtml?
   
@@ -49,23 +49,23 @@ Say I ask for http://MyAwesomeSite.com/blueberries/and/cream. Note that we don&#
   
 > Ah, ok.
   
-> Are you busy tomorrow night&#8230;
+> Are you busy tomorrow night…
   
 > Yep.
   
-> Oh&#8230;er, ok, well here&#8217;s your file then. 
+> Oh…er, ok, well here's your file then. 
 
 The most specific file match wins, without the need for setting up routing ahead of time. Simply drop an appropriately named file in a folder and point an href at it. 
 
 Any trailing portion of the URL is then stored in an array for easy access (which we will see later). What this allows us to do is create very easy, semantic URLs. 
 
-Example: my application will show me the list of all activities when I go to http://notmyrealurl.com/Activities but will filter the list for the &#8220;razor&#8221; tag when I go to http://notmyrealurl.com/Activities/razor.
+Example: my application will show me the list of all activities when I go to http://notmyrealurl.com/Activities but will filter the list for the “razor” tag when I go to http://notmyrealurl.com/Activities/razor.
 
 The exception is files that begin with underscores. Underscored files are not accessible, as they are used to protect our Magic Files in the next section.
 
 ## Magic Pages
 
-Ok, so this part I&#8217;m less enamored of, but there are some good parts. There are two classes of special files in WebMatrix, layout files and lifecycle pages. 
+Ok, so this part I'm less enamored of, but there are some good parts. There are two classes of special files in WebMatrix, layout files and lifecycle pages. 
 
 ### Layout Files
 
@@ -90,7 +90,7 @@ Layout files allow us to define a common layout that we want to apply to our web
 </body>
 </html>
 ```
-A basic page that includes a header file, an optional section named &#8220;SidePane&#8221;, and body of the original page, and finally an included footer file. In this sample I am keeping my \_Header, \_Footer, and _MainLayout files in a subfolder called Shared. To use this layout, I could make a sample page like this:
+A basic page that includes a header file, an optional section named “SidePane”, and body of the original page, and finally an included footer file. In this sample I am keeping my \_Header, \_Footer, and _MainLayout files in a subfolder called Shared. To use this layout, I could make a sample page like this:
 
 ```cshtml
 @{
@@ -118,11 +118,11 @@ PageData["Title"] = "My Awesome Hello World";
 	}
 }
 ```
-Yeah, I just used a blink and a marquee, that&#8217;s how exciting this part is. You&#8217;ll notice I also put a value in the PageData dictionary at the top of the page, which was then regurgitated by the layout and used as the title. When files are being rendered or included, they receive a copy of the PageData and can access the values we squirreled away. Handy.
+Yeah, I just used a blink and a marquee, that's how exciting this part is. You'll notice I also put a value in the PageData dictionary at the top of the page, which was then regurgitated by the layout and used as the title. When files are being rendered or included, they receive a copy of the PageData and can access the values we squirreled away. Handy.
 
-There&#8217;s also a Page dynamic property in WebBasePage that we can assign stuff to. So far that hasn&#8217;t blown up in my face.
+There's also a Page dynamic property in WebBasePage that we can assign stuff to. So far that hasn't blown up in my face.
 
-If I think back to the classic ASP days I can remember a time when we desperately wanted this type of functionality. A clean, straightforward way to define some sitewide layout templates separately from our actual page, and here it is. It&#8217;s like ASP 4.0.
+If I think back to the classic ASP days I can remember a time when we desperately wanted this type of functionality. A clean, straightforward way to define some sitewide layout templates separately from our actual page, and here it is. It's like ASP 4.0.
 
 And I only just now noticed that interesting conjunction in ASP and ASP.Net numbering schemes, hmm.
 
@@ -152,9 +152,9 @@ PageStart is trickier in a couple ways. First, PageStart is a bit of a misnomer.
     <text>I'm after</text>
 }
 ```
-If you specifically include the RunPage() line, then your page will be run in between the code above and below it. If you don&#8217;t include this directive then the entire PageStart file will be run before calling the requested page.
+If you specifically include the RunPage() line, then your page will be run in between the code above and below it. If you don't include this directive then the entire PageStart file will be run before calling the requested page.
 
-The next trick is that \_PageStart runs in a nested sequence from the root level to the level of the file that has been requested. Basically the engine traverses each directory from the root to the folder your requested file is in and, if a \_PageStart file is present, executes it. It&#8217;s similar to those nesting dolls (or recursion, oohh).
+The next trick is that \_PageStart runs in a nested sequence from the root level to the level of the file that has been requested. Basically the engine traverses each directory from the root to the folder your requested file is in and, if a \_PageStart file is present, executes it. It's similar to those nesting dolls (or recursion, oohh).
 
 But the magic is not done yet, and this was one of those pits of mud I fell into.
 
@@ -173,9 +173,9 @@ Yeah.
 
 ## But what else did you do?
 
-There&#8217;s more. I&#8217;ve spent 17 hours on my sample site so far, which includes implementing a SQL Compact database, implementing and removing WebSecurity authentication, and a score of other things. I&#8217;ve found out the hard way that getting fancy can bite you and that it is actually possible to install a 10 inch tailpipe on the WebMatrix hatchback (which I just realized could refer to two different things I&#8217;ve done, hmmm, tailpipe and a <strike>shopping cart handle</strike> spoiler then). 
+There's more. I've spent 17 hours on my sample site so far, which includes implementing a SQL Compact database, implementing and removing WebSecurity authentication, and a score of other things. I've found out the hard way that getting fancy can bite you and that it is actually possible to install a 10 inch tailpipe on the WebMatrix hatchback (which I just realized could refer to two different things I've done, hmmm, tailpipe and a <strike>shopping cart handle</strike> spoiler then). 
 
-Unfortunately because I had issues with the authentication I can&#8217;t post a live link yet, the next post will have to cover all the fun that has gone into trying to get a certified host for WebMatrix to run correctly (hint, not all [&#8216;SpotLight&#8217; hosts][3] can run the included, basic example sites).
+Unfortunately because I had issues with the authentication I can't post a live link yet, the next post will have to cover all the fun that has gone into trying to get a certified host for WebMatrix to run correctly (hint, not all [&#8216;SpotLight' hosts][3] can run the included, basic example sites).
 
  [1]: /index.php/WebDev/UIDevelopment/AJAX/trying-out-webmatrix-and-razor "Chissie on Trying Out Webmatrix and Razor"
  [2]: /index.php/WebDev/ServerProgramming/the-many-functions-of-webmatrix "Read the Webmatrix Overview post"

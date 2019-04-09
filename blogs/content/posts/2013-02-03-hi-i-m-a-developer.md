@@ -30,15 +30,15 @@ tags:
 <span style="font-size: 10pt; line-height: 14.25pt;"><span style="font-family: arial, helvetica, sans-serif;">The world of development is an interesting one where creativity comes alive through code to produce wonderful programs that do lots of cool stuff.</span></span>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Okay that&#8217;s the Wizard of Oz intro over, is it really that rosy?</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Okay that's the Wizard of Oz intro over, is it really that rosy?</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">It seems the world of development has changed a great deal and gone are the days when you could just be a code cutter (though such roles do exist and are required), it seems a developer has to now master a wide array of skills and do battle with various foes like the Windows Operating System (<em>level 72 elite boss for those that are keeping track&#8230;</em>) as well trying to do their day job (<em>which in itself now consists of different minion roles</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">It seems the world of development has changed a great deal and gone are the days when you could just be a code cutter (though such roles do exist and are required), it seems a developer has to now master a wide array of skills and do battle with various foes like the Windows Operating System (<em>level 72 elite boss for those that are keeping track…</em>) as well trying to do their day job (<em>which in itself now consists of different minion roles</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">With the advances in .NET development there are a wide range of Frameworks, Tools and Add-Ons that can be worked with, installed and generally cried over (<em>a black hole in which I have been sucked into, the crying bit&#8230;</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">With the advances in .NET development there are a wide range of Frameworks, Tools and Add-Ons that can be worked with, installed and generally cried over (<em>a black hole in which I have been sucked into, the crying bit…</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -46,7 +46,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-family: arial, helvetica, sans-serif;">Now I can hear you say, that&#8217;s all good but we don&#8217;t have those problems, we have a <strong>Textbook Development Team</strong> with a <strong>Textbook It Support Team</strong> in a <strong>Textbook Office</strong> but that is not quite the real world and you will often have boundaries between teams becoming thinner or more common now, the lack of resources and/or teams (<em>leaving the task of taking on those roles and their responsibilities up to the individuals in the department and organisation</em>).</span>
+  <span style="font-family: arial, helvetica, sans-serif;">Now I can hear you say, that's all good but we don't have those problems, we have a <strong>Textbook Development Team</strong> with a <strong>Textbook It Support Team</strong> in a <strong>Textbook Office</strong> but that is not quite the real world and you will often have boundaries between teams becoming thinner or more common now, the lack of resources and/or teams (<em>leaving the task of taking on those roles and their responsibilities up to the individuals in the department and organisation</em>).</span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -58,19 +58,19 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">And this is where my hell begins&#8230;</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">And this is where my hell begins…</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 10pt; line-height: 14.25pt;">Now don&#8217;t get me wrong, I enjoy the techie element of my role, I feel I fulfil the developer title more fully by being able to flex my many different skills (<em>making me adaptable for almost any occasion</em>), a result of accumulating experience in a wide range of sectors starting from my humble beginnings as an IT Support guy, moving into a System Administration role, sideways across into Application Support, Technical Project Lead, Solution Architecture and back into Software Development in my current role as an Senior .NET Enterprise Developer (</span><span style="font-size: 10pt; line-height: 14.25pt;"><em>not Star Trek&#8230;I wish it was, but it&#8217;s not and I have to live with that disappointment for the rest of my career life&#8230;I tried do the Spock hand thing, got strange looks from the others in the developer forum&#8230;</em></span><span style="font-size: 10pt; line-height: 14.25pt;">).</span></span>
+  <span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 10pt; line-height: 14.25pt;">Now don't get me wrong, I enjoy the techie element of my role, I feel I fulfil the developer title more fully by being able to flex my many different skills (<em>making me adaptable for almost any occasion</em>), a result of accumulating experience in a wide range of sectors starting from my humble beginnings as an IT Support guy, moving into a System Administration role, sideways across into Application Support, Technical Project Lead, Solution Architecture and back into Software Development in my current role as an Senior .NET Enterprise Developer (</span><span style="font-size: 10pt; line-height: 14.25pt;"><em>not Star Trek…I wish it was, but it's not and I have to live with that disappointment for the rest of my career life…I tried do the Spock hand thing, got strange looks from the others in the developer forum…</em></span><span style="font-size: 10pt; line-height: 14.25pt;">).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">In the company where I work now, my team is fairly self-sufficient and that often means we do a lot of the stuff ourselves (<em>whilst still going through proper channels as required</em>) which is great as it means we can quickly prototype solutions through a Virtual Machine on our PC or install a particular tool we need to perform some task &#8211; all of this means that we generally have control over our own PC&#8217;s (<em>as all developers should&#8230;but they don&#8217;t unfortunately</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">In the company where I work now, my team is fairly self-sufficient and that often means we do a lot of the stuff ourselves (<em>whilst still going through proper channels as required</em>) which is great as it means we can quickly prototype solutions through a Virtual Machine on our PC or install a particular tool we need to perform some task &#8211; all of this means that we generally have control over our own PC's (<em>as all developers should…but they don't unfortunately</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">But it&#8217;s a double edged sword as I found out the past few days and while being able to administer your own PC&#8217;s and Server&#8217;s is great it can quickly become a bottomless pit that you simply can&#8217;t escape no matter how many Bear Ghryll&#8217;s episodes you have watched (<em>some English guy on the TV that does cool stuff to survive, like James Bond for the wild</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">But it's a double edged sword as I found out the past few days and while being able to administer your own PC's and Server's is great it can quickly become a bottomless pit that you simply can't escape no matter how many Bear Ghryll's episodes you have watched (<em>some English guy on the TV that does cool stuff to survive, like James Bond for the wild</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -78,15 +78,15 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">So begins my particular episode&#8230;</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">So begins my particular episode…</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have a pretty snazzy developer PC inherited from my predecessor, a rather cool Hewlet Packard Z600 Workstation specced up to the hilt with serious &#8216;Uber&#8217; hardware (<em>dual quad Xeon&#8217;s, stupid amount of memory, SSD&#8217;s, drool&#8230;</em>) and thankfully I have complete control over it (<em>mostly</em>) so I had the chance to configure my PC the way I wanted it to do the development I needed to do.</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have a pretty snazzy developer PC inherited from my predecessor, a rather cool Hewlet Packard Z600 Workstation specced up to the hilt with serious &#8216;Uber' hardware (<em>dual quad Xeon's, stupid amount of memory, SSD's, drool…</em>) and thankfully I have complete control over it (<em>mostly</em>) so I had the chance to configure my PC the way I wanted it to do the development I needed to do.</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have the usual culprits on there, Visual Studio 2010 Premium SP1, MSSQL Server 2008 R2, VMware, lots of useful tools (<em>Notepad++, Red Gate, Solitaire</em>) all running on a Windows 7 Professional 64 bit&#8230;nothing out of the ordinary there I hear you say, ah I haven’t told you about that little evil gremlin called Oracle, more specifically Oracle 64 bit and 32 bit clients on a 64 bit operating system (<em>yes, that combination should cause you to feel nauseous</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have the usual culprits on there, Visual Studio 2010 Premium SP1, MSSQL Server 2008 R2, VMware, lots of useful tools (<em>Notepad++, Red Gate, Solitaire</em>) all running on a Windows 7 Professional 64 bit…nothing out of the ordinary there I hear you say, ah I haven’t told you about that little evil gremlin called Oracle, more specifically Oracle 64 bit and 32 bit clients on a 64 bit operating system (<em>yes, that combination should cause you to feel nauseous</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -188,7 +188,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-family: arial, helvetica, sans-serif;">Don&#8217;t forget to clear the gac&#8217;s (both 32 bit and 64 bit), I found this the simplest way of doing it:</span>
+  <span style="font-family: arial, helvetica, sans-serif;">Don't forget to clear the gac's (both 32 bit and 64 bit), I found this the simplest way of doing it:</span>
 </p>
 
   * <span style="font-family: arial, helvetica, sans-serif;">Start Command Prompt for Visual Studio 32 bit</span>

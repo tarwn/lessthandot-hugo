@@ -19,11 +19,11 @@ categories:
 ---
 With this blog post I am hoping to start a new series of blogs devoted to the interesting T-SQL problems I encounter in forums during the week.
 
-The idea of this blog series came to me on Wednesday night when I thought I solved a complex problem&#8230;
+The idea of this blog series came to me on Wednesday night when I thought I solved a complex problem…
 
 # First Problem &#8211; Divide data into 15 min. time intervals
 
-The first problem, I&#8217;d like to discuss, is found in this [MSDN thread][1]:
+The first problem, I'd like to discuss, is found in this [MSDN thread][1]:
 
 Given this table
 
@@ -345,11 +345,11 @@ The problem is to find the overlapped regions (or ranges) and these overlapped r
 
 &#8212;&#8212;&#8212;&#8212;-
   
-I saw this problem at ~11pm on Wednesday night, thought I solved it and that&#8217;s when the idea of this blog came to my mind.
+I saw this problem at ~11pm on Wednesday night, thought I solved it and that's when the idea of this blog came to my mind.
 
-The next day, however, based on Hunchback&#8217;s (Alejandro Mesa) comment I realized, that my &#8220;solution&#8221; worked only for a single overlapping range for the same chromosome. If we have multiple overlapping ranges, that solution will not work. I spent ~ an hour trying to fix my idea for multiple overlapping ranges, but gave up at the end, as I had work to do. So, I will show two ingenious solutions of this problem presented in that thread by (Peso) Peter Larsson.
+The next day, however, based on Hunchback's (Alejandro Mesa) comment I realized, that my “solution” worked only for a single overlapping range for the same chromosome. If we have multiple overlapping ranges, that solution will not work. I spent ~ an hour trying to fix my idea for multiple overlapping ranges, but gave up at the end, as I had work to do. So, I will show two ingenious solutions of this problem presented in that thread by (Peso) Peter Larsson.
 
-First let&#8217;s create the test table with 100K records:
+First let's create the test table with 100K records:
 
 sql
 CREATE TABLE [dbo].[Chromosomes](
@@ -579,7 +579,7 @@ QUOTENAME</span><span class="pun" style="font-weight: inherit;font-style: inheri
 ORDER BY AddressId'
 </span><span class="kwd" style="font-weight: inherit;font-style: inherit;color: #000088">execute</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">(@</span><span class="pln" style="font-weight: inherit;font-style: inherit;color: #000000">SQL</span><span class="pun" style="font-weight: inherit;font-style: inherit;color: #666600">)</span></pre>
 
-And here is Hunchback&#8217;s (Alejandro Mesa) solution using SQL Server 2008 specific syntax:
+And here is Hunchback's (Alejandro Mesa) solution using SQL Server 2008 specific syntax:
 
 sql
 SELECT
@@ -650,7 +650,7 @@ EXECUTE SP_EXECUTESQL
   @TotalCount
 ```
 
-Hope you find these problems interesting as well and see you in a week (or more)&#8230;
+Hope you find these problems interesting as well and see you in a week (or more)…
 
 The next series of this blog:
 

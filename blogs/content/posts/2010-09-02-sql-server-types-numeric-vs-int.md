@@ -149,9 +149,9 @@ References: [Int reference on MSDN][1] and [Numeric/Decimal reference on MSDN][2
 
 ### Performance #1
 
-When SQL Server is asked to execute a math function (+,-,*,/), it uses a defined set of rules to determine the output type, then implicitly converts the arguments to that type (see [this article][3] for a subset that relates to decimals). This means that in many cases there could be implicit conversions to numeric from int, so it&#8217;s possible someone believed we could try and tweak our performance by defining the field as numeric instead of an int. 
+When SQL Server is asked to execute a math function (+,-,*,/), it uses a defined set of rules to determine the output type, then implicitly converts the arguments to that type (see [this article][3] for a subset that relates to decimals). This means that in many cases there could be implicit conversions to numeric from int, so it's possible someone believed we could try and tweak our performance by defining the field as numeric instead of an int. 
 
-Let&#8217;s test out implicit conversions:
+Let's test out implicit conversions:
 
 sql
 /* ****** Creation of some number tables ****** */
@@ -214,7 +214,7 @@ SELECT @start = GETDATE();
 SELECT @Junk = Num/CAST(@Int as numeric(7,0)) FROM NumberNumericTest n;
 SELECT DateDiff(Millisecond, @Start, GetDate());
 ```
-Initially I compared the execution plans and didn&#8217;t see much difference, but after some modifications (thanks George!) and additions we can see the differences between a number of different situations.
+Initially I compared the execution plans and didn't see much difference, but after some modifications (thanks George!) and additions we can see the differences between a number of different situations.
 
 Sample Results:
 
@@ -282,7 +282,7 @@ Sample Results:
   </table>
 </div>
 
-In the second test&#8217;s plan we can see an example of that implicit cast:
+In the second test's plan we can see an example of that implicit cast:
 
 <pre>numeric/int w/ Implicit Cast:
 
@@ -294,9 +294,9 @@ So if we did have an integer that we need to operate on with a float value (the 
 
 ### Performance #2
 
-The other potential performance impact is with auto-parameterization. Auto-parameterization occurs when you provide SQL Server with a non-parameterized SQL statement. The server determines a type for those parameters and parameterizes them (part of the magic that makes plans reusable for non-parameterized queries). I couldn&#8217;t find anything terribly recent, but as far back as SQL Server 6.5 and 7.0 the engine was documented as using the int type for any non-decimal value of 9 digits or less. This means that in the unlikely situation that you&#8217;re executing inline, non-parameterized SQL statements and have used numeric(\*,0) types in your table definitions, you will actually be taking a performance hit for the implicit conversion from auto-parameterized integer to the numeric(\*,0) field.
+The other potential performance impact is with auto-parameterization. Auto-parameterization occurs when you provide SQL Server with a non-parameterized SQL statement. The server determines a type for those parameters and parameterizes them (part of the magic that makes plans reusable for non-parameterized queries). I couldn't find anything terribly recent, but as far back as SQL Server 6.5 and 7.0 the engine was documented as using the int type for any non-decimal value of 9 digits or less. This means that in the unlikely situation that you're executing inline, non-parameterized SQL statements and have used numeric(\*,0) types in your table definitions, you will actually be taking a performance hit for the implicit conversion from auto-parameterized integer to the numeric(\*,0) field.
 
-And if that wasn&#8217;t bad enough, the same SQL Server documentation says that SQL Server treats integers as more exact than numeric and decimal types. It doesn&#8217;t specify why the document goes out of its way to share this information with us, but generally when someone goes out of their way to point out something like this in a document, I get a little nervous and tend to focus more heavily on their &#8216;recommended&#8217; practice (use int).
+And if that wasn't bad enough, the same SQL Server documentation says that SQL Server treats integers as more exact than numeric and decimal types. It doesn't specify why the document goes out of its way to share this information with us, but generally when someone goes out of their way to point out something like this in a document, I get a little nervous and tend to focus more heavily on their &#8216;recommended' practice (use int).
 
 More information on [Parameterization][4] and [SQL 7 Comparison Optimization][5]
 

@@ -15,7 +15,7 @@ categories:
   - Database Programming
 
 ---
-I’ve gone to The Dark Side: I took a PowerShell class. I&#8217;ve started writing new scripts and replacing old VBscripts. Was it scary? Terrifying. Learning a new language – programming or speaking – is never easy. Do I know everything? Not even close. I know how to get help (get-help – get it? harharhar&#8230;), and who to ask for help. 
+I’ve gone to The Dark Side: I took a PowerShell class. I've started writing new scripts and replacing old VBscripts. Was it scary? Terrifying. Learning a new language – programming or speaking – is never easy. Do I know everything? Not even close. I know how to get help (get-help – get it? harharhar…), and who to ask for help. 
 
 One of the biggest obstacles for me was figuring out the punctuation and syntax in PowerShell. How do I comment out a line? Why (), [] and {}? _What does it all mean?_ 
 
@@ -90,7 +90,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        $Name=&#8221;Jes&#8221;
+        $Name=”Jes”
       </td>
     </tr>
     
@@ -132,7 +132,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
     
     <tr>
       <td>
-        &#8221;
+        ”
       </td>
       
       <td>
@@ -144,7 +144,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        $a=100<br /> &#8220;The value of a is $a&#8221; will output as:<br /> The value of a is 100
+        $a=100<br /> “The value of a is $a” will output as:<br /> The value of a is 100
       </td>
     </tr>
     
@@ -162,7 +162,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        $a=100<br /> &#8216;The value of a is $a&#8217; will output as:<br /> The value of a is $a
+        $a=100<br /> &#8216;The value of a is $a' will output as:<br /> The value of a is $a
       </td>
     </tr>
     
@@ -180,7 +180,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        &#8220;The value is `$10&#8221; will output as:<br /> The value is $10<br /> It won&#8217;t treat it as a variable.
+        “The value is `$10” will output as:<br /> The value is $10<br /> It won't treat it as a variable.
       </td>
     </tr>
     
@@ -198,7 +198,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        &#8220;text&#8221;.ToUpper()<br /> (2 +1)*4
+        “text”.ToUpper()<br /> (2 +1)*4
       </td>
     </tr>
     
@@ -234,7 +234,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        Get-Wmiobject -list | where {$_.name -match &#8220;win32*&#8221;}
+        Get-Wmiobject -list | where {$_.name -match “win32*”}
       </td>
     </tr>
     
@@ -269,7 +269,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        $Name=&#8221;Jes&#8221;; $Name
+        $Name=”Jes”; $Name
       </td>
     </tr>
     

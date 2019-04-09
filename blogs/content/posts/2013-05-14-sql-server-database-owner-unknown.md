@@ -30,7 +30,7 @@ Today I was checking an older server and decided to run sp_helpdb. On a bunch of
     
 > Cannot show requested dialog.(SqlMgmt)
       
-> Property Owner is not available for Database'[Your Database Name]&#8217;. This property may not exist for this
+> Property Owner is not available for Database'[Your Database Name]'. This property may not exist for this
       
 > object, or may not be retrievable due to insufficient access rights. (Microsoft.SqlServer.Smo)
 

@@ -34,7 +34,7 @@ This script is not intended to be production ready. I have spent no time at all 
 
 ## Initial Steps
 
-If you would like to build a sample project of your own and follow along, here&#8217;s the steps you will need to perform first:
+If you would like to build a sample project of your own and follow along, here's the steps you will need to perform first:
 
 <ol style="margin-left:3em; line-height: 1.4em">
   <li>
@@ -44,7 +44,7 @@ If you would like to build a sample project of your own and follow along, here&#
     Remove the Diagnostics entry in the web.config or add storage settings
   </li>
   <li>
-    In the Project References, select &#8220;Microsoft.Web.Infrastructure&#8221; and set &#8220;Copy Local&#8221; to &#8220;True&#8221;
+    In the Project References, select “Microsoft.Web.Infrastructure” and set “Copy Local” to “True”
   </li>
   <li>
     Create a Hosted Service in the Azure Dashboard
@@ -64,7 +64,7 @@ If you know your way around Azure, steps 4-7 are mostly reading [xkcd][2] while 
 
 ## Create the Deployment Script
 
-Now that we have a project and all the prerequisites out of the way, let&#8217;s start building the script. As a reminder, these are the steps we intend to follow:
+Now that we have a project and all the prerequisites out of the way, let's start building the script. As a reminder, these are the steps we intend to follow:
 
   * Upload a compiled Package to Azure Storage
   * Create a new Staging deployment
@@ -72,7 +72,7 @@ Now that we have a project and all the prerequisites out of the way, let&#8217;s
   * Promote the new deployment to Production
   * Suspend the instances of the old production deployment and keep them handy in the Staging slot
 
-Let&#8217;s go!
+Let's go!
 
 ### Connect to Azure
 
@@ -89,13 +89,13 @@ Select-AzureSubscription $subscriptionName -Current
 ```
 _$publishSettingsPath, $subscriptionName, and $storageAccountName are parameters I have passed into my script_
 
-We load the Azure module from the Microsoft SDKs folder (this is where it installs from Web PI). We then use the *.publishsettings file to &#8220;log in&#8221; to the Azure subscription, set the storage account we will be using by default, and set this subscription as the default one for our current powershell session.
+We load the Azure module from the Microsoft SDKs folder (this is where it installs from Web PI). We then use the *.publishsettings file to “log in” to the Azure subscription, set the storage account we will be using by default, and set this subscription as the default one for our current powershell session.
 
 <div style="background-color: #eeeeee; padding: .5em 1em; margin: .5em .5em 1.5em .5em;">
-  <a href="http://msdn.microsoft.com/en-us/library/dn722512.aspx" title="Import-AzurePublishSettingsFile on MSDN">Import-AzurePublishSettingsFile</a> basically logs into your Azure account using the supplied publishsettings file, storing a management certificate and a subscription data file. Once we&#8217;re &#8220;logged in&#8221;, we can use the rest of the Azure cmdlets to interact with our Azure resources.</p> 
+  <a href="http://msdn.microsoft.com/en-us/library/dn722512.aspx" title="Import-AzurePublishSettingsFile on MSDN">Import-AzurePublishSettingsFile</a> basically logs into your Azure account using the supplied publishsettings file, storing a management certificate and a subscription data file. Once we're “logged in”, we can use the rest of the Azure cmdlets to interact with our Azure resources.</p> 
 
 <p>
-  <a href="http://msdn.microsoft.com/en-us/library/dn722501.aspx" title="Set-AzureSubscription on MSDN">Set-AzureSubscription</a> sets the &#8220;current&#8221; storage account for the subscription, basically defining a default so we don&#8217;t have to specify it throughout the script. Another option would be to use <a href="http://msdn.microsoft.com/en-us/library/dn495246.aspx" title="New-AzureStorageContext on MSDN">New-AzureStorageContext</a> to create context for the Storage Account and pass this to the calls that interact with Storage.
+  <a href="http://msdn.microsoft.com/en-us/library/dn722501.aspx" title="Set-AzureSubscription on MSDN">Set-AzureSubscription</a> sets the “current” storage account for the subscription, basically defining a default so we don't have to specify it throughout the script. Another option would be to use <a href="http://msdn.microsoft.com/en-us/library/dn495246.aspx" title="New-AzureStorageContext on MSDN">New-AzureStorageContext</a> to create context for the Storage Account and pass this to the calls that interact with Storage.
 </p>
 
 <p>
@@ -106,7 +106,7 @@ We load the Azure module from the Microsoft SDKs folder (this is where it instal
 </h3>
 
 <p>
-  Now that we have access to Azure, we can move on to upload the package. This package can be generated from Visual Studio by right clicking on the Cloud Project and choosing &#8220;Package&#8221;. In an automated process, we can use MSBuild to create this package before calling this script to upload and deploy it.
+  Now that we have access to Azure, we can move on to upload the package. This package can be generated from Visual Studio by right clicking on the Cloud Project and choosing “Package”. In an automated process, we can use MSBuild to create this package before calling this script to upload and deploy it.
 </p>
     
 ```powershell
@@ -129,18 +129,18 @@ $packageUri = $blobInfo.ICloudBlob.Uri
 </p>
 
 <p>
-First we create the container if it doesn&#8217;t already exist, then we upload the package (without prompting), and once that is complete we capture the blob information and extract the URL for later use in the deployment.
+First we create the container if it doesn't already exist, then we upload the package (without prompting), and once that is complete we capture the blob information and extract the URL for later use in the deployment.
 </p>
 
 <div style="background-color: #eeeeee; padding: .5em 1em; margin: .5em .5em 1.5em .5em;">
-<a href="http://msdn.microsoft.com/en-us/library/dn495272.aspx" title="Get-AzureStorageContainer on MSDN">Get-AzureStorageContainer</a> attempts to retrieve a container with the given name. In this case I&#8217;ve used the ErrorAction of SilentlyContinue so that if it doesn&#8217;t exist I can create it.</p> 
+<a href="http://msdn.microsoft.com/en-us/library/dn495272.aspx" title="Get-AzureStorageContainer on MSDN">Get-AzureStorageContainer</a> attempts to retrieve a container with the given name. In this case I've used the ErrorAction of SilentlyContinue so that if it doesn't exist I can create it.</p> 
 
 <p>
-<a href="http://msdn.microsoft.com/en-us/library/dn495291.aspx" title="New-AzureStorageContainer on MSDN">New-AzureStorageContainer</a> creates a container with the given name. Since I haven&#8217;t specified permissions, the container will be created with the most restrictive rights.
+<a href="http://msdn.microsoft.com/en-us/library/dn495291.aspx" title="New-AzureStorageContainer on MSDN">New-AzureStorageContainer</a> creates a container with the given name. Since I haven't specified permissions, the container will be created with the most restrictive rights.
 </p>
 
 <p>
-<a href="http://msdn.microsoft.com/en-us/library/dn495279.aspx" title="Set-AzureStorageBlobContent on MSDN">Set-AzureStorageBlobContent</a> uploads the contents of a file specified by -File to the given -Container value with a final name specified by the -Blob property. The -Force overrides any questions the command might have, like &#8220;are you sure you want to do that&#8221;.
+<a href="http://msdn.microsoft.com/en-us/library/dn495279.aspx" title="Set-AzureStorageBlobContent on MSDN">Set-AzureStorageBlobContent</a> uploads the contents of a file specified by -File to the given -Container value with a final name specified by the -Blob property. The -Force overrides any questions the command might have, like “are you sure you want to do that”.
 </p>
 
 <p>
@@ -176,17 +176,17 @@ Before we can create the new deployment, we check to see if there is already a d
 </p>
 
 <div style="background-color: #eeeeee; padding: .5em 1em; margin: .5em .5em 1.5em .5em;">
-<a href="http://msdn.microsoft.com/en-us/library/dn495146.aspx" title="Get-AzureDeployment on MSDN">Get-AzureDeployment</a> retrieves details on the current deployment in the specified slot. I&#8217;ve used ErrorAction SilentlyContinue here because I am only making this call to determine if something is already there and don&#8217;t want to exit out if the slot turns out to be empty.</p> 
+<a href="http://msdn.microsoft.com/en-us/library/dn495146.aspx" title="Get-AzureDeployment on MSDN">Get-AzureDeployment</a> retrieves details on the current deployment in the specified slot. I've used ErrorAction SilentlyContinue here because I am only making this call to determine if something is already there and don't want to exit out if the slot turns out to be empty.</p> 
 
 <p>
 <a href="http://msdn.microsoft.com/en-us/library/dn495296.aspx" title="Remove-AzureDeployment on MSDN">Remove-AzureDeployment</a> removes the deployment we have detected in the Staging slot, using -Force to again suppress any interactive questions the command might have.
 </p>
 
 <p>
-<a href="http://msdn.microsoft.com/en-us/library/dn495143.aspx" title="New-AzureDeployment on MSDN">New-AzureDeployment</a> creates a new deployment in the specified slot, using the supplied package URI and the configuration file path. I opted to treat warnings as errors because I&#8217;d rather clean up warnings immediately. Unfortunately this parameter does not support URLs. By default the deployment will be started, though there is a -DoNotStart parameter if you do not want this behavior. </div> 
+<a href="http://msdn.microsoft.com/en-us/library/dn495143.aspx" title="New-AzureDeployment on MSDN">New-AzureDeployment</a> creates a new deployment in the specified slot, using the supplied package URI and the configuration file path. I opted to treat warnings as errors because I'd rather clean up warnings immediately. Unfortunately this parameter does not support URLs. By default the deployment will be started, though there is a -DoNotStart parameter if you do not want this behavior. </div> 
 
 <h3>
-  Wait for all of the instances&#8230;
+  Wait for all of the instances…
 </h3>
 
 <p>
@@ -230,7 +230,7 @@ while ((Get-AllInstancesAreStatus $deployment.RoleInstanceList $statusReady) -eq
 </p>
 
 <p>
-  While there are any instances that are not in &#8216;ReadyRun&#8217; status, we sleep for $instancepollRate seconds and continue to check again. If more than $instancePollLimit seconds go by while waiting, we&#8217;ll throw an error that will cause our script to exit.
+  While there are any instances that are not in &#8216;ReadyRun' status, we sleep for $instancepollRate seconds and continue to check again. If more than $instancePollLimit seconds go by while waiting, we'll throw an error that will cause our script to exit.
 </p>
 
 <p>
@@ -268,7 +268,7 @@ Remove-AzureAccount -Name $subscriptionName -Force
 </p>
 
 <p>
-Performing the VIP swap is a simple command and the Powershell cmdlet turns that asynchronous method into a synchronous call for us, like so many of the others. Once the swap is complete, if we have a deployment in the Staging slot (the old Production one), we go ahead and tell it to suspend, but don&#8217;t wait for the individual instances to stop before exiting.
+Performing the VIP swap is a simple command and the Powershell cmdlet turns that asynchronous method into a synchronous call for us, like so many of the others. Once the swap is complete, if we have a deployment in the Staging slot (the old Production one), we go ahead and tell it to suspend, but don't wait for the individual instances to stop before exiting.
 </p>
 
 <div style="background-color: #eeeeee; padding: .5em 1em; margin: .5em .5em 1.5em .5em;">
@@ -283,10 +283,10 @@ Performing the VIP swap is a simple command and the Powershell cmdlet turns that
 </p>
 
 <p>
-<a href="http://msdn.microsoft.com/en-us/library/dn722529.aspx" title="Remove-AzureAccount on MSDN">Remove-AzureAccount</a> is used to remove the Azure subscription data from the Powershell session, basically the &#8220;logout&#8221; equivalent to Import-AzurePublishSettingsFile&#8217;s &#8220;login&#8221; </div> 
+<a href="http://msdn.microsoft.com/en-us/library/dn722529.aspx" title="Remove-AzureAccount on MSDN">Remove-AzureAccount</a> is used to remove the Azure subscription data from the Powershell session, basically the “logout” equivalent to Import-AzurePublishSettingsFile's “login” </div> 
 
 <h2>
-  And we&#8217;re deployed&#8230;
+  And we're deployed…
 </h2>
 
 <p>
@@ -294,7 +294,7 @@ Performing the VIP swap is a simple command and the Powershell cmdlet turns that
 </p>
 
 <p>
-  While this may not be a production-ready script, it&#8217;s not far off (and I&#8217;ve used worse). The few cmdlets above should start to show the pattern that Microsoft used with this Powershell library. There are plenty of additional cmdlets to interact with storage services, VMs, affinity groups, HDInsight, Media Services&#8230;you name it, it&#8217;s probably in there.
+  While this may not be a production-ready script, it's not far off (and I've used worse). The few cmdlets above should start to show the pattern that Microsoft used with this Powershell library. There are plenty of additional cmdlets to interact with storage services, VMs, affinity groups, HDInsight, Media Services…you name it, it's probably in there.
 </p>
 
 <p>
@@ -302,7 +302,7 @@ Performing the VIP swap is a simple command and the Powershell cmdlet turns that
 </p>
 
 <p>
-  The best part is that, unlike some Microsoft frameworks/packages, this magic doesn&#8217;t just make a great demo, it also works in real production environments.
+  The best part is that, unlike some Microsoft frameworks/packages, this magic doesn't just make a great demo, it also works in real production environments.
 </p>
 
  [1]: https://github.com/tarwn/AzureHostedServiceDeploymentSample "tarwn/AzureHostedServiceDeploymentSample on github"

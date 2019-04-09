@@ -25,7 +25,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Sometimes you get some dynamic SQL handed to you which is 2 pages long with all kind of parameters. Of course you yourself would never write such a monstrosity, but how can you verify that all parameters in the code have been declared? Let&#8217;s say you have the following piece of dynamic SQL
+Sometimes you get some dynamic SQL handed to you which is 2 pages long with all kind of parameters. Of course you yourself would never write such a monstrosity, but how can you verify that all parameters in the code have been declared? Let's say you have the following piece of dynamic SQL
 
 sql
 DECLARE @DynamicSql nvarchar(1000)
@@ -48,7 +48,7 @@ Here is the error.
   
 _Msg 137, Level 15, State 2, Line 2
   
-Must declare the scalar variable &#8220;@Type&#8221;._
+Must declare the scalar variable “@Type”._
 
 What if there was something that could help you find these kind of problems? There is, in SQL Server 2012 we now have the sp\_describe\_undeclared_parameters stored procedure 
 
@@ -88,9 +88,9 @@ Running that will give you the following error
 
 _Msg 137, Level 15, State 2, Line 3
   
-Must declare the scalar variable &#8220;@name&#8221;._
+Must declare the scalar variable “@name”._
 
-Here is how to quickly test that as well, take the code from above and grab everything except for this part ,@id = 1,@name = &#8216;sysobjects&#8217;
+Here is how to quickly test that as well, take the code from above and grab everything except for this part ,@id = 1,@name = &#8216;sysobjects'
 
 Basically, you now have this
 

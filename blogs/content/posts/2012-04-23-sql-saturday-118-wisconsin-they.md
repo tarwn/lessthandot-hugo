@@ -24,7 +24,7 @@ Thank you to the 33 speakers that came from (at my last count) 12 states to pres
 
 Thank you to the small army of volunteers. They stuffed bags for attendees, checked people in at registration, collected tickets at lunch, helped speakers as room monitors, and carried boxes for me. They rocked the event.
 
-Thank you to the 226 other attendees at the event. _Two hundred and twenty-six_. I nearly had to pick myself up off the floor when I saw that number at the end of the day. That&#8217;s a lot of people getting free training and networking.
+Thank you to the 226 other attendees at the event. _Two hundred and twenty-six_. I nearly had to pick myself up off the floor when I saw that number at the end of the day. That's a lot of people getting free training and networking.
 
 Last but certainly not least, thank you a hundred times over to our great sponsors. We would not have been able to hold this event without the support of [Red Gate][12], [Tushaus][13], [Confio][14], [Idera][15], [Rubix Consulting][16], [PASS][17], [CUNA Mutual Group][18], [Trek Bikes][19], [Melissa Data][20], and blog sponsors. These companies help us not only in our day-to-day jobs, but extend that to community events like SQL Saturdays. Please thank them, and give them your business. (Their software and services _will_ make your life easier.)
 

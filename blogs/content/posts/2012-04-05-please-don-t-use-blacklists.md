@@ -22,9 +22,9 @@ tags:
   - sql injection
 
 ---
-Every now and then you will hear how some site will use a blacklist to &#8216;protect&#8217; themselves against sql injection. Using a blacklist is very foolish because you can&#8217;t ever think of all the different ways that the bad guys will try to bypass your little list.
+Every now and then you will hear how some site will use a blacklist to &#8216;protect' themselves against sql injection. Using a blacklist is very foolish because you can't ever think of all the different ways that the bad guys will try to bypass your little list.
   
-Let&#8217;s say you have DROP and DROP TABLE in your list.
+Let's say you have DROP and DROP TABLE in your list.
 
 What about these two
 
@@ -71,7 +71,7 @@ OPEN Table_Cursor
 CLOSE Table_Cursor DEALLOCATE Table_Cursor 
 ```
 
-That infected millions of pages in 2008, there are still variants of this one today. A blacklist won&#8217;t help you in this case.
+That infected millions of pages in 2008, there are still variants of this one today. A blacklist won't help you in this case.
 
 You can also protect yourself against this attack by denying SELECT permissions on the sysobjects table, your website user should not have access to these tables in general. If you use stored procedures you can just give access to the stored procedures and nothing else.
 

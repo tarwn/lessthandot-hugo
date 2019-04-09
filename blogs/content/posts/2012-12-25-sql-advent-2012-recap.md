@@ -53,7 +53,7 @@ The post showed you a couple of ways to improve your tech skills
 
 SQL Advent 2012 Day 18: [Stay relevant and marketable][7]
   
-If you don&#8217;t keep up, you will lose
+If you don't keep up, you will lose
 
 SQL Advent 2012 Day 17: [No matter how long you are on the wrong path, go back][8]
   
@@ -61,7 +61,7 @@ Sometimes it is better to start from scratch than continue down the wrong path
 
 SQL Advent 2012 Day 16: [Lack of database design and normalization][9]
   
-We don&#8217;t need no stinking keys
+We don't need no stinking keys
 
 SQL Advent 2012 Day 15: [Benefits of Indexes][10]
   
@@ -69,7 +69,7 @@ Why do we need indexes and what purpose do they serve?
 
 SQL Advent 2012 Day 14: [When to say no][11]
   
-Sometines you have to say no&#8230;.even to your boss
+Sometines you have to say no….even to your boss
 
 SQL Advent 2012 Day 13: [Features enabled that are not used][12]
   
@@ -93,7 +93,7 @@ Why write something if it already exist
 
 SQL Advent 2012 Day 8: [Foreign Keys][17]
   
-A small post showing that you don&#8217;t always need a primary key for a foreign key
+A small post showing that you don't always need a primary key for a foreign key
 
 SQL Advent 2012 Day 7: [Lack of constraints][18]
   

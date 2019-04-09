@@ -21,7 +21,7 @@ tags:
   - requirejs
 
 ---
-I&#8217;m reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. The larger or more complex a project, the more important it is to be able to modularize the code. Modules provide organization, ensure script loading order is correct, and enable dependency injection for cleaner unit testing. AngularJS brings a built-in ability to define modules and inject dependencies. With Knockout, we&#8217;ll look at using [RequireJS][1], and AMD packages.
+I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. The larger or more complex a project, the more important it is to be able to modularize the code. Modules provide organization, ensure script loading order is correct, and enable dependency injection for cleaner unit testing. AngularJS brings a built-in ability to define modules and inject dependencies. With Knockout, we'll look at using [RequireJS][1], and AMD packages.
 
 <div style="background-color: #eeeeee; padding: 1em;">
   This is the sixth of eight posts looking at the capabilities of knockout and Angular. In the <a href="/index.php/WebDev/UIDevelopment/angularjs-vs-knockout-introduction-1" title="AngularJS vs Knockout - Introduction">introduction post</a>, I outlined the capabilities that I am evaluating for. In the <a href="/index.php/WebDev/UIDevelopment/angularjs-vs-knockout-templating-5" title="AngularJS vs Knockout - Templating">fifth post</a>, I looked at templating. This post explores defining modules and dependency injection.
@@ -31,7 +31,7 @@ All of the examples presented throughout the series are available in the [tarwn/
 
 ## Modules in AngularJS
 
-The ability to define [modules][3] is built into AngularJS, but it doesn&#8217;t include an asynchronous loading option, so when we get to that point we&#8217;ll be including the external library [script.js][4].
+The ability to define [modules][3] is built into AngularJS, but it doesn't include an asynchronous loading option, so when we get to that point we'll be including the external library [script.js][4].
 
 ### AngularJS Simple Dependency Injection Example
 
@@ -39,7 +39,7 @@ Full source available at [Angular/SimpleDI.html][5].
 
 Angular modules are collections of functionality with a shared configuration block. Controllers, services, and even values can be attached to the module and will be loaded with the module. Modules can have dependencies on one another, which affects their loading order. Controllers and Providers (services, factories, etc) list their dependencies when they are defined, and those dependencies are filled by Angulars injector.
 
-Here is an example based on the earlier sample for data binding, except our controller has a dependency on the &#8220;sampleServices/ListOfItemsService&#8221; service and when we push the button it will call this service to obtain the list of items to be displayed.
+Here is an example based on the earlier sample for data binding, except our controller has a dependency on the “sampleServices/ListOfItemsService” service and when we push the button it will call this service to obtain the list of items to be displayed.
 
 ```html
 <html ng-app="sampleApp">
@@ -87,7 +87,7 @@ sampleApp.controller('ModuleDIController',
     }]
 );
 ```
-As part of the example I&#8217;ve listed both the dependencies ($scope and ListOfItemsService) and then defined the controller function to take these two properties. Angular has the ability to infer dependencies based on the name of the parameters or list them explicitly like this. The explicit method is safe for a wider range of minification programs, so I decided to try it out.
+As part of the example I've listed both the dependencies ($scope and ListOfItemsService) and then defined the controller function to take these two properties. Angular has the ability to infer dependencies based on the name of the parameters or list them explicitly like this. The explicit method is safe for a wider range of minification programs, so I decided to try it out.
 
 One advantage to working with modules like this is that we can define things like these services independently from the logic that is going to use them, then let the library (AngularJS in this case) figure out how to wire the pieces back together again. This takes a lot of complexity and extra work out of our hands, because we no longer have to deal with juggling a long list of includes or functions into the right order. It also keeps the root namespace clear and makes it simpler to see what external dependencies a chunk of code is using. We can also swap out the provider, replacing it with one that has different functionality, caching, or stubs it out for testing purposes.
 
@@ -95,7 +95,7 @@ One advantage to working with modules like this is that we can define things lik
 
 Full source available at [Angular/ModuleError.html][6].
 
-The next thing I&#8217;m concerned with is how errors will look once the framework has wired together my dependencies. Instead of returning a list of items, I&#8217;m going to modify the service to throw an explicit error and see what the result looks like.
+The next thing I'm concerned with is how errors will look once the framework has wired together my dependencies. Instead of returning a list of items, I'm going to modify the service to throw an explicit error and see what the result looks like.
 
 ```javascript
 var sampleServices = angular.module('sampleServices', []);
@@ -105,13 +105,13 @@ sampleServices.service('ListOfItemsService', function () {
     };
 })
 ```
-In Chrome I get a clean stack trace with clickable references to the files and correct line numbers, Firefox gets the same information but it&#8217;s jumbled with extra characters (possibly intended specifically for chrome output?) and the whole error is a single link that simply expands to show some properties that aren&#8217;t very useful. This is less than great for an unexpected error during development, but it also means business as usual for expected production errors, as they&#8217;ll be able to use some standard error handling code instead of something new.
+In Chrome I get a clean stack trace with clickable references to the files and correct line numbers, Firefox gets the same information but it's jumbled with extra characters (possibly intended specifically for chrome output?) and the whole error is a single link that simply expands to show some properties that aren't very useful. This is less than great for an unexpected error during development, but it also means business as usual for expected production errors, as they'll be able to use some standard error handling code instead of something new.
 
 ### AngularJS Module Loading
 
 Full source available at [Angular/AsyncDI.html][7].
 
-By default, Angular does not include a method for loading scripts. The documentation for [module][8] indicates that there are external libraries that solve this, but don&#8217;t indicate what they are. Searching for something I could use as an example, I ran into a post (and didn&#8217;t copy down the URL, sorry) that uses require.js and a mention by someone that they had used [script.js][4]. I also ran into a post ([Building Huuuuuge Apps with AngularJS][9]) by one of the core Angular team members, Brian Ford, that recommends against using RequireJS with Angular, so I suppose script.js it is.
+By default, Angular does not include a method for loading scripts. The documentation for [module][8] indicates that there are external libraries that solve this, but don't indicate what they are. Searching for something I could use as an example, I ran into a post (and didn't copy down the URL, sorry) that uses require.js and a mention by someone that they had used [script.js][4]. I also ran into a post ([Building Huuuuuge Apps with AngularJS][9]) by one of the core Angular team members, Brian Ford, that recommends against using RequireJS with Angular, so I suppose script.js it is.
 
 Using script.js, I remove the ng-app attribute and instead bootstrap the document to use the sampleApp module once the two files are loaded.
 
@@ -145,7 +145,7 @@ The downside of this method is that it requires me to list all of the files I wa
 
 ## Modules in Knockout
 
-Once again we&#8217;re looking at a feature that is outside the scope of Knockout, so it&#8217;s time to turn to a 3rd party library. The most popular choice here seems to be [RequireJS][1].
+Once again we're looking at a feature that is outside the scope of Knockout, so it's time to turn to a 3rd party library. The most popular choice here seems to be [RequireJS][1].
 
 ### Knockout/RequireJS Simple Dependency Injection Example
 
@@ -230,7 +230,7 @@ define("sampleServices/ListOfItemsService", function () {
 ```
 In Chrome, the console shows the error with a short stack trace which, when clicked, takes me directly to the line that produced the error. In Firefox, the console shows both the error message and the offending line, which opens up the source to the correct spot when clicked.
 
-Again, this is primarily only going to be an issue during development, a I will hopefully have appropriate error handling logic in the application for expected errors in production (and I don&#8217;t expect my users to troubleshoot them for me).
+Again, this is primarily only going to be an issue during development, a I will hopefully have appropriate error handling logic in the application for expected errors in production (and I don't expect my users to troubleshoot them for me).
 
 ### Knockout/RequireJS Module Loading
 
@@ -250,37 +250,37 @@ require(["sampleApp/ModuleDIModel"],
     }
 );
 ```
-Like the AngularJS exmaple, I define a base URL for the library and then relay on it to run my bootstrapping code. In this case the bootstrap code hasn&#8217;t changed, though. RequireJS now automatically looks for js/AsyncDI/sampleApp/ModuleDIModel.js and resolves it&#8217;s dependencies too, then runs my method.
+Like the AngularJS exmaple, I define a base URL for the library and then relay on it to run my bootstrapping code. In this case the bootstrap code hasn't changed, though. RequireJS now automatically looks for js/AsyncDI/sampleApp/ModuleDIModel.js and resolves it's dependencies too, then runs my method.
 
 ## Some Differences
 
-Where do I start? Most of this post was a comparison of external libraries, so while it was hopefully useful, I&#8217;m not going down a script.js vs RequireJS path (you can check this out instead: [$script.js vs RequireJS: Dependency Management Comparisons][13]).
+Where do I start? Most of this post was a comparison of external libraries, so while it was hopefully useful, I'm not going down a script.js vs RequireJS path (you can check this out instead: [$script.js vs RequireJS: Dependency Management Comparisons][13]).
 
 In fact, there is really only one difference we can look at here:
 
-### It isn&#8217;t built in
+### It isn't built in
 
-In the case of Knockout, we once again had to pull in an extra package. As always, this means we now have to track and manage yet another library that has separate security vulnerabilities, updates, and support team from the core library. It&#8217;s a tradeoff and you have to decide whether it&#8217;s worth it or not.
+In the case of Knockout, we once again had to pull in an extra package. As always, this means we now have to track and manage yet another library that has separate security vulnerabilities, updates, and support team from the core library. It's a tradeoff and you have to decide whether it's worth it or not.
 
-### It isn&#8217;t built in
+### It isn't built in
 
-In the case of Angular, Modules and dependency injection are built in, but they suggest either keeping everything in a few files or merging them with a DIY build process. In my book, 1000+ line files are a code smell and I can&#8217;t stand them, but I think what it comes down to at the end of the day is whether you are ok with big files, want to use an external library (like script.js or RequireJS), or want to merge and minify them in your build process (you do have a build process, right?).
+In the case of Angular, Modules and dependency injection are built in, but they suggest either keeping everything in a few files or merging them with a DIY build process. In my book, 1000+ line files are a code smell and I can't stand them, but I think what it comes down to at the end of the day is whether you are ok with big files, want to use an external library (like script.js or RequireJS), or want to merge and minify them in your build process (you do have a build process, right?).
 
-I&#8217;d compare RequireJS + Knockout to Angular, but when we included RequireJS we not only got modules, we also got asynchronous loading, so then we had to ratchet Angular up a notch and add script.js to get back to the same spot.
+I'd compare RequireJS + Knockout to Angular, but when we included RequireJS we not only got modules, we also got asynchronous loading, so then we had to ratchet Angular up a notch and add script.js to get back to the same spot.
 
 ## Final Thoughts
 
-In both cases there is one unanswered issue. When is your application too big for keeping it all in a couple files? When does it become so large it impacts the user&#8217;s ability to load it via script tags, impacts our ability to keep our dependencies straight, etc. I think 10 &#8211; 20 modules is not too bad to keep track of as separate files, but I wouldn&#8217;t want to go larger than that. I could easily use namespacing with Knockout instead of a module loader for something that small, though it&#8217;s not as clean when it comes time to unit test (that post is coming, don&#8217;t worry).
+In both cases there is one unanswered issue. When is your application too big for keeping it all in a couple files? When does it become so large it impacts the user's ability to load it via script tags, impacts our ability to keep our dependencies straight, etc. I think 10 &#8211; 20 modules is not too bad to keep track of as separate files, but I wouldn't want to go larger than that. I could easily use namespacing with Knockout instead of a module loader for something that small, though it's not as clean when it comes time to unit test (that post is coming, don't worry).
 
-So what is big? When do we need to switch from a few files or one big minified file to a module loader or a bundler like [Cassette][14] that can auto bundle everything based on include comments? Is there a sweet spot in between where just have modules and DI without asynchronous loading is perfect? Or is asynchronous loading for &#8220;huge&#8221; applications (defined by Brian Ford above as tens and hundreds of thousands of lines) totally unnecessary?
+So what is big? When do we need to switch from a few files or one big minified file to a module loader or a bundler like [Cassette][14] that can auto bundle everything based on include comments? Is there a sweet spot in between where just have modules and DI without asynchronous loading is perfect? Or is asynchronous loading for “huge” applications (defined by Brian Ford above as tens and hundreds of thousands of lines) totally unnecessary?
 
-I don&#8217;t have those answers, but they are important considerations we should be making when we sit down and try to choose between AngularJS and Knockout on a future project.
+I don't have those answers, but they are important considerations we should be making when we sit down and try to choose between AngularJS and Knockout on a future project.
 
-I think the AngularJS DI system works really well, and I was really happy about how it performed for the Unit testing examples (next post). I&#8217;m not crazy about the inferred method for DI, I feel like it saves a little typing while limiting minification and potential asynchronous loading options.
+I think the AngularJS DI system works really well, and I was really happy about how it performed for the Unit testing examples (next post). I'm not crazy about the inferred method for DI, I feel like it saves a little typing while limiting minification and potential asynchronous loading options.
 
-When I first looked at RequireJS for defining modules (and at Angular&#8217;s method, to be honest), it looked messy. They both still look a bit messy, but after working through these examples, I&#8217;ve decided I do actually like it and I&#8217;m planning on retrofiting some past projects to use RequireJS. And, unlike the build your own file merger suggestion for Angular, it already has well documented tools and methods for [optimizing][15] via your build process.
+When I first looked at RequireJS for defining modules (and at Angular's method, to be honest), it looked messy. They both still look a bit messy, but after working through these examples, I've decided I do actually like it and I'm planning on retrofiting some past projects to use RequireJS. And, unlike the build your own file merger suggestion for Angular, it already has well documented tools and methods for [optimizing][15] via your build process.
 
-So, not a strong conclusion or set of comparisons for this post, but I&#8217;m sure we can hash it out in the comments 🙂
+So, not a strong conclusion or set of comparisons for this post, but I'm sure we can hash it out in the comments 🙂
 
 <div style="background-color: #DDDDDD; padding: 8px; width: 400px;">
   <h3>

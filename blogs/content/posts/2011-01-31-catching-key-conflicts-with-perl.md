@@ -38,7 +38,7 @@ my $row = $dbh->do(qq{INSERT INTO customer ( name, address, email ) VALUES (?,?,
 &error($dbh->errstr) unless $row; # Forward to error handler. 
 ```
 
-[Class::DBI][1] is a database abstraction Perl module. It wasn&#8217;t immediately apparent to me how to handle a key conflict when using it. After a little investigation I found key violations will trigger an exception which makes it fairly simple to handle:
+[Class::DBI][1] is a database abstraction Perl module. It wasn't immediately apparent to me how to handle a key conflict when using it. After a little investigation I found key violations will trigger an exception which makes it fairly simple to handle:
 
 ```perl
 eval

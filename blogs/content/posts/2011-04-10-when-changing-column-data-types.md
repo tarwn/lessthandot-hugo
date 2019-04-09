@@ -42,7 +42,7 @@ Here is the question
 
 > I have a SQL Server 2005 database with a datetime column. There is already data in the table but now the customer needs dates before 1753. So I decided to migrate the database to a SQL Server 2008 to use the datetime2 type.
 > 
-> However I can&#8217;t just switch the type of the column from datetime to datetime2. Is there a way to do this conversion or do I have to reimport the data?
+> However I can't just switch the type of the column from datetime to datetime2. Is there a way to do this conversion or do I have to reimport the data?
   
 > Someone else answered the following
 
@@ -60,7 +60,7 @@ This of course is highly inefficient. Just imagine running that suggestion on a 
 
 My approach would be to do this instead: _ALTER TABLE TableName ALTER COLUMN ColumnName datetime2_
 
-Let&#8217;s take a closer look at the T-SQL needed for this
+Let's take a closer look at the T-SQL needed for this
 
 First create the following table and insert one row
 
@@ -128,11 +128,11 @@ Output
   
 1600-01-01 00:00:00.0000000
 
-Just be aware that if you are changing data types, make sure that what you change to can hold the current values. If you are changing from varchar to integer, make sure you only have values that can be converted to integers, the operation will fail if they can&#8217;t be converted to integers.
+Just be aware that if you are changing data types, make sure that what you change to can hold the current values. If you are changing from varchar to integer, make sure you only have values that can be converted to integers, the operation will fail if they can't be converted to integers.
 
 ## Conclusion
 
-Learn the product and learn it well. Don&#8217;t overly depend on the wizards in SSMS, and if you use SSMS, hit the Script button to see what kind of T-SQL SSMS generates.
+Learn the product and learn it well. Don't overly depend on the wizards in SSMS, and if you use SSMS, hit the Script button to see what kind of T-SQL SSMS generates.
 
 The wizards are nice but sometimes they get it wrong. Here is the code that the wizard generates to change the column
 
@@ -167,7 +167,7 @@ GO
 COMMIT
 
 ```
-I definitely don&#8217;t want that either, that creates a whole new table..yikes
+I definitely don't want that either, that creates a whole new table..yikes
 
 Spend some time in Books On Line, maybe every day at lunch open a random topic and read it for half and hour and run the code examples. If you commute, download the topic to your local device or hit the online version and study it. Another good way to learn is of course hitting the newsgroups where you will see top notch advice from SQL Server experts
 

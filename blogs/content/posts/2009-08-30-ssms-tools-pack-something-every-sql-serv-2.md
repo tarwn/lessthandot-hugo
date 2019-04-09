@@ -26,7 +26,7 @@ tags:
   - ssms
 
 ---
-This post was already published yesterday, someone deleted it by mistake so I had to recreate it&#8230;sorry for that (and thanks for google cache :-))
+This post was already published yesterday, someone deleted it by mistake so I had to recreate it…sorry for that (and thanks for google cache :-))
 
 SSMS Tools PACK is an Add-In (Add-On) for Microsoft SQL Server Management Studio and Microsoft SQL Server Management Studio Express, this tool is developed by [Mladen Prajdi&#263;][1]. 
 
@@ -41,7 +41,7 @@ SSMS Tools PACK contains a few upgrades to the IDE that were missing from Manage
   * [Search Results in Grid Mode and Execution Plans.][8]{.Titles}
   * [Generate Insert statements for a single table, the whole database or current resultsets in grids.][9]{.Titles}
   * [Text document Regions and Debug sections.][10]{.Titles}
-  * [Running custom scripts from Object explorer&#8217;s Context menu.][11]{.Titles}
+  * [Running custom scripts from Object explorer's Context menu.][11]{.Titles}
   * [CRUD (Create, Read, Update, Delete) stored procedure generation.][12]{.Titles}
   * [New query template.][13]{.Titles}
 
@@ -129,9 +129,9 @@ AS
 GO
 ```
 
-As you can see I added a comment block there that has my name and the initial version number. Having all your developers use a tool like this is great because you will have all the same looking procs and don&#8217;t have to worry that some people use @Error or @ErrorCode or @ErrorID. You just modify the template to have the error checking that you have standardized upon and you are done
+As you can see I added a comment block there that has my name and the initial version number. Having all your developers use a tool like this is great because you will have all the same looking procs and don't have to worry that some people use @Error or @ErrorCode or @ErrorID. You just modify the template to have the error checking that you have standardized upon and you are done
 
-So now let&#8217;s see what SSMS Tools PACK generates
+So now let's see what SSMS Tools PACK generates
 
 Right click on the table you created, select SSMS Tools and then Create CRUD (See image below)
 
@@ -284,7 +284,7 @@ GO
 ```
 As you can see that is a huge time saver, you can of course customize it so that it conforms to your style guide.
 
-Don&#8217;t forget to thank Mladen Prajdi&#263; on twitter: <http://twitter.com/MladenPrajdic> or to donate if this tool is useful to you
+Don't forget to thank Mladen Prajdi&#263; on twitter: <http://twitter.com/MladenPrajdic> or to donate if this tool is useful to you
 
 
 

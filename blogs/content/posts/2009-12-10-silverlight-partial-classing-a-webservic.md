@@ -18,7 +18,7 @@ tags:
 Hey Folks,
 
 <p style="text-indent: 30pt;">
-  Just ran into this minor quirk today, figured I&#8217;d share the solution. I have a Webservice that returns an array of a class defined on the server. On the client side, I wanted to extend that class to link it to some GUI elements. Enter the partial class. If you haven&#8217;t played with Partial Classes before, I&#8217;d recommend checking them out. It allows you to build additional functionality into any class. Not by inheriting from a base, but actually extending that class without creating a new one. Anyways, I wound up with the following:
+  Just ran into this minor quirk today, figured I'd share the solution. I have a Webservice that returns an array of a class defined on the server. On the client side, I wanted to extend that class to link it to some GUI elements. Enter the partial class. If you haven't played with Partial Classes before, I'd recommend checking them out. It allows you to build additional functionality into any class. Not by inheriting from a base, but actually extending that class without creating a new one. Anyways, I wound up with the following:
 </p>
 
 ```vbnet
@@ -44,20 +44,20 @@ End Namespace
 </p>
 
 <p style="text-indent: 30pt;">
-  The critical part though, is the attribute. Without the System.Xml.Serialization.XmlIgnore attribute, you&#8217;ll get an exception on the constructor of the web service Reference.vb file:
+  The critical part though, is the attribute. Without the System.Xml.Serialization.XmlIgnore attribute, you'll get an exception on the constructor of the web service Reference.vb file:
 </p>
 
 Exception has been thrown by the target of an invocation.
   
--There was an error reflecting type &#8216;Alerts.srAlerts.BaseResponse&#8217;.
+-There was an error reflecting type &#8216;Alerts.srAlerts.BaseResponse'.
   
-&#8211;There was an error reflecting type &#8216;Alerts.srAlerts.GetAlertDataResponse&#8217;.
+&#8211;There was an error reflecting type &#8216;Alerts.srAlerts.GetAlertDataResponse'.
   
-&#8212;There was an error reflecting property &#8216;Alerts&#8217;.
+&#8212;There was an error reflecting property &#8216;Alerts'.
   
-&#8212;-There was an error reflecting type &#8216;Alerts.srAlerts.Alert&#8217;.
+&#8212;-There was an error reflecting type &#8216;Alerts.srAlerts.Alert'.
   
-&#8212;&#8211;There was an error reflecting property &#8216;CommentDisplay&#8217;.
+&#8212;&#8211;There was an error reflecting property &#8216;CommentDisplay'.
 
 <p style="text-indent: 30pt;">
   It would appear that the web service system in Silverlight attempts to serialize all members of the class, even those that are defined client side in a partial class, and it gets a little confused. Using the XMLIgnore attribute forces the serializer to skip this property and allows us to use the partial class on the client side as we expected.

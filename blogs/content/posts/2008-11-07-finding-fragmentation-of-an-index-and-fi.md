@@ -114,7 +114,7 @@ and s.name ='IX_TestIndex_Index'
   </tr>
 </table>
 
-That is good, almost no fragmentation. Let&#8217;s change that shall we?
+That is good, almost no fragmentation. Let's change that shall we?
 
 sql
 UPDATE TestIndex
@@ -230,7 +230,7 @@ REORGANIZE;
 
 As you can see after the reorganize(DBCC INDEXDEFRAG for you SQL Server 2000 folks) fragmentation levels dropped to less than 3 percent.
 
-Just for fun let&#8217;s also rebuild (Drop and recreate the index for you SQL Server 2000 folks) the index
+Just for fun let's also rebuild (Drop and recreate the index for you SQL Server 2000 folks) the index
 
 sql
 ALTER INDEX IX_TestIndex_Index ON TestIndex
@@ -301,7 +301,7 @@ Of course you will not run rebuild/reorganize manually for every index in your d
 
 ## Permissions
 
-I added this section because our [SQLCop][1] tool has an index fragmentation check, unfortunately if you don&#8217;t have permissions you get an error. Big thanks to [George][2] for taking the time to write this section.
+I added this section because our [SQLCop][1] tool has an index fragmentation check, unfortunately if you don't have permissions you get an error. Big thanks to [George][2] for taking the time to write this section.
 
 In order to run the query that checks for fragmented indexes, you need to have VIEW DATABASE STATE permissions.
 

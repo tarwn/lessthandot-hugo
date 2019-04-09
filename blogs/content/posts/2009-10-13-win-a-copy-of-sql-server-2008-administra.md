@@ -21,7 +21,7 @@ tags:
 ---
 Rod Colledge was so kind to give the readers of [Less Than Dot][1] a chance to win a pdf copy of his book [SQL Server 2008 Administration in Action][2]. 
 
-Here is how you can win, read the [Interview With Rod Colledge About The Book SQL Server 2008 Administration in Action][3] post and tell me which question or answer you liked the most and why. Leave a comment on that post, do not leave it here. Comments are moderated so do not panic if you don&#8217;t see your comment right away.
+Here is how you can win, read the [Interview With Rod Colledge About The Book SQL Server 2008 Administration in Action][3] post and tell me which question or answer you liked the most and why. Leave a comment on that post, do not leave it here. Comments are moderated so do not panic if you don't see your comment right away.
 
 I will pick (picked today) a winner this Friday at 12 PM EST
 

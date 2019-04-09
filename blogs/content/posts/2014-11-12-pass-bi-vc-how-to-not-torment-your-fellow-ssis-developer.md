@@ -22,11 +22,11 @@ tags:
 
 ---
 <p style="text-align: justify">
-  On November 17th 2PM CET I will redo my SQL Server Days presentation <a href="/index.php/uncategorized/speaking-at-sql-server-days-2014/">How to (not) torment your fellow SSIS developer?</a> for the <a href="http://bi.sqlpass.org/">PASS BI virtual chapter</a>. This is great news for the people who couldn&#8217;t attend my session at the SQL Server Days and who still want to see it (I hope those people actually exist).
+  On November 17th 2PM CET I will redo my SQL Server Days presentation <a href="/index.php/uncategorized/speaking-at-sql-server-days-2014/">How to (not) torment your fellow SSIS developer?</a> for the <a href="http://bi.sqlpass.org/">PASS BI virtual chapter</a>. This is great news for the people who couldn't attend my session at the SQL Server Days and who still want to see it (I hope those people actually exist).
 </p>
 
 <p style="text-align: justify">
-  What is even better is that the PASS BI virtual chapter afterwards always uploads the webinars to Youtube, so there won&#8217;t be any excuse for not watching my session 🙂<br /> Check out other amazing BI sessions from the SQL community on<a href="https://www.youtube.com/user/passbivc"> their Youtube channel</a>!
+  What is even better is that the PASS BI virtual chapter afterwards always uploads the webinars to Youtube, so there won't be any excuse for not watching my session 🙂<br /> Check out other amazing BI sessions from the SQL community on<a href="https://www.youtube.com/user/passbivc"> their Youtube channel</a>!
 </p>
 
 <p style="text-align: justify">

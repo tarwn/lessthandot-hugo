@@ -18,7 +18,7 @@ tags:
   - product information management
 
 ---
-A lot of PIM projects start together with an e-commerce project. The e-commerce project will make products available online and to maintain the product information a PIM project is started preceding the e-commerce project. In my previous post &#8220;[What is Product Information Management?][1]&#8221; I explained what Product Information Management is. But who would benefit from such a PIM project? 
+A lot of PIM projects start together with an e-commerce project. The e-commerce project will make products available online and to maintain the product information a PIM project is started preceding the e-commerce project. In my previous post “[What is Product Information Management?][1]” I explained what Product Information Management is. But who would benefit from such a PIM project? 
 
 <div class="image_block">
   <a href="http://farm6.staticflickr.com/5045/5322091121_204bb92a05_o.jpg"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/PimBenefit.jpg?mtime=1388673769" width="500" height="333" /></a>
@@ -26,7 +26,7 @@ A lot of PIM projects start together with an e-commerce project. The e-commerce 
 
 # The e-commerce team
 
-Since they are in most cases the first requesters for a PIM system, it&#8217;s obvious they will benefit from this. For a decent e-commerce site, it&#8217;s important to have as much information available as possible. For smaller shops it might be possible to manage this information in Excel or an ERP system, but once your shops starts growing you&#8217;ll need something to manage the amount of information
+Since they are in most cases the first requesters for a PIM system, it's obvious they will benefit from this. For a decent e-commerce site, it's important to have as much information available as possible. For smaller shops it might be possible to manage this information in Excel or an ERP system, but once your shops starts growing you'll need something to manage the amount of information
 
 # The catalog team
 
@@ -34,15 +34,15 @@ Does your company publishes an annual catalog, season special catalogs, flyers f
 
 # Marketing
 
-You spent weeks on creating a new marketing campaign with a new styling, product images, descriptions etc. And now you have to update the company websites, web shops, catalogs, flyers,&#8230; With a PIM solution you only have to update your product information in the PIM system and it will be pushed to all your channels. 
+You spent weeks on creating a new marketing campaign with a new styling, product images, descriptions etc. And now you have to update the company websites, web shops, catalogs, flyers,… With a PIM solution you only have to update your product information in the PIM system and it will be pushed to all your channels. 
 
 # Sales
 
-More and more sales are confronted with customers looking up details on the internet and &#8220;testing&#8221; the knowledge of the sales people in a store. Since all the information on the website/web shop comes from your PIM system, you can easily give access to sales employees via in shop computers or via tablets enabling them to answer all the test questions.
+More and more sales are confronted with customers looking up details on the internet and “testing” the knowledge of the sales people in a store. Since all the information on the website/web shop comes from your PIM system, you can easily give access to sales employees via in shop computers or via tablets enabling them to answer all the test questions.
 
 # After-sales/Support
 
-In your PIM system you can find all the technical specifications of your products, including spare parts, accessories, follow up products, &#8230; So certainly if you keep all the product info in PIM even if you don&#8217;t sell them anymore, after-sales can easily advise your customers if they are looking for spare parts or a new alternative for the product they bought from you years ago.
+In your PIM system you can find all the technical specifications of your products, including spare parts, accessories, follow up products, … So certainly if you keep all the product info in PIM even if you don't sell them anymore, after-sales can easily advise your customers if they are looking for spare parts or a new alternative for the product they bought from you years ago.
 
 # The Customer
 

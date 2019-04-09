@@ -13,7 +13,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-If you ever replicate tables that have identity seeds on columns you&#8217;re more than likely going to have a headache on your first try of setting this up. There are several things you have to consider and take into account when replicating these types of columns. Of course you want them replicated and you can very easily do so while retaining the integrity between the tables. However, if you ever remove replication from the subscriber table, you’re going to find yourself in a sticky situation no matter what setting you have for the replication. 
+If you ever replicate tables that have identity seeds on columns you're more than likely going to have a headache on your first try of setting this up. There are several things you have to consider and take into account when replicating these types of columns. Of course you want them replicated and you can very easily do so while retaining the integrity between the tables. However, if you ever remove replication from the subscriber table, you’re going to find yourself in a sticky situation no matter what setting you have for the replication. 
 
 There are a few catches to mention. The first is not to use the drop option in the @pre\_creation\_cmd parameter of the sp_addarticle execution if you want to retain the last set seed on the subscriber table. I say this because if you go on your subscriber after initializing it and check your seed, it will be set to NULL. This is normal for how the drop and even the truncate option handles the seed. You’ll see the same results if you use truncate on a table that has a identity column. What you’ll want to do is use the delete in this option to retain the seed where it is at the subscriber level.
   
@@ -84,7 +84,7 @@ DBCC CHECKIDENT
 ```
 After making all these changes, you will see that 10 is still our seed.
   
-<span class="MT_red"><br /> Checking identity information: current identity value &#8217;10&#8217;, current column value &#8217;10&#8217;.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
+<span class="MT_red"><br /> Checking identity information: current identity value '10', current column value '10'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
   
 Let’s setup replication and initialize everything to db2.tbl1
 
@@ -189,23 +189,23 @@ DBCC CHECKIDENT
   ,NORESEED
 )
 ```
-<span class="MT_red">Checking identity information: current identity value &#8216;NULL&#8217;, current column value &#8217;11&#8217;.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
+<span class="MT_red">Checking identity information: current identity value &#8216;NULL', current column value '11'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
   
 Or
   
-<span class="MT_red"><br /> Checking identity information: current identity value &#8216;NULL&#8217;, current column value &#8216;NULL&#8217;.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
+<span class="MT_red"><br /> Checking identity information: current identity value &#8216;NULL', current column value &#8216;NULL'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
   
 As you can see the drop option basically reset our seed even while the seed is retained on the tables definition. If you attempt to insert directly into db2.tbl1 after removing replication you will violate the key.
 
 You can prevent the Null from happening by using the delete option instead of drop. What this does not give you is your seed back. It will only delete the data in the subscriber table and bulk copy to initialize the table. The not for replication must still be set and if using the delete option you will need to manually set it on the subscriber table. What it does do for you is leave the seed at the last value used. That means if you delete your publisher and subscriber and set it back up using the delete option. 
 
-You can simulate this all by using the exact script for the publication with the small change of @pre\_creation\_cmd = N&#8217;drop&#8217; to @pre\_creation\_cmd = N&#8217;delete&#8217;. 
+You can simulate this all by using the exact script for the publication with the small change of @pre\_creation\_cmd = N'drop' to @pre\_creation\_cmd = N'delete'. 
 
 Once you do the same steps as above and run DBCC CHECKIDENT after inserting some records to be replicated, you will see the identity value remain but the value rise.
 
 Like this
   
-<span class="MT_red"><br /> Checking identity information: current identity value &#8217;26&#8217;, current column value &#8217;30&#8217;.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
+<span class="MT_red"><br /> Checking identity information: current identity value '26', current column value '30'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
 
 I personally like this. It gives me point in time reference. You don’t need this of course but it is nice to have with using the delete option.
   
@@ -224,7 +224,7 @@ exec sp_dropsubscription @publication =N'Tables', @subscriber = N'LKFW00TK', @ar
 ```
 Now insert a value into db2.tbl1
   
-<span class="MT_red"><br /> Msg 2627, Level 14, State 1, Line 1<br /> Violation of PRIMARY KEY constraint &#8216;PK_tbl1&#8217;. Cannot insert duplicate key in object &#8216;dbo.tbl1&#8217;.<br /> The statement has been terminated.<br /> </span>
+<span class="MT_red"><br /> Msg 2627, Level 14, State 1, Line 1<br /> Violation of PRIMARY KEY constraint &#8216;PK_tbl1'. Cannot insert duplicate key in object &#8216;dbo.tbl1'.<br /> The statement has been terminated.<br /> </span>
   
 Of course this will happen sense your seed wants to use 27 in my results above. To fix this it’s a very simple change to our DBCC CHECKIDENT command
 

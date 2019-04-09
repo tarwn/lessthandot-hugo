@@ -132,9 +132,9 @@ This module went into some things you have to do if you want to do a point in ti
 
 The other day I had some complaints about Sybase Central, I still think it sucks compared to SQL Server Management Studio but some of the things I complained about have been addresses
   
-When I said that I didn&#8217;t see results when running two commands, this is because by default Sybase Central only shows one result set. The icons are hideous, some of them have to be from NT4 or even windows 3.11
+When I said that I didn't see results when running two commands, this is because by default Sybase Central only shows one result set. The icons are hideous, some of them have to be from NT4 or even windows 3.11
   
-You will like this one&#8230;there is no shortcut or toolbar options to uncomment or comment a block of text&#8230;.you have to go line by line or place /\* before and \*/ after the text you want to comment. You can&#8217;t use multiple windows open in the same session, CTRL + N and it closes what you had open and you have a blank window, you have to open another instance of Interactive SQL to have multiple connections and sessions
+You will like this one…there is no shortcut or toolbar options to uncomment or comment a block of text….you have to go line by line or place /\* before and \*/ after the text you want to comment. You can't use multiple windows open in the same session, CTRL + N and it closes what you had open and you have a blank window, you have to open another instance of Interactive SQL to have multiple connections and sessions
   
 For the rest, you will think that you are back using Query Analyzer
 
@@ -142,13 +142,13 @@ For the rest, you will think that you are back using Query Analyzer
 
 This started with the error log, where errors are stored and severity levels of errors, also discussed was how to prune the error log.
   
-Next up was sp\_who (what no sp\_who2? Nope, doesn&#8217;t exist) and how to use KILL
+Next up was sp\_who (what no sp\_who2? Nope, doesn't exist) and how to use KILL
   
 Discussed next was how to monitor lock contention by using the sp\_oject\_stats stored procedure.
 
 **MDA Tables**
   
-These tables are similar to the sys.dm&#8230;&#8230; views in SQL Server. There are over 30 of these tables
+These tables are similar to the sys.dm…… views in SQL Server. There are over 30 of these tables
 
 **sp_sysmon**
   

@@ -28,9 +28,9 @@ A person asked the following question:
 > 
 > EXEC @ReturnCode = master.dbo.xp_cmdshell @cmdline
 > 
-> On the Results tab I get 2 lines Could not find a part of the path &#8216;serverdirectoryfilename&#8217;. NULL
+> On the Results tab I get 2 lines Could not find a part of the path &#8216;serverdirectoryfilename'. NULL
 > 
-> How do I capture the first line in an error message? I tried using a Try Catch block with &#8220;SELECT @ErrorMessage = ERROR_MESSAGE()&#8221; and it doesn&#8217;t grab it.
+> How do I capture the first line in an error message? I tried using a Try Catch block with “SELECT @ErrorMessage = ERROR_MESSAGE()” and it doesn't grab it.
 > 
 > The message is not coming from sys.messages. Where is this error message coming from then?
 
@@ -38,13 +38,13 @@ First of all that message comes from the Command Shell/DOS, not from SQL Server.
   
 So if you were to execute the bogus command _bla bla c:_ you would get the following output
 
-_&#8216;bla&#8217; is not recognized as an internal or external command,operable program or batch file._
+_&#8216;bla' is not recognized as an internal or external command,operable program or batch file._
 
-If you did something like _dir z:_ when you don&#8217;t have a z drive you would see the following
+If you did something like _dir z:_ when you don't have a z drive you would see the following
 
 _The system cannot find the path specified._
 
-Now let&#8217;s look at some code by running a dir command on a drive that doesn&#8217;t exist, if you do have a z drive then change it to something that you don&#8217;t have
+Now let's look at some code by running a dir command on a drive that doesn't exist, if you do have a z drive then change it to something that you don't have
 
 sql
 DECLARE @cmdline VARCHAR(500),
@@ -137,7 +137,7 @@ Run the code again and now you should see the following output.
     
     <tr>
       <td>
-        &#8216;bla&#8217; is not recognized as an internal or external command,operable program or batch file.
+        &#8216;bla' is not recognized as an internal or external command,operable program or batch file.
       </td>
       
       <td>

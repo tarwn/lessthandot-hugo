@@ -25,7 +25,7 @@ tags:
   - data migration
 
 ---
-Sometimes you want to dump the data from all the tables in a database into files. There is really no fast and easy way to do this. Fortunately it is very easy to roll your own solution. Let&#8217;s look at what we need to do
+Sometimes you want to dump the data from all the tables in a database into files. There is really no fast and easy way to do this. Fortunately it is very easy to roll your own solution. Let's look at what we need to do
 
 1) we need to grab all the tables in the database
   
@@ -45,7 +45,7 @@ sql
 SELECT name FROM sys.tables
 ```
 
-However if you use schemas then that won&#8217;t work, you need to do the following
+However if you use schemas then that won't work, you need to do the following
 
 sql
 SELECT SCHEMA_NAME(SCHEMA_ID),name 
@@ -75,7 +75,7 @@ Windows does not allow for certain characters in file names
   
 : (colon)
   
-&#8221; (double quote)
+” (double quote)
   
 / (forward slash)
    
@@ -135,7 +135,7 @@ You can now take that and run it. When you run it, you will see the following ou
 
 NULL
   
-Starting copy&#8230;
+Starting copy…
   
 NULL
   
@@ -147,7 +147,7 @@ Clock Time (ms.) Total : 1 Average : (32000.00 rows per sec.)
   
 NULL
 
-Sometines you don&#8217;t want to see that output,In that case we need to [suppress xp_cmdshell output][1], you do this by adding ,no_output at the end
+Sometines you don't want to see that output,In that case we need to [suppress xp_cmdshell output][1], you do this by adding ,no_output at the end
 
 sql
 SELECT 'EXEC xp_cmdshell ''bcp '           --bcp
@@ -177,7 +177,7 @@ There you have it, a quick and dirty version to dump all the tables into files.
 
 You can of course enhance this by creating a proc where you can specify only a certain schema, delimiters, how to connect etc etc
 
-If you don&#8217;t want to use xp\_cmdshell, you can also dump the results without the xp\_cmdshell part into a BAT file and call it from DOS or PowerShell
+If you don't want to use xp\_cmdshell, you can also dump the results without the xp\_cmdshell part into a BAT file and call it from DOS or PowerShell
 
 That query would look like this
 

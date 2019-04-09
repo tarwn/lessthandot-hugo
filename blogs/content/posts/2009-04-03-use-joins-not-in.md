@@ -14,9 +14,9 @@ categories:
   - Microsoft SQL Server
 
 ---
-While untangling a pretty nasty correlated subquery someone had written at work that was going three layers deep with IN (select X from Y) type of stuff, I used twitter to vent some of my rage [SQL Training Wheels][1]. This found its way to facebook, where one of my friends (and fellow LessThanDot members) asked &#8220;How So&#8221;.
+While untangling a pretty nasty correlated subquery someone had written at work that was going three layers deep with IN (select X from Y) type of stuff, I used twitter to vent some of my rage [SQL Training Wheels][1]. This found its way to facebook, where one of my friends (and fellow LessThanDot members) asked “How So”.
 
-Well, the answer is simple. Like training wheels, they are easy. Damn easy. But, also like training wheels, they can really get in the way. As such, use of IN is often good for quick ad-hoc queries, but for anything to be run more than once it&#8217;s probably worth at least exploring the option of using a derived table and a join.
+Well, the answer is simple. Like training wheels, they are easy. Damn easy. But, also like training wheels, they can really get in the way. As such, use of IN is often good for quick ad-hoc queries, but for anything to be run more than once it's probably worth at least exploring the option of using a derived table and a join.
 
 Ok here is a second try at an example. The query in question was meant to get the most recent appointment for each invoice, when there is not really a direct link. So take some sample data:
 
@@ -86,13 +86,13 @@ on aa.appt_id = a.id
 group by i.id
 ```
 
-Notice that one uses a correlated subquery and some IN&#8217;s, and the other uses simple joins. For this example, there is not much performance difference (most queries are pretty easy with a small data set) but in the real database there are several million rows in each table, and one of the tables involved takes up about 1/2 of the entire database for the application we support. 
+Notice that one uses a correlated subquery and some IN's, and the other uses simple joins. For this example, there is not much performance difference (most queries are pretty easy with a small data set) but in the real database there are several million rows in each table, and one of the tables involved takes up about 1/2 of the entire database for the application we support. 
 
-The example from work was a bit more complex (it wasn&#8217;t straightforward joins, and I needed to create a pretty gross derived table to get the dataset I wanted to join to) but the performance gain was much greater. Because the correlated subquery as I understand it gets called 1x per row in the resultset, and it was not exactly a lightweight query, the original query my coworker had written took 15-30 seconds to return a relatively small resultset. The more rows you want back, the worse it gets. 
+The example from work was a bit more complex (it wasn't straightforward joins, and I needed to create a pretty gross derived table to get the dataset I wanted to join to) but the performance gain was much greater. Because the correlated subquery as I understand it gets called 1x per row in the resultset, and it was not exactly a lightweight query, the original query my coworker had written took 15-30 seconds to return a relatively small resultset. The more rows you want back, the worse it gets. 
 
-By joining to a derived table we were able to get the query down below 2 seconds. This gain was probably more an indication of how bad the subquery really was (if you think my example is ridiculous, try thinking of one ten times more so!) but I think the lesson holds that you don&#8217;t want to always use IN just because its&#8217; more comfortable.
+By joining to a derived table we were able to get the query down below 2 seconds. This gain was probably more an indication of how bad the subquery really was (if you think my example is ridiculous, try thinking of one ten times more so!) but I think the lesson holds that you don't want to always use IN just because its' more comfortable.
 
-For another reason I dislike IN, check out [Denis&#8217; Old Post][2]
+For another reason I dislike IN, check out [Denis' Old Post][2]
 
 \*** **Got a SQL Server question? Check out our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 

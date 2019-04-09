@@ -13,9 +13,9 @@ categories:
   - Microsoft Technologies
 
 ---
-Now that the [setup][1] is out of the way, let&#8217;s look at how we can get this stuff tested. 
+Now that the [setup][1] is out of the way, let's look at how we can get this stuff tested. 
 
-I&#8217;m a bit more interested in the observable side of the relationship so I&#8217;ll start there, looking at the method using winforms events first. Testing our Send method when using events is just a matter of checking to see if the event we expected is raised. If we were doing this for real, we&#8217;d want some kind of mock handler that records not only whether it was called but what parameters were passed, etc&#8230; But for simplicity&#8217;s sake we will just capture whether or not the handler got called.
+I'm a bit more interested in the observable side of the relationship so I'll start there, looking at the method using winforms events first. Testing our Send method when using events is just a matter of checking to see if the event we expected is raised. If we were doing this for real, we'd want some kind of mock handler that records not only whether it was called but what parameters were passed, etc… But for simplicity's sake we will just capture whether or not the handler got called.
 
 ```csharp
 [Test]
@@ -32,7 +32,7 @@ public void Send() {
 }
 ```
 
-This isn&#8217;t too bad thanks to the lambda expression, but it is important to note that we are only testing that the event is raised, not that the correct processing took place. On the other hand, look at the same test using the reactive approach.
+This isn't too bad thanks to the lambda expression, but it is important to note that we are only testing that the event is raised, not that the correct processing took place. On the other hand, look at the same test using the reactive approach.
 
 ```csharp
 [Test]
@@ -55,7 +55,7 @@ public void Send() {
 }
 ```
 
-I get that the lambda in the event based method basically does the same thing as the mock subscriber we&#8217;re using for the reactive method. But I feel like this approach models the actual behavior a bit better than the event driven approach did. I guess at the end of the day it is just a matter of preference. Hopefully I&#8217;ve made my preference clear 🙂
+I get that the lambda in the event based method basically does the same thing as the mock subscriber we're using for the reactive method. But I feel like this approach models the actual behavior a bit better than the event driven approach did. I guess at the end of the day it is just a matter of preference. Hopefully I've made my preference clear 🙂
 
 From the other side of the relationship, the testing approach is almost identical. Take a look at tests on the subscription for an example. Events first:
 
@@ -103,9 +103,9 @@ public void Subscribe() {
 }
 ```
 
-So the reactive approach doesn&#8217;t change all that much on the observer side. But I think the observable side is the one we are more concerned about.
+So the reactive approach doesn't change all that much on the observer side. But I think the observable side is the one we are more concerned about.
 
-When dealing with the observables, I like how easy the reactive approach makes it to mock the other side of the relationship to confirm that the proper calls are being made on subscribers. This design seems to split the responsibility more evenly between the subscriber and the publisher, and this in turn makes the relationship a bit simpler to manage. The interface coupling that it introduces doesn&#8217;t seem any worse to me than the implicit coupling you get when dealing with events. While the implications for testing in this scenario aren&#8217;t exactly earth shattering, I do **like** testing the reactive approach better. The way the tests are structured just gives me a bit more confidence that things will go smoothly than the event based one.
+When dealing with the observables, I like how easy the reactive approach makes it to mock the other side of the relationship to confirm that the proper calls are being made on subscribers. This design seems to split the responsibility more evenly between the subscriber and the publisher, and this in turn makes the relationship a bit simpler to manage. The interface coupling that it introduces doesn't seem any worse to me than the implicit coupling you get when dealing with events. While the implications for testing in this scenario aren't exactly earth shattering, I do **like** testing the reactive approach better. The way the tests are structured just gives me a bit more confidence that things will go smoothly than the event based one.
 
 _*****as usual, source code for this post can be found over at [github][2], with these examples in the TestingObservable project._
 

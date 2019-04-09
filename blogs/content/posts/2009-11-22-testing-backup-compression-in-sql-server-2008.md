@@ -24,11 +24,11 @@ tags:
 ---
 I got a brand new SQL Server 2008 test server and decided to test backup compression. I picked 2 databases to do this test; the smaller database is 4.8GB in size the bigger database is about 44 GB in size.
   
-Let&#8217;s start with the smaller database.
+Let's start with the smaller database.
   
 First I backed the database up, one backup used compression while the other one did not.
 
-Let&#8217;s look at some code
+Let's look at some code
 
 sql
 BACKUP DATABASE [SmallDB] TO  DISK = N'V:SmallDB_Compressed.BAK' 
@@ -98,7 +98,7 @@ The uncompressed backup took 395.740 seconds (109.410 MB/sec) to complete.
 
 Just as before with the small database, the compressed backup was a little faster. The size of the backup was 9.725 GB for the compressed backup and 44.338 GB for the uncompressed backup
 
-Now let&#8217;s take a look at the restore.
+Now let's take a look at the restore.
 
 sql
 RESTORE DATABASE [MediumDB] 
@@ -128,7 +128,7 @@ To sum it all up:
 
 Another good thing is that with SQL Server 2008 R2 backup compression will be available in the standard edition as well, until now backup compression was only an Enterprise Edition feature
 
-All in all I was impressed with backup compression and I can&#8217;t see a reason why you would not want to use it. It does use more CPU to backup when using compression but I am more RAM bound than CPU bound.
+All in all I was impressed with backup compression and I can't see a reason why you would not want to use it. It does use more CPU to backup when using compression but I am more RAM bound than CPU bound.
 
 
 

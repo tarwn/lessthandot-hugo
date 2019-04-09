@@ -29,7 +29,7 @@ There was a question today [How to change my local sql server sa password?][1] i
 
 Before I start I would like you to read this post by ted Krueger first: [To SA or not to SA][2] to understand why you should not be using the SA account.
 
-Now that you know why you should not be using the SA account and you are still using it, let&#8217;s see how you can change the password for the SA account
+Now that you know why you should not be using the SA account and you are still using it, let's see how you can change the password for the SA account
 
 The easiest way is to login to the server as sa or any other account that has sufficient privileges to change the sa account
 
@@ -58,7 +58,7 @@ GO
 ```
 Now try to login. It is possible that the sa account is disabled, you will see the following message
 
-Login failed for user &#8216;sa&#8217;. Reason: The account is disabled. (Microsoft SQL Server, Error: 18470)
+Login failed for user &#8216;sa'. Reason: The account is disabled. (Microsoft SQL Server, Error: 18470)
 
 To enable the account, all you have to do is the following
 
@@ -83,7 +83,7 @@ You can also do all of this from SSMS with the GUI, navigate to the security fol
 
 Click on the Status page to enable or disable the account
 
-I would encourage you to use T-SQL not the GUI, the day (and I promise you this will happen) will come that sql server will be installed on a box without the tools (Sever core perhaps) and you can only connect to it from the command line with osql, you will be stuck if you don&#8217;t know how to do this with T-SQL
+I would encourage you to use T-SQL not the GUI, the day (and I promise you this will happen) will come that sql server will be installed on a box without the tools (Sever core perhaps) and you can only connect to it from the command line with osql, you will be stuck if you don't know how to do this with T-SQL
 
  [1]: http://stackoverflow.com/questions/10703150/how-to-change-my-local-sql-server-sa-password
  [2]: /index.php/DataMgmt/DBAdmin/to-sa-or-not-to-sa

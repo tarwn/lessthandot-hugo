@@ -21,7 +21,7 @@ Here is what I found interesting this past week in SQL Land:
 
 **[Understanding backups and log-related Trace Flags in SQL Server 2000/2005 and 2008][1]**
   
-Kimberly Tripp is giving a play by play from 2000 to 2005/2008 to discuss the differences and what&#8217;s changed and why those changes were significant. The biggest changes were between 2000 and 2005.
+Kimberly Tripp is giving a play by play from 2000 to 2005/2008 to discuss the differences and what's changed and why those changes were significant. The biggest changes were between 2000 and 2005.
 
 **[Business Rule Enforcement][2]**
   
@@ -33,7 +33,7 @@ Jonathan Kehayias shows us what he thinks of LINQ to SQL
 
 **[Who is Active? v7.30][4]**
   
-Adam Machanic has released the latest version of his _Who is Active_ script. Who is Active? is a comprehensive DMV-based monitoring script, designed to tell you at a glance what processes are active on your SQL Server and what they&#8217;re up to. It has a number of optional features so that you can get results quickly, or monitor deeply, depending on your needs when you happen to be using the script. 
+Adam Machanic has released the latest version of his _Who is Active_ script. Who is Active? is a comprehensive DMV-based monitoring script, designed to tell you at a glance what processes are active on your SQL Server and what they're up to. It has a number of optional features so that you can get results quickly, or monitor deeply, depending on your needs when you happen to be using the script. 
 
 **[Sp_indexinfo has been updated][5]**
   

@@ -48,7 +48,7 @@ Like this layout
   <img src="/wp-content/uploads/blogs/DataMgmt//parms_ssrs_2.gif" alt="" title="" width="835" height="292" />
 </div>
 
-Most would be inclined to create another procedure and then create matching parameters for that report. Then use the &#8220;Parameters!&#8221; call to assign a default value to the parameter going to the second procedure. You can bypass this by simply naming the parameters in the procedures the same and then call them in your dataset as Text and using the same names.
+Most would be inclined to create another procedure and then create matching parameters for that report. Then use the “Parameters!” call to assign a default value to the parameter going to the second procedure. You can bypass this by simply naming the parameters in the procedures the same and then call them in your dataset as Text and using the same names.
 
 So your second procedure would be something like
 

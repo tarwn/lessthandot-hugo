@@ -27,7 +27,7 @@ tags:
   - truncate
 
 ---
-I wrote a blogpost about the fact that there is a common myth that you can&#8217;t rollback a truncate statement in SQL [this post was written on June 13, 2007][1] and it showed you that you could rollback a truncate. Here is some code that shows that.
+I wrote a blogpost about the fact that there is a common myth that you can't rollback a truncate statement in SQL [this post was written on June 13, 2007][1] and it showed you that you could rollback a truncate. Here is some code that shows that.
 
 First create this very simple table
 
@@ -93,7 +93,7 @@ In Oracle to truncate a table, the table must be in your schema or you must have
 
 In Oracle a truncate statement is actually a DDL statement, you CANNOT rollback a truncate after it has happened. A truncate statement removes all rows and returns the freed space to the tablespace containing the table.
 
-Please keep these differences in mind when working with different platforms, don&#8217;t assume anything, it will bite you in the butt, always reference the documentation. For some more Oracle and SQL Server differences, see also my post [Differences between Oracle and SQL Server when working with NULL and blank values][3]
+Please keep these differences in mind when working with different platforms, don't assume anything, it will bite you in the butt, always reference the documentation. For some more Oracle and SQL Server differences, see also my post [Differences between Oracle and SQL Server when working with NULL and blank values][3]
 
  [1]: http://sqlblog.com/blogs/denis_gobo/archive/2007/06/13/1458.aspx
  [2]: /index.php/DataMgmt/DBProgramming/MSSQLServer/why-do-you-need-additional

@@ -23,7 +23,7 @@ This question came up recently so I decided to blog about it
   
 If you have your stored procedures in source control and you want to see if they are the same as the one on the server, all you need to do is script out the procs and do a diff right?
 
-Let&#8217;s see what happens, create this proc
+Let's see what happens, create this proc
 
 sql
 Create procedure prTest

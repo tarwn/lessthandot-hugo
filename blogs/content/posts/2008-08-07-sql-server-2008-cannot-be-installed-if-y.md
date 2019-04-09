@@ -23,6 +23,6 @@ More about this in this knowledgebase article
   
 There is also an item on connect submitted by Steve Kass: <http://connect.microsoft.com/SQLServer/feedback/ViewFeedback.aspx?FeedbackID=360930>
 
-So I guess I have to wait till August 11th when VS 2008 goes RTM to install it. I don&#8217;t want to install VS 2008 SP1 Beta so close before RTM
+So I guess I have to wait till August 11th when VS 2008 goes RTM to install it. I don't want to install VS 2008 SP1 Beta so close before RTM
 
 <img src="http://i34.tinypic.com/350js03.jpg" border="0" alt="Image and video hosting by TinyPic" />

@@ -16,7 +16,7 @@ tags:
   - silverlight binding
 
 ---
-The Binding system is Silverlight is pretty cool. It lets us easily bind property values of UI Elements to all sorts of good stuff. But, if you want to create your own custom bind-able properties, it takes a bit more effort than the usual Property=&#8221;{Binding=Field}&#8221; in XAML.
+The Binding system is Silverlight is pretty cool. It lets us easily bind property values of UI Elements to all sorts of good stuff. But, if you want to create your own custom bind-able properties, it takes a bit more effort than the usual Property=”{Binding=Field}” in XAML.
 
 For example, I have a datagrid. One of the columns in that data grid holds a control that displays and icon and a tool tip based on the content of some data.
 
@@ -83,6 +83,6 @@ Public Shared ReadOnly _MyToolTipProperty As DependencyProperty = DependencyProp
         d.SetValue(ToolTipService.ToolTipProperty, e.NewValue)
     End Sub
 ```
-And that fixes that. Why this wasn&#8217;t just handled behind the scenes I don&#8217;t know. I&#8217;ve heard that they have done a lot of work on the Binding system for SL4, so maybe this will not be a requirement once the next update rolls out. 
+And that fixes that. Why this wasn't just handled behind the scenes I don't know. I've heard that they have done a lot of work on the Binding system for SL4, so maybe this will not be a requirement once the next update rolls out. 
 
 -Rick

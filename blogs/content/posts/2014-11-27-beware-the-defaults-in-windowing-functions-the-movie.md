@@ -31,7 +31,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  I&#8217;m quite pleased with the video &#8211; excellent <a href="http://technet.microsoft.com/en-us/sysinternals/bb897434.aspx">Zoomit </a>use by the way &#8211; as it highlights the most important aspects of my blog post:
+  I'm quite pleased with the video &#8211; excellent <a href="http://technet.microsoft.com/en-us/sysinternals/bb897434.aspx">Zoomit </a>use by the way &#8211; as it highlights the most important aspects of my blog post:
 </p>
 
 <ul style="text-align: justify;">
@@ -44,11 +44,11 @@ tags:
 </ul>
 
 <p style="text-align: justify;">
-  Or even better, specify ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW or another framing option. Just not the default 🙂<br /> The one thing missing in the video &#8211; and I must confess I didn&#8217;t highlight it enough in my blog post &#8211; is the massive performance difference between ROWS and RANGE. I&#8217;m re-reading the excellent book by Itzik Ben-Gan about the <a href="http://www.amazon.com/Microsoft-High-Performance-Functions-Developer-Reference/dp/0735658366/ref=sr_1_1?ie=UTF8&qid=1417091814&sr=8-1&keywords=windowing+functions">T-SQL windowing functions</a> and there Itzik explains why this is the case. In a nutshell:
+  Or even better, specify ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW or another framing option. Just not the default 🙂<br /> The one thing missing in the video &#8211; and I must confess I didn't highlight it enough in my blog post &#8211; is the massive performance difference between ROWS and RANGE. I'm re-reading the excellent book by Itzik Ben-Gan about the <a href="http://www.amazon.com/Microsoft-High-Performance-Functions-Developer-Reference/dp/0735658366/ref=sr_1_1?ie=UTF8&qid=1417091814&sr=8-1&keywords=windowing+functions">T-SQL windowing functions</a> and there Itzik explains why this is the case. In a nutshell:
 </p>
 
 <p style="text-align: justify;">
-  When using the ROWS window frame extent, the window spool operator can use an optimized in-memory work table which speeds things up tremendously. However, when using RANGE the typical on-disk work table has to be used, which is of course much slower. In theory, RANGE is equal to ROWS when the ordering values are unique within the partition, but the optimizer doesn&#8217;t check for uniqueness so RANGE will always default to the on-disk work table.
+  When using the ROWS window frame extent, the window spool operator can use an optimized in-memory work table which speeds things up tremendously. However, when using RANGE the typical on-disk work table has to be used, which is of course much slower. In theory, RANGE is equal to ROWS when the ordering values are unique within the partition, but the optimizer doesn't check for uniqueness so RANGE will always default to the on-disk work table.
 </p>
 
 <p style="text-align: justify;">

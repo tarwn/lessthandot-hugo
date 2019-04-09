@@ -19,7 +19,7 @@ tags:
 ---
 Recently I was experimenting with Office 365 as a single-sign on source for an existing ASP.Net application. Unfortunately, most of the documentation I found focused on the use cases of having Visual Studio automatically add it as part of a new project, multiple versions of a very similar looking OWIN sample using built-in (black box) OpenId calls, and using Microsoft.Identity.Clients.ActiveDirectory in not terribly well explained example code to (I think) call the OAuth endpoints.
 
-The examples did not fit well with what I already know about the mechanics of OAuth, so that made it harder to determine what they were doing and how I would wedge them into my codebase (and I can&#8217;t justify converting the entire codebase to OWIN to use those examples). Eventually, I decided that learning a one off solution to do something I already knew how to do may not be worth the investment, so I did a direct implementation instead. 
+The examples did not fit well with what I already know about the mechanics of OAuth, so that made it harder to determine what they were doing and how I would wedge them into my codebase (and I can't justify converting the entire codebase to OWIN to use those examples). Eventually, I decided that learning a one off solution to do something I already knew how to do may not be worth the investment, so I did a direct implementation instead. 
 
 <div style="background-color: #eeeeee; margin: 1em; padding: 1em">
   Links referenced in this post:</p> 
@@ -58,7 +58,7 @@ The examples did not fit well with what I already know about the mechanics of OA
 
 <ol style="margin-left: 2em;">
   <li>
-    We redirect the user&#8217;s browser to the Office365 login portal
+    We redirect the user's browser to the Office365 login portal
   </li>
   <li>
     They log in and the portal redirects them back to us, with a single use authorization code
@@ -75,7 +75,7 @@ The examples did not fit well with what I already know about the mechanics of OA
 </ol>
 
 <p>
-  Behind the scenes, we previously defined an application in Azure AD that described the level of permissions we were going to use as the user, so when ask and receive access to the resource, it&#8217;s only those rights we defined for the application (and if we didn&#8217;t define any, we&#8217;ll receive an error). Because we are passing re-usable tokens around that are not encrypted or a public/private key, we need to be especially concerned about <A href="https://www.owasp.org/index.php/Man-in-the-middle_attack" title="OWASP - Man-in-the-middle attack">man-in-the-middle attacks</a> and ensure all calls happen over HTTPS.
+  Behind the scenes, we previously defined an application in Azure AD that described the level of permissions we were going to use as the user, so when ask and receive access to the resource, it's only those rights we defined for the application (and if we didn't define any, we'll receive an error). Because we are passing re-usable tokens around that are not encrypted or a public/private key, we need to be especially concerned about <A href="https://www.owasp.org/index.php/Man-in-the-middle_attack" title="OWASP - Man-in-the-middle attack">man-in-the-middle attacks</a> and ensure all calls happen over HTTPS.
 </p>
 
 <h1>
@@ -99,7 +99,7 @@ The examples did not fit well with what I already know about the mechanics of OA
 </p>
 
 <p>
-  Step 2: <a href="https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually">Register your application in Azure AD</a> (Follow the &#8220;Register your web server app with the Azure Management Portal&#8221; instructions)
+  Step 2: <a href="https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually">Register your application in Azure AD</a> (Follow the “Register your web server app with the Azure Management Portal” instructions)
 </p>
 
 <p>
@@ -111,7 +111,7 @@ The examples did not fit well with what I already know about the mechanics of OA
 </h2>
 
 <p>
-  I&#8217;m going to focus down on just the barest of examples, a simple controller that sends you to Office 365 for authorization, then uses that returned code to ask for an access token (which will also return back information like the name of the person that has logged in).
+  I'm going to focus down on just the barest of examples, a simple controller that sends you to Office 365 for authorization, then uses that returned code to ask for an access token (which will also return back information like the name of the person that has logged in).
 </p>
 
 <h3>
@@ -147,7 +147,7 @@ public ActionResult Index()
 </p>
 
 <p>
-  URL: The URL is the OAuth2 authorize URL for Office365. This URL can also be found in the application configuration screens for your application in Azure AD, where it will include the TENANT_ID value directly in the string (but it&#8217;s still a good idea to extract it out).
+  URL: The URL is the OAuth2 authorize URL for Office365. This URL can also be found in the application configuration screens for your application in Azure AD, where it will include the TENANT_ID value directly in the string (but it's still a good idea to extract it out).
 </p>
 
 <p>
@@ -163,7 +163,7 @@ public ActionResult Index()
 </h3>
 
 <p>
-  First things first, let&#8217;s see if we have an error and, if not, harvest the returned values out of the response.
+  First things first, let's see if we have an error and, if not, harvest the returned values out of the response.
 </p>
 
 ```csharp
@@ -194,7 +194,7 @@ public ActionResult Office365Callback()
 ```
 
 <p>
-  The response fields are defined in the response section of the <a href="https://msdn.microsoft.com//en-us/library/azure/dn645542.aspx#Anchor_2" title="MSDN - Authorization Code Grant Flow - Request an authorization code">&#8220;Request an authorization code&#8221; MSDN article above</a>.
+  The response fields are defined in the response section of the <a href="https://msdn.microsoft.com//en-us/library/azure/dn645542.aspx#Anchor_2" title="MSDN - Authorization Code Grant Flow - Request an authorization code">“Request an authorization code” MSDN article above</a>.
 </p>
 
 <p>
@@ -206,7 +206,7 @@ public ActionResult Office365Callback()
 </h3>
 
 <p>
-  The user has been authorized, but we still don&#8217;t know who they are. Also, if we intend to ask about group memberships or similar AD queries, we will need access to Azure AD. So our next request is to ask for an Access Token that will grant us access, as it also returns the user information back as a <a href="https://jwt.io/" title="JSON Web Token">JWT (JSON Web Token)</a>.
+  The user has been authorized, but we still don't know who they are. Also, if we intend to ask about group memberships or similar AD queries, we will need access to Azure AD. So our next request is to ask for an Access Token that will grant us access, as it also returns the user information back as a <a href="https://jwt.io/" title="JSON Web Token">JWT (JSON Web Token)</a>.
 </p>
 
 <p>
@@ -226,7 +226,7 @@ public ActionResult Office365Callback()
 ```
 
 <p>
-  Resource: The resource &#8220;https://graph.windows.net&#8221; is the Azure AD directory (which no documentation I read anywhere made particularly clear). I had a lot of confusion about this from early on because the documentation is just a little too generic for it&#8217;s own good.
+  Resource: The resource “https://graph.windows.net” is the Azure AD directory (which no documentation I read anywhere made particularly clear). I had a lot of confusion about this from early on because the documentation is just a little too generic for it's own good.
 </p>
 
 <p>
@@ -238,7 +238,7 @@ public ActionResult Office365Callback()
 </p>
 
 <p>
-  &#8220;code&#8221; is the code we extracted from the querystring above that we received in the Callback from Office365.
+  “code” is the code we extracted from the querystring above that we received in the Callback from Office365.
 </p>
 
 <p>
@@ -327,7 +327,7 @@ public class Office365TokenResponse
 </h3>
 
 <p>
-  To parse the JWT Token and extract the user&#8217;s information, we need a couple additional assemblies: System.IdentityModel.Tokens.Jwt and System.IdentityModel
+  To parse the JWT Token and extract the user's information, we need a couple additional assemblies: System.IdentityModel.Tokens.Jwt and System.IdentityModel
 </p>
 
 <p>
@@ -406,7 +406,7 @@ public void ParseToken()
 </h2>
 
 <p>
-  To lock the application down to a security group, go back to your Azure AD application configuration and select the option to require unique users, then add the Security Group on the &#8220;Users and Groups&#8221; tab.
+  To lock the application down to a security group, go back to your Azure AD application configuration and select the option to require unique users, then add the Security Group on the “Users and Groups” tab.
 </p>
 
 <h2>
@@ -414,5 +414,5 @@ public void ParseToken()
 </h2>
 
 <p>
-  I ran into a long list of errors during this process, hopefully you wil have bypassed most or all of them if you followed this far. Most of those errors were not knowing that that resource for the second URL is expected to be &#8220;https://graph.windows.net&#8221; and not your own application.
+  I ran into a long list of errors during this process, hopefully you wil have bypassed most or all of them if you followed this far. Most of those errors were not knowing that that resource for the second URL is expected to be “https://graph.windows.net” and not your own application.
 </p>

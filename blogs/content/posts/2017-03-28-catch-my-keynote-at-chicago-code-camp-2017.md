@@ -17,15 +17,15 @@ categories:
 
 I have a notebook for my Ideas, and Dreams, and Goals.
 
-Here&#8217;s one of my Ideas.
+Here's one of my Ideas.
 
 [<img class="aligncenter size-medium wp-image-8632" src="/wp-content/uploads/2017/03/Goal-225x300.jpg" alt="goal" width="225" height="300" srcset="/wp-content/uploads/2017/03/Goal-225x300.jpg 225w, /wp-content/uploads/2017/03/Goal-768x1024.jpg 768w, /wp-content/uploads/2017/03/Goal.jpg 1512w" sizes="(max-width: 225px) 100vw, 225px" />][2]
 
 I watched a very inspiring keynote at [That Conference][3], and I decided I wanted to be the person at the front of the room, giving a keynote, inspiring the audience.
 
-Achievement unlocked: on Saturday, April 29, 2017, I&#8217;ll be the keynote speaker at [Chicago Code Camp 2017][4]! This event, in its ninth year, is a free, volunteer-run, day-long conference in downtown Chicago. There&#8217;s a huge list of technical sessions, ranging from React to Machine Learning to Docker.
+Achievement unlocked: on Saturday, April 29, 2017, I'll be the keynote speaker at [Chicago Code Camp 2017][4]! This event, in its ninth year, is a free, volunteer-run, day-long conference in downtown Chicago. There's a huge list of technical sessions, ranging from React to Machine Learning to Docker.
 
-My keynote is &#8220;Busy is a Four Letter Word&#8221;. I&#8217;m tired of asking people, &#8220;How are you?&#8221; only to hear, &#8220;I&#8217;m so busy.&#8221; What I want to hear is, &#8220;I&#8217;m learning a new skill or language&#8221;, or &#8220;I recently had this great adventure&#8221;, or &#8220;I&#8217;m content with my life.&#8221; How do we, as over-worked, over-scheduled, over-tired people get to that state? I&#8217;m going to share what I&#8217;ve learned about how to be less busy &#8211; how to say no, how to set a priority, and how to enjoy being bored again!
+My keynote is “Busy is a Four Letter Word”. I'm tired of asking people, “How are you?” only to hear, “I'm so busy.” What I want to hear is, “I'm learning a new skill or language”, or “I recently had this great adventure”, or “I'm content with my life.” How do we, as over-worked, over-scheduled, over-tired people get to that state? I'm going to share what I've learned about how to be less busy &#8211; how to say no, how to set a priority, and how to enjoy being bored again!
 
 Register today to attend this free event and get a great day of technical training!
 

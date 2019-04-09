@@ -25,7 +25,7 @@ tags:
 
 Visual Studio 2010 and Microsoft .NET Framework 4 will be available for download later today on MSDN. Right now it looks like the time that it will be available is 10 AM PDT.
 
-Now when it is available on MSDN don&#8217;t just download it from the first place you see it, check Top Downloads first ( http://msdn.microsoft.com/en-us/subscriptions/bb608344.aspx ) The top downloads page uses Akamai and the downloads are much faster than the regular MSDN downloads.
+Now when it is available on MSDN don't just download it from the first place you see it, check Top Downloads first ( http://msdn.microsoft.com/en-us/subscriptions/bb608344.aspx ) The top downloads page uses Akamai and the downloads are much faster than the regular MSDN downloads.
 
 Microsoft also announced that SilverLight 4 will be released to the web later this week.
 

@@ -18,9 +18,9 @@ categories:
   - Oracle Admin
 
 ---
-I hear more and more emphasis on two things: big data and business intelligence. Companies are investing more and more money in both. Conferences are providing more tracks on those topics. Books that focus on these topics seem to be everywhere. They were the focus of last week’s keynotes at PASS Summit. Yes, there is a lot of data out there. Yes, mining the data the business has collected for analysis, insights, and trends is what keeps the business moving forward. These topics are sexy. They&#8217;re attractive. People want to see them, and spend time with them.
+I hear more and more emphasis on two things: big data and business intelligence. Companies are investing more and more money in both. Conferences are providing more tracks on those topics. Books that focus on these topics seem to be everywhere. They were the focus of last week’s keynotes at PASS Summit. Yes, there is a lot of data out there. Yes, mining the data the business has collected for analysis, insights, and trends is what keeps the business moving forward. These topics are sexy. They're attractive. People want to see them, and spend time with them.
 
-Knowing this, are you, a DBA, thinking your job is threatened? Are you worried that you will get phased out with time, or relegated to a dark basement office, next to the server room? Does data seem unattractive, and, let&#8217;s face it, unsexy? Do you fear becoming a [Milton][1]?
+Knowing this, are you, a DBA, thinking your job is threatened? Are you worried that you will get phased out with time, or relegated to a dark basement office, next to the server room? Does data seem unattractive, and, let's face it, unsexy? Do you fear becoming a [Milton][1]?
 
  
 
@@ -68,7 +68,7 @@ As the volume of data grows, a physical SQL Server instance can outgrow attached
 
 ### Look Forward
 
-By realizing that the world of data is changing and committing to change with it, you are positioning yourself to have a successful future.   Start researching the future of data. Think about what you are interested in learning about the future. Begin studying and applying what you’re learning. You&#8217;re going to be attracted to your job again. It&#8217;s going to be sexy to be a DBA for years to come!
+By realizing that the world of data is changing and committing to change with it, you are positioning yourself to have a successful future.   Start researching the future of data. Think about what you are interested in learning about the future. Begin studying and applying what you’re learning. You're going to be attracted to your job again. It's going to be sexy to be a DBA for years to come!
 
  [1]: http://www.imdb.com/character/ch0001900/
  [2]: http://www.bobpusateri.com/

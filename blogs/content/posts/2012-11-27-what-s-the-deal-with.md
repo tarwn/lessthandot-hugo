@@ -51,7 +51,7 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: justify;">
-  The postal code in Belgium usually consists of 4 digits. However, sometimes it is prefixed with “<em>B-</em>“, which makes the data alphanumeric. The house number column has a value containing the word &#8220;bus&#8221;, so it becomes alphanumeric as well. When we pull this data into the SSIS dataflow, we get the following:
+  The postal code in Belgium usually consists of 4 digits. However, sometimes it is prefixed with “<em>B-</em>“, which makes the data alphanumeric. The house number column has a value containing the word “bus”, so it becomes alphanumeric as well. When we pull this data into the SSIS dataflow, we get the following:
 </div>
 
 <div class="image_block">
@@ -87,7 +87,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="margin-left: 35.4pt; text-align: left;">
-  <strong><em><span lang="EN-US">Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:MyExcel.xls;Extended Properties=&#8221;Excel 8.0;HDR=Yes;IMEX=1&#8243;;</span></em></strong>
+  <strong><em><span lang="EN-US">Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:MyExcel.xls;Extended Properties=”Excel 8.0;HDR=Yes;IMEX=1&#8243;;</span></em></strong>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
@@ -171,14 +171,14 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: left;">
-  <em><span lang="EN-US">[Excel Source [5]] Error: There was an error with Excel Source.Outputs[Excel Source Output].Columns[Comments] on Excel Source.Outputs[Excel Source Output]. The column status returned was: &#8220;Text was truncated or one or more characters had no match in the target code page.&#8221;.</span></em>
+  <em><span lang="EN-US">[Excel Source [5]] Error: There was an error with Excel Source.Outputs[Excel Source Output].Columns[Comments] on Excel Source.Outputs[Excel Source Output]. The column status returned was: “Text was truncated or one or more characters had no match in the target code page.”.</span></em>
 </p>
 
 <p class="MsoNormal">
   <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/ExcelComments.png?mtime=1353999029"><img src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/ExcelComments.png?mtime=1353999029" alt="" width="332" height="334" /></a>
 </p>
 
-_Bob really hated that customer service&#8230;_
+_Bob really hated that customer service…_
 
 <span style="font-weight: bold;">The solution part III</span>
 
@@ -198,9 +198,9 @@ _Bob really hated that customer service&#8230;_
   <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_4.png?mtime=1353999022"><img src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_4.png?mtime=1353999022" alt="" width="400" height="239" /></a>
 </p>
 
-_The values are shown as <Long Text> as the data viewer can&#8217;t show LOB data._
+_The values are shown as <Long Text> as the data viewer can't show LOB data._
 
-<span style="text-align: justify;">Sometimes SSIS and Excel stubbornly refuse to play nice together and won&#8217;t adjust the column data type. In that case you’ll have to adjust the data type yourself in the advanced editor of the Excel source.</span>
+<span style="text-align: justify;">Sometimes SSIS and Excel stubbornly refuse to play nice together and won't adjust the column data type. In that case you’ll have to adjust the data type yourself in the advanced editor of the Excel source.</span>
 
 <p class="MsoNormal" style="text-align: justify;">
   <strong><span lang="EN-US">Conclusion</span></strong>

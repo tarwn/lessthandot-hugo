@@ -21,9 +21,9 @@ tags:
   - smo
 
 ---
-You inherited a brand new SQL server, one of the first questions you ask is of course where is the source control for this servers I want to see all the procedures and jobs. The answer might be that they use daily backups as source control or just don&#8217;t do any source control at all.
+You inherited a brand new SQL server, one of the first questions you ask is of course where is the source control for this servers I want to see all the procedures and jobs. The answer might be that they use daily backups as source control or just don't do any source control at all.
   
-If you want all jobs into one file then you don&#8217;t need to use SMO since there is an easier solution, take a look here: [Scripting all jobs on SQL Server 2005/2008 into one file][1]
+If you want all jobs into one file then you don't need to use SMO since there is an easier solution, take a look here: [Scripting all jobs on SQL Server 2005/2008 into one file][1]
 
 If you want all the jobs into their own separate file then keep on reading here. What you do NOT want to do is script all these jobs one by one. I wrote a little C# console app that will scripts out all the jobs on a server and save them into separate files with a sql extension, this way you can dump them into a source control folder.
 

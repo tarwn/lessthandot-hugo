@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-This blog post contains test cases for the first article in the series [Including an Aggregated Column&#8217;s Related Values][1]
+This blog post contains test cases for the first article in the series [Including an Aggregated Column's Related Values][1]
 
 There is also an excellent (as always) article by Itzik Ben Gan [Optimizing TOP N per Group Queries][2]. I suggest to read and try the recommendations from that article first.
 
@@ -178,7 +178,7 @@ The execution plans
   <img src="/wp-content/uploads/blogs/DataMgmt/ExecutionPlans.gif" alt="" title="" width="1862" height="1902" />
 </div>
 
-This illustrates a real case scenario &#8211; see [ASP.NET forum&#8217;s thread][6]
+This illustrates a real case scenario &#8211; see [ASP.NET forum's thread][6]
 
 sql
 CREATE TABLE Items(

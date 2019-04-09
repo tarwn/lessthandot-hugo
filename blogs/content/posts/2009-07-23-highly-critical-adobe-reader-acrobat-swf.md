@@ -18,11 +18,11 @@ tags:
 ---
 Another critical Adobe Reader Vulnerability.
 
-A vulnerability has been reported in Adobe Reader and Acrobat, which can be exploited by malicious people to compromise a user&#8217;s system.
+A vulnerability has been reported in Adobe Reader and Acrobat, which can be exploited by malicious people to compromise a user's system.
 
 The vulnerability is caused due to an error in authplay.dll when processing SWF content and can be exploited to execute arbitrary code.
 
-From Adobe&#8217;s [security advisory][1] 
+From Adobe's [security advisory][1] 
 
 > A critical vulnerability exists in the current versions of Flash Player (v9.0.159.0 and v10.0.22.87) for Windows, Macintosh and Linux operating systems, and the authplay.dll component that ships with Adobe Reader and Acrobat v9.x for Windows, Macintosh and UNIX operating systems. This vulnerability (CVE-2009-1862) could cause a crash and potentially allow an attacker to take control of the affected system. There are reports that this vulnerability is being actively exploited in the wild via limited, targeted attacks against Adobe Reader v9 on Windows.
 > 

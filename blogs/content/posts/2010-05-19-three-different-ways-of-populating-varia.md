@@ -36,7 +36,7 @@ So you might have a (over simplified here) table like this
 
 And there might be a dozen more configurations for a process
   
-In general people will do 3 selects if there are 3 values, let&#8217;s take a look at what I mean. First create this table
+In general people will do 3 selects if there are 3 values, let's take a look at what I mean. First create this table
 
 sql
 CREATE TABLE SomeConfigurations(Typeid INT NOT NULL, 
@@ -78,7 +78,7 @@ SELECT @ActiveServerName,@DatabaseName,@LogTableName
 
 Okay so that is not really something I want to maintain. I guess if you get paid by lines of code written it makes you look good 🙂
   
-Next up.. a different approach&#8230;
+Next up.. a different approach…
 
 ## Enter the pivot.
 

@@ -45,7 +45,7 @@ If you pick the XLS format, you will see something like this
 
 [<img src="http://farm6.staticflickr.com/5487/9033887996_06e6a16b74.jpg" width="500" height="376" alt="TwitterXls" />][5]
 
-Very nice indeed, now let&#8217;s see if facebook, google+, pinterest and others will follow suit
+Very nice indeed, now let's see if facebook, google+, pinterest and others will follow suit
 
  [1]: /wp-content/uploads/blogs/ITProfessionals/Denis/Twitter AnalyticsTab.PNG?mtime=1371128480
  [2]: http://www.flickr.com/photos/denisgobo/9031660371/ "Twitter Analytics by Denis Gobo, on Flickr"

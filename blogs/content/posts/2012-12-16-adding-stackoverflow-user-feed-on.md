@@ -27,7 +27,7 @@ use XML::Feed;
 my $feed = XML::Feed->parse(URI->new('http://stackoverflow.com/feeds/user/1691146'));
 ```
 
-We need to adapt the template to account for XML::Feed&#8217;s differences: 
+We need to adapt the template to account for XML::Feed's differences: 
 
 ```perl
 my $template = <<"TEMPLATE";

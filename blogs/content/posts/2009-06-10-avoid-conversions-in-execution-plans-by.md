@@ -21,7 +21,7 @@ tags:
   - sql
 
 ---
-Yesterday in the [Changing exec to sp_executesql doesn&#8217;t provide any benefit if you are not using parameters correctly][1] post I showed you that sp_executesql is better than exec because you get plan reuse and the procedure cache doesn&#8217;t get bloated.
+Yesterday in the [Changing exec to sp_executesql doesn't provide any benefit if you are not using parameters correctly][1] post I showed you that sp_executesql is better than exec because you get plan reuse and the procedure cache doesn't get bloated.
   
 Today I will show you that sp_executesql is better than exec or ad hoc queries when you deal with conversions in execution plans
 
@@ -65,7 +65,7 @@ WHERE:([testpage].[dbo].[TestPerf].[SomeValue]=CONVERT_IMPLICIT(smallint,[@2],0)
 AND [testpage].[dbo].[TestPerf].[SomeCol1]=CONVERT_IMPLICIT(nvarchar(4000),[@1],0)))_
 ```
 
-As you can see the value 1 needs to be converted to smallint and &#8216;Test&#8217; Needs to be converted to nvarchar. You can actually see what the value is converted to by using the SQL\_VARIANT\_PROPERTY function.
+As you can see the value 1 needs to be converted to smallint and &#8216;Test' Needs to be converted to nvarchar. You can actually see what the value is converted to by using the SQL\_VARIANT\_PROPERTY function.
   
 When you run the following query
 
@@ -88,7 +88,7 @@ you get this as output
   varchar	        0	        0
 ```
 
-so the value 1 becomes an int and &#8216;test&#8217; is varchar
+so the value 1 becomes an int and &#8216;test' is varchar
 
 Exec with dynamic SQL is not any better than ad hoc of course since the same query gets generated as with the ad hoc query
   
@@ -139,7 +139,7 @@ Here is the execution plan
 
 As you can see no conversions here
 
-Now let&#8217;s take a look at how we can take the dynamic query from before and use sp_executesql to get rid of conversions
+Now let's take a look at how we can take the dynamic query from before and use sp_executesql to get rid of conversions
 
 Run this query
 
@@ -192,7 +192,7 @@ and <strong>SomeValue =  @InnerSomeValue'</strong> </pre>
   </p>
   
   <p>
-    Let&#8217;s look at something else<br /> The query from before with parameters
+    Let's look at something else<br /> The query from before with parameters
   </p>
 
 ```sql
@@ -280,7 +280,7 @@ exec sp_executesql 	@SQL,@ParmDefinition,
 </div>
 
 <p>
-  Now we will change the parameters from <strong>smallint </strong>and <strong>nvarchar </strong>to <strong>int </strong>and <strong>varchar </strong>in the query below. This won&#8217;t make any difference in the execution plan because the parameters used in the plan are still of the correct datatype since the inner parameters are used not the outer ones!!
+  Now we will change the parameters from <strong>smallint </strong>and <strong>nvarchar </strong>to <strong>int </strong>and <strong>varchar </strong>in the query below. This won't make any difference in the execution plan because the parameters used in the plan are still of the correct datatype since the inner parameters are used not the outer ones!!
 </p>
     
 ```sql

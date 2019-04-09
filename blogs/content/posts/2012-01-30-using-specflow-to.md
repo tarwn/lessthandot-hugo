@@ -31,13 +31,13 @@ This post will walk through the benefits and high level details of these methods
 
 ## Why Executable Tests
 
-End users don&#8217;t have a very clear idea of what they need. This is reflected in the requirements gathering time of projects that operate from detailed, up front specs. It&#8217;s also reflected by Agile practices, which promote short, iterative coding phases, one purpose of which is to get quick user feedback specifically to mitigate this risk. 
+End users don't have a very clear idea of what they need. This is reflected in the requirements gathering time of projects that operate from detailed, up front specs. It's also reflected by Agile practices, which promote short, iterative coding phases, one purpose of which is to get quick user feedback specifically to mitigate this risk. 
 
-Our users aren&#8217;t to blame. 
+Our users aren't to blame. 
 
-Part of the problem is our misunderstanding of what the users are trying to achieve. With different backgrounds, vocabularies, and general contexts, communication gaps and misunderstandings are to be expected. Add the fact that our end user often has only a vague definition in their own mind of what they want, which takes seeing or using a particular piece of software to determine whether their idea is works or needs further improvement or refinement. And as if that weren&#8217;t enough, there&#8217;s often a failure ask for the appropriate level of understanding committing code to editor.
+Part of the problem is our misunderstanding of what the users are trying to achieve. With different backgrounds, vocabularies, and general contexts, communication gaps and misunderstandings are to be expected. Add the fact that our end user often has only a vague definition in their own mind of what they want, which takes seeing or using a particular piece of software to determine whether their idea is works or needs further improvement or refinement. And as if that weren't enough, there's often a failure ask for the appropriate level of understanding committing code to editor.
 
-Tests can&#8217;t solve all of these issues, but they can help close the gap.
+Tests can't solve all of these issues, but they can help close the gap.
 
 ### SpecFlow, Gherkin, and Readable Tests
 
@@ -51,7 +51,7 @@ Following the Behavior Driven Development (BDD) or Acceptance Test Driven Develo
 
 As part of the Continuous Delivery project I mentioned above, I implemented a barebones interface testing project that uses Selenium WebDriver and Nunit to execute a couple basic tests against a deployed MVC site. The raw source code for the project is available on [BitBucket][5].
 
-_If you haven&#8217;t used Selenium before or are unfamiliar with the Page Object pattern, you can find more information in [this earlier post][6] which covers these topics in depth._
+_If you haven't used Selenium before or are unfamiliar with the Page Object pattern, you can find more information in [this earlier post][6] which covers these topics in depth._
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/interfacetests.png" title="Interface Tests Project" /><br /> MVCMusicStore Interface Tests Project
@@ -63,23 +63,23 @@ The tests are written in Nunit and extend a TestFixtureBase class that is respon
 
 ## Adding SpecFlow
 
-The first step is to add SpecFlow. While there is a NuGet package for it, you will actually want to download the [SpecFlow installer][7] and install it. The installer includes templates, intellisense, and other bits and bobs that you won&#8217;t get with the NuGet package. That said, I actually did both, first installing it then using NuGet to pull down the package for my project so I could commit the packaged references to the projects source code repository.
+The first step is to add SpecFlow. While there is a NuGet package for it, you will actually want to download the [SpecFlow installer][7] and install it. The installer includes templates, intellisense, and other bits and bobs that you won't get with the NuGet package. That said, I actually did both, first installing it then using NuGet to pull down the package for my project so I could commit the packaged references to the projects source code repository.
 
-After installing the full install package, there will be a few new items in the &#8220;Add New Items&#8221; menu in Visual Studio.
+After installing the full install package, there will be a few new items in the “Add New Items” menu in Visual Studio.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/SpecFlow/AddNewItem.png" title="'Add New Item' dialog in Visual Studio" /><br /> &#8220;Add New Item&#8221; dialog in Visual Studio
+  <img src="http://www.tiernok.com/LTDBlog/SpecFlow/AddNewItem.png" title="'Add New Item' dialog in Visual Studio" /><br /> “Add New Item” dialog in Visual Studio
 </div>
 
-The &#8220;SpecFlow Feature File&#8221; option will create a new pair of files for our feature and the generated code behind that feature. The feature is where we will write our user story and the individual scenarios in Gherkin. The generated code reflects the scenario as an Nunit test, with each step in the scenario treated as a potential function to call out to.
+The “SpecFlow Feature File” option will create a new pair of files for our feature and the generated code behind that feature. The feature is where we will write our user story and the individual scenarios in Gherkin. The generated code reflects the scenario as an Nunit test, with each step in the scenario treated as a potential function to call out to.
 
-The &#8220;SpecFlow Step Definition&#8221; item is just a *.cs class file that we would put the individual step functions in for the tests to call. Both the Feature File and Step Definition file are populated with an addition sample as part of their template..
+The “SpecFlow Step Definition” item is just a *.cs class file that we would put the individual step functions in for the tests to call. Both the Feature File and Step Definition file are populated with an addition sample as part of their template..
 
 ## Adding a SpecFlow feature
 
-To start with, lets discuss what we&#8217;re going to be testing. Since the application is a Music store, lets define how we want the cart total to work. Here&#8217;s the User Story (feature) we will be working with:
+To start with, lets discuss what we're going to be testing. Since the application is a Music store, lets define how we want the cart total to work. Here's the User Story (feature) we will be working with:
 
-> As a shopper I would like to see my up to date cart total as part of each screen so I don&#8217;t have to visit my cart to verify my items are in it
+> As a shopper I would like to see my up to date cart total as part of each screen so I don't have to visit my cart to verify my items are in it
 
 Now this probably sounds like enough to go ahead an implement it, but lets nail down some scenarios first. If I was an working with an end user, these are the type of things we would probably come up with:
 
@@ -115,7 +115,7 @@ Scenario: Add an Item
 
 ...
 ```
-I&#8217;ve added a SpecFlow Feature File to the project and I can write all of the scenarios for the feature. After saving it, I can run the Nunit GUI and see a series of new, inconclusive tests, each named after the Scenario name I provided in the Feature File.
+I've added a SpecFlow Feature File to the project and I can write all of the scenarios for the feature. After saving it, I can run the Nunit GUI and see a series of new, inconclusive tests, each named after the Scenario name I provided in the Feature File.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/SpecFlow/NunitInconclusive.png" title="Inconclusive tests in Nunit GUI" /><br /> Inconclusive tests in Nunit GUI
@@ -123,11 +123,11 @@ I&#8217;ve added a SpecFlow Feature File to the project and I can write all of t
 
 Feature File: [View the file on BitBucket][8]
 
-Now it&#8217;s time to start wiring them into the Page Library calls.
+Now it's time to start wiring them into the Page Library calls.
 
 ## Wiring in the Browser
 
-When each scenario runs, we want it to start clean with a fresh browser instance. This is similar to how the existing [TestFixtureBase][9] works, so we can reuse that object with a few tweaks. The challenge with the SpecFlow scenarios is that I will be reusing steps in several different features and I don&#8217;t want several different browsers to open based on which class is instantiated to make a coded step definition available. Also, unlike the current interface tests that execute inside a single method, the fact that we are running tests across multiple methods will make it trickier to keep track of the current page instance.
+When each scenario runs, we want it to start clean with a fresh browser instance. This is similar to how the existing [TestFixtureBase][9] works, so we can reuse that object with a few tweaks. The challenge with the SpecFlow scenarios is that I will be reusing steps in several different features and I don't want several different browsers to open based on which class is instantiated to make a coded step definition available. Also, unlike the current interface tests that execute inside a single method, the fact that we are running tests across multiple methods will make it trickier to keep track of the current page instance.
 
 Based on coding up several earlier SpecFlow steps, I ended up with a base class for my step definitions that helped resolve both of these issues, while also providing some properties to help improve readability.
 
@@ -179,25 +179,25 @@ namespace MvcMusicStore.InterfaceTests.Features {
 
 }
 ```
-I&#8217;ve used the SpecFlow hooks for BeforeScenario and AfterScenario to handle initialization and I&#8217;ve used the provided ScenarioContext to help store a common driver and the current page. I&#8217;ve also specified that these hooks only occur for tests tagged with &#8220;UI&#8221; so I can later create some additional tests that will make direct calls to the JSON controller endpoints without spinning up a whole browser session.
+I've used the SpecFlow hooks for BeforeScenario and AfterScenario to handle initialization and I've used the provided ScenarioContext to help store a common driver and the current page. I've also specified that these hooks only occur for tests tagged with “UI” so I can later create some additional tests that will make direct calls to the JSON controller endpoints without spinning up a whole browser session.
 
-At this point I still get all &#8220;Inconclusive&#8221; test results from Nunit, but I can see that each tests fires up a browser as Nunit progresses through the test run and the Before/AfterScenario hooks are called.
+At this point I still get all “Inconclusive” test results from Nunit, but I can see that each tests fires up a browser as Nunit progresses through the test run and the Before/AfterScenario hooks are called.
 
 ## Defining the Step Definition File
 
-With the Feature completed and a base Feature file created to handle our browser, it&#8217;s time to write the code that will be executed behind the individuals steps of the file.
+With the Feature completed and a base Feature file created to handle our browser, it's time to write the code that will be executed behind the individuals steps of the file.
 
-Besides creating tests that result in &#8220;Inconclusive&#8221; results, SpecFlow also provides us with some basic code to get started with the step definition file. In the text output tab of the Nunit GUI we can see that each undefined step from SpecFlow outputs the information needed to implement the step, like so:
+Besides creating tests that result in “Inconclusive” results, SpecFlow also provides us with some basic code to get started with the step definition file. In the text output tab of the Nunit GUI we can see that each undefined step from SpecFlow outputs the information needed to implement the step, like so:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/SpecFlow/NunitStepDefinition.png" title="Step Definition text in Nunit Text Output" /><br /> Step Definition text in Nunit Text Output
 </div>
 
-Back in Visual Studio I will create a new &#8220;SpecFlow Step Definition&#8221; file and copy the content of the Nunit Text output window into the class in this file, removing the unnecessary addition example steps and all the extra class definitions and plain text. Each statement that appears in a Scenario in the Feature File has a corresponding method in the generated Nunit test, so each one will need a method. I&#8217;ve actually cheated a little and reused some steps from some earlier SpecFlow features, so my final file only has the new steps defined:
+Back in Visual Studio I will create a new “SpecFlow Step Definition” file and copy the content of the Nunit Text output window into the class in this file, removing the unnecessary addition example steps and all the extra class definitions and plain text. Each statement that appears in a Scenario in the Feature File has a corresponding method in the generated Nunit test, so each one will need a method. I've actually cheated a little and reused some steps from some earlier SpecFlow features, so my final file only has the new steps defined:
 
-The other steps are in a previously defined [Step Definition file][10]. I&#8217;ll probably centralize common steps at some point to make them easy to find, but for the meantime the base class will help keep the current page and web browser accessible to the steps in both files and I have few enough tests that I&#8217;ll remember where those definitions are (remind me I said this when I go back in a week and make a fuss on twitter about not remembering where they are).
+The other steps are in a previously defined [Step Definition file][10]. I'll probably centralize common steps at some point to make them easy to find, but for the meantime the base class will help keep the current page and web browser accessible to the steps in both files and I have few enough tests that I'll remember where those definitions are (remind me I said this when I go back in a week and make a fuss on twitter about not remembering where they are).
 
-Once I have the Step Definition methods setup, I can go ahead and wire in the code necessary to drive the browser. I&#8217;ll walk through the methods for the &#8220;Add an Item&#8221; feature.
+Once I have the Step Definition methods setup, I can go ahead and wire in the code necessary to drive the browser. I'll walk through the methods for the “Add an Item” feature.
 
 **InterfaceTests/Features/Cart.feature**
 
@@ -222,7 +222,7 @@ public void IHaveTheHomePageOpen() {
 	NextPage = PageBase.LoadIndexPage(CurrentDriver, Settings.CurrentSettings.BaseUrl);
 }
 ```
-The class definition for FeatureBase above includes a CurrentPage property that we use to store and retrieve the page object associated with the browsers current page. To improve readability a little, I&#8217;ve created the NextPage property, which is simply a setter for the CurrentPage one. 
+The class definition for FeatureBase above includes a CurrentPage property that we use to store and retrieve the page object associated with the browsers current page. To improve readability a little, I've created the NextPage property, which is simply a setter for the CurrentPage one. 
 
 ### And I select a genre from the left
 
@@ -236,9 +236,9 @@ public void GivenISelectAGenreFromTheLeft() {
 	NextPage = CurrentPage.SelectGenre(Default.Genre.Name);
 }
 ```
-All page objects extend the PageBase class, so I&#8217;ve added a partial class for PageBase (PageLibraryPageBase.Navigation.cs) that includes navigation and behavior that&#8217;s common to all pages in the application. 
+All page objects extend the PageBase class, so I've added a partial class for PageBase (PageLibraryPageBase.Navigation.cs) that includes navigation and behavior that's common to all pages in the application. 
 
-**Default.Genre.Name**: As I mentioned earlier, there is a singleton Settings object that is responsible for loading settings from an XML file and making them available to the tests. I&#8217;ve added a _Genre_ and _Album_ element to the settings file so I can provide some default values without hardcoding them into the test code or, worse, each individual test. I then created another shortcut property in my FeatureBase so I can reference these values by the property name Default instead of the much longer Settings.CurrentSettings.Default.
+**Default.Genre.Name**: As I mentioned earlier, there is a singleton Settings object that is responsible for loading settings from an XML file and making them available to the tests. I've added a _Genre_ and _Album_ element to the settings file so I can provide some default values without hardcoding them into the test code or, worse, each individual test. I then created another shortcut property in my FeatureBase so I can reference these values by the property name Default instead of the much longer Settings.CurrentSettings.Default.
 
 ### And I select an album from the genre page
 
@@ -260,9 +260,9 @@ public void GivenISelectAnAlbumFromTheGenrePage() {
 	NextPage = ((BrowsePage)CurrentPage).SelectAlbum(Default.Album.Name);
 }
 ```
-Which just doesn&#8217;t seem as readable to me.
+Which just doesn't seem as readable to me.
 
-I&#8217;ve added the generic cast method to the PageBase method to make it easily accessible:
+I've added the generic cast method to the PageBase method to make it easily accessible:
 
 **PageLibrary/Base/PageBase.cs**
 
@@ -278,7 +278,7 @@ public abstract partial class PageBase : CommonBase {
 ```
 ### When I add the album to my cart
 
-If you remember, the original scenario we listed above was &#8220;When I add an item to my cart, it displays a total of 1&#8221;. Often it is fairly easy to separate the Given portion of our scenario from the When/Then portion because the Given part is often the part that we took for granted when we were describing the scenario or when it was described to us.
+If you remember, the original scenario we listed above was “When I add an item to my cart, it displays a total of 1”. Often it is fairly easy to separate the Given portion of our scenario from the When/Then portion because the Given part is often the part that we took for granted when we were describing the scenario or when it was described to us.
 
 **InterfaceTests/Features/CartSteps.cs**
 
@@ -288,11 +288,11 @@ public void WhenIAddTheAlbumToMyCart() {
 	NextPage = CurrentPage.As<AlbumDetailPage>().AddToCart();
 }
 ```
-As you can tell by now, the actual logic that goes into the step definition files is fairly minimal. This is by design and is similar to the MVC concept of a thin controller. By keeping the page behavior in the page objects, we&#8217;re attempting to minimize the brittleness of our test code.
+As you can tell by now, the actual logic that goes into the step definition files is fairly minimal. This is by design and is similar to the MVC concept of a thin controller. By keeping the page behavior in the page objects, we're attempting to minimize the brittleness of our test code.
 
 ### Then the cart has a total of 1
 
-The last step is to verify the expectation. We&#8217;re going to do something a little special with this step because it matches a similar step across several of the tests, with the exception of the number we are expecting to see.
+The last step is to verify the expectation. We're going to do something a little special with this step because it matches a similar step across several of the tests, with the exception of the number we are expecting to see.
 
 **InterfaceTests/Features/CartSteps.cs**
 
@@ -309,14 +309,14 @@ SpecFlow allows us to enter a regular expression in the step definition, which i
 With all of the steps built, I can now run the test for verification:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/SpecFlow/NunitAddItemDone.png" title="Pass test run for 'Add Item' scenario" /><br /> Pass test run for &#8216;Add Item&#8217; scenario
+  <img src="http://www.tiernok.com/LTDBlog/SpecFlow/NunitAddItemDone.png" title="Pass test run for 'Add Item' scenario" /><br /> Pass test run for &#8216;Add Item' scenario
 </div>
 
-The text output tab of Nunit still provides us with information at the step level, but more importantly we now have a &#8220;Pass&#8221;.
+The text output tab of Nunit still provides us with information at the step level, but more importantly we now have a “Pass”.
 
 ## Wrapping Up
 
-By capturing the end users expectations in this way, we have some structure that helps gather them at a good level of detail while also providing a testable version that we can automatically run as we develop the solution and as a regression suite when we are finished. The requirements are readable by our end user, by ourselves, and can be programmed against. As we build up a library of common step definitions we will start being able to put new tests together even faster as well as have some visibility into what portions of the application are the most critical (if a step shows up in 50% of our tests, it&#8217;s a good bet it&#8217;s a lot more critical to the stability of our application than the item that shows up once in a single test).
+By capturing the end users expectations in this way, we have some structure that helps gather them at a good level of detail while also providing a testable version that we can automatically run as we develop the solution and as a regression suite when we are finished. The requirements are readable by our end user, by ourselves, and can be programmed against. As we build up a library of common step definitions we will start being able to put new tests together even faster as well as have some visibility into what portions of the application are the most critical (if a step shows up in 50% of our tests, it's a good bet it's a lot more critical to the stability of our application than the item that shows up once in a single test).
 
 All of the code for this project is available in [BitBucket][11].
 

@@ -21,9 +21,9 @@ This came up a couple of days ago, a person created a User-Defined Table Type an
 
 **Msg 229, Level 14, State 5, Line 9
   
-The EXECUTE permission was denied on the object &#8216;SysObjectsCount&#8217;, database &#8216;testTVP&#8217;, schema &#8216;dbo&#8217;.**
+The EXECUTE permission was denied on the object &#8216;SysObjectsCount', database &#8216;testTVP', schema &#8216;dbo'.**
 
-Let&#8217;s take a look at how to give permissions because if you do the following
+Let's take a look at how to give permissions because if you do the following
 
 sql
 GRANT EXECUTE ON SysObjectsCount TO TestLogin
@@ -33,9 +33,9 @@ You will get this error
 
 **Msg 15151, Level 16, State 1, Line 1
   
-Cannot find the object &#8216;SysObjectsCount&#8217;, because it does not exist or you do not have permission.**
+Cannot find the object &#8216;SysObjectsCount', because it does not exist or you do not have permission.**
 
-Let&#8217;s fix this, I will show you some code so that you can reproduce this
+Let's fix this, I will show you some code so that you can reproduce this
 
 First create the following login
 
@@ -106,7 +106,7 @@ You get the following error
 
 **Msg 229, Level 14, State 5, Line 9
   
-The EXECUTE permission was denied on the object &#8216;SysObjectsCount&#8217;, database &#8216;testTVP&#8217;, schema &#8216;dbo&#8217;.**
+The EXECUTE permission was denied on the object &#8216;SysObjectsCount', database &#8216;testTVP', schema &#8216;dbo'.**
 
 In order to give the permissions to testLogin, you need to execute the following code, yes the **::** is correct.
 
@@ -148,7 +148,7 @@ And if you look now in SSMS, you will be able to see the User-Defined Table Type
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/tvp.PNG?mtime=1332357761"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/tvp.PNG?mtime=1332357761" width="305" height="481" /></a>
 </div>
 
-That&#8217;s it for this post&#8230;hopefully this will help someone else in the future
+That's it for this post…hopefully this will help someone else in the future
 
 See also my post [SQL Advent 2011 Day 18: Table-valued Parameters][1] for some more info about User-Defined Table Types
 

@@ -21,7 +21,7 @@ tags:
   - restore
 
 ---
-In yesterday&#8217;s post [MongoDB: How to backup and restore databases][1] we looked at how to backup and restore a database, today we are going to look at how to restore a collection from a backup. Be aware that mongorestore and mongodump have to be executed from a command window in the bin directory where mongodb is. To execute the MongoDB commands you need to connect to mongodb first. On my PC this is in the directory C:NoSQLmongodbbin>
+In yesterday's post [MongoDB: How to backup and restore databases][1] we looked at how to backup and restore a database, today we are going to look at how to restore a collection from a backup. Be aware that mongorestore and mongodump have to be executed from a command window in the bin directory where mongodb is. To execute the MongoDB commands you need to connect to mongodb first. On my PC this is in the directory C:NoSQLmongodbbin>
 
 In order to get started create a new database, name it MultiCollection 
 
@@ -63,7 +63,7 @@ Thu Jan 31 16:16:52 Metadata for MultiCollection.People to dump/MultiCollection/
 
 C:NoSQLmongodbbin></pre>
 
-Now let&#8217;s add one more item to the People collection
+Now let's add one more item to the People collection
 
 <pre>db.People.insert( { name : "ZZZZZZ",  age : 9999 } )</pre>
 
@@ -85,7 +85,7 @@ Thu Jan 31 16:20:52     going into namespace [MultiCollection.People]
 5 objects found
 Thu Jan 31 16:20:52     Creating index: { key: { _id: 1 }, ns: "MultiCollection.People", name: "_id_" }</pre>
 
-Let&#8217;s take a look at what we have
+Let's take a look at what we have
   
 We should have 5 items since we did a backup before we added item 6, we restored that backup
 
@@ -108,7 +108,7 @@ Something is not right, we still have 6 items. If you look back at the restore o
 
 What we have to do is drop the collections first, you do that by specifying `--drop`
 
-Let&#8217;s do the restore again but now with the &#8211;drop option
+Let's do the restore again but now with the &#8211;drop option
 
 <pre>mongorestore dump/MultiCollection --drop</pre>
 
@@ -138,11 +138,11 @@ Here are the results
 
 As you can see we have 5 items now
 
-Let&#8217;s insert the same item again
+Let's insert the same item again
 
 <pre>db.People.insert( { name : "ZZZZZZ",  age : 9999 } )</pre>
 
-Let&#8217;s also drop the Blog collection
+Let's also drop the Blog collection
 
 <pre>db.Blog.drop()</pre>
 
@@ -167,7 +167,7 @@ Thu Jan 31 17:01:28     going into namespace [MultiCollection.Blog]
 5 objects found
 Thu Jan 31 17:01:28     Creating index: { key: { _id: 1 }, ns: "MultiCollection.Blog", name: "_id_" }</pre>
 
-Since we already dropped the collection manually we didn&#8217;t have to add the drop option. Let&#8217;s see what we have in the database now, People should have 6 items and Blog should have 5 items
+Since we already dropped the collection manually we didn't have to add the drop option. Let's see what we have in the database now, People should have 6 items and Blog should have 5 items
 
 <pre>db.Blog.find()
 { "_id" : ObjectId("510adec1d9a67956d3f4a446"), "name" : "Denis", "age" : 20 }

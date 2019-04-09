@@ -24,7 +24,7 @@ tags:
   - sql server
 
 ---
-At work we decided to start a book club, we pick a book, every week we decide how much we will read. After the week is over, we meet and then discuss what we read. We discuss what we liked, what we didn&#8217;t like and also what we learned.
+At work we decided to start a book club, we pick a book, every week we decide how much we will read. After the week is over, we meet and then discuss what we read. We discuss what we liked, what we didn't like and also what we learned.
 
 [<img src="http://farm6.staticflickr.com/5478/9564719333_3d9b05c893.jpg" width="500" height="375" alt="Book list" />][1]
 
@@ -50,7 +50,7 @@ Chapter 7: Special Datatypes and Execution Plans
   
 Chapter 8: Advanced Topics
 
-One chapter a week should be doable for everyone. I will post my &#8216;review&#8217; on Sunday and then you guys have the whole of next week to do yours in the comments.
+One chapter a week should be doable for everyone. I will post my &#8216;review' on Sunday and then you guys have the whole of next week to do yours in the comments.
 
 After this book is done we can pick the next one, we can use a poll for that.
 

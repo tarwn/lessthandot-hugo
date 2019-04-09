@@ -13,7 +13,7 @@ categories:
   - Microsoft Access
 
 ---
-Here is a list of the wikis that refer specifically to Microsoft Access, however, a great many ideas from other areas, such as SQL Server, can be transferred to Access, so don&#8217;t stop here! You can also post in our forums ([Access VBA & Jet SQL][1], [Access Forms & Reports][2]), if you need any help, or would like to help others.
+Here is a list of the wikis that refer specifically to Microsoft Access, however, a great many ideas from other areas, such as SQL Server, can be transferred to Access, so don't stop here! You can also post in our forums ([Access VBA & Jet SQL][1], [Access Forms & Reports][2]), if you need any help, or would like to help others.
 
 It is important to remember that Access uses the Jet database, for the most part, but both halves of this union, Jet and Access, can be used separately. It is something I often forget 🙂
 
@@ -94,7 +94,7 @@ This is a list of functions that appear in the wiki, a number of them may have b
   * [Domain Aggregate Functions][38]
   * [File, Folder, Drive Exists][39]
   * [Listbox: Does an Item Exist][40]
-  * [Luhn&#8217;s Algorithm in Visual Basic][41]
+  * [Luhn's Algorithm in Visual Basic][41]
   * [Most Recently Created File in a Folder][42]
   * [Ordinal Suffixes for Dates (st, nd, rd, th)][43]
   * [Table, Query, Form, Report, Module Exists][44]

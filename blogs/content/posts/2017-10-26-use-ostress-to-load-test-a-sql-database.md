@@ -42,7 +42,7 @@ The output folder contains one log file, and one output file for each connection
 
 [<img class="aligncenter size-full wp-image-8833" src="/wp-content/uploads/2017/10/ostress-output.png" alt="ostress-output" width="487" height="199" srcset="/wp-content/uploads/2017/10/ostress-output.png 487w, /wp-content/uploads/2017/10/ostress-output-300x123.png 300w" sizes="(max-width: 487px) 100vw, 487px" />][2]
 
-One question I&#8217;ve been asked was how to build delays into the batch. My suggestion is to edit the T-SQL script, using WAITFOR DELAY, to accomplish that.
+One question I've been asked was how to build delays into the batch. My suggestion is to edit the T-SQL script, using WAITFOR DELAY, to accomplish that.
 
 Give ostress a try when you want a simple load testing tool for SQL Server!
 

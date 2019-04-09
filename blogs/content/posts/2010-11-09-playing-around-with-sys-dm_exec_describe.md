@@ -22,7 +22,7 @@ tags:
   - sql server denali
 
 ---
-If you have a stored procedure which returns two result sets up till now there was now way to get the meta data easily about the first result set. Let&#8217;s take a look what is new in SQL Server Denali, first create this very simple stored procedure.
+If you have a stored procedure which returns two result sets up till now there was now way to get the meta data easily about the first result set. Let's take a look what is new in SQL Server Denali, first create this very simple stored procedure.
 
 sql
 create procedure prTest
@@ -159,7 +159,7 @@ As you can see you get the name, type, precision, length and more about the resu
 
 ## sys.dm\_exec\_describe\_first\_result_set
 
-This query is more interesting because it will look at a dynamic query. Let&#8217;s say your query is the following _&#8216;SELECT * FROM sysobjects SELECT 3&#8217;_ passed in as a parameter
+This query is more interesting because it will look at a dynamic query. Let's say your query is the following _&#8216;SELECT * FROM sysobjects SELECT 3'_ passed in as a parameter
 
 Here is how that would work
 

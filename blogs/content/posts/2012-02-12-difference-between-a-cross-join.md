@@ -36,7 +36,7 @@ A cross join produces the Cartesian product of the tables involved in the join. 
 
 Here what Wikipedia has to say about it: http://en.wikipedia.org/wiki/Cartesian_product
 
-> For example, the Cartesian product of the 13-element set of standard playing card ranks {Ace, King, Queen, Jack, 10, 9, 8, 7, 6, 5, 4, 3, 2} and the four-element set of card suits {&#9824;, &#9829;, &#9830;, &#9827;} is the 52-element set of all possible playing cards: ranks × suits = {(Ace, &#9824;), (King, &#9824;), &#8230;, (2, &#9824;), (Ace, &#9829;), &#8230;, (3, &#9827;), (2, &#9827;)}. The corresponding Cartesian product has 52 = 13 × 4 elements. The Cartesian product of the suits × ranks would still be the 52 pairings, but in the opposite order {(&#9824;, Ace), (&#9824;, King), &#8230;}. Ordered pairs (a kind of tuple) have order, but sets are unordered. The order in which the elements of a set are listed is irrelevant; the deck can be shuffled and it is still the same set of cards.
+> For example, the Cartesian product of the 13-element set of standard playing card ranks {Ace, King, Queen, Jack, 10, 9, 8, 7, 6, 5, 4, 3, 2} and the four-element set of card suits {&#9824;, &#9829;, &#9830;, &#9827;} is the 52-element set of all possible playing cards: ranks × suits = {(Ace, &#9824;), (King, &#9824;), …, (2, &#9824;), (Ace, &#9829;), …, (3, &#9827;), (2, &#9827;)}. The corresponding Cartesian product has 52 = 13 × 4 elements. The Cartesian product of the suits × ranks would still be the 52 pairings, but in the opposite order {(&#9824;, Ace), (&#9824;, King), …}. Ordered pairs (a kind of tuple) have order, but sets are unordered. The order in which the elements of a set are listed is irrelevant; the deck can be shuffled and it is still the same set of cards.
 
 ## Full outer join
 
@@ -46,7 +46,7 @@ Here is what wikipedia has on full outer join: http://en.wikipedia.org/wiki/Join
 
 > Conceptually, a full outer join combines the effect of applying both left and right outer joins. Where records in the FULL OUTER JOINed tables do not match, the result set will have NULL values for every column of the table that lacks a matching row. For those records that do match, a single row will be produced in the result set (containing fields populated from both tables).
   
-> For example, this allows us to see each employee who is in a department and each department that has an employee, but also see each employee who is not part of a department and each department which doesn&#8217;t have an employee.
+> For example, this allows us to see each employee who is in a department and each department that has an employee, but also see each employee who is not part of a department and each department which doesn't have an employee.
 
 ## Examples
 
@@ -133,9 +133,9 @@ Here is the output
   </table>
 </div>
 
-As you can see there are two rows that have NULL in them, these are the ones that don&#8217;t exist in both tables
+As you can see there are two rows that have NULL in them, these are the ones that don't exist in both tables
 
-Now, let&#8217;s look at the cross join. We will get back 9 rows since we have 3 rows in both tables, output will be 3 x 3 rows
+Now, let's look at the cross join. We will get back 9 rows since we have 3 rows in both tables, output will be 3 x 3 rows
 
 sql
 SELECT * FROM TableA a

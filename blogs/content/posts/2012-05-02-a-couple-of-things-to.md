@@ -67,7 +67,7 @@ GO
 INSERT Test DEFAULT VALUES
 ```
 
-The problem is that until you try to insert data in your tables, you won&#8217;t see this error, at that point it might be too late and your application will fail
+The problem is that until you try to insert data in your tables, you won't see this error, at that point it might be too late and your application will fail
 
 To list all the tables in your database without a clustered index, you can use this code
 
@@ -98,7 +98,7 @@ _Msg 40516, Level 15, State 1, Line 2
   
 Global temp objects are not supported in this version of SQL Server._
 
-I admit that I have only used a global temporary table once or twice in the last 10+ years or so, I don&#8217;t think this is a big deal
+I admit that I have only used a global temporary table once or twice in the last 10+ years or so, I don't think this is a big deal
 
 ## 3) Select Into is not supported
 
@@ -112,9 +112,9 @@ Here is the error
   
 _Msg 40510, Level 16, State 1, Line 1
   
-Statement &#8216;SELECT INTO&#8217; is not supported in this version of SQL Server._
+Statement &#8216;SELECT INTO' is not supported in this version of SQL Server._
 
-I don&#8217;t think this is a big deal either, sure you will have to list all the columns and create the table first before inserting, this could be a pain in the neck but it is not the end of the world
+I don't think this is a big deal either, sure you will have to list all the columns and create the table first before inserting, this could be a pain in the neck but it is not the end of the world
 
 ## 4) Newsequentialid() is not supported
 
@@ -134,13 +134,13 @@ Here is the error message
   
 _Msg 40511, Level 15, State 1, Line 1
   
-Built-in function &#8216;newsequentialid&#8217; is not supported in this version of SQL Server._
+Built-in function &#8216;newsequentialid' is not supported in this version of SQL Server._
 
 In this case, you will probably need to go with newid() instead of newsequentialid(), not a big change
 
 ## Conclusion
 
-Overall I don&#8217;t think that these are major issues and should be fairly easy to either change the design or change the code to get around these limitations in this version of SQL Azure
+Overall I don't think that these are major issues and should be fairly easy to either change the design or change the code to get around these limitations in this version of SQL Azure
 
 What do you think, big pain in the neck or no big deal?
 

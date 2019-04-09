@@ -26,15 +26,15 @@ I went to Amsterdam (and Antwerp) for 12 days recently and was shocked at the ra
 
 [<img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/Screenshot_2013-07-27-08-12-44.png?mtime=1374927587" width="360" height="640" />][1]
 
-You might think those prices aren&#8217;t too bad, but you need to pay attention, scroll down to the bottom of the message, here is what you see
+You might think those prices aren't too bad, but you need to pay attention, scroll down to the bottom of the message, here is what you see
   
 
   
 [<img alt="" src="/wp-content/uploads/users/SQLDenis/TurnOfData.PNG?mtime=1374929678" width="565" height="210" />][2]
   
-AT&T will charge you $19.97 per MB for roaming if you don&#8217;t take one of those 3 packages. Imagine if you by mistake download an 8 MB picture because you forgot to turn roaming off, that is one expensive picture. These prices are just too much, all the operators in the world should have some kind of agreement and then they can charge you a little more for roaming but certainly not $19.97 per MB. I know one person who recently went to Mexico for 4 days and got charged an extra $300. I think $20 or $30 per week for roaming should be more than enough to cover any so called costs that the operators are incurring because of someone going to a different country with their cell phone.
+AT&T will charge you $19.97 per MB for roaming if you don't take one of those 3 packages. Imagine if you by mistake download an 8 MB picture because you forgot to turn roaming off, that is one expensive picture. These prices are just too much, all the operators in the world should have some kind of agreement and then they can charge you a little more for roaming but certainly not $19.97 per MB. I know one person who recently went to Mexico for 4 days and got charged an extra $300. I think $20 or $30 per week for roaming should be more than enough to cover any so called costs that the operators are incurring because of someone going to a different country with their cell phone.
 
-Just remember when going abroad, turn off cellular or turn on airplane mode and then see what packages your operator offers. The $30 for 120 MB also seems a little steep to me. When people are on vacation they like to take a lot of pictures and post them via instagram, facebook, twitter, Google + and other services, this will chew up a lot of data. One GB for $50 seems much more reasonable to me, we don&#8217;t have 640 K cameras on our phone anymore. Also some phones will upload you pictures to Google+ in the background so you have to be aware of that as well.
+Just remember when going abroad, turn off cellular or turn on airplane mode and then see what packages your operator offers. The $30 for 120 MB also seems a little steep to me. When people are on vacation they like to take a lot of pictures and post them via instagram, facebook, twitter, Google + and other services, this will chew up a lot of data. One GB for $50 seems much more reasonable to me, we don't have 640 K cameras on our phone anymore. Also some phones will upload you pictures to Google+ in the background so you have to be aware of that as well.
 
 What do you think, are the prices fair or are the operators gauging if you are roaming?
 

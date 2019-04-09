@@ -17,4 +17,4 @@ categories:
 ---
 Tell a story about SQL Server in 11 words or less. 
 
-Despite his protests, the report told the truth. Data doesn&#8217;t lie.
+Despite his protests, the report told the truth. Data doesn't lie.

@@ -34,16 +34,16 @@ Product information is literally all the information you can find about the prod
   * sizes and colours
   * Detailed specifications
   * Price information
-  * Images, video&#8217;s, URL&#8217;s
+  * Images, video's, URL's
   * Promo and marketing information
   * Packaging information
   * Datasheets, manuals
   * Sale information
   * Availability information
   * Relations with other products
-  * &#8230;
+  * …
 
-And multiply all the above with all the languages of all the countries a company is selling to. That&#8217;s a lot to manage isn&#8217;t it?
+And multiply all the above with all the languages of all the countries a company is selling to. That's a lot to manage isn't it?
 
 <div class="image_block">
   <a href="http://www.flickr.com/photos/jeannetteeatsspaghetti/8681772523/"><img src="/wp-content/uploads/blogs/DataMgmt/Axel8s/PIM.jpg?mtime=1379538337" alt="" width="471" height="500" /></a>
@@ -51,7 +51,7 @@ And multiply all the above with all the languages of all the countries a company
 
 # Where is this information now?
 
-In most companies the essential information for a product is found in their ERP system. The rest is scattered over the company in departmental files, folders, databases, papers etc&#8230; Or can be found at external organisations hired for marketing campaigns, printed catalogs, website design, translations and so on.
+In most companies the essential information for a product is found in their ERP system. The rest is scattered over the company in departmental files, folders, databases, papers etc… Or can be found at external organisations hired for marketing campaigns, printed catalogs, website design, translations and so on.
   
 And usually when a company thinks about starting a web-shop they realize they need accurate and complete information to put on the web and they start looking for something to manage their product information.
 

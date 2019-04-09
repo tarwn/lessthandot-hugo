@@ -21,7 +21,7 @@ tags:
 ---
 I wrote a blog post 437 days ago asking you the reader if you would be interested in a FxCop tool for SQL Server. That post can be found here: [SQLCop, FxCop For SQL Server, Would You Be Interested in This?][1]. Today I am pleased to announce that the first version of this tool is available. The tool is free and will remain free, we will never charge for it.
 
-The tool is only 412 kb to download and no installer is needed. The reason we didn&#8217;t do an add in in SSMS is because we wanted people to be able to run it it by itself. The tool was tested on Windows XP, Vista and Windows 7 (64 and 32 bit)
+The tool is only 412 kb to download and no installer is needed. The reason we didn't do an add in in SSMS is because we wanted people to be able to run it it by itself. The tool was tested on Windows XP, Vista and Windows 7 (64 and 32 bit)
 
 A big thanks to [George Mastros][2] for coding this tool, you can also thank him on twitter here: http://twitter.com/gmmastros
 

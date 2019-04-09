@@ -31,7 +31,7 @@ Take it to the cloud, of course.
 
 ## Azure Setup
 
-The target of this exercise was to get the project deploying automatically to the cloud, and I wasn&#8217;t particular about where. I decided that the [free website][3] feature in Azure would be a good target. Mostly due to the free part but also because I suspected it would be easy.
+The target of this exercise was to get the project deploying automatically to the cloud, and I wasn't particular about where. I decided that the [free website][3] feature in Azure would be a good target. Mostly due to the free part but also because I suspected it would be easy.
 
 First up was creating an Azure account, which I did via [WindowsAzure.com][4]. The Web Sites feature is still in Preview mode, so I had to go the preview features and enable it.
 
@@ -45,7 +45,7 @@ The Web Sites option is at the bottom and enabled with a button and dialog:
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-02.png" alt="WindowsAzure.com - Preview Features" /><br /> WindowsAzure.com &#8211; Preview Features
 </div>
 
-Once it&#8217;s enabled, I can go into the portal and when I press the &#8220;New&#8221; button at the bottom, I&#8217;ll have options to create a new Web Site instance.
+Once it's enabled, I can go into the portal and when I press the “New” button at the bottom, I'll have options to create a new Web Site instance.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-03.png" alt="WindowsAzure.com - New Website" /><br /> WindowsAzure.com &#8211; New Website
@@ -57,7 +57,7 @@ After creating the new site, it will provision and show up in my dashboard:
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-04.png" alt="WindowsAzure.com - Dashboard" /><br /> WindowsAzure.com &#8211; Dashboard
 </div>
 
-That&#8217;s all it takes to have a new Web Site in Windows Azure. Of course it&#8217;s not doing anything useful at the moment, so lets go back to the build process and fix that.
+That's all it takes to have a new Web Site in Windows Azure. Of course it's not doing anything useful at the moment, so lets go back to the build process and fix that.
 
 ## Build Process Changes
 
@@ -65,7 +65,7 @@ Because I chose to use an Azure Web Site, the build changes are going to be mini
 
 In the properties dashboard for the new website above, there is a link to download the publish settings for the site and a link to setup credentials. First setup the credentials, then click the download link to download the publish settings. These settings are intended for Visual Studio or Web Matrix, but being XML we can read the file and pluck out the important values.
 
-I made a copy of my final &#8220;Deploy to Production&#8221; step and modified the msdeploy step to use a new Param file. The Param file is used during the deployment to set the IIS name and connection strings, you can see all of them on [BitBucket][5]. 
+I made a copy of my final “Deploy to Production” step and modified the msdeploy step to use a new Param file. The Param file is used during the deployment to set the IIS name and connection strings, you can see all of them on [BitBucket][5]. 
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-05.png" alt="TeamCity Build Steps" /><br /> TeamCity Build Steps
@@ -82,7 +82,7 @@ I then updated the Configuration Parameters to reflect the Azure credentials and
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-07.png" alt="TeamCity Configuration Parameters" /><br /> TeamCity Configuration Parameters
 </div>
 
-And that&#8217;s it, probably the fastest on premises to cloud change. Press the build button in TeamCity and we have a green build to the cloud:
+And that's it, probably the fastest on premises to cloud change. Press the build button in TeamCity and we have a green build to the cloud:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-08.png" alt="TeamCity Build Successful" /><br /> TeamCity Build Successful
@@ -102,7 +102,7 @@ And of course I had to push the button a few times:
 
 You can see the site here: http://elismvcmusicstore.azurewebsites.net
 
-_Note: It will probably load slowly. It&#8217;s on a shared node and seems to go to sleep since it gets visited so infrequently. If I felt like paying for it, it&#8217;s just a toggle button away from running as a reserved instance (and another to scale it up to multiple instances)_
+_Note: It will probably load slowly. It's on a shared node and seems to go to sleep since it gets visited so infrequently. If I felt like paying for it, it's just a toggle button away from running as a reserved instance (and another to scale it up to multiple instances)_
 
 ## That was the easy button version
 

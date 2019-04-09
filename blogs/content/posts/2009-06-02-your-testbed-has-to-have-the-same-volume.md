@@ -27,11 +27,11 @@ Now how on earth can you expect anything to behave the same when you compare 100
   
 This is one of the fundamental flaws when people design a database, move it to production and then find out that it blows up/breaks down/is unusable on production
 
-The worst case I have seen was when someone designed a table with a CompanyName column which was CHAR(5000). Yes you read that right CHAR(5000) nor VARCHAR(5000). On &#8216;staging&#8217; it was all fine with 50 rows or so. They moved this to production loaded it up with 100000 rows and it was slow as hell. What can you expect when you have only one row per page&#8230;..this was just terrible.
+The worst case I have seen was when someone designed a table with a CompanyName column which was CHAR(5000). Yes you read that right CHAR(5000) nor VARCHAR(5000). On &#8216;staging' it was all fine with 50 rows or so. They moved this to production loaded it up with 100000 rows and it was slow as hell. What can you expect when you have only one row per page…..this was just terrible.
 
 I understand that not every shop has the money to store terabytes of data but guess what? You can buy a USB TB hard drive for about $100. Plug in 5 of those and test with volume otherwise you will suffer later.
 
-Now let&#8217;s look at some code to see what the difference is
+Now let's look at some code to see what the difference is
 
 First create these two tables
 
@@ -95,9 +95,9 @@ select * from TestBig
 where Somevalue like '2%'
 ```
 
-Table &#8216;TestSmall&#8217;. Scan count 1, logical reads 2, physical reads 0
+Table &#8216;TestSmall'. Scan count 1, logical reads 2, physical reads 0
   
-Table &#8216;TestBig&#8217;. Scan count 1, logical reads 74, physical reads 0
+Table &#8216;TestBig'. Scan count 1, logical reads 74, physical reads 0
 
 As you can see the reads are much higher for the TestBig table, this is of course not surprising since the TestBig has a lot more rows
 
@@ -111,9 +111,9 @@ select * from TestBig
 where left(Somevalue,1) = '2'
 ```
 
-Table &#8216;TestSmall&#8217;. Scan count 1, logical reads 7, physical reads 0
+Table &#8216;TestSmall'. Scan count 1, logical reads 7, physical reads 0
   
-Table &#8216;TestBig&#8217;. Scan count 1, logical reads 1132, physical reads 0
+Table &#8216;TestBig'. Scan count 1, logical reads 1132, physical reads 0
 
 Okay, so the smaller table had 3.5 times more reads while the bigger table had 15 times more reads. Just imagine what would happen if the bigger table was even bigger?
 
@@ -129,7 +129,7 @@ sql
 set statistics time on
 ```
 
-Let&#8217;s run the same queries again
+Let's run the same queries again
 
 sql
 select * from TestSmall
@@ -149,7 +149,7 @@ CPU time = 15 ms, elapsed time = 97 ms.
 
 As you can see the numbers are much better for the smaller table
   
-When we do the non sargable queries the numbers don&#8217;t increase for the smaller table but they do for the bigger table
+When we do the non sargable queries the numbers don't increase for the smaller table but they do for the bigger table
 
 sql
 select * from TestSmall

@@ -38,7 +38,7 @@ Call
 sql
 Select dbo.DateTimeTimeZoneOffset('2009-06-26')
 ```
-Usage of this is seen directly in the blog post from yesterday and how it can be a simply task for formatting things like DateTime. Don&#8217;t let it stop there though. Formatting strings for file names, headers, logs and on can be done quickly and easily with C# (or VB.NET) and makes this a great tool to any DBA.
+Usage of this is seen directly in the blog post from yesterday and how it can be a simply task for formatting things like DateTime. Don't let it stop there though. Formatting strings for file names, headers, logs and on can be done quickly and easily with C# (or VB.NET) and makes this a great tool to any DBA.
 
 Next goes into file operations.
 
@@ -94,7 +94,7 @@ sql
 Exec WriteToFile 'Testing....','C:txt_doc_new.txt'
 ```
 
-Last one I&#8217;ll post today is removing old files (backups typically) which is similar to a task I used to do using vbs scripts. The vbs scripts are a good method. I still use it on a few instances I want security more restricted as well. I say that of course as the permission level of any file operations SQLCLR will be external or unsafe. Given that setting is permitted in the situation, the SQLCLR is handy and easier to throw logging and other methods into the process.
+Last one I'll post today is removing old files (backups typically) which is similar to a task I used to do using vbs scripts. The vbs scripts are a good method. I still use it on a few instances I want security more restricted as well. I say that of course as the permission level of any file operations SQLCLR will be external or unsafe. Given that setting is permitted in the situation, the SQLCLR is handy and easier to throw logging and other methods into the process.
 
 Delete old backups in a series of subdirectories. 
 
@@ -137,7 +137,7 @@ sql
 Exec RemoveOldBackups 'C:test',23
 ```
 
-Have fun and don&#8217;t forget the pressure SQLCLR can bring to you instances.
+Have fun and don't forget the pressure SQLCLR can bring to you instances.
 
 
 

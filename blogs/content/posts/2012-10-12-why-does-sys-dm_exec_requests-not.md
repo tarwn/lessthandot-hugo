@@ -59,7 +59,7 @@ dbcc opentran
 ```
 
 
-> Transaction information for database &#8216;AdventureWorks2012&#8217;.</p> 
+> Transaction information for database &#8216;AdventureWorks2012'.</p> 
 > 
 > Oldest active transaction:
       

@@ -50,11 +50,11 @@ _The SQL Server Code Name “Denali” CTP3 Product Guide includes useful resour
 
   * Denali Technical Overview
   * Microsoft SQL Server: The Data and BI Platform for Today and Tomorrow
-  * For Partners &#8211; Exploring Opportunities with the Cloud-Ready Information Platform and SQL Server Code Name &#8220;Denali&#8221;
+  * For Partners &#8211; Exploring Opportunities with the Cloud-Ready Information Platform and SQL Server Code Name “Denali”
   * Security Features Overview
   * All Up Data Warehouse: From SMP to Parallel Data Warehouse
   * Optimize SQL Server for Private Cloud Technical Presentation
-  * Introducing Microsoft SQL Server Developer Tools,Code Name &#8220;Juneau&#8221;: An Introduction to Doing Database Development in a Modern Way
+  * Introducing Microsoft SQL Server Developer Tools,Code Name “Juneau”: An Introduction to Doing Database Development in a Modern Way
   * Best Practices for Building Custom Open Data Protocol (OData) Services with Windows Azure
 
           **5 Technical White Papers**

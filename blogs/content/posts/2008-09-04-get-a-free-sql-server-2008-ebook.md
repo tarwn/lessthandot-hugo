@@ -18,7 +18,7 @@ tags:
   - tools
 
 ---
-Download a trial version of Red Gate&#8217;s SQL Toolbelt 2008 and get [Brad&#8217;s Sure Guide to SQL Server 2008][1] for free
+Download a trial version of Red Gate's SQL Toolbelt 2008 and get [Brad's Sure Guide to SQL Server 2008][1] for free
 
 Products included in the SQL Toolbelt 2008:
 
@@ -44,8 +44,8 @@ SQL Multi Script
   
 SQL Comparison SDK
 
-I have been using Red Gate&#8217;s products since 2002 and must say that they have saved me tons of work/time many times.
+I have been using Red Gate's products since 2002 and must say that they have saved me tons of work/time many times.
 
-Here is the link to the site: [Brad&#8217;s Sure Guide to SQL Server 2008][1]
+Here is the link to the site: [Brad's Sure Guide to SQL Server 2008][1]
 
  [1]: http://www.red-gate.com/specials/ToolbeltBradsure.htm?utm_source=ssc&utm_medium=email&utm_content=Bradsure-080904&utm_campaign=sqltoolbelt

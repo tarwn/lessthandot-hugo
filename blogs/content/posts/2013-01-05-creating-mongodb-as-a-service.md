@@ -28,11 +28,11 @@ In addition to Scala I decided to mess around with MongoDB as well. This post is
 
 Here is what wikipedia has to say about MongoDB
 
-> MongoDB (from &#8220;humongous&#8221;) is an open source document-oriented database system developed and supported by 10gen. It is part of the NoSQL family of database systems. Instead of storing data in tables as is done in a &#8220;classical&#8221; relational database, MongoDB stores structured data as JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster.
+> MongoDB (from “humongous”) is an open source document-oriented database system developed and supported by 10gen. It is part of the NoSQL family of database systems. Instead of storing data in tables as is done in a “classical” relational database, MongoDB stores structured data as JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster.
 
 Here is what MongoDB is about according to their site
 
-> MongoDB (from &#8220;hu**mongo**us&#8221;) is a scalable, high-performance, open source NoSQL database. Written in C++, MongoDB features:
+> MongoDB (from “hu**mongo**us”) is a scalable, high-performance, open source NoSQL database. Written in C++, MongoDB features:
 > 
 > Document-Oriented Storage »
   
@@ -40,7 +40,7 @@ Here is what MongoDB is about according to their site
 > 
 > Full Index Support »
   
-> Index on any attribute, just like you&#8217;re used to.
+> Index on any attribute, just like you're used to.
 > 
 > Replication & High Availability »
   
@@ -86,7 +86,7 @@ THIRD-PARTY-NOTICES
 
 After you are done with that you need to create a data folder, inside that folder you need a db folder. Your db folder would be in this location C:NoSQLmongodbdatadb
 
-Let&#8217;s see if we can get MongoDB to start up.
+Let's see if we can get MongoDB to start up.
   
 Open up a Command Prompt (WinKey + X + C) and paste this in
   
@@ -116,11 +116,11 @@ f9d664267
   
 Sat Jan 05 12:12:25 [initandlisten] build info: windows sys.getwindowsversion(ma
   
-jor=6, minor=1, build=7601, platform=2, service\_pack=&#8217;Service Pack 1&#8242;) BOOST\_LIB
+jor=6, minor=1, build=7601, platform=2, service\_pack='Service Pack 1&#8242;) BOOST\_LIB
   
 \_VERSION=1\_49
   
-Sat Jan 05 12:12:25 [initandlisten] options: { dbpath: &#8220;C:NoSQLmongodbdata&#8221; }</p> 
+Sat Jan 05 12:12:25 [initandlisten] options: { dbpath: “C:NoSQLmongodbdata” }</p> 
 
 Sat Jan 05 12:12:25 [initandlisten] journal dir=C:/NoSQL/mongodb/data/journal
   
@@ -148,31 +148,31 @@ Sat Jan 05 12:13:24 dbexit:
   
 Sat Jan 05 12:13:24 [consoleTerminate] shutdown: going to close listening socket
   
-s&#8230;
+s…
   
 Sat Jan 05 12:13:24 [consoleTerminate] closing listening socket: 352
   
 Sat Jan 05 12:13:24 [consoleTerminate] closing listening socket: 372
   
-Sat Jan 05 12:13:24 [consoleTerminate] shutdown: going to flush diaglog&#8230;
+Sat Jan 05 12:13:24 [consoleTerminate] shutdown: going to flush diaglog…
   
-Sat Jan 05 12:13:24 [consoleTerminate] shutdown: going to close sockets&#8230;
+Sat Jan 05 12:13:24 [consoleTerminate] shutdown: going to close sockets…
   
-Sat Jan 05 12:13:24 [consoleTerminate] shutdown: waiting for fs preallocator&#8230;
+Sat Jan 05 12:13:24 [consoleTerminate] shutdown: waiting for fs preallocator…
   
-Sat Jan 05 12:13:24 [consoleTerminate] shutdown: lock for final commit&#8230;
+Sat Jan 05 12:13:24 [consoleTerminate] shutdown: lock for final commit…
   
-Sat Jan 05 12:13:24 [consoleTerminate] shutdown: final commit&#8230;
+Sat Jan 05 12:13:24 [consoleTerminate] shutdown: final commit…
   
-Sat Jan 05 12:13:24 [consoleTerminate] shutdown: closing all files&#8230;
+Sat Jan 05 12:13:24 [consoleTerminate] shutdown: closing all files…
   
 Sat Jan 05 12:13:24 [consoleTerminate] closeAllFiles() finished
   
-Sat Jan 05 12:13:24 [consoleTerminate] journalCleanup&#8230;
+Sat Jan 05 12:13:24 [consoleTerminate] journalCleanup…
   
 Sat Jan 05 12:13:24 [consoleTerminate] removeJournalFiles
   
-Sat Jan 05 12:13:24 [consoleTerminate] shutdown: removing fs lock&#8230;
+Sat Jan 05 12:13:24 [consoleTerminate] shutdown: removing fs lock…
   
 Sat Jan 05 12:13:24 dbexit: really exiting now_
 
@@ -224,7 +224,7 @@ If you look at the services (either click on Services from Control PanelSystem a
 
 Congratulations, the service is now running
 
-Let&#8217;s take it for a test, open up a Command Prompt and paste the following _C:NoSQLmongodbbinmongo_
+Let's take it for a test, open up a Command Prompt and paste the following _C:NoSQLmongodbbinmongo_
 
 You should see
   
@@ -234,7 +234,7 @@ connecting to: test
   
 Welcome to the MongoDB shell.
   
-For interactive help, type &#8220;help&#8221;.
+For interactive help, type “help”.
   
 For more comprehensive documentation, see
           
@@ -258,19 +258,19 @@ switched to db test
 
 Type **k = { x : 5 }** and hit enter, you should see the following
   
-{ &#8220;x&#8221; : 5 }
+{ “x” : 5 }
 
-Type **j = { name : &#8220;Denis&#8221;}** and hit enter, you should see the following
+Type **j = { name : “Denis”}** and hit enter, you should see the following
   
-{ &#8220;name&#8221; : &#8220;Denis&#8221; }
+{ “name” : “Denis” }
 
-Now let&#8217;s insert j and k into the database
+Now let's insert j and k into the database
   
 Type **db.things.insert( j )** and hit enter
   
 Type **db.things.insert( k )** and hit enter
 
-Now let&#8217;s see what we inserted
+Now let's see what we inserted
 
 Type **show collections** and hit enter, you should see the following
   
@@ -280,36 +280,36 @@ things
 
 Type **db.things.find()** and hit enter, you should see the following
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e861b1065e4ad1d2279af6&#8221;), &#8220;name&#8221; : &#8220;Denis&#8221; }
+{ “_id” : ObjectId(“50e861b1065e4ad1d2279af6”), “name” : “Denis” }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e861b9065e4ad1d2279af7&#8221;), &#8220;x&#8221; : 5 }
+{ “_id” : ObjectId(“50e861b9065e4ad1d2279af7”), “x” : 5 }
 
-Let&#8217;s use a loop to insert another 9 items
+Let's use a loop to insert another 9 items
   
 Type **for (var i = 1; i <= 9; i++) db.things.insert( { x : 5 , j : i } )** and hit enter
 
 Type **db.things.find()** and hit enter, you should see the following
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e861b1065e4ad1d2279af6&#8221;), &#8220;name&#8221; : &#8220;Denis&#8221; }
+{ “_id” : ObjectId(“50e861b1065e4ad1d2279af6”), “name” : “Denis” }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e861b9065e4ad1d2279af7&#8221;), &#8220;x&#8221; : 5 }
+{ “_id” : ObjectId(“50e861b9065e4ad1d2279af7”), “x” : 5 }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e86200065e4ad1d2279af8&#8221;), &#8220;x&#8221; : 5, &#8220;j&#8221; : 1 }
+{ “_id” : ObjectId(“50e86200065e4ad1d2279af8”), “x” : 5, “j” : 1 }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e86200065e4ad1d2279af9&#8221;), &#8220;x&#8221; : 5, &#8220;j&#8221; : 2 }
+{ “_id” : ObjectId(“50e86200065e4ad1d2279af9”), “x” : 5, “j” : 2 }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e86200065e4ad1d2279afa&#8221;), &#8220;x&#8221; : 5, &#8220;j&#8221; : 3 }
+{ “_id” : ObjectId(“50e86200065e4ad1d2279afa”), “x” : 5, “j” : 3 }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e86200065e4ad1d2279afb&#8221;), &#8220;x&#8221; : 5, &#8220;j&#8221; : 4 }
+{ “_id” : ObjectId(“50e86200065e4ad1d2279afb”), “x” : 5, “j” : 4 }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e86200065e4ad1d2279afc&#8221;), &#8220;x&#8221; : 5, &#8220;j&#8221; : 5 }
+{ “_id” : ObjectId(“50e86200065e4ad1d2279afc”), “x” : 5, “j” : 5 }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e86200065e4ad1d2279afd&#8221;), &#8220;x&#8221; : 5, &#8220;j&#8221; : 6 }
+{ “_id” : ObjectId(“50e86200065e4ad1d2279afd”), “x” : 5, “j” : 6 }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e86200065e4ad1d2279afe&#8221;), &#8220;x&#8221; : 5, &#8220;j&#8221; : 7 }
+{ “_id” : ObjectId(“50e86200065e4ad1d2279afe”), “x” : 5, “j” : 7 }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e86200065e4ad1d2279aff&#8221;), &#8220;x&#8221; : 5, &#8220;j&#8221; : 8 }
+{ “_id” : ObjectId(“50e86200065e4ad1d2279aff”), “x” : 5, “j” : 8 }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;50e86200065e4ad1d2279b00&#8221;), &#8220;x&#8221; : 5, &#8220;j&#8221; : 9 }
+{ “_id” : ObjectId(“50e86200065e4ad1d2279b00”), “x” : 5, “j” : 9 }
 
-This post was mostly to show you how you can setup MongoDB to run as a service on Windows 8. In subsequent posts we will take a look at how to do more interesting stuff with MongoDB. Stay tuned&#8230;&#8230;
+This post was mostly to show you how you can setup MongoDB to run as a service on Windows 8. In subsequent posts we will take a look at how to do more interesting stuff with MongoDB. Stay tuned……

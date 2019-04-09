@@ -21,7 +21,7 @@ How do you select all the rows that contain uppercase characters only? There sre
   
 3 Cast to varbinary 
 
-Let&#8217;s first create the table and also some test data 
+Let's first create the table and also some test data 
 
 CREATE TABLE #tmp ( x VARCHAR(10) NOT NULL ) 
 
@@ -43,7 +43,7 @@ ABC
   
 ZZZ 
 
-Let&#8217;s get started, first up is BINARY_CHECKSUM 
+Let's get started, first up is BINARY_CHECKSUM 
 
 ```text
 SELECT x 
@@ -80,7 +80,7 @@ SELECT DATABASEPROPERTYEX( 'model' , 'collation' )
 ```
 I get this as output: SQL\_Latin1\_General\_CP1\_CI_AS 
 
-What does all that junk mean? Well let&#8217;s run the following function (yes those are 2 colons :: )
+What does all that junk mean? Well let's run the following function (yes those are 2 colons :: )
 
 ```text
 SELECT * 

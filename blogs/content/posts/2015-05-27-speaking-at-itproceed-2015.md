@@ -28,7 +28,7 @@ Power BI has many faces and this session aims to give a clear overview of what P
   
 You will learn how you can use Power BI in your environment and how you can bring self-service BI to the next level.
 
-You can check the full agenda [here][2]. There is still room available, so hurry up and register [here][3]. Oh wait, I didn&#8217;t mention the best part yet: the event is totally free!
+You can check the full agenda [here][2]. There is still room available, so hurry up and register [here][3]. Oh wait, I didn't mention the best part yet: the event is totally free!
 
 See you at ITPROceed!
 

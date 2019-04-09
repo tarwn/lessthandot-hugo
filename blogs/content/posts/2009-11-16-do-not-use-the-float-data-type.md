@@ -15,7 +15,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-That may seem a little harsh, and it&#8217;s not always true. However, most of the time, the float data type should be avoided. Unfortunately, the float (and real) data types are approximate data types that can lead to significant rounding errors.
+That may seem a little harsh, and it's not always true. However, most of the time, the float data type should be avoided. Unfortunately, the float (and real) data types are approximate data types that can lead to significant rounding errors.
 
 **How to detect this problem:**
 

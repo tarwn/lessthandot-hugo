@@ -19,7 +19,7 @@ tags:
   - sql server fabric
 
 ---
-Microsoft has shown DATAllegro at the PASS conference. They have removed Linux, the database it was running on and also the old file system. DATAllegro is running on Windows with NTFS and SQL2008 now. Can&#8217;t wait for the Kilimanjaro CTP 🙂
+Microsoft has shown DATAllegro at the PASS conference. They have removed Linux, the database it was running on and also the old file system. DATAllegro is running on Windows with NTFS and SQL2008 now. Can't wait for the Kilimanjaro CTP 🙂
 
 Another thing shown at PASS is SQL Server Fabric. SQL Server Fabric gives you the ability to manage your SQL Server environment as a whole. Inside SQL Server Management Studio there will be a new view named Fabric Explorer connecting to a Fabric Control Point. The Dashboard will show the overal health
 

@@ -32,7 +32,7 @@ tags:
   - xml
 
 ---
-This is a remarkably simple trick which I&#8217;ve found very handy. With a few lines of Perl you can take any RSS feed and format it to your liking.
+This is a remarkably simple trick which I've found very handy. With a few lines of Perl you can take any RSS feed and format it to your liking.
 
 # 
 

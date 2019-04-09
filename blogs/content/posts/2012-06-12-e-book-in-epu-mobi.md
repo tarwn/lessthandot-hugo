@@ -64,6 +64,6 @@ Windows Azure Prescriptive Guidance
   
 Windows Azure Service Bus Reference
 
-Some of these books are pretty short, the shortest one is 6 pages, there are also longer books, the longest one is 422 pages. This a good deal, now you can load these books on your mobile device and even if you don&#8217;t have connectivity, you will be able to pick up some new things that you will learn from these books
+Some of these books are pretty short, the shortest one is 6 pages, there are also longer books, the longest one is 422 pages. This a good deal, now you can load these books on your mobile device and even if you don't have connectivity, you will be able to pick up some new things that you will learn from these books
 
 You can check out all these books here: http://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx

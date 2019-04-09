@@ -22,9 +22,9 @@ Over the series of 12 posts, I have built a <a href="http://wiki.ltd.local/index
 
 ## General Feelings
 
-My general feelings towards TeamCity during this process have been good. I found several places where TeamCity would have been easier to use [than Jenkins], such as parsing test result files and evaluating results. I like the visibility of pending changes for each build step and everything I have implemented has been extremely straightforward (though I haven&#8217;t taken on custom graphs and code coverage yet). Wiring together dependencies was far easier and clearer then in Jenkins, and the build-level configurations and sharing of build numbers throughout the build was a lot cleaner. Little touches like previews for the artifacts and working directories were also extremely handy.
+My general feelings towards TeamCity during this process have been good. I found several places where TeamCity would have been easier to use [than Jenkins], such as parsing test result files and evaluating results. I like the visibility of pending changes for each build step and everything I have implemented has been extremely straightforward (though I haven't taken on custom graphs and code coverage yet). Wiring together dependencies was far easier and clearer then in Jenkins, and the build-level configurations and sharing of build numbers throughout the build was a lot cleaner. Little touches like previews for the artifacts and working directories were also extremely handy.
 
-Not everything was perfect, however. The build chains were as close as I could get to a pipeline visualization and they are busier then the pipeline view in Jenkins. There also wasn&#8217;t an obvious way to use a build chain view for the dashboard. Rerunning steps in the build would create a whole new chain, rather then being treated as a retry of a prior run of the same snapshot. The plugins don&#8217;t feel quite as first class in TeamCity as they did in Jenkins, but the built in functionality was quite a bit more extensive, so I think this just comes down to focus and my own experience (or lack) with the tools. 
+Not everything was perfect, however. The build chains were as close as I could get to a pipeline visualization and they are busier then the pipeline view in Jenkins. There also wasn't an obvious way to use a build chain view for the dashboard. Rerunning steps in the build would create a whole new chain, rather then being treated as a retry of a prior run of the same snapshot. The plugins don't feel quite as first class in TeamCity as they did in Jenkins, but the built in functionality was quite a bit more extensive, so I think this just comes down to focus and my own experience (or lack) with the tools. 
 
 But enough of my feelings, lets do some technical stuff.
 
@@ -32,7 +32,7 @@ But enough of my feelings, lets do some technical stuff.
 
 The build pipeline is the process the code goes through from committing the code to eventual delivery, automated where possible to minimize the lead time for new features and wire in good practices I want to follow. The code is built and passes through a variety of tests and checks at each step, with only a few configurations changing along the way, ensuring what is released has passed every step as quickly and consistently as possible (smooth is fast). 
 
-The current Jenkins build pipeline looks like this (plus lots of static analysis that doesn&#8217;t fit in the picture):
+The current Jenkins build pipeline looks like this (plus lots of static analysis that doesn't fit in the picture):
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_load.png" title="Continuous Delivery Pipeline with Load Test Step" /><br /> Continuous Delivery Pipeline with Load Test Step
@@ -72,7 +72,7 @@ Since my [original post][1] I have setup a dedicated Hyper-V server on Windows 2
   * <a href="http://www.iis.net/downloads/community/2007/05/wcat-63-%28x64%29" title="WCAT 6.3 download on iis.net" target="_blank">WCAT 6.3</a>
   * <a href="http://www.mozilla.org/en-US/firefox/new/" title="Firefox download" target="_blank">FireFox 146 (or whatever)</a>
 
-As noted, the Firefox and mercurial installs didn&#8217;t match, version-wise, but everything else I kept the same as the Jenkins build server.
+As noted, the Firefox and mercurial installs didn't match, version-wise, but everything else I kept the same as the Jenkins build server.
 
 ## Creating the CI Build
 
@@ -86,13 +86,13 @@ The project serves as the container for the builds, creating one only requires a
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_01.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_01_sm.png" alt="TeamCity - Project Setup" /><br /> </a><br /> Team City &#8211; Project Setup
 </div>
 
-Once the project is named, I can add my first build step (don&#8217;t worry, I&#8217;ll only do these screen shots one time):
+Once the project is named, I can add my first build step (don't worry, I'll only do these screen shots one time):
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_02.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_02_sm.png" alt="TeamCity - Ready to add builds" /><br /> </a><br /> Team City &#8211; Ready to add builds
 </div>
 
-Here I&#8217;ll name the build step and define the artifacts I want to store for later use, including the deployment package I intend to make and the folder of environment-specific configurations.
+Here I'll name the build step and define the artifacts I want to store for later use, including the deployment package I intend to make and the folder of environment-specific configurations.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_03.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_03_sm.png" alt="TeamCity - Adding a Build" /><br /> </a><br /> Team City &#8211; Adding a Build
@@ -104,7 +104,7 @@ Next is the settings for the main site code repository. To create VCS settings f
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_04.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_04_sm.png" alt="TeamCity - Defining Version Control" /><br /> </a><br /> Team City &#8211; Defining Version Control
 </div>
 
-At this point I can start adding my build steps. These build steps will duplicate the ones I used in Jenkins. An advantage over the Jenkins setup is that the MSBuild runner already has versions configured and there is a built-in MSTest runner. When entering the command-line calls I used in Jenkins, I&#8217;ll substitute in TeamCity variables using the small  ![Popup icon][2]image next to the inputs.
+At this point I can start adding my build steps. These build steps will duplicate the ones I used in Jenkins. An advantage over the Jenkins setup is that the MSBuild runner already has versions configured and there is a built-in MSTest runner. When entering the command-line calls I used in Jenkins, I'll substitute in TeamCity variables using the small  ![Popup icon][2]image next to the inputs.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_05.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_05_sm.png" alt="TeamCity - Build Steps" /><br /> </a><br /> Team City &#8211; Build Steps
@@ -124,7 +124,7 @@ Then the last step is to define the build parameters. TeamCity automatically det
   <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_07.png" alt="TeamCity - Build Parameters" /><br /> Team City &#8211; Build Parameters
 </div>
 
-Once I have finished setting up this build, I can return to the main dashboard and run it on demand by pressing the &#8220;Run&#8221; button.
+Once I have finished setting up this build, I can return to the main dashboard and run it on demand by pressing the “Run” button.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_08.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_08_sm.png" alt="TeamCity - Dashboard" /><br /> </a><br /> Team City &#8211; Dashboard
@@ -140,7 +140,7 @@ The interface testing build ([original post here][4]) is only a few steps. The f
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_09.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_09_sm.png" alt="TeamCity - Interface Test Build" /><br /> </a><br /> Team City &#8211; Interface Test Build
 </div>
 
-Skipping ahead to the Dependencies section, I&#8217;ll add a snapshot dependency on the CI stage so that builds of the Interface stage use snapshots from the same point in time as it&#8217;s linked CI build. I&#8217;ll also add an artifact dependency to pull all of the artifacts from the CI build into a local folder named PriorArtifacts, keeping with the pattern I used in the Jenkins build. 
+Skipping ahead to the Dependencies section, I'll add a snapshot dependency on the CI stage so that builds of the Interface stage use snapshots from the same point in time as it's linked CI build. I'll also add an artifact dependency to pull all of the artifacts from the CI build into a local folder named PriorArtifacts, keeping with the pattern I used in the Jenkins build. 
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_10.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_10_sm.png" alt="TeamCity - Dependencies" /><br /> </a><br /> Team City &#8211; Dependencies
@@ -152,9 +152,9 @@ Next I add a build trigger to run after a successful build of the CI stage and f
   <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_11.png" alt="TeamCity - Build Parameters" /><br /> Team City &#8211; Build Parameters
 </div>
 
-And the last step is to return to the project screen and define the Artifacts for this stage as &#8220;PriorArtifacts/*&#8221; so it will pass on all of the artifacts it pulled in from the prior stage.
+And the last step is to return to the project screen and define the Artifacts for this stage as “PriorArtifacts/*” so it will pass on all of the artifacts it pulled in from the prior stage.
 
-Running this build reminded me that Firefox has a nasty habit of downloading updates when you least want them, as the interface tests started timing out because they couldn&#8217;t quit. A quick tweak to the Firefox settings and I have a successful interface test step running, with the test results showing in the summary just like the CI stage.
+Running this build reminded me that Firefox has a nasty habit of downloading updates when you least want them, as the interface tests started timing out because they couldn't quit. A quick tweak to the Firefox settings and I have a successful interface test step running, with the test results showing in the summary just like the CI stage.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_12.png" alt="TeamCity - Interface Tests" /><br /> Team City &#8211; Interface Tests
@@ -168,7 +168,7 @@ At this point I have all the pieces I need to finish out the last 3 stages.
 
 **Load Test Build**
   
-The Load Test stage ([see original here][5]) gets the same build number and artifacts as the Interface Testing stage. I add a new VCS root to pull down the load tests scripts from [BitBucket][6], deploy, smoke test, then run the run.cmd file that runs the WCAT load test. I skipped the challenging part of this, which is turning the results into a chart, but as I mentioned earlier that sounds like it will be a follow-up post of it&#8217;s own. The dependencies, parameters, and build trigger are set up the same as the Interface testing build.
+The Load Test stage ([see original here][5]) gets the same build number and artifacts as the Interface Testing stage. I add a new VCS root to pull down the load tests scripts from [BitBucket][6], deploy, smoke test, then run the run.cmd file that runs the WCAT load test. I skipped the challenging part of this, which is turning the results into a chart, but as I mentioned earlier that sounds like it will be a follow-up post of it's own. The dependencies, parameters, and build trigger are set up the same as the Interface testing build.
 
 **Deploy QA and Deploy Prod Builds**
   
@@ -182,7 +182,7 @@ Those 5 builds compromise the core of the pipeline and show up in the TeamCity d
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_13.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_13_sm.png" alt="TeamCity - Full Dashboard" /><br /> </a><br /> Team City &#8211; Full Dashboard
 </div>
 
-To get to the build chains view, go into the Project page and click the last tab to the right, titled &#8220;Build Chains&#8221;.
+To get to the build chains view, go into the Project page and click the last tab to the right, titled “Build Chains”.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_14.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_14_sm.png" alt="TeamCity - Build Chains" /><br /> </a><br /> Team City &#8211; Build Chains

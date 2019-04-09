@@ -23,7 +23,7 @@ tags:
 ---
 ### ISO Week in SQL Server
 
-First let&#8217;s take a look at what ISO week is, from WikiPedia:
+First let's take a look at what ISO week is, from WikiPedia:
   
 Week date representations are in the format as shown below.
   
@@ -31,11 +31,11 @@ YYYY-Www or YYYYWww
   
 YYYY-Www-D or YYYYWwwD
 
-[YYYY] indicates the so-called ISO year which is slightly different than the calendar year (see below). [Www] is the week number prefixed by the letter &#8216;W&#8217;, from W01 through W53. [D] is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday. This form is popular in the manufacturing industries.
+[YYYY] indicates the so-called ISO year which is slightly different than the calendar year (see below). [Www] is the week number prefixed by the letter &#8216;W', from W01 through W53. [D] is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday. This form is popular in the manufacturing industries.
   
 There are mutually equivalent definitions for week 01:
 
-  * the week with the year&#8217;s first Thursday in it,
+  * the week with the year's first Thursday in it,
   * the week with 4 January in it,
   * the first week with the majority (four or more) of its days in the starting year, and
   * the week starting with the Monday in the period 29 December – 4 January.
@@ -48,8 +48,8 @@ The ISO year starts at the first day (Monday) of week 01 and ends at the Sunday 
   
 Examples:
 
-  * 2008-12-29 is written &#8220;2009-W01-1&#8221;
-  * 2010-01-03 is written &#8220;2009-W53-7&#8221;
+  * 2008-12-29 is written “2009-W01-1”
+  * 2010-01-03 is written “2009-W53-7”
 
 You can read more about ISO week here: http://en.wikipedia.org/wiki/ISO\_week\_date
 
@@ -90,7 +90,7 @@ sql
 select datepart(isowk,'20071231'),datepart(wk,'20071231')
 ```
 
-As you can see here also SQL Server&#8217;s wk part returns 53 while isowk returns 1
+As you can see here also SQL Server's wk part returns 53 while isowk returns 1
 
 I have also added parts of this to the wiki here: [ISO Week In SQL Server][1]
 

@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-End of the day and I thought I&#8217;d offer this up to read and think about.
+End of the day and I thought I'd offer this up to read and think about.
 
 What makes a good SQL Server Reporting Services implementation?
 
@@ -24,7 +24,7 @@ Once you ask these questions you can identify issues that must be avoided.
 
 Report rendering performance:
 
-As much as possible, all data should be located with the SSRS installation. This is a hard task to meet but if obtained, the trips once taken off the server to other data stores will increase performance by taking network latency out of the picture. Most reports are going to generate a large return of data. Make sure you don&#8217;t allow this to hurt your performance. That does not remove the server to client aspect but limits the latency to that alone. Security is a problem once you create your data storage for reporting. Are you compromising data that is sensitive? Working in the pharmaceutical area this may be more of a critical step in the process to take. It should always be considered though. Next, what are the clients using to access your report server? Is your client environment controlled so you know what to develop for?
+As much as possible, all data should be located with the SSRS installation. This is a hard task to meet but if obtained, the trips once taken off the server to other data stores will increase performance by taking network latency out of the picture. Most reports are going to generate a large return of data. Make sure you don't allow this to hurt your performance. That does not remove the server to client aspect but limits the latency to that alone. Security is a problem once you create your data storage for reporting. Are you compromising data that is sensitive? Working in the pharmaceutical area this may be more of a critical step in the process to take. It should always be considered though. Next, what are the clients using to access your report server? Is your client environment controlled so you know what to develop for?
 
 Security:
 

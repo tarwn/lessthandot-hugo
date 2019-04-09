@@ -16,7 +16,7 @@ categories:
 ---
 This is a quick one and I see one issue already in the script generating a useless Go, use, go but here we go.
 
-Using SMO to script some indexes and FK&#8217;s found on tables.
+Using SMO to script some indexes and FK's found on tables.
 
 Create a new c# app project in VS.NET (mine is named object scripter). Add the GUI objects so it looks like this
 
@@ -24,7 +24,7 @@ Create a new c# app project in VS.NET (mine is named object scripter). Add the G
   <img src="/wp-content/uploads/blogs/DataMgmt//smo_1.gif" alt="" title="" width="770" height="603" />
 </div>
 
-Paste the code (not error handled and very quickly written..you&#8217;ve been warned!!!) below in the code view
+Paste the code (not error handled and very quickly written..you've been warned!!!) below in the code view
 
 ```csharp
 using System;

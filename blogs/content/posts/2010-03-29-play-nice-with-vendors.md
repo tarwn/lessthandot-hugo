@@ -72,7 +72,7 @@ SELECT
 > WHERE ps.forwarded_record_count > 0
 ```
 
-To learn more about forwarded records and HEAP issues, check Sankar Reddy’s ([blog][3] | [Twitter][4]) blog, &#8220;[How can I tell if a SQL Server system is affected by Forwarded records?&#8221;][5] and also a very good [reply][6] from Jonathan Kehayias ([blog][1] | [Twitter][2]) in the msdn forums [here][6].
+To learn more about forwarded records and HEAP issues, check Sankar Reddy’s ([blog][3] | [Twitter][4]) blog, “[How can I tell if a SQL Server system is affected by Forwarded records?”][5] and also a very good [reply][6] from Jonathan Kehayias ([blog][1] | [Twitter][2]) in the msdn forums [here][6].
   
 Once the problem was identified as forwarded records on a HEAP table, it was found that the table had a unique non-clustered index. This left the opportunity to resolve the forwarded records issue by converting the unique non-clustered index into a clustered index and would resolve the problems.
   
@@ -106,7 +106,7 @@ The email (has been altered to keep to a NDA):
 > 
 > Without the effort put forth to create the good relationship with the vendor, this task could have been a long and drawn out process. Worse, the performance problem could have remained on the database and any workaround fix (from us) would have been at best, temporary. 
 > 
-> ## What&#8217;s next?
+> ## What's next?
 > 
 > Call your vendor and begin to create a professional relationship with them. Introduce yourself. Send them an email.
 

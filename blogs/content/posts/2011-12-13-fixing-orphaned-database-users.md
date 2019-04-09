@@ -49,13 +49,13 @@ To call SP\_CHANGE\_USERS_LOGIN, use the following syntax.
 
  
 
-sp\_change\_users_login [ @Action = ] &#8216;action&#8217;
+sp\_change\_users_login [ @Action = ] &#8216;action'
 
-[ , [ @UserNamePattern = ] &#8216;user&#8217; ]
+[ , [ @UserNamePattern = ] &#8216;user' ]
 
-[ , [ @LoginName = ] &#8216;login&#8217; ]
+[ , [ @LoginName = ] &#8216;login' ]
 
-[ , [ @Password = ] &#8216;password&#8217; ]
+[ , [ @Password = ] &#8216;password' ]
 
 [;]
 

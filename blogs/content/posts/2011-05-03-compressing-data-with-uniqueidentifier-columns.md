@@ -39,7 +39,7 @@ With compressing a table with one column, the results would be thought to compre
   <a href="/wp-content/uploads/blogs/DataMgmt/-51.png?mtime=1304392780"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-51.png?mtime=1304392780" width="624" height="118" /></a>
 </div>
 
-**Hold on&#8230;let’s talk**
+**Hold on…let’s talk**
 
 Before going over the results, note: compression will vary slightly based on the data types that are in the table.  There are many data types that cannot be compressed and some that can be greatly impacted by enabling either ROW or PAGE.  In most cases, ROW and PAGE level compression will also have drastic differences.  A perfect example of a high impact compression can make is on CHAR data types.  The benefit of the compression on CHAR is the removal of the trailing space. 
 

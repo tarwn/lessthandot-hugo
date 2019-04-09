@@ -29,7 +29,7 @@ tags:
 ---
 The following [question][1] was asked
 
-> I&#8217;ve got a sql server that&#8217;s set up to have database files to default to e drive, but the model&#8217;s files are on c. will new database pick up the setting from the server and put them on e, or will they pick it up from the model and put them on c?
+> I've got a sql server that's set up to have database files to default to e drive, but the model's files are on c. will new database pick up the setting from the server and put them on e, or will they pick it up from the model and put them on c?
 
 What SQL Server does is that it will pick up the settings from the server settings. We can easily verify that by running some scripts
 
@@ -68,7 +68,7 @@ C:Program FilesMicrosoft SQL ServerMSSQL11.MSSQLSERVERMSSQLDATATestMeNow.mdf
   
 C:Program FilesMicrosoft SQL ServerMSSQL11.MSSQLSERVERMSSQLDATATestMeNow_log.ldf
 
-Now, let&#8217;s change it at the server level, this code below will make the default for data files on D:Data and log files on D:Log
+Now, let's change it at the server level, this code below will make the default for data files on D:Data and log files on D:Log
 
 sql
 USE [master]

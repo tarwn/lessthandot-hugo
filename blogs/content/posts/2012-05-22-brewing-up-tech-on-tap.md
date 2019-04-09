@@ -24,7 +24,7 @@ The first [Tech on Tap][1] was [so much fun][2] that we decided to do it again! 
 
 **The Topic** 
 
-[Microsoft SharePoint][3] is everywhere, in organizations of all sizes. If it is in yours, or your company is considering implementing it, you won&#8217;t want to miss this. What is SharePoint? It’s a presentation and collaboration platform. It’s a document authoring and sharing tool. People can set up web sites with it, manage documents, and publish reports.
+[Microsoft SharePoint][3] is everywhere, in organizations of all sizes. If it is in yours, or your company is considering implementing it, you won't want to miss this. What is SharePoint? It’s a presentation and collaboration platform. It’s a document authoring and sharing tool. People can set up web sites with it, manage documents, and publish reports.
 
  
 

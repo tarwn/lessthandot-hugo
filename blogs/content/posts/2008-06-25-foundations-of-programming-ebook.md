@@ -15,15 +15,15 @@ categories:
   - VB.NET
 
 ---
-I noticed this free ebook today, figured I would share it here. I&#8217;ve obviously not read the whole thing yet, but it looks like its&#8217; pretty good info (at least for a .NET developer).
+I noticed this free ebook today, figured I would share it here. I've obviously not read the whole thing yet, but it looks like its' pretty good info (at least for a .NET developer).
 
 You can download it here: [Foundations of Programming @ CodeBetter][1]
 
-I think its&#8217; really cool that someone took the time to compile all this information and get it out to us for free. It seems pretty concise also (only 79 pages, and covers a lot of big topics). 
+I think its' really cool that someone took the time to compile all this information and get it out to us for free. It seems pretty concise also (only 79 pages, and covers a lot of big topics). 
 
 Enjoy. Or not.
 
-And if you do enjoy it, kick it, if you&#8217;re into that kind of thing. I&#8217;d think its&#8217; useful to non-lessthandoters as well 😉 
+And if you do enjoy it, kick it, if you're into that kind of thing. I'd think its' useful to non-lessthandoters as well 😉 
 
 [Foundations of Programming @ DotNetKicks][2]
 

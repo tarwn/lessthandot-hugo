@@ -127,13 +127,13 @@ ID: 50000
   
 Source: setup.rll </p> 
 
-We&#8217;re sorry
+We're sorry
   
 There is no additional information about this issue in the Error and Event Log Messages or Knowledge Base databases at this time. You can use the links in the Support area to determine whether any additional information might be available elsewhere.</em>
 
 Download the [SQL Server 2014 CTP1][1] and start playing with Hekaton
   
-Make sure to check out Kalen delaney&#8217;s Hekaton whitepaper as well, you can download the whitepaper here: http://t.co/6IzfRnJLcu</x64>
+Make sure to check out Kalen delaney's Hekaton whitepaper as well, you can download the whitepaper here: http://t.co/6IzfRnJLcu</x64>
 
 Here are a couple of small posts I put together
 

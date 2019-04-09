@@ -19,21 +19,21 @@ categories:
   - ASP.NET
 
 ---
-I recently had to go back and make some changes to a Web Service I&#8217;d made a while ago in VS2005. For some reason, when I tried to open the project, Visual Studio gave me this error:
+I recently had to go back and make some changes to a Web Service I'd made a while ago in VS2005. For some reason, when I tried to open the project, Visual Studio gave me this error:
 
-_&#8220;Project type is not supported by this installation&#8221;_
+_“Project type is not supported by this installation”_
 
-I can&#8217;t think of any changes I&#8217;ve made to my Visual Studio installation, but _something_ must have changed for it to no longer see the type of project I&#8217;d created (it could open other projects in the solution, just not this particular one).
+I can't think of any changes I've made to my Visual Studio installation, but _something_ must have changed for it to no longer see the type of project I'd created (it could open other projects in the solution, just not this particular one).
 
-Anyway, after much searching and a few failed attempts to fix it from other posts I&#8217;d read on the subject, here&#8217;s what worked for me:
+Anyway, after much searching and a few failed attempts to fix it from other posts I'd read on the subject, here's what worked for me:
 
 1. Close all instances of Visual Studio
 
-2. Download and install &#8220;Microsoft Visual Studio 2005 &#8211; Update to Support Web Application Projects&#8221; from:
+2. Download and install “Microsoft Visual Studio 2005 &#8211; Update to Support Web Application Projects” from:
 
 http://www.microsoft.com/downloads/details.aspx?FamilyId=8B05EE00-9554-4733-8725-3CA89DD9BFCA&displaylang=en
 
-3. Download and install &#8220;Web Application Project Setup&#8221; from
+3. Download and install “Web Application Project Setup” from
 
 http://download.microsoft.com/download/9/0/6/906064ce-0bd1-4328-af40-49dca1aef87c/WebApplicationProjectSetup.msi
 

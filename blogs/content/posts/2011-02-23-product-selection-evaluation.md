@@ -42,7 +42,7 @@ tags:
   </ul>
 </div>
 
-Having identified the root needs the product will fulfill, engaging people while selecting criteria, and generating a scorecard to evaluate each contender against, we&#8217;re ready to get started, right?
+Having identified the root needs the product will fulfill, engaging people while selecting criteria, and generating a scorecard to evaluate each contender against, we're ready to get started, right?
 
 Well, almost. 
 
@@ -56,7 +56,7 @@ In order to evaluate and score all of the contending products, we first need som
   <img src="http://tiernok.com/LTDBlog/ProductSelection/doors.png" title="Obligatory picture of 3 doors" style="max-width: 120px" />
 </div>
 
-At this point it&#8217;s highly likely we will have one or two products that have been suggested. However those aren&#8217;t the only solutions on the market and armed with our enhanced and comprehensive list of requirement, we ought to be able to find a few more options to evaluate. Even if we have a clear winner at this point, looking at additional options will ensure there wasn&#8217;t anything critical we overlooked and that we can show alignment with the groups interests.
+At this point it's highly likely we will have one or two products that have been suggested. However those aren't the only solutions on the market and armed with our enhanced and comprehensive list of requirement, we ought to be able to find a few more options to evaluate. Even if we have a clear winner at this point, looking at additional options will ensure there wasn't anything critical we overlooked and that we can show alignment with the groups interests.
 
 <div style="border: 1px solid #BBBBBB; margin: 0em 1em; padding: 1em; float: right; width: 200px;">
   I was once in a process improvement session that was headed towards a solution involving a 3-4 week development project. The operations manager listened to us hash through the problem and requirements, then calmly suggested a solution involving a pack of construction paper and some transparent binder inserts. Not only did it end up filling the need, we were able to implement it that afternoon and it required less work to use.
@@ -66,9 +66,9 @@ While options are good, we want to be wary of the internal development solution.
 
 ### <s>Play with products</s> Evaluate! 
 
-With the exception of the internal development product, it&#8217;s now time to sit down and play with some products. Depending on the size of the purchase and the criticality of the purchase, this could consist of something as light as reviewing published specs to getting full installations or samples and having real users test drive the products. The scorecard is the starting point for these trials, but we want to make sure we also capture additional features and any detrimental factors we run into. 
+With the exception of the internal development product, it's now time to sit down and play with some products. Depending on the size of the purchase and the criticality of the purchase, this could consist of something as light as reviewing published specs to getting full installations or samples and having real users test drive the products. The scorecard is the starting point for these trials, but we want to make sure we also capture additional features and any detrimental factors we run into. 
 
-Extra columns or space on the scorecard should be used to reflect software scores. These include things like price tags, annual support costs, average response time, and other similar values. Some of these, like cost, will likely already be strongly represented in our criteria (ie, don&#8217;t spend more than $X), while other may need to be factored in or rated against one another. Don&#8217;t forget to track bonus items, features no one was expecting but might help break a tie.
+Extra columns or space on the scorecard should be used to reflect software scores. These include things like price tags, annual support costs, average response time, and other similar values. Some of these, like cost, will likely already be strongly represented in our criteria (ie, don't spend more than $X), while other may need to be factored in or rated against one another. Don't forget to track bonus items, features no one was expecting but might help break a tie.
 
 ### Review and Select 
 
@@ -78,21 +78,21 @@ Extra columns or space on the scorecard should be used to reflect software score
 
 Highest score wins, right? Not necessarily.
 
-After all of the evaluations have been completed, we should have a clear set of leaders. With some hands on time, there have likely been some pros and cons discovered that weren&#8217;t on the initial list. These could sway the group to re-evaluate some of their scores. The important part is that the process has given us the information we need to make an informed decision, whereas without it were closer to guessing.
+After all of the evaluations have been completed, we should have a clear set of leaders. With some hands on time, there have likely been some pros and cons discovered that weren't on the initial list. These could sway the group to re-evaluate some of their scores. The important part is that the process has given us the information we need to make an informed decision, whereas without it were closer to guessing.
 
 Either individually or in a group we need to determine where the new criteria fall on the scorecard, determine if anything has changed since we started (budget cuts, changing needs, etc), and so on. 
 
 ### Document, Document, Document
 
-Document all the factors in the decisions. Promises from vendors, pros and cons of products, changes to the scoring, final selection. In 6 months we need to be able to understand what details led to the decision we made and if a product has failed to fulfill it&#8217;s promises.
+Document all the factors in the decisions. Promises from vendors, pros and cons of products, changes to the scoring, final selection. In 6 months we need to be able to understand what details led to the decision we made and if a product has failed to fulfill it's promises.
 
 The final deliverable of the product selection process is a decision that has clearly included the input of the necessary parties and a decision directly based on our needs and problems.
 
 ## Next Steps
 
-Once the product has been selected, it&#8217;s time to implement. This should include at least a minimal implementation plan, identifying an owner for the implementation, purchasing the software, and so on. This can be a two paragraph note with a bullet list or a fully defined project plan following your methodology of choice (critical path, CCPM, scrum, etc). 
+Once the product has been selected, it's time to implement. This should include at least a minimal implementation plan, identifying an owner for the implementation, purchasing the software, and so on. This can be a two paragraph note with a bullet list or a fully defined project plan following your methodology of choice (critical path, CCPM, scrum, etc). 
 
-Implementing the product is outside the scope of this product selection series, but there is one step beyond implementation that is not. Every process should end in a review. What worked, what didn&#8217;t work, did we we achieve long term success, and so on. In short, the process is never perfect, some things didn&#8217;t go so well, and there is always too much work. So we&#8217;ll skip past the implementation and head straight to the review.
+Implementing the product is outside the scope of this product selection series, but there is one step beyond implementation that is not. Every process should end in a review. What worked, what didn't work, did we we achieve long term success, and so on. In short, the process is never perfect, some things didn't go so well, and there is always too much work. So we'll skip past the implementation and head straight to the review.
 
 #### Product Selection:
 

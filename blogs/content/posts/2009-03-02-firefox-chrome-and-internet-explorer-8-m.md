@@ -48,7 +48,7 @@ else
    behave normally
 ```
 
-I don&#8217;t know but this is just crazy, don&#8217;t come to me either saying that IE8 is beta, so what, this is insane! IE8 uses 362MB while FireFox 3 only uses 100MB. Chrome compared to Firefox uses almost double the memory. Chrome + FireFox combine still use 80MB less than Internet Explorer 8
+I don't know but this is just crazy, don't come to me either saying that IE8 is beta, so what, this is insane! IE8 uses 362MB while FireFox 3 only uses 100MB. Chrome compared to Firefox uses almost double the memory. Chrome + FireFox combine still use 80MB less than Internet Explorer 8
 
 Below is a screen shot of what memory usage looks like
 

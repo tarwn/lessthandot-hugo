@@ -30,7 +30,7 @@ tags:
   <img src="/wp-content/uploads/blogs/DataMgmt/sqlu_logo.gif" alt="" title="" width="150" height="166" align="left" />
 </div>
 
-Welcome to our second class for HA and DR week of [SQL University][1]. Yesterday we went through defining HA and DR along with some common practices you can use. Today we are going to focus on the concept, &#8220;Backups are for sissies!&#8221; OK, we’re really going to look at backup and restore for Disaster / Recovery (DR) and how being a sissy and always backing up our databases and testing out restores is a proven strategy for DR. 
+Welcome to our second class for HA and DR week of [SQL University][1]. Yesterday we went through defining HA and DR along with some common practices you can use. Today we are going to focus on the concept, “Backups are for sissies!” OK, we’re really going to look at backup and restore for Disaster / Recovery (DR) and how being a sissy and always backing up our databases and testing out restores is a proven strategy for DR. 
 
 When all else fails and the walls are falling down on the database servers, backups will be your life preserver. Backups are the foundation for Disaster and Recovery (DR). Backups can also save you when high Availability (HA) completely fails you. Let’s get started!
 
@@ -90,7 +90,7 @@ ALTER DATABASE TEST_DR_BACKUP SET RECOVERY FULL
 GO
 ```
 
-Now that we have a database to backup, let&#8217;s execute a typical full backup statement
+Now that we have a database to backup, let's execute a typical full backup statement
 
 sql
 BACKUP DATABASE TEST_DR_BACKUP
@@ -107,7 +107,7 @@ WITH CHECKSUM,COPY_ONLY
 GO
 ```
 
-Looking into the statement, we have several options to make our backups, &#8220;smart&#8221;. One method that is extremely useful in DR is the COPY\_ONLY option. By using the COPY\_ONLY option, we can create full backups of a database without affecting the LSN order in other backup strategies. This is a powerful option given the need to get backups offsite while we are using backup strategies locally for other things. 
+Looking into the statement, we have several options to make our backups, “smart”. One method that is extremely useful in DR is the COPY\_ONLY option. By using the COPY\_ONLY option, we can create full backups of a database without affecting the LSN order in other backup strategies. This is a powerful option given the need to get backups offsite while we are using backup strategies locally for other things. 
 
 Crude but effective copy methods with batch files, .NET development and even manual efforts can also be used for moving the existing backup files. Automating these tasks is always a key operation to put into place. Backup/Restore operations take time and the time of a DBA is expensive when you consider all the tasks we need to cover in our day-to-day operations. Later, we will go over a proven automated strategy and feature in SQL Server. 
 
@@ -178,7 +178,7 @@ Going farther:
 
 [Paul Randal’s corrupt database for testing][7]
 
-> Why did I link to Paul&#8217;s corrupt database? This is a valuable resource to test on. Through backup and restore and through all of this week of blogs, use this database to really see if you can recover using a DR or HA strategy. 
+> Why did I link to Paul's corrupt database? This is a valuable resource to test on. Through backup and restore and through all of this week of blogs, use this database to really see if you can recover using a DR or HA strategy. 
 
 If you liked this SQL University post, please take a moment to fill out the [SQL University Course Evaluation][8] and select HA/DR Week. Thank you!
   

@@ -32,7 +32,7 @@ This baby had 128K (not MB) of RAM, 4 sound channels and 16 colors
   
 With the C128 you had a C64 built in and you could run CP/M (it came with a floppy)
   
-I almost always booted up C64, this gave you 39KB free memory to use, the speed was 1MHZ, the C128 could run at 2MHZ but then the screen would go dark before you switched back to 1MHZ. The C128 came with BASIC built in, I had a taperecorder so that I could store and retrieve programs games. This was such a nuisance, if your friend gave you a game and the heads on his recorder were aligned different you could not load the game, you would have to use a screwdriver to fix the azimuth. It would take up to 30 minutes to load a game if you didn&#8217;t have a turbo.
+I almost always booted up C64, this gave you 39KB free memory to use, the speed was 1MHZ, the C128 could run at 2MHZ but then the screen would go dark before you switched back to 1MHZ. The C128 came with BASIC built in, I had a taperecorder so that I could store and retrieve programs games. This was such a nuisance, if your friend gave you a game and the heads on his recorder were aligned different you could not load the game, you would have to use a screwdriver to fix the azimuth. It would take up to 30 minutes to load a game if you didn't have a turbo.
 
 I still remember the great games from that time, here are some of my favorites
 

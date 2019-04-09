@@ -19,4 +19,4 @@ There are 2 versions (and 3 flavors of each) ISO or DVD
 
 Download it here: http://www.microsoft.com/downloads/details.aspx?FamilyId=35F53843-03F7-4ED5-8142-24A4C024CA05&displaylang=en
 
-Don&#8217;t forget to also visit the SQL Server 2008 Release Candidate 0 connect site here: https://connect.microsoft.com/SQLServer/content/content.aspx?ContentID=5395
+Don't forget to also visit the SQL Server 2008 Release Candidate 0 connect site here: https://connect.microsoft.com/SQLServer/content/content.aspx?ContentID=5395

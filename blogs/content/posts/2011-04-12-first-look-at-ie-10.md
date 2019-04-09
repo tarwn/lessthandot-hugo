@@ -34,7 +34,7 @@ Channel 9 has made available a video on their site about Internet Explorer 10, I
 
 Here is what they say on the channel 9 site
 
-> Just when you were expecting to hear more about IE9 on this opening day of Mix &#8217;11, and today we&#8217;ll be talking about the IE10 Platform Preview. IE10 builds on IE9 with support for even more standards like CSS3 gradients, multi-column, and grid layouts. In this video Rob Mauceri walks us through some of the new features of IE10 including an example of flowing of content in multi-column layouts.
+> Just when you were expecting to hear more about IE9 on this opening day of Mix '11, and today we'll be talking about the IE10 Platform Preview. IE10 builds on IE9 with support for even more standards like CSS3 gradients, multi-column, and grid layouts. In this video Rob Mauceri walks us through some of the new features of IE10 including an example of flowing of content in multi-column layouts.
 
 Here is Dean Hachamovitch, corporate vice president in charge of the Internet Explorer team at Microsoft wearing a shirt with the IE 10 logo during the IE keynote ate Mix 11 today.
   

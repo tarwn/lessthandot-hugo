@@ -23,7 +23,7 @@ The first idea that came to mind was to use sp_MSForEachDB non-documented stored
   
 <span class="MT_red">UPDATE</span>
   
-Based on Duncan&#8217;s comments the better code than I suggested would be
+Based on Duncan's comments the better code than I suggested would be
 
 sql
 sp_MSForEachDb 'IF ''?'' NOT IN (''master'', ''tempdb'', ''tempdev'', ''model'', ''msdb'')

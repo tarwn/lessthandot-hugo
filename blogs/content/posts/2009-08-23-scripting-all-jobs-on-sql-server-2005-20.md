@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-In the [Scripting All The Jobs On Your SQL Server Instance Into Separate Files By Using SMO][1] post I showed you how you can use SMO to script all the jobs into separate files. But what if you want to have them all in one file? You can of course use SMO for that or you can do it from SSMS. Most people don&#8217;t know about this and that is the reason for this little post.
+In the [Scripting All The Jobs On Your SQL Server Instance Into Separate Files By Using SMO][1] post I showed you how you can use SMO to script all the jobs into separate files. But what if you want to have them all in one file? You can of course use SMO for that or you can do it from SSMS. Most people don't know about this and that is the reason for this little post.
 
 You know that you can not select more that one job if you expand the job folder, but you can if you are in detail view
 

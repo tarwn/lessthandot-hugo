@@ -193,7 +193,7 @@ All in all we have over 2000 blog posts on this site. I will leave you with the 
       </td>
       
       <td>
-        <a href="/index.php?p=760">Do you use Column=@Param OR @Param IS NULL in your WHERE clause? Don&#8217;t, it doesn&#8217;t perform</a>
+        <a href="/index.php?p=760">Do you use Column=@Param OR @Param IS NULL in your WHERE clause? Don't, it doesn't perform</a>
       </td>
       
       <td>

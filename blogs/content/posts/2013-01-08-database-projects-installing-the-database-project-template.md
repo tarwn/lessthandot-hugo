@@ -32,7 +32,7 @@ So now we have Source Control in place we need to install the Database Projects 
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate1.png?mtime=1357652727"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate1.png?mtime=1357652727" width="150" height="150" /></a>
 </div>
 
-When you want to create a Database Project for the first time, you&#8217;ll see a Web Install in the New Project Template screen when you select SQL Server:
+When you want to create a Database Project for the first time, you'll see a Web Install in the New Project Template screen when you select SQL Server:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate2.png?mtime=1357652946"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate2.png?mtime=1357652946" width="450" height="300" /></a>
@@ -44,25 +44,25 @@ When you click the Web Install, a new pop-up screen will appear telling you you 
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate3.png?mtime=1357652946"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate3.png?mtime=1357652946" width="200" height="100" /></a>
 </div>
 
-A web page will open where you can download SQL Server Data Tools for Visual Studio 2010 or for Visual Studio 2012. Since I&#8217;m using the SQL Server Data Tools delivered with SQL Server 2012 and this is a Visual Studio 2010 Shell I will download the Visual Studio 2010 version:
+A web page will open where you can download SQL Server Data Tools for Visual Studio 2010 or for Visual Studio 2012. Since I'm using the SQL Server Data Tools delivered with SQL Server 2012 and this is a Visual Studio 2010 Shell I will download the Visual Studio 2010 version:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate4.png?mtime=1357652946"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate4.png?mtime=1357652946" width="400" height="200" /></a>
 </div>
 
-Another screen will show, giving you more details about what&#8217;s going to happen and give you more options if you need to install SQL Server Data Tools on a machine with no internet access or with other language needs. Since Dutch is not supported and my machine has internet access I just start the download:
+Another screen will show, giving you more details about what's going to happen and give you more options if you need to install SQL Server Data Tools on a machine with no internet access or with other language needs. Since Dutch is not supported and my machine has internet access I just start the download:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate5.png?mtime=1357652946"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate5.png?mtime=1357652946" width="200" height="300" /></a>
 </div>
 
-Now you can choose to Save or Run the setup. I&#8217;m just going to run it:
+Now you can choose to Save or Run the setup. I'm just going to run it:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate6.png?mtime=1357652946"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate6.png?mtime=1357652946" width="200" height="100" /></a>
 </div>
 
-Don&#8217;t know if you can trust Microsoft Corporation as a Publisher but hitting Don&#8217;t Run will not help you on getting the software installed. So hit Run:
+Don't know if you can trust Microsoft Corporation as a Publisher but hitting Don't Run will not help you on getting the software installed. So hit Run:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate7.png?mtime=1357652946"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPCreate7.png?mtime=1357652946" width="200" height="100" /></a>
@@ -96,6 +96,6 @@ Close SQL Server Data Tools and start it again. Because of the new version you m
 
 .
   
-I still don&#8217;t understand why the SQL Server Database Project Template isn&#8217;t delivered with the initial setup of the SQL Server Data Tools but we&#8217;re almost ready to create our first project.
+I still don't understand why the SQL Server Database Project Template isn't delivered with the initial setup of the SQL Server Data Tools but we're almost ready to create our first project.
 
  [1]: /index.php/DataMgmt/DBAdmin/database-projects-setting-up-source

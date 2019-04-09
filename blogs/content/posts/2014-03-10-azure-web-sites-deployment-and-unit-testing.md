@@ -34,7 +34,7 @@ The source code is on github: [https://github.com/tarwn/CloudPixiesAndGhosts][1]
 
 ## Azure Website
 
-Once I had a basic &#8220;hello World&#8221; page and a github repository, it was time to create the Azure Website that would be the deployment target.
+Once I had a basic “hello World” page and a github repository, it was time to create the Azure Website that would be the deployment target.
 
 <div id="attachment_2373" style="width: 310px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep1.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep1-300x199.png" alt="Create Azure Web Site - Step 1" width="300" height="199" class="size-medium wp-image-2373" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep1-300x199.png 300w, /wp-content/uploads/2014/02/01_CreateSiteStep1.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
@@ -44,7 +44,7 @@ Once I had a basic &#8220;hello World&#8221; page and a github repository, it wa
   </p>
 </div>
 
-The wizard has a github option, but due to the way github permissions work, it ends up needing far more permissions than I want to provide. Instead I have chosen to use the generic &#8220;External Repository&#8221; option. 
+The wizard has a github option, but due to the way github permissions work, it ends up needing far more permissions than I want to provide. Instead I have chosen to use the generic “External Repository” option. 
 
 <div id="attachment_2374" style="width: 310px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep2.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep2-300x198.png" alt="Create Azure Web Site - Step 2" width="300" height="198" class="size-medium wp-image-2374" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep2-300x198.png 300w, /wp-content/uploads/2014/02/01_CreateSiteStep2.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
@@ -86,21 +86,21 @@ And my basic little web page is picked up by Azure Websites and deployed to the 
   </p>
 </div>
 
-Giving us the &#8220;cloud&#8221; portion of the project name:
+Giving us the “cloud” portion of the project name:
 
 <div id="attachment_2378" style="width: 398px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep6.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep6.png" alt="It&#039;s in the cloud!" width="388" height="165" class="size-full wp-image-2378" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep6.png 388w, /wp-content/uploads/2014/02/01_CreateSiteStep6-300x127.png 300w" sizes="(max-width: 388px) 100vw, 388px" /></a>
   
   <p class="wp-caption-text">
-    It&#8217;s in the cloud!
+    It's in the cloud!
   </p>
 </div>
 
-There is one last step, though. Because I used the generic &#8220;External Repository&#8221; option, my code is not being deployed immediately when I commit it.
+There is one last step, though. Because I used the generic “External Repository” option, my code is not being deployed immediately when I commit it.
 
 Luckily Azure Websites exposes a deployment trigger URL that we can plug into github to notify when a new commit is received.
 
-In the Azure Website settings, we copy that &#8220;Deployment Trigger URL&#8221;:
+In the Azure Website settings, we copy that “Deployment Trigger URL”:
 
 <div id="attachment_2371" style="width: 310px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/02/01_AutoDeploymentStep1.png"><img src="/wp-content/uploads/2014/02/01_AutoDeploymentStep1-300x72.png" alt="Configuring the Build triggering - Step 1" width="300" height="72" class="size-medium wp-image-2371" srcset="/wp-content/uploads/2014/02/01_AutoDeploymentStep1-300x72.png 300w, /wp-content/uploads/2014/02/01_AutoDeploymentStep1.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
@@ -126,7 +126,7 @@ And now each time I commit new code to master, it runs through the automated dep
 
 ## Add Unit Tests
 
-So far, the example code just has a single page that doesn&#8217;t really do anything worth unit testing. This isn&#8217;t intended to be a real-world sample, but it does need some simple logic to test.
+So far, the example code just has a single page that doesn't really do anything worth unit testing. This isn't intended to be a real-world sample, but it does need some simple logic to test.
 
 ```c#
 public ActionResult Index()
@@ -140,7 +140,7 @@ public ActionResult Text(string text)
     return View(model);
 }
 ```
-Now I&#8217;ve added actions and views for a simple form that asks for a piece of text, submits it, and then shows a response based on whetehr the txt is populated or not.
+Now I've added actions and views for a simple form that asks for a piece of text, submits it, and then shows a response based on whetehr the txt is populated or not.
 
 So we have a form:
   
@@ -210,7 +210,7 @@ This uses the node.js package manager to install the azure-cli package and insta
 
 `run: azure site deploymentscript -h`
 
-**4.** To generate a deployment script, i&#8217;ll specify the aspWAP option and point to the project:
+**4.** To generate a deployment script, i'll specify the aspWAP option and point to the project:
 
 `azure site deploymentscript --aspWAP CloudSite/CloudSite.csproj -s CloudPixiesAndGhosts.sln`
 
@@ -218,7 +218,7 @@ This generates a .deployment and a deploy.cmd file.
 
 **5.** Run the deploy.cmd file to test it out
 
-I received an error on my first run because nuget wasn&#8217;t available. I enabled package restore on the solution and tried again and it worked. Later I found the same section (Deployment section, subsection 1) of this script was failing on Azure, so I ended up commenting it out entirely.
+I received an error on my first run because nuget wasn't available. I enabled package restore on the solution and tried again and it worked. Later I found the same section (Deployment section, subsection 1) of this script was failing on Azure, so I ended up commenting it out entirely.
 
 This may no longer be an issue, the Azure team has been updating things frequently and newer versions may be improved since.
 
@@ -270,7 +270,7 @@ And there we have it, Nunit unit tests running automatically during the deployme
 
 ## Sidenote: CassiniDev
 
-As I mentioned before, I originally had set out to get CassiniDev, Selenium, and Phantom all running in harmony as part of the build. I got CassiniDev and Selenium running locally, but couldn&#8217;t get CassiniDev to host the site during the deployment:
+As I mentioned before, I originally had set out to get CassiniDev, Selenium, and Phantom all running in harmony as part of the build. I got CassiniDev and Selenium running locally, but couldn't get CassiniDev to host the site during the deployment:
 
 <div id="attachment_2370" style="width: 710px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/02/03_CassiniFailure.png"><img src="/wp-content/uploads/2014/02/03_CassiniFailure.png" alt="Network Permissions Denied for CassiniDev" width="700" height="306" class="size-full wp-image-2370" srcset="/wp-content/uploads/2014/02/03_CassiniFailure.png 700w, /wp-content/uploads/2014/02/03_CassiniFailure-300x131.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a>
@@ -280,15 +280,15 @@ As I mentioned before, I originally had set out to get CassiniDev, Selenium, and
   </p>
 </div>
 
-During the setup of the test, CassiniDev&#8217;s StartServer command receives an &#8220;Access Denied&#8221; exception.
+During the setup of the test, CassiniDev's StartServer command receives an “Access Denied” exception.
 
-This is the [/CloudPixiesTests][4] project in the solution, if you&#8217;re curious. The Selenium + CassiniDev (ie, the magix pixies part of the repository name) runs fine locally. 
+This is the [/CloudPixiesTests][4] project in the solution, if you're curious. The Selenium + CassiniDev (ie, the magix pixies part of the repository name) runs fine locally. 
 
 ## Would I Use This For Production?
 
-Personally, I wouldn&#8217;t use this as my test and deployment process. I think it&#8217;s a great system, but I miss too much from having a build server and have a high enough comfort level with build servers that this simplified setup doesn&#8217;t win me much (especially once you add in the limits on what you can do with the built-in staging platform).
+Personally, I wouldn't use this as my test and deployment process. I think it's a great system, but I miss too much from having a build server and have a high enough comfort level with build servers that this simplified setup doesn't win me much (especially once you add in the limits on what you can do with the built-in staging platform).
 
-I really like the deployment side of this and could see using it as the last mile, with a build server that automatically managed the build process and then either pushes to a repository or merges from the branch it&#8217;s building to the one that gets deployed. The only downside to this method would be applying schema updates to storage resources (SQL or serialized documents), as the actual deployment would then be operating asynchronously from your build process, but even that is solvable.
+I really like the deployment side of this and could see using it as the last mile, with a build server that automatically managed the build process and then either pushes to a repository or merges from the branch it's building to the one that gets deployed. The only downside to this method would be applying schema updates to storage resources (SQL or serialized documents), as the actual deployment would then be operating asynchronously from your build process, but even that is solvable.
 
  [1]: https://github.com/tarwn/CloudPixiesAndGhosts "tarwn/CloudPixiesAndGhosts on github"
  [2]: https://github.com/tarwn/CloudPixiesAndGhosts/tree/master/CloudSiteTests

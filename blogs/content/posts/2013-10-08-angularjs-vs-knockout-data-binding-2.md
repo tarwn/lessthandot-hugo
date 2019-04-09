@@ -19,7 +19,7 @@ tags:
   - knockout
 
 ---
-I&#8217;m reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. First things first, how does the data binding work with each of these libraries?
+I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. First things first, how does the data binding work with each of these libraries?
 
 <div style="background-color: #eeeeee; padding: 1em;">
   This is the second of eight posts looking at the capabilities of knockout and Angular. In the <a href="/index.php/WebDev/UIDevelopment/angularjs-vs-knockout-introduction-1" title="AngularJS vs Knockout - Introduction">introduction post</a>, I outlined the capabilities that I am evaluating for and the variety of scripts used in the series. This post is looking specifically at how to use data binding with both frameworks, as that will be used through the rest of the series.
@@ -29,7 +29,7 @@ All of the examples presented throughout the series are available in the [tarwn/
 
 ## Angular Binding
 
-Angular allows you to easily bind to any variables or functions on the scope object, without any extra properties or JavaScript functions. A binding can be in the form of an HTML attribute, like ng-model, or in the form of {{ property }}, which evaluates it&#8217;s contents and can be used to output to either the screen or as part of an HTML attribute. 
+Angular allows you to easily bind to any variables or functions on the scope object, without any extra properties or JavaScript functions. A binding can be in the form of an HTML attribute, like ng-model, or in the form of {{ property }}, which evaluates it's contents and can be used to output to either the screen or as part of an HTML attribute. 
 
 ### Angular Binding Example
 
@@ -76,13 +76,13 @@ On the HTML side, the ng-app attribute defines the main module for the page and 
 	</ul>
 </div>
 ```
-As I modify an input wired to a property in $scope, other elements bound to the same property update automatically (as will the property itself). Besides the straightforward &#8220;for loop&#8221;-like behavior of ng-repeat in this example, they also offer other variants, which are covered in detail in the [documentation][3]. 
+As I modify an input wired to a property in $scope, other elements bound to the same property update automatically (as will the property itself). Besides the straightforward “for loop”-like behavior of ng-repeat in this example, they also offer other variants, which are covered in detail in the [documentation][3]. 
 
 ## Knockout Binding
 
-Knockout&#8217;s bindings are different from Angular&#8217;s in a few ways. With Knockout, you can data bind to regular fields or to special &#8220;observable&#8221; properties. When binding to regular fields, the value is only read once and changes are not tracked. Observables track their changes, updating bound elements and referencing calculated observables when they are changed. 
+Knockout's bindings are different from Angular's in a few ways. With Knockout, you can data bind to regular fields or to special “observable” properties. When binding to regular fields, the value is only read once and changes are not tracked. Observables track their changes, updating bound elements and referencing calculated observables when they are changed. 
 
-Knockout bindings are defined on elements using a single &#8220;data-bind&#8221; attribute or without elements using a container-less style that depends on comments (not covered here). All of the bindings for an element go in that attribute, and are evaluated from left to right. Where Angular uses the presence of the [ng-app][4] and [ng-controller][5] directives to initialize the application, Knockout relies on an explicit &#8220;ko.applyBindings(_viewmodel_)&#8221; call.
+Knockout bindings are defined on elements using a single “data-bind” attribute or without elements using a container-less style that depends on comments (not covered here). All of the bindings for an element go in that attribute, and are evaluated from left to right. Where Angular uses the presence of the [ng-app][4] and [ng-controller][5] directives to initialize the application, Knockout relies on an explicit “ko.applyBindings(_viewmodel_)” call.
 
 ### Knockout Binding Example
 
@@ -142,21 +142,21 @@ There are quite a few differences in the two approaches.
 
 **Updates &#8211; Full Change or Per Key**
   
-Knockout&#8217;s default behavior for inputs is to update the backing value after the full input has changed. Angular updates on individual key presses. This behavior is customizable in both frameworks, Knockout provides a binding named &#8216;valueUpdate&#8217; to override the behavior with options of keyup, keypress, and afterkeydown. Angular does not offer a built-in switch, but you can build a custom directive to provide the exact behavior you want (or [copy one from stackoverflow][7]).
+Knockout's default behavior for inputs is to update the backing value after the full input has changed. Angular updates on individual key presses. This behavior is customizable in both frameworks, Knockout provides a binding named &#8216;valueUpdate' to override the behavior with options of keyup, keypress, and afterkeydown. Angular does not offer a built-in switch, but you can build a custom directive to provide the exact behavior you want (or [copy one from stackoverflow][7]).
 
 **Specific Bindings vs Element Controllers**
   
-Angular&#8217;s ng-model attribute defines a property to use as a model for the input, attaching extra properties for state (validation, clean/dirty, etc) and sharing that value/model/controller with other directives on the element (wording depends where you look in the documentation). Knockout&#8217;s bindings are much more specific and don&#8217;t interact or rely on one another directly.
+Angular's ng-model attribute defines a property to use as a model for the input, attaching extra properties for state (validation, clean/dirty, etc) and sharing that value/model/controller with other directives on the element (wording depends where you look in the documentation). Knockout's bindings are much more specific and don't interact or rely on one another directly.
 
 **Binding Verbosity and Erroring**
   
-Knockout is much wordier for simple values, requiring an element (or the container-less comments) to output even a single value. Angular&#8217;s ability to output values from {{}}&#8217;s provides a more concise binding. On the other hand, when a knockout binding is incorrect, you get an error message and no extra output on the screen. When the shorter {{}} form of Angular binding fails, it fails silently and leaves the binding text visible to the user. 
+Knockout is much wordier for simple values, requiring an element (or the container-less comments) to output even a single value. Angular's ability to output values from {{}}'s provides a more concise binding. On the other hand, when a knockout binding is incorrect, you get an error message and no extra output on the screen. When the shorter {{}} form of Angular binding fails, it fails silently and leaves the binding text visible to the user. 
 
 ## Final Thoughts
 
-The &#8216;everything in one data-bind&#8217; attribute method for knockout can be a little annoying when dealing with simple single-value outputs but it&#8217;s rare that I notice it (typically only after doing the same form in Angular). In the opposite direction (knockout example to Angular), I find that Angular&#8217;s approach of separate attributes can get annoying when you start to stack on a few directives and 3-4 validation attributes. 
+The &#8216;everything in one data-bind' attribute method for knockout can be a little annoying when dealing with simple single-value outputs but it's rare that I notice it (typically only after doing the same form in Angular). In the opposite direction (knockout example to Angular), I find that Angular's approach of separate attributes can get annoying when you start to stack on a few directives and 3-4 validation attributes. 
 
-The most frustrating aspect of either framework, though, has to be Angular&#8217;s silent failures. There is no value, in my mind, to failing silently, it simply makes identifying and fixing errors harder and more frustrating.
+The most frustrating aspect of either framework, though, has to be Angular's silent failures. There is no value, in my mind, to failing silently, it simply makes identifying and fixing errors harder and more frustrating.
 
 <div style="background-color: #DDDDDD; padding: 8px; width: 400px;">
   <h3>

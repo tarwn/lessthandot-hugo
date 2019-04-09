@@ -28,7 +28,7 @@ This is day 3 of my training. It will be a scorching 100 degrees in NYC today so
 
 #### Auto Expand
 
-This is what is knows as autogrow in SQL Server. by default Sybase does not have this turned on, as a matter of fact, you have to run a script that is shipped with the product in order to create the stored procedures that will make it possible for you to use this feature. It seems that within the Sybase crowd, if it is a old school DBA then they don&#8217;t like feature, if it is a new DBA they love it because they have to do less.
+This is what is knows as autogrow in SQL Server. by default Sybase does not have this turned on, as a matter of fact, you have to run a script that is shipped with the product in order to create the stored procedures that will make it possible for you to use this feature. It seems that within the Sybase crowd, if it is a old school DBA then they don't like feature, if it is a new DBA they love it because they have to do less.
 
 There is a proc that is named sp_dbextend that you can use to manage all this stuff
 
@@ -40,7 +40,7 @@ sp_dbextend 'modify', 'database', pubs2, logsegment, 'growby', '5%'
 
 You can use the sp_dbextend stored procedure to manage devices, databases and thresholds.
 
-I won&#8217;t go into more detail here, you can look that up in Sybase documentation if you are interested.
+I won't go into more detail here, you can look that up in Sybase documentation if you are interested.
 
 #### tempdb
 
@@ -72,7 +72,7 @@ sp_tempdb bind, 'LG', 'Menace', 'DB', 'tempdb_01'
 
 If you want to check what tempdb a certain process id has assigned, you can use the tempdb_id() function, you would pass in the SPID
 
-All in all interesting stuff&#8230;..however if the original tempdb is down, you are still out of luck
+All in all interesting stuff…..however if the original tempdb is down, you are still out of luck
   
 In the SQL Server world people have been asking for 1 tempdb per database for a while to get around the tempdb contention issues
 
@@ -146,4 +146,4 @@ This is very similar to SQL Server, it even has that proc we all know sp_helprot
   
 One interesting thins is that if I create Table A with a PK and you create table B with a FK to my table, then I have to give you references permissions on my table or specific columns
 
-Everything else is similar to SQL Server, there is object chaining, there are roles. What does not exists in Sybase(and this has nothing to do with security but we discussed bit) is deferred name resolution&#8230;.the way they do it is creating a dummy table and then dropping it after the proc has been created.
+Everything else is similar to SQL Server, there is object chaining, there are roles. What does not exists in Sybase(and this has nothing to do with security but we discussed bit) is deferred name resolution….the way they do it is creating a dummy table and then dropping it after the proc has been created.

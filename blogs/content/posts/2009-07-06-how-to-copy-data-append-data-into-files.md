@@ -19,7 +19,7 @@ tags:
   - openrowset
 
 ---
-Sometimes you want to quickly copy some data into a text file or you want append some data to a text file but you don&#8217;t feel like opening BIDS or the DTS designer. Here is a way to accomplish what you want from within a query window
+Sometimes you want to quickly copy some data into a text file or you want append some data to a text file but you don't feel like opening BIDS or the DTS designer. Here is a way to accomplish what you want from within a query window
   
 To copy data into a new file use BCP (Bulk Copy Program). To append to a file use OPENROWSET
 
@@ -46,7 +46,7 @@ insert TestData values(11,'abcdefg11',3.41)
 insert TestData values(12,'abcdefg12',3.42)
 ```
 
-Now lets&#8217; first use BCP to copy data into a file. Here is what the command will look like
+Now lets' first use BCP to copy data into a file. Here is what the command will look like
 
 sql
 master..xp_cmdshell 'bcp "SELECT id, CHAR(34) + SomeValue + CHAR(34),SomeOtherValue FROM tempdb..TestData" queryout C:TestData.txt -t, -c -Slocalhost -T'
@@ -58,7 +58,7 @@ So what does all this stuff do?
 
 **bcp** is the bulk copy program
 
-**&#8220;SELECT id, CHAR(34) + SomeValue + CHAR(34),SomeOtherValue FROM tempdb..TestData&#8221;** This is our query, CHAR(34) is the ascii code for double qoutes, we are putting double quotes around the character values/
+**“SELECT id, CHAR(34) + SomeValue + CHAR(34),SomeOtherValue FROM tempdb..TestData”** This is our query, CHAR(34) is the ascii code for double qoutes, we are putting double quotes around the character values/
 
 **queryout** Specifies the direction of the bulk copy
 
@@ -70,7 +70,7 @@ So what does all this stuff do?
 
 **-Slocalhost** tells bcp where to connect to, in this case localhost.
 
-**-T** Specifies that bcp connects to SQL Server with a trusted connection. If you want to use login credentials and you username is SQL2008 and the password = pw2008 then instead of -T you would do this -U&#8221;SQL2008&#8243; -P&#8221;pw2008&#8243;
+**-T** Specifies that bcp connects to SQL Server with a trusted connection. If you want to use login credentials and you username is SQL2008 and the password = pw2008 then instead of -T you would do this -U”SQL2008&#8243; -P”pw2008&#8243;
 
 There are a lot more arguments available for the BCP utility, I recommend checking all the available arguments out here: http://msdn.microsoft.com/en-us/library/ms162802.aspx
 
@@ -86,7 +86,7 @@ It is not a best practice to have xp\_cmdshell enabled. As a matter of fact begi
   
 Server: Msg 15281, Level 16, State 1, Procedure xp_cmdshell, Line 1
 
-SQL Server blocked access to procedure &#8216;sys.xp\_cmdshell&#8217; of component &#8216;xp\_cmdshell&#8217; because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;xp\_cmdshell&#8217; by using sp\_configure. For more information about enabling &#8216;xp_cmdshell&#8217;, see &#8220;Surface Area Configuration&#8221; in SQL Server Books Online.
+SQL Server blocked access to procedure &#8216;sys.xp\_cmdshell' of component &#8216;xp\_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;xp\_cmdshell' by using sp\_configure. For more information about enabling &#8216;xp_cmdshell', see “Surface Area Configuration” in SQL Server Books Online.
 
 To enable xp_cmdshell execute the following code
 
@@ -110,9 +110,9 @@ In SQL Server 2005 and 2008 OPENROWSET is also disabled by default, if you try t
 
 Server: Msg 15281, Level 16, State 1, Line 1
   
-SQL Server blocked access to STATEMENT &#8216;OpenRowset/OpenDatasource&#8217; of component &#8216;Ad Hoc Distributed Queries&#8217; because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;Ad Hoc Distributed Queries&#8217; by using sp_configure. For more information about enabling &#8216;Ad Hoc Distributed Queries&#8217;, see &#8220;Surface Area Configuration&#8221; in SQL Server Books Online.
+SQL Server blocked access to STATEMENT &#8216;OpenRowset/OpenDatasource' of component &#8216;Ad Hoc Distributed Queries' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;Ad Hoc Distributed Queries' by using sp_configure. For more information about enabling &#8216;Ad Hoc Distributed Queries', see “Surface Area Configuration” in SQL Server Books Online.
 
-To enable OPENROWSET and OPENQUERY you can use the previous script but instead of &#8216;xp_cmdshell&#8217; you will use &#8216;Ad Hoc Distributed Queries&#8217;. The script to enable Ad Hoc Distributed Queries is below
+To enable OPENROWSET and OPENQUERY you can use the previous script but instead of &#8216;xp_cmdshell' you will use &#8216;Ad Hoc Distributed Queries'. The script to enable Ad Hoc Distributed Queries is below
 
 sql
 EXECUTE SP_CONFIGURE 'show advanced options', 1
@@ -138,7 +138,7 @@ You should see the following output
 
 _NULL
   
-Starting copy&#8230;
+Starting copy…
   
 NULL
   
@@ -159,7 +159,7 @@ select * from OPENROWSET('Microsoft.Jet.OLEDB.4.0',
 
 If everything is correct and ad-hoc queries are enabled on your instance you should see all the rows we inserted. 
 
-Now let&#8217;s append a row to the file
+Now let's append a row to the file
 
 sql
 INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
@@ -175,7 +175,7 @@ INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0',
 select 13,'abcdefg13',3.43
 ```
 
-What if you want to use OPENROWSET to insert into a file that does not exist yet? Let&#8217;s try it out by changing the name to TestData2.txt.
+What if you want to use OPENROWSET to insert into a file that does not exist yet? Let's try it out by changing the name to TestData2.txt.
 
 sql
 INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
@@ -187,11 +187,11 @@ And here is our message
   
 _Server: Msg 7399, Level 16, State 1, Line 1
   
-OLE DB provider &#8216;Microsoft.Jet.OLEDB.4.0&#8217; reported an error.
+OLE DB provider &#8216;Microsoft.Jet.OLEDB.4.0' reported an error.
   
-[OLE/DB provider returned message: The Microsoft Jet database engine could not find the object &#8216;TestData2.txt&#8217;. Make sure the object exists and that you spell its name and the path name correctly.]
+[OLE/DB provider returned message: The Microsoft Jet database engine could not find the object &#8216;TestData2.txt'. Make sure the object exists and that you spell its name and the path name correctly.]
   
-OLE DB error trace [OLE/DB Provider &#8216;Microsoft.Jet.OLEDB.4.0&#8217; IColumnsInfo::GetColumnsInfo returned 0x80004005: ]._
+OLE DB error trace [OLE/DB Provider &#8216;Microsoft.Jet.OLEDB.4.0' IColumnsInfo::GetColumnsInfo returned 0x80004005: ]._
 
 Mmm, what if we create a file from within a shell command?
 
@@ -205,7 +205,7 @@ NULL
   
 _ 
 
-Now that we created the file, let&#8217;s try again
+Now that we created the file, let's try again
 
 sql
 INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
@@ -215,11 +215,11 @@ select * from TestData
 
 _Server: Msg 7357, Level 16, State 2, Line 1
   
-Could not process object &#8216;SELECT * FROM TestData2.txt&#8217;. The OLE DB provider &#8216;Microsoft.Jet.OLEDB.4.0&#8242; indicates that the object has no columns.
+Could not process object &#8216;SELECT * FROM TestData2.txt'. The OLE DB provider &#8216;Microsoft.Jet.OLEDB.4.0&#8242; indicates that the object has no columns.
   
-OLE DB error trace [Non-interface error: OLE DB provider unable to process object, since the object has no columnsProviderName=&#8217;Microsoft.Jet.OLEDB.4.0&#8242;, Query=SELECT * FROM TestData2.txt&#8217;]._
+OLE DB error trace [Non-interface error: OLE DB provider unable to process object, since the object has no columnsProviderName='Microsoft.Jet.OLEDB.4.0&#8242;, Query=SELECT * FROM TestData2.txt']._
 
-As you can see since the file is an empty file JET doesn&#8217;t know how to insert the data
+As you can see since the file is an empty file JET doesn't know how to insert the data
 
 It might be entirely possible to use OPENROWSET to insert into a blank file and if you know how then feel free to leave a comment. But in general to copy data into a file that does not extist yet use bcp and openrowset to append to a file.
   

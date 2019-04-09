@@ -23,13 +23,13 @@ tags:
 ---
 This was asked on twitter the other day and I emailed the person the solution to this. The solution uses dynamic management views and it is not perfect because of a couple of reasons.
   
-1) The dynamic management views don&#8217;t keep this information forever, restart the server and your data is gone
+1) The dynamic management views don't keep this information forever, restart the server and your data is gone
   
 2) If your table name is in a comment it will be picked up by this query
   
 3) If the table name is part of another object it will also be picked up, for example if you have a table name customer and a view name customers then it will return a row if customers was part of the query but you are lloking for the customer table
 
-So let&#8217;s look at some code
+So let's look at some code
   
 First create the following stored procedure
 
@@ -69,7 +69,7 @@ sql
 exec prTestProc
 ```
 
-Now let&#8217;s look at the output. Here is the query that returns all the queries, their execution counts, if they were ad hoc or not and their last execution time. The query works by using the sys.dm\_exec\_query\_stats and sys.dm\_exec\_sql\_text dynamic management views to bring back the SQL statements themselves. 
+Now let's look at the output. Here is the query that returns all the queries, their execution counts, if they were ad hoc or not and their last execution time. The query works by using the sys.dm\_exec\_query\_stats and sys.dm\_exec\_sql\_text dynamic management views to bring back the SQL statements themselves. 
 
 sql
 SELECT * FROM(SELECT coalesce(object_name(s2.objectid),'Ad-Hoc') as ProcName,execution_count, 
@@ -95,7 +95,7 @@ Ad-Hoc		6		select count(*) from master..spt_values where type = 'P'  	2009-08-03
 Ad-Hoc		5		select * from master..spt_values where type = 'P'  		2009-08-03 10:11:12.280
 </pre>
 
-Let&#8217;s look at the query in more detail
+Let's look at the query in more detail
 
 This line below has the name of the table we are searching for
 
@@ -119,7 +119,7 @@ As you can see this is probably good enough to give you some quick results to fi
   
 1) I can quickly find the table since it will be on top in the object explorer
   
-2) I don&#8217;t have to think what the original name was, I just remove the 2 leading underscores
+2) I don't have to think what the original name was, I just remove the 2 leading underscores
 
 Of course you can also run a trace and then store that in a file, this enables you then to parse the file with a trace tool (more on that later this week when I will blog about a couple of free trace tools, Ami Levin just notified me about a new free trace tool so I will include that one). You could also use Extended Events to do something like this but I like this approach because it is very simple and you can all do it in T-SQL
 

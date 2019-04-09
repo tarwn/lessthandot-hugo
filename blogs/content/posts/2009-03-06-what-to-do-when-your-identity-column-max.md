@@ -72,7 +72,7 @@ DROP TABLE tester
 DROP TABLE oldtester
 ```
 
-With this solution, you can keep your database going for another few years, or for about as long as it took you to fill up the positive integers. Then you&#8217;ll have to switch to bigints or a decimal data type, though I have to express my disgust for using a packed data type as a clustered index key, especially considering that compared to int or bigint, decimal always uses more bytes of storage for the same precision:
+With this solution, you can keep your database going for another few years, or for about as long as it took you to fill up the positive integers. Then you'll have to switch to bigints or a decimal data type, though I have to express my disgust for using a packed data type as a clustered index key, especially considering that compared to int or bigint, decimal always uses more bytes of storage for the same precision:
 
 int: 8-9 digits, up to 4294967296 = 4 bytes storage
   

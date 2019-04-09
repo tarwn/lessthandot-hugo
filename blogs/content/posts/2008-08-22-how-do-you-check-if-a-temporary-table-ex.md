@@ -22,7 +22,7 @@ tags:
 ---
 I see more and more people asking how to check if a temporary table exists. How do you check if a temp table exists? 
 
-You can use IF OBJECT_ID(&#8216;tempdb..#temp&#8217;) IS NOT NULL Let&#8217;s see how it works 
+You can use IF OBJECT_ID(&#8216;tempdb..#temp') IS NOT NULL Let's see how it works 
 
 sql
 --Create table 
@@ -108,9 +108,9 @@ PRINT '#temp does not exist!'
 END 
 ```
 
-It doesn&#8217;t exist and that is correct since it&#8217;s a local temp table not a global temp table 
+It doesn't exist and that is correct since it's a local temp table not a global temp table 
 
-Well let&#8217;s test that statement 
+Well let's test that statement 
 
 sql
 --create a global temp table 
@@ -143,7 +143,7 @@ PRINT '##temp does not exist!'
 END 
 ```
 
-And yes this time it does exist since it&#8217;s a global table
+And yes this time it does exist since it's a global table
 
 I have also added this to our wiki, read it here: [Check If Temporary Table Exists][1]
 

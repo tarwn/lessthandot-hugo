@@ -29,9 +29,9 @@ If you are a windows user/developer then the name Mark Russinovich might seem fa
 
 > A zero-day (or zero-hour or day zero) attack or threat is a computer threat that tries to exploit computer application vulnerabilities that are unknown to others or the software developer, also called zero-day vulnerabilities. Zero-day exploits (actual software that uses a security hole to carry out an attack) are used or shared by attackers before the developer of the target software knows about the vulnerability.
   
-> The term derives from the age of the exploit. A &#8220;zero day&#8221; attack occurs on or before the first or &#8220;zeroth&#8221; day of developer awareness, meaning the developer has not had any opportunity to distribute a security fix to users of the software
+> The term derives from the age of the exploit. A “zero day” attack occurs on or before the first or “zeroth” day of developer awareness, meaning the developer has not had any opportunity to distribute a security fix to users of the software
 
-The story is about a terrorist organization that tries to bring the US and European systems down by launching a whole variety of viruses (virii) written by the Russian coder superphreak. Our hero must try to find out what the virus does, who created it and how to stop it. He also warned people about September 11th and nobody listens because he wasn&#8217;t persistent enough, he doesn&#8217;t want to make the same mistake again. Will he succeed? I won&#8217;t spoil it here but the books has some major turns and twist that will make it difficult to put the book down.
+The story is about a terrorist organization that tries to bring the US and European systems down by launching a whole variety of viruses (virii) written by the Russian coder superphreak. Our hero must try to find out what the virus does, who created it and how to stop it. He also warned people about September 11th and nobody listens because he wasn't persistent enough, he doesn't want to make the same mistake again. Will he succeed? I won't spoil it here but the books has some major turns and twist that will make it difficult to put the book down.
 
 The book is written in a style similar to Michael Crichton or Dan Brown, the chapters are fast paced and short. The book is hard to put down, it is a page turner and you will stay past your bed time trying to find out what will happen next.
 
@@ -45,9 +45,9 @@ The trailer for the book
   
 [video:youtube:ucyMBYg9RWU]
 
-[Mark Russinovich&#8217;s interview for The Big Thrill][4]
+[Mark Russinovich's interview for The Big Thrill][4]
   
-Read Mark&#8217;s interview on Zero Day in the latest issue of The Big Thrill
+Read Mark's interview on Zero Day in the latest issue of The Big Thrill
 
 Podcast with Herding Code: http://herdingcode.com/?p=320
 

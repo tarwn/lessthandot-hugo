@@ -18,15 +18,15 @@ tags:
   - CosmosDB
 
 ---
-I&#8217;m building a B2C website with Cosmos DB as the backend store. This site will have a number of different authentication mechanisms, but I&#8217;m newer to ASP.Net Core 2 and the authentication changes since the prior version so I&#8217;m going to start with a basic Cookie and Login authentication system.
+I'm building a B2C website with Cosmos DB as the backend store. This site will have a number of different authentication mechanisms, but I'm newer to ASP.Net Core 2 and the authentication changes since the prior version so I'm going to start with a basic Cookie and Login authentication system.
 
-This is the second post in a series documenting the creation of this project. If you haven&#8217;t worked with custom authentication in ASP.Net Core 2, are looking for more examples of interacting with Cosmos DB, or just trying to avoid the overkill of Identity and EntityFramework, I hope this is helpful.
+This is the second post in a series documenting the creation of this project. If you haven't worked with custom authentication in ASP.Net Core 2, are looking for more examples of interacting with Cosmos DB, or just trying to avoid the overkill of Identity and EntityFramework, I hope this is helpful.
 
 If you want to follow along from the beginning, the series starts with [ASP.Net Core 2 w/ Cosmos DB: Getting Started][1] 
 
 ## Getting Organization
 
-Instead of grabbing a cup of coffee and pounding away at my keyboard until I&#8217;m done, I prefer to break work down into a smaller set of steps I can work on one at a time. This helps provide a sense of momentum, knowledge that each new step is starting at a known good state, and the safety to throw away a set of changes that isn&#8217;t working out instead of backtracking manually.
+Instead of grabbing a cup of coffee and pounding away at my keyboard until I'm done, I prefer to break work down into a smaller set of steps I can work on one at a time. This helps provide a sense of momentum, knowledge that each new step is starting at a known good state, and the safety to throw away a set of changes that isn't working out instead of backtracking manually.
 
 <div id="attachment_9155" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -46,7 +46,7 @@ At a macro level, I can break this down into:
 
 This post will cover the first set: building standard username/password authentication down to Cosmos DB. It will also include some refactoring of the `Persistence` class I created to interact with Cosmos DB and good, secure hashing of passwords.
 
-This is going to be a long post, it may look a little formidable at first, but actual coding time took less than writing it up as a blog post, it&#8217;s extensible (per the next two posts), and we have wide open freedom to apply any HTML and CSS we want and we can worry less about ASP.Net Core 2.1 releasing and breaking everything while we&#8217;re in the middle.
+This is going to be a long post, it may look a little formidable at first, but actual coding time took less than writing it up as a blog post, it's extensible (per the next two posts), and we have wide open freedom to apply any HTML and CSS we want and we can worry less about ASP.Net Core 2.1 releasing and breaking everything while we're in the middle.
 
 <div id="attachment_9173" style="width: 505px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_107.png" alt="These are the main changes, plus a few POCOs" width="495" height="746" class="size-full wp-image-9173" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_107.png 495w, /wp-content/uploads/2018/04/aspnetcore2cosmos_107-199x300.png 199w" sizes="(max-width: 495px) 100vw, 495px" />
@@ -66,7 +66,7 @@ ASP.Net Core 2 ships with built-in modules for a variety of use cases: [MSDN: AS
   Be aware that most the MSDN examples mix the concepts of the Authentication middleware with the <code>Identity</code> model. ASP.net is not required and is, in my opinion, a fairly clumsy abstraction. Even the article on <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-custom-storage-providers">custom authentication</a> assumes you want to use Identity for the business logic and will just be supplying data store implementations that are lightly documented and much wider than needed.</p> 
   
   <p>
-    We will be using Principals and Identities for HttpContext, these are standard HttpContext concepts that are not related to &#8220;ASP.Net Core Identity&#8221;.
+    We will be using Principals and Identities for HttpContext, these are standard HttpContext concepts that are not related to “ASP.Net Core Identity”.
   </p>
 </div>
 
@@ -77,7 +77,7 @@ The purpose of the Authentication modules are to interact with the outside world
   * Sign In/Out: Persisting claims information back out into the world (writing a cookie)
   * External behavior for Unauthenticated/Forbidden requests: Sending a 401 Response
 
-`Authentication Schemes` uniquely identify each Authentication module, for instance a request that comes in with two cookies would show two sets of Claims, each identified by an `AuthenticationScheme` from the Authentication module that read it. The `AuthenticationScheme` can also be used to enforce authentication to a specific `Scheme` for an endpoint (ignore claims from other modules, does this `Scheme` say they are allowed in?). A `DefaultAuthenticationScheme` configuration tell the system which Authentication module to challenge un-authentication users with. Or you can can have an endpoint explicitly issue a Challenge by `Scheme`, &#8220;Twitter&#8221; for example:
+`Authentication Schemes` uniquely identify each Authentication module, for instance a request that comes in with two cookies would show two sets of Claims, each identified by an `AuthenticationScheme` from the Authentication module that read it. The `AuthenticationScheme` can also be used to enforce authentication to a specific `Scheme` for an endpoint (ignore claims from other modules, does this `Scheme` say they are allowed in?). A `DefaultAuthenticationScheme` configuration tell the system which Authentication module to challenge un-authentication users with. Or you can can have an endpoint explicitly issue a Challenge by `Scheme`, “Twitter” for example:
 
 **Starting a Twitter OAuth Sign-in**
 
@@ -93,15 +93,15 @@ public IActionResult RegisterWithTwitter()
     return Challenge(props, "Twitter");
 }
 ```
-There&#8217;s a lot more, here is a great post: [ASP.NET Core 2.0 Authentication and Authorization System Demystified][4].
+There's a lot more, here is a great post: [ASP.NET Core 2.0 Authentication and Authorization System Demystified][4].
 
 ## Task 1: Cookies, custom Membership, Cosmos DB, and basic pages
 
-The first piece we have sliced off is the workflow of Registering, Login, and Logout with cookies for validation. Though I executed this in vertical slices (for instance, I built the registration form from HTML down to Cosmo sDB before starting the login form), the post is presented in finished files or we&#8217;d be staring at the same file 10-12 times in a row.
+The first piece we have sliced off is the workflow of Registering, Login, and Logout with cookies for validation. Though I executed this in vertical slices (for instance, I built the registration form from HTML down to Cosmo sDB before starting the login form), the post is presented in finished files or we'd be staring at the same file 10-12 times in a row.
 
 ### Authentication and ICustomMembership
 
-First, let&#8217;s focus on getting the custom authentication wired in with the Cookies authentication module and a custom Membership object to include business logic.
+First, let's focus on getting the custom authentication wired in with the Cookies authentication module and a custom Membership object to include business logic.
 
 The concrete `CosmosDBMembership` object will be responsible for creating and validating users internally against the Cosmos DB store:
 
@@ -122,7 +122,7 @@ public interface ICustomMembership
 ```
 This reflects the basic set of behaviors we intend to perform, with an options object that includes a `DefaultPathAfterLogin` and `AuthenticationType` to use when interacting with Claims and HttpContext SignIn/SignOut methods.
 
-Next, we switch to the `Startup.cs` and register the concrete `CosmosDBMembership` class for this interface, register the default scheme (&#8220;Cookies&#8221;), and configure a Cookie authentication module for the &#8220;Cookies&#8221; scheme:
+Next, we switch to the `Startup.cs` and register the concrete `CosmosDBMembership` class for this interface, register the default scheme (“Cookies”), and configure a Cookie authentication module for the “Cookies” scheme:
 
 [SampleCosmosCore2App/Startup.cs][6]
 
@@ -173,29 +173,29 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 	app.UseMvc();
 }
 ```
-_Note: While I refer to the &#8220;Cookies&#8221; scheme by name, you&#8217;ll note above I actually use the constant CookieAuthenticationDefaults.AuthenticationScheme_
+_Note: While I refer to the “Cookies” scheme by name, you'll note above I actually use the constant CookieAuthenticationDefaults.AuthenticationScheme_
 
 **#1 &#8211; services.AddCustomMembership:** Register CosmosDBMembership as a Transient dependency for ICustomMembership vi an [extension method (github)][7].
 
-**#2 &#8211; services.AddAuthentication:** Set the Default Authentication Scheme to our &#8220;Cookies&#8221; scheme to tell the system to use the &#8220;Cookies&#8221; module for challenging Unauthorized users.
+**#2 &#8211; services.AddAuthentication:** Set the Default Authentication Scheme to our “Cookies” scheme to tell the system to use the “Cookies” module for challenging Unauthorized users.
 
-**#3 &#8211; .AddCookie:** Lightly configure a Cookies module to use the &#8220;Cookies&#8221; scheme and provide the &#8220;LoginPath&#8221; used for challenging a user. (I don&#8217;t recall why I included &#8220;LogoutPath&#8221;). Wire an event in for `OnValidatePrincipal` that gets the registered Membership object and asks it if the user is valid according to our business logic.
+**#3 &#8211; .AddCookie:** Lightly configure a Cookies module to use the “Cookies” scheme and provide the “LoginPath” used for challenging a user. (I don't recall why I included “LogoutPath”). Wire an event in for `OnValidatePrincipal` that gets the registered Membership object and asks it if the user is valid according to our business logic.
 
 **#4 &#8211; app.UseAuthentication:** Include the configured authentication middleware in the application
 
-Now that we have wired ourselves into the outside world, let&#8217;s move on to build the business logic and persistence.
+Now that we have wired ourselves into the outside world, let's move on to build the business logic and persistence.
 
 ### Cosmos DB Refactoring
 
-In the prior post, I had very basic CRUD logic to read/write a `Sample` object to Cosmos DB. Now we need to add the concepts of a registered user (`LoginUser`) and an authorized user session (`LoginSession`). First we&#8217;re going to do some refactoring.
+In the prior post, I had very basic CRUD logic to read/write a `Sample` object to Cosmos DB. Now we need to add the concepts of a registered user (`LoginUser`) and an authorized user session (`LoginSession`). First we're going to do some refactoring.
 
 Here are the challenges:
 
   * It will be a mess if we add `LoginUser` logic to `Persistence` on top of `Sample`
-  * [Microsoft&#8217;s performance guide][8] says we should use a Singleton for the DocumentClient for performance
+  * [Microsoft's performance guide][8] says we should use a Singleton for the DocumentClient for performance
 
 <div class="note-area">
-  The three most notable changes from the <a href="https://azure.microsoft.com/en-us/blog/performance-tips-for-azure-documentdb-part-1-2/" title="MSDN: CosmosDB Performance Tips">Performance Tips</a> are configuring the <code>Persistence</code> class (and it&#8217;s DocumentClient) to be a singleton over the lifetime of the web server, calling <code>OpenAsync</code> early so the connection is opened prior to the first real call, and moving the call to <code>EnsureSetupAsync</code> to the registration of the Singleton in <code>Startup.cs</code> so it happens only one time.
+  The three most notable changes from the <a href="https://azure.microsoft.com/en-us/blog/performance-tips-for-azure-documentdb-part-1-2/" title="MSDN: CosmosDB Performance Tips">Performance Tips</a> are configuring the <code>Persistence</code> class (and it's DocumentClient) to be a singleton over the lifetime of the web server, calling <code>OpenAsync</code> early so the connection is opened prior to the first real call, and moving the call to <code>EnsureSetupAsync</code> to the registration of the Singleton in <code>Startup.cs</code> so it happens only one time.
 </div>
 
 To solve this, Persistence will be split into a top-level class with general behavior and responsibility for the DocumentClient instance, while actual persistence logic will be moved into individual, scoped data classes:
@@ -252,9 +252,9 @@ public class Persistence : IDisposable
 	}
 }
 ```
-And we&#8217;ve exposed access to `Sample` and `LoginUser` data through two properties, which are also referenced during the `EnsureSetupAsync` call (btw: don&#8217;t use a Task.WhenAll for that like I did, bad things happen).
+And we've exposed access to `Sample` and `LoginUser` data through two properties, which are also referenced during the `EnsureSetupAsync` call (btw: don't use a Task.WhenAll for that like I did, bad things happen).
 
-Next, we&#8217;ll stop calling the `EnsureSetupAsync` method on every persistence call and instead call this one time during the setup of the service.
+Next, we'll stop calling the `EnsureSetupAsync` method on every persistence call and instead call this one time during the setup of the service.
 
 [SampleCosmosCore2App/Startup.cs][10]
 
@@ -316,7 +316,7 @@ public async Task<RegisterResult> RegisterAsync(string userName, string email, s
 	return RegisterResult.GetSuccess();
 }
 ```
-Registration is pretty straightforward. Take the 3 required properties, load them into a `LoginUser` object, persist it, then sign the user in. The one non-obvious piece is the reliance on an `Exception` to detect duplicate Usernames. We&#8217;re going to add a unique constraint to Cosmos DB later to help enforce unique usernames.
+Registration is pretty straightforward. Take the 3 required properties, load them into a `LoginUser` object, persist it, then sign the user in. The one non-obvious piece is the reliance on an `Exception` to detect duplicate Usernames. We're going to add a unique constraint to Cosmos DB later to help enforce unique usernames.
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; LoginAsync][12]
 
@@ -339,9 +339,9 @@ public async Task<LoginResult> LoginAsync(string userName, string password)
 	return LoginResult.GetSuccess();
 }
 ```
-We don&#8217;t have a password hash function yet, so for Login we take a username and password to load a `LoginUer` from the database, perform a direct comparison, and sign the user in if it is a match.
+We don't have a password hash function yet, so for Login we take a username and password to load a `LoginUer` from the database, perform a direct comparison, and sign the user in if it is a match.
 
-These both use the SignInAsync method, which creates a `LoginSession` for the user and uses the Authentication&#8217;s SignIn method for the `Options.AuthenticationType` we configured back in `Startup`:
+These both use the SignInAsync method, which creates a `LoginSession` for the user and uses the Authentication's SignIn method for the `Options.AuthenticationType` we configured back in `Startup`:
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; SignInAsync][13]
 
@@ -361,7 +361,7 @@ private async Task SignInAsync(LoginUser user)
 	await _context.HttpContext.SignInAsync(new ClaimsPrincipal(identity));
 }
 ```
-Behind the scenes, ASP.Net is calling the `SignIn` method on the &#8220;Cookies&#8221; authentication module. The Cookies module will take the ClaimsPrincipal we just passed it and write it as a cookie on the outgoing Response (and then read it back in on subsequent Requests). This is how we&#8217;ll know who the user is later. Which brings us to ValidateLoginAsync, which is called from our custom OnValidatePrincipal logic.
+Behind the scenes, ASP.Net is calling the `SignIn` method on the “Cookies” authentication module. The Cookies module will take the ClaimsPrincipal we just passed it and write it as a cookie on the outgoing Response (and then read it back in on subsequent Requests). This is how we'll know who the user is later. Which brings us to ValidateLoginAsync, which is called from our custom OnValidatePrincipal logic.
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; ValidateLoginAsync][14]
 
@@ -383,7 +383,7 @@ public async Task<bool> ValidateLoginAsync(ClaimsPrincipal principal)
 	return true;
 }
 ```
-We attempt to read the &#8220;sessionId&#8221; claim from the passed Principal and associate it with a saved `LoginSession` in the database, with a basic verification check to make sure the user has not logged out. In the event that we call false, our OnValidatePrincipal call will reject this principal (ensure it&#8217;s not flagged as &#8220;Authenticated&#8221;).
+We attempt to read the “sessionId” claim from the passed Principal and associate it with a saved `LoginSession` in the database, with a basic verification check to make sure the user has not logged out. In the event that we call false, our OnValidatePrincipal call will reject this principal (ensure it's not flagged as “Authenticated”).
 
 Finally, we have the last step for a user: Logging out.
 

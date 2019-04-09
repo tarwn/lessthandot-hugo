@@ -23,7 +23,7 @@ In version 0.9.2 and earlier, SquishIt had two options for handling browser cach
 
 ### Querystring Invalidation
 
-SquishIt&#8217;s default versioning behavior is to append the versioning hash to the URL of a combined file as a query string parameter. So a bundle set up like this:
+SquishIt's default versioning behavior is to append the versioning hash to the URL of a combined file as a query string parameter. So a bundle set up like this:
 
 ```csharp
 Bundle.JavaScript()
@@ -38,7 +38,7 @@ Would render a script tag like this:
 <script type="text/javascript" src="/output/minifyjs_test_output.js?{hashKeyName}={invalidationHash}"></script>
 ```
 
-The main disadvantage of this is that it doesn&#8217;t work with all caching proxies, though it seems to be pretty consistently supported in modern browsers. The advantage is that it only requires one set of combined files to be stored on the server. This is usually the best choice for files served locally because it doesn&#8217;t require any cleanup of old files on the server.
+The main disadvantage of this is that it doesn't work with all caching proxies, though it seems to be pretty consistently supported in modern browsers. The advantage is that it only requires one set of combined files to be stored on the server. This is usually the best choice for files served locally because it doesn't require any cleanup of old files on the server.
 
 ### Filename Invalidation
 
@@ -57,11 +57,11 @@ Would render a script tag like this:
 <script type="text/javascript" src="/output/minifyjs_test_output{invalidationHash}.js"></script>
 ```
 
-The main disadvantage of this strategy is that it tends to accumulate files over time. Because the hash is generated off of the combined file&#8217;s contents, every time a bundled script file or stylesheet changes, a new combined file is created. It eventually becomes necessary to clean this stuff up (The easiest way is to delete all files and reset the app pool, otherwise its usually safe to delete all but the most recent version for each combined file). The main advantage is that it is supported by all caching proxies &#8211; this consistent behavior makes it a good choice for CDN environments where you typically need to manage multiple versions of files anyway.
+The main disadvantage of this strategy is that it tends to accumulate files over time. Because the hash is generated off of the combined file's contents, every time a bundled script file or stylesheet changes, a new combined file is created. It eventually becomes necessary to clean this stuff up (The easiest way is to delete all files and reset the app pool, otherwise its usually safe to delete all but the most recent version for each combined file). The main advantage is that it is supported by all caching proxies &#8211; this consistent behavior makes it a good choice for CDN environments where you typically need to manage multiple versions of files anyway.
 
 ### Folder Invalidation
 
-This new strategy is similar to the filename invalidation strategy when it comes to output file naming, but behaves more like querystring invalidation in terms of disk footprint. It is used similarly to the hash in filename option, in that you simply put a hash symbol in the path where you want the content&#8217;s hash to show up. Unlike the hash in filename method, it requires you to use it explicitly because we need to be able to figure out the right folder to write files to. So a bundle set up like this:
+This new strategy is similar to the filename invalidation strategy when it comes to output file naming, but behaves more like querystring invalidation in terms of disk footprint. It is used similarly to the hash in filename option, in that you simply put a hash symbol in the path where you want the content's hash to show up. Unlike the hash in filename method, it requires you to use it explicitly because we need to be able to figure out the right folder to write files to. So a bundle set up like this:
 
 ```csharp
 Bundle.JavaScript()

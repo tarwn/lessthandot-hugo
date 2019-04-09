@@ -27,7 +27,7 @@ tags:
   <img src="/wp-content/uploads/blogs/DataMgmt/lazydba2.gif" alt="" title="" width="209" height="209" />
 </div>
 
-Today on the lazy DBA we&#8217;re going to talk about why Gandalf couldn’t open the door to the mines of Moria. OK, we&#8217;re not going to talk about Gandalf or even Trolls. Although some of us might work with a few Trolls. We are going to talk about Wizards without pointy hats. 
+Today on the lazy DBA we're going to talk about why Gandalf couldn’t open the door to the mines of Moria. OK, we're not going to talk about Gandalf or even Trolls. Although some of us might work with a few Trolls. We are going to talk about Wizards without pointy hats. 
 
 **Scenario**
 

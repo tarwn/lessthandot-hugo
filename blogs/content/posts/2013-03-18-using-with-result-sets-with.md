@@ -25,7 +25,7 @@ Yesterday I blogged about using WITH RESULT SETS with the EXECUTE command here: 
 
 > Can you use this feature to get result sets from the stored procedure returning multiple result sets such as sp_spaceused? If so, can you show this?
 
-So today we are going to look at how we can do this. Let&#8217;s say we execute the following stored procedure without specifying an object name
+So today we are going to look at how we can do this. Let's say we execute the following stored procedure without specifying an object name
 
 sql
 EXEC sp_spaceused
@@ -37,7 +37,7 @@ You will get two resultsets, the output will look something like this
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_spaceused_resultset.PNG?mtime=1363647770"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_spaceused_resultset.PNG?mtime=1363647770" width="347" height="220" /></a>
 </div>
 
-Now let&#8217;s see what happens if we only specify the first result set
+Now let's see what happens if we only specify the first result set
 
 sql
 EXEC sp_spaceused 

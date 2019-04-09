@@ -20,7 +20,7 @@ Every week you hear a new story about some site that got hacked via SQL Injectio
 
 [Securing SQL Server: Protecting Your Database from Attackers][1] <img src="http://www.assoc-amazon.com/e/ir?t=&l=as2&o=1&a=1597496251&camp=217145&creative=399349" width="1" height="1" border="0" alt="" />by Denny Cherry is a book that frankly any person that manages SQL Server instances or is a SQl Server developer should read.
 
-The good thing is that at 238 pages (not counting the index) it won&#8217;t take you weeks to get through the book. You get all the information you need in a condensed matter.
+The good thing is that at 238 pages (not counting the index) it won't take you weeks to get through the book. You get all the information you need in a condensed matter.
 
 The book has 9 chapters and 1 appendix, below is a list of the chapters
 
@@ -44,10 +44,10 @@ Chapter 9: Server Rights
   
 Appendix A: External Audit Checklists 
 
-These chapters cover pretty much everything you need to know about securing SQL Server. I won&#8217;t go into detail what the chapters are about, the name of the chapter tells you pretty much what is covered. If you are still running everything as sa or have BUILTINAdministrators enabled, learn why this is a bad idea. There are many best practices outlined in this book, you should take a note of all of them and implement them in your organization.
+These chapters cover pretty much everything you need to know about securing SQL Server. I won't go into detail what the chapters are about, the name of the chapter tells you pretty much what is covered. If you are still running everything as sa or have BUILTINAdministrators enabled, learn why this is a bad idea. There are many best practices outlined in this book, you should take a note of all of them and implement them in your organization.
 
 I also really like the real world examples that Denny uses in the book to highlight that disasters do happen and companies go out of business because of it.
 
-I highly recommend this book, if you happened to get crappy weather this Memorial Day weekend, why not pick up this book and learn something. If you apply the material from the book in securing your servers you will be thankful in the future&#8230;nobody wants to get the call that the server got hacked or backups are missing
+I highly recommend this book, if you happened to get crappy weather this Memorial Day weekend, why not pick up this book and learn something. If you apply the material from the book in securing your servers you will be thankful in the future…nobody wants to get the call that the server got hacked or backups are missing
 
  [1]: http://www.amazon.com/gp/product/1597496251/ref=as_li_ss_tl?ie=UTF8&tag=sql08-20&linkCode=as2&camp=217145&creative=399349&creativeASIN=1597496251

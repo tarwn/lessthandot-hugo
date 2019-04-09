@@ -286,7 +286,7 @@ In order to attack this problem you have to divide and conquer. Here are the fou
 
 ## 1 Take the dot out
 
-This is pretty easy, all you have to do is use the replace function and replace &#8216;.&#8217; with &#8216;_&#8217;
+This is pretty easy, all you have to do is use the replace function and replace &#8216;.' with &#8216;_'
 
 sql
 declare @FilePath varchar(100)

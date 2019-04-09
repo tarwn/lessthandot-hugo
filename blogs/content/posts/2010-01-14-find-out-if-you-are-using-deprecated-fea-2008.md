@@ -93,15 +93,15 @@ Keep in mind that I have some throw-away databases that I use to answer question
 
 So how does this query help you? Well, you are at least aware that you are using these deprecated features inside your code somewhere. It is time to call the object_definition function to find exactly where this happens 🙂
 
-It could also be that internal code uses these deprecated features&#8230;.wouldn&#8217;t that be ironic?
+It could also be that internal code uses these deprecated features….wouldn't that be ironic?
 
 You can also take a look at these blog posts by [George Mastros][2] that show you how you can find out where some of this stuff is called from
 
 [Identify procedures that call SQL Server undocumented procedures][3]
   
-[Don&#8217;t use text datatype for SQL 2005 and up][4]
+[Don't use text datatype for SQL 2005 and up][4]
 
-In case you don&#8217;t have access to this dynamic management view, here is the whole list of deprcated features that this query returns
+In case you don't have access to this dynamic management view, here is the whole list of deprcated features that this query returns
 
 sql
 select instance_name 
@@ -135,9 +135,9 @@ SET DISABLE\_DEF\_CNST_CHK
   
 DEFAULT keyword as a default value
   
-&#8216;@&#8217; and names that start with &#8216;@@&#8217; as Transact-SQL identifiers
+&#8216;@' and names that start with &#8216;@@' as Transact-SQL identifiers
   
-&#8216;#&#8217; and &#8216;##&#8217; as the name of temporary tables and stored procedures
+&#8216;#' and &#8216;##' as the name of temporary tables and stored procedures
   
 String literals as column aliases
   
@@ -155,25 +155,25 @@ Non-ANSI \*= or =\* outer join operators
   
 FASTFIRSTROW
   
-sp_configure &#8216;ft notify bandwidth (min)&#8217;
+sp_configure &#8216;ft notify bandwidth (min)'
   
-sp_configure &#8216;ft notify bandwidth (max)&#8217;
+sp_configure &#8216;ft notify bandwidth (max)'
   
-sp_configure &#8216;ft crawl bandwidth (min)&#8217;
+sp_configure &#8216;ft crawl bandwidth (min)'
   
-sp_configure &#8216;ft crawl bandwidth (max)&#8217;
+sp_configure &#8216;ft crawl bandwidth (max)'
   
-sp_configure &#8216;priority boost&#8217;
+sp_configure &#8216;priority boost'
   
-sp_configure &#8216;set working set size&#8217;
+sp_configure &#8216;set working set size'
   
-sp_configure &#8216;open objects&#8217;
+sp_configure &#8216;open objects'
   
-sp_configure &#8216;locks&#8217;
+sp_configure &#8216;locks'
   
-sp_configure &#8216;allow updates&#8217;
+sp_configure &#8216;allow updates'
   
-sp_configure &#8216;disallow results from triggers&#8217;
+sp_configure &#8216;disallow results from triggers'
   
 CREATE TRIGGER WITH APPEND
   
@@ -185,7 +185,7 @@ Multiple table hints without comma
   
 HOLDLOCK table hint without parenthesis
   
-&#8216;::&#8217; function calling syntax
+&#8216;::' function calling syntax
   
 SETUSER
   
@@ -495,21 +495,21 @@ sp_addlogin
   
 IN PATH
   
-FULLTEXTSERVICEPROPERTY(&#8216;ConnectTimeout&#8217;)
+FULLTEXTSERVICEPROPERTY(&#8216;ConnectTimeout')
   
-FULLTEXTSERVICEPROPERTY(&#8216;DataTimeout&#8217;)
+FULLTEXTSERVICEPROPERTY(&#8216;DataTimeout')
   
-FULLTEXTSERVICEPROPERTY(&#8216;ResourceUsage&#8217;)
+FULLTEXTSERVICEPROPERTY(&#8216;ResourceUsage')
   
-DATABASEPROPERTYEX(&#8216;IsFullTextEnabled&#8217;)
+DATABASEPROPERTYEX(&#8216;IsFullTextEnabled')
   
-FULLTEXTCATALOGPROPERTY(&#8216;LogSize&#8217;)
+FULLTEXTCATALOGPROPERTY(&#8216;LogSize')
   
-FULLTEXTCATALOGPROPERTY(&#8216;PopulateStatus&#8217;)
+FULLTEXTCATALOGPROPERTY(&#8216;PopulateStatus')
   
 DATABASEPROPERTY
   
-sp_configure &#8216;remote proc trans&#8217;
+sp_configure &#8216;remote proc trans'
   
 SET OFFSETS
   

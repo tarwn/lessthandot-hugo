@@ -40,11 +40,11 @@ WHERE age IS NULL
 
 In a NoSQL database it is possible that half the documents in a collection are omitted and maybe five are there with the value null. How can you know if the field is missing or has the value null?
 
-Let&#8217;s take a quick look. First insert the following document into your collection
+Let's take a quick look. First insert the following document into your collection
 
 <pre>db.Blog.insert( { name : "Denis2" } )</pre>
 
-As you can see it just has a name. Now let&#8217;s add another document this time with age as well, we will make the age NULL
+As you can see it just has a name. Now let's add another document this time with age as well, we will make the age NULL
 
 <pre>db.Blog.insert( { name : "Denis",  age : NULL} )</pre>
 
@@ -62,9 +62,9 @@ Now if you execute the following
 
 You get back both document
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;512118a7c1eca3d7ffcd00f9&#8221;), &#8220;name&#8221; : &#8220;Denis&#8221;, &#8220;age&#8221; : null }
+{ “_id” : ObjectId(“512118a7c1eca3d7ffcd00f9”), “name” : “Denis”, “age” : null }
   
-{ &#8220;_id&#8221; : ObjectId(&#8220;512123d9c1eca3d7ffcd00fa&#8221;), &#8220;name&#8221; : &#8220;Denis2&#8221; }
+{ “_id” : ObjectId(“512123d9c1eca3d7ffcd00fa”), “name” : “Denis2” }
 
 In order to return the document where the value that is stored is null, you can use `$type: 10`. What that means is that the field is of BSON Type Null 
 

@@ -45,4 +45,4 @@ FROM sys.procedures
 WHERE is_auto_executed = 1
 ```
 
-Creating stored procedures to run on startup is a nice way of ensuring that certain flags/tables/users are created/updated/deleted when the SQL instance is restarted, this way you won&#8217;t forget to run that code that you have tucked away in some folder that needs to be run to initialize some data on startup.
+Creating stored procedures to run on startup is a nice way of ensuring that certain flags/tables/users are created/updated/deleted when the SQL instance is restarted, this way you won't forget to run that code that you have tucked away in some folder that needs to be run to initialize some data on startup.

@@ -18,7 +18,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-A couple of days ago a coworker was having problems with an insert statement. This insert statement needed to insert data into a table if that data didn&#8217;t already exists in the table he was inserting to.
+A couple of days ago a coworker was having problems with an insert statement. This insert statement needed to insert data into a table if that data didn't already exists in the table he was inserting to.
 
 The table he was inserting to had about 20 million rows and the table he was inserting from had about 100 thousand rows. The problem he had was that the left join that checked if the rows existed was nor performing very well. Since one table was much smaller compared to the other table I suggested a _left outer loop join_. Once he changed to the _left outer loop join_ the query was about 20 times faster because now it performed an index seek instead of an index scan.
 
@@ -139,7 +139,7 @@ Below is the execution plan generated when you run these 3 queries, click on the
   <img src="/wp-content/uploads/blogs/DataMgmt/ExecutionPlan.png" alt="Execution Plan" title="Execution Plan" width="979" height="521" />
 </div>
 
-As you can see the loop join doesn&#8217;t look that impressive compared to the rest, however it is the only query that does a seek instead of a scan
+As you can see the loop join doesn't look that impressive compared to the rest, however it is the only query that does a seek instead of a scan
 
 What about the reads? Run the following query
 
@@ -178,27 +178,27 @@ Here is what is returned
   
 **Left Join**
   
-Table &#8216;Worktable&#8217;. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0
+Table &#8216;Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0
   
-Table &#8216;TestLarge&#8217;. Scan count 1, logical reads 159177, physical reads 0, read-ahead reads 0
+Table &#8216;TestLarge'. Scan count 1, logical reads 159177, physical reads 0, read-ahead reads 0
   
-Table &#8216;TestSmall&#8217;. Scan count 1, logical reads 913, physical reads 0, read-ahead reads 0
+Table &#8216;TestSmall'. Scan count 1, logical reads 913, physical reads 0, read-ahead reads 0
 
 **Not Exist**
   
-Table &#8216;TestSmall&#8217;. Scan count 1, logical reads 913, physical reads 0, read-ahead reads 0
+Table &#8216;TestSmall'. Scan count 1, logical reads 913, physical reads 0, read-ahead reads 0
   
-Table &#8216;TestLarge&#8217;. Scan count 1, logical reads 159177, physical reads 0, read-ahead reads 0
+Table &#8216;TestLarge'. Scan count 1, logical reads 159177, physical reads 0, read-ahead reads 0
 
 **Left Loop Join**
   
-Table &#8216;TestLarge&#8217;. Scan count 115456, logical reads 492566, physical reads 0, read-ahead reads 0
+Table &#8216;TestLarge'. Scan count 115456, logical reads 492566, physical reads 0, read-ahead reads 0
   
-Table &#8216;TestSmall&#8217;. Scan count 3, logical reads 1006, physical reads 0, read-ahead reads 0
+Table &#8216;TestSmall'. Scan count 3, logical reads 1006, physical reads 0, read-ahead reads 0
   
-Table &#8216;Worktable&#8217;. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0
+Table &#8216;Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0
 
-Finally let&#8217;s look at how long each query took
+Finally let's look at how long each query took
 
 sql
 set statistics time on

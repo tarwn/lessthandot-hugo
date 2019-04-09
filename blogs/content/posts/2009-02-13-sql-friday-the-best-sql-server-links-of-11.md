@@ -27,7 +27,7 @@ Gail Shaw tells us about the uniquefier which makes indexes unique
   
 **[Performance impact: a large number of virtual log files – Part II][3]**
   
-Linchi Shea&#8217;s two part post explores two questions
+Linchi Shea's two part post explores two questions
      
 1. Is a large number of VLFs in a transaction log still a significant performance factor in SQL Server 2008?
      

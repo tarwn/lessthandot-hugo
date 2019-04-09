@@ -35,19 +35,19 @@ We’ll begin seeing how Visual Studio 10 and the .NET Framework 4.0 offer compe
 
 **[Episode 4: No More Parallel Development Pain][4]**
   
-We&#8217;ll examine how the improvements to branching and merging in Team Foundation Server 2010 will help eliminate the pain associated with parallel development.
+We'll examine how the improvements to branching and merging in Team Foundation Server 2010 will help eliminate the pain associated with parallel development.
 
 **[Episode 5: Code Focused in Visual Studio 2010][5]**
   
-We look at the new code editor in Visual Studio 2010. We&#8217;ll try out some of the new code navigation features that make it easier to move around in your source code.
+We look at the new code editor in Visual Studio 2010. We'll try out some of the new code navigation features that make it easier to move around in your source code.
 
 **[Episode 6: Parallel Extensions][6]**
   
-we start taking a look at Parallel Extensions to the .NET Framework. We&#8217;ll look at some of the surface-area of the Parallel Extensions API and provide you with enough information to start working with it yourself in the Visual Studio 2010 CTP VPC
+we start taking a look at Parallel Extensions to the .NET Framework. We'll look at some of the surface-area of the Parallel Extensions API and provide you with enough information to start working with it yourself in the Visual Studio 2010 CTP VPC
 
 **[Episode 7: No More Planning Black Box][7]**
   
-We look at how Team Foundation Server 2010 will help you more easily plan the work and iterations which make up your project. We&#8217;ll first examine the new work item hierarchy which supports such relationships as parent/child and successor/predecessor.
+We look at how Team Foundation Server 2010 will help you more easily plan the work and iterations which make up your project. We'll first examine the new work item hierarchy which supports such relationships as parent/child and successor/predecessor.
 
 **[Episode 8: Pure Client-Side Development with ASP.NET AJAX 4.0][8]**
   
@@ -55,11 +55,11 @@ We introduce some of the new features and functionality of ASP.NET AJAX 4.0. We�
 
 **[Episode 9: Visual Basic 10][9]**
   
-We introduce some of the new features and functionality coming to the Visual Basic language with the release of Visual Basic 10. We&#8217;ll cover a whole range of features from Auto-Properties, to Multiline Lambdas, Statement Lambdas, Collection Initializers, Array Literals, and Implicit Line Continuation
+We introduce some of the new features and functionality coming to the Visual Basic language with the release of Visual Basic 10. We'll cover a whole range of features from Auto-Properties, to Multiline Lambdas, Statement Lambdas, Collection Initializers, Array Literals, and Implicit Line Continuation
 
 **[Episode 10: Making Web Deployment Easier][10]**
   
-n this episode of 10-4, we&#8217;ll look at new features coming in Visual Studio 2010 that make deploying web applications a lot easier. We&#8217;ll look at web.config transformations, the Microsoft web deployment tool and web one-click deployment.
+n this episode of 10-4, we'll look at new features coming in Visual Studio 2010 that make deploying web applications a lot easier. We'll look at web.config transformations, the Microsoft web deployment tool and web one-click deployment.
 
 **[Episode 11: Bi-Directional Routing with ASP.NET WebForms 4.0][11]**
   
@@ -67,7 +67,7 @@ We introduce another new feature of ASP.NET WebForms 4.0: Routing. The ASP.NET R
 
 **[Episode 12: Simplifying Your Code With C# 4.0][12]**
   
-We take a look at some features coming with C# 4.0 that will help you simplify your existing code (as well as making new code you write more simple). There&#8217;s already a plethora of C# 4.0 content you can find out there (including here on Channel 9 itself), so we will dive in specifically to how the combination of named and optional parameters will help you simplify your code.
+We take a look at some features coming with C# 4.0 that will help you simplify your existing code (as well as making new code you write more simple). There's already a plethora of C# 4.0 content you can find out there (including here on Channel 9 itself), so we will dive in specifically to how the combination of named and optional parameters will help you simplify your code.
 
 **[Episode 13: No More Late Surprises][13]**
   
@@ -77,7 +77,7 @@ This video is based on the September 2008 CTP, and there will be even more repor
 
 **[Episode 14: Sentient DSLs][14]**
   
-We introduce a new feature coming along with Visual Studio 2010 and the .NET Framework 4.0: sentient DSLs. If you&#8217;ve become intrigued with all the hype around leveraging domain-specific languages, but you&#8217;re concerned about the added complexity that comes with having to learn a bunch of different grammars, then sentient DSLs are for you. Write the code that you think makes sense, and allow the application to create itself. Coding should be fun, and most importantly, it should be easy.
+We introduce a new feature coming along with Visual Studio 2010 and the .NET Framework 4.0: sentient DSLs. If you've become intrigued with all the hype around leveraging domain-specific languages, but you're concerned about the added complexity that comes with having to learn a bunch of different grammars, then sentient DSLs are for you. Write the code that you think makes sense, and allow the application to create itself. Coding should be fun, and most importantly, it should be easy.
 
 **[Episode 15: Model-First Development with the Entity Framework 4.0][15]**
   
@@ -85,11 +85,11 @@ In this episode of 10-4, we introduce a new tooling enhancement coming with Visu
 
 **[Episode 16: Windows Workflow 4][16]**
   
-In this episode of 10-4 we build a &#8220;Hello Workflow 4&#8221; application. You might have heard that .NET 4 includes an all new Workflow engine &#8211; learn how you can not only use Workflow but also do test first style development with it.
+In this episode of 10-4 we build a “Hello Workflow 4” application. You might have heard that .NET 4 includes an all new Workflow engine &#8211; learn how you can not only use Workflow but also do test first style development with it.
 
 **[Episode 17: F# Intro][17]**
   
-In this episode of 10-4, we take a quick look at F#, a new addition to the family of managed programming languages in Visual Studio 2010. F# is a multi-paradigm programming language. Though its focus is at functional programming, it&#8217;s capable of producing object-oriented code like other .NET languages. Since it is a .NET language, it can interop just fine with other existing .NET languages. 
+In this episode of 10-4, we take a quick look at F#, a new addition to the family of managed programming languages in Visual Studio 2010. F# is a multi-paradigm programming language. Though its focus is at functional programming, it's capable of producing object-oriented code like other .NET languages. Since it is a .NET language, it can interop just fine with other existing .NET languages. 
 
 There is a lot to F#, more than we could possibly cover in a single 10-4 episode. So in this episode, we are just taking a brief look at the basic data types in F# as well as some more intermediate features like recursion, pattern matching, and partially-applied functions.
 
@@ -99,13 +99,13 @@ http://msdn.microsoft.com/en-us/fsharp/default.aspx
 
 **[Episode 18: Functional UI Testing][18]**
   
-In this episode of 10-4 we look at a new type of test coming in Visual Studio Team System 2010 known as the coded UI test. Coded UI tests can be created to automatically navigate through your application&#8217;s UI, which in turn can be used to verify that the paths your users might take through your application are working properly. You can also add validation logic along the way to verify the properties of objects within the UI. Much like unit tests can quickly surface regressions on a method or function level, coded UI tests can bring the same level of rapid automated testing capabilities to the UI layer.
+In this episode of 10-4 we look at a new type of test coming in Visual Studio Team System 2010 known as the coded UI test. Coded UI tests can be created to automatically navigate through your application's UI, which in turn can be used to verify that the paths your users might take through your application are working properly. You can also add validation logic along the way to verify the properties of objects within the UI. Much like unit tests can quickly surface regressions on a method or function level, coded UI tests can bring the same level of rapid automated testing capabilities to the UI layer.
 
 This demo is based on an early build of Visual Studio Team System 2010 Beta 1.
 
 **[Episode 19: Service Discovery with WCF][19]**
   
-WCF in .NET 4 includes an implementation of the WS-Discovery protocol. Sounds exciting right? Actually it is very cool because it allows you to build applications and services that can discover other services using UDP multicast messages or via a discovery proxy. In this episode I&#8217;ll walk through the Service Discovery lab where we build a messenger style application I call &#8220;ChatWOW&#8221;. In this lab you will see how to make your service discoverable and how you can discover other services. Later when Beta 1 is released, you can try it yourself.
+WCF in .NET 4 includes an implementation of the WS-Discovery protocol. Sounds exciting right? Actually it is very cool because it allows you to build applications and services that can discover other services using UDP multicast messages or via a discovery proxy. In this episode I'll walk through the Service Discovery lab where we build a messenger style application I call “ChatWOW”. In this lab you will see how to make your service discoverable and how you can discover other services. Later when Beta 1 is released, you can try it yourself.
 
 Update: The WCF/WF4 Training Kit is now live at http://code.msdn.microsoft.com/wcfwf4 so you can try it yourself.
 
@@ -119,11 +119,11 @@ n this episode of 10-4, Drew Robbins covers some of the new web tooling features
 
 **[Episode 22: Simplifying Data-Driven Web Applications][22]**
   
-In this episode of 10-4, we discuss how the development of data-driven web applications has evolved in ASP.NET and how in the .NET Framework 4 it becomes even easier. Whether you&#8217;re working on a new or existing application, getting your UI to light up model-level metadata/validation becomes as simple as a single line of code.
+In this episode of 10-4, we discuss how the development of data-driven web applications has evolved in ASP.NET and how in the .NET Framework 4 it becomes even easier. Whether you're working on a new or existing application, getting your UI to light up model-level metadata/validation becomes as simple as a single line of code.
 
 **[Episode 23: An Introduction to Manual Testing][23]**
   
-Despite all of the advances in automated testing tools and frameworks over the last decade, manual testing still constitutes the lion&#8217;s share of testing effort within most software development organizations.
+Despite all of the advances in automated testing tools and frameworks over the last decade, manual testing still constitutes the lion's share of testing effort within most software development organizations.
 
 This episode of 10-4 will introduce the new capabilities in Visual Studio Team System 2010 for supporting manual testing. You will see how these capabilities will not only help manual testers do their jobs more effectively, but this approach also helps developers by providing detailed diagnostics information about tests when they fail.
 

@@ -26,7 +26,7 @@ The goal is to identify all friday the thirteenths for a given timeframe
 
 **[Regular Pentagon][2]**
   
-Given a grid co-ordinate (x,y) as the centre point of a regular pentagon, and the sum of the length of the sides, return the co-ordinates of each point as: &#8220;Top&#8221;, &#8220;MidLeft&#8221;, &#8220;MidRight&#8221;, &#8220;BottomLeft&#8221;, &#8220;BottomRight&#8221; and the distance from the centre to each of the points.
+Given a grid co-ordinate (x,y) as the centre point of a regular pentagon, and the sum of the length of the sides, return the co-ordinates of each point as: “Top”, “MidLeft”, “MidRight”, “BottomLeft”, “BottomRight” and the distance from the centre to each of the points.
 
 **[ASCII Art Shapes][3]**
   
@@ -38,11 +38,11 @@ Find every prime number between 0 and 1,000,000
 
 **[Calculating the Fibonacci Sequence][5]**
   
-Calculate &#8216;X&#8217; numbers in the Fibonacci Sequence, which is essentially adding the previous 2 occurring numbers together to make the next 
+Calculate &#8216;X' numbers in the Fibonacci Sequence, which is essentially adding the previous 2 occurring numbers together to make the next 
 
 **[split a filepath][6]**
   
-Let&#8217;s say you have the following 4 items:
+Let's say you have the following 4 items:
 
 C:dataoldone.jpg
   
@@ -74,7 +74,7 @@ Write a program that will take two dates as inputs, and output the number of wee
 
 **[Hello World! For Hackers][11]**
   
-Create the most unique way of writing &#8220;Hello World&#8221; &#8211; the more fantastic, cryptic, oddball the better 
+Create the most unique way of writing “Hello World” &#8211; the more fantastic, cryptic, oddball the better 
 
 **[Calculate the moon phase][12]**
   
@@ -136,11 +136,11 @@ also give the solution with the least amount of pieces.
 
 **[Beers per day][19]**
   
-A man earns a certain amount of chrissies a month he has to pay 15% taxes and every year he has to pay 0.5% taxes more than the year before. The man&#8217;s income is indexed each year by 1%. When will that man&#8217;s net income be 200% of his begin income
+A man earns a certain amount of chrissies a month he has to pay 15% taxes and every year he has to pay 0.5% taxes more than the year before. The man's income is indexed each year by 1%. When will that man's net income be 200% of his begin income
 
 **[Distance to line segment][20]**
   
-Given the coordinates of the line segment, calculate the shortest distance to a given point. The distance that you are to calculate is represented by the red line. If the point is &#8216;outside&#8217; the line segment, meaning, you cannot draw a perpendicular line to it, then you should return the distance from the given point to the closest end point
+Given the coordinates of the line segment, calculate the shortest distance to a given point. The distance that you are to calculate is represented by the red line. If the point is &#8216;outside' the line segment, meaning, you cannot draw a perpendicular line to it, then you should return the distance from the given point to the closest end point
 
 Keep an eye on [Programmer Puzzles][21] because every 2 weeks or so we post a new puzzle
 

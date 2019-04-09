@@ -22,7 +22,7 @@ tags:
 ---
 I answered this question a while back and decided to create a little blogpost.
 
-Let&#8217;s say you have the following datetime values
+Let's say you have the following datetime values
 
 2009-05-12 11:13:19.667
   

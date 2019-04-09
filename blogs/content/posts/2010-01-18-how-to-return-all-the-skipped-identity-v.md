@@ -20,9 +20,9 @@ tags:
   - sql server 2008
 
 ---
-Every now and then someone will ask how to return a list of all the identity values in a table that have been skipped. You will probably have a table with an identity column, the &#8216;problem&#8217; with identity columns is that if an insert is rolled back or fails in any way then the identity value is not reused&#8230;you end up with gaps. Identifying gaps is pretty easy to do if you have a table of numbers in your database.
+Every now and then someone will ask how to return a list of all the identity values in a table that have been skipped. You will probably have a table with an identity column, the &#8216;problem' with identity columns is that if an insert is rolled back or fails in any way then the identity value is not reused…you end up with gaps. Identifying gaps is pretty easy to do if you have a table of numbers in your database.
 
-If you don&#8217;t have a table of numbers, here is some code that will create a table with numbers between 1\` and 2048
+If you don't have a table of numbers, here is some code that will create a table with numbers between 1\` and 2048
 
 sql
 create table Numbers (number int not null primary key )

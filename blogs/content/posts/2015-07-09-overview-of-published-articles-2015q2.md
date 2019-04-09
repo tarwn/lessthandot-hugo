@@ -36,7 +36,7 @@ tags:
 
 <strong style="color: #2f2f2f">MSSQLTIPS</strong>
 
-I&#8217;ve been busy writing tips!
+I've been busy writing tips!
 
 <ul style="color: #2f2f2f">
   <li>

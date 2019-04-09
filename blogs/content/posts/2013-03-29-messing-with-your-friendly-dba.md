@@ -23,7 +23,7 @@ tags:
   - sql server 2012
 
 ---
-April Fools&#8217; Day is a day when people play practical jokes and hoaxes on each other. Why not trying to play some practical jokes on your friendly DBA 🙂
+April Fools' Day is a day when people play practical jokes and hoaxes on each other. Why not trying to play some practical jokes on your friendly DBA 🙂
 
 The first thing we are going to do is to spoof the host and program name. This is easy to do. Click on Connect, choose Database Engine, you will see the following box
 
@@ -54,9 +54,9 @@ WHERE session_id = @@spid
 <pre>host_name	    program_name
 LarryEllison-PC	    TOAD</pre>
 
-If the DBA monitors the connection he might notice&#8230;..if not, time for plan B
+If the DBA monitors the connection he might notice…..if not, time for plan B
 
-## Kick it up a notch&#8230;.or two
+## Kick it up a notch….or two
 
 Time to become real evil 🙂
   
@@ -90,6 +90,6 @@ sql
 SELECT * FROM HugeTable
 ```
 
-Call your DBA to stop by and then ask him if he deleted all 3 billion rows from this table? Look at his face..let him run `sp_spaceused 'HugeTable'`. Once the panic sets in tell him he has be pranked&#8230;&#8230;.
+Call your DBA to stop by and then ask him if he deleted all 3 billion rows from this table? Look at his face..let him run `sp_spaceused 'HugeTable'`. Once the panic sets in tell him he has be pranked…….
 
-Of course there is a chance that all your permissions will be taken away&#8230;..
+Of course there is a chance that all your permissions will be taken away…..

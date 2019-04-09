@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-I&#8217;m sure one of us already Wiki&#8217;d this or put it in a blog but since I just had to weed through some code to figure out why something wasn&#8217;t working I figured I&#8217;d say it again.
+I'm sure one of us already Wiki'd this or put it in a blog but since I just had to weed through some code to figure out why something wasn't working I figured I'd say it again.
 
 PLEASE and I stress, PLEASE, make sure you initialize your variable in TSQL or at the least, use IsNull or coalesce to prevent this famous and all annoying issue from killing your hard work
 
@@ -25,7 +25,7 @@ Set @AllImportantVarToRunThisScript = (Select 'MyPretendCharColumn') + @MyVarTha
 
 Select @AllImportantVarToRunThisScript
 ```
-Oops! You just lost the game and crashed and burned. Take care of your NULL&#8217;s!!!!
+Oops! You just lost the game and crashed and burned. Take care of your NULL's!!!!
 
 sql
 Declare @AllImportantVarToRunThisScript varchar(30)
@@ -40,4 +40,4 @@ Set @AllImportantVarToRunThisScript = (Select 'MyPretendCharColumn')
 
 Select @AllImportantVarToRunThisScript
 ```
-Ok, the last one is just silly and it can get even worse but it&#8217;s better than getting NULL 😉
+Ok, the last one is just silly and it can get even worse but it's better than getting NULL 😉

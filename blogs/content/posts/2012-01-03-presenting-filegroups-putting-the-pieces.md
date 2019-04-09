@@ -21,13 +21,13 @@ categories:
   <img src="http://www.popculturemadness.com/Entertainment/Decades/images/greatest-show-on-earth.jpg" alt="" title="" />
 </p>
 
-_Come one, come all to&#8230;_
+_Come one, come all to…_
 
 **Filegroups: Putting The Pieces Together** 
 
-Every DBA must know how to create and maintain filegroups because they affect performance, maintenance, and security of your data. What are filegroups, and how do you use them? In this session, I&#8217;ll show you how to create filegroups, create objects in them, move objects to them, perform maintenance, and walk through piecemeal restores. 
+Every DBA must know how to create and maintain filegroups because they affect performance, maintenance, and security of your data. What are filegroups, and how do you use them? In this session, I'll show you how to create filegroups, create objects in them, move objects to them, perform maintenance, and walk through piecemeal restores. 
 
-I&#8217;ll be presenting for [WiSSUG][1]. 
+I'll be presenting for [WiSSUG][1]. 
 
 Where: Microsoft Offices, N19 W24133 Riverwood Dr., Suite 150, Waukesha, WI 53188 
 

@@ -29,9 +29,9 @@ tags:
 ---
 Axel posted a post titled [Catching the OUTPUT of your DML statements][1] earlier today. I posted something about the OUPUT clause myself as part of my SQL Advent 2011 series here: [SQL Advent 2011 Day 11: DML statements with the OUTPUT clause][2]
 
-Reading Axel&#8217;s post where he describes how he can use this instead of a trigger got me thinking about how @@identity and scope\_identity() would behave. You all know that when you have an insert trigger that inserts into a table with an identity column that @@identity will give you the value of the table that the trigger inserted into, scope\_identity() will give you the id of the table that the trigger fired from.
+Reading Axel's post where he describes how he can use this instead of a trigger got me thinking about how @@identity and scope\_identity() would behave. You all know that when you have an insert trigger that inserts into a table with an identity column that @@identity will give you the value of the table that the trigger inserted into, scope\_identity() will give you the id of the table that the trigger fired from.
 
-Let&#8217;s see what happens with the OUTPUT clause. First create these two simple tables
+Let's see what happens with the OUTPUT clause. First create these two simple tables
 
 sql
 CREATE TABLE TestOutput (id int identity not null,SomeCol date)
@@ -47,7 +47,7 @@ sql
 SELECT @@identity, scope_identity()
 ```
 
-If it doesn&#8217;t return 1, run the following
+If it doesn't return 1, run the following
 
 sql
 TRUNCATE TABLE TestOutput
@@ -83,9 +83,9 @@ And here
 ----    -----   ------------    ------------    ----------------
 1	1	2012-05-25	1		1</pre>
 
-Not very useful since all the values are 1 so we don&#8217;t know where @@identity and scope_identity() get their values from
+Not very useful since all the values are 1 so we don't know where @@identity and scope_identity() get their values from
 
-Let&#8217;s just insert a bunch of rows in the TestOutput table
+Let's just insert a bunch of rows in the TestOutput table
 
 sql
 INSERT TestOutput VALUES('20120101')
@@ -102,7 +102,7 @@ OUTPUT inserted.id,inserted.SomeCol,   INTO TestOutput2
 VALUES ('20120526')
 ```
 
-Let&#8217;s see what we have
+Let's see what we have
 
 sql
 SELECT * FROM TestOutput
@@ -195,7 +195,7 @@ SELECT * FROM TestOutput2
 
 If you do this now, you will get the value 5, the value 5 is the value of the identity column for the TestOutput2 table, we last inserted into this table via the OUTPUT clause
 
-So be aware when using @@identity and scope\_identity(), they might not behave as you would expect them to behave. The thing to remember is that @@identity and scope\_identity() don&#8217;t return the values from the statement just executed but from the one that was just executed prior to the current statement. If you do use the OUTPUT clause, @@identity and scope\_identity() will return the value from the table where the OUTPUT clause is inserting into. If you need the ID for the table that the OUTPUT clause inserted into, just grab @@identity or scope\_identity() after the statement executed
+So be aware when using @@identity and scope\_identity(), they might not behave as you would expect them to behave. The thing to remember is that @@identity and scope\_identity() don't return the values from the statement just executed but from the one that was just executed prior to the current statement. If you do use the OUTPUT clause, @@identity and scope\_identity() will return the value from the table where the OUTPUT clause is inserting into. If you need the ID for the table that the OUTPUT clause inserted into, just grab @@identity or scope\_identity() after the statement executed
 
  [1]: /index.php/DataMgmt/DBProgramming/MSSQLServer/catching-the-output-of-your
  [2]: /index.php/DataMgmt/DataDesign/sql-advent-2011-day-11

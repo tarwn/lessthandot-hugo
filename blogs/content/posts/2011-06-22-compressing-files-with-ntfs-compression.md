@@ -32,7 +32,7 @@ You know that you can right click on a file/folder, select properties, click adv
 
 [<img src="http://farm6.static.flickr.com/5277/5860004203_c847a70cac.jpg" width="394" height="300" alt="compress" />][1]
 
-Did you know that you can call this from the command line also? I just saw this on Raymond Chen&#8217;s blog today: http://blogs.msdn.com/b/oldnewthing/archive/2011/06/22/10177613.aspx
+Did you know that you can call this from the command line also? I just saw this on Raymond Chen's blog today: http://blogs.msdn.com/b/oldnewthing/archive/2011/06/22/10177613.aspx
 
 I decided to try it out
 

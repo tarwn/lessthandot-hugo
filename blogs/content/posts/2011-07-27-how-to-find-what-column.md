@@ -37,9 +37,9 @@ CREATE TABLE [dbo].[Sheet1$] (
 )
 ```
 
-Sometimes the data that you are importing won&#8217;t fit into your column and you get the helpful **String or binary data would be truncated** message.
+Sometimes the data that you are importing won't fit into your column and you get the helpful **String or binary data would be truncated** message.
   
-Of course it doesn&#8217;t tell you which column it is, now you need to figure out which column and compare the tables
+Of course it doesn't tell you which column it is, now you need to figure out which column and compare the tables
 
 I will show you what I mean, first create these two tables
 
@@ -65,7 +65,7 @@ create table TestTrunc(
 	GO
 ```
 
-Now let&#8217;s insert some data into the temp table 
+Now let's insert some data into the temp table 
 
 sql
 insert 	temp
@@ -87,7 +87,7 @@ String or binary data would be truncated.
   
 The statement has been terminated._
 
-Yes, very nice&#8230;.could you indicate which column it actually has a problem with?
+Yes, very nice….could you indicate which column it actually has a problem with?
 
 Now the purpose of this post is to create code that you then can modify for your own needs and can use it to compare any two tables.
 
@@ -233,7 +233,7 @@ join TempTrunc tt on t._col0 = tt._col0
 ------------------------------------------------------------------------------------
 truncation	truncation	no truncation	     truncation	     truncation</pre>
 
-And again, we will use a dynamic approach, we don&#8217;t know the real column names
+And again, we will use a dynamic approach, we don't know the real column names
 
 sql
 declare @sql varchar(8000)
@@ -331,7 +331,7 @@ exec ('drop table ' + @ImportTableCompare+ ',' + @DestinationTableCompare )
 
 ### To Do list
 
-Here are some things for you to add&#8230;&#8230;.
+Here are some things for you to add…….
 
 Now if you have worked with SQL Server for a while now, you might notice that what I did was not really what you would call defensive programming.
   
@@ -339,7 +339,7 @@ Can you tell what I forgot?
 
 **1)** if the column name has spaces or other weird characters I am not taking care of that. To take care of that use the QUOTENAME function or put brackets around column_name
 
-**2)** I also didn&#8217;t look at the schema the table is in, you can use the TABLE_SCHEMA column for that, and the same applies as for columns, use QUOTENAME to take care of schemas that have an invalid name.
+**2)** I also didn't look at the schema the table is in, you can use the TABLE_SCHEMA column for that, and the same applies as for columns, use QUOTENAME to take care of schemas that have an invalid name.
 
 **3)** LEN trims spaces, be aware of that otherwise you might still get truncation if inserting into a char column.
 
@@ -376,7 +376,7 @@ Now run this and observe character\_maximum\_length
   
 select * from information_schema.columns
   
-where table_name = &#8216;TestTrim&#8217;
+where table_name = &#8216;TestTrim'
 
 As you can see the character\_maximum\_length is -1 for (max) columns, you need to take that into account
 

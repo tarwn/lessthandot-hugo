@@ -23,11 +23,11 @@ tags:
 ---
 As you might know we are giving away 2 MSDN ultimate subscriptions, for the original announcement see here: [MSDN Ultimate Subscription giveaway][1]
 
-We decided on one of the winners already, for the other winner I decided to pull a Pontius Pilate on you so that nobody can blame me that they didn&#8217;t win&#8230;.yes I know it sounds like a cop out&#8230;that is because it is&#8230;and this is more fun.
+We decided on one of the winners already, for the other winner I decided to pull a Pontius Pilate on you so that nobody can blame me that they didn't win….yes I know it sounds like a cop out…that is because it is…and this is more fun.
 
 Here is what I did..I picked the 20 best answers and put them in 2 groups of 10. In each group 3 people will advance to a final vote, you can vote for two people. The results of those two polls will be looked at tomorrow morning around 9 AM EST and then a new poll will be created with the final 6 contestants.
 
-Make sure that you look at every person&#8217;s answer, also check their links so that you can decide who should advance.
+Make sure that you look at every person's answer, also check their links so that you can decide who should advance.
 
 The group A people can be found here: http://forum.ltd.local/viewtopic.php?f=121&t=11533
   

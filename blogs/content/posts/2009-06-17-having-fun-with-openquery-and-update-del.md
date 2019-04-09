@@ -21,7 +21,7 @@ tags:
 ---
 Recently I had to do some data manipulation against a Sybase linked server running on a Unix box. When you have a linked server you can use OPENQUERY do perform DML statements like delete, update and inserts but the syntax is a little different
 
-So let&#8217;s look at some code, first create a linked server on your machine that is linked to your machine. You can add a linked server through the wizard or through the sp_addlinkedserver stored proc
+So let's look at some code, first create a linked server on your machine that is linked to your machine. You can add a linked server through the wizard or through the sp_addlinkedserver stored proc
 
 sql
 EXEC master.dbo.sp_addlinkedserver @server = N'localhost', @srvproduct=N'SQL Server'
@@ -136,9 +136,9 @@ Output
 <pre>id	col1
 3	Test3</pre>
 
-**When it doesn&#8217;t work**
+**When it doesn't work**
 
-I showed you what worked, now let&#8217;s look at some stuff that doesn&#8217;t
+I showed you what worked, now let's look at some stuff that doesn't
   
 Create another table that looks like the table we had before but without a primary key
 
@@ -189,11 +189,11 @@ you will be greeted with this message
 
 _Server: Msg 7320, Level 16, State 2, Line 1
   
-Could not execute query against OLE DB provider &#8216;SQLOLEDB&#8217;. The provider could not support a required row lookup interface. The provider indicates that conflicts occurred with other properties or requirements.
+Could not execute query against OLE DB provider &#8216;SQLOLEDB'. The provider could not support a required row lookup interface. The provider indicates that conflicts occurred with other properties or requirements.
   
 [OLE/DB provider returned message: Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done.]
   
-OLE DB error trace [OLE/DB Provider &#8216;SQLOLEDB&#8217; ICommandText::Execute returned 0x80040e21: select id,col1 from tempdb.dbo.test2 where id = 1 [PROPID=DBPROP\_IRowsetLocate VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING], [PROPID=DBPROP\_BOOKMARKS VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING]]._
+OLE DB error trace [OLE/DB Provider &#8216;SQLOLEDB' ICommandText::Execute returned 0x80040e21: select id,col1 from tempdb.dbo.test2 where id = 1 [PROPID=DBPROP\_IRowsetLocate VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING], [PROPID=DBPROP\_BOOKMARKS VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING]]._
 
 The delete has the same issue as the update statement, running the following
 
@@ -204,13 +204,13 @@ will produce this error message
 
 _Server: Msg 7320, Level 16, State 2, Line 1
   
-Could not execute query against OLE DB provider &#8216;SQLOLEDB&#8217;. The provider could not support a required row lookup interface. The provider indicates that conflicts occurred with other properties or requirements.
+Could not execute query against OLE DB provider &#8216;SQLOLEDB'. The provider could not support a required row lookup interface. The provider indicates that conflicts occurred with other properties or requirements.
   
 [OLE/DB provider returned message: Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done.]
   
-OLE DB error trace [OLE/DB Provider &#8216;SQLOLEDB&#8217; ICommandText::Execute returned 0x80040e21: select id,col1 from tempdb.dbo.test2 where id = 2 [PROPID=DBPROP\_IRowsetLocate VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING], [PROPID=DBPROP\_BOOKMARKS VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING]]._
+OLE DB error trace [OLE/DB Provider &#8216;SQLOLEDB' ICommandText::Execute returned 0x80040e21: select id,col1 from tempdb.dbo.test2 where id = 2 [PROPID=DBPROP\_IRowsetLocate VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING], [PROPID=DBPROP\_BOOKMARKS VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING]]._
 
-So what those errors are telling us is that a row lookup could not be performed, this is of course because we don&#8217;t have a key on this table. So just be aware of that!
+So what those errors are telling us is that a row lookup could not be performed, this is of course because we don't have a key on this table. So just be aware of that!
 
 Now that we are done we can drop the linked server, you can use sp_dropserver to do that
 

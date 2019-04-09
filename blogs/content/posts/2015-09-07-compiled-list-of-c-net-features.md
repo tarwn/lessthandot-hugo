@@ -17,7 +17,7 @@ tags:
   - 'c#'
 
 ---
-We have talked about doing this at work for a while, so I finally sat down this weekend and tried to make a list of C# features that the team could share. We intend to use this to help gauge who the best people are to ask questions in different areas (C# isn&#8217;t our only list) as well as a list of things to learn when you&#8217;re bored (after crossing off all the ones you know). I added in some of the .Net framework features to round the list off.
+We have talked about doing this at work for a while, so I finally sat down this weekend and tried to make a list of C# features that the team could share. We intend to use this to help gauge who the best people are to ask questions in different areas (C# isn't our only list) as well as a list of things to learn when you're bored (after crossing off all the ones you know). I added in some of the .Net framework features to round the list off.
 
 Based on their relevance in our team, I left some grouped together (like unsafe code and WPF) and broke others into details (ASP.Net). Do you see any I missed? How much of the list have you worked with in production?
 
@@ -57,7 +57,7 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 1.0] Operator Overloading
   * [C# 1.0] Inheritance: extends base
   * [C# 1.0] Hiding: new
-  * [C# 1.0] Access modifiers: public protected private internal &#8220;protected internal&#8221;
+  * [C# 1.0] Access modifiers: public protected private internal “protected internal”
   * [C# 1.0] Modifiers &#8211; static instance const virtual overrides sealed extern
   * [C# 1.0] Property Declaration
   * [C# 1.0] Constructors
@@ -84,18 +84,18 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 2.0] Preprocessor Region: #pragma warning
   * [C# 2.0] Generics &#8211; Usage
   * [C# 2.0] Generic Class Declaration
-  * [C# 2.0] Generic Constraints: &#8220;where T&#8221;
+  * [C# 2.0] Generic Constraints: “where T”
   * [C# 2.0] Anonymous methods (inline delegates, closures)
   * [C# 2.0] Iterators: yield
   * [C# 2.0] Static Classes
-  * [C# 2.0] Partial types: &#8220;public partial class XYZ&#8221;
-  * [C# 2.0] Nullable types: &#8220;int? x = null&#8221;
-  * [C# 2.0] namespace aliases: &#8220;using xyz = System.IO;&#8221;
+  * [C# 2.0] Partial types: “public partial class XYZ”
+  * [C# 2.0] Nullable types: “int? x = null”
+  * [C# 2.0] namespace aliases: “using xyz = System.IO;”
   * [C# 2.0] Default value expression: default()
   * [C# 2.0] Conditional attribute
   * [C# 2.0] Fixed size buffers
   * [C# 2.0] Delegate Covariance/Contravariance
-  * [C# 2.0] Friend Assemblies: aka &#8220;oops we made everything internal&#8221;
+  * [C# 2.0] Friend Assemblies: aka “oops we made everything internal”
   * [C# 3.0] Implicitly Typed Local Variables: var
   * [C# 3.0] Extension Methods
   * [C# 3.0] Lambda expressions
@@ -104,7 +104,7 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 3.0] Anonymouse types
   * [C# 3.0] Implicitly typed arrays
   * [C# 3.0] Query Expressions: from into in join let orderby group select
-  * [C# 3.0] Automatically implemented properties: &#8220;public int X { get; set; }&#8221;
+  * [C# 3.0] Automatically implemented properties: “public int X { get; set; }”
   * [C# 3.0] Partial method declaration
   * [C# 4.0] Covariance, Contravariance
   * [C# 4.0] Dynamic Dispatch: dynamic
@@ -124,7 +124,7 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 6.0] Exception filters
   * [C# 6.0] Exception filters
 
-Where&#8217;s LINQ???!? In the .Net Framework of course:
+Where's LINQ???!? In the .Net Framework of course:
 
 # .Net Framework Features
 
@@ -239,4 +239,4 @@ Where&#8217;s LINQ???!? In the .Net Framework of course:
   * ASP.Net &#8211; Web API 2
   * ASP.Net &#8211; OData
 
-Whew, and that doesn&#8217;t even count all of the extra nuget packages that are out there now&#8230;It&#8217;s hard to remember how we managed without some of this stuff back in the 1.0 and 1.1 days.
+Whew, and that doesn't even count all of the extra nuget packages that are out there now…It's hard to remember how we managed without some of this stuff back in the 1.0 and 1.1 days.

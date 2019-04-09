@@ -27,7 +27,7 @@ tags:
   - tip
 
 ---
-If you ever have to start working with Oracle you have to keep in mind that NULLs and blank values don&#8217;t work exactly the same as in SQL Server. Let&#8217;s take a look at some examples
+If you ever have to start working with Oracle you have to keep in mind that NULLs and blank values don't work exactly the same as in SQL Server. Let's take a look at some examples
 
 Create this table and insert some rows
 
@@ -41,7 +41,7 @@ insert into TestNull values(' ');
 
 As you can see we inserted four rows, one row is null, one row is blank, one row has a space and one row has Bla.
 
-Now let&#8217;s run the following query
+Now let's run the following query
 
 ```plsql
 SELECT Col2,
@@ -150,7 +150,7 @@ Here is an image of the same results
 
 See what happened, Oracle changed the blanks to NULLs. 
 
-We can easily test this theory, let&#8217;s create a table with a column that has a not null constraint
+We can easily test this theory, let's create a table with a column that has a not null constraint
 
 ```plsql
 create table TestNull2(Col2 varchar(100) not null);
@@ -164,9 +164,9 @@ insert into TestNull2 values(NULL);
 
 Here is the error
   
-_SQL Error: ORA-01400: cannot insert NULL into (&#8220;SYSTEM&#8221;.&#8221;TESTNULL2&#8243;.&#8221;COL2&#8243;)
+_SQL Error: ORA-01400: cannot insert NULL into (“SYSTEM”.”TESTNULL2&#8243;.”COL2&#8243;)
   
-01400. 00000 &#8211; &#8220;cannot insert NULL into (%s)&#8221;_
+01400. 00000 &#8211; “cannot insert NULL into (%s)”_
 
 Inserting Bla works without a problem
 
@@ -180,9 +180,9 @@ What about a blank, what will happen now?
 insert into TestNull2 values('');
 ```
 
-_SQL Error: ORA-01400: cannot insert NULL into (&#8220;SYSTEM&#8221;.&#8221;TESTNULL2&#8243;.&#8221;COL2&#8243;)
+_SQL Error: ORA-01400: cannot insert NULL into (“SYSTEM”.”TESTNULL2&#8243;.”COL2&#8243;)
   
-01400. 00000 &#8211; &#8220;cannot insert NULL into (%s)&#8221;_
+01400. 00000 &#8211; “cannot insert NULL into (%s)”_
 
 As you can see the blank gets converted to a NULL and you get the same error. This is very different from SQL Server.
 
@@ -196,7 +196,7 @@ A space is no problem.
 
 **Coalesce differences**
   
-Just be aware that coalesce won&#8217;t work the same either. Oracle doesn&#8217;t have isnull but it has the nvl function instead
+Just be aware that coalesce won't work the same either. Oracle doesn't have isnull but it has the nvl function instead
 
 Run the following two statements
 

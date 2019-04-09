@@ -25,7 +25,7 @@ Written by Matthew A. Stoecker
   
 This book has 524 pages
 
-The reason I read exam preparation books is to learn things about the product which you would otherwise learn the hard way, you might have introduced bugs because you didn&#8217;t know why certain things worked the way they did. Taking the preparation exams in the book is also another good way to see if you have actually mastered the material inside the book. This book is organized in 10 chapters. If you have done Windows Forms programming then you will have no problem following the material in the book, it is written in a clear and concise matter and source code is in C# and VB. 
+The reason I read exam preparation books is to learn things about the product which you would otherwise learn the hard way, you might have introduced bugs because you didn't know why certain things worked the way they did. Taking the preparation exams in the book is also another good way to see if you have actually mastered the material inside the book. This book is organized in 10 chapters. If you have done Windows Forms programming then you will have no problem following the material in the book, it is written in a clear and concise matter and source code is in C# and VB. 
 
 Here is what is covered in each chapter.
 

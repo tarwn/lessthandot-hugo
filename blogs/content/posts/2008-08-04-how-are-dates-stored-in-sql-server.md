@@ -157,7 +157,7 @@ GO
   
 &#8211;1900-01-01 00:00:00.000 
 
-So there is no implicit conversion, o is fine &#8216;o&#8217; is not 
+So there is no implicit conversion, o is fine &#8216;o' is not 
 
 ```sql
 DECLARE @d DATETIME 

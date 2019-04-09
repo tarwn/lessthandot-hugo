@@ -20,7 +20,7 @@ tags:
 ---
 [![][1]][2]
 
-This month&#8217;s T-SQL Tuesday is hosted by [Jes Borland][3] and it is all about grouping and aggregate functions, here is my attempt. I wrote most of this post on my way to the MVP summit in Seattle. This post is all about the stock market, charting data for Intraday chart and for end of day charts. This post contains a lot of code and I apologize for that, I just want you to be able to run the code, in order to do that we have to setup all the tables and data.
+This month's T-SQL Tuesday is hosted by [Jes Borland][3] and it is all about grouping and aggregate functions, here is my attempt. I wrote most of this post on my way to the MVP summit in Seattle. This post is all about the stock market, charting data for Intraday chart and for end of day charts. This post contains a lot of code and I apologize for that, I just want you to be able to run the code, in order to do that we have to setup all the tables and data.
 
 Most people think of aggregate/grouping functions being Min, Max, Avg, Sum etc etc. To me Row_number and other ranking/windowing functions, datepart, converting to date, year() and month() can also be considered grouping
   

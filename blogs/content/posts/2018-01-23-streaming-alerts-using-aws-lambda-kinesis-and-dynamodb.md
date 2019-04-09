@@ -21,9 +21,9 @@ tags:
   - Serverless
 
 ---
-Recently I was talking to some friends about alerting on complex streaming data. Between some past event processing work we had done and earlier experience aggregating real-time manufacturing data, I was thinking a lot about projecting and evaluating results as we go versus querying the for results on some frequency. It seemed like a realistic approach and I couldn&#8217;t stop thinking about it, so I decided to prototype the pieces that I was least familiar with. 
+Recently I was talking to some friends about alerting on complex streaming data. Between some past event processing work we had done and earlier experience aggregating real-time manufacturing data, I was thinking a lot about projecting and evaluating results as we go versus querying the for results on some frequency. It seemed like a realistic approach and I couldn't stop thinking about it, so I decided to prototype the pieces that I was least familiar with. 
 
-The idea is based on one that is used frequently in CQRS and I&#8217;m far from the first to have it, professional tools like [Apache Spark][1] and [Amazon Kinesis Data Analytics][2] support this idea of a continuous query over time, but part of the driver was also the desire to support user-defined rules in a multi-tenant environment and see how that would impact my design thinking as I prototyped.
+The idea is based on one that is used frequently in CQRS and I'm far from the first to have it, professional tools like [Apache Spark][1] and [Amazon Kinesis Data Analytics][2] support this idea of a continuous query over time, but part of the driver was also the desire to support user-defined rules in a multi-tenant environment and see how that would impact my design thinking as I prototyped.
 
 <div style="border: 1px solid #eeeeee; border-left: 8px solid #eeeeee; margin: .5em 0; padding: 1em;">
   <b>Examples:</b>
@@ -57,7 +57,7 @@ The idea is based on one that is used frequently in CQRS and I&#8217;m far from 
 </div>
 
 <p>
-  I would use a fake front-end to manage some fake &#8220;machines&#8221; for 2 &#8220;clients&#8221;, that would change state occasionally and publish those events. The fake site would push those events into the beginning of my real prototype, an <a href="https://aws.amazon.com/kinesis/">Amazon Kinesis</a> stream for events. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function, the &#8220;Rule Processor&#8221;, would be triggered by a batch of events on the stream. It would load the appropriate rules out of <A href="https://aws.amazon.com/dynamodb/">DynamoDB</a> for each client, evaluate which rules each event applies to, then combine that with previously cached events from DynamoDB and evaluate whether the rule is satisfied. If so, an alert would be published to the Kinesis Alerts Stream. Further downstream, an &#8220;Alerts Processor&#8221; function would receive those alerts and, in a real system, decide what types of notifications were necessary.
+  I would use a fake front-end to manage some fake “machines” for 2 “clients”, that would change state occasionally and publish those events. The fake site would push those events into the beginning of my real prototype, an <a href="https://aws.amazon.com/kinesis/">Amazon Kinesis</a> stream for events. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function, the “Rule Processor”, would be triggered by a batch of events on the stream. It would load the appropriate rules out of <A href="https://aws.amazon.com/dynamodb/">DynamoDB</a> for each client, evaluate which rules each event applies to, then combine that with previously cached events from DynamoDB and evaluate whether the rule is satisfied. If so, an alert would be published to the Kinesis Alerts Stream. Further downstream, an “Alerts Processor” function would receive those alerts and, in a real system, decide what types of notifications were necessary.
 </p>
 
 <h2>
@@ -104,7 +104,7 @@ new Rule({
 </pre>
 
 <p>
-  I wouldn&#8217;t expect an end user to enter a rule like this and would probably rework the structure if this was intended to be a real system, but it is good enough to let me resolve the bigger unknowns around processing events and partitioning data.
+  I wouldn't expect an end user to enter a rule like this and would probably rework the structure if this was intended to be a real system, but it is good enough to let me resolve the bigger unknowns around processing events and partitioning data.
 </p>
 
 <h2>
@@ -120,7 +120,7 @@ new Rule({
 </p>
 
 <p>
-  The core of the system is the &#8220;Rule Processor&#8221;:
+  The core of the system is the “Rule Processor”:
 </p>
 
 <div id="attachment_8901" style="width: 463px" class="wp-caption aligncenter">
@@ -143,9 +143,9 @@ new Rule({
     Group them by Client
   </li>
   <li>
-    For Each Client&#8217;s group of events: <ul>
+    For Each Client's group of events: <ul>
       <li>
-        Load the client&#8217;s rules
+        Load the client's rules
       </li>
       <li>
         Create result buckets for each rule and add applicable events to it
@@ -165,7 +165,7 @@ new Rule({
 </ul>
 
 <p>
-  Each of the &#8220;Event x Rule&#8221; result buckets can be thought of as the results of a query we&#8217;re running continuously as events flow in (which is about the time I realized I was duplicating work a bunch of much smarter folks had put into stream analytics packages above). So if I have 6 rules that care about machine events and 1 event comes in for &#8220;machineStatusChange&#8221; on &#8220;machine-01&#8221;, then I&#8217;ll add that event to all 6 buckets individually (storage is cheap).
+  Each of the “Event x Rule” result buckets can be thought of as the results of a query we're running continuously as events flow in (which is about the time I realized I was duplicating work a bunch of much smarter folks had put into stream analytics packages above). So if I have 6 rules that care about machine events and 1 event comes in for “machineStatusChange” on “machine-01”, then I'll add that event to all 6 buckets individually (storage is cheap).
 </p>
 
 <p>
@@ -242,7 +242,7 @@ function evaluateAndStore(eventGroup){
     </h2>
     
     <p>
-      This proved out the big question I had, and maybe helped some folks with running Kinesis functions locally (previous post), so I&#8217;m calling it a win. If I were building this for production, the next steps would be to continue making the rules richer, figure out how to age data out of the result set I&#8217;m storing in DynamoDB, and start building an interface that would allow you to create and store a rule on your own. Another big question would be whether I also need some sort of regular event (second? Minute) to re-evaluate rules for data to fall off or for queries that want to rely on the continued state of a value without needing new events to come in and restart it (the machine is still running, still running, still running…).
+      This proved out the big question I had, and maybe helped some folks with running Kinesis functions locally (previous post), so I'm calling it a win. If I were building this for production, the next steps would be to continue making the rules richer, figure out how to age data out of the result set I'm storing in DynamoDB, and start building an interface that would allow you to create and store a rule on your own. Another big question would be whether I also need some sort of regular event (second? Minute) to re-evaluate rules for data to fall off or for queries that want to rely on the continued state of a value without needing new events to come in and restart it (the machine is still running, still running, still running…).
     </p>
 
  [1]: https://spark.apache.org/

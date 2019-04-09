@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-It&#8217;s not often that we (as programmers) need random numbers, especially from a database. When you are testing your queries for performance, it&#8217;s best to use a large table to do it. Sometimes you just don&#8217;t have access to a large table to test with, so you may think about creating many rows in your existing table.
+It's not often that we (as programmers) need random numbers, especially from a database. When you are testing your queries for performance, it's best to use a large table to do it. Sometimes you just don't have access to a large table to test with, so you may think about creating many rows in your existing table.
 
 SQL Server has a rand() function that will return a random (fractional) number between 0 and 1.
   
@@ -40,9 +40,9 @@ From   (Select 1 As NUM Union All
 0.920057583532051
 0.920057583532051</pre>
 
-Not very random, is it? I mean, the number is random, but it&#8217;s also the same for each row. The purpose of this blog is to demonstrate how to get a random value in set based operations.
+Not very random, is it? I mean, the number is random, but it's also the same for each row. The purpose of this blog is to demonstrate how to get a random value in set based operations.
 
-There is an interesting technique that you can use to accomplish this. There is a NewId() function in SQL Server that returns a GUID, for example: &#8216;94344EE4-5D7A-45EB-9EBC-7A596B7F90F3&#8217;. NewId does work well for set based operations, for example:
+There is an interesting technique that you can use to accomplish this. There is a NewId() function in SQL Server that returns a GUID, for example: &#8216;94344EE4-5D7A-45EB-9EBC-7A596B7F90F3'. NewId does work well for set based operations, for example:
 
 sql
 Select Rand() As RandomNumber, NewId() As GUID
@@ -57,7 +57,7 @@ From   (Select 1 As NUM Union All
 0.130542187318667      B42D7973-B3E2-420F-8D4D-DC72442D0824
 </pre>
 
-Notice that the &#8216;Random Number&#8217; column is the same for each row, but the GUID column is different. We can use this interesting fact to generate random numbers by combining this with another function available in SQL Server. The CHECKSUM function will return an integer hash value based on its argument. In this case, we can pass in a GUID, and checksum will return an integer.
+Notice that the &#8216;Random Number' column is the same for each row, but the GUID column is different. We can use this interesting fact to generate random numbers by combining this with another function available in SQL Server. The CHECKSUM function will return an integer hash value based on its argument. In this case, we can pass in a GUID, and checksum will return an integer.
 
 sql
 Select Rand() As RandomNumber, 
@@ -74,9 +74,9 @@ From   (Select 1 As NUM Union All
 0.152440960483059      6BD23217-F3FF-4F19-AA7F-C127CA7A4763    976,389,102
 </pre>
 
-Before we continue, let&#8217;s take a look at the output, because there are some interesting observations that we need to consider before continuing. RandomInteger can be positive or negative because it&#8217;s limited to the range of an integer, so the values must fall between -2,147,483,648 and 2,147,483,647. 
+Before we continue, let's take a look at the output, because there are some interesting observations that we need to consider before continuing. RandomInteger can be positive or negative because it's limited to the range of an integer, so the values must fall between -2,147,483,648 and 2,147,483,647. 
 
-Most of the time, we want a random number within a certain range of numbers. In most languages, we simply multiply the result of the Rand() function to get this number. Since our RandomInteger is already a whole number, we really can&#8217;t do this. However, we could use the mod operator to guarantee a range of numbers. Mod is the remainder of a division operation, so if we mod a number by 10, we are guaranteed to get a number between -9 and +9. Unfortunately, this is a little misleading because there are 19 possible numbers we can get for this. So, to make sure we get a range to 10 numbers, we need to take the absolute value of the number, and then mod 10. Like this:
+Most of the time, we want a random number within a certain range of numbers. In most languages, we simply multiply the result of the Rand() function to get this number. Since our RandomInteger is already a whole number, we really can't do this. However, we could use the mod operator to guarantee a range of numbers. Mod is the remainder of a division operation, so if we mod a number by 10, we are guaranteed to get a number between -9 and +9. Unfortunately, this is a little misleading because there are 19 possible numbers we can get for this. So, to make sure we get a range to 10 numbers, we need to take the absolute value of the number, and then mod 10. Like this:
 
 sql
 Select Rand() As RandomNumber, 
@@ -95,7 +95,7 @@ From   (Select 1 As NUM Union All
 
 Now, we are guaranteed to get a Random number between 0 and 9. Suppose you want to get a random number between 10 and 15. The range of numbers is 6 (10,11,12,13,14,15). The mod value for this needs to be 6, to get a number in the range of 0 to 5. Then, we add 10 to the result to get a number in the range of 10 to 15.
 
-If you want to generate a random number between -5 and 5, don’t be tempted to remove the absolute value function, because you will get numbers that appears to be random, but are not &#8216;as random&#8217; as they should be. 
+If you want to generate a random number between -5 and 5, don’t be tempted to remove the absolute value function, because you will get numbers that appears to be random, but are not &#8216;as random' as they should be. 
 
 In my database, I have a numbers table with 1,000,000 rows. When I run this code:
 
@@ -149,4 +149,4 @@ Order By RandomNumber
 5            91037
 </pre>
 
-Notice now that the values are &#8216;more&#8217; random than the previous version (where 0 had double the number of occurrences). Since we are talking about random numbers, we wouldn&#8217;t expect there to be the same number of occurrences for each number, but with the previous version, there were double the number of zero&#8217;s, which isn&#8217;t truly random. This version has approximately the same number of zero&#8217;s as any other number, making it &#8216;more random&#8217;.
+Notice now that the values are &#8216;more' random than the previous version (where 0 had double the number of occurrences). Since we are talking about random numbers, we wouldn't expect there to be the same number of occurrences for each number, but with the previous version, there were double the number of zero's, which isn't truly random. This version has approximately the same number of zero's as any other number, making it &#8216;more random'.

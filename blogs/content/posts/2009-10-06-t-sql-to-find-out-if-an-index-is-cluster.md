@@ -51,7 +51,7 @@ go
   
 To use INDEXPROPERTY you need to know the table ID, the name of the index and use IsClustered for the property. To get the table id, you use the OBJECT_ID function with the table name passed in
   
-So for the index ix\_test on table Test we will use INDEXPROPERTY(OBJECT\_ID(&#8216;Test&#8217;), &#8216;ix_test&#8217;,&#8217;IsClustered&#8217;)
+So for the index ix\_test on table Test we will use INDEXPROPERTY(OBJECT\_ID(&#8216;Test'), &#8216;ix_test','IsClustered')
 
 sql
 SELECT 'ix_test',INDEXPROPERTY(OBJECT_ID('Test'), 'ix_test','IsClustered')

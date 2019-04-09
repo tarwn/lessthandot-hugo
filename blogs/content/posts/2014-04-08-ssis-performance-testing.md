@@ -44,11 +44,11 @@ The RunID column is populated by a package parameter; I will come back to this l
 
 The package starts with an Execute SQL Task to log the start. I use the following SSIS expression to construct the SQL statement on the fly, allowing you to easy copy-paste the logging task between packages.
 
-> &#8220;INSERT INTO dbo.PackageLogging(RunID, PackageName,StartDate) VALUES (&#8221; +  (DT_STR,10,1252)@[$Package::RunID] + &#8220;,'&#8221; +  @[System::PackageName] + &#8220;&#8216;,SYSDATETIME());&#8221;
+> “INSERT INTO dbo.PackageLogging(RunID, PackageName,StartDate) VALUES (” +  (DT_STR,10,1252)@[$Package::RunID] + “,'” +  @[System::PackageName] + “&#8216;,SYSDATETIME());”
 
 At the end of the control flow, there is an Execute SQL Task that updates the EndDate of the previously inserted row. The expression looks like this:
 
-> &#8220;UPDATE dbo.PackageLogging SET [EndDate] = SYSDATETIME() WHERE RunID = &#8221; + (DT_STR,10,1252)  @[$Package::RunID] + &#8221; AND PackageName = &#8216;&#8221; +  @[System::PackageName] + &#8220;&#8216;;&#8221;
+> “UPDATE dbo.PackageLogging SET [EndDate] = SYSDATETIME() WHERE RunID = ” + (DT_STR,10,1252)  @[$Package::RunID] + ” AND PackageName = &#8216;” +  @[System::PackageName] + “&#8216;;”
 
 The RunID parameter is important to link those two Execute SQL Tasks together. A typical control flow looks like this:
 

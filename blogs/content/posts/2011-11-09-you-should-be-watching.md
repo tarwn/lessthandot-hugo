@@ -19,7 +19,7 @@ Have you been watching Brent Ozar PLF’s Technology Triage Tuesdays? If you’r
 
 Here’s a few of the ones that I’ve watched that I’ve enjoyed and learned a lot:
   
-[There&#8217;s something about nolock][2]
+[There's something about nolock][2]
   
 [How to tell when tempdb is a problem][3]
   

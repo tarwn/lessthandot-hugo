@@ -27,7 +27,7 @@ Sometimes you want to quickly see what the biggest tables are in your database. 
 
 > When you drop or rebuild large indexes, or drop or truncate large tables, the Database Engine defers the actual page deallocations, and their associated locks, until after the transaction commits. Deferred drop operations do not release allocated space immediately. Therefore, the values returned by sp_spaceused immediately after dropping or truncating a large object may not reflect the actual disk space available. 
 
-You could use updateusage but I don&#8217;t bother, I just want to get a rough size
+You could use updateusage but I don't bother, I just want to get a rough size
 
 Here is the query that will give you the 10 biggest tables in your SQL Server database
 

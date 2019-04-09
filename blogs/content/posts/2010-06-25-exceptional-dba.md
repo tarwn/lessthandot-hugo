@@ -34,7 +34,7 @@ The morning that the announcement went out I was completely blown away, not only
 
 This was also the day I was able to see who the other finalists were. I was more than pleased to see Jorge Segarra ([Blog][1] | [Twitter][2]) and Jonathan Kehayias ([Blog][3] | [Twitter][4]) in the final six. Jorge is a leader in the SQL Community. I could easily see that from the creation of SQL University and when I was lucky enough to have him come speak at SQL Saturday in Chicago. Jonathan is another person that the word exceptional fits with without a doubt. I’ve been very fortunate over the last few months to get to know him better and, for my part, call him a friend.
 
-I&#8217;m still reading about Kevan Riley, John Burnette and Tracy Hamlin. I can guarantee that these other three finalists are nothing short of exceptional simply by making it to this accomplishment as well. I hope to meet all of them at PASS or in their local areas during SQL Saturday’s or SSUG’s. 
+I'm still reading about Kevan Riley, John Burnette and Tracy Hamlin. I can guarantee that these other three finalists are nothing short of exceptional simply by making it to this accomplishment as well. I hope to meet all of them at PASS or in their local areas during SQL Saturday’s or SSUG’s. 
 
 **How did I get here?**
 

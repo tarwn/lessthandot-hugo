@@ -23,7 +23,7 @@ While I was trying the longer process though, I found a series of smaller tools 
 
 ## The Quicker Process
 
-So, with a big fat &#8220;this worked on my machine and might blow up yours&#8221; disclaimer, here&#8217;s that process:
+So, with a big fat “this worked on my machine and might blow up yours” disclaimer, here's that process:
 
 1. Stop the server
 2. Delete the server (but keep the drives) 
@@ -42,7 +42,7 @@ _Reference: <http://michaelwasham.com/2012/08/07/copying-vhds-and-other-blobs-be
     * Azure Dashboard &#8211; Virtual Machines
     * Select Disks at top
     * Select the drive + press Delete
-    * Select the &#8220;Delete and retain associated VHD&#8221; option
+    * Select the “Delete and retain associated VHD” option
 * Resize the Disk 
     * Download WindowsAzureDiskResizer:
 
@@ -70,25 +70,25 @@ Copyright 2013 Maarten Balliauw
 
   * Re-Create the Disk 
       * Azure Dashboard &#8211; Virtual Machines &#8211; Disks
-      * Select &#8220;Create&#8221; at the bottom
+      * Select “Create” at the bottom
       * Name the drive
       * Select the VHD you just resized
-      * Check the &#8220;this contains an OS&#8221; box and select &#8220;Windows&#8221;
+      * Check the “this contains an OS” box and select “Windows”
   * Re-create the VM 
       * Azure Dashboard
       * New &#8211; Compute &#8211; Virtual Machine &#8211; From Gallery
-      * Select &#8220;My Disks&#8221;
+      * Select “My Disks”
       * Select the new drive you just re-created
       * Finish the wizard to setup the VM like it originally was
       * Attach any other drives it originally had (reboot?)
       * Configure ACL rules in the Endpoints of the Virtual Machine
       * RDP Connect to the server
-      * you may need to use IP address at this point, my DNS wasn&#8217;t updating and I had used same name as original server
+      * you may need to use IP address at this point, my DNS wasn't updating and I had used same name as original server
   * Resize the disk 
       * Open Server Manager
       * Select Storage, then Disk Management
       * Select the drive you resized
-      * Right click and select &#8220;Expand&#8221;
+      * Right click and select “Expand”
       * Wizard!
   * Hurrah, the disk is embiggened!
   

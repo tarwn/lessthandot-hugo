@@ -21,7 +21,7 @@ Microsoft is all about rapid release cycles nowadays. We already experienced thi
   
 Now SQL Server appears to get the same treatment: [SQL Server 2016 CTP 2.1 has just been released][1]. There is nothing groundbreaking in this release &#8211; which can be considered as an upgrade of CTP2 &#8211; but there are some additional functionalities and improvements in the database engine.
 
-If you have already installed CTP2, you can just upgrade it to CTP2.1 following the usual upgrade procedure. Just spin-up the SQL Server set-up, go to Installation and choose _Upgrade from a previous version of SQL Server_. Hit Next a few times, choose which instance and which features you want to upgrade and you&#8217;re all done.
+If you have already installed CTP2, you can just upgrade it to CTP2.1 following the usual upgrade procedure. Just spin-up the SQL Server set-up, go to Installation and choose _Upgrade from a previous version of SQL Server_. Hit Next a few times, choose which instance and which features you want to upgrade and you're all done.
 
 Before:
 
@@ -31,7 +31,7 @@ After:
 
 [<img class="alignnone size-full wp-image-3434" src="/wp-content/uploads/2015/06/version_2.png" alt="version_2" width="317" height="145" srcset="/wp-content/uploads/2015/06/version_2.png 317w, /wp-content/uploads/2015/06/version_2-300x137.png 300w" sizes="(max-width: 317px) 100vw, 317px" />][3]
 
-One of the new features for example is the ability to use computed columns in a temporal table. Exciting! (OK, I&#8217;m just using this as an example that I actually upgraded my system)
+One of the new features for example is the ability to use computed columns in a temporal table. Exciting! (OK, I'm just using this as an example that I actually upgraded my system)
 
 [<img class="alignnone size-full wp-image-3437" src="/wp-content/uploads/2015/06/temporal_before.png" alt="temporal_before" width="973" height="317" srcset="/wp-content/uploads/2015/06/temporal_before.png 973w, /wp-content/uploads/2015/06/temporal_before-300x97.png 300w" sizes="(max-width: 973px) 100vw, 973px" />][4]
 

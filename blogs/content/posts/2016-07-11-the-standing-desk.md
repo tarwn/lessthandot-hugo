@@ -13,11 +13,11 @@ categories:
   - Uncategorized
 
 ---
-I hear that, “Sitting is the new smoking.” We’re supposed to stand more often, walk more often, move more often. I&#8217;m an active person (running and biking regularly) &#8211; but not while working. After using the same basic desk (not designed for office work) for several years, I decided to purchase a desk meant for someone who is on the computer all day.
+I hear that, “Sitting is the new smoking.” We’re supposed to stand more often, walk more often, move more often. I'm an active person (running and biking regularly) &#8211; but not while working. After using the same basic desk (not designed for office work) for several years, I decided to purchase a desk meant for someone who is on the computer all day.
 
 Coworkers recommended [The Human Solution][1]’s [UPLIFT Desk][2]. With a wide variety of options for the frame, the top, and the accessories, along with a decent warranty, free shipping, and reasonable pricing, here is the setup I picked.
 
-I chose the [UPLIFT Stand Up Desk with 1” Thick Bamboo Top][3]. I really, really wanted a [reclaimed wood top][4] – how gorgeous are those? How trendy? But&#8230;how expensive?!
+I chose the [UPLIFT Stand Up Desk with 1” Thick Bamboo Top][3]. I really, really wanted a [reclaimed wood top][4] – how gorgeous are those? How trendy? But…how expensive?!
 
 My desktop is rectangular, 30” x 60”. It’s so big! I have room for two laptops with docks, their accessories, piles of books, and room to spare when need to read or write.
 

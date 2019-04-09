@@ -29,7 +29,7 @@ This is a short Scala post to explain what the difference is between val and var
 
 In Java you would use final to create a variable which would be read only, this is the same as val in Scala. 
 
-Let&#8217;s look at some very simple Scala code.
+Let's look at some very simple Scala code.
 
 ```scala
 object Test {
@@ -69,7 +69,7 @@ println("Test1 " + Test1)
 }
 ```
 
-Here is the error, the code won&#8217;t even compile
+Here is the error, the code won't even compile
 
 <pre>Description		Resource	Path		Location	Type
 reassignment to val	Test.scala	/ScalaTemp/src	line 8		Scala Problem

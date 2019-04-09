@@ -13,11 +13,11 @@ categories:
   - Web Design, Graphics and Styling
 
 ---
-Surprisingly not many people know but there is an actual internet archive. Yes they have snapshots through history of the internet. Not many sites get by without having snapshots done when alterations to the sites core structure is found. If you&#8217;ve been in web development for awhile or did web development years back I would check it out. It&#8217;s fun to remember just how bad some of the sites you built were 🙂
+Surprisingly not many people know but there is an actual internet archive. Yes they have snapshots through history of the internet. Not many sites get by without having snapshots done when alterations to the sites core structure is found. If you've been in web development for awhile or did web development years back I would check it out. It's fun to remember just how bad some of the sites you built were 🙂
 
 http://www.archive.org/web/web.php
 
-You&#8217;ll even get a good laugh checking out sites like google when it was in beta
+You'll even get a good laugh checking out sites like google when it was in beta
   
 http://web.archive.org/web/19981202230410/http://www.google.com/
 

@@ -22,7 +22,7 @@ tags:
 ---
 Do you have a group of developers who as soon as their application has any issues they call you because it must be the database server?  Do you have managers who really want to know if all the jobs are running successfully?  Yeah, me too.
 
-That&#8217;s one of the really cool things with Diagnostic Manager.  You can setup security for Active Directory Groups, Active Directory Logins and SQL Logins for read only access in the Console.
+That's one of the really cool things with Diagnostic Manager.  You can setup security for Active Directory Groups, Active Directory Logins and SQL Logins for read only access in the Console.
 
  
 

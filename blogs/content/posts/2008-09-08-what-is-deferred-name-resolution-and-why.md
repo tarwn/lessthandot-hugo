@@ -43,7 +43,7 @@ This is the error you get
   
 Server: Msg 2714, Level 16, State 1, Line 12
   
-There is already an object named &#8216;#temptable&#8217; in the database.
+There is already an object named &#8216;#temptable' in the database.
 
 You can do something like this to get around the issue with the temp table
 
@@ -75,7 +75,7 @@ So what is thing called Deferred Name Resolution? Here is what is explained in B
 > 
 > In the resolution stage, Microsoft SQL Server 2000 also performs other validation activities (for example, checking the compatibility of a column data type with variables). If the objects referenced by the stored procedure are missing when the stored procedure is executed, the stored procedure stops executing when it gets to the statement that references the missing object. In this case, or if other errors are found in the resolution stage, an error is returned.
 
-So what is happening is that beginning with SQL server 7 deferred name resolution was enabled for real tables but not for temporary tables. If you change the code to use a real table instead of a temporary table you won&#8217;t have any problem
+So what is happening is that beginning with SQL server 7 deferred name resolution was enabled for real tables but not for temporary tables. If you change the code to use a real table instead of a temporary table you won't have any problem
   
 Run this to see what I mean
 
@@ -96,7 +96,7 @@ END
 SELECT * FROM temptable --what does this return
 ```
 
-What about variables? Let&#8217;s try it out, run this
+What about variables? Let's try it out, run this
 
 sql
 DECLARE @x INT
@@ -121,9 +121,9 @@ And you get the follwing error
   
 Server: Msg 134, Level 15, State 1, Line 13
   
-The variable name &#8216;@i&#8217; has already been declared. Variable names must be unique within a query batch or stored procedure.
+The variable name &#8216;@i' has already been declared. Variable names must be unique within a query batch or stored procedure.
 
-Now why do you need to care about deferred name resolution? Let&#8217;s take another example from a blogpost I made a while back: [Do you depend on sp_depends (no pun intended)][2] 
+Now why do you need to care about deferred name resolution? Let's take another example from a blogpost I made a while back: [Do you depend on sp_depends (no pun intended)][2] 
 
 First create this proc
 
@@ -155,7 +155,7 @@ sp_depends 'somefuction'
 
 result: Object does not reference any object, and no objects reference it.
 
-Most people will not create a proc before they have created the function. So when does this behavior rear its ugly head? When you script out all the objects in a database, if the function or any objects referenced by an object are created after the object that references them then sp_depends won&#8217;t be 100% correct
+Most people will not create a proc before they have created the function. So when does this behavior rear its ugly head? When you script out all the objects in a database, if the function or any objects referenced by an object are created after the object that references them then sp_depends won't be 100% correct
 
 SQL Server 2005 makes it pretty easy to do it yourself
 

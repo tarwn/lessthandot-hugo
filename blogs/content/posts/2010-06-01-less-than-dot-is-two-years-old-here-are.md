@@ -518,7 +518,7 @@ I love it that the math post got 44 comments, that was pretty interesting
     </td>
     
     <td>
-      <a href="/index.php?p=760">Do you use Column=@Param OR @Param IS NULL in your WHERE clause? Don&#8217;t, it doesn&#8217;t perform</a>
+      <a href="/index.php?p=760">Do you use Column=@Param OR @Param IS NULL in your WHERE clause? Don't, it doesn't perform</a>
     </td>
     
     <td>
@@ -584,7 +584,7 @@ I love it that the math post got 44 comments, that was pretty interesting
     </td>
     
     <td>
-      <a href="/index.php?p=27">Good SQL Articles To Read If You Can&#8217;t Afford Books</a>
+      <a href="/index.php?p=27">Good SQL Articles To Read If You Can't Afford Books</a>
     </td>
     
     <td>
@@ -1006,7 +1006,7 @@ The pages with the hacks, tips and tricks are still number one
   </tr>
 </table>
 
-That is it, thank you for visiting and we will have lots of more content coming up in the years ahead. If you have any questions don&#8217;t hesitate to ask in our [forums][3]
+That is it, thank you for visiting and we will have lots of more content coming up in the years ahead. If you have any questions don't hesitate to ask in our [forums][3]
 
 If you are interested in the stats for our first year then visit this link: [Less Than Dot A Year In Review][4]
 

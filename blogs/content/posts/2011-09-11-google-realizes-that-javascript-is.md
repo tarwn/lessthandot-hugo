@@ -33,7 +33,7 @@ Here is what was posted on the [com.googlegroups.google-caja-discuss][1] list
 
 > Javascript has fundamental flaws that cannot be fixed merely by evolving the
   
-> language. We&#8217;ll adopt a two-pronged strategy for the future of Javascript:
+> language. We'll adopt a two-pronged strategy for the future of Javascript:
 > 
 > &#8211; Harmony (low risk/low reward): continue working in conjunction with
      
@@ -119,13 +119,13 @@ Assuming that Dash is now called Dart, here is what it is supposed to do, again 
      
 > code.
 
-So far we don&#8217;t know much about this new language except for what they say about Dash, we can assume that it will address some of the points that were posted in the list which I shared in this post earlier
+So far we don't know much about this new language except for what they say about Dash, we can assume that it will address some of the points that were posted in the list which I shared in this post earlier
 
 Even if this new language is better than JavaScript will all the other browser vendors be on board? Remember that Google launched the [Go language][3] last year, what happened to that?
 
 I am skeptical about all of this but of course I could be dead wrong
 
-Time will tell&#8230;&#8230;&#8230;
+Time will tell………
 
  [1]: http://markmail.org/message/uro3jtoitlmq6x7t
  [2]: http://gotocon.com/aarhus-2011/presentation/Opening%20Keynote:%20Dart,%20a%20new%20programming%20language%20for%20structured%20web%20programming

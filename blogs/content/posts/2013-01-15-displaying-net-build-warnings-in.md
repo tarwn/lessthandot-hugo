@@ -21,7 +21,7 @@ tags:
   - teamcity
 
 ---
-I like it when I kick off a build and there aren&#8217;t any warnings. Unfortunately I&#8217;m forgetful and it&#8217;s always easier to edit the code now then it is 3 months later (when I remember to look at the warnings). When I put together [my sample Continuous Delivery project][1], I was using Jenkins, which provided plugins for capturing warnings. It was nice to have visual feedback when I added a new warning, see how many were outstanding, have a list of outstanding warnings available on demand, and when I had a few minutes and fixed some of them, positive feedback by watching the warning chart slowly go down.
+I like it when I kick off a build and there aren't any warnings. Unfortunately I'm forgetful and it's always easier to edit the code now then it is 3 months later (when I remember to look at the warnings). When I put together [my sample Continuous Delivery project][1], I was using Jenkins, which provided plugins for capturing warnings. It was nice to have visual feedback when I added a new warning, see how many were outstanding, have a list of outstanding warnings available on demand, and when I had a few minutes and fixed some of them, positive feedback by watching the warning chart slowly go down.
 
 <div style="background-color: #CCFFCC; border: 2px solid #BBEEBB; border-width: 2px 2px 2px 14px; margin: .5em; padding: .5em">
   <strong>June 2016 Update:</strong> Good news! Mitch Terlisner took this original idea and improved on it, then shared those updates. You can see the updated version (using TeamCity 9) and instructions here: <a href="/index.php/enterprisedev/application-lifecycle-management/improved-teamcity-net-build-warnings/" title="Improved TeamCity .Net Build Warnings">Improved TeamCity .Net Build Warnings</a>
@@ -31,7 +31,7 @@ When I switch modes and work in [TeamCity][2], I miss having that information av
 
 In this post I am going to cover capturing the warnings from an MSBuild build step, adding that warning count to the main dashboard, adding a statistics chart for the warning count over time, adding a condensed list to the end of the build log, adding the formatted list as a build artifact, and adding a custom report tab to report the warnings for each build. 
 
-Because who doesn&#8217;t need five different ways to see their warnings?
+Because who doesn't need five different ways to see their warnings?
 
 ## Capturing the Build Warnings
 
@@ -43,7 +43,7 @@ Parameter to add to MSBuild: <code class="codespan">/l:FileLogger,Microsoft.Buil
   <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/MSBuildParameter.png" alt="Adding the MS Build Parameter" style="border: 1px solid #666666;" /><br /> Adding the MS Build Parameter
 </div>
 
-Each time MSBuild runs, it will log it&#8217;s output to the specified file. We can use powershell to extract the warnings from the output, like so:
+Each time MSBuild runs, it will log it's output to the specified file. We can use powershell to extract the warnings from the output, like so:
 
 ```text
 Param(
@@ -76,11 +76,11 @@ This will output a section at the bottom of the build log that contains our warn
   <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/LogOutput.png" alt="Warnings in the Bottom of a Build Log" style="border: 1px solid #666666;" /><br /> Warnings in the Bottom of a Build Log
 </div>
 
-Which I suppose is fine, but doesn&#8217;t really add that much value over the ones listed further up the log by MSBuild itself.
+Which I suppose is fine, but doesn't really add that much value over the ones listed further up the log by MSBuild itself.
 
 ## Condensed Warning List in Archived Text File
 
-Now that I have formatted warnings, it&#8217;s pretty easy to create a file with those warnings and archive it. First I&#8217;ll update the script to take an output parameter and add some file output:
+Now that I have formatted warnings, it's pretty easy to create a file with those warnings and archive it. First I'll update the script to take an output parameter and add some file output:
 
 ```text
 Param(
@@ -104,7 +104,7 @@ if($RawOutputPath){
     $stream.Close()
 }
 ```
-Then I&#8217;ll configure the project to capture that output file as an artifact:
+Then I'll configure the project to capture that output file as an artifact:
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
   <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/ArtifactConfig_RawOutput.png" alt="Artifact Configuration" style="border: 1px solid #666666;" /><br /> Artifact Configuration
@@ -146,7 +146,7 @@ Each successful build will also display the number of warnings that were capture
   <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/BuildStatusAfter.png" alt="Build status on dashboard, with warnings" style="border: 1px solid #666666;" /><br /> Build status on dashboard, with warnings
 </div>
 
-Better, but what about historical values? And I still don&#8217;t like that text file artifact.
+Better, but what about historical values? And I still don't like that text file artifact.
 
 ## Warning Count as a Custom Chart
 
@@ -155,7 +155,7 @@ TeamCity also provides the ability to add custom charts based on either built-in
 ```text
 Write-Host "##teamcity[buildStatisticValue key='buildWarnings' value='$count']"
 ```
-Adding a [custom chart][5] requires us to dig into the configurations of TeamCity. I&#8217;m going to add a chart that will be displayed for any build that provides the warning count number above, so I&#8217;ll open the <code class="codespan">[teamCity data dir]/config/main-config.xml</code> file and add the following section:
+Adding a [custom chart][5] requires us to dig into the configurations of TeamCity. I'm going to add a chart that will be displayed for any build that provides the warning count number above, so I'll open the <code class="codespan">[teamCity data dir]/config/main-config.xml</code> file and add the following section:
 
 ```text
 <graph title="Build Warnings" hideFilters="showFailed" seriesTitle="Warning" format="">
@@ -168,7 +168,7 @@ This will add a chart to the Statistics tab of the build. After a few builds thi
   <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/WarningChart.png" alt="Build Warning Statistics" style="border: 1px solid #666666;" /><br /> Build Warning Statistics
 </div>
 
-It probably would look better if I hadn&#8217;t built with the same number of warnings each time, but you get the point. The mouse hover works just like the built-in charts, linking to the run status for the individual point.
+It probably would look better if I hadn't built with the same number of warnings each time, but you get the point. The mouse hover works just like the built-in charts, linking to the run status for the individual point.
 
 Ok, getting better, but I think we can take it one step further. 
 
@@ -176,7 +176,7 @@ Ok, getting better, but I think we can take it one step further.
 
 So far we have improved methods of seeing the warning count and watching how it changes over time, but the actual list still leaves something to be desired. Luckily, TeamCity supports [custom report tabs][6] in the Build Results. This gives us an easily accessible place to put the warnings and, since it uses HTML, better formatting options than the text file.
 
-First I need to update the powershell script to output the HTML file. TeamCity will be picking up an entire folder for the report tab, so I could add some external CSS or image files for my report, but I&#8217;ll leave that for another day.
+First I need to update the powershell script to output the HTML file. TeamCity will be picking up an entire folder for the report tab, so I could add some external CSS or image files for my report, but I'll leave that for another day.
 
 ```text
 # html report output
@@ -192,7 +192,7 @@ $stream.WriteLine("</ul>")
 $stream.WriteLine("</body></html>")
 $stream.Close()
 ```
-I&#8217;ve added HTML output to the script with a hardcoded output location that ensures the report directory exists before writing the index.html page. I&#8217;ve hardcoded this value to reduce the amount of thinking &#8216;ll need to do as I add this to other projects (keeps it consistent from output name to artifact setting to report tab configuration).
+I've added HTML output to the script with a hardcoded output location that ensures the report directory exists before writing the index.html page. I've hardcoded this value to reduce the amount of thinking &#8216;ll need to do as I add this to other projects (keeps it consistent from output name to artifact setting to report tab configuration).
 
 The next step is to configure the project to capture the folder as an artifact:
 

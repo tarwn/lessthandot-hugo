@@ -53,7 +53,7 @@ categories:
   </li>
 </ul>
 
-Find out more here&#8230;
+Find out more here…
 
 [EnterpriseCore.io: The State of Software Engineering Report, 2017][1]
 

@@ -16,7 +16,7 @@ tags:
   - windows server 2008 r2
 
 ---
-Windows Server 2008 R2 will support up to 256 logical processors, up till now Windows only supports 64 logical processors, that means you can&#8217;t even run that fancy Intel 80 core chip that they showed a while back.
+Windows Server 2008 R2 will support up to 256 logical processors, up till now Windows only supports 64 logical processors, that means you can't even run that fancy Intel 80 core chip that they showed a while back.
 
 Since I am a SQL Server guy this is going to be interesting, wonder if you can get an execution plan that uses 100+ processors. Imagine you pay per CPU? That would be a ton of money.
 

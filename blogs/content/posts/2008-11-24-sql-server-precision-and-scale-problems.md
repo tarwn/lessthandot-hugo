@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-Many people are confused about SQL Server&#8217;s precision and scale. This is unfortunate because choosing the correct values for precision and scale is critically important when you perform math operations using the decimal/numeric data type. The point of this blog is to explain how SQL Server determines the data type for math operations, and the order in which conversions occur.
+Many people are confused about SQL Server's precision and scale. This is unfortunate because choosing the correct values for precision and scale is critically important when you perform math operations using the decimal/numeric data type. The point of this blog is to explain how SQL Server determines the data type for math operations, and the order in which conversions occur.
 
 For example:
 
@@ -29,7 +29,7 @@ Select 10 / 3.000000    UNION All
 Select 10 / 3.0000000   UNION All 
 Select 10 / 3.00000000 
 ```
-Let&#8217;s take a close look at the above query so that we can predict the output. Of course, it will help if we know the data types that SQL Server uses. There is a relatively obscure function that you can use to determine the data types. SQL\_VARIANT\_PROPERTY
+Let's take a close look at the above query so that we can predict the output. Of course, it will help if we know the data types that SQL Server uses. There is a relatively obscure function that you can use to determine the data types. SQL\_VARIANT\_PROPERTY
 
 For the first calculation, we have 10 / 3. We all know the answer is 3 1/3, but how is this expressed in the output?
 
@@ -46,7 +46,7 @@ Select SQL_VARIANT_PROPERTY(3, 'BaseType') As [Base Type],
 ```
 The output indicates SQL Server will use Integer, Precision 10, scale 0. Using integer math, the output will be 3. Since both values are integer, the result is an integer.
 
-Now, let&#8217;s look at the next one. 10/3.0
+Now, let's look at the next one. 10/3.0
 
 sql
 Select SQL_VARIANT_PROPERTY(3.0, 'BaseType') As [Base Type], 
@@ -87,7 +87,7 @@ Precision = 11 + 6
   
 Precision = 17
 
-Unfortunately, this isn&#8217;t correct because the SQL\_VARIANT\_PROPERTY is returning 10 for the integer. When dividing the numbers, SQL Server actually converts the integer to a decimal, using the smallest value possible to represent the value. In this case, 10 is converted to decimal(2,0). Performing the calculations again:
+Unfortunately, this isn't correct because the SQL\_VARIANT\_PROPERTY is returning 10 for the integer. When dividing the numbers, SQL Server actually converts the integer to a decimal, using the smallest value possible to represent the value. In this case, 10 is converted to decimal(2,0). Performing the calculations again:
 
 10 / 3.0
   
@@ -119,7 +119,7 @@ Scale = 6
 
 So, Select 10 / 3.0 = 3.333333
 
-Now, let&#8217;s fast forward to the last calculation. Select 10 / 3.00000000
+Now, let's fast forward to the last calculation. Select 10 / 3.00000000
 
 Precision/scale for the 10 (after converting to decimal) = 2,0
   

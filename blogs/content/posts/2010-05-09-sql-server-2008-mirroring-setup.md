@@ -24,7 +24,7 @@ tags:
 ---
 ## Time to get our hands dirty
 
-We&#8217;ve gone over [Planning your hardware for SQL Server Mirroring][1] and [Planning your SQL Server mirroring landscape][2]. Today we are going to get down into actually configuring a basic mirror using Developer Edition. Developer Edition is a great tool that is extremely inexpensive. At the time of this writing, [the cost was still only $47][3].
+We've gone over [Planning your hardware for SQL Server Mirroring][1] and [Planning your SQL Server mirroring landscape][2]. Today we are going to get down into actually configuring a basic mirror using Developer Edition. Developer Edition is a great tool that is extremely inexpensive. At the time of this writing, [the cost was still only $47][3].
 
 To set our mirror up we will need two instances. The instances for our examples will be located on the same physical hardware. 
 
@@ -175,7 +175,7 @@ select * from sys.database_mirroring where mirroring_guid is not null
   <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_9.gif" alt="" title="" width="628" height="127" />
 </div>
 
-In the real world, the mirroring\_state\_desc will say &#8220;Synchronizing&#8221; much longer than the amount of time it takes to execute this query. The initial startup of the mirroring requires it to catch up, and with larger databases that are active, the synchronizing status can last minutes.
+In the real world, the mirroring\_state\_desc will say “Synchronizing” much longer than the amount of time it takes to execute this query. The initial startup of the mirroring requires it to catch up, and with larger databases that are active, the synchronizing status can last minutes.
   
 We now have a mirroring running in High Protection. 
 
@@ -236,7 +236,7 @@ EXEC sys.sp_dbmmonitoraddmonitoring
 
 ## Moving on with mirroring
 
-We&#8217;ve managed to setup our mirror together and show that our data is all synchronized. This is truly a huge accomplishment and you can see just how simple the base setup can be. There is flexibility in using SSMS for the entire process or moving into TSQL. For a High Availability solution, SQL Server mirroring can give you plenty of confidence in knowing the day a disaster to your server happens, your company can keep moving. 
+We've managed to setup our mirror together and show that our data is all synchronized. This is truly a huge accomplishment and you can see just how simple the base setup can be. There is flexibility in using SSMS for the entire process or moving into TSQL. For a High Availability solution, SQL Server mirroring can give you plenty of confidence in knowing the day a disaster to your server happens, your company can keep moving. 
 
 Part 2 in the mirroring series will go over using the other two types of mirroring (High Availability and High Performance) and certificates for mirroring. </p>
 

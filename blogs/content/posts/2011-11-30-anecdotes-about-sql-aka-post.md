@@ -29,21 +29,21 @@ tags:
   - sql server
 
 ---
-This is my 400th blog post here on lessthandot and I decide to <del>steal</del> borrow Chrissie&#8217;s [idea][1] and ask a bunch of people if they have an interesting story to share about SQL.
+This is my 400th blog post here on lessthandot and I decide to <del>steal</del> borrow Chrissie's [idea][1] and ask a bunch of people if they have an interesting story to share about SQL.
 
 Here is how I asked it
 
-> As you may or may not know I&#8217;m an avid SQL fan.
+> As you may or may not know I'm an avid SQL fan.
   
-> I&#8217;m in the process of writing my 400th blogpost on lessthandot and I thought I would make it a little special and ask some special people about their experience with SQL. Just a few lines, why you like it or why you don&#8217;t like it. Perhaps an anecdote about it. A bad memory, a good memory. Just a few lines or just one line would make me happy. But if you don&#8217;t want to I will understand also. By SQL I could be about Access, Oracle SQL Server, DB2, NoSQL whatever comes to mind
+> I'm in the process of writing my 400th blogpost on lessthandot and I thought I would make it a little special and ask some special people about their experience with SQL. Just a few lines, why you like it or why you don't like it. Perhaps an anecdote about it. A bad memory, a good memory. Just a few lines or just one line would make me happy. But if you don't want to I will understand also. By SQL I could be about Access, Oracle SQL Server, DB2, NoSQL whatever comes to mind
   
-> I will be asking this question to a bunch of people. If you don&#8217;t mind include your twitter handle and blog URL so that I can add those
+> I will be asking this question to a bunch of people. If you don't mind include your twitter handle and blog URL so that I can add those
 
 I got a bunch of replies, here they are in the order that I received them. Feel free to add your own by leaving a comment
 
 * * *
 
-I fell in love with programming when doing some Excel VBA, from Excel I went to Access and I wrote some very cool programs in that, just until it became to slow for my needs. And then I switched to SQL-server. I started with SQL-server 2000 and I didn&#8217;t even have a clue how to install it. I started learning and finding out I did it all wrong. SQL is not what I do best but I learned a lot, due in a big part because of the wonderful SQL-community and my friends at Lessthandot.
+I fell in love with programming when doing some Excel VBA, from Excel I went to Access and I wrote some very cool programs in that, just until it became to slow for my needs. And then I switched to SQL-server. I started with SQL-server 2000 and I didn't even have a clue how to install it. I started learning and finding out I did it all wrong. SQL is not what I do best but I learned a lot, due in a big part because of the wonderful SQL-community and my friends at Lessthandot.
 
 christiaan baes ([@chrissie1][2]), [Blog][3]
 
@@ -53,7 +53,7 @@ christiaan baes ([@chrissie1][2]), [Blog][3]
   
 Remou ([@FBoyle][4]), [Blog][5]</p> 
 
-* * *SQL Server has been the most predictable, reliable thing in my career, and when it&#8217;s been unpredictable or unreliable, the SQL Server community has been the most predictably, reliably helpful thing around. Even when SQL is broke, the SQL community makes it a joy.</p> 
+* * *SQL Server has been the most predictable, reliable thing in my career, and when it's been unpredictable or unreliable, the SQL Server community has been the most predictably, reliably helpful thing around. Even when SQL is broke, the SQL community makes it a joy.</p> 
 
 Brent Ozar ([@BrentO][6]), [Blog][7]
 
@@ -61,7 +61,7 @@ Brent Ozar ([@BrentO][6]), [Blog][7]
 
 
   
-studied at university, and show me that computing isn&#8217;t just about
+studied at university, and show me that computing isn't just about
   
 either being a sysadmin or a programmer. I wish I had discovered that
   
@@ -75,7 +75,7 @@ Rob Farley ([@rob_farley][8]), [Blog][9]
 
 George Mastros ([@gmmastros][10]), [Blog][11]
 
-* * *Since SQL is my life this is a rough question. You&#8217;d think that would
+* * *Since SQL is my life this is a rough question. You'd think that would
 
 
   
@@ -91,7 +91,7 @@ all around as introduced me to some of the most intelligent people on
   
 the face of the earth.</p> 
 
-SQL Server isn&#8217;t easy nor hard to adapt it to any situation. This
+SQL Server isn't easy nor hard to adapt it to any situation. This
   
 makes it a viable area for anyone to succeed in. As a complete
   
@@ -115,25 +115,25 @@ Steve Jones ([@way0utwest][14]), [Blog][15]
 
 Kevin Kline ([@kekline][16]), [Blog][17]
 
-* * *For me, SQL is the perfect blend of programming and simplicity. The internals of any relational engine are complex, and the cost based optimizer is order of magnitudes more complex than almost any code the normal programmer will be involved with. My personal interest lies in design, because the cost based optimizer is greatly affected by how well our design maps to the relational engine&#8217;s needs. The better the base design, the more likely the code you write will just work. It is really funny how easy design turns out to be, with the biggest obstacle often being your own mind. A great database design looks more complex than a poor one often does, usually because a poor design looks like how a procedural programmer would create a solution, rather than adjusting the design to match the needs of the code that will do the lion&#8217;s share of the work, the query processor. </p> 
+* * *For me, SQL is the perfect blend of programming and simplicity. The internals of any relational engine are complex, and the cost based optimizer is order of magnitudes more complex than almost any code the normal programmer will be involved with. My personal interest lies in design, because the cost based optimizer is greatly affected by how well our design maps to the relational engine's needs. The better the base design, the more likely the code you write will just work. It is really funny how easy design turns out to be, with the biggest obstacle often being your own mind. A great database design looks more complex than a poor one often does, usually because a poor design looks like how a procedural programmer would create a solution, rather than adjusting the design to match the needs of the code that will do the lion's share of the work, the query processor. </p> 
 
 Louis Davidson ([@drsql][18]), [Blog][19]
 
 * * *I do have a fun story about SQL.</p> 
 
-One of my coworkers thinks she&#8217;s awesome: she deserves to be paid at the senior analyst level, is always on top of everything, is very competent and all. Well, the reality is actually a bit different (in the minds of me and several other coworkers). I mean, she is intelligent and does a good job, she isn&#8217;t a plodder or anything, but we can all tell you stories. Such as the less than efficient ways she runs things or how she acts like everyone else is irresponsible and she is perfect, but in fact SHE didn&#8217;t send us the email she&#8217;s grilling us about not replying to, or when the attention turns to what she didn&#8217;t do then woah suddenly we&#8217;re moving on to the next business item. Or she tells us that such-and-such she does can&#8217;t be automated and years later the issue gets attention and someone automates it in one day (laugh). Anyway, I had a wonderful little experience with her and SQL a couple of years ago.
+One of my coworkers thinks she's awesome: she deserves to be paid at the senior analyst level, is always on top of everything, is very competent and all. Well, the reality is actually a bit different (in the minds of me and several other coworkers). I mean, she is intelligent and does a good job, she isn't a plodder or anything, but we can all tell you stories. Such as the less than efficient ways she runs things or how she acts like everyone else is irresponsible and she is perfect, but in fact SHE didn't send us the email she's grilling us about not replying to, or when the attention turns to what she didn't do then woah suddenly we're moving on to the next business item. Or she tells us that such-and-such she does can't be automated and years later the issue gets attention and someone automates it in one day (laugh). Anyway, I had a wonderful little experience with her and SQL a couple of years ago.
 
-So basically, her job is to be an application super-super-user. A glorified babysitter. Keep it running. Help plan and perform upgrades. Set up users and printers and workstations. Change the login message. And so on. But no development or use of highly technical computer skills. Except, she took a class in SQL once, and fancied herself capable in it. So one day she came to get me to ask for help with a SQL statement she was running. She said another coworker had sent it to her but it wasn&#8217;t working.
+So basically, her job is to be an application super-super-user. A glorified babysitter. Keep it running. Help plan and perform upgrades. Set up users and printers and workstations. Change the login message. And so on. But no development or use of highly technical computer skills. Except, she took a class in SQL once, and fancied herself capable in it. So one day she came to get me to ask for help with a SQL statement she was running. She said another coworker had sent it to her but it wasn't working.
 
-I kindly came to take a look and what she was trying to run in Query Analyzer (SQL 2000 days) was something like the following. I wish I could remember it exactly, but it really doesn&#8217;t matter because you&#8217;ll get the picture pretty quickly. Remember, this was sent to her by her coworker and she just copied and pasted and ran it as a SQL query:
+I kindly came to take a look and what she was trying to run in Query Analyzer (SQL 2000 days) was something like the following. I wish I could remember it exactly, but it really doesn't matter because you'll get the picture pretty quickly. Remember, this was sent to her by her coworker and she just copied and pasted and ran it as a SQL query:
 
 <pre>Set the users to disabled before the services are taken down</pre>
 
-Inside I laughed my head off while outside I calmly explained, to her great confusion, that it wasn&#8217;t a SQL statement, it was just plain English.
+Inside I laughed my head off while outside I calmly explained, to her great confusion, that it wasn't a SQL statement, it was just plain English.
 
-And I&#8217;m glad to say that to this day she only runs whole SQL query files supplied as part of a predefined procedure that she has specifically been instructed to run.
+And I'm glad to say that to this day she only runs whole SQL query files supplied as part of a predefined procedure that she has specifically been instructed to run.
 
-Three cheers for &#8220;I&#8217;ve taken a class in SQL&#8221; woman!
+Three cheers for “I've taken a class in SQL” woman!
 
 Emtucifor [Blog][20]
 
@@ -169,7 +169,7 @@ I do still remember the idiotic questions I asked, including the RAISERROR synta
 
 I then started to use SQL Server professionally (as a developer) and the more I used it, the more I started to participate in different online forums and answer T-SQL related questions. At first it was ASP.NET forum (where I started by asking many ASP,NET related questions but then ended up answering many simple questions in SQL related category). There I met George Mastros and was lately introduced to LTD site. I am very glad I am now able to blog on this site.
   
-I also started to learn more and more about SQL Server, read many SQL Server blogs, meet and become virtual friends with many of SQL Server professionals. So, now I&#8217;d say one of my life passions is in solving T-SQL problems and helping people with SQL Server related questions, even though there is a lot for me to learn about SQL Server and I continue to learn something new daily.
+I also started to learn more and more about SQL Server, read many SQL Server blogs, meet and become virtual friends with many of SQL Server professionals. So, now I'd say one of my life passions is in solving T-SQL problems and helping people with SQL Server related questions, even though there is a lot for me to learn about SQL Server and I continue to learn something new daily.
 
 Naomi Nosonovsky ([@NaomiNos][25]), [Blog][26], [Beyond Relationa][27]l, [Guest Article][28]
 
@@ -181,9 +181,9 @@ Jes Borland ([@grrl_geek][29]), [Blog][30]
 
 Chopstik ([@Chopstik][31]), [Blog][32]
 
-* * *My first foray into SQL Server I was fresh from MySQL and MS Access and couldn&#8217;t see past the first couple layers of tables and queries. Fast forward a few years and I was working with procedures and views and just starting to understand indexing. A few more years and I was working with SSRS and learning a lot more about tuning and topics like SARGability. SSAS, SSIS, the power of system views, backup and restore strategies, monitoring, &#8230; The deeper and further I go, the more there is to learn, and it doesn&#8217;t seem to be ending any time soon.</p> 
+* * *My first foray into SQL Server I was fresh from MySQL and MS Access and couldn't see past the first couple layers of tables and queries. Fast forward a few years and I was working with procedures and views and just starting to understand indexing. A few more years and I was working with SSRS and learning a lot more about tuning and topics like SARGability. SSAS, SSIS, the power of system views, backup and restore strategies, monitoring, … The deeper and further I go, the more there is to learn, and it doesn't seem to be ending any time soon.</p> 
 
-Funny anecdote/story: I was once performing destructive maintenance on a server (detaching and removing old databases) as well as rearranging data files for some active databases. I cleaned up all the stale Dbs and finished moving them from the old location to the new one with time to spare in my outage window. About an hour afterwards I received a phone call from the shipping office, who had tried all the normal troubleshooting steps (reboot, reboot again, etc) to figure out why their MS Access app was having problems. Halfway through walking them through checking their ethernet outlet, while literally saying something like &#8220;wiggle the cable and then try again&#8221;, I realized that there was one obscure database that a single form in their app relied on. I quickly reattached the forgotten DB just in time for them to connect properly. The rest of my time with the company the shipping office always wiggled their ethernet cable before calling me, and I haven&#8217;t forgotten to reattach a database since. Sometimes it&#8217;s the lessons from when we screw up that stick with us the longest.
+Funny anecdote/story: I was once performing destructive maintenance on a server (detaching and removing old databases) as well as rearranging data files for some active databases. I cleaned up all the stale Dbs and finished moving them from the old location to the new one with time to spare in my outage window. About an hour afterwards I received a phone call from the shipping office, who had tried all the normal troubleshooting steps (reboot, reboot again, etc) to figure out why their MS Access app was having problems. Halfway through walking them through checking their ethernet outlet, while literally saying something like “wiggle the cable and then try again”, I realized that there was one obscure database that a single form in their app relied on. I quickly reattached the forgotten DB just in time for them to connect properly. The rest of my time with the company the shipping office always wiggled their ethernet cable before calling me, and I haven't forgotten to reattach a database since. Sometimes it's the lessons from when we screw up that stick with us the longest.
 
 Eli Weinstock-Herman ([@tarwn][33]), [Blog][34]
 

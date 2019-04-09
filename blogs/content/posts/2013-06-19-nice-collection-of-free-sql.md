@@ -35,7 +35,7 @@ Here is what is available for SQL Server
 
 5 Tips for a Smooth SSIS Upgrade to SQL Server 2012
   
-A Hitchiker&#8217;s Guide to Microsoft StreamInsight Queries
+A Hitchiker's Guide to Microsoft StreamInsight Queries
   
 Data Mining Extensions (DMX) Reference
   

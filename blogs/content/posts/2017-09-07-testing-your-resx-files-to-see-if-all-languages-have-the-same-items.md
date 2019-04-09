@@ -13,15 +13,15 @@ categories:
   - Uncategorized
 
 ---
-It&#8217;s one of those things you need to when writing multilingual applications. Create resource file (resx) for each language you want to support. And then you add an item and forget to add it to one of language files and then, oops empty label. 
+It's one of those things you need to when writing multilingual applications. Create resource file (resx) for each language you want to support. And then you add an item and forget to add it to one of language files and then, oops empty label. 
 
-We don&#8217;t want that. 
+We don't want that. 
 
 And we write tests, so why not write a test for that. 
 
 And on [Stackoverflow][1] the user [TiltonJH][2] was so kind to provide me with the answer. 
 
-I translated it to VB.Net code and changed a small thing (the resourcemanager didn&#8217;t find the resourcesets but the resourcemaager from the type did, so I pass that in. 
+I translated it to VB.Net code and changed a small thing (the resourcemanager didn't find the resourcesets but the resourcemaager from the type did, so I pass that in. 
 
 ```vbnet
 Imports System.Globalization

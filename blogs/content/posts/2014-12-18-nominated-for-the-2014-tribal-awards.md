@@ -25,7 +25,7 @@ Just like last year, [SQLServerCentral.com][1] and [Simple Talk][2] are hostin
 
 In the previous edition, I was nominated for _Best New Community Voice_, however this year I am very pleased to announce that this blog has made the final in the category _Best Blog of the Year_!
   
-It&#8217;s a great honour, especially when you consider the other finalists:
+It's a great honour, especially when you consider the other finalists:
 
   * Brent Ozar
   * Paul Randal

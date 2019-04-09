@@ -19,7 +19,7 @@ tags:
   - nosql
 
 ---
-Let&#8217;s say you have a collection and you are only interested in storing the last 50 items or so. Everytime you add a new item, you want the oldest item to disappear. What you can do is create a capped collection. Here are some behaviors that capped collections have
+Let's say you have a collection and you are only interested in storing the last 50 items or so. Everytime you add a new item, you want the oldest item to disappear. What you can do is create a capped collection. Here are some behaviors that capped collections have
 
 > Capped collections guarantee preservation of the insertion order. As a result, queries do not need an index to return documents in insertion order. Without this indexing overhead, they can support higher insertion throughput.
 > 
@@ -31,7 +31,7 @@ Here is the syntax for creating a capped collection of one megabyte
 
 <pre>db.createCollection('TestSize', {capped: true, size: 1048576})</pre>
 
-Let&#8217;s get started with some code, create a new database named TestCap
+Let's get started with some code, create a new database named TestCap
 
 <pre>use TestCap</pre>
 

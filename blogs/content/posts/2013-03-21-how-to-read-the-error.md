@@ -46,7 +46,7 @@ Once you click on the view button, you will see something like this
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog2.PNG?mtime=1363863585"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog2.PNG?mtime=1363863585" width="628" height="408" /></a>
 </div>
 
-That is all nice and dandy but can I do it from T-SQL? Let&#8217;s find out by running xp_readerrorlog.
+That is all nice and dandy but can I do it from T-SQL? Let's find out by running xp_readerrorlog.
 
 sql
 EXEC master.dbo.xp_readerrorlog
@@ -56,7 +56,7 @@ Here is the output
   
 Msg 229, Level 14, State 5, Procedure xp_readerrorlog, Line 1
   
-The EXECUTE permission was denied on the object &#8216;xp_readerrorlog&#8217;, database &#8216;mssqlsystemresource&#8217;, schema &#8216;sys&#8217;.
+The EXECUTE permission was denied on the object &#8216;xp_readerrorlog', database &#8216;mssqlsystemresource', schema &#8216;sys'.
 
 That is no good. Luckily for us there is a stored procedure that is provided, this proc is named rds\_read\_error_log 
 
@@ -84,13 +84,13 @@ The output is something like you expect from xp_readerrorlog
   
 > 2013-03-21 13:04:08.100 Server Server process ID is 2252.
   
-> 2013-03-21 13:04:08.100 Server System Manufacturer: &#8216;Xen&#8217;, System Model: &#8216;HVM domU&#8217;.
+> 2013-03-21 13:04:08.100 Server System Manufacturer: &#8216;Xen', System Model: &#8216;HVM domU'.
   
 > 2013-03-21 13:04:08.100 Server Authentication mode is MIXED.
   
-> 2013-03-21 13:04:08.100 Server Logging SQL Server messages in file &#8216;D:RDSDBDATALogERROR&#8217;.
+> 2013-03-21 13:04:08.100 Server Logging SQL Server messages in file &#8216;D:RDSDBDATALogERROR'.
   
-> 2013-03-21 13:04:08.100 Server The service account is &#8216;RDSGroupRDSIMAGE$&#8217;. This is an informational message; no user action is required.
+> 2013-03-21 13:04:08.100 Server The service account is &#8216;RDSGroupRDSIMAGE$'. This is an informational message; no user action is required.
   
 > 2013-03-21 13:04:08.100 Server Registry startup parameters:
 	   
@@ -108,7 +108,7 @@ The output is something like you expect from xp_readerrorlog
   
 > 2013-03-21 13:04:08.100 Server Command Line Startup Parameters:
 	   
-> -s &#8220;MSSQLSERVER&#8221;
+> -s “MSSQLSERVER”
   
 > 2013-03-21 13:04:09.850 Server SQL Server detected 1 sockets with 1 cores per socket and 1 logical processors per socket, 1 total logical processors; using 1 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
   

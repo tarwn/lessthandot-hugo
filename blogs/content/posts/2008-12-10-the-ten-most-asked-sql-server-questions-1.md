@@ -28,7 +28,7 @@ If you are active in the SQL Server newsgroups and forums as I am, you will noti
   
 3) [Splitting string values][3]
   
-4) [Select all rows from one table that don&#8217;t exist in another table][4]
+4) [Select all rows from one table that don't exist in another table][4]
   
 5) [Getting all rows from one table and only the latest from the child table][5]
   
@@ -57,7 +57,7 @@ INSERT INTO SomeDates VALUES('2008-10-02 00:00:00.000')
 INSERT INTO SomeDates VALUES('2008-10-01 00:00:00.000')
 ```
 
-Return everything between &#8216;2008-10-01&#8217; and &#8216;2008-10-02&#8217;
+Return everything between &#8216;2008-10-01' and &#8216;2008-10-02'
 
 sql
 SELECT *
@@ -74,7 +74,7 @@ This works without a problem, we get this returned
   
 2008-10-02 00:00:00.000
 
-Let&#8217;s add some more dates including the time portion
+Let's add some more dates including the time portion
 
 sql
 INSERT INTO SomeDates VALUES('2008-10-02 00:01:00.000')
@@ -85,7 +85,7 @@ INSERT INTO SomeDates VALUES('2008-10-01 00:12:00.000')
 INSERT INTO SomeDates VALUES('2008-10-01 23:00:00.000')
 ```
 
-Return everything between &#8216;2008-10-01&#8217; and &#8216;2008-10-02&#8217;
+Return everything between &#8216;2008-10-01' and &#8216;2008-10-02'
 
 sql
 SELECT *
@@ -576,7 +576,7 @@ DECLARE @SplitString VARCHAR(1000)
 
 You now can dump the result into a table and then you can join one of your real tables with that table which will execute much faster
 
-## 4 Select all rows from one table that don&#8217;t exist in another table {#4}
+## 4 Select all rows from one table that don't exist in another table {#4}
 
 There are at least 5 ways to return data from one table which is not in another table. Two of these are SQL Server 2005 and greater only
 
@@ -609,7 +609,7 @@ sql
 SELECT * FROM testjoin WHERE ID NOT IN(SELECT ID FROM testnulls)
 ```
 
-What happened? Nothing gets returned! The reason is because the subquery returns a NULL and you can&#8217;t compare a NULL to anything
+What happened? Nothing gets returned! The reason is because the subquery returns a NULL and you can't compare a NULL to anything
 
 Now run this
 
@@ -621,7 +621,7 @@ That worked because we eliminated the NULL values in the subquery
 
 **NOT EXISTS**
 
-NOT EXISTS doesn&#8217;t have the problem that NOT IN has. Run the following code
+NOT EXISTS doesn't have the problem that NOT IN has. Run the following code
 
 sql
 SELECT * FROM testjoin j
@@ -731,11 +731,11 @@ We have another blog post on our site which has a lot more detail about doing th
   
 5. Compound Key, aka Packed Values
 
-That post can be found here: [Including an Aggregated Column&#8217;s Related Values][12]
+That post can be found here: [Including an Aggregated Column's Related Values][12]
 
 ## 6 Getting all characters until a specific character (charindex + left) {#6}
 
-There are two built in functions that you can use in SQL Server to return the first position in a column of the character you are looking for. These functions are PATINDEX and CHARINDEX. Let&#8217;s take a look at how PATINDEX works. First create this table.
+There are two built in functions that you can use in SQL Server to return the first position in a column of the character you are looking for. These functions are PATINDEX and CHARINDEX. Let's take a look at how PATINDEX works. First create this table.
 
 sql
 CREATE TABLE #SomeTable2
@@ -823,7 +823,7 @@ However I do not recommend doing that ever, the default is ON and I would leave 
 
 ## 8 Row values to column (PIVOT) {#8}
 
-A very frequent request is how to pivot/transpose/crosstab a query. SQL server 2005 introduced PIVOT, this makes life a lot easier compared to the SQL 2000 days. so let&#8217;s see how this works. First create this table
+A very frequent request is how to pivot/transpose/crosstab a query. SQL server 2005 introduced PIVOT, this makes life a lot easier compared to the SQL 2000 days. so let's see how this works. First create this table
 
 sql
 CREATE TABLE #SomeTable
@@ -893,7 +893,7 @@ What we want is too list all the movies in a column and the sum of all quantitie
   </tr>
 </table>
 
-First let&#8217;s look how we can do this in SQL Server 2000, this BTW will also work in SQL Server 2005/2008
+First let's look how we can do this in SQL Server 2000, this BTW will also work in SQL Server 2005/2008
 
 sql
 SELECT SUM(CASE SomeName WHEN 'Scarface' THEN Quantity ELSE 0 END) AS Scarface,
@@ -927,7 +927,7 @@ To pad a number with leading zeroes you use as many zeroes as you want the outpu
   
 For example if you want to pad a 6 digit column with zeroes you would do something like this
    
-RIGHT(&#8216;000000&#8217; + CONVERT(VARCHAR(6),ColumnName),6)
+RIGHT(&#8216;000000' + CONVERT(VARCHAR(6),ColumnName),6)
 
 Here is some code that will show this, first create this table
   
@@ -992,7 +992,7 @@ FROM testpadding
 
 Server: Msg 248, Level 16, State 1, Line 1
   
-The conversion of the varchar value &#8216;02222222222222222222200002&#8217; overflowed an int column.
+The conversion of the varchar value &#8216;02222222222222222222200002' overflowed an int column.
 
 Okay we can do a bigint instead
 
@@ -1005,7 +1005,7 @@ Server: Msg 8115, Level 16, State 2, Line 1
   
 Arithmetic overflow error converting expression to data type bigint.
 
-Nope, even that doesn&#8217;t fit, now what?
+Nope, even that doesn't fit, now what?
 
 sql
 select replace(ltrim(replace(id,'0',' ')),' ','0')
@@ -1024,13 +1024,13 @@ FROM testpadding
   
 2222222222222222222200002
 
-So how does that work? First you replace all the zeroes with spaces, then you trim it to get rid of the leading spaces, after you replace the space back to zeroes again, the leading zeroes don&#8217;t exists anymore because they were trimmed
+So how does that work? First you replace all the zeroes with spaces, then you trim it to get rid of the leading spaces, after you replace the space back to zeroes again, the leading zeroes don't exists anymore because they were trimmed
 
 ## 10 Concatenate Values From Multiple Rows Into One Column {#10}
 
-If you want to concatenate values from multiple rows into one and you want to order it then you have to use FOR XML PATH. The ORDER BY is -not- guaranteed to be processed before the concatenation occurs, if you use that technique. However, it -is- guaranteed if you use FOR XML PATH(&#8221;).
+If you want to concatenate values from multiple rows into one and you want to order it then you have to use FOR XML PATH. The ORDER BY is -not- guaranteed to be processed before the concatenation occurs, if you use that technique. However, it -is- guaranteed if you use FOR XML PATH(”).
 
-Let&#8217;s take a look. First create these tables
+Let's take a look. First create these tables
 
 sql
 USE TEMPDB

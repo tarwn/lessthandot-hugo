@@ -30,7 +30,7 @@ This is day fifteen of the [SQL Advent 2012 series][1] of blog posts. Today we a
 
 ## So how does an index work?
 
-How does an index work, how does it help SQL Server finding stuff faster? Here is an simple non technology explanation. If I told you to grab a cookbook and give me all the recipes in that book for cod, what would you do? There are two things yuo can do, you can read through the whole book page by page until you get to the last page looking for any cod recipes. Or&#8230;&#8230;&#8230;..take a look at the picture below
+How does an index work, how does it help SQL Server finding stuff faster? Here is an simple non technology explanation. If I told you to grab a cookbook and give me all the recipes in that book for cod, what would you do? There are two things yuo can do, you can read through the whole book page by page until you get to the last page looking for any cod recipes. Or………..take a look at the picture below
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/IMG01005-20121214-1059.jpg?mtime=1355500346"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/IMG01005-20121214-1059.jpg?mtime=1355500346" width="640" height="480" /></a>
@@ -48,7 +48,7 @@ Here is what books on line has to say about the [storage of a clustered index][2
 
 > _In SQL Server, indexes are organized as B-trees. Each page in an index B-tree is called an index node. The top node of the B-tree is called the root node. The bottom level of nodes in the index is called the leaf nodes. Any index levels between the root and the leaf nodes are collectively known as intermediate levels. In a clustered index, the leaf nodes contain the data pages of the underlying table. The root and intermediate level nodes contain index pages holding index rows. Each index row contains a key value and a pointer to either an intermediate level page in the B-tree, or a data row in the leaf level of the index. The pages in each level of the index are linked in a doubly-linked list._
 
-A non clustered index is a little different since it doesn&#8217;t store the whole data pages, here is what books on line has to say about [the storage of a nonclustered index][3]
+A non clustered index is a little different since it doesn't store the whole data pages, here is what books on line has to say about [the storage of a nonclustered index][3]
 
 > _Nonclustered indexes have the same B-tree structure as clustered indexes, except for the following significant differences:</p> 
 > 
@@ -68,9 +68,9 @@ A non clustered index is a little different since it doesn&#8217;t store the who
 > 
 > ## Keep your clustered indexes narrow
 > 
-> Try to keep your clustered indexes as narrow as possible, if you can use something like an integer, this is only 4 bytes. The reason to keep your clustered indexes narrow is that when you have non clustered indexes, the row locator is the clustered index key for the row. In this case your non clustered index will become bigger as well and now you won&#8217;t be able to store as much data on a page. To illustrate that let&#8217;s take a look at some simple code
+> Try to keep your clustered indexes as narrow as possible, if you can use something like an integer, this is only 4 bytes. The reason to keep your clustered indexes narrow is that when you have non clustered indexes, the row locator is the clustered index key for the row. In this case your non clustered index will become bigger as well and now you won't be able to store as much data on a page. To illustrate that let's take a look at some simple code
 > 
-> First let&#8217;s create this table and populate it with 2048 rows
+> First let's create this table and populate it with 2048 rows
 > 
 > sql
 CREATE TABLE Test1(id int, somecol char(36), somecol2 char(36))
@@ -95,7 +95,7 @@ CREATE NONCLUSTERED INDEX ix1 on Test1(somecol)
 > CREATE NONCLUSTERED INDEX ix2 on Test1(somecol2)
 ```
 
-> Let&#8217;s check how much storage is required for the non clustered indexes
+> Let's check how much storage is required for the non clustered indexes
 > 
 > sql
 SELECT
@@ -129,14 +129,14 @@ Test1	2048    472 KB	       176 KB	240 KB	        56 KB</pre>
 > 
 > We see that it is using 240 KB for the indexes
 > 
-> Let&#8217;s recreate the clustered index with all 3 columns now.
+> Let's recreate the clustered index with all 3 columns now.
 > 
 > sql
 CREATE CLUSTERED INDEX cx on Test1(id,somecol,somecol2)
 > WITH DROP_EXISTING
 ```
 
-> Recreating the clustered index also recreated the non clustered indexes. Let&#8217;s check now how many pages a non clustered index is
+> Recreating the clustered index also recreated the non clustered indexes. Let's check now how many pages a non clustered index is
 > 
 > sql
 SELECT
@@ -176,7 +176,7 @@ Test1	2048    600 KB	 176 KB	384 KB	        40 KB</pre>
 > 
 > So why does this matter you ask? SQL Server will use indexes for all kind of things, if you run a COUNT(*) it will use an index, if you do a JOIN it will use an index, it will use indexes in GROUP By queries and many more things.
 > 
-> Let&#8217;s look at a simple example, when you do a COUNT(*), the optimizer will pick a non clustered index if there is one since it usually has less columns than the clustered index 
+> Let's look at a simple example, when you do a COUNT(*), the optimizer will pick a non clustered index if there is one since it usually has less columns than the clustered index 
 > 
 > sql
 SET SHOWPLAN_TEXT ON

@@ -28,9 +28,9 @@ PetaPoco is built specifically with primary keys as a first class citizen, so it
 
 ## Adding a column
 
-Like Simple.Data, adding a column to our database table is no problem at all. First lets add the column to our database, then we&#8217;ll look at how that affects both our existing code and an updated POCO with a matching field.
+Like Simple.Data, adding a column to our database table is no problem at all. First lets add the column to our database, then we'll look at how that affects both our existing code and an updated POCO with a matching field.
 
-Like before, I&#8217;ll use the more concise syntax of PetaPoco to add the column instead of the standard ADO logic:
+Like before, I'll use the more concise syntax of PetaPoco to add the column instead of the standard ADO logic:
 
 ```csharp
 private void CreateTable() {
@@ -49,7 +49,7 @@ private void SelectDecoratedRecords() {
 	}
 }
 ```
-Now let&#8217;s add the new column to both our raw POCO and the decorated POCO:
+Now let's add the new column to both our raw POCO and the decorated POCO:
 
 ```csharp
 public class Person {
@@ -87,7 +87,7 @@ Yesterdays third insert option, using an undecorated object and counting on refl
 
 ## Adding a Table
 
-Following Chrissie&#8217;s lead, lets add an address table and an undeclared foreign key relationship from the Person table (I have to tease him about something).
+Following Chrissie's lead, lets add an address table and an undeclared foreign key relationship from the Person table (I have to tease him about something).
 
 ```csharp
 private void CreateTables() {
@@ -97,7 +97,7 @@ private void CreateTables() {
 	}
 }
 ```
-And I will add an additional Person POCO to reflect the new column, as well as an Address POCO to reflect the new table. The simpler query logic is addictive, so I&#8217;ve decorated both POCOs (I&#8217;ll explain the ResultColumn later):
+And I will add an additional Person POCO to reflect the new column, as well as an Address POCO to reflect the new table. The simpler query logic is addictive, so I've decorated both POCOs (I'll explain the ResultColumn later):
 
 ```csharp
 [TableName("Person")]
@@ -122,7 +122,7 @@ public class Address {
 	public string HouseNumber { get; set; }
 }
 ```
-Following Chrissie&#8217;s lead, I&#8217;ll query for the related records separately first:
+Following Chrissie's lead, I'll query for the related records separately first:
 
 ```csharp
 public void QuerySeperately() {
@@ -145,7 +145,7 @@ public void QuerySeperately() {
 	}
 }
 ```
-As he pointed out, this method doesn&#8217;t perform well. We can replace this with a single query using the [Multi-POCO][4] support.
+As he pointed out, this method doesn't perform well. We can replace this with a single query using the [Multi-POCO][4] support.
 
 ```csharp
 public void QueryMultiStyle() { 
@@ -168,17 +168,17 @@ public void QueryMultiStyle() {
 	}
 }
 ```
-PetaPoco has the ability to map the results of JOINs to several objects, but it&#8217;s kind of tricky. The simplest method is to return the fields in the same order as the generic object list. What PetaPoco then does is attempt to process each column in the result from left to right, moving to the next object in line when it reaches a column that doesn&#8217;t exist in the first or has already been populated. So in this case, because both of the tables and POCOs have an &#8220;Id&#8221;, when the result set reaches the second id it makes the logical conclusion that it is time to start mapping the Address object. PetaPoco uses type detection in the Person object to locate a property to assign the Address instance to.
+PetaPoco has the ability to map the results of JOINs to several objects, but it's kind of tricky. The simplest method is to return the fields in the same order as the generic object list. What PetaPoco then does is attempt to process each column in the result from left to right, moving to the next object in line when it reaches a column that doesn't exist in the first or has already been populated. So in this case, because both of the tables and POCOs have an “Id”, when the result set reaches the second id it makes the logical conclusion that it is time to start mapping the Address object. PetaPoco uses type detection in the Person object to locate a property to assign the Address instance to.
 
-There is also more extensive capabilities available to use lambdas to manage the multi-POCO mapping on our own, and if we wanted to we could easily define a single POCO object that had all the necessary fields for both tables. Logic for [One-to-many joins][5] is more complex and I haven&#8217;t had time to dig fully into the intricacies yet.
+There is also more extensive capabilities available to use lambdas to manage the multi-POCO mapping on our own, and if we wanted to we could easily define a single POCO object that had all the necessary fields for both tables. Logic for [One-to-many joins][5] is more complex and I haven't had time to dig fully into the intricacies yet.
 
-The last trick was the ResultColumn attribute I used above. By default PetaPoco assumes that all of the properties in our POCO are going to be inserted into the database. ResultColumn properties are ignored for inserts and updates, but can still be selected into. In this case I&#8217;m using it to have PetaPoco ignore the column, but the real purpose would be to allow me to return an additional calculated column, aggregate, or other value that wouldn&#8217;t have meaning in an INSERT or UPDATE. 
+The last trick was the ResultColumn attribute I used above. By default PetaPoco assumes that all of the properties in our POCO are going to be inserted into the database. ResultColumn properties are ignored for inserts and updates, but can still be selected into. In this case I'm using it to have PetaPoco ignore the column, but the real purpose would be to allow me to return an additional calculated column, aggregate, or other value that wouldn't have meaning in an INSERT or UPDATE. 
 
-_Note: There is an Ignore attribute that would have worked just as well and been a better fit, but then I wouldn&#8217;t have had a chance to talk about the ResultColumn 🙂_
+_Note: There is an Ignore attribute that would have worked just as well and been a better fit, but then I wouldn't have had a chance to talk about the ResultColumn 🙂_
 
 ## Conclusion
 
-So there we go. We can add auto-incrementing IDs very easily, PetaPoco is smart enough to map partial objects, and there is some really neat stuff available for multi-POCO joins. I&#8217;ve continued to update the [github repository][6], so feel free to grab a copy of the code and play around with yourself.
+So there we go. We can add auto-incrementing IDs very easily, PetaPoco is smart enough to map partial objects, and there is some really neat stuff available for multi-POCO joins. I've continued to update the [github repository][6], so feel free to grab a copy of the code and play around with yourself.
 
  [1]: /index.php/DesktopDev/MSTech/simple-data-and-vb-net "Simple.Data and VB.Net the beginning"
  [2]: /index.php/DesktopDev/MSTech/CSharp/playing-with-petapoco "Playing with PetaPoco"

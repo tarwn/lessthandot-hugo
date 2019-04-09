@@ -30,7 +30,7 @@ After downloading, install and configure it. (Yes, even in my development enviro
 
 Now you need a database. AdventureWorks is an old standby, but there is a new test database available, WideWorldImporters! And it’s on GitHub! This is exciting. Download from <https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0>. Restore the database into your SQL Server 2016 instance.
 
-Then you need proper security for your database. Don’t run all demos as sa or as your own sysadmin-level account. That isn’t the real world, and not how users will access an application (or, it shouldn&#8217;t be). Add a Windows user if you can; I had to use SQL authentication for mine. I created a login named PurchaseOrdersApp. At the server level, permissions are public. At the database level, I granted db\_datareader and db\_datawriter.
+Then you need proper security for your database. Don’t run all demos as sa or as your own sysadmin-level account. That isn’t the real world, and not how users will access an application (or, it shouldn't be). Add a Windows user if you can; I had to use SQL authentication for mine. I created a login named PurchaseOrdersApp. At the server level, permissions are public. At the database level, I granted db\_datareader and db\_datawriter.
 
 <div id='gallery-2' class='gallery galleryid-4555 gallery-columns-2 gallery-size-thumbnail'>
   <dl class='gallery-item'>
@@ -125,7 +125,7 @@ The next step is creating the connection. I click “New Connection” and fill 
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-4-4580'>
-      Choose &#8220;Database&#8221;
+      Choose “Database”
     </dd>
   </dl>
   

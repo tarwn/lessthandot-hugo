@@ -23,9 +23,9 @@ tags:
   - trapping
 
 ---
-I have a bunch of linked servers to SQL Servers and also to Sybase ASE Servers ON AIX machines. There are some interesting things that can happen. For example if you type the name of the object or the linked server itself wrong, you can&#8217;t trap this&#8230;.. or can you?
+I have a bunch of linked servers to SQL Servers and also to Sybase ASE Servers ON AIX machines. There are some interesting things that can happen. For example if you type the name of the object or the linked server itself wrong, you can't trap this….. or can you?
 
-Let&#8217;s take a look. Open up SSMS and connect to your local instance. Now create a linked server named TestLinkedServer which points to the local server. The code to do that is below.
+Let's take a look. Open up SSMS and connect to your local instance. Now create a linked server named TestLinkedServer which points to the local server. The code to do that is below.
 
 sql
 EXEC master.dbo.SP_ADDLINKEDSERVER @server = N'TestLinkedServer',
@@ -65,7 +65,7 @@ TEST_
 
 Yes, that worked just as expected.
   
-Now what do you think will happen if we change the table name from sysobjects to sysobjects2? Let&#8217;s run it and see
+Now what do you think will happen if we change the table name from sysobjects to sysobjects2? Let's run it and see
 
 sql
 BEGIN TRY	
@@ -80,7 +80,7 @@ END CATCH
 PRINT 'TEST'
 ```
 
-_OLE DB provider &#8220;SQLNCLI10&#8221; for linked server &#8220;TestLinkedServer&#8221; returned message &#8220;Deferred prepare could not be completed.&#8221;.
+_OLE DB provider “SQLNCLI10” for linked server “TestLinkedServer” returned message “Deferred prepare could not be completed.”.
   
 Msg 8180, Level 16, State 1, Line 1
   
@@ -88,7 +88,7 @@ Statement(s) could not be prepared.
   
 Msg 208, Level 16, State 1, Line 1
   
-Invalid object name &#8216;tempdb..sysobjects2&#8217;._
+Invalid object name &#8216;tempdb..sysobjects2'._
 
 Ouch it blew up on us and never made it to the print statement.
 
@@ -109,7 +109,7 @@ PRINT 'TEST'
 
 _Msg 7202, Level 11, State 2, Line 4
   
-Could not find server &#8216;TestLinkedServer2&#8217; in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers._
+Could not find server &#8216;TestLinkedServer2' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers._
 
 Same problem, blows up and never makes it to the print statement. What if we take the last two examples and wrap them inside an exec statement?
 
@@ -126,9 +126,9 @@ END CATCH
 PRINT 'TEST'
 ```
 
-_OLE DB provider &#8220;SQLNCLI10&#8221; for linked server &#8220;TestLinkedServer&#8221; returned message &#8220;Deferred prepare could not be completed.&#8221;.
+_OLE DB provider “SQLNCLI10” for linked server “TestLinkedServer” returned message “Deferred prepare could not be completed.”.
   
-Invalid object name &#8216;tempdb..sysobjects2&#8217;.
+Invalid object name &#8216;tempdb..sysobjects2'.
   
 208
   
@@ -149,7 +149,7 @@ END CATCH
 PRINT 'TEST'
 ```
 
-_Could not find server &#8216;TestLinkedServer2&#8217; in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+_Could not find server &#8216;TestLinkedServer2' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
   
 7202
   
@@ -157,17 +157,17 @@ TEST_
 
 Beautiful, Even using a non existent linked server name is caught when using it inside an EXEC statement.
 
-As you can see it is possible to trap a problem with linked servers if you wrap it inside an Exec statement which you could not trap otherwise. One thing you can&#8217;t trap however is a timeout.
+As you can see it is possible to trap a problem with linked servers if you wrap it inside an Exec statement which you could not trap otherwise. One thing you can't trap however is a timeout.
 
 Here are some of the error messages I trapped on my boxes
 
-Cannot fetch a row from OLE DB provider &#8220;MSDASQL&#8221; for linked server &#8220;Test&#8221;.
+Cannot fetch a row from OLE DB provider “MSDASQL” for linked server “Test”.
   
-Cannot initialize the data source object of OLE DB provider &#8220;MSDASQL&#8221; for linked server &#8220;Test&#8221;.
+Cannot initialize the data source object of OLE DB provider “MSDASQL” for linked server “Test”.
   
-The OLE DB provider &#8220;MSDASQL&#8221; for linked server &#8220;Test&#8221; could not INSERT INTO table &#8220;[MSDASQL]&#8221;.
+The OLE DB provider “MSDASQL” for linked server “Test” could not INSERT INTO table “[MSDASQL]”.
   
-The OLE DB provider &#8220;MSDASQL&#8221; for linked server &#8220;Test&#8221; reported an error committing the current transaction.
+The OLE DB provider “MSDASQL” for linked server “Test” reported an error committing the current transaction.
 
 Hope you learned something and hopefully this will help you in your troubles with linked servers
 

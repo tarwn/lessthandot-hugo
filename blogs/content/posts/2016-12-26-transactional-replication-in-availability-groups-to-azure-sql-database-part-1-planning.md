@@ -13,9 +13,9 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Throughout the last few years, I&#8217;ve worked with SQL Server Availability Groups, Transactional Replication, and Azure SQL Databases. Recently, I had the challenge and opportunity to work on a project that involved all three at the same time. The goal was to take six databases that were in a SQL Server 2012 Availability Group and replicate them to Azure SQL Databases.
+Throughout the last few years, I've worked with SQL Server Availability Groups, Transactional Replication, and Azure SQL Databases. Recently, I had the challenge and opportunity to work on a project that involved all three at the same time. The goal was to take six databases that were in a SQL Server 2012 Availability Group and replicate them to Azure SQL Databases.
 
-Both replication of a database in an AG and replication from SQL Server to SQL Database come with several caveats, limitations, and challenges. In this five-post blog series, I hope to share with you the lessons I&#8217;ve learned so you can do this correctly from the beginning.
+Both replication of a database in an AG and replication from SQL Server to SQL Database come with several caveats, limitations, and challenges. In this five-post blog series, I hope to share with you the lessons I've learned so you can do this correctly from the beginning.
 
   * <a href="/?p=4896" target="_blank">Part 1 &#8211; Planning</a>
   * <a href="/?p=4906" target="_blank">Part 2 &#8211; The Distributor</a>
@@ -27,11 +27,11 @@ Both replication of a database in an AG and replication from SQL Server to SQL D
 
 ### Getting Started
 
-Determine what you need to accomplish and if there is a simpler way to do it. This is a complicated solution with a lot of moving parts. Many things can go wrong or break. In this situation, we needed to have on-premises data in Azure to be consumed by other Azure services and for analytics. It also had to stay on-premises for transactional applications. The other option for moving the data on a regular basis was <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-sql-data-sync" target="_blank">Azure SQL Data Sync</a>, which has been in preview for five (long) years &#8211; I didn&#8217;t want to use a preview technology, especially one that&#8217;s been in preview mode for so long.
+Determine what you need to accomplish and if there is a simpler way to do it. This is a complicated solution with a lot of moving parts. Many things can go wrong or break. In this situation, we needed to have on-premises data in Azure to be consumed by other Azure services and for analytics. It also had to stay on-premises for transactional applications. The other option for moving the data on a regular basis was <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-sql-data-sync" target="_blank">Azure SQL Data Sync</a>, which has been in preview for five (long) years &#8211; I didn't want to use a preview technology, especially one that's been in preview mode for so long.
 
-You should have some familiarity with each of these features before combining them. Write up an architecture document ahead of time that will include all the relevant information you need as you&#8217;re setting this up &#8211; replica names, publication properties, distributor properties, subscriber information, SQL DB information. Download my <a href="/?p=4899" target="_blank">Replication Setup Checklist</a> to be prepared.
+You should have some familiarity with each of these features before combining them. Write up an architecture document ahead of time that will include all the relevant information you need as you're setting this up &#8211; replica names, publication properties, distributor properties, subscriber information, SQL DB information. Download my <a href="/?p=4899" target="_blank">Replication Setup Checklist</a> to be prepared.
 
-Read through this series, and these other blog posts, to be prepared. I&#8217;ve referenced these blogs many time:
+Read through this series, and these other blog posts, to be prepared. I've referenced these blogs many time:
 
   * <a href="https://msdn.microsoft.com/en-us/library/hh710046.aspx" target="_blank">Configure Replication for Always On Availability Groups</a> (MSDN)
   * <a href="https://blogs.msdn.microsoft.com/alwaysonpro/2014/01/30/setting-up-replication-on-a-database-that-is-part-of-an-alwayson-availability-group/" target="_blank">Setting up Replication on a database that is part of an AlwaysOn Availability Group</a> (AlwaysOn Support Team)
@@ -42,9 +42,9 @@ Lastly, reach out for help if needed. The SQL Server community helped me many, m
 
 ### Prep Work
 
-There are tasks you&#8217;ll need to take care of in SQL Server, the AG, and the SQL DB before you can begin.
+There are tasks you'll need to take care of in SQL Server, the AG, and the SQL DB before you can begin.
 
-This blog series assumes you already have an AG set up &#8211; it won&#8217;t go through the setup of that. It also assumes you have an Azure SQL server and a SQL Database created &#8211; it won&#8217;t go through that setup either.
+This blog series assumes you already have an AG set up &#8211; it won't go through the setup of that. It also assumes you have an Azure SQL server and a SQL Database created &#8211; it won't go through that setup either.
 
 Ideally, the publishers, distributor, and subscribers will all be the same version and edition of SQL Server. If not, you have to configure from the highest-version server, or you will get errors.
 
@@ -79,7 +79,7 @@ Using SSMS, verify you can connect from each publisher and distributor to the SQ
 
 Use the “Deploy Database to Microsoft Azure SQL Database” wizard to find any incompatibilities within the database. If there are stored procedures that cross-reference another database, for example, that isn’t supported in SQL Database and those objects can’t be replicated.
 
-With all those pieces in place, let&#8217;s get started!
+With all those pieces in place, let's get started!
 
 ### Scenario
 

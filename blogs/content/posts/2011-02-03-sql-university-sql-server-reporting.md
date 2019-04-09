@@ -27,7 +27,7 @@ _SQL Server 2008 R2_
   <a href="/wp-content/uploads/blogs/All/SQL-University-Shield-268x300.png?mtime=1296004623"><img alt="" src="/wp-content/uploads/blogs/All/SQL-University-Shield-268x300.png?mtime=1296004623" width="268" height="300" /></a>
 </div>
 
-Welcome to SQL Server Reporting Services week at [SQL University][1]. This is a great blog project put together by Jorge Segarra ([Twitter][2] | [Blog][3]), and contributed to by many SQL professionals. If you aren&#8217;t a student yet, head over to the website and get started in classes! 
+Welcome to SQL Server Reporting Services week at [SQL University][1]. This is a great blog project put together by Jorge Segarra ([Twitter][2] | [Blog][3]), and contributed to by many SQL professionals. If you aren't a student yet, head over to the website and get started in classes! 
 
 **SQL Server Reporting Services Configuration Files** 
 
@@ -43,7 +43,7 @@ The first thing you need to do? Find the files (and I see a lot of forum questio
 
 The second thing you need to do? Back up the files before making any changes. 
 
-Once you find the file and open it in a text editor (remember, it&#8217;s just an XML document), this is what you&#8217;ll see. 
+Once you find the file and open it in a text editor (remember, it's just an XML document), this is what you'll see. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/ConfigFileStart.JPG?mtime=1296005818"><img alt="" src="/wp-content/uploads/blogs/All/ConfigFileStart.JPG?mtime=1296005818" width="730" height="245" /></a>
@@ -123,7 +123,7 @@ These settings are used when your reports tie into the Microsoft Bing Maps web s
 
 Reporting Services is very feature-rich, and allows you to do customization. Familiarity with the configuration files will give you a better understanding of what is available, how it works, and how to resolve problems that may occur. 
 
-Please take a minute to fill out the [SQL University Course Evaluation][8] for this week&#8217;s classes. Thanks!
+Please take a minute to fill out the [SQL University Course Evaluation][8] for this week's classes. Thanks!
 
  [1]: http://sqlchicken.com/sql-university/
  [2]: http://twitter.com/sqlchicken

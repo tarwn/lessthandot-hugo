@@ -22,7 +22,7 @@ tags:
   
 If you want to learn about Google Wave then check out the book [The Complete Guide to Google Wave][2] written by Gina Trapani with Adam Pash.
 
-This book&#8217;s contents are freely available to view online. Here is what is covered in the book: 
+This book's contents are freely available to view online. Here is what is covered in the book: 
 
 _Chapter 1 Meet Google Wave
   
@@ -44,7 +44,7 @@ Chapter 5 Dive Deeper into Wave
   
 Add rich content to your waves like maps and photo slide shows.
 
-Chapter 6 Master Wave&#8217;s Interface
+Chapter 6 Master Wave's Interface
   
 Navigate Wave from the keyboard and customize your Wave interface.
 
@@ -56,9 +56,9 @@ Chapter 8 Wave Bots
   
 Automatically update the contents of your waves with bots.
 
-Appendix A What Wave Can&#8217;t Do
+Appendix A What Wave Can't Do
   
-It&#8217;s not just you. See what&#8217;s NOT working in the current version of Wave, and what features the Wave team has promised are coming.
+It's not just you. See what's NOT working in the current version of Wave, and what features the Wave team has promised are coming.
 
 Appendix B Contribute to The Complete Guide to Google Wave
   

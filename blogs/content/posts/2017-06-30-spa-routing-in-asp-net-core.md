@@ -23,7 +23,7 @@ This is not guaranteed to be the only way to do this, just the one that worked f
 
 **Goals:**
   
-1. Static files to live in &#8220;Assets&#8221; instead of &#8220;wwwroot&#8221;
+1. Static files to live in “Assets” instead of “wwwroot”
   
 2. Client-side routes like ~/configure/userScenarios to return ~/index.html when the browser loads them
   
@@ -50,7 +50,7 @@ public static void Main(string[] args)
 ```
 ## Startup.cs &#8211; Default Files, Assets, Client Routes
 
-Then in my Startup.cs file I added configuration to load &#8220;index.html&#8221; by default, static files in my &#8220;Assets&#8221; folder, and URL rewriting to rewrite client-side route patterns to the base &#8220;index.html&#8221; file:
+Then in my Startup.cs file I added configuration to load “index.html” by default, static files in my “Assets” folder, and URL rewriting to rewrite client-side route patterns to the base “index.html” file:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

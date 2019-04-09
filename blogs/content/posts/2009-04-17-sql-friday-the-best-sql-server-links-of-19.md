@@ -25,15 +25,15 @@ Brent Ozar (without Hulk hands) explains in a video why backup log with truncate
 
 **[does size really matter &#8211; or is it what you do with it?][2]**
   
-Paul Randal has a survey on his website: &#8220;I&#8217;m interested in the physical layout of your databases. I&#8217;ve got four surveys, for a variety of database sizes. Please vote multiple times in each survey, as you see fit&#8221;
+Paul Randal has a survey on his website: “I'm interested in the physical layout of your databases. I've got four surveys, for a variety of database sizes. Please vote multiple times in each survey, as you see fit”
 
 **[How Dirty are your Reads?][3]**
   
-Andrew Kelly asks: &#8220;are dirty reads overused or even abused” by the average shop these days?&#8221;
+Andrew Kelly asks: “are dirty reads overused or even abused” by the average shop these days?”
 
 **[Requirements vs Architecture][4]**
   
-Louis Davidson has a nice post, he asks: &#8220;Can you turn off the “Get ‘er done” part of your mind when you are doing requirements, or do you find that you really really want to start building software well before you really understand the entire problem?&#8221;
+Louis Davidson has a nice post, he asks: “Can you turn off the “Get ‘er done” part of your mind when you are doing requirements, or do you find that you really really want to start building software well before you really understand the entire problem?”
 
 **[SQL Server 2008 SP1 Cumulative Update 1 is available!][5]**
   
@@ -41,9 +41,9 @@ Aaron Bertrand tells us that if you were among those who installed CU4 for SQL S
 
 **[Developers vs DBAs][6]**
   
-Gail writes: &#8220;I was listening to a podcast on nHibernate this morning. Most of it was very good, but there was one section that absolutly made me see red.
+Gail writes: “I was listening to a podcast on nHibernate this morning. Most of it was very good, but there was one section that absolutly made me see red.
 
-The guest on the show was asked how the DBAs felt about the use of nHibernate for a new app on an existing (old) database. The reply essentially was &#8216;We haven&#8217;t told them and we’re not going to tell them.'&#8221;
+The guest on the show was asked how the DBAs felt about the use of nHibernate for a new app on an existing (old) database. The reply essentially was &#8216;We haven't told them and we’re not going to tell them.'”
 
 
 

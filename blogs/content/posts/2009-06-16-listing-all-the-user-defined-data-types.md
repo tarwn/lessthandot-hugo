@@ -36,7 +36,7 @@ SELECT * FROM sys.Types
 WHERE is_user_defined = 1
 ```
 
-Let&#8217;s take a look how this works by adding a couple of User-Defined Data Types. we will add a birthday type which will be a datetime (on SQL Server 2008 it should be a date) and a StateCode which is a char(2)
+Let's take a look how this works by adding a couple of User-Defined Data Types. we will add a birthday type which will be a datetime (on SQL Server 2008 it should be a date) and a StateCode which is a char(2)
 
 sql
 USE master

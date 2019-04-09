@@ -23,7 +23,7 @@ tags:
   - uniqueidentifier
 
 ---
-This [question][1] came up yesterday and I decided to do a little blog post about it. Someone wanted to know if there was something like @@identity/scope_identity() for a uniqueidentifier column with a default of newsequentialid(). There is not such a function but you can use OUTPUT INSERTED.Column to do something similar. Let&#8217;s take a look
+This [question][1] came up yesterday and I decided to do a little blog post about it. Someone wanted to know if there was something like @@identity/scope_identity() for a uniqueidentifier column with a default of newsequentialid(). There is not such a function but you can use OUTPUT INSERTED.Column to do something similar. Let's take a look
 
 First create this table
 
@@ -37,7 +37,7 @@ INSERT bla (ID) VALUES(1)
 GO
 ```
 
-Do a simple select&#8230;.
+Do a simple select….
 
 sql
 SELECT * FROM bla
@@ -61,7 +61,7 @@ VALUES(2)
 <pre>SomeID
 28E798A8-0AE6-E011-A428-0021867E1D41</pre>
 
-As you can see you get the uniqueidentifier just created back, all we have added was OUTPUT INSERTED.SomeID between INSERT&#8230;.. and VALUES&#8230;&#8230;
+As you can see you get the uniqueidentifier just created back, all we have added was OUTPUT INSERTED.SomeID between INSERT….. and VALUES……
   
 Pretty simple so far
   
@@ -100,7 +100,7 @@ sql
 SELECT * FROM bla
 ```
 
-Here is the data, of course on your machine the values for SomeID won&#8217;t be the same
+Here is the data, of course on your machine the values for SomeID won't be the same
   
 
 

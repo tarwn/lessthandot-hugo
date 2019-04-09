@@ -29,7 +29,7 @@ tags:
   - virtualization
 
 ---
-Oracle has updated the [Sun Acquisition FAQ][1]. The FAQ now has Oracle&#8217;s plans for MySQL, Java, Virtualization, NetBeans, Glassfish, OpenOffice, Open Source and other things.
+Oracle has updated the [Sun Acquisition FAQ][1]. The FAQ now has Oracle's plans for MySQL, Java, Virtualization, NetBeans, Glassfish, OpenOffice, Open Source and other things.
 
 Below are the relevant pieces from that document.
 

@@ -116,7 +116,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_13.png?mtime=1370291507"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_13.png?mtime=1370291507" alt="" width="370" height="298" /></a>
 </p>
 
-<span style="text-align: justify;">That’s it, SharePoint is now installed on the virtual machine, but it is not configured yet, so it is still useless. (some might argue it’s also useless after it has been configured, but let&#8217;s not get into that)</span>
+<span style="text-align: justify;">That’s it, SharePoint is now installed on the virtual machine, but it is not configured yet, so it is still useless. (some might argue it’s also useless after it has been configured, but let's not get into that)</span>
 
 Go back to [overview][1].   
 Previous part: [Installing SQL Server][2].   

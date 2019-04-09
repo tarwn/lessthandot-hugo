@@ -23,13 +23,13 @@ On 19 and 20 November, the annual [SQL Server Days][1] will take place again. Th
   
 Why?
   
-Because they provide a different track for all the profiles even for the Oracle DBA&#8217;s.
+Because they provide a different track for all the profiles even for the Oracle DBA's.
   
 Because some international top speakers are coming like : 
 
-  * Bob Beauchemin ([Blog][3] | [Twitter][4]): Whenever you see someone from SQLskills on a speaker list you shouldn&#8217;t doubt and just go. I&#8217;ve seen Bob teaching in Barcelona twice and can assure you, listing to him is fun but be prepared for some deep learning
+  * Bob Beauchemin ([Blog][3] | [Twitter][4]): Whenever you see someone from SQLskills on a speaker list you shouldn't doubt and just go. I've seen Bob teaching in Barcelona twice and can assure you, listing to him is fun but be prepared for some deep learning
   * Dandy Weyn ([Blog][5] | https://twitter.com/ilikesql): The Belgian who presented the American MS SQL Server 2012 roadshow. Who wants to miss that?
-  * Mladen Prajdic ([Blog][6] | [Twitter][7]): When you&#8217;re able to write a SSMS plugin like the SSMS Tools Pack, you can tell a lot more about the tricks nobody heard of.
+  * Mladen Prajdic ([Blog][6] | [Twitter][7]): When you're able to write a SSMS plugin like the SSMS Tools Pack, you can tell a lot more about the tricks nobody heard of.
 
 Because also Belgian top speakers will present some sessions : 
 

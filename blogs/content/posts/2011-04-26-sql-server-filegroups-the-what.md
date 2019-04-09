@@ -21,7 +21,7 @@ I once had a boss whose desk looked something like this:
   <a href="/wp-content/uploads/users/grrlgeek/messy-desk.jpg?mtime=1303781099"><img alt="" src="/wp-content/uploads/users/grrlgeek/messy-desk.jpg?mtime=1303781099" width="310" height="232" /></a>
 </div>
 
-_Shudder._ I like things organized, from the files on my desk to the files in my database. There&#8217;s a mechanism in SQL Server to help you separate and organize files: filegroups. 
+_Shudder._ I like things organized, from the files on my desk to the files in my database. There's a mechanism in SQL Server to help you separate and organize files: filegroups. 
 
 **What is a Filegroup?** 
 

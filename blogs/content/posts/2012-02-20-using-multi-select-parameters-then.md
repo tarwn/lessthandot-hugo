@@ -24,7 +24,7 @@ So, from my understanding there was a .Net framework update that limited the num
 
 So, basically what that means is if you have a report with multi-select parameters, and you select over a certain number of parameters to run your report on, you’ll get the error “operation cannot run due to current state of the object” because you’ve exceeded the amount of posted data the .Net framework allows.
 
-Not everyone will experience this issue. If your multi-select parameters only have a handful of options, you shouldn&#8217;t ever run into this issue. However, if you have parameters that contain a lot of options, then you&#8217;ll most likely want to change the default value, otherwise you run the risk of an error getting thrown.
+Not everyone will experience this issue. If your multi-select parameters only have a handful of options, you shouldn't ever run into this issue. However, if you have parameters that contain a lot of options, then you'll most likely want to change the default value, otherwise you run the risk of an error getting thrown.
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/sqlreportingservices/thread/cb6ede72-6ed1-4379-9d3c-847c11b75b32
  [2]: http://stackoverflow.com/questions/8684049/asp-net-ms11-100-how-can-i-change-the-limit-on-the-maximum-number-of-posted-for

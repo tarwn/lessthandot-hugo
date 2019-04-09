@@ -21,7 +21,7 @@ I have 5 Google Wave Invitations that I will give away today
 
 All you need to do is leave a comment with your twitter user name telling me why you think you need a Google Wave invite. I will pick 5 people randomly and today at 5PM EST I will DM the winners
 
-Keep in mind that the invites won&#8217;t be activated right away, according to the wave team
+Keep in mind that the invites won't be activated right away, according to the wave team
 
 > Invite others to Google Wave
 > 
@@ -91,6 +91,6 @@ FROM #TEMP
 ORDER BY NEWID()
 ```
 
-**And the lucky winners are: @AaronBertrand, @misterjp, @Jorriss,@russconklin and sqlsister. Invitations have been entered into Google Wave&#8230;now you have to wait for the Wave team**
+**And the lucky winners are: @AaronBertrand, @misterjp, @Jorriss,@russconklin and sqlsister. Invitations have been entered into Google Wave…now you have to wait for the Wave team**
 
  [1]: http://imgur.com/1mKn7.png

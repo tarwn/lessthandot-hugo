@@ -39,21 +39,21 @@ Start with the purpose of the project or initiative. As the business owner descr
 
 ### What does the business do?
 
-It may not always be necessary to ask the business this (hopefully if you work there you already know the answer), but at a minimum it should be written somewhere near your other notes. The business provides context for the data and drives the relative importance of different terms and entities. It&#8217;s important to remember that one company&#8217;s definition of &#8220;customer&#8221; could be entirely different from another company&#8217;s. Knowing the context helps us determine how important the terms from the prior conversation are and the wide variety of contexts is the reason there isn&#8217;t one world-wide standard for the &#8220;Customer&#8221; entity.
+It may not always be necessary to ask the business this (hopefully if you work there you already know the answer), but at a minimum it should be written somewhere near your other notes. The business provides context for the data and drives the relative importance of different terms and entities. It's important to remember that one company's definition of “customer” could be entirely different from another company's. Knowing the context helps us determine how important the terms from the prior conversation are and the wide variety of contexts is the reason there isn't one world-wide standard for the “Customer” entity.
 
 <div style="text-align: center; color: #666666; float: left; margin: 1em;">
   <a href="http://www.flickr.com/photos/miranda_jc/3406275289/"><img src="http://tiernok.com/LTDBlog/conceptual/sneakycat.png" alt="Evaluate outside influences" title="Evaluate outside influences" /></a><br />Outside influences can sneak up<br />Sneaky Cat on <a href="http://www.flickr.com/photos/miranda_jc/3406275289/" title="See original on Flickr">Flickr</a>
 </div>
 
-### About those other materials&#8230;
+### About those other materials…
 
 Any additional materials, products, or people referenced in that first conversation need to be tracked down. Materials will expose a much more detailed list of potential data fields then you will hear in a conversation, competing products or products priced out of the organizations range will provide additional terminology and purpose, while other people will provide both a sounding board for the assumptions so far and a source of secondary translations and assumptions. The important part is that we all started with the same base story (the initial business owner) before getting this far, as that frames these conversations and investigations. And yes, I really want to use the word _context_ again.
 
-### What&#8217;s sneaking up on us?
+### What's sneaking up on us?
 
 The last source of information we want to address is projects that are starting in the near future, strategic initiatives, and similar surprises waiting only a few weeks down the road. Going back to the business to ask about planned projects in the near future can often uncover additional information that will be critical to the model. Changes in business direction, assumptions of geographic growth or acquisitions, and even projects that are intended to tie into this data source can all mean the difference between a completed model and a redo of the modeling effort.
 
-### Put it all together&#8230;
+### Put it all together…
 
 So by now we should be able to put it all together, right? Well, maybe. Probably not.
 
@@ -63,13 +63,13 @@ Now that we have all of those raw inputs, all of those conversations, all of tho
   <a href="http://www.flickr.com/photos/mcnutcase/2229434187/"><img src="http://tiernok.com/LTDBlog/conceptual/catbasket.jpg" alt="Turn the problem sideways" title="Turn the problem sideways" /></a><br />Turn the problem sideways<br />Cat in Basket on <a href="http://www.flickr.com/photos/mcnutcase/2229434187/" title="See original on Flickr">Flickr</a>
 </div>
 
-This last step incorporates the &#8220;Analysis&#8221; phase that I mentioned above. This is where we look at all of the potential attributes we have collected (you kept a list to make the logical phase easier, right?) and consider them from multiple different directions.
+This last step incorporates the “Analysis” phase that I mentioned above. This is where we look at all of the potential attributes we have collected (you kept a list to make the logical phase easier, right?) and consider them from multiple different directions.
 
 As we look through our list of entities and potential attributes, we want to question them on the dimensions of time, availability, location/person, and categorization:
 
   * Do we need to track the value as it changes over time?
   * Do we need to provide a mechanism to enter future values?
-  * Do these values get deleted, flagged as inactive, or &#8230;?
+  * Do these values get deleted, flagged as inactive, or …?
   * Do different variations of the value exist based on Location? Language? Currency? Person viewing the data?
   * Can entities be re-categorized (ie, relationships changed)?
   * Can relationships/categorizations be duplicated? Many-to-Many? Time sensitive?
@@ -82,4 +82,4 @@ There will be a time when you have to call it done (for now). I probably spend t
 
 ## The Finished Conceptual Model
 
-At the point we call it &#8220;Finished [for now]&#8221;, we will have one or more diagrams that display the different entities and relationships, using business terms. We will also have a whole slew of notes on what those terms meant, other terms that were mentioned during the exploration (potential attributes, technical requirements, etc), and a partially worn out whiteboard. These our our deliverables from the conceptual modeling process and provide the foundation for our next steps.
+At the point we call it “Finished [for now]”, we will have one or more diagrams that display the different entities and relationships, using business terms. We will also have a whole slew of notes on what those terms meant, other terms that were mentioned during the exploration (potential attributes, technical requirements, etc), and a partially worn out whiteboard. These our our deliverables from the conceptual modeling process and provide the foundation for our next steps.

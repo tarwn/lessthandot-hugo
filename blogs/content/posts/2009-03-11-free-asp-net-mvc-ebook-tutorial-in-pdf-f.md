@@ -18,7 +18,7 @@ tags:
   - mvc
 
 ---
-Scott Guthrie (AKA The man!) has posted on his blog that you can download a free ASP.NET MVC eBook Tutorial in pdf format. The book is licensed under a &#8220;Creative Commons Attribution No Derivatives&#8221; license – this means you can share, distribute, print, or hand it out to anyone.
+Scott Guthrie (AKA The man!) has posted on his blog that you can download a free ASP.NET MVC eBook Tutorial in pdf format. The book is licensed under a “Creative Commons Attribution No Derivatives” license – this means you can share, distribute, print, or hand it out to anyone.
 
 This is what is covered in the book
 
@@ -46,4 +46,4 @@ Perform automated unit testing (including dependency injection and mocking)_
 
 You can download the book here: http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf
 
-Scott Guthrie also announced that the ASP.NET MVC framework is about to ship any day now. Check out Scott Guthrie&#8217;s blog post here: http://weblogs.asp.net/scottgu/archive/2009/03/10/free-asp-net-mvc-ebook-tutorial.aspx where he has some more info about the book.
+Scott Guthrie also announced that the ASP.NET MVC framework is about to ship any day now. Check out Scott Guthrie's blog post here: http://weblogs.asp.net/scottgu/archive/2009/03/10/free-asp-net-mvc-ebook-tutorial.aspx where he has some more info about the book.

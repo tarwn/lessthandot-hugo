@@ -25,7 +25,7 @@ tags:
   - sql server 2012
 
 ---
-I had to change the domain account on some SQL Server boxes that we have. After I changed the account on one machine from DomainNameUser to DomainNameNewUser SQL Server wouldn&#8217;t start up
+I had to change the domain account on some SQL Server boxes that we have. After I changed the account on one machine from DomainNameUser to DomainNameNewUser SQL Server wouldn't start up
 
 In the error log I saw the following messages
 
@@ -51,7 +51,7 @@ In the error log I saw the following messages
   
 > 2013-04-30 12:42:06.11 Server SQL Server could not spawn FRunCM thread. Check the SQL Server error log and the Windows event logs for information about possible related problems.
 
-We are not using encryption, VIA is disabled as well. After trying all kinds of different things I notice that when logging on with this profile on the box there was an error. Something about that the profile couldn&#8217;t be created and a temporary profile would be used instead
+We are not using encryption, VIA is disabled as well. After trying all kinds of different things I notice that when logging on with this profile on the box there was an error. Something about that the profile couldn't be created and a temporary profile would be used instead
 
 In the end I had to wipe out the user profile from the box
 

@@ -23,9 +23,9 @@ tags:
 ---
 Asking me what I do for living could net you different answers, depending on what day you ask. Over the years, and through the course of several jobs, I have had a wide range of responsibilities that often stretched well beyond my current organizational role. I like to call these opportunities.
 
-Recently I was considering the idea of building a virtual lab, as I&#8217;ve been worried that some of the varied experiences or skills I&#8217;ve picked up would rust away. While in Wisconsin visiting Ted Krueger ([twitter][1] | [blog][2]) for [SQL Saturday Chicago][3], I realized that the lab could serve two purposes. I could use it to not only regain or sharpen aging skills, but I could also use it to start blogging on more technical matters. Don&#8217;t get me wrong, I love process and personal improvement topics, but I need my tech fix too.
+Recently I was considering the idea of building a virtual lab, as I've been worried that some of the varied experiences or skills I've picked up would rust away. While in Wisconsin visiting Ted Krueger ([twitter][1] | [blog][2]) for [SQL Saturday Chicago][3], I realized that the lab could serve two purposes. I could use it to not only regain or sharpen aging skills, but I could also use it to start blogging on more technical matters. Don't get me wrong, I love process and personal improvement topics, but I need my tech fix too.
 
-So here we are. If you don&#8217;t already have a virtual lab at work or home then I invite you to follow along with me as I build one. Each blog entry will have a general level of difficulty, from basic installation  ![propeller beanie][4]to advanced administration ![wizard's hat][5]. As the lab grows we will be installing a wide number of systems then later configuring and tuning them to meet different circumstances and needs. 
+So here we are. If you don't already have a virtual lab at work or home then I invite you to follow along with me as I build one. Each blog entry will have a general level of difficulty, from basic installation  ![propeller beanie][4]to advanced administration ![wizard's hat][5]. As the lab grows we will be installing a wide number of systems then later configuring and tuning them to meet different circumstances and needs. 
 
 Lets get started.
 
@@ -35,7 +35,7 @@ Lets get started.
   </h2>
   
   <p>
-    The purpose of today&#8217;s article is to create a basic windows virtual machine that can serve as a template for later virtual machines. Having a basic image or set of images on hand can dramatically speed up production and non-production roll-outs as well as ensure standardization of systems across your environment.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
+    The purpose of today's article is to create a basic windows virtual machine that can serve as a template for later virtual machines. Having a basic image or set of images on hand can dramatically speed up production and non-production roll-outs as well as ensure standardization of systems across your environment.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
   </p>
 </div>
 
@@ -51,7 +51,7 @@ Here is a sample set of questions you should consider:
 
 <ol style="margin-left: 2em;">
   <li>
-    What OS&#8217;s are you intending to run? Desktop, Server, Windows, Unix, Linux ?
+    What OS's are you intending to run? Desktop, Server, Windows, Unix, Linux ?
   </li>
   <li>
     What major software packages or technical areas are you intended to explore in the lab?
@@ -90,7 +90,7 @@ Here is a sample set of questions you should consider:
       My lab will be running multiple Windows servers and 1-2 linux systems
     </li>
     <li>
-      Software packages: SQL Server (of course), TFS, Active Directory, Sharepoint, potentially a DC, possibly Exchange, &#8230;pretty much anything in Microsoft&#8217;s catalog or that comes in as a user request is fair game
+      Software packages: SQL Server (of course), TFS, Active Directory, Sharepoint, potentially a DC, possibly Exchange, …pretty much anything in Microsoft's catalog or that comes in as a user request is fair game
     </li>
     <li>
       None of these systems will go to a production environment or be accessed by active development environments
@@ -109,7 +109,7 @@ Here is a sample set of questions you should consider:
 
 ### Platform Selection
 
-Once we have an idea what we our lab will be used for, we need to determine what type of platform to use. If this is a home lab or you have limited space for equipment, you will probably want to go with a virtualization platform. Using a virtualization platform allows us to have a smaller physical (and electrical) footprint and multi-purpose our equipment, since many of our test servers will not need to be running when we aren&#8217;t directly using them. Virtualization also allows us to move systems to upgraded hosts if we later find ourselves having performance problems.
+Once we have an idea what we our lab will be used for, we need to determine what type of platform to use. If this is a home lab or you have limited space for equipment, you will probably want to go with a virtualization platform. Using a virtualization platform allows us to have a smaller physical (and electrical) footprint and multi-purpose our equipment, since many of our test servers will not need to be running when we aren't directly using them. Virtualization also allows us to move systems to upgraded hosts if we later find ourselves having performance problems.
 
 The hardware you use will depend on the types of answers you provided to the questions above. Using an old desktop might be a acceptable solution or you may need to incorporate higher end systems or even spare servers. My last setup (2007-2009) used an off-the-shelf Dell Precision work station as the host without any extra equipment or over-the-top upgrades. The system performed well as a low budget SQL Server and Windows server platform. On the other hand my new environment will need to support a far wider range and number of systems, so it will require higher performance hardware.
 
@@ -141,7 +141,7 @@ The hardware you use will depend on the types of answers you provided to the que
 
 ## Installing our First Virtual Server
 
-From this point forward we will be working from the comfort of my home lab, so examples will be based on VMWare Server 2.1 and I will point out versions for other software as it is introduced. The purpose of this first virtual machine is to serve as a template for later machines, allowing me to build out one image that with a standard base configuration, installs all common services, then apply all the outstanding Windows updates. Though I will be using the term &#8216;template&#8217; in the article, this shouldn&#8217;t be confused with the template capability in VMware&#8217;s vSphere. 
+From this point forward we will be working from the comfort of my home lab, so examples will be based on VMWare Server 2.1 and I will point out versions for other software as it is introduced. The purpose of this first virtual machine is to serve as a template for later machines, allowing me to build out one image that with a standard base configuration, installs all common services, then apply all the outstanding Windows updates. Though I will be using the term &#8216;template' in the article, this shouldn't be confused with the template capability in VMware's vSphere. 
 
 <div class="hint">
   In a production environment it is extremely helpful to have a basic server image already pre-configured and up to date. Not only does it provide a faster alternative to building each server from scratch, but it ensures that each server goes out with all of the required services and configurations and does so without adding a checklist to your process. Not that I am a <a href="/index.php/ITProfessionals/ITServiceManagement/there-is-never-time-for-part-3" title="Or maybe I am">process improvement fan</a> or anything.
@@ -157,40 +157,40 @@ First we need to build our virtual machine. Opening the VMWare Server Host and l
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vmware_beginning.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vmware_beginning.png" title="VMWare, Freshly Installed" /></a><br /> VMWare, Freshly Installed
 </div>
 
-Clicking the &#8220;Virtual Machine&#8221; menu provides an option to &#8220;Create Virtual Machine&#8221; and a wizard to walk us through the creation of our virtual machine.
+Clicking the “Virtual Machine” menu provides an option to “Create Virtual Machine” and a wizard to walk us through the creation of our virtual machine.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vmware_create_vm.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vmware_create_vm.png" title="VMWare Menu, Create VM" /></a><br /> Create a new VM
 </div>
 
-While it isn&#8217;t critical to pick a good name at this point, it couldn&#8217;t hurt either. Later as we create servers for specific purposes the VM names will reflect the actual names of their servers.
+While it isn't critical to pick a good name at this point, it couldn't hurt either. Later as we create servers for specific purposes the VM names will reflect the actual names of their servers.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step1.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step1.png" title="Creating a new VM, Step 1" /></a><br /> New VM &#8211; Provide a Name
 </div>
 
-In my case I intend to use Windows 2008 R2 as my main server environment, so this basic image will reflect that in it&#8217;s name and I will choose the Windows 2008 option from the operating systems tab. Before choosing the 64-bit image I made sure to run the [64-bit compatibility check][6] offered by VMWare to ensure I could run a 64-bit guest on my host. If you are using Virtual Server 2005 then you will be limited to 32-bit guests so be sue you buy/download the correct versions.
+In my case I intend to use Windows 2008 R2 as my main server environment, so this basic image will reflect that in it's name and I will choose the Windows 2008 option from the operating systems tab. Before choosing the 64-bit image I made sure to run the [64-bit compatibility check][6] offered by VMWare to ensure I could run a 64-bit guest on my host. If you are using Virtual Server 2005 then you will be limited to 32-bit guests so be sue you buy/download the correct versions.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step2.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step2.png" title="Creating a new VM, Step 2" /></a><br /> New VM &#8211; OS Selection
 </div>
 
-For this first server I am going to allocate 4GB of RAM for use during the installation process. When making later copies of the system we will tune these values accordingly. As I intend to use these systems in a lab environment and may need the images to be portable to another single core system, I&#8217;m going to select the 1 CPU option. For later articles we may create 2- or 4-CPU options, but for most of our non-production needs a 1-CPU system will be sufficient. While technically it would be possible to &#8220;tune&#8221; the CPU setting at a later time, since we really only care about the hard-drive file at this point, changing CPU architectures on a system after installation ranges from tricky to absurdly-painful-with-no-hope-of-working.
+For this first server I am going to allocate 4GB of RAM for use during the installation process. When making later copies of the system we will tune these values accordingly. As I intend to use these systems in a lab environment and may need the images to be portable to another single core system, I'm going to select the 1 CPU option. For later articles we may create 2- or 4-CPU options, but for most of our non-production needs a 1-CPU system will be sufficient. While technically it would be possible to “tune” the CPU setting at a later time, since we really only care about the hard-drive file at this point, changing CPU architectures on a system after installation ranges from tricky to absurdly-painful-with-no-hope-of-working.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step3.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step3.png" title="Creating a new VM, Step 2" /></a><br /> New VM &#8211; RAM and CPU Settings
 </div>
 
-The final lasting decision (though not the last step) is how large we want to make the virtual drive and whether we want to allocate the space ahead of time or use a growth model. In my last environment I pre-allocated space for my base windows installation and then attached or created secondary drives for the installed applications. In this case, Microsoft is suggesting [a minimum of 32GB of space][7] and, while I don&#8217;t want to give up the space, I&#8217;ve decided to use pre-allocation again to simplify the process.
+The final lasting decision (though not the last step) is how large we want to make the virtual drive and whether we want to allocate the space ahead of time or use a growth model. In my last environment I pre-allocated space for my base windows installation and then attached or created secondary drives for the installed applications. In this case, Microsoft is suggesting [a minimum of 32GB of space][7] and, while I don't want to give up the space, I've decided to use pre-allocation again to simplify the process.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step4.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step4.png" title="Creating a new VM, Step 3" /></a><br /> New VM &#8211; Drive Settings
 </div>
 
-The final options, optical drive access and network method, are only going to be used for this image during the Windows installation process. Later copies will again have values assigned based on the project or technology that&#8217;s being installed. For the purposes of the installation we will use an ISO file for the optical drive and bridged networking.
+The final options, optical drive access and network method, are only going to be used for this image during the Windows installation process. Later copies will again have values assigned based on the project or technology that's being installed. For the purposes of the installation we will use an ISO file for the optical drive and bridged networking.
 
 <div class="hint">
-  When you install VMWare initially it will ask for a folder for your standard store (default is &#8220;C:Virtual Machines&#8221; on Windows). ISOs placed in this folder will be available for mounting in VMWare or you can create a new store that points to a folder elsewhere. Having a dedicated drive for software storage, I created an &#8216;MSDN Library&#8217; store and pointed it to that location.
+  When you install VMWare initially it will ask for a folder for your standard store (default is “C:Virtual Machines” on Windows). ISOs placed in this folder will be available for mounting in VMWare or you can create a new store that points to a folder elsewhere. Having a dedicated drive for software storage, I created an &#8216;MSDN Library' store and pointed it to that location.
 </div>
 
 <div class="hint">
@@ -206,13 +206,13 @@ The final options, optical drive access and network method, are only going to be
 We are now ready to turn our machine on for the first time and install Windows. This part is actually fairly boring, which is yet another reason that we want to limit how many times we have to do it.
 
 <div class="mylab">
-  This is the point I ran into an issue with VMWare&#8217;s console. VMWare continued to present me with a black screen when I opened the console. I believe the change that fixed this issue was setting the DNS address on the vmnet1 network connection, but it could just as easily have been the firewall being turned off when VMWare started or the couple changes I made to IE&#8217;s trusted sites. An excellent, practical example of why you should always make one change at a time and write down what you changed when you are troubleshooting a systems problem.
+  This is the point I ran into an issue with VMWare's console. VMWare continued to present me with a black screen when I opened the console. I believe the change that fixed this issue was setting the DNS address on the vmnet1 network connection, but it could just as easily have been the firewall being turned off when VMWare started or the couple changes I made to IE's trusted sites. An excellent, practical example of why you should always make one change at a time and write down what you changed when you are troubleshooting a systems problem.
 </div>
 
-The first decision the installer requires is selection between the various versions of Windows. Based on the options available, the trade-offs outlined in [the feature comparison][8], and the fact that I have already written down my MSDN Enterprise key, I will be installing Enterprise edition. I&#8217;m not actually sure how long the installation took, I wandered off and found something else to do for a while (Peanut butter jelly time, peanut b&#8230;oh). I&#8217;ve installed windows a few more times than your average developer, so my bet is on 39 minutes. 😉
+The first decision the installer requires is selection between the various versions of Windows. Based on the options available, the trade-offs outlined in [the feature comparison][8], and the fact that I have already written down my MSDN Enterprise key, I will be installing Enterprise edition. I'm not actually sure how long the installation took, I wandered off and found something else to do for a while (Peanut butter jelly time, peanut b…oh). I've installed windows a few more times than your average developer, so my bet is on 39 minutes. 😉
 
 <div class="hint">
-  The default Windows password policy is probably going to annoy you if you haven&#8217;t run into it before. It will not tell you what the policy is when your password fails and the policy itself is well-defined. In a production environment one of our first steps would likely be to change it to meet our business needs or current setup.</p> 
+  The default Windows password policy is probably going to annoy you if you haven't run into it before. It will not tell you what the policy is when your password fails and the policy itself is well-defined. In a production environment one of our first steps would likely be to change it to meet our business needs or current setup.</p> 
   
   <p>
     Official policy information can be found <a href="http://technet.microsoft.com/en-us/library/cc264456.aspx" title="Windows 2008 Password Policy Settings">here</a> </div> 
@@ -230,15 +230,15 @@ The first decision the installer requires is selection between the various versi
     </div>
     
     <p>
-      After these two tasks we will begin by applying service packs (none for Windows 2008 R2 at this time) and then windows updates. Windows 2008 offers a handy dashboard to manage these tasks on the first install and, being lazy, I&#8217;m not going to turn it down.
+      After these two tasks we will begin by applying service packs (none for Windows 2008 R2 at this time) and then windows updates. Windows 2008 offers a handy dashboard to manage these tasks on the first install and, being lazy, I'm not going to turn it down.
     </p>
     
     <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/setup_dashboard.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/setup_dashboard.png" title="Server Dashboard" /></a><br /> Windows Server &#8220;Configuration&#8221; Dashboard
+      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/setup_dashboard.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/setup_dashboard.png" title="Server Dashboard" /></a><br /> Windows Server “Configuration” Dashboard
     </div>
     
     <div class="hint">
-      If you haven&#8217;t worked with server much in the past you may be surprised by a strange dialog when you attempt to restart your system. When you shutdown or reboot a server it asks you to provide a reason and note, I advise that you get in the habit of always typing up a short note on why you are shutting down or rebooting. It only takes a few seconds and one day it&#8217;s going to save you hours because these notes are entered into the event log before the system shuts down.
+      If you haven't worked with server much in the past you may be surprised by a strange dialog when you attempt to restart your system. When you shutdown or reboot a server it asks you to provide a reason and note, I advise that you get in the habit of always typing up a short note on why you are shutting down or rebooting. It only takes a few seconds and one day it's going to save you hours because these notes are entered into the event log before the system shuts down.
     </div>
     
     <p>
@@ -262,11 +262,11 @@ The first decision the installer requires is selection between the various versi
     </p>
     
     <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/bginfo_background.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/bginfo_background.png" title="Server Dashboard" /></a><br /> Windows Server &#8220;Configuration&#8221; Dashboard
+      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/bginfo_background.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/bginfo_background.png" title="Server Dashboard" /></a><br /> Windows Server “Configuration” Dashboard
     </div>
     
     <div class="mylab">
-      Once upon a time I had scripts and standard layouts to add other interesting information to the background (such as uptime counters and such), but that can wait for another day. For this initial example I have grouped the information in a way that is meaningful for me, but haven&#8217;t done anything fancy.
+      Once upon a time I had scripts and standard layouts to add other interesting information to the background (such as uptime counters and such), but that can wait for another day. For this initial example I have grouped the information in a way that is meaningful for me, but haven't done anything fancy.
     </div>
     
     <div class="hint">

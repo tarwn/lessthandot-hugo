@@ -46,7 +46,7 @@ So I decided to play around with this, I downloaded the font (you can download t
 
 I increased the font size for every and also compared bold to regular. The last 2 lines have a size of 72.
 
-So what do you think? Does this make sense? Also how much do you print on average? I really don&#8217;t print that much at all, at home I don&#8217;t even have a printer. As a matter of fact I haven&#8217;t used a printer at home for at least 6 years or so
+So what do you think? Does this make sense? Also how much do you print on average? I really don't print that much at all, at home I don't even have a printer. As a matter of fact I haven't used a printer at home for at least 6 years or so
 
 Will you use this font?
 

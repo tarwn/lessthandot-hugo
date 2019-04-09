@@ -36,7 +36,7 @@ The data practice at BlueMetal is as strong as ever and with that, business is n
 >   * Ever eager to move forward with technology and help make the decisions that evolve our field
 >   * Work in a team that has all these characteristics and more but with unique mindsets for each practice while maintaining a strong and successful team that is formidable to any other 
 
-I’m not asking for much of myself, right?  I have a feeling that many of you will relate to some or all of these bullet points.  They may not be written the way you&#8217;ve put them down for your own goals, but more than likely, the goals all come to the same conclusion; success.
+I’m not asking for much of myself, right?  I have a feeling that many of you will relate to some or all of these bullet points.  They may not be written the way you've put them down for your own goals, but more than likely, the goals all come to the same conclusion; success.
 
 With all of this, I’m extending the visibility of the addition BlueMetal Architects in Chicago is looking to gain.  But, I don’t want you to just click the link and go look at a job description.  I’d rather have you, like I did, read about BlueMetal Architects first, and then go check out the description.  As with what I’ve said in many of my seminars and sessions, the best companies find the best people.  This also extends to a job description in the fact that, if they don’t match your expertise or mindset exactly, the company still wants to hear from you if you have the same level of skills and ambition to succeed.
 

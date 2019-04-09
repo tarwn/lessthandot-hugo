@@ -25,7 +25,7 @@ See also this interesting article on recursive CTE implementation [T-SQL: Using 
 
 You may find this [article][4] by SQLUSA (Kalman Toth) very interesting.
 
-I think you will find these blogs by Brad Schulz [Viva la Famiglia!][5] and [This Article On Recurson Is Entitled &#8220;This Article On Recursion Is Entitled &#8220;This Article&#8230;][6] interesting and useful and enjoyable reading.
+I think you will find these blogs by Brad Schulz [Viva la Famiglia!][5] and [This Article On Recurson Is Entitled “This Article On Recursion Is Entitled “This Article…][6] interesting and useful and enjoyable reading.
 
 See also [Challenge 17][7] and its solutions at [Challenge 17 &#8211; Winners][8]
 
@@ -319,7 +319,7 @@ where (Stock = 0 and Amount > 0) OR Stock > 0 )
 select * from cte_toInsert order by Item, Amount DESC OPTION (MAXRECURSION 10) </pre>
 
 <p>
-  Here is another interesting problem where I had to use Nikola&#8217;s help to come up to the final solution:
+  Here is another interesting problem where I had to use Nikola's help to come up to the final solution:
 </p>
 
 <p>
@@ -346,7 +346,7 @@ pk_rights   fk_rights   RightsName                                         Right
 15          14          EditCategory Caption                               0           EditCategory Caption</pre>
 
 <p>
-  I need the output to look like this&#8230;. the indents are for readability only but the rows must be ordered in this sequence.
+  I need the output to look like this…. the indents are for readability only but the rows must be ordered in this sequence.
 </p>
 
 <pre lang="">

@@ -83,7 +83,7 @@ You should never use * but only list the columns you really want, see also here:
   
 There is a missing qualifier in the table name
   
-This where clause is not sargable instead of left(SomeColumn,1) =&#8217;A&#8217; do this SomeColumn like &#8216;A%&#8217;. see also here: [Functions on left side of the operator][3]
+This where clause is not sargable instead of left(SomeColumn,1) ='A' do this SomeColumn like &#8216;A%'. see also here: [Functions on left side of the operator][3]
   
 @@ROWCOUNT should be selected right after the query because the print will make it have a value of 0; any statement will affect @@ROWCOUNT so you should always dump it into a variable right after you do a DML statement. The same that applies to @@ROWCOUNT also applies to @@ERROR. If you do need to grab both @@ERROR and @@rowcount then do it on the same line. SELECT @MyErr =@@ERROR, @MyCount = @@ROWCOUNT 
 
@@ -151,7 +151,7 @@ select @SQL ='The value this item is..'
 select @SQL + isnull(@Val,' currently not available')
 ```
 
-Running that code will return the following: The value this item is.. currently. This is because isnull looks at @Val which is varchar(10) and chops off everything after 10 characters. If you use coalesce then you don&#8217;t have this problem, run the following
+Running that code will return the following: The value this item is.. currently. This is because isnull looks at @Val which is varchar(10) and chops off everything after 10 characters. If you use coalesce then you don't have this problem, run the following
 
 sql
 declare @SQL varchar(100)
@@ -170,7 +170,7 @@ sql
 select 3/2
 ```
 
-So running that returns 1, surprised? Don&#8217;t be the result of division with two integers is an integer, this is also known as [integer math][6]
+So running that returns 1, surprised? Don't be the result of division with two integers is an integer, this is also known as [integer math][6]
 
 Here is how you can fix it by doing explicit and implicit conversions
 
@@ -226,7 +226,7 @@ select @v =replicate('a',20000)
 select len(@v)
 ```
 
-8000 will be returned because &#8216;a&#8217; is a varchar which goes up to 8000 max. Here is one way to get around it
+8000 will be returned because &#8216;a' is a varchar which goes up to 8000 max. Here is one way to get around it
 
 sql
 declare @v varchar(max)
@@ -286,7 +286,7 @@ INSERT TestOne VALUES(GETDATE())
 select @@identity
 ```
 
-You will get back the value 1 and not 5. This is because @@IDENTITY doesn&#8217;t care about scope and returns the last identity value from all the statements, which in this case is from the code within the trigger trTestOne. So the bottom line is this: Always use SCOPE_IDENTITY() unless you DO need the last identity value regradless of scope (for example you need to know the identity from the table insert inside the trigger)
+You will get back the value 1 and not 5. This is because @@IDENTITY doesn't care about scope and returns the last identity value from all the statements, which in this case is from the code within the trigger trTestOne. So the bottom line is this: Always use SCOPE_IDENTITY() unless you DO need the last identity value regradless of scope (for example you need to know the identity from the table insert inside the trigger)
   
 Run this now and you will see both values and you can see that they are indeed different
 

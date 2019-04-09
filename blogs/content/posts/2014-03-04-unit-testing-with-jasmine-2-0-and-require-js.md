@@ -28,15 +28,15 @@ One option to solve this is to simply call window.onload again:
 
 ```html
 ```
-But that&#8217;s icky and causes you to have two test bars across the screen (and probably doesn&#8217;t work well with other reporters either).
+But that's icky and causes you to have two test bars across the screen (and probably doesn't work well with other reporters either).
 
 [<img src="/wp-content/uploads/2014/02/JasmineDoubleFail.png" alt="JasmineDoubleFail" width="726" height="182" class="aligncenter size-full wp-image-2477" srcset="/wp-content/uploads/2014/02/JasmineDoubleFail.png 726w, /wp-content/uploads/2014/02/JasmineDoubleFail-300x75.png 300w" sizes="(max-width: 726px) 100vw, 726px" />][1]
 
-Yeah, that&#8217;s special.
+Yeah, that's special.
 
 ## Option 2: Custom Boot Script
 
-Or we can fix the root cause, the fact that the tests are running on window.onload and that doesn&#8217;t play well with AMD. The boot script included with Jasmine is supposed to be a template that can be customized to your own needs, so let&#8217;s take advantage of that. Copying the existing boot script, we can replace the section that registers the tests to onload with one that will add a callable method to the window:
+Or we can fix the root cause, the fact that the tests are running on window.onload and that doesn't play well with AMD. The boot script included with Jasmine is supposed to be a template that can be customized to your own needs, so let's take advantage of that. Copying the existing boot script, we can replace the section that registers the tests to onload with one that will add a callable method to the window:
 
 **boot-without-onload.js**
 

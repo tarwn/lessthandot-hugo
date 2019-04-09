@@ -22,7 +22,7 @@ tags:
   - mono
 
 ---
-In an application I&#8217;m working on, I had a need for a method to write a single object to several [Lucene][1] indexes in order to support different types of searches. I ended up with a method that looks like this:
+In an application I'm working on, I had a need for a method to write a single object to several [Lucene][1] indexes in order to support different types of searches. I ended up with a method that looks like this:
 
 ```csharp
 public static void Accept<T>(T to_be_indexed) 
@@ -94,11 +94,11 @@ public static void Accept<T>(T to_be_indexed)
 }
 ```
 
-The problem we ran into was the lambda expression grabbing whatever &#8220;current&#8221; was defined as **_at execution time_**, causing the same index to be written to twice (and others not at all) in many cases. This is what forced us to add the line
+The problem we ran into was the lambda expression grabbing whatever “current” was defined as **_at execution time_**, causing the same index to be written to twice (and others not at all) in many cases. This is what forced us to add the line
   
 <code class="codespan">var captured = current;</code>
   
-and use captured rather than current within the lambda. I&#8217;ve gotta say, I **really** like the all the code in that using block for the countdown. It may be because I set rather low expectations with my hackish early attempts to get this done, but I like things very simple and this definitely fits the bill. But, as beautiful / simple as the code may be, I still don&#8217;t want to write it multiple times if I can avoid it. So I took a look at the signature for Parallel.ForEach in .net 4 and threw together a version that would work with my system (running on mono 2.4.2.3, mostly equivalent to .net 3.5). Here that is:
+and use captured rather than current within the lambda. I've gotta say, I **really** like the all the code in that using block for the countdown. It may be because I set rather low expectations with my hackish early attempts to get this done, but I like things very simple and this definitely fits the bill. But, as beautiful / simple as the code may be, I still don't want to write it multiple times if I can avoid it. So I took a look at the signature for Parallel.ForEach in .net 4 and threw together a version that would work with my system (running on mono 2.4.2.3, mostly equivalent to .net 3.5). Here that is:
 
 ```csharp
 public static void ForEach<T>(IEnumerable<T> enumerable, Action<T> action)
@@ -142,9 +142,9 @@ public static void Accept<T>(T to_be_indexed)
 }
 ```
 
-I realize that this is a very naive implementation, and that Parallel.ForEach in .net 4 is probably doing things under the hood that I haven&#8217;t even considered (optimizing for different number of CPU&#8217;s and such) but I think / hope that the ThreadPool takes care of some of that for me. I&#8217;d love to hear any comments on how to make it better though. 
+I realize that this is a very naive implementation, and that Parallel.ForEach in .net 4 is probably doing things under the hood that I haven't even considered (optimizing for different number of CPU's and such) but I think / hope that the ThreadPool takes care of some of that for me. I'd love to hear any comments on how to make it better though. 
 
-For another implementation, check out this Code Project article: [Poor Man&#8217;s Parallel ForEach][3]. We tested this implementation briefly (and far from scientifically), but found that the ThreadPool behaved a bit more consistently, was often a bit faster, and also required much less code to implement.
+For another implementation, check out this Code Project article: [Poor Man's Parallel ForEach][3]. We tested this implementation briefly (and far from scientifically), but found that the ThreadPool behaved a bit more consistently, was often a bit faster, and also required much less code to implement.
 
  [1]: http://incubator.apache.org/projects/lucene.net.html
  [2]: /index.php/All/?disp=authdir&author=225

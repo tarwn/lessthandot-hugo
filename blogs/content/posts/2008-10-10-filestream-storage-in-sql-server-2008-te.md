@@ -90,4 +90,4 @@ Conclusion**
 
 You can find that technical article here: http://msdn.microsoft.com/en-us/library/cc949109.aspx
 
-You also check out Paul Randal&#8217;s blog here: http://www.sqlskills.com/blogs/paul/
+You also check out Paul Randal's blog here: http://www.sqlskills.com/blogs/paul/

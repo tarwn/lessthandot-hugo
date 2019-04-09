@@ -75,7 +75,7 @@ Complete the wizard – click Finish. All options should have green checkmarks.
 
 &nbsp;
 
-Your remote distributor is now configured. You&#8217;ll need the server name, database name, and admin password as you set up publishers and subscribers. Next, you&#8217;ll configure your publishers.
+Your remote distributor is now configured. You'll need the server name, database name, and admin password as you set up publishers and subscribers. Next, you'll configure your publishers.
 
  [1]: /wp-content/uploads/2016/12/distribution-1.png
  [2]: /wp-content/uploads/2016/12/distribution-2.png

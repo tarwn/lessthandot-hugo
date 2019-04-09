@@ -20,11 +20,11 @@ categories:
 ---
 One of the often asked questions on ASP.NET forum I visit is how to change SQLDataSource parameter. I know two common solutions to this problem, though I only tried one in my own web-pages.
 
-I&#8217;ve just learned about another interesting solution which is presented in Peter Kellner&#8217;s [blog][1]. See also [another blog][2] discussing this approach.
+I've just learned about another interesting solution which is presented in Peter Kellner's [blog][1]. See also [another blog][2] discussing this approach.
 
-The solution I&#8217;m familiar with and used is to set the parameter in Selecting (Inserting / Updating for Insert / Update) events of SQLDataSource. Also if we want to retrieve an Output parameter of stored procedure, for example, we can use the Inserted (Updated / Deleted) events of SQLDataSource.
+The solution I'm familiar with and used is to set the parameter in Selecting (Inserting / Updating for Insert / Update) events of SQLDataSource. Also if we want to retrieve an Output parameter of stored procedure, for example, we can use the Inserted (Updated / Deleted) events of SQLDataSource.
 
-This is a sample of retrieving an output parameter&#8217;s value in Inserted event of SQLDataSource
+This is a sample of retrieving an output parameter's value in Inserted event of SQLDataSource
 
 ```c#
 #region DataSource Inserted
@@ -67,7 +67,7 @@ where SQLDataSource definition in ASPX page looks like
             </asp:SqlDataSource>
 ```
 
-Same code by limno for VB.NET (see [ASP.NET forum&#8217;s thread][3])
+Same code by limno for VB.NET (see [ASP.NET forum's thread][3])
 
 ```vb.net
 Protected Sub SqlDataSource1_Inserted(ByVal sender As Object, ByVal e As   System.Web.UI.WebControls.SqlDataSourceStatusEventArgs)
@@ -87,7 +87,7 @@ Here is the sample I found of setting parameter in Inserting event
     }
     #endregion
 ```
-Alternative method of setting parameter&#8217;s value is to use DefaultValue of parameter, like this
+Alternative method of setting parameter's value is to use DefaultValue of parameter, like this
 
 ```vb.net
 Protected Sub FormView1_ItemUpdating(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.FormViewUpdateEventArgs) Handles FormView1.ItemUpdating

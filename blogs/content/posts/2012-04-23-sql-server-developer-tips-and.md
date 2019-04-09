@@ -18,7 +18,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-This blog is to share and highlight some of the tips and tricks that I’ve learned while using SQL Server the last few years. Some of these are code oriented, database design, or performance oriented, while others focus on personal development. Hopefully you&#8217;ll learn at least one thig from this blog.
+This blog is to share and highlight some of the tips and tricks that I’ve learned while using SQL Server the last few years. Some of these are code oriented, database design, or performance oriented, while others focus on personal development. Hopefully you'll learn at least one thig from this blog.
 
 ## You don’t have to type out the columns
 
@@ -140,7 +140,7 @@ There are loads of options that you can choose from. Some examples include:
   * Advanced execution settings (set nocount, set noexec, etc.)
   * Results to Grid, Text, or File
 
-That&#8217;s all that I can think of for now. If you&#8217;ve got any tips or tricks, or a favorite person that you follow, please share it in the comments below, or even write your own blog and link us to it.
+That's all that I can think of for now. If you've got any tips or tricks, or a favorite person that you follow, please share it in the comments below, or even write your own blog and link us to it.
 
  [1]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt1.png "scripting select to"
  [2]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt2.png "premade excel spreadsheet"

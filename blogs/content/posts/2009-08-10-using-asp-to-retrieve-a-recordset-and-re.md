@@ -96,7 +96,7 @@ select 2 [testValue] union
 select 3 [testValue] 
 return 1
 ```
-The recordset object will be populated correctly, but the return value parameter returns &#8220;undefined&#8221;:
+The recordset object will be populated correctly, but the return value parameter returns “undefined”:
 
 ```asp
 var oConn = Server.CreateObject("ADODB.Connection");

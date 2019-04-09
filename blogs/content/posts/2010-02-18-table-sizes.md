@@ -20,7 +20,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-I do not know if there is already code for table sizes (as used in SQL Server 2008 reports) but what I&#8217;ve seen on the net people are using cursors and temporary tables (completely unnecessary). 
+I do not know if there is already code for table sizes (as used in SQL Server 2008 reports) but what I've seen on the net people are using cursors and temporary tables (completely unnecessary). 
 
 > NOTE (added later):
   

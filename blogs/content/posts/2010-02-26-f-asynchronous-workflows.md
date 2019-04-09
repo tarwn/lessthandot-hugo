@@ -56,7 +56,7 @@ There is a good reason you never see code like this. For one, it is highly inden
 
 This is almost a literal translation of the C# except for one thing. Notice how the C# version threads through an exception parameter? In F# you have first class error handling in asynchronous work flows so the first failure will will call your exception handling code.
 
-The first class support for asynchronous work flows is an amazing feature of F#. It allows you to create simple elegant code right where you need it. Think about some of your synchronous projects that just don&#8217;t have the performance you need and consider F# as a powerful solution to you problem.
+The first class support for asynchronous work flows is an amazing feature of F#. It allows you to create simple elegant code right where you need it. Think about some of your synchronous projects that just don't have the performance you need and consider F# as a powerful solution to you problem.
 
 [F# &#8211; Microsoft Research][1]
   

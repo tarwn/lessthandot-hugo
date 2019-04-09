@@ -21,7 +21,7 @@ tags:
 ---
 As part of a long series of posts, I implemented a version of the MVC Music Store tutorial application on top of a pair of SQL Server CE databases. SQL Server CE is great for small apps, being a portable file-based database that can easily be moved to a full SQL Server instance. Last week I migrated my application to use full SQL Server instances instead of the SDF file and picked up a 3x performance improvement. It was interesting enough that I decided to share 🙂
 
-_Note: I wasn&#8217;t purposefully performance tuning my sample site. This move was a necessary step to prep for doing some other SQL Server related things with the project and the performance improvement was just a neat side effect._
+_Note: I wasn't purposefully performance tuning my sample site. This move was a necessary step to prep for doing some other SQL Server related things with the project and the performance improvement was just a neat side effect._
 
 ## The Results
 

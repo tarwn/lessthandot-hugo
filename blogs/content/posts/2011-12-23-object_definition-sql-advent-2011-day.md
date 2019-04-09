@@ -49,7 +49,7 @@ TF = SQL table-valued function
 
 V = View
 
-So let&#8217;s take a quick look
+So let's take a quick look
 
 Here is how you would use sp_helptext 
 
@@ -67,7 +67,7 @@ SELECT OBJECT_DEFINITION(OBJECT_ID('uspGetBillOfMaterials'))
 
 That also returns the definition of the stored procedure
 
-So you say&#8230;so what, what is the big deal, seems the same to me? I say, hold on, let me show you this&#8230;&#8230;what if I wanted to have the definition of every trigger, stored procedure or function that references the Production.BillOfMaterials table. Here is how simple that is
+So you say…so what, what is the big deal, seems the same to me? I say, hold on, let me show you this……what if I wanted to have the definition of every trigger, stored procedure or function that references the Production.BillOfMaterials table. Here is how simple that is
 
 sql
 SELECT OBJECT_DEFINITION(OBJECT_ID),OBJECT_NAME(OBJECT_ID) AS  NameOfObject
@@ -80,7 +80,7 @@ AND REPLACE(REPLACE(OBJECT_DEFINITION(OBJECT_ID),']',''),'[','') like '%Producti
 
 Notice that I am using a replace statement to filter out brackets
 
-But there is an easier way, you don&#8217;t even need the function in this case, the sys.all\_sql\_modules object catalog view has already a definition column
+But there is an easier way, you don't even need the function in this case, the sys.all\_sql\_modules object catalog view has already a definition column
 
 Here is how you do it
 

@@ -21,7 +21,7 @@ If you use the FOR XML syntax in SQL Server it can be a little tricky to get the
   
 For every table that you have in a join it becomes a child of the table before. What if you have a 3 table join and you want one table to be the parent and the two tables that you are joining to be on the same level, I will show you how you can accomplish that.
   
-First let&#8217;s create some tables and insert some data
+First let's create some tables and insert some data
 
 sql
 CREATE TABLE #tempCustomer (CustomerID INT)
@@ -37,7 +37,7 @@ INSERT #tempAddress VALUES(2,'Other Address')
 INSERT #tempPhone VALUES(2,'212-777-8888')
 ```
 
-Now let&#8217;s see what we have by running the following select statement
+Now let's see what we have by running the following select statement
 
 sql
 SELECT Customer.CustomerID,Address.FullAddress,Phone.PhoneNumber

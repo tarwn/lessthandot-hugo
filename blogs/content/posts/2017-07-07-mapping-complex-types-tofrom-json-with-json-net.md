@@ -17,7 +17,7 @@ tags:
   - json.net
 
 ---
-In an [earlier post][1] I introduced a strongly typed Identity object I am using in an ASP.Net Core application to make my code and error messages more readable. I didn&#8217;t wanted that extra complexity reflected in my database or over the wire with an API. In this post we&#8217;ll look at a simple method to map my strongly typed properties in C# to simpler values in JSON.
+In an [earlier post][1] I introduced a strongly typed Identity object I am using in an ASP.Net Core application to make my code and error messages more readable. I didn't wanted that extra complexity reflected in my database or over the wire with an API. In this post we'll look at a simple method to map my strongly typed properties in C# to simpler values in JSON.
 
 This is my desired state:
 
@@ -29,7 +29,7 @@ This is my desired state:
   </p>
 </div>
 
-I want a strongly typed Identity object in my API backend that transparently converts into a simple int value to/from the database and converts to an int or `null` for the front-end (null in cases where a permanent ID hasn&#8217;t been assigned yet). The right side of this was handled in that earlier post with a PetaPoco IMapper implementation registered globally for IIdentity<int> types. JSON.Net supports a similar method that I can register with ASP.Net Core.
+I want a strongly typed Identity object in my API backend that transparently converts into a simple int value to/from the database and converts to an int or `null` for the front-end (null in cases where a permanent ID hasn't been assigned yet). The right side of this was handled in that earlier post with a PetaPoco IMapper implementation registered globally for IIdentity<int> types. JSON.Net supports a similar method that I can register with ASP.Net Core.
 
 This is what my ASP.Net MVC Method looks like:
 
@@ -125,9 +125,9 @@ How it works:
 
 `WriteJson` is called when JSON.Net is converting to JSON and simply returns the underlying value of my Identity. 
 
-`ReadJson` is called to convert from raw JSON to C#. Converting JSON is slightly more complex, as I allow for null values from the client (it doesn&#8217;t generate id&#8217;s) so when the JSON value is null I pass that on as a null Identity. If it&#8217;s not null, I use reflection on the concrete Identity to find the single parameter constructor and invoke it with incoming JSON converted to the expected type (`int` for the examples above). 
+`ReadJson` is called to convert from raw JSON to C#. Converting JSON is slightly more complex, as I allow for null values from the client (it doesn't generate id's) so when the JSON value is null I pass that on as a null Identity. If it's not null, I use reflection on the concrete Identity to find the single parameter constructor and invoke it with incoming JSON converted to the expected type (`int` for the examples above). 
 
-If I wasn&#8217;t generating these Identity classes, there would be some risk in assuming the presence of a constructor of that shape. Because I&#8217;m generating it, I can save time because i know it&#8217;s all or nothing, either all of the Identity objects will work or none of them will. 
+If I wasn't generating these Identity classes, there would be some risk in assuming the presence of a constructor of that shape. Because I'm generating it, I can save time because i know it's all or nothing, either all of the Identity objects will work or none of them will. 
 
 ## Employing it in ASP.Net
 

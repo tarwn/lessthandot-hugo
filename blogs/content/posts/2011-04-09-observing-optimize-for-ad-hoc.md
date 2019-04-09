@@ -20,7 +20,7 @@ categories:
 
 ---
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
-  <strong style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri; font-size: 11pt;">Optimize For Ad Hoc Workloads – Observations&#8230;&#8230;</span></strong>
+  <strong style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri; font-size: 11pt;">Optimize For Ad Hoc Workloads – Observations……</span></strong>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
@@ -44,7 +44,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">The article suggests running the below query to determine the number of plans in cache and the total space that they are taking up.<span style="mso-spacerun: yes;">  </span>So I ran the query on my memory hungry server and the following is what happened&#8230;&#8230;</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">The article suggests running the below query to determine the number of plans in cache and the total space that they are taking up.<span style="mso-spacerun: yes;">  </span>So I ran the query on my memory hungry server and the following is what happened……</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -272,7 +272,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">And&#8230;I’m back&#8230; </span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">And…I’m back… </span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">

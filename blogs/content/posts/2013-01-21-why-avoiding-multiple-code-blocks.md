@@ -229,7 +229,7 @@ Now we see that executing the second Stored Procedure also created 2 Executions 
 
 **Conclusion**
   
-Avoid Stored Procedures that contain complete code blocks encapsulated in IF&#8230;ELSE or CASE blocks. It will result in SQL Server creating Execution Plans for all possibilities, consuming more Buffer Cache (memory) and in the end slow down the execution of the code.
+Avoid Stored Procedures that contain complete code blocks encapsulated in IF…ELSE or CASE blocks. It will result in SQL Server creating Execution Plans for all possibilities, consuming more Buffer Cache (memory) and in the end slow down the execution of the code.
   
 As a bonus, troubleshooting the individual Stored Procedures will be much easier and there is a bigger chance that you can reuse the Stored Procedures.
 

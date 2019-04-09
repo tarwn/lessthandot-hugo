@@ -68,7 +68,7 @@ An extra suitcase for swag &#8211; there will be pens, bags, shirts, books, and 
 
 Comfortable, wear-all-day shoes – a necessity. You’re going to be on your feet a lot. You want shoes you can wear all day, which you won’t mind wearing on the Seattle streets and through the convention center.
 
-Layers! You’ll be walking outdoors, then sitting in conference rooms, then in hallways. Temperatures vary. Layer it up! Always bring extra clothing, too. You&#8217;ll find yourself spilling coffee on your shirt, or wanting to wear a different pair of pants to dinner.
+Layers! You’ll be walking outdoors, then sitting in conference rooms, then in hallways. Temperatures vary. Layer it up! Always bring extra clothing, too. You'll find yourself spilling coffee on your shirt, or wanting to wear a different pair of pants to dinner.
 
 Light waterproof jacket &#8211; this will help you be comfortable walking around Seattle.
 

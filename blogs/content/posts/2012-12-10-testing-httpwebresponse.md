@@ -20,7 +20,7 @@ tags:
 ---
 Recently I was working on a library to consume a REST API without exposing any of the specifics to the rest of the application. Implementing a common interface and set of custom exceptions was easy enough, but exercising the internal logic was going to be tough. 
 
-While I could use the live REST API to verify the general logic worked, I had limited options when it came to the full range of HTTP responses and communication failures. Add in the impact those live API calls would have on my build process performance, the occasional failures of my build due the imperfections of talking to a live service, and the overhead of maintaining separation between my test and live data in that service&#8230;what I really had on my hands was the beginning of years of random, painful maintenance.
+While I could use the live REST API to verify the general logic worked, I had limited options when it came to the full range of HTTP responses and communication failures. Add in the impact those live API calls would have on my build process performance, the occasional failures of my build due the imperfections of talking to a live service, and the overhead of maintaining separation between my test and live data in that service…what I really had on my hands was the beginning of years of random, painful maintenance.
 
 If only I could mock WebRequest and have it return carefully crafted responses to test my code with, all without ever touching the real network.
 
@@ -34,9 +34,9 @@ Yep, making friends.
 
 _The source code for this post is located on github, with the sample service implementation and test projects: [tarwn/TestableHttpWebResponse][2]_
 
-## Let&#8217;s Start with the Tests
+## Let's Start with the Tests
 
-I&#8217;ve created a sample service implementation with two API call implementations. Each one builds a WebRequest, executes it, and analyzes the response. A retry policy wraps around the request execution, evaluating exceptions to determine whether to retry or map them to a local exception type to be rethrown.
+I've created a sample service implementation with two API call implementations. Each one builds a WebRequest, executes it, and analyzes the response. A retry policy wraps around the request execution, evaluating exceptions to determine whether to retry or map them to a local exception type to be rethrown.
 
 Here is an example of one of those calls and the synchronous method it uses internally:
 
@@ -91,7 +91,7 @@ public void TestFixtureSetup()
 	WebRequest.RegisterPrefix("test", TestableWebRequestCreateFactory.GetFactory());
 }
 ```
-TestableWebRequestCreateFactory.GetFactory() exposes a singleton that can be referenced from any of the tests in this class. When the WebRequest object receives a Uri starting with &#8220;test://&#8221;, it will call the associated factory, giving us the opportunity to respond with a Request object of our choosing.
+TestableWebRequestCreateFactory.GetFactory() exposes a singleton that can be referenced from any of the tests in this class. When the WebRequest object receives a Uri starting with “test://”, it will call the associated factory, giving us the opportunity to respond with a Request object of our choosing.
 
 A common base URI will prove helpful as we write the tests:
 
@@ -100,7 +100,7 @@ public Uri BaseUri { get { return new Uri("test://mydomain.com/api/"); } }
 ```
 **2: Building a Test**
 
-The easiest test to start with is one that will test the &#8220;happy path&#8221; where our API call receives a 200 Success response. 
+The easiest test to start with is one that will test the “happy path” where our API call receives a 200 Success response. 
 
 First we need to set up the request:
 
@@ -143,7 +143,7 @@ This exercises the entire successful path of the operation without any additiona
 
 Another tricky part of testing a service is figuring out how to test HTTP codes other then the success case. 
 
-The sample service maps received Protocol Errors (401, 404, etc) to a local exception so the code consuming this library doesn&#8217;t have to know how to parse WebExceptions. 
+The sample service maps received Protocol Errors (401, 404, etc) to a local exception so the code consuming this library doesn't have to know how to parse WebExceptions. 
 
 **TestableHttpWebResponse.Sample/SampleService.cs**
 
@@ -171,11 +171,11 @@ private Exception MappedException(WebException we)
 		return new SampleServiceOutageException(we);
 }
 ```
-Exercising the mapping logic is going to require the WebRequest to receive a WebException. Let&#8217;s make that happen.
+Exercising the mapping logic is going to require the WebRequest to receive a WebException. Let's make that happen.
 
-_Yes, I know a HEAD request will break this, that&#8217;s why it&#8217;s called &#8220;sample&#8221; code 🙂_
+_Yes, I know a HEAD request will break this, that's why it's called “sample” code 🙂_
 
-In the first test, we used the EnqueueResponse method of the TestableWebRequest to set up a 200 Success response. It&#8217;s just as simple to return a 404 Http code with the expected message and request body:
+In the first test, we used the EnqueueResponse method of the TestableWebRequest to set up a 200 Success response. It's just as simple to return a 404 Http code with the expected message and request body:
 
 **TestableHttpWebResponse.Sample.Tests/SampleServiceTests.cs**
 
@@ -253,7 +253,7 @@ And there we have it, all the various flavors of an HttpWebRequest.
 
 ## The Testable Classes
 
-The Testable classes are still under construction. At the time of this post they support the functionality above as well as the ability to set and verify Request Headers and write and verify the Request stream contents (upload). Currently the asynchronous methods (BeginGetResponse/EndGetResponse) are not implemented, but I&#8217;ll be adding those soon along with SampleService calls that exercise those via TPL and async/await logic. I&#8217;ll also be looking through WebRequest for other properties or methods I haven&#8217;t imlpemented yet to see what&#8217;s useful.
+The Testable classes are still under construction. At the time of this post they support the functionality above as well as the ability to set and verify Request Headers and write and verify the Request stream contents (upload). Currently the asynchronous methods (BeginGetResponse/EndGetResponse) are not implemented, but I'll be adding those soon along with SampleService calls that exercise those via TPL and async/await logic. I'll also be looking through WebRequest for other properties or methods I haven't imlpemented yet to see what's useful.
 
 Hopefully others will find this useful as well.
 

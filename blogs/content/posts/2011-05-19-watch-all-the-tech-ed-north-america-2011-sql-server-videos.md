@@ -32,11 +32,11 @@ If you missed Tech·Ed North America 2011, I have compiled a list of all the SQL
 
 Each one links directly to the video, have fun watching it all
 
-**[Microsoft SQL Server Code-Named &#8220;Denali&#8221; AlwaysOn Series,Part 1: Introducing the Next Generation High Availability Solution][1]**
+**[Microsoft SQL Server Code-Named “Denali” AlwaysOn Series,Part 1: Introducing the Next Generation High Availability Solution][1]**
   
 Santosh Balasubramanian Database & Business Intelligence 300 &#8211; Advanced DBI302 Day 1 May 16, 2011 from 1:15PM to 2:30PM
   
-In this session we talk about the new high availability solution that is being introduced in SQL Server code-named &#8220;Denali&#8221;. The session provides an overview of AlwaysOn and introduces the key new features and capabilities that will help businesses achieve the high availability SLA for mission…
+In this session we talk about the new high availability solution that is being introduced in SQL Server code-named “Denali”. The session provides an overview of AlwaysOn and introduces the key new features and capabilities that will help businesses achieve the high availability SLA for mission…
 
 **[Building Scalable Database Solutions Using Microsoft SQL Azure Database Federations][2]**
   
@@ -54,9 +54,9 @@ SQL Server Data Quality Services (DQS) is a Knowledge-Driven Data Quality produc
   
 Teo Lachev Database & Business Intelligence 200 &#8211; Intermediate DBI205 Day 1 May 16, 2011 from 3:00PM to 4:15PM
 
-Rich in demos,this session presents top reasons to upgrade to Microsoft SQL Server 2008 and SQL Server 2008 R2 versions of Reporting Services. Use this information to convince your boss that it&#8217;s time to upgrade and remove past limitations. If you already use these versions,you might discover…
+Rich in demos,this session presents top reasons to upgrade to Microsoft SQL Server 2008 and SQL Server 2008 R2 versions of Reporting Services. Use this information to convince your boss that it's time to upgrade and remove past limitations. If you already use these versions,you might discover…
 
-**[The T-SQL Cookbook: What&#8217;s Cool in Microsoft SQL Server 2008 R2 and New in SQL Server Code-Named &#8220;Denali&#8221;][5]**
+**[The T-SQL Cookbook: What's Cool in Microsoft SQL Server 2008 R2 and New in SQL Server Code-Named “Denali”][5]**
   
 Tobias Ternstrom Database & Business Intelligence 300 &#8211; Advanced DBI318 Day 1 May 16, 2011 from 3:00PM to 4:15PM
 
@@ -104,17 +104,17 @@ John McAllister Database & Business Intelligence 200 &#8211; Intermediate DBI204
 
 Master Data Services (MDS) was released in Microsoft SQL Server 2008 R2 and enables organizations to do a better job of managing key data assets. In the next release of SQL Server,it will be even easier to manage data by using Excel as the user interface. In this session we cover the basics of MDS…
 
-**[What&#8217;s New in Microsoft SQL Server Code-Named &#8220;Denali&#8221; for SQL Server Analysis Services and PowerPivot][13]**
+**[What's New in Microsoft SQL Server Code-Named “Denali” for SQL Server Analysis Services and PowerPivot][13]**
   
 T.K. Anand, Ashvini Sharma Database & Business Intelligence 200 &#8211; Intermediate DBI206 Day 2 May 17, 2011 from 10:15AM to 11:30AM
 
 In Microsoft SQL Server 2008 R2,we introduced PowerPivot which is a self-service Business Intelligence experience that enables information workers to build,share and collaborate on their personal and team BI applications within the familiar environment of Excel and SharePoint. In SQL Server…
 
-**[Abundantly &#8220;Crescent&#8221;: Demos Galore][14]**
+**[Abundantly “Crescent”: Demos Galore][14]**
   
 Sean Boon, Carolyn Chau, Sabrena McBride Database & Business Intelligence 200 &#8211; Intermediate DBI208 Day 2 May 17, 2011 from 3:15PM to 4:30PM
 
-What is Microsoft project code-named &#8220;Crescent&#8221; really capable of? How can it address the needs of your business? This session covers a variety of demonstrations against REAL DATA,across various industry verticals,to enable you to see what&#8217;s possible when deploying this new technology. If you like…
+What is Microsoft project code-named “Crescent” really capable of? How can it address the needs of your business? This session covers a variety of demonstrations against REAL DATA,across various industry verticals,to enable you to see what's possible when deploying this new technology. If you like…
 
 **[What’s New in Microsoft SQL Server Code-Named “Denali” for Reporting Services][15]**
   
@@ -128,11 +128,11 @@ Torsten Grabs Database & Business Intelligence 300 &#8211; Advanced DBI303 Day 2
 
 Microsoft SQL Server 2008 R2 introduces StreamInsight,a comprehensive platform for building event-driven applications. While typical relational database applications are query-driven,event-driven applications are characterized by continuously arriving new data,continuous processing of the incoming…
 
-**[What&#8217;s New in Manageability for Microsoft SQL Server Code-Named &#8220;Denali&#8221;][17]**
+**[What's New in Manageability for Microsoft SQL Server Code-Named “Denali”][17]**
   
 Denny Cherry Database & Business Intelligence 300 &#8211; Advanced DBI304 Day 2 May 17, 2011 from 1:30PM to 2:45PM
 
-Microsoft SQL Server &#8220;Denali&#8221; has many new features and enhancements. With a focus on manageability,this session tours new features including Contained Databases,Distributed Replay Utility,User Defined Roles,SQL Management Studio enhancements,and PowerShell. The session is demo-intensive and…
+Microsoft SQL Server “Denali” has many new features and enhancements. With a focus on manageability,this session tours new features including Contained Databases,Distributed Replay Utility,User Defined Roles,SQL Management Studio enhancements,and PowerShell. The session is demo-intensive and…
 
 **[High Availability and Disaster Recovery Customer Panel: Architectures and Lessons Learned][18]**
   
@@ -144,7 +144,7 @@ This session covers real-life customer deployment scenarios to achieve high avai
   
 Eric Hanson Database & Business Intelligence 300 &#8211; Advanced DBI312 Day 2 May 17, 2011 from 8:30AM to 9:45AM
 
-This talk describes a new data warehouse SQL query acceleration feature in Microsoft SQL Server code-named &#8220;Denali&#8221; based on a new type of index called the columnstore. This new index,combined with enhanced query processing features,improves data warehouse query performance by hundreds to thousands…
+This talk describes a new data warehouse SQL query acceleration feature in Microsoft SQL Server code-named “Denali” based on a new type of index called the columnstore. This new index,combined with enhanced query processing features,improves data warehouse query performance by hundreds to thousands…
 
 **[Microsoft SQL Azure Advanced Administration: Backup,Restore and Database Management Strategies for Cloud Databases][20]**
   
@@ -176,11 +176,11 @@ Kevin Fan, Manpratap Suri Database & Business Intelligence 300 &#8211; Advanced 
 
 Learn how you can utilize the power of Excel and Excel Services BI features to easily create a compelling BI solution using the tools you already know.
 
-**[Performance Tuning and Optimization in Microsoft SQL Server 2008 R2 and SQL Server Code-Named &#8220;Denali&#8221;][25]**
+**[Performance Tuning and Optimization in Microsoft SQL Server 2008 R2 and SQL Server Code-Named “Denali”][25]**
   
 Adam Machanic, Mike Wachal Database & Business Intelligence 400 &#8211; Expert DBI402 Day 2 May 17, 2011 from 3:15PM to 4:30PM
 
-Understanding when to search for performance problems and how to tune your queries to correct them is one of the most persistent questions that face DBAs. Join Adam and Mike to explore a methodology for discovering and improving performance problems. Along the way you&#8217;ll see examples that take…
+Understanding when to search for performance problems and how to tune your queries to correct them is one of the most persistent questions that face DBAs. Join Adam and Mike to explore a methodology for discovering and improving performance problems. Along the way you'll see examples that take…
 
 **[Best Practices for Building Tier 1 Enterprise Business Intelligence Solutions with Microsoft SQL Server Analysis Services][26]**
   
@@ -210,7 +210,7 @@ Learn what are the current and future SQL Server Appliances and References Archi
   
 Michael Bassett, Anjan Das, Jim Hautala Database & Business Intelligence 300 &#8211; Advanced DBI308 Day 3 May 18, 2011 from 1:30PM to 2:45PM
 
-This session depicts some of the new features and architecture changes present in version 3.0 of SQL Server Fast Track Data Warehousing. Best practices derived from HP&#8217;s extensive joint testing with Microsoft during the development of its current Fast Track reference architectures are also detailed.
+This session depicts some of the new features and architecture changes present in version 3.0 of SQL Server Fast Track Data Warehousing. Best practices derived from HP's extensive joint testing with Microsoft during the development of its current Fast Track reference architectures are also detailed.
 
 **[Microsoft SQL Azure Performance Considerations and Troubleshooting][31]**
   
@@ -222,7 +222,7 @@ Become an expert on SQL Azure by learning how to best utilize the cloud database
   
 Guy Bowerman, Darmadi Komo Database & Business Intelligence 300 &#8211; Advanced DBI315 Day 3 May 18, 2011 from 10:15AM to 11:30AM
 
-Come and learn how SQL Server fits into your company&#8217;s strategy on virtualization and private cloud. We talk talk about SQL Server feautures that are relevant in virtualization and private cloud deployment,why Hyper-V is better for SQL Server virtualization,the upcoming HP Database Consolidation…
+Come and learn how SQL Server fits into your company's strategy on virtualization and private cloud. We talk talk about SQL Server feautures that are relevant in virtualization and private cloud deployment,why Hyper-V is better for SQL Server virtualization,the upcoming HP Database Consolidation…
 
 **[What’s New in Microsoft SQL Server Code-Named “Denali” for SQL Server Integration Services][33]**
   
@@ -266,7 +266,7 @@ Alex Jauch, Robert Quimbey Database & Business Intelligence 300 &#8211; Advanced
 
 In this session,hear about innovative storage and data management strategies that are being used by leading organizations around the world to build highly efficient,flexible and reliable IT infrastructure to support their business-critical enterprise software including Microsoft Exchange…
 
-**[Microsoft SQL Server Code-Named &#8220;Denali&#8221; AlwaysOn Series,Part 2: Building a Mission-Critical High Availability Solution Using AlwaysOn][40]**
+**[Microsoft SQL Server Code-Named “Denali” AlwaysOn Series,Part 2: Building a Mission-Critical High Availability Solution Using AlwaysOn][40]**
   
 Justin Erickson Database & Business Intelligence 400 &#8211; Expert DBI404 Day 3 May 18, 2011 from 8:30AM to 9:45AM
 

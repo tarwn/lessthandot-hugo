@@ -18,7 +18,7 @@ tags:
   - testing
 
 ---
-Writing tests for code is just as important as writing the code itself. Time spent writing tests is less time spent tracking down and fixing bugs, making it a great investment. Despite knowing this it can sometimes be hard to force yourself to stop coding and write tests. Fortunately, Perl has some modules to make it pretty simple. Here&#8217;s the module we&#8217;re going to be testing:
+Writing tests for code is just as important as writing the code itself. Time spent writing tests is less time spent tracking down and fixing bugs, making it a great investment. Despite knowing this it can sometimes be hard to force yourself to stop coding and write tests. Fortunately, Perl has some modules to make it pretty simple. Here's the module we're going to be testing:
 
 ```perl
 #!/usr/bin/perl
@@ -162,7 +162,7 @@ Although writing tests can be a chore it is worth doing. If you write tests a li
   * When you add a method to a class.
   * When you find a bug.
 
-You&#8217;ll develop a good library of tests without too much effort.
+You'll develop a good library of tests without too much effort.
 
 Further reading: [Test::More perldoc][1]
 

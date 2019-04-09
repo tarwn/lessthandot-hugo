@@ -10,7 +10,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-Well as anyone who has had the luxury of working with Great Plains and its database, you know it&#8217;s close to impossible to find data in the database. Well fear not, for there is a way to navigate this labyrinth of a database.
+Well as anyone who has had the luxury of working with Great Plains and its database, you know it's close to impossible to find data in the database. Well fear not, for there is a way to navigate this labyrinth of a database.
 
 The Great Plains developers, as kind as they are, created a tool that allows you to see their documentation on the database and application. If you know the name of the form you want to get data from, you can get it. Here’s how to do it.
 

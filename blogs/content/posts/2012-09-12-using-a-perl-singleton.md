@@ -22,9 +22,9 @@ tags:
   - singleton
 
 ---
-It&#8217;s been quite a while since I last posted here. Since my last entry I got a new job, got married, went on honeymoon (got back yesterday!) and spent quite a lot of time maintaining legacy Perl code.
+It's been quite a while since I last posted here. Since my last entry I got a new job, got married, went on honeymoon (got back yesterday!) and spent quite a lot of time maintaining legacy Perl code.
 
-One thing I see a lot is sharing objects by passing them to the constructor of a new object. This is fine until you&#8217;re dealing with complicated sets of objects within objects. 
+One thing I see a lot is sharing objects by passing them to the constructor of a new object. This is fine until you're dealing with complicated sets of objects within objects. 
 
 ```perl
 #!/usr/bin/perl
@@ -58,7 +58,7 @@ sub do_something {
     return $object2->do_something_else();
 }
 ```
-MyObject is now holding a reference to the config object which it doesn&#8217;t need directly. This will only get worse if MyObject2 needs another object which requires the config object, etc.
+MyObject is now holding a reference to the config object which it doesn't need directly. This will only get worse if MyObject2 needs another object which requires the config object, etc.
 
 Instead we could use a singleton object:
 

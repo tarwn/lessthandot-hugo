@@ -13,7 +13,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-I&#8217;m almost embarrassed to publish this but I have operated for years under a false assumption that I only recently discovered to be untrue. Or, to perhaps state it better, to be unnecessary. When using an outer join, I have always tended to put the ON operators in the order of the join itself. So, for example, if my first table in a left join was table1, then my ON operators would always be table1.field1 = table2.field1. A more clear example is below.
+I'm almost embarrassed to publish this but I have operated for years under a false assumption that I only recently discovered to be untrue. Or, to perhaps state it better, to be unnecessary. When using an outer join, I have always tended to put the ON operators in the order of the join itself. So, for example, if my first table in a left join was table1, then my ON operators would always be table1.field1 = table2.field1. A more clear example is below.
 
 sql
 SELECT a.[field1], a.[field2]
@@ -31,4 +31,4 @@ WHERE b.[field1] IS NULL
 
 Both of the code samples above do the same thing. The only issue when using an outer join is the order in which the tables are presented, not the operators in the ON part of the join.
 
-However, that being said, I will still write my code in that fashion as I think it is easier to read and maintain. If nothing else, it is adherence to a standard. So, even if that doesn&#8217;t match your own standard, it is important to establish a standard and maintain it which will make it easier for future maintenance.
+However, that being said, I will still write my code in that fashion as I think it is easier to read and maintain. If nothing else, it is adherence to a standard. So, even if that doesn't match your own standard, it is important to establish a standard and maintain it which will make it easier for future maintenance.

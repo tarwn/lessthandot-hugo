@@ -52,7 +52,7 @@ MSmerge\_{publication name}\_{article}\_[ | PARTITION]\_VIEW
 
 To view the definition of a data partition view, use sp_helptext.  The Person data partition view would be reviewed with the following statement.
 
-sp\_helptext &#8216;dbo.MSmerge\_MultipleSubs\_ParamFilters\_Person\_PARTITION\_VIEW&#8217;
+sp\_helptext &#8216;dbo.MSmerge\_MultipleSubs\_ParamFilters\_Person\_PARTITION\_VIEW'
 
  
 
@@ -81,9 +81,9 @@ IO Statistics of this statement
 
  
 
-Table &#8216;Person&#8217;. Scan count 1, logical reads 3816, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
+Table &#8216;Person'. Scan count 1, logical reads 3816, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 
-Table &#8216;MSmerge\_partition\_groups&#8217;. Scan count 1, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
+Table &#8216;MSmerge\_partition\_groups'. Scan count 1, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 
  
 

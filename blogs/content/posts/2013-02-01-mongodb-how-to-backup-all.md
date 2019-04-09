@@ -75,7 +75,7 @@ mongodump --db SingleCollection
 mongodump --db TestDB
 mongodump --db TestStuff</pre>
 
-But did you know that if you don&#8217;t specify a database that mongodump will back up all the databases? Try it out, run the following
+But did you know that if you don't specify a database that mongodump will back up all the databases? Try it out, run the following
 
 mongodump 
 

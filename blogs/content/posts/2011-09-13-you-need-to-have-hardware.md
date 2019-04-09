@@ -17,9 +17,9 @@ tags:
   - windows 8
 
 ---
-If your processor does not support Virtualization Technology then you can&#8217;t run [Windows 8][1] in Virtual Box&#8230;.you will get a black screen of death. In order to find out if your CPU supports hardware Virtualization Technology you can download the Intel Processor Identification Utility here http://www.intel.com/p/en_US/support/highlights/processors/toolspiu/
+If your processor does not support Virtualization Technology then you can't run [Windows 8][1] in Virtual Box….you will get a black screen of death. In order to find out if your CPU supports hardware Virtualization Technology you can download the Intel Processor Identification Utility here http://www.intel.com/p/en_US/support/highlights/processors/toolspiu/
 
-Run it and look if Virtualization Technology is enabled&#8230;see the bottom of this picture
+Run it and look if Virtualization Technology is enabled…see the bottom of this picture
   
 [<img src="http://farm7.static.flickr.com/6195/6145566403_c707fd4f42.jpg" width="500" height="167" alt="Intel Processor Identification Utility" />][2]
 
@@ -41,7 +41,7 @@ Finally on the Acceleration tab, click on both **Enable VT-x/Amd-v** and **Enabl
   
 [<img src="http://farm7.static.flickr.com/6180/6146115850_f53b27c536.jpg" width="500" height="130" alt="EnableVT" />][5]
 
-Now you are all set&#8230;have fun
+Now you are all set…have fun
 
 [<img src="http://farm7.static.flickr.com/6188/6145467215_0efbb953d9.jpg" width="500" height="374" alt="windows 8 metro start screen" />][6]
 

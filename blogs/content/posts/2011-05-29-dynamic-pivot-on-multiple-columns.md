@@ -27,9 +27,9 @@ You need to keep in mind, that resulting query should have less than 1024 column
 
 Now, every time I need to create a dynamic query, I need to know what is the final query I am going to arrive to. Having the idea in mind and printing the SQL command until I got it right helps to create the working query.
 
-Let&#8217;s consider the first example based on the AdventureWorks SalesOrderHeader table.
+Let's consider the first example based on the AdventureWorks SalesOrderHeader table.
   
-This code creates the table we&#8217;re going to transform &#8211; it gives us summary of orders and total due per each quarter:
+This code creates the table we're going to transform &#8211; it gives us summary of orders and total due per each quarter:
 
 sql
 USE AdventureWorks 
@@ -958,7 +958,7 @@ EXECUTE( @SQL)</pre>
 </div>
 
 <p>
-  I&#8217;ll post another recent problem found in the following MSDN thread <a href="http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/89d5954f-d518-4eb4-8c44-c124c6e1ee6d">Basic Crosstab Query</a>
+  I'll post another recent problem found in the following MSDN thread <a href="http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/89d5954f-d518-4eb4-8c44-c124c6e1ee6d">Basic Crosstab Query</a>
 </p>
 
 <pre lang="tsql">

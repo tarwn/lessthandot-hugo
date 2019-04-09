@@ -28,7 +28,7 @@ Just got a question on my [A first look at sequences in SQL Server Denali][1] po
 
 The question is the following: _How can you add a new column to existing table (already populated) and make it a sequence column?_
 
-Let&#8217;s take a look. First create this very simple table
+Let's take a look. First create this very simple table
 
 sql
 CREATE TABLE bla (id INT)

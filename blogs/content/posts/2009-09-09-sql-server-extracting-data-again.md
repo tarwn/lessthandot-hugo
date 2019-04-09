@@ -20,7 +20,7 @@ In a recent article, I explained how to [extract numbers from a string][1]. This
 
 This functionality is particularly useful for formatting data (when you need to export in a consistent way). For example, phone numbers (in the U.S.) are usually 10 digits long, but some people like to use (111) 222-3333 or 111-222-3333 or even 111.222.3333. 
 
-The idea here is to remove all characters that we don&#8217;t want so that we can apply any formatting we do want.
+The idea here is to remove all characters that we don't want so that we can apply any formatting we do want.
 
 Most of the time, when you see code like this, it will step through the data character by character. This code is different. It uses PatIndex to find the first occurrence of an invalid character. It removes that character, and then continues on until all instances of invalid characters are removed.
 
@@ -72,15 +72,15 @@ End
 ```
 As you can see, the real work is done by using the like comparison functionality of the PatIndex function.
 
-&#8216;%[^a-z]%&#8217;
+&#8216;%[^a-z]%'
   
-&#8216;%[^a-z0-9]%&#8217;
+&#8216;%[^a-z0-9]%'
   
-&#8216;%[^0-9]%&#8217;
+&#8216;%[^0-9]%'
 
 It should be relatively simple to modify the previous functions to suit any sort of comparisons. You can use it to remove ranges of characters, or even for single characters (similar to the replace function).
 
-For example, if you wanted to remove certain punctuation characters, but leave everything else, you could use &#8216;%[^.^,^-]%&#8217; (to remove dot, comma, and dash).
+For example, if you wanted to remove certain punctuation characters, but leave everything else, you could use &#8216;%[^.^,^-]%' (to remove dot, comma, and dash).
 
 You can use the following code to test this functionality. It creates a table variable with some sample data. The query at the end returns the original data, and another column showing the output from the three functions presented here.
 

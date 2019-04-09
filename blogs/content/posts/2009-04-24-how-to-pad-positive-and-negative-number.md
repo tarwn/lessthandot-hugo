@@ -36,7 +36,7 @@ That returns the output that we want
 
 00012345
 
-Let&#8217;s continue by creating a table and dumping some numbers in that table
+Let's continue by creating a table and dumping some numbers in that table
 
 sql
 CREATE TABLE #Numbers(Num INT)

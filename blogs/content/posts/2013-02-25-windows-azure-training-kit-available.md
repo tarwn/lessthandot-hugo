@@ -32,7 +32,7 @@ Microsoft has made available the Windows Azure Training Kit
 
 The Windows Azure Training Kit includes hands-on labs, presentations, and samples to help you understand how to build applications that use Windows Azure.
 
-**[Hands-on labs][1]** are sets of step-by-step guides that are designed to help you learn how to use key Windows Azure services and features. Each Lab provides instructions to guide you through the process of developing a complete application. The cool thing is that you can contribute to any of these hands-on labs by forking their repositories on GitHub and make changes to the content. Once you&#8217;ve made your changes, share them back with the community by sending a pull request.
+**[Hands-on labs][1]** are sets of step-by-step guides that are designed to help you learn how to use key Windows Azure services and features. Each Lab provides instructions to guide you through the process of developing a complete application. The cool thing is that you can contribute to any of these hands-on labs by forking their repositories on GitHub and make changes to the content. Once you've made your changes, share them back with the community by sending a pull request.
 
 **[Demos][2]** are sets of step-by-step guides that are designed to demonstrate how to use key Windows Azure services and features.
 

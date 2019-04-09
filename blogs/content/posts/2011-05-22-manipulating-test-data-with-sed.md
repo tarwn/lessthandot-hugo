@@ -14,7 +14,7 @@ categories:
   - Linux
 
 ---
-Following on from my [previous blog about sed][1], this blog will detail how I use sed most often: manipulating test data when running demonstrations of new features. Let&#8217;s say we&#8217;ve developed a web service which creates users from the following XML document:
+Following on from my [previous blog about sed][1], this blog will detail how I use sed most often: manipulating test data when running demonstrations of new features. Let's say we've developed a web service which creates users from the following XML document:
 
 ```xml
 <user>
@@ -26,7 +26,7 @@ We might want to demonstrate this web service using a number of combinations of 
 
   * robearl/password
   * rob\_earl/pass\_word
-  * rob&#8217;earl/pass&#8217;word
+  * rob'earl/pass'word
   * rob-earl/pass-word
   * etc.
 
@@ -37,6 +37,6 @@ Instead, we can use sed. Create a single document like the one above and pass it
 ```bash
 cat single_document.xml | sed -e 's/USERNAME/robearl/' -e 's/PASSWORD/password/' | curl <options> -d @- <web service>
 ```
-Using this technique, we avoid having to create lots of XML documents and it&#8217;s obvious what data is being passed without having to open up each document during the demonstration.
+Using this technique, we avoid having to create lots of XML documents and it's obvious what data is being passed without having to open up each document during the demonstration.
 
  [1]: /index.php/SysAdmins/OS/Linux/bulk-editing-with-sed

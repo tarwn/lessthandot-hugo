@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-I&#8217;m spawning off a thread that I helped out in on SQLServerCentral for this article. The basic need in the task is, import a bunch of text files, parse out all email address and insert them delimited by “;” into a relational table.
+I'm spawning off a thread that I helped out in on SQLServerCentral for this article. The basic need in the task is, import a bunch of text files, parse out all email address and insert them delimited by “;” into a relational table.
 
 This is going to cover a few common things you will need to know how to do in order to successfully build ETL tasks.
 

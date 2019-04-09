@@ -19,7 +19,7 @@ tags:
   - tip
 
 ---
-The CSS SQL Server Engineers have posted an interesting post, I myself don&#8217;t have any of the fake identity columns but I did many times suggest in newsgroups to use UPDLOCK and HOLDLOCK in a transaction to guarantee that 2 inserts would not generate the same key value. This stuff below is from the CSS SQL Server Engineers post here: http://blogs.msdn.com/psssql/archive/2009/10/26/reduce-locking-and-other-needs-when-updating-data-better-performance.aspx
+The CSS SQL Server Engineers have posted an interesting post, I myself don't have any of the fake identity columns but I did many times suggest in newsgroups to use UPDLOCK and HOLDLOCK in a transaction to guarantee that 2 inserts would not generate the same key value. This stuff below is from the CSS SQL Server Engineers post here: http://blogs.msdn.com/psssql/archive/2009/10/26/reduce-locking-and-other-needs-when-updating-data-better-performance.aspx
 
 The following pattern typically stems from an old practice used in SQL 4.x and 6.x days, before IDENTITY was introduced.
 

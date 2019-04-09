@@ -26,7 +26,7 @@ I recommend this type of upgrade only if downtime is extremely limited in your i
 
 For our lab, let’s start by setting up the database and the mirror. The following steps we will go through will be almost identical to the steps we worked through together in a [previous exercise][2] to move databases between SQL Server instances of the same 2005 versions using mirroring. 
 
-## Let&#8217;s jump in
+## Let's jump in
 
 Create the database on the SQL Server 2005 instance, run a full backup and then a backup of the transaction log to capture the tail-end transactions for applying to the secondary database (mirror). 
 

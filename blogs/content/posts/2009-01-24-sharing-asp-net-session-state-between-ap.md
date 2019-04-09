@@ -17,9 +17,9 @@ categories:
   - ASP.NET
 
 ---
-In [Part I][1] we set up our awesome website, and a nice SQL Server database to manage our sessions. But we&#8217;re not done yet, now we want to share that session state between our site and another web application, in this case a service.
+In [Part I][1] we set up our awesome website, and a nice SQL Server database to manage our sessions. But we're not done yet, now we want to share that session state between our site and another web application, in this case a service.
 
-So, now that our site is good to go, we can set up the webservice call. First, we need to set up the service. For this example we&#8217;ll just return a simple string, from the session of course.
+So, now that our site is good to go, we can set up the webservice call. First, we need to set up the service. For this example we'll just return a simple string, from the session of course.
 
 ```csharp
 [WebMethod(EnableSession = true)]
@@ -29,9 +29,9 @@ public String RetrieveValue()
 }
 ```
 
-I know, its&#8217; breathtaking 😉
+I know, its' breathtaking 😉
 
-Its&#8217; important to note the &#8220;EnableSession&#8221; attribute here, this is what give your service access to the Session.
+Its' important to note the “EnableSession” attribute here, this is what give your service access to the Session.
 
 Another thing you will need to do is set your webservice to allow POSTs, like so:
 
@@ -39,13 +39,13 @@ Another thing you will need to do is set your webservice to allow POSTs, like so
 <add verb="GET,HEAD, POST" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/>
 ```
 
-(this is found in the &#8220;httpHandlers&#8221; section of the web.config)
+(this is found in the “httpHandlers” section of the web.config)
 
-To be able to call the webservice, we need its&#8217; IP from the debugger, so set the service to be your startup project and fire it up. Make a note of the address (for example, http://localhost:52588) because we will need it here. May as well just leave the services running on localhost so we can call them (I haven&#8217;t figured out a way to make ctrl+f5 start up both).
+To be able to call the webservice, we need its' IP from the debugger, so set the service to be your startup project and fire it up. Make a note of the address (for example, http://localhost:52588) because we will need it here. May as well just leave the services running on localhost so we can call them (I haven't figured out a way to make ctrl+f5 start up both).
 
-To call the webservice we&#8217;ll use a bit of jquery goodness. Its&#8217; easy since we aren&#8217;t returning a custom type. I can assure you this technique works for those as well, as long as they can be serialized &#8211; i&#8217;ll address this later on because there are some issues with sharing types on the server side that I would like to get into at some point.
+To call the webservice we'll use a bit of jquery goodness. Its' easy since we aren't returning a custom type. I can assure you this technique works for those as well, as long as they can be serialized &#8211; i'll address this later on because there are some issues with sharing types on the server side that I would like to get into at some point.
 
-Here&#8217;s the javascript to replace the stub we set up in part I:
+Here's the javascript to replace the stub we set up in part I:
 
 ```javascript
 <script type="text/javascript">
@@ -75,7 +75,7 @@ In our connection string, we just need to add the Application Name property. So 
 <sessionState mode="SQLServer" sqlConnectionString="Data Source=127.0.0.1; Integrated Security=SSPI; Application Name=TEST" cookieless="false" timeout="20"/>
 ```
 
-So how can we use this then? Lets check out the stored procedure change (found at [sneal.net][2]). There&#8217;s a proc called &#8220;TempGetAppID&#8221; in the ASP state database. I don&#8217;t know all the inner workings of this database, but its used within the database to identify the application connecting to it. So we can alter the proc to include the kind Mr. (or Mrs.) Sneal&#8217;s change:
+So how can we use this then? Lets check out the stored procedure change (found at [sneal.net][2]). There's a proc called “TempGetAppID” in the ASP state database. I don't know all the inner workings of this database, but its used within the database to identify the application connecting to it. So we can alter the proc to include the kind Mr. (or Mrs.) Sneal's change:
 
 sql
 -- start change
@@ -93,9 +93,9 @@ sql
     -- end change
 ```
 
-So now, the database managing session state should treat both your website and your webservice as parts of the same application, and you will be able to retrieve the value you stashed in the session through javascript. Its&#8217; clearly not a very good examplle, but I am sure you can think of better ways to use this new power 🙂
+So now, the database managing session state should treat both your website and your webservice as parts of the same application, and you will be able to retrieve the value you stashed in the session through javascript. Its' clearly not a very good examplle, but I am sure you can think of better ways to use this new power 🙂
 
-If you&#8217;d like to download the source code for this project, you can do so [here][3]
+If you'd like to download the source code for this project, you can do so [here][3]
 
 Got a question on ASP.net? Check out our [ASP.net Forum][4]!
 

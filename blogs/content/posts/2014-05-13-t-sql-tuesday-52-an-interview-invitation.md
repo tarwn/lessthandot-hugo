@@ -70,5 +70,5 @@ tags:
 </ul>
 
 <p style="text-align: justify">
-  If I’m in a really bad mood, I could ask about SharePoint integration 🙂 Anyway, questions can test for knowledge and experience, but passion and personality are very important as well. I don&#8217;t really care if someone can&#8217;t recite all the protection levels in SSIS, these can easily be found with a search engine.<br /> But in the end, I’ll let the interview depend on this crucial question: would you use a bar chart or a pie chart?
+  If I’m in a really bad mood, I could ask about SharePoint integration 🙂 Anyway, questions can test for knowledge and experience, but passion and personality are very important as well. I don't really care if someone can't recite all the protection levels in SSIS, these can easily be found with a search engine.<br /> But in the end, I’ll let the interview depend on this crucial question: would you use a bar chart or a pie chart?
 </p>

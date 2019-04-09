@@ -35,7 +35,7 @@ Someone asked [two interesting questions][1] last night
   
 2) Can a CTE be modified? Can I insert rows after it has been constructed?
 
-Let&#8217;s look at question number one first. Is there a way to construct an empty CTE? Yes, there is, but why would you want to do this? Anyway, here is one way of having an empty CTE
+Let's look at question number one first. Is there a way to construct an empty CTE? Yes, there is, but why would you want to do this? Anyway, here is one way of having an empty CTE
 
 sql
 WITH Hello 
@@ -46,7 +46,7 @@ FROM sysobjects WHERE 1 =0
 SELECT * FROM Hello
 ```
 
-Question number two (Can a CTE be modified? Can I insert rows after it has been constructed?) is more interesting, first let&#8217;s look at a simple example and then we will look at something that makes more sense
+Question number two (Can a CTE be modified? Can I insert rows after it has been constructed?) is more interesting, first let's look at a simple example and then we will look at something that makes more sense
 
 We need to create a table first with 1 row
 
@@ -72,7 +72,7 @@ sql
 SELECT * FROM testNow
 ```
 
-What about inserts, can we insert into a common table expression? Sure, let&#8217;s take a look how we can do that.
+What about inserts, can we insert into a common table expression? Sure, let's take a look how we can do that.
 
 sql
 ;WITH Hello 
@@ -90,7 +90,7 @@ sql
 SELECT * FROM testNow
 ```
 
-So this is all, but what is the point? Really for the examples I gave there is none, you can just update the table directly instead. But, let&#8217;s look at a more interesting example
+So this is all, but what is the point? Really for the examples I gave there is none, you can just update the table directly instead. But, let's look at a more interesting example
 
 First we need to create the following table
 
@@ -146,7 +146,7 @@ So my table would look like this
 0	C	2010-01-01
 0	C	2009-01-01</pre>
 
-First let&#8217;s do the select statement, in order to accomplish what we set out to do we can use the row_number function, partition by SomeVal and order by SomeDate descending
+First let's do the select statement, in order to accomplish what we set out to do we can use the row_number function, partition by SomeVal and order by SomeDate descending
 
 Run the following statement
 

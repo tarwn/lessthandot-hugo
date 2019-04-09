@@ -16,7 +16,7 @@ tags:
   - recap
 
 ---
-So finally it is a new year and a new decade (this of course all depends if there is a year zero or not). The Dow Jones Industrial Average (yes the DJI is an average and not an index) closed lower than it was a decade ago, as a matter of fact it is a 1000 points lower now. Just keep in mind that the stock market still hasn&#8217;t recovered in Japan and that has been going on for 20 years now. We had 3 bubbles during the last decade..internet&#8230;.housing&#8230;oil. For the next decade gold is looking to be perhaps the first bubble to burst. 
+So finally it is a new year and a new decade (this of course all depends if there is a year zero or not). The Dow Jones Industrial Average (yes the DJI is an average and not an index) closed lower than it was a decade ago, as a matter of fact it is a 1000 points lower now. Just keep in mind that the stock market still hasn't recovered in Japan and that has been going on for 20 years now. We had 3 bubbles during the last decade..internet….housing…oil. For the next decade gold is looking to be perhaps the first bubble to burst. 
 
 During the last decade technology continued with its innovation, memory and hard drives increased by a 100 times. You had a 20 GB hard drive in 1999 now you have a 2 TB drive. Instead of 64 MB of ram now you have 6 GB of ram. You can read about my favorite technologies of the last decade here: [My top ten favorite technologies of this decade][1]
 
@@ -42,8 +42,8 @@ Below is a list of the 10 keywords that people have used in search engines to ge
   7. [c# 4.0 new features][3]  
     Same as number two 
   8. [sp_executesql][8]  
-    A post showing that changing exec to sp_executesql doesn&#8217;t provide any benefit if you are not using parameters correctly 
-  9. [sql server blocked access to procedure &#8216;sys.xp\_cmdshell&#8217; of component &#8216;xp\_cmdshell&#8217; because this component is turned off as part of the security configuration for this server. a system administrator can enable the use of &#8216;xp\_cmdshell&#8217; by using sp\_configure. for more information about enabling &#8216;xp_cmdshell&#8217;, see &#8220;surface area configuration&#8221; in sql server books online.][9]  
+    A post showing that changing exec to sp_executesql doesn't provide any benefit if you are not using parameters correctly 
+  9. [sql server blocked access to procedure &#8216;sys.xp\_cmdshell' of component &#8216;xp\_cmdshell' because this component is turned off as part of the security configuration for this server. a system administrator can enable the use of &#8216;xp\_cmdshell' by using sp\_configure. for more information about enabling &#8216;xp_cmdshell', see “surface area configuration” in sql server books online.][9]  
     How to enable xp_cmdshell and Ad Hoc Distributed Queries on SQL Server 2005 
  10. [mssql create xml file][10]  
     A post explaining how to create XML files out of SQL Server with SSIS and FOR XML syntax 
@@ -59,7 +59,7 @@ Views : 17762
 Comments : 29  
 By : [SQLDenis][12]
 
-2. [Good SQL Articles To Read If You Can&#8217;t Afford Books][13]  
+2. [Good SQL Articles To Read If You Can't Afford Books][13]  
 Views : 15050  
 Comments : 18  
 By : [SQLDenis][12]
@@ -114,7 +114,7 @@ Below is the breakdown off all the browsers that visited our site<table cellspac
 
 **Operating Systems**
   
-Here are all the operating systems that visited our site in 2009. No surprises here really, I expect that Android will make great gains in the next year&#8230;keep an eye out for that Nexus One announcement by Google on January 5th<table cellspacing = "5" 
+Here are all the operating systems that visited our site in 2009. No surprises here really, I expect that Android will make great gains in the next year…keep an eye out for that Nexus One announcement by Google on January 5th<table cellspacing = "5" 
 
 </table> 
 
@@ -126,7 +126,7 @@ This is just for December 2009 because if you do the whole year then windows 7 i
 Vista 16.88%	
 Win 7 16.77%</pre>
 
-So that is it for this post, let&#8217;s hope that we keep producing a lot of great content for you our reader in the coming decade.
+So that is it for this post, let's hope that we keep producing a lot of great content for you our reader in the coming decade.
 
  [1]: /index.php/ITProfessionals/EthicsIT/my-top-ten-favorite-technologies-of-this
  [2]: /index.php/ITProfessionals/EthicsIT/google-interview-questions

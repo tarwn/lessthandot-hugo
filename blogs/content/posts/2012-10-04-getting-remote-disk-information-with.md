@@ -19,7 +19,7 @@ tags:
   - wmi
 
 ---
-A couple of weeks ago someone asked me why they should upgrade to MS SQL Server 2012. I named a bunch of reasons and only remembered afterwards that the possibility to use Windows Server Core could also be a surplus. Just 2 days later this [Case for Core][1] post from Jeremiah Peschka ([blog][2] | [twitter][3]) made me realize there was a lot of work for me before I could say that running MS SQL Server 2012 on Windows Server Core. I already read the book [Microsoft SQL Server 2008 Administration with Windows PowerShell][4] and reviewed it [here][5].So I decided to try to avoid the usage of Remote Desktop as much as possible and finally start to use PowerShell on a daily basis. One of the first things I needed to do was the restore of a database on another server. So before I could start the restore I needed to check the servers&#8217; disk configuration and available space. So let&#8217;s see how to do this with PowerShell.
+A couple of weeks ago someone asked me why they should upgrade to MS SQL Server 2012. I named a bunch of reasons and only remembered afterwards that the possibility to use Windows Server Core could also be a surplus. Just 2 days later this [Case for Core][1] post from Jeremiah Peschka ([blog][2] | [twitter][3]) made me realize there was a lot of work for me before I could say that running MS SQL Server 2012 on Windows Server Core. I already read the book [Microsoft SQL Server 2008 Administration with Windows PowerShell][4] and reviewed it [here][5].So I decided to try to avoid the usage of Remote Desktop as much as possible and finally start to use PowerShell on a daily basis. One of the first things I needed to do was the restore of a database on another server. So before I could start the restore I needed to check the servers' disk configuration and available space. So let's see how to do this with PowerShell.
   
 To get information about disks we use the win32_logicaldisk wmiobject and with the -computer parameter we specify our server name:
 
@@ -33,9 +33,9 @@ The result looks like this:
   <a href="/wp-content/uploads/users/axel8s/PSDiskInfo1.PNG?mtime=1349357595"><img alt="" src="/wp-content/uploads/users/axel8s/PSDiskInfo1.PNG?mtime=1349357595" width="232" height="536" /></a>
 </div>
 
-As you can see, the requested information is there and if I only need to do this just once it&#8217;s fine but I&#8217;m going to need this information several times on different servers so let’s make the result more user friendly.
+As you can see, the requested information is there and if I only need to do this just once it's fine but I'm going to need this information several times on different servers so let’s make the result more user friendly.
   
-First things first, let&#8217;s just select the data I need, with a pipe I pass the input from the Get-WmiObject to the second part of my command and there I use the Select-Object to specify the object that I want:
+First things first, let's just select the data I need, with a pipe I pass the input from the Get-WmiObject to the second part of my command and there I use the Select-Object to specify the object that I want:
 
 ```PowerShell
 Get-WmiObject win32_logicaldisk -computer <computername> | select-object DeviceID, VolumeName,Size,FreeSpace
@@ -47,7 +47,7 @@ This looks better:
   <a href="/wp-content/uploads/users/axel8s/PSDiskInfo2.png?mtime=1349357671"><img alt="" src="/wp-content/uploads/users/axel8s/PSDiskInfo2.png?mtime=1349357671" width="964" height="110" /></a>
 </div>
 
-Next step is to see the percentage free space. Using @{Name=&#8221;&#8221;,Expression={}}:
+Next step is to see the percentage free space. Using @{Name=””,Expression={}}:
 
 ```PowerShell
 Get-WmiObject win32_logicaldisk -computer <computername> | select-object DeviceID, VolumeName,Size,FreeSpace,@{Name="PCTFreeSpace";Expression={$_.FreeSpace/$_.Size*100}}

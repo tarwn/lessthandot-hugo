@@ -86,4 +86,4 @@ _Msg 41307, Level 16, State 1, Line 4
   
 The row size limit of 8060 bytes for memory optimized tables has been exceeded. Please simplify the table definition._
 
-Just be aware of these limitations if you are thinking about using Hekaton. There are also limitations with T-SQL, for example MERGE statement, TRUNCATE statement and identity columns can&#8217;t be used, certain functions can&#8217;t be used either. Make sure to look at the documentation to see what the restrictions are
+Just be aware of these limitations if you are thinking about using Hekaton. There are also limitations with T-SQL, for example MERGE statement, TRUNCATE statement and identity columns can't be used, certain functions can't be used either. Make sure to look at the documentation to see what the restrictions are

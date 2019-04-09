@@ -43,9 +43,9 @@ Here is what the database looked like after I did the maintenance
 
 As you can see I did nicely here, free space for fileid 4 went from 46 GB to 175 GB, for fileid 1 it went from 16 GB to 69 GB
 
-Of course I had to brag about this and then it happened&#8230;.the sentence you never want to hear&#8230;&#8230;.how come you didn&#8217;t shrink the database, the backups will still be as big&#8230;you are wasting space&#8230;.if only I could send Paul Randal or Ted Krueger to this person&#8230;&#8230;.
+Of course I had to brag about this and then it happened….the sentence you never want to hear…….how come you didn't shrink the database, the backups will still be as big…you are wasting space….if only I could send Paul Randal or Ted Krueger to this person…….
 
-So let&#8217;s debunk that myth shall we?
+So let's debunk that myth shall we?
 
 First create these 3 database, they will be 3 MB, 3 GB and 9 GB in size
 
@@ -117,6 +117,6 @@ Navigate to the folder and what do you see?
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/sqlfiles.PNG?mtime=1333217577"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/sqlfiles.PNG?mtime=1333217577" width="449" height="204" /></a>
 </div>
 
-That&#8217;s right there is only MBs difference between the 3MB database and the 3 GB database. I checked my production server and the backup took 30 minutes less to complete compared to the backups that ran before I freed up space
+That's right there is only MBs difference between the 3MB database and the 3 GB database. I checked my production server and the backup took 30 minutes less to complete compared to the backups that ran before I freed up space
 
-I won&#8217;t go into details here why shrinking the database is bad but I can guarantee you that it is no coincidence that shrink could mean _making the database smaller_ and _psychiatrist_ 🙂
+I won't go into details here why shrinking the database is bad but I can guarantee you that it is no coincidence that shrink could mean _making the database smaller_ and _psychiatrist_ 🙂

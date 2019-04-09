@@ -33,7 +33,7 @@ Subscriber: Azure SQL Database &#8211; server jessqldb2, database ReplicationTes
 
 ### Setting up the replication publisher
 
-You&#8217;ll need to start by configuring the AG current primary as Publisher. (In this demo, this is SQL2014AG2.) Then, you&#8217;ll need to configure the distributor that we set up in step 2 to use the AG listener name, rather than the server name.
+You'll need to start by configuring the AG current primary as Publisher. (In this demo, this is SQL2014AG2.) Then, you'll need to configure the distributor that we set up in step 2 to use the AG listener name, rather than the server name.
 
 Log into the primary &#8211; SQL2014AG2.
 
@@ -71,7 +71,7 @@ Snapshot Agent – choose to create a snapshot immediately. Click Next.
 
 Agent Security – click Security Settings to choose what account the snapshot and log reader agents will run under. Click OK. Click Next.
 
-(I could write an entire blog post about this, but that is better left to people more well-versed in replication than myself. I know that I don&#8217;t want to use the SQL Server Agent service account &#8211; I want to create an AD account that has been granted the permissions needed as described in  <a href="https://msdn.microsoft.com/en-us/library/ms151227.aspx" target="_blank">Replication Agent Security Model</a>.)
+(I could write an entire blog post about this, but that is better left to people more well-versed in replication than myself. I know that I don't want to use the SQL Server Agent service account &#8211; I want to create an AD account that has been granted the permissions needed as described in  <a href="https://msdn.microsoft.com/en-us/library/ms151227.aspx" target="_blank">Replication Agent Security Model</a>.)
 
 [<img class="aligncenter size-full wp-image-4932" src="/wp-content/uploads/2016/12/publisher-8.png" alt="publisher 8" width="553" height="474" srcset="/wp-content/uploads/2016/12/publisher-8.png 553w, /wp-content/uploads/2016/12/publisher-8-300x257.png 300w" sizes="(max-width: 553px) 100vw, 553px" />][8]
 
@@ -101,7 +101,7 @@ After initializing, check the Snapshot Agent and Log Reader Agent for success. (
 
 Because my database is in an AG, I need to make sure that the distributor is configured on all the replicas in the AG. Note: you only have to do this step for the first publication &#8211; not each subsequent publication.
 
-In this example, I&#8217;ll need to configure SQL2014AG1, the other replica.
+In this example, I'll need to configure SQL2014AG1, the other replica.
 
 Connect to SQL2014AG1. Right-click Replication and select Configure Distribution.
 
@@ -147,7 +147,7 @@ After doing that, in Object Explorer, expand Server Objects > Linked Servers. Ri
 
 This needs to be done for every publication you set up where the database is in an AG.
 
-This step also needs to be done from the distributor server &#8211; you can&#8217;t do this from SSMS on another server or your workstation. You must RDP to the distributor and run these commands &#8211; in SSMS or even SQL CMD.
+This step also needs to be done from the distributor server &#8211; you can't do this from SSMS on another server or your workstation. You must RDP to the distributor and run these commands &#8211; in SSMS or even SQL CMD.
 
 Connect to the distributor.
 

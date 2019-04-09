@@ -15,13 +15,13 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-I&#8217;ve seen this question numerous times in the forums I like to frequent. The idea is, when you create a new database, you may want that database to have several tables, some of which are automatically populated with data (thinking about relatively static lookup tables here).
+I've seen this question numerous times in the forums I like to frequent. The idea is, when you create a new database, you may want that database to have several tables, some of which are automatically populated with data (thinking about relatively static lookup tables here).
 
 The process mentioned here may not be useful for everyone, but it is certainly something to consider.
 
 There is a system database named Model. This database is used when you create a new user database. In fact, any object (table, view, stored procedures, functions, etc…) that exists in the model database will be copied to your newly created database. This may be a blessing and a curse, so use this suggestion wisely. If you have a SQL Instance where you need to set up a new database for each customer, and that is all the instance is used for, then it makes sense to create your objects in the Model database. However, if you have a general purpose instance that you are using for various databases, you probably won’t want to put your objects in the Model database. 
 
-Enough of the chatter, let&#8217;s see how this can be done.
+Enough of the chatter, let's see how this can be done.
 
 First, create a table in the Model database.
 
@@ -41,7 +41,7 @@ use Master
 go
 Create Database NewDatabaseWithModelTable
 ```
-Now, let&#8217;s make sure the table (and it&#8217;s data) exist in the new database.
+Now, let's make sure the table (and it's data) exist in the new database.
 
 sql
 use NewDatabaseWithModelTable

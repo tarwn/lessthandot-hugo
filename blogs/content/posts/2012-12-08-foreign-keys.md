@@ -31,11 +31,11 @@ tags:
   - ssms
 
 ---
-This is day eight of the [SQL Advent 2012 series][1] of blog posts. In yesterday&#8217;s post [SQL Advent 2012 Day 7: Lack of constraints][2] we touched a little upon foreign key constraints but today we are going to take a closer look at foreign keys. The two things that we are going to cover are the fact that you don&#8217;t need a primary key in order to define a foreign key relationship, SQL Server by default will not index foreign keys
+This is day eight of the [SQL Advent 2012 series][1] of blog posts. In yesterday's post [SQL Advent 2012 Day 7: Lack of constraints][2] we touched a little upon foreign key constraints but today we are going to take a closer look at foreign keys. The two things that we are going to cover are the fact that you don't need a primary key in order to define a foreign key relationship, SQL Server by default will not index foreign keys
 
-## You don&#8217;t need a primary key in order to have a foreign key
+## You don't need a primary key in order to have a foreign key
 
-Most people will define a foreign key relationship between the foreign key and a primary key. You don&#8217;t have to have a primary key in order to have a foreign key, if you have a unique index or a unique constraint then those can be used as well. Let&#8217;s take a look at what that looks like with some code examples
+Most people will define a foreign key relationship between the foreign key and a primary key. You don't have to have a primary key in order to have a foreign key, if you have a unique index or a unique constraint then those can be used as well. Let's take a look at what that looks like with some code examples
 
 **A foreign key with a unique constraint instead of a primary key**
   
@@ -69,11 +69,11 @@ GO
 
 _Msg 2627, Level 14, State 1, Line 2
   
-Violation of UNIQUE KEY constraint &#8216;ix_unique&#8217;. Cannot insert duplicate key in object &#8216;dbo.TestUniqueConstraint&#8217;. The duplicate key value is (1).
+Violation of UNIQUE KEY constraint &#8216;ix_unique'. Cannot insert duplicate key in object &#8216;dbo.TestUniqueConstraint'. The duplicate key value is (1).
   
 The statement has been terminated._
 
-Now that we verified that we can&#8217;t have duplicates, it is time to create the table that will have the foreign key
+Now that we verified that we can't have duplicates, it is time to create the table that will have the foreign key
 
 sql
 CREATE TABLE TestForeignConstraint(id int)
@@ -103,11 +103,11 @@ INSERT TestForeignConstraint  VALUES(2)
 
 _Msg 547, Level 16, State 0, Line 1
   
-The INSERT statement conflicted with the FOREIGN KEY constraint &#8220;FK\_TestForeignConstraint\_TestUniqueConstraint&#8221;. The conflict occurred in database &#8220;tempdb&#8221;, table &#8220;dbo.TestUniqueConstraint&#8221;, column &#8216;id&#8217;.
+The INSERT statement conflicted with the FOREIGN KEY constraint “FK\_TestForeignConstraint\_TestUniqueConstraint”. The conflict occurred in database “tempdb”, table “dbo.TestUniqueConstraint”, column &#8216;id'.
   
 The statement has been terminated._
 
-As you can see, you can&#8217;t insert the value 2 since it doesn&#8217;t exist in the TestUniqueConstraint table
+As you can see, you can't insert the value 2 since it doesn't exist in the TestUniqueConstraint table
 
 **A foreign key with a unique index instead of a primary key**
   
@@ -143,11 +143,11 @@ GO
 
 _Msg 2601, Level 14, State 1, Line 2
   
-Cannot insert duplicate key row in object &#8216;dbo.TestUniqueIndex&#8217; with unique index &#8216;ix_unique&#8217;. The duplicate key value is (1).
+Cannot insert duplicate key row in object &#8216;dbo.TestUniqueIndex' with unique index &#8216;ix_unique'. The duplicate key value is (1).
   
 The statement has been terminated._
 
-Now that we verified that we can&#8217;t have duplicates, it is time to create the table that will have the foreign key
+Now that we verified that we can't have duplicates, it is time to create the table that will have the foreign key
 
 sql
 CREATE TABLE TestForeignIndex(id int)
@@ -177,11 +177,11 @@ INSERT TestForeignIndex  VALUES(2)
 
 _Msg 547, Level 16, State 0, Line 1
   
-The INSERT statement conflicted with the FOREIGN KEY constraint &#8220;FK\_TestForeignIndex\_TestUniqueIndex&#8221;. The conflict occurred in database &#8220;tempdb&#8221;, table &#8220;dbo.TestUniqueIndex&#8221;, column &#8216;id&#8217;.
+The INSERT statement conflicted with the FOREIGN KEY constraint “FK\_TestForeignIndex\_TestUniqueIndex”. The conflict occurred in database “tempdb”, table “dbo.TestUniqueIndex”, column &#8216;id'.
   
 The statement has been terminated._
 
-As you can see, you can&#8217;t insert the value 2 since it doesn&#8217;t exist in the TestUniqueIndex table
+As you can see, you can't insert the value 2 since it doesn't exist in the TestUniqueIndex table
 
 As you have seen with the code example, you can have a foreign key constraint that will reference a unique index or a unique constraint in addition to be able to reference a primary key
 
@@ -217,7 +217,7 @@ TestUniqueIndex	        ix_unique	NONCLUSTERED</pre>
 
 As you can see both tables have an index
 
-Now let&#8217;s look at what the case is for the foreign key tables. Run the query below
+Now let's look at what the case is for the foreign key tables. Run the query below
 
 sql
 SELECT OBJECT_NAME(object_id) as TableName,
@@ -235,7 +235,7 @@ TestForeignConstraint	NULL	HEAP
 TestForeignIndex	NULL	HEAP
 </pre>
 
-As you can see no indexes have been added to the tables. Should you add indexes? In order to answer that let&#8217;s see what would happen if you did add indexes. Joins would perform faster since it can traverse the index instead of the whole table to find the matching join conditions. Updates and deletes will be faster as well since the index can be used to find the foreign keys rows to update or delete (remember this depends if you specified CASCADE or NO ACTION when you create the foreign key constraint)
+As you can see no indexes have been added to the tables. Should you add indexes? In order to answer that let's see what would happen if you did add indexes. Joins would perform faster since it can traverse the index instead of the whole table to find the matching join conditions. Updates and deletes will be faster as well since the index can be used to find the foreign keys rows to update or delete (remember this depends if you specified CASCADE or NO ACTION when you create the foreign key constraint)
   
 So to answer the question, yes, I think you should index the foreign key columns
 

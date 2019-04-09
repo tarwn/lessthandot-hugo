@@ -17,17 +17,17 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Throughout the day, I probably write 5 to 15 short scripts to accomplish tasks that really, have no real purpose for future use.  That is, they aren&#8217;t worth saving.  Typically this is because the script, like the one below, is easier to write than it is to search a folder to find.
+Throughout the day, I probably write 5 to 15 short scripts to accomplish tasks that really, have no real purpose for future use.  That is, they aren't worth saving.  Typically this is because the script, like the one below, is easier to write than it is to search a folder to find.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/trashbin.jpg?mtime=1352997880"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/trashbin.jpg?mtime=1352997880" width="320" height="213" /></a>
 </div>
 
-Just about the time I was going to hit delete I thought; why not post them on [LTD&#8217;s Wiki][1]?
+Just about the time I was going to hit delete I thought; why not post them on [LTD's Wiki][1]?
 
-Well, that is what I&#8217;m going to start attempting to do.  Don&#8217;t get too excited.  There have been some good scripts that have gotten a lot of use, both from me and readers.  Scripts like the [Orphaned fix script][2].  That script really came from the same situation.  I needed a quick script so I wrote it quickly.  Before throwing that one out, I realized it had some value given the steps that it resolves and the repeated need to fix orphaned users in databases.
+Well, that is what I'm going to start attempting to do.  Don't get too excited.  There have been some good scripts that have gotten a lot of use, both from me and readers.  Scripts like the [Orphaned fix script][2].  That script really came from the same situation.  I needed a quick script so I wrote it quickly.  Before throwing that one out, I realized it had some value given the steps that it resolves and the repeated need to fix orphaned users in databases.
 
-Another way to get them out there, blogging them.  On that note, today&#8217;s short-throw-away script is grabbing the count of tables in a database and printing them out in SSMS with the table name.  This was for a quick reply in an email.  Hopefully it will help someone else out at some point.
+Another way to get them out there, blogging them.  On that note, today's short-throw-away script is grabbing the count of tables in a database and printing them out in SSMS with the table name.  This was for a quick reply in an email.  Hopefully it will help someone else out at some point.
 
 To add to all of this and the idea, I’m tagging anyone that reads this to do the same on your own blog.  All of those quick hacks in T-SQL or even C# and so on, post them up.  It’s a blog post, it’s sharing and it just might save someone a lot of time.
 

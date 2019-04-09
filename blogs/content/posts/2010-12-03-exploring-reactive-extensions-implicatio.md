@@ -16,7 +16,7 @@ categories:
   - Microsoft Technologies
 
 ---
-I&#8217;m pretty sure this is going to be necessary post 🙂
+I'm pretty sure this is going to be necessary post 🙂
 
 OS &#8211; level threads are good, but they will only take you so far (and kind of back you into a corner)
 

@@ -13,7 +13,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Today my subscription from SQL Server Central had this for the question of the day, &#8220;Which of the following statements would you use to allow read-only access to the data and objects held within the mirrored copy of a mirrored database, without breaking the mirroring session?&#8221;
+Today my subscription from SQL Server Central had this for the question of the day, “Which of the following statements would you use to allow read-only access to the data and objects held within the mirrored copy of a mirrored database, without breaking the mirroring session?”
 
 The answer is pretty easy but I noticed there was an alarming amount of answers that were wrong. Mostly saying an ALTER for READ_ONLY was the way to get the job done. I decided this would make a good write on how to actually do it. I needed a DB and a mirror of that DB first so here is how we get that set up.
 
@@ -121,4 +121,4 @@ CREATE DATABASE PRINCIPLE_DB_COPY
 ON (NAME = 'PRINCIPLE_DB', FILENAME = 'C:PRINCPLE_DB_COPY.SNP')
    AS SNAPSHOT OF PRINCIPLE_DB
 ```
-If you go under the Database Snapshots tree now in SSMS, you should see PRINCIPLE\_DB\_COPY. Do a &#8220;SELECT * FROM TBL&#8221; and we can now read our data off the mirror using snapshots in a read-only mode.
+If you go under the Database Snapshots tree now in SSMS, you should see PRINCIPLE\_DB\_COPY. Do a “SELECT * FROM TBL” and we can now read our data off the mirror using snapshots in a read-only mode.

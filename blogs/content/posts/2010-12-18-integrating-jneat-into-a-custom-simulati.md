@@ -32,7 +32,7 @@ Download the latest version: http://nn.cs.utexas.edu/?neat-java
   
 Download and install Apache Ant: http://ant.apache.org/ (\`apt-get install ant\` on Ubuntu/Debian)
 
-It&#8217;s fairly straightforward to build a jNEAT library using Ant. Extract the archive somewhere and place the following code into build.xml in the root directory.
+It's fairly straightforward to build a jNEAT library using Ant. Extract the archive somewhere and place the following code into build.xml in the root directory.
 
 ```xml
 <project name="jneat" default="jar" basedir=".">
@@ -80,7 +80,7 @@ The only parameters we need to worry about are the population size, network inpu
 
 ## Evaluation
 
-Evaluate the population by running your simulation for a set period of time, query each organism&#8217;s network for actions every update.
+Evaluate the population by running your simulation for a set period of time, query each organism's network for actions every update.
 
 ```java
 // Within main simulation loop
@@ -144,9 +144,9 @@ There are a couple of methods which can be used to see if the population is chan
 
 <code class="codespan">neatPop.viewtext();</code>
 
-This will print a breakdown of the population and can help diagnose problems if you aren&#8217;t seeing any improvements.
+This will print a breakdown of the population and can help diagnose problems if you aren't seeing any improvements.
 
-jNEAT also comes with a handy GUI which can display a visual representation of each organism&#8217;s neural network. Before doing this the population needs to be saved to a file:
+jNEAT also comes with a handy GUI which can display a visual representation of each organism's neural network. Before doing this the population needs to be saved to a file:
 
 <code class="codespan">neatPop.print_to_file_by_species("SavedPopulation.txt");</code>
 

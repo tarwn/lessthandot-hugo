@@ -92,7 +92,7 @@ It’s the network! Blaming the network on slow performance is fun. Network and 
 
 ### 11. Allowing Jane and John to write T-SQL because they know how to write SELECT *
 
-So the CFO comes to your office and he just went to this really cool lightshow expo in Vegas to release SQL Server 30099 R500. Best lightshow he has ever seen. Even better was that the really good sales guy up on the stage popped open SQL Server Management Studio version fifty billion and started bringing up data. Yes, you guessed it. He just asked for you to install that really neat tool on his laptop so he can, &#8220;Get data&#8221;. Scary! Put policies in place to prevent this. Even for senior staff. Someone in an office with their finger on the F5 key and a SELECT * FROM reallybloodyhugeandwidetable is your nightmare come true. 
+So the CFO comes to your office and he just went to this really cool lightshow expo in Vegas to release SQL Server 30099 R500. Best lightshow he has ever seen. Even better was that the really good sales guy up on the stage popped open SQL Server Management Studio version fifty billion and started bringing up data. Yes, you guessed it. He just asked for you to install that really neat tool on his laptop so he can, “Get data”. Scary! Put policies in place to prevent this. Even for senior staff. Someone in an office with their finger on the F5 key and a SELECT * FROM reallybloodyhugeandwidetable is your nightmare come true. 
 
 
 

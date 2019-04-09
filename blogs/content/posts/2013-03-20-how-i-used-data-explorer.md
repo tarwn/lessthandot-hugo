@@ -46,7 +46,7 @@ Recently, I had to create a demo for showcasing PowerPivot and Power View in Off
 
 <span style="text-align: justify;">Next I import similar data sets containing list of countries with their location and also some lists with unemployment rates, population and gross national income. All I need to do some serious analyses on what are the key contributing factors in winning a gold medal at the Olympics.</span>
 
-After I imported everything into PowerPivot, I did some rudimentary data cleansing. The hardest part was to match countries from different lists. For example, is it North Korea or Democratic People&#8217;s Republic of Korea? Finally I have the following model:
+After I imported everything into PowerPivot, I did some rudimentary data cleansing. The hardest part was to match countries from different lists. For example, is it North Korea or Democratic People's Republic of Korea? Finally I have the following model:
 
 <a style="text-align: center;" href="/media/users/koenverbeeck/DataExplorerDemo/diagram.png?mtime=1363781203"><img src="/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/diagram.png?mtime=1363781203" alt="" width="722" height="380" /></a>
 

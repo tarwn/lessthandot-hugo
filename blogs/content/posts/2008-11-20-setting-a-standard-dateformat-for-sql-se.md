@@ -23,7 +23,7 @@ sp_configure 'default language'
 
 This will tell you what the default language is (sort of). It actually returns a config_value with an integer that represents the language id.
 
-You can then run&#8230;
+You can then run…
 
 sql
 sp_helplanguage
@@ -31,13 +31,13 @@ sp_helplanguage
 
 You will see a list of languages that SQL Server supports. 
 
-The odd thing here is that the server&#8217;s language setting will not solve your problem. This setting configures the default language for NEW users. By changing this setting, existing users will continue to have their original language. This is where it gets interesting because it&#8217;s the login&#8217;s language setting that determines SQL Server&#8217;s date format.
+The odd thing here is that the server's language setting will not solve your problem. This setting configures the default language for NEW users. By changing this setting, existing users will continue to have their original language. This is where it gets interesting because it's the login's language setting that determines SQL Server's date format.
 
-For example, if user A has a default language of us_english, then a date of 4/6/2006 will be interpreted as April 6, 2006. If user B has a default language of &#8216;British&#8217;, then the date will be interpreted as June 4, 2006.
+For example, if user A has a default language of us_english, then a date of 4/6/2006 will be interpreted as April 6, 2006. If user B has a default language of &#8216;British', then the date will be interpreted as June 4, 2006.
 
-So far, I&#8217;m just presenting some background information and haven&#8217;t really solved the problem. 
+So far, I'm just presenting some background information and haven't really solved the problem. 
 
-The good news is that you can change the default language for a user so that subsequent logins will exhibit the correct interpretation of dates. Here&#8217;s how:
+The good news is that you can change the default language for a user so that subsequent logins will exhibit the correct interpretation of dates. Here's how:
 
 You can set the default language for a user by issueing the following command.
 
@@ -64,9 +64,9 @@ Select Convert(DateTime, '4/6/2006'),
 ```
 _**Summary**_
   
-You can set the default language for new logins by configuring the server&#8217;s default language by using sp_configure.
+You can set the default language for new logins by configuring the server's default language by using sp_configure.
 
-You can change a user&#8217;s default language by using sp_defaultlanguage.
+You can change a user's default language by using sp_defaultlanguage.
 
 You can temporarily change the language for a query by using Set Language
 

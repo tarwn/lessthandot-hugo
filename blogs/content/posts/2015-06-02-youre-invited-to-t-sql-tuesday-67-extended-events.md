@@ -17,11 +17,11 @@ categories:
   - Uncategorized
 
 ---
-<img class="alignleft" src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="T-SQL Tuesday #67" width="154" height="154" />We meet again for another edition of T-SQL Tuesday! On Tuesday, June 9, 2015, you&#8217;re invited to blog about a chosen topic. Link back to this blog post, read what others have written, and post about it on Twitter. We share knowledge and get to know other bloggers!
+<img class="alignleft" src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="T-SQL Tuesday #67" width="154" height="154" />We meet again for another edition of T-SQL Tuesday! On Tuesday, June 9, 2015, you're invited to blog about a chosen topic. Link back to this blog post, read what others have written, and post about it on Twitter. We share knowledge and get to know other bloggers!
 
-The June 2015 topic is Extended Events. I want to know (and others do, too) how you&#8217;ve solved problems with Extended Events. What sessions have you created? What unique way have you used predicates or targets? What challenges have you overcome?
+The June 2015 topic is Extended Events. I want to know (and others do, too) how you've solved problems with Extended Events. What sessions have you created? What unique way have you used predicates or targets? What challenges have you overcome?
 
-If you&#8217;re thinking, &#8220;I haven&#8217;t used Extended Events!&#8221; or &#8220;I don&#8217;t know enough about Extended Events to write a blog about it!&#8221;, perfect! I want you to write a blog that lists the questions you have. That way, other contributors can leave comments with suggestions, or link to their blogs that give you answers. Don&#8217;t be shy! We all started out knowing nothing about this new feature.
+If you're thinking, “I haven't used Extended Events!” or “I don't know enough about Extended Events to write a blog about it!”, perfect! I want you to write a blog that lists the questions you have. That way, other contributors can leave comments with suggestions, or link to their blogs that give you answers. Don't be shy! We all started out knowing nothing about this new feature.
 
 ### The Rules
 

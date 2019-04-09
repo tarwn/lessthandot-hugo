@@ -54,7 +54,7 @@ categories:
     </div>
 
   * <div class="MsoNormal" style="text-align: justify; line-height: normal; text-indent: -0.25in; margin: 0in 0in 10pt 37.25pt; background: white; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;">
-      <span style="font-family: &amp;quot; color: black; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">Memory mismanagement – the advent of 64-bit SQL Server removes the memory allocation &#8220;shackles&#8221; placed on its 32-bit predecessors, but issues arising from incorrect memory configuration are still common </span>
+      <span style="font-family: &amp;quot; color: black; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">Memory mismanagement – the advent of 64-bit SQL Server removes the memory allocation “shackles” placed on its 32-bit predecessors, but issues arising from incorrect memory configuration are still common </span>
     </div>
 
   * <div class="MsoNormal" style="text-align: justify; line-height: normal; text-indent: -0.25in; margin: 0in 0in 10pt 37.25pt; background: white; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;">
@@ -74,7 +74,7 @@ categories:
     </div>
 
   * <div class="MsoNormal" style="text-align: justify; line-height: normal; text-indent: -0.25in; margin: 0in 0in 10pt 37.25pt; background: white; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;">
-      <span style="font-family: &amp;quot; color: black; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">Accidentally-lost data – &#8220;oops, wrong database!&#8221; Let&#8217;s hope you&#8217;ve got backups!</span>
+      <span style="font-family: &amp;quot; color: black; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">Accidentally-lost data – “oops, wrong database!” Let's hope you've got backups!</span>
     </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">

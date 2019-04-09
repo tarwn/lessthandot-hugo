@@ -27,13 +27,13 @@ I like to use BULK INSERT or bcp as much as possible, this is especially true if
 
 Make sure to use something other than notepad when dealing with these files and you want to look at them. Notepad++ or Editplus have more functionality and are many times faster than notepad. The nice thing about either of these is that you can see control characters.
 
-See how you can see the linefeeds here? Can&#8217;t do that in notepad
+See how you can see the linefeeds here? Can't do that in notepad
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/LineFeedFile.PNG?mtime=1360855487"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/LineFeedFile.PNG?mtime=1360855487" width="421" height="223" /></a>
 </div>
 
-So let&#8217;s say you get a file where the row terminator is a linefeed, how would you specify that as a row terminator in BULK INSERT?
+So let's say you get a file where the row terminator is a linefeed, how would you specify that as a row terminator in BULK INSERT?
 
 You can try newline
 
@@ -45,7 +45,7 @@ BULK INSERT SomeTable
          ROWTERMINATOR = 'n')
 ```
 
-Nope, that doesn&#8217;t work, you get 0 rows inserted
+Nope, that doesn't work, you get 0 rows inserted
 
 You can try carriage return
 
@@ -57,7 +57,7 @@ BULK INSERT SomeTable
          ROWTERMINATOR = 'r')
 ```
 
-Nope, that doesn&#8217;t work either, you get 0 rows inserted
+Nope, that doesn't work either, you get 0 rows inserted
 
 What about l for linefeed?
 
@@ -89,7 +89,7 @@ You get this error
   
 Msg 102, Level 15, State 1, Line 5
   
-Incorrect syntax near &#8216;CHAR&#8217;.
+Incorrect syntax near &#8216;CHAR'.
 
 Mmm, what if you embed it from within Dynamic SQL
 

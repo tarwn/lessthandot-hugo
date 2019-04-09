@@ -89,7 +89,7 @@ Choose Single color map and Display labels. Select the label #COUNTYNAME.
   <img src="/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz4.JPG?mtime=1332901368" alt="" />
 </p>
 
-When you click Finish, you&#8217;ll be taken to the Report Builder main screen.
+When you click Finish, you'll be taken to the Report Builder main screen.
 
 You can click on “Map Title” to change this.
 
@@ -156,7 +156,7 @@ _Choose spatial data and map view options_
   * Spatial field &#8211; Make sure this is set to the field in the query that contains the spatial data, SpatialLocation. 
   * Layer type &#8211; Choose Point, to display one point. A polygon would outline and area, and line could be used to mark a path. 
 
-You won&#8217;t “Embed map data” or “Add a Bing Maps layer” on this layer, in this example.
+You won't “Embed map data” or “Add a Bing Maps layer” on this layer, in this example.
 
  
 
@@ -186,13 +186,13 @@ Use marker types, based on City, and marker colors, for the SUM(Sales).
 
 ![][11]
 
-Click Finish and you&#8217;ll be taken back to the main screen. Now, you can see two layers have been added to the map.
+Click Finish and you'll be taken back to the main screen. Now, you can see two layers have been added to the map.
 
 ![][12]
 
 Click Run to view the results.
 
-Here, you&#8217;ll see a point for each city that has a store. Each point has a different marker (circle, square, pin, etc.) The color of the marker is going to vary based on the amount of sales – the lowest (Endicott) is white, the highest (Melville) is red.
+Here, you'll see a point for each city that has a store. Each point has a different marker (circle, square, pin, etc.) The color of the marker is going to vary based on the amount of sales – the lowest (Endicott) is white, the highest (Melville) is red.
 
 ![][13]
 

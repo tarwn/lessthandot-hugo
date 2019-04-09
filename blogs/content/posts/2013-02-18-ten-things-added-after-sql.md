@@ -47,7 +47,7 @@ Here are the ten things I like the most
 	  
 * DMVs
 
-Let&#8217;s take a look into some more detail why I like these features.
+Let's take a look into some more detail why I like these features.
 
 **Date and time data types**
   
@@ -59,7 +59,7 @@ Data compression was added in SQL Server 2008 as well. I use data compression mo
 
 **Windowing functions**
   
-The windowing functions row\_number, rank and dense\_rank are being used all over the place now. This was added in SQL Server 2005 and at least now I don&#8217;t have to look up the syntax every time I want to use them. This simplified a lot for me, no more running counts and using temp tables with identity columns to provide a row number. More about windowing functions can be found here: [Windowing Functions][2]
+The windowing functions row\_number, rank and dense\_rank are being used all over the place now. This was added in SQL Server 2005 and at least now I don't have to look up the syntax every time I want to use them. This simplified a lot for me, no more running counts and using temp tables with identity columns to provide a row number. More about windowing functions can be found here: [Windowing Functions][2]
 
 **Partitioning**
   
@@ -83,7 +83,7 @@ Error handling was very primitive until SQL Server 2005. You had to deal with er
 
 **Varchar max**
   
-If you ever worked with text and ntext you know what a pain in the neck those data types are. A whole bunch of functions don&#8217;t work and there are tons of other restrictions as well. The (max) datatypes makes this much more manageable and easier than before. More can be found here: [varchar(max)][9]
+If you ever worked with text and ntext you know what a pain in the neck those data types are. A whole bunch of functions don't work and there are tons of other restrictions as well. The (max) datatypes makes this much more manageable and easier than before. More can be found here: [varchar(max)][9]
 
 **DMVs**
   
@@ -121,7 +121,7 @@ Mirroring was added to SQl Server 2005 Service Pack 1, it was also in the RTM ve
 
 **Pivot and unpivot**
   
-Pivot is a nice addition but if you don&#8217;t know the columns beforehand you will need to use dynamic SQL. I still have to lookup pivot and unpivot every time I use them since the syntax is a little complex. More can be found here [Crosstab with PIVOT][11] and [UNPIVOT][12]
+Pivot is a nice addition but if you don't know the columns beforehand you will need to use dynamic SQL. I still have to lookup pivot and unpivot every time I use them since the syntax is a little complex. More can be found here [Crosstab with PIVOT][11] and [UNPIVOT][12]
 
 **Columnstore indexes**
   
@@ -153,7 +153,7 @@ I use the object\_definition function all the time. If I need to see in how many
 
  **Compound Operators**
   
-Compound Operators make it possible to declare and assign a value at the same time, for example `declare @i int =5;` This makes for compact code and you don&#8217;t have to search where the variable is initialized. More information can be found here: [Compound Operators Or How T-SQL Is Morphing Into VB Or C#][20]
+Compound Operators make it possible to declare and assign a value at the same time, for example `declare @i int =5;` This makes for compact code and you don't have to search where the variable is initialized. More information can be found here: [Compound Operators Or How T-SQL Is Morphing Into VB Or C#][20]
 
 * * *
 
@@ -163,7 +163,7 @@ Compound Operators make it possible to declare and assign a value at the same ti
 
 
 
-I could go on and on about even more stuff I like, I am just going to list 15 or so more things infomercial style&#8230;.. 
+I could go on and on about even more stuff I like, I am just going to list 15 or so more things infomercial style….. 
 
 SSMS
   
@@ -193,7 +193,7 @@ Optimize for ad hoc workloads
   
 Snapshot Isolation
 
-Now let&#8217;s hear it from you, what do you like the most that they have added since SQL Server 2005? I wonder how difficult it would be to pick out the DBAs from the developers based on the items people list 🙂
+Now let's hear it from you, what do you like the most that they have added since SQL Server 2005? I wonder how difficult it would be to pick out the DBAs from the developers based on the items people list 🙂
 
  [1]: /index.php/DataMgmt/DBProgramming/MSSQLServer/sql-advent-2011-day-1
  [2]: /index.php/DataMgmt/DataDesign/sql-advent-2011-day-6

@@ -18,7 +18,7 @@ tags:
   - data warehouse
 
 ---
-Most of the scripts I&#8217;ve used to populate date dimension uses a cursor. Since data is loaded only once to a date dimension in the ETL life cycle, using a cursor isn&#8217;t a sin.
+Most of the scripts I've used to populate date dimension uses a cursor. Since data is loaded only once to a date dimension in the ETL life cycle, using a cursor isn't a sin.
 
 Still, when I was reviewing my own code the other day, I wanted to get rid of the cursor. _Why not, Right_?
 
@@ -61,11 +61,11 @@ SELECT datekey = CAST(CONVERT(VARCHAR(8), DATEADD(day, Num, @startdate), 112) AS
 FROM d
 ```
 
-Let&#8217;s take a closer look:
+Let's take a closer look:
 
   1. Variables StartDate and EndDate hold the date range for the result set.
   2. We define a CTE (called c) that uses Row_Number() function to generate numbers starting from zero for each row in sys.columns. sys.columns is cross joined to itself to generate more number of [input] rows.
   3. We define another CTE (called d) that uses numbers from c, filters on date range, and converts numbers to dates based on the date variables.
   4. Finally, the Select statement uses Num and Date column aliases created by the two CTEs and date functions to create additional fields for the date dimension.
 
-You&#8217;ll notice that the script doesn&#8217;t have all columns a date dimension typically has. Don&#8217;t call me lazy for that &#8211; it provides the logic and skeleton to add more columns. Just add them as needed.
+You'll notice that the script doesn't have all columns a date dimension typically has. Don't call me lazy for that &#8211; it provides the logic and skeleton to add more columns. Just add them as needed.

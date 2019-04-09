@@ -65,7 +65,7 @@ FROM wp_term_taxonomy TT
    INNER JOIN wp_terms T ON T.term_id = TT.term_id
 WHERE taxonomy = 'category'
 ```
-I wasn&#8217;t sure if I was going to use the name or slug in the &#8220;file path&#8221;, so I grabbed both. I also grabbed the parent so I could recursively build the paths in Excel.
+I wasn't sure if I was going to use the name or slug in the “file path”, so I grabbed both. I also grabbed the parent so I could recursively build the paths in Excel.
 
 ### 3. Generate Category Paths in Excel
 
@@ -73,7 +73,7 @@ Before building out my final list of post data, I need to recursively build out 
 
 `=IF($B1=0,$C1,VLOOKUP($B1,$A$1:$E$126,5) & "/" & $C1)`
 
-If the category has a parent id of 0, we know it&#8217;s a parent category and output it&#8217;s name alone. Otherwise we VLOOKUP to find the name of the parent and prepend it to the current rows category name. This gives us a table of category paths to reference from our post data.
+If the category has a parent id of 0, we know it's a parent category and output it's name alone. Otherwise we VLOOKUP to find the name of the parent and prepend it to the current rows category name. This gives us a table of category paths to reference from our post data.
 
 ### 4. Assign Colors in Excel
 
@@ -83,21 +83,21 @@ Nothing fancy, but this will let me use a VLOOKUP from the posts tab to produce 
 
 ### 5. Build the log file in Excel
 
-With the results of the first query in an excel tab named &#8220;wp\_posts&#8221; and the categories in &#8220;wp\_term\_taxonomy&#8221;, I add some extra rows in the wp\_posts sheet to accommodate calculated fields I will be adding:
+With the results of the first query in an excel tab named “wp\_posts” and the categories in “wp\_term\_taxonomy”, I add some extra rows in the wp\_posts sheet to accommodate calculated fields I will be adding:
 
 A:unix timestamp, B:author, C:A/M, D:(inserted), E:(inserted), F:(inserted), G:post title, H:category/term id
 
-In Column D, I add the following lookup to build the &#8220;File path&#8221;:
+In Column D, I add the following lookup to build the “File path”:
 
 `="LessThanDot/" & VLOOKUP($H1,wp_term_taxonomy!$A$1:$E$126,5,FALSE) & "/" & G1`
 
-This uses VLOOKUP to find the category &#8220;path&#8221;, prepends a root of &#8220;LessThanDot&#8221; and appends the post title, giving me something that looks like a file path.
+This uses VLOOKUP to find the category “path”, prepends a root of “LessThanDot” and appends the post title, giving me something that looks like a file path.
 
 In Column E, I do the VLOOKUP that grabs each authors assigned color:
 
 `=VLOOKUP(B1,colors!$A$2:$D$39,4,FALSE)`
 
-In Column F, I create a value that matches the format for Gource&#8217;s [Custom Log Format][2]:
+In Column F, I create a value that matches the format for Gource's [Custom Log Format][2]:
 
 `=A1&"|"&B1&"|"&C1&"|"&D1&"|"&E1`
 
@@ -112,7 +112,7 @@ Copying that column into a text file gives me something like this:
 ```
 ### Run Gource
 
-I&#8217;ve done several runs with Gource this weekend, so I&#8217;ve been playing with various combinations of settings. For this video, I wanted to display one of our old LessThanDot footer logos in the bottom right of the visualization, I suppressed the progress bar from the video, and made various tweaks to the time settings to speed up (5.5 years of posts with the default settings would have been loooong). 1280&#215;720 matches YouTube&#8217;s HD setting, and I tweaked the date format and color to make it stand out less.
+I've done several runs with Gource this weekend, so I've been playing with various combinations of settings. For this video, I wanted to display one of our old LessThanDot footer logos in the bottom right of the visualization, I suppressed the progress bar from the video, and made various tweaks to the time settings to speed up (5.5 years of posts with the default settings would have been loooong). 1280&#215;720 matches YouTube's HD setting, and I tweaked the date format and color to make it stand out less.
 
 `gource --logo site_logo_footer.png -1280x720 --logo-offset 30x30<br />
  --hide "progress" --font-colour 454545 --seconds-per-day .25 --auto-skip-seconds 1 -o gource.ppm --path posts.log --dat<br />

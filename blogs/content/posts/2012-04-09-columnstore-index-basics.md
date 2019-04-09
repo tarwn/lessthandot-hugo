@@ -58,7 +58,7 @@ Review the execution plan and the IO statistics generated from the query.
 
 _(60398 row(s) affected)_
 
-_Table &#8216;FactInternetSales&#8217;. Scan count 1, logical reads 2062, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;FactInternetSales'. Scan count 1, logical reads 2062, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
  
 
@@ -85,7 +85,7 @@ Then, execute the query to retrieve TotalProductCost and SalesAmount again and r
 
 _(60398 row(s) affected)_
 
-_Table &#8216;FactInternetSales&#8217;. Scan count 1, logical reads 311, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;FactInternetSales'. Scan count 1, logical reads 311, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
  
 
@@ -131,7 +131,7 @@ The columnstore index is now used.  Review the IO statistics.
 
 _(60398 row(s) affected)_
 
-_Table &#8216;FactInternetSales&#8217;. Scan count 1, logical reads 21, physical reads 2, read-ahead reads 4, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;FactInternetSales'. Scan count 1, logical reads 21, physical reads 2, read-ahead reads 4, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
  
 
@@ -269,9 +269,9 @@ This query generates the execution plan shown below
 
 The statistics IO that was generated from this query</p> 
 
-_Table &#8216;Worktable&#8217;. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
-_Table &#8216;FactInternetSales_VLT&#8217;. Scan count 5, logical reads 131348, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;FactInternetSales_VLT'. Scan count 5, logical reads 131348, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
  
 
@@ -298,9 +298,9 @@ Execute the same query again and review the execution plan that was generated an
 
  
 
-_Table &#8216;FactInternetSales_VLT&#8217;. Scan count 4, logical reads 116, physical reads 10, read-ahead reads 33, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;FactInternetSales_VLT'. Scan count 4, logical reads 116, physical reads 10, read-ahead reads 33, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
-_Table &#8216;Worktable&#8217;. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
  
 

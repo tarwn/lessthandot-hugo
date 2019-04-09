@@ -25,7 +25,7 @@ The PSS SQL Server Engineers explain what causes this, here is just a part of th
 
 > The Microsoft SQL Server Analysis Services support team has seen an increasing number of issues involving errors when attempting to execute queries against or deploy databases to instances of Analysis Services 2005 and Analysis Services 2008 that are configured for Kerberos authentication and running on Windows 2008 Server or Windows Vista. This note provides information regarding the errors that have been reported and investigated.
 > 
-> What we&#8217;ve found is that when a client application is running on an operating system that is Advanced Encryption Standard (AES) aware (i.e. Windows Vista and Windows 2008 Server) and connects to an Analysis Services server that is running on an operating system that is AES aware then one of the following error return values or error messages may surface.
+> What we've found is that when a client application is running on an operating system that is Advanced Encryption Standard (AES) aware (i.e. Windows Vista and Windows 2008 Server) and connects to an Analysis Services server that is running on an operating system that is AES aware then one of the following error return values or error messages may surface.
 > 
 > 0X80090302
   

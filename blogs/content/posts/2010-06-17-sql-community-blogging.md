@@ -24,7 +24,7 @@ tags:
   - sql university
 
 ---
-[SQL University][1] is one of the greatest concepts I&#8217;ve seen in the SQL Community. Thanks to Jorge Segarra ([Blog][2] | [Twitter][3])for coming up with it and organizing it. Today we are going to talk about something dear and close to the concept of SQL University. Blogging! Blogs are an important part of the concept of SQL University. With them we can easily bring this wealth of knowledge in the course syllabus format with writers from the SQL Community in a vast geographical range and range of expertise. 
+[SQL University][1] is one of the greatest concepts I've seen in the SQL Community. Thanks to Jorge Segarra ([Blog][2] | [Twitter][3])for coming up with it and organizing it. Today we are going to talk about something dear and close to the concept of SQL University. Blogging! Blogs are an important part of the concept of SQL University. With them we can easily bring this wealth of knowledge in the course syllabus format with writers from the SQL Community in a vast geographical range and range of expertise. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/ITProfessionals/blog.gif" alt="" title="" width="296" height="280" />
@@ -36,13 +36,13 @@ Promoting and sharing blogs doesn’t only bring with it satisfaction of sharing
 
 **My own personal story of blogging**
 
-I wrote my first blog in November of 2008. The title was, &#8220;[User to Schema to Roles for controlling security][4]&#8220;. I won’t lie; I have learned an enormous amount about how to blog since then. I’ve learned more about writing period! Writing is an art form and catching the audience’s attention is important when you write your blogs. The best part of blogging and writing in general is that everyone has their own way of getting the audience’s attention with humor, technical skills and just downright talent. You hold that talent inside you, but you need to try it to find it and build on it. 
+I wrote my first blog in November of 2008. The title was, “[User to Schema to Roles for controlling security][4]“. I won’t lie; I have learned an enormous amount about how to blog since then. I’ve learned more about writing period! Writing is an art form and catching the audience’s attention is important when you write your blogs. The best part of blogging and writing in general is that everyone has their own way of getting the audience’s attention with humor, technical skills and just downright talent. You hold that talent inside you, but you need to try it to find it and build on it. 
 
 In the SQL Community, we have hundreds (if not thousands) of bloggers out there writing daily and providing step-by-step articles that help us learn new things, fix old things and become better DBA’s all around. So why write your own if the wealth of knowledge exists and is still pouring out of all of these SQL Community members?
 
 _If it is written already, I don’t need to write it._ <-- Horrible statement! 
 
-The one reason I can give you to not hold back on starting up your own blog and sharing your SQL Server trials is: everyone sees a situation differently and replays that situation to an audience in many different ways. Your way (yes, yours) can be the way that a hundred people grasp while other perspectives leave them with questions. That reason alone takes, &#8220;it&#8217;s already done&#8221; and throws it down the truncate statement. (Haha! SQL nerd humor is awesome!) 
+The one reason I can give you to not hold back on starting up your own blog and sharing your SQL Server trials is: everyone sees a situation differently and replays that situation to an audience in many different ways. Your way (yes, yours) can be the way that a hundred people grasp while other perspectives leave them with questions. That reason alone takes, “it's already done” and throws it down the truncate statement. (Haha! SQL nerd humor is awesome!) 
 
 **Let people review them**
 
@@ -50,7 +50,7 @@ Letting your guard down and sending your drafted blogs to friends and peers in t
 
 A perfect example is a blog on using TRUNCATE\_ONLY. SHRINK and TRUNCATE\_ONLY are just bad. (Paul Randal ([Blog][5] | [Twitter][6]) [says so][7].) Very bad! Google TRUNCATE_ONLY log and you will find plenty of bad advice, unfortunately. The use of this option and action is really not a good thing to do on your SQL Servers. We do see a lot of blogs going out on the topic though, and complete step-by-step instructions on how to do it. If these blogs were placed under a technical review, the author may have gotten this reply:
 
-> _&#8220;Ted, I hate to say it but the blogs needs a lot of help in the technical realm. Your steps are perfect and solid for anyone to take and get a shrinkfile working. No doubt about that! The problem is, you don’t say anything about why shrinkfile is not good and when to use it. Just says: do it! I could see how that might lead to a DBA putting a shrinkfile (or database) into a job and running it endlessly. I would definitely add a description of the action and emergencies where it really is only called on.&#8221;_
+> _“Ted, I hate to say it but the blogs needs a lot of help in the technical realm. Your steps are perfect and solid for anyone to take and get a shrinkfile working. No doubt about that! The problem is, you don’t say anything about why shrinkfile is not good and when to use it. Just says: do it! I could see how that might lead to a DBA putting a shrinkfile (or database) into a job and running it endlessly. I would definitely add a description of the action and emergencies where it really is only called on.”_
 
 I can also honestly say that most of the SQL Community and bloggers we have would be polite and respectful in while doing a review like this. 
 
@@ -66,7 +66,7 @@ There are leaders in the SQL Community and those leaders all actively blog (and 
 
 **Still not convinced?**
 
-Mike Walsh contributes a lot to the SQL Community. A little while ago Mike spent the time writing a series on blogging. The blog series starts with a [video chat session with Brent Ozar][11] on experiences with blogging. Then the series goes into, &#8220;[Why I should blog][12]&#8220;, &#8220;[How should I blog][13]&#8221; and the second part of the [interview with Brent][14]. The series is excellent and answers a lot of questions and pumps you up to get into blogging SQL Server and about the community. If I haven’t convinced you how blogging can be extremely gratifying, Mike will. 
+Mike Walsh contributes a lot to the SQL Community. A little while ago Mike spent the time writing a series on blogging. The blog series starts with a [video chat session with Brent Ozar][11] on experiences with blogging. Then the series goes into, “[Why I should blog][12]“, “[How should I blog][13]” and the second part of the [interview with Brent][14]. The series is excellent and answers a lot of questions and pumps you up to get into blogging SQL Server and about the community. If I haven’t convinced you how blogging can be extremely gratifying, Mike will. 
 
 Thank you for taking the time to attend another SQL University course! Please take the time to fill out the [SQL University Course Evaluation][15].
 

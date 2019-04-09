@@ -29,7 +29,7 @@ Another year done and another year to look forward to. Last year I focused on th
 My original 2010 goals were light so I expanded the list fairly early. I did not end up achieving the whole list. There may be a lesson there.
 
 Read 15-30 Articles/Week
-:   According to Google Reader I read 2785 items (~53/week) last year. It&#8217;s not even worth estimating non-RSS articles, I reached this goal easily. Success.
+:   According to Google Reader I read 2785 items (~53/week) last year. It's not even worth estimating non-RSS articles, I reached this goal easily. Success.
 
 Read 12 on-topic Books
 :   My professional reading included 20 books this past year and there are several more I was in the process of reading when the year rolled over. Success.
@@ -50,7 +50,7 @@ Leadership
 
 ## 2011 Goals
 
-I&#8217;m starting with a larger number of goals this year. The numbers are based on last year as a baseline. I&#8217;ve attempted to keep them from being too aggressive as my son will put a lot of new and interesting demands on my time.
+I'm starting with a larger number of goals this year. The numbers are based on last year as a baseline. I've attempted to keep them from being too aggressive as my son will put a lot of new and interesting demands on my time.
 
 Topics this year are similar to last year:
 
@@ -97,6 +97,6 @@ And my goals for 2011:
 
 I suspect the reading goals will be low again, even with a newborn in the house (counting pleasure reading, I purchased over 50 books last year and likely read twice that). Which brings me to my biggest goal for 2011:
 
-Be a good first-time dad AND don&#8217;t fall of the internet at the same time.
+Be a good first-time dad AND don't fall of the internet at the same time.
 
 Here we go.

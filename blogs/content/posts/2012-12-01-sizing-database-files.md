@@ -27,11 +27,11 @@ tags:
   - tempdb
 
 ---
-This post will demonstrate that there is a difference in performance if you don&#8217;t size your database file accordingly. It is a good practice to have your database sized correctly for the next 6 to 12 months, you don&#8217;t want your server wasting cycles with growing files all the time. Figure out how big your files are now, figure out how much they will grow in the next year and size your files accordingly, check back every month or so to see if your estimates were correct. 
+This post will demonstrate that there is a difference in performance if you don't size your database file accordingly. It is a good practice to have your database sized correctly for the next 6 to 12 months, you don't want your server wasting cycles with growing files all the time. Figure out how big your files are now, figure out how much they will grow in the next year and size your files accordingly, check back every month or so to see if your estimates were correct. 
 
-By default SQL Server will create databases wilt very small files when you create a database and you don&#8217;t specify the sizes. If you have people creating databases on your servers, consider adding a DDL trigger to notify you when a new DB is added so that you can talk to the database creator and size the files. You also can change the defaults on the server so that you don&#8217;t have the 10% growth either.
+By default SQL Server will create databases wilt very small files when you create a database and you don't specify the sizes. If you have people creating databases on your servers, consider adding a DDL trigger to notify you when a new DB is added so that you can talk to the database creator and size the files. You also can change the defaults on the server so that you don't have the 10% growth either.
 
-First let&#8217;s see what the difference is when we have a database where the files will have to grow versus one where the files are big enough for the data that will be inserted.
+First let's see what the difference is when we have a database where the files will have to grow versus one where the files are big enough for the data that will be inserted.
 
 Here we are creating two databases, one with much bigger files than the other one
 
@@ -73,13 +73,13 @@ The CREATE DATABASE statement failed. The primary file must be at least 4 MB to 
 
 Make the size of the primary file bigger, change the bold part from 1280KB to 5280KB or bigger if you still get the error
 
-NAME = N&#8217;TestSmaller&#8217;, FILENAME = N&#8217;f:TempTestSmaller.mdf&#8217; ,
+NAME = N'TestSmaller', FILENAME = N'f:TempTestSmaller.mdf' ,
   
 SIZE = **1280KB** , FILEGROWTH = 1024KB</em>
 
 [/edit]
   
-These two stored proc calls are just to verify that the files match with what we specified, you can use sp_helpdb to check the size of a database that you created when you don&#8217;t specify the file sizes
+These two stored proc calls are just to verify that the files match with what we specified, you can use sp_helpdb to check the size of a database that you created when you don't specify the file sizes
 
 sql
 EXEC sp_helpdb 'TestBigger'
@@ -113,7 +113,7 @@ GO
 CREATE TABLE test (SomeName VARCHAR(100), SomeID VARCHAR(36), SomeOtherID VARCHAR(100), SomeDate DATETIME)
 ```
 
-This query is just used so that the data is cached for the two inserts later on, this way the data doesn&#8217;t have to be fatched from disk for either inserts, you can discard the results after the query is done
+This query is just used so that the data is cached for the two inserts later on, this way the data doesn't have to be fatched from disk for either inserts, you can discard the results after the query is done
 
 sql
 USE master
@@ -174,7 +174,7 @@ As you can see, the bigger database did not expand, the smaller database expande
 
 **Autogrow**
   
-If you do use autogrow, then make sure you don&#8217;t use the default 10%, take a look at this message
+If you do use autogrow, then make sure you don't use the default 10%, take a look at this message
 
 > Date 11/30/2012 12:57:56 PM
   
@@ -184,15 +184,15 @@ If you do use autogrow, then make sure you don&#8217;t use the default 10%, take
 > 
 > Message
   
-> Autogrow of file &#8216;MyDB_Log&#8217; in database &#8216;MyDB&#8217; took 104381 milliseconds. Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+> Autogrow of file &#8216;MyDB_Log' in database &#8216;MyDB' took 104381 milliseconds. Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
 
-See that, it took a long time, you don&#8217;t want to grow a one terabyte file by ten percent, that would be one hundred gigabytes, that is huge. Use something smaller and don&#8217;t use percent, the bigger the file gets the longer it will take to expand the file.
+See that, it took a long time, you don't want to grow a one terabyte file by ten percent, that would be one hundred gigabytes, that is huge. Use something smaller and don't use percent, the bigger the file gets the longer it will take to expand the file.
 
 **File placement**
   
 Separate the log files from the data files by placing them on separate hard drives. Placing the files on separate drives allows I/O activity to occur at the same time for both the data and log files. Instead of having huge files consider having smaller files in separate filegroups. Put different tables used in the same join queries in different filegroups as well. This will improve performance, because of parallel disk I/O searching for joined data.
 
-Put heavily accessed tables and the nonclustered indexes that belong to those tables on different filegroups. This will improve performance, because of parallel I/O if the files are located on different physical disks. Just remember that you can&#8217;t separate the clustered indexes from the base table, you can only do this for non clustered indexes. Of course people can get very creative, I have worked with a database once where each table was placed in its own filegroups, there were hundreds of files&#8230;.what a mess
+Put heavily accessed tables and the nonclustered indexes that belong to those tables on different filegroups. This will improve performance, because of parallel I/O if the files are located on different physical disks. Just remember that you can't separate the clustered indexes from the base table, you can only do this for non clustered indexes. Of course people can get very creative, I have worked with a database once where each table was placed in its own filegroups, there were hundreds of files….what a mess
 
 **Tempdb**
   

@@ -21,7 +21,7 @@ tags:
 ---
 I answered this question today and thought it would be useful to create a little post
 
-If you have a varchar value like this &#8216;2009-06-26 14:30:00.000Z+4:30&#8217; you want to take 4 hours and 30 minutes and then subtract that from the date itself so in this case you will get 2009-06-26 11:00:00.000. The reason you subtract is because the +4:30 means that this was generated in a zone that is 4:30 ahead of utc
+If you have a varchar value like this &#8216;2009-06-26 14:30:00.000Z+4:30' you want to take 4 hours and 30 minutes and then subtract that from the date itself so in this case you will get 2009-06-26 11:00:00.000. The reason you subtract is because the +4:30 means that this was generated in a zone that is 4:30 ahead of utc
 
 So first we need to figure out a couple of things
   

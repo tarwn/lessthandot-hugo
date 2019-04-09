@@ -28,7 +28,7 @@ tags:
   - teaser
 
 ---
-In this week&#8217;s puzzle we are going to try to figure out how many uppercase, how many lowercase characters are in a column, we are also interested in how many are neither uppercase or lowercase
+In this week's puzzle we are going to try to figure out how many uppercase, how many lowercase characters are in a column, we are also interested in how many are neither uppercase or lowercase
 
 Here is the table and the data
 

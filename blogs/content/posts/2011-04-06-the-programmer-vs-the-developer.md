@@ -18,17 +18,17 @@ tags:
   - programmer
 
 ---
-We&#8217;ve been conditioned to accept the terms &#8220;Programmer, &#8220;Software Developer&#8221;, and &#8220;Software Engineer&#8221; as synonymous. Want ads and internal job titles tell us so. When someone gets paid to fill a human-sized hole, they&#8217;re going to use the most marketable term that can be attached to a three sentence description, so these terms are used almost interchangeably. We can&#8217;t trust that a company hiring for a &#8220;Developer&#8221; actually needs the skills that make a &#8220;Developer&#8221; different from a &#8220;Programmer&#8221;.
+We've been conditioned to accept the terms “Programmer, “Software Developer”, and “Software Engineer” as synonymous. Want ads and internal job titles tell us so. When someone gets paid to fill a human-sized hole, they're going to use the most marketable term that can be attached to a three sentence description, so these terms are used almost interchangeably. We can't trust that a company hiring for a “Developer” actually needs the skills that make a “Developer” different from a “Programmer”.
 
-However, despite rampant misuse, the differences between the term &#8220;Developer&#8221; and &#8220;Programmer&#8221; still have value.
+However, despite rampant misuse, the differences between the term “Developer” and “Programmer” still have value.
 
 ## The Programmer vs. the Developer
 
-To start with we have to accept that these titles represent different things. That neither of these titles are better than the other. In fact I would be willing to bet most of us have the wrong titles, both as a description of what the business thinks it needs from us and a reflection of our own particular skill sets and personalities. We&#8217;re going to ignore all that for the moment.
+To start with we have to accept that these titles represent different things. That neither of these titles are better than the other. In fact I would be willing to bet most of us have the wrong titles, both as a description of what the business thinks it needs from us and a reflection of our own particular skill sets and personalities. We're going to ignore all that for the moment.
 
 Ignored? Good.
 
-The defining difference between &#8220;Programmer&#8221; and &#8220;Developer&#8221; is one of scope, of depth vs. breadth.
+The defining difference between “Programmer” and “Developer” is one of scope, of depth vs. breadth.
 
 ### The Programmer
 
@@ -36,7 +36,7 @@ The programmer writes code. The programmer knows the ins and outs of language, p
 
 ### The Developer
 
-The Developer produces a finished solution for a murky business definition. Along that path from nothing to something there is programming, but also end user communications, business analysis, architecture, documentation, testing, project management, and so on. A Developer has a base level of skill in all of these, some stronger than others. No two developers will have exactly the same skill levels, but their overall ability as a developer is reflected in how accurately the end solution meets the customer&#8217;s needs. The Developer has breadth.
+The Developer produces a finished solution for a murky business definition. Along that path from nothing to something there is programming, but also end user communications, business analysis, architecture, documentation, testing, project management, and so on. A Developer has a base level of skill in all of these, some stronger than others. No two developers will have exactly the same skill levels, but their overall ability as a developer is reflected in how accurately the end solution meets the customer's needs. The Developer has breadth.
 
 ### The Overlap
 

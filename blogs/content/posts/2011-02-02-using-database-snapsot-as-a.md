@@ -26,9 +26,9 @@ Let me first start by saying that this is not a foolproof solution, it is just a
 
 The option in this article is also nice if your backups are terabyte size because your restore would take a while and even then all the tables would be affected. You would have to restore to another DB and then just pull down the data from the table you want.
 
-Everyday we create a database snapshot on our mirrored instance at 9 AM. Just a little after 9 AM someone deleted some data from a table because the WHERE clause was incorrect. Since we had a database snapshot, we could easily pull the data back and it saved us some time since we didn&#8217;t need to restore the database or recreate the data.
+Everyday we create a database snapshot on our mirrored instance at 9 AM. Just a little after 9 AM someone deleted some data from a table because the WHERE clause was incorrect. Since we had a database snapshot, we could easily pull the data back and it saved us some time since we didn't need to restore the database or recreate the data.
 
-Now let&#8217;s take a look at some code to see what can be done after a bad delete
+Now let's take a look at some code to see what can be done after a bad delete
 
 First create a test database
 
@@ -91,11 +91,11 @@ DELETE TestTable
 
 _Msg 3906, Level 16, State 1, Line 1
   
-Failed to update database &#8220;TestSnapshot&#8221; because the database is read-only.
+Failed to update database “TestSnapshot” because the database is read-only.
   
 _ 
   
-Now let&#8217;s delete all the data from the table in the test database
+Now let's delete all the data from the table in the test database
 
 sql
 USE Test
@@ -128,9 +128,9 @@ SELECT  COUNT(*)
 FROM    Test..TestTable
 ```
 
-Just a couple of things to consider. If you have a lot of activity in your database then the database snapshot might grow considerably, be aware of that or you will run out of space if you placed the database snapshot on a drive that doesn&#8217;t have a lot of space.
+Just a couple of things to consider. If you have a lot of activity in your database then the database snapshot might grow considerably, be aware of that or you will run out of space if you placed the database snapshot on a drive that doesn't have a lot of space.
 
-If you data gets updated frequently then this won&#8217;t work either, the table in question for us was one where we had end of day values stored.
+If you data gets updated frequently then this won't work either, the table in question for us was one where we had end of day values stored.
 
 To drop the snapshot, you just use a regular DROP DATABASE command
 

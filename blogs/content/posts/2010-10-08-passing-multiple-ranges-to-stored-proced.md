@@ -22,11 +22,11 @@ This blog was inspired by the following thread at MSDN Transact-SQL forum:
   
 [Multiple values in field as parameter][1]
 
-Given a string with values such as &#8216;201|203|301|400..600|725|800..900&#8217; return records from the table where Code field will be any of the values passed with | as a delimiter and also within the passed ranges where range indication will be ..
+Given a string with values such as &#8216;201|203|301|400..600|725|800..900' return records from the table where Code field will be any of the values passed with | as a delimiter and also within the passed ranges where range indication will be ..
 
 The first idea that comes to mind is to use various splitting techniques available (see, for example, this excellent blog by Aaron Bertrand [Splitting List of Integers][2] or follow up by Brad Schulz [Integer List Split &#8211; a SQL fable][3] or the old times classic by Erland Sommarskog [Arrays and Lists in SQL Server][4]) split the list first by | and then, if needed by .. to introduce the ranges of values.
 
-In order to run the solution I implemented, we need to create a Numbers table in our database first (why it&#8217;s important you can read in this classical article
+In order to run the solution I implemented, we need to create a Numbers table in our database first (why it's important you can read in this classical article
   
 [Why should I consider using an auxiliary Calendar table][5]).
 

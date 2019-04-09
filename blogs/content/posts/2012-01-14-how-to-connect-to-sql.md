@@ -24,9 +24,9 @@ tags:
   - tip
 
 ---
-I was restoring a TB+ sized database on our staging database today. Someone needed to use a different database but he couldn&#8217;t login because the database I was restoring was the default database for the login he was using. I told him to click on the Options button in the connection dialog and specify another database. I guess there was an misunderstanding because he couldn&#8217;t get it to work. This means it is time for a blog post.
+I was restoring a TB+ sized database on our staging database today. Someone needed to use a different database but he couldn't login because the database I was restoring was the default database for the login he was using. I told him to click on the Options button in the connection dialog and specify another database. I guess there was an misunderstanding because he couldn't get it to work. This means it is time for a blog post.
 
-First, let&#8217;s create two databases
+First, let's create two databases
 
 sql
 CREATE DATABASE Test1
@@ -79,7 +79,7 @@ ALTER DATABASE Test1 SET OFFLINE
 
 Now if you try to login with the TestLogin account, you will see the following error
 
-_**Login failed for user &#8216;TestLogin&#8217;. (Microsoft SQL Server, Error: 18456)**_
+_**Login failed for user &#8216;TestLogin'. (Microsoft SQL Server, Error: 18456)**_
 
 Here is what you need to do, on the connect to server window, click on the options button
 
@@ -93,7 +93,7 @@ That will open the Connection Properties tab
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServer.PNG?mtime=1326571269"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServer.PNG?mtime=1326571269" width="401" height="348" /></a>
 </div>
 
-Whatever you do, do not select _Browse server&#8230;_ from the connect to database option, if you do that you will get the following error
+Whatever you do, do not select _Browse server…_ from the connect to database option, if you do that you will get the following error
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServerError.PNG?mtime=1326571280"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServerError.PNG?mtime=1326571280" width="614" height="167" /></a>

@@ -17,7 +17,7 @@ tags:
   - CosmosDB
 
 ---
-I’m building the foundation for an ASP.Net Core 2 site with [Cosmos DB][1] as the back-end store and want to build in the idea of user-manageable API keys. In the past two posts, I&#8217;ve added interactive registration and login to the application using built-in Cookie and Twitter middleware on top of custom authorization logic and Cosmos DB. In this one, we&#8217;ll be adding endpoints that require API Keys that can be created and revoked by the user.
+I’m building the foundation for an ASP.Net Core 2 site with [Cosmos DB][1] as the back-end store and want to build in the idea of user-manageable API keys. In the past two posts, I've added interactive registration and login to the application using built-in Cookie and Twitter middleware on top of custom authorization logic and Cosmos DB. In this one, we'll be adding endpoints that require API Keys that can be created and revoked by the user.
 
 <div id="attachment_9155" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -37,7 +37,7 @@ While I started out with credentials stored directly in the `LoginUser` Document
   </p>
 </div>
 
-In this post, that separation will start paying off, as it will allow us to add API key entries for the user and easily &#8220;revoke&#8221; them by switching their authentication type from &#8220;APIKey&#8221; to &#8220;RevokedAPIKey&#8221;, keeping the data available for audits but ensuring it&#8217;s no longer valid for API authentication.
+In this post, that separation will start paying off, as it will allow us to add API key entries for the user and easily “revoke” them by switching their authentication type from “APIKey” to “RevokedAPIKey”, keeping the data available for audits but ensuring it's no longer valid for API authentication.
 
 <div class="note-area">
   Posts in this series:</p> 
@@ -60,7 +60,7 @@ In this post, that separation will start paying off, as it will allow us to add 
 
 ## Breaking it down
 
-In the last two posts, we laid the groundwork for authentication from the UI down to Cosmos DB. With this post, we&#8217;re going to build a minimal screen to let users generate API Keys, some protected API endpoints, and the logic to tie these into the `LoginUserAuthentications` DocumentCollection in Cosmos DB.
+In the last two posts, we laid the groundwork for authentication from the UI down to Cosmos DB. With this post, we're going to build a minimal screen to let users generate API Keys, some protected API endpoints, and the logic to tie these into the `LoginUserAuthentications` DocumentCollection in Cosmos DB.
 
 <div id="attachment_9202" style="width: 426px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_301.png" alt="From UI down to Cosmos DB back up to Middleware" width="416" height="874" class="size-full wp-image-9202" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_301.png 416w, /wp-content/uploads/2018/04/aspnetcore2cosmos_301-143x300.png 143w" sizes="(max-width: 416px) 100vw, 416px" />
@@ -81,7 +81,7 @@ The source code through this set of changes is available here: [github: Sample_A
 
 ## Task 1: User-managed API Keys
 
-In this set of changes, we&#8217;re going to add some very basic screens to show the list of API Keys, add a new one, and revoke an existing one. 
+In this set of changes, we're going to add some very basic screens to show the list of API Keys, add a new one, and revoke an existing one. 
 
 <div class="note-area">
   Why Revoke instead of Delete? I chose to revoke API Keys to help support audit logs and instrumentation down the road. This may be a case of YAGNI, but it was easy enough to implement and also tries a pattern I may refactor to using for passwords and password history.
@@ -89,7 +89,7 @@ In this set of changes, we&#8217;re going to add some very basic screens to show
 
 ### UI Screens
 
-Let&#8217;s start with the screens and work down the stack. I&#8217;ve created a new (and poorly named) `UserController` for the new screens.
+Let's start with the screens and work down the stack. I've created a new (and poorly named) `UserController` for the new screens.
 
 [SampleCosmosCore2App/Controllers/UserController.cs][3]
 
@@ -148,13 +148,13 @@ public async Task<IActionResult> Revoke(string id)
 	}
 }
 ```
-`IndexAsync` uses `ICustomMembership` to get the current logged in user&#8217;s information, then uses a new `UserPersistence` method to get all available `LoginUserAuthentications` from Cosmos DB (which will include Twitter, revoked API Tokens, and more as we go along).
+`IndexAsync` uses `ICustomMembership` to get the current logged in user's information, then uses a new `UserPersistence` method to get all available `LoginUserAuthentications` from Cosmos DB (which will include Twitter, revoked API Tokens, and more as we go along).
 
 `AddKey` and `PostAddKeyAsync` display a form to create a new API Token and receive the POST, respectively. When we receive the POST, we rely on a new method in `ICustomMembership` to generate a token then use the existing method (built while adding Twitter) to store that token.
 
 `Revoke` uses a new `ICustomMembership` method to revoke a given key (and I only just noticed I left off the conventional Async suffix, oops).
 
-The AddKey view is a basic 1-field form (included more to show you I don&#8217;t have anything up my sleeves):
+The AddKey view is a basic 1-field form (included more to show you I don't have anything up my sleeves):
 
 [SampleCosmosCore2App/Views/User/AddKey.cshtml][4]
 
@@ -184,7 +184,7 @@ The AddKey view is a basic 1-field form (included more to show you I don&#8217;t
 </div>
 ```
 
-And once it&#8217;s created, we then show it to you with &#8220;ShowKey&#8221;:
+And once it's created, we then show it to you with “ShowKey”:
 
 [SampleCosmosCore2App/Views/User/ShowKey.cshtml][5]
 
@@ -226,9 +226,9 @@ And once it&#8217;s created, we then show it to you with &#8220;ShowKey&#8221;:
 </div>
 ```
 
-We&#8217;ll be requiring the pair of API Key Id and API Key Secret to authorize API calls later. The Id is the generated Cosmos DB `id` and the Key is the `ICustomMembership` generated value.
+We'll be requiring the pair of API Key Id and API Key Secret to authorize API calls later. The Id is the generated Cosmos DB `id` and the Key is the `ICustomMembership` generated value.
 
-Displaying the index is a little more complex, as there are potentially several types of `LoginUserAuthentications` records available, so we include areas for specific keys and ignore the ones we don&#8217;t currently recognize:
+Displaying the index is a little more complex, as there are potentially several types of `LoginUserAuthentications` records available, so we include areas for specific keys and ignore the ones we don't currently recognize:
 
 [SampleCosmosCore2App/Views/User/Index.cshtml][6]
 
@@ -344,7 +344,7 @@ else
 </table>
 ```
 
-Again, this HTML won&#8217;t win any awards, it&#8217;s here to let us functionally build out what we need. Later in a real application we would replace this with a better form or front-end templates and JSON.
+Again, this HTML won't win any awards, it's here to let us functionally build out what we need. Later in a real application we would replace this with a better form or front-end templates and JSON.
 
 ### Membership + Persistence
 
@@ -359,7 +359,7 @@ The new methods are:
   * UserPersistence.UpdateUserAuthenticationAsync
 
 <div class="note-area">
-  If you look at the <a href="https://github.com/tarwn/Sample_ASPNetCore2AndCosmosDB/commit/1404bde5677301f385fe9189eb89ce710745685e" title="commit diff on github">commit details</a>, you&#8217;ll also see an un-committed fix to UserPersistence.GetUserBySessionIdAsync from the prior post (oops).
+  If you look at the <a href="https://github.com/tarwn/Sample_ASPNetCore2AndCosmosDB/commit/1404bde5677301f385fe9189eb89ce710745685e" title="commit diff on github">commit details</a>, you'll also see an un-committed fix to UserPersistence.GetUserBySessionIdAsync from the prior post (oops).
 </div>
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs][7]
@@ -420,19 +420,19 @@ public async Task<RevocationDetails> RevokeAuthenticationAsync(string userId, st
     return RevocationDetails.GetSuccess();
 }
 ```
-`RevokeAuthenticationAsync` is a little more involved due to validation that the key you&#8217;re trying to revoke exists, is yours, isn&#8217;t already revoked, and so on, but then it updates the key type from `APIKey` to `RevokedAPIKey` and updates it in Cosmos DB.
+`RevokeAuthenticationAsync` is a little more involved due to validation that the key you're trying to revoke exists, is yours, isn't already revoked, and so on, but then it updates the key type from `APIKey` to `RevokedAPIKey` and updates it in Cosmos DB.
 
 <div class="warning-area">
   <p>
-    So, ask me about class initializers&#8230;
+    So, ask me about class initializers…
   </p>
   
   <p>
-    There are times that using class initializers is an <b>anti-pattern</b>, like the case above. If the properties are required for the object to be valid, put it in the constructor and don&#8217;t use class initializers for it. Everything else is fair game.
+    There are times that using class initializers is an <b>anti-pattern</b>, like the case above. If the properties are required for the object to be valid, put it in the constructor and don't use class initializers for it. Everything else is fair game.
   </p>
   
   <p>
-    I recognize that people really like them, but it misleads the next developer and makes it easy to introduce bugs when you&#8217;re adding or changing &#8220;required&#8221; fields.
+    I recognize that people really like them, but it misleads the next developer and makes it easy to introduce bugs when you're adding or changing “required” fields.
   </p>
 </div>
 
@@ -451,7 +451,7 @@ public enum AuthenticationScheme
 First we add the two new Authentication types to the enum.
 
 <div class="note-area">
-  I really shouldn&#8217;t have named this enum &#8220;AuthenticationScheme&#8221;, since that has a specific meaning for ASP.Net Core 2 already, sorry about that. Future refactor opportunity.
+  I really shouldn't have named this enum “AuthenticationScheme”, since that has a specific meaning for ASP.Net Core 2 already, sorry about that. Future refactor opportunity.
 </div>
 
 
@@ -484,11 +484,11 @@ public async Task UpdateUserAuthenticationAsync(LoginUserAuthentication userAuth
 
 // ...
 ```
-Once again, the Cosmos DB logic is pretty straightforward. I&#8217;m still getting used to the Query result handling, which feels a little convoluted, but everything else has been absurdly smooth because we&#8217;re just doing usual Document store logic (please take this JSON serialized object and give it back later) instead of having to map relational concepts to objects.
+Once again, the Cosmos DB logic is pretty straightforward. I'm still getting used to the Query result handling, which feels a little convoluted, but everything else has been absurdly smooth because we're just doing usual Document store logic (please take this JSON serialized object and give it back later) instead of having to map relational concepts to objects.
 
 Now we can test out this process.
 
-First we&#8217;ll add a new Key:
+First we'll add a new Key:
 
 <div id="attachment_9203" style="width: 368px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_302.png" alt="Adding an API Key" width="358" height="254" class="size-full wp-image-9203" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_302.png 358w, /wp-content/uploads/2018/04/aspnetcore2cosmos_302-300x213.png 300w" sizes="(max-width: 358px) 100vw, 358px" />
@@ -528,7 +528,7 @@ And we can revoke one of the keys easily:
   </p>
 </div>
 
-And here it is in Cosmos DB Data Explorer, with the poorly named &#8220;Scheme&#8221; property indicating &#8220;3&#8221;, which is &#8220;RevokedAPIKey&#8221;:
+And here it is in Cosmos DB Data Explorer, with the poorly named “Scheme” property indicating “3”, which is “RevokedAPIKey”:
 
 <div id="attachment_9207" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_306-600x236.png" alt="Viewing Revoked API Key in Cosmos DB Data Explorer" width="600" height="236" class="size-medium-width wp-image-9207" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_306-600x236.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306-300x118.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306-768x302.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306-763x300.png 763w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306.png 885w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -538,28 +538,28 @@ And here it is in Cosmos DB Data Explorer, with the poorly named &#8220;Scheme&#
   </p>
 </div>
 
-Now that our fictitious users can generate and revoke API keys and we&#8217;ve locked in those changes, it&#8217;s time to protect some API endpoints.
+Now that our fictitious users can generate and revoke API keys and we've locked in those changes, it's time to protect some API endpoints.
 
 ## Task 2: Protected API Endpoints
 
-What we&#8217;re going to be doing for this case is adding in a new AuthenticationHandler middleware. 
+What we're going to be doing for this case is adding in a new AuthenticationHandler middleware. 
 
 **Other resources**
 
   * Adding a custom AuthenticationHandler: [Custom Authentication in ASP.NET Core 2.0][8]
   * More detailed: [Creating an authentication scheme in ASP.NET Core 2.0][9]
 
-We&#8217;ll be adding a `CustomMembershipAPIAuthHandler` and an options object to hold the name of the `AuthenticationScheme` and `Realm` configured from startup.
+We'll be adding a `CustomMembershipAPIAuthHandler` and an options object to hold the name of the `AuthenticationScheme` and `Realm` configured from startup.
 
 The very short version of AuthenticationHandlers is that when the server receives a request, it will go through the whole list of available AuthenticationHandlers and ask each one if the request is: Pass, Fail, or NoResult:
 
-  * NoResult: This request doesn&#8217;t have anything relevant to me, thank you drive through!
-  * Fail: This request has relevant info for me and it&#8217;s wrong!
-  * Success: This request has relevant info for me and it&#8217;s right, here&#8217;s a ClaimsPrincipal!
+  * NoResult: This request doesn't have anything relevant to me, thank you drive through!
+  * Fail: This request has relevant info for me and it's wrong!
+  * Success: This request has relevant info for me and it's right, here's a ClaimsPrincipal!
 
 ### Add the AuthenticationHandler
 
-For this case, we&#8217;re going to expect an `Authorization` header on requests formatted as: `Scheme Id:Secret`, similar to Basic and Bearer authentication methods. The `Scheme` comes from the Options that will be set in Startup, the Id and Secret are the API Token values we created above.
+For this case, we're going to expect an `Authorization` header on requests formatted as: `Scheme Id:Secret`, similar to Basic and Bearer authentication methods. The `Scheme` comes from the Options that will be set in Startup, the Id and Secret are the API Token values we created above.
 
 [SampleCosmosCore2App/Membership/CustomMembershipAPIAuthHandler.cs][10] (HandleAuthenticateAsync)
 
@@ -603,9 +603,9 @@ public class CustomMembershipAPIAuthHandler : AuthenticationHandler<CustomMember
     // ...
 }
 ```
-Notice we&#8217;ve added the concept of a &#8220;OneTimeLogin&#8221; to `ICustomMembership`. This will lead to a membership refactor to make it clearer which methods are relevant to &#8220;Interactive&#8221; logins and which are relevant to &#8220;OneTimeLogin&#8221; types like API request authentication.
+Notice we've added the concept of a “OneTimeLogin” to `ICustomMembership`. This will lead to a membership refactor to make it clearer which methods are relevant to “Interactive” logins and which are relevant to “OneTimeLogin” types like API request authentication.
 
-On top of having logic to look at handle Authenticate requests, we also want to add logic to handle Challenge and Forbidden requests. In this case, we are going to add a nice `WWW-Authenticate` header before letting the base class send it back as a 401, which is consistent with how most APIs handle challenges. We&#8217;re also going to just let the base class handle the Forbidden cases as designed.
+On top of having logic to look at handle Authenticate requests, we also want to add logic to handle Challenge and Forbidden requests. In this case, we are going to add a nice `WWW-Authenticate` header before letting the base class send it back as a 401, which is consistent with how most APIs handle challenges. We're also going to just let the base class handle the Forbidden cases as designed.
 
 [SampleCosmosCore2App/Membership/CustomMembershipAPIAuthHandler.cs][10] (HandleAuthenticateAsync)
 
@@ -657,11 +657,11 @@ public void ConfigureServices(IServiceCollection services)
     });
 }
 ```
-First we make a one line addition to the `AddCustomMembershipAPIAuth` Extension method, passing in a `Scheme` and `Realm`. Next we add in a new &#8220;APIAccessOnly&#8221; policy that we will use to enforce API Access authentication only for API endpoints, which we can do next.
+First we make a one line addition to the `AddCustomMembershipAPIAuth` Extension method, passing in a `Scheme` and `Realm`. Next we add in a new “APIAccessOnly” policy that we will use to enforce API Access authentication only for API endpoints, which we can do next.
 
 [SampleCosmosCore2App/Controllers/ValuesController.cs][13]<pre lang="csharp""> \[Route("api/[controller]")\] \[Authorize(Policy = "APIAccessOnly")\] public class ValuesController : Controller { // GET api/values [HttpGet] public IEnumerable<string> Get() { return new string[] { "value1", "value2" }; } // ... } </pre> 
 
-I&#8217;ve decorated the ValuesController with an `Authorize(Policy = ...)` attribute, but I could also have used `Authorize(AuthenticationScheme = ...)` and skipped the policy definition in the Startup file. However, I like the idea that all of my Authentication schemes are defined in Startup consistently, the policy for accessing API endpoints is defined in one place, and it looks more readable to me.
+I've decorated the ValuesController with an `Authorize(Policy = ...)` attribute, but I could also have used `Authorize(AuthenticationScheme = ...)` and skipped the policy definition in the Startup file. However, I like the idea that all of my Authentication schemes are defined in Startup consistently, the policy for accessing API endpoints is defined in one place, and it looks more readable to me.
 
 ### Membership Changes
 
@@ -696,11 +696,11 @@ public async Task<ClaimsPrincipal> GetOneTimeLoginAsync(string scheme, string us
     return new ClaimsPrincipal(claimsIdentity);
 }
 ```
-Currently this method accepts an authentication scheme for the &#8220;OneTimeLogin&#8221;, later this will be refactored so that the membership class supports a separate &#8220;InteractiveAuthenticationScheme&#8221; and &#8220;OneTimeLoginScheme&#8221; that are configured in Startup and they will consistently set either `userId` and `userAuthId` claims or `userId` and `sessionid` claims.
+Currently this method accepts an authentication scheme for the “OneTimeLogin”, later this will be refactored so that the membership class supports a separate “InteractiveAuthenticationScheme” and “OneTimeLoginScheme” that are configured in Startup and they will consistently set either `userId` and `userAuthId` claims or `userId` and `sessionid` claims.
 
-That&#8217;s all we needed! Let&#8217;s try it out with [postman][15].
+That's all we needed! Let's try it out with [postman][15].
 
-Let&#8217;s start with the happy path, passing in good credentials:
+Let's start with the happy path, passing in good credentials:
 
 <div id="attachment_9209" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_308-600x230.png" alt="Testing the successful path w/ good API Credentials" width="600" height="230" class="size-medium-width wp-image-9209" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_308-600x230.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_308-300x115.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_308-768x294.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_308-784x300.png 784w, /wp-content/uploads/2018/04/aspnetcore2cosmos_308.png 888w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -724,9 +724,9 @@ Excellent! We now have working API Authentication!
 
 ## Wrapping up, next steps
 
-Moving right along. We now have an ASP.net Core 2 website that can perform really basic CRUD logic against Cosmos DB. We&#8217;ve then layered standard username/password authentication on it, with storage in Cosmos DB as well. Then we extended this to support a second interactive login method (Twitter), opening the door to adding as many of those as we need. Then in this post, we&#8217;ve added API authorization for per-request authorization. So far, so good.
+Moving right along. We now have an ASP.net Core 2 website that can perform really basic CRUD logic against Cosmos DB. We've then layered standard username/password authentication on it, with storage in Cosmos DB as well. Then we extended this to support a second interactive login method (Twitter), opening the door to adding as many of those as we need. Then in this post, we've added API authorization for per-request authorization. So far, so good.
 
-Next up, we&#8217;re going to take a break from Cosmos DB for a bit to do some general refactoring (which won&#8217;t be a blog post) and add in error handling logic. From there, we&#8217;ll shift focus to front-end tooling to ensure we have a good developer and production experience with CSS and JavaScript. Once we&#8217;re done there, we&#8217;ll be back to add in API Rate Limiting with Cosmos DB as the backing store. See you soon!
+Next up, we're going to take a break from Cosmos DB for a bit to do some general refactoring (which won't be a blog post) and add in error handling logic. From there, we'll shift focus to front-end tooling to ensure we have a good developer and production experience with CSS and JavaScript. Once we're done there, we'll be back to add in API Rate Limiting with Cosmos DB as the backing store. See you soon!
 
  [1]: https://azure.microsoft.com/en-us/services/cosmos-db/
  [2]: https://github.com/tarwn/Sample_ASPNetCore2AndCosmosDB/tree/Post-%234 "Github: Source as of this post"

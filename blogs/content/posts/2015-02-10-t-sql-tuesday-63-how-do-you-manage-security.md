@@ -35,7 +35,7 @@ tags:
     <strong>DontSaveSensitive</strong>, which is my personal favorite as it forces you to use either configurations or parameters.
   </li>
   <li>
-    <strong>EncryptSensitiveWithPassword</strong>. Other people can still open the package if they don&#8217;t have the password,  but the passwords in the connection managers are lost and need to be re-entered..
+    <strong>EncryptSensitiveWithPassword</strong>. Other people can still open the package if they don't have the password,  but the passwords in the connection managers are lost and need to be re-entered..
   </li>
   <li>
     <strong>EncryptAllWithPassword</strong>, for the paranoia people.
@@ -52,11 +52,11 @@ tags:
 </ul>
 
 <p style="text-align: justify">
-  Protection levels were really important before SSIS 2012, as they specified how sensitive data was protected. However, the default of EncryptSensitiveWithUserKey is a really crappy one. If you schedule a package with this protection level using SQL Server Agent, the package can still run if there is no actual sensitive data in the package, but a lot of unnecessary warnings are generated. It&#8217;s best to avoid this protection level at all costs.
+  Protection levels were really important before SSIS 2012, as they specified how sensitive data was protected. However, the default of EncryptSensitiveWithUserKey is a really crappy one. If you schedule a package with this protection level using SQL Server Agent, the package can still run if there is no actual sensitive data in the package, but a lot of unnecessary warnings are generated. It's best to avoid this protection level at all costs.
 </p>
 
 <p style="text-align: justify">
-  Protecting the package with a password is a good option. However, when deploying the package with the package deployment model (or every version of SSIS before 2012), you had to enter the password when you were scheduling the package with Agent. This means though that the password is stored in MSDB, so it isn&#8217;t that secure. My advice is to use DontSaveSensitive and store sensitive information inside a SQL Server configuration table.
+  Protecting the package with a password is a good option. However, when deploying the package with the package deployment model (or every version of SSIS before 2012), you had to enter the password when you were scheduling the package with Agent. This means though that the password is stored in MSDB, so it isn't that secure. My advice is to use DontSaveSensitive and store sensitive information inside a SQL Server configuration table.
 </p>
 
 <p style="text-align: justify">

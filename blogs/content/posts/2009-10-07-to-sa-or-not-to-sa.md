@@ -16,9 +16,9 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-The question was raised again if SA should be disabled. First, it doesn&#8217;t matter if you do not utilize SQL Server Authentication. The account is then disabled in the first place. Most instances have mixed mode enabled however so SA is a major concern and a huge pet peeve of mine.
+The question was raised again if SA should be disabled. First, it doesn't matter if you do not utilize SQL Server Authentication. The account is then disabled in the first place. Most instances have mixed mode enabled however so SA is a major concern and a huge pet peeve of mine.
 
-So to put it lightly&#8230;
+So to put it lightly…
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//NoEntry.gif" alt="" title="" width="292" height="301" />
@@ -67,7 +67,7 @@ First, Active Directory group setup for the DBAs is the only ones that have acce
   </p>
 </blockquote>
 
-<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="/index.php/datamgmt/datadesign/securing-you-password-for-sql-server-200/embed/#?secret=AHCITsCkau" data-secret="AHCITsCkau" width="500" height="282" title="&#8220;Securing your password for SQL Server 2005 and 2008 and more&#8221; &#8212; LessthanDot" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="/index.php/datamgmt/datadesign/securing-you-password-for-sql-server-200/embed/#?secret=AHCITsCkau" data-secret="AHCITsCkau" width="500" height="282" title="“Securing your password for SQL Server 2005 and 2008 and more” &#8212; LessthanDot" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 So now that I got it out that only the DBAs should at any time be able to access sa in any way shape or form, what about the password?
 
@@ -75,6 +75,6 @@ Here is how I’ve handled SA and its password in my career. Bi-weekly (every tw
 
 That does a few things for you. First it resets the password frequently enough it is less likely to be compromised. Two, if it is somehow used by some person that you trusted with your life, whatever they used it on will break. I love that moment when it does to 😉 Out come the lashes with a wet noodle!
 
-Last point I wanted to talk about is the fact that SA should never be the account you go to in order to save your ass. Yes, I really meant to be that direct on that statement. You as a DBA are in charge of securing the database servers. That means you have to secure your path into them for disasters and recovery points as well. This means the thought process must be handled of a complete loss of active directory and most accounts that would be typical or default to SQL Server. The SA account is default and that being said can be a point of disaster itself. In the least you should have an account on SQL Authentication that you can utilize for single user controls or dedicated admin connections. Trust me from experience of having these things break. You don’t want to be google&#8217;ing, “How do I recover the sa password” 
+Last point I wanted to talk about is the fact that SA should never be the account you go to in order to save your ass. Yes, I really meant to be that direct on that statement. You as a DBA are in charge of securing the database servers. That means you have to secure your path into them for disasters and recovery points as well. This means the thought process must be handled of a complete loss of active directory and most accounts that would be typical or default to SQL Server. The SA account is default and that being said can be a point of disaster itself. In the least you should have an account on SQL Authentication that you can utilize for single user controls or dedicated admin connections. Trust me from experience of having these things break. You don’t want to be google'ing, “How do I recover the sa password” 
 
 Happy is the DBA that protects from disaster!

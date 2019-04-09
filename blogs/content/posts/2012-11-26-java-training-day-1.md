@@ -35,7 +35,7 @@ Java is a general purpose language, it is interperted, output is bytecode, you n
   
 A Java file gets compiled to a system-neutral format which is a class file and gets a .class extension, this is compressed and not really human readable
 
-Classes are organized in a group called a package, a package is very similar to a .net namespace. You use this so that you don&#8217;t get collisions if you have two classes with the same name.
+Classes are organized in a group called a package, a package is very similar to a .net namespace. You use this so that you don't get collisions if you have two classes with the same name.
 
 You use javadoc to generate standard formatted documentation.
 
@@ -51,11 +51,11 @@ In a class the main routine is the start of a program
   
 The main routine will look like this
 
-public static void main(String[] args) {&#8230;&#8230;.}
+public static void main(String[] args) {…….}
 
-A java source file has to end in .java, for example MyClass.java this will produce a file called MyClass.class. you can&#8217;t have more than one public class in a source file, you cannot have partial classes like in .net either.
+A java source file has to end in .java, for example MyClass.java this will produce a file called MyClass.class. you can't have more than one public class in a source file, you cannot have partial classes like in .net either.
 
-Java runs on top of the JVM, the JVM is different per operating system. No need to recompile Java&#8230;Write once run everywhere&#8230;.some people like to say write once&#8230;debug everywhere 🙂
+Java runs on top of the JVM, the JVM is different per operating system. No need to recompile Java…Write once run everywhere….some people like to say write once…debug everywhere 🙂
 
 **Java versions and flavors**
   
@@ -135,7 +135,7 @@ JBoss Red Hat
 
 **Environment variables**
   
-Oh how I used to hate dealing with these variables, stuff wouldn&#8217;t work if this wasn&#8217;t setup correctly
+Oh how I used to hate dealing with these variables, stuff wouldn't work if this wasn't setup correctly
   
 There are a couple of environment variables that you need
 
@@ -203,7 +203,7 @@ SAR (service archive) is similar to EAR. It provides a service.xml file and acco
   
 APK (Android Application Package), a variant of the Java archive format, is used for Android applications.[3]
 
-We compiled and ran some programs from the command line, it is amazing how many people have problems with the path and classpath variables to get it to work&#8230;but we all did and now we are allowed to use Eclipese or Netbeans instead
+We compiled and ran some programs from the command line, it is amazing how many people have problems with the path and classpath variables to get it to work…but we all did and now we are allowed to use Eclipese or Netbeans instead
 
 **Javadoc comments**
   
@@ -249,7 +249,7 @@ Here is an example
   
 Can have letters and numbers, cannot begin with a digit
 
-The reason most programming language don&#8217;t allow identifiers to start with a digit is simple
+The reason most programming language don't allow identifiers to start with a digit is simple
 
 int 6;
   
@@ -267,7 +267,7 @@ final int BOILING_POINT;
   
 BOILING_POINT; = 100;
 
-Once you assign the value, you can&#8217;t change BOILING_POINT anymore
+Once you assign the value, you can't change BOILING_POINT anymore
 
 We learned about scope and learned that depending on where the variable is declared, it might not be visible outside of the block, this is the same as in other languages (local variables)
 
@@ -275,4 +275,4 @@ When you want to have only one copy of a class variable, make it static, then if
   
 Static variables are available to use as soon as a class is loaded
 
-Brain fried&#8230;&#8230;time to go&#8230;&#8230;.. back tomorrow
+Brain fried……time to go…….. back tomorrow

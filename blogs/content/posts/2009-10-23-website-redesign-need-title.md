@@ -20,7 +20,7 @@ LessThanDot has had a stable layout and design for a couple years now, giving al
   <img src="http://www.tiernok.com/downloads/LTD/Tidbit_1.png" alt="LTD Tidbit Image" />
 </center>
 
-And apparently there is listening and then there is listening&#8230;
+And apparently there is listening and then there is listening…
 
 ## The Redesign
 
@@ -30,7 +30,7 @@ After the recent LTD Meet & Greet I convinced myself to start following our blog
   <img src="http://www.tiernok.com/downloads/LTD/Tidbit_4.png" alt="LTD Tidbit Image" />
 </center>
 
-After continued reflection (in some cases nearly an hour spent behind someone doing 5 under in the left lane&#8230;), I realized that the most significant culprit for my poor reading experience was a combination of the reading area layout and mixed font and color usage. Luckily I had some free time on my hands one Friday evening while waiting for Onpnt to review a few _\*cough\*_ minor reviewing notes I left on one of his posts. Since I had downtime and we had decided to test Google Video and Voice, I opened Photoshop and started trying to visualize a better reading experience. I&#8217;m not the handiest of graphics people but my CSS skills are pretty good and we have several founders who were willing to provide opinions, ideas and assistance as we turned those first drawings into a credible and, more importantly, readable site design.
+After continued reflection (in some cases nearly an hour spent behind someone doing 5 under in the left lane…), I realized that the most significant culprit for my poor reading experience was a combination of the reading area layout and mixed font and color usage. Luckily I had some free time on my hands one Friday evening while waiting for Onpnt to review a few _\*cough\*_ minor reviewing notes I left on one of his posts. Since I had downtime and we had decided to test Google Video and Voice, I opened Photoshop and started trying to visualize a better reading experience. I'm not the handiest of graphics people but my CSS skills are pretty good and we have several founders who were willing to provide opinions, ideas and assistance as we turned those first drawings into a credible and, more importantly, readable site design.
 
 <center>
   <img src="http://www.tiernok.com/downloads/LTD/Tidbit_3.png" alt="LTD Tidbit Image" />
@@ -46,7 +46,7 @@ We are currently prepping our QA site to open it as a limited beta with the new 
   <img src="http://www.tiernok.com/downloads/LTD/Tidbit_2.png" alt="LTD Tidbit Image" />
 </center>
 
-As we finish rounding out the testing and making any minor updates that are necessary, I will continue to share more information on what the changes are and what some of the potential additions we have coming after the redesign rollout. Once the testing and limited beta is complete (hopefully before I have run out of blog material) we will have a limited downtime window to push to production and then surprise everyone that didn&#8217;t read this far with the new layout and functionality.
+As we finish rounding out the testing and making any minor updates that are necessary, I will continue to share more information on what the changes are and what some of the potential additions we have coming after the redesign rollout. Once the testing and limited beta is complete (hopefully before I have run out of blog material) we will have a limited downtime window to push to production and then surprise everyone that didn't read this far with the new layout and functionality.
 
 Just to ensure I have something to do in case the QA session goes more smoothly than a QA session has ever gone before, I will also be posting small tidbits of information to the forums and on Twitter ([@tarwn][4]). We have also planned a number of articles for the launch week and have made some additional modifications to the feedback and rating systems to provide a better channel for you to share your opinions.
 

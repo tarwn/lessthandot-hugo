@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-I was reading Itzik Ben-Gan&#8217;s An Introduction to [New T-SQL Programmability Features in SQL Server 2008][1] article yesterday after one of my friends allerted me to the following from that article
+I was reading Itzik Ben-Gan's An Introduction to [New T-SQL Programmability Features in SQL Server 2008][1] article yesterday after one of my friends allerted me to the following from that article
   
 For example, the plan for the following query performs an index seek on the index on the CurrencyRateDate DATETIME column:
 
@@ -29,7 +29,7 @@ WHERE CAST(CurrencyRateDate AS DATE) = '20040701';
 
 I was surprised by this, as we all know functions/conversions on column names are generaly bad for performance.
 
-Let&#8217;s see how this works. First create this table in the tempdb database.
+Let's see how this works. First create this table in the tempdb database.
 
 ```sql
 use tempdb

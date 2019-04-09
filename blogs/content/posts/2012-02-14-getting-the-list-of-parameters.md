@@ -22,7 +22,7 @@ tags:
 ---
 If you want to see what parameters a stored procedure is using then you can accomplish this in a couple of different ways. You can use sys.parameters or INFORMATION_SCHEMA.parameters from within SQL Server itself, you can also SqlCommandBuilder from within ADO.NET
 
-Let&#8217;s say you have a procedure name prTest in a database named Test2
+Let's say you have a procedure name prTest in a database named Test2
 
 sql
 CREATE PROCEDURE prTest

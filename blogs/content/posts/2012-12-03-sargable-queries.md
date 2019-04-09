@@ -27,7 +27,7 @@ tags:
   - t-sql
 
 ---
-This is day three of the [SQL Advent 2012 series][1] of blog posts. Today we are going to look at sargable queries. You might ask yourself, what is this weird term sargable. Sargable comes from searchable argument, sometimes also referred as <span class="MT_red">S</span>earch <span class="MT_red">ARG</span>ument <span class="MT_red">ABLE</span>. What that means is that the query will be able to use an index, a seek will be performed instead of a scan. In general any time you have a function wrapped around a column, an index won&#8217;t be used
+This is day three of the [SQL Advent 2012 series][1] of blog posts. Today we are going to look at sargable queries. You might ask yourself, what is this weird term sargable. Sargable comes from searchable argument, sometimes also referred as <span class="MT_red">S</span>earch <span class="MT_red">ARG</span>ument <span class="MT_red">ABLE</span>. What that means is that the query will be able to use an index, a seek will be performed instead of a scan. In general any time you have a function wrapped around a column, an index won't be used
 
 Some examples that are not sargable 
 
@@ -45,7 +45,7 @@ WHERE SomeDate >= '20120101' AND SomeDate < '20130101'
 WHERE OrderID = 33000/3
 ```
 
-Let&#8217;s create a table, insert some data so that we can look at the execution plan
+Let's create a table, insert some data so that we can look at the execution plan
   
 Create this simple table
 
@@ -53,7 +53,7 @@ sql
 CREATE TABLE Test(SomeID varchar(100))
 ```
 
-Let&#8217;s insert some data that will start with a letter followed by some digits
+Let's insert some data that will start with a letter followed by some digits
 
 sql
 INSERT Test
@@ -72,7 +72,7 @@ sql
 CREATE CLUSTERED INDEX cx_test ON Test(SomeID)
 ```
 
-Let&#8217;s take a look at the execution plan, hit CTRL + M, this will add the execution plan once the query is done running
+Let's take a look at the execution plan, hit CTRL + M, this will add the execution plan once the query is done running
 
 sql
 SELECT * FROM Test
@@ -113,13 +113,13 @@ Here are the two plans
 
 > |&#8211;Clustered Index Seek(OBJECT:([master].[dbo].[Test].[cx_test]),
     
-> SEEK:([master].[dbo].[Test].[SomeID] >= &#8216;Rþ&#8217; AND [master].[dbo].[Test].[SomeID] < 'T'), WHERE:([master].[dbo].[Test].[SomeID] like 's%') ORDERED FORWARD) |--Clustered Index Scan(OBJECT:([master].[dbo].[Test].[cx_test]), WHERE:(substring([master].[dbo].[Test].[SomeID],(1),(1))='s')) 
+> SEEK:([master].[dbo].[Test].[SomeID] >= &#8216;Rþ' AND [master].[dbo].[Test].[SomeID] < 'T'), WHERE:([master].[dbo].[Test].[SomeID] like 's%') ORDERED FORWARD) |--Clustered Index Scan(OBJECT:([master].[dbo].[Test].[cx_test]), WHERE:(substring([master].[dbo].[Test].[SomeID],(1),(1))='s')) 
 
 As you can see the top one while looking more complicated is actually giving you a seek
 
 ## Making a case sensitive search sargable
 
-Now let&#8217;s take a look at how we can make a case sensitive search sargable as well
+Now let's take a look at how we can make a case sensitive search sargable as well
   
 In order to do a search and make it case sensitive, you have to have a case sensitive collation, if your table is not created with a case sensitive collation then you can supply it as part of the query
 
@@ -184,7 +184,7 @@ A
   
 a
 
-Now let&#8217;s take a look at how we can make the case sensitive search sargable
+Now let's take a look at how we can make the case sensitive search sargable
 
 First create this table and insert some data
 
@@ -303,7 +303,7 @@ WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS
 AND Val LIKE 'ABCD'
 ```
 
-AND Val LIKE &#8216;ABCD&#8217; will result in a seek, now when it also does the Val = &#8216;ABCD&#8217; COLLATE SQL\_Latin1\_General\_CP1\_CS_AS part, it only returns the row that matches your value
+AND Val LIKE &#8216;ABCD' will result in a seek, now when it also does the Val = &#8216;ABCD' COLLATE SQL\_Latin1\_General\_CP1\_CS_AS part, it only returns the row that matches your value
 
 If you run both queries, you can look at the plan difference (hit CTRL + M so that the plan is included)
 
@@ -350,7 +350,7 @@ GO
      
 > WHERE:(CONVERT_IMPLICIT(varchar(50),[tempdb].[dbo].[CaseSensitiveSearch].[Val],0)=CONVERT(varchar(8000),[@1],0)))
 > 
-> |&#8211;Index Seek(OBJECT:([tempdb].[dbo].[CaseSensitiveSearch].[IX_SearchVal]), SEEK:([tempdb].[dbo].[CaseSensitiveSearch].[Val] >= &#8216;ABCD&#8217;
+> |&#8211;Index Seek(OBJECT:([tempdb].[dbo].[CaseSensitiveSearch].[IX_SearchVal]), SEEK:([tempdb].[dbo].[CaseSensitiveSearch].[Val] >= &#8216;ABCD'
        
 > AND [tempdb].[dbo].[CaseSensitiveSearch].[Val] <= 'ABCD'), WHERE:(CONVERT_IMPLICIT(varchar(50),[tempdb].[dbo].[CaseSensitiveSearch].[Val],0)='ABCD' AND [tempdb].[dbo].[CaseSensitiveSearch].[Val] like 'ABCD') ORDERED FORWARD)
 

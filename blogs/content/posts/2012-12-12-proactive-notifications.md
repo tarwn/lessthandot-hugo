@@ -33,12 +33,12 @@ The last thing you want as a DBA is to hear any of the following things from the
   * The database is very slow
   * The latest backup we have is 9 days old
   * The table that was created has 2 extra columns this morning
-  * Everything is locked up can&#8217;t get any results back from a query
+  * Everything is locked up can't get any results back from a query
   * Deadlocks are occurring
 
 What you really want to have at your shop is a tool like [Quest Foglight][3], [Confio Ignite][4], [Red Gate SQL Monitor][5] or similar. The benefit of these tools is that there is a central location where you can look at all the alerts at a glance. You get a lot of stuff out of the box and all you have to do is tell it what server to start monitoring. I would suggest to start using the trial version to see if it is something that would be beneficial for your organization.
 
-Of course you can roll your own solution as well, this will involve work and unless your time is worthless or you are bored out of your mind after work I wouldn&#8217;t do it.
+Of course you can roll your own solution as well, this will involve work and unless your time is worthless or you are bored out of your mind after work I wouldn't do it.
 
 ## Utilize the logs
 
@@ -93,7 +93,7 @@ Someone decided to take a backup of that 1 TB database in the middle of the day
   
 The update statistics job is still running
   
-Statistics are stale and haven&#8217;t been updated in a long time
+Statistics are stale and haven't been updated in a long time
   
 The virus scan is running amok and nobody told it to ignore the database files
   
@@ -103,13 +103,13 @@ If you have a tool like [Quest Foglight][3], [Confio Ignite][4], [Red Gate SQL M
 
 You can of course also use sp_who2, BlkBy column and DBCC INPUTBUFFER to see what is going on
 
-If you like to use Dynamic Management Views, then take a look at Glenn Berry&#8217;s [SQL Server 2005 Diagnostic Information Queries (Dec 2012)][6] and [SQL Server 2008 Diagnostic Information Queries (Nov 2012)][7] posts, there is a .sql file in each post with all kind of queries to discover all kinds of stuff about your server. 
+If you like to use Dynamic Management Views, then take a look at Glenn Berry's [SQL Server 2005 Diagnostic Information Queries (Dec 2012)][6] and [SQL Server 2008 Diagnostic Information Queries (Nov 2012)][7] posts, there is a .sql file in each post with all kind of queries to discover all kinds of stuff about your server. 
 
 It could also be that your hardware is having issues, make sure the IOs look good and check the eventlog for any clues.
 
 ## The latest backup we have is 9 days old
 
-The following query will give you for all the databases the last time it was backed up or display NEVER if it wasn&#8217;t backed up
+The following query will give you for all the databases the last time it was backed up or display NEVER if it wasn't backed up
 
 sql
 SELECT s.Name AS DatabaseName,'Database backup was taken on  ' + 
@@ -130,13 +130,13 @@ ReportServer	Database backup was taken on  NEVER!!!</pre>
 
 As you can see that is not that great, all the databases should be backed up on a regular basis. Scroll up to the _Utilize the logs_ section to see how you can check the errorlog for failed backup messages.
 
-## Everything is locked up, you can&#8217;t get any results back from a query
+## Everything is locked up, you can't get any results back from a query
 
 Usually this indicates that there is an open transaction somewhere that has not finished or someone did the BEGIN TRAN part but never did a COMMIT or ROLLBACK.
 
-Some people just restart the server to &#8216;fix&#8217; the issue, of course if you do that you will never know what the root cause is and you never know when it will happen again.
+Some people just restart the server to &#8216;fix' the issue, of course if you do that you will never know what the root cause is and you never know when it will happen again.
 
-We can easily show what happens when you have an open transaction, btw don&#8217;t do this on the production server.
+We can easily show what happens when you have an open transaction, btw don't do this on the production server.
 
 In 1 query window run this, replace SomeTable with a real table name.
 
@@ -154,7 +154,7 @@ sql
 SELECT TOP 1 * FROM SomeTable WITH(UPDLOCK, HOLDLOCK)
 ```
 
-That query won&#8217;t return anything unless the first one is commited or rolled back
+That query won't return anything unless the first one is commited or rolled back
   
 Now run this query below, the first column should have the text AWAITING COMMAND
 
@@ -209,7 +209,7 @@ There is already a post written on LessThanDot explaining how you can get emaile
 
 I only touched the surface of what can be done in this post. I want you to find out if there is any monitoring being done in your shop, who gets notified? I have worked in places where the end user was the proactive notification, as long as we fixed it before the business users started to complaint life was good. Manual notifications and homebrew solutions might work for a while but when you add more and more servers and you add more people to the team this becomes laborious and error prone.
 
-If there is one New Year&#8217;s resolution you should add next year, I would suggest proactive notifications. Get trial versions of the tools, try them out until January 1st and then decide if you think it is worth.
+If there is one New Year's resolution you should add next year, I would suggest proactive notifications. Get trial versions of the tools, try them out until January 1st and then decide if you think it is worth.
 
 That is all for day twelve of the [SQL Advent 2012 series][1], come back tomorrow for the next one, you can also check out all the posts from last year here: [SQL Advent 2011 Recap][9]
 

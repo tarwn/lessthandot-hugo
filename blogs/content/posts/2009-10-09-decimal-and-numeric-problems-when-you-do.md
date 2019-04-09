@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-When you don&#8217;t specify the precision and scale for your decimal data types, SQL Server will use its own default values, which is probably NOT what you want. In fact, the default precision and scale values are 18,0. If you want a whole number data type, use bigint, int, smallint, or int. If you want fractional numbers use DECIMAL, but ALWAYS specify the precision and scale.
+When you don't specify the precision and scale for your decimal data types, SQL Server will use its own default values, which is probably NOT what you want. In fact, the default precision and scale values are 18,0. If you want a whole number data type, use bigint, int, smallint, or int. If you want fractional numbers use DECIMAL, but ALWAYS specify the precision and scale.
 
 For example:
 

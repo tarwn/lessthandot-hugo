@@ -13,9 +13,9 @@ categories:
   - Microsoft SQL Server
 
 ---
-When you write a case/when statement in T-SQL, it&#8217;s critically important that you cause all return values to have the same data type. If you don&#8217;t do this, you open yourself up to conversion problems. This problem can occur even if some branches of the code are never executed.
+When you write a case/when statement in T-SQL, it's critically important that you cause all return values to have the same data type. If you don't do this, you open yourself up to conversion problems. This problem can occur even if some branches of the code are never executed.
 
-When SQL Server compiles the code, it analyzes all branches of execution and determines the return data type. It does not matter that your particular query does not use a particular branch of execution. If it&#8217;s there, it will be considered.
+When SQL Server compiles the code, it analyzes all branches of execution and determines the return data type. It does not matter that your particular query does not use a particular branch of execution. If it's there, it will be considered.
 
 This article describes data type precedence that sql server uses:
     
@@ -33,7 +33,7 @@ Select Case When @Data Is NULL Then NULL
             When 0=1           Then 1
             End
 ```
-Since @Data = &#8221;, the code should return &#8216;Data is empty&#8217;. In this case, it doesn&#8217;t because the 0=1 branch causes SQL Server to &#8216;attempt&#8217; to convert each return value to an integer, and fails. 
+Since @Data = ”, the code should return &#8216;Data is empty'. In this case, it doesn't because the 0=1 branch causes SQL Server to &#8216;attempt' to convert each return value to an integer, and fails. 
 
 When mixing numbers and strings, SQL Server prefers (based on data type precedence) to convert data to numbers. This is a little unfortunately because all number data can be converted to a string, but not all strings can be converted to a number. 
 
@@ -49,4 +49,4 @@ Select Case When @Data Is NULL Then NULL
             When 0=1           Then Convert(VarChar(10), 1)
             End
 ```
-Now, each branch returns a string (or NULL, which doesn&#8217;t matter), so there will not be any problems with running this code.
+Now, each branch returns a string (or NULL, which doesn't matter), so there will not be any problems with running this code.

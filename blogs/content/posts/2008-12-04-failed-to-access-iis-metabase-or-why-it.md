@@ -18,7 +18,7 @@ tags:
   - visual studio 2008
 
 ---
-So yesterday I got a new machine at work. I decided to only install SQL Server 2008 and Visual Studio 2008 on this box. First I installed Visual Studio 2008, after that I installed Visual Studio 2008 Service Pack 1 and then I installed SQL Server 2008. I still remember when I tried to install SQL Server 2008 RTM on my older machine with Visual Studio 2008 and it wouldn&#8217;t do it because you needed SP1 for the framework first, this got released 2 days later or so.
+So yesterday I got a new machine at work. I decided to only install SQL Server 2008 and Visual Studio 2008 on this box. First I installed Visual Studio 2008, after that I installed Visual Studio 2008 Service Pack 1 and then I installed SQL Server 2008. I still remember when I tried to install SQL Server 2008 RTM on my older machine with Visual Studio 2008 and it wouldn't do it because you needed SP1 for the framework first, this got released 2 days later or so.
 
 So then I noticed that IIS was not installed on this box, of course you need the CD/DVD to add components to the Operating System. I went to MSDN, downloaded the Operating System, installed IIS and thought I was in business.
 

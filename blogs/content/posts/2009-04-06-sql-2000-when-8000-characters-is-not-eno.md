@@ -14,9 +14,9 @@ categories:
   - Microsoft SQL Server
 
 ---
-MS SQL Server 2000 has a limitation of 8000 characters in a varchar variable. The historical reason for this limitation, I believe, is related to the 8k size of data pages, where in-row data can&#8217;t exceed something like 8060 bytes (actual numbers vary a little).
+MS SQL Server 2000 has a limitation of 8000 characters in a varchar variable. The historical reason for this limitation, I believe, is related to the 8k size of data pages, where in-row data can't exceed something like 8060 bytes (actual numbers vary a little).
 
-But what if you need to work with data that is longer than 8000 characters? When storing data in a table, you can use the text datatype which is stored out-of-row (though there are options about storing strings shorter than 8k characters in-row and then moving them out-of-row if they grow). But you can&#8217;t use the text datatype as a variable. Look:
+But what if you need to work with data that is longer than 8000 characters? When storing data in a table, you can use the text datatype which is stored out-of-row (though there are options about storing strings shorter than 8k characters in-row and then moving them out-of-row if they grow). But you can't use the text datatype as a variable. Look:
 
 sql
 DECLARE @longdata text
@@ -34,9 +34,9 @@ SELECT @longdata
 
 This works fine, but there are limitations on what can be done with that @longdata variable just like there are with text columns, such as the inability to use the Len() function (use DataLength instead).
 
-If you truly must have variables with more than 8000 characters in a stored procedure, but they can&#8217;t be passed in as parameters, then you are now in the unfortunate position of having to use tables and text pointers. You&#8217;ll need the functions TEXTPTR, WRITETEXT, UPDATETEXT, and READTEXT. With these, you can work with pieces of the long data types (no longer than 8000 characters at a time in a variable).
+If you truly must have variables with more than 8000 characters in a stored procedure, but they can't be passed in as parameters, then you are now in the unfortunate position of having to use tables and text pointers. You'll need the functions TEXTPTR, WRITETEXT, UPDATETEXT, and READTEXT. With these, you can work with pieces of the long data types (no longer than 8000 characters at a time in a variable).
 
-Here&#8217;s an example of putting more than 8000 characters into a column in an SP:
+Here's an example of putting more than 8000 characters into a column in an SP:
 
 sql
 CREATE TABLE #Table (
@@ -84,7 +84,7 @@ sql
 SELECT Left(longdata, 8000) + Substring(longdata, 8001, 8000) + Substring(longdata, 16001, 8000)
 ```
 
-Sure, this may actually temporarily create a longer string (I don&#8217;t know for sure) but the final value in the rowset will not exceed 8000 characters.
+Sure, this may actually temporarily create a longer string (I don't know for sure) but the final value in the rowset will not exceed 8000 characters.
 
 You can concatenate strings when submitting dynamic SQL statements:
 
@@ -103,16 +103,16 @@ SET @SQl4 = '8000 characters here'
 EXEC (@SQL1 + @SQL2 + @SQL3 + @SQL4)
 ```
 
-While I can&#8217;t really recommend this method, if you are desperate and this is the only way to get the job done, it&#8217;s a possibility. I&#8217;ve personally only used it in two narrow situations: creating pre-processed SQL objects where the dynamic SQL is executed rarely only when something changes, and the code it creates is static until the next change. One creates history-keeping triggers, and the other builds a standard set of pivoted views in response to changes of the metadata definitions of some web objects. Both required this method to be able to handle the number of columns possible. 
+While I can't really recommend this method, if you are desperate and this is the only way to get the job done, it's a possibility. I've personally only used it in two narrow situations: creating pre-processed SQL objects where the dynamic SQL is executed rarely only when something changes, and the code it creates is static until the next change. One creates history-keeping triggers, and the other builds a standard set of pivoted views in response to changes of the metadata definitions of some web objects. Both required this method to be able to handle the number of columns possible. 
 
-• SQL 2005 has a new &#8216;max&#8217; keyword for the length of the (n)var/char data types that allows variables to be as big as the (n)text datatype can be. You can do anything to them that you could with regular varchar types, but behind the scenes they function like the text data type with values less than 8000 characters in-row and values greater than 8000 characters stored in out-of-row pages.
+• SQL 2005 has a new &#8216;max' keyword for the length of the (n)var/char data types that allows variables to be as big as the (n)text datatype can be. You can do anything to them that you could with regular varchar types, but behind the scenes they function like the text data type with values less than 8000 characters in-row and values greater than 8000 characters stored in out-of-row pages.
 
 sql
 DECLARE @longdata varchar(max)
 SET @longdata = '<more than 8000 characters here>'
 ```
 
-Max here simply means that the data type can go up to the maximum storage size allowed, which is 2^31-1 bytes (minus 2 more bytes for presumably a length value). Note that you can&#8217;t specify varchar(16000) or some value over 8000. You only get between 1 and 8000, or the special identifier _max_.
+Max here simply means that the data type can go up to the maximum storage size allowed, which is 2^31-1 bytes (minus 2 more bytes for presumably a length value). Note that you can't specify varchar(16000) or some value over 8000. You only get between 1 and 8000, or the special identifier _max_.
 
 As a practical example of using a text datatype to defeat the 8000-character limitation in MS SQL Server 2000, here is a SendMail stored procedure that will use the CDO.Message object to send email with a body longer than 8000 characters. Note: put in your mail server name or make it a parameter or perhaps make it read from a table!
 
@@ -276,7 +276,7 @@ BEGIN
 END
 ```
 
-Here&#8217;s a sample execution of SendMail for you:
+Here's a sample execution of SendMail for you:
 
 sql
 EXEC SendMail 'emtucifor@example.com', 'emtucifor@example.com', 'This is a test email', @HTMLBody = '<8000 characters here>'

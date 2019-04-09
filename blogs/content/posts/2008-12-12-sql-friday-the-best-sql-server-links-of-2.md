@@ -17,7 +17,7 @@ tags:
 ---
 Here we go, the second week of The Best SQL Server Links Of The Past Week series.
   
-It was a slow week this week, didn&#8217;t see a lot of things
+It was a slow week this week, didn't see a lot of things
 
 **[Performance Impact: file fragmentation and SAN &#8212; Part I][1]
   
@@ -25,15 +25,15 @@ It was a slow week this week, didn&#8217;t see a lot of things
   
 [Performance Impact: file fragmentation and SAN &#8212; Part III][3]** 
   
-Linchi Shea&#8217;s three-part post about performance impact with file fragmentation andthe SAN
+Linchi Shea's three-part post about performance impact with file fragmentation andthe SAN
 
 **[Defensive database programming: fun with UPDATE.][4]**
   
-Alexander Kuznetsov explains that it is well known that UPDATE &#8230; FROM command does not detect ambiguities. Also it well known that ANSI standard UPDATE may perform very poorly and may be difficult to maintain
+Alexander Kuznetsov explains that it is well known that UPDATE … FROM command does not detect ambiguities. Also it well known that ANSI standard UPDATE may perform very poorly and may be difficult to maintain
 
 **[Podcast: Ryan Dunn &#8211; SQL Data Services (SQL in the cloud)][5] (show number 42)**
   
-Greg Low&#8217;s podcast with Ryan Dunn about SQL Data Services. Microsoft Senior Technical Evangelist Ryan Dunn discusses SQL Services and SQL Data Services, the future of the cloud based data services, what is currently available and how to get started.
+Greg Low's podcast with Ryan Dunn about SQL Data Services. Microsoft Senior Technical Evangelist Ryan Dunn discusses SQL Services and SQL Data Services, the future of the cloud based data services, what is currently available and how to get started.
 
 **[TCP Chimney Offload][6]**
   
@@ -47,7 +47,7 @@ System.Data.SqlClient.SqlException: A transport-level error has occurred when se
 
 A significant part of sql server process memory has been paged out. This may result in a performance degradation.</em>
 
-Read Jason Massie&#8217;s post, also check out the link in the edit section
+Read Jason Massie's post, also check out the link in the edit section
 
 **[How do I view the script of the DDL triggers][7]**
   
@@ -59,7 +59,7 @@ Nice post by Dan Guzman showing some code to get some details and the rowcount f
 
 **[Never Index a BIT?][9]**
   
-Indexing a bit column, that is just crazy talk&#8230;&#8230;.or is it? Jason Massie shows some code which will make your decision if this is crazy or not really simple
+Indexing a bit column, that is just crazy talk…….or is it? Jason Massie shows some code which will make your decision if this is crazy or not really simple
 
 **[Diagnosing Transaction Log Performance Issues and Limits of the Log Manager][10]**
   
@@ -69,9 +69,9 @@ Overview
   
 For transactional workloads I/O performance of the writes to the SQL Server transaction log is critical to both throughput and application response time. This document discusses briefly how to determine if I/O to the transaction log file is a performance bottleneck and how to determine if this is storage related; a limitation is due to log manager itself or a combination of the two. Concepts and topics described in this paper apply mainly to SQL Server 2005 and SQL Server 2008.
 
-**[Is LINQ the next OLE DB? &#8220;LINQ-ed&#8221; Server as a rowset source?][11]**
+**[Is LINQ the next OLE DB? “LINQ-ed” Server as a rowset source?][11]**
   
-Bob Beauchemin writes &#8220;The &#8220;relational database bigots&#8221; I hang out with don&#8217;t like LINQ at all. They hope it would shrivel up in a corner and become part of the fad-technology graveyard. Or they&#8217;re waiting to make big bucks fixing the performance problems they think will ensue&#8230;&#8230;&#8230;&#8230;.&#8221;
+Bob Beauchemin writes “The “relational database bigots” I hang out with don't like LINQ at all. They hope it would shrivel up in a corner and become part of the fad-technology graveyard. Or they're waiting to make big bucks fixing the performance problems they think will ensue………….”
   
 You can read the rest there and tell me what you think.
 

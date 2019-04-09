@@ -45,7 +45,7 @@ If anyone has other methods or improvements to these, please feel free to commen
   <img src="/wp-content/uploads/users/onpnt/ssis_delete_1.gif" alt="" title="" width="437" height="157" />
 </div>
 
-  2. Name the task, &#8220;Remove all files based on backdays&#8221;
+  2. Name the task, “Remove all files based on backdays”
   3. Create the following variables
 <div class="image_block">
   <img src="/wp-content/uploads/users/onpnt/ssis_delete_2.gif" alt="" title="" width="343" height="137" />
@@ -293,9 +293,9 @@ Logging from the first method appears in blocks like this
 
 compared to the SSIS logging method of
 
-> Diagnostic,onpnt,onpnt,Delete Old File,{E4830550-A51A-46F3-A374-243888315707},{969D771F-24A9-4A57-B98D-42B025BE2573},6/4/2010 7:31:25 AM,6/4/2010 7:31:25 AM,0,(null),Trying to delete file &#8216;C:TestDeleteFileSystemTaskFile_20100603191001.trn&#8217;.
+> Diagnostic,onpnt,onpnt,Delete Old File,{E4830550-A51A-46F3-A374-243888315707},{969D771F-24A9-4A57-B98D-42B025BE2573},6/4/2010 7:31:25 AM,6/4/2010 7:31:25 AM,0,(null),Trying to delete file &#8216;C:TestDeleteFileSystemTaskFile_20100603191001.trn'.
   
-> Diagnostic,onpnt,onpnt,Delete Old File,{E4830550-A51A-46F3-A374-243888315707},{969D771F-24A9-4A57-B98D-42B025BE2573},6/4/2010 7:31:25 AM,6/4/2010 7:31:25 AM,0,(null),Finished deleting file &#8216;C:TestDeleteFileSystemTaskFile_20100603191001.trn&#8217;.
+> Diagnostic,onpnt,onpnt,Delete Old File,{E4830550-A51A-46F3-A374-243888315707},{969D771F-24A9-4A57-B98D-42B025BE2573},6/4/2010 7:31:25 AM,6/4/2010 7:31:25 AM,0,(null),Finished deleting file &#8216;C:TestDeleteFileSystemTaskFile_20100603191001.trn'.
 
 ## Conclusions
 

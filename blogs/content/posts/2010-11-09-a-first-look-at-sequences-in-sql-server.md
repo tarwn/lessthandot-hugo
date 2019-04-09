@@ -17,7 +17,7 @@ tags:
   - sql server denali
 
 ---
-People have been asking for sequences for a very long time and now finally it is included with SQL Server Denali CTP 1. You don&#8217;t have to muck around with an identity table that you share across many tables anymore.
+People have been asking for sequences for a very long time and now finally it is included with SQL Server Denali CTP 1. You don't have to muck around with an identity table that you share across many tables anymore.
 
 A simple sequence will look like this
 
@@ -54,7 +54,7 @@ INSERT bla DEFAULT VALUES  --3
 INSERT bla VALUES(NEXT VALUE FOR GlobalCounter)  --4
 ```
 
-Now let&#8217;s see what is in the table, should be 3 and 4
+Now let's see what is in the table, should be 3 and 4
 
 sql
 SELECT * FROM bla  --3,4
@@ -88,7 +88,7 @@ Here is the error message
   
 _Msg 11728, Level 16, State 1, Line 1
   
-The sequence object &#8216;GlobalCounterTest&#8217; has reached its minimum or maximum value. Restart the sequence object to allow new values to be generated._
+The sequence object &#8216;GlobalCounterTest' has reached its minimum or maximum value. Restart the sequence object to allow new values to be generated._
 
 To reset a sequence, you need to use restart
 
@@ -97,7 +97,7 @@ ALTER SEQUENCE GlobalCounterTest RESTART
 GO
 ```
 
-Let&#8217;s take a look at another example, this sequence will generate values 1 and 2 and will restart once you reach the max, this is accomplished by using cycle
+Let's take a look at another example, this sequence will generate values 1 and 2 and will restart once you reach the max, this is accomplished by using cycle
 
 sql
 CREATE SEQUENCE MySequence
@@ -134,7 +134,7 @@ GO 256
 
 _Msg 11728, Level 16, State 1, Line 1
   
-The sequence object &#8216;TinySequence&#8217; has reached its minimum or maximum value. Restart the sequence object to allow new values to be generated._
+The sequence object &#8216;TinySequence' has reached its minimum or maximum value. Restart the sequence object to allow new values to be generated._
 
 One more example, if you create a sequence like this without specifying a start value, it will start at -2147483648 for an integer
 

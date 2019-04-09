@@ -31,9 +31,9 @@ CREATE CLUSTERED  INDEX ix_test_clust ON test (id ASC, col1 DESC)
 
 How would you find out without scripting the index if the columns are in descending or ascending order? SQL Server has a function for that, the name of this function is INDEXKEY_PROPERTY
   
-Before starting I need to warn you that this will only run on SQL Server 2005 and above, I have not tested this on SQL Server 2000 but if you need it to run on SQL Server 2000 remove sys. in front of the tables&#8230;so instead of sys.sysindexes use sysindexes that should do the trick.
+Before starting I need to warn you that this will only run on SQL Server 2005 and above, I have not tested this on SQL Server 2000 but if you need it to run on SQL Server 2000 remove sys. in front of the tables…so instead of sys.sysindexes use sysindexes that should do the trick.
 
-Let&#8217;s see how that works. first create this table in the tempdb
+Let's see how that works. first create this table in the tempdb
 
 sql
 USE tempdb
@@ -329,7 +329,7 @@ SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 1 , 1 , 'isdescending' )
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 1 , 2 , 'isdescending' )
 ```
 
-Of course we are not amateurs and nobody wants to type all that stuff, we will just take the query from before and put the following in the select statement _INDEXKEY_PROPERTY (k.id,k.indid ,c.colid,&#8217;isdescending&#8217;) as IsDescending_
+Of course we are not amateurs and nobody wants to type all that stuff, we will just take the query from before and put the following in the select statement _INDEXKEY_PROPERTY (k.id,k.indid ,c.colid,'isdescending') as IsDescending_
   
 Run the code below to see how that works.
 
@@ -527,7 +527,7 @@ Here is the output
   </tr>
 </table>
 
-Of course if you can do that you can also very simply write a query that returns all the columns that are sorted descending in any index by making the WHERE clause the following: where INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,&#8217;isdescending&#8217;) = 1. Run the query below to see how that works
+Of course if you can do that you can also very simply write a query that returns all the columns that are sorted descending in any index by making the WHERE clause the following: where INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') = 1. Run the query below to see how that works
 
 sql
 select INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') as IsDescending,OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,k.keyno,k.indid as IndexID 

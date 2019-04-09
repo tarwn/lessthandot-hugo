@@ -22,16 +22,16 @@ tags:
   - simulation
 
 ---
-Scalability is easy, provided you don&#8217;t need it to work.
+Scalability is easy, provided you don't need it to work.
 
 Probably the number one failure of system scaling is when people dive right in and start building. No baselines, limited measurements, no analysis, just a hypothesis and a whole lot of late nights tweaking the system. With extra complexity comes extra costs, from the initial development through more expensive maintenance. Scale poorly and not only do we take on those extra complexity costs, but also the more obvious additional costs of the actual implementation (new servers, more resources, etc).
 
 ## The Somewhat Contrived Example
 
-Recently I&#8217;ve been working on a system to simulate parallelizing workloads, specifically workloads that depend on external resources with rate or load thresholds. Let&#8217;s use it to look at a somewhat contrived example.
+Recently I've been working on a system to simulate parallelizing workloads, specifically workloads that depend on external resources with rate or load thresholds. Let's use it to look at a somewhat contrived example.
 
 <div style="background-color: #eeeeee; padding: 1em; margin: 1em;">
-  Note: For this post, the simulated &#8220;service&#8221; has a 100 request/minute limit and throttles individual clients for 15 second windows. Individual operations consist of 50ms of local processing and a single service request that has 50ms of latency and 100 ms for processing and response time. Similar results can be achieved with more realistic batch sizes and rates, the smaller values just allow me to more quickly produce samples for the blog post.
+  Note: For this post, the simulated “service” has a 100 request/minute limit and throttles individual clients for 15 second windows. Individual operations consist of 50ms of local processing and a single service request that has 50ms of latency and 100 ms for processing and response time. Similar results can be achieved with more realistic batch sizes and rates, the smaller values just allow me to more quickly produce samples for the blog post.
 </div>
 
 So the backstory is that I have a batch process that is running more and more slowly as we take on larger and more frequent workloads. 
@@ -42,7 +42,7 @@ I start by testing the batch process locally so I can see how slow it is before 
   <img src="http://tiernok.com/LTDBlog/Scalability/Graph_01.png" alt="Graph - 1 Client, 60 Requests, 100rpm Limit" /><br /> 1 Client, 60 Requests, 100rpm
 </div>
 
-Locally it runs pretty quickly, but I&#8217;m betting that parallelizing the process will give me a significant increase in speed.
+Locally it runs pretty quickly, but I'm betting that parallelizing the process will give me a significant increase in speed.
 
 <div style="text-align: center; font-size: .8em; color: #666666">
   <img src="http://tiernok.com/LTDBlog/Scalability/Graph_02.png" alt="Graph - 1 Client vs 30 Clients, 60 Requests, 100rpm Limit" /><br /> 1 Client vs 30 Clients, 60 Requests, 100rpm
@@ -56,9 +56,9 @@ Except when I try to push this to production, I start getting a lot of errors.
   <img src="http://tiernok.com/LTDBlog/Scalability/Graph_03.png" alt="Graph - 30 Clients, 300 Requests, 100rpm - 67% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm &#8211; 67% Failure Rate
 </div>
 
-As it turns out, the external API my process saves the data to has a rate limit. When I exceed the allowable rate, I&#8217;m throttled for a short period of time. Any requests I make during that throttle period are returned with errors indicating I&#8217;m throttled.
+As it turns out, the external API my process saves the data to has a rate limit. When I exceed the allowable rate, I'm throttled for a short period of time. Any requests I make during that throttle period are returned with errors indicating I'm throttled.
 
-Hmm. Luckily there are a number of common patterns available to retry these types of failures. I&#8217;ll add an exponential back-off retry pattern so that when I get throttled my service will retry failed requests at slower rates until the service un-throttles me. While I&#8217;ve found plenty of code examples online, none of them seem to have recommendations, so I&#8217;ll just use one of the sample settings they provide.
+Hmm. Luckily there are a number of common patterns available to retry these types of failures. I'll add an exponential back-off retry pattern so that when I get throttled my service will retry failed requests at slower rates until the service un-throttles me. While I've found plenty of code examples online, none of them seem to have recommendations, so I'll just use one of the sample settings they provide.
 
 <div style="text-align: center; font-size: .8em; color: #666666">
   <img src="http://tiernok.com/LTDBlog/Scalability/Graph_04.png" alt="Graph - 30 Clients, 300 Requests, 100rpm, Retry Policy #1 - 7% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm, Retry Policy #1 &#8211; 7% Failure Rate
@@ -82,11 +82,11 @@ Success!
 
 ## Where I Went Wrong
 
-Ok, so maybe not. Over the course of my little story I went wrong in a number of places. Even though this was a contrived example, I&#8217;ve watched very similar scenarios play out in a number of different organizations with real systems.
+Ok, so maybe not. Over the course of my little story I went wrong in a number of places. Even though this was a contrived example, I've watched very similar scenarios play out in a number of different organizations with real systems.
 
 ### The Bottleneck
 
-The first and most critical problem was that I didn&#8217;t actually locate the bottleneck in my process, I simply tried to do more of the same. The [Theory of Constraints][1] tells us that we can improve the rate of a process by identifying and exploiting the constraints. 
+The first and most critical problem was that I didn't actually locate the bottleneck in my process, I simply tried to do more of the same. The [Theory of Constraints][1] tells us that we can improve the rate of a process by identifying and exploiting the constraints. 
 
 In this system, the constraint looked like it was the sequential execution of the tasks, but in reality the constraint was the time it took to call the 3rd-party API. Had we identified that bottleneck before starting, we could have approached the problem differently.
 
@@ -96,7 +96,7 @@ In this system, the constraint looked like it was the sequential execution of th
 
 Rather than the parallel complexity, we can modify how the tasks are executed to try and take advantage of knowing where our bottleneck is. If the API allowed us to submit several requests in a batch, this redesign would net us several orders of magnitude improvement. Another option would be to run the results of the local processing into a queue and submit requests from there at a slow trickle, using only a percentage of our API limit so as not to disrupt any other real-time operations or batch processing the system supports. Another option we could take advantage of is not starting any of our expensive 3rd-party communications until we know that the entire job can actually be processed successfully through our local process.
 
-Identifying the constraint unlocks the ability to turn the problem on it&#8217;s head and achieve higher improvements, typically by orders of magnitude.
+Identifying the constraint unlocks the ability to turn the problem on it's head and achieve higher improvements, typically by orders of magnitude.
 
 ### The Math Error
 
@@ -104,15 +104,15 @@ I concluded the scenario above by assuming I had found a good solution that also
 
 ### The Evolving Assumption
 
-Somewhere along the way I found 30 clients to be a great improvement and didn&#8217;t test other options. Then I made some assumptions about a retry policy. Then I tweaked that retry policy until the error rate disappeared. My assumptions made sense at the time, so I never questioned where they were leading me.
+Somewhere along the way I found 30 clients to be a great improvement and didn't test other options. Then I made some assumptions about a retry policy. Then I tweaked that retry policy until the error rate disappeared. My assumptions made sense at the time, so I never questioned where they were leading me.
 
-When I found a winning combination for my retry rate, I didn&#8217;t realize I was missing other, better options:
+When I found a winning combination for my retry rate, I didn't realize I was missing other, better options:
 
 <div style="text-align: center; font-size: .8em; color: #666666">
   <img src="http://tiernok.com/LTDBlog/Scalability/Graph_07.png" alt="Graph - 30 Clients, 300 Requests, 100rpm, Retry Policy #1B vs 4A-C" /><br /> 30 Clients, 300 Requests, 100rpm, Retry Policy #1B vs 4A-C
 </div>
 
-What&#8217;s worse, is that trail of assumptions along the way was never re-validated. I concluded with a 6.5x improvement, but is that still accurate?
+What's worse, is that trail of assumptions along the way was never re-validated. I concluded with a 6.5x improvement, but is that still accurate?
 
 <div style="text-align: center; font-size: .8em; color: #666666">
   <img src="http://tiernok.com/LTDBlog/Scalability/Graph_08.png" alt="Graph - 1-50 Clients, 300 Requests, 100rpm, Retry Policy #1B" /><br /> 1-50 Clients, 300 Requests, 100rpm, Retry Policy #1B

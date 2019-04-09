@@ -18,7 +18,7 @@ tags:
   - primitves
 
 ---
-I don&#8217;t know how many times I&#8217;ve put together the same slow regexp to check if the user input is a valid phone number. I decided that this cannot go on and developed a simple phone number primitive. Now our main concern here is the performance of TryParse since it will be used the most. After running some performance tests the median timing was 400ns on a 3Ghz machine.
+I don't know how many times I've put together the same slow regexp to check if the user input is a valid phone number. I decided that this cannot go on and developed a simple phone number primitive. Now our main concern here is the performance of TryParse since it will be used the most. After running some performance tests the median timing was 400ns on a 3Ghz machine.
 
 ```CSharp
 [Serializable]

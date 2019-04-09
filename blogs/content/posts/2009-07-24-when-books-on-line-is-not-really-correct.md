@@ -44,7 +44,7 @@ sql
 EXEC TestStuff 1,test1,Test2
 ```
 
-So even though you don&#8217;t enclose the character value in quotes it works.
+So even though you don't enclose the character value in quotes it works.
 
 From the [SQL Server 2008 Books Online (June 2009) EXECUTE (Transact-SQL)][3] page, I changed the color to red for the sentence that is wrong.
 
@@ -76,7 +76,7 @@ That gives you this error
   
 Server: Msg 207, Level 16, State 3, Line 3
   
-Invalid column name &#8216;a&#8217;.
+Invalid column name &#8216;a'.
 
 Of course there are other inconsistent things in SQL Server, here is a perfect example
 

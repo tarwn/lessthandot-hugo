@@ -19,9 +19,9 @@ tags:
   - unit testing
 
 ---
-Recently I decided to start doing JavaScript [code katas.][1] I&#8217;ve been using JavaScript for around ten years, but there there are still a lot of aspects I don&#8217;t know well or that I could use more practice in. Case in point, I had never used a unit testing framework with javascript. Having never unit tested JavaScript before, I used a scientific tool to carefully select from amongst the numerous unit testing packages available.
+Recently I decided to start doing JavaScript [code katas.][1] I've been using JavaScript for around ten years, but there there are still a lot of aspects I don't know well or that I could use more practice in. Case in point, I had never used a unit testing framework with javascript. Having never unit tested JavaScript before, I used a scientific tool to carefully select from amongst the numerous unit testing packages available.
 
-I typed &#8220;javascript unit testing&#8221; into Google and started reading.
+I typed “javascript unit testing” into Google and started reading.
 
 ## jsTestDriver
 
@@ -33,13 +33,13 @@ The jsTestDriver site includes plugins for Eclipse, Maven, and IntelliJ. I also 
   <img src="http://tiernok.com/LTDBlog/jsunittest/editplus.png" alt="Screenshot of EditPlus" /><br /> Screenshot of EditPlus Settings
 </div>
 
-Though I&#8217;m not using the feature, jsTestDriver provides a flag to specify an output file for the results, enabling us to use it as part of a continuous build.
+Though I'm not using the feature, jsTestDriver provides a flag to specify an output file for the results, enabling us to use it as part of a continuous build.
 
 ### The Setup
 
 Setting up jsTestDriver on my system was fairly straightforward.
 
-  1. Download Java &#8211; Visit [java.com][4] and download the appropriate installer, run the installer, remember to go into the control panel and fiddle with Java&#8217;s update settings
+  1. Download Java &#8211; Visit [java.com][4] and download the appropriate installer, run the installer, remember to go into the control panel and fiddle with Java's update settings
   2. Download the jar file &#8211; Visit the [project on Google][5] and download a copy of the jar file (I used the self-contained version)
   3. Create folders &#8211; Create a top level folder and two sub folders (for instance, src and src-test). Put the jar in the top level folder
   4. Create a conf file &#8211; I used the one in the [Getting Started Guide][6] as a starting point
@@ -49,7 +49,7 @@ At this point we should be able to fire up the server for the first time and ver
 ```text
 "C:Program Files (x86)Javajre6binjava" -jar JsTestDriver-1.3.2.jar --port 4224 --browser "C:Documents and SettingsTarwnLocal SettingsApplication DataGoogleChromeApplicationchrome.exe"
 ```
-What this does is starts the jsTestDriver jar on port 4224 and also automatically starts up an instance of chrome that will be captured by the server to run tests. I was initially using Firefox but jsTestDriver can&#8217;t intercept the console log the way it can with Chrome, so I wasn&#8217;t getting very good output for failed or errored tests.
+What this does is starts the jsTestDriver jar on port 4224 and also automatically starts up an instance of chrome that will be captured by the server to run tests. I was initially using Firefox but jsTestDriver can't intercept the console log the way it can with Chrome, so I wasn't getting very good output for failed or errored tests.
 
 Next I created a .cmd file to run all the tests in my folders:
 
@@ -63,7 +63,7 @@ This tells jsTestDriver to run all available tests (based on the settings in the
 
 Once we have gotten this far, we can start writing some simple tests.
 
-In each directory (src and src-test), create a file named &#8220;mystuff.js&#8221;.
+In each directory (src and src-test), create a file named “mystuff.js”.
 
 **src/mystuff.js**
 
@@ -140,7 +140,7 @@ Tests failed: Tests failed. See log for details.
 
 The top reflects the tests that have run at a glance with .s for passing tests, Fs for failed, and E for errored. Afterwards we get a summary of the total counts and then a section for the one browser we ran with. jsTestDriver allows you to capture multiple browsers, so we could configure this to run our tests across chrome, firefox, and IE simultaneously.
 
-jsTestDriver also supports &#8220;setup&#8221; and &#8220;teardown&#8221; functions to run before and after tests. 
+jsTestDriver also supports “setup” and “teardown” functions to run before and after tests. 
 
 ## Qunit
 
@@ -176,7 +176,7 @@ The empty file will be our test runner. Update the file to look like this:
 </body>
 </html>
 ```
-As you can see, we are referencing a CDNed version of jQuery, the local qunit files we downloaded, our source file, and a test js file we haven&#8217;t created yet. The remainder of the HTML will be used by Qunit to display the results.
+As you can see, we are referencing a CDNed version of jQuery, the local qunit files we downloaded, our source file, and a test js file we haven't created yet. The remainder of the HTML will be used by Qunit to display the results.
 
 ### Writing Tests
 
@@ -211,7 +211,7 @@ test("Fails miserably", function(){
 	ok(false,"miserably");
 });
 ```
-Qunit&#8217;s _equals_ method has it&#8217;s actual and expected arguments reversed from jsTestDriver, instead expecting them in this order: _Qunit.equals(actual, expected)_. I didn&#8217;t originally notice this and had to update both the jsTestDriver test mapping script and the sample above (here and in bitbucket).
+Qunit's _equals_ method has it's actual and expected arguments reversed from jsTestDriver, instead expecting them in this order: _Qunit.equals(actual, expected)_. I didn't originally notice this and had to update both the jsTestDriver test mapping script and the sample above (here and in bitbucket).
 
 ### Running Tests
 
@@ -221,7 +221,7 @@ Opening the testrunner html file, we should now see it display a block for each 
   <img src="http://tiernok.com/LTDBlog/jsunittest/qunit.png" alt="QUnit Results" /><br /> QUnit Results
 </div>
 
-Failed tests automatically display details. Any test can be toggled open/closed by clicking it&#8217;s name, and a handy &#8220;rerun&#8221; button lets us re-run a single test.
+Failed tests automatically display details. Any test can be toggled open/closed by clicking it's name, and a handy “rerun” button lets us re-run a single test.
 
 ## Combining Them
 

@@ -21,7 +21,7 @@ I was thinking about writing a post about _how C# is morphing into SQL_ because 
 
 For some bizarre reason Chrissie had the same idea yesterday and posted the following post: [What so special about Optional/named parameters][2]. From that article you will learn that VB already had this back in the vb4 days.
 
-So let&#8217;s get started. First the SQL Server version
+So let's get started. First the SQL Server version
   
 Create the following stored procedure which has 3 optional parameters
 
@@ -99,7 +99,7 @@ exec OptionalTest 'bla' ,'Twelve','Thirsty','Forty'
   
 @Param4 = Forty
 
-If we pass in the first parameter and we olso want to pass in the third parameter we need to use named parameters, in this case we do this @Param3 = &#8216;Thirsty&#8217;
+If we pass in the first parameter and we olso want to pass in the third parameter we need to use named parameters, in this case we do this @Param3 = &#8216;Thirsty'
 
 sql
 exec OptionalTest 'bla' ,@Param3 = 'Thirsty'
@@ -127,7 +127,7 @@ exec OptionalTest 'bla' ,@Param4 = 'Thirsty'
   
 @Param4 = Thirsty
 
-Omitting parameters won&#8217;t run or parse for that matter
+Omitting parameters won't run or parse for that matter
 
 sql
 exec OptionalTest 'bla' ,,,'Thirsty'
@@ -135,7 +135,7 @@ exec OptionalTest 'bla' ,,,'Thirsty'
 
 Server: Msg 102, Level 15, State 1, Line 1
   
-Incorrect syntax near &#8216;,&#8217;.
+Incorrect syntax near &#8216;,'.
 
 You can use nulls but as you can see from the output nothing gets printed at all for paraeter 2 or 3, this is because when you concatenate a NULL value with something else you get nothing back
 
@@ -205,7 +205,7 @@ namespace ConsoleApplication1
 
 Here is the output from those calls
 
-p.OptionalTest(&#8220;bla&#8221;);
+p.OptionalTest(“bla”);
               
 param1 = bla
               
@@ -215,7 +215,7 @@ param3 = three
               
 param4 =
 
-p.OptionalTest(&#8220;bla&#8221;,&#8221;twelve&#8221;)
+p.OptionalTest(“bla”,”twelve”)
               
 param1 = bla
               
@@ -225,7 +225,7 @@ param3 = three
               
 param4 =
 
-p.OptionalTest(&#8220;bla&#8221;,&#8221;twelve&#8221;,&#8221;Thirsty&#8221;)
+p.OptionalTest(“bla”,”twelve”,”Thirsty”)
               
 param1 = bla
               
@@ -235,7 +235,7 @@ param3 = Thirsty
               
 param4 =
 
-p.OptionalTest(&#8220;bla&#8221;,&#8221;twelve&#8221;,&#8221;Thirsty&#8221;,&#8221;Forty&#8221;)
+p.OptionalTest(“bla”,”twelve”,”Thirsty”,”Forty”)
               
 param1 = bla
               
@@ -245,7 +245,7 @@ param3 = Thirsty
               
 param4 = Forty
 
-p.OptionalTest(&#8220;bla&#8221;,param3:&#8221;Thirsty&#8221;)
+p.OptionalTest(“bla”,param3:”Thirsty”)
               
 param1 = bla
               
@@ -255,7 +255,7 @@ param3 = Thirsty
               
 param4 =
 
-p.OptionalTest(&#8220;bla&#8221;,param4:&#8221;Thirsty&#8221;)
+p.OptionalTest(“bla”,param4:”Thirsty”)
               
 param1 = bla
               
@@ -265,7 +265,7 @@ param3 = three
               
 param4 = Thirsty
 
-p.OptionalTest(&#8220;bla&#8221;,null,null,&#8221;Thirsty&#8221;)
+p.OptionalTest(“bla”,null,null,”Thirsty”)
               
 param1 = bla
               
@@ -277,9 +277,9 @@ param4 = Thirsty
 
 As you can see there is almost no difference between SQL and C# when calling with named parameters
 
-exec OptionalTest &#8216;bla&#8217; ,@Param4 = &#8216;Thirsty&#8217;
+exec OptionalTest &#8216;bla' ,@Param4 = &#8216;Thirsty'
   
-p.OptionalTest(&#8220;bla&#8221;,param4:&#8221;Thirsty&#8221;)
+p.OptionalTest(“bla”,param4:”Thirsty”)
 
 Now you might ask yourself why do we need this? Have you ever called Office COM components? Here is what you would do now
 

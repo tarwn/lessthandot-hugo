@@ -27,7 +27,7 @@ The recording of the [webinar][1] I did for the PASS BI virtual chapter is live!
   
 (Quick reminder: it was the same session as on the SQLServerDays: <a style="color: #c04623" href="/index.php/uncategorized/speaking-at-sql-server-days-2014/">How to (not) torment your fellow SSIS developer?</a>)
 
-I&#8217;m quite pleased with the recording, although I sound like a drunk German scientist sometimes.
+I'm quite pleased with the recording, although I sound like a drunk German scientist sometimes.
 
 {{< youtube -N7gxmAdceM >}}
 

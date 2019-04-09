@@ -24,7 +24,7 @@ This is part three of a series about Report Builder 3.0.
   * <a title="Report Builder 3.0 – Map Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-map/" target="_blank">Report Builder 3.0 – Map Wizard</a>
   * <a title="Report Builder 3.0 – Report Parts" href="/index.php/datamgmt/dbprogramming/mssqlserver/report-builder-3-0-report/" target="_blank">Report Builder 3.0 – Report Parts</a>
 
-In this post, I&#8217;ll cover the Chart Wizard, which allows you to build colorful, graphic charts in a few simple steps.
+In this post, I'll cover the Chart Wizard, which allows you to build colorful, graphic charts in a few simple steps.
 
 The Chart Wizard can be accessed in two ways. It will appear on the splash screen when you open Report Builder. It can also be found under File > New.
 

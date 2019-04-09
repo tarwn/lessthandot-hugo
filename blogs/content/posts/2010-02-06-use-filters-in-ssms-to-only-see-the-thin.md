@@ -18,9 +18,9 @@ tags:
   - tip
 
 ---
-Now that all my server are SQL Server 2008 I use SSMS with SSMS Toolpack and Toad. I don&#8217;t really use Query Analyzer anymore. The other day I found out that you can hide objects you don&#8217;t want to see in SSMS by using filters. 
+Now that all my server are SQL Server 2008 I use SSMS with SSMS Toolpack and Toad. I don't really use Query Analyzer anymore. The other day I found out that you can hide objects you don't want to see in SSMS by using filters. 
 
-Let&#8217;s first look at some code. Create a new database named test, create a new schema named Denis and then add 3 tables to the dbo schema and 3 tables to the Denis schema. Just run the code below
+Let's first look at some code. Create a new database named test, create a new schema named Denis and then add 3 tables to the dbo schema and 3 tables to the Denis schema. Just run the code below
 
 sql
 create database test
@@ -76,7 +76,7 @@ If you want to remove the filter, just right click on the folder, select Filter 
 
 
 
-If you work in a team and you created several tables that all start with Report then you can create a new filter and just show these objects. This way you don&#8217;t need to see any tables that your team members created. Below is a screen shot of a filter like that.
+If you work in a team and you created several tables that all start with Report then you can create a new filter and just show these objects. This way you don't need to see any tables that your team members created. Below is a screen shot of a filter like that.
 
 <div>
   <img src="/wp-content/uploads/blogs/DataMgmt/NewSnip.PNG" alt="" title="" width="538" height="96" />

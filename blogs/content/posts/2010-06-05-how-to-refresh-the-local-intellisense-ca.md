@@ -22,7 +22,7 @@ tags:
 ---
 This question came up again yesterday in our [SQL Server forum][1] so I decided to create a short blog post about it.
   
-The version of SQL Server Management Studio that ships with SQL Server2008 comes with IntelliSense enabled, I still think IntelliSense is sometimes more in my way than it is useful but I won&#8217;t bore you with that. 
+The version of SQL Server Management Studio that ships with SQL Server2008 comes with IntelliSense enabled, I still think IntelliSense is sometimes more in my way than it is useful but I won't bore you with that. 
 
 What will eventually happen is that if you create new tables and stored procedures IntelliSense will not know about those, when this happens you have to refresh the local IntelliSense cache for it to _see_ the new objects.
 

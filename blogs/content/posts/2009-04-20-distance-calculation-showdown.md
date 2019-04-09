@@ -22,7 +22,7 @@ A while back George, Denis and I did a series of posts on calculating distance b
   
 [Part 3: CLR (2005 +)][3]
 
-At the time I promised to run some tests. I had an idea how it would turn out at that point, but wanted to make my testing a bit more thorough. So, I&#8217;ve got the three functions that were created from following along with those blog entries. I then created a new stored proc for each method. For example (this is the TSQL version):
+At the time I promised to run some tests. I had an idea how it would turn out at that point, but wanted to make my testing a bit more thorough. So, I've got the three functions that were created from following along with those blog entries. I then created a new stored proc for each method. For example (this is the TSQL version):
 
 sql
 CREATE proc [dbo].[ClosestZips_TSQL] (@ZipCode char(5), @Quantity int)
@@ -46,7 +46,7 @@ ORDER BY dbo.tsqlDistCalc(h.Longitude, h.Latitude, g.Longitude, g.Latitude)
 end
 ```
 
-Then, I ran these procs for my zip code, for a varying number of results. The number of results didn&#8217;t turn out to matter, so I&#8217;ve left that out. This table contains the results:
+Then, I ran these procs for my zip code, for a varying number of results. The number of results didn't turn out to matter, so I've left that out. This table contains the results:
 
 <table border="1" cellpadding="2" align="center">
   <tr>
@@ -90,15 +90,15 @@ Then, I ran these procs for my zip code, for a varying number of results. The nu
   </tr>
 </table>
 
-These times were on a pretty weak laptop, at least by software developer&#8217;s standards. I ran the test a whole bunch of times, and these were typical times (but in the low end of the spectrum I observed). I am sure times on a better machine would be much faster, and I would love to hear other people&#8217;s results.
+These times were on a pretty weak laptop, at least by software developer's standards. I ran the test a whole bunch of times, and these were typical times (but in the low end of the spectrum I observed). I am sure times on a better machine would be much faster, and I would love to hear other people's results.
 
 So, the CLR was the winner in this test, but there are some things to consider besides speed. One is its availability. Of course it is not available on SQL 2000 or earlier, but there are other factors in play as well. For example, on my shared web host I cannot run CLR code in the database :-/. Some organizations may not allow CLR integration code on their servers as a rule either. A big advantage you have with the other two is that if you have a SQL Server with the requisite version at your disposal, you can use them. 
 
-Another thing to consider is what else you can do with the data. Using the CLR and T-SQL approaches, the data is stored as raw coordinate pairs. I haven&#8217;t confirmed this, but they seem much quicker to write to as well, so that should be taken into consideration if your app will need to do a lot of writing (not likely for a &#8220;Closest Store&#8221; type of thing).
+Another thing to consider is what else you can do with the data. Using the CLR and T-SQL approaches, the data is stored as raw coordinate pairs. I haven't confirmed this, but they seem much quicker to write to as well, so that should be taken into consideration if your app will need to do a lot of writing (not likely for a “Closest Store” type of thing).
 
-Storing the raw coordinate pairs will also allow you to do some cool things to limit the size of your query, that can yield tremendous performance gains. For example, George showed me a trick once where you can first use the pythagorean theorem to approximate distance, and use this to create a bounding box. You then limit the number of pairs you need to run the &#8220;real&#8221; calculation on and really speed things up. But that might be a topic for another post.
+Storing the raw coordinate pairs will also allow you to do some cool things to limit the size of your query, that can yield tremendous performance gains. For example, George showed me a trick once where you can first use the pythagorean theorem to approximate distance, and use this to create a bounding box. You then limit the number of pairs you need to run the “real” calculation on and really speed things up. But that might be a topic for another post.
 
-I&#8217;ve tried to cover the ups and downs of these methods the best that I could. I&#8217;d love to hear about anything I missed. Have fun!
+I've tried to cover the ups and downs of these methods the best that I could. I'd love to hear about anything I missed. Have fun!
 
 \*** **Got a SQL Server question? Check out our [Microsoft SQL Server Programming][4] forum or our [Microsoft SQL Server Admin][5] forum**
 

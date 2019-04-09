@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-My dear friends Erin Stellato ([Blog][1] | [Twitter][2]) and Michelle Ufford ([Blog][3] | [Twitter][4]) tagged me for Meme Monday series&#8230;so here we go
+My dear friends Erin Stellato ([Blog][1] | [Twitter][2]) and Michelle Ufford ([Blog][3] | [Twitter][4]) tagged me for Meme Monday series…so here we go
 
 <span class="MT_under">Actual start of blog</span>
   

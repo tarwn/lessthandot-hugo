@@ -25,11 +25,11 @@ Having read three books written by Stephen Levy ([Hackers][2], [Crypto][3] and [
 
 [In The Plex: How Google Thinks, Works, and Shapes Our Lives][5] is a very interesting book, it is a must read for anyone who wants to know how Google thinks and why it is that it thinks that way. Both Larry Page and Sergey Brin were Montessori students, this highly influenced their way of thinking. I learned a lot of interesting stuff about Google in this book, here are a few examples:
   
-I always thought that pagerank was named like that because it was the rank for a page&#8230;guess what? The person who came up with this ranking algorithm is Larry Page&#8230;.mmmm now pagerank is a name that makes sense in a different way.
+I always thought that pagerank was named like that because it was the rank for a page…guess what? The person who came up with this ranking algorithm is Larry Page….mmmm now pagerank is a name that makes sense in a different way.
 
-Going through 25 interviews and having to tell them what your SAT scores were or why you received a B in high school for an exam&#8230;.really..who cares&#8230;Google cares. Google interviews are also notoriously hard, they are only interested in the very best people
+Going through 25 interviews and having to tell them what your SAT scores were or why you received a B in high school for an exam….really..who cares…Google cares. Google interviews are also notoriously hard, they are only interested in the very best people
 
-Don&#8217;t be Evil..you will learn how that was picked, I won&#8217;t spoil it here.
+Don't be Evil..you will learn how that was picked, I won't spoil it here.
 
 Stephen Levy was given unprecedented access to the people on the Google campus for 2 years while writing this book, it shows, there is so much detail in this book that you are thinking that you are actually there. I would say that if there is one book that you want to read about Google, then pick this one, it is the most complete book so far.
 

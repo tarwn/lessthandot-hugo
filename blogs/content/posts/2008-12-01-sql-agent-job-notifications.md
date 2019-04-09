@@ -14,17 +14,17 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-This falls under DBA scripting and automation. I am going to try to key on these things in the next few weeks after reading Dan&#8217;s blog titled, &#8220;Scripting DBA Actions&#8221; here http://blogs.msdn.com/dtjones/archive/2008/11/23/scripting-dba-actions.aspx
+This falls under DBA scripting and automation. I am going to try to key on these things in the next few weeks after reading Dan's blog titled, “Scripting DBA Actions” here http://blogs.msdn.com/dtjones/archive/2008/11/23/scripting-dba-actions.aspx
 
-If you have a landscape that is of some size then on most of your instances you&#8217;re going to find yourself mixed into dozens of SQL Agents Jobs that can become a daily task to ensure they ran correctly. Again this is on the basis you have no monitoring tools that will already notify you of problems and failures. Now we all know there is the Notifications option on all jobs. This is great for basic failures, successful runs and completions but if you&#8217;ve ever had to write a job that really did something other than a backup task you&#8217;re going to find the need for more options in notifying you when certain things fail and or complete. This is also helpful when you don&#8217;t want large SQL Tasks to stop an entire job but in the same event let you know one update may have not been successful.
+If you have a landscape that is of some size then on most of your instances you're going to find yourself mixed into dozens of SQL Agents Jobs that can become a daily task to ensure they ran correctly. Again this is on the basis you have no monitoring tools that will already notify you of problems and failures. Now we all know there is the Notifications option on all jobs. This is great for basic failures, successful runs and completions but if you've ever had to write a job that really did something other than a backup task you're going to find the need for more options in notifying you when certain things fail and or complete. This is also helpful when you don't want large SQL Tasks to stop an entire job but in the same event let you know one update may have not been successful.
 
-So let&#8217;s say we have a job that first downloads from an internet location, backs up a table, bulk imports the new data from the download, exports to excel worksheets for sales exception reporting and then updates several key points in sales data. 
+So let's say we have a job that first downloads from an internet location, backs up a table, bulk imports the new data from the download, exports to excel worksheets for sales exception reporting and then updates several key points in sales data. 
 
-That&#8217;s a heavy task and if we have a failure on per say in the excel export from a SQL Task that just selects some data, do we really want to forego the update? No, not really sense the update is key to the business running. 
+That's a heavy task and if we have a failure on per say in the excel export from a SQL Task that just selects some data, do we really want to forego the update? No, not really sense the update is key to the business running. 
 
 So SQL Server 2005 and up implemented a long awaited method of emailing without the need for one of outlook to be installed and or xp_ to use cdonts which opened our instances to security risks. To be honest there were dozens of points on SQL Server 2005 that made the hair on my neck stand up with excitement and this was on the top of the list.
 
-So let&#8217;s first setup you instance for database mail abilities. First you&#8217;ll have to verify that database mail is enabled. you can do that with surface area configuration by going into the surface area configuration features. Then select Database Mail and make sure it is Enabled. Remember by default most of SQL Server 2005 features are disabled. You can also run
+So let's first setup you instance for database mail abilities. First you'll have to verify that database mail is enabled. you can do that with surface area configuration by going into the surface area configuration features. Then select Database Mail and make sure it is Enabled. Remember by default most of SQL Server 2005 features are disabled. You can also run
 
 sql
 USE Master
@@ -40,7 +40,7 @@ GO
 sp_configure 'show advanced options', 0
 GO
 ```
-Now you&#8217;re going to need a profile and account. Out of scope for me to go step by step through this process and there are hundreds of articles out there on how to do it. Probably hundreds on doing what I&#8217;m talking about also but what&#8217;s the internet if it isn&#8217;t full of repeated articles stating the same thing 😉 One thing I do like to do is create a profile named &#8220;DBA {instance name}&#8221; and an account to match that naming. This way I know where it comes from and which aspect of the instance is sending it without even opening the mail. At least it gets me to open it quicker than most that is.
+Now you're going to need a profile and account. Out of scope for me to go step by step through this process and there are hundreds of articles out there on how to do it. Probably hundreds on doing what I'm talking about also but what's the internet if it isn't full of repeated articles stating the same thing 😉 One thing I do like to do is create a profile named “DBA {instance name}” and an account to match that naming. This way I know where it comes from and which aspect of the instance is sending it without even opening the mail. At least it gets me to open it quicker than most that is.
 
 So now that you have that all running you can test it by this simple little script
 
@@ -50,9 +50,9 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='you@yourcompany.com',
 @body = 'It works!',
 @profile_name = 'SQL DBA'
 ```
-You should have received the email. I you didn&#8217;t you can either wait for me to write a troubleshooting database mail blog or following yourself to http://msdn.microsoft.com/en-us/library/ms188663.aspx
+You should have received the email. I you didn't you can either wait for me to write a troubleshooting database mail blog or following yourself to http://msdn.microsoft.com/en-us/library/ms188663.aspx
 
-Typically if it doesn&#8217;t work you&#8217;re blocking it on the server level or at the mail server level. Good thing to check is port blocking and or your companies chosen firewall/antivirus software.
+Typically if it doesn't work you're blocking it on the server level or at the mail server level. Good thing to check is port blocking and or your companies chosen firewall/antivirus software.
 
 OK this is cool! I can email all kinds of things. Actually you would be very surprised. You can send attachments on the fly, query results, HTML formatting, excel formatting and the list goes on. These all reasons I was excited to see the advent of database mail.
 
@@ -162,25 +162,25 @@ QuitWithRollback:
 IF (@@TRANCOUNT > 0) ROLLBACK TRANSACTION
 EndSave:
 ```
-You can test this job to see how it works by running as is and also changing the mail &#8220;Caller Task&#8221; so something like select 1/0.
+You can test this job to see how it works by running as is and also changing the mail “Caller Task” so something like select 1/0.
 
-Obviously I like the right click script option. The important things you need to know here is the workflow sense I&#8217;m sure if you&#8217;re reading this you know how to create a SQL Job already and don&#8217;t need me to tell you how.
+Obviously I like the right click script option. The important things you need to know here is the workflow sense I'm sure if you're reading this you know how to create a SQL Job already and don't need me to tell you how.
 
-The main task will require you to push to the successful notification upon a successful run and then the failure on that event. So in SSMS you&#8217;re going to have it look like this
+The main task will require you to push to the successful notification upon a successful run and then the failure on that event. So in SSMS you're going to have it look like this
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//job1.gif" alt="" title="" width="703" height="349" />
 </div>
 
-Make sure you use your successful notification task in the On success action or you&#8217;re job will have an unreachable task and complain when you save it. Then make sure your Success Caller reports success but if failure points to the failure caller task. In your failure task your always going to want to report failure on success. So you&#8217;re other tasks advanced options will appear as 
+Make sure you use your successful notification task in the On success action or you're job will have an unreachable task and complain when you save it. Then make sure your Success Caller reports success but if failure points to the failure caller task. In your failure task your always going to want to report failure on success. So you're other tasks advanced options will appear as 
 
-Success&#8230;
+Success…
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//job2.gif" alt="" title="" width="702" height="246" />
 </div>
 
-Failure&#8230;
+Failure…
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//job3.gif" alt="" title="" width="705" height="323" />
@@ -188,4 +188,4 @@ Failure&#8230;
 
 I also recommend notification services and setting up the normal failure notifications in the SQL job. This way if all fails you should get it queued up.
 
-So now you can email to your heart&#8217;s content. Well until you show up on the black list anyhow 😉
+So now you can email to your heart's content. Well until you show up on the black list anyhow 😉

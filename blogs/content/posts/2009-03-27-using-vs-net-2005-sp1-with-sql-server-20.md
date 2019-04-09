@@ -17,13 +17,13 @@ When I first installed SQL Server 2008 in my environment one of the first things
   
 and start messing around with connectivity to the instance. That failed miserably. Errors were abound!
   
-All hope is not lost though&#8230;
+All hope is not lost though…
 
 The last thing I want to do is install side by side versions of VS.NET. The IDE is heavy and sucks the life out of
   
-any developer machine. I&#8217;m sure I&#8217;m not the only one that does not want to think about what version I&#8217;m clicking
+any developer machine. I'm sure I'm not the only one that does not want to think about what version I'm clicking
   
-when creating packages. Yes that is laziness in the purest form and I&#8217;m proud of it. My efficiency as a DBA and
+when creating packages. Yes that is laziness in the purest form and I'm proud of it. My efficiency as a DBA and
   
 support developer is very good and rewarded. 
 
@@ -31,7 +31,7 @@ So Microsoft was kind enough to allow me to use my full VS.NET 2005 SP1 installa
   
 SQL Server 2008 instances. Thank you!!!
 
-The update is called, &#8220;Microsoft Visual Studio 2005 Service Pack 1 Update for Microsoft SQL Server 2008 Support&#8221;.
+The update is called, “Microsoft Visual Studio 2005 Service Pack 1 Update for Microsoft SQL Server 2008 Support”.
   
 This is similar to the DTS legacy support update that we all had to throw in when we had those nagging 2000 instances
   
@@ -49,9 +49,9 @@ Remember you need SP1 on VS.NET 2005 installed. Personally I think 2005 was the 
   
 my hard head is sticking with it until they really put the pressure on me. 
 
-The install process is a next&#8230;next&#8230;finish one as usual. You should now be able to connect to SQL Server 2008
+The install process is a next…next…finish one as usual. You should now be able to connect to SQL Server 2008
   
-&#8220;almost error free&#8221;. I say almost because there is still the nice little gotcha listed on the download page of
+“almost error free”. I say almost because there is still the nice little gotcha listed on the download page of
 
 This update does not support the following features for SQL Server 2008:
   

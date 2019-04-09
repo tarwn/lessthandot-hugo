@@ -15,7 +15,7 @@ categories:
   - Professional Development
 
 ---
-Last week Thursday, I had the pleasure of attending the [Chicago SQL Server User Group][1]&#8216;s monthly meeting and presenting &#8220;Filegroups: Putting the Pieces Together&#8221;. Other than my usual brush with death as I attempted to navigate to the underground parking garage, the travel down and back was smooth. It was great to see the usual #chisql gang, and meet a few new people.
+Last week Thursday, I had the pleasure of attending the [Chicago SQL Server User Group][1]&#8216;s monthly meeting and presenting “Filegroups: Putting the Pieces Together”. Other than my usual brush with death as I attempted to navigate to the underground parking garage, the travel down and back was smooth. It was great to see the usual #chisql gang, and meet a few new people.
 
 The presentation was fantastic! The crowd was really lively, both asking and answering questions. After the presentation, several people stuck around to ask more questions, which is always a sign of success in my book!
 

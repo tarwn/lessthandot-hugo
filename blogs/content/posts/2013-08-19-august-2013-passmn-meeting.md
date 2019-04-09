@@ -17,7 +17,7 @@ categories:
   - Professional Development
 
 ---
-The August 2013 <a href="http://minnesota.sqlpass.org" target="_blank">PASSMN</a> is going to be another outstanding event! If you are in the Twin Cities area this coming Tuesday, August 20th, you&#8217;ll want to make sure you have this is on your calendar.
+The August 2013 <a href="http://minnesota.sqlpass.org" target="_blank">PASSMN</a> is going to be another outstanding event! If you are in the Twin Cities area this coming Tuesday, August 20th, you'll want to make sure you have this is on your calendar.
 
 PASSMN is excited to welcome Minnesota and <a href="http://www.sqlskills.com/" target="_blank">SQLSkills</a>&#8216; own, Joseph Sack (<a href="http://www.sqlskills.com/blogs/joe/" target="_blank">Blog</a> | <a href="https://twitter.com/josephsack" target="_blank">Twitter</a>)! Joe is a SQL Server MVP and SQL Server 2008 Microsoft Certified Master. Before his time with <a href="http://www.sqlskills.com/" target="_blank">SQLSkills</a>, Joe worked for Microsoft as a Premier Field Engineer and managed the SQL Server MCM program. We are extremely excited to have Joe speaking this month and are expecting another overflow crowd!
 
@@ -45,7 +45,7 @@ There are only a few spots left, so if you are going to be in the area, RSVP now
 > 
 > **Happy Hour**:
   
-> For those interested, we will be having an end of summer happy hour after this month&#8217;s meeting. We&#8217;ll be making our way over to <a href="http://bit.ly/16T4me3/" target="_blank">Cowboy Jack&#8217;s</a>, likely around 6:30PM. Feel free to stop on over for some <a href="https://twitter.com/search?q=%23sqlfamily&src=typd" target="_blank">#sqlfamily</a> time! A big thanks to Merrill Aldrich (<a href="http://sqlblog.com/blogs/merrill_aldrich/default.aspx/" target="_blank">Blog</a> | <a href="https://twitter.com/onupdatecascade" target="_blank">Twitter</a>) for getting this setup! 
+> For those interested, we will be having an end of summer happy hour after this month's meeting. We'll be making our way over to <a href="http://bit.ly/16T4me3/" target="_blank">Cowboy Jack's</a>, likely around 6:30PM. Feel free to stop on over for some <a href="https://twitter.com/search?q=%23sqlfamily&src=typd" target="_blank">#sqlfamily</a> time! A big thanks to Merrill Aldrich (<a href="http://sqlblog.com/blogs/merrill_aldrich/default.aspx/" target="_blank">Blog</a> | <a href="https://twitter.com/onupdatecascade" target="_blank">Twitter</a>) for getting this setup! 
 
 We look forward to seeing everyone on the 20th!
 

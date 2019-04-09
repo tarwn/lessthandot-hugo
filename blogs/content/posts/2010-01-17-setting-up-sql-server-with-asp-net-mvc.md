@@ -42,7 +42,7 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
 </p>
 
 <p>
-  So I don&#8217;t have the Express version of SQL Server on my machine. The first thing I have to do is open the Web.config file and change the connection string from this
+  So I don't have the Express version of SQL Server on my machine. The first thing I have to do is open the Web.config file and change the connection string from this
 </p>
 
 <pre lang="xml"><connectionStrings>
@@ -62,15 +62,15 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
 	</connectionStrings></pre>
 
 <p>
-  Now let&#8217;s try again by clicking on the login page. Still a problem for me, now I get the following error
+  Now let's try again by clicking on the login page. Still a problem for me, now I get the following error
 </p>
 
 <p>
-  <strong>Cannot open database &#8220;aspnetdb&#8221; requested by the login. The login failed.<br /> Login failed for user &#8216;Denis-PCDenis&#8217;.</strong>
+  <strong>Cannot open database “aspnetdb” requested by the login. The login failed.<br /> Login failed for user &#8216;Denis-PCDenis'.</strong>
 </p>
 
 <p>
-  Okay this makes sense since I don&#8217;t have this database, I need to create it. There are 2 ways you can do this. Either navigate to C:WindowsMicrosoft.NETFrameworkv2.0.50727 and execute aspnet_regsql.exe or run the Visual Studio command prompt.
+  Okay this makes sense since I don't have this database, I need to create it. There are 2 ways you can do this. Either navigate to C:WindowsMicrosoft.NETFrameworkv2.0.50727 and execute aspnet_regsql.exe or run the Visual Studio command prompt.
 </p>
 
 <p>

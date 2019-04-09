@@ -33,7 +33,7 @@ This is the fourth post in a multi-part series on my Continuous Delivery pipelin
 
 ## Run the Build
 
-With the automated build already polling changes from the source code repository, this process actually started while I was still writing the initial unit tests for the prior post. With the little red &#8220;failed build&#8221; dot as my guide, and the ever present twitter bot reminding me on each broken commit, I ended up working on both the unit tests and the server configuration in overlapping steps.
+With the automated build already polling changes from the source code repository, this process actually started while I was still writing the initial unit tests for the prior post. With the little red “failed build” dot as my guide, and the ever present twitter bot reminding me on each broken commit, I ended up working on both the unit tests and the server configuration in overlapping steps.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_firstfail.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_firstfail.png" title="Failing Unit Test Build" /></a><br /> Failing Unit Test Build
@@ -43,49 +43,49 @@ The initial build failure was due to the addition of the MS Test project to the 
 
 There are several blogs and methods outlined to get MS Test running on a build server, including some registry hacks and other unsupported trickery. After spending some time exploring that route, I eventually gave up and installed Visual Studio on the test server. 
 
-_This is an area that Microsoft could definitely use some improvement in (MS Test integration), but what&#8217;s interesting is that many experts on continuous delivery (of which I am definitely not one) actually suggest using the same software on the build server as the developers use to minimize differences in the builds. Whatever the case, the choice of MS Test generally ends with us having Visual Studio on our build server._
+_This is an area that Microsoft could definitely use some improvement in (MS Test integration), but what's interesting is that many experts on continuous delivery (of which I am definitely not one) actually suggest using the same software on the build server as the developers use to minimize differences in the builds. Whatever the case, the choice of MS Test generally ends with us having Visual Studio on our build server._
 
 Once the install was completed and I had patched Visual Studio up to date, I was able to run successful builds again.
 
 ## Run the Tests in the Build
 
-At this point I am building the test project every time the build runs, but I&#8217;m not actually running any of the tests. In order to run the tests, I am going to drop to the command line and run the MS Test executable directly. To execute a command directly as a build step, I&#8217;ll add a &#8220;Windows Batch Command&#8221; step to the &#8220;Build&#8221; section of my CI Build job.
+At this point I am building the test project every time the build runs, but I'm not actually running any of the tests. In order to run the tests, I am going to drop to the command line and run the MS Test executable directly. To execute a command directly as a build step, I'll add a “Windows Batch Command” step to the “Build” section of my CI Build job.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_command.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_command.png" title="Jenkins Configuration - New Windows Batch Command" /></a><br /> Jenkins Configuration &#8211; New Windows Batch Command
 </div>
 
-The MS Test executable is located in the Visual Studio folder at <code class="codespan">C:Program Files (x86)Microsoft Visual Studio 10.0Common7IDEmstest.exe</code>. I&#8217;ll execute this against the compiled assembly from the MVCMusicStoreTests project and configure the results file to land somewhere obvious so i can import it later. 
+The MS Test executable is located in the Visual Studio folder at <code class="codespan">C:Program Files (x86)Microsoft Visual Studio 10.0Common7IDEmstest.exe</code>. I'll execute this against the compiled assembly from the MVCMusicStoreTests project and configure the results file to land somewhere obvious so i can import it later. 
 
-Jenkins provides a list of variables we can use in commands, in this case I&#8217;ll use the %WORKSPACE% variable to locate the assembly:
+Jenkins provides a list of variables we can use in commands, in this case I'll use the %WORKSPACE% variable to locate the assembly:
   
 <code class="codespan">"C:Program Files (x86)Microsoft Visual Studio 10.0Common7IDEmstest.exe" /resultsfile:"%WORKSPACE%MvcMusicStoreTestsbinReleaseMyTests.Results.xml" /testcontainer:"%WORKSPACE%MvcMusicStoreTestsbinReleaseMvcMusicStoreTests.dll" /nologo</code>
 
-At this point, I can run the build again but it doesn&#8217;t show anything different than before until I open the command log. Inside the command log I can see that the tests ran successfully as part of the build. I also can manually verify the results file was published to the location I specified above.
+At this point, I can run the build again but it doesn't show anything different than before until I open the command log. Inside the command log I can see that the tests ran successfully as part of the build. I also can manually verify the results file was published to the location I specified above.
 
 ## Integrating the Test Run
 
-To integrate the MS Test results into Jenkins, I&#8217;ll use a plugin to map the MS Test format to a format that Jenkins natively understands (Junit XML results). A plugin is available from the &#8220;Manage Plugins&#8221; screen (Jenkins, Manage Jenkins, Manage Plugins, Click the Available Tab) to do this work for me. 
+To integrate the MS Test results into Jenkins, I'll use a plugin to map the MS Test format to a format that Jenkins natively understands (Junit XML results). A plugin is available from the “Manage Plugins” screen (Jenkins, Manage Jenkins, Manage Plugins, Click the Available Tab) to do this work for me. 
 
-After the plugin installs successfully, there is a new entry in the &#8220;Post-Build Actions&#8221; section of the job configuration. All I need to do is check the new &#8220;Publish MSTest test result report&#8221; checkbox and enter the path I used above for the result files. 
+After the plugin installs successfully, there is a new entry in the “Post-Build Actions” section of the job configuration. All I need to do is check the new “Publish MSTest test result report” checkbox and enter the path I used above for the result files. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_results.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_results.png" title="Jenkins Configuration - New Windows Batch Command" /></a><br /> Jenkins Configuration &#8211; New Windows Batch Command
 </div>
 
-Now when I run the build again, a new section shows up on the run summary screen that indicates I don&#8217;t have any failing tests. Clicking that link for more details, I can see that Jenkins has parsed that results file from MS Test and provided information on all of the running tests and their execution times.
+Now when I run the build again, a new section shows up on the run summary screen that indicates I don't have any failing tests. Clicking that link for more details, I can see that Jenkins has parsed that results file from MS Test and provided information on all of the running tests and their execution times.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_success.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_success.png" title="Jenkins Configuration - Successful Job w/ Unit Tests" /></a><br /> Jenkins Configuration &#8211; Successful Job w/ Unit Tests
 </div>
 
-In addition to the test information, there is also a new menu item on the left side named &#8220;History&#8221;. Clicking this will show historical information on the test runs, including a graph of the execution times and test counts. 
+In addition to the test information, there is also a new menu item on the left side named “History”. Clicking this will show historical information on the test runs, including a graph of the execution times and test counts. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_history_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_history.png" title="Jenkins Configuration - Unit Test History" /></a><br /> Jenkins Configuration &#8211; Unit Test History
 </div>
 
-_Note: If, like me, you didn&#8217;t bother to define a server name in the Jenkins configuration panel, you will find that some of these links will not work from a remote server because they are defined with the full server name instead of relative links._
+_Note: If, like me, you didn't bother to define a server name in the Jenkins configuration panel, you will find that some of these links will not work from a remote server because they are defined with the full server name instead of relative links._
 
 I am naturally paranoid when things work right away, so at this point I purposefully broke a unit test and reran the build to verify it would report it correctly.
 

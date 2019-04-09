@@ -17,11 +17,11 @@ tags:
   - reflection
 
 ---
-Have you ever found yourself working on an ASP.net Action and noticed there isn&#8217;t a single Authorization attribute in sight? Or gone to edit an endpoint in WebAPI, only to realize you took a coffee break at exactly the wrong time and forgot to come back and add the authorization attribute&#8230;a month ago? Or the time you found an MVC endpoint with WebAPI Authorization attributes on it? 
+Have you ever found yourself working on an ASP.net Action and noticed there isn't a single Authorization attribute in sight? Or gone to edit an endpoint in WebAPI, only to realize you took a coffee break at exactly the wrong time and forgot to come back and add the authorization attribute…a month ago? Or the time you found an MVC endpoint with WebAPI Authorization attributes on it? 
 
-While relying on code reviews and regular reminders to the team can reduce occurrences of this, we&#8217;re human and can only catch so much. Instead, it would be nice if a warning popped up before we ever pushed the code out: &#8220;You haven&#8217;t defined authentication for the XYZ endpoint yet!&#8221;. Luckily we have a CI environment (right???), so we can use Unit Tests to provide that warning and serve as a safety net to make sure we can&#8217;t push unprotected endpoints out to production.
+While relying on code reviews and regular reminders to the team can reduce occurrences of this, we're human and can only catch so much. Instead, it would be nice if a warning popped up before we ever pushed the code out: “You haven't defined authentication for the XYZ endpoint yet!”. Luckily we have a CI environment (right???), so we can use Unit Tests to provide that warning and serve as a safety net to make sure we can't push unprotected endpoints out to production.
 
-Code for this post: [Github: tarwn/Blog_KnockoutMVVMPatterns/&#8230;/AuthorizationSafetyNetTests.cs][1]
+Code for this post: [Github: tarwn/Blog_KnockoutMVVMPatterns/…/AuthorizationSafetyNetTests.cs][1]
 
 ## Detecting Authentication Holes for ASP.Net MVC
 
@@ -88,12 +88,12 @@ public void AllMvcActionsHaveExplicitAuthorizationDefined_UsingStandardReflectio
 }
 ```
   * 0: For readability in the tests, I moved the attribute check to an external variable
-  * 1: We&#8217;re in a separate test assembly, so get the assembly for the HomeController and get all types that implement IController
+  * 1: We're in a separate test assembly, so get the assembly for the HomeController and get all types that implement IController
   * 2: If any attributes on the controller match the attribute test, continue to the next controller (all of the actions are covered)
   * 3: If any attributes on each action match the test, skip to the next attribute
   * 4: After collecting a list of actions that are missing auth, we can now product a test failure message with the relevant information
 
-In my sample code I have an Action called &#8220;AccidentalOpenEndpoint&#8221; in my HomeController to show the test in action:
+In my sample code I have an Action called “AccidentalOpenEndpoint” in my HomeController to show the test in action:
 
 ```text
 1 action(s) do not have explicit authorization: HomeController.AccidentalOpenEndpoint
@@ -128,10 +128,10 @@ public void AllMvcActionsHaveExplicitAuthorizationDefined()
     }
 }
 ```
-  * 1: Once again get all of the IController implementations in the assembly for HomeController, but this time wrap them in ReflectedControllerDescriptor&#8217;s
-  * 2: Use the ReflectedController&#8217;s built in &#8220;GetCanonicalActions&#8221; method to get a collection of ActionDescriptors
-  * 3: Get the attributes from the Action and it&#8217;s Controller and run them through the IsMVCAttributeAuth test
-  * 4: Once again, output a test failure message for Actions that didn&#8217;t pass the test
+  * 1: Once again get all of the IController implementations in the assembly for HomeController, but this time wrap them in ReflectedControllerDescriptor's
+  * 2: Use the ReflectedController's built in “GetCanonicalActions” method to get a collection of ActionDescriptors
+  * 3: Get the attributes from the Action and it's Controller and run them through the IsMVCAttributeAuth test
+  * 4: Once again, output a test failure message for Actions that didn't pass the test
 
 This version is a lot more concise and has the additional advantage that it is using the same black magic internally to find Actions that MVC is, as opposed to use putting together a Flag enum for the fetMethods reflection call.
 
@@ -186,7 +186,7 @@ public void AllApiActionsHaveExplicitAuthorizationDefined()
   
   
   <p>
-    Similar to the MVC test, we are looking for any actions that don&#8217;t have an attribute implementing IAuthorizationFilter or AllowAnonymous attribute.
+    Similar to the MVC test, we are looking for any actions that don't have an attribute implementing IAuthorizationFilter or AllowAnonymous attribute.
   </p>
   
   
@@ -202,7 +202,7 @@ public void AllApiActionsHaveExplicitAuthorizationDefined()
     
     
     <li>
-      2: Get all of the custom attributes for each action + action&#8217;s controller and find the ones that don&#8217;t have a match for the attribute test
+      2: Get all of the custom attributes for each action + action's controller and find the ones that don't have a match for the attribute test
     </li>
     
     

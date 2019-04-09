@@ -16,7 +16,7 @@ categories:
 ---
 Quite often we want to consolidate query information across all databases (or all user databases). When this question is asked in forums, the usual recommendation is to either try running [undocumented sp_MSForEachDB stored procedure][1] or do a loop and use dynamic SQL. The example of such stored procedures can be found, for example, [THIRD EXAMPLE &#8211; SPROC to enumerate all objects in databases][2].
 
-The idea occurred to me last night that while we do need a dynamic SQL to solve this problem, we don&#8217;t really need a loop unless we need a second loop involving looping through all tables.
+The idea occurred to me last night that while we do need a dynamic SQL to solve this problem, we don't really need a loop unless we need a second loop involving looping through all tables.
 
 ### Table of Contents:
 
@@ -148,7 +148,7 @@ where [name] NOT IN ('master','tempdb','model','msdb') order by [Name]
 execute(@Qry)
 ```
 
-You can only list types you&#8217;re interested in, of course.
+You can only list types you're interested in, of course.
 
 The script below will give you a count of records in every table in a database:
 
@@ -238,7 +238,7 @@ select * from #TablesSizes order by TableName
 
 Here is a script showing database files sizes for all databases
 
-Before I show the T-SQL code I&#8217;d like to point to this [very interesting blog][20] as how to get database sizes in all SQL Server instances using PowerShell
+Before I show the T-SQL code I'd like to point to this [very interesting blog][20] as how to get database sizes in all SQL Server instances using PowerShell
 
 ## Database Files Sizes in All Databases {#8}
 

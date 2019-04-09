@@ -17,9 +17,9 @@ categories:
   - Server Programming
 
 ---
-Using SQL server to generate automatic emails, I&#8217;ve noticed from time to time that the emails will miscellaneously contain exclamations throughout the mail.
+Using SQL server to generate automatic emails, I've noticed from time to time that the emails will miscellaneously contain exclamations throughout the mail.
 
-Here&#8217;s an example to replicate the situation. We&#8217;ll generate a table with multiple rows of the alphabet and email the contents:
+Here's an example to replicate the situation. We'll generate a table with multiple rows of the alphabet and email the contents:
 
 sql
 declare @t table (letters varchar(100))
@@ -54,7 +54,7 @@ exec @hr = sp_OAMethod @mailObj, 'Send', NULL
 exec @hr = sp_OADestroy @mailObj
 ```
 
-This should kick out the alphabet repeated 256 times, with a <br> tag after each alphabet. By examining the result in query analyzer, it should look just fine. However, when you go check the email that got sent, you&#8217;ll find parts of the text that look like this:
+This should kick out the alphabet repeated 256 times, with a <br> tag after each alphabet. By examining the result in query analyzer, it should look just fine. However, when you go check the email that got sent, you'll find parts of the text that look like this:
 
 <code class="codespan">abcdefghijklmnopqrstuvwxyz<br />
 abcdefghijklmnopqrstuvwxyzabcdef! ghijklmnopqrstuvwxyz<br />

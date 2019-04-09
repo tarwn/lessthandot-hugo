@@ -18,15 +18,15 @@ tags:
   - raffle
 
 ---
-The winners of the MSDN Ultimate subscriptions are [Emtucifor][1] and [Shawson][2]. Originally we were going to select the winner based on comments, we also only had one subscription. Then Ted Krueger donated one of his subscriptions, there was only one comment that stood out and it was Emtucifor&#8217;s. The comment is below
+The winners of the MSDN Ultimate subscriptions are [Emtucifor][1] and [Shawson][2]. Originally we were going to select the winner based on comments, we also only had one subscription. Then Ted Krueger donated one of his subscriptions, there was only one comment that stood out and it was Emtucifor's. The comment is below
 
-> I have always dreamed of owning my own software company. A few years back I started doing some database development on the side, but then I got married, had a son, and began having some health challenges which together halted what I&#8217;d been doing.
+> I have always dreamed of owning my own software company. A few years back I started doing some database development on the side, but then I got married, had a son, and began having some health challenges which together halted what I'd been doing.
 > 
 > But there is a special opportunity coming to me this Saturday to get back into the swing of things: my wife and son will be leaving the country for six weeks. I had already been planning to devote myself to developing one of many application ideas, but now:
 > 
-> 1) I would use MSDN Ultimate Subscription to build a secure server/file transfer/fetching/archiving/processing/reconciling/user worklist managing/cross-platform system (uncannily and quite coincidentally, exactly what is desperately needed at a company I know). It will help other people&#8217;s lives in several ways: filling a need that many companies are bound to have and for a low price (as initially I will need to build market presence more than profit); increasing the number of small software development businesses out there, proving again that it can be done and providing inspiration for the masses; getting a family&#8217;s Dad home so he can spend more time with them. If it helps, I&#8217;ll blog about the development and growth of my application and business.
+> 1) I would use MSDN Ultimate Subscription to build a secure server/file transfer/fetching/archiving/processing/reconciling/user worklist managing/cross-platform system (uncannily and quite coincidentally, exactly what is desperately needed at a company I know). It will help other people's lives in several ways: filling a need that many companies are bound to have and for a low price (as initially I will need to build market presence more than profit); increasing the number of small software development businesses out there, proving again that it can be done and providing inspiration for the masses; getting a family's Dad home so he can spend more time with them. If it helps, I'll blog about the development and growth of my application and business.
 > 
-> 2) The functionality I would use that is unique to VS Ultimate is Architecture and Modeling. I believe in &#8220;starting the way you mean to finish.&#8221; So even though I&#8217;ll be a one-man shop at first, that means test-driven design, agile development, automated regression testing, version control, good backups, and all the infrastructure needed to hire employees when the time comes without having to change much. I&#8217;ll be eager to add the layer diagramming abilities of VS Ultimate to this mix.
+> 2) The functionality I would use that is unique to VS Ultimate is Architecture and Modeling. I believe in “starting the way you mean to finish.” So even though I'll be a one-man shop at first, that means test-driven design, agile development, automated regression testing, version control, good backups, and all the infrastructure needed to hire employees when the time comes without having to change much. I'll be eager to add the layer diagramming abilities of VS Ultimate to this mix.
 > 
 > 3. Blogs and technical community activity:
 > 
@@ -40,21 +40,21 @@ The winners of the MSDN Ultimate subscriptions are [Emtucifor][1] and [Shawson][
   
 > not to mention http://forum.ltd.local/memberlist.php?mode=viewprofile&u=98
 
-Not only did we think that the comment was good but apparently someone else as well, he actually used parts of it as his own in Andy Leonard&#8217;s giveaway here: http://sqlblog.com/blogs/andy_leonard/archive/2010/07/03/a-visual-studio-2010-msdn-seeding-card-giveaway-contest.aspx
+Not only did we think that the comment was good but apparently someone else as well, he actually used parts of it as his own in Andy Leonard's giveaway here: http://sqlblog.com/blogs/andy_leonard/archive/2010/07/03/a-visual-studio-2010-msdn-seeding-card-giveaway-contest.aspx
 
 We decided to raffle of the other subscription by vote..so I already started to put the polls together. During that time David Taylor left a great comment
 
-> 1) Why do you need this &#8211; Because I am a poor, seriously underpaid SQL Server 2008 DBA/Developer who can&#8217;t even afford VS2010 Pro!
+> 1) Why do you need this &#8211; Because I am a poor, seriously underpaid SQL Server 2008 DBA/Developer who can't even afford VS2010 Pro!
   
 > What are you going to build with this &#8211; I am going to build practice apps to learn from, as I am relatively new to development
   
-> will it help other people&#8217;s lives? It is my hope that training myself will get me into a job in which I am helping other people.
+> will it help other people's lives? It is my hope that training myself will get me into a job in which I am helping other people.
 > 
 > 2) What specific functionality that is only part of Ultimate are you going to use? &#8211; Architecture Explorer
 > 
-> 3) You need to have a technical blog and provide the URL to that blog, if you are an active member of the technical community (stackoverflow, msdn forums etc etc) then also include those links. &#8211; http://dyfhid.wordpress.com. Also, I am the Volunteer Coordinator for PASS&#8217; APplication Development Virtual Chapter, located at http://appdev.sqlpass.org
+> 3) You need to have a technical blog and provide the URL to that blog, if you are an active member of the technical community (stackoverflow, msdn forums etc etc) then also include those links. &#8211; http://dyfhid.wordpress.com. Also, I am the Volunteer Coordinator for PASS' APplication Development Virtual Chapter, located at http://appdev.sqlpass.org
 
-Now we had a dilemma, do we yank the poll and give the award to David or not? We proceeded with the poll. Wouldn&#8217;t you know it, David won Andy&#8217;s contest, because of that I emailed him and we decided that he wouldn&#8217;t be eligible here.
+Now we had a dilemma, do we yank the poll and give the award to David or not? We proceeded with the poll. Wouldn't you know it, David won Andy's contest, because of that I emailed him and we decided that he wouldn't be eligible here.
 
 Here are the results of the final poll: http://forum.ltd.local/viewtopic.php?f=121&t=11550
 

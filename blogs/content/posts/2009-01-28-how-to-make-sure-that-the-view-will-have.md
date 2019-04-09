@@ -90,7 +90,7 @@ DROP TABLE TestTable
 GO
 ```
 
-And yes I know &#8216;real&#8217; SQL programmers never use SELECT * and &#8216;real&#8217; SQL programmers name their defaults 😉
+And yes I know &#8216;real' SQL programmers never use SELECT * and &#8216;real' SQL programmers name their defaults 😉
 
 
 

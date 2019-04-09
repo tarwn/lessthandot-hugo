@@ -47,7 +47,7 @@ Horrible, horrible reviews on Amazon. Still an interesting story of how to cope 
 
 4) [Brave New World][5] by Aldous Huxley
   
-It was interesting&#8230;I am sure it was eye opening and way ahead of its time when it was published in 1932. Some interesting things like the use of Our Ford (instead of Our Lord and of course the assembly lines that Ford first used which is I guess a metaphor for life in the World State). Soma&#8230;the good feel drug&#8230;.I wonder how he came up with that one. Reminded me of 1984, the matrix and V for Vendetta.At times it was difficult to read..and I had to re-read paragraphs.
+It was interesting…I am sure it was eye opening and way ahead of its time when it was published in 1932. Some interesting things like the use of Our Ford (instead of Our Lord and of course the assembly lines that Ford first used which is I guess a metaphor for life in the World State). Soma…the good feel drug….I wonder how he came up with that one. Reminded me of 1984, the matrix and V for Vendetta.At times it was difficult to read..and I had to re-read paragraphs.
 
 5) [The War of the World][6] by Niall Ferguson
   
@@ -55,7 +55,7 @@ This book is about the conflicts in the 20th century and maybe a reminder what c
 
 6) [The big short][7] by Michael Lewis
   
-The best book I read so far this year&#8230;.deals with the financial crisis of 2007/2008 but written in a very witty way&#8230;very much like Liar&#8217;s Poker..his first book&#8230;highly recommended
+The best book I read so far this year….deals with the financial crisis of 2007/2008 but written in a very witty way…very much like Liar's Poker..his first book…highly recommended
 
 7) [Full Dark, No Stars][8] by Stephen King
   
@@ -63,7 +63,7 @@ Probably his best book in a looooooong time, this one has 4 short stories and so
 
 8) [Night Shift][9] by Stephen King
   
-Short stories, you probably know some of them like Children of the Corn or Graveyard Shift. Some interesting stories, I liked this book, I don&#8217;t really think you can go wrong with a Stephen King book.
+Short stories, you probably know some of them like Children of the Corn or Graveyard Shift. Some interesting stories, I liked this book, I don't really think you can go wrong with a Stephen King book.
 
 9) [Zombie Spaceship Wasteland][10] by Patton Oswalt
   
@@ -71,19 +71,19 @@ This is a comedy book written by a comedian..nothing to do with zombies..pretty 
 
 10) [How an Economy Grows and Why It Crashes][11] by Peter D. Schiff and Andrew J. Schiff
   
-Interesting book, explaining why we have the crisis and why Quantitative Easing is not the solution&#8230;also everything is explained with stories on a small island..highly recommended
+Interesting book, explaining why we have the crisis and why Quantitative Easing is not the solution…also everything is explained with stories on a small island..highly recommended
 
 11) [The Girl with the Dragon Tattoo][12] by Stieg Larsson
   
 A female hacker and a journalist are investigating a murder from decades ago. I really really liked this book. Some trivia..Stieg Larsson died while walking up the stairs to his publisher delivering the manuscripts..he never saw the books published!!!
 
-12) [The Coke Machine: The Dirty Truth Behind the World&#8217;s Favorite Soft Drink][13] by Michael Blanding
+12) [The Coke Machine: The Dirty Truth Behind the World's Favorite Soft Drink][13] by Michael Blanding
   
 History of Coca Cola, how it started, how it is very ruthless against anything that stands in its way, this of course also includes schools that want to eliminate soda from the lunchroom. Very interesting book, highly recommended.
 
 13) [A Heartbeat Away][14] by Michael Palmer
   
-Reminded me of a cross between Dan Brown and Richard Preston(The Cobra Event, The Hot Zone, The Demon in the Freezer) During the President&#8217;s State of the Union address, a terrorist releases a bio-agent with potentially fatal consequences, the only man who can save the group is a scientist the President has had locked away for treason. I really enjoyed this book.
+Reminded me of a cross between Dan Brown and Richard Preston(The Cobra Event, The Hot Zone, The Demon in the Freezer) During the President's State of the Union address, a terrorist releases a bio-agent with potentially fatal consequences, the only man who can save the group is a scientist the President has had locked away for treason. I really enjoyed this book.
 
 14) [Bad Science: Quacks, Hacks, and Big Pharma Flacks][15] by Ben Goldacre
   
@@ -101,11 +101,11 @@ Besides the factual inconsistencies I liked the book and the characters it has, 
 
 16) [Professional SQL Server 2008 Internals and Troubleshooting][18] by Christian Bolton, Justin Langford, Brent Ozar, James Rowland-Jones, Jonathan Kehayias, Cindy Gross and Steven Wort
   
-A must read if you need to troubleshoot any performance problem with SQL Server, can&#8217;t recommend it enough.
+A must read if you need to troubleshoot any performance problem with SQL Server, can't recommend it enough.
 
 17) [The Selfish Gene][19] by Richard Dawkins
   
-A gene&#8217;s eye view of evolution, really interesting book, highly recommended.
+A gene's eye view of evolution, really interesting book, highly recommended.
 
 18) [Life][20] by Keith Richards
   
@@ -115,9 +115,9 @@ Although Keith Richards has some tendencies of megalomania, I liked this book. N
   
 A behind the scenes analysis of th crash of 2008 and what caused it. Hopefully we will learn from this. This was a good book and I really liked it.
 
-20) [Quantum Man: Richard Feynman&#8217;s Life in Science][22] by Lawrence M. Krauss
+20) [Quantum Man: Richard Feynman's Life in Science][22] by Lawrence M. Krauss
   
-I reviewed this here: [Book review: Quantum Man: Richard Feynman&#8217;s Life in Science][23]
+I reviewed this here: [Book review: Quantum Man: Richard Feynman's Life in Science][23]
 
 21) [Physics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100][24] by Michio Kaku
   
@@ -131,7 +131,7 @@ I reviewed this here: [Book Review: Securing SQL Server By Denny Cherry][26]
   
 The second book in this trilogy, you will learn why Lisbeth was locked up and who her father is
 
-24) [The Girl Who Kicked the Hornet&#8217;s Nest][28] by Stieg Larsson
+24) [The Girl Who Kicked the Hornet's Nest][28] by Stieg Larsson
   
 The final book in this trilogy. This trilogy is awesome, it is too bad Stieg Larsson passed away, I would have loved to read more about Lisbeth Salander, Blomkvist and the rest of the characters
 
@@ -139,9 +139,9 @@ The final book in this trilogy. This trilogy is awesome, it is too bad Stieg Lar
   
 A fun book from a funny woman
 
-26) [The King&#8217;s Speech: How One Man Saved the British Monarchy][30] by Mark Logue
+26) [The King's Speech: How One Man Saved the British Monarchy][30] by Mark Logue
   
-I didn&#8217;t see the movie, so nothing was spoiled for me. A good book detailing how King George VI overcam his speech problem and what actually caused these problems.
+I didn't see the movie, so nothing was spoiled for me. A good book detailing how King George VI overcam his speech problem and what actually caused these problems.
 
 27) [The Alchemist][31] by Paulo Coelho
   
@@ -149,17 +149,17 @@ A shepherd is looking for a treasure, he travels a lot to find the treasure not 
 
 That is what I read so far this year. My goal is to read this whole list, that was published on Reddit a couple of months ago, within the next 5 years. I already read the ones in <span class="MT_red">red</span>
 
-1. The Hitchhiker&#8217;s Guide to the Galaxy by Douglas Adams.   
+1. The Hitchhiker's Guide to the Galaxy by Douglas Adams.   
 <span style="color: #FF0000">2. 1984 by George Orwell. <br />3. Dune by Frank Herbert.</span>   
 4. Slaughterhouse 5 by Kurt Vonnegut.   
-5. Ender&#8217;s Game by Orson Scott Card.  
+5. Ender's Game by Orson Scott Card.  
 <span style="color: #FF0000">6. <span class="posthilit">Brave</span> <span class="posthilit">New</span> <span class="posthilit">World</span> by Aldous Huxley.</span> read in 2011   
 7. The Catcher in the Rye by J. D. Salinger.  
 8. The Bible by Various.   
 <span style="color: #FF0000">9. Snow Crash by Neal Stephenson.</span> read in 2011   
 <span style="color: #FF0000">10. Harry Potter Series by J.K. Rowling. </span>  
 11. Stranger in a Strange Land by Robert A. Heinlein.   
-12. Surely You&#8217;re Joking, Mr. Feynman! by Richard P. Feynman.  
+12. Surely You're Joking, Mr. Feynman! by Richard P. Feynman.  
 <span style="color: #FF0000">13. To Kill A Mockingbird by Harper Lee.</span>   
 14. The Foundation Saga by Isaac Asimov.  
 <span style="color: #FF0000">15. Neuromancer by William Gibson.</span>   
@@ -175,7 +175,7 @@ That is what I read so far this year. My goal is to read this whole list, that w
 25. The Giver by Lois Lowry.   
 26. Crime and Punishment by Fyodor Dostoyevsky.   
 <span style="color: #FF0000">27. Animal Farm by George Orwell.</span>  
-28. A People&#8217;s History of the United States by Howard Zinn.   
+28. A People's History of the United States by Howard Zinn.   
 <span style="color: #FF0000">29. The Lord of the Rings by J. R. R. Tolkien.</span>   
 30. Ishmael by Daniel Quinn.   
 <span style="color: #FF0000">31. A Brief History of Time by Stephen Hawking.</span>  
@@ -197,7 +197,7 @@ That is what I read so far this year. My goal is to read this whole list, that w
 47. The Hyperion Cantos by Dan Simmons.   
 48. A Confederacy of Dunces by John Kennedy Toole.   
 49. The Declaration of Independence, The US Constitution, and the Bill of Rights by Various.   
-50. Cat&#8217;s Cradle by Kurt Vonnegut.  
+50. Cat's Cradle by Kurt Vonnegut.  
 51. A Canticle for Leibowitz by Walter M. Miller, Jr.   
 <span style="color: #FF0000">52. Odyssey by Homer.</span>  
 53. Fahrenheit 451 by Ray Bradbury.   
@@ -208,7 +208,7 @@ That is what I read so far this year. My goal is to read this whole list, that w
 58. A Game of Thrones by George RR Martin.  
 <span style="color: #FF0000">59. The Art of Deception by Kevin Mitnick. <br />60. The Little Prince by Antoine de Saint Exupéry.<br />61. Freakonomics by Stephen Dubner and Steven Levitt. </span>  
 62. The Moon is a Harsh Mistress by Robert A. Heinlein.  
-<span style="color: #FF0000">63. The Omnivore&#8217;s Dilemma by Michael Pollan.</span>  
+<span style="color: #FF0000">63. The Omnivore's Dilemma by Michael Pollan.</span>  
 64. Heart of Darkness by Joseph Conrad.   
 65. The Forever War by Joe Haldeman.   
 <span style="color: #FF0000">66. Adventures of Huckleberry Finn by Mark Twain. </span>  
@@ -231,7 +231,7 @@ That is what I read so far this year. My goal is to read this whole list, that w
 84. The Unbearable Lightness of Being by Milan Kundera.  
 85. Why People Believe Weird Things by Michael Shermer.  
 86. Manufacturing Consent: The Political Economy of the Mass Media by Edward Herman and Noam Chomsky.  
-87. Asimov&#8217;s Guide to the Bible by Isaac Asimov.  
+87. Asimov's Guide to the Bible by Isaac Asimov.  
 88. The Old Man and the Sea by Ernest Hemingway.   
 89. Collapse by Jared Diamond.  
 90. Infinite Jest by David Foster Wallave.  
@@ -258,9 +258,9 @@ That is what I read so far this year. My goal is to read this whole list, that w
 112. Rendezvous with Rama by Arthur C Clarke.   
 113. Oryx and Crake by Margaret Atwood.   
 114. Beyond Good and Evil by Friedrich Nietzsche.  
-115. Gravity&#8217;s Rainbow by Thomas Pynchon.   
+115. Gravity's Rainbow by Thomas Pynchon.   
 116. Naked Lunch by William Burroughs.   
-117. Childhood&#8217;s End by Arthur C Clarke.  
+117. Childhood's End by Arthur C Clarke.  
 118. Of Mice and Men by John Steinbeck.  
 119. The Book of Ler by MA Foster.  
 120. The Demon-Haunted <span class="posthilit">World</span>: Science as a Candle in the Dark by Carl Sagan.  
@@ -274,9 +274,9 @@ That is what I read so far this year. My goal is to read this whole list, that w
 128. The Saga of Seven Suns by Kevin J Anderson.  
 129. The Grapes of Wrath by John Steinbeck .  
 130. American Psycho by Bret Easton Ellis.  
-131. The Mote in God&#8217;s Eye by Larry Niven and Jerry Pournelle.   
+131. The Mote in God's Eye by Larry Niven and Jerry Pournelle.   
 132. The Chomsky Reader by Noam Chomsky.  
-133. The Panda&#8217;s Thumb by Stephen Jay Gould.  
+133. The Panda's Thumb by Stephen Jay Gould.  
 134. Flatland by Edwin Abbot.  
 135. On the Road by Jack Kerouac .   
 136. The God Delusion by Richard Dawkins.  
@@ -299,7 +299,7 @@ That is what I read so far this year. My goal is to read this whole list, that w
 153. The Pillars of the Earth by Ken Follett.   
 154. The Prince of Nothing by R. Scott Bakker.  
 155. Perdido Street Station by China Mieville.  
-156. Man&#8217;s Search for Meaning by Viktor Frankl.  
+156. Man's Search for Meaning by Viktor Frankl.  
 157. The Wasteland by TS Elliot.  
 158. The Kite Runner by Khaled Hosseini.   
 159. Pi to 5 million places by [kick books].  
@@ -307,7 +307,7 @@ That is what I read so far this year. My goal is to read this whole list, that w
 161. The Dispossessed by Ursula K. Le Guin.  
 162. Guts by Chuck Palahniuk.   
 163. fear and trembling by Søren Kierkegaard.  
-<span style="color: #FF0000">164. One Flew Over the Cuckoo&#8217;s Nest by Ken Kesey. </span>  
+<span style="color: #FF0000">164. One Flew Over the Cuckoo's Nest by Ken Kesey. </span>  
 165. Kafka on the Shore by Haruki Murakami.  
 166. Ulysses by James Joyce.  
 167. Macbeth by Shakespeare.  
@@ -315,7 +315,7 @@ That is what I read so far this year. My goal is to read this whole list, that w
 169. Atheism: The Case Against God by George H. Smith.  
 170. The Handmaids Tale by Margaret Atwood.  
 171. For Whom the Bell Tolls by Ernest Hemingway.  
-172. Sophie&#8217;s <span class="posthilit">World</span> by Jostein Gaarder.  
+172. Sophie's <span class="posthilit">World</span> by Jostein Gaarder.  
 173. Women by Charles Bukowski.  
 174. Red Mars by Kim Stanley Robinson.  
 175. We Need To Talk About Kevin by Lionel Shriver.  

@@ -20,7 +20,7 @@ I built my first website for the NCSA Mosaic browser. A lot has changed since th
 
 While the server-side method has not gotten much more advanced, the client-side methods are generations beyond where we used to be. <a href="http://www.alistapart.com/articles/responsive-web-design/" alt="Responsive Web Design, A List Apart, Ethan Marcotte">Responsive Web Design</a> and <a href="http://easy-readers.net/books/adaptive-web-design/" alt="Adaptive Web Design, Aaron Gustafson">Adaptive Web Design</a> provide the methods to use CSS and javascript to produce site that scales and progressively enhances to meet the end users device capabilities.
 
-A couple months ago I decided to redesign my personal website again, with the goal of making it provide a good experience at mobile phone, tablet, and monitor sizes. Here&#8217;s how I did it.
+A couple months ago I decided to redesign my personal website again, with the goal of making it provide a good experience at mobile phone, tablet, and monitor sizes. Here's how I did it.
 
 ## The Screen Sizes
 
@@ -40,20 +40,20 @@ As the available screen real estate gets larger, the logo size increases, the nu
 
 ## Implementation
 
-While my site doesn&#8217;t have a lot of functionality, achieving the layout changes and addition of features at the largest sizes was still a nice challenge. The key to the site is the CSS media queries that alter the visibility of elements and areas, combined with some javascript to load in larger images or additional elements when relevant. In the event that a browser doesn&#8217;t support media queries and javascript, they will receive the smallest possible layout. Though there are workarounds, I purposefully left the IE8/IE7 layout in this mode, which would also be used for most mobile browsers.
+While my site doesn't have a lot of functionality, achieving the layout changes and addition of features at the largest sizes was still a nice challenge. The key to the site is the CSS media queries that alter the visibility of elements and areas, combined with some javascript to load in larger images or additional elements when relevant. In the event that a browser doesn't support media queries and javascript, they will receive the smallest possible layout. Though there are workarounds, I purposefully left the IE8/IE7 layout in this mode, which would also be used for most mobile browsers.
 
 If you load the site in the secondary window and drag the width around, you will be able to see the transitions: <a href="http://tiernok.com" target="_blank">http://tiernok.com</a>
 
 ### Images
 
-I cheated a bit on images. Any image with the &#8220;imglow&#8221; CSS class will be hidden above 480 px screen width and replaced with ones that with a class &#8220;imghi&#8221;. Since many small browsers would load the large image even if it is hidden, I put the actual image source in a data attribute and use a bit of javascript to populate the src value.
+I cheated a bit on images. Any image with the “imglow” CSS class will be hidden above 480 px screen width and replaced with ones that with a class “imghi”. Since many small browsers would load the large image even if it is hidden, I put the actual image source in a data attribute and use a bit of javascript to populate the src value.
 
 <code lang="html"><br />
 <img src="_n_images/logo_sm.png" alt="Eli Weinstock-Herman | Tarwn" border="0" class="imglow" /><br />
 <img data-fullsrc="_n_images/logo.png" alt="Eli Weinstock-Herman | Tarwn" border="0" class="imghi" /><br />
 </code>
 
-The social images at the top of the screen have classes that define whether they are available for small resolution or not and display at half resolution in smaller screens. These don&#8217;t load dynamically at larger size, so all 4 will load on browsers that load hidden images.
+The social images at the top of the screen have classes that define whether they are available for small resolution or not and display at half resolution in smaller screens. These don't load dynamically at larger size, so all 4 will load on browsers that load hidden images.
 
 The background coffee spills start to show at the medium resolutions via positioned background images on the main content wrapper, so these only load when the screen is large enough to display them. This is also when the inner right side panel is displayed, along with the contact image and books. This content is loaded and not displayed at smaller resolutions, so there is some room to shrink that initial mobile load further.
 
@@ -97,7 +97,7 @@ I started the redesign with the [Html5 boilerplate][5] to give me a consistent s
 
 Currently a mobile device without javascript will load about 83KB of content (obviously this changes based on what is on the front-page of the site). With Javascript this goes up to 160KB for mobile and 800&#215;600 resolutions and 200KB for the largest screen size. I think the smaller resolutions could be reduced further by restricting the inner sidebar content and small icon loading, and the whole site could do with some minification and gzip. 
 
-Overall I am very happy with it. The size is usable at every resolution I try and this method doesn&#8217;t rely on the client-side user agent. Additional functionality would be easy to add, as I could use feature detection to add functionality only if the end user&#8217;s browser supported it, regardless of the user agent string. I&#8217;m very happy with the result.
+Overall I am very happy with it. The size is usable at every resolution I try and this method doesn't rely on the client-side user agent. Additional functionality would be easy to add, as I could use feature detection to add functionality only if the end user's browser supported it, regardless of the user agent string. I'm very happy with the result.
 
  [1]: http://tiernok.com/LTDBlog/website/SmallPhone.png
  [2]: http://tiernok.com/LTDBlog/website/LargePhone.png

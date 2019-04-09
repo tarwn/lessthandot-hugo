@@ -58,7 +58,7 @@ What you really wanted is the following
 
 As you can see we added January 4th and January 6th to the results with a count of zero.
 
-Let&#8217;s get started, first we are going to created a calendar table
+Let's get started, first we are going to created a calendar table
 
 Here is a simple way to return a bunch of dates
 
@@ -74,7 +74,7 @@ where Row < 5114
 
 That will return dates between 2010-01-01 and 2023-12-31
 
-Now let&#8217;s create the calendar table and insert the rows from the query above
+Now let's create the calendar table and insert the rows from the query above
 
 sql
 CREATE TABLE Calendar (SomeDate date not null primary key)
@@ -91,7 +91,7 @@ where Row < 5114
 
 You might want to adjust the range to start earlier or end later for your purpose
 
-Now that the calendar table is ready, let&#8217;s create a fake order table with some dates
+Now that the calendar table is ready, let's create a fake order table with some dates
 
 sql
 create table SomeData (OrderDate date, SomeCol int)
@@ -108,7 +108,7 @@ insert SomeData values('2013-01-09',1)
 insert SomeData values('2013-01-09',1)
 ```
 
-Querying from this table&#8230;..
+Querying from this table…..
 
 sql
 select OrderDate, count(somecol) as SomeCount
@@ -127,7 +127,7 @@ Here are the results
 2013-01-08	1
 2013-01-09	2</pre>
 
-As you can see January 4th and January 6th are missing. Let&#8217;s do a left join with the calendar table to display the results
+As you can see January 4th and January 6th are missing. Let's do a left join with the calendar table to display the results
 
 Here is the code, I will go over it a little later
 
@@ -220,7 +220,7 @@ SELECT * FROM Calendar
 2010-01-05	2
 .....           ...</pre>
 
-And if you add rows, you don&#8217;t have to update the column
+And if you add rows, you don't have to update the column
 
 sql
 INSERT Calendar values('20240101')

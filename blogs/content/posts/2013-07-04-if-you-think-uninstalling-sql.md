@@ -25,7 +25,7 @@ tags:
 <p>
 Click on the Oracle Home that you want to remove and then click on the Remove (not named uninstall or deinstall this time) button. Now you would expect that you would see another window where you could perhaps pick what to remove. But no, you get a dialog box telling you to go ahead and run a BAT file in a certain directory.  <br />
 <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleRemoveBatfile.PNG?mtime=1372947010"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleRemoveBatfile.PNG?mtime=1372947010" width="440" height="144" /></a></p>
-<p>Really, you couldn&#8217;t at least have an option to run that file from withing this deinstaller?</p>
+<p>Really, you couldn't at least have an option to run that file from withing this deinstaller?</p>
 <p>Opening that BAT file reveals the following</p>
 <pre lang="dos">
 @echo off
@@ -135,5 +135,5 @@ Will update the Enterprise Manager configuration for the following database(s):<
 ORCL</p></blockquote>
 <p>First time I ran this it failed, when I rain it again it succeeded but I still have these services on my laptop</p>
 <div class="image_block"><a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleRemoveServices.PNG?mtime=1372947653"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleRemoveServices.PNG?mtime=1372947653" width="720" height="209" /></a></div>
-<p>When I posted that I was uninstalling Oracle, I got a reply from Tim Ford &#8221; Its easier to just rebuild the server.&#8221;  Maybe he is right??</p>
-<p>Here is also a link to someone&#8217;s post about a last resort method http://www.oracle-base.com/articles/misc/manual-oracle-uninstall.php</p>
+<p>When I posted that I was uninstalling Oracle, I got a reply from Tim Ford ” Its easier to just rebuild the server.”  Maybe he is right??</p>
+<p>Here is also a link to someone's post about a last resort method http://www.oracle-base.com/articles/misc/manual-oracle-uninstall.php</p>

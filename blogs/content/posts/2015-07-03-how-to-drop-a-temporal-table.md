@@ -20,7 +20,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  No no, I didn&#8217;t say <em>temporary</em>, but <strong>temporal</strong>! SQL Server 2016 introduces a great new feature called <strong>Temporal Tables</strong>. Or in other words, system-versioned tables. We&#8217;ll see what catches on. In a gist, such a table keeps track of the history of its rows by the use of some audit columns (start and end date) and a history table. Sounds a bit like the love child of Change Data Capture and a Type 2 dimension.
+  No no, I didn't say <em>temporary</em>, but <strong>temporal</strong>! SQL Server 2016 introduces a great new feature called <strong>Temporal Tables</strong>. Or in other words, system-versioned tables. We'll see what catches on. In a gist, such a table keeps track of the history of its rows by the use of some audit columns (start and end date) and a history table. Sounds a bit like the love child of Change Data Capture and a Type 2 dimension.
 </p>
 
 <p style="text-align: justify">
@@ -45,7 +45,7 @@ CREATE TABLE dbo.TestTemporal
 </p>
 
 <p style="text-align: justify">
-  Even the <em>Delete</em> action was missing from the table&#8217;s context menu.
+  Even the <em>Delete</em> action was missing from the table's context menu.
 </p>
 
 <p style="text-align: justify">

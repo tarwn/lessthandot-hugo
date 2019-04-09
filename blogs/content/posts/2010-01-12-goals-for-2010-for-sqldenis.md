@@ -43,7 +43,7 @@ Christiane F: [Wir Kinder vom Bahnhof Zoo][5] (I have this book in Croatian)
   
 Dan Brown: [Digital Fortress][6] (I have the Dutch version titled Het Juvenalis Dilemma)
   
-Michael Pollan: [The Omnivore&#8217;s Dilemma: A Natural History of Four Meals][7]
+Michael Pollan: [The Omnivore's Dilemma: A Natural History of Four Meals][7]
   
 Roy Osherove: [The Art of Unit Testing][8]
   
@@ -83,9 +83,9 @@ When I do watch shows it is mostly on HBO or Showtime, I love Sopranos, Oz, True
 
 There was a time when I played games on the computer at least a couple of day a week, this is when I had my Commodore 128 in the 1980s, I blogged about that here: [What was your first computer and what were some of your favorite games?][1] 
   
-These days I think the games are too complicated or you need to spend several hours just to learn how to play this game. I like my games to be simple..I have a weapon..you move ..I shoot. Games should be to relax not a commitment, if you don&#8217;t play for a week suddenly a whole bunch of people have higher levels than you in WoW.
+These days I think the games are too complicated or you need to spend several hours just to learn how to play this game. I like my games to be simple..I have a weapon..you move ..I shoot. Games should be to relax not a commitment, if you don't play for a week suddenly a whole bunch of people have higher levels than you in WoW.
 
-So that is it&#8230;nothing major really&#8230;I decided not to tag anyone since it is already practically the middle of January.
+So that is it…nothing major really…I decided not to tag anyone since it is already practically the middle of January.
 
  [1]: /index.php/ITProfessionals/EthicsIT/what-was-your-first-computer-and-what-we
  [2]: /index.php/ITProfessionals/EthicsIT/goals-for-2010

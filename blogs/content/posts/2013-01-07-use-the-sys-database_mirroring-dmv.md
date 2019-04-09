@@ -22,19 +22,19 @@ tags:
 ---
 I have been using mirroring for about three years now and I must say it is one of the best features that have been added to SQL Server. We used to do plain old replication and log shipping in the past but almost all of those have been replaced by mirroring. 
 
-Someone at work asked me how to check what state the databases are in and if a database on one server is the principal or the mirror. There are a couple of ways you can check this. You can open up SSMS and expand the database folder. You will see something like the following next to the database name _(Mirror, Synchronized / Restoring&#8230;)_ or you might see _(Principal, Synchronized)_, other states are possible, for example disconnected, synchronizing, suspended.
+Someone at work asked me how to check what state the databases are in and if a database on one server is the principal or the mirror. There are a couple of ways you can check this. You can open up SSMS and expand the database folder. You will see something like the following next to the database name _(Mirror, Synchronized / Restoring…)_ or you might see _(Principal, Synchronized)_, other states are possible, for example disconnected, synchronizing, suspended.
 
-Another way to see what is going on is to launch Database Mirroring Monitor. You launch the Database Mirroring Monitor by right clicking on the database, selecting Tasks, then click on Launch Database Mirroring Monitor&#8230;
+Another way to see what is going on is to launch Database Mirroring Monitor. You launch the Database Mirroring Monitor by right clicking on the database, selecting Tasks, then click on Launch Database Mirroring Monitor…
 
 Another option is to check the error log, messages might look like these
 
 _Message
   
-Database mirroring is inactive for database &#8216;YourDB&#8217;. This is an informational message only. No user action is required.</p> 
+Database mirroring is inactive for database &#8216;YourDB'. This is an informational message only. No user action is required.</p> 
 
 Message
   
-The mirroring connection to &#8220;TCP://SomeServer.SomeNetwork:5022&#8221; has timed out for database &#8220;YourDB&#8221; after 10 seconds without a response. Check the service and network connections.</em>
+The mirroring connection to “TCP://SomeServer.SomeNetwork:5022” has timed out for database “YourDB” after 10 seconds without a response. Check the service and network connections.</em>
 
 I myself like the sys.database_mirroring dynamic management view. This view will give you the state that the mirror is in, the partner name, mirror role, what the safety level is, the connection timeout and more. Here is a query I like to run
 

@@ -33,7 +33,7 @@ Subscriber: Azure SQL Database &#8211; server jessqldb2, database ReplicationTes
 
 ### Time to test!
 
-Congratulations, you&#8217;ve configured a remote distributor, configured all of your AG replicas as publishers, and configured your SQL Database as a subscriber! Now you want to ensure that transactions are replicating to the database, and that they continue to do so if there is a failover in the AG.
+Congratulations, you've configured a remote distributor, configured all of your AG replicas as publishers, and configured your SQL Database as a subscriber! Now you want to ensure that transactions are replicating to the database, and that they continue to do so if there is a failover in the AG.
 
 ### Testing that replication works
 
@@ -61,6 +61,6 @@ Go to the subscriber. Query for the new or changed value.
 
 ### Troubleshooting
 
-Troubleshooting replication is outside the scope of this blog series. If you find that things aren&#8217;t working as expected, read the article <a href="https://www.simple-talk.com/sql/database-administration/monitoring-transactional-replication-in-sql-server/" target="_blank">Monitoring Transactional Replication in SQL Server</a>, and review the <a href="http://www.sqlservercentral.com/stairway/72401/" target="_blank">SQLServerCentral.com Stairway to Replication </a>article <a href="http://www.sqlservercentral.com/articles/Stairway+Series/72452/" target="_blank">Level 10: Troubleshooting</a>.
+Troubleshooting replication is outside the scope of this blog series. If you find that things aren't working as expected, read the article <a href="https://www.simple-talk.com/sql/database-administration/monitoring-transactional-replication-in-sql-server/" target="_blank">Monitoring Transactional Replication in SQL Server</a>, and review the <a href="http://www.sqlservercentral.com/stairway/72401/" target="_blank">SQLServerCentral.com Stairway to Replication </a>article <a href="http://www.sqlservercentral.com/articles/Stairway+Series/72452/" target="_blank">Level 10: Troubleshooting</a>.
 
 Troubleshooting Availability Groups is also outside the scope of this blog series. If you need help, start with <a href="https://msdn.microsoft.com/en-us/library/dn135328(v=sql.110).aspx" target="_blank">AlwaysOn Availability Groups Troubleshooting and Monitoring Guide</a>.

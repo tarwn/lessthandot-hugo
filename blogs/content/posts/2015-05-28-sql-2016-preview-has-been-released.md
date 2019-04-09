@@ -20,13 +20,13 @@ tags:
   - syndicated
 
 ---
-For those who haven&#8217;t noticed already:
+For those who haven't noticed already:
 
 SQL Server 2016 CTP2 (or Preview as some call it) has just been released!
   
 This means it is play time! 🙂
 
-You can either download a copy if you&#8217;re old school like me, or you can spin up a VM in Azure like all the cool kids.
+You can either download a copy if you're old school like me, or you can spin up a VM in Azure like all the cool kids.
 
 [SQL Server 2016 first public preview now available!][1]
 
@@ -35,12 +35,12 @@ Some of my favorite features (although some are not yet in the preview):
   * SSIS incremental deployment model (aka deploy only 1 package to the SSIS catalog). Although I understand the reason of the SSIS team to first allow only deployments of full projects, there are a lot of customers that want this functionality.
   * Power Query in all the things! (more specifically: in SSIS and SSRS)
   * R integration in SSRS (this should allow you to do amazing things with SSRS)
-  * SSRS revamp (still have to see it though, but I&#8217;m already excited!)
+  * SSRS revamp (still have to see it though, but I'm already excited!)
   * [Temporal tables ][2]
   * [Live query plans][3] (seems pretty awesome)
   * DAX enhancements (many 2 many, median, percentiles, and so on)
 
-Here&#8217;s a good overview of what you can expect in SQL Server 2016:
+Here's a good overview of what you can expect in SQL Server 2016:
 
 [BI on your terms with SQL Server 2016][4]
 

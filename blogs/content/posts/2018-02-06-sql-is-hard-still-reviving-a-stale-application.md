@@ -28,15 +28,15 @@ Several years ago, I [launched SQLisHard][1] to help folks learn SQL. Some folks
 </div>
 
 <p>
-  For about $10/month, this little site has kept running and helping folks. I expected to see traffic die off, since I wasn&#8217;t adding more content. Instead, there&#8217;s been nearly 7000 folks that have stopped by and successfully completed one or more exercises despite a total lack of marketing.
+  For about $10/month, this little site has kept running and helping folks. I expected to see traffic die off, since I wasn't adding more content. Instead, there's been nearly 7000 folks that have stopped by and successfully completed one or more exercises despite a total lack of marketing.
 </p>
 
 <p>
-  The hosting is oversized for what it is, most of the technology is not what I would pick today for options, but it just keeps ticking. So I&#8217;m dusting off the build pipeline, rebuilding some data analytics so I can see what&#8217;s going on, and started fashioning a new set of exercises.
+  The hosting is oversized for what it is, most of the technology is not what I would pick today for options, but it just keeps ticking. So I'm dusting off the build pipeline, rebuilding some data analytics so I can see what's going on, and started fashioning a new set of exercises.
 </p>
 
 <p>
-  Here&#8217;s how I went about reviving the application.
+  Here's how I went about reviving the application.
 </p>
 
 <h2>
@@ -44,7 +44,7 @@ Several years ago, I [launched SQLisHard][1] to help folks learn SQL. Some folks
 </h2>
 
 <p>
-  One of the things that made it easy to tinker with SQLisHard is the build pipeline for delivering updates. Most of the scripts live in the repo, but I hadn&#8217;t bothered to document it. Luckily, I had an old backup of the original build server VM and was able to recreate the build process on a much newer one.
+  One of the things that made it easy to tinker with SQLisHard is the build pipeline for delivering updates. Most of the scripts live in the repo, but I hadn't bothered to document it. Luckily, I had an old backup of the original build server VM and was able to recreate the build process on a much newer one.
 </p>
 
 <p>
@@ -52,7 +52,7 @@ Several years ago, I [launched SQLisHard][1] to help folks learn SQL. Some folks
 </p>
 
 <p>
-  A build pipeline makes delivering changes consistent. This application has 2 separate databases, runs user-entered queries against a real database, and has to provide accurate feedback every time (or risk hurting someone&#8217;s progression). A pipeline provides both safety and speed. I was experimenting with several different things at the time, so I have rudimentary testing covering all types of situations. By the time the changes roll out to the website and apply changes to 2 separate SQL Server instances, that one button push has run:
+  A build pipeline makes delivering changes consistent. This application has 2 separate databases, runs user-entered queries against a real database, and has to provide accurate feedback every time (or risk hurting someone's progression). A pipeline provides both safety and speed. I was experimenting with several different things at the time, so I have rudimentary testing covering all types of situations. By the time the changes roll out to the website and apply changes to 2 separate SQL Server instances, that one button push has run:
 </p>
 
 <ul>
@@ -80,7 +80,7 @@ Several years ago, I [launched SQLisHard][1] to help folks learn SQL. Some folks
 </ul>
 
 <p>
-  It was a little painful to bring back to life, but infinitely safer then applying changes manually. It&#8217;s past time for every company to run a pipeline, and I&#8217;m more than happy to dive into more details or other build services if folks are interested.
+  It was a little painful to bring back to life, but infinitely safer then applying changes manually. It's past time for every company to run a pipeline, and I'm more than happy to dive into more details or other build services if folks are interested.
 </p>
 
 <h2>
@@ -99,7 +99,7 @@ Several years ago, I [launched SQLisHard][1] to help folks learn SQL. Some folks
 </p>
 
 <p>
-  Visibility into the flow from step to step helped me make adjustments and help folks make it all the way through the exercises. This site used a bunch of experimental things, so the data originally lived in a beta Splunk Cloud offering that was discontinued years ago (and replaced by a cloud offering that did not have an API&#8230;). Unfortunately, this activity is not tracked well in the database either.
+  Visibility into the flow from step to step helped me make adjustments and help folks make it all the way through the exercises. This site used a bunch of experimental things, so the data originally lived in a beta Splunk Cloud offering that was discontinued years ago (and replaced by a cloud offering that did not have an API…). Unfortunately, this activity is not tracked well in the database either.
 </p>
 
 <p>
@@ -146,7 +146,7 @@ customEvents
 ```
 
 <p>
-  Where this pays off is when I start making new exercises public. Now I&#8217;ll have immediate visibility into how folks are progressing and I can try to improve the exercise descriptions to help as many folks get through as I can.
+  Where this pays off is when I start making new exercises public. Now I'll have immediate visibility into how folks are progressing and I can try to improve the exercise descriptions to help as many folks get through as I can.
 </p>
 
 <h2>
@@ -158,7 +158,7 @@ customEvents
 </p>
 
 <p>
-  One of the great things about a relational database is the ability to mine across those related datasets for new information. Aggregation plays a big part here, so I&#8217;ve started building an exercise set that looks like this:
+  One of the great things about a relational database is the ability to mine across those related datasets for new information. Aggregation plays a big part here, so I've started building an exercise set that looks like this:
 </p>
 
 <ul>
@@ -198,11 +198,11 @@ customEvents
 </ul>
 
 <p>
-  If this works out, I&#8217;ll have a test link posted on twitter (@sqlishard) and, after a trial period, will roll it out live.
+  If this works out, I'll have a test link posted on twitter (@sqlishard) and, after a trial period, will roll it out live.
 </p>
 
 <p>
-  I can&#8217;t promise this will usher in a great deal of additions, it&#8217;s hard to jump in this code base and not immediately start rewriting all the things plus I have a half-dozen other projects I&#8217;d like to be working on too. We&#8217;ll see what happens.
+  I can't promise this will usher in a great deal of additions, it's hard to jump in this code base and not immediately start rewriting all the things plus I have a half-dozen other projects I'd like to be working on too. We'll see what happens.
 </p>
 
  [1]: /index.php/datamgmt/dbprogramming/sql-is-hard/ "SQL is Hard launch post"

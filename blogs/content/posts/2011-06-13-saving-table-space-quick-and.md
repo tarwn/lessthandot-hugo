@@ -95,7 +95,7 @@ Now I know some people might be thinking that some of these seem like very small
 
 Remember to always research your changes and test everything first before pushing changes to a production system; you never know when something might need that extra piece of data.
 
-One way that you might be interested in modifying the script is by changing the where clause to have a ratio of >=8. This is signifigant because sql server stores data on 8k pages, and if you&#8217;re completely filling, or going over that, you could have additional speed and space issues. You could also set the count minimum to something like 10 or so to get rid of any small lookup tables you may have.
+One way that you might be interested in modifying the script is by changing the where clause to have a ratio of >=8. This is signifigant because sql server stores data on 8k pages, and if you're completely filling, or going over that, you could have additional speed and space issues. You could also set the count minimum to something like 10 or so to get rid of any small lookup tables you may have.
 
 For more information on data types and sizes, look [here][1]
 

@@ -18,11 +18,11 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Continuing onwards with the SQL Server auditing feature, let&#8217;s start off by creating a simple audit that will capture some server level events.
+Continuing onwards with the SQL Server auditing feature, let's start off by creating a simple audit that will capture some server level events.
 
 As a DBA one of the things to know is when login attempts are made, and which ones is failing as it could be someone unauthorized trying to gain access . This can be easily retrieved from the SQL error log, however we want to keep track of these events over a period of time, there for the error log might not suffice.
 
-In other circumstances, the system can be under certain policies and regulations which requires you to keep the data for a set amount of time, and we don&#8217;t want other data that is not as critical to be clutter the data we are actually looking to keep.
+In other circumstances, the system can be under certain policies and regulations which requires you to keep the data for a set amount of time, and we don't want other data that is not as critical to be clutter the data we are actually looking to keep.
 
 ### Creating The Audit
 
@@ -42,7 +42,7 @@ This should bring up a new window similar to this:
 
 ##### On Audit Log Failure
 
-Here we can select between the different actions to take based upon what audit action is triggered. We might just want to log all the database option changes, and who made the change, then we will only use CONTINUE or if we don&#8217;t allow changes, then we can fail the operation. In more secure environments when we receive certain login failures, the audit mechanism can shut down SQL and prevent a possible security breach.
+Here we can select between the different actions to take based upon what audit action is triggered. We might just want to log all the database option changes, and who made the change, then we will only use CONTINUE or if we don't allow changes, then we can fail the operation. In more secure environments when we receive certain login failures, the audit mechanism can shut down SQL and prevent a possible security breach.
 
 ##### Audit Destination
 

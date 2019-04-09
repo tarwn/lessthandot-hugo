@@ -42,7 +42,7 @@ sql
 ALTER USER UserName WITH LOGIN = UserName
 ```
 
-Let&#8217;s write some code and see how this all works
+Let's write some code and see how this all works
 
 First we are creating a new user named TestLogin
 
@@ -156,17 +156,17 @@ GO
 
 Msg 916, Level 14, State 1, Line 1
   
-The server principal &#8220;TestLogin&#8221; is not able to access the database &#8220;TestLogin&#8221; under the current security context.
+The server principal “TestLogin” is not able to access the database “TestLogin” under the current security context.
 
 Leave that query window open for now, we will get back to it later.
   
-Now let&#8217;s fix the user by mapping the user to the login
+Now let's fix the user by mapping the user to the login
 
 sql
 EXECUTE sp_change_users_login 'Update_One', 'TestLogin', 'TestLogin'
 ```
 
-Now this query doesn&#8217;t return any rows since the user has been fixed
+Now this query doesn't return any rows since the user has been fixed
 
 sql
 EXECUTE sp_change_users_login 'report'
@@ -243,7 +243,7 @@ GO
 
 Msg 916, Level 14, State 1, Line 1
   
-The server principal &#8220;TestLogin&#8221; is not able to access the database &#8220;TestLogin&#8221; under the current security context.
+The server principal “TestLogin” is not able to access the database “TestLogin” under the current security context.
 
 Here is how to do the same thing with ALTER USER as with sp\_change\_users_login 
 
@@ -251,7 +251,7 @@ sql
 ALTER USER TestLogin WITH LOGIN = TestLogin
 ```
 
-As you can see, this doesn&#8217;t return anything anymore
+As you can see, this doesn't return anything anymore
 
 sql
 EXECUTE sp_change_users_login 'report'

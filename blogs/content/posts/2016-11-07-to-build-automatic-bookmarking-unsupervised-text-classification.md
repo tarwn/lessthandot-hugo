@@ -18,15 +18,15 @@ tags:
   - TF-IDF
 
 ---
-I&#8217;ve been bookmarking all of my online reading for the past 7 years and recently started thinking about using that dataset to dig into trends in my past reading and potentially build a model to start scoring content I haven&#8217;t read yet. Even though I have manual keywords for each entry, I decided to look into what I could get with unsupervised text classification techniques to balance out the fact that I had entered those labels over long periods of time.
+I've been bookmarking all of my online reading for the past 7 years and recently started thinking about using that dataset to dig into trends in my past reading and potentially build a model to start scoring content I haven't read yet. Even though I have manual keywords for each entry, I decided to look into what I could get with unsupervised text classification techniques to balance out the fact that I had entered those labels over long periods of time.
 
 My first goal is to programmatically extract keywords from consistently formatted blog posts on static website pages.
 
 <div style="margin: 1em 0; padding: 1em; background-color: #FFFFCC">
-  <b>Warning:</b> This isn&#8217;t an expert post on text classification or natural language processing. It&#8217;s a mildly rambling journey of a developer making general progress and the code, libraries, and resources used along the way.</p> 
+  <b>Warning:</b> This isn't an expert post on text classification or natural language processing. It's a mildly rambling journey of a developer making general progress and the code, libraries, and resources used along the way.</p> 
   
   <p>
-    For context, I am not an expert. Machine learning has been an interest since college, so I know some of the general terms at a high level and have written a number of smaller supervised systems, but haven&#8217;t actually played with text classification or natural language processing before.
+    For context, I am not an expert. Machine learning has been an interest since college, so I know some of the general terms at a high level and have written a number of smaller supervised systems, but haven't actually played with text classification or natural language processing before.
   </p>
 </div>
 
@@ -36,7 +36,7 @@ I learn best by doing, so on top of some of the high level knowledge I added a b
   * [Tutorial: Finding Important Words in Text Using TF-IDF][2]
   * [NLP keyword extraction tutorial with RAKE and Maui][3]
 
-I also leaned on the [The Hitchhiker&#8217;s Guide to Python: HTML Scraping][4], because I only dip into python about every 5 years and was pretty rusty.
+I also leaned on the [The Hitchhiker's Guide to Python: HTML Scraping][4], because I only dip into python about every 5 years and was pretty rusty.
 
 ## Using TF-IDF
 
@@ -53,13 +53,13 @@ pages = [
     'http://tiernok.com/posts/improved-teamcity-net-build-warnings.html'
 ]
 ```
-Starting with a set of my own posts meant the consistent would be in a consistent format, I would have some ideas on what I expected the keywords to be, and I could defer things like local content caching logic without running up someone else&#8217;s bill or messing up their page statistics.
+Starting with a set of my own posts meant the consistent would be in a consistent format, I would have some ideas on what I expected the keywords to be, and I could defer things like local content caching logic without running up someone else's bill or messing up their page statistics.
 
 _Please be kind to my site if you run these scripts yourself, btw_
 
-I played around with several ways to extract the text, but ended up on the [requests][5] module for scraping, [html2text][6] for extracting text, and [TextBlob][7] for the analysis, basing the script on [Steven Loria&#8217;s post][8] and using his functions for the scoring.
+I played around with several ways to extract the text, but ended up on the [requests][5] module for scraping, [html2text][6] for extracting text, and [TextBlob][7] for the analysis, basing the script on [Steven Loria's post][8] and using his functions for the scoring.
 
-After a few iterations where I tried to resolve pluralization and grouping things by common word roots (lemmetizing), I ended up back at a simple implementation that doesn&#8217;t take forever to run:
+After a few iterations where I tried to resolve pluralization and grouping things by common word roots (lemmetizing), I ended up back at a simple implementation that doesn't take forever to run:
 
 **[tfidf.py][9]**
 
@@ -94,9 +94,9 @@ for page in completed_pages:
     for word, score in page_scores[:5]:
         print("\rWord: {}, TF-IDF: {}".format(word, round(score, 5)))
 ```
-I love python for it&#8217;s readability, but documentation and figuring out which library one should be using for basic things like executing web requests ate up a bunch of my time (this is the 3rd web library, 4th HTML to text method, and 2nd library for analyzing content).
+I love python for it's readability, but documentation and figuring out which library one should be using for basic things like executing web requests ate up a bunch of my time (this is the 3rd web library, 4th HTML to text method, and 2nd library for analyzing content).
 
-This is the top words it gave me for the first entry, a post about a real-time JavaScript test runner using Microsoft&#8217;s VS Code IDE for samples:
+This is the top words it gave me for the first entry, a post about a real-time JavaScript test runner using Microsoft's VS Code IDE for samples:
 
 ```text
 Scoring http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html
@@ -106,15 +106,15 @@ Word: tests, TF-IDF: 0.00962
 Word: false, TF-IDF: 0.00812
 Word: isusingwallaby, TF-IDF: 0.00609
 ```
-Apparently I didn&#8217;t use explicit &#8220;false&#8221; values frequently enough in the prior posts (or at least not as frequently as I used the word Javascript). 
+Apparently I didn't use explicit “false” values frequently enough in the prior posts (or at least not as frequently as I used the word Javascript). 
 
-This bring us to the reasons it won&#8217;t fit for what I&#8217;m doing:
+This bring us to the reasons it won't fit for what I'm doing:
 
-1. If I compare all of my content against my content, a lot of the real keywords are going to end up with high IDF values simply because I am going to use them in a lot of posts (or read about them a lot when I apply it to bookmarking other people&#8217;s content)
+1. If I compare all of my content against my content, a lot of the real keywords are going to end up with high IDF values simply because I am going to use them in a lot of posts (or read about them a lot when I apply it to bookmarking other people's content)
 
-2. It&#8217;s slow. Granted, I&#8217;m doing this the worst possible way right now, by analyzing the whole set of words in the whole set of documents for each page, so I could optimize a lot simply by building an overall hashtable of words and document frequencies and per-document hashtables of words and frequencies, but this is only going to optimize well because I use the same words a lot, which brings us back to #1.
+2. It's slow. Granted, I'm doing this the worst possible way right now, by analyzing the whole set of words in the whole set of documents for each page, so I could optimize a lot simply by building an overall hashtable of words and document frequencies and per-document hashtables of words and frequencies, but this is only going to optimize well because I use the same words a lot, which brings us back to #1.
 
-So, still a useful tool in the bag and could be interesting comparing a small number of documents to more general written works to not lose the industry specific terms, but not really the answer to what I&#8217;m looking for.
+So, still a useful tool in the bag and could be interesting comparing a small number of documents to more general written works to not lose the industry specific terms, but not really the answer to what I'm looking for.
 
 ## RAKE: Rapid Automatic Keyword Extraction
 
@@ -128,7 +128,7 @@ The RAKE algorithm is described in the book Text Mining Applications and Theory 
 
 2. A Co-occurrence graph is built to identify the frequency that words are associated together in those phrases. Here is a good outline of how co-occurence graphs are built: [Mining Twitter Data with Python (Part 4: Rugby and Term Co-occurrences)][13]
 
-3. A score is calculated for each phrase that is the sum of the individual word&#8217;s scores from the co-occurrence graph. An individual word score is calculated as the degree (number of times it appears + number of additional words it appears with) of a word divided by it&#8217;s frequency (number of times it appears), which weights towards longer phrases.
+3. A score is calculated for each phrase that is the sum of the individual word's scores from the co-occurrence graph. An individual word score is calculated as the degree (number of times it appears + number of additional words it appears with) of a word divided by it's frequency (number of times it appears), which weights towards longer phrases.
 
 4. Adjoining keywords are included if they occur more than twice in the document and score high enough. An adjoining keyword is two keyword phrases with a stop word between them.
 
@@ -138,7 +138,7 @@ Which sounds like it should resolve both the speed and watering down effects fro
 
 ### Implementation using RAKE
 
-Luckily, there are a few implementations for RAKE already for python. I&#8217;ll be using the highest google result, [python-rake][14].
+Luckily, there are a few implementations for RAKE already for python. I'll be using the highest google result, [python-rake][14].
 
 **[rake.py][15]**
 
@@ -175,15 +175,15 @@ Keyword: open visual studio code, score: 12
 Keyword: ext install\nwallaby-vscode\nwallaby
 </pre>
 
-Well&#8230;that didn&#8217;t go as planned.
+Well…that didn't go as planned.
 
-Rake seemed to get closer to a good set of results and was twice as fast as the TF-IDF version (which, as written, will get progressively worse with every link we add to the pile). Unfortunately, we&#8217;re running into a Garbage-In Garbage-Out problem.
+Rake seemed to get closer to a good set of results and was twice as fast as the TF-IDF version (which, as written, will get progressively worse with every link we add to the pile). Unfortunately, we're running into a Garbage-In Garbage-Out problem.
 
-## Better algorithms don&#8217;t give us cleaner input data
+## Better algorithms don't give us cleaner input data
 
 One of the biggest issues with AI/ML work is making sure you have a clean data set. In this case, there is no way for these two algorithms to know to skip things like code entries and content from the header and footer of the site.
 
-Because I&#8217;m working with really consistent input, I can add some cleansing logic to extract just the blog posts from each page and throw away sections of code. 
+Because I'm working with really consistent input, I can add some cleansing logic to extract just the blog posts from each page and throw away sections of code. 
 
 ### Cleaner Content using BeautifulSoup
 
@@ -233,7 +233,7 @@ Now with a cleaner content to work with, TF-IDF has pulled out a pretty good set
 
 ## And thus it goes…
 
-This started as some scratch code to try and generate keywords for a consistent set of HTML pages, with the intent of applying what I built here to a diverse set (everything I&#8217;ve read and remembered to bookmark in the past 7 years). My next steps are going to be to try TextRank against the data to evaluate how it does and to modify the RAKE code to accept some constraints to see if, for instance, a limit of 2-3 word phrases nets a better set.
+This started as some scratch code to try and generate keywords for a consistent set of HTML pages, with the intent of applying what I built here to a diverse set (everything I've read and remembered to bookmark in the past 7 years). My next steps are going to be to try TextRank against the data to evaluate how it does and to modify the RAKE code to accept some constraints to see if, for instance, a limit of 2-3 word phrases nets a better set.
 
 Along the way, I also realized that LessThanDot has an awesome set of content available that would be interesting to analyze (over 1800 posts) and between tags, titles, and categories there is some labeling in place that might enable some supervised learning techniques.
 

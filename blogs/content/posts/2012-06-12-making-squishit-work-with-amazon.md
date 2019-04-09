@@ -17,11 +17,11 @@ tags:
   - squishit
 
 ---
-For the unfortunate souls not in the know (or is it the fortunate souls using one of the myriad alternatives?), [SquishIt][1] is a library used to optimize content delivery at runtime in ASP.net applications. It combines and minifies javascript files, and also does a bit of preprocessing for things like [LESS][2] and [CoffeeScript][3]. I&#8217;ve been working with Justin Etheredge ([blog][4]|[twitter][5]) on this for a while, first on patches for various bugs I encountered trying to use SquishIt on linux, but more recently my focus has been on improving extensibility. One of the areas that I really felt the library could benefit from increased extensibility is the area of CDN support. I&#8217;ve been doing a lot of work with Amazon CloudFront lately, and decided it would be cool to see how cleanly I could get SquishIt to work with the service.
+For the unfortunate souls not in the know (or is it the fortunate souls using one of the myriad alternatives?), [SquishIt][1] is a library used to optimize content delivery at runtime in ASP.net applications. It combines and minifies javascript files, and also does a bit of preprocessing for things like [LESS][2] and [CoffeeScript][3]. I've been working with Justin Etheredge ([blog][4]|[twitter][5]) on this for a while, first on patches for various bugs I encountered trying to use SquishIt on linux, but more recently my focus has been on improving extensibility. One of the areas that I really felt the library could benefit from increased extensibility is the area of CDN support. I've been doing a lot of work with Amazon CloudFront lately, and decided it would be cool to see how cleanly I could get SquishIt to work with the service.
 
 ### SquishIt CDN Support in Previous Versions
 
-I suppose it makes sense to start with what we already had in place. CDN support in SquishIt has been slowly progressing, largely thanks to community contributions. As of version 0.8.6 we did have support for injecting a base URL into asset paths, but this required you to know the generated file name in advance and upload it to your CDN through other means. While this worked, and could be easily automated in your build process, it wasn&#8217;t exactly convenient. The pull requests we&#8217;ve gotten have done a fairly good job showing us what the community wants in terms of CDN support, so it feels like it is time to start trying to treat it as a first class citizen. The first thing I would like is a way to render the combined file directly to my CDN if it doesn&#8217;t already exist, and maybe a way to force overwriting the file if need be.
+I suppose it makes sense to start with what we already had in place. CDN support in SquishIt has been slowly progressing, largely thanks to community contributions. As of version 0.8.6 we did have support for injecting a base URL into asset paths, but this required you to know the generated file name in advance and upload it to your CDN through other means. While this worked, and could be easily automated in your build process, it wasn't exactly convenient. The pull requests we've gotten have done a fairly good job showing us what the community wants in terms of CDN support, so it feels like it is time to start trying to treat it as a first class citizen. The first thing I would like is a way to render the combined file directly to my CDN if it doesn't already exist, and maybe a way to force overwriting the file if need be.
 
 ### Adding Support for Custom Renderers
 
@@ -37,7 +37,7 @@ Bundle.JavaScript()
     .Render("combinedOutput.js");
 ```
 
-So the first thing that came to mind was to add something like a &#8220;WithFileRenderer&#8221; method. This would give us a way to inject a renderer into a bundle and have it used to render the combined files. However, we probably don&#8217;t want to render to the CDN while debugging, so &#8220;WithReleaseFileRenderer&#8221; might be more appropriate. Setting up the method went something like this:
+So the first thing that came to mind was to add something like a “WithFileRenderer” method. This would give us a way to inject a renderer into a bundle and have it used to render the combined files. However, we probably don't want to render to the CDN while debugging, so “WithReleaseFileRenderer” might be more appropriate. Setting up the method went something like this:
 
 ```csharp
 IRenderer releaseFileRenderer;
@@ -59,7 +59,7 @@ public Configuration UseReleaseRenderer(IRenderer releaseRenderer)
 }
 ```
 
-Finally, we need to change the way the file renderer is obtained when we go to render the combined assets. Previously we were instantiating a new FileRenderer or CacheRenderer depending on circumstance, and passing that renderer into the main rendering method. This won&#8217;t cut it anymore, as our needs have gotten significantly more complex. The constraints we have to deal with are as follows:
+Finally, we need to change the way the file renderer is obtained when we go to render the combined assets. Previously we were instantiating a new FileRenderer or CacheRenderer depending on circumstance, and passing that renderer into the main rendering method. This won't cut it anymore, as our needs have gotten significantly more complex. The constraints we have to deal with are as follows:
 
   * When debugging we should use a normal file renderer
   * We should favor a renderer configured at the instance level over one configured statically
@@ -81,11 +81,11 @@ This is basically all we needed to do to enable us to plug in a custom renderer 
 
 ### Building the S3 Keys
 
-The only really tricky thing about building the renderer is that it takes a string representing the disk location to render to. Changing what the renderer takes as a parameter would involve a more significant change to the core behavior than I&#8217;m comfortable making right now, so the first thing we need is a way to turn these disk locations into keys that S3 can use. The key we create needs to match the relative path to that of the locally-rendered asset so that injecting the base url will yield the absolute path that we need.
+The only really tricky thing about building the renderer is that it takes a string representing the disk location to render to. Changing what the renderer takes as a parameter would involve a more significant change to the core behavior than I'm comfortable making right now, so the first thing we need is a way to turn these disk locations into keys that S3 can use. The key we create needs to match the relative path to that of the locally-rendered asset so that injecting the base url will yield the absolute path that we need.
 
 None of this is terribly difficult &#8211; the main edge cases we need to cover are
 
-  * Root appearing twice in the file path (because of Windows&#8217; drive lettering this is mostly an issue running on unix-based systems)
+  * Root appearing twice in the file path (because of Windows' drive lettering this is mostly an issue running on unix-based systems)
   * Virtual directories
 
 To meet these requirements the two pieces of information that we need inside the key builder are the physical application path and virtual directory. Here are some tests:
@@ -169,7 +169,7 @@ public interface IRenderer
 }
 ```
 
-The only things we&#8217;ll need to implement this method are an initialized S3 client, a bucket and the key builder we implemented in the last section. By default, we won&#8217;t want to upload our content if it already exists on the CDN, so we will need to check for existence before uploading the content. This can be done by querying for object metadata using the desired key &#8211; if the file doesn&#8217;t exist we will get a &#8220;not found&#8221; status on the exception thrown by the s3 client. So the most important test will look like this:
+The only things we'll need to implement this method are an initialized S3 client, a bucket and the key builder we implemented in the last section. By default, we won't want to upload our content if it already exists on the CDN, so we will need to check for existence before uploading the content. This can be done by querying for object metadata using the desired key &#8211; if the file doesn't exist we will get a “not found” status on the exception thrown by the s3 client. So the most important test will look like this:
 
 ```csharp
 [Test]
@@ -202,7 +202,7 @@ public void Render_Uploads_If_File_Doesnt_Exist()
 }
 ```
 
-Note that it is checking the PutObjectRequest to ensure that the ACL used is &#8220;NoACL&#8221;. This is probably not an optimal default (most people will want the &#8220;PublicRead&#8221; ACL I imagine) but I decided to err on the side of caution and force people to opt-in to making their content publicly visible. The implementation for the render method looks something like this:
+Note that it is checking the PutObjectRequest to ensure that the ACL used is “NoACL”. This is probably not an optimal default (most people will want the “PublicRead” ACL I imagine) but I decided to err on the side of caution and force people to opt-in to making their content publicly visible. The implementation for the render method looks something like this:
 
 ```csharp
 public void Render(string content, string outputPath)
@@ -250,11 +250,11 @@ bool FileExists(string key)
 }
 ```
 
-It has gotten slightly more complex since then (I&#8217;ve added configurable headers and an option for forcing overwrite of the existing file) but the core logic remains the same. It&#8217;s a fairly naive implementation but my experience with the Amazon services has been good enough so far that I haven&#8217;t encountered a lot of the exceptions that I hope to add handling for in the future.
+It has gotten slightly more complex since then (I've added configurable headers and an option for forcing overwrite of the existing file) but the core logic remains the same. It's a fairly naive implementation but my experience with the Amazon services has been good enough so far that I haven't encountered a lot of the exceptions that I hope to add handling for in the future.
 
 ### Adding Invalidation
 
-At this point we should be able to render our content directly to S3, but this doesn&#8217;t get us all the way to where we need to be. While hosting static content in S3 offers some advantages over hosting it locally and it **can** work as a CDN, using CloudFront to deliver your S3 content makes more sense if you really want to minimize latency. To make this work we&#8217;ll just need to add an invaliator to the mix. A test for the core usage looks like this:
+At this point we should be able to render our content directly to S3, but this doesn't get us all the way to where we need to be. While hosting static content in S3 offers some advantages over hosting it locally and it **can** work as a CDN, using CloudFront to deliver your S3 content makes more sense if you really want to minimize latency. To make this work we'll just need to add an invaliator to the mix. A test for the core usage looks like this:
 
 ```csharp
 [Test]
@@ -339,11 +339,11 @@ class CloudFrontInvalidator : IDisposable, IInvalidator
 }
 ```
 
-As an interesting aside, while I was working on this Amazon released [support for querystring invalidation/versioning][7], which is SquishIt&#8217;s default behavior. I had planned to add a release note telling people that they would need to use squishit&#8217;s &#8220;hash in filename&#8221; option, but it seems like now there won&#8217;t be any need 🙂
+As an interesting aside, while I was working on this Amazon released [support for querystring invalidation/versioning][7], which is SquishIt's default behavior. I had planned to add a release note telling people that they would need to use squishit's “hash in filename” option, but it seems like now there won't be any need 🙂
 
 ### Neat, But How Do I Use This?
 
-It&#8217;s nice that this all works on paper (and in unit tests) but how do we actually tie everything together? One of the key design decisions was that the renderer is instantiated with pre-initialized CloudFront and S3 clients. This way users aren&#8217;t locked into a certain method of getting credentials or anything like that. To use the custom renderer for only a particular bundle usage would be something like this:
+It's nice that this all works on paper (and in unit tests) but how do we actually tie everything together? One of the key design decisions was that the renderer is instantiated with pre-initialized CloudFront and S3 clients. This way users aren't locked into a certain method of getting credentials or anything like that. To use the custom renderer for only a particular bundle usage would be something like this:
 
 ```csharp
 var s3client = new AmazonS3Client("accessKey", "secretKey");
@@ -360,7 +360,7 @@ Bundle.JavaScript()
     .Add("file2.js")
     .Render("combined.js");
 ```
-This is nice, but I think the global configuration is probably what people will be using more often. As is common in ASP.net apps a lot of the setup magic for this happens in the app initialization. So you&#8217;d add something like this to your Application_Start method (in Global.asax.cs):
+This is nice, but I think the global configuration is probably what people will be using more often. As is common in ASP.net apps a lot of the setup magic for this happens in the app initialization. So you'd add something like this to your Application_Start method (in Global.asax.cs):
 
 ```csharp
 var s3client = new AmazonS3Client("accessKey", "secretKey");
@@ -375,11 +375,11 @@ Bundle.ConfigureDefaults()
     .UseDefaultOutputBaseHref("http://s3.amazonaws.com/bucket");
 ```
 
-I tried to make this something that could be run via WebActivator, but had trouble finding a method to use that would have access to the HttpContext (needed to resolve application path and virtual directory) so for now it needs to be set up manually. This may be for the best though, as it doesn&#8217;t force any particular convention for access key / secret key retrieval. It doesn&#8217;t **feel** like a ton of setup code to me, hopefully others will agree.
+I tried to make this something that could be run via WebActivator, but had trouble finding a method to use that would have access to the HttpContext (needed to resolve application path and virtual directory) so for now it needs to be set up manually. This may be for the best though, as it doesn't force any particular convention for access key / secret key retrieval. It doesn't **feel** like a ton of setup code to me, hopefully others will agree.
 
-### What&#8217;s Next
+### What's Next
 
-Now that SquishIt 0.8.7 has been released I can finally start planning to make this available [on NuGet][8] as a standard package (currently in beta until I get a little more testing). It can be installed like any other, but will require updating SquishIt if you&#8217;re using a pre-0.8.7 version. If you need to report any issues encountered while using the library, or feel like contributing some code, please do so [on github][9]. Oh, and if you just want to kick the tires on SquishIt without all this other nonsense, or try making it work with another CDN you can find the core library [on NuGet][10] as well.
+Now that SquishIt 0.8.7 has been released I can finally start planning to make this available [on NuGet][8] as a standard package (currently in beta until I get a little more testing). It can be installed like any other, but will require updating SquishIt if you're using a pre-0.8.7 version. If you need to report any issues encountered while using the library, or feel like contributing some code, please do so [on github][9]. Oh, and if you just want to kick the tires on SquishIt without all this other nonsense, or try making it work with another CDN you can find the core library [on NuGet][10] as well.
 
  [1]: https://github.com/jetheredge/SquishIt
  [2]: http://lesscss.org/

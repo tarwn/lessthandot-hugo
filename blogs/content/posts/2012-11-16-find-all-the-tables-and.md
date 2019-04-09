@@ -43,9 +43,9 @@ Source spid76
 
 Message
   
-Database &#8216;YourCrappyDB&#8217; cannot be started in this edition of SQL Server because part or all of object &#8216;CrappyIndexData&#8217; is enabled with data compression or vardecimal storage format. Data compression and vardecimal storage format are only supported on SQL Server Enterprise Edition.</em>
+Database &#8216;YourCrappyDB' cannot be started in this edition of SQL Server because part or all of object &#8216;CrappyIndexData' is enabled with data compression or vardecimal storage format. Data compression and vardecimal storage format are only supported on SQL Server Enterprise Edition.</em>
 
-Okay, so they are running the standard edition of SQL Server. How can you quickly find all the tables and indexes that use compression? Let&#8217;s take a look, first we are going to create three tables, a heap, a table with a non clustered index and a table with a clustered index
+Okay, so they are running the standard edition of SQL Server. How can you quickly find all the tables and indexes that use compression? Let's take a look, first we are going to create three tables, a heap, a table with a non clustered index and a table with a clustered index
 
 A table without indexes (a heap)
 

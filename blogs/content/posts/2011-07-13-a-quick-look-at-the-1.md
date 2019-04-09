@@ -32,7 +32,7 @@ tags:
 ---
 SQL Server Denali CTP3 has a bunch of new date/time functions like DATEFROMPARTS, DATETIMEFROMPARTS and EOMONTH
 
-First let&#8217;s take a look at EOMONTH.
+First let's take a look at EOMONTH.
 
 The syntax for EOMONTH is
 
@@ -78,7 +78,7 @@ SELECT EOMONTH('20110615',-1)
 
 2011-05-31 00:00:00.0000000
 
-The one problem with this function is that if you do a query and specify between some date and EOMONTH it won&#8217;t give you anything after midnight. I already explained that in this post: [How Does Between Work With Dates In SQL Server?][1]
+The one problem with this function is that if you do a query and specify between some date and EOMONTH it won't give you anything after midnight. I already explained that in this post: [How Does Between Work With Dates In SQL Server?][1]
 
 I also wonder why there is no SOMONTH function? Yes, I know it starts with 1, but if there is an _end of month_ function then someone will also search for a _start of month_ function.
 

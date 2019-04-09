@@ -21,7 +21,7 @@ tags:
 ---
 In this blog post I will show you a couple of ways of getting the top 2 values from a set in SQL Server. The dense_rank queries will not work if you have SQL server 2000 but the other ones should.
 
-Let&#8217;s say you have a table that has this data
+Let's say you have a table that has this data
   
 100
   
@@ -41,7 +41,7 @@ Let&#8217;s say you have a table that has this data
 
 You want to get the 2 highest amounts in that table the values 100 and 99, how would you do this?
   
-Let&#8217;s take a look at some posibillities, first create this table and populate it with data
+Let's take a look at some posibillities, first create this table and populate it with data
 
 sql
 create table TestTies (id int identity,SomeValue tinyint)
@@ -222,7 +222,7 @@ query 5 54.11% (running count)
 
 Wow, query 5 running count is slower than the other 4 combined, this was expected of course. It is also interesting that dense_rank is not as efficient as using max twice
   
-Let&#8217;s do some more testing, we will create a non clustered index on the SomeValue column
+Let's do some more testing, we will create a non clustered index on the SomeValue column
 
 sql
 create index ix_SomeValue on TestTies(SomeValue desc)
@@ -240,7 +240,7 @@ query 4 13.95% (distinct sub query)
   
 query 5 34.32% (running count)
 
-As you can see now dense_rank is fastest. Let&#8217;s make that non clustered index a clustered index and look at the plans again.
+As you can see now dense_rank is fastest. Let's make that non clustered index a clustered index and look at the plans again.
 
 sql
 drop index  TestTies.ix_SomeValue

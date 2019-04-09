@@ -29,7 +29,7 @@ tags:
   - teaser
 
 ---
-I haven&#8217;t done a puzzle for a long time so I figured let&#8217;s do a simple one. Return the right 6 characters of the column but without using the RIGHT function.
+I haven't done a puzzle for a long time so I figured let's do a simple one. Return the right 6 characters of the column but without using the RIGHT function.
 
 Here is what the table looks like
 
@@ -59,4 +59,4 @@ Z      7</pre>
 
 As you can see spaces should remain and when the value is NULL then there should be a blank. The length for the row with the NULL value should be 0, you cannot hardcode 7 for the length, you have to calculate it.
 
-Post your solution(s) in the comment section, remember no RIGHT function. Let&#8217;s see how many different ways you can come up with to do this
+Post your solution(s) in the comment section, remember no RIGHT function. Let's see how many different ways you can come up with to do this

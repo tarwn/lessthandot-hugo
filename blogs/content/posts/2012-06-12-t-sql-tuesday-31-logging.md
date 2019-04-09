@@ -18,19 +18,19 @@ tags:
   - t-sql
 
 ---
- <img src="http://sqlblog.com/files/folders/30073/download.aspx" style="float: right; margin: 8px" alt="T-SQL Tuesday" />How big are your core databases right now? Do you know how they got that way? Is that normal? These questions are impossible to answer just by looking at the database options dialog in SSMS. They are also questions I&#8217;ve had to try to answer in several different environments, because without logging we not only didn&#8217;t know what normal growth looked like for our system, we didn&#8217;t know what tables and indexes were driving that growth. 
+ <img src="http://sqlblog.com/files/folders/30073/download.aspx" style="float: right; margin: 8px" alt="T-SQL Tuesday" />How big are your core databases right now? Do you know how they got that way? Is that normal? These questions are impossible to answer just by looking at the database options dialog in SSMS. They are also questions I've had to try to answer in several different environments, because without logging we not only didn't know what normal growth looked like for our system, we didn't know what tables and indexes were driving that growth. 
 
 The answer lies in a very simple query and a little logging.
 
-_Aaron Nelson (<a href="https://twitter.com/#!/sqlvariant" title="@SQLVariant on twitter" alt="@sqlvariant on twitter">twitter</a>|[blog][1]) is hosting [T-SQL Tuesday][2] this month with the topic of &#8220;Logging&#8221;. Check out [his post][2] for a list of other T-SQL Tuesday posts this month and congratulate him on speaking at TechEd on Tuesday morning (he&#8217;s denied being the loud powershell fan in the keynote, btw)._
+_Aaron Nelson (<a href="https://twitter.com/#!/sqlvariant" title="@SQLVariant on twitter" alt="@sqlvariant on twitter">twitter</a>|[blog][1]) is hosting [T-SQL Tuesday][2] this month with the topic of “Logging”. Check out [his post][2] for a list of other T-SQL Tuesday posts this month and congratulate him on speaking at TechEd on Tuesday morning (he's denied being the loud powershell fan in the keynote, btw)._
 
 ## The Setup
 
 Monitoring the sizes at the index and table level provides raw material for looking several different statistics. Luckily this is fairly easy to do for on premises and SQL Azure databases. 
 
-_For the purpose of these examples I&#8217;m going to be logging the database growth in the same database. Obviously this won&#8217;t work for every environment and adds an extra variable to our growth statistics._
+_For the purpose of these examples I'm going to be logging the database growth in the same database. Obviously this won't work for every environment and adds an extra variable to our growth statistics._
 
-First up, let&#8217;s create a table to store the raw data in:
+First up, let's create a table to store the raw data in:
 
 sql
 CREATE TABLE dbo.DatabaseSizeLog(
@@ -47,7 +47,7 @@ CREATE TABLE dbo.DatabaseSizeLog(
 	[RowCount]	int NOT NULL
 );
 ```
-Note that I am capturing both ids and names for the table and index. We could JOIN to get the names, but being able to run a quick one line statement to look at key information is worth the slightly higher storage cost. I&#8217;ve also used an integer IDENTITY column as the required clustered index for a SQL Azure database. A better option would be LogTime, DatabaseId, and IndexId in the order that makes the most sense for how you intend to look at the data.
+Note that I am capturing both ids and names for the table and index. We could JOIN to get the names, but being able to run a quick one line statement to look at key information is worth the slightly higher storage cost. I've also used an integer IDENTITY column as the required clustered index for a SQL Azure database. A better option would be LogTime, DatabaseId, and IndexId in the order that makes the most sense for how you intend to look at the data.
 
 Once we have the raw table, we need the query to capture the data:
 
@@ -72,7 +72,7 @@ WHERE o.type NOT IN ('S','IT');
 ```
 This should be placed in a scheduled job in SQL Agent for an on-premises database, or tied into a scheduled task system (perhaps via a worker role) for a SQL Azure database.
 
-Now that we have some data and we&#8217;re logging it at some regular interval, lets start getting some use out of it.
+Now that we have some data and we're logging it at some regular interval, lets start getting some use out of it.
 
 ## Basic Information
 
@@ -191,7 +191,7 @@ WHERE E1.Num = 1
 ```
 ## And more
 
-By now I hope you have even more ideas for ways to slice this simple data set. Logging is a powerful tool in our inventory and often even a simple query can provide a great deal of information if we log it over time. The basic query that started this post probably didn&#8217;t look like much, but capturing the values over time allowed us to expose a lot of new information about our database. Having visibility into how our systems are running can be the difference between finding out our database hit a size limit after the fact and knowing that it is growing at an abnormal pace long before the problem occurs.
+By now I hope you have even more ideas for ways to slice this simple data set. Logging is a powerful tool in our inventory and often even a simple query can provide a great deal of information if we log it over time. The basic query that started this post probably didn't look like much, but capturing the values over time allowed us to expose a lot of new information about our database. Having visibility into how our systems are running can be the difference between finding out our database hit a size limit after the fact and knowing that it is growing at an abnormal pace long before the problem occurs.
 
  [1]: http://sqlvariant.com/ "Aaron's Blog"
  [2]: http://sqlvariant.com/2012/06/t-sql-tuesday-31-logging/ "T-SQL Tuesday #31 - Logging"

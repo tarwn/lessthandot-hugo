@@ -23,15 +23,15 @@ Ok, so now the developer comes back out in me. Frustrating as it is, this is kin
 
 What we have here is a task that is at most, run a few times a year on request. Speed isn’t truly a concern. Yes, I said that and it hurt way down deep but it’s true. Sometimes you have to take a step to the side of performance to get a job done. Remember we are part of the business solution and there is a reason for cutting corners on some aspects of business. It gets you ahead in the long run! Well, sometimes it does. 😉
 
-So my real developer hat went on at this point. Simple imports failed to do what I needed all around. I was on an hour time constraint to get this out the door and I had nothing. So I started thinking high level. What do we really need to do here? Import every row in a bunch of files that are fixed format. Hey, I did that once or twice. Usually most of us at one time have either scripted files into SQL Server or written hacked up executables with one big ugly button that says, &#8220;RUN ME!!!!!!&#8221;
+So my real developer hat went on at this point. Simple imports failed to do what I needed all around. I was on an hour time constraint to get this out the door and I had nothing. So I started thinking high level. What do we really need to do here? Import every row in a bunch of files that are fixed format. Hey, I did that once or twice. Usually most of us at one time have either scripted files into SQL Server or written hacked up executables with one big ugly button that says, “RUN ME!!!!!!”
 
-Come on, you know who you are. I&#8217;ll show you mine if you show me yours
+Come on, you know who you are. I'll show you mine if you show me yours
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//runme.gif" alt="" title="" width="527" height="191" />
 </div>
 
-So after I failed at my normal import practices and knowing a long day of SSIS would go out of my time bounds, I grabbed a new project (almost left WindowsApplication1 as the name :P) and started thinking and the code came out of me as it once did in my earlier programming career. I wrote that small executable in about an hour. Actually, I wrote a little before dinner and the rest after so not quite an hour. The program even logged each line processed, any errors encountered and any transaction ID found. I went as far as helping my validation process of this import by inserting fully qualified file names, line count in the files and date time values so I could write this nasty to validate against the actual files themselves afterwards&#8230;
+So after I failed at my normal import practices and knowing a long day of SSIS would go out of my time bounds, I grabbed a new project (almost left WindowsApplication1 as the name :P) and started thinking and the code came out of me as it once did in my earlier programming career. I wrote that small executable in about an hour. Actually, I wrote a little before dinner and the rest after so not quite an hour. The program even logged each line processed, any errors encountered and any transaction ID found. I went as far as helping my validation process of this import by inserting fully qualified file names, line count in the files and date time values so I could write this nasty to validate against the actual files themselves afterwards…
 
 sql
 select 
@@ -67,7 +67,7 @@ I managed to write the validation report the business wanted in minutes. Now if 
   
 • The ASAP factor
 
-The task itself should always be thought of first. It should tell you the options you have and with experience, you will find the easy path to narrowing the list of options quickly to the right one. Automation is an easy guess. Do I need to ever touch it again? I always come to a task in the sense it will be used more than once. Even when they say it will be throw away code, I keep automating it or making it easy to run in mind. Full automation is the step you have to decide on vs. a &#8220;RUN ME&#8221; button convenience. Ah&#8230;the ASAP factor. We need this ASAP!!!!!! I love that one. I have many meanings of that abbreviation. I can&#8217;t put them here. I have to keep it clean 😉 
+The task itself should always be thought of first. It should tell you the options you have and with experience, you will find the easy path to narrowing the list of options quickly to the right one. Automation is an easy guess. Do I need to ever touch it again? I always come to a task in the sense it will be used more than once. Even when they say it will be throw away code, I keep automating it or making it easy to run in mind. Full automation is the step you have to decide on vs. a “RUN ME” button convenience. Ah…the ASAP factor. We need this ASAP!!!!!! I love that one. I have many meanings of that abbreviation. I can't put them here. I have to keep it clean 😉 
 
 If I would have taken this all into account in the first place, the task would have been quick and painless. 
 

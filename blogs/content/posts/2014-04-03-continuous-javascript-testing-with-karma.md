@@ -19,17 +19,17 @@ tags:
   - requirejs
 
 ---
-I use a continuous testing tool named [NCrunch][1] for all of my .Net code. In fact, [NCrunch has spoiled me][2] so much that manually running tests is bordering on painful. I&#8217;ve gotten used to doing absolutely nothing and still having the latest build results, test results, code coverage, highlighted execution paths for failed tests, and little hover notices on each line that passed an exception. Make a change, magic happens. All coding should work like that.
+I use a continuous testing tool named [NCrunch][1] for all of my .Net code. In fact, [NCrunch has spoiled me][2] so much that manually running tests is bordering on painful. I've gotten used to doing absolutely nothing and still having the latest build results, test results, code coverage, highlighted execution paths for failed tests, and little hover notices on each line that passed an exception. Make a change, magic happens. All coding should work like that.
 
-The AngularJS team has built a continuous javascript testrunner named [karma][3], so of course I&#8217;m going to give it a try. 
+The AngularJS team has built a continuous javascript testrunner named [karma][3], so of course I'm going to give it a try. 
 
-At the time of this post, the current version is 0.12 and I will be using Jasmine 2.0 ([woo, Async!][4]), RequireJS (also a [recent topic][5]), and [Squire.js][6] (for injecting mocks). The sample project I&#8217;m using for demos is just something that was handy that already had some tests.
+At the time of this post, the current version is 0.12 and I will be using Jasmine 2.0 ([woo, Async!][4]), RequireJS (also a [recent topic][5]), and [Squire.js][6] (for injecting mocks). The sample project I'm using for demos is just something that was handy that already had some tests.
 
 # Setting up Karma
 
-Setting up karma is pretty straightforward. The karma site has clear information already on how to [install the package][7] and [set up the configuration][8], so I&#8217;m not going to go into the details on that.
+Setting up karma is pretty straightforward. The karma site has clear information already on how to [install the package][7] and [set up the configuration][8], so I'm not going to go into the details on that.
 
-One minor variance is that I chose to install karma local to my project rather than globally, so I&#8217;ll have to run the tools from the node_modules subdirectory.
+One minor variance is that I chose to install karma local to my project rather than globally, so I'll have to run the tools from the node_modules subdirectory.
 
 I created a package.json file for my project:
 
@@ -50,7 +50,7 @@ I created a package.json file for my project:
 	}
 }
 ```<div style="background-color: #eeeeee; padding: .5em;">
-  <b>Important Note:</b> Be careful with your versions. I&#8217;ve found out the hard way that karma keeps their dependencies wide open &#8220;*&#8221; until they are ready to move versions, then they lock them down to something that may not actually be the latest version. Karma 0.10 worked fine with karma-jasmine 0.2 until they released 0.10.10 which locked in a requirement for karma-jasmine ~0.1. More recently the karma-phantomjs-launcher has revved to 1.3, which somehow broke a perfectly working 0.12 karma against 1.2 despite there being no actual code changes (I suspect a versioning side-effect mixed with their *-version acceptance).
+  <b>Important Note:</b> Be careful with your versions. I've found out the hard way that karma keeps their dependencies wide open “*” until they are ready to move versions, then they lock them down to something that may not actually be the latest version. Karma 0.10 worked fine with karma-jasmine 0.2 until they released 0.10.10 which locked in a requirement for karma-jasmine ~0.1. More recently the karma-phantomjs-launcher has revved to 1.3, which somehow broke a perfectly working 0.12 karma against 1.2 despite there being no actual code changes (I suspect a versioning side-effect mixed with their *-version acceptance).
 </div>
 
 And then go through the steps to create my karma configuration:
@@ -93,7 +93,7 @@ I already had a set of 68 specs configured to run from my SpecRunner file, with 
 ```
 The folder structure is a little odd, as this was originally just a play project. My test libraries are mixed with the core libraries and my specs and src have a flat structure. Were this a production project, I would also try to find a way to combine this inline config with the one below and generate the list of spec files instead of hand-coding them.
 
-Because I am using RequireJS, I&#8217;ve included that option in my configuration and created a RequireJS configuration based on the one supplied in the [RequireJS instructions][13] on the karma site.
+Because I am using RequireJS, I've included that option in my configuration and created a RequireJS configuration based on the one supplied in the [RequireJS instructions][13] on the karma site.
 
 **test-main.js:** [townthing/town/js/test/test-main.js]()
 
@@ -124,7 +124,7 @@ The biggest difference between my script and the sample one is I am loading the 
 
 Running karma locally is then as easy as: `node .\node_modules\karma\bin\karma start karma.conf.js`
 
-It&#8217;s only a few more steps to create a single test-main.js that both the jasmine SpecRunner file and karma can share.
+It's only a few more steps to create a single test-main.js that both the jasmine SpecRunner file and karma can share.
 
 # The Results
 
@@ -140,7 +140,7 @@ Once I have the configurations set up, my tests run successfully from karma. I h
   </p>
 </div>
 
-I was getting errors about missing timestamps when Squire loads some of the dependencies, but the files are found so I&#8217;m not sure why they are occurring (and they don&#8217;t happen on one of my other projects). I found a similar [issue][14] and [stackoverflow][15] question, so I&#8217;m not the only one with this particular issue. 
+I was getting errors about missing timestamps when Squire loads some of the dependencies, but the files are found so I'm not sure why they are occurring (and they don't happen on one of my other projects). I found a similar [issue][14] and [stackoverflow][15] question, so I'm not the only one with this particular issue. 
 
 `node .\node_modules\karma\bin\karma start karma.conf.js --single-run`
 
@@ -148,21 +148,21 @@ I was getting errors about missing timestamps when Squire loads some of the depe
   <a href="/wp-content/uploads/2014/04/karma2.png"><img src="/wp-content/uploads/2014/04/karma2.png" alt="Karma Run - Take 2 - (Node hasn&#039;t eaten my blue background in this window)" width="805" height="88" class="size-full wp-image-2543" srcset="/wp-content/uploads/2014/04/karma2.png 805w, /wp-content/uploads/2014/04/karma2-300x32.png 300w" sizes="(max-width: 805px) 100vw, 805px" /></a>
   
   <p class="wp-caption-text">
-    Karma Run &#8211; Take 2 &#8211; (Node hasn&#8217;t eaten my blue background in this window)
+    Karma Run &#8211; Take 2 &#8211; (Node hasn't eaten my blue background in this window)
   </p>
 </div>
 
-I was able to correct the issue from switching my test-main.js require basePath from &#8220;base/src&#8221; to &#8220;/base/src&#8221;, I&#8217;m still digging into why this worked.
+I was able to correct the issue from switching my test-main.js require basePath from “base/src” to “/base/src”, I'm still digging into why this worked.
 
 # My Thoughts
 
-NCrunch set the bar high, and while karma runs my tests continuously, I think comparing it NCrunch would be unfair to karma because it just isn&#8217;t in the same league.
+NCrunch set the bar high, and while karma runs my tests continuously, I think comparing it NCrunch would be unfair to karma because it just isn't in the same league.
 
-Running locally, Karma does not give me that much more value than just refreshing a SpecRunner file in the browser. With the browser I have to change Alt+Tab to the window and F5 refresh, with karma the console output of test results is there, but it doesn&#8217;t have the browser&#8217;s ability to click on an error and see the code in context, see files that didn&#8217;t load correctly, etc. Karma has a plugin infrastructure for other reporters, but the few I&#8217;ve looked at have been focused on providing static files. I briefly looked at an HTML reporter in the hope that it might do some AJAX-y magic, but it simply created HTML output files.
+Running locally, Karma does not give me that much more value than just refreshing a SpecRunner file in the browser. With the browser I have to change Alt+Tab to the window and F5 refresh, with karma the console output of test results is there, but it doesn't have the browser's ability to click on an error and see the code in context, see files that didn't load correctly, etc. Karma has a plugin infrastructure for other reporters, but the few I've looked at have been focused on providing static files. I briefly looked at an HTML reporter in the hope that it might do some AJAX-y magic, but it simply created HTML output files.
 
-One thing I really like about karma is it&#8217;s ability to easily plug in other browsers and run across one or more simultaneously. In a build server environment, this would mean I could easily run my JS unit tests across a wide set of browsers, collect the results, and then either capture the text output from karma or use a plugin for my build server to integrate in the results.
+One thing I really like about karma is it's ability to easily plug in other browsers and run across one or more simultaneously. In a build server environment, this would mean I could easily run my JS unit tests across a wide set of browsers, collect the results, and then either capture the text output from karma or use a plugin for my build server to integrate in the results.
 
-So overall, I think it makes a great tool for running unit tests the same locally and on the build server and being able to easily do so across a wide range of browsers, but I really don&#8217;t like the choice of using the console as the primary output. I think they overlooked the fact that they already have a browser front-end and a web server that could have been used to provide a richer front-end (potentially one that could be compared to NCrunch) and stil had a slimmer console or other-plugin-of-choice reporting mechanism for those that prefer it or are automating against it.
+So overall, I think it makes a great tool for running unit tests the same locally and on the build server and being able to easily do so across a wide range of browsers, but I really don't like the choice of using the console as the primary output. I think they overlooked the fact that they already have a browser front-end and a web server that could have been used to provide a richer front-end (potentially one that could be compared to NCrunch) and stil had a slimmer console or other-plugin-of-choice reporting mechanism for those that prefer it or are automating against it.
 
  [1]: http://www.ncrunch.net/
  [2]: /index.php/enterprisedev/unittest/reducing-code-build-test-friction/

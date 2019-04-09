@@ -22,7 +22,7 @@ tags:
   - visitors
 
 ---
-In yesterday&#8217;s post we looked at [Searches, Countries and Content][1]. Today we are looking at Devices, Operating Systems and Browsers. Microsoft came out with a new operating system at the end of October. during the month of December, Windows 8 accounted for 7.88% of all Windows visitors. We&#8217;ll have to see how long it will take before Windows 8 passes Windows XP.
+In yesterday's post we looked at [Searches, Countries and Content][1]. Today we are looking at Devices, Operating Systems and Browsers. Microsoft came out with a new operating system at the end of October. during the month of December, Windows 8 accounted for 7.88% of all Windows visitors. We'll have to see how long it will take before Windows 8 passes Windows XP.
 
 ## Mobile Devices
 
@@ -548,7 +548,7 @@ Here is the data for mobile operating systems, I just picked the top 3 and only 
   </table>
 </div>
 
-Next year will be very interesting, we have to see what will happen in terms of new android and iOS devices. Will the Surface Pro help Microsoft win some tables market share or will the partners have to step up and come out with some cool Windows 8 tables? Time will tell&#8230;&#8230;
+Next year will be very interesting, we have to see what will happen in terms of new android and iOS devices. Will the Surface Pro help Microsoft win some tables market share or will the partners have to step up and come out with some cool Windows 8 tables? Time will tell……
 
  [1]: /index.php/ITProfessionals/other/2012-searches-countries-and-devices
  [2]: /wp-content/uploads/blogs/ITProfessionals/Denis/StatsBrowsers.PNG?mtime=1356640800

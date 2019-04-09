@@ -24,7 +24,7 @@ tags:
 
 Since no <a href="http://www.sqlsaturday.com/453/eventhome.aspx" target="_blank">SQL Saturday Minnesota</a> would be complete without a full slate of pre-cons, <a href="http://passmn.org" target="_blank">PASSMN</a> and the organizers of SQL Saturday #453 are proud to announce the addition of **four** day long pre-cons to be held on <span class="aBn"><span class="aQJ">Friday, October 9th</span></span> from <span class="aBn"><span class="aQJ">9AM &#8211; 5PM</span></span>. Sessions will once again be held at Dakota County Technical College in Rosemount, MN.
 
-For the low price of only **$99** you could learn how to build a world class data organization from the team at Pragmatic Works, dive into the world of Hadoop with Hortonwork&#8217;s own Bill Preachuk and his PASS Summit 2015 selected pre-con, become a SQL Server security master with Ed Leighton-Dick, or learn everything there is no know about Power BI with Mark Vaillancourt.
+For the low price of only **$99** you could learn how to build a world class data organization from the team at Pragmatic Works, dive into the world of Hadoop with Hortonwork's own Bill Preachuk and his PASS Summit 2015 selected pre-con, become a SQL Server security master with Ed Leighton-Dick, or learn everything there is no know about Power BI with Mark Vaillancourt.
 
 Visit the links below to review the complete abstracts for these amazing sessions.
 

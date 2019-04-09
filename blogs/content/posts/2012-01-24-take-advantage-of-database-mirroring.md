@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-In the previous article, &#8220;**[Estimating Mean Uptime for Team-based uptime measurements][1]**&#8221; uptime planning was discussed in some detail.  The calculation you could use to set team goals was provided.  All of these goals in general are for helping gauge how we are doing and where we have growth areas, but how do we even use something like database mirroring with our applications?
+In the previous article, “**[Estimating Mean Uptime for Team-based uptime measurements][1]**” uptime planning was discussed in some detail.  The calculation you could use to set team goals was provided.  All of these goals in general are for helping gauge how we are doing and where we have growth areas, but how do we even use something like database mirroring with our applications?
 
 In most .NET-driven development, and when a SQL Server database is behind the application, a connection string is involved.  In particular, ADO.NET connection strings are commonly used to connect to SQL Server.  One thing that the ADO.NET connection string offers an application is the Failover Partner property.  The Failover Partner property provides an application or service the ability to automatically decide to look to a secondary source if the primary is unavailable.  In conjunction with SQL Server’s database mirroring, this can be very powerful and provide the ability to help us meet our projected uptime goals.
 

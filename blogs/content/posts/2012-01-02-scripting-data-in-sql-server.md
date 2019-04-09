@@ -42,6 +42,6 @@ Now you can select Schema only, Data only, Schema and Data. See image below of w
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/scriptData.PNG?mtime=1325543364"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/scriptData.PNG?mtime=1325543364" width="463" height="411" /></a>
 </div>
 
-Don&#8217;t forget to install the [SSMS Toolspack][1], that will enable you to script just one table or just results from a query as well
+Don't forget to install the [SSMS Toolspack][1], that will enable you to script just one table or just results from a query as well
 
  [1]: http://www.ssmstoolspack.com/

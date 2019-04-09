@@ -21,7 +21,7 @@ tags:
 ---
 The week of November 10th is Visual Studio 2010 and the .NET Framework 4.0 week on Channel 9! They will have 12 videos going live this week featuring interviews with various members of the Visual Studio and the .NET Framework product teams, including several screencast demonstrations of the latest bits.
 
-Stay tuned to http://channel9.msdn.com/VisualStudio/ for all of the action. Here&#8217;s the lineup:
+Stay tuned to http://channel9.msdn.com/VisualStudio/ for all of the action. Here's the lineup:
 
 **Monday, November 10th:**
   

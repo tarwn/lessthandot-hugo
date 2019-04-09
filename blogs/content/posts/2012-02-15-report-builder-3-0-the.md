@@ -102,7 +102,7 @@ I’ve been building reports with SQL Server Reporting Services for a few years.
 
 Open allows you to open a saved .rdl.
 
-Recent allows you to open .rdl files you&#8217;ve recently worked on.
+Recent allows you to open .rdl files you've recently worked on.
 
 <p class="MsoNormal">
   <img src="/wp-content/uploads/users/grrlgeek/RB3%20Start.JPG?mtime=1329269464" alt="" />

@@ -41,7 +41,7 @@ Here is the link to the post: [@@IDENTITY returns wrong identity field][1]
 
 Since the first post I have blogged almost 1100 times, 678 times on the [SQL Server Code,Tips And Tricks, Perfomance Tuning][2] blog and over 400 times here on lessthandot
 
-Let&#8217;s hear your story, I am tagging the following people:
+Let's hear your story, I am tagging the following people:
 
 Ted Krueger [@onpnt][3]
   

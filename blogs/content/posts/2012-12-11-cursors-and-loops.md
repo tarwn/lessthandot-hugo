@@ -37,7 +37,7 @@ This is day eleven of the [SQL Advent 2012 series][1] of blog posts. Today we ar
 
 ## Why do we hate those poor cursors?
 
-Let&#8217;s first see why people tend to use cursors. Let&#8217;s say you come from a procedural language and this is the first time you are using SQL. In the procedural language you know how to traverse a list, you of course will look for something that is similar in SQL&#8230;&#8230;..bingo!!! you found it&#8230;the almighty cursor&#8230;.the crusher of allmost all SQL Server performance. You start using it, your code works, you are happy, life is good. Now a team member tells you that the cursor is evil and should never ever be used. You are confused, if a cursor is never to be used then why is it part of the language? Well you might say the same for the goto statement, this exists in SQL however Edsger Dijkstra&#8217;s letter _Go To Statement Considered Harmful_ was published in the March 1968 Communications of the ACM.
+Let's first see why people tend to use cursors. Let's say you come from a procedural language and this is the first time you are using SQL. In the procedural language you know how to traverse a list, you of course will look for something that is similar in SQL……..bingo!!! you found it…the almighty cursor….the crusher of allmost all SQL Server performance. You start using it, your code works, you are happy, life is good. Now a team member tells you that the cursor is evil and should never ever be used. You are confused, if a cursor is never to be used then why is it part of the language? Well you might say the same for the goto statement, this exists in SQL however Edsger Dijkstra's letter _Go To Statement Considered Harmful_ was published in the March 1968 Communications of the ACM.
 
 The reason that cursors are evil is that they tend to be slower than a set based solution. Cursors are not needed for 99% of the cases. SQL is a set based language, it works best with sets of data not row by row processing, when you do something set based it will generally perform hundreds of times faster than using a cursor.
 
@@ -142,7 +142,7 @@ Why the need of looping over the list od IDs? Join with the linked server and do
 
 ## Replacing one evil with another
 
-If you are using while loops instead of cursors then you really have not replaced the cursor at all, you are still not doing a set based operation, everything is still going row by row. Aaron Bertrand has a good post here, no need for me to repeat the same [Bad Habits to Kick : Thinking a WHILE loop isn&#8217;t a CURSOR][2]
+If you are using while loops instead of cursors then you really have not replaced the cursor at all, you are still not doing a set based operation, everything is still going row by row. Aaron Bertrand has a good post here, no need for me to repeat the same [Bad Habits to Kick : Thinking a WHILE loop isn't a CURSOR][2]
 
 ## Loops in triggers
 
@@ -157,7 +157,7 @@ SELECT * FROM sys.procedures
 WHERE OBJECT_DEFINITION((object_id) )LIKE '%DECLARE%%cursor%'
 ```
 
-For while loops, just change the &#8216;%DECLARE%%cursor%&#8217; part to &#8216;%while%&#8217;
+For while loops, just change the &#8216;%DECLARE%%cursor%' part to &#8216;%while%'
 
 Look at those procs and investigate if you can rewrite them using a SET based operation instead
 
@@ -203,7 +203,7 @@ FROM sys.tables
 
 ## Are cursors always evil?
 
-No, cursors have their purpose, see the section above. Also take a look at Adam Machanic&#8217;s post [Running sums, redux][4] where you can actually see that a cursor is faster if you are doing a running count
+No, cursors have their purpose, see the section above. Also take a look at Adam Machanic's post [Running sums, redux][4] where you can actually see that a cursor is faster if you are doing a running count
 
 ## How to change from cursors to a set based operation
 

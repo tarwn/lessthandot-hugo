@@ -113,7 +113,7 @@ To use sp\_addtablecontents in the scenario above; call the procedure after the 
 
 (To show the performance of this method, 1.9 Million rows were inserted into the table on this SSIS execution)
 
-Exec sp\_addtabletocontents @table\_name = &#8216;PUB_INVENTORY&#8217;
+Exec sp\_addtabletocontents @table\_name = &#8216;PUB_INVENTORY'
 
 Leaving the filter parameter out will force the entire table to be scanned for rows missing from the tracking tables.  The total time to execute this procedure after the 1.9 million row bulk insert took 4 minutes and 20 seconds.  After setting the tracking table to synchronize the data correctly, the synchronization agent must be run to perform the inserts on the subscriber.  This process took another 12 minutes and 34 seconds.   So the payoff in the bulk loading operations were offset by the time it took to insert into the tracking tables and then send the next bulk load operations to the subscriber.
 

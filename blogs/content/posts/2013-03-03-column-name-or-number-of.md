@@ -34,9 +34,9 @@ Msg 213, Level 16, State 1, Procedure prTestTemp, Line 5
   
 Column name or number of supplied values does not match table definition.
 
-I looked at the proc, hasn&#8217;t changed in months, I decided to run it from a different window and no problem. I took me a couple of minutes to realize what was going on.
+I looked at the proc, hasn't changed in months, I decided to run it from a different window and no problem. I took me a couple of minutes to realize what was going on.
 
-Let&#8217;s duplicate this here with some code that you can run. Make sure that you run the code all in the same window
+Let's duplicate this here with some code that you can run. Make sure that you run the code all in the same window
 
 First create this stored procedure, do not close this window after creation
 
@@ -86,7 +86,7 @@ EXEC prTestTemp
 
 This time there was no error
 
-Let&#8217;s do another experiment, create the table again
+Let's do another experiment, create the table again
 
 sql
 CREATE TABLE #temp (id int, id2 int)
@@ -95,7 +95,7 @@ INSERT #temp VALUES(1,2)
 SELECT * FROM #temp
 ```
 
-Now, let&#8217;s try modifying the procedure, change create to alter and run it again
+Now, let's try modifying the procedure, change create to alter and run it again
 
 sql
 ALTER PROCEDURE prTestTemp
@@ -114,7 +114,7 @@ _Msg 213, Level 16, State 1, Procedure prTestTemp, Line 5
   
 Column name or number of supplied values does not match table definition._
 
-As you can see, you can&#8217;t modify the procedure in the same window, copy and paste the code in another window and you won&#8217;t have a problem.
+As you can see, you can't modify the procedure in the same window, copy and paste the code in another window and you won't have a problem.
 
 The reason you run into this because the temporary table is local to your connection, it is not dropped until you close the connection. If you have a temporary table with the same name inside a proc that you try to execute you will run into this problem. One way to avoid this is by not naming a temporary table the same in every stored procedure that you have, for example #temp
 

@@ -19,15 +19,15 @@ tags:
   - paas
 
 ---
-There&#8217;s been a lot of buzz about the cloud over the past years, with a lot of that attention going to IaaS and SaaS platforms, but there&#8217;s a revolution (or re-revolution) that is of even more importance, and that&#8217;s PaaS. What PaaS brings us is the ability to scale horizontally and treat CPU, memory, and storage as pools of resources that are as deep as our checkbooks allow. 
+There's been a lot of buzz about the cloud over the past years, with a lot of that attention going to IaaS and SaaS platforms, but there's a revolution (or re-revolution) that is of even more importance, and that's PaaS. What PaaS brings us is the ability to scale horizontally and treat CPU, memory, and storage as pools of resources that are as deep as our checkbooks allow. 
 
-Forget about virtual servers. Remember that 60 hour job with a 24 hour deadline? Built on a PaaS platform and equipped with a couple hundred dollars, you won&#8217;t even be staying late today.
+Forget about virtual servers. Remember that 60 hour job with a 24 hour deadline? Built on a PaaS platform and equipped with a couple hundred dollars, you won't even be staying late today.
 
-Today&#8217;s post is going to share highlights from a basic file processing application. Something you would find (hopefully better written) in any random enterprise IT shop or SaaS company. It offers a web page that lets you upload files, a button to process files, a basic and poorly written list of the processed and unprocessed files, and an unattended worker. The trick is that this application was written on top of Windows Azure, so I can play tricks with time just by twisting the dial from one file processor to twenty.
+Today's post is going to share highlights from a basic file processing application. Something you would find (hopefully better written) in any random enterprise IT shop or SaaS company. It offers a web page that lets you upload files, a button to process files, a basic and poorly written list of the processed and unprocessed files, and an unattended worker. The trick is that this application was written on top of Windows Azure, so I can play tricks with time just by twisting the dial from one file processor to twenty.
 
 ## The Basic File Processor
 
-The file processing in the sample application is intended to be a sample workload. It consists of reading files completely into memory and passing them around, spinning through them one character at a time, replacing each character in the line with it&#8217;s upper case variant. Very critical stuff, very performant.
+The file processing in the sample application is intended to be a sample workload. It consists of reading files completely into memory and passing them around, spinning through them one character at a time, replacing each character in the line with it's upper case variant. Very critical stuff, very performant.
 
 In addition to running the process via the website, I also need an unattended application that will can run the same processing function. If I owned the server, this would be a scheduled task or service. As an Azure Worker the code will be remarkably similar.
 
@@ -35,7 +35,7 @@ In addition to running the process via the website, I also need an unattended ap
   <img src="http://tiernok.com/LTDBlog/CloudFileProcessor.png" alt="Cloud Processor Architecture" style="margin-bottom: 5px" /><br /> Architecture of the Processor
 </div>
 
-The two front-ends access common logic in the Core library, which is responsible for both the processing logic and interacting with storage resources. This being sample code, it is certified as working on my machine and is definitely not production ready. That being said, I did write this in a few evenings, so writing a production-ready service doesn&#8217;t have to take that long in normal workdays.
+The two front-ends access common logic in the Core library, which is responsible for both the processing logic and interacting with storage resources. This being sample code, it is certified as working on my machine and is definitely not production ready. That being said, I did write this in a few evenings, so writing a production-ready service doesn't have to take that long in normal workdays.
 
 ### The Web Site
 
@@ -237,17 +237,17 @@ The second configuration is applied when we deploy the instances above and tells
   </Role>
 </ServiceConfiguration>
 ```
-Note that I&#8217;m telling it to use the local development storage, which is supported by a local storage emulator. In a production configuration I would enter the service location and a generated token.
+Note that I'm telling it to use the local development storage, which is supported by a local storage emulator. In a production configuration I would enter the service location and a generated token.
 
-## So Where&#8217;s the Magic?
+## So Where's the Magic?
 
-So where&#8217;s the magic that makes this a distribute application instead of 3 days of overtime? It&#8217;s sprinkled throughout the system.
+So where's the magic that makes this a distribute application instead of 3 days of overtime? It's sprinkled throughout the system.
 
 The architecture of this system would work just as well outside of Azure, provided I offered it stand-ins for the 3 storage resources and deployed the instances and any necessary settings accordingly. Instead of worrying about how to manage deployments and what to use for centralized queueing and storage, I can focus on building an application that simply assumes those resources are available. Is there headroom for performance improvements? Sure, but I can also choose to throw another $15/month server at it, push data to CDNs and blob storage, add caching, or even a SQL Azure instance. 
 
 This application may be fairly basic, but nothing stops us from following this same pattern for much larger applications. PaaS has removed some of the constraints we take for granted. Even applications that have to run in-house in order to standardize against a database can now consider uploading a subset of that lookup data to a table store, performing most of the heavy lifting in the cloud, then produce a few files to import back into the on-premise system. The total execution time would be longer, but being able to scale part of the job across numerous parallel instances means the actual elapsed time can actually be much shorter.
 
-And it means when we have a 60 hour task that&#8217;s due in 24, it&#8217;s no longer an impossible situation.
+And it means when we have a 60 hour task that's due in 24, it's no longer an impossible situation.
 
 _The source code is available [on github][4] along with requirements and links for setting up the emulators locally._
 

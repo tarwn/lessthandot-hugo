@@ -72,7 +72,7 @@ _On bits & pieces_: “Use active verbs unless there is no comfortable way to ge
 
 “Keep your paragraphs short.”
 
-&#8220;Rewriting is the essence of writing well: it&#8217;s where the game is won or lost.&#8221;
+“Rewriting is the essence of writing well: it's where the game is won or lost.”
 
 “There’s no subject you don’t have permission to write about.”
 

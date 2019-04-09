@@ -85,8 +85,8 @@ The login page appears. Login and behold the beauty of Windows Server 2012.
 
 Next we’ll give some components friendlier names. Start up the PowerShell command window as an administrator (right-click on the icon in the start menu and select _Run As Administrator_ at the bottom). Execute the following commands:
 
-_Rename-NetAdapter -Name &#8220;Ethernet&#8221; -NewName &#8220;EXTLAN&#8221;   
-Rename-NetAdapter -Name &#8220;Ethernet 2&#8221; -NewName &#8220;INTLAN&#8221;   
+_Rename-NetAdapter -Name “Ethernet” -NewName “EXTLAN”   
+Rename-NetAdapter -Name “Ethernet 2” -NewName “INTLAN”   
 Rename-Computer -NewName **SP2013BI** -Restart –Force_
 
 The two statements will rename the network adapters. The external and internal LAN might be in another order, depending on how you added them to the VM. The third statement will rename the server to SP2013BI and restart the server.

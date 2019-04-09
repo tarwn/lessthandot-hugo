@@ -20,11 +20,11 @@ tags:
   - webdriver
 
 ---
-I&#8217;ve written about using Selenium/WebDriver for automated testing in a C# environment in the past. Some of these posts may be dated, but I&#8217;ve covered everything from [using the Selenium IDE][1], to [using WebDriver and the PageObject pattern][2], to [using SpecFlow to drive Selenium UI testing][3]. But in this age of [MVVM/MVC frameworks and libraries][4], do we really need every single test to hit the database?
+I've written about using Selenium/WebDriver for automated testing in a C# environment in the past. Some of these posts may be dated, but I've covered everything from [using the Selenium IDE][1], to [using WebDriver and the PageObject pattern][2], to [using SpecFlow to drive Selenium UI testing][3]. But in this age of [MVVM/MVC frameworks and libraries][4], do we really need every single test to hit the database?
 
 # The Integration Testing Tax
 
-UI testing is widely accepted as slow and fragile. We can use patterns like the [Page Object design pattern][5] to reduce the fragility of how we interact with elements on the page, but that doesn&#8217;t speed things up any. We can merge tests to reduce repetitive actions, but that just adds a bunch of mess to the fragility side of the equation again.
+UI testing is widely accepted as slow and fragile. We can use patterns like the [Page Object design pattern][5] to reduce the fragility of how we interact with elements on the page, but that doesn't speed things up any. We can merge tests to reduce repetitive actions, but that just adds a bunch of mess to the fragility side of the equation again.
 
 So what to do?
 
@@ -32,7 +32,7 @@ Something I have been considering lately is to use Selenium to test just the Vie
 
 # UI Testing without the Backend
 
-To try this out, I needed a sample application. I wrote a simple application using [knockout][6] and [RequireJS][7]. There is a basic search screen that allows you to &#8220;search&#8221; against a slow WebApi endpoint, get further details about a product from that endpoint, and add items to a local cart. 
+To try this out, I needed a sample application. I wrote a simple application using [knockout][6] and [RequireJS][7]. There is a basic search screen that allows you to “search” against a slow WebApi endpoint, get further details about a product from that endpoint, and add items to a local cart. 
 
 Note: The WebApi actions are slow to reflect performance from larger, more complex applications that have to worry about things like authentication, databases, accessing network stores, logging, contention and retry policies, business logic, etc. 
 
@@ -44,7 +44,7 @@ The fake application looks like this:
 
 [<img src="/wp-content/uploads/2014/11/SeleniumKnockoutSampleApp.png" alt="SeleniumKnockoutSampleApp" width="639" height="864" class="aligncenter size-full wp-image-3090" srcset="/wp-content/uploads/2014/11/SeleniumKnockoutSampleApp.png 639w, /wp-content/uploads/2014/11/SeleniumKnockoutSampleApp-221x300.png 221w" sizes="(max-width: 639px) 100vw, 639px" />][9]
 
-The ViewModel behind this view contains all of the properties necessary to display the screen and it&#8217;s actions:
+The ViewModel behind this view contains all of the properties necessary to display the screen and it's actions:
 
 ```javascript
 define(["knockout", 
@@ -93,10 +93,10 @@ function (ko,
 All of the code for the site is located here: [github: tarwn/Blog_RequireJSandSelenium &#8211; /SampleWebSite][10]
 
 <div style="background-color: #FFFFBB; padding: 1em; margin: .25em 1em">
-  If you have not used <a href="http://requirejs.org/" title="RequireJS">RequireJS</a>, the top part of the javascript file may look confusing. define() is used to define all the dependencies I need for the script and a method that accepts those dependencies for us in the scope of that script. When someone in turn asks for an IndexViewModel (or more appropriately: /app/indexViewModel), they will get back this constructor, fully wired with all of it&#8217;s dependencies. RequireJS ensures dependencies are loaded in the right order, keeps the global window scope clean, and allows us to mock out those dependencies using tools like <a href="https://github.com/iammerrick/Squire.js/" title="Squire.js on github">Squire.js</a>.
+  If you have not used <a href="http://requirejs.org/" title="RequireJS">RequireJS</a>, the top part of the javascript file may look confusing. define() is used to define all the dependencies I need for the script and a method that accepts those dependencies for us in the scope of that script. When someone in turn asks for an IndexViewModel (or more appropriately: /app/indexViewModel), they will get back this constructor, fully wired with all of it's dependencies. RequireJS ensures dependencies are loaded in the right order, keeps the global window scope clean, and allows us to mock out those dependencies using tools like <a href="https://github.com/iammerrick/Squire.js/" title="Squire.js on github">Squire.js</a>.
 </div>
 
-Let&#8217;s get testing!
+Let's get testing!
 
 ## Testing with Selenium &#8211; times 8!
 
@@ -104,7 +104,7 @@ While playing with this, I looked at 4 different methods of testing with Seleniu
 
 The 4 methods are:
 
-  * [IndexTests.FullIntegration][11] &#8211; launch the site locally and run my UI tests against it, with the &#8220;real&#8221; WebAPI service
+  * [IndexTests.FullIntegration][11] &#8211; launch the site locally and run my UI tests against it, with the “real” WebAPI service
   * [IndexTests.ClientSideInjection][12] &#8211; Execute a script to stub the itemService.js logic to run locally
   * [IndexTests.NancyServer][13] &#8211; Self-host a Nancy server with fake versions of the server-side API
   * [IndexTests.NancyServer][14] &#8211; Self-host a Nancy server that serves a stubbed itemService.js file
@@ -145,7 +145,7 @@ Translated into English:
   Note: I used the PageObject pattern very lightly to try and keep the tests readable and easily repeatable for each test method, but did not spend a lot of time following good patterns to create maintainable logic, as this is just experimental code.
 </div>
 
-Rather than go through all of the cases, I&#8217;ll touch on just the basic FullIntegration case and one of the Nancy cases. The ClientSide injection case felt really hacky and fragile and I don&#8217;t think it&#8217;s a good choice.
+Rather than go through all of the cases, I'll touch on just the basic FullIntegration case and one of the Nancy cases. The ClientSide injection case felt really hacky and fragile and I don't think it's a good choice.
 
 ### IndexTests.FullIntegration
 
@@ -181,7 +181,7 @@ Besides the performance, the other downside of this method is the hosting. In th
 
 ### IndexTests.Nancy
 
-In this case, I created a self-hosting Nancy site that copies all of the static content from my Sample site and exposes fake versions of the API. The downsides of the two Nancy methods are the restriction to static content (no MVC pages) and that you&#8217;re reimplementing a fake API for the system. 
+In this case, I created a self-hosting Nancy site that copies all of the static content from my Sample site and exposes fake versions of the API. The downsides of the two Nancy methods are the restriction to static content (no MVC pages) and that you're reimplementing a fake API for the system. 
 
 This second issue actually bothers me a bit, as it means you are creating a fake set of data that all of your tests are going to rely on. Typically when you have one big shared pool of test data, it makes your systems harder to maintain, as that test data turns into a bog of magic values, some of which have to be set just so for tests to succeed. Allowing the tests to define the values that would be returned when they have specific needs would make this a lot more maintainable and help surface those critical data assumptions in the tests.
 
@@ -255,7 +255,7 @@ We pick up quite a bit of performance when we remove the backend server from the
 
 ## Conclusions
 
-This turned out to be a pretty nice little experiment. I wouldn&#8217;t use any of these methods for a production test suite as they are now, but they definitely have promise and I&#8217;ll certainly be trying out some more things with that Nancy setup. 
+This turned out to be a pretty nice little experiment. I wouldn't use any of these methods for a production test suite as they are now, but they definitely have promise and I'll certainly be trying out some more things with that Nancy setup. 
 
 Switching from a full integration focus to more of a View focus did make things faster, but not to the degree I had hoped. I intend to spend some further thought on how to turn the dial up further without making this really painful to maintain.
 

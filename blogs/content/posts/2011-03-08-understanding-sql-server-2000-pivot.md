@@ -18,7 +18,7 @@ categories:
 ---
 [<img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" align="left" />][1]
   
-This month&#8217;s T-SQL Tuesday is being hosted by our very own, Jes Borland ([Twitter][2] | [Blog][3]). Not only is she hosting this month but she is making it possible for LessThanDot&#8217;s first T-SQL Tuesday event. The topic that is brought to us is to discuss with everyone how we solved business problems with aggregate functions. I thought this would be a good time to explain how you can write a pivot query in SQL 2000 using aggregate functions. Writing a query is one thing, understanding how it works is another. The goal of this blog post is to explain HOW it works so that it can be applied to other interesting problems.
+This month's T-SQL Tuesday is being hosted by our very own, Jes Borland ([Twitter][2] | [Blog][3]). Not only is she hosting this month but she is making it possible for LessThanDot's first T-SQL Tuesday event. The topic that is brought to us is to discuss with everyone how we solved business problems with aggregate functions. I thought this would be a good time to explain how you can write a pivot query in SQL 2000 using aggregate functions. Writing a query is one thing, understanding how it works is another. The goal of this blog post is to explain HOW it works so that it can be applied to other interesting problems.
 
 Why? This database engine is 11 years old, why bother? We are sometimes stuck dealing with an older database engine. Understanding the concept behind this pivot will also allow you to use the technique in other interesting ways. Personally, I think that by understanding how this works is another step in the process of “thinking in sets”.
 
@@ -57,7 +57,7 @@ The data is relatively simple, but is meant to demonstrate the concept. The goal
 
 As you can see, the original data had the name and shoe size for each person on separate rows. The output has just a single row per person but with additional columns for the data.
 
-Setting up the code&#8230;.
+Setting up the code….
 
 sql
 Create Table #Temp(Id Int, Name VarChar(20), Value VarChar(20))
@@ -82,7 +82,7 @@ Select *
 From   #Temp
 ```
 
-Simple. We see all the data in the table. For our next step, let&#8217;s set up the output structure. We know we want to see the ID column and the Value column twice, once for the person&#8217;s name and again for the shoe size. 
+Simple. We see all the data in the table. For our next step, let's set up the output structure. We know we want to see the ID column and the Value column twice, once for the person's name and again for the shoe size. 
 
 sql
 Select Id,
@@ -102,7 +102,7 @@ From   #Temp
 4           Greg                 Greg
 4           9                    9</pre>
 
-This query is simply duplicating the data in two columns. Ultimately, we will want the second column to show the person&#8217;s name, and the third column to show the shoe size. For the next step, let&#8217;s show just the name in the second column and the shoe size in the third. We will do this using a case expression:
+This query is simply duplicating the data in two columns. Ultimately, we will want the second column to show the person's name, and the third column to show the shoe size. For the next step, let's show just the name in the second column and the shoe size in the third. We will do this using a case expression:
 
 sql
 Select Id,
@@ -122,7 +122,7 @@ From   #Temp
 4           Greg                 NULL
 4           NULL                 9</pre>
 
-Take a look at the case expression. Notice that there is no ELSE clause. Without an ELSE, the CASE expression will return NULL. This is extremely important for our end result. However, it&#8217;s important to realize that the second column has the person&#8217;s name and NULL, and the third column has shoe size and null. Next we will introduce column aliases.
+Take a look at the case expression. Notice that there is no ELSE clause. Without an ELSE, the CASE expression will return NULL. This is extremely important for our end result. However, it's important to realize that the second column has the person's name and NULL, and the third column has shoe size and null. Next we will introduce column aliases.
 
 sql
 Select Id,
@@ -142,7 +142,7 @@ From   #Temp
 4           Greg                 NULL
 4           NULL                 9</pre>
 
-Nothing fancy here. Just the column names. We still have NULL&#8217;s in our data that we will want to eliminate. Which leads us to our next step, and the most important part, too. When we use aggregates, it&#8217;s important to realize that they ignore NULL&#8217;s in the data. For example, if we have 2 rows with &#8220;George&#8221; in one row and NULL in the other row, Max(Column) will ignore the NULL and return George. We can use that to our advantage here.
+Nothing fancy here. Just the column names. We still have NULL's in our data that we will want to eliminate. Which leads us to our next step, and the most important part, too. When we use aggregates, it's important to realize that they ignore NULL's in the data. For example, if we have 2 rows with “George” in one row and NULL in the other row, Max(Column) will ignore the NULL and return George. We can use that to our advantage here.
 
 sql
 Select Id,

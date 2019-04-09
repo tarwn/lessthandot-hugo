@@ -128,7 +128,7 @@ GO
 EXEC sp_rename '[dbo].[Test2].[col_3]', 'col3', 'COLUMN' 
 GO
 ```
-You can run that SQL and then you can run the same query against the table to see that the columns names don&#8217;t have those unwanted characters anymore
+You can run that SQL and then you can run the same query against the table to see that the columns names don't have those unwanted characters anymore
 
 sql
 select * from Test2

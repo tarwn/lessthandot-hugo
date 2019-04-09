@@ -20,7 +20,7 @@ tags:
 ---
 Yes it is true, Django 1.0 has been released today. Here is a part of the announcement:
 
-> No, you&#8217;re not hallucinating, it&#8217;s really here.
+> No, you're not hallucinating, it's really here.
 > 
 > Around three years ago, Adrian, Simon, Wilson and I released some code to the world. Our plan was to hack quietly on it for a bit, release a solid 1.0 release, and then really get the ball rolling.
 > 

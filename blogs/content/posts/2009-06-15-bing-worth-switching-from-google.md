@@ -20,7 +20,7 @@ tags:
 ---
 Bing is the latest version of a search engine developed by Microsoft. Microsoft was developing and testing for the last couple of months a search engine with the name Kumo which in Japanese means spider or cloud. Kumo was of course just the code name for what would become eventually Bing. 
 
-Search is very important because 1% of the search market is roughly worth 1 billion dollars. This means that the number two player can make some decent money. Microsoft doesn&#8217;t have to become number one but they need to just grab around 30% or so and they are in good shape. Since Bing was launched it actually surpassed Yahoo and took market share away from both Google and Yahoo. Google must be eyeing this with great interest because a couple of weeks ago the [WolframAlpha][1] decision engine was launched and now Bing is here. Did you see the pathetic answer from Google to WolframAlpha named [Google Squared][2]
+Search is very important because 1% of the search market is roughly worth 1 billion dollars. This means that the number two player can make some decent money. Microsoft doesn't have to become number one but they need to just grab around 30% or so and they are in good shape. Since Bing was launched it actually surpassed Yahoo and took market share away from both Google and Yahoo. Google must be eyeing this with great interest because a couple of weeks ago the [WolframAlpha][1] decision engine was launched and now Bing is here. Did you see the pathetic answer from Google to WolframAlpha named [Google Squared][2]
 
 I have tried to use a search engine developed by Microsoft several times in the past. I tried MSN search and it didn’t do the job, I tried LiveSearch and that was barely better. 
 

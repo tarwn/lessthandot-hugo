@@ -44,7 +44,7 @@ $Headers = "Log Version"," Transaction Start Time"," REST Operation Type"," Requ
 
 dir -recurse $InputFolder -Include "*.log" | %{ Import-Csv $_.FullName -Delimiter ";" -Header $Headers | ConvertTo-Csv -Delimiter "," -NoTypeInformation | select -skip 1 | Add-Content $OutputFile }
 ```
-Running it from a powershell prompt is easy. I downloaded a different hour&#8217;s worth of blob transactions to a folder named &#8220;blob\_2014\_03_11&#8221; and then ran:
+Running it from a powershell prompt is easy. I downloaded a different hour's worth of blob transactions to a folder named “blob\_2014\_03_11” and then ran:
 
 `.\CombineLogFiles.ps1  "blob_2014_03_11\1200" combinedfiles.csv` 
 

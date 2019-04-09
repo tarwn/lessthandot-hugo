@@ -29,7 +29,7 @@ I was chosen to speak too! If you’re attending, I hope you can join me for one
 </p>
 
 <p style="padding-left: 30px;">
-  SQL Server professionals like to talk &#8211; a lot. We blog, we tweet, we answer forum questions, and more to help others. Add your voice! Learn about the different ways you can share your experience and knowledge. Once you start teaching others, you&#8217;ll realize how much knowledge you have!
+  SQL Server professionals like to talk &#8211; a lot. We blog, we tweet, we answer forum questions, and more to help others. Add your voice! Learn about the different ways you can share your experience and knowledge. Once you start teaching others, you'll realize how much knowledge you have!
 </p>
 
 <p style="padding-left: 30px;">
@@ -37,7 +37,7 @@ I was chosen to speak too! If you’re attending, I hope you can join me for one
 </p>
 
 <p style="padding-left: 30px;">
-  Having multiple database files and filegroups is one of many strategies to improve performance and make administration easier. What are filegroups, and how do you use them? In this session, I&#8217;ll show you how to create filegroups, create objects in them or move objects to them, and discuss how they can help performance. I&#8217;ll also cover Enterprise-level features like piecemeal restores.
+  Having multiple database files and filegroups is one of many strategies to improve performance and make administration easier. What are filegroups, and how do you use them? In this session, I'll show you how to create filegroups, create objects in them or move objects to them, and discuss how they can help performance. I'll also cover Enterprise-level features like piecemeal restores.
 </p>
 
 ### Minnesota is Going to Rock!

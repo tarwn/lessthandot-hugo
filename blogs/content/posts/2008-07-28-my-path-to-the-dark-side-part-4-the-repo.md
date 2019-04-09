@@ -24,7 +24,7 @@ Previous posts can be found here:
   * [Part Two &#8211; The Domain Model][2]
   * [Part Three &#8211; Testing the Schema][3]
 
-Setting up the repositories for our objects is where this really starts to get fun for me. This is what allows us to work with the persisted objects so easily from our application code, without all the SQL getting in the way. The first thing we want to think about here is what we need the repository to do. Add/Delete/Update all come to mind of course. As well as retrieval of single objects and collections. These will be pretty much standard behaviors across most of our objects. So lets&#8217; look at the interface first:
+Setting up the repositories for our objects is where this really starts to get fun for me. This is what allows us to work with the persisted objects so easily from our application code, without all the SQL getting in the way. The first thing we want to think about here is what we need the repository to do. Add/Delete/Update all come to mind of course. As well as retrieval of single objects and collections. These will be pretty much standard behaviors across most of our objects. So lets' look at the interface first:
 
 ```csharp
 using System;
@@ -46,7 +46,7 @@ namespace RecipeTracker.Interfaces
 }
 ```
 
-Looking at all those methods, there is really only one (GetByFamily) that we won&#8217;t need for any repository that we create. So we can put all the other methods into a BaseRepository class. We will need use generics so we can return all the different types however. But first, we need to get a session, so we can add a class for that.
+Looking at all those methods, there is really only one (GetByFamily) that we won't need for any repository that we create. So we can put all the other methods into a BaseRepository class. We will need use generics so we can return all the different types however. But first, we need to get a session, so we can add a class for that.
 
 ```csharp
 using System;
@@ -83,9 +83,9 @@ namespace RecipeTracker.Repositories
 }
 ```
 
-The SessionFactory part should look familar from part 3, the only difference here is that we are initializing the configuration using TypeOf(T) to determine which assembly to find the configuration in rather than TypeOf(MyType). We could probably get away with the latter for this purpose, because there probably won&#8217;t be more than one assembly in the application, but why be lazy right? After all, we do need to use generics to deal with the return types anyways. 
+The SessionFactory part should look familar from part 3, the only difference here is that we are initializing the configuration using TypeOf(T) to determine which assembly to find the configuration in rather than TypeOf(MyType). We could probably get away with the latter for this purpose, because there probably won't be more than one assembly in the application, but why be lazy right? After all, we do need to use generics to deal with the return types anyways. 
 
-So now this little bit of code doesn&#8217;t need to be handled by our repository, and it can focus on what it does best. So here&#8217;s the BaseRepository, it&#8217;s nice and simple since it doesn&#8217;t need to get its&#8217; own sessions anymore:
+So now this little bit of code doesn't need to be handled by our repository, and it can focus on what it does best. So here's the BaseRepository, it's nice and simple since it doesn't need to get its' own sessions anymore:
 
 ```csharp
 using System;
@@ -174,13 +174,13 @@ namespace RecipeTracker.Repositories
 }
 ```
 
-This is some wacky looking code at first. It kind of reminds me of Linq, but what its&#8217; called is HQL (Hibernate Query Language). I haven&#8217;t really gotten into it all that much, so I don&#8217;t feel qualified to speak about it in detail, but I do find it kinda cool. It may not be as easy as Linq, where you could do a nice Linq query such as
+This is some wacky looking code at first. It kind of reminds me of Linq, but what its' called is HQL (Hibernate Query Language). I haven't really gotten into it all that much, so I don't feel qualified to speak about it in detail, but I do find it kinda cool. It may not be as easy as Linq, where you could do a nice Linq query such as
 
 <code class="codespan">recipeList.Where(n => n.Family = family)</code>
 
 But remember this needs to work on older framework versions as well. I think the HQL is reasonably succinct, and even somewhat elegant. After all reading that you can just about instantly tell what it does. It just creates a criteria on the session for Recipes, and then defines the expression to be evaluated (table.Family = family). Pretty cool. We could probably figure out how to do this with generics pretty easily, but I figure this kind of method is going to be tied to your specific type, and you want to have a descriptive name, and all that.
 
-So after all this I think we are ready to set up some tests. This will be on the next page (damn I&#8217;m getting long-winded!)
+So after all this I think we are ready to set up some tests. This will be on the next page (damn I'm getting long-winded!)
 
 <!--nextpage-->I cut this to only two method for the sake of brevity but all the methods (and other repositories) are included in the attached project.
 
@@ -256,13 +256,13 @@ namespace RecipeTracker.Tests
 ```
 A few new things to note here. First, the [TestFixtureSetUp] attribute tag. This identifies a method that needs to be execute when we first set up the fixture. Not to be confused with [SetUp] which identifies a method that needs to be executed before **each test** is run. And then [TearDown] which indicates a method to be run after each test. In our case, TestFixtureSetup() initializes our configuration. SetupContext() creates our schema. And TeardownContext() gets rid of our schema. These are all very simple, and maybe not even necessary, but it is important to know that they are there, and see how much more could be done in these methods (see the commented out SchemaFiller.CreateInitialData() that is used for (you guessed it) creating initial data!).
 
-Now we are ready to fire up NUnit and run our tests. And now is when we&#8217;ll see that beautiful red bar (trust me it is beautiful, it means that you designed a test that will fail when its&#8217; supposed to!). When it fails you&#8217;ll see something like this:
+Now we are ready to fire up NUnit and run our tests. And now is when we'll see that beautiful red bar (trust me it is beautiful, it means that you designed a test that will fail when its' supposed to!). When it fails you'll see something like this:
 
 <code class="codespan">RecipeTracker.Tests.ImpressionRepository_Fixture (TestFixtureSetUp):<br />
 NHibernate.InvalidProxyTypeException : The following types may not be used as proxies:<br />
 RecipeTracker.Model.Recipe: method AlcoholByWeight should be virtual</code>
 
-As it turns out we need to implement all of the methods and properties as virtual so that NHibernate can create subclasses from our object. Well, we can do this or specify lazy = &#8220;false&#8221; for our classes. But I like the lazy initialization, so I will make them virtual. After doing this, the tests should run just fine.
+As it turns out we need to implement all of the methods and properties as virtual so that NHibernate can create subclasses from our object. Well, we can do this or specify lazy = “false” for our classes. But I like the lazy initialization, so I will make them virtual. After doing this, the tests should run just fine.
 
  [1]: /index.php/DesktopDev/MSTech/the-path-to-nhibernate-aamp-tdd-part-1-t
  [2]: /index.php/DesktopDev/MSTech/my-path-to-the-dark-side-part-2-the-doma

@@ -23,7 +23,7 @@ tags:
 ---
 The SQL Server Database Engine has published a SQL Server Columnstore Index FAQ wiki
 
-The SQL Server columnstore index feature, code-named Apollo, speeds up data warehouse query processing in SQL Server code-named &#8220;Denali&#8221;, in many cases by a factor of 10 to 100. We&#8217;ll be posting answers to frequently asked questions here. For more information about columnstore indexes, please see Columnstore Indexes on MSDN.
+The SQL Server columnstore index feature, code-named Apollo, speeds up data warehouse query processing in SQL Server code-named “Denali”, in many cases by a factor of 10 to 100. We'll be posting answers to frequently asked questions here. For more information about columnstore indexes, please see Columnstore Indexes on MSDN.
 
 There are 6 sections
   

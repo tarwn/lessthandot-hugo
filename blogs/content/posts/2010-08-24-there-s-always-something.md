@@ -13,9 +13,9 @@ categories:
   - Server Programming
 
 ---
-It&#8217;s always amazing to go back and look at code that you wrote just over a year ago. As I&#8217;m sure it common with most people, I was surprised, and a little embarassed, at how bad some of my code was back then. It&#8217;s amazing how much you learn and grow in a year, especially when your as relatively new to the industry as I am. So let me show you what I found that made me reflect on the last year.
+It's always amazing to go back and look at code that you wrote just over a year ago. As I'm sure it common with most people, I was surprised, and a little embarassed, at how bad some of my code was back then. It's amazing how much you learn and grow in a year, especially when your as relatively new to the industry as I am. So let me show you what I found that made me reflect on the last year.
 
-I recently got a request to make a rehash of a report I did a year ago, except that the drill down order is different. Cool. Copy, pase, drag, change a couple things, done. I deployed the new report to the dev server and off it goes. I then decided to go ahead and look at the stored procedure running the report to see exactly what it was doing, since I haven&#8217;t looked at it in about a year. Wow, I was a bit surprised when I opened it. Here&#8217;s what I found.
+I recently got a request to make a rehash of a report I did a year ago, except that the drill down order is different. Cool. Copy, pase, drag, change a couple things, done. I deployed the new report to the dev server and off it goes. I then decided to go ahead and look at the stored procedure running the report to see exactly what it was doing, since I haven't looked at it in about a year. Wow, I was a bit surprised when I opened it. Here's what I found.
 
 sql
 ALTER PROCEDURE [rp].[CompanyMoodList] 
@@ -95,7 +95,7 @@ order by CompanyName, BusinessUnit, TaskName
 
 END
 ```
-I decided to clean that up somewhat, since i definately don&#8217;t need those temp tables. Here&#8217;s what I ended up with (note that this is just in a query window on the prod server, I&#8217;m not actually modifying live code, that&#8217;s a No-No!)
+I decided to clean that up somewhat, since i definately don't need those temp tables. Here's what I ended up with (note that this is just in a query window on the prod server, I'm not actually modifying live code, that's a No-No!)
 
 sql
 select 
@@ -128,10 +128,10 @@ from dbo.tblENTERPRISE_ISSUES a
 where prProjectStatus='Active'
 	and a.Priority>=1
 ```
-So I hit execute, and it works fine, except that it&#8217;s now taking 6 seconds to execute, instead of 1 second like the previous version. I thought to myself &#8220;WTF?! This is better! This should be even faster!&#8221; I looked at the execution plan and see some clustered index scans that are pretty high, so I make a couple of indexes. No dice. 
+So I hit execute, and it works fine, except that it's now taking 6 seconds to execute, instead of 1 second like the previous version. I thought to myself “WTF?! This is better! This should be even faster!” I looked at the execution plan and see some clustered index scans that are pretty high, so I make a couple of indexes. No dice. 
 
-Now I&#8217;m thinking that there must be something in the new query that I&#8217;m over looking. It then struck me that the main thing I changed was the subquery for the max date. I then take the coalesce statement out of the subquery because there&#8217;s no nulls in that column (I had just carried it over from the last one). I then rerun the query and voila! It ran in about 1 second with the exact same dataset as before.
+Now I'm thinking that there must be something in the new query that I'm over looking. It then struck me that the main thing I changed was the subquery for the max date. I then take the coalesce statement out of the subquery because there's no nulls in that column (I had just carried it over from the last one). I then rerun the query and voila! It ran in about 1 second with the exact same dataset as before.
 
-I now understand what was happening, or at least sort of. Before the subquery could do the group by on the wassnid sql server had to go and check if all the wasnid&#8217;s were null, and if so change them to &#8221;. Removing the coalesce removed that extra step.
+I now understand what was happening, or at least sort of. Before the subquery could do the group by on the wassnid sql server had to go and check if all the wasnid's were null, and if so change them to ”. Removing the coalesce removed that extra step.
 
-So now I&#8217;ve got some updated code and I learned something new (or learned something to keep in mind in sub-queries). I&#8217;d call today a good day!
+So now I've got some updated code and I learned something new (or learned something to keep in mind in sub-queries). I'd call today a good day!

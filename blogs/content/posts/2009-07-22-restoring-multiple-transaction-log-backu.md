@@ -13,7 +13,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-If you&#8217;ve ever had to restore log files and not use the restore to a point in time option, I&#8217;m sure you found it to be a pain executing all the restore statements.
+If you've ever had to restore log files and not use the restore to a point in time option, I'm sure you found it to be a pain executing all the restore statements.
 
 A good tip when you have to do this is to use vbscript or some other scripting technology to create your own .sql file that you can just execute and restore the .trn files 
 
@@ -67,7 +67,7 @@ Next
 
 results.Close
 ```
-Now just run that and you&#8217;ll get your .sql you can execute and be done with it. I usually only do this on special occasions so there aren&#8217;t parameters like date range and such passed but you could easily add those in and only grab a certain listing of files.
+Now just run that and you'll get your .sql you can execute and be done with it. I usually only do this on special occasions so there aren't parameters like date range and such passed but you could easily add those in and only grab a certain listing of files.
 
  [1]: /index.php/DataMgmt/DBAdmin/title-8
  [2]: http://www.quest.com/litespeed-for-sql-server/

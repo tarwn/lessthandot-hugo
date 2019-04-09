@@ -43,7 +43,7 @@ There is no hatred in me for Crohns or having to deal with pain in my life like 
 
 I met this event 11 years ago. She is the most important thing to me and without her I could not have done any of this. She has spent more time than I wish she ever would have had to taking care of me when I was down and ready to give in. I’m reminded every day how lucky I am and why I work so hard to make her life with me the best I can. Together we have created a family I never thought I would have with our perfect two sons. I can’t thank her enough because without her I know I could not hold my head up every day. 
 
-## In closing&#8230;
+## In closing…
 
 The rest is yet to be seen. My future looks very promising because of the people I have around me. Between the LessThanDot group and the SQL community that has accepted me, I have great success in my sight and I can’t wait to get there with everyone around me. 
 

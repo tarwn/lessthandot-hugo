@@ -29,7 +29,7 @@ tags:
 ---
 This is a quick post, this [question][1] was asked recently
 
-> I have a stored procedure which is being called by some business objects and it&#8217;s working fine. I want to extend this stored procedure to call a new stored procedure (basically it will insert some of the passed in data into another table), but this isn&#8217;t working. How can I get the error output back from both stored procedures?
+> I have a stored procedure which is being called by some business objects and it's working fine. I want to extend this stored procedure to call a new stored procedure (basically it will insert some of the passed in data into another table), but this isn't working. How can I get the error output back from both stored procedures?
 
 This is pretty simple to do if you capture the output from the first procedure and then you can use an output parameter to pass it back. Here is a very simple version of how it would work
 
@@ -87,6 +87,6 @@ Output
   
 Divide BY zero ERROR encountered. 8134
 
-What is better for the end user 8134 or &#8220;Divide BY zero ERROR encountered.&#8221;?
+What is better for the end user 8134 or “Divide BY zero ERROR encountered.”?
 
  [1]: http://stackoverflow.com/questions/8171359/capture-the-error-output-from-a-stored-procedure-when-calling-another-stored-pro/8171572#8171572

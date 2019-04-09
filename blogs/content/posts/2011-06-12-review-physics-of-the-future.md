@@ -24,7 +24,7 @@ tags:
 ---
 [<img src="http://farm6.static.flickr.com/5197/5825886374_e89ee3e4bc_m.jpg" width="240" height="240" alt="Physics of the Future How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100" />][1]
   
-I picked up the book [Physics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100][2] <img src="http://www.assoc-amazon.com/e/ir?t=&l=as2&o=1&a=0385530803&camp=217153&creative=399349" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />mainly to see what is in store for humanity in the year 2100. Having read Ray Kurzweil&#8217;s 3 books on a similar subject, this was of interest to me. When people predict the future they usually underestimate the pace of progress, just imagine when you looked at CPUs between 1980 and 1985, you would never think that we would have quadcore CPUs in our laptops, these quadcore CPUs would outperform those clunky machines by such a factor that it is almost impossible to put it on the same graph.
+I picked up the book [Physics of the Future: How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100][2] <img src="http://www.assoc-amazon.com/e/ir?t=&l=as2&o=1&a=0385530803&camp=217153&creative=399349" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />mainly to see what is in store for humanity in the year 2100. Having read Ray Kurzweil's 3 books on a similar subject, this was of interest to me. When people predict the future they usually underestimate the pace of progress, just imagine when you looked at CPUs between 1980 and 1985, you would never think that we would have quadcore CPUs in our laptops, these quadcore CPUs would outperform those clunky machines by such a factor that it is almost impossible to put it on the same graph.
 
 There were some interesting things in this book, one of them is Optogenetics,
   
@@ -43,7 +43,7 @@ In terms of medicine, nanobots that go through our veins and zap cancerous cells
 
 Clothing will be smart, if you get injured, your clothes will make a diagnose of your condition and together with your gps location they will send a signal to the nearest hospital.
 
-All in all, I found this book very interesting and very entertaining. for some people all these thing will be scary and they will be scared of it, for other people it will be exciting and they will embrace these changes. Michio Kaku has already seen some of these inventions already as proto types being tested right now. You don&#8217;t need to be a science buff to understand this book, it is dumb down to appeal to the masses.
+All in all, I found this book very interesting and very entertaining. for some people all these thing will be scary and they will be scared of it, for other people it will be exciting and they will embrace these changes. Michio Kaku has already seen some of these inventions already as proto types being tested right now. You don't need to be a science buff to understand this book, it is dumb down to appeal to the masses.
 
  [1]: http://www.flickr.com/photos/denisgobo/5825886374/ "Physics of the Future How Science Will Shape Human Destiny and Our Daily Lives by the Year 2100 by Denis Gobo, on Flickr"
  [2]: http://www.amazon.com/gp/product/0385530803/ref=as_li_ss_tl?ie=UTF8&tag=sql08-20&linkCode=as2&camp=217153&creative=399349&creativeASIN=0385530803

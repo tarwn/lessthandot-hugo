@@ -39,7 +39,7 @@ select @SomeCount
 
 The value that the @SomeCount parameter returns will be 0 because print resets the value of @@ROWCOUNT to 0
 
-Let&#8217;s take a look at another example, but instead of using print we will use a _SET @param = value_ statement. Can you guess what @SomeCount will return in the select statement?
+Let's take a look at another example, but instead of using print we will use a _SET @param = value_ statement. Can you guess what @SomeCount will return in the select statement?
 
 sql
 DECLARE @SomeCount INT
@@ -56,9 +56,9 @@ SELECT @SomeCount
 
 The value that the @SomeCount parameter returns will be 1 because the _SET @param = value_ always sets the @@ROWCOUNT value to 1. Here is what Books On Line has on statements that make a simple assignment 
 
-> Statements that make a simple assignment always set the @@ROWCOUNT value to 1. No rows are sent to the client. Examples of these statements are: SET @local_variable, RETURN, READTEXT, and select without query statements such as SELECT GETDATE() or SELECT &#8216;Generic Text&#8217;.
+> Statements that make a simple assignment always set the @@ROWCOUNT value to 1. No rows are sent to the client. Examples of these statements are: SET @local_variable, RETURN, READTEXT, and select without query statements such as SELECT GETDATE() or SELECT &#8216;Generic Text'.
 
-Let&#8217;s look at another example, what do you think will be returned in the query below
+Let's look at another example, what do you think will be returned in the query below
 
 sql
 DECLARE @SomeCount INT, @SomeOtherCount int
@@ -77,7 +77,7 @@ Books On Line explanation on that one is the following
 
 > Statements that make an assignment in a query or use RETURN in a query set the @@ROWCOUNT value to the number of rows affected or read by the query, for example: SELECT @local_variable = c1 FROM t1. 
 
-Let&#8217;s take a look at another rather silly example
+Let's take a look at another rather silly example
 
 sql
 DECLARE @SomeCount INT
@@ -96,7 +96,7 @@ As you can see the IF statement also resets the @@ROWCOUNT and you get back 0
 
 ## So when should you store @@ROWCOUNT into a variable?
 
-If you want to store the rows that were affected by A DML statement then you need to grab @@ROWCOUNT immediately after the DML statement. There can&#8217;t be any code between the DML statement and your code that stores @@ROWCOUNT into a variable.
+If you want to store the rows that were affected by A DML statement then you need to grab @@ROWCOUNT immediately after the DML statement. There can't be any code between the DML statement and your code that stores @@ROWCOUNT into a variable.
 
 So instead of this
 
@@ -138,7 +138,7 @@ I am just giving you a little more code here, the same also applies for @@ERROR,
 
 There are 3 versions of the same query below, all of them will terminate with an error.
   
-First let&#8217;s look at code that first grabs the rowcount and then the error
+First let's look at code that first grabs the rowcount and then the error
 
 sql
 declare @SomeCount int, @Error int

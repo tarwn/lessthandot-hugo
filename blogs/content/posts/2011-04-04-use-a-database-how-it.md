@@ -43,13 +43,13 @@ BEGIN
 END
 ```
 
-If you are thinking _silly you, you can&#8217;t have an IF statement like that in a function_, then you have disappointed me. What you really should be saying is the following: [why are you hardcoding this, create a heights table and then grab all the heights that are valid for the range][1]
+If you are thinking _silly you, you can't have an IF statement like that in a function_, then you have disappointed me. What you really should be saying is the following: [why are you hardcoding this, create a heights table and then grab all the heights that are valid for the range][1]
 
 Yes, I grabbed this example from the following question: [TSQL &#8211; If..Else statement inside Table-Valued Functions &#8211; cant go through…][2]. As you can see several people answered with how to use a CASE statement instead. That is all nice and dandy but the information should be in a table instead
 
 # Single Source of Truth
 
-The thing that is wrong with that piece of code posted is not the fact that the IF statement doesn&#8217;t work but the fact that a table was not used to store the info. If you are using a table then you can populate a drop down in a form, use the table in the function, in other procedures, views etc etc. If you need to make a change, you do it in one place and one place only. 
+The thing that is wrong with that piece of code posted is not the fact that the IF statement doesn't work but the fact that a table was not used to store the info. If you are using a table then you can populate a drop down in a form, use the table in the function, in other procedures, views etc etc. If you need to make a change, you do it in one place and one place only. 
 
 This is a very important thing to understand, if you have the same information from 10 different sources all over the place hen when you need to make a change you are bound to make mistakes. Can you imagine if you need to store tax information, having this hardcoded like that? That is insanity.
 
@@ -66,7 +66,7 @@ CREATE TABLE Heights (
 GO
 ```
 
-Now let&#8217;s insert some data
+Now let's insert some data
 
 sql
 INSERT Heights values(1,'Small',0,154)
@@ -82,7 +82,7 @@ FROM Heights
 WHERE 181 between StartRange and EndRange
 ```
 
-Let&#8217;s continue by adding another table, this table will have some people and their height. 
+Let's continue by adding another table, this table will have some people and their height. 
 
 sql
 CREATE TABLE Players(Player varchar(200),Height smallint)
@@ -121,7 +121,7 @@ If tomorrow I decide that tall people have to be taller than 180 centimeters, I 
 
 P.S.
   
-Yes, I know, instead of having a player column I should have at least first and last name columns (preferably in a person table) but in the day and age of internet induced ADD I didn&#8217;t feel it would add anything to the point I was trying to make in this post&#8230;&#8230;so forgive me
+Yes, I know, instead of having a player column I should have at least first and last name columns (preferably in a person table) but in the day and age of internet induced ADD I didn't feel it would add anything to the point I was trying to make in this post……so forgive me
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 

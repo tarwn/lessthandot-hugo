@@ -16,7 +16,7 @@ tags:
   - 'c# .net'
 
 ---
-Folks, please remember to refactor early and often&#8230; 
+Folks, please remember to refactor early and often… 
 
 ```CSharp
 private Element ReadMemberExpression()

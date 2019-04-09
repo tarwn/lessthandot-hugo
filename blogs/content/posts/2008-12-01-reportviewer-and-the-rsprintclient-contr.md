@@ -14,21 +14,21 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Ever seen this when you try to use the print client control in SSRS, &#8220;Unable to load client print control&#8221;?
+Ever seen this when you try to use the print client control in SSRS, “Unable to load client print control”?
 
-Well if you haven&#8217;t I&#8217;m willing to bet you will. Member pmch22 and myself worked on this little fun error message for the entire day. First the problem seem to have come up a few weeks ago when someone tried to print and received this message. They downloaded a patch and applied it but no luck. I thought I had the problem fixed at the SSRS instance level but that was a long way from the truth. 
+Well if you haven't I'm willing to bet you will. Member pmch22 and myself worked on this little fun error message for the entire day. First the problem seem to have come up a few weeks ago when someone tried to print and received this message. They downloaded a patch and applied it but no luck. I thought I had the problem fixed at the SSRS instance level but that was a long way from the truth. 
 
 Today we set out to kill this little bug and here is what we found. 
 
-If you google this nasty you get fun hits about a Microsoft Windows Update 956391. Some kill bits hotfixes. It sure killed some bits let me tell you. Killed the client print control on the report server 🙁 Simple enough sense the next search is the fix which is update KB954606 to fix the later update. update to fix the update. Don&#8217;t laugh and don&#8217;t say MS sucks because if you&#8217;ve ever developed anything you&#8217;ve had to send them out as well. Well unless all you&#8217;ve developed is a recipe front-end for your mother-in-law to get in good with her. 😉
+If you google this nasty you get fun hits about a Microsoft Windows Update 956391. Some kill bits hotfixes. It sure killed some bits let me tell you. Killed the client print control on the report server 🙁 Simple enough sense the next search is the fix which is update KB954606 to fix the later update. update to fix the update. Don't laugh and don't say MS sucks because if you've ever developed anything you've had to send them out as well. Well unless all you've developed is a recipe front-end for your mother-in-law to get in good with her. 😉
 
-So this did work. Only problem is it only worked as far as the ReportServer would take you. In pmch22&#8217;s article &#8220;Intranet site for Reporting Services Reports&#8221; (which is an excellent write up) was related to the problem we still faced. For the ReportViewer call it would still give the error on clicking the print icon to launch the ActiveX. I tried reapplying a few things and just before all else failed I found this handy little article &#8220;Client Print Fails to Load After Microsoft Update 956391&#8221; at &#8220;Brian Hartman&#8217;s Report Viewer Blog&#8221;. It was the best explanation of this problem I found thus far. Lucky for me in that blog entry was a list of what the author had tried in step order. There was one step that bolded out at me. The report viewer!!! I should have thought of this in the first place really. Still kicking myself for it. When there is a problem with an object you should always turn to the originating source and verify it is correct before running off on a ghost hunt. 
+So this did work. Only problem is it only worked as far as the ReportServer would take you. In pmch22's article “Intranet site for Reporting Services Reports” (which is an excellent write up) was related to the problem we still faced. For the ReportViewer call it would still give the error on clicking the print icon to launch the ActiveX. I tried reapplying a few things and just before all else failed I found this handy little article “Client Print Fails to Load After Microsoft Update 956391” at “Brian Hartman's Report Viewer Blog”. It was the best explanation of this problem I found thus far. Lucky for me in that blog entry was a list of what the author had tried in step order. There was one step that bolded out at me. The report viewer!!! I should have thought of this in the first place really. Still kicking myself for it. When there is a problem with an object you should always turn to the originating source and verify it is correct before running off on a ghost hunt. 
 
-So if you found yourself with the update mentioned don&#8217;t uninstall it for one. Microsoft releases these for a reason and uninstalling them usually isn&#8217;t the best course. If you&#8217;re smart you have WSUS running and you&#8217;re controlling in a test environment before applying anyhow. The company we are with now does not but they will get there. Growing and growing fast. 
+So if you found yourself with the update mentioned don't uninstall it for one. Microsoft releases these for a reason and uninstalling them usually isn't the best course. If you're smart you have WSUS running and you're controlling in a test environment before applying anyhow. The company we are with now does not but they will get there. Growing and growing fast. 
 
-So in an attempt to fix the error try these steps&#8230;
+So in an attempt to fix the error try these steps…
   
-1. Verify you have KB956391 installed. If it isn&#8217;t you have other issues
+1. Verify you have KB956391 installed. If it isn't you have other issues
   
 2. Verify you updated your web references and re-deploy your site.
   
@@ -44,7 +44,7 @@ Again the blog I found and that helped me fix this is @ http://blogs.msdn.com/br
 
 I thank that person for taking the time to write it up. 
 
-Listing of related links&#8230;
+Listing of related links…
   
 KB954606 http://www.microsoft.com/downloads/details.aspx?familyid=5148B887-F323-4ADB-9721-61E1C0CFD213&displaylang=en
 

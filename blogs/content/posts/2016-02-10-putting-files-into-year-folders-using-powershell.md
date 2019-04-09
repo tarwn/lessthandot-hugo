@@ -23,7 +23,7 @@ So to no longer keep you in suspense, here is the complete code<pre lang=powersh
 
 This only takes the last 10 files and it uses the LastWriteTime but you get the drift.
 
-Just fill in the Source and Destination Directories and you&#8217;re good to go.
+Just fill in the Source and Destination Directories and you're good to go.
 
 Most important parts.<pre lang=powershell>$files = get-childitem $SourceDir \*.\* -File |Select-Object -last 10</pre> 
 

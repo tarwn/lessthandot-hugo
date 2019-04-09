@@ -52,7 +52,7 @@ Don’t take that as saying if you aren’t a goofball you won’t get followers
 
 9)      Don’t get mad if people do not follow you back right away and you meet all of this.  Some have time to keep up with the new followers list but if you are like me, it is a once a month thing to check them out.
 
-10)   Finally, no one will care that you are just starting out with SQL Server. We all start somewhere and I know that I for one, don&#8217;t care where you are with learning SQL. I&#8217;ll hang out with everyone, afterall I picked  @SQLSarg as my example here.  And he wears pink superman shirts while presenting! 
+10)   Finally, no one will care that you are just starting out with SQL Server. We all start somewhere and I know that I for one, don't care where you are with learning SQL. I'll hang out with everyone, afterall I picked  @SQLSarg as my example here.  And he wears pink superman shirts while presenting! 
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-5.png?mtime=1297303747"><img alt="" src="/wp-content/uploads/blogs/All/-5.png?mtime=1297303747" width="300" height="400" /></a>

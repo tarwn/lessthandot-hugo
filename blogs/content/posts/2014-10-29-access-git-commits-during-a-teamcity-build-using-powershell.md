@@ -18,11 +18,11 @@ tags:
   - teamcity
 
 ---
-Recently I needed access to the list of commits that were included with each of my TeamCity builds. TeamCity provides a pretty big list of [Predefined Build Parameters][1], but it doesn&#8217;t provide access to details of the commits it is currently building. Having Powershell and Git on my server, though, I can write some scripts to extract not just information about the latest commit, but about any series of commits that have occurred.
+Recently I needed access to the list of commits that were included with each of my TeamCity builds. TeamCity provides a pretty big list of [Predefined Build Parameters][1], but it doesn't provide access to details of the commits it is currently building. Having Powershell and Git on my server, though, I can write some scripts to extract not just information about the latest commit, but about any series of commits that have occurred.
 
 # Extracting Usable Commit Details
 
-In this script, I am extracting just the list of authors, dates, and commit messages. I formatted the git log output so I could easily feed it into Powershell&#8217;s [ConvertFrom-StringData][2] method to get an array of objects.
+In this script, I am extracting just the list of authors, dates, and commit messages. I formatted the git log output so I could easily feed it into Powershell's [ConvertFrom-StringData][2] method to get an array of objects.
 
 ```powershell
 function Get-CommitsFromGitLog([string] $StartCommit, [string] $EndCommit){
@@ -39,13 +39,13 @@ TeamCity defines a Build Parameter named [build.vcs.number][3], so we could use 
 ```powershell
 Get-CommitsFromGitLog -StartCommit "%build.vcs.number%^" -EndCommit "%build.vcs.number%"
 ```
-The net effect is that I&#8217;m asking for all changes starting one commit before the identified one (the ^ at the end) through that identified one. 
+The net effect is that I'm asking for all changes starting one commit before the identified one (the ^ at the end) through that identified one. 
 
 Unfortunately, this is only the latest commit. Retrieving the details for a group of commits requires some additional work.
 
 # Finding the Previous Commit Hash
 
-This is the tricky part. If TeamCity provided the build.vcs.number from the previous build, we would probably be using that. Though, realistically, if our build is successful and the prior one wasn&#8217;t, we would only be listing some of the changes being deployed. Really what we need is the build.vcs.number from the _last successful build_, which definitely isn&#8217;t built in.
+This is the tricky part. If TeamCity provided the build.vcs.number from the previous build, we would probably be using that. Though, realistically, if our build is successful and the prior one wasn't, we would only be listing some of the changes being deployed. Really what we need is the build.vcs.number from the _last successful build_, which definitely isn't built in.
 
 However, TeamCity does have a [REST API][4] that exposes details about prior builds. There is also a built in service account we can use to access that API, and the credentials and URL are all available in the REST API. So we can implement some calls without the extra pain of accidentally breaking the build every time Joe the developer changes his password and forgets he had it in the script too.
 

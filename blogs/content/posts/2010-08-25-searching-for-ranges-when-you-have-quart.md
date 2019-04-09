@@ -180,7 +180,7 @@ There are a couple of ways to return that data &#8211; below are 3 queries and t
 
 The first query creates a date from the 2 columns and then checks if that date falls between the end and start date passed in.
   
-Run the statement below, it returns &#8216;2009-01-01 00:00:00.000&#8217;. Mess around with the numbers to to see how it works.
+Run the statement below, it returns &#8216;2009-01-01 00:00:00.000'. Mess around with the numbers to to see how it works.
 
 sql
 SELECT DATEADD(qq,1-1,DATEADD(yy,2009 -1900,0))
@@ -209,11 +209,11 @@ This is the execution plan, as you can see it uses a Clustered Index Scan
     
 > WHERE:(dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),
     
-> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),&#8217;1900-01-01 00:00:00.000&#8242;))>=[@startDate]
+> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))>=[@startDate]
     
 > AND dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),
     
-> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),&#8217;1900-01-01 00:00:00.000&#8242;))<=[@endDate])) 
+> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))<=[@endDate])) 
 
 **Query 2** 
   
@@ -243,7 +243,7 @@ Here is the plan, as you can see it results in a Clustered Index Seek.
     
 > AND dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),
     
-> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),&#8217;1900-01-01 00:00:00.000&#8242;))<=[@endDate]) ORDERED FORWARD)
+> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))<=[@endDate]) ORDERED FORWARD)
 
 **Query 3** 
   
@@ -286,7 +286,7 @@ SELECT *
 FROM Periods
 ```
 
-&#8230; the data looks like this
+… the data looks like this
 
 <div class="tables">
   <table>
@@ -416,7 +416,7 @@ FROM Periods
 WHERE PeriodDate BETWEEN @startDate AND @endDate
 ```
 
-> |&#8211;Clustered Index Scan(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]), WHERE:(dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),&#8217;1900-01-01 00:00:00.000&#8242;))>=[@startDate] AND dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),&#8217;1900-01-01 00:00:00.000&#8242;))<=[@endDate])) 
+> |&#8211;Clustered Index Scan(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]), WHERE:(dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))>=[@startDate] AND dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))<=[@endDate])) 
 
 So we still have an index scan, but if we create an index on the computed column now, we can find out if that helps.
 
@@ -441,7 +441,7 @@ WHERE PeriodDate BETWEEN @startDate AND @endDate
 
 And there is your index seek.
 
-Just as an FYI, don&#8217;t just start creating computed columns and adding indexes left and right. If you can, try to modify the table so that you store the dates only; after that it is easy with the _datepart_ function to figure out what year, quarter or month is stored in that column.
+Just as an FYI, don't just start creating computed columns and adding indexes left and right. If you can, try to modify the table so that you store the dates only; after that it is easy with the _datepart_ function to figure out what year, quarter or month is stored in that column.
 
 To keep this post to a reasonable length, I decided to create another post that will show you how to use a calendar table to the same kind of query. That post will be up in a day or two.
 

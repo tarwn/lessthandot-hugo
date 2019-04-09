@@ -47,7 +47,7 @@ Here is some additional information
 
 _CONCAT takes a variable number of string arguments and concatenates them into a single string. It requires a minimum of two input values; otherwise, an error is raised. All arguments are implicitly converted to string types and then concatenated. Null values are implicitly converted to an empty string. If all the arguments are null, then an empty string of type varchar(1) is returned. The implicit conversion to strings follows the existing rules for data type conversions_
 
-Let&#8217;s run some code and do some comparison with a regular string concatenation by using the @val + @val2
+Let's run some code and do some comparison with a regular string concatenation by using the @val + @val2
 
 sql
 declare @i char(1)  ='1'

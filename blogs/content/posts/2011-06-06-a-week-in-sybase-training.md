@@ -103,7 +103,7 @@ The interface file lives in the $SYBASE directory
   
 SQL Server only has 8K files, Sybase has 2K, 4K, 8K, 16k files.
   
-This sounds great, however the page size is per server and if on one server the page size is 2K and the other server has 4K then you can&#8217;t backup and restore the database on the other server, you need to script out the DB and then bcp all the data over, there was also another way mentioned by manipulating files.
+This sounds great, however the page size is per server and if on one server the page size is 2K and the other server has 4K then you can't backup and restore the database on the other server, you need to script out the DB and then bcp all the data over, there was also another way mentioned by manipulating files.
 
 Sybase also has no mixed extents, an 8K master database will be 4 times bigger than a 2K master database.
 
@@ -119,7 +119,7 @@ This is something like number of open databases,open objects, open indexes, open
   
 data cache**
 
-This is done with the sp_config stored procedure, all these configurations are written in the ServerName.cfg file (in theory you can change it right there but if you add a bad value you might mess up your server and it won&#8217;t start). 
+This is done with the sp_config stored procedure, all these configurations are written in the ServerName.cfg file (in theory you can change it right there but if you add a bad value you might mess up your server and it won't start). 
 
 The sp\_monitorconfig will show you the usage statistics. The procedure sp\_monitorconfig displays cache usage statistics regarding metadata descriptors for indexes, objects, and databases. sp_monitorconfig also reports statistics on auxiliary scan descriptors used for referential integrity queries, and usage statistics for transaction descriptors and DTX participants.
 

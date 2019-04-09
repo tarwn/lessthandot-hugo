@@ -28,7 +28,7 @@ For one of the databases that I have to manage we were running out of space, so 
 
 <img src="/wp-content/uploads/blogs/DataMgmt/Drive.PNG" alt="" title="" width="359" height="506" />
 
-I was asked to move some files used by one database to this new drive. I decided to write up a little blog post just in case you ever need to do this so that you don&#8217;t backup and restore (with move) because there is another way.
+I was asked to move some files used by one database to this new drive. I decided to write up a little blog post just in case you ever need to do this so that you don't backup and restore (with move) because there is another way.
 
 First create this test database with 3 data files and 1 log file, the data files will be in the C:DB_Files directory
 
@@ -61,7 +61,7 @@ GO
 SELECT * FROM Test
 ```
 
-Now instead of having the data files in the C:DB\_Files we want to move them to the D:DB\_Files directory. You can use ALTER DATABASE&#8230;MODIFY FILE to do that, you just specify the new file locations, just make sure that the directory exists.
+Now instead of having the data files in the C:DB\_Files we want to move them to the D:DB\_Files directory. You can use ALTER DATABASE…MODIFY FILE to do that, you just specify the new file locations, just make sure that the directory exists.
 
 The following code will change the location of the data files
 
@@ -99,15 +99,15 @@ GO
 
 You will see the following message
 
-> The file &#8220;TestMove&#8221; has been modified in the system catalog. The new path will be used the next time the database is started.
+> The file “TestMove” has been modified in the system catalog. The new path will be used the next time the database is started.
   
-> The file &#8220;TestMove2&#8221; has been modified in the system catalog. The new path will be used the next time the database is started.
+> The file “TestMove2” has been modified in the system catalog. The new path will be used the next time the database is started.
   
-> The file &#8220;TestMove3&#8221; has been modified in the system catalog. The new path will be used the next time the database is started.
+> The file “TestMove3” has been modified in the system catalog. The new path will be used the next time the database is started.
 
 **[EDIT]**
   
-Paul Randal mentioned that you don&#8217;t have to shut down SQL Server, you can also just take the database OFFLINE, see here for more detail: http://www.sqlmag.com/blogs/SQLServerQuestionsAnswered/SQLServerQuestionsAnswered/tabid/1977/entryid/72328/A-Safe-Method-for-Moving-a-Database-to-a-New-Location.aspx
+Paul Randal mentioned that you don't have to shut down SQL Server, you can also just take the database OFFLINE, see here for more detail: http://www.sqlmag.com/blogs/SQLServerQuestionsAnswered/SQLServerQuestionsAnswered/tabid/1977/entryid/72328/A-Safe-Method-for-Moving-a-Database-to-a-New-Location.aspx
   
 **[/EDIT]**
 
@@ -120,7 +120,7 @@ ALTER DATABASE TestMove
 SET OFFLINE;
 ```
 
-If you do not stop SQL Server or take the database offline, you won&#8217;t be able to move the files and you will get a message like the one below
+If you do not stop SQL Server or take the database offline, you won't be able to move the files and you will get a message like the one below
   
 <img src="/wp-content/uploads/blogs/DataMgmt/cannotmove.PNG" alt="" title="" width="479" height="303" />
   
@@ -235,7 +235,7 @@ WHERE database_id = DB_ID(N'TestMove');
   </table>
 </div>
 
-Finally, just run this simple query again to verify that you didn&#8217;t corrupt anything
+Finally, just run this simple query again to verify that you didn't corrupt anything
 
 sql
 USE TestMove

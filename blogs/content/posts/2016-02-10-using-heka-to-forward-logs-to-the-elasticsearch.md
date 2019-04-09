@@ -21,13 +21,13 @@ Yesterday I asked how people forward their linux logs to the logstash/elasticsea
 
 Thanks Dan Barua and James Nugent. 
 
-I&#8217;ve been setting up an ELK (Elastisearch, Logstash and Kibana) stack since last week and having heaps of fun doing so. 
+I've been setting up an ELK (Elastisearch, Logstash and Kibana) stack since last week and having heaps of fun doing so. 
 
 You can go to this post for the configuration [post][2] but first go [download the package][3] you need for your server and install it. If like me you have installed the deb package you will notice that heka starts running immediately.
 
-ALl you have to do now is update the \etc\heka\conf.d\00-hekad.toml file with the configuration in the previous link. Don&#8217;t forget to change the url to your elasticsearch server. 
+ALl you have to do now is update the \etc\heka\conf.d\00-hekad.toml file with the configuration in the previous link. Don't forget to change the url to your elasticsearch server. 
 
-Also don&#8217;t forget to give read access to the syslog file and the auth.log file.
+Also don't forget to give read access to the syslog file and the auth.log file.
 
 <pre>sudo chmod 666 /var/log/syslog
 sudo chmod 666 /var/log/auth.log</pre>
@@ -40,7 +40,7 @@ And then you restart the service/daemon
 
 <pre>sudo /etc/init.d/heka restart</pre>
 
-Or you can reboot the server if you&#8217;re a windows admin. 
+Or you can reboot the server if you're a windows admin. 
 
 The logs will be in the logstash-* index.
 

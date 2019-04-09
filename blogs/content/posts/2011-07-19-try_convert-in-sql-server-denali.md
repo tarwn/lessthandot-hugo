@@ -50,7 +50,7 @@ Here is what the syntax looks like
 
 <pre>TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )</pre>
 
-Let&#8217;s take a look how this all works, I will create a table and inserts some values
+Let's take a look how this all works, I will create a table and inserts some values
 
 sql
 create table #test(SomeCol varchar(100))
@@ -603,7 +603,7 @@ Here is the result
   </table>
 </div>
 
-Pretty neat, as you can see if you for example try to convert 16000228 to a datetime you will get 0 since it falls out of the acceptable datetime range, for datetime2 and date you do get a value back. The conversion to numeric(30,10) also shows that the value is truncated after 10 decimals. This function is pretty handy since you won&#8217;t get the conversion errors you would get if you try to convert it with the regular convert function
+Pretty neat, as you can see if you for example try to convert 16000228 to a datetime you will get 0 since it falls out of the acceptable datetime range, for datetime2 and date you do get a value back. The conversion to numeric(30,10) also shows that the value is truncated after 10 decimals. This function is pretty handy since you won't get the conversion errors you would get if you try to convert it with the regular convert function
 
 You can also use CASE or IIF to return if the value can or cannot be converted, below is an example of both
 

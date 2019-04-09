@@ -91,7 +91,7 @@ create table Foo(id int default 0,
 id2 int default 1)
 ```
 
-Now let&#8217;s see if the default is created
+Now let's see if the default is created
 
 sql
 select column_default 
@@ -128,13 +128,13 @@ ALTER table foo2 drop DF__Foo__id2__7D439ABD
 
 So what is the big deal you say?
   
-Let&#8217;s say you do this on a staging box and want to create a script to hand over to someone else who will run it on the production box
+Let's say you do this on a staging box and want to create a script to hand over to someone else who will run it on the production box
   
 If you create you script on the staging box and the person runs it on production he will see something like this
 
 erver: Msg 3733, Level 16, State 2, Line 1
   
-Constraint &#8216;DF\_\_Foo\_\_id2__7D439ABD&#8217; does not belong to table &#8216;foo2&#8217;.
+Constraint &#8216;DF\_\_Foo\_\_id2__7D439ABD' does not belong to table &#8216;foo2'.
   
 Server: Msg 3727, Level 16, State 1, Line 1
   

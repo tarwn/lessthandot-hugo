@@ -33,9 +33,9 @@ John Resig writes:
 
 Sweet, you will get jQuery intellisense 🙂
 
-Read Jogn Resig&#8217;s announcement here: http://jquery.com/blog/2008/09/28/jquery-microsoft-nokia/
+Read Jogn Resig's announcement here: http://jquery.com/blog/2008/09/28/jquery-microsoft-nokia/
 
-Read Scott Guthrie&#8217;s post here: http://weblogs.asp.net/scottgu/archive/2008/09/28/jquery-and-microsoft.aspx
+Read Scott Guthrie's post here: http://weblogs.asp.net/scottgu/archive/2008/09/28/jquery-and-microsoft.aspx
 
 Bertrand Le Roy has also a post here: http://weblogs.asp.net/bleroy/archive/2008/09/28/jquery-now-officially-part-of-the-net-developer-s-toolbox.aspx
 

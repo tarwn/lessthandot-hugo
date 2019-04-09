@@ -16,17 +16,17 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-In yesterday&#8217;s post [Setting up SQL Server Database Mail with gmail][1], I showed you how to setup SQL Server Database Mail to work with a gmail account, today we are going to look at doing some Database Mail maintenance. 
+In yesterday's post [Setting up SQL Server Database Mail with gmail][1], I showed you how to setup SQL Server Database Mail to work with a gmail account, today we are going to look at doing some Database Mail maintenance. 
 
-Database Mail messages and their attachments are stored in the msdb database. If you don&#8217;t periodically delete these messages then the msdb database might growe larger than expected. 
+Database Mail messages and their attachments are stored in the msdb database. If you don't periodically delete these messages then the msdb database might growe larger than expected. 
 
 There are two stored procedure that you can call to delete items related to mail in the msdb database. The first stored procedure we are look at is sysmail\_delete\_mailitems\_sp. The sysmail\_delete\_mailitems\_sp stored procedure can be called with two optional arguments
 
-> [ **@sent_before**= ] &#8216;sent_before&#8217;
+> [ **@sent_before**= ] &#8216;sent_before'
   
 > Deletes e-mails up to the date and time provided as the sent\_before argument. sent\_before is datetime with NULL as default. NULL indicates all dates.
 > 
-> [ **@sent_status**= ] &#8216;sent_status&#8217;
+> [ **@sent_status**= ] &#8216;sent_status'
   
 > Deletes e-mails of the type specified by sent\_status. sent\_status is varchar(8) with no default. Valid entries are sent, unsent, retrying, and failed. NULL indicates all statuses.
 
@@ -57,11 +57,11 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @Date , @sent_status
 
 * * *The next proc we will look at is sysmail\_delete\_log\_sp. You can use the sysmail\_delete\_log\_sp stored procedure to permanently delete entries from the Database Mail log. This proc also has two optional arguments</p> 
 
-> [ **@logged_before** = ] &#8216;logged_before&#8217;
+> [ **@logged_before** = ] &#8216;logged_before'
   
 > Deletes entries up to the date and time specified by the logged\_before argument. logged\_before is datetime with NULL as default. NULL indicates all dates.
 > 
-> [ **@event_type** = ] &#8216;event_type&#8217;
+> [ **@event_type** = ] &#8216;event_type'
   
 > Deletes log entries of the type specified as the event\_type. event\_type is varchar(15) with no default. Valid entries are success, warning, error, and informational. NULL indicates all event types.
 

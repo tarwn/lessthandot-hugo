@@ -18,7 +18,7 @@ tags:
   - knockout
 
 ---
-I&#8217;m reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. A huge piece of both of these frameworks is the ability to create and reuse templates for the output. AngularJS brings template Directives, transclusion, and behavior to the table, while Knockout brings templating, dynamic template names, and it&#8217;s own ability to apply additional behavior.
+I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. A huge piece of both of these frameworks is the ability to create and reuse templates for the output. AngularJS brings template Directives, transclusion, and behavior to the table, while Knockout brings templating, dynamic template names, and it's own ability to apply additional behavior.
 
 <div style="background-color: #eeeeee; padding: 1em;">
   This is the fifth of eight posts looking at the capabilities of knockout and Angular. In the <a href="/index.php/WebDev/UIDevelopment/angularjs-vs-knockout-introduction-1" title="AngularJS vs Knockout - Introduction">introduction post</a>, I outlined the capabilities that I am evaluating for. In the <a href="/index.php/WebDev/UIDevelopment/angularjs-vs-knockout-serialization-4" title="AngularJS vs Knockout - Serialization">fourth post</a>, I looked at serialization. This post explores some of the templating capabilities in the two frameworks.
@@ -28,7 +28,7 @@ All of the examples presented throughout the series are available in the [tarwn/
 
 ## Templating in AngularJS
 
-[Directives][2] in Angular are touted as one of it&#8217;s &#8216;killer&#8217; features. They provide the ability to create entirely new elements using templates and custom behavior by replacing and manipulating DOM content. Angular Directives can be used to define custom behavior based on custom tags, attributes, and class names.
+[Directives][2] in Angular are touted as one of it's &#8216;killer' features. They provide the ability to create entirely new elements using templates and custom behavior by replacing and manipulating DOM content. Angular Directives can be used to define custom behavior based on custom tags, attributes, and class names.
 
 ### AngularJS Simple Templating Example
 
@@ -71,7 +71,7 @@ The element is straightforward and readable. The directive will replace the cust
 
 Full source available at [Angular/TransclusionTemplating.html][4].
 
-Angular directives provide the ability to [transclude][5] content, inserting content from a custom element into the template in a directive. I&#8217;ve worked with a number of layouts over the years that have container elements, transclusion is a great tool to replace this repetitive (and occasionally fragile) code with a more readable and less repetitive element that provides the same final product. Here I&#8217;ve defined a basic Directive that for a container with a title and transcluded content.
+Angular directives provide the ability to [transclude][5] content, inserting content from a custom element into the template in a directive. I've worked with a number of layouts over the years that have container elements, transclusion is a great tool to replace this repetitive (and occasionally fragile) code with a more readable and less repetitive element that provides the same final product. Here I've defined a basic Directive that for a container with a title and transcluded content.
 
 ```html
 <div ng-controller="TransclusionTemplatingController">
@@ -112,7 +112,7 @@ Defining dialogs, containers, and so on as standard templates could take a lot o
 
 Full source available at [Angular/BehaviorTemplating.html][6].
 
-In the [validation post][7], I used the linking method of a Directive to build validation. With templates, we can use that same linking method to add behavior to the template. Taking the transcluded container one step further, I&#8217;m going to provide the ability to hide or show the content by clicking on the title of the container.
+In the [validation post][7], I used the linking method of a Directive to build validation. With templates, we can use that same linking method to add behavior to the template. Taking the transcluded container one step further, I'm going to provide the ability to hide or show the content by clicking on the title of the container.
 
 ```html
 <div ng-controller="BehaviorTemplatingController">
@@ -163,7 +163,7 @@ In the [validation post][7], I used the linking method of a Directive to build v
 ```
 Ten to eleven years ago, this would have been an ASP or PHP function that took content, wrapped it in some HTML, then slathered on some cross-browser javascript. The combination of transclusion and linking script is pretty powerful, providing an easy way to create dialog, container control, or panel logic in a single place with behavior, then re-use it in a readable format via custom tags.
 
-I ran into a couple major speedbumps while working on this, however. The first was that I started out going down the complete wrong road. By default, the guide and documentation on the Angular site default to the latest unstable version, while I am using the latest stable version. This resulted in quite a bit of confusion, as I was originally using a function that doesn&#8217;t even exist in the stable version.
+I ran into a couple major speedbumps while working on this, however. The first was that I started out going down the complete wrong road. By default, the guide and documentation on the Angular site default to the latest unstable version, while I am using the latest stable version. This resulted in quite a bit of confusion, as I was originally using a function that doesn't even exist in the stable version.
 
 The other issue was the continued difficulty of debugging things that fail silently. While I was working on this, I often found myself staring at no results and no error message. It also took some fiddling to figure out which pattern to use when naming directives vs using them in the HTML. This is likely one of those things that you get used to as you use it heavily, but in the longer term could cause issues if you have to come back to it after to using it for a while or are bringing new developers up to speed with it for the first time.
 
@@ -175,7 +175,7 @@ The other issue was the continued difficulty of debugging things that fail silen
 
 Full source available at [Knockout/SimpleTemplating.html][9].
 
-Just as I did in the AngularJS example above, I&#8217;m going to start with a simple template that turns a username into a twitter button.
+Just as I did in the AngularJS example above, I'm going to start with a simple template that turns a username into a twitter button.
 
 ```html
 <div>
@@ -220,7 +220,7 @@ var SimpleTemplatingModel = function () {
 
 // ...
 ```
-Nesting templates dynamically is probably a less frequent use case than transclusion, and not something you would run into anywhere near as often as good uses for Angular&#8217;s transclusion. But it does provide a neat example for dynamic templates, which have a much wider use case. You can easily build a SPA container using a high level template binding to an observable, then swap the value to new template names on demand (via routing).
+Nesting templates dynamically is probably a less frequent use case than transclusion, and not something you would run into anywhere near as often as good uses for Angular's transclusion. But it does provide a neat example for dynamic templates, which have a much wider use case. You can easily build a SPA container using a high level template binding to an observable, then swap the value to new template names on demand (via routing).
 
 ### Knockout Templating w/ Behavior Example
 
@@ -254,13 +254,13 @@ Like Angular, knockout templates provide a mechanism to add behavior when they a
     }
 </script>
 ```
-For this example, I&#8217;ve returned to the container that hides it&#8217;s content when the title is clicked. Knockout does not include DOM manipulation methods, so I&#8217;ve reached out to [jQuery][13] for the click handling and toggling (though if the library size worries you, I could have also gone to [Zepto.js][14], a lighter weight alternative).
+For this example, I've returned to the container that hides it's content when the title is clicked. Knockout does not include DOM manipulation methods, so I've reached out to [jQuery][13] for the click handling and toggling (though if the library size worries you, I could have also gone to [Zepto.js][14], a lighter weight alternative).
 
-Unlike the Angular example, there weren&#8217;t any major struggles to make this work.
+Unlike the Angular example, there weren't any major struggles to make this work.
 
 ## Some Differences
 
-With templating, there are quite a few differences between the two frameworks, but I don&#8217;t think that would prevent you from implementing the same site in either.
+With templating, there are quite a few differences between the two frameworks, but I don't think that would prevent you from implementing the same site in either.
 
 **Readability**
 
@@ -272,29 +272,29 @@ This is a great feature in Knockout, and I could see a number of uses for it whe
 
  <span class="MT_orange">(Update)</span>
 
-When I originally published this post, my AngularJS focus was solely on custom directives, but it turns out () that there is a built-in [ngInclude][15] binding that will include a template similarly to knockout&#8217;s dynamic template. It includes an external HTML file with a child scope that is derived from the current one. It also has an onload attribute, which is evaluated when the template is loaded.
+When I originally published this post, my AngularJS focus was solely on custom directives, but it turns out () that there is a built-in [ngInclude][15] binding that will include a template similarly to knockout's dynamic template. It includes an external HTML file with a child scope that is derived from the current one. It also has an onload attribute, which is evaluated when the template is loaded.
 
 Example: [Angular/ngIncludeTemplating.html][16]
 
-It&#8217;s not a huge difference, but I like Knockout&#8217;s ability to specify the data model. With AngularJS, your scope is available to the template and it figures out what it wants to grab and manipulate, with knockout you can pass it an instance of exactly the viewmodel it&#8217;s expecting and the template doesn&#8217;t have to have any knowledge about the higher level viewmodel. It also differentiates between collections, which it will iterate over, and non-collections, which it will render one template against. On the plus side for Angular, it&#8217;s templates for ngInclude are separate files already, something you have to add a plugin to knockout to achieve.
+It's not a huge difference, but I like Knockout's ability to specify the data model. With AngularJS, your scope is available to the template and it figures out what it wants to grab and manipulate, with knockout you can pass it an instance of exactly the viewmodel it's expecting and the template doesn't have to have any knowledge about the higher level viewmodel. It also differentiates between collections, which it will iterate over, and non-collections, which it will render one template against. On the plus side for Angular, it's templates for ngInclude are separate files already, something you have to add a plugin to knockout to achieve.
 
 **Transclusion**
 
-Transclusion is an excellent tool with a wide set of use cases. I&#8217;d love to see a library combine transclusion and dynamic templates, as I think that these are easily one of the biggest differentiators for templating in the two libraries.
+Transclusion is an excellent tool with a wide set of use cases. I'd love to see a library combine transclusion and dynamic templates, as I think that these are easily one of the biggest differentiators for templating in the two libraries.
 
 **Behavior**
 
-With the Knockout example I pulled in a third party library (jQuery), and this comes with all the potential maintenance issues that you get when you start adding additional libraries. I don&#8217;t think the size is much of an issue, as I could just as easily have pulled in a smaller library. The other thing I didn&#8217;t like about Knockout was defining the behavior as a binding on the element rather than as part of the template. In my example above, I wanted to build a component with some behavior, but I had to bind that extra behavior from outside the template definition. Beside feeling a little hinky, it also could cause some problems if I was using dynamic templates with different behavior.
+With the Knockout example I pulled in a third party library (jQuery), and this comes with all the potential maintenance issues that you get when you start adding additional libraries. I don't think the size is much of an issue, as I could just as easily have pulled in a smaller library. The other thing I didn't like about Knockout was defining the behavior as a binding on the element rather than as part of the template. In my example above, I wanted to build a component with some behavior, but I had to bind that extra behavior from outside the template definition. Beside feeling a little hinky, it also could cause some problems if I was using dynamic templates with different behavior.
 
-The AngularJS example kept the behavior together with the template definition, which I liked, but jqLite doesn&#8217;t have as extensive a set of functionality as a full standalone library like jQuery. If I needed that additional functionality, I don&#8217;t think I can remove jqLite from the file size of AngularJS, so I&#8217;m carrying a little extra baggage.
+The AngularJS example kept the behavior together with the template definition, which I liked, but jqLite doesn't have as extensive a set of functionality as a full standalone library like jQuery. If I needed that additional functionality, I don't think I can remove jqLite from the file size of AngularJS, so I'm carrying a little extra baggage.
 
 **Pain Points**
 
-I feel like I have to point out again the pain points I ran into with AngularJS and it&#8217;s documentation. Even knowing that google is dropping me on the unstable branch and that the version is visible in the top left, in many cases it is very hard to go from a page in the unstable version to the corresponding page in a stable version, or to figure out what version a function was added so I can look for alternatives if it&#8217;s not in stable yet. This caused a great deal of confusion. As far as I can tell, Knockout&#8217;s documentation speaks to the latest stable/release version, and not the 3.0 version (beta when I started this, RC now). I do know that I haven&#8217;t had any struggles with it, where I seem to struggle frequently with the Angular side (maybe they assume everyone is using the unstable version or has long enough deployment cycles that it will be stable by the time we deploy?).
+I feel like I have to point out again the pain points I ran into with AngularJS and it's documentation. Even knowing that google is dropping me on the unstable branch and that the version is visible in the top left, in many cases it is very hard to go from a page in the unstable version to the corresponding page in a stable version, or to figure out what version a function was added so I can look for alternatives if it's not in stable yet. This caused a great deal of confusion. As far as I can tell, Knockout's documentation speaks to the latest stable/release version, and not the 3.0 version (beta when I started this, RC now). I do know that I haven't had any struggles with it, where I seem to struggle frequently with the Angular side (maybe they assume everyone is using the unstable version or has long enough deployment cycles that it will be stable by the time we deploy?).
 
 ## Final Words
 
-If we consider the end goal of using frameworks like these for templating, I feel that both bring a great deal of capability to the table. There are definitely differences in how they work and I felt those as I was working on the examples. I&#8217;d love to somehow have the transclusion ability from AngularJS, dynamic templating from Knockout, and combined behavior and template in a single place from AngularJS.
+If we consider the end goal of using frameworks like these for templating, I feel that both bring a great deal of capability to the table. There are definitely differences in how they work and I felt those as I was working on the examples. I'd love to somehow have the transclusion ability from AngularJS, dynamic templating from Knockout, and combined behavior and template in a single place from AngularJS.
 
 <div style="background-color: #DDDDDD; padding: 8px; width: 400px;">
   <h3>

@@ -23,13 +23,13 @@ tags:
   - sql server
 
 ---
-Someone tried to figure out why his data was showing the next day when he passed in today&#8217;s date. If you are not careful to use the same data type and this includes scale and precision as well, you can get some strange results. In this post I will take a look at date, integer, varchar and decimal data types 
+Someone tried to figure out why his data was showing the next day when he passed in today's date. If you are not careful to use the same data type and this includes scale and precision as well, you can get some strange results. In this post I will take a look at date, integer, varchar and decimal data types 
 
 
 
 ## Dates
 
-When using dates make sure that you are using the same data type, don&#8217;t mix datetime and smalldatetime. If you do, you can get some unexpected results, let&#8217;s take a look
+When using dates make sure that you are using the same data type, don't mix datetime and smalldatetime. If you do, you can get some unexpected results, let's take a look
 
 First create this table with a datetime column
 
@@ -84,7 +84,7 @@ Output
 
 What happens is because smalldatetime is accurate to 1 minute, it rounds up to the next hour and thus it becomes the next day
   
-Usually stuff like this happens where the table gets changed but someone forgot to also change the procedure, it could take a while until you catch a bug like this because unless you are passing in the last minute of the hour you won&#8217;t see it&#8230;however the fact that the seconds are all 00 should give it away
+Usually stuff like this happens where the table gets changed but someone forgot to also change the procedure, it could take a while until you catch a bug like this because unless you are passing in the last minute of the hour you won't see it…however the fact that the seconds are all 00 should give it away
   
 
 
@@ -120,7 +120,7 @@ _Msg 8114, Level 16, State 5, Procedure prTestInt, Line 0
   
 Error converting data type int to smallint._
 
-This is a good thing, you will be able to catch this immediately. At least it doesn&#8217;t do a negative overflow like in some languages
+This is a good thing, you will be able to catch this immediately. At least it doesn't do a negative overflow like in some languages
 
 
 
@@ -190,7 +190,7 @@ Output
   
 9
 
-In this case SQL Server used a size of 1 since nothing was specified. However when you use varchar in a cast or convert function and you don&#8217;t specify a size, it will default to 30 characters
+In this case SQL Server used a size of 1 since nothing was specified. However when you use varchar in a cast or convert function and you don't specify a size, it will default to 30 characters
 
 sql
 SELECT CONVERT(VARCHAR,'1111111111222222222233333333334')
@@ -206,7 +206,7 @@ Take also a look at this post [Always include size when using varchar, nvarchar,
 
 ## Decimal/Numeric
 
-Decimal (or numeric) will round down or up if it can&#8217;t hold the whole value
+Decimal (or numeric) will round down or up if it can't hold the whole value
   
 Take a look by running this
 
@@ -230,7 +230,7 @@ As you can see 1.999 will round up to 2.00 if your scale is less than the number
 
 If you have to do multiplication you have to be extra careful and have enough space to avoid rounding issues, I deal with this all the time because we have to show 10 digits for scale.
 
-Decimal and numeric will default to (18,0) if you don&#8217;t specify anything when declaring them, see this post [Decimal and Numeric problems when you don&#8217;t specify precision and scale][4] by George Mastros for more info, no need for me to repeat the same.
+Decimal and numeric will default to (18,0) if you don't specify anything when declaring them, see this post [Decimal and Numeric problems when you don't specify precision and scale][4] by George Mastros for more info, no need for me to repeat the same.
 
 # Conclusion
 

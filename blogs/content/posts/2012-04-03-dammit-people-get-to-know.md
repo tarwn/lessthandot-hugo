@@ -25,11 +25,11 @@ tags:
   - trick
 
 ---
-A couple of months back we were interviewing people for 2 positions, one of the questions I like to ask is the following: If you have a column in a table that&#8217;s an integer data type how can you restrict the values to be between 1 and 10? Most of the people start by saying that they restrict it in the application, when I ask how they would prevent from someone who has write access to do it they usually say that they would add a trigger. Only about 20% of the people know that there is something in the table designer where they can enter a range. Between 5 and 10% of the people know that this is called a **check constraint**. If you know what a check constraint is&#8230;bravo, you my friend are an elitist!
+A couple of months back we were interviewing people for 2 positions, one of the questions I like to ask is the following: If you have a column in a table that's an integer data type how can you restrict the values to be between 1 and 10? Most of the people start by saying that they restrict it in the application, when I ask how they would prevent from someone who has write access to do it they usually say that they would add a trigger. Only about 20% of the people know that there is something in the table designer where they can enter a range. Between 5 and 10% of the people know that this is called a **check constraint**. If you know what a check constraint is…bravo, you my friend are an elitist!
 
 I forgot about these interviews but this question [Overriding the maximum value of a bigint datatype in MSSQL][1] made it reappear like a phoenix that rises from the ashes.
 
-Let&#8217;s look at some examples
+Let's look at some examples
 
 First create this table
 
@@ -38,7 +38,7 @@ create table SomeTable(code char(3) not null)
 GO
 ```
 
-Now let&#8217;s say we want to restrict the values that you can insert to only accept characters from a through z, here is what the constraint looks like
+Now let's say we want to restrict the values that you can insert to only accept characters from a through z, here is what the constraint looks like
 
 sql
 alter table SomeTable add  constraint ck_bla
@@ -46,7 +46,7 @@ check (code like '[a-Z][a-Z][a-Z]' )
 GO
 ```
 
-If you now run the following insert statement&#8230;.
+If you now run the following insert statement….
 
 sql
 insert SomeTable values ('123')
@@ -56,7 +56,7 @@ You get this error message back
 
 _Msg 547, Level 16, State 0, Line 1
   
-The INSERT statement conflicted with the CHECK constraint &#8220;ck_bla&#8221;. The conflict occurred in database &#8220;tempdb&#8221;, table &#8220;dbo.SomeTable&#8221;, column &#8216;code&#8217;.
+The INSERT statement conflicted with the CHECK constraint “ck_bla”. The conflict occurred in database “tempdb”, table “dbo.SomeTable”, column &#8216;code'.
   
 The statement has been terminated._
 
@@ -83,7 +83,7 @@ insert SomeTable2 values ('100')
 
 _Msg 547, Level 16, State 0, Line 2
   
-The INSERT statement conflicted with the CHECK constraint &#8220;ck_SomeTable2&#8221;. The conflict occurred in database &#8220;tempdb&#8221;, table &#8220;dbo.SomeTable2&#8221;, column &#8216;SomeCol&#8217;.
+The INSERT statement conflicted with the CHECK constraint “ck_SomeTable2”. The conflict occurred in database “tempdb”, table “dbo.SomeTable2”, column &#8216;SomeCol'.
   
 The statement has been terminated._
 
@@ -95,11 +95,11 @@ insert SomeTable2 values ('-1')
 
 _Msg 244, Level 16, State 1, Line 1
   
-The conversion of the varchar value &#8216;-1&#8217; overflowed an INT1 column. Use a larger integer column.
+The conversion of the varchar value &#8216;-1' overflowed an INT1 column. Use a larger integer column.
   
 The statement has been terminated._
 
-As you can see you also get an error, however this is not from the constraint but the error is raised because the tinyint datatype can&#8217;t be less than 0
+As you can see you also get an error, however this is not from the constraint but the error is raised because the tinyint datatype can't be less than 0
 
 Check constraint can also be tied to a user defined function and you can also use regular expressions. Ranges can also be used, for example _salary >= 15000 AND salary <= 100000_
 

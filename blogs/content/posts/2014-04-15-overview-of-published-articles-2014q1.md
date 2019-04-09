@@ -18,9 +18,9 @@ tags:
   - ssis
 
 ---
-Since I write at different places &#8211; this blog, [Intense School][1] and [MSSQLTips.com][2] &#8211; someone recently asked me if I could provide an overview from time to time to keep track of all the published material. It makes it easier to follow and it&#8217;s also a chance for me to promote my material to readers who perhaps don&#8217;t visit the other sites very often.
+Since I write at different places &#8211; this blog, [Intense School][1] and [MSSQLTips.com][2] &#8211; someone recently asked me if I could provide an overview from time to time to keep track of all the published material. It makes it easier to follow and it's also a chance for me to promote my material to readers who perhaps don't visit the other sites very often.
 
-Anyway, these are all the articles I&#8217;ve put out since [my initial announcement on this blog][3]:
+Anyway, these are all the articles I've put out since [my initial announcement on this blog][3]:
 
 **Intense School**
 

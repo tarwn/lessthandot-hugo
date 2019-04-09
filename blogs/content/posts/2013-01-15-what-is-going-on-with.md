@@ -21,7 +21,7 @@ tags:
   - sql server 2012
 
 ---
-Two days ago I wrote a post [Setting up SQL Server Database Mail with gmail][1], I showed you how to setup SQL Server Database Mail to work with a gmail account. In yesterday&#8217;s post [Database Mail maintenance in SQL Server][2] we looked at some maintenance, today we are going to look at how we can check what is being done by Database Mail. There are a couple of Catalog Views that we will take a look at:
+Two days ago I wrote a post [Setting up SQL Server Database Mail with gmail][1], I showed you how to setup SQL Server Database Mail to work with a gmail account. In yesterday's post [Database Mail maintenance in SQL Server][2] we looked at some maintenance, today we are going to look at how we can check what is being done by Database Mail. There are a couple of Catalog Views that we will take a look at:
 
 sysmail\_event\_log
   

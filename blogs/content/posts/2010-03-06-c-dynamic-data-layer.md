@@ -107,7 +107,7 @@ public class DynamicDataLayer : IDisposable
 ```
 Using this class, the code to retrieve records from a database becomes much cleaner.
   
-Take notice of how we don&#8217;t have to explicitly cast the dynamic type to the variable we assign it to.
+Take notice of how we don't have to explicitly cast the dynamic type to the variable we assign it to.
 
 ```CSharp
 using (var dataLayer = new DynamicDataLayer(Provider, ConnectionString))

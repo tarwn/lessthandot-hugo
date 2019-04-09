@@ -13,7 +13,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Often I hear the argument on log shipping for disaster recovery not being a good choice due to the difficulty in failing back to the primary site. I never really got this argument and enjoy it when people try to bring it up when trying to sell expensive third party tools to replicate off-site. Of course if you have the money, there are far better choices to get your data to the DR site. If you don&#8217;t like most groups, then this is an easy and stable way to get your failback scenario setup.
+Often I hear the argument on log shipping for disaster recovery not being a good choice due to the difficulty in failing back to the primary site. I never really got this argument and enjoy it when people try to bring it up when trying to sell expensive third party tools to replicate off-site. Of course if you have the money, there are far better choices to get your data to the DR site. If you don't like most groups, then this is an easy and stable way to get your failback scenario setup.
 
 Basically the reason it is hard to fail back to the primary site is due to the data not being in sync. Just saying that out loud promotes a few options to easily fall back. The easiest solution is the do the exact same thing you are doing on the primary site while waiting for a disaster. Backups! This is a sort of poor man’s strategy to get your primary site back in sync from a failover.
 
@@ -21,7 +21,7 @@ Given the task of first deciding what your DR strategy is based on the business 
 
 The basic steps here are to first monitor the status of the database on a particular interval. In this example I do this every minute in a different job. Note: watch your msdb job history retention. You can grow pretty fast when running jobs in short intervals. So if a database that is in standby is found to be online either by automated tasks or manual tasks, the database was brought online due to a disaster event. With the database online you can then script your entire backup strategy on the DR instances to start backing up the data the company is now relying on to survive. Let’s take a look at a script that will start you off in that direction
 
-In the below examples I&#8217;m using a database named DBA05 to hold my primary table that consists of the monitored databases and the scripts to execute to start backups rolling.
+In the below examples I'm using a database named DBA05 to hold my primary table that consists of the monitored databases and the scripts to execute to start backups rolling.
 
 sql
 IF OBJECT_ID ('DBA05.dbo.BACKUP_PLANS','U') IS NOT NULL
@@ -112,7 +112,7 @@ As you can see the table is pretty simple. We need to know the database to monit
 
 Now that you have the table setup, you can get going on the monitor job. The code below will first use the sys.databases system view to validate the status of the databases. This joined to our table of which databases to monitor will filter out any other databases on the instance. Once the databases that are online and a flag for agent status of 0, the job will proceed to setup the SQL Agent jobs for each given script found in the table. After all is done successfully the status is updated.
 
-I wrote this for this blog and tested it out so the script works as is but you will need to alter it greatly in order to fit it into your environment. It was also written in 2005 as you can see with the TRY&#8230;CATCH. 
+I wrote this for this blog and tested it out so the script works as is but you will need to alter it greatly in order to fit it into your environment. It was also written in 2005 as you can see with the TRY…CATCH. 
 
 sql
 BEGIN TRY
@@ -179,6 +179,6 @@ BEGIN CATCH
   RAISERROR(@ErrMsg, @ErrSeverity, 1)
 END CATCH
 ```
-To fully get everything up and running you should add differentials and more importantly, log backups into this table. Given your backup strategy and log backup plans on the primary site, you should already know the acceptance of the business for point in time recovery. Follow that same strategy! Once this is all done you can then successfully monitor the DR site for a failover and automatically start backups so you have a point in time to backup the tail logs and get your data in sync quickly. Or as quickly as the size of the pipes to the offsite are. This will also save you in case of a hardware failure on the DR site. Yes, don’t forget to backup the DR servers as well to tape and or other means of recovery. You don’t want to fail over and then have the DR site fail in a day. Not acceptable! Remember that the primary site, once brought back up and ready for failback, will need the databases in recovering status to apply the logs or diff&#8217;s to it. If you recover the site completely and prior to a scheduled full backup, you can restore the last full backup and all other backup to get to the time you had the disaster in recovering mode. Then copy the minimal required backups that started on the DR site over. 
+To fully get everything up and running you should add differentials and more importantly, log backups into this table. Given your backup strategy and log backup plans on the primary site, you should already know the acceptance of the business for point in time recovery. Follow that same strategy! Once this is all done you can then successfully monitor the DR site for a failover and automatically start backups so you have a point in time to backup the tail logs and get your data in sync quickly. Or as quickly as the size of the pipes to the offsite are. This will also save you in case of a hardware failure on the DR site. Yes, don’t forget to backup the DR servers as well to tape and or other means of recovery. You don’t want to fail over and then have the DR site fail in a day. Not acceptable! Remember that the primary site, once brought back up and ready for failback, will need the databases in recovering status to apply the logs or diff's to it. If you recover the site completely and prior to a scheduled full backup, you can restore the last full backup and all other backup to get to the time you had the disaster in recovering mode. Then copy the minimal required backups that started on the DR site over. 
 
 I’ve used this method in a few facilities and it works well when budget is small on DR. That is as most of us know the case in most environments. If the databases are extremely large it may not be the best copying the backups back, however in most cases with databases that size, budget is typically more accessible.

@@ -26,7 +26,7 @@ tags:
   - tricks
 
 ---
-You have only $50 left and you can buy two DVDs or one SQL book, what do you do? I would buy the book but not every person has the same idea of a fun time. This is the reason why I present you with a bunch of links to articles which will give you very good info. Some of this you won&#8217;t be able to find in a book anyway.
+You have only $50 left and you can buy two DVDs or one SQL book, what do you do? I would buy the book but not every person has the same idea of a fun time. This is the reason why I present you with a bunch of links to articles which will give you very good info. Some of this you won't be able to find in a book anyway.
 
 [The curse and blessings of dynamic SQL][1]. How you use dynamic SQL, when you should &#8211; and when you should not.
 

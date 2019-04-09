@@ -27,13 +27,13 @@ tags:
   <img src="/wp-content/uploads/blogs/Architect/msdn_notforresale.gif" alt="" title="" width="250" height="145" align="left" />
 </div>
 
-I was fortunate enough to receive MSDN Ultimate Subscriptions as well as SQLDenis ([blog][1] | [Twitter][2]). I Think Denis&#8217;s idea and contest to see who we can give these to is excellent. To support Denis and his idea, I&#8217;m adding another subscription that will be handed over once we read over the responses. That means your chances just got much better to enjoy the subscriptions and the benefits Visual Studio 2010 has to offer!
+I was fortunate enough to receive MSDN Ultimate Subscriptions as well as SQLDenis ([blog][1] | [Twitter][2]). I Think Denis's idea and contest to see who we can give these to is excellent. To support Denis and his idea, I'm adding another subscription that will be handed over once we read over the responses. That means your chances just got much better to enjoy the subscriptions and the benefits Visual Studio 2010 has to offer!
 
 
 
 To go over what the response should consist of again…
 
-  1. Why do you need this, what are you going to build with this, will it help other people&#8217;s lives?
+  1. Why do you need this, what are you going to build with this, will it help other people's lives?
   2. What specific functionality that is only part of Ultimate are you going to use?
   3. You need to have a technical blog and provide the URL to that blog, if you are an active member of the technical community (stackoverflow, msdn forums etc etc) then also include those links.
 

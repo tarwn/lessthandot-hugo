@@ -46,7 +46,7 @@ Now it is time to do the export. To do the export we will use the mongoexport ut
 
 ## Export in json format
 
-To export the data, we need to tell mongoexport what database to use, what collection to use and optionally we also need to specify what fields to use. If you don&#8217;t specify the fields, you will get all of them. If we wanted to export the name and age fields from the Person collection in the ExportDb database, you would specify it like this
+To export the data, we need to tell mongoexport what database to use, what collection to use and optionally we also need to specify what fields to use. If you don't specify the fields, you will get all of them. If we wanted to export the name and age fields from the Person collection in the ExportDb database, you would specify it like this
 
 <pre>mongoexport --db ExportDb --collection Person -fields name,age</pre>
 

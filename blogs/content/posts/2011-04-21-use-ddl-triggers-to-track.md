@@ -23,7 +23,7 @@ tags:
   - triggers
 
 ---
-Someone wanted to know when and by who a certain table was dropped, I told the person that you can do this with a DDL trigger.Wouldn&#8217;t it be nice if you could track exactly all the DDL statements that were executed on a table in your database? Well, you can by using DDL Triggers, DDL Triggers were added in SQL Server 2005. 
+Someone wanted to know when and by who a certain table was dropped, I told the person that you can do this with a DDL trigger.Wouldn't it be nice if you could track exactly all the DDL statements that were executed on a table in your database? Well, you can by using DDL Triggers, DDL Triggers were added in SQL Server 2005. 
 
 DDL triggers are a special kind of trigger that fire in response to Data Definition Language (DDL) statements. They can be used to perform administrative tasks in the database such as auditing and regulating database operations. A DDL trigger can be created on the database level or on the server level. In this post I will create a database level DDL trigger that will listen for the ALTER TABLE command.
 
@@ -58,7 +58,7 @@ AS
 GO
 ```
 
-The code in the trigger should be pretty simple to follow. The line _EVENTDATA().value(&#8216;(/EVENT_INSTANCE/TSQLCommand/CommandText)[1]&#8217;,&#8217;nvarchar(max)&#8217;)_ is grabbing the DDL statement, more about EVENTDATA() can be found here: http://msdn.microsoft.com/en-us/library/ms173781.aspx
+The code in the trigger should be pretty simple to follow. The line _EVENTDATA().value(&#8216;(/EVENT_INSTANCE/TSQLCommand/CommandText)[1]','nvarchar(max)')_ is grabbing the DDL statement, more about EVENTDATA() can be found here: http://msdn.microsoft.com/en-us/library/ms173781.aspx
 
 Next up is the test table that we will use to play around with
 
@@ -83,7 +83,7 @@ DROP COLUMN SomeDate
 GO
 ```
 
-Now let&#8217;s see what we have in our log table
+Now let's see what we have in our log table
 
 sql
 SELECT * FROM TriggerLog
@@ -159,7 +159,7 @@ Here is the output
 
 As you can see we have all the DDL statements captured in the table, the time it happened and the person who did it.
   
-Let&#8217;s just drop and recreate the table
+Let's just drop and recreate the table
 
 sql
 drop table Test

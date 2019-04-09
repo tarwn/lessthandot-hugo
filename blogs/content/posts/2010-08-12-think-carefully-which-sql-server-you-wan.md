@@ -18,7 +18,7 @@ categories:
 ---
 ### <span class="MT_red">UPDATE</span>
 
-Turned out I was wrong and it&#8217;s easy enough to create SSIS package to run an import of VFP table into SQL Server 64 bit. The complete solution was provided by Jin Chen in this MSDN thread [How to run SSIS package &#8211; Import VFP table to SQL Server 64 bit][1] and I was able to easily follow it and the package ran OK. I now quote the solution:
+Turned out I was wrong and it's easy enough to create SSIS package to run an import of VFP table into SQL Server 64 bit. The complete solution was provided by Jin Chen in this MSDN thread [How to run SSIS package &#8211; Import VFP table to SQL Server 64 bit][1] and I was able to easily follow it and the package ran OK. I now quote the solution:
 
 In order to load data from Visual FoxPro to 64-bit SQL Server, we can use Microsoft OLE DB Provider for Visual FoxPro or Visual FoxPro ODBC Driver to load data from Visual FoxPro, and then upload into SQL Server.
 
@@ -36,15 +36,15 @@ Select the DFT, and go to Data Flow designer page.
   
 Add a OLE DB Source to the package.
   
-Double-click the OLE DB Source, click &#8220;New&#8221; > &#8220;New&#8221; to create a connection to Visual FoxPro.
+Double-click the OLE DB Source, click “New” > “New” to create a connection to Visual FoxPro.
   
-In the Connection Manager, please select &#8220;Microsoft OLE DB Provider for Visual FoxPro&#8221;
+In the Connection Manager, please select “Microsoft OLE DB Provider for Visual FoxPro”
   
 Type the file path of a Visual FoxPro database(e.g. C:Address.dbc).
   
-Test the connection by clicking button &#8220;Test Connection&#8221;
+Test the connection by clicking button “Test Connection”
   
-Click &#8220;OK&#8221; > &#8220;OK&#8221; to apply.
+Click “OK” > “OK” to apply.
   
 Now, we can select a table from the Visual FoxPro database in the OLE DB Source editor.
   
@@ -60,19 +60,19 @@ Select the DFT, and go to Data Flow designer page.
   
 Add an ADO NET Souce to the package. Please note, ADO NET is started to support from SSIS 2008. In other words, in SSIS 2005, there is no ADO NET source.
   
-Double-click the OLE DB Source, click &#8220;New&#8221; > &#8220;New&#8221; to create a connection to Visual FoxPro.
+Double-click the OLE DB Source, click “New” > “New” to create a connection to Visual FoxPro.
   
-In the Connection Manager, please select &#8220;Odbc Data Provider&#8221;
+In the Connection Manager, please select “Odbc Data Provider”
   
 Select the DSN we created before, and then test the connection, make sure it is successful.
   
-Click &#8220;OK&#8221; > &#8220;OK&#8221; to apply.
+Click “OK” > “OK” to apply.
   
 Now, we can select a table from the Visual FoxPro database in the ADO NET Source editor. If it is fail, please try using SQL Command mode.
   
 Additionally, we strongly recommend using the Visual FoxPro OLE DB provider as a replacement. Also, in design-time, pleaes set the package to run in 32-bit mode, otherwise the package will fail to run.
   
-Right-click the project > &#8220;Properties&#8221; > &#8220;Debugging&#8221; > Set &#8220;Run64Runtime&#8221; to be &#8220;False&#8221;.
+Right-click the project > “Properties” > “Debugging” > Set “Run64Runtime” to be “False”.
 
 The two drivers can be downloaded from:
   
@@ -86,9 +86,9 @@ See also this very helpful blog post by Todd McDermid
 
 Also important suggestion by Scott Stauffer from the comments
   
-If you run the package interactively in BIDS, right click the project and choose properties, choose Debugging on the left of the properties dialogue box, then change Run64BitRuntime from &#8220;True&#8221; to &#8220;False&#8221;. I would suspect this should work. 
+If you run the package interactively in BIDS, right click the project and choose properties, choose Debugging on the left of the properties dialogue box, then change Run64BitRuntime from “True” to “False”. I would suspect this should work. 
 
-To run the package from a SQLAgent Job, go to the properties of the step of a type SQL Server Integration Services Package, and click on the Execution Options tab, then choose &#8220;Use 32 bit runtime&#8221;
+To run the package from a SQLAgent Job, go to the properties of the step of a type SQL Server Integration Services Package, and click on the Execution Options tab, then choose “Use 32 bit runtime”
 
 This is also an important [relevant thread][3] 
 
@@ -96,9 +96,9 @@ Bellow is the original text of the blog, which is not really relevant anymore.
   
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
-In this short blog post I&#8217;d like to emphasize the importance of a decision which SQL Server version to install &#8211; 32 bit or 64 bit in 64 bit OS. If you install 64 bit version of SQL Server, be aware, that you may not be able to utilize data from many non SQL sources, that don&#8217;t have OleDB or ODBC driver in 64 bit version.
+In this short blog post I'd like to emphasize the importance of a decision which SQL Server version to install &#8211; 32 bit or 64 bit in 64 bit OS. If you install 64 bit version of SQL Server, be aware, that you may not be able to utilize data from many non SQL sources, that don't have OleDB or ODBC driver in 64 bit version.
 
-Say, you&#8217;ll get the following error attempting to invoke Import/Export wizard for VFPOleDB:
+Say, you'll get the following error attempting to invoke Import/Export wizard for VFPOleDB:
 
 TITLE: SQL Server Import and Export Wizard
   
@@ -126,7 +126,7 @@ OK
 
 Feature is not available. (Microsoft OLE DB Provider for Visual FoxPro)
 
-And if you try to expand this error, you&#8217;ll get this information:
+And if you try to expand this error, you'll get this information:
   
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
@@ -158,7 +158,7 @@ Just something to be aware of.
 
 [Here][5] is a reply by MSFT employee on this topic:
   
-_There is no 64-bit VFP OleDB provider. That is why we can&#8217;t import data from VFP to a 64-bit SQL Server. The workaround in the link you provided won&#8217;t work too, as it is using the VFP provider too. This can&#8217;t work in 64bit SQL Server.</p> 
+_There is no 64-bit VFP OleDB provider. That is why we can't import data from VFP to a 64-bit SQL Server. The workaround in the link you provided won't work too, as it is using the VFP provider too. This can't work in 64bit SQL Server.</p> 
 
 In order to work around the issue, we can firstly install a 32-bit SQL Server, import the data from VFP to this 32-bit SQL Server, and then synchronize the data from the 32-bit SQL Server to the 64-bit SQL Server.
   

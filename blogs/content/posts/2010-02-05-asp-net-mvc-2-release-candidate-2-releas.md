@@ -28,7 +28,7 @@ ASP.NET MVC 2 RC 2 has been released and is available for download.
   <img src="/wp-content/uploads/blogs/WebDev//mvc-logo-landing-page.png" alt="" title="" width="142" height="58" />
 </div>
 
-For those that don&#8217;t know what ASP.NET MVC 2 is. ASP.NET MVC 2 is a framework for developing highly testable and maintainable Web applications by leveraging the Model-View-Controller (MVC) pattern. The framework encourages developers to maintain a clear separation of concerns among the responsibilities of the application – the UI logic using the view, user-input handling using the controller, and the domain logic using the model. ASP.NET MVC applications are easily testable using techniques such as test-driven development (TDD).
+For those that don't know what ASP.NET MVC 2 is. ASP.NET MVC 2 is a framework for developing highly testable and maintainable Web applications by leveraging the Model-View-Controller (MVC) pattern. The framework encourages developers to maintain a clear separation of concerns among the responsibilities of the application – the UI logic using the view, user-input handling using the controller, and the domain logic using the model. ASP.NET MVC applications are easily testable using techniques such as test-driven development (TDD).
 
 The installation package includes templates and tools for Visual Studio 2008 SP 1 to increase productivity when writing ASP.NET MVC applications. For example, the Add View dialog box takes advantage of customizable code generation (T4) templates to generate a view based on a model object. The default project template allows the developer to automatically hook up a unit-test project that is associated with the ASP.NET MVC application.
   
@@ -57,4 +57,4 @@ The following changes have been made to existing types and members for the ASP.N
 
 You can download ASP.NET MVC 2 (Release Candidate 2) here: http://www.microsoft.com/downloads/details.aspx?FamilyID=7aba081a-19b9-44c4-a247-3882c8f749e3&displaylang=en
 
-Make sure to check Scott Guthrie&#8217;s blog post about ASP.NET MVC 2 RC 2 here: http://weblogs.asp.net/scottgu/archive/2010/02/05/asp-net-mvc-2-release-candidate-2-now-available.aspx
+Make sure to check Scott Guthrie's blog post about ASP.NET MVC 2 RC 2 here: http://weblogs.asp.net/scottgu/archive/2010/02/05/asp-net-mvc-2-release-candidate-2-now-available.aspx

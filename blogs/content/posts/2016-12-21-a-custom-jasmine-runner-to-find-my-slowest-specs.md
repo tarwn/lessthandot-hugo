@@ -17,21 +17,21 @@ tags:
   - phantomjs
 
 ---
-I&#8217;ve been playing around lately with a pure command-line Jasmine runner that doesn&#8217;t rely on a SpecRunner file to run tests. I work daily with a largish application that is well over 100K lines of front-end code and greater than 7000 front-end tests. Over time as the codebase and test count has grown, our Continuous Integration environment has continued to get slower. While build servers like Jenkins and TeamCity provide some analytics around slow tests, there is still some digging involved to identify the best targets for improvement, something I&#8217;m hoping a local runner can make easier.
+I've been playing around lately with a pure command-line Jasmine runner that doesn't rely on a SpecRunner file to run tests. I work daily with a largish application that is well over 100K lines of front-end code and greater than 7000 front-end tests. Over time as the codebase and test count has grown, our Continuous Integration environment has continued to get slower. While build servers like Jenkins and TeamCity provide some analytics around slow tests, there is still some digging involved to identify the best targets for improvement, something I'm hoping a local runner can make easier.
 
-Sample code for this post: [tools/jasmine2-runner/jasmine2-runner.js][1] (embedded in a sample project named &#8220;townthing&#8221;).
+Sample code for this post: [tools/jasmine2-runner/jasmine2-runner.js][1] (embedded in a sample project named “townthing”).
 
-I&#8217;ve taken a very small project I&#8217;ve used in prior posts on [Karma][2] and [WallabyJS][3] and written a reusable Jasmine console runner, relying on Phantom 2, that creates a set of statistics as it runs and tries to identify the slowest set of tests in the set without pushing it to a remote server.
+I've taken a very small project I've used in prior posts on [Karma][2] and [WallabyJS][3] and written a reusable Jasmine console runner, relying on Phantom 2, that creates a set of statistics as it runs and tries to identify the slowest set of tests in the set without pushing it to a remote server.
 
 ## What are my slowest tests?
 
-My test project is small enough that I won&#8217;t learn that much new, but it&#8217;s big enough to serve as an example.
+My test project is small enough that I won't learn that much new, but it's big enough to serve as an example.
 
 I have Phantom installed locally and in my path, so to run the tests I can do this:
 
 `phantomjs.exe .\tools\jasmine2-runner\jasmine2-runner.js "['../test/compass.spec', '../test/tile.spec', '../test/tree.spec', '../test/weather.spec']"`
 
-The sample code uses requirejs, so I&#8217;m passing in an array of specs that will be used in a define statement prior to running jasmine.
+The sample code uses requirejs, so I'm passing in an array of specs that will be used in a define statement prior to running jasmine.
 
 The results from running this look like:
 
@@ -74,13 +74,13 @@ There are several things we learn from this run:
       * All of those 15% belong to the same top-level suite
       * There is ~.017s between the total from the specs and the overall run time</ul> 
     
-    I don&#8217;t know if that ~0.017 is normal, but I&#8217;ve seen some fairly large numbers sneak our of other codebases where beforeEach logic was set at entirely too high a level, code was running outside the specs, and so on and in this case it&#8217;s low enough I wouldn&#8217;t focus on it. My first stop would be seeing what is going on with the tile class and suite, since that feels like more of a systematic issue across the whole suite than an individual test issue.
+    I don't know if that ~0.017 is normal, but I've seen some fairly large numbers sneak our of other codebases where beforeEach logic was set at entirely too high a level, code was running outside the specs, and so on and in this case it's low enough I wouldn't focus on it. My first stop would be seeing what is going on with the tile class and suite, since that feels like more of a systematic issue across the whole suite than an individual test issue.
     
     ## How it works (and how to re-use it)
     
-    This runner is not ready for drop-in use with another project, but it&#8217;s also not that far off. 
+    This runner is not ready for drop-in use with another project, but it's also not that far off. 
     
-    In a nutshell, the script opens a Phantom page with minimal HTML and no URL. It then injects in jasmine, [a jasmine bootloader for RequireJS][4], a custom console runner, requireJS, a requireJS configuration, and then a script that require()&#8217;s the passed in spec list before running window.execute to run the tests. 
+    In a nutshell, the script opens a Phantom page with minimal HTML and no URL. It then injects in jasmine, [a jasmine bootloader for RequireJS][4], a custom console runner, requireJS, a requireJS configuration, and then a script that require()'s the passed in spec list before running window.execute to run the tests. 
     
     The custom console runner takes care of capturing results from the tests and passes them back via the console log, which is captured in the outer phantom script for processing. The top-level suite output flows out as each suite is finished, but the stats wait until the full suite has run to minimize delays that show up if you interact with the console too heavily/frequently.
     
@@ -210,15 +210,15 @@ Runner.execute(function(result){
     
 ```
 
-    Customizing this for other projects is relatively easy, and I&#8217;ll probably work on making it easier to reuse as a I have more time. Right now the main things you need to do are:
+    Customizing this for other projects is relatively easy, and I'll probably work on making it easier to reuse as a I have more time. Right now the main things you need to do are:
     
       * Replace the jasmine paths with ones that make sense for your project
-      * Replace the &#8220;inject additional required files&#8221; section with the additional dependencies you need
-      * Update the &#8220;execute provided spec list&#8221; section to match how you run tests
+      * Replace the “inject additional required files” section with the additional dependencies you need
+      * Update the “execute provided spec list” section to match how you run tests
     
     You will also want to download the runner, console-reporter, and jasmine bootloader from [github][5].
     
-    For instance, if you are using a basic SpecRunner.html file with the spec and source files listed in script tags, you could drop these in the &#8220;inject additional required files&#8221; section and replace the &#8220;execute provided spec list&#8221; with just a single call to &#8220;windows.executeTests()&#8221;.
+    For instance, if you are using a basic SpecRunner.html file with the spec and source files listed in script tags, you could drop these in the “inject additional required files” section and replace the “execute provided spec list” with just a single call to “windows.executeTests()”.
 
  [1]: https://github.com/tarwn/townthing/blob/master/tools/jasmine2-runner/jasmine2-runner.js
  [2]: /index.php/webdev/uidevelopment/javascript/continuous-javascript-testing-with-karma/ "Continuous Javascript Testing with Karma "

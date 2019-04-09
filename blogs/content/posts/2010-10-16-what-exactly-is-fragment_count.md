@@ -93,7 +93,7 @@ inner join cte  SN on SN.ID  = S.ID + 1 and SN.PagePID <> S.PagePID + 1
 
 
 ```
-The query might not give the exact count of fragments in the table. In my tests it returned every time 1 or 2 less fragments(probably i am missing something else). This will give the Ending Page Number of the current fragment and First Page Number of Next Fragment. If you look at the values of columns &#8220;ThisFragmentEndPage&#8221;,&#8221;NextFragmentBeginPage&#8221;, for the first few rows they differ by more than 1 page, and for remaining rows, there is exactly one page difference. Interesting fact is that missing one page is actually allocated to table. You can check it in sp_tablepages table. But it is assigned to different Level. 
+The query might not give the exact count of fragments in the table. In my tests it returned every time 1 or 2 less fragments(probably i am missing something else). This will give the Ending Page Number of the current fragment and First Page Number of Next Fragment. If you look at the values of columns “ThisFragmentEndPage”,”NextFragmentBeginPage”, for the first few rows they differ by more than 1 page, and for remaining rows, there is exactly one page difference. Interesting fact is that missing one page is actually allocated to table. You can check it in sp_tablepages table. But it is assigned to different Level. 
 
 In the above example, the fragmentation is not because of Page Splits. It is based on he way SQL Storage engine allocates pages while inserting rows.
 

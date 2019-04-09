@@ -64,7 +64,7 @@ Security isn’t that complex. Really, it isn’t. They need SELECT on this so y
 
 We have far too many good tools like CLR now to need that bugger. Let’s start to use them and just take this thing out for good. Bring back the blank SA passwords if you leave this thing open to people executing it. 
 
-I&#8217;m tagging Wendy Pastrick ([Twitter][1] | [Blog][2]), Aaron Lowe ([Twitter][3] | [Blog][4]) and Jes Borland ([Twitter][5] | [Blog][6])
+I'm tagging Wendy Pastrick ([Twitter][1] | [Blog][2]), Aaron Lowe ([Twitter][3] | [Blog][4]) and Jes Borland ([Twitter][5] | [Blog][6])
 
  [1]: http://twitter.com/wendy_dance
  [2]: http://wendyverse.blogspot.com/

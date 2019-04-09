@@ -15,29 +15,29 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Securing data services is part of a DBA&#8217;s critical tasks that should be performed. This goes beyond users, roles and schemas though. A DBA must take into account the concept of software installations in a growing and dynamic environment that often pose serious security threats. It&#8217;s very common for software to ship with the desktop version of SQL Server (MSDE2000 or SQL Express). This can be prepackaged and installed, configured and user created on the fly during installation. Most of us with developer experience know exactly how to do this and how easy it has made our jobs as developers at times. You can package up your very own free database server with your application and with a simple command and a small script, configure and have it rolling in no time. 
+Securing data services is part of a DBA's critical tasks that should be performed. This goes beyond users, roles and schemas though. A DBA must take into account the concept of software installations in a growing and dynamic environment that often pose serious security threats. It's very common for software to ship with the desktop version of SQL Server (MSDE2000 or SQL Express). This can be prepackaged and installed, configured and user created on the fly during installation. Most of us with developer experience know exactly how to do this and how easy it has made our jobs as developers at times. You can package up your very own free database server with your application and with a simple command and a small script, configure and have it rolling in no time. 
 
-Given my change in careers and moving to the DBA side of things I quickly started realizing how bad this can be for the environment all together and honestly how bad some of the developers of these prepackaged solutions can really get. The age old example is the sa account usage and weak passwords. Today I did my monthly audit of the instances on my network and not all that surprising I found an unknown instance that was installed by another network administrator. The SQL Server instance was the desktop version and was prepackaged. When I asked the admin about it, he didn&#8217;t even know he installed it. So why was it such an issue? The developer that packaged the MSDE used sa and left the password blank. There are several reasons why this is bad. A few of you could name right away is. Gaining access to that database servers databases and having unrestricted permissions to them. The one I worry most about is linked servers and other data source connections you can make while in there. With a prepackaged MSDE installed under the radar, you can gain access to anything and everything.
+Given my change in careers and moving to the DBA side of things I quickly started realizing how bad this can be for the environment all together and honestly how bad some of the developers of these prepackaged solutions can really get. The age old example is the sa account usage and weak passwords. Today I did my monthly audit of the instances on my network and not all that surprising I found an unknown instance that was installed by another network administrator. The SQL Server instance was the desktop version and was prepackaged. When I asked the admin about it, he didn't even know he installed it. So why was it such an issue? The developer that packaged the MSDE used sa and left the password blank. There are several reasons why this is bad. A few of you could name right away is. Gaining access to that database servers databases and having unrestricted permissions to them. The one I worry most about is linked servers and other data source connections you can make while in there. With a prepackaged MSDE installed under the radar, you can gain access to anything and everything.
 
 After saying all that I wanted to post how I audit the network for instances and maintain the knowledge of what I have out there and what may be potentially a problem.
 
 First I use SQL Ping which can be found http://www.sqlsecurity.com/Tools/FreeTools/tabid/65/Default.aspx
 
-SQL Ping isn&#8217;t a secret and most of you probably know or have used it. It seems to be the easiest and free instance discovery tool out there. There is a good article over on SQL Server Central that goes over the usage @ http://www.sqlservercentral.com/articles/64016/
+SQL Ping isn't a secret and most of you probably know or have used it. It seems to be the easiest and free instance discovery tool out there. There is a good article over on SQL Server Central that goes over the usage @ http://www.sqlservercentral.com/articles/64016/
 
 In most cases your will know you facilities IP schema so it makes searches fairly simple. Example would be if you have your corporate location on 192.168.61.xx and your primary manufacturing location on 192.168.71.xx. For SQL Ping all we need to do is the following then to search those networks for existing SQL Server instances.
 
 Sqlping3cl.exe –scantype range –startIP 192.168.61.0 –endIP 192.168.61.254 –output instance\_searchcorporate\_location.csv
 
-This outputs a file listing all found instances. The primary data I&#8217;m worried about for the task of security audits are the columns ServerIP, ServerName, InstanceName, TrueVersion and Details.
+This outputs a file listing all found instances. The primary data I'm worried about for the task of security audits are the columns ServerIP, ServerName, InstanceName, TrueVersion and Details.
 
 This data gives me plenty to compare older audits with this one and let me know what may be a potential problem or a new instance that comes up without the DBA being notified. 
 
 None of this is useful if you ask me though unless you can automate it. Seeing as SQL Ping is a command line utility your options are wide. You could use windows task scheduler to run the utility, or you can keep the entire process on the instance by scheduling it through a job.
 
-The SSIS package is quite large on my job server due to error handling and script steps to validate files, SQL Ping functionality and a few other things that makes it lengthy. In a real situation you&#8217;re also going to want to make it dynamic. Pass variables in the SSIS around to call up SQL Ping to search difference schemas, instances and file locations. You can also use the argument IPList to specify the IPs to search. Make sure firewalls aren&#8217;t getting in your way by running SQL Ping first from the command prompt initially.
+The SSIS package is quite large on my job server due to error handling and script steps to validate files, SQL Ping functionality and a few other things that makes it lengthy. In a real situation you're also going to want to make it dynamic. Pass variables in the SSIS around to call up SQL Ping to search difference schemas, instances and file locations. You can also use the argument IPList to specify the IPs to search. Make sure firewalls aren't getting in your way by running SQL Ping first from the command prompt initially.
   
-For an example, I&#8217;m going to create a new package to run off a small subset of IP&#8217;s and static paths.
+For an example, I'm going to create a new package to run off a small subset of IP's and static paths.
   
 First task bring over two send email tasks which will act as our success and failure notifications. Add the SMTP connection to the connection manager and go ahead and configure the tasks to point to your local or remote SMTP server.
   
@@ -66,11 +66,11 @@ Public Sub Main()
         Dts.TaskResult = Dts.Results.Success
     End Sub
 ```
-Replace the xx with your own structure. There are some things I need to point out with SQLPing 3.0 command line. I have problems putting paths in such as C:folderfile.csv. I have a posting up on sqlsecurity.com and Chip has made some replies. Seeing as the following command works fine I haven&#8217;t pulled SQL Ping 3.0 from this process. The new version is still a very good tool that based all my tests for stability. I thank Chip again for the hard work and offering of SQL Ping to the community. If you have problems you can always comment here as well for help or go to the sqlsecurity.com community.
+Replace the xx with your own structure. There are some things I need to point out with SQLPing 3.0 command line. I have problems putting paths in such as C:folderfile.csv. I have a posting up on sqlsecurity.com and Chip has made some replies. Seeing as the following command works fine I haven't pulled SQL Ping 3.0 from this process. The new version is still a very good tool that based all my tests for stability. I thank Chip again for the hard work and offering of SQL Ping to the community. If you have problems you can always comment here as well for help or go to the sqlsecurity.com community.
 
 This is the working command for directory paths other than the root:
 
-c: sqlping3cl.exe &#8220;-scantype range -startIP 192.168.xx.xx -EndIP 192.168.xx.xx -Output instance\_searchcorporate\_location.csv
+c: sqlping3cl.exe “-scantype range -startIP 192.168.xx.xx -EndIP 192.168.xx.xx -Output instance\_searchcorporate\_location.csv
 
 Next step in the SSIS package is to edit the second script task. This step will validate the file creation by SQL Ping and base the flow for the next step on the existence of the file. 
 
@@ -116,7 +116,7 @@ Configure the flat file source with the flat file connection. Verify the mapping
   <img src="/wp-content/uploads/blogs/DataMgmt//mapp_view.gif" alt="" title="" />
 </div>
 
-This ensures they will pump to SQL accurately and without issues. Connect the conversion to the OLEDB destination and open the destination editor. Select the SQL connection you created earlier and then in the table listing find your table. Verify in mappings then that your converted values are mapped. By default you will probably get the original columns. I typically check &#8220;Keep nulls&#8221; for these types of tasks also. Sense we rely on external processes that are out of our control the opportunity for null values is more probable. 
+This ensures they will pump to SQL accurately and without issues. Connect the conversion to the OLEDB destination and open the destination editor. Select the SQL connection you created earlier and then in the table listing find your table. Verify in mappings then that your converted values are mapped. By default you will probably get the original columns. I typically check “Keep nulls” for these types of tasks also. Sense we rely on external processes that are out of our control the opportunity for null values is more probable. 
 
 Go back the control flow tab and connect all your steps to the email tasks so notifications go out on success and failures. You should end up with something similar to 
 

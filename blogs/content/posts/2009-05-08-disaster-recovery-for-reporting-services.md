@@ -13,7 +13,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-One of the must have tools for any DBA that has one or multiple SSRS instances of SSRS running, is the RSScripter tool written by Jasper Smith. I can&#8217;t say enough about how critical this tool has been to my success in administrating and successfully providing a 100% report uptime goal. There are several key tasks this tool accomplishes for me without much more time consuming scripting projects. Without them it would be a painstaking task to accomplish backing up SSRS and shipping offsite.
+One of the must have tools for any DBA that has one or multiple SSRS instances of SSRS running, is the RSScripter tool written by Jasper Smith. I can't say enough about how critical this tool has been to my success in administrating and successfully providing a 100% report uptime goal. There are several key tasks this tool accomplishes for me without much more time consuming scripting projects. Without them it would be a painstaking task to accomplish backing up SSRS and shipping offsite.
 
 Today I thought I would share my DR setup for an SSRS instance primarily revolving around the reports. 
 
@@ -41,15 +41,15 @@ Open cmd and change directory so you are in context to run the RS utility.
 
 My recommendation is to run the samples rss provided for publishing. This will give you a place to troubleshoot security or any other issues before hand. This will take out your coding of the rss as a possible cause for failures if you do some other coding. It will also troubleshooting the RSScripter cmd creations before you start creating and trying to send hundreds of objects down the pipe.
 
-Once you know RS is publishing ok don&#8217;t forget to remove the test off the instance. In the RSScripter readme file there is a provided sample of automating the scripting and publishing tasks. This sample is pretty well formed and can really be used out of the box with minor changes. The author has even provided the RSS code to script out your roles. Basically not only has the work been done in scripting the reports and such, but the work for automating everything. I&#8217;m not going to go into the permmision sets and such in this blog but hope to get a follow up quickly on that task. Security in my DR solution is maintained differently than the primary sources of course. This means I change things a bit so I don&#8217;t want my report roles and such sent down. Let&#8217;s just get out objects over there for now so you have a recovery point.
+Once you know RS is publishing ok don't forget to remove the test off the instance. In the RSScripter readme file there is a provided sample of automating the scripting and publishing tasks. This sample is pretty well formed and can really be used out of the box with minor changes. The author has even provided the RSS code to script out your roles. Basically not only has the work been done in scripting the reports and such, but the work for automating everything. I'm not going to go into the permmision sets and such in this blog but hope to get a follow up quickly on that task. Security in my DR solution is maintained differently than the primary sources of course. This means I change things a bit so I don't want my report roles and such sent down. Let's just get out objects over there for now so you have a recovery point.
 
 First command is to actually script everything. This can be accomplished with the RSScripterCMD which is included with the RSScripter.exe (GUI version)
 
 Here is how a sample command would look
   
-c:tempreportsrsscriptercmd /s:http://localhost/ReportServer/ReportService2005.asmx /c:&#8221;c:tempreportsRSScripter.cfg&#8221; /l:&#8221;c:tempreportsrsscripterlog.txt&#8221;
+c:tempreportsrsscriptercmd /s:http://localhost/ReportServer/ReportService2005.asmx /c:”c:tempreportsRSScripter.cfg” /l:”c:tempreportsrsscripterlog.txt”
 
-You&#8217;re Catalog.xml file should look like this
+You're Catalog.xml file should look like this
 
 ```xml
 <?xml version="1.0" ?>
@@ -102,7 +102,7 @@ ECHO TIMEOUT        = %TIMEOUT% >>%LOGFILE%
 ECHO RS             = %RS% >>%LOGFILE%
 ECHO. >>%LOGFILE%
 ```
-Really the only thing you would need to do is change the REPORTSERVER variable to the remote instance and run this batch file. It will deploy based on the RSS scripts in each directory the objects in the order they are required. This is typically, Folder, Data Source and Report at a minimum. I&#8217;m not all that great with recursive loops through directories in batch so I wrote a VBScript script to handle the replace. Why not really? The file is created already and we can simply read the contents in, replace the path and then run the cmd. If you want to write some other method to simplify the number of objects being called, then go for it. This to me just seemed as simple sense the work has already been done.
+Really the only thing you would need to do is change the REPORTSERVER variable to the remote instance and run this batch file. It will deploy based on the RSS scripts in each directory the objects in the order they are required. This is typically, Folder, Data Source and Report at a minimum. I'm not all that great with recursive loops through directories in batch so I wrote a VBScript script to handle the replace. Why not really? The file is created already and we can simply read the contents in, replace the path and then run the cmd. If you want to write some other method to simplify the number of objects being called, then go for it. This to me just seemed as simple sense the work has already been done.
 
 Here is the code for AlterDestSRV.vbs
 
@@ -138,8 +138,8 @@ C:tempreportsrsscriptercmd /s:http://localhost/ReportServer/ReportService2005.as
 Call c:tempreportsAlterDestSRV.vbs "C:tempreportsrs scripter load all items.cmd" "localhost" "remotehost"
 C:tempreportsRS Scripter Load All Items.cmd
 ```
-Depending on the dynamic nature of your reporting instances you may want to schedule these to run daily, weekly or monthly. Some things to think about and consider in your DR solution for SSRS are, do you want to overwrite objects for each iteration of the replication and also, how should you handle the data sources in general. Typically if you fail over to your hot site, you had a major failure on the primary. This means your data sources are probably not going to be up anymore. In my SSRS instances, data sources are controlled completely by the DBA (me). I hand out the DS&#8217;s to the developers and do not allow overwriting at all. Sense this is well maintained, I create the data sources on both sites when the need is there for a new one. You can alter the data sources with RSS though. I will show you how to do this in another blog on RSS in general. You may get all you need just from RSScripter&#8217;s readme though. It was put together very well.
+Depending on the dynamic nature of your reporting instances you may want to schedule these to run daily, weekly or monthly. Some things to think about and consider in your DR solution for SSRS are, do you want to overwrite objects for each iteration of the replication and also, how should you handle the data sources in general. Typically if you fail over to your hot site, you had a major failure on the primary. This means your data sources are probably not going to be up anymore. In my SSRS instances, data sources are controlled completely by the DBA (me). I hand out the DS's to the developers and do not allow overwriting at all. Sense this is well maintained, I create the data sources on both sites when the need is there for a new one. You can alter the data sources with RSS though. I will show you how to do this in another blog on RSS in general. You may get all you need just from RSScripter's readme though. It was put together very well.
 
 The last step is to throw the calls into a SQL Agent job with a Operating System type step. Then schedule away.
 
-As always I&#8217;m open to new tools and better methods so please comment here and let us all know of them.
+As always I'm open to new tools and better methods so please comment here and let us all know of them.

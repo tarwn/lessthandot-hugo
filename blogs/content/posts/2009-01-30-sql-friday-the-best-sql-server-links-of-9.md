@@ -31,15 +31,15 @@ A while back someone posted on the ITKE forum asking what Indexes where, and wha
 
 In the basic view, an Index is a subset of columns from a table. This subset of columns is stored in a sorted order so that the SQL Server can more quickly find the records based on the data in the index.
 
-**[New Vendor Interview with an &#8220;annoying&#8221; DBA][4]**
+**[New Vendor Interview with an “annoying” DBA][4]**
   
-Once you have been a DBA for any length of time, you will encounter the situation of a new vendor coming in with software that has a database back end. Wherever I am working or helping, I like to interject the idea of &#8220;DBA Input&#8221; as early into the process as possible and I go through a discussion with them.
+Once you have been a DBA for any length of time, you will encounter the situation of a new vendor coming in with software that has a database back end. Wherever I am working or helping, I like to interject the idea of “DBA Input” as early into the process as possible and I go through a discussion with them.
 
 **[When did DBCC CHECKDB last run on my databases?][5]**
   
-I&#8217;ve seen this question a few times on the forums, and unfortunately there never is a really good answer that is easy to use. SQL Server 2000 didn&#8217;t track this information internally, and even though an internal tracking mechanism was added to SQL Server 2005, it isn&#8217;t the easiest thing to get for every database in a large environment
+I've seen this question a few times on the forums, and unfortunately there never is a really good answer that is easy to use. SQL Server 2000 didn't track this information internally, and even though an internal tracking mechanism was added to SQL Server 2005, it isn't the easiest thing to get for every database in a large environment
 
-**[Hot It Works: SQL Server SuperLatch&#8217;ing / Sub-latches][6]**
+**[Hot It Works: SQL Server SuperLatch'ing / Sub-latches][6]**
   
 SQL Server Books Online uses the terms super latches and sub-latch to describe them. For example the SQL Server:Latches performance counter group calls them super latches. The DVM that exposes the super latches use the term sub-latch, sys.dm\_os\_sublatches. They are the same internal structure simply exposed under separate terms.
 
@@ -51,7 +51,7 @@ Interesting post make sure you read the comments
   
 I’d be willing to place a bet that on any given week, I’ll field at least one question on the MSDN Forums that reads a bit like this:
 
-&#8220;I need to create a unique key for a table using a Stored Procedure|User-Defined Function. Please do NOT suggest IDENTITY.&#8221;
+“I need to create a unique key for a table using a Stored Procedure|User-Defined Function. Please do NOT suggest IDENTITY.”
 
 
 

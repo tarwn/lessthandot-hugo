@@ -22,15 +22,15 @@ tags:
 ---
 This is a quick post about a question that had to do with time formatting. This question was asked in our [SQL Server programming forum][1] today
 
-> I don&#8217;t see a format of hh:mm AM/PM only 
+> I don't see a format of hh:mm AM/PM only 
 > 
 > Do we need to do it using datepart or how to get only hour:minute am/pm format ?
 
 The question can be found here: [Formatting time only][2]. SQL Server has a bunch of formats for converting datetime values, a list of all of them can be found in Books On Line here: [CAST and CONVERT (Transact-SQL)][3]
 
-So let&#8217;s say for example that you have this datetime &#8216;2010-03-24 16:20:01.800&#8217; and you want to show 4:20 PM, how can you do that?
+So let's say for example that you have this datetime &#8216;2010-03-24 16:20:01.800' and you want to show 4:20 PM, how can you do that?
 
-Let&#8217;s take a look, if you are on SQL Server 2008 you can convert to time
+Let's take a look, if you are on SQL Server 2008 you can convert to time
 
 sql
 DECLARE @t TIME = '2010-03-24 16:20:01.800'
@@ -54,7 +54,7 @@ SELECT CONVERT(VARCHAR(30),@t,100)
   
 4:20PM
 
-That gives me 4:20PM. But how can I add a space between 0 and PM? Say hello to my little friend [STUFF][4]. In order to add a space you need to start at position 5 and add a space and don&#8217;t do any replacement.
+That gives me 4:20PM. But how can I add a space between 0 and PM? Say hello to my little friend [STUFF][4]. In order to add a space you need to start at position 5 and add a space and don't do any replacement.
 
 Take a look at what I mean
 
@@ -66,7 +66,7 @@ SELECT STUFF('4:20PM',5,0,' ')
   
 4:20 PM
 
-Now let&#8217;s use the code from before and wrap the STUFF function around it
+Now let's use the code from before and wrap the STUFF function around it
 
 sql
 DECLARE @t TIME = '2010-03-24 16:20:01.800'

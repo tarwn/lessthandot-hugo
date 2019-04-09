@@ -90,7 +90,7 @@ There are a lot of constructs in SQL that help to assist us with handing errors.
 
  
 
-To see more details on these error handling techniques you can catch my new presentation on error handling titled &#8220;We ain&#8217;t affraid of no errors&#8221;, at the St. Louis SQL Server User Group meeting on June 14<sup>th</sup>, 2011 and after the presentation my slide deck will be available at [http://www.stlssug.org][1] Hope to see you there!
+To see more details on these error handling techniques you can catch my new presentation on error handling titled “We ain't affraid of no errors”, at the St. Louis SQL Server User Group meeting on June 14<sup>th</sup>, 2011 and after the presentation my slide deck will be available at [http://www.stlssug.org][1] Hope to see you there!
 
  
 

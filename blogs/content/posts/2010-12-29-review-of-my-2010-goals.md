@@ -31,15 +31,15 @@ Watch more television
   
 Play more computer games
 
-Now let&#8217;s see how I did
+Now let's see how I did
 
 ## Upgrade our servers to SQL Server 2008
 
-This was done and we are all on SQL Server 2008 now. No more replication, we can now use all the fancy T-SQL&#8230;.everyone is happy
+This was done and we are all on SQL Server 2008 now. No more replication, we can now use all the fancy T-SQL….everyone is happy
 
 ## Read 2 books per month
 
-I didn&#8217;t quite make it but I also read parts of technical books, I decided not to include those since I didn&#8217;t finish those. Here is the list of books that I did finish.
+I didn't quite make it but I also read parts of technical books, I decided not to include those since I didn't finish those. Here is the list of books that I did finish.
 
 **Stephen King**: [Just After Sunset][2]
   
@@ -61,9 +61,9 @@ Freedom is the follow up to Daemon and has all the elements that made Daemon suc
   
 This is probably the best book by Dan Brown. It has a very interesting ending, highly recommended.
 
-**Michael Pollan**: [In Defense of Food: An Eater&#8217;s Manifesto][8]
+**Michael Pollan**: [In Defense of Food: An Eater's Manifesto][8]
   
-Read this on my way to the 2010 MVP summit. If people would read this book they wouldn&#8217;t eat all that modified stuff that the stores are filled with nowadays
+Read this on my way to the 2010 MVP summit. If people would read this book they wouldn't eat all that modified stuff that the stores are filled with nowadays
 
 **Stephenie Meyer**: [Twilight][9]
   
@@ -73,13 +73,13 @@ Stephenie Meyer: [Eclipse][11]
   
 Stephenie Meyer: [Breaking Dawn][12]
 
-Why oh why did I start this series, the first two books were fine but then it became ridiculous. Renesmee really&#8230;? Renesmee is a vampire/human hybrid member of the Olympic Coven. She is the daughter of Edward Cullen and Bella Swan, and the imprintee of Jacob Black
+Why oh why did I start this series, the first two books were fine but then it became ridiculous. Renesmee really…? Renesmee is a vampire/human hybrid member of the Olympic Coven. She is the daughter of Edward Cullen and Bella Swan, and the imprintee of Jacob Black
   
-Of course after I &#8216;invested&#8217; all the time into the books so far I had no choice to finish it. I do not recommend this
+Of course after I &#8216;invested' all the time into the books so far I had no choice to finish it. I do not recommend this
 
 **Peter Benchley**: [Jaws][13]
   
-The movie was good, the book is even better. The book has a chapter which is not in the movie, in this chapter Brody&#8217;s wife and the scientist have an affair. I highly recommended this book.
+The movie was good, the book is even better. The book has a chapter which is not in the movie, in this chapter Brody's wife and the scientist have an affair. I highly recommended this book.
 
 **Steven D. Levitt and Stephen J. Dubner**: [Freakonomics: A Rogue Economist Explores the Hidden Side of Everything][14]
   
@@ -99,9 +99,9 @@ This was very interesting, the book has a nice history about medicine and hospit
   
 A fun book if you want to escape from reality.
 
-**Frank W. Abagnale**: [The Art of the Steal: How to Protect Yourself and Your Business from Fraud, America&#8217;s #1 Crime][18]
+**Frank W. Abagnale**: [The Art of the Steal: How to Protect Yourself and Your Business from Fraud, America's #1 Crime][18]
   
-Frank Abagnale is the person who wrote &#8220;Catch me if you can&#8221;. This book details how fraud happens and what can be done to stop it. Now more important than ever with identity theft and lost data all over the place. A must read.
+Frank Abagnale is the person who wrote “Catch me if you can”. This book details how fraud happens and what can be done to stop it. Now more important than ever with identity theft and lost data all over the place. A must read.
 
 **Ron Suskind**: [The Way of the World: A Story of Truth and Hope in an Age of Extremism][19]
   
@@ -113,7 +113,7 @@ A very interesting book, yes Tiger Wood is good..not because he has talent but b
 
 **Bill Bryson**: [The Lost Continent: Travels in Small-Town America][21]
   
-I love Bill Bryson&#8217;s writing. The first book I read by Bill Bryson was A walk in the woods and I loved it. This book is funny, it is entertaning and you will also learn some facts about the USA. Highly recommended.
+I love Bill Bryson's writing. The first book I read by Bill Bryson was A walk in the woods and I loved it. This book is funny, it is entertaning and you will also learn some facts about the USA. Highly recommended.
 
 **Ian Stirk**: <a href=""http://www.amazon.com/gp/product/1935182730?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1935182730">SQL Server DMVs in Action: Better Queries with Dynamic Management Views</a>
   
@@ -147,7 +147,7 @@ My favorite show is probably Boardwalk Empire
 
 ## Play more computer games
 
-Here I failed miserably..pretty much the only game I played this year was Angry Birds on my wife&#8217;s Droid X
+Here I failed miserably..pretty much the only game I played this year was Angry Birds on my wife's Droid X
   
 
   

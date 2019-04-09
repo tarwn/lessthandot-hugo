@@ -23,7 +23,7 @@ There is code available to take advantage of the sp_replwritetovarbin heap overf
   
 In a default configuration, the sp_replwritetovarbin stored procedure is accessible by anyone. To disable this proc you can run this as an admin on the box
   
-Before disabling this pro read BradC&#8217;s comment so that you do not break replication
+Before disabling this pro read BradC's comment so that you do not break replication
 
 sql
 execute master.dbo.sp_dropextendedproc 'sp_replwritetovarbin'

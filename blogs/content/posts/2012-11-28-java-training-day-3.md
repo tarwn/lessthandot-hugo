@@ -37,13 +37,13 @@ Public
   
 Accessible from code in any package
 
-We covered constructors, what its function is and that the compiler will create an empty constructor if you don&#8217;t create your own, the constructor has the same name as the class. Java doesn&#8217;t have a destructor since it is garbage collected but you can implement a finalize method
+We covered constructors, what its function is and that the compiler will create an empty constructor if you don't create your own, the constructor has the same name as the class. Java doesn't have a destructor since it is garbage collected but you can implement a finalize method
 
 We also looked at nested classes, basically a class that is declared inside another class. POJOs (Plain Old Java Objects) were also explained, a good example would be a JavaBean that you would use in JSP, JavaBeans have public get and set methods and also a public no-argument constructor.
 
 Next up we looked at the javadoc utility, this utility is used to create documentation in a standard format.
 
-Even though Java doesn&#8217;t have multiple inheritance like c++, you can &#8216;inherit&#8217; from more than one interface. An interface is basically a code contract, when you inherit (implement) an interface you have to implement all the methods defined in the interface. An interface does not have an implementation, it has methods with empty bodies, it is up to the class that implements the interface to create the method code
+Even though Java doesn't have multiple inheritance like c++, you can &#8216;inherit' from more than one interface. An interface is basically a code contract, when you inherit (implement) an interface you have to implement all the methods defined in the interface. An interface does not have an implementation, it has methods with empty bodies, it is up to the class that implements the interface to create the method code
 
 We looked at upcasting (casting to a superclass type) and downcasting (casting to a subclass, this will only work if the object is a compatible type)
   
@@ -116,9 +116,9 @@ Weekends are best.
   
 Weekends are best.
 
-Who wrote that&#8230;Monday is my favorite day 🙂
+Who wrote that…Monday is my favorite day 🙂
 
-That is it for today&#8230;tomorrow we will start on generics which of course in java is just syntactic sugar unlike in c#, java uses a technique called erasure&#8230;..the generic type is erased at runtime
+That is it for today…tomorrow we will start on generics which of course in java is just syntactic sugar unlike in c#, java uses a technique called erasure…..the generic type is erased at runtime
 
 From the Java docs
 

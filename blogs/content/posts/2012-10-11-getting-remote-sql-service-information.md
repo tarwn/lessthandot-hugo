@@ -20,7 +20,7 @@ tags:
   - sql server
 
 ---
-Every DBA managing multiple SQL Servers with multiple instances will know the issues with developers, project managers and others that don&#8217;t know the importance of the instance name when they request you to take some action.
+Every DBA managing multiple SQL Servers with multiple instances will know the issues with developers, project managers and others that don't know the importance of the instance name when they request you to take some action.
   
 So you can start some e-mail ping pong to get the instance name, open the server documentation or RDP to the server to find the installed instances. But in the time you would need to do this you can write yourself a PowerShell script to get the remote service information.
   
@@ -42,7 +42,7 @@ But since I only need SQL Server information I will filter out all the other ser
 Get-Service -ComputerName <SQLServerHostName> -name "MSSQL*"
 ```
 
-As you can see we can now see the installed instances of SQL Server on our remote server. Only if the Instance name is too long you will see &#8230; at some point:
+As you can see we can now see the installed instances of SQL Server on our remote server. Only if the Instance name is too long you will see … at some point:
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/axel8s/PSSQLService2.PNG?mtime=1349948026"><img alt="" src="/wp-content/uploads/users/axel8s/PSSQLService2.PNG?mtime=1349948026" width="575" height="138" /></a>
@@ -74,6 +74,6 @@ Executing the script will look like this:
   <a href="/wp-content/uploads/users/axel8s/PSSQLService4.PNG?mtime=1349948043"><img alt="" src="/wp-content/uploads/users/axel8s/PSSQLService4.PNG?mtime=1349948043" width="983" height="253" /></a>
 </div>
 
-Et voila, another point I can take of my list of items I can&#8217;t do on a Server Core&#8230;
+Et voila, another point I can take of my list of items I can't do on a Server Core…
 
  [1]: /index.php/SysAdmins/OS/Windows/getting-remote-disk-information-with

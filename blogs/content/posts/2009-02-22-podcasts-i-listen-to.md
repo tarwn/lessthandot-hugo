@@ -53,7 +53,7 @@ This is great to listen to on the treadmill since it is not a serious show
 
 **[Windows Weekly][11]**
   
-A weekly show with Paul Thurrott of the [Super Site for Windows][12]. Paul Thurrott isn&#8217;t a Microsoft fanboy and doesn&#8217;t hold back, if he thinks a Microsoft product sucks he will let you know.
+A weekly show with Paul Thurrott of the [Super Site for Windows][12]. Paul Thurrott isn't a Microsoft fanboy and doesn't hold back, if he thinks a Microsoft product sucks he will let you know.
 
 **[Herding Code][13]**
   

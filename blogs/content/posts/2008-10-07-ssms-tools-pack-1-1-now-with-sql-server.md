@@ -29,7 +29,7 @@ Current window history is a dockable window that show queries executed in a curr
 Search for a value in all non-binary columns in all tables in the database
 
 &#8211; [**<font color="#004080">Uppercase/Lowercase keywords</font>**][2]:              
-Set all keywords to uppercase or lowercase letters. Custom keywords can be added. Doesn&#8217;t check comments, text and quoted text anymore. 
+Set all keywords to uppercase or lowercase letters. Custom keywords can be added. Doesn't check comments, text and quoted text anymore. 
 
 &#8211; [**<font color="#004080">Run one script on multiple databases</font>**][3]:              
 Run selected or full window text on selected databases on the currently connected server. 
@@ -46,8 +46,8 @@ Generate insert statement from your data.
 &#8211; [**<font color="#004080">Text document Regions and Debug sections</font>**][7]:               
 Add Regions and Debug section in your scripts to ease development experience. 
 
-&#8211; [**<font color="#004080">Running custom scripts from Object explorer&#8217;s Context menu</font>**][8]:               
-Speedy execution of custom scripts from Object Explorer&#8217;s context menus. 
+&#8211; [**<font color="#004080">Running custom scripts from Object explorer's Context menu</font>**][8]:               
+Speedy execution of custom scripts from Object Explorer's context menus. 
 
 &#8211; [**<font color="#004080">CRUD (Create, Read, Update, Delete) stored procedure generation</font>**][9]:               
 Generate Customizable CRUD stored procedures for all tables in your database. 

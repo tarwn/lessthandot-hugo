@@ -189,7 +189,7 @@ These are the top 10 most visited pages on LessThanDot.com, I have left out the 
   
 4 [Blog &#8211; Only In A Database Can You Get 1000% + Improvement By Changing A Few Lines Of Code][4]
   
-5 [Blog &#8211; Good SQL Articles To Read If You Can&#8217;t Afford Books][5]
+5 [Blog &#8211; Good SQL Articles To Read If You Can't Afford Books][5]
   
 6 [Forum &#8211; View forum &#8211; Programmer Puzzles][6]
   

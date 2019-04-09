@@ -40,7 +40,7 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-When running SQL Server on Amazon&#8217;s AWS RDS, you can&#8217;t do it like that. If you try running it, you will get the following error.
+When running SQL Server on Amazon's AWS RDS, you can't do it like that. If you try running it, you will get the following error.
 
 Msg 15247, Level 16, State 1, Procedure sp_configure, Line 105
   

@@ -23,7 +23,7 @@ tags:
   - ssis
 
 ---
-I will be speaking tomorrow night, May 4th, on SQL Server Integration Services basics for the SQL Connections group in the Chicago suburbs. Yes, the Wisconsin guy is going to go farther than Hwy 60 once again. The session, &#8220;SSIS 2008 Basics – Get up to Speed in 90 Minutes&#8221;, will be going over the fundamentals of SSIS and getting started with your own installation and development of packages. There is a lot to cover when considering SSIS basics when starting from opening the installation media, to opening BIDS for the first time. I hope everyone that attends leaves the session excited and ready to jump into SSIS. 
+I will be speaking tomorrow night, May 4th, on SQL Server Integration Services basics for the SQL Connections group in the Chicago suburbs. Yes, the Wisconsin guy is going to go farther than Hwy 60 once again. The session, “SSIS 2008 Basics – Get up to Speed in 90 Minutes”, will be going over the fundamentals of SSIS and getting started with your own installation and development of packages. There is a lot to cover when considering SSIS basics when starting from opening the installation media, to opening BIDS for the first time. I hope everyone that attends leaves the session excited and ready to jump into SSIS. 
 
 The path and goals of the session will cover
 

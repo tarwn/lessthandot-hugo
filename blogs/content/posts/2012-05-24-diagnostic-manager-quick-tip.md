@@ -20,7 +20,7 @@ tags:
   - sql
 
 ---
-A great use of Idera&#8217;s Diagnostic Manager is to manage your SQL Job&#8217;s and knowing which jobs have failed, which ones are running long and which ones have been running for the last 10 hours. You even get to adjust the thresholds for each all of those metrics.
+A great use of Idera's Diagnostic Manager is to manage your SQL Job's and knowing which jobs have failed, which ones are running long and which ones have been running for the last 10 hours. You even get to adjust the thresholds for each all of those metrics.
 
 If a job fails, you can don’t have check the history of the job in SSMS to see why it failed. Instead you can do it right from Diagnostic Manager. From SQL Agent Jobs in the Services section, find a click on the job you want to know the history of in the top section.
 

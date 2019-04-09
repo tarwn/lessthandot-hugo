@@ -30,7 +30,7 @@ One of the people on my team wants to have the ability to truncate tables on the
 
 > The minimum permission required is ALTER on table\_name. TRUNCATE TABLE permissions default to the table owner, members of the sysadmin fixed server role, and the db\_owner and db_ddladmin fixed database roles, and are not transferable.
 
-Before I answer why someone would need ALTER TABLE permissions when the person already has DELETE permissions, let&#8217;s run some code that will show the &#8216;problem&#8217;.
+Before I answer why someone would need ALTER TABLE permissions when the person already has DELETE permissions, let's run some code that will show the &#8216;problem'.
 
 First create a Test database, add one table and insert one row
 
@@ -77,9 +77,9 @@ TRUNCATE TABLE TestTruncate
 
 _Msg 1088, Level 16, State 7, Line 1
   
-Cannot find the object &#8220;TestTruncate&#8221; because it does not exist or you do not have permissions._
+Cannot find the object “TestTruncate” because it does not exist or you do not have permissions._
 
-As you can see, you don&#8217;t have permission. A delete will work just fine
+As you can see, you don't have permission. A delete will work just fine
 
 sql
 DELETE TestTruncate
@@ -87,7 +87,7 @@ DELETE TestTruncate
 
 (1 row(s) affected)
 
-Before I give you a workaround, let&#8217;s try to figure out why the minimum requirement is ALTER TABLE. What is the difference between a DELETE and a TRUNCATE in terms of logging? When a TRUNCATE occurs, the operation does not log individual row deletions, a DELETE operation does. The reason this is important is because if you have a trigger on the table, in needs to be disabled before the TRUNCATE occurs. **Now you know why ALTER TABLE is required, triggers need to be disabled.**
+Before I give you a workaround, let's try to figure out why the minimum requirement is ALTER TABLE. What is the difference between a DELETE and a TRUNCATE in terms of logging? When a TRUNCATE occurs, the operation does not log individual row deletions, a DELETE operation does. The reason this is important is because if you have a trigger on the table, in needs to be disabled before the TRUNCATE occurs. **Now you know why ALTER TABLE is required, triggers need to be disabled.**
 
 sql
 ALTER TABLE SomeTable DISABLE TRIGGER SomeTrigger
@@ -95,7 +95,7 @@ ALTER TABLE SomeTable DISABLE TRIGGER SomeTrigger
 
 And in order to disable the trigger, ALTER TABLE permissions are required as a minimum.
 
-But I don&#8217;t want people altering tables on our staging and QA servers, so here is one way of giving the person the ability to TRUNCATE a table without giving them permissions explicitly. Create a stored procedure and use WITH EXECUTE AS, this will define the execution context of the stored procedure. In the example below, I picked a user that has sufficient privileges to perform the TRUNCATE.
+But I don't want people altering tables on our staging and QA servers, so here is one way of giving the person the ability to TRUNCATE a table without giving them permissions explicitly. Create a stored procedure and use WITH EXECUTE AS, this will define the execution context of the stored procedure. In the example below, I picked a user that has sufficient privileges to perform the TRUNCATE.
 
 sql
 CREATE PROCEDURE prTruncate

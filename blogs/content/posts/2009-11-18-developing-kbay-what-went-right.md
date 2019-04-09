@@ -20,7 +20,7 @@ tags:
 Hello Everyone,
 
 <p style="text-indent: 30pt;">
-  Rick here again with another little blurb on my most recent Silverlight project, KBay. Today, I&#8217;d like to write a little bit about what went right.
+  Rick here again with another little blurb on my most recent Silverlight project, KBay. Today, I'd like to write a little bit about what went right.
 </p>
 
 <img src="http://ringdev.com/code/KBayHome.PNG" alt="KBay Home Page" title="KBay Home Page " style="margin-left:50px;" />
@@ -28,19 +28,19 @@ Hello Everyone,
 ### Separation of Power
 
 <p style="text-indent: 30pt;">
-  One of the biggest attributes of KBay&#8217;s success, IMO, was the segregation of development. My coworker Adam (Hi Adam!) and I handled the majority of the work for this project. The initial goal was to try to involve everyone on the App Dev team, to give them more exposure to Silverlight. But with the tight time-line and other priorities, we couldn&#8217;t keep the whole team on page. So after some initial design meetings and DB layout, it largely fell to Adam and me to get it to work.
+  One of the biggest attributes of KBay's success, IMO, was the segregation of development. My coworker Adam (Hi Adam!) and I handled the majority of the work for this project. The initial goal was to try to involve everyone on the App Dev team, to give them more exposure to Silverlight. But with the tight time-line and other priorities, we couldn't keep the whole team on page. So after some initial design meetings and DB layout, it largely fell to Adam and me to get it to work.
 </p>
 
 ### Balance Your Strengths
 
 <p style="text-indent: 30pt;">
-  Adam and I approached the problem from our own strengths. Both of us are more than capable of writing the entire solution, but we both have our strengths and weaknesses. In my case, my experience with Blend and XAML, along with some rudimentary graphics arts knowledge, really allowed me to speed through the front end, while Adam&#8217;s envelope pushing experience with LINQ and Generics allowed him to come up with some really awesome solutions to communication and technical issues.
+  Adam and I approached the problem from our own strengths. Both of us are more than capable of writing the entire solution, but we both have our strengths and weaknesses. In my case, my experience with Blend and XAML, along with some rudimentary graphics arts knowledge, really allowed me to speed through the front end, while Adam's envelope pushing experience with LINQ and Generics allowed him to come up with some really awesome solutions to communication and technical issues.
 </p>
 
 ### Two Heads are Better Than One
 
 <p style="text-indent: 30pt;">
-  This separation really allowed us to greatly improve not just our development speed, but it also worked as a sort of code review, where we were both interacting with each other&#8217;s interfaces. Since we had virtually no requirements for the project, it allowed us to brainstorm freely and to consider many options that neither of us would have thought of on our own.
+  This separation really allowed us to greatly improve not just our development speed, but it also worked as a sort of code review, where we were both interacting with each other's interfaces. Since we had virtually no requirements for the project, it allowed us to brainstorm freely and to consider many options that neither of us would have thought of on our own.
 </p>
 
 ### Lather, Rinse, Repeat
@@ -76,13 +76,13 @@ Hello Everyone,
 ### Are Limits Bad?
 
 <p style="text-indent: 30pt;">
-  Maybe &#8216;limits&#8217; isn&#8217;t the right word for this. You can still do almost everything you can do through other platforms, you just have to go about it through entirely different means. The limits that exist force developers to go through the new means, using async communication and webservices/WCF instead of continuing to depend on integrated IO and synchronous processing. So while there is a learning curve in changing the way we approach problems in Silverlight, I think that overcoming that curve will enable more developers to think in a parallel style. Removing the interface from the process, and making the processes async forces developers to partake in good development practices. Because every time I see a Windows app go to a white screen because some developer tried running I/O operations on the GUI thread, I cry a little on the inside.
+  Maybe &#8216;limits' isn't the right word for this. You can still do almost everything you can do through other platforms, you just have to go about it through entirely different means. The limits that exist force developers to go through the new means, using async communication and webservices/WCF instead of continuing to depend on integrated IO and synchronous processing. So while there is a learning curve in changing the way we approach problems in Silverlight, I think that overcoming that curve will enable more developers to think in a parallel style. Removing the interface from the process, and making the processes async forces developers to partake in good development practices. Because every time I see a Windows app go to a white screen because some developer tried running I/O operations on the GUI thread, I cry a little on the inside.
 </p>
 
 ### I Love Log
 
 <p style="text-indent: 30pt;">
-  That&#8217;s it for the more abstract summary of the KBay project. I promise my next segment will deal with more of the technical nuts and bolts of the project. Including the communication layer and my personal favorite, LOGGING!!!
+  That's it for the more abstract summary of the KBay project. I promise my next segment will deal with more of the technical nuts and bolts of the project. Including the communication layer and my personal favorite, LOGGING!!!
 </p>
 
 -Rick

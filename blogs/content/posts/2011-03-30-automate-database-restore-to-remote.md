@@ -158,17 +158,17 @@ Taking one of the Execute T-SQL Tasks for example, an expression is used to util
 
 The expression for the task to restore the differential backup file:
 
-> &#8220;RESTORE DATABASE [&#8221; + @[User::DatabaseNameRestore] + &#8220;] FROM DISK = N'&#8221; + @[User::DiffRestorePath] + &#8220;&#8216; &#8221; +
+> “RESTORE DATABASE [” + @[User::DatabaseNameRestore] + “] FROM DISK = N'” + @[User::DiffRestorePath] + “&#8216; ” +
   
-> &#8220;WITH FILE = 1, &#8221; +
+> “WITH FILE = 1, ” +
   
-> &#8220;MOVE N'&#8221; + @[User::DataFile] + &#8220;&#8216; TO N'&#8221; + @[User::RestoreLocMDF] + &#8220;&#8216;, &#8221; +
+> “MOVE N'” + @[User::DataFile] + “&#8216; TO N'” + @[User::RestoreLocMDF] + “&#8216;, ” +
   
-> &#8220;MOVE N'&#8221;+ @[User::LogFile] + &#8220;&#8216; TO N'&#8221; + @[User::RestoreLocLDF] + &#8220;&#8216;, &#8221; +
+> “MOVE N'”+ @[User::LogFile] + “&#8216; TO N'” + @[User::RestoreLocLDF] + “&#8216;, ” +
   
-> &#8220;NOUNLOAD, &#8221; +
+> “NOUNLOAD, ” +
   
-> &#8220;REPLACE, STATS = 10 &#8220;</p>
+> “REPLACE, STATS = 10 “</p>
  
 
 Evaluated, this expression results in:

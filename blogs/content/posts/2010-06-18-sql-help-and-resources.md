@@ -52,13 +52,13 @@ If you are reading this and have been part of a SQL Saturday, SQL Server User Gr
 
 These companies take the vast amount of resources and pour them into building the community. 
 
-Quest Software is a great example. Quest has not only been a major sponsor for dozens of SQL events but also spends a great deal of resources on providing things like, &#8220;[The pain of the week][7]&#8221; to the community. [SQLServerPedia][8] is a huge resource powered by Quest with Mr. Ozar leading the way. You could without a doubt spend a month reading, watching and learning from [SQLServerPedia][8]. 
+Quest Software is a great example. Quest has not only been a major sponsor for dozens of SQL events but also spends a great deal of resources on providing things like, “[The pain of the week][7]” to the community. [SQLServerPedia][8] is a huge resource powered by Quest with Mr. Ozar leading the way. You could without a doubt spend a month reading, watching and learning from [SQLServerPedia][8]. 
 
 Red-Gate is another great company supporting the community in a number of ways, from the [Exceptional DBA of the Year][9] recognition that is going on right now, to the work that Steve Jones ([Blog][10] | [Twitter][11])and Brad McGehee ([Blog][12] | [Twitter][13]) do for the community backed by Red-Gate. Red-Gate stands behind the community and does a great deal for us all. And did I mention the SQL Tools rock?
 
 Pragmatic Works is one of my favorite online free resources in the community. There are so many [webinars][14] provided to the community to build on, you could spend another month just watching them to catch up. Pragmatic Works has an entire [resource page][15] devoted to the webinars, whitepapers, articles and my personal favorite, the SSIS Cheat Sheet. Pragmatic Works is a resource that is valued and highly recommended to everyone that touches anything SQL Server related.
 
-I hardly even scratched the surface of these companies&#8217; devotion and support of the SQL Community. There are dozens of others that I could sit down and praise for everything they do daily. I&#8217;ve been fortunate to have worked with some of them during SQL Saturdays and User Groups and sat down to talk with them. If you have a chance to find them at one of these events or meetings, stop by and get to know them. You will be amazed at just how much they are involved in the community and the passion that comes out for it. 
+I hardly even scratched the surface of these companies' devotion and support of the SQL Community. There are dozens of others that I could sit down and praise for everything they do daily. I've been fortunate to have worked with some of them during SQL Saturdays and User Groups and sat down to talk with them. If you have a chance to find them at one of these events or meetings, stop by and get to know them. You will be amazed at just how much they are involved in the community and the passion that comes out for it. 
 
 **Don’t forget these resources**
 

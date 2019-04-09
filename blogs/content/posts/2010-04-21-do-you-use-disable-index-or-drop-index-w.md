@@ -21,7 +21,7 @@ tags:
 ---
 There are certain operations where dropping an index, loading data and then again creating the index can speed up data loading. SQL server 2005 introduced a way to disable an index.
 
-Let&#8217;s take a look, first create this table
+Let's take a look, first create this table
 
 sql
 Create table TestIndex (id int, somecol varchar(20))
@@ -42,7 +42,7 @@ sql
 create index ix_TestIndex on TestIndex(id,somecol)
 ```
 
-Now let&#8217;s disable this index
+Now let's disable this index
 
 sql
 ALTER INDEX ix_TestIndex
@@ -64,7 +64,7 @@ set showplan_text on
     
     </pre>
 
-Now let&#8217;s rebuild the index again
+Now let's rebuild the index again
 
 sql
 ALTER INDEX ix_TestIndex
@@ -88,7 +88,7 @@ set showplan_text on
 
 As you can see, it uses the index again 
 
-Now let&#8217;s drop this index
+Now let's drop this index
 
 sql
 drop index TestIndex.ix_TestIndex
@@ -96,13 +96,13 @@ drop index TestIndex.ix_TestIndex
 
 **Is there a difference how disable works between nonclustered and clustered indexes?**
   
-Let&#8217;s take a look, first create this clustered index
+Let's take a look, first create this clustered index
 
 sql
 create clustered index ix_TestIndexClustered on TestIndex(id,somecol)
 ```
 
-Now let&#8217;s disable this clustered index
+Now let's disable this clustered index
 
 sql
 ALTER INDEX ix_TestIndexClustered
@@ -126,7 +126,7 @@ We get this error
   
  _Msg 8655, Level 16, State 1, Line 1
   
-The query processor is unable to produce a plan because the index &#8216;ix_TestIndexClustered&#8217; on table or view &#8216;TestIndex&#8217; is disabled._
+The query processor is unable to produce a plan because the index &#8216;ix_TestIndexClustered' on table or view &#8216;TestIndex' is disabled._
 
 As you can see while a clustered index is disabled the data is unavailable. Not only that, you can also not insert anything into the table,
   
@@ -141,7 +141,7 @@ Fails with the same error from before
   
 _Msg 8655, Level 16, State 1, Line 1
   
-The query processor is unable to produce a plan because the index &#8216;ix_TestIndexClustered&#8217; on table or view &#8216;TestIndex&#8217; is disabled._
+The query processor is unable to produce a plan because the index &#8216;ix_TestIndexClustered' on table or view &#8216;TestIndex' is disabled._
 
 If we rebuild the clustered index again
 
@@ -167,7 +167,7 @@ We can see that it does use the clustered index
 
 **My question to you.**
   
-So my question to you people is, do any of you use this instead of drop and create index? One advantage I see is that you don&#8217;t need to update the code that drops and recreates the non clustered index if your index definition changes when using disable index in your ETL process. If you disable a clustered index you can also not insert into the table.
+So my question to you people is, do any of you use this instead of drop and create index? One advantage I see is that you don't need to update the code that drops and recreates the non clustered index if your index definition changes when using disable index in your ETL process. If you disable a clustered index you can also not insert into the table.
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 

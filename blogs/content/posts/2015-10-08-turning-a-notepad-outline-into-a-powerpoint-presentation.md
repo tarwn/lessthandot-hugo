@@ -19,7 +19,7 @@ One of the tasks that I find the hardest is to create a new presentation. I hav
 
 I used to take my Notepad outlines and copy and paste them into PowerPoint. That was time-consuming and error-prone.
 
-**Work smarter, not harder.** Here&#8217;s a trick I learned from <a href="http://www.brentozar.com/team/kendra-little/" target="_blank">Kendra Little</a> on how to take the outline and automatically turn it into a PowerPoint presentation.
+**Work smarter, not harder.** Here's a trick I learned from <a href="http://www.brentozar.com/team/kendra-little/" target="_blank">Kendra Little</a> on how to take the outline and automatically turn it into a PowerPoint presentation.
 
 Create an outline in Notepad. A couple of tips to help you make the best presentation:
 
@@ -36,7 +36,7 @@ Create an outline in Notepad. A couple of tips to help you make the best pres
 
 Save the file as a .txt file.
 
-Open PowerPoint. Choose the option to open an existing presentation. Navigate to where your text file is saved. In the bottom right, next to File name, use the drop-down menu to select &#8220;All Outlines&#8221;. Select your outline and click Open.
+Open PowerPoint. Choose the option to open an existing presentation. Navigate to where your text file is saved. In the bottom right, next to File name, use the drop-down menu to select “All Outlines”. Select your outline and click Open.
 
 [<img class="aligncenter size-full wp-image-4212" src="/wp-content/uploads/2015/10/powerpoint-open.png" alt="powerpoint open" width="957" height="540" srcset="/wp-content/uploads/2015/10/powerpoint-open.png 957w, /wp-content/uploads/2015/10/powerpoint-open-300x169.png 300w" sizes="(max-width: 957px) 100vw, 957px" />][1]
 

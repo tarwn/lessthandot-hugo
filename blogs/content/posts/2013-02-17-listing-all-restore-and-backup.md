@@ -46,6 +46,6 @@ ORDER   BY 2 desc, 3 DESC
 
 Throw this in a view on your _Tools_ database and you are all set.
 
-This will probably also be added to SQLCop&#8217;s informational section
+This will probably also be added to SQLCop's informational section
 
  [1]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/how-much-longer-will-the

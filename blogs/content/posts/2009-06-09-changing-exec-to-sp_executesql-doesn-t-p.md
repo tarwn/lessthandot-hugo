@@ -25,7 +25,7 @@ tags:
   - sql
 
 ---
-Changing exec to sp_executesql doesn&#8217;t provide any benefit if you are not using parameters correctly
+Changing exec to sp_executesql doesn't provide any benefit if you are not using parameters correctly
 
 I was looking through some code recently and noticed all these sp_executesql calls which did not use parameters correctly.
   
@@ -47,7 +47,7 @@ and Col1 = ' + convert(varchar(10),@Col1)
 exec sp_executesql @SQL
 ```
 
-What that code does is it builds a SQL statement and executes it. The problem is that when you do something like that the query plan will not be reused when you change the values of @Col2 and @Col1. When a new plan is generated everytime your values change you will bloat SQL Server&#8217;s procedure cache and less memory will be available for data.
+What that code does is it builds a SQL statement and executes it. The problem is that when you do something like that the query plan will not be reused when you change the values of @Col2 and @Col1. When a new plan is generated everytime your values change you will bloat SQL Server's procedure cache and less memory will be available for data.
   
 Below is some code to demonstrate what I mean, I have tested this code on SQL Server 2008 only!!
 
@@ -70,7 +70,7 @@ where type = 'P'
 order by number
 ```
 
-Now let&#8217;s see what we inserted
+Now let's see what we inserted
 
 sql
 select * from dbo.test
@@ -94,17 +94,17 @@ Col1 Col2 SomeDate SomeValue
   
 7 6 2009-06-09 11:50:04.327 ABCDEFG
   
-&#8230;..
+…..
   
-&#8230;..
+…..
   
-&#8230;..
+…..
   
 2047 2046 2009-06-09 11:50:04.327 ABCDEFG
   
 2048 2047 2009-06-09 11:50:04.327 ABCDEFG 
 
-First let&#8217;s clear our procedure cache
+First let's clear our procedure cache
 
 sql
 dbcc freeproccache
@@ -141,7 +141,7 @@ and q.text  not like '%sys.dm_exec_cached_plans %'
 
 As you can see we have 2 plans and each was used 5 times. So for each change in the value a new plan gets generated
 
-Let&#8217;s clear the cache again
+Let's clear the cache again
 
 sql
 dbcc freeproccache
@@ -182,7 +182,7 @@ exec (@SQL)
 go
 ```
 
-Now let&#8217;s see how many plans we have
+Now let's see how many plans we have
 
 sql
 select q.text,cp.usecounts,cp.objtype,p.*,
@@ -199,7 +199,7 @@ and q.text  not like '%sys.dm_exec_cached_plans %'
 
 As you can see we have 2 plans with a count of 5 for each.
 
-Now let&#8217;s convert that query to use sp_executesql instead of exec
+Now let's convert that query to use sp_executesql instead of exec
 
 Run the query below
 
@@ -223,7 +223,7 @@ And you get the following message
   
 **Server: Msg 214, Level 16, State 2, Procedure sp_executesql, Line 1
   
-Procedure expects parameter &#8216;@statement&#8217; of type &#8216;ntext/nchar/nvarchar&#8217;.**
+Procedure expects parameter &#8216;@statement' of type &#8216;ntext/nchar/nvarchar'.**
 
 This is because sp_executesql expects nvarchar and not varchar
 
@@ -281,7 +281,7 @@ cp.cacheobjtype = 'Compiled Plan' and q.text  like '%dbo.test%'
 and q.text  not like '%sys.dm_exec_cached_plans %'
 ```
 
-As you can see we have 2 plans with a count of 5 for each. This is because we didn&#8217;t use sp_executesql correctly and the engine couldn&#8217;t reuse the plan. Here is what Books On Line has to say
+As you can see we have 2 plans with a count of 5 for each. This is because we didn't use sp_executesql correctly and the engine couldn't reuse the plan. Here is what Books On Line has to say
 
 > sp_executesql can be used instead of stored procedures to execute a Transact-SQL statement a number of times when the change in parameter values to the statement is the only variation. Because the Transact-SQL statement itself remains constant and only the parameter values change, the Microsoft® SQL Server™ query optimizer is likely to reuse the execution plan it generates for the first execution.
 
@@ -406,7 +406,7 @@ and q.text  not like '%sys.dm_exec_cached_plans %'
 
 As you can see we still have a count of 10 and only one plan.
 
-As you can see sp\_executesql can be beneficial for performance when used correctly. Using sp\_executesql will also give you some additional features you can&#8217;t do with EXEC.
+As you can see sp\_executesql can be beneficial for performance when used correctly. Using sp\_executesql will also give you some additional features you can't do with EXEC.
 
 How would you get a count of rows in a table? with EXEC you need to use a temp table and populate that, with sp_executesql you can use an output variable
 

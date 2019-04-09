@@ -16,7 +16,7 @@ categories:
   - Database Programming
 
 ---
-There are a lot of RDBMS out there. It would be nice to assume that any one is perfect for or can be adapted to any situation, but that simply isn&#8217;t true. Each has its strengths and its weaknesses. 
+There are a lot of RDBMS out there. It would be nice to assume that any one is perfect for or can be adapted to any situation, but that simply isn't true. Each has its strengths and its weaknesses. 
 
 When I am doing initial research on a database project, there are a few properties I will look into and questions I will ask to determine what is the best fit for that project. 
 
@@ -32,7 +32,7 @@ When I am doing initial research on a database project, there are a few properti
   * Operating system 
   * Other hardware/resources required 
 
-I&#8217;ve gathered this information for the following RDBMS: 
+I've gathered this information for the following RDBMS: 
 
   * Microsoft Access 
   * Microsoft SQL Server 
@@ -40,7 +40,7 @@ I&#8217;ve gathered this information for the following RDBMS:
   * MySQL 
   * PostgreSQL 
 
-Having this information at my fingertips, able to be presented to a client or a project manager I&#8217;m working with, has been invaluable. I hope this reference can be of value to you too! 
+Having this information at my fingertips, able to be presented to a client or a project manager I'm working with, has been invaluable. I hope this reference can be of value to you too! 
 
 ### [Cheatsheet: RDBMS Comparison][1]
 

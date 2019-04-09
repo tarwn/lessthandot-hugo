@@ -15,7 +15,7 @@ tags:
   - teamcity
 
 ---
-A few years back, I posted &#8220;[Displaying .Net Build Warnings in TeamCity][1]&#8220;. Many folks found it useful (and it served as a good reference the last time I needed to re-setup warnings). Recently, Mitch Terlisner reached out to me with a much improved version to share with folks that includes better build status output, an interactive warnings tab, statistics chart, and a custom metric to enable custom failure rules:
+A few years back, I posted “[Displaying .Net Build Warnings in TeamCity][1]“. Many folks found it useful (and it served as a good reference the last time I needed to re-setup warnings). Recently, Mitch Terlisner reached out to me with a much improved version to share with folks that includes better build status output, an interactive warnings tab, statistics chart, and a custom metric to enable custom failure rules:
 
 **Better Warning Output in build status!**
   
@@ -91,9 +91,9 @@ Mitch added these parameters and steps to his build template to apply to multipl
 
 Download the powershell script here: [BuildWarningReportGenerator.ps1 Gist][2]
 
-1. Select the &#8220;Parameters&#8221; menu.
+1. Select the “Parameters” menu.
   
-2. Add a a parameter for the Build Log name that we&#8217;ll generate from MSBuild: 
+2. Add a a parameter for the Build Log name that we'll generate from MSBuild: 
 
 <pre>Name: BuildLogFile
    Value: BuildLog.Log
@@ -107,7 +107,7 @@ Download the powershell script here: [BuildWarningReportGenerator.ps1 Gist][2]
 
 [<img src="/wp-content/uploads/2016/05/TeamCityWarnings_Template_1-1024x306.png" alt="Add Parameters" width="800" class="aligncenter size-large wp-image-4501" srcset="/wp-content/uploads/2016/05/TeamCityWarnings_Template_1-1024x306.png 1024w, /wp-content/uploads/2016/05/TeamCityWarnings_Template_1-300x89.png 300w, /wp-content/uploads/2016/05/TeamCityWarnings_Template_1.png 1043w" sizes="(max-width: 1024px) 100vw, 1024px" />][3]
 
-Next we&#8217;ll want to add build steps to purge any prior versions of the file, run the log during MS Build calls, and then evaluate the log file for warnings at the end of the run.
+Next we'll want to add build steps to purge any prior versions of the file, run the log during MS Build calls, and then evaluate the log file for warnings at the end of the run.
 
 [<img src="/wp-content/uploads/2016/05/TeamCityWarnings_Template_2.png" alt="Build Steps" width="839" height="341" class="aligncenter size-full wp-image-4502" srcset="/wp-content/uploads/2016/05/TeamCityWarnings_Template_2.png 839w, /wp-content/uploads/2016/05/TeamCityWarnings_Template_2-300x121.png 300w" sizes="(max-width: 839px) 100vw, 839px" />][4]
 
@@ -144,9 +144,9 @@ To add a report tab with the warning information in TeamCity:
 
 [<img src="/wp-content/uploads/2016/05/TeamCityWarnings_Report1.png" alt="Add Report Tab" width="895" height="453" class="aligncenter size-full wp-image-4503" srcset="/wp-content/uploads/2016/05/TeamCityWarnings_Report1.png 895w, /wp-content/uploads/2016/05/TeamCityWarnings_Report1-300x151.png 300w" sizes="(max-width: 895px) 100vw, 895px" />][5]
 
-1. Open the Project and click &#8220;Edit Project Settings&#8221; and select the Report Tab
+1. Open the Project and click “Edit Project Settings” and select the Report Tab
   
-2. Click the &#8220;Create new build report tab&#8221; button
+2. Click the “Create new build report tab” button
   
 3. Enter settings and press Save
 
@@ -190,7 +190,7 @@ Edit config/main-config.xml, and merge in these settings
 
 ## Closing
 
-I wanted to thank Mitch again for sending back the improvements he made on the original. This is a level or two above my original post and I&#8217;m already applying some of the changes to my own builds.
+I wanted to thank Mitch again for sending back the improvements he made on the original. This is a level or two above my original post and I'm already applying some of the changes to my own builds.
 
  [1]: /index.php/enterprisedev/application-lifecycle-management/displaying-net-build-warnings-in/ "Displaying .Net Build Warnings in TeamCity"
  [2]: https://gist.github.com/tarwn/bfd08f42226463871389a766fa40258c

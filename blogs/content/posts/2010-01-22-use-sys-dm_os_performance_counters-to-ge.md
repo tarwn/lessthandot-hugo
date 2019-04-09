@@ -53,7 +53,7 @@ AND a.OBJECT_NAME = 'SQLServer:Buffer Manager'
 
 ## Page life expectancy {#PLE}
 
-Now let&#8217;s look at Page life expectancy.
+Now let's look at Page life expectancy.
   
 Page life expectancy is the number of seconds a page will stay in the buffer pool, ideally it should be above 300 seconds. If it is less than 300 seconds this could indicate memory pressure, a cache flush or missing indexes.
 

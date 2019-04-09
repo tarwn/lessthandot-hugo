@@ -76,7 +76,7 @@ Chevy Corvette	1
 Fiat 500	1
 Ford Taurus	1</pre>
 
-As you can see that made the code smaller by about 20 bytes. This of course will only work if you want 0 and 1; if you want more posibilities then you need to use case. Another reason why you maybe don&#8217;t want to use the sign function is that someone looking at your code might not immediately know what the code is supposed to do.
+As you can see that made the code smaller by about 20 bytes. This of course will only work if you want 0 and 1; if you want more posibilities then you need to use case. Another reason why you maybe don't want to use the sign function is that someone looking at your code might not immediately know what the code is supposed to do.
   
 Remember you should always write code with the assumption that the person who will be maintaining your code is a psychopatic killer who has your address 😉
 

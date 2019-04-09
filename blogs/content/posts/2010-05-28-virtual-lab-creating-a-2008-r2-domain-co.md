@@ -38,7 +38,7 @@ FQDN
 :   Fully Qualified Domain Name &#8211; the fully spelled out domain name for a domain, for example mydomain.com
 
 <div class="hint">
-  There has been a critical change to this article due to a new piece of information that I didn&#8217;t previously know. Rather than use the base windows image as the DC for your lab you should go ahead and install this machine from scratch to ensure it doesn&#8217;t have a duplicate SID. In prior versions we could (sort-of) change a SID but that&#8217;s not really the case anymore. This is really only a big deal for the DC because the SIDs for users from the DC (domain accounts) need to not match SIDs for local users/groups/etc.<br /> More details can around duplicate SIDs, 2008 R2, and similar topics are available in <a href="http://blogs.technet.com/b/markrussinovich/archive/2009/11/03/3291024.aspx" target="_blank">this article from Mark Russinovich</a>.
+  There has been a critical change to this article due to a new piece of information that I didn't previously know. Rather than use the base windows image as the DC for your lab you should go ahead and install this machine from scratch to ensure it doesn't have a duplicate SID. In prior versions we could (sort-of) change a SID but that's not really the case anymore. This is really only a big deal for the DC because the SIDs for users from the DC (domain accounts) need to not match SIDs for local users/groups/etc.<br /> More details can around duplicate SIDs, 2008 R2, and similar topics are available in <a href="http://blogs.technet.com/b/markrussinovich/archive/2009/11/03/3291024.aspx" target="_blank">this article from Mark Russinovich</a>.
 </div>
 
 ## Setting up VM
@@ -52,12 +52,12 @@ First we need to create a virtual machine to house the future domain controller 
 For the time being this system is going to be connected to the Host via the existing Bridged connection. At a later point in time we will look at creating virtual networks in VMWare and build out a more defined network. 
 
 <div class="mylab">
-  Because I don&#8217;t intend on having a heavy workload on this server or installing any additional services beyond AD and DNS, I have only allocated 512MB of memory to the server. If it becomes noticeably sluggish servicing my tiny domain then I will bump it up to 1024.
+  Because I don't intend on having a heavy workload on this server or installing any additional services beyond AD and DNS, I have only allocated 512MB of memory to the server. If it becomes noticeably sluggish servicing my tiny domain then I will bump it up to 1024.
 </div>
 
 ## Configuring the OS
 
-Once the virtual machine is created, configured in VMWare, and Windows has been installed, it&#8217;s time to move on to the Windows configuration. Some of these will be the same as our prior article and several will be new additions to prep the server for Active Directory.
+Once the virtual machine is created, configured in VMWare, and Windows has been installed, it's time to move on to the Windows configuration. Some of these will be the same as our prior article and several will be new additions to prep the server for Active Directory.
 
 First we will want to configure the server name and then assign it a new static IP Address on the local network.
 
@@ -65,9 +65,9 @@ First we will want to configure the server name and then assign it a new static 
   <a href="http://tiernok.com/LTDBlog/BasicDC/1_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/1_startup.png" alt="Changing the System Name" /></a><br /> Changing the System Name
 </div>
 
-After changing the name we&#8217;ll open the network settings by either selecting the &#8220;Configure Networking&#8221; link on the Initial Configuration dashboard (above) or clicking the network icon in the tool tray at the bottom right, followed by &#8220;Open Network and Sharing&#8221;, and then &#8220;Change adapter settings&#8221; near the top right of the screen. With the &#8220;Network Connections&#8221; screen open we can right click the network adapter and enter the &#8220;Properties&#8221; pane. Select the &#8220;Internet Protocol Version 4&#8221; item from the list and press properties to access the IP configuration panel. 
+After changing the name we'll open the network settings by either selecting the “Configure Networking” link on the Initial Configuration dashboard (above) or clicking the network icon in the tool tray at the bottom right, followed by “Open Network and Sharing”, and then “Change adapter settings” near the top right of the screen. With the “Network Connections” screen open we can right click the network adapter and enter the “Properties” pane. Select the “Internet Protocol Version 4” item from the list and press properties to access the IP configuration panel. 
 
-At this point we need to select a static IP address that isn&#8217;t already in use on our network and isn&#8217;t in the DHCP range for our network. After selecting an IP Address we enter the static IP address, enter the gateway server or switches address, and then enter the servers address as the primary DNS entry and our switch or external DNS as the secondary one.
+At this point we need to select a static IP address that isn't already in use on our network and isn't in the DHCP range for our network. After selecting an IP Address we enter the static IP address, enter the gateway server or switches address, and then enter the servers address as the primary DNS entry and our switch or external DNS as the secondary one.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/2_startup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/2_startup.png" alt="Configuring the IP Address" /></a><br /> Configuring the IP Address
@@ -78,7 +78,7 @@ At this point we need to select a static IP address that isn&#8217;t already in 
 </div>
 
 <div class="hint">
-  It is possible to install Active Directory and the DNS server on a system without a static IP address and trust that it will assign itself the same address over time, but I don&#8217;t recommend it as your clients will eventually not be able to find their DNS server and than pain and suffering will ensue.
+  It is possible to install Active Directory and the DNS server on a system without a static IP address and trust that it will assign itself the same address over time, but I don't recommend it as your clients will eventually not be able to find their DNS server and than pain and suffering will ensue.
 </div>
 
 The last step to preparing your server for Active Directory is planning. In a non-lab installation we would want to put some forethought into how many clients we intend to support with Directory Services, whether there will be secondary DCs on the network, etc. I have an older link for [capacity planning for AD on Windows 2003][2], but unfortunately I have not been able to find a comparable article for 2008 yet.
@@ -91,7 +91,7 @@ In Windows 2008, Active Directory has expanded to take on a wider range of roles
   <a href="http://tiernok.com/LTDBlog/BasicDC/0_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/0_setup.png" alt="Assigning Server Roles" /></a><br /> Assigning Server Roles
 </div>
 
-To start the installation and setup process, we will refer back to the Initial Configuration dashboard (click the pinned shortcut on the taskbar if you closed it already). Under section 3 there is a &#8220;Roles&#8221; category that will allow us to easily assign the necessary roles to our server.
+To start the installation and setup process, we will refer back to the Initial Configuration dashboard (click the pinned shortcut on the taskbar if you closed it already). Under section 3 there is a “Roles” category that will allow us to easily assign the necessary roles to our server.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/1_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/1_setup.png" alt="Assigning Server Roles" /></a><br /> Assigning Server Roles
@@ -99,7 +99,7 @@ To start the installation and setup process, we will refer back to the Initial C
 
 ### Installing the Active Directory Role
 
-The first page of the &#8220;Add Roles Wizard&#8221; presents us with some friendly reminders to set a static IP Address (check), ensure the Administrator account has a strong password (check), and make sure the server is up to date on Windows Updates (check). 
+The first page of the “Add Roles Wizard” presents us with some friendly reminders to set a static IP Address (check), ensure the Administrator account has a strong password (check), and make sure the server is up to date on Windows Updates (check). 
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/2_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/2_setup.png" alt="Assigning Server Roles" /></a><br /> Assigning Server Roles
@@ -117,13 +117,13 @@ On selecting the AD DS option the wizard runs a quick validation and notices tha
   <a href="http://tiernok.com/LTDBlog/BasicDC/4_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/4_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS &#8211; Prerequisites
 </div>
 
-After choosing to install the prerequisite (a difficult and time consuming decision, or perhaps not) and pressing next on the main screen, we are provided with a list of &#8220;Things to Note&#8221; as well as links to additional information, saving me the time of writing and linking them up myself.
+After choosing to install the prerequisite (a difficult and time consuming decision, or perhaps not) and pressing next on the main screen, we are provided with a list of “Things to Note” as well as links to additional information, saving me the time of writing and linking them up myself.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/5_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/5_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS &#8211; Things to Note
 </div>
 
-A short confirmation displays the items we are installing, including the noted prerequisite above and a reminder that directory services won&#8217;t truly be functional until we run &#8220;dcpromo&#8221;.
+A short confirmation displays the items we are installing, including the noted prerequisite above and a reminder that directory services won't truly be functional until we run “dcpromo”.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/6_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/6_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS &#8211; Confirmation
@@ -136,14 +136,14 @@ After the installation and verification is complete, we are presented a handy li
 </div>
 
 <div class="hint">
-  If you accidentally close the window before pressing the link or need to access dcpromo later, the start menu&#8217;s run input will recognize &#8220;dcpromo&#8221; and find the requisite shortcut for you.
+  If you accidentally close the window before pressing the link or need to access dcpromo later, the start menu's run input will recognize “dcpromo” and find the requisite shortcut for you.
 </div>
 
 ### AD DS Installation Wizard (DCPromo)
 
 The dcpromo wizard will complete the installation of AD DS on the server. 
 
-On the first step we are presented with the option to &#8220;Use Advanced Mode Setup&#8221;. This option will cause several additional wizard windows to appear throughout the process that would have defaulted behind the scenes if it were not checked. Press the &#8220;advanced mode installation&#8221; hyperlink to get a help document about the additional options presented in advanced mode.
+On the first step we are presented with the option to “Use Advanced Mode Setup”. This option will cause several additional wizard windows to appear throughout the process that would have defaulted behind the scenes if it were not checked. Press the “advanced mode installation” hyperlink to get a help document about the additional options presented in advanced mode.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; Beginning
@@ -167,21 +167,21 @@ The wizard then prompts us to enter a Domain NetBIOS name, with a suggestion bas
   <a href="http://tiernok.com/LTDBlog/BasicDC/10_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/10_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; NetBIOS Name
 </div>
 
-Next we&#8217;ll set the functional level of our forest. The functional level defines the maximum level (and feature set) that our forest will support. When installing additional DCs in an existing forest or creating a business domain that you intend to support over the next ten years, this needs to be a well thought out decision. When installing in a virtual lab we will of course pick the highest possible level in less time than it took to write this paragraph.
+Next we'll set the functional level of our forest. The functional level defines the maximum level (and feature set) that our forest will support. When installing additional DCs in an existing forest or creating a business domain that you intend to support over the next ten years, this needs to be a well thought out decision. When installing in a virtual lab we will of course pick the highest possible level in less time than it took to write this paragraph.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/11_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/11_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; Functional Level
 </div>
 
 <div class="hint">
-  One of the best reasons for using 2008 R2 mode is the new &#8220;Recycle Bin&#8221; option. This option keeps deleted entries in memory and provides an option to restore them, providing a bit of a safety net and reducing the potential for having to use the AD Recovery Mode to recover a deleted set of accounts or objects.
+  One of the best reasons for using 2008 R2 mode is the new “Recycle Bin” option. This option keeps deleted entries in memory and provides an option to restore them, providing a bit of a safety net and reducing the potential for having to use the AD Recovery Mode to recover a deleted set of accounts or objects.
 </div>
 
 <div class="mylab">
   Actually the Recycle Bin option worries me. I like admins (and myself) to be a little scared of their tools and nothing says scared like remembering that time you accidentally deleted something and spent recovering it manually. Oh well.
 </div>
 
-After another quick scan of the network will tell us if DNS is available and supports the necessary capabilities for the domain controller. In this case, since we are installing a primary DC, I&#8217;m going to suggest we install DNS on the same server.
+After another quick scan of the network will tell us if DNS is available and supports the necessary capabilities for the domain controller. In this case, since we are installing a primary DC, I'm going to suggest we install DNS on the same server.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/12_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/12_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; DNS
@@ -195,7 +195,7 @@ The next step is to provide a location for the database and files that will be u
   <a href="http://tiernok.com/LTDBlog/BasicDC/13_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/13_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; Database and File Locations
 </div>
 
-The Directory Services Restore password is used only when major restoration activities need to be undertaken. After entering the password we will add it to our password safe so it won&#8217;t be forgotten. This password will hopefully never be needed (especially in a lab environment), but not writing it down will pretty much ensure our first, future restoration step will be getting past the lack of a password.
+The Directory Services Restore password is used only when major restoration activities need to be undertaken. After entering the password we will add it to our password safe so it won't be forgotten. This password will hopefully never be needed (especially in a lab environment), but not writing it down will pretty much ensure our first, future restoration step will be getting past the lack of a password.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/14_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/14_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; Restore Password
@@ -209,7 +209,7 @@ After a brief summary of the selected configurations and the option to export th
 
 The installer wraps up with the common Finish screen and a request to reboot.
 
-After rebooting, our &#8220;Initial Configuration Tasks&#8221; window confirms our new roles have been installed. 
+After rebooting, our “Initial Configuration Tasks” window confirms our new roles have been installed. 
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/BasicDC/16_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/16_setup.png" alt="DCPromo" /></a><br /> Initial Configuration Tasks &#8211; Roles

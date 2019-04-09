@@ -15,7 +15,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-By definition, primary keys must contain unique data. They are implemented in the database through the use of a unique index. If there is not already a clustered index on the table, then the primary key&#8217;s index will be clustered. It&#8217;s not always true, but most of the time, you want your primary keys to be clustered because it is usually the key criteria in your requests to the data. This includes join conditions and where clause criteria. Clustered indexes give you exceptional performance because it allows SQL Server to create optimal execution plans.
+By definition, primary keys must contain unique data. They are implemented in the database through the use of a unique index. If there is not already a clustered index on the table, then the primary key's index will be clustered. It's not always true, but most of the time, you want your primary keys to be clustered because it is usually the key criteria in your requests to the data. This includes join conditions and where clause criteria. Clustered indexes give you exceptional performance because it allows SQL Server to create optimal execution plans.
 
 **How to detect this problem:**
 

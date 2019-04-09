@@ -26,7 +26,7 @@ First task is to write the procedure to use PIVOT with dynamic column headers. I
 
 I wrote something in AdventureWorks to for this example so if you have AdventureWorks floating around you should be able to read this and run through step for step with success.
 
-Here is our procedure. I’m sure my methods will take great notice from my local TSQL friends 🙂 The dynamic SQL more so than anything&#8230;
+Here is our procedure. I’m sure my methods will take great notice from my local TSQL friends 🙂 The dynamic SQL more so than anything…
 
 sql
 Create Procedure GetSalesPerWeek
@@ -176,11 +176,11 @@ Hit OK to save.
 
 Now in the field next to the Product Number go ahead and enter an expression for the heading like this
 
-=&#8221;W&#8221; & Code.GetColumnHeading(0)
+=”W” & Code.GetColumnHeading(0)
 
 Recall in our procedure we return each week as Wnn for the week number. So in our code we created an ArrayList filled up with the order we want. The same order we based the procedure off of. Now by using the index of the ArrayList we can simply call for the heading that should be all the way to the left (-51 weeks from the current) by means of index of 0. In the details textbox we can then simply do the following as well given the same guidelines
 
-=Fields(&#8220;W&#8221; & Code.GetColumnHeading(0)).Value
+=Fields(“W” & Code.GetColumnHeading(0)).Value
 
 Most developers don’t know they can reference the fields by name in this manner. Usually it just isn’t required and that is the case. It can be useful to note that you can dynamically fill the object name in though and get the same results as Fields!name.Value
 

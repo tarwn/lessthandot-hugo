@@ -19,7 +19,7 @@ tags:
   - sockets
 
 ---
-Recently I was working with some socket programming using the SocketAsyncEventArgs class. When writing high performance .NET code it is a good idea to keep object creation to a minimum. Instead of creating a new SocketAsyncEventArgs instance every time an action was performed I decided to put together a simple generic object pool. I hope you&#8217;ll try it out and leave me some feedback. 
+Recently I was working with some socket programming using the SocketAsyncEventArgs class. When writing high performance .NET code it is a good idea to keep object creation to a minimum. Instead of creating a new SocketAsyncEventArgs instance every time an action was performed I decided to put together a simple generic object pool. I hope you'll try it out and leave me some feedback. 
 
 ```CSharp
 /// <summary>

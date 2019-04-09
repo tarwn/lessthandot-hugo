@@ -23,13 +23,13 @@ But I hate doing backups.
 
 And I hate digging through backups to find something.
 
-What I really needed was a way to automatically push the configuration files into a mercurial repository. This would require no ongoing work from me, &#8216;backups&#8217; that are taken only when there are changes, and very easy browsing of differences between versions or over time. Sold.
+What I really needed was a way to automatically push the configuration files into a mercurial repository. This would require no ongoing work from me, &#8216;backups' that are taken only when there are changes, and very easy browsing of differences between versions or over time. Sold.
 
 ## Mercurial Repository
 
 First up is creating the local mercurial repo. I only want it to pick up the configuration files, but these are stored in the same folders that the Jenkins executables and my jobs are stored in. 
 
-In order to only version my configuration files, I&#8217;ll create the repository, tell it to ignore all files in the folder, then explicitly add just the ones I want to track.
+In order to only version my configuration files, I'll create the repository, tell it to ignore all files in the folder, then explicitly add just the ones I want to track.
 
 Creating the repository:
 
@@ -48,7 +48,7 @@ hg add .hgignore
 ```
 And then the last step is to create a remote repository, add the credentials to mercurial, and do our first push. 
 
-In my case I created a new BitBucket repository and then cheated by opening the repository in TortoiseHg WorkBench to save the remote address and my credentials as &#8220;default&#8221;.
+In my case I created a new BitBucket repository and then cheated by opening the repository in TortoiseHg WorkBench to save the remote address and my credentials as “default”.
 
 With the remote repository setup, now I can do the first push:
 
@@ -59,21 +59,21 @@ And my configurations are safely whisked away to the cloud.
 
 ## Automagicalize It
 
-One of the advantages I sold myself on was the hands off nature of the final solution. In order to achieve that I need to setup something to perform nightly commits and pushes for me. With Jenkins right here, I might as well use it to drive it&#8217;s own backups.
+One of the advantages I sold myself on was the hands off nature of the final solution. In order to achieve that I need to setup something to perform nightly commits and pushes for me. With Jenkins right here, I might as well use it to drive it's own backups.
 
-First up, I&#8217;ll create a new job named &#8220;Backup Configurations&#8221;.
+First up, I'll create a new job named “Backup Configurations”.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/JenkinsBackups/1.png" title="General Job Settings" /><br /> General Job Settings
 </div>
 
-I want this to run every night, so I&#8217;ll setup a trigger to run at 1:30 every night by specifying &#8220;Build Periodically&#8221; with a setting of &#8220;30 1 \* \* *&#8221;.
+I want this to run every night, so I'll setup a trigger to run at 1:30 every night by specifying “Build Periodically” with a setting of “30 1 \* \* *”.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/JenkinsBackups/2.png" title="Build Trigger Settings" /><br /> Build Trigger Settings
 </div>
 
-And then the last step is to add an &#8220;Execute Windows Batch Command&#8221; step to my job that executes a similar commit and push to the ones above. Because I am in a subfolder of the repository, I don&#8217;t have to add in any path commands or other trickery.
+And then the last step is to add an “Execute Windows Batch Command” step to my job that executes a similar commit and push to the ones above. Because I am in a subfolder of the repository, I don't have to add in any path commands or other trickery.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/JenkinsBackups/3.png" title="Build Step" /><br /> Build Step

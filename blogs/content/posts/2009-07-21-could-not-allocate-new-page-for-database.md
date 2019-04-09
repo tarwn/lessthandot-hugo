@@ -24,9 +24,9 @@ tags:
 ---
 Someone was writing some queries that brought back a lot of data (and I mean a LOT!!) and after a while he got the following message
 
-> Connectivity error: \[Microsoft\]\[ODBC SQL Server Driver\][SQL Server]Could not allocate new page for database &#8216;TEMPDB&#8217;. There are no more pages available in filegroup DEFAULT. Space can be created by dropping objects, adding additional files, or or allowing file growth
+> Connectivity error: \[Microsoft\]\[ODBC SQL Server Driver\][SQL Server]Could not allocate new page for database &#8216;TEMPDB'. There are no more pages available in filegroup DEFAULT. Space can be created by dropping objects, adding additional files, or or allowing file growth
 
-That is not good, fortunately this wasn&#8217;t one of our production machines but a dev/test box.
+That is not good, fortunately this wasn't one of our production machines but a dev/test box.
 
 So what causes this? You might think that tempdb is only used for temporary(#temp or ##temp) tables but that is not true, tempdb is used for a lot of thing and since SQL server 2005 it is used more than ever. Here are some things that tempdb is used for:
 
@@ -62,7 +62,7 @@ Here are a couple of ways
   2. Add another file on another disk with more space
   3. Shrink the log file of tempdb
 
-Now most likely you want to put in place some long term solutions after you did a quick fix. First of all, you should make sure that autogrow is not turned off. If you run the query below you don&#8217;t want to see a value of 0 in the growth column
+Now most likely you want to put in place some long term solutions after you did a quick fix. First of all, you should make sure that autogrow is not turned off. If you run the query below you don't want to see a value of 0 in the growth column
 
 sql
 select growth,* from master..sysaltfiles
@@ -84,11 +84,11 @@ sql
 SELECT DATABASEPROPERTYEX('tempdb','recovery')
 ```
 
-Ideally you want tempdb on its own drive, doing this will also improve performance. If you can&#8217;t have tempdb on its own drive then make sure you have plenty of space on that drive and if not then add one or more files on another drive.
+Ideally you want tempdb on its own drive, doing this will also improve performance. If you can't have tempdb on its own drive then make sure you have plenty of space on that drive and if not then add one or more files on another drive.
 
 Make sure that your queries have covering indexes, George wrote an article that explains how to create covering indexes here: [SQL Server covering indexes][2]
 
-Most likely you don&#8217;t really want to return multi million rows in 1 big chunk, try doing it in batches that are smaller. The same applies for delete statements, try to do those in chunks, this will also perform much better. 
+Most likely you don't really want to return multi million rows in 1 big chunk, try doing it in batches that are smaller. The same applies for delete statements, try to do those in chunks, this will also perform much better. 
 
 
 

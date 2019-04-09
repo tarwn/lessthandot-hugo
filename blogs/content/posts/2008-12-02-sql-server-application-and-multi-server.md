@@ -21,7 +21,7 @@ There are some cool things announced by Microsoft
 
 _**SQL Server Application and Multi-server Private CTP &#8211; Registration**</p> 
 
-As part of SQL Server &#8220;Kilimanjaro&#8221;, we have announced baseline investments for application and multi-server management. We are recruiting customers to participate in a private CTP with SQL Server Engineering. Registration for the Private CTP will take place until December 15, 2008 and the 4-5 week Private CTP will begin in mid-January. Microsoft is looking for participants in entities with at least 1 DBA, more than 25 PCs, and SQL Server installations across their organization. Register today!
+As part of SQL Server “Kilimanjaro”, we have announced baseline investments for application and multi-server management. We are recruiting customers to participate in a private CTP with SQL Server Engineering. Registration for the Private CTP will take place until December 15, 2008 and the 4-5 week Private CTP will begin in mid-January. Microsoft is looking for participants in entities with at least 1 DBA, more than 25 PCs, and SQL Server installations across their organization. Register today!
 
 **Microsoft SQL Server 2008 Free Trial Offer**
 
@@ -29,7 +29,7 @@ Dell, MaximumASP, and PASS, the Professional Association for SQL Server have par
 
 From the basic capabilities needed for a shared-hosting platform requiring support for Microsoft .NET and PHP technologies, to Hyper-V based virtual servers, to the sophisticated needs of a dedicated server, SQL Server 2008 can accommodate and grow with your data-management needs.
 
-Sign up for a FREE Microsoft SQL Server 2008 account and experience and test Microsoft&#8217;s newest, most intelligent data platform in a MaximumASP hosting environment.
+Sign up for a FREE Microsoft SQL Server 2008 account and experience and test Microsoft's newest, most intelligent data platform in a MaximumASP hosting environment.
 
 **Your SQL Server 2008 trial accounts includes:**
   

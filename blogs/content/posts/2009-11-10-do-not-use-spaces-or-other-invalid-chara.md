@@ -41,7 +41,7 @@ WHERE   Table_Name Like '%[^a-z' + @AcceptableSymbols + ']%'
 
 **How to correct it:** If this is a number issue, you may need to redesign your database structure to include more tables. For example, if you have a StudentGrade table with (StudentId, Grade1, Grade2, Grade3, Grade4) you should change it to be StudentGrade with (StudentId, Grade, Identifier). Each student would have multiple rows in this table (one for each grade). You would need to add an identifier column to indicate what the grade is for (test on November 10, book report, etc).
 
-If this is a weird character issue, then you should change the name of the column so it is a simple word or phrase without any spaces, numbers, or symbols. When you do this, make sure you check all occurrences of where this is used from. This could include procedures, function, views, indexes, front end code, etc&#8230;
+If this is a weird character issue, then you should change the name of the column so it is a simple word or phrase without any spaces, numbers, or symbols. When you do this, make sure you check all occurrences of where this is used from. This could include procedures, function, views, indexes, front end code, etc…
 
 **Level of severity:** mild
   

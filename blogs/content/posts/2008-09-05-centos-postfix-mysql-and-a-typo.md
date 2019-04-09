@@ -23,17 +23,17 @@ tags:
 ---
 # A little lesson in typo-trauma
 
-Today I finally got round to doing some admin on my primary home server, which (amongst many things) is my main mail server. After dusting a few cobwebs away, checking nobody had broken any of the furniture and such, I decided to run yum to get the latest updates (it had been almost a month since the last time I checked 88| but still, at least now it was about to be updated to all the shiny sparkly new things that CentOS had released for me&#8230;
+Today I finally got round to doing some admin on my primary home server, which (amongst many things) is my main mail server. After dusting a few cobwebs away, checking nobody had broken any of the furniture and such, I decided to run yum to get the latest updates (it had been almost a month since the last time I checked 88| but still, at least now it was about to be updated to all the shiny sparkly new things that CentOS had released for me…
 
 And it did, it came up with about 5 or 6 updates, including an update to postfix. Great. So, it finished in about a minute or two and I went on about my evening. All was happy in the land of the ignorant.
 
-Ignorant, that is, until I decided to send an email to my dear old mum to give her an update on the list of laptops I was recommending for her (I know, I&#8217;m so thoughtful :D). At which point my squirrelmail (webmail) froze.. you see, I&#8217;m currently re-decorating my study, so have moved my main workstation into another room, and as such it&#8217;s not in use.. and my other non-work laptop is, er, recovering from, er, how do you say it? A little &#8216;rinse&#8217; in the bath&#8230; so, work laptop it is, and webmail access only&#8230; 
+Ignorant, that is, until I decided to send an email to my dear old mum to give her an update on the list of laptops I was recommending for her (I know, I'm so thoughtful :D). At which point my squirrelmail (webmail) froze.. you see, I'm currently re-decorating my study, so have moved my main workstation into another room, and as such it's not in use.. and my other non-work laptop is, er, recovering from, er, how do you say it? A little &#8216;rinse' in the bath… so, work laptop it is, and webmail access only… 
 
-I thought maybe it was my damn windows wifi connection at first because it has been such a problem the last few days.. (I can&#8217;t wait to get back to my linux environments, this windows only stuff is giving me a serious heart condition.) Anyway, after a prod and a poke it seemed that it might be the mail server&#8230;
+I thought maybe it was my damn windows wifi connection at first because it has been such a problem the last few days.. (I can't wait to get back to my linux environments, this windows only stuff is giving me a serious heart condition.) Anyway, after a prod and a poke it seemed that it might be the mail server…
 
 ## Determining the problem
 
-So, I checked the mail server logs and discovered&#8230;
+So, I checked the mail server logs and discovered…
 
 ```text
 [root@phantom ~]# tail /var/log/maillog
@@ -42,7 +42,7 @@ So, I checked the mail server logs and discovered&#8230;
 phantom postfix/smtpd[8736]: fatal: unsupported dictionary type: mysql
 ...
 ```
-mmmm&#8230; now, that looks familiar.. wasn&#8217;t that a problem I faced when setting up this mail server? The problem that centos repositories only provide the standard postfix rpm which doesn&#8217;t have mysql support compiled in? But, it has been working for ages.. why is it failing now ? Hold on.. let me check what exactly was updated again recently&#8230;
+mmmm… now, that looks familiar.. wasn't that a problem I faced when setting up this mail server? The problem that centos repositories only provide the standard postfix rpm which doesn't have mysql support compiled in? But, it has been working for ages.. why is it failing now ? Hold on.. let me check what exactly was updated again recently…
 
 ```text
 [root@phantom ~]# tail /var/log/yum.log
@@ -51,11 +51,11 @@ mmmm&#8230; now, that looks familiar.. wasn&#8217;t that a problem I faced when 
 Updated: postfix - 2:2.3.3-2.1.el5_2.i386
 ...
 ```
-Ahhhh&#8230; bugger.:'(
+Ahhhh… bugger.:'(
 
 ## Path of enlightenment
 
-OK&#8230; now I&#8217;m thinking that some stupid numpty has released the wrong rpm in the wrong repository, because I know that I set things up originally to exclude the main repositories for postfix updates and only get it from the centosplus repository. Of course I did. I&#8217;m sure. I think. mmmmm&#8230; ok, let me check&#8230;
+OK… now I'm thinking that some stupid numpty has released the wrong rpm in the wrong repository, because I know that I set things up originally to exclude the main repositories for postfix updates and only get it from the centosplus repository. Of course I did. I'm sure. I think. mmmmm… ok, let me check…
 
 ```text
 [root@phantom ~]# vi /etc/yum.repos.d/CentOS-Base.repo
@@ -82,7 +82,7 @@ gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-5
 priority=2
 includepkgs=kernel* postfix*
 ```
-Ooops. Can you spot it? :yes: Yep, exactly &#8211; every entry apart from the updates was excluding &#8220;postfix&#8221;, whilst the updates were excluding &#8220;posfix&#8221;.. :no: 
+Ooops. Can you spot it? :yes: Yep, exactly &#8211; every entry apart from the updates was excluding “postfix”, whilst the updates were excluding “posfix”.. :no: 
 
 ## Fixing the shame..
 
@@ -93,4 +93,4 @@ That, my friend, is the scourge of bugs everywhere.. the humble typo. ah well. L
 [root@phantom ~]# rpm -Uvh ----replacepkgs ----force postfix-2.3.3-2.el5.centos.mysql_pgsql.i386.rpm
 [root@phantom ~]# sed -i 's/posfix/postfix/g' /etc/yum.repos.d/CentOS-Base.repo
 ```
-phew&#8230; mail server back up and working again. I thought for a brief second that it was going to be a major problem, but, thankfully, a download + install to rollback and a correction of a typo later.. and I&#8217;m back up and running 🙂 A lesson in scrutiny of important configuration data has been learnt..:lalala: until the next time.. ;D
+phew… mail server back up and working again. I thought for a brief second that it was going to be a major problem, but, thankfully, a download + install to rollback and a correction of a typo later.. and I'm back up and running 🙂 A lesson in scrutiny of important configuration data has been learnt..:lalala: until the next time.. ;D

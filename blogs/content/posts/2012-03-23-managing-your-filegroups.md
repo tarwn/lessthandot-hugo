@@ -17,7 +17,7 @@ categories:
   - Data Modelling and Design
 
 ---
-It’s 4 PM; do you know what&#8217;s in your filegroups?
+It’s 4 PM; do you know what's in your filegroups?
 
 I found myself having this inner monologue the other day after I pushed a database form dev to test. On the dev server I had split the database into two filegroups, one to store the data for the staging tables, and one to store the data for the end results. The files essentially looked like this:
 

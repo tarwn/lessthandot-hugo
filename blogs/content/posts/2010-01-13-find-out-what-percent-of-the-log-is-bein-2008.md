@@ -42,9 +42,9 @@ ReportServer        55
 tempdb              50
 msdb                5</pre>
 
-Notice that I filtered out the total with this clause _and instance_name <> &#8216;_Total&#8217;_ The total number doesn&#8217;t really make sense for that query. 
+Notice that I filtered out the total with this clause _and instance_name <> &#8216;_Total'_ The total number doesn't really make sense for that query. 
 
-Now let&#8217;s take a look at another query. What if I want to know the size in KB for each log size and also for all of them combined? Here is the query for that.
+Now let's take a look at another query. What if I want to know the size in KB for each log size and also for all of them combined? Here is the query for that.
 
 sql
 select instance_name,cntr_value from sys.dm_os_performance_counters
@@ -68,7 +68,7 @@ model			1016
 ReportServerTempDB	760
 mssqlsystemresource	504</pre>
 
-As you can see _Total is the first thing listed and it is actually a sum of all the log files in the query. The numbers don&#8217;t add up in my output because I removed some database names after running the query.
+As you can see _Total is the first thing listed and it is actually a sum of all the log files in the query. The numbers don't add up in my output because I removed some database names after running the query.
 
 Since I showed you how to do the log files, here is a way how to show the size of all the data files. here is the query for the data files
 
@@ -91,7 +91,7 @@ ReportServer            4288
 ReportServerTempDB      3264
 model                   2240</pre>
 
-And just as with the log size query, you can see _Total is the first thing listed and it is actually a sum of all the data files in the query. The numbers don&#8217;t add up in my output because I removed some database names after running the query.
+And just as with the log size query, you can see _Total is the first thing listed and it is actually a sum of all the data files in the query. The numbers don't add up in my output because I removed some database names after running the query.
 
 I will be back with another post tomorrow showing you how you can use the sys.dm\_os\_performance_counters dynamic management view to see if you are still using any deprecated features in your database.
 

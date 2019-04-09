@@ -15,13 +15,13 @@ categories:
 ---
 The recent [thread][1] in ASP.NET forums is the primary reason for this blog post.
 
-I want to show how error messages from the SQL Server were handled in our web pages. The site I was working on had most of the functionality developed by the previous developer. Unfortunately, most pages didn&#8217;t use a separation of layers and used SQLDataSource for data manipulations.
+I want to show how error messages from the SQL Server were handled in our web pages. The site I was working on had most of the functionality developed by the previous developer. Unfortunately, most pages didn't use a separation of layers and used SQLDataSource for data manipulations.
 
 The sample I want to show was called from InsertPerson.aspx page. For inserting a person we used the stored procedure I showed in my previous blog [How to insert information into multiple related tables and return ID using SQLDataSource][2].
 
 For inserting a new person the InsertPerson.aspx page was used that had multiview control, FormView controls with different tabs using User Controls for each tab (the tab was a special control designed by my colleague).
 
-Here is the beginning of the page&#8217;s code:
+Here is the beginning of the page's code:
 
 ```HTML
 <asp:Label ID="UPDATE_OPENER" runat="server" Visible="false" Text=""></asp:Label>

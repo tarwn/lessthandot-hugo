@@ -13,7 +13,7 @@ categories:
   - Web Design, Graphics and Styling
 
 ---
-Over the past couple of years, we&#8217;ve been moving from a &#8220;custom-developed&#8221; (read: terrible) reporting system towards SSRS-type reports. We do this using the ASP.net client reports, but with a twist. We had a lot of problems using the built in data-binding, especially when making schema changes (which are frequent as we try to move the database to a more sane design). In order to get around these problems, we created a report definition class that encapsulates the stored procedure used to get the report data, the parameters, and anything else we need to display on the report viewer page. We use this class, along with custom parameter input pages and a dedicated report viewer page, to late-bind the report to a data table retrieved at runtime. This would conceivably make it easier to report from a different data source as well. I won&#8217;t go too much farther off topic, but to make a long story short this forces us to define data sets in our reports manually, which is of course a pain in the neck.
+Over the past couple of years, we've been moving from a “custom-developed” (read: terrible) reporting system towards SSRS-type reports. We do this using the ASP.net client reports, but with a twist. We had a lot of problems using the built in data-binding, especially when making schema changes (which are frequent as we try to move the database to a more sane design). In order to get around these problems, we created a report definition class that encapsulates the stored procedure used to get the report data, the parameters, and anything else we need to display on the report viewer page. We use this class, along with custom parameter input pages and a dedicated report viewer page, to late-bind the report to a data table retrieved at runtime. This would conceivably make it easier to report from a different data source as well. I won't go too much farther off topic, but to make a long story short this forces us to define data sets in our reports manually, which is of course a pain in the neck.
 
 For the uninitiated, when viewing a .rdlc file (or .rdl) as an XML document, the dataset definition looks something like this. Only yours probably have a real datasource 😉
 
@@ -49,7 +49,7 @@ For the uninitiated, when viewing a .rdlc file (or .rdl) as an XML document, the
 
 Pretty simple stuff, but defining it can make setting up a new report somewhat daunting. As we start getting requests for more and more new reports, automating this process looks more and more appealing, and this morning it was finally looking appealing enough that I dropped everything else for about half an hour to figure it out. It ended up being much easier than I expected.
 
-What makes it so easy is the GetSchemaTable method ([see returned table layout][1]) on the IDataReader interface. The first thing we need to do is get the schema table. In this instance its&#8217; set up to just take a complete query string (parameters and all) &#8211; this is for a command line app used by developers, and SQL injection / plan caching / etc&#8230; is simply not as valuable as the ability to enter whatever query we want into the CLI and have it run. We&#8217;re interested in the ColumnName and DataType columns in this case. Not much to this method: 
+What makes it so easy is the GetSchemaTable method ([see returned table layout][1]) on the IDataReader interface. The first thing we need to do is get the schema table. In this instance its' set up to just take a complete query string (parameters and all) &#8211; this is for a command line app used by developers, and SQL injection / plan caching / etc… is simply not as valuable as the ability to enter whatever query we want into the CLI and have it run. We're interested in the ColumnName and DataType columns in this case. Not much to this method: 
 
 ```csharp
 public static DataTable SchemaTable(String source_query)
@@ -69,7 +69,7 @@ public static DataTable SchemaTable(String source_query)
 }
 ```
 
-From there, we need to build up an XML string, similar to what is posted above. It doesn&#8217;t need to be a complete document, just a fragment that can be pasted into our template when creating a new report. I used string manipulation to build it because I didn&#8217;t feel like wrestling with the .net classes to get the namespace &#8220;rd&#8221; defined (it proved tricky since I don&#8217;t want to build the entire document). The formatting is a little funny, just to make the output easy to read:
+From there, we need to build up an XML string, similar to what is posted above. It doesn't need to be a complete document, just a fragment that can be pasted into our template when creating a new report. I used string manipulation to build it because I didn't feel like wrestling with the .net classes to get the namespace “rd” defined (it proved tricky since I don't want to build the entire document). The formatting is a little funny, just to make the output easy to read:
 
 ```csharp
 /// <summary>Build an XML String representing the data set returned by provided query</summary>
@@ -149,8 +149,8 @@ You can then use the app like so:
   <img src="/wp-content/uploads/blogs/WebDev/generating-report-definition-for-asp-net/ReportDataSetDefinitionGenerator.PNG" alt="" title="" width="671" height="335" />
 </div>
 
-And it would generate the output shown above in a file in /Output, all ready to paste into your .rdl(c) file. I&#8217;ve used this for 2008 .rdlc files (which correspond to 2005 .rdl files), not sure if there were any changes to DataSet definitions that would prevent this from being used with 2008 .rdl&#8217;s.
+And it would generate the output shown above in a file in /Output, all ready to paste into your .rdl(c) file. I've used this for 2008 .rdlc files (which correspond to 2005 .rdl files), not sure if there were any changes to DataSet definitions that would prevent this from being used with 2008 .rdl's.
 
-I&#8217;m sure this could be made more fully featured but we don&#8217;t really create that many new reports so for now it does what we need to streamline the process just fine.
+I'm sure this could be made more fully featured but we don't really create that many new reports so for now it does what we need to streamline the process just fine.
 
  [1]: http://msdn.microsoft.com/en-us/library/0kct2kw6%28vs.71%29.aspx

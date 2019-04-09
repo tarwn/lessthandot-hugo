@@ -91,11 +91,11 @@ Results
 
 92 percent processed.
 
-Processed 216 pages for database &#8216;OwnerTest2&#8217;, file &#8216;OwnerTest2&#8217; on file 1.
+Processed 216 pages for database &#8216;OwnerTest2', file &#8216;OwnerTest2' on file 1.
 
 100 percent processed.
 
-Processed 2 pages for database &#8216;OwnerTest2&#8217;, file &#8216;OwnerTest2_log&#8217; on file 1.
+Processed 2 pages for database &#8216;OwnerTest2', file &#8216;OwnerTest2_log' on file 1.
 
 BACKUP DATABASE successfully processed 218 pages in 0.227 seconds (7.472 MB/sec).
 
@@ -120,9 +120,9 @@ Results
 
 100 percent processed.
 
-Processed 216 pages for database &#8216;OwnerTest&#8217;, file &#8216;OwnerTest2&#8217; on file 1.
+Processed 216 pages for database &#8216;OwnerTest', file &#8216;OwnerTest2' on file 1.
 
-Processed 2 pages for database &#8216;OwnerTest&#8217;, file &#8216;OwnerTest2_log&#8217; on file 1.
+Processed 2 pages for database &#8216;OwnerTest', file &#8216;OwnerTest2_log' on file 1.
 
 RESTORE DATABASE successfully processed 218 pages in 0.547 seconds (3.101 MB/sec).
 
@@ -142,7 +142,7 @@ Make sure that a query window is open with the context as a user that is in the 
 </p>
 
 <p>
-  Cannot execute as the database principal because the principal &#8220;dbo&#8221; does not exist, this type of principal cannot be impersonated, or you do not have permission.
+  Cannot execute as the database principal because the principal “dbo” does not exist, this type of principal cannot be impersonated, or you do not have permission.
 </p>
 
 <p>

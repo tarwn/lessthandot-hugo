@@ -70,7 +70,7 @@ Paul Randal who worked on DBCC CHECKDB has a whole bunch of blog posts about DBC
 
 ## Make sure that you have enough space left on the drives
 
-Running out of space on a drive is not fun stuff, suddenly you can&#8217;t insert any more data into your tables because no new pages can be allocated. If you have tools in your shop like cacti then this is probably already monitored. If you don&#8217;t have any tools then either get a tool or roll your own. Here is how you can get the free space fo the drives with T-SQL
+Running out of space on a drive is not fun stuff, suddenly you can't insert any more data into your tables because no new pages can be allocated. If you have tools in your shop like cacti then this is probably already monitored. If you don't have any tools then either get a tool or roll your own. Here is how you can get the free space fo the drives with T-SQL
 
 sql
 CREATE TABLE #FixedDrives(Drive CHAR(1),MBFree INT)

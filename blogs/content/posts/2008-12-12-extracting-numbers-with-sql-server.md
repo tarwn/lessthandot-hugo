@@ -15,7 +15,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-We all have perfectly normalized tables, with perfectly scrubbed data, right? I wish! Sometimes we are stuck with dirty data in legacy applications. What&#8217;s worse is that we are sometimes expected to do interesting things with dirty data. In this blog, I will show you how to extract a number from a varchar column that contains letters and numbers.
+We all have perfectly normalized tables, with perfectly scrubbed data, right? I wish! Sometimes we are stuck with dirty data in legacy applications. What's worse is that we are sometimes expected to do interesting things with dirty data. In this blog, I will show you how to extract a number from a varchar column that contains letters and numbers.
 
 First, let’s take a look at what some of that data might look like:
 
@@ -27,25 +27,25 @@ How do we do this? Well… it get’s tricky.
 
 The first thing we need to do is to find the character that is a number. For this, we can use PatIndex:
 
-**Select PatIndex(&#8216;%[0-9.-]%&#8217;, Data)**
+**Select PatIndex(&#8216;%[0-9.-]%', Data)**
 
-Next, Let&#8217;s remove any characters from the beginning of the string, like this:
+Next, Let's remove any characters from the beginning of the string, like this:
 
-**Select SubString(Data, PatIndex(&#8216;%[0-9.-]%&#8217;, Data), 8000)**
+**Select SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000)**
 
 This allows us to accommodate any characters that appear before the numbers. The substring result forces the numbers to the beginning of the string. Next step is to determine where the numbers end. For that, we can use PatIndex again.
 
-**Select PatIndex(&#8216;%[^0-9.-]%&#8217;, SubString(Data, PatIndex(&#8216;%[0-9.-]%&#8217;, Data), 8000))**
+**Select PatIndex(&#8216;%[^0-9.-]%', SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000))**
 
-PatIndex returns an integer for the first character that matches. We&#8217;ll want to use this in a LEFT function, there there is a potential problem. If there&#8217;s no match, PatIndex will return 0. So, we should make sure that PatIndex will always return at least one. We can trick the system by appending a character before running the PatIndex function. Like this:
+PatIndex returns an integer for the first character that matches. We'll want to use this in a LEFT function, there there is a potential problem. If there's no match, PatIndex will return 0. So, we should make sure that PatIndex will always return at least one. We can trick the system by appending a character before running the PatIndex function. Like this:
 
-**Select PatIndex(&#8216;%[^0-9.-]%&#8217;, SubString(Data, PatIndex(&#8216;%[0-9.-]%&#8217;, Data), 8000) + &#8216;X&#8217;)**
+**Select PatIndex(&#8216;%[^0-9.-]%', SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000) + &#8216;X')**
 
 By including something we know will match the pattern, we guarantee that we get a number greater than zero from the PatIndex function.
 
 Next step is to get the left part of the substring, which will return just the numbers. Like this:
 
-**Select Left(SubString(Data, PatIndex(&#8216;%[0-9.-]%&#8217;, Data), 8000), PatIndex(&#8216;%[^0-9.-]%&#8217;, SubString(Data, PatIndex(&#8216;%[0-9.-]%&#8217;, Data), 8000) + &#8216;X&#8217;)-1)**
+**Select Left(SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000), PatIndex(&#8216;%[^0-9.-]%', SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000) + &#8216;X')-1)**
 
 Now, I will admit that this is a very ugly formula to use. However, there is a high probability that it is re-usable. Because of this, it would make a nice little function to have in our SQL Arsenal.
 
@@ -59,7 +59,7 @@ Begin
              PatIndex('%[^0-9.-]%', SubString(@Data, PatIndex('%[0-9.-]%', @Data), 8000) + 'X')-1)
 End
 ```
-Now, we can use this function wherever we need it. As a final step, let&#8217;s test it on our sample data. Before doing this, let&#8217;s think about other data that could potentially cause us problems. We should test an empty string, NULL, a string without any numbers, and a string that contains multiple numbers separated by characters.
+Now, we can use this function wherever we need it. As a final step, let's test it on our sample data. Before doing this, let's think about other data that could potentially cause us problems. We should test an empty string, NULL, a string without any numbers, and a string that contains multiple numbers separated by characters.
   
 Declare @Temp Table(Data VarChar(60))
 
@@ -94,4 +94,4 @@ No Numbers Here
 approximately 2.5 miles, but less than 3 2.5
 </span></pre>
 
-I wish we could count on our data being perfect, but we really can&#8217;t. The best we can do is to use the data we are given in a way that works.
+I wish we could count on our data being perfect, but we really can't. The best we can do is to use the data we are given in a way that works.

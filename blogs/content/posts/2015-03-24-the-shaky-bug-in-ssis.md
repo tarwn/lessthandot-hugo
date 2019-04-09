@@ -27,7 +27,7 @@ tags:
   * [SSIS 2012 Control Flow moving objects is unusable][2]
 
 <p style="text-align: justify">
-  Luckily Microsoft patched this bug in CU7. You can download the hotfix <a href="https://support.microsoft.com/en-us/kb/2883424/en-us?wa=wsignin1.0">here</a>. If your environment is up-to-date with the latest patches, most likely you won&#8217;t experience this bug.
+  Luckily Microsoft patched this bug in CU7. You can download the hotfix <a href="https://support.microsoft.com/en-us/kb/2883424/en-us?wa=wsignin1.0">here</a>. If your environment is up-to-date with the latest patches, most likely you won't experience this bug.
 </p>
 
 <p style="text-align: justify">
@@ -36,7 +36,7 @@ tags:
 
 <blockquote class="twitter-tweet" lang="en">
   <p>
-    <a href="https://twitter.com/Ko_Ver">@Ko_Ver</a> Ok, because the CU that fixes that only updates the DLL&#8217;s for VS2010, you need to manually overwrite the assemblies in VS2012 folder
+    <a href="https://twitter.com/Ko_Ver">@Ko_Ver</a> Ok, because the CU that fixes that only updates the DLL's for VS2010, you need to manually overwrite the assemblies in VS2012 folder
   </p>
   
   <p>
@@ -46,7 +46,7 @@ tags:
 
 If you go back to the [first Connect item][1], these steps are described in the work arounds and they work like a charm.
 
-The issue has also been [reported for SSIS 2014][3], and while the item has been closed as fixed, there&#8217;s no explanation on how it is fixed. Maybe in an upcoming CU for SQL Server 2014? It&#8217;s possible the same work around works for SSIS 2014, but I haven&#8217;t tried it (I don&#8217;t have the bug in Visual Studio 2013) so if you do try it, it&#8217;s at your own risk.
+The issue has also been [reported for SSIS 2014][3], and while the item has been closed as fixed, there's no explanation on how it is fixed. Maybe in an upcoming CU for SQL Server 2014? It's possible the same work around works for SSIS 2014, but I haven't tried it (I don't have the bug in Visual Studio 2013) so if you do try it, it's at your own risk.
 
  [1]: https://connect.microsoft.com/SQLServer/feedback/details/790470/when-dragging-ssis-objects-on-canvas-the-objects-shake-jiggle-jitter
  [2]: https://connect.microsoft.com/SQLServer/feedback/details/776664/ssis-2012-control-flow-moving-objects-is-unusable

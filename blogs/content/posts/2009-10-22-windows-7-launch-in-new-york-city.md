@@ -26,9 +26,9 @@ I am running Windows 7 on all my home machines since it became available from MS
 
 [<img src="http://farm3.static.flickr.com/2795/4036464788_3db9bcea03.jpg" width="500" height="375" alt="Monitors" />][3]
 
-The launch even was held in Soho in a loft which was probably used as an art gallery at other times. It was interesting that this event was only for press, partners and invited guests&#8230;..this time there would be no..developers&#8230; developers&#8230; developers coming out of Steve Ballmer&#8217;s mouth 🙂
+The launch even was held in Soho in a loft which was probably used as an art gallery at other times. It was interesting that this event was only for press, partners and invited guests…..this time there would be no..developers… developers… developers coming out of Steve Ballmer's mouth 🙂
 
-Remember Kylie from that [&#8216;cute&#8217; windows 7 commercial][4]? She was there, she introduced Steve Ballmer and he gave her a pink laptop&#8230;.very cute
+Remember Kylie from that [&#8216;cute' windows 7 commercial][4]? She was there, she introduced Steve Ballmer and he gave her a pink laptop….very cute
   
 [<img src="http://farm3.static.flickr.com/2540/4036467632_1fd5fa76c4_m.jpg" width="240" height="180" alt="Ballmer Gives Laptop" />][5]
 
@@ -36,7 +36,7 @@ Ballmer explained some of the things that happened during the creation of Window
   
 [<img src="http://farm3.static.flickr.com/2747/4035720493_9c96b970a6_m.jpg" width="240" height="180" alt="Ballmer" />][6] &nbsp;[<img src="http://farm3.static.flickr.com/2460/4036472382_b78faa8f75_m.jpg" width="240" height="180" alt="Ballmer Presentation" />][7] 
 
-After Ballmer was done with his presentation 7 cool things that Windows 7 can do was presented. The thing that impressed me the most is when they had video, tv and pictures on 8 different monitors from a single DELL XPS machine&#8230;.that was pretty cool. Netflix on a touchscreen looked pretty nice&#8230;.also shown was a kindle app for Windows 7.
+After Ballmer was done with his presentation 7 cool things that Windows 7 can do was presented. The thing that impressed me the most is when they had video, tv and pictures on 8 different monitors from a single DELL XPS machine….that was pretty cool. Netflix on a touchscreen looked pretty nice….also shown was a kindle app for Windows 7.
 
 After all this they opened a partition where all the partners had their hardware setup. Some of these devices you can see in the pictures below
   
@@ -46,7 +46,7 @@ After all this they opened a partition where all the partners had their hardware
   
 [<img src="http://farm4.static.flickr.com/3510/4035730917_119c175cd6.jpg" width="466" height="500" alt="Ballmer Inspecting" />][9]
 
-The 3D Batman game was cool looking&#8230;initially I thought that the screen was fuzzy but then I noticed that I needed to wear the special glasses on the table; after I put the glasses on the game looked really crisp and had that 3D look and feel.
+The 3D Batman game was cool looking…initially I thought that the screen was fuzzy but then I noticed that I needed to wear the special glasses on the table; after I put the glasses on the game looked really crisp and had that 3D look and feel.
   
 [<img src="http://farm3.static.flickr.com/2498/4036486848_66225f72df.jpg" width="500" height="375" alt="Batman 3D" />][10]
 
@@ -62,7 +62,7 @@ There were 3 bars, one of them had a bunch of coffee machines and the other 2 ha
   
 [<img src="http://farm3.static.flickr.com/2576/4035712229_3b1c29def8_m.jpg" width="240" height="180" alt="Bar" />][13]
 
-Maybe you know that twitter did a deal with Bing where Bing would get access to twitter&#8217;s firehouse so that it could do real time search, the pic below shows a real time search for Windows 7 which is refereshed every time someone tweets about Windows 7
+Maybe you know that twitter did a deal with Bing where Bing would get access to twitter's firehouse so that it could do real time search, the pic below shows a real time search for Windows 7 which is refereshed every time someone tweets about Windows 7
   
 [<img src="http://farm3.static.flickr.com/2502/4035739081_dc847c530d.jpg" width="449" height="500" alt="Twitter Bing Live Update" />][14]
 

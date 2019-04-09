@@ -31,7 +31,7 @@ _1. You have been shrunk down to the size of a nickel and tossed into a blender.
 
 2. Design and describe a system/application that will most efficiently produce a report of the top 1 million Google search requests.These are the particulars.
 
-* You are given 12 servers to work with. They are all dual-processor machines with 4Gb of RAM, 4x400GB hard drives and networked together.(Basically, nothing more than high-end PC&#8217;s)
+* You are given 12 servers to work with. They are all dual-processor machines with 4Gb of RAM, 4x400GB hard drives and networked together.(Basically, nothing more than high-end PC's)
 
 * The log data has already been cleaned for you. It consists of 100 Billion log lines, broken down into 12 320 GB files of 40-byte search terms per line.
 
@@ -39,6 +39,6 @@ _1. You have been shrunk down to the size of a nickel and tossed into a blender.
 
 So what do you think, could you answer these questions?
 
-And don&#8217;t forget, if you have any tech questions then don&#8217;t hesitate to ask in our [forums][1]
+And don't forget, if you have any tech questions then don't hesitate to ask in our [forums][1]
 
  [1]: http://forum.ltd.local/

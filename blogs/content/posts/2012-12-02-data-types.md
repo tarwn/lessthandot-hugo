@@ -33,7 +33,7 @@ This is day two of the [SQL Advent 2012 series][1] of blog posts. Today we are g
 
 SQL Server has two data types to store character data[1], both of them come in fixed and variable length sizes. The char and varchar data type uses one byte of store to store one character, the nchar and nvarchar data type uses two bytes of store to store one character. The nchar and nvarchar data types are used to store unicode of data
 
-Let&#8217;s think about that for a second, what we are saying is that the char and varchar data type can store twice the number of characters in the same amount of store as the nchar and nvarchar data type. Why does this matter, space is cheap right? True, space is getting cheaper but we are also storing more and more data every year.
+Let's think about that for a second, what we are saying is that the char and varchar data type can store twice the number of characters in the same amount of store as the nchar and nvarchar data type. Why does this matter, space is cheap right? True, space is getting cheaper but we are also storing more and more data every year.
 
 Now think about what happens you have everything stored as unicode data
 
@@ -41,9 +41,9 @@ Now think about what happens you have everything stored as unicode data
   * What about when transferring the results to and from your database server, are the packets able to store the same number of characters.
   * What about the amount of data on a page, what does this do to indexes and index lookups, how does it affect index maintenance?
 
-**If you don&#8217;t need it, then don&#8217;t use unicode data**.
+**If you don't need it, then don't use unicode data**.
   
-Some examples of what I have seen stored in nchar and nvarchar when realy you shouldn&#8217;t:
+Some examples of what I have seen stored in nchar and nvarchar when realy you shouldn't:
 
 Zip Code for US addresses
   
@@ -53,7 +53,7 @@ Social Security Numbers (which were stored in plain text none the less)
   
 Integer data (enforced by constraints or the app layer to make sure these were only digits)
 
-Let&#8217;s take a quick look by running some T-SQL
+Let's take a quick look by running some T-SQL
 
 First create these two tables
 
@@ -85,7 +85,7 @@ CROSS JOIN sys.sysobjects c4
 GO
 ```
 
-Let&#8217;s see how much space is used by both tables
+Let's see how much space is used by both tables
 
 sql
 EXEC sp_spaceused 'TestChar'
@@ -118,11 +118,11 @@ Here is the plan for that query
 
 > |&#8211;Table Scan(OBJECT:([tempdb].[dbo].[TestChar]),
   
-> WHERE:([tempdb].[dbo].[TestChar].[SomeCol] like [@v]+&#8217;%&#8217;))
+> WHERE:([tempdb].[dbo].[TestChar].[SomeCol] like [@v]+'%'))
 
 If we look at the plan we can see that this looks pretty good
   
-Usually people will sometimes change the datatype of a column but will not change any code that access this column. Let&#8217;s now change the data type of the column to nchar
+Usually people will sometimes change the datatype of a column but will not change any code that access this column. Let's now change the data type of the column to nchar
 
 sql
 ALTER TABLE TestChar ALTER COLUMN SomeCol nchar(10)
@@ -147,7 +147,7 @@ Here is the plan
 
 > |&#8211;Table Scan(OBJECT:([tempdb].[dbo].[TestChar]),
   
-> WHERE:([tempdb].[dbo].[TestChar].[SomeCol] like CONVERT_IMPLICIT(nvarchar(11),[@v]+&#8217;%&#8217;,0)))
+> WHERE:([tempdb].[dbo].[TestChar].[SomeCol] like CONVERT_IMPLICIT(nvarchar(11),[@v]+'%',0)))
 
 As you can see, there is a conversion going on right now.
 
@@ -187,7 +187,7 @@ Storage size is 4 bytes. Integer data from -2^31 (-2,147,483,648) through 2^31 &
   
 Storage size is 8 bytes. Integer data from -2^63 (-9,223,372,036,854,775,808) through 2^63-1 (9,223,372,036,854,775,807).
 
-Now imagine facebook with a billion users decided to use bigint as CountryID in their Country table, this key is then uses as a foreign key in the user demographics table. This is wasteful,either use a smallint since we won&#8217;t go through 32 thousand countries in the forseeable feature or use the 2 or 3 character ISO code. The problem is even worse if you have a compound 6 column key and it is used as a foreign key in tons of other tables&#8230;that was real fun to clean up&#8230;.use a surrogate 1 column key in that case&#8230;but be sure to test&#8230;.normalize till it hurts then denormalize till it works&#8230;.I will cover normalization in another post&#8230;just wanted to mention it
+Now imagine facebook with a billion users decided to use bigint as CountryID in their Country table, this key is then uses as a foreign key in the user demographics table. This is wasteful,either use a smallint since we won't go through 32 thousand countries in the forseeable feature or use the 2 or 3 character ISO code. The problem is even worse if you have a compound 6 column key and it is used as a foreign key in tons of other tables…that was real fun to clean up….use a surrogate 1 column key in that case…but be sure to test….normalize till it hurts then denormalize till it works….I will cover normalization in another post…just wanted to mention it
 
 That is all for day two of the SQL Advent 2012 series, come back tomorrow for the next one, you can also check out all the posts from last year here: [SQL Advent 2011 Recap][2]
 

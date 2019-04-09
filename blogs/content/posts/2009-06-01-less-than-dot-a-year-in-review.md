@@ -404,7 +404,7 @@ Now we go on to the content on this site.
     </td>
     
     <td>
-      <a href="/index.php?p=27">Good SQL Articles To Read If You Can&#8217;t Afford Books</a>
+      <a href="/index.php?p=27">Good SQL Articles To Read If You Can't Afford Books</a>
     </td>
   </tr>
   
@@ -684,7 +684,7 @@ Now we go on to the content on this site.
   </tr>
 </table>
 
-That is it, thank you for visiting and we will have lots of more content coming up in the year ahead. If you have any questions don&#8217;t hesitate to ask in our [forums][2]
+That is it, thank you for visiting and we will have lots of more content coming up in the year ahead. If you have any questions don't hesitate to ask in our [forums][2]
 
  [1]: http://ltd.local/
  [2]: http://forum.ltd.local/

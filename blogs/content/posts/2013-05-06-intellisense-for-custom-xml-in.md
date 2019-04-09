@@ -25,7 +25,7 @@ There are a few ways to do this, but if you have a schema (XSD) for the file, th
 
 ## Sample Files
 
-So let&#8217;s assume for the moment that you have the following sample files:
+So let's assume for the moment that you have the following sample files:
 
 **AwesomeFile.xml**
 
@@ -71,19 +71,19 @@ So let&#8217;s assume for the moment that you have the following sample files:
 	
 </xs:schema>
 ```
-Visual Studio gives us handy intellisense suggestions and warnings when we&#8217;re writing the schema because we have specified a namespace it knows, but how do we get that usefulness when we&#8217;re adding more content to our awesome XML file?
+Visual Studio gives us handy intellisense suggestions and warnings when we're writing the schema because we have specified a namespace it knows, but how do we get that usefulness when we're adding more content to our awesome XML file?
 
 ## More Cowbell
 
 Turns out, adding this functionality is pretty easy. Visual Studio is smart enough to use know schemas, so all we have to do is provide the information that makes our schema known and relevant for our XML file. 
 
-For this example I am assuming that the two files are in the same folder. I&#8217;ve also made the file complex enough that the additions we make should work for far more complex setups also.
+For this example I am assuming that the two files are in the same folder. I've also made the file complex enough that the additions we make should work for far more complex setups also.
 
-Here&#8217;s the steps:
+Here's the steps:
 
   1. Define a target namespace on the schema
   2. Define the empty namespace of the schema as this namespace
-  3. set attributeFormDefault to unqualified so attributes in our XML file won&#8217;t require namespace declarations
+  3. set attributeFormDefault to unqualified so attributes in our XML file won't require namespace declarations
   4. Add the namespace declaration to the XML file
 
 Updating our files (and adding comments to reflect the list above), we have:
@@ -158,4 +158,4 @@ And when we use the wrong type:
   <img src="http://tiernok.com/LTDBlog/XmlSchemaIntellisense/WrongTypeWarning.png" alt="Intellisense suggestions" />
 </div>
 
-_Hopefully the custom color scheme isn&#8217;t confusing, was feeling too lazy to switch it and switch it back_
+_Hopefully the custom color scheme isn't confusing, was feeling too lazy to switch it and switch it back_

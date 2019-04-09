@@ -26,7 +26,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Anyway, my session is titled <em>&#8220;How to (not) torment your fellow SSIS developer?&#8221;</em> and its abstract is as follows:
+  Anyway, my session is titled <em>“How to (not) torment your fellow SSIS developer?”</em> and its abstract is as follows:
 </p>
 
 <p style="text-align: justify">

@@ -27,7 +27,7 @@ Here are the requirements for the USB Device
 
 For a device to be compatible and useful it must conform to these requirements:
 
-  * The removable media&#8217;s capacity must be at least 256 MB—250 MB after formatting. Windows Vista x86 is limited to using 3.5GB (Vista x64 can support up to 16GB); this restriction has been removed in Windows 7.
+  * The removable media's capacity must be at least 256 MB—250 MB after formatting. Windows Vista x86 is limited to using 3.5GB (Vista x64 can support up to 16GB); this restriction has been removed in Windows 7.
   * The device must have an access time of 1 ms or less.
   * The device must be capable of 2.5 MB/s read speeds for 4 KB random reads spread uniformly across the entire device, and 1.75 MB/s write speeds for 512 KB random writes spread uniformly across the device
 

@@ -29,7 +29,7 @@ _I met Denis and Sebastian over a year ago when I attended their session on test
 
 Test case heuristics are patterns used to help decide the next test to write and ensure test coverage of requirements. This is the second post on a series of test case heuristics pertaining to database testing.
 
-I&#8217;m trying out a new way of delivering series to a wider audience &#8211; post sharing! The series home is at: http://testdrivendatabases.com/test-heuristics where you can find links to all articles in the series. The posts will be scattered over a variety of websites and blogs.
+I'm trying out a new way of delivering series to a wider audience &#8211; post sharing! The series home is at: http://testdrivendatabases.com/test-heuristics where you can find links to all articles in the series. The posts will be scattered over a variety of websites and blogs.
 
 ## Definition:
 
@@ -72,7 +72,7 @@ Tests for zero records seem to uncover missing requirements or defects in code i
 
 Whereas tests for one and some records seem to uncover more problems in loops when a specific exit condition is needed.
 
-Tests for multiple (&#8220;some&#8221;) records may also be useful when data can be duplicated. Often we assume that data being processed is unique, but asking the question, &#8220;what if there are multiple instances of the same record?&#8221; can be illuminating.
+Tests for multiple (“some”) records may also be useful when data can be duplicated. Often we assume that data being processed is unique, but asking the question, “what if there are multiple instances of the same record?” can be illuminating.
 
 ## Special Cases:
 
@@ -84,7 +84,7 @@ The join type (e.g. inner, left or right outer, full) must also be considered. T
   * A record exists in the left table and there is exactly one match in the right table.
   * A record exists in the left table and has multiple matches in the right table.
   * A record exists in the right table, but has no matches in the left table.
-  * And so on&#8230;
+  * And so on…
 
 **Filters**: Zero-one-some is also particularly useful in filters, such as WHERE clauses. Consider the following sub-query, for example:
 

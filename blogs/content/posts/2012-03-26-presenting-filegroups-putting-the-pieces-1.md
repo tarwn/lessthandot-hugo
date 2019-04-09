@@ -16,15 +16,15 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-It&#8217;s been a busy year already, but I&#8217;m just getting started!
+It's been a busy year already, but I'm just getting started!
 
-I&#8217;ll be presenting on Tuesday, April 3, 2012, at 6:00 pm, for SQL Connection Suburban Chicago.
+I'll be presenting on Tuesday, April 3, 2012, at 6:00 pm, for SQL Connection Suburban Chicago.
 
 [![][1]][2]
 
-I&#8217;ll be giving my new favorite presentation, &#8220;Filegroups: Putting the Pieces Together&#8221;.
+I'll be giving my new favorite presentation, “Filegroups: Putting the Pieces Together”.
 
-Abstract: Every DBA must know how to create and maintain filegroups because they affect performance, maintenance, and security of your data. What are filegroups, and how do you use them? In this session, I&#8217;ll show you how to create filegroups, create objects in them, move objects to them, perform maintenance, and walk through piecemeal restores.
+Abstract: Every DBA must know how to create and maintain filegroups because they affect performance, maintenance, and security of your data. What are filegroups, and how do you use them? In this session, I'll show you how to create filegroups, create objects in them, move objects to them, perform maintenance, and walk through piecemeal restores.
 
 You can get more information and register [here][3].
 

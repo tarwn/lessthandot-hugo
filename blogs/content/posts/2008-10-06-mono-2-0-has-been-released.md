@@ -48,7 +48,7 @@ Mono.Cecil: A library to manipulate ECMA CLI files (the native format used for e
   
 Mono.Cairo: A binding to the Cairo Graphics library to produce 2D graphics and render them into a variety of forms (images, windows, postscript and PDF).
   
-Mono&#8217;s SQLite support: a library to create and consume databases created with SQLite.
+Mono's SQLite support: a library to create and consume databases created with SQLite.
   
 Mono.Posix: a library to access Linux and Unix specific functionality from your managed application. With both a low-level interface as well as higher level interfaces. 
 

@@ -27,7 +27,7 @@ tags:
 ---
 Someone had some trouble earlier today with [calling a user defined function that has a default value for a parameter][1]
 
-When you have a stored procedure with default values for parameters, you can omit those when calling the proc. With user defined functions, it works a little different, let&#8217;s take a look.
+When you have a stored procedure with default values for parameters, you can omit those when calling the proc. With user defined functions, it works a little different, let's take a look.
 
 First create this simple function
 
@@ -77,7 +77,7 @@ You will see the following text
 > 
 > When a parameter of the function has a default value, **the keyword DEFAULT must be specified** when the function is called in order to retrieve the default value. This behavior is different from using parameters with default values in stored procedures in which omitting the parameter also implies the default value. An exception to this behavior is when invoking a scalar function by using the EXECUTE statement. When using EXECUTE, the DEFAULT keyword is not required.
 
-So, let&#8217;s try that
+So, let's try that
 
 sql
 SELECT dbo.fnTest(  23, default )

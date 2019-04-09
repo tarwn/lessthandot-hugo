@@ -94,7 +94,7 @@ Create an ADO.NET Connection by going into connection manager configuration.  N
 
 In the connection just created, change DelayValidation to True.  Click the Expressions property next to open the Property Expression Editor.  Select ServerName Property and then use the following expression as the expression for ServerName
 
-ISNULL(@[User::InstanceName]) ? &#8220;SERVERNAME\DENALICTP3&#8221; :  @[User::InstanceName]
+ISNULL(@[User::InstanceName]) ? “SERVERNAME\DENALICTP3” :  @[User::InstanceName]
 
 Note: Change the instance name that will be the default if the variable name is null to one that is active on your development servers.  Validating empty strings should also be performed.
 

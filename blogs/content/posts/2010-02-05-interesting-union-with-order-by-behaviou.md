@@ -41,7 +41,7 @@ You will get the following error
 
 **_Server: Msg 156, Level 15, State 1, Line 4
   
-Incorrect syntax near the keyword &#8216;UNION&#8217;._**
+Incorrect syntax near the keyword &#8216;UNION'._**
 
 Interestingly, this same code will work if you use it in the following matter
 

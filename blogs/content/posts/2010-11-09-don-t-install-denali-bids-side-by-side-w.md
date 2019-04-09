@@ -36,7 +36,7 @@ Microsoft Visual Studio
   
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
-&#8216;C:UsersDenisAppDataLocalTemptemp.dtproj&#8217; cannot be opened because its project type (.dtproj) is not supported by this version of the application. 
+&#8216;C:UsersDenisAppDataLocalTemptemp.dtproj' cannot be opened because its project type (.dtproj) is not supported by this version of the application. 
 
 To open it, please use a version that supports this type of project.
   

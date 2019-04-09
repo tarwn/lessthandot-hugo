@@ -40,7 +40,7 @@ tags:
   </ul>
 </div>
 
-It was a long trip from &#8220;I want product ABC&#8221; to what we really ended up choosing and implementing. No process is perfect, no meeting goes as planned. After the product selection process is complete it&#8217;s time to review what went well, what fared poorly, and what we can try to improve the process. There are fifteen other tasks waiting, but taking some time to identify these factors is the first step to evolving our process towards an ultimate goal of less wasted motion in both the short and long terms. Some day we should be able to lift our heads and realize that we are not only selecting the best possible products for our needs, but doing so with less energy and resources then it originally took to simply pick one at random (with the random conversations, arguments, integration losses, and other baggage that incorporate that &#8216;process&#8217;).
+It was a long trip from “I want product ABC” to what we really ended up choosing and implementing. No process is perfect, no meeting goes as planned. After the product selection process is complete it's time to review what went well, what fared poorly, and what we can try to improve the process. There are fifteen other tasks waiting, but taking some time to identify these factors is the first step to evolving our process towards an ultimate goal of less wasted motion in both the short and long terms. Some day we should be able to lift our heads and realize that we are not only selecting the best possible products for our needs, but doing so with less energy and resources then it originally took to simply pick one at random (with the random conversations, arguments, integration losses, and other baggage that incorporate that &#8216;process').
 
 ## Step 4: Review 
 
@@ -48,11 +48,11 @@ It was a long trip from &#8220;I want product ABC&#8221; to what we really ended
   <img src="http://tiernok.com/LTDBlog/ThinkingGuy.jpg" title="Assess and review" style="max-width: 120px" />
 </div>
 
-There are a lot of templates out there for reviewing projects and tasks and, like so many areas in our field, there are books upon books upon theories upon methods. Don&#8217;t waste a lot of time trying to find the perfect method, generally any method will get us 80% of the way there. One starting place I like is the [Agile Retrospective][1].
+There are a lot of templates out there for reviewing projects and tasks and, like so many areas in our field, there are books upon books upon theories upon methods. Don't waste a lot of time trying to find the perfect method, generally any method will get us 80% of the way there. One starting place I like is the [Agile Retrospective][1].
 
 ### Hold the Retrospective
 
-The best retrospectives I have been included in have had a few common factors (this is not to say you can&#8217;t have an excellent one without these factors, I can only speak from my own experience). Prior to the retrospective we should send out a survey for people to fill out and bring to the meeting with them. I have a post-mortem document I borrow questions from and expanded over time, here are some examples (my apologies, I haven&#8217;t tracked all the sources of these questions):
+The best retrospectives I have been included in have had a few common factors (this is not to say you can't have an excellent one without these factors, I can only speak from my own experience). Prior to the retrospective we should send out a survey for people to fill out and bring to the meeting with them. I have a post-mortem document I borrow questions from and expanded over time, here are some examples (my apologies, I haven't tracked all the sources of these questions):
 
   * Are you proud of the outcome of the project?
   * What was the single most frustrating part of the project?
@@ -83,7 +83,7 @@ Document only as much as you need and no more. Documenting every last detail is 
 
 We did it. From a general budget line item or CEO query we have evaluated what the company needed, brought all the business owners on board to create requirements and selection criteria, evaluated several products against each other, and executed a lessons learned exercise against our process. Along the way we sidestepped a lot of meetings, reduced a slew of risks, reduced implementation and requirements gaps, and probably saved our company a lot of money they will never know about. 
 
-The absolute last step is to write this down for your year end review and to send out a thank you email to everyone that was involved in the process. From the CEO to the business owners, to the implementation team, everyone deserves to enjoy the successes. And a little not-so-secret tip? Success is the best step 0 for your next project. Having a string of success behind you makes it that much easier to root cause people&#8217;s requirements, get them involved in selection, and successfully complete that next project.
+The absolute last step is to write this down for your year end review and to send out a thank you email to everyone that was involved in the process. From the CEO to the business owners, to the implementation team, everyone deserves to enjoy the successes. And a little not-so-secret tip? Success is the best step 0 for your next project. Having a string of success behind you makes it that much easier to root cause people's requirements, get them involved in selection, and successfully complete that next project.
 
 #### Product Selection:
 

@@ -17,11 +17,11 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Take a look at the books in your office. Think about how much space they take up. Now pick one up and page through it. Is there a lot of white space? Some pages may only have a couple paragraphs on them. There are a lot of words and letters repeated. If there was a way to compress the book, it would be much lighter to store and carry around, wouldn&#8217;t it?
+Take a look at the books in your office. Think about how much space they take up. Now pick one up and page through it. Is there a lot of white space? Some pages may only have a couple paragraphs on them. There are a lot of words and letters repeated. If there was a way to compress the book, it would be much lighter to store and carry around, wouldn't it?
 
 The same principle applies to your SQL Server databases. Pages have free space on them. They also have bits of data that are repeated. A great feature of SQL Server is data compression, which will reduce the size of a database on disk, making storage and administration easier.
 
-SQL Server 2008 (and newer versions) **Enterprise Edition** includes two types of data compression: row and page. The following demos were done in SQL Server 2012 Enterprise Edition in order to show the value data compression has and efficiency gains that can be had by utilizing this enterprise-level feature.&#8217; The demos will also show key performance factors to be aware of that may, or may not, be effected by data compression.
+SQL Server 2008 (and newer versions) **Enterprise Edition** includes two types of data compression: row and page. The following demos were done in SQL Server 2012 Enterprise Edition in order to show the value data compression has and efficiency gains that can be had by utilizing this enterprise-level feature.' The demos will also show key performance factors to be aware of that may, or may not, be effected by data compression.
 
 ### Row Compression
 
@@ -31,9 +31,9 @@ Row compression reduces the amount of space rows take up on a page in several wa
   * It uses the least amount of storage possible for some data types. Some numeric data types are reduced in size, and some character data types remove padding. For a full list of which data types can be compressed, and the method used, read [Row Compression Implementation][1]. 
   * NULL and 0 values take up no space on a page. 
 
-Let&#8217;s see this in action. I&#8217;ll walk you through creating and populating a table, checking the size of the table, and viewing the size of the rows with DBCC PAGE. Then, I&#8217;ll enable row compression, rebuild the table, and revisit the page to see what&#8217;s changed.
+Let's see this in action. I'll walk you through creating and populating a table, checking the size of the table, and viewing the size of the rows with DBCC PAGE. Then, I'll enable row compression, rebuild the table, and revisit the page to see what's changed.
 
-First, I&#8217;ll create a table with several data types INT, CHAR(50), DATETIME, MONEY, and DECIMAL, to show the effects of compression on each.
+First, I'll create a table with several data types INT, CHAR(50), DATETIME, MONEY, and DECIMAL, to show the effects of compression on each.
 
 sql
 USE AdventureWorks2012; 
@@ -48,7 +48,7 @@ CREATE TABLE TestRowCompression
 WITH ( DATA_COMPRESSION = NONE);
 ```
 
-Then, I&#8217;ll insert data into the table. I&#8217;m using a variety of values, including 0 and NULL, to show how that is compressed.
+Then, I'll insert data into the table. I'm using a variety of values, including 0 and NULL, to show how that is compressed.
 
 sql
 INSERT INTO TestRowCompression 
@@ -59,7 +59,7 @@ INSERT INTO TestRowCompression
 VALUES ( 12, 'Green Plate', '2012/12/01 08:34:56', '500.00', 12, 12 );
 ```
 
-Let&#8217;s see how the data appears when selected in a normal query.
+Let's see how the data appears when selected in a normal query.
 
 sql
 SELECT ItemID , 
@@ -81,11 +81,11 @@ sp_spaceused 'dbo.TestRowCompression';
 
 <img src="/wp-content/uploads/users/grrlgeek/compression%202.JPG?mtime=1355883902" alt="" width="422" height="71" />
 
-Here, I can see that there are three rows, and the data is taking up 8KB of space that&#8217;s one page. How do I tell how much space each row is using? I can view the page, using DBCC PAGE, to find that information.
+Here, I can see that there are three rows, and the data is taking up 8KB of space that's one page. How do I tell how much space each row is using? I can view the page, using DBCC PAGE, to find that information.
 
-> _Note_: if you&#8217;re not familiar with DBCC IND and DBCC PAGE, I recommend reading [Using DBCC PAGE and DBCC IND to find out if page splits ever roll back][3] by Paul Randal.
+> _Note_: if you're not familiar with DBCC IND and DBCC PAGE, I recommend reading [Using DBCC PAGE and DBCC IND to find out if page splits ever roll back][3] by Paul Randal.
 
-I&#8217;ll use DBCC IND to find the file number and page number.
+I'll use DBCC IND to find the file number and page number.
 
 sql
 DBCC IND ('AdventureWorks2012', 'TestRowCompression', 0);
@@ -93,7 +93,7 @@ DBCC IND ('AdventureWorks2012', 'TestRowCompression', 0);
 
 <img src="/wp-content/uploads/users/grrlgeek/compression%203.JPG?mtime=1355883902" alt="" width="768" height="62" />
 
-I&#8217;ll run DBCC PAGE, using the data page &#8211; PageType 1, PagePID 23816 &#8211; to view the data on the page.
+I'll run DBCC PAGE, using the data page &#8211; PageType 1, PagePID 23816 &#8211; to view the data on the page.
 
 sql
 DBCC TRACEON (3604); 
@@ -102,7 +102,7 @@ DBCC PAGE ('AdventureWorks2012', 1, 23816, 3);
 GO
 ```
 
-I&#8217;m going to skim past the header and go to the information for the first row. Here, in the top right, I can see the entire row uses 95 bytes. You can see the bytes used by each field by reviewing &#8216;Length (physical)&#8217;. The ItemID field is an INT, which takes 4 bytes for storage. The ItemName field is declared as CHAR(50), and even though it is only 20 characters in length, it&#8217;s using 50 bytes. ItemLength and ItemWidth take up 9 bytes each, even though they are values of 0. This is the way data is normally stored on pages.
+I'm going to skim past the header and go to the information for the first row. Here, in the top right, I can see the entire row uses 95 bytes. You can see the bytes used by each field by reviewing &#8216;Length (physical)'. The ItemID field is an INT, which takes 4 bytes for storage. The ItemName field is declared as CHAR(50), and even though it is only 20 characters in length, it's using 50 bytes. ItemLength and ItemWidth take up 9 bytes each, even though they are values of 0. This is the way data is normally stored on pages.
 
 <img src="/wp-content/uploads/users/grrlgeek/compression%204.JPG?mtime=1355883902" alt="" width="610" height="518" />
 
@@ -127,7 +127,7 @@ ALTER TABLE dbo.TestRowCompression REBUILD
 WITH (DATA_COMPRESSION = ROW);
 ```
 
-I&#8217;ll run sp_spaceused again to compare the space used for the table.
+I'll run sp_spaceused again to compare the space used for the table.
 
 sql
 sp_spaceused 'dbo.TestRowCompression';
@@ -135,7 +135,7 @@ sp_spaceused 'dbo.TestRowCompression';
 
 <img src="/wp-content/uploads/users/grrlgeek/compression%207.JPG?mtime=1355884192" alt="" width="407" height="44" />
 
-The data size has remained the same, but the unused size has increased. But, what this doesn&#8217;t tell me is how much space is SQL Server using for each field in each row? What effect has row compression had on the rows? Let&#8217;s view the page again.
+The data size has remained the same, but the unused size has increased. But, what this doesn't tell me is how much space is SQL Server using for each field in each row? What effect has row compression had on the rows? Let's view the page again.
 
 I will run DBCC IND again to get the page number. Then, I run DBCC PAGE to view the results. 
 
@@ -173,13 +173,13 @@ The next level of data compression is page compression. The leaf level of tables
   * Prefix compression 
   * Dictionary compression 
 
-We&#8217;ve already covered row compression. How do prefix and dictionary work?
+We've already covered row compression. How do prefix and dictionary work?
 
 #### Prefix Compression
 
 This type will look at the data stored in each column. It will find a pattern in the beginning &#8216; the prefix &#8216; of each value, store that in a section of the page called the compression information structure (CIS), and reference the prefix in the row, instead of the entire value.
 
-Let&#8217;s use names as an example, since that is something you could have with many repeating values.
+Let's use names as an example, since that is something you could have with many repeating values.
 
 <table border="1" cellspacing="0" cellpadding="0">
   <tr>
@@ -517,7 +517,7 @@ Dictionary compression takes this one step further and replaces repeating values
   </tr>
 </table>
 
-To show the effects, let&#8217;s copy the data from TestRowCompression into a new table.
+To show the effects, let's copy the data from TestRowCompression into a new table.
 
 sql
 SELECT ItemID , 
@@ -530,7 +530,7 @@ INTO''' TestPageCompression
 FROM''' TestRowCompression;
 ```
 
-I&#8217;ll alter the table to use page compression and check the size.
+I'll alter the table to use page compression and check the size.
 
 sql
 ALTER TABLE dbo.TestPageCompression REBUILD 
@@ -540,7 +540,7 @@ sp_spaceused 'dbo.TestPageCompression';
 
 <img src="/wp-content/uploads/users/grrlgeek/compression%2010.JPG?mtime=1355884192" alt="" width="416" height="68" />
 
-Right now, this is no different from when I applied row compression. Because this is a small table, with few repeating values, this does not surprise me. I have another table in my database, [dbo.bigTransactionHistory][5], which is larger and may offer better results. Let&#8217;s look.
+Right now, this is no different from when I applied row compression. Because this is a small table, with few repeating values, this does not surprise me. I have another table in my database, [dbo.bigTransactionHistory][5], which is larger and may offer better results. Let's look.
 
 sql
 sp_spaceused 'dbo.bigTransactionHistory';
@@ -594,11 +594,11 @@ Page compression can also greatly reduce the space your database is using on dis
   <img src="/wp-content/uploads/users/grrlgeek/compression%2016.JPG?mtime=1355884817" alt="" width="526" height="333" />
 </p>
 
-> _Question_:&#8217;if I have enabled row or page compression, can I take a backup of the database, which is on Enterprise Edition, and restore it to a server that is Standard Edition? No, that can&#8217;t be done. Paul Randal demonstrates this in [Does my database contain Enterprise-only features?][6] Be aware of this, and the need to manage and be aware of your compression settings, if this could happen in your environment.
+> _Question_:'if I have enabled row or page compression, can I take a backup of the database, which is on Enterprise Edition, and restore it to a server that is Standard Edition? No, that can't be done. Paul Randal demonstrates this in [Does my database contain Enterprise-only features?][6] Be aware of this, and the need to manage and be aware of your compression settings, if this could happen in your environment.
 
 ### There Has To Be A Negative, Right? 
 
-Data compression sounds fantastic, and it is. But, as Robert Heinlein would say, [TANSTAAFL][7]. The price you pay for your data taking up less space on disk is higher CPU usage. When the data is written to the table, or indexes are rebuilt, additional CPU will be needed to compress it. If your system currently experiences CPU pressure, it&#8217;s not a good idea to enable compression on it.
+Data compression sounds fantastic, and it is. But, as Robert Heinlein would say, [TANSTAAFL][7]. The price you pay for your data taking up less space on disk is higher CPU usage. When the data is written to the table, or indexes are rebuilt, additional CPU will be needed to compress it. If your system currently experiences CPU pressure, it's not a good idea to enable compression on it.
 
 ### Resources
 

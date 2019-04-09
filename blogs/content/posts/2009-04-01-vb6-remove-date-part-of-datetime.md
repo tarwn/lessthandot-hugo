@@ -16,7 +16,7 @@ categories:
   - Visual Basic 5 and 6
 
 ---
-Have you ever needed to remove the time part of a date variable, or remove the date part of a date variable? I recently had a requirement to do this, and my first reaction was to use the format function because it is very flexible and quite simple to use. Unfortunately, it does&#8217;t perform very well.
+Have you ever needed to remove the time part of a date variable, or remove the date part of a date variable? I recently had a requirement to do this, and my first reaction was to use the format function because it is very flexible and quite simple to use. Unfortunately, it does't perform very well.
 
 First, the format method for removing the time part.
 
@@ -38,7 +38,7 @@ The Int function performs a simple truncate on a number. Note: this does not do 
 Debug.Print Now - Int(Now)
 0.390729166669189 </span> </pre>
 
-Surprised to see a number instead of a time? Me too. But&#8230; in VB6, when you subtract dates, the resulting data type is a double.
+Surprised to see a number instead of a time? Me too. But… in VB6, when you subtract dates, the resulting data type is a double.
 
 <pre><span class="MT_blue">Debug.Print TypeName(Now - Int(Now))
 Double</span> </pre>
@@ -48,7 +48,7 @@ However, this double can be converted back to a Date variable type like this.
 <pre><span class="MT_blue">Debug.Print cDate(Now - Int(Now))
 9:25:40 AM</span> </pre>
 
-Clearly, there are 2 different methods for separating the date from the time in a Date variable. Which is better? They both return the correct value, so now it&#8217;s up to performance.
+Clearly, there are 2 different methods for separating the date from the time in a Date variable. Which is better? They both return the correct value, so now it's up to performance.
 
 I tested the performance with this code:
 

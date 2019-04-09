@@ -15,7 +15,7 @@ categories:
 ---
 Do you use between to return data that has dates? Do you know that between will get everything since midnight from the first criteria and up to midnight exactly from the second criteria. If you do BETWEEN 2006-10-01 AND 2006-10-02 then all the values that are greater or equal than 2006-10-01 and less or equal to 2006-10-02 will be returned. So no values after 2006-10-02 midnight will be returned. 
 
-Let&#8217;s test this out, first let&#8217;s create this table 
+Let's test this out, first let's create this table 
 
 ```sql
 CREATE TABLE SomeDates (DateColumn DATETIME)
@@ -28,7 +28,7 @@ INSERT INTO SomeDates VALUES('2006-10-02 00:00:00.000')
 INSERT INTO SomeDates VALUES('2006-10-01 00:00:00.000')
 ```
 
-Return everything between &#8216;2006-10-01&#8217; and &#8216;2006-10-02&#8217; 
+Return everything between &#8216;2006-10-01' and &#8216;2006-10-02' 
 
 ```sql
 SELECT * 
@@ -39,7 +39,7 @@ ORDER BY DateColumn
 
 This works without a problem 
 
-Let&#8217;s add some more dates including the time portion 
+Let's add some more dates including the time portion 
 
 ```sql
 INSERT INTO SomeDates VALUES('2006-10-02 00:01:00.000') 
@@ -50,7 +50,7 @@ INSERT INTO SomeDates VALUES('2006-10-01 00:12:00.000')
 INSERT INTO SomeDates VALUES('2006-10-01 23:00:00.000') 
 ```
 
-Return everything between &#8216;2006-10-01&#8217; and &#8216;2006-10-02&#8217; 
+Return everything between &#8216;2006-10-01' and &#8216;2006-10-02' 
 
 ```sql
 SELECT * 

@@ -39,11 +39,11 @@ VLDB stands for Very Large Database, Not too long ago the definition of VLDB was
 
 **What is the big deal with VLDB anyway, it is just bigger right?**
   
-The problem with a VLDB is that you have to change your mindset and you have to change your ways how you do certain things. Think of it like driving 20 miles per hours compared to driving 160 miles per hour, when you drive very fast you can&#8217;t get away with doing stupid stuff on the road, you will crash. The same is true when working with big databases. You can&#8217;t just delete 100 million rows, you might fill up the log file, you have to do it in batches if you can&#8217;t use a truncate statement.
+The problem with a VLDB is that you have to change your mindset and you have to change your ways how you do certain things. Think of it like driving 20 miles per hours compared to driving 160 miles per hour, when you drive very fast you can't get away with doing stupid stuff on the road, you will crash. The same is true when working with big databases. You can't just delete 100 million rows, you might fill up the log file, you have to do it in batches if you can't use a truncate statement.
 
 **Storage**
   
-While you can get away with having just one drive when dealing with smaller database, this doesn&#8217;t hold true for Very Large Databases. With Very Large Databases, ideally you want separate drives for tempdb, log file and data files. You can also put the non clustered indexes on a different spindle, separate from the heaps and clustered indexes. Also make sure that you [size your database files][2] correctly to improve performance.
+While you can get away with having just one drive when dealing with smaller database, this doesn't hold true for Very Large Databases. With Very Large Databases, ideally you want separate drives for tempdb, log file and data files. You can also put the non clustered indexes on a different spindle, separate from the heaps and clustered indexes. Also make sure that you [size your database files][2] correctly to improve performance.
   
 If you have 64 GB of RAM and your database is 50 GB, it is very likely that the whole database will be in RAM at some point. When your database is 2 TB and you have only 512 GB of RAM, you cannot even have a quarter of the DB in RAM. This is where you need to have fast hard drives. A fast SAN or some Solid State Drives are worth looking into.
 
@@ -76,7 +76,7 @@ SELECT *
 FROM HugeTable
 ORDER By SomeColumn
 ```
-When doing something like that SQL Server will create a worktable in tempdb, if the table is big and your tempdb is placed on a drive that doesn&#8217;t have a lot of space, you will run out of space, take a look at [Dealing with the could not allocate new page for database &#8216;TEMPDB&#8217;. There are no more pages available in filegroup DEFAULT error message][4] how to resolve this
+When doing something like that SQL Server will create a worktable in tempdb, if the table is big and your tempdb is placed on a drive that doesn't have a lot of space, you will run out of space, take a look at [Dealing with the could not allocate new page for database &#8216;TEMPDB'. There are no more pages available in filegroup DEFAULT error message][4] how to resolve this
 
 **Compression**
   
@@ -84,13 +84,13 @@ Compression is great, I use it, it makes the backups smaller, it makes the resto
 
 **Testbed size**
   
-When coding against Very Large Databases, you need to test with a QA or testbox that has about the same data, you will get into trouble if you don&#8217;t. Take a look at [Your testbed has to have the same volume of data as on production in order to simulate normal usage][5] to see what can happen.
+When coding against Very Large Databases, you need to test with a QA or testbox that has about the same data, you will get into trouble if you don't. Take a look at [Your testbed has to have the same volume of data as on production in order to simulate normal usage][5] to see what can happen.
 
 **Crappy queries**
   
 Ah yes, how to bring the database to its knees, have some n00bs write some queries against your database. While you can get away with writing non-[SARGable queries][6], queries where the index is not used, you will suffer immensely if you do this on Very Large Databases
 
-I only touched upon a couple of key points, just keep in mind that if you do the thing I mentioned here even with smaller databases, you won&#8217;t suffer when your database starts to grow. And no, while premature optimization might be the root of all evil, I would call this best practices instead
+I only touched upon a couple of key points, just keep in mind that if you do the thing I mentioned here even with smaller databases, you won't suffer when your database starts to grow. And no, while premature optimization might be the root of all evil, I would call this best practices instead
 
 That is all for day twenty-one of the [SQL Advent 2012 series][1], come back tomorrow for the next one, you can also check out all the posts from last year here: [SQL Advent 2011 Recap][7]
 

@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Earlier this week I decided that I wanted to generate a report that shows me how the security is set up on my databases. I&#8217;m mainly intersted in my database roles and how they&#8217;re set up, and logins assigned to the database. So I did some snooping around and generated 3 queries for myself.
+Earlier this week I decided that I wanted to generate a report that shows me how the security is set up on my databases. I'm mainly intersted in my database roles and how they're set up, and logins assigned to the database. So I did some snooping around and generated 3 queries for myself.
 
 sql
 select
@@ -53,7 +53,7 @@ order by name
 ```
 This query displays all rights explicitly granted and denied in the database to database roles.
 
-In this query, name is the name of the database role. Type and type\_desc describe what the grantee principal id is. class and class\_desc describes what is having a right granted to it. Permission_name shows the permission, and state shows if that permission is being granted or denied. Object name is the object that is having a right granted, schema name is the schema name that&#8217;s being granted a right.
+In this query, name is the name of the database role. Type and type\_desc describe what the grantee principal id is. class and class\_desc describes what is having a right granted to it. Permission_name shows the permission, and state shows if that permission is being granted or denied. Object name is the object that is having a right granted, schema name is the schema name that's being granted a right.
 
 sql
 select
@@ -106,9 +106,9 @@ SELECT
 ```
 This query shows all of the database roles and all of the logins assigned to the roles. Grp is the database role and Member is the login name.
 
-Now, these three queries gave me a good starting point, but to run these you have to go to each database. And if i want to query different servers (i&#8217;ve got 3, a dev, a test, and a prod) to make sure they&#8217;re similer, i&#8217;d have to connect to each server. So, I created a couple of stored procedures and threw those into a reporting services report. Now, i can go to the report, query a sever and a database, and then compare it to another server and database.
+Now, these three queries gave me a good starting point, but to run these you have to go to each database. And if i want to query different servers (i've got 3, a dev, a test, and a prod) to make sure they're similer, i'd have to connect to each server. So, I created a couple of stored procedures and threw those into a reporting services report. Now, i can go to the report, query a sever and a database, and then compare it to another server and database.
 
-here&#8217;s the script to create the sp&#8217;s that i made.
+here's the script to create the sp's that i made.
 
 sql
 -- =============================================
@@ -336,4 +336,4 @@ END
 GO
 
 ```
-Now, if you get to looking, the verification of the server name and database is actually running on the server that&#8217;s hosting the sp&#8217;s. I could have spent some more time and changed this to do this dynamically, but most of my servers have a similer database list. So, keep that in mind if you use these.
+Now, if you get to looking, the verification of the server name and database is actually running on the server that's hosting the sp's. I could have spent some more time and changed this to do this dynamically, but most of my servers have a similer database list. So, keep that in mind if you use these.

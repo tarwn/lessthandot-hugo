@@ -13,7 +13,7 @@ categories:
   - Project Management
 
 ---
-[Chris Shaw posted a new SQL Quiz][1] where he asks: &#8220;What are the largest challenges that you have faced in your career and how did you overcome those?&#8221;
+[Chris Shaw posted a new SQL Quiz][1] where he asks: “What are the largest challenges that you have faced in your career and how did you overcome those?”
 
 [Denny Cherry (@mrdenny on twitter)][2] tagged [SQLDenis][3] who then tagged me so here is my story:
 

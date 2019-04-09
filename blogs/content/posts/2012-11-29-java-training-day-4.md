@@ -45,13 +45,13 @@ An array is a simple container. Arrays have a couple of limitations
   
 . All the members of the array must be of the same type
   
-. You can&#8217;t add methods and attributes to an array
+. You can't add methods and attributes to an array
 
 The java.util package has two container classes as well as an supporting interface
 
 Vector class
   
-Has add() and remove() methods, the elementAt() method let&#8217;s you retrieve an element at a specified index
+Has add() and remove() methods, the elementAt() method let's you retrieve an element at a specified index
   
 The Stack subclass provides the push() and pop() methods, this will support a LIFO stack
 
@@ -104,7 +104,7 @@ The collections framework consists of:
   * Concurrent Implementations &#8211; Implementations designed for highly concurrent use.
   
     Wrapper Implementations &#8211; Add functionality, such as synchronization, to other implementations.
-  * Convenience Implementations &#8211; High-performance &#8220;mini-implementations&#8221; of the collection interfaces.
+  * Convenience Implementations &#8211; High-performance “mini-implementations” of the collection interfaces.
   * Abstract Implementations &#8211; Partial implementations of the collection interfaces to facilitate custom implementations.
   * Algorithms &#8211; Static methods that perform useful functions on collections, such as sorting a list.
   * Infrastructure &#8211; Interfaces that provide essential support for the collection interfaces.
@@ -275,7 +275,7 @@ There is a tutorial availabe on the Oracle website here: http://docs.oracle.com/
 
 Traditional
   
-Inefficient, checks must be done even if stuff doesn&#8217;t blow up
+Inefficient, checks must be done even if stuff doesn't blow up
   
 Difficult to maintain
   
@@ -289,7 +289,7 @@ Compiler can enforce proper exception handling
   
 Exception is caught by a block designed to handle the exception
   
-Errors cause by constructors, initializers and other code that doesn&#8217;t return a return value
+Errors cause by constructors, initializers and other code that doesn't return a return value
 
 All exceptions objects are subclasses of java.lang.Throwable and they inherit its methods
   
@@ -299,7 +299,7 @@ Error, this mean as major system-level error occured
   
 RuntimeException , logic or data validateion error that should have been found and fixed during development
   
-Exception, run-time problems like a file that can&#8217;t be found or a network problem
+Exception, run-time problems like a file that can't be found or a network problem
 
 A program can catch exceptions by using a combination of the try, catch, and finally blocks.
 
@@ -313,7 +313,7 @@ The finally block identifies a block of code that is guaranteed to execute, and 
   
 This was added in Java 1.4, it is a simple way to check run-time conditions and throw exceptions when you are debugging code
   
-It can be enabled or disabled at runtime, by default they are disabled, use the -ea switch from the command line to enable it. Since Java doesn&#8217;t have a preprocessor this would be a way to do testing without having to modify the code
+It can be enabled or disabled at runtime, by default they are disabled, use the -ea switch from the command line to enable it. Since Java doesn't have a preprocessor this would be a way to do testing without having to modify the code
 
 **Input/Output**
   

@@ -76,7 +76,7 @@ Use a proxy on the step that is calling the SSIS package. The proxy will use a d
 
 Another security point is based on the internal security of the package itself and how passwords for things such as connection managers are saved. This is done by using the setting, ProtectionLevel. By default this is set to, “EncryptSensitiveWithUserKey”. By using this key the user profile that created the package is taken to encrypt anything needed. The primary failure with this being left as the default and not handling the effects will be shown when moving the package from one machine to another while the user profile that created the package is not the one that opens it for execution.
 
-To resolve the ProtectionLevel related errors there are several options. The best practice would be to reevaluate the ProtectionLevel setting itself and determine the proper setting to use. For troubleshooting purposes, setting this value to, &#8220;DontSaveSensitive&#8221; and executing the package will verify if the ProtectionLevel used is the cause.
+To resolve the ProtectionLevel related errors there are several options. The best practice would be to reevaluate the ProtectionLevel setting itself and determine the proper setting to use. For troubleshooting purposes, setting this value to, “DontSaveSensitive” and executing the package will verify if the ProtectionLevel used is the cause.
 
 > <span class="MT_red">Note: Using the Protection Level of DontSaveSensitive is not considered a best practice due to this setting bypassing all encryption of sensitive data in the package.</span> 
 
@@ -113,7 +113,7 @@ _Example: Developer starts to write a package to import a flat file much like th
 
 In the situation above, the package will not execute on the developers machine while under the 64 bit platform. Resolving that is a project setting to set the execution of 64 bit mode to false. (Essentially executing with the 32 bit components) More importantly, when this package is executed successfully in BIDS and then transferred to a Windows Server 64 bit version, the package will again fail by using the agent with default settings.
 
-To resolve this problem of transport and running in 32 bit mode on a 64 bit Windows Server version: SSIS tools install be default a 32 bit version of DTEXEC which can be used to call a package in 32 bit mode. This can also be done by using a setting in the agent step itself found in the Execution Options, &#8220;Use 32 bit runtime&#8221;.
+To resolve this problem of transport and running in 32 bit mode on a 64 bit Windows Server version: SSIS tools install be default a 32 bit version of DTEXEC which can be used to call a package in 32 bit mode. This can also be done by using a setting in the agent step itself found in the Execution Options, “Use 32 bit runtime”.
 
 **Double Hop** problems exist when windows authentication is used and the process in which passing credentials from a calling mechanism to a second forces another request to a third resource or server.
 

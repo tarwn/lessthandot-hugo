@@ -14,9 +14,9 @@ categories:
   - Designing Software
 
 ---
-One of the tricks I picked up from my last job (and our forum software, now that I think of it) is the idea of user emulation. I could log into the application, search for a user, and, at the push of a button, temporarily become that user. The only differences between emulating them and actually logging in as them were a black bar that indicated who I am (with a link to stop emulating), all audit records continued to reflect my own user id, and I didn&#8217;t need to keep track of 30 different sample accounts and passwords.
+One of the tricks I picked up from my last job (and our forum software, now that I think of it) is the idea of user emulation. I could log into the application, search for a user, and, at the push of a button, temporarily become that user. The only differences between emulating them and actually logging in as them were a black bar that indicated who I am (with a link to stop emulating), all audit records continued to reflect my own user id, and I didn't need to keep track of 30 different sample accounts and passwords.
 
-As I said, it&#8217;s a neat trick. 
+As I said, it's a neat trick. 
 
 ## Advantages
 
@@ -24,11 +24,11 @@ Implemented consistently, this stops being just a trick and becomes a very power
 
 ### Debugging
 
-As developers the largest benefit for us is the ability to debug our systems from a variety of viewpoints. Rather than going through the trouble of creating and managing sample users for every impacted role, we can use existing user records with real data behind them. This not only reduces the time to start debugging and remove the time involved in ongoing maintenance of test accounts, but may actually force out a few extra bugs that we wouldn&#8217;t catch with a new, vanilla user account.
+As developers the largest benefit for us is the ability to debug our systems from a variety of viewpoints. Rather than going through the trouble of creating and managing sample users for every impacted role, we can use existing user records with real data behind them. This not only reduces the time to start debugging and remove the time involved in ongoing maintenance of test accounts, but may actually force out a few extra bugs that we wouldn't catch with a new, vanilla user account.
 
 ### Support
 
-Duplicating a bug or answering a question becomes a lot easier when we can emulate the person on the other end of the bug report or phone. We can emulate the person in our production environment and in our development environment and verify that both environments break in the same way (or that development doesn&#8217;t break after we fix it). We also get firsthand clues, which can knock hours off the bug-hunting process.
+Duplicating a bug or answering a question becomes a lot easier when we can emulate the person on the other end of the bug report or phone. We can emulate the person in our production environment and in our development environment and verify that both environments break in the same way (or that development doesn't break after we fix it). We also get firsthand clues, which can knock hours off the bug-hunting process.
 
 ### Customer Service
 
@@ -92,12 +92,12 @@ Public Class SessionContext
 	End Sub
 End Class
 ```
-Altogether not that complex a code construct, although I&#8217;m sure it will grow more so over the lifetime of the application. 
+Altogether not that complex a code construct, although I'm sure it will grow more so over the lifetime of the application. 
 
 As long as we consistently access user information through the exposed User property in the session and user the exposed UserIdForAuditing property for auditing purposes, then most of the work is done for us. The only other piece we need is a button on the UI to start emulating and some logic to handle the danger below.
 
 ## Dangers
 
-There are two main dangers to watch for. The first danger is making sure emulation doesn&#8217;t grant users the ability to promote themselves. Either emulation needs to be reserved for administrative users, or logic needs to be added to make certain levels or roles unavailable for emulation (or assignment during emulation).
+There are two main dangers to watch for. The first danger is making sure emulation doesn't grant users the ability to promote themselves. Either emulation needs to be reserved for administrative users, or logic needs to be added to make certain levels or roles unavailable for emulation (or assignment during emulation).
 
-The other main danger is that you now have a much greater chance (probably guarantee) that you will have the same user &#8220;logged in&#8221; in two locations at once. Most applications handle this just fine, but there are also many that cannot. Examples of this behavior are enforcing single location sign-ons, coded security that assumes multiple location means an account has been compromised, and making the mistake of storing session data keyed only to a user id instead of a unique session.
+The other main danger is that you now have a much greater chance (probably guarantee) that you will have the same user “logged in” in two locations at once. Most applications handle this just fine, but there are also many that cannot. Examples of this behavior are enforcing single location sign-ons, coded security that assumes multiple location means an account has been compromised, and making the mistake of storing session data keyed only to a user id instead of a unique session.

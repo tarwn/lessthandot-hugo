@@ -22,7 +22,7 @@ Last month, I asked a group of [amazing women][2] to submit sessions for the [Sp
 
 Only 24 could be chosen, though, and I’d like to congratulate all of the speakers that were chosen. You can find the full schedule [here][4]. 
 
-I’m thrilled to announce that my session, Reporting Services 201, was one of those chosen! I&#8217;ll be presenting on Wednesday, March 16, 12:00 GMT (8:00 AM EST in the US). Thanks to everyone that voted. I presented the session to the [WI SSUG][5] on Tuesday, and it went really well. I think everyone that attends will learn a few new SSRS tricks. 
+I’m thrilled to announce that my session, Reporting Services 201, was one of those chosen! I'll be presenting on Wednesday, March 16, 12:00 GMT (8:00 AM EST in the US). Thanks to everyone that voted. I presented the session to the [WI SSUG][5] on Tuesday, and it went really well. I think everyone that attends will learn a few new SSRS tricks. 
 
 So, your next mission, should you choose to accept it, is to [register][6] for the 24 Hours of PASS sessions you want to attend! (I hope it’s all of them!) Registration is FREE! 
 

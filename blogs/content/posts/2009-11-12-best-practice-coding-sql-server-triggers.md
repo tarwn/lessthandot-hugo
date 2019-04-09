@@ -28,9 +28,9 @@ tags:
 ---
 Best Practice: coding SQL Server triggers for multi-row operations
 
-There are many forum posts where people code triggers but these triggers are coded incorrectly because they don&#8217;t account for multi-row operations. A trigger fires per batch not per row, if you are lucky you will get an error&#8230;if you are not lucky you will not get an error but it might take a while before you notice that you are missing a whole bunch of data
+There are many forum posts where people code triggers but these triggers are coded incorrectly because they don't account for multi-row operations. A trigger fires per batch not per row, if you are lucky you will get an error…if you are not lucky you will not get an error but it might take a while before you notice that you are missing a whole bunch of data
   
-Let&#8217;s take a look, first create these two tables
+Let's take a look, first create these two tables
 
 sql
 create table Test(id int identity not null primary key, 
@@ -148,7 +148,7 @@ select * from TestHistory
 4	2009-11-12 14:52:08.370
 6	2009-11-12 14:52:20.167</pre>
 
-let&#8217;s try that again
+let's try that again
 
 sql
 insert Test(SomeDate)
@@ -236,7 +236,7 @@ select * from TestHistory
 10	2009-11-12 14:53:51.870
 11	2009-11-12 14:53:51.870</pre>
 
-So what is worse in this case? The error message or the fact that the code didn&#8217;t blow up but that the insert wasn&#8217;t working correctly? I&#8217;ll take an error message any time over the other problem.
+So what is worse in this case? The error message or the fact that the code didn't blow up but that the insert wasn't working correctly? I'll take an error message any time over the other problem.
 
 I am putting together a [SQL Server Best Programming Practices][1] wiki page, this blog post is part of it as are other posts and articles either from this site as well as from other sites. I am still working on the [SQL Server Best Programming Practices][1] wiki page but I encourage you to bookmark it and come back every now and then because I will be adding more content
 

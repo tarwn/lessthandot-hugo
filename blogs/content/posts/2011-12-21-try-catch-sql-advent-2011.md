@@ -51,7 +51,7 @@ returns the line number inside the routine that caused the error
   
 returns the complete text of the error message. The text includes the values supplied for any substitutable parameters, such as lengths, object names, or times
 
-Let&#8217;s run an example that generates a divide by zero error, in the catch we are just doing a simple select that calls the functions mentioned before to see what they return
+Let's run an example that generates a divide by zero error, in the catch we are just doing a simple select that calls the functions mentioned before to see what they return
 
 sql
 BEGIN TRY
@@ -77,7 +77,7 @@ END CATCH;
 
 
 
-As you can see we got all that information back, that was pretty nice. Let&#8217;s take it to the next step
+As you can see we got all that information back, that was pretty nice. Let's take it to the next step
 
 Create the following table to store all the error information in
 
@@ -230,7 +230,7 @@ SELECT * FROM LogErrors
       </td>
       
       <td>
-        Conversion failed when converting the varchar value &#8216;a&#8217; to data type int.
+        Conversion failed when converting the varchar value &#8216;a' to data type int.
       </td>
     </tr>
     

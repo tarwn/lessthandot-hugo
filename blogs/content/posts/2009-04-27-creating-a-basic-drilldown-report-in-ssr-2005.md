@@ -21,7 +21,7 @@ categories:
 ---
 This is my first blog, so please go easy one me.
 
-So from what I&#8217;ve seen a lot of companies tend to need to see hierarchical data in a report, or see data in a hierarchical structure in a report. Usually the best and most simple way to display this data is a drill down report. For the purposes of this blog I’m going to act as if the reader hasn’t used SSRS before but has used Sql Server 2005 and some knowledge in TSQL.
+So from what I've seen a lot of companies tend to need to see hierarchical data in a report, or see data in a hierarchical structure in a report. Usually the best and most simple way to display this data is a drill down report. For the purposes of this blog I’m going to act as if the reader hasn’t used SSRS before but has used Sql Server 2005 and some knowledge in TSQL.
 
 A drill down report starts with a higher level set of data (overview) and allows you to “drill down”, or move through, the data into lower levels, getting into more specific details as you go.
   

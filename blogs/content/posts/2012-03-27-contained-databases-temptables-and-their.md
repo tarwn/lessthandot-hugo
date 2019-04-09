@@ -19,7 +19,7 @@ tags:
   - temporary table
 
 ---
-In SQL Server 2012 we now can have Contained Databases. To be precise we now can have partially Contained Databases. The complete definition is found in the [MSDN Database][1]. In short a Contained Database holds it&#8217;s configuration and security information so you should be able to move these databases easily between different SQL Servers without having to create users or other configuration items. But as we all know Collations can cause serious problems, certainly if there is a difference between the Collation of the database itself and tempdb. So what happens if we create a Contained Database with a different Collation on a server? And does a Contained Database uses tempdb for it&#8217;s Temporary Tables? Let&#8217;s find out what happens with a normal database and after that wath happens with a Contained Databases.
+In SQL Server 2012 we now can have Contained Databases. To be precise we now can have partially Contained Databases. The complete definition is found in the [MSDN Database][1]. In short a Contained Database holds it's configuration and security information so you should be able to move these databases easily between different SQL Servers without having to create users or other configuration items. But as we all know Collations can cause serious problems, certainly if there is a difference between the Collation of the database itself and tempdb. So what happens if we create a Contained Database with a different Collation on a server? And does a Contained Database uses tempdb for it's Temporary Tables? Let's find out what happens with a normal database and after that wath happens with a Contained Databases.
   
 First things first, check the Collation settings of the server and tempdb:
 
@@ -144,7 +144,7 @@ We get a resultset:
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB3.png?mtime=1332856155"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB3.png?mtime=1332856155" width="274" height="64" /></a>
 </div>
 
-So what does this means? Is the Temporary Table created in the Contained Database itself or is it stored in tempdb with the Collation of the Contained Database? When you execute the following query in both databases you&#8217;ll find the answer:
+So what does this means? Is the Temporary Table created in the Contained Database itself or is it stored in tempdb with the Collation of the Contained Database? When you execute the following query in both databases you'll find the answer:
 
 sql
 SP_HELP #ContaintedTempData

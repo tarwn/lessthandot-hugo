@@ -18,7 +18,7 @@ In the last few months I started working on my first ASP.NET MVC project. I alre
 
 I also first want to thank people who helped me to get where I am now with this project: Viv Phillips and Paul Mrozowski from UniversalThread, Darin Dimitrov from stackoverflow, Alex Ullrich and Sergey Kosik and also Jazzen Chen from MS. I also want to thank authors of many blogs and articles I read while working on this project.
 
-I started my project from defining my models using Entity Framework Code first pattern since I already had the database defined. I am going to discuss only one model &#8220;Client&#8221; for the Clients table.
+I started my project from defining my models using Entity Framework Code first pattern since I already had the database defined. I am going to discuss only one model “Client” for the Clients table.
 
 This is how the table looks in the database:
 
@@ -84,7 +84,7 @@ GO
 ```
 Last 2 constraints in the above script refer to the Operators table I am not showing here.
 
-Let&#8217;s add some data to insert:
+Let's add some data to insert:
 
 sql
 GO
@@ -228,7 +228,7 @@ namespace CardNumbers.Objects
 }
 ```
 
-The interesting thing in this model is 2 Complex Types. Originally this model didn&#8217;t have Complex Types, but I found later that I need them in order to create one Editor for each Contact information (as we see, the table is not properly normalized and contains 2 contacts columns). 
+The interesting thing in this model is 2 Complex Types. Originally this model didn't have Complex Types, but I found later that I need them in order to create one Editor for each Contact information (as we see, the table is not properly normalized and contains 2 contacts columns). 
 
 I created all my models in one project called CardNumbers.Objects. I later was criticized for such project name, but I used the same naming convention that was used by our 3 days course teacher and therefore left it as is. In my next project I am going to be more thoughtful in regards to project names.
 
@@ -381,9 +381,9 @@ So, the above two projects describe my models and means to work with them.
 
 Now I am going to describe the CardNumbers.Web project. 
 
-I started from designing the view for working with the Clients. Here I didn&#8217;t want to go with the standard shown in all tutorials ways of displaying all clients information in a one page grid with inline Edit/Delete buttons. I didn&#8217;t like this interface much. So, I started my research as what existing grids I may try to implement. I looked up a few different grid implementations and at some point someone suggested me to look into [flexigrid][1] CodePlex project. I really liked its look and decided to go with it. Also, I believe that same person suggested me [his site][2] which was enough to get me started. I got the Clients view working relatively quickly based on that information.
+I started from designing the view for working with the Clients. Here I didn't want to go with the standard shown in all tutorials ways of displaying all clients information in a one page grid with inline Edit/Delete buttons. I didn't like this interface much. So, I started my research as what existing grids I may try to implement. I looked up a few different grid implementations and at some point someone suggested me to look into [flexigrid][1] CodePlex project. I really liked its look and decided to go with it. Also, I believe that same person suggested me [his site][2] which was enough to get me started. I got the Clients view working relatively quickly based on that information.
 
-However, I didn&#8217;t want to start from displaying all Clients. I wanted to simulate my current VFP application where I started from the empty grid, typed some letters in the client name search textbox and based on that show only small subset of rows initially.
+However, I didn't want to start from displaying all Clients. I wanted to simulate my current VFP application where I started from the empty grid, typed some letters in the client name search textbox and based on that show only small subset of rows initially.
 
 This took me a while to figure out. I was almost ready to give up, but finally found addFormData method (which was there all the time) and figured out how to use it for my purpose. It may seem silly to most of the experienced jquery developers, but for me it was my first mini-success.
 
@@ -416,7 +416,7 @@ So, I will show you how my Client View now looks and the relevant portions of Cl
 ```
 As you can see, this main view has just few controls and lines of code. At the top I display two search controls and at the bottom the flexigrid placeholder and the dialog (invisible initially) for my modal Add/Edit dialogs.
 
-Now I want to show the Clients.js part that is responsible for the flexigrid and passing Search form data to the controller through form&#8217;s collection:
+Now I want to show the Clients.js part that is responsible for the flexigrid and passing Search form data to the controller through form's collection:
 
 ```javascript
 $("#flexClients").flexigrid({
@@ -477,7 +477,7 @@ function addFormData() {
     return true;
 }
 ```
-So, the first part defines flexigrid (you can see that it used Client controller Client method to return its data). Then the next piece of code binds grid&#8217;s double click with the same method that is called by the Edit button (in other words, I want to either click on the Edit button or double click on the selected row in a grid to get the same behavior) and the last piece of code (addFormData) is used to pass both Search form and add-edit-form data back to my controller. 
+So, the first part defines flexigrid (you can see that it used Client controller Client method to return its data). Then the next piece of code binds grid's double click with the same method that is called by the Edit button (in other words, I want to either click on the Edit button or double click on the selected row in a grid to get the same behavior) and the last piece of code (addFormData) is used to pass both Search form and add-edit-form data back to my controller. 
 
 And this is how Client method of the controller looks like (I separated this method into 2 based on the idea I took from looking at the [following solution][3])
 
@@ -726,7 +726,7 @@ $.get(url, function (html) {
                 });
 ```
 
-And to make the whole picture complete I&#8217;ll show the Edit method of my controller that returns the above data:
+And to make the whole picture complete I'll show the Edit method of my controller that returns the above data:
 
 ```c#
 public ActionResult Edit(int id)
@@ -743,7 +743,7 @@ As you can see, just a few lines of code to return the model data and the partia
 
 This all may seem very easy now, but I can tell you it was not easy to figure all the pieces out.
 
-I am not showing certain functionality here such as my view model or EditorFor custom editors. I also don&#8217;t show the RemoteValidator used to provide uniqueness of the client number and client name. If there will be an interest, I may discuss these details in the separate blog post.
+I am not showing certain functionality here such as my view model or EditorFor custom editors. I also don't show the RemoteValidator used to provide uniqueness of the client number and client name. If there will be an interest, I may discuss these details in the separate blog post.
 
 Hope this blog post can help people struggling with the modal dialogs implementation in ASP.NET MVC application.
 

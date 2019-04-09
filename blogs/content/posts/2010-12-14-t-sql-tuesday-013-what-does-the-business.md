@@ -22,11 +22,11 @@ categories:
 ---
 [<img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="" title="" width="154" height="154" align="left" />][1] 
 
-Steve Jones (@way0utwest | blog) is hosting this month&#8217;s T-SQL Tuesday blog party. The official topic this month is: &#8220;What issues have you had in interacting with the business to get your job done?&#8221; 
+Steve Jones (@way0utwest | blog) is hosting this month's T-SQL Tuesday blog party. The official topic this month is: “What issues have you had in interacting with the business to get your job done?” 
 
 **Learning the Business**
 
-Until just a few weeks ago, when I changed jobs, my primary job was to write (and edit, and manage) reports for the business. I spent three years working at this for a small company. I learned, after the first few reports, that my job wasn&#8217;t simply to write a query and drag fields onto a table. The job was much more involved than that. I found out that not asking questions beforehand often meant I&#8217;d spend more time redoing my work than I had building it the first time around. 
+Until just a few weeks ago, when I changed jobs, my primary job was to write (and edit, and manage) reports for the business. I spent three years working at this for a small company. I learned, after the first few reports, that my job wasn't simply to write a query and drag fields onto a table. The job was much more involved than that. I found out that not asking questions beforehand often meant I'd spend more time redoing my work than I had building it the first time around. 
 
 So, I spent time learning the business side of my job. I educated myself on business terms, understanding cost, price, margins, profits, days to ship, days to pay, and any other important items that were mentioned. I also took it upon myself to understand our business. I researched our biggest suppliers, so I knew what kind of information we could get from them. I studied and worked with our largest and smallest customers, making sure their needs were met. 
 

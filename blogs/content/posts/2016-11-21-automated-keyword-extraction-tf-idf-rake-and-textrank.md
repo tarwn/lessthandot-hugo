@@ -20,21 +20,21 @@ tags:
   - TF-IDF
 
 ---
-After initially playing around with text processing in [my prior post][1], I added an additional algorithm and cleaned up the logic to make it easier to perform test runs and reuse later. I tweaked the RAKE algorithm implementation and added TextRank into the mix, with full sample code and links to sources available. I&#8217;m also using a read-through cache of the unprocessed and processed files so I can see the content and tweak the cleanse logic. 
+After initially playing around with text processing in [my prior post][1], I added an additional algorithm and cleaned up the logic to make it easier to perform test runs and reuse later. I tweaked the RAKE algorithm implementation and added TextRank into the mix, with full sample code and links to sources available. I'm also using a read-through cache of the unprocessed and processed files so I can see the content and tweak the cleanse logic. 
 
 <div style="margin: 1em 0; padding: 1em; background-color: #FFFFCC">
-  Context: The ultimate goal is to build a script that could process through 6 years of my bookmarked reading and extract out keywords, so I could do some trend analysis on how my reading has changed over time and maybe later build a supervised model with that data to analyze new online posts and produce a &#8220;worth my time or not&#8221; score.
+  Context: The ultimate goal is to build a script that could process through 6 years of my bookmarked reading and extract out keywords, so I could do some trend analysis on how my reading has changed over time and maybe later build a supervised model with that data to analyze new online posts and produce a “worth my time or not” score.
 </div>
 
 The first step was to increase my hands-on knowledge of text processing and identify potential algorithms. I used Python as the programming language, 5 sample posts from my own website, and two algorithms: TF-IDF and RAKE. I learned how these algorithms work, that data cleansing is an incredibly important step, and that python package management has trailed significantly behind most of the other languages I use day-to-day.
 
 The code for this post is available here: <https://github.com/tarwn/bookmark_analysis/tree/master/exploration/v2>
 
-Let me start with the results, then I&#8217;ll jump into the algorithms and code.
+Let me start with the results, then I'll jump into the algorithms and code.
 
 ## Keyword Extract Results
 
-These results are a subset of a larger set using TF-IDF, RAKE, and TextRank for the latest 50 posts I&#8217;ve written on LessThandot. I chose a larger sample because TF-IDF relies on frequency of words found in other documents as part of the score, so I wanted a large enough pool to help it shine (or not). 
+These results are a subset of a larger set using TF-IDF, RAKE, and TextRank for the latest 50 posts I've written on LessThandot. I chose a larger sample because TF-IDF relies on frequency of words found in other documents as part of the score, so I wanted a large enough pool to help it shine (or not). 
 
 Here are results for two recent posts:
 
@@ -82,7 +82,7 @@ TextRank:
  * similar approach
 </pre>
 
-RAKE optimizes towards long keywords, which provides accurate phrases that aren&#8217;t terribly useful as keywords. TF-IDF has pulled out some viable keywords. TextRank seems to most frequently pull out the best candidate set of the 3 by landing somewhere between the twp.
+RAKE optimizes towards long keywords, which provides accurate phrases that aren't terribly useful as keywords. TF-IDF has pulled out some viable keywords. TextRank seems to most frequently pull out the best candidate set of the 3 by landing somewhere between the twp.
 
 ## Algorithms
 
@@ -102,7 +102,7 @@ The RAKE algorithm is described in the book Text Mining Applications and Theory 
 
 2. A Co-occurrence graph is built to identify the frequency that words are associated together in those phrases. Here is a good outline of how co-occurence graphs are built: [Mining Twitter Data with Python (Part 4: Rugby and Term Co-occurrences)][5]
 
-3. A score is calculated for each phrase that is the sum of the individual word&#8217;s scores from the co-occurrence graph. An individual word score is calculated as the degree (number of times it appears + number of additional words it appears with) of a word divided by it&#8217;s frequency (number of times it appears), which weights towards longer phrases.
+3. A score is calculated for each phrase that is the sum of the individual word's scores from the co-occurrence graph. An individual word score is calculated as the degree (number of times it appears + number of additional words it appears with) of a word divided by it's frequency (number of times it appears), which weights towards longer phrases.
 
 4. Adjoining keywords are included if they occur more than twice in the document and score high enough. An adjoining keyword is two keyword phrases with a stop word between them.
 
@@ -126,7 +126,7 @@ In general, TextRank creates a graph of the words and relationships between them
 
 5. A post-processing step loops back through the initial candidate list and identifies words that appear next to one another and merges the two entries from the scored results into a single multi-word entry
 
-I used [this TextRank implementation][9] as a base, modifying it to return the numeric score with the keywords so I could isolate the top 5 like I have for other algorithms. My solution for multi-word scores was simple addition, for no reason better than it was good enough for what I&#8217;m doing.
+I used [this TextRank implementation][9] as a base, modifying it to return the numeric score with the keywords so I could isolate the top 5 like I have for other algorithms. My solution for multi-word scores was simple addition, for no reason better than it was good enough for what I'm doing.
 
 ## Making it all work
 
@@ -195,17 +195,17 @@ def get_test_links():
 test_links = get_test_links()[:50]
 execute(cleanse_tiernok_html, test_links)
 ```
-Compared to my exploratory scripts in the prior version, now I have something easy to read and usable as the base for other projects. The cleanse method is provided as a function so the underlying contentloader isn&#8217;t tied directly to my site&#8217;s page layout and the links are gathered independently for the same reason.
+Compared to my exploratory scripts in the prior version, now I have something easy to read and usable as the base for other projects. The cleanse method is provided as a function so the underlying contentloader isn't tied directly to my site's page layout and the links are gathered independently for the same reason.
 
 ## Results
 
-TextRank provided the best results for what I&#8217;m trying to do, but seemed the slowest by a lot. 
+TextRank provided the best results for what I'm trying to do, but seemed the slowest by a lot. 
 
-**Time:** At 50 documents the RAKE and TF-IDF implementations took about 2 seconds each, while TextRank took over 6.5 <u>minutes</u>. This is a comparison of three implementations I downloaded from the internet, though, so I&#8217;m going to dig deeper or write my own implementation of TextRank to see if I can locate the bottleneck.
+**Time:** At 50 documents the RAKE and TF-IDF implementations took about 2 seconds each, while TextRank took over 6.5 <u>minutes</u>. This is a comparison of three implementations I downloaded from the internet, though, so I'm going to dig deeper or write my own implementation of TextRank to see if I can locate the bottleneck.
 
-**Best fit for my goal:** For the purposes of identifying longer term trends (common subjects across all of my documents, &#8220;C#&#8221; or &#8220;JavaScript&#8221;), TextRank or RAKE is going to generally be the best choice, as TF-IDF will likely score common words across many documents lower (Inverse Document Frequency).
+**Best fit for my goal:** For the purposes of identifying longer term trends (common subjects across all of my documents, “C#” or “JavaScript”), TextRank or RAKE is going to generally be the best choice, as TF-IDF will likely score common words across many documents lower (Inverse Document Frequency).
 
-**Other Alternative:** I also evaluated the Text Analytics option for [Azure Cognitive Services][11]. It was quick to get running and has a free tier that would be plenty for me (1000 calls/month). Unfortunately the [Key Phrases API][12] surfaces only the keywords (1/3rd of the phrases, at a guess) and not the associated scores, so it wouldn&#8217;t work for this use (which is unfortunate, parallel cloud execution would be nice to have for this project).
+**Other Alternative:** I also evaluated the Text Analytics option for [Azure Cognitive Services][11]. It was quick to get running and has a free tier that would be plenty for me (1000 calls/month). Unfortunately the [Key Phrases API][12] surfaces only the keywords (1/3rd of the phrases, at a guess) and not the associated scores, so it wouldn't work for this use (which is unfortunate, parallel cloud execution would be nice to have for this project).
 
  [1]: /index.php/artificial-intelligence/to-build-automatic-bookmarking-unsupervised-text-classification/ "To Build Automatic Bookmarking – Unsupervised Text Classification"
  [2]: http://stevenloria.com/finding-important-words-in-a-document-using-tf-idf/

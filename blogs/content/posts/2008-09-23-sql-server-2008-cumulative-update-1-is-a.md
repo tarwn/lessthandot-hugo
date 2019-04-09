@@ -40,9 +40,9 @@ Some lists that use visibility toggles may not work as expected when you upgrade
 
 Some text characters are displayed as square glyphs in a report that you design or view by using SQL Server 2008 Reporting Services
 
-Error message when you try to run or preview a very large report in Microsoft SQL Server 2008 Reporting Services: &#8220;Exception of type System.OutOfMemoryException was thrown&#8221;
+Error message when you try to run or preview a very large report in Microsoft SQL Server 2008 Reporting Services: “Exception of type System.OutOfMemoryException was thrown”
 
-Error message when you try to view a report in SQL Server 2008 Reporting Services: &#8220;Object reference not set to an instance of an object. (rsRuntimeErrorInExpression)&#8221;
+Error message when you try to view a report in SQL Server 2008 Reporting Services: “Object reference not set to an instance of an object. (rsRuntimeErrorInExpression)”
 
 SQL Server 2008 Reporting Services stops responding when you try to render a report in the Image format
 
@@ -66,9 +66,9 @@ SQL Server 2008 Reporting Services interprets the Slant property as a positive s
 
 SQL Server 2008 Reporting Services may stop responding when you move a history snapshot or a linked report to a new folder location
 
-Error message when you try to create a query against a Hyperion Essbase cube database: &#8220;OLAP error (1260046): Unknown Member PARENT\_UNIQUE\_NAME used in query&#8221;
+Error message when you try to create a query against a Hyperion Essbase cube database: “OLAP error (1260046): Unknown Member PARENT\_UNIQUE\_NAME used in query”
 
-Error message when you run an MDX query that uses the CREATE GLOBAL CUBE statement to create a local cube in SQL Server 2008 Analysis Services or in SQL Server 2005 Analysis Services: &#8220;The syntax for &#8216;<MDXFunctionName>&#8217; is incorrect&#8221;
+Error message when you run an MDX query that uses the CREATE GLOBAL CUBE statement to create a local cube in SQL Server 2008 Analysis Services or in SQL Server 2005 Analysis Services: “The syntax for &#8216;<MDXFunctionName>' is incorrect”
 
 The SQL Server 2005 Distribution Agent and the SQL Server 2008 Distribution Agent do not skip error 20598 when you configure a SQL Server 2000 transactional publication to skip error 20598
 
@@ -78,23 +78,23 @@ You cannot edit a component that has multiple inputs in a SQL Server 2008 or SQL
 
 An incorrect aggregate value is returned when you run an MDX query against a parent/child dimension that has the HideMemberIf property set to ParentIsBlankSelfOrMissing in SQL Server 2008 or in SQL Server 2005
 
-Error message when you run an INSERT statement in SQL Server: &#8220;Cannot insert an explicit value into a timestamp column&#8221;
+Error message when you run an INSERT statement in SQL Server: “Cannot insert an explicit value into a timestamp column”
 
 You cannot view calculated members in an Excel 2007 pivot table that references an OLAP table in SQL Server 2005 Analysis Services Service Pack 2 or in SQL Server 2008 Analysis Services
 
-Error message when you run an MDX query in SQL Server 2008 Analysis Services: &#8220;The MDX function failed because the coordinate for the &#8216;<AttributeName>&#8217; attribute contains a set&#8221;
+Error message when you run an MDX query in SQL Server 2008 Analysis Services: “The MDX function failed because the coordinate for the &#8216;<AttributeName>' attribute contains a set”
 
-Error message when you update a table at the subscriber in a transactional replication in SQL Server 2005: &#8220;Updateable Subscriptions: Rows do not match between Publisher and Subscriber&#8221;
+Error message when you update a table at the subscriber in a transactional replication in SQL Server 2005: “Updateable Subscriptions: Rows do not match between Publisher and Subscriber”
 
 No rows are returned when you use the sp_replqueuemonitor stored procedure to list the queued messages for a queue-updating subscription in SQL Server
 
 When you update rows by using a cursor in SQL Server 2005, the update may take a long time to finish
 
-Error message when you process a partition from SQL Server 2005 Analysis Services Cumulative Update 7: &#8220;Detected inconsistency between User define slice and detected slice of partition. The slice specified for the %{Property/} attribute is incorrect&#8221;
+Error message when you process a partition from SQL Server 2005 Analysis Services Cumulative Update 7: “Detected inconsistency between User define slice and detected slice of partition. The slice specified for the %{Property/} attribute is incorrect”
 
-You receive a &#8220;Current session is no longer valid&#8221; error message or an access violation occurs when you process a cube in SQL Server 2008 Analysis Services
+You receive a “Current session is no longer valid” error message or an access violation occurs when you process a cube in SQL Server 2008 Analysis Services
 
-Error message when you run an UPDATE statement against a table that has a DML trigger in SQL Server 2008: &#8220;An inconsistency was detected during an internal operation&#8221;
+Error message when you run an UPDATE statement against a table that has a DML trigger in SQL Server 2008: “An inconsistency was detected during an internal operation”
 
 Analysis Services may stop responding when a NonEmpty clause causes many cell errors
 
@@ -112,7 +112,7 @@ A NullReferenceException error for T-SQL Debugger occurs when you use the SET SH
 
 The IntelliSense feature incorrectly completes the logical operators in the CASE WHEN clause in SQL Server 2008
 
-You receive an error message when you click the View Single Column Profile By Column button in the Data Profile Viewer in SQL Server 2008: &#8220;Unhandled Exception&#8221;
+You receive an error message when you click the View Single Column Profile By Column button in the Data Profile Viewer in SQL Server 2008: “Unhandled Exception”
 
 The IntelliSense feature stops working when you type a query that has a specific lexical combination in SQL Server Management Studio in SQL Server 2008
 
@@ -120,27 +120,27 @@ You cannot start the Data Profile Viewer (DataProfileViewer.exe) in SQL Server 2
 
 In SQL Server 2008, the IntelliSense feature may become unavailable when you type Transact-SQL statements in the Query Editor in SQL Server Management Studio
 
-Error message when you start the SQL Server 2008 Reporting Services Configuration Manager: &#8220;Invalid namespace&#8221;
+Error message when you start the SQL Server 2008 Reporting Services Configuration Manager: “Invalid namespace”
 
 The SimSun font is not displayed correctly when you view a SQL Server 2008 Report Services report
 
 Clients cannot connect to the Report Server Web service in SQL Server 2008 Reporting Services
 
-Error message when you render a report in SQL Server 2008 Reporting Services: &#8220;A generic error occurred in GDI+&#8221;
+Error message when you render a report in SQL Server 2008 Reporting Services: “A generic error occurred in GDI+”
 
-Data disappears from a report that contains an inner group that is set to an initial state of &#8220;Hidden&#8221; in SQL Server 2008 Reporting Services
+Data disappears from a report that contains an inner group that is set to an initial state of “Hidden” in SQL Server 2008 Reporting Services
 
 A SQL Server 2008 Reporting Services report may repaginate continually and consume 100% of CPU resources
 
 No records may be returned when you call the SQLExecute function to execute a prepared statement and you use the SQL Native Client ODBC Driver in SQL Server 2008
 
-Error message when you install SQL Server 2008 Express edition on a domain controller that is running Windows Server 2003 SP2 or Windows Small Business Server 2003 SP1: &#8220;Exception has been thrown by the target of invocation&#8221;
+Error message when you install SQL Server 2008 Express edition on a domain controller that is running Windows Server 2003 SP2 or Windows Small Business Server 2003 SP1: “Exception has been thrown by the target of invocation”
 
 You cannot upgrade a non-English instance of SQL Server 2000 Reporting Services to SQL Server 2008 Reporting Services
 
 When you try to run SQL Server 2008 database engine repair from a DVD, the repair fails, and you may receive error messages
 
-When you install SQL Server 2008, the installation fails, and the &#8220;Attributes do not match&#8221; error message is logged in the Summary.txt file
+When you install SQL Server 2008, the installation fails, and the “Attributes do not match” error message is logged in the Summary.txt file
 
 SQL Server Setup does not use the instance name that you provide in the modified Config.ini file when you try to install SQL Server 2008 Express
 
@@ -156,7 +156,7 @@ When you install a clustered instance of SQL Server 2008, account validation fai
 
 The CompleteFailoverCluster action does not detect the correct SKU that is prepared by using the PrepareFailoverCluster action in SQL Server 2008
 
-Error message when you try to add a second node to a SQL Server 2008 failover cluster: &#8220;The current SKU is invalid&#8221;
+Error message when you try to add a second node to a SQL Server 2008 failover cluster: “The current SKU is invalid”
 
 You receive an error message that the file is being used by another process when you try to rename or move an output file from a job in SQL Server Agent in SQL Server 2008
 

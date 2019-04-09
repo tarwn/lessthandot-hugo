@@ -24,7 +24,7 @@ tags:
   - sql server 2012
 
 ---
-If you need to use a Dedicated Administrator Connection (DAC) via SSMS, you can&#8217;t just use the Connect Object Explorer, if you try you will get the following error
+If you need to use a Dedicated Administrator Connection (DAC) via SSMS, you can't just use the Connect Object Explorer, if you try you will get the following error
 
 Dedicated administrator connections are not supported via SSMS as it establishes multiple connections by design. (Microsoft.SqlServer.Management.SqlStudio.Explorer)
 

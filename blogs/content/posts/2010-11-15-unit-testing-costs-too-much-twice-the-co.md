@@ -19,7 +19,7 @@ tags:
 ---
 Last week I had the pleasure of presenting at a [.Net Code Camp][1] on the topic of Unit Testing. A key theme of the session was barriers to adoption and the values we can achieve using this tool.
 
-The main barrier to my adoption of Unit Testing was the idea that writing twice as much code would increase the value of my work. Twice as much code, as was pointed out in a response to [my post two week&#8217;s ago][2], sounds like higher maintenance costs, higher initial development costs, and a greater opportunity for bugs.
+The main barrier to my adoption of Unit Testing was the idea that writing twice as much code would increase the value of my work. Twice as much code, as was pointed out in a response to [my post two week's ago][2], sounds like higher maintenance costs, higher initial development costs, and a greater opportunity for bugs.
 
 ## How Does Adding Code Increase Value?
 
@@ -39,7 +39,7 @@ Consider a software process that includes developers, a QA department, a custome
   8. Once the customer is satisfied, the pieces are deployed to production
   9. End users use the pieces in production and interact with production data
 
-This won&#8217;t match everyone&#8217;s environments but it should be simple enough to be representative of the work that happens in our environments.
+This won't match everyone's environments but it should be simple enough to be representative of the work that happens in our environments.
 
 ### Unit Testing is Testing at the Source
 
@@ -67,7 +67,7 @@ Costs:
   * Bugs found by customer: Similar to last step but any testing to this point by customer is likely to be duplicated, customer schedules impacted, cost of extar customer time, timeline impacted
   * Bugs found in production: Prior step + developers are pulled off other tasks to detect and cleanup bad data, schedules are impacted due to developer time, potentially wasted end user time, potential to retrain + monitor users to work around problem and then retrain back afterward
 
-Besides people-based costs, there are also hidden costs to returning to development and quality stages. The more time that passes between writing the code and returning to it, the more familiarity will be lost and the higher the potential that other pieces will have been added on top of the bug. Other details, such as the specifics of the requirements that code was fulfilling and how it was initially tested prior to QA hand-off, will rely on the memory of the developer and will have to take into account any changes that have occurred since initial development. Perhaps of greater concern is that QA will not have the same level of familiarity with the tests they initially performed and the customer is more likely to add even more &#8216;refinements&#8217; when it comes time to re-review the changes.
+Besides people-based costs, there are also hidden costs to returning to development and quality stages. The more time that passes between writing the code and returning to it, the more familiarity will be lost and the higher the potential that other pieces will have been added on top of the bug. Other details, such as the specifics of the requirements that code was fulfilling and how it was initially tested prior to QA hand-off, will rely on the memory of the developer and will have to take into account any changes that have occurred since initial development. Perhaps of greater concern is that QA will not have the same level of familiarity with the tests they initially performed and the customer is more likely to add even more &#8216;refinements' when it comes time to re-review the changes.
 
 Unit Testing is our tool for doing testing at the source, to catch defects earlier before they propagate costs throughout the process.
 
@@ -79,7 +79,7 @@ The value we gain from Unit Testing is value to the team and the business, not t
 
 ## Balancing Cost and Value
 
-There is a cost to writing Unit Tests that we have to balance with the potential savings and risk reduction. I don&#8217;t believe there is a universal answer as to how much Unit Testing is appropriate for a given environment, project, and team. Many teams take it on faith that 100% coverage is their best bet, but I am not convinced. 
+There is a cost to writing Unit Tests that we have to balance with the potential savings and risk reduction. I don't believe there is a universal answer as to how much Unit Testing is appropriate for a given environment, project, and team. Many teams take it on faith that 100% coverage is their best bet, but I am not convinced. 
 
 What I can tell you is that all of the benefits of this tool are out of your reach if you don’t give it a test drive. 
 
@@ -87,7 +87,7 @@ As several people saw in my CodeCamp presentation, it doesn’t take long to add
 
 Other posts in this unplanned series:
 
-  * Initial &#8220;Unit Testing Costs Too Much&#8221; post: [Unit Testing Costs Too Much][3]
+  * Initial “Unit Testing Costs Too Much” post: [Unit Testing Costs Too Much][3]
   * Code camp review and links for slides: [Raleigh Code Camp Followup][4]
   * 2x Code Followup: [Unit Testing Costs Too Much &#8211; Twice The Code = Value?][5]
   * Too Many Things to Learn: [Unit Testing Costs Too Much &#8211; Too Many Things to Learn][6]

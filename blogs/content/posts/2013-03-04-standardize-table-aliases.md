@@ -15,7 +15,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-What&#8217;s wrong with the following code?
+What's wrong with the following code?
 
 sql
 SELECT 
@@ -27,7 +27,7 @@ FROM [HumanResources].[Employee] a
 	ON b.[BusinessEntityID] = a.[BusinessEntityID]
 
 ```
-Nothing &#8211; except for my poor choice of using meaningless single characters as table aliases. Although it&#8217;s not a big deal with simpler queries like I&#8217;ve here, it can be a maintenance nightmare with complex queries that join multiple tables.
+Nothing &#8211; except for my poor choice of using meaningless single characters as table aliases. Although it's not a big deal with simpler queries like I've here, it can be a maintenance nightmare with complex queries that join multiple tables.
 
 What about now? Is there anything wrong still?
 
@@ -89,6 +89,6 @@ LEFT OUTER JOIN sys.extended_properties ep ON ep.major_id = t.object_id
 SELECT *
 FROM fn_listextendedproperty('TableAlias', 'schema', 'Person', 'table', 'Address', NULL, NULL)
 ```
-Now I&#8217;ve to give a shout out to RedGate&#8217;s SQL Promt. In addition to other features, SQL Prompt allows you to automatically assign table aliases, and [specify custom aliases][1] **forcing you to use standard aliases**.
+Now I've to give a shout out to RedGate's SQL Promt. In addition to other features, SQL Prompt allows you to automatically assign table aliases, and [specify custom aliases][1] **forcing you to use standard aliases**.
 
  [1]: http://www.red-gate.com/supportcenter/content/SQL_Prompt/help/5.3/SPT_Aliases

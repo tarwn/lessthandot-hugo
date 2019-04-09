@@ -21,7 +21,7 @@ categories:
 ---
 Someone asked the following question on our forum: [HHMMSS format in sysjobhistory][1].
 
-> The sysjobhistory table in MSDB stores the run time of jobs in the format HHMMSS as an integer. Thus, a job that finishes in 18 minutes and 9 seconds is stored as 1809. If a job finishes in 4 seconds it&#8217;s stored as 4, and another that finishes in 7 hours, 21 minutes, 33 seconds as 72133. I&#8217;m trying to get to this data and need it formated in the time data type. Thus I&#8217;m looking for 00:18:09, 00:00:04, and 07:21:33 respectively.
+> The sysjobhistory table in MSDB stores the run time of jobs in the format HHMMSS as an integer. Thus, a job that finishes in 18 minutes and 9 seconds is stored as 1809. If a job finishes in 4 seconds it's stored as 4, and another that finishes in 7 hours, 21 minutes, 33 seconds as 72133. I'm trying to get to this data and need it formated in the time data type. Thus I'm looking for 00:18:09, 00:00:04, and 07:21:33 respectively.
 
 This is pretty simple to do in a 2 step process
 
@@ -33,7 +33,7 @@ Once you have that, you can use the STUFF function to inject colons in position 
 
 <pre>STUFF(STUFF(Value,3,0,':'),6,0,':')</pre>
 
-The 0 means that you don&#8217;t want to replace any characters
+The 0 means that you don't want to replace any characters
 
 So to put it all together, you can use a CTE (Common Table Expression) combined with the stuff function to accomplish this job
 
@@ -46,7 +46,7 @@ WHERE run_duration >=0)
 SELECT STUFF(STUFF(FormattedTime,3,0,':'),6,0,':'),* FROM cte
 ```
 
-Now I don&#8217;t have any jobs that run over 24 hours, I might have some of them that are 16 hours or so I am not sure if it adds to the hours or if it starts to add 2 more digits for the days
+Now I don't have any jobs that run over 24 hours, I might have some of them that are 16 hours or so I am not sure if it adds to the hours or if it starts to add 2 more digits for the days
 
 If you have never used the STUFF function before make sure to read our wiki: [Ten SQL Server Functions That You Have Ignored Until Now][2] to learn about other seldom used functions like
   

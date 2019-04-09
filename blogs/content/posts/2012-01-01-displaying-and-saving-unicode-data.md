@@ -28,11 +28,11 @@ Now, since I am describing the solution I used for the particular application, I
 
 Now, I wanted to display these 11 languages with their corresponding flags on the form, so the logical choice was to create a class with the textbox for the unicode text and image for the image flag and then instantiate this class on the form.
 
-The first question was what to chose for displaying unicode data? Rick mentioned MS Edit Box control ActiveX, but I didn&#8217;t find it in the list of my installed ActiveX. But I found MS Forms2 TextBox ActiveX control and since I also remembered [this thread][3] on foxite forum, I decided to try this ActiveX control.
+The first question was what to chose for displaying unicode data? Rick mentioned MS Edit Box control ActiveX, but I didn't find it in the list of my installed ActiveX. But I found MS Forms2 TextBox ActiveX control and since I also remembered [this thread][3] on foxite forum, I decided to try this ActiveX control.
   
-The first problem I encountered with this ActiveX as that it didn&#8217;t show up until I clicked on it when I was running the form. Luckily I found the following solution &#8211; invoke SetFocus of this control (I called it txtLanguage in my class) and then it was displayed correctly. I am not sure if my solution is the best to handle this ActiveX behavior quirks, but hey, it works.
+The first problem I encountered with this ActiveX as that it didn't show up until I clicked on it when I was running the form. Luckily I found the following solution &#8211; invoke SetFocus of this control (I called it txtLanguage in my class) and then it was displayed correctly. I am not sure if my solution is the best to handle this ActiveX behavior quirks, but hey, it works.
 
-Ok, so far so good. Now, following Rick&#8217;s article I used the following in my form to get the data in the binary format:
+Ok, so far so good. Now, following Rick's article I used the following in my form to get the data in the binary format:
 
 ```
 LOCAL lcSQL
@@ -67,7 +67,7 @@ mysqlexec(m.lcSQL, 'Prefs_sl', program())
 ```
 mysqlexec here is a wrapper for the sqlexec function.
 
-Now I found the first discrepancy with Rick&#8217;s article &#8211; I found that I don&#8217;t need any conversion after that, I can assign the field&#8217;s content to the text property of this ActiveX (or ControlSource property) and the control correctly displays the unicode data!
+Now I found the first discrepancy with Rick's article &#8211; I found that I don't need any conversion after that, I can assign the field's content to the text property of this ActiveX (or ControlSource property) and the control correctly displays the unicode data!
 
 I was happy &#8211; the first part of displaying data turned out to be quite easy!
 
@@ -95,7 +95,7 @@ this.lblLanguage.caption = this.lblLanguage.caption + ' ' + transform(val(right(
   this.lProgrammaticChange = .f.
 ```
 
-Everything was good so far. However, I haven&#8217;t expected how hard (for me) it will be the &#8216;saving&#8217; data part. I was spending days trying various ideas from Rick&#8217;s article and was still unable to achieve the desired result. I was about to throw all I had away and try to switch to ADO for data retrieval, but luckily Gregory Adam helped me here and published a working sample.
+Everything was good so far. However, I haven't expected how hard (for me) it will be the &#8216;saving' data part. I was spending days trying various ideas from Rick's article and was still unable to achieve the desired result. I was about to throw all I had away and try to switch to ADO for data retrieval, but luckily Gregory Adam helped me here and published a working sample.
 
 First of all, we need to make sure there is no UT8 translation to the current code page. For this we need to do the following
 
@@ -407,11 +407,11 @@ As we can see, we need to convert data back from binary to nvarchar.
   
 With all this code in place, we display the unicode data and save them back to SQL Server.
 
-A big thanks to Gregory for helping me with the code &#8211; I don&#8217;t know where I would be without his help.
+A big thanks to Gregory for helping me with the code &#8211; I don't know where I would be without his help.
 
-Olaf Doschke showed another way which is even simpler than implemented solution and in accordance to the original Rick&#8217;s article.
+Olaf Doschke showed another way which is even simpler than implemented solution and in accordance to the original Rick's article.
 
-In the form&#8217;s Load we need the following:
+In the form's Load we need the following:
 
 ```
 Sys(987,.F.)
@@ -421,9 +421,9 @@ Then, after getting binary data from SQL Server the same way as I show in this b
 
 this.txtLanguage.text = createbinary(prefs_sl.Language00)
 
-We don&#8217;t want to use COMPROP now for the ActiveX.
+We don't want to use COMPROP now for the ActiveX.
 
-and then, saving data, we need to follow Rick&#8217;s steps:
+and then, saving data, we need to follow Rick's steps:
 
 ```
 pcSavedText1 = Strconv(This.Text,12)
@@ -441,9 +441,9 @@ This is how the form with many languages looked like
 
 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
   
-I need to also tell, that after I finished the form and was happy to show it to my colleagues, I was up to a big disappointment. It turned out we are not going to support unicode (our main application is not up to support it yet) and so I will be re-doing this form after we will agree on the tables&#8217; structures (they also are going to change). So, what I showed in this blog post we&#8217;re not going to use at present in production.
+I need to also tell, that after I finished the form and was happy to show it to my colleagues, I was up to a big disappointment. It turned out we are not going to support unicode (our main application is not up to support it yet) and so I will be re-doing this form after we will agree on the tables' structures (they also are going to change). So, what I showed in this blog post we're not going to use at present in production.
 
-<span class="MT_red">UPDATE.</span> My colleague also re-designed prefs_sl table to one EAV Settings table. We know that EAV design has its own problems, but for saving various application level settings it can be used. I already re-designed the forms we&#8217;re going to use. 
+<span class="MT_red">UPDATE.</span> My colleague also re-designed prefs_sl table to one EAV Settings table. We know that EAV design has its own problems, but for saving various application level settings it can be used. I already re-designed the forms we're going to use. 
 
 But in any case, it was a very important exercise and I hope it will help other people who need to display and save Unicode data in their Visual FoxPro applications.
 

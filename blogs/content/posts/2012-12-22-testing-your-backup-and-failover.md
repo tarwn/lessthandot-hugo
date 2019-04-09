@@ -24,9 +24,9 @@ tags:
 ---
 This is day twenty-two of the [SQL Advent 2012 series][1] of blog posts. Today we are going to look at how to test your backup and failover strategy
 
-Let&#8217;s say your CEO comes to you and asks if your backups are good, you say yes, the CEO proceeds to tell you that the board will be arriving in 5 minutes and he will do a hard unplug of your main server. Have the backup restored within 1 hour. How comfortable are you now? Do you actually even test your backups, how do you know that they are not corrupt? What about failover to the other data center, has this been tested, do you know that it will work? 
+Let's say your CEO comes to you and asks if your backups are good, you say yes, the CEO proceeds to tell you that the board will be arriving in 5 minutes and he will do a hard unplug of your main server. Have the backup restored within 1 hour. How comfortable are you now? Do you actually even test your backups, how do you know that they are not corrupt? What about failover to the other data center, has this been tested, do you know that it will work? 
 
-With Hurricane Sandy causing havoc a couple of weeks ago where whole data centers ran out of fuel and generators didn&#8217;t start up, there are a whole bunch of companies rethinking their HA/DR strategy. Is it really wise having your data center not enough geographically dispersed. I mean if your main data center is in New York City and your backup data center is in Jersey City or Secaucus then you will be in trouble when a storm like Sandy comes along.
+With Hurricane Sandy causing havoc a couple of weeks ago where whole data centers ran out of fuel and generators didn't start up, there are a whole bunch of companies rethinking their HA/DR strategy. Is it really wise having your data center not enough geographically dispersed. I mean if your main data center is in New York City and your backup data center is in Jersey City or Secaucus then you will be in trouble when a storm like Sandy comes along.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Storm.PNG?mtime=1356218425"><img alt="" title="Hi I am Sandy...I am here to destroy your backups" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Storm.PNG?mtime=1356218425" width="560" height="328" /></a>
@@ -40,7 +40,7 @@ Where do you store your backups? Next to the server in a bin are all the tapes? 
 
 See also this post by Ted Krueger for some more backup information: [Backups are for sissies!!!][2]
 
-We have a 200 page or so document that explains in detail what needs to happen if we switch data centers or if we have to rebuild a whole data center in the case of a catastrophe. How long would it take you to rebuild a server, install SQL server, installing all the apps and making sure that all the permissions are correct&#8230;&#8230;.oh what&#8230;oh you didn&#8217;t think you needed to backup master and tempdb. Hopefully you have all your jobs and SSIS packages scripted out or backed up. What about the permissions and accounts, do you know all the accounts that you need to create in case you don&#8217;t have a master backup?
+We have a 200 page or so document that explains in detail what needs to happen if we switch data centers or if we have to rebuild a whole data center in the case of a catastrophe. How long would it take you to rebuild a server, install SQL server, installing all the apps and making sure that all the permissions are correct…….oh what…oh you didn't think you needed to backup master and tempdb. Hopefully you have all your jobs and SSIS packages scripted out or backed up. What about the permissions and accounts, do you know all the accounts that you need to create in case you don't have a master backup?
 
 When you boss asks next time what you do all day, make sure to tell him or her that you are making sure that in the case of a catastrophe the company is back in business in an instant, it is part of your job and your duty to yourself and the company
 

@@ -17,11 +17,11 @@ tags:
   - sql server profiler
 
 ---
-Stop me if you&#8217;ve heard this one&#8230;a programmer walks up to a DBA and says, &#8220;The database is slow.&#8221; 
+Stop me if you've heard this one…a programmer walks up to a DBA and says, “The database is slow.” 
 
 One of the many performance tuning and troubleshooting tools in the SQL Server DBA toolbelt is Profiler. You pick events you want to see, set up a trace, and watch the events roll by. The problem is that this graphical tool, especially when run from a workstation, can place a heavy load on the server. 
 
-A better way to perform a trace of events is to run it on the server. I was asked to do this at work last week, and had to say, &#8220;I don&#8217;t know how to do that.&#8221; I learned something new, and I want to share it with you! 
+A better way to perform a trace of events is to run it on the server. I was asked to do this at work last week, and had to say, “I don't know how to do that.” I learned something new, and I want to share it with you! 
 
 **Setting Up the Trace** 
 
@@ -59,7 +59,7 @@ Once those settings have been chosen, verify that you are connected to the corre
 
 **Stopping the Server-Side Trace** 
 
-Eventually, you will probably want to stop this trace. Collecting an infinite amount of data may sound fun, but there won&#8217;t be any value in it. 
+Eventually, you will probably want to stop this trace. Collecting an infinite amount of data may sound fun, but there won't be any value in it. 
 
 First, you’ll need the trace ID. 
 

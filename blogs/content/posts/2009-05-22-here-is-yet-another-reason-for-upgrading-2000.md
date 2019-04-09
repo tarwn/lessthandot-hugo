@@ -21,7 +21,7 @@ tags:
 ---
 I had to restore a bunch of databases yesterday from our live server running on SQL Server 2000 to a server running SQL Server 2008. These databases range in size from 5 GB to well over 100 GB. I remember when I scripted out the biggest database with all the filegroups and ran that script on a 2000 box it took over an hour to create this database. 
 
-The reason for this is that all the filegroups get filled with zeroes. In SQL Server 2008 (and SQL Server 2005) this doesn&#8217;t work like that anymore. When you create the database, the filegroups don&#8217;t get filled with zeroes anymore. When I took the script that ran for over an hour and ran it on the SQL Server 2008 box it finished in under a minute.
+The reason for this is that all the filegroups get filled with zeroes. In SQL Server 2008 (and SQL Server 2005) this doesn't work like that anymore. When you create the database, the filegroups don't get filled with zeroes anymore. When I took the script that ran for over an hour and ran it on the SQL Server 2008 box it finished in under a minute.
 
 I decided to take this for a test I ran the following script on both a 2000 and a 2008 box, both are desktop XP machines. The script will create a database named test with a datafile of 3012.00 MB and a log file of 2321.00 MB
 
@@ -33,9 +33,9 @@ LOG ON (NAME = N'Test_Log', FILENAME = N'C:Test_Log.LDF' , SIZE = 2321, FILEGROW
 GO
 ```
 
-The CREATE DATABASE process is allocating 3012.00 MB on disk &#8216;Test_Data&#8217;.
+The CREATE DATABASE process is allocating 3012.00 MB on disk &#8216;Test_Data'.
   
-The CREATE DATABASE process is allocating 2321.00 MB on disk &#8216;Test_Log&#8217;.
+The CREATE DATABASE process is allocating 2321.00 MB on disk &#8216;Test_Log'.
 
 The 2008 box was over 3 times as fast
 
@@ -60,9 +60,9 @@ LOG ON (NAME = N'Test_Log', FILENAME = N'C:Test_Log.LDF' , SIZE = 4321, FILEGROW
 GO
 ```
 
-The CREATE DATABASE process is allocating 6012.00 MB on disk &#8216;Test_Data&#8217;.
+The CREATE DATABASE process is allocating 6012.00 MB on disk &#8216;Test_Data'.
   
-The CREATE DATABASE process is allocating 4321.00 MB on disk &#8216;Test_Log&#8217;.
+The CREATE DATABASE process is allocating 4321.00 MB on disk &#8216;Test_Log'.
 
 The 2008 box was still over 3 times as fast
 

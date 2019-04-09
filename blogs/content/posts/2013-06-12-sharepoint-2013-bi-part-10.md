@@ -56,7 +56,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_06.png?mtime=1370461325"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_06.png?mtime=1370461325" alt="" width="1000" height="107" /></a>
 </p>
 
-<span style="text-align: justify;">Next go to Site Settings > Site Features and activate </span>**SharePoint Server Publishing** **if it isn&#8217;t already active**<span style="text-align: justify;">.</span>
+<span style="text-align: justify;">Next go to Site Settings > Site Features and activate </span>**SharePoint Server Publishing** **if it isn't already active**<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_04.png?mtime=1370461325"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_04.png?mtime=1370461325" alt="" width="996" height="105" /></a>

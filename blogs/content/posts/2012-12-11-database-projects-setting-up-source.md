@@ -30,18 +30,18 @@ tags:
   - subversion
 
 ---
-For some time I wanted to document the possibilities of the SQL Server Database Project and how developers and DBA&#8217;s can benefit from it.
+For some time I wanted to document the possibilities of the SQL Server Database Project and how developers and DBA's can benefit from it.
   
 **Problem Statement**
   
-Many companies I&#8217;ve worked for struggle with their database lifecycle management:
+Many companies I've worked for struggle with their database lifecycle management:
 
-  * Production databases are copied to Test, Staging, UAT&#8230; environments by the DBA&#8217;s with production (sensitive) data
-  * DBA&#8217;s spend too much time doing the copy operations
+  * Production databases are copied to Test, Staging, UAT… environments by the DBA's with production (sensitive) data
+  * DBA's spend too much time doing the copy operations
   * Backup chains are broken because of the lack of use of the WITH COPY_ONLY option
   * Changes are made by the DBA executing individual scripts, sometimes breaking because the development database and production database were out of sync.
-  * Bugs are &#8220;Emergency&#8221; fixed in the production database so the schemas of the development and production database are out of sync
-  * &#8230;
+  * Bugs are “Emergency” fixed in the production database so the schemas of the development and production database are out of sync
+  * …
 
 **Possible solution**
   
@@ -49,7 +49,7 @@ In general there is not much to learn from a developer (just kidding!) but norma
   
 **Getting started &#8211; Choosing a Source Control Provider**
   
-Again as a DBA I did not know what Source Control Provider to choose, I worked with Visual Source Safe a decade ago and had to do a setup of Team Foundation Server once and didn&#8217;t want to go through this pain again. A quick poll on twitter on which Source Control Provider to use was depressing. Probably because our American friends were sleeping, the Belgian Developers were still hitting the snooze button and Christiaan was walking his dog. Lucky for me Dave Dustin ([twitter][1]) from the other side of the world gave me some possibilities. In the next example I will use AnkhSVN, Subversion with Support for Visual Studio. You can download the setup from [here][2].
+Again as a DBA I did not know what Source Control Provider to choose, I worked with Visual Source Safe a decade ago and had to do a setup of Team Foundation Server once and didn't want to go through this pain again. A quick poll on twitter on which Source Control Provider to use was depressing. Probably because our American friends were sleeping, the Belgian Developers were still hitting the snooze button and Christiaan was walking his dog. Lucky for me Dave Dustin ([twitter][1]) from the other side of the world gave me some possibilities. In the next example I will use AnkhSVN, Subversion with Support for Visual Studio. You can download the setup from [here][2].
   
 **The setup**
   

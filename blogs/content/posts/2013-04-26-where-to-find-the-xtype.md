@@ -86,7 +86,7 @@ V = View
   
 X = Extended stored procedure
 
-However there is no table in SQL Server that holds this info&#8230;.or is there?
+However there is no table in SQL Server that holds this info….or is there?
 
 I answered [this question][1] today and decided to share here as well
 

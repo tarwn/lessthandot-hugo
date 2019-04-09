@@ -25,7 +25,7 @@ tags:
   - ssms
 
 ---
-This is day thirteen of the [SQL Advent 2012 series][1] of blog posts. Today we are going to look at servers where everything is installed and enabled. Before we start this post let&#8217;s look back in time a little. Before SQL Server 2005 came out when you installed SQL Server pretty much everything was turned on by default. This of course widened the attack vector against the database servers. With SQL Server 2005 pretty much everything is turned off and you have to turn the features on if you want to use them. Now sometimes some admins will just turn everything on because that way they don&#8217;t have to deal with this later, this are also the same kind of people who insist that the account needs to be db_owner otherwise their code won&#8217;t work.
+This is day thirteen of the [SQL Advent 2012 series][1] of blog posts. Today we are going to look at servers where everything is installed and enabled. Before we start this post let's look back in time a little. Before SQL Server 2005 came out when you installed SQL Server pretty much everything was turned on by default. This of course widened the attack vector against the database servers. With SQL Server 2005 pretty much everything is turned off and you have to turn the features on if you want to use them. Now sometimes some admins will just turn everything on because that way they don't have to deal with this later, this are also the same kind of people who insist that the account needs to be db_owner otherwise their code won't work.
 
 To see what these features are and if they are turned off, you can use the following query. 
 
@@ -73,7 +73,7 @@ Here you can enable or disable the features you are interested in. You can also 
 
 ## Installing everything by default
 
-Here I have mixed feelings myself about what to do. On one hand I don&#8217;t like to install SSAS or SSRS if there is no need for it, on the other hand I don&#8217;t feel like adding that stuff 6 months down the road if there is suddenly a need for it. If I do install it, I make sure it at least doesn&#8217;t run by default but it is disabled. There is no benefit in having SSAS, SSRS or SSIS running and using CPU cycles as well as RAM if nobody is using these services. If you do install it and nobody uses it, disable the services, you will have more RAM and CPU cycles for the SQL Server service available.
+Here I have mixed feelings myself about what to do. On one hand I don't like to install SSAS or SSRS if there is no need for it, on the other hand I don't feel like adding that stuff 6 months down the road if there is suddenly a need for it. If I do install it, I make sure it at least doesn't run by default but it is disabled. There is no benefit in having SSAS, SSRS or SSIS running and using CPU cycles as well as RAM if nobody is using these services. If you do install it and nobody uses it, disable the services, you will have more RAM and CPU cycles for the SQL Server service available.
 
 That is all for day thirteen of the [SQL Advent 2012 series][1], come back tomorrow for the next one, you can also check out all the posts from last year here: [SQL Advent 2011 Recap][2]
 

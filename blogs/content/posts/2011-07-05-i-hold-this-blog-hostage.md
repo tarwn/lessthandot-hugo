@@ -45,7 +45,7 @@ I hope to get to the next million in less time, perhaps within the next 2 years
 
 Anyway, thanks all for visiting and here are the 10 most visited blog posts that I have written
 
-1. [Do you use Column=@Param OR @Param IS NULL in your WHERE clause? Don&#8217;t, it doesn&#8217;t perform][2]
+1. [Do you use Column=@Param OR @Param IS NULL in your WHERE clause? Don't, it doesn't perform][2]
   
 Views : 41774
   
@@ -69,7 +69,7 @@ Views : 26140
   
 Comments : 20
 
-5. [Good SQL Articles To Read If You Can&#8217;t Afford Books][6]
+5. [Good SQL Articles To Read If You Can't Afford Books][6]
   
 Views : 20292
   

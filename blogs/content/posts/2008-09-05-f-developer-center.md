@@ -18,7 +18,7 @@ tags:
 ---
 Microsoft has launched the [F# Developer Center][1]
 
-Here you can learn everything about Microsoft&#8217;s functional programming language F# (pronounced F sharp). There are links to forums, blogs, projects on codeplex, code gallery samples, videos and much more.
+Here you can learn everything about Microsoft's functional programming language F# (pronounced F sharp). There are links to forums, blogs, projects on codeplex, code gallery samples, videos and much more.
 
 Also check out the Getting Started with F# section, here you can download the latest F# CTP and three sample chapters of the Expert F# book are also available for preview
 

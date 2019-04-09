@@ -26,7 +26,7 @@ As a parent of two boys, I entrust these people with stop signs in hand to ensur
 
 I honestly feel comfortable knowing that large STOP sign will be throw up any time my children come to the intersection that leads them to school. 
 
-A few weeks ago I had the pleasure of walking with my oldest son to school. I really enjoy these chances sense my commut is long and doesn&#8217;t allow me them very often. It’s any parent’s enjoyment to see their children interacting with the other kids at an early age. It&#8217;s amazing to see how they change personalities when they are mixed into other kids. Something about this day really bothered me though. On my way to pick my son up after school, I noticed the crossing guard sitting in her car, stop sign on the dash and parents running, skipping (one tumbling) across the busy road to school. What?!? The safety of the stop sign isn’t good enough for the parents? No, I’m not that old but I feel this person should never let their guard down. It is their job to ensure that while school is in and within time frames that all pedestrians cross that road safely. If the parents cross unattended then when will it lead to kids maybe 13 to 14 years of age being ok to RUN FOR YOUR LIFE!
+A few weeks ago I had the pleasure of walking with my oldest son to school. I really enjoy these chances sense my commut is long and doesn't allow me them very often. It’s any parent’s enjoyment to see their children interacting with the other kids at an early age. It's amazing to see how they change personalities when they are mixed into other kids. Something about this day really bothered me though. On my way to pick my son up after school, I noticed the crossing guard sitting in her car, stop sign on the dash and parents running, skipping (one tumbling) across the busy road to school. What?!? The safety of the stop sign isn’t good enough for the parents? No, I’m not that old but I feel this person should never let their guard down. It is their job to ensure that while school is in and within time frames that all pedestrians cross that road safely. If the parents cross unattended then when will it lead to kids maybe 13 to 14 years of age being ok to RUN FOR YOUR LIFE!
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//RUN.gif" alt="" title="" width="420" height="405" />
@@ -34,7 +34,7 @@ A few weeks ago I had the pleasure of walking with my oldest son to school. I re
 
 I had a very good conversation with the crossing guard. This lesson is in line with you as a DBA and handling what goes on with your database servers. Many times over, a DBA either becomes frustrated due to not getting security correct or is just lazy and grants far too much to a user or developer so they can get their tasks accomplished. Never, and I mean never let your guard down when it comes to this. 
 
-## The Rules&#8230;
+## The Rules…
 
 **_First rule:_** sa has no place beyond the DBA and even for the DBA should never be used for anything other than emergencies
 
@@ -52,4 +52,4 @@ Schemas and roles are the database server god’s gift to SQL Server. I cannot s
 
 Finally the question should always be raised is a requestor really needs what they think they need. Requests come in stating your SQL Development team needs a database set to TURSTWORTHY and they need ability to deploy and call up unsafe or external CLR procedures so they can work with files from the database. Let’s think about that requirement. I love CLR and external events. It is the bread and butter of my administration. I can get things done that would take calling 300 external services and executables in previous versions. I’m the DBA! What happens when CLR is misused and not controlled? It can and will take you down. Would the request by the developer team be better suited outside SQL Server and then having read to the data into an executable which then does the file operations? Mostly, yes that is the better way to prevent unwanted problems in performance. That is not to say that CLR external operations are left completely out of development. Personally I believe the DBA should be the writer of those and allow EXEC to the developers. Control is yours so use it in a way it will keep you in your place and your database server healthy. 
 
-Don&#8217;t forget, saying no isn&#8217;t all that bad for a DBA.
+Don't forget, saying no isn't all that bad for a DBA.

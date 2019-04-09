@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-I built LaunchReady in my spare time, continuing to work fulltime during the day, spend time with the family in the evening, and jump online or hit the trails occasionally with friends. I also had a bunch of ideas, which served as interesting distractions from making it actually work. In this post I&#8217;ll share a few of the tactics I used to stay balanced, get past the distractions, and find motivation when things seemed impossible.
+I built LaunchReady in my spare time, continuing to work fulltime during the day, spend time with the family in the evening, and jump online or hit the trails occasionally with friends. I also had a bunch of ideas, which served as interesting distractions from making it actually work. In this post I'll share a few of the tactics I used to stay balanced, get past the distractions, and find motivation when things seemed impossible.
 
 <div style="border: 2px solid #ddd; border-left-width: 16px; margin: 1em 0; padding: 1em;">
   <h3>
@@ -29,7 +29,7 @@ I built LaunchReady in my spare time, continuing to work fulltime during the day
   </p>
   
   <p>
-    3. <u>LaunchReady: Don&#8217;t Get Distracted, Getting Stuff Done</u><br /> Ignoring the distracting cool ideas to get work done
+    3. <u>LaunchReady: Don't Get Distracted, Getting Stuff Done</u><br /> Ignoring the distracting cool ideas to get work done
   </p>
 </div>
 
@@ -39,7 +39,7 @@ Building a product in my spare time meant I was working within some tight constr
 
 ### Get the distractions out of my head
 
-One of the biggest barriers was all of the cool things I wanted to do with the system once it was built. Faced with &#8220;how do I make this database migration work&#8221; versus &#8220;how can I use machine learning to do that cool thing&#8221;, I would get sucked into daydreaming about the cool thing.
+One of the biggest barriers was all of the cool things I wanted to do with the system once it was built. Faced with “how do I make this database migration work” versus “how can I use machine learning to do that cool thing”, I would get sucked into daydreaming about the cool thing.
 
 <div id="attachment_9050" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/03/launchreadypost_11-600x320.png" alt="Early UI Sketches for User Scenarios + Test Results" width="600" height="320" class="size-medium-width wp-image-9050" srcset="/wp-content/uploads/2018/03/launchreadypost_11-600x320.png 600w, /wp-content/uploads/2018/03/launchreadypost_11-300x160.png 300w, /wp-content/uploads/2018/03/launchreadypost_11-562x300.png 562w, /wp-content/uploads/2018/03/launchreadypost_11.png 695w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -63,13 +63,13 @@ Once I was done, I would save my thinking and move on, satisfied that I had give
 
 ### When in doubt, ship something
 
-Some of the things I needed were so undefined I couldn&#8217;t figure out how to build them. I would find myself banging my head against the idea over and over, unable to make progress. When stuck, ship something. Then do it again.
+Some of the things I needed were so undefined I couldn't figure out how to build them. I would find myself banging my head against the idea over and over, unable to make progress. When stuck, ship something. Then do it again.
 
 <div id="attachment_8945" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/02/launchreadypost_04-600x124.png" alt="Push the Button: TeamCity deployment pipeline for LaunchReady (4 servers )" width="600" height="124" class="size-medium-width wp-image-8945" srcset="/wp-content/uploads/2018/02/launchreadypost_04-600x124.png 600w, /wp-content/uploads/2018/02/launchreadypost_04-300x62.png 300w, /wp-content/uploads/2018/02/launchreadypost_04-768x158.png 768w, /wp-content/uploads/2018/02/launchreadypost_04-1024x211.png 1024w, /wp-content/uploads/2018/02/launchreadypost_04.png 1100w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
-    Push the Button: TeamCity deployment pipeline for LaunchReady (4+ &#8220;servers&#8221;)
+    Push the Button: TeamCity deployment pipeline for LaunchReady (4+ “servers”)
   </p>
 </div>
 
@@ -77,7 +77,7 @@ The momentum of shipping small pieces helped me get moving and it started chippi
 
 ## Getting work done after a 40 hour week
 
-Luckily this work doesn&#8217;t conflict with my day job, or else I probably would have burned out. By day I&#8217;m an engineering manager, thinking about how to help support folks, hire them, refine the organization and processes, and so on. This project needed time for writing software, doing market research, and other activities, so there was still a gear switch between them.
+Luckily this work doesn't conflict with my day job, or else I probably would have burned out. By day I'm an engineering manager, thinking about how to help support folks, hire them, refine the organization and processes, and so on. This project needed time for writing software, doing market research, and other activities, so there was still a gear switch between them.
 
 ### Make a schedule
 
@@ -101,11 +101,11 @@ So I made a schedule. I mapped out my week in 30 minute increments, creating a t
   </p>
 </div>
 
-Each Sunday, I would make a copy of the template and start logging my week. It never went perfect, but it helped. I had permission to focus on the project and could see I wasn&#8217;t ignoring it through the week. I could turn it off and spend time with the family. It felt a little weird that ?80% of my life was scheduled, but now things were getting my full focus.
+Each Sunday, I would make a copy of the template and start logging my week. It never went perfect, but it helped. I had permission to focus on the project and could see I wasn't ignoring it through the week. I could turn it off and spend time with the family. It felt a little weird that ?80% of my life was scheduled, but now things were getting my full focus.
 
 ### Ship something (again)
 
-Even with scheduled time, sometimes you sit down on a Tuesday night after a long day and just can&#8217;t get started. There&#8217;s still so much to do, I&#8217;m tired from the day, nothing seems interesting, &#8230; So I would pick one small ticket for the marketing site or the application and I would do it. Then I would pick up one more. And before I knew it it was 10PM and I had shipped 3.5 hours of features or website improvements.
+Even with scheduled time, sometimes you sit down on a Tuesday night after a long day and just can't get started. There's still so much to do, I'm tired from the day, nothing seems interesting, … So I would pick one small ticket for the marketing site or the application and I would do it. Then I would pick up one more. And before I knew it it was 10PM and I had shipped 3.5 hours of features or website improvements.
 
 <div id="attachment_8987" style="width: 329px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/02/launchreadypost_09.png" alt="Some Easy 1 Hour tasks" width="319" height="376" class="size-full wp-image-8987" srcset="/wp-content/uploads/2018/02/launchreadypost_09.png 319w, /wp-content/uploads/2018/02/launchreadypost_09-255x300.png 255w" sizes="(max-width: 319px) 100vw, 319px" />
@@ -115,13 +115,13 @@ Even with scheduled time, sometimes you sit down on a Tuesday night after a long
   </p>
 </div>
 
-But to feel a sense of accomplishment from shipping small work, I need small work to work on. Which brings me to&#8230;
+But to feel a sense of accomplishment from shipping small work, I need small work to work on. Which brings me to…
 
 ### Break the work down into bite-size pieces
 
 Initially I knew what I was doing, so I broke work down functionally. First I would make some database tables, then some back end logic, later I would do the front-end.
 
-Which ended up as a mess, with a lot of pieces that didn&#8217;t fit together.
+Which ended up as a mess, with a lot of pieces that didn't fit together.
 
 So I stopped and closed out the functional task list and replaced it with bits of user interface and exposed features that I would build from the top all the way into the back-end database or distributed agents. 
 
@@ -129,7 +129,7 @@ So I stopped and closed out the functional task list and replaced it with bits o
 
 And because I needed small tasks to build momentum on tough days, I sliced these very thin so I could accomplish them and ship something small on rough days or on the two nights I only had 1.5 hours of coding time. 
 
-But keeping the tasks organized became overwhelming, so&#8230;.
+But keeping the tasks organized became overwhelming, so….
 
 ### Use a ticket system
 
@@ -159,7 +159,7 @@ Clubhouse was a nice balance between the disconnected set of cards in Trello and
   <img src="/wp-content/uploads/2018/02/launchreadypost_06-600x327.png" alt="(Ignore the dashed flightline, I can&#039;t go back to Sept to screenshot this better)" width="600" height="327" class="size-medium-width wp-image-8947" srcset="/wp-content/uploads/2018/02/launchreadypost_06-600x327.png 600w, /wp-content/uploads/2018/02/launchreadypost_06-300x164.png 300w, /wp-content/uploads/2018/02/launchreadypost_06-550x300.png 550w, /wp-content/uploads/2018/02/launchreadypost_06.png 682w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
-    (Ignore the dashed flightline, I can&#8217;t go back to Sept to screenshot this better)
+    (Ignore the dashed flightline, I can't go back to Sept to screenshot this better)
   </p>
 </div>
 
@@ -167,7 +167,7 @@ Seeing my progress on the larger scale was useful. This was a pretty big elephan
 
 ## TLDR: Create a pace of shipping small, working things
 
-If I had to boil this all down, it is to build momentum by shipping small, working things. Most projects like this aren&#8217;t well enough defined to take a few weeks and go build just the database, etc. So start from the interface, ship small pieces, use a system to move all of those things you&#8217;re trying to remember (even the work) off your conscious brain, and be ok with the fact that sometimes it takes writing 5 things in a row in the wrong direction to figure out what the right direction should be.
+If I had to boil this all down, it is to build momentum by shipping small, working things. Most projects like this aren't well enough defined to take a few weeks and go build just the database, etc. So start from the interface, ship small pieces, use a system to move all of those things you're trying to remember (even the work) off your conscious brain, and be ok with the fact that sometimes it takes writing 5 things in a row in the wrong direction to figure out what the right direction should be.
 
 I hope some of the content in this series has been helpful and good luck with your own endeavors!
 

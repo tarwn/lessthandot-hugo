@@ -37,7 +37,7 @@ SELECT partition_number,rows,object_name(object_id)
 FROM sys.partitions
 ```
 
-So what can you do? Let&#8217;s take a look. First we are going to create a partitioned table in case you don&#8217;t have one so that you can get the same output as me.
+So what can you do? Let's take a look. First we are going to create a partitioned table in case you don't have one so that you can get the same output as me.
 
 sql
 CREATE TABLE SalesPartitioned(YearCol SMALLINT NOT NULL,OrderID INT NOT NULL, SomeData UNIQUEIDENTIFIER DEFAULT newsequentialid())
@@ -103,14 +103,14 @@ And here is the output
 2010        4
 3000        4</pre>
 
-Now that we have the partition function, we need a partition scheme. A partition scheme is used to map boundary values in partition functions to filegroups. You can have one filegroup for each year placed on a different spindle, this way you don&#8217;t have to wait for the disk if all partitions are on the same spindle. For the sake of simplicity we only have one filegroup. Here is how to create the partition scheme
+Now that we have the partition function, we need a partition scheme. A partition scheme is used to map boundary values in partition functions to filegroups. You can have one filegroup for each year placed on a different spindle, this way you don't have to wait for the disk if all partitions are on the same spindle. For the sake of simplicity we only have one filegroup. Here is how to create the partition scheme
 
 sql
 CREATE PARTITION SCHEME psFiscalYear
 AS PARTITION pfFiscalYear ALL TO ([PRIMARY])
 ```
 
-_Partition scheme &#8216;psFiscalYear&#8217; has been created successfully. &#8216;PRIMARY&#8217; is marked as the next used filegroup in partition scheme &#8216;psFiscalYear&#8217;._
+_Partition scheme &#8216;psFiscalYear' has been created successfully. &#8216;PRIMARY' is marked as the next used filegroup in partition scheme &#8216;psFiscalYear'._
 
 Now we will add a clustered index and partition this on the YearCol column, the syntax looks like this
 

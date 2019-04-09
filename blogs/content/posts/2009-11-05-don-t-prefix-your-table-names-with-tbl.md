@@ -25,7 +25,7 @@ From	Information_Schema.tables
 Where	Table_Type = 'Base Table'
        	And Table_Name Like 'tbl%'
 ```
-**How to correct it:** Rename the table to remove the prefix. This is not as simple as it seems because this table could be referenced from a number of places, including views, stored procedures, user defined functions, index creation scripts, in-line SQL (embedded within front end applications), etc&#8230;
+**How to correct it:** Rename the table to remove the prefix. This is not as simple as it seems because this table could be referenced from a number of places, including views, stored procedures, user defined functions, index creation scripts, in-line SQL (embedded within front end applications), etc…
 
 **Level of severity:** mild
 

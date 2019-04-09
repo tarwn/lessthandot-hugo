@@ -19,7 +19,7 @@ categories:
 ---
 [<img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" align="left" />][1]
   
-This month&#8217;s T-SQL Tuesday is being hosted by our very own, Jes Borland ([Twitter][2] | [Blog][3]). Not only is she hosting this month but she is making it possible for LessThanDot&#8217;s first T-SQL Tuesday event. The topic that is brought to us is to discuss with everyone how we solved business problems with aggregate functions. I thought this would be a good time to delete some data so here is my post on the topic.</p> 
+This month's T-SQL Tuesday is being hosted by our very own, Jes Borland ([Twitter][2] | [Blog][3]). Not only is she hosting this month but she is making it possible for LessThanDot's first T-SQL Tuesday event. The topic that is brought to us is to discuss with everyone how we solved business problems with aggregate functions. I thought this would be a good time to delete some data so here is my post on the topic.</p> 
 
 **Duplicates are Evil**
 

@@ -28,7 +28,7 @@ from information_schema.columns
 where is_nullable ='YES'
 order by table_name,column_name
 ```
-Now you might have noticed that some of these are views. You can join with information\_schema.tables and filter on table\_type = &#8216;base table&#8217; to list just the tables.
+Now you might have noticed that some of these are views. You can join with information\_schema.tables and filter on table\_type = &#8216;base table' to list just the tables.
 
 sql
 select c.table_name,c.column_name,t.table_type

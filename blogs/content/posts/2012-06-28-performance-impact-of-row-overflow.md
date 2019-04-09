@@ -105,7 +105,7 @@ INSERT INTO OverFlowPages SELECT REPLICATE('0',5000),REPLICATE('0',3000)
 ```
 
 
-_Statsitics IO: Table &#8216;OverFlowPages&#8217;. Scan count 0, logical reads 6, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Statsitics IO: Table &#8216;OverFlowPages'. Scan count 0, logical reads 6, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
 _Listing 6_
 
@@ -158,7 +158,7 @@ SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 1
 
 _Listing 9_
 
-_Table &#8216;OverFlowPages&#8217;. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;OverFlowPages'. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-150.png?mtime=1340765934"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-150.png?mtime=1340765934" width="369" height="87" /></a>
@@ -177,7 +177,7 @@ _Listing 10_
 
  
 
-_Table &#8216;OverFlowPages&#8217;. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 1, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;OverFlowPages'. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 1, lob physical reads 0, lob read-ahead reads 0._
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-151.png?mtime=1340765934"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-151.png?mtime=1340765934" width="372" height="89" /></a>
@@ -213,7 +213,7 @@ _Listing 12_
 
  __
 
-_Table &#8216;OverFlowPages&#8217;. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
+_Table &#8216;OverFlowPages'. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
  
 

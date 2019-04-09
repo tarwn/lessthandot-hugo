@@ -18,7 +18,7 @@ tags:
   - squishit
 
 ---
-Everybody&#8217;s favorite [LTD blogger][1] / [Belgian tweeter][2] Chris asked me last week how he could get SquishIt working with the [Nancy web framework][3]. I had to admit, I had no idea. But couldn&#8217;t imagine it would be that much more difficult than making it work with ASP.net MVC. So I decided to look into it. It turned out to be pretty much the same, with one extra step. I started out by installing the packages I needed from NuGet to an empty asp.net application:
+Everybody's favorite [LTD blogger][1] / [Belgian tweeter][2] Chris asked me last week how he could get SquishIt working with the [Nancy web framework][3]. I had to admit, I had no idea. But couldn't imagine it would be that much more difficult than making it work with ASP.net MVC. So I decided to look into it. It turned out to be pretty much the same, with one extra step. I started out by installing the packages I needed from NuGet to an empty asp.net application:
 
 ```text
 > install-package SquishIt
@@ -29,9 +29,9 @@ Everybody&#8217;s favorite [LTD blogger][1] / [Belgian tweeter][2] Chris asked m
 
 Once installed, there is a little bit of setup work we need to do.
 
-### Configuring Nancy&#8217;s View Engine
+### Configuring Nancy's View Engine
 
-This was infinitely more complex than using a referenced library in a razor view with MVC. Translation: this was as simple as adding a &#8220;razor&#8221; section to the web.config:
+This was infinitely more complex than using a referenced library in a razor view with MVC. Translation: this was as simple as adding a “razor” section to the web.config:
 
 ```xml
 <configSections>
@@ -48,11 +48,11 @@ This was infinitely more complex than using a referenced library in a razor view
   </razor>
 ```
 
-Its worth noting that when I added SquishIt.Framework to the namespaces section it **worked**, but didn&#8217;t help with intellisense. So I ended up adding the @using directives in my views anyway. So if you want intellisense, don&#8217;t bother with the namespaces if redundancy bothers you.
+Its worth noting that when I added SquishIt.Framework to the namespaces section it **worked**, but didn't help with intellisense. So I ended up adding the @using directives in my views anyway. So if you want intellisense, don't bother with the namespaces if redundancy bothers you.
 
 ### Static Bundles
 
-The typical SquishIt use involves writing a new css or javascript file to the server&#8217;s file system. At least I think it does &#8211; this is certainly what I would consider typical. So I looked at that first. First thing I needed to do was figure out how to get Nancy to render a view for me. It wasn&#8217;t terribly difficult, just had to set up a module with the routes involved:
+The typical SquishIt use involves writing a new css or javascript file to the server's file system. At least I think it does &#8211; this is certainly what I would consider typical. So I looked at that first. First thing I needed to do was figure out how to get Nancy to render a view for me. It wasn't terribly difficult, just had to set up a module with the routes involved:
 
 ```csharp
 using Nancy;
@@ -69,7 +69,7 @@ namespace SquishIt.NancySample.Modules
 }
 ```
 
-By convention, Nancy locates the view in Views/Home. I assume it would look in Views/Shared next, but didn&#8217;t bother to confirm. So I added couple javascript files in Content/js, and then added a view with a bundle:
+By convention, Nancy locates the view in Views/Home. I assume it would look in Views/Shared next, but didn't bother to confirm. So I added couple javascript files in Content/js, and then added a view with a bundle:
 
 ```razor
 @using SquishIt.Framework
@@ -125,7 +125,7 @@ namespace SquishIt.NancySample.Modules
 }
 ```
 
-This module renders a cached bundle by name using SquishIt&#8217;s globally configured MIME types to render the content. It also sets a cache-control header on the response, just because I wanted to see how to set headers with Nancy.
+This module renders a cached bundle by name using SquishIt's globally configured MIME types to render the content. It also sets a cache-control header on the response, just because I wanted to see how to set headers with Nancy.
 
 We then need to add a Global.asax and build a bundle:
 
@@ -139,7 +139,7 @@ protected void Application_Start(object sender, EventArgs e)
 }
 ```
 
-The second parameter here is called filePath, but actually represents the path to the assets controller, including the &#8220;name&#8221; parameter. This is what gets used in the src attribute of the rendered tag.
+The second parameter here is called filePath, but actually represents the path to the assets controller, including the “name” parameter. This is what gets used in the src attribute of the rendered tag.
 
 Finally we can add a view. Note that the cached bundle is rendered by name into the page:
 
@@ -184,11 +184,11 @@ Piece of cake.
 
 ### Conclusion
 
-This was my first exposure to Nancy, and I came away pretty impressed. Its no-nonsense approach reminds me of other projects I&#8217;ve messed around with in the past like [manos][5] and [ServiceStack][6]. I hope to get a chance to play around with it at least a little bit more.
+This was my first exposure to Nancy, and I came away pretty impressed. Its no-nonsense approach reminds me of other projects I've messed around with in the past like [manos][5] and [ServiceStack][6]. I hope to get a chance to play around with it at least a little bit more.
 
-I&#8217;ll think about putting together a package to help with integration (similar to [SquishIt.Mvc][7] but its so easy to get going that I&#8217;m not sure its needed (that package is only a controller and a few extension methods that return MvcHtmlStrings instead of strings). I guess I will have to see if there is any demand, or if there are any issues preventing Nancy from being used in shared hosting environments to see if it&#8217;d be worth it.
+I'll think about putting together a package to help with integration (similar to [SquishIt.Mvc][7] but its so easy to get going that I'm not sure its needed (that package is only a controller and a few extension methods that return MvcHtmlStrings instead of strings). I guess I will have to see if there is any demand, or if there are any issues preventing Nancy from being used in shared hosting environments to see if it'd be worth it.
 
-The sample project can be downloaded in its&#8217; entirety at [github][8].
+The sample project can be downloaded in its' entirety at [github][8].
 
  [1]: /index.php/All/?disp=authdir&author=7
  [2]: http://twitter.com/chrissie1

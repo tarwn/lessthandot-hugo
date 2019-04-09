@@ -16,7 +16,7 @@ categories:
 ---
 One of my Windows Server 2003 R2 boxes started showing CPU bumps of 0 to 10% late last night. In investigating this a process cidaemon.exe was found to be the process causing the small but consistent utilization.
 
-This process is associated with full text indexing on Windows. Even if you don&#8217;t use full text indexing, Windows does. I found 3 catalogs setup on the server. One of the defaults being the system volume. Repeated attempts to configure full text indexing and fix the wild CPU usage all failed. The only way I was able to fix this problem was the delete the catalogs and recreate them. After that full text indexing went back to normal processing and cidaemon.exe was sent to the bottom of the processes list in task manager.
+This process is associated with full text indexing on Windows. Even if you don't use full text indexing, Windows does. I found 3 catalogs setup on the server. One of the defaults being the system volume. Repeated attempts to configure full text indexing and fix the wild CPU usage all failed. The only way I was able to fix this problem was the delete the catalogs and recreate them. After that full text indexing went back to normal processing and cidaemon.exe was sent to the bottom of the processes list in task manager.
 
 If you come across this fix it quickly. From my research this issue will build and CPU usage can raise up to 70% over my 10% average.
 
@@ -24,11 +24,11 @@ To find out what catalogs you have do the following. (you can do this on any Win
 
 Click Start&#8211;>Search
   
-In the Right menu click &#8220;Change Preferences&#8221;
+In the Right menu click “Change Preferences”
   
-Then click &#8220;With Indexing Service (for faster local searches&#8221;
+Then click “With Indexing Service (for faster local searches”
   
-Then click &#8220;Change indexing service settings (advanced)
+Then click “Change indexing service settings (advanced)
 
 This opens the snap for indexing service. Write down you catalogs if you want to recreate them. Note: I found no valid reasoning to actually recreate these catalogs although I felt better putting the system back in the state it was.
 

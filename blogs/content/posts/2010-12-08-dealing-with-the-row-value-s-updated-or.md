@@ -21,7 +21,7 @@ tags:
   - ssms
 
 ---
-Someone asked about this error [this morning][1] and I decided to turn it into a blog post. Basically the person was using the designer/editor in SSMS to delete a row, the table didn&#8217;t have a key and the rows were not unique, he got the following error: _The row value(s) updated or deleted either do not make the row unique or they alter multiple rows_. Let&#8217;s see this in action and also take a look at how we can get around this.
+Someone asked about this error [this morning][1] and I decided to turn it into a blog post. Basically the person was using the designer/editor in SSMS to delete a row, the table didn't have a key and the rows were not unique, he got the following error: _The row value(s) updated or deleted either do not make the row unique or they alter multiple rows_. Let's see this in action and also take a look at how we can get around this.
 
 First create the following table.
 
@@ -32,7 +32,7 @@ INSERT INTO Test (col1) VALUES('<ccc>ddd</ccc>')
 INSERT INTO Test (col1) VALUES('<ccc>ddd</ccc>')
 ```
 
-Now, do the following, navigate to this table in Object Explorer, right click on the table, select the &#8220;Edit top 200 rows&#8221; option (see also below for image)
+Now, do the following, navigate to this table in Object Explorer, right click on the table, select the “Edit top 200 rows” option (see also below for image)
 
 ![][2]
 
@@ -60,7 +60,7 @@ Error Message: The row value(s) updated or deleted either do not make the row un
 
 Correct the errors and attempt to delete the row again or press ESC to cancel the change(s).
 
-This is really a limitation of the designer/tool. So when a human looks at that grid with the 2 rows, the human knows that it wants to delete the first row&#8230;.however since the 2 rows are completely identical SQL Server does not know which row to delete from the table.
+This is really a limitation of the designer/tool. So when a human looks at that grid with the 2 rows, the human knows that it wants to delete the first row….however since the 2 rows are completely identical SQL Server does not know which row to delete from the table.
 
 Of course this is also yet another reason to have a primary key on the table.
 
@@ -91,7 +91,7 @@ The query above uses rowcount with a value of 1, this will only affect 1 row now
 
 I think that both the person who creates a table like this and the tool itself is at fault. The tool is at fault because it should either give you an option of which row to delete somehow or if it knows that it is not unique it should not let you press the delete button.
 
-The person who creates such a table is also at fault because this table doesn&#8217;t conform to any database design guidelines like normal form. I know this is a simple example in this post, but believe me I have run into these kind of tables in production databases more than a dozen times. 
+The person who creates such a table is also at fault because this table doesn't conform to any database design guidelines like normal form. I know this is a simple example in this post, but believe me I have run into these kind of tables in production databases more than a dozen times. 
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][4] forum or our [Microsoft SQL Server Admin][5] forum**<ins></ins>
 

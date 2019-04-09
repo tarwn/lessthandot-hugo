@@ -16,7 +16,7 @@ tags:
   - Vagrant
 
 ---
-Setting up a development environment for LessThanDot is kind of tricky, where &#8220;tricky&#8221; is defined somewhere between &#8220;I have PHP on my Windows box&#8221; and &#8220;at least I&#8217;m running it in a version of Apache&#8221;. Recently I realized I had misplaced my local development environment somewhere and needed a way to make some changes.
+Setting up a development environment for LessThanDot is kind of tricky, where “tricky” is defined somewhere between “I have PHP on my Windows box” and “at least I'm running it in a version of Apache”. Recently I realized I had misplaced my local development environment somewhere and needed a way to make some changes.
 
 Have a problem once? Solve it. Have a problem a second time? Automate it.
 
@@ -24,7 +24,7 @@ So, using [Vagrant][1], I created a series of configurations and scripts that ca
 
 ## What it takes to launch a server
 
-LessThanDot is probably not that dissimilar from other LAMP blogs. We have wired together several external packages that we run on a very specific version of PHP and MySQL that doesn&#8217;t make them angry (ish). The site lives on a set of sub-domains and includes some tricky bits, like using soft-linked media folders to prevent the content from being wiped out when we deploy new versions (or having to be included in source control). 
+LessThanDot is probably not that dissimilar from other LAMP blogs. We have wired together several external packages that we run on a very specific version of PHP and MySQL that doesn't make them angry (ish). The site lives on a set of sub-domains and includes some tricky bits, like using soft-linked media folders to prevent the content from being wiped out when we deploy new versions (or having to be included in source control). 
 
 **Folder structure:**
 
@@ -32,15 +32,15 @@ LessThanDot is probably not that dissimilar from other LAMP blogs. We have wired
       * configs/ &#8211; configurations used on our live serve for Apache, PHP, etc
       * trunk/ &#8211; the source code for the site
       * deploy/ &#8211; the deployment scripts (not relevant to this story)
-      * vagrant_data/ &#8211; (.gitignore&#8217;d) created by vagrant script for copies of backups and such
+      * vagrant_data/ &#8211; (.gitignore'd) created by vagrant script for copies of backups and such
       * vagrant_setup/ &#8211; scripts for vagrant like bootstrap.sh and mysql-secure.sh
       * Vagrantfile &#8211; the main Vagrant provisioning script
-      * vagrant.config &#8211; (.gitignore&#8217;d) the configuration file consumed by vagrant
+      * vagrant.config &#8211; (.gitignore'd) the configuration file consumed by vagrant
       * vagrant.config.sample &#8211; a sample file to create a vagrant.config from
 
-The real configuration file and vagrant_data folder are listed in the gitignore to ensure real configurations and media content don&#8217;t make it into git (more soon on where that media content even came from).
+The real configuration file and vagrant_data folder are listed in the gitignore to ensure real configurations and media content don't make it into git (more soon on where that media content even came from).
 
-**Type &#8220;vagrant up&#8221; on the host:**
+**Type “vagrant up” on the host:**
 
   * VM is created with matching version of Centos and booted
   * The local configuration file is loaded with values for: 
@@ -50,18 +50,18 @@ The real configuration file and vagrant_data folder are listed in the gitignore 
       * VM IP Address and fake domain name (lessthandot.local)
       * Address, credentials, and filenames for our backups (not on our public server)
   * A private network is setup using the configured IP Address
-  * The VM&#8217;s hostname is set using the domain name above
+  * The VM's hostname is set using the domain name above
   * The /etc/hosts file is updated with aliases for the configured domain and necessary subdomains (ex: blogs.lessthandot.local)
   * The host folder is linked to a new /vagrant folder on the VM (content in these folders is synced)
   * The bootstrap.sh is called to continue setup on the VM (passing in the configs args)
 
 **Bootstrap.sh on the VM (runs from the Vagrantfile above):**
 
-  * Creates a local /vagrant/vagrant_data folder if it doesn&#8217;t exist (this is synced with the host)
-  * If there isn&#8217;t a database backup available in /vagrant/vagrant_data: 
+  * Creates a local /vagrant/vagrant_data folder if it doesn't exist (this is synced with the host)
+  * If there isn't a database backup available in /vagrant/vagrant_data: 
       * Connect to the backup server and download the most recent database backup
-      * Since this is synced with the host, I can choose to leave this file for subsequent &#8220;vagrant up&#8221; runs or delete it to get a fresh one
-  * If there isn&#8217;t a media backup available in /vagrant/vagrant_data: 
+      * Since this is synced with the host, I can choose to leave this file for subsequent “vagrant up” runs or delete it to get a fresh one
+  * If there isn't a media backup available in /vagrant/vagrant_data: 
       * Connect to the backup server and download the most recent media backup
   * Install PHP 
       * I had to add a new package source to get the specific version I wanted: rpm -Uvh https:/a.completely.different.source/
@@ -69,7 +69,7 @@ The real configuration file and vagrant_data folder are listed in the gitignore 
   * Install MySQL 
       * `yum -y install mysql-server`
       * `service mysqld start`
-  * Secure MySQL &#8211; run the &#8220;secure-mysql.sh&#8221; script (below), passing the configured root password from the conf file
+  * Secure MySQL &#8211; run the “secure-mysql.sh” script (below), passing the configured root password from the conf file
   * Create the website database user from passed configs
   * Restore MySQL Backups 
       * unzip the database backup from /vagrant/vagrant_data to the local user directory
@@ -88,17 +88,17 @@ The real configuration file and vagrant_data folder are listed in the gitignore 
       * Extract media files from the backups and put them in the appropriate places (already gitignored, these are replaced with soft links in production)
       * restart apache, cross fingers
 
-At this point I can open up my local browser of choice, type in http://lessthandot.local, and the site loads with up to date data. All of the links throughout the site link to appropriate sub-domains as you move from sub-site to sub-site, and everything runs smoothly. If I screw something up, I&#8217;m working in a local git folder and can back it out and, if it&#8217;s bad enough, destroy and recreate my environment in minutes.
+At this point I can open up my local browser of choice, type in http://lessthandot.local, and the site loads with up to date data. All of the links throughout the site link to appropriate sub-domains as you move from sub-site to sub-site, and everything runs smoothly. If I screw something up, I'm working in a local git folder and can back it out and, if it's bad enough, destroy and recreate my environment in minutes.
 
 ## Details (aka, Places Things Got Hinky)
 
-Here are some of the details and sticky spots, without revealing anything I shouldn&#8217;t behind the scenes on our server.
+Here are some of the details and sticky spots, without revealing anything I shouldn't behind the scenes on our server.
 
 ### 64-bit OS on Windows
 
-initially I couldn&#8217;t get the VirtualBox VMs to start. vagrant would get stuck after setting the private key for SSH. I pulled up the VritualBox GUI and tried to view the screen and it warned me that I couldn&#8217;t run a 64-bit VM. I rebooted and turned on the Intel virtualization option in my BIOS, which didn&#8217;t fix it. Then I removed the Hyper-V feature from Windows, which did the trick.
+initially I couldn't get the VirtualBox VMs to start. vagrant would get stuck after setting the private key for SSH. I pulled up the VritualBox GUI and tried to view the screen and it warned me that I couldn't run a 64-bit VM. I rebooted and turned on the Intel virtualization option in my BIOS, which didn't fix it. Then I removed the Hyper-V feature from Windows, which did the trick.
 
-At this point, I could successfully launch a Centos VM from the command-line. I could SSH into the system with &#8220;vagrant ssh&#8221; and it automatically linked my host directory with &#8220;/vagrant&#8221; on the VM, so files copied in either would sync back to the first&#8221;.
+At this point, I could successfully launch a Centos VM from the command-line. I could SSH into the system with “vagrant ssh” and it automatically linked my host directory with “/vagrant” on the VM, so files copied in either would sync back to the first”.
 
 ### Local Configuration File, not in git, passed through to VM
 
@@ -178,7 +178,7 @@ SETTINGS_BACKUPS_DATA=${11}
 
 ### Custom Domains / Hosts file
 
-To have the host names resolve, I used a plugin named &#8220;hostsupdater&#8221;. It doesn&#8217;t support windows UAC yet, so for the short term I had to make my hosts file editable by my user account (ick). I chose this plugin because it allowed me to specify additional aliases rather than assuming I only wanted the hostname of the VM added.
+To have the host names resolve, I used a plugin named “hostsupdater”. It doesn't support windows UAC yet, so for the short term I had to make my hosts file editable by my user account (ick). I chose this plugin because it allowed me to specify additional aliases rather than assuming I only wanted the hostname of the VM added.
 
 To install it:
   
@@ -190,11 +190,11 @@ In my Vagrantfile:
 config.vm.hostname = settings["vagrant.hostname"]
 config.hostsupdater.aliases = ["sqlcop.#{config.vm.hostname}","blogs.#{config.vm.hostname}","wiki.#{config.vm.hostname}","forum.#{config.vm.hostname}","cooking.#{config.vm.hostname}","admin.#{config.vm.hostname}"]
 ```
-The plugin, hostsupdater, takes care of adding and removing entries from the hosts files when I &#8220;vagrant up&#8221;.
+The plugin, hostsupdater, takes care of adding and removing entries from the hosts files when I “vagrant up”.
 
 ### Copying files that already exist
 
-This will get stuck at an &#8220;are you sure&#8221; prompt: 
+This will get stuck at an “are you sure” prompt: 
 
 ```bash
 cp /vagrant/configs/httpd.conf /etc/httpd/conf/httpd.conf

@@ -67,13 +67,13 @@ Once the review of the il file was performed and the parameter changes from Doug
 
 A copy of replrec.dll was obtained prior to SP3 being applied and a replrec.dll after SP3 was applied.  Running the following commands genearted the il files for each.
 
-c:Program Files (x86)Microsoft Visual Studio 10.0VC>tlbimp &#8220;C:VMSetupback date replrecreplrec.dll&#8221; /OUT:SQLCOM_Backdate.dll
+c:Program Files (x86)Microsoft Visual Studio 10.0VC>tlbimp “C:VMSetupback date replrecreplrec.dll” /OUT:SQLCOM_Backdate.dll
 
-c:Program Files (x86)Microsoft Visual Studio 10.0VC>tlbimp &#8220;C:VMSetupreplrec.dll&#8221; /OUT:SQLCOM_Current.dll
+c:Program Files (x86)Microsoft Visual Studio 10.0VC>tlbimp “C:VMSetupreplrec.dll” /OUT:SQLCOM_Current.dll
 
-c:Program Files (x86)Microsoft Visual Studio 10.0VC>ildasm &#8220;SQLCOM\_backdate.dll&#8221; /OUT=SQLCOM\_backdate.il
+c:Program Files (x86)Microsoft Visual Studio 10.0VC>ildasm “SQLCOM\_backdate.dll” /OUT=SQLCOM\_backdate.il
 
-c:Program Files (x86)Microsoft Visual Studio 10.0VC>ildasm &#8220;SQLCOM\_Current.dll&#8221; /OUT=SQLCOM\_current.il
+c:Program Files (x86)Microsoft Visual Studio 10.0VC>ildasm “SQLCOM\_Current.dll” /OUT=SQLCOM\_current.il
 
 Comparing the contents of the SQLCOM\_backdate.il and SQLCOM\_current.il files reveals the primary difference in the current replrec.dll and the post dated replrec.dll being the method SetColumnStatus. It did not exist in the current replrec.dll, but was in the backdated replrec.dll file.
 

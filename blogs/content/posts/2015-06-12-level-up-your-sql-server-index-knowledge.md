@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-I presented &#8220;Level Up Your SQL Server Index Knowledge&#8221; on Wednesday, June 10 for NEWDUG. I had a great audience that asked lot of questions and shared war stories. Presentations with lots of questions and discussion are my favorite!
+I presented “Level Up Your SQL Server Index Knowledge” on Wednesday, June 10 for NEWDUG. I had a great audience that asked lot of questions and shared war stories. Presentations with lots of questions and discussion are my favorite!
 
 For those of you interested, [the slides and demos can be downloaded here][1].
 

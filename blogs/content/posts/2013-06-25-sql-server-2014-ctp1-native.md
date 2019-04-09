@@ -64,7 +64,7 @@ select row_number() over(order by s1.name),replicate('a',100)
 from sys.sysobjects s1, sys.sysobjects s2, sys.sysobjects s3
 ```
 
-Let&#8217;s see how much memory SQL Server is using for this table
+Let's see how much memory SQL Server is using for this table
 
 sql
 SELECT 

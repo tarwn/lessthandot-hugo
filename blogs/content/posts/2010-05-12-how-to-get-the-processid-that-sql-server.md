@@ -24,7 +24,7 @@ I have two instances of SQL Server running on my laptop, one is SQL Server 2008 
 
 <img src="/wp-content/uploads/blogs/DataMgmt//TaskManager.PNG" alt="" title="" width="737" height="236" />
 
-Can you tell which process is the 2008 instance and which process is the 2008 R2 instance? I can&#8217;t either. Now if you want to know what process id your instance is using you can do three things
+Can you tell which process is the 2008 instance and which process is the 2008 R2 instance? I can't either. Now if you want to know what process id your instance is using you can do three things
 
 ### 1) Use T-SQL
 
@@ -45,7 +45,7 @@ So, now I know that the 2008 instance is using processid 2212 and the 2008 R2 in
 
 If I look at my SQL Server log, I see the following
 
-05/12/2010 08:24:25,System Manufacturer: &#8216;Hewlett-Packard&#8217;<c> System Model: &#8216;HP Compaq 8510p&#8217;.
+05/12/2010 08:24:25,System Manufacturer: &#8216;Hewlett-Packard'<c> System Model: &#8216;HP Compaq 8510p'.
   
 05/12/2010 08:24:25,Server **process ID is 2184**.
   

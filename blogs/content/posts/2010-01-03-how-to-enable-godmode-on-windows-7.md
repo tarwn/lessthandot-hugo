@@ -31,7 +31,7 @@ After that is done you will see the following icon on your desktop
   <img src="/wp-content/uploads/blogs/ITProfessionals/GodmodeIcon.png" alt="" title="" width="78" height="80" />
 </div>
 
-Now when you click on that icon you it will open up the following folder&#8230;isn&#8217;t that cool?
+Now when you click on that icon you it will open up the following folder…isn't that cool?
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/GodMode2.png?mtime=1357606733"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/GodMode2.png?mtime=1357606733" width="733" height="859" /></a>
@@ -39,4 +39,4 @@ Now when you click on that icon you it will open up the following folder&#8230;i
 
 By the way there is much more in this folder than in the screenshot, in the screenshot you only see 4 sections, in the folder there are 46 different ones
 
- **<span class="MT_red">Warning&#8230;although GodMode works on Vista 32 bit and 32 bit Windows Server 2008 it does not work on Vista 64 bit sp2 and 64 bit Windows Server 2008&#8230;see comments to fix it if you tried it on those operating systems</span>**
+ **<span class="MT_red">Warning…although GodMode works on Vista 32 bit and 32 bit Windows Server 2008 it does not work on Vista 64 bit sp2 and 64 bit Windows Server 2008…see comments to fix it if you tried it on those operating systems</span>**

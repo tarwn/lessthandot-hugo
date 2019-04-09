@@ -59,9 +59,9 @@ Built to tackle customers’ big data challenges, SQL Server 2012 PDW will offer
 
 The Hekaton announcement can be found here: http://blogs.technet.com/b/dataplatforminsider/archive/2012/11/07/pass-summit-2012-accelerating-business-through-data-insights.aspx
 
-# InfoGraphic summarizing today&#8217;s PASS Keynote
+# InfoGraphic summarizing today's PASS Keynote
 
-Below is an infographic summarizing today&#8217;s PASS Keynote
+Below is an infographic summarizing today's PASS Keynote
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC1.PNG?mtime=1352311558"><img alt="" src="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC1.PNG?mtime=1352311558" width="549" height="659" /></a>

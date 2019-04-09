@@ -19,7 +19,7 @@ tags:
 ---
 I have seen enough questions about this lately and this means that it is time for a blogpost. SQL Server 2008 has a bunch of new data types and one of them is the date datatype.
   
-If you don&#8217;t care for the time portion of the date you can now use the date data type and save 5 bytes per row compared to datetime. I know that there is smalldatetime which only takes up 4 bytes but I myself could not use that because we have data that goes back to 1896 and thus can&#8217;t be stored in smalldatetime
+If you don't care for the time portion of the date you can now use the date data type and save 5 bytes per row compared to datetime. I know that there is smalldatetime which only takes up 4 bytes but I myself could not use that because we have data that goes back to 1896 and thus can't be stored in smalldatetime
 
 So take a look at this code
 
@@ -31,7 +31,7 @@ select @d  =@d+1
 select @d
 ```
 
-To convert this to SQL Server 2008 logically you would think that all you had to do is change datetime to date. Go ahead&#8230;run it&#8230;make my day
+To convert this to SQL Server 2008 logically you would think that all you had to do is change datetime to date. Go ahead…run it…make my day
 
 sql
 declare @d date
@@ -59,7 +59,7 @@ select @d
 
 So that will work with both date and datetime (should work with all the date datatypes) and it is clear what you are doing.
 
-But wait&#8230;.scroll down in the next 5 seconds and you will get another option as a bonus.
+But wait….scroll down in the next 5 seconds and you will get another option as a bonus.
 
 What about this?
 
@@ -72,7 +72,7 @@ select @d
 
 That does the addition before assignment.
 
-But wait&#8230;.scroll down in the next 5 seconds and you will get another option which is even shorter as a bonus.
+But wait….scroll down in the next 5 seconds and you will get another option which is even shorter as a bonus.
 
 Here is another version which is a little shorter
 
@@ -81,7 +81,7 @@ declare @d date = getdate() +1
 select @d 
 ```
 
-Even though the last two versions are shorter, I would opt for using dateadd. With dateadd you know what you are doing, what does +1 mean? Are you adding days, hours or what&#8230;it is not clear from just looking at the code without running it
+Even though the last two versions are shorter, I would opt for using dateadd. With dateadd you know what you are doing, what does +1 mean? Are you adding days, hours or what…it is not clear from just looking at the code without running it
 
 
 

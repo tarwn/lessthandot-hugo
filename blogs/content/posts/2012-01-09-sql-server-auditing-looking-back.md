@@ -33,7 +33,7 @@ The new release of SQL Server is around the corner, and with it there are numero
 
 In addition to this, it also introduces filtering to your audits. This is set up on your audit instead of the Server Audit Specification or Database Audit Specification. This will limited what is written to the audit file even more, however there will be the additional CPU overhead to pay for filtering the audits.
 
-Let&#8217;s take a look how to set it up through the SSMS:
+Let's take a look how to set it up through the SSMS:
 
 First of all, create the audit as previously and navigate as in the screenshot. Note that we will use testdb, check for dbo schema and only actions taking place by users which are defined as a DB_Owner:
 
@@ -108,15 +108,15 @@ Database Audits:
 
 1. Name starts with &#8216;DBAudit_%.
   
-2. Audit file name starts with &#8216;DBAudit\_Spec\_%&#8217;.
+2. Audit file name starts with &#8216;DBAudit\_Spec\_%'.
   
 3. Audit is enabled.
 
 Server Audits:
 
-1. Name starts with &#8216;SQLAudit_%&#8217;.
+1. Name starts with &#8216;SQLAudit_%'.
   
-2. Audit file name starts with &#8216;ServerAudit_%&#8217;.
+2. Audit file name starts with &#8216;ServerAudit_%'.
   
 3. Audit is enabled.
 
@@ -520,7 +520,7 @@ This concludes the PBM monitoring for this series. the conditions can be changed
 
 So you are capturing audits to a remote server, and they are all sitting there and getting backed up occasionally. Current value of the auditing? Zero, NULL.
 
-In this form they&#8217;re not providing you with any insight. Let&#8217;s rather pull it into a database. First off we need one:
+In this form they're not providing you with any insight. Let's rather pull it into a database. First off we need one:
 
 sql
 /*
@@ -595,7 +595,7 @@ SET ANSI_PADDING OFF
 GO
 
 ```
-This gives us our database, you can just move you files to the correct directory as well as add all the secondary files and file groups you need to sustain this. There is also a table &#8220;template&#8221; with which to create your tables. Each table will be specific to an audit file.
+This gives us our database, you can just move you files to the correct directory as well as add all the secondary files and file groups you need to sustain this. There is also a table “template” with which to create your tables. Each table will be specific to an audit file.
 
 Next we need to get the audit information into the database, below is the script I used and can be modified to fit into either a SQL Job or SSIS package.
 
@@ -635,7 +635,7 @@ INSERT  INTO AuditingLogs.dbo.[Table]
 ```
 This is currently very basic, and I included some comments into the scripts to give you an overview of what is going on.
 
-For one of the audits used in demoing the SQL Server Auditing feature, I pulled all the information into a table. As per the sys.fn\_get\_audit\_file we can return the same results from the table. In the following example I&#8217;m using sys.dm\_audit_actions to join to the table to make the information more clear:
+For one of the audits used in demoing the SQL Server Auditing feature, I pulled all the information into a table. As per the sys.fn\_get\_audit\_file we can return the same results from the table. In the following example I'm using sys.dm\_audit_actions to join to the table to make the information more clear:
 
 sql
 USE AuditingLogs ;
@@ -664,7 +664,7 @@ Currently the database is only hosting the information and it will be nice if Mi
 
 ### Closing the Chapter
 
-The auditing feature very useful, and is significantly more so than C2 auditing due to the level of granularity. This is also one of the drawbacks; if the auditing is not well planned out it can bring your database or even server to its knees. As with all auditing mechanisms this feature can chew it&#8217;s way through SAN and a lot of thought needs to go into planning this, and if done so, will pay off greatly in the end. With filtering included in SQL Server 2012 it relieves some of this drawbacks in terms of the impact across a SQL Server instance. Overall I think it&#8217;s a great feature, and it still has the ability to improve greatly.
+The auditing feature very useful, and is significantly more so than C2 auditing due to the level of granularity. This is also one of the drawbacks; if the auditing is not well planned out it can bring your database or even server to its knees. As with all auditing mechanisms this feature can chew it's way through SAN and a lot of thought needs to go into planning this, and if done so, will pay off greatly in the end. With filtering included in SQL Server 2012 it relieves some of this drawbacks in terms of the impact across a SQL Server instance. Overall I think it's a great feature, and it still has the ability to improve greatly.
 
 Below are the links to the rest of the series:
 

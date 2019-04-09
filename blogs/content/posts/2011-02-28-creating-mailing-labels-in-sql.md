@@ -33,9 +33,9 @@ Are you currently running a report to get your customers mailing information, th
 
 The basic steps are to: create a report with multiple columns, add a list, add a textbox, write an expression, and let Reporting Services do the hard work! 
 
-I&#8217;m using Avery 5160 labels as an example. Depending on the labels you have, you may need adjust your columns, width, height and padding. 
+I'm using Avery 5160 labels as an example. Depending on the labels you have, you may need adjust your columns, width, height and padding. 
 
-1. Create a new, blank report. I&#8217;m using the AdventureWorks database. My query is:
+1. Create a new, blank report. I'm using the AdventureWorks database. My query is:
 
 ```sql
 SELECT        FirstName, LastName, AddressLine1, AddressLine2, City, StateProvinceName, PostalCode
@@ -46,7 +46,7 @@ FROM            Sales.vIndividualCustomer
   
 A. Expand Columns, and add the appropriate number of columns. In this example, this will be three.
   
-B. You&#8217;ll need to add in the spacing between the labels, too, so they line up correctly when printed. This may be trial and error. In this example, it is .03125 inches.
+B. You'll need to add in the spacing between the labels, too, so they line up correctly when printed. This may be trial and error. In this example, it is .03125 inches.
   
 C. Set your Margins. In this example, they are Left 0, Right 0, Top 0.1875, and Bottom 0. 
 
@@ -64,7 +64,7 @@ C. Set your Margins. In this example, they are Left 0, Right 0, Top 0.1875, and 
   
 A. Set the Width and Height properties of the textbox. Again, a width of 2.8125 and a height of 1.0625.
   
-B. You&#8217;ll also need to adjust the Padding. Remember, this box is slightly larger than the actual labels because of the margins and area between the labels. I set Padding to Left &#8211; 15pt, Right &#8211; 15 pt, Top &#8211; 0 pt, Bottom &#8211; 0 pt. 
+B. You'll also need to adjust the Padding. Remember, this box is slightly larger than the actual labels because of the margins and area between the labels. I set Padding to Left &#8211; 15pt, Right &#8211; 15 pt, Top &#8211; 0 pt, Bottom &#8211; 0 pt. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/SSRSLabels4.JPG?mtime=1298823149"><img alt="" src="/wp-content/uploads/users/grrlgeek/SSRSLabels4.JPG?mtime=1298823149" width="218" height="359" /></a>

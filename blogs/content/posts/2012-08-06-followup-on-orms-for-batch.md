@@ -23,7 +23,7 @@ My Original Post: [Evaluating ORMs for Batch Data Performance][3]
   
 Source Code: [My fork of StaticVoid.OrmPerformance][4]
 
-I received a lot of good feedback and suggestions on that post, and implemented all of the additions (except Kermit&#8217;s, oops). While I am still looking primarily at bulk insert performance, I also implemented the other test operations and Luke has pulled most of the changes back into his project (I am behind on issuing a pull request for NHibernate, sorry). This post is a follow-up on those additions with an updated conclusion, if you hadn&#8217;t read the [previous post][3], it&#8217;s probably still worth a read.
+I received a lot of good feedback and suggestions on that post, and implemented all of the additions (except Kermit's, oops). While I am still looking primarily at bulk insert performance, I also implemented the other test operations and Luke has pulled most of the changes back into his project (I am behind on issuing a pull request for NHibernate, sorry). This post is a follow-up on those additions with an updated conclusion, if you hadn't read the [previous post][3], it's probably still worth a read.
 
 ## The Updated Lineup
 
@@ -94,7 +94,7 @@ Create a connection, add as many items as you want to the list, then call Insert
 
 ## More Detail
 
-In the last post I included a comparison of all of the various methods used to insert data as a single graph. Unfortunately that graph was hard to read, as the basic Entity Framework methods were operating about an order of magnitude slower than everything else. I still thought the data was interesting, though, so I have created a graph with those values truncated as I did in the original post&#8217;s followup. The one critical difference is that I am plotting the 10,000 record inserts instead of 100,000 like last time. That just took too long to run 🙂
+In the last post I included a comparison of all of the various methods used to insert data as a single graph. Unfortunately that graph was hard to read, as the basic Entity Framework methods were operating about an order of magnitude slower than everything else. I still thought the data was interesting, though, so I have created a graph with those values truncated as I did in the original post's followup. The one critical difference is that I am plotting the 10,000 record inserts instead of 100,000 like last time. That just took too long to run 🙂
 
 <div style="text-align: center; color: #666666; font-size: 90%">
   <img src="http://tiernok.com/LTDBlog/ORM/GraphB-2.png" alt="10,000 row inserts, All categories and variants" /><br /> 10,000 row inserts, All categories and variants
@@ -102,11 +102,11 @@ In the last post I included a comparison of all of the various methods used to i
 
 With more details we can see the spread and variation a little more clearly. 
 
-**Big &#8216;Ol String method:** One of the other surprises I ran into when doing this was how slow the &#8220;cram it all into one long string&#8221; method was (&#8220;SqlCommand &#8211; Insert Once&#8221; above). This is often suggested as a quick and dirty way to do batch insertion, basically by concatenating all the data into a single long INSERT statement with multiple VALUE rows or UNIONs. At 100 records this option tied with Dapper as the fastest method. Unfortunately it scales really horribly, moving up to nearly last, leading me to believe that people suggesting this method only tested it in lower ranges.
+**Big &#8216;Ol String method:** One of the other surprises I ran into when doing this was how slow the “cram it all into one long string” method was (“SqlCommand &#8211; Insert Once” above). This is often suggested as a quick and dirty way to do batch insertion, basically by concatenating all the data into a single long INSERT statement with multiple VALUE rows or UNIONs. At 100 records this option tied with Dapper as the fastest method. Unfortunately it scales really horribly, moving up to nearly last, leading me to believe that people suggesting this method only tested it in lower ranges.
 
 ## Conclusions
 
-In my last post I concluded that I wouldn&#8217;t use an ORM for batch processing, but Simple.Data has forced me to reconsider that statement. Raw speed is not the only measure I would use to select a tool for getting data A into database B, but it is clear that if my requirements include bulk data insertion, ORMs are no longer automatically taken off the table. Congratulations to Mark for making a very clean, very fast way to get a whole lot of data into a database for very little up front effort (and thanks for adding it to my todo list).
+In my last post I concluded that I wouldn't use an ORM for batch processing, but Simple.Data has forced me to reconsider that statement. Raw speed is not the only measure I would use to select a tool for getting data A into database B, but it is clear that if my requirements include bulk data insertion, ORMs are no longer automatically taken off the table. Congratulations to Mark for making a very clean, very fast way to get a whole lot of data into a database for very little up front effort (and thanks for adding it to my todo list).
 
  [1]: http://blog.staticvoid.co.nz/ "static void; blog"
  [2]: https://twitter.com/staticv0id "staticv0id on twitter"

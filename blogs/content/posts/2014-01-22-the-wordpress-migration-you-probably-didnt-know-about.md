@@ -22,7 +22,7 @@ Read on for details on the migration, why we chose WordPress, and some of the po
 
 ## The Migration
 
-My philosophy on migrations is to make them as seamless as possible, so that wherever possible users just don&#8217;t notice that you have pulled a website out from under them and replaced it with a new one.
+My philosophy on migrations is to make them as seamless as possible, so that wherever possible users just don't notice that you have pulled a website out from under them and replaced it with a new one.
 
 LessThanDot is composed of 4 major components: the blogs (with over 2000 posts!), the wiki, the forums, and the middle bits that hold everything together and provide unified accounts (and then some more bits around the edges like SQLCop and Cooking). 
 
@@ -30,7 +30,7 @@ LessThanDot is composed of 4 major components: the blogs (with over 2000 posts!)
 
 When I decided to finally bite the bullet and replace the blog engine (by popular request), I had three audiences, each with their own set of goals:
 
-**Readers (y&#8217;all)**
+**Readers (y'all)**
 
   * Keep all the existing posts we find on google, bookmark and send to co-workers, etc
   * Keep all the comments we have left over time
@@ -38,30 +38,30 @@ When I decided to finally bite the bullet and replace the blog engine (by popula
   * Minimize downtime
   * Minimize shocking changes to the layout, availability of search, etc
 
-**Writers (A smaller set of y&#8217;all)**
+**Writers (A smaller set of y'all)**
 
-  * Preserve everyone&#8217;s hard work, including 2+ year old drafts that might still get published some day
+  * Preserve everyone's hard work, including 2+ year old drafts that might still get published some day
   * Make it easier to create, schedule, and publish new posts (or in some cases, just less cluttered or error-prone)
   * Make things like Google authorship and embedding micro-data in posts easy (or totally magically behind the scenes)
-  * Support 3rd-party blog writing applications (this is the one we haven&#8217;t gotten done, argh)
+  * Support 3rd-party blog writing applications (this is the one we haven't gotten done, argh)
 
 **Developers (the smallest set)**
 
   * The ability to be able to make theme changes easily, with few or no arcane voodoo steps
-  * Simpler environment for plugins and integrating the blogs with the rest of our site (I still don&#8217;t get the b2evo folder and file structure)
+  * Simpler environment for plugins and integrating the blogs with the rest of our site (I still don't get the b2evo folder and file structure)
   * Simplify upgrades for the core software and plugins so we can stay on top of them easily
   * Provide the ability to do neat things like Google authorship without requiring some form of voodoo and several weekends of hackery
-  * Make the writers happy so they&#8217;ll let us stay in the pool longer at the annual LessThanDot Summits 🙂
+  * Make the writers happy so they'll let us stay in the pool longer at the annual LessThanDot Summits 🙂
 
 And I think we have been successful.
 
 ## WordPress Observations, the Positive
 
-I&#8217;m pretty sure someone else did the original LessThanDot teeming work on B2Evolution but I created the new new layout theme for B2Evo that we have sported since 2009. I remember having to do a lot of guessing and print statements to try and figure out what files did what in the templates, and the documentation was only of limited helpfulness.
+I'm pretty sure someone else did the original LessThanDot teeming work on B2Evolution but I created the new new layout theme for B2Evo that we have sported since 2009. I remember having to do a lot of guessing and print statements to try and figure out what files did what in the templates, and the documentation was only of limited helpfulness.
 
-### I Just Built It&#8230;
+### I Just Built It…
 
-I started out the WordPress migration with a blank theme folder called &#8220;LessThanDot2009&#8221;. There are a plethora of posts out there on creating a custom theme, but the one I liked walked through the creation of a theme in small steps, building it up one piece at a time. I followed along, using LessThanDot code snippets where the author was using bootstrap, until before I knew it I had most of our site put together. 
+I started out the WordPress migration with a blank theme folder called “LessThanDot2009”. There are a plethora of posts out there on creating a custom theme, but the one I liked walked through the creation of a theme in small steps, building it up one piece at a time. I followed along, using LessThanDot code snippets where the author was using bootstrap, until before I knew it I had most of our site put together. 
 
 <div id="attachment_2282" style="width: 310px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/01/WordpressProgress.png"><img src="/wp-content/uploads/2014/01/WordpressProgress-300x187.png" alt="WordPress Migration - The First Page" width="300" height="187" class="size-medium wp-image-2282" srcset="/wp-content/uploads/2014/01/WordpressProgress-300x187.png 300w, /wp-content/uploads/2014/01/WordpressProgress.png 800w" sizes="(max-width: 300px) 100vw, 300px" /></a>
@@ -71,7 +71,7 @@ I started out the WordPress migration with a blank theme folder called &#8220;Le
   </p>
 </div>
 
-I quickly started branching out as I followed the tutorial, and before long I realized that Googling for &#8220;WordPress _anything_&#8221; would consistently net me a clear set of documentation pages with the exact the functions or hooks that I needed to do that _anything_.
+I quickly started branching out as I followed the tutorial, and before long I realized that Googling for “WordPress _anything_” would consistently net me a clear set of documentation pages with the exact the functions or hooks that I needed to do that _anything_.
 
 <div style="float: right; background-color: #dddddd; margin: 4px 0px 4px 8px; padding: 12px 8px 12px 0;">
   <h4 style="margin: 0px 0px 8px 8px;">
@@ -94,7 +94,7 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <p>
-  The ease with which the layout went together was great. As I knocked this out I was able to start identifying potential plugins to socket in and provide behavior that wasn&#8217;t built-in, such as view counts and code highlighting.
+  The ease with which the layout went together was great. As I knocked this out I was able to start identifying potential plugins to socket in and provide behavior that wasn't built-in, such as view counts and code highlighting.
 </p>
 
 <h3>
@@ -114,7 +114,7 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <p>
-  Next up was data integration and showing posts on the front page of LessThanDot.com&#8230;
+  Next up was data integration and showing posts on the front page of LessThanDot.com…
 </p>
 
 <p>
@@ -134,19 +134,19 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <p>
-  It all really moved this fast. As I had a few hours or a half day on a Saturday, I would sit down and just knock out a whole section of functionality (then take 3-4 weeks off to do other things). If this had been a real job, I&#8217;m confidant this would have taken less than a week&#8230;well, if you don&#8217;t count importing.
+  It all really moved this fast. As I had a few hours or a half day on a Saturday, I would sit down and just knock out a whole section of functionality (then take 3-4 weeks off to do other things). If this had been a real job, I'm confidant this would have taken less than a week…well, if you don't count importing.
 </p>
 
 <h3>
-  Argh, importing&#8230;
+  Argh, importing…
 </h3>
 
 <p>
-  The hard part ended up being the data. We had over 2000 posts we wanted to bring across, blog authors we wanted to preserve, thousands of custom tags, way too many categories, more thousands of comments, view counts I wanted to preserve, images in posts that needed their URL redirected to wherever I ended up copying the b2evo image folders, &#8230; surely this had been solved before.
+  The hard part ended up being the data. We had over 2000 posts we wanted to bring across, blog authors we wanted to preserve, thousands of custom tags, way too many categories, more thousands of comments, view counts I wanted to preserve, images in posts that needed their URL redirected to wherever I ended up copying the b2evo image folders, … surely this had been solved before.
 </p>
 
 <p>
-  We found an importer, and paid for it. Unfortunately the importer had a number of basic things it wasn&#8217;t doing correctly and because the code was encrypted, I couldn&#8217;t fix it. So after numerous test runs and slowly getting ever more frustrated, I threw it out and wrote my own.
+  We found an importer, and paid for it. Unfortunately the importer had a number of basic things it wasn't doing correctly and because the code was encrypted, I couldn't fix it. So after numerous test runs and slowly getting ever more frustrated, I threw it out and wrote my own.
 </p>
 
 <div id="attachment_2285" style="width: 682px" class="wp-caption aligncenter">
@@ -170,7 +170,7 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </div>
 
 <p>
-  Don&#8217;t get me wrong, if someone else had written something like this and made it available, I totally would have started with theirs. In a later blog post, I&#8217;ll post up the code for this plugin in case anyone else finds it helpful down the road (and because I&#8217;m still annoyed by the one we paid for).
+  Don't get me wrong, if someone else had written something like this and made it available, I totally would have started with theirs. In a later blog post, I'll post up the code for this plugin in case anyone else finds it helpful down the road (and because I'm still annoyed by the one we paid for).
 </p>
 
 <h2>
@@ -182,11 +182,11 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <p>
-  1. The syntax seemed relatively consistent, or at least well documented enough that I didn&#8217;t notice when it was inconsistent. But it could have been even more obvious/consistent which functions were returning values and which were going to echo.
+  1. The syntax seemed relatively consistent, or at least well documented enough that I didn't notice when it was inconsistent. But it could have been even more obvious/consistent which functions were returning values and which were going to echo.
 </p>
 
 <p>
-  2. What functions are calling the database? Every time I add a function outside &#8220;The Loop&#8221;, I&#8217;m worried that I&#8217;m causing more database calls to be made when I don&#8217;t want them to be. It&#8217;s not clear when it will be smart enough to have 5 or 6 individual calls not call the database on their own when the whole post is going to be loaded just a bit further down the page? I haven&#8217;t done a lot of digging on this topic, but it seems to be more heavily technical than most people want to read about on WordPress, so it doesn&#8217;t show up in the documentation.
+  2. What functions are calling the database? Every time I add a function outside “The Loop”, I'm worried that I'm causing more database calls to be made when I don't want them to be. It's not clear when it will be smart enough to have 5 or 6 individual calls not call the database on their own when the whole post is going to be loaded just a bit further down the page? I haven't done a lot of digging on this topic, but it seems to be more heavily technical than most people want to read about on WordPress, so it doesn't show up in the documentation.
 </p>
 
 <p>
@@ -238,7 +238,7 @@ endforeach;
 </p>
 
 <p>
-  4. Look at the source code for plugins before you use them so you know which ones have a lot of positive comments but are obviously going to be impossible to support long term. Some of those same beginner developers got a plugin running on their machine, but you know in a version or two it&#8217;s going to be the biggest security leak in your site.
+  4. Look at the source code for plugins before you use them so you know which ones have a lot of positive comments but are obviously going to be impossible to support long term. Some of those same beginner developers got a plugin running on their machine, but you know in a version or two it's going to be the biggest security leak in your site.
 </p>
 
 <p>
@@ -249,12 +249,12 @@ endforeach;
   <a href="/wp-content/uploads/2014/01/wordpress-spam.png"><img src="/wp-content/uploads/2014/01/wordpress-spam-300x55.png" alt="Time to empty out the spam for the day..." width="300" height="55" class="size-medium wp-image-2289" srcset="/wp-content/uploads/2014/01/wordpress-spam-300x55.png 300w, /wp-content/uploads/2014/01/wordpress-spam.png 363w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
-    Time to empty out the spam for the day&#8230;
+    Time to empty out the spam for the day…
   </p>
 </div>
 
 <p>
-  Oh my god the spam. We have built up our spam rules on B2Evo over the course of years without even realising how much spam LessThanDot would be getting without those rules. Within the first 8 minutes of switching the sub-domain to show WordPress instead of B2Evo, we received more than 10 spam comments. Chrissie started deleting, I started deleting, a vast array of spammers kept at it, I started banning IPs&#8230;and the flood kept coming at a steady pace of 2 spam comments/minute. I finally found a good spam plugin the next day that has managed the 2/minute load just fine without any performance impact on our servers (we still have to empty out the spam folder occasionally though, oh well).
+  Oh my god the spam. We have built up our spam rules on B2Evo over the course of years without even realising how much spam LessThanDot would be getting without those rules. Within the first 8 minutes of switching the sub-domain to show WordPress instead of B2Evo, we received more than 10 spam comments. Chrissie started deleting, I started deleting, a vast array of spammers kept at it, I started banning IPs…and the flood kept coming at a steady pace of 2 spam comments/minute. I finally found a good spam plugin the next day that has managed the 2/minute load just fine without any performance impact on our servers (we still have to empty out the spam folder occasionally though, oh well).
 </p>
 
 <p>

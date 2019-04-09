@@ -20,15 +20,15 @@ tags:
   - wcat
 
 ---
-Adding load testing to my continuous build process provides several benefits for a fairly cheap entry fee. As the development process progresses, I&#8217;ll have a baseline and know if I add something to the application that impacts the performance. I&#8217;ll also be able to accurately discuss it&#8217;s performance when asked, instead of guessing. And if I want to increase the performance, that same baseline will serve as a guide on my progress. 
+Adding load testing to my continuous build process provides several benefits for a fairly cheap entry fee. As the development process progresses, I'll have a baseline and know if I add something to the application that impacts the performance. I'll also be able to accurately discuss it's performance when asked, instead of guessing. And if I want to increase the performance, that same baseline will serve as a guide on my progress. 
 
 Not every application needs to process 100,000 transactions/second, but the cost of guessing how well our application will perform tends to catch up with us.
 
-In the [previous post][1], I walked through using WCAT to define and execute a load test scenario against the site from my [continuous delivery project][2]. In this post, I&#8217;ll take those WCAT scripts and incorporate them into Jenkins as a new build step in my delivery pipeline, not only running the load test but capturing the results so I can show them over time.
+In the [previous post][1], I walked through using WCAT to define and execute a load test scenario against the site from my [continuous delivery project][2]. In this post, I'll take those WCAT scripts and incorporate them into Jenkins as a new build step in my delivery pipeline, not only running the load test but capturing the results so I can show them over time.
 
 ## Prep the Server
 
-Before I can start configuring my new build step, I need to prep the server. Following the steps in my prior post, I&#8217;ll download the WCAT msi to the build server and install it, then register the build server as a WCAT client:
+Before I can start configuring my new build step, I need to prep the server. Following the steps in my prior post, I'll download the WCAT msi to the build server and install it, then register the build server as a WCAT client:
 
 ```text
 cscript //H:cscript
@@ -55,19 +55,19 @@ First up is defining the parameter for the CI build number:
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config1.png" title="Load Test Job - Build Parameter" /><br /> Load Test Job &#8211; Build Parameter
 </div>
 
-Then I need to add in the code repository that I&#8217;m hosting the Load Test scripts from the last post in:
+Then I need to add in the code repository that I'm hosting the Load Test scripts from the last post in:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config2.png" title="Load Test Job - Load Test Scripts" /><br /> Load Test Job &#8211; Load Test Scripts
 </div>
 
-I&#8217;ve also added the [EnvFile plugin][3] to allow me to store critical information, like server names and passwords, in an external settings file:
+I've also added the [EnvFile plugin][3] to allow me to store critical information, like server names and passwords, in an external settings file:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config3.png" title="Load Test Job - External Settings" /><br /> Load Test Job &#8211; External Settings
 </div>
 
-Then using the [Copy Artifact][4] plugin, I&#8217;ll add a build step to retrieve the zipped deployable website from the CI build step:
+Then using the [Copy Artifact][4] plugin, I'll add a build step to retrieve the zipped deployable website from the CI build step:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4.png" title="Load Test Job - Copy Artifacts" /><br /> Load Test Job &#8211; Copy Artifacts
@@ -107,7 +107,7 @@ and clutter up my twitter feed.
 
 With that I have a fully functional build job that deploys a website on demand and load tests it. 
 
-And now the really hard part. Doing something with the load test results (you think I&#8217;m being sarcastic, but just wait).
+And now the really hard part. Doing something with the load test results (you think I'm being sarcastic, but just wait).
 
 ## Displaying the Results
 
@@ -117,15 +117,15 @@ There is really only one plugin in Jenkins that I could find to handle plotting 
 
 ### The Plot Plugin (Duh Duh Duuuuh)
 
-The [Plot Plugin][6] is finicky, poorly documented, and has some hinkiness in the Jenkins display that I haven&#8217;t seen from other plugins. It annoyed me enough that I actually started reading through the source code in [github][7] to get help figuring out some of it&#8217;s behavior (and then after seeing it, briefly considered trying to relearn java long enough to add some much needed fixes). 
+The [Plot Plugin][6] is finicky, poorly documented, and has some hinkiness in the Jenkins display that I haven't seen from other plugins. It annoyed me enough that I actually started reading through the source code in [github][7] to get help figuring out some of it's behavior (and then after seeing it, briefly considered trying to relearn java long enough to add some much needed fixes). 
 
-Among it&#8217;s other weaknesses, the plot plugin doesn&#8217;t allow you to set data labels, it automatically uses the tag names of the XML. Which doesn&#8217;t work so well when your XML nodes all have the same name. 
+Among it's other weaknesses, the plot plugin doesn't allow you to set data labels, it automatically uses the tag names of the XML. Which doesn't work so well when your XML nodes all have the same name. 
 
 Like the WCAT results.
 
 Argh.
 
-So after much wrestling, I decided to map the WCAT data to a new XML file purely for the purposes of feeding the plot plugin (and to also reconfigure it so I could enter all the points for a plot from one XPath query, don&#8217;t get me started on forcing me to re-enter the filename for each XPath statement for the same plot).
+So after much wrestling, I decided to map the WCAT data to a new XML file purely for the purposes of feeding the plot plugin (and to also reconfigure it so I could enter all the points for a plot from one XPath query, don't get me started on forcing me to re-enter the filename for each XPath statement for the same plot).
 
 **Transform.xsl**
 
@@ -222,13 +222,13 @@ And there we go, I now have a job that I can run on demand that will load test m
 
 ## Incorporate into Build Pipeline
 
-The last step of this whole load test adventure is incorporating the load test job I&#8217;ve created into my build pipeline. 
+The last step of this whole load test adventure is incorporating the load test job I've created into my build pipeline. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_load.png" title="Continuous Delivery Pipeline with Load Test Step" /><br /> Continuous Delivery Pipeline with Load Test Step
 </div>
 
-The only changes necessary to insert the Load Test job into the pipeline is to modify my &#8220;ASPNet MVC Music Store Interface Tests&#8221; build job to trigger a parametrized build of this new load test and in the load test, check the &#8220;Build Pipeline Plugin -> Manually Execute Downstream Project&#8221; option and specify the &#8220;Deploy to QA&#8221; build step as the target. 
+The only changes necessary to insert the Load Test job into the pipeline is to modify my “ASPNet MVC Music Store Interface Tests” build job to trigger a parametrized build of this new load test and in the load test, check the “Build Pipeline Plugin -> Manually Execute Downstream Project” option and specify the “Deploy to QA” build step as the target. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_wload.png" title="Continuous Delivery Pipeline w/ Load Testing Step" /><br /> Continuous Delivery Pipeline w/ Load Testing Step

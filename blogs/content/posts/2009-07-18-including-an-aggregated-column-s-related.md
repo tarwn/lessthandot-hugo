@@ -14,11 +14,11 @@ categories:
   - Microsoft SQL Server
 
 ---
-In this co-authored blog post, [Naomi][1] and I will present six different solutions to the commonly experienced query problem of how to include an aggregated column&#8217;s related values &#8211; values from the same row in the group that provided the displayed value.
+In this co-authored blog post, [Naomi][1] and I will present six different solutions to the commonly experienced query problem of how to include an aggregated column's related values &#8211; values from the same row in the group that provided the displayed value.
 
 ## Background
 
-It&#8217;s a fairly simple query to select the maximum date for each group in a GROUP BY query. You just throw in a Max() on the date column and then GROUP BY the other columns. For example,
+It's a fairly simple query to select the maximum date for each group in a GROUP BY query. You just throw in a Max() on the date column and then GROUP BY the other columns. For example,
 
 sql
 SELECT
@@ -28,7 +28,7 @@ FROM Orders
 GROUP BY CustomerID
 ```
 
-But a common query need is to include other column values from the same row as the most recent date. Unfortunately, putting aggregates on other columns doesn&#8217;t work:
+But a common query need is to include other column values from the same row as the most recent date. Unfortunately, putting aggregates on other columns doesn't work:
 
 sql
 SELECT
@@ -39,7 +39,7 @@ FROM Orders
 GROUP BY CustomerID
 ```
 
-It&#8217;s almost like you need some kind of Max(OrderDate->SubTotal).
+It's almost like you need some kind of Max(OrderDate->SubTotal).
 
 Note that the desired results are fairly easy in MS Access using the aggregate functions Last and First:
 
@@ -61,11 +61,11 @@ However, these functions are not available in SQL Server, likely because the que
 
 In order to have enough data to make results significant and also to let others run the same queries against the same data, we are going to use the AdventureWorks sample database.
 
-In our scenario, we want to show customers&#8217; account numbers along with the date and subtotal of their most recent order. We&#8217;re keeping it simple for clarity, but note that you can include as many columns as you like. In a later installment we&#8217;ll do these same queries with more columns and different scenarios, and will expand on some of the queries a bit. We&#8217;ll also discuss performance to help you select between them.
+In our scenario, we want to show customers' account numbers along with the date and subtotal of their most recent order. We're keeping it simple for clarity, but note that you can include as many columns as you like. In a later installment we'll do these same queries with more columns and different scenarios, and will expand on some of the queries a bit. We'll also discuss performance to help you select between them.
 
-Note that the aggregate doesn&#8217;t have to be on a date. Perhaps you want to know the date of the largest dollar value order per customer. In this case, you&#8217;d be doing a Max() on the order value instead of a date, and you would most certainly run into duplicates. Keep this in mind when reading below and when developing your own queries.
+Note that the aggregate doesn't have to be on a date. Perhaps you want to know the date of the largest dollar value order per customer. In this case, you'd be doing a Max() on the order value instead of a date, and you would most certainly run into duplicates. Keep this in mind when reading below and when developing your own queries.
 
-The basic query we&#8217;ll be working with is:
+The basic query we'll be working with is:
 
 sql
 SELECT
@@ -83,22 +83,22 @@ What we want to do is also return the Subtotal value from the same row as the La
 We know of only a few basic approaches to the problem:
 
 <div>
-  &#8211; <strong>Key Search</strong> &#8212; use the LastOrderDate column as a key (along with customer AccountNumber) to locate the correct rows in the OrderHeader table. This requires an extra join and also the key isn&#8217;t unique, so we might have to perform another Max() on a unique column and join another time, with the new column added to the key.</p> 
+  &#8211; <strong>Key Search</strong> &#8212; use the LastOrderDate column as a key (along with customer AccountNumber) to locate the correct rows in the OrderHeader table. This requires an extra join and also the key isn't unique, so we might have to perform another Max() on a unique column and join another time, with the new column added to the key.</p> 
   
   <p>
-    &#8211; <strong>Number and Filter</strong> &#8212; select all rows from OrderHeader, and number them in a way exploitable to correctly filter out unwanted rows. Observe that this won&#8217;t require hitting the table again, but it could use a lot of extra resources to temporarily materialize more data. Skipping over obvious poor choices such as a temp table with an ordered update or a cursor, options might be a windowing function (SQL 2005 and up) or a temp table with an identity column (SQL 2000).
+    &#8211; <strong>Number and Filter</strong> &#8212; select all rows from OrderHeader, and number them in a way exploitable to correctly filter out unwanted rows. Observe that this won't require hitting the table again, but it could use a lot of extra resources to temporarily materialize more data. Skipping over obvious poor choices such as a temp table with an ordered update or a cursor, options might be a windowing function (SQL 2005 and up) or a temp table with an identity column (SQL 2000).
   </p>
   
   <p>
-    &#8211; <strong>Simulate MS Access</strong> &#8212; simulate how MS Access works somehow, getting only the data we need in a single table access (seek or scan). Let&#8217;s imagine how the SQL engine already performs a Max. As it touches each row, it must store the intermediate value that is the best candidate so far for all the seen values. And it has to have one of these per group, per column. All that is needed is that every time it writes the Max() candidate into its temporary storage, it also writes the extra column we want into the same data.
+    &#8211; <strong>Simulate MS Access</strong> &#8212; simulate how MS Access works somehow, getting only the data we need in a single table access (seek or scan). Let's imagine how the SQL engine already performs a Max. As it touches each row, it must store the intermediate value that is the best candidate so far for all the seen values. And it has to have one of these per group, per column. All that is needed is that every time it writes the Max() candidate into its temporary storage, it also writes the extra column we want into the same data.
   </p>
   
   <p>
-    How could we do this ourselves? We need to ORDER BY OrderDate but actually yield SubTotal. SubTotal clearly won&#8217;t sort in the correct order by itself. Remembering Max(OrderDate->SubTotal), what if it wasn&#8217;t by itself, and somehow contained the OrderDate, too, to make it sort properly? So here we have an idea about packing both columns into a single value that sorts correctly yet can still be used to get the SubTotal back out. When the engine does its Max() bit as usual on the date and stores the best candidate, it will also be forced to store the other value at the same time (which we can extract later).
+    How could we do this ourselves? We need to ORDER BY OrderDate but actually yield SubTotal. SubTotal clearly won't sort in the correct order by itself. Remembering Max(OrderDate->SubTotal), what if it wasn't by itself, and somehow contained the OrderDate, too, to make it sort properly? So here we have an idea about packing both columns into a single value that sorts correctly yet can still be used to get the SubTotal back out. When the engine does its Max() bit as usual on the date and stores the best candidate, it will also be forced to store the other value at the same time (which we can extract later).
   </p>
 </div>
 
-So let&#8217;s use those ideas and turn them into real queries. Unless otherwise stated, queries will work with SQL Server 2000.
+So let's use those ideas and turn them into real queries. Unless otherwise stated, queries will work with SQL Server 2000.
 
 ## Key Search</p> 
 
@@ -251,7 +251,7 @@ ORDER BY
   * This example uses a varchar column to hold the packed values, but be aware that converting to and from binary is faster than char (plus harder to use and more error-prone) and binary aggregation is faster. The crucial part is being able to faithfully extract the data that was put in.
   * This query has no problem with duplicates. It does effectively sort by the full compound value, so if multiple orders for the same customer can be on the same order date and you want some other column to determine which one is selected, it has to be included in the packed data.
   * As given, this query does not handle NULLs at all. A few strategic Coalesces can fix that.
-  * There is no significant performance difference between unpacking one many-item compound value or many one-item compound values (though you&#8217;d always include all columns needed for ordering).
+  * There is no significant performance difference between unpacking one many-item compound value or many one-item compound values (though you'd always include all columns needed for ordering).
 
 sql
 SELECT
@@ -269,9 +269,9 @@ FROM
    ) X
 ```
 
-Isn&#8217;t that cool? I don&#8217;t advocate using it all the time, but when performance is bad and the trade-offs are worth it, do it.
+Isn't that cool? I don't advocate using it all the time, but when performance is bad and the trade-offs are worth it, do it.
 
-In closing, thank you for visiting. We hope this is useful to you. You might like to see the next installment [Including an Aggregated Column&#8217;s Related Values &#8211; Part 2][4], discussing this issue in further depth.
+In closing, thank you for visiting. We hope this is useful to you. You might like to see the next installment [Including an Aggregated Column's Related Values &#8211; Part 2][4], discussing this issue in further depth.
 
 Erik
 

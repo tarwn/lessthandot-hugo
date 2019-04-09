@@ -16,11 +16,11 @@ tags:
   - static site generator
 
 ---
-If you&#8217;re working on a free product or startup, you&#8217;re probably thinking frequently about how to balance your time across all the things that need doing. One of those millions of things is getting a marketing site up to tell people about your amazing thing, and do so in a way that looks professional, is easy to update and redeploy, doesn&#8217;t turn into a whole separate coding project, and so on.
+If you're working on a free product or startup, you're probably thinking frequently about how to balance your time across all the things that need doing. One of those millions of things is getting a marketing site up to tell people about your amazing thing, and do so in a way that looks professional, is easy to update and redeploy, doesn't turn into a whole separate coding project, and so on.
 
 Because I spend cycles thinking about things like this in my free time, I started looking into static site generators as a potential way to balance dynamic-enough with not-building-a-thing and low operational costs. You could have the freedom of hand-editable pages for things like your landing page, something minimal like markdown for blog posts, just enough markup to inject content from those blog posts into your landing page, but not have to build a whole back-end (and pay for extra back-end resources) to run it. 
 
-So I decided to build a marketing site structure. It didn&#8217;t take long and you can feel free to grab a copy if you want to shave some time off and start where I left off: [tarwn/StaticMarketingSite on github][1]
+So I decided to build a marketing site structure. It didn't take long and you can feel free to grab a copy if you want to shave some time off and start where I left off: [tarwn/StaticMarketingSite on github][1]
 
 ## Anatomy of a Marketing Site
 
@@ -40,13 +40,13 @@ Lastly, I wanted a simple test, update, and deployment story.
 
 ## Current Status
 
-This is not a final state, but I&#8217;ll outline where I am now and what I&#8217;m considering changing. I&#8217;m using [Metalsmith][2] as the static site generator, with a mixture of HTML, Markdown, and [Handlebars][3] for content and the only local dependencies are [node.js][4] and [git][5].
+This is not a final state, but I'll outline where I am now and what I'm considering changing. I'm using [Metalsmith][2] as the static site generator, with a mixture of HTML, Markdown, and [Handlebars][3] for content and the only local dependencies are [node.js][4] and [git][5].
 
 ### Build and Deployment
 
 This is the place I spend the least amount of time now. 
 
-After pulling the git repo down to a machine, I run `npm install` to install metalsmith and it&#8217;s plugins.
+After pulling the git repo down to a machine, I run `npm install` to install metalsmith and it's plugins.
 
 To build a fresh version of the site, I run `node install.js`
 
@@ -70,7 +70,7 @@ So my workflow is:
   * Refresh my browser
   * When happy: git commit, git push, wait a few seconds for it to go live
 
-I don&#8217;t like the delay of step 3, so I may tighten this up further with a watch task so I can leave the index re-processing automatically in the background every time I save a file and cut down on the delay to seeing it in the browser. Next up would be cooking in a live refresh so I wouldn&#8217;t even need to refresh the browser.
+I don't like the delay of step 3, so I may tighten this up further with a watch task so I can leave the index re-processing automatically in the background every time I save a file and cut down on the delay to seeing it in the browser. Next up would be cooking in a live refresh so I wouldn't even need to refresh the browser.
 
 ### Adding a blog post
 
@@ -85,7 +85,7 @@ excerpt: summary of my post
 ---
 Content of my post
 ```
-The top section, or &#8220;front matter&#8221;, defines metadata used elsewhere in the build process. A &#8220;draft: true&#8221; value tells metalsmith to skip publishing the entry. The date is used when ordering the posts to decide what should show on the landing page and in the RSS feed. The &#8220;layout&#8221; property tells metalsmith to wrap this in the layouts/post.html content. The &#8220;excerpt&#8221; property is displayed on the landing page and in the RSS feed.
+The top section, or “front matter”, defines metadata used elsewhere in the build process. A “draft: true” value tells metalsmith to skip publishing the entry. The date is used when ordering the posts to decide what should show on the landing page and in the RSS feed. The “layout” property tells metalsmith to wrap this in the layouts/post.html content. The “excerpt” property is displayed on the landing page and in the RSS feed.
 
 ### Additional details
 
@@ -210,9 +210,9 @@ You can see the full file here: [index.js on tarwn/StaticMarketingSite][9].
 
 LESS/SASS/CSS- I left these out on purpose because I think this should reflect the fastest/least friction option for the person building the site
 
-Docs Layouts &#8211; I didn&#8217;t finish docs at all. I feel like this is going to be pretty custom to how someone would want to share information about their product (and what that product is), so it&#8217;s one of the bigger gaps
+Docs Layouts &#8211; I didn't finish docs at all. I feel like this is going to be pretty custom to how someone would want to share information about their product (and what that product is), so it's one of the bigger gaps
 
-Image processing, Responsive frameworks, etc &#8211; These are choices that rely heavily on the design of the page, so I didn&#8217;t play with it at all
+Image processing, Responsive frameworks, etc &#8211; These are choices that rely heavily on the design of the page, so I didn't play with it at all
 
  [1]: https://github.com/tarwn/StaticMarketingSite "tarwn/StaticMarketingSite on github"
  [2]: http://metalsmith.io

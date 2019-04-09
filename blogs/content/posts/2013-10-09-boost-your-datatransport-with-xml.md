@@ -18,7 +18,7 @@ categories:
   - VB.NET
 
 ---
-Xml, as we all know, has a drawback, being the potential growth in size, characteristical to the format , especially when dealing with complex types and collections of complex types. Let&#8217;s take a look at a classic example, taken from Wikipedia. 
+Xml, as we all know, has a drawback, being the potential growth in size, characteristical to the format , especially when dealing with complex types and collections of complex types. Let's take a look at a classic example, taken from Wikipedia. 
 
 ```xml
 <person>
@@ -57,7 +57,7 @@ Based on this example it would seem that attribute-only XML outperforms about an
 ```
 This is quite an improvement if we still imagine those same 1000 persons. Nevertheless, as JSON demonstrates : complex types and collections can be handled in a more intelligent way when it comes to limiting growth in size where serialization is involved. 
 
-That said, we can still tweak serialization from within our code, of course. By using attributes in our classes we can limit the length of the tagnames or prevent properties we don&#8217;t want to be serialized from appearing within the resulting XML, and thus adding to the total size. 
+That said, we can still tweak serialization from within our code, of course. By using attributes in our classes we can limit the length of the tagnames or prevent properties we don't want to be serialized from appearing within the resulting XML, and thus adding to the total size. 
 
 ```vbnet
 Public Class Address
@@ -68,7 +68,7 @@ Public Class Address
     Public Property Code As String
     Public Property State As String
 ```
-This gives us the means to trim resulting XML in such a way that the final result may feel like being &#8220;acceptable&#8221;. Our classes we could then expand with functionality to serialize any instance at any moment as well as deserialize back into them. Typically we use XmlSerializer objects for this. 
+This gives us the means to trim resulting XML in such a way that the final result may feel like being “acceptable”. Our classes we could then expand with functionality to serialize any instance at any moment as well as deserialize back into them. Typically we use XmlSerializer objects for this. 
 
 ```vbnet
 Public Class Address
@@ -94,11 +94,11 @@ Public Class Address
 
 End Class
 ```
-There&#8217;s a drawback though. If we want to serialize our instances into XML purely in memory, this turns out to be quite a mess. You&#8217;ll get there eventually, but the more you want to customise the XML to be generated the messier it gets. Serializing to file(s) on hard disk is a tad more straightforward, but do we want to make a roundtrip to the hard disk at each serialization at all times ? Obviously no. 
+There's a drawback though. If we want to serialize our instances into XML purely in memory, this turns out to be quite a mess. You'll get there eventually, but the more you want to customise the XML to be generated the messier it gets. Serializing to file(s) on hard disk is a tad more straightforward, but do we want to make a roundtrip to the hard disk at each serialization at all times ? Obviously no. 
 
 Luckily this can be done in a much easier way, courtesy of the .NET framework builtin Linq To XML. Linq To XML turns both reading and writing XML into a breeze. 
 
-Now, there&#8217;s a reason I have used VB as PL here, instead of C# or C++. From VB 9 onward it has this cool feature on board, named XML litterals. No, C# does not have this feature on board. As for the why, you have to address the C# compiler development team for that. Anyway, as you can see, this feature is nothing less than awesome. 
+Now, there's a reason I have used VB as PL here, instead of C# or C++. From VB 9 onward it has this cool feature on board, named XML litterals. No, C# does not have this feature on board. As for the why, you have to address the C# compiler development team for that. Anyway, as you can see, this feature is nothing less than awesome. 
 
 ```vbnet
 Public Class Address
@@ -132,7 +132,7 @@ Public Class Address
 
 End Class
 ```
-We don&#8217;t have to use serializer objects anymore, as you can see. As a matter of fact, even the use of Attributes in our code has become obsolete because we serialize only what we want and only how we want it, without relying on external objects. And what&#8217;s more, it is compiled, not interpreted as you might think. 
+We don't have to use serializer objects anymore, as you can see. As a matter of fact, even the use of Attributes in our code has become obsolete because we serialize only what we want and only how we want it, without relying on external objects. And what's more, it is compiled, not interpreted as you might think. 
 
 Consuming this functionality is just as easy. 
 
@@ -159,7 +159,7 @@ Dim someAddress As New Address With {
 ```
 Now, at least, we are somewhere. With a relative small overhead we can use extra functionality within objects in our code to generate XML wich leaves all in all a small fingerprint where our data-transport is concerned. Yet, the fingerprint is still there, and when we have to deal with various nested complex types combined with very large collections, there still is the risk that the size of the generated XML may become unacceptable. 
 
-We haven&#8217;t gone to the bottom yet though, where XML is concerned. There still is one option whe haven&#8217;t explored. What we can do is **_denormalising_** our XML. So instead of composing elements we place all their attributes in 1 big root tag. Sort of like denormalising a table model of a database. The **_<Person><Address /><Phonenumbers><Phonenumber /><Phonenumber /></Phonenumbers></Person>_** example above would look in a denormalised form like this : 
+We haven't gone to the bottom yet though, where XML is concerned. There still is one option whe haven't explored. What we can do is **_denormalising_** our XML. So instead of composing elements we place all their attributes in 1 big root tag. Sort of like denormalising a table model of a database. The **_<Person><Address /><Phonenumbers><Phonenumber /><Phonenumber /></Phonenumbers></Person>_** example above would look in a denormalised form like this : 
 
 ```xml
 <person firstName="John"
@@ -174,9 +174,9 @@ We haven&#8217;t gone to the bottom yet though, where XML is concerned. There st
         P2.Type="fax"
         P2.Value="646 555-4567" />
 ```
-As you can see, this is XML in it&#8217;s very most compact form. JSON can hardly do better than this ( in fact, it can&#8217;t). Notice that I used a dot within the attributes to have some sort of indication that we are dealing with a composition of elements really, which has to be taken into account when deserialising back into objects. In fact, the dot serves as a degenerate dimension, in database speak. The dot is arbitrarily chosen from my part ( as are the composition identifiers A for Address, P1 for Phonenumber1, P2 for Phonenumber2 ). It might as well have been an underscore or whatever. But a dot is fine and it&#8217;s use within attribute names does seem to pass inspection on validity. 
+As you can see, this is XML in it's very most compact form. JSON can hardly do better than this ( in fact, it can't). Notice that I used a dot within the attributes to have some sort of indication that we are dealing with a composition of elements really, which has to be taken into account when deserialising back into objects. In fact, the dot serves as a degenerate dimension, in database speak. The dot is arbitrarily chosen from my part ( as are the composition identifiers A for Address, P1 for Phonenumber1, P2 for Phonenumber2 ). It might as well have been an underscore or whatever. But a dot is fine and it's use within attribute names does seem to pass inspection on validity. 
 
-Now everything is in place for generating very compact XML and an easy deserialisation into complex types . But&#8230; ( oh yes, there&#8217;s a but )&#8230; each attribute within an XML tag must be unique. There&#8217;s always a way to work around this of course, but in the end the easiest solution is to introduce an extra property ( which will not be serialized of course ) within classes that will participate in data-transport. We will name this property **_SequenceID_** (but you can pick another name if you like to). 
+Now everything is in place for generating very compact XML and an easy deserialisation into complex types . But… ( oh yes, there's a but )… each attribute within an XML tag must be unique. There's always a way to work around this of course, but in the end the easiest solution is to introduce an extra property ( which will not be serialized of course ) within classes that will participate in data-transport. We will name this property **_SequenceID_** (but you can pick another name if you like to). 
 
 On a note: I for my self allways add a property SequenceID to my domain classes. On another level, it allows me for example to use this property for binding in XAML to a SortDescription. In that way I only have to manage the SequenceID of my classes in code behind, when sorting is involved. Binding will do the rest. 
 
@@ -334,4 +334,4 @@ Dim aPerson As New Person _
 
             Console.WriteLine(aPerson.ToString)
 ```
-And you know what&#8217;s the nicest thing of it all? Excel can handle this kind of XML without any problem at all. Of course, you will have a worksheet with 1 row and a hell of lot of columns.
+And you know what's the nicest thing of it all? Excel can handle this kind of XML without any problem at all. Of course, you will have a worksheet with 1 row and a hell of lot of columns.

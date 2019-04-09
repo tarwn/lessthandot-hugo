@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-It’s a new year, you (hopefully) have a new training budget and vacation time, and I hope you&#8217;ll consider <a href="http://sqlcruise.com/hub-2015/" target="_blank">SQL Cruise Caribbean 2015</a>. It departs Miami, FL on Saturday, February 7, 2015; stops in Saint Maarten, US Virgin Islands, and Bahamas; and returns to Miami on Saturday, February 14, 2015. In between, there are hours of in-depth SQL Server training!
+It’s a new year, you (hopefully) have a new training budget and vacation time, and I hope you'll consider <a href="http://sqlcruise.com/hub-2015/" target="_blank">SQL Cruise Caribbean 2015</a>. It departs Miami, FL on Saturday, February 7, 2015; stops in Saint Maarten, US Virgin Islands, and Bahamas; and returns to Miami on Saturday, February 14, 2015. In between, there are hours of in-depth SQL Server training!
 
 ### 5 Reasons to Board Norwegian Getaway for SQL Cruise
 

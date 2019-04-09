@@ -85,7 +85,7 @@ AdventureWorks2012    189.49 MB	DenisDenis	16	Mar 16 2013	Status=ONLINE, .....	1
 AdventureWorksDW2008R2 92.56 MB	DenisDenis	15	Mar 16 2013	Status=ONLINE.....	100
 AdventureWorksDW2012  201.74 MB	DenisDenis	14	Mar 16 2013	Status=ONLINE.....	110</pre>
 
-Let&#8217;s say we want to change the names of all the columns and also we want to make the column created return a datetime value. You can of course dump the stored procedure output in a temporary table and select from that table. But in this case I think WITH RESULT SETS shows its value. Here is how we do this with sp_helpdb
+Let's say we want to change the names of all the columns and also we want to make the column created return a datetime value. You can of course dump the stored procedure output in a temporary table and select from that table. But in this case I think WITH RESULT SETS shows its value. Here is how we do this with sp_helpdb
 
 sql
 EXEC sp_helpdb

@@ -14,9 +14,9 @@ categories:
   - Microsoft SQL Server
 
 ---
-SQL Server Management Studio (SSMS) has <a href="/index.php/datamgmt/dbprogramming/tips-and-tricks-to-make/" target="_blank">a lot of cool little tips and tricks</a>. Last night, while presenting for 24 Hours of PASS, I used the Window Split function and noticed a few &#8220;oohs&#8221; and &#8220;aaahs&#8221; on Twitter.
+SQL Server Management Studio (SSMS) has <a href="/index.php/datamgmt/dbprogramming/tips-and-tricks-to-make/" target="_blank">a lot of cool little tips and tricks</a>. Last night, while presenting for 24 Hours of PASS, I used the Window Split function and noticed a few “oohs” and “aaahs” on Twitter.
 
-Here&#8217;s how you do it.
+Here's how you do it.
 
 Open a query in SSMS. In this case, I was looking at a nonclustered index creation statement, and wanted to keep it at the top of the window while I ran several queries, seeing if they would use it.
 
@@ -30,7 +30,7 @@ To split the upper half of the window, where my query is, I can either go to Win
 
 &nbsp;
 
-This tip can be helpful for many situations. Think of viewing a stored procedure or function, and keeping the list of parameters at the top of the window. It can be really helpful when combined with the Tools > Options> Query Results > SQL Server > Results to Grid > &#8220;Display results in a separate tab&#8221; option, for keeping large portions of the query on the screen at one time.
+This tip can be helpful for many situations. Think of viewing a stored procedure or function, and keeping the list of parameters at the top of the window. It can be really helpful when combined with the Tools > Options> Query Results > SQL Server > Results to Grid > “Display results in a separate tab” option, for keeping large portions of the query on the screen at one time.
 
 &nbsp;
 

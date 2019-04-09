@@ -15,17 +15,17 @@ tags:
   - skill matrix
 
 ---
-I&#8217;m currently trying to quantify what it means to be good at a variety of technologies that we use day to day. Some I&#8217;ve put some thought into before ([What does a Web Developer need to know?][1]), but some are proving to be more difficult.
+I'm currently trying to quantify what it means to be good at a variety of technologies that we use day to day. Some I've put some thought into before ([What does a Web Developer need to know?][1]), but some are proving to be more difficult.
 
-Here&#8217;s my goal: I&#8217;m working with my team to build some tools that we can use to identify our skill levels, provide guideposts on how we can improve those skills, signs to indicate who on the team has more specialized knowledge in which areas, and also provide a guide for a plethora of other activities, like code reviews, design reviews, owners of sections of the internal wiki, etc. Our team is growing, so we want to start trying to build some tools and guides that will help people come on board easier and put off the day that my management duties leave no time for coding.
+Here's my goal: I'm working with my team to build some tools that we can use to identify our skill levels, provide guideposts on how we can improve those skills, signs to indicate who on the team has more specialized knowledge in which areas, and also provide a guide for a plethora of other activities, like code reviews, design reviews, owners of sections of the internal wiki, etc. Our team is growing, so we want to start trying to build some tools and guides that will help people come on board easier and put off the day that my management duties leave no time for coding.
 
 ## Technical Skill List
 
 The current work-in-progress is based on things like the [Programmer Competency Matrix][2], a blog series a couple years ago on [How to Appraise a Developer][3], my own post linked above, and a number of books and other sources.
 
-We are building a series of matrices that describe technical skills, non-technical developer skills (support, communication, etc), and skill inside our codebase. We&#8217;ll use a combination of self-evaluation and external evaluation to determine roughly where we are in each row. This will help us uncover skills we didn&#8217;t know others had, determine areas we&#8217;re more interested in specializing in, create goals and see progress on our professional development, take on projects that are step or two out of our comfort level, etc.
+We are building a series of matrices that describe technical skills, non-technical developer skills (support, communication, etc), and skill inside our codebase. We'll use a combination of self-evaluation and external evaluation to determine roughly where we are in each row. This will help us uncover skills we didn't know others had, determine areas we're more interested in specializing in, create goals and see progress on our professional development, take on projects that are step or two out of our comfort level, etc.
 
-We have a good handle on the non-technical developer skills and our codebase, the technical skills are the part I don&#8217;t have a good start on yet. What does it mean to be a beginner in ASP.Net MVC? What are some of the signs you have learned more than that? And a step beyond that? I&#8217;d love some feedback and help.
+We have a good handle on the non-technical developer skills and our codebase, the technical skills are the part I don't have a good start on yet. What does it mean to be a beginner in ASP.Net MVC? What are some of the signs you have learned more than that? And a step beyond that? I'd love some feedback and help.
 
 <table class="oneshottable">
   <tr>
@@ -288,7 +288,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   
   <tr>
     <td>
-      Testing &#8211; NUnit, MSTest, Moq, Rhino &#8230;
+      Testing &#8211; NUnit, MSTest, Moq, Rhino …
     </td>
     
     <td>
@@ -515,7 +515,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   </tr>
 </table>
 
-Later, when I have the table more fleshed out, I&#8217;ll do a follow-up post in case this would be a useful tool for others as well.
+Later, when I have the table more fleshed out, I'll do a follow-up post in case this would be a useful tool for others as well.
 
  [1]: /index.php/webdev/uidevelopment/what-does-a-web-developer/ "What does a Web Developer need to know?"
  [2]: http://sijinjoseph.com/programmer-competency-matrix/ "Programmer Competency Matrix"

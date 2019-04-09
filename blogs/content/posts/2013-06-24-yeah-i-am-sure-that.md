@@ -32,7 +32,7 @@ Zdnet also reported this today here: http://www.zdnet.com/oracle-databases-head-
 
 Here is what I found interesting in that article, the following quote from Holger Mueller
 
-> Holger Mueller, an analyst at Constellation Research, said **Microsoft is addressing the shortfall of its SQL Server in terms of scalability**. Mueller added that the partnership, which doesn&#8217;t mention Oracle 12c directly, is larger than expected with the additions of WebLogic and Java.
+> Holger Mueller, an analyst at Constellation Research, said **Microsoft is addressing the shortfall of its SQL Server in terms of scalability**. Mueller added that the partnership, which doesn't mention Oracle 12c directly, is larger than expected with the additions of WebLogic and Java.
 
 Really that is the reason, Microsoft allows running of Oracle on Azure because SQL Server has a scalibility problem? Fascinating!! What is next, Microsoft offers PHP because C# sucks?
 
@@ -42,4 +42,4 @@ Really that is the reason, Microsoft allows running of Oracle on Azure because S
 
 The more plausible reason is that since Microsoft is competing directly with Amazon in the cloud, it wants to offer the same things that Amazon offers. Amazon offers Oracle as well as SQL Server.
 
-That&#8217;s what I think
+That's what I think

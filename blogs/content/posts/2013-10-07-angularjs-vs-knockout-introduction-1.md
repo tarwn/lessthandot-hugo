@@ -27,9 +27,9 @@ tags:
   - sammyjs
 
 ---
-I&#8217;m reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. There are already plenty of posts out there comparing [AngularJS][1] and [Knockout][2]. I have been slowly reading through all the comparisons I could find, but unfortunately I keep running into cases where the posts are too high level, miss capabilities I need, or have errors that undermine my trust in the rest of the post. 
+I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. There are already plenty of posts out there comparing [AngularJS][1] and [Knockout][2]. I have been slowly reading through all the comparisons I could find, but unfortunately I keep running into cases where the posts are too high level, miss capabilities I need, or have errors that undermine my trust in the rest of the post. 
 
-The thing is, Knockout and AngularJS are attempting to solve two different problems. One is simply an MVVM binding framework, the other is a SPA-in-a-box solution. So instead of trying to directly compare the two frameworks, I&#8217;ve outlined the capabilities I need and will review how well each of the frameworks meets those capabilities. Where one library does not meet a particular set of needs, I&#8217;ll look at a common solution that people use with that library. Since Knockout is purely a databinding library, I expect to have to pull in others when it&#8217;s time to talk about routing, modules, and unit testing, while I shouldn&#8217;t have to do this as much with AngularJS.
+The thing is, Knockout and AngularJS are attempting to solve two different problems. One is simply an MVVM binding framework, the other is a SPA-in-a-box solution. So instead of trying to directly compare the two frameworks, I've outlined the capabilities I need and will review how well each of the frameworks meets those capabilities. Where one library does not meet a particular set of needs, I'll look at a common solution that people use with that library. Since Knockout is purely a databinding library, I expect to have to pull in others when it's time to talk about routing, modules, and unit testing, while I shouldn't have to do this as much with AngularJS.
 
 Here are the capabilities I need:
 
@@ -57,7 +57,7 @@ Here are the capabilities I need:
   </li>
 </ul>
 
-Before I dive into either of these libraries, though, I need some assurance that they will support the browsers I need, won&#8217;t get me into an odd licensing situation, and have sizable communities maintaining them. Here is a list of all the libraries I&#8217;ve incorporated in the series:
+Before I dive into either of these libraries, though, I need some assurance that they will support the browsers I need, won't get me into an odd licensing situation, and have sizable communities maintaining them. Here is a list of all the libraries I've incorporated in the series:
 
 <table class="tables" style="border-collapse: collapse">
   <tr>
@@ -473,9 +473,9 @@ Browser Compatibility:
   </tr>
 </table>
 
-I&#8217;ll explore each capability in both frameworks as well as my opinions and frustrations along the way. Then when the whole series is posted, I&#8217;ll offer a final set of opinions. The plan is to post daily (weekdays) until I get to the end, so keep an eye out on the site or follow me on [twitter][3] for updates.
+I'll explore each capability in both frameworks as well as my opinions and frustrations along the way. Then when the whole series is posted, I'll offer a final set of opinions. The plan is to post daily (weekdays) until I get to the end, so keep an eye out on the site or follow me on [twitter][3] for updates.
 
-I haven&#8217;t actually written the last post yet, so you have plenty of time to color my opinion and point out where I did things wrong as I roll out each post 🙂
+I haven't actually written the last post yet, so you have plenty of time to color my opinion and point out where I did things wrong as I roll out each post 🙂
 
 <div style="background-color: #DDDDDD; padding: 8px; width: 400px;">
   <h3>

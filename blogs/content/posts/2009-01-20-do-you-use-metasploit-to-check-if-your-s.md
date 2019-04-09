@@ -38,7 +38,7 @@ Allows the Metasploit framework to be used as a SSL certificate scanner. This pr
   
 The vulnerable function is exposed through the System.Product namespace but is also accessible by using the ASnative API directly. 
 
-The ASnative API is interesting because it offers a different way to call builtin functions, and the only way to call certain undocumented functions. ASnative functions are indexed in a two-dimensional array, with the first index being between 1 and 3000, while the second index is usually below 300. The &#8220;escape&#8221; function has an index value of (100,0)
+The ASnative API is interesting because it offers a different way to call builtin functions, and the only way to call certain undocumented functions. ASnative functions are indexed in a two-dimensional array, with the first index being between 1 and 3000, while the second index is usually below 300. The “escape” function has an index value of (100,0)
 
 Remember a H4x0r already is using Metasploit and other tools to penetrate and take over your servers by take advantage of buffer overflows and other vulnerabilities.
 

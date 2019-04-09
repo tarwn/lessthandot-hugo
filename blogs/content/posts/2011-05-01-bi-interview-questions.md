@@ -16,7 +16,7 @@ categories:
   - SSIS
 
 ---
-Recently I had to find a BI resource to do some ETL work for me.  I wanted to make sure I had the right person for the job so I came up with a list of interview questions that proved out to be spot on.  It really helped me weed out the folks that knew a lot of buzz words versus the folks that had actually worked with the different aspects of the BI ETL process.  I&#8217;ve provided some of the answers to a few of the questions.  You would be surprised at what little people really know when they claim to be an expert at BI.  I did find the perfect person using these questions and the project is well under way and on target! 
+Recently I had to find a BI resource to do some ETL work for me.  I wanted to make sure I had the right person for the job so I came up with a list of interview questions that proved out to be spot on.  It really helped me weed out the folks that knew a lot of buzz words versus the folks that had actually worked with the different aspects of the BI ETL process.  I've provided some of the answers to a few of the questions.  You would be surprised at what little people really know when they claim to be an expert at BI.  I did find the perfect person using these questions and the project is well under way and on target! 
 
 **Can you explain normalization?**
 

@@ -26,11 +26,11 @@ People should really take advantage of these tools to check their own site befor
 
 So what actually happened with Kaspersky? Here is what ChannelWeb had to say about this
 
-> A security vulnerability in Moscow-based Kaspersky Lab&#8217;s U.S. Web site was made public after a hacker launched a SQL attack and posted listings of tables contained on the security company&#8217;s site.
+> A security vulnerability in Moscow-based Kaspersky Lab's U.S. Web site was made public after a hacker launched a SQL attack and posted listings of tables contained on the security company's site.
   
-> The hacker, known as Unu, posted screen shots as well as a list of tables Feb. 7 to a blog after hacking into the security company&#8217;s Web site via a simple SQL injection attack that allowed information to be exposed by entering secret username and password information.
+> The hacker, known as Unu, posted screen shots as well as a list of tables Feb. 7 to a blog after hacking into the security company's Web site via a simple SQL injection attack that allowed information to be exposed by entering secret username and password information.
 > 
-> &#8220;Kaspersky is one of the leading companies in the security and antivirus market. It seems as though they are not able to secure their own databases,&#8221; the hacker said on a hackerblog.org posting. &#8220;Alter one of the parameters and you have access to EVERYTHING: users, activation codes, lists of bugs, admins, shop, etc.&#8221;
+> “Kaspersky is one of the leading companies in the security and antivirus market. It seems as though they are not able to secure their own databases,” the hacker said on a hackerblog.org posting. “Alter one of the parameters and you have access to EVERYTHING: users, activation codes, lists of bugs, admins, shop, etc.”
 
 You can read that whole article here: http://www.crn.com/security/213401972
 

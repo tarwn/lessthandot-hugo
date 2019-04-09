@@ -26,7 +26,7 @@ tags:
   <img src="/wp-content/uploads/blogs/DataMgmt/lazydba.gif" alt="" title="" width="378" height="378" />
 </div>
 
-SQL Trace (and use of profiler as a front end to SQL Trace procedures) is far from a secret. Performance tuning in the days of 2005/2008 has become much easier with the advent of DMVs but SQL Trace still has its place in the realm of, &#8220;Why is this happening&#8221;. Performance tuning becomes almost easy while watching exactly what is going on with the batches hitting our database servers. The only downfall is the impact SQL Trace plays on an active database server. This can be done strategically and with minimal impact from a well thought through plan of attack. 
+SQL Trace (and use of profiler as a front end to SQL Trace procedures) is far from a secret. Performance tuning in the days of 2005/2008 has become much easier with the advent of DMVs but SQL Trace still has its place in the realm of, “Why is this happening”. Performance tuning becomes almost easy while watching exactly what is going on with the batches hitting our database servers. The only downfall is the impact SQL Trace plays on an active database server. This can be done strategically and with minimal impact from a well thought through plan of attack. 
 
 So what does SQL Trace have to do with being a lazy DBA?
 
@@ -42,7 +42,7 @@ So we can see that being lazy in reality has little to do with being truly lazy.
 
 **Scenario time:**
 
-_You are the only DBA in the entire world employed at your company. This means you are the lucky and only person that does reporting, integrations, import/extract&#8230;All of it! Director needs to update the ERP system for every single one of the ten thousand customers that are in the database. You know the database but know it will also take you days just to determine just what columns need this update due to the most awful naming convention in a database you have ever seen._ 
+_You are the only DBA in the entire world employed at your company. This means you are the lucky and only person that does reporting, integrations, import/extract…All of it! Director needs to update the ERP system for every single one of the ten thousand customers that are in the database. You know the database but know it will also take you days just to determine just what columns need this update due to the most awful naming convention in a database you have ever seen._ 
 
 You are in for all-nighters for at least two days because this director holds your job in their hands. What if I told you that you could get it done in around 20 minutes with these steps?
 

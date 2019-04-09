@@ -22,7 +22,7 @@ tags:
   After our installation of SQL Server 2008 R2 <a href="/index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/virtual-lab-creating-a-basic-sql-2008-r2" alt="Click here to catch up on that article if you missed it" target="_blank">a few weeks ago</a>, I mentioned that we still had some additional setup tasks before we could consider the server to be done. This article covers setting up DatabaseMail, the internal mail client/management system that will allow us to use built-in alerts (among other things).<br /> <br /> <label>Technical Area:</label> Accidental Database Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
 </div>
 
-Database Mail is a subsystem that acts like a [SMTP][1] client, allowing us to send emails from SQL Server processes and scripts. It replaces SQL Mail and doesn&#8217;t require a local installation of additional software (like Outlook, the quick fix) to function. 
+Database Mail is a subsystem that acts like a [SMTP][1] client, allowing us to send emails from SQL Server processes and scripts. It replaces SQL Mail and doesn't require a local installation of additional software (like Outlook, the quick fix) to function. 
 
 ## Account, Profile, Service Broker, what?
 
@@ -32,7 +32,7 @@ Database Mail expands on the concept of sending mail to include all of the featu
 
 Database Mail is something we want to setup immediately on creating a new server. When we are working with a relatively small number of servers, the GUI is not a bad option for setting up some accounts.
 
-We&#8217;ll start by setting up an administrator profile with then intent to send critical notifications and alerts to this profile.
+We'll start by setting up an administrator profile with then intent to send critical notifications and alerts to this profile.
 
 In SSMS we can right click the Database Mail entry under Management to begin the wizard.
 
@@ -40,27 +40,27 @@ In SSMS we can right click the Database Mail entry under Management to begin the
   <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/01_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/01_config.png" alt="SSMS DatabaseMail" /></a><br /> DatabaseMail Menu Item in SSMS
 </div>
 
-The Intro screen is fairly boring, so lets press &#8220;Next&#8221; and head to the main configuration page. This being the first time we are configuring DatabaseMail on our new server, we want to leave the first option selected and continue.
+The Intro screen is fairly boring, so lets press “Next” and head to the main configuration page. This being the first time we are configuring DatabaseMail on our new server, we want to leave the first option selected and continue.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/02_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/02_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS
 </div>
 
-A quick check by the wizard and it determines that components for Database Mail aren&#8217;t available on the server yet, so it asks us if we want to go ahead and install them (yes).
+A quick check by the wizard and it determines that components for Database Mail aren't available on the server yet, so it asks us if we want to go ahead and install them (yes).
 
 <div class="hint">
-  How did the server know Database Mail wasn&#8217;t configured, and what did it do when we pressed &#8216;Yes&#8217;? <br /> There is an advanced option in the system configurations called &#8216;Database Mail XPs&#8217;. When the option is set to &#8216;0&#8217; (which is the default), then the Database Mail process doesn&#8217;t run. So the dialog simply checked the current value and, when we selected &#8216;Yes&#8217;, updated the configuration to a value of &#8216;1&#8217;.
+  How did the server know Database Mail wasn't configured, and what did it do when we pressed &#8216;Yes'? <br /> There is an advanced option in the system configurations called &#8216;Database Mail XPs'. When the option is set to &#8216;0' (which is the default), then the Database Mail process doesn't run. So the dialog simply checked the current value and, when we selected &#8216;Yes', updated the configuration to a value of &#8216;1'.
 </div>
 
-Profiles are used to represent a set of email addresses which allows us to represent a single person (or system) with multiple fail-over accounts. If an error occurs when the system is attempting to send mail from the first account in a profile, it fails to the next and retries, continuing until it either runs out of accounts or successfully sends it&#8217;s message.
+Profiles are used to represent a set of email addresses which allows us to represent a single person (or system) with multiple fail-over accounts. If an error occurs when the system is attempting to send mail from the first account in a profile, it fails to the next and retries, continuing until it either runs out of accounts or successfully sends it's message.
 
-Lets enter a Profile Name of &#8220;The Accidental Admin&#8221;.
+Lets enter a Profile Name of “The Accidental Admin”.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/03_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/02_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS
 </div>
 
-Now we&#8217;ll add the first two accounts to this profile, each on a different network. Many admins will choose a non-local account with an external provider as their primary to reduce the chances that emails will not get through when other issues are happening. As many of you know, when a server room overheats the exchange server is always the first to go, so we will start with an external provider and fail-over to an internal one. Keep in mind that these are the accounts the database will send emails _from_ when using the specified profile, not to.
+Now we'll add the first two accounts to this profile, each on a different network. Many admins will choose a non-local account with an external provider as their primary to reduce the chances that emails will not get through when other issues are happening. As many of you know, when a server room overheats the exchange server is always the first to go, so we will start with an external provider and fail-over to an internal one. Keep in mind that these are the accounts the database will send emails _from_ when using the specified profile, not to.
 
 Creating an account is fairly straightforward, simply enter the details for where you would like the email to be sent and any authentication options that are necessary. In this case we want to create a minimum of two accounts so the failover can work properly.
 
@@ -86,19 +86,19 @@ The last interactive step is to confirm or modify some additional system paramet
   <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/07_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/07_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS &#8211; System Parameters
 </div>
 
-After a final review screen, press the &#8216;Finish&#8217; button to implement the changes.
+After a final review screen, press the &#8216;Finish' button to implement the changes.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/08_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/08_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS &#8211; Finished
 </div>
 
-The last step is to test our new setup. Right-click the Database Mail menu option in SSMS and select &#8220;Send Test Email&#8230;&#8221;.
+The last step is to test our new setup. Right-click the Database Mail menu option in SSMS and select “Send Test Email…”.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/09_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/09_config.png" alt="SSMS DatabaseMail - Test Email" /></a><br /> SSMS Menu &#8211; Sending a Test Email
 </div>
 
-After entering an email address for our test message, we can hit the &#8220;Send&#8221; button and wait for confirmation of our ability to hit &#8220;Next, Next, Finish&#8221;.
+After entering an email address for our test message, we can hit the “Send” button and wait for confirmation of our ability to hit “Next, Next, Finish”.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/10_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/10_config.png" alt="SSMS DatabaseMail - Test Email Dialog" /></a><br /> SSMS DatabaseMail &#8211; Test Email Dialog
@@ -204,12 +204,12 @@ print 'Test Email Away!';
 
 GO	
 ```
-Running this script creates a setup similar to what we created in the first section, though some of the names have been changed (and I have removed my email address from the list so I don&#8217;t get server updates when someone comes along and forgets to swap out the addresses).
+Running this script creates a setup similar to what we created in the first section, though some of the names have been changed (and I have removed my email address from the list so I don't get server updates when someone comes along and forgets to swap out the addresses).
 
 ## And Now, Uses
 
-So now that we have Database Mail setup, what are we going to use it for? Well, besides creating our own monitoring and email scripts, the built in Alerts component in SQL Server uses Database mail to tell us when critical parts of our server have decided to misbehave. SQL Agent jobs have the option to notify us when they fail and they do so using, yep, Database Mail. Setting up Database Mail and using it in each of these situations won&#8217;t prevent problems from occurring, but it is the difference between finding out when the problem is occurring and finding out after the server has melted down. 
+So now that we have Database Mail setup, what are we going to use it for? Well, besides creating our own monitoring and email scripts, the built in Alerts component in SQL Server uses Database mail to tell us when critical parts of our server have decided to misbehave. SQL Agent jobs have the option to notify us when they fail and they do so using, yep, Database Mail. Setting up Database Mail and using it in each of these situations won't prevent problems from occurring, but it is the difference between finding out when the problem is occurring and finding out after the server has melted down. 
 
-Next week will be something interesting, but I haven&#8217;t determined what that will be yet, so we&#8217;ll figure it out as we go.
+Next week will be something interesting, but I haven't determined what that will be yet, so we'll figure it out as we go.
 
  [1]: http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol "Simple Mail Transport Protocol"

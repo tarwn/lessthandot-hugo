@@ -20,7 +20,7 @@ tags:
   - sql server 2008
 
 ---
-If you are using snapshots be aware that running sp_helpdb reports wrong files. Let&#8217;s take a look by running some code
+If you are using snapshots be aware that running sp_helpdb reports wrong files. Let's take a look by running some code
 
 First create a test database
 
@@ -36,7 +36,7 @@ CREATE DATABASE [test] ON  PRIMARY
 GO
 ```
 
-Now let&#8217;s create a table and populate it with some data
+Now let's create a table and populate it with some data
 
 sql
 USE test
@@ -91,7 +91,7 @@ sp_helpdb 'Test'
 test		1	C:test.mdf		PRIMARY	2304 KB
 test_log	2	C:test_log.LDF	        NULL	1792 KB</pre>
 
-Let&#8217;s add some more data to our table
+Let's add some more data to our table
 
 sql
 use Test

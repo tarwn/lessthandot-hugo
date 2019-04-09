@@ -23,9 +23,9 @@ Here is what I found interesting this past week in SQL Land:
   
 Explanation of the following: When you attempt to change the Login Account for the SQL services [SQL Server, SQL Agent, Full Text, Analysis Services] from the SQL Server Computer Manager tool, you may encounter the following error message:
   
-&#8220;WMI Provider Error&#8221;
+“WMI Provider Error”
   
-&#8220;Access is denied. [0x80070005]&#8221;
+“Access is denied. [0x80070005]”
 
 **[What is allocation bottleneck?][2]**
   
@@ -43,7 +43,7 @@ Jonathan Kehayias explains how to move tempdb
   
 One very common question that I see on the forums is on index seeks and index scans. A query is resulting in a table/clustered index scan, even though there’s an index on one or more of the columns been searched on. Gail Shaw does a nice explanation
 
-**[Don&#8217;t Touch that Shrink Button!][6]**
+**[Don't Touch that Shrink Button!][6]**
   
 This topic has indeed been done to death. Yet I still often encounter unecessary database autoshrinks, scheduled shrink jobs and at times a seeming lack of knowledge on just what one should be doing as far as their database sizes.
 

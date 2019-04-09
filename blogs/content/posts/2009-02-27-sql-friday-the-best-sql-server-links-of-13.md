@@ -21,11 +21,11 @@ Here is what I found interesting this past week in SQL Land:
 
 **[Is CHECKDB A Necessity?][1]**
   
-I&#8217;m often asked by professionals whether CheckDB is still recommended on SQL2k8. SQL is calculating a checksum to avoid physical page corruption since 2k5. However in my experience (starting with SQL 7.0) I’ve never been able to clearly say that CheckDB is not necessary .. Does anyone have a good advice? Read the post to find out the answer
+I'm often asked by professionals whether CheckDB is still recommended on SQL2k8. SQL is calculating a checksum to avoid physical page corruption since 2k5. However in my experience (starting with SQL 7.0) I’ve never been able to clearly say that CheckDB is not necessary .. Does anyone have a good advice? Read the post to find out the answer
 
 **[Run-time Execution Plan Options][2]**
   
-Joe Chang made a post and hes sks &#8220;What are the top core SQL Server engine performance issues today, after all the improvements that have gone into 2005 and 2008? (I am excluding matters beyond the power of Microsoft, like eliminating bad developers.)&#8221;
+Joe Chang made a post and hes sks “What are the top core SQL Server engine performance issues today, after all the improvements that have gone into 2005 and 2008? (I am excluding matters beyond the power of Microsoft, like eliminating bad developers.)”
 
 **[Enabling Data Compression By Default in a SQL Server 2008 Database][3]**
   
@@ -43,7 +43,7 @@ And this week we have a bonus link, it is not SQL Server but MySQL, a very inter
 
 **[How FriendFeed uses MySQL to store schema-less data][8]**
   
-Bret Taylor writes: We use MySQL for storing all of the data in FriendFeed. Our database has grown a lot as our user base has grown. We now store over 250 million entries and a bunch of other data, from comments and &#8220;likes&#8221; to friend lists.
+Bret Taylor writes: We use MySQL for storing all of the data in FriendFeed. Our database has grown a lot as our user base has grown. We now store over 250 million entries and a bunch of other data, from comments and “likes” to friend lists.
 
 As our database has grown, we have tried to iteratively deal with the scaling issues that come with rapid growth. We did the typical things, like using read slaves and memcache to increase read throughput and sharding our database to improve write throughput. However, as we grew, scaling our existing features to accomodate more traffic turned out to be much less of an issue than adding new features.
 

@@ -23,9 +23,9 @@ tags:
   - transactions
 
 ---
-Sometimes you have to insert a bunch of data and you can&#8217;t use BCP or another bulk load method. When you do single row inserts, SQL Server wraps these inserts inside an implicit transaction. Did you know that if you use an explicit transaction that the inserts will be much faster? I touched upon this earlier in this post [MongoDB vs. SQL Server &#8211; INSERT comparison part deux][1] but since someone asked about this today, I decided to take another look with different run sizes as well
+Sometimes you have to insert a bunch of data and you can't use BCP or another bulk load method. When you do single row inserts, SQL Server wraps these inserts inside an implicit transaction. Did you know that if you use an explicit transaction that the inserts will be much faster? I touched upon this earlier in this post [MongoDB vs. SQL Server &#8211; INSERT comparison part deux][1] but since someone asked about this today, I decided to take another look with different run sizes as well
 
-Let&#8217;s take a look. first create the following table
+Let's take a look. first create the following table
 
 sql
 CREATE TABLE Sometest(id INT PRIMARY KEY, SomeCol VARCHAR(200), SomeDate DATETIME,SomeCol2 VARCHAR(200), SomeDate2 DATETIME,
@@ -90,6 +90,6 @@ Here is what the numbers look like on my machine for different insert sizes
 5000	 190	  103
 1000	  40       23</pre>
 
-As you can see, when you have an explicit transaction it is much faster than when you don&#8217;t specify a transaction
+As you can see, when you have an explicit transaction it is much faster than when you don't specify a transaction
 
  [1]: /index.php/DataMgmt/DBProgramming/mongodb-vs-sql-server-insert-comparison

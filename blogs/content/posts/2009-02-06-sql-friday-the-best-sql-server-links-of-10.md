@@ -15,11 +15,11 @@ tags:
   - sql friday
 
 ---
-Here we are with another fascinating episode of the **SQL Friday, The Best SQL Server Links Of The Past Week** show. I can&#8217;t believe it is week 10 already, if I continue like this I will be retired soon&#8230;..or just tired without the re prefix.
+Here we are with another fascinating episode of the **SQL Friday, The Best SQL Server Links Of The Past Week** show. I can't believe it is week 10 already, if I continue like this I will be retired soon…..or just tired without the re prefix.
   
 Here is what I found interesting this past week in SQL Land:
 
-**[Shrinking is a popular topic&#8230;][1]**
+**[Shrinking is a popular topic…][1]**
   
 Mike explains some concepts about shrinking and the transaction log
 

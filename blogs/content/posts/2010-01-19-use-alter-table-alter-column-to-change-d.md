@@ -27,7 +27,7 @@ tags:
 ---
 This question popped in the [microsoft.public.sqlserver.programming][1] forum yesterday. A person wanted to change a column from varchar 500 to varchar 2000. This is actually pretty easy to do in SQL Server, you can use the _alter table alter column_ command
   
-Let&#8217;s take a quick look at how this works
+Let's take a quick look at how this works
   
 First create this table
 
@@ -82,7 +82,7 @@ id              int             NULL
 itemdate        datetime        NULL
 title           varchar         2000</pre>
 
-Now let&#8217;s change the datetime column to a varchar, execute the following query
+Now let's change the datetime column to a varchar, execute the following query
 
 sql
 alter table [TestTable] alter column [itemdate] [varchar] (49)
@@ -124,7 +124,7 @@ Results
 1           Jan 18 2010  5:28PM                               bla
 2           Jan 18 2010  5:30PM                               bla</pre>
 
-Now we will add a column. The command to add a column is very similar to the one where you alter a column, the difference is that you don&#8217;t use the column keyword. Below is a query that will add an int column with a default of 0
+Now we will add a column. The command to add a column is very similar to the one where you alter a column, the difference is that you don't use the column keyword. Below is a query that will add an int column with a default of 0
 
 sql
 alter table [TestTable] add  [SomeInt] int default 0 not null
@@ -162,7 +162,7 @@ itemdate        varchar         49
 title           varchar         2000
 SomeInt		int		NULL</pre>
 
-Now let&#8217;s insert a row, we will use a value of 2 for the newly added SomeInt column
+Now let's insert a row, we will use a value of 2 for the newly added SomeInt column
 
 sql
 insert [TestTable]
@@ -195,7 +195,7 @@ Here is the error for the above command
   
 **Msg 245, Level 16, State 1, Line 1
   
-Conversion failed when converting the varchar value &#8216;Jan 18 2010 5:12PM&#8217; to data type int.
+Conversion failed when converting the varchar value &#8216;Jan 18 2010 5:12PM' to data type int.
   
 The statement has been terminated.**
 

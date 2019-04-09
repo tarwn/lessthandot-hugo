@@ -30,11 +30,11 @@ tags:
   - w3c
 
 ---
-What is a web developer? Recently I was involved in a discussion about the skills a web developer is expected to have and how interesting it has been to watch common bad practices (like table layout and SQL injection) continue to spread. So in the nature of Denis&#8217;s [What does a SQL Server developer need to know?][1] post, I present the web developer breakdown.
+What is a web developer? Recently I was involved in a discussion about the skills a web developer is expected to have and how interesting it has been to watch common bad practices (like table layout and SQL injection) continue to spread. So in the nature of Denis's [What does a SQL Server developer need to know?][1] post, I present the web developer breakdown.
 
 ## What Level Am I?
 
-Rather than try and attach years of experience to this scale, I&#8217;m going to present a list of major areas and skills, questions, or topics in each area. I&#8217;ve tried to capture whether I feel a skill is required to be an Intermediate or Advanced web developer. 
+Rather than try and attach years of experience to this scale, I'm going to present a list of major areas and skills, questions, or topics in each area. I've tried to capture whether I feel a skill is required to be an Intermediate or Advanced web developer. 
 
 I put this list together based on my own experience, 20-30 web developer interview lists, and some feedback from others.
 
@@ -217,7 +217,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Purpose and use of &#8220;media&#8221;
+      Purpose and use of “media”
     </td>
   </tr>
   
@@ -321,7 +321,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Knows and can use prototype (little &#8216;p&#8217;, not the framework)
+      Knows and can use prototype (little &#8216;p', not the framework)
     </td>
   </tr>
   
@@ -399,7 +399,7 @@ Advanced: Knows almost everything on the list
   
   <tr>
     <td colspan="2" class="summary">
-      The shift to dynamic, server-generated websites in the mid-to-late 90&#8217;s was responsible for shifting the focus of the web from document retrieval to interactivity, commerce, and services.
+      The shift to dynamic, server-generated websites in the mid-to-late 90's was responsible for shifting the focus of the web from document retrieval to interactivity, commerce, and services.
     </td>
   </tr>
   
@@ -753,7 +753,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Table Layout &#8211; what it is, why it&#8217;s bad (at least three reasons)
+      Table Layout &#8211; what it is, why it's bad (at least three reasons)
     </td>
   </tr>
   
@@ -857,7 +857,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      You&#8217;ve implemented some form of browser analytics
+      You've implemented some form of browser analytics
     </td>
   </tr>
   
@@ -911,7 +911,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Backbutton doesn&#8217;t work w/ your sites, would prefer to disable it altogether
+      Backbutton doesn't work w/ your sites, would prefer to disable it altogether
     </td>
   </tr>
   
@@ -946,11 +946,11 @@ Advanced: Knows almost everything on the list
   </tr>
 </table>
 
-_Note: Disqualifiers indicate that you won&#8217;t progress past [B]eginner or [I]ntermediate levels until you stop doing them and understand why doing them was a bad idea_
+_Note: Disqualifiers indicate that you won't progress past [B]eginner or [I]ntermediate levels until you stop doing them and understand why doing them was a bad idea_
 
-## What&#8217;s Missing
+## What's Missing
 
-There are several things that were intentionally left out of this list. Some were hard to quantity in a general manner, others I was unsure how relevant they were. And I&#8217;m sure people will be kind enough to add additional oversights and revisions below.
+There are several things that were intentionally left out of this list. Some were hard to quantity in a general manner, others I was unsure how relevant they were. And I'm sure people will be kind enough to add additional oversights and revisions below.
 
 Missing Categories:
 
@@ -960,7 +960,7 @@ Missing Categories:
   * Design and Graphics skills
   * Application Lifecycle Management &#8211; Source Control, Deployment, etc
 
-Extra items that didn&#8217;t make it in:
+Extra items that didn't make it in:
 
   * Can implement RSS and ATOM feeds
   * Can implement a web farm
@@ -969,14 +969,14 @@ Extra items that didn&#8217;t make it in:
   * Knows how to create DTDs and/or XSDs
   * Can write regular expressions without a reference
   * Knows relevant tools for Yahoo (SiteExplorer), Google, Bing for managing site information
-  * Schema.org &#8211; it belongs in the Meta category but I didn&#8217;t know what level of skill, knowledge, or adoption I should include considering it&#8217;s newness and several other factors
+  * Schema.org &#8211; it belongs in the Meta category but I didn't know what level of skill, knowledge, or adoption I should include considering it's newness and several other factors
 
-There is also the fact that we often get caught up maintaining or even adding on to a site that violates many of the skills and standards you see in this list. This doesn&#8217;t prevent us from writing good, clean, semantic sites the rest of the time and being forced to write poor code does not make on inherently less skilled.
+There is also the fact that we often get caught up maintaining or even adding on to a site that violates many of the skills and standards you see in this list. This doesn't prevent us from writing good, clean, semantic sites the rest of the time and being forced to write poor code does not make on inherently less skilled.
 
 ## A Brief Digression, or Why an App Dev is Not a Web Dev
 
 At one point web development was seen as less exciting and far less complex than application development. It is still seen as extremely similar to application development, so much so that it is quite normal to hire a good or great application developer and expect them to be a good or great web developer. 
 
-Unfortunately it doesn&#8217;t quite work that way, as web development has grown extremely complex since the first dynamic sites started showing up in the late 90&#8217;s. Doubly unfortunately, web development is based on a stateless model instead of the stateful one most application developers are used to, uses a fluid layout instead of the grid layout, and sneaks a lot of extra communications and caching into the mix. This is a series of paradigm shifts not unlike the one between procedural, object oriented, and functional programming.
+Unfortunately it doesn't quite work that way, as web development has grown extremely complex since the first dynamic sites started showing up in the late 90's. Doubly unfortunately, web development is based on a stateless model instead of the stateful one most application developers are used to, uses a fluid layout instead of the grid layout, and sneaks a lot of extra communications and caching into the mix. This is a series of paradigm shifts not unlike the one between procedural, object oriented, and functional programming.
 
  [1]: /index.php/DataMgmt/DBProgramming/MSSQLServer/what-does-a-sql-server "Read Denis's post"

@@ -104,7 +104,7 @@ Bring over an OLE DB Source into the data flow window and configure it to use so
 
 Now bring over the Derived Column object and double click it. The Derived column transformation editor is pretty good at making things easy for you. Basically what we want is a column that will map to our “ident” column in SQL Server and hold the value we placed in the variable identifying this source. 
 
-To do this enter “ident” into the Derived Column Name, leave &#8220;add as new column&#8221; and then expand the variables section above that to expose your user variables. You can now drag the variable source1key into the Expression place holder. Once you do this the value will be parsed and the data type will be populated for you. 
+To do this enter “ident” into the Derived Column Name, leave “add as new column” and then expand the variables section above that to expose your user variables. You can now drag the variable source1key into the Expression place holder. Once you do this the value will be parsed and the data type will be populated for you. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//dragvariables.gif" alt="" title="" width="628" height="241" />

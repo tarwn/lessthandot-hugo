@@ -26,11 +26,11 @@ I recently came across the following error message when I tried to look at the b
 
 [<img class="alignnone size-full wp-image-2585" alt="koen_mdserror" src="/wp-content/uploads/2014/04/koen_mdserror.png" width="299" height="120" />][1]
 
-Too bad I am the system administrator on that machine&#8230;
+Too bad I am the system administrator on that machine…
 
 Anyway, after some searching it came out the MDS stored procedure _udpEntityStagingAllBatchesByModelGet_ throws a bit of a temper tantrum if one of the batch tags used in the staging process of a leaf member is NULL. You can check this in the table **mdm.tblStgBatch**.
 
-Simple delete the offending batches and you&#8217;re good to go!
+Simple delete the offending batches and you're good to go!
 
 sql
 DELETE FROM mdm.tblStgBatch

@@ -75,7 +75,7 @@ As usually it ended with the raffle, during the day there was a Kindle giveaway 
 
 [<img src="http://farm5.static.flickr.com/4071/4550309155_13c0d2b3d8.jpg" width="500" height="375" alt="Raffle1" />][8]
 
-I had a good time at the event, I learned a couple of things and I will play around with some of those things to see how I can incorporate them into my code. Seeing something developed in front of you also makes you grok it faster compared to a book. You can ask the person delivering the session a question and he/she will explain it to you right there and then, you can&#8217;t get something like that out of a book.
+I had a good time at the event, I learned a couple of things and I will play around with some of those things to see how I can incorporate them into my code. Seeing something developed in front of you also makes you grok it faster compared to a book. You can ask the person delivering the session a question and he/she will explain it to you right there and then, you can't get something like that out of a book.
 
 I will finish with a big thanks to Melissa Demsak and all the other people involved in making this an awesome event.
 

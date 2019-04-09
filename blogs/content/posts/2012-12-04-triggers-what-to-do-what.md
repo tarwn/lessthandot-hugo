@@ -31,8 +31,8 @@ This is day four of the [SQL Advent 2012 series][1] of blog posts. Today we are 
 
 Some things that DML triggers are used for:
 
-  * Keeps your databases from having wrong data by doing checks that can&#8217;t be handled with constraints
-  * Filling in values that are not supplied and can&#8217;t be handled through default constraints since these don&#8217;t fire on updates 
+  * Keeps your databases from having wrong data by doing checks that can't be handled with constraints
+  * Filling in values that are not supplied and can't be handled through default constraints since these don't fire on updates 
   * Calculation summary values and updates the summary table with that value
   * Used as a mechanism to maintain an audit trail for DML statements
 
@@ -44,15 +44,15 @@ Some things that DDL triggers are used for:
 
 Most common mistake people make when first starting writing triggers is that they write it in such a way that it will only work if you insert/update/delete one row at a time. A trigger fires per batch not per row, you have to take this into consideration otherwise your DML statements will blow up. How to do this is explained in this post [Best Practice: Coding SQL Server triggers for multi-row operations][2], there is no point recreating that post here.
 
-Another problem that I see is that some people think a trigger is SQL Server&#8217;s version of crontab, you will see code that sends email, kicks off jobs, runs stored procedures. This is the wrong approach, a trigger should be lean and mean, it should execute as fast as possible, if you need to do some additional things then dump some data from the trigger into a processing table and then use that table to do your additional tasks. Don&#8217;t use triggers as a messaging system either, SQL Server comes with Service Broker, use that instead. Triggers might look like hammers to some people but I guarantee you not everything is a nail&#8230;.
+Another problem that I see is that some people think a trigger is SQL Server's version of crontab, you will see code that sends email, kicks off jobs, runs stored procedures. This is the wrong approach, a trigger should be lean and mean, it should execute as fast as possible, if you need to do some additional things then dump some data from the trigger into a processing table and then use that table to do your additional tasks. Don't use triggers as a messaging system either, SQL Server comes with Service Broker, use that instead. Triggers might look like hammers to some people but I guarantee you not everything is a nail….
 
-You could end up with a real difficult thing to debug, one trigger that kicks off other triggers, now have fun debugging the trigger hell you got yourself into&#8230;.or worse debug this mess if you inherited this&#8230;.this is like the GOTO spaghetti code of databases.
+You could end up with a real difficult thing to debug, one trigger that kicks off other triggers, now have fun debugging the trigger hell you got yourself into….or worse debug this mess if you inherited this….this is like the GOTO spaghetti code of databases.
 
 Since triggers work besides the scenes you might spend hours debugging something only to find out that a trigger modified the value
 
 One thing I always find interesting is when someone sees two _n rows affected_ statements when they only did one insert, you know a person like that has not been exposed to triggers yet
 
-Some people will say that you don&#8217;t need triggers for anything and that they do more harm than good, I myself don&#8217;t agree with that, triggers have a place but they should not be abused and overused, the same can be said of views
+Some people will say that you don't need triggers for anything and that they do more harm than good, I myself don't agree with that, triggers have a place but they should not be abused and overused, the same can be said of views
 
 What is your opinion, are triggers needed or are they not needed?
 

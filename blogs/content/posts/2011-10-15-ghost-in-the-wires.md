@@ -21,17 +21,17 @@ categories:
 
 I noticed Kevin Mitnick latest book [Ghost In The Wires][1] was released, since I already read [The Art of Deception][2] and [The Art of Intrusion][3] I decided to give Ghost in the wires a try. Ghost in the wires is the first time that Kevin Mitnick tells the story of how he did his hacking and phreaking and how he was eventually caught, caught with the help of another hacker nonetheless. 
 
-The book is very easy to read and not very technical, everyone should be able to read this book without a problem. Reading this book will make you realize what people in the security already know: the weakest link in security is the human. It is just amazing how good Kevin Mitnick was at social engineering, his tricks worked every single time. Kevin Mitnick didn&#8217;t do any of his hacking for financial gain, even though he had credit card numbers he never used them. He did however steal people&#8217;s identity so that he could work while on the run.
+The book is very easy to read and not very technical, everyone should be able to read this book without a problem. Reading this book will make you realize what people in the security already know: the weakest link in security is the human. It is just amazing how good Kevin Mitnick was at social engineering, his tricks worked every single time. Kevin Mitnick didn't do any of his hacking for financial gain, even though he had credit card numbers he never used them. He did however steal people's identity so that he could work while on the run.
 
-I highly recommend this book to any person working in the computer industry, not just to read the true story about Kevin Mitnick but also to remind yourself and your co-workers to be very diligent and not to give away any information to people you don&#8217;t know
+I highly recommend this book to any person working in the computer industry, not just to read the true story about Kevin Mitnick but also to remind yourself and your co-workers to be very diligent and not to give away any information to people you don't know
 
-If you don&#8217;t work with computers, this will still be a good read, think of it like the high tech version of [Catch Me If You Can][4]
+If you don't work with computers, this will still be a good read, think of it like the high tech version of [Catch Me If You Can][4]
 
 It is also pretty funny to see all the [crazy myths][5]. Below is the list of some of them
 
-1) Kevin was on the FBI&#8217;s Most Wanted List
+1) Kevin was on the FBI's Most Wanted List
   
-2) Kevin was accused of stealing &#8220;billions of dollars&#8221; in secrets and software.
+2) Kevin was accused of stealing “billions of dollars” in secrets and software.
   
 3) Kevin used stolen credit card information.
   
@@ -39,9 +39,9 @@ It is also pretty funny to see all the [crazy myths][5]. Below is the list of so
   
 5) Kevin inspired two movies.
   
-6) Kevin&#8217;s story has inspired two books.
+6) Kevin's story has inspired two books.
   
-7) Kevin has inspired a &#8220;Rabid internet cult&#8221;.
+7) Kevin has inspired a “Rabid internet cult”.
   
 8) He is thought to have damaged computers and stolen millions of dollars of software from high-tech companies.
   

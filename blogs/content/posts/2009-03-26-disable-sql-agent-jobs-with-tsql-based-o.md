@@ -146,7 +146,7 @@ think that is prone to typos and copying the job_id directly out of sysjob is a 
 sql
 select job_id,[name] from msdb.dbo.sysjobs
 ```
-This shows &#8220;8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC&#8221; for the Capacity Restriction Monitor Plant 01 job_id
+This shows “8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC” for the Capacity Restriction Monitor Plant 01 job_id
 
 Syntax for sp\_update\_job is as follows. One key note is you can use job\_name or job\_id to update the job with
   
@@ -189,7 +189,7 @@ Every night at midnight we stated the volume should be replenished to the maximu
   
 simply another job to reset the Vol_Status in our table to the value in Volume. The added requirement we need to
   
-add to that job is re-enabling out monitor. If we don&#8217;t then the call to change the enable value in sysjob will remain
+add to that job is re-enabling out monitor. If we don't then the call to change the enable value in sysjob will remain
   
 0 and the we break out monitoring process. So create another job scheduled for midnight with the statement of
 

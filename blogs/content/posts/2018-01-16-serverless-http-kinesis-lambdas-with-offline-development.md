@@ -19,13 +19,13 @@ tags:
   - Serverless
 
 ---
-Lately I&#8217;ve been exploring an idea around applying custom, user-defined rules to streams of events. I&#8217;m using a combination of technologies, but the core is a FaaS setup that I can run locally that utilizes the [serverless][1] package to deploy [AWS Lambda][2] functions that consume events from a [Kinesis stream][3]. 
+Lately I've been exploring an idea around applying custom, user-defined rules to streams of events. I'm using a combination of technologies, but the core is a FaaS setup that I can run locally that utilizes the [serverless][1] package to deploy [AWS Lambda][2] functions that consume events from a [Kinesis stream][3]. 
 
-I prefer the speed of local development feedback cycles. Getting HTTP Functions running locally was easy with serverless-offline, Kinesis was a lot trickier with more false starts. If you&#8217;re trying to get local node.js Lambdas running for HTTP and Kinesis, hopefully this will help.
+I prefer the speed of local development feedback cycles. Getting HTTP Functions running locally was easy with serverless-offline, Kinesis was a lot trickier with more false starts. If you're trying to get local node.js Lambdas running for HTTP and Kinesis, hopefully this will help.
 
-## Spoilers&#8230;
+## Spoilers…
 
-By the end of this post, we&#8217;ll have an HTTP endpoint that can accept POSTed events and publish to a Kinesis stream. We&#8217;ll have another function pulling events off that stream and processing them. No infrastructure, no polling code, no webserver configurations, less than 40 lines of code, and a simple cli command to deploy: `serverless deploy`
+By the end of this post, we'll have an HTTP endpoint that can accept POSTed events and publish to a Kinesis stream. We'll have another function pulling events off that stream and processing them. No infrastructure, no polling code, no webserver configurations, less than 40 lines of code, and a simple cli command to deploy: `serverless deploy`
 
 <div id="attachment_8867" style="width: 666px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png" alt="cUrl => HTTP Function => Kinesis Stream => Kinesis Function" width="656" height="161" class="size-full wp-image-8867" srcset="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput.png 656w, /wp-content/uploads/2018/01/OfflineHttpAndKinesisOutput-300x74.png 300w" sizes="(max-width: 656px) 100vw, 656px" />
@@ -35,7 +35,7 @@ By the end of this post, we&#8217;ll have an HTTP endpoint that can accept POSTe
   </p>
 </div>
 
-That&#8217;s pretty standard FaaS stuff, but I can&#8217;t stand the latency of deploying to test changes, so I&#8217;ll add in some plugins and a little hackery to have all of that running in realtime, locally, with automatic syncing of changes as they&#8217;re made (because I don&#8217;t even like restarting services to try changes).
+That's pretty standard FaaS stuff, but I can't stand the latency of deploying to test changes, so I'll add in some plugins and a little hackery to have all of that running in realtime, locally, with automatic syncing of changes as they're made (because I don't even like restarting services to try changes).
 
 <div id="attachment_8890" style="width: 699px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutputUpdated.png" alt="Updated Functions, Running Locally, No Restarts (SUPER!!!)" width="689" height="157" class="size-full wp-image-8890" srcset="/wp-content/uploads/2018/01/OfflineHttpAndKinesisOutputUpdated.png 689w, /wp-content/uploads/2018/01/OfflineHttpAndKinesisOutputUpdated-300x68.png 300w" sizes="(max-width: 689px) 100vw, 689px" />
@@ -45,13 +45,13 @@ That&#8217;s pretty standard FaaS stuff, but I can&#8217;t stand the latency of 
   </p>
 </div>
 
-Here comes the details&#8230;
+Here comes the details…
 
 ## Laying the Groundwork: An HTTP Function
 
-First I need some events flowing into a log. I&#8217;m choosing to use an HTTP endpoint to start getting setup for more complex functions and so I don&#8217;t get distracted building something to produce real events.
+First I need some events flowing into a log. I'm choosing to use an HTTP endpoint to start getting setup for more complex functions and so I don't get distracted building something to produce real events.
   
-I&#8217;m using [serverless]() to wire up and deploy my functions. Two of the benefits of this is not wiring my deployment to git commits and being able to simulate Lambda and run my function logic locally.
+I'm using [serverless]() to wire up and deploy my functions. Two of the benefits of this is not wiring my deployment to git commits and being able to simulate Lambda and run my function logic locally.
 
 ### 1. Set Up Serverless + AWS
 
@@ -130,15 +130,15 @@ To deploy this to real AWS, we run: `serverless deploy`
 
 Serverless creates the stack for us, creates a CloudFormation file to deploy the Lambda, performs the update, then returns information about the environment and the new endpoint it created. Replace the `localhost` entry above with that new endpoint and try it out!
 
-We can continue to make changes and redeploy them, later deploys update that same stack. When we&#8217;re done, we can leave it running or remove it with `serverless remove`.
+We can continue to make changes and redeploy them, later deploys update that same stack. When we're done, we can leave it running or remove it with `serverless remove`.
 
 ### 2. Adding in Kinesis
 
 Adding a function to consume events from Kinesis is just as easy as the Http example above, but making this work locally is where it gets tricky. I looked at a few different approaches and eventually had to bundle something up on my own (I may go back to the drawing board and write a serverless-kinesalite plugin soon).
 
-_Note: From here out I&#8217;ll focus on running offline, you can then layer in the configurations for deploying to real Kinesis (lots of good posts on that)._
+_Note: From here out I'll focus on running offline, you can then layer in the configurations for deploying to real Kinesis (lots of good posts on that)._
 
-To simulate kinesis locally, we can use the [kinesalite][8] package. So let&#8217;s start by adding a script to bootstrap a Kinesis stream locally that we can publish to from our Http function above. 
+To simulate kinesis locally, we can use the [kinesalite][8] package. So let's start by adding a script to bootstrap a Kinesis stream locally that we can publish to from our Http function above. 
 
 First, we can use a YAML file to define some environment-specific environment variables:
 
@@ -152,7 +152,7 @@ offline:
   KINESIS_REGION: 'us-east-1'
   KINESIS_STREAM_NAME_EVENTS: 'offline-events'
 ```
-Because I don&#8217;t have a Kinesis plugin for serverless, we&#8217;re going to be running the bootstrap.js script prior to starting `serverless offline`, so we can use these environment variables across that bootstrap file, the Kinesis Lambda watcher, and in server less for the HTTP functions to publish to.
+Because I don't have a Kinesis plugin for serverless, we're going to be running the bootstrap.js script prior to starting `serverless offline`, so we can use these environment variables across that bootstrap file, the Kinesis Lambda watcher, and in server less for the HTTP functions to publish to.
 
 This is easy to make available in the serverless config, using a coalesce to look at the set for a stage passed in from the command line or falling back to a default value:
 
@@ -173,16 +173,16 @@ provider:
 
 …
 ```
-As we add the bootstrap and kinesis runner, we&#8217;ll pull these environment variables in as well.
+As we add the bootstrap and kinesis runner, we'll pull these environment variables in as well.
 
-Now we&#8217;ll need to add some additional npm packages:
+Now we'll need to add some additional npm packages:
 
   * `npm install aws-sdk --save` &#8211; For creating the Kinesis stream and publishing in the HTTP Function
   * `npm install js-yaml --save-dev` &#8211; For parsing the env.yml file for the bootstrap + runner
   * `npm install concurrently --save-dev` &#8211; To make a clean npm task to start everything
   * `npm install -g kinesalite` &#8211; Kinesis emulation
 
-We&#8217;re ready to add in local kinesis now.
+We're ready to add in local kinesis now.
 
 ### 3. Bootstrap the Stream
 
@@ -226,20 +226,20 @@ function ensureStreamExists(kinesis, streamName){
     });
 }
 ```
-At the top, we&#8217;re pulling the environment variables from the YAML file and pushing it into process.env. We then use the variables to define our Kinesis connection and call the homegrown `ensureStreamExists` function for each Stream we need to create it if it doesn&#8217;t already exist. My other application has multiple streams, so I have additional KINESIS\_STREAM\_NAME_* environment variables and call `ensureStreamExists` for each one. 
+At the top, we're pulling the environment variables from the YAML file and pushing it into process.env. We then use the variables to define our Kinesis connection and call the homegrown `ensureStreamExists` function for each Stream we need to create it if it doesn't already exist. My other application has multiple streams, so I have additional KINESIS\_STREAM\_NAME_* environment variables and call `ensureStreamExists` for each one. 
 
-Now to try it out, we can use two console sessions to run kinesalite: `kinesalite` and then the bootstrap: `node utility/bootstrap.js`, and we&#8217;ll know it&#8217;s working when we see this:
+Now to try it out, we can use two console sessions to run kinesalite: `kinesalite` and then the bootstrap: `node utility/bootstrap.js`, and we'll know it's working when we see this:
 
 ```text
 Bootstrap: Success - Kinesis stream 'offline-events' created
 ```
-We&#8217;ll come back and use concurrently to bundle this into a single, easy npm task.
+We'll come back and use concurrently to bundle this into a single, easy npm task.
 
 ### 4. Add a Kinesis Function
 
 Adding a new function to consume Kinesis events is as easy as the HTTP function.
 
-Here is the function we&#8217;re adding:
+Here is the function we're adding:
 
 **OfflineHttpAndKinesis/functions/eventsStream.js** [(github)][12]
 
@@ -254,13 +254,13 @@ module.exports.handler = (event, context, callback) => {
     callback(null, `Successfully processed ${event.Records.length} event.`);
 };
 ```
-This function accepts a batch of Kinesis events, loops through each to read the contents, and then console.log&#8217;s that event content. In later posts, I&#8217;ll go into more complex cases or you can look at the [serverless/examples][13] for ideas.
+This function accepts a batch of Kinesis events, loops through each to read the contents, and then console.log's that event content. In later posts, I'll go into more complex cases or you can look at the [serverless/examples][13] for ideas.
 
 Now for the hard part.
 
-I&#8217;ve adapted a runner I found online for this part, which is available on [github][14]. I&#8217;ve fixed some bugs and made changes for wider function support, but I&#8217;m still leaning toward writing a serverless plugin directly instead.
+I've adapted a runner I found online for this part, which is available on [github][14]. I've fixed some bugs and made changes for wider function support, but I'm still leaning toward writing a serverless plugin directly instead.
 
-`npm install git+https://github.com/tarwn/local-kinesis-lambda-runner.git#package --save-dev` will install the version I&#8217;m using.
+`npm install git+https://github.com/tarwn/local-kinesis-lambda-runner.git#package --save-dev` will install the version I'm using.
 
 With the package above and the following script, we can bind functions locally to the Kinesis streams with minimal double-typing (there is still a little).
 
@@ -286,13 +286,13 @@ initialize(functions);
 
 // … more code …
 ```
-The key part of this file to edit is the names in the array of functions. `funName` is a human-readable name you will see in the console output, `handlerPath` is the relative path to the file the handler is in, `handlerName` is the module. Everything else is read from the environment variables that are pulled in from the env.yml file and you can add as few or as many entries to the functions array as you like. This file also invalidates the require() cache while it&#8217;s running, so you can make changes to functions and fire new events and the new code will be picked up immediately without restarting anything.
+The key part of this file to edit is the names in the array of functions. `funName` is a human-readable name you will see in the console output, `handlerPath` is the relative path to the file the handler is in, `handlerName` is the module. Everything else is read from the environment variables that are pulled in from the env.yml file and you can add as few or as many entries to the functions array as you like. This file also invalidates the require() cache while it's running, so you can make changes to functions and fire new events and the new code will be picked up immediately without restarting anything.
 
 We have one more step before we can bring it all together: publishing events.
 
 ## Publishing Events to Kinesis
 
-We have all the pieces we need to publish events, an HTTP function, the AWS SDK, shared environment variables to identify the streams, so let&#8217;s connect all the dots.
+We have all the pieces we need to publish events, an HTTP function, the AWS SDK, shared environment variables to identify the streams, so let's connect all the dots.
 
 Updating the function to publish the events looks like this:
 
@@ -327,17 +327,17 @@ module.exports.handler = (event, context, callback) => {
 	});
 };
 ```
-Here we&#8217;re initializing the Kinesis connection, then inside the HTTP handler we use `putRecord` to publish the POSTed event to our Kinesis stream.
+Here we're initializing the Kinesis connection, then inside the HTTP handler we use `putRecord` to publish the POSTed event to our Kinesis stream.
 
-The first thing to note is that we initialize the kinesis object outside the function call in both functions. AWS will re-use functions if a lot of events are coming in, so this ensures we don&#8217;t lose time on every single call recreating that necessary resource.
+The first thing to note is that we initialize the kinesis object outside the function call in both functions. AWS will re-use functions if a lot of events are coming in, so this ensures we don't lose time on every single call recreating that necessary resource.
 
-The second to note is that I&#8217;ve hard-coded the PartitionKey. Kinesalite only handles a single partition, but for a real system you would want to replace this with some logic to calculate a PartitionKey, depending on whether you wanted events to consistently be placed in the same partition (maybe all events for a client are always on the same partition) or opt for something more random to level-load the partitions. Lambda will run a single function at a time against each partition, preserving the order of whatever processing you&#8217;re doing (only to the partition, though, not the whole stream).
+The second to note is that I've hard-coded the PartitionKey. Kinesalite only handles a single partition, but for a real system you would want to replace this with some logic to calculate a PartitionKey, depending on whether you wanted events to consistently be placed in the same partition (maybe all events for a client are always on the same partition) or opt for something more random to level-load the partitions. Lambda will run a single function at a time against each partition, preserving the order of whatever processing you're doing (only to the partition, though, not the whole stream).
 
 So, we have a Kinesis emulator, a script to bootstrap the stream, an Http endpoint that pushes an event to kinesis, a function that consumes those events, and a script to run the kinesis function as if it were running under serverless. Time to put it all together!
 
-## Let&#8217;s Go!
+## Let's Go!
 
-Instead of firing up 4 consoles and running things in the perfect order, we&#8217;ll use `concurrently` to create a single npm task that will make our lives much easier (and more colorful). Here is the npm task:
+Instead of firing up 4 consoles and running things in the perfect order, we'll use `concurrently` to create a single npm task that will make our lives much easier (and more colorful). Here is the npm task:
 
 **OfflineHttpAndKinesis/package.json** [(github)][17]
 
@@ -346,7 +346,7 @@ Instead of firing up 4 consoles and running things in the perfect order, we&#821
     "offline": "concurrently --names \"KNSL,BOOT,HTTP,STRM\" -c \"bgGreen.bold,bgGreen.bold,bgBlue.bold,bgMagenta.bold\" --kill-others-on-fail \"kinesalite\" \"node utility/bootstrap.js\" \"serverless offline start --stage offline\" \"node utility/runOfflineStreamHandlers.js\""
   },
 ```
-This sets up 4 names to show on console output, each with a different color, and each with a different command. We&#8217;re going to run kinesalite, the bootstrap, serverless offline, and the offline handler script. If we Ctrl+C, it will force a failure and exit them all.
+This sets up 4 names to show on console output, each with a different color, and each with a different command. We're going to run kinesalite, the bootstrap, serverless offline, and the offline handler script. If we Ctrl+C, it will force a failure and exit them all.
 
 To start, we just need to type `npm run offline`.
 
@@ -362,7 +362,7 @@ Initial output:
   </p>
 </div>
 
-I&#8217;ve been ignoring the initial error that gets kicked out by the stream handler script, it doesn&#8217;t cause any issues at this time. (It&#8217;s adding to the &#8216;maybe I&#8217;ll write a plugin&#8217; balance, though).
+I've been ignoring the initial error that gets kicked out by the stream handler script, it doesn't cause any issues at this time. (It's adding to the &#8216;maybe I'll write a plugin' balance, though).
 
 And after running the curl command to add an event:
   
@@ -376,9 +376,9 @@ And after running the curl command to add an event:
   </p>
 </div>
 
-So we have two pretty simple bits of code and we&#8217;re consuming events (with the first 1,000,000 runs/month being free). There were some complicated bits, but that was all for offline emulation. 
+So we have two pretty simple bits of code and we're consuming events (with the first 1,000,000 runs/month being free). There were some complicated bits, but that was all for offline emulation. 
 
-Hopefully this was helpful, next up I&#8217;ll dive into the project that sparked this work and also adds in some DynamoDB and running an entire Express instance in a single HTTP Function (not recommend, by the way).
+Hopefully this was helpful, next up I'll dive into the project that sparked this work and also adds in some DynamoDB and running an entire Express instance in a single HTTP Function (not recommend, by the way).
 
  [1]: https://serverless.com/
  [2]: https://aws.amazon.com/lambda/

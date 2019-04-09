@@ -46,9 +46,9 @@ Knowing the sizes of my databases, I knew the numbers were wrong. So I opened a 
   <a href="/wp-content/uploads/blogs/SysAdmins/FSMP2.JPG?mtime=1354195179"><img alt="" src="/wp-content/uploads/blogs/SysAdmins/FSMP2.JPG?mtime=1354195179" width="810" height="530" /></a>
 </div>
 
-At that moment I realized I wasn&#8217;t getting the information from the Mount Points, just from the Disks that had a drive letter assigned to them.
+At that moment I realized I wasn't getting the information from the Mount Points, just from the Disks that had a drive letter assigned to them.
   
-So let&#8217;s find out how we can get that information with Windows PowerShell. I still need the wmiobject but instead of the win32\_logicaldisk I&#8217;m going to use the win32\_volume. I also replace the DeviceID and VolumeName objects with Name and Label:
+So let's find out how we can get that information with Windows PowerShell. I still need the wmiobject but instead of the win32\_logicaldisk I'm going to use the win32\_volume. I also replace the DeviceID and VolumeName objects with Name and Label:
 
 ```PowerShell
 get-wmiobject win32_volume -computer <computername|
@@ -63,7 +63,7 @@ The result looks like this:
 
 As you can see, the drive letter properties are empty for my Mount Points and in the name column I can find the file and folder where they are mounted.
   
-So let&#8217;s find the space, free space and percentage free space of the volumes. I can use the calculations from my previous script only Size needs to be replaced with Capacity:
+So let's find the space, free space and percentage free space of the volumes. I can use the calculations from my previous script only Size needs to be replaced with Capacity:
 
 ```PowerShell
 get-wmiobject win32_volume -computer <computername|
@@ -90,6 +90,6 @@ select name, label, @{Name="Capacity (GB)";Expression={$_.Capacity/1GB}},
 format-table
 ```
 
-End that&#8217;s it, the next request for free disk space is a matter of seconds again.
+End that's it, the next request for free disk space is a matter of seconds again.
 
  [1]: /index.php/SysAdmins/OS/Windows/getting-remote-disk-information-with

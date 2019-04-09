@@ -15,7 +15,7 @@ categories:
   - nHibernate (.Net)
 
 ---
-I ran into a funny issue recently using Fluent NHibernate. Saw that it was storing enums as Strings in the database, or more accurately storing them as MySQL&#8217;s [Enum Data Type][1]. I would prefer to store them as integers so that behavior is the same as other databases, and refactoring gets easier. Hacking around in Fluent NHibernate I found the following:
+I ran into a funny issue recently using Fluent NHibernate. Saw that it was storing enums as Strings in the database, or more accurately storing them as MySQL's [Enum Data Type][1]. I would prefer to store them as integers so that behavior is the same as other databases, and refactoring gets easier. Hacking around in Fluent NHibernate I found the following:
 
 ```csharp
 Map(x => x.Property).CustomType<SomeType>();
@@ -30,11 +30,11 @@ NHibernate: SELECT additionsu0_.Recipe_id as Recipe8_2_, additionsu0_.Id as Id2_
 NHibernate: UPDATE `HopUse` SET AddTime = ?p0, BoilTime = ?p1, HopIngredientType = ?p2, Note = ?p3, Quantity = ?p4, WhenUsed = ?p5, HopUsed_id = ?p6 WHERE Id = ?p7;?p0 = 15, ?p1 = 45, ?p2 = 0, ?p3 = 'note', ?p4 = 56.6990462, ?p5 = 3, ?p6 = NULL, ?p7 = 2
 ```
 
-Now, what the heck is that update doing there? A quick googling showed that it is a common problem associated with flushing the session. The test method shown even has a killer name: [The Ghostbuster][2]. In a nutshell it means that if something needs to be done behind the scenes that &#8220;changes&#8221; a property on your object (like converting an integer to an enum) the object is marked as dirty and when the session is flushed it will need to be updated. You can see how this would get expensive!
+Now, what the heck is that update doing there? A quick googling showed that it is a common problem associated with flushing the session. The test method shown even has a killer name: [The Ghostbuster][2]. In a nutshell it means that if something needs to be done behind the scenes that “changes” a property on your object (like converting an integer to an enum) the object is marked as dirty and when the session is flushed it will need to be updated. You can see how this would get expensive!
 
-That&#8217;s all well and good, but how to fix it? The first thing that came to mind was a mapping convention for enums. But I ran into another problem there &#8211; the examples I saw for setting up conventions used the IProperty class, [which is not cls-compliant][3]. I&#8217;m running on Mono, so this was not an option for me. Going back to the drawing board, I remembered the IUserType from &#8220;old school&#8221; NHibernate ([ably explained here][4]).
+That's all well and good, but how to fix it? The first thing that came to mind was a mapping convention for enums. But I ran into another problem there &#8211; the examples I saw for setting up conventions used the IProperty class, [which is not cls-compliant][3]. I'm running on Mono, so this was not an option for me. Going back to the drawing board, I remembered the IUserType from “old school” NHibernate ([ably explained here][4]).
 
-I didn&#8217;t want to have to do this for every enum in the application &#8211; something I could use more widely was in order. Unable to find any examples (could be weak google-fu) I decided to try my own. I ended up with a generic class called &#8220;EnumMapper&#8221; implementing the IUserType interface, that looks awfully similar to Ray Houston&#8217;s example cited above. It isn&#8217;t perfect (I think I might be able to go back and clean it up some) but its not too awful I don&#8217;t think. It might just be getting too late for me, but I couldn&#8217;t think of a good way to limit it to enums. Anyway, it does its job as long as I don&#8217;t give it a bad parameter. Here it is in all its ugliness:
+I didn't want to have to do this for every enum in the application &#8211; something I could use more widely was in order. Unable to find any examples (could be weak google-fu) I decided to try my own. I ended up with a generic class called “EnumMapper” implementing the IUserType interface, that looks awfully similar to Ray Houston's example cited above. It isn't perfect (I think I might be able to go back and clean it up some) but its not too awful I don't think. It might just be getting too late for me, but I couldn't think of a good way to limit it to enums. Anyway, it does its job as long as I don't give it a bad parameter. Here it is in all its ugliness:
 
 ```csharp
 public class EnumMapper<T> : IUserType
@@ -117,7 +117,7 @@ NHibernate: SELECT maltsused0_.Recipe_id as Recipe8_1_, maltsused0_.Id as Id1_, 
 NHibernate: SELECT hopsused0_.Recipe_id as Recipe8_1_, hopsused0_.Id as Id1_, hopsused0_.Id as Id4_0_, hopsused0_.AddTime as AddTime4_0_, hopsused0_.BoilTime as BoilTime4_0_, hopsused0_.Note as Note4_0_, hopsused0_.Quantity as Quantity4_0_, hopsused0_.WhenUsed as WhenUsed4_0_, hopsused0_.HopUsed_id as HopUsed7_4_0_ FROM `HopUse` hopsused0_ WHERE hopsused0_.Recipe_id=?p0;?p0 = 1
 NHibernate: SELECT additionsu0_.Recipe_id as Recipe8_2_, additionsu0_.Id as Id2_, additionsu0_.Id as Id1_1_, additionsu0_.AddTime as AddTime1_1_, additionsu0_.BoilTime as BoilTime1_1_, additionsu0_.Note as Note1_1_, additionsu0_.Quantity as Quantity1_1_, additionsu0_.WhenUsed as WhenUsed1_1_, additionsu0_.AdditionUsed_id as Addition7_1_1_, addition1_.Id as Id0_0_, addition1_.Brand as Brand0_0_, addition1_.Description as Descript3_0_0_, addition1_.Name as Name0_0_ FROM `AdditionUse` additionsu0_ left outer join `Addition` addition1_ on additionsu0_.AdditionUsed_id=addition1_.Id WHERE additionsu0_.Recipe_id=?p0;?p0 = 1
 ```
-The ghost update is gone! It ain&#8217;t pretty but its&#8217; getting the job done. At least until the next time I break it 🙄 If anyone knows a better way, I would love to hear it.
+The ghost update is gone! It ain't pretty but its' getting the job done. At least until the next time I break it 🙄 If anyone knows a better way, I would love to hear it.
 
  [1]: http://dev.mysql.com/doc/refman/5.0/en/enum.html
  [2]: http://nhforge.org/blogs/nhibernate/archive/2008/10/20/how-test-your-mappings-the-ghostbuster.aspx

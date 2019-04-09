@@ -39,7 +39,7 @@ Both of these authors have 2008 editions of their book coming out this year. So 
 
 [Interview With Joe Celko About The Forthcoming Book Thinking In Sets][11] 
 
-So if you have any questions, then leave a comment and I&#8217;ll make sure that I ask them these questions.
+So if you have any questions, then leave a comment and I'll make sure that I ask them these questions.
 
  [1]: http://www.amazon.com/gp/product/0764542567/104-9560314-1143159?ie=UTF8&tag=sql08-20&linkCode=xm2&camp=1789&creativeASIN=0764542567
  [2]: http://www.amazon.com/gp/product/1590595297/102-1687136-8876917?ie=UTF8&tag=sql08-20&linkCode=xm2&camp=1789&creativeASIN=1590595297

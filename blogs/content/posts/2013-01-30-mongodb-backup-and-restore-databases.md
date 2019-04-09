@@ -20,7 +20,7 @@ tags:
   - restore
 
 ---
-Today it is time to learn how to backup and restore databases in MongoDB. You do have jobs setup that automatically create backups right? If you do not, please close this window and go set that up first, your data is the most important part of the organization, without data you got nothing, just ask [ma.gnolia][1]. That site is not around anymore because they didn&#8217;t back up their database. Enough of that let&#8217;s get started.
+Today it is time to learn how to backup and restore databases in MongoDB. You do have jobs setup that automatically create backups right? If you do not, please close this window and go set that up first, your data is the most important part of the organization, without data you got nothing, just ask [ma.gnolia][1]. That site is not around anymore because they didn't back up their database. Enough of that let's get started.
   
 Connect to mongodb, create a new database named blog. You can do that by just executing `use blog`
 
@@ -42,7 +42,7 @@ Here is the output
 
 <pre>[ "Blog", "system.indexes" ]</pre>
 
-Let&#8217;s get some stats for that collection
+Let's get some stats for that collection
 
 <pre>db.Blog.stats()</pre>
 
@@ -69,7 +69,7 @@ Here is the output
 
 ## Backing Up
 
-Time to do the backup. To do a backup you can&#8217;t run if you are connected to mongodb. Open up a new command/shell window, navigate to the bin directory inside the mongodb folder. In my case this is D:mongodbbin. To do a backup we are going to call the mongodump executable inside the bin directory. Here is what the syntax will look like
+Time to do the backup. To do a backup you can't run if you are connected to mongodb. Open up a new command/shell window, navigate to the bin directory inside the mongodb folder. In my case this is D:mongodbbin. To do a backup we are going to call the mongodump executable inside the bin directory. Here is what the syntax will look like
 
 mongodump &#8211;db {Database name} 
 
@@ -93,13 +93,13 @@ As you can see the backup also creates a metadata file Blog.metadata.json
 
 All that the manifest file has in it is the following
   
-{ &#8220;indexes&#8221; : [ { &#8220;v&#8221; : 1, &#8220;key&#8221; : { &#8220;\_id&#8221; : 1 }, &#8220;ns&#8221; : &#8220;blog.Blog&#8221;, &#8220;name&#8221; : &#8220;\_id_&#8221; } ] }
+{ “indexes” : [ { “v” : 1, “key” : { “\_id” : 1 }, “ns” : “blog.Blog”, “name” : “\_id_” } ] }
 
 As you can see it has the database as well as the collection name
 
-We will talk more about the .bson file in tomorrow&#8217;s post
+We will talk more about the .bson file in tomorrow's post
 
-Now that we have a backup we can do a restore. But first let&#8217;s drop the collection 🙂
+Now that we have a backup we can do a restore. But first let's drop the collection 🙂
 
 Execute the following in the command window connected to mongodb
 
@@ -139,7 +139,7 @@ Wed Jan 30 13:59:58     going into namespace [blog.Blog]
 5 objects found
 Wed Jan 30 13:59:58     Creating index: { key: { _id: 1 }, ns: "blog.Blog", name: "_id_" }</pre>
 
-Now, let&#8217;s see if we have the collection back
+Now, let's see if we have the collection back
 
 <pre>db.Blog.stats()</pre>
 
@@ -185,7 +185,7 @@ db.Blog.find()
 { "_id" : ObjectId("510961b3e5247980b903c30f"), "name" : "Xavier", "age" : 10, "city" : "Barcelona"
 { "_id" : ObjectId("510961b5e5247980b903c310"), "name" : "Zen", "age" : 50, "city" : "Kyoto" }</pre>
 
-As you can see it it pretty straightforward to backup and restore databases. What if you just want to restore a collection? Aha&#8230;that will be tomorrow&#8217;s post: [MongoDB: How to restore collections][2]
+As you can see it it pretty straightforward to backup and restore databases. What if you just want to restore a collection? Aha…that will be tomorrow's post: [MongoDB: How to restore collections][2]
 
 That is all for this post, if you are interested in my other MongoDB posts, you can find them here:
   

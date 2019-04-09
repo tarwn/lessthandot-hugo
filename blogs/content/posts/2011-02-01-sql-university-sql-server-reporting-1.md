@@ -27,9 +27,9 @@ _SQL Server 2008 R2_
   <a href="/wp-content/uploads/users/grrlgeek/sql-university-shield.png?mtime=1296100411"><img alt="" src="/wp-content/uploads/users/grrlgeek/sql-university-shield.png?mtime=1296100411" width="156" height="174" /></a>
 </div>
 
-Welcome to SQL Server Reporting Services week at [SQL University][1]. This is a great blog project put together by Jorge Segarra ([Twitter][2] | [Blog][3]), and contributed to by many SQL professionals. If you aren&#8217;t a student yet, head over to the website and get started! 
+Welcome to SQL Server Reporting Services week at [SQL University][1]. This is a great blog project put together by Jorge Segarra ([Twitter][2] | [Blog][3]), and contributed to by many SQL professionals. If you aren't a student yet, head over to the website and get started! 
 
-This semester, Professor Jes will be guiding you through Reporting Services administration. Let&#8217;s get started! 
+This semester, Professor Jes will be guiding you through Reporting Services administration. Let's get started! 
 
 **SQL Server Reporting Services Configuration Files**
 

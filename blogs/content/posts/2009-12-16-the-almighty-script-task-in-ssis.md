@@ -25,7 +25,7 @@ Alright, stop getting excited one task man, there is a place and a job for every
 
 ## _A real world scenario_
 
-It is very common for the need to extract data from your databases in order to transform and import into flat files. Many database developers new so SSIS attach themselves to the script task to complete this type of process. System.IO is exposed as many namespaces in the script task so you can create the new file dynamically and then pump the data into the file while in the same context. The script task will be more than happy to do this for you and possibly in many cases efficiently. The problem is at this point you have just turned all of SSIS into a container around one or multiple simple executables. What you have in SSIS with the script task at this point is simply a container of the executable. A major reason I’m picking on the new flat file creation and export from a database source is I’ve seen it many times over. When I ask the developers why they do this, they usually explain to me how they selected a file for the flat-file connection and the OK button greyed out, leaving them unable to continue, so they figured it was broken or not capable of the task. &#8220;Don&#8217;t stop there!&#8221;, I tell them, &#8220;You are on the right track&#8221;. 
+It is very common for the need to extract data from your databases in order to transform and import into flat files. Many database developers new so SSIS attach themselves to the script task to complete this type of process. System.IO is exposed as many namespaces in the script task so you can create the new file dynamically and then pump the data into the file while in the same context. The script task will be more than happy to do this for you and possibly in many cases efficiently. The problem is at this point you have just turned all of SSIS into a container around one or multiple simple executables. What you have in SSIS with the script task at this point is simply a container of the executable. A major reason I’m picking on the new flat file creation and export from a database source is I’ve seen it many times over. When I ask the developers why they do this, they usually explain to me how they selected a file for the flat-file connection and the OK button greyed out, leaving them unable to continue, so they figured it was broken or not capable of the task. “Don't stop there!”, I tell them, “You are on the right track”. 
 
 The flat-file connection requires you to map your columns, but this is not obvious and is commonly missed. You can take the flat file connection and set the columns to the way they will be on export. This means the mappings will match up on the later setup of the transform from the source.
 
@@ -53,7 +53,7 @@ Ah…I can save it now
   <img src="/wp-content/uploads/blogs/DataMgmt//watch_3.gif" alt="" title="" width="397" height="313" />
 </div>
 
-Let&#8217;s try it out with a test data flow I created while helping someone out a few weeks ago. Change your connection manager property in a flat file destination to point to our new file connection.
+Let's try it out with a test data flow I created while helping someone out a few weeks ago. Change your connection manager property in a flat file destination to point to our new file connection.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/watch_4.gif" alt="" title="" width="469" height="143" />

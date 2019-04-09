@@ -25,7 +25,7 @@ tags:
 ---
 I saw that some people are hitting our site with a search for how to create a sorted view in SQL Server 2008.
 
-You all know that in SQL Server 2000 you can create a view and use TOP 100 PERCENT with ORDER By and it will be sorted. Since SQL server 2005 that doesn&#8217;t work anymore. I actually never understood the need for sorted views to begin with, how hard is it to do something like this
+You all know that in SQL Server 2000 you can create a view and use TOP 100 PERCENT with ORDER By and it will be sorted. Since SQL server 2005 that doesn't work anymore. I actually never understood the need for sorted views to begin with, how hard is it to do something like this
 
 sql
 SELECT * 
@@ -33,13 +33,13 @@ FROM View
 ORDER By Column
 ```
 
-Not hard, I guess pople want the convenience of opening the view in SSMS and it is sorted &#8216;correctly&#8217;
+Not hard, I guess pople want the convenience of opening the view in SSMS and it is sorted &#8216;correctly'
   
-There is a way to get this to work in SQL server 2005, there is a hotfix that will &#8216;fix&#8217; this but you have to run in 2000 compatability mode.
+There is a way to get this to work in SQL server 2005, there is a hotfix that will &#8216;fix' this but you have to run in 2000 compatability mode.
   
 The link to the fix is here: [FIX: When you query through a view that uses the ORDER BY clause in SQL Server 2008, the result is still returned in random order][1]
 
-Now let&#8217;s get started with the code
+Now let's get started with the code
   
 Create this table
 
@@ -90,7 +90,7 @@ select * from vTestSort
 
 Oops it is not sorted
   
-Let&#8217;s try something else, we will use 99.99 percent
+Let's try something else, we will use 99.99 percent
 
 sql
 create view vTestSort2
@@ -125,7 +125,7 @@ select * from vTestSort2
 
 look at that, magic! It works
 
-Let&#8217;s try another way by using the max value of an integer
+Let's try another way by using the max value of an integer
 
 sql
 create view vTestSort3
@@ -160,13 +160,13 @@ select * from vTestSort3
 
 And bingo, it also works.
 
-Now, just because this works right now it doesn&#8217;t mean that it will work after you apply the next hotfix or service pack. Why not doing this instead
+Now, just because this works right now it doesn't mean that it will work after you apply the next hotfix or service pack. Why not doing this instead
 
 sql
 select * from vTestSort3
 order by id
 ```
 
-That will always work and you don&#8217;t have to deal with unexpected results down the road
+That will always work and you don't have to deal with unexpected results down the road
 
  [1]: http://support.microsoft.com/default.aspx?scid=kb;en-us;926292&sd=rss&spid=2855

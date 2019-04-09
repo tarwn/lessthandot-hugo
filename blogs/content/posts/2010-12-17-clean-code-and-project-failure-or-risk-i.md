@@ -38,7 +38,7 @@ The key ingredient to all of these is the same thing; complexity and our failure
 
 ## Where Complexity Comes From
 
-Humans follow complex, organic processes that are often defined more by the exceptions than the standard. Communicating this process is challenging and prone to error, and that&#8217;s before we notice how many steps we miss and take for granted. Compounding this is the fact that we aren&#8217;t just developing a complex, logical application to replace or enhance a complex, organic process, but we are using <u>other</u> complex, organic processes to do so, such as requirements analysis, project management, software development, budgeting, and so on.
+Humans follow complex, organic processes that are often defined more by the exceptions than the standard. Communicating this process is challenging and prone to error, and that's before we notice how many steps we miss and take for granted. Compounding this is the fact that we aren't just developing a complex, logical application to replace or enhance a complex, organic process, but we are using <u>other</u> complex, organic processes to do so, such as requirements analysis, project management, software development, budgeting, and so on.
 
 <div style="max-width: 520px; padding: .5em; margin: .5em auto; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center;">
   <img src="http://tiernok.com/LTDBlog/process.jpg" alt="Toolbox" /><br /> The sum of two organic processes is not a neat, easily digitized process flow
@@ -48,7 +48,7 @@ The more complex a problem is, the easier it is to get the answer wrong. The tot
 
 Project success is not a boolean matter, it is a complex, organic, human one.
 
-## But We Were Talking About Clean Code&#8230;?
+## But We Were Talking About Clean Code…?
 
 Ok, so coming back down to Earth for a moment, what does all of this have to do with clean code?
 
@@ -62,19 +62,19 @@ So the lack of clean code is not, in and of itself a failure, it is an increase 
 >   Steve McConnell, Code Complete
 > </div>
 
-Ok, so I&#8217;m not the first to point out the complexity inherent in development, but we can project this into other processes in our projects as well:
+Ok, so I'm not the first to point out the complexity inherent in development, but we can project this into other processes in our projects as well:
 
-Project Management, in all of it&#8217;s flavors, exists to help manage the complexity inherent in the organic process of executing projects. The adoption of Agile and Continuous Improvement continue to help us fit those processes to our own environments and needs.
+Project Management, in all of it's flavors, exists to help manage the complexity inherent in the organic process of executing projects. The adoption of Agile and Continuous Improvement continue to help us fit those processes to our own environments and needs.
 
 To find out how processes work, Lean Manufacturing emphasizes the importance of going and seeing with our own eyes. This helps mitigate the complexities introduced by having someone explain their own process and needs through several layers of communications. This technique helps mitigate risks in analysis, definition, and improvement efforts. 
 
-Software Architecture, Agile Modeling, &#8230; we acknowledge that the complex, organic process an end user follows does not translate one-for-one into a software product and that the high level design of a project needs to react and reflect the refined or changing needs of the end user over the course of the project.
+Software Architecture, Agile Modeling, … we acknowledge that the complex, organic process an end user follows does not translate one-for-one into a software product and that the high level design of a project needs to react and reflect the refined or changing needs of the end user over the course of the project.
 
 And so on.
 
-## So&#8230;Who do We Blame?
+## So…Who do We Blame?
 
-Projects are big, organic beasts of intertwined complexities. It&#8217;s difficult to even consider how to put a single number on the risk inherent in executing a project, it&#8217;s level of resiliency to failures or misunderstandings at any level, and the direct benefits derived from following good practices. 
+Projects are big, organic beasts of intertwined complexities. It's difficult to even consider how to put a single number on the risk inherent in executing a project, it's level of resiliency to failures or misunderstandings at any level, and the direct benefits derived from following good practices. 
 
 Success and failure are not boolean, there are many levels of success, mediocrity, and failure.
 

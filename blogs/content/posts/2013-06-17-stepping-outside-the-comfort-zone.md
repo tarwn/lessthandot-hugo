@@ -33,7 +33,7 @@ I did that, but didn’t see the disk added when I started the vm up. Then I rem
 
 Next thing I know, I’m creating databases on multiple disks.
 
-I was excited. No, really, I was! There are some people reading this that are probably thinking, &#8220;That was really easy. Why did she have to ask for help?&#8221; But this is stuff I don’t do every day, or even every week. I am not good at asking for help, but I did it. I called up skills from way back in the day and applied them.
+I was excited. No, really, I was! There are some people reading this that are probably thinking, “That was really easy. Why did she have to ask for help?” But this is stuff I don’t do every day, or even every week. I am not good at asking for help, but I did it. I called up skills from way back in the day and applied them.
 
 I’m a happy geek.
 

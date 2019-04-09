@@ -26,13 +26,13 @@ tags:
 ---
 Average Joe. An average day. An average salary. An average run. An average house. 
 
-You hear about &#8220;averages&#8221; a lot. But what does it really mean? And why is this important to a SQL Server professional? 
+You hear about “averages” a lot. But what does it really mean? And why is this important to a SQL Server professional? 
 
 **Being Average** 
 
-An average is the &#8220;middle&#8221; value in a set of data values. When talking about or calculating an average, most people consider using the &#8220;mean&#8221;. However, there are also &#8220;median&#8221; and &#8220;mode&#8221; to take into consideration. Each is calculated differently, and can produce drastically different results across a data set. As a data professional, particularly when working with business intelligence and reporting, knowing what data point the business or user needs to know is of utmost importance. 
+An average is the “middle” value in a set of data values. When talking about or calculating an average, most people consider using the “mean”. However, there are also “median” and “mode” to take into consideration. Each is calculated differently, and can produce drastically different results across a data set. As a data professional, particularly when working with business intelligence and reporting, knowing what data point the business or user needs to know is of utmost importance. 
 
-Let&#8217;s use the AdventureWorks2008R2 sample database to explore these functions. We&#8217;ll use the SalesOrderHeader and SalesOrderDetail tables to determine &#8220;averages&#8221;. 
+Let's use the AdventureWorks2008R2 sample database to explore these functions. We'll use the SalesOrderHeader and SalesOrderDetail tables to determine “averages”. 
 
 To begin, create a view that takes the orders, by salesperson, for a year, and sums the number of orders and value of orders. 
 
@@ -68,7 +68,7 @@ Results:
 
 **Median** 
 
-The median is calculated by arranging all values in the data set in order, then determining the middle number. If there are an even number of values, you&#8217;ll add the two in the middle and calculate the mean. In SQL Server, this isn&#8217;t as easy to achieve. However, with the addition of common table expressions (CTEs) and ranking functions, it has become easier. 
+The median is calculated by arranging all values in the data set in order, then determining the middle number. If there are an even number of values, you'll add the two in the middle and calculate the mean. In SQL Server, this isn't as easy to achieve. However, with the addition of common table expressions (CTEs) and ranking functions, it has become easier. 
 
 First, we create a CTE that will order the sales value. The ROW_NUMBER function ranks the orders by value, looking at each salesperson separately. The COUNT function will tell us how many orders the salesperson has. 
 
@@ -87,11 +87,11 @@ SELECT SPID, Value, RowNum, CountOrders
 FROM OrdersBySP;
 ```
 
-Here&#8217;s a sample of the results. As you can see, salesperson 275 has a total of 86 orders. Salesperson 277 has 97. 
+Here's a sample of the results. As you can see, salesperson 275 has a total of 86 orders. Salesperson 277 has 97. 
 
 ![][2]
 
-We&#8217;re going to add a WHERE clause to the CTE: 
+We're going to add a WHERE clause to the CTE: 
 
 sql
 WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
@@ -138,9 +138,9 @@ You can see that this yields a different result set than using the AVG function 
 
 **Median in SQL Server 2012** 
 
-In the newest version of SQL Server, it gets even easier to calculate a median value. There is a new function, PERCENTILE_CONT. It &#8220;calculates a percentile based on a continuous distribution of the column value&#8221; (to quote Books Online). Let&#8217;s see how this works. 
+In the newest version of SQL Server, it gets even easier to calculate a median value. There is a new function, PERCENTILE_CONT. It “calculates a percentile based on a continuous distribution of the column value” (to quote Books Online). Let's see how this works. 
 
-You will specify the percentile you want &#8211; in this case, we want the 50th, so we use (0.5). Then, we use WITHIN GROUP (ORDER BY &#8230; ) to tell the function which values to sort and compute. I&#8217;m using OVER (PARTITION BY &#8230; ) to tell the function that I want to divide the values up by salesperson. 
+You will specify the percentile you want &#8211; in this case, we want the 50th, so we use (0.5). Then, we use WITHIN GROUP (ORDER BY … ) to tell the function which values to sort and compute. I'm using OVER (PARTITION BY … ) to tell the function that I want to divide the values up by salesperson. 
 
 sql
 SELECT DISTINCT OBSP.SalesPersonID, 
@@ -161,7 +161,7 @@ This is a fantastic improvement!
 
 The mode is the most frequently occurring value in a data set. This is more useful with a data set that has a lot of values that are the same. 
 
-To translate this into T-SQL, let&#8217;s look at the quantities of an item sold. We&#8217;ll get the COUNT of the quantity, and put it in descending order to see what quantity of the item is ordered most frequently. 
+To translate this into T-SQL, let's look at the quantities of an item sold. We'll get the COUNT of the quantity, and put it in descending order to see what quantity of the item is ordered most frequently. 
 
 sql
 SELECT COUNT(SOD.OrderQty) AS FrequencyOfValue, SOD.OrderQty
@@ -193,13 +193,13 @@ ORDER BY COUNT(SOD.OrderQty) DESC;
 
 ![][7]
 
-**It&#8217;s Hard to Be Average** 
+**It's Hard to Be Average** 
 
-As you&#8217;ve seen, &#8220;average&#8221; can mean more than one thing. Make sure that you understand the differences between the three options, and which one your users need to see in a given case. 
+As you've seen, “average” can mean more than one thing. Make sure that you understand the differences between the three options, and which one your users need to see in a given case. 
 
 **_Resources_**
 
-LTD&#8217;s own George Mastros wrote about this in 2008: </index.php/DataMgmt/DataDesign/calculating-mean-median-and-mode-with-sq>. 
+LTD's own George Mastros wrote about this in 2008: </index.php/DataMgmt/DataDesign/calculating-mean-median-and-mode-with-sq>. 
 
 Itzik Ben-Gan tackled median here: <http://www.sqlmag.com/article/tsql3/calculating-the-median-gets-simpler-in-sql-server-2005>.
 

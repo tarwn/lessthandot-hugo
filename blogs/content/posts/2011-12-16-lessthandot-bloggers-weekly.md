@@ -53,7 +53,7 @@ Denis goes over the OUPUT Clause and utilizing it to return the effected rows fr
 
 Jes Borland added to the week starting off with the monthly T-SQL Tuesday post.  This month she went over a trick she uses to gather transaction log usage for SQL Server.  Jes does a good job of talking about the script she wrote and the use of SQLPERF as well as the DMV clear options it has.  I really like the added description for security needed around the script she posted.
 
-[#meme15: I&#8217;m A Blogger. Why?][8]
+[#meme15: I'm A Blogger. Why?][8]
 
 This was a new monthly posting that Jason Strate started up and Jes joined in.  The topic this month was, why you blog and continue to blog.  I’m happy to read Jes’s post on this.  Although she hints that it was me that helped her get into blogging, we’re really the lucky ones on LessThanDot to have her here.
 
@@ -101,7 +101,7 @@ blogged this week about using the Continuous Delivery Model for his home lab.  
 
 One part that sticks out on the concept and reasoning for why you would want to stick to this model
 
-_“When I spend a weekend playing with caching in my ASP.Net project, I want to be able to walk away from the project knowing it still works and I won&#8217;t be spending my next Saturday trying to figure what I did to break my test systems. This project will also provide a future testbed for load testing and static analysis tools”_
+_“When I spend a weekend playing with caching in my ASP.Net project, I want to be able to walk away from the project knowing it still works and I won't be spending my next Saturday trying to figure what I did to break my test systems. This project will also provide a future testbed for load testing and static analysis tools”_
 
 How many times was that you? I know it was me more than a few times.
 

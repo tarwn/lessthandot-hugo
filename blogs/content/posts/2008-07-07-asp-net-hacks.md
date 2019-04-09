@@ -13,7 +13,7 @@ categories:
   - ASP.NET
 
 ---
-At LessThanDot, we&#8217;ve decided to release a series of articles, tips and tricks which will be known as the &#8220;Hacks&#8221; series. The first installment was the popular SQL Server Programming Hacks and this week sees the release of the [ASP.NET Hacks][1]. These hacks have been split up into the following categories:
+At LessThanDot, we've decided to release a series of articles, tips and tricks which will be known as the “Hacks” series. The first installment was the popular SQL Server Programming Hacks and this week sees the release of the [ASP.NET Hacks][1]. These hacks have been split up into the following categories:
 
 1 Applications
       
@@ -51,7 +51,7 @@ At LessThanDot, we&#8217;ve decided to release a series of articles, tips and tr
       
 18 Web
 
-We&#8217;ve decided to release these in the wiki so that anyone can contribute to them, so feel free to add anything else that you find useful.
+We've decided to release these in the wiki so that anyone can contribute to them, so feel free to add anything else that you find useful.
 
 LessThanDot ASP.NET Hacks: http://wiki.ltd.local/index.php/ASP.NET_Hacks
 

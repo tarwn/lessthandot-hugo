@@ -34,7 +34,7 @@ Here are just some examples that I pulled down from [wikipedia][3]
   * Intramar, the French Navy computer network, was infected with Conficker on 15 January 2009. The network was subsequently quarantined, forcing aircraft at several airbases to be grounded because their flight plans could not be downloaded.
   * The United Kingdom Ministry of Defence reported that some of its major systems and desktops were infected. The virus has spread across administrative offices, NavyStar/N* desktops aboard various Royal Navy warships and Royal Navy submarines, and hospitals across the city of Sheffield reported infection of over 800 computers.
   * On 2 February 2009, the Bundeswehr, the unified armed forces of Germany reported that about one hundred of their computers were infected.
-  * An infection of Manchester City Council&#8217;s IT system caused an estimated £1.5m worth of disruption in February 2009. USB flash drives have since been banned, as this was believed to be the vector for the initial infection.
+  * An infection of Manchester City Council's IT system caused an estimated £1.5m worth of disruption in February 2009. USB flash drives have since been banned, as this was believed to be the vector for the initial infection.
 
 I noticed the book [Worm: The First Digital World War][1] by Mark Bowden and decided to check it out since I already read [Killing Pablo][4] which was written by Mark Bowden as well
 
@@ -42,7 +42,7 @@ The book is written for people who are not familiar with all the terms that most
 
 The book takes you through how the Conficker worm started to infect computers to the cat and mouse game that followed between the Conficker creator and the Conficker Cabal. Also covered is a general history of worms and viruses/virii so that you can see that each virus is based on some elements of the previous one.
 
-The book is only 245 pages and it is a very easy read with a nice size font. If you don&#8217;t know anything about Conficker, I think this is a good book to read. If you already know about Conficker and followed it then I don&#8217;t think you will find a lot of new things in this book that have not been discussed before, however I think that this book will still be of interest to you, the Conficker Cabal stuff was the most interesting part to me
+The book is only 245 pages and it is a very easy read with a nice size font. If you don't know anything about Conficker, I think this is a good book to read. If you already know about Conficker and followed it then I don't think you will find a lot of new things in this book that have not been discussed before, however I think that this book will still be of interest to you, the Conficker Cabal stuff was the most interesting part to me
 
 In the end I would recommend this book and I think you will enjoy it.
 
