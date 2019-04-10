@@ -28,7 +28,7 @@ I am running Windows 7 on all my home machines since it became available from MS
 
 The launch even was held in Soho in a loft which was probably used as an art gallery at other times. It was interesting that this event was only for press, partners and invited guests…..this time there would be no..developers… developers… developers coming out of Steve Ballmer's mouth 🙂
 
-Remember Kylie from that [&#8216;cute' windows 7 commercial][4]? She was there, she introduced Steve Ballmer and he gave her a pink laptop….very cute
+Remember Kylie from that ['cute' windows 7 commercial][4]? She was there, she introduced Steve Ballmer and he gave her a pink laptop….very cute
   
 [<img src="http://farm3.static.flickr.com/2540/4036467632_1fd5fa76c4_m.jpg" width="240" height="180" alt="Ballmer Gives Laptop" />][5]
 

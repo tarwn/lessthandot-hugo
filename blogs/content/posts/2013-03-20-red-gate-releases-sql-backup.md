@@ -28,7 +28,7 @@ _With SQL Backup Pro 7.3, you can quickly, simply, and securely upload and store
   * _Recover your data whenever you want_
   * _Manage your backups online_
 
-_You’ll need a Hosted Storage account, SQL Backup Pro 7.3, and that’s it &#8211; we’ll give you your first 5GB of storage free._
+_You’ll need a Hosted Storage account, SQL Backup Pro 7.3, and that’s it – we’ll give you your first 5GB of storage free._
 
 Look for a review to be coming soon from myself and possibly other Lessthandot bloggers on SQL Backup Pro 7.3.
 

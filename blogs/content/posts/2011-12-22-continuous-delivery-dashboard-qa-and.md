@@ -23,7 +23,7 @@ tags:
 Automating the deployment of software to the various test, QA, and Production environments streamlines the software delivery process, provides a well-practiced routine prior to the production deployment, and removes a lot of the risks that come with depending on people's memories and checklists in order to get a working production push. Automating the deployment also makes the process more repeatable and less prone to error, simplifying the creation or recreation of an environment not just for the current release, but for past releases as well.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p6.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p6.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline – Focus of Current Post
 </div>
 
 This is the final post in a multi-part series on my Continuous Delivery pipeline project. The [previous post][1] followed the implementation of the automated interface stage, the second job in my chain of automated jobs. The last steps in my pipeline will be push button deployments to my QA and production environments. While I don't have a true QA process and the production environment is simply a subfolder [on my personal site][2], I wanted to include these two steps because they will be common to most real pipelines.
@@ -37,13 +37,13 @@ As with other plugins, the “Build Pipeline” plugin is available through the 
 The configuration instructions on [the Build Pipeline Plugin page][4] provide all the information that is necessary to get started.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_setup1.png" title="Build Pipeline Plugin - Setup" /><br /> Build Pipeline Plugin &#8211; Setup
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_setup1.png" title="Build Pipeline Plugin - Setup" /><br /> Build Pipeline Plugin – Setup
 </div>
 
 In the initial setup I have provided a name and title and, most importantly, selected the CI Build job as my pipeline starting point. Pressing Ok, the plugin looks at my build and will generate the pipeline starting at that selected project and tracing it forward through build triggers to any additional projects. In my case, I only have the CI build and the interface test job, so I get a pipeline with just two steps.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_2step_lg.png" title="Larger view" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_2step.png" title="Pipeline Dashboard - CI and Interface Tests" /></a><br /> Pipeline Dashboard &#8211; CI and Interface Tests
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_2step_lg.png" title="Larger view" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_2step.png" title="Pipeline Dashboard - CI and Interface Tests" /></a><br /> Pipeline Dashboard – CI and Interface Tests
 </div>
 
 The pipeline dashboard shows me the two steps (left to right) of my current pipeline and the trigger on the left side (either the Hg revision number or “No revision” for manual builds). Inside each tile is the name of the job, date, and duration. Each tile also links to the details for the specific run.
@@ -53,13 +53,13 @@ The pipeline dashboard shows me the two steps (left to right) of my current pipe
 With the addition of the pipeline plugin, there is a new option available in the Post-build section to define downstream projects to be manually triggered.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_newtrigger.png" title="Interface Job - Manual Trigger for QA Deployment" /><br /> Interface Job &#8211; Manual Trigger for QA Deployment
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_newtrigger.png" title="Interface Job - Manual Trigger for QA Deployment" /><br /> Interface Job – Manual Trigger for QA Deployment
 </div>
 
 When the next step in a build chain is triggered by this type of build trigger instead of the normal trigger or parametrized trigger I added in the previous post, it is displayed in the pipeline dashboard with a button.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_deploybutton.png" title="Pipeline Dashboard - Manual Trigger Button" /><br /> Pipeline Dashboard &#8211; Manual Trigger Button
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_deploybutton.png" title="Pipeline Dashboard - Manual Trigger Button" /><br /> Pipeline Dashboard – Manual Trigger Button
 </div>
 
 These are perfect for our QA and production steps, as the build chain will execute up until this point and then wait for a human to make the decision to update the QA or production environment. When I push the button, the information is still available from the previous portion of the build chain, including environment variables (like the SOURCE\_BUILD\_NUMBER) that were set in the beginning. 
@@ -111,13 +111,13 @@ With the addition of “manually execute deployments” to the QA and Production
 The dashboard in Jenkins has incorporated these two new jobs and now shows all 4 in each row, along with the buttons for QA and Prod deployments that haven't run.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_done_lg.png" title="Larger view" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_done.png" title="Pipeline Dashboard - All Steps" /></a><br /> Pipeline Dashboard &#8211; All Steps
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_done_lg.png" title="Larger view" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_done.png" title="Pipeline Dashboard - All Steps" /></a><br /> Pipeline Dashboard – All Steps
 </div>
 
 The individual tiles change color to indicate their status at a glance. As the build progresses, each step fires off a tweet to keep me up to date on what's going on. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_inprogress.png" title="Larger view" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_inprogress.png" title="Pipeline Dashboard - In Progress" /></a><br /> Pipeline Dashboard &#8211; In Progress
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_inprogress.png" title="Larger view" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_inprogress.png" title="Pipeline Dashboard - In Progress" /></a><br /> Pipeline Dashboard – In Progress
 </div>
 
 And there we have it, my completed pipeline.

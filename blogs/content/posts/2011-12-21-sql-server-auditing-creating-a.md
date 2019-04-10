@@ -50,7 +50,7 @@ We can choose between file, application, and the security log. The different opt
 
 For the file destination there are some handy features like choosing the different sizes and reserving that disk space upfront. In the case of using the audit log due to regulation, it is advised that you keep an eye on the files to ensure that back them up before they are recycled.
 
-After creating the audit, under the same location &#8211; select your audit >> right-click and select Enable Audit.
+After creating the audit, under the same location – select your audit >> right-click and select Enable Audit.
 
 ### Creating The Specification
 

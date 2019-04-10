@@ -34,9 +34,9 @@ Daniel Suarez has signed a deal with DreamWorks for the film rights, hopefully t
 
 The first 7 chapters of Daemon are available here: http://thedaemon.com/daemonpreview.html
 
-A interesting talk by the author is available here: [Daniel Suarez &#8211; Daemon: Bot-Mediated Reality][5]
+A interesting talk by the author is available here: [Daniel Suarez – Daemon: Bot-Mediated Reality][5]
 
-Wired Magazine also has a nice article &#8211; [How Debut Daemon Earned Serious Geek Cred][6]
+Wired Magazine also has a nice article – [How Debut Daemon Earned Serious Geek Cred][6]
 
 The follow-up to Daemon titled Freedom has also just been published, you can find that book here: [Freedom][7]
 

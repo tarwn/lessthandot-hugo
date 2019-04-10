@@ -61,7 +61,7 @@ tags:
   The MCSA exams are the same for everyone; it doesn’t matter if you are going for the MCSE – Business Intelligence or for MCSE – Data Platform. Personally I like this decision, as everyone with the MCSA has the same common ground in the SQL Server platform. There’s always some overlap between the tasks a specific role is supposed to do. For example, DBA’s need SSIS from time to time to move data around and BI developers might need to set-up replication to feed a reporting database. Forcing everyone to do the same exams ensures certification holders have a certain skill set in the most important aspects of SQL Server.
 </div>
 
-<span style="text-align: justify">Before I started my certification spree on SQL Server 2012, I already had the three MCTS certifications for SQL Server 2008 (BI, DBA en database developer) and the MCITP: Business Intelligence Developer 2008. So I only had to refresh the older material &#8211; especially the DBA stuff – and learn all the new features. Why didn’t I took the upgrade exams? Because I like to challenge myself and I wanted to make sure I learned as much as possible in the progress.</span>
+<span style="text-align: justify">Before I started my certification spree on SQL Server 2012, I already had the three MCTS certifications for SQL Server 2008 (BI, DBA en database developer) and the MCITP: Business Intelligence Developer 2008. So I only had to refresh the older material – especially the DBA stuff – and learn all the new features. Why didn’t I took the upgrade exams? Because I like to challenge myself and I wanted to make sure I learned as much as possible in the progress.</span>
 
 <p style="text-align: justify">
   <strong>70-463</strong>

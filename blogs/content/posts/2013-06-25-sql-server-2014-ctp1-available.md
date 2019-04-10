@@ -39,7 +39,7 @@ If you have SQL Server or Visual Studio installed on your machine, the installer
 
 Running `@@version` will give you the following
 
-Microsoft SQL Server 2014 (CTP1) &#8211; 11.0.9120.5 (X64)
+Microsoft SQL Server 2014 (CTP1) – 11.0.9120.5 (X64)
 	  
 Jun 10 2013 20:09:10
 	  
@@ -51,7 +51,7 @@ Here is what the SSMS splash screen looks like
   
 [<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/SSMS2014Startup.PNG?mtime=1371999115" width="467" height="306" />][2]
 
-Clicking on Help&#8211;> About gives the following info
+Clicking on Help–> About gives the following info
 
 <pre>Microsoft SQL Server Management Studio		11.0.9120.5
 Microsoft Analysis Services Client Tools	11.0.9120.5

@@ -25,7 +25,7 @@ The other day I succumbed to the urge to upgrade my customized version of [MVC M
 
 Upgrading from MVC3 to MVC4 was easy. I followed the instructions from the [MVC4 release notes][4] and committed my changes. 
 
-I installed Visual Studio 2012 on my build server (including .Net 4.5) so the build would run. Installing a copy on build servers is allowed under visual studio licensing models and while some people try to create a &#8216;pure' non-VS build experience, I think the only advantage one gets from this model is ensuring the production application is compiled in a different manner from the one the developers built and tested under.
+I installed Visual Studio 2012 on my build server (including .Net 4.5) so the build would run. Installing a copy on build servers is allowed under visual studio licensing models and while some people try to create a 'pure' non-VS build experience, I think the only advantage one gets from this model is ensuring the production application is compiled in a different manner from the one the developers built and tested under.
 
 VS upgraded, .Net upgraded, MVC upgraded, time to commit and push.
 

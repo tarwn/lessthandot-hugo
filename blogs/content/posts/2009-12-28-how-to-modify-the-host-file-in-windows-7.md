@@ -41,13 +41,13 @@ I am getting the following error on my Windows 7 machine
   <img src="/wp-content/uploads/blogs/SysAdmins/error.png" alt="" title="" width="395" height="184" />
 </div>
 
-In order to fix this you first need to run notepad as an adminstrator. Here is how you do this. Click Start&#8211;>All Programs&#8211;>Accessories, right-click on Notepad, and then click Run as administrator. This might ask you for a password, enter it
+In order to fix this you first need to run notepad as an adminstrator. Here is how you do this. Click Start–>All Programs–>Accessories, right-click on Notepad, and then click Run as administrator. This might ask you for a password, enter it
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/SysAdmins//RunAsAdmin.png" alt="" title="" width="270" height="162" />
 </div>
 
-Now from notepad press CTRL + O (or File&#8211;> Open) and navigate to the host file after you make your changes save it..that should work.
+Now from notepad press CTRL + O (or File–> Open) and navigate to the host file after you make your changes save it..that should work.
 
 I like to use the MVPS HOSTS file, this file is pretty extensive, it has over 16000 entries. Since my PC is used by my wife and my oldest son this is some extra protection that I have in case they get to a bad site.
 

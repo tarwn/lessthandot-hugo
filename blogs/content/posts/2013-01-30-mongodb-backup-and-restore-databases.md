@@ -71,7 +71,7 @@ Here is the output
 
 Time to do the backup. To do a backup you can't run if you are connected to mongodb. Open up a new command/shell window, navigate to the bin directory inside the mongodb folder. In my case this is D:mongodbbin. To do a backup we are going to call the mongodump executable inside the bin directory. Here is what the syntax will look like
 
-mongodump &#8211;db {Database name} 
+mongodump –db {Database name} 
 
 You need to change the database name to something that you have. Running the command will create a directory named dump
 
@@ -164,7 +164,7 @@ Now, let's see if we have the collection back
 
 As you can see the collection is there again, the restore worked.
 
-You can also restore the backup to a new database or another database. If the database does not exists it will create one for you. If I run the same command from before but use &#8211;db RestoredDB you will get the following output
+You can also restore the backup to a new database or another database. If the database does not exists it will create one for you. If I run the same command from before but use –db RestoredDB you will get the following output
 
 <pre>mongorestore -db RestoredDB dump/blog
 connected to: 127.0.0.1

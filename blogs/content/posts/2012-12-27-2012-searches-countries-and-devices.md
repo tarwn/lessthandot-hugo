@@ -202,7 +202,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://wiki.ltd.local/index.php/Kill_All_Active_Connections_To_A_Database">Kill All Active Connections To A Database &#8211; Wiki</a>
+        <a href="http://wiki.ltd.local/index.php/Kill_All_Active_Connections_To_A_Database">Kill All Active Connections To A Database – Wiki</a>
       </td>
       
       <td>
@@ -222,7 +222,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List">SQL Server Programming Hacks &#8211; 100+ List &#8211; Wiki</a>
+        <a href="http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List">SQL Server Programming Hacks – 100+ List – Wiki</a>
       </td>
       
       <td>
@@ -232,7 +232,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://forum.ltd.local/viewforum.php?f=102">View forum &#8211; Programmer Puzzles</a>
+        <a href="http://forum.ltd.local/viewforum.php?f=102">View forum – Programmer Puzzles</a>
       </td>
       
       <td>
@@ -262,7 +262,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://wiki.ltd.local/index.php/Cursors_and_How_to_Avoid_Them">Cursors and How to Avoid Them &#8211; Wiki</a>
+        <a href="http://wiki.ltd.local/index.php/Cursors_and_How_to_Avoid_Them">Cursors and How to Avoid Them – Wiki</a>
       </td>
       
       <td>

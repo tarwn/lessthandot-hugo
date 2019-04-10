@@ -17,7 +17,7 @@ categories:
 ---
 In order to simplify saving some entities, I recently changed some mappings in my application to use the **inverse** attribute. In less cryptic terms, this means that the collection item is responsible for maintaining the relationship to the collection owner. In contrast, when using a standard relationship the parent entity is responsible for managing the collection items. The reason for this is that it lets you save the collection items without going to the database (or second level cache) to get the collection's owner.
 
-This can make things a little weird &#8211; the primary difference is that both sides of the relationship now need to be aware that they are participants. Say you have the following two classes, and the corresponding mappings (sorry, I used Fluent NHibernate):
+This can make things a little weird – the primary difference is that both sides of the relationship now need to be aware that they are participants. Say you have the following two classes, and the corresponding mappings (sorry, I used Fluent NHibernate):
 
 ```csharp
 class Recipe {

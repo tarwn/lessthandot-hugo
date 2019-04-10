@@ -107,7 +107,7 @@ Fields containing characters not on the ordinary keyboard. Help to find all thos
 
 **Emtucifor** came up with this
 
-Look for columns using char() instead of varchar() &#8212; I know this may not be an issue in 2008 but it is in 2005.
+Look for columns using char() instead of varchar() — I know this may not be an issue in 2008 but it is in 2005.
    
 Warn about columns called “ID” in every table instead of “TableNameID”.
    
@@ -147,7 +147,7 @@ WHERE NOT EXISTS (SELECT 1 FROM B WHERE A.ID = B.ID)
 
 Implicit semi-join:
   
-SELECT DISTINCT A.Something &#8212; no B columns in select list, DISTINCT removes duplicates or not DISTINCT keyword but A<->B relationship is one-to-one
+SELECT DISTINCT A.Something — no B columns in select list, DISTINCT removes duplicates or not DISTINCT keyword but A<->B relationship is one-to-one
   
 FROM A
   

@@ -60,7 +60,7 @@ Uri Dimant shows the problem with named constraints and temp tables
 
 [Advanced SQL Server 2005 Express Job Scheduling][5]
   
-Mladen Prajdi&#263; writes how to schedule jobs in SQL Server 2005 Express
+Mladen Prajdić writes how to schedule jobs in SQL Server 2005 Express
 
 [BCP Basics][6]
   

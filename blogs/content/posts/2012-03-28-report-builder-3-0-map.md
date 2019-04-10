@@ -19,8 +19,8 @@ categories:
 This is part five of a series about Report Builder 3.0.
 
   * [Report Builder 3.0 – The Introduction][1]
-  * [Report Builder 3.0 &#8211; Table or Matrix Wizard][2]
-  * [Report Builder 3.0 &#8211; Chart Wizard][3]
+  * [Report Builder 3.0 – Table or Matrix Wizard][2]
+  * [Report Builder 3.0 – Chart Wizard][3]
   * [Report Builder 3.0 – Chart Types, Visualizations, and Properties][4]
   * [Report Builder 3.0 – Report Parts][5]
 
@@ -63,7 +63,7 @@ _Choose spatial data and map view options_
 
 _Choose map visualization_ 
 
-  * Basic map – This displays locations – spatial data &#8211; only. 
+  * Basic map – This displays locations – spatial data – only. 
   * Color analytical map – This displays data – analytical data – by color. 
   * Bubble map – This displays data – analytical data – using bubbles that vary in size, relative to the changes in the data. 
 
@@ -77,8 +77,8 @@ Choose Basic map and continue.
 
 _Choose color theme and data visualization_ 
 
-  * Theme &#8211; The theme determines the color scheme of the background, legend, and other parts surrounding the map. 
-  * Single color map &#8211; This will make all regions of the map the same color. 
+  * Theme – The theme determines the color scheme of the background, legend, and other parts surrounding the map. 
+  * Single color map – This will make all regions of the map the same color. 
   * Display labels – This will show data points on the regions. 
 
 Choose Single color map and Display labels. Select the label #COUNTYNAME.
@@ -153,8 +153,8 @@ SELECT NYS.Name, NYS.City, NYS.TotalDue, ADDR.SpatialLocation FROM NYStoreSales 
 
 _Choose spatial data and map view options_ 
 
-  * Spatial field &#8211; Make sure this is set to the field in the query that contains the spatial data, SpatialLocation. 
-  * Layer type &#8211; Choose Point, to display one point. A polygon would outline and area, and line could be used to mark a path. 
+  * Spatial field – Make sure this is set to the field in the query that contains the spatial data, SpatialLocation. 
+  * Layer type – Choose Point, to display one point. A polygon would outline and area, and line could be used to mark a path. 
 
 You won't “Embed map data” or “Add a Bing Maps layer” on this layer, in this example.
 

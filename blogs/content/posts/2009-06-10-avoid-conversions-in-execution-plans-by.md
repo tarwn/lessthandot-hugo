@@ -58,14 +58,14 @@ Here is the execution plan
 ```
 _
    
-|&#8211;Table Scan(OBJECT:([testpage].[dbo].[TestPerf]),
+|–Table Scan(OBJECT:([testpage].[dbo].[TestPerf]),
    
 WHERE:([testpage].[dbo].[TestPerf].[SomeValue]=CONVERT_IMPLICIT(smallint,[@2],0)
    
 AND [testpage].[dbo].[TestPerf].[SomeCol1]=CONVERT_IMPLICIT(nvarchar(4000),[@1],0)))_
 ```
 
-As you can see the value 1 needs to be converted to smallint and &#8216;Test' Needs to be converted to nvarchar. You can actually see what the value is converted to by using the SQL\_VARIANT\_PROPERTY function.
+As you can see the value 1 needs to be converted to smallint and 'Test' Needs to be converted to nvarchar. You can actually see what the value is converted to by using the SQL\_VARIANT\_PROPERTY function.
   
 When you run the following query
 
@@ -88,7 +88,7 @@ you get this as output
   varchar	        0	        0
 ```
 
-so the value 1 becomes an int and &#8216;test' is varchar
+so the value 1 becomes an int and 'test' is varchar
 
 Exec with dynamic SQL is not any better than ad hoc of course since the same query gets generated as with the ad hoc query
   

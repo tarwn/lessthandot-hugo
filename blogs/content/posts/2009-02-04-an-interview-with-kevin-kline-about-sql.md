@@ -43,7 +43,7 @@ KK> If I'm measuring the most progress against the ANSI standard, I'd have to sa
 
 **Denis: From each RDBMS covered in your book can you name your favorite feature which is unique to that RDBMS?**
 
-KK> I cover fewer database in the 3rd edition than in the 2nd edition since few readers expressed an interest in continuing coverage of IBM's DB2 UDB or Sybase's Adaptive Server. Having said that, we still cover the ANSI standard plus the four most popular database &#8211; Oracle, Microsoft SQL Server, MySQL, and PostgreSQL. For Oracle, I love the incredibly powerful MODEL statement and the DECODE function. They rock! For SQL Server, I enjoy the PIVOT and UNPIVOT statements and its XML handling features. MySQL has a very nifty capability of utilizing several different transaction processing engines, such as InnoDB and MyISAM, some of which focus on raw processing power by dispensing with the niceties. And I really, really like PostgreSQL unwaivering support of the ANSI standard in all of their SQL statements.
+KK> I cover fewer database in the 3rd edition than in the 2nd edition since few readers expressed an interest in continuing coverage of IBM's DB2 UDB or Sybase's Adaptive Server. Having said that, we still cover the ANSI standard plus the four most popular database – Oracle, Microsoft SQL Server, MySQL, and PostgreSQL. For Oracle, I love the incredibly powerful MODEL statement and the DECODE function. They rock! For SQL Server, I enjoy the PIVOT and UNPIVOT statements and its XML handling features. MySQL has a very nifty capability of utilizing several different transaction processing engines, such as InnoDB and MyISAM, some of which focus on raw processing power by dispensing with the niceties. And I really, really like PostgreSQL unwaivering support of the ANSI standard in all of their SQL statements.
 
 **Denis: Should people write pure ANSI SQL or are there times when it is okay to write proprietary SQL?**
 
@@ -55,7 +55,7 @@ KK> We'd seen a long time span from the late 1990's til late in this decade wher
 
 **Denis: What SQL books are on your bookshelf?**
 
-KK> I still keep a copy of SQL99: Complete &#8211; Really! as well as the ANSI 2006 SQL standard. I have Celco's SQL for Smarties, Feuerstein's PL/SQL Programming, and Ben-Gan's Inside Transact-SQL Programming and Inside Transact-SQL Queries. In addition, I'll always keep a copy of my late friend Ken Henderson's The Guru's Guide to Transact-SQL for sentimental reasons. I also have general database books about all the database platforms.
+KK> I still keep a copy of SQL99: Complete – Really! as well as the ANSI 2006 SQL standard. I have Celco's SQL for Smarties, Feuerstein's PL/SQL Programming, and Ben-Gan's Inside Transact-SQL Programming and Inside Transact-SQL Queries. In addition, I'll always keep a copy of my late friend Ken Henderson's The Guru's Guide to Transact-SQL for sentimental reasons. I also have general database books about all the database platforms.
 
 **Denis: Why do you write technical books?**
 
@@ -67,7 +67,7 @@ KK> There's no doubt that the section of SQL in a Nutshell that covers ALTER, CR
 
 **Denis: Who are your favorite authors?**
 
-KK> In the database world, my two favorite authors are Kalen Delaney of Inside SQL Server fame and Steven Feuerstein, author of PL/SQL Programming and many other excellent Oracle books and a fine blog as well. Outside of the database world, I'm a voracious reader on all topics, both fiction and non-fiction. However, I will always read anything put out by two non-fiction writers &#8211; Jared Diamond, author of Guns, Germs and Steel, and Michael Pollan, author of The Omnivore's Delimma.
+KK> In the database world, my two favorite authors are Kalen Delaney of Inside SQL Server fame and Steven Feuerstein, author of PL/SQL Programming and many other excellent Oracle books and a fine blog as well. Outside of the database world, I'm a voracious reader on all topics, both fiction and non-fiction. However, I will always read anything put out by two non-fiction writers – Jared Diamond, author of Guns, Germs and Steel, and Michael Pollan, author of The Omnivore's Delimma.
 
 **Denis: Where can we expect to see you in 2009? Any conferences, seminars, trade shows or classrooms perhaps?**
 

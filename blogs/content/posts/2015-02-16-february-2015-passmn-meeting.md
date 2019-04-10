@@ -36,11 +36,11 @@ There are only a few spots left, so if you are going to be in the area, be sure 
 
 > **Location:**
   
-> <a href="http://binged.it/AcUxYj" target="_blank">Microsoft Technology Center &#8211; 3601 West 76th Street, Suite 600 Edina, MN 55437 </a>
+> <a href="http://binged.it/AcUxYj" target="_blank">Microsoft Technology Center – 3601 West 76th Street, Suite 600 Edina, MN 55437 </a>
 > 
 > **Date:**
   
-> Tuesday February 17th, 2015 Time: 4:00 PM &#8211; 6:00 PM 
+> Tuesday February 17th, 2015 Time: 4:00 PM – 6:00 PM 
 > 
 > **<a href="http://www.eventbrite.com/e/february-2015-passmn-meeting-tickets-15705186636?aff=eac2" target="_blank">Click to RSVP </a>**
 

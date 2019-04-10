@@ -20,7 +20,7 @@ categories:
 ---
 I want to thank the [Chicago Suburban SQL Connections][1] user group for inviting me to present! I hopped in the Fit and took a mini-road trip down to Downers Grove, IL on Tuesday, August 2 (with a stop at Mars Cheese Castle along the way!). 
 
-I gave a preview of my [PASS Summit 2011][2] presentation, **Reporting Services 201: From Basic to WOW!** The presentation shows you how to take a simple table and make it pop, using report properties, table properties, tablix, lists and charts. It's a very fun, interactive session and I always learn something new when I give it. The Connections audience was awesome &#8211; they had a lot of great questions for me, and were able to help answer each other's questions as well. I think I was able to spark a desire in a couple people to get started with SSRS, convince a couple people to move from 2005 to 2008, and help people that use it every day already. 
+I gave a preview of my [PASS Summit 2011][2] presentation, **Reporting Services 201: From Basic to WOW!** The presentation shows you how to take a simple table and make it pop, using report properties, table properties, tablix, lists and charts. It's a very fun, interactive session and I always learn something new when I give it. The Connections audience was awesome – they had a lot of great questions for me, and were able to help answer each other's questions as well. I think I was able to spark a desire in a couple people to get started with SSRS, convince a couple people to move from 2005 to 2008, and help people that use it every day already. 
 
 The PowerPoint presentation and all .rdl files can be downloaded [here][3].
 

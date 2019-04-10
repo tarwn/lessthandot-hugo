@@ -20,12 +20,12 @@ Keep in mind, I have extremely high hopes for these types of services, due to my
 
 In any case, let's see what we're going to be looking at:
 
-  * <a href="http://www.loggly.com/" title="Visit Loggly" target="_blank">Loggly</a> &#8211; “It's fast, fun and easy to use”
-  * <a href="http://www.datadoghq.com/" title="Visit DataDog" target="_blank">DataDog</a> &#8211; “On a mission to bring sanity to IT Management”
-  * <a href="https://www.splunkstorm.com/" title="Visit Splunk Storm" target="_blank">Splunk Storm</a> &#8211; “Your data has the answers, we help you find them.”
-  * <a href="http://www.sumologic.com/" title="Visit Sumologic" target="_blank">Sumo Logic</a> &#8211; “Make Your Applications Run Longer & Stronger”
-  * <a href="http://www.logentries.com/" title="Visit logentries" target="_blank">logentries</a> &#8211; “We make your life easier”
-  * <a href="https://papertrailapp.com/" title="Visit papertrail" target="_blank">papertrail</a> &#8211; “Get back to work.”
+  * <a href="http://www.loggly.com/" title="Visit Loggly" target="_blank">Loggly</a> – “It's fast, fun and easy to use”
+  * <a href="http://www.datadoghq.com/" title="Visit DataDog" target="_blank">DataDog</a> – “On a mission to bring sanity to IT Management”
+  * <a href="https://www.splunkstorm.com/" title="Visit Splunk Storm" target="_blank">Splunk Storm</a> – “Your data has the answers, we help you find them.”
+  * <a href="http://www.sumologic.com/" title="Visit Sumologic" target="_blank">Sumo Logic</a> – “Make Your Applications Run Longer & Stronger”
+  * <a href="http://www.logentries.com/" title="Visit logentries" target="_blank">logentries</a> – “We make your life easier”
+  * <a href="https://papertrailapp.com/" title="Visit papertrail" target="_blank">papertrail</a> – “Get back to work.”
 A few of these were non-starters, but I'll record what I know about them. The rest I'll present in similar formats for comparison.
 
 ## Loggly

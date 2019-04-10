@@ -28,7 +28,7 @@ I was messing around with SQL Azure today and noticed a couple of things that ar
 
 All the code has been tested against the following version of SQL Azure as returned by @@version
 
-Microsoft SQL Azure (RTM) &#8211; 11.0.1892.4
+Microsoft SQL Azure (RTM) – 11.0.1892.4
   
 Apr 24 2012 10:21:54 Copyright (c) Microsoft Corporation
 
@@ -112,7 +112,7 @@ Here is the error
   
 _Msg 40510, Level 16, State 1, Line 1
   
-Statement &#8216;SELECT INTO' is not supported in this version of SQL Server._
+Statement 'SELECT INTO' is not supported in this version of SQL Server._
 
 I don't think this is a big deal either, sure you will have to list all the columns and create the table first before inserting, this could be a pain in the neck but it is not the end of the world
 
@@ -134,7 +134,7 @@ Here is the error message
   
 _Msg 40511, Level 15, State 1, Line 1
   
-Built-in function &#8216;newsequentialid' is not supported in this version of SQL Server._
+Built-in function 'newsequentialid' is not supported in this version of SQL Server._
 
 In this case, you will probably need to go with newid() instead of newsequentialid(), not a big change
 

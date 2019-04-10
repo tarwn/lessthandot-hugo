@@ -72,7 +72,7 @@ Enter an adapter I will call, for this post, the “PresentationModel”:
   <a href="/wp-content/uploads/2016/02/Diagram.png"><img src="/wp-content/uploads/2016/02/Diagram.png" alt="PresentationModel - Defines Validation/Formatting" width="400" height="400" class="size-full wp-image-4420" srcset="/wp-content/uploads/2016/02/Diagram.png 400w, /wp-content/uploads/2016/02/Diagram-200x200.png 200w, /wp-content/uploads/2016/02/Diagram-300x300.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></a>
   
   <p class="wp-caption-text">
-    PresentationModel &#8211; Defines Validation/Formatting
+    PresentationModel – Defines Validation/Formatting
   </p>
 </div>
 
@@ -105,8 +105,8 @@ The example is an Order object with a collection of Order Lines that alow a user
 
 I now have several levels of tests I can easily write, as well:
 
-  * Parsing and Formatting tests &#8211; make sure “currencyType” works consistently, instead of testing 500 different currency inputs in my application
-  * PresentationModel regression tests &#8211; make sure each field in the “PresentationModel” has the correct type and length requirements
+  * Parsing and Formatting tests – make sure “currencyType” works consistently, instead of testing 500 different currency inputs in my application
+  * PresentationModel regression tests – make sure each field in the “PresentationModel” has the correct type and length requirements
 
 When I later re-use this model to display a summary of the order, I already have all of the types defined (and tested) in the “PresentationModel”, making it impossible to accidentally format one as a currency amount and the other as a plain decimal value.
 

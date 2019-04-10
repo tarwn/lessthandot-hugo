@@ -53,7 +53,7 @@ Look how well that performance improved, I achieved better than a 6x improvement
 Except when I try to push this to production, I start getting a lot of errors. 
 
 <div style="text-align: center; font-size: .8em; color: #666666">
-  <img src="http://tiernok.com/LTDBlog/Scalability/Graph_03.png" alt="Graph - 30 Clients, 300 Requests, 100rpm - 67% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm &#8211; 67% Failure Rate
+  <img src="http://tiernok.com/LTDBlog/Scalability/Graph_03.png" alt="Graph - 30 Clients, 300 Requests, 100rpm - 67% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm – 67% Failure Rate
 </div>
 
 As it turns out, the external API my process saves the data to has a rate limit. When I exceed the allowable rate, I'm throttled for a short period of time. Any requests I make during that throttle period are returned with errors indicating I'm throttled.
@@ -61,19 +61,19 @@ As it turns out, the external API my process saves the data to has a rate limit.
 Hmm. Luckily there are a number of common patterns available to retry these types of failures. I'll add an exponential back-off retry pattern so that when I get throttled my service will retry failed requests at slower rates until the service un-throttles me. While I've found plenty of code examples online, none of them seem to have recommendations, so I'll just use one of the sample settings they provide.
 
 <div style="text-align: center; font-size: .8em; color: #666666">
-  <img src="http://tiernok.com/LTDBlog/Scalability/Graph_04.png" alt="Graph - 30 Clients, 300 Requests, 100rpm, Retry Policy #1 - 7% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm, Retry Policy #1 &#8211; 7% Failure Rate
+  <img src="http://tiernok.com/LTDBlog/Scalability/Graph_04.png" alt="Graph - 30 Clients, 300 Requests, 100rpm, Retry Policy #1 - 7% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm, Retry Policy #1 – 7% Failure Rate
 </div>
 
 Hmm, better. My failure rate has gone way down. What if I tweak the values?
 
 <div style="text-align: center; font-size: .8em; color: #666666">
-  <img src="http://tiernok.com/LTDBlog/Scalability/Graph_05.png" alt="Graph - 30 Clients, 300 Requests, 100rpm, Retry Policy #2 - 29% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm, Retry Policy #2 &#8211; 29% Failure Rate
+  <img src="http://tiernok.com/LTDBlog/Scalability/Graph_05.png" alt="Graph - 30 Clients, 300 Requests, 100rpm, Retry Policy #2 - 29% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm, Retry Policy #2 – 29% Failure Rate
 </div>
 
 Oh, that was bad, I obviously was on the right track before. What if I just extend the retry amount a bit to try and knock out the last bit of errors. 
 
 <div style="text-align: center; font-size: .8em; color: #666666">
-  <img src="http://tiernok.com/LTDBlog/Scalability/Graph_06.png" alt="Graph - 30 Clients, 300 Requests, 100rpm, Retry Policy #1B - 0% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm, Retry Policy #1B &#8211; 0% Failure Rate
+  <img src="http://tiernok.com/LTDBlog/Scalability/Graph_06.png" alt="Graph - 30 Clients, 300 Requests, 100rpm, Retry Policy #1B - 0% Failure Rate" /><br /> 30 Clients, 300 Requests, 100rpm, Retry Policy #1B – 0% Failure Rate
 </div>
 
 Ok, perfect. Now I have a system that is more than 6 times faster than the original, can be easily extended by throwing more workers at it, and is actually in a better position to handle occasional slow downs from my 3rd-party service. 
@@ -91,7 +91,7 @@ The first and most critical problem was that I didn't actually locate the bottle
 In this system, the constraint looked like it was the sequential execution of the tasks, but in reality the constraint was the time it took to call the 3rd-party API. Had we identified that bottleneck before starting, we could have approached the problem differently.
 
 <div style="text-align: center; font-size: .8em; color: #666666">
-  <img src="http://tiernok.com/LTDBlog/Scalability/ProcessChange.png" alt="Process - Alternative Design" /><br /> Process &#8211; Alternative Design
+  <img src="http://tiernok.com/LTDBlog/Scalability/ProcessChange.png" alt="Process - Alternative Design" /><br /> Process – Alternative Design
 </div>
 
 Rather than the parallel complexity, we can modify how the tasks are executed to try and take advantage of knowing where our bottleneck is. If the API allowed us to submit several requests in a batch, this redesign would net us several orders of magnitude improvement. Another option would be to run the results of the local processing into a queue and submit requests from there at a slow trickle, using only a percentage of our API limit so as not to disrupt any other real-time operations or batch processing the system supports. Another option we could take advantage of is not starting any of our expensive 3rd-party communications until we know that the entire job can actually be processed successfully through our local process.

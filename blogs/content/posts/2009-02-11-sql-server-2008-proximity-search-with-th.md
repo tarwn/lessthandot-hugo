@@ -90,7 +90,7 @@ SELECT @h
 
 output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+———————————————-
   
 0xE6100000010C6744696FF07D4340EC51B81E855753C0
 
@@ -119,7 +119,7 @@ UNIT[“Degree”, 0.0174532925199433]]
 
 Back to our code, in order to have this data in our table
 
-SET @h = geography::STGeomFromText(&#8216;POINT(-77.36750 38.98390)', 4326);
+SET @h = geography::STGeomFromText('POINT(-77.36750 38.98390)', 4326);
 
 We need to do some things, first we update our temp column
 
@@ -146,7 +146,7 @@ Now we have to add a primary key, this is needed because otherwise we won't be a
 
 Server: Msg 12008, Level 16, State 1, Line 1
   
-Table &#8216;zipcodes' does not have a clustered primary key as required by the spatial index. Make sure that the primary key column exists on the table before creating a spatial index.
+Table 'zipcodes' does not have a clustered primary key as required by the spatial index. Make sure that the primary key column exists on the table before creating a spatial index.
 
 sql
 ALTER TABLE zipcodes ADD 

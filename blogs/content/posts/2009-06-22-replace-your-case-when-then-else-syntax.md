@@ -68,7 +68,7 @@ group by brand
 
 Here is our output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+——————–
 
 <pre>brand	HasDefects
 BMW 635 CSi	0

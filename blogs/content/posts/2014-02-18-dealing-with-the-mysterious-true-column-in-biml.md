@@ -33,7 +33,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <i>The data type for input buffer column ‘True’ on the ScriptComponent input buffer ‘Input0’ does not match the mapped output column from the previous transformation.</i>
+  <i>The data type for input buffer column 'True’ on the ScriptComponent input buffer 'Input0’ does not match the mapped output column from the previous transformation.</i>
 </p>
 
 <p style="text-align: justify">

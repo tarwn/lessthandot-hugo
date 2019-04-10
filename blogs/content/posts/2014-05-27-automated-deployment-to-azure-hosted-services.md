@@ -38,7 +38,7 @@ If you would like to build a sample project of your own and follow along, here's
 
 <ol style="margin-left:3em; line-height: 1.4em">
   <li>
-    Create an Azure project in Visual Studio &#8211; Create/attach one or more web or worker roles
+    Create an Azure project in Visual Studio – Create/attach one or more web or worker roles
   </li>
   <li>
     Remove the Diagnostics entry in the web.config or add storage settings
@@ -230,7 +230,7 @@ while ((Get-AllInstancesAreStatus $deployment.RoleInstanceList $statusReady) -eq
 </p>
 
 <p>
-  While there are any instances that are not in &#8216;ReadyRun' status, we sleep for $instancepollRate seconds and continue to check again. If more than $instancePollLimit seconds go by while waiting, we'll throw an error that will cause our script to exit.
+  While there are any instances that are not in 'ReadyRun' status, we sleep for $instancepollRate seconds and continue to check again. If more than $instancePollLimit seconds go by while waiting, we'll throw an error that will cause our script to exit.
 </p>
 
 <p>

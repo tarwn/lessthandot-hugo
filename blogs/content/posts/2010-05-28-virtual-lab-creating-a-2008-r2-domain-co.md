@@ -35,7 +35,7 @@ Kerberos
 :   Kerberos is an authentication protocol used to allow systems on an un-trusted network a method to prove their identity to one another
 
 FQDN
-:   Fully Qualified Domain Name &#8211; the fully spelled out domain name for a domain, for example mydomain.com
+:   Fully Qualified Domain Name – the fully spelled out domain name for a domain, for example mydomain.com
 
 <div class="hint">
   There has been a critical change to this article due to a new piece of information that I didn't previously know. Rather than use the base windows image as the DC for your lab you should go ahead and install this machine from scratch to ensure it doesn't have a duplicate SID. In prior versions we could (sort-of) change a SID but that's not really the case anymore. This is really only a big deal for the DC because the SIDs for users from the DC (domain accounts) need to not match SIDs for local users/groups/etc.<br /> More details can around duplicate SIDs, 2008 R2, and similar topics are available in <a href="http://blogs.technet.com/b/markrussinovich/archive/2009/11/03/3291024.aspx" target="_blank">this article from Mark Russinovich</a>.
@@ -114,25 +114,25 @@ Next we move on to the Roles selection page. As promised, we see a number of act
 On selecting the AD DS option the wizard runs a quick validation and notices that our server does not appear to have a necessary component, in this case .Net Framework 3.5. 
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/4_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/4_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS &#8211; Prerequisites
+  <a href="http://tiernok.com/LTDBlog/BasicDC/4_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/4_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS – Prerequisites
 </div>
 
 After choosing to install the prerequisite (a difficult and time consuming decision, or perhaps not) and pressing next on the main screen, we are provided with a list of “Things to Note” as well as links to additional information, saving me the time of writing and linking them up myself.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/5_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/5_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS &#8211; Things to Note
+  <a href="http://tiernok.com/LTDBlog/BasicDC/5_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/5_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS – Things to Note
 </div>
 
 A short confirmation displays the items we are installing, including the noted prerequisite above and a reminder that directory services won't truly be functional until we run “dcpromo”.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/6_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/6_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS &#8211; Confirmation
+  <a href="http://tiernok.com/LTDBlog/BasicDC/6_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/6_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS – Confirmation
 </div>
 
 After the installation and verification is complete, we are presented a handy link to launch dcpromo.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS &#8211; Wizard Complete
+  <a href="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS – Wizard Complete
 </div>
 
 <div class="hint">
@@ -146,31 +146,31 @@ The dcpromo wizard will complete the installation of AD DS on the server.
 On the first step we are presented with the option to “Use Advanced Mode Setup”. This option will cause several additional wizard windows to appear throughout the process that would have defaulted behind the scenes if it were not checked. Press the “advanced mode installation” hyperlink to get a help document about the additional options presented in advanced mode.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; Beginning
+  <a href="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/7_setup.png" alt="DCPromo" /></a><br /> DCPromo – Beginning
 </div>
 
 After an informational screen about the suggested cryptography option and systems that may not support it, we are presented with the option to add a domain to an existing forest or to create a new domain under a new forest. This being our first DC in the virtual lab, we will be creating a new forest for our domain.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/8_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/8_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; New Forest and Domain
+  <a href="http://tiernok.com/LTDBlog/BasicDC/8_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/8_setup.png" alt="DCPromo" /></a><br /> DCPromo – New Forest and Domain
 </div>
 
 Next type the fully qualified domain name (FQDN) for your domain. After typing this name the wizard will then scan to ensure the name is not already in use.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/9_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/9_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; FQDN Entry
+  <a href="http://tiernok.com/LTDBlog/BasicDC/9_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/9_setup.png" alt="DCPromo" /></a><br /> DCPromo – FQDN Entry
 </div>
 
 The wizard then prompts us to enter a Domain NetBIOS name, with a suggestion based on the name from the prior step.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/10_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/10_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; NetBIOS Name
+  <a href="http://tiernok.com/LTDBlog/BasicDC/10_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/10_setup.png" alt="DCPromo" /></a><br /> DCPromo – NetBIOS Name
 </div>
 
 Next we'll set the functional level of our forest. The functional level defines the maximum level (and feature set) that our forest will support. When installing additional DCs in an existing forest or creating a business domain that you intend to support over the next ten years, this needs to be a well thought out decision. When installing in a virtual lab we will of course pick the highest possible level in less time than it took to write this paragraph.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/11_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/11_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; Functional Level
+  <a href="http://tiernok.com/LTDBlog/BasicDC/11_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/11_setup.png" alt="DCPromo" /></a><br /> DCPromo – Functional Level
 </div>
 
 <div class="hint">
@@ -184,7 +184,7 @@ Next we'll set the functional level of our forest. The functional level defines 
 After another quick scan of the network will tell us if DNS is available and supports the necessary capabilities for the domain controller. In this case, since we are installing a primary DC, I'm going to suggest we install DNS on the same server.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/12_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/12_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; DNS
+  <a href="http://tiernok.com/LTDBlog/BasicDC/12_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/12_setup.png" alt="DCPromo" /></a><br /> DCPromo – DNS
 </div>
 
 After selecting to install the DNS server we receive a warning that a delegation for the DNS server cannot be created because the authoritative parent zone for the domain name I entered earlier could not be found. Translated, this means that the server went looking for an authoritative DNS entry for the _avl.local_ domain name I entered and determined that no one had ever heard of it. Since we are just now installing the DNS server that will recognize that name, this is to be expected and can be safely ignored. 
@@ -192,19 +192,19 @@ After selecting to install the DNS server we receive a warning that a delegation
 The next step is to provide a location for the database and files that will be used by AD DS. In a non-lab setup this needs to be carefully planned to ensure enough capacity is available ahead of time. This being a virtual lab, we will be accepting the defaults and allowing it to carve out space from the primary drive.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/13_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/13_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; Database and File Locations
+  <a href="http://tiernok.com/LTDBlog/BasicDC/13_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/13_setup.png" alt="DCPromo" /></a><br /> DCPromo – Database and File Locations
 </div>
 
 The Directory Services Restore password is used only when major restoration activities need to be undertaken. After entering the password we will add it to our password safe so it won't be forgotten. This password will hopefully never be needed (especially in a lab environment), but not writing it down will pretty much ensure our first, future restoration step will be getting past the lack of a password.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/14_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/14_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; Restore Password
+  <a href="http://tiernok.com/LTDBlog/BasicDC/14_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/14_setup.png" alt="DCPromo" /></a><br /> DCPromo – Restore Password
 </div>
 
 After a brief summary of the selected configurations and the option to export these settings for an unattended installation, we are ready to let the server start installing.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/15_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/15_setup.png" alt="DCPromo" /></a><br /> DCPromo &#8211; Installing
+  <a href="http://tiernok.com/LTDBlog/BasicDC/15_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/15_setup.png" alt="DCPromo" /></a><br /> DCPromo – Installing
 </div>
 
 The installer wraps up with the common Finish screen and a request to reboot.
@@ -212,7 +212,7 @@ The installer wraps up with the common Finish screen and a request to reboot.
 After rebooting, our “Initial Configuration Tasks” window confirms our new roles have been installed. 
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/BasicDC/16_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/16_setup.png" alt="DCPromo" /></a><br /> Initial Configuration Tasks &#8211; Roles
+  <a href="http://tiernok.com/LTDBlog/BasicDC/16_setup.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/BasicDC/16_setup.png" alt="DCPromo" /></a><br /> Initial Configuration Tasks – Roles
 </div>
 
 ## Managing the Domain

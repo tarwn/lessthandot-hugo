@@ -57,7 +57,7 @@ Would render a script tag like this:
 <script type="text/javascript" src="/output/minifyjs_test_output{invalidationHash}.js"></script>
 ```
 
-The main disadvantage of this strategy is that it tends to accumulate files over time. Because the hash is generated off of the combined file's contents, every time a bundled script file or stylesheet changes, a new combined file is created. It eventually becomes necessary to clean this stuff up (The easiest way is to delete all files and reset the app pool, otherwise its usually safe to delete all but the most recent version for each combined file). The main advantage is that it is supported by all caching proxies &#8211; this consistent behavior makes it a good choice for CDN environments where you typically need to manage multiple versions of files anyway.
+The main disadvantage of this strategy is that it tends to accumulate files over time. Because the hash is generated off of the combined file's contents, every time a bundled script file or stylesheet changes, a new combined file is created. It eventually becomes necessary to clean this stuff up (The easiest way is to delete all files and reset the app pool, otherwise its usually safe to delete all but the most recent version for each combined file). The main advantage is that it is supported by all caching proxies – this consistent behavior makes it a good choice for CDN environments where you typically need to manage multiple versions of files anyway.
 
 ### Folder Invalidation
 

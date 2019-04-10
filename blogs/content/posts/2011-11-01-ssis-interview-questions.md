@@ -20,7 +20,7 @@ categories:
 
 ---
 <p class="xmsonormal">
-  The answers to these questions can be found @ <a href="/index.php/DataMgmt/ssis/ssis-interview-questions-answers">SSIS Interview Questions &#8211; Answers</a>
+  The answers to these questions can be found @ <a href="/index.php/DataMgmt/ssis/ssis-interview-questions-answers">SSIS Interview Questions – Answers</a>
 </p>
 
 <div class="image_block">

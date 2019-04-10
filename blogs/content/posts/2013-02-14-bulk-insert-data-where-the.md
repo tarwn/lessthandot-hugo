@@ -89,7 +89,7 @@ You get this error
   
 Msg 102, Level 15, State 1, Line 5
   
-Incorrect syntax near &#8216;CHAR'.
+Incorrect syntax near 'CHAR'.
 
 Mmm, what if you embed it from within Dynamic SQL
 

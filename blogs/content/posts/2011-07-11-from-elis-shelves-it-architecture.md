@@ -31,7 +31,7 @@ Today I'm offering up two books with tools and ideas to help us analyze our envi
 ### [IT Architecture Toolkit][1]  
 Jane A. Carbone
 
-This is a self-declared &#8216;Practical Guide' to enterprise architecture, aiming to help us get the work done without the depth of knowledge and practice that a full-time, experienced enterprise architect would bring to the table. There is little filler in this book, going straight from why architecture is important to the company into methods to analyze the current situation and defining a path forward. By the end of the process we have not only a vision and defined goal, but also projects, methods of estimating, metrics, assistance getting buy-in, and so on. 
+This is a self-declared 'Practical Guide' to enterprise architecture, aiming to help us get the work done without the depth of knowledge and practice that a full-time, experienced enterprise architect would bring to the table. There is little filler in this book, going straight from why architecture is important to the company into methods to analyze the current situation and defining a path forward. By the end of the process we have not only a vision and defined goal, but also projects, methods of estimating, metrics, assistance getting buy-in, and so on. 
   
 The practices and methods described in the book will be familiar to those with more background in business or enterprise architecture, but are just as approachable for those that have not had the time to delve into these subjects. Even if you aren't ready for a full blown architectural initiative, the ideas presented in many of the chapters are just as useful on a day-to-day IT management basis and provide good supplemental material.
   

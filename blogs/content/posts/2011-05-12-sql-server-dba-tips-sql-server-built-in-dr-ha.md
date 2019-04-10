@@ -75,7 +75,7 @@ Make these decisions with great scrutiny.  Placing a stable and tested DR and H
 
 [Log Shipping for cheap DR][6]
 
-**[High Availability with SQL Server 2008 &#8211; by Paul S. Randal][7]**
+**[High Availability with SQL Server 2008 – by Paul S. Randal][7]**
 
 **High Availability/ Disaster Recovery SQL University Geoff Hiten, Robert Davis and Allan Hirt******
 

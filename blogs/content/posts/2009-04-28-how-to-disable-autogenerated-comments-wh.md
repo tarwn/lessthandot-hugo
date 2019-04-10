@@ -35,7 +35,7 @@ else
 print'no'
 ```
 
-Now script it out, you do this by finding the proc under your <ins>database</ins>&#8211;><ins>programmability</ins>&#8211;><ins>stored procedures</ins>. Right click on the proc, select <ins>script procedure as</ins> and then choose <ins>create to</ins> and pick <ins>a new window</ins>
+Now script it out, you do this by finding the proc under your <ins>database</ins>–><ins>programmability</ins>–><ins>stored procedures</ins>. Right click on the proc, select <ins>script procedure as</ins> and then choose <ins>create to</ins> and pick <ins>a new window</ins>
   
 Your procedure will look like this
 
@@ -60,12 +60,12 @@ For SQL Server 2000 it is under the formatting tab in the Generate SQL Script ob
 
 <img src="http://i44.tinypic.com/1424qap.jpg" border="0" alt="Scripting in SQL Server 2000" />
 
-For SQL Server 2005 it is under Tools&#8211;>Options&#8211;>Scripting(see image below)
+For SQL Server 2005 it is under Tools–>Options–>Scripting(see image below)
   
 <img src="http://i43.tinypic.com/6zvhxz.jpg" border="0" alt="Scripting in SQL Server 2005" />
 
 
 
-For SQL Server 2008 it is under Tools&#8211;>Options&#8211;>SQL Server Object Explorer&#8211;>Scripting(see image below)
+For SQL Server 2008 it is under Tools–>Options–>SQL Server Object Explorer–>Scripting(see image below)
   
 <img src="http://i39.tinypic.com/e71p5e.jpg" border="0" alt="Scripting in SQL Server 2008" />

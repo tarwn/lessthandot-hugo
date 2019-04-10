@@ -17,7 +17,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-SQL Server baseline collection is an important task that is too frequently overlooked.  Collecting information on how SQL Server is both providing data services and reacting to how those data services are being utilized, creates a foundation for efficient troubleshooting and predicting growth.  Take a typical problem in which a customer (anyone you are providing data services to internally or externally) comes to you and states something is slow and they think it is the data services.  In most situations, this would lead to a drawn out process of looking into the health of the instance directly related to the situation.  What if we can first ask &#8211; and answer &#8211; the question, “What is normal performance for the period in which the data services seem to be slow?”
+SQL Server baseline collection is an important task that is too frequently overlooked.  Collecting information on how SQL Server is both providing data services and reacting to how those data services are being utilized, creates a foundation for efficient troubleshooting and predicting growth.  Take a typical problem in which a customer (anyone you are providing data services to internally or externally) comes to you and states something is slow and they think it is the data services.  In most situations, this would lead to a drawn out process of looking into the health of the instance directly related to the situation.  What if we can first ask – and answer – the question, “What is normal performance for the period in which the data services seem to be slow?”
 
 In reality, troubleshooting is a methodology that has an equation simply stated as – problem * identification / normal operations = solution.  This means that the problem must have an identity in order for a solution to be developed.  The solution cannot be sound or stable without identifying the problem.  Furthering this, we can ascertain that a solution can be an evolving equation as well.  A solution required, in many cases, forms a further problem in the form of changing the data services as they are at the time the initial identified problem was uncovered.  This can be in the form of growth, maintenance, introduction of new variables and so on.
 
@@ -33,7 +33,7 @@ After reviewing the queries Glenn has provided, 32 distinct tables can be formed
 
 **_Note: before reading on, please ensure to always show the recognition that is deserved while using anything someone has provided to the public for use.  In this case, always place the header in each area the code is used to show Glenn as the author and SQLskills.com as the supporting company._**
 
-**_&#8212; SQL Server 2008 R2 Diagnostic Information Queries_**** __**
+**_— SQL Server 2008 R2 Diagnostic Information Queries_**** __**
 
 sql
 -- SQL Server 2008 R2 Diagnostic Information Queries
@@ -49,9 +49,9 @@ sql
 -- SQL Server 2008 R2 RTM was retired on July 12, 2012
 ```
 
-**_&#8212; They are all noted in the instructions_**** __**
+**_— They are all noted in the instructions_**** __**
 
-**_&#8212; SQL Server 2008 R2 RTM was retired on July 12, 2012_**
+**_— SQL Server 2008 R2 RTM was retired on July 12, 2012_**
 
 ** __**
 

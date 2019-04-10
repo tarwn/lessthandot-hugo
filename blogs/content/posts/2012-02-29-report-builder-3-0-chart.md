@@ -19,7 +19,7 @@ categories:
 This is part three of a series about Report Builder 3.0.
 
   * <a title="Report Builder 3.0 – The Introduction" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-the/" target="_blank">Report Builder 3.0 – The Introduction</a>
-  * <a title="Report Builder 3.0 – Table or Matrix Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-table/" target="_blank">Report Builder 3.0 &#8211; Table or Matrix Wizard</a>
+  * <a title="Report Builder 3.0 – Table or Matrix Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-table/" target="_blank">Report Builder 3.0 – Table or Matrix Wizard</a>
   * <a title="Report Builder 3.0 – Table or Matrix Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-table/" target="_blank">Report Builder 3.0 – Chart Types, Visualizations, and Properties</a>
   * <a title="Report Builder 3.0 – Map Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-map/" target="_blank">Report Builder 3.0 – Map Wizard</a>
   * <a title="Report Builder 3.0 – Report Parts" href="/index.php/datamgmt/dbprogramming/mssqlserver/report-builder-3-0-report/" target="_blank">Report Builder 3.0 – Report Parts</a>
@@ -36,7 +36,7 @@ First, I have to choose a dataset. I can pick a shared dataset, or create a new 
 
 ![][2]
 
-After I select my dataset, I am taken to the Design a query screen. (More in-depth information on this screen can be found in [Report Builder 3.0 &#8211; Table or Matrix Wizard][3].)
+After I select my dataset, I am taken to the Design a query screen. (More in-depth information on this screen can be found in [Report Builder 3.0 – Table or Matrix Wizard][3].)
 
 I build my query using the Production.Product, Production.ProductCategory and Production.ProductSubcategory tables.
 

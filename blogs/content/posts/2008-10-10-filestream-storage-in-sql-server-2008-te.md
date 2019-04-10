@@ -30,55 +30,55 @@ Choices for BLOB Storage
   
 Overview of FILESTREAM**
   
-&#8211;Dual Programming Model Access to BLOB Data
+–Dual Programming Model Access to BLOB Data
   
-&#8211;When to Use FILESTREAM
+–When to Use FILESTREAM
   
 **Configuring Windows for FILESTREAM**
   
-&#8211;Hardware Selection and Configuration
+–Hardware Selection and Configuration
   
-&#8211;Physical Storage Layout
+–Physical Storage Layout
   
-&#8211;RAID Level Choice
+–RAID Level Choice
   
-&#8211;Drive Interface Choice
+–Drive Interface Choice
   
-&#8211;NTFS Configuration
+–NTFS Configuration
   
-&#8212;-Optimizing NTFS Performance
+—-Optimizing NTFS Performance
   
-&#8212;-Cluster Size
+—-Cluster Size
   
-&#8212;-Managing Fragmentation
+—-Managing Fragmentation
   
-&#8212;-Compression
+—-Compression
   
-&#8212;-Space Management
+—-Space Management
   
-&#8212;-Security
+—-Security
   
-&#8211;Antivirus Considerations
+–Antivirus Considerations
   
-&#8211;Enabling FILESTREAM in Windows
+–Enabling FILESTREAM in Windows
   
 **Configuring SQL Server for FILESTREAM**
   
-&#8211;Security Considerations
+–Security Considerations
   
-&#8211;Enabling FILESTREAM in SQL Server
+–Enabling FILESTREAM in SQL Server
   
-&#8211;Creating a Database Enabled for FILESTREAM
+–Creating a Database Enabled for FILESTREAM
   
-&#8211;Creating a Table for Storing FILESTREAM Data
+–Creating a Table for Storing FILESTREAM Data
   
-&#8211;Configuring FILESTREAM Garbage Collection
+–Configuring FILESTREAM Garbage Collection
   
-&#8211;Partitioning Considerations
+–Partitioning Considerations
   
-&#8211;Load Balancing of FILESTREAM Data
+–Load Balancing of FILESTREAM Data
   
-&#8211;Feature Combinations and Restrictions
+–Feature Combinations and Restrictions
   
 **Performance Tuning and Benchmarking Considerations
   

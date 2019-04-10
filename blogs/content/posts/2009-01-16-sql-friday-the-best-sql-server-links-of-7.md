@@ -21,7 +21,7 @@ Here is what I found interesting this past week in SQL Land:
 
 **[SQL Server Spatial: EMPTY vs. NULL][1]**
   
-Yesterday a friend asked me if it was better to always use a value of GEOMETRYCOLLECTION EMPTY as an alternative to making a geometry/geography column nullable. OGC has its own concept of database NULL, that is [GEOMETRY] EMPTY, where [GEOMETRY] can be any valid geometry subtype (that is &#8216;POINT EMPTY', &#8216;LINESTRING EMPTY', etc). When I asked why it mattered, he said he was tired of putting ..WHERE…IS NOT NULL in every UPDATE of SQL Server spatial data type. Sounds like reason for a blog entry.
+Yesterday a friend asked me if it was better to always use a value of GEOMETRYCOLLECTION EMPTY as an alternative to making a geometry/geography column nullable. OGC has its own concept of database NULL, that is [GEOMETRY] EMPTY, where [GEOMETRY] can be any valid geometry subtype (that is 'POINT EMPTY', 'LINESTRING EMPTY', etc). When I asked why it mattered, he said he was tired of putting ..WHERE…IS NOT NULL in every UPDATE of SQL Server spatial data type. Sounds like reason for a blog entry.
 
 **[TempDB Monitoring and Troubleshooting: Allocation Bottleneck][2]**
   

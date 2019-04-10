@@ -22,7 +22,7 @@ Normally this would require either highlighting entire queries to comment/uncomm
 
 So try this!
 
-Put &#8211;/\* at the top of your query and &#8211;\*/ at the bottom:
+Put –/\* at the top of your query and –\*/ at the bottom:
 
 sql
 --/* Test Query #3 (Gorp Method)

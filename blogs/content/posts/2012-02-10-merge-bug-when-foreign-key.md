@@ -20,7 +20,7 @@ tags:
   - sql server 2008
 
 ---
-Few days ago my colleague showed me strange behavior of SQL Server's 2008 RTM MERGE statement. Although this is corrected in SP1 1 or more probably in CU1 (there is [bug solved in CU1][1] connected to this &#8211; imo), I do believe its worth to be mentioned.
+Few days ago my colleague showed me strange behavior of SQL Server's 2008 RTM MERGE statement. Although this is corrected in SP1 1 or more probably in CU1 (there is [bug solved in CU1][1] connected to this – imo), I do believe its worth to be mentioned.
 
 If you try to update parent column (column referenced by foreign key) even with the same value it fails with message “<span style="font-family: courier new,courier;">The MERGE statement conflicted with the REFERENCE constraint</span>” when index used for FK relationship is NONCLUSTERED. It does not matter if this index is primary key, unique constraint or non-filtered unique key (those are options you can use for FK). Moreover, it does not matter if there is (or there's not) some other clustered index. It also does not matter if child table has indexes, clustered or non-clustered.
 
@@ -35,7 +35,7 @@ How to reproduce:
 
 Example:
 
-<span style="color: #888888;">&#8212; Create tables</span>  
+<span style="color: #888888;">— Create tables</span>  
 `<strong>Create Table</strong> tparent ( cCode <strong><span style="color: #888888;">varchar(2) not null</span></strong>);<br /><strong>Create table</strong> tchild  ( cCode <span style="color: #888888;"><strong>varchar(2) not null</strong></span>);  </p>
 <p>``<span style="color: #888888;">-- Create non-clustered PK on parent table<br /></span>``<span><strong>Alter Table</strong> tparent <br /> <strong>add Constraint</strong> PK_tparent<br /> <strong>Primary Key NONCLUSTERED</strong> (cCode <strong><span style="color: #888888;">asc</span></strong>);  </p>
 <p>-</span>``<span><span style="color: #888888;">- Create Foreign key</span></span>`  

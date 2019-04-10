@@ -40,7 +40,7 @@ categories:
 
 5. <a href="https://twitter.com/sqllensman" target="_blank">Patrick Flynn</a> is an Ironman!
 
-6. During Office Hours, one cruiser asked, “How do you do \*it\* &#8211; keeping up with the community/speaking/blogging, while having a family and a job?” That turned into one of the most honest discussions I've been part of on that topic. It's not easy &#8211; for any of us. It requires balance. Those conversations are what Office Hours is all about.
+6. During Office Hours, one cruiser asked, “How do you do \*it\* – keeping up with the community/speaking/blogging, while having a family and a job?” That turned into one of the most honest discussions I've been part of on that topic. It's not easy – for any of us. It requires balance. Those conversations are what Office Hours is all about.
 
 7. Running a 5K in Charlotte Amalie, St Thomas, is a lot of work. Those hills! Those 99 Stairs! But having two fellow cruisers along makes it a lot more fun. (Thanks Jared and Drew!)
 

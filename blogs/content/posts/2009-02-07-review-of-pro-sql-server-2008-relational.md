@@ -40,7 +40,7 @@ I highly recommend this book to anyone who wants to learn or get better at desig
 
 When it comes to database design and SQL Server I have no doubt in my mind that this is the book to get. This is the third version of the book I have read and I am pleased to see that every edition is a little better than the previous one.
 
-Download chapter 1 here: http://www.apress.com/book/downloadfile/4090 to get a &#8216;feel' for the book
+Download chapter 1 here: http://www.apress.com/book/downloadfile/4090 to get a 'feel' for the book
 
 Amazon link here: [Pro SQL Server 2008 Relational Database Design and Implementation][1]
 

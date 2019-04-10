@@ -37,10 +37,10 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
 
 **Operators:**
 
-  * [C# 1.0] Arithmetic + &#8211; * / %
+  * [C# 1.0] Arithmetic + – * / %
   * [C# 1.0] Logical Comparisons & | ^ ! ~ && || true false
   * [C# 1.0] String concatenation
-  * [C# 1.0] Increment/Decrement (++x &#8211;x x++ x&#8211;)
+  * [C# 1.0] Increment/Decrement (++x –x x++ x–)
   * [C# 1.0] Binary Shift (<< >>)
   * [C# 1.0] Comparison (== != < > <= >=)
   * [C# 1.0] Assignment (= += -= *= /= %= &= |= ^= <<= >>=)
@@ -58,7 +58,7 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 1.0] Inheritance: extends base
   * [C# 1.0] Hiding: new
   * [C# 1.0] Access modifiers: public protected private internal “protected internal”
-  * [C# 1.0] Modifiers &#8211; static instance const virtual overrides sealed extern
+  * [C# 1.0] Modifiers – static instance const virtual overrides sealed extern
   * [C# 1.0] Property Declaration
   * [C# 1.0] Constructors
   * [C# 1.0] Static Constructors
@@ -82,7 +82,7 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 1.0] Preprocessor Region: #region #endregion
   * [C# 1.0] Preprocessor Region: #line
   * [C# 2.0] Preprocessor Region: #pragma warning
-  * [C# 2.0] Generics &#8211; Usage
+  * [C# 2.0] Generics – Usage
   * [C# 2.0] Generic Class Declaration
   * [C# 2.0] Generic Constraints: “where T”
   * [C# 2.0] Anonymous methods (inline delegates, closures)
@@ -111,7 +111,7 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 4.0] Named Arguments and Optional Parameters (for Methods)
   * [C# 5.0] Async modified: async await
   * [C# 5.0] Caller Information Attributes
-  * [C# 6.0] Roslyn &#8211; Compiler-as-a-service
+  * [C# 6.0] Roslyn – Compiler-as-a-service
   * [C# 6.0] Initializers for Automatic Properties
   * [C# 6.0] Getter-only Automatic Properties
   * [C# 6.0] Lambda Expressions for Method Declaration
@@ -131,20 +131,20 @@ Where's LINQ???!? In the .Net Framework of course:
 **.Net 1.0**
 
   * Collections: ArrayList, HashTable, Dictionary
-  * Threading &#8211; ThreadPool, Thread, ThreadStart
-  * Threading &#8211; Synchronized Regions: SynchronizationAttribute, Monitor (lock/SyncLock)
-  * Threading &#8211; Manual Synchronization: Interlocked, WaitHandle/Mutex, ManualResetEvent, AutoResetEvent
-  * ADO.Net &#8211; Database access using: Connection, Command, DataReader, DbParameter
-  * ASP.Net &#8211; WebForms
-  * ASP.Net &#8211; ASMX
-  * ASP.Net &#8211; ASHX
-  * ASP.Net &#8211; Page output caching
-  * ASP.Net &#8211; Application Cache
+  * Threading – ThreadPool, Thread, ThreadStart
+  * Threading – Synchronized Regions: SynchronizationAttribute, Monitor (lock/SyncLock)
+  * Threading – Manual Synchronization: Interlocked, WaitHandle/Mutex, ManualResetEvent, AutoResetEvent
+  * ADO.Net – Database access using: Connection, Command, DataReader, DbParameter
+  * ASP.Net – WebForms
+  * ASP.Net – ASMX
+  * ASP.Net – ASHX
+  * ASP.Net – Page output caching
+  * ASP.Net – Application Cache
 
 **.Net 2.0**
 
-  * Threading &#8211; BackgroundWorker
-  * Threading &#8211; SynchronizationContext
+  * Threading – BackgroundWorker
+  * Threading – SynchronizationContext
   * Generics
   * Generic Collections: List<T>, Stack<T>, Queue<T>, Dictionary<TKey,TValue>, LinkedList<T>, SortedDictionary<TKey,TValue>, ReadOnlyCollection<T>, etc
   * Nullable types
@@ -156,24 +156,24 @@ Where's LINQ???!? In the .Net Framework of course:
   * System.Diagnostics.EventLog
   * System.Net.Mail
   * ResGen.exe
-  * Threading &#8211; System.Threading.Semaphore
-  * ADO.Net &#8211; Asynchronous Processing
-  * ADO.Net &#8211; SqlBulkCopy
-  * ADO.Net &#8211; SQL Server User Defined Types
-  * ADO.Net &#8211; SQL Server Max Data Types
-  * ADO.Net &#8211; DataSet + DataAdapter Batch Processing
-  * ADO.Net &#8211; Query Notifications
-  * ADO.Net &#8211; Connection Pool Control
-  * ADO.Net &#8211; System.Transactions
-  * ADO.Net &#8211; DataTableReader
-  * ADO.Net &#8211; Multiple Active Result Sets (MARS)
-  * ASP.Net &#8211; Master/Content pages
-  * ASP.Net &#8211; WebParts
-  * ASP.Net &#8211; Skins/Themes
-  * ASP.Net &#8211; Membership
-  * ASP.Net &#8211; Profiles and Custom Profile Properties
-  * ASP.Net &#8211; Cache Profiles
-  * ASP.Net &#8211; Microsoft AJAX
+  * Threading – System.Threading.Semaphore
+  * ADO.Net – Asynchronous Processing
+  * ADO.Net – SqlBulkCopy
+  * ADO.Net – SQL Server User Defined Types
+  * ADO.Net – SQL Server Max Data Types
+  * ADO.Net – DataSet + DataAdapter Batch Processing
+  * ADO.Net – Query Notifications
+  * ADO.Net – Connection Pool Control
+  * ADO.Net – System.Transactions
+  * ADO.Net – DataTableReader
+  * ADO.Net – Multiple Active Result Sets (MARS)
+  * ASP.Net – Master/Content pages
+  * ASP.Net – WebParts
+  * ASP.Net – Skins/Themes
+  * ASP.Net – Membership
+  * ASP.Net – Profiles and Custom Profile Properties
+  * ASP.Net – Cache Profiles
+  * ASP.Net – Microsoft AJAX
 
 **.Net 3.0**
 
@@ -186,15 +186,15 @@ Where's LINQ???!? In the .Net Framework of course:
 
   * .Net Compact Framework
   * System.AddIn
-  * Collections &#8211; HashSet<T>, SortedSet<T>
+  * Collections – HashSet<T>, SortedSet<T>
   * Pipes
   * LINQ
-  * LINQ &#8211; Expression Trees
-  * ADO.Net &#8211; LINQ to SQL
-  * ADO.Net &#8211; LINQ to Dataset
-  * ADO.Net &#8211; Entity Data Model / Entity Framework 1
-  * ASP.Net &#8211; ScriptManager, AJAX Controls
-  * ASP.net &#8211; Dynamic Data
+  * LINQ – Expression Trees
+  * ADO.Net – LINQ to SQL
+  * ADO.Net – LINQ to Dataset
+  * ADO.Net – Entity Data Model / Entity Framework 1
+  * ASP.Net – ScriptManager, AJAX Controls
+  * ASP.net – Dynamic Data
   * Silverlight
 
 **.Net 4.0**
@@ -204,39 +204,39 @@ Where's LINQ???!? In the .Net Framework of course:
   * Covariance and Contravariance in Generics
   * Memory Mapped Files
   * Portable Class Libraries
-  * Threading &#8211; PLINQ (pop quiz: does AsParallel() go at the beginning or end of your LINQ statement? Why?)
-  * Threading &#8211; TPL &#8211; System.Threading.Tasks
-  * Threading &#8211; Barrier, SpinWait, SpinLock, CancellationTokens, BlockingCollection<T>
-  * Threading &#8211; ConcurrentStack, ConcurrentQueue, ConcurrentDictionary, ConcurrentBag
+  * Threading – PLINQ (pop quiz: does AsParallel() go at the beginning or end of your LINQ statement? Why?)
+  * Threading – TPL – System.Threading.Tasks
+  * Threading – Barrier, SpinWait, SpinLock, CancellationTokens, BlockingCollection<T>
+  * Threading – ConcurrentStack, ConcurrentQueue, ConcurrentDictionary, ConcurrentBag
   * Tuples (\*sigh\*)
   * IObservable, Reactive Extensions
-  * ADO.Net &#8211; Entity Framework 4
+  * ADO.Net – Entity Framework 4
   * MEF
-  * ASP.Net &#8211; HTML5 form types
-  * ASP.Net &#8211; Bundling and minification
-  * ASP.Net &#8211; WebSocket Support
-  * ASP.Net &#8211; Asynchronous Requests/Responses
-  * ASP.Net &#8211; System.Net.Http
-  * ASP.Net &#8211; MVC
-  * ASP.Net &#8211; Web API 1
-  * ASP.Net &#8211; Extensible Cache &#8211; OutputCacheProvider
-  * ASP.Net &#8211; Extensible Request Validation &#8211; RequestValidator
-  * ASP.Net &#8211; Resource Monitoring &#8211; appDomainResourceMonitoring
+  * ASP.Net – HTML5 form types
+  * ASP.Net – Bundling and minification
+  * ASP.Net – WebSocket Support
+  * ASP.Net – Asynchronous Requests/Responses
+  * ASP.Net – System.Net.Http
+  * ASP.Net – MVC
+  * ASP.Net – Web API 1
+  * ASP.Net – Extensible Cache – OutputCacheProvider
+  * ASP.Net – Extensible Request Validation – RequestValidator
+  * ASP.Net – Resource Monitoring – appDomainResourceMonitoring
 
 **.Net 4.5, 4.6**
 
   * AppContext Compatibility Switches
   * .Net Native
-  * Threading &#8211; TPL Dataflow
+  * Threading – TPL Dataflow
   * System.Net.Http
   * System.Net.WebSockets
-  * ADO.Net &#8211; SQLClient Streaming Support
-  * ADO.Net &#8211; Async for Connection, DbCommand, DbDataReader, SqlCommand, SqlDataReader, SqlBulkCopy
-  * ADO.Net &#8211; AlwaysOn support
-  * ADO.Net &#8211; LocalDB
-  * ADO.Net &#8211; Entity Framework 5
-  * ADO.Net &#8211; Extended Protection
-  * ASP.Net &#8211; Web API 2
-  * ASP.Net &#8211; OData
+  * ADO.Net – SQLClient Streaming Support
+  * ADO.Net – Async for Connection, DbCommand, DbDataReader, SqlCommand, SqlDataReader, SqlBulkCopy
+  * ADO.Net – AlwaysOn support
+  * ADO.Net – LocalDB
+  * ADO.Net – Entity Framework 5
+  * ADO.Net – Extended Protection
+  * ASP.Net – Web API 2
+  * ASP.Net – OData
 
 Whew, and that doesn't even count all of the extra nuget packages that are out there now…It's hard to remember how we managed without some of this stuff back in the 1.0 and 1.1 days.

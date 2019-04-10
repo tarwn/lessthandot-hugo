@@ -19,7 +19,7 @@ tags:
 ---
 There are some cool things announced by Microsoft
 
-_**SQL Server Application and Multi-server Private CTP &#8211; Registration**</p> 
+_**SQL Server Application and Multi-server Private CTP – Registration**</p> 
 
 As part of SQL Server “Kilimanjaro”, we have announced baseline investments for application and multi-server management. We are recruiting customers to participate in a private CTP with SQL Server Engineering. Registration for the Private CTP will take place until December 15, 2008 and the 4-5 week Private CTP will begin in mid-January. Microsoft is looking for participants in entities with at least 1 DBA, more than 25 PCs, and SQL Server installations across their organization. Register today!
 

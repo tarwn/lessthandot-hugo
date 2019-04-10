@@ -1,5 +1,5 @@
 ---
-title: Dealing with the Column name ‘TEXT()’ contains an invalid XML identifier as required by FOR XML; ‘(‘(0x0028) is the first character at fault error
+title: Dealing with the Column name 'TEXT()’ contains an invalid XML identifier as required by FOR XML; '('(0x0028) is the first character at fault error
 author: SQLDenis
 type: post
 date: 2012-12-05T11:42:00+00:00
@@ -31,7 +31,7 @@ I had to deploy a user defined function I was given yesterday, when I tried to I
 
 Msg 6850, Level 16, State 1, Procedure fnGetBooks, Line 8
   
-Column name &#8216;TEXT()' contains an invalid XML identifier as required by FOR XML; &#8216;(&#8216;(0x0028) is the first character at fault.
+Column name 'TEXT()' contains an invalid XML identifier as required by FOR XML; '('(0x0028) is the first character at fault.
 
 The function looked a little like this one
 

@@ -25,7 +25,7 @@ Working as a Software Developer* in a range of small companies and organizations
 
 This isn't a new process or even a sales pitch on how you too can implement my process and save thousands. It's simply a walk through of the challenges that led to the process, the tools and practices I incorporated, and the steps I followed to build a lightweight process.
 
-_*Software Developer: It seems every developer position I've held has had a different definition of &#8216;Developer' ([and &#8216;Programmer'][1], and…you get the point). The positive side of this is lots of great experiences, the negative side is all the fun things I got to use/do and never again._
+_*Software Developer: It seems every developer position I've held has had a different definition of 'Developer' ([and 'Programmer'][1], and…you get the point). The positive side of this is lots of great experiences, the negative side is all the fun things I got to use/do and never again._
 
 ## Building a Process
 
@@ -64,9 +64,9 @@ So this is my bare minimum set of requirements from my process, my focus.
       * I am not comfortable (or was not) with the system I was adding onto
       * Standards are limited to finding existing examples to duplicate
       * Expected to convert some existing components for wider use w/ my portion without disrupting their existing functions
-  * No automated testing &#8211; the framework is challenging for unit testing
-  * Live environment &#8211; though my pieces of the system would not be live for weeks or months, the system is deployed weekly and existing portions would be used and revised
-  * I am a team of one &#8211; limits flexibility, easier to get “stuck in the mud” without someone to pull me out, limited to my own experiences 
+  * No automated testing – the framework is challenging for unit testing
+  * Live environment – though my pieces of the system would not be live for weeks or months, the system is deployed weekly and existing portions would be used and revised
+  * I am a team of one – limits flexibility, easier to get “stuck in the mud” without someone to pull me out, limited to my own experiences 
 
 So having a focus and an understanding of my initial challenges, I built an initial process.
 
@@ -158,7 +158,7 @@ The most critical part of creating a process is to know why your creating it. Wi
 
 If you are interested, here are some random links on related topics (plenty more in my [Delicious bookmarks][3]).
 
-  * [The Uncertainty Principle OR How to Choose the Right Methodology &#8211; Kosmothink][4]
+  * [The Uncertainty Principle OR How to Choose the Right Methodology – Kosmothink][4]
   * [Waterfall v Agile: How Should I Approach My Software Development Project?][5]
   * [Time Boxing Strategies to Help You Get Things Done in Your Project][6]
   * [Methodology Doesn’t Matter][7]

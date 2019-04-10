@@ -39,7 +39,7 @@ The tasks in the container now contain four unique data flow ad transformations.
 
   1. Pull Plan Cache – pulls the server for the entire plan cache. Note, large plan caches can seriously affect the buffer overflowing to disk.  Be sure this is really a requirement that can prove valuable to you and your SQL Server instance. 
   2. Pull TOP 100 Worst Queries
-  3. Pull Plan’s XML data.  &#8211;  Data Flow 1 and 3 can be combined.  For performance analysis, we left it in here for now. 
+  3. Pull Plan’s XML data.  –  Data Flow 1 and 3 can be combined.  For performance analysis, we left it in here for now. 
   4. The final process handles running the index analysis script.  Another script task handles pulling the contents of the file with the database list to run the script on.  Then moves to a Foreach Loop to shred the ADO object.  Within the Foreach Loop Container is the method that will require our second connection manager.
 
 <div class="image_block">

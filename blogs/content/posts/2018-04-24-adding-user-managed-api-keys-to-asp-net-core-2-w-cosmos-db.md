@@ -659,7 +659,19 @@ public void ConfigureServices(IServiceCollection services)
 ```
 First we make a one line addition to the `AddCustomMembershipAPIAuth` Extension method, passing in a `Scheme` and `Realm`. Next we add in a new “APIAccessOnly” policy that we will use to enforce API Access authentication only for API endpoints, which we can do next.
 
-[SampleCosmosCore2App/Controllers/ValuesController.cs][13]<pre lang="csharp""> \[Route("api/[controller]")\] \[Authorize(Policy = "APIAccessOnly")\] public class ValuesController : Controller { // GET api/values [HttpGet] public IEnumerable<string> Get() { return new string[] { "value1", "value2" }; } // ... } </pre> 
+[SampleCosmosCore2App/Controllers/ValuesController.cs][13]
+```csharp
+[Route("api/[controller]")] 
+[Authorize(Policy = "APIAccessOnly")] 
+public class ValuesController : Controller { 
+  // GET api/values 
+  [HttpGet] 
+  public IEnumerable<string> Get() { 
+    return new string[] { "value1", "value2" }; 
+  } 
+  // ... 
+}
+```
 
 I've decorated the ValuesController with an `Authorize(Policy = ...)` attribute, but I could also have used `Authorize(AuthenticationScheme = ...)` and skipped the policy definition in the Startup file. However, I like the idea that all of my Authentication schemes are defined in Startup consistently, the policy for accessing API endpoints is defined in one place, and it looks more readable to me.
 

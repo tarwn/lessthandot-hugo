@@ -29,7 +29,7 @@ Since it is a day off for me today, I decided to give Amazon Relational Database
 
 You can try it out for free if you are a new AWS customer
 
-> Amazon RDS for SQL Server &#8211; Free Tier
+> Amazon RDS for SQL Server – Free Tier
 > 
 > New AWS customers can get started with Amazon RDS for SQL Server for free and receive the following Amazon RDS for SQL Server resources each month for free:
   
@@ -173,7 +173,7 @@ sp_helpdb
 
 Here is what I see
 
-No permission to access database &#8216;model'.
+No permission to access database 'model'.
 
 <pre>name	     db_size	owner	dbid	created
 master	      4.75 MB	rdsa	1	Apr  8 2003

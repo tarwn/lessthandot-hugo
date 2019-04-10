@@ -58,7 +58,7 @@ AS
 GO
 ```
 
-The code in the trigger should be pretty simple to follow. The line _EVENTDATA().value(&#8216;(/EVENT_INSTANCE/TSQLCommand/CommandText)[1]','nvarchar(max)')_ is grabbing the DDL statement, more about EVENTDATA() can be found here: http://msdn.microsoft.com/en-us/library/ms173781.aspx
+The code in the trigger should be pretty simple to follow. The line _EVENTDATA().value('(/EVENT_INSTANCE/TSQLCommand/CommandText)[1]','nvarchar(max)')_ is grabbing the DDL statement, more about EVENTDATA() can be found here: http://msdn.microsoft.com/en-us/library/ms173781.aspx
 
 Next up is the test table that we will use to play around with
 
@@ -205,7 +205,7 @@ select type_name from sys.trigger_event_types
 
 Here is a partial result set
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+——————–
   
 CREATE_TABLE
   

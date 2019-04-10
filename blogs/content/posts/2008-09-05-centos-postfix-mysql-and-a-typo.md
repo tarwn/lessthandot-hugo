@@ -27,7 +27,7 @@ Today I finally got round to doing some admin on my primary home server, which (
 
 And it did, it came up with about 5 or 6 updates, including an update to postfix. Great. So, it finished in about a minute or two and I went on about my evening. All was happy in the land of the ignorant.
 
-Ignorant, that is, until I decided to send an email to my dear old mum to give her an update on the list of laptops I was recommending for her (I know, I'm so thoughtful :D). At which point my squirrelmail (webmail) froze.. you see, I'm currently re-decorating my study, so have moved my main workstation into another room, and as such it's not in use.. and my other non-work laptop is, er, recovering from, er, how do you say it? A little &#8216;rinse' in the bath… so, work laptop it is, and webmail access only… 
+Ignorant, that is, until I decided to send an email to my dear old mum to give her an update on the list of laptops I was recommending for her (I know, I'm so thoughtful :D). At which point my squirrelmail (webmail) froze.. you see, I'm currently re-decorating my study, so have moved my main workstation into another room, and as such it's not in use.. and my other non-work laptop is, er, recovering from, er, how do you say it? A little 'rinse' in the bath… so, work laptop it is, and webmail access only… 
 
 I thought maybe it was my damn windows wifi connection at first because it has been such a problem the last few days.. (I can't wait to get back to my linux environments, this windows only stuff is giving me a serious heart condition.) Anyway, after a prod and a poke it seemed that it might be the mail server…
 
@@ -82,7 +82,7 @@ gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-5
 priority=2
 includepkgs=kernel* postfix*
 ```
-Ooops. Can you spot it? :yes: Yep, exactly &#8211; every entry apart from the updates was excluding “postfix”, whilst the updates were excluding “posfix”.. :no: 
+Ooops. Can you spot it? :yes: Yep, exactly – every entry apart from the updates was excluding “postfix”, whilst the updates were excluding “posfix”.. :no: 
 
 ## Fixing the shame..
 

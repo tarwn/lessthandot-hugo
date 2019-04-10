@@ -24,7 +24,7 @@ When a SQL Server Agent Job is created, the creator of the job is, by default, t
 
 On the other side of how ownership is impersonated; permission issues with jobs can be fixed by simply changing ownership of the job.  For example: In SQL Server, there are two databases, SQLAgent\_1 and SQLAgent\_2.  Each database has a table named SQLAgent\_Tbl.  Database user Fred has been granted SELECT permissions to SQLAgent\_1.dbo.SQLAgent\_Tbl but not granted SELECT in SQLAgent\_2.dbo.SQLAgent\_Tbl.  A SQL Server Agent Job has been created with Fred as the owner.  In the job there are two steps.  Step one performs a select on SQLAgent\_1.dbo.SQLAgent\_Tbl and step two performs a select on SQLAgent\_2.dbo.SQLAgent_Tbl.  Upon executing the job the agent returns a severity 14 error with the following message.
 
-<span class="MT_red">Executed as user: fred. The SELECT permission was denied on the object &#8216;Agent2_tbl', database &#8216;SQLAgent_2', schema &#8216;dbo'. [SQLSTATE 42000] (Error 229). The step failed.</span>
+<span class="MT_red">Executed as user: fred. The SELECT permission was denied on the object 'Agent2_tbl', database 'SQLAgent_2', schema 'dbo'. [SQLSTATE 42000] (Error 229). The step failed.</span>
 
 To fix this there are two options.  Grant Fred SELECT on SQLAgent2\_Tbl or change the ownership of the job to an account that already has the needed SELECT permissions.  In this example, change job ownership to the SQL Server Agent account which has SELECT permissions to both tables in both databases by using sp\_update_job procedure in the MSDB databases.
 

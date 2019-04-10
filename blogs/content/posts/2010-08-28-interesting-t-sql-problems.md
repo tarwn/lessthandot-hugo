@@ -21,7 +21,7 @@ With this blog post I am hoping to start a new series of blogs devoted to the in
 
 The idea of this blog series came to me on Wednesday night when I thought I solved a complex problem…
 
-# First Problem &#8211; Divide data into 15 min. time intervals
+# First Problem – Divide data into 15 min. time intervals
 
 The first problem, I'd like to discuss, is found in this [MSDN thread][1]:
 
@@ -187,7 +187,7 @@ See also a different and simpler approach suggested by Celko in [this thread][2]
 
 * * *
 
-# Second Problem &#8211; Find overlapping ranges
+# Second Problem – Find overlapping ranges
 
 The second problem is really a gem and it is presented in [How can I find overlapped ranges?][3] thread:
 
@@ -343,7 +343,7 @@ The whole table is about 31,000 records (includes 22 chromosomes + X, Y chromoso
 
 The problem is to find the overlapped regions (or ranges) and these overlapped records have to be on the same Chromosome of this table.
 
-&#8212;&#8212;&#8212;&#8212;-
+————-
   
 I saw this problem at ~11pm on Wednesday night, thought I solved it and that's when the idea of this blog came to my mind.
 
@@ -471,7 +471,7 @@ DROP TABLE #Work
 print 'Time elapsed (sec): ' + convert(varchar(30),datediff(second, @TimeStart, getdate()))
 ```
 
-Set based solution based on the quirky update idea &#8211; it takes ~5 second to execute:
+Set based solution based on the quirky update idea – it takes ~5 second to execute:
 
 sql
 set statistics time off
@@ -554,7 +554,7 @@ print 'Time elapsed (sec): ' + convert(varchar(30),datediff(second, @TimeStart, 
 
 &nbsp;
 
-# Third problem &#8211; Transpose columns to rows
+# Third problem – Transpose columns to rows
 
 The third problem is simple enough, but yet quite interesting. It is presented in the following [Vertical Result Set thread][4]
 
@@ -616,7 +616,7 @@ GO
 
 &nbsp;
 
-## Fourth problem &#8211; Count % of NULLs in every column in a table
+## Fourth problem – Count % of NULLs in every column in a table
 
 I decided to add this problem here rather than create a new blog for the last week interesting problems.
   
@@ -654,7 +654,7 @@ Hope you find these problems interesting as well and see you in a week (or more)
 
 The next series of this blog:
 
-[Interesting T-SQL problems &#8211; new problems][7]
+[Interesting T-SQL problems – new problems][7]
 
 And perhaps you appreciate this topic as well
   

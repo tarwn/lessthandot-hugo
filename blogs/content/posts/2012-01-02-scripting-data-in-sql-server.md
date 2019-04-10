@@ -24,7 +24,7 @@ tags:
 ---
 SQL Server 2008 has the Script Data option inside the script wizard. 
 
-You would right click on the database, select Tasks&#8211;>Generate Scripts&#8211;>Pick the DB
+You would right click on the database, select Tasks–>Generate Scripts–>Pick the DB
   
 and then you would be presented with scripting options, one of the options would be to script data, this is located under Table/View options. See the image below of how it looks like
 
@@ -34,7 +34,7 @@ and then you would be presented with scripting options, one of the options would
 
 In SQL Server 2012, this has changed and is kind of buried. Here is how to find it now.
 
-Right click on the database, select Tasks&#8211;>Generate Scripts&#8211;>Set Scripting Options&#8211;>Advanced. Scroll down to Types of data to script
+Right click on the database, select Tasks–>Generate Scripts–>Set Scripting Options–>Advanced. Scroll down to Types of data to script
 
 Now you can select Schema only, Data only, Schema and Data. See image below of what the options should look like
 

@@ -42,7 +42,7 @@ I remember taking family vacations as a kid. We'd all pile in the van and go cam
 
 This tradition continues in grand fashion with events like PASS Summit and SQL Saturdays. After all, didn't Big Brother Rob and I talk for three hours straight on the car ride from Seattle to Portland, much to Dad John and Mom Yanni's amusement? In 2011 alone, I've visited #sqlfamily in four states, where we've done everything from run half marathons to sing karaoke. 
 
-I remember going to my grandma's every month for dinner &#8211; usually burgers in the summer and chili in the winter, with ice cream for dessert. The adults would play pinochle and the kids would run around outside, playing hide and seek or sledding. 
+I remember going to my grandma's every month for dinner – usually burgers in the summer and chili in the winter, with ice cream for dessert. The adults would play pinochle and the kids would run around outside, playing hide and seek or sledding. 
 
 Today, I go to user group meetings monthly for #sqlfamily dinner. It's pizza and beer now, the people are great, and I don't have to sit at the kid's table any more. 
 

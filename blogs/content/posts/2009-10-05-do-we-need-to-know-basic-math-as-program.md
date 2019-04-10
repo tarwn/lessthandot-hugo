@@ -51,7 +51,7 @@ If we visit the Java forums it doesn't get any better, take a look at this threa
 > 
 > Cheers!
 
-Here is one &#8216;solution'
+Here is one 'solution'
 
 ```Java
 int x = numberToInvertSign;
@@ -65,7 +65,7 @@ for(int i = 0; i < 2*Math.abs(x); i++){
    }
 }
 ```
-You have to love this &#8216;gem' (of course this is someone messing with the original poster)
+You have to love this 'gem' (of course this is someone messing with the original poster)
 
 ```java
 switch (i)

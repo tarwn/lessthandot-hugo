@@ -58,7 +58,7 @@ Trying to execute this statement will generate the following error
 
  <span style="color: #ff0000;"></span>
 
-<span style="color: #ff0000;">The operation failed because an index or statistics with name &#8216;colint_cover' already exists on table &#8216;testarea'.</span>
+<span style="color: #ff0000;">The operation failed because an index or statistics with name 'colint_cover' already exists on table 'testarea'.</span>
 
  
 

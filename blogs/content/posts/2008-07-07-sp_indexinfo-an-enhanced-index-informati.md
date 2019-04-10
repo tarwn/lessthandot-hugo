@@ -15,7 +15,7 @@ categories:
 ---
 Tibor Karaszi has created a very useful index information stored procedure for SQL Server 2005 and up.
   
-This stored procedure will tell you the following&#8221;
+This stored procedure will tell you the following”
 
 What indexes exists for a or each table(s)
   

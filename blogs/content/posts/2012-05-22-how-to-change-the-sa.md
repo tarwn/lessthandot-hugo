@@ -58,7 +58,7 @@ GO
 ```
 Now try to login. It is possible that the sa account is disabled, you will see the following message
 
-Login failed for user &#8216;sa'. Reason: The account is disabled. (Microsoft SQL Server, Error: 18470)
+Login failed for user 'sa'. Reason: The account is disabled. (Microsoft SQL Server, Error: 18470)
 
 To enable the account, all you have to do is the following
 

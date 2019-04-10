@@ -21,15 +21,15 @@ Last night, I had a mad, mad evening at the inaugural Madison, WI SQL Server Use
 
 First, I'd like to thank the organizers, volunteers and the interim board of directors. Putting together a new group is hard work, and requires time, dedication and passion. The only thing we lack: more time! Our interim board is:
   
-President &#8211; Tim Benninghoff ([Twitter][2] | [Blog][3])
+President – Tim Benninghoff ([Twitter][2] | [Blog][3])
   
-Technical &#8211; Tony Sebion ([Twitter][4] )
+Technical – Tony Sebion ([Twitter][4] )
   
-Communications &#8211; Jes Borland ([Twitter][5])
+Communications – Jes Borland ([Twitter][5])
   
-Membership &#8211; Steve Novoselac ([Twitter][6] | [Blog][7])
+Membership – Steve Novoselac ([Twitter][6] | [Blog][7])
   
-Operations &#8211; Matt Cherwin ([Twitter][8] )
+Operations – Matt Cherwin ([Twitter][8] )
 
 Permanent first-term elections will be held in August, so start thinking about how you can give back to our group by running for a position! 
 

@@ -18,7 +18,7 @@ tags:
   - unit testing
 
 ---
-  * [Part One &#8211; The Beginning][1]
+  * [Part One – The Beginning][1]
 
 In part one we discussed what has brought me to the shameful point of using an object-relational mapper. At the risk of being ostracized from the database community, I really think this is going to be helpful for my project. 
 
@@ -220,10 +220,10 @@ Once this is done, we are ready to set up NHibernate.
 NHibernate is driven by an xml file added to the project called hibernate.cfg.xml. So what are you waiting for, add that file! (again to the root directory) I promise to be here when you get back. Ok, that was not so hard, right? Now, what do we need to add to this file? For this simple example, not all that much. We need to define a “session-factory” class, which is basically a more sophisticated connection string. Properties we need to set include:
 
   * Provider
-  * Dialect &#8211; SQL “flavor” for NHibernate to use
-  * Driver &#8211; Driver NHibernate uses to identify (and connect to) Provider
-  * Connection String &#8211; where is the database located?
-  * Show Sql &#8211; whether to output SQL to the console
+  * Dialect – SQL “flavor” for NHibernate to use
+  * Driver – Driver NHibernate uses to identify (and connect to) Provider
+  * Connection String – where is the database located?
+  * Show Sql – whether to output SQL to the console
 
 So, what does this file look like? Glad you asked:
 

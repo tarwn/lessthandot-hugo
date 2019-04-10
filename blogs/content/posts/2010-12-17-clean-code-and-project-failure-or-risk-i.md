@@ -24,9 +24,9 @@ I recently tuned into an ongoing debate in the software craftsmanship world on t
 
 There have been a number of excellent posts on this topic and I urge you to check them out:
 
-  * Bob Martin ([blog][1]|[twitter][2]) &#8211; [The Cost of Clean Code?][3]
-  * Michael Norton ([blog][4]|[twitter][5]) &#8211; [Code as a Cause of Project Failure][6]
-  * Michael Dubakov ([blog][7]|[twitter][8]) &#8211; [Do Really All Projects Fail Because of Code?][9]
+  * Bob Martin ([blog][1]|[twitter][2]) – [The Cost of Clean Code?][3]
+  * Michael Norton ([blog][4]|[twitter][5]) – [Code as a Cause of Project Failure][6]
+  * Michael Dubakov ([blog][7]|[twitter][8]) – [Do Really All Projects Fail Because of Code?][9]
 
 These are all excellent points, but the focus on business vs code has caused us to miss the fact that all of the examples lead to a single root cause that is neither business nor code.
 

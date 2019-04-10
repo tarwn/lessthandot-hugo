@@ -63,11 +63,11 @@ Costs:
   * Several pieces wired together: changes to the unit and surrounding units
   * During Handoff: Wasted meeting/handoff time for devs and QA personnel, potential schedule change, additional debugging time and cost changes (per prior step)
   * Bugs found in QA: (at minimum) Handoff to Dev, switch from new task to work on bug, investigation, development, debugging changes, handoff to QA, QA repeats some level of testing (high potential for new bug, developers tend to test direct changes only)
-  * Bugs found in handoff to customer: (at a minimum) Prior QA steps,time for QA to duplicate problem, task-switching time for QA, cost of customer time and others involved, re-handoff to customer, timeline impact, potential impact to customer trust (depends on frequency &#8211; costs include increased micro-management, increased meetings, etc)
+  * Bugs found in handoff to customer: (at a minimum) Prior QA steps,time for QA to duplicate problem, task-switching time for QA, cost of customer time and others involved, re-handoff to customer, timeline impact, potential impact to customer trust (depends on frequency – costs include increased micro-management, increased meetings, etc)
   * Bugs found by customer: Similar to last step but any testing to this point by customer is likely to be duplicated, customer schedules impacted, cost of extar customer time, timeline impacted
   * Bugs found in production: Prior step + developers are pulled off other tasks to detect and cleanup bad data, schedules are impacted due to developer time, potentially wasted end user time, potential to retrain + monitor users to work around problem and then retrain back afterward
 
-Besides people-based costs, there are also hidden costs to returning to development and quality stages. The more time that passes between writing the code and returning to it, the more familiarity will be lost and the higher the potential that other pieces will have been added on top of the bug. Other details, such as the specifics of the requirements that code was fulfilling and how it was initially tested prior to QA hand-off, will rely on the memory of the developer and will have to take into account any changes that have occurred since initial development. Perhaps of greater concern is that QA will not have the same level of familiarity with the tests they initially performed and the customer is more likely to add even more &#8216;refinements' when it comes time to re-review the changes.
+Besides people-based costs, there are also hidden costs to returning to development and quality stages. The more time that passes between writing the code and returning to it, the more familiarity will be lost and the higher the potential that other pieces will have been added on top of the bug. Other details, such as the specifics of the requirements that code was fulfilling and how it was initially tested prior to QA hand-off, will rely on the memory of the developer and will have to take into account any changes that have occurred since initial development. Perhaps of greater concern is that QA will not have the same level of familiarity with the tests they initially performed and the customer is more likely to add even more 'refinements' when it comes time to re-review the changes.
 
 Unit Testing is our tool for doing testing at the source, to catch defects earlier before they propagate costs throughout the process.
 
@@ -89,8 +89,8 @@ Other posts in this unplanned series:
 
   * Initial “Unit Testing Costs Too Much” post: [Unit Testing Costs Too Much][3]
   * Code camp review and links for slides: [Raleigh Code Camp Followup][4]
-  * 2x Code Followup: [Unit Testing Costs Too Much &#8211; Twice The Code = Value?][5]
-  * Too Many Things to Learn: [Unit Testing Costs Too Much &#8211; Too Many Things to Learn][6]
+  * 2x Code Followup: [Unit Testing Costs Too Much – Twice The Code = Value?][5]
+  * Too Many Things to Learn: [Unit Testing Costs Too Much – Too Many Things to Learn][6]
 
  [1]: /index.php/DesktopDev/MSTech/raleigh-code-camp-followup "Read my quick CodeCamp review"
  [2]: /index.php/DesktopDev/GeneralPurposeLanguages/unit-testing-costs-too-much "Read the 'Unit testing Costs Too Much' post"

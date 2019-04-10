@@ -28,7 +28,7 @@ categories:
  
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">IF</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;">EXISTS</span><span style="color: blue;"> </span><span style="color: gray;">(</span><span style="color: blue;">SELECT</span> [name] <span style="color: blue;">FROM</span> dbo<span style="color: gray;">.</span><span style="color: green;">sysobjects</span> <span style="color: blue;">WHERE</span> [name] <span style="color: gray;">=</span> <span style="color: red;">&#8216;usp_Delete_OS_Files_By_Date'</span> <span style="color: gray;">AND</span> <span style="color: blue;">TYPE</span> <span style="color: gray;">=</span> <span style="color: red;">&#8216;P'</span><span style="color: gray;">)</span><span style="mso-spacerun: yes;">  </span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">IF</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;">EXISTS</span><span style="color: blue;"> </span><span style="color: gray;">(</span><span style="color: blue;">SELECT</span> [name] <span style="color: blue;">FROM</span> dbo<span style="color: gray;">.</span><span style="color: green;">sysobjects</span> <span style="color: blue;">WHERE</span> [name] <span style="color: gray;">=</span> <span style="color: red;">'usp_Delete_OS_Files_By_Date'</span> <span style="color: gray;">AND</span> <span style="color: blue;">TYPE</span> <span style="color: gray;">=</span> <span style="color: red;">'P'</span><span style="color: gray;">)</span><span style="mso-spacerun: yes;">  </span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -68,11 +68,11 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">                                      </span>@SourceDir = &#8216;\smpprod01BackupsSGC'</span>
+  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">                                      </span>@SourceDir = '\smpprod01BackupsSGC'</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">                                    </span>, @SourceFile = &#8216;SGC_Backup_*'</span>
+  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">                                    </span>, @SourceFile = 'SGC_Backup_*'</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -144,7 +144,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">SET</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> @SourceDirFOR <span style="color: gray;">=</span> <span style="color: red;">&#8216;FOR %I IN (“&#8216;</span> <span style="color: gray;">+</span> @SourceDir <span style="color: gray;">+</span> @SourceFile <span style="color: gray;">+</span> <span style="color: red;">&#8216;”) DO @ECHO %~nxtI'</span><span style="color: gray;">;</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">SET</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> @SourceDirFOR <span style="color: gray;">=</span> <span style="color: red;">'FOR %I IN (“'</span> <span style="color: gray;">+</span> @SourceDir <span style="color: gray;">+</span> @SourceFile <span style="color: gray;">+</span> <span style="color: red;">'”) DO @ECHO %~nxtI'</span><span style="color: gray;">;</span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -156,7 +156,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;">&#8212; Get OS File information from the OS</span>
+  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;">— Get OS File information from the OS</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -188,7 +188,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;">&#8212; Put the OS File info in date order</span>
+  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;">— Put the OS File info in date order</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -244,7 +244,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;">&#8212; Loop through OS Information and create delete command and execute </span>
+  <span style="font-family: &amp;amp; color: green; font-size: 10pt; mso-no-proof: yes;">— Loop through OS Information and create delete command and execute </span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -288,7 +288,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">WHILE </span><span style="font-family: &amp;amp; color: gray; font-size: 10pt; mso-no-proof: yes;">(</span><span style="font-family: &amp;amp; color: fuchsia; font-size: 10pt; mso-no-proof: yes;">@@fetch_status</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;"><></span> <span style="color: gray;">&#8211;</span>1<span style="color: gray;">)</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">WHILE </span><span style="font-family: &amp;amp; color: gray; font-size: 10pt; mso-no-proof: yes;">(</span><span style="font-family: &amp;amp; color: fuchsia; font-size: 10pt; mso-no-proof: yes;">@@fetch_status</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;"><></span> <span style="color: gray;">–</span>1<span style="color: gray;">)</span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -300,7 +300,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">      </span><span style="color: blue;">IF </span><span style="color: gray;">(</span><span style="color: fuchsia;">@@fetch_status</span> <span style="color: gray;"><></span> <span style="color: gray;">&#8211;</span>2<span style="color: gray;">)</span><span style="mso-spacerun: yes;">    </span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">      </span><span style="color: blue;">IF </span><span style="color: gray;">(</span><span style="color: fuchsia;">@@fetch_status</span> <span style="color: gray;"><></span> <span style="color: gray;">–</span>2<span style="color: gray;">)</span><span style="mso-spacerun: yes;">    </span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -308,7 +308,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">            </span><span style="color: blue;">SET</span> @DelCommand <span style="color: gray;">=</span> <span style="color: red;">&#8216;</span></span><span style="font-family: &amp;amp; color: red; font-size: 10pt; mso-no-proof: yes;">DEL</span><span style="font-family: &amp;amp; color: red; font-size: 10pt; mso-no-proof: yes;"> /Q “&#8216;</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;">+</span> @SourceDir <span style="color: gray;">+</span> @FileName <span style="color: gray;">+</span> <span style="color: red;">&#8216;”&#8216;</span><span style="color: gray;">;</span><span style="mso-spacerun: yes;">     </span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">            </span><span style="color: blue;">SET</span> @DelCommand <span style="color: gray;">=</span> <span style="color: red;">'</span></span><span style="font-family: &amp;amp; color: red; font-size: 10pt; mso-no-proof: yes;">DEL</span><span style="font-family: &amp;amp; color: red; font-size: 10pt; mso-no-proof: yes;"> /Q “'</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;">+</span> @SourceDir <span style="color: gray;">+</span> @FileName <span style="color: gray;">+</span> <span style="color: red;">'”'</span><span style="color: gray;">;</span><span style="mso-spacerun: yes;">     </span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">

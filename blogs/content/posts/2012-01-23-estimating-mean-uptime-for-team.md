@@ -35,7 +35,7 @@ Uptime minutes / Planned Uptime * 100 = Uptime %
 
 Planned uptime should always be set forth and well-documented.  This is more relevant if the systems are not a 24 by 7 operation.  Estimating weekends when no connectivity is required could prove to have a drastic negative impact on the overall uptime.  This would involve normal updates to operating systems, database servers, effects from other key system components, and maintenance.  Maintenance can be a gray area so plan well.  If running something like SQL Server Standard Edition, maintenance on indexes can be a factor in overall planned downtime and uptime.  This is due to the time it takes for large indexes to be rebuilt and the data not being available during that time.  Without planning uptime, or planned downtime, the objectives can be nearly impossible to estimate.
 
-Now that uptime has been defined and explained, add in the remaining components defined earlier that are required for an overall uptime objective.  Let’s assume we planned uptime has been set to allow for 60 minutes of downtime for each component; uptime minutes / 525900 \* 100 = Uptime %.  Planned uptime minutes = (365.25 \* 24 * 60) &#8211; 60 = 525900
+Now that uptime has been defined and explained, add in the remaining components defined earlier that are required for an overall uptime objective.  Let’s assume we planned uptime has been set to allow for 60 minutes of downtime for each component; uptime minutes / 525900 \* 100 = Uptime %.  Planned uptime minutes = (365.25 \* 24 * 60) – 60 = 525900
 
 If we achieved 525800 minutes of uptime, this would mean we achieved 99.98% uptime.
 

@@ -28,7 +28,7 @@ One of the benefits of Microsoft SQL Azure over an on-premises or VM installatio
 Finding good, detailed articles about this has been difficult. Here's a couple I found:
 
   * [Fault-tolerance in Windows Azure SQL Database][1]
-  * [Inside Microsoft Azure SQL Database][2] (retired article &#8211; this is a revision from prior to it being taken down)
+  * [Inside Microsoft Azure SQL Database][2] (retired article – this is a revision from prior to it being taken down)
 
 What really interested me was the database communications. How do reads flow into the database when there's 3 of them? How do writes occur when one of my database replicas is down? How does a replica catch back up when it is available again?
 
@@ -143,8 +143,8 @@ Things I simplified:
 Things I got wrong:
 
   * Commits: While I tried to match the explained process, it is not wholly accurate and there is definitely a bug when a commit comes in with an Online Primary, a restoring Secondary, and an Offline secondary. It will be queued up for commit on the secondary but aborted on the primary due to lack of quorum, leading to a secondary that has bad data (and possibly both secondaries, if the other comes online before the next write occurs).
-  * The Full Restore logic &#8211; this was an extrapolated guess from the documentation
-  * SQL Transactions and multi-step operations &#8211; these aren't implemented purely, but didn't seem to add much value from the perspective of showing how the distributed logic works
+  * The Full Restore logic – this was an extrapolated guess from the documentation
+  * SQL Transactions and multi-step operations – these aren't implemented purely, but didn't seem to add much value from the perspective of showing how the distributed logic works
 
 See anything else? I would love to know so I could improve the models, let me know.
 

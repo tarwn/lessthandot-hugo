@@ -64,7 +64,7 @@ C. Set your Margins. In this example, they are Left 0, Right 0, Top 0.1875, and 
   
 A. Set the Width and Height properties of the textbox. Again, a width of 2.8125 and a height of 1.0625.
   
-B. You'll also need to adjust the Padding. Remember, this box is slightly larger than the actual labels because of the margins and area between the labels. I set Padding to Left &#8211; 15pt, Right &#8211; 15 pt, Top &#8211; 0 pt, Bottom &#8211; 0 pt. 
+B. You'll also need to adjust the Padding. Remember, this box is slightly larger than the actual labels because of the margins and area between the labels. I set Padding to Left – 15pt, Right – 15 pt, Top – 0 pt, Bottom – 0 pt. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/SSRSLabels4.JPG?mtime=1298823149"><img alt="" src="/wp-content/uploads/users/grrlgeek/SSRSLabels4.JPG?mtime=1298823149" width="218" height="359" /></a>

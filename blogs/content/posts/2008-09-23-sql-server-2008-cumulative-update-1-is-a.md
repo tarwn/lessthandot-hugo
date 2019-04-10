@@ -68,7 +68,7 @@ SQL Server 2008 Reporting Services may stop responding when you move a history s
 
 Error message when you try to create a query against a Hyperion Essbase cube database: “OLAP error (1260046): Unknown Member PARENT\_UNIQUE\_NAME used in query”
 
-Error message when you run an MDX query that uses the CREATE GLOBAL CUBE statement to create a local cube in SQL Server 2008 Analysis Services or in SQL Server 2005 Analysis Services: “The syntax for &#8216;<MDXFunctionName>' is incorrect”
+Error message when you run an MDX query that uses the CREATE GLOBAL CUBE statement to create a local cube in SQL Server 2008 Analysis Services or in SQL Server 2005 Analysis Services: “The syntax for '<MDXFunctionName>' is incorrect”
 
 The SQL Server 2005 Distribution Agent and the SQL Server 2008 Distribution Agent do not skip error 20598 when you configure a SQL Server 2000 transactional publication to skip error 20598
 
@@ -82,7 +82,7 @@ Error message when you run an INSERT statement in SQL Server: “Cannot insert a
 
 You cannot view calculated members in an Excel 2007 pivot table that references an OLAP table in SQL Server 2005 Analysis Services Service Pack 2 or in SQL Server 2008 Analysis Services
 
-Error message when you run an MDX query in SQL Server 2008 Analysis Services: “The MDX function failed because the coordinate for the &#8216;<AttributeName>' attribute contains a set”
+Error message when you run an MDX query in SQL Server 2008 Analysis Services: “The MDX function failed because the coordinate for the '<AttributeName>' attribute contains a set”
 
 Error message when you update a table at the subscriber in a transactional replication in SQL Server 2005: “Updateable Subscriptions: Rows do not match between Publisher and Subscriber”
 

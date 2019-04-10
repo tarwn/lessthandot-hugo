@@ -58,7 +58,7 @@ The IO from this query should show these results:
 
 (100 row(s) affected)
 
-Table &#8216;PerfLOB'. Scan count 1, logical reads 4, physical reads 0, read-ahead reads 0, lob logical reads 200, lob physical reads 0, lob read-ahead reads 0. (1 row(s) affected)
+Table 'PerfLOB'. Scan count 1, logical reads 4, physical reads 0, read-ahead reads 0, lob logical reads 200, lob physical reads 0, lob read-ahead reads 0. (1 row(s) affected)
 
 **SQL Server 2005+ Investigation** 
 

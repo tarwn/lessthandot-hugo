@@ -32,7 +32,7 @@ Let's forget about the message for a minute and focus on the point of it all for
 
 Your software has blown up. The user only cares about your software because it's enabling them to get some work done or providing entertainment or otherwise allowing them to do something that has absolutely nothing to do with enjoying the actual software. The tool has just blown up in their hands and whatever time they invested or value they were expecting has just gone out the window.
 
-In programmer terms, this is Visual Studio/Eclipse/etc crashing with a dozen unsaved files. A corrupt git repository with no backups. The RAID controller of your business database committing suicide 20 minutes before someone realizes the backups were also on the local drive. HR getting the math wrong when they determine how many people in your group to &#8216;right-size'. Yeah.
+In programmer terms, this is Visual Studio/Eclipse/etc crashing with a dozen unsaved files. A corrupt git repository with no backups. The RAID controller of your business database committing suicide 20 minutes before someone realizes the backups were also on the local drive. HR getting the math wrong when they determine how many people in your group to 'right-size'. Yeah.
 
 “There was an error, we're sorry for the inconvenience. Please try again later.”
 
@@ -40,7 +40,7 @@ Still a good error?
 
 ## Own Your Errors
 
-Instead of focusing on blame-shifting in every direction but yourself with a &#8216;professional' bland error message, own the damn error. Every error message should tell the user exactly what the situation is and what to do next. Even assurance of the worst case you can think of is probably not going to outdo what their imaginations will come up with if you tell them nothing at all (as they pound that retry button and get more and more angry).
+Instead of focusing on blame-shifting in every direction but yourself with a 'professional' bland error message, own the damn error. Every error message should tell the user exactly what the situation is and what to do next. Even assurance of the worst case you can think of is probably not going to outdo what their imaginations will come up with if you tell them nothing at all (as they pound that retry button and get more and more angry).
 
 Is their work recoverable? Tell them. 
 

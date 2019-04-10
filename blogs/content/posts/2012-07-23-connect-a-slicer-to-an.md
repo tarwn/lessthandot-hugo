@@ -69,7 +69,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: tahoma,arial,helvetica,sans-serif;">Ok, this is where we get a little technical.  Here is the basic code needed to pass a <strong>SINGLE</strong> slicer value to a PivotTable.  Modification would need to be made &#8212; and are shown in comments – to allow for multiple values to be passed.  <strong>REMEMBER.  THIS IS IMPORTANT!</strong> Multiple values can ONLY be passed if the data source is from an OLAP database.  This is from the Excel Object Model documentation.  If you try to pass multiple values to a non-OLAP source object, a run-time error will occur.</span>
+  <span style="font-family: tahoma,arial,helvetica,sans-serif;">Ok, this is where we get a little technical.  Here is the basic code needed to pass a <strong>SINGLE</strong> slicer value to a PivotTable.  Modification would need to be made — and are shown in comments – to allow for multiple values to be passed.  <strong>REMEMBER.  THIS IS IMPORTANT!</strong> Multiple values can ONLY be passed if the data source is from an OLAP database.  This is from the Excel Object Model documentation.  If you try to pass multiple values to a non-OLAP source object, a run-time error will occur.</span>
 </p>
 
  

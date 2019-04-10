@@ -58,9 +58,9 @@ This is almost a literal translation of the C# except for one thing. Notice how 
 
 The first class support for asynchronous work flows is an amazing feature of F#. It allows you to create simple elegant code right where you need it. Think about some of your synchronous projects that just don't have the performance you need and consider F# as a powerful solution to you problem.
 
-[F# &#8211; Microsoft Research][1]
+[F# – Microsoft Research][1]
   
-[F# &#8211; MSDN][2]
+[F# – MSDN][2]
 
  [1]: http://research.microsoft.com/en-us/um/cambridge/projects/fsharp/
  [2]: http://msdn.microsoft.com/en-us/fsharp/default.aspx

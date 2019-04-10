@@ -79,7 +79,7 @@ EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'SoftwareMicrosoftMSSQLServerM
 GO
 ```
 
-Or you can do it by right clicking on the server &#8211;> properties &#8211;> Database Settings if you are not as comfortable running SQL. Here is what it looks like
+Or you can do it by right clicking on the server –> properties –> Database Settings if you are not as comfortable running SQL. Here is what it looks like
   
 [<img src="http://farm7.static.flickr.com/6043/6355955641_8d0daa2731_b.jpg" width="704" height="632" alt="DBSettings" />][2]
 

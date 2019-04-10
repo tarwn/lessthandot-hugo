@@ -60,7 +60,7 @@ INNER JOIN (SELECT MyTable.Id
 
 The above is the original test case and the solution we implemented with Borislav.
 
-Based on Nikola's comments I re-worked the test case. The last suggestion performs the best. We can get further improvement if we include &#8216;% &#8216; in our Keys and WordsToExclude tables. For the explanation of the last Nikola's query see http://msdn.microsoft.com/en-us/library/ms178543.aspx
+Based on Nikola's comments I re-worked the test case. The last suggestion performs the best. We can get further improvement if we include '% ' in our Keys and WordsToExclude tables. For the explanation of the last Nikola's query see http://msdn.microsoft.com/en-us/library/ms178543.aspx
 
 See also this blog [ALL, ANY and SOME: The Three Stooges][2] 
 

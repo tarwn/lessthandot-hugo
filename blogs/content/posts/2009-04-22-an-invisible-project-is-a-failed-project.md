@@ -18,7 +18,7 @@ tags:
 ---
 **What is a Project**
   
-Most people, on hearing the term &#8216;project', immediately think of the long, drawn out affairs including large percentages of the company attempting to achieve business-transforming achievements. However if we look at projects based simply on the number and type that occur, we find that a far greater percentage are small affairs with short timespans, small goals, and smaller teams. These smaller projects consume the resources that aren't on the larger projects, account for the resources from those larger projects when the larger project is not active, and often have little to no natural visibility when viewed beside the game-changing larger project.
+Most people, on hearing the term 'project', immediately think of the long, drawn out affairs including large percentages of the company attempting to achieve business-transforming achievements. However if we look at projects based simply on the number and type that occur, we find that a far greater percentage are small affairs with short timespans, small goals, and smaller teams. These smaller projects consume the resources that aren't on the larger projects, account for the resources from those larger projects when the larger project is not active, and often have little to no natural visibility when viewed beside the game-changing larger project.
   
 Considering there will likely be at least 10 to 20 small projects for each large project, and small projects are less driven to provide high level visibility to a wide audience, it is not strange that the large projects draw attention so naturally.
 
@@ -32,7 +32,7 @@ And that's how we fail.
 
 **Invisibility as a Form of Failure**
   
-We will assume that your product successfully fulfilled the &#8216;requirements' you discussed with the &#8216;Stakeholder' while waiting for the barely palatable coffee to brew. We will assume that you managed to launch the change on the exact date you originally estimated, with absolutely flawless execution.
+We will assume that your product successfully fulfilled the 'requirements' you discussed with the 'Stakeholder' while waiting for the barely palatable coffee to brew. We will assume that you managed to launch the change on the exact date you originally estimated, with absolutely flawless execution.
 
 How then is this a failure?
 
@@ -60,11 +60,11 @@ Three small steps can turn this whole situation into a positive improvement for 
 Even small projects should have some type of appreciable benefit for the company. Waste reductions, cost reductions, quality improvements, risk reduction: you are executing a project and should be increasing value, otherwise you really shouldn't be doing that project. Quantify that value and what it costs without this project. You are not simplifying a process, you are: 
 
   * Reducing complexity and training requirements by _removedSteps/OldNumberOfSteps_
-  * Reducing potential for error &#8211; _1/OldNumberOfSteps_
-  * Cycle time &#8211; _process time reduction_
-  * Task execution time &#8211; _end-user time reduction_
+  * Reducing potential for error – _1/OldNumberOfSteps_
+  * Cycle time – _process time reduction_
+  * Task execution time – _end-user time reduction_
 
-Now you have some numbers, it's time to determine how you will communicate those results to the company. If you wait until your annual review then your going to get some credit for it, but your boss needs something to take to their annual review, as does the &#8216;Stakeholder', their boss, your CEO, … the list goes on. The quantified benefits need to be communicated up the chain, preferably in a way that does not cause your coworkers to make additions to your coffee every time you turn your back.
+Now you have some numbers, it's time to determine how you will communicate those results to the company. If you wait until your annual review then your going to get some credit for it, but your boss needs something to take to their annual review, as does the 'Stakeholder', their boss, your CEO, … the list goes on. The quantified benefits need to be communicated up the chain, preferably in a way that does not cause your coworkers to make additions to your coffee every time you turn your back.
 
 So back to the conversation you are having with your Stakeholder at the beginning of the project. This time there are a few extra items you are going to discuss, such as a method of reporting the project status and the benefits. This should be a very simple method, both to generate and to understand. Next, while your discussing the potential benefits and the method you will use to report the project status and gains, you are going to extend the project by a couple months.
   
@@ -72,7 +72,7 @@ Yep, read that again. Once more. Ready? We have just taken your small 4 week pro
 
 As you progress through the year you will begin to accumulate completed projects with quantifiable _long-term_ benefits. After each of the post-implementation meetings you will publish a set of final results as well as projections on what the change will save over the course of a year. This will be provided to the Stakeholder and then, if they are willing, published to a larger group that includes both your boss and theirs. If the savings are significant, bring your boss into the discussion and let them choose whether to take it higher. And finally, make sure that any minions that assisted you with the project receive proper levels of appreciation in the final report.
 
-How do we handle a case where the potential benefits were poorly selected or their estimates grossly off target? Well, we get a bit more learning in that self-improvement to marketing ratio. Spend some time brainstorming what types of improvements you did gain (experience, skill enhancements, process or business model understanding, etc). This is not a high gain report, but you still have some currency if you brainstorm a few &#8216;secondary benefits' that were achieved despite the initial benefits not playing out. Not something to take to the CEO, but still marketable and still usable when reporting your progress at the end of the year. Successful execution of a 3 month project on time and on budget with secondary benefits still beats &#8216;I did that thing for Joe down the hall'.
+How do we handle a case where the potential benefits were poorly selected or their estimates grossly off target? Well, we get a bit more learning in that self-improvement to marketing ratio. Spend some time brainstorming what types of improvements you did gain (experience, skill enhancements, process or business model understanding, etc). This is not a high gain report, but you still have some currency if you brainstorm a few 'secondary benefits' that were achieved despite the initial benefits not playing out. Not something to take to the CEO, but still marketable and still usable when reporting your progress at the end of the year. Successful execution of a 3 month project on time and on budget with secondary benefits still beats 'I did that thing for Joe down the hall'.
 
 **Details of Success**
   

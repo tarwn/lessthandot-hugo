@@ -23,7 +23,7 @@ Here is what I found interesting this past week in SQL Land:
   
 Brent Ozar (without Hulk hands) explains in a video why backup log with truncate_only is a dangerous command with serious consequences. Learn why this might not be the best way to free up drive space on your SQL Server.
 
-**[does size really matter &#8211; or is it what you do with it?][2]**
+**[does size really matter – or is it what you do with it?][2]**
   
 Paul Randal has a survey on his website: “I'm interested in the physical layout of your databases. I've got four surveys, for a variety of database sizes. Please vote multiple times in each survey, as you see fit”
 
@@ -33,7 +33,7 @@ Andrew Kelly asks: “are dirty reads overused or even abused” by the average 
 
 **[Requirements vs Architecture][4]**
   
-Louis Davidson has a nice post, he asks: “Can you turn off the “Get ‘er done” part of your mind when you are doing requirements, or do you find that you really really want to start building software well before you really understand the entire problem?”
+Louis Davidson has a nice post, he asks: “Can you turn off the “Get 'er done” part of your mind when you are doing requirements, or do you find that you really really want to start building software well before you really understand the entire problem?”
 
 **[SQL Server 2008 SP1 Cumulative Update 1 is available!][5]**
   
@@ -43,7 +43,7 @@ Aaron Bertrand tells us that if you were among those who installed CU4 for SQL S
   
 Gail writes: “I was listening to a podcast on nHibernate this morning. Most of it was very good, but there was one section that absolutly made me see red.
 
-The guest on the show was asked how the DBAs felt about the use of nHibernate for a new app on an existing (old) database. The reply essentially was &#8216;We haven't told them and we’re not going to tell them.'”
+The guest on the show was asked how the DBAs felt about the use of nHibernate for a new app on an existing (old) database. The reply essentially was 'We haven't told them and we’re not going to tell them.'”
 
 
 

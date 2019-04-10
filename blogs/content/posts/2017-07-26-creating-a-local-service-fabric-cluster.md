@@ -26,9 +26,9 @@ Here are the technical details:
 
 My VMs are: 
 
-  * SFNode0 &#8211; 192.168.1.200
-  * SFNode1 &#8211; 192.168.1.201
-  * SFNode2 &#8211; 192.168.1.202
+  * SFNode0 – 192.168.1.200
+  * SFNode1 – 192.168.1.201
+  * SFNode2 – 192.168.1.202
 
 Here we go!
 
@@ -181,19 +181,19 @@ Here are the errors as I work through them:
 
 ### Name Resolution Failure
 
-**Error:** “Machine &#8216;SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: No such host is known”
+**Error:** “Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: No such host is known”
 
 **Fix:** Name resolution failed to find the host on my local network, so I switched my `iPAddress` properties to actual IP Addresses.
 
 ### Missing Firewall Rule
 
-**Error:** “Machine &#8216;SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: A connection attempt failed because the conncted party did not properly respond…” (classic timeout error)
+**Error:** “Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: A connection attempt failed because the conncted party did not properly respond…” (classic timeout error)
 
 **Fix:** Add the Firewall rule I mentioned above to allow traffic on 135, 137, 138, 139, and 445.
 
 ### SMB? Reboot all the things
 
-**Error:** “Machine &#8216;SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: The connection was actively refused”
+**Error:** “Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: The connection was actively refused”
 
 **Fix:**
   
@@ -256,7 +256,7 @@ Right click the project and select “Publish”. In the Publish dialog, select 
   <img src="/wp-content/uploads/2017/07/PublishPackage.png" alt="VS 2017 - Publish Package for Service Fabric" width="638" height="434" class="size-full wp-image-8723" srcset="/wp-content/uploads/2017/07/PublishPackage.png 638w, /wp-content/uploads/2017/07/PublishPackage-300x204.png 300w" sizes="(max-width: 638px) 100vw, 638px" />
   
   <p class="wp-caption-text">
-    VS 2017 &#8211; Publish Package for Service Fabric
+    VS 2017 – Publish Package for Service Fabric
   </p>
 </div>
 

@@ -539,7 +539,7 @@ Now we go on to the content on this site.
 
 <ol start='1'>
   <li>
-    <a href="/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks &#8211; 100+ List</a> &#8206;(19,784 views)
+    <a href="/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a> &#8206;(19,784 views)
   </li>
   <li>
     <a href="/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a> &#8206;(19,405 views)

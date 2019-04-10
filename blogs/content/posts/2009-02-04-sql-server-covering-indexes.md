@@ -18,7 +18,7 @@ Most developers know that indexes can help speed up your queries, but what happe
 
 In SQL Server Management Studio, you can see the execution plan by pressing CTRL-M and then run your query. With Query Analyzer, use CTRL-K. After you run the query, you will see a new tab for the execution plan.
 
-There is a &#8216;type' of index that performs better than a clustered index. You can create a covering index. This is more of an idea (there is no syntax for COVERING in SQL). It sometimes helps to think of an index as a separate table. It's not, but for the moment, think of it that way. When you create an index, an object is created in the database that has all of the data in the index. SQL Server can then use this index to speed up your queries. Now, consider a query that only uses a couple of columns in your table. If you create an index that has all of the data from those columns, then there is no reason for the query to use the table (because all of the data is found in the index).
+There is a 'type' of index that performs better than a clustered index. You can create a covering index. This is more of an idea (there is no syntax for COVERING in SQL). It sometimes helps to think of an index as a separate table. It's not, but for the moment, think of it that way. When you create an index, an object is created in the database that has all of the data in the index. SQL Server can then use this index to speed up your queries. Now, consider a query that only uses a couple of columns in your table. If you create an index that has all of the data from those columns, then there is no reason for the query to use the table (because all of the data is found in the index).
 
 For example:
 
@@ -44,7 +44,7 @@ Select FavoriteColor
 From   PeopleTest
 Where  Id = 2
 ```
-This will return &#8216;Green'. Simple, right. Well… here's what's happening behind the scenes. SQL Server will use the clustered index to quickly locate the row where ID = 2. It will then go to the table to get FavoriteColor. Essentially, there are 2 steps. Locate the row in the index and use it to look up the row in the table.
+This will return 'Green'. Simple, right. Well… here's what's happening behind the scenes. SQL Server will use the clustered index to quickly locate the row where ID = 2. It will then go to the table to get FavoriteColor. Essentially, there are 2 steps. Locate the row in the index and use it to look up the row in the table.
 
 Now, add this nonclustered index:
 

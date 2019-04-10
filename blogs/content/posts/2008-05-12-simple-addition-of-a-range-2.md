@@ -27,13 +27,13 @@ for (i=1;i<=100;i++)
 }
 document.write("Loop: " + sumOfRangeLoop + "<br/>");	
 ```
-Great &#8211; it gets you the answer that you wanted. Now what about 25 to 25,000,000 ? OK, that takes a while to run…. What if I tried 234 to 435,657,123 ? Mmmm… ouch. This doesn't work too well does it ? 
+Great – it gets you the answer that you wanted. Now what about 25 to 25,000,000 ? OK, that takes a while to run…. What if I tried 234 to 435,657,123 ? Mmmm… ouch. This doesn't work too well does it ? 
 
 ## Improving Performance
 
 If we want to be able to scale our code then we need to use a little math to help us get the answer, instead of relying on brute force. 
 
-In this [excellent and clearly explained article about number range summation][1], you will see that there are many ways to visualise the process to make it easier to calculate the sum of a range &#8211; even in our head, and how they all lead toward a single formula. Within the comments you will notice that discussion identifies a more generic formula that allows for the starting position to be more than 1, and also to allow evenly spaced &#8216;steps'. 
+In this [excellent and clearly explained article about number range summation][1], you will see that there are many ways to visualise the process to make it easier to calculate the sum of a range – even in our head, and how they all lead toward a single formula. Within the comments you will notice that discussion identifies a more generic formula that allows for the starting position to be more than 1, and also to allow evenly spaced 'steps'. 
 
 ```javascript
 var rangeStart = 234;
@@ -113,7 +113,7 @@ Testing Loop: 7.342 seconds
 
 ## In Conclusion
 
-So, this simply means that you should use the right tool for the job. The Brute Force method doesn't scale very well &#8211; there are simple equations that can answer this question, so.. use them. Here is a self contained function that returns the sum of a range from x to y with stepping z. You'll need to validate the rangeStep to ensure it is valid with the rangeStart and rangeEnd.
+So, this simply means that you should use the right tool for the job. The Brute Force method doesn't scale very well – there are simple equations that can answer this question, so.. use them. Here is a self contained function that returns the sum of a range from x to y with stepping z. You'll need to validate the rangeStep to ensure it is valid with the rangeStart and rangeEnd.
 
 ```javascript
 function sumRange(rangeStart, rangeEnd, rangeStep)

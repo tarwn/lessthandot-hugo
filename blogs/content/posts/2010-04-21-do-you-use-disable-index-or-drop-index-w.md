@@ -126,7 +126,7 @@ We get this error
   
  _Msg 8655, Level 16, State 1, Line 1
   
-The query processor is unable to produce a plan because the index &#8216;ix_TestIndexClustered' on table or view &#8216;TestIndex' is disabled._
+The query processor is unable to produce a plan because the index 'ix_TestIndexClustered' on table or view 'TestIndex' is disabled._
 
 As you can see while a clustered index is disabled the data is unavailable. Not only that, you can also not insert anything into the table,
   
@@ -141,7 +141,7 @@ Fails with the same error from before
   
 _Msg 8655, Level 16, State 1, Line 1
   
-The query processor is unable to produce a plan because the index &#8216;ix_TestIndexClustered' on table or view &#8216;TestIndex' is disabled._
+The query processor is unable to produce a plan because the index 'ix_TestIndexClustered' on table or view 'TestIndex' is disabled._
 
 If we rebuild the clustered index again
 

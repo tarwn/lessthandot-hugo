@@ -33,7 +33,7 @@ You will see a list of languages that SQL Server supports.
 
 The odd thing here is that the server's language setting will not solve your problem. This setting configures the default language for NEW users. By changing this setting, existing users will continue to have their original language. This is where it gets interesting because it's the login's language setting that determines SQL Server's date format.
 
-For example, if user A has a default language of us_english, then a date of 4/6/2006 will be interpreted as April 6, 2006. If user B has a default language of &#8216;British', then the date will be interpreted as June 4, 2006.
+For example, if user A has a default language of us_english, then a date of 4/6/2006 will be interpreted as April 6, 2006. If user B has a default language of 'British', then the date will be interpreted as June 4, 2006.
 
 So far, I'm just presenting some background information and haven't really solved the problem. 
 

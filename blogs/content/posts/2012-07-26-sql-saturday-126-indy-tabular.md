@@ -30,11 +30,11 @@ I hope you can join me at 1:00 PM at SQL Saturday #126 in Indianapolis, IN.  I 
 
 -Josh
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+—————————————————————————————————————————————
 
 _**Update**_
 
 Thank you all who attended my session!  If you would like a copy of my slides/database project please see the following links:
 
-Slides &#8212; http://sdrv.ms/OZgEL1  
-Database Project &#8212; http://sdrv.ms/O4yoDx
+Slides — http://sdrv.ms/OZgEL1  
+Database Project — http://sdrv.ms/O4yoDx

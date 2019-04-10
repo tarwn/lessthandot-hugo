@@ -34,7 +34,7 @@ First we need an example of the event and, being lazy, I'm going to generate one
 When we open the Event Log from Administrative Tools menu in Windows, there are several logs available. SQL Server and other service log entries are logged to the Application log. To create my new event-driven task, I locate the entry I just created, right click it, and select “Attach Task to This Event…”.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/EventMonitor/orig/01_screen.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/EventMonitor/01_screen.png" alt="Attach Task to Event Dialog" /></a><br /> Attach Task to Event &#8211; Dialog
+  <a href="http://tiernok.com/LTDBlog/EventMonitor/orig/01_screen.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/EventMonitor/01_screen.png" alt="Attach Task to Event Dialog" /></a><br /> Attach Task to Event – Dialog
 </div>
 
 The Task creation option presents us with a fairly simple dialog. To be consistent and build good habits, we fill in a descriptive name and description for the task. 

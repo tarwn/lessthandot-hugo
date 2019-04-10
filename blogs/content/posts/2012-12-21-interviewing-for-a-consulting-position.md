@@ -64,7 +64,7 @@ Several other answers and possibly more questions will come from the time spent 
 
 _Do you have any questions?_ 
 
-With almost all interviews, the interview ends with the interviewer asking, “Do you have any questions for me?”   Take full advantage of this question.  A question that can be extremely effective is, “How do you like it here &#8211; the people, the team, the success of the business and overall, your feel for the company being a success story?”
+With almost all interviews, the interview ends with the interviewer asking, “Do you have any questions for me?”   Take full advantage of this question.  A question that can be extremely effective is, “How do you like it here – the people, the team, the success of the business and overall, your feel for the company being a success story?”
 
 Although this seems like a loaded question it can bring out details on how each person that is presented with the question replies to it.  If the interview is in person, pay close attention to the demeanor of them when this is asked.  This can tell you if the question has made the interviewer or team member uncomfortable which leads to a negative feeling towards the company.  Body language can be as effective in answering important questions as the verbal answer.
 
@@ -78,7 +78,7 @@ Note: Examples are examples and should not be the only preparation or skill cons
 
 _Consultant_ 
 
-Interviewing for a consultant position or entry level consulting position can be the most challenging.  If a person has little knowledge of consulting, this could be potentially a point of stress leading up to or during an interview.  One aspect to interviewing a potential consultant is finding a stress point or fracture point in which the person has.  This is important!  As a consultant, stress may be compounded and higher than many other positions in fulltime employment.  This is the nature of consulting in time and workload expectations.  Work ethics as an experienced consultant typically lower a great deal of stress in those areas but, to a person entering consulting for the first time, it is something that a good interviewer will seek out &#8211; how long does it take to stress them.
+Interviewing for a consultant position or entry level consulting position can be the most challenging.  If a person has little knowledge of consulting, this could be potentially a point of stress leading up to or during an interview.  One aspect to interviewing a potential consultant is finding a stress point or fracture point in which the person has.  This is important!  As a consultant, stress may be compounded and higher than many other positions in fulltime employment.  This is the nature of consulting in time and workload expectations.  Work ethics as an experienced consultant typically lower a great deal of stress in those areas but, to a person entering consulting for the first time, it is something that a good interviewer will seek out – how long does it take to stress them.
 
 The first and best advice for a person interviewing for their first consulting position is, relax!  The interviewing company should be aware of the fact this is a new career path and take that into account.  This should not be a negative factor against you unless there was misleading information or a position is simply not ideal for a new consultant.
 

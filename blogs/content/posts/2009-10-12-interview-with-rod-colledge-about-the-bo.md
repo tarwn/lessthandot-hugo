@@ -60,7 +60,7 @@ I can’t live without Redgate’s [SQL Compare][4] and Quest’s [Litespeed][5]
 
 Almost 🙂 It’s a great move in the right direction. If only we could constrain disk and network resources in the same way as CPU and memory. Hopefully that will be addressed in the next version of SQL Server.
 
-The other interesting thing about Resource Governor is that as well as constraining resource usage, we can also use it to measure resource usage by group, and use that for time costing purposes &#8211; like they used to do in the old mainframe days.
+The other interesting thing about Resource Governor is that as well as constraining resource usage, we can also use it to measure resource usage by group, and use that for time costing purposes – like they used to do in the old mainframe days.
 
 **Will DBAs finally realize high availability with mirroring is not a disasterrecovery solution after reading SQL Server 2008 Administration in Action?**
 

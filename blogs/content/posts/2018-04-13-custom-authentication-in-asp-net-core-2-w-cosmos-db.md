@@ -175,13 +175,13 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ```
 _Note: While I refer to the “Cookies” scheme by name, you'll note above I actually use the constant CookieAuthenticationDefaults.AuthenticationScheme_
 
-**#1 &#8211; services.AddCustomMembership:** Register CosmosDBMembership as a Transient dependency for ICustomMembership vi an [extension method (github)][7].
+**#1 – services.AddCustomMembership:** Register CosmosDBMembership as a Transient dependency for ICustomMembership vi an [extension method (github)][7].
 
-**#2 &#8211; services.AddAuthentication:** Set the Default Authentication Scheme to our “Cookies” scheme to tell the system to use the “Cookies” module for challenging Unauthorized users.
+**#2 – services.AddAuthentication:** Set the Default Authentication Scheme to our “Cookies” scheme to tell the system to use the “Cookies” module for challenging Unauthorized users.
 
-**#3 &#8211; .AddCookie:** Lightly configure a Cookies module to use the “Cookies” scheme and provide the “LoginPath” used for challenging a user. (I don't recall why I included “LogoutPath”). Wire an event in for `OnValidatePrincipal` that gets the registered Membership object and asks it if the user is valid according to our business logic.
+**#3 – .AddCookie:** Lightly configure a Cookies module to use the “Cookies” scheme and provide the “LoginPath” used for challenging a user. (I don't recall why I included “LogoutPath”). Wire an event in for `OnValidatePrincipal` that gets the registered Membership object and asks it if the user is valid according to our business logic.
 
-**#4 &#8211; app.UseAuthentication:** Include the configured authentication middleware in the application
+**#4 – app.UseAuthentication:** Include the configured authentication middleware in the application
 
 Now that we have wired ourselves into the outside world, let's move on to build the business logic and persistence.
 
@@ -280,7 +280,7 @@ Now the setup for CosmosDB will be called just the one time, instead of on every
 
 The last step is actually using these changes to read and write `LoginUser` and `LoginSession` instances to CosmosDB.
 
-### Cosmos DB &#8211; Membership
+### Cosmos DB – Membership
 
 We have an Interface defined above and the `Persistence` class has been refactored so we can add new Cosmos DB methods as we need them. Now we can focus on fleshing out the concrete `CosmosDBMembership` class. This wil then define the Persistence methods we need to add for Cosmos DB.
 
@@ -289,7 +289,7 @@ We have an Interface defined above and the `Persistence` class has been refactor
   * LogoutAsync
   * ValidateLoginAsync
 
-[Membership/CosmosDBMembership.cs &#8211; RegisterAsync][11]
+[Membership/CosmosDBMembership.cs – RegisterAsync][11]
 
 ```csharp
 public async Task<RegisterResult> RegisterAsync(string userName, string email, string password)
@@ -318,7 +318,7 @@ public async Task<RegisterResult> RegisterAsync(string userName, string email, s
 ```
 Registration is pretty straightforward. Take the 3 required properties, load them into a `LoginUser` object, persist it, then sign the user in. The one non-obvious piece is the reliance on an `Exception` to detect duplicate Usernames. We're going to add a unique constraint to Cosmos DB later to help enforce unique usernames.
 
-[SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; LoginAsync][12]
+[SampleCosmosCore2App/Membership/CosmosDBMembership.cs – LoginAsync][12]
 
 ```csharp
 public async Task<LoginResult> LoginAsync(string userName, string password)
@@ -343,7 +343,7 @@ We don't have a password hash function yet, so for Login we take a username and 
 
 These both use the SignInAsync method, which creates a `LoginSession` for the user and uses the Authentication's SignIn method for the `Options.AuthenticationType` we configured back in `Startup`:
 
-[SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; SignInAsync][13]
+[SampleCosmosCore2App/Membership/CosmosDBMembership.cs – SignInAsync][13]
 
 ```csharp
 private async Task SignInAsync(LoginUser user)
@@ -363,7 +363,7 @@ private async Task SignInAsync(LoginUser user)
 ```
 Behind the scenes, ASP.Net is calling the `SignIn` method on the “Cookies” authentication module. The Cookies module will take the ClaimsPrincipal we just passed it and write it as a cookie on the outgoing Response (and then read it back in on subsequent Requests). This is how we'll know who the user is later. Which brings us to ValidateLoginAsync, which is called from our custom OnValidatePrincipal logic.
 
-[SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; ValidateLoginAsync][14]
+[SampleCosmosCore2App/Membership/CosmosDBMembership.cs – ValidateLoginAsync][14]
 
 ```csharp
 public async Task<bool> ValidateLoginAsync(ClaimsPrincipal principal)
@@ -387,7 +387,7 @@ We attempt to read the “sessionId” claim from the passed Principal and assoc
 
 Finally, we have the last step for a user: Logging out.
 
-[SampleCosmosCore2App/Membership/CosmosDBMembership.cs &#8211; LogoutAsync][15]
+[SampleCosmosCore2App/Membership/CosmosDBMembership.cs – LogoutAsync][15]
 
 ```csharp
 public async Task LogoutAsync()

@@ -65,19 +65,19 @@ Here is what the plan looks like.
 
 Here is what the plan looks like in text (you can get the output if you run SET SHOWPLAN_TEXT on first)
 
- _|&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))
+ _|–Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))
          
-|&#8211;Stream Aggregate(DEFINE:([Expr1005]=Count(*)))
+|–Stream Aggregate(DEFINE:([Expr1005]=Count(*)))
               
-|&#8211;Clustered Index Seek(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]),
+|–Clustered Index Seek(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]),
 		  
 SEEK:([Test].[dbo].[TestIndex].[Value]=[@1]) ORDERED FORWARD)</p> 
 
-|&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))
+|–Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))
          
-|&#8211;Stream Aggregate(DEFINE:([Expr1005]=Count(*)))
+|–Stream Aggregate(DEFINE:([Expr1005]=Count(*)))
               
-|&#8211;Clustered Index Scan(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]))
+|–Clustered Index Scan(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]))
   
 </em>
 
@@ -95,11 +95,11 @@ select count(*) from TestIndex
 set statistics io off
 ```
 
-_Table &#8216;TestIndex'. Scan count 1, logical reads 2491, physical reads 0,
+_Table 'TestIndex'. Scan count 1, logical reads 2491, physical reads 0,
   
 read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p> 
 
-Table &#8216;TestIndex'. Scan count 1, logical reads 2491, physical reads 0,
+Table 'TestIndex'. Scan count 1, logical reads 2491, physical reads 0,
   
 read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</em>
 
@@ -170,27 +170,27 @@ The difference between before and now is that parallelism is being used as you c
 
 Here is the text version of the execution plan
 
- _|&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[globalagg1006],0)))
+ _|–Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[globalagg1006],0)))
          
-|&#8211;Stream Aggregate(DEFINE:([globalagg1006]=SUM([partialagg1005])))
+|–Stream Aggregate(DEFINE:([globalagg1006]=SUM([partialagg1005])))
               
-|&#8211;Parallelism(Gather Streams)
+|–Parallelism(Gather Streams)
                    
-|&#8211;Stream Aggregate(DEFINE:([partialagg1005]=Count(*)))
+|–Stream Aggregate(DEFINE:([partialagg1005]=Count(*)))
                         
-|&#8211;Clustered Index Seek(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]),
+|–Clustered Index Seek(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]),
 	  
 SEEK:([Test].[dbo].[TestIndex].[Value]='A' OR [Test].[dbo].[TestIndex].[Value]='B') ORDERED FORWARD)</p> 
 
-|&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[globalagg1006],0)))
+|–Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[globalagg1006],0)))
          
-|&#8211;Stream Aggregate(DEFINE:([globalagg1006]=SUM([partialagg1005])))
+|–Stream Aggregate(DEFINE:([globalagg1006]=SUM([partialagg1005])))
               
-|&#8211;Parallelism(Gather Streams)
+|–Parallelism(Gather Streams)
                    
-|&#8211;Stream Aggregate(DEFINE:([partialagg1005]=Count(*)))
+|–Stream Aggregate(DEFINE:([partialagg1005]=Count(*)))
                         
-|&#8211;Clustered Index Scan(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]))</em>
+|–Clustered Index Scan(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]))</em>
 
 If we set the max degree of parallelism to 1 by using the MAXDOP option we get the same plan as before
 
@@ -214,19 +214,19 @@ Here is the graphical plan
 
 Here is the text version of the plan
 
-_|&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))
+_|–Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))
          
-|&#8211;Stream Aggregate(DEFINE:([Expr1005]=Count(*)))
+|–Stream Aggregate(DEFINE:([Expr1005]=Count(*)))
               
-|&#8211;Clustered Index Seek(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]),
+|–Clustered Index Seek(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]),
 	  
 SEEK:([Test].[dbo].[TestIndex].[Value]='A') ORDERED FORWARD)</p> 
 
-|&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1007],0)))
+|–Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1007],0)))
          
-|&#8211;Stream Aggregate(DEFINE:([Expr1007]=Count(*)))
+|–Stream Aggregate(DEFINE:([Expr1007]=Count(*)))
               
-|&#8211;Clustered Index Scan(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]))</em>
+|–Clustered Index Scan(OBJECT:([Test].[dbo].[TestIndex].[ix_TestIndex]))</em>
 
 So there you have it, nothing earth-shattering in this post but still nice to know that a seek is not always faster than a scan
 

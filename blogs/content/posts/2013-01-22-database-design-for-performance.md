@@ -196,7 +196,7 @@ We do see a slight difference in the operational cost of the order header and de
 
 Figure 9 – Review buffered page counts
 
-Another example would be a common task &#8211; check if an order is shipped. To do this, in both cases we need to look at the detail table and the shipment table.
+Another example would be a common task – check if an order is shipped. To do this, in both cases we need to look at the detail table and the shipment table.
 
 sql
 CREATE PROCEDURE sel_ShipDate (@ordernum INT)
@@ -239,7 +239,7 @@ Resulting in the following plan and buffer needs as page counts.
   <a href="/wp-content/uploads/blogs/All/design_perf_20.gif?mtime=1358784827"><img alt="" src="/wp-content/uploads/blogs/All/design_perf_20.gif?mtime=1358784827" width="716" height="298" /></a>
 </div>
 
-As we can see, there isn’t a large difference.  So far we’ve looked at queries and plans that are similar in resource consumption, other than a slight variance in pages pulled into the buffer.  Let’s take a look at the order header table now.  The order header table takes on a severe non-normalized factor.  The first thing that is obvious is the customer data.  In the poorly designed order header table, the customer data is not unique &#8211; it’s repeated and redundancy starts to creep in.
+As we can see, there isn’t a large difference.  So far we’ve looked at queries and plans that are similar in resource consumption, other than a slight variance in pages pulled into the buffer.  Let’s take a look at the order header table now.  The order header table takes on a severe non-normalized factor.  The first thing that is obvious is the customer data.  In the poorly designed order header table, the customer data is not unique – it’s repeated and redundancy starts to creep in.
 
 With the order header table, poor design and working towards normalization, we’ll start to see a larger impact to the IO requirements, equating to more CPU and buffer usage, from querying the table.  Let’s take a typical example where a query is needed to return customers that have placed more than 3 orders, the number of orders they have placed, and only orders that have shipped will be acceptable.  To perform this query, we would read both designs slightly differently.
 

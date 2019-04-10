@@ -116,7 +116,7 @@ sql
 EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/g'
 ```
 
-So there you have it EXEC sp_readerrorlog 0, 1, &#8216;Command Line Startup Parameters' is a quick way to check how SQL Server was started without looking through your error log
+So there you have it EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters' is a quick way to check how SQL Server was started without looking through your error log
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 

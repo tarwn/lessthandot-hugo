@@ -52,7 +52,7 @@ Expand the Views folder which currently only has the web.config file.  Right-cl
 
 Now the important bit, you need to download the correct Web.Optimization package as its not included in your project and trying to create, build and compile any kind of web enabled page will cause no end of grief no less messages such as:
 
-<span style="font-size: 14px; line-height: 18px; background-color: #eeeeee;"><span style="font-family: 'courier new', courier;">Compiler Error Message: CS0103: The name &#8216;Scripts' does not exist in the current context</span></span>
+<span style="font-size: 14px; line-height: 18px; background-color: #eeeeee;"><span style="font-family: 'courier new', courier;">Compiler Error Message: CS0103: The name 'Scripts' does not exist in the current context</span></span>
 
 You may also see initial errors such as:
 

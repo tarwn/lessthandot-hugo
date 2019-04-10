@@ -105,11 +105,11 @@ And my log files are now named differently:
 
 These three configuration files store security settings for various components. It isn’t recommended that you edit these files, but it’s helpful to know what they correspond to. 
 
-**RSSrvPolicy** &#8211; Report Server. Located at C:Program FilesMicrosoft SQL ServerMSRS10_50.MSSQLSERVERReporting ServicesReportServer
+**RSSrvPolicy** – Report Server. Located at C:Program FilesMicrosoft SQL ServerMSRS10_50.MSSQLSERVERReporting ServicesReportServer
   
-**RSMgrPolicy** &#8211; Report Manager.Located at C:Program FilesMicrosoft SQL ServerMSRS10_50.MSSQLSERVERReporting ServicesReportManager
+**RSMgrPolicy** – Report Manager.Located at C:Program FilesMicrosoft SQL ServerMSRS10_50.MSSQLSERVERReporting ServicesReportManager
   
-**RSPreviewPolicy** &#8211; Report Designer. Note that this is in a different location, as Report Designer is part of Visual Studio (Business Intelligence Development Studio). C:Program Files (x86)Microsoft Visual Studio 9.0Common7IDEPrivateAssemblies
+**RSPreviewPolicy** – Report Designer. Note that this is in a different location, as Report Designer is part of Visual Studio (Business Intelligence Development Studio). C:Program Files (x86)Microsoft Visual Studio 9.0Common7IDEPrivateAssemblies
 
 **RSReportDesigner**
 

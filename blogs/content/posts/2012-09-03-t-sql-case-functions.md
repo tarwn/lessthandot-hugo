@@ -26,13 +26,13 @@ With the CASE statement you can add conditional logic to your T-SQL code. T-SQL 
 
 **ISNULL**
 
-The ISNULL(&#8216;Null\_Expression','Replace\_Value') function evaluates the value of the &#8216;Null\_Expression' and if the result is NULL it returns the &#8216;Replace\_Value' value. Otherwise the &#8216;Null_Expression' value is returned:
+The ISNULL('Null\_Expression','Replace\_Value') function evaluates the value of the 'Null\_Expression' and if the result is NULL it returns the 'Replace\_Value' value. Otherwise the 'Null_Expression' value is returned:
 
 sql
 SELECT TOP 10 ISNULL(MiddleName,'NA')AS NoNullMiddleName FROM Person.Person
 ```
 
-In the result we see that all the NULL values are replaced by the &#8216;NA' value. Values that were not NULL keep their value:
+In the result we see that all the NULL values are replaced by the 'NA' value. Values that were not NULL keep their value:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC1.gif?mtime=1346673979"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC1.gif?mtime=1346673979" width="154" height="235" /></a>
@@ -66,7 +66,7 @@ In the result you see that the size is shown in the coalesceresult column unless
 
 **IIF**
 
-Just like in SSIS and MS Access, SQL Server 2012 now supports the IIF(&#8216;logical\_expression','expression\_if\_true','expression\_if\_false') function. So if the &#8216;logical\_expression evaluates to TRUE the &#8216;expression\_if\_true' value is shown, otherwise the &#8216;expression\_if\_false' is executed:
+Just like in SSIS and MS Access, SQL Server 2012 now supports the IIF('logical\_expression','expression\_if\_true','expression\_if\_false') function. So if the 'logical\_expression evaluates to TRUE the 'expression\_if\_true' value is shown, otherwise the 'expression\_if\_false' is executed:
 
 sql
 SELECT IIF(Title LiKE '%s.','Miss','Mister') AS Title, FirstName 
@@ -82,7 +82,7 @@ Since IIF supports the true/false expressions you can even put logical expressio
 
 **CHOOSE**
 
-CHOOSE(&#8216;index','expr1&#8242;,'expr2&#8242;,…,'exprn') is also known in MS Access and new in SQL Server 2012 and gives the possibility to use an index number and the result of the corresponding index expression:
+CHOOSE('index','expr1','expr2',…,'exprn') is also known in MS Access and new in SQL Server 2012 and gives the possibility to use an index number and the result of the corresponding index expression:
 
 sql
 SELECT FirstName, LastName, MiddleName, CHOOSE(2,FirstName, LastName, MiddleName) AS Chosen

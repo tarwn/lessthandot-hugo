@@ -28,7 +28,7 @@ I have created a simple report, with a table. I drag a list control on the body,
   <a href="/wp-content/uploads/users/grrlgeek/SSRS List Design.JPG?mtime=1313722870"><img alt="" src="/wp-content/uploads/users/grrlgeek/SSRS List Design.JPG?mtime=1313722870" width="776" height="265" /></a>
 </div>
 
-I go to the Preview tab. I see this error: “The tablix ‘tablixname’ has a detail member with inner members. Detail members can only contain static inner members.” 
+I go to the Preview tab. I see this error: “The tablix 'tablixname’ has a detail member with inner members. Detail members can only contain static inner members.” 
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/SSRS List Preview Error.JPG?mtime=1313722871"><img alt="" src="/wp-content/uploads/users/grrlgeek/SSRS List Preview Error.JPG?mtime=1313722871" width="820" height="160" /></a>

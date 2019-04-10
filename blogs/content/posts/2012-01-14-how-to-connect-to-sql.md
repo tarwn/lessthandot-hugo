@@ -79,7 +79,7 @@ ALTER DATABASE Test1 SET OFFLINE
 
 Now if you try to login with the TestLogin account, you will see the following error
 
-_**Login failed for user &#8216;TestLogin'. (Microsoft SQL Server, Error: 18456)**_
+_**Login failed for user 'TestLogin'. (Microsoft SQL Server, Error: 18456)**_
 
 Here is what you need to do, on the connect to server window, click on the options button
 

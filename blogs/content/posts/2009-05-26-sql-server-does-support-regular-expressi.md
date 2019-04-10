@@ -28,11 +28,11 @@ Someone posted the following question
 
 Someone posted the following answer
 
-> You cannot do this out of the box &#8211; MS SQL Server does support CHECK CONSTRAINTS &#8211; but for things like a maximum or minimum INT value, or a string length or such.
+> You cannot do this out of the box – MS SQL Server does support CHECK CONSTRAINTS – but for things like a maximum or minimum INT value, or a string length or such.
 > 
-> What you're looking for would be a CHECK based on a regular expression &#8211; and out of the box, SQL Server does not offer that capability.
+> What you're looking for would be a CHECK based on a regular expression – and out of the box, SQL Server does not offer that capability.
 > 
-> You could theoretically write a .NET assembly, deploy it inside SQL Server, and then use it to enforce the CHECK &#8211; not a trivial undertaking.
+> You could theoretically write a .NET assembly, deploy it inside SQL Server, and then use it to enforce the CHECK – not a trivial undertaking.
 
 While SQL server does not support a full implementation of regular expression, you can do what the person asked for without a problem in T-SQL.
 
@@ -64,7 +64,7 @@ As you can see we got the following message twice
   
 _Server: Msg 547, Level 16, State 1, Line 1
   
-The INSERT statement conflicted with the CHECK constraint “ck_bla”. The conflict occurred in database “Test”, table “dbo.blatest”, column &#8216;code'.
+The INSERT statement conflicted with the CHECK constraint “ck_bla”. The conflict occurred in database “Test”, table “dbo.blatest”, column 'code'.
   
 The statement has been terminated.
   
@@ -72,7 +72,7 @@ _
 
 If you want to insert D12 but not d12, in other words you need the constraint to be case sensitive then you have to create the constraint like this
   
-check (code like &#8216;\[DMOPT\]\[0-9\][0-9]' COLLATE SQL\_Latin1\_General\_CP1\_CS_AS )
+check (code like '\[DMOPT\]\[0-9\][0-9]' COLLATE SQL\_Latin1\_General\_CP1\_CS_AS )
 
 What we did is used the SQL\_Latin1\_General\_CP1\_CS_AS collation, to find out what this collation does, run the following
 

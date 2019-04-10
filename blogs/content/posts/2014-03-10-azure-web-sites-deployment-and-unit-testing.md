@@ -40,7 +40,7 @@ Once I had a basic “hello World” page and a github repository, it was time t
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep1.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep1-300x199.png" alt="Create Azure Web Site - Step 1" width="300" height="199" class="size-medium wp-image-2373" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep1-300x199.png 300w, /wp-content/uploads/2014/02/01_CreateSiteStep1.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
-    Create Azure Web Site &#8211; Step 1
+    Create Azure Web Site – Step 1
   </p>
 </div>
 
@@ -50,7 +50,7 @@ The wizard has a github option, but due to the way github permissions work, it e
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep2.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep2-300x198.png" alt="Create Azure Web Site - Step 2" width="300" height="198" class="size-medium wp-image-2374" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep2-300x198.png 300w, /wp-content/uploads/2014/02/01_CreateSiteStep2.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
-    Create Azure Web Site &#8211; Step 2
+    Create Azure Web Site – Step 2
   </p>
 </div>
 
@@ -60,7 +60,7 @@ The last step is to provide those repository details
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep3.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep3-300x191.png" alt="Create Azure Web Site - Step 3" width="300" height="191" class="size-medium wp-image-2375" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep3-300x191.png 300w, /wp-content/uploads/2014/02/01_CreateSiteStep3.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
-    Create Azure Web Site &#8211; Step 3
+    Create Azure Web Site – Step 3
   </p>
 </div>
 
@@ -70,7 +70,7 @@ And the Azure Website is running:
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep4.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep4.png" alt="Azure Web Site - Running" width="700" height="27" class="size-full wp-image-2376" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep4.png 700w, /wp-content/uploads/2014/02/01_CreateSiteStep4-300x11.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a>
   
   <p class="wp-caption-text">
-    Azure Web Site &#8211; Running
+    Azure Web Site – Running
   </p>
 </div>
 
@@ -106,7 +106,7 @@ In the Azure Website settings, we copy that “Deployment Trigger URL”:
   <a href="/wp-content/uploads/2014/02/01_AutoDeploymentStep1.png"><img src="/wp-content/uploads/2014/02/01_AutoDeploymentStep1-300x72.png" alt="Configuring the Build triggering - Step 1" width="300" height="72" class="size-medium wp-image-2371" srcset="/wp-content/uploads/2014/02/01_AutoDeploymentStep1-300x72.png 300w, /wp-content/uploads/2014/02/01_AutoDeploymentStep1.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
-    Configuring the Build triggering &#8211; Step 1
+    Configuring the Build triggering – Step 1
   </p>
 </div>
 
@@ -118,7 +118,7 @@ And then in the github settings for our project, we paste it in as a WebHoook UR
   <a href="/wp-content/uploads/2014/02/01_AutoDeploymentStep2.png"><img src="/wp-content/uploads/2014/02/01_AutoDeploymentStep2-300x91.png" alt="Configuring the Build triggering - Step 2" width="300" height="91" class="size-medium wp-image-2372" srcset="/wp-content/uploads/2014/02/01_AutoDeploymentStep2-300x91.png 300w, /wp-content/uploads/2014/02/01_AutoDeploymentStep2.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
-    Configuring the Build triggering &#8211; Step 2
+    Configuring the Build triggering – Step 2
   </p>
 </div>
 

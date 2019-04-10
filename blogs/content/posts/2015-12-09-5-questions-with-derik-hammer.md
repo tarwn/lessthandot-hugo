@@ -15,7 +15,7 @@ categories:
 ---
 It was October 2013, and I was in Charlotte, NC. I'd attended Red Gate's SQL in the City event during the day, and was heading over to register for PASS Summit. I started chatting with one of the SQL in the City attendees. He was a DBA familiar with Red Gate's tools and events, but he'd never heard of PASS or PASS Summit. You bet I started talking about how amazing the organization, the conference, and most importantly the community is. I gave him my card and said I hoped to hear from him soon.
 
-This is how I met Derik Hammer (<a href="https://www.linkedin.com/in/sqlhammer" target="_blank">linkedin </a>| <a href="http://www.sqlhammer.com/blog/" target="_blank">blog</a>| <a href="https://twitter.com/SQLHammer" target="_blank">twitter</a>) , and gosh, am I glad I did! A week after Summit, I emailed Derik with some information such as his local chapter and some of my favorite community resources. I followed his Twitter account. He did the rest on his own &#8211; continued to blog, started a PASS chapter, and started speaking. He has been getting after his own career! What he has done in the past two years should motivate all of us!
+This is how I met Derik Hammer (<a href="https://www.linkedin.com/in/sqlhammer" target="_blank">linkedin </a>| <a href="http://www.sqlhammer.com/blog/" target="_blank">blog</a>| <a href="https://twitter.com/SQLHammer" target="_blank">twitter</a>) , and gosh, am I glad I did! A week after Summit, I emailed Derik with some information such as his local chapter and some of my favorite community resources. I followed his Twitter account. He did the rest on his own – continued to blog, started a PASS chapter, and started speaking. He has been getting after his own career! What he has done in the past two years should motivate all of us!
 
 I got a chance to ask him a few questions via email recently!
 
@@ -31,7 +31,7 @@ My other favorite is the optimizer. The optimizer is the work of geniuses and I 
 
 Replication (transactional/merge/peer-to-peer) has always driven me crazy. Replication is a great feature but the library of stored procedures is a challenge to use. In addition, the replication monitor leaves a lot of room for improvement. I feel that the underlying feature could remain mostly the same if its usability were to improve.
 
-### Within two years, you went from not knowing about PASS Summit to being very involved in the community &#8211; you're a chapter leader and a speaker. What is it the draws you to the SQL Server community?
+### Within two years, you went from not knowing about PASS Summit to being very involved in the community – you're a chapter leader and a speaker. What is it the draws you to the SQL Server community?
 
 In 2013, I was close to exhausting what I could learn from the DBAs in my immediate vicinity and I was looking for something more. That is when I drove down to Charlotte, NC and attended the Red-Gate SQL in the City, where we met. On day one I was overwhelmed by the community. I walked up to Grant Fritchey and had a lengthy conversation about replication where he was genuinely interested in my challenges and experiences. Next thing I knew I was walking with you down the block. Your passion and energy is always intoxicating. When we parted I was jazzed up to seek out the Buffalo Wild Wings networking event that Steve Jones was planning. Upon arrival, I was once again shocked as Steve introduced me a number of people and took time to talk to them about me as if we were friends, even though we had just met.
 
@@ -57,4 +57,4 @@ Let me geek-out on you for a second and attempt to define the time travel scenar
 
 * * *
 
-Have questions about how to get involved in the community? Reach out to Derik &#8211; he's a great example of someone who has done just that!
+Have questions about how to get involved in the community? Reach out to Derik – he's a great example of someone who has done just that!

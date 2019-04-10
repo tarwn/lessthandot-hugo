@@ -26,7 +26,7 @@ SELECT * FROM sys.sql_modules
 WHERE OBJECT_DEFINITION(object_id) LIKE '%ntile%'
 ```
 
-&#8212;&#8212;-
+——-
   
 (0 row(s) affected)
 

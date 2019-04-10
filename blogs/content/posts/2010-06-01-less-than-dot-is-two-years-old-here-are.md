@@ -756,7 +756,7 @@ The pages with the hacks, tips and tricks are still number one
 
 <ol start='1'>
   <li>
-    <a href="http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks &#8211; 100+ List</a> &#8206;(33,646 views)
+    <a href="http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a> &#8206;(33,646 views)
   </li>
   <li>
     <a href="http://wiki.ltd.local/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a> &#8206;(27,922 views)
@@ -947,7 +947,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=16">Classic ASP URL Rewriting &#8211; A Practical Example</a>
+      <a href="http://forum.ltd.local/viewtopic.php?t=16">Classic ASP URL Rewriting – A Practical Example</a>
     </td>
     
     <td>
@@ -977,7 +977,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=4675">Puzzle 23 &#8211; Distance to line segment</a>
+      <a href="http://forum.ltd.local/viewtopic.php?t=4675">Puzzle 23 – Distance to line segment</a>
     </td>
     
     <td>

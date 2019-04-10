@@ -140,7 +140,7 @@ You can see that this yields a different result set than using the AVG function 
 
 In the newest version of SQL Server, it gets even easier to calculate a median value. There is a new function, PERCENTILE_CONT. It “calculates a percentile based on a continuous distribution of the column value” (to quote Books Online). Let's see how this works. 
 
-You will specify the percentile you want &#8211; in this case, we want the 50th, so we use (0.5). Then, we use WITHIN GROUP (ORDER BY … ) to tell the function which values to sort and compute. I'm using OVER (PARTITION BY … ) to tell the function that I want to divide the values up by salesperson. 
+You will specify the percentile you want – in this case, we want the 50th, so we use (0.5). Then, we use WITHIN GROUP (ORDER BY … ) to tell the function which values to sort and compute. I'm using OVER (PARTITION BY … ) to tell the function that I want to divide the values up by salesperson. 
 
 sql
 SELECT DISTINCT OBSP.SalesPersonID, 

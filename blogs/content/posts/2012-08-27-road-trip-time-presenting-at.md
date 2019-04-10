@@ -29,7 +29,7 @@ I was chosen to speak too! If you’re attending, I hope you can join me for one
 </p>
 
 <p style="padding-left: 30px;">
-  SQL Server professionals like to talk &#8211; a lot. We blog, we tweet, we answer forum questions, and more to help others. Add your voice! Learn about the different ways you can share your experience and knowledge. Once you start teaching others, you'll realize how much knowledge you have!
+  SQL Server professionals like to talk – a lot. We blog, we tweet, we answer forum questions, and more to help others. Add your voice! Learn about the different ways you can share your experience and knowledge. Once you start teaching others, you'll realize how much knowledge you have!
 </p>
 
 <p style="padding-left: 30px;">

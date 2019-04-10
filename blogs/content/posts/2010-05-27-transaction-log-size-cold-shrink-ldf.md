@@ -82,9 +82,9 @@ Our successful restore…
   
 > 100 percent processed.
   
-> Processed 200 pages for database &#8216;LOGSHIP\_PUB\_SECONDARY', file &#8216;LOGSHIP_PUB' on file 1.
+> Processed 200 pages for database 'LOGSHIP\_PUB\_SECONDARY', file 'LOGSHIP_PUB' on file 1.
   
-> Processed 1 pages for database &#8216;LOGSHIP\_PUB\_SECONDARY', file &#8216;LOGSHIP\_PUB\_log' on file 1.
+> Processed 1 pages for database 'LOGSHIP\_PUB\_SECONDARY', file 'LOGSHIP\_PUB\_log' on file 1.
   
 > RESTORE DATABASE successfully processed 201 pages in 93.555 seconds (0.016 MB/sec).
 

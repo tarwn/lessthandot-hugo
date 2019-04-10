@@ -153,7 +153,7 @@ categories:
     
     <blockquote>
       <p>
-        To get the most out of the system you want to fill any &#8216;minimums'. That is to say, if I cannot reduce the min memory, I should optimize to use at least that much. If I have a minimum number of buffers, I should optimize to use at least that many. Here is how you do that.
+        To get the most out of the system you want to fill any 'minimums'. That is to say, if I cannot reduce the min memory, I should optimize to use at least that much. If I have a minimum number of buffers, I should optimize to use at least that many. Here is how you do that.
       </p>
       
       <p>

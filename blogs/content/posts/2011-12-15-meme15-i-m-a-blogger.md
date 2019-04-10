@@ -18,7 +18,7 @@ It's time for a new meme! My good friend Jason Strate ([twitter][1] | [blog][2])
 
 **Why I Started Blogging**
 
-It was 2009. I realized there was a SQL community. I was reading blogs, lurking on forums, attending a user group, and tweeting. I was also asking a lot of questions. I even managed to come up with a few solutions. Once, I was telling my friend Ted Krueger how I solved a problem. Ted asked, “Jes, that's great &#8211; why don't you blog it?” I started thinking about it. I wrote down problems I solved. I wrote down things I'd learned. 
+It was 2009. I realized there was a SQL community. I was reading blogs, lurking on forums, attending a user group, and tweeting. I was also asking a lot of questions. I even managed to come up with a few solutions. Once, I was telling my friend Ted Krueger how I solved a problem. Ted asked, “Jes, that's great – why don't you blog it?” I started thinking about it. I wrote down problems I solved. I wrote down things I'd learned. 
 
 But I didn't want to blog. What did I know about SQL? What could I blog that hadn't been written about before? Why would anyone ever read my blogs? These are the thoughts I had that held me back. 
 
@@ -26,7 +26,7 @@ Eventually, I gave in, and started my own WordPress blog. My first blogs were, q
 
 For historical record: [my first Reporting Services blog post][4]. 
 
-Then Ted had a bigger challenge for me, and started asking me to join LessThanDot.com. Again, I didn't want to. There was no way I could blog at the level they were &#8211; they were far smarter, and more experienced. But Ted didn't give up, and in December 2010 I started here. 
+Then Ted had a bigger challenge for me, and started asking me to join LessThanDot.com. Again, I didn't want to. There was no way I could blog at the level they were – they were far smarter, and more experienced. But Ted didn't give up, and in December 2010 I started here. 
 
 **Why I Blog** 
 

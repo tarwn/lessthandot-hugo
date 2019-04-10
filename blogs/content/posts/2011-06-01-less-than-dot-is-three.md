@@ -1435,7 +1435,7 @@ The pages with the hacks, tips and tricks are still number two behind the main w
     <a href="/index.php/Main_Page" title="Main Page">Main Page</a> &#8206;(557,488 views)
   </li>
   <li>
-    <a href="/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks &#8211; 100+ List</a> &#8206;(44,500 views)
+    <a href="/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a> &#8206;(44,500 views)
   </li>
   <li>
     <a href="/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a> &#8206;(33,312 views)

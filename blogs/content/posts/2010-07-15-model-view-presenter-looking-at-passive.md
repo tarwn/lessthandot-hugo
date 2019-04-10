@@ -40,9 +40,9 @@ Passive View is a subset of the Model-View-Presenter pattern. In Passive View, t
 
 From the outside in, the architecture for Passive View looks something like this:
 
-  * UI &#8211; The User Interface reflects what is going on beneath it by implementing one or more View interfaces
-  * Presenter &#8211; The Presenter receives interactions from the UI or Model and updates the Views it is attached to
-  * Model &#8211; The model is a facade or black box in our diagram, behind which is a business logic layer and data layer
+  * UI – The User Interface reflects what is going on beneath it by implementing one or more View interfaces
+  * Presenter – The Presenter receives interactions from the UI or Model and updates the Views it is attached to
+  * Model – The model is a facade or black box in our diagram, behind which is a business logic layer and data layer
 
 In a flat architecture we would collect data from the interface, perhaps do some business and data validation, and then save it directly to a database using stored procedures or inline SQL. Defining a data access layer (or data model like entity framework) allows our application to operate on cohesive, defined objects that are meaningful to the application and stored and retrieved consistently. Defining a business logic layer allows us to centralize business rules that operate on entities in our application in a manner that is consistent with the business and internally consistent in the application, minimizing the risk that occurs when making changes to the business flow. Separating the logic of populating inputs and responding to button presses on the UI from the information being communicated to the end user and conceptual responses to their input allows the system to interact with the user consistently across any number of interfaces into the same application.
 
@@ -54,12 +54,12 @@ My learning exercise has been the the creation of an ASP.Net search page that al
 
 My example application has several functional and non-functional requirements:
 
-  1. Functional &#8211; Display product number, name, list price, and available quantity in tabular format
-  2. Functional &#8211; Provide a basic search input and button to search product names
-  3. Non-Functional &#8211; Implement an M-V-P pattern &#8211; Obviously the purpose of this whole exercise
-  4. Non-Functional &#8211; Use a simple model stack that can be easily replaced with a Service-Oriented one at a later time
-  5. Non-Functional &#8211; Build with the idea that we will later create a Silverlight or WPF front-end
-  6. Non-Functional &#8211; Make pretty pictures for article
+  1. Functional – Display product number, name, list price, and available quantity in tabular format
+  2. Functional – Provide a basic search input and button to search product names
+  3. Non-Functional – Implement an M-V-P pattern – Obviously the purpose of this whole exercise
+  4. Non-Functional – Use a simple model stack that can be easily replaced with a Service-Oriented one at a later time
+  5. Non-Functional – Build with the idea that we will later create a Silverlight or WPF front-end
+  6. Non-Functional – Make pretty pictures for article
 
 _My unwritten, final requirement was to finish the whole thing in half a day, though luckily I didn't define whether I intended that to mean 4 hours or 12._
 
@@ -77,17 +77,17 @@ The purple layer is my presentation layer, which reflects the View. The blue lay
 
 Once the high level diagram was completed, I could approach the task of creating some base classes and interfaces to use in implementing the project.
 
-  * Model.IModel &#8211; Generic Model Interface to expose business calls to Presenters
-  * Presenter.IView &#8211; Generic View Interface that all Presenters can interact with and all screens implement
-  * Presenter.BasePresenter &#8211; Generic Presenter class that all Presenters will implement
+  * Model.IModel – Generic Model Interface to expose business calls to Presenters
+  * Presenter.IView – Generic View Interface that all Presenters can interact with and all screens implement
+  * Presenter.BasePresenter – Generic Presenter class that all Presenters will implement
 
 To keep the project to a single morning but also allow the ability to come back and build a more architecturally sound solution, I implemented the Model in a very basic fashion that was referenced locally by the Presenter project and makes direct calls to SQL Server using ADO and parametrized, inline SQL. This buys me the benefits of having a well-defined Model (via the interface) but allows me concentrate my time and effort on the learning part of the project (ie, the M-V-P interaction and structure). Defining the model interface also leaves me open to come back and replace it with better separated code and the ability to create a model that acts as a facade to a service stack, instead of local DLLs.
 
-  * Model.BasicModel.Model &#8211; Basic implementation of a model that will interact with AdventureWorks on SQL Server
-  * Model.Entities.Product &#8211; A Product Entity that can be communicated between an IModel instance and Presenter 
-      * Presenter.ProductSearchPresenter &#8211; A Presenter to manage product search interface
-      * Presenter.IProductSearchView &#8211; A view of the data involved in a product search
-      * ProductSearch.aspx &#8211; A web page that implements the IProductSearchView and interacts with the ProductSearchPresenter
+  * Model.BasicModel.Model – Basic implementation of a model that will interact with AdventureWorks on SQL Server
+  * Model.Entities.Product – A Product Entity that can be communicated between an IModel instance and Presenter 
+      * Presenter.ProductSearchPresenter – A Presenter to manage product search interface
+      * Presenter.IProductSearchView – A view of the data involved in a product search
+      * ProductSearch.aspx – A web page that implements the IProductSearchView and interacts with the ProductSearchPresenter
 
 My final Visio diagram ended up looking like this:
 

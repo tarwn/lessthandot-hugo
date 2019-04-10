@@ -50,13 +50,13 @@ WHILE @lnCurrent <= @lnMax
 ```
 The output of this code produces a script of all stored procedures in a database.
 
-Obviously, there are many applications of this code &#8211; you may try appending comments to this script, for example, or change your procedures in some way.
+Obviously, there are many applications of this code – you may try appending comments to this script, for example, or change your procedures in some way.
 
 There are alternative ways of scripting all stored procedures, as suggested by
   
 Adam Haines in the referenced thread:
 
-Option 1: Use the scripting wizard Right-click the db &#8211;> tasks &#8211;> Generate scripts &#8211;> go through the wizard.
+Option 1: Use the scripting wizard Right-click the db –> tasks –> Generate scripts –> go through the wizard.
 
 Option 2: Open the stored procedures folder in SSMS (in the object explorer details window). (You can also press F7 to do so, see [this blog][2] for details). You can use shift+click to select all the stored procedures and you can then right-click and script them to a file.
 

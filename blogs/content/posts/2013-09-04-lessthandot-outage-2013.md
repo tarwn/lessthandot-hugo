@@ -63,7 +63,7 @@ Good news, our host has informed us they recovered some of their servers! Well, 
 
 ## Updated, No SLA, No ETA, 2013-09-03 {#updated}
 
-After prodding them again, our &#8216;host' has admitted they have no ETA on getting the remaining servers (ours included). We have also noticed that dedicated servers are specifically excluded from the SLA, so in essence the policy of our host is “downtime? sucks to be you”. We also found out that we forgot to finish setting up backups when we set up the server with them, so our most recent backup is March. They have told us our options are to setup a new server from our backups or “wait indefinitely” for our server to be located and brought online. 
+After prodding them again, our 'host' has admitted they have no ETA on getting the remaining servers (ours included). We have also noticed that dedicated servers are specifically excluded from the SLA, so in essence the policy of our host is “downtime? sucks to be you”. We also found out that we forgot to finish setting up backups when we set up the server with them, so our most recent backup is March. They have told us our options are to setup a new server from our backups or “wait indefinitely” for our server to be located and brought online. 
 
 We will likely have to go the new server setup route, the next question we will have to consider is whether to do it with this host (who is paid through the end of the year), or find another and raise funds early for another year. 
 

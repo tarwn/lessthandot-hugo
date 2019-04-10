@@ -18,7 +18,7 @@ tags:
   - performance
 
 ---
-Lee Everest created a post named [MongoDB vs. SQL Server &#8211; INSERT comparison][1] where he compared inserting 50001 rows with MongoDB vs. SQL Server. So he claims that MongoDB inserts 50001 rows in 30 seconds while the SQL Server one takes 1.5 minutes. Okay so I looked at this SQL Script and can make 2 improvements
+Lee Everest created a post named [MongoDB vs. SQL Server – INSERT comparison][1] where he compared inserting 50001 rows with MongoDB vs. SQL Server. So he claims that MongoDB inserts 50001 rows in 30 seconds while the SQL Server one takes 1.5 minutes. Okay so I looked at this SQL Script and can make 2 improvements
 
 First create this table
 

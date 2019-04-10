@@ -21,7 +21,7 @@ tags:
 ---
 Generally when we are defining tables, the more specific the column definition the better. Yesterday, however, I ran into a case where better definition actually has increased storage use for no appreciable benefit.
 
-## Integers &#8211; Using Numeric vs Int
+## Integers – Using Numeric vs Int
 
 As I was working on the database I came across a curious sight, multiple columns defined as numeric(7,0), numeric(9,0), and so on. It seemed like someone was trying to provide the database with the most specific definition possible for a number of different pieces of data. Having never run into this particular practice, I immediately started searching for a reason. Was it smaller? faster? better?
 
@@ -55,7 +55,7 @@ Using a very specific, well-defined numeric has actually cost us storage space, 
     
     <tr>
       <td>
-        1 &#8211; 2
+        1 – 2
       </td>
       
       <td>
@@ -77,7 +77,7 @@ Using a very specific, well-defined numeric has actually cost us storage space, 
     
     <tr>
       <td>
-        3 &#8211; 4
+        3 – 4
       </td>
       
       <td>
@@ -99,7 +99,7 @@ Using a very specific, well-defined numeric has actually cost us storage space, 
     
     <tr>
       <td>
-        5 &#8211; 9
+        5 – 9
       </td>
       
       <td>
@@ -121,7 +121,7 @@ Using a very specific, well-defined numeric has actually cost us storage space, 
     
     <tr>
       <td>
-        10 &#8211; 18
+        10 – 18
       </td>
       
       <td>
@@ -232,7 +232,7 @@ Sample Results:
     
     <tr>
       <td>
-        int/int &#8211; No Cast
+        int/int – No Cast
       </td>
       
       <td>
@@ -242,7 +242,7 @@ Sample Results:
     
     <tr>
       <td>
-        numeric/int &#8211; Implicit Cast
+        numeric/int – Implicit Cast
       </td>
       
       <td>
@@ -252,7 +252,7 @@ Sample Results:
     
     <tr>
       <td>
-        numeric/numeric &#8211; Implicit Cast
+        numeric/numeric – Implicit Cast
       </td>
       
       <td>
@@ -262,7 +262,7 @@ Sample Results:
     
     <tr>
       <td>
-        int/CAST(int as numeric) &#8211; Implicit Cast
+        int/CAST(int as numeric) – Implicit Cast
       </td>
       
       <td>
@@ -296,7 +296,7 @@ So if we did have an integer that we need to operate on with a float value (the 
 
 The other potential performance impact is with auto-parameterization. Auto-parameterization occurs when you provide SQL Server with a non-parameterized SQL statement. The server determines a type for those parameters and parameterizes them (part of the magic that makes plans reusable for non-parameterized queries). I couldn't find anything terribly recent, but as far back as SQL Server 6.5 and 7.0 the engine was documented as using the int type for any non-decimal value of 9 digits or less. This means that in the unlikely situation that you're executing inline, non-parameterized SQL statements and have used numeric(\*,0) types in your table definitions, you will actually be taking a performance hit for the implicit conversion from auto-parameterized integer to the numeric(\*,0) field.
 
-And if that wasn't bad enough, the same SQL Server documentation says that SQL Server treats integers as more exact than numeric and decimal types. It doesn't specify why the document goes out of its way to share this information with us, but generally when someone goes out of their way to point out something like this in a document, I get a little nervous and tend to focus more heavily on their &#8216;recommended' practice (use int).
+And if that wasn't bad enough, the same SQL Server documentation says that SQL Server treats integers as more exact than numeric and decimal types. It doesn't specify why the document goes out of its way to share this information with us, but generally when someone goes out of their way to point out something like this in a document, I get a little nervous and tend to focus more heavily on their 'recommended' practice (use int).
 
 More information on [Parameterization][4] and [SQL 7 Comparison Optimization][5]
 

@@ -27,7 +27,7 @@ So, with a big fat “this worked on my machine and might blow up yours” discl
 
 1. Stop the server
 2. Delete the server (but keep the drives) 
-* Azure Dashboard &#8211; Virtual Machines
+* Azure Dashboard – Virtual Machines
 * Select the Server
 * Press Delete
 * Select Delete but keep the drives option
@@ -39,7 +39,7 @@ So, with a big fat “this worked on my machine and might blow up yours” discl
 _Reference: <http://michaelwasham.com/2012/08/07/copying-vhds-and-other-blobs-between-storage-accounts/>_ 
 
 * Delete the disk 
-    * Azure Dashboard &#8211; Virtual Machines
+    * Azure Dashboard – Virtual Machines
     * Select Disks at top
     * Select the drive + press Delete
     * Select the “Delete and retain associated VHD” option
@@ -69,14 +69,14 @@ Copyright 2013 Maarten Balliauw
 ```
 
   * Re-Create the Disk 
-      * Azure Dashboard &#8211; Virtual Machines &#8211; Disks
+      * Azure Dashboard – Virtual Machines – Disks
       * Select “Create” at the bottom
       * Name the drive
       * Select the VHD you just resized
       * Check the “this contains an OS” box and select “Windows”
   * Re-create the VM 
       * Azure Dashboard
-      * New &#8211; Compute &#8211; Virtual Machine &#8211; From Gallery
+      * New – Compute – Virtual Machine – From Gallery
       * Select “My Disks”
       * Select the new drive you just re-created
       * Finish the wizard to setup the VM like it originally was

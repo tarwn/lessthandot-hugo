@@ -49,15 +49,15 @@ Michelle Ufford made a very nice post about error handling, she included a store
   
 Bob Beauchemin made a series of posts about Spatial Index Diagnostic Procs. The links to the articles are below
 
-[Spatial Index Diagnostic Procs &#8211; Intro][7]
+[Spatial Index Diagnostic Procs – Intro][7]
 
-[Spatial Index Diagnostic Procs &#8211; Filters][8]
+[Spatial Index Diagnostic Procs – Filters][8]
 
-[Spatial Index Diagnostic Procs &#8211; Filter Output][9]
+[Spatial Index Diagnostic Procs – Filter Output][9]
 
-[Spatial Index Diagnostic Procs &#8211; How to specify query sample][10]
+[Spatial Index Diagnostic Procs – How to specify query sample][10]
 
-[Spatial Index Diagnostic Procs &#8211; The Rest of the Story][11]
+[Spatial Index Diagnostic Procs – The Rest of the Story][11]
 
 **[SQL Server (2005 and 2008) Trace Flag 1118 (-T1118) Usage][12]**
   

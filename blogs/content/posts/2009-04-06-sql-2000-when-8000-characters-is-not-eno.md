@@ -105,7 +105,7 @@ EXEC (@SQL1 + @SQL2 + @SQL3 + @SQL4)
 
 While I can't really recommend this method, if you are desperate and this is the only way to get the job done, it's a possibility. I've personally only used it in two narrow situations: creating pre-processed SQL objects where the dynamic SQL is executed rarely only when something changes, and the code it creates is static until the next change. One creates history-keeping triggers, and the other builds a standard set of pivoted views in response to changes of the metadata definitions of some web objects. Both required this method to be able to handle the number of columns possible. 
 
-• SQL 2005 has a new &#8216;max' keyword for the length of the (n)var/char data types that allows variables to be as big as the (n)text datatype can be. You can do anything to them that you could with regular varchar types, but behind the scenes they function like the text data type with values less than 8000 characters in-row and values greater than 8000 characters stored in out-of-row pages.
+• SQL 2005 has a new 'max' keyword for the length of the (n)var/char data types that allows variables to be as big as the (n)text datatype can be. You can do anything to them that you could with regular varchar types, but behind the scenes they function like the text data type with values less than 8000 characters in-row and values greater than 8000 characters stored in out-of-row pages.
 
 sql
 DECLARE @longdata varchar(max)

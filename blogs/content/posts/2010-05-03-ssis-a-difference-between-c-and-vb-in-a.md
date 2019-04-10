@@ -41,7 +41,7 @@ MessageBox.Show(FileName);
 
 You will get the following friendly error.
   
-**Non-invocable member &#8216;Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables' cannot be used like a method.**
+**Non-invocable member 'Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables' cannot be used like a method.**
 
 Do you see what the error is in the code? 
 

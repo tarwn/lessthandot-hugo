@@ -191,11 +191,11 @@ SET SHOWPLAN_TEXT ON
 
 > Here is the plan
 > 
-> > |&#8211;Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))
+> > |–Compute Scalar(DEFINE:([Expr1004]=CONVERT_IMPLICIT(int,[Expr1005],0)))
          
-> > |&#8211;Stream Aggregate(DEFINE:([Expr1005]=Count(*)))
+> > |–Stream Aggregate(DEFINE:([Expr1005]=Count(*)))
               
-> > |&#8211;Index Scan(OBJECT:([ReportServer].[dbo].[Test1].[ix2]))
+> > |–Index Scan(OBJECT:([ReportServer].[dbo].[Test1].[ix2]))
 > 
 > Basically it had to scan through all the index pages to get the count, if your index was now still 12 pages instead of 21, SQL Server would take less time to accomplish this.
 > 
@@ -219,7 +219,7 @@ SET SHOWPLAN_TEXT ON
   
 > [Index Seek on LOB Columns][11]
   
-> [Row Overflow Pages &#8211; Index Tuning][12]
+> [Row Overflow Pages – Index Tuning][12]
   
 > [Columnstore Index Basics][13]
   

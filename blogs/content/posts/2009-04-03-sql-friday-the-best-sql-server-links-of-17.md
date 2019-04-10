@@ -23,7 +23,7 @@ I skipped last week because of some mysterious reason. Here is what I found inte
   
 Bart Duncan explains why you should almost always use DateTimeOffset instead of Datetime
 
-**[Who is Active? v8.40 &#8211; Now With Delta Power!][2]**
+**[Who is Active? v8.40 – Now With Delta Power!][2]**
   
 Adam Machanic has updated his Who is Active with a huge number of changes, fixes, and enhancements
 
@@ -37,7 +37,7 @@ SQLDumper utility is used by various components of the product to generate and s
   
 If you have SQL Server 2008 failover cluster installations you might be having a problem that prevents these important files from getting created 
 
-**[SQL Server Technical Rollup &#8211; Lots of Useful Documents, News, Events and New KB articles][5]**
+**[SQL Server Technical Rollup – Lots of Useful Documents, News, Events and New KB articles][5]**
   
 Tony Rogerson has compiled a nice list of useful documents, news, events and new KB articles
 

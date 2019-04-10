@@ -25,32 +25,32 @@ Stay tuned to http://channel9.msdn.com/VisualStudio/ for all of the action. Here
 
 **Monday, November 10th:**
   
-&#8211; Visual Studio 2010 Overview with Jason Zander
+– Visual Studio 2010 Overview with Jason Zander
 
 **Languages Day (Tuesday, November 11th):**
   
-&#8211; C# 4.0 Implementation and Design Questions
+– C# 4.0 Implementation and Design Questions
   
-&#8211; VB 10
+– VB 10
   
-&#8211; C++ 10: 10 is the new 6
+– C++ 10: 10 is the new 6
 
 **The IDE (Wednesday, November 12th):**
   
-&#8211; Being Code-Focused with Visual Studio 2010
+– Being Code-Focused with Visual Studio 2010
   
-&#8211; Test-Driven Development and Visual Studio 2010
+– Test-Driven Development and Visual Studio 2010
 
 **Concurrency and Parallelism (Thursday, November 13th):**
   
-&#8211; Parallel Extensions in the .NET Framework 4.0
+– Parallel Extensions in the .NET Framework 4.0
   
-&#8211; Parallel Patterns Library (Native Parallelism)
+– Parallel Patterns Library (Native Parallelism)
   
-&#8211; Parallel Debugging Tools in Visual Studio 2010
+– Parallel Debugging Tools in Visual Studio 2010
 
 **Web Tools (Friday, October 3rd):** ??? (probably a typo)
   
-&#8211; Sharepoint Development with Visual Studio 2010
+– Sharepoint Development with Visual Studio 2010
   
-&#8211; Web Development and Deployment with Visual Studio 2010
+– Web Development and Deployment with Visual Studio 2010

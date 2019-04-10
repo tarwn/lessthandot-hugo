@@ -85,7 +85,7 @@ In this episode of 10-4, we introduce a new tooling enhancement coming with Visu
 
 **[Episode 16: Windows Workflow 4][16]**
   
-In this episode of 10-4 we build a “Hello Workflow 4” application. You might have heard that .NET 4 includes an all new Workflow engine &#8211; learn how you can not only use Workflow but also do test first style development with it.
+In this episode of 10-4 we build a “Hello Workflow 4” application. You might have heard that .NET 4 includes an all new Workflow engine – learn how you can not only use Workflow but also do test first style development with it.
 
 **[Episode 17: F# Intro][17]**
   

@@ -51,7 +51,7 @@ Notable honors and accomplishments:
 SQL Server MVP   
 Microsoft SQL Server Certification Exams Author   
 Finalist for the DBA of the Year 2010 Awards   
-PASS Regional Mentor &#8211; North Central Region   
+PASS Regional Mentor – North Central Region   
 Co-founder and blog on LessThanDot.com   
 www.ltd.local   
 Simple-Talk DBA of the Day   
@@ -61,7 +61,7 @@ Magenic Thought Leadership </em>
 
 _SQL Server Internals, BI and Development, Development on the .NET Framework, Integration Processing and Development, Database Server Technology, Hardware, Disaster/Recovery Planning and Testing.</p> 
 
-Being part of a Team &#8211; A specialty we all need to master</em>
+Being part of a Team – A specialty we all need to master</em>
 
 Notice how I directly focus on SQL Server and the key features that I truly feel I can offer a level of skills that would potentially show a quick return on investment to a company from employment or consulting.  Prior to this summary, vbscript, AS400 and even COBOL were listed.  That, on my part, was a failure and did not represent my current skills very well.
 

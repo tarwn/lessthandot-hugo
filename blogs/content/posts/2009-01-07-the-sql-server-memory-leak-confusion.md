@@ -25,7 +25,7 @@ How do you know you need more RAM?
   
 Take a look at your Buffer Cache Hit Ratio, ideally you want to be at 95% plus.
   
-Mine right now is 99.927 which is very good. To look at the Buffer Cache Hit Ratio you need to open up Performance in Control Panel&#8211;>Administrative Tools. Click on the + to add a new counter, from the Performance object select _SQL Server: Buffer Manager_, from the Select counters from list select _buffer cache hit ratio_
+Mine right now is 99.927 which is very good. To look at the Buffer Cache Hit Ratio you need to open up Performance in Control Panel–>Administrative Tools. Click on the + to add a new counter, from the Performance object select _SQL Server: Buffer Manager_, from the Select counters from list select _buffer cache hit ratio_
   
 Take a look at the screen shot below if the text is too confusing
 

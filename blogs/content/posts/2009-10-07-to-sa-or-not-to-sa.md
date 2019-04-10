@@ -67,7 +67,7 @@ First, Active Directory group setup for the DBAs is the only ones that have acce
   </p>
 </blockquote>
 
-<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="/index.php/datamgmt/datadesign/securing-you-password-for-sql-server-200/embed/#?secret=AHCITsCkau" data-secret="AHCITsCkau" width="500" height="282" title="“Securing your password for SQL Server 2005 and 2008 and more” &#8212; LessthanDot" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="/index.php/datamgmt/datadesign/securing-you-password-for-sql-server-200/embed/#?secret=AHCITsCkau" data-secret="AHCITsCkau" width="500" height="282" title="“Securing your password for SQL Server 2005 and 2008 and more” — LessthanDot" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 So now that I got it out that only the DBAs should at any time be able to access sa in any way shape or form, what about the password?
 

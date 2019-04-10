@@ -22,7 +22,7 @@ What a great idea! Starting and nurturing a new user group can be an overwhelmin
 
 The moment Steve mentioned this, I knew it was something I wanted to be a part of and I have focused a great deal of energy on it over the last year. We knew we had interest from people outside of the Twin Cities area and soon focused our efforts on Rochester, home of the Mayo Clinic and a large IBM facility. Rochester was also the location from which we would receive the most “feedback” when we were unable to stream a PASSMN meeting.
 
-Getting all of the logistics in place took a little longer than we thought but I am thrilled to announce that PASSMN will hold the first ever PASSMN &#8211; Rochester meeting on January 22nd at 4PM, at the Mayo Clinic. Come for the networking, stay for the presentation!
+Getting all of the logistics in place took a little longer than we thought but I am thrilled to announce that PASSMN will hold the first ever PASSMN – Rochester meeting on January 22nd at 4PM, at the Mayo Clinic. Come for the networking, stay for the presentation!
 
 A huge thanks goes out to Steve as well as a great group of DBAs at the Mayo Clinic and our Microsoft partners who all helped make this reality.
 

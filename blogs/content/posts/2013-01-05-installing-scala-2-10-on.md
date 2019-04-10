@@ -78,7 +78,7 @@ From the menu go to File and then select New Project. Navigate to Scala Wizards 
 
 Now that the project is created let's create a simple object
 
-Right click on the Scala Project from the package Explorer and select New&#8211;> Scala Object
+Right click on the Scala Project from the package Explorer and select New–> Scala Object
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno7.PNG?mtime=1357398110"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno7.PNG?mtime=1357398110" width="510" height="573" /></a>
@@ -113,7 +113,7 @@ object Test2 {
 	}
 }
 ```
-Run it by selecting Run As&#8211;> Scala Application from the Run as button
+Run it by selecting Run As–> Scala Application from the Run as button
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno10.PNG?mtime=1357399576"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno10.PNG?mtime=1357399576" width="455" height="48" /></a>
@@ -194,7 +194,7 @@ The Scala 2.10.0 codebase includes the following new features and changes:&nbsp;
       * Asynchronously get some JSON: `for (req <- WS.url(restApiUrl).get()) yield (req.json  "users").as[List[User]]` (uses play!)
       * <http://docs.scala-lang.org/overviews/core/futures.html>
   * Dynamic and applyDynamic 
-      * `x.foo` becomes `x.applyDynamic("foo")` if `x`&#8216;s type does not define a `foo`, but is a subtype of `Dynamic`
+      * `x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
       * <http://docs.scala-lang.org/sips/pending/type-dynamic.html>
   * Dependent method types: 
       * `def identity(x: AnyRef): x.type = x` // the return type says we return exactly what we got
@@ -231,7 +231,7 @@ The Scala 2.10.0 codebase includes the following new features and changes:&nbsp;
 
 ### Experimental features {#Experimentalfeatures}
 
-The following exciting &#8212; experimental &#8212; features are part of 2.10.0:
+The following exciting — experimental — features are part of 2.10.0:
 
   * Scala Reflection 
       * <https://docs.google.com/document/d/1Z1VhhNPplbUpaZPIYdc0_EUv5RiGQ2X4oqp0i-vz1qw/edit#heading=h.pqwdkl>

@@ -55,7 +55,7 @@ Blogging
 
 These are just a few ideas, I'm sure if you spent a few minutes you could expand on them and even come up with others that I didn't think of. The key factor, though, is that you have to take the initiative to make these happen. Waiting for someone to budget some extra training time or to setup one of these programs for you is likely going to leave you exactly where you are right now. Pick one of these that seems easy, determine your next step and commit. Now write it on a post-it, tell a co-worker, heck post it down below and tell us all what you will start doing in the next 24 hours (or 6, or now) to keep and improve your edge.
 
-## Next &#8211; Part 2
+## Next – Part 2
 
 We can't keep waiting for a CPU to fry from a failed fan, a 3AM outage from a full disk drive, or for database to corrupt before we find out no one has been switching out the tapes. Get your training and developmental tasks started, the next article is going to bring another gap…and another challenge.
 

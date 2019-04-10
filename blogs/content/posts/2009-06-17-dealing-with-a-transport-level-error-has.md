@@ -36,7 +36,7 @@ _**Msg 10054, Level 20, State 0, Line 0
   
 A transport-level error has occurred when sending the request to the server.
   
-(provider: TCP Provider, error: 0 &#8211; An existing connection was forcibly closed by the remote host.)**_
+(provider: TCP Provider, error: 0 – An existing connection was forcibly closed by the remote host.)**_
   
 
   

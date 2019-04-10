@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-A recent post in the forum I frequent presented an interesting problem &#8211; shrink log file in all user databases. See the reasons why it may not be a good idea explained in [Do not truncate your LDF files][1] and [Why you want to be restrictive with shrink of database files][2]. 
+A recent post in the forum I frequent presented an interesting problem – shrink log file in all user databases. See the reasons why it may not be a good idea explained in [Do not truncate your LDF files][1] and [Why you want to be restrictive with shrink of database files][2]. 
 
 The first idea that came to mind was to use sp_MSForEachDB non-documented stored procedure for this task. You can find this [article by Arshad Ali][3] very helpful in understanding sp\_MsForEachTable and sp\_MSForEachDB stored procedures and their parameters.
   
@@ -68,9 +68,9 @@ execute (@SQL)
 
 (code based on this [MSDN thread][4])
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+————————-
   
-Interestingly, this solution, proposed by Borislav Borissov, still attempts to change recovery model in TempDB &#8211; not clear why:
+Interestingly, this solution, proposed by Borislav Borissov, still attempts to change recovery model in TempDB – not clear why:
 
 sql
 sp_MSForEachDb 'IF LOWER(''?'') NOT IN (''master'', ''tempdb'', ''tempdev'', ''model'', ''msdb'')

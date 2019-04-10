@@ -145,7 +145,7 @@ You should now understand the hierarchy of sp_addextendedproperty. Once you’ve
 
 What if something changes? Maybe a default value changes, or you want to add more information. You can execute [sp_updateextendedproperty][2] to update the information. This is very similar to adding – pass in the property name and the updated value, then the appropriate levels.
 
-Let’s say I want to be more specific about the purpose of the schema Jes. I can update the ‘Purpose’ property easily.
+Let’s say I want to be more specific about the purpose of the schema Jes. I can update the 'Purpose’ property easily.
 
 ```sql
 exec sp_updateextendedproperty 

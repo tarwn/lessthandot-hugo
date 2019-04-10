@@ -129,7 +129,7 @@ To get the Additional working days, below table will be useful..
 
 0 1 2 3 4 5 6
    
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+——————
   
 0| 1 2 3 4 5 5 5
   

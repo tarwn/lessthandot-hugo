@@ -74,7 +74,7 @@ ORDER BY id
 
 This doesn't work in 2005 or 2008
 
-OF course you can do this and it will &#8216;work' and I wrote about it here: [Create a sorted view in SQL Server 2005 and SQL Server 2008][3]
+OF course you can do this and it will 'work' and I wrote about it here: [Create a sorted view in SQL Server 2005 and SQL Server 2008][3]
 
 sql
 CREATE VIEW vTestSort2

@@ -33,7 +33,7 @@ Adam has already tested it and it works perfectly!
 
 <blockquote class="twitter-tweet" lang="en">
   <p>
-    <a href="https://twitter.com/Ko_Ver">@Ko_Ver</a> just tried it&#8211;works great! Thank you!
+    <a href="https://twitter.com/Ko_Ver">@Ko_Ver</a> just tried it–works great! Thank you!
   </p>
   
   <p>

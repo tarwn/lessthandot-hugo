@@ -33,9 +33,9 @@ FROM View
 ORDER By Column
 ```
 
-Not hard, I guess pople want the convenience of opening the view in SSMS and it is sorted &#8216;correctly'
+Not hard, I guess pople want the convenience of opening the view in SSMS and it is sorted 'correctly'
   
-There is a way to get this to work in SQL server 2005, there is a hotfix that will &#8216;fix' this but you have to run in 2000 compatability mode.
+There is a way to get this to work in SQL server 2005, there is a hotfix that will 'fix' this but you have to run in 2000 compatability mode.
   
 The link to the fix is here: [FIX: When you query through a view that uses the ORDER BY clause in SQL Server 2008, the result is still returned in random order][1]
 

@@ -36,7 +36,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">One <em style="mso-bidi-font-style: normal;">fact</em> table &#8212; Internet Sales – which relates to a single dimension – Dates.</span>
+  <span style="font-family: verdana,geneva;">One <em style="mso-bidi-font-style: normal;">fact</em> table — Internet Sales – which relates to a single dimension – Dates.</span>
 </p>
 
 <p class="MsoNormal">
@@ -70,7 +70,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: courier new,courier;"> =FORMAT(‘Dates’[ActualDate], “dddd”)</span>
+  <span style="font-family: courier new,courier;"> =FORMAT('Dates’[ActualDate], “dddd”)</span>
 </p>
 
 <p class="MsoNormal">
@@ -116,7 +116,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: courier new,courier;">[Sales WTD]:=CALCULATE(</span><br /><span style="font-family: courier new,courier;"> SUM(&#8216;Internet Sales'[SalesAmount]),                         <br /> DATESBETWEEN(          <br /> Dates[ActualDate],<br /> LASTDATE(Dates[WeekStartDate]), <br /> LASTDATE(Dates[ActualDate])</span><span style="font-family: courier new,courier;"><br /> )<br /> );</span>
+  <span style="font-family: courier new,courier;">[Sales WTD]:=CALCULATE(</span><br /><span style="font-family: courier new,courier;"> SUM('Internet Sales'[SalesAmount]),                         <br /> DATESBETWEEN(          <br /> Dates[ActualDate],<br /> LASTDATE(Dates[WeekStartDate]), <br /> LASTDATE(Dates[ActualDate])</span><span style="font-family: courier new,courier;"><br /> )<br /> );</span>
 </p>
 
 <p class="MsoNormal">

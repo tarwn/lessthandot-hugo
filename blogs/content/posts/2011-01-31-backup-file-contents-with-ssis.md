@@ -142,9 +142,9 @@ Querying these configuration tables shows the contents successfully inserted
 
 Over this four part series a lot of things were discussed.  The Lookup, Conditional Split, OLEDB Command, variable usage and Foreach Loop Container all at a high level.  In the process, we setup a cool task for backing up of files on servers.  With SSIS and some of the components and tasks available, many things like this can be automated and provide a great recovery point in the event of a disaster at any level.
 
-Part one &#8211; [Backup file contents with SSIS – Defining the Design][2]
+Part one – [Backup file contents with SSIS – Defining the Design][2]
 
-Part two &#8211; [Backup file contents with SSIS – Foreach Loop Container and file handling][5]
+Part two – [Backup file contents with SSIS – Foreach Loop Container and file handling][5]
 
 Part three – [Backup file contents with SSIS – Supporting tables and structures][1]
 

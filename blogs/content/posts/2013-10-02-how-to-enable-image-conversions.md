@@ -43,7 +43,7 @@ The necessary packages can be found here:
 
 # Change the hybris configuration
 
-Open the localextensions.xml file in &#8216;hybris\_install\_dir'config and lookup the following tag:
+Open the localextensions.xml file in 'hybris\_install\_dir'config and lookup the following tag:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag2.png?mtime=1380714712"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag2.png?mtime=1380714712" width="439" height="69" /></a>
@@ -58,7 +58,7 @@ Uncomment the tag and add the location of the mediaconversion extension:
 
 # Rebuild hybris
 
-Open a command prompt and navigate to the &#8216;hybris\_install\_dir'binplatform directory.
+Open a command prompt and navigate to the 'hybris\_install\_dir'binplatform directory.
   
 Execute the following commands
 

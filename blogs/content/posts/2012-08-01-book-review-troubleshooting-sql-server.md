@@ -23,7 +23,7 @@ My latest SQL Server read was [Troubleshooting SQL Server – A Guide for the Ac
   <img src="/wp-content/uploads/blogs/DataMgmt/TroubleshootingSQL.JPG?mtime=1343829419" alt="" />
 </p>
 
-Topics that are covered include disk I/O configuration, CPU, memory, indexes, blocking, deadlocks, transaction logs, and &#8211; my favorite &#8211; accidents waiting to happen.
+Topics that are covered include disk I/O configuration, CPU, memory, indexes, blocking, deadlocks, transaction logs, and – my favorite – accidents waiting to happen.
 
 **The Good** 
 
@@ -61,9 +61,9 @@ How SQL Server, the OS, and memory interact is complicated to understand. One of
 
 **Chapter 5 – Missing Indexes** 
 
-There is a good review of index basics, stressing the difference between key columns and nonkey columns, the order of key columns, and included columns. The two main troubleshooting tools discussed are the Database Tuning Advisor and the missing index DMVs. I found it most interesting to compare how DTA and the DMVs work &#8211; they are not equal! The queries provided in this chapter are very useful for everyday troubleshooting.
+There is a good review of index basics, stressing the difference between key columns and nonkey columns, the order of key columns, and included columns. The two main troubleshooting tools discussed are the Database Tuning Advisor and the missing index DMVs. I found it most interesting to compare how DTA and the DMVs work – they are not equal! The queries provided in this chapter are very useful for everyday troubleshooting.
 
-**Chapter 6 &#8211; Blocking** 
+**Chapter 6 – Blocking** 
 
 When first starting as a DBA, it was hard to understand the difference between latches and locks, necessary to the operation of SQL Server, and blocking, which happens but isn’t desirable. This chapter covers the basics of the types of locks and latches, which is all an accidental DBA really needs to understand at first. Queries using DMVs are given to help troubleshoot what tasks are blocked or waiting. The part I was most interested in was automatic detection and notification. In particular, I've started learning more about the blocked process report recently, and was happy to see information about it. Other topics like event notifications using Service Broker and Extended Events in SQL Server 2012 are covered.
 

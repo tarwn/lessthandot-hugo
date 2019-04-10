@@ -83,7 +83,7 @@ You should never use * but only list the columns you really want, see also here:
   
 There is a missing qualifier in the table name
   
-This where clause is not sargable instead of left(SomeColumn,1) ='A' do this SomeColumn like &#8216;A%'. see also here: [Functions on left side of the operator][3]
+This where clause is not sargable instead of left(SomeColumn,1) ='A' do this SomeColumn like 'A%'. see also here: [Functions on left side of the operator][3]
   
 @@ROWCOUNT should be selected right after the query because the print will make it have a value of 0; any statement will affect @@ROWCOUNT so you should always dump it into a variable right after you do a DML statement. The same that applies to @@ROWCOUNT also applies to @@ERROR. If you do need to grab both @@ERROR and @@rowcount then do it on the same line. SELECT @MyErr =@@ERROR, @MyCount = @@ROWCOUNT 
 
@@ -226,7 +226,7 @@ select @v =replicate('a',20000)
 select len(@v)
 ```
 
-8000 will be returned because &#8216;a' is a varchar which goes up to 8000 max. Here is one way to get around it
+8000 will be returned because 'a' is a varchar which goes up to 8000 max. Here is one way to get around it
 
 sql
 declare @v varchar(max)

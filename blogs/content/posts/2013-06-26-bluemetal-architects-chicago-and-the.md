@@ -27,7 +27,7 @@ It’s been a bit longer than a month, back when I posted “<a href="/index.php
 
  
 
-The data practice at BlueMetal is as strong as ever and with that, business is nothing short of exceptional.  So much so that cloning is in the mix and I’m working on a machine that can clone dozens of onpnts.  OK, I was just seeing if I had your attention.  BlueMetal Architects in Chicago is looking for an addition to our data practice &#8211; someone that has the same goals I’ve always written and talked about.  The goals I’m talking about are quite simple.
+The data practice at BlueMetal is as strong as ever and with that, business is nothing short of exceptional.  So much so that cloning is in the mix and I’m working on a machine that can clone dozens of onpnts.  OK, I was just seeing if I had your attention.  BlueMetal Architects in Chicago is looking for an addition to our data practice – someone that has the same goals I’ve always written and talked about.  The goals I’m talking about are quite simple.
 
 
 

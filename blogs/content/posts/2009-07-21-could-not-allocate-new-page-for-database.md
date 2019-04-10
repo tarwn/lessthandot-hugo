@@ -1,5 +1,5 @@
 ---
-title: Dealing with the could not allocate new page for database ‘TEMPDB’. There are no more pages available in filegroup DEFAULT error message
+title: Dealing with the could not allocate new page for database 'TEMPDB’. There are no more pages available in filegroup DEFAULT error message
 author: SQLDenis
 type: post
 date: 2009-07-21T18:01:51+00:00
@@ -24,7 +24,7 @@ tags:
 ---
 Someone was writing some queries that brought back a lot of data (and I mean a LOT!!) and after a while he got the following message
 
-> Connectivity error: \[Microsoft\]\[ODBC SQL Server Driver\][SQL Server]Could not allocate new page for database &#8216;TEMPDB'. There are no more pages available in filegroup DEFAULT. Space can be created by dropping objects, adding additional files, or or allowing file growth
+> Connectivity error: \[Microsoft\]\[ODBC SQL Server Driver\][SQL Server]Could not allocate new page for database 'TEMPDB'. There are no more pages available in filegroup DEFAULT. Space can be created by dropping objects, adding additional files, or or allowing file growth
 
 That is not good, fortunately this wasn't one of our production machines but a dev/test box.
 

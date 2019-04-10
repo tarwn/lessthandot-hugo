@@ -727,7 +727,7 @@ group by CustomerName</code>
 
 The expression above returns the following error:
   
-<span class="MT_red">Column &#8216;CTEOrders.OrderAmt' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause</span>
+<span class="MT_red">Column 'CTEOrders.OrderAmt' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause</span>
 
 The goal of the statement above was to show the customer’s total order amount with the overall order amount. The following statement resolves this issue because it is aggregating the aggregates. The window is now summing the aggregated amount which are grouped on the customer name.
 

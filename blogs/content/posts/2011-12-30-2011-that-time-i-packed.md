@@ -33,7 +33,7 @@ A year ago, I sat down and wrote [2011 Goals: Bring It On][1]. I wanted to go bi
 
 **Blogging**
 
-I wrote 50 blogs in 2011 &#8211; 50! The most popular were: 
+I wrote 50 blogs in 2011 – 50! The most popular were: 
 
   * [Tips and Tricks to Make SQL Server Management Studio Awesome][2]
   * [A Cheat Sheet for All the *{_(%#$] PowerShell Punctuation][3]
@@ -67,7 +67,7 @@ I hope I am doing this, every single day.
 
 **Help Myself** 
 
-I did not get two certifications this year. I didn't even get one &#8211; I failed the test. 
+I did not get two certifications this year. I didn't even get one – I failed the test. 
 
 I did write a PowerShell script. I wrote several, actually. PowerShell is really cool. 
 
@@ -77,7 +77,7 @@ Have I learned a lot this year? An unbelievable amount.
 
 What an awesome year it was. I've had good days and bad days, but the SQL community has been there for me through all of them. I can't wait to see where I'm standing a year from now. 
 
-My advice to anyone reading this: get involved involved in the SQL community. Join a user group, attend a SQL Saturday, blog, volunteer for PASS, join Twitter &#8211; anything. Don't sit and wait for the opportunities to come to you. Go to them. Put yourself out there. You have no idea what is waiting, and how amazing it is going to be. 
+My advice to anyone reading this: get involved involved in the SQL community. Join a user group, attend a SQL Saturday, blog, volunteer for PASS, join Twitter – anything. Don't sit and wait for the opportunities to come to you. Go to them. Put yourself out there. You have no idea what is waiting, and how amazing it is going to be. 
 
 <p align="center">
   Happy New Year!

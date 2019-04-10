@@ -175,7 +175,7 @@ Yeah.
 
 There's more. I've spent 17 hours on my sample site so far, which includes implementing a SQL Compact database, implementing and removing WebSecurity authentication, and a score of other things. I've found out the hard way that getting fancy can bite you and that it is actually possible to install a 10 inch tailpipe on the WebMatrix hatchback (which I just realized could refer to two different things I've done, hmmm, tailpipe and a <strike>shopping cart handle</strike> spoiler then). 
 
-Unfortunately because I had issues with the authentication I can't post a live link yet, the next post will have to cover all the fun that has gone into trying to get a certified host for WebMatrix to run correctly (hint, not all [&#8216;SpotLight' hosts][3] can run the included, basic example sites).
+Unfortunately because I had issues with the authentication I can't post a live link yet, the next post will have to cover all the fun that has gone into trying to get a certified host for WebMatrix to run correctly (hint, not all ['SpotLight' hosts][3] can run the included, basic example sites).
 
  [1]: /index.php/WebDev/UIDevelopment/AJAX/trying-out-webmatrix-and-razor "Chissie on Trying Out Webmatrix and Razor"
  [2]: /index.php/WebDev/ServerProgramming/the-many-functions-of-webmatrix "Read the Webmatrix Overview post"

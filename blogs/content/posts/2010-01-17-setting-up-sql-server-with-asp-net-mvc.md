@@ -19,7 +19,7 @@ tags:
 ---
 If you download [ASP.NET MVC][1] from Microsoft, install it and create a MVC website you might run into a couple of gotchas in regards to the database. First of all ASP.NET MVC use SQL Server Express by default in the connection string. So if you were to run your ASP.NET MVC website, then clicking on login you would get this error:
 
-_<span class="MT_smaller">A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 &#8211; Error Locating Server/Instance Specified</span>)_
+_<span class="MT_smaller">A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 – Error Locating Server/Instance Specified</span>)_
 
 A little more info below that error will tell you that it is trying to create a SQL Server Express database. Here is that info
 
@@ -66,7 +66,7 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
 </p>
 
 <p>
-  <strong>Cannot open database “aspnetdb” requested by the login. The login failed.<br /> Login failed for user &#8216;Denis-PCDenis'.</strong>
+  <strong>Cannot open database “aspnetdb” requested by the login. The login failed.<br /> Login failed for user 'Denis-PCDenis'.</strong>
 </p>
 
 <p>
@@ -74,7 +74,7 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
 </p>
 
 <p>
-  Start &#8211;> All Programs &#8211;> Microsoft Visual Studio 2008 &#8211;> Visual Studio Tools &#8211;> Visual Studio 2008 Command Prompt
+  Start –> All Programs –> Microsoft Visual Studio 2008 –> Visual Studio Tools –> Visual Studio 2008 Command Prompt
 </p>
 
 <p>

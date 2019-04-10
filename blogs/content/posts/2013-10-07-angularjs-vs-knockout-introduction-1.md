@@ -35,25 +35,25 @@ Here are the capabilities I need:
 
 <ul style="padding-left: 2em;">
   <li>
-    Data binding &#8211; bind HTML elements to JavaScript data models
+    Data binding – bind HTML elements to JavaScript data models
   </li>
   <li>
-    Validation &#8211; validation of raw inputs by applying rules for fields or model properties
+    Validation – validation of raw inputs by applying rules for fields or model properties
   </li>
   <li>
-    Serialization &#8211; easy method for serializing models to POST to server-side APIs
+    Serialization – easy method for serializing models to POST to server-side APIs
   </li>
   <li>
-    Templating &#8211; define HTML templates for re-usable complex collections of HTML
+    Templating – define HTML templates for re-usable complex collections of HTML
   </li>
   <li>
-    Modules + DI &#8211; keep my javascript files separate, help me order them properly, manage dependencies for me
+    Modules + DI – keep my javascript files separate, help me order them properly, manage dependencies for me
   </li>
   <li>
-    Automated Testing &#8211; Exploring unit testing and possibilities for higher level testing
+    Automated Testing – Exploring unit testing and possibilities for higher level testing
   </li>
   <li>
-    SPA Routing/History &#8211; make it easy for me to route between views in a single page app, with history/deep linking
+    SPA Routing/History – make it easy for me to route between views in a single page app, with history/deep linking
   </li>
 </ul>
 

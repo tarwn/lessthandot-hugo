@@ -21,13 +21,13 @@ I don't have a count of how many resumes and technical screens I've done, but we
 
 So let's talk hiring.
 
-## Step 0 &#8211; The Criteria
+## Step 0 – The Criteria
 
 We evaluate candidates between each step of the process. A single “No” at any stage, from anyone involved in the process is all it takes to decide the fit is not there. We interview a lot of amazing people, but not all of them are a good fit for this specific team.
 
 From the Phone Screen forward, we always commit to a date and time we will provide feedback. People are important to us, so we make the commitment to limit stress on the candidate (we have all been there before, wondering if we would get a call and when). 
 
-## Step 1 &#8211; The Introduction
+## Step 1 – The Introduction
 
 First, you have to find us somehow. We do work with a couple recruiters, so that's one possible introduction path. We also have job ads cleverly hidden in the careers section of our website (though they were in drastic need of a redo). We also meet people at events and have the occasional referral (more in a minute on why these are “occasional”).
 
@@ -35,7 +35,7 @@ We typically had 4 job ads listed at a time, not because we were looking for 4 p
 
 So somehow you have found yourself to be reading the job ad that fits your experiences, level of responsibility, skills, and so on. Let's get to the introduction.
 
-### Step 1A &#8211; The Recruiter Path
+### Step 1A – The Recruiter Path
 
 The recruiters goal is to do everything they can to identify one candidate that will make it through our process. Our best recruiter sends us roughly 1.3 candidates for every one we hire. They perform their own screening against our technical criteria, checking references, and evaluating for how well they think the candidate will fit, before they will even send me a resume to consider screening. 
 
@@ -45,7 +45,7 @@ Great recruiters are happiest when they find a great match on the first try. The
 
 As part of this, the recruiter has candidates complete our Technical Screen (Step 2). Once we decide the potential fit is there, we schedule the Coffee Screen (goto Step 4).
 
-### Step 1B &#8211; The Website Application Path
+### Step 1B – The Website Application Path
 
 The key to the application path is to capture the interest of people that will be great in our environment and, hopefully, push away some of the people that would hate the way we work. This is one reason we need to revise our job ads again, to try to surface those polarizing criteria better. 
 
@@ -55,7 +55,7 @@ The application is not a formality, it is the first piece of information we are 
 
 Providing a resume and application queues the candidate up for internal review and, if they pass muster, will lead to the Technical Screen (Step 2), followed by the Phone Screen (Step 3).
 
-### Step 1C &#8211; The Referral
+### Step 1C – The Referral
 
 We limit referrals, but they also have greater prestige attached to them when they come in the door. 
 
@@ -94,7 +94,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h2>
-      Step 2 &#8211; The Technical Screen
+      Step 2 – The Technical Screen
     </h2>
     
     <p>
@@ -110,7 +110,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h2>
-      Step 3 &#8211; The Phone Screen
+      Step 3 – The Phone Screen
     </h2>
     
     <p>
@@ -118,7 +118,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h2>
-      Step Not 4 &#8211; The Reference Check
+      Step Not 4 – The Reference Check
     </h2>
     
     <p>
@@ -126,7 +126,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h2>
-      Step 4 &#8211; The Coffee Screen
+      Step 4 – The Coffee Screen
     </h2>
     
     <p>
@@ -146,7 +146,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h2>
-      Step 5 &#8211; The Office Interview
+      Step 5 – The Office Interview
     </h2>
     
     <p>
@@ -158,11 +158,11 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h3>
-      5A &#8211; The Introduction
+      5A – The Introduction
     </h3>
     
     <p>
-      We start the morning with some coffee (or tea) and a brief review of the agenda for the day. We review the steps and people the candidate will be interacting with over the course of the day, as well as the goals we have for each stage. We also review any critical questions the candidate has so we can ensure they get answered over the course of the day (we also review them before the candidate leaves, just to be absolutely sure). This also lets me suggest parts of the day that they be asked in and customize part of the &#8216;About Us' Q&A to address those questions.
+      We start the morning with some coffee (or tea) and a brief review of the agenda for the day. We review the steps and people the candidate will be interacting with over the course of the day, as well as the goals we have for each stage. We also review any critical questions the candidate has so we can ensure they get answered over the course of the day (we also review them before the candidate leaves, just to be absolutely sure). This also lets me suggest parts of the day that they be asked in and customize part of the 'About Us' Q&A to address those questions.
     </p>
     
     <p>
@@ -170,7 +170,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h3>
-      5B &#8211; The Technical Screen, Take 2
+      5B – The Technical Screen, Take 2
     </h3>
     
     <p>
@@ -182,7 +182,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h3>
-      5C &#8211; The Background Deep Dive
+      5C – The Background Deep Dive
     </h3>
     
     <p>
@@ -198,7 +198,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h3>
-      5D &#8211; The About Us section
+      5D – The About Us section
     </h3>
     
     <p>
@@ -214,7 +214,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h3>
-      5E &#8211; Lunch
+      5E – Lunch
     </h3>
     
     <p>
@@ -222,7 +222,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h3>
-      5F &#8211; Technical Deep Dive
+      5F – Technical Deep Dive
     </h3>
     
     <p>
@@ -238,7 +238,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h3>
-      5G &#8211; Team Q&A
+      5G – Team Q&A
     </h3>
     
     <p>
@@ -250,7 +250,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h3>
-      5F &#8211; Wrap Up
+      5F – Wrap Up
     </h3>
     
     <p>
@@ -262,7 +262,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h2>
-      Step 6 &#8211; Process Improvement
+      Step 6 – Process Improvement
     </h2>
     
     <p>
@@ -274,7 +274,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h2>
-      Step 7 &#8211; The Decisioning
+      Step 7 – The Decisioning
     </h2>
     
     <p>
@@ -290,7 +290,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <h2>
-      Step 8 &#8211; The Offer
+      Step 8 – The Offer
     </h2>
     
     <p>

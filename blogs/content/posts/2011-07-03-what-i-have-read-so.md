@@ -35,7 +35,7 @@ My goal for this year is to read 50 books. At this point I have read 27 books, s
 
 1) [Snow Crash][2] by Neal Stephenson
   
-Hiro Protagonist&#8211;hacker, samurai swordsman, and pizza-delivery drive is living in the Metaverse and people start frying their brains from the designer drug called Snow Crash. Interesting book, really enjoyed the 2nd half of the book, the first part was hard to get into
+Hiro Protagonist–hacker, samurai swordsman, and pizza-delivery drive is living in the Metaverse and people start frying their brains from the designer drug called Snow Crash. Interesting book, really enjoyed the 2nd half of the book, the first part was hard to get into
 
 2) [Boneshaker][3] by Cherie Priest
   

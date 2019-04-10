@@ -56,7 +56,7 @@ Having previous virtualized servers (as well as managed the random set of SQL se
   
 Aaron Nelson** ([blog][14] | [twitter][15])
   
-I went into Aaron's session with almost no knowledge of powershell and came out with some ideas and practical examples of where it could be used to manage environments and automate work. While some of the concepts clicked quickly for me (&#8216;piping' output is common in Unix-like systems), others were new to me and his examples hit a good balance between brevity in code length and breadth of functionality. He also pointed out a number of good follow-up resources and reading recommendations.
+I went into Aaron's session with almost no knowledge of powershell and came out with some ideas and practical examples of where it could be used to manage environments and automate work. While some of the concepts clicked quickly for me ('piping' output is common in Unix-like systems), others were new to me and his examples hit a good balance between brevity in code length and breadth of functionality. He also pointed out a number of good follow-up resources and reading recommendations.
 
 **<u>Maximizing Plan Re-Use</u>
   
@@ -68,7 +68,7 @@ The concept of executions plans is still fairly new to me, something I had littl
   
 Denny Cherry** ([blog][12] | [twitter][13])
   
-As Denny put it in the beginning, often there is a disconnect between DBA's and Storage Admins that comes down to some fundamental differences in terminology. This session was a &#8216;How to Speak Storage Admin' class that walked us trough the basics of terminology, tools and methods to help size your environment, and some advanced tools he uses in his own environment. And excellent session, even if I am a developer and not a DBA 🙂
+As Denny put it in the beginning, often there is a disconnect between DBA's and Storage Admins that comes down to some fundamental differences in terminology. This session was a 'How to Speak Storage Admin' class that walked us trough the basics of terminology, tools and methods to help size your environment, and some advanced tools he uses in his own environment. And excellent session, even if I am a developer and not a DBA 🙂
 
 **<u>[Top 10 Mistakes on SQL Server][18]</u>
   

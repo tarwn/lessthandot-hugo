@@ -69,9 +69,9 @@ The restore ran fine, as shown below, until it hit the database version upgrade 
   
 100 percent processed.
   
-Processed 532576 pages for database &#8216;TEMPRESTORE', file &#8216;TEMPRESTORE' on file 1.
+Processed 532576 pages for database 'TEMPRESTORE', file 'TEMPRESTORE' on file 1.
   
-Processed 4 pages for database &#8216;TEMPRESTORE', file &#8216;TEMPRESTORE_log' on file 1.
+Processed 4 pages for database 'TEMPRESTORE', file 'TEMPRESTORE_log' on file 1.
   
 <span class="MT_red">Msg 3013, Level 16, State 1, Line 2<br /> RESTORE DATABASE is terminating abnormally.<br /> Msg 845, Level 17, State 1, Line 2<br /> Time-out occurred while waiting for buffer latch type 3 for page (1:0), database ID 27.</span></p> 
 
@@ -85,31 +85,31 @@ GO
 ```
 The resulting messages below show the restore was at a state that allowed the call for recovery to complete and bring the database online by upgrading the internal version. Now, a critical step here to verify the databases integrity is to run a CHECKDB before allowing activity on it. This is even more critical if this is a restore that is required for production. Do not skip a CHECKDB on a database if this happens to you.
 
-Converting database &#8216;TEMPRESTORE' from version 661 to the current version 706.
+Converting database 'TEMPRESTORE' from version 661 to the current version 706.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 661 to version 668.
+Database 'TEMPRESTORE' running the upgrade step from version 661 to version 668.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 668 to version 669.
+Database 'TEMPRESTORE' running the upgrade step from version 668 to version 669.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 669 to version 670.
+Database 'TEMPRESTORE' running the upgrade step from version 669 to version 670.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 670 to version 671.
+Database 'TEMPRESTORE' running the upgrade step from version 670 to version 671.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 671 to version 672.
+Database 'TEMPRESTORE' running the upgrade step from version 671 to version 672.
   
 ………
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 700 to version 701.
+Database 'TEMPRESTORE' running the upgrade step from version 700 to version 701.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 701 to version 702.
+Database 'TEMPRESTORE' running the upgrade step from version 701 to version 702.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 702 to version 703.
+Database 'TEMPRESTORE' running the upgrade step from version 702 to version 703.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 703 to version 704.
+Database 'TEMPRESTORE' running the upgrade step from version 703 to version 704.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 704 to version 705.
+Database 'TEMPRESTORE' running the upgrade step from version 704 to version 705.
   
-Database &#8216;TEMPRESTORE' running the upgrade step from version 705 to version 706.
+Database 'TEMPRESTORE' running the upgrade step from version 705 to version 706.
   
 RESTORE DATABASE successfully processed 0 pages in 289.824 seconds (0.000 MB/sec).
 

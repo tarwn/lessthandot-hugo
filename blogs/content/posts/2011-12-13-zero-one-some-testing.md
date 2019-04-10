@@ -29,7 +29,7 @@ _I met Denis and Sebastian over a year ago when I attended their session on test
 
 Test case heuristics are patterns used to help decide the next test to write and ensure test coverage of requirements. This is the second post on a series of test case heuristics pertaining to database testing.
 
-I'm trying out a new way of delivering series to a wider audience &#8211; post sharing! The series home is at: http://testdrivendatabases.com/test-heuristics where you can find links to all articles in the series. The posts will be scattered over a variety of websites and blogs.
+I'm trying out a new way of delivering series to a wider audience – post sharing! The series home is at: http://testdrivendatabases.com/test-heuristics where you can find links to all articles in the series. The posts will be scattered over a variety of websites and blogs.
 
 ## Definition:
 

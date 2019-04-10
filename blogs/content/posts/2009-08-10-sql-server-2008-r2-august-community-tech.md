@@ -65,29 +65,29 @@ Learn more about SQL Server 2008 R2 here: http://www.microsoft.com/sqlserver/200
   
 Available on August 10th to TechNet/MSDN Subscribers and on August 12th to the general public
 
-The download link does not work yet but will be available very soon. You can also find it in MSDN under Updated Products&#8211;>SQL Server 2008, here is what is available
+The download link does not work yet but will be available very soon. You can also find it in MSDN under Updated Products–>SQL Server 2008, here is what is available
   
-_SQL Server 2008 R2 Enterprise Evaluation (x86) &#8211; (English)
+_SQL Server 2008 R2 Enterprise Evaluation (x86) – (English)
   
 1,249.31 (MB)</p> 
 
-SQL Server 2008 R2 Enterprise Evaluation (x64) &#8211; (English)
+SQL Server 2008 R2 Enterprise Evaluation (x64) – (English)
   
 1,350.25 (MB)
 
-SQL Server 2008 R2 Enterprise Evaluation (ia64) &#8211; (English)
+SQL Server 2008 R2 Enterprise Evaluation (ia64) – (English)
   
 1,334.92 (MB)
 
-SQL Server 2008 R2 Express Edition CTP (x86 and x64 WoW) &#8211; (English)
+SQL Server 2008 R2 Express Edition CTP (x86 and x64 WoW) – (English)
   
 100.76 (MB)
 
-SQL Server 2008 R2 Express Edition CTP (x64) &#8211; (English)
+SQL Server 2008 R2 Express Edition CTP (x64) – (English)
   
 113.46 (MB)
 
-SQL Server 2008 R2 Express Edition CTP (x86) &#8211; (English)
+SQL Server 2008 R2 Express Edition CTP (x86) – (English)
   
 86.33 (MB)</em>
 

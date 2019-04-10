@@ -90,7 +90,7 @@ function (ko,
 
 });
 ```
-All of the code for the site is located here: [github: tarwn/Blog_RequireJSandSelenium &#8211; /SampleWebSite][10]
+All of the code for the site is located here: [github: tarwn/Blog_RequireJSandSelenium – /SampleWebSite][10]
 
 <div style="background-color: #FFFFBB; padding: 1em; margin: .25em 1em">
   If you have not used <a href="http://requirejs.org/" title="RequireJS">RequireJS</a>, the top part of the javascript file may look confusing. define() is used to define all the dependencies I need for the script and a method that accepts those dependencies for us in the scope of that script. When someone in turn asks for an IndexViewModel (or more appropriately: /app/indexViewModel), they will get back this constructor, fully wired with all of it's dependencies. RequireJS ensures dependencies are loaded in the right order, keeps the global window scope clean, and allows us to mock out those dependencies using tools like <a href="https://github.com/iammerrick/Squire.js/" title="Squire.js on github">Squire.js</a>.
@@ -98,16 +98,16 @@ All of the code for the site is located here: [github: tarwn/Blog_RequireJSandSe
 
 Let's get testing!
 
-## Testing with Selenium &#8211; times 8!
+## Testing with Selenium – times 8!
 
 While playing with this, I looked at 4 different methods of testing with Selenium across Chrome and Phantom. 
 
 The 4 methods are:
 
-  * [IndexTests.FullIntegration][11] &#8211; launch the site locally and run my UI tests against it, with the “real” WebAPI service
-  * [IndexTests.ClientSideInjection][12] &#8211; Execute a script to stub the itemService.js logic to run locally
-  * [IndexTests.NancyServer][13] &#8211; Self-host a Nancy server with fake versions of the server-side API
-  * [IndexTests.NancyServer][14] &#8211; Self-host a Nancy server that serves a stubbed itemService.js file
+  * [IndexTests.FullIntegration][11] – launch the site locally and run my UI tests against it, with the “real” WebAPI service
+  * [IndexTests.ClientSideInjection][12] – Execute a script to stub the itemService.js logic to run locally
+  * [IndexTests.NancyServer][13] – Self-host a Nancy server with fake versions of the server-side API
+  * [IndexTests.NancyServer][14] – Self-host a Nancy server that serves a stubbed itemService.js file
 
 These tests only cover the case where the HTML page is already a static file. If my page had instead been server-side generated from something like ASP.Net MVC or Web Pages, there would be additional work involved.
 

@@ -28,7 +28,7 @@ All of the examples presented throughout the series are available in the [tarwn/
 
 ## Templating in AngularJS
 
-[Directives][2] in Angular are touted as one of it's &#8216;killer' features. They provide the ability to create entirely new elements using templates and custom behavior by replacing and manipulating DOM content. Angular Directives can be used to define custom behavior based on custom tags, attributes, and class names.
+[Directives][2] in Angular are touted as one of it's 'killer' features. They provide the ability to create entirely new elements using templates and custom behavior by replacing and manipulating DOM content. Angular Directives can be used to define custom behavior based on custom tags, attributes, and class names.
 
 ### AngularJS Simple Templating Example
 

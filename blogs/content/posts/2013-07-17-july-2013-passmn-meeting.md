@@ -31,7 +31,7 @@ There are only a few spots left, so if you are going to be in the area, RSVP now
 
 > **Location**:
   
-> [Microsoft Technology Center &#8211; 3601 West 76th Street, Suite 600 Edina, MN 55437][1]
+> [Microsoft Technology Center – 3601 West 76th Street, Suite 600 Edina, MN 55437][1]
   
 > **Date:**
   
@@ -39,7 +39,7 @@ There are only a few spots left, so if you are going to be in the area, RSVP now
   
 > **Time:**
   
-> 5:30 PM &#8211; 7:00 PM
+> 5:30 PM – 7:00 PM
 > 
 > **[Click to RSVP][2]** 
 

@@ -43,7 +43,7 @@ This is the error you get
   
 Server: Msg 2714, Level 16, State 1, Line 12
   
-There is already an object named &#8216;#temptable' in the database.
+There is already an object named '#temptable' in the database.
 
 You can do something like this to get around the issue with the temp table
 
@@ -121,7 +121,7 @@ And you get the follwing error
   
 Server: Msg 134, Level 15, State 1, Line 13
   
-The variable name &#8216;@i' has already been declared. Variable names must be unique within a query batch or stored procedure.
+The variable name '@i' has already been declared. Variable names must be unique within a query batch or stored procedure.
 
 Now why do you need to care about deferred name resolution? Let's take another example from a blogpost I made a while back: [Do you depend on sp_depends (no pun intended)][2] 
 

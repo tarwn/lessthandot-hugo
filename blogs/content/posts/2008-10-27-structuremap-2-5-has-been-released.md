@@ -23,7 +23,7 @@ StructureMap is a Dependency Injection tool written in C# for .NET development. 
 **The new functionality in StructureMap 2.5:** 
 
   * Completely revamped Assembly scanning options 
-  * Cleaner, more predictable way to initialize a Container.&#160; StructureMapConfiguration is now deprecated, please use ObjectFactory.Initialize().
+  * Cleaner, more predictable way to initialize a Container.  StructureMapConfiguration is now deprecated, please use ObjectFactory.Initialize().
   * Optional setter injection 
   * All new abilities to query the configuration of a Container 
   * The ability to use StructureMap with ZERO Xml or attributes by default 
@@ -35,7 +35,7 @@ StructureMap is a Dependency Injection tool written in C# for .NET development. 
   * Far more extensibility 
   * Interception and post processing hooks for you AOP enthusiasts. StructureMap will NOT include its own AOP engine, but will allow you to use the runtime AOP technique of your choice. 
   * More configuration options in both Xml and the Fluent Interface. Completely revamped the Registry DSL. 
-  * More options for modular configuration (mix and match Xml configuration or Registry's at will) &#8212; which basically had to trigger: 
+  * More options for modular configuration (mix and match Xml configuration or Registry's at will) — which basically had to trigger: 
   * Completely revamped diagnostics, including the Environment Testing support 
   * Transparent creation of concrete types that are not explicitly registered 
   * Create objects with explicit arguments passed to the container 

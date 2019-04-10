@@ -90,7 +90,7 @@ Let's see if we can get MongoDB to start up.
   
 Open up a Command Prompt (WinKey + X + C) and paste this in
   
-C:NoSQLmongodbbinmongod.exe &#8211;dbpath C:NoSQLmongodbdata
+C:NoSQLmongodbbinmongod.exe –dbpath C:NoSQLmongodbdata
 
 Running that should trigger a firewall warning
 
@@ -102,7 +102,7 @@ Check Private Networks and click Allow Access
 
 Your Command Prompt window should have the following
 
-_C:UsersDenis>C:NoSQLmongodbbinmongod.exe &#8211;dbpath C:NoSQLmongodbdata
+_C:UsersDenis>C:NoSQLmongodbbinmongod.exe –dbpath C:NoSQLmongodbdata
   
 Sat Jan 05 12:12:25 [initandlisten] MongoDB starting : pid=5780 port=27017 dbpat
   
@@ -116,7 +116,7 @@ f9d664267
   
 Sat Jan 05 12:12:25 [initandlisten] build info: windows sys.getwindowsversion(ma
   
-jor=6, minor=1, build=7601, platform=2, service\_pack='Service Pack 1&#8242;) BOOST\_LIB
+jor=6, minor=1, build=7601, platform=2, service\_pack='Service Pack 1') BOOST\_LIB
   
 \_VERSION=1\_49
   
@@ -206,7 +206,7 @@ dbpath=C:NoSQLmongodbdata
 
 In a Command Prompt with elevated privileges (Winkey + X + A) run the following
 
-_C:NoSQLmongodbbinmongod.exe &#8211;config C:NoSQLmongodbmongod.cfg &#8211;install_
+_C:NoSQLmongodbbinmongod.exe –config C:NoSQLmongodbmongod.cfg –install_
 
 Now run the following command
 

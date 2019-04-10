@@ -41,7 +41,7 @@ Once our roles in the database are created we need to create an AD security grou
 
 Now that the database role security groups have been created the User Security groups need to be made. These are the security groups that the application will actually check to determine permissions in the application. These could be numerous, but for the sake of simplicity and this blog we’ll keep it down to two.
 
-For this example, we would need two user security groups, an Admin group and a users group. In AD we have the groups (Application Abbreviation)-Users and (Application Abbreviation)-Admins (notice the –‘s, that means that actual people will be in this security group). This is where the clean-up of AD comes in handy, because depending on our requirements we can just drop a security group (or groups) in each and be done.
+For this example, we would need two user security groups, an Admin group and a users group. In AD we have the groups (Application Abbreviation)-Users and (Application Abbreviation)-Admins (notice the –'s, that means that actual people will be in this security group). This is where the clean-up of AD comes in handy, because depending on our requirements we can just drop a security group (or groups) in each and be done.
 
 <div class="image_block">
   <img src="/wp-content/uploads/users/thirster42/UserSecurityGroups.jpg" alt="" title="" width="425" height="162" />

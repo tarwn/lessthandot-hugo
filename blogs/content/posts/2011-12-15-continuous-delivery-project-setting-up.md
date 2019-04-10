@@ -25,7 +25,7 @@ tags:
 A continuous integration server verifies that all of the currently committed changes play well together and reduces the elapsed time between a team member committing a change and finding out it leaves the build in a poor state. The faster we find out about a defect or unstable build, the fresher the changes are in our minds and the faster we can fix it.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p1.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p1.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline – Focus of Current Post
 </div>
 
 This is the second post in a multi-part series on my Continuous Delivery pipeline project. The [first post][1] discussed Continuous Delivery, defined the process I am building, and outlined the technology selections I've made for the project. In this post I will begin setting up Continuous Integration for the project using Jenkins as a build server, MS Build to execute builds, and BitBucket to serve as the source code repository. 
@@ -46,11 +46,11 @@ My server is a Windows 2008 R2 VM with 2GB of RAM assigned to it and a single 32
 
 To get started on the new build server VM, I've installed the following software:
 
-  * [Chrome][6] &#8211; because IE was annoying me
-  * [UnxTools][7] &#8211; Extra tools Jenkins needs that mimic several Unix commands
-  * <a href=http://jenkins-ci.org/"" title="Jenkins Downloads">Jenkins</a> &#8211; The installer will install the JRE and latest version of Jenkins
-  * [Jenkins][8] &#8211; .Net Framework 4 (Check windows updates afterwards)
-  * [Mercurial][9] &#8211; the windows version will install with tortoiseHg
+  * [Chrome][6] – because IE was annoying me
+  * [UnxTools][7] – Extra tools Jenkins needs that mimic several Unix commands
+  * <a href=http://jenkins-ci.org/"" title="Jenkins Downloads">Jenkins</a> – The installer will install the JRE and latest version of Jenkins
+  * [Jenkins][8] – .Net Framework 4 (Check windows updates afterwards)
+  * [Mercurial][9] – the windows version will install with tortoiseHg
 
 With a couple reboots along the way, all the packages are installed with little extra effort.
 
@@ -64,14 +64,14 @@ _Note: Jenkins somehow magically set itself up as a service on my system (or I w
   <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/dashboard_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/dashboard.png" title="Jenkins Dashboard" /></a><br /> Jenkins Dashboard (unfortunately a later shot as I misplaced some of my earlier screenshots)
 </div>
 
-The side menu offers a link to the server settings (Manage Jenkins), and from there I get a list of sub-menus in the main area that includes “Plugins”. To start with I'll install the plugins for Mercurial, Twitter, and MS Build from the “Available” tab on the plugins screen. After installing, system-wide options for the plugins are added in the system configuration screen (Manage Jenkins &#8211; Configure System). 
+The side menu offers a link to the server settings (Manage Jenkins), and from there I get a list of sub-menus in the main area that includes “Plugins”. To start with I'll install the plugins for Mercurial, Twitter, and MS Build from the “Available” tab on the plugins screen. After installing, system-wide options for the plugins are added in the system configuration screen (Manage Jenkins – Configure System). 
 
 ### Mercurial
 
 The mercurial configuration is straightforward and offers a reasonable set of defaults, so of course I changed it. I added the path for the mercurial binaries to my PATH environment to make command-line access easier outside of the build server and then modified the mercurial configs in the build server to reflect that change.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_mercurial_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_mercurial.png" title="Jenkins Configuration - Mercurial" /></a><br /> Jenkins Configuration &#8211; Mercurial
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_mercurial_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_mercurial.png" title="Jenkins Configuration - Mercurial" /></a><br /> Jenkins Configuration – Mercurial
 </div>
 
 My simplified configuration is the name of the executable and all blanks for the rest of the values.
@@ -81,7 +81,7 @@ My simplified configuration is the name of the executable and all blanks for the
 The latest MS Build executable is installed as part of the .Net framework installation. In the Jenkins server setup, I add an MS Build item, naming it with it's version number (I can add separate, named configurations for each version later if I'm so inclined) and pointing the path to <code class="codespan">"C:WindowsMicrosoft.NETFrameworkv4.0.30319MSBuild.exe"</code>.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_msbuild_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_msbuild.png" title="Jenkins Configuration - MS Build, Framework 4" /></a><br /> Jenkins Configuration &#8211; MS Build, Framework 4
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_msbuild_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_msbuild.png" title="Jenkins Configuration - MS Build, Framework 4" /></a><br /> Jenkins Configuration – MS Build, Framework 4
 </div>
 
 _Note: You can define multiple MS Build executables if you have projects that run on different versions. Naming them clearly will help when you later need to select the appropriate MS Build exe to build with_
@@ -122,7 +122,7 @@ Here are the errors I had to work through in order to get the initial build to w
   1. Error (twice), console log told me hg wasn't recognized 
       * hg hadn't actually installed the first time due to windows updates being in middle of another install
       * I rebooted to finish windows update, installed tortoisehg, rebooted to have clean startup (and paths), and the issue was corrected
-  2. Failure &#8211; In the console log it complained about not being able to find the MS Build executable 
+  2. Failure – In the console log it complained about not being able to find the MS Build executable 
       * Returned to project settings and switched MS Build option from (default) to the one I had configured above in global settings
   3. Error MSB4019: The imported project “C: … Microsoft.WebApplication.targets” was not found 
       * Options: 
@@ -130,7 +130,7 @@ Here are the errors I had to work through in order to get the initial build to w
           * Install Visual Studio
           * Copy folder from existing install (C:Program FilesMSBuildMicrosoftVisualStudiov10.0WebApplications)
       * I went with option 1 and ran windows updates again before continuing
-  4. error CS0234: The type or namespace name &#8216;Mvc' does not exist 
+  4. error CS0234: The type or namespace name 'Mvc' does not exist 
       * Would have been fixed if I had installed VS (oh well)
       * Download and install MVC: http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=4211
 
@@ -141,13 +141,13 @@ At this point the initial build runs successfully.
 After getting the initial build setup, it's time to add some refinements. First up is switching the build to run in release mode by adding <code class="codespan">"/p:Configuration=Release"</code> to the command line arguments in the MS Build section.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_rel.png" title="Jenkins Configuration - Adding Release to Build Args" /><br /> Jenkins Configuration &#8211; Adding Release to Build Args
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_rel.png" title="Jenkins Configuration - Adding Release to Build Args" /><br /> Jenkins Configuration – Adding Release to Build Args
 </div>
 
 Now that I have it working, I also want to add the option to automatically run when new changes are committed to source control. The Build Triggers section of the job configuration controls how jobs are triggered, so I'll select the “Poll SCM” option to poll my source control repository. A value of <code class="codespan">"*/5 * * * *"</code> will set it to check every 5 minutes (which may be overkill given how few updates I will be making over the course of this project, but oh well).
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_poll.png" title="Jenkins Configuration - Polling for Build Trigger" /><br /> Jenkins Configuration &#8211; Defining Polling for Build Trigger
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_poll.png" title="Jenkins Configuration - Polling for Build Trigger" /><br /> Jenkins Configuration – Defining Polling for Build Trigger
 </div>
 
 _Note: Timing uses Unix cron-style values. Basically the string is used as a test against the current time to see if a particular step is to be run, so 5 \* \* \* \* would run only if the minutes value was a 5, while \*/5 \* \* \* * runs if it is divisible by 5._
@@ -173,7 +173,7 @@ At this point running another build fails, with multiple errors complaining abou
 Now that I have a nice, tidy package of the deployable build, I need to put it somewhere for longer term use. In the Post-Build Actions of my job configuration, there is an option to archive artifacts from the build. Checking this box and entering the path for the zip file from the Project Properties screen (objDebugPackageMvcMusicStore.zip) tells Jenkins to archive that zip file as the artifacts from each build.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_successfulbuild_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_successfulbuild.png" title="Jenkins Configuration - Successful Build" /></a><br /> Jenkins Configuration &#8211; Successful Build
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_successfulbuild_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_successfulbuild.png" title="Jenkins Configuration - Successful Build" /></a><br /> Jenkins Configuration – Successful Build
 </div>
 
 After executing another successful build, we can see the build server has archived the zip file (above). If I click that zip file I'll be prompted to download it to a local machine.

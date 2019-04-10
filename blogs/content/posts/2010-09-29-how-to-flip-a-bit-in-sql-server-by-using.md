@@ -107,7 +107,7 @@ _The bits in the result are set to 1 if either (but not both) bits (for the curr
   
 00000001
   
-&#8212;&#8212;&#8211;
+——–
   
 00000001 
 
@@ -119,7 +119,7 @@ _If both bits are 0 or both bits are 1, the bit in the result is cleared to a va
   
 00000001
   
-&#8212;&#8212;&#8211;
+——–
   
 00000000 
 

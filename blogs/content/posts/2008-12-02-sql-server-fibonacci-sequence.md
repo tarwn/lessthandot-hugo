@@ -13,7 +13,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-This probably falls under the category of &#8216;Why bother'. However, there has been some recent interest in calculating arbitrarily large fibonacci numbers. There is nothing particularly difficult about calculating these numbers until you reach the maximum number that a bigint (or decimal) can hold. With Fibonacci numbers, you reach this limit pretty fast. There's nothing particularly difficult about calculating this sequence, it merely involves adding 2 numbers together. But, since we run in to the data type limit, we need to start thinking outside the box. 
+This probably falls under the category of 'Why bother'. However, there has been some recent interest in calculating arbitrarily large fibonacci numbers. There is nothing particularly difficult about calculating these numbers until you reach the maximum number that a bigint (or decimal) can hold. With Fibonacci numbers, you reach this limit pretty fast. There's nothing particularly difficult about calculating this sequence, it merely involves adding 2 numbers together. But, since we run in to the data type limit, we need to start thinking outside the box. 
 
 Obviously, we cannot store the numbers in any sort of number data type, so we need to use strings instead. Then, we need to create a way to add strings together as though they were numbers. This is the real challenge with calculating large numbers, but it's really not that difficult either. We'll simply write a function that adds 2 strings together as though they were numbers.
 

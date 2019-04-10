@@ -28,19 +28,19 @@ Duplicati uses Pre-Internet Encryption, you know that nobody can decrypt your fi
 
 Duplicati is available for the following platforms
 
-Duplicati 1.3.2 for Windows &#8211; (32bit, msi)
+Duplicati 1.3.2 for Windows – (32bit, msi)
   
-Duplicati 1.3.2 for Windows &#8211; (64bit, msi)
+Duplicati 1.3.2 for Windows – (64bit, msi)
   
-Duplicati 1.3.2 for Mac OS X &#8211; (dmg)
+Duplicati 1.3.2 for Mac OS X – (dmg)
   
-Duplicati 1.3.2 for Debian, Ubuntu, LinuxMint &#8211; (deb)
+Duplicati 1.3.2 for Debian, Ubuntu, LinuxMint – (deb)
   
-Duplicati 1.3.2 for Fedora, RedHat, OpenSuSE &#8211; (rpm)
+Duplicati 1.3.2 for Fedora, RedHat, OpenSuSE – (rpm)
   
-Duplicati 1.3.2 &#8211; (Binaries, zip)
+Duplicati 1.3.2 – (Binaries, zip)
   
-Duplicati 1.3.2 &#8211; (Linux binary, tgz)
+Duplicati 1.3.2 – (Linux binary, tgz)
 
 Let's take a look at how easy it is to use. After you install Duplicati, run it. When you run it the first time a wizard will pop up. Pick select a new backup
 

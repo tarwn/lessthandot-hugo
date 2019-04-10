@@ -136,7 +136,7 @@ This expanded out into the following test cases (naming pattern: FunctionUnderTe
 
 Breaking this down into pieces:
   
-(full function at [EvaluateFizzBuzz/Evaluation/Evaluator.cs &#8211; NormalizeCode()][5])
+(full function at [EvaluateFizzBuzz/Evaluation/Evaluator.cs – NormalizeCode()][5])
 
 We need to ensure the first method is an instance method rather than static:
 

@@ -133,7 +133,7 @@ Inspecting the statement column, we can see that it only captured the delete sta
   <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result3.jpg?mtime=1325062845"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result3.jpg?mtime=1325062845" width="1087" height="89" /></a>
 </div>
 
-To create the users, database, and populate it with the data I used &#8211; run the following:
+To create the users, database, and populate it with the data I used – run the following:
 
 sql
 /*Creates the database and the logins*/

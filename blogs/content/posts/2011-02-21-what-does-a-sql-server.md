@@ -26,7 +26,7 @@ I have been interviewing people for a SQL Server position for the past six weeks
   
 So I would like to ask you the reader what a SQL Server developer should know when he falls into these levels.
 
-Beginner &#8212; < 2 years Intermediate -- between 2 and 5 years Advanced –- over 5 years Here is what I think it should be, leave me a comment if you have something to add or disagree. I am only focusing on T-SQL here, no SSIS, SSRS, Powershell etc etc etc **Beginner &#8212; < 2 years**
+Beginner — < 2 years Intermediate -- between 2 and 5 years Advanced –- over 5 years Here is what I think it should be, leave me a comment if you have something to add or disagree. I am only focusing on T-SQL here, no SSIS, SSRS, Powershell etc etc etc **Beginner — < 2 years**
   
 Aggregates: COUNT, SUM, MAX/MIN, DISTINCT, GROUP BY, HAVING
   
@@ -44,7 +44,7 @@ Normalization
   
 Basic stored procedures and user defined functions programming
 
-**Intermediate &#8212; between 2 and 5 years**
+**Intermediate — between 2 and 5 years**
   
 Everything for the previous level plus
   

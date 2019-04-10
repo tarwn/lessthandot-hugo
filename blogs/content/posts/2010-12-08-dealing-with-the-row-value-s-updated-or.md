@@ -44,11 +44,11 @@ You will get the following dialog
 
 Hit yes and you will get the following error dialog
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+—————————
   
 Microsoft SQL Server Management Studio
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+—————————
   
 No rows were deleted.
 

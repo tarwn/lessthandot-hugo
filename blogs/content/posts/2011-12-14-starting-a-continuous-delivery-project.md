@@ -104,7 +104,7 @@ There are also a number of other plugins for Jenkins which I'll mention at the a
 
 ## Next Steps
 
-That's the setup. I've created [a forum post][3] to discuss the whole process (although comments on individual blogs are obviously still welcome). I also have created [a wiki page][4] to tie all the posts together and give a current status for the project. You can also watch me break things by following [@TarwnBuildSrvr][5] (currently pretty dull output, may be another project there). I'll also post the &#8216;production' URL for the project and URLs for the source code on bitbucket.
+That's the setup. I've created [a forum post][3] to discuss the whole process (although comments on individual blogs are obviously still welcome). I also have created [a wiki page][4] to tie all the posts together and give a current status for the project. You can also watch me break things by following [@TarwnBuildSrvr][5] (currently pretty dull output, may be another project there). I'll also post the 'production' URL for the project and URLs for the source code on bitbucket.
 
 <ul class="thelist">
   <li>

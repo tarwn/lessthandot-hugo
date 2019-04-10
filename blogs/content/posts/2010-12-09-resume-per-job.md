@@ -33,7 +33,7 @@ Buzz words are great. They catch the unsuspecting director or VP’s eye and can
 
 Let’s take this example (completely made up for this article)
 
-_Jane Doe &#8211; Database Professional</p> 
+_Jane Doe – Database Professional</p> 
 
 Jane is an experienced database professional with an expert level in SSIS, SSAS, SSRS and SQL Server Internals. Jane has spent over a decade creating in-depth and comprehensive SSRS reports as well as building a knowledge base of SQL Server to ensure your data services are always available and valued. This time has proven to also build a level of knowledge in T-SQL, MDX, C# and many other Microsoft development and database platforms.</i> 
 

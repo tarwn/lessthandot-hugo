@@ -78,13 +78,13 @@ Of course, best practices should always be a task in review for any query review
 
 **Sargability – Code Changes**
 
-Sargable queries come down to search argument capable, or effectively utilizing indexing to minimize time, memory usage and overall consumption of resource like IO to fulfill the query’s needs. This indicates the primary area to review first is the WHERE &#8211; the predicates area of the query.
+Sargable queries come down to search argument capable, or effectively utilizing indexing to minimize time, memory usage and overall consumption of resource like IO to fulfill the query’s needs. This indicates the primary area to review first is the WHERE – the predicates area of the query.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-172.png?mtime=1355031677"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-172.png?mtime=1355031677" width="418" height="174" /></a><br /> Figure 4
 </div>
 
-A good rule to go by out of the box is, anything that manipulates the left side of the comparison will indicate a non-sargable situation. In listing 1, the function Year on the column ShipDate to the left, comparing 2005 to the resulting value, causes this to be a non-sargable predicate &#8211; a predicate that cannot fully take advantage of indexing. The YEAR() function is used in this example due to the high usage of it just as shown in listing 1. Luckily, there is an effective way to write this in a sargable manner.
+A good rule to go by out of the box is, anything that manipulates the left side of the comparison will indicate a non-sargable situation. In listing 1, the function Year on the column ShipDate to the left, comparing 2005 to the resulting value, causes this to be a non-sargable predicate – a predicate that cannot fully take advantage of indexing. The YEAR() function is used in this example due to the high usage of it just as shown in listing 1. Luckily, there is an effective way to write this in a sargable manner.
 
 sql
 WHERE hdr.ShipDate >= '2005-01-01' AND hdr.ShipDate <= '2005-12-31'

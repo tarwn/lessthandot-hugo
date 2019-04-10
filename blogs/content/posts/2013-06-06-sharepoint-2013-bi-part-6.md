@@ -116,7 +116,7 @@ Enter the product key and accept the license terms.
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part6/InstallPowerPivotInstance_16.png?mtime=1370293385"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part6/InstallPowerPivotInstance_16.png?mtime=1370293385" alt="" width="481" height="200" /></a>
 </p>
 
-<span style="text-align: justify;">Each PowerPivot workbook is a Tabular Model – with a bunch of gibberish appended to the workbook name &#8211; stored in the instance. The interaction is limited though. For example you cannot process the tables.</span>
+<span style="text-align: justify;">Each PowerPivot workbook is a Tabular Model – with a bunch of gibberish appended to the workbook name – stored in the instance. The interaction is limited though. For example you cannot process the tables.</span>
 
 <p style="text-align: justify;">
   The last piece is running SQL Server 2012 service pack 1 again. Run the sp1 setup and make sure the PowerPivot instance is selected.

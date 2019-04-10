@@ -44,7 +44,7 @@ So I might have enough information to put together a normalized database to supp
 
 ## Creating the Database
 
-Creating the first database was [fairly straightforward (video)][9] and consisted of setting up my subscription, creating a new server, and then creating the database. The main interface uses Silverlight, so unfortunately I wasn't able to use my \[insert tablet here\] (the future is here?). After the initial database &#8216;server' was setup, I switched over to SSMS to actually build out my data model.
+Creating the first database was [fairly straightforward (video)][9] and consisted of setting up my subscription, creating a new server, and then creating the database. The main interface uses Silverlight, so unfortunately I wasn't able to use my \[insert tablet here\] (the future is here?). After the initial database 'server' was setup, I switched over to SSMS to actually build out my data model.
 
 <div style="padding: .5em; margin: 1.5em .5em .5em 0px; color: #666666; font-size: .8em; text-align: center; position: relative;">
   <img src="http://tiernok.com/LTDBlog/azure/dbdiagram.jpg" alt="DB Diagram" /><br /> I Also Drew A Data Model…with Color (Oooo)

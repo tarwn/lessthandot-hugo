@@ -16,11 +16,11 @@ categories:
 ---
 Recently I had to deal with the problem of displaying and saving Unicode data in a Visual FoxPro form. As we all know, Visual FoxPro does not support Unicode, so this was quite a challenge for me. I would never have solved this problem by myself if Gregory Adam from the [UniversalThread][1] would not lend me his generous support and practically solved the problem of saving for me. I want to show the full solution we came to together as this may be a very important topic for the remaining Visual FoxPro developers (and because Koen asked me to write this blog post).
 
-There used to be the classical and very comprehensive article on this topic written by Rick Strahl Using Unicode in Visual FoxPro Web and Desktop Applications. The link to that article now appears to be broken, so I found another shorter article: [Unicode to ANSI Translation in VFP 9.0 &#8211; Sys(987)][2] 
+There used to be the classical and very comprehensive article on this topic written by Rick Strahl Using Unicode in Visual FoxPro Web and Desktop Applications. The link to that article now appears to be broken, so I found another shorter article: [Unicode to ANSI Translation in VFP 9.0 – Sys(987)][2] 
 
 I originally started from the first mentioned article. Our application uses SQL Server to hold data and uses sql pass thru technique to send information from and to SQL Server. 
 
-Now, since I am describing the solution I used for the particular application, I will start with the SQL Server table I was using. That table was named Prefs_sl and it was a flat table with 1 record containing all preferences for a sales point. Because of its flat nature it was badly normalized. Say, it had 11 language fields language00 &#8211; language10 (nvarchar(100)) to hold name of the language the Sales Point can display and 11 image lngImage00-lngImage10 (varbinary(max)) fields to hold the image of the country flag. So, this was the table I was working with on the SQL Server side.
+Now, since I am describing the solution I used for the particular application, I will start with the SQL Server table I was using. That table was named Prefs_sl and it was a flat table with 1 record containing all preferences for a sales point. Because of its flat nature it was badly normalized. Say, it had 11 language fields language00 – language10 (nvarchar(100)) to hold name of the language the Sales Point can display and 11 image lngImage00-lngImage10 (varbinary(max)) fields to hold the image of the country flag. So, this was the table I was working with on the SQL Server side.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Prefs_sl SQL Server table.JPG?mtime=1325442752"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Prefs_sl SQL Server table.JPG?mtime=1325442752" width="1764" height="162" /></a>
@@ -30,7 +30,7 @@ Now, I wanted to display these 11 languages with their corresponding flags on th
 
 The first question was what to chose for displaying unicode data? Rick mentioned MS Edit Box control ActiveX, but I didn't find it in the list of my installed ActiveX. But I found MS Forms2 TextBox ActiveX control and since I also remembered [this thread][3] on foxite forum, I decided to try this ActiveX control.
   
-The first problem I encountered with this ActiveX as that it didn't show up until I clicked on it when I was running the form. Luckily I found the following solution &#8211; invoke SetFocus of this control (I called it txtLanguage in my class) and then it was displayed correctly. I am not sure if my solution is the best to handle this ActiveX behavior quirks, but hey, it works.
+The first problem I encountered with this ActiveX as that it didn't show up until I clicked on it when I was running the form. Luckily I found the following solution – invoke SetFocus of this control (I called it txtLanguage in my class) and then it was displayed correctly. I am not sure if my solution is the best to handle this ActiveX behavior quirks, but hey, it works.
 
 Ok, so far so good. Now, following Rick's article I used the following in my form to get the data in the binary format:
 
@@ -67,9 +67,9 @@ mysqlexec(m.lcSQL, 'Prefs_sl', program())
 ```
 mysqlexec here is a wrapper for the sqlexec function.
 
-Now I found the first discrepancy with Rick's article &#8211; I found that I don't need any conversion after that, I can assign the field's content to the text property of this ActiveX (or ControlSource property) and the control correctly displays the unicode data!
+Now I found the first discrepancy with Rick's article – I found that I don't need any conversion after that, I can assign the field's content to the text property of this ActiveX (or ControlSource property) and the control correctly displays the unicode data!
 
-I was happy &#8211; the first part of displaying data turned out to be quite easy!
+I was happy – the first part of displaying data turned out to be quite easy!
 
 Here is the code I used to display the data:
 
@@ -95,7 +95,7 @@ this.lblLanguage.caption = this.lblLanguage.caption + ' ' + transform(val(right(
   this.lProgrammaticChange = .f.
 ```
 
-Everything was good so far. However, I haven't expected how hard (for me) it will be the &#8216;saving' data part. I was spending days trying various ideas from Rick's article and was still unable to achieve the desired result. I was about to throw all I had away and try to switch to ADO for data retrieval, but luckily Gregory Adam helped me here and published a working sample.
+Everything was good so far. However, I haven't expected how hard (for me) it will be the 'saving' data part. I was spending days trying various ideas from Rick's article and was still unable to achieve the desired result. I was about to throw all I had away and try to switch to ADO for data retrieval, but luckily Gregory Adam helped me here and published a working sample.
 
 First of all, we need to make sure there is no UT8 translation to the current code page. For this we need to do the following
 
@@ -407,7 +407,7 @@ As we can see, we need to convert data back from binary to nvarchar.
   
 With all this code in place, we display the unicode data and save them back to SQL Server.
 
-A big thanks to Gregory for helping me with the code &#8211; I don't know where I would be without his help.
+A big thanks to Gregory for helping me with the code – I don't know where I would be without his help.
 
 Olaf Doschke showed another way which is even simpler than implemented solution and in accordance to the original Rick's article.
 
@@ -439,7 +439,7 @@ This is how the form with many languages looked like
   <a href="/wp-content/uploads/blogs/DataMgmt/ManyLanguages.JPG?mtime=1325442752"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/ManyLanguages.JPG?mtime=1325442752" width="927" height="654" /></a>
 </div>
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+—————————
   
 I need to also tell, that after I finished the form and was happy to show it to my colleagues, I was up to a big disappointment. It turned out we are not going to support unicode (our main application is not up to support it yet) and so I will be re-doing this form after we will agree on the tables' structures (they also are going to change). So, what I showed in this blog post we're not going to use at present in production.
 

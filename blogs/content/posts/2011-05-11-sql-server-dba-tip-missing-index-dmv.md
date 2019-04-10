@@ -107,7 +107,7 @@ Creating overlapping or duplicate indexes has a large negative impact on perform
 
 **Resources**
 
-[Jason Strate &#8211; Index Black Ops Series/Whitepaper and more][1]
+[Jason Strate – Index Black Ops Series/Whitepaper and more][1]
 
 [Index DMV Usage Considerations][2]
 

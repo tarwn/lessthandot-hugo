@@ -50,7 +50,7 @@ corp_name + ' ' + city = 'Corp. Boston Key StonesInc.  '
 
  
 
-A query written this way is not as uncommon as you may think.  I’ve seen many instances in both client and mobile applications where string values like the above ‘Corp. Boston Key StonesInc.’, are sent to the database engine to prevent multiple calls and _trim_ the packet that is needed to be sent.  This type of query requires some work on the tuner’s part to find an optimal plan.
+A query written this way is not as uncommon as you may think.  I’ve seen many instances in both client and mobile applications where string values like the above 'Corp. Boston Key StonesInc.’, are sent to the database engine to prevent multiple calls and _trim_ the packet that is needed to be sent.  This type of query requires some work on the tuner’s part to find an optimal plan.
 
 Looking at the plan as it is written above, we can see there is areas that can be improved.  One of those areas is the estimation versus the actual rows that are generated.
 
@@ -58,7 +58,7 @@ Looking at the plan as it is written above, we can see there is areas that can b
   <a href="/wp-content/uploads/blogs/All/card_compute_1.gif?mtime=1353089577"><img alt="" src="/wp-content/uploads/blogs/All/card_compute_1.gif?mtime=1353089577" width="814" height="463" /></a>
 </div>
 
-In a lot of cases, the major difference between estimated and actual rows can mean outdated or stale statistics.  However, in this particular case, the statistics were created at the time this query was executed, given the auto create statistics setting on the database.  The root cause of this difference in estimated versus actual rows is due to the use of corp_name + ‘ ‘ + city.  There are 500 rows in the corporation table so the 106 estimated rows is generated from the estimated 30% selectivity that is performed.
+In a lot of cases, the major difference between estimated and actual rows can mean outdated or stale statistics.  However, in this particular case, the statistics were created at the time this query was executed, given the auto create statistics setting on the database.  The root cause of this difference in estimated versus actual rows is due to the use of corp_name + ' ' + city.  There are 500 rows in the corporation table so the 106 estimated rows is generated from the estimated 30% selectivity that is performed.
 
 We can look at this in another table with more rows, member.
 
@@ -75,7 +75,7 @@ The member table has 10,000 rows and the estimated rows generated from the above
 
 Fixing the above plan when performance problems are seen from the query being executed several times can be done by utilizing computed columns.  This method is the same concept that was mentioned earlier when a calculation is performed on two or more columns in order to retrieve data matching the expressions final value.  There is really one _gotcha_ that should be taken into account when creating a computed column: whether it should be persisted or not.   Let’s look at a non-persisted computed column first.
 
-Alter the corporation table to add a computed column on the expression corp_name + ‘ ‘ + city.
+Alter the corporation table to add a computed column on the expression corp_name + ' ' + city.
 
 sql
 ALTER TABLE corporation

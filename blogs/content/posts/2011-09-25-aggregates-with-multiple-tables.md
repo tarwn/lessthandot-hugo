@@ -45,7 +45,7 @@ Which gives us these results
 
 <div class="tables">
 <center>
-</p> <table border="1" cellpadding ="5" cellspacing = "5"> <caption style="color:blue;font-weight:bold">Aggregate Query Results &#8211; Ordered and Returned</caption> 
+</p> <table border="1" cellpadding ="5" cellspacing = "5"> <caption style="color:blue;font-weight:bold">Aggregate Query Results – Ordered and Returned</caption> 
 
 <tr>
 <th align="right">
@@ -206,7 +206,7 @@ which produces the following results:
 
 <div class="tables">
 <center>
-</p> <table border="1" cellpadding ="5" cellspacing = "5"> <caption style="color:blue;font-weight:bold">Aggregate Query Results &#8211; Ordered only</caption> 
+</p> <table border="1" cellpadding ="5" cellspacing = "5"> <caption style="color:blue;font-weight:bold">Aggregate Query Results – Ordered only</caption> 
 
 <tr>
 <th align="right">
@@ -344,7 +344,7 @@ with these correct now results:
 
 <div class="tables">
 <center>
-</p> <table border="1" cellpadding ="5" cellspacing = "5"> <caption style="color:blue;font-weight:bold">Aggregate Query Results &#8211; Ordered and Returned</caption> 
+</p> <table border="1" cellpadding ="5" cellspacing = "5"> <caption style="color:blue;font-weight:bold">Aggregate Query Results – Ordered and Returned</caption> 
 
 <tr>
 <th align="right">
@@ -516,7 +516,7 @@ So, hopefully you can now easily recognize the problem and apply the same idea w
 </p>
 
 <p>
-Say, few days ago I looked into report. The number of joins used in the query made my head dizzy &#8211; I told right away that because of the JOINs the total results are not going to be correct.
+Say, few days ago I looked into report. The number of joins used in the query made my head dizzy – I told right away that because of the JOINs the total results are not going to be correct.
 </p>
 
 <p>
@@ -524,7 +524,7 @@ So, how did I solve the problem? I included the totals using WINDOW AGGREGATE fu
 </p>
 
 <p>
-Unfortunately, I am not sure if an easier method exists for reports in SSRS when we need to present information for customer orders, for example, but also display customer addresses (and there may be many addresses per customer). Obviously, we will not get correct totals if we will just sum the records &#8211; we need to apply some tricks, simplest of them will be to pre-calculate totals and include these fields as part of the returned dataset. I will be interested to know your solutions for this problem.
+Unfortunately, I am not sure if an easier method exists for reports in SSRS when we need to present information for customer orders, for example, but also display customer addresses (and there may be many addresses per customer). Obviously, we will not get correct totals if we will just sum the records – we need to apply some tricks, simplest of them will be to pre-calculate totals and include these fields as part of the returned dataset. I will be interested to know your solutions for this problem.
 </p>
 
 <p>

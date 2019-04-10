@@ -56,9 +56,9 @@ Resources that should be reviewed when determining if you should upgrade your co
   
 [DMV/DMF on Compatibility level 80 – Paul Randal][4] ([Twitter][5] | [Blog][6])
   
-[Listing of what you lose and gain (and vice versa) &#8211; BOL][7]
+[Listing of what you lose and gain (and vice versa) – BOL][7]
   
-[Backward compatibility &#8211; BOL][8]
+[Backward compatibility – BOL][8]
   
 **Should I flip the switch?**
 

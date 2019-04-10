@@ -25,7 +25,7 @@ I noticed Brent Ozar worked on a SQL book titled: [Professional SQL Server 2008 
 
 **Denis: Is the book geared towards a beginner/intermediate level user or do you have to be an advanced user to really utilize the information in this book?**
 
-I like to think that the reader is somebody who's been managing SQL Servers for a year or two and is getting frustrated. He doesn't understand what's going on inside the engine when a query runs. He's not satisfied with just creating more indexes or running sp_who2 &#8211; he wants to know what's actually happening under the hood. He can't afford top-notch consultants, or he can't get good ones locally, or he wants to BECOME a top-notch consultant.
+I like to think that the reader is somebody who's been managing SQL Servers for a year or two and is getting frustrated. He doesn't understand what's going on inside the engine when a query runs. He's not satisfied with just creating more indexes or running sp_who2 – he wants to know what's actually happening under the hood. He can't afford top-notch consultants, or he can't get good ones locally, or he wants to BECOME a top-notch consultant.
 
 This book covers so many gray areas that traditional books haven't covered. CPUs matter. Memory matters. Storage matters. Latching matters. Traditional SQL books haven't dived deeply enough into these subjects, and I think this book does.
 
@@ -33,7 +33,7 @@ This book covers so many gray areas that traditional books haven't covered. CPUs
 
 Don't change anything you don't fully understand, and don't take anybody's word for anything. Just because you read a recommendation in a forum that your server will go faster when MAXDOP is set to 1 doesn't mean it's going to work in your individual situation. Just because MAXDOP = 1 makes one of your servers faster doesn't mean it'll make them all faster. When you change settings, you change the way SQL Server behaves, and you should understand the ramifications.
 
-One of the first things I do when I'm troubleshooting a server is find out all of the non-default settings. Don't assume AUTO_CLOSE is turned off &#8211; people do crazy things. I make a list of everything that isn't set at factory defaults, and I start asking why. Don't get me wrong &#8211; there's some easy knobs to turn in order to make SQL Server go faster, like Instant File Initialization, but there's not a lot of surefire tweaks that work in every single situation.
+One of the first things I do when I'm troubleshooting a server is find out all of the non-default settings. Don't assume AUTO_CLOSE is turned off – people do crazy things. I make a list of everything that isn't set at factory defaults, and I start asking why. Don't get me wrong – there's some easy knobs to turn in order to make SQL Server go faster, like Instant File Initialization, but there's not a lot of surefire tweaks that work in every single situation.
 
 **Denis: With the addition of Dynamic Management Views is it now easier to find bottlenecks than before?**
 
@@ -43,7 +43,7 @@ Without a doubt. Whenever I present on DMVs, I hear a chorus of questions asking
 
 sys.dm\_db\_missing\_index\_details, I wish I could quit you.
 
-I do “weekend” performance tuning on the side, so when I troubleshoot performance, I'm usually looking at a database I've never seen before. Indexing is tough to do right, and easy to do wrong. I can usually get huge performance improvements by tweaking the index strategy. The missing index DMVs give me a starting point without having to run traces. They're still not a silver bullet &#8211; they're like the Index Tuning WIzard or Database Tuning Advisor in that they can give some pretty nasty advice. When used properly, though, they can give huge performance boosts. 
+I do “weekend” performance tuning on the side, so when I troubleshoot performance, I'm usually looking at a database I've never seen before. Indexing is tough to do right, and easy to do wrong. I can usually get huge performance improvements by tweaking the index strategy. The missing index DMVs give me a starting point without having to run traces. They're still not a silver bullet – they're like the Index Tuning WIzard or Database Tuning Advisor in that they can give some pretty nasty advice. When used properly, though, they can give huge performance boosts. 
 
 **Denis: Is there a place for Solid State Drives, perhaps for tempdb or is it still too early for mission critical servers?**
 
@@ -61,7 +61,7 @@ At the end of the day, does it really matter whether your Page Life Expectancy i
 
 **Denis: What part of SQL troubleshooting do people struggle the most with?**
 
-Reading execution plans and doing something about it. I bought Grant Fritchey's book, SQL Server 2008 Query Performance Tuning Distilled, for that exact reason &#8211; I just couldn't read the plans well enough, and the question comes up so gosh-darned often. I'm working with a company now that sends me execution plans so large that I would need to print them out on wallpaper and paste it up in a conference room. There comes a point where you have to draw the line and say, “It's not a matter of tuning this query &#8211; it's a matter of dumping this query and asking what the user is really trying to accomplish, and how we can meet their needs.”
+Reading execution plans and doing something about it. I bought Grant Fritchey's book, SQL Server 2008 Query Performance Tuning Distilled, for that exact reason – I just couldn't read the plans well enough, and the question comes up so gosh-darned often. I'm working with a company now that sends me execution plans so large that I would need to print them out on wallpaper and paste it up in a conference room. There comes a point where you have to draw the line and say, “It's not a matter of tuning this query – it's a matter of dumping this query and asking what the user is really trying to accomplish, and how we can meet their needs.”
 
 **Denis: Can you name some tools that will help with troubleshooting performance?
   
@@ -71,7 +71,7 @@ I work for Quest Software, but even if I didn't, I'd name-drop Foglight Performa
 
 I couldn't imagine performance tuning without Bill Graziano's fantastic utility ClearTrace. If you don't have Foglight PA, you'll be running traces to capture queries, and ClearTrace really helps you make sense of trace file contents. I can fire up ClearTrace and find problem queries very fast.
 
-In the book, I wrote the Performance Dashboard chapter, and I'd highly recommend that for anybody who has zero budget for SQL Server tools. It's not perfect &#8211; it's far from it &#8211; but it's one heck of a big leap forward when you're stumbling around in the dark trying to find bottlenecks.
+In the book, I wrote the Performance Dashboard chapter, and I'd highly recommend that for anybody who has zero budget for SQL Server tools. It's not perfect – it's far from it – but it's one heck of a big leap forward when you're stumbling around in the dark trying to find bottlenecks.
 
 **Denis: What are some of the biggest mistakes people make when setting up a new server in terms of performance?** 
 
@@ -111,15 +111,15 @@ And tons more, but that's a good start.
 
 I really like reading James Rowland-Jones' chapter on Latching in our book. He has a really good sense of humor that plays well in print.
 
-I like that Kevin Kline writes like he talks &#8211; he makes complex topics deceptively simple. Anybody can sandblast you with fifty-cent words, but Kevin distills things down in a way that's easy to read quickly.
+I like that Kevin Kline writes like he talks – he makes complex topics deceptively simple. Anybody can sandblast you with fifty-cent words, but Kevin distills things down in a way that's easy to read quickly.
 
 Tim Ford spends entirely too much time writing his next book and needs to blog more, because he's hilarious, and I'm going through withdrawal.
 
-My favorite authors of all time, though, would be Dave Eggers, Douglas Adams, and Garrison Keillor &#8211; and the poet W. H. Auden for good measure. I'm no Paul Randal &#8211; I think I read maybe 10 books in 2009, and I don't see that changing in 2010.
+My favorite authors of all time, though, would be Dave Eggers, Douglas Adams, and Garrison Keillor – and the poet W. H. Auden for good measure. I'm no Paul Randal – I think I read maybe 10 books in 2009, and I don't see that changing in 2010.
 
 **Denis: How are you involved with SQLServerpedia?**
 
-There's only two of us really heavily involved on a day-to-day basis. Brett Epps handles everything technical &#8211; if it involves PHP, graphics, MySQL, anything like that, that's his full time job. (I'm thankful for him, because when I was the guy doing that, the site looked bad and performed worse.) I handle everything else &#8211; working with the bloggers, checking article submissions, planning promotions, coming up with what we're going to do next. I get a lot of logistical support from a bunch of Questies &#8211; Christian Hasker, Andy Grant, Betsy Mendenhall, Heather Eichman, and Stephanie McCulloch &#8211; but most of the work is still me.
+There's only two of us really heavily involved on a day-to-day basis. Brett Epps handles everything technical – if it involves PHP, graphics, MySQL, anything like that, that's his full time job. (I'm thankful for him, because when I was the guy doing that, the site looked bad and performed worse.) I handle everything else – working with the bloggers, checking article submissions, planning promotions, coming up with what we're going to do next. I get a lot of logistical support from a bunch of Questies – Christian Hasker, Andy Grant, Betsy Mendenhall, Heather Eichman, and Stephanie McCulloch – but most of the work is still me.
 
 I love it. I really wish I had more hours in the day to spend on SQLServerPedia. We've got a million cool ideas, and it just comes down to manpower.
 
@@ -127,7 +127,7 @@ I love it. I really wish I had more hours in the day to spend on SQLServerPedia.
 
 EVERYWHERE, MUHAHAHA. Okay, maybe not. I'll be at the WorkTamer conferences in Canada, the Microsoft MVP Summit in Seattle, SQLSaturday Chicago, the PASS Summit in Seattle, and maybe the European one as well. I'm aiming for the Microsoft Certified Master program in March, and if that happens, I'll be off the radar for a few weeks.
 
-I've got a day-long free virtual event coming in February with Kevin Kline and Ari Weil, too &#8211; we'll be talking DMVs all day long. More news soon…
+I've got a day-long free virtual event coming in February with Kevin Kline and Ari Weil, too – we'll be talking DMVs all day long. More news soon…
 
 That is it, thanks to Brent for the interview, you can visit Brent's site here: http://www.brentozar.com/ and you can follow him on twitter here: http://twitter.com/brento
 

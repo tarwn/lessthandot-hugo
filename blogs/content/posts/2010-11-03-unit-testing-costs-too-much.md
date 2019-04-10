@@ -59,8 +59,8 @@ Follow-ups:
 
   * Initial “Unit Testing Costs Too Much” post: [Unit Testing Costs Too Much][2]
   * Code camp review and links for slides: [Raleigh Code Camp Followup][3]
-  * 2x Code Followup: [Unit Testing Costs Too Much &#8211; Twice The Code = Value?][4]
-  * Too Many Things to Learn: [Unit Testing Costs Too Much &#8211; Too Many Things to Learn][5]
+  * 2x Code Followup: [Unit Testing Costs Too Much – Twice The Code = Value?][4]
+  * Too Many Things to Learn: [Unit Testing Costs Too Much – Too Many Things to Learn][5]
 
  [1]: http://codecamp.org/ "Visit the codecamp website"
  [2]: /index.php/DesktopDev/GeneralPurposeLanguages/unit-testing-costs-too-much "Check out the first post"

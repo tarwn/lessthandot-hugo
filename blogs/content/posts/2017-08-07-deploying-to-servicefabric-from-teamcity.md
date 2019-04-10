@@ -60,7 +60,7 @@ My build pipeline for this project will be a single CI stage that runs the tests
   <img src="/wp-content/uploads/2017/08/DeployserviceFabric.png" alt="Deployment Pipeline - API updates before ServiceFabric" width="547" height="129" class="size-full wp-image-8781" srcset="/wp-content/uploads/2017/08/DeployserviceFabric.png 547w, /wp-content/uploads/2017/08/DeployserviceFabric-300x71.png 300w" sizes="(max-width: 547px) 100vw, 547px" />
   
   <p class="wp-caption-text">
-    Deployment Pipeline &#8211; API updates before ServiceFabric
+    Deployment Pipeline – API updates before ServiceFabric
   </p>
 </div>
 
@@ -222,7 +222,7 @@ Running the build, I can verify everything is successful by opening up the archi
   <img src="/wp-content/uploads/2017/07/TeamCity_Package_Success-1024x321.png" alt="TeamCity Package - Verifying Versions" width="1024" height="321" class="size-large wp-image-8763" srcset="/wp-content/uploads/2017/07/TeamCity_Package_Success-1024x321.png 1024w, /wp-content/uploads/2017/07/TeamCity_Package_Success-300x94.png 300w, /wp-content/uploads/2017/07/TeamCity_Package_Success-768x241.png 768w, /wp-content/uploads/2017/07/TeamCity_Package_Success.png 1392w" sizes="(max-width: 1024px) 100vw, 1024px" />
   
   <p class="wp-caption-text">
-    TeamCity Package &#8211; Verifying Versions
+    TeamCity Package – Verifying Versions
   </p>
 </div>
 

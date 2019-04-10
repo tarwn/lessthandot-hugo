@@ -63,7 +63,7 @@ select CustomerName<br />
   <a href="/wp-content/uploads/blogs/DataMgmt/NoParmResults.jpg?mtime=1346902398"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/NoParmResults.jpg?mtime=1346902398" width="301" height="239" /></a>
 </div>
 
-The OVER clause takes three additional arguments to change the scope of the clause &#8212; PARTITION BY, ORDER BY, and ROWS or RANGE. 
+The OVER clause takes three additional arguments to change the scope of the clause — PARTITION BY, ORDER BY, and ROWS or RANGE. 
 
 ## PARTITION BY
 

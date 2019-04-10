@@ -50,7 +50,7 @@ Chapter 7: Special Datatypes and Execution Plans
   
 Chapter 8: Advanced Topics
 
-One chapter a week should be doable for everyone. I will post my &#8216;review' on Sunday and then you guys have the whole of next week to do yours in the comments.
+One chapter a week should be doable for everyone. I will post my 'review' on Sunday and then you guys have the whole of next week to do yours in the comments.
 
 After this book is done we can pick the next one, we can use a poll for that.
 

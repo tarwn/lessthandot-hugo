@@ -14,7 +14,7 @@ categories:
   - Data Modelling and Design
 
 ---
-There are various methods to accommodate this problem, let's examine a few of them and also check performance. When you divide two numbers, and the denominator is 0, the result of the operation is undefined. In reality, we usually define some alternative number to use (usually 0). In the example and the code I show below, I will assume that the expected result for a &#8216;divide by zero' condition is 0.
+There are various methods to accommodate this problem, let's examine a few of them and also check performance. When you divide two numbers, and the denominator is 0, the result of the operation is undefined. In reality, we usually define some alternative number to use (usually 0). In the example and the code I show below, I will assume that the expected result for a 'divide by zero' condition is 0.
 
 For most of us, the typical method for accommodating divide by zero is to first check the denominator to see if it is equal to zero. If it is, then return 0, otherwise perform the division. Like this…
 
@@ -55,7 +55,7 @@ Select Coalesce(NULL, NULL, NULL, 'Apple') -- Returns Apple
 ```
 
 
-Lastly, we need to think about the division. If you try to divide any number by zero, you will get an error. However, if you divide a number by NULL, you get NULL. We can use this to our advantage to prevent the &#8216;divide by zero' error while evaluating slow performing functions just once. Like this:
+Lastly, we need to think about the division. If you try to divide any number by zero, you will get an error. However, if you divide a number by NULL, you get NULL. We can use this to our advantage to prevent the 'divide by zero' error while evaluating slow performing functions just once. Like this:
 
 sql
 Select Coalesce(Numerator / NullIf(dbo.SlowPerformingFunction(), 0), 0) As [CalculatedColumn]
@@ -66,4 +66,4 @@ In this case, NULLIF will return the value from the SlowPerformingFunction if th
 
 **Is this method actually faster?**
 
-The true answer is, &#8216;It depends'. If your denominator is a scalar value (parameter to the procedure or a pre-calculated value), then NO. The Case/When method can be faster. You see, if the denominator is zero, the division does not occur. However, if you have a poorly performing function, then the Coalesce/NullIf method will be faster because the function is called only once. Sure, the division occurs even if the result of the function is 0, but it's NULL math, and a simple division too. My recommendation is to write the query both ways and compare the performance. Whichever method performs better is the one you should use.
+The true answer is, 'It depends'. If your denominator is a scalar value (parameter to the procedure or a pre-calculated value), then NO. The Case/When method can be faster. You see, if the denominator is zero, the division does not occur. However, if you have a poorly performing function, then the Coalesce/NullIf method will be faster because the function is called only once. Sure, the division occurs even if the result of the function is 0, but it's NULL math, and a simple division too. My recommendation is to write the query both ways and compare the performance. Whichever method performs better is the one you should use.

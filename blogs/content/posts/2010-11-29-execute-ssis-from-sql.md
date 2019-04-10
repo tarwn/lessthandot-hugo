@@ -21,7 +21,7 @@ tags:
   - ssis
 
 ---
-There are a few methods to execute a SQL Server Integration Services (SSIS) package from T-SQL. Very often the use of xp\_cmdshell is the first choice to accomplish this task. Xp\_cmdshell has primarily been a system administration extended stored procedure. Many types of extended stored procedures such as this one are meant for tasks that are either manual or very refined and controlled tasks. This is all due to the requirements of the levels of sysadmin roles &#8211; or CONTROL SERVER to be exact. Further on this topic, xp\_cmdshell is disabled by default because it has been a known attack method. Having the ability to execute xp\_cmdshell exposes operating system level access. In worst case scenarios, the SQL Server Service account is also a domain account with either Domain Admin rights or rights to other resources on the domain that are sensitive or open to damaging effects to the business. To expose xp_cmdshell then opens one of the highest security risks relating to SQL Server. 
+There are a few methods to execute a SQL Server Integration Services (SSIS) package from T-SQL. Very often the use of xp\_cmdshell is the first choice to accomplish this task. Xp\_cmdshell has primarily been a system administration extended stored procedure. Many types of extended stored procedures such as this one are meant for tasks that are either manual or very refined and controlled tasks. This is all due to the requirements of the levels of sysadmin roles – or CONTROL SERVER to be exact. Further on this topic, xp\_cmdshell is disabled by default because it has been a known attack method. Having the ability to execute xp\_cmdshell exposes operating system level access. In worst case scenarios, the SQL Server Service account is also a domain account with either Domain Admin rights or rights to other resources on the domain that are sensitive or open to damaging effects to the business. To expose xp_cmdshell then opens one of the highest security risks relating to SQL Server. 
 
 SSIS execution has many options. DTEXEC is a very common command line method to executing any DTSX file (SSIS Package) and has a vast amount of control with the ability of switches to set conditional values given the executing circumstances. DTEXEC can be manually executed from an OS level perspective. This leads to xp\_cmdshell and a number one method of execution solution. However, the security risks apply once xp\_cmdshell is enabled to accomplish this. Securing this method can be accomplished with steps to either secure the calling account to limited domain access. Another problem often arises in the needs of the SSIS processing itself. SSIS packages are often developed for the primary use of importing, transforming and inserting data from a wide range of sources that are not SQL Server. These sources may include files such as csv or txt, Excel and other Office Application files, Database servers like Oracle, DB2 or MySQL, Flat File or Desktop Database Applications: MS Access, FoxPro, Dbase.
 
@@ -176,15 +176,15 @@ To start a job from T-SQL the system procedure sp\_start\_job is used. Sp\_start
 
 > Execute sp\_start\_job
        
-> { [@job\_name =] &#8216;job\_name'
+> { [@job\_name =] 'job\_name'
          
 > | [@job\_id =] job\_id }
        
 > [ , [@error\_flag =] error\_flag]
        
-> [ , [@server\_name =] &#8216;server\_name']
+> [ , [@server\_name =] 'server\_name']
        
-> [ , [@step\_name =] &#8216;step\_name']
+> [ , [@step\_name =] 'step\_name']
        
 > [ , [@output\_flag =] output\_flag]
 
@@ -246,7 +246,7 @@ The resulting message in the query window will be:
 
 > (1 row(s) affected)
   
-> Job &#8216;CallSSIS' started successfully.
+> Job 'CallSSIS' started successfully.
 
 The first message is from the update to the configuration table and the second message is returned from the sp\_start\_job execution.
 

@@ -28,15 +28,15 @@ LessThanDot is probably not that dissimilar from other LAMP blogs. We have wired
 
 **Folder structure:**
 
-  * / &#8211; top-level git repository folder 
-      * configs/ &#8211; configurations used on our live serve for Apache, PHP, etc
-      * trunk/ &#8211; the source code for the site
-      * deploy/ &#8211; the deployment scripts (not relevant to this story)
-      * vagrant_data/ &#8211; (.gitignore'd) created by vagrant script for copies of backups and such
-      * vagrant_setup/ &#8211; scripts for vagrant like bootstrap.sh and mysql-secure.sh
-      * Vagrantfile &#8211; the main Vagrant provisioning script
-      * vagrant.config &#8211; (.gitignore'd) the configuration file consumed by vagrant
-      * vagrant.config.sample &#8211; a sample file to create a vagrant.config from
+  * / – top-level git repository folder 
+      * configs/ – configurations used on our live serve for Apache, PHP, etc
+      * trunk/ – the source code for the site
+      * deploy/ – the deployment scripts (not relevant to this story)
+      * vagrant_data/ – (.gitignore'd) created by vagrant script for copies of backups and such
+      * vagrant_setup/ – scripts for vagrant like bootstrap.sh and mysql-secure.sh
+      * Vagrantfile – the main Vagrant provisioning script
+      * vagrant.config – (.gitignore'd) the configuration file consumed by vagrant
+      * vagrant.config.sample – a sample file to create a vagrant.config from
 
 The real configuration file and vagrant_data folder are listed in the gitignore to ensure real configurations and media content don't make it into git (more soon on where that media content even came from).
 
@@ -69,7 +69,7 @@ The real configuration file and vagrant_data folder are listed in the gitignore 
   * Install MySQL 
       * `yum -y install mysql-server`
       * `service mysqld start`
-  * Secure MySQL &#8211; run the “secure-mysql.sh” script (below), passing the configured root password from the conf file
+  * Secure MySQL – run the “secure-mysql.sh” script (below), passing the configured root password from the conf file
   * Create the website database user from passed configs
   * Restore MySQL Backups 
       * unzip the database backup from /vagrant/vagrant_data to the local user directory
@@ -208,7 +208,7 @@ This will charge ahead without any prompting at all:
 
 Do the second. 🙂
 
-### Securing MySQL &#8211; mysql-secure.sh
+### Securing MySQL – mysql-secure.sh
 
 When you install MySQL, it will suggest you run a command to secure your installation. This script performs the same steps:
 

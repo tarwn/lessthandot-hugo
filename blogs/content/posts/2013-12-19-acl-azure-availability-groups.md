@@ -32,8 +32,8 @@ While it may be difficult to determine how to implement an ACL for a load balanc
 
 For example, referring back to the diagram above, if the following names are associated with the objects needed to configure an ACL for a network range of only 189.123.0.0/16
 
-  * Cloud Service &#8211; SQLAzureService
-  * Load Balanced Endpoint &#8211; SQLAGEndpoint
+  * Cloud Service – SQLAzureService
+  * Load Balanced Endpoint – SQLAGEndpoint
 
 In PowerShell for Azure, we would construct the following
 

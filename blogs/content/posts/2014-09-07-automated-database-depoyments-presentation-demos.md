@@ -26,11 +26,11 @@ There aren't any pictures, if I did that than what would be the point of present
 
 When I started the demo, I had some previously installed software already in place to help the demos move quickly. Everything I used was free or covered under an MSDN subscription.
 
-**Database VM** &#8211; “PLC026-DB01” &#8211; The demo database “server” was running Windows 2012 R2 and SQL Server 2012 developer edition. The database was a sample database from a ASP.Net Music Store tutorial that I happened to have sitting around; the backup I used during the demo is available [here][1] (press the “Raw” button to download).
+**Database VM** – “PLC026-DB01” – The demo database “server” was running Windows 2012 R2 and SQL Server 2012 developer edition. The database was a sample database from a ASP.Net Music Store tutorial that I happened to have sitting around; the backup I used during the demo is available [here][1] (press the “Raw” button to download).
 
-**Build Server VM** &#8211; “PLC026-Build01” &#8211; The “build server” was running Windows 2012 R2 and included a free git server named [Bonobo Git Server][2] and the build server [TeamCity][3]. I also installed the SQL Management Objects for Powershell following the instructions [here][4].
+**Build Server VM** – “PLC026-Build01” – The “build server” was running Windows 2012 R2 and included a free git server named [Bonobo Git Server][2] and the build server [TeamCity][3]. I also installed the SQL Management Objects for Powershell following the instructions [here][4].
 
-**Laptop** &#8211; on my “local” system I was using SQL Server 2012, Powershell 3, Chrome, and [git][5]. I was using a GUI for git named [SmartGit][6], which was the only-non-free/non-MSDN tool in the mix.
+**Laptop** – on my “local” system I was using SQL Server 2012, Powershell 3, Chrome, and [git][5]. I was using a GUI for git named [SmartGit][6], which was the only-non-free/non-MSDN tool in the mix.
 
 ## Server Setup
 
@@ -107,7 +107,7 @@ Note: On a production system you would want to have separate credentials or use 
       Execute Step: If all previous steps finished successfully
     </li>
     <li>
-      Powershell Bitness: x64 &#8211; note: match this to the version of SQL Management Objects you installed on the server
+      Powershell Bitness: x64 – note: match this to the version of SQL Management Objects you installed on the server
     </li>
     <li>
       Error Output: error
@@ -148,7 +148,7 @@ Note: On a production system you would want to have separate credentials or use 
       Execute Step: If all previous steps finished successfully
     </li>
     <li>
-      Powershell Bitness: x64 &#8211; note: match this to the version of SQL Management Objects you installed on the server
+      Powershell Bitness: x64 – note: match this to the version of SQL Management Objects you installed on the server
     </li>
     <li>
       Error Output: error
@@ -259,7 +259,7 @@ This addition is going to add a MaintenanceMode table to the database and log be
       Execute Step: If all previous steps finished successfully
     </li>
     <li>
-      Powershell Bitness: x64 &#8211; note: match this to the version of SQL Management Objects you installed on the server
+      Powershell Bitness: x64 – note: match this to the version of SQL Management Objects you installed on the server
     </li>
     <li>
       Error Output: error
@@ -322,7 +322,7 @@ The last demo focused on the other side of our change deployment process, bringi
 
 3. I attached the same VCS we used in the prior build configurations
 
-4. I selected Triggers from the Build Configuration Settings menu and added a trigger of type “Schedule Trigger”, selected 2 AM, and unchecked the box “Trigger build only if there are pending changes” (wording differs depending on version of TeamCity &#8211; the intent is that we want to run every night even if there aren't new changes in VCS)
+4. I selected Triggers from the Build Configuration Settings menu and added a trigger of type “Schedule Trigger”, selected 2 AM, and unchecked the box “Trigger build only if there are pending changes” (wording differs depending on version of TeamCity – the intent is that we want to run every night even if there aren't new changes in VCS)
 
 5. I added a Snapshot dependency just like the “Apply to Production” build configuration
 
@@ -348,7 +348,7 @@ The last demo focused on the other side of our change deployment process, bringi
       Execute Step: If all previous steps finished successfully
     </li>
     <li>
-      Powershell Bitness: x64 &#8211; note: match this to the version of SQL Management Objects you installed on the server
+      Powershell Bitness: x64 – note: match this to the version of SQL Management Objects you installed on the server
     </li>
     <li>
       Error Output: error

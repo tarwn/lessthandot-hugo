@@ -15,11 +15,11 @@ categories:
 ---
 This is part 2 of a 5-part series.
 
-  * <a href="/?p=4896" target="_blank">Part 1 &#8211; Planning</a>
-  * <a href="/?p=4906" target="_blank">Part 2 &#8211; The Distributor</a>
-  * <a href="/?p=4923" target="_blank">Part 3 &#8211; The Publisher</a>
-  * <a href="/?p=4945" target="_blank">Part 4 &#8211; The Subscriber</a>
-  * <a href="/?p=4960" target="_blank">Part 5 &#8211; Testing</a>
+  * <a href="/?p=4896" target="_blank">Part 1 – Planning</a>
+  * <a href="/?p=4906" target="_blank">Part 2 – The Distributor</a>
+  * <a href="/?p=4923" target="_blank">Part 3 – The Publisher</a>
+  * <a href="/?p=4945" target="_blank">Part 4 – The Subscriber</a>
+  * <a href="/?p=4960" target="_blank">Part 5 – Testing</a>
 
 &nbsp;
 
@@ -29,19 +29,19 @@ Publishers: servers SQL2014AG1 and SQL2014AG2, database AGTest
 
 Distributor: stand-alone server, SQL2014demo
 
-Subscriber: Azure SQL Database &#8211; server jessqldb2, database ReplicationTest
+Subscriber: Azure SQL Database – server jessqldb2, database ReplicationTest
 
 ### Setting up the replication distributor
 
 The first step in this process is to set up the remote distributor. As I mentioned in the first blog, you do not want your distribution database on one of the AG replicas. You need to set this up on a server that is not part of the AG.
 
-Start by logging on to the distributor server &#8211; in this demo, SQL2014demo.
+Start by logging on to the distributor server – in this demo, SQL2014demo.
 
 Right-click Replication and select Configure Distribution.
 
 Click Next on Welcome
 
-Distributor – select ‘Server’ will act as its own Distributor. Click Next.
+Distributor – select 'Server’ will act as its own Distributor. Click Next.
 
 [<img class="aligncenter wp-image-4912 size-full" src="/wp-content/uploads/2016/12/distribution-1.png" alt="distribution 1" width="503" height="456" srcset="/wp-content/uploads/2016/12/distribution-1.png 503w, /wp-content/uploads/2016/12/distribution-1-300x271.png 300w" sizes="(max-width: 503px) 100vw, 503px" />][1]
 

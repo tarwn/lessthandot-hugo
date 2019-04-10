@@ -63,11 +63,11 @@ Parent Server MPM Generation: 3
   
 Server uptime: 2 days 7 hours 43 minutes 34 seconds
   
-Total accesses: 41598844 &#8211; Total Traffic: 571.4 GB
+Total accesses: 41598844 – Total Traffic: 571.4 GB
   
-CPU Usage: u1734.41 s1457.05 cu0 cs0 &#8211; 1.59% CPU load
+CPU Usage: u1734.41 s1457.05 cu0 cs0 – 1.59% CPU load
   
-207 requests/sec &#8211; 2.9 MB/second &#8211; 14.4 kB/request
+207 requests/sec – 2.9 MB/second – 14.4 kB/request
   
 24 requests currently being processed, 616 idle workers
 

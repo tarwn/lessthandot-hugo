@@ -69,7 +69,7 @@ Continuing with the creation of Eventlog, create a sample page on your site to g
 
 4.Browse to the sample page and create application error.
 
-5.This error should be logged in Eventlog as a new log &#8211; MyAppLog. 
+5.This error should be logged in Eventlog as a new log – MyAppLog. 
 
 6.Once the log is created remove permissions to NetworkServices account in Event log. Network services account is needed only to create the log. 
 
@@ -79,7 +79,7 @@ Continuing with the creation of Eventlog, create a sample page on your site to g
 
 9.Check event log. 
 
-The only drawback to create to an application specific event log is that you need admin rights on the web server. If that’s not possible, you can send out an email or write to a log file on the server. Code to send email &#8211;
+The only drawback to create to an application specific event log is that you need admin rights on the web server. If that’s not possible, you can send out an email or write to a log file on the server. Code to send email –
 
 ```csharp
 <%Import System.Web.Mail%>

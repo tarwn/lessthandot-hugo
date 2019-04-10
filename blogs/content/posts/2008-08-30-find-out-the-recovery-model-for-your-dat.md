@@ -18,7 +18,7 @@ tags:
   - sql server
 
 ---
-You want to quickly find out what the recovery model is for your database but you don't want to start clicking and right-clicking in SSMS/Enterprise Manager to get that information. This is what you can do, you can use databasepropertyex to get that info. Replace &#8216;msdb' with your database name
+You want to quickly find out what the recovery model is for your database but you don't want to start clicking and right-clicking in SSMS/Enterprise Manager to get that information. This is what you can do, you can use databasepropertyex to get that info. Replace 'msdb' with your database name
 
 sql
 select databasepropertyex('msdb','Recovery') 

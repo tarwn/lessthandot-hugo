@@ -72,15 +72,15 @@ End
 ```
 As you can see, the real work is done by using the like comparison functionality of the PatIndex function.
 
-&#8216;%[^a-z]%'
+'%[^a-z]%'
   
-&#8216;%[^a-z0-9]%'
+'%[^a-z0-9]%'
   
-&#8216;%[^0-9]%'
+'%[^0-9]%'
 
 It should be relatively simple to modify the previous functions to suit any sort of comparisons. You can use it to remove ranges of characters, or even for single characters (similar to the replace function).
 
-For example, if you wanted to remove certain punctuation characters, but leave everything else, you could use &#8216;%[^.^,^-]%' (to remove dot, comma, and dash).
+For example, if you wanted to remove certain punctuation characters, but leave everything else, you could use '%[^.^,^-]%' (to remove dot, comma, and dash).
 
 You can use the following code to test this functionality. It creates a table variable with some sample data. The query at the end returns the original data, and another column showing the output from the three functions presented here.
 

@@ -1,5 +1,5 @@
 ---
-title: 'IT: Beyond the ‘Right Now’ Problem'
+title: 'IT: Beyond the 'Right Now’ Problem'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-03-18T13:22:28+00:00
@@ -83,8 +83,8 @@ There's a lot of catch up to do to get on top of your environment, but the end g
 
 For more information on long term architectural planning and some additional information on taking your team to the next level, I highly recommend the following two books:
 
-  * [IT Architecture Toolkit][2] &#8211; A pragmatic approach to analyzing, planning, and building the IT architecture 
-  * [World Class IT][3] &#8211; Focused on the executive and management levels, discusses principles and methods that can grow an IT organization to &#8216;World Class' status
+  * [IT Architecture Toolkit][2] – A pragmatic approach to analyzing, planning, and building the IT architecture 
+  * [World Class IT][3] – Focused on the executive and management levels, discusses principles and methods that can grow an IT organization to 'World Class' status
 
 _This is just a brief thought on another way of looking at IT maturity in business environments. Recently I've been tied up with [refreshing my site][4] and trying to [recapture my personal brand][5]. While I haven't had as many opportunities to post as I would like, I have had the time to finish a couple new books and learn a few new things as I rolled out the site. More to come soon._
 

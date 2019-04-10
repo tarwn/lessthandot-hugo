@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-SQL Server execution plans are invaluable for figuring out how a query was run &#8211; and how to make it run better. Most of the time that I spend with execution plans is in either SQL Server Management Studio or, more frequently, SQL Sentry's Plan Explorer. However, many developers spend most of their time in Visual Studio. Is there a way for you to view execution plans using Visual Studio? Yes!
+SQL Server execution plans are invaluable for figuring out how a query was run – and how to make it run better. Most of the time that I spend with execution plans is in either SQL Server Management Studio or, more frequently, SQL Sentry's Plan Explorer. However, many developers spend most of their time in Visual Studio. Is there a way for you to view execution plans using Visual Studio? Yes!
 
 I downloaded and installed <a href="https://www.visualstudio.com/en-us/products/compare-visual-studio-products-vs.aspx" target="_blank">Visual Studio Premium 2013</a> with SQL Server Data Tools. This is the first time I've used Visual Studio in…many years. I wasn't sure what had changed, how much I'd remember about it, and how easy it would be to figure out what I wanted. Turns out, it's pretty easy to do what I wanted: connect to a database, open a query, and see if I could view an execution plan.
 

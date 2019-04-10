@@ -132,7 +132,7 @@ and now when I add a “+ 1” to the end of the line without even saving the fi
   <a href="/wp-content/uploads/2016/10/FailingTests.png"><img src="/wp-content/uploads/2016/10/FailingTests-1024x436.png" alt="Failing Tests - Red Marker, Clickable Console Details" width="800" class="size-large wp-image-4679" srcset="/wp-content/uploads/2016/10/FailingTests-1024x436.png 1024w, /wp-content/uploads/2016/10/FailingTests-300x127.png 300w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
   
   <p class="wp-caption-text">
-    Failing Tests &#8211; Red Marker, Clickable Console Details
+    Failing Tests – Red Marker, Clickable Console Details
   </p>
 </div>
 

@@ -83,7 +83,7 @@ Setup of the Availability Groups in the structure covers one or more databases.�
 ## Windows Server Failover Cluster (WSFC)
 
 <h3 style="padding-left: 30px">
-  Lab Server Build &#8211; Ensure to search for new hotfixes
+  Lab Server Build – Ensure to search for new hotfixes
 </h3>
 
   * Windows Server 2008 R2 Enterprise Service Pack 1 
@@ -271,7 +271,7 @@ Connect to each server or open Server Manager for remote access to each server. 
 
 The following steps are used to configure the cluster containing the four logical servers that have the failover clustering features installed.
 
-On a local computer with Failover Manager installed, or one of the servers that will be in the cluster, click Start&#8211;>Administrative Tools&#8211;>Failover Cluster Manager.
+On a local computer with Failover Manager installed, or one of the servers that will be in the cluster, click Start–>Administrative Tools–>Failover Cluster Manager.
 
 (The Failover Cluster Manager can also be opened by using the MMC snap-in.)
 

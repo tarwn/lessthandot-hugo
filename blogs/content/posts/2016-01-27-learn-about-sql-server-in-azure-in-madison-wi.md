@@ -44,4 +44,4 @@ I'll be presenting my full-day class <a href="http://www.eventbrite.com/e/sql-s
 
 ### Call To Action
 
-<a href="http://www.eventbrite.com/e/sql-sat-madison-pre-con-get-started-with-sql-server-in-azure-wjes-borland-tickets-20990868252" target="_blank">Register today</a> for this one-day training opportunity. Don't forget to register for <a href="http://www.sqlsaturday.com/499/eventhome.aspx" target="_blank">SQLSaturday Madison</a> &#8211; a free, one-day event where you can choose from over 30 SQL Server sessions &#8211; as well!
+<a href="http://www.eventbrite.com/e/sql-sat-madison-pre-con-get-started-with-sql-server-in-azure-wjes-borland-tickets-20990868252" target="_blank">Register today</a> for this one-day training opportunity. Don't forget to register for <a href="http://www.sqlsaturday.com/499/eventhome.aspx" target="_blank">SQLSaturday Madison</a> – a free, one-day event where you can choose from over 30 SQL Server sessions – as well!

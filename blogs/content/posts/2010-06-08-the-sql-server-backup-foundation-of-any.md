@@ -48,7 +48,7 @@ A full database backup contains a full representation of the database [with enou
 
 **Partial Backup** – Partial backups are primarily used when all you want is in the primary filegroup of a database. This leaves all the other filegroups out of the backup and reduces the size of the overall backup file. 
 
-**File backups** &#8211; File backups help with large databases and recovering only portions of the database. They are exactly what they are named: a method for backing up a file or filegroup in a SQL Server database. Given that some databases exceed the Terabyte size, a File backup can be very useful in protecting critical tables as one chunk in a File backup. They also can be used in ETL operations for a quick backup strategy and rollback point while not needing to recover an entire database if corruption occurs.
+**File backups** – File backups help with large databases and recovering only portions of the database. They are exactly what they are named: a method for backing up a file or filegroup in a SQL Server database. Given that some databases exceed the Terabyte size, a File backup can be very useful in protecting critical tables as one chunk in a File backup. They also can be used in ETL operations for a quick backup strategy and rollback point while not needing to recover an entire database if corruption occurs.
 
 ## Last Resort Recovery
 

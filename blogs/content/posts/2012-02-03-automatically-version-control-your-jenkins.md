@@ -23,7 +23,7 @@ But I hate doing backups.
 
 And I hate digging through backups to find something.
 
-What I really needed was a way to automatically push the configuration files into a mercurial repository. This would require no ongoing work from me, &#8216;backups' that are taken only when there are changes, and very easy browsing of differences between versions or over time. Sold.
+What I really needed was a way to automatically push the configuration files into a mercurial repository. This would require no ongoing work from me, 'backups' that are taken only when there are changes, and very easy browsing of differences between versions or over time. Sold.
 
 ## Mercurial Repository
 

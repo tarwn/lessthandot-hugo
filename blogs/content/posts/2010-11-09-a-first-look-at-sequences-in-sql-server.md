@@ -88,7 +88,7 @@ Here is the error message
   
 _Msg 11728, Level 16, State 1, Line 1
   
-The sequence object &#8216;GlobalCounterTest' has reached its minimum or maximum value. Restart the sequence object to allow new values to be generated._
+The sequence object 'GlobalCounterTest' has reached its minimum or maximum value. Restart the sequence object to allow new values to be generated._
 
 To reset a sequence, you need to use restart
 
@@ -134,7 +134,7 @@ GO 256
 
 _Msg 11728, Level 16, State 1, Line 1
   
-The sequence object &#8216;TinySequence' has reached its minimum or maximum value. Restart the sequence object to allow new values to be generated._
+The sequence object 'TinySequence' has reached its minimum or maximum value. Restart the sequence object to allow new values to be generated._
 
 One more example, if you create a sequence like this without specifying a start value, it will start at -2147483648 for an integer
 
@@ -147,7 +147,7 @@ select NEXT VALUE FOR TestSequence
 
 output
   
-&#8212;&#8212;&#8212;&#8212;
+————
   
 -2147483648
 

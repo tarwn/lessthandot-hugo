@@ -80,7 +80,7 @@ Now I don't have to scroll all the way to the top to figure out what is actually
 
 I have worked with code that was all in lowercase and all in uppercase. I have no problem with either but if you at least standardize on one or the other it will be a little easier to jump from your code to someone else's code
   
-You can setup standard templates in SSMS for your organization, you can get to it from the menu bar, View&#8211;> Template Explorer or hit CTRL + ALT + T
+You can setup standard templates in SSMS for your organization, you can get to it from the menu bar, View–> Template Explorer or hit CTRL + ALT + T
 
 Now expand the Stored Procedures folder
 
@@ -118,7 +118,7 @@ GO
 EXECUTE <Schema_Name, sysname, Schema_Name>.<Procedure_Name, sysname, Procedure_Name> <value_for_param1, , 1>, <value_for_param2, , 2>
 GO
 ```
-You can modify this template, give it to every developer and now you all have the same template. What can be done with templates can also be done with snippets, if you do Tools&#8211;>Code Snippets Manager, you can see all the snippets that are available, you can add your own snippets so that all developers will have the same snippets for comment tasks.
+You can modify this template, give it to every developer and now you all have the same template. What can be done with templates can also be done with snippets, if you do Tools–>Code Snippets Manager, you can see all the snippets that are available, you can add your own snippets so that all developers will have the same snippets for comment tasks.
 
 Standardize on comments as well
   

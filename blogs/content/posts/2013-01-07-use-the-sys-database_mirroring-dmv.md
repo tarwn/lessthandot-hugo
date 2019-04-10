@@ -30,7 +30,7 @@ Another option is to check the error log, messages might look like these
 
 _Message
   
-Database mirroring is inactive for database &#8216;YourDB'. This is an informational message only. No user action is required.</p> 
+Database mirroring is inactive for database 'YourDB'. This is an informational message only. No user action is required.</p> 
 
 Message
   

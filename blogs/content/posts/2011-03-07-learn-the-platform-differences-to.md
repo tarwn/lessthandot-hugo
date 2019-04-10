@@ -60,7 +60,7 @@ CREATE INDEX ix_test ON Test(ID,SomeColumn)
 Here is the error that is raised
 
 <div style="border:1px solid black;background-color:#444;color:white;margin:0 20px;padding:0 5px 0 5px;">
-  Msg 1919, Level 16, State 1, Line 1<br /> Column &#8216;SomeColumn' in table &#8216;Test' is of a type that is invalid for use as a key column in an index.
+  Msg 1919, Level 16, State 1, Line 1<br /> Column 'SomeColumn' in table 'Test' is of a type that is invalid for use as a key column in an index.
 </div>
 
 Now, let's change the column to nvarchar(200). You can do this by using the ALTER TABLE…ALTER COLUMN syntax. Here is what it looks like for this table

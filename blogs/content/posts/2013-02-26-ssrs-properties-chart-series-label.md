@@ -21,7 +21,7 @@ categories:
 ---
 This blog is part of my series [Making Data Tell a Story With SSRS Properties][1].
 
-**Property**: Label &#8211; Visible
+**Property**: Label – Visible
 
 The purpose of this property is to show the values of data points in the series on a chart.
 

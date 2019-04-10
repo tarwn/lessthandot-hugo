@@ -251,29 +251,29 @@ We got visitors from 210 countries, in the table below is the top 20. As expecte
 
 Here is the list of the most popular posts in terms of hits as determined by Google Analytics for the year 2010. The title will pretty much tell you what the post/article is about
   
-Blog &#8211; [How To Enable GodMode On Windows 7][2]
+Blog – [How To Enable GodMode On Windows 7][2]
   
-Blog &#8211; [Why (and How) I Model][3]
+Blog – [Why (and How) I Model][3]
   
-Blog &#8211; [The Ten Most Asked SQL Server Questions And Their Answers][4]
+Blog – [The Ten Most Asked SQL Server Questions And Their Answers][4]
   
-Wiki &#8211; [SQL Server Programming Hacks &#8211; 100+ List &#8211; Wiki][5]
+Wiki – [SQL Server Programming Hacks – 100+ List – Wiki][5]
   
-Blog &#8211; [SQL Server Zipcode Latitude/Longitude proximity distance search][6]
+Blog – [SQL Server Zipcode Latitude/Longitude proximity distance search][6]
   
 [SqlCop][7]
   
-Blog &#8211; [Multi-Value Parameters in SSRS][8]
+Blog – [Multi-Value Parameters in SSRS][8]
   
-Blog &#8211; [Trying the Stand-Up Desk][9]
+Blog – [Trying the Stand-Up Desk][9]
   
-Blog &#8211; [6 ways to import data into SQL Server][10]
+Blog – [6 ways to import data into SQL Server][10]
   
-Blog &#8211; [Calculating Mean, Median and Mode with SQL Server][11]
+Blog – [Calculating Mean, Median and Mode with SQL Server][11]
   
-Blog &#8211; [How to enable xp_cmdshell and Ad Hoc Distributed Queries on SQL Server 2005][12]
+Blog – [How to enable xp_cmdshell and Ad Hoc Distributed Queries on SQL Server 2005][12]
   
-Blog &#8211; [Being a Fraud][13]
+Blog – [Being a Fraud][13]
 
 # Search Engines
 

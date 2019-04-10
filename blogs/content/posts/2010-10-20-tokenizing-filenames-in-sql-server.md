@@ -286,7 +286,7 @@ In order to attack this problem you have to divide and conquer. Here are the fou
 
 ## 1 Take the dot out
 
-This is pretty easy, all you have to do is use the replace function and replace &#8216;.' with &#8216;_'
+This is pretty easy, all you have to do is use the replace function and replace '.' with '_'
 
 sql
 declare @FilePath varchar(100)
@@ -296,7 +296,7 @@ SELECT REPLACE(@FilePath,'.','_')
 
 Result
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+————————————————-
   
 Y:dgfdgdgd\_Databla\_2010\_10\_14\_Pre\_Calc_BAK
 
@@ -312,7 +312,7 @@ SELECT RIGHT(@FilePath,PATINDEX('%%',REVERSE(@FilePath))-1) AS PATH
 
 Result
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+————————————————-
   
 bla\_2010\_10\_14\_Pre_Calc.BAK
 
@@ -328,7 +328,7 @@ SELECT RIGHT(REPLACE(@FilePath,'.','_'),PATINDEX('%%',REVERSE(@FilePath))-1) AS 
 
 Result
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+————————————–
   
 bla\_2010\_10\_14\_Pre\_Calc\_BAK
 

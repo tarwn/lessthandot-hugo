@@ -24,7 +24,7 @@ This week, you get to meet a fantastic group of women, all of whom work with SQL
 
 Hi. My name is Jes. I'm five feet tall. I love coffee. My favorite band is the Dropkick Murphys. My favorite place is Yellowstone National Park. And I'm a Woman In Technology. How did I get here? 
 
-I'm the second of five kids (three sisters, one brother). My parents weren't scientists or engineers or teachers &#8211; my stepdad worked for Fire & Safety Equipment, and I had a stay-at-home mom. They didn't go to college, and they didn't push me towards academics or college. 
+I'm the second of five kids (three sisters, one brother). My parents weren't scientists or engineers or teachers – my stepdad worked for Fire & Safety Equipment, and I had a stay-at-home mom. They didn't go to college, and they didn't push me towards academics or college. 
 
 But when I was in middle school, I got accepted into the Accelerated Learning Program (ALP). We met once a week. We got to play on computers and solve logic problems and hold science fairs. I was in love. Our advisor was Mrs. Mattice. She was brilliant, encouraging, and never told us something was impossible. 
 
@@ -54,7 +54,7 @@ Mentor, teach and lead!
 
 I am an active member of the [JCI Oshkosh Jaycees][12]. One of our programs is to partner with an elementary school, providing volunteer and other support. We have a mentor program set up, where Jaycees go to the school one day a week and have lunch with their student. This has been a huge success, leading to better attendance, better grades, and happier kids. 
 
-I'm also involved with our local [FIRST LEGO League][13] &#8211; lego robot competitions. (Lego robots are killer cool.) The kids are learning math, science, geometry, electronics, robotics and programming. They are also exposed to a broad range of adults, from engineers and architects to doctors and database administrators. This is an excellent program, and I love it. 
+I'm also involved with our local [FIRST LEGO League][13] – lego robot competitions. (Lego robots are killer cool.) The kids are learning math, science, geometry, electronics, robotics and programming. They are also exposed to a broad range of adults, from engineers and architects to doctors and database administrators. This is an excellent program, and I love it. 
 
 The simple fact is that one person can change a life. One kind word, one little bit of encouragement, one offer to help with a science fair project or math problem or robot build can make a world of difference. You can be that difference. Be that difference. 
 

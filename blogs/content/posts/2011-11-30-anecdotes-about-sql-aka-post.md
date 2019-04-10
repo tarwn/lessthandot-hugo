@@ -111,7 +111,7 @@ Ted Krueger ([@onpnt][12]), [Blog][13]
 
 Steve Jones ([@way0utwest][14]), [Blog][15]
 
-* * *Way back in the 1980’s, I was studying all of the currently available database systems and data-centric programming languages. Email was still at least 7 years away and the Internet was 10 years to come. To be honest, they were not at all intuitive or sensible. But a new database model was emerging, the relational database. Database normalization and design just ‘clicked’ for me. It simply made sense. And on top of the much easier design methods, the language that came along with the relational database, SQL, also made sense – a lot of sense. I’d worked with Fortran, COBOL, and dBase quite a lot by that time. But none of those programming languages could come close to the ease and simplicity of a SELECT statement. Hey, what could be easier than asking for the columns of data you wanted FROM a specific table WHERE it met a specific set of conditions? It was exhilarating and powerful! I’ve been stuck on SQL ever since and, while many other technologies have come and gone, I believe that I’ll be able to finish my career still working with and enjoying SQL.</p> 
+* * *Way back in the 1980’s, I was studying all of the currently available database systems and data-centric programming languages. Email was still at least 7 years away and the Internet was 10 years to come. To be honest, they were not at all intuitive or sensible. But a new database model was emerging, the relational database. Database normalization and design just 'clicked’ for me. It simply made sense. And on top of the much easier design methods, the language that came along with the relational database, SQL, also made sense – a lot of sense. I’d worked with Fortran, COBOL, and dBase quite a lot by that time. But none of those programming languages could come close to the ease and simplicity of a SELECT statement. Hey, what could be easier than asking for the columns of data you wanted FROM a specific table WHERE it met a specific set of conditions? It was exhilarating and powerful! I’ve been stuck on SQL ever since and, while many other technologies have come and gone, I believe that I’ll be able to finish my career still working with and enjoying SQL.</p> 
 
 Kevin Kline ([@kekline][16]), [Blog][17]
 
@@ -155,7 +155,7 @@ Learning a product is always relatively easy. Meeting people too.
   
 But meeting cool people isn’t.</p> 
 
-Mladen Prajdi&#263; ([@mladenprajdic][21]), [Blog][22]
+Mladen Prajdić ([@mladenprajdic][21]), [Blog][22]
 
 * * *My favorite SQL Server memory is probably taking a series of DTS packages in SQL 2000 that had several manual steps in the middle. Using a series of script tasks, I was able to fully automate the process and save a few days a month of person-time. I think this was probably the time that I fell in love with programming.</p> 
 

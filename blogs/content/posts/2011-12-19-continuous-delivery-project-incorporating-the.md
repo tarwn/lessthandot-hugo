@@ -26,7 +26,7 @@ tags:
 The purpose of the integration build is to bring potential issues to the surface as quickly as possible. Unit tests run quickly and adding them to the continuous integration build helps flush out defects as close to the beginning of the process as possible. Generally build engines will support unit test framework by directly integrating with them or by providing an ability to execute the test framework and import their results.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p3.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p3.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline – Focus of Current Post
 </div>
 
 This is the fourth post in a multi-part series on my Continuous Delivery pipeline project. The [previous post][1] followed the changes necessary to add unit testing to the MVC Music Store project, a process that ended in the creation of unit tests for the Checkout process. In this post I will configure the CI build job to run the unit test suite, including extra steps necessary to get the MS Test framework runnable on the build server.
@@ -52,7 +52,7 @@ Once the install was completed and I had patched Visual Studio up to date, I was
 At this point I am building the test project every time the build runs, but I'm not actually running any of the tests. In order to run the tests, I am going to drop to the command line and run the MS Test executable directly. To execute a command directly as a build step, I'll add a “Windows Batch Command” step to the “Build” section of my CI Build job.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_command.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_command.png" title="Jenkins Configuration - New Windows Batch Command" /></a><br /> Jenkins Configuration &#8211; New Windows Batch Command
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_command.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_command.png" title="Jenkins Configuration - New Windows Batch Command" /></a><br /> Jenkins Configuration – New Windows Batch Command
 </div>
 
 The MS Test executable is located in the Visual Studio folder at <code class="codespan">C:Program Files (x86)Microsoft Visual Studio 10.0Common7IDEmstest.exe</code>. I'll execute this against the compiled assembly from the MVCMusicStoreTests project and configure the results file to land somewhere obvious so i can import it later. 
@@ -70,19 +70,19 @@ To integrate the MS Test results into Jenkins, I'll use a plugin to map the MS T
 After the plugin installs successfully, there is a new entry in the “Post-Build Actions” section of the job configuration. All I need to do is check the new “Publish MSTest test result report” checkbox and enter the path I used above for the result files. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_results.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_results.png" title="Jenkins Configuration - New Windows Batch Command" /></a><br /> Jenkins Configuration &#8211; New Windows Batch Command
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_results.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_results.png" title="Jenkins Configuration - New Windows Batch Command" /></a><br /> Jenkins Configuration – New Windows Batch Command
 </div>
 
 Now when I run the build again, a new section shows up on the run summary screen that indicates I don't have any failing tests. Clicking that link for more details, I can see that Jenkins has parsed that results file from MS Test and provided information on all of the running tests and their execution times.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_success.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_success.png" title="Jenkins Configuration - Successful Job w/ Unit Tests" /></a><br /> Jenkins Configuration &#8211; Successful Job w/ Unit Tests
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_success.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_success.png" title="Jenkins Configuration - Successful Job w/ Unit Tests" /></a><br /> Jenkins Configuration – Successful Job w/ Unit Tests
 </div>
 
 In addition to the test information, there is also a new menu item on the left side named “History”. Clicking this will show historical information on the test runs, including a graph of the execution times and test counts. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_history_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_history.png" title="Jenkins Configuration - Unit Test History" /></a><br /> Jenkins Configuration &#8211; Unit Test History
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_history_lg.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/unittest_history.png" title="Jenkins Configuration - Unit Test History" /></a><br /> Jenkins Configuration – Unit Test History
 </div>
 
 _Note: If, like me, you didn't bother to define a server name in the Jenkins configuration panel, you will find that some of these links will not work from a remote server because they are defined with the full server name instead of relative links._

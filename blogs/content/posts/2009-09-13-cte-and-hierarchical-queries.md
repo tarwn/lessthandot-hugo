@@ -27,7 +27,7 @@ You may find this [article][4] by SQLUSA (Kalman Toth) very interesting.
 
 I think you will find these blogs by Brad Schulz [Viva la Famiglia!][5] and [This Article On Recurson Is Entitled “This Article On Recursion Is Entitled “This Article…][6] interesting and useful and enjoyable reading.
 
-See also [Challenge 17][7] and its solutions at [Challenge 17 &#8211; Winners][8]
+See also [Challenge 17][7] and its solutions at [Challenge 17 – Winners][8]
 
 For instance, this code is much easier to read now after moving some logic into CTE
 
@@ -215,7 +215,7 @@ WHERE dp.GroupName = N'Research and Development' OR Level = 0;
 ```
 Another slight variation of this same theme can be found in this [MSDN thread][10]
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+———————
   
 Below I describe few recent problems I solved using recursive CTE technique:
 

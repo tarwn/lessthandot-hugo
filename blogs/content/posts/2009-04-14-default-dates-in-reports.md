@@ -22,7 +22,7 @@ Declare @joindate datetime
 select @joindate = max(joindate)  from employees
 select cast(convert (varchar(10),dateadd(dd,-(day(@joindate)-1),@joindate),101) as datetime) as startdate,  cast(convert(varchar(10),dateadd(dd,-day(dateadd(mm,1,@joindate)),dateadd(mm,1,@joindate)),101) as datetime) as enddate
 ```
-Next on the Reports Parameters window, set the default values as &#8211; From Query and select the Start and End dates.
+Next on the Reports Parameters window, set the default values as – From Query and select the Start and End dates.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/date-parameters.GIF" alt="" title="" width="666" height="520" />

@@ -37,7 +37,7 @@ The only thing we need to get started with Unit Testing is some source code and 
 
 The project we are working with is a basic ASP.Net web application project that I built very quickly for sample purposes. This project can be [downloaded here][4] and includes the sample project and a backup of the SQL database. Feel free to download and follow along, or simply read the post.
 
-Our goal is to quickly add Unit Testing to a pseudo &#8216;existing' application and position ourselves to take advantage of Unit Testing as we continue to maintain or work on this &#8216;existing' application.
+Our goal is to quickly add Unit Testing to a pseudo 'existing' application and position ourselves to take advantage of Unit Testing as we continue to maintain or work on this 'existing' application.
 
 ### Adding the Unit Testing Project
 
@@ -108,16 +108,16 @@ Back to the test project for a moment. When we added our new test project, Visua
 
 <ol style="list-style-type: upper-alpha;">
   <li>
-    Test Class Declaration &#8211; Using the [TestClass] attribute tells the Unit Testing framework that this class will have test methods in it
+    Test Class Declaration – Using the [TestClass] attribute tells the Unit Testing framework that this class will have test methods in it
   </li>
   <li>
-    TestContext &#8211; Stores information for the tests (notably ASP.Net page tests and data driven tests) &#8211; subject of a whole different blog post
+    TestContext – Stores information for the tests (notably ASP.Net page tests and data driven tests) – subject of a whole different blog post
   </li>
   <li>
-    Additional Test Attributes &#8211; this commented out section contains additional method definitions we can use for setting up or tearing down test data and objects before and after each test or each test run
+    Additional Test Attributes – this commented out section contains additional method definitions we can use for setting up or tearing down test data and objects before and after each test or each test run
   </li>
   <li>
-    Our first Unit Test method &#8211; Visual Studio has provided us without first test method, complete with the [TestMethod] attribute that it uses to locate all unit tests in the class
+    Our first Unit Test method – Visual Studio has provided us without first test method, complete with the [TestMethod] attribute that it uses to locate all unit tests in the class
   </li>
 </ol>
 
@@ -290,7 +290,7 @@ Sample code and previous articles in this unplanned series:
 
   * Initial “Unit Testing Costs Too Much” post: [Unit Testing Costs Too Much][1]
   * Code camp review and links for slides: [Raleigh Code Camp Followup][8]
-  * 2x Code Followup: [Unit Testing Costs Too Much &#8211; Twice The Code = Value?][9]
+  * 2x Code Followup: [Unit Testing Costs Too Much – Twice The Code = Value?][9]
   * Sample Code: [ZIP Archive of Sample Project and Database Backup][4]
 
  [1]: /index.php/DesktopDev/GeneralPurposeLanguages/unit-testing-costs-too-much "Check out the first post"

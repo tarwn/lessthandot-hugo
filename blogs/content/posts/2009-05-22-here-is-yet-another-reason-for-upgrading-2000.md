@@ -33,9 +33,9 @@ LOG ON (NAME = N'Test_Log', FILENAME = N'C:Test_Log.LDF' , SIZE = 2321, FILEGROW
 GO
 ```
 
-The CREATE DATABASE process is allocating 3012.00 MB on disk &#8216;Test_Data'.
+The CREATE DATABASE process is allocating 3012.00 MB on disk 'Test_Data'.
   
-The CREATE DATABASE process is allocating 2321.00 MB on disk &#8216;Test_Log'.
+The CREATE DATABASE process is allocating 2321.00 MB on disk 'Test_Log'.
 
 The 2008 box was over 3 times as fast
 
@@ -60,9 +60,9 @@ LOG ON (NAME = N'Test_Log', FILENAME = N'C:Test_Log.LDF' , SIZE = 4321, FILEGROW
 GO
 ```
 
-The CREATE DATABASE process is allocating 6012.00 MB on disk &#8216;Test_Data'.
+The CREATE DATABASE process is allocating 6012.00 MB on disk 'Test_Data'.
   
-The CREATE DATABASE process is allocating 4321.00 MB on disk &#8216;Test_Log'.
+The CREATE DATABASE process is allocating 4321.00 MB on disk 'Test_Log'.
 
 The 2008 box was still over 3 times as fast
 

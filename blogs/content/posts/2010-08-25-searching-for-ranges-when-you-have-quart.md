@@ -176,11 +176,11 @@ If we pass in a range from _2009-01-01_ until _2009-09-28_, then the following d
 
 ## Running the queries
 
-There are a couple of ways to return that data &#8211; below are 3 queries and their execution plans
+There are a couple of ways to return that data – below are 3 queries and their execution plans
 
 The first query creates a date from the 2 columns and then checks if that date falls between the end and start date passed in.
   
-Run the statement below, it returns &#8216;2009-01-01 00:00:00.000'. Mess around with the numbers to to see how it works.
+Run the statement below, it returns '2009-01-01 00:00:00.000'. Mess around with the numbers to to see how it works.
 
 sql
 SELECT DATEADD(qq,1-1,DATEADD(yy,2009 -1900,0))
@@ -205,15 +205,15 @@ GO
 
 This is the execution plan, as you can see it uses a Clustered Index Scan
 
-> |&#8211;Clustered Index Scan(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]),
+> |–Clustered Index Scan(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]),
     
 > WHERE:(dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),
     
-> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))>=[@startDate]
+> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000'))>=[@startDate]
     
 > AND dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),
     
-> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))<=[@endDate])) 
+> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000'))<=[@endDate])) 
 
 **Query 2** 
   
@@ -235,7 +235,7 @@ GO
 
 Here is the plan, as you can see it results in a Clustered Index Seek.
 
-> |&#8211;Clustered Index Seek(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]),
+> |–Clustered Index Seek(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]),
     
 > SEEK:([msdb].[dbo].[Periods].[PeriodYear] >= datepart(year,[@startDate])
     
@@ -243,7 +243,7 @@ Here is the plan, as you can see it results in a Clustered Index Seek.
     
 > AND dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),
     
-> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))<=[@endDate]) ORDERED FORWARD)
+> dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000'))<=[@endDate]) ORDERED FORWARD)
 
 **Query 3** 
   
@@ -260,7 +260,7 @@ WHERE
 ```
 Here is the plan, as you can see it results in a Clustered Index Seek also.
 
-> |&#8211;Clustered Index Seek(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]),
+> |–Clustered Index Seek(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]),
       
 > SEEK:([msdb].[dbo].[Periods].[PeriodYear] >= datepart(year,[@startDate])
       
@@ -416,7 +416,7 @@ FROM Periods
 WHERE PeriodDate BETWEEN @startDate AND @endDate
 ```
 
-> |&#8211;Clustered Index Scan(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]), WHERE:(dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))>=[@startDate] AND dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000&#8242;))<=[@endDate])) 
+> |–Clustered Index Scan(OBJECT:([msdb].[dbo].[Periods].[ix_Periods]), WHERE:(dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000'))>=[@startDate] AND dateadd(quarter,[msdb].[dbo].[Periods].[PeriodQuarter]-(1),dateadd(year,[msdb].[dbo].[Periods].[PeriodYear]-(1900),'1900-01-01 00:00:00.000'))<=[@endDate])) 
 
 So we still have an index scan, but if we create an index on the computed column now, we can find out if that helps.
 
@@ -437,7 +437,7 @@ SELECT *
 FROM Periods
 WHERE PeriodDate BETWEEN @startDate AND @endDate
 ```
-> |&#8211;Index Seek(OBJECT:([msdb].[dbo].[Periods].[ix_PeriodDate]), SEEK:([msdb].[dbo].[Periods].[PeriodDate] >= [@startDate] AND [msdb].[dbo].[Periods].[PeriodDate] <= [@endDate]) ORDERED FORWARD)
+> |–Index Seek(OBJECT:([msdb].[dbo].[Periods].[ix_PeriodDate]), SEEK:([msdb].[dbo].[Periods].[PeriodDate] >= [@startDate] AND [msdb].[dbo].[Periods].[PeriodDate] <= [@endDate]) ORDERED FORWARD)
 
 And there is your index seek.
 

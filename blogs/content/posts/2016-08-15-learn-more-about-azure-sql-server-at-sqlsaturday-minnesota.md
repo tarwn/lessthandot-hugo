@@ -27,6 +27,6 @@ Every attendee will get a link to my GitHub repository with scripts to accomplis
 
 Second, I'll be attending and presenting on Saturday, October 1. My session is “SQL Server in Azure: Essentials for the Database Administrator”. I cover what DBAs need to know about SQL Server VMs, SQL Database, networking, security, and monitoring to make Azure fit into their current environments.
 
-But I'm giving only <a href="http://www.sqlsaturday.com/557/Sessions/Schedule.aspx" target="_blank">1 of 48 sessions</a>! SQLSaturday has something for everyone &#8211; the DBA, the database developer, the BI practitioner. I hope to see you at SQLSaturday Minnesota!
+But I'm giving only <a href="http://www.sqlsaturday.com/557/Sessions/Schedule.aspx" target="_blank">1 of 48 sessions</a>! SQLSaturday has something for everyone – the DBA, the database developer, the BI practitioner. I hope to see you at SQLSaturday Minnesota!
 
 &nbsp;

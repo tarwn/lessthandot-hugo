@@ -51,7 +51,7 @@ This procedure will give you the following info:
   * How frequently the indexes has been used
   * Any obvious indexes I should add?
 
-**[Digging Around in SQL Internals &#8211; View Page Data][6]**
+**[Digging Around in SQL Internals – View Page Data][6]**
   
 Michelle Ufford wrote a post about using DBCC Page and sys.system\_internals\_allocation_units to view page data
 
@@ -61,7 +61,7 @@ The PSS SQL Server Engineers show us how to migrate SQL Server 2000 DTS packages
 
 **[Estimated and Actual execution plan revisited][8]**
   
-Gail Shaw explains why the terms ‘estimated execution plan’ and ‘actual execution plan’ are perhaps a little bit misleading.
+Gail Shaw explains why the terms 'estimated execution plan’ and 'actual execution plan’ are perhaps a little bit misleading.
 
 
 

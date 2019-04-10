@@ -28,7 +28,7 @@ tags:
 ---
 This post was already published yesterday, someone deleted it by mistake so I had to recreate it…sorry for that (and thanks for google cache :-))
 
-SSMS Tools PACK is an Add-In (Add-On) for Microsoft SQL Server Management Studio and Microsoft SQL Server Management Studio Express, this tool is developed by [Mladen Prajdi&#263;][1]. 
+SSMS Tools PACK is an Add-In (Add-On) for Microsoft SQL Server Management Studio and Microsoft SQL Server Management Studio Express, this tool is developed by [Mladen Prajdić][1]. 
 
 SSMS Tools PACK contains a few upgrades to the IDE that were missing from Management Studio:</p> 
 
@@ -74,7 +74,7 @@ CREATE TABLE Test (ID INT PRIMARY KEY IDENTITY,
                     LastUpdatedDate DATETIME not null)
 ```
 
-Now from the menu select SSMS Tools&#8211;>CRUD Generator&#8211;>Options (see pic below)
+Now from the menu select SSMS Tools–>CRUD Generator–>Options (see pic below)
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_1.png?mtime=1357606468"><img alt="" src="/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_1.png?mtime=1357606468" width="452" height="280" /></a>
@@ -284,7 +284,7 @@ GO
 ```
 As you can see that is a huge time saver, you can of course customize it so that it conforms to your style guide.
 
-Don't forget to thank Mladen Prajdi&#263; on twitter: <http://twitter.com/MladenPrajdic> or to donate if this tool is useful to you
+Don't forget to thank Mladen Prajdić on twitter: <http://twitter.com/MladenPrajdic> or to donate if this tool is useful to you
 
 
 

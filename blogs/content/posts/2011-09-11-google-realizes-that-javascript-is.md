@@ -35,11 +35,11 @@ Here is what was posted on the [com.googlegroups.google-caja-discuss][1] list
   
 > language. We'll adopt a two-pronged strategy for the future of Javascript:
 > 
-> &#8211; Harmony (low risk/low reward): continue working in conjunction with
+> – Harmony (low risk/low reward): continue working in conjunction with
      
 > TC39 (the EcmaScript standards body) to evolve Javascript
      
-> &#8211; Dash (high risk/high reward): Develop a new language (called Dash) that
+> – Dash (high risk/high reward): Develop a new language (called Dash) that
      
 > aims to maintain the dynamic nature of Javascript but have a better
      
@@ -63,25 +63,25 @@ Assuming that Dash is now called Dart, here is what it is supposed to do, again 
 > 
 > Dash is designed with three perspectives in mind:
 > 
-> &#8211; Performance &#8212; Dash is designed with performance characteristics in
+> – Performance — Dash is designed with performance characteristics in
      
 > mind, so that it is possible to create VMs that do not have the performance
      
 > problems that all EcmaScript VMs must have.
      
-> &#8211; Developer Usability &#8212; Dash is designed to keep the dynamic,
+> – Developer Usability — Dash is designed to keep the dynamic,
      
 > easy-to-get-started, no-compile nature of Javascript that has made the web
      
 > platform the clear winner for hobbyist developers.
      
-> &#8211; Ability to be Tooled &#8212; Dash is designed to be more easily tooled (e.g.
+> – Ability to be Tooled — Dash is designed to be more easily tooled (e.g.
      
 > with optional types) for large-scale projects that require
      
 > code-comprehension features such as refactoring and finding callsites.
       
-> Dash, however, does not require tooling to be effective&#8211;small-scale
+> Dash, however, does not require tooling to be effective–small-scale
      
 > developers may still be satisfied with a text editor.
 > 
@@ -91,13 +91,13 @@ Assuming that Dash is now called Dart, here is what it is supposed to do, again 
 > 
 > Dash will be designed to be consumed in a number of locations:
 > 
-> &#8211; Browser VM &#8212; Our aspiration is that Dash will ultimately be a viable
+> – Browser VM — Our aspiration is that Dash will ultimately be a viable
      
 > substitute for Javascript as the native client-side language of choice
      
 > across all browsers.
      
-> &#8211; Front-end Server &#8212; Dash will be designed as a language that can be
+> – Front-end Server — Dash will be designed as a language that can be
      
 > used server-side for things up to the size of Google-scale Front Ends. This
      
@@ -105,7 +105,7 @@ Assuming that Dash is now called Dart, here is what it is supposed to do, again 
      
 > and front end code.
      
-> &#8211; Dash Cross Compiler &#8212; Dash will be designed so that a large subset of
+> – Dash Cross Compiler — Dash will be designed so that a large subset of
      
 > it can be compiled to target legacy Javascript platforms so teams that
      

@@ -26,7 +26,7 @@ tags:
 It can be challenging to add unit testing to a project that was built without planning to incorporate it. The ASP.Net MVC Music Store tutorial was not built with unit testing in mind, but today we're going to walk through the addition of Controller unit tests, focusing on a controller that directly references Entity Framework objects and implicitly interacts with ASP.Net Membership objects and Request data from the current HttpContext.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p2.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p2.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline – Focus of Current Post
 </div>
 
 This is the third post in a multi-part series on my Continuous Delivery pipeline project. The [previous post][1] followed the setup of the Continuous Integration engine and the CI build job. This post follows the addition of Unit Tests to the ASP.Net MVC Music Store application so those tests can be incorporated in the CI build job (in the next post).

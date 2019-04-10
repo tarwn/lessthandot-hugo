@@ -41,7 +41,7 @@ Mean is another name for average. SQL Server has a built-in function to calculat
 
 To calculate the average, sum the data and divide by the number of rows. In this case, 1 + 2 + 5 + 5 + 5 + 6 + 6 + 6 + 7 + 9 + 10 = 62. 62/11 = 5.636363
 
-Median represents the &#8216;middle' value. To calculate the median by hand, you sort the values and return the value that appears in the middle of the list. If there is an odd number of items, there will be exactly one value in the middle of the list. If there is an even number of items, you average the 2 values that are closest to the middle.
+Median represents the 'middle' value. To calculate the median by hand, you sort the values and return the value that appears in the middle of the list. If there is an odd number of items, there will be exactly one value in the middle of the list. If there is an even number of items, you average the 2 values that are closest to the middle.
 
 <pre>Data
 1

@@ -81,7 +81,7 @@ Here is the error message that you will get
 
 _Msg 229, Level 14, State 5, Line 1
   
-The SELECT permission was denied on the object &#8216;TestAccess', database &#8216;TestPermissions', schema &#8216;dbo'._
+The SELECT permission was denied on the object 'TestAccess', database 'TestPermissions', schema 'dbo'._
 
 Running the insert statement is no problem
 

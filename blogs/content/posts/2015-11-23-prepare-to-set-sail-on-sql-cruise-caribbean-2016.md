@@ -15,7 +15,7 @@ categories:
   - Uncategorized
 
 ---
-Here in the Frozen Tundra of Wisconsin, winter is setting in &#8211; this weekend, temperatures didn't rise above freezing, and snow fell in some parts of the state. I have my cold-weather running gear out &#8211; fleece-lined tights, wind-proof jacket, hats, mittens, and trail shoes &#8211; and my snowshoes are hanging in the garage. For now, I'm looking forward to winter.
+Here in the Frozen Tundra of Wisconsin, winter is setting in – this weekend, temperatures didn't rise above freezing, and snow fell in some parts of the state. I have my cold-weather running gear out – fleece-lined tights, wind-proof jacket, hats, mittens, and trail shoes – and my snowshoes are hanging in the garage. For now, I'm looking forward to winter.
 
 I'm also still digesting all the great things I learned at <a href="http://sqlpass.org/summit/2015" target="_blank">PASS Summit </a>and MVP Summit a month ago. I attended great sessions on Azure topics, professional development, and learned what's coming in SQL Server 2016. I'm recharged from spending time with old friends and meeting new ones.
 
@@ -29,7 +29,7 @@ That's right…adventure on the high seas! Pirates! Rum! SQL Server!
   <a href="/wp-content/uploads/2015/02/IMAG0532_1.jpg"><img class="size-medium wp-image-3238" src="/wp-content/uploads/2015/02/IMAG0532_1-300x169.jpg" alt="On the beach in Nassau after the best on-shore day ever " width="300" height="169" srcset="/wp-content/uploads/2015/02/IMAG0532_1-300x169.jpg 300w, /wp-content/uploads/2015/02/IMAG0532_1-1024x579.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
-    SQL Cruise 2015 &#8211; On the beach in Nassau after the best on-shore day ever
+    SQL Cruise 2015 – On the beach in Nassau after the best on-shore day ever
   </p>
 </div>
 
@@ -50,7 +50,7 @@ I'm beyond delighted that Tim Ford, our fearless captain, has asked me to be a T
 </p>
 
 <p style="padding-left: 30px">
-  &#8216;Time and tide wait for no man', but SQL Server must wait for resources when executing a query. The lifecycle of a query is full of waiting, and SQL Server records when it's waiting, why, and for how long. By learning how each query is executed, and observing how waits can accumulate along the way, you can unlock the secrets to what resources or code changes are needed to improve your query and server performance.
+  'Time and tide wait for no man', but SQL Server must wait for resources when executing a query. The lifecycle of a query is full of waiting, and SQL Server records when it's waiting, why, and for how long. By learning how each query is executed, and observing how waits can accumulate along the way, you can unlock the secrets to what resources or code changes are needed to improve your query and server performance.
 </p>
 
 If you've ever considered attending SQL Cruise, today is the day to <a href="http://sqlcruise.com/registerme/" target="_blank">register</a>! No one has ever regretted setting sail on SQL Cruise.

@@ -108,7 +108,7 @@ Something is not right, we still have 6 items. If you look back at the restore o
 
 What we have to do is drop the collections first, you do that by specifying `--drop`
 
-Let's do the restore again but now with the &#8211;drop option
+Let's do the restore again but now with the –drop option
 
 <pre>mongorestore dump/MultiCollection --drop</pre>
 
@@ -150,7 +150,7 @@ Now if you do a find nothing is there
 
 <pre>db.Blog.find()</pre>
 
-In order to restore a collection, you need to use the &#8211;collection option and give the collection name, you also need to specify where the backup file is. In our case it is dump/Multicollection/Blog.bson. You will also see that information from the dump output
+In order to restore a collection, you need to use the –collection option and give the collection name, you also need to specify where the backup file is. In our case it is dump/Multicollection/Blog.bson. You will also see that information from the dump output
   
 
 

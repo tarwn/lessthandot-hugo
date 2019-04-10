@@ -83,7 +83,7 @@ This is basically all we needed to do to enable us to plug in a custom renderer 
 
 The only really tricky thing about building the renderer is that it takes a string representing the disk location to render to. Changing what the renderer takes as a parameter would involve a more significant change to the core behavior than I'm comfortable making right now, so the first thing we need is a way to turn these disk locations into keys that S3 can use. The key we create needs to match the relative path to that of the locally-rendered asset so that injecting the base url will yield the absolute path that we need.
 
-None of this is terribly difficult &#8211; the main edge cases we need to cover are
+None of this is terribly difficult – the main edge cases we need to cover are
 
   * Root appearing twice in the file path (because of Windows' drive lettering this is mostly an issue running on unix-based systems)
   * Virtual directories
@@ -169,7 +169,7 @@ public interface IRenderer
 }
 ```
 
-The only things we'll need to implement this method are an initialized S3 client, a bucket and the key builder we implemented in the last section. By default, we won't want to upload our content if it already exists on the CDN, so we will need to check for existence before uploading the content. This can be done by querying for object metadata using the desired key &#8211; if the file doesn't exist we will get a “not found” status on the exception thrown by the s3 client. So the most important test will look like this:
+The only things we'll need to implement this method are an initialized S3 client, a bucket and the key builder we implemented in the last section. By default, we won't want to upload our content if it already exists on the CDN, so we will need to check for existence before uploading the content. This can be done by querying for object metadata using the desired key – if the file doesn't exist we will get a “not found” status on the exception thrown by the s3 client. So the most important test will look like this:
 
 ```csharp
 [Test]

@@ -39,7 +39,7 @@ protected void Application_Start()
 	// ...
 }
 ```
-**Sample Action &#8211; no Extra Code**
+**Sample Action – no Extra Code**
 
 ```csharp
 [HttpGet]

@@ -54,7 +54,7 @@ select * from test
 
 Output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+—————-
 
 <pre>id	col1
 1	test1</pre>
@@ -86,7 +86,7 @@ select * from test
 
 Output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+—————-
 
 <pre>id	col1
 1	test1
@@ -109,7 +109,7 @@ select * from test
 
 Output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+—————-
 
 <pre>id	col1
 2	Test2
@@ -131,7 +131,7 @@ select * from test
 
 Output
   
-&#8212;&#8212;&#8212;&#8212;&#8211;
+————–
 
 <pre>id	col1
 3	Test3</pre>
@@ -157,7 +157,7 @@ select * from openquery(localhost,'select * from tempdb.dbo.test2')
 
 Output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+—————-
 
 <pre>id	col1
 1	test1</pre>
@@ -189,11 +189,11 @@ you will be greeted with this message
 
 _Server: Msg 7320, Level 16, State 2, Line 1
   
-Could not execute query against OLE DB provider &#8216;SQLOLEDB'. The provider could not support a required row lookup interface. The provider indicates that conflicts occurred with other properties or requirements.
+Could not execute query against OLE DB provider 'SQLOLEDB'. The provider could not support a required row lookup interface. The provider indicates that conflicts occurred with other properties or requirements.
   
 [OLE/DB provider returned message: Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done.]
   
-OLE DB error trace [OLE/DB Provider &#8216;SQLOLEDB' ICommandText::Execute returned 0x80040e21: select id,col1 from tempdb.dbo.test2 where id = 1 [PROPID=DBPROP\_IRowsetLocate VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING], [PROPID=DBPROP\_BOOKMARKS VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING]]._
+OLE DB error trace [OLE/DB Provider 'SQLOLEDB' ICommandText::Execute returned 0x80040e21: select id,col1 from tempdb.dbo.test2 where id = 1 [PROPID=DBPROP\_IRowsetLocate VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING], [PROPID=DBPROP\_BOOKMARKS VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING]]._
 
 The delete has the same issue as the update statement, running the following
 
@@ -204,11 +204,11 @@ will produce this error message
 
 _Server: Msg 7320, Level 16, State 2, Line 1
   
-Could not execute query against OLE DB provider &#8216;SQLOLEDB'. The provider could not support a required row lookup interface. The provider indicates that conflicts occurred with other properties or requirements.
+Could not execute query against OLE DB provider 'SQLOLEDB'. The provider could not support a required row lookup interface. The provider indicates that conflicts occurred with other properties or requirements.
   
 [OLE/DB provider returned message: Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done.]
   
-OLE DB error trace [OLE/DB Provider &#8216;SQLOLEDB' ICommandText::Execute returned 0x80040e21: select id,col1 from tempdb.dbo.test2 where id = 2 [PROPID=DBPROP\_IRowsetLocate VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING], [PROPID=DBPROP\_BOOKMARKS VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING]]._
+OLE DB error trace [OLE/DB Provider 'SQLOLEDB' ICommandText::Execute returned 0x80040e21: select id,col1 from tempdb.dbo.test2 where id = 2 [PROPID=DBPROP\_IRowsetLocate VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING], [PROPID=DBPROP\_BOOKMARKS VALUE=True STATUS=DBPROPSTATUS\_CONFLICTING]]._
 
 So what those errors are telling us is that a row lookup could not be performed, this is of course because we don't have a key on this table. So just be aware of that!
 

@@ -30,7 +30,7 @@ I always wanted to be a radio star. The fame! The glory! The chaos you can cause
 </p>
 
 <p style="text-align: left;">
-  There's a great website, <a href="http://runasradio.com/default.aspx">RunAsRadio</a>, that frequently interviews technologists about what's hot in IT. I was asked to chat about one of my favorite topics &#8211; SQL Server Reporting Services. Never one to turn down a chance to be on my soapbox, I readily agreed. You can listen to the resulting chatter <a href="http://s3.amazonaws.com/runas/runasradio_0260_jes_borland.mp3">here</a>.
+  There's a great website, <a href="http://runasradio.com/default.aspx">RunAsRadio</a>, that frequently interviews technologists about what's hot in IT. I was asked to chat about one of my favorite topics – SQL Server Reporting Services. Never one to turn down a chance to be on my soapbox, I readily agreed. You can listen to the resulting chatter <a href="http://s3.amazonaws.com/runas/runasradio_0260_jes_borland.mp3">here</a>.
 </p>
 
 <p style="text-align: left;">

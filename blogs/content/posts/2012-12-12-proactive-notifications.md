@@ -134,7 +134,7 @@ As you can see that is not that great, all the databases should be backed up on 
 
 Usually this indicates that there is an open transaction somewhere that has not finished or someone did the BEGIN TRAN part but never did a COMMIT or ROLLBACK.
 
-Some people just restart the server to &#8216;fix' the issue, of course if you do that you will never know what the root cause is and you never know when it will happen again.
+Some people just restart the server to 'fix' the issue, of course if you do that you will never know what the root cause is and you never know when it will happen again.
 
 We can easily show what happens when you have an open transaction, btw don't do this on the production server.
 

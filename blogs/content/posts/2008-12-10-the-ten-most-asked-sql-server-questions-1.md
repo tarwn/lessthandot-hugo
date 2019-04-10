@@ -57,7 +57,7 @@ INSERT INTO SomeDates VALUES('2008-10-02 00:00:00.000')
 INSERT INTO SomeDates VALUES('2008-10-01 00:00:00.000')
 ```
 
-Return everything between &#8216;2008-10-01' and &#8216;2008-10-02'
+Return everything between '2008-10-01' and '2008-10-02'
 
 sql
 SELECT *
@@ -85,7 +85,7 @@ INSERT INTO SomeDates VALUES('2008-10-01 00:12:00.000')
 INSERT INTO SomeDates VALUES('2008-10-01 23:00:00.000')
 ```
 
-Return everything between &#8216;2008-10-01' and &#8216;2008-10-02'
+Return everything between '2008-10-01' and '2008-10-02'
 
 sql
 SELECT *
@@ -218,7 +218,7 @@ from SomeDates
 
 Both methods return this
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+———————————————–
 
 <pre>DateColumn              stripped
 2008-10-02 00:00:00.000	2008-10-02 00:00:00.000
@@ -723,9 +723,9 @@ We have another blog post on our site which has a lot more detail about doing th
 
 **Number and Filter**
   
-3. Windowing Function &#8211; Two Stage
+3. Windowing Function – Two Stage
   
-4. Windowing Function &#8211; One Stage
+4. Windowing Function – One Stage
 
 **Simulate MS Access**
   
@@ -927,7 +927,7 @@ To pad a number with leading zeroes you use as many zeroes as you want the outpu
   
 For example if you want to pad a 6 digit column with zeroes you would do something like this
    
-RIGHT(&#8216;000000' + CONVERT(VARCHAR(6),ColumnName),6)
+RIGHT('000000' + CONVERT(VARCHAR(6),ColumnName),6)
 
 Here is some code that will show this, first create this table
   
@@ -992,7 +992,7 @@ FROM testpadding
 
 Server: Msg 248, Level 16, State 1, Line 1
   
-The conversion of the varchar value &#8216;02222222222222222222200002' overflowed an int column.
+The conversion of the varchar value '02222222222222222222200002' overflowed an int column.
 
 Okay we can do a bigint instead
 

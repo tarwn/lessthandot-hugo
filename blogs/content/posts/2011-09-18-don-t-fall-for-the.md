@@ -41,7 +41,7 @@ They will tell you to go back to the Run box and type “inf”, then they will 
 
 This, they will tell you is proof that your machine is infected.
 
-After that they will tell you that to fix it you need to do the following. Go to the Run box and type www.ammyy.com. Ammyy Admin &#8211; is a popular config-zero free remote desktop sharing software. It's used for system administration, webinars and instant remote desktop access. So next they will take over your system by using this tool
+After that they will tell you that to fix it you need to do the following. Go to the Run box and type www.ammyy.com. Ammyy Admin – is a popular config-zero free remote desktop sharing software. It's used for system administration, webinars and instant remote desktop access. So next they will take over your system by using this tool
 
 Here is a also a video that someone recorded [video:youtube:cueN1-2lANA] 
 

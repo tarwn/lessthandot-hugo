@@ -93,7 +93,7 @@ FROM DUAL;
 </p>
 
 <p style="text-align: justify;">
-  I used the ANSI date literal to specify a hard-coded date value. For example: DATE’1900-01-01’. Check out the following Oracle documentation about date literals: <a href="http://docs.oracle.com/cd/B19306_01/server.102/b14200/sql_elements003.htm#BABGIGCJ">Literals</a>. Let’s replace this literal with the Oracle date value TO_DATE(‘1900-01-01’,’yyyy-mm-dd’):
+  I used the ANSI date literal to specify a hard-coded date value. For example: DATE’1900-01-01’. Check out the following Oracle documentation about date literals: <a href="http://docs.oracle.com/cd/B19306_01/server.102/b14200/sql_elements003.htm#BABGIGCJ">Literals</a>. Let’s replace this literal with the Oracle date value TO_DATE('1900-01-01’,’yyyy-mm-dd’):
 </p>
 
 <div class="image_block" style="text-align: center;">

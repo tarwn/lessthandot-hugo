@@ -46,9 +46,9 @@ The Azure REST API outlines all of the errors you can expect to get back, nicely
 
 The two error codes we are looking at are:
 
-> ContainerNotFound: Not Found (404) &#8211; The specified container does not exist.
+> ContainerNotFound: Not Found (404) – The specified container does not exist.
   
-> BlobNotFound: Not Found (404) &#8211; The specified blob does not exist. 
+> BlobNotFound: Not Found (404) – The specified blob does not exist. 
 
 A test for the [Lease Container Operation][3] can be implemented using the SDK like this:
 

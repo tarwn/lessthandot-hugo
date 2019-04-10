@@ -23,7 +23,7 @@ tags:
   - transactions
 
 ---
-Sometimes you have to insert a bunch of data and you can't use BCP or another bulk load method. When you do single row inserts, SQL Server wraps these inserts inside an implicit transaction. Did you know that if you use an explicit transaction that the inserts will be much faster? I touched upon this earlier in this post [MongoDB vs. SQL Server &#8211; INSERT comparison part deux][1] but since someone asked about this today, I decided to take another look with different run sizes as well
+Sometimes you have to insert a bunch of data and you can't use BCP or another bulk load method. When you do single row inserts, SQL Server wraps these inserts inside an implicit transaction. Did you know that if you use an explicit transaction that the inserts will be much faster? I touched upon this earlier in this post [MongoDB vs. SQL Server – INSERT comparison part deux][1] but since someone asked about this today, I decided to take another look with different run sizes as well
 
 Let's take a look. first create the following table
 

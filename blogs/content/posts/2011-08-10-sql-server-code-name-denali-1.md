@@ -50,7 +50,7 @@ _The SQL Server Code Name “Denali” CTP3 Product Guide includes useful resour
 
   * Denali Technical Overview
   * Microsoft SQL Server: The Data and BI Platform for Today and Tomorrow
-  * For Partners &#8211; Exploring Opportunities with the Cloud-Ready Information Platform and SQL Server Code Name “Denali”
+  * For Partners – Exploring Opportunities with the Cloud-Ready Information Platform and SQL Server Code Name “Denali”
   * Security Features Overview
   * All Up Data Warehouse: From SMP to Parallel Data Warehouse
   * Optimize SQL Server for Private Cloud Technical Presentation
@@ -84,11 +84,11 @@ _The SQL Server Code Name “Denali” CTP3 Product Guide includes useful resour
           **6 Click-Through Demonstrations**
 
   * AlwaysOn Availability Groups
-  * Reporting Services &#8211; Crescent Overview
-  * SQL Server Private Cloud &#8211; Resource Pooling
-  * SQL Server Private Cloud &#8211; Elasticity
-  * SQL Server Private Cloud &#8211; Self-Service Provisioning
-  * SQL Server Private Cloud &#8211; Control and Customize
+  * Reporting Services – Crescent Overview
+  * SQL Server Private Cloud – Resource Pooling
+  * SQL Server Private Cloud – Elasticity
+  * SQL Server Private Cloud – Self-Service Provisioning
+  * SQL Server Private Cloud – Control and Customize
 
           **13 Self-Running Demonstrations**
 
@@ -96,18 +96,18 @@ _The SQL Server Code Name “Denali” CTP3 Product Guide includes useful resour
   * User Defined Audit and Audit Filtering
   * User Defined Server Roles
   * Denali Security Instructions and Scripts for Recreating the Self-Running Demos Zip File
-  * Reporting Services &#8211; Crescent Overview
+  * Reporting Services – Crescent Overview
   * Introduction to Enterprise Information Management (EIM)
-  * Demo 1 &#8211; Data Quality Services (DQS)
-  * Demo 2 &#8211; Using SSIS with DQS for Data Cleansing
-  * Demo 3 &#8211; Master Data Services (MDS) Add-in for Excel
-  * Demo 4 &#8211; Using SSIS with MDS for Lookups
-  * Demo 5 &#8211; Using Query Column Store
+  * Demo 1 – Data Quality Services (DQS)
+  * Demo 2 – Using SSIS with DQS for Data Cleansing
+  * Demo 3 – Master Data Services (MDS) Add-in for Excel
+  * Demo 4 – Using SSIS with MDS for Lookups
+  * Demo 5 – Using Query Column Store
   * Conclusion for EIM Demonstrations
-  * SQL Server Private Cloud &#8211; Resource Pooling
-  * SQL Server Private Cloud &#8211; Elasticity
-  * SQL Server Private Cloud &#8211; Self-Service Provisioning
-  * SQL Server Private Cloud &#8211; Control and Customize
+  * SQL Server Private Cloud – Resource Pooling
+  * SQL Server Private Cloud – Elasticity
+  * SQL Server Private Cloud – Self-Service Provisioning
+  * SQL Server Private Cloud – Control and Customize
 
           **26 Links to On-Line References</p> 
 

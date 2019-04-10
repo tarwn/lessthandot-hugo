@@ -14,7 +14,7 @@ categories:
   - Data Modelling and Design
 
 ---
-Quite often we want to consolidate query information across all databases (or all user databases). When this question is asked in forums, the usual recommendation is to either try running [undocumented sp_MSForEachDB stored procedure][1] or do a loop and use dynamic SQL. The example of such stored procedures can be found, for example, [THIRD EXAMPLE &#8211; SPROC to enumerate all objects in databases][2].
+Quite often we want to consolidate query information across all databases (or all user databases). When this question is asked in forums, the usual recommendation is to either try running [undocumented sp_MSForEachDB stored procedure][1] or do a loop and use dynamic SQL. The example of such stored procedures can be found, for example, [THIRD EXAMPLE – SPROC to enumerate all objects in databases][2].
 
 The idea occurred to me last night that while we do need a dynamic SQL to solve this problem, we don't really need a loop unless we need a second loop involving looping through all tables.
 
@@ -50,7 +50,7 @@ The idea occurred to me last night that while we do need a dynamic SQL to solve 
   
 [Database Files Growth][17]
 
-Here is a script demonstrating this idea &#8211; it lists indexes in all databases with their usage. This script was an answer to [Help in T-SQL Query thread][18] in MSDN T-SQL forum.
+Here is a script demonstrating this idea – it lists indexes in all databases with their usage. This script was an answer to [Help in T-SQL Query thread][18] in MSDN T-SQL forum.
 
 ## Indexes in all databases with their usage {#1}
 

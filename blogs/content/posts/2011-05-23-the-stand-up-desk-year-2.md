@@ -52,9 +52,9 @@ Unfortunately this product appears to have been discontinued, but on the offchan
 
 The parts were all under the brand of Real Organized and unfortunately were not on the Lowes website. Here's a breakdown of what I used:
   
-12&#8243; x 1.5&#8243; Black Legs &#8211; #253656
+12&#8243; x 1.5&#8243; Black Legs – #253656
   
-16&#8243; x 1.5&#8243; Black Legs &#8211; #253660
+16&#8243; x 1.5&#8243; Black Legs – #253660
 
 I don't have part #'s for the wood, sorry. For reference I used 4 16&#8243;x16&#8243; for the monitor stands and 2 12&#8243; x 24&#8243; for the front one.
 

@@ -72,7 +72,7 @@ There's a difference between _“I know what we have to do, lets just go do it�
 
 ## “Done” for the post
 
-This post was inspired by posts from Howard (not published yet?) and Alex ([Bad Medicine &#8211; How Prescription Becomes a Problem in User Stories][1]) as well as ongoing conversations we've been having. 
+This post was inspired by posts from Howard (not published yet?) and Alex ([Bad Medicine – How Prescription Becomes a Problem in User Stories][1]) as well as ongoing conversations we've been having. 
 
 It may seem like wasted effort to put a definition of “Done” together, but I have yet to see an environment where the long term cost wasn't much greater (and my personal IT experience spans consulting engagements, 4 SaaS products, and over 75 projects). Not every website needs to load at Google search speeds, but the team needs to have a clear bar to aim for, even if that is “under ten seconds”, and the customer needs to know and be OK with this bar. 
 

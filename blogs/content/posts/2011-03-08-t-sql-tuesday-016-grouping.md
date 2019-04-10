@@ -503,7 +503,7 @@ Take a look at this line AND TickMinute % @TimeSpan = 0
   
 So basically we are aggregating in 1 or 5 minutes (really whatever @TimeSpan is, if it is 3 then it will be in 3 minute chunks). We are using the % [(Modulo)][4] operator to accomplish this.
 
-&#8211;If you run the code above with @TimeSpan = 5, you get data in 5 minute intervals
+–If you run the code above with @TimeSpan = 5, you get data in 5 minute intervals
   
 DECLARE @TimeSpan INT = 5
 
@@ -561,7 +561,7 @@ DECLARE @TimeSpan INT = 5
   </table>
 </div>
 
-&#8211;If you run the code above with @TimeSpan = 1, you get data in 1 minute intervals
+–If you run the code above with @TimeSpan = 1, you get data in 1 minute intervals
   
 DECLARE @TimeSpan INT = 1
 

@@ -26,7 +26,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  Anyway, I posted the slides on <a href="http://www.slideshare.net/KoenVerbeeck/data-visualization-tips-tricks-23479927">Slideshare</a> and you can also download the code for the demos of Valentino on <a href="http://blog.hoegaerden.be/2013/06/21/community-day-data-visualization-tips-tricks-download/">his blog</a>. To everyone who showed up at our session: thanks for being such a great audience. ‘till next time!
+  Anyway, I posted the slides on <a href="http://www.slideshare.net/KoenVerbeeck/data-visualization-tips-tricks-23479927">Slideshare</a> and you can also download the code for the demos of Valentino on <a href="http://blog.hoegaerden.be/2013/06/21/community-day-data-visualization-tips-tricks-download/">his blog</a>. To everyone who showed up at our session: thanks for being such a great audience. 'till next time!
 </p>
 
 <p style="text-align: justify;">

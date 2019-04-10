@@ -90,7 +90,7 @@ _Msg 137, Level 15, State 2, Line 3
   
 Must declare the scalar variable “@name”._
 
-Here is how to quickly test that as well, take the code from above and grab everything except for this part ,@id = 1,@name = &#8216;sysobjects'
+Here is how to quickly test that as well, take the code from above and grab everything except for this part ,@id = 1,@name = 'sysobjects'
 
 Basically, you now have this
 

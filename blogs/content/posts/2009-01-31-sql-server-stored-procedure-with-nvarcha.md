@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-Most seasoned sql server programmers know this already, but for you beginners…. When you create a stored procedure with a &#8216;string' type of parameter (char, nchar, varchar, nvarchar), it is critically important that you specify the maximum size for this string. When you have a string type of parameter and do NOT specify the size, sql server will default to 1 character.
+Most seasoned sql server programmers know this already, but for you beginners…. When you create a stored procedure with a 'string' type of parameter (char, nchar, varchar, nvarchar), it is critically important that you specify the maximum size for this string. When you have a string type of parameter and do NOT specify the size, sql server will default to 1 character.
 
 I really wish the T-SQL parser would error when trying to use a string type without specifying the size. This would prevent a lot of problems, especially for the beginners.
 

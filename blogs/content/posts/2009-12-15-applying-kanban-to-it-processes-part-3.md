@@ -38,30 +38,30 @@ The annual PC deployment is expected to account for the following equipment:
 Software imaging is available to install a base operating system and set of drivers on each PC, reducing the variability in initial install process. Tasks like domain registration, utility software, office software, and IT software installations will be standard for every system, but there will also be some customized software installation based on the final user or area the equipment will be assigned to. Refreshing an existing PC requires the same steps with the addition of an extra task in the audit system to link the old and new use of the system. Based on stories from prior years it is clear that one of the most disruptive issues was when a system required *rework due to a missing software installation or configuration, so the team decides to add some verifications to the process to limit opportunities to miss software installs or configurations.
 
 <div style="background-color: #eeeeee; padding: 1em; font-style: italic">
-  Rework is a name for the process of taking a completed part and sending it back through a portion of the process to correct an incomplete or missed production step. In the case of deploying a PC this could be a missing piece of software during the setup process, improper permissions, or any of a dozen other items that would require a technician to return to a previously &#8216;completed' PC in order to finish working on it. Costs from rework include the cost of executing a step a second time, executing later steps a second time, changeover between the current work and the item to be reworked, and delays in completing the current work against the original estimate or deadline.
+  Rework is a name for the process of taking a completed part and sending it back through a portion of the process to correct an incomplete or missed production step. In the case of deploying a PC this could be a missing piece of software during the setup process, improper permissions, or any of a dozen other items that would require a technician to return to a previously 'completed' PC in order to finish working on it. Costs from rework include the cost of executing a step a second time, executing later steps a second time, changeover between the current work and the item to be reworked, and delays in completing the current work against the original estimate or deadline.
 </div>
 
 ### First Visual Board
 
 After discussing the requirements and steps in the process, the technicians have created a common process for all equipment:
 
-  * Receiving &#8211; New equipment and equipment for re-deployment that has not yet been &#8216;tagged'
-  * Inventory &#8211; New equipment and equipment for re-deployment that has a &#8216;tag' applied
-  * Imaging &#8211; Applying basic OS, driver, and software images to the systems
-  * Customization Analysis &#8211; Building a list of customer software and/or settings for the intended end-user
-  * Office Software &#8211; Installation and initial configuration of office software and company templates</li? 
-      * IT Software and Utilities &#8211; Installation of a standard set of utilities and IT software for troubleshooting and auditing
-      * Custom Installation &#8211; Installing and applying custom configurations
-      * Audit &#8211; Running the first Audit of a PC and linking assignments for re-deployed PCs
-      * Deployment &#8211; deploying the hardware to the end user
+  * Receiving – New equipment and equipment for re-deployment that has not yet been 'tagged'
+  * Inventory – New equipment and equipment for re-deployment that has a 'tag' applied
+  * Imaging – Applying basic OS, driver, and software images to the systems
+  * Customization Analysis – Building a list of customer software and/or settings for the intended end-user
+  * Office Software – Installation and initial configuration of office software and company templates</li? 
+      * IT Software and Utilities – Installation of a standard set of utilities and IT software for troubleshooting and auditing
+      * Custom Installation – Installing and applying custom configurations
+      * Audit – Running the first Audit of a PC and linking assignments for re-deployed PCs
+      * Deployment – deploying the hardware to the end user
 
-To manage PCs through this process, the team has invented a system of &#8216;tagging' the equipment. The technicians have designed a combination check-list and worksheet that is copied and filled out for each PC. The top corner of the document becomes the Kanban card, while the rest serves as a checklist that will be used to verify the previous step of each deployment stage as the equipment progresses through the process. In prior years the team determined there was an average of 5% rework required to correct missing configurations or software.
+To manage PCs through this process, the team has invented a system of 'tagging' the equipment. The technicians have designed a combination check-list and worksheet that is copied and filled out for each PC. The top corner of the document becomes the Kanban card, while the rest serves as a checklist that will be used to verify the previous step of each deployment stage as the equipment progresses through the process. In prior years the team determined there was an average of 5% rework required to correct missing configurations or software.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <img src="http://www.tiernok.com/LTDBLog/Pt_3_Tag.png" alt="example worksheet" title="Example Worksheet" /><br /> Example worksheet with cut-out for Kanban card
 </div>
 
-Rather than putting a QA step at the end of their deployment process, they have chosen to start each step by verifying the task from the previous step. By verifying sooner they hope to prevent the need for a long QA process, reduce the amount of rework, and catch and correct issues earlier to prevent repetition of later tasks (such as running the audit software). Check boxes for &#8216;execute' and &#8216;verify' are available for each line on the tag.
+Rather than putting a QA step at the end of their deployment process, they have chosen to start each step by verifying the task from the previous step. By verifying sooner they hope to prevent the need for a long QA process, reduce the amount of rework, and catch and correct issues earlier to prevent repetition of later tasks (such as running the audit software). Check boxes for 'execute' and 'verify' are available for each line on the tag.
 
 Now that the tasks have been defined, the first visual board is put together using tape and labels on a corkboard. Thumbtacks will be used to attach the Kanban cards for each piece of equipment to the appropriate step on the board. 
 
@@ -75,9 +75,9 @@ The Kanban limits at each stage are based on the available workspace and the des
 
 There are a number of requirements and factors available to report on with this process. Based on the requirements and expressed wishes of the IT Manager, the team produces the following list of items to report on:
 
-  * Progress &#8211; based on the concept of a [burndown][3] chart, the Progress chart displays actual progress and a projected completion date
-  * Inventory to Deployment &#8211; a simple graph to show the actual deployment times against the averages and range from prior years
-  * User Satisfaction &#8211; A pair of horizontal bars that display successful delivery to promise date and number of incomplete deployments (rework)
+  * Progress – based on the concept of a [burndown][3] chart, the Progress chart displays actual progress and a projected completion date
+  * Inventory to Deployment – a simple graph to show the actual deployment times against the averages and range from prior years
+  * User Satisfaction – A pair of horizontal bars that display successful delivery to promise date and number of incomplete deployments (rework)
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <img src="http://www.tiernok.com/LTDBLog/KanbanPt3_Spreadsheet.png" alt="Charts for Report" title="Charts for Report" /><br /> Spreadsheet and Charts for Weekly Report
@@ -97,13 +97,13 @@ New and re-purposed equipment was assigned a user and tagged prior to any work t
 
 Here are some of the achievements:
 
-  * 100% Visibility &#8211; Visibility into the process and inventory at all times with no additional effort spent on tracking down technicians or counting hardware on the fly
-  * Improved Morale &#8211; Reduced confusion and negativity from the end-users around the assignment process based on clearer communications and assignment process
-  * Time Savings &#8211; no rework meant time savings in the deployment process as well as removing the interruptions that rework caused
-  * Financial Savings &#8211; better inventory estimation and management allowed for larger order sizes and better savings without impacting completion times
-  * Good Marketing, Cheap &#8211; the simple process of creating reports not only saved time but also produced simple enough metrics that they could be re-used at management meetings for additional positive press without requiring additional time and effort from the IT manager
-  * Higher Productivity &#8211; Based on process consistency, estimation improvements, and reduction of the interruption level of prior years, the overall process took fewer labor hours to complete
-  * Measurable Improvement &#8211; Due to careful tracking, the same statistics tracked during the process execution can be reported at the end of the year as department and personal improvements
+  * 100% Visibility – Visibility into the process and inventory at all times with no additional effort spent on tracking down technicians or counting hardware on the fly
+  * Improved Morale – Reduced confusion and negativity from the end-users around the assignment process based on clearer communications and assignment process
+  * Time Savings – no rework meant time savings in the deployment process as well as removing the interruptions that rework caused
+  * Financial Savings – better inventory estimation and management allowed for larger order sizes and better savings without impacting completion times
+  * Good Marketing, Cheap – the simple process of creating reports not only saved time but also produced simple enough metrics that they could be re-used at management meetings for additional positive press without requiring additional time and effort from the IT manager
+  * Higher Productivity – Based on process consistency, estimation improvements, and reduction of the interruption level of prior years, the overall process took fewer labor hours to complete
+  * Measurable Improvement – Due to careful tracking, the same statistics tracked during the process execution can be reported at the end of the year as department and personal improvements
 
 The achievements listed here range from hard (financial) to soft (morale) and likely do not cover all of the achievements that would have occurred in a non-fictional version of this story. In a nutshell, the process was able to run more smoothly, more effectively, and more predictably, and that gave the team a number of measurable improvements over prior years. This same process will be re-usable in future years, and can be used as a foundation for further improvement or allow the improvement efforts to focus on other processes while this one simply runs smoothly forward. While using a Kanban system for a temporary process is not a common application, it shows another angle on how it can be used to tame complex work processes and help drive overall improvement of the process.
 

@@ -39,7 +39,7 @@ After poking around in SSRS Web Interface, I quickly found that short of opening
 
 ## Subscriptions.ExtensionSettings
 
-I found the e-mail addresses that each Subscription is e-mailed to. The problem (or opportunity) is that it is buried in an XML field &#8211; Subscriptions.ExtensionSettings. This is the first opportunity that I've really had to mess with XML in SQL in a long time so I figured it wouldn't be too bad and I could figure out how to pluck what I needed.
+I found the e-mail addresses that each Subscription is e-mailed to. The problem (or opportunity) is that it is buried in an XML field – Subscriptions.ExtensionSettings. This is the first opportunity that I've really had to mess with XML in SQL in a long time so I figured it wouldn't be too bad and I could figure out how to pluck what I needed.
 
 However, my heart sank when I hit the second hurdle. 
 
@@ -49,7 +49,7 @@ However, my heart sank when I hit the second hurdle.
   <a href="/wp-content/uploads/users/kconan/SSRS_Schedule.JPG?mtime=1353450271"><img alt="" src="/wp-content/uploads/users/kconan/SSRS_Schedule.JPG?mtime=1353450271" width="505" height="136" /></a>
 </div>
 
-The Schedule table has a series of fields where it stores the schedule &#8211; Schedule.RecurrenceType, Schedule.DaysOfWeek and Schedule.DaysOfMonth. This one wasn't going to be as straight forward to get past. I remember something in the back of my mind about taking a number have to square it or something or another but it was all really fuzzy.
+The Schedule table has a series of fields where it stores the schedule – Schedule.RecurrenceType, Schedule.DaysOfWeek and Schedule.DaysOfMonth. This one wasn't going to be as straight forward to get past. I remember something in the back of my mind about taking a number have to square it or something or another but it was all really fuzzy.
 
 ## This can't be the first time someone has had to solve this issue, who's got a blog or forum post about it?!?!
 
@@ -69,11 +69,11 @@ Remember, I needed to know what report subscriptions should have ran on a specif
 
 Schedule.RecurrenceType had 3 values that I needed:
 
-2 &#8211; The subscription runs multiple times during the day, every day. So I want all subscriptions that have that setting.
+2 – The subscription runs multiple times during the day, every day. So I want all subscriptions that have that setting.
   
-4 &#8211; The subscription runs one or more days a week. This is used in conjunction with Schedule.DaysOfWeek.
+4 – The subscription runs one or more days a week. This is used in conjunction with Schedule.DaysOfWeek.
   
-5 &#8211; The subscription runs on specific days of the month. This is used in conjunction with Schedule.DaysOfMonth.
+5 – The subscription runs on specific days of the month. This is used in conjunction with Schedule.DaysOfMonth.
 
 I'm not going to explain bit wise, but here is a link to a BOL Article:
 
@@ -81,7 +81,7 @@ I'm not going to explain bit wise, but here is a link to a BOL Article:
 
 Schedule.DaysOfWeek and Schedule.DaysOfMonth work off a bit checker (bit wise). It'll help if you think of the day of the week in terms of what number it is. For example, Sunday = 1, Monday = 2, Tuesday = 3 etc.
 
-The first value (Sunday and the first of the month) use a bit value of 1. After that you can figure out the bit value by taking 2 the power of the number you are looking for minus 1. For example, for the 3rd, it would be 2 to the power of (3 &#8211; 1) which is 2 to the power of 2 which equals 4.
+The first value (Sunday and the first of the month) use a bit value of 1. After that you can figure out the bit value by taking 2 the power of the number you are looking for minus 1. For example, for the 3rd, it would be 2 to the power of (3 – 1) which is 2 to the power of 2 which equals 4.
 
 So if we were looking for reports that ran on every Tuesday, the TSQL would be Schedule.RecurrenceType = 4 AND Schedule.DaysofWeek & 4 = 4.
 

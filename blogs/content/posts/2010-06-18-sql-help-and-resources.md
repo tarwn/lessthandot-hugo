@@ -44,7 +44,7 @@ Kidding!!! (I think an apple just whizzed by my head)
   * [SQL Server Forums-Helping to Build a Knowledge Base][3] (6/15) by Ted Krueger 
   * [DBA Coach LaRock: Community Service Week][4] (6/16)
   * [SQL Community: Professional Association of SQL Server][5] – (6/17) by Jes Borland
-  * [Let’s Blog!][6] &#8211; (6/17) by Ted Krueger
+  * [Let’s Blog!][6] – (6/17) by Ted Krueger
 
 You could almost take what we’ve gone over and spend the next 2 years diving into just those topics. There is one other corner of the community that I find to be exceptional that cannot go without discussion. That is, the companies that stand behind us. 
 

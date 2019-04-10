@@ -27,25 +27,25 @@ How do we do this? Well… it get’s tricky.
 
 The first thing we need to do is to find the character that is a number. For this, we can use PatIndex:
 
-**Select PatIndex(&#8216;%[0-9.-]%', Data)**
+**Select PatIndex('%[0-9.-]%', Data)**
 
 Next, Let's remove any characters from the beginning of the string, like this:
 
-**Select SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000)**
+**Select SubString(Data, PatIndex('%[0-9.-]%', Data), 8000)**
 
 This allows us to accommodate any characters that appear before the numbers. The substring result forces the numbers to the beginning of the string. Next step is to determine where the numbers end. For that, we can use PatIndex again.
 
-**Select PatIndex(&#8216;%[^0-9.-]%', SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000))**
+**Select PatIndex('%[^0-9.-]%', SubString(Data, PatIndex('%[0-9.-]%', Data), 8000))**
 
 PatIndex returns an integer for the first character that matches. We'll want to use this in a LEFT function, there there is a potential problem. If there's no match, PatIndex will return 0. So, we should make sure that PatIndex will always return at least one. We can trick the system by appending a character before running the PatIndex function. Like this:
 
-**Select PatIndex(&#8216;%[^0-9.-]%', SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000) + &#8216;X')**
+**Select PatIndex('%[^0-9.-]%', SubString(Data, PatIndex('%[0-9.-]%', Data), 8000) + 'X')**
 
 By including something we know will match the pattern, we guarantee that we get a number greater than zero from the PatIndex function.
 
 Next step is to get the left part of the substring, which will return just the numbers. Like this:
 
-**Select Left(SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000), PatIndex(&#8216;%[^0-9.-]%', SubString(Data, PatIndex(&#8216;%[0-9.-]%', Data), 8000) + &#8216;X')-1)**
+**Select Left(SubString(Data, PatIndex('%[0-9.-]%', Data), 8000), PatIndex('%[^0-9.-]%', SubString(Data, PatIndex('%[0-9.-]%', Data), 8000) + 'X')-1)**
 
 Now, I will admit that this is a very ugly formula to use. However, there is a high probability that it is re-usable. Because of this, it would make a nice little function to have in our SQL Arsenal.
 

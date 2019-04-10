@@ -44,7 +44,7 @@ When I used Java in 2000 and 2001 it was primarily to do JSP development. The ma
 
 Over the next five days, I will blog about what I did and learned, I will also probably put some stuff on our wiki so that I can have it as a reference/cheat sheet
 
-Here is my question to you…..What are some of your favorite resources for Java and the Java ecosystem? I am looking for blogs to subscribe to, people to follow on twitter, if you have a favorite Java book then tell me about it. My favorite books from 2001 were Core Java, Volume I and II, I am happy to see that the 9th edition is coming out on December 10th: [Core Java Volume I&#8211;Fundamentals (9th Edition) (Core Series)][2]. If you know of any good podcasts then tell me about those as well
+Here is my question to you…..What are some of your favorite resources for Java and the Java ecosystem? I am looking for blogs to subscribe to, people to follow on twitter, if you have a favorite Java book then tell me about it. My favorite books from 2001 were Core Java, Volume I and II, I am happy to see that the 9th edition is coming out on December 10th: [Core Java Volume I–Fundamentals (9th Edition) (Core Series)][2]. If you know of any good podcasts then tell me about those as well
 
  [1]: http://www.flickr.com/photos/mrjoro/22752982/ "Java Logo by mrjoro, on Flickr"
  [2]: http://www.amazon.com/gp/product/0137081898/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0137081898&linkCode=as2&tag=sql08-20

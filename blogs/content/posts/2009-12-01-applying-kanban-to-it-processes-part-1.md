@@ -26,7 +26,7 @@ Lately I have seen an increase in the number of articles in the Development and 
 
 ## What is Kanban?
 
-Kanban is a Japanese term for &#8216;visual board' or &#8216;signboard' and is a tool for reducing the cycle time<sup>1</sup> of a process, increasing visibility into the flow of processes, and reducing the amount of In Process<sup>2</sup> work. By leveraging the visibility into the process and flow between processes we can see where the work flow loses momentum and either bottlenecks or reduces the effectiveness of earlier steps. Kanban is used in Lean Manufacturing to gain visibility into the process and execution status, reduce wastes (and costs), and help achieve [Just In Time][2] production capability. 
+Kanban is a Japanese term for 'visual board' or 'signboard' and is a tool for reducing the cycle time<sup>1</sup> of a process, increasing visibility into the flow of processes, and reducing the amount of In Process<sup>2</sup> work. By leveraging the visibility into the process and flow between processes we can see where the work flow loses momentum and either bottlenecks or reduces the effectiveness of earlier steps. Kanban is used in Lean Manufacturing to gain visibility into the process and execution status, reduce wastes (and costs), and help achieve [Just In Time][2] production capability. 
 
 <span class="MT_smaller">1. Cycle Time: The time it takes for an order to be produced from initial reception through completion</span>
   
@@ -54,24 +54,24 @@ By removing backlogged queues and re-prioritization between each step we have re
 
 ### Visualization and Metrics
 
-Visualizing the requests at each &#8216;station' using a physical board is a good way to communicate across the group and manage your Kanban. If your board only has 3 physical areas or slots for &#8216;cards' then your not going to take more than 3 requests. People at later and earlier steps can see progress being made as well as excess capacity (ie, nothing to do) at your step. The board is not only a method to manage your tasks but also an instant communications tool, allowing the area to focus more on doing the work and less on creating reports or filling in metric scorecards.
+Visualizing the requests at each 'station' using a physical board is a good way to communicate across the group and manage your Kanban. If your board only has 3 physical areas or slots for 'cards' then your not going to take more than 3 requests. People at later and earlier steps can see progress being made as well as excess capacity (ie, nothing to do) at your step. The board is not only a method to manage your tasks but also an instant communications tool, allowing the area to focus more on doing the work and less on creating reports or filling in metric scorecards.
 
 <center>
-  <img src="http://tiernok.com/LTDBlog/InitialExampleBoard.png" alt="Initial Example Board" title="Initial Example Board" /><br /> Finishing 2 Units/Day &#8211; ~14 days to produce new order<br />
+  <img src="http://tiernok.com/LTDBlog/InitialExampleBoard.png" alt="Initial Example Board" title="Initial Example Board" /><br /> Finishing 2 Units/Day – ~14 days to produce new order<br />
 </center>
 
 Another major benefit from Kanban methods will become apparent as the initial visual board is created. Besides driving the creation of a clear definition of the operations or production steps, the initial population of the board with current requests and WIP will start to make process bottlenecks evident. As time progresses and the kanban system forces you to reduce this backlog, the bottlenecks will continue to become more obvious, showing areas where direct improvement will affect the delivery time for the whole process. In many systems, when a previous step goes dry in a Kanban system the personnel from that step will start to move forward to help product clear the backlogged step. Simple rules or rearrangement of current staff can continue to give performance gains, as the board displays where slowdowns and hiccups occur as well as potential areas that are frequently left without work.
 
 <center>
-  <img src="http://tiernok.com/LTDBlog/KanbanExampleBoard.png" alt="Example Board" title="Example Board" /><br /> Finishing 2 Units/Day &#8211; ~5 days to produce new order<br />
+  <img src="http://tiernok.com/LTDBlog/KanbanExampleBoard.png" alt="Example Board" title="Example Board" /><br /> Finishing 2 Units/Day – ~5 days to produce new order<br />
 </center>
 
 The manufacturing community has hundreds of examples of visual boards, but for the purpose of the article I'm going to point out a couple links from Agile software development articles. Kanban boards do not have to be expensive and, in my opinion, should always start out as a physical board before diving into a software solution (if ever).
 
-  * [“Lean -Software Development in Small Teams” Article][3] &#8211; Whiteboard and Magnets
-  * [“Evolution of a Kanban Board” Article][4] &#8211; Whiteboard and Post-Its &tm;
-  * [“Visualizing Agile Projects with Kanban Boards” Article][5] &#8211; Several pictures and informative article
-  * [“The Kanban Story &#8211; Kanban Board” Article][6] &#8211; Final (Simple!) Result for another software development board
+  * [“Lean -Software Development in Small Teams” Article][3] – Whiteboard and Magnets
+  * [“Evolution of a Kanban Board” Article][4] – Whiteboard and Post-Its &tm;
+  * [“Visualizing Agile Projects with Kanban Boards” Article][5] – Several pictures and informative article
+  * [“The Kanban Story – Kanban Board” Article][6] – Final (Simple!) Result for another software development board
 
 Searching the internet will give you many additional examples in a variety of environments.
 

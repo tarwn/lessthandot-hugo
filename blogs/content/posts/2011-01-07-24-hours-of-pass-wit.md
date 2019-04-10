@@ -14,7 +14,7 @@ categories:
   - Data Modelling and Design
 
 ---
-On March 15 & 16, 2011, [PASS][1] will be presenting another round of 24 Hours of PASS &#8211; 24 one-hour presentations given by SQL People. The March event is centered around Women In Technology (WIT), as it is Women's History Month. PASS put out a call for SQL women speakers to submit abstracts. 
+On March 15 & 16, 2011, [PASS][1] will be presenting another round of 24 Hours of PASS – 24 one-hour presentations given by SQL People. The March event is centered around Women In Technology (WIT), as it is Women's History Month. PASS put out a call for SQL women speakers to submit abstracts. 
 
 There was no way I was going to do it. Me, present, when there are speakers like Gail Shaw and Stacia Misner, Kendra Little and Jessica Moss? But I was working on my session for the [WI SSUG][2] and submitted a session for [SQL Saturday #67][3], and someone on Twitter asked about 24HOP. I protested, and several people jumped in with encouragement. So I took the dive and emailed my abstract. 
 
@@ -86,7 +86,7 @@ Christina Leo
 
 Would all of you consider submitting a session? Just to amuse me? I want to hear what all of you have to say, whether it be about SQL Server index internals, or T-SQL basics, or Data Collectors, or Replication, or SSRS, or MDX. You all have taught me something, so I know you can teach others. 
 
-Submit a session by emailing the abstract (250 word max) and bio (125 word max) to 24hours@sqlpass.org. The deadline is Friday, January 14 &#8211; so please hurry!
+Submit a session by emailing the abstract (250 word max) and bio (125 word max) to 24hours@sqlpass.org. The deadline is Friday, January 14 – so please hurry!
 
  [1]: http://sqlpass.org
  [2]: http://wisconsin.sqlpass.org

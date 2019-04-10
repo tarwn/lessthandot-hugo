@@ -73,7 +73,7 @@ A few years back, I posted “[Displaying .Net Build Warnings in TeamCity][1]“
   
 > * Shows counts of warnings by solution/project/warning code, and shows which warnings are most numerous.
   
-> * Interactive &#8211; allows expanding/collapsing at the solution/project, and filtering to new warnings or by warning code(s).
+> * Interactive – allows expanding/collapsing at the solution/project, and filtering to new warnings or by warning code(s).
 > 
 > Mitch Terlisner
   

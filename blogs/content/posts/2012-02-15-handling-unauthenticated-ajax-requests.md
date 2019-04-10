@@ -40,7 +40,7 @@ $.ajax({
 });
 ```
 
-The ease with which this allows you to define behavior for different status codes is fantastic. As I set off down this path, the most obvious choice seemed to be adding a 401 (unauthorized) status code to the login page, but this got us into a weird redirect loop because forms authentication redirects all 401's to the login page &#8211; causing you lose the return URL, and redirect users back to the login page once they are authenticated. Not exactly a paragon of usability.
+The ease with which this allows you to define behavior for different status codes is fantastic. As I set off down this path, the most obvious choice seemed to be adding a 401 (unauthorized) status code to the login page, but this got us into a weird redirect loop because forms authentication redirects all 401's to the login page – causing you lose the return URL, and redirect users back to the login page once they are authenticated. Not exactly a paragon of usability.
 
 Having found this out the hard way, I decided a custom status code might be better. It's easy enough to add the custom status code to the login page with a single line of C#:
 

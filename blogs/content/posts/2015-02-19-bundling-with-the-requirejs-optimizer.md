@@ -108,7 +108,7 @@ I ran the site with and without caching enabled, refreshing and capturing only t
   <a href="/wp-content/uploads/2015/02/100RTT_Vanilla.png"><img src="/wp-content/uploads/2015/02/100RTT_Vanilla.png" alt="Small Sample Load - 100RTT/750kbps - Vanilla" width="451" height="30" class="size-full wp-image-3172" srcset="/wp-content/uploads/2015/02/100RTT_Vanilla.png 451w, /wp-content/uploads/2015/02/100RTT_Vanilla-300x19.png 300w" sizes="(max-width: 451px) 100vw, 451px" /></a>
   
   <p class="wp-caption-text">
-    Small Sample Load &#8211; 100RTT/750kbps &#8211; Vanilla
+    Small Sample Load – 100RTT/750kbps – Vanilla
   </p>
 </div>
 
@@ -116,7 +116,7 @@ I ran the site with and without caching enabled, refreshing and capturing only t
   <a href="/wp-content/uploads/2015/02/100RTT_Vanilla_Cache.png"><img src="/wp-content/uploads/2015/02/100RTT_Vanilla_Cache.png" alt="Small Sample Load - 100RTT/750kbps - Vanilla, Cached" width="447" height="23" class="size-full wp-image-3173" srcset="/wp-content/uploads/2015/02/100RTT_Vanilla_Cache.png 447w, /wp-content/uploads/2015/02/100RTT_Vanilla_Cache-300x15.png 300w" sizes="(max-width: 447px) 100vw, 447px" /></a>
   
   <p class="wp-caption-text">
-    Small Sample Site &#8211; 100RTT/750kbps &#8211; Vanilla Cached
+    Small Sample Site – 100RTT/750kbps – Vanilla Cached
   </p>
 </div>
 
@@ -126,7 +126,7 @@ After using the optimizer (bundled and minified), the best results I received we
   <a href="/wp-content/uploads/2015/02/100RTT_BundledMinified.png"><img src="/wp-content/uploads/2015/02/100RTT_BundledMinified.png" alt="Small Sample Load - 100RTT/750kbps - Bundled, Minified" width="446" height="26" class="size-full wp-image-3174" srcset="/wp-content/uploads/2015/02/100RTT_BundledMinified.png 446w, /wp-content/uploads/2015/02/100RTT_BundledMinified-300x17.png 300w" sizes="(max-width: 446px) 100vw, 446px" /></a>
   
   <p class="wp-caption-text">
-    Small Sample Load &#8211; 100RTT/750kbps &#8211; Bundled, Minified
+    Small Sample Load – 100RTT/750kbps – Bundled, Minified
   </p>
 </div>
 
@@ -134,7 +134,7 @@ After using the optimizer (bundled and minified), the best results I received we
   <a href="/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache.png"><img src="/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache.png" alt="Small Sample Load - 100RTT/750kbps - Bundled, Minified, Cached" width="436" height="23" class="size-full wp-image-3175" srcset="/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache.png 436w, /wp-content/uploads/2015/02/100RTT_BundledMinified_Cache-300x15.png 300w" sizes="(max-width: 436px) 100vw, 436px" /></a>
   
   <p class="wp-caption-text">
-    Small Sample Load &#8211; 100RTT/750kbps &#8211; Bundled, Minified, Cached
+    Small Sample Load – 100RTT/750kbps – Bundled, Minified, Cached
   </p>
 </div>
 
@@ -148,7 +148,7 @@ While there was a visible difference in the small site, I also wanted to see wha
   <a href="/wp-content/uploads/2015/02/Large_100RTT_Vanilla.png"><img src="/wp-content/uploads/2015/02/Large_100RTT_Vanilla.png" alt="Large Sample Load - 100RTT/750kbps - Vanilla" width="447" class="size-full wp-image-3180" srcset="/wp-content/uploads/2015/02/Large_100RTT_Vanilla.png 894w, /wp-content/uploads/2015/02/Large_100RTT_Vanilla-300x14.png 300w" sizes="(max-width: 894px) 100vw, 894px" /></a>
   
   <p class="wp-caption-text">
-    Large Sample Load &#8211; 100RTT/750kbps &#8211; Vanilla
+    Large Sample Load – 100RTT/750kbps – Vanilla
   </p>
 </div>
 
@@ -156,7 +156,7 @@ While there was a visible difference in the small site, I also wanted to see wha
   <a href="/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached.png"><img src="/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached.png" alt="Large Sample Load - 100RTT/750kbps - Vanilla, Cached" width="438" class="size-full wp-image-3181" srcset="/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached.png 877w, /wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached-300x18.png 300w" sizes="(max-width: 877px) 100vw, 877px" /></a>
   
   <p class="wp-caption-text">
-    Large Sample Load &#8211; 100RTT/750kbps &#8211; Vanilla, Cached
+    Large Sample Load – 100RTT/750kbps – Vanilla, Cached
   </p>
 </div>
 
@@ -166,7 +166,7 @@ After using the optimizer to create 2 minified bundles:
   <a href="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified.png"><img src="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified.png" alt="Large Sample Load - 100RTT/750kbps - Bundled, Minified" width="438" class="size-full wp-image-3178" srcset="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified.png 877w, /wp-content/uploads/2015/02/Large_100RTT_BundledMinified-300x16.png 300w" sizes="(max-width: 877px) 100vw, 877px" /></a>
   
   <p class="wp-caption-text">
-    Large Sample Load &#8211; 100RTT/750kbps &#8211; Bundled, Minified
+    Large Sample Load – 100RTT/750kbps – Bundled, Minified
   </p>
 </div>
 
@@ -174,7 +174,7 @@ After using the optimizer to create 2 minified bundles:
   <a href="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached.png"><img src="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached.png" alt="Large Sample Load - 100RTT/750kbps - Bundled, Minified, Cached" width="429" class="size-full wp-image-3179" srcset="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached.png 858w, /wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached-300x14.png 300w" sizes="(max-width: 858px) 100vw, 858px" /></a>
   
   <p class="wp-caption-text">
-    Large Sample Load &#8211; 100RTT/750kbps &#8211; Bundled, Minified, Cached
+    Large Sample Load – 100RTT/750kbps – Bundled, Minified, Cached
   </p>
 </div>
 

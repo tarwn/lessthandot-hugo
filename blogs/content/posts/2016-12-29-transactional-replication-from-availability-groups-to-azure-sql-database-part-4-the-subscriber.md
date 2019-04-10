@@ -15,11 +15,11 @@ categories:
 ---
 This is part 4 of a 5-part series.
 
-  * <a href="/?p=4896" target="_blank">Part 1 &#8211; Planning</a>
-  * <a href="/?p=4906" target="_blank">Part 2 &#8211; The Distributor</a>
-  * <a href="/?p=4923" target="_blank">Part 3 &#8211; The Publisher</a>
-  * <a href="/?p=4945" target="_blank">Part 4 &#8211; The Subscriber</a>
-  * <a href="/?p=4960" target="_blank">Part 5 &#8211; Testing</a>
+  * <a href="/?p=4896" target="_blank">Part 1 – Planning</a>
+  * <a href="/?p=4906" target="_blank">Part 2 – The Distributor</a>
+  * <a href="/?p=4923" target="_blank">Part 3 – The Publisher</a>
+  * <a href="/?p=4945" target="_blank">Part 4 – The Subscriber</a>
+  * <a href="/?p=4960" target="_blank">Part 5 – Testing</a>
 
 &nbsp;
 
@@ -29,7 +29,7 @@ Publishers: servers SQL2014AG1 and SQL2014AG2, database AGTest
 
 Distributor: stand-alone server, SQL2014demo
 
-Subscriber: Azure SQL Database &#8211; server jessqldb2, database ReplicationTest
+Subscriber: Azure SQL Database – server jessqldb2, database ReplicationTest
 
 ### Setting up the replication subscription
 

@@ -19,7 +19,7 @@ And has it ever been an adventure. I won't lie, there have been a couple of mome
 
 **Ask questions** 
 
-I don't know everything &#8211; about the office, about the clients, about the projects, or about technology. There are the typical “new job” questions &#8211; where are the bathrooms? Where is the coffee? Where is my desk? There's adjusting to new coworkers, new IM software, a new email address, and remembering to drive to the correct office. 
+I don't know everything – about the office, about the clients, about the projects, or about technology. There are the typical “new job” questions – where are the bathrooms? Where is the coffee? Where is my desk? There's adjusting to new coworkers, new IM software, a new email address, and remembering to drive to the correct office. 
 
 In addition to that, rather than working for one company, I've been working on multiple projects for multiple clients since day one. I have to learn about new industries. There are new acronyms (this is not limited just to IT, believe it or not), new laws, and new business models. This is scary. I've had a lot of questions. 
 
@@ -29,7 +29,7 @@ My solutions was to start a OneNote notebook for each client, with the acronyms 
 
 Asking questions is a good start. Knowing who to ask is also helpful. 
 
-I've learned that the network I've spent the last few years building &#8211; through jobs, Twitter, user groups, SQL Saturdays, and other events &#8211; is my most valuable resource. In the last two weeks, I have seen that people want me to succeed, they want me to do my best, and they're willing to help me do that. They've cheered me on through my first few days, asking how things are going. They've offered advice. I've had questions about PHP, MySQL, data modeling tools, and domain registrations. With every question I've asked, I've had people not only answer them, but go above and beyond to help. 
+I've learned that the network I've spent the last few years building – through jobs, Twitter, user groups, SQL Saturdays, and other events – is my most valuable resource. In the last two weeks, I have seen that people want me to succeed, they want me to do my best, and they're willing to help me do that. They've cheered me on through my first few days, asking how things are going. They've offered advice. I've had questions about PHP, MySQL, data modeling tools, and domain registrations. With every question I've asked, I've had people not only answer them, but go above and beyond to help. 
 
 I hope I can repay this all, someday. 
 

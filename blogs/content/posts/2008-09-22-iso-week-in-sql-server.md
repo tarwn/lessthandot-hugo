@@ -31,7 +31,7 @@ YYYY-Www or YYYYWww
   
 YYYY-Www-D or YYYYWwwD
 
-[YYYY] indicates the so-called ISO year which is slightly different than the calendar year (see below). [Www] is the week number prefixed by the letter &#8216;W', from W01 through W53. [D] is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday. This form is popular in the manufacturing industries.
+[YYYY] indicates the so-called ISO year which is slightly different than the calendar year (see below). [Www] is the week number prefixed by the letter 'W', from W01 through W53. [D] is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday. This form is popular in the manufacturing industries.
   
 There are mutually equivalent definitions for week 01:
 

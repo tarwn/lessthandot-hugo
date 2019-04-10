@@ -42,7 +42,7 @@ Download part 2 here: http://download.microsoft.com/download/e/5/4/e5440aa4-8fa1
 
 Edit
   
-&#8212;&#8212;&#8211;
+——–
 
 Greg Low has also added another podcast on his site. In this podcast SQL Server CAT team leader Lubor Kollar discusses the role of the CAT team, SQL Server 2008 resource governor and compression.
   

@@ -49,15 +49,15 @@ End Namespace
 
 Exception has been thrown by the target of an invocation.
   
--There was an error reflecting type &#8216;Alerts.srAlerts.BaseResponse'.
+-There was an error reflecting type 'Alerts.srAlerts.BaseResponse'.
   
-&#8211;There was an error reflecting type &#8216;Alerts.srAlerts.GetAlertDataResponse'.
+–There was an error reflecting type 'Alerts.srAlerts.GetAlertDataResponse'.
   
-&#8212;There was an error reflecting property &#8216;Alerts'.
+—There was an error reflecting property 'Alerts'.
   
-&#8212;-There was an error reflecting type &#8216;Alerts.srAlerts.Alert'.
+—-There was an error reflecting type 'Alerts.srAlerts.Alert'.
   
-&#8212;&#8211;There was an error reflecting property &#8216;CommentDisplay'.
+—–There was an error reflecting property 'CommentDisplay'.
 
 <p style="text-indent: 30pt;">
   It would appear that the web service system in Silverlight attempts to serialize all members of the class, even those that are defined client side in a partial class, and it gets a little confused. Using the XMLIgnore attribute forces the serializer to skip this property and allows us to use the partial class on the client side as we expected.

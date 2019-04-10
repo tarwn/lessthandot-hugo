@@ -28,7 +28,7 @@ INSERT INTO SomeDates VALUES('2006-10-02 00:00:00.000')
 INSERT INTO SomeDates VALUES('2006-10-01 00:00:00.000')
 ```
 
-Return everything between &#8216;2006-10-01' and &#8216;2006-10-02' 
+Return everything between '2006-10-01' and '2006-10-02' 
 
 ```sql
 SELECT * 
@@ -50,7 +50,7 @@ INSERT INTO SomeDates VALUES('2006-10-01 00:12:00.000')
 INSERT INTO SomeDates VALUES('2006-10-01 23:00:00.000') 
 ```
 
-Return everything between &#8216;2006-10-01' and &#8216;2006-10-02' 
+Return everything between '2006-10-01' and '2006-10-02' 
 
 ```sql
 SELECT * 

@@ -67,7 +67,7 @@ EXEC prTest
 
 Msg 229, Level 14, State 5, Procedure prTest, Line 1
   
-The EXECUTE permission was denied on the object &#8216;prTest', database &#8216;test', schema &#8216;dbo'.
+The EXECUTE permission was denied on the object 'prTest', database 'test', schema 'dbo'.
 
 In the window where you have all the permissions, give execute permissions to this stored procedure to the TestUser. You can use GRANT EXECUTE ON ProcName TO UserName to accomplish this, there is no need to give additional privileges like db_owner or sysadmin
 
@@ -89,7 +89,7 @@ And here is the error
 
 Msg 3701, Level 14, State 20, Procedure prTest, Line 3
   
-Cannot alter the procedure &#8216;prTest', because it does not exist or you do not have permission.
+Cannot alter the procedure 'prTest', because it does not exist or you do not have permission.
 
 Execute the following in the window where you have all the permissions
 

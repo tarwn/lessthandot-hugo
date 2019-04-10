@@ -127,7 +127,7 @@ Again these were from my dual core laptop, you might get a bigger difference if 
 
 ## Profiling Performance
 
-Visual Studio 2010 ships with a couple of tools that will make your life easier if you do parallel programming. Launch the Performance Wizard from Tools&#8211;>Launch Performance Wizard
+Visual Studio 2010 ships with a couple of tools that will make your life easier if you do parallel programming. Launch the Performance Wizard from Tools–>Launch Performance Wizard
   
   
 <img src="/wp-content/uploads/blogs/Architect//LaunchWizard.PNG" alt="" title="" width="479" height="217" />
@@ -141,7 +141,7 @@ Pick concurrency and visualize the behaviour of a multithreaded application.
 
 After you are done, start your app and when you close the app, reports will be generated.
   
-If you don't see the reports then do the following; click on View&#8211;>Other Windows&#8211;>Performance Explorer. 
+If you don't see the reports then do the following; click on View–>Other Windows–>Performance Explorer. 
 
 FYI, You need to run as admin to generate these report and if you are on a 64bit machine then you need to set the platform target to x86 in order to be able to generate these reports. I was greeted with the following message: _To enable complete call stacks on x64 platforms, executive paging must be disabled. A reboot is then required. To make this change, click “Yes”, save your work, and then reboot. For more information, see http://go.microsoft.com/fwlink/?LinkId=157265_ . After I rebooted everything worked.
 

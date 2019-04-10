@@ -77,11 +77,11 @@ The first select statement will function correctly. The next statements will res
 
 > (0 row(s) affected)
   
-> The SELECT permission was denied on the column &#8216;col1' of the object &#8216;tblColPerms', database &#8216;AdventureWorks', schema &#8216;dbo'.
+> The SELECT permission was denied on the column 'col1' of the object 'tblColPerms', database 'AdventureWorks', schema 'dbo'.
   
-> The SELECT permission was denied on the column &#8216;id' of the object &#8216;tblColPerms', database &#8216;AdventureWorks', schema &#8216;dbo'.
+> The SELECT permission was denied on the column 'id' of the object 'tblColPerms', database 'AdventureWorks', schema 'dbo'.
   
-> The SELECT permission was denied on the column &#8216;id' of the object &#8216;tblColPerms', database &#8216;AdventureWorks', schema &#8216;dbo'.</p>
+> The SELECT permission was denied on the column 'id' of the object 'tblColPerms', database 'AdventureWorks', schema 'dbo'.</p>
 **Summary**
 
 This was a great tip and catch by Laerte Junior.  It also shows that the code we write, although it may be efficient or meeting best practices, can have an impact on the complete cycle of a transaction as it flows through SQL Server.

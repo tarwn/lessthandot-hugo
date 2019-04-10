@@ -139,7 +139,7 @@ And third, when you run a script and have an error, most times you can double-cl
 
 **Part III: Must-Have Third-Party Add-Ins**
 
-SSMS Tools Pack &#8211; <http://www.ssmstoolspack.com/>
+SSMS Tools Pack – <http://www.ssmstoolspack.com/>
 
 This free add-in extends the functionality of SSMS. A lot. Some of its features that I love:
 
@@ -153,7 +153,7 @@ And that’s just scratching the surface. Download this tool!
 
 ![][23]
 
-Extended Events Manager &#8211; <http://extendedeventmanager.codeplex.com/> 
+Extended Events Manager – <http://extendedeventmanager.codeplex.com/> 
 
 Are you using Extended Events yet? You should be. Sure, the down side is that there is no GUI for it (yet). However, this tool starts to bridge the gap. You can view event sessions, start and stop them, drop them, and script out operations. 
 

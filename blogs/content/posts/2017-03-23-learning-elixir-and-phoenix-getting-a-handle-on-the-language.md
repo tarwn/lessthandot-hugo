@@ -17,7 +17,7 @@ tags:
 ---
 Recently I started learning Elixir and the Phoenix framework. I've found that mixing hands on programming with reading is the fastest way for me to get up to speed with a new language or framework, so if that's your style you might find this useful. In this post I started at zero and ended at being able to write small modules, run unit tests, and work with the interactive console.
 
-Previous Post: [Learning Elixir and Phoenix &#8211; Environments and Editors][1]
+Previous Post: [Learning Elixir and Phoenix – Environments and Editors][1]
 
 <div style="background-color: #FFFFCC; padding: 1em; margin: .5em; border: 1px solid #EEEEBB; border-left-width: 16px;">
   Note: I'm just getting started, so this is not an expert post on the best way to learn Elixir, but closer to a log of the most useful things I used along the way. As I gain experience I'll likely have to revisit earlier assumptions and correct myself.
@@ -25,7 +25,7 @@ Previous Post: [Learning Elixir and Phoenix &#8211; Environments and Editors][1]
 
 As I stated before, my goal is to get from “barely able to read it” to “able to ship readable, idiomatic, testable apps”. This is the path I took, including problems and successes I ran into along the way. The links I include are probably less than 5% of what I actually read and tried, this is the distilled set I think helped me the most.
 
-# Getting Started &#8211; the interactive console
+# Getting Started – the interactive console
 
 My first step was walking through this [Getting Started with Elixir][2] post. It provided some background on Elixir, then walked through the first few commands in the interactive console. It may seem silly, but I duplicated every example in the console myself, trying to start building a little muscle memory on some of the basics.
 
@@ -38,9 +38,9 @@ Next I walked through [Elixir School][3], working side by side with the examples
 Here's some of the notes I made along the way:
 
   * String concatenation is weird <>
-  * &#8216;Arity' -> number of arguments for a function
+  * 'Arity' -> number of arguments for a function
   * Enum is the underscore of Elixir
-  * Case default uses the _ to match the final arg &#8211; “_” is a variable and it just happens to match anything that made it this far &#8211; Elixir doesn't provide warnings for not using variables that belong with underscore
+  * Case default uses the _ to match the final arg – “_” is a variable and it just happens to match anything that made it this far – Elixir doesn't provide warnings for not using variables that belong with underscore
 
 So very much trying to fit what I'm learning from Elixir with what I expect and know from other languages.
 
@@ -50,7 +50,7 @@ So I took a break and then came back to it ([Decision fatigue][5]?). I was tryin
 
 # Creating a project
 
-Elixir runs on top of Erlang, which is designed to be a distributed, resilient system. The next stop I made was [How I Start &#8211; Elixir][6], written by the creator of Elixir, [José Valim][7].
+Elixir runs on top of Erlang, which is designed to be a distributed, resilient system. The next stop I made was [How I Start – Elixir][6], written by the creator of Elixir, [José Valim][7].
 
 In retrospect, I wasn't quite ready for this, but it got me in and writing some code (which was good) and I got some of the basics he was communicating, even if some of the deeper detail didn't sink in.
 

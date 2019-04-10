@@ -34,7 +34,7 @@ Specifically a section extracted…
 > 
 > _For table variables, cardinality changes does not trigger auto update statistics._
 
-Referenced from &#8211; <http://support.microsoft.com/kb/195565>
+Referenced from – <http://support.microsoft.com/kb/195565>
 
 The best way to look at this is to give it a try and see if the statement is accurate.
 

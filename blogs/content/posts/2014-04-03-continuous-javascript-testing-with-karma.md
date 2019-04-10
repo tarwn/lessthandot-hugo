@@ -148,7 +148,7 @@ I was getting errors about missing timestamps when Squire loads some of the depe
   <a href="/wp-content/uploads/2014/04/karma2.png"><img src="/wp-content/uploads/2014/04/karma2.png" alt="Karma Run - Take 2 - (Node hasn&#039;t eaten my blue background in this window)" width="805" height="88" class="size-full wp-image-2543" srcset="/wp-content/uploads/2014/04/karma2.png 805w, /wp-content/uploads/2014/04/karma2-300x32.png 300w" sizes="(max-width: 805px) 100vw, 805px" /></a>
   
   <p class="wp-caption-text">
-    Karma Run &#8211; Take 2 &#8211; (Node hasn't eaten my blue background in this window)
+    Karma Run – Take 2 – (Node hasn't eaten my blue background in this window)
   </p>
 </div>
 

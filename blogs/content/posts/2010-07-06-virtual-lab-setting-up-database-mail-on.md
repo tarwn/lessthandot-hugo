@@ -49,7 +49,7 @@ The Intro screen is fairly boring, so lets press “Next” and head to the main
 A quick check by the wizard and it determines that components for Database Mail aren't available on the server yet, so it asks us if we want to go ahead and install them (yes).
 
 <div class="hint">
-  How did the server know Database Mail wasn't configured, and what did it do when we pressed &#8216;Yes'? <br /> There is an advanced option in the system configurations called &#8216;Database Mail XPs'. When the option is set to &#8216;0' (which is the default), then the Database Mail process doesn't run. So the dialog simply checked the current value and, when we selected &#8216;Yes', updated the configuration to a value of &#8216;1'.
+  How did the server know Database Mail wasn't configured, and what did it do when we pressed 'Yes'? <br /> There is an advanced option in the system configurations called 'Database Mail XPs'. When the option is set to '0' (which is the default), then the Database Mail process doesn't run. So the dialog simply checked the current value and, when we selected 'Yes', updated the configuration to a value of '1'.
 </div>
 
 Profiles are used to represent a set of email addresses which allows us to represent a single person (or system) with multiple fail-over accounts. If an error occurs when the system is attempting to send mail from the first account in a profile, it fails to the next and retries, continuing until it either runs out of accounts or successfully sends it's message.
@@ -65,43 +65,43 @@ Now we'll add the first two accounts to this profile, each on a different networ
 Creating an account is fairly straightforward, simply enter the details for where you would like the email to be sent and any authentication options that are necessary. In this case we want to create a minimum of two accounts so the failover can work properly.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/04_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/04_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS &#8211; Account Entry
+  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/04_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/04_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS – Account Entry
 </div>
 
 Now that we have two accounts, we can move on.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/05_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/05_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS &#8211; Account View
+  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/05_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/05_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS – Account View
 </div>
 
 The next step is to decide whether our profile is going to be public or private. A public profile will be accessible to other people working on the system, whereas a private one will not. In this case we will make the profile public but be aware that this means anyone will be able to us the database server to send mail from this particular profile.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/06_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/06_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS &#8211; Profile Security
+  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/06_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/06_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS – Profile Security
 </div>
 
 The last interactive step is to confirm or modify some additional system parameters. This step is not specific to configuring an email profile and accounts, it is displayed as the final step of setting up DatabaseMail (when setting up for the first time). I suggest reviewing the settings to ensure your comfortable with each of them.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/07_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/07_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS &#8211; System Parameters
+  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/07_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/07_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS – System Parameters
 </div>
 
-After a final review screen, press the &#8216;Finish' button to implement the changes.
+After a final review screen, press the 'Finish' button to implement the changes.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/08_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/08_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS &#8211; Finished
+  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/08_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/08_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS – Finished
 </div>
 
 The last step is to test our new setup. Right-click the Database Mail menu option in SSMS and select “Send Test Email…”.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/09_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/09_config.png" alt="SSMS DatabaseMail - Test Email" /></a><br /> SSMS Menu &#8211; Sending a Test Email
+  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/09_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/09_config.png" alt="SSMS DatabaseMail - Test Email" /></a><br /> SSMS Menu – Sending a Test Email
 </div>
 
 After entering an email address for our test message, we can hit the “Send” button and wait for confirmation of our ability to hit “Next, Next, Finish”.
 
 <div class="screenshot">
-  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/10_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/10_config.png" alt="SSMS DatabaseMail - Test Email Dialog" /></a><br /> SSMS DatabaseMail &#8211; Test Email Dialog
+  <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/10_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/10_config.png" alt="SSMS DatabaseMail - Test Email Dialog" /></a><br /> SSMS DatabaseMail – Test Email Dialog
 </div>
 
 ## or From a Script

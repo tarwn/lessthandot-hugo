@@ -24,7 +24,7 @@ One of the [goals][2] I set way back in the beginning of the year was to start t
 
 I'm mostly looking forward to this event to get a feel of the speakers and the process so I may one day jump in as one myself. If you are near to this event I would recommend it. So far the list of speakers is really good and I'm looking forward to all the sessions being held. 
 
-You can find all of the details on [sqlfool][3]&#8216;s (Michelle Ufford) [site][4].
+You can find all of the details on [sqlfool][3]'s (Michelle Ufford) [site][4].
 
 I hope to see you there and look forward to meeting new faces in the SQL Server community.
 

@@ -66,7 +66,7 @@ I hope to see everyone there! Let’s make the turnout a good one this month.
     Common performance problems caused by poor Execution Plans
   </li>
   <li>
-    Tuning with Indexes &#8211; altering existing indexes and maintaining indexes
+    Tuning with Indexes – altering existing indexes and maintaining indexes
   </li>
   <li>
     Tune SQL Server itself (such as Parallelism)

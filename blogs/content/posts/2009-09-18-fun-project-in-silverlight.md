@@ -13,7 +13,7 @@ categories:
   - Web Design, Graphics and Styling
 
 ---
-So I'm finally writing a blog post. Not that I'm a lazy guy or anything, but I doubt anyone here wants to read about the stupid things my wife's cats do or what I thought of the last block buster movie that came out. But I finally have a few things that I think raise to the bar of &#8216;worth showing other people'.
+So I'm finally writing a blog post. Not that I'm a lazy guy or anything, but I doubt anyone here wants to read about the stupid things my wife's cats do or what I thought of the last block buster movie that came out. But I finally have a few things that I think raise to the bar of 'worth showing other people'.
 
 I've been lucky, in my current environment I have a pretty loose leash and I get to push different technologies that would otherwise be ignored. And for the last 2 years I've been following and pushing for traction on Silverlight. To put it bluntly, I love Silverlight. Oh sure, it's got its fair share of faults. But it is an amazing platform and keeps getting better. 
 

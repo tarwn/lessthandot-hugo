@@ -22,8 +22,8 @@ categories:
 This is part six of a series about Report Builder 3.0.
 
   * <a title="Report Builder 3.0 – The Introduction" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-the/" target="_blank">Report Builder 3.0 – The Introduction</a>
-  * <a title="Report Builder 3.0 – Table or Matrix Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-table/" target="_blank">Report Builder 3.0 &#8211; Table or Matrix Wizard</a>
-  * <a title="Report Builder 3.0 – Chart Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-chart/" target="_blank">Report Builder 3.0 &#8211; Chart Wizard</a>
+  * <a title="Report Builder 3.0 – Table or Matrix Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-table/" target="_blank">Report Builder 3.0 – Table or Matrix Wizard</a>
+  * <a title="Report Builder 3.0 – Chart Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-chart/" target="_blank">Report Builder 3.0 – Chart Wizard</a>
   * <a title="Report Builder 3.0 – Chart Types, Visualizations, and Properties" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-chart-1/" target="_blank">Report Builder 3.0 – Chart Types, Visualizations, and Properties</a>
   * <a title="Report Builder 3.0 – Map Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-map/" target="_blank">Report Builder 3.0 – Map Wizard</a>
 
@@ -93,7 +93,7 @@ Yes, publishing and re-using report parts is that easy.
 
 **What benefits do they provide?** 
 
-The two main benefits to using report parts are time savings and consistency &#8211; just like mass-produced machine parts.
+The two main benefits to using report parts are time savings and consistency – just like mass-produced machine parts.
 
 Creating a table, chart, or image can be a time-consuming process. There are many details to be considered, such as what data is included, what the layout is, and even color schemes.  If that is done once, and the information is needed again, it will save the organization time. Multiply that by many tables and many reports over a year, and you can see the savings adding up.
 

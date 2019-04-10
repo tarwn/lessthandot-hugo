@@ -120,7 +120,7 @@ In general, TextRank creates a graph of the words and relationships between them
 
 2. Each word is then added to the graph and relationships are added between the word and others in a sliding window around the word
 
-3. A ranking algorithm is run on each vertex for several iterations, updating all of the word scores based on the related word scores, until the scores stabilize &#8211; the research paper notes this is typically 20-30 iterations
+3. A ranking algorithm is run on each vertex for several iterations, updating all of the word scores based on the related word scores, until the scores stabilize – the research paper notes this is typically 20-30 iterations
 
 4. The words are sorted and the top N are kept (N is typically 1/3rd of the words)
 

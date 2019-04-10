@@ -27,7 +27,7 @@ tags:
 ---
 Java Training Day 1
   
-&#8212;
+—
   
 Today is day one of the Java class I am taking this week. I am just dumping some of the stuff that I am hearing about, some of the stuff I might already know.
   

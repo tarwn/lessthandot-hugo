@@ -27,15 +27,15 @@ The baseline can be used for all types of situations.
 
 A few…
 
-&#8211;          Questionable peak replication times
+–          Questionable peak replication times
 
-&#8211;          Assistance in analyzing upgrade paths
+–          Assistance in analyzing upgrade paths
 
-&#8211;          Adding or removing subscribers or re-publishers and impacts
+–          Adding or removing subscribers or re-publishers and impacts
 
-&#8211;          Spike reporting and predictive analysis on synchronizing events
+–          Spike reporting and predictive analysis on synchronizing events
 
-&#8211;          Determining better time periods for bulk data loads or mass updates
+–          Determining better time periods for bulk data loads or mass updates
 
 The project has the SSIS package available for download and has been marked as, Beta.  This package has been through thorough testing but I am hopeful many of you have a chance to test it and report back and issues and or valued comments on the baseline collections.
 

@@ -40,7 +40,7 @@ tags:
   </ul>
 </div>
 
-It was a long trip from “I want product ABC” to what we really ended up choosing and implementing. No process is perfect, no meeting goes as planned. After the product selection process is complete it's time to review what went well, what fared poorly, and what we can try to improve the process. There are fifteen other tasks waiting, but taking some time to identify these factors is the first step to evolving our process towards an ultimate goal of less wasted motion in both the short and long terms. Some day we should be able to lift our heads and realize that we are not only selecting the best possible products for our needs, but doing so with less energy and resources then it originally took to simply pick one at random (with the random conversations, arguments, integration losses, and other baggage that incorporate that &#8216;process').
+It was a long trip from “I want product ABC” to what we really ended up choosing and implementing. No process is perfect, no meeting goes as planned. After the product selection process is complete it's time to review what went well, what fared poorly, and what we can try to improve the process. There are fifteen other tasks waiting, but taking some time to identify these factors is the first step to evolving our process towards an ultimate goal of less wasted motion in both the short and long terms. Some day we should be able to lift our heads and realize that we are not only selecting the best possible products for our needs, but doing so with less energy and resources then it originally took to simply pick one at random (with the random conversations, arguments, integration losses, and other baggage that incorporate that 'process').
 
 ## Step 4: Review 
 

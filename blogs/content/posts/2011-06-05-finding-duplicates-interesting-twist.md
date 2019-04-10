@@ -22,7 +22,7 @@ categories:
   - Data Modelling and Design
 
 ---
-A recent [MSDN thread][1] presented a very interesting problem &#8211; find duplicates based on any 4 of the 5 columns and eliminate the duplicates.
+A recent [MSDN thread][1] presented a very interesting problem – find duplicates based on any 4 of the 5 columns and eliminate the duplicates.
 
 Here is the data table we will be working with:
 
@@ -299,13 +299,13 @@ sql
 ;with UnPvt AS (SELECT ID, ColValue FROM tblTEST 
 UNPIVOT (ColValue FOR ColName IN ([FirstColumn],[SecondColumn],[ThirdColumn],[FourthColumn], [FifthColumn])) unpvt),
 ```
-The second step is also more or less clear &#8211; find possible duplicates by counting IDs partitioned by ColValue
+The second step is also more or less clear – find possible duplicates by counting IDs partitioned by ColValue
 
 sql
 SameVals as (SELECT * FROM (select *, COUNT(ID) OVER (PARTITION by ColValue) as cntSame from UnPvt) X WHERE cntSame >=2),
 ```
 
-Now, what can we do next? The next step was a road block for me. But then, an Eureka moment &#8211; we can use CROSS APPLY and find all records that have more than 4 values matching the current record values
+Now, what can we do next? The next step was a road block for me. But then, an Eureka moment – we can use CROSS APPLY and find all records that have more than 4 values matching the current record values
 
 sql
 DupRecs as (select T.*,S.cntDups, S.ID as DupID

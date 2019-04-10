@@ -111,7 +111,7 @@ If we were to pass our input string into the Tokenize method we should get back 
   * Number = **10**
   * Plus = **+**
   * Number = **2**
-  * Dash = **&#8211;**
+  * Dash = **–**
   * Number = **3**
 
 In this form we can easily move forward in the process and begin the syntactical analysis process but that is for another day. Take notice of how in the final else condition we return an unknown token. This is because it is not the job of the lexical analyzer to decide how to handle an invalid token. Given this simple example it is easy to imagine what other tokens we could add. With enough though you can come up with your own programming language in no time. 

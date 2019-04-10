@@ -29,7 +29,7 @@ The IronPython and Dynamic Language Runtime teams are proud to announce the rele
   * The addition of more C-based standard modules such as cmath and _winreg
   * Significant improvements in importing compatibility and features
   * Distribution of IronPython under the Microsoft Public License which has been approved by OSI
-  * Performance improvements. On that note, a new Wiki page has been created for IronPython performance reports &#8211; see [http://www.codeplex.com/IronPython/Wiki/View.aspx?title=IronPython%20Performance<span class="externalLinkIcon"></span>][1]{.externalLink}
+  * Performance improvements. On that note, a new Wiki page has been created for IronPython performance reports – see [http://www.codeplex.com/IronPython/Wiki/View.aspx?title=IronPython%20Performance<span class="externalLinkIcon"></span>][1]{.externalLink}
   * Over 500 bugs have been closed in 2.0. 453 of these were reported on CodePlex
   * Support for precompilation of Python source files into a single dll
 

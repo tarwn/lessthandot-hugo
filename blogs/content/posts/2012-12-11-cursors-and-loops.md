@@ -157,7 +157,7 @@ SELECT * FROM sys.procedures
 WHERE OBJECT_DEFINITION((object_id) )LIKE '%DECLARE%%cursor%'
 ```
 
-For while loops, just change the &#8216;%DECLARE%%cursor%' part to &#8216;%while%'
+For while loops, just change the '%DECLARE%%cursor%' part to '%while%'
 
 Look at those procs and investigate if you can rewrite them using a SET based operation instead
 

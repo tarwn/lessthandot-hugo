@@ -86,7 +86,7 @@ and s.name = 'ix_Test_bla'
 <pre>Tablename	Indexname	index_type_desc	avg_fragmentation_in_percent	page_count
 Test	        ix_Test_bla	CLUSTERED INDEX	34.4827586206897                 58</pre>
 
-Now it is time to &#8216;fix' the index, we can either defragment/reorganize or rebuild the index
+Now it is time to 'fix' the index, we can either defragment/reorganize or rebuild the index
 
 sql
 ALTER INDEX ix_Test_bla ON [dbo].[Test] REORGANIZE
@@ -94,7 +94,7 @@ ALTER INDEX ix_Test_bla ON [dbo].[Test] REORGANIZE
 
 _Msg 40517, Level 16, State 1, Line 1
   
-Keyword or statement option &#8216;REORGANIZE' is not supported in this version of SQL Server._
+Keyword or statement option 'REORGANIZE' is not supported in this version of SQL Server._
 
 Okay, so SQL Azure does not support reorganizing the index
   

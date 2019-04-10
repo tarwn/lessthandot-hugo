@@ -75,7 +75,7 @@ Stephenie Meyer: [Breaking Dawn][12]
 
 Why oh why did I start this series, the first two books were fine but then it became ridiculous. Renesmee really…? Renesmee is a vampire/human hybrid member of the Olympic Coven. She is the daughter of Edward Cullen and Bella Swan, and the imprintee of Jacob Black
   
-Of course after I &#8216;invested' all the time into the books so far I had no choice to finish it. I do not recommend this
+Of course after I 'invested' all the time into the books so far I had no choice to finish it. I do not recommend this
 
 **Peter Benchley**: [Jaws][13]
   

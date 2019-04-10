@@ -18,7 +18,7 @@ categories:
   - SSIS
 
 ---
-**&#8212; The Story &#8212;**_<img width="315" style="float: right;" src="http://joshuafennessy.files.wordpress.com/2012/07/dataviewer.jpg" alt="Yay!  Data Viewer!" height="315" />_
+**— The Story —**_<img width="315" style="float: right;" src="http://joshuafennessy.files.wordpress.com/2012/07/dataviewer.jpg" alt="Yay!  Data Viewer!" height="315" />_
 
 Experienced SSIS developers will recognize the usefulness of the simple _data viewer_ object used during the development process to peek into the data set and see what is going on at various stages of execution.
 
@@ -28,7 +28,7 @@ This problem is nullified in SQL 2012 with the introduction of the SSIS Data Tap
 
 * * *
 
-**&#8212; Information Collection &#8212;  
+**— Information Collection —  
 ** 
 
 Data tap files are output to the SSIS root install directory, and must be configured through SSMS. First some information about the package must be gathered in SSDT, so fire up your development environment and follow along.
@@ -46,7 +46,7 @@ With these two pieces of information, it’s off to SSMS for the rest of the pro
 
 * * *
 
-**&#8212; Execution &#8212;  
+**— Execution —  
 ** 
 
 Connect to your SQL Server 2012 Instance that hosts the SQL 2012 Integration Services Catalog. Mine is SSISDB on my default instance. Once there, execute the following stored procedures in order.
@@ -59,7 +59,7 @@ To make it REALLY easy, I’ve written a SQL Script using template parameters th
 
 * * *
 
- **&#8212; Data Review &#8212;  
+ **— Data Review —  
 ** 
 
 After the package is executed, check your SSIS Install directory – mine is   
@@ -69,7 +69,7 @@ There is your output! Now you can see EXACTLY what SSIS was working with at any 
 
 * * *
 
-**&#8212; Some Important Notes &#8212;  
+**— Some Important Notes —  
 ** 
 
   * Data taps are only valid for ONE execution, so unless you create a job step with all of this code, you’ll only get a data tap when you explicitly specify it.

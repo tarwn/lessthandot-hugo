@@ -223,7 +223,7 @@ And you get the following message
   
 **Server: Msg 214, Level 16, State 2, Procedure sp_executesql, Line 1
   
-Procedure expects parameter &#8216;@statement' of type &#8216;ntext/nchar/nvarchar'.**
+Procedure expects parameter '@statement' of type 'ntext/nchar/nvarchar'.**
 
 This is because sp_executesql expects nvarchar and not varchar
 

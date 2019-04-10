@@ -111,9 +111,9 @@ GO
 
 Here are the two plans
 
-> |&#8211;Clustered Index Seek(OBJECT:([master].[dbo].[Test].[cx_test]),
+> |–Clustered Index Seek(OBJECT:([master].[dbo].[Test].[cx_test]),
     
-> SEEK:([master].[dbo].[Test].[SomeID] >= &#8216;Rþ' AND [master].[dbo].[Test].[SomeID] < 'T'), WHERE:([master].[dbo].[Test].[SomeID] like 's%') ORDERED FORWARD) |--Clustered Index Scan(OBJECT:([master].[dbo].[Test].[cx_test]), WHERE:(substring([master].[dbo].[Test].[SomeID],(1),(1))='s')) 
+> SEEK:([master].[dbo].[Test].[SomeID] >= 'Rþ' AND [master].[dbo].[Test].[SomeID] < 'T'), WHERE:([master].[dbo].[Test].[SomeID] like 's%') ORDERED FORWARD) |--Clustered Index Scan(OBJECT:([master].[dbo].[Test].[cx_test]), WHERE:(substring([master].[dbo].[Test].[SomeID],(1),(1))='s')) 
 
 As you can see the top one while looking more complicated is actually giving you a seek
 
@@ -142,7 +142,7 @@ WHERE Val = 'A'
 
 Val
   
-&#8212;&#8211;
+—–
   
 A
   
@@ -165,7 +165,7 @@ WHERE Val = 'A'
 
 Val
   
-&#8212;&#8211;
+—–
   
 A
 
@@ -178,7 +178,7 @@ WHERE Val = 'A' COLLATE SQL_Latin1_General_CP1_CS_AS
 
 Val
   
-&#8212;&#8211;
+—–
   
 A
   
@@ -242,7 +242,7 @@ Here are the results of that query
   
 Val
   
-&#8212;&#8211;
+—–
   
 AbCd
   
@@ -287,7 +287,7 @@ Here is the result, it maches what was passed in
   
 Val
   
-&#8212;
+—
   
 ABCD
 
@@ -303,7 +303,7 @@ WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS
 AND Val LIKE 'ABCD'
 ```
 
-AND Val LIKE &#8216;ABCD' will result in a seek, now when it also does the Val = &#8216;ABCD' COLLATE SQL\_Latin1\_General\_CP1\_CS_AS part, it only returns the row that matches your value
+AND Val LIKE 'ABCD' will result in a seek, now when it also does the Val = 'ABCD' COLLATE SQL\_Latin1\_General\_CP1\_CS_AS part, it only returns the row that matches your value
 
 If you run both queries, you can look at the plan difference (hit CTRL + M so that the plan is included)
 
@@ -346,11 +346,11 @@ SET SHOWPLAN_TEXT OFF
 GO
 ```
 
-> |&#8211;Table Scan(OBJECT:([tempdb].[dbo].[CaseSensitiveSearch]),
+> |–Table Scan(OBJECT:([tempdb].[dbo].[CaseSensitiveSearch]),
      
 > WHERE:(CONVERT_IMPLICIT(varchar(50),[tempdb].[dbo].[CaseSensitiveSearch].[Val],0)=CONVERT(varchar(8000),[@1],0)))
 > 
-> |&#8211;Index Seek(OBJECT:([tempdb].[dbo].[CaseSensitiveSearch].[IX_SearchVal]), SEEK:([tempdb].[dbo].[CaseSensitiveSearch].[Val] >= &#8216;ABCD'
+> |–Index Seek(OBJECT:([tempdb].[dbo].[CaseSensitiveSearch].[IX_SearchVal]), SEEK:([tempdb].[dbo].[CaseSensitiveSearch].[Val] >= 'ABCD'
        
 > AND [tempdb].[dbo].[CaseSensitiveSearch].[Val] <= 'ABCD'), WHERE:(CONVERT_IMPLICIT(varchar(50),[tempdb].[dbo].[CaseSensitiveSearch].[Val],0)='ABCD' AND [tempdb].[dbo].[CaseSensitiveSearch].[Val] like 'ABCD') ORDERED FORWARD)
 

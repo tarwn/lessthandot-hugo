@@ -82,7 +82,7 @@ FROM            DimProductCategory;
 </p>
 
 <p style="text-align: justify">
-  I used the original expression again – without any scope &#8211; and when I ran the report, the row finally showed up!
+  I used the original expression again – without any scope – and when I ran the report, the row finally showed up!
 </p>
 
 <p style="text-align: justify">

@@ -30,21 +30,21 @@ Anyway if you do install Denali as a named instance this is what happens when yo
 
 Here is the text
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+—————————
   
 Microsoft Visual Studio
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+—————————
   
-&#8216;C:UsersDenisAppDataLocalTemptemp.dtproj' cannot be opened because its project type (.dtproj) is not supported by this version of the application. 
+'C:UsersDenisAppDataLocalTemptemp.dtproj' cannot be opened because its project type (.dtproj) is not supported by this version of the application. 
 
 To open it, please use a version that supports this type of project.
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+—————————
   
 OK Help
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+—————————
 
 Here is also a small video I created [video:youtube:hdNeTWHiwW0] 
 

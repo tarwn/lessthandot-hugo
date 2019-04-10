@@ -28,7 +28,7 @@ There seems to be a little bit of confusion on how to script out the database. T
 
 So for those who do not use/have source control I will show you how to do it
 
-Logically you would think that this would be the way: _Right click on the database &#8211;> Script Database As &#8211;> CREATE To and then pick your choice_. See also image below
+Logically you would think that this would be the way: _Right click on the database –> Script Database As –> CREATE To and then pick your choice_. See also image below
 
 
 
@@ -59,7 +59,7 @@ end
 GO
 ```
 
-What you have to do is actually this: _Right click on your database&#8211;>Tasks&#8211;>Generate Scripts_
+What you have to do is actually this: _Right click on your database–>Tasks–>Generate Scripts_
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut2.png?mtime=1357605211"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut2.png?mtime=1357605211" width="456" height="465" /></a>

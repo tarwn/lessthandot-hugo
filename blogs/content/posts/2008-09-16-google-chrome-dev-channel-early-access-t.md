@@ -26,9 +26,9 @@ The Dev channel is useful for:
   
 **Testers** who need to make sure they're working with the latest bug fixes
   
-**Anyone who wants to help make Google Chrome better** &#8212; your feedback helps us turn good new features into great features, and using the Dev channel is a simple way for anyone to help.
+**Anyone who wants to help make Google Chrome better** — your feedback helps us turn good new features into great features, and using the Dev channel is a simple way for anyone to help.
 
-Dev channel releases are less stable than Beta channel releases. Expect the occasional “sad tab” or even browser crashes (if you turn on &#8216;Help make Google Chrome better..' in Options, we'll get the crash reports so we can fix the bugs).
+Dev channel releases are less stable than Beta channel releases. Expect the occasional “sad tab” or even browser crashes (if you turn on 'Help make Google Chrome better..' in Options, we'll get the crash reports so we can fix the bugs).
 
 Automatic updates of new Dev channel releases are published every 1-2 weeks
 

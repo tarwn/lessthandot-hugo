@@ -26,23 +26,23 @@ The examples did not fit well with what I already know about the mechanics of OA
 
 <ul>
 <li>
-<a href="https://msdn.microsoft.com/office/office365/howto/setup-development-environment#bk_CreateAzureSubscription">Office365 &#8211; Associate your Office 365 with an Azure AD Account</a></a> <li>
-  <a href="https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually">MSDN &#8211; Manually register your app with Azure AD</a>
+<a href="https://msdn.microsoft.com/office/office365/howto/setup-development-environment#bk_CreateAzureSubscription">Office365 – Associate your Office 365 with an Azure AD Account</a></a> <li>
+  <a href="https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually">MSDN – Manually register your app with Azure AD</a>
 </li>
 <li>
-  <a href="https://msdn.microsoft.com//en-us/library/azure/dn645542.aspx" title="MSDN - Authorization Code Grant Flow">MSDN &#8211; Authorization Code Grant Flow</a>
+  <a href="https://msdn.microsoft.com//en-us/library/azure/dn645542.aspx" title="MSDN - Authorization Code Grant Flow">MSDN – Authorization Code Grant Flow</a>
 </li>
 <li>
-  <a href="https://www.owasp.org/index.php/Man-in-the-middle_attack" title="OWASP - Man-in-the-middle attack">OWASP &#8211; Man-in-the-middle attack</a>
+  <a href="https://www.owasp.org/index.php/Man-in-the-middle_attack" title="OWASP - Man-in-the-middle attack">OWASP – Man-in-the-middle attack</a>
 </li>
 <li>
-  <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)" title="OWASP - Cross Site Request Forgery">OWASP &#8211; Cross Site Request Forgery</a>
+  <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)" title="OWASP - Cross Site Request Forgery">OWASP – Cross Site Request Forgery</a>
 </li>
 <li>
   <a href="https://jwt.io/" title="JSON Web Token">JWT (JSON Web Token)</a>
 </li>
 <li>
-  <a href="http://www.newtonsoft.com/json/help/html/CustomJsonConverter.htm" title="Newtonsoft - Custom JsonConverter">Newtonsoft JSON.Net &#8211; Custom JsonConverter</a>
+  <a href="http://www.newtonsoft.com/json/help/html/CustomJsonConverter.htm" title="Newtonsoft - Custom JsonConverter">Newtonsoft JSON.Net – Custom JsonConverter</a>
 </li></ul> </div> 
 <h1>
   How OAuth2 Works

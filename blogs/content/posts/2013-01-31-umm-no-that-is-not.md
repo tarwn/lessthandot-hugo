@@ -47,6 +47,6 @@ This of course will create the file, however there will be some output in the fr
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobOutput.PNG?mtime=1359678223"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobOutput.PNG?mtime=1359678223" width="666" height="292" /></a>
 </div>
 
-The only reason I found out about this was because I was asked how to skip the &#8216;header' in SQL Server. After a good deal of puzzlement looking at this creative &#8216;solution' I told the person how to use bcp instead
+The only reason I found out about this was because I was asked how to skip the 'header' in SQL Server. After a good deal of puzzlement looking at this creative 'solution' I told the person how to use bcp instead
 
 Any crazy stories from the trenches you want to share in the comments?

@@ -149,7 +149,7 @@ This became overwhelming, so I moved them all to Trello and added even more func
   <img src="/wp-content/uploads/2018/03/launchreadypost_14-600x178.png" alt="LaunchReady - Final Task System" width="600" height="178" class="size-medium-width wp-image-9070" srcset="/wp-content/uploads/2018/03/launchreadypost_14-600x178.png 600w, /wp-content/uploads/2018/03/launchreadypost_14-300x89.png 300w, /wp-content/uploads/2018/03/launchreadypost_14-768x227.png 768w, /wp-content/uploads/2018/03/launchreadypost_14-1024x303.png 1024w, /wp-content/uploads/2018/03/launchreadypost_14-1014x300.png 1014w, /wp-content/uploads/2018/03/launchreadypost_14.png 1389w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
-    LaunchReady &#8211; Final Task System
+    LaunchReady – Final Task System
   </p>
 </div>
 

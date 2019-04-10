@@ -38,7 +38,7 @@ Find every prime number between 0 and 1,000,000
 
 **[Calculating the Fibonacci Sequence][5]**
   
-Calculate &#8216;X' numbers in the Fibonacci Sequence, which is essentially adding the previous 2 occurring numbers together to make the next 
+Calculate 'X' numbers in the Fibonacci Sequence, which is essentially adding the previous 2 occurring numbers together to make the next 
 
 **[split a filepath][6]**
   
@@ -74,7 +74,7 @@ Write a program that will take two dates as inputs, and output the number of wee
 
 **[Hello World! For Hackers][11]**
   
-Create the most unique way of writing “Hello World” &#8211; the more fantastic, cryptic, oddball the better 
+Create the most unique way of writing “Hello World” – the more fantastic, cryptic, oddball the better 
 
 **[Calculate the moon phase][12]**
   
@@ -140,7 +140,7 @@ A man earns a certain amount of chrissies a month he has to pay 15% taxes and ev
 
 **[Distance to line segment][20]**
   
-Given the coordinates of the line segment, calculate the shortest distance to a given point. The distance that you are to calculate is represented by the red line. If the point is &#8216;outside' the line segment, meaning, you cannot draw a perpendicular line to it, then you should return the distance from the given point to the closest end point
+Given the coordinates of the line segment, calculate the shortest distance to a given point. The distance that you are to calculate is represented by the red line. If the point is 'outside' the line segment, meaning, you cannot draw a perpendicular line to it, then you should return the distance from the given point to the closest end point
 
 Keep an eye on [Programmer Puzzles][21] because every 2 weeks or so we post a new puzzle
 

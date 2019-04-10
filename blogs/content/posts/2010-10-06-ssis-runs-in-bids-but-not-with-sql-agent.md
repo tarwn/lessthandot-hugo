@@ -61,7 +61,7 @@ In our approach listing we can evaluate a new list directly related to SSIS.
   3. Variable access and Configuration file access. Environmental variables, Registry, Configuration files
   4. Supporting objects
   5. 32-bit vs. 64-bit
-  6. Double HOP &#8211; loss of authentication
+  6. Double HOP – loss of authentication
   7. External calls (not configuration file based)
   8. OS level calls when using DTExec.exe and security
 

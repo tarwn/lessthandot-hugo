@@ -36,7 +36,7 @@ What do I _do_? As of May 8, 2012, I’m a Consultant with Brent Ozar PLF. Consu
 
 I start by reading through my email and saying hello to all my friends Twitter. I need Twitter, now that I work from home. It gives me virtual “coworkers” to talk to.
 
-7:45 – Begin research time. I’m doing a server health check with a client this week. We’ve been asked to review his delete process and recommend possible alternatives. I’m investigating a SQLCAT blog on Fast Ordered Deletes &#8211; <http://sqlcat.com/sqlcat/b/msdnmirror/archive/2009/05/20/fast-ordered-delete.aspx>.
+7:45 – Begin research time. I’m doing a server health check with a client this week. We’ve been asked to review his delete process and recommend possible alternatives. I’m investigating a SQLCAT blog on Fast Ordered Deletes – <http://sqlcat.com/sqlcat/b/msdnmirror/archive/2009/05/20/fast-ordered-delete.aspx>.
 
 8:00 – I begin putting together findings for the client in a PowerPoint deck.
 

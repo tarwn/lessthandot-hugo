@@ -91,11 +91,11 @@ Results
 
 92 percent processed.
 
-Processed 216 pages for database &#8216;OwnerTest2', file &#8216;OwnerTest2' on file 1.
+Processed 216 pages for database 'OwnerTest2', file 'OwnerTest2' on file 1.
 
 100 percent processed.
 
-Processed 2 pages for database &#8216;OwnerTest2', file &#8216;OwnerTest2_log' on file 1.
+Processed 2 pages for database 'OwnerTest2', file 'OwnerTest2_log' on file 1.
 
 BACKUP DATABASE successfully processed 218 pages in 0.227 seconds (7.472 MB/sec).
 
@@ -120,9 +120,9 @@ Results
 
 100 percent processed.
 
-Processed 216 pages for database &#8216;OwnerTest', file &#8216;OwnerTest2' on file 1.
+Processed 216 pages for database 'OwnerTest', file 'OwnerTest2' on file 1.
 
-Processed 2 pages for database &#8216;OwnerTest', file &#8216;OwnerTest2_log' on file 1.
+Processed 2 pages for database 'OwnerTest', file 'OwnerTest2_log' on file 1.
 
 RESTORE DATABASE successfully processed 218 pages in 0.547 seconds (3.101 MB/sec).
 

@@ -140,9 +140,9 @@ Unlike Angular, knockout bindings are much more specific. In the example above, 
 
 There are quite a few differences in the two approaches. 
 
-**Updates &#8211; Full Change or Per Key**
+**Updates – Full Change or Per Key**
   
-Knockout's default behavior for inputs is to update the backing value after the full input has changed. Angular updates on individual key presses. This behavior is customizable in both frameworks, Knockout provides a binding named &#8216;valueUpdate' to override the behavior with options of keyup, keypress, and afterkeydown. Angular does not offer a built-in switch, but you can build a custom directive to provide the exact behavior you want (or [copy one from stackoverflow][7]).
+Knockout's default behavior for inputs is to update the backing value after the full input has changed. Angular updates on individual key presses. This behavior is customizable in both frameworks, Knockout provides a binding named 'valueUpdate' to override the behavior with options of keyup, keypress, and afterkeydown. Angular does not offer a built-in switch, but you can build a custom directive to provide the exact behavior you want (or [copy one from stackoverflow][7]).
 
 **Specific Bindings vs Element Controllers**
   
@@ -154,7 +154,7 @@ Knockout is much wordier for simple values, requiring an element (or the contain
 
 ## Final Thoughts
 
-The &#8216;everything in one data-bind' attribute method for knockout can be a little annoying when dealing with simple single-value outputs but it's rare that I notice it (typically only after doing the same form in Angular). In the opposite direction (knockout example to Angular), I find that Angular's approach of separate attributes can get annoying when you start to stack on a few directives and 3-4 validation attributes. 
+The 'everything in one data-bind' attribute method for knockout can be a little annoying when dealing with simple single-value outputs but it's rare that I notice it (typically only after doing the same form in Angular). In the opposite direction (knockout example to Angular), I find that Angular's approach of separate attributes can get annoying when you start to stack on a few directives and 3-4 validation attributes. 
 
 The most frustrating aspect of either framework, though, has to be Angular's silent failures. There is no value, in my mind, to failing silently, it simply makes identifying and fixing errors harder and more frustrating.
 

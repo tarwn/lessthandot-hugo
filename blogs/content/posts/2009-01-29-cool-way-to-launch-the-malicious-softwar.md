@@ -25,9 +25,9 @@ There is a cool way to launch the Malicious Software Removal Tool by Microsoft. 
 
 Here are both ways
   
-1) Click on Start&#8211;>Run enter MRT and hit enter
+1) Click on Start–>Run enter MRT and hit enter
 
-2) Right click anywhere on the desktop, then select New&#8211;>Shortcut, type MRT into the edit field, and hit Next and then Finish. This will create a shortcut to MRT.exe, in this case the shortcut points to %windir%system32MRT.exe. Now you can just click on the shortcut to launch the Malicious Software Removal Tool
+2) Right click anywhere on the desktop, then select New–>Shortcut, type MRT into the edit field, and hit Next and then Finish. This will create a shortcut to MRT.exe, in this case the shortcut points to %windir%system32MRT.exe. Now you can just click on the shortcut to launch the Malicious Software Removal Tool
 
 This will work on Vista and XP. Pretty cool right? I think everyone should listen to Security Now, If you are not subscribed to it then you should do it right now.
 

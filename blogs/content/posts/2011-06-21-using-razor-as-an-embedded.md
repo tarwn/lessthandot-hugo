@@ -19,11 +19,11 @@ tags:
   - winforms
 
 ---
-When the Razor view engine for ASP.net MVC 3 was announced, I was not all that excited. It is nice, and a bit more compact, but didn't seem to offer anything that special, especially compared to some of the other view engines that are out there. Fast-forward a few months and our frustration with the SSRS-derived client reports available in .NET has come to a head. For our needs (basic &#8216;fact sheet' type reports about entities) they are absurdly slow and support for them within Visual Studio is awful due to the lag between RDL and RDLC dialects. Coming from more of a web development background, I naturally gravitated towards something HTML based. I've had pretty good success with NHaml and Spark in ASP.net MVC before, so I looked at them, but found a need to reference System.Web along with both, which is a deal breaker (we're looking to use these in a WinForms client application).
+When the Razor view engine for ASP.net MVC 3 was announced, I was not all that excited. It is nice, and a bit more compact, but didn't seem to offer anything that special, especially compared to some of the other view engines that are out there. Fast-forward a few months and our frustration with the SSRS-derived client reports available in .NET has come to a head. For our needs (basic 'fact sheet' type reports about entities) they are absurdly slow and support for them within Visual Studio is awful due to the lag between RDL and RDLC dialects. Coming from more of a web development background, I naturally gravitated towards something HTML based. I've had pretty good success with NHaml and Spark in ASP.net MVC before, so I looked at them, but found a need to reference System.Web along with both, which is a deal breaker (we're looking to use these in a WinForms client application).
 
 #### Enter Razor
 
-All this searching led me back to [Razor][1], the same view engine I'd said &#8216;meh' to when it was first released. What immediately jumped out at me was a feature that I'd missed the first time around, namely that it can run _outside an asp.net app domain_ for testability. It can be invoked rather easily from code too:
+All this searching led me back to [Razor][1], the same view engine I'd said 'meh' to when it was first released. What immediately jumped out at me was a feature that I'd missed the first time around, namely that it can run _outside an asp.net app domain_ for testability. It can be invoked rather easily from code too:
 
 ```csharp
 string template = "Hello @Model.Name! Welcome to Razor!";

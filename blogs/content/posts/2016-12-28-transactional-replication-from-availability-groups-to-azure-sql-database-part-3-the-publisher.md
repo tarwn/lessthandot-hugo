@@ -15,11 +15,11 @@ categories:
 ---
 This is part 3 of a 5-part series.
 
-  * <a href="/?p=4896" target="_blank">Part 1 &#8211; Planning</a>
-  * <a href="/?p=4906" target="_blank">Part 2 &#8211; The Distributor</a>
-  * <a href="/?p=4923" target="_blank">Part 3 &#8211; The Publisher</a>
-  * <a href="/?p=4945" target="_blank">Part 4 &#8211; The Subscriber</a>
-  * <a href="/?p=4960" target="_blank">Part 5 &#8211; Testing</a>
+  * <a href="/?p=4896" target="_blank">Part 1 – Planning</a>
+  * <a href="/?p=4906" target="_blank">Part 2 – The Distributor</a>
+  * <a href="/?p=4923" target="_blank">Part 3 – The Publisher</a>
+  * <a href="/?p=4945" target="_blank">Part 4 – The Subscriber</a>
+  * <a href="/?p=4960" target="_blank">Part 5 – Testing</a>
 
 &nbsp;
 
@@ -29,13 +29,13 @@ Publishers: servers SQL2014AG1 and SQL2014AG2, database AGTest
 
 Distributor: stand-alone server, SQL2014demo
 
-Subscriber: Azure SQL Database &#8211; server jessqldb2, database ReplicationTest
+Subscriber: Azure SQL Database – server jessqldb2, database ReplicationTest
 
 ### Setting up the replication publisher
 
 You'll need to start by configuring the AG current primary as Publisher. (In this demo, this is SQL2014AG2.) Then, you'll need to configure the distributor that we set up in step 2 to use the AG listener name, rather than the server name.
 
-Log into the primary &#8211; SQL2014AG2.
+Log into the primary – SQL2014AG2.
 
 Expand Replication, right-click Local Publications, select New Publication.
 
@@ -71,7 +71,7 @@ Snapshot Agent – choose to create a snapshot immediately. Click Next.
 
 Agent Security – click Security Settings to choose what account the snapshot and log reader agents will run under. Click OK. Click Next.
 
-(I could write an entire blog post about this, but that is better left to people more well-versed in replication than myself. I know that I don't want to use the SQL Server Agent service account &#8211; I want to create an AD account that has been granted the permissions needed as described in  <a href="https://msdn.microsoft.com/en-us/library/ms151227.aspx" target="_blank">Replication Agent Security Model</a>.)
+(I could write an entire blog post about this, but that is better left to people more well-versed in replication than myself. I know that I don't want to use the SQL Server Agent service account – I want to create an AD account that has been granted the permissions needed as described in  <a href="https://msdn.microsoft.com/en-us/library/ms151227.aspx" target="_blank">Replication Agent Security Model</a>.)
 
 [<img class="aligncenter size-full wp-image-4932" src="/wp-content/uploads/2016/12/publisher-8.png" alt="publisher 8" width="553" height="474" srcset="/wp-content/uploads/2016/12/publisher-8.png 553w, /wp-content/uploads/2016/12/publisher-8-300x257.png 300w" sizes="(max-width: 553px) 100vw, 553px" />][8]
 
@@ -99,7 +99,7 @@ After initializing, check the Snapshot Agent and Log Reader Agent for success. (
 
 ### Configure distribution on all other publishers
 
-Because my database is in an AG, I need to make sure that the distributor is configured on all the replicas in the AG. Note: you only have to do this step for the first publication &#8211; not each subsequent publication.
+Because my database is in an AG, I need to make sure that the distributor is configured on all the replicas in the AG. Note: you only have to do this step for the first publication – not each subsequent publication.
 
 In this example, I'll need to configure SQL2014AG1, the other replica.
 
@@ -147,7 +147,7 @@ After doing that, in Object Explorer, expand Server Objects > Linked Servers. Ri
 
 This needs to be done for every publication you set up where the database is in an AG.
 
-This step also needs to be done from the distributor server &#8211; you can't do this from SSMS on another server or your workstation. You must RDP to the distributor and run these commands &#8211; in SSMS or even SQL CMD.
+This step also needs to be done from the distributor server – you can't do this from SSMS on another server or your workstation. You must RDP to the distributor and run these commands – in SSMS or even SQL CMD.
 
 Connect to the distributor.
 

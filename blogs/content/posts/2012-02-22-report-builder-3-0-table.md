@@ -19,7 +19,7 @@ categories:
 This is part two of a series about Report Builder 3.0.
 
   * <a title="Report Builder 3.0 – The Introduction" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-the/" target="_blank">Report Builder 3.0 – The Introduction</a>
-  * <a title="Report Builder 3.0 – Chart Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-chart/" target="_blank">Report Builder 3.0 &#8211; Chart Wizard</a>
+  * <a title="Report Builder 3.0 – Chart Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-chart/" target="_blank">Report Builder 3.0 – Chart Wizard</a>
   * <a title="Report Builder 3.0 – Chart Types, Visualizations, and Properties" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-chart-1/" target="_blank">Report Builder 3.0 – Chart Types, Visualizations, and Properties</a>
   * <a title="Report Builder 3.0 – Map Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-map/" target="_blank">Report Builder 3.0 – Map Wizard</a>
   * <a title="Report Builder 3.0 – Report Parts" href="/index.php/datamgmt/dbprogramming/mssqlserver/report-builder-3-0-report/" target="_blank">Report Builder 3.0 – Report Parts</a>

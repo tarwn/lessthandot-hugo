@@ -28,7 +28,7 @@ tags:
 ---
 You have only $50 left and you can buy two DVDs or one SQL book, what do you do? I would buy the book but not every person has the same idea of a fun time. This is the reason why I present you with a bunch of links to articles which will give you very good info. Some of this you won't be able to find in a book anyway.
 
-[The curse and blessings of dynamic SQL][1]. How you use dynamic SQL, when you should &#8211; and when you should not.
+[The curse and blessings of dynamic SQL][1]. How you use dynamic SQL, when you should – and when you should not.
 
 [Arrays and Lists in SQL Server][2]. Several methods on how to pass an array of values from a client to SQL Server, and performance data about the methods. Two versions are available, one for SQL 2005 and one for SQL 2000 and earlier.
 

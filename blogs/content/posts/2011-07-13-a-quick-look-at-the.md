@@ -87,7 +87,7 @@ UNION
 SELECT IIF(TRY_CONVERT(float,'1')IS NULL,'Cast failed','Cast succeeded')
 ```
 
-&#8212;&#8212;&#8211;
+——–
   
 Cast failed
   

@@ -106,7 +106,7 @@ Download the [Microsoft BI Authentication and Identity Delegation Word document]
 
 SQL Server Data Tools – Business Intelligence for Visual Studio 2012 (SSDT BI) templates has been released this week as well. With SSDT BI for Visual Studio 2012 you can develop and deploy SQL Server Business intelligence projects. Projects created in Visual Studio 2010 can be opened in Visual Studio 2012 and the other way around without upgrading or downgrading. You can read more about this and see some screenshots here: http://blogs.msdn.com/b/sqlrsteamblog/archive/2013/03/06/sql-server-data-tools-business-intelligence-for-visual-studio-2012-released-online.aspx
 
-You can download it here: [Microsoft SQL Server Data Tools &#8211; Business Intelligence for Visual Studio 2012][2]
+You can download it here: [Microsoft SQL Server Data Tools – Business Intelligence for Visual Studio 2012][2]
 
  [1]: http://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/MSFTBIAuthOverview.docx
  [2]: http://www.microsoft.com/en-us/download/details.aspx?id=36843

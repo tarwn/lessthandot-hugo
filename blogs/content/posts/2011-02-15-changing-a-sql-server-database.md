@@ -29,7 +29,7 @@ However, there may come a day when you run into this error:
 
 > There was error outputting database level information for ServerName.DatabaseName.
   
-> Property Owner is not available for Database &#8216;[DatabaseName]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.
+> Property Owner is not available for Database '[DatabaseName]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.
 
 When you log into SQL Server Management Studio, right-click the database, and select Properties, you'll see this dialog box: 
 

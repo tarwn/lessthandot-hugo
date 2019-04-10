@@ -166,7 +166,7 @@ Here is the error
   
 _SQL Error: ORA-01400: cannot insert NULL into (“SYSTEM”.”TESTNULL2&#8243;.”COL2&#8243;)
   
-01400. 00000 &#8211; “cannot insert NULL into (%s)”_
+01400. 00000 – “cannot insert NULL into (%s)”_
 
 Inserting Bla works without a problem
 
@@ -182,7 +182,7 @@ insert into TestNull2 values('');
 
 _SQL Error: ORA-01400: cannot insert NULL into (“SYSTEM”.”TESTNULL2&#8243;.”COL2&#8243;)
   
-01400. 00000 &#8211; “cannot insert NULL into (%s)”_
+01400. 00000 – “cannot insert NULL into (%s)”_
 
 As you can see the blank gets converted to a NULL and you get the same error. This is very different from SQL Server.
 

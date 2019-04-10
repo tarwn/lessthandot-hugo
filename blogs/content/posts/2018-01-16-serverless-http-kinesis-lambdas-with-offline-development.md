@@ -57,8 +57,8 @@ I'm using [serverless]() to wire up and deploy my functions. Two of the benefits
 
 First up, I followed the Getting Started directions to get serverless setup with AWS credentials: 
 
-  * [AWS &#8211; Installation][4]
-  * [AWS &#8211; Credentials][5]
+  * [AWS – Installation][4]
+  * [AWS – Credentials][5]
 
 Next, I define a very simple Http handler for my function:
 
@@ -177,10 +177,10 @@ As we add the bootstrap and kinesis runner, we'll pull these environment variabl
 
 Now we'll need to add some additional npm packages:
 
-  * `npm install aws-sdk --save` &#8211; For creating the Kinesis stream and publishing in the HTTP Function
-  * `npm install js-yaml --save-dev` &#8211; For parsing the env.yml file for the bootstrap + runner
-  * `npm install concurrently --save-dev` &#8211; To make a clean npm task to start everything
-  * `npm install -g kinesalite` &#8211; Kinesis emulation
+  * `npm install aws-sdk --save` – For creating the Kinesis stream and publishing in the HTTP Function
+  * `npm install js-yaml --save-dev` – For parsing the env.yml file for the bootstrap + runner
+  * `npm install concurrently --save-dev` – To make a clean npm task to start everything
+  * `npm install -g kinesalite` – Kinesis emulation
 
 We're ready to add in local kinesis now.
 
@@ -362,7 +362,7 @@ Initial output:
   </p>
 </div>
 
-I've been ignoring the initial error that gets kicked out by the stream handler script, it doesn't cause any issues at this time. (It's adding to the &#8216;maybe I'll write a plugin' balance, though).
+I've been ignoring the initial error that gets kicked out by the stream handler script, it doesn't cause any issues at this time. (It's adding to the 'maybe I'll write a plugin' balance, though).
 
 And after running the curl command to add an event:
   

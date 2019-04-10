@@ -65,7 +65,7 @@ Never feel uncomfortable helping others. Helping is one of the foundations of in
 
 It is absolutely critical to understand that the members in these forums do not have a binding agreement to help nor are they obligated in any way to stick through it. Usually, the members helping will go to great lengths to solve the problems. If a person does not stick through it though, becoming frustrated with them is usually not the best reaction. The member helping may have had a problem of their own come up, or had to leave their computer for a time. Every reply is given for free and as-is. Reacting negatively when a member that is helping you leaves abruptly may cause repercussions in the future, when you have another question. 
 
-When every resource fails you: Books Online, real books, your secret cube buddy that knows how to write SELECT *, the help desk solution of reboot doesn’t work &#8211; give the technical forums a try. When you get an answer and are sitting back relaxing, push the chair back to the keyboard and see if you can return the favor by helping on the next thread under yours.
+When every resource fails you: Books Online, real books, your secret cube buddy that knows how to write SELECT *, the help desk solution of reboot doesn’t work – give the technical forums a try. When you get an answer and are sitting back relaxing, push the chair back to the keyboard and see if you can return the favor by helping on the next thread under yours.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/ITProfessionals/crazy_hair_puller.gif" alt="" title="" width="101" height="160" align="left" />

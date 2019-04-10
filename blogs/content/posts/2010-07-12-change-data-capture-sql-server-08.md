@@ -76,7 +76,7 @@ If you run into a failure to authenticate:
 
 > Msg 22830, Level 16, State 1, Procedure sp\_cdc\_enable\_db\_internal, Line 186
   
-> Could not update the metadata that indicates database AdventureWorks is enabled for Change Data Capture. The failure occurred when executing the command &#8216;SetCDCTracked(Value = 1)'. The error returned was 15404: &#8216;Could not obtain information about Windows NT group/user &#8216;PMHCtkrueger', error code 0x54b.'. Use the action and error to determine the cause of the failure and resubmit the request.
+> Could not update the metadata that indicates database AdventureWorks is enabled for Change Data Capture. The failure occurred when executing the command 'SetCDCTracked(Value = 1)'. The error returned was 15404: 'Could not obtain information about Windows NT group/user 'PMHCtkrueger', error code 0x54b.'. Use the action and error to determine the cause of the failure and resubmit the request.
   
 > Msg 266, Level 16, State 2, Procedure sp\_cdc\_enable\_db\_internal, Line 0
   

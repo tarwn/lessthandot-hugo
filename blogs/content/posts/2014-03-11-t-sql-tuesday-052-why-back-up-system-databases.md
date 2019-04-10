@@ -19,7 +19,7 @@ categories:
 
 You’ve been told time and again to back up your SQL Server system databases – master, msdb, and model. I’m here to tell you it’s not that important, especially if you have a large number of SQL Server instances. The information in those databases should be documented, scripted, and available in other locations, not just contained here.
 
-**TL;DR:** Make sure all information contained in the system databases is documented and/or scripted in another location. Before you are forced to restore system databases in an emergency, practice doing it in a test system _just because_ &#8211; there are some important steps to take and lessons to be leared.
+**TL;DR:** Make sure all information contained in the system databases is documented and/or scripted in another location. Before you are forced to restore system databases in an emergency, practice doing it in a test system _just because_ – there are some important steps to take and lessons to be leared.
 
 ### master
 

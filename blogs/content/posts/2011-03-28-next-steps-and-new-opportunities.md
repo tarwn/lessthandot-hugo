@@ -32,7 +32,7 @@ I like to think I am above average as a developer, but I had been working as a g
   You don't want to become an IT generalist. Most companies are look for specialists and after being a generalist you won't be skilled enough to work as a specialist. 
   
   <div style="text-align: right; padding: 6px 30px 0px 0px;">
-    &#8211; Unnamed Recruiter
+    – Unnamed Recruiter
   </div>
 </div>
 

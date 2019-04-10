@@ -81,4 +81,4 @@ Prevent unauthorized software from running with AppLocker
 
 Note: Ultimate includes all Enterprise and all Home Premium features, including multi-language packs.
 
-&#8211; Windows 7 Enterprise is available only through Microsoft Volume Licensing
+– Windows 7 Enterprise is available only through Microsoft Volume Licensing

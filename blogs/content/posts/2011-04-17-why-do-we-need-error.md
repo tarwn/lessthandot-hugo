@@ -42,7 +42,7 @@ I think there are quite a few reasons we should engage in handling something oth
 
      UPDATE checking
 
-            SET balance = balance &#8211; @transfer_amount
+            SET balance = balance – @transfer_amount
 
             WHERE account = @checking_account
 

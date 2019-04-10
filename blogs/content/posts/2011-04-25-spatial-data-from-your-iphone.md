@@ -28,16 +28,16 @@ To find the location data from your iPhone you'll need to find the consolidated.
 
 C:Users<UserName>AppDataRoamingApple ComputerMobileSyncBackup<LongStringOfNumbers&Letters>
 
-In the Backup directory there should be a folder for each device you've synced with iTunes. To verify you are in the correct one, open the Info.plist in a text editor and look for a &#8216;Device Name' value in the XML. It should match the name of your iPhone if you are in the correct one. If it doesn't match check the other directories in the Backup folder until you find the one that does.
+In the Backup directory there should be a folder for each device you've synced with iTunes. To verify you are in the correct one, open the Info.plist in a text editor and look for a 'Device Name' value in the XML. It should match the name of your iPhone if you are in the correct one. If it doesn't match check the other directories in the Backup folder until you find the one that does.
 
 Now that you've found the correct directory, we need to find out which file is the consolidated.db. I found two ways to do this:
 
 1. Parsing the Manifest.mbdb and Manifest.mbdx files. This didn't work for me but here's the [link][2] to the instructions if you'd like to try it. In my case the Python script errored out.
 
-2. Trial and Error &#8211; This is the method I used and it's not as bad as it sounds. I also found some other interesting things doing it this way that I'll share later in the post. Below are two options for finding the file by trial & error. Using either option below I was able to find the correct file in less than 5 minutes.
+2. Trial and Error – This is the method I used and it's not as bad as it sounds. I also found some other interesting things doing it this way that I'll share later in the post. Below are two options for finding the file by trial & error. Using either option below I was able to find the correct file in less than 5 minutes.
 
 **Trial & Error Option 1:**  
-Sort your directory by Size (largest to smallest) and starting at the top, open each file in a text editor. The file you are looking for will start with &#8216;SQLite format 3' and should contain the following string &#8216;CREATE TABLE CellLocation'. On my system the file was approximately 11MB.
+Sort your directory by Size (largest to smallest) and starting at the top, open each file in a text editor. The file you are looking for will start with 'SQLite format 3' and should contain the following string 'CREATE TABLE CellLocation'. On my system the file was approximately 11MB.
 
 <div class="image_block">
   <a href="/media/blogs/DataMgmt/ip1.jpg?mtime=1303746981"><img src="/wp-content/uploads/blogs/DataMgmt/ip1.jpg?mtime=1303746981" alt="" width="413" height="65" /></a>
@@ -134,7 +134,7 @@ That depends on you. If you're really interested in tracking the data on an ongo
 
 **What's that? The spatial data is cool but you want more data from your iPhone…**
 
-Well, you're in luck! There is a good possibility that you can get a lot more data using these same steps. Instead of looking specifically for the consolidated.db file, look for any file that starts with &#8216;SQLite' and take a look at the data it contains just like we did above. I'll bet you find some interesting stuff, I know I did. I use an application called NewsRack for reading RSS feeds and another application called CardBank to store all of my &#8216;customer loyality' card information instead of having them all on my key chain or in my wallet. Guess what? Yep, you're right, they both use SQL Lite to store the data and I can pull that data into SQL Server.
+Well, you're in luck! There is a good possibility that you can get a lot more data using these same steps. Instead of looking specifically for the consolidated.db file, look for any file that starts with 'SQLite' and take a look at the data it contains just like we did above. I'll bet you find some interesting stuff, I know I did. I use an application called NewsRack for reading RSS feeds and another application called CardBank to store all of my 'customer loyality' card information instead of having them all on my key chain or in my wallet. Guess what? Yep, you're right, they both use SQL Lite to store the data and I can pull that data into SQL Server.
 
 What are you still doing here? Go discover what data is on your iPhone that you can import into SQL Server and have some fun doing it!
 

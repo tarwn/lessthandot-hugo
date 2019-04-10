@@ -97,18 +97,18 @@ Programmers can choose from a variety of structures
 
 The collections framework consists of:
 
-  * Collection Interfaces &#8211; Represent different types of collections, such as sets, lists and maps. These interfaces form the basis of the framework.
-  * General-purpose Implementations &#8211; Primary implementations of the collection interfaces.
-  * Legacy Implementations &#8211; The collection classes from earlier releases, Vector and Hashtable, have been retrofitted to implement the collection interfaces.
-  * Special-purpose Implementations &#8211; Implementations designed for use in special situations. These implementations display nonstandard performance characteristics, usage restrictions, or behavior.
-  * Concurrent Implementations &#8211; Implementations designed for highly concurrent use.
+  * Collection Interfaces – Represent different types of collections, such as sets, lists and maps. These interfaces form the basis of the framework.
+  * General-purpose Implementations – Primary implementations of the collection interfaces.
+  * Legacy Implementations – The collection classes from earlier releases, Vector and Hashtable, have been retrofitted to implement the collection interfaces.
+  * Special-purpose Implementations – Implementations designed for use in special situations. These implementations display nonstandard performance characteristics, usage restrictions, or behavior.
+  * Concurrent Implementations – Implementations designed for highly concurrent use.
   
-    Wrapper Implementations &#8211; Add functionality, such as synchronization, to other implementations.
-  * Convenience Implementations &#8211; High-performance “mini-implementations” of the collection interfaces.
-  * Abstract Implementations &#8211; Partial implementations of the collection interfaces to facilitate custom implementations.
-  * Algorithms &#8211; Static methods that perform useful functions on collections, such as sorting a list.
-  * Infrastructure &#8211; Interfaces that provide essential support for the collection interfaces.
-  * Array Utilities &#8211; Utility functions for arrays of primitives and reference objects. Not, strictly speaking, a part of the Collections Framework, this functionality was added to the Java platform at the same time and relies on some of the same infrastructure.
+    Wrapper Implementations – Add functionality, such as synchronization, to other implementations.
+  * Convenience Implementations – High-performance “mini-implementations” of the collection interfaces.
+  * Abstract Implementations – Partial implementations of the collection interfaces to facilitate custom implementations.
+  * Algorithms – Static methods that perform useful functions on collections, such as sorting a list.
+  * Infrastructure – Interfaces that provide essential support for the collection interfaces.
+  * Array Utilities – Utility functions for arrays of primitives and reference objects. Not, strictly speaking, a part of the Collections Framework, this functionality was added to the Java platform at the same time and relies on some of the same infrastructure.
 
 Collection Implementations
   

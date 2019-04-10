@@ -30,15 +30,15 @@ If you are interested in any of the demonstrations and method the demonstrations
 
 [Backup file contents with SSIS – INSERT/UPDATE Decisions][4]
 
-[Backup file contents with SSIS &#8211; Supporting tables and procedures][5]
+[Backup file contents with SSIS – Supporting tables and procedures][5]
 
-[Backup file contents with SSIS &#8211; Foreach Loop Container and file handling][6]
+[Backup file contents with SSIS – Foreach Loop Container and file handling][6]
 
-[Backup file contents with SSIS &#8211; Defining the Design][7]
+[Backup file contents with SSIS – Defining the Design][7]
 
 [Automate Database Restore to Remote Instance with SSIS][8]
 
-[Compress Data Partition Snapshots with SSIS &#8211; SQL University][9]
+[Compress Data Partition Snapshots with SSIS – SQL University][9]
 
 [Making SSIS Dynamic: Passing variables between packages][10]
 

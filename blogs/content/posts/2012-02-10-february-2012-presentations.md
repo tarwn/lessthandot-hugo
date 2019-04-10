@@ -24,7 +24,7 @@ _Tuesday, February 21, 6:00 pm Central_
 
 I’ll be presenting via Live Meeting for my friends in East Iowa. Hopefully someone there brings construction paper and crayons!
 
-Make Your Voice Heard SQL Server professionals like to talk &#8211; a lot! We blog, we tweet, we answer forum questions, and more. Add your voice! Learn about the different ways you can share your experience and knowledge. Once you start teaching others, you'll realize how much knowledge you have! This session will cover how to use LinkedIn, Twitter, forums, and blogging to extend your reach.
+Make Your Voice Heard SQL Server professionals like to talk – a lot! We blog, we tweet, we answer forum questions, and more. Add your voice! Learn about the different ways you can share your experience and knowledge. Once you start teaching others, you'll realize how much knowledge you have! This session will cover how to use LinkedIn, Twitter, forums, and blogging to extend your reach.
 
 **Session Materials: [Make Your Voice Heard 380PASS Feb 2012.pdf][3]**
 
@@ -36,7 +36,7 @@ I’ll be giving an abbreviated version of the same presentation for “my” us
 
 Make Your Voice Heard
 
-SQL Server professionals like to talk &#8211; a lot! We blog, we tweet, we answer forum questions, and more. Add your voice! Learn about the different ways you can share your experience and knowledge. Once you start teaching others, you'll realize how much knowledge you have! This session will cover how to use LinkedIn, Twitter, forums, and blogging to extend your reach.
+SQL Server professionals like to talk – a lot! We blog, we tweet, we answer forum questions, and more. Add your voice! Learn about the different ways you can share your experience and knowledge. Once you start teaching others, you'll realize how much knowledge you have! This session will cover how to use LinkedIn, Twitter, forums, and blogging to extend your reach.
 
  **Session Materials: [Make Your Voice Heard MADPASS Feb 2012.pdf][7]**
 

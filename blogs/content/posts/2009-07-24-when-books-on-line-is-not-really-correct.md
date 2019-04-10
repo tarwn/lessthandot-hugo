@@ -76,7 +76,7 @@ That gives you this error
   
 Server: Msg 207, Level 16, State 3, Line 3
   
-Invalid column name &#8216;a'.
+Invalid column name 'a'.
 
 Of course there are other inconsistent things in SQL Server, here is a perfect example
 

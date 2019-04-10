@@ -45,7 +45,7 @@ END
 
 If you are thinking _silly you, you can't have an IF statement like that in a function_, then you have disappointed me. What you really should be saying is the following: [why are you hardcoding this, create a heights table and then grab all the heights that are valid for the range][1]
 
-Yes, I grabbed this example from the following question: [TSQL &#8211; If..Else statement inside Table-Valued Functions &#8211; cant go through…][2]. As you can see several people answered with how to use a CASE statement instead. That is all nice and dandy but the information should be in a table instead
+Yes, I grabbed this example from the following question: [TSQL – If..Else statement inside Table-Valued Functions – cant go through…][2]. As you can see several people answered with how to use a CASE statement instead. That is all nice and dandy but the information should be in a table instead
 
 # Single Source of Truth
 

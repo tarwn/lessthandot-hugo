@@ -26,7 +26,7 @@ If you want to mess around with Database Mail from your laptop and you don't hav
 
 Below is the whole thing in one easy to run script
   
-Make sure to change Your.Account@gmail.com to what your gmail account is, also notice that @enable_ssl =1 and that we are using port 587 (@port = &#8216;587')
+Make sure to change Your.Account@gmail.com to what your gmail account is, also notice that @enable_ssl =1 and that we are using port 587 (@port = '587')
 
 sql
 IF NOT EXISTS(SELECT * FROM msdb.dbo.sysmail_profile WHERE  name = 'GmailDBMail') 

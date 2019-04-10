@@ -49,13 +49,13 @@ To call SP\_CHANGE\_USERS_LOGIN, use the following syntax.
 
  
 
-sp\_change\_users_login [ @Action = ] &#8216;action'
+sp\_change\_users_login [ @Action = ] 'action'
 
-[ , [ @UserNamePattern = ] &#8216;user' ]
+[ , [ @UserNamePattern = ] 'user' ]
 
-[ , [ @LoginName = ] &#8216;login' ]
+[ , [ @LoginName = ] 'login' ]
 
-[ , [ @Password = ] &#8216;password' ]
+[ , [ @Password = ] 'password' ]
 
 [;]
 
@@ -73,7 +73,7 @@ For SQL Server 2012, the ALTER USER is used by simply using dynamic T-SQL to gen
 
  ****
 
-The below script has a work flow of first identifying the orphaned database users by utilizing the same sp\_change\_users\_login with the ‘report’ action called.  This returns the database users of the database it is executed in and then allows the script to check the sys.server\_principals for a valid login.  If a login is not found, one is created with the same name as the database user.  The password is set as a default password.  This password should be immediately dealt with as a change method by the user or some other compliant method to prevent security problems.  Once the login is created, the sp\_change\_users_login is used to remap the database user to the new SQL login or to an existing login that was found.
+The below script has a work flow of first identifying the orphaned database users by utilizing the same sp\_change\_users\_login with the 'report’ action called.  This returns the database users of the database it is executed in and then allows the script to check the sys.server\_principals for a valid login.  If a login is not found, one is created with the same name as the database user.  The password is set as a default password.  This password should be immediately dealt with as a change method by the user or some other compliant method to prevent security problems.  Once the login is created, the sp\_change\_users_login is used to remap the database user to the new SQL login or to an existing login that was found.
 
  
 

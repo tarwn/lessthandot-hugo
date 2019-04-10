@@ -32,7 +32,7 @@ There really aren’t words to describe how awesome this event was.
 
 Thank you, sponsors. Without DeVry, Redgate, SQL Sentry, Quest Software, Embarcadero, Idera, Confio, Microsoft, PASS, Fusion IO, PTI, SQLSkills.com, Magenic, Morgan Kaufmann, SQL Server Magazine, Wrox, CozyRoc, Apress, Gerasus Software, O’Reilly, and the many SQL bloggers, this event wouldn’t have been possible. 
 
-Thank you, organizers and volunteers! Norman Kelm, Aaron Lowe, Ted Krueger, Bob Pusateri, Rich Rousseau, Wendy Pastrick, and Bill Lescher put countless hours into this very successful event. We had a great location, top-notch speakers, excellent breakfast and lunch (of course _I’ll_ mention the food), wonderful sponsors &#8211; all because of them. In addition, there was a whole fleet of volunteers who registered people, handed out t-shirts, answered questions, and in general were awesome. 
+Thank you, organizers and volunteers! Norman Kelm, Aaron Lowe, Ted Krueger, Bob Pusateri, Rich Rousseau, Wendy Pastrick, and Bill Lescher put countless hours into this very successful event. We had a great location, top-notch speakers, excellent breakfast and lunch (of course _I’ll_ mention the food), wonderful sponsors – all because of them. In addition, there was a whole fleet of volunteers who registered people, handed out t-shirts, answered questions, and in general were awesome. 
 
 Thank you, Michael Kappel, for being our event photographer. You took [great shots][4] and captured the energy and excitement of the event. 
 

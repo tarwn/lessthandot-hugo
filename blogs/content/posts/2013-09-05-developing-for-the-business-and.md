@@ -18,7 +18,7 @@ categories:
   - Professional Development
 
 ---
-Technology is a wonderful tool that should make all of our lives better &#8211; at least until Skynet takes over. But then I am hoping that this article will serve me in good stead with our new superior overlords.  😀
+Technology is a wonderful tool that should make all of our lives better – at least until Skynet takes over. But then I am hoping that this article will serve me in good stead with our new superior overlords.  😀
 
 The problem, as you may have guessed by now, is that far too often we find that technology often frustrates us as much as it serves to benefit. Beyond the work software that we use that simply never functions as well as we think it should (Microsoft Office, anyone?) are the increasing multitude of apps that are available for pc's, tablets and smartphones that either perform nowhere near to expectations or behave in odd fashions that we would not expect.
 

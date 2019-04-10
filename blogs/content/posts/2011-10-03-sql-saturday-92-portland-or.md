@@ -28,11 +28,11 @@ I'll be presenting a preview of my PASS Summit session “Reporting Services 201
 
 I'll be sitting on the Women In Technology lunch panel as well! Sopheap Suy will be guiding a discussion on how we recruit, retaain and succeed in the technology world. Men and women are encouraged to join the discussion! I'll be up at the front of the room with Kendra Little and Yanni Robel. 
 
-Because this is occuring the weekend before PASS Summit in Seattle, there are people traveling from all over the country, and the world, for this event. Check out the [networking page][4]! I'm excited to meet Buck Woody &#8211; I hear he's the one person that drinks more coffee than I do. Who do you see on that list that you want to meet? Make a note of who it is, and when you see them, walk up and introduce yourself. (This is great practice for Summit.) It doesn't matter if they're a speaker, blogger, author, MVP, Microsoft employee, or a DBA down the street &#8211; we are all there to learn, talk SQL, and meet each other. Everyone I've ever met at a SQL Saturday was more than happy to talk and answer my questions. 
+Because this is occuring the weekend before PASS Summit in Seattle, there are people traveling from all over the country, and the world, for this event. Check out the [networking page][4]! I'm excited to meet Buck Woody – I hear he's the one person that drinks more coffee than I do. Who do you see on that list that you want to meet? Make a note of who it is, and when you see them, walk up and introduce yourself. (This is great practice for Summit.) It doesn't matter if they're a speaker, blogger, author, MVP, Microsoft employee, or a DBA down the street – we are all there to learn, talk SQL, and meet each other. Everyone I've ever met at a SQL Saturday was more than happy to talk and answer my questions. 
 
 **Bonus** 
 
-If you're still in town on Sunday, consider being part of the #sqlrun #screamteam! Several SQL People are going to be participating in the Portland Marathon, Half Marathon and 10K &#8211; me, Allen White, Erin Stellato, Yanni Robel, Rob Farley, Karen Lopez, Rob Drysdale, Brent Ozar and Doug Lane. Bring your lungs, noisemakers, cowbell and SQL spirit and cheer us on! A spectator's guide can be found [here][5].
+If you're still in town on Sunday, consider being part of the #sqlrun #screamteam! Several SQL People are going to be participating in the Portland Marathon, Half Marathon and 10K – me, Allen White, Erin Stellato, Yanni Robel, Rob Farley, Karen Lopez, Rob Drysdale, Brent Ozar and Doug Lane. Bring your lungs, noisemakers, cowbell and SQL spirit and cheer us on! A spectator's guide can be found [here][5].
 
  [1]: http://sqlsaturday.com/92/eventhome.aspx
  [2]: http://www.sqlsaturday.com/images/sqlsat92_web.png ""

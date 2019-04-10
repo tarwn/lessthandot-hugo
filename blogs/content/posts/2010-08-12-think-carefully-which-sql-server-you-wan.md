@@ -18,7 +18,7 @@ categories:
 ---
 ### <span class="MT_red">UPDATE</span>
 
-Turned out I was wrong and it's easy enough to create SSIS package to run an import of VFP table into SQL Server 64 bit. The complete solution was provided by Jin Chen in this MSDN thread [How to run SSIS package &#8211; Import VFP table to SQL Server 64 bit][1] and I was able to easily follow it and the package ran OK. I now quote the solution:
+Turned out I was wrong and it's easy enough to create SSIS package to run an import of VFP table into SQL Server 64 bit. The complete solution was provided by Jin Chen in this MSDN thread [How to run SSIS package – Import VFP table to SQL Server 64 bit][1] and I was able to easily follow it and the package ran OK. I now quote the solution:
 
 In order to load data from Visual FoxPro to 64-bit SQL Server, we can use Microsoft OLE DB Provider for Visual FoxPro or Visual FoxPro ODBC Driver to load data from Visual FoxPro, and then upload into SQL Server.
 
@@ -94,31 +94,31 @@ This is also an important [relevant thread][3]
 
 Bellow is the original text of the blog, which is not really relevant anymore.
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+———————————————————————————
   
-In this short blog post I'd like to emphasize the importance of a decision which SQL Server version to install &#8211; 32 bit or 64 bit in 64 bit OS. If you install 64 bit version of SQL Server, be aware, that you may not be able to utilize data from many non SQL sources, that don't have OleDB or ODBC driver in 64 bit version.
+In this short blog post I'd like to emphasize the importance of a decision which SQL Server version to install – 32 bit or 64 bit in 64 bit OS. If you install 64 bit version of SQL Server, be aware, that you may not be able to utilize data from many non SQL sources, that don't have OleDB or ODBC driver in 64 bit version.
 
 Say, you'll get the following error attempting to invoke Import/Export wizard for VFPOleDB:
 
 TITLE: SQL Server Import and Export Wizard
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+——————————
 
 The operation could not be completed.
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+——————————
   
 ADDITIONAL INFORMATION:
 
 Feature is not available. (Microsoft OLE DB Provider for Visual FoxPro)
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+——————————
   
 BUTTONS:
 
 OK
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+——————————
 
 ===================================
 
@@ -128,7 +128,7 @@ Feature is not available. (Microsoft OLE DB Provider for Visual FoxPro)
 
 And if you try to expand this error, you'll get this information:
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+——————————
   
 Program Location:
 
@@ -148,7 +148,7 @@ at Microsoft.SqlServer.Dts.DtsWizard.DTSWizard.GetOpenedConnection(WizardInputs 
   
 at Microsoft.SqlServer.Dts.DtsWizard.Step1.OnLeavePage(LeavePageEventArgs e)
 
-&#8212;&#8212;&#8212;&#8212;&#8212;
+—————
   
 None of the methods outlined in this WiKi article
   

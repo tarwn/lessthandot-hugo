@@ -178,7 +178,7 @@ The execution plans
   <img src="/wp-content/uploads/blogs/DataMgmt/ExecutionPlans.gif" alt="" title="" width="1862" height="1902" />
 </div>
 
-This illustrates a real case scenario &#8211; see [ASP.NET forum's thread][6]
+This illustrates a real case scenario – see [ASP.NET forum's thread][6]
 
 sql
 CREATE TABLE Items(

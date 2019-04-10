@@ -34,21 +34,21 @@ Advil/Tylenol – aches and pains from long days on your feet (and late nights) 
 
 Water bottle you can refill – you’ll be more tired and more likely to get sick if you aren’t properly hydrated. There are water fountains at the convention center. Use them!
 
-Snacks &#8211; most of us will be on different time zones and different eating schedules than the conference meal times. Bring snacks, stay focused, stay alert, avoid turning into a zombie looking for braiiiiiiiins. Granola bars, jerky, and almonds are my favorites.
+Snacks – most of us will be on different time zones and different eating schedules than the conference meal times. Bring snacks, stay focused, stay alert, avoid turning into a zombie looking for braiiiiiiiins. Granola bars, jerky, and almonds are my favorites.
 
-Breath mints/gum – ‘nuff said.
+Breath mints/gum – 'nuff said.
 
 **Electronics/Other**
 
 Laptop or tablet – taking notes, checking email – you’ll need to do those things.
 
-Charger  &#8211; very, very important.
+Charger  – very, very important.
 
 Mouse / presentation mouse –  if your laptop track pad isn’t enough. It never is for me.
 
 Phone – and if you’re from outside the U.S., check out Rob Farley’s post, [Calling home, receiving calls and smartphone data from the US][2].
 
-Charger – ‘nuff said.
+Charger – 'nuff said.
 
 Spare batteries – AAA, AA – whatever your devices take.
 
@@ -62,7 +62,7 @@ Notebook & pen – sometimes, you won’t want to have your laptop around. Pull 
 
 Business cards – very, very important! These are essential for networking. Bonus: when you talk to someone, write down what you talked about before you hand it to them – it’s an easy way for them to remember you when they get home with their pile of cards!
 
-An extra suitcase for swag &#8211; there will be pens, bags, shirts, books, and more. Even if it’s something you can’t use, would a coworker like to know you thought of her? Would your user group like some additional giveaways? I can bet they will!
+An extra suitcase for swag – there will be pens, bags, shirts, books, and more. Even if it’s something you can’t use, would a coworker like to know you thought of her? Would your user group like some additional giveaways? I can bet they will!
 
 **Clothing**
 
@@ -70,15 +70,15 @@ Comfortable, wear-all-day shoes – a necessity. You’re going to be on your fe
 
 Layers! You’ll be walking outdoors, then sitting in conference rooms, then in hallways. Temperatures vary. Layer it up! Always bring extra clothing, too. You'll find yourself spilling coffee on your shirt, or wanting to wear a different pair of pants to dinner.
 
-Light waterproof jacket &#8211; this will help you be comfortable walking around Seattle.
+Light waterproof jacket – this will help you be comfortable walking around Seattle.
 
 Light long-sleeve and short-sleeve shirts.
 
-Jeans or khakis &#8211; Summit is pretty casual, but remember, it’s still a professional conference.
+Jeans or khakis – Summit is pretty casual, but remember, it’s still a professional conference.
 
 Lots of socks and underwear – yes, people have forgotten these before.
 
-Workout clothes and shoes &#8211; there’s [a #sqlrun on Wednesday morning][3], and Kendra Little blogged about [other workout opportunities][4]. It’s a busy week, but including exercise will help you stay energized and focused!
+Workout clothes and shoes – there’s [a #sqlrun on Wednesday morning][3], and Kendra Little blogged about [other workout opportunities][4]. It’s a busy week, but including exercise will help you stay energized and focused!
 
 SQL Saturday shirt – it’s tradition to wear SQL Saturday shirts on Wednesday.
 

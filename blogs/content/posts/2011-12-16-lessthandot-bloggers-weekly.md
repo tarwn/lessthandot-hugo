@@ -49,7 +49,7 @@ Denis goes over the OUPUT Clause and utilizing it to return the effected rows fr
 
 ### [Jes Borland][1]
 
-[T-SQL Tuesday #25: T-SQL Tricks &#8211; Checking Transaction Log Space Used][7]
+[T-SQL Tuesday #25: T-SQL Tricks – Checking Transaction Log Space Used][7]
 
 Jes Borland added to the week starting off with the monthly T-SQL Tuesday post.  This month she went over a trick she uses to gather transaction log usage for SQL Server.  Jes does a good job of talking about the script she wrote and the use of SQLPERF as well as the DMV clear options it has.  I really like the added description for security needed around the script she posted.
 
@@ -73,13 +73,13 @@ As a consultant I can agree with all of these and quickly adapting is why I thin
 
 I contributed this week with topics on Replication, Orphaned Database Users, SSIS and my own write-up of why I blog and continue to do so.  Here is a list of those blogs.  I hope one of them helps someone out.  I know some of these lessoned learned from being in the field so long have proven valuable to me and hope to pass that to others.
 
-[Why I started and continue to blog &#8211; #Meme15 on Blogging][11]
+[Why I started and continue to blog – #Meme15 on Blogging][11]
 
 [SQL Server Integration Services tools to have – Configuration File Editor][12]
 
 [Troubleshooting Merge Replication Performance – Indexing Publications][13]
 
-[Fixing orphaned database users in 2005 to 2012 &#8211; T-SQL Tuesday #025][14]
+[Fixing orphaned database users in 2005 to 2012 – T-SQL Tuesday #025][14]
 
 [Troubleshooting Merge Replication – Logging][15]
 
@@ -105,7 +105,7 @@ _“When I spend a weekend playing with caching in my ASP.Net project, I want to
 
 How many times was that you? I know it was me more than a few times.
 
-Eli follows that blog up with [Continuous Delivery Project &#8211; Making MVCMusicStore Testable][19] to really kick it off and stay to his word.
+Eli follows that blog up with [Continuous Delivery Project – Making MVCMusicStore Testable][19] to really kick it off and stay to his word.
 
 **Milestones on LessThanDot** 
 

@@ -39,7 +39,7 @@ In order to tune a query, there is value in understanding how a query is process
   <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_1.gif" alt="" title="" width="619" height="92" />
 </div>
 
-Following the parser, the next step is to hand the parse tree off to the Algebrizer. Within the Algebrizer, all name resolving is performed. For example, if a table name is not fully qualified, the Algebrizer will handle determining the exact location. The Algebrizer also determines data types such as, VARCHAR(10) and NUMERIC(2,2). With the Algebrizer completing successfully, a query processor tree is created. The query processor tree is the final product that is required in order for the finishing task to finally create the execution plan &#8211; The Optimizer.
+Following the parser, the next step is to hand the parse tree off to the Algebrizer. Within the Algebrizer, all name resolving is performed. For example, if a table name is not fully qualified, the Algebrizer will handle determining the exact location. The Algebrizer also determines data types such as, VARCHAR(10) and NUMERIC(2,2). With the Algebrizer completing successfully, a query processor tree is created. The query processor tree is the final product that is required in order for the finishing task to finally create the execution plan – The Optimizer.
 
 The optimizer has several tasks to accomplish in order to come to a valid execution plan. During these tasks, the optimizer will determine the resources and objects available to use in order to create the most efficient execution possible. Part of this is determined on statistics that are created in your database. After everything has been calculated and the optimizer has found the most efficient execution plan possible, it is then compared to others in the plan cache. Plan cache is an allocated section in memory where SQL Server stores all of the execution plans that have been created. These plans are not estimated but the actual execution plans that have been created from running statements in SQL Server. If the optimizer finds a plan that matches the estimated plan it has created, it will use the plan that is already in plan cache. This provides a few things for SQL Server in respect to speed. It will prevent multiple plans from being cached that are identical and using memory that can be utilized for other plans.
 
@@ -105,7 +105,7 @@ If we then search for the plan by the sql_handle, we’ll see it has been remove
 
 **Tuning Execution Plans**
 
-To show some more common operations and tuning methods utilizing execution plans, we will create a database to work in. The database name will be PLANLAB and we will import data from AdventureWorks tables &#8211; Sales.SalesOrderHeader and Sales.SalesOrderDetails.
+To show some more common operations and tuning methods utilizing execution plans, we will create a database to work in. The database name will be PLANLAB and we will import data from AdventureWorks tables – Sales.SalesOrderHeader and Sales.SalesOrderDetails.
 
 To prepare the database, tables and import the data from an already existing AdventureWorks database local to the instance, run the following statements in the order they appear. Modify the file paths to match your own development file system structure.
 

@@ -39,10 +39,10 @@ Though I'm not using the feature, jsTestDriver provides a flag to specify an out
 
 Setting up jsTestDriver on my system was fairly straightforward.
 
-  1. Download Java &#8211; Visit [java.com][4] and download the appropriate installer, run the installer, remember to go into the control panel and fiddle with Java's update settings
-  2. Download the jar file &#8211; Visit the [project on Google][5] and download a copy of the jar file (I used the self-contained version)
-  3. Create folders &#8211; Create a top level folder and two sub folders (for instance, src and src-test). Put the jar in the top level folder
-  4. Create a conf file &#8211; I used the one in the [Getting Started Guide][6] as a starting point
+  1. Download Java – Visit [java.com][4] and download the appropriate installer, run the installer, remember to go into the control panel and fiddle with Java's update settings
+  2. Download the jar file – Visit the [project on Google][5] and download a copy of the jar file (I used the self-contained version)
+  3. Create folders – Create a top level folder and two sub folders (for instance, src and src-test). Put the jar in the top level folder
+  4. Create a conf file – I used the one in the [Getting Started Guide][6] as a starting point
 
 At this point we should be able to fire up the server for the first time and verify everything is ready to go. I created a .cmd file on my system for the server so I could easily start it:
 

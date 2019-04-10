@@ -42,7 +42,7 @@ From   (Select 1 As NUM Union All
 
 Not very random, is it? I mean, the number is random, but it's also the same for each row. The purpose of this blog is to demonstrate how to get a random value in set based operations.
 
-There is an interesting technique that you can use to accomplish this. There is a NewId() function in SQL Server that returns a GUID, for example: &#8216;94344EE4-5D7A-45EB-9EBC-7A596B7F90F3'. NewId does work well for set based operations, for example:
+There is an interesting technique that you can use to accomplish this. There is a NewId() function in SQL Server that returns a GUID, for example: '94344EE4-5D7A-45EB-9EBC-7A596B7F90F3'. NewId does work well for set based operations, for example:
 
 sql
 Select Rand() As RandomNumber, NewId() As GUID
@@ -57,7 +57,7 @@ From   (Select 1 As NUM Union All
 0.130542187318667      B42D7973-B3E2-420F-8D4D-DC72442D0824
 </pre>
 
-Notice that the &#8216;Random Number' column is the same for each row, but the GUID column is different. We can use this interesting fact to generate random numbers by combining this with another function available in SQL Server. The CHECKSUM function will return an integer hash value based on its argument. In this case, we can pass in a GUID, and checksum will return an integer.
+Notice that the 'Random Number' column is the same for each row, but the GUID column is different. We can use this interesting fact to generate random numbers by combining this with another function available in SQL Server. The CHECKSUM function will return an integer hash value based on its argument. In this case, we can pass in a GUID, and checksum will return an integer.
 
 sql
 Select Rand() As RandomNumber, 
@@ -95,7 +95,7 @@ From   (Select 1 As NUM Union All
 
 Now, we are guaranteed to get a Random number between 0 and 9. Suppose you want to get a random number between 10 and 15. The range of numbers is 6 (10,11,12,13,14,15). The mod value for this needs to be 6, to get a number in the range of 0 to 5. Then, we add 10 to the result to get a number in the range of 10 to 15.
 
-If you want to generate a random number between -5 and 5, don’t be tempted to remove the absolute value function, because you will get numbers that appears to be random, but are not &#8216;as random' as they should be. 
+If you want to generate a random number between -5 and 5, don’t be tempted to remove the absolute value function, because you will get numbers that appears to be random, but are not 'as random' as they should be. 
 
 In my database, I have a numbers table with 1,000,000 rows. When I run this code:
 
@@ -149,4 +149,4 @@ Order By RandomNumber
 5            91037
 </pre>
 
-Notice now that the values are &#8216;more' random than the previous version (where 0 had double the number of occurrences). Since we are talking about random numbers, we wouldn't expect there to be the same number of occurrences for each number, but with the previous version, there were double the number of zero's, which isn't truly random. This version has approximately the same number of zero's as any other number, making it &#8216;more random'.
+Notice now that the values are 'more' random than the previous version (where 0 had double the number of occurrences). Since we are talking about random numbers, we wouldn't expect there to be the same number of occurrences for each number, but with the previous version, there were double the number of zero's, which isn't truly random. This version has approximately the same number of zero's as any other number, making it 'more random'.

@@ -135,9 +135,9 @@ SET DISABLE\_DEF\_CNST_CHK
   
 DEFAULT keyword as a default value
   
-&#8216;@' and names that start with &#8216;@@' as Transact-SQL identifiers
+'@' and names that start with '@@' as Transact-SQL identifiers
   
-&#8216;#' and &#8216;##' as the name of temporary tables and stored procedures
+'#' and '##' as the name of temporary tables and stored procedures
   
 String literals as column aliases
   
@@ -155,25 +155,25 @@ Non-ANSI \*= or =\* outer join operators
   
 FASTFIRSTROW
   
-sp_configure &#8216;ft notify bandwidth (min)'
+sp_configure 'ft notify bandwidth (min)'
   
-sp_configure &#8216;ft notify bandwidth (max)'
+sp_configure 'ft notify bandwidth (max)'
   
-sp_configure &#8216;ft crawl bandwidth (min)'
+sp_configure 'ft crawl bandwidth (min)'
   
-sp_configure &#8216;ft crawl bandwidth (max)'
+sp_configure 'ft crawl bandwidth (max)'
   
-sp_configure &#8216;priority boost'
+sp_configure 'priority boost'
   
-sp_configure &#8216;set working set size'
+sp_configure 'set working set size'
   
-sp_configure &#8216;open objects'
+sp_configure 'open objects'
   
-sp_configure &#8216;locks'
+sp_configure 'locks'
   
-sp_configure &#8216;allow updates'
+sp_configure 'allow updates'
   
-sp_configure &#8216;disallow results from triggers'
+sp_configure 'disallow results from triggers'
   
 CREATE TRIGGER WITH APPEND
   
@@ -185,7 +185,7 @@ Multiple table hints without comma
   
 HOLDLOCK table hint without parenthesis
   
-&#8216;::' function calling syntax
+'::' function calling syntax
   
 SETUSER
   
@@ -495,21 +495,21 @@ sp_addlogin
   
 IN PATH
   
-FULLTEXTSERVICEPROPERTY(&#8216;ConnectTimeout')
+FULLTEXTSERVICEPROPERTY('ConnectTimeout')
   
-FULLTEXTSERVICEPROPERTY(&#8216;DataTimeout')
+FULLTEXTSERVICEPROPERTY('DataTimeout')
   
-FULLTEXTSERVICEPROPERTY(&#8216;ResourceUsage')
+FULLTEXTSERVICEPROPERTY('ResourceUsage')
   
-DATABASEPROPERTYEX(&#8216;IsFullTextEnabled')
+DATABASEPROPERTYEX('IsFullTextEnabled')
   
-FULLTEXTCATALOGPROPERTY(&#8216;LogSize')
+FULLTEXTCATALOGPROPERTY('LogSize')
   
-FULLTEXTCATALOGPROPERTY(&#8216;PopulateStatus')
+FULLTEXTCATALOGPROPERTY('PopulateStatus')
   
 DATABASEPROPERTY
   
-sp_configure &#8216;remote proc trans'
+sp_configure 'remote proc trans'
   
 SET OFFSETS
   

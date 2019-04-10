@@ -52,7 +52,7 @@ Its worth noting that when I added SquishIt.Framework to the namespaces section 
 
 ### Static Bundles
 
-The typical SquishIt use involves writing a new css or javascript file to the server's file system. At least I think it does &#8211; this is certainly what I would consider typical. So I looked at that first. First thing I needed to do was figure out how to get Nancy to render a view for me. It wasn't terribly difficult, just had to set up a module with the routes involved:
+The typical SquishIt use involves writing a new css or javascript file to the server's file system. At least I think it does – this is certainly what I would consider typical. So I looked at that first. First thing I needed to do was figure out how to get Nancy to render a view for me. It wasn't terribly difficult, just had to set up a module with the routes involved:
 
 ```csharp
 using Nancy;
@@ -96,7 +96,7 @@ As long as I disabled debugging, a single tag was rendered into my page for bund
 
 ### Cached Bundles
 
-SquishIt also has the ability to render bundles to an internal cache instead of the file system. This is useful for shared hosting environments. You can read the initial documentation [here][4]. Getting this to work with Nancy was not really that different &#8211; we just needed to create a module to handle serving the assets:
+SquishIt also has the ability to render bundles to an internal cache instead of the file system. This is useful for shared hosting environments. You can read the initial documentation [here][4]. Getting this to work with Nancy was not really that different – we just needed to create a module to handle serving the assets:
 
 ```csharp
 using System.IO;

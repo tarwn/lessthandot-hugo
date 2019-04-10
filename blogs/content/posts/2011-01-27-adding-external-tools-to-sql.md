@@ -24,7 +24,7 @@ Well, one day I was just doing some exploring in SQL Server Management Studio, 
 So, here's the steps to add an application as an external tool
 
   1. Open Management Studios
-  2. Go to Tools &#8211; External Tools
+  2. Go to Tools – External Tools
   3. Click Add
   4. Type in a Title for the new tool
   5. Click the elipse button next to command, and navigate to the .exe file of your application and click open

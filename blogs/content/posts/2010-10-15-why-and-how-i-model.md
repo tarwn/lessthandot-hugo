@@ -28,7 +28,7 @@ Creating a model forces me to refine a concept down to it's simplest elements, f
 
 I model to think through processes, question my assumptions, and provide guidance towards a solution. While it probably looks like something I threw together in about ten minutes, there are actually a lot of processes going on behind the scenes.
 
-## Purpose &#8211; What are We Drawing?
+## Purpose – What are We Drawing?
 
 <div style="float: right; font-size: .8em; color: #666666; text-align: center;">
   <img src="http://tiernok.com/LTDBlog/modeling/dostuff.jpg" title="Do Stuff!" /><br /> No Goal? Here's a Diagram.
@@ -64,7 +64,7 @@ Mess around with too many factors and at the end of the day a mess is all you'll
 
 Or to translate: gobbledygook.
 
-## Constraint &#8211; Less is More
+## Constraint – Less is More
 
 A goal provides me with my first constraint, and constraints are good. Defining constraints will keep my model simpler and consistent, which means the end message will be clearer. At the same time, a well-defined set of constraints will encourage creativity, providing a better end product.
 
@@ -72,13 +72,13 @@ Often my constraints will include things like not allowing connections to cross,
 
 This keeps me focused instead of playing with the entire palette of colors, shapes, and page sizes available in my favorite software tools.
 
-## Content &#8211; Work on a Temporary Surface
+## Content – Work on a Temporary Surface
 
 Even with constraints and a goal, I still don't know exactly where I will end up or what I will learn along the way, so I start on the whiteboard. With a whiteboard I can start diagramming out the pieces I know, add in new items or resolve question marks as I run into them, and easily combine and rearrange my thoughts. Some of my constraints will be ineffective at this stage, but natural constraints (like the number of markers I have and the board size) will replace them in helping my creativity and thought processes.
 
 This stage is also where I figure out my wording. Because it's so easy to see the big picture (heh) on my whiteboard, I also get a good feel for when words are too specific, not specific enough, or possibly just not quite the right word for what I am trying to communicate. Instead of focusing on getting all the boxes lined up, I can focus on using clear and consistent terminology that will help support the final model rather than detract from it.
 
-## Medium &#8211; Where is it Going?
+## Medium – Where is it Going?
 
 <div style="float: left; font-size: .8em; color: #666666; text-align: center; margin: 2em 1em 1em 1em">
   <img src="http://tiernok.com/trent/2004_11_05_04_sm.jpg" title="Content needs context" /><br /> Content needs Context
@@ -90,7 +90,7 @@ Will there need to be a legend? Is font-size 8 going to be a waste of time or re
 
 The context the diagram will be communicating in will determine the last set of constraints.
 
-## Terminology &#8211; The Wrong Word Invalidates the Model
+## Terminology – The Wrong Word Invalidates the Model
 
 <div style="float: right; font-size: .8em; color: #666666; text-align: center;">
   <img src="http://tiernok.com/LTDBlog/modeling/van-venn-diagram.jpg" title="'Van' Diagram" /><br /> Using the right terminology, <br />thanks <a href="http://www.lolcaption.com/random-funny/what-is-a-van-diagram-you-ask-well-let-me-show-you/">lolcaption.com</a>
@@ -100,7 +100,7 @@ General wording may have been roughed in on the whiteboard and some really good 
 
 That being said, endless anxiety over perfection is nowhere near as good as a cool beer at the end of a work day, so we need to strike a balance between working through the night and achieving good enough. So I'll be careful, in general, when using customer terminology and try to be pragmatic in my search for the perfect name for the third box from the left.
 
-## Composition &#8211; Additional Layers of Meaning
+## Composition – Additional Layers of Meaning
 
 The last stage of the model, having transferred it from whiteboard to software and applied corrections to terminology, is to add some depth that supports the initial concept. 
 

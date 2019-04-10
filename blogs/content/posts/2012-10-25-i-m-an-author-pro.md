@@ -27,7 +27,7 @@ One of my bucket list items has always been “publish a book”. Little did I k
   <em>“Pro SQL Server Practices 2012 Edition is an anthology of high-end wisdom from a group of accomplished database administrators who are quietly but relentlessly pushing the performance and feature envelope of Microsoft SQL Server 2012. With an emphasis upon performance—but also branching into release management, auditing, and other issues—the book helps you deliver the most value for your company’s investment in Microsoft’s flagship database system. “ </em>
 </p>
 
-I was honored to work on this book with a host of highly-respected SQL Server professionals &#8211; Bradley Ball , TJay Belt , Glenn Berry ,  Carlos Bossy , Louis Davidson , Ben DeBow , Grant Fritchey , Jonathan Gardner , Jeremy Lowell , Jesper Johansen , Wendy Pastrick , Kellyn Pot'vin , Mladen Prajdi&#263; , Herve Roggero , Chris Shaw , Gail Shaw , and Jason Strate. What an excellent group to be among!
+I was honored to work on this book with a host of highly-respected SQL Server professionals – Bradley Ball , TJay Belt , Glenn Berry ,  Carlos Bossy , Louis Davidson , Ben DeBow , Grant Fritchey , Jonathan Gardner , Jeremy Lowell , Jesper Johansen , Wendy Pastrick , Kellyn Pot'vin , Mladen Prajdić , Herve Roggero , Chris Shaw , Gail Shaw , and Jason Strate. What an excellent group to be among!
 
 My chapter is “Automating Administration”. Here, I show you how to free up your time and improve your internal processes by automating tasks such as backups, index maintenance, and baselining. I walk you through using tools such as SQL Server Agent jobs and PowerShell. Automation is a powerful thing, allowing you to accomplish more with less – as we are all being asked to do.
 

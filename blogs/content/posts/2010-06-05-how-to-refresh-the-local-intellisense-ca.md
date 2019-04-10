@@ -26,7 +26,7 @@ The version of SQL Server Management Studio that ships with SQL Server2008 comes
 
 What will eventually happen is that if you create new tables and stored procedures IntelliSense will not know about those, when this happens you have to refresh the local IntelliSense cache for it to _see_ the new objects.
 
-There are two ways to do it, if you are a shortcut impaired developer then here is how you do it. Click on Edit&#8211;>IntelliSense&#8211;>Refresh Local Cache
+There are two ways to do it, if you are a shortcut impaired developer then here is how you do it. Click on Edit–>IntelliSense–>Refresh Local Cache
 
 <img src="/wp-content/uploads/blogs/DataMgmt//Intelli2.PNG" alt=" refresh the local IntelliSense cache in SQL Server Management Studio" title=" refresh the local IntelliSense cache in SQL Server Management Studio" width="483" height="463" />
 

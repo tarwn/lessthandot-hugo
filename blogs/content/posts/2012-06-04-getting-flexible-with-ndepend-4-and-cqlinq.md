@@ -35,7 +35,7 @@ AND IsUsedBy (
 )
 ```
 
-This didn't work however (CQL doesn't really have support for subqueries), and I couldn't really find anything in the language that would allow us to achieve what we wanted. NDepend 4 introduces a new linq-based replacement called CQLinq that offers a lot more flexibility, so I figured I would see if I could write the query that we needed using it. It ended up being much easier than I thought &#8211; CQLinq gives us access to most (if not all) of the standard LINQ operators, and the same functions for querying code using attributes and history that we had with CQL. This is the query I came up with:
+This didn't work however (CQL doesn't really have support for subqueries), and I couldn't really find anything in the language that would allow us to achieve what we wanted. NDepend 4 introduces a new linq-based replacement called CQLinq that offers a lot more flexibility, so I figured I would see if I could write the query that we needed using it. It ended up being much easier than I thought – CQLinq gives us access to most (if not all) of the standard LINQ operators, and the same functions for querying code using attributes and history that we had with CQL. This is the query I came up with:
 
 ```CSHARP
 // <Name>Test Query for Contract Changes</Name>

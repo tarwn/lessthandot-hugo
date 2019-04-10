@@ -25,7 +25,7 @@ In this example, a high level view of SQL Server is required.  Last start time,
 
 Open SSMS and connect to a server.  In many cases, this point is a hard point if the server name isn’t known.  Ask, if they are a developer, to check connection strings in applications or even the services.msc listing for SQL Server.  If a named instance is installed, the name will be in the service name.
 
-Once connected to an instance from SSMS, right click the server name and scroll to Reports&#8211;>Standard Reports&#8211;>click Server Dashboard
+Once connected to an instance from SSMS, right click the server name and scroll to Reports–>Standard Reports–>click Server Dashboard
 
 ![][1]
 
@@ -39,7 +39,7 @@ Getting the information back to you
 
 All the information in the report is great but it doesn’t do much good if it cannot easily get back to you or become mobile.  Luckily, the report(s) can quickly be saved to a few common formats.
 
-Right click an area in the report and scroll to export&#8211;>PDF
+Right click an area in the report and scroll to export–>PDF
 
 ![][3]
 

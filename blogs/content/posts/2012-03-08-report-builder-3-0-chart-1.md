@@ -19,8 +19,8 @@ categories:
 This is part four of a series about Report Builder 3.0.
 
   * <a title="Report Builder 3.0 – The Introduction" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-the/" target="_blank">Report Builder 3.0 – The Introduction</a>
-  * <a title="Report Builder 3.0 – Table or Matrix Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-table/" target="_blank">Report Builder 3.0 &#8211; Table or Matrix Wizard</a>
-  * <a title="Report Builder 3.0 – Chart Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-chart/" target="_blank">Report Builder 3.0 &#8211; Chart Wizard</a>
+  * <a title="Report Builder 3.0 – Table or Matrix Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-table/" target="_blank">Report Builder 3.0 – Table or Matrix Wizard</a>
+  * <a title="Report Builder 3.0 – Chart Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-chart/" target="_blank">Report Builder 3.0 – Chart Wizard</a>
   * <a title="Report Builder 3.0 – Map Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-map/" target="_blank">Report Builder 3.0 – Map Wizard</a>
   * [Report Builder 3.0 – Report Parts][1]
 
@@ -236,7 +236,7 @@ The horizontal axis is generally where your categories and series will be shown.
 </p>
 
 <p style="padding-left: 30px">
-  Labels &#8211; You can set the labels to offset, rotate, and wrap.
+  Labels – You can set the labels to offset, rotate, and wrap.
 </p>
 
 <p style="padding-left: 30px">

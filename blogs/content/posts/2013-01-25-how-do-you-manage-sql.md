@@ -50,7 +50,7 @@ The reason we also check for collation\_name in addition to state\_desc is docum
 
 > A database that has just come online is not necessarily ready to accept connections. To identify when a database can accept connections, query the collation\_name column of sys.databases or the Collation property of DATABASEPROPERTYEX. The database can accept connections when the database collation returns a non-null value. For AlwaysOn databases, query the database\_state or database\_state\_desc columns of sys.dm\_hadr\_database\_replica\_states.
 
-Yet another option would be to have a table with the &#8216;live' server for the database, this however is more used for jobs, SSIS packages and programs that live on other servers
+Yet another option would be to have a table with the 'live' server for the database, this however is more used for jobs, SSIS packages and programs that live on other servers
 
 How do you manage your jobs when dealing with mirroring? Leave me a comment, I am interested in your approach.
 

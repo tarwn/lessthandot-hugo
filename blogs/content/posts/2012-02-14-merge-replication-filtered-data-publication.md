@@ -280,7 +280,7 @@ Possible failure can consist of security errors, access to the ReplData folder, 
 
 Agent jobs will follow a naming convention if the defaults were used.
 
-INSTANCE-database-publication-increment &#8211; Example: ONPNTRC0-AdventureWorks-Sales-1
+INSTANCE-database-publication-increment – Example: ONPNTRC0-AdventureWorks-Sales-1
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-23.png?mtime=1329263553"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-23.png?mtime=1329263553" width="500" height="167" /></a>

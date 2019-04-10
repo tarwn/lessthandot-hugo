@@ -196,19 +196,19 @@ select [message] from log_shipping_monitor_history_detail
 
 Results:
 
-> Starting transaction log copy. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;
+> Starting transaction log copy. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053'
   
-> Retrieving copy settings. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;
+> Retrieving copy settings. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053'
   
-> Retrieved copy settings. Primary Server: &#8216;ONPNT\_XPS', Primary Database: &#8216;AdventureWorks', Backup Source Directory: &#8216;\onpnt\_xpspub\_logs', Backup Destination Directory: &#8216;\onpnt\_xpssub_logs', Last Copied File: &#8216;<none>&#8216;
+> Retrieved copy settings. Primary Server: 'ONPNT\_XPS', Primary Database: 'AdventureWorks', Backup Source Directory: '\onpnt\_xpspub\_logs', Backup Destination Directory: '\onpnt\_xpssub_logs', Last Copied File: '<none>'
   
-> Copying log backup files. Primary Server: &#8216;ONPNT\_XPS', Primary Database: &#8216;AdventureWorks', Backup Source Directory: &#8216;\onpnt\_xpspub\_logs', Backup Destination Directory: &#8216;\onpnt\_xpssub_logs'
+> Copying log backup files. Primary Server: 'ONPNT\_XPS', Primary Database: 'AdventureWorks', Backup Source Directory: '\onpnt\_xpspub\_logs', Backup Destination Directory: '\onpnt\_xpssub_logs'
   
-> Checking to see if any previously copied log backup files that are required by the restore operation are missing. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;
+> Checking to see if any previously copied log backup files that are required by the restore operation are missing. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053'
   
-> The copy operation was successful. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;, Number of log backup files copied: 0
+> The copy operation was successful. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053', Number of log backup files copied: 0
   
-> Starting transaction log copy. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053&#8242;</none>
+> Starting transaction log copy. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053'</none>
 
 Another extremely practical usage of these tables is, in the event of a disaster, being able to later analyze data that may have been lost in log backups that did not get copied to secondary servers. The log\_shipping\_secondary has a column, “last\_copied\_file”. This column has helped me determine exactly where a subscribing database is at in the restores several times in the past. 
 

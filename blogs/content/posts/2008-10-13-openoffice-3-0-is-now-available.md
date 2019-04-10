@@ -18,7 +18,7 @@ tags:
 ---
 OpenOffice.org 3.0 is now available, but because of extreme demand you will see this message
 
-> Apologies &#8211; our website is struggling to cope with the unprecedented
+> Apologies – our website is struggling to cope with the unprecedented
   
 > demand for the new release 3.0 of OpenOffice.org. The technical teams are
   

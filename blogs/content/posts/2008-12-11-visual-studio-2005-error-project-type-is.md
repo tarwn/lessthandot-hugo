@@ -29,7 +29,7 @@ Anyway, after much searching and a few failed attempts to fix it from other post
 
 1. Close all instances of Visual Studio
 
-2. Download and install “Microsoft Visual Studio 2005 &#8211; Update to Support Web Application Projects” from:
+2. Download and install “Microsoft Visual Studio 2005 – Update to Support Web Application Projects” from:
 
 http://www.microsoft.com/downloads/details.aspx?FamilyId=8B05EE00-9554-4733-8725-3CA89DD9BFCA&displaylang=en
 

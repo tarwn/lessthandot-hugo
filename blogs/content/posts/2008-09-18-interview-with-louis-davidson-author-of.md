@@ -24,7 +24,7 @@ tags:
   - sql server 2008
 
 ---
-[Pro SQL Server 2008 Relational Database Design and Implementation][1] is one of those books that should be in the hands of every SQL Server developer. There are tons of SQL Server programming books around but none of them covers the fundamentals of a good SQL Server database, the design. If your design is &#8216;broken' then it is a lot harder to fix it down the road, design is probably the number one reason people have all kinds of problems with their databases. 
+[Pro SQL Server 2008 Relational Database Design and Implementation][1] is one of those books that should be in the hands of every SQL Server developer. There are tons of SQL Server programming books around but none of them covers the fundamentals of a good SQL Server database, the design. If your design is 'broken' then it is a lot harder to fix it down the road, design is probably the number one reason people have all kinds of problems with their databases. 
 
 I have both the 2000 and 2005 edition of the Pro SQL Server 2008 Relational Database Design and Implementation so I was very excited when I noticed that Louis had finished his latest version. I contacted him to see if he would be willing to do an interview and as you can see he did. Make sure to read the whole interview because there is a way to win a copy.
 
@@ -60,7 +60,7 @@ I am also writing a section in an upcoming book that the MVP's are producing abo
 
 The date data type is probably my favorite new feature in SQL Server 2008. This is the one feature that will eventually change SQL Server designs for the better. It certainly will make working with date data easier. Never needing to store time data when you don't need time data is going to change the world. 
 
-The crazy date values and roundoff issues with all of the SQL Server 2005 and earlier types were just a pain, especially with datetime. The fact that times of '23:59:59.999&#8242; rounded off to the next day confused everyone at one time or another. 
+The crazy date values and roundoff issues with all of the SQL Server 2005 and earlier types were just a pain, especially with datetime. The fact that times of '23:59:59.999' rounded off to the next day confused everyone at one time or another. 
 
 The only thing I wish they had added was a time type that didn't just hold a time of day, but held a time duration. Time as it is will be somewhat useful, but it certainly won't be as earth shatteringly useful as the date type. 
 

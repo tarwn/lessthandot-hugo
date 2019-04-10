@@ -19,7 +19,7 @@ IT professionals (and amateurs), it's time we had a chat. It's time to stop drag
 
 It's clumsy. It's childish. It uses memory on the server.
 
-Oh, and there's a really easy tool to copy files built into Windows &#8211; <a href="https://technet.microsoft.com/en-us/library/cc733145.aspx" target="_blank">Robocopy</a>.
+Oh, and there's a really easy tool to copy files built into Windows – <a href="https://technet.microsoft.com/en-us/library/cc733145.aspx" target="_blank">Robocopy</a>.
 
 Here's the basic premise: you open a PowerShell window (or command prompt, but let's join the 21st century), and enter
 
@@ -58,4 +58,4 @@ Let's say I wanted to move all the .xml.gz files from one directory to another. 
 
 That's a very quick look at Robocopy. I suggest you know it, use it, and love it!
 
-(Inspired by <a href="https://twitter.com/sqlagentman" target="_blank">Tim Ford</a>&#8216;s <a href="http://thesqlagentman.com/2016/01/entry-level-content/" target="_blank">call to blog about #entrylevel topics</a> that I #wanttoshare.)
+(Inspired by <a href="https://twitter.com/sqlagentman" target="_blank">Tim Ford</a>'s <a href="http://thesqlagentman.com/2016/01/entry-level-content/" target="_blank">call to blog about #entrylevel topics</a> that I #wanttoshare.)

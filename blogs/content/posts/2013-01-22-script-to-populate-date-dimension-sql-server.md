@@ -68,4 +68,4 @@ Let's take a closer look:
   3. We define another CTE (called d) that uses numbers from c, filters on date range, and converts numbers to dates based on the date variables.
   4. Finally, the Select statement uses Num and Date column aliases created by the two CTEs and date functions to create additional fields for the date dimension.
 
-You'll notice that the script doesn't have all columns a date dimension typically has. Don't call me lazy for that &#8211; it provides the logic and skeleton to add more columns. Just add them as needed.
+You'll notice that the script doesn't have all columns a date dimension typically has. Don't call me lazy for that – it provides the logic and skeleton to add more columns. Just add them as needed.

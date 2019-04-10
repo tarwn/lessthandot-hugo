@@ -13,7 +13,7 @@ categories:
   - Professional Development
 
 ---
-Every year, the Wisconsin SQL Server user groups combine forces to host a SQL Saturday in Madison. It's always a great day to learn things, but it's also fun to have presenters come from all over the U.S. This year, Meagan Longoria (<a href="https://datasavvy.wordpress.com/" target="_blank">blog </a>| <a href="https://twitter.com/mmarie" target="_blank">twitter </a>| <a href="https://www.linkedin.com/in/meaganlongoria" target="_blank">linkedin</a>) &#8211; who I knew from Twitter &#8211; came to our SQL Saturday from Kansas City, MO. She and I share a love of SQL Server, good beer, and dogs. I sent her to my favorite WI brewery, <a href="http://www.newglarusbrewing.com/" target="_blank">New Glarus Brewing</a>, for a road trip on Friday, and I hear she enjoyed it. She's my next pick for my 5 Questions series!
+Every year, the Wisconsin SQL Server user groups combine forces to host a SQL Saturday in Madison. It's always a great day to learn things, but it's also fun to have presenters come from all over the U.S. This year, Meagan Longoria (<a href="https://datasavvy.wordpress.com/" target="_blank">blog </a>| <a href="https://twitter.com/mmarie" target="_blank">twitter </a>| <a href="https://www.linkedin.com/in/meaganlongoria" target="_blank">linkedin</a>) – who I knew from Twitter – came to our SQL Saturday from Kansas City, MO. She and I share a love of SQL Server, good beer, and dogs. I sent her to my favorite WI brewery, <a href="http://www.newglarusbrewing.com/" target="_blank">New Glarus Brewing</a>, for a road trip on Friday, and I hear she enjoyed it. She's my next pick for my 5 Questions series!
 
 ### Meagan, what is your job title, and what do you _do_ every day (or week)?
 

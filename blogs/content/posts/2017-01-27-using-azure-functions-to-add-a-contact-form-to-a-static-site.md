@@ -33,7 +33,7 @@ From the Azure Dashboard, create a new “Azure Function App”.
   <a href="/wp-content/uploads/2017/01/Azure_0.png"><img src="/wp-content/uploads/2017/01/Azure_0.png" alt="Azure Function App - Getting Started" width="800" height="467" class="size-full wp-image-4981" srcset="/wp-content/uploads/2017/01/Azure_0.png 800w, /wp-content/uploads/2017/01/Azure_0-300x175.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
-    Azure Function App &#8211; Getting Started
+    Azure Function App – Getting Started
   </p>
 </div>
 
@@ -45,7 +45,7 @@ The trigger for the Azure Function is the Webhook endpoint:
   <a href="/wp-content/uploads/2017/01/Azure_1.png"><img src="/wp-content/uploads/2017/01/Azure_1.png" alt="Azure Function - Webhook Trigger" width="800" height="184" class="size-full wp-image-4998" srcset="/wp-content/uploads/2017/01/Azure_1.png 800w, /wp-content/uploads/2017/01/Azure_1-300x69.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
-    Azure Function &#8211; Webhook Trigger
+    Azure Function – Webhook Trigger
   </p>
 </div>
 
@@ -55,7 +55,7 @@ We can customize this to listen only to the /contact route and POST messages:
   <a href="/wp-content/uploads/2017/01/Azure_2.png"><img src="/wp-content/uploads/2017/01/Azure_2.png" alt="Azure Function - Webhook Trigger Details" width="741" height="407" class="size-full wp-image-4983" srcset="/wp-content/uploads/2017/01/Azure_2.png 741w, /wp-content/uploads/2017/01/Azure_2-300x164.png 300w" sizes="(max-width: 741px) 100vw, 741px" /></a>
   
   <p class="wp-caption-text">
-    Azure Function &#8211; Webhook Trigger Details
+    Azure Function – Webhook Trigger Details
   </p>
 </div>
 
@@ -67,7 +67,7 @@ We don't have an input for this Azure Function, and the return value is simply t
   <a href="/wp-content/uploads/2017/01/Azure_3.png"><img src="/wp-content/uploads/2017/01/Azure_3.png" alt="Azure Function - Return Value" width="391" height="278" class="size-full wp-image-4984" srcset="/wp-content/uploads/2017/01/Azure_3.png 391w, /wp-content/uploads/2017/01/Azure_3-300x213.png 300w" sizes="(max-width: 391px) 100vw, 391px" /></a>
   
   <p class="wp-caption-text">
-    Azure Function &#8211; Return Value
+    Azure Function – Return Value
   </p>
 </div>
 
@@ -187,7 +187,7 @@ Don't grab the URL above your code screen yet, it probably has an Administrative
   <a href="/wp-content/uploads/2017/01/Azure_7.png"><img src="/wp-content/uploads/2017/01/Azure_7.png" alt="Azure Functions - Key, Logs, and URL" width="800" height="131" class="size-full wp-image-4999" srcset="/wp-content/uploads/2017/01/Azure_7.png 800w, /wp-content/uploads/2017/01/Azure_7-300x49.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
-    Azure Functions &#8211; Key, Logs, and URL
+    Azure Functions – Key, Logs, and URL
   </p>
 </div>
 
@@ -197,7 +197,7 @@ In a new Postman request, enter the URL at the top, select “Post” as the met
   <a href="/wp-content/uploads/2017/01/Azure_8.png"><img src="/wp-content/uploads/2017/01/Azure_8.png" alt="Azure Function - First Call Failed" width="800" height="385" class="size-full wp-image-5000" srcset="/wp-content/uploads/2017/01/Azure_8.png 800w, /wp-content/uploads/2017/01/Azure_8-300x144.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
-    Azure Function &#8211; First Call Failed
+    Azure Function – First Call Failed
   </p>
 </div>
 
@@ -207,7 +207,7 @@ Fixing the code then nets us:
   <a href="/wp-content/uploads/2017/01/Azure_9.png"><img src="/wp-content/uploads/2017/01/Azure_9.png" alt="Azure Function - Second Call Failed" width="800" height="326" class="size-full wp-image-5001" srcset="/wp-content/uploads/2017/01/Azure_9.png 800w, /wp-content/uploads/2017/01/Azure_9-300x122.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
-    Azure Function &#8211; Second Call Failed
+    Azure Function – Second Call Failed
   </p>
 </div>
 
@@ -217,7 +217,7 @@ Because my code is expecting urlencoded form data and wasn't able to parse any f
   <a href="/wp-content/uploads/2017/01/Azure_10.png"><img src="/wp-content/uploads/2017/01/Azure_10.png" alt="Azure Function - Success" width="800" height="290" class="size-full wp-image-5002" srcset="/wp-content/uploads/2017/01/Azure_10.png 800w, /wp-content/uploads/2017/01/Azure_10-300x108.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
-    Azure Function &#8211; Success
+    Azure Function – Success
   </p>
 </div>
 
@@ -252,7 +252,7 @@ There was one more catch the first time I tried this. Because I'm posting from m
   <a href="/wp-content/uploads/2017/01/Azure_11.png"><img src="/wp-content/uploads/2017/01/Azure_11.png" alt="Azure Function - CORS Config" width="410" height="249" class="size-full wp-image-4992" srcset="/wp-content/uploads/2017/01/Azure_11.png 410w, /wp-content/uploads/2017/01/Azure_11-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
   
   <p class="wp-caption-text">
-    Azure Function &#8211; CORS Config
+    Azure Function – CORS Config
   </p>
 </div>
 

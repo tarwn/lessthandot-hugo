@@ -28,7 +28,7 @@ Anyway here's what the diagram looks like:
   <img src="/wp-content/uploads/blogs/Architect/Validating-Architecture-VS2010/ArchitectureDiagramExample.PNG" alt="Sample Architecture Diagram" title="Diagram" width="428" height="372" />
 </div>
 
-Nothing really special here &#8211; the words are the name of the tier, and the numbers are the number of units of code (in this case projects, but you can add individual namespaces or classes as well). To create the diagram, we need to first create a new Visual Studio Modeling Project. A new layer diagram can then be added to this project. I used the designer to add the shapes and dependency lines, and all looks good. But we want to do more than look at it!
+Nothing really special here – the words are the name of the tier, and the numbers are the number of units of code (in this case projects, but you can add individual namespaces or classes as well). To create the diagram, we need to first create a new Visual Studio Modeling Project. A new layer diagram can then be added to this project. I used the designer to add the shapes and dependency lines, and all looks good. But we want to do more than look at it!
 
 This is where things get interesting. To place modules into one of the tiers, you can drag and drop either from the Solution Explorer or from the new Architecture Explorer. Both have different ways of finding the objects you are looking for, but the result is the same. Once all modules are allocated to the right layer, you can right click the diagram and choose “Validate Architecture”.
 
@@ -38,7 +38,7 @@ Visual Studio will then build your solution and validate its architecture. If al
   
 > 1/28/2010 4:04:23 PM: Architecture validation succeeded (0 suppressed). 
 
-Now, let's try adding an illegal call, in this case from the data tier to a caching provider found in the web tier (I first tried adding a reference to the “Biz” project, but was not allowed because it would introduce a cyclic dependency &#8211; I guess this was in previous versions but I never ran into it before &#8211; pretty cool).
+Now, let's try adding an illegal call, in this case from the data tier to a caching provider found in the web tier (I first tried adding a reference to the “Biz” project, but was not allowed because it would introduce a cyclic dependency – I guess this was in previous versions but I never ran into it before – pretty cool).
 
 After this call is added, try validating the architecture again. The solution will be rebuilt, and you'll see something like this: 
 

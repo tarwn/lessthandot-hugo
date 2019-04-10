@@ -21,9 +21,9 @@ The technical sphere seems to have very mixed definitions for the terms “Quali
 
 Often in the software world, Quality seems to mean “Does it work or not”. Occasionally there is the idea of a [Definition of Done][4], and the definition of Quality includes additional documents, automated tests, formal communications, etc. 
 
-> **Dictionary.com** &#8211; character with respect to fineness, or grade of excellence
+> **Dictionary.com** – character with respect to fineness, or grade of excellence
   
-> **Merriam Webster** &#8211; degree of excellence, superiority in kind 
+> **Merriam Webster** – degree of excellence, superiority in kind 
 
 If Quality is a scale of excellence, what level do we assign to “it works”? What grade do we get for “I didn't find any broken bits”? Why do we keep assuming “it isn't obviously broken” means we have achieved quality?
 

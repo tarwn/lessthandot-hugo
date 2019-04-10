@@ -617,7 +617,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you run a distributed query in SQL Server 2005 or SQL Server 2008: “OLE DB provider &#8216;SQLNCLI' for linked server &#8216;<Linked Server>' returned message &#8216;No transaction is active'”
+      FIX: Error message when you run a distributed query in SQL Server 2005 or SQL Server 2008: “OLE DB provider 'SQLNCLI' for linked server '<Linked Server>' returned message 'No transaction is active'”
     </td>
   </tr>
   
@@ -771,7 +771,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you try to add articles to a publication that uses an Oracle Database 11g database as the publisher in SQL Server 2008: “Constraint column &#8216;<ColumnName>' not found in table &#8216;<TableName>'”
+      FIX: Error message when you try to add articles to a publication that uses an Oracle Database 11g database as the publisher in SQL Server 2008: “Constraint column '<ColumnName>' not found in table '<TableName>'”
     </td>
   </tr>
   
@@ -785,7 +785,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you synchronize data for a transactional publication in SQL Server 2008: “Procedure or function &#8216;sp_MSins_dbo<TableName>_msrepl_ccs' expects parameter &#8216;@c7', which was not supplied”
+      FIX: Error message when you synchronize data for a transactional publication in SQL Server 2008: “Procedure or function 'sp_MSins_dbo<TableName>_msrepl_ccs' expects parameter '@c7', which was not supplied”
     </td>
   </tr>
 </table>

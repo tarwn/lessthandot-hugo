@@ -159,7 +159,7 @@ As you can see you get the name, type, precision, length and more about the resu
 
 ## sys.dm\_exec\_describe\_first\_result_set
 
-This query is more interesting because it will look at a dynamic query. Let's say your query is the following _&#8216;SELECT * FROM sysobjects SELECT 3'_ passed in as a parameter
+This query is more interesting because it will look at a dynamic query. Let's say your query is the following _'SELECT * FROM sysobjects SELECT 3'_ passed in as a parameter
 
 Here is how that would work
 

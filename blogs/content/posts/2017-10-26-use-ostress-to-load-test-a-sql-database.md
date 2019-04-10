@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Have you ever wondered how you could take one or more .sql files you captured as a workload and run them against a SQL Server or Azure SQL Database to test performance or impact? Microsoft has a free tool to do just that &#8211; ostress.
+Have you ever wondered how you could take one or more .sql files you captured as a workload and run them against a SQL Server or Azure SQL Database to test performance or impact? Microsoft has a free tool to do just that – ostress.
 
 Ostress.exe is part of the RML utilities. The first step is to download it from <https://www.microsoft.com/en-us/download/details.aspx?id=4511>. Along with the command-line tools, there is also a helpful help document!
 
@@ -27,7 +27,7 @@ The next thing you’ll need is one or more .sql files that the tool will run.
 To run a load test, you’ll open RML cmd prompt and enter your command. A few common parameters, which you’ll be using:
 
 <p style="padding-left: 30px">
-  -S – server name &#8211; this works for a SQL Server or an Azure SQL Database.<br /> -E – Windows authentication. The other option is -U and -P for SQL authentication.<br /> -d – database name.<br /> -i – Path to batch file(s), such as C:\ostress\ostress_batch_file.sql.<br /> -n – Number of connections to create.<br /> -r – Number of iterations through the file each connection will make.<br /> -q – Quiet mode – no result display.<br /> -o – Output file directory.
+  -S – server name – this works for a SQL Server or an Azure SQL Database.<br /> -E – Windows authentication. The other option is -U and -P for SQL authentication.<br /> -d – database name.<br /> -i – Path to batch file(s), such as C:\ostress\ostress_batch_file.sql.<br /> -n – Number of connections to create.<br /> -r – Number of iterations through the file each connection will make.<br /> -q – Quiet mode – no result display.<br /> -o – Output file directory.
 </p>
 
 A sample command which will take one file I created (ostress\_batch\_file.sql), create 5 connections, and run it twice on each:

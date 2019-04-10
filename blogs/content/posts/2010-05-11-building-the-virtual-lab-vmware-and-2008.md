@@ -124,13 +124,13 @@ The hardware you use will depend on the types of answers you provided to the que
       Memory: 10 GB of DDR3 RAM w/ room to upgrade up to 24GB
     </li>
     <li>
-      Storage #1: Raid 10 Array &#8211; (4) SATA2 7200RPM 500GB drives, mixed manufacturers
+      Storage #1: Raid 10 Array – (4) SATA2 7200RPM 500GB drives, mixed manufacturers
     </li>
     <li>
-      Storage #2: <a href="http://www.amazon.com/Vantec-NST-360SU-BK-3-5-Inch-External-Enclosure/dp/B000EDKO04/ref=sr_1_1?ie=UTF8&s=electronics&qid=1272804217&sr=8-1" title="View at Amazon">Vantec external enclosure</a> w/ 500GB SATA2 drive (USB2/eSata) &#8211; raw storage for some backups, MSDN images, and other purchased software
+      Storage #2: <a href="http://www.amazon.com/Vantec-NST-360SU-BK-3-5-Inch-External-Enclosure/dp/B000EDKO04/ref=sr_1_1?ie=UTF8&s=electronics&qid=1272804217&sr=8-1" title="View at Amazon">Vantec external enclosure</a> w/ 500GB SATA2 drive (USB2/eSata) – raw storage for some backups, MSDN images, and other purchased software
     </li>
     <li>
-      Storage #3: <a href="http://www.amazon.com/TWO-BAY-SATA-DOCKING-STATION/dp/B001UHQFVA/ref=sr_1_5?ie=UTF8&s=electronics&qid=1272804276&sr=1-5" title="View at amazon">Bytecc two-bay docking station</a> (USB2/eSata) &#8211; more disk (will be critical in a later article)
+      Storage #3: <a href="http://www.amazon.com/TWO-BAY-SATA-DOCKING-STATION/dp/B001UHQFVA/ref=sr_1_5?ie=UTF8&s=electronics&qid=1272804276&sr=1-5" title="View at amazon">Bytecc two-bay docking station</a> (USB2/eSata) – more disk (will be critical in a later article)
     </li>
   </ul>
   
@@ -141,7 +141,7 @@ The hardware you use will depend on the types of answers you provided to the que
 
 ## Installing our First Virtual Server
 
-From this point forward we will be working from the comfort of my home lab, so examples will be based on VMWare Server 2.1 and I will point out versions for other software as it is introduced. The purpose of this first virtual machine is to serve as a template for later machines, allowing me to build out one image that with a standard base configuration, installs all common services, then apply all the outstanding Windows updates. Though I will be using the term &#8216;template' in the article, this shouldn't be confused with the template capability in VMware's vSphere. 
+From this point forward we will be working from the comfort of my home lab, so examples will be based on VMWare Server 2.1 and I will point out versions for other software as it is introduced. The purpose of this first virtual machine is to serve as a template for later machines, allowing me to build out one image that with a standard base configuration, installs all common services, then apply all the outstanding Windows updates. Though I will be using the term 'template' in the article, this shouldn't be confused with the template capability in VMware's vSphere. 
 
 <div class="hint">
   In a production environment it is extremely helpful to have a basic server image already pre-configured and up to date. Not only does it provide a faster alternative to building each server from scratch, but it ensures that each server goes out with all of the required services and configurations and does so without adding a checklist to your process. Not that I am a <a href="/index.php/ITProfessionals/ITServiceManagement/there-is-never-time-for-part-3" title="Or maybe I am">process improvement fan</a> or anything.
@@ -166,31 +166,31 @@ Clicking the “Virtual Machine” menu provides an option to “Create Virtual 
 While it isn't critical to pick a good name at this point, it couldn't hurt either. Later as we create servers for specific purposes the VM names will reflect the actual names of their servers.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-  <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step1.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step1.png" title="Creating a new VM, Step 1" /></a><br /> New VM &#8211; Provide a Name
+  <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step1.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step1.png" title="Creating a new VM, Step 1" /></a><br /> New VM – Provide a Name
 </div>
 
 In my case I intend to use Windows 2008 R2 as my main server environment, so this basic image will reflect that in it's name and I will choose the Windows 2008 option from the operating systems tab. Before choosing the 64-bit image I made sure to run the [64-bit compatibility check][6] offered by VMWare to ensure I could run a 64-bit guest on my host. If you are using Virtual Server 2005 then you will be limited to 32-bit guests so be sue you buy/download the correct versions.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-  <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step2.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step2.png" title="Creating a new VM, Step 2" /></a><br /> New VM &#8211; OS Selection
+  <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step2.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step2.png" title="Creating a new VM, Step 2" /></a><br /> New VM – OS Selection
 </div>
 
 For this first server I am going to allocate 4GB of RAM for use during the installation process. When making later copies of the system we will tune these values accordingly. As I intend to use these systems in a lab environment and may need the images to be portable to another single core system, I'm going to select the 1 CPU option. For later articles we may create 2- or 4-CPU options, but for most of our non-production needs a 1-CPU system will be sufficient. While technically it would be possible to “tune” the CPU setting at a later time, since we really only care about the hard-drive file at this point, changing CPU architectures on a system after installation ranges from tricky to absurdly-painful-with-no-hope-of-working.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-  <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step3.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step3.png" title="Creating a new VM, Step 2" /></a><br /> New VM &#8211; RAM and CPU Settings
+  <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step3.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step3.png" title="Creating a new VM, Step 2" /></a><br /> New VM – RAM and CPU Settings
 </div>
 
 The final lasting decision (though not the last step) is how large we want to make the virtual drive and whether we want to allocate the space ahead of time or use a growth model. In my last environment I pre-allocated space for my base windows installation and then attached or created secondary drives for the installed applications. In this case, Microsoft is suggesting [a minimum of 32GB of space][7] and, while I don't want to give up the space, I've decided to use pre-allocation again to simplify the process.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-  <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step4.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step4.png" title="Creating a new VM, Step 3" /></a><br /> New VM &#8211; Drive Settings
+  <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step4.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step4.png" title="Creating a new VM, Step 3" /></a><br /> New VM – Drive Settings
 </div>
 
 The final options, optical drive access and network method, are only going to be used for this image during the Windows installation process. Later copies will again have values assigned based on the project or technology that's being installed. For the purposes of the installation we will use an ISO file for the optical drive and bridged networking.
 
 <div class="hint">
-  When you install VMWare initially it will ask for a folder for your standard store (default is “C:Virtual Machines” on Windows). ISOs placed in this folder will be available for mounting in VMWare or you can create a new store that points to a folder elsewhere. Having a dedicated drive for software storage, I created an &#8216;MSDN Library' store and pointed it to that location.
+  When you install VMWare initially it will ask for a folder for your standard store (default is “C:Virtual Machines” on Windows). ISOs placed in this folder will be available for mounting in VMWare or you can create a new store that points to a folder elsewhere. Having a dedicated drive for software storage, I created an 'MSDN Library' store and pointed it to that location.
 </div>
 
 <div class="hint">
@@ -222,11 +222,11 @@ The first decision the installer requires is selection between the various versi
     </p>
     
     <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vmtools_host.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vmtools_host.png" title="Host Server - Installing VMWare Tools" /></a><br /> Installing VMWare tools &#8211; Server OS View
+      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vmtools_host.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vmtools_host.png" title="Host Server - Installing VMWare Tools" /></a><br /> Installing VMWare tools – Server OS View
     </div>
     
     <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vmtools_guest.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vmtools_guest.png" title="Guest Server - Installing VMWare Tools" /></a><br /> Installing VMWare tools &#8211; Guest OS View
+      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vmtools_guest.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vmtools_guest.png" title="Guest Server - Installing VMWare Tools" /></a><br /> Installing VMWare tools – Guest OS View
     </div>
     
     <p>
@@ -246,7 +246,7 @@ The first decision the installer requires is selection between the various versi
     </p>
     
     <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/snmp_setup.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/snmp_setup.png" title="Server Features - Configuring SNMP" /></a><br /> Server Features &#8211; Configuring SNMP
+      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/snmp_setup.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/snmp_setup.png" title="Server Features - Configuring SNMP" /></a><br /> Server Features – Configuring SNMP
     </div>
     
     <div class="hint">

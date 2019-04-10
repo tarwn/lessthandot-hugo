@@ -134,7 +134,7 @@ If you create you script on the staging box and the person runs it on production
 
 erver: Msg 3733, Level 16, State 2, Line 1
   
-Constraint &#8216;DF\_\_Foo\_\_id2__7D439ABD' does not belong to table &#8216;foo2'.
+Constraint 'DF\_\_Foo\_\_id2__7D439ABD' does not belong to table 'foo2'.
   
 Server: Msg 3727, Level 16, State 1, Line 1
   

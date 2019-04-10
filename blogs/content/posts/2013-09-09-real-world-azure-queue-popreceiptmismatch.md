@@ -52,7 +52,7 @@ An Update method provides the ability to resurface the Message, extend the visib
 
 The ability to break down work into atomic units and then spin up N units consuming items from that queue is a powerful tool for horizontally scaling work.
 
-## The PopReceipt &#8211; Not Just for GetMessage Calls
+## The PopReceipt – Not Just for GetMessage Calls
 
 To prevent other processes from updating a Message that has been Get-ed, a unique PopReceipt is issued with the GetMessage response. Later UpdateMessage and DeleteMessage calls are required to have this PopReceipt to access the item. This prevents crosstalk or a Message resurfacing and being picked up by a second worker, then being updated or deleted by the original worker. Very handy.
 
@@ -69,7 +69,7 @@ The Azure REST API outlines all of the errors you can expect to get back, nicely
 The error code we are looking at is:
 
 <div style="background-color: #EEEEEE; margin: .5em; padding: .5em">
-  PopReceiptMismatch: Bad Request (400) &#8211; The specified pop receipt did not match the pop receipt for a dequeued message.
+  PopReceiptMismatch: Bad Request (400) – The specified pop receipt did not match the pop receipt for a dequeued message.
 </div>
 
 The [Delete Message][5] (Last updated Sept, 2011) documentation specifically outlines this scenario:

@@ -20,7 +20,7 @@ Thank you to everyone that participated in T-SQL Tuesday #016: Aggregate Functio
 
 I'd like to give a shout out to my LessThanDot.com posse for letting me host, and writing excellent posts. I've been on the site for four months now, and I'm loving it here. 
 
-A special thank you goes to the 13 Microsoft MVPs for sharing your expertise with us, especially since many of you were at Summit and had a busy week. MVPs are the cream of the crop &#8211; they are experts in the field, and they put their time and energy into the community, as well. Thanks for helping! 
+A special thank you goes to the 13 Microsoft MVPs for sharing your expertise with us, especially since many of you were at Summit and had a busy week. MVPs are the cream of the crop – they are experts in the field, and they put their time and energy into the community, as well. Thanks for helping! 
 
 With that…drumroll please…
 
@@ -28,29 +28,29 @@ With that…drumroll please…
 
 Right out of the gate, Rob Farley, MVP ([B][1] | [T][2]) gave us [The Blocking Nature of Aggregates][3]. He describes the differences between Stream Aggregate and Hash Match with an easy-to-understand example of a card deck. Then, he demonstrates how the Aggregate transformation in SSIS works. 
 
-Mark Broadbent ([B][4] | [T][5]) was a firm believer that you don't need a line of T-SQL to participate! He has aggregated a great list of training media in [T-SQL Tuesday #016 &#8211; SELECT MediaType, SUM(Content) FROM #Sources GROUP BY MediaType][6].
+Mark Broadbent ([B][4] | [T][5]) was a firm believer that you don't need a line of T-SQL to participate! He has aggregated a great list of training media in [T-SQL Tuesday #016 – SELECT MediaType, SUM(Content) FROM #Sources GROUP BY MediaType][6].
 
 Michael J Swart ([B][7] | [T][8]) In [The Aggregate Function PRODUCT()][9], Michael shows us how to build a PRODUCT function, and how he uses it to calculate the value of the dollar after inflation.
 
 Robert Davis, MCM ([B][10] | [T][11]) gives us examples of using aggregates to get information from an XML query plan in [T-SQL Tuesday #16: Using Aggregate Functions in XML][12] .
 
-Nick Haslam ([B][13] | [T][14]) brings us a solid example of how he used PIVOT and aggregation to solve a complex data warehouse load in [T-SQL Tuesday #016 &#8211; Taking it to the MAX][15]. 
+Nick Haslam ([B][13] | [T][14]) brings us a solid example of how he used PIVOT and aggregation to solve a complex data warehouse load in [T-SQL Tuesday #016 – Taking it to the MAX][15]. 
 
-Jacob Sebastian, MVP ([B][16] | [T][17]) A T-SQL Tuesday first-timer (yay!) brings us [T-SQL Tuesday #016 &#8211; Summarizing data using GROUPING SETS()][18], a run-through of GROUPING SETS, with fantastic examples. 
+Jacob Sebastian, MVP ([B][16] | [T][17]) A T-SQL Tuesday first-timer (yay!) brings us [T-SQL Tuesday #016 – Summarizing data using GROUPING SETS()][18], a run-through of GROUPING SETS, with fantastic examples. 
 
 Bradley Ball ([B][19] | [T][20]) provides two scripts, one to get database size statistics, and another for table size statistics, in [T-SQL Tuesday 16: Aggregation][21]. 
 
 Jim McLeod ([B][22] | [T][23]) The burning question on Jim's mind is “Can we reproduce columnstore indexes in SQL Server 2008?” Find out by reading [Can We Reproduce Columnstore Aggregations in SQL 2008?][24] 
 
-Luke Hayler ([B][25] | [T][26]) is a man after my own heart with a Reporting Services 2005 discussion about row groups, column groups and their scope in [T-SQL Tuesday #016 &#8211; Aggregations][27]. Excellent examples, Luke! 
+Luke Hayler ([B][25] | [T][26]) is a man after my own heart with a Reporting Services 2005 discussion about row groups, column groups and their scope in [T-SQL Tuesday #016 – Aggregations][27]. Excellent examples, Luke! 
 
 Robert Matthew Cook ([B][28] | [T][29]) learns something new when he researches CLR Aggregates for [T-SQL Tuesday #016 Aggregate Functions #tsql2sday][30] . 
 
-Noel McKinney ([B][31] | [T][32]) uses CHECKSUM_AGG to determine changes in checksums in a group, for loading a DW. [T-SQL Tuesday #016 &#8211; Aggregation Functions][33] 
+Noel McKinney ([B][31] | [T][32]) uses CHECKSUM_AGG to determine changes in checksums in a group, for loading a DW. [T-SQL Tuesday #016 – Aggregation Functions][33] 
 
-Jason Strate, MVP ([B][34] | [T][35]) is improving query performance &#8211; significantly! &#8211; by aggregating in a correlated subquery. He shows us how in [Aggregating With Correlated Sub-Queries #tsql2sday][36]. 
+Jason Strate, MVP ([B][34] | [T][35]) is improving query performance – significantly! – by aggregating in a correlated subquery. He shows us how in [Aggregating With Correlated Sub-Queries #tsql2sday][36]. 
 
-Ted Krueger, MVP ([B][37] | [T][38]) is deleting data (oh noes!) in [T-SQL Tuesday #016 &#8211; COUNT and DELETE duplicates][39]. Thankfully, it's just duplicate data, and never should have been there in the first place. 
+Ted Krueger, MVP ([B][37] | [T][38]) is deleting data (oh noes!) in [T-SQL Tuesday #016 – COUNT and DELETE duplicates][39]. Thankfully, it's just duplicate data, and never should have been there in the first place. 
 
 Matt Velic ([B][40] | [T][41]) gets a gold star for reinforcing the basics of aggregation with a look back at one of the American film greats, John Hughes, in [T-SQL Tuesday 16: Aggregate the 80s][42] . Also, my _favoritest_ favorite John Hughes movie has to be Uncle Buck. Or maybe The Great Outdoors. Or maybe Weird Science. He was so full awesome, it's hard to pick. 
 
@@ -58,13 +58,13 @@ Denis Gobo, MVP ([B][43] | [T][44]) gives thorough examples of how to chart intr
 
 Bob Pusateri ([B][46] | [T][47]) has a solution for people that don't have time or money for SSAS in [A Poor Man's Data Warehouse][48]. Also: bacon gets an honorable mention here. 
 
-Pinal Dave ([B][49] | [T][50]) A student's question prompted this quick-but-informative post: [SQL SERVER &#8211; Difference between COUNT(DISTINCT) vs COUNT(ALL)][51].
+Pinal Dave ([B][49] | [T][50]) A student's question prompted this quick-but-informative post: [SQL SERVER – Difference between COUNT(DISTINCT) vs COUNT(ALL)][51].
 
 Jen McCown, MVP ([B][52] | [T][53]) serves up some of my favorite T-SQL tricks, like OVER (PARTITION BY) and CTEs in [T-SQL Tuesday #016: Aggregates and Windowing Functions and Ranking! Yum!][54]. 
 
-Andy Lohn ([B][55] | [T][56]) uses CHECKSUM_AGG to verify the data in static tables across different environments in [T-SQL Tuesday #016 &#8211; The Power of the CHECKSUM_AGG][57]. 
+Andy Lohn ([B][55] | [T][56]) uses CHECKSUM_AGG to verify the data in static tables across different environments in [T-SQL Tuesday #016 – The Power of the CHECKSUM_AGG][57]. 
 
-Gill Rowley ([B][58] | [T][58]) gets mathy and creates a factorial function! [T-SQL Tuesday #16 &#8211; Aggregate Functions & Factorials(!)][59] 
+Gill Rowley ([B][58] | [T][58]) gets mathy and creates a factorial function! [T-SQL Tuesday #16 – Aggregate Functions & Factorials(!)][59] 
 
 Kelly Martinez ([B][60] | [T][61]) shows us how to use PIVOT like a pro! [T-SQL Tuesday #16: PIVOT][62] 
 
@@ -76,13 +76,13 @@ Doug Lane ([B][69] | [T][69]) Another man after my heart with a Reporting Servic
 
 Sean McCown, MVP ([B][71] | [T][53]) I've never heard of PowerShell scripts referred to as “cute”, until Sean wrote [T-SQL Tuesday #016: Get DB Sums With Powershell][72]. 
 
-Claire Willett ([B][73] | [T][74]) [T-SQL Tuesday 016 &#8211; When is yesterday, exactly?][75] Claire tells us, “Despite only taking up 20% of the week, Mondays are kind of important.” She then shows us how she used aggregates with dates to pull data for the current business day and previous day. 
+Claire Willett ([B][73] | [T][74]) [T-SQL Tuesday 016 – When is yesterday, exactly?][75] Claire tells us, “Despite only taking up 20% of the week, Mondays are kind of important.” She then shows us how she used aggregates with dates to pull data for the current business day and previous day. 
 
 George Mastros, MVP ([B][76] | [T][77]) walks us through the **how** of [Understanding SQL Server 2000 Pivot with Aggregates][78] . 
 
-Ricardo Leka ([B][79] | [T][80]) A quick but effective script to show blocked processes: [T-SQL Tuesday #016 &#8211; Blocking Processes &#8211; #tsql2sday][81]. 
+Ricardo Leka ([B][79] | [T][80]) A quick but effective script to show blocked processes: [T-SQL Tuesday #016 – Blocking Processes – #tsql2sday][81]. 
 
-Jason Brimhall ([B][82] | [T][83]) [T-SQL Tuesday #016: Aggregates and Statistics][84]. First, I learned something new: what a “quartile” is. And he used OVER &#8211; a favorite! Jason shows us how to use MAX and OVER to properly size production databases. 
+Jason Brimhall ([B][82] | [T][83]) [T-SQL Tuesday #016: Aggregates and Statistics][84]. First, I learned something new: what a “quartile” is. And he used OVER – a favorite! Jason shows us how to use MAX and OVER to properly size production databases. 
 
 Andy Leonard, MVP ([B][85] | [T][86]) proves there are multiple ways to do the same thing with [T-SQL Tuesday: Aggregations in SSIS][87]!
 
@@ -92,9 +92,9 @@ Amit Banerjee ([B][91] | [T][92]) gives us examples of using aggregates for perf
 
 Brad Schulz, MVP ([B][94]) [T-SQL Tuesday #016: AWF-Inspiring Queries][95] Brad, who appears to missing a letter in his last name (ha! Had to, Brad!), walks an order through an identity crisis with the help of window functions. 
 
-Tom Powell ([B][96] | T) Tom shows us the fine points of both functions in [Aggregation &#8211; Getting Totals And Subtotals With ROLLUP And CUBE][97]. 
+Tom Powell ([B][96] | T) Tom shows us the fine points of both functions in [Aggregation – Getting Totals And Subtotals With ROLLUP And CUBE][97]. 
 
-Thomas Rushton ([B][98] | [T][99]) shows us how to check backup sizes. Then he shows us a better way. In the same post! [T-SQL Tuesday #16 &#8211; Aggregates and Average Weekly Backup Sizes][100] 
+Thomas Rushton ([B][98] | [T][99]) shows us how to check backup sizes. Then he shows us a better way. In the same post! [T-SQL Tuesday #16 – Aggregates and Average Weekly Backup Sizes][100] 
 
 Aaron Bertrand, MVP ([B][101] | [T][102]) String concatenation, six ways: which IS the best? Find out in [T-SQL Tuesday # 16 : This is not the aggregate you're looking for][103]. 
 
@@ -104,11 +104,11 @@ Ken Johnson ([B][107] | [T][108]) tackles aggregates from a more philosophical p
 
 Stacia Misner ([B][110] | [T][111]) shows us how to use AGGREGATE in [Retrieving Aggregate Data from Analysis Services for Reports][112]. 
 
-Naomi Nosonovsky ([B][113]) talks about how to perform a PERCENT() function in [T-SQL Tuesday #016 &#8211; TOP N Percent for the group][114]. 
+Naomi Nosonovsky ([B][113]) talks about how to perform a PERCENT() function in [T-SQL Tuesday #016 – TOP N Percent for the group][114]. 
 
-Josh Feierman ([B][115] | [T][116]) Tips! Tricks! Performance Monitoring! MDX! Yes, all of this in one place at [Fun With Aggregation &#8211; TSQL2SDay #16][117]. 
+Josh Feierman ([B][115] | [T][116]) Tips! Tricks! Performance Monitoring! MDX! Yes, all of this in one place at [Fun With Aggregation – TSQL2SDay #16][117]. 
 
-Steve Jones, MVP ([B][118] | [T][119]) Last, but certainly not least, Steve shares a TRUE STORY of how aggregation is ALMOST equal to aggravation &#8211; but he worked around it in the end! [T-SQL Tuesday #016 &#8211; Aggregation][120]
+Steve Jones, MVP ([B][118] | [T][119]) Last, but certainly not least, Steve shares a TRUE STORY of how aggregation is ALMOST equal to aggravation – but he worked around it in the end! [T-SQL Tuesday #016 – Aggregation][120]
 
 **Whew!** 
 

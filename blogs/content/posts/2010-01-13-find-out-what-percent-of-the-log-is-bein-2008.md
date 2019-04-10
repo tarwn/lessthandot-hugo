@@ -42,7 +42,7 @@ ReportServer        55
 tempdb              50
 msdb                5</pre>
 
-Notice that I filtered out the total with this clause _and instance_name <> &#8216;_Total'_ The total number doesn't really make sense for that query. 
+Notice that I filtered out the total with this clause _and instance_name <> '_Total'_ The total number doesn't really make sense for that query. 
 
 Now let's take a look at another query. What if I want to know the size in KB for each log size and also for all of them combined? Here is the query for that.
 

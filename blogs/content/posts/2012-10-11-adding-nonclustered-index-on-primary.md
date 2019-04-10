@@ -49,7 +49,7 @@ GROUP BY
 ```
 IO results
 
-> Table &#8216;IndexPageCount'. Scan count 1, logical reads 164, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p>
+> Table 'IndexPageCount'. Scan count 1, logical reads 164, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p>
  
 
 And the plan generated from this query
@@ -131,7 +131,7 @@ GROUP BY
 ```
 After reviewing the statistics IO from the second execution, the new covering index was utilized and showed an improvement on logical reads.
 
-> Table &#8216;IndexPageCount'. Scan count 1, logical reads 29, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p>
+> Table 'IndexPageCount'. Scan count 1, logical reads 29, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p>
 Looking at the execution plan, we can see the new nonclustered index is effectively being utilized as well.
 
 <div class="image_block">

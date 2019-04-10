@@ -82,7 +82,7 @@ If you now locate the file in the bin directory and open the file, you should se
 
 ## Export in csv format
 
-Exporting in csv format is pretty much the same as before with the addition of &#8211;csv. Our command will look like this
+Exporting in csv format is pretty much the same as before with the addition of –csv. Our command will look like this
 
 <pre>mongoexport --db ExportDb --collection Person --csv -fields name,age</pre>
 
@@ -102,7 +102,7 @@ C:NoSQLmongodbbin></pre>
 
 Just like before we want to direct the output into a file instead of onto the screen, we will just add -o Person.csv to the command , the command will look like this
 
-mongoexport &#8211;db ExportDb &#8211;collection Person &#8211;csv -fields name,age -o Person.csv
+mongoexport –db ExportDb –collection Person –csv -fields name,age -o Person.csv
 
 <pre>C:NoSQLmongodbbin>mongoexport --db ExportDb --collection Person --csv -fields name,age -o Person.csv
 connected to: 127.0.0.1

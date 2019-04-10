@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-In a merge replicating world, laptops are typically the majority of the subscribing machines.  With laptops and any other user controlled computer, changes can come up &#8211; upgrades are needed or new hardware rollouts.  These all cause the need for a new or rebuilt laptop / desktop to be issued to users.  Many times when the need for a rebuild or replacement happens and the machine was subscribing to a merge replication publication, the steps taken are to apply a new snapshot.  This is typically needed once a DBA calls for the need to reinitialize the subscriber off a new snapshot.  Although this method works, it is a massively time consuming process and isn’t’ needed.
+In a merge replicating world, laptops are typically the majority of the subscribing machines.  With laptops and any other user controlled computer, changes can come up – upgrades are needed or new hardware rollouts.  These all cause the need for a new or rebuilt laptop / desktop to be issued to users.  Many times when the need for a rebuild or replacement happens and the machine was subscribing to a merge replication publication, the steps taken are to apply a new snapshot.  This is typically needed once a DBA calls for the need to reinitialize the subscriber off a new snapshot.  Although this method works, it is a massively time consuming process and isn’t’ needed.
 
 **Replication and Domains** 
 
@@ -46,7 +46,7 @@ EXEC sp_detach_db 'SalesMan', 'true';
 
  
 
-Now, copy the mdf and ldf filed for the database to an external storage device.  This can be any type of storage &#8211; a USB drive, external HDD or network storage area.  Shut down the old machine and start the new machine or, if the new machine is already started and the name is different, rename the new machine to the same as the old machinee.  You will probably need to work with your domain admin to remove the machine from the domain before shutting the old machine down.
+Now, copy the mdf and ldf filed for the database to an external storage device.  This can be any type of storage – a USB drive, external HDD or network storage area.  Shut down the old machine and start the new machine or, if the new machine is already started and the name is different, rename the new machine to the same as the old machinee.  You will probably need to work with your domain admin to remove the machine from the domain before shutting the old machine down.
 
 Once you’ve renamed the new machine to the same as the old machine, attach the database.  This is done by first copying the mdf and ldf into the directory on the machine where you want them to be located.  Then attach the database using the CREATE DATABASE statement.
 

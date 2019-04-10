@@ -29,7 +29,7 @@ This is not guaranteed to be the only way to do this, just the one that worked f
   
 3. No extra work to remember when I add new configuration pages client-side
 
-## Program.cs &#8211; Rename WebRoot
+## Program.cs – Rename WebRoot
 
 In my Program.cs file, I renamed wwwroot to Assets:
 
@@ -48,7 +48,7 @@ public static void Main(string[] args)
     host.Run();
 }
 ```
-## Startup.cs &#8211; Default Files, Assets, Client Routes
+## Startup.cs – Default Files, Assets, Client Routes
 
 Then in my Startup.cs file I added configuration to load “index.html” by default, static files in my “Assets” folder, and URL rewriting to rewrite client-side route patterns to the base “index.html” file:
 

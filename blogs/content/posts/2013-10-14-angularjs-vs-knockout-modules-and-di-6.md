@@ -270,7 +270,7 @@ I'd compare RequireJS + Knockout to Angular, but when we included RequireJS we n
 
 ## Final Thoughts
 
-In both cases there is one unanswered issue. When is your application too big for keeping it all in a couple files? When does it become so large it impacts the user's ability to load it via script tags, impacts our ability to keep our dependencies straight, etc. I think 10 &#8211; 20 modules is not too bad to keep track of as separate files, but I wouldn't want to go larger than that. I could easily use namespacing with Knockout instead of a module loader for something that small, though it's not as clean when it comes time to unit test (that post is coming, don't worry).
+In both cases there is one unanswered issue. When is your application too big for keeping it all in a couple files? When does it become so large it impacts the user's ability to load it via script tags, impacts our ability to keep our dependencies straight, etc. I think 10 – 20 modules is not too bad to keep track of as separate files, but I wouldn't want to go larger than that. I could easily use namespacing with Knockout instead of a module loader for something that small, though it's not as clean when it comes time to unit test (that post is coming, don't worry).
 
 So what is big? When do we need to switch from a few files or one big minified file to a module loader or a bundler like [Cassette][14] that can auto bundle everything based on include comments? Is there a sweet spot in between where just have modules and DI without asynchronous loading is perfect? Or is asynchronous loading for “huge” applications (defined by Brian Ford above as tens and hundreds of thousands of lines) totally unnecessary?
 

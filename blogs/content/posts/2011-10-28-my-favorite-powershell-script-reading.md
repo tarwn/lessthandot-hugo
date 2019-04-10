@@ -53,7 +53,7 @@ That output is sent to the Sort-Object –Descending LastWriteTime command, whic
 
 Here, the two commands split. 
 
-The first command sends output to the Select &#8211; First command, which pulls the latest file. –Property LastWriteTime will display the time the log was written. This is helpful to me so I can see when my job started. 
+The first command sends output to the Select – First command, which pulls the latest file. –Property LastWriteTime will display the time the log was written. This is helpful to me so I can see when my job started. 
 
 The second command sends output to the Get-Content command, which displays the text file in my ISE window. I can then review it for errors. 
 

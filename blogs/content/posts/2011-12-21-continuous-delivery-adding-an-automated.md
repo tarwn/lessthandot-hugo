@@ -24,7 +24,7 @@ tags:
 Human beings are good at creative tasks. Put an end user in front of an interface and ask them to find an error and good luck stuffing that particular cat back into the bag. Where we don't perform as well is performing those tasks repetitively. After several cycles we begin to lose focus, start listening more to our expectations than what we are actually seeing in front of us, gradually forget steps, or worse lose track and have to restart from the beginning. By automating the redundant tasks, we play to the strengths of the computer and free the human to return to creative duties.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p5.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p5.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline – Focus of Current Post
 </div>
 
 This is the fifth post in a multi-part series on my Continuous Delivery pipeline project. The [previous post][1] completed the Continuous Integration job by performing a test deployment of the final package. In this post I'll build the next stage in the pipeline, a job that is responsible for performing automated system testing against the website.
@@ -100,7 +100,7 @@ With a basic automated interface project built, I have enough of what I need to 
 Opening Jenkins in my browser, I create a New Job, selecting the freestyle project and specifying the name and a useful description. In the job configuration I go ahead and setup the mercurial repository information to pull down the Automated Interface test code. I then add steps to execute a build of the project and verify that the job works so far.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_build.png" title="Build Configuration" /><br /> Interface Tests &#8211; Build Configuration
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_build.png" title="Build Configuration" /><br /> Interface Tests – Build Configuration
 </div>
 
 To test the settings thus far, I'll trigger a build manually and verify this portion of the project works. I'll also go ahead and add [twitter][5] to my post-build steps again, just because.
@@ -112,13 +112,13 @@ With the build step working, now I can focus on picking up the artifacts from th
 In the top of my job configuration I'll check the “This Build is Parametrized” box and add a SOURCE\_BUILD\_NUMBER parameter where I will specify the CI Job's build number that I want to run against. Initially this will require me to manually enter the build number, a bit later I'll return to the CI Build and create a trigger to pass the parameter automatically.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_params.png" title="Build Parameters" /><br /> Interface Tests &#8211; Build Parameters
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_params.png" title="Build Parameters" /><br /> Interface Tests – Build Parameters
 </div>
 
 Next, I'll add a “Copy artifacts from another project” step (Thank you “Copy Artifacts” plugin) to the top of the build steps. This plugin has a number of different options, but I'll use the build number I passed in as a parameter to retrieve the artifacts. Using the parametrized number option allows me to run the job by typing a build number in, which can be handy, and is similar to how the later QA and Production deploy stages will be setup to retrieve artifacts (I like consistency).
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_artifacts.png" title="Copy Artifacts" /><br /> Interface Tests &#8211; Copy Artifacts
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_artifacts.png" title="Copy Artifacts" /><br /> Interface Tests – Copy Artifacts
 </div>
 
 At this point I realized I had forgotten to check the “Clean Build” option in my Mercurial settings, so I'll go back and add that so I don't risk having a stale copy of the artifacts from a prior run.
@@ -128,7 +128,7 @@ At this point I realized I had forgotten to check the “Clean Build” option i
 Now that I have all the pieces in place, it's just a matter of putting them together. Like the CI Build Job, I'll create a Deploy batch command and a Smoke Test batch command. The only difference is that here I have specified a different target website and I have used the parametrized “SOURCE\_BUILD\_NUMBER” instead of the local BUILD_NUMBER environment variable.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_deploy.png" title="Deploy for Testing" /><br /> Interface Tests &#8211; Deploy for Testing
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_deploy.png" title="Deploy for Testing" /><br /> Interface Tests – Deploy for Testing
 </div>
 
 I'll also configure the test results to be captured in the Post-build, just like the CI Build.
@@ -138,7 +138,7 @@ I'll also configure the test results to be captured in the Post-build, just like
 I'll download Nunit from the [Nunit website][6] and install that on my server, then create the last two steps to put the correct configuration file in my assembly folder and run the Nunit testrunner to execute the tests. At this point I'll also install Firefox on the server, as that is the browser I am automating for the tests.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_runtests.png" title="Run the Tests" /><br /> Interface Tests &#8211; Run the Tests
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_runtests.png" title="Run the Tests" /><br /> Interface Tests – Run the Tests
 </div>
 
 The first step is a basic copy command to copy the prepared “auto” config to “TestRun.config”, the file my test code will pick up when it starts. The Nunit command executes the nunit console against the compiled assembly, which runs all available test methods in the assembly, just as if I was running it from the GUI.
@@ -150,7 +150,7 @@ The last part, before I run my build again, is to import the results of the test
 With that completed, I'll run the test again to verify the results.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_failedrun.png" title="Failed Test" /><br /> Interface Tests &#8211; Failed Test
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_failedrun.png" title="Failed Test" /><br /> Interface Tests – Failed Test
 </div>
 
 Hmm, that saves me the trouble of breaking the tests to make sure the results are accurate. It turns out when I was cleaning up absolute paths in the MVCMusicStore project I missed the link under the logo, so when the tests tried to navigate through that link they didn't get to the page they were expecting and correctly failed the test.
@@ -162,7 +162,7 @@ Fix that issue, wait for the CI Build to run again, trigger this job with the nu
 The last step is to configure the CI Build to automatically trigger this new job when it completes. Opening the CI Build job, there is a new option in the Post-build configuration section that was added when I installed the “Trigger Parametrized Builds” plugin. I'll add a “Predefined Parameter” with the same name as I used in the new job, SOURCE\_BUILD\_NUMBER, and I'll populate it with the local BUILD_NUMBER environment variable of the CI Build job.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_parameterized.png" title="Parameterized Build Trigger" /><br /> CI Build &#8211; Parameterized trigger
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_parameterized.png" title="Parameterized Build Trigger" /><br /> CI Build – Parameterized trigger
 </div>
 
 Saving the change, when I execute a CI job now, it successfully triggers an Automated Interface Test job on the build artifact it just completed.

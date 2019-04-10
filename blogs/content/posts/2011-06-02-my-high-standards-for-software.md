@@ -1,5 +1,5 @@
 ---
-title: My ‘High Standards’ for Software Development
+title: My 'High Standards’ for Software Development
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-06-02T10:22:00+00:00
@@ -21,7 +21,7 @@ tags:
   <img src="http://tiernok.com/LTDBlog/rant.png" alt="Ranting Guy" style="height: 75px; " />
 </div>
 
-Follow me on twitter for a few weeks and you will inevitably see comments reflecting my &#8216;high standards', generally in the form of frustration when something falls short. As a technical user I have little patience with software that is difficult to use, communicates poorly, or leaves my systems in an unstable state. Driving this frustration is the fact that we have been discussing these issues since well before I joined the field, yet I am still being sold software that doesn't meet even basic standards of usability and safety.
+Follow me on twitter for a few weeks and you will inevitably see comments reflecting my 'high standards', generally in the form of frustration when something falls short. As a technical user I have little patience with software that is difficult to use, communicates poorly, or leaves my systems in an unstable state. Driving this frustration is the fact that we have been discussing these issues since well before I joined the field, yet I am still being sold software that doesn't meet even basic standards of usability and safety.
 
 _Note: this has been sitting the queue for several months. It's not the product of a single instance of bad software, but rather the culmination of a long line of barely usable applications that had a questionable ability to tell me if they were actually working or not._
 
@@ -37,7 +37,7 @@ Usability isn't a black and white topic. You don't have to be an Apple to provid
 
 Many would argue that improving user experience costs time or resources without appreciable (or needed) benefit. Ensuring that the language used throughout the application is the same, buttons and icons follow a consistent pattern throughout the application, or the response time fits into the [10/1.0/0.1 model][1] does not provide a new form or feature we can show the client. 
 
-Usability, however, does not provide value in bits, it provides overall value. Using consistent terminology that reflects the usage of the end consumer reduces the perceived complexity of the application, making it more &#8216;intuitive', more &#8216;obvious', and &#8216;quick to learn'. Standing on the shoulders of common language and making it easier for your customer or consumer to give you money is not useless. The smaller the consumer market, the easier this should be, reducing customer confusion, training time, time lost to unnecessary phone calls, support costs, opportunity costs, and even reducing demo and end-user sign-off times. The end-user is familiar with the process the application is going to replace or enhance, using unfamiliar terminology, inconsistent terminology, or radically different workflows will frustrate them. Happy customers bring more business and trust, frustrated customers bring less business and distrust.
+Usability, however, does not provide value in bits, it provides overall value. Using consistent terminology that reflects the usage of the end consumer reduces the perceived complexity of the application, making it more 'intuitive', more 'obvious', and 'quick to learn'. Standing on the shoulders of common language and making it easier for your customer or consumer to give you money is not useless. The smaller the consumer market, the easier this should be, reducing customer confusion, training time, time lost to unnecessary phone calls, support costs, opportunity costs, and even reducing demo and end-user sign-off times. The end-user is familiar with the process the application is going to replace or enhance, using unfamiliar terminology, inconsistent terminology, or radically different workflows will frustrate them. Happy customers bring more business and trust, frustrated customers bring less business and distrust.
 
 ### The Time
 
@@ -88,7 +88,7 @@ The other side of error messages is the technical perspective.
 When an application doesn't provide me with a meaningful error message I am left wondering if the application even knows why it failed. I immediately call into question the stability of the application, because if it doesn't know why it failed then it is also likely it didn't leave things in a good state (returning to the atomicity point). So, like the end user above, I know I have something that I might have to clean up after, but I have no clue what went wrong and no way to request assistance. 
 
 <div style="text-align: center; color: #c04623; margin: .5em; font-size: 1.25em;">
-  “Hi, I got the error &#8216;We are sorry, the system had a general error', what do I do next? Is my data still good?”
+  “Hi, I got the error 'We are sorry, the system had a general error', what do I do next? Is my data still good?”
 </div>
 
 I have no idea what that partially complete task has done to the stability of my systems, so it's possible it has just caused problems elsewhere in my environment and I now need to waste my time trying to reproduce the error, not just to get the task done, but also to determine what else has been broken. 
@@ -97,7 +97,7 @@ Like the atomicity issue, if I continue to get poor communications from an appli
 
 ## Setting the Bar
 
-What should be obvious by this point is that I'm a little type A and that I expect a certain level of usability and design from applications I use (and build). When I'm ranting about an application or system, on twitter or in person, it's because I consider consistency, clear communications, and atomicity to be basic attributes of an application. Ignoring these basic levels of usability and atomicity makes an application sub-par and a developer that has consistently ignored them throughout their career is not yet what I would qualify as &#8216;experienced'. 
+What should be obvious by this point is that I'm a little type A and that I expect a certain level of usability and design from applications I use (and build). When I'm ranting about an application or system, on twitter or in person, it's because I consider consistency, clear communications, and atomicity to be basic attributes of an application. Ignoring these basic levels of usability and atomicity makes an application sub-par and a developer that has consistently ignored them throughout their career is not yet what I would qualify as 'experienced'. 
 
 A good developer delivers solutions. If it doesn't work, can't be used, or causes more work then it solves, then it isn't a solution.
 

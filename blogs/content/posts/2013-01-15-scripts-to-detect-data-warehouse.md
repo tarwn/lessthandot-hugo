@@ -151,7 +151,7 @@ WHERE   rt.name LIKE 'Fact%'
 
  
 
-#### Detect missing foreign key(s) in fact tables &#8211; Columns suffixed with Key, but don't have foreign key constraint:
+#### Detect missing foreign key(s) in fact tables – Columns suffixed with Key, but don't have foreign key constraint:
 
 I stole the following query from [here][3] posted by [George Mastros][4], and replaced ID with Key to use it for data warehouse scenario.
 

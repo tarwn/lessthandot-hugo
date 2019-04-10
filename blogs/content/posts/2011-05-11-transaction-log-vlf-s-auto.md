@@ -61,11 +61,11 @@ You should then see something similiar to this:
 
 Columns of note are:
 
-FileSize &#8211; file size in bytes.
+FileSize – file size in bytes.
 
-Status &#8211; 0 not in use, 2 in use.
+Status – 0 not in use, 2 in use.
 
-CreateLSN &#8211; Log Sequence Number.
+CreateLSN – Log Sequence Number.
 
 When looking to optimize the T-Log we are looking actually looking to allocate the right number, and correctly sized VLF's. When VLF's are created, either by autogrow or a manual grow; a certain number of VLF's are allocated according to the size.
 

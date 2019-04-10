@@ -21,26 +21,26 @@ Over the course of the next hour the LTD website will be undergoing conversion t
   
 the new format. What this means is that we will spend about the next 15 minutes or so without any visible changes. Then everything will break horribly. Then (hopefully) everything will look right again and we will be on the new layout.
 
-  * **Done!** &#8211; Basic Backups as precaution
-  * **Done!** &#8211; Copying new files and breaking site
-  * **Done!** &#8211; Configuring Forum
-  * **Done!** &#8211; Configuring Wiki
-  * **Done!** &#8211; Configuring Blogs
-  * **Done?** &#8211; Final Tests
+  * **Done!** – Basic Backups as precaution
+  * **Done!** – Copying new files and breaking site
+  * **Done!** – Configuring Forum
+  * **Done!** – Configuring Wiki
+  * **Done!** – Configuring Blogs
+  * **Done?** – Final Tests
 
 I will continue to post updates as we go.
 
-12:26 PM EST &#8211; Completed backups
+12:26 PM EST – Completed backups
   
-12:41 PM EST &#8211; Finished copying + minimal blog fixes
+12:41 PM EST – Finished copying + minimal blog fixes
   
-12:46 PM EST &#8211; Finished forum settings
+12:46 PM EST – Finished forum settings
   
-12:48 PM EST &#8211; Finished Wiki
+12:48 PM EST – Finished Wiki
   
-12:58 PM EST &#8211; Finished Blogs
+12:58 PM EST – Finished Blogs
   
-1:04 PM EST &#8211; DONE! …ish
+1:04 PM EST – DONE! …ish
 
 **The Bottom!**
   

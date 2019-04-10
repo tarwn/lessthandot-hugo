@@ -22,7 +22,7 @@ tags:
 ---
 I see more and more people asking how to check if a temporary table exists. How do you check if a temp table exists? 
 
-You can use IF OBJECT_ID(&#8216;tempdb..#temp') IS NOT NULL Let's see how it works 
+You can use IF OBJECT_ID('tempdb..#temp') IS NOT NULL Let's see how it works 
 
 sql
 --Create table 

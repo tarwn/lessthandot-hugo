@@ -32,17 +32,17 @@ I am an Assistant Vice President | Database Administration Manager at Republic B
 
 End of the day I’m a regular guy who hopes to inspire others to be the best they can be whether it is being a DBA or something else.
 
-### You're an athlete &#8211; we share a love of running, and you love basketball (although this five-foot-tall person does not). What is the most important life lesson you've learned from athletics?
+### You're an athlete – we share a love of running, and you love basketball (although this five-foot-tall person does not). What is the most important life lesson you've learned from athletics?
 
 5 ft. tall!! You could be our point guard.
 
-There are so many lessons that I've learned over the years from sports &#8211; hard work ethic, teamwork, leadership, being a play maker. But more than anything else I learned the importance of determination. Basketball has been a huge part of my past. You have to put the work in to become better; same concept in our professional careers.
+There are so many lessons that I've learned over the years from sports – hard work ethic, teamwork, leadership, being a play maker. But more than anything else I learned the importance of determination. Basketball has been a huge part of my past. You have to put the work in to become better; same concept in our professional careers.
 
 I can remember waking up at 3 a.m. to go to the gym before classes to shoot 1,000 jump shots, or running wind sprints in the street followed by going to class, then hitting afternoon practice sessions. To be good at anything you have to put in the effort; when someone says you can't do it chances are I will be seen working toward proving that you can do it.
 
 Hard work and determination does pay off.
 
-### You recently stepped up to the plate (ha! another sport!) and helped organize SQL Saturday Louisville. First, thank you &#8211; having run several events, I know it takes a team of dedicated people. Second, what did you learn? Third, would you encourage others to volunteer, too?
+### You recently stepped up to the plate (ha! another sport!) and helped organize SQL Saturday Louisville. First, thank you – having run several events, I know it takes a team of dedicated people. Second, what did you learn? Third, would you encourage others to volunteer, too?
 
 First up is the dedicated people. I was humbled to be allowed the opportunity to jump in and help with this year's event. Up to this point I've attended several of these, and spoken at other conferences and UG's; I never really thought about the behind the scenes people and what it takes to put an event like this on. SQLSat403 in Louisville showed me how much effort a dedicated team is needed. Very thankful for the opportunity.
 
@@ -72,4 +72,4 @@ Physical Therapist. Initially, I started down the path in sports medicine due to
 
 * * *
 
-Now you know why Chris is one of my favorite people &#8211; he's motivated, helpful, and he loves Extended Events. Make sure to introduce yourself if you're at an event with him!
+Now you know why Chris is one of my favorite people – he's motivated, helpful, and he loves Extended Events. Make sure to introduce yourself if you're at an event with him!

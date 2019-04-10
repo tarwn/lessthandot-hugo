@@ -17,7 +17,7 @@ categories:
 ---
 This blog is part of my series [Making Data Tell a Story With SSRS Properties][1].
 
-Today my guest blogger is my good friend Doug Lane &#8211; a fellow blogger, presenter, and runner. If you ever get a chance to watch Doug present, do it! His lightning talk at PASS Summit 2011 on framing had me rolling with laughter.
+Today my guest blogger is my good friend Doug Lane – a fellow blogger, presenter, and runner. If you ever get a chance to watch Doug present, do it! His lightning talk at PASS Summit 2011 on framing had me rolling with laughter.
 
 Today, Doug is talking about [InnerPlotPosition][2].
 

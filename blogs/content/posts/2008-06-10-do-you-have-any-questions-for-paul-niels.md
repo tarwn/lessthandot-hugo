@@ -19,7 +19,7 @@ Paul Nielsen is the author of [SQL Server 2005 Bible][1] and blogs at http://sql
 
 Louis Davidson is the author of [Pro SQL Server 2005 Database Design and Optimization][2] and he blogs at http://sqlblog.com/blogs/louis_davidson/default.aspx.
 
-Both of these authors have 2008 editions of their book coming out this year. So do you have anything in mind that you would like to ask them? In general try to keep it SQL Server related. I interviewed Louis before on my old blog and to give you a little ‘feel’ of what the interview will look like I pasted some links below. These links are all the interviews I have done so far with SQL people.
+Both of these authors have 2008 editions of their book coming out this year. So do you have anything in mind that you would like to ask them? In general try to keep it SQL Server related. I interviewed Louis before on my old blog and to give you a little 'feel’ of what the interview will look like I pasted some links below. These links are all the interviews I have done so far with SQL people.
 
 [Interview With SQL Server MVP Louis Davidson: Author Of Pro SQL Server 2005 Database Design and Optimization][3] 
 

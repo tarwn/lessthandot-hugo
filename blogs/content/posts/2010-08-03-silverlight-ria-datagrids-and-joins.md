@@ -22,7 +22,7 @@ Lately we've been playing around with RIA services for Silverlight. Using them w
 
 ## Watch and Learn
 
-If you are unfamiliar with RIA in Silverlight, I would recommend this video: <http://www.silverlight.net/learn/videos/all/net-ria-services-intro/>. It is a complete walk through of creating a demo from the &#8216;Business Application' template in Visual Studio for SL 3. If you are working in SL4, be sure to check the comments in the video for the breaking changes.
+If you are unfamiliar with RIA in Silverlight, I would recommend this video: <http://www.silverlight.net/learn/videos/all/net-ria-services-intro/>. It is a complete walk through of creating a demo from the 'Business Application' template in Visual Studio for SL 3. If you are working in SL4, be sure to check the comments in the video for the breaking changes.
 
 ## What's the Skinny?
 
@@ -36,11 +36,11 @@ I have a relational database, in this case I am looking at the _League_ and _Pla
 
 ## Reprimanding that Lazy EF
 
-On the server side, find your service class. It should be called something like &#8216;MyApplicationDomainService1' and be in the &#8216;Services' folder by default. In that class look for a method called &#8216;GetMyObjects' where MyObjects is the collection you are binding to on the client side. It should contain something like &#8216;Return (Me.ObjectContext.MyObjects)'. Change it to:
+On the server side, find your service class. It should be called something like 'MyApplicationDomainService1' and be in the 'Services' folder by default. In that class look for a method called 'GetMyObjects' where MyObjects is the collection you are binding to on the client side. It should contain something like 'Return (Me.ObjectContext.MyObjects)'. Change it to:
   
 <code =VB>Return (Me.ObjectContext.MyObjects.Include("MyChildObject")</code>
   
-In my case this was the &#8216;GetLeagues' method and it contains: &#8216;Return (Me.ObjectContext.Leagues.Include(“Player”))'
+In my case this was the 'GetLeagues' method and it contains: 'Return (Me.ObjectContext.Leagues.Include(“Player”))'
 
 This will tell the Entity Framework model that it should Eager Load the .Player property. But before we rejoice and rebuild, wait, there's more!
 

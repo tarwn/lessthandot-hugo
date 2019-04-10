@@ -61,7 +61,7 @@ Policies can be created either with T-SQL or SSMS. In T-SQL, the following syste
 
 These system procedures are not well documented as you will find in Books Online. SSMS is commonly the primary tool for creating, editing and viewing policies. To view how the system procedures are utilized, script out policies and conditions to better understand what SSMS executes behind the management tools.
 
-With SSMS, the task of handling the syntax of using executesql() is far easier to achieve a successfully parsed statement. This comes is even more relevant when quotes are required in your T-SQL statements. With SSMS and the query entry windows, single apostrophes are set to multiple apostrophes as needed when the query is saved and parsed. If you were to enter two apostrophes such as ” to equate to &#8216;, this would require four to execute properly in a direct procedure call.
+With SSMS, the task of handling the syntax of using executesql() is far easier to achieve a successfully parsed statement. This comes is even more relevant when quotes are required in your T-SQL statements. With SSMS and the query entry windows, single apostrophes are set to multiple apostrophes as needed when the query is saved and parsed. If you were to enter two apostrophes such as ” to equate to ', this would require four to execute properly in a direct procedure call.
 
 To set the policy up with SSMS, Right click policies in SSMS under the Management node and click, New Policy¡K
 

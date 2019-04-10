@@ -22,7 +22,7 @@ tags:
 ---
 Several weeks ago I started digging into WebMatrix. Over the course of a weekend I was able to put together a quick, functioning website, pick up some basics of working with WebMatrix and the deployment tool, and play with a few other technologies as well. Then I stepped back and realized I was only using a percentage of it's capabilities.
 
-I've read a lot of blogs and articles on Web Matrix and none of them prepared me for the sheer range of capabilities this little tool offers. One would mention writing a web page, another would talk about deployment, a third about WordPress…it wasn't until I started playing with it and went to write a blog entry of my own that I realized how much capability was packed into this one &#8216;little' tool. 
+I've read a lot of blogs and articles on Web Matrix and none of them prepared me for the sheer range of capabilities this little tool offers. One would mention writing a web page, another would talk about deployment, a third about WordPress…it wasn't until I started playing with it and went to write a blog entry of my own that I realized how much capability was packed into this one 'little' tool. 
 
 This isn't a deep dive, there's plenty of those. This is a shallow float across the surface of what is actually a quite impressive (and don't forget free) tool.
 
@@ -56,7 +56,7 @@ _Note: it was at this point I noticed my MySQL installation was annoyed and not 
 
 **More Depth:** [A WordPress Blog in 15 Minutes with WebMatrix][1]
 
-## Building Sites &#8211; But Wait, There's More
+## Building Sites – But Wait, There's More
 
 Ok, so what if we want to build our own site?
 
@@ -124,7 +124,7 @@ Later on when we deploy we get an interesting option for SDF files. They are tre
   
 **More Depth:** [Everything SQL Server Compact site][7]
   
-**More Depth:** [Code-First Development (EF) w/ SQL CE 4.0][8] &#8211; I wonder, if you do it DB-first is the code actually larger than the DB?
+**More Depth:** [Code-First Development (EF) w/ SQL CE 4.0][8] – I wonder, if you do it DB-first is the code actually larger than the DB?
 
 ## Site Reports
 
@@ -166,9 +166,9 @@ Deployments after the initial one are not full site deployments. The tool will s
 
 One problem I have run into, coming from a larger scale database background, was that sometimes I would forget to download a fresh copy of the database before making schema changes (so I then had to download the database, make the changes again, then deploy it back to the live site).
 
-**More Depth:** [Publish Your Website &#8211; IIS.Net][13]
+**More Depth:** [Publish Your Website – IIS.Net][13]
   
-**More Depth:** [Microsoft WebMatrix in Context and Deploying Your First Site &#8211; Scot Hanselman][14]
+**More Depth:** [Microsoft WebMatrix in Context and Deploying Your First Site – Scot Hanselman][14]
 
 ## The Bad News
 

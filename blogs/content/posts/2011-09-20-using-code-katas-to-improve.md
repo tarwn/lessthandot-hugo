@@ -58,12 +58,12 @@ The last benefit to a programming kata is we can throw it away when we're done o
 
 So, if you wanted to try this out, where could you start?
 
-  * [CodeKata.PragProg.com][5] &#8211; Dave Thomas has listed 21 programming and non-programming exercises
-  * Forums &#8211; Find a forum question that requires more than 5 lines of code for an answer. Write it, reinvent it, mix, repeat
-  * [Coding Dojo][6] &#8211; A catalog of 23 katas
-  * [Project Euler][7] &#8211; a series of challenging math problems that make excellent practice problems
-  * [TopCoder][8] &#8211; Though it exists as a programming competition, the sample and practice problems at TopCoder make good katas (if you can get the crash-friendly interface to work and find them, that is)
-  * Blogging &#8211; Writing about a topic forces us to explore and better define or communicate it
+  * [CodeKata.PragProg.com][5] – Dave Thomas has listed 21 programming and non-programming exercises
+  * Forums – Find a forum question that requires more than 5 lines of code for an answer. Write it, reinvent it, mix, repeat
+  * [Coding Dojo][6] – A catalog of 23 katas
+  * [Project Euler][7] – a series of challenging math problems that make excellent practice problems
+  * [TopCoder][8] – Though it exists as a programming competition, the sample and practice problems at TopCoder make good katas (if you can get the crash-friendly interface to work and find them, that is)
+  * Blogging – Writing about a topic forces us to explore and better define or communicate it
 
 The best way to start is to pick something you feel like you can finish in 15-30 minutes and try to do a variant of it every day or two. If you feel like you're not getting any value out of it after a week or two, you can stop; your time investment has been low. If you do start seeing some value in it, though, you have another tool for keeping your skills relevant and sharp.
 

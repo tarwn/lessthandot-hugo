@@ -17,11 +17,11 @@ categories:
   - Data Modelling and Design
 
 ---
-In this blog post I want to discuss a problem I encounter frequently in SQL related forums &#8211; how to perform dynamic PIVOT involving multiple columns using pure T-SQL solution. In SQL Server Reporting Services this functionality can be easily achieved using [Matrix template][1].
+In this blog post I want to discuss a problem I encounter frequently in SQL related forums – how to perform dynamic PIVOT involving multiple columns using pure T-SQL solution. In SQL Server Reporting Services this functionality can be easily achieved using [Matrix template][1].
 
 With the introduction of PIVOT operator in SQL 2005, it became very easy to write queries that transform rows into columns. There are numerous articles on the Web as how to perform PIVOT and even dynamic PIVOT. However, most of these articles explain how to perform such queries for just one column. I want to expand the transformation for multiple columns.
 
-The idea of a solution is quite simple &#8211; you need to generate the SQL dynamically. Since we want to use pivot on multiple columns, we need to use [CASE based pivot][2].
+The idea of a solution is quite simple – you need to generate the SQL dynamically. Since we want to use pivot on multiple columns, we need to use [CASE based pivot][2].
 
 You need to keep in mind, that resulting query should have less than 1024 columns. You may build the check for number of columns into the query.
 
@@ -29,7 +29,7 @@ Now, every time I need to create a dynamic query, I need to know what is the fin
 
 Let's consider the first example based on the AdventureWorks SalesOrderHeader table.
   
-This code creates the table we're going to transform &#8211; it gives us summary of orders and total due per each quarter:
+This code creates the table we're going to transform – it gives us summary of orders and total due per each quarter:
 
 sql
 USE AdventureWorks 

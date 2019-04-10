@@ -56,7 +56,7 @@ SELECT @SomeCount
 
 The value that the @SomeCount parameter returns will be 1 because the _SET @param = value_ always sets the @@ROWCOUNT value to 1. Here is what Books On Line has on statements that make a simple assignment 
 
-> Statements that make a simple assignment always set the @@ROWCOUNT value to 1. No rows are sent to the client. Examples of these statements are: SET @local_variable, RETURN, READTEXT, and select without query statements such as SELECT GETDATE() or SELECT &#8216;Generic Text'.
+> Statements that make a simple assignment always set the @@ROWCOUNT value to 1. No rows are sent to the client. Examples of these statements are: SET @local_variable, RETURN, READTEXT, and select without query statements such as SELECT GETDATE() or SELECT 'Generic Text'.
 
 Let's look at another example, what do you think will be returned in the query below
 

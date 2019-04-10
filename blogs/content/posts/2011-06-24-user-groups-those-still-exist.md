@@ -71,7 +71,7 @@ If you haven’t been attending your local user group meeting – whether that�
 
 **PASS** – SQL Server User Groups: <http://www.sqlpass.org/PASSChapters.aspx> 
   
-**INETA** &#8211; .NET User Groups: <http://www.ineta.org/>
+**INETA** – .NET User Groups: <http://www.ineta.org/>
   
 **GITCA** – General IT: <http://www.gitca.org/Pages/default.aspx>
 

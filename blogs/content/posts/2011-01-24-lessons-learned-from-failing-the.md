@@ -31,7 +31,7 @@ More importantly, it was reinforced that the SQL community is the best. People a
 
 I think Grant Fritchey ([Blog][1] | [Twitter][2]) made the biggest impact this morning when he tweeted “You had the guts to try. I still haven't tried one of the exams. You'll get it next time.” 
 
-Yes, I will. I don't know when that is &#8211; I'm not sure when I will reschedule my exam &#8211; but I know what I need to do now, and I'm ready to get started. After a week off.
+Yes, I will. I don't know when that is – I'm not sure when I will reschedule my exam – but I know what I need to do now, and I'm ready to get started. After a week off.
 
  [1]: http://scarydba.com
  [2]: http://twitter.com/#!/GFritchey

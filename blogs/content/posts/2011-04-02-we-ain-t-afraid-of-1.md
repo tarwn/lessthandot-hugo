@@ -34,39 +34,39 @@ categories:
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">USE</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: blue;">master</span> <span style="mso-tab-count: 5;">                            </span><span style="color: green;">&#8211;@@ERROR contains 0</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">USE</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: blue;">master</span> <span style="mso-tab-count: 5;">                            </span><span style="color: green;">–@@ERROR contains 0</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 1;">   </span><span style="color: blue;">SELECT</span> <span style="color: gray;">*</span> <span style="color: blue;">FROM</span> <span style="color: green;">sysobjects</span> <span style="mso-tab-count: 1;">     </span><span style="mso-tab-count: 1;">      </span><span style="color: green;">&#8211;@@ERROR contains 0</span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 1;">   </span><span style="color: blue;">SELECT</span> <span style="color: gray;">*</span> <span style="color: blue;">FROM</span> <span style="color: green;">sysobjects</span> <span style="mso-tab-count: 1;">     </span><span style="mso-tab-count: 1;">      </span><span style="color: green;">–@@ERROR contains 0</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">USE</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> model <span style="mso-tab-count: 5;">                             </span><span style="color: green;">&#8211;@@ERROR contains 0</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">USE</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> model <span style="mso-tab-count: 5;">                             </span><span style="color: green;">–@@ERROR contains 0</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 1;">   </span><span style="color: blue;">SELECT</span> <span style="color: gray;">*</span> <span style="color: blue;">FROM</span> <span style="color: green;">sysdatabases</span> <span style="mso-tab-count: 1;">   </span><span style="mso-tab-count: 1;">      </span><span style="color: green;">&#8211;@@ERROR contains 208</span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 1;">   </span><span style="color: blue;">SELECT</span> <span style="color: gray;">*</span> <span style="color: blue;">FROM</span> <span style="color: green;">sysdatabases</span> <span style="mso-tab-count: 1;">   </span><span style="mso-tab-count: 1;">      </span><span style="color: green;">–@@ERROR contains 208</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">IF</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;">EXISTS</span><span style="color: blue;"> </span><span style="color: gray;">(</span><span style="color: blue;">SELECT</span> <span style="color: gray;">*</span> <span style="color: blue;">FROM</span> <span style="color: green;">sysservers</span><span style="color: gray;">)</span> <span style="mso-tab-count: 1;">  </span><span style="color: green;">&#8211;@@ERROR contains 208</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">IF</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;">EXISTS</span><span style="color: blue;"> </span><span style="color: gray;">(</span><span style="color: blue;">SELECT</span> <span style="color: gray;">*</span> <span style="color: blue;">FROM</span> <span style="color: green;">sysservers</span><span style="color: gray;">)</span> <span style="mso-tab-count: 1;">  </span><span style="color: green;">–@@ERROR contains 208</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 1;">   </span><span style="color: blue;">SELECT</span> 1<span style="color: gray;">=</span>1<span style="mso-tab-count: 2;">        </span><span style="mso-tab-count: 3;">                 </span><span style="color: green;">&#8211;@@ERROR contains 102</span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 1;">   </span><span style="color: blue;">SELECT</span> 1<span style="color: gray;">=</span>1<span style="mso-tab-count: 2;">        </span><span style="mso-tab-count: 3;">                 </span><span style="color: green;">–@@ERROR contains 102</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">IF</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: fuchsia;">@@ERROR</span> <span style="color: gray;">></span> 0 <span style="mso-tab-count: 4;">                        </span><span style="color: green;">&#8211;@@ERROR contains 0 </span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">IF</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: fuchsia;">@@ERROR</span> <span style="color: gray;">></span> 0 <span style="mso-tab-count: 4;">                        </span><span style="color: green;">–@@ERROR contains 0 </span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 1;">   </span><span style="color: blue;">GOTO</span> somewhere <span style="mso-tab-count: 4;">                     </span><span style="color: green;">&#8211;@@ERROR contains 0</span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 1;">   </span><span style="color: blue;">GOTO</span> somewhere <span style="mso-tab-count: 4;">                     </span><span style="color: green;">–@@ERROR contains 0</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">somewhere:</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="mso-tab-count: 5;">                            </span><span style="color: green;">&#8211;@@ERROR contains 0</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">somewhere:</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="mso-tab-count: 5;">                            </span><span style="color: green;">–@@ERROR contains 0</span></span>
 </p>
 
 <p style="line-height: 14.25pt; text-indent: -0.25in; margin-left: 0.25in; mso-list: l2 level1 lfo3;">
@@ -106,11 +106,11 @@ categories:
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">SET</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> @oldname <span style="color: gray;">=</span> <span style="color: red;">&#8216;Cato'</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">SET</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> @oldname <span style="color: gray;">=</span> <span style="color: red;">'Cato'</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">SET</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> @newname <span style="color: gray;">=</span> <span style="color: red;">&#8216;Tessereau'</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">SET</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> @newname <span style="color: gray;">=</span> <span style="color: red;">'Tessereau'</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
@@ -118,15 +118,15 @@ categories:
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">RAISERROR </span><span style="font-family: &amp;amp; color: gray; font-size: 10pt; mso-no-proof: yes;">(</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;">50001<span style="color: gray;">,</span><span style="mso-spacerun: yes;">  </span><span style="color: green;">&#8211;user-defined error message number</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">RAISERROR </span><span style="font-family: &amp;amp; color: gray; font-size: 10pt; mso-no-proof: yes;">(</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;">50001<span style="color: gray;">,</span><span style="mso-spacerun: yes;">  </span><span style="color: green;">–user-defined error message number</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 3;">               </span>10<span style="color: gray;">, </span><span style="color: green;">&#8211;severity level</span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 3;">               </span>10<span style="color: gray;">, </span><span style="color: green;">–severity level</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 3;">               </span>1<span style="color: gray;">,<span style="mso-spacerun: yes;">  </span></span><span style="color: green;">&#8211;error state</span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-tab-count: 3;">               </span>1<span style="color: gray;">,<span style="mso-spacerun: yes;">  </span></span><span style="color: green;">–error state</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt 0.25in; mso-layout-grid-align: none;">
@@ -154,7 +154,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">  </span><span style="color: green;">&#8211;just a silly little proc</span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">  </span><span style="color: green;">–just a silly little proc</span></span>
 </p>
 
 <p class="MsoNormal" style="line-height: normal; margin: 0in 0in 0pt; mso-layout-grid-align: none;">

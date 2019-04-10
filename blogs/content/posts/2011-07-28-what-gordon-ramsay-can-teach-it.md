@@ -70,7 +70,7 @@ There are only two directions, improving and deteriorating. No matter what impro
 
 ## We May Not Work in the Kitchen…
 
-We may not work in kitchens, but we do work in environments that can be very stressful, where every customer sees themselves as a chef and outages have to be corrected at 3am. We tend to add complexity where we should be removing it, we have communications problems, we have disconnects from our &#8216;customers', we have difficulty delivering consistently, and we treat leadership as something that is granted at the wave of a new title. 
+We may not work in kitchens, but we do work in environments that can be very stressful, where every customer sees themselves as a chef and outages have to be corrected at 3am. We tend to add complexity where we should be removing it, we have communications problems, we have disconnects from our 'customers', we have difficulty delivering consistently, and we treat leadership as something that is granted at the wave of a new title. 
 
 I picked five elements in the show, but these are not the only parallels I saw. Management, passion, pride, respect, continuous improvement, keeping our eye on the “plot” … IT doesn't have to invent everything from scratch. At the end of the day we are in an industry of people, delivering solutions to people, for problems that people created. All of the people-side issues exist all around us, in hundreds of different industries, we just need to step beyond our egos and be open to learning from them.
 

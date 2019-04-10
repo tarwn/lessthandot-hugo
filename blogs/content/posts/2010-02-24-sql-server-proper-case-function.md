@@ -39,11 +39,11 @@ This code uses several functions, some that you may not be familiar with. Upper 
 
 PatIndex searches through a string and returns the position where a search pattern is found. In our case, we want to find a “non-alpha character followed by a lower case alpha character”. By default, searches are not case sensitive. This is actually controlled by the collation of your database. You can get case sensitive searches by using a binary collation. For this function, I use:
 
-PatIndex(&#8216;%\[^a-zA-Z\]\[a-z\]%', @Data COLLATE Latin1\_General\_Bin)
+PatIndex('%\[^a-zA-Z\]\[a-z\]%', @Data COLLATE Latin1\_General\_Bin)
 
 The other function I use here is stuff. Stuff can be used to insert text in to the middle of a string. It can also be used similar to a Replace function. With replace, you essentially replace all occurrences of one string with another. Stuff is different in that you can replace data based on its position within a string without regard to what is at that position. For example:
 
-Select Stuff(&#8216;lower case', 7, 1, &#8216;C')
+Select Stuff('lower case', 7, 1, 'C')
 
 Notice how the 7th character (the lower case c) is replaced with an upper case C.
 

@@ -63,7 +63,7 @@ GO
 
 [edit]
   
-_On sql server 2012, you might need to make the size of the &#8216;TestSmaller file larger</p> 
+_On sql server 2012, you might need to make the size of the 'TestSmaller file larger</p> 
 
 If you get an error like the following
 
@@ -178,13 +178,13 @@ If you do use autogrow, then make sure you don't use the default 10%, take a loo
 
 > Date 11/30/2012 12:57:56 PM
   
-> Log SQL Server (Current &#8211; 11/25/2012 5:00:00 AM)
+> Log SQL Server (Current – 11/25/2012 5:00:00 AM)
 > 
 > Source spid62
 > 
 > Message
   
-> Autogrow of file &#8216;MyDB_Log' in database &#8216;MyDB' took 104381 milliseconds. Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+> Autogrow of file 'MyDB_Log' in database 'MyDB' took 104381 milliseconds. Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
 
 See that, it took a long time, you don't want to grow a one terabyte file by ten percent, that would be one hundred gigabytes, that is huge. Use something smaller and don't use percent, the bigger the file gets the longer it will take to expand the file.
 

@@ -365,7 +365,7 @@ Here is what people searched for most when they visited our site from a search e
         </td>
         
         <td>
-          ole db provider &#8216;microsoft.jet.oledb.4.0' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.
+          ole db provider 'microsoft.jet.oledb.4.0' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.
         </td>
       </tr>
       
@@ -525,7 +525,7 @@ Here is what people searched for most when they visited our site from a search e
         </td>
         
         <td>
-          ole db provider &#8216;microsoft.ace.oledb.12.0' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.
+          ole db provider 'microsoft.ace.oledb.12.0' cannot be used for distributed queries because the provider is configured to run in single-threaded apartment mode.
         </td>
       </tr>
       

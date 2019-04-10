@@ -36,25 +36,25 @@ The target of this exercise was to get the project deploying automatically to th
 First up was creating an Azure account, which I did via [WindowsAzure.com][4]. The Web Sites feature is still in Preview mode, so I had to go the preview features and enable it.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-01.png" alt="WindowsAzure.com - Preview Features Option" /><br /> WindowsAzure.com &#8211; Preview Features Option
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-01.png" alt="WindowsAzure.com - Preview Features Option" /><br /> WindowsAzure.com – Preview Features Option
 </div>
 
 The Web Sites option is at the bottom and enabled with a button and dialog:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-02.png" alt="WindowsAzure.com - Preview Features" /><br /> WindowsAzure.com &#8211; Preview Features
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-02.png" alt="WindowsAzure.com - Preview Features" /><br /> WindowsAzure.com – Preview Features
 </div>
 
 Once it's enabled, I can go into the portal and when I press the “New” button at the bottom, I'll have options to create a new Web Site instance.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-03.png" alt="WindowsAzure.com - New Website" /><br /> WindowsAzure.com &#8211; New Website
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-03.png" alt="WindowsAzure.com - New Website" /><br /> WindowsAzure.com – New Website
 </div>
 
 After creating the new site, it will provision and show up in my dashboard:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-04.png" alt="WindowsAzure.com - Dashboard" /><br /> WindowsAzure.com &#8211; Dashboard
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-04.png" alt="WindowsAzure.com - Dashboard" /><br /> WindowsAzure.com – Dashboard
 </div>
 
 That's all it takes to have a new Web Site in Windows Azure. Of course it's not doing anything useful at the moment, so lets go back to the build process and fix that.

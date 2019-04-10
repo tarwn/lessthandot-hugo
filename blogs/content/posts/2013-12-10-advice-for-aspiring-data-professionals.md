@@ -16,9 +16,9 @@ categories:
 ---
 “If you could give an aspiring DBA just one piece of advice what would it be?” This was a question posed to me by John Sansom (<a href="http://www.johnsansom.com/" target="_blank">blog </a>| <a href="https://twitter.com/SqlBrit" target="_blank">twitter</a>).
 
-Question everything about the data &#8211; access to it, security of it, and how it's being used.
+Question everything about the data – access to it, security of it, and how it's being used.
 
-I don’t mean this negatively. You can question why a developer wants &#8216;sa' access, or why the business wants to implement a feature, or why the same process has been done the same way for ten years when there is a new method that would be faster and more secure &#8211; without being negative.
+I don’t mean this negatively. You can question why a developer wants 'sa' access, or why the business wants to implement a feature, or why the same process has been done the same way for ten years when there is a new method that would be faster and more secure – without being negative.
 
 The DBA is the gatekeeper of the company’s data, and, as I always say, the business’s data IS the business. Understand that this is a very important role, and should not be taken lightly. It is not your job – and it should not be – to say yes to every request, or to approve every piece of code the developers want moved into production.
 

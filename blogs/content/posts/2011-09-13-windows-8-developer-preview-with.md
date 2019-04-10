@@ -32,7 +32,7 @@ Here is what is available:
   
 4.8 GB
   
-Sha 1 hash &#8211; 6FE9352FB59F6D0789AF35D1001BD4E4E81E42AF
+Sha 1 hash – 6FE9352FB59F6D0789AF35D1001BD4E4E81E42AF
   
 All of the following come on a disk image file (.iso).
   
@@ -58,7 +58,7 @@ Includes a disk image file (.iso) to install the Windows Developer Preview and M
   
 2.8 GB
   
-Sha 1 hash &#8211; 4E0698BBABE01ED27582C9FC16AD21C4422913CC
+Sha 1 hash – 4E0698BBABE01ED27582C9FC16AD21C4422913CC
   
 Includes a disk image file (.iso) to install the Windows Developer Preview and Metro style apps on a 32-bit PC.
 
@@ -80,25 +80,25 @@ Taking advantage of touch input requires a screen that supports multi-touch
 
 If you are a [msdn subscriber][2] then there are even more windows 8 goodies available
 
-Windows Server Developer Preview with Hyper-V Virtual Machine (x64) &#8211; (English)
+Windows Server Developer Preview with Hyper-V Virtual Machine (x64) – (English)
   
-Windows Server Developer Preview (x64) &#8211; DVD (English)
+Windows Server Developer Preview (x64) – DVD (English)
   
-Windows Developer Preview WDF Co-Installer (x86 and x64) &#8211; (English)
+Windows Developer Preview WDF Co-Installer (x86 and x64) – (English)
   
-Windows Developer Preview Symbols (x86) &#8211; (English)
+Windows Developer Preview Symbols (x86) – (English)
   
-Windows Developer Preview Symbols (x64) &#8211; (English)
+Windows Developer Preview Symbols (x64) – (English)
   
-Windows Developer Preview SDK/WDK (x86 and x64) &#8211; (English)
+Windows Developer Preview SDK/WDK (x86 and x64) – (English)
   
-Windows Developer Preview ADK (x86 and x64) &#8211; (English)
+Windows Developer Preview ADK (x86 and x64) – (English)
   
-Windows Developer Preview with Developer Tools and Apps (x64) &#8211; DVD (English)
+Windows Developer Preview with Developer Tools and Apps (x64) – DVD (English)
   
-Windows Developer Preview with Apps (x64) &#8211; DVD (English)
+Windows Developer Preview with Apps (x64) – DVD (English)
   
-Windows Developer Preview with Apps (x86) &#8211; DVD (English)
+Windows Developer Preview with Apps (x86) – DVD (English)
 
 And here is a screenshot from Windows 8 of this site in IE 10
 

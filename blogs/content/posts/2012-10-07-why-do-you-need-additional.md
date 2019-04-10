@@ -30,7 +30,7 @@ One of the people on my team wants to have the ability to truncate tables on the
 
 > The minimum permission required is ALTER on table\_name. TRUNCATE TABLE permissions default to the table owner, members of the sysadmin fixed server role, and the db\_owner and db_ddladmin fixed database roles, and are not transferable.
 
-Before I answer why someone would need ALTER TABLE permissions when the person already has DELETE permissions, let's run some code that will show the &#8216;problem'.
+Before I answer why someone would need ALTER TABLE permissions when the person already has DELETE permissions, let's run some code that will show the 'problem'.
 
 First create a Test database, add one table and insert one row
 

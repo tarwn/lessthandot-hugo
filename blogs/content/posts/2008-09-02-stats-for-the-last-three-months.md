@@ -181,25 +181,25 @@ Romania 0.67%
 
 These are the top 10 most visited pages on LessThanDot.com, I have left out the front page since that would have been number 1.
 
-1 [Forum &#8211; View topic &#8211; SQL Server Programming Hacks][1]
+1 [Forum – View topic – SQL Server Programming Hacks][1]
   
-2 [Wiki &#8211; ASP.NET Hacks &#8211; Wiki][2]
+2 [Wiki – ASP.NET Hacks – Wiki][2]
   
-3 [Wiki &#8211; SQL Server Programming Hacks &#8211; 100+ List &#8211; Wiki][3]
+3 [Wiki – SQL Server Programming Hacks – 100+ List – Wiki][3]
   
-4 [Blog &#8211; Only In A Database Can You Get 1000% + Improvement By Changing A Few Lines Of Code][4]
+4 [Blog – Only In A Database Can You Get 1000% + Improvement By Changing A Few Lines Of Code][4]
   
-5 [Blog &#8211; Good SQL Articles To Read If You Can't Afford Books][5]
+5 [Blog – Good SQL Articles To Read If You Can't Afford Books][5]
   
-6 [Forum &#8211; View forum &#8211; Programmer Puzzles][6]
+6 [Forum – View forum – Programmer Puzzles][6]
   
-7 [Blog &#8211; 5 Books Every Developer Should Read][7]
+7 [Blog – 5 Books Every Developer Should Read][7]
   
-8 [Blog &#8211; nHibernate performance against Stored procedures][8]
+8 [Blog – nHibernate performance against Stored procedures][8]
   
-9 [Forum &#8211; View forum &#8211; None of the Above][9]
+9 [Forum – View forum – None of the Above][9]
   
-10 [Wiki &#8211; ASP.NET: Access Master Page controls from the Content Page &#8211; Wiki][10]
+10 [Wiki – ASP.NET: Access Master Page controls from the Content Page – Wiki][10]
 
  [1]: http://forum.ltd.local/viewtopic.php?f=17&t=306
  [2]: http://wiki.ltd.local/index.php/ASP.NET_Hacks

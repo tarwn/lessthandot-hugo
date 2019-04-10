@@ -19,11 +19,11 @@ Here we go, the second week of The Best SQL Server Links Of The Past Week series
   
 It was a slow week this week, didn't see a lot of things
 
-**[Performance Impact: file fragmentation and SAN &#8212; Part I][1]
+**[Performance Impact: file fragmentation and SAN — Part I][1]
   
-[Performance Impact: file fragmentation and SAN &#8212; Part II][2]
+[Performance Impact: file fragmentation and SAN — Part II][2]
   
-[Performance Impact: file fragmentation and SAN &#8212; Part III][3]** 
+[Performance Impact: file fragmentation and SAN — Part III][3]** 
   
 Linchi Shea's three-part post about performance impact with file fragmentation andthe SAN
 
@@ -31,7 +31,7 @@ Linchi Shea's three-part post about performance impact with file fragmentation a
   
 Alexander Kuznetsov explains that it is well known that UPDATE … FROM command does not detect ambiguities. Also it well known that ANSI standard UPDATE may perform very poorly and may be difficult to maintain
 
-**[Podcast: Ryan Dunn &#8211; SQL Data Services (SQL in the cloud)][5] (show number 42)**
+**[Podcast: Ryan Dunn – SQL Data Services (SQL in the cloud)][5] (show number 42)**
   
 Greg Low's podcast with Ryan Dunn about SQL Data Services. Microsoft Senior Technical Evangelist Ryan Dunn discusses SQL Services and SQL Data Services, the future of the cloud based data services, what is currently available and how to get started.
 
@@ -43,7 +43,7 @@ _\[Microsoft\]\[ODBC SQL Server Driver\][DBNETLIB] General Network error. Check 
 
 ERROR \[08S01\] \[Microsoft\][SQL Native Client]Communication link failure
 
-System.Data.SqlClient.SqlException: A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 &#8211; An existing connection was forcibly closed by the remote host.)
+System.Data.SqlClient.SqlException: A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 – An existing connection was forcibly closed by the remote host.)
 
 A significant part of sql server process memory has been paged out. This may result in a performance degradation.</em>
 

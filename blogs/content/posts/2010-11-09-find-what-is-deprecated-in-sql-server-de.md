@@ -33,11 +33,11 @@ where object_name like '%deprecated%'
 
 You get back 239 rows, below are the new things compared to 2008
 
-sp_configure &#8216;awe enabled'
+sp_configure 'awe enabled'
   
-sp_configure &#8216;affinity64 mask'
+sp_configure 'affinity64 mask'
   
-sp_configure &#8216;affinity mask'
+sp_configure 'affinity mask'
   
 SET ERRLVL
   

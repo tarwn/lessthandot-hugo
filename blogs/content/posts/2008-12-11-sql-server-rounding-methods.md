@@ -20,7 +20,7 @@ There are various ways to round a number, and most of us don't give it much thou
 
 It's important to note that in most cases, the Round function produces the result we want. The intended purpose of the code shown below is to affect only those cases where a number can be rounded up or down because the value rounded is exactly mid-way between the rounded up number and the rounded down number. For example, when you round 3.5 to the nearest whole number, what should the result be? 3 or 4? When you perform many calculations on rounded numbers, a Stochastic round or a bankers round will be more accurate than any other method because (statistically), the edge cases will cancel each other out, resulting in a more accurate result.
 
-It's interesting to note that many client side languages like vb6 and the .net framework implement bankers rounding. Starting with .net framework 2.0, there is an optional 3rd argument to the round function that allows you to modify the behavior. In any event, this differs from SQL Server's implementation of rounding, which is always &#8216;Round away from zero'. For example, round(4.25, 1) = 4.3 and Round(-4.25, 1) = -4.3. Both numbers are rounded away from zero. In VB, Round(4.25, 1) = 4.2
+It's interesting to note that many client side languages like vb6 and the .net framework implement bankers rounding. Starting with .net framework 2.0, there is an optional 3rd argument to the round function that allows you to modify the behavior. In any event, this differs from SQL Server's implementation of rounding, which is always 'Round away from zero'. For example, round(4.25, 1) = 4.3 and Round(-4.25, 1) = -4.3. Both numbers are rounded away from zero. In VB, Round(4.25, 1) = 4.2
 
 Let's look at some sample data, and the expected results when rounded to 1 decimal place:
 
@@ -36,7 +36,7 @@ Let's look at some sample data, and the expected results when rounded to 1 decim
 
 **Round Up:**
   
-This method always rounds the number up to the next highest number. For example, 3.1 rounded up is 4 and -3.1 rounded up is -3. In SQL Server, the easiest way to achieve ‘RoundUp’ is to use the ceiling function. Unfortunately, the Ceiling function only works with whole numbers. There’s no built-in function that RoundsUp where you can specify the number of digits. This is no problem, we can just build our own.
+This method always rounds the number up to the next highest number. For example, 3.1 rounded up is 4 and -3.1 rounded up is -3. In SQL Server, the easiest way to achieve 'RoundUp’ is to use the ceiling function. Unfortunately, the Ceiling function only works with whole numbers. There’s no built-in function that RoundsUp where you can specify the number of digits. This is no problem, we can just build our own.
 
 sql
 Create Function dbo.RoundUp(@Val Decimal(32,16), @Digits Int)
@@ -116,7 +116,7 @@ End
 ```
 **Stochastic Rounding**
   
-This is similar to &#8216;Round to even'. When the remaining digits is a 5 followed by zeros, we randomly round down or up. Implementing this is a bit more difficult because SQL Server doesn't like random numbers in user defined function. To work-around this limitation, we can create a view that returns a random number and call that view from within the function. First, the view:
+This is similar to 'Round to even'. When the remaining digits is a 5 followed by zeros, we randomly round down or up. Implementing this is a bit more difficult because SQL Server doesn't like random numbers in user defined function. To work-around this limitation, we can create a view that returns a random number and call that view from within the function. First, the view:
 
 sql
 Create View vw_RandomBit

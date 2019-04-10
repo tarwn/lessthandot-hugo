@@ -321,7 +321,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Knows and can use prototype (little &#8216;p', not the framework)
+      Knows and can use prototype (little 'p', not the framework)
     </td>
   </tr>
   
@@ -409,7 +409,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Knows at least 2 server-side technologies &#8211; Perl, PHP, ASP 3, JSP, Java Servlets, CFM, ASP.Net (WebPages, Web Forms, MVC), Ruby on Rails, Python (WSGI, CGI, mod_python), etc
+      Knows at least 2 server-side technologies – Perl, PHP, ASP 3, JSP, Java Servlets, CFM, ASP.Net (WebPages, Web Forms, MVC), Ruby on Rails, Python (WSGI, CGI, mod_python), etc
     </td>
   </tr>
   
@@ -689,7 +689,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      SQL Injection &#8211; what it is, how to prevent it
+      SQL Injection – what it is, how to prevent it
     </td>
   </tr>
   
@@ -699,7 +699,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Cross site scripting &#8211; what it is, how to prevent it
+      Cross site scripting – what it is, how to prevent it
     </td>
   </tr>
   
@@ -709,7 +709,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Cross Site Request Forgery &#8211; what it is, how to prevent it
+      Cross Site Request Forgery – what it is, how to prevent it
     </td>
   </tr>
   
@@ -729,7 +729,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Cookies &#8211; Understand session hijacking and dangers of storing user information or identification
+      Cookies – Understand session hijacking and dangers of storing user information or identification
     </td>
   </tr>
 </table>
@@ -753,7 +753,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Table Layout &#8211; what it is, why it's bad (at least three reasons)
+      Table Layout – what it is, why it's bad (at least three reasons)
     </td>
   </tr>
   
@@ -773,7 +773,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Table Layout &#8211; and why using CSS for table layout (display: table, table-cell, etc) is not bad
+      Table Layout – and why using CSS for table layout (display: table, table-cell, etc) is not bad
     </td>
   </tr>
   
@@ -958,7 +958,7 @@ Missing Categories:
   * Project management skills
   * Documentation and Modeling skills
   * Design and Graphics skills
-  * Application Lifecycle Management &#8211; Source Control, Deployment, etc
+  * Application Lifecycle Management – Source Control, Deployment, etc
 
 Extra items that didn't make it in:
 
@@ -969,7 +969,7 @@ Extra items that didn't make it in:
   * Knows how to create DTDs and/or XSDs
   * Can write regular expressions without a reference
   * Knows relevant tools for Yahoo (SiteExplorer), Google, Bing for managing site information
-  * Schema.org &#8211; it belongs in the Meta category but I didn't know what level of skill, knowledge, or adoption I should include considering it's newness and several other factors
+  * Schema.org – it belongs in the Meta category but I didn't know what level of skill, knowledge, or adoption I should include considering it's newness and several other factors
 
 There is also the fact that we often get caught up maintaining or even adding on to a site that violates many of the skills and standards you see in this list. This doesn't prevent us from writing good, clean, semantic sites the rest of the time and being forced to write poor code does not make on inherently less skilled.
 

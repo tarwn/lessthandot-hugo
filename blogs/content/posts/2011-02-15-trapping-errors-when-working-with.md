@@ -88,7 +88,7 @@ Statement(s) could not be prepared.
   
 Msg 208, Level 16, State 1, Line 1
   
-Invalid object name &#8216;tempdb..sysobjects2'._
+Invalid object name 'tempdb..sysobjects2'._
 
 Ouch it blew up on us and never made it to the print statement.
 
@@ -109,7 +109,7 @@ PRINT 'TEST'
 
 _Msg 7202, Level 11, State 2, Line 4
   
-Could not find server &#8216;TestLinkedServer2' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers._
+Could not find server 'TestLinkedServer2' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers._
 
 Same problem, blows up and never makes it to the print statement. What if we take the last two examples and wrap them inside an exec statement?
 
@@ -128,7 +128,7 @@ PRINT 'TEST'
 
 _OLE DB provider “SQLNCLI10” for linked server “TestLinkedServer” returned message “Deferred prepare could not be completed.”.
   
-Invalid object name &#8216;tempdb..sysobjects2'.
+Invalid object name 'tempdb..sysobjects2'.
   
 208
   
@@ -149,7 +149,7 @@ END CATCH
 PRINT 'TEST'
 ```
 
-_Could not find server &#8216;TestLinkedServer2' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
+_Could not find server 'TestLinkedServer2' in sys.servers. Verify that the correct server name was specified. If necessary, execute the stored procedure sp_addlinkedserver to add the server to sys.servers.
   
 7202
   

@@ -30,17 +30,17 @@ I volunteered for it last year, was accepted, and served on the speaker review t
   <em>Giving the thumbs up to sessions and speakers is fun!</em>
 </p>
 
-_What do I need to do to get started?_ Fill out [this application][3]. It's simple &#8211; most of the questions are about your familiarity with the various tracks.   
+_What do I need to do to get started?_ Fill out [this application][3]. It's simple – most of the questions are about your familiarity with the various tracks.   
 _How much time will it take?_ This is going to vary, from task to task and person to person. I spent 3 weeks working on speaker review. On average, I spent about 10 hours each of those weeks. I dug in for about 2 hours a night a couple nights a week, staying up late, and put in a couple hours on Sunday mornings and afternoons . The good: this is a short-term assignment with a definite start and end. The bad: you need to be able to dedicate the time to that, on top of family, work, recreation, sleep, and any other activities you might have. (I, for one, am glad that my marathon will be over at that point.)   
 _What am I going to be doing?_ I can't tell you that for sure, but you will be reviewing speakers and abstracts.   
-_I've never done this before!_ Don't worry &#8211; neither had I. I was still able to be successful. I knew a few of the speakers from user groups, SQL Saturdays, 24 Hours of PASS, and other training events, but no way had I heard or heard of everyone that submitted. I came up with a process for checking each of them, and I did a thorough job.  Also, remember that you won't be working alone. There will be a team of people helping you, with managers on each team. Everyone involved was open and helpful.   
+_I've never done this before!_ Don't worry – neither had I. I was still able to be successful. I knew a few of the speakers from user groups, SQL Saturdays, 24 Hours of PASS, and other training events, but no way had I heard or heard of everyone that submitted. I came up with a process for checking each of them, and I did a thorough job.  Also, remember that you won't be working alone. There will be a team of people helping you, with managers on each team. Everyone involved was open and helpful.   
 _What do I get out of it?_ You won't get a plaque or win a million dollars. You get the opportunity to shape the content of one of the largest SQL Server training events held each year. You get the chance to learn more about the speakers that will be there, and what they will be speaking about. You get to meet other volunteers, who are really good people. Best of all, you get to give back to the SQL community, which is awesome.
 
 A note for speakers: if you're going to submit abstracts, you won't be able to submit in the same category you're reviewing.
 
 Have I talked you into volunteering? Awesome! I love it when I can get people interested in helping others.
 
-Your mission, should you choose to accept it, is to fill out [the application][3] by **9:00 PM PST on Wednesday, March 28, 2012**. Yes, that's this week &#8211; so hurry!
+Your mission, should you choose to accept it, is to fill out [the application][3] by **9:00 PM PST on Wednesday, March 28, 2012**. Yes, that's this week – so hurry!
 
  [1]: http://www.sqlpass.org/AboutPASS/News/NewsletterArchive.aspx
  [2]: http://sqlpass.org

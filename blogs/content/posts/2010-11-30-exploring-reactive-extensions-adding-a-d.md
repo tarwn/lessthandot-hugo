@@ -13,7 +13,7 @@ categories:
   - Microsoft Technologies
 
 ---
-I think the reactive extensions library starts to look even better when you start taking into consideration all the cool linq stuff it lets you do with sequences of events. In order to use this we need to add another reference, this time to System.Reactive. It's interesting that the stuff we are importing with these references becomes available anyplace the System namespace is available &#8211; there's no need to add using directives to our code files. I guess this is because it's intended to become a first class feature in .net some time.
+I think the reactive extensions library starts to look even better when you start taking into consideration all the cool linq stuff it lets you do with sequences of events. In order to use this we need to add another reference, this time to System.Reactive. It's interesting that the stuff we are importing with these references becomes available anyplace the System namespace is available – there's no need to add using directives to our code files. I guess this is because it's intended to become a first class feature in .net some time.
 
 The first example here will be a form that listens for mouse movements. We want to update a label to show current coordinates (and buttons pushed) when either the X or Y coordinate is a multiple of 10, OR the left and right buttons are both pushed. Normally this could be done with a bit of conditional logic in our event handler. Consider the following:
 

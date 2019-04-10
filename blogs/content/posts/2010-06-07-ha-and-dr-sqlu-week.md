@@ -24,7 +24,7 @@ categories:
 
 Welcome to [SQL University][1] HA and DR week! My name is Ted Krueger and I will be covering various High Availability and Disaster Recovery (HA and DR) strategies and methods. 
 
-During the week, we will talk about defining HA and DR and introduce some points to consider while putting them into practice in your centers. Next, we will go over DR. The DR class will be composed of a Log Shipping setup and also a backup/restore discussion. Finally, we will setup a database mirror and discuss the basics of this HA feature, which is available in SQL Server 2005, 2008 and 2008 R2. The HA and DR will also cover testing your solutions. That is critical to these life saving strategies &#8211; we need to know they will work in the time of need! 
+During the week, we will talk about defining HA and DR and introduce some points to consider while putting them into practice in your centers. Next, we will go over DR. The DR class will be composed of a Log Shipping setup and also a backup/restore discussion. Finally, we will setup a database mirror and discuss the basics of this HA feature, which is available in SQL Server 2005, 2008 and 2008 R2. The HA and DR will also cover testing your solutions. That is critical to these life saving strategies – we need to know they will work in the time of need! 
 
 
 
@@ -108,9 +108,9 @@ HA is defined as a true method of having the data available 100% (give or take s
 
 With the major changes to SQL Server in release 2005, Database Mirroring became a long awaited option. Prior to Database Mirroring, creating a true automated failover response and safety on strategy was difficult and costly. With Database Mirroring, available in both Standard and Enterprise Editions, came a feature that adds a great deal of security for SQL Server while retaining a cost effective implementation. Database Mirroring consists of 3 primary operating modes, which must be properly understood in order to maintain true High Availability. 
 
-  * High Availability (Synchronous Mirroring with Safety On) &#8211; Includes 3 designated SQL Server instances &#8211; Principal, Mirror and Witness.
-  * High Protection (Synchronous Mirroring with Safety Off) &#8211; Includes 2 designated SQL Server instances &#8211; Principal and Mirror.
-  * High Performance (Asynchronous Mirroring) &#8211; Includes 2 designated SQL Server instances &#8211; Principal and Mirror.
+  * High Availability (Synchronous Mirroring with Safety On) – Includes 3 designated SQL Server instances – Principal, Mirror and Witness.
+  * High Protection (Synchronous Mirroring with Safety Off) – Includes 2 designated SQL Server instances – Principal and Mirror.
+  * High Performance (Asynchronous Mirroring) – Includes 2 designated SQL Server instances – Principal and Mirror.
 
 High Availability operating mode is truly HA with the automated failover capabilities. Some critical aspects to automated failover need to be considered just as considerations come in with DR failover events. Two questions we can ask ourselves before moving forward are: Can the applications supporting the business handle an automated failover? Can the application’s performance handle this operating mode?
   

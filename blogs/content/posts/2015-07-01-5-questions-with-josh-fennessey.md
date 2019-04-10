@@ -21,11 +21,11 @@ Josh (<a href="http://joshuafennessy.com/about/" target="_blank">website</a>| <a
 
 Great question! For the last couple of years or so, I've been pretty focused in the Hadoop space. It's been a fun experience, so far. I really love how fast the technology moves in the open source community. It's nearly impossible to keep up with changes and new projects. It's really interesting to watch it all happen.
 
-From a technology space, I really enjoy working with clients that are looking to get more out of their information. I like to use the term &#8216;dark data', which I didn't make up by the way, to describe the kind of analysis that Hadoop is capable of. Dark data can be describe as data that you own in your organization, but aren't using to make decisions. Things like documents, email, call center transcriptions. These types of information are all over the place, but it's often difficult to pull any real meaning out of them. Hadoop gives me a platform to work on that opens up possibilities with this data.
+From a technology space, I really enjoy working with clients that are looking to get more out of their information. I like to use the term 'dark data', which I didn't make up by the way, to describe the kind of analysis that Hadoop is capable of. Dark data can be describe as data that you own in your organization, but aren't using to make decisions. Things like documents, email, call center transcriptions. These types of information are all over the place, but it's often difficult to pull any real meaning out of them. Hadoop gives me a platform to work on that opens up possibilities with this data.
 
 I also like working at the Hadoop scale. I've always had a fascination with distributed systems, Hadoop lets me play with technology that I've considered a hobby (and get paid for it!).
 
-### Let's talk about working from home. You've done it successfully &#8211; what are your secrets?
+### Let's talk about working from home. You've done it successfully – what are your secrets?
 
 Oh man, this is one of things I really love about my job. Working from home really is great, except when it isn't. Sometimes it's hard. Sometimes it's lonely. But there are some really easy tips that I use to make sure that things are running smoothly.
 

@@ -28,7 +28,7 @@ As hard as it is to hold back on even the simple updates that a DBA may have to 
   2. Temporary retention of the data prior to updating
   3. Error Handling
   4. Timing an update
-  5. Integrity &#8211; Knowing the entire picture and all that is affected
+  5. Integrity – Knowing the entire picture and all that is affected
 
 **Having a point-in-time backup** ****
 
@@ -71,7 +71,7 @@ Error handling should be thought through.  Protect your data from every point o
 
 Timing updates, deletes and mass inserts is another critical step in performing these DBA level changes to data.  High level locking in SQL Server will occur when changes are made that take time, or simply change a high volume of data.  These locks may cause business operations to slow, and in some cases, stop.  Ensure that this situation is avoided or, at a minimum, causes the least amount of negative impact to the business. 
 
-**Integrity &#8211; Knowing the entire picture and all that is affected**
+**Integrity – Knowing the entire picture and all that is affected**
 
 Very seldom will a database have tables that are completely unrelated.  That becomes a completely different tip using the right tool for the right type of storage.  As such, relational data can be directly affected at the time of performing changes to data by means other than the applications that are written for them.  Ensure that all other tables that are related by constraints or basic key references that are not true definitions in SQL Server, are thought out and integrity is retained through the changes. 
 

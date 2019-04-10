@@ -27,7 +27,7 @@ FROM [HumanResources].[Employee] a
 	ON b.[BusinessEntityID] = a.[BusinessEntityID]
 
 ```
-Nothing &#8211; except for my poor choice of using meaningless single characters as table aliases. Although it's not a big deal with simpler queries like I've here, it can be a maintenance nightmare with complex queries that join multiple tables.
+Nothing – except for my poor choice of using meaningless single characters as table aliases. Although it's not a big deal with simpler queries like I've here, it can be a maintenance nightmare with complex queries that join multiple tables.
 
 What about now? Is there anything wrong still?
 
@@ -58,7 +58,7 @@ FROM [HumanResources].[Employee] emp
 ```
 <span class="MT_under">Solution:</span>
 
-I use extended properties &#8211; following is an example script.
+I use extended properties – following is an example script.
 
 sql
 EXEC sys.sp_addextendedproperty

@@ -30,6 +30,6 @@ The Beta version of SQL Server 2005 Service Pack 3 (SP3) is now available. You c
 
 The build number is 9.00.4028.00
 
-Download SQL Server 2005 Service Pack 3 &#8211; Beta here: http://www.microsoft.com/downloads/details.aspx?FamilyId=D22317E1-BC64-4936-A14B-7A632B50A4CA&displaylang=en
+Download SQL Server 2005 Service Pack 3 – Beta here: http://www.microsoft.com/downloads/details.aspx?FamilyId=D22317E1-BC64-4936-A14B-7A632B50A4CA&displaylang=en
 
 To obtain SQL Server 2005 SP3 Beta for Express Edition or Express Edition with Advanced Services go here: http://www.microsoft.com/downloads/details.aspx?FamilyId=80DFF99C-CC82-4639-92BB-BBDAFF677792&displaylang=en

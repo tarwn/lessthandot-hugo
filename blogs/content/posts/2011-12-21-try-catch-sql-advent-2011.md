@@ -230,7 +230,7 @@ SELECT * FROM LogErrors
       </td>
       
       <td>
-        Conversion failed when converting the varchar value &#8216;a' to data type int.
+        Conversion failed when converting the varchar value 'a' to data type int.
       </td>
     </tr>
     

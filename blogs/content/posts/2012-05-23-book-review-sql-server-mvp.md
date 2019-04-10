@@ -30,11 +30,11 @@ categories:
 
 My latest SQL read was [SQL Server MVP Deep Dives][1]. It’s a compilation – 59 chapters – on various SQL Server topics, written by Microsoft MVPs. What's so cool about this book, as opposed to most, is that it plays to an author's strengths and passions. It doesn’t cover one topic; it covers every aspect of SQL Server. 
 
-**Part 1 &#8211; Database Design and Architecture   
+**Part 1 – Database Design and Architecture   
 **    
 I found this section relevant when I opened this book because I was starting two database design projects. Louis Davidson and Paul Nielsen’s database design ideas are useful for everyone to review from time to time.
 
-**Part 2 &#8211; Database Development   
+**Part 2 – Database Development   
 **    
 The “Error Handling in SQL Server applications” chapter by Bill Graziano was immediately useful and impactful. Using “Try…Catch” and RAISERROR are often overlooked, but shouldn’t be, when writing T-SQL. 
 
@@ -52,11 +52,11 @@ I like the fact that non-SQL MVPs are also contributing. Even a (gasp) Access MV
 **    
 “My favorite DMVs, and why” by Aaron Bertrand is one of my favorite chapters. DMVs are great. What I learned is that Aaron made his own sp_who! I wish I was still in a large corporate environment to test that. He also shows an uptime function that he created in his utility database, which he uses in almost all DMV queries. Good idea!
 
-Ron Talmage wrote “Some practical issues in table partitioning”. It covered the basics &#8211; usually writing about this topic is overwhelming. I know I don’t fully understand partitioning yet. One thing I know: I think LEFT is easier to understand.
+Ron Talmage wrote “Some practical issues in table partitioning”. It covered the basics – usually writing about this topic is overwhelming. I know I don’t fully understand partitioning yet. One thing I know: I think LEFT is easier to understand.
 
 Scott Stauffer wrote “Successfully implementing Kerberos delegation”. In February, I had the pleasure of meeting Scott in Redmond, WA. I remember many Kerberos issues from my previous job. I never had a solid understanding of all the pieces until now. He provides a great great list of resources. I would love to see more people understand Active Directory and related services. (As Argenis Fernandez once tweeted, you can't be really good at SQL Server until you get AD.) 
 
-**Part 4 &#8211; Performance Tuning and Optimization   
+**Part 4 – Performance Tuning and Optimization   
 **    
 There are a few chapters on indexes here, because they are that important.
 

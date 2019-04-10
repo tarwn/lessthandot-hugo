@@ -62,7 +62,7 @@ FROM TestCompositeIndex;
 ```
 Result
   
-&#8212;&#8212;&#8211;
+——–
   
 IndexSelectivity TotalCount DistinctCount
   
@@ -79,7 +79,7 @@ FROM TestCompositeIndex;
 
 Result
   
-&#8212;&#8212;&#8211;
+——–
   
 IndexSelectivity TotalCount DistinctCount
   

@@ -28,35 +28,35 @@ categories:
   Tips posted so far are listed below and will be updated as we add the days</p> 
   
   <p>
-    <a href="/index.php/DataMgmt/DBAdmin/sql-server-dba-tip-1">SQL Server DBA Tip 1 &#8211; Server Configuration – MAX Memory</a>
+    <a href="/index.php/DataMgmt/DBAdmin/sql-server-dba-tip-1">SQL Server DBA Tip 1 – Server Configuration – MAX Memory</a>
   </p>
   
   <p>
-    <span style="text-decoration: underline;"><a href="/index.php/DataMgmt/DataDesign/sql-server-dba-tip-2">SQL Server DBA Tip 2 &#8211; Server Configuration – Data/Log Files</a> </span>
+    <span style="text-decoration: underline;"><a href="/index.php/DataMgmt/DataDesign/sql-server-dba-tip-2">SQL Server DBA Tip 2 – Server Configuration – Data/Log Files</a> </span>
   </p>
   
   <p>
-    <span style="text-decoration: underline;"><a href="/index.php/DataMgmt/DBAdmin/sql-server-dba-tip-6">SQL Server DBA Tip 3 &#8211; Server Configuration – Model Database</a> </span>
+    <span style="text-decoration: underline;"><a href="/index.php/DataMgmt/DBAdmin/sql-server-dba-tip-6">SQL Server DBA Tip 3 – Server Configuration – Model Database</a> </span>
   </p>
   
   <p>
-    <span style="text-decoration: underline;"><a href="/index.php/DataMgmt/DBAdmin/sql-server-32bit-64bit">SQL Server DBA Tip 4 &#8211; Server Considerations &#8211; 32 bit / 64 bit</a></span>
+    <span style="text-decoration: underline;"><a href="/index.php/DataMgmt/DBAdmin/sql-server-32bit-64bit">SQL Server DBA Tip 4 – Server Considerations – 32 bit / 64 bit</a></span>
   </p>
   
   <p>
-    <a title="SQL Server DBA Tip 5 - Server Considerations - Installing Features (SSIS, SSRS, Engine, SSAS)" href="/index.php/All/?p=1211">SQL Server DBA Tip 5 &#8211; Server Considerations &#8211; Installing Features (SSIS, SSRS, Engine, SSAS)</a>
+    <a title="SQL Server DBA Tip 5 - Server Considerations - Installing Features (SSIS, SSRS, Engine, SSAS)" href="/index.php/All/?p=1211">SQL Server DBA Tip 5 – Server Considerations – Installing Features (SSIS, SSRS, Engine, SSAS)</a>
   </p>
   
   <p>
-    <a title="SQL Server DBA Tip 6 - Server Security – Windows Authentication / SQL Authentication" href="/index.php/All/?p=1212">SQL Server DBA Tip 6 &#8211; Server Security – Windows Authentication / SQL Authentication</a>
+    <a title="SQL Server DBA Tip 6 - Server Security – Windows Authentication / SQL Authentication" href="/index.php/All/?p=1212">SQL Server DBA Tip 6 – Server Security – Windows Authentication / SQL Authentication</a>
   </p>
   
   <p>
-    <a title="SQL Server DBA Tip 7 - Server Security and grouping – Schema Control" href="/index.php/All/?p=1215">SQL Server DBA Tip 7 &#8211; Server Security and grouping – Schema Control</a>
+    <a title="SQL Server DBA Tip 7 - Server Security and grouping – Schema Control" href="/index.php/All/?p=1215">SQL Server DBA Tip 7 – Server Security and grouping – Schema Control</a>
   </p>
   
   <p>
-    <a title="SQL Server DBA Tip 8 - Server Monitoring - Baseline" href="/index.php/All/?p=1223">SQL Server DBA Tip 8 &#8211; Server Monitoring &#8211; Baseline</a>
+    <a title="SQL Server DBA Tip 8 - Server Monitoring - Baseline" href="/index.php/All/?p=1223">SQL Server DBA Tip 8 – Server Monitoring – Baseline</a>
   </p>
   
   <p>

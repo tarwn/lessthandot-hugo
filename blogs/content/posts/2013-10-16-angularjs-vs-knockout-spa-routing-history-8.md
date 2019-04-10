@@ -328,7 +328,7 @@ As I mentioned above, all of these examples were really easy to put together, so
 
 Man that was easy.There are a ton of good routing libraries out there and it seems like even if you made the wrong decision when you picked one, it would be relatively easy to switch to a different one later. I personally liked Finch.js the best, but if I was using AngularJS I'd probably ride the default library as long as I could (and may never have a reason to change).
 
-Using the dynamic template to change “pages” was also easy. I banged on the links a while and Chrome said I was using a lot of memory, but as soon as I let the GC clean up, it all cleared up. Banging on AngularJS also used memory, but it had GC's occurring along the way too, so I suspect if I were to use the knockout &#8216;sorta-SPA' viewmodel in a production environment, I would actually want to use a method that delete()-ed the oold model as the new one was assigned.
+Using the dynamic template to change “pages” was also easy. I banged on the links a while and Chrome said I was using a lot of memory, but as soon as I let the GC clean up, it all cleared up. Banging on AngularJS also used memory, but it had GC's occurring along the way too, so I suspect if I were to use the knockout 'sorta-SPA' viewmodel in a production environment, I would actually want to use a method that delete()-ed the oold model as the new one was assigned.
 
 ## Post 8 of <del>8</del> 9
 

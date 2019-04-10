@@ -76,7 +76,7 @@ SELECT *
 FROM HugeTable
 ORDER By SomeColumn
 ```
-When doing something like that SQL Server will create a worktable in tempdb, if the table is big and your tempdb is placed on a drive that doesn't have a lot of space, you will run out of space, take a look at [Dealing with the could not allocate new page for database &#8216;TEMPDB'. There are no more pages available in filegroup DEFAULT error message][4] how to resolve this
+When doing something like that SQL Server will create a worktable in tempdb, if the table is big and your tempdb is placed on a drive that doesn't have a lot of space, you will run out of space, take a look at [Dealing with the could not allocate new page for database 'TEMPDB'. There are no more pages available in filegroup DEFAULT error message][4] how to resolve this
 
 **Compression**
   

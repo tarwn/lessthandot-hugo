@@ -19,7 +19,7 @@ tags:
 ---
 Microsoft is all about rapid release cycles nowadays. We already experienced this with Power BI, where monthly new features and improvements have been added.
   
-Now SQL Server appears to get the same treatment: [SQL Server 2016 CTP 2.1 has just been released][1]. There is nothing groundbreaking in this release &#8211; which can be considered as an upgrade of CTP2 &#8211; but there are some additional functionalities and improvements in the database engine.
+Now SQL Server appears to get the same treatment: [SQL Server 2016 CTP 2.1 has just been released][1]. There is nothing groundbreaking in this release – which can be considered as an upgrade of CTP2 – but there are some additional functionalities and improvements in the database engine.
 
 If you have already installed CTP2, you can just upgrade it to CTP2.1 following the usual upgrade procedure. Just spin-up the SQL Server set-up, go to Installation and choose _Upgrade from a previous version of SQL Server_. Hit Next a few times, choose which instance and which features you want to upgrade and you're all done.
 

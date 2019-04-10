@@ -24,7 +24,7 @@ I'm in the writers chair, though, so this will be somewhat opinionated. We'll be
   <img src="/wp-content/uploads/2018/04/cosmos-db-600x315.png" alt="Azure Cosmos DB - Globally distributed, multi-model database" width="600" height="315" class="size-medium-width wp-image-9149" srcset="/wp-content/uploads/2018/04/cosmos-db.png 600w, /wp-content/uploads/2018/04/cosmos-db-300x158.png 300w, /wp-content/uploads/2018/04/cosmos-db-571x300.png 571w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
-    <a href="https://azure.microsoft.com/en-us/services/cosmos-db/">Azure Cosmos DB &#8211; Globally distributed, multi-model database</a>
+    <a href="https://azure.microsoft.com/en-us/services/cosmos-db/">Azure Cosmos DB – Globally distributed, multi-model database</a>
   </p>
 </div>
 
@@ -69,7 +69,7 @@ Let's lock in this first win by pressing F5 to run the site and verify we have a
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_002.png" alt="ASP.Net Core 2 - Default ValuesController Output" width="495" height="181" class="size-full wp-image-9089" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_002.png 495w, /wp-content/uploads/2018/04/aspnetcore2cosmos_002-300x110.png 300w" sizes="(max-width: 495px) 100vw, 495px" />
   
   <p class="wp-caption-text">
-    ASP.Net Core 2 &#8211; Default ValuesController Output
+    ASP.Net Core 2 – Default ValuesController Output
   </p>
 </div>
 
@@ -91,7 +91,7 @@ Following the expected conventions, let's add a “Controllers” folder to the 
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_003-600x418.png" alt="ASP.Net Core 2: Add New Item - Controller Class" width="600" height="418" class="size-medium-width wp-image-9091" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_003-600x418.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003-300x209.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003-768x535.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003-431x300.png 431w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003.png 948w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
-    ASP.Net Core 2: Add New Item &#8211; Controller Class
+    ASP.Net Core 2: Add New Item – Controller Class
   </p>
 </div>
 
@@ -123,7 +123,7 @@ Next we'll add a `Layout.cshtml` file that to serve as the general HTML layout f
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_004.png" alt="ASP.Net Core 2 - Add View Dialog" width="593" height="347" class="size-full wp-image-9092" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_004.png 593w, /wp-content/uploads/2018/04/aspnetcore2cosmos_004-300x176.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_004-513x300.png 513w" sizes="(max-width: 593px) 100vw, 593px" />
   
   <p class="wp-caption-text">
-    ASP.Net Core 2 &#8211; Add View Dialog
+    ASP.Net Core 2 – Add View Dialog
   </p>
 </div>
 
@@ -259,7 +259,7 @@ Then reference the new project from the ASP.Net one:
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_007-600x415.png" alt="ASP/.Net Core - Adding Project Reference" width="600" height="415" class="size-medium-width wp-image-9095" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_007-600x415.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007-300x207.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007-768x531.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007-434x300.png 434w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007.png 794w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
-    ASP/.Net Core &#8211; Adding Project Reference
+    ASP/.Net Core – Adding Project Reference
   </p>
 </div>
 
@@ -579,7 +579,7 @@ And now we have a very simple CRUD interface:
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_009.png" alt="ASP.Net Core 2 - Basic CRUD Interface to Cosmos DB" width="409" height="215" class="size-full wp-image-9097" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_009.png 409w, /wp-content/uploads/2018/04/aspnetcore2cosmos_009-300x158.png 300w" sizes="(max-width: 409px) 100vw, 409px" />
   
   <p class="wp-caption-text">
-    ASP.Net Core 2 &#8211; Basic CRUD Interface to Cosmos DB
+    ASP.Net Core 2 – Basic CRUD Interface to Cosmos DB
   </p>
 </div>
 

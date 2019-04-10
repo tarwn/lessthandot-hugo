@@ -27,11 +27,11 @@ To access the property, right-click a row or column group in the tablix and sele
   <img src="/wp-content/uploads/users/grrlgeek/filter 1.png?mtime=1360071212" alt="" width="579" height="596" />
 </p>
 
-Expression &#8211; a field from the data set. You can also select the fx button to write an expression.
+Expression – a field from the data set. You can also select the fx button to write an expression.
 
-Operator &#8211; the comparison operator. Options are =, <>, Like, >, >=, <, <=, Top N, Bottom N, Top %, Bottom %, In, Between.
+Operator – the comparison operator. Options are =, <>, Like, >, >=, <, <=, Top N, Bottom N, Top %, Bottom %, In, Between.
 
-Value &#8211;  the value you want to compare the expression to. This can be a single value, or you can select the fx button to write an expression.
+Value –  the value you want to compare the expression to. This can be a single value, or you can select the fx button to write an expression.
 
 **Example**: I have a report that shows sales per year by sales territory. I want to filter it so only orders placed after 2006 show in totals.
 

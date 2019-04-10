@@ -99,7 +99,7 @@ I built this site structure using [Metalsmith][2].
 
 2. Next I decided on a site structure I wanted to target:
 
-/ &#8211; landing page
+/ – landing page
   
 /about
   
@@ -210,9 +210,9 @@ You can see the full file here: [index.js on tarwn/StaticMarketingSite][9].
 
 LESS/SASS/CSS- I left these out on purpose because I think this should reflect the fastest/least friction option for the person building the site
 
-Docs Layouts &#8211; I didn't finish docs at all. I feel like this is going to be pretty custom to how someone would want to share information about their product (and what that product is), so it's one of the bigger gaps
+Docs Layouts – I didn't finish docs at all. I feel like this is going to be pretty custom to how someone would want to share information about their product (and what that product is), so it's one of the bigger gaps
 
-Image processing, Responsive frameworks, etc &#8211; These are choices that rely heavily on the design of the page, so I didn't play with it at all
+Image processing, Responsive frameworks, etc – These are choices that rely heavily on the design of the page, so I didn't play with it at all
 
  [1]: https://github.com/tarwn/StaticMarketingSite "tarwn/StaticMarketingSite on github"
  [2]: http://metalsmith.io

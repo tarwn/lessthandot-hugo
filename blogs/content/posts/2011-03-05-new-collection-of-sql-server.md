@@ -76,7 +76,7 @@ Learn security & compliance features for SQL Server from Il-Sung Lee, Senior Pro
   
 Justin Erickson
   
-Learn about AlwaysOn &#8211; HA/DR improvements/enhancements for SQL Server from Justin Erickson, Senior Program Manager from SQL Server Engine team.
+Learn about AlwaysOn – HA/DR improvements/enhancements for SQL Server from Justin Erickson, Senior Program Manager from SQL Server Engine team.
 
 **[SQL Server backup compression][8]**
   

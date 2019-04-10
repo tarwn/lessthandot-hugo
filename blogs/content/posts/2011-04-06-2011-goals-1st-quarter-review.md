@@ -30,9 +30,9 @@ I have lots of ideas. I just need the time to write. And, I need to focus on mor
   
 I am blown away by my experiences presenting already this year.
   
-February &#8211; presented “Reporting Services 201” for WI SSUG.
+February – presented “Reporting Services 201” for WI SSUG.
   
-March &#8211; presented “Reporting Services 201” for 24 Hours of PASS and “Make Your Voice Heard” for SQL Saturday 67 Chicago.
+March – presented “Reporting Services 201” for 24 Hours of PASS and “Make Your Voice Heard” for SQL Saturday 67 Chicago.
   
 I will be the speaker for MADPASS in April. I'm considering submitting for SQL Saturday 75 Columbus. I'm trying to work out a date to present to ONSSUG. I have committed to submitting abstracts for PASS Summit.
   

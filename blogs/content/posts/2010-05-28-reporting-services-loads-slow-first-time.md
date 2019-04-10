@@ -35,7 +35,7 @@ I was fortunate enough to purchase a new laptop recently and installed my usual 
 
 On my new Dell XPS I have McAfee Security installed. It came with the laptop and isn’t all that bad. Does the job! But, when I open my Report Manager session, it takes around 5 minutes to load. Wow! I’m not a patient DBA. I like measuring things in nanoseconds. It is the foundation of why I purchase hardware at work that is way overboard and scalable. So my first inclination is to turn to the Windows Firewall. I know a lot of people may disagree with me, but I turn it off. It is good and I understand the concept behind it, but in our world, it can cause more problems than it's worth. I’m behind my Cisco firewall and the McAfee firewall. I think I’m ok for now until a script kiddy reads this 😉
 
-I opened the McAfee Security Center and navigated to the location I assume will be causing the problem &#8212; the firewall configuration. In this configuration I see that the Firewall protection is enabled and the option for configuring it is there. Upon opening this configuration I am presented with a listing of programs/files that have particular “access” settings. 
+I opened the McAfee Security Center and navigated to the location I assume will be causing the problem — the firewall configuration. In this configuration I see that the Firewall protection is enabled and the option for configuring it is there. Upon opening this configuration I am presented with a listing of programs/files that have particular “access” settings. 
 
 In this listing I quickly notice that my SQL Server Analysis Service instance is blocked. Fixed that! 
 

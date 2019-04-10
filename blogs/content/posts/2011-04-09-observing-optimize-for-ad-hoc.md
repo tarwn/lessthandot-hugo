@@ -68,11 +68,11 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">        </span><span style="color: gray;">,</span> <span style="color: fuchsia;">sum</span><span style="color: gray;">(</span><span style="color: fuchsia;">cast</span><span style="color: gray;">((</span><span style="color: blue;">CASE</span> <span style="color: blue;">WHEN</span> usecounts <span style="color: gray;">=</span> 1 <span style="color: blue;">THEN</span> size_in_bytes <span style="color: blue;">ELSE</span> 0 <span style="color: blue;">END</span><span style="color: gray;">)</span> <span style="color: blue;">as</span> <span style="color: blue;">decimal</span><span style="color: gray;">(</span>18<span style="color: gray;">,</span>2<span style="color: gray;">)))/</span>1024<span style="color: gray;">/</span>1024 <span style="color: blue;">AS</span> [Total MBs &#8211; USE Count 1]</span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">        </span><span style="color: gray;">,</span> <span style="color: fuchsia;">sum</span><span style="color: gray;">(</span><span style="color: fuchsia;">cast</span><span style="color: gray;">((</span><span style="color: blue;">CASE</span> <span style="color: blue;">WHEN</span> usecounts <span style="color: gray;">=</span> 1 <span style="color: blue;">THEN</span> size_in_bytes <span style="color: blue;">ELSE</span> 0 <span style="color: blue;">END</span><span style="color: gray;">)</span> <span style="color: blue;">as</span> <span style="color: blue;">decimal</span><span style="color: gray;">(</span>18<span style="color: gray;">,</span>2<span style="color: gray;">)))/</span>1024<span style="color: gray;">/</span>1024 <span style="color: blue;">AS</span> [Total MBs – USE Count 1]</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">        </span><span style="color: gray;">,</span> <span style="color: fuchsia;">sum</span><span style="color: gray;">(</span><span style="color: blue;">CASE</span> <span style="color: blue;">WHEN</span> usecounts <span style="color: gray;">=</span> 1 <span style="color: blue;">THEN</span> 1 <span style="color: blue;">ELSE</span> 0 <span style="color: blue;">END</span><span style="color: gray;">)</span> <span style="color: blue;">AS</span> [Total Plans &#8211; USE Count 1]</span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">        </span><span style="color: gray;">,</span> <span style="color: fuchsia;">sum</span><span style="color: gray;">(</span><span style="color: blue;">CASE</span> <span style="color: blue;">WHEN</span> usecounts <span style="color: gray;">=</span> 1 <span style="color: blue;">THEN</span> 1 <span style="color: blue;">ELSE</span> 0 <span style="color: blue;">END</span><span style="color: gray;">)</span> <span style="color: blue;">AS</span> [Total Plans – USE Count 1]</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -84,7 +84,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">ORDER</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: blue;">BY</span> [Total MBs &#8211; USE Count 1] <span style="color: blue;">DESC</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">ORDER</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: blue;">BY</span> [Total MBs – USE Count 1] <span style="color: blue;">DESC</span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -112,11 +112,11 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
-  <span style="font-family: &amp;amp; font-size: 8pt;">CacheType   Total Plans   Total MBs     Avg Use Count Total MBs &#8211; USE Count 1  Total Plans </span>
+  <span style="font-family: &amp;amp; font-size: 8pt;">CacheType   Total Plans   Total MBs     Avg Use Count Total MBs – USE Count 1  Total Plans </span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
-  <span style="font-family: &amp;amp; font-size: 8pt;">&#8212;&#8212;&#8212;&#8211; &#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8212;</span>
+  <span style="font-family: &amp;amp; font-size: 8pt;">———– ————- ————- ————- ———————— ————</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
@@ -168,11 +168,11 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">CacheType<span style="mso-spacerun: yes;">   </span>Total Plans<span style="mso-spacerun: yes;">  </span>Total MBs<span style="mso-spacerun: yes;">    </span>Avg Use Count Total MBs &#8211; USE Count 1<span style="mso-spacerun: yes;">   </span>Total Plans </span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">CacheType<span style="mso-spacerun: yes;">   </span>Total Plans<span style="mso-spacerun: yes;">  </span>Total MBs<span style="mso-spacerun: yes;">    </span>Avg Use Count Total MBs – USE Count 1<span style="mso-spacerun: yes;">   </span>Total Plans </span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;"> </span><span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">&#8212;&#8212;&#8212;-<span style="mso-spacerun: yes;">  </span>&#8212;&#8212;&#8212;&#8211; <span style="mso-spacerun: yes;"> </span>&#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;"> </span><span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">———-<span style="mso-spacerun: yes;">  </span>———– <span style="mso-spacerun: yes;"> </span>———— ————- ————————- ————</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -224,11 +224,11 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">CacheType<span style="mso-spacerun: yes;">  </span>Total Plans<span style="mso-spacerun: yes;">   </span>Total MBs<span style="mso-spacerun: yes;">    </span>Avg Use Count Total MBs &#8211; USE Count 1<span style="mso-spacerun: yes;">    </span>Total Plans</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">CacheType<span style="mso-spacerun: yes;">  </span>Total Plans<span style="mso-spacerun: yes;">   </span>Total MBs<span style="mso-spacerun: yes;">    </span>Avg Use Count Total MBs – USE Count 1<span style="mso-spacerun: yes;">    </span>Total Plans</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; &#8212;&#8212;&#8212;&#8212;</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">———- ————- ———— ————- ————————– ————</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -288,11 +288,11 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">CacheType<span style="mso-spacerun: yes;">  </span>Total Plans<span style="mso-spacerun: yes;">   </span>Total MBs<span style="mso-spacerun: yes;">    </span>Avg Use Count Total MBs &#8211; USE Count 1<span style="mso-spacerun: yes;">       </span>Total Plans</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">CacheType<span style="mso-spacerun: yes;">  </span>Total Plans<span style="mso-spacerun: yes;">   </span>Total MBs<span style="mso-spacerun: yes;">    </span>Avg Use Count Total MBs – USE Count 1<span style="mso-spacerun: yes;">       </span>Total Plans</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; &#8212;&#8212;&#8212;&#8212;</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">———- ————- ———— ————- —————————– ————</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">

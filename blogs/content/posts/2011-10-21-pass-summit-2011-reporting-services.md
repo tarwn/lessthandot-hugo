@@ -27,7 +27,7 @@ I covered a few of my favorite RS features that I think can make your reports st
   * Lists 
   * Charts 
 
-My presentation materials &#8211; PowerPoint and .rdls &#8211; are available for download at <http://www.sqlpass.org/summit/2011/Speakers/CallForSpeakers/SessionDetail.aspx?sid=1004>. 
+My presentation materials – PowerPoint and .rdls – are available for download at <http://www.sqlpass.org/summit/2011/Speakers/CallForSpeakers/SessionDetail.aspx?sid=1004>. 
 
 I love presenting this session and can't wait to do it again! 
 

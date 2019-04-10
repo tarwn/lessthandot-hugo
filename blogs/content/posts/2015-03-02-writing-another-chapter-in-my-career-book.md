@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-On Tuesday, I have to decide: which lunchbox do I take to my first day of work &#8211; Star Wars or Wonder Woman?
+On Tuesday, I have to decide: which lunchbox do I take to my first day of work – Star Wars or Wonder Woman?
 
 [<img class="aligncenter size-medium wp-image-3280" src="/wp-content/uploads/2015/03/lunchboxes-300x169.jpg" alt="lunchboxes" width="300" height="169" srcset="/wp-content/uploads/2015/03/lunchboxes-300x169.jpg 300w, /wp-content/uploads/2015/03/lunchboxes-1024x579.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />][1]
 

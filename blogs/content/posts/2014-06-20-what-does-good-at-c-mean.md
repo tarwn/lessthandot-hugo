@@ -72,7 +72,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   
   <tr>
     <th colspan="4">
-      Web Development &#8211; Client-side
+      Web Development – Client-side
     </th>
   </tr>
   
@@ -114,7 +114,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   
   <tr>
     <td>
-      Frameworks &#8211; Knockout, RequireJS, etc
+      Frameworks – Knockout, RequireJS, etc
     </td>
     
     <td>
@@ -150,7 +150,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   
   <tr>
     <td>
-      Testing &#8211; jasmine, QUnit, etc
+      Testing – jasmine, QUnit, etc
     </td>
     
     <td>
@@ -168,7 +168,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   
   <tr>
     <th colspan="4">
-      Web Development &#8211; Server-side
+      Web Development – Server-side
     </th>
   </tr>
   
@@ -288,7 +288,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   
   <tr>
     <td>
-      Testing &#8211; NUnit, MSTest, Moq, Rhino …
+      Testing – NUnit, MSTest, Moq, Rhino …
     </td>
     
     <td>
@@ -480,7 +480,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   
   <tr>
     <td>
-      DCVS &#8211; Git, Hg, etc
+      DCVS – Git, Hg, etc
     </td>
     
     <td>
@@ -498,7 +498,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   
   <tr>
     <td>
-      Build Server &#8211; TeamCity, Jenkins, Go, etc
+      Build Server – TeamCity, Jenkins, Go, etc
     </td>
     
     <td>

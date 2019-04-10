@@ -34,7 +34,7 @@ namespace SquishIt.Framework
 
 This takes the place of the old “FileSystem” static class, that probably only a few people are aware of. The implementation isn't that important, but it takes some information from HttpRuntime / HttpContext and uses that to convert between file locations on disk and app-relative web paths. 
 
-Because newer versions of Nancy don't reference System.Web, we had to find another way to do this. It seems like the best way to get it done is using Nancy's IRootPathProvider. The following looks like a reasonable approximation of what was being done with HttpContext / HttpRuntime &#8211; I have not tested it with CSS path rewriting or any of the trickier stuff that SquishIt does, but I think it will work. If not I'm sure someone will let me know.
+Because newer versions of Nancy don't reference System.Web, we had to find another way to do this. It seems like the best way to get it done is using Nancy's IRootPathProvider. The following looks like a reasonable approximation of what was being done with HttpContext / HttpRuntime – I have not tested it with CSS path rewriting or any of the trickier stuff that SquishIt does, but I think it will work. If not I'm sure someone will let me know.
 
 ```csharp
 using System;
@@ -72,7 +72,7 @@ namespace SquishIt.NancySample
 }
 ```
 
-Pretty simple. We basically had to replace the Server.MapPath / HttpRuntime.AppDomainAppPath type stuff we were using with IRootPathProvider.GetRootPath(). It may very well end up being more complicated than this &#8211; but whats important is it is now in the user's control. In addition to allowing users of newer versions of Nancy to use SquishIt, this will also let users with environmental issues that our code does not account for work around our bad code without needing to dig too deeply into SquishIt's internals.
+Pretty simple. We basically had to replace the Server.MapPath / HttpRuntime.AppDomainAppPath type stuff we were using with IRootPathProvider.GetRootPath(). It may very well end up being more complicated than this – but whats important is it is now in the user's control. In addition to allowing users of newer versions of Nancy to use SquishIt, this will also let users with environmental issues that our code does not account for work around our bad code without needing to dig too deeply into SquishIt's internals.
 
 Once this is coded, we just have to configure SquishIt to use it. This can be done in a nancy bootstrapper like so:
 

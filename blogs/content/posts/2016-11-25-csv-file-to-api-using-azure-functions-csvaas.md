@@ -27,7 +27,7 @@ When I went down this path, I decided it had to be a realistic. The API side had
   <a href="/wp-content/uploads/2016/11/CSVaaS.png"><img src="/wp-content/uploads/2016/11/CSVaaS.png" alt="Transformation Pipeline - Saving a CSV in a folder to Managed API" width="960" height="235" class="size-full wp-image-4840" srcset="/wp-content/uploads/2016/11/CSVaaS.png 960w, /wp-content/uploads/2016/11/CSVaaS-300x73.png 300w" sizes="(max-width: 960px) 100vw, 960px" /></a>
   
   <p class="wp-caption-text">
-    Transformation Pipeline &#8211; Saving a CSV in a folder to Managed API
+    Transformation Pipeline – Saving a CSV in a folder to Managed API
   </p>
 </div>
 
@@ -37,13 +37,13 @@ I drop a file in my Dropbox folder, it’s picked up and processed into a simila
 
 Here's the tools I used:
 
-  * Azure API Management &#8211; provides an API gateway with built-in authentication mechanisms, analytics, customizable policies, caching, and documentation with “Try It” interfaces
-  * Azure Storage &#8211; provides infinite file storage where I can drop translated JSON files to serve as the back-end behind the API gateway
+  * Azure API Management – provides an API gateway with built-in authentication mechanisms, analytics, customizable policies, caching, and documentation with “Try It” interfaces
+  * Azure Storage – provides infinite file storage where I can drop translated JSON files to serve as the back-end behind the API gateway
   * Azure Functions 
       * #1: monitors dropbox and scoops up changes to convert them from CSV into JSON, saving to an “archive” container in Azure Storage
       * #2: monitors the “archive” container and publishes new entries by copying them to “public/latest” and adding them to a list in “listing/all”
-  * Microsoft Account &#8211; identity provider for API subscription
-  * Dropbox &#8211; my end-user “UI”
+  * Microsoft Account – identity provider for API subscription
+  * Dropbox – my end-user “UI”
 
 The only one of these that requires coding is the Azure Functions, and I did those in C#.
 
@@ -145,7 +145,7 @@ And dive into details like response times around the world for specific date ran
 
 So I have pretty documentation, examples in numerous languages, try it right in the interface buttons, subscription management, and so on with no effort beyond defining the operations (and I could customize all of this if I felt like spending the time).
 
-## Building It &#8211; Implementation Details
+## Building It – Implementation Details
 
 Here's the details of what it took to build it.
 

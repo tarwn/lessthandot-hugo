@@ -61,7 +61,7 @@ This time, we get Numeric(2,1) (for 3.0) and int for the 10. There are well defi
 
 For division, the rule is:
 
-Precision = p1 &#8211; s1 + s2 + max(6, s1 + p2 + 1)
+Precision = p1 – s1 + s2 + max(6, s1 + p2 + 1)
   
 Scale = max(6, s1 + p2 + 1)
 
@@ -77,9 +77,9 @@ P2 = 2
   
 S2 = 1
 
-Precision = p1 &#8211; s1 + s2 + max(6, s1 + p2 + 1)
+Precision = p1 – s1 + s2 + max(6, s1 + p2 + 1)
   
-Precision = 10 &#8211; 0 + 1 + max(6, 0 + 2 + 1)
+Precision = 10 – 0 + 1 + max(6, 0 + 2 + 1)
   
 Precision = 11 + Max(6, 3)
   
@@ -99,9 +99,9 @@ P2 = 2
   
 S2 = 1
 
-Precision = p1 &#8211; s1 + s2 + max(6, s1 + p2 + 1)
+Precision = p1 – s1 + s2 + max(6, s1 + p2 + 1)
   
-Precision = 2 &#8211; 0 + 1 + max(6, 0 + 2 + 1)
+Precision = 2 – 0 + 1 + max(6, 0 + 2 + 1)
   
 Precision = 3 + Max(6, 3)
   
@@ -135,9 +135,9 @@ P2 = 9
   
 S2 = 8
 
-Precision = p1 &#8211; s1 + s2 + max(6, s1 + p2 + 1)
+Precision = p1 – s1 + s2 + max(6, s1 + p2 + 1)
   
-Precision = 2 &#8211; 0 + 8 + max(6, 0 + 9 + 1)
+Precision = 2 – 0 + 8 + max(6, 0 + 9 + 1)
   
 Precision = 10 + Max(6, 10)
   

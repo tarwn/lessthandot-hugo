@@ -19,7 +19,7 @@ categories:
 
 I love and am very familiar with SQL Server. But, as a consultant, I need to step outside of that box pretty often, and advise people on applications, storage, and networking. I have general knowledge of those topics, gathered from many years in IT, seeing a lot of systems, and always being willing to learn.
 
-But having to work with some things on my own is the hardest part. I’ve been struggling with virtualization for some months. I have WMware Workstation on my personal laptop &#8211; I went and bought a full license because I really needed the full capabilities &#8211; and I decided to conquer some of my fears.
+But having to work with some things on my own is the hardest part. I’ve been struggling with virtualization for some months. I have WMware Workstation on my personal laptop – I went and bought a full license because I really needed the full capabilities – and I decided to conquer some of my fears.
 
 ### Cloning
 

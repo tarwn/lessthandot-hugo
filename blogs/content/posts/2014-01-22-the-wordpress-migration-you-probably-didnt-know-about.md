@@ -67,7 +67,7 @@ I started out the WordPress migration with a blank theme folder called “LessTh
   <a href="/wp-content/uploads/2014/01/WordpressProgress.png"><img src="/wp-content/uploads/2014/01/WordpressProgress-300x187.png" alt="WordPress Migration - The First Page" width="300" height="187" class="size-medium wp-image-2282" srcset="/wp-content/uploads/2014/01/WordpressProgress-300x187.png 300w, /wp-content/uploads/2014/01/WordpressProgress.png 800w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
-    WordPress Migration &#8211; The First Page
+    WordPress Migration – The First Page
   </p>
 </div>
 

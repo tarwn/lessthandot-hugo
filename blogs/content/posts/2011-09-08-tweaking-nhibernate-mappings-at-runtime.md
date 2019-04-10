@@ -16,7 +16,7 @@ categories:
 ---
 Every once in a while, especially on legacy systems, you can run into database-specific issues that NHibernate can't get around out of the box. We've been looking to convert from our current ORM to NHibernate, and run into a couple. One is self-inflicted (we use a DB-first codegen approach) and the other is forced on us by differences in the way Oracle and SQL Server handle ID assignment. So our problems are:
 
-  1. NHibernate defaults to a single global sequence on Oracle &#8211; we need a named sequence per table
+  1. NHibernate defaults to a single global sequence on Oracle – we need a named sequence per table
   2. Table names on oracle can't exceed 30 characters
 
 We really don't want to compile mappings into their own assembly (really 2, that we could switch between), so we looked for alternatives and found a [Remapper][1] approach on Krystof Kozmic's blog. In a nutshell, this allows you to adjust your (single set of) mappings at runtime to account for platform-specific bits.

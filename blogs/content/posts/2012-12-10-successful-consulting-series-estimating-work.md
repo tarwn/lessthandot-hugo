@@ -79,21 +79,21 @@ Mistaken discovery of these only being the major components to the project may l
 In reality, the discovery stage for this has only begun.  Let’s break it down and see how the thought process should go while adding hours to each discovery item.
 
   * SQL Server 2005 upgrade to SQL Server 2008 R2<o :p></o>
-  * 10 &#8211; Deprecated feature usage discovery <o :p></o>
+  * 10 – Deprecated feature usage discovery <o :p></o>
 
   * Each database being hosted<o :p></o>
 
-  * 5 &#8211; Security method used<o :p></o>
+  * 5 – Security method used<o :p></o>
 
-  * 1 &#8211; Editions used and requirements<o :p></o>
+  * 1 – Editions used and requirements<o :p></o>
 
-  * 5 &#8211; Owners of each database and buy in to upgrade<o :p></o>
+  * 5 – Owners of each database and buy in to upgrade<o :p></o>
 
-  * 10 &#8211; Hardware being used to host the SQL Server instances<o :p></o>
+  * 10 – Hardware being used to host the SQL Server instances<o :p></o>
 
-  * 5 &#8211; Licensing needs (changes/cost)<o :p></o>
+  * 5 – Licensing needs (changes/cost)<o :p></o>
 
-  * 12 &#8211; SQL features utilized needing modifications/review/design considerations<o :p></o>
+  * 12 – SQL features utilized needing modifications/review/design considerations<o :p></o>
 
   * SQL Server Agent Jobs<o :p></o>
 
@@ -101,34 +101,34 @@ In reality, the discovery stage for this has only begun.  Let’s break it down
 
   * SSIS, SSRS, SSAS, FILESTREAM, Full Text etc…<o :p></o>
 
-  * 5 &#8211; Server clustering involvement<o :p></o>
+  * 5 – Server clustering involvement<o :p></o>
 
   * Mirroring<o :p></o>
-  * 5 &#8211; Custom implementations for failover<o :p></o>
+  * 5 – Custom implementations for failover<o :p></o>
 
-  * 5 &#8211; In-place failover of features<o :p></o>
+  * 5 – In-place failover of features<o :p></o>
 
-  * 10 &#8211; Hardware being used to host the mirror<o :p></o>
+  * 10 – Hardware being used to host the mirror<o :p></o>
 
-  * 5 &#8211; Stability of mirror<o :p></o>
+  * 5 – Stability of mirror<o :p></o>
 
   * Application <o :p></o>
-  * 5 &#8211; Connectivity provider being used<o :p></o>
+  * 5 – Connectivity provider being used<o :p></o>
 
-  * 20 &#8211; Changes needed to application<o :p></o>
+  * 20 – Changes needed to application<o :p></o>
 
-  * 5 &#8211; Does application handle the failover scenario?<o :p></o>
+  * 5 – Does application handle the failover scenario?<o :p></o>
 
   * Integration Server<o :p></o>
-  * 5 &#8211; Number of packages<o :p></o>
+  * 5 – Number of packages<o :p></o>
 
-  * 1 &#8211; Schedule and execution times of each<o :p></o>
+  * 1 – Schedule and execution times of each<o :p></o>
 
-  * 5 &#8211; Connections and providers used<o :p></o>
+  * 5 – Connections and providers used<o :p></o>
 
-  * 1 &#8211; Security method used<o :p></o>
+  * 1 – Security method used<o :p></o>
 
-  * 10 &#8211; Will SSIS packages require metadata refresh or any other needs?<o :p></o>
+  * 10 – Will SSIS packages require metadata refresh or any other needs?<o :p></o>
 
 As we can see, the discovery stage has become much more than simply discovering what version of SQL Server is in place and what other major components are relying on the databases on the SQL Server.  After listing these discovery items out, hours accumulated to 135 hours or ~3 weeks on a 40 hour work week.  This is a method of walking through and estimating discovery.  However, the steps are not completed.  The next step in discovery is movement of hours and making suggestive cutbacks based on where hours can be eliminated to make this a more feasible overall accumulated amount of hours the client will accept.  For example, Application discovery can be reduced by pulling 20 hours from the changes needed to the application and push them to the client.  The next reduction is made by combing hours into similar work performed.  For the integration server, application and SQL Server instances themselves, security can be combined by using methods to discover the security models quicker.  Scripting and so forth can be sent to the client for this discovery to be performed by the client.  This eliminates the hours to be done by you, the consultant.
 
@@ -143,17 +143,17 @@ For a SQL Server upgrade, there are tools we can utilize to make planning (and p
 Break down the development and design for Widget Maker LTD SQL Server upgrade.  We would break this down the same for any project and estimation process.  The point here is, break it down and further pinpoint hours we need based on our experience, resources and skills at hand.
 
   * Design<o :p></o>
-  * 5 &#8211; Method of upgrade to be used<o :p></o>
-  * 10 &#8211; Hardware needed during upgrade<o :p></o>
-  * 20 &#8211; Recovery planning design <o :p></o>
+  * 5 – Method of upgrade to be used<o :p></o>
+  * 10 – Hardware needed during upgrade<o :p></o>
+  * 20 – Recovery planning design <o :p></o>
 
   * Development<o :p></o>
   * Method to be used requirements<o :p></o>
 
-  * 30 &#8211; Upgrade scripting needed<o :p></o>
-  * 25 &#8211; Recovery scripting <o :p></o>
-  * 10 &#8211; Application development needs<o :p></o>
-  * 15 &#8211; SSIS changes<o :p></o>
+  * 30 – Upgrade scripting needed<o :p></o>
+  * 25 – Recovery scripting <o :p></o>
+  * 10 – Application development needs<o :p></o>
+  * 15 – SSIS changes<o :p></o>
 
 We’ve really put this estimation stage down in a high level and, in most cases, it will be.  Estimating the design and development above is made from a seasoned data architect that has performed these steps before.  Now, even seasoned consultants perform the estimation stages.  So don’t assume experience bypasses important steps in estimating work to be performed.  If it is, failure typically creeps into a project.
 

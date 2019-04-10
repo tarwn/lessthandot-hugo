@@ -33,7 +33,7 @@ Select Case When @Data Is NULL Then NULL
             When 0=1           Then 1
             End
 ```
-Since @Data = ”, the code should return &#8216;Data is empty'. In this case, it doesn't because the 0=1 branch causes SQL Server to &#8216;attempt' to convert each return value to an integer, and fails. 
+Since @Data = ”, the code should return 'Data is empty'. In this case, it doesn't because the 0=1 branch causes SQL Server to 'attempt' to convert each return value to an integer, and fails. 
 
 When mixing numbers and strings, SQL Server prefers (based on data type precedence) to convert data to numbers. This is a little unfortunately because all number data can be converted to a string, but not all strings can be converted to a number. 
 

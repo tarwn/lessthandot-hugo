@@ -28,7 +28,7 @@ This is a quick post about a question that had to do with time formatting. This 
 
 The question can be found here: [Formatting time only][2]. SQL Server has a bunch of formats for converting datetime values, a list of all of them can be found in Books On Line here: [CAST and CONVERT (Transact-SQL)][3]
 
-So let's say for example that you have this datetime &#8216;2010-03-24 16:20:01.800' and you want to show 4:20 PM, how can you do that?
+So let's say for example that you have this datetime '2010-03-24 16:20:01.800' and you want to show 4:20 PM, how can you do that?
 
 Let's take a look, if you are on SQL Server 2008 you can convert to time
 
@@ -37,7 +37,7 @@ DECLARE @t TIME = '2010-03-24 16:20:01.800'
 SELECT @t AS TIME
 ```
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+—————–
   
 16:20:01.8000000
 
@@ -50,7 +50,7 @@ DECLARE @t TIME = '2010-03-24 16:20:01.800'
 SELECT CONVERT(VARCHAR(30),@t,100)
 ```
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+——————–
   
 4:20PM
 
@@ -62,7 +62,7 @@ sql
 SELECT STUFF('4:20PM',5,0,' ')
 ```
 
-&#8212;&#8212;&#8212;&#8212;&#8212;
+—————
   
 4:20 PM
 
@@ -72,7 +72,7 @@ sql
 DECLARE @t TIME = '2010-03-24 16:20:01.800'
 SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@t,100),7),6,0,' ') AS FormattedTime
 ```
-&#8212;&#8212;&#8212;&#8212;&#8211;
+————–
   
 4:20 PM
 
@@ -84,7 +84,7 @@ SET @d = '2010-03-24 16:20:01.800'
 SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@d,100),7),6,0,' ')
 ```
 
-&#8212;&#8212;&#8212;&#8212;&#8211;
+————–
   
 4:20 PM
 

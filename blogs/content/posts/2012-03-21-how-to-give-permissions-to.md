@@ -21,7 +21,7 @@ This came up a couple of days ago, a person created a User-Defined Table Type an
 
 **Msg 229, Level 14, State 5, Line 9
   
-The EXECUTE permission was denied on the object &#8216;SysObjectsCount', database &#8216;testTVP', schema &#8216;dbo'.**
+The EXECUTE permission was denied on the object 'SysObjectsCount', database 'testTVP', schema 'dbo'.**
 
 Let's take a look at how to give permissions because if you do the following
 
@@ -33,7 +33,7 @@ You will get this error
 
 **Msg 15151, Level 16, State 1, Line 1
   
-Cannot find the object &#8216;SysObjectsCount', because it does not exist or you do not have permission.**
+Cannot find the object 'SysObjectsCount', because it does not exist or you do not have permission.**
 
 Let's fix this, I will show you some code so that you can reproduce this
 
@@ -106,7 +106,7 @@ You get the following error
 
 **Msg 229, Level 14, State 5, Line 9
   
-The EXECUTE permission was denied on the object &#8216;SysObjectsCount', database &#8216;testTVP', schema &#8216;dbo'.**
+The EXECUTE permission was denied on the object 'SysObjectsCount', database 'testTVP', schema 'dbo'.**
 
 In order to give the permissions to testLogin, you need to execute the following code, yes the **::** is correct.
 

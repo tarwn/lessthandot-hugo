@@ -55,9 +55,9 @@ Sarah Henwood and Bob Dorr explain SQL Server Sparse Files
 
 **[How It Works: sys.dm\_os\_buffer_descriptors][9]**
   
-Answer to the question: I am counting pages in the buffer pool using &#8216;Select count(*) from sys.dm\_os\_buffer_descriptors' and I get 6,460 buffers but when when I look at the Buffer Node:Database pages counter it shows 6,599. Why the difference?”
+Answer to the question: I am counting pages in the buffer pool using 'Select count(*) from sys.dm\_os\_buffer_descriptors' and I get 6,460 buffers but when when I look at the Buffer Node:Database pages counter it shows 6,599. Why the difference?”
 
-**[RML Utilities &#8211; ReadTrace and how to workaround MARS][10]**
+**[RML Utilities – ReadTrace and how to workaround MARS][10]**
   
 We've lately gotten several questions from users regarding ReadTrace and how to workaround when your input trace files contain MARS (Multiple Active Result Sets)
 

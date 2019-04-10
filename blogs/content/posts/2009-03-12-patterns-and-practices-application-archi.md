@@ -60,52 +60,52 @@ Here is a list of all the chapters, make sure you check out the cheat sheets
   
 
 
-  * [Chapter 1 &#8211; Fundamentals of Application Architecture][6] 
-  * [Chapter 2 &#8211; .NET Platform Overview][7]
-  * [Chapter 3 &#8211; Architecture and Design Guidelines][8]
+  * [Chapter 1 – Fundamentals of Application Architecture][6] 
+  * [Chapter 2 – .NET Platform Overview][7]
+  * [Chapter 3 – Architecture and Design Guidelines][8]
 
 #### Part II, Design
   
 
 
-  * [Chapter 4 &#8211; Designing Your Architecture][9]
-  * [Chapter 5 &#8211; Deployment Patterns][10]
-  * [Chapter 6 &#8211; Architectural Styles][11]
-  * [Chapter 7 &#8211; Quality Attributes][12]
-  * [Chapter 8 &#8211; Communication Guidelines][13]
+  * [Chapter 4 – Designing Your Architecture][9]
+  * [Chapter 5 – Deployment Patterns][10]
+  * [Chapter 6 – Architectural Styles][11]
+  * [Chapter 7 – Quality Attributes][12]
+  * [Chapter 8 – Communication Guidelines][13]
 
 #### Part III, Layers
   
 
 
-  * [Chapter 9 &#8211; Layers and Tiers][14]
-  * [Chapter 10 &#8211; Presentation Layer Guidelines][15]
-  * [Chapter 11 &#8211; Business Layer Guidelines][16]
-  * [Chapter 12 &#8211; Data Access Layer Guidelines][17]
-  * [Chapter 13 &#8211; Service Layer Guidelines][18]
+  * [Chapter 9 – Layers and Tiers][14]
+  * [Chapter 10 – Presentation Layer Guidelines][15]
+  * [Chapter 11 – Business Layer Guidelines][16]
+  * [Chapter 12 – Data Access Layer Guidelines][17]
+  * [Chapter 13 – Service Layer Guidelines][18]
 
 #### Part IV, Archetypes
   
 
 
-  * [Chapter 14 &#8211; Application Archetypes][19]
-  * [Chapter 15 &#8211; Web Applications][20]
-  * [Chapter 16 &#8211; Rich Internet Applications (RIA)][21]
-  * [Chapter 17 &#8211; Rich Client Applications][22]
-  * [Chapter 18 &#8211; Services][23]
-  * [Chapter 19 &#8211; Mobile Applications][24]
-  * [Chapter 20 &#8211; Office Business Applications (OBA)][25]
-  * [Chapter 21 &#8211; SharePoint Line-Of-Business (LOB) Applications][26]
+  * [Chapter 14 – Application Archetypes][19]
+  * [Chapter 15 – Web Applications][20]
+  * [Chapter 16 – Rich Internet Applications (RIA)][21]
+  * [Chapter 17 – Rich Client Applications][22]
+  * [Chapter 18 – Services][23]
+  * [Chapter 19 – Mobile Applications][24]
+  * [Chapter 20 – Office Business Applications (OBA)][25]
+  * [Chapter 21 – SharePoint Line-Of-Business (LOB) Applications][26]
 
 #### Appendix
   
 
 
-  * [Cheat Sheet &#8211; patterns & practices Pattern Catalog][27]
-  * [Cheat Sheet &#8211; Presentation Technology Matrix][28]
-  * [Cheat Sheet &#8211; Data Access Technology Matrix][29]
-  * [Cheat Sheet &#8211; Workflow Technology Matrix][30]
-  * [Cheat Sheet &#8211; Integration Technology Matrix][31]
+  * [Cheat Sheet – patterns & practices Pattern Catalog][27]
+  * [Cheat Sheet – Presentation Technology Matrix][28]
+  * [Cheat Sheet – Data Access Technology Matrix][29]
+  * [Cheat Sheet – Workflow Technology Matrix][30]
+  * [Cheat Sheet – Integration Technology Matrix][31]
 
 ### Errata Page
   

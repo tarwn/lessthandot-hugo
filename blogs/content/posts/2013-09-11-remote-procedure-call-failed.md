@@ -58,7 +58,7 @@ Looking further, the MSC for opening MMC, is located in the SysWOW64 folder.  T
 What you will want to do is one of two things.
 
   1. Remove the SQL Server Configuration Manager form the tiles on your machine and add the one below, found in the 2012 folder
-  2. Leave the prior version, if needed for other configurations, and rename the 2012 MSC so it is easily distinguished &#8211; recommended
+  2. Leave the prior version, if needed for other configurations, and rename the 2012 MSC so it is easily distinguished – recommended
 
 To perform the second option, open the folder as shown below.
 

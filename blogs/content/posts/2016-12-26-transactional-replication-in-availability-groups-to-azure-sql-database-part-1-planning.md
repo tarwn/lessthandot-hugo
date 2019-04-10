@@ -17,19 +17,19 @@ Throughout the last few years, I've worked with SQL Server Availability Groups, 
 
 Both replication of a database in an AG and replication from SQL Server to SQL Database come with several caveats, limitations, and challenges. In this five-post blog series, I hope to share with you the lessons I've learned so you can do this correctly from the beginning.
 
-  * <a href="/?p=4896" target="_blank">Part 1 &#8211; Planning</a>
-  * <a href="/?p=4906" target="_blank">Part 2 &#8211; The Distributor</a>
-  * <a href="/?p=4923" target="_blank">Part 3 &#8211; The Publisher</a>
-  * <a href="/?p=4945" target="_blank">Part 4 &#8211; The Subscriber</a>
-  * <a href="/?p=4960" target="_blank">Part 5 &#8211; Testing</a>
+  * <a href="/?p=4896" target="_blank">Part 1 – Planning</a>
+  * <a href="/?p=4906" target="_blank">Part 2 – The Distributor</a>
+  * <a href="/?p=4923" target="_blank">Part 3 – The Publisher</a>
+  * <a href="/?p=4945" target="_blank">Part 4 – The Subscriber</a>
+  * <a href="/?p=4960" target="_blank">Part 5 – Testing</a>
 
 &nbsp;
 
 ### Getting Started
 
-Determine what you need to accomplish and if there is a simpler way to do it. This is a complicated solution with a lot of moving parts. Many things can go wrong or break. In this situation, we needed to have on-premises data in Azure to be consumed by other Azure services and for analytics. It also had to stay on-premises for transactional applications. The other option for moving the data on a regular basis was <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-sql-data-sync" target="_blank">Azure SQL Data Sync</a>, which has been in preview for five (long) years &#8211; I didn't want to use a preview technology, especially one that's been in preview mode for so long.
+Determine what you need to accomplish and if there is a simpler way to do it. This is a complicated solution with a lot of moving parts. Many things can go wrong or break. In this situation, we needed to have on-premises data in Azure to be consumed by other Azure services and for analytics. It also had to stay on-premises for transactional applications. The other option for moving the data on a regular basis was <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-sql-data-sync" target="_blank">Azure SQL Data Sync</a>, which has been in preview for five (long) years – I didn't want to use a preview technology, especially one that's been in preview mode for so long.
 
-You should have some familiarity with each of these features before combining them. Write up an architecture document ahead of time that will include all the relevant information you need as you're setting this up &#8211; replica names, publication properties, distributor properties, subscriber information, SQL DB information. Download my <a href="/?p=4899" target="_blank">Replication Setup Checklist</a> to be prepared.
+You should have some familiarity with each of these features before combining them. Write up an architecture document ahead of time that will include all the relevant information you need as you're setting this up – replica names, publication properties, distributor properties, subscriber information, SQL DB information. Download my <a href="/?p=4899" target="_blank">Replication Setup Checklist</a> to be prepared.
 
 Read through this series, and these other blog posts, to be prepared. I've referenced these blogs many time:
 
@@ -44,7 +44,7 @@ Lastly, reach out for help if needed. The SQL Server community helped me many, m
 
 There are tasks you'll need to take care of in SQL Server, the AG, and the SQL DB before you can begin.
 
-This blog series assumes you already have an AG set up &#8211; it won't go through the setup of that. It also assumes you have an Azure SQL server and a SQL Database created &#8211; it won't go through that setup either.
+This blog series assumes you already have an AG set up – it won't go through the setup of that. It also assumes you have an Azure SQL server and a SQL Database created – it won't go through that setup either.
 
 Ideally, the publishers, distributor, and subscribers will all be the same version and edition of SQL Server. If not, you have to configure from the highest-version server, or you will get errors.
 
@@ -65,7 +65,7 @@ The distribution database should not be on a replica server. If that server is l
 
 The service accounts for the engine and Agent on all publishers, distributor, and subscribers must be Windows accounts. Don’t do this with NT Service accounts. Also, make sure the accounts have minimum permissions or you may get SSPI errors. (Described at <https://cmatskas.com/fixing-error-cannot-generate-sspi-context-after-changing-sql-service-account/>.)
 
-The service account of the Log Reader Agent must be a db_owner in the publication database. As a matter of fact, there are a whole lot of rules about service accounts and permissions. Read <a href="https://msdn.microsoft.com/en-us/library/ms151227.aspx" target="_blank">Replication Agent Security Model</a> and apply all these rules. Do not just automatically make accounts sysadmin and local admins. It will be hard and frustrating &#8211; but your setup needs to be secure.
+The service account of the Log Reader Agent must be a db_owner in the publication database. As a matter of fact, there are a whole lot of rules about service accounts and permissions. Read <a href="https://msdn.microsoft.com/en-us/library/ms151227.aspx" target="_blank">Replication Agent Security Model</a> and apply all these rules. Do not just automatically make accounts sysadmin and local admins. It will be hard and frustrating – but your setup needs to be secure.
 
 On SQL Servers, make sure port 1433 is open on firewalls.
 

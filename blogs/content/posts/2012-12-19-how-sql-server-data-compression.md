@@ -93,7 +93,7 @@ DBCC IND ('AdventureWorks2012', 'TestRowCompression', 0);
 
 <img src="/wp-content/uploads/users/grrlgeek/compression%203.JPG?mtime=1355883902" alt="" width="768" height="62" />
 
-I'll run DBCC PAGE, using the data page &#8211; PageType 1, PagePID 23816 &#8211; to view the data on the page.
+I'll run DBCC PAGE, using the data page – PageType 1, PagePID 23816 – to view the data on the page.
 
 sql
 DBCC TRACEON (3604); 
@@ -102,7 +102,7 @@ DBCC PAGE ('AdventureWorks2012', 1, 23816, 3);
 GO
 ```
 
-I'm going to skim past the header and go to the information for the first row. Here, in the top right, I can see the entire row uses 95 bytes. You can see the bytes used by each field by reviewing &#8216;Length (physical)'. The ItemID field is an INT, which takes 4 bytes for storage. The ItemName field is declared as CHAR(50), and even though it is only 20 characters in length, it's using 50 bytes. ItemLength and ItemWidth take up 9 bytes each, even though they are values of 0. This is the way data is normally stored on pages.
+I'm going to skim past the header and go to the information for the first row. Here, in the top right, I can see the entire row uses 95 bytes. You can see the bytes used by each field by reviewing 'Length (physical)'. The ItemID field is an INT, which takes 4 bytes for storage. The ItemName field is declared as CHAR(50), and even though it is only 20 characters in length, it's using 50 bytes. ItemLength and ItemWidth take up 9 bytes each, even though they are values of 0. This is the way data is normally stored on pages.
 
 <img src="/wp-content/uploads/users/grrlgeek/compression%204.JPG?mtime=1355883902" alt="" width="610" height="518" />
 
@@ -151,7 +151,7 @@ I can see things have changed drastically! The overall row size is reduced to 42
 
 <img src="/wp-content/uploads/users/grrlgeek/compression%208.JPG?mtime=1355884192" alt="" width="643" height="507" />
 
-Looking at the third row, I can see even less space is being used &#8216; 36 bytes. Here, the INT field, ItemID, is reduced to 1 byte, and ItemName is using only 11 bytes.
+Looking at the third row, I can see even less space is being used ' 36 bytes. Here, the INT field, ItemID, is reduced to 1 byte, and ItemName is using only 11 bytes.
 
 <img src="/wp-content/uploads/users/grrlgeek/compression%209.JPG?mtime=1355884192" alt="" width="630" height="484" />
 
@@ -177,7 +177,7 @@ We've already covered row compression. How do prefix and dictionary work?
 
 #### Prefix Compression
 
-This type will look at the data stored in each column. It will find a pattern in the beginning &#8216; the prefix &#8216; of each value, store that in a section of the page called the compression information structure (CIS), and reference the prefix in the row, instead of the entire value.
+This type will look at the data stored in each column. It will find a pattern in the beginning ' the prefix ' of each value, store that in a section of the page called the compression information structure (CIS), and reference the prefix in the row, instead of the entire value.
 
 Let's use names as an example, since that is something you could have with many repeating values.
 
@@ -602,7 +602,7 @@ Data compression sounds fantastic, and it is. But, as Robert Heinlein would say,
 
 ### Resources
 
-SQL Server Technical Paper &#8211; [Data Compression: Strategy, Capacity Planning and Best Practices][8]
+SQL Server Technical Paper – [Data Compression: Strategy, Capacity Planning and Best Practices][8]
 
  [1]: http://msdn.microsoft.com/en-us/library/cc280576.aspx
  [2]: http://msdn.microsoft.com/en-us/library/ms188776.aspx

@@ -116,7 +116,7 @@ GO
 ```
 Here is the plan for that query
 
-> |&#8211;Table Scan(OBJECT:([tempdb].[dbo].[TestChar]),
+> |–Table Scan(OBJECT:([tempdb].[dbo].[TestChar]),
   
 > WHERE:([tempdb].[dbo].[TestChar].[SomeCol] like [@v]+'%'))
 
@@ -145,7 +145,7 @@ GO
 
 Here is the plan
 
-> |&#8211;Table Scan(OBJECT:([tempdb].[dbo].[TestChar]),
+> |–Table Scan(OBJECT:([tempdb].[dbo].[TestChar]),
   
 > WHERE:([tempdb].[dbo].[TestChar].[SomeCol] like CONVERT_IMPLICIT(nvarchar(11),[@v]+'%',0)))
 
@@ -177,11 +177,11 @@ Storage size is 1 byte. Integer data from 0 through 255.
 
 **smallint**
   
-Storage size is 2 bytes. Integer data from -2^15 (-32,768) through 2^15 &#8211; 1 (32,767). 
+Storage size is 2 bytes. Integer data from -2^15 (-32,768) through 2^15 – 1 (32,767). 
 
 **int**
   
-Storage size is 4 bytes. Integer data from -2^31 (-2,147,483,648) through 2^31 &#8211; 1 (2,147,483,647). 
+Storage size is 4 bytes. Integer data from -2^31 (-2,147,483,648) through 2^31 – 1 (2,147,483,647). 
 
 **bigint**
   

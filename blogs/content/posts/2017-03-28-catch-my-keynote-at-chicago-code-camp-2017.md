@@ -25,7 +25,7 @@ I watched a very inspiring keynote at [That Conference][3], and I decided I want
 
 Achievement unlocked: on Saturday, April 29, 2017, I'll be the keynote speaker at [Chicago Code Camp 2017][4]! This event, in its ninth year, is a free, volunteer-run, day-long conference in downtown Chicago. There's a huge list of technical sessions, ranging from React to Machine Learning to Docker.
 
-My keynote is “Busy is a Four Letter Word”. I'm tired of asking people, “How are you?” only to hear, “I'm so busy.” What I want to hear is, “I'm learning a new skill or language”, or “I recently had this great adventure”, or “I'm content with my life.” How do we, as over-worked, over-scheduled, over-tired people get to that state? I'm going to share what I've learned about how to be less busy &#8211; how to say no, how to set a priority, and how to enjoy being bored again!
+My keynote is “Busy is a Four Letter Word”. I'm tired of asking people, “How are you?” only to hear, “I'm so busy.” What I want to hear is, “I'm learning a new skill or language”, or “I recently had this great adventure”, or “I'm content with my life.” How do we, as over-worked, over-scheduled, over-tired people get to that state? I'm going to share what I've learned about how to be less busy – how to say no, how to set a priority, and how to enjoy being bored again!
 
 Register today to attend this free event and get a great day of technical training!
 

@@ -66,7 +66,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">In the company where I work now, my team is fairly self-sufficient and that often means we do a lot of the stuff ourselves (<em>whilst still going through proper channels as required</em>) which is great as it means we can quickly prototype solutions through a Virtual Machine on our PC or install a particular tool we need to perform some task &#8211; all of this means that we generally have control over our own PC's (<em>as all developers should…but they don't unfortunately</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">In the company where I work now, my team is fairly self-sufficient and that often means we do a lot of the stuff ourselves (<em>whilst still going through proper channels as required</em>) which is great as it means we can quickly prototype solutions through a Virtual Machine on our PC or install a particular tool we need to perform some task – all of this means that we generally have control over our own PC's (<em>as all developers should…but they don't unfortunately</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -82,7 +82,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have a pretty snazzy developer PC inherited from my predecessor, a rather cool Hewlet Packard Z600 Workstation specced up to the hilt with serious &#8216;Uber' hardware (<em>dual quad Xeon's, stupid amount of memory, SSD's, drool…</em>) and thankfully I have complete control over it (<em>mostly</em>) so I had the chance to configure my PC the way I wanted it to do the development I needed to do.</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have a pretty snazzy developer PC inherited from my predecessor, a rather cool Hewlet Packard Z600 Workstation specced up to the hilt with serious 'Uber' hardware (<em>dual quad Xeon's, stupid amount of memory, SSD's, drool…</em>) and thankfully I have complete control over it (<em>mostly</em>) so I had the chance to configure my PC the way I wanted it to do the development I needed to do.</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">

@@ -58,9 +58,9 @@ Example path: _C:SQLBINARYMSSQL.3Reporting ServicesLogFiles_
 
 Determine the time the error occurred and open the log file that coincides with the error. In order to find the error quickly, you can search for the logical name of the report. When searching for this particular report name, the following stack trace was found
 
-> _ReportingServicesService!library!a!03/29/2010-16:20:07:: i INFO: Call to RenderFirst( &#8216;/folder/report name' ) ReportingServicesService!processing!a!3/29/2010-16:20:41:: e ERROR: Throwing Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: Cannot read the next data row for the data set {me}., ;
+> _ReportingServicesService!library!a!03/29/2010-16:20:07:: i INFO: Call to RenderFirst( '/folder/report name' ) ReportingServicesService!processing!a!3/29/2010-16:20:41:: e ERROR: Throwing Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: Cannot read the next data row for the data set {me}., ;
    
-> Info: Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: Cannot read the next data row for the data set {me}. &#8212;> System.Data.SqlClient.SqlException: Transaction (Process ID 306) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
+> Info: Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: Cannot read the next data row for the data set {me}. —> System.Data.SqlClient.SqlException: Transaction (Process ID 306) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
      
 > at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
      
@@ -80,7 +80,7 @@ Determine the time the error occurred and open the log file that coincides with 
      
 > at Microsoft.ReportingServices.DataExtensions.MappingDataReader.GetNextRow()
      
-> &#8212; End of inner exception stack trace &#8212;_
+> — End of inner exception stack trace —_
 
 We can now see that the root cause of the report failure was, “_Transaction (Process ID 306) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction._“. 
 

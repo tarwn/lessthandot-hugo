@@ -77,11 +77,11 @@ function OrderLinePresentationModel(orderLine){
 ```
 In English, we are exposing the following properties from the underlying OrderLine Model:
 
-  * Name &#8211; a string type that must have 1-25 characters
-  * Quantity &#8211; an integer type that must be between 1 and 500
-  * Price &#8211; a Currency type that must be between $0 and $100
-  * Total &#8211; total for the line that is formatted as a Currency type
-  * IsValid &#8211; A property that reflects whether all of the inputs have valid values
+  * Name – a string type that must have 1-25 characters
+  * Quantity – an integer type that must be between 1 and 500
+  * Price – a Currency type that must be between $0 and $100
+  * Total – total for the line that is formatted as a Currency type
+  * IsValid – A property that reflects whether all of the inputs have valid values
 
 The “type” objects are used during the read/write pipelines:
 
@@ -89,7 +89,7 @@ The “type” objects are used during the read/write pipelines:
   <a href="/wp-content/uploads/2016/02/PresentationModel.png"><img src="/wp-content/uploads/2016/02/PresentationModel.png" alt="Presentation Model - Read/Write Pipelines" width="500" height="220" class="size-full wp-image-4415" srcset="/wp-content/uploads/2016/02/PresentationModel.png 500w, /wp-content/uploads/2016/02/PresentationModel-300x132.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>
   
   <p class="wp-caption-text">
-    Presentation Model &#8211; Read/Write Pipelines
+    Presentation Model – Read/Write Pipelines
   </p>
 </div>
 

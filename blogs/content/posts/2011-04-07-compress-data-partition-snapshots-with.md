@@ -66,7 +66,7 @@ Data inserted as follows:
 
 The first step is to setup the request for the publication information.  We do this with an Execute SQL Task and insert the results into a variable with the data type as object.   To do this, change the ResultSet to Full result set and then map a variable of the object data type to the index 0 of the results.  Name the SQL Task, Get publications.
 
-The SqlStatement being used is: sp_helpmergepublication @publication = &#8216;Prescriptions'
+The SqlStatement being used is: sp_helpmergepublication @publication = 'Prescriptions'
 
 > Note: we are not using a variable in this example but for reuse; change this to utilize a variable and a property expression to build the SqlStatement source. Don’t forget to set, Bypass Prepare to true for the task!</p>
 Create two variables at this time with both set as strings.  User::PubName and User::Retention. 
@@ -88,7 +88,7 @@ Create four more variables. 
 
 Add an Execute SQL Task to the Foreach Loop Container and name it, Get partitions.  This task will call the sp_helpmergepartition procedure to return the partitions for the publication.  The statement to use in the SqlStatement value is shown below.
 
-sp_helpmergepartition @publication = &#8216;Prescriptions'
+sp_helpmergepartition @publication = 'Prescriptions'
 
 Connect the execute task to another Foreach Loop Container named, Enumerate partitions.  Set this Foreach Loop Container with the same configuration as the first.  Use the variable User::PartitionHelp for the source variable and map the following variables as shown.
 
@@ -118,7 +118,7 @@ Bring a script task over into the partition loop container and name it, Determin
 
 After bringing an Execute SQL Task and naming it, Execute sp\_job\_start, configure the SQL task to execute a property expression with the following expression.
 
-“exec msdb.dbo.sp\_start\_job @job_id = &#8216;” + @[User::JobID]  + “&#8216;”
+“exec msdb.dbo.sp\_start\_job @job_id = '” + @[User::JobID]  + “'”
 
 This will be evaluated to the current partitions snapshot job and start the job.  Nothing else is needed in the SQL task. 
 

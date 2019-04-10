@@ -48,7 +48,7 @@ You can sort the results by clicking on a column, click it again and it is sorte
   
 Did you know that if you do CTRL + A, CTRL + C, it copies it as TAB delimited, just paste it into Excel
 
-What about you, what &#8216;new' things have you discovered in SSMS?
+What about you, what 'new' things have you discovered in SSMS?
 
  [1]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/listing-all-your-sql-server
  [2]: http://blogs.msdn.com/b/buckwoody/archive/2008/09/02/selecting-columns-to-display-in-ssms.aspx

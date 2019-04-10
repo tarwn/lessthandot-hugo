@@ -35,9 +35,9 @@ The first three queries listed are built in to NDepend. I added the fourth, just
 SELECT METHODS WHERE WasAdded OR CodeWasChanged
 ```
 
-Not a bad way to keep an eye on what is getting changed in the codebase. To get in this state I added three new methods to the codebase I was looking at (in a place that I could remove them easily since they are not only low quality but useless as well). Two had 7 parameters, putting them in violation of the constraint for basic quality principles. I didn't add any tests, so all three were in violation of the test coverage constraint. And finally they all showed up in the list of new methods. It's worth noting the yellow circle at the bottom right as well &#8211; the yellow means that warnings were encountered when running the CQL portion of the analysis. Green would be good, and red would mean I have some bad queries that can't be run. 
+Not a bad way to keep an eye on what is getting changed in the codebase. To get in this state I added three new methods to the codebase I was looking at (in a place that I could remove them easily since they are not only low quality but useless as well). Two had 7 parameters, putting them in violation of the constraint for basic quality principles. I didn't add any tests, so all three were in violation of the test coverage constraint. And finally they all showed up in the list of new methods. It's worth noting the yellow circle at the bottom right as well – the yellow means that warnings were encountered when running the CQL portion of the analysis. Green would be good, and red would mean I have some bad queries that can't be run. 
 
-Double clicking a row in the CQL Explorer will take you to the CQL Editor &#8211; from here you can view the results of the query, and the CQL it contains. From there you can easily navigate to the method definition in your source code by double-clicking. 
+Double clicking a row in the CQL Explorer will take you to the CQL Editor – from here you can view the results of the query, and the CQL it contains. From there you can easily navigate to the method definition in your source code by double-clicking. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/Architect/CQL-VS-NDepend3/cqleditor.PNG" alt="CQL Editor" title="CQL Editor Screenshot" width="457" height="913" />

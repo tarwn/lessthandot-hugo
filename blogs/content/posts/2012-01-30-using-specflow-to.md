@@ -214,7 +214,7 @@ Keep in mind if you look at the code repository some of these steps are in separ
 
 Each of my scenarios starts with the same step, ensuring we have the browser open and pointing to the site. The step definition is then fairly straightforward, given the base class already ensures we have a fresh browser available:
 
-**InterfaceTests/Features/NavigationSteps.cs** &#8211; this is the step I borrowed from a previous test
+**InterfaceTests/Features/NavigationSteps.cs** – this is the step I borrowed from a previous test
 
 ```csharp
 [Given(@"I have the Home Page open")]
@@ -309,7 +309,7 @@ SpecFlow allows us to enter a regular expression in the step definition, which i
 With all of the steps built, I can now run the test for verification:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/SpecFlow/NunitAddItemDone.png" title="Pass test run for 'Add Item' scenario" /><br /> Pass test run for &#8216;Add Item' scenario
+  <img src="http://www.tiernok.com/LTDBlog/SpecFlow/NunitAddItemDone.png" title="Pass test run for 'Add Item' scenario" /><br /> Pass test run for 'Add Item' scenario
 </div>
 
 The text output tab of Nunit still provides us with information at the step level, but more importantly we now have a “Pass”.

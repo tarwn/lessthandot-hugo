@@ -65,7 +65,7 @@ At this point, there are no indexes on the table other than the primary key’s 
 
 Further investigation shows a large number of lob logical reads to return the results.
 
-> Table &#8216;PerfLOB'. Scan count 1, logical reads 10, physical reads 0, read-ahead reads 7, lob logical reads 726000, lob physical reads 0, lob read-ahead reads 336000.</p>
+> Table 'PerfLOB'. Scan count 1, logical reads 10, physical reads 0, read-ahead reads 7, lob logical reads 726000, lob physical reads 0, lob read-ahead reads 336000.</p>
 This query requires an extreme amount of resources to complete, as we’ve shown monitoring the IO statistics through these examples.  Working with the substring method that Paul discussed in his article, we will take advantage of the computed column that was created on the table, SUB_CONTENT.  This column holds the first 100 characters of the LOB column for each row.
 
 Now, let’s take a look at something that could be a requirement in a production environment for updating the PerfLOB table.  The USERNAME column must be updated so ownership of the documents are maintained.  This could be done with the following query.
@@ -80,7 +80,7 @@ GO
 ```
 
 
-> IO Results &#8211; Table &#8216;PerfLOB'. Scan count 1, logical reads 10, physical reads 0, read-ahead reads 0, lob logical reads 86000, lob physical reads 0, lob read-ahead reads 0.</p><div class="image_block">
+> IO Results – Table 'PerfLOB'. Scan count 1, logical reads 10, physical reads 0, read-ahead reads 0, lob logical reads 86000, lob physical reads 0, lob read-ahead reads 0.</p><div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-153.png?mtime=1344439799"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-153.png?mtime=1344439799" width="501" height="85" /></a>
 </div>
 
@@ -153,15 +153,15 @@ Looking at the execution plans generated from the new update statements, we can 
 
 Further, the IO generated  by the update statement has significantly been reduced.
 
-> Table &#8216;Worktable'. Scan count 0, logical reads 7, physical reads 0, read-ahead reads 0, lob logical reads 59, lob physical reads 0, lob read-ahead reads 0.
+> Table 'Worktable'. Scan count 0, logical reads 7, physical reads 0, read-ahead reads 0, lob logical reads 59, lob physical reads 0, lob read-ahead reads 0.
 > 
 > (1 row(s) affected)
 > 
-> Table &#8216;PerfLOB'. Scan count 1, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
+> Table 'PerfLOB'. Scan count 1, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 > 
 > (1 row(s) affected)
 > 
-> Table &#8216;PerfLOB'. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
+> Table 'PerfLOB'. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 
 **Summary**
 

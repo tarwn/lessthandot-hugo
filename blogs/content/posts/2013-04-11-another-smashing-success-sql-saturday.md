@@ -72,5 +72,5 @@ Here's a peek at our first-time speakers! (My deepest apologies to Jennifer Salv
 </p>
 
 <p style="text-align: center;">
-  <em>Jim Dorame talks PowerShell and PSX &#8211; his first presentation ever! </em>
+  <em>Jim Dorame talks PowerShell and PSX – his first presentation ever! </em>
 </p>

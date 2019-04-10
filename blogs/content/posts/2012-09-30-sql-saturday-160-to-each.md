@@ -135,7 +135,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">The after party was once again held at the Kalamazoo Beer Exchange – a local sports bar with an interesting twist on pricing.  The draft beer price is dynamically set buy the sales of the previous 15 minutes.  I know I’d sure like to get my hands on that algorithm to see how it works.  Unfortunately, it was awfully busy there, and not all of us got fed.  So, a few of us retreated back to Tim and Amy’s house for some speaker dinner leftovers, and a really amazing game &#8212; Cards Against Humanity.  Laughter roared through the house, and I’m sure we disturbed Tim’s children more than once.  Thanks again to Tim and Amy for letting us all invade.</span>
+  <span style="font-family: verdana,geneva;">The after party was once again held at the Kalamazoo Beer Exchange – a local sports bar with an interesting twist on pricing.  The draft beer price is dynamically set buy the sales of the previous 15 minutes.  I know I’d sure like to get my hands on that algorithm to see how it works.  Unfortunately, it was awfully busy there, and not all of us got fed.  So, a few of us retreated back to Tim and Amy’s house for some speaker dinner leftovers, and a really amazing game — Cards Against Humanity.  Laughter roared through the house, and I’m sure we disturbed Tim’s children more than once.  Thanks again to Tim and Amy for letting us all invade.</span>
 </p>
 
 ## <span style="font-family: verdana,geneva;"><strong style="mso-bidi-font-weight: normal;">Final Thoughts</strong></span> {.MsoNormal}

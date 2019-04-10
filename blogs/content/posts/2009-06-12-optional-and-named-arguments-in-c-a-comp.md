@@ -99,7 +99,7 @@ exec OptionalTest 'bla' ,'Twelve','Thirsty','Forty'
   
 @Param4 = Forty
 
-If we pass in the first parameter and we olso want to pass in the third parameter we need to use named parameters, in this case we do this @Param3 = &#8216;Thirsty'
+If we pass in the first parameter and we olso want to pass in the third parameter we need to use named parameters, in this case we do this @Param3 = 'Thirsty'
 
 sql
 exec OptionalTest 'bla' ,@Param3 = 'Thirsty'
@@ -135,7 +135,7 @@ exec OptionalTest 'bla' ,,,'Thirsty'
 
 Server: Msg 102, Level 15, State 1, Line 1
   
-Incorrect syntax near &#8216;,'.
+Incorrect syntax near ','.
 
 You can use nulls but as you can see from the output nothing gets printed at all for paraeter 2 or 3, this is because when you concatenate a NULL value with something else you get nothing back
 
@@ -277,7 +277,7 @@ param4 = Thirsty
 
 As you can see there is almost no difference between SQL and C# when calling with named parameters
 
-exec OptionalTest &#8216;bla' ,@Param4 = &#8216;Thirsty'
+exec OptionalTest 'bla' ,@Param4 = 'Thirsty'
   
 p.OptionalTest(“bla”,param4:”Thirsty”)
 

@@ -77,7 +77,7 @@ Here is just a small list that you can choose from, I grabbed this from [stackov
   
 [The Design of Everyday Things][24] by Donald Norman
   
-[JavaScript &#8211; The Good Parts][25]
+[JavaScript – The Good Parts][25]
   
 [Getting Real by 37 Signals][26]
   

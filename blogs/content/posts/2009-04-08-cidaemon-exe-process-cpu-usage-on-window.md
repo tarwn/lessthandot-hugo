@@ -22,7 +22,7 @@ If you come across this fix it quickly. From my research this issue will build a
 
 To find out what catalogs you have do the following. (you can do this on any Windows XP Pro and up OS)
 
-Click Start&#8211;>Search
+Click Start–>Search
   
 In the Right menu click “Change Preferences”
   
@@ -32,7 +32,7 @@ Then click “Change indexing service settings (advanced)
 
 This opens the snap for indexing service. Write down you catalogs if you want to recreate them. Note: I found no valid reasoning to actually recreate these catalogs although I felt better putting the system back in the state it was.
 
-First you have to stop them. Right click the catalog&#8211;>All tasks&#8211;>Stop
+First you have to stop them. Right click the catalog–>All tasks–>Stop
   
 Then delete them and recreate if you see fit.
 

@@ -35,13 +35,13 @@ That was an easy sample to write and more realistic forms aren't much more chall
 
 But when we look at how well it achieves the purpose, we find it has a lot of gaps:
 
-  * Yes &#8211; It prevents bad values for users with good intent
-  * Yes &#8211; It helps the good intent user correct their value without the overhead of a server round-trip
-  * No &#8211; It prevents bad values when a script fails to load (like jQuery)
-  * No &#8211; It prevents bad values as a result of malicious editing of the web form (developer tools)
-  * No &#8211; It prevents bad values submitted directly to the endpoint (ex: [Cross-Site Request Forgery][3])
-  * No &#8211; It prevents bad values when accessed in [frames][4]
-  * No &#8211; It prevents bad values when data is altered via a [Man-in-the-middle attack][5]
+  * Yes – It prevents bad values for users with good intent
+  * Yes – It helps the good intent user correct their value without the overhead of a server round-trip
+  * No – It prevents bad values when a script fails to load (like jQuery)
+  * No – It prevents bad values as a result of malicious editing of the web form (developer tools)
+  * No – It prevents bad values submitted directly to the endpoint (ex: [Cross-Site Request Forgery][3])
+  * No – It prevents bad values when accessed in [frames][4]
+  * No – It prevents bad values when data is altered via a [Man-in-the-middle attack][5]
 
 When we're working in authenticated areas, the risk for some of these is reduced, but reduced is not the same as robust.
 
@@ -81,13 +81,13 @@ public ActionResult SaveRecord(int recordId, string recordValue)
 ```
 So how does this stack up against the client-side method?
 
-  * Yes &#8211; It prevents bad values for users with good intent
-  * No &#8211; It helps the good intent user correct their value without the overhead of a server round-trip
-  * Yes &#8211; It prevents bad values when a script fails to load (like jQuery)
-  * Yes &#8211; It prevents bad values as a result of malicious editing of the web form (developer tools)
-  * Yes &#8211; It prevents bad values submitted directly to the endpoint (ex: [Cross-Site Request Forgery][3])
-  * Yes &#8211; It prevents bad values when accessed in [frames][4]
-  * Yes &#8211; It prevents bad values when data is altered via a [Man-in-the-middle attack][5]
+  * Yes – It prevents bad values for users with good intent
+  * No – It helps the good intent user correct their value without the overhead of a server round-trip
+  * Yes – It prevents bad values when a script fails to load (like jQuery)
+  * Yes – It prevents bad values as a result of malicious editing of the web form (developer tools)
+  * Yes – It prevents bad values submitted directly to the endpoint (ex: [Cross-Site Request Forgery][3])
+  * Yes – It prevents bad values when accessed in [frames][4]
+  * Yes – It prevents bad values when data is altered via a [Man-in-the-middle attack][5]
 
 Note: Keep in mind some of these also require other corrective or protective actions (like framebusting to combat Cross Frame Scripting), I'm just focusing on the validation aspects.
 

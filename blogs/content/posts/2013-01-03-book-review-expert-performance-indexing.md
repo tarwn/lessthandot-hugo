@@ -42,7 +42,7 @@ There are a lot of misconceptions about how to use indexes in SQL Server. Myths 
 
 **Index Maintenance**
 
-How fragmentation occurs, and how to fix it, is covered in detail. Defragmentation can occur through several methods – index rebuild, index reorganization, drop and rebuild &#8211; and each of them is broken down.
+How fragmentation occurs, and how to fix it, is covered in detail. Defragmentation can occur through several methods – index rebuild, index reorganization, drop and rebuild – and each of them is broken down.
 
 **Indexing Tools**
 

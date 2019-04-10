@@ -178,25 +178,25 @@ Here is what is returned
   
 **Left Join**
   
-Table &#8216;Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0
+Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0
   
-Table &#8216;TestLarge'. Scan count 1, logical reads 159177, physical reads 0, read-ahead reads 0
+Table 'TestLarge'. Scan count 1, logical reads 159177, physical reads 0, read-ahead reads 0
   
-Table &#8216;TestSmall'. Scan count 1, logical reads 913, physical reads 0, read-ahead reads 0
+Table 'TestSmall'. Scan count 1, logical reads 913, physical reads 0, read-ahead reads 0
 
 **Not Exist**
   
-Table &#8216;TestSmall'. Scan count 1, logical reads 913, physical reads 0, read-ahead reads 0
+Table 'TestSmall'. Scan count 1, logical reads 913, physical reads 0, read-ahead reads 0
   
-Table &#8216;TestLarge'. Scan count 1, logical reads 159177, physical reads 0, read-ahead reads 0
+Table 'TestLarge'. Scan count 1, logical reads 159177, physical reads 0, read-ahead reads 0
 
 **Left Loop Join**
   
-Table &#8216;TestLarge'. Scan count 115456, logical reads 492566, physical reads 0, read-ahead reads 0
+Table 'TestLarge'. Scan count 115456, logical reads 492566, physical reads 0, read-ahead reads 0
   
-Table &#8216;TestSmall'. Scan count 3, logical reads 1006, physical reads 0, read-ahead reads 0
+Table 'TestSmall'. Scan count 3, logical reads 1006, physical reads 0, read-ahead reads 0
   
-Table &#8216;Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0
+Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0
 
 Finally let's look at how long each query took
 

@@ -28,7 +28,7 @@ A person asked the following question:
 > 
 > EXEC @ReturnCode = master.dbo.xp_cmdshell @cmdline
 > 
-> On the Results tab I get 2 lines Could not find a part of the path &#8216;serverdirectoryfilename'. NULL
+> On the Results tab I get 2 lines Could not find a part of the path 'serverdirectoryfilename'. NULL
 > 
 > How do I capture the first line in an error message? I tried using a Try Catch block with “SELECT @ErrorMessage = ERROR_MESSAGE()” and it doesn't grab it.
 > 
@@ -38,7 +38,7 @@ First of all that message comes from the Command Shell/DOS, not from SQL Server.
   
 So if you were to execute the bogus command _bla bla c:_ you would get the following output
 
-_&#8216;bla' is not recognized as an internal or external command,operable program or batch file._
+_'bla' is not recognized as an internal or external command,operable program or batch file._
 
 If you did something like _dir z:_ when you don't have a z drive you would see the following
 
@@ -137,7 +137,7 @@ Run the code again and now you should see the following output.
     
     <tr>
       <td>
-        &#8216;bla' is not recognized as an internal or external command,operable program or batch file.
+        'bla' is not recognized as an internal or external command,operable program or batch file.
       </td>
       
       <td>

@@ -76,7 +76,7 @@ Excel file comes in from Arwen
 
 Open SSMS and find your DBA database (that you should have in Simple recovery and is a place where you should do all of your godly DBA, Developer work)
 
-Right click the DB&#8211;>Tasks&#8211;>Import Data…
+Right click the DB–>Tasks–>Import Data…
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/lazxywizard_2.gif" alt="" title="" width="357" height="330" />

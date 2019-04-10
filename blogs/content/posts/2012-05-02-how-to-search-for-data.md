@@ -68,7 +68,7 @@ Here is what Books On Line has on the use of wild cards
       
       <td>
         <p>
-          WHERE title LIKE &#8216;%computer%' finds all book titles with the word &#8216;computer' anywhere in the book title.
+          WHERE title LIKE '%computer%' finds all book titles with the word 'computer' anywhere in the book title.
         </p>
       </td>
     </tr>
@@ -88,7 +88,7 @@ Here is what Books On Line has on the use of wild cards
       
       <td>
         <p>
-          WHERE au_fname LIKE &#8216;_ean' finds all four-letter first names that end with ean (Dean, Sean, and so on).
+          WHERE au_fname LIKE '_ean' finds all four-letter first names that end with ean (Dean, Sean, and so on).
         </p>
       </td>
     </tr>
@@ -108,7 +108,7 @@ Here is what Books On Line has on the use of wild cards
       
       <td>
         <p>
-          WHERE au_lname LIKE &#8216;[C-P]arsen' finds author last names ending with arsen and starting with any single character between C and P, for example Carsen, Larsen, Karsen, and so on. In range searches, the characters included in the range may vary depending on the sorting rules of the collation.
+          WHERE au_lname LIKE '[C-P]arsen' finds author last names ending with arsen and starting with any single character between C and P, for example Carsen, Larsen, Karsen, and so on. In range searches, the characters included in the range may vary depending on the sorting rules of the collation.
         </p>
       </td>
     </tr>
@@ -128,7 +128,7 @@ Here is what Books On Line has on the use of wild cards
       
       <td>
         <p>
-          WHERE au_lname LIKE &#8216;de[^l]%' all author last names starting with de and where the following letter is not l.
+          WHERE au_lname LIKE 'de[^l]%' all author last names starting with de and where the following letter is not l.
         </p>
       </td>
     </tr>
@@ -158,7 +158,7 @@ where SomeCol LIKE '%_%'
 
 output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+—————–
   
 12345
   
@@ -183,7 +183,7 @@ where SomeCol LIKE '%[_]%'
 
 output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+—————–
   
 abc_bb
   
@@ -213,7 +213,7 @@ where SomeCol LIKE '%[[]%'
 
 output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+—————–
   
 2222[2222
 
@@ -233,7 +233,7 @@ where SomeCol LIKE '%[2-3]%'
 
 output
   
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+—————–
   
 12345
   

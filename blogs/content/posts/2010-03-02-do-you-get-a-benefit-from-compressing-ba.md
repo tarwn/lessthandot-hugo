@@ -135,18 +135,18 @@ GO
 
 Here are the times that each backup took.
   
-<span class="MT_smaller"><em>Processed 11640 pages FOR DATABASE &#8216;TestCompressed', FILE &#8216;TestCompressed_Data' ON FILE 1.<br /> Processed 2 pages FOR DATABASE &#8216;TestCompressed', FILE &#8216;TestCompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 11642 pages IN 5.483 seconds (16.587 MB/sec).</strong></p> 
+<span class="MT_smaller"><em>Processed 11640 pages FOR DATABASE 'TestCompressed', FILE 'TestCompressed_Data' ON FILE 1.<br /> Processed 2 pages FOR DATABASE 'TestCompressed', FILE 'TestCompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 11642 pages IN 5.483 seconds (16.587 MB/sec).</strong></p> 
 
 <p>
-  Processed 11640 pages FOR DATABASE &#8216;TestCompressed', FILE &#8216;TestCompressed_Data' ON FILE 1.<br /> Processed 1 pages FOR DATABASE &#8216;TestCompressed', FILE &#8216;TestCompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 11641 pages IN 6.461 seconds (14.076 MB/sec).</strong>
+  Processed 11640 pages FOR DATABASE 'TestCompressed', FILE 'TestCompressed_Data' ON FILE 1.<br /> Processed 1 pages FOR DATABASE 'TestCompressed', FILE 'TestCompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 11641 pages IN 6.461 seconds (14.076 MB/sec).</strong>
 </p>
 
 <p>
-  Processed 25496 pages FOR DATABASE &#8216;TestUncompressed', FILE &#8216;TestUncompressed_Data' ON FILE 1.<br /> Processed 2 pages FOR DATABASE &#8216;TestUncompressed', FILE &#8216;TestUncompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 25498 pages IN 9.167 seconds (21.729 MB/sec).</strong>
+  Processed 25496 pages FOR DATABASE 'TestUncompressed', FILE 'TestUncompressed_Data' ON FILE 1.<br /> Processed 2 pages FOR DATABASE 'TestUncompressed', FILE 'TestUncompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 25498 pages IN 9.167 seconds (21.729 MB/sec).</strong>
 </p>
 
 <p>
-  Processed 25496 pages FOR DATABASE &#8216;TestUncompressed', FILE &#8216;TestUncompressed_Data' ON FILE 1.<br /> Processed 1 pages FOR DATABASE &#8216;TestUncompressed', FILE &#8216;TestUncompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 25497 pages IN 14.243 seconds (13.985 MB/sec).</strong><br /> </em></span>
+  Processed 25496 pages FOR DATABASE 'TestUncompressed', FILE 'TestUncompressed_Data' ON FILE 1.<br /> Processed 1 pages FOR DATABASE 'TestUncompressed', FILE 'TestUncompressed_Log' ON FILE 1.<br /> <strong>BACKUP DATABASE successfully processed 25497 pages IN 14.243 seconds (13.985 MB/sec).</strong><br /> </em></span>
 </p>
 
 <p>

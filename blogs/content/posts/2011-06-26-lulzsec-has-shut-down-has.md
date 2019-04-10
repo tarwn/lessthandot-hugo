@@ -67,21 +67,21 @@ Here is the “press release”
 > 
 > We are Lulz Security, and this is our final release, as today marks something meaningful to us. 50 days ago, we set sail with our humble ship on an uneasy and brutal ocean: the Internet. The hate machine, the love machine, the machine powered by many machines. We are all part of it, helping it grow, and helping it grow on us.
 > 
-> For the past 50 days we've been disrupting and exposing corporations, governments, often the general population itself, and quite possibly everything in between, just because we could. All to selflessly entertain others &#8211; vanity, fame, recognition, all of these things are shadowed by our desire for that which we all love. The raw, uninterrupted, chaotic thrill of entertainment and anarchy. It's what we all crave, even the seemingly lifeless politicians and emotionless, middle-aged self-titled failures. You are not failures. You have not blown away. You can get what you want and you are worth having it, believe in yourself.
+> For the past 50 days we've been disrupting and exposing corporations, governments, often the general population itself, and quite possibly everything in between, just because we could. All to selflessly entertain others – vanity, fame, recognition, all of these things are shadowed by our desire for that which we all love. The raw, uninterrupted, chaotic thrill of entertainment and anarchy. It's what we all crave, even the seemingly lifeless politicians and emotionless, middle-aged self-titled failures. You are not failures. You have not blown away. You can get what you want and you are worth having it, believe in yourself.
 > 
 > While we are responsible for everything that The Lulz Boat is, we are not tied to this identity permanently. Behind this jolly visage of rainbows and top hats, we are people. People with a preference for music, a preference for food; we have varying taste in clothes and television, we are just like you. Even Hitler and Osama Bin Laden had these unique variations and style, and isn't that interesting to know? The mediocre painter turned supervillain liked cats more than we did.
 > 
 > Again, behind the mask, behind the insanity and mayhem, we truly believe in the AntiSec movement. We believe in it so strongly that we brought it back, much to the dismay of those looking for more anarchic lulz. We hope, wish, even beg, that the movement manifests itself into a revolution that can continue on without us. The support we've gathered for it in such a short space of time is truly overwhelming, and not to mention humbling. Please don't stop. Together, united, we can stomp down our common oppressors and imbue ourselves with the power and freedom we deserve.
 > 
-> So with those last thoughts, it's time to say bon voyage. Our planned 50 day cruise has expired, and we must now sail into the distance, leaving behind &#8211; we hope &#8211; inspiration, fear, denial, happiness, approval, disapproval, mockery, embarrassment, thoughtfulness, jealousy, hate, even love. If anything, we hope we had a microscopic impact on someone, somewhere. Anywhere.
+> So with those last thoughts, it's time to say bon voyage. Our planned 50 day cruise has expired, and we must now sail into the distance, leaving behind – we hope – inspiration, fear, denial, happiness, approval, disapproval, mockery, embarrassment, thoughtfulness, jealousy, hate, even love. If anything, we hope we had a microscopic impact on someone, somewhere. Anywhere.
 > 
 > Thank you for sailing with us. The breeze is fresh and the sun is setting, so now we head for the horizon.
 > 
 > Let it flow…
 > 
-> Lulz Security &#8211; our crew of six wishes you a happy 2011, and a shout-out to all of our battlefleet members and supporters across the globe
+> Lulz Security – our crew of six wishes you a happy 2011, and a shout-out to all of our battlefleet members and supporters across the globe
 > 
-> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+> ——————————————————————————————————
 > 
 > Our mayhem: http://lulzsecurity.com/releases/
   

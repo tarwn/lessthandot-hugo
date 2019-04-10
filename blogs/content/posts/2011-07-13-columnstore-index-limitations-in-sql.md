@@ -49,9 +49,9 @@ As you can see the columnstore index performs better.
 
 Here are the reads
 
-_Table &#8216;TestRowStore'. Scan count 3, **logical reads 9636**, physical reads 0, read-ahead reads 0
+_Table 'TestRowStore'. Scan count 3, **logical reads 9636**, physical reads 0, read-ahead reads 0
   
-Table &#8216;TestColumnStore'. Scan count 2, **logical reads 8**, physical reads 0, read-ahead reads 0_
+Table 'TestColumnStore'. Scan count 2, **logical reads 8**, physical reads 0, read-ahead reads 0_
 
 The difference in reads is dramatic
 
@@ -88,12 +88,12 @@ Here is the whole list of errors that SQL Server might throw when you try to do 
 
 _ 
 
-  * SQL Server cannot load database &#8216;%.*ls' because it contains a columnstore index. The currently installed edition of SQL Server does not support columnstore indexes. Either disable the columnstore index in the database by using a supported edition of SQL S
+  * SQL Server cannot load database '%.*ls' because it contains a columnstore index. The currently installed edition of SQL Server does not support columnstore indexes. Either disable the columnstore index in the database by using a supported edition of SQL S
   * The Cross Rowset check on columnstore index object ID %d, index ID %d, partition ID %I64d. Drop and recreate the columnstore index.
   * CREATE INDEX statement failed because a columnstore index cannot be unique. Create the columnstore index without the UNIQUE keyword or create a unique index without the COLUMNSTORE keyword.
   * CREATE INDEX statement failed because specifying sort order (ASC or DESC) is not allowed when creating a columnstore index. Create the columnstore index without specifying a sort order.
   * CREATE INDEX statement failed because a columnstore index cannot be created on a view. Consider creating a columnstore index on the base table or creating an index without the COLUMNSTORE keyword on the view.
-  * CREATE INDEX statement failed because column &#8216;%.\*ls' on table &#8216;%.\*ls' is a computed column and a columnstore index cannot be created on a computed column. Consider creating a nonclustered columnstore index on a subset of columns that does not include the 
+  * CREATE INDEX statement failed because column '%.\*ls' on table '%.\*ls' is a computed column and a columnstore index cannot be created on a computed column. Consider creating a nonclustered columnstore index on a subset of columns that does not include the 
   * CREATE INDEX statement failed because a columnstore index cannot be a filtered index. Consider creating a columnstore index without the predicate filter.
   * CREATE INDEX statement failed because a columnstore index cannot be created on a sparse column. Consider creating a nonclustered columnstore index on a subset of columns that does not include any sparse columns.
   * CREATE INDEX statement failed because a columnstore index cannot have included columns. Create the columnstore index on the desired columns without specifying any included columns.
@@ -117,19 +117,19 @@ _
   * Clustered columnstore index is not supported.
   * Multiple nonclustered columnstore indexes are not supported.
   * Conversion between columnstore index and relational index is not supported.
-  * CREATE INDEX statement failed because a columnstore index cannot be created on a column with datatype decimal or numeric that has a precision that requires more than 8 bytes of storage. Consider either reducing the precision of column &#8216;%.*ls' to 18 or cre
-  * CREATE INDEX statement failed because a columnstore index cannot be created on a datetimeoffset type with precision that requires more than 8 bytes of storage. Consider either reducing the precision of column &#8216;%.*ls' to datetimeoffset(n) where n = 0, 1, o
-  * Cannot include column &#8216;%.*ls' in a columnstore index because the data type of the column is not supported in a columnstore index. The column may have been included explicitly (in the CREATE INDEX statement) or implicitly. Implicit inclusion occurs when c
+  * CREATE INDEX statement failed because a columnstore index cannot be created on a column with datatype decimal or numeric that has a precision that requires more than 8 bytes of storage. Consider either reducing the precision of column '%.*ls' to 18 or cre
+  * CREATE INDEX statement failed because a columnstore index cannot be created on a datetimeoffset type with precision that requires more than 8 bytes of storage. Consider either reducing the precision of column '%.*ls' to datetimeoffset(n) where n = 0, 1, o
+  * Cannot include column '%.*ls' in a columnstore index because the data type of the column is not supported in a columnstore index. The column may have been included explicitly (in the CREATE INDEX statement) or implicitly. Implicit inclusion occurs when c
   * MERGE clause of ALTER PARTITION statement failed because two nonempty partitions containing a columnstore index cannot be merged. Consider disabling the columnstore index before issuing the ALTER PARTITION statement, then rebuilding the columnstore index 
   * MERGE clause of ALTER PARTITION statement failed because two partitions on different filegroups cannot be merged if either partition contains columnstore index data. Consider disabling the columnstore index before issuing the ALTER PARTITION statement, th
   * SPLIT clause of ALTER PARTITION statement failed because the partition is not empty. Only empty partitions can be split in when a columnstore index exists on the table. Consider disabling the columnstore index before issuing the ALTER PARTITION statement
   * The stored procedure, sp_tableoption failed because a table with a nonclustered columnstore index cannot be altered to use vardecimal storage format. Consider dropping the columnstore index.
-  * CREATE INDEX statement failed because table &#8216;%.*ls' uses vardecimal storage format. A columnstore index cannot be created on a table using vardecimal storage. Consider rebuilding the table without vardecimal storage.
-  * TRUNCATE TABLE statement failed because table &#8216;%.*ls' has a columnstore index on it. A table with a columnstore index cannot be truncated. Consider dropping the columnstore index then truncating the table.
+  * CREATE INDEX statement failed because table '%.*ls' uses vardecimal storage format. A columnstore index cannot be created on a table using vardecimal storage. Consider rebuilding the table without vardecimal storage.
+  * TRUNCATE TABLE statement failed because table '%.*ls' has a columnstore index on it. A table with a columnstore index cannot be truncated. Consider dropping the columnstore index then truncating the table.
   * CREATE INDEX statement failed because a columnstore index on a partitioned table must be partition-aligned with the base table. Consider dropping the columnstore index before creating a new clustered index.
   * DROP INDEX statement failed because a columnstore index on a partitioned table must be partition-aligned with the base table (heap). Consider dropping the columnstore index before dropping a clustered index.
   * %S_MSG statement failed because the operation cannot be performed online on a table with a columnstore index. Perform the operation without specifying the ONLINE option or drop (or disable) the columnstore index before performing the operation using the O
-  * %s cannot be enabled on a table with a columnstore index. Consider dropping columnstore index &#8216;%s' on table &#8216;%s'.
+  * %s cannot be enabled on a table with a columnstore index. Consider dropping columnstore index '%s' on table '%s'.
   * CREATE INDEX statement failed because a columnstore index cannot be created on a table enabled for %S\_MSG. Consider disabling %S\_MSG and then creating the columnstore index.
 
 </em>

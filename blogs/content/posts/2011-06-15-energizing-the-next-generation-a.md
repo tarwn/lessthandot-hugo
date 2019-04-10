@@ -28,15 +28,15 @@ I started by having each of the panelists talk about what they are currently doi
 
 One of the first questions I posed, and opened up for dicussion, was, “What are ways we can get girls and boys interested in technology?” A few suggestions were given.
   
-Alice &#8211; <http://www.alice.org/> &#8211; A free 3-D program that teaches object-oriented programming.
+Alice – <http://www.alice.org/> – A free 3-D program that teaches object-oriented programming.
   
-First Lego League &#8211; <http://www.firstlegoleague.org> &#8211; A robotics program for 9-16 year-olds that teaches them about science, engineering and technology. Also: LEGO ROBOTS! How much cooler can it get? (Disclaimer: I have judged FLL competitions. I think they are AWESOME.)
+First Lego League – <http://www.firstlegoleague.org> – A robotics program for 9-16 year-olds that teaches them about science, engineering and technology. Also: LEGO ROBOTS! How much cooler can it get? (Disclaimer: I have judged FLL competitions. I think they are AWESOME.)
   
-TechCorps Ohio &#8211; <http://techcorpsohio.org/> &#8211; This program connects tech resources to schools.
+TechCorps Ohio – <http://techcorpsohio.org/> – This program connects tech resources to schools.
   
-Girls In Tech &#8211; <http://www.girlsintech.net/> &#8211; GIT exists to engage, educate and empower women in technology. They mentor girls in grades K-12 and have a university program as well.
+Girls In Tech – <http://www.girlsintech.net/> – GIT exists to engage, educate and empower women in technology. They mentor girls in grades K-12 and have a university program as well.
   
-Girl Develop It Columbus &#8211; <http://girldevelopitcbus.com/> &#8211; A place for women and men to go to learn programming in a relaxed atmosphere. 
+Girl Develop It Columbus – <http://girldevelopitcbus.com/> – A place for women and men to go to learn programming in a relaxed atmosphere. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/WITLunch2.JPG?mtime=1308147644"><img alt="" src="/wp-content/uploads/users/grrlgeek/WITLunch2.JPG?mtime=1308147644" width="360" height="204" /></a>

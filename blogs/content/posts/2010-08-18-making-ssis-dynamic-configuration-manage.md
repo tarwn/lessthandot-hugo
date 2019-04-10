@@ -25,7 +25,7 @@ tags:
   - ssis
 
 ---
-Every task that is out there to enable SSIS to be more, &#8216;dynamic', ensures that we can develop reusable and more manageable solutions. Variables and configuration files along with package configurations are all part in allowing packages to become dynamic in this way. You may be thinking right now that it would be cool to have something like a date variable so you could use it in an Execute SQL Statement or such. That and a lot of other common uses are indeed, part of making a package dynamic. However, we can push this much further and bring out the essential foundation of configurations and variables in working freely from environment to environment.
+Every task that is out there to enable SSIS to be more, 'dynamic', ensures that we can develop reusable and more manageable solutions. Variables and configuration files along with package configurations are all part in allowing packages to become dynamic in this way. You may be thinking right now that it would be cool to have something like a date variable so you could use it in an Execute SQL Statement or such. That and a lot of other common uses are indeed, part of making a package dynamic. However, we can push this much further and bring out the essential foundation of configurations and variables in working freely from environment to environment.
 
 To get going, let’s look at one of the most common settings you will have internal to your packages: database connections. The connection management in SSIS allows us to completely set all the key properties of the connections internally from the use of configuration management.
 

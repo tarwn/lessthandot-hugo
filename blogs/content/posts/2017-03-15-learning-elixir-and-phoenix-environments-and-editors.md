@@ -98,10 +98,10 @@ I tried Atom for all 3 environments, in the vagrant case running it on the host 
 
 Packages:
 
-  * [language-elixir][9] &#8211; Syntax highlighting and snippets
-  * [linter-elixirc][10] &#8211; Linting for elixir
-  * [minimap][11] &#8211; not elixir-specific, it's a birds eye scrollbar (something I started liking years ago with [metalscroll][12])
-  * [autocomplete-elixir][13] &#8211; autocomplete dropdowns, type hints, etc
+  * [language-elixir][9] – Syntax highlighting and snippets
+  * [linter-elixirc][10] – Linting for elixir
+  * [minimap][11] – not elixir-specific, it's a birds eye scrollbar (something I started liking years ago with [metalscroll][12])
+  * [autocomplete-elixir][13] – autocomplete dropdowns, type hints, etc
 
 I had some teething troubles with at least one of the elixir ones, it would get very unhappy when it couldn't find elixir (which occurred in folders that asdf had not been installed in yet). On a positive note, having auto-indention, autocompletion of things like defmodule do/end, syntax coloring, and so on are a basic set of expectations for me when using any IDE. I also get instant re-compilation of code to show errors and warnings, which is also handy (no regular switches to command line to run the build myself and wait for the result, just instant feedback). One thing that stood out to me is that Atom tends to hide everything by default and the occasional plugin error liked to beat me in the face with its error messages.
 
@@ -111,7 +111,7 @@ Find it here: [VS Code Editor][14]
 
 I only tried VS Code on the windows environment so far (it has been my go -to python editor for a little while). Like Atom, it needed a version of elixir installed in order for extensions to work properly.
 
-Extension: [vscode-elixir][15] &#8211; syntax coloring, snippets, intellisense
+Extension: [vscode-elixir][15] – syntax coloring, snippets, intellisense
 
 I had a little more familiarity with VS Code already, but I haven't used it in a couple months. Like Atom, VS Code relies heavily on you learning lots of keyboard shortcuts, search menus, etc. Something I had not done much with either. I have found VS Code to be a little more discoverable than Atom, partially due to a number of the most important (to me) features sitting on a sidebar by default, where Atom starts you off with more-or-less an empty screen (and a Welcome screen I can't seem to make stop showing up). Also, they've really handled things like performing simple git commits quickly very easy, I've long ignored or disliked just about every IDE version control plugin I've tried, this one does that one simple, small thing very well.
 

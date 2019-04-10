@@ -114,7 +114,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
     
     <tr>
       <td>
-        &#8211;
+        –
       </td>
       
       <td>
@@ -150,7 +150,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
     
     <tr>
       <td>
-        &#8216;
+        '
       </td>
       
       <td>
@@ -162,7 +162,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        $a=100<br /> &#8216;The value of a is $a' will output as:<br /> The value of a is $a
+        $a=100<br /> 'The value of a is $a' will output as:<br /> The value of a is $a
       </td>
     </tr>
     
@@ -358,7 +358,7 @@ There are four main commands to remember for PowerShell. Using these four comman
       </td>
       
       <td>
-        Lists all the PowerShell drives in the current session &#8211; FileSystem, Functions, Alias, etc.
+        Lists all the PowerShell drives in the current session – FileSystem, Functions, Alias, etc.
       </td>
       
       <td>

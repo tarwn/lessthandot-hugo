@@ -189,11 +189,11 @@ DBCC CHECKIDENT
   ,NORESEED
 )
 ```
-<span class="MT_red">Checking identity information: current identity value &#8216;NULL', current column value '11'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
+<span class="MT_red">Checking identity information: current identity value 'NULL', current column value '11'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
   
 Or
   
-<span class="MT_red"><br /> Checking identity information: current identity value &#8216;NULL', current column value &#8216;NULL'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
+<span class="MT_red"><br /> Checking identity information: current identity value 'NULL', current column value 'NULL'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
   
 As you can see the drop option basically reset our seed even while the seed is retained on the tables definition. If you attempt to insert directly into db2.tbl1 after removing replication you will violate the key.
 
@@ -224,7 +224,7 @@ exec sp_dropsubscription @publication =N'Tables', @subscriber = N'LKFW00TK', @ar
 ```
 Now insert a value into db2.tbl1
   
-<span class="MT_red"><br /> Msg 2627, Level 14, State 1, Line 1<br /> Violation of PRIMARY KEY constraint &#8216;PK_tbl1'. Cannot insert duplicate key in object &#8216;dbo.tbl1'.<br /> The statement has been terminated.<br /> </span>
+<span class="MT_red"><br /> Msg 2627, Level 14, State 1, Line 1<br /> Violation of PRIMARY KEY constraint 'PK_tbl1'. Cannot insert duplicate key in object 'dbo.tbl1'.<br /> The statement has been terminated.<br /> </span>
   
 Of course this will happen sense your seed wants to use 27 in my results above. To fix this it’s a very simple change to our DBCC CHECKIDENT command
 

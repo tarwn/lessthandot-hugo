@@ -43,7 +43,7 @@ Another thing you will need to do is set your webservice to allow POSTs, like so
 
 To be able to call the webservice, we need its' IP from the debugger, so set the service to be your startup project and fire it up. Make a note of the address (for example, http://localhost:52588) because we will need it here. May as well just leave the services running on localhost so we can call them (I haven't figured out a way to make ctrl+f5 start up both).
 
-To call the webservice we'll use a bit of jquery goodness. Its' easy since we aren't returning a custom type. I can assure you this technique works for those as well, as long as they can be serialized &#8211; i'll address this later on because there are some issues with sharing types on the server side that I would like to get into at some point.
+To call the webservice we'll use a bit of jquery goodness. Its' easy since we aren't returning a custom type. I can assure you this technique works for those as well, as long as they can be serialized – i'll address this later on because there are some issues with sharing types on the server side that I would like to get into at some point.
 
 Here's the javascript to replace the stub we set up in part I:
 

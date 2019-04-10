@@ -22,7 +22,7 @@ tags:
   - sql injection
 
 ---
-Every now and then you will hear how some site will use a blacklist to &#8216;protect' themselves against sql injection. Using a blacklist is very foolish because you can't ever think of all the different ways that the bad guys will try to bypass your little list.
+Every now and then you will hear how some site will use a blacklist to 'protect' themselves against sql injection. Using a blacklist is very foolish because you can't ever think of all the different ways that the bad guys will try to bypass your little list.
   
 Let's say you have DROP and DROP TABLE in your list.
 

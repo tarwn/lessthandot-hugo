@@ -102,7 +102,7 @@ sql
 exec FindColumnsWithNulls
 ```
 
-You will get a &#8216;report' that lists SchemaName, TableName, ColumnName and DataType
+You will get a 'report' that lists SchemaName, TableName, ColumnName and DataType
 
 This proc does not tell you how many NULLS you have in a column, it will just report that the column has at least one NULL value. With the output from the proc, it is pretty easy for you to find how many NULLS there are and then update the value to something that is not NULL
 

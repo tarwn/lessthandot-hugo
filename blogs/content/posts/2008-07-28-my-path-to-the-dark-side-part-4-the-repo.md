@@ -20,9 +20,9 @@ tags:
 ---
 Previous posts can be found here:
 
-  * [Part One &#8211; The Beginning][1]
-  * [Part Two &#8211; The Domain Model][2]
-  * [Part Three &#8211; Testing the Schema][3]
+  * [Part One – The Beginning][1]
+  * [Part Two – The Domain Model][2]
+  * [Part Three – Testing the Schema][3]
 
 Setting up the repositories for our objects is where this really starts to get fun for me. This is what allows us to work with the persisted objects so easily from our application code, without all the SQL getting in the way. The first thing we want to think about here is what we need the repository to do. Add/Delete/Update all come to mind of course. As well as retrieval of single objects and collections. These will be pretty much standard behaviors across most of our objects. So lets' look at the interface first:
 

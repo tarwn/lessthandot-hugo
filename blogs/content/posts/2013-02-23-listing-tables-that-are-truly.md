@@ -110,7 +110,7 @@ CREATE PARTITION SCHEME psFiscalYear
 AS PARTITION pfFiscalYear ALL TO ([PRIMARY])
 ```
 
-_Partition scheme &#8216;psFiscalYear' has been created successfully. &#8216;PRIMARY' is marked as the next used filegroup in partition scheme &#8216;psFiscalYear'._
+_Partition scheme 'psFiscalYear' has been created successfully. 'PRIMARY' is marked as the next used filegroup in partition scheme 'psFiscalYear'._
 
 Now we will add a clustered index and partition this on the YearCol column, the syntax looks like this
 

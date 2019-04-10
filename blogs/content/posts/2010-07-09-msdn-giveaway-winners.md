@@ -44,15 +44,15 @@ Not only did we think that the comment was good but apparently someone else as w
 
 We decided to raffle of the other subscription by vote..so I already started to put the polls together. During that time David Taylor left a great comment
 
-> 1) Why do you need this &#8211; Because I am a poor, seriously underpaid SQL Server 2008 DBA/Developer who can't even afford VS2010 Pro!
+> 1) Why do you need this – Because I am a poor, seriously underpaid SQL Server 2008 DBA/Developer who can't even afford VS2010 Pro!
   
-> What are you going to build with this &#8211; I am going to build practice apps to learn from, as I am relatively new to development
+> What are you going to build with this – I am going to build practice apps to learn from, as I am relatively new to development
   
 > will it help other people's lives? It is my hope that training myself will get me into a job in which I am helping other people.
 > 
-> 2) What specific functionality that is only part of Ultimate are you going to use? &#8211; Architecture Explorer
+> 2) What specific functionality that is only part of Ultimate are you going to use? – Architecture Explorer
 > 
-> 3) You need to have a technical blog and provide the URL to that blog, if you are an active member of the technical community (stackoverflow, msdn forums etc etc) then also include those links. &#8211; http://dyfhid.wordpress.com. Also, I am the Volunteer Coordinator for PASS' APplication Development Virtual Chapter, located at http://appdev.sqlpass.org
+> 3) You need to have a technical blog and provide the URL to that blog, if you are an active member of the technical community (stackoverflow, msdn forums etc etc) then also include those links. – http://dyfhid.wordpress.com. Also, I am the Volunteer Coordinator for PASS' APplication Development Virtual Chapter, located at http://appdev.sqlpass.org
 
 Now we had a dilemma, do we yank the poll and give the award to David or not? We proceeded with the poll. Wouldn't you know it, David won Andy's contest, because of that I emailed him and we decided that he wouldn't be eligible here.
 

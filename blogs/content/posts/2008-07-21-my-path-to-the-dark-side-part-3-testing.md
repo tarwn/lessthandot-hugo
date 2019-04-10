@@ -20,8 +20,8 @@ tags:
 ---
 Previous posts can be found here:
 
-  * [Part One &#8211; The Beginning][1]
-  * [Part Two &#8211; The Domain Model][2]
+  * [Part One – The Beginning][1]
+  * [Part Two – The Domain Model][2]
 
 In part two we set up our domain model. Now, before we can test nhibernate's ability to work with and persist objects, we need to ensure that we've defined our schema well enough that NHibernate can create the Schema for us (since that was kind of the point). Now is where NUnit starts to become very useful.
 
@@ -65,7 +65,7 @@ If everything is set up right, when you fire up the NUnit GUI, load the RecipeTr
 
 For this part we'll need to start setting up our repositories to move the objects to and from the database. This gets pretty involved, so this will have to be continued in Part 4.
 
-Here is the sample project (so far). Next one will be where it gets interesting! [Sample Project &#8211; Part 1][3]
+Here is the sample project (so far). Next one will be where it gets interesting! [Sample Project – Part 1][3]
 
  [1]: /index.php/DesktopDev/MSTech/the-path-to-nhibernate-aamp-tdd-part-1-t
  [2]: /index.php/DesktopDev/MSTech/my-path-to-the-dark-side-part-2-the-doma

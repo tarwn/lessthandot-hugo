@@ -102,7 +102,7 @@ and data_type in('varchar','char','nvarchar','nchar')
 
 column_name
   
-&#8212;&#8212;&#8212;&#8212;&#8211;
+————–
   
 Col1
   
@@ -376,7 +376,7 @@ Now run this and observe character\_maximum\_length
   
 select * from information_schema.columns
   
-where table_name = &#8216;TestTrim'
+where table_name = 'TestTrim'
 
 As you can see the character\_maximum\_length is -1 for (max) columns, you need to take that into account
 

@@ -18,11 +18,11 @@ categories:
   - Windows 8
 
 ---
-Windows 8 has been a hot topic of late &#8211; especially getting started with it. We already had a post from our very own Denis Gobo ([@denisgobo][1]) in [how to shut down Windows 8][2]. This led me to write a quick post on some features you may or may not know of.
+Windows 8 has been a hot topic of late – especially getting started with it. We already had a post from our very own Denis Gobo ([@denisgobo][1]) in [how to shut down Windows 8][2]. This led me to write a quick post on some features you may or may not know of.
 
-Windows 8 has a great design for touch screens, and some great shortcuts for the PC User as well. I've been using it since Consumer Preview and to be honest &#8211; it did take a week or so to get used to the new interface. There are one or two tricks, that when you know them, make it a lot easier to work with as a PC User.
+Windows 8 has a great design for touch screens, and some great shortcuts for the PC User as well. I've been using it since Consumer Preview and to be honest – it did take a week or so to get used to the new interface. There are one or two tricks, that when you know them, make it a lot easier to work with as a PC User.
 
-To start of with, I am going to talk a bit about charms. Charms is the new “navigation” for Windows 8 &#8211; it appears on the right hand side whenever you move your mouse to either the top right, or bottom right corners of the screen.
+To start of with, I am going to talk a bit about charms. Charms is the new “navigation” for Windows 8 – it appears on the right hand side whenever you move your mouse to either the top right, or bottom right corners of the screen.
 
 This will bring up the following:
 
@@ -42,9 +42,9 @@ In order they are:
   
 5. Settings
 
-There is one thing about charms which is a very subtle yet powerful feature… it is context sensitive! Depending which application is active, will depend what charms enables you to do. Some of you might have downloaded the Wikipedia app (for example) from the store; good looking, side scrolling; so how do you search? With the charms menu, just open it up and search whatever you're looking for. For those of you which lives in a suffocated broadband area like me &#8211; this is also where you go to limit the amount of data which live tiles uses in the Win8UI (this however is only from RTM onwards).
+There is one thing about charms which is a very subtle yet powerful feature… it is context sensitive! Depending which application is active, will depend what charms enables you to do. Some of you might have downloaded the Wikipedia app (for example) from the store; good looking, side scrolling; so how do you search? With the charms menu, just open it up and search whatever you're looking for. For those of you which lives in a suffocated broadband area like me – this is also where you go to limit the amount of data which live tiles uses in the Win8UI (this however is only from RTM onwards).
 
-Another handy feature is Flip-2D &#8211; better known as the 3D Aero flip in Windows Vista/7. This is done by moving your mouse to the top left corner of the screen, or pressing WIN + Tab.
+Another handy feature is Flip-2D – better known as the 3D Aero flip in Windows Vista/7. This is done by moving your mouse to the top left corner of the screen, or pressing WIN + Tab.
 
 It looks similar to this:
 

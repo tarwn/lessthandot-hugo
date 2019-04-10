@@ -192,7 +192,7 @@ $stream.WriteLine("</ul>")
 $stream.WriteLine("</body></html>")
 $stream.Close()
 ```
-I've added HTML output to the script with a hardcoded output location that ensures the report directory exists before writing the index.html page. I've hardcoded this value to reduce the amount of thinking &#8216;ll need to do as I add this to other projects (keeps it consistent from output name to artifact setting to report tab configuration).
+I've added HTML output to the script with a hardcoded output location that ensures the report directory exists before writing the index.html page. I've hardcoded this value to reduce the amount of thinking 'll need to do as I add this to other projects (keeps it consistent from output name to artifact setting to report tab configuration).
 
 The next step is to configure the project to capture the folder as an artifact:
 

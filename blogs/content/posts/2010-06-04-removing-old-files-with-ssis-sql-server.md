@@ -293,9 +293,9 @@ Logging from the first method appears in blocks like this
 
 compared to the SSIS logging method of
 
-> Diagnostic,onpnt,onpnt,Delete Old File,{E4830550-A51A-46F3-A374-243888315707},{969D771F-24A9-4A57-B98D-42B025BE2573},6/4/2010 7:31:25 AM,6/4/2010 7:31:25 AM,0,(null),Trying to delete file &#8216;C:TestDeleteFileSystemTaskFile_20100603191001.trn'.
+> Diagnostic,onpnt,onpnt,Delete Old File,{E4830550-A51A-46F3-A374-243888315707},{969D771F-24A9-4A57-B98D-42B025BE2573},6/4/2010 7:31:25 AM,6/4/2010 7:31:25 AM,0,(null),Trying to delete file 'C:TestDeleteFileSystemTaskFile_20100603191001.trn'.
   
-> Diagnostic,onpnt,onpnt,Delete Old File,{E4830550-A51A-46F3-A374-243888315707},{969D771F-24A9-4A57-B98D-42B025BE2573},6/4/2010 7:31:25 AM,6/4/2010 7:31:25 AM,0,(null),Finished deleting file &#8216;C:TestDeleteFileSystemTaskFile_20100603191001.trn'.
+> Diagnostic,onpnt,onpnt,Delete Old File,{E4830550-A51A-46F3-A374-243888315707},{969D771F-24A9-4A57-B98D-42B025BE2573},6/4/2010 7:31:25 AM,6/4/2010 7:31:25 AM,0,(null),Finished deleting file 'C:TestDeleteFileSystemTaskFile_20100603191001.trn'.
 
 ## Conclusions
 

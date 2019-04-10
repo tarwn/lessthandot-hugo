@@ -55,7 +55,7 @@ You get the following error
 
 _Msg 942, Level 14, State 4, Line 1
   
-Database &#8216;test' cannot be opened because it is offline._
+Database 'test' cannot be opened because it is offline._
 
 If you try running the following command to bring the database online
 
@@ -67,7 +67,7 @@ Now you get this error
 
 _Msg 5011, Level 14, State 9, Line 1
   
-User does not have permission to alter database &#8216;test', the database does not exist, or the database is not in a state that allows access checks.
+User does not have permission to alter database 'test', the database does not exist, or the database is not in a state that allows access checks.
   
 Msg 5069, Level 16, State 1, Line 1
   

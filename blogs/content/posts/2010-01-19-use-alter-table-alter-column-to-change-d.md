@@ -195,7 +195,7 @@ Here is the error for the above command
   
 **Msg 245, Level 16, State 1, Line 1
   
-Conversion failed when converting the varchar value &#8216;Jan 18 2010 5:12PM' to data type int.
+Conversion failed when converting the varchar value 'Jan 18 2010 5:12PM' to data type int.
   
 The statement has been terminated.**
 

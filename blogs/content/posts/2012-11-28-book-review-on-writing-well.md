@@ -14,7 +14,7 @@ categories:
   - Book Review
 
 ---
-Secret: when I was in high school, I was going to grow up to be a high school English teacher and writer. I read voraciously. I wrote endlessly &#8211; journals, short stories, poems, and essays. I haven’t become a teacher yet, but I’ve kept my love of writing alive. I’ve been blogging – personally and professionally – for years and even co-authored a book this year!
+Secret: when I was in high school, I was going to grow up to be a high school English teacher and writer. I read voraciously. I wrote endlessly – journals, short stories, poems, and essays. I haven’t become a teacher yet, but I’ve kept my love of writing alive. I’ve been blogging – personally and professionally – for years and even co-authored a book this year!
 
 To me, writing is an art form. I can only get better at it, but it will take time, and practice. I was discussing writing with Jeremiah ([blog][1] | [twitter][2]) one day, and he recommended I read William Zinsser’s [On Writing Well The Classic Guide to Writing Nonfiction][3] for inspiration.
 

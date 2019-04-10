@@ -17,7 +17,7 @@ tags:
   - nhibernate
 
 ---
-The last time I did a post on NHibernate (or any post for that matter &#8211; I guess I've been a bit busy) [Ben][1] asked a question about what I ended up using for session management in the application I've been working on. I guess I could come out and answer it, but I'd hardly get a new post out of that. Instead I will break out the tried and true answer for all things IT, “It depends”. Let's take a look at what it depends on.
+The last time I did a post on NHibernate (or any post for that matter – I guess I've been a bit busy) [Ben][1] asked a question about what I ended up using for session management in the application I've been working on. I guess I could come out and answer it, but I'd hardly get a new post out of that. Instead I will break out the tried and true answer for all things IT, “It depends”. Let's take a look at what it depends on.
 
 ## What is the Session?
 
@@ -25,7 +25,7 @@ This is probably the best place to start. If you're used to working with ADO.net
 
 ## What is your Unit of Work?
 
-This is the $64,000 question. Once you know what your unit of work is, session management will more or less solve itself. As you can imagine, this is highly dependent on the nature of the application you're working on. In most cases the unit of work is synonymous with a business transaction. It represents the minimum amount of work that you want to commit to your underlying storage mechanism. This is an all or nothing proposition &#8211; if your unit of work requires you to write four objects to a data store, and only three succeed, then the three that succeeded will be cancelled, or rolled back. 
+This is the $64,000 question. Once you know what your unit of work is, session management will more or less solve itself. As you can imagine, this is highly dependent on the nature of the application you're working on. In most cases the unit of work is synonymous with a business transaction. It represents the minimum amount of work that you want to commit to your underlying storage mechanism. This is an all or nothing proposition – if your unit of work requires you to write four objects to a data store, and only three succeed, then the three that succeeded will be cancelled, or rolled back. 
 
 Keeping this in mind, a desktop application using an embedded database for persistence may be able to get by with a single session for the life of the application, as long as transactions are properly committed and the session is flushed when the app shuts down. This gives you the benefit of storing a LOT of data in the first level cache, which can be very beneficial when you're positive no one else will be modifying it (though, with an in memory database you may not even need the first level cache 😉 ). 
 

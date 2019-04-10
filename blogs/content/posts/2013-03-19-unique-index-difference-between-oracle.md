@@ -62,7 +62,7 @@ Here is the error
   
 _Msg 2601, Level 14, State 1, Line 1
   
-Cannot insert duplicate key row in object &#8216;dbo.TestUnique' with unique index &#8216;SomeIndex'. The duplicate key value is (<null>).
+Cannot insert duplicate key row in object 'dbo.TestUnique' with unique index 'SomeIndex'. The duplicate key value is (<null>).
   
 The statement has been terminated.</null>_
 

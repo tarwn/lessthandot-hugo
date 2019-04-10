@@ -52,31 +52,31 @@ _While I originally expected the load test portion to be the trickiest, the real
 First up is defining the parameter for the CI build number:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config1.png" title="Load Test Job - Build Parameter" /><br /> Load Test Job &#8211; Build Parameter
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config1.png" title="Load Test Job - Build Parameter" /><br /> Load Test Job – Build Parameter
 </div>
 
 Then I need to add in the code repository that I'm hosting the Load Test scripts from the last post in:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config2.png" title="Load Test Job - Load Test Scripts" /><br /> Load Test Job &#8211; Load Test Scripts
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config2.png" title="Load Test Job - Load Test Scripts" /><br /> Load Test Job – Load Test Scripts
 </div>
 
 I've also added the [EnvFile plugin][3] to allow me to store critical information, like server names and passwords, in an external settings file:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config3.png" title="Load Test Job - External Settings" /><br /> Load Test Job &#8211; External Settings
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config3.png" title="Load Test Job - External Settings" /><br /> Load Test Job – External Settings
 </div>
 
 Then using the [Copy Artifact][4] plugin, I'll add a build step to retrieve the zipped deployable website from the CI build step:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4.png" title="Load Test Job - Copy Artifacts" /><br /> Load Test Job &#8211; Copy Artifacts
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4.png" title="Load Test Job - Copy Artifacts" /><br /> Load Test Job – Copy Artifacts
 </div>
 
 With those retrieved, I can now deploy them to my remote server using MS Deploy and execute the VBScript file I created to smoke test the deployed site, each as windows batch command steps:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4c.png" title="Load Test Job - Deploy + Smoke Test" /><br /> Load Test Job &#8211; Deploy + Smoke Test
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config4c.png" title="Load Test Job - Deploy + Smoke Test" /><br /> Load Test Job – Deploy + Smoke Test
 </div>
 
 _Note: These commands and scripts are available in the [Deploy and Smoke Test post][5]_
@@ -90,13 +90,13 @@ The actual command to execute the load test is nicely wrapped in a the Run.cmd f
 The last steps archive the log.xml file that WCAT produces, 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config5.png" title="Load Test Job - Archive Log File" /><br /> Load Test Job &#8211; Archive Log File
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config5.png" title="Load Test Job - Archive Log File" /><br /> Load Test Job – Archive Log File
 </div>
 
 capture the results of the smoke test, 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config6.png" title="Load Test Job - Capture Smoke Test Results" /><br /> Load Test Job &#8211; Capture Smoke Test Results
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config6.png" title="Load Test Job - Capture Smoke Test Results" /><br /> Load Test Job – Capture Smoke Test Results
 </div>
 
 and clutter up my twitter feed. 
@@ -207,13 +207,13 @@ Which nets me a results file, like so:
 The last piece of the equation is to configure the Plot in the load test job. Here is an example of one graph configuration (the full set is pretty long):
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config8.png" title="Load Test Job - Plot Settings" /><br /> Load Test Job &#8211; Plot Settings
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/LoadTest_Config8.png" title="Load Test Job - Plot Settings" /><br /> Load Test Job – Plot Settings
 </div>
 
 Each plot has an XPath statement that corresponds to one of the sections of the result XML file, that way I have unique names for the values when it stores the data and I have labels on the plots. Running the job a few times to build up data and my graph looks like this:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/load_diagram.png" title="Load Test Job - Response Time Diagram" /><br /> Load Test Job &#8211; Response Time Diagram
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/load_diagram.png" title="Load Test Job - Response Time Diagram" /><br /> Load Test Job – Response Time Diagram
 </div>
 
 _Note: I suspect the fact that I got bored and was watching Netflix for the last few tests had some effect on the values_

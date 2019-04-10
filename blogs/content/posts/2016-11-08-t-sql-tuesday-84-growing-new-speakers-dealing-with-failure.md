@@ -20,7 +20,7 @@ I’m joining [this month’s #tsql2sday blog party][1] as Andy Yun ([blog][1] |
 I’ve had the opportunity to present hundreds of times – in-person to small user groups and at large conferences, online to one person or hundreds. As I present, I’m working with technology – the laptop I’m using, the projector I’m connected to, the SQL Server I’m running demos against. Technology can and will fail. As a speaker, this can be downright terrifying.
 
 <h3 style="text-align: justify">
-  “I have not failed. I’ve just found 10,000 ways that won’t work.” &#8211; Thomas A. Edison
+  “I have not failed. I’ve just found 10,000 ways that won’t work.” – Thomas A. Edison
 </h3>
 
 You can prepare so you’re able to continue presenting when there is a problem.

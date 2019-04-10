@@ -25,7 +25,7 @@ categories:
   - SSIS
 
 ---
-When importing flat files to SQL Server destination, it's a common pattern to extract them to staging tables. Subsequent phases of ETL, transform and load, move data from staging to destination. A typical data integration project needs to import data from [at least] hunderds of files. Manually creating extract packages for hundreds of files is like watching Jersey Shore and South Beach Tow at the same time &#8211; painful.
+When importing flat files to SQL Server destination, it's a common pattern to extract them to staging tables. Subsequent phases of ETL, transform and load, move data from staging to destination. A typical data integration project needs to import data from [at least] hunderds of files. Manually creating extract packages for hundreds of files is like watching Jersey Shore and South Beach Tow at the same time – painful.
 
 In this post, I provide a framework that automates the process of creating SSIS packages to extract data from flatfiles to staging tables; I call them extract packages. This framework is metadata driven and creates packages dynamically.
 

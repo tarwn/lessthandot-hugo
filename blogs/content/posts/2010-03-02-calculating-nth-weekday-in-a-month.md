@@ -37,7 +37,7 @@ Solving this problem comprises the following 3 steps, which logically satisfy ea
 sql
 SELECT DATEADD(MONTH,@Month-1,DATEADD(YEAR,@Year-1900,0))
 ```
-2. Get the first date on which any weekday will occur nth time in the month. i.e. ((N-1)\*7+1)th day of the month will be the first date on which any weekday will occur nth time. In this case, the first date for the specified week (3) is, February 1st 2010 + (3 &#8211; 1)\*7 days = February 15th 2010.
+2. Get the first date on which any weekday will occur nth time in the month. i.e. ((N-1)\*7+1)th day of the month will be the first date on which any weekday will occur nth time. In this case, the first date for the specified week (3) is, February 1st 2010 + (3 – 1)\*7 days = February 15th 2010.
 
 sql
 SELECT DATEADD(DAY,(@Weekno-1)*7 ,DATEADD(MONTH,@Month-1,DATEADD(YEAR,@Year-  1900,0)))
@@ -46,15 +46,15 @@ SELECT DATEADD(DAY,(@Weekno-1)*7 ,DATEADD(MONTH,@Month-1,DATEADD(YEAR,@Year-  19
   
 Week day Requested is 6 (Sunday) and Weekday of first date that came in above step is 0(Monday).
   
-So, No of days required to add are (Weekday Requested &#8211; weekday of first date ) = 6 – 0 = 6 days.
+So, No of days required to add are (Weekday Requested – weekday of first date ) = 6 – 0 = 6 days.
   
 Note: If the above formula results in negative value, add 7 to the result.
   
 You can write the above expression as
   
-No of days to add = (7 + Weekday Requested &#8211; Weekday Of first date) % 7
+No of days to add = (7 + Weekday Requested – Weekday Of first date) % 7
   
-In our case, the number of days required to add are 6 &#8211; 0 = 6 days. So, by adding 6 days to 15th February 2010,you will get 21st February 2010, which is 3rd Sunday of February 2010.
+In our case, the number of days required to add are 6 – 0 = 6 days. So, by adding 6 days to 15th February 2010,you will get 21st February 2010, which is 3rd Sunday of February 2010.
   
 So, the final query will become,
 

@@ -69,7 +69,7 @@ GO
 
 _Msg 2627, Level 14, State 1, Line 2
   
-Violation of UNIQUE KEY constraint &#8216;ix_unique'. Cannot insert duplicate key in object &#8216;dbo.TestUniqueConstraint'. The duplicate key value is (1).
+Violation of UNIQUE KEY constraint 'ix_unique'. Cannot insert duplicate key in object 'dbo.TestUniqueConstraint'. The duplicate key value is (1).
   
 The statement has been terminated._
 
@@ -103,7 +103,7 @@ INSERT TestForeignConstraint  VALUES(2)
 
 _Msg 547, Level 16, State 0, Line 1
   
-The INSERT statement conflicted with the FOREIGN KEY constraint “FK\_TestForeignConstraint\_TestUniqueConstraint”. The conflict occurred in database “tempdb”, table “dbo.TestUniqueConstraint”, column &#8216;id'.
+The INSERT statement conflicted with the FOREIGN KEY constraint “FK\_TestForeignConstraint\_TestUniqueConstraint”. The conflict occurred in database “tempdb”, table “dbo.TestUniqueConstraint”, column 'id'.
   
 The statement has been terminated._
 
@@ -143,7 +143,7 @@ GO
 
 _Msg 2601, Level 14, State 1, Line 2
   
-Cannot insert duplicate key row in object &#8216;dbo.TestUniqueIndex' with unique index &#8216;ix_unique'. The duplicate key value is (1).
+Cannot insert duplicate key row in object 'dbo.TestUniqueIndex' with unique index 'ix_unique'. The duplicate key value is (1).
   
 The statement has been terminated._
 
@@ -177,7 +177,7 @@ INSERT TestForeignIndex  VALUES(2)
 
 _Msg 547, Level 16, State 0, Line 1
   
-The INSERT statement conflicted with the FOREIGN KEY constraint “FK\_TestForeignIndex\_TestUniqueIndex”. The conflict occurred in database “tempdb”, table “dbo.TestUniqueIndex”, column &#8216;id'.
+The INSERT statement conflicted with the FOREIGN KEY constraint “FK\_TestForeignIndex\_TestUniqueIndex”. The conflict occurred in database “tempdb”, table “dbo.TestUniqueIndex”, column 'id'.
   
 The statement has been terminated._
 

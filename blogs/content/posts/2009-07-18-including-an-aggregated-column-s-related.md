@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-In this co-authored blog post, [Naomi][1] and I will present six different solutions to the commonly experienced query problem of how to include an aggregated column's related values &#8211; values from the same row in the group that provided the displayed value.
+In this co-authored blog post, [Naomi][1] and I will present six different solutions to the commonly experienced query problem of how to include an aggregated column's related values – values from the same row in the group that provided the displayed value.
 
 ## Background
 
@@ -83,14 +83,14 @@ What we want to do is also return the Subtotal value from the same row as the La
 We know of only a few basic approaches to the problem:
 
 <div>
-  &#8211; <strong>Key Search</strong> &#8212; use the LastOrderDate column as a key (along with customer AccountNumber) to locate the correct rows in the OrderHeader table. This requires an extra join and also the key isn't unique, so we might have to perform another Max() on a unique column and join another time, with the new column added to the key.</p> 
+  – <strong>Key Search</strong> — use the LastOrderDate column as a key (along with customer AccountNumber) to locate the correct rows in the OrderHeader table. This requires an extra join and also the key isn't unique, so we might have to perform another Max() on a unique column and join another time, with the new column added to the key.</p> 
   
   <p>
-    &#8211; <strong>Number and Filter</strong> &#8212; select all rows from OrderHeader, and number them in a way exploitable to correctly filter out unwanted rows. Observe that this won't require hitting the table again, but it could use a lot of extra resources to temporarily materialize more data. Skipping over obvious poor choices such as a temp table with an ordered update or a cursor, options might be a windowing function (SQL 2005 and up) or a temp table with an identity column (SQL 2000).
+    – <strong>Number and Filter</strong> — select all rows from OrderHeader, and number them in a way exploitable to correctly filter out unwanted rows. Observe that this won't require hitting the table again, but it could use a lot of extra resources to temporarily materialize more data. Skipping over obvious poor choices such as a temp table with an ordered update or a cursor, options might be a windowing function (SQL 2005 and up) or a temp table with an identity column (SQL 2000).
   </p>
   
   <p>
-    &#8211; <strong>Simulate MS Access</strong> &#8212; simulate how MS Access works somehow, getting only the data we need in a single table access (seek or scan). Let's imagine how the SQL engine already performs a Max. As it touches each row, it must store the intermediate value that is the best candidate so far for all the seen values. And it has to have one of these per group, per column. All that is needed is that every time it writes the Max() candidate into its temporary storage, it also writes the extra column we want into the same data.
+    – <strong>Simulate MS Access</strong> — simulate how MS Access works somehow, getting only the data we need in a single table access (seek or scan). Let's imagine how the SQL engine already performs a Max. As it touches each row, it must store the intermediate value that is the best candidate so far for all the seen values. And it has to have one of these per group, per column. All that is needed is that every time it writes the Max() candidate into its temporary storage, it also writes the extra column we want into the same data.
   </p>
   
   <p>
@@ -205,7 +205,7 @@ The windowing functions were introduced in SQL Server 2005, so the two queries b
   * Easily supports not just 1 but _n_ rows per group.
   * Performance degrades fairly linearly as rows increase. The windowing functions are fast but huge rowsets can begin to bog them down.
 
-### 3. Windowing Function &#8211; Two Stages</p> 
+### 3. Windowing Function – Two Stages</p> 
 
   * A common table expression is not needed, but is cleaner. The CTE query can be made into a derived table if desired.
 
@@ -225,7 +225,7 @@ FROM OrderData
 WHERE Selector = 1
 ```
 
-### 4. Windowing Function &#8211; One Stage
+### 4. Windowing Function – One Stage
 
 sql
 SELECT TOP 1 WITH TIES
@@ -271,7 +271,7 @@ FROM
 
 Isn't that cool? I don't advocate using it all the time, but when performance is bad and the trade-offs are worth it, do it.
 
-In closing, thank you for visiting. We hope this is useful to you. You might like to see the next installment [Including an Aggregated Column's Related Values &#8211; Part 2][4], discussing this issue in further depth.
+In closing, thank you for visiting. We hope this is useful to you. You might like to see the next installment [Including an Aggregated Column's Related Values – Part 2][4], discussing this issue in further depth.
 
 Erik
 

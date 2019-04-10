@@ -43,7 +43,7 @@ We also looked at nested classes, basically a class that is declared inside anot
 
 Next up we looked at the javadoc utility, this utility is used to create documentation in a standard format.
 
-Even though Java doesn't have multiple inheritance like c++, you can &#8216;inherit' from more than one interface. An interface is basically a code contract, when you inherit (implement) an interface you have to implement all the methods defined in the interface. An interface does not have an implementation, it has methods with empty bodies, it is up to the class that implements the interface to create the method code
+Even though Java doesn't have multiple inheritance like c++, you can 'inherit' from more than one interface. An interface is basically a code contract, when you inherit (implement) an interface you have to implement all the methods defined in the interface. An interface does not have an implementation, it has methods with empty bodies, it is up to the class that implements the interface to create the method code
 
 We looked at upcasting (casting to a superclass type) and downcasting (casting to a subclass, this will only work if the object is a compatible type)
   

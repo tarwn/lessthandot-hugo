@@ -17,7 +17,7 @@ categories:
   - Database Programming
 
 ---
- <img src="/wp-content/uploads/blogs/ITProfessionals/sqlnugget.jpg?mtime=1326466147" alt="" title="" align="left" width="200" height="200" />It's time for [SQL Nuggets][1]! This is a cool idea started by LTD's own [Ted Krueger][2] &#8211; a quick SQL-related blog on Fridays. This week's nugget is **“Deciding I need to delete it all and start over again”** (and I'd like that with a side of honey mustard, please). 
+ <img src="/wp-content/uploads/blogs/ITProfessionals/sqlnugget.jpg?mtime=1326466147" alt="" title="" align="left" width="200" height="200" />It's time for [SQL Nuggets][1]! This is a cool idea started by LTD's own [Ted Krueger][2] – a quick SQL-related blog on Fridays. This week's nugget is **“Deciding I need to delete it all and start over again”** (and I'd like that with a side of honey mustard, please). 
 
 A wise Jedi once said, “Try not. Do or do not. There is no try.” What happens when you do, but you do poorly? You do it over. 
 

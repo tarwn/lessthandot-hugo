@@ -19,7 +19,7 @@ tags:
   - sql server
 
 ---
-In [2005- Version][1] and [2008 Version][2] George and Denis have already shown a couple of great ways to calculate distance between two pairs of latitude/longitude coordinates in SQL Server. In SQL 2005 + there is a third option (Well, it was the second option until 2008 introduced the new Geography data type). SQL 2005 was the first version of SQL Server to offer CLR integration &#8211; giving developers the ability to write their own functions and stored procs as .NET assemblies. In addition to opening a whole new world of possibilities to SQL developers, when used wisely these functions/procs will in some cases outperform standard T-SQL, especially when it comes to math and string manipulation.
+In [2005- Version][1] and [2008 Version][2] George and Denis have already shown a couple of great ways to calculate distance between two pairs of latitude/longitude coordinates in SQL Server. In SQL 2005 + there is a third option (Well, it was the second option until 2008 introduced the new Geography data type). SQL 2005 was the first version of SQL Server to offer CLR integration – giving developers the ability to write their own functions and stored procs as .NET assemblies. In addition to opening a whole new world of possibilities to SQL developers, when used wisely these functions/procs will in some cases outperform standard T-SQL, especially when it comes to math and string manipulation.
 
 So, lets get down to business. First thing to do is create a class library to hold your functions. You can do this in C# or VB.net, I won't judge. But I will use C#.
 

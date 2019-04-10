@@ -17,7 +17,7 @@ My 5 Questions series continues with Russ Thomas (<a href="https://sqljudo.wordp
 
 At SQL Saturday Portland 2013, Russ asked me and Grant Fritchey to sit in on his presentation, “Verbal Judo for the DBA”. Grant and I had fun taking on roles with other members of the audience, talking through situations, learning how to communicate. I thought, “This guy knows how to teach people!” As I've gotten to know Russ over the last couple of years, I've realized he knows a lot more than that!
 
-Russ runs a “<a href="https://sqljudo.wordpress.com/monthly-dba-challenge/" target="_blank">Monthly DBA Challenge</a>” for his DBAs and his blog readers, and I love it. If you want to sharpen your DBA skills, watch for these every month! I also had the pleasure of watching Russ develop from a first-time SQL Saturday speaker into a PASS Summit speaker &#8211; congratulations Russ! I even had the pleasure of co-presenting with him at SQL Saturday Madison 2015, where we did an SSMS Showdown!
+Russ runs a “<a href="https://sqljudo.wordpress.com/monthly-dba-challenge/" target="_blank">Monthly DBA Challenge</a>” for his DBAs and his blog readers, and I love it. If you want to sharpen your DBA skills, watch for these every month! I also had the pleasure of watching Russ develop from a first-time SQL Saturday speaker into a PASS Summit speaker – congratulations Russ! I even had the pleasure of co-presenting with him at SQL Saturday Madison 2015, where we did an SSMS Showdown!
 
 <div id="attachment_3511" style="width: 611px" class="wp-caption alignright">
   <a href="/wp-content/uploads/2015/07/jes_and_russ.jpg"><img class="wp-image-3511" src="/wp-content/uploads/2015/07/jes_and_russ.jpg" alt="The SSMS Showdown gets serious" width="601" height="338" srcset="/wp-content/uploads/2015/07/jes_and_russ.jpg 1024w, /wp-content/uploads/2015/07/jes_and_russ-300x168.jpg 300w" sizes="(max-width: 601px) 100vw, 601px" /></a>
@@ -31,9 +31,9 @@ I had a few fun questions for Russ, and he had equally fun answers!
 
 **You've gone from being a DBA to managing a team of DBAs. What is the best part of managing a team, and what is the worst part of managing a team?** 
 
-Best part of being a manager is working with a team of talented, smart, and fun people. I work really hard when hiring to find the right fit. It's not always that straightforward. But we are all data nerds &#8211; and treat each other like a close knit family. We have a lot of fun, and a lot of stress, which makes us a pretty tight team.
+Best part of being a manager is working with a team of talented, smart, and fun people. I work really hard when hiring to find the right fit. It's not always that straightforward. But we are all data nerds – and treat each other like a close knit family. We have a lot of fun, and a lot of stress, which makes us a pretty tight team.
 
-Hardest part, by far, is losing people. It's a great time to be in a data field &#8211; job opportunities for high end talent is pretty amazing. It's always hard to see people you've worked with move on, there is always another company with deeper pockets, but I remain in close contact with almost all of them. Still feels like a team when I see them at a SQLSat or PASS.
+Hardest part, by far, is losing people. It's a great time to be in a data field – job opportunities for high end talent is pretty amazing. It's always hard to see people you've worked with move on, there is always another company with deeper pockets, but I remain in close contact with almost all of them. Still feels like a team when I see them at a SQLSat or PASS.
 
 I suppose the other hard part is finding time to still get to be a hands on DBA myself. Meetings, meetings, meetings.
 
@@ -51,11 +51,11 @@ Every time I see a cruiser race by with full lights and sirens I get homesick, b
 
 **You're going to be stranded on a desert island. What are 3 books that you bring with you?** 
 
-1. Pappy Gunn &#8211; the most amazing profile of a WWII pilot that I've ever read &#8211; no adventure story on earth can match what really happened with this cat.
+1. Pappy Gunn – the most amazing profile of a WWII pilot that I've ever read – no adventure story on earth can match what really happened with this cat.
   
-2. Book of Mormon &#8211; yep, I'm Mormon
+2. Book of Mormon – yep, I'm Mormon
   
-3. And let's see… probably the Martian &#8211; great book, especially for someone stranded and deserted.
+3. And let's see… probably the Martian – great book, especially for someone stranded and deserted.
 
 **There's a lot of talk about getting kids involved in STEM early to help them choose that as a career path. As a dad, what are your thoughts on that?** 
 
@@ -63,7 +63,7 @@ Personally, I want my kids to do whatever they love. I have a daughter who has b
 
 Meanwhile, my 10 year old daughter is fascinated by the weather. So much so, that we constantly watch old re-runs of strangest weather on earth. She has pulled every single book from library that she can on meteorology.
 
-Those interest however came from exposure. Colorado has amazing lightening storms, hail storms, the occasional tornado &#8211; my 10 year old eats this up. My other daughter, I used to take to air-shows.
+Those interest however came from exposure. Colorado has amazing lightening storms, hail storms, the occasional tornado – my 10 year old eats this up. My other daughter, I used to take to air-shows.
 
 It's impossible to gain an interest in something you've never been exposed to. I am a huge advocate of any effort to get kids exposure to STEM as early as possible. It won't speak to every kid, but there are a lot of kids who'd never have known if they hadn't been introduced.
 
@@ -71,8 +71,8 @@ I discovered technology in high school when a math teacher lent me a Teach Yours
 
 **Would you rather spend a week in Disney World or a week in a national park, and why?** 
 
-Does Whistler Mountain Bike park in British Columbia count as a national park? If so, definitely that. If not, I'd still probably pick a week mountain biking in Moab / Fruita &#8211; but it's not an easy choice. Hanging out at Disneyland with my kids is pretty dang fun too. Something we do every other fall.
+Does Whistler Mountain Bike park in British Columbia count as a national park? If so, definitely that. If not, I'd still probably pick a week mountain biking in Moab / Fruita – but it's not an easy choice. Hanging out at Disneyland with my kids is pretty dang fun too. Something we do every other fall.
 
 &nbsp;
 
-Russ, thanks for answering my questions. I'm looking forward to seeing you at PASS Summit &#8211; and watching you present!
+Russ, thanks for answering my questions. I'm looking forward to seeing you at PASS Summit – and watching you present!

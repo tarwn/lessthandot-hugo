@@ -56,7 +56,7 @@ Here is the output
   
 Msg 229, Level 14, State 5, Procedure xp_readerrorlog, Line 1
   
-The EXECUTE permission was denied on the object &#8216;xp_readerrorlog', database &#8216;mssqlsystemresource', schema &#8216;sys'.
+The EXECUTE permission was denied on the object 'xp_readerrorlog', database 'mssqlsystemresource', schema 'sys'.
 
 That is no good. Luckily for us there is a stored procedure that is provided, this proc is named rds\_read\_error_log 
 
@@ -68,7 +68,7 @@ EXEC rdsadmin..rds_read_error_log
 
 The output is something like you expect from xp_readerrorlog
 
-> 2013-03-21 13:04:08.100 Server Microsoft SQL Server 2012 &#8211; 11.0.2100.60 (X64)
+> 2013-03-21 13:04:08.100 Server Microsoft SQL Server 2012 – 11.0.2100.60 (X64)
 	  
 > Feb 10 2012 19:39:15
 	  
@@ -84,13 +84,13 @@ The output is something like you expect from xp_readerrorlog
   
 > 2013-03-21 13:04:08.100 Server Server process ID is 2252.
   
-> 2013-03-21 13:04:08.100 Server System Manufacturer: &#8216;Xen', System Model: &#8216;HVM domU'.
+> 2013-03-21 13:04:08.100 Server System Manufacturer: 'Xen', System Model: 'HVM domU'.
   
 > 2013-03-21 13:04:08.100 Server Authentication mode is MIXED.
   
-> 2013-03-21 13:04:08.100 Server Logging SQL Server messages in file &#8216;D:RDSDBDATALogERROR'.
+> 2013-03-21 13:04:08.100 Server Logging SQL Server messages in file 'D:RDSDBDATALogERROR'.
   
-> 2013-03-21 13:04:08.100 Server The service account is &#8216;RDSGroupRDSIMAGE$'. This is an informational message; no user action is required.
+> 2013-03-21 13:04:08.100 Server The service account is 'RDSGroupRDSIMAGE$'. This is an informational message; no user action is required.
   
 > 2013-03-21 13:04:08.100 Server Registry startup parameters:
 	   

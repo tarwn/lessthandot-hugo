@@ -1,5 +1,5 @@
 ---
-title: Stop the ‘Stop Online Piracy’ Act
+title: Stop the 'Stop Online Piracy’ Act
 author: Alex Ullrich
 type: post
 date: 2011-11-10T23:28:00+00:00
@@ -21,7 +21,7 @@ Anyone from outside the US can safely ignore this post, though the details may p
 
 > To promote prosperity, creativity, entrepreneurship, and innovation by combating the theft of U.S. property, and for other purposes.
 
-You can see the full text of the bill at [OpenCongress][1]. The language of the bill is very vague (the cynic in me suspects intentionally so) but seems it would grant fairly sweeping powers to the government (and to &#8216;qualifying plaintiffs') when it comes to dealing with alleged perpetrators of copyright infringement.
+You can see the full text of the bill at [OpenCongress][1]. The language of the bill is very vague (the cynic in me suspects intentionally so) but seems it would grant fairly sweeping powers to the government (and to 'qualifying plaintiffs') when it comes to dealing with alleged perpetrators of copyright infringement.
 
 If you don't have time to wade through it, you might be interested in what the [Electronic Frontier Foundation][2] has to say. Or maybe [Justin Bieber's][3] take will be more to your liking. [Mike Masnick][4] has also had quite a bit to say, including an [open letter to Chris Dodd][5] that's co-signed by some prominent internet developers and venture capitalists.
 

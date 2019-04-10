@@ -1,5 +1,5 @@
 ---
-title: ‘LocalSqlServer’ Error Deploying WebSecurity in WebMatrix/Web Pages
+title: 'LocalSqlServer’ Error Deploying WebSecurity in WebMatrix/Web Pages
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-08-09T10:52:00+00:00
@@ -26,7 +26,7 @@ Several weeks ago I was working on a sample site in Web Matrix and ran into a br
   
 > **Description:** An error occurred during the processing of a configuration file required to service this request. Please review the specific error details below and modify your configuration file appropriately.
 > 
-> **Parser Error Message:** The connection name &#8216;LocalSqlServer' was not found in the applications configuration or the connection string is empty. 
+> **Parser Error Message:** The connection name 'LocalSqlServer' was not found in the applications configuration or the connection string is empty. 
 
 Today I managed to solve it based on an [archived forum post][1] I found through google. 
 

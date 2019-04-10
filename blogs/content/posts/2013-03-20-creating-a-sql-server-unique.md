@@ -45,7 +45,7 @@ As expected that blows up
 
 Msg 2627, Level 14, State 1, Line 1
   
-Violation of UNIQUE KEY constraint &#8216;uc_TestUnique'. Cannot insert duplicate key in object &#8216;dbo.TestUnique'. The duplicate key value is (1, 0).
+Violation of UNIQUE KEY constraint 'uc_TestUnique'. Cannot insert duplicate key in object 'dbo.TestUnique'. The duplicate key value is (1, 0).
   
 The statement has been terminated.
 
@@ -110,7 +110,7 @@ INSERT INTO TestUnique VALUES(1);
 
 _Msg 2601, Level 14, State 1, Line 1
   
-Cannot insert duplicate key row in object &#8216;dbo.TestUnique' with unique index &#8216;SomeIndex'. The duplicate key value is (1).
+Cannot insert duplicate key row in object 'dbo.TestUnique' with unique index 'SomeIndex'. The duplicate key value is (1).
   
 The statement has been terminated._
 
@@ -124,7 +124,7 @@ Here are the results
   
 Id
   
-&#8212;&#8211;
+—–
   
 1
   

@@ -23,7 +23,7 @@ tags:
 Executing an integration build and unit test run on the build server is all well and good, but before we can say a build is complete and ready to go, it's a good idea to know it will work when it is deployed. Executing a test deployment and then smoke testing it will ensure the archived build is ready to be deployed to test or production environments and that the necessary configurations and resources are available and working.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p4.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline &#8211; Focus of Current Post
+  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p4.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline – Focus of Current Post
 </div>
 
 This is the fifth post in a multi-part series on my Continuous Deployment pipeline project. The [previous post][1] covered integrating unit tests into the Continuous Integration stage. This post will cover the final portion of that stage, an automated deployment of the site and smoke test to make sure it can be deployed in a working state.
@@ -167,13 +167,13 @@ A recent sample of the output looks like this:
 With the script built, all I need to do is add a final “Windows Batch Command” step to my job to execute this script.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Job Configuration - Smoke Test" /></a><br /> Job Configuration &#8211; Smoke Test
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Job Configuration - Smoke Test" /></a><br /> Job Configuration – Smoke Test
 </div>
 
 And then configure the post-build step to import the result file as a Junit test result file.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketestresult.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketestresult.png" title="Job Configuration - Smoke Test Results" /></a><br /> Job Configuration &#8211; Smoke Test Results
+  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketestresult.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketestresult.png" title="Job Configuration - Smoke Test Results" /></a><br /> Job Configuration – Smoke Test Results
 </div>
 
 With this method I not only get the tests executed as part of every build, but the results are nicely aggregated with the unit test results.

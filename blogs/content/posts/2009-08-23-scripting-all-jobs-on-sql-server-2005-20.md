@@ -24,7 +24,7 @@ You know that you can not select more that one job if you expand the job folder,
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut4.png?mtime=1357605366"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut4.png?mtime=1357605366" width="279" height="280" /></a>
 </div>
 
-So navigate to the job folder, press on it and hit the F7 key or from the toolbar: view&#8211;>Object Explorer Details
+So navigate to the job folder, press on it and hit the F7 key or from the toolbar: view–>Object Explorer Details
 
 That will bring up a view like the following
 
@@ -32,7 +32,7 @@ That will bring up a view like the following
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut5.png?mtime=1357605388"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut5.png?mtime=1357605388" width="616" height="389" /></a>
 </div>
 
-Now you can select the jobs that you want, right click&#8211;>Script Job as&#8211;>CREATE to&#8211;>File and you specify the location and that is all.
+Now you can select the jobs that you want, right click–>Script Job as–>CREATE to–>File and you specify the location and that is all.
 
 Hopefully this will be handy for you.
 

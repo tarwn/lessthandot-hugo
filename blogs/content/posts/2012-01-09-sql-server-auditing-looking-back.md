@@ -23,7 +23,7 @@ Over the past couple of weeks, we have looked at the new auditing feature introd
 
 1.SQL Server 2008 vs. SQL Server 2012,
   
-2.PBM &#8211; Last take on auditing your audits,
+2.PBM – Last take on auditing your audits,
   
 3.The Auditing Repository.
 
@@ -88,7 +88,7 @@ Below is the results of querying an audit file with the filter:
 
 Other additional functionality is OnError:Fail Operation as well as maximum number of files. Maximum number of files indicates the number of files needed to be kept.
 
-### PBM &#8211; Last Take On Auditing Your Audits
+### PBM – Last Take On Auditing Your Audits
 
 Continuing from the last post, below is some policies which you can use with SQL Server 2008/R2/2012.
 
@@ -106,17 +106,17 @@ These policies will take a look at the naming convention for the policies as fol
 
 Database Audits:
 
-1. Name starts with &#8216;DBAudit_%.
+1. Name starts with 'DBAudit_%.
   
-2. Audit file name starts with &#8216;DBAudit\_Spec\_%'.
+2. Audit file name starts with 'DBAudit\_Spec\_%'.
   
 3. Audit is enabled.
 
 Server Audits:
 
-1. Name starts with &#8216;SQLAudit_%'.
+1. Name starts with 'SQLAudit_%'.
   
-2. Audit file name starts with &#8216;ServerAudit_%'.
+2. Audit file name starts with 'ServerAudit_%'.
   
 3. Audit is enabled.
 

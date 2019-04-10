@@ -120,11 +120,11 @@ GO
 
 _(8 row(s) affected)
   
-Table &#8216;Test'. Scan count 1, logical reads 6, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p> 
+Table 'Test'. Scan count 1, logical reads 6, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</p> 
 
 (8 row(s) affected)
   
-Table &#8216;Test'. Scan count 1, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</em>
+Table 'Test'. Scan count 1, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.</em>
 
 As you can see the dynamic SQL query only uses 2 reads where the other solution uses 6 reads.
 
@@ -154,11 +154,11 @@ That query also does an index scan.
 
 Here is the execution plan in text for both of the queries that cause the scan
 
-|&#8211;Index Scan(OBJECT:([tempdb].[dbo].[Test].[ix_test]),
+|–Index Scan(OBJECT:([tempdb].[dbo].[Test].[ix_test]),
    
 WHERE:([tempdb].[dbo].[Test].[Somecol2]=isnull([@col],[tempdb].[dbo].[Test].[Somecol2])))
 
-|&#8211;Index Scan(OBJECT:([tempdb].[dbo].[Test].[ix_test]),
+|–Index Scan(OBJECT:([tempdb].[dbo].[Test].[ix_test]),
     
 WHERE:([tempdb].[dbo].[Test].[Somecol2]=[@col] OR [@col] IS NULL))
 

@@ -38,7 +38,7 @@ The most exciting blogging news is that I have moved my tech blogs to this site,
 
 **Reading:**
   
-I read a lot of blogs, and I grab books I need to reference. I am working through MCTS 70-432 Exam Microsoft SQL Server 2008 &#8211; Implementation and Maintenance , in preparation for taking the exam in January. I also got a wonderful Christmas present from my friend Aaron Nelson ([Twitter][4] | [Blog][5]), and will be tackling Windows PowerShell in Action over the next few weeks. (Thanks Aaron!) It's a lot harder for me to read a tech book cover-to-cover than, say, the Neil Gaiman book currently sitting on my coffee table.
+I read a lot of blogs, and I grab books I need to reference. I am working through MCTS 70-432 Exam Microsoft SQL Server 2008 – Implementation and Maintenance , in preparation for taking the exam in January. I also got a wonderful Christmas present from my friend Aaron Nelson ([Twitter][4] | [Blog][5]), and will be tackling Windows PowerShell in Action over the next few weeks. (Thanks Aaron!) It's a lot harder for me to read a tech book cover-to-cover than, say, the Neil Gaiman book currently sitting on my coffee table.
 
 **Running:**
   

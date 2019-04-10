@@ -84,7 +84,7 @@ This code isn't necessarily bad, and actually performed quite well for my purpos
 
 
 > Who cares if I don't synchronize access to the object! It's immutable!</p>
-With all this in mind, once I had the problem solved I decided to see how hard it'd be to implement the same algorithm without any mutable values &#8211; I'm not sure if it will end up as idiomatic F# or not, but I hope it's at least a step in the right direction.
+With all this in mind, once I had the problem solved I decided to see how hard it'd be to implement the same algorithm without any mutable values – I'm not sure if it will end up as idiomatic F# or not, but I hope it's at least a step in the right direction.
 
 ### Getting Rid of Mutable State
 
@@ -107,7 +107,7 @@ let rec applyUntilEqual (power, lam, tortoise, hare) =
         (power, lam, tortoise, hare)
 ```
 
-Note that we don't need to pass &#8216;f' (the function passed into our brent implementation) into this function. Because this method is declared inside the brent function, it will have access to all of the data passed in. In all cases except when tortoise and hare are equal, the function calls itself with altered values. The first half of the inner if statement handles the preprocessing that is done when power and lam are equal &#8211; multiplying the power by 2 and replacing the tortoise with the hare. The second half handles the normal processing, incrementing lam and applying the function to the hare. The final case simply returns the same tuple that it receives. 
+Note that we don't need to pass 'f' (the function passed into our brent implementation) into this function. Because this method is declared inside the brent function, it will have access to all of the data passed in. In all cases except when tortoise and hare are equal, the function calls itself with altered values. The first half of the inner if statement handles the preprocessing that is done when power and lam are equal – multiplying the power by 2 and replacing the tortoise with the hare. The second half handles the normal processing, incrementing lam and applying the function to the hare. The final case simply returns the same tuple that it receives. 
 
 This is a step in the right direction, but it still seems to have 1 branch too many. So let's take a look at what we're really trying to do with this recursion. It's not necessarily the processing of values, but the while loop itself. With a few changes we can make the method focus a bit more on what we need it to do. The most important change is to allow it to take another function as an argument.
 
@@ -119,7 +119,7 @@ let rec applyUntilEqual func (power, lam, mu, tortoise, hare) =
         applyUntilEqual func (func (power, lam, mu, tortoise, hare))
 ```
 
-This sure does look simpler, but surprisingly free of any interesting logic. As is so often the case, this is where things really get interesting. If tortoise and hare are equal, we simply return the tuple that was passed in. If they aren't, then the function calls itself with the input tuple, as transformed by the function passed in. The &#8216;func' parameter that we added can carry the logic we want to apply on each pass through our &#8216;loop'. The following snippet shows the implementation of the first bit of logic, along with the way it can be called from code:
+This sure does look simpler, but surprisingly free of any interesting logic. As is so often the case, this is where things really get interesting. If tortoise and hare are equal, we simply return the tuple that was passed in. If they aren't, then the function calls itself with the input tuple, as transformed by the function passed in. The 'func' parameter that we added can carry the logic we want to apply on each pass through our 'loop'. The following snippet shows the implementation of the first bit of logic, along with the way it can be called from code:
 
 ```fsharp
 let phaseOne (power, lam, mu, tortoise, hare) =
@@ -131,7 +131,7 @@ let phaseOne (power, lam, mu, tortoise, hare) =
 let phaseOneResult = applyUntilEqual func (<tuple containing data>)
 ```
 
-Because we don't need to check whether tortoise and hare are equal, we can write this in a single if statement. This frees us to short-circuit things a little bit, accomplishing both the pre and post processing in the (power = lam) condition, so this could save us a few passes through the function. Notice this function includes the &#8216;mu' parameter, even though it is not used yet. This is because by adding that parameter, we can use the same &#8216;loop' function for both of the main loops in the algorithm. 
+Because we don't need to check whether tortoise and hare are equal, we can write this in a single if statement. This frees us to short-circuit things a little bit, accomplishing both the pre and post processing in the (power = lam) condition, so this could save us a few passes through the function. Notice this function includes the 'mu' parameter, even though it is not used yet. This is because by adding that parameter, we can use the same 'loop' function for both of the main loops in the algorithm. 
 
 It takes the same bundle of data (even though it now only uses mu, tortoise and hare). The reason for this goes beyond being able to share the loop function, as we'll see in a second. All we have to do this time is apply the function to tortoise and hare, and increment mu. 
 
@@ -140,7 +140,7 @@ let phaseTwo (power, lam, mu, tortoise, hare) =
     (power, lam, mu + 1, f tortoise, f hare)
 ```
 
-Finally, we need to implement the loop that starts with _for i in range(lam):_ in the python code. This code really only needs to execute the function provided _(lam &#8211; 1)_ times. It's not too difficult, but slightly interesting.
+Finally, we need to implement the loop that starts with _for i in range(lam):_ in the python code. This code really only needs to execute the function provided _(lam – 1)_ times. It's not too difficult, but slightly interesting.
 
 ```fsharp
 let advanceHare (power, lam, mu, tortoise, hare) =
@@ -152,7 +152,7 @@ let advanceHare (power, lam, mu, tortoise, hare) =
     (power, lam, mu, tortoise, advance lam hare)
 ```
 
-The interesting part is the inner &#8216;advance' function. It only takes the number of times to execute and the current hare value. This allows us to take (and return) the same package of data that the other functions expect from the outer function. So, after tying up some loose ends we should have eliminated all of the mutable state. But lets look at the reason I alluded to in the last paragraph for passing the same bundle of data through all functions. 
+The interesting part is the inner 'advance' function. It only takes the number of times to execute and the current hare value. This allows us to take (and return) the same package of data that the other functions expect from the outer function. So, after tying up some loose ends we should have eliminated all of the mutable state. But lets look at the reason I alluded to in the last paragraph for passing the same bundle of data through all functions. 
 
 ### Aside: Pipeline Operators
 
@@ -170,7 +170,7 @@ let multiply x y = x * y
 let x10 x = x |> multiply 10 
 ```
 
-At least syntactically speaking, this transforms the code from the _function (arg1, arg2)_ syntax that's common in most languages to something like _arg1 |> function arg2_. You can chain these together, with the operator always receiving the output of the previous function, forming a nice clean &#8216;pipeline'. So if we wanted to get really crazy, an x100 function could be written like so: _let x100 = x |> multiply 10 |> multiply 10_. This doesn't seem that impressive with such a simple example, but it really shines when trying to compose complex functions from simple building blocks. My personal favorite use for the pipeline operator is applying a chain of functions to a lazily evaluated sequence.
+At least syntactically speaking, this transforms the code from the _function (arg1, arg2)_ syntax that's common in most languages to something like _arg1 |> function arg2_. You can chain these together, with the operator always receiving the output of the previous function, forming a nice clean 'pipeline'. So if we wanted to get really crazy, an x100 function could be written like so: _let x100 = x |> multiply 10 |> multiply 10_. This doesn't seem that impressive with such a simple example, but it really shines when trying to compose complex functions from simple building blocks. My personal favorite use for the pipeline operator is applying a chain of functions to a lazily evaluated sequence.
 
 Luckily, we can use the code we've put together to show the pipeline operator in action. Starting with a tuple containing our inputs, we can get the result we need by chaining the simple methods we've created together in order.
 
@@ -182,13 +182,13 @@ Luckily, we can use the code we've put together to show the pipeline operator in
     |> fun (_, lam, mu, _, _) -> lam, mu
 ```
 
-This is some pretty dense code, but if I've done a decent job explaining it you should be able to read it alright. Notice the code following the last pipe operator &#8211; for this one we are simply using a lambda expression to extract the two values we need from our bundle of data. This is a simple operation, but it also shows that we can apply arbitrary lambda expressions as well as defined functions using the pipeline operator. I think it reads a little better with the predefined functions, though if there wasn't any conditional logic in the short functions we have I'd probably favor using lambdas (except for the applyUntilEqual function). The original and immutable implementations are included in the attached file if you'd like to take a closer look.
+This is some pretty dense code, but if I've done a decent job explaining it you should be able to read it alright. Notice the code following the last pipe operator – for this one we are simply using a lambda expression to extract the two values we need from our bundle of data. This is a simple operation, but it also shows that we can apply arbitrary lambda expressions as well as defined functions using the pipeline operator. I think it reads a little better with the predefined functions, though if there wasn't any conditional logic in the short functions we have I'd probably favor using lambdas (except for the applyUntilEqual function). The original and immutable implementations are included in the attached file if you'd like to take a closer look.
 
-### Conclusion &#8211; Immutability Comes at a Cost
+### Conclusion – Immutability Comes at a Cost
 
 So, what did this get us? I hope that it got us closer to idiomatic F# code, though I'm not the best judge of that. It undoubtedly succeeded in breaking the dependence on mutable state to implement the algorithm. This came at a cost though. In my simple use case, looking for cycles when applying a pair of functions to 1000 numeric inputs, execution time increases by about 50%. Both implementations are quick, but the one using mutable state is noticeably quicker. This wasn't exactly a scientific test but it does appear consistent when I run on a few different machines with wildly varying specs. Because the mutable state is contained within the method I suspect that both implementations would both run in parallel without much problem.
 
-This leaves me suspecting that careful, localized use of mutable state can be valuable when attempting to improve the performance of F# code. But it's probably best to shoot for immutability first. As always I'd love to see ways to make it perform or read better &#8211; I can't shake the feeling that I missed something.
+This leaves me suspecting that careful, localized use of mutable state can be valuable when attempting to improve the performance of F# code. But it's probably best to shoot for immutability first. As always I'd love to see ways to make it perform or read better – I can't shake the feeling that I missed something.
 
  [1]: http://projecteuler.net/
  [2]: http://en.wikipedia.org/wiki/Cycle_detection

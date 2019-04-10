@@ -27,7 +27,7 @@ Take a moment and list two or three items you would like to make part of your pr
 
 ### Step 1: Make a Standard
 
-The first step is to write it down. Creating a &#8216;standard' is going to be difficult, we naturally shy away from writing these things down because writing is powerful and once it's written down we feel committed. On the other hand, we want it to get done, so that power that makes us nervous is also going to help strengthen our self-discipline and get it done.
+The first step is to write it down. Creating a 'standard' is going to be difficult, we naturally shy away from writing these things down because writing is powerful and once it's written down we feel committed. On the other hand, we want it to get done, so that power that makes us nervous is also going to help strengthen our self-discipline and get it done.
   
 Keep your standard as simple as possible. The more complex your standard is, the harder it will be to actually go out and follow it. if you later find items that need to be added, you can add them, but make do your best to keep it simple and to only add things that are actually practical (both in doing and in result). A simple standard is easier to follow and takes less time, letting you build good habits with less effort.
   
@@ -58,7 +58,7 @@ Hold Yourself Responsible
 
 To many of us it probably sounds crazy to voluntarily create a standard and make more work for ourselves, but it's the greater path of laziness. If we can convince ourselves to have the discipline to identify and execute those little tasks, it will mean fewer 3AM phone calls, fewer stress-filled outages, and fewer year-end inventories audits and other time consuming (and sometimes painful) activities. When you start looking at the number of risks and the amount of unplanned events you can avoid, suddenly the extra 10 or 20 minutes every few weeks, months, or years doesn't seem like so big a deal. But you have to do it, each and every time. Half the job is usually not going to net you half the results, so be disciplined enough to do it every time. If part of a task has to be put off due to an emergency deployment, schedule a meeting reminder to finish it later that day. If your a heavy procrastinator, like me, then remind yourself constantly than it is lazier to do that 5 minute task now then to take a 4AM call. Make it happen.
 
-## Next &#8211; Part 3
+## Next – Part 3
 
 There is never time to sit and reflect on how your job gets done, experiment to find better ways, or attend non-technical training to improve your team or processes. In fact, if only you could reduce the time you spend on such-and-such task, you might finally have the time to focus on that. Hmm, chicken and egg. 
 

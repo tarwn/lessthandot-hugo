@@ -86,7 +86,7 @@ It is not a best practice to have xp\_cmdshell enabled. As a matter of fact begi
   
 Server: Msg 15281, Level 16, State 1, Procedure xp_cmdshell, Line 1
 
-SQL Server blocked access to procedure &#8216;sys.xp\_cmdshell' of component &#8216;xp\_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;xp\_cmdshell' by using sp\_configure. For more information about enabling &#8216;xp_cmdshell', see “Surface Area Configuration” in SQL Server Books Online.
+SQL Server blocked access to procedure 'sys.xp\_cmdshell' of component 'xp\_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'xp\_cmdshell' by using sp\_configure. For more information about enabling 'xp_cmdshell', see “Surface Area Configuration” in SQL Server Books Online.
 
 To enable xp_cmdshell execute the following code
 
@@ -110,9 +110,9 @@ In SQL Server 2005 and 2008 OPENROWSET is also disabled by default, if you try t
 
 Server: Msg 15281, Level 16, State 1, Line 1
   
-SQL Server blocked access to STATEMENT &#8216;OpenRowset/OpenDatasource' of component &#8216;Ad Hoc Distributed Queries' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of &#8216;Ad Hoc Distributed Queries' by using sp_configure. For more information about enabling &#8216;Ad Hoc Distributed Queries', see “Surface Area Configuration” in SQL Server Books Online.
+SQL Server blocked access to STATEMENT 'OpenRowset/OpenDatasource' of component 'Ad Hoc Distributed Queries' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Ad Hoc Distributed Queries' by using sp_configure. For more information about enabling 'Ad Hoc Distributed Queries', see “Surface Area Configuration” in SQL Server Books Online.
 
-To enable OPENROWSET and OPENQUERY you can use the previous script but instead of &#8216;xp_cmdshell' you will use &#8216;Ad Hoc Distributed Queries'. The script to enable Ad Hoc Distributed Queries is below
+To enable OPENROWSET and OPENQUERY you can use the previous script but instead of 'xp_cmdshell' you will use 'Ad Hoc Distributed Queries'. The script to enable Ad Hoc Distributed Queries is below
 
 sql
 EXECUTE SP_CONFIGURE 'show advanced options', 1
@@ -187,11 +187,11 @@ And here is our message
   
 _Server: Msg 7399, Level 16, State 1, Line 1
   
-OLE DB provider &#8216;Microsoft.Jet.OLEDB.4.0' reported an error.
+OLE DB provider 'Microsoft.Jet.OLEDB.4.0' reported an error.
   
-[OLE/DB provider returned message: The Microsoft Jet database engine could not find the object &#8216;TestData2.txt'. Make sure the object exists and that you spell its name and the path name correctly.]
+[OLE/DB provider returned message: The Microsoft Jet database engine could not find the object 'TestData2.txt'. Make sure the object exists and that you spell its name and the path name correctly.]
   
-OLE DB error trace [OLE/DB Provider &#8216;Microsoft.Jet.OLEDB.4.0' IColumnsInfo::GetColumnsInfo returned 0x80004005: ]._
+OLE DB error trace [OLE/DB Provider 'Microsoft.Jet.OLEDB.4.0' IColumnsInfo::GetColumnsInfo returned 0x80004005: ]._
 
 Mmm, what if we create a file from within a shell command?
 
@@ -215,9 +215,9 @@ select * from TestData
 
 _Server: Msg 7357, Level 16, State 2, Line 1
   
-Could not process object &#8216;SELECT * FROM TestData2.txt'. The OLE DB provider &#8216;Microsoft.Jet.OLEDB.4.0&#8242; indicates that the object has no columns.
+Could not process object 'SELECT * FROM TestData2.txt'. The OLE DB provider 'Microsoft.Jet.OLEDB.4.0' indicates that the object has no columns.
   
-OLE DB error trace [Non-interface error: OLE DB provider unable to process object, since the object has no columnsProviderName='Microsoft.Jet.OLEDB.4.0&#8242;, Query=SELECT * FROM TestData2.txt']._
+OLE DB error trace [Non-interface error: OLE DB provider unable to process object, since the object has no columnsProviderName='Microsoft.Jet.OLEDB.4.0', Query=SELECT * FROM TestData2.txt']._
 
 As you can see since the file is an empty file JET doesn't know how to insert the data
 

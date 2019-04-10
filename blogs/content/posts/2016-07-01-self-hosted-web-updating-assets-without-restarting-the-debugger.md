@@ -64,8 +64,8 @@ The key ingredient is <a href="https://www.npmjs.com/package/gulp-watch" title="
 
 I have two tasks for gulp: 
 
-  * “less” &#8211; transpiles all *.less files in my assets folder and concatenates them into a single stylesheet.css file
-  * “watch” &#8211; watches the contents of my assets folder and either runs them through the “less” task or copies them to the bin/Debug/Assets folder
+  * “less” – transpiles all *.less files in my assets folder and concatenates them into a single stylesheet.css file
+  * “watch” – watches the contents of my assets folder and either runs them through the “less” task or copies them to the bin/Debug/Assets folder
 
 **gulpfile.json**: Configuration
 
@@ -132,7 +132,7 @@ I have two sets of files I want to handle, my LESS files and everything else.
 
 <u>Everything Else:</u> The first watch has everything except the LESS files and when a change occurs, it calls the handleChangedAssetFile method. This specifically targets only file changes, as I want to stop the debugger when I add a new file so I can remember to mark it as Content and Copy Always in the Properties pane. I also output the filename to the console as an easy way to confirm that a change has or has not been copied (it always is, but it's easy to second guess when you make a change and the new file doesn't do what you expect).
 
-<u>LESS Files:</u> The LESS file watch simply triggers the previously defined &#8216;less' task, which will transpile the LESS files again and produce a new stylesheet.css. When the updated stylesheet.css file is saved, the first watch notices the change and copies it to the bin folder.
+<u>LESS Files:</u> The LESS file watch simply triggers the previously defined 'less' task, which will transpile the LESS files again and produce a new stylesheet.css. When the updated stylesheet.css file is saved, the first watch notices the change and copies it to the bin folder.
 
 ## Using It
 

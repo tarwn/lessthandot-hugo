@@ -93,7 +93,7 @@ In the Configuration Type select, Parent package variable and then enter the nam
   <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_17.gif" alt="" title="" width="320" height="317" />
 </div>
 
-Scroll to the Package&#8211;>Variables section and then highlight Value. This is what will physically and dynamically set the Value of the variable.
+Scroll to the Package–>Variables section and then highlight Value. This is what will physically and dynamically set the Value of the variable.
 
 Once completed, you should have the following listening in the configurations. Note that ServerSourceConfig is a configuration file from the previous article.
 

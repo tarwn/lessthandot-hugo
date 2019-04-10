@@ -45,7 +45,7 @@ So, now I know that the 2008 instance is using processid 2212 and the 2008 R2 in
 
 If I look at my SQL Server log, I see the following
 
-05/12/2010 08:24:25,System Manufacturer: &#8216;Hewlett-Packard'<c> System Model: &#8216;HP Compaq 8510p'.
+05/12/2010 08:24:25,System Manufacturer: 'Hewlett-Packard'<c> System Model: 'HP Compaq 8510p'.
   
 05/12/2010 08:24:25,Server **process ID is 2184**.
   
@@ -53,7 +53,7 @@ If I look at my SQL Server log, I see the following
   
 05/12/2010 08:24:25,(c) Microsoft Corporation.
   
-05/12/2010 08:24:25,Microsoft SQL Server 2008 R2 (RTM) &#8211; 10.50.1600.1 (X64) <nl> Apr 2 2010 15:48:46 <nl> Copyright (c) Microsoft Corporation<nl> Developer Edition (64-bit) on Windows NT 6.1 <x64> (Build 7600: )
+05/12/2010 08:24:25,Microsoft SQL Server 2008 R2 (RTM) – 10.50.1600.1 (X64) <nl> Apr 2 2010 15:48:46 <nl> Copyright (c) Microsoft Corporation<nl> Developer Edition (64-bit) on Windows NT 6.1 <x64> (Build 7600: )
 
 ### 3) Use the services tab in task manager
 

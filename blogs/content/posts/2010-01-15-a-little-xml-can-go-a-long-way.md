@@ -111,7 +111,7 @@ Group By CustomerTable.Id, CustomerTable.Name, CustomFieldsTable.Id
 Order By TypeId
 For Xml Path('CustomerFields'), Type, Root('CustomFieldList')
 ```
-What I found awkward here was that nested select &#8211; it's written much like a correlated subquery, but it returns multiple rows / columns, and relies on the “For Xml” magic to to associate the resulting list with the correct outer node.
+What I found awkward here was that nested select – it's written much like a correlated subquery, but it returns multiple rows / columns, and relies on the “For Xml” magic to to associate the resulting list with the correct outer node.
 
 It took a bit of mental gymnastics to adjust to the way this feature works, but it **really** saved the day for me in this situation. The feature ended up finished on time, and an internal client that I had once thought was impossible to please was actually pleased (if only for a fleeting moment).
 
