@@ -13,6 +13,9 @@
     <br style="clear: left">
     <div class="bioSoc">
         <span class="bioSocTitle">Social Sitings</span>
+        {{ if $authorData.homepage }}
+            <a href="{{ $authorData.homepage }}" title="Homepage: {{ $authorData.homepage }}" class="bioSocLink" rel="author"><img src="/images/Home.svg" alt="Homepage"></a>
+        {{ end }}
         {{ if $authorData.twitter }}
             <a href="http://twitter.com/{{ $authorData.twitter }}" title="{{ $authorData.twitter }} at Twitter" class="bioSocLink" rel="author"><img src="/images/Twitter.svg" alt="Twitter"></a>
         {{ end }}
