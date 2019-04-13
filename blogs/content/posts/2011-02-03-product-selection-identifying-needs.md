@@ -32,13 +32,13 @@ tags:
       1: Identifying Needs
     </li>
     <li>
-      2: <a href="/index.php/ITProfessionals/ITProcesses/product-selection-requirements-and-scoring" title="Read the 2nd entry">Requirements and Scoring</a>
+      2: <a href="/index.php/itprofessionals/projectmanagement/product-selection-requirements-and-scoring" title="Read the 2nd entry">Requirements and Scoring</a>
     </li>
     <li>
-      3: <a href="/index.php/ITProfessionals/ITProcesses/product-selection-evaluation" title="Read the third entry">Evaluation</a>
+      3: <a href="/index.php/itprofessionals/projectmanagement/product-selection-evaluation" title="Read the third entry">Evaluation</a>
     </li>
     <li>
-      4: <a href="/index.php/ITProfessionals/ITProcesses/product-selection-reviewing-the-process" title="Read the 4th entry">Review</a>
+      4: <a href="/index.php/itprofessionals/projectmanagement/product-selection-reviewing-the-process" title="Read the 4th entry">Review</a>
     </li>
   </ul>
 </div>

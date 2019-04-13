@@ -28,16 +28,16 @@ tags:
   
   <ul style="margin-left: 1em; list-style-type: none; ">
     <li>
-      1: <a href="/index.php/ITProfessionals/ITProcesses/product-selection-identifying-needs" title="Read the first entry">Identifying Needs</a>
+      1: <a href="/index.php/itprofessionals/projectmanagement/product-selection-identifying-needs" title="Read the first entry">Identifying Needs</a>
     </li>
     <li>
-      2: <a href="/index.php/ITProfessionals/ITProcesses/product-selection-requirements-and-scoring" title="Read the 2nd entry">Requirements and Scoring</a>
+      2: <a href="/index.php/itprofessionals/projectmanagement/product-selection-requirements-and-scoring" title="Read the 2nd entry">Requirements and Scoring</a>
     </li>
     <li style="color: #666666; font-style: italic; font-weight: bold">
       3: Evaluation
     </li>
     <li>
-      4: <a href="/index.php/ITProfessionals/ITProcesses/product-selection-reviewing-the-process" title="Read the 4th entry">Review</a>
+      4: <a href="/index.php/itprofessionals/projectmanagement/product-selection-reviewing-the-process" title="Read the 4th entry">Review</a>
     </li>
   </ul>
 </div>
