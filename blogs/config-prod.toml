@@ -11,4 +11,4 @@ disableKinds = ["RSS"]
   category = "categories"
 
 [params]
-googleAnalytics = "xxx"
+googleAnalytics = "UA-4471405-1"
