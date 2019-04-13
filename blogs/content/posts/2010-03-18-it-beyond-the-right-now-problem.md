@@ -1,5 +1,5 @@
 ---
-title: 'IT: Beyond the 'Right Now’ Problem'
+title: 'IT: Beyond the ‘Right Now’ Problem'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-03-18T13:22:28+00:00
