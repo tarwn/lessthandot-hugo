@@ -49,7 +49,7 @@ Every week in my shop we do cross training. Someone brings in something they are
   </h3>
   
   <p>
-    The spinner control starts out just like any other control. We have a layout root control, a grid. In the layout root we add a ViewBox. The view box handles dynamic scaling so that we don't have to worry about rendering the spinner at different sizes. The view box only accepts one child though, so we need another grid inside of it. Since the ViewBox can scale to any size, we need to set a fixed size for the grid so that we can work with it. I went with 128&#215;128, you can use any size you like, the larger, the more accurate things will be.
+    The spinner control starts out just like any other control. We have a layout root control, a grid. In the layout root we add a ViewBox. The view box handles dynamic scaling so that we don't have to worry about rendering the spinner at different sizes. The view box only accepts one child though, so we need another grid inside of it. Since the ViewBox can scale to any size, we need to set a fixed size for the grid so that we can work with it. I went with 128 ×128, you can use any size you like, the larger, the more accurate things will be.
   </p>
   
   <h3>

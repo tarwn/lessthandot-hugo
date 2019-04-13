@@ -16,7 +16,7 @@ categories:
   - Server Programming
 
 ---
-For the duration of the Edinburgh Festival Fringe I'm responsible for a couple of Samsung MagicNet plasma screens which run 24/7 in the windows outside a venue. They're essentially 32&#8243; screens with a built in PC running Windows XP and a VNC server. They're pretty flexible as you can set them to open a webpage fullscreen then display just about anything.
+For the duration of the Edinburgh Festival Fringe I'm responsible for a couple of Samsung MagicNet plasma screens which run 24/7 in the windows outside a venue. They're essentially 32″ screens with a built in PC running Windows XP and a VNC server. They're pretty flexible as you can set them to open a webpage fullscreen then display just about anything.
 
 Unfortunately, they're prone to faults and I have no real way of knowing when one occurs until I attempt to VNC into (or walk passed) one of them which brings me to the purpose of this post: How to ensure your remote VNC sessions are doing what they're supposed to.
 

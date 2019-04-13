@@ -277,6 +277,6 @@ Partial Public Class ScriptMain
 End Class
 ```
 
-There are a couple of things you need to know, the XML will be generated inside a <ROOT> tag, I am stripping that out on line 23 of the code, on line 24 I am adding <?xml version=”1.0&#8243; ?> to the file. Line 26 has the location where the file will be written, right now it is C:MusicCollection.xml but you can modify that.
+There are a couple of things you need to know, the XML will be generated inside a <ROOT> tag, I am stripping that out on line 23 of the code, on line 24 I am adding <?xml version="1.0" ?> to the file. Line 26 has the location where the file will be written, right now it is C:MusicCollection.xml but you can modify that.
 
 So now we are all done with this. It is time to run this package. Run the package and you should see that file has been created.

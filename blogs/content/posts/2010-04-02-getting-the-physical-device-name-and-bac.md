@@ -98,7 +98,7 @@ msdb	2010-03-24 12:58:15.000
 Policy	2010-03-24 09:59:32.000
 Test	2010-03-24 12:43:43.000</pre>
 
-This last part is also on our wiki, you can find it here [Get last backup dates for all databases &#8206;][2]
+This last part is also on our wiki, you can find it here [Get last backup dates for all databases  ][2]
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 

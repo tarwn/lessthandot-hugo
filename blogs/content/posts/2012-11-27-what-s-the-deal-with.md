@@ -87,7 +87,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="margin-left: 35.4pt; text-align: left;">
-  <strong><em><span lang="EN-US">Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:MyExcel.xls;Extended Properties=”Excel 8.0;HDR=Yes;IMEX=1&#8243;;</span></em></strong>
+  <strong><em><span lang="EN-US">Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:MyExcel.xls;Extended Properties=”Excel 8.0;HDR=Yes;IMEX=1″;</span></em></strong>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">

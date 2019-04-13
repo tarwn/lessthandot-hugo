@@ -164,7 +164,7 @@ insert into TestNull2 values(NULL);
 
 Here is the error
   
-_SQL Error: ORA-01400: cannot insert NULL into (“SYSTEM”.”TESTNULL2&#8243;.”COL2&#8243;)
+_SQL Error: ORA-01400: cannot insert NULL into (“SYSTEM”.”TESTNULL2″.”COL2″)
   
 01400. 00000 – “cannot insert NULL into (%s)”_
 
@@ -180,7 +180,7 @@ What about a blank, what will happen now?
 insert into TestNull2 values('');
 ```
 
-_SQL Error: ORA-01400: cannot insert NULL into (“SYSTEM”.”TESTNULL2&#8243;.”COL2&#8243;)
+_SQL Error: ORA-01400: cannot insert NULL into (“SYSTEM”.”TESTNULL2″.”COL2″)
   
 01400. 00000 – “cannot insert NULL into (%s)”_
 

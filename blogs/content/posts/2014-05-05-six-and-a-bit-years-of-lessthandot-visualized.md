@@ -112,7 +112,7 @@ Copying that column into a text file gives me something like this:
 ```
 ### Run Gource
 
-I've done several runs with Gource this weekend, so I've been playing with various combinations of settings. For this video, I wanted to display one of our old LessThanDot footer logos in the bottom right of the visualization, I suppressed the progress bar from the video, and made various tweaks to the time settings to speed up (5.5 years of posts with the default settings would have been loooong). 1280&#215;720 matches YouTube's HD setting, and I tweaked the date format and color to make it stand out less.
+I've done several runs with Gource this weekend, so I've been playing with various combinations of settings. For this video, I wanted to display one of our old LessThanDot footer logos in the bottom right of the visualization, I suppressed the progress bar from the video, and made various tweaks to the time settings to speed up (5.5 years of posts with the default settings would have been loooong). 1280 ×720 matches YouTube's HD setting, and I tweaked the date format and color to make it stand out less.
 
 `gource --logo site_logo_footer.png -1280x720 --logo-offset 30x30<br />
  --hide "progress" --font-colour 454545 --seconds-per-day .25 --auto-skip-seconds 1 -o gource.ppm --path posts.log --dat<br />

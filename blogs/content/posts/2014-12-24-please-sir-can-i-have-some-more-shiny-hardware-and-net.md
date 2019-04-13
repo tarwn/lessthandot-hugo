@@ -66,7 +66,7 @@ Intel Quad Core i7 mobile processor 2.3Ghz/3.75Ghz
 
 nVidia Quadro 2000M 2GB Graphics card
 
-15.6&#8243; Dreamcolor Panel with a native resolution of 1920&#215;1080 pixels!
+15.6″ Dreamcolor Panel with a native resolution of 1920 ×1080 pixels!
 
 High quality metal chassis and outer skin with metallic brushed finish
 
@@ -147,7 +147,7 @@ This will execute the Winsat command and create an xml results file that you can
 </p>
 
 <p style="color: #000000">
-  The screen is not to everyone's taste and I found I was squinting a lot at the native resolution of 1920&#215;180 pixels on the 15.6&#8243; panel, frankly it's too high a resolution for a small panel but you cannot deny the quality of the Dreamcolor panel – one of the most crisp and brilliantly coloured panels I have used in a long time (it's actually better than my large HP monitor!).  In hindsight I should have gone for the larger 8570w notebook which has the 17&#8243; display making for easier reading however after a few adjustments of the font size and some tweaking in my favourite apps like Visual Studio I quickly became comfortable.
+  The screen is not to everyone's taste and I found I was squinting a lot at the native resolution of 1920 ×180 pixels on the 15.6″ panel, frankly it's too high a resolution for a small panel but you cannot deny the quality of the Dreamcolor panel – one of the most crisp and brilliantly coloured panels I have used in a long time (it's actually better than my large HP monitor!).  In hindsight I should have gone for the larger 8570w notebook which has the 17″ display making for easier reading however after a few adjustments of the font size and some tweaking in my favourite apps like Visual Studio I quickly became comfortable.
 </p>
 
 <p style="color: #000000">

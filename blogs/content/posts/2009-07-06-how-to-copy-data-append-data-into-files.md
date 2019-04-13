@@ -70,7 +70,7 @@ So what does all this stuff do?
 
 **-Slocalhost** tells bcp where to connect to, in this case localhost.
 
-**-T** Specifies that bcp connects to SQL Server with a trusted connection. If you want to use login credentials and you username is SQL2008 and the password = pw2008 then instead of -T you would do this -U”SQL2008&#8243; -P”pw2008&#8243;
+**-T** Specifies that bcp connects to SQL Server with a trusted connection. If you want to use login credentials and you username is SQL2008 and the password = pw2008 then instead of -T you would do this -U”SQL2008″ -P”pw2008″
 
 There are a lot more arguments available for the BCP utility, I recommend checking all the available arguments out here: http://msdn.microsoft.com/en-us/library/ms162802.aspx
 

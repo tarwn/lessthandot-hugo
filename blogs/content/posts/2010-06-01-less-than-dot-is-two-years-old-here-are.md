@@ -756,49 +756,49 @@ The pages with the hacks, tips and tricks are still number one
 
 <ol start='1'>
   <li>
-    <a href="http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a> &#8206;(33,646 views)
+    <a href="http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a>  (33,646 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a> &#8206;(27,922 views)
+    <a href="http://wiki.ltd.local/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a>  (27,922 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Access_Master_Page_controls_from_the_Content_Page" title="ASP.NET: Access Master Page controls from the Content Page">ASP.NET: Access Master Page controls from the Content Page</a> &#8206;(10,841 views)
+    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Access_Master_Page_controls_from_the_Content_Page" title="ASP.NET: Access Master Page controls from the Content Page">ASP.NET: Access Master Page controls from the Content Page</a>  (10,841 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/5_ways_to_return_rows_from_one_table_not_in_another_table" title="5 ways to return rows from one table not in another table">5 ways to return rows from one table not in another table</a> &#8206;(9,259 views)
+    <a href="http://wiki.ltd.local/index.php/5_ways_to_return_rows_from_one_table_not_in_another_table" title="5 ways to return rows from one table not in another table">5 ways to return rows from one table not in another table</a>  (9,259 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Add_a_total_row_to_a_GridView" title="ASP.NET: Add a total row to a GridView">ASP.NET: Add a total row to a GridView</a> &#8206;(8,159 views)
+    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Add_a_total_row_to_a_GridView" title="ASP.NET: Add a total row to a GridView">ASP.NET: Add a total row to a GridView</a>  (8,159 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Convert_HTML_tables_to_a_DataSet" title="ASP.NET: Convert HTML tables to a DataSet">ASP.NET: Convert HTML tables to a DataSet</a> &#8206;(7,918 views)
+    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Convert_HTML_tables_to_a_DataSet" title="ASP.NET: Convert HTML tables to a DataSet">ASP.NET: Convert HTML tables to a DataSet</a>  (7,918 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Insert_data_into_SQL_Server" title="ASP.NET: Insert data into SQL Server">ASP.NET: Insert data into SQL Server</a> &#8206;(7,893 views)
+    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Insert_data_into_SQL_Server" title="ASP.NET: Insert data into SQL Server">ASP.NET: Insert data into SQL Server</a>  (7,893 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/Concatenate_Values_From_Multiple_Rows_Into_One_Column_Ordered" title="Concatenate Values From Multiple Rows Into One Column Ordered">Concatenate Values From Multiple Rows Into One Column Ordered</a> &#8206;(7,242 views)
+    <a href="http://wiki.ltd.local/index.php/Concatenate_Values_From_Multiple_Rows_Into_One_Column_Ordered" title="Concatenate Values From Multiple Rows Into One Column Ordered">Concatenate Values From Multiple Rows Into One Column Ordered</a>  (7,242 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/Row_To_Column_%28PIVOT%29" title="Row To Column (PIVOT)">Row To Column (PIVOT)</a> &#8206;(6,466 views)
+    <a href="http://wiki.ltd.local/index.php/Row_To_Column_%28PIVOT%29" title="Row To Column (PIVOT)">Row To Column (PIVOT)</a>  (6,466 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Strip_HTML_tags_from_a_string" title="ASP.NET: Strip HTML tags from a string">ASP.NET: Strip HTML tags from a string</a> &#8206;(6,156 views)
+    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Strip_HTML_tags_from_a_string" title="ASP.NET: Strip HTML tags from a string">ASP.NET: Strip HTML tags from a string</a>  (6,156 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Drawing_images_and_bar_charts_with_System.Drawing" title="ASP.NET: Drawing images and bar charts with System.Drawing">ASP.NET: Drawing images and bar charts with System.Drawing</a> &#8206;(6,049 views)
+    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Drawing_images_and_bar_charts_with_System.Drawing" title="ASP.NET: Drawing images and bar charts with System.Drawing">ASP.NET: Drawing images and bar charts with System.Drawing</a>  (6,049 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Read_and_display_a_text_file" title="ASP.NET: Read and display a text file">ASP.NET: Read and display a text file</a> &#8206;(6,004 views)
+    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Read_and_display_a_text_file" title="ASP.NET: Read and display a text file">ASP.NET: Read and display a text file</a>  (6,004 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Add_paging_to_a_repeater" title="ASP.NET: Add paging to a repeater">ASP.NET: Add paging to a repeater</a> &#8206;(5,706 views)
+    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Add_paging_to_a_repeater" title="ASP.NET: Add paging to a repeater">ASP.NET: Add paging to a repeater</a>  (5,706 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/Case_Sensitive_Search" title="Case Sensitive Search">Case Sensitive Search</a> &#8206;(5,700 views)
+    <a href="http://wiki.ltd.local/index.php/Case_Sensitive_Search" title="Case Sensitive Search">Case Sensitive Search</a>  (5,700 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/Column_To_Row_%28UNPIVOT%29" title="Column To Row (UNPIVOT)">Column To Row (UNPIVOT)</a> &#8206;(5,567 views)
+    <a href="http://wiki.ltd.local/index.php/Column_To_Row_%28UNPIVOT%29" title="Column To Row (UNPIVOT)">Column To Row (UNPIVOT)</a>  (5,567 views)
   </li>
 </ol>
 

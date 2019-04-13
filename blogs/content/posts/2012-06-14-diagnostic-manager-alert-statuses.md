@@ -28,7 +28,7 @@ So how do you know if something critical just happened that you really should lo
 
 This is where I use the different alert statuses and have defined what each status means.
 
-Critical (Red) status means I want our support center who is watching the alerts page 24&#215;7 to call me anytime of the day or night about it. I keep things like job failures, disk space that is really low and custom alerts about backups being really behind for example in this spot. When a alert goes to critical and it is not something that I need to know about immediately, I will re-adjust to only go as far as a warning level.
+Critical (Red) status means I want our support center who is watching the alerts page 24 ×7 to call me anytime of the day or night about it. I keep things like job failures, disk space that is really low and custom alerts about backups being really behind for example in this spot. When a alert goes to critical and it is not something that I need to know about immediately, I will re-adjust to only go as far as a warning level.
 
 Warning (Yellow) status means that this is something that I want to know about and could be become a serious issue, but I don't need a 3AM wake up call about it. For me it's almost as important as a critical alert and is something that I will look at, but I won't drop everything right now for it.
 

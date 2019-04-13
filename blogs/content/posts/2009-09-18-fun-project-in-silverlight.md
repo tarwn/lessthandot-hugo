@@ -25,9 +25,9 @@ After about 2 hours of work (a lunch and some free time), I came up this:
 
 It's not nearly as refined as theirs, but it has all the same concepts. 
 
-The imagery is actually pretty simple. I have three PNGs I created in photoshop. The color layer and two cloud layers. The color layer was made by putting bold colors in vertical stripes on an 800&#215;800 canvas, then applying a horizontal motion blur and cropping it down to a circle. 
+The imagery is actually pretty simple. I have three PNGs I created in photoshop. The color layer and two cloud layers. The color layer was made by putting bold colors in vertical stripes on an 800 ×800 canvas, then applying a horizontal motion blur and cropping it down to a circle. 
 
-The clouds started out as a cloud filter on a 2400&#215;2400 canvas. I used the magic wand to select the darkest pixel with set to non-continuous, anti-aliased, and a 120 tolerance. I used the Select -> Feather option to feather the selection out 100 pixels then deleted. Then I re-sized the canvas down to 800&#215;800 and cropped it into a circle. Then I repeated this process to create a second cloud layer.
+The clouds started out as a cloud filter on a 2400 ×2400 canvas. I used the magic wand to select the darkest pixel with set to non-continuous, anti-aliased, and a 120 tolerance. I used the Select -> Feather option to feather the selection out 100 pixels then deleted. Then I re-sized the canvas down to 800 ×800 and cropped it into a circle. Then I repeated this process to create a second cloud layer.
 
 From there I hopped into Blend and tossed a couple of rectangles onto a grid. I set them to stretch alignment and auto height/width. Turned off the stroke and set the fill brush to the images I had just created. I then created an animation. In it I applied a rotate transform to both of the cloud rectangles. One set to 360, the other set to -360, and the duration set to 60 seconds with repeat set to Forever.
 

@@ -95,7 +95,7 @@ Minimizing the pages that were available at the smaller resolutions not only kep
 
 I started the redesign with the [Html5 boilerplate][5] to give me a consistent start place and minimize how much time I had to deal with browser specific layout tweaks. I did tweak the media query resolutions quite a bit as I built out the pages, but part of this was my lack of designer skills and not having a clear enough picture of what I wanted the site to look like. 
 
-Currently a mobile device without javascript will load about 83KB of content (obviously this changes based on what is on the front-page of the site). With Javascript this goes up to 160KB for mobile and 800&#215;600 resolutions and 200KB for the largest screen size. I think the smaller resolutions could be reduced further by restricting the inner sidebar content and small icon loading, and the whole site could do with some minification and gzip. 
+Currently a mobile device without javascript will load about 83KB of content (obviously this changes based on what is on the front-page of the site). With Javascript this goes up to 160KB for mobile and 800 ×600 resolutions and 200KB for the largest screen size. I think the smaller resolutions could be reduced further by restricting the inner sidebar content and small icon loading, and the whole site could do with some minification and gzip. 
 
 Overall I am very happy with it. The size is usable at every resolution I try and this method doesn't rely on the client-side user agent. Additional functionality would be easy to add, as I could use feature detection to add functionality only if the end user's browser supported it, regardless of the user agent string. I'm very happy with the result.
 

@@ -539,34 +539,34 @@ Now we go on to the content on this site.
 
 <ol start='1'>
   <li>
-    <a href="/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a> &#8206;(19,784 views)
+    <a href="/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a>  (19,784 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a> &#8206;(19,405 views)
+    <a href="/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a>  (19,405 views)
   </li>
   <li>
-    <a href="/index.php/Main_Page" title="Main Page">Main Page</a> &#8206;(18,391 views)
+    <a href="/index.php/Main_Page" title="Main Page">Main Page</a>  (18,391 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET:_Access_Master_Page_controls_from_the_Content_Page" title="ASP.NET: Access Master Page controls from the Content Page">ASP.NET: Access Master Page controls from the Content Page</a> &#8206;(6,170 views)
+    <a href="/index.php/ASP.NET:_Access_Master_Page_controls_from_the_Content_Page" title="ASP.NET: Access Master Page controls from the Content Page">ASP.NET: Access Master Page controls from the Content Page</a>  (6,170 views)
   </li>
   <li>
-    <a href="/index.php/5_ways_to_return_rows_from_one_table_not_in_another_table" title="5 ways to return rows from one table not in another table">5 ways to return rows from one table not in another table</a> &#8206;(5,757 views)
+    <a href="/index.php/5_ways_to_return_rows_from_one_table_not_in_another_table" title="5 ways to return rows from one table not in another table">5 ways to return rows from one table not in another table</a>  (5,757 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET:_Add_a_total_row_to_a_GridView" title="ASP.NET: Add a total row to a GridView">ASP.NET: Add a total row to a GridView</a> &#8206;(4,804 views)
+    <a href="/index.php/ASP.NET:_Add_a_total_row_to_a_GridView" title="ASP.NET: Add a total row to a GridView">ASP.NET: Add a total row to a GridView</a>  (4,804 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET:_Convert_HTML_tables_to_a_DataSet" title="ASP.NET: Convert HTML tables to a DataSet">ASP.NET: Convert HTML tables to a DataSet</a> &#8206;(4,548 views)
+    <a href="/index.php/ASP.NET:_Convert_HTML_tables_to_a_DataSet" title="ASP.NET: Convert HTML tables to a DataSet">ASP.NET: Convert HTML tables to a DataSet</a>  (4,548 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET:_Insert_data_into_SQL_Server" title="ASP.NET: Insert data into SQL Server">ASP.NET: Insert data into SQL Server</a> &#8206;(4,243 views)
+    <a href="/index.php/ASP.NET:_Insert_data_into_SQL_Server" title="ASP.NET: Insert data into SQL Server">ASP.NET: Insert data into SQL Server</a>  (4,243 views)
   </li>
   <li>
-    <a href="/index.php/Concatenate_Values_From_Multiple_Rows_Into_One_Column_Ordered" title="Concatenate Values From Multiple Rows Into One Column Ordered">Concatenate Values From Multiple Rows Into One Column Ordered</a> &#8206;(4,150 views)
+    <a href="/index.php/Concatenate_Values_From_Multiple_Rows_Into_One_Column_Ordered" title="Concatenate Values From Multiple Rows Into One Column Ordered">Concatenate Values From Multiple Rows Into One Column Ordered</a>  (4,150 views)
   </li>
   <li>
-    <a href="/index.php/Case_Sensitive_Search" title="Case Sensitive Search">Case Sensitive Search</a> &#8206;(3,508 views)
+    <a href="/index.php/Case_Sensitive_Search" title="Case Sensitive Search">Case Sensitive Search</a>  (3,508 views)
   </li>
 </ol>
 

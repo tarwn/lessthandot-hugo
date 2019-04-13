@@ -1432,49 +1432,49 @@ The pages with the hacks, tips and tricks are still number two behind the main w
 
 <ol start='1'>
   <li>
-    <a href="/index.php/Main_Page" title="Main Page">Main Page</a> &#8206;(557,488 views)
+    <a href="/index.php/Main_Page" title="Main Page">Main Page</a>  (557,488 views)
   </li>
   <li>
-    <a href="/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a> &#8206;(44,500 views)
+    <a href="/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a>  (44,500 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a> &#8206;(33,312 views)
+    <a href="/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a>  (33,312 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET:_Access_Master_Page_controls_from_the_Content_Page" title="ASP.NET: Access Master Page controls from the Content Page">ASP.NET: Access Master Page controls from the Content Page</a> &#8206;(14,358 views)
+    <a href="/index.php/ASP.NET:_Access_Master_Page_controls_from_the_Content_Page" title="ASP.NET: Access Master Page controls from the Content Page">ASP.NET: Access Master Page controls from the Content Page</a>  (14,358 views)
   </li>
   <li>
-    <a href="/index.php/5_ways_to_return_rows_from_one_table_not_in_another_table" title="5 ways to return rows from one table not in another table">5 ways to return rows from one table not in another table</a> &#8206;(13,906 views)
+    <a href="/index.php/5_ways_to_return_rows_from_one_table_not_in_another_table" title="5 ways to return rows from one table not in another table">5 ways to return rows from one table not in another table</a>  (13,906 views)
   </li>
   <li>
-    <a href="/index.php/Kill_All_Active_Connections_To_A_Database" title="Kill All Active Connections To A Database">Kill All Active Connections To A Database</a> &#8206;(11,919 views)
+    <a href="/index.php/Kill_All_Active_Connections_To_A_Database" title="Kill All Active Connections To A Database">Kill All Active Connections To A Database</a>  (11,919 views)
   </li>
   <li>
-    <a href="/index.php/Row_To_Column_%28PIVOT%29" title="Row To Column (PIVOT)">Row To Column (PIVOT)</a> &#8206;(10,816 views)
+    <a href="/index.php/Row_To_Column_%28PIVOT%29" title="Row To Column (PIVOT)">Row To Column (PIVOT)</a>  (10,816 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET:_Convert_HTML_tables_to_a_DataSet" title="ASP.NET: Convert HTML tables to a DataSet">ASP.NET: Convert HTML tables to a DataSet</a> &#8206;(10,680 views)
+    <a href="/index.php/ASP.NET:_Convert_HTML_tables_to_a_DataSet" title="ASP.NET: Convert HTML tables to a DataSet">ASP.NET: Convert HTML tables to a DataSet</a>  (10,680 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET:_Add_a_total_row_to_a_GridView" title="ASP.NET: Add a total row to a GridView">ASP.NET: Add a total row to a GridView</a> &#8206;(10,484 views)
+    <a href="/index.php/ASP.NET:_Add_a_total_row_to_a_GridView" title="ASP.NET: Add a total row to a GridView">ASP.NET: Add a total row to a GridView</a>  (10,484 views)
   </li>
   <li>
-    <a href="/index.php/Concatenate_Values_From_Multiple_Rows_Into_One_Column_Ordered" title="Concatenate Values From Multiple Rows Into One Column Ordered">Concatenate Values From Multiple Rows Into One Column Ordered</a> &#8206;(10,366 views)
+    <a href="/index.php/Concatenate_Values_From_Multiple_Rows_Into_One_Column_Ordered" title="Concatenate Values From Multiple Rows Into One Column Ordered">Concatenate Values From Multiple Rows Into One Column Ordered</a>  (10,366 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET:_Insert_data_into_SQL_Server" title="ASP.NET: Insert data into SQL Server">ASP.NET: Insert data into SQL Server</a> &#8206;(10,170 views)
+    <a href="/index.php/ASP.NET:_Insert_data_into_SQL_Server" title="ASP.NET: Insert data into SQL Server">ASP.NET: Insert data into SQL Server</a>  (10,170 views)
   </li>
   <li>
-    <a href="/index.php/Use_the_sys.dm_db_index_usage_stats_dmv_to_check_if_indexes_are_being_used" title="Use the sys.dm db index usage stats dmv to check if indexes are being used">Use the sys.dm db index usage stats dmv to check if indexes are being used</a> &#8206;(9,038 views)
+    <a href="/index.php/Use_the_sys.dm_db_index_usage_stats_dmv_to_check_if_indexes_are_being_used" title="Use the sys.dm db index usage stats dmv to check if indexes are being used">Use the sys.dm db index usage stats dmv to check if indexes are being used</a>  (9,038 views)
   </li>
   <li>
-    <a href="/index.php/ASP.NET:_Strip_HTML_tags_from_a_string" title="ASP.NET: Strip HTML tags from a string">ASP.NET: Strip HTML tags from a string</a> &#8206;(8,865 views)
+    <a href="/index.php/ASP.NET:_Strip_HTML_tags_from_a_string" title="ASP.NET: Strip HTML tags from a string">ASP.NET: Strip HTML tags from a string</a>  (8,865 views)
   </li>
   <li>
-    <a href="/index.php/Column_To_Row_%28UNPIVOT%29" title="Column To Row (UNPIVOT)">Column To Row (UNPIVOT)</a> &#8206;(8,664 views)
+    <a href="/index.php/Column_To_Row_%28UNPIVOT%29" title="Column To Row (UNPIVOT)">Column To Row (UNPIVOT)</a>  (8,664 views)
   </li>
   <li>
-    <a href="/index.php/SQL_Server_Admin_Hacks" title="SQL Server Admin Hacks">SQL Server Admin Hacks</a> &#8206;(8,489 views)
+    <a href="/index.php/SQL_Server_Admin_Hacks" title="SQL Server Admin Hacks">SQL Server Admin Hacks</a>  (8,489 views)
   </li>
 </ol>
 
