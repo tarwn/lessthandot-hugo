@@ -6,6 +6,8 @@ date: 2008-12-10T15:09:00+00:00
 ID: 241
 excerpt: 'If you are active in the SQL Server newsgroups and forums as I am, you will notice that the same questions keep popping up all the time. I picked ten of them which I see daily. Since this became a pretty long blogpost I have linked all the questions bel&hellip;'
 url: /index.php/datamgmt/datadesign/the-ten-most-asked-sql-server-questions-1/
+aliases:
+  - /index.php/datamgmt/datadesign/the-ten-most-asked-sql-server-questions--1/
 views:
   - 126983
 rp4wp_auto_linked:

@@ -1,5 +1,5 @@
 ---
-title: AngularJS vs Knockout – Final Thoughts (9 of 9)
+title: AngularJS vs Knockout - Final Thoughts (9 of 9)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-10-21T13:38:00+00:00
@@ -29,7 +29,7 @@ Knockout and AngularJS are attempting to solve two different problems. One is an
 
 This post has my final thoughts, but the previous 8 dive into individual comparisons and have more specific comparisons and thoughts along the way. If you have not done so, I urge you to at least skim through those as well (and not just for the extra hit counts).
 
-## The Winner Is…
+## The Winner Is...
 
 The winner is both of these frameworks. I'll get opinionated in a moment, but I want to point out that neither of these frameworks is the wrong decision. They are both very useful and the decision to use one over the other is not going to be because one is innately poorer than the other, it's going to be because one fits the style and specific guidelines for a project better than the other. Saying that one is better than the other in all scenarios is just laziness.
 
