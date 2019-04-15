@@ -17,7 +17,7 @@ categories:
 ---
 We all have perfectly normalized tables, with perfectly scrubbed data, right? I wish! Sometimes we are stuck with dirty data in legacy applications. What's worse is that we are sometimes expected to do interesting things with dirty data. In this blog, I will show you how to extract a number from a varchar column that contains letters and numbers.
 
-First, let’s take a look at what some of that data might look like:
+First, let's take a look at what some of that data might look like:
 
 <span style="color:blue;">2.1 miles<br /> 4 miles<br /> Approximately 6.5 miles<br /> 3.9<br /> 7.2miles</span>
 
@@ -49,7 +49,7 @@ Next step is to get the left part of the substring, which will return just the n
 
 Now, I will admit that this is a very ugly formula to use. However, there is a high probability that it is re-usable. Because of this, it would make a nice little function to have in our SQL Arsenal.
 
-sql
+```sql
 Create Function dbo.GetNumbers(@Data VarChar(8000))
 Returns VarChar(8000)
 AS
@@ -59,11 +59,12 @@ Begin
              PatIndex('%[^0-9.-]%', SubString(@Data, PatIndex('%[0-9.-]%', @Data), 8000) + 'X')-1)
 End
 ```
+
 Now, we can use this function wherever we need it. As a final step, let's test it on our sample data. Before doing this, let's think about other data that could potentially cause us problems. We should test an empty string, NULL, a string without any numbers, and a string that contains multiple numbers separated by characters.
-  
+
+```sql
 Declare @Temp Table(Data VarChar(60))
 
-sql
 Insert Into @Temp Values('2.1 miles')
 Insert Into @Temp Values('4 miles')
 Insert Into @Temp Values('Approximately 6.5 miles')
