@@ -1,3 +1,22 @@
 <div id="rtside">
-    
+    <div class="content-sidebar-section">
+        <h2>Authors</h2>
+        <ul class="author-list dimmed">
+            <li><a href="/author">All</a> ({{ (where .Pages "Section" "posts") | len }})</li>
+            {{ $authors := .Site.Data._authors }}
+            {{ range $key, $value := .Site.Taxonomies.author }}
+                {{ $authorData := index $authors $key}}
+                <li><a href="/author/{{ $key }}">{{ $authorData.name }}</a> ({{ $value | len }})</li>
+            {{ end }}
+        </ul>
+    </div>
+    <div class="content-sidebar-section">
+        <h2>Top Categories</h2>
+        <ul class="dimmed">
+            <li><a href="/categories">All</a> ({{ (where .Pages "Section" "posts") | len }})</li>
+        {{ range first 15 .Site.Taxonomies.categories.ByCount }}
+            <li><a href="/categories/{{ .Name }}">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+        {{ end }}
+        </ul>
+    </div>
 </div>
