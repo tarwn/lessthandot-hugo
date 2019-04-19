@@ -25,7 +25,7 @@ So let's get started. First we need our starting point. DB1, User1 associated to
 
 I'm doing everything in SQL Server 2008 but this will work in 2005 also
 
-sql
+```sql
 USE master
 Go
 CREATE DATABASE [db1] ON PRIMARY 
@@ -49,7 +49,7 @@ Schemas are limited to that though. Permissions are only controlled when schemas
 
 In saying that let's create our second database DB2
 
-sql
+```sql
 USE master
 Go
 CREATE DATABASE [db2] ON PRIMARY 
@@ -60,7 +60,7 @@ GO
 ```
 We now need to create our role, schema and user in DB2. The key here is to tie it all together. To get it out of the way create the database user under the login User1. 
 
-sql
+```sql
 USE [db2]
 GO
 CREATE USER [User1] FOR LOGIN [User1] WITH DEFAULT_SCHEMA=[dbo]
@@ -68,13 +68,13 @@ GO
 ```
 Next we need to create our role. We don't do anything with security yet other than create the role. Advanced security options come later and out of scope here. Our entire objective here is to control what User1 does in DB2.
 
-sql
+```sql
 CREATE ROLE [Controller2_Role] AUTHORIZATION [dbo]
 GO
 ```
 Now we need to tie it all together. Create the schema. Instead of authorizing the database user to the schema we authorize the role to the schema. This is the key that is overlooked often in the landscape.
 
-sql
+```sql
 CREATE SCHEMA [controller2] AUTHORIZATION [Controller2_Role]
 GO
 
@@ -86,12 +86,12 @@ Let's try it out. Execute the GRANT statement as a sysadmin. Disconnect from the
   
 Execute this create table statement from DB1 to create a table in DB2
 
-sql
+```sql
 CREATE TABLE db2.Controller2.tbl1 (col1 int)
 ```
 Now to test security by trying this statement
 
-sql
+```sql
 CREATE TABLE db2.dbo.tbl1 (col1 int)
 ```
 The first create table statement worked and created a table under the schema Controller2. However as we tested out that was the limit and User1 was not able to create a table under dbo schema.

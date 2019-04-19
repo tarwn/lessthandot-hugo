@@ -37,7 +37,7 @@ Let's take a look at how this all works.
 
 I will first create this database with two stored procedures, one is encrypted, the other one is not
 
-sql
+```sql
 CREATE DATABASE bla
 GO
 
@@ -63,7 +63,7 @@ As you can see there is a lock on the encrypted stored procedure
 
 Now, let's create a new user with data reader and writer permissions
 
-sql
+```sql
 USE [master]
 GO
 CREATE LOGIN [test] WITH PASSWORD=N'test', DEFAULT_DATABASE=[bla], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
@@ -90,7 +90,7 @@ In order to see the procedures, the user has to have execute permissions.
   
 If I give execute permissions to the stored procedures for the user like this, the user should see them.
 
-sql
+```sql
 GRANT EXECUTE ON prTestEncrypted TO test
 GRANT EXECUTE ON prTest TO test
 ```
@@ -100,7 +100,7 @@ The user will now see both procs with a lock on them
 
 If I grant view definition to the user....
 
-sql
+```sql
 GRANT VIEW DEFINITION ON prTestEncrypted TO test
 GRANT VIEW DEFINITION ON prTest TO test
 ```

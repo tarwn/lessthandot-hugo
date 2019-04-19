@@ -19,7 +19,7 @@ Presented below is a hard coded list of undocumented stored procedures. By their
 
 **How to detect this problem:**
 
-sql
+```sql
 Declare @Temp Table(ProcedureName VarChar(50))
 
 Insert Into @Temp Values('sp_MStablespace')

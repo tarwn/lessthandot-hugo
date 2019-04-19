@@ -27,7 +27,7 @@ I have a bunch of linked servers to SQL Servers and also to Sybase ASE Servers O
 
 Let's take a look. Open up SSMS and connect to your local instance. Now create a linked server named TestLinkedServer which points to the local server. The code to do that is below.
 
-sql
+```sql
 EXEC master.dbo.SP_ADDLINKEDSERVER @server = N'TestLinkedServer',
                                    @srvproduct=N'',
                                    @datasrc='(local)',
@@ -36,7 +36,7 @@ EXEC master.dbo.SP_ADDLINKEDSERVER @server = N'TestLinkedServer',
 
 Now we can do a small test, run the following code
 
-sql
+```sql
 SELECT * FROM OPENQUERY(TestLinkedServer,'select count(*) from tempdb..sysobjects')
 ```
 
@@ -44,7 +44,7 @@ That should return an integer.
 
 If we try something more interesting like a division by zero, will it get trapped?
 
-sql
+```sql
 BEGIN TRY	
 	 SELECT * FROM OPENQUERY(TestLinkedServer,'select 1/0')
 END TRY
@@ -67,7 +67,7 @@ Yes, that worked just as expected.
   
 Now what do you think will happen if we change the table name from sysobjects to sysobjects2? Let's run it and see
 
-sql
+```sql
 BEGIN TRY	
 	 SELECT * FROM OPENQUERY(TestLinkedServer,'select count(*) from tempdb..sysobjects2')
 END TRY
@@ -94,7 +94,7 @@ Ouch it blew up on us and never made it to the print statement.
 
 How about if we use TestLinkedServer2 instead of TestLinkedServer?
 
-sql
+```sql
 BEGIN TRY	
 	 SELECT * FROM OPENQUERY(TestLinkedServer2,'select count(*) from tempdb..sysobjects')
 END TRY
@@ -113,7 +113,7 @@ Could not find server 'TestLinkedServer2' in sys.servers. Verify that the correc
 
 Same problem, blows up and never makes it to the print statement. What if we take the last two examples and wrap them inside an exec statement?
 
-sql
+```sql
 BEGIN TRY	
 	 exec( 'SELECT * FROM OPENQUERY(TestLinkedServer,''select count(*) from tempdb..sysobjects2'')')
 END TRY
@@ -136,7 +136,7 @@ TEST_
 
 That caught the exception and TEST was printed
 
-sql
+```sql
 BEGIN TRY	
 	 exec( 'SELECT * FROM OPENQUERY(TestLinkedServer2,''select count(*) from tempdb..sysobjects'')')
 END TRY

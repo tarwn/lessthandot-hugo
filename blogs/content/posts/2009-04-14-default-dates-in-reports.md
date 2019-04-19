@@ -17,7 +17,7 @@ For reports that requires start and end dates as parameters, typically the defau
   
 To do this, create a new dataset. Paste the below query 
 
-sql
+```sql
 Declare @joindate datetime
 select @joindate = max(joindate)  from employees
 select cast(convert (varchar(10),dateadd(dd,-(day(@joindate)-1),@joindate),101) as datetime) as startdate,  cast(convert(varchar(10),dateadd(dd,-day(dateadd(mm,1,@joindate)),dateadd(mm,1,@joindate)),101) as datetime) as enddate

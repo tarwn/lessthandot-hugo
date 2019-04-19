@@ -27,7 +27,7 @@ I recently encountered a curious issue with a query. The query itself wasn't exa
 
 The query looked something like this:
 
-sql
+```sql
 WITH CTE_Contracts AS
 (
 	SELECT
@@ -47,7 +47,7 @@ JOIN dateDim		d ON	d.[Date]	BETWEEN c.ContractFrom AND c.ContractTo
 ```
 The query is a bit more complex, but you get the idea. On the test server, the query took 1 minute and 24 seconds to return about 90,000 rows. That's a tad slow if you ask me. I didn't see anything wrong with the query (and indexes wouldn't help), so I just blamed it on the server and on the standard edition of SQL Server. That was until I came across a very similar query. That query did about the same thing, but it also fetched data from another table and appended it to the first result set with a UNION. Something like this:
 
-sql
+```sql
 WITH CTE_Contracts AS
 (
 	SELECT
@@ -86,7 +86,7 @@ The nested loops now gives a warning that there is no join predicate. This resul
 
 The question is why does SQL Server change behavior? Well, the second query has a UNION operator in the inner query. This means that SQL Server has to compare the two result sets which each other, so the date columns have to be calculated directly in the inner query. Knowing this, we can easily optimize the first query by adding a “dummy UNION”:
 
-sql
+```sql
 WITH CTE_Contracts AS
 (
 	SELECT

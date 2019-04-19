@@ -25,7 +25,7 @@ The EXECUTE permission was denied on the object 'SysObjectsCount', database 'tes
 
 Let's take a look at how to give permissions because if you do the following
 
-sql
+```sql
 GRANT EXECUTE ON SysObjectsCount TO TestLogin
 ```
 
@@ -39,7 +39,7 @@ Let's fix this, I will show you some code so that you can reproduce this
 
 First create the following login
 
-sql
+```sql
 USE [master]
 GO
 CREATE LOGIN [TestLogin] WITH PASSWORD=N'test', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
@@ -48,14 +48,14 @@ GO
 
 Now create the following database
 
-sql
+```sql
 CREATE DATABASE testTVP
 GO
 ```
 
 Create a new user in the database that we just created and give the user db\_datareader and db\_datawriter roles
 
-sql
+```sql
 USE testTVP
 GO
 
@@ -72,14 +72,14 @@ GO
 ```
 Now create the following type
 
-sql
+```sql
 CREATE TYPE SysObjectsCount AS TABLE(quantity INT, xtype CHAR(2))
 GO
 ```
 
 Now run the following piece of code
 
-sql
+```sql
 DECLARE @mySystableCount AS SysObjectsCount
  
 INSERT @mySystableCount
@@ -93,7 +93,7 @@ That runs fine right? Open another connection but this time login as TestLogin
 
 Try to run that code again
 
-sql
+```sql
 DECLARE @mySystableCount AS SysObjectsCount
  
 INSERT @mySystableCount
@@ -110,13 +110,13 @@ The EXECUTE permission was denied on the object 'SysObjectsCount', database 'tes
 
 In order to give the permissions to testLogin, you need to execute the following code, yes the **::** is correct.
 
-sql
+```sql
 GRANT EXECUTE ON TYPE::SysObjectsCount to TestLogin
 ```
 
 That reminds me of how you would use fn_helpcollations()
 
-sql
+```sql
 SELECT * FROM ::fn_helpcollations()
 ```
 
@@ -126,13 +126,13 @@ _GRANT EXECUTE ON TYPE SysObjectsCount to TestLogin_
 
 Anyway, execute this
 
-sql
+```sql
 GRANT EXECUTE ON TYPE::SysObjectsCount to TestLogin
 ```
 
 Now you should be able to run this code connected as TestLogin
 
-sql
+```sql
 DECLARE @mySystableCount AS SysObjectsCount
  
 INSERT @mySystableCount

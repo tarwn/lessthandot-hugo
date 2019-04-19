@@ -20,20 +20,20 @@ tags:
 ---
 You want to quickly find out what the recovery model is for your database but you don't want to start clicking and right-clicking in SSMS/Enterprise Manager to get that information. This is what you can do, you can use databasepropertyex to get that info. Replace 'msdb' with your database name
 
-sql
+```sql
 select databasepropertyex('msdb','Recovery') 
 ```
 
 What if you want it for all databases in one shot? No problem here is how, this will work on SQL Server version 2000
 
-sql
+```sql
 SELECT name,DATABASEPROPERTYEX(name,'Recovery') 
  from sysdatabases
 ```
 
 For SQL Server 2005 and up, you should use the following command
 
-sql
+```sql
 select name,recovery_model_desc
 from sys.databases
 ```

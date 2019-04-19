@@ -17,7 +17,7 @@ categories:
 ---
 I was doing some research on my SQL Servers and wanted to know just how much disk space an instance's database were taking up. Since the databases on this instance are across a couple of different arrays and backups and other stuff exist on the server, I figured i'd write some t-sql to figure out this question. Here's what I wrote:
 
-sql
+```sql
 SELECT SUM(SIZE*8)/1024.0/1024.0 
 FROM master.sys.sysaltfiles
 ```

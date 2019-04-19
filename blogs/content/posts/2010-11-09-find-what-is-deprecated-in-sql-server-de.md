@@ -26,7 +26,7 @@ With every version of SQL Server come warnings about features/code that is depre
 
 If you run the following query on SQL Server Denali CTP 1
 
-sql
+```sql
 select * from sys.dm_os_performance_counters
 where object_name like '%deprecated%'
 ```

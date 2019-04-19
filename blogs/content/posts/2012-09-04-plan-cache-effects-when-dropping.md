@@ -32,7 +32,7 @@ Let's look at one example and follow through with the entire process of how SQL 
 
 Using the script in listing 1.1, create a table named, CustTable and insert some test data into it.
 
-sql
+```sql
 CREATE TABLE [dbo].[CustTable](
 	[CustID] [int] IDENTITY(1,1) NOT NULL,
 	[CustName] [varchar](150) NULL,
@@ -57,7 +57,7 @@ At this point, with AUTO\_STATS on, checking for existing statistics on the Cust
 
  
 
-sql
+```sql
 SELECT COUNT(*),CustName,BusRegionID 
 FROM CustTable  
 WHERE SalesQuotaID > 1
@@ -70,7 +70,7 @@ _Listing 1.2_
 
 We should see a result of three statistics created.  One for each custname, busregionid and salesquotaid.
 
-sql
+```sql
 SELECT * FROM sys.stats WHERE object_id = OBJECT_ID('dbo.CustTable')
 ```
 
@@ -83,7 +83,7 @@ _Listing 1.3_
 
 For SQL Server 2012, turn trace flag 8666 so we can examine the statistics being used by the plans in the cache.
 
-sql
+```sql
 DBCC TRACEON(8666)
 GO
 ```
@@ -94,7 +94,7 @@ _Listing 1.4_
 
 Once trace flag 8666 is enabled, we can dig deep into dm\_exec\_cached\_plans and dm\_exec\_query\_plan while using XMLNAMESPACES to reference the field, wszStatName.  The plan from the query we ran earlier in listing 1.2 should be in the cache.  This can be verified by running the following query that uses the wszStatName Field Name to examine the statistics the plans referenced.
 
-sql
+```sql
 ;WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/showplan' as showplan)
 SELECT qt.text AS SQLCommand,
       qp.query_plan,
@@ -119,7 +119,7 @@ As we can see, the three statistics are shown in the results for the plan that w
 
 Now that both statistics and a valid plan have been cached, drop the CustName column on the CustTable table.
 
-sql
+```sql
 ALTER TABLE CustTable
 DROP COLUMN CustName
 ```
@@ -138,7 +138,7 @@ Notice the statistic, \_WA\_Sys\_00000002\_02FC7413 is no longer referenced and 
 
 In order to remove a distinct plan from cache, FREEPROCCACHE can be used by passing in the plan\_handle as a parameter.  To determine all cached plans that reference a particular column, the DMVs dm\_exec\_query\_stats and dm\_exec\_query_plan with XMLNAMESPACES can be used in a manner similar to how we identified the statistics referenced by a specific plan.
 
-sql
+```sql
 ;WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/showplan' as showplan)
 SELECT cp.plan_handle
 FROM sys.dm_exec_query_stats AS cp (NOLOCK)
@@ -153,7 +153,7 @@ _Listing 1.7_
 
 Listing 1.7 will return all plan handles that reference the column CustName.  We can take advantage of the ability to identify those plan handles and combine it with dynamic SQL to then  iterate through each plan handle returned in order to execute DBCC FREEPROCCACHE, which allows us to fully automate the removal of these plans.
 
-sql
+```sql
 ;WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/showplan' as showplan)
 SELECT cp.plan_handle
         ,ROW_NUMBER() OVER (ORDER BY cp.plan_handle) AS ROWID

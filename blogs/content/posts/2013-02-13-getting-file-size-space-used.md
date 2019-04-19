@@ -25,7 +25,7 @@ Sometimes you want to quickly see how many files a database has, how much space 
 
 The sizes in these files are stored in 8k pages, in order to get the size in MB you need to divide by 128. If something is 131072 8K pages and you divide it by 128 you will get 1024
 
-sql
+```sql
 SELECT 131072/128.0
 ```
 
@@ -33,7 +33,7 @@ That query gives you 1024
 
 For SQL Server 2000 and up you can use this query
 
-sql
+```sql
 SELECT
 	a.FILEID AS file_id,
 	CONVERT(DECIMAL(12,2),ROUND(a.size/128.000,2)) AS [file_size_mb],
@@ -47,7 +47,7 @@ FROM
 
 For SQL Server 2005 and up you can use the following query
 
-sql
+```sql
 SELECT
 	a.FILEID AS file_id,
 	CONVERT(DECIMAL(12,2),ROUND(a.size/128.000,2)) AS [file_size_mb],
@@ -63,7 +63,7 @@ The only difference between the two queries is that the top query uses the syste
 
 You can also use the sys.database_files catalog view from SQL Server 2005 onward. Here is what the query looks like, it is mostly the same except for some column names
 
-sql
+```sql
 SELECT
 	a.file_id ,
 	CONVERT(DECIMAL(12,2),ROUND(a.size/128.000,2)) AS [file_size_mb],

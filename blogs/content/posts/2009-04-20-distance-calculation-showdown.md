@@ -24,7 +24,7 @@ A while back George, Denis and I did a series of posts on calculating distance b
 
 At the time I promised to run some tests. I had an idea how it would turn out at that point, but wanted to make my testing a bit more thorough. So, I've got the three functions that were created from following along with those blog entries. I then created a new stored proc for each method. For example (this is the TSQL version):
 
-sql
+```sql
 CREATE proc [dbo].[ClosestZips_TSQL] (@ZipCode char(5), @Quantity int)
 as
 

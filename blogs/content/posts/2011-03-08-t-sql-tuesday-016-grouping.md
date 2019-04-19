@@ -42,7 +42,7 @@ First we need a table of symbols (some people will call them tickers). This tabl
   
 Here is the table
 
-sql
+```sql
 CREATE TABLE Symbols (
        SymbolID INT NOT NULL PRIMARY KEY,
        Symbol VARCHAR(20) NOT NULL)
@@ -50,7 +50,7 @@ CREATE TABLE Symbols (
 
 We will insert these 4 symbols
 
-sql
+```sql
 INSERT Symbols VALUES(1,'ABC')
 INSERT Symbols VALUES(2,'DEF')
 INSERT Symbols VALUES(3,'MNO')
@@ -59,14 +59,14 @@ INSERT Symbols VALUES(4,'XYZ')
 
 Next up is the creation of the table of numbers, this will facilitate the creation of the data later on.
 
-sql
+```sql
 CREATE TABLE Numbers (number INT NOT NULL  PRIMARY KEY)
 GO
 ```
 
 This will populate the table with 90000 rows.
 
-sql
+```sql
 INSERT Numbers
 SELECT TOP 90000 ROW_NUMBER() OVER(ORDER BY s1.id )
 FROM sysobjects s1,sysobjects s2,sysobjects s3
@@ -74,14 +74,14 @@ FROM sysobjects s1,sysobjects s2,sysobjects s3
 
 Next up is a table that will hold some time information
 
-sql
+```sql
 CREATE TABLE TempTickTime ( TickTime DATETIME NOT NULL)
 GO
 ```
 
 This will populate that table with 30 second intervals between 2011-02-28 09:30:30.000 and 2011-03-31 15:30:00.000 only when it is between 9:30 AM and 4 PM
 
-sql
+```sql
 DECLARE @StartTime DATETIME = '20110228 09:30:00'
 INSERT TempTickTime
 SELECT DATEADD(s,number * 30,@StartTime)
@@ -95,7 +95,7 @@ From the 4 tickers we have, two will trade Monday through Friday and two will tr
 
 Create this table and populate it as follows
 
-sql
+```sql
 CREATE TABLE TickData (
        SymbolID INT NOT NULL,
        TickTime DATETIME NOT NULL,
@@ -128,7 +128,7 @@ We are done with intraday data, next up is end of day
 
 First create this table
 
-sql
+```sql
 CREATE TABLE EODData (
        SymbolID INT NOT NULL,
        SomeDate DATETIME NOT NULL,
@@ -138,7 +138,7 @@ CREATE TABLE EODData (
 
 In the query below we are grabbing the max time per day for a SymbolID and the associated price for that time. We are in essence grouping by SymbolId and Date, since we are ordering by TickTime descending and we are only grabbing where the ROW value is 1, we will get the latest value for a day.
 
-sql
+```sql
 ;WITH CTE AS(SELECT *,
 ROW_NUMBER() OVER (PARTITION BY SymbolId,CONVERT(DATE,TickTime) ORDER BY TickTime DESC) AS ROW
 FROM TickData)
@@ -151,7 +151,7 @@ ORDER BY SymbolID,CONVERT(DATE,TickTime)
 
 Here is another way of doing the insert by grouping by SymbolId and converting the TickTime to a date and grabbing the max TickTime for that, with this derived table we join back to the TickData table and do our inserts.
 
-sql
+```sql
 --INSERT EODData
 SELECT t.SymbolId,CONVERT(DATE,TickTime),TickPrice,0
 FROM TickData t
@@ -165,7 +165,7 @@ and t.TickTime =  x.MaxTime
 
 Here is where we do some grouping, in order to grab the last possible value for a week, we need to group by SymbolID, year, month and the week number.
 
-sql
+```sql
 SELECT SymbolId,MAX(SomeDate) as MaxDate
 FROM EODData
 GROUP BY SymbolId,YEAR(SomeDate), MONTH(SomeDate),DATEPART(wk,SomeDate)
@@ -412,7 +412,7 @@ That query produces the following output, as you can see it has the latest value
 
 Here is an example of how to join the grouping query to the table so that we can get all the details for the row, we will use this as the basis for our update later on
 
-sql
+```sql
 SELECT e.* from EODData e
 join (
        SELECT SymbolId,MAX(SomeDate) as MaxDate
@@ -424,7 +424,7 @@ and e.SymbolId =x.SymbolId
 
 And here is how we update the IsEndOfWeek column with the value 1 for the rows that fall on the end of the week
 
-sql
+```sql
 UPDATE  e
 SET e.IsEndOfWeek = 1
 FROM EODData e
@@ -440,7 +440,7 @@ AND e.SymbolId =x.SymbolId
 
 If we chart 1,3 or 6 months we will use daily values
 
-sql
+```sql
 SELECT *
 FROM EODData
 WHERE SymbolId = 1
@@ -449,7 +449,7 @@ ORDER BY SomeDate
 
 If we chart anything over 6 months we want to grab weekly values, the query for that is now really simple
 
-sql
+```sql
 SELECT *
 FROM EODData
 WHERE SymbolId = 1
@@ -463,7 +463,7 @@ If we want data for a 1 day chart then we are going to grab in 1 minute interval
 
 There is going to be a lot going on in the following code snippet so I will try to explain it in the comments
 
-sql
+```sql
 DECLARE @StartDate DATETIME = '2011-03-01 09:30:00.000'
 DECLARE @TimeSpan INT = 5
 -- 1  will return 2011-03-31 00:00:00.000

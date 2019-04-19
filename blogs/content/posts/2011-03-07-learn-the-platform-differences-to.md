@@ -40,20 +40,20 @@ Let's take a look
 
 If I have this table
 
-sql
+```sql
 CREATE TABLE Test(SomeColumn NVARCHAR(MAX), ID INT, SomeDate DATETIME)
 GO
 ```
 
 I add 1 row
 
-sql
+```sql
 INSERT Test VALUES(REPLICATE('T',200),1,GETDATE())
 ```
 
 Now I want to create this index
 
-sql
+```sql
 CREATE INDEX ix_test ON Test(ID,SomeColumn)
 ```
 
@@ -65,20 +65,20 @@ Here is the error that is raised
 
 Now, let's change the column to nvarchar(200). You can do this by using the ALTER TABLE...ALTER COLUMN syntax. Here is what it looks like for this table
 
-sql
+```sql
 ALTER TABLE Test ALTER COLUMN SomeColumn NVARCHAR(200)
 GO
 ```
 
 Now we have no problem creating this index
 
-sql
+```sql
 CREATE INDEX ix_test ON Test(ID,SomeColumn)
 ```
 
 You can verify that the select works
 
-sql
+```sql
 SELECT * FROM Test
 ```
 
@@ -86,13 +86,13 @@ Now, let's drop the table and take a look at what happens when the length of the
   
 Drop the table
 
-sql
+```sql
 DROP TABLE test
 ```
 
 create the table again with one row, this time we have 300 bytes in the column
 
-sql
+```sql
 CREATE TABLE Test(SomeColumn NVARCHAR(MAX), ID INT, SomeDate DATETIME)
 GO
 
@@ -101,7 +101,7 @@ INSERT Test VALUES(REPLICATE('T',300),1,GETDATE())
 
 Now when we try to make in NVARCHAR(200)
 
-sql
+```sql
 ALTER TABLE Test ALTER COLUMN SomeColumn NVARCHAR(200)
 GO
 ```

@@ -47,7 +47,7 @@ Select Stuff('lower case', 7, 1, 'C')
 
 Notice how the 7th character (the lower case c) is replaced with an upper case C.
 
-sql
+```sql
 Create Function dbo.Proper(@Data VarChar(8000))
 Returns VarChar(8000)
 As

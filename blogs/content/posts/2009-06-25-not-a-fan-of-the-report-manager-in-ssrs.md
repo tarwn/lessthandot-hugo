@@ -25,7 +25,7 @@ If you're are using SSRS and in a high reporting environment like most are, then
 
 To run this procedure I recommend first looking at it to see what is does. You should always follow this guideline anytime you try to use objects like this. Follow the train all the way through to the end result set. An example of a really big catch on why you should do this can be seen in the CreateSubscription procedure. In order to gather the records required to insert the SID's for the person creating the subscription, the procedure GetUserIDBySid is called given the authority type of 1 being sent. If you do not accurately gather your SID before calling the CreatSubscription, you will essentially force the GetUserIDBySid to insert another row for your SUSER\_NAME value. That will essentially break down the integrity sense you will now have duplicates of your account listed in the Users table. So for this issue you should follow back to the Users table and see that the SID is stored as a varbinary(85) and you can gather that based on your SUSER\_NAME value as such
 
-sql
+```sql
 Set @my_usersid = (Select [SID] From ReportServer.dbo.Users Where UserName = suser_name())
 ```
 Use this SID the modify and create user value.
@@ -48,12 +48,12 @@ You can then pass to this function a basic datetime value while only needing to 
 
 as such...
 
-sql
+```sql
 Set @time_send = (Select dbo.DateTimeTimeZoneOffset(Cast('2009-06-25 08:00:00' as datetime)))
 ```
 So putting this all together you can come up with a script similar to the following. This tested will create a subscription for each day of the week to be sent out at 8:00 AM
 
-sql
+```sql
 Declare @me nvarchar(260)
 Declare @now datetime
 Declare @time_send varchar(35)

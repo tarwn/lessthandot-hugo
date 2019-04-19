@@ -32,7 +32,7 @@ Now let's take a look at some code to see what can be done after a bad delete
 
 First create a test database
 
-sql
+```sql
 USE master
 GO
  
@@ -46,7 +46,7 @@ GO
 
 Now create a table and populate it with some data
 
-sql
+```sql
 USE test
 GO
  
@@ -62,7 +62,7 @@ CROSS JOIN sysobjects s2
 
 Now it is time to create your snapshot
 
-sql
+```sql
 USE master
 GO
  
@@ -75,14 +75,14 @@ GO
 
 If you run this, you will see that both the test database and the snapshot database table have the same number of rows
 
-sql
+```sql
 SELECT COUNT(*) FROM TestSnapshot..TestTable
 SELECT COUNT(*) FROM Test..TestTable
 ```
 
 A database snapshot is read only and you cannot delete data, try it out.
 
-sql
+```sql
 USE TestSnapshot
 GO
  
@@ -97,7 +97,7 @@ _
   
 Now let's delete all the data from the table in the test database
 
-sql
+```sql
 USE Test
 GO
  
@@ -106,14 +106,14 @@ DELETE  TestTable
 
 Just to verify, grab the count from the table
 
-sql
+```sql
 SELECT  COUNT(*)
 FROM    TestTable
 ```
 
 So the table is empty, but you can still get all the data back by inserting into the table from the database snapshot
 
-sql
+```sql
 INSERT  TestTable
 SELECT  *
 FROM    TestSnapshot..TestTable
@@ -121,7 +121,7 @@ FROM    TestSnapshot..TestTable
 
 And now both tables have the same number of rows again
 
-sql
+```sql
 SELECT  COUNT(*)
 FROM    TestSnapshot..TestTable
 SELECT  COUNT(*)
@@ -134,7 +134,7 @@ If you data gets updated frequently then this won't work either, the table in qu
 
 To drop the snapshot, you just use a regular DROP DATABASE command
 
-sql
+```sql
 DROP DATABASE TestSnapshot 
 ```
 

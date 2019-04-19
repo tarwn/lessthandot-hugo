@@ -27,7 +27,7 @@ We should now be using the catalog view sys.database_files. Here, I'll show you 
 
 Here are the columns returned when querying sysfiles. 
 
-sql
+```sql
 USE AdventureWorks2008R2;
 GO
 
@@ -41,7 +41,7 @@ GO
 
 Moving on, here is the query of sys.sysfiles. 
 
-sql
+```sql
 USE AdventureWorks2008R2;
 GO
 
@@ -56,7 +56,7 @@ This query's result is the same as the original virtual table.
 
 Now, the new hotness, sys.database_files. 
 
-sql
+```sql
 USE AdventureWorks2008R2;
 GO
 
@@ -81,7 +81,7 @@ Let's look at a couple of useful queries using this new view.
 
 A query to determine file size (with a little help from Bob Pusateri ([twitter][3] | [blog][4])) is: 
 
-sql
+```sql
 SELECT fg.data_space_id AS FGID,
    (f.file_id) AS FileCount,
    ROUND(CAST((f.size) AS FLOAT)/128,2) AS Reserved_MB,
@@ -93,7 +93,7 @@ FROM sys.filegroups fg
 
 Another useful query, especially as it related to what I was doing, is to determine what filegroup a file is on. 
 
-sql
+```sql
 SELECT FG.name as FilegroupName, F.file_id, F.name as [FileName] 
 FROM sys.database_files F 
 	INNER JOIN sys.filegroups FG ON FG.data_space_id = F.data_space_id;

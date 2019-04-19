@@ -23,7 +23,7 @@ tags:
 ---
 Sometimes you want to quickly see the percentage of log spaced that each database is using on your server. In SQL Server 2005 and 2008 you can use the sys.dm\_os\_performance\_counters dynamic management view to find out this information. The query below will list all database and the percentage of log spaced used. The cntr\_value column will have the percent of the log file that is being used and instance_name will be the database name.
 
-sql
+```sql
 select instance_name,cntr_value from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Databases'   
 and counter_name = 'Percent Log Used' 
@@ -46,7 +46,7 @@ Notice that I filtered out the total with this clause _and instance_name <> '_To
 
 Now let's take a look at another query. What if I want to know the size in KB for each log size and also for all of them combined? Here is the query for that.
 
-sql
+```sql
 select instance_name,cntr_value from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Databases'   
 and counter_name = 'Log File(s) Size (KB)'   
@@ -72,7 +72,7 @@ As you can see _Total is the first thing listed and it is actually a sum of all 
 
 Since I showed you how to do the log files, here is a way how to show the size of all the data files. here is the query for the data files
 
-sql
+```sql
 select instance_name,cntr_value from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Databases'   
 and counter_name = 'Data File(s) Size (KB)'   

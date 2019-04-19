@@ -23,7 +23,7 @@ tags:
 ---
 One of the best ways to improve your skills is by helping other people in forums and newsgroups. I was doing just that tonight and I stumbled on this piece of code here: http://stackoverflow.com/questions/3622685/transfer-column-data-from-one-database-to-another
 
-sql
+```sql
 update [DB1].[dbo].[Table1]
 set [DB1].[dbo].[Table1].[Column1] = [DB2].[dbo].[Table1].[Column1]
 from [DB1].[dbo].[Table1] db1Alias, [DB2].[dbo].[Table1] db2Alias
@@ -43,7 +43,7 @@ The problem is that aliases are defined for the tables but not used in the colum
 
 Let's take a closer look with some code that you can actually run. First create these two tables
 
-sql
+```sql
 use tempdb
 go
 
@@ -58,7 +58,7 @@ go
 
 Now when you try to run this piece of code, which is the same as the code at the beginning of the post except for the object names, you will get an error.
 
-sql
+```sql
 update tempdb.dbo.BlaTest
 set tempdb.dbo.BlaTest.id =tempdb.dbo.BlaTest2.id
 from tempdb.dbo.BlaTest b
@@ -77,7 +77,7 @@ So what can be done?
 
 Here is my preferred way of running this query, use the table aliases in the update and the columns
 
-sql
+```sql
 update b
 set b.id =a.id
 from tempdb.dbo.BlaTest b
@@ -86,7 +86,7 @@ JOIN tempdb.dbo.BlaTest2 a on b.id =a.id
 
 But you can also write the query like this by using the alias only for the column that is not being updated.
 
-sql
+```sql
 update tempdb.dbo.BlaTest
 set tempdb.dbo.BlaTest.id =a.id
 from tempdb.dbo.BlaTest b

@@ -97,7 +97,7 @@ For demonstration purposes, I will create a table variable and populate it with 
   
 As I stated earlier, SQL Server has a built-in function for calculating the average. The Avg function will ignore rows with NULL. So the average of 1, 2, NULL is 1.5 because the sum of the data is 3 and there are 2 rows that are not NULL. 3/2 = 1.5.
 
-sql
+```sql
 Declare @Temp Table(Id Int Identity(1,1), Data Decimal(10,5))
 
 Insert into @Temp Values(1)
@@ -147,7 +147,7 @@ To get the first value in the last 50 percent of rows...
 
 Putting it all together:
 
-sql
+```sql
 Declare @Temp Table(Id Int Identity(1,1), Data Decimal(10,5))
 
 Insert into @Temp Values(1)
@@ -187,7 +187,7 @@ Select ((
   
 To Calculate the mode with sql server, we first need to get the counts for each value in the set. Then, we need to filter the data so that values equal to the count are returned.
 
-sql
+```sql
 Declare @Temp Table(Id Int Identity(1,1), Data Decimal(10,5))
 
 Insert into @Temp Values(1)

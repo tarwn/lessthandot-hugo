@@ -39,7 +39,7 @@ So to put it all together, you can use a CTE (Common Table Expression) combined 
 
 Here is all the code that is needed
 
-sql
+```sql
 ;WITH cte AS(SELECT RIGHT('000000' + CONVERT(VARCHAR(6),run_duration),6 ) AS FormattedTime,* FROM msdb..sysjobhistory
 WHERE run_duration >=0)
  

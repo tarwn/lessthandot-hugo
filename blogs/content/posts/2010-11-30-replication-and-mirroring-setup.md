@@ -183,7 +183,7 @@ Once the mirror setup is completed, replication must be configured further to en
 
 To set the agents, use the sp\_add\_agent_parameter procedure
 
-sql
+```sql
 exec sp_add_agent_parameter @profile_id = 1, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'ONPNT_XPSR2Distributor'
 exec sp_add_agent_parameter @profile_id = 2, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'ONPNT_XPSR2Distributor'
 exec sp_add_agent_parameter @profile_id = 3, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'ONPNT_XPSR2Distributor'
@@ -204,7 +204,7 @@ The profile ID can be obtained by querying the [MSAgent_Profiles][2] table in th
 
 Since profile IDs may be different on different installations, verify your profile ID by check this table. Once the parameters are set, use the [MSagent_parameters][3] table to verify by checking the parameter_name column for the value -PublisherFailoverPartner.
 
-sql
+```sql
 SELECT * FROM MSagent_parameters WHERE parameter_name = '-PublisherFailoverPartner'
 ```
 
@@ -218,13 +218,13 @@ Testing is everything when you have a more complex HA setup, such as mirroring w
 
 At this point mirroring and replication is functioning together. The principal and mirror are acting in a synchronized state and replication is acting based off the distributor. To test this setup, test mirroring by altering a record in AdventureWorks on the principal.
 
-sql
+```sql
 SELECT AddressLine1 FROM person.Address WHERE AddressID = 1
 ```
 
 The statement above results in, “1970 Napa Ct”. Update the AddressLine1 value to, “1970 Napa Court” and ensure the changes flow to the subscriber of the publication.
 
-sql
+```sql
 UPDATE Person.Address SET AddressLine1 = '1970 Napa Court'
 WHERE AddressID = 1
 ```
@@ -257,14 +257,14 @@ To test the failover, run the same test as we performed earlier but in reverse o
 
 In this case, update the same value back to the Ct over Court value.
 
-sql
+```sql
 UPDATE Person.Address SET AddressLine1 = '1970 Napa Ct'
 WHERE AddressID = 1
 ```
 
 Check on the subscriber now that the changes flowed as they should have
 
-sql
+```sql
 SELECT AddressLine1 FROM person.Address WHERE AddressID = 1
 ```
 

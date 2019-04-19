@@ -24,7 +24,7 @@ Just to be clear here, I am NOT suggesting that every string column should have 
 
 **How to detect this problem:**
 
-sql
+```sql
 Select  C.Table_Name, Column_Name
 From    Information_Schema.Columns C
         Inner Join Information_Schema.Tables T

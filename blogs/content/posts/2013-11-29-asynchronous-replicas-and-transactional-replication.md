@@ -50,7 +50,7 @@ To show this further, the following test can be performed.
 
 With the availability group mentioned previously and the publication, the following code is started in a new query window.  This code will start updating random address rows that are part of replication.
 
-sql
+```sql
 DECLARE @LOOP INT = 1
 
 WHILE @LOOP <= 100000
@@ -78,7 +78,7 @@ Now to test a failure event of the asynchronous node for DR, it is taken offline
 
 The two options we have are to bring the asynchronous replica online and let it catch up or, turn on trace flag 1448 and essentially ignore the state of the replica.  We'll turn trace flag 1448 on.
 
-sql
+```sql
 DBCC TRACEON(1448,-1)
 ```
 

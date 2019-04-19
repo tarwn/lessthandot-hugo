@@ -35,7 +35,7 @@ What SQL Server does is that it will pick up the settings from the server settin
 
 To check where model has its path, you can run the following query
 
-sql
+```sql
 select * from master..sysaltfiles
 where db_name(dbid) ='model'
 go
@@ -49,14 +49,14 @@ C:Program FilesMicrosoft SQL ServerMSSQL11.MSSQLSERVERMSSQLDATAmodellog.ldf
 
 If I now create a new database like this
 
-sql
+```sql
 create database TestMeNow
 GO
 ```
 
 And if I now check for the location
 
-sql
+```sql
 select * from master..sysaltfiles
 where db_name(dbid) ='TestMeNow'
 go
@@ -70,7 +70,7 @@ C:Program FilesMicrosoft SQL ServerMSSQL11.MSSQLSERVERMSSQLDATATestMeNow_log.ldf
 
 Now, let's change it at the server level, this code below will make the default for data files on D:Data and log files on D:Log
 
-sql
+```sql
 USE [master]
 GO
 EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'SoftwareMicrosoftMSSQLServerMSSQLServer', N'DefaultData', REG_SZ, N'D:Data'
@@ -87,14 +87,14 @@ Now restart the SQL Server instance for the changes to take effect
   
 Create a new database
 
-sql
+```sql
 create database TestMeNow3
 GO
 ```
 
 Now if you check, you will see that it placed the files in the location we have specified in the server settings
 
-sql
+```sql
 select * from master..sysaltfiles
 where db_name(dbid) ='TestMeNow3'
 go

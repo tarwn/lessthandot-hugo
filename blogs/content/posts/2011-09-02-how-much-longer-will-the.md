@@ -30,7 +30,7 @@ Of course we all know that the RESTORE DATABASE command has the STATS n option, 
 
 Fear not, here is a query that will tell you exactly how long
 
-sql
+```sql
 SELECT	
     d.PERCENT_COMPLETE AS [%Complete],
     d.TOTAL_ELAPSED_TIME/60000 AS ElapsedTimeMin,

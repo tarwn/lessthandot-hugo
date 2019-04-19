@@ -35,7 +35,7 @@ After reviewing the queries Glenn has provided, 32 distinct tables can be formed
 
 **_— SQL Server 2008 R2 Diagnostic Information Queries_**** __**
 
-sql
+```sql
 -- SQL Server 2008 R2 Diagnostic Information Queries
 -- Glenn Berry 
 -- April 2013
@@ -61,7 +61,7 @@ For example:  For the SQL Server 2008 R2 diagnostic information queries, the ha
 
 Other considerations while creating these initial tables are the instance name, collection date and, if applicable, the database name.  Without these pieces of information, a baseline cannot be formed.  Make  these small adjustments so the three key pieces of information are captured.  Using @@SERVERNAME, GETDATE(), and DB\_NAME(DB\_ID()), they can be obtained quite easily.
 
-sql
+```sql
 -- Hardware information from SQL Server 2008 and 2008 R2  (Query 8) (Hardware Info)
 -- (Cannot distinguish between HT and multi-core)
 SELECT cpu_count AS [Logical CPU Count], hyperthread_ratio AS [Hyperthread Ratio],
@@ -114,7 +114,7 @@ This DFT is nothing more than a direct source to destination
 
 Until we get to the database specific queries, the DFT creation has been fairly simple.  With database specific queries, however, we need to obtain a listing of the databases that should be evaluated and have data collected.  This can be done by using the Recordset Destination populated by a source adapter based on the following query.
 
-sql
+```sql
 select name from sys.databases where name not in ('master','tempdb','model','msdb') and state_desc = 'ONLINE' and user_access_desc = 'MULTI_USER'
 ```
 

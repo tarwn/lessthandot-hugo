@@ -27,7 +27,7 @@ You can easily check by running this from a command prompt _netsh int tcp show g
 
 Or if you want to use SSMS, you can use _xp_cmdshell_ 
 
-sql
+```sql
 xp_cmdshell 'netsh int tcp show global'
 ```
 

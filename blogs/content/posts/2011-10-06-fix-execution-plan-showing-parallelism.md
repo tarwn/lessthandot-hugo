@@ -27,7 +27,7 @@ The question in the beginning of this blog is fictitious but let's pretend it is
 
 Load up some data into a table.  Remember, Parallelism may only show on a table larger than normal, so load a good deal of data into the table.
 
-sql
+```sql
 CREATE TABLE LotsOhColumns 
 (
 	id int identity(1,1) primary key
@@ -53,7 +53,7 @@ GO 3000000
 ```
 Now let's run a basic query on the table
 
-sql
+```sql
 SELECT [fk_id]
       ,[col1]
       ,[col2]
@@ -72,7 +72,7 @@ Looking at this plan, tons of issues come up.  The first one that we insist on 
 
 Looking at the query we need a nonclustered index on fk_id and include on the resulting columns.  This should prove to be useful given the results and predicate.
 
-sql
+```sql
 CREATE INDEX IDX_COVERING_ASC ON LotsOhColumns 
 (
    [fk_id]

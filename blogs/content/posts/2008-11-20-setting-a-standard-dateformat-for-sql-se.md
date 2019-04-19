@@ -17,7 +17,7 @@ categories:
 ---
 Each SQL Server has a default language. You can see what the default language is by executing these commands (in a query window).
 
-sql
+```sql
 sp_configure 'default language'
 ```
 
@@ -25,7 +25,7 @@ This will tell you what the default language is (sort of). It actually returns a
 
 You can then run...
 
-sql
+```sql
 sp_helplanguage
 ```
 
@@ -41,7 +41,7 @@ The good news is that you can change the default language for a user so that sub
 
 You can set the default language for a user by issueing the following command.
 
-sql
+```sql
 sp_defaultlanguage @loginame = 'LoginName', @language = 'Language'
 ```
 
@@ -49,7 +49,7 @@ After running this command, you will need to logout and back in to the database 
 
 There is an alternative method, but it only works for the current session. You can set the language in your query (much the same way the Set DateFormat works). When you disconnect from the database, the language setting is NOT saved. Set Language differs from Set DateFormat regarding weekday names and month names, for example:
 
-sql
+```sql
 set language 'us_english'
 
 Select Convert(DateTime, '4/6/2006'), 

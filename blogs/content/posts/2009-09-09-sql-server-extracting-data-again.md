@@ -28,7 +28,7 @@ Please note that I am NOT claiming that this code is the fastest, or the most ef
 
 The following code will remove non-alpha characters.
 
-sql
+```sql
 CREATE Function [dbo].[RemoveNonAlphaCharacters](@Temp VarChar(1000))
 Returns VarChar(1000)
 AS
@@ -44,7 +44,7 @@ The following code will remove non-alpha numeric characters.
   
 <span class="MT_red"><strong>** Note:</strong></span> The floowing code has changed recently based on a comment from one of the readers Andrei. Originally I had a search pattern of <span class="MT_red">[^a-z^0-9]</span>, which was incorrect. This search pattern incorrectly allowed the ^ to stay in the data when it should have been removed. The correct search pattern should be: <span class="MT_red">[^a-z0-9]</span>
 
-sql
+```sql
 CREATE Function [dbo].[RemoveNonAlphaNumericCharacters](@Temp VarChar(1000))
 Returns VarChar(1000)
 AS
@@ -58,7 +58,7 @@ End
 ```
 The following code will remove non-numeric characters.
 
-sql
+```sql
 CREATE Function [dbo].[RemoveNonNumericCharacters](@Temp VarChar(1000))
 Returns VarChar(1000)
 AS
@@ -84,7 +84,7 @@ For example, if you wanted to remove certain punctuation characters, but leave e
 
 You can use the following code to test this functionality. It creates a table variable with some sample data. The query at the end returns the original data, and another column showing the output from the three functions presented here.
 
-sql
+```sql
 Declare @Test Table(Data VarChar(100))
 
 Insert Into @Test Values('(111) 222-3333')

@@ -24,7 +24,7 @@ I had to do some performance testing for an upcoming [MSSQLTips][1] article and 
 
 First of all we have to log start and end dates of the package to a table so we can easily calculate the duration a package took to finish. This can probably be calculated from the SSIS catalog as well, but I was a bit too <del>busy</del> lazy to find out how to do this. Anyway, the logging table is created using the following statement:
 
-sql
+```sql
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[PackageLogging]') AND type in (N'U'))
 BEGIN
 	CREATE TABLE [dbo].[PackageLogging](
@@ -56,7 +56,7 @@ The RunID parameter is important to link those two Execute SQL Tasks together. A
 
 Logging is the first step, now we have to run the package of course. I created a stored procedure that allows me to easily start a package in the SSIS catalog.
 
-sql
+```sql
 CREATE PROC [dbo].[RunPackage]
 	(@RunID			INT
 	,@PackageName	VARCHAR(50)
@@ -98,7 +98,7 @@ The proc passes the @RunID parameter to the package, as well as other usual susp
 
 Using this stored procedure, it is easy to run a package multiple times in a row using a WHILE loop.
 
-sql
+```sql
 DECLARE @RunID INT = 1;
 
 WHILE (@RunID <= 10)
@@ -112,7 +112,7 @@ The package is run synchronously, so that multiple instances do not run at the s
 
 Using the following query, it is easy to build a nice chart in SSRS:
 
-sql
+```sql
 SELECT
 	 [RunID]
 	,[PackageName]

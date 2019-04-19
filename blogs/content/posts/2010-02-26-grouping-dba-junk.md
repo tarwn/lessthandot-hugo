@@ -46,7 +46,7 @@ We can go much farther than that knowing schemas are available to us by grouping
 
 Let's say we have two databases on an instance named, ERP and WMS. In our DBA database we can create schemas to match the databases such as WMS\_OBJ and ERP\_OBJ. Now when we create procedures, function, views and so on we can put them into the schema that represents the database they refer to.
 
-sql
+```sql
 CREATE PROCEDURE WMS_OBJ.GRABAWIDGET
 AS
 SELECT WIDGETS FROM WMS.WIDGET_TABLE
@@ -54,7 +54,7 @@ SELECT WIDGETS FROM WMS.WIDGET_TABLE
 
 Without much thought we can quickly find all our objects 
 
-sql
+```sql
 SELECT * FROM INFORMATION_SCHEMA.ROUTINES 
 WHERE SPECIFIC_SCHEMA = 'WMS_OBJ'
 ```

@@ -32,7 +32,7 @@ Anyway, after some searching it came out the MDS stored procedure _udpEntitySta
 
 Simple delete the offending batches and you're good to go!
 
-sql
+```sql
 DELETE FROM mdm.tblStgBatch
 WHERE BatchTag IS NULL;
 ```

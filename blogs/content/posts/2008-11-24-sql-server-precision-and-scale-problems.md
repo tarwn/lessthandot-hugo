@@ -18,7 +18,7 @@ Many people are confused about SQL Server's precision and scale. This is unfortu
 
 For example:
 
-sql
+```sql
 Select 10 / 3           UNION All 
 Select 10 / 3.0         UNION All 
 Select 10 / 3.00        UNION All 
@@ -35,7 +35,7 @@ For the first calculation, we have 10 / 3. We all know the answer is 3 1/3, but 
 
 Well, using the SQL\_VARIANT\_PROPERTY function, we can determine the data type that SQL Server will use.
 
-sql
+```sql
 Select SQL_VARIANT_PROPERTY(3, 'BaseType') As [Base Type], 
        SQL_VARIANT_PROPERTY(3, 'Precision') As [Precision],
        SQL_VARIANT_PROPERTY(3, 'Scale') As [Scale],
@@ -48,7 +48,7 @@ The output indicates SQL Server will use Integer, Precision 10, scale 0. Using i
 
 Now, let's look at the next one. 10/3.0
 
-sql
+```sql
 Select SQL_VARIANT_PROPERTY(3.0, 'BaseType') As [Base Type], 
        SQL_VARIANT_PROPERTY(3.0, 'Precision') As [Precision],
        SQL_VARIANT_PROPERTY(3.0, 'Scale') As [Scale],

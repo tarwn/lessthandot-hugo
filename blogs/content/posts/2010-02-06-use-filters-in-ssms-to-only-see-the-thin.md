@@ -22,7 +22,7 @@ Now that all my server are SQL Server 2008 I use SSMS with SSMS Toolpack and Toa
 
 Let's first look at some code. Create a new database named test, create a new schema named Denis and then add 3 tables to the dbo schema and 3 tables to the Denis schema. Just run the code below
 
-sql
+```sql
 create database test
 go
 

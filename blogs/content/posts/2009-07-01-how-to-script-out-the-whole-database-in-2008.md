@@ -38,7 +38,7 @@ Logically you would think that this would be the way: _Right click on the databa
 
 What that will do is just create the database and not much else, here is what the script might look like
 
-sql
+```sql
 USE [master]
 GO
 

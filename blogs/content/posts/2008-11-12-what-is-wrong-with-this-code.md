@@ -21,7 +21,7 @@ tags:
 ---
 Take a look at this code which I found a while back in a stored proc
 
-sql
+```sql
 declare @id int,@xtype char(1),@uid int,@info int,@status int
 
 set  @id =(select id from sysobjects where name = 'sysobjects')
@@ -36,7 +36,7 @@ go
 
 Do you see what is wrong? It uses five select statements to accomplish something which can be done in one. I would do something like this instead.
 
-sql
+```sql
 declare @id int,@xtype char(1),@uid int,@info int,@status int
 
 select @id =id
@@ -58,7 +58,7 @@ What we want to do is display a row of counts for 4 xtypes from the sysobjects t
 
 Have you ever seen code like this that does that? I have!
 
-sql
+```sql
 select count(*) as [s],
 (select count(*) from  sysobjects where xtype = 'u') as [u],
 (select count(*) from  sysobjects where xtype = 'p') as [p],
@@ -71,7 +71,7 @@ That code will do a select 4 times against the table
   
 A better way would be to do this
 
-sql
+```sql
 select  sum(case xtype when 's' then 1 else 0 end) as [s],
 sum(case xtype when 'u' then 1 else 0 end) as [u],
 sum(case xtype when 'p' then 1 else 0 end) as [p],
@@ -82,7 +82,7 @@ where xtype in('s','u','p','c')
 
 In SQL server 2005/2008 you can use the PIVOT operator, here is what the query would look like
 
-sql
+```sql
 SELECT s, u, p, c
 FROM
 (SELECT xtype

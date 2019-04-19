@@ -32,7 +32,7 @@ Time for this week's puzzle/teaser. I want to return the results in ascending or
 
 If you run this code
 
-sql
+```sql
 CREATE TABLE Puzzle
      (Col1 varchar(20) NOT NULL PRIMARY KEY CLUSTERED,
       Col2 varchar(20) NOT NULL UNIQUE NONCLUSTERED);
@@ -82,7 +82,7 @@ Z
 
 Without using ORDER BY, how would you make the SELECT query return Col1 in ascending order? You can't make changes to the table, all that you are allowed to modify is this part
 
-sql
+```sql
 SELECT Col1 FROM Puzzle;
 ```
 

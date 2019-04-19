@@ -25,7 +25,7 @@ This is the third indexing post in this series, we already looked at [Filtered I
 
 Let's write some T-SQL to see this all in action, first create this table.
 
-sql
+```sql
 CREATE TABLE TestIndex (name1 varchar(500)not null,
 id int not null,
 userstat int not null,
@@ -35,7 +35,7 @@ SomeVal uniqueidentifier not null)
 
 Now insert 50000 rows
 
-sql
+```sql
 INSERT TestIndex
 SELECT top 50000 s.name,s.id,s.userstat,s2.name,newid() 
 FROM master..sysobjects s
@@ -44,13 +44,13 @@ CROSS JOIN master..sysobjects s2
 
 Now create this index
 
-sql
+```sql
 CREATE CLUSTERED INDEX IX_TestIndex_Index ON TestIndex(SomeVal)
 ```
 
 Now let us look at some data by using the sys.dm\_db\_index\_physical\_stats Dynamic Management View. 
 
-sql
+```sql
 SELECT Object_name(object_id) as Tablename,s.name as Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent
@@ -113,7 +113,7 @@ and s.name ='IX_TestIndex_Index'
 
 That is good, almost no fragmentation, let's change that shall we? You remember [not to cluster an index on a uniqueidentifier when using the NEWID function][4] right? That will completely fragment your index because of page splits
 
-sql
+```sql
 UPDATE TestIndex
 SET SomeVal = NEWID()
 ```
@@ -174,7 +174,7 @@ There are two ways to fix fragmentation, one is to reorganize the index and the 
   
 Here is how to do a REORGANIZE
 
-sql
+```sql
 ALTER INDEX IX_TestIndex_Index ON TestIndex
 REORGANIZE;
 ```
@@ -233,7 +233,7 @@ As you can see after the reorganize(DBCC INDEXDEFRAG for you SQL Server 2000 fol
 
 Just for fun let's also rebuild (Drop and recreate/DBCC REINDEX for you SQL Server 2000 folks) the index
 
-sql
+```sql
 ALTER INDEX IX_TestIndex_Index ON TestIndex
 REBUILD;
 ```
@@ -310,7 +310,7 @@ The sys.dm\_db\_index\_usage\_stats dynamic management view is extremely helpful
 
 Run the query below
 
-sql
+```sql
 SELECT
 TableName = OBJECT_NAME(s.[OBJECT_ID]),
 IndexName = i.name,

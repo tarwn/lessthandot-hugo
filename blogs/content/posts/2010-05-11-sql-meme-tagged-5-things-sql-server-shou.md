@@ -23,7 +23,7 @@ I have been tagged by [Aaron Bertrand][1] in the latest SQL meme: [Tagged: 5 thi
 
 The isnumeric function is something that can bring you into trouble without you even knowing it, for example run these queries
 
-sql
+```sql
 select	ISNUMERIC(CHAR(9)),
 		ISNUMERIC('1D2'),
 		ISNUMERIC('.'),
@@ -35,7 +35,7 @@ Really a tab (Char(9) is numeric? I would be much better if SQL Server had IsInt
   
 Something like this
 
-sql
+```sql
 SELECT ISNUMERIC('123', 'TinyInt')
 ```
 
@@ -43,7 +43,7 @@ SELECT ISNUMERIC('123', 'TinyInt')
 
 Lookup indexed views and you will see more restrictions than you can fathom, you can't memorize these things either, there are too many. First you need a bunch of setting
 
-sql
+```sql
 SET NUMERIC_ROUNDABORT OFF;
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,
     QUOTED_IDENTIFIER, ANSI_NULLS ON;
@@ -51,7 +51,7 @@ SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,
 
 Why not replace that with
 
-sql
+```sql
 SET CREATE_INDEXED_VIEW_SETTINGS ON
 ```
 
@@ -65,7 +65,7 @@ Take away the ability to create an ordered view since it is ignored anyway.
   
 So for example if you create this view, which was working nicely in SQL Server 2000
 
-sql
+```sql
 CREATE VIEW vTestSort
 AS
 SELECT TOP 100 PERCENT id FROM TestSort
@@ -76,7 +76,7 @@ This doesn't work in 2005 or 2008
 
 OF course you can do this and it will 'work' and I wrote about it here: [Create a sorted view in SQL Server 2005 and SQL Server 2008][3]
 
-sql
+```sql
 CREATE VIEW vTestSort2
 AS
 SELECT TOP 99.99 PERCENT  id FROM TestSort
@@ -90,7 +90,7 @@ This is a great interview question and that is the only usefulness of this const
   
 Of course you can now use a Filtered Index in 2008 to accomplish this
 
-sql
+```sql
 create unique nonclustered index IX_LookMaMultipleNullValues on dbo.SomeTable(SomeColumn)
 where SomeColumn is not null;
 ```
@@ -111,7 +111,7 @@ Banish GETDATE() and use CURRENT\_TIMESTAMP instead, the only reason people (me 
 
 **User functions**
 
-sql
+```sql
 SELECT	SYSTEM_USER,
 		SUSER_SNAME(), 
 		USER,

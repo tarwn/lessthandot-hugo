@@ -29,7 +29,7 @@ WHERE (SomeColumn=@col OR @col IS NULL)
 
 The problem with that approach is that it doesn't perform well, let's take a look, first create this table
 
-sql
+```sql
 USE tempdb
 GO
 
@@ -48,7 +48,7 @@ GO
 
 Here is the query that uses the method described before, I am using AND 1=1 so that this query will match the one I will show later
 
-sql
+```sql
 DECLARE @col INT
 SELECT @col = 1
 
@@ -61,7 +61,7 @@ AND  (SomeCol2=@col OR @col IS NULL)
 ```
 Here is the query using dynamic SQL
 
-sql
+```sql
 GO
 
 DECLARE @col INT
@@ -82,7 +82,7 @@ EXEC sp_executesql @SQL,N'@InnerParamcol INT',@col
 
 Now let's run these queries and take a look at the reads
 
-sql
+```sql
 SET STATISTICS IO ON
 GO
 
@@ -140,7 +140,7 @@ As you can see, there is a place for dynamic SQL and if you use it correctly you
 
 Someone on twitter suggested to try this query
 
-sql
+```sql
 DECLARE @col INT
 SELECT @col = 1
  
@@ -164,7 +164,7 @@ WHERE:([tempdb].[dbo].[Test].[Somecol2]=[@col] OR [@col] IS NULL))
 
 There was also a comment about recompiles, when you use sp_executesql you should not get recompiles when changing the value that you are passing in. I ran this query
 
-sql
+```sql
 DECLARE @col INT
 SELECT @col = 1
  

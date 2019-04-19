@@ -27,7 +27,7 @@ If you want to test for yourself, then run the following code
   
 The codeblock below will create a database with a filegroup where we will store Hekaton tables
 
-sql
+```sql
 CREATE DATABASE HekatonDB
     ON 
     PRIMARY(NAME = [HekatonDB_data], 
@@ -42,7 +42,7 @@ CREATE DATABASE HekatonDB
 
 Next, it is time to create the Hekaton table
 
-sql
+```sql
 USE HekatonDB
 GO
 
@@ -58,7 +58,7 @@ go
 
 Lets insert some data, the following inserts 531441 rows in my table
 
-sql
+```sql
 insert [StorageTestTable]
 select row_number() over(order by s1.name),replicate('a',100)
 from sys.sysobjects s1, sys.sysobjects s2, sys.sysobjects s3
@@ -66,7 +66,7 @@ from sys.sysobjects s1, sys.sysobjects s2, sys.sysobjects s3
 
 Let's see how much memory SQL Server is using for this table
 
-sql
+```sql
 SELECT 
 memory_allocated_for_table_kb   AS MemTableAllocKb,
 memory_used_by_table_kb         AS MemTableUsedKb,
@@ -96,7 +96,7 @@ Session settings are fixed at create time
 
 Here is our native compiled stored procedure
 
-sql
+```sql
 CREATE PROCEDURE usp_TestHekatonNative
 WITH NATIVE_COMPILATION,                          -- native compiled
 EXECUTE AS OWNER,                                 -- Execution context
@@ -116,7 +116,7 @@ GO
 ```
 And here is our regular stored procedure
 
-sql
+```sql
 CREATE PROCEDURE usp_TestHekatonRegular
 AS 
 	SELECT	COUNT(*)
@@ -128,17 +128,17 @@ Time to run the tests
 
 Enable time statistics
 
-sql
+```sql
 SET STATISTICS TIME ON
 ```
 
 Run these two procs a bunch of times
 
-sql
+```sql
 exec usp_TestHekatonNative
 ```
 
-sql
+```sql
 exec usp_TestHekatonRegular
 ```
 

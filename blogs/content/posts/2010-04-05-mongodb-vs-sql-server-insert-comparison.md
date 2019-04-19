@@ -22,7 +22,7 @@ Lee Everest created a post named [MongoDB vs. SQL Server – INSERT comparison][
 
 First create this table
 
-sql
+```sql
 CREATE TABLE MongoCompare
     (guid uniqueidentifier
     ,value int
@@ -32,7 +32,7 @@ GO
 
 Here is the script he used.
 
-sql
+```sql
 DECLARE @id int = 1
 WHILE (@id < 500001)
 BEGIN
@@ -44,7 +44,7 @@ GO
 
 Now if I was to write that code I would write it with an explicit transaction and I would also use nocount on. So If we do this
 
-sql
+```sql
 SET NOCOUNT ON
 BEGIN TRAN
 DECLARE @id int = 1

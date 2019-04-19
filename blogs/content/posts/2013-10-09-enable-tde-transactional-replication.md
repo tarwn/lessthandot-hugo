@@ -62,7 +62,7 @@ To show these steps, we will take the replication setup from earlier.  As state
 
 Connect to the publisher instance and create a master key and certificate.  Make a backup of the certificate immediately after the certificate creation.
 
-sql
+```sql
 CREATE MASTER KEY ENCRYPTION
 BY PASSWORD = 'Password$1'
 GO
@@ -88,7 +88,7 @@ Copy the two files from the publisher server to the subscriber server.  Place t
 
 Once the backup files are copied, turn on database encryption for the DBA database.  This is performed by using the CREATE DATABASE ENCRYPTION KEY and ALTER DATABASE commands.
 
-sql
+```sql
 CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = AES_128
 ENCRYPTION BY SERVER CERTIFICATE TDECert;
@@ -102,7 +102,7 @@ At this point, the DBA database on the publisher has TDE enabled and is being en
 
 Connect to the subscriber and create a master key and a certificate.  Create the certificate based on the file copied earlier from the publisher's certificate.
 
-sql
+```sql
 CREATE MASTER KEY ENCRYPTION
 BY PASSWORD = 'Password$1'
 GO
@@ -118,7 +118,7 @@ GO
 
 Next, create a database encryption key and enable the database for encryption.
 
-sql
+```sql
 CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = AES_128
 ENCRYPTION BY SERVER CERTIFICATE TDECert;
@@ -134,7 +134,7 @@ At this point, replication can be started again.  Perform a basic test to ensur
 
 Given the table structure, the below statement can be used to put a small load on the table and replication.
 
-sql
+```sql
 DECLARE @ID INT = 1013
 WHILE @ID <= 10000
  BEGIN

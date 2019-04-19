@@ -21,7 +21,7 @@ A computed column can be described as an expression that is evaluated in a table
 
 Cardinality is an interesting topic when computed columns are used.  In many cases, tuning steps are taken by using computed columns when arithmetic operations are used in queries such as
 
-sql
+```sql
 SELECT Col1 FROM tbl WHERE Col2 + Col3 = 1
 ```
 
@@ -30,7 +30,7 @@ The above query can be _tuned_ in many cases by altering the table to add a comp
 
 Once the computed column is created and persisted, the query could be altered to look like the following
 
-sql
+```sql
 SELECT Col1 FROM tbl WHERE ColComputed = 1
 ```
 
@@ -43,7 +43,7 @@ As we've discussed, using computed columns can be a good tuning method in some c
 
 To look at the cardinality a little closer, take the following query that was written to read the Credit database from SQLSkills.
 
-sql
+```sql
 select corp_name + ' ' + city from corporation where 
 corp_name + ' ' + city = 'Corp. Boston Key StonesInc.  '
 ```
@@ -62,7 +62,7 @@ In a lot of cases, the major difference between estimated and actual rows can me
 
 We can look at this in another table with more rows, member.
 
-sql
+```sql
 select member_no from member where lastname + ',' + firstname = 'INFANTE,WLTANAWOIKGLQR'
 ```
 
@@ -77,14 +77,14 @@ Fixing the above plan when performance problems are seen from the query being ex
 
 Alter the corporation table to add a computed column on the expression corp_name + ' ' + city.
 
-sql
+```sql
 ALTER TABLE corporation
 ADD [corp_city_computed]  AS (([corp_name]+' ')+[city])
 ```
 
 Execute the query below and review the results in Plan Explorer.
 
-sql
+```sql
 select corp_name + ' ' + city from corporation where 
 [corp_city_computed] = 'Corp. Boston Key StonesInc.  '
 ```
@@ -101,7 +101,7 @@ We've actually introduced more problems with the computed problem as seen above.
 
 In order to fully take advantage of the objective of using computed columns to enhance the performance of the query, the persisted attribute needs to be set.  To do this, run the following ALTER statement on corporation.
 
-sql
+```sql
 ALTER TABLE corporation
 DROP COLUMN [corp_city_computed]
 GO

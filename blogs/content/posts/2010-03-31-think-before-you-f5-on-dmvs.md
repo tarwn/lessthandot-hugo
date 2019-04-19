@@ -58,7 +58,7 @@ The below charts are from Idera SQLDM and used only to show a high level view of
 
 The query that will be used is below and part from Denis Gobo's blog referred to above while removing the direct condition to look at only one index.
 
-sql
+```sql
 SELECT OBJECT_NAME(OBJECT_ID) AS Tablename,s.name AS Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent

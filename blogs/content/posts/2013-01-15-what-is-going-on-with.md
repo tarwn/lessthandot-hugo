@@ -37,7 +37,7 @@ sysmail_mailattachments
 
 The event_type column will have the type of message for each Windows or SQL Server message returned by the Database Mail system. The types of messages are errors, warnings, informational messages, success messages, and additional internal messages. Here is for example a query that brings back the last 100 rows that were generated
 
-sql
+```sql
 SELECT TOP 100 * FROM msdb.dbo.sysmail_event_log
 ORDER BY last_mod_date DESC 
 ```
@@ -48,7 +48,7 @@ This view will hold all the messages that did not go out, sent_status will be fa
 
 To see all the failed messages, you can just execute this simple query
 
-sql
+```sql
 SELECT * FROM msdb.dbo.sysmail_faileditems
 ```
 
@@ -58,7 +58,7 @@ Database Mail will mark messages as sent when they are successfully submitted to
 
 To see all the items that were sent, you can use the following query
 
-sql
+```sql
 SELECT * FROM msdb.dbo.sysmail_sentitems
 ```
 
@@ -76,7 +76,7 @@ The sent\_status column will be unsent if Database Mail has not attempted to sen
 
 Here is a simple query that will return all unsent items
 
-sql
+```sql
 SELECT * FROM msdb.dbo.sysmail_unsentitems
 ```
 
@@ -86,13 +86,13 @@ You can use the sysmail_mailattachments view to quickly see who got what attachm
 
 Here is a simple query to get you started
 
-sql
+```sql
 SELECT * FROM msdb.dbo.sysmail_mailattachments
 ```
 
 Of course you can also combine these views by joining on the mailitem_id. here is just one such query
 
-sql
+```sql
 SELECT * FROM msdb.dbo.sysmail_mailattachments a
 JOIN msdb.dbo.sysmail_unsentitems u ON a.mailitem_id = u.mailitem_id
 ```

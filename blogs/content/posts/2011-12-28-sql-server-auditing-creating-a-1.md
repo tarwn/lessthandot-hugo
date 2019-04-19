@@ -50,7 +50,7 @@ The first configuration I have for the Database Specification, I am capturing on
 
 I executed the following query on my account which is sysadmin:
 
-sql
+```sql
 USE testdb;
 GO
 
@@ -70,7 +70,7 @@ This resulted in no deletes being captured:
 
 When executed as test\_writer, which belongs to the db\_datawriter role and I execute the following:
 
-sql
+```sql
 USE testdb;
 GO
 
@@ -92,7 +92,7 @@ _One thing to note on the output is under “audit\_file\_offset”. All three v
 
 As with the Server Audits, use the following query to retrieve the audit information as it is displayed above:
 
-sql
+```sql
 SELECT  event_time ,
         action_id ,
         succeeded ,
@@ -115,7 +115,7 @@ _Note the areas in the red squares, it changes to audit objects, then a specific
 
 Again, I execute a delete statement:
 
-sql
+```sql
 USE testdb;
 GO
 
@@ -135,7 +135,7 @@ Inspecting the statement column, we can see that it only captured the delete sta
 
 To create the users, database, and populate it with the data I used – run the following:
 
-sql
+```sql
 /*Creates the database and the logins*/
 
 USE [master]

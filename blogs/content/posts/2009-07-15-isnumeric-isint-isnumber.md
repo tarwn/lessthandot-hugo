@@ -26,7 +26,7 @@ $12.09
 
 Technically, all of these are numbers.
 
-sql
+```sql
 Select Convert(Money, '$12.09')
 Select Convert(Float, '1.4e3')
 Select Convert(Float, '2d4')
@@ -50,7 +50,7 @@ Notice how the second column will only evaluate to true for the value that can b
 
 You can create your own User Defined Function to check for integers, like so:
 
-sql
+```sql
 CREATE Function dbo.IsInteger(@Value VarChar(18))
 Returns Bit
 As 
@@ -71,7 +71,7 @@ End
 
 To use this new function:
 
-sql
+```sql
 Select Convert(int, field)
 From   Table
 Where  dbo.IsInteger(field) = 1
@@ -79,7 +79,7 @@ Where  dbo.IsInteger(field) = 1
 
 If you want to allow fractional numbers, then you can add e0 to the isnumeric test.
 
-sql
+```sql
 Select IsNumeric('$12.09' + 'e0')
 Select IsNumeric('1.4e3' + 'e0')
 Select IsNumeric('2d4' + 'e0')
@@ -88,7 +88,7 @@ Select IsNumeric('3.7' + 'e0')
 
 Again, you can create a User Defined Function to test this.
 
-sql
+```sql
 Create Function IsNumber(@Value VarChar(18))
 Returns Bit
 As
@@ -99,7 +99,7 @@ End
 
 After creating the User Defined Functions, you can test it with the following code.
 
-sql
+```sql
 Declare @Temp Table(Data VarChar(18))
 
 Insert Into @Temp Values('$12.09')

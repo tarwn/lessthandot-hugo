@@ -25,7 +25,7 @@ Here is a quick SQL Server quiz. Do you know the answer to all of these question
 
 2) If your database is in simple recovery model and you run code that looks like this
 
-sql
+```sql
 BULK INSERT Northwind.dbo.[Order Details]
    FROM 'f:orderslineitem.tbl'
    WITH 
@@ -38,7 +38,7 @@ Will this be minimally logged?
 
 3) How many flaws/worst practices are in this piece of code
 
-sql
+```sql
 select * 
 from SomeTable
 Where left(SomeColumn,1) ='A'
@@ -49,7 +49,7 @@ select @@rowcount as 'Rows returned'
 
 4) When we use Try and Catch will the following tran be commited?
 
-sql
+```sql
 BEGIN TRANSACTION TranA
     BEGIN TRY
      DECLARE  @cond INT;
@@ -63,7 +63,7 @@ BEGIN TRANSACTION TranA
 
 5)Take a look at the code below, what will the last select return?
 
-sql
+```sql
 declare @SQL varchar(100)
 declare @Val varchar(10)
 
@@ -74,13 +74,13 @@ select @SQL + isnull(@Val,' currently not available')
 
 6)What will the returned when you run the following query?
 
-sql
+```sql
 select 3/2
 ```
 
 7)How many rows will the select query return from the table with 3 rows
 
-sql
+```sql
 CREATE TABLE #testnulls (ID INT)
 INSERT INTO #testnulls VALUES (1)
 INSERT INTO #testnulls VALUES (2)
@@ -92,7 +92,7 @@ where id <> 1
 
 8)If you run the code below what will the len function return, can you also answer why?
 
-sql
+```sql
 declare @v varchar(max)
 select @v =replicate('a',20000)
 
@@ -101,7 +101,7 @@ select len(@v)
 
 9) If you have the following table
 
-sql
+```sql
 CREATE TABLE #testnulls2 (ID INT)
 INSERT INTO #testnulls2 VALUES (1)
 INSERT INTO #testnulls2 VALUES (2)
@@ -109,14 +109,14 @@ INSERT INTO #testnulls2 VALUES (null)
 ```
 what will the query below return?
 
-sql
+```sql
 select count(*), count(id)
 from #testnulls2
 ```
 
 10)If you have the following two tables
 
-sql
+```sql
 CREATE TABLE TestOne (id INT IDENTITY,SomeDate DATETIME)
 CREATE TABLE TestTwo (id INT IDENTITY,TestOneID INT,SomeDate DATETIME)
  
@@ -129,7 +129,7 @@ CREATE TABLE TestTwo (id INT IDENTITY,TestOneID INT,SomeDate DATETIME)
 
 If table TestOne now has the following trigger added to it
 
-sql
+```sql
 CREATE TRIGGER trTestOne ON [dbo].[TestOne]
     FOR INSERT
     AS
@@ -143,7 +143,7 @@ CREATE TRIGGER trTestOne ON [dbo].[TestOne]
 
 What will be the value that the @@identity function returns after a new insert into the TestOne table?
 
-sql
+```sql
 INSERT TestOne VALUES(GETDATE())
 select @@identity
 ```

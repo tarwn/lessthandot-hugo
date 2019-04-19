@@ -27,7 +27,7 @@ tags:
   Anyway, I was testing this feature a bit (more specifically if they supported computed columns as promised in CTP 2.1) and I created a temporal table with the following query:
 </p>
 
-sql
+```sql
 CREATE TABLE dbo.TestTemporal
 		(ID int primary key
 		,A int

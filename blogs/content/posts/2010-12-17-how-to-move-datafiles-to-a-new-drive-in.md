@@ -32,7 +32,7 @@ I was asked to move some files used by one database to this new drive. I decided
 
 First create this test database with 3 data files and 1 log file, the data files will be in the C:DB_Files directory
 
-sql
+```sql
 USE master
 GO
 
@@ -49,7 +49,7 @@ GO
 
 Now just create a test table, insert one row and do a simple select.
 
-sql
+```sql
 USE TestMove
 GO
 
@@ -65,7 +65,7 @@ Now instead of having the data files in the C:DB\_Files we want to move them to 
 
 The following code will change the location of the data files
 
-sql
+```sql
 USE master;
 GO
 ALTER DATABASE TestMove
@@ -115,7 +115,7 @@ Now, the first thing you want to do is stop SQL Server or take the database offl
 
 To take the database offline, you can run this
 
-sql
+```sql
 ALTER DATABASE TestMove
 SET OFFLINE;
 ```
@@ -142,14 +142,14 @@ Start SQL Server again or make the database online again.
 
 To set the database online, run this
 
-sql
+```sql
 ALTER DATABASE TestMove
 SET ONLINE;
 ```
 
 After SQL Server is up and running. run the following query.
 
-sql
+```sql
 SELECT name, physical_name AS CurrentLocation, state_desc
 FROM sys.master_files
 WHERE database_id = DB_ID(N'TestMove');
@@ -237,7 +237,7 @@ WHERE database_id = DB_ID(N'TestMove');
 
 Finally, just run this simple query again to verify that you didn't corrupt anything
 
-sql
+```sql
 USE TestMove
 GO
 

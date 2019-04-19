@@ -48,7 +48,7 @@ Once you click on the view button, you will see something like this
 
 That is all nice and dandy but can I do it from T-SQL? Let's find out by running xp_readerrorlog.
 
-sql
+```sql
 EXEC master.dbo.xp_readerrorlog
 ```
 
@@ -62,7 +62,7 @@ That is no good. Luckily for us there is a stored procedure that is provided, th
 
 Here is how you execute it
 
-sql
+```sql
 EXEC rdsadmin..rds_read_error_log 
 ```
 
@@ -119,7 +119,7 @@ Here is what the stored procedure signature looks like
   
 
 
-sql
+```sql
 CREATE PROCEDURE [dbo].[rds_read_error_log] @index INT = 0, @type INT = 1,
 @search_str1 VARCHAR(255) = NULL, @search_str2 VARCHAR(255) = NULL,
 @start_time DATETIME = NULL, @end_time DATETIME = NULL,

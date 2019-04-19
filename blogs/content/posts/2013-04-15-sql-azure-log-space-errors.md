@@ -36,7 +36,7 @@ In this case, the ONLINE operation with a CREATE INDEX statement provides the fu
 
 To create the index with ONLINE, you simply specify the ON value in the options.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX [IDX_SalesOrderID_COVER_ASC] ON [dbo].[IndexPageCount]
 (
 	[SalesOrderID] ASC

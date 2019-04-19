@@ -24,7 +24,7 @@ This post is based on a question I answered earlier today, someone wanted to che
 
 The Stored Procedure below is based on the code that [George Mastros][1] wrote for the following blog post: [Search all columns in all the tables in a database for a specific value][2]
 
-sql
+```sql
 CREATE PROCEDURE FindColumnsWithNulls
 AS
 SET NOCOUNT ON
@@ -98,7 +98,7 @@ WHERE   DataFound = 1
 ```
 You can call the code like this
 
-sql
+```sql
 exec FindColumnsWithNulls
 ```
 

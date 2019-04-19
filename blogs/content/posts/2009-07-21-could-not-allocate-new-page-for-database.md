@@ -64,14 +64,14 @@ Here are a couple of ways
 
 Now most likely you want to put in place some long term solutions after you did a quick fix. First of all, you should make sure that autogrow is not turned off. If you run the query below you don't want to see a value of 0 in the growth column
 
-sql
+```sql
 select growth,* from master..sysaltfiles
 where dbid = db_id('tempdb')
 ```
 
 This query below is another way of getting the growth value for tempdb
 
-sql
+```sql
 use tempdb
 go
 
@@ -80,7 +80,7 @@ EXEC sp_helpfile
 
 You also want to make sure that tempdb is in simple recovery mode and not in full, this query will return the recovery mode for tempdb
 
-sql
+```sql
 SELECT DATABASEPROPERTYEX('tempdb','recovery')
 ```
 

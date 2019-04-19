@@ -40,7 +40,7 @@ SSIS is made to move data.  Andy Leonard does a great job of saying that and [s
 
 We will test off a merge replication publication named Prescriptions.  This will be one table and based on SUSER_SNAME for the data partition.  This table can be created from the script below.
 
-sql
+```sql
 CREATE TABLE [dbo].[tblPrescriptions](
 	[PresID] [int] NULL,
 	[UserCreate] [varchar](30) NULL,

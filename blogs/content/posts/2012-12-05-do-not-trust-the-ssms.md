@@ -44,13 +44,13 @@ Technically, yes, that will create a primary key on the table but what will happ
 
 First create this very simple table
 
-sql
+```sql
 CREATE TABLE TestInt(Col1 tinyint not null)
 ```
 
 Now they users changed their mind and want to insert values that go beyond what a tinyint can hold. If you try to insert 300, you will get an error
 
-sql
+```sql
 INSERT TestInt VALUES(300)
 ```
 
@@ -62,13 +62,13 @@ The statement has been terminated.
 
 No, problem, I will just change the data type
 
-sql
+```sql
 ALTER TABLE TestInt ALTER COLUMN Col1 int NOT NULL
 ```
 
 But what if you use the SSMS designer by right clicking on the table, choosing design and then changing the data type from tinyint to int? Here is what SSMS will do behind the scenes for you
 
-sql
+```sql
 /* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
 BEGIN TRANSACTION
 SET QUOTED_IDENTIFIER ON
@@ -105,21 +105,21 @@ What about adding some defaults to the table, if you use the SSMS table designer
 
 Here is how to create a default with T-SQL, now you can specify a name and make sure it matches your shop's naming convention
 
-sql
+```sql
 ALTER TABLE dbo.TestInt ADD CONSTRAINT
 	DF_TestInt_Col1 DEFAULT 1 FOR Col1
 ```
 
 About that yellow key icon, let's add a primary key to our table, I can do the following with T-SQL, I can also make it non clustered if I want to
 
-sql
+```sql
 ALTER TABLE dbo.TestInt ADD CONSTRAINT
 	PK_TestInt PRIMARY KEY CLUSTERED 
 	(Col1)  ON [PRIMARY]
 ```
 Click that yellow key icon and here is what happens behind the scenes, I have not found a way to make it non clustered from the designer
 
-sql
+```sql
 /* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
 BEGIN TRANSACTION
 SET QUOTED_IDENTIFIER ON

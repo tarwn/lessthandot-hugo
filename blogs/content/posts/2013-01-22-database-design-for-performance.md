@@ -52,12 +52,12 @@ Both designs have been preloaded with 116,000 header rows, 4.2 million detail ro
 
 While designing, it is important to take the step of preloading expected data into your design.  This data is completely volatile, but valuable from the aspect of seeing where redundancy can occur.  Take the following queries:
 
-sql
+```sql
 SELECT TOP 1000 * FROM OrderHDR_Poor
 ```
 
 
-sql
+```sql
 SELECT TOP 1000 * FROM OrderHDR
 ```
 
@@ -74,7 +74,7 @@ Internally, these designs also affect storage.  Since the designs are similar a
 
 Another aspect to look at is how the design is affecting the overall page storage needs.  Setting data types aside, the normalization level will have a direct effect on how many pages are needed. In both designs, we can use catalog views to look at how this impacts page counts.
 
-sql
+```sql
 select 
     obj.name, 
     idx.name,
@@ -102,7 +102,7 @@ Querying data that is not normalized has a few concerns and performance aspects 
 
 Take the example below and the plan generated from the query
 
-sql
+```sql
 CREATE PROCEDURE [dbo].[select_OrderDetailsByOrderNum] (@ordernum INT)
 AS
 SELECT 
@@ -128,7 +128,7 @@ Figure 4 – Querying a poor design
 
 In order to tune this plan, an index would help the overall performance on ordernum in the order details table.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_ordernum_ASC
 ON [dbo].[OrderDTL_Poor] ([ordernum])
 INCLUDE ([item],[itemcost],[itemqty],[shipid])
@@ -151,7 +151,7 @@ Figure 6 – Buffer review after tuning
 
 This plan isn't bad and will perform fairly well under normal conditions.  Let's compare this to the same procedure and the plan that is generated based on the design of the normalized tables.
 
-sql
+```sql
 CREATE PROCEDURE select_OrderDetailsByOrderNumv2 (@ordernum INT)
 AS
 SELECT 
@@ -175,7 +175,7 @@ GO
 
 Figure 7 – normalizing and plan generated from same procedure
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_Detail_Ordernum_ASC
 ON [dbo].[OrderDTL] ([ordernum])
 INCLUDE ([item],[shipID],[itemcost],[itemqty])
@@ -198,7 +198,7 @@ Figure 9 – Review buffered page counts
 
 Another example would be a common task – check if an order is shipped. To do this, in both cases we need to look at the detail table and the shipment table.
 
-sql
+```sql
 CREATE PROCEDURE sel_ShipDate (@ordernum INT)
 AS
 SELECT 
@@ -220,7 +220,7 @@ From the above procedure, the following plan is generated and resulting buffer n
 
 Looking at the normalized design and the same needs, the following procedure can be used and executed.
 
-sql
+```sql
 CREATE PROCEDURE sel_ShipDatev2 (@ordernum INT)
 AS
 SELECT 
@@ -245,7 +245,7 @@ With the order header table, poor design and working towards normalization, we'l
 
 Poor design – non-normalized
 
-sql
+```sql
 select 
 	hdr.customerName,
 	count(*)
@@ -262,7 +262,7 @@ having count(*) > 3
 
 **Normalizing**
 
-sql
+```sql
 select 
 	cust.contactName,
 	count(*)
@@ -279,7 +279,7 @@ having count(*) > 3
 
 Both of these queries are easily tuned with indexing on ShipID.  Further indexing could be done but we'll look at indexing ShipID given it has the highest cost for both queries.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_ShipIDPoor
 ON [dbo].[OrderDTL_Poor] ([shipID])
 INCLUDE ([ordernum])
@@ -294,7 +294,7 @@ Plan for the non-normalized design (note the sort operation due to poor statisti
   <a href="/wp-content/uploads/blogs/All/-58.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-58.png?mtime=1358783966" width="624" height="202" /></a>
 </div>
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_ShipID
 ON [dbo].[OrderDTL] ([shipID])
 INCLUDE ([ordernum])

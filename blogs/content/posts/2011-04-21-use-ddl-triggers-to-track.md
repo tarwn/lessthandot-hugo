@@ -29,7 +29,7 @@ DDL triggers are a special kind of trigger that fire in response to Data Definit
 
 First I will create a sample database
 
-sql
+```sql
 CREATE DATABASE TestTrigger
 GO
 
@@ -39,14 +39,14 @@ GO
 
 Now I will create a table which will hold the DDL statement, the time and the login of the person who executed the statement
 
-sql
+```sql
 CREATE TABLE TriggerLog(DDL VARCHAR(300), ExecutedBy VARCHAR(100), EventDate datetime)
 GO
 ```
 
 Here is what my DDL trigger will look like, more information about DDL triggers can be found here: http://msdn.microsoft.com/en-us/library/ms189799.aspx
 
-sql
+```sql
 CREATE TRIGGER trALterTable 
 ON DATABASE -- A DB level trigger
 FOR ALTER_TABLE --Event we want to capture
@@ -62,13 +62,13 @@ The code in the trigger should be pretty simple to follow. The line _EVENTDATA()
 
 Next up is the test table that we will use to play around with
 
-sql
+```sql
 CREATE TABLE test(id INT)
 ```
 
 The following block of code will add a column, change the data type of the column and will finally drop the column
 
-sql
+```sql
 ALTER TABLE test
 ADD SomeDate date
 GO
@@ -85,7 +85,7 @@ GO
 
 Now let's see what we have in our log table
 
-sql
+```sql
 SELECT * FROM TriggerLog
 order by EventDate
 ```
@@ -161,21 +161,21 @@ As you can see we have all the DDL statements captured in the table, the time it
   
 Let's just drop and recreate the table
 
-sql
+```sql
 drop table Test
 GO
 ```
 
 Now create the table again
 
-sql
+```sql
 CREATE TABLE test(id INT)
 GO
 ```
 
 If you now execute this query, you will get back pretty much all the DDL statements that we executed before
 
-sql
+```sql
 SELECT DDL + 'GO'
 FROM TriggerLog
 ORDER BY EventDate
@@ -183,7 +183,7 @@ ORDER BY EventDate
 
 Here is what it looks like if you copied the results and pasted them into a query window.
 
-sql
+```sql
 ALTER TABLE test
 ADD SomeDate date
 GO
@@ -199,7 +199,7 @@ This was just a small example of how a DDL trigger works, A DDL trigger enables 
 
 To see all the events that DDL triggers can listen for you can use the sys.trigger\_event\_types Object Catalog View
 
-sql
+```sql
 select type_name from sys.trigger_event_types 
 ```
 

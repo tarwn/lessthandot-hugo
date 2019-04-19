@@ -20,7 +20,7 @@ Well, the answer is simple. Like training wheels, they are easy. Damn easy. But,
 
 Ok here is a second try at an example. The query in question was meant to get the most recent appointment for each invoice, when there is not really a direct link. So take some sample data:
 
-sql
+```sql
 --invoices, invoice activities, appointments
 
 create table #invoices (id int identity(1,1) primary key clustered, bill_date datetime)
@@ -59,7 +59,7 @@ union all select GETDATE() - 25
 
 and two different ways to approach it:
 
-sql
+```sql
 select id,
 	(select max(appointment_date)
 		from #appointments

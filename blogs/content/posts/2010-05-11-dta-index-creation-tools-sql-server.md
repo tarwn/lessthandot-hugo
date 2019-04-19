@@ -35,7 +35,7 @@ This morning however, DTA was being less than helpful.
 
 A query went by my monitoring tools that sent my disk queue length threw the roof. Well, it went to 8 but as most DBAs know, 3 will make us squirm in our chairs. Once I reviewed the query, it wasn't really all that bad. In fact, I think it was well written by the vendor. Checking the execution plan I could see there was just some covering index needs to ensure parallelism and some key lookup steps were removed. So I opened DTA already knowing pretty much what I wanted to do and ran the query through it. The results were about what I expected but looking closer I saw this 
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX [_dta_index_9_379148396__K1] ON [dbo].[WHDR] 
 (
 	[WO_ID] ASC

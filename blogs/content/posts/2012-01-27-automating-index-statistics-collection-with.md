@@ -58,7 +58,7 @@ The BypassPrepare is still required in the Execute SQL Task because the temporar
 
 In order to take into account the multiple databases that index statistics should be collected from, pass a parameter into the SQLStatement.  This is done by altering the statement to use a variable in T-SQL instead of the DB_ID() function.
 
-sql
+```sql
 DECLARE @RunTimeDB VARCHAR(128)
 SELECT @RunTimeDB = [Name] FROM sys.databases WHERE [name] = ?
 ```
@@ -78,7 +78,7 @@ Finally, add a task to clean up the temporary table. Normally, the temporary tab
 
 To do this, we check to ensure the table exists before calling a DROP TABLE statement.
 
-sql
+```sql
 IF OBJECT_ID('tempdb..##IndexBaseLine') IS NOT NULL
 BEGIN
     DROP TABLE ##IndexBaseLine

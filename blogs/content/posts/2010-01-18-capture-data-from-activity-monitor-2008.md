@@ -46,7 +46,7 @@ Let's show this by grabbing the query that populates the file information in the
 
 To use this query for ourselves, all we need to do is comment out the INSERT INTO #am_dbfilestats and we can either convert the INSERT INTO to a SELECT INTO statement with our own temporary table or simply use the query as a direct SELECT 
 
-sql
+```sql
 SELECT 
     d.name AS [Database], 
     f.physical_name AS [File], 

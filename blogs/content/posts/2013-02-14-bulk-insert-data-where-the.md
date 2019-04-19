@@ -37,7 +37,7 @@ So let's say you get a file where the row terminator is a linefeed, how would yo
 
 You can try newline
 
-sql
+```sql
 BULK INSERT SomeTable
    FROM 'D:JunkdrawImportMe.txt'
    WITH (FIELDTERMINATOR = 't',
@@ -49,7 +49,7 @@ Nope, that doesn't work, you get 0 rows inserted
 
 You can try carriage return
 
-sql
+```sql
 BULK INSERT SomeTable
    FROM 'D:JunkdrawImportMe.txt'
    WITH (FIELDTERMINATOR = 't',
@@ -61,7 +61,7 @@ Nope, that doesn't work either, you get 0 rows inserted
 
 What about l for linefeed?
 
-sql
+```sql
 BULK INSERT SomeTable
    FROM 'D:JunkdrawImportMe.txt'
    WITH (FIELDTERMINATOR = 't',
@@ -77,7 +77,7 @@ Bulk load data conversion error (type mismatch or invalid character for the spec
 
 What about if you try a CHAR(10) which is a linefeed
 
-sql
+```sql
 BULK INSERT SomeTable
    FROM 'D:JunkdrawImportMe.txt'
    WITH (FIELDTERMINATOR = 't',
@@ -93,7 +93,7 @@ Incorrect syntax near 'CHAR'.
 
 Mmm, what if you embed it from within Dynamic SQL
 
-sql
+```sql
 DECLARE @cmd varchar(1000)
 SET @cmd = 'BULK INSERT SomeTable
 FROM ''D:JunkdrawImportMe.txt''

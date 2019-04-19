@@ -30,7 +30,7 @@ Let's look at the merging of data with Column-Level Tracking and what is transfe
 
 _We will focus on SalesOrderHeader.SalesOrderID 75123.  Ensure that updates have been made to the SalesOrderID prior to this example and you have synchronized the updates.  If no changes or subscriber traffic has occurred on the publication database, the MSMerge_* tracking tables will be empty at that time.  To show how the level tracking functions, it is best to update a subscriber and merge the changes before this running these examples.  You can use the same update statement below to perform that initial update and merge event._
 
-sql
+```sql
 update Sales.SalesOrderHeader
 set ShipDate = getdate(), OrderDate = getdate()-10,DueDate = getdate()-1
 where SalesOrderID = 75123
@@ -44,7 +44,7 @@ where SalesOrderID = 75123
 
 Before replicating to the publication database, check the MSMerge\_Contents and MSMerge\_Genhistory to see the pending changes on the subscriber that we just performed.
 
-sql
+```sql
 SELECT 
 	contents.generation,
 	contents.lineage,
@@ -67,7 +67,7 @@ The query above shows that the update performed earlier is in a pending state on
 
 Now that we have seen how to find the pending changes on the subscriber and return the row and column lineage values, use the lineage values to determine the subscriber that made the changes, actual versions and columns that were changed.  To do this, use the statement below.
 
-sql
+```sql
 declare @lineage varbinary(311)
 declare @colv varbinary(311)
 
@@ -89,7 +89,7 @@ The position column represents the actual column position for the results from r
 
 The following script shows how we can match these values all together in order to return meaningful information regarding the actual lineage and where updates originated.
 
-sql
+```sql
 declare @lineage varbinary(311)
 declare @colv varbinary(311)
 declare @articlename nvarchar(128) = 'SalesOrderHeader'
@@ -157,7 +157,7 @@ Results from the publication database
 
 To show the difference in performance, a mass update has been executed on the SalesOrderHeader on the publication database.  The update changes the SalesPersonID and LoginAccount so the rows will be included in the partitioned snapshot.
 
-sql
+```sql
 update Sales.SalesOrderHeader set SalesPersonID = 275, LoginAccount = 'ONPNTtkrueger'
 where SalesOrderID IN (SELECT TOP 10000 SalesOrderID from Sales.SalesOrderHeader
 						Order by OrderDate desc)

@@ -23,7 +23,7 @@ If you are a blogger, you want to spend time on writing the content not on forma
 
 If you want to show the output of a query in a html table you have a couple of options. Let's first take a look at a simple query
 
-sql
+```sql
 SELECT TOP 10 name,create_date
 FROM msdb.sys.procedures
 ORDER BY create_date
@@ -161,7 +161,7 @@ What I want is a table, here is what that looks like
 
 In order to accomplish that, I can grab the query result and put TD and TR tags around the columns and rows. I can also do something like the following
 
-sql
+```sql
 SELECT TOP 10 '<tr><td>',name,'</td><td>',create_date,'</td></tdr>'
 FROM msdb.sys.procedures
 ORDER BY create_date

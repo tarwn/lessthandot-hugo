@@ -44,7 +44,7 @@ Expand Database Engine go all the way down to xp\_cmdshell and click enable xp\_
   
 To do it with a script use the one below
 
-sql
+```sql
 EXECUTE sp_configure 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
@@ -68,7 +68,7 @@ SQL Server blocked access to STATEMENT 'OpenRowset/OpenDatasource' of component 
 
 To enable OPENROWSET and OPENQUERY you can use the previous script but instead of 'xp_cmdshell' you will use 'Ad Hoc Distributed Queries'. The script to enable Ad Hoc Distributed Queries is below
 
-sql
+```sql
 EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO

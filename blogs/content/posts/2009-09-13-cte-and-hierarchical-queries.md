@@ -31,7 +31,7 @@ See also [Challenge 17][7] and its solutions at [Challenge 17 – Winners][8]
 
 For instance, this code is much easier to read now after moving some logic into CTE
 
-sql
+```sql
 ;WITH
 
 -- -----------------------------------------------
@@ -183,7 +183,7 @@ One of the most interesting applications of CTE is in solving hierarchical queri
 
 The example of it which I always refer when I need to solve such a problem could be found in BOL: [Recursive Queries Using Common Table Expressions][9]
 
-sql
+```sql
 USE AdventureWorks;
 
 WITH DirectReports (ManagerID, EmployeeID, Title, DeptID, Level)

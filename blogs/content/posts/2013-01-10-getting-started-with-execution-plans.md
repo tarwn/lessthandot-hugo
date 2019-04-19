@@ -30,7 +30,7 @@ I will only focus on the graphical Execution Plans and in the examples the Adven
   
 To see a Query Execution plan, you need to create a query:
 
-sql
+```sql
 SELECT * FROM Sales.vStoreWithContacts
 ```
 
@@ -94,7 +94,7 @@ As you can see, the most expensive operation is highlighted in red and the tool 
   
 When executing the following query:
 
-sql
+```sql
 SELECT * FROM Sales.vStoreWithContacts
 WHERE Firstname = 'Alan'
 ```
@@ -110,7 +110,7 @@ This information comes from the Dynamic Management View: sys.dm\_db\_missing\_in
   
 Are you rewriting a query and wondering which one should perform better? You can easily compare the Execution Plans of two queries. Just write these queries in one query window:
 
-sql
+```sql
 SELECT * FROM Sales.vStoreWithContacts
 WHERE Firstname NOT LIKE 'A%';
 

@@ -22,13 +22,13 @@ SQL Server has a rand() function that will return a random (fractional) number b
   
 For example:
 
-sql
+```sql
 Select Rand()
 --	0.686350654426017
 ```
 The problem with the rand function occurs when you use set based operations.
 
-sql
+```sql
 Select Rand() As RandomNumber
 From   (Select 1 As NUM Union All
         Select 2 Union All
@@ -44,7 +44,7 @@ Not very random, is it? I mean, the number is random, but it's also the same for
 
 There is an interesting technique that you can use to accomplish this. There is a NewId() function in SQL Server that returns a GUID, for example: '94344EE4-5D7A-45EB-9EBC-7A596B7F90F3'. NewId does work well for set based operations, for example:
 
-sql
+```sql
 Select Rand() As RandomNumber, NewId() As GUID
 From   (Select 1 As NUM Union All
         Select 2 Union All
@@ -59,7 +59,7 @@ From   (Select 1 As NUM Union All
 
 Notice that the 'Random Number' column is the same for each row, but the GUID column is different. We can use this interesting fact to generate random numbers by combining this with another function available in SQL Server. The CHECKSUM function will return an integer hash value based on its argument. In this case, we can pass in a GUID, and checksum will return an integer.
 
-sql
+```sql
 Select Rand() As RandomNumber, 
        NewId() As GUID, 
        Checksum(NewId()) As RandomInteger
@@ -78,7 +78,7 @@ Before we continue, let's take a look at the output, because there are some inte
 
 Most of the time, we want a random number within a certain range of numbers. In most languages, we simply multiply the result of the Rand() function to get this number. Since our RandomInteger is already a whole number, we really can't do this. However, we could use the mod operator to guarantee a range of numbers. Mod is the remainder of a division operation, so if we mod a number by 10, we are guaranteed to get a number between -9 and +9. Unfortunately, this is a little misleading because there are 19 possible numbers we can get for this. So, to make sure we get a range to 10 numbers, we need to take the absolute value of the number, and then mod 10. Like this:
 
-sql
+```sql
 Select Rand() As RandomNumber, 
        NewId() As GUID, 
        Abs(Checksum(NewId())) % 10 As RandomInteger
@@ -99,7 +99,7 @@ If you want to generate a random number between -5 and 5, don't be tempted to re
 
 In my database, I have a numbers table with 1,000,000 rows. When I run this code:
 
-sql
+```sql
 Select	RandomNumber, Count(*) As NumberCount
 From	(
 		Select Checksum(NewId()) % 6 As RandomNumber
@@ -125,7 +125,7 @@ Order By RandomNumber
 
 Notice that 0 has double the number of occurrences. Instead, we should write it like this:
 
-sql
+```sql
 Select	RandomNumber, Count(*) As NumberCount
 From	(
 		Select Abs(Checksum(NewId())) % 11 - 5 As RandomNumber

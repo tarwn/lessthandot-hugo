@@ -24,7 +24,7 @@ Focusing on delete events, we can take a look at a common but extremely poor pra
 
 Let's say a SQL Developer has been tasked with removing outdated records from a database.  This has been found to be safe, provided an archiving strategy is put in place and the items are now archived out to a secondary source.  The archiving strategy, however, did not provide a method to remove the original items.  Given this, the developer has to remove the items manually at a time not within normal operating hours.  The database was designed by the team's DBA and has implemented a relationship between the table the items need to be removed from and another table for customer ordering details.
 
-sql
+```sql
 CREATE TABLE item_table (itemnumber int PRIMARY KEY IDENTITY(1,1), itemdesc varchar(10), itemstatus tinyint)
 GO
 CREATE TABLE cust_item_ordering (custorder_id BIGINT, itemnumber INT, itemqty INT)
@@ -50,7 +50,7 @@ The developer proceeds to search and finds a solution to get beyond the error. 
 
 Please execute the following on server A in database B.  I'll let you know when to run the next step when I finish getting something done.
 
-sql
+```sql
 EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"
 ```
 
@@ -79,7 +79,7 @@ The problem still remains: the items in the item\_table need to be removed.  In
 
 To find all the FK columns that relate to a specific PK, we can look at the catalog view [sys.foreign_keys][2] and [sys.foreign\_key\_columns][3].  Using the two foreign key catalog views with [sys.objects][4] and [sys.columns,][5] we can obtain all the needed information to further review where to look and what to remove prior to the primary key rows.
 
-sql
+```sql
 SELECT
  obj_fk.name [Foreign Key Table Name],
  fk_name.name [Foreign Key Column Name],
@@ -103,7 +103,7 @@ In the results, there is another table that has been identified with a foreign k
 
 To remove the data, first identify if the data should be removed.  If the data is passed for removal, remove the foreign key rows and then, last, remove the primary key data.
 
-sql
+```sql
 BEGIN TRY
 	DELETE FROM cust_item_ordering WHERE itemnumber = 99
 	DELETE FROM itemdetail WHERE itemnumber = 99

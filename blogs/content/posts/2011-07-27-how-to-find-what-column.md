@@ -25,7 +25,7 @@ Sometimes you get data from Excel or another system and you need to import that 
 
 Here is an example of a table created by the import/export wizard based on an Excel file
 
-sql
+```sql
 CREATE TABLE [dbo].[Sheet1$] (
 [emailaddress] nvarchar(255),
 [Value] nvarchar(255),
@@ -43,7 +43,7 @@ Of course it doesn't tell you which column it is, now you need to figure out whi
 
 I will show you what I mean, first create these two tables
 
-sql
+```sql
 use tempdb
 go
 
@@ -67,7 +67,7 @@ create table TestTrunc(
 
 Now let's insert some data into the temp table 
 
-sql
+```sql
 insert 	temp
 select '1234567890','12345678901234567890','bla','1234','123456789011111'	
 union all
@@ -76,7 +76,7 @@ select '1234567890111','1233','bla111','1234','123456111'
 
 If we now try to insert the data from the temp table into the TestTrunc table it will blow up
 
-sql
+```sql
 insert TestTrunc
 select * from temp
 ```
@@ -93,7 +93,7 @@ Now the purpose of this post is to create code that you then can modify for your
 
 First thing we need to know is what the columns are in the table that are (n)chars or (n)varchar
 
-sql
+```sql
 select column_name
 from information_schema.columns
 where table_name = 'temp'
@@ -116,7 +116,7 @@ Col5
 
 That was easy, now we want to know the max length of the data in each column
 
-sql
+```sql
 declare @sql varchar(8000)
 select @sql = 'select  0 as _col0 ,'
 select @sql +=   'max(len( ' + column_name+ ')) AS ' + column_name + ',' 
@@ -134,7 +134,7 @@ exec (@sql)
 
 That code basically creates and runs the following 
 
-sql
+```sql
 select  0 as _col0 ,
 	max(len( Col1)) AS Col1,
 	max(len( Col2)) AS Col2,
@@ -147,7 +147,7 @@ from temp
 
 If we now look in the MaxLengths table we will see the following
 
-sql
+```sql
 select * from MaxLengths
 ```
 
@@ -161,7 +161,7 @@ Next to figure out is what the max length of the column itself is in the table t
   
 Run the following query
 
-sql
+```sql
 select character_maximum_length,column_name
 from information_schema.columns
 where table_name = 'TestTrunc'
@@ -182,7 +182,7 @@ Here is the result
 
 We will again do this dynamically and insert the values into another table
 
-sql
+```sql
 declare @sql varchar(8000)
 select @sql = 'select 0 as _col0, '
 select @sql +=   '' + convert(varchar(20),character_maximum_length)+ ' AS ' + column_name + ',' 
@@ -200,7 +200,7 @@ exec (@sql)
 
 Now we can see what we have in the two tables
 
-sql
+```sql
 select 'TempTrunc' as TableNAme,* from TempTrunc
 union all
 select 'MaxLengths' as TableNAme,* from MaxLengths
@@ -217,7 +217,7 @@ As you can see, all columns except for Col3 will cause the truncation problem
   
 Of course we want to do something like this, it will tell us which columns have truncation problems
 
-sql
+```sql
 select  case when  t.col1 > tt.col1 then 'truncation' else 'no truncation' end as Col1,
  case when  t.col2 > tt.col2 then 'truncation' else 'no truncation' end as Col2,
  case when  t.col3 > tt.col3 then 'truncation' else 'no truncation'  end as Col3,
@@ -235,7 +235,7 @@ truncation	truncation	no truncation	     truncation	     truncation</pre>
 
 And again, we will use a dynamic approach, we don't know the real column names
 
-sql
+```sql
 declare @sql varchar(8000)
 select @sql = 'select  '
 select @sql +=   '' + 'case when  t.' + column_name + ' > tt.' + column_name
@@ -264,7 +264,7 @@ That is all there is to it, you can of course customize it by passing in the tab
 
 Here is what it would look like with dynamic table names
 
-sql
+```sql
 declare @ImportTable varchar(100)
 declare @DestinationTable varchar(100)
 select @ImportTable = 'temp'
@@ -345,7 +345,7 @@ Can you tell what I forgot?
 
 example
 
-sql
+```sql
 create table TestTrim(SomeData char(3))
 go
 
@@ -388,7 +388,7 @@ Bonus, use IIF instead of CASE.
   
 If you are using SQL Server Denali CTP3 or up, you can use IIF instead of CASE. See [A Quick look at the new IIF function in Denali CTP3 for more information about IIF][1]
 
-sql
+```sql
 select  
 case when  t.col1 > tt.col1 then 'truncation' else 'no truncation' end as Col1,
 case when  t.col2 > tt.col2 then 'truncation' else 'no truncation' end as Col2,
@@ -399,7 +399,7 @@ from MaxLengths t
 join TempTrunc tt on t._col0 = tt._col0
 ```
 
-sql
+```sql
 select  
 IIF(t.col1 > tt.col1,'truncation','no truncation') as Col1,
 IIF(t.col2 > tt.col2,'truncation','no truncation') as Col2,

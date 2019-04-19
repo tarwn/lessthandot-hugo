@@ -22,7 +22,7 @@ Here is what I mean by that.
 
 Say you have your first procedure like this
 
-sql
+```sql
 Create Procedure FindOrders(@date datetime,@plant smallint)
 As
 Select 
@@ -52,7 +52,7 @@ Most would be inclined to create another procedure and then create matching para
 
 So your second procedure would be something like
 
-sql
+```sql
 Create Procedure FindShippedOrders(@date datetime,@plant smallint)
 As
 Select 

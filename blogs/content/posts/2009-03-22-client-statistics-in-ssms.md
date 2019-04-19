@@ -16,7 +16,7 @@ categories:
 ---
 How many times have you done something like this testing speed
 
-sql
+```sql
 Declare @cnt_test bigint
 Declare @st datetime
 Set @st = getdate()

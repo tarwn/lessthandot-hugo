@@ -23,7 +23,7 @@ In SQL Server 2012 we now can have Contained Databases. To be precise we now can
   
 First things first, check the Collation settings of the server and tempdb:
 
-sql
+```sql
 SELECT SERVERPROPERTY('collation'), DATABASEPROPERTYEX('tempdb','collation')
 GO
 ```
@@ -36,7 +36,7 @@ In my case the server en tempdb Collation are the same, Case-Insensitive and Acc
 
 To start I create a database with a different Collation than the server default, in my case Case-Sensitive:
 
-sql
+```sql
 CREATE DATABASE NotContainedDB
 	COLLATE SQL_Latin1_General_CP1_CS_AS
 GO
@@ -44,7 +44,7 @@ GO
 
 From within the new database I create a regular and a Temporary Table and insert a value in it:
 
-sql
+```sql
 USE NotContainedDB
 GO
 
@@ -70,7 +70,7 @@ GO
 
 Now if we just write a little query to compare the values in both tables:
 
-sql
+```sql
 SELECT * FROM 
 	NotContaintedData NCD
 	INNER JOIN #NotContaintedTempData NCTD
@@ -86,7 +86,7 @@ We see that SQL Server is unable to compare the Case-Sensitive and Case-Insensit
 
 This behaviour is expected. So will it be the same with a Contained Database? To be able to test it we first have to enable the usage of Contained Databases:
 
-sql
+```sql
 SP_CONFIGURE 'contained database authentication', 1
 GO
 RECONFIGURE WITH OVERRIDE
@@ -95,7 +95,7 @@ GO
 
 Now we can create a Contained Database, note that we can only use PARTIAL and the database is created with a different Collation than the server default:
 
-sql
+```sql
 CREATE DATABASE ContainedDB
 	CONTAINMENT = PARTIAL
 	COLLATE SQL_Latin1_General_CP1_CS_AS
@@ -104,7 +104,7 @@ GO
 
 Now I create simular tables to the ones in the noncontained database:
 
-sql
+```sql
 USE ContainedDB
 GO
 
@@ -130,7 +130,7 @@ GO
 
 If we now run the query where both values are compared:
 
-sql
+```sql
 SELECT * FROM 
 	ContaintedData CD
 	INNER JOIN #ContaintedTempData CTD
@@ -146,7 +146,7 @@ We get a resultset:
 
 So what does this means? Is the Temporary Table created in the Contained Database itself or is it stored in tempdb with the Collation of the Contained Database? When you execute the following query in both databases you'll find the answer:
 
-sql
+```sql
 SP_HELP #ContaintedTempData
 GO
 ```

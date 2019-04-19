@@ -25,7 +25,7 @@ The reason for this is that all the filegroups get filled with zeroes. In SQL Se
 
 I decided to take this for a test I ran the following script on both a 2000 and a 2008 box, both are desktop XP machines. The script will create a database named test with a datafile of 3012.00 MB and a log file of 2321.00 MB
 
-sql
+```sql
 CREATE DATABASE [Test]  ON (NAME = N'Test_Data', 
 FILENAME = N'C:Test.MDF' , SIZE = 3012, FILEGROWTH = 10%) 
 LOG ON (NAME = N'Test_Log', FILENAME = N'C:Test_Log.LDF' , SIZE = 2321, FILEGROWTH = 10%)
@@ -47,12 +47,12 @@ I decided to do another test and made the database bigger. This time I created a
 
 First you need to drop the database we created before
 
-sql
+```sql
 drop database test
 go
 ```
 
-sql
+```sql
 CREATE DATABASE [Test]  ON (NAME = N'Test_Data', 
 FILENAME = N'C:Test.MDF' , SIZE = 6012, FILEGROWTH = 10%) 
 LOG ON (NAME = N'Test_Log', FILENAME = N'C:Test_Log.LDF' , SIZE = 4321, FILEGROWTH = 10%)

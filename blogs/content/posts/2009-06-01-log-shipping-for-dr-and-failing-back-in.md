@@ -23,7 +23,7 @@ The basic steps here are to first monitor the status of the database on a partic
 
 In the below examples I'm using a database named DBA05 to hold my primary table that consists of the monitored databases and the scripts to execute to start backups rolling.
 
-sql
+```sql
 IF OBJECT_ID ('DBA05.dbo.BACKUP_PLANS','U') IS NOT NULL
 	BEGIN
 		DROP TABLE DBA05.dbo.BACKUP_PLANS
@@ -114,7 +114,7 @@ Now that you have the table setup, you can get going on the monitor job. The cod
 
 I wrote this for this blog and tested it out so the script works as is but you will need to alter it greatly in order to fit it into your environment. It was also written in 2005 as you can see with the TRY...CATCH. 
 
-sql
+```sql
 BEGIN TRY
 BEGIN TRANSACTION
 

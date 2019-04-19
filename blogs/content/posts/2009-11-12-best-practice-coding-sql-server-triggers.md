@@ -32,7 +32,7 @@ There are many forum posts where people code triggers but these triggers are cod
   
 Let's take a look, first create these two tables
 
-sql
+```sql
 create table Test(id int identity not null primary key, 
 			SomeDate datetime not null)
 GO
@@ -44,7 +44,7 @@ GO
 
 Now create this trigger, this trigger is very simple, it basically inserts a row into the history table every time an insert happens in the test table
 
-sql
+```sql
 CREATE  TRIGGER trTest
     ON Test
     FOR INSERT
@@ -65,13 +65,13 @@ CREATE  TRIGGER trTest
 
 Run this insert statement which only inserts one row
 
-sql
+```sql
 insert Test(SomeDate) values(getdate())
 ```
 
 Now run this to see what is in the history table
 
-sql
+```sql
 select * from TestHistory
 ```
 
@@ -79,7 +79,7 @@ select * from TestHistory
 
 That all works fine, what happens when we try to insert 2 rows?
 
-sql
+```sql
 insert Test(SomeDate)
 select getdate()
 union all
@@ -96,7 +96,7 @@ The statement has been terminated._
 
 What would happen if you coded the trigger in this way
 
-sql
+```sql
 ALTER TRIGGER trTest
     ON Test
     FOR INSERT
@@ -116,13 +116,13 @@ ALTER TRIGGER trTest
 ```
 Now insert one row
 
-sql
+```sql
 insert Test(SomeDate) values(getdate())
 ```
 
 We look again what is in the history table, as you can see we have id 1 and 4, this is because id 2 and 3 failed and were rolled back
 
-sql
+```sql
 select * from TestHistory
 ```
 
@@ -131,7 +131,7 @@ select * from TestHistory
 
 Here is where it gets interesting, run this code
 
-sql
+```sql
 insert Test(SomeDate)
 select getdate()
 union all
@@ -140,7 +140,7 @@ select getdate() + 1
 
 That runs fine but when we look now we are missing row 5 in the history table
 
-sql
+```sql
 select * from TestHistory
 ```
 
@@ -150,7 +150,7 @@ select * from TestHistory
 
 let's try that again
 
-sql
+```sql
 insert Test(SomeDate)
 select getdate()
 union all
@@ -159,7 +159,7 @@ select getdate() + 1
 
 Now we are missing row 7 in the history table
 
-sql
+```sql
 select * from TestHistory
 ```
 
@@ -170,7 +170,7 @@ select * from TestHistory
 
 The problem is with this line of code
 
-sql
+```sql
 SELECT @id = id FROM inserted
 ```
 
@@ -178,7 +178,7 @@ SELECT @id = id FROM inserted
 
 Here is how you would change the trigger to work correctly
 
-sql
+```sql
 ALTER TRIGGER trTest
     ON Test
     FOR INSERT
@@ -197,13 +197,13 @@ GO
 
 Now run this
 
-sql
+```sql
 insert Test(SomeDate) values(getdate())
 ```
 
 We can now verify that it works correctly
 
-sql
+```sql
 select * from TestHistory
 ```
 
@@ -215,7 +215,7 @@ select * from TestHistory
 
 Now run this for 2 rows
 
-sql
+```sql
 insert Test(SomeDate)
 select getdate()
 union all
@@ -224,7 +224,7 @@ select getdate() + 1
 
 And as you can see both rows were inserted into the history table
 
-sql
+```sql
 select * from TestHistory
 ```
 

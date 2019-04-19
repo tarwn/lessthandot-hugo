@@ -35,7 +35,7 @@ To return the setting of the maximum rows that will be retained in history for e
 
 To return the JobHistoryMaxRowsPerJob, run the following
 
-sql
+```sql
 DECLARE @jobhistory_max_rows_per_job INT  
   
 EXECUTE master.dbo.xp_instance_regread N'HKEY_LOCAL_MACHINE',  

@@ -33,7 +33,7 @@ I haven't done a puzzle for a long time so I figured let's do a simple one. Retu
 
 Here is what the table looks like
 
-sql
+```sql
 CREATE TABLE #Puzzle(SomeCol CHAR(7))
 
 INSERT  #Puzzle VALUES ('AAAAAAA')

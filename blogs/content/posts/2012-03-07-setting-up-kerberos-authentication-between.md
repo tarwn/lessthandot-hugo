@@ -42,7 +42,7 @@ SETSPN –A MSSQLSvc/sql1.thirsterdomain.com:1433 thirsterdomainsql1ServiceAccou
   
 The very last thing to do is to set up the linked server on each server. So if we had SQL1 and SQL2 we'd run the following commands:
 
-sql
+```sql
 --run this on sql2
 exec sp_addlinkedserver @server='sql1', @srvproduct='', @provider='SQLNCLI',  @provstr='Integrated Security=SSPI'
 go

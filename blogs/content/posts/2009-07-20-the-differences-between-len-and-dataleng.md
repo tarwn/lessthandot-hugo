@@ -37,7 +37,7 @@ So what does that mean? It means that the LEN function will first right trim the
 
 Take a look at this example
 
-sql
+```sql
 declare @v nchar(5)
 select @v ='ABC  '
 
@@ -49,7 +49,7 @@ The output for len is 3 while the output for datalength =10. The reason that dat
 
 Let's take a look at some more data, first create this table
 
-sql
+```sql
 create table #TeslLen (	CharCol char(5), 
 			VarCharCol varchar(5),
 			NCharCol nchar(5), 
@@ -66,7 +66,7 @@ insert #TeslLen values(' ',' ',' ',' ')
 
 Now run the following query
 
-sql
+```sql
 select CharCol as Value,len(CharCol) as LenChar,DATALENGTH(CharCol) as DLenChar,
 	len(VarCharCol) as LenVarChar,DATALENGTH(VarCharCol)as DLenVarChar,
 	len(NCharCol) as LenNChar,DATALENGTH(NCharCol) as DLenNChar,

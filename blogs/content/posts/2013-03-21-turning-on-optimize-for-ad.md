@@ -26,7 +26,7 @@ tags:
 ---
 There are several advanced options that you can modify in SQL Server. If you want to turn on optimize for ad hoc workloads in SQL Server, you can run the following script
 
-sql
+```sql
 EXEC sys.sp_configure N'optimize for ad hoc workloads', N'1'
 RECONFIGURE WITH OVERRIDE
 GO
@@ -34,7 +34,7 @@ GO
 
 If you want to use OPENROWSET, you can run the following
 
-sql
+```sql
 EXECUTE sys.sp_configure'Ad Hoc Distributed Queries', '1'
 RECONFIGURE WITH OVERRIDE
 GO

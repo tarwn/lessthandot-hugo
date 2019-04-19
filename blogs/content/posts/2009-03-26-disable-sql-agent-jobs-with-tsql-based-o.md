@@ -40,7 +40,7 @@ The key is the one notification. This is one option of getting around that using
 
 Step 1) create the table to monitor
 
-sql
+```sql
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -65,13 +65,13 @@ SET ANSI_PADDING OFF
 ```
 Insert the data in order to test out monitor
 
-sql
+```sql
 INSERT INTO DBO.[VOL_MONITOR]
 VALUES ('AL Plant 1',20000,15000)
 ```
 Step 2) create the job to monitor the volume count.
 
-sql
+```sql
 DECLARE @jobId BINARY(16)
 EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'Capacity Restriction Monitor Plant 01', 
 		@enabled=1, 
@@ -143,7 +143,7 @@ First query the sysjob table in MSDB to grab the job_id. You can also use the na
   
 think that is prone to typos and copying the job_id directly out of sysjob is a bit more stable.
 
-sql
+```sql
 select job_id,[name] from msdb.dbo.sysjobs
 ```
 This shows “8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC” for the Capacity Restriction Monitor Plant 01 job_id
@@ -156,7 +156,7 @@ when you do not specify them. The answer is no, the SP will only update what par
 
 syntax
 
-sql
+```sql
 sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
      [, [@new_name =] 'new_name' ] 
      [, [@enabled =] enabled ]
@@ -178,7 +178,7 @@ So to form this call and disable the job we need to add to the job this statemen
 
 After the db mail send put issue a Go and then add
 
-sql
+```sql
 Exec msdb.dbo.sp_update_job @job_id = '8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC' , @enabled = 0
 ```
 Now when the job runs it will send the notifications out and disable the job so no further
@@ -193,7 +193,7 @@ add to that job is re-enabling out monitor. If we don't then the call to change 
   
 0 and the we break out monitoring process. So create another job scheduled for midnight with the statement of
 
-sql
+```sql
 Update mem_vol set vol_status = volume
 Go
 Exec msdb..sp_update_job @job_id = '8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC' , @enabled = 1

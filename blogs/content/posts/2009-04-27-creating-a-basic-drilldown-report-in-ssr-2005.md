@@ -27,7 +27,7 @@ A drill down report starts with a higher level set of data (overview) and allows
   
 So to start, we'll need a set of data. Just so that we're on the same page lets create the following stored procedure.
 
-sql
+```sql
 CREATE PROCEDURE dbo.DrilldownExample 
 	-- Add the parameters for the stored procedure here
 	  

@@ -18,7 +18,7 @@ It is good practice to show the user a message if your report does not return an
   
 Create a blank report. Add a dataset that returns some data. You can use the following query to create your example...
 
-sql
+```sql
 select 1 col1,2 col2,3 col3,4 col4,5 col5
 union all
 select 1 col1,2 col2,3 col3,4 col4,5 col5
@@ -85,7 +85,7 @@ Hit preview
 
 Go back to your dataset and change the query to this
 
-sql
+```sql
 declare @tbl table (col1 int,col2 int,col3 int,col4 int,col5 int)
 select * from @tbl
 ```

@@ -28,7 +28,7 @@ I was restoring a TB+ sized database on our staging database today. Someone need
 
 First, let's create two databases
 
-sql
+```sql
 CREATE DATABASE Test1
 GO
 
@@ -38,14 +38,14 @@ GO
 
 Now create a new login named TestLogin with a password of Test
 
-sql
+```sql
 USE [master]
 GO
 CREATE LOGIN [TestLogin] WITH PASSWORD=N'Test', DEFAULT_DATABASE=[Test1]
 ```
 Add the login we just created to the Test1 database and make the login part of the db_owner role
 
-sql
+```sql
 USE [Test1]
 GO
 CREATE USER [TestLogin] FOR LOGIN [TestLogin]
@@ -58,7 +58,7 @@ GO
 
 Add the login we just created to the Test2 database and make the login part of the db_owner role
 
-sql
+```sql
 USE [Test2]
 GO
 CREATE USER [TestLogin] FOR LOGIN [TestLogin]
@@ -73,7 +73,7 @@ Make sure that you can login with the TestLogin account
 
 Now that you know that you can login with the TestLogin account, use another account and put the Test1 in offline mode
 
-sql
+```sql
 ALTER DATABASE Test1 SET OFFLINE
 ```
 

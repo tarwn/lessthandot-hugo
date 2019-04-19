@@ -33,7 +33,7 @@ Doesn't that sound fantastic? It is! It's very simple to run, too.
 
  
 
-sql
+```sql
 USE ReportServer;
 GO
 

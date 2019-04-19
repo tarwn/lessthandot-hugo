@@ -154,7 +154,7 @@ To my dismay, I was not allowed to make this SP read from a table. But I am stil
 
 And finally, using the document names:
 
-sql
+```sql
   INNER JOIN @DocumentNames N on D.DocumentName = N.DocumentName
 ```
 
@@ -168,7 +168,7 @@ sql
 
   
 ```
-sql
+```sql
     SELECT
       DocNameString =
           CASE

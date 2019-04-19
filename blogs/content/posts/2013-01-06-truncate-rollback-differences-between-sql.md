@@ -31,7 +31,7 @@ I wrote a blogpost about the fact that there is a common myth that you can't rol
 
 First create this very simple table
 
-sql
+```sql
 CREATE TABLE dbo.TruncateTest (ID int IDENTITY PRIMARY KEY, 
 				SomeOtherCol varchar(49))
 GO
@@ -39,14 +39,14 @@ GO
 
 Add the following two rows
 
-sql
+```sql
 INSERT dbo.TruncateTest VALUES(1)
 INSERT dbo.TruncateTest VALUES(1)
 ```
 
 Now execute this whole block in one shot, you will see three resultsets, two of them will have two rows and one resultset will be empty
 
-sql
+```sql
 SELECT * FROM dbo.TruncateTest -- 2 rows
  
 BEGIN TRAN
@@ -81,7 +81,7 @@ ID          SomeOtherCol
 
 As you can see the table was empty at one point, however the table has the same two rows again, if you execute this query, you will see those two row again
 
-sql
+```sql
 SELECT * FROM dbo.TruncateTest
 ```
 

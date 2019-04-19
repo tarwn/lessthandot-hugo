@@ -19,7 +19,7 @@ By definition, primary keys must contain unique data. They are implemented in th
 
 **How to detect this problem:**
 
-sql
+```sql
 Select AllTables.Name
 From   (
        Select Name, id 

@@ -75,7 +75,7 @@ In the framework that was developed to support the older bits of our application
 
 I'd never used For Xml to generate a nested xml output like this before, and the syntax proved to be just a little awkward for me. What I needed to do first was get the list of customers associated with the business entity being displayed, and then get the list of Customer Fields associated with each of them (along with any data that had already been entered for those fields). The actual query to retrieve it ended up being kind of nasty, so I won't hurt anyone's eyes with that. For the sake of the example, lets assume that everything for the inner bits of xml (the “Field” elements) comes from one table.
 
-sql
+```sql
 declare @caseid int
 
 Select CustomerTable.Id as "@custid",

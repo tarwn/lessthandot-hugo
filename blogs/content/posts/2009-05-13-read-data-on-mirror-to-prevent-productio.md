@@ -19,7 +19,7 @@ The answer is pretty easy but I noticed there was an alarming amount of answers 
 
 Step one is to create a DB to actually work with. In our imaginary world this is going to be our principle that must not go offline, take on heavy load from DR methods and not have futile locks applied resulting in production slowdowns.
 
-sql
+```sql
 CREATE DATABASE [PRINCIPLE_DB] 
 ```
 Now to get a mirror up and running you have the basic 1,2,3 setup as I call it.
@@ -42,14 +42,14 @@ First thing is to back the database up. The backup and restore steps are critica
 
 Backup script
 
-sql
+```sql
 BACKUP DATABASE [PRINCIPLE_DB] 
 TO DISK = N'C:principle_db_mirror_startup.bak' 
 WITH FORMAT
 ```
 To make it interesting and give us an objective to select on later, throw this in there after
 
-sql
+```sql
 Use PRINCIPLE_DB
 Go
 CREATE TABLE TBL (ident INT Identity(1,1))
@@ -60,7 +60,7 @@ Go 10
 ```
 Now sense we have control here and no one is doing anything to the test DB, backup the tail end of the log now.
 
-sql
+```sql
 BACKUP LOG [PRINCIPLE_DB] 
 TO DISK = 'C:principle_db_mirror_logstartup.trn' 
 WITH FORMAT
@@ -69,7 +69,7 @@ Copy those over to your second instance in your lab setup.
   
 Next is to restore the backups to the instance you want as the mirror. Here is the restore command for your second instance
 
-sql
+```sql
 RESTORE DATABASE [PRINCIPLE_DB] FROM  DISK = N'C:principle_db_mirror_startup.bak' 
 WITH  REPLACE,NORECOVERY,  
 MOVE N'PRINCIPLE_DB' TO N'C:PRINCIPLE_DB.mdf',  
@@ -78,14 +78,14 @@ GO
 ```
 And restore the log
 
-sql
+```sql
 RESTORE LOG [PRINCIPLE_DB] 
 FROM DISK = 'C:principle_db_mirror_logstartup.trn' 
 WITH NORECOVERY
 ```
 Getting the mirror going in its simplest form without really going into the configuration and planning strategy can be done with a short ALTER DATABASE script and setting the partner to the endpoints either you created or the default Mirroring endpoints. First thing is to make sure your endpoints are configured. You can query sys.endpoints or a bit more informative with sys.database\_mirroring\_endpoints. If your endpoints are not up the basic command to get one is
 
-sql
+```sql
 CREATE ENDPOINT Mirroring
 	STATE=STARTED
 AS TCP (LISTENER_PORT=5022)
@@ -96,14 +96,14 @@ Running the query above on sys.database\_mirroring\_endpoints, you should see DA
 
 On the Mirror first run
 
-sql
+```sql
 ALTER DATABASE [PRINCIPLE_DB]
 SET PARTNER = 'TCP://principle.fullyqualifiedname.com:5022'
 GO
 ```
 Then on the principle instance
 
-sql
+```sql
 ALTER DATABASE [PRINCIPLE_DB]
 SET PARTNER = 'TCP://mirror.fullyqualifiedname.com:5022'
 GO
@@ -116,7 +116,7 @@ On your mirror instance start a new query window in the master context.
   
 Run the following
 
-sql
+```sql
 CREATE DATABASE PRINCIPLE_DB_COPY
 ON (NAME = 'PRINCIPLE_DB', FILENAME = 'C:PRINCPLE_DB_COPY.SNP')
    AS SNAPSHOT OF PRINCIPLE_DB

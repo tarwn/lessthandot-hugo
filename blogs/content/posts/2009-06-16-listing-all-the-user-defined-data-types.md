@@ -22,7 +22,7 @@ If you have a bunch of User-Defined Data Types in your databases and you would l
 
 On SQL Server 2000 and up
 
-sql
+```sql
 select * from systypes
 where xusertype > 256
 ```
@@ -31,14 +31,14 @@ or
 
 On SQL Server 2005 and up
 
-sql
+```sql
 SELECT * FROM sys.Types 
 WHERE is_user_defined = 1
 ```
 
 Let's take a look how this works by adding a couple of User-Defined Data Types. we will add a birthday type which will be a datetime (on SQL Server 2008 it should be a date) and a StateCode which is a char(2)
 
-sql
+```sql
 USE master
 EXEC sp_addtype birthday, datetime, 'NULL'
 Go
@@ -47,26 +47,26 @@ Go
 ```
 Now we can create a table which uses these two types
 
-sql
+```sql
 create table TestType (Birthday birthday,State StateCode)
 ```
 
 Insert some data
 
-sql
+```sql
 insert TestType values('19100101','NY')
 insert TestType values('19800101','CA')
 ```
 
 And we can query the data as usual
 
-sql
+```sql
 select * from TestType
 ```
 
 To see what data type is actually used to store the data we can run the following query
 
-sql
+```sql
 select column_name,data_type,character_maximum_length
 from information_schema.columns
 where table_name = 'TestType'
@@ -86,7 +86,7 @@ As you can see datetime and char(2) are used
 
 We can also use the SysTypes (SQL Server 2000 and up) and Sys.Types system tables/catalog views
 
-sql
+```sql
 SELECT s.name,s2.name,s2.length
  FROM SysTypes s
 join SysTypes s2 on s.xtype = s2.xtype
@@ -101,7 +101,7 @@ name		name		length
 birthday	datetime	8
 StateCode	char		8000</pre>
 
-sql
+```sql
 SELECT s.name,s2.name,s2.max_length
 FROM Sys.Types s
 join Sys.Types s2 on s2.user_type_id = s.system_type_id
@@ -120,7 +120,7 @@ How do you drop a User-Defined Data Type?
   
 Here is how you do it. Run the following query
 
-sql
+```sql
 USE master
 EXEC sp_droptype 'birthday'
 GO
@@ -133,13 +133,13 @@ Cannot drop. The data type is being used.
 
 So we first need to drop the table that is using this data type
 
-sql
+```sql
 drop table TestType
 ```
 
 Now we can try again
 
-sql
+```sql
 USE master
 EXEC sp_droptype 'StateCode'
 

@@ -57,7 +57,7 @@ If you are a .NET programmer then this function should look very familiar to you
 
 Let's take a look at how it all works, first let's create a table and inserts some locales info so that it will be easier to show the different output later
 
-sql
+```sql
 CREATE TABLE Locales(locale varchar(100))
 insert Locales
 select 'en-US'   --USA
@@ -75,7 +75,7 @@ select 'ru' --Russia
 
 Now, let's format some dates
 
-sql
+```sql
 DECLARE @d DATETIME = '01/01/2011';
 
 select locale,FORMAT ( @d, 'd', locale ) AS Result,
@@ -189,7 +189,7 @@ Here is what the output looks like, as you can see if you use specific formattin
 
 Let's look at another example, this one will format currency
 
-sql
+```sql
 select locale,FORMAT ( 100, 'c', locale ) AS Result
 from Locales
 ```
@@ -274,7 +274,7 @@ As you can see the currency symbol is different depending on what locale has bee
 
 You can also specify the number of characters after the decimal point
 
-sql
+```sql
 select locale,FORMAT ( 100.34, 'C1', locale ) AS Result1,
 			  FORMAT ( 100.34, 'C2', locale ) AS Result2,
 			  FORMAT ( 100.34, 'C3', locale ) AS Result3,

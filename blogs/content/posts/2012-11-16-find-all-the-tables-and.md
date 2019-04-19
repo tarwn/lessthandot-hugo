@@ -49,7 +49,7 @@ Okay, so they are running the standard edition of SQL Server. How can you quickl
 
 A table without indexes (a heap)
 
-sql
+```sql
 CREATE TABLE TestCompress(SomeCol VARCHAR(1000))
 GO
 
@@ -58,7 +58,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  PAGE)
 ```
 A table with a non clustered index
 
-sql
+```sql
 --Non clustered index
 CREATE TABLE TestCompress2(SomeCol VARCHAR(100) NOT null)
 GO
@@ -71,7 +71,7 @@ GO
 
 A table with a clustered index
 
-sql
+```sql
 --Clustered index
 CREATE TABLE TestCompress3(SomeCol VARCHAR(100) NOT null)
 GO
@@ -84,7 +84,7 @@ GO
 
 Here is the query that will give you the table name, the storage type, the index name if there is one and the type of compression
 
-sql
+```sql
 SELECT DISTINCT
 SCHEMA_NAME(o.schema_id)  + '.' + OBJECT_NAME(o.object_id) AS TableName,
 i.name AS IndexName,

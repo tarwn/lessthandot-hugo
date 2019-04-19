@@ -35,7 +35,7 @@ Let's see this in action. I'll walk you through creating and populating a table,
 
 First, I'll create a table with several data types INT, CHAR(50), DATETIME, MONEY, and DECIMAL, to show the effects of compression on each.
 
-sql
+```sql
 USE AdventureWorks2012; 
 GO  
 CREATE TABLE TestRowCompression 
@@ -50,7 +50,7 @@ WITH ( DATA_COMPRESSION = NONE);
 
 Then, I'll insert data into the table. I'm using a variety of values, including 0 and NULL, to show how that is compressed.
 
-sql
+```sql
 INSERT INTO TestRowCompression 
 VALUES ( 100000, 'Small Red Lego Brick', '2012/12/4', '0.75', 0, 0 ); 
 INSERT INTO TestRowCompression 
@@ -61,7 +61,7 @@ VALUES ( 12, 'Green Plate', '2012/12/01 08:34:56', '500.00', 12, 12 );
 
 Let's see how the data appears when selected in a normal query.
 
-sql
+```sql
 SELECT ItemID , 
  ItemName ,  
  DateAdded , 
@@ -75,7 +75,7 @@ FROM TestRowCompression;
 
 What I want to know now is how much space these rows are taking up in the database, and on the page. I can use [sp_spaceused][2] to find the reserved and used disk space of the table.
 
-sql
+```sql
 sp_spaceused 'dbo.TestRowCompression';
 ```
 
@@ -87,7 +87,7 @@ Here, I can see that there are three rows, and the data is taking up 8KB of spac
 
 I'll use DBCC IND to find the file number and page number.
 
-sql
+```sql
 DBCC IND ('AdventureWorks2012', 'TestRowCompression', 0);
 ```
 
@@ -95,7 +95,7 @@ DBCC IND ('AdventureWorks2012', 'TestRowCompression', 0);
 
 I'll run DBCC PAGE, using the data page – PageType 1, PagePID 23816 – to view the data on the page.
 
-sql
+```sql
 DBCC TRACEON (3604); 
 GO 
 DBCC PAGE ('AdventureWorks2012', 1, 23816, 3); 
@@ -112,7 +112,7 @@ Reviewing the data for the third record, we can see that also takes up 95 bytes,
 
 If I am looking to reduce the space used by data in my database, I could enable row compression to do so. Before you start rebuilding all your tables in a development environment, use the stored procedure [sp\_estimate\_data\_compression\_savings][4] to determine what level of compression can be achieved. This will help you determine how much space can be saved, and if it is worth making the change.
 
-sql
+```sql
 EXEC sp_estimate_data_compression_savings 'dbo', 'TestRowCompression', NULL, NULL, 'ROW';
 ```
 
@@ -122,14 +122,14 @@ Compressing this table would offer very little benefit, since at this time there
 
 > _Note_: this will rebuild the table you are working with. Depending on the size of your table, this may take some time. Always test this in a development environment first.
 
-sql
+```sql
 ALTER TABLE dbo.TestRowCompression REBUILD 
 WITH (DATA_COMPRESSION = ROW);
 ```
 
 I'll run sp_spaceused again to compare the space used for the table.
 
-sql
+```sql
 sp_spaceused 'dbo.TestRowCompression';
 ```
 
@@ -139,7 +139,7 @@ The data size has remained the same, but the unused size has increased. But, wha
 
 I will run DBCC IND again to get the page number. Then, I run DBCC PAGE to view the results. 
 
-sql
+```sql
 DBCC IND ('AdventureWorks2012', 'TestRowCompression', 0);
 DBCC TRACEON (3604);
 GO
@@ -519,7 +519,7 @@ Dictionary compression takes this one step further and replaces repeating values
 
 To show the effects, let's copy the data from TestRowCompression into a new table.
 
-sql
+```sql
 SELECT ItemID , 
  ItemName , 
  DateAdded , 
@@ -532,7 +532,7 @@ FROM''' TestRowCompression;
 
 I'll alter the table to use page compression and check the size.
 
-sql
+```sql
 ALTER TABLE dbo.TestPageCompression REBUILD 
 WITH (DATA_COMPRESSION = PAGE);
 sp_spaceused 'dbo.TestPageCompression';
@@ -542,7 +542,7 @@ sp_spaceused 'dbo.TestPageCompression';
 
 Right now, this is no different from when I applied row compression. Because this is a small table, with few repeating values, this does not surprise me. I have another table in my database, [dbo.bigTransactionHistory][5], which is larger and may offer better results. Let's look.
 
-sql
+```sql
 sp_spaceused 'dbo.bigTransactionHistory';
 ```
 
@@ -552,7 +552,7 @@ We can see the table has approximately 1100 MB of data.
 
 First, I will apply row compression and check the size.
 
-sql
+```sql
 ALTER TABLE dbo.bigTransactionHistory REBUILD 
 WITH (DATA_COMPRESSION = ROW);
 sp_spaceused 'dbo.bigTransactionHistory';
@@ -564,7 +564,7 @@ The space used by data is now down to 725 MB.
 
 Now I will apply page compression to see if this can be reduced further.
 
-sql
+```sql
 ALTER TABLE dbo.bigTransactionHistory REBUILD 
 WITH (DATA_COMPRESSION = PAGE);
 sp_spaceused 'dbo.bigTransactionHistory';
@@ -576,7 +576,7 @@ It has indeed reduced the space used, down to 472 MB. This is roughly 58% space 
 
 Using DBCC PAGE, I can view the CIS.
 
-sql
+```sql
 DBCC IND ('AdventureWorks2012', 'bigTransactionHistory', 0);
 DBCC TRACEON (3604);
 GO 

@@ -22,7 +22,7 @@ I started my project from defining my models using Entity Framework Code first p
 
 This is how the table looks in the database:
 
-sql
+```sql
 CREATE TABLE [dbo].[Clients](
 	[ClientID] [int] IDENTITY(1,1) NOT NULL,
 	[client_no] [smallint] NOT NULL,
@@ -86,7 +86,7 @@ Last 2 constraints in the above script refer to the Operators table I am not sho
 
 Let's add some data to insert:
 
-sql
+```sql
 GO
 SET IDENTITY_INSERT [dbo].[Clients] ON
 

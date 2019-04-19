@@ -33,7 +33,7 @@ Reading Axel's post where he describes how he can use this instead of a trigger 
 
 Let's see what happens with the OUTPUT clause. First create these two simple tables
 
-sql
+```sql
 CREATE TABLE TestOutput (id int identity not null,SomeCol date)
 GO
 
@@ -43,13 +43,13 @@ GO
 
 Before we start make sure that this returns 1
 
-sql
+```sql
 SELECT @@identity, scope_identity()
 ```
 
 If it doesn't return 1, run the following
 
-sql
+```sql
 TRUNCATE TABLE TestOutput
 INSERT TestOutput VALUES('20120101')
 TRUNCATE TABLE TestOutput
@@ -58,7 +58,7 @@ SELECT @@identity, scope_identity()
 
 Now we are set to go, we are inserting one row
 
-sql
+```sql
 INSERT TestOutput 
 OUTPUT inserted.id,inserted.SomeCol, @@identity, scope_identity() INTO TestOutput2
 VALUES ('20120525')
@@ -66,7 +66,7 @@ VALUES ('20120525')
 
 If we do a select for both tables
 
-sql
+```sql
 SELECT * FROM TestOutput
 SELECT * FROM TestOutput2
 ```
@@ -87,7 +87,7 @@ Not very useful since all the values are 1 so we don't know where @@identity and
 
 Let's just insert a bunch of rows in the TestOutput table
 
-sql
+```sql
 INSERT TestOutput VALUES('20120101')
 INSERT TestOutput VALUES('20120101')
 INSERT TestOutput VALUES('20120101')
@@ -96,7 +96,7 @@ INSERT TestOutput VALUES('20120101')
 
 Now if the do the insert with the OUTPUT clause again, the values will be different
 
-sql
+```sql
 INSERT TestOutput 
 OUTPUT inserted.id,inserted.SomeCol,   INTO TestOutput2
 VALUES ('20120526')
@@ -104,7 +104,7 @@ VALUES ('20120526')
 
 Let's see what we have
 
-sql
+```sql
 SELECT * FROM TestOutput
 SELECT * FROM TestOutput2
 ```
@@ -133,13 +133,13 @@ The output is 2 for both. Now you are probably asking yourself why 2 was not ins
   
 Run this statement now
 
-sql
+```sql
 SELECT @@identity, scope_identity()
 ```
 
 The output of that is what will be inserted when you run the query below next
 
-sql
+```sql
 INSERT TestOutput 
 OUTPUT inserted.id,inserted.SomeCol, @@identity, scope_identity() INTO TestOutput2
 VALUES ('20120525')
@@ -157,7 +157,7 @@ But as you can see @@identity and scope_identity() are actually populated with t
 
 Here is a quick test
 
-sql
+```sql
 CREATE TABLE TestOutput3 (id int identity (1000,1) not null,SomeCol date)
 GO
 
@@ -175,13 +175,13 @@ Output
 
 Now when you run this again, it will insert the value 1000
 
-sql
+```sql
 INSERT TestOutput 
 OUTPUT inserted.id,inserted.SomeCol, @@identity, scope_identity() INTO TestOutput2
 VALUES ('20120525')
 ```
 
-sql
+```sql
 SELECT * FROM TestOutput2
 ```
 

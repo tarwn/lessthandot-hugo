@@ -32,7 +32,7 @@ This is a pretty simple and common problem that a lot of people have to solve. L
 
 The key to a good report is great sql code. This simple query will power our cross tab report:
 
-sql
+```sql
 select 
 	it.itName,
 	d.depName,

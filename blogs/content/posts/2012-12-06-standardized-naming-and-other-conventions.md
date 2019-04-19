@@ -49,7 +49,7 @@ I also wrote about about this in the using the [ISO-11179 Naming Conventions][2]
   
 Never use Hungarian notation on column names or variables, I have worked with tables that looked like this
 
-sql
+```sql
 CREATE TABLE tblEmployee(
 strFirstName varchar(255),
 strLastName varchar(255),
@@ -63,14 +63,14 @@ If you have intellisense in SSMS, having every table start with tbl is making it
 
 Instead of 
 
-sql
+```sql
 -- the salary for the employee
 declare @decValue decimal(20,2)
 ```
 
 It would be better to have something like the following
 
-sql
+```sql
 declare @EmployeeSalary decimal(20,2)
 ```
 
@@ -90,7 +90,7 @@ Now expand the Stored Procedures folder
 
 The basic stored procedure template looks like this
 
-sql
+```sql
 -- =============================================
 -- Create basic stored procedure template
 -- =============================================

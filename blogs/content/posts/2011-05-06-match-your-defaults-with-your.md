@@ -27,7 +27,7 @@ Here is a quick demonstration that shows you what can happen when you use defaul
 
 Let's take a look, first create the following table
 
-sql
+```sql
 CREATE TABLE TestFrag (
 	id INT NOT NULL IDENTITY PRIMARY KEY, 
 	SomeData UNIQUEIDENTIFIER DEFAULT newsequentialid(),
@@ -37,7 +37,7 @@ CREATE TABLE TestFrag (
 ```
 Add a trigger on that table
 
-sql
+```sql
 CREATE TRIGGER [dbo].[Tr_TestFrag] ON [dbo].[TestFrag] FOR Insert 
 AS
 UPDATE t
@@ -50,7 +50,7 @@ GO
 
 Now add another identical table, the only difference is that the default matches what gets updated from within the trigger
 
-sql
+```sql
 CREATE TABLE TestFrag2 (
 	id INT NOT NULL IDENTITY PRIMARY KEY, 
 	SomeData UNIQUEIDENTIFIER DEFAULT newsequentialid(),
@@ -61,7 +61,7 @@ CREATE TABLE TestFrag2 (
 
 Here is the other trigger
 
-sql
+```sql
 CREATE TRIGGER [dbo].[Tr_TestFrag2] ON [dbo].[TestFrag2] FOR Insert 
 AS
 UPDATE t
@@ -74,7 +74,7 @@ GO
 
 Now let's pump 100000 rows into both tables
 
-sql
+```sql
 INSERT TestFrag(Somedate)
 SELECT TOP 100000 GETDATE() 
 FROM sysobjects s1
@@ -82,7 +82,7 @@ CROSS JOIN sysobjects s2
 CROSS JOIN sysobjects s3
 ```
 
-sql
+```sql
 INSERT TestFrag2(Somedate)
 SELECT TOP 100000 GETDATE() 
 FROM sysobjects s1
@@ -92,14 +92,14 @@ CROSS JOIN sysobjects s3
 
 Run this to just verify that we have the same data
 
-sql
+```sql
 SELECT TOP 10 * FROM TestFrag
 SELECT TOP 10 * FROM TestFrag2
 ```
 
 Now let's look how much space each table is using
 
-sql
+```sql
 EXEC sp_spaceused 'TestFrag'
 EXEC sp_spaceused 'TestFrag2'
 ```
@@ -114,7 +114,7 @@ See that, the table with the same default as in the trigger is using a lot less 
 
 Now let's see how bad the fragmentation is. Here is the 2005 and up version
 
-sql
+```sql
 SELECT  
     OBJECT_NAME(i.OBJECT_ID) AS TableName
     ,indexstats.index_id

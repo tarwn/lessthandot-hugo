@@ -38,7 +38,7 @@ One thing I noticed is, it does not seem to take into account if the edition of 
 
 I was happy to see the first thing Red Gate does is weed out system databases, but didn't include databases like distribution or such that are used by replication.  Those system databases are often and commonly indexed and require analysis.  The tool is also filtering out databases that are in standby, offline and snapshots.  I think the query that is used could use some [ ] around name though (ok, now I'm being really picky)
 
-sql
+```sql
 SELECT name AS databaseName
      , database_id AS databaseId
 FROM master.sys.databases
@@ -60,7 +60,7 @@ On to the good stuff: SQL Index Manager is more than likely dynamic T-SQLing out
 
 An example of that call
 
-sql
+```sql
 exec sp_executesql N'
 SELECT index_id
      , avg_fragmentation_in_percent

@@ -32,7 +32,7 @@ Let's get started
 
 First create and populate these two tables in your database
 
-sql
+```sql
 create table Artist (ArtistID int primary key not null,
 ArtistName varchar(38))
 go
@@ -64,7 +64,7 @@ insert into Album values(7,2,'Light Grenades',2006)
 
 Now create this proc
 
-sql
+```sql
 create proc prMusicCollectionXML
 as
 declare @XmlOutput xml 
@@ -78,7 +78,7 @@ go
 
 After executing the proc
 
-sql
+```sql
 exec prMusicCollectionXML
 ```
 

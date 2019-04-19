@@ -18,7 +18,7 @@ MS SQL Server 2000 has a limitation of 8000 characters in a varchar variable. Th
 
 But what if you need to work with data that is longer than 8000 characters? When storing data in a table, you can use the text datatype which is stored out-of-row (though there are options about storing strings shorter than 8k characters in-row and then moving them out-of-row if they grow). But you can't use the text datatype as a variable. Look:
 
-sql
+```sql
 DECLARE @longdata text
 ```
 
@@ -26,7 +26,7 @@ DECLARE @longdata text
 
 But while that seems definitive, it is not the whole story, because you **can** use the text data type as a parameter in a stored procedure:
 
-sql
+```sql
 CREATE PROCEDURE DisplayText @longdata text
 AS
 SELECT @longdata
@@ -38,7 +38,7 @@ If you truly must have variables with more than 8000 characters in a stored proc
 
 Here's an example of putting more than 8000 characters into a column in an SP:
 
-sql
+```sql
 CREATE TABLE #Table (
    id int identity(1,1) primary key clustered,
    longdata text
@@ -74,13 +74,13 @@ Now you know the basics of handling more than 8000 characters in SQL 2000. But t
 
 • The 8000-character limitation does not apply to literal strings, just variables and rowsets. This means that with the DisplayText stored procedure above you can put in more than 8000 characters like so:
 
-sql
+```sql
 EXEC DisplayText '<more than 8000 characters here>'
 ```
 
 This does not mean you can somehow exceed 8000 characters with a commonly-tried but mistaken method such as
 
-sql
+```sql
 SELECT Left(longdata, 8000) + Substring(longdata, 8001, 8000) + Substring(longdata, 16001, 8000)
 ```
 
@@ -88,7 +88,7 @@ Sure, this may actually temporarily create a longer string (I don't know for sur
 
 You can concatenate strings when submitting dynamic SQL statements:
 
-sql
+```sql
 DECLARE
    @SQL1 varchar(8000),
    @SQL2 varchar(8000),
@@ -107,7 +107,7 @@ While I can't really recommend this method, if you are desperate and this is the
 
 • SQL 2005 has a new 'max' keyword for the length of the (n)var/char data types that allows variables to be as big as the (n)text datatype can be. You can do anything to them that you could with regular varchar types, but behind the scenes they function like the text data type with values less than 8000 characters in-row and values greater than 8000 characters stored in out-of-row pages.
 
-sql
+```sql
 DECLARE @longdata varchar(max)
 SET @longdata = '<more than 8000 characters here>'
 ```
@@ -116,7 +116,7 @@ Max here simply means that the data type can go up to the maximum storage size a
 
 As a practical example of using a text datatype to defeat the 8000-character limitation in MS SQL Server 2000, here is a SendMail stored procedure that will use the CDO.Message object to send email with a body longer than 8000 characters. Note: put in your mail server name or make it a parameter or perhaps make it read from a table!
 
-sql
+```sql
 CREATE PROCEDURE SendMail
    @From varchar(1000),
    @To varchar(1000),
@@ -178,7 +178,7 @@ IF @ReturnCode <> 0 BEGIN PRINT dbo.ObjectErrorFunc(@CDOMessage, @ReturnCode, 'C
 
 The error handling here after each SP\_OA SP call uses a custom function I wrote. I found it to be invaluable when debugging problems with OLE calls to various objects from SQL Server. You may either tear out this error handling, call the sp\_OAGetErrorInfo procedure yourself, or use mine, which is below (plus a couple of dependent functions that you may want to rewrite/modify/reimplement/stop using).
 
-sql
+```sql
 CREATE FUNCTION [dbo].[ObjectErrorFunc] (
    @Object int,
    @ReturnCode int,
@@ -241,7 +241,7 @@ BEGIN
 END
 ```
 
-sql
+```sql
 CREATE FUNCTION [dbo].[NumberToHex] (@Number sql_variant)
 RETURNS varchar(72)
 AS
@@ -265,7 +265,7 @@ BEGIN
 END
 ```
 
-sql
+```sql
 CREATE FUNCTION [dbo].[BinaryToHex] (@Number varbinary(32))
 RETURNS varchar(72)
 AS
@@ -278,7 +278,7 @@ END
 
 Here's a sample execution of SendMail for you:
 
-sql
+```sql
 EXEC SendMail 'emtucifor@example.com', 'emtucifor@example.com', 'This is a test email', @HTMLBody = '<8000 characters here>'
 ```
 

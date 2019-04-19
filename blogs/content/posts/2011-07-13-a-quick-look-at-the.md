@@ -34,13 +34,13 @@ The syntax is as follows
 
 So instead of this
 
-sql
+```sql
 SELECT CASE WHEN 1 = 2 THEN 'equal' ELSE 'not equal' END AS Comp
 ```
 
 We can do this
 
-sql
+```sql
 SELECT IIF(1=2,'equal','not equal') as Comp
 ```
 
@@ -48,7 +48,7 @@ Both of those will return not equal
 
 Be aware that you can't use NULL like in the example below
 
-sql
+```sql
 SELECT IIF(1=2,NULL ,NULL ) as calc
 ```
 
@@ -60,7 +60,7 @@ At **lease** one of the result expressions in a CASE specification must be an ex
 
 If you use a variable then you can use NULL
 
-sql
+```sql
 declare @i int = NULL 
 
 
@@ -75,13 +75,13 @@ The fact that IIF is translated into CASE also has an impact on other aspects of
 
 Here is a nested (silly) example
 
-sql
+```sql
 SELECT IIF(1=2,'equal',IIF(4=2,'equal','not equal')) as Comp
 ```
 
 Here is another example that combines IIF with TRY_CONVERT to return if a value can be converted to a specific data type
 
-sql
+```sql
 SELECT IIF(TRY_CONVERT(float,'bla')IS NULL,'Cast failed','Cast succeeded')
 UNION
 SELECT IIF(TRY_CONVERT(float,'1')IS NULL,'Cast failed','Cast succeeded')

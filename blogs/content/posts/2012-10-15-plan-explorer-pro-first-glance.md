@@ -48,7 +48,7 @@ The next thing I found really valued in the Pro Edition, the history and comment
 
 The next feature, Full Query Call Stack, is something I've been hoping for in Plan Explorer for some time.  Before, tuning a batch was a bit difficult as it pertains to cost and specific issues that go along with aspects to the entire transaction.  For example, a loop is something we can now look closely at.  Take the example query I wrote to test out Pro edition.
 
-sql
+```sql
 DECLARE @LOOP INT = 1
 DECLARE @DueDate DATETIME
 SET @DueDate = (SELECT MAX(DueDate) FROM Sales.SalesOrderHeader)
@@ -70,7 +70,7 @@ In the above image, the highlighted row could be a point in which the full query
 
 In this case, I might want to add an index and then comment on the history area that I am doing so to tune this portion of the script.
 
-sql
+```sql
 CCREATE INDEX IDX_DueDate_ASC ON Sales.SalesOrderHeader (DueDate)
 GO
 ```
@@ -85,7 +85,7 @@ Stepping through the stack, another statement is seen as high cost to the overal
 
 Again, we'd want to add to the comments, another index change is needed.
 
-sql
+```sql
 CREATE INDEX IDX_DueDate_ASC ON Sales.SalesOrderHeader (DueDate) INCLUDE (ShipDate)
 WITH (DROP_EXISTING=ON)
 GO
@@ -99,7 +99,7 @@ The last feature I'll go over today is the Pro Edition feature, waits statistics
 
 For example, changing the statement that has been used to perform and table wide update should prove to show high shared page IO latch wait times.
 
-sql
+```sql
 DECLARE @LOOP INT = 1
 DECLARE @DueDate DATETIME
 SET @DueDate = (SELECT MAX(DueDate) FROM Sales.SalesOrderHeader)

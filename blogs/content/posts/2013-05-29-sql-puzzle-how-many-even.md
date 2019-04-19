@@ -35,7 +35,7 @@ Before starting I want you to be aware that 0 is an even number From wikipedia: 
 
 Here is the table that you will use for your solution
 
-sql
+```sql
 CREATE TABLE #Puzzle(Col1 int, Col2 int, Col3 int, Col4 int, Col5 int)
 
 INSERT  #Puzzle VALUES (1,2,3,4,5)

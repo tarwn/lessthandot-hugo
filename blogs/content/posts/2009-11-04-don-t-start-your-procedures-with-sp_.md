@@ -20,7 +20,7 @@ Also, consider what would happen if Microsoft decides to ship a system stored pr
 
 **How to detect this problem:**
 
-sql
+```sql
 Select	* 
 From	Information_Schema.Routines 
 Where	Specific_Name Like 'sp[_]%'

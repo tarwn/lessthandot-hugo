@@ -32,7 +32,7 @@ There are two stored procedure that you can call to delete items related to mail
 
 If I want to delete everything older than 2 days, I can use the following proc call
 
-sql
+```sql
 DECLARE @Date datetime
 SELECT @Date = DateAdd(dd,-2,Getdate())
 
@@ -41,13 +41,13 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @Date
 
 If I want to delete all the items that have failed I can call the proc like this
 
-sql
+```sql
 EXECUTE msdb.dbo.sysmail_delete_mailitems_sp  @sent_status = 'failed' 
 ```
 
 Of course we can also combine the arguments, this will wipe out all the failed messages older than 2 days
 
-sql
+```sql
 DECLARE @Date datetime
 SELECT @Date = DateAdd(dd,-2,Getdate())
 SELECT @Date
@@ -67,7 +67,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @Date , @sent_status
 
 Here is how we will delete all events in the log older than two days
 
-sql
+```sql
 DECLARE @Date datetime
 SELECT @Date = DateAdd(dd,-2,Getdate())
 
@@ -77,13 +77,13 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @Date
 
 Here we are deleting all the events with an event type of success
 
-sql
+```sql
 EXECUTE msdb.dbo.sysmail_delete_log_sp   @event_type = 'success'
 ```
 
 And just like before, we can combine the two proc calls and wipe out everything with an event type of success and older than two days
 
-sql
+```sql
 DECLARE @Date datetime
 SELECT @Date = DateAdd(dd,-2,Getdate())
 

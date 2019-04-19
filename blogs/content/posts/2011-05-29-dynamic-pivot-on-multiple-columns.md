@@ -31,7 +31,7 @@ Let's consider the first example based on the AdventureWorks SalesOrderHeader ta
   
 This code creates the table we're going to transform – it gives us summary of orders and total due per each quarter:
 
-sql
+```sql
 USE AdventureWorks 
 
 SELECT   DATEPART(quarter,OrderDate) AS [Quarter], 

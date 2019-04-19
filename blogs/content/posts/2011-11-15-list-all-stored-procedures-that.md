@@ -23,13 +23,13 @@ tags:
 ---
 You know that you can mark a proc to run at startup in SQL Server. What you have to do is create the stored procedure in the master database and after that you have to set the startup flag to true. If your stored procedure name is spMyProc, the code would look like this.
 
-sql
+```sql
 exec sp_procoption N'spMyProc', 'startup', 'on'
 ```
 
 What if you want to list all the stored procedures on your server which are set to run on startup? Here is how you do this
 
-sql
+```sql
 SELECT name,create_date,modify_date
 FROM sys.procedures
 WHERE OBJECTPROPERTY(OBJECT_ID, 'ExecIsStartup') = 1
@@ -39,7 +39,7 @@ That query will give you the name, creation date and modification date of every 
 
 Aaron Bertrand pointed out that you can also use the is\_auto\_executed column, here is what the query would look like now, much easier to read
 
-sql
+```sql
 SELECT name,create_date,modify_date
 FROM sys.procedures
 WHERE is_auto_executed = 1

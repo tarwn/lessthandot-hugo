@@ -20,7 +20,7 @@ I want to also note, that we can pass the list of keywords as a delimited list a
 
 The code bellow illustrates the problem and the solution I found.
 
-sql
+```sql
 DECLARE @MyTable TABLE (Id int identity(1,1), Searched varchar(200))
 DECLARE @Keys    TABLE (Word varchar(200), WordId int identity(1,1))
 
@@ -64,7 +64,7 @@ Based on Nikola's comments I re-worked the test case. The last suggestion perfor
 
 See also this blog [ALL, ANY and SOME: The Three Stooges][2] 
 
-sql
+```sql
 USE [AllTests]
 GO
 

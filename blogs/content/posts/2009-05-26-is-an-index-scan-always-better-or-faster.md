@@ -29,7 +29,7 @@ Yes, you can create a clustered index on a non unique column because SQL Server 
 
 Create the following table with a clustered index
 
-sql
+```sql
 create table TestIndex (Value varchar(100) not null)
 
 create clustered index ix_TestIndex on TestIndex(Value)
@@ -37,7 +37,7 @@ create clustered index ix_TestIndex on TestIndex(Value)
 
 Now insert a million rows with all the same value
 
-sql
+```sql
 insert TestIndex
 select top 1000000 'A' from master..spt_values s1
 CROSS JOIN master..spt_values s2
@@ -45,7 +45,7 @@ CROSS JOIN master..spt_values s2
 
 Now run the following and look at the execution plan
 
-sql
+```sql
 select count(*) from TestIndex
 where Value = 'A'
 
@@ -83,7 +83,7 @@ SEEK:([Test].[dbo].[TestIndex].[Value]=[@1]) ORDERED FORWARD)</p>
 
 What about IO, is that any different?
 
-sql
+```sql
 set nocount on
 set statistics io on
 select count(*) from TestIndex
@@ -107,7 +107,7 @@ Looks the same to me
 
 Now let's take a look at the time it takes to run this
 
-sql
+```sql
 set nocount on
 set statistics time on
 select count(*) from TestIndex
@@ -132,7 +132,7 @@ CPU time = 93 ms, elapsed time = 106 ms.</em>
 
 BTW, you will also get an index seek if you specify a WHERE clause like this
 
-sql
+```sql
 select count(*) from TestIndex
 where Value > ''
 ```
@@ -141,7 +141,7 @@ So there you have it, a seek is not always faster than a scan. And yes, I know t
 
 Okay just for fun now let's insert another million rows with the value B
 
-sql
+```sql
 insert TestIndex
 select top 1000000 'b' from master..spt_values s1
 CROSS JOIN master..spt_values s2
@@ -149,7 +149,7 @@ CROSS JOIN master..spt_values s2
 
 And now run this
 
-sql
+```sql
 select count(*) from TestIndex
 where Value in( 'A','B')
 
@@ -194,7 +194,7 @@ SEEK:([Test].[dbo].[TestIndex].[Value]='A' OR [Test].[dbo].[TestIndex].[Value]='
 
 If we set the max degree of parallelism to 1 by using the MAXDOP option we get the same plan as before
 
-sql
+```sql
 select count(*) from TestIndex
 where Value = 'A'
 option(maxdop 1)

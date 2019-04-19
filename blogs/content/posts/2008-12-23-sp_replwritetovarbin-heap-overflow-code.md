@@ -25,7 +25,7 @@ In a default configuration, the sp_replwritetovarbin stored procedure is accessi
   
 Before disabling this pro read BradC's comment so that you do not break replication
 
-sql
+```sql
 execute master.dbo.sp_dropextendedproc 'sp_replwritetovarbin'
 ```
 

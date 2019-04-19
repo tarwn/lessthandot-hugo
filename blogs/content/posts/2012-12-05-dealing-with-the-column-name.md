@@ -35,7 +35,7 @@ Column name 'TEXT()' contains an invalid XML identifier as required by FOR XML; 
 
 The function looked a little like this one
 
-sql
+```sql
 CREATE FUNCTION fnGetBooks (@AuthorID INT)
  
 RETURNS VARCHAR(8000)
@@ -62,7 +62,7 @@ GO
 
 Trying to run that will give you the same error. Do you see the problem? First I determined what 0x0028 was, you can easy do this by running the following query
 
-sql
+```sql
 SELECT CHAR(0x0028)
 ```
 
@@ -70,7 +70,7 @@ As you can see, that is the left parentheses (
   
 Interesting but not really helpful, I know I wrote stuff that uses FOR XML PATH myself in the past. I ran the following query to give me a list of objects that use FOR XML PATH
 
-sql
+```sql
 SELECT * 
 FROM sys.objects
 WHERE OBJECT_DEFINITION(object_id) LIKE '%FOR%%XML%%PATH%'
@@ -80,13 +80,13 @@ Then I looked at some of those functions, the only thing I noticed is that TEXT 
 
 Instead of
 
-sql
+```sql
 SELECT  BookName + ', ' AS [TEXT()]
 ```
 
 It was
 
-sql
+```sql
 SELECT  BookName + ', ' AS [text()]
 ```
 

@@ -20,7 +20,7 @@ categories:
 ---
 When setting up and designing a merge replication publication that will utilize join filters, indexing strategies can be vital to determining design issues in the setup.  Take the below query on the AdventureWorks database.
 
-sql
+```sql
 SELECT 
 	<columns>
 FROM Person.Person
@@ -43,7 +43,7 @@ This technique of writing a query can assist in designing merge and transactiona
 
 In the article tuning for [parameterized filters][1], the index IDX\_PARTITION\_LOGIN\_GUID\_ASC was created.  This same index will help in the publication created for this article.  The definition of the index is shown below.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX [IDX_PARTITION_LOGIN_GUID_ASC]
 ON [Person].[Person] ([LoginAccount])
 INCLUDE ([rowguid])

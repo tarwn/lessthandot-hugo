@@ -46,7 +46,7 @@ No UPDATE, DELETE or INSERT should be performed without wrapping the statements 
 
 For example:
 
-sql
+```sql
 BEGIN TRY
             BEGIN TRY 
 	UPDATE MONEY_TABLE SET SALARY = 200000                                                  

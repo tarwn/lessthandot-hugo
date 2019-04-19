@@ -24,7 +24,7 @@ tags:
 ---
 There was a question I answered the other day where [someone complained that the rowcount was always 0][1]. Below is a simplified version of the query, can you tell why @SomeCount will be 0?
 
-sql
+```sql
 declare @SomeCount int
 
 select 1
@@ -41,7 +41,7 @@ The value that the @SomeCount parameter returns will be 0 because print resets t
 
 Let's take a look at another example, but instead of using print we will use a _SET @param = value_ statement. Can you guess what @SomeCount will return in the select statement?
 
-sql
+```sql
 DECLARE @SomeCount INT
  
 SELECT 1
@@ -60,7 +60,7 @@ The value that the @SomeCount parameter returns will be 1 because the _SET @para
 
 Let's look at another example, what do you think will be returned in the query below
 
-sql
+```sql
 DECLARE @SomeCount INT, @SomeOtherCount int
  
  
@@ -79,7 +79,7 @@ Books On Line explanation on that one is the following
 
 Let's take a look at another rather silly example
 
-sql
+```sql
 DECLARE @SomeCount INT
  
 SELECT 1
@@ -100,7 +100,7 @@ If you want to store the rows that were affected by A DML statement then you nee
 
 So instead of this
 
-sql
+```sql
 declare @SomeCount int
 
 select 1
@@ -115,7 +115,7 @@ select @SomeCount
 
 You do this, move the print until after you populate your variable with the @@ROWCOUNT value
 
-sql
+```sql
 declare @SomeCount int
 
 select 1
@@ -140,7 +140,7 @@ There are 3 versions of the same query below, all of them will terminate with an
   
 First let's look at code that first grabs the rowcount and then the error
 
-sql
+```sql
 declare @SomeCount int, @Error int
 
 select 1
@@ -162,7 +162,7 @@ As you can see both variables are 0, TheRowcount is 0 because the query terminat
 
 Here is another example, all we did was reversed the assignment of @SomeCount and @Error
 
-sql
+```sql
 declare @SomeCount int, @Error int
 
 select 1
@@ -182,7 +182,7 @@ In this case TheRowcount is 1 because the statement that assigned @Error reset @
 
 Finally we will look at what happens when you assign both variables with one statement
 
-sql
+```sql
 declare @SomeCount int, @Error int
 
 select 1

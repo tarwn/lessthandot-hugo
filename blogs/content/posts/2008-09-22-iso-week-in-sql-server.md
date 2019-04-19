@@ -57,7 +57,7 @@ Sometimes you need to show the ISO week in SQL server but there was no built in 
   
 Here is what the function looks like
 
-sql
+```sql
 CREATE FUNCTION ISOweek  (@DATE datetime)
 RETURNS int
 AS
@@ -80,13 +80,13 @@ GO
 
 Now run the following query on SQL server 2000 and up
 
-sql
+```sql
 select dbo.ISOweek('20071231'),datepart(wk,'20071231')
 ```
 
 If you are running SQL server 2008 then you can use DATEPART and the datepart argument isowk. Run the select statement below to see the result
 
-sql
+```sql
 select datepart(isowk,'20071231'),datepart(wk,'20071231')
 ```
 

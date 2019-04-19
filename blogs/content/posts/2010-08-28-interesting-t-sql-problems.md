@@ -131,7 +131,7 @@ Now, my first idea was to use datepart function to get year, month, day, hour po
 
 I list both of the solutions below:
 
-sql
+```sql
 declare @Sales table (SalesDateTime datetime,     SalesAmount decimal(10,2))
 insert into @Sales
 select
@@ -351,7 +351,7 @@ The next day, however, based on Hunchback's (Alejandro Mesa) comment I realized,
 
 First let's create the test table with 100K records:
 
-sql
+```sql
 CREATE TABLE [dbo].[Chromosomes](
     [Name] [varchar](10) NOT NULL,
     [Chromosome] [varchar](10) NOT NULL,
@@ -382,7 +382,7 @@ select * from Chromosomes
 
 The first solution uses cursor and takes ~27 sec. to execute:
 
-sql
+```sql
 -- Cursor based idea
 set nocount on
 declare @TimeStart datetime = getdate()
@@ -473,7 +473,7 @@ print 'Time elapsed (sec): ' + convert(varchar(30),datediff(second, @TimeStart, 
 
 Set based solution based on the quirky update idea – it takes ~5 second to execute:
 
-sql
+```sql
 set statistics time off
 set nocount on
 declare @TimeStart datetime = getdate()
@@ -581,7 +581,7 @@ ORDER BY AddressId'
 
 And here is Hunchback's (Alejandro Mesa) solution using SQL Server 2008 specific syntax:
 
-sql
+```sql
 SELECT
 	C.*
 FROM
@@ -624,7 +624,7 @@ The problem is presented in [this thread][5]. For any given table find percent o
 
 My solution for this problem is to create dynamic query using the idea from my other blog [How to get information about all databases without a loop][6]:
 
-sql
+```sql
 USE AdventureWorks 
 
 DECLARE  @TotalCount DECIMAL(10,2), 

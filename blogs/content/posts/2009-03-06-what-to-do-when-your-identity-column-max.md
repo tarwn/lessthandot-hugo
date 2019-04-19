@@ -19,7 +19,7 @@ Not yet!
 
 You do something like this:
 
-sql
+```sql
 --What's the biggest signed four-byte long:
 --select power(convert(bigint, 2), 31) - 1
 --2147483647

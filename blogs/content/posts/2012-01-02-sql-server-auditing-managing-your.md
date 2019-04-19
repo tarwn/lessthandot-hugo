@@ -34,7 +34,7 @@ Now that we have set up our audits covering failed logins on instance level and 
 
 First off, let's see what views are available at our disposal:
 
-sql
+```sql
 USE master;
 GO
 SELECT name,[object_id] FROM [sys].[all_objects]
@@ -114,7 +114,7 @@ Below is a test policy I created for the post and will monitor the audits for th
   
 5. Maximum File Size Unit ( MB, GB or TB )
 
-sql
+```sql
 -- Creates the policy condition
 
 Declare @condition_id int

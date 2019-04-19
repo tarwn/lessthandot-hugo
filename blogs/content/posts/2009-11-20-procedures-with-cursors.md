@@ -21,7 +21,7 @@ There are rare times when a cursor will outperform set based code. Not all proce
 
 **How to detect this problem:**
 
-sql
+```sql
 Select  Object_Name(Object_ID) As ProcedureName
 From    sys.sql_modules S
 Where   (Definition Like '%cursor%' or Definition Like '%while%')

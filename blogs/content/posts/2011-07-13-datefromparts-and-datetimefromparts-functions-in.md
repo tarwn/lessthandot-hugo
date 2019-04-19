@@ -57,7 +57,7 @@ _DATEFROMPARTS ( year, month, day )_
 
 Here is an example
 
-sql
+```sql
 SELECT DATEFROMPARTS ( 2011, 7, 13 ) AS Result;
 ```
 
@@ -65,7 +65,7 @@ SELECT DATEFROMPARTS ( 2011, 7, 13 ) AS Result;
 
 If you pass in all ones, you will get year 1, month 1 and day 1
 
-sql
+```sql
 SELECT DATEFROMPARTS(1,1,1)
 ```
 
@@ -73,7 +73,7 @@ SELECT DATEFROMPARTS(1,1,1)
 
 You can of course also pass in functions, so to get the first day of the current year and month, you would do this
 
-sql
+```sql
 SELECT DATEFROMPARTS(year(getdate()),month(getdate()),1)
 ```
 
@@ -91,7 +91,7 @@ _DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )_
 
 If you were to pass in the same values as for date into the DATETIMEFROMPARTS function you will get an error
 
-sql
+```sql
 SELECT DATETIMEFROMPARTS(1,1,1)
 ```
 
@@ -112,7 +112,7 @@ Console.WriteLine(date1.ToString("M/dd/yyyy h:mm:ss.fff tt"));
 
 You can do this in SQL
 
-sql
+```sql
 SELECT DATETIMEFROMPARTS ( 2011, 7, 13, 16, 32, 18, 500 ) AS Result;
 ```
 
@@ -122,7 +122,7 @@ There are a couple of things to be aware of
   
 You have to be within the valid datetime range (January 1, 1753, through December 31, 9999)
 
-sql
+```sql
 SELECT DATETIMEFROMPARTS(1600,1,1,1,1,1,500)
 ```
 
@@ -134,7 +134,7 @@ Cannot construct data type datetime, some of the arguments have values which are
 
 If you use datetime2, which goes back to year 1 then you are fine, however if you just change DATETIMEFROMPARTS to DATETIME2FROMPARTS you will have a problem, DATETIME2FROMPARTS needs also precision 
 
-sql
+```sql
 SELECT DATETIME2FROMPARTS(1600,1,1,1,1,1,500)
 ```
 
@@ -144,7 +144,7 @@ The datetime2fromparts function requires 8 argument(s).
   
 &#12288;
 
-sql
+```sql
 SELECT DATETIME2FROMPARTS(1600,1,1,1,1,1,500,3)
 ```
 

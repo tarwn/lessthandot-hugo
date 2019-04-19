@@ -24,7 +24,7 @@ Still, when I was reviewing my own code the other day, I wanted to get rid of th
 
 Here is a script that uses CTE and Window Functions to populate the date dimension.
 
-sql
+```sql
 DECLARE @startdate DATE = '20000101'
 	, @enddate DATE = '20301231' ;
 

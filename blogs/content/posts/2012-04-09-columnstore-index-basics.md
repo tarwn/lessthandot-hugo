@@ -43,7 +43,7 @@ The demonstrations will work off the table, FactInternetSales and two columns, T
 
 Run the following query before adding any indexes other than what was in place in the database when attached.
 
-sql
+```sql
 SET STATISTICS IO ON
 SELECT TotalProductCost, SalesAmount FROM [dbo].[FactInternetSales]
 ```
@@ -70,7 +70,7 @@ After reviewing this query plan, in most cases a nonclustered index would be use
 
  
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_PRODCOST_SALESAMT ON [dbo].[FactInternetSales] (TotalProductCost,SalesAmount)
 ```
 
@@ -97,7 +97,7 @@ Prepare the table for a columnstore index by dropping the nonclustered index cre
 
  
 
-sql
+```sql
 DROP INDEX [FactInternetSales].IDX_PRODCOST_SALESAMT
 ```
 
@@ -112,7 +112,7 @@ Create a columnstore index on the FactInternetSales table by using the statement
 
  
 
-sql
+```sql
 CREATE NONCLUSTERED COLUMNSTORE INDEX IDX_COLSTORE_PRODCOST_SALESAMT ON [FactInternetSales] (TotalProductCost,SalesAmount)
 ```
 
@@ -157,7 +157,7 @@ For example, a situation may arise after a data warehouse processing task that h
 
  
 
-sql
+```sql
 UPDATE [dbo].[FactInternetSales]
 SET SalesAmount = SalesAmount * .23
 WHERE SalesTerritoryKey = 6
@@ -173,7 +173,7 @@ The following error will be generated from the update and no data will be change
 
 To achieve the update statement, use the ALTER INDEX statement to disable the index.
 
-sql
+```sql
 ALTER INDEX IDX_COLSTORE_PRODCOST_SALESAMT ON [dbo].[FactInternetSales] DISABLE
 ```
 
@@ -188,7 +188,7 @@ In order to get the columnstore index enabled and available for the optimizer to
 
  
 
-sql
+```sql
 ALTER INDEX IDX_COLSTORE_PRODCOST_SALESAMT ON [dbo].[FactInternetSales] REBUILD
 ```
 
@@ -219,7 +219,7 @@ Use the same FactInternetSales table that was used earlier.  The SELECT INTO st
 
  
 
-sql
+```sql
 SELECT * INTO [FactInternetSales_VLT] FROM [FactInternetSales]
 GO
 INSERT INTO [FactInternetSales_VLT]
@@ -251,7 +251,7 @@ To show a more substantial amount of work in the execution plan with parallelism
 
  
 
-sql
+```sql
 SELECT SalesTerritoryKey, SUM(TotalProductCost), SUM(SalesAmount) FROM [dbo].[FactInternetSales_VLT]  
 GROUP BY SalesTerritoryKey
 ORDER BY SalesTerritoryKey
@@ -283,7 +283,7 @@ Create a columnstore index that contains all three columns used in the query.
 
  
 
-sql
+```sql
 CREATE NONCLUSTERED COLUMNSTORE INDEX IDX_COLSTORE_PRODCOST_SALESAMT ON [FactInternetSales_VLT] (SalesTerritoryKey,TotalProductCost,SalesAmount)
 ```
 
@@ -320,7 +320,7 @@ To run this same query using a row execution mode, use the MAXDOP query hint to 
 
  
 
-sql
+```sql
 SELECT SalesTerritoryKey, SUM(TotalProductCost), SUM(SalesAmount) FROM [dbo].[FactInternetSales_VLT]  
 GROUP BY SalesTerritoryKey
 ORDER BY SalesTerritoryKey

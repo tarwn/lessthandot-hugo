@@ -25,7 +25,7 @@ other alternate name are not supported. Specify the actual server name, 'LKFW00T
 
 I knew exactly how to fix that sense I've had to so many times when I do multiple local installs. Simply run the following to clear up the server names
 
-sql
+```sql
 USE MASTER
 GO
 SP_DROPSERVER 'LKFW00TKLKF00TKSQL05'
@@ -45,7 +45,7 @@ Urgh! Alright. I checked the cached credentials.
   
 e.g.
 
-sql
+```sql
 select * from msdb..syscachedcredentials
 ```
 OK, I'm the only one. That's good. Thinking....

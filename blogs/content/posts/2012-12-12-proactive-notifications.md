@@ -46,7 +46,7 @@ You need to scan the errorlog periodically to see if there are errors, you can a
 
 Here is a small example of what you can do if you have this in a SQL Agent job that runs every 5 minutes or so, you can of course email yourself the results, dump the result into a table that is perhaps shown on a dashboard in the office, there are many possibilities.
 
-sql
+```sql
 --This will hold the rows
 CREATE TABLE #ErrorLog (LogDate datetime, ProcessInfo VarChar(10), ErrorMessage VarChar(Max))
 
@@ -111,7 +111,7 @@ It could also be that your hardware is having issues, make sure the IOs look goo
 
 The following query will give you for all the databases the last time it was backed up or display NEVER if it wasn't backed up
 
-sql
+```sql
 SELECT s.Name AS DatabaseName,'Database backup was taken on  ' + 
 CASE WHEN MAX(b.backup_finish_date) IS NULL THEN 'NEVER!!!' ELSE
 CONVERT(VARCHAR(12), (MAX(b.backup_finish_date)), 101) END AS LastBackUpTime
@@ -140,7 +140,7 @@ We can easily show what happens when you have an open transaction, btw don't do 
 
 In 1 query window run this, replace SomeTable with a real table name.
 
-sql
+```sql
 BEGIN TRAN
 
 SELECT TOP 1 * FROM SomeTable WITH(UPDLOCK, HOLDLOCK)
@@ -150,7 +150,7 @@ You will get a message that the query completed successfully
 
 In another window run this
 
-sql
+```sql
 SELECT TOP 1 * FROM SomeTable WITH(UPDLOCK, HOLDLOCK)
 ```
 
@@ -158,7 +158,7 @@ That query won't return anything unless the first one is commited or rolled back
   
 Now run this query below, the first column should have the text AWAITING COMMAND
 
-sql
+```sql
 SELECT   sys.cmd
         ,sys.last_batch
         ,lok.resource_type
@@ -193,7 +193,7 @@ As you can see you have a blocking\_session\_id and a session\_id, this will tel
 
 Go back to that first command window and execute a rollback
 
-sql
+```sql
 ROLLBACK
 ```
 

@@ -48,20 +48,20 @@ If you are active in the SQL Server newsgroups and forums as I am, you will noti
 
 This is a very popular question and people sometimes answer that you need to use between. There is a problem with between if you happen to have a value at exactly midnight. Let us take a look, first create this table.
 
-sql
+```sql
 CREATE TABLE SomeDates (DateColumn DATETIME)
 ```
 
 Insert 2 values
 
-sql
+```sql
 INSERT INTO SomeDates VALUES('2008-10-02 00:00:00.000')
 INSERT INTO SomeDates VALUES('2008-10-01 00:00:00.000')
 ```
 
 Return everything between '2008-10-01' and '2008-10-02'
 
-sql
+```sql
 SELECT *
 FROM SomeDates
 WHERE DateColumn BETWEEN '20081001' AND '20081002'
@@ -78,7 +78,7 @@ This works without a problem, we get this returned
 
 Let's add some more dates including the time portion
 
-sql
+```sql
 INSERT INTO SomeDates VALUES('2008-10-02 00:01:00.000')
 INSERT INTO SomeDates VALUES('2008-10-02 00:00:59.000')
 INSERT INTO SomeDates VALUES('2008-10-02 00:00:01.000')
@@ -89,7 +89,7 @@ INSERT INTO SomeDates VALUES('2008-10-01 23:00:00.000')
 
 Return everything between '2008-10-01' and '2008-10-02'
 
-sql
+```sql
 SELECT *
 FROM SomeDates
 WHERE DateColumn BETWEEN '20081001' AND '20081002'
@@ -112,7 +112,7 @@ Here is where it goes wrong; for 2008-10-02 only the midnight value is returned 
 
 Now if we change 2008-10-02 to 2008-10-03 we get what we want
 
-sql
+```sql
 SELECT *
 FROM SomeDates
 WHERE DateColumn BETWEEN '20081001' AND '20081003'
@@ -138,13 +138,13 @@ ORDER BY DateColumn
 
 Now insert a value for 2008-10-03 (midnight)
 
-sql
+```sql
 INSERT INTO SomeDates VALUES('2008-10-03 00:00:00.000')
 ```
 
 Run the query again
 
-sql
+```sql
 SELECT *
 FROM SomeDates
 WHERE DateColumn BETWEEN '20081001' AND '20081003'
@@ -175,7 +175,7 @@ We get back 2008-10-03 00:00:00.000, between will return the date if it is exact
 
 If you use >= and < then you get exactly what you need 
 
-sql
+```sql
 SELECT *
 FROM SomeDates
 WHERE DateColumn >= '20081001' AND DateColumn < '20081003'
@@ -206,14 +206,14 @@ So be careful when using between because you might get back rows that you did no
 
 To strip the time portion of a datetime, you can do this and still return a datetime
 
-sql
+```sql
 Select * ,DATEADD(dd, DATEDIFF(dd, 0, DateColumn), 0) as stripped
 from SomeDates 
 ```
 
 you can also do a convert to varchar with a style value of 112 and then converting back to datetime
 
-sql
+```sql
 Select * ,convert(datetime,Convert(varchar(8),DateColumn,112)) as stripped
 from SomeDates 
 ```
@@ -249,7 +249,7 @@ First create the following 3 stored procedures
 
 Just the date searching proc
 
-sql
+```sql
 CREATE PROCEDURE FindMyData_Date
     @DataToFind DATETIME
 AS
@@ -320,13 +320,13 @@ go
 
 If you want to test just this proc, try this
 
-sql
+```sql
 exec FindMyData_Date '20070615'
 ```
 
 This is the string proc
 
-sql
+```sql
 CREATE PROCEDURE FindMyData_String
     @DataToFind NVARCHAR(4000),
     @ExactMatch BIT = 0
@@ -403,13 +403,13 @@ GO
 
 If you want to test just this proc, try this
 
-sql
+```sql
 exec FindMyData_string 'google', 0
 ```
 
 Just the number proc
 
-sql
+```sql
 CREATE PROCEDURE FindMyData_Number
     @DataToFind NVARCHAR(4000),
     @ExactMatch BIT = 0
@@ -493,13 +493,13 @@ go
 
 If you want to test just this proc, try this
 
-sql
+```sql
 exec FindMyData_Number '562', 1
 ```
 
 The mother of all procs!
 
-sql
+```sql
 CREATE PROCEDURE FindMyData
     @DataToFind NVARCHAR(4000),
     @ExactMatch BIT = 0
@@ -524,13 +524,13 @@ go
 
 Here are some proc calls to test it out
 
-sql
+```sql
 exec FindMyData 'google', 0
 exec FindMyData 1, 0
 exec FindMyData '20081201', 0
 ```
 
-sql
+```sql
 exec FindMyData 'sysobjects', 0 
 ```
 
@@ -538,7 +538,7 @@ exec FindMyData 'sysobjects', 0
 
 The fastest way to split a comma delimited string is by using a number table. If you do not have a number table in your database then use this code to create one
 
-sql
+```sql
 -- Create our Pivot table ** do this only once
     CREATE TABLE NumberPivot (NumberID INT PRIMARY KEY)
     
@@ -551,7 +551,7 @@ sql
 
 Now you can run the following code to return each of the values in the comma delimited string in its own row
 
-sql
+```sql
 DECLARE @SplitString VARCHAR(1000)
     SELECT @SplitString ='1,4,77,88,4546,234,2,3,54,87,9,6,4,36,6,9,9,6,4,4,68,9,0,5,3,2,'
      
@@ -565,7 +565,7 @@ DECLARE @SplitString VARCHAR(1000)
 
 You can also return distinct values by using DISTINCT 
 
-sql
+```sql
 DECLARE @SplitString VARCHAR(1000)
     SELECT @SplitString ='1,4,77,88,4546,234,2,3,54,87,9,6,4,36,6,9,9,6,4,4,68,9,0,5,3,2'
      
@@ -594,7 +594,7 @@ EXCEPT (2005+)
 
 First Create these two tables
 
-sql
+```sql
 CREATE TABLE testnulls (ID INT)
     INSERT INTO testnulls VALUES (1)
     INSERT INTO testnulls VALUES (2)
@@ -607,7 +607,7 @@ CREATE TABLE testnulls (ID INT)
 
 **NOT IN**
 
-sql
+```sql
 SELECT * FROM testjoin WHERE ID NOT IN(SELECT ID FROM testnulls)
 ```
 
@@ -615,7 +615,7 @@ What happened? Nothing gets returned! The reason is because the subquery returns
 
 Now run this
 
-sql
+```sql
 SELECT * FROM testjoin WHERE ID NOT IN(SELECT ID FROM testnulls WHERE ID IS NOT NULL)
 ```
 
@@ -625,7 +625,7 @@ That worked because we eliminated the NULL values in the subquery
 
 NOT EXISTS doesn't have the problem that NOT IN has. Run the following code
 
-sql
+```sql
 SELECT * FROM testjoin j
     WHERE NOT EXISTS (SELECT n.ID
     FROM testnulls n
@@ -638,7 +638,7 @@ Everything worked as expected
 
 Plain vanilla LEFT and RIGHT JOINS
 
-sql
+```sql
 SELECT j.* FROM testjoin j
     LEFT OUTER JOIN testnulls n ON n.ID = j.ID
     WHERE n.ID IS NULL
@@ -652,7 +652,7 @@ SELECT j.* FROM testjoin j
 
 OUTER APPLY is something that got added to SQL 2005
 
-sql
+```sql
 SELECT j.* FROM testjoin j
     OUTER APPLY
     (SELECT id  FROM testnulls n
@@ -664,7 +664,7 @@ SELECT j.* FROM testjoin j
   
 EXCEPT is something that got added to SQL 2005. It basically returns everything from the top table which is not in the bottom table
 
-sql
+```sql
 SELECT * FROM testjoin
     EXCEPT
     SELECT * FROM testnulls
@@ -674,7 +674,7 @@ SELECT * FROM testjoin
   
 INTERSECT returns what ever is in both tables(like a regular join)
 
-sql
+```sql
 SELECT * FROM testjoin
     INTERSECT
     SELECT * FROM testnulls
@@ -684,7 +684,7 @@ SELECT * FROM testjoin
 
 First create this table
 
-sql
+```sql
 CREATE TABLE #MaxVal(id INT,VALUE INT,SomeDate datetime)
     INSERT #MaxVal VALUES(1,1,'20010101')
     INSERT #MaxVal VALUES(1,2,'20020101')
@@ -698,7 +698,7 @@ CREATE TABLE #MaxVal(id INT,VALUE INT,SomeDate datetime)
 
 If you just need the max value from a column you can just do a group by
 
-sql
+```sql
 SELECT id,MAX(SomeDate) AS VALUE
     FROM #MaxVal
     GROUP BY id
@@ -706,7 +706,7 @@ SELECT id,MAX(SomeDate) AS VALUE
 
 If you need the whole row back then the query below is one way of doing this
 
-sql
+```sql
 SELECT t.* FROM(
     SELECT id,MAX(SomeDate) AS MaxValue
     FROM #MaxVal
@@ -739,7 +739,7 @@ That post can be found here: [Including an Aggregated Column's Related Values][1
 
 There are two built in functions that you can use in SQL Server to return the first position in a column of the character you are looking for. These functions are PATINDEX and CHARINDEX. Let's take a look at how PATINDEX works. First create this table.
 
-sql
+```sql
 CREATE TABLE #SomeTable2
 (SomeValue VARCHAR(49))
 INSERT INTO #SomeTable2 VALUES ('one two three')
@@ -752,7 +752,7 @@ INSERT INTO #SomeTable2 VALUES ('one two three four five')
 
 Now we want to return everything up to the first space and also everything after the last space. Here is how we do that
 
-sql
+```sql
 select *,left(SomeValue,patindex('% %',SomeValue)-1),
 right(SomeValue,patindex('% %',(reverse(SomeValue)))-1)
 from #SomeTable2
@@ -770,7 +770,7 @@ People have a hard time with nulls, the first problem with NULLs is that your WH
 
 First create this simple table
 
-sql
+```sql
 CREATE TABLE #SomeTableNull(SomeValue VARCHAR(49))
 INSERT INTO #SomeTableNull VALUES ('1')
 INSERT INTO #SomeTableNull VALUES ('')
@@ -780,7 +780,7 @@ INSERT INTO #SomeTableNull VALUES (NULL)
 
 To search a column your WHERE clause uses the = sign
 
-sql
+```sql
 SELECT * FROM #SomeTableNull WHERE SomeValue = ''
 SELECT * FROM #SomeTableNull WHERE SomeValue = '1'
 SELECT * FROM #SomeTableNull WHERE SomeValue = 'a'
@@ -788,13 +788,13 @@ SELECT * FROM #SomeTableNull WHERE SomeValue = 'a'
 
 Now let us try that to find a NULL value
 
-sql
+```sql
 SELECT * FROM #SomeTableNull WHERE SomeValue = NULL
 ```
 
 What just happened? We got nothing back? The reason is that you cannot compare a NULL value according to ANSI standards.
 
-sql
+```sql
 Take a look at this
 IF NULL = NULL
 print 'equal'
@@ -806,13 +806,13 @@ The bottom print statement got printed, NULL is unknown and you do not know if t
 
 The correct way to return the NULL value is the following
 
-sql
+```sql
 SELECT * FROM #SomeTableNull WHERE SomeValue IS NULL
 ```
 
 Just so that you know this, if you turn off ansi nulls then you can use =
 
-sql
+```sql
 SET ansi_nulls off
 
 
@@ -827,12 +827,12 @@ However I do not recommend doing that ever, the default is ON and I would leave 
 
 A very frequent request is how to pivot/transpose/crosstab a query. SQL server 2005 introduced PIVOT, this makes life a lot easier compared to the SQL 2000 days. so let's see how this works. First create this table
 
-sql
+```sql
 CREATE TABLE #SomeTable
 (SomeName VARCHAR(49), Quantity INT)
 ```
 
-sql
+```sql
 INSERT INTO #SomeTable VALUES ('Scarface', 2)
 INSERT INTO #SomeTable VALUES ('Scarface', 4)
 INSERT INTO #SomeTable VALUES ('LOTR', 5)
@@ -897,7 +897,7 @@ What we want is too list all the movies in a column and the sum of all quantitie
 
 First let's look how we can do this in SQL Server 2000, this BTW will also work in SQL Server 2005/2008
 
-sql
+```sql
 SELECT SUM(CASE SomeName WHEN 'Scarface' THEN Quantity ELSE 0 END) AS Scarface,
 SUM(CASE SomeName WHEN 'LOTR' THEN Quantity ELSE 0 END) AS LOTR,
 SUM(CASE SomeName WHEN 'Jaws' THEN Quantity ELSE 0 END) AS Jaws,
@@ -908,7 +908,7 @@ FROM #SomeTable
 
 In SQL Server 2005/2008 we can use PIVOT, here is how we can use it
 
-sql
+```sql
 SELECT Scarface, LOTR, Jaws, Saw,Blade
 FROM
 (SELECT SomeName,Quantity
@@ -937,7 +937,7 @@ USE tempdb
   
 go
 
-sql
+```sql
 CREATE TABLE testpadding(id VARCHAR(50),id2 INT)
 INSERT testpadding VALUES('000001',1)
 INSERT testpadding VALUES('000134',134)
@@ -947,7 +947,7 @@ INSERT testpadding VALUES('000002',2)
 
 Now run 
 
-sql
+```sql
 SELECT RIGHT('000000' + CONVERT(VARCHAR(6),id2),6)
 FROM testpadding
 ```
@@ -966,7 +966,7 @@ what about the id columns and stripping the zeroes from that?
   
 No problem do this
 
-sql
+```sql
 SELECT CONVERT(INT,id)
 FROM testpadding
 ```
@@ -983,11 +983,11 @@ FROM testpadding
 
 Beautiful right? Not so fast, insert this row
 
-sql
+```sql
 INSERT testpadding VALUES('02222222222222222222200002',2)
 ```
 
-sql
+```sql
 SELECT CONVERT(INT,id)
 FROM testpadding
 ```
@@ -998,7 +998,7 @@ The conversion of the varchar value '02222222222222222222200002' overflowed an i
 
 Okay we can do a bigint instead
 
-sql
+```sql
 SELECT CONVERT(bigINT,id)
 FROM testpadding
 ```
@@ -1009,7 +1009,7 @@ Arithmetic overflow error converting expression to data type bigint.
 
 Nope, even that doesn't fit, now what?
 
-sql
+```sql
 select replace(ltrim(replace(id,'0',' ')),' ','0')
 FROM testpadding
 ```
@@ -1034,7 +1034,7 @@ If you want to concatenate values from multiple rows into one and you want to or
 
 Let's take a look. First create these tables
 
-sql
+```sql
 USE TEMPDB
 GO
 CREATE TABLE Authors (Id INT, LastName VARCHAR(100), FirstName VARCHAR(100))
@@ -1063,7 +1063,7 @@ GO
 
 This is the old style function, it will run on SQL Server 2000 and up
 
-sql
+```sql
 CREATE FUNCTION fnGetBooks2 (@AuthorID INT)
 RETURNS VARCHAR(8000)
 AS
@@ -1083,7 +1083,7 @@ GO
 
 This is the same function using XML Path, so SQL Server 2005 and up
 
-sql
+```sql
 CREATE FUNCTION fnGetBooks (@AuthorID INT)
  
 RETURNS VARCHAR(8000)
@@ -1110,12 +1110,12 @@ GO
 
 Here are the calls to the functions
 
-sql
+```sql
 SELECT *,dbo.fnGetBooks(id) AS Books
 FROM Authors
 ```
 
-sql
+```sql
 SELECT *,dbo.fnGetBooks2(id) AS Books
 FROM Authors
 ```

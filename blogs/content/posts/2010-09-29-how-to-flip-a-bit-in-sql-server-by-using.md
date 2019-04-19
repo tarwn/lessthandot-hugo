@@ -53,7 +53,7 @@ True
 
 How can you do this in SQL Server? It is pretty easy, take a look
 
-sql
+```sql
 select ~ CONVERT(bit,0)
 select ~ CONVERT(bit,1)
 ```
@@ -64,7 +64,7 @@ The ~ symbol is the Bitwise NOT operator, here is what books on line has to say 
 
 Let's take a look at another example. What do you think will happen here?
 
-sql
+```sql
 select ~ CONVERT(tinyint,0)
 select ~ CONVERT(tinyint,1)
 ```
@@ -88,7 +88,7 @@ When you have 1 all bits are turned off except for the first bit, when you flip 
 
 If you want to use tinyint or int you can use the following code
 
-sql
+```sql
 select  CONVERT(tinyint,0) ^ 1 as [tinyint], 0^1 as [int]
 select  CONVERT(tinyint,1) ^ 1 as [tinyint], 1^1 as [int]
 ```
@@ -125,7 +125,7 @@ _If both bits are 0 or both bits are 1, the bit in the result is cleared to a va
 
 So in the end if you want to flip a bit use the Bitwise NOT operator
 
-sql
+```sql
 select ~ CONVERT(bit,0)
 select ~ CONVERT(bit,1)
 ```

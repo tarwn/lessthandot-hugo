@@ -28,7 +28,7 @@ In this post I will be using the AdventureWorks2008R2 database and I will query 
   
 Take the following query:
 
-sql
+```sql
 USE AdventureWorks2008R2;
 GO
 
@@ -46,14 +46,14 @@ We see that there is a complete scan of the Clustered Index which makes sense si
   
 As the Missing Index Hint suggests, create an index on the OrderDate column:
 
-sql
+```sql
 CREATE INDEX IX_SalesOrderHeader_OrderDate
 	ON Sales.SalesOrderHeader(OrderDate);
 GO
 ```
 Executing our first query again in another form:
 
-sql
+```sql
 SELECT OrderDate FROM Sales.SalesOrderHeader
 WHERE OrderDate >= '20060101' AND OrderDate <='20061231';
 GO
@@ -68,7 +68,7 @@ You see that the query is internally translated to <code class="codespan">SELECT
 
 Since we are looking for all the dates in 2006, you might want to consider using the YEAR function. The YEAR function returns only the YEAR part of a date(time) value:
 
-sql
+```sql
 SELECT YEAR('20060127 02:15:59')
 ```
 
@@ -80,7 +80,7 @@ Results in
 
 So the following query should make sense and is more readable then the former 2:
 
-sql
+```sql
 SELECT OrderDate FROM Sales.SalesOrderHeader
 WHERE YEAR(OrderDate) = 2006;
 GO

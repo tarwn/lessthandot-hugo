@@ -77,7 +77,7 @@ In our connection string, we just need to add the Application Name property. So 
 
 So how can we use this then? Lets check out the stored procedure change (found at [sneal.net][2]). There's a proc called “TempGetAppID” in the ASP state database. I don't know all the inner workings of this database, but its used within the database to identify the application connecting to it. So we can alter the proc to include the kind Mr. (or Mrs.) Sneal's change:
 
-sql
+```sql
 -- start change
 
     -- Use the application name specified in the connection for the appname if specified

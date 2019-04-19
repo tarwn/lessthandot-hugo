@@ -23,7 +23,7 @@ The following query compares your column names against a list of [identified key
 
 **How to detect this problem:**
 
-sql
+```sql
 Declare @Temp Table(Data VarChar(50))
 Insert Into @Temp Values('ABSOLUTE')
 Insert Into @Temp Values('ACTION')

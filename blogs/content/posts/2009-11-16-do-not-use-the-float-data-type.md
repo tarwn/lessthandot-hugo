@@ -19,7 +19,7 @@ That may seem a little harsh, and it's not always true. However, most of the tim
 
 **How to detect this problem:**
 
-sql
+```sql
 Select Table_Name + '.' + Column_Name As Name, 'Table' As ObjectType
 From   Information_Schema.Columns
 Where  Data_Type in ('Float', 'Real')

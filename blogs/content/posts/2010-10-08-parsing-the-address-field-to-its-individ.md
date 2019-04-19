@@ -24,7 +24,7 @@ This blog post is a result of the currently active thread at MSDN T-SQL forum
 
 The question of parsing a row data with bad formatted addresses often comes in the SQL newsgroups. Unfortunately, there is no universal 100% bullet-proof solution that covers all possible scenarios. However, for a common scenario of City, State Zip the parsing can be done using the following technique:
 
-sql
+```sql
 declare @t table (Address varchar(max))
 insert into @t 
 select 

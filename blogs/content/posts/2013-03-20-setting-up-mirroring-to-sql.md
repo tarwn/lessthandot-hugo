@@ -36,7 +36,7 @@ To fix this problem, the best solution is to not tear the availability group dow
 
 Right click the endpoint in SSMS and choose, script to new query window.
 
-sql
+```sql
 CREATE ENDPOINT [Hadr_endpoint] 
 	STATE=STARTED
 	AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
@@ -50,7 +50,7 @@ GO
 
 Now, on the database server that is pre-2012 that you wish to setup mirroring on to use as an upgrade method, run the ALTER statement below.
 
-sql
+```sql
 ALTER ENDPOINT [Mirroring] 
 	STATE=STARTED
 	AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
@@ -63,12 +63,12 @@ GO
 
 After running the ALTER statement, stop and start then endpoint
 
-sql
+```sql
 ALTER ENDPOINT [Mirroring] STATE=STOPPED
 ```
 
 
-sql
+```sql
 ALTER ENDPOINT [Mirroring] STATE=STARTED
 ```
 

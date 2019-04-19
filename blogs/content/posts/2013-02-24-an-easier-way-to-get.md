@@ -95,7 +95,7 @@ Did you know that you can do this in an easier way on SQL Server 2012? No, I am 
 
 Now if I want to see the parameters, all I need is
 
-sql
+```sql
 SELECT registry_key, value_name, value_data
 FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%MSSQLServerParameters';
@@ -110,7 +110,7 @@ SQLArg2	        -lC:MSSQLDATAmastlog.ldf</pre>
 
 There is more that you can do, let's see I want to know some stuff about SQL agent
 
-sql
+```sql
 SELECT  value_name, value_data
 FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SQLServerAgent%';
@@ -130,7 +130,7 @@ WorkingDirectory	C:MSSQLJOBS</pre>
 
 To see all that this dmv returns, execute the following
 
-sql
+```sql
 SELECT registry_key, value_name, value_data
 FROM sys.dm_server_registry
 ```

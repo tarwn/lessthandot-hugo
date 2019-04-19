@@ -20,7 +20,7 @@ The code below will check for columns that have ID in the name of the column whe
 
 **How to detect this problem:**
 
-sql
+```sql
 SELECT  C.TABLE_SCHEMA,C.TABLE_NAME,C.COLUMN_NAME
 FROM    INFORMATION_SCHEMA.COLUMNS C          
         INNER Join INFORMATION_SCHEMA.TABLES T            

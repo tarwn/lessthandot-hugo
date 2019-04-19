@@ -32,7 +32,7 @@ Another way to get them out there, blogging them.  On that note, today's short-
 To add to all of this and the idea, I'm tagging anyone that reads this to do the same on your own blog.  All of those quick hacks in T-SQL or even C# and so on, post them up.  It's a blog post, it's sharing and it just might save someone a lot of time.
 
 > Disclaimer: throw away scripts are just that. Untested and not run threw a ringer. Test them first 🙂</p>
-sql
+```sql
 set nocount on
 declare @int int = 1
 declare @count bigint

@@ -30,7 +30,7 @@ Please leave me a comment if you have written or have seen a trigger that is wri
 
 I am looking at the following question: [Email trigger when data is changed][1]
 
-sql
+```sql
 ALTER TRIGGER [dbo].[RVABestellingenAantalWijzigenTrigger]
 ON [dbo].[RVA_Bestellingen]  
 AFTER UPDATE

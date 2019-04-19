@@ -47,7 +47,7 @@ In preparation for setting the procedure to call the agent job, we need to creat
   
 A credential can be created with SSMS or T-SQL. With T-SQL, the CREATE CREDENTIAL statement is used.
 
-sql
+```sql
 CREATE CREDENTIAL EmpImportUser WITH IDENTITY ='EmpImportUser'
 ,SECRET = 'EmployeeImportAccount'
 GO
@@ -69,7 +69,7 @@ The Credential is then utilized in the creation of the proxy account so the step
 
 Adding a proxy can be accomplished with SSMS and T-SQL as well. With T-SQL, the sp\_add\_proxy procedure is executed with mapping to the credential.
 
-sql
+```sql
 EXEC msdb.dbo.sp_add_proxy @proxy_name=N'ImportUser',@credential_name=N'ImportUser', 
 		@enabled=1
 GO
@@ -100,7 +100,7 @@ Another variable will act as the SqlCommand of the source in the data flow task.
 
 The Execute SQL Task will be a direct input of the following statement
 
-sql
+```sql
 IF OBJECT_ID('dbo.EmpManagers') IS NULL
 BEGIN
 	CREATE TABLE [dbo].[EmpManagers](
@@ -190,7 +190,7 @@ To start a job from T-SQL the system procedure sp\_start\_job is used. Sp\_start
 
 To successfully call sp\_start\_job, we are only required the job name or job id. The remaining parameters can be left NULL. So to call the CallSSIS job the execute statement would be:
 
-sql
+```sql
 Exec msdb.dbo.sp_start_job @job_name = N'CallSSIS'
 ```
 
@@ -200,7 +200,7 @@ With any statement, error handling should be used. In this example, adding the T
 
 The complete stored procedure, CallUpEmpCheck, would be as follows
 
-sql
+```sql
 CREATE PROCEDURE [dbo].[CallUpEmpCheck] 
 (@ID INT = NULL)
 AS
@@ -223,7 +223,7 @@ Once the procedure is created we are ready to execute and test the process compl
 
 Earlier the ImportUser login was created and added to the operator role for SSIS in order to execute SSIS packages. In order to work with the tables in this process further right must be granted.
 
-sql
+```sql
 GRANT UPDATE ON dbo.[SSIS Configurations] TO [ONPNT_XPSImportUser]
 GRANT INSERT ON dbo.EmpManagers TO [ONPNT_XPSImportUser]
 GRANT SELECT ON dbo.EmpManagers TO [ONPNT_XPSImportUser]
@@ -237,7 +237,7 @@ This may seem like a lot of security for this user and in the context of Adventu
 
 Executing this setup is the final test. Use the following execute procedure statement to start the process
 
-sql
+```sql
 EXEC dbo.[CallUpEmpCheck] @ID = 5
 ```
 </p> 

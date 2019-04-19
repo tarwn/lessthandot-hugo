@@ -29,7 +29,7 @@ The first thing we need to do is load our data. There are various sources for th
 
 Once you have downloaded your data, the next step is to import it in to your database. You can use the following script to do it.
 
-sql
+```sql
 CREATE TABLE ZipCodesTemp(
     [Country] [VARCHAR](2) NULL,
     [ZipCode] [VARCHAR](5) NULL,
@@ -55,7 +55,7 @@ EXEC(@bulk_cmd)
 
 Now you will create this table
 
-sql
+```sql
 CREATE TABLE ZipCodes(
     [Country] [VARCHAR](2)  NULL,
     [ZipCode] [VARCHAR](5) NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE ZipCodes(
 
 There is at least one duplicate row in this file so we will import only uniques
 
-sql
+```sql
 INSERT  ZipCodes (Country,ZipCode,City,STATE,StateAbbreviation,County,Latitude,Longitude)
 SELECT DISTINCT Country,ZipCode,City,STATE,StateAbbreviation,County,Latitude,Longitude
 FROM  ZipCodesTemp
@@ -82,7 +82,7 @@ Our next step will be to update the GeogCol1 table with something that SQL serve
   
 Here is some sample code that displays the format of this datatype
 
-sql
+```sql
 DECLARE @h geography;
 SET @h = geography::STGeomFromText('POINT(-77.36750 38.98390)', 4326);
 SELECT @h
@@ -98,13 +98,13 @@ As you can see it is some binary data. This data is using the World Geodetic Sys
 
 To see if this is supported in your database you can run this query
 
-sql
+```sql
 SELECT * FROM sys.spatial_reference_systems
 ```
 
 And yes in my database it has a spatial\_reference\_id of 4326
 
-sql
+```sql
 SELECT * FROM sys.spatial_reference_systems
 WHERE spatial_reference_id = 4326
 ```
@@ -123,7 +123,7 @@ SET @h = geography::STGeomFromText('POINT(-77.36750 38.98390)', 4326);
 
 We need to do some things, first we update our temp column
 
-sql
+```sql
 UPDATE zipcodes 
 SET GeogColTemp= 'POINT(' + convert(varchar(100),longitude) 
 +' ' +  convert(varchar(100),latitude) +')'
@@ -131,14 +131,14 @@ SET GeogColTemp= 'POINT(' + convert(varchar(100),longitude)
 
 Now we can update out geography column
 
-sql
+```sql
 UPDATE zipcodes 
 SET GeogCol1 =  geography::STGeomFromText(GeogColTemp,4326)
 ```
 
 We can drop the temp column now
 
-sql
+```sql
 ALTER TABLE zipcodes DROP COLUMN GeogColTemp
 ```
 
@@ -148,7 +148,7 @@ Server: Msg 12008, Level 16, State 1, Line 1
   
 Table 'zipcodes' does not have a clustered primary key as required by the spatial index. Make sure that the primary key column exists on the table before creating a spatial index.
 
-sql
+```sql
 ALTER TABLE zipcodes ADD 
 	CONSTRAINT [PK_ZipCode] PRIMARY KEY  CLUSTERED 
 	(
@@ -159,14 +159,14 @@ ALTER TABLE zipcodes ADD
 
 Create the spatial index
 
-sql
+```sql
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1 
    ON zipcodes(GeogCol1);
 ```
 
 first I will show you an example to calculate the distance that you can execute
 
-sql
+```sql
 DECLARE @g geography;
 DECLARE @h geography;
 SET @h = geography::STGeomFromText('POINT(-77.36750 38.98390)', 4326);
@@ -180,7 +180,7 @@ Now I want to see all the zipcode which are within 20 miles of zipcode 10028 (ye
 
 Here is a way that will take a long time since it is not sargable, this will take about 2 seconds
 
-sql
+```sql
 SELECT h.* 
 FROM zipcodes g 
 JOIN zipcodes h on g.zipcode <> h.zipcode
@@ -191,7 +191,7 @@ WHERE g.GeogCol1.STDistance(h.GeogCol1)/1609.344 <= 20
 
 Now we all know functions on the left side of the operator are bad, here is how this is optimized, we switch the calculation to the right side of the = sign
 
-sql
+```sql
 SELECT h.* 
 FROM zipcodes g 
 JOIN zipcodes h on g.zipcode <> h.zipcode
@@ -204,7 +204,7 @@ that ran in between 15 and 60 milliseconds
 
 To find everything between 10 and 20 miles you can use this
 
-sql
+```sql
 SELECT h.* 
 FROM zipcodes g 
 JOIN zipcodes h on g.zipcode <> h.zipcode

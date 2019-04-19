@@ -29,7 +29,7 @@ tags:
 ---
 Take a look at this piece of <del>junk</del> code, what pops up in your head when you look at this?
 
-sql
+```sql
 CREATE FUNCTION [dbo].[age](@set varchar(10))
 RETURNS TABLE
 AS
@@ -57,7 +57,7 @@ It is not difficult to create such a table.
   
 Here is a sample table
 
-sql
+```sql
 CREATE TABLE Heights (	
 	HeightId int primary key not null,
 	HeightDescription varchar(20) not null,
@@ -68,7 +68,7 @@ GO
 
 Now let's insert some data
 
-sql
+```sql
 INSERT Heights values(1,'Small',0,154)
 INSERT Heights values(2,'Average',155,175)
 INSERT Heights values(3,'Tall',176,300)
@@ -76,7 +76,7 @@ INSERT Heights values(3,'Tall',176,300)
 
 Now if I want to know if 181 centimeters is considered tall or not, I can run this
 
-sql
+```sql
 SELECT HeightDescription
 FROM Heights
 WHERE 181 between StartRange and EndRange
@@ -84,14 +84,14 @@ WHERE 181 between StartRange and EndRange
 
 Let's continue by adding another table, this table will have some people and their height. 
 
-sql
+```sql
 CREATE TABLE Players(Player varchar(200),Height smallint)
 GO
 ```
 
 The following people are the shortest and tallest people on record
 
-sql
+```sql
 INSERT Players values('Robert Wadlow',272)
 INSERT Players values('John Rogan',267)
 INSERT Players values('June Rey Balawing',56)
@@ -101,7 +101,7 @@ INSERT Players values('Pauline Musters',58)
 
 Now when I want to list all the tall people, my query looks like this
 
-sql
+```sql
 SELECT p.* 
 FROM Players p 
 JOIN Heights h on p.Height between h.StartRange and h.EndRange
@@ -110,7 +110,7 @@ where h.HeightDescription = 'Tall'
 
 When I want to list all the tall people, my query looks like this
 
-sql
+```sql
 SELECT p.* 
 FROM Players p 
 JOIN Heights h on p.Height between h.StartRange and h.EndRange

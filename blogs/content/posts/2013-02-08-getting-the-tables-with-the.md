@@ -32,7 +32,7 @@ You could use updateusage but I don't bother, I just want to get a rough count
 
 Here is the query that will give you that
 
-sql
+```sql
 CREATE TABLE #temp (name varchar(100), rows int,reserved varchar(100), data varchar(100),index_size  varchar(100),unused  varchar(100))
 
 CREATE TABLE #loop (id int identity, name varchar(1000))

@@ -15,7 +15,7 @@ categories:
 ---
 Today, I came across a question in MSDN forums “How to pick 5 random records?”. In SQL Server the only consistent way I know is to use NEWID() function in the Order By Clause. 
 
-sql
+```sql
 select top 5 * from Orders  order by NEWID()
 ```
 This approach will always scan the entire table irrespective of number of rows requested. It retrieves each record in the table, appends a new GUID for each row, then based on that GUID it sorts the rows and presents the top 5 rows. Disadvantage here is it scans the entire table (if it's heap) or Clustered Index. 
@@ -24,7 +24,7 @@ After thinking for a while, I got an idea; If the table has a Unique column and 
         
 Assume a table “Orders” with an index on column “OrderId”. In order to pick 5 random rows, we can write query like this.
 
-sql
+```sql
 ;with cte as 
 (
 	select top 5 OrderID from Orders  order by NEWID()
@@ -36,7 +36,7 @@ The Inner CTE will use the index and pick the 5 random orders and outer query wi
 
 The Table we used for testing,has around 1,80,000 records. Has an Clustered index and Non-Clustered Index on the Column. For Both indexes, the only common column is “ID”. The size of these indexes is listed below.
 
-sql
+```sql
 select index_type_desc,index_level,page_count from sys.dm_db_index_physical_stats(DB_ID(),object_id('Issues'),null,null,'detailed')
 ```<div class="tables">
   <table cellpadding="1" cellspacing="1" border="1">
@@ -130,7 +130,7 @@ Non Clustered Index occupied total 306 Pages across the 2 Levels
 
 Here are the executed queries
 
-sql
+```sql
 -- Non CTE Version
 SELECT TOP 5 * FROM Issue_Dump  ORDER BY NEWID()
 

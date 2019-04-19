@@ -116,7 +116,7 @@ You can use bcp to copy data into partitioned tables by executing in parallel wi
 
 You need these options turned on
 
-sql
+```sql
 exec sp_dboption MyDb, "select into/bulkcopy/pllsort", true
 exec sp_dboption MyDb, "trunc log on chkpt", true
 ```

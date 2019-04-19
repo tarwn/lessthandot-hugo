@@ -21,7 +21,7 @@ Here is something interesting to think about
 
 Create this table and insert these 2 rows
 
-sql
+```sql
 create table TableName(id int, name varchar(50))
 insert TableName values(1,'bla')
 insert TableName values(2,'bla2')
@@ -29,7 +29,7 @@ insert TableName values(2,'bla2')
 
 Now if you try to do something like this
 
-sql
+```sql
 SELECT TOP 1 ID,Name
    FROM TableName
    ORDER BY Name
@@ -45,7 +45,7 @@ Incorrect syntax near the keyword 'UNION'._**
 
 Interestingly, this same code will work if you use it in the following matter
 
-sql
+```sql
 SELECT TOP 1 *
 FROM (
    SELECT TOP 1 ID,Name
@@ -59,7 +59,7 @@ ORDER BY ID DESC
 
 This same code also works with Common Table Expressions
 
-sql
+```sql
 WITH query AS (
     SELECT TOP 1 ID,Name
    FROM TableName

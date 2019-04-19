@@ -460,7 +460,7 @@ If the listener was not created in the initial wizard setup, perform these steps
   1. Open SSMS 2012
   2. Execute the statement below to assign the listener name and IP to the Availability Group
 
-sql
+```sql
 USE [master]
 GO
 ALTER AVAILABILITY GROUP [SQLAG]
@@ -493,7 +493,7 @@ In the following configuration, the diagram illustrates the 2-node read routing 
 
 Note: Each replica requires the secondary role to be configured in a read-intent configuration.  In this configuration, the primary replica has a secondary role of read-intent.  In the case of the automatic failover to the secondary node, read-intent connections would be routed back to the secondary node.
 
-sql
+```sql
 ALTER AVAILABILITY GROUP SQLAG
 MODIFY REPLICA ON
 N'NODE1\SHAREPOINT2013' WITH

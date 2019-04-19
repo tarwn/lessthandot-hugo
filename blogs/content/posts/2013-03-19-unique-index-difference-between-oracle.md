@@ -38,7 +38,7 @@ Today we are going to look at the difference between a unique index in Oracle an
 
 Let's start with SQL Server. First create this table and also this index
 
-sql
+```sql
 CREATE TABLE TestUnique (Id int)
 
 
@@ -47,14 +47,14 @@ CREATE UNIQUE INDEX SomeIndex ON TESTUNIQUE (ID);
 
 Insert the following two rows
 
-sql
+```sql
 INSERT INTO TestUnique VALUES(1);
 INSERT INTO TestUnique VALUES(null);
 ```
 
 Now let's insert one more NULL
 
-sql
+```sql
 INSERT INTO TestUnique VALUES(null);
 ```
 

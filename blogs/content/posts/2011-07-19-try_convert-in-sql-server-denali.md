@@ -52,7 +52,7 @@ Here is what the syntax looks like
 
 Let's take a look how this all works, I will create a table and inserts some values
 
-sql
+```sql
 create table #test(SomeCol varchar(100))
 GO
 
@@ -74,7 +74,7 @@ insert #test values('0.12345678901')
 
 Now, I will try to convert the values in the table to various data types
 
-sql
+```sql
 select SomeCol,
 	   TRY_CONVERT(float,SomeCol) as float,
 	   TRY_CONVERT(date,SomeCol) as date,
@@ -609,7 +609,7 @@ You can also use CASE or IIF to return if the value can or cannot be converted, 
 
 **CASE**
 
-sql
+```sql
 SELECT 
     CASE WHEN TRY_CONVERT(float,'bla') IS NULL 
     THEN 'Cast failed'
@@ -631,7 +631,7 @@ Cast succeeded
 
 **IIF**
 
-sql
+```sql
 SELECT IIF(TRY_CONVERT(float,'bla')IS NULL,'Cast failed','Cast succeeded')
 UNION
 SELECT IIF(TRY_CONVERT(float,'1')IS NULL,'Cast failed','Cast succeeded')
@@ -645,7 +645,7 @@ Cast succeeded
 
 Be aware that if you pass in a NULL, then NULL is returned
 
-sql
+```sql
 select  TRY_CONVERT( numeric(30,10),null)
 ```
 

@@ -30,7 +30,7 @@ For example, the table the example below is based on is a 290 million row table,
 
 **Query**
 
-sql
+```sql
 select max(recordid) from myTable where recordid > 1
 ```
 
@@ -45,7 +45,7 @@ select max(recordid) from myTable where recordid > 1
 
 **The missing index details** 
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX [<Name of Missing Index, sysname,>]
 ON [dbo].[myTable] ([recordid])
 GO
@@ -55,7 +55,7 @@ GO
 
 The index, IDX\_RECORDID\_ASC definition
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX [IDX_RECORDID_ASC] ON [dbo].[myTable]
 (
 	[recordid] ASC

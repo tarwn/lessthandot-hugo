@@ -36,7 +36,7 @@ Reference: http://msdn.microsoft.com/en-us/library/bb677315.aspx
 
 Of course seeing this means much more. Let's take a look at AdventureWorks2008. The view HumanResources.vEmployee as the following definition
 
-sql
+```sql
 SELECT 
 e.[EmployeeID],c.[Title],c.[FirstName],c.[MiddleName],c.[LastName]
 ,c.[Suffix],e.[Title] AS [JobTitle] ,c.[Phone],c.[EmailAddress]
@@ -55,7 +55,7 @@ Looking at this view's definition we can see that several columns are referred t
 
 For example, take the view vEmployee. As the definition shows, the tables Employee, Contact, EmployeeAddress, Address, StateProvince and CountryRegion. Using sys.sql\_expression\_dependencies this can also be reviewed with a short query.
 
-sql
+```sql
 SELECT 
 	OBJECT_NAME(referencing_id) AS referencing_entity_name 
     ,referenced_server_name AS server_name
@@ -74,7 +74,7 @@ Resulting in
 
 The same tables listed in the referenceing\_id and using the OBJECT\_NAME to return the objects name for more meaningful information. Reversing this, in a sense, and adding the sys.objects catalog view, we can start by looking deeper into the dependencies and focus on one of the tables the view is referencing.
 
-sql
+```sql
 SELECT 
 	depends.referenced_entity_name,
     OBJECT_NAME(depends.referencing_id) AS referencing_entity_name, 
@@ -91,7 +91,7 @@ And OBJECT_NAME(referencing_id) = N'vEmployee';
 
 We now see that relationship in the results between the table and the view in a reverse reference based on the same dependency view. This can be taken a bit further in looking to the columns that are only EmployeeID.
 
-sql
+```sql
 SELECT 
 g.referenced_schema_name,
 g.referenced_entity_name,
@@ -115,7 +115,7 @@ The results of this query can also be quickly obtained by using sys.objects, sys
   
 Take this short and the most common problem with this metadata and dependency issue. Run the statements as they are, in order.
 
-sql
+```sql
 CREATE TABLE tbl (col INT, txt varchar(5))
 GO
 
@@ -168,7 +168,7 @@ In the case where views are used heavily, or even at all, coupled by developers 
 
 Run the following sp_refreshview and recheck sysdepends
 
-sql
+```sql
 sp_refreshview 'dbo.vTbl'
 GO
 ```
@@ -177,7 +177,7 @@ The results show that sysdepends now map correctly again.
 
 To make this more usable in a large system or where many views are managed, a script like below can be used.
 
-sql
+```sql
 DECLARE @viewname NVARCHAR(255)
 DECLARE @looper INT = 1
 IF OBJECT_ID('tempdb..#viewnames') IS NOT NULL

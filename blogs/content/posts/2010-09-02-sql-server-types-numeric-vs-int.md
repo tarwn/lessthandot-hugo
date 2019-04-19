@@ -153,7 +153,7 @@ When SQL Server is asked to execute a math function (+,-,*,/), it uses a defined
 
 Let's test out implicit conversions:
 
-sql
+```sql
 /* ****** Creation of some number tables ****** */
 Create Table NumberIntTest(Num Int Identity(1,1) Primary Key)
 go
@@ -306,7 +306,7 @@ So at the end of the day, using a numeric(*,0) requires more space, provides no 
 
 There are two options for finding these columns, using a SQL query like the one below or [downloading SQLCop][6] to check for this and many other common situations.
 
-sql
+```sql
 SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, DATA_TYPE, NUMERIC_PRECISION, NUMERIC_SCALE
 FROM INFORMATION_SCHEMA.COLUMNS C
 WHERE C.DATA_TYPE IN ('numeric','decimal') AND NUMERIC_SCALE = 0 AND NUMERIC_PRECISION <= 18

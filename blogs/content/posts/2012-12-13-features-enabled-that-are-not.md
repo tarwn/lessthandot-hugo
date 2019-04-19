@@ -29,7 +29,7 @@ This is day thirteen of the [SQL Advent 2012 series][1] of blog posts. Today we 
 
 To see what these features are and if they are turned off, you can use the following query. 
 
-sql
+```sql
 SELECT name, value,value_in_use 
 FROM sys.configurations
 WHERE name IN (
@@ -49,7 +49,7 @@ The difference between _value_ and _value\_in\_use_ is that _value\_in\_use_ is 
 
 Here is an example that will turn off xp_cmdshell
 
-sql
+```sql
 EXECUTE sp_configure 'show advanced options', 1
 RECONFIGURE
 GO

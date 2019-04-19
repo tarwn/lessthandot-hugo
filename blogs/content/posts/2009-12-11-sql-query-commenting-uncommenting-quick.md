@@ -24,7 +24,7 @@ So try this!
 
 Put –/\* at the top of your query and –\*/ at the bottom:
 
-sql
+```sql
 --/* Test Query #3 (Gorp Method)
 SELECT *
 FROM Blah
@@ -36,7 +36,7 @@ Notice that the query is NOT commented out.
 
 Now, to toggle the whole query as commented or not, just uncomment the first line:
 
-sql
+```sql
 /* Test Query #3 (Gorp Method)
 SELECT *
 FROM Blah

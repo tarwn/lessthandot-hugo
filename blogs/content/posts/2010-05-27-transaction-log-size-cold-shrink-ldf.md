@@ -43,7 +43,7 @@ We can see by Size that we have the 300MB mdf and 3000MB log file.
 
 Now assuming we ran a shrinkfile on the log file, we could use DBCC SQLPERF(logspace) to check the logs free space. 
 
-sql
+```sql
 create table #temp (DatabaseName sysname, LogSize float, SpaceUsedPerc float, Status bit)
 insert #temp EXEC ('dbcc sqlperf(logspace)')
 select SpaceUsedPerc from #temp where DatabaseName = 'LOGSHIP_PUB'
@@ -61,7 +61,7 @@ The problem we will run into will be when this backup is restored. Even knowing 
 
 Best way to see is by example so let's restore the database.
 
-sql
+```sql
 RESTORE DATABASE [LOGSHIP_PUB_SECONDARY] FROM  DISK = N'C:LOGSHIP_PUB_FULL.bak' 
 	WITH  FILE = 1,  
 	MOVE N'LOGSHIP_PUB' TO N'C:LOGSHIP_PUB_SECONDARY.mdf',  
@@ -90,7 +90,7 @@ Our successful restore...
 
 Checking our size and space utilized we should see the same results from the initial database
 
-sql
+```sql
 Select [size],[name],[filename] from sysaltfiles
 ```
 <div class="image_block">

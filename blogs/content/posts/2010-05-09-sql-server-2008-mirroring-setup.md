@@ -59,7 +59,7 @@ We are going to jump right into setting the mirror up. Our first configuration w
 
 In order to ensure the databases we want to mirror are ready for mirroring itself, we need to check a few things first. Full recovery is a requirement of mirroring. This is required for logging purposes. To check that the AdventureWorks database is in Full Recovery, we can run the following
 
-sql
+```sql
 IF (DATABASEPROPERTYEX('AdventureWorks', 'RECOVERY') <> 'FULL')
  BEGIN
   ALTER DATABASE AdventureWorks SET RECOVERY FULL
@@ -71,7 +71,7 @@ If you have an existing AdventureWorks database on the SQL Server you will be us
 
 You can check for these files using sysaltfiles
 
-sql
+```sql
 SELECT * FROM master.dbo.sysaltfiles
 ```
 <div class="image_block">
@@ -82,7 +82,7 @@ Backing up the principal to get the mirror ready is the next major piece to prep
 
 To create the Full and Tail end log backups, execute the following 
 
-sql
+```sql
 BACKUP DATABASE AdventureWorks TO DISK = 'C:AdventureWorks_full_initial.bak'
 GO
 BACKUP LOG AdventureWorks TO DISK = 'C:AdventureWorks_taillog_initial.trn'
@@ -91,7 +91,7 @@ GO
 
 We can now restore the database to the mirror SQL Server. In the case of our AdventureWorks database, we have two file groups as well. These files groups pose no complication to the mirroring landscape other than they need to exist on the mirror as well as the principal. The only place we need to reference them is in the restore of the database as well.
 
-sql
+```sql
 RESTORE DATABASE AdventureWorks 
 FROM DISK = 'C:AdventureWorks_full_initial.bak'
 WITH NORECOVERY,
@@ -168,7 +168,7 @@ Once you exit the wizard, a dialog will come up asking if you want to start the 
 
 Check it out, it works!
 
-sql
+```sql
 select * from sys.database_mirroring where mirroring_guid is not null
 ```
 <div class="image_block">
@@ -189,13 +189,13 @@ Follow the steps commented to ensure each is executed on the correct instance.
 
 First, to clean up the previous mirroring session we setup from SSMS, remove mirroring by executing this statement from the principal. 
 
-sql
+```sql
 ALTER DATABASE AdventureWorks SET PARTNER OFF;
 ```
 
 Then drop the endpoints on both the principal and mirror by using 
 
-sql
+```sql
 DROP ENDPOINT [Mirroring]
 ```
 
@@ -203,7 +203,7 @@ Use the BACKUP and RESTORE scripts and steps as discussed in the beginning of th
 
 Then run the following on the instances listed in comments and the order noted
 
-sql
+```sql
 --On the principle run
 --1
 CREATE ENDPOINT [Mirroring] 

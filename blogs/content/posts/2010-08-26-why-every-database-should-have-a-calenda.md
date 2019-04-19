@@ -19,7 +19,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-sql
+```sql
 create table Calendar (
         CalendarID smallint not null primary key,
 		DateStamp date not null,
@@ -33,7 +33,7 @@ create table Calendar (
 GO
 ```
 
-sql
+```sql
 declare @d date
 select @d = '20100101'				
 	
@@ -49,11 +49,11 @@ select number + 2048 from master..spt_values
 where type = 'P') x
 ```
 
-sql
+```sql
 create index ix_cal on Calendar(DateStamp,CalendarID)
 ```
 
-sql
+```sql
 select *
  from Calendar
 where DateStamp >= '20100826'
@@ -63,7 +63,7 @@ select *
 where CalendarID >= 237
 ```
 
-sql
+```sql
 select MIN(DateStamp),MAX(DateStamp)
 from Calendar
 ```

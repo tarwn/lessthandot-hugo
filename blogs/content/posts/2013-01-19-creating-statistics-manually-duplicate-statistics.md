@@ -20,7 +20,7 @@ Something I never really would have thought much about was the creation of stati
 
 Take an example table named, testarea loaded with some test data.
 
-sql
+```sql
 CREATE TABLE testarea (colint INT, colchar varchar(155))
 GO
 INSERT INTO testarea
@@ -32,7 +32,7 @@ GO 1000
 
 At the time of this table's creation, you may already know that colint is going to be needed in a predicate form.  At this time you could create your own statistics on colint.
 
-sql
+```sql
 CREATE STATISTICS colint_cover ON [dbo].[testarea]([colint])
 GO
 ```
@@ -46,7 +46,7 @@ In the case of the colint column, we'll effectively want to have an index if it 
 
  
 
-sql
+```sql
 CREATE INDEX colint_cover ON testarea(colint)
 INCLUDE (colchar)
 GO
@@ -66,7 +66,7 @@ This frustrated me for a second given the creation of an index will automaticall
 
 For example
 
-sql
+```sql
 CREATE INDEX IDX_colint ON [dbo].[testarea]([colint])
 GO
 select * from sys.stats where object_id = OBJECT_ID('testarea')
@@ -79,7 +79,7 @@ As stated earlier, the statistics are named the same as the index.
 
 In order to create the index at this point, a different name would be needed.
 
-sql
+```sql
 CREATE INDEX idx_colint_cover ON testarea(colint)
 INCLUDE (colchar)
 GO
@@ -87,7 +87,7 @@ GO
 
 But run the sys.stats query again
 
-sql
+```sql
 SELECT * FROM sys.stats WHERE object_id = OBJECT_ID('testarea')
 GO
 ```

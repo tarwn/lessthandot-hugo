@@ -51,7 +51,7 @@ Performance Monitor (perfmon) is a tool that you can use not only for baseline c
 
 With the addition of Dynamic Management Views in SQL Server 2005+, we have a completely new way to add to baseline capturing. sys.dm\_os\_performance\_counters alone gives us a vast amount of information to work off of that was only available to perfmon. To see the types of counters that are exposed in performance\_counters, use the following query
 
-sql
+```sql
 SELECT DISTINCT [object_name]  
 FROM sys.[dm_os_performance_counters]  
 ORDER BY[object_name]; 

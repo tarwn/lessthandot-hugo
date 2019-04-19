@@ -19,7 +19,7 @@ Obviously, we cannot store the numbers in any sort of number data type, so we ne
 
 Please understand that this is not production quality code. I'm not validating the inputs and I'm being careless about the data type conversions. Also note that I use the varchar(max) data type. This implies SQL2005 code. If you want to test this on SQL2000, then you'll need to replace varchar(max) with VarChar(8000). You won't be able to calculate as many numbers, but you'll still get quite a few.
 
-sql
+```sql
 Create Function dbo.AddString(@String1 VarChar(8000), @String2 VarChar(8000))
 Returns VarChar(max)
 As
@@ -62,7 +62,7 @@ End
 ```
 The user defined function shown above allows us to add strings as though they were numbers. Now, how do we calculate the fibonacci series? Like this:
 
-sql
+```sql
 Declare @Temp Table(Id Int Identity(1,1), FIB VarChar(max))
 
 Insert Into @Temp(FIB) Values('0')

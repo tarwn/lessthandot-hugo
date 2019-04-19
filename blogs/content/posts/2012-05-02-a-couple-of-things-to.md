@@ -38,7 +38,7 @@ There is actually no problem creating a table without a clustered index (heap)
   
 If you run this code
 
-sql
+```sql
 CREATE TABLE Test(bla uniqueidentifier default newid())
 ```
 
@@ -48,7 +48,7 @@ And then refresh and expand the tables folder, you will see the following
 
 Now run the following
 
-sql
+```sql
 INSERT Test DEFAULT VALUES
 ```
 
@@ -60,7 +60,7 @@ Tables without a clustered index are not supported in this version of SQL Server
 
 Adding a clustered index and running the insert again fixes this
 
-sql
+```sql
 CREATE CLUSTERED INDEX ix_Test_bla on Test(bla)
 GO
 
@@ -71,7 +71,7 @@ The problem is that until you try to insert data in your tables, you won't see t
 
 To list all the tables in your database without a clustered index, you can use this code
 
-sql
+```sql
 SELECT t.name 
 FROM sys.tables t
 WHERE NOT EXISTS (	SELECT 1  FROM sys.indexes i
@@ -81,7 +81,7 @@ WHERE NOT EXISTS (	SELECT 1  FROM sys.indexes i
 
 BTW, temporary tables can be created without a clustered index, this runs without a problem
 
-sql
+```sql
 CREATE TABLE #bla(id int)
 INSERT #bla VALUES(1)
 ```
@@ -90,7 +90,7 @@ INSERT #bla VALUES(1)
 
 If you try to create the following global temporary table, you will get an error
 
-sql
+```sql
 CREATE TABLE ##bla(id int)
 ```
 
@@ -104,7 +104,7 @@ I admit that I have only used a global temporary table once or twice in the last
 
 You cannot use select into either in SQL Azure
 
-sql
+```sql
 SELECT * INTO Testb from Test
 ```
 
@@ -120,13 +120,13 @@ I don't think this is a big deal either, sure you will have to list all the colu
 
 Remember this table from before
 
-sql
+```sql
 CREATE TABLE Test2(bla uniqueidentifier default newid())
 ```
 
 Try making that default newsequentialid() instead of newid()
 
-sql
+```sql
 CREATE TABLE Testb(bla uniqueidentifier default newsequentialid())
 ```
 

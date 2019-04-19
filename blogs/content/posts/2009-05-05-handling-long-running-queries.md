@@ -47,7 +47,7 @@ So let's do it.
   
 First open a new query window and execute
 
-sql
+```sql
 sp_configure 'show advanced options', 1;
 GO
 RECONFIGURE;
@@ -69,7 +69,7 @@ So you've successfully kept your database server from having the life sucked out
 
 Run this now while you still have the configuration at 1
 
-sql
+```sql
 While 1=1
  Begin
   Select 'Oh boy...'
@@ -79,7 +79,7 @@ Alright, this was a given what was going to happen. It's an infinite loop so it'
 
 Now configure the governor back to 0 (default and means forever). What you can do now is try it in your session with the SET. 
 
-sql
+```sql
 SET QUERY_GOVERNOR_COST_LIMIT 1
 SELECT * FROM BIGARCETABLE
 SET QUERY_GOVERNOR_COST_LIMIT 0

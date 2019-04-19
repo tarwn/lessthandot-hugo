@@ -37,7 +37,7 @@ Stepping back from a high-level domain level security risk, take a normal instal
 
 At this stage in the installation discussed above, the SQL Server instance is somewhat secured.  An individual would have to know the sa account, and there has been no mention of XP\_CMDSHELL being enabled.   But, the installation of the application and SQL Server Express utilizes the silent install commands.  In that setup command, the sa account is in clear text.  This was found by a person looking to exploit the laptop in some way.  At this point, the person that means to cause harm to the laptop or network it has access to, can only exploit the databases on the Express instance as it is configured.  XP\_CMDSHELL is, however, can be easily enabled by performing the following reconfiguration of SQL Server.
 
-sql
+```sql
 EXEC master.dbo.sp_configure 'show advanced options', 1
 RECONFIGURE
 EXEC master.dbo.sp_configure 'xp_cmdshell', 1
@@ -49,7 +49,7 @@ With the sa account having CONTROL SERVER, this command can be run.  Once XP_CM
 
 The folder share that was mentioned earlier and part of the installation has been secured to read only by users of the laptop.  The share can easily be seen by executing the following XP_CMDSHELL statement.
 
-sql
+```sql
 xp_cmdshell 'net view \.'
 ```
 
@@ -60,7 +60,7 @@ xp_cmdshell 'net view \.'
 
 We have now exposed a local share named Imports.  Further attempts at trying to write files to the share have shown the share is indeed, secured.  That is, until the following xp_cmdshell statement is executed.
 
-sql
+```sql
 xp_cmdshell 'icacls \%COMPUTERNAME%Imports /t /grant Everyone:F'
 ```
 

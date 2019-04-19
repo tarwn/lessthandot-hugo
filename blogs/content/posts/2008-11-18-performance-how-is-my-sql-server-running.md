@@ -39,7 +39,7 @@ In the dialog browse to the location the rdl files are and select them all and c
 
 Now double click the “performace\_dashbaord\_main.rdl” and hit preview. You were probably shown either permissions errors or a nasty datatime overflow error like this, “Difference of two datetime columns caused overflow at runtime”. First, permissions you can handle. You need server view state and access to sys views. The overflow is a bit different. There is an easy fix for it. Basically it's from sessions over 24 hours in time. To fix this go into the msdb and modify the procedure MS\_PerfDashboard.usp\_Main_GetSessionInfo to this
 
-sql
+```sql
 USE [msdb]
 GO
 ALTER procedure [MS_PerfDashboard].[usp_Main_GetSessionInfo]

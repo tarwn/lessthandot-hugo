@@ -62,7 +62,7 @@ Let's get started, first we are going to created a calendar table
 
 Here is a simple way to return a bunch of dates
 
-sql
+```sql
 ;with cte as (select row_number() over(order by s1.name) as Row
 from sysobjects s1
 cross join sysobjects s2)
@@ -76,7 +76,7 @@ That will return dates between 2010-01-01 and 2023-12-31
 
 Now let's create the calendar table and insert the rows from the query above
 
-sql
+```sql
 CREATE TABLE Calendar (SomeDate date not null primary key)
 GO
 
@@ -93,7 +93,7 @@ You might want to adjust the range to start earlier or end later for your purpos
 
 Now that the calendar table is ready, let's create a fake order table with some dates
 
-sql
+```sql
 create table SomeData (OrderDate date, SomeCol int)
 insert SomeData values('2013-01-01',1)
 insert SomeData values('2013-01-01',1)
@@ -110,7 +110,7 @@ insert SomeData values('2013-01-09',1)
 
 Querying from this table.....
 
-sql
+```sql
 select OrderDate, count(somecol) as SomeCount
 from SomeData
 group by OrderDate
@@ -131,7 +131,7 @@ As you can see January 4th and January 6th are missing. Let's do a left join wit
 
 Here is the code, I will go over it a little later
 
-sql
+```sql
 -- grab min and max dates or supply range yourself
 declare @mindate date,@maxdate date
 select @mindate =min(OrderDate),@maxdate = max(OrderDate)
@@ -164,7 +164,7 @@ Running that will give you this
 
 So what are we doing in the code? Here it is again
 
-sql
+```sql
 -- grab min and max dates or supply range yourself
 declare @mindate date,@maxdate date
 select @mindate =min(OrderDate),@maxdate = max(OrderDate)
@@ -202,7 +202,7 @@ Your calendar table does not have to be that simple, you can add IsWeekday, IsWe
 
 You can also have these be computed columns, for example here we are adding a computed column that will have the week number
 
-sql
+```sql
 ALTER TABLE calendar ADD WeekNum AS DATEPART(wk,SomeDate)
 ```
 
@@ -222,7 +222,7 @@ SELECT * FROM Calendar
 
 And if you add rows, you don't have to update the column
 
-sql
+```sql
 INSERT Calendar values('20240101')
 ```
 

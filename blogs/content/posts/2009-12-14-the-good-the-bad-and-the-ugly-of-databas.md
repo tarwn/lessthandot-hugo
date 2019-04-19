@@ -37,7 +37,7 @@ So the data I was after was related to customer billing, item long descriptions,
 
 Let's take a look at my create table statement
 
-sql
+```sql
 CREATE TABLE FINDME
 (
 KEYS Char(500)
@@ -72,7 +72,7 @@ We can already see that the first issue is the CHAR data types. That isn't reall
 
 Notice the CUST5 string. This CUST5 related back to CUSTOMER which holds other customer data. How are you going to join these tables? Given a normal primary to foreign relationship you would compose a query such as
 
-sql
+```sql
 SELECT
 	a.CUSTID
 	,b.CUSTID
@@ -83,7 +83,7 @@ JOIN CUSTOMER b ON a.CUSTID = b.CUSTID
 
 Let's do it with the data as it is in our FINDME table now though. We'll assume for this exercise that CUSTID is actually stored in its own column in CUSTOMER
 
-sql
+```sql
 SELECT
 	SUBSTRING(a.KEYS,51,5)
 	,b.CUSTID
@@ -96,7 +96,7 @@ First query will obtain index seeks given the supporting indexes and even on hig
 
 Second problem is the storage of the description in multiple fields. By nature concatenation is slow. For that matter, any string manipulation in any development plan is slower than not. In order to get your long description out of this table you will be forced into the following
 
-sql
+```sql
 SELECT 
 	TXT1 + TXT2
 FROM 

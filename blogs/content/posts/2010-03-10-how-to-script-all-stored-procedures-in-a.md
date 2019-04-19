@@ -21,7 +21,7 @@ In the forums I frequent, the question of scripting all stored procedures in a d
 
 A few years ago, I asked this question myself in www.UniversalThread.com forum and Borislav Borissov helped me to come up with the following solution:
 
-sql
+```sql
 set nocount on
 DECLARE @Test TABLE (Id INT IDENTITY(1,1), Code varchar(max))
 

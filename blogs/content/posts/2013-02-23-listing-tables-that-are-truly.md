@@ -32,21 +32,21 @@ To list all the tables that are partitioned you can use the sys.partitions view.
 
 If you were to do the following, you would get back every table
 
-sql
+```sql
 SELECT partition_number,rows,object_name(object_id)
 FROM sys.partitions
 ```
 
 So what can you do? Let's take a look. First we are going to create a partitioned table in case you don't have one so that you can get the same output as me.
 
-sql
+```sql
 CREATE TABLE SalesPartitioned(YearCol SMALLINT NOT NULL,OrderID INT NOT NULL, SomeData UNIQUEIDENTIFIER DEFAULT newsequentialid())
 GO
 ```
 
 We are going to insert some data into the table
 
-sql
+```sql
 INSERT SalesPartitioned (YearCol,OrderID)
 SELECT 2007,number
 FROM master..spt_values
@@ -63,14 +63,14 @@ WHERE type = 'P'
 
 We will now add a primary key
 
-sql
+```sql
 ALTER TABLE dbo.SalesPartitioned ADD CONSTRAINT
 	PK_Sales PRIMARY KEY NONCLUSTERED (YearCol,OrderID)
 ```
 
 Now it is time to create our partition function. Here is how we will do it
 
-sql
+```sql
 CREATE PARTITION FUNCTION pfFiscalYear(SMALLINT)
 AS RANGE RIGHT FOR VALUES(2007,2008,2009)
 ```
@@ -81,7 +81,7 @@ What that does is actually create 4 partitions, one for 2007, one for 2008, one 
 
 You can verify this by using the function $partition
 
-sql
+```sql
 select 1 AS val,$partition.pfFiscalYear(1) AS partition	    UNION all
 select 2006,$partition.pfFiscalYear(2006)	UNION all
 select 2007,$partition.pfFiscalYear(2007)	UNION all
@@ -105,7 +105,7 @@ And here is the output
 
 Now that we have the partition function, we need a partition scheme. A partition scheme is used to map boundary values in partition functions to filegroups. You can have one filegroup for each year placed on a different spindle, this way you don't have to wait for the disk if all partitions are on the same spindle. For the sake of simplicity we only have one filegroup. Here is how to create the partition scheme
 
-sql
+```sql
 CREATE PARTITION SCHEME psFiscalYear
 AS PARTITION pfFiscalYear ALL TO ([PRIMARY])
 ```
@@ -114,14 +114,14 @@ _Partition scheme 'psFiscalYear' has been created successfully. 'PRIMARY' is mar
 
 Now we will add a clustered index and partition this on the YearCol column, the syntax looks like this
 
-sql
+```sql
 CREATE CLUSTERED INDEX IX_Sales ON SalesPartitioned(YearCol,OrderID)
 ON psFiscalYear(YearCol)
 ```
 
 Now it is time to list all the tables that are partitioned. Here is how you do it
 
-sql
+```sql
 SELECT partition_number,rows,object_name(object_id)
 FROM sys.partitions s
 WHERE EXISTS(SELECT NULL 

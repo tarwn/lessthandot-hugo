@@ -22,7 +22,7 @@ When you use the decimal (or numeric) data type, you should always identity the 
 
 SQL 2005 +
 
-sql
+```sql
 -- SQL 2005 +
 Select	Name 
 From	sys.sysobjects  
@@ -34,7 +34,7 @@ Order By Name
 ```
 SQL 2000
 
-sql
+```sql
 SELECT  Name
 FROM    (
         SELECT S.Name, C.TEXT

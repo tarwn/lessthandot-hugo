@@ -40,7 +40,7 @@ Let's duplicate this here with some code that you can run. Make sure that you ru
 
 First create this stored procedure, do not close this window after creation
 
-sql
+```sql
 CREATE PROCEDURE prTestTemp
 AS
 
@@ -53,7 +53,7 @@ GO
 
 In the same window now create the following temp table
 
-sql
+```sql
 CREATE TABLE #temp (id int, id2 int)
 INSERT #temp VALUES(1,2)
 
@@ -62,7 +62,7 @@ SELECT * FROM #temp
 
 Now run the procedure
 
-sql
+```sql
 EXEC prTestTemp
 ```
 
@@ -74,13 +74,13 @@ Column name or number of supplied values does not match table definition._
 
 Drop the table and we will try again
 
-sql
+```sql
 DROP TABLE #temp
 ```
 
 Run the procedure again
 
-sql
+```sql
 EXEC prTestTemp
 ```
 
@@ -88,7 +88,7 @@ This time there was no error
 
 Let's do another experiment, create the table again
 
-sql
+```sql
 CREATE TABLE #temp (id int, id2 int)
 INSERT #temp VALUES(1,2)
 
@@ -97,7 +97,7 @@ SELECT * FROM #temp
 
 Now, let's try modifying the procedure, change create to alter and run it again
 
-sql
+```sql
 ALTER PROCEDURE prTestTemp
 AS
 
@@ -120,7 +120,7 @@ The reason you run into this because the temporary table is local to your connec
 
 BTW, doing something like this is no problem
 
-sql
+```sql
 CREATE PROCEDURE prTestTemp2
 AS
  

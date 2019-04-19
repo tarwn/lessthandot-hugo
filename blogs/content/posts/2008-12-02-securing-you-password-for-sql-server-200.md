@@ -48,7 +48,7 @@ Here are the steps in order
 
 7. You can select on it to see by using the DecryptByKey function and then ALWAYS close your key
 
-sql
+```sql
 CREATE TABLE SSPasswordList (EncrypPwdPhrase VARBINARY(255),UserN Varchar(255), SystemN Varchar(255), SystemType varchar(3))
 Go
 CREATE CERTIFICATE PasswordCert 
@@ -76,7 +76,7 @@ Go
 ```
 Let's make this easy for us to use now. create these two proc's in your DBA database
 
-sql
+```sql
 Create Proc [dbo].[GrabPassword] (@userN varchar(610))
 As
 SET NOCOUNT ON

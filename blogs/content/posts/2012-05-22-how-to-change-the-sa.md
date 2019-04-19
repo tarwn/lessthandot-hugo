@@ -35,7 +35,7 @@ The easiest way is to login to the server as sa or any other account that has su
 
 here is what the script looks like
 
-sql
+```sql
 USE [master]
 GO
 ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword'
@@ -50,7 +50,7 @@ Password validation failed. The password does not meet Windows policy requiremen
 
 There are two things you can do, the smarter thing would be to pick a complex password with some digits and some characters that are not alphanumeric. Or you can shoot yourself in the foot by turning the check off
 
-sql
+```sql
 USE [master]
 GO
 ALTER LOGIN [sa] WITH PASSWORD=N'NewPassword', CHECK_POLICY =OFF
@@ -62,7 +62,7 @@ Login failed for user 'sa'. Reason: The account is disabled. (Microsoft SQL Serv
 
 To enable the account, all you have to do is the following
 
-sql
+```sql
 ALTER LOGIN [sa] ENABLE
 GO
 ```
@@ -71,7 +71,7 @@ GO
 
 And if you are old school, you can also do the following, thanks to [Aaron Bertrand][3] for this
 
-sql
+```sql
 EXEC sp_password N'old password', N'new password', N'sa';
 ```
 

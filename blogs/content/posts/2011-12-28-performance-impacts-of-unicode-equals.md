@@ -299,7 +299,7 @@ The script for these results was heavily based on the one in Michael's post abov
 
 **Setup Sample Data Table**
 
-sql
+```sql
 -----------------------------------
 -- Prep - Generate Sample Data
 
@@ -333,7 +333,7 @@ And here is the test code:
 
 **Setup Sample Data Table**
 
-sql
+```sql
 -----------------------------
 -- Test
 

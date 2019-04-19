@@ -45,7 +45,7 @@ If you are creating a new database, you can specify the filegroups in the CREATE
 
 Here, I will create a database named FilegroupTest. It has two filegroups, **PRIMARY** and **FGTestFG2**. There are two data files, **FGTest1_dat**, assigned to **PRIMARY**; and **FGTest2_dat**, assigned to **FGTestFG2**. 
 
-sql
+```sql
 CREATE DATABASE FilegroupTest 
 ON PRIMARY 
 (NAME = FGTest1_dat, 
@@ -60,14 +60,14 @@ LOG ON
 
 If you have an existing database, use can use the ALTER DATABASE statement to add a filegroup. I'm going to add **FGTestFG3** to **FilegroupTest**. 
 
-sql
+```sql
 ALTER DATABASE FilegroupTest 
 ADD FILEGROUP FGTestFG3
 ```
 
 I can view the filegroups in a database using sys.filegroups. 
 
-sql
+```sql
 USE FilegroupTest;
 GO
 SELECT * 
@@ -79,7 +79,7 @@ FROM sys.filegroups
 
 To create a new file, **FGTest3_dat**, and assign it to **FGTestFG3**, I'll use ALTER DATABASE again. 
 
-sql
+```sql
 ALTER DATABASE FilegroupTest 
 ADD FILE 
 (NAME = FGTest3_dat, 
@@ -89,7 +89,7 @@ TO FILEGROUP FGTestFG3
 
 Right now, my PRIMARY filegroup is the default filegroup. I can change that to **FGTestFG3** using ALTER DATABASE. 
 
-sql
+```sql
 ALTER DATABASE FilegroupTest 
 MODIFY FILEGROUP FGTestFG3 DEFAULT  
 ```
@@ -108,7 +108,7 @@ Note: You can move a heap (a table with no clustered index). To do so, you would
 
 First, I create a table with no indexes. 
 
-sql
+```sql
 CREATE TABLE StuffAndJunk
 (StuffHere INT NOT NULL, 
  JunkHere INT NOT NULL)
@@ -116,7 +116,7 @@ CREATE TABLE StuffAndJunk
 
 I can use sp_help to see which filegroup this was created on. It was created on the default, **FGTestFG3**. 
 
-sql
+```sql
 exec sp_help 'dbo.StuffAndJunk'
 ```
 <div class="image_block">
@@ -125,7 +125,7 @@ exec sp_help 'dbo.StuffAndJunk'
 
 I can also return this information using the sys.filegroups, sys.allocation_units and sys.partitions tables. 
 
-sql
+```sql
 SELECT PA.object_id, FG.name 
 FROM sys.filegroups FG 
 	INNER JOIN sys.allocation_units AU ON AU.data_space_id = FG.data_space_id 
@@ -143,7 +143,7 @@ Note: It is possible to create a table in a secondary filegroup, move the data f
 
 I'm going to add a clustered index to the table. When I do this, I specify which filegroup I want it created on. I create **StuffJunk** on **FGTestFG2**. 
 
-sql
+```sql
 CREATE CLUSTERED INDEX StuffJunk 
 	ON StuffAndJunk (StuffHere, JunkHere) 
 	ON FGTestFG2
@@ -157,7 +157,7 @@ If I run my sys.filegroups query again, I can see I have the same object_id, but
 
 How would I move a table with an existing clustered index? Let's move **StuffAndJunk** back to **FGTestFG3**. I would issue a create clustered index command with the option to drop existing, like this. 
 
-sql
+```sql
 CREATE CLUSTERED INDEX StuffJunk 
 	ON StuffAndJunk (StuffHere, JunkHere) 
 	WITH (DROP_EXISTING = ON)

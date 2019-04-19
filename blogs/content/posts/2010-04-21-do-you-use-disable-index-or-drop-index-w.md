@@ -23,13 +23,13 @@ There are certain operations where dropping an index, loading data and then agai
 
 Let's take a look, first create this table
 
-sql
+```sql
 Create table TestIndex (id int, somecol varchar(20))
 ```
 
 Insert a little bit of data
 
-sql
+```sql
 insert into TestIndex
   select number,CONVERT(varchar(20),getdate(),100)
   from master..spt_values
@@ -38,13 +38,13 @@ insert into TestIndex
 
 Create a nonclustered index
 
-sql
+```sql
 create index ix_TestIndex on TestIndex(id,somecol)
 ```
 
 Now let's disable this index
 
-sql
+```sql
 ALTER INDEX ix_TestIndex
   ON TestIndex
   DISABLE
@@ -52,7 +52,7 @@ ALTER INDEX ix_TestIndex
 
 Now when we run our query against the table and look at the plan we get a table scan
 
-sql
+```sql
 set showplan_text on
   go
   select * from TestIndex
@@ -66,7 +66,7 @@ set showplan_text on
 
 Now let's rebuild the index again
 
-sql
+```sql
 ALTER INDEX ix_TestIndex
   ON TestIndex
   REBUILD
@@ -74,7 +74,7 @@ ALTER INDEX ix_TestIndex
 
 Now we will run the same query again
 
-sql
+```sql
 set showplan_text on
   go
   select * from TestIndex
@@ -90,7 +90,7 @@ As you can see, it uses the index again
 
 Now let's drop this index
 
-sql
+```sql
 drop index TestIndex.ix_TestIndex
 ```
 
@@ -98,13 +98,13 @@ drop index TestIndex.ix_TestIndex
   
 Let's take a look, first create this clustered index
 
-sql
+```sql
 create clustered index ix_TestIndexClustered on TestIndex(id,somecol)
 ```
 
 Now let's disable this clustered index
 
-sql
+```sql
 ALTER INDEX ix_TestIndexClustered
   ON TestIndex
   DISABLE
@@ -112,7 +112,7 @@ ALTER INDEX ix_TestIndexClustered
 
 And now when we run the query from before
 
-sql
+```sql
 set showplan_text on
   go
   select * from TestIndex
@@ -132,7 +132,7 @@ As you can see while a clustered index is disabled the data is unavailable. Not 
   
 So this query
 
-sql
+```sql
 insert into TestIndex
 select 2,'Bla'
 ```
@@ -145,7 +145,7 @@ The query processor is unable to produce a plan because the index 'ix_TestIndexC
 
 If we rebuild the clustered index again
 
-sql
+```sql
 ALTER INDEX ix_TestIndexClustered
   ON TestIndex
   REBUILD
@@ -153,7 +153,7 @@ ALTER INDEX ix_TestIndexClustered
 
 And if we run this query again
 
-sql
+```sql
 set showplan_text on
   go
   select * from TestIndex

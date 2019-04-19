@@ -24,7 +24,7 @@ So lets watch it happen
 
 create a db 
 
-sql
+```sql
 CREATE DATABASE [dr_db] ON PRIMARY 
 ( NAME = N'dr_db', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL10.LKF00TKSQL08MSSQLDATAdr_db.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
 LOG ON 
@@ -33,7 +33,7 @@ GO
 ```
 Here is what we'll do then. Run these line for line
 
-sql
+```sql
 BACKUP DATABASE dr_db TO DISK='D:dr_db_full.bak' WITH INIT
 BACKUP LOG dr_db TO DISK='D:db_dr_log1.trn'
 CREATE TABLE dr_db.dbo.tbl (col1 int)
@@ -65,7 +65,7 @@ You can see a shrinkfile in the same situation below work out as such
 
 Same database and we'll create another named dr_db2
 
-sql
+```sql
 BACKUP DATABASE dr_db TO DISK='D:dr_db_full.bak' WITH INIT
 BACKUP LOG dr_db TO DISK='D:db_dr_log1.trn'
 CREATE TABLE dr_db.dbo.tbl (col1 int)
@@ -88,7 +88,7 @@ BACKUP LOG dr_db TO DISK='D:db_dr_log5.trn'
 ```
 Now let's see a RESTORE
 
-sql
+```sql
 RESTORE DATABASE [dr_db2] FROM DISK = N'D:dr_db_full.bak' WITH FILE = 1, MOVE N'dr_db' TO N'D:SQLDATASQLSYSDATAMSSQL.1MSSQLDATAdr_db2.mdf', MOVE N'dr_db_log' TO N'D:SQLDATASQLSYSDATAMSSQL.1MSSQLDATAdr_db2_log.ldf', NORECOVERY, NOUNLOAD, REPLACE, STATS = 10
 RESTORE DATABASE [dr_db2] FROM DISK = N'D:dr_db_diff1.bak' WITH NORECOVERY
 RESTORE LOG [dr_db2] FROM DISK = N'D:db_dr_log2.trn' WITH NORECOVERY
@@ -99,7 +99,7 @@ RESTORE DATABASE dr_db2 WITH RECOVERY
 ```
 Let's test it to see if my “tbl” table has data from 1 to 11
 
-sql
+```sql
 SELECT * FROM tbl
 ```
 And it does 🙂 Now you're a happy DBA

@@ -28,7 +28,7 @@ categories:
 The first stage to tuning a query is the coding. Take a look at the query in listing 1
 
 > Note: The query above is utilizing three tables pulled from the database AdventureWorks2012. To create these tables, import them without any indexes into another database. Use a SELECT INTO or [any other number of import methods][1] to build the tables. </p>
-sql
+```sql
 SELECT 
 SUM(OrderQty) AS TotalQuantity
 ,salesman.LastName 
@@ -86,7 +86,7 @@ Sargable queries come down to search argument capable, or effectively utilizing 
 
 A good rule to go by out of the box is, anything that manipulates the left side of the comparison will indicate a non-sargable situation. In listing 1, the function Year on the column ShipDate to the left, comparing 2005 to the resulting value, causes this to be a non-sargable predicate – a predicate that cannot fully take advantage of indexing. The YEAR() function is used in this example due to the high usage of it just as shown in listing 1. Luckily, there is an effective way to write this in a sargable manner.
 
-sql
+```sql
 WHERE hdr.ShipDate >= '2005-01-01' AND hdr.ShipDate <= '2005-12-31'
 ```
 
@@ -105,7 +105,7 @@ Take the example below.
 
 Table tempdb_usage has the following schema and contains 2 million rows of data.
 
-sql
+```sql
 CREATE TABLE [dbo].[tempdb_usage](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[bla1] [varchar](36) NULL,
@@ -127,7 +127,7 @@ The data is as shown in figure 5
 
 If the following query was executed against this table to return all the rows in column bla1 that are similar to the parameter string of “data”
 
-sql
+```sql
 SELECT bla1 FROM dbo.[tempdb_usage]
 WHERE bla1 LIKE 'bla1 data %'
 ```
@@ -142,7 +142,7 @@ The above query would result in a plan that effectively scans on the index creat
 
 If this were an OLAP setup, the query and resulting plan would typically be acceptable. However, if the reporting needs that caused this query to be written and utilized also required the data to be sorted by columns, the needs of the query would drastically change. To take a close look at what sorting would do to the tempdb utilization to fulfill the query, we can look at sys.dm\_io\_virtual\_file\_stats. 
 
-sql
+```sql
 SELECT num_of_reads,num_of_writes FROM sys.dm_io_virtual_file_stats(DB_ID('tempdb'), 1)
 ```
 
@@ -161,7 +161,7 @@ The results above are from the query in listing 4 being executed. To get a good 
 
 This shows us that tempdb was written to with a factor of 5 given the query from listing 4. Overall, this is a low number and we could live with it on a lot of instances. To show how sorting in SQL Server could drastically change this utilization, execute the query in listing 6. 
 
-sql
+```sql
 SELECT bla1 FROM dbo.[tempdb_usage]
 WHERE bla1 LIKE 'bla1 data %'
 ORDER BY bla2
@@ -239,7 +239,7 @@ Some basics of index creation: Columns in an output list are typically better su
 
 With these basic steps, the following indexes can be created.
 
-sql
+```sql
 CREATE CLUSTERED INDEX IDX_SalesOrderID ON Sales.SalesOrderHeader (SalesOrderID)
 CREATE NONCLUSTERED INDEX IDX_SalesPersonID ON Sales.SalesOrderHeader (SalesPersonID)
 CREATE NONCLUSTERED INDEX IDX_COVER_HEADER ON Sales.SalesOrderHeader (ShipDate) 
@@ -274,7 +274,7 @@ Following the same effective steps to create indexes, cover the remaining table 
 
 Person.Person
 
-sql
+```sql
 CREATE CLUSTERED INDEX IDX_BusinessEntityID ON Person.Person (BusinessEntityID)
 CREATE NONCLUSTERED INDEX IDX_FirstLastName ON Person.Person (FirstName,LastName)
 ```
@@ -285,7 +285,7 @@ CREATE NONCLUSTERED INDEX IDX_FirstLastName ON Person.Person (FirstName,LastName
 
 Sales.SalesOrderDetail
 
-sql
+```sql
 CREATE CLUSTERED INDEX IDX_SalesOrderID_DTL ON Sales.SalesOrderDetail (SalesOrderID)
 CREATE NONCLUSTERED INDEX IDX_OrderQTY ON Sales.SalesOrderDetail (OrderQTY)
 ```

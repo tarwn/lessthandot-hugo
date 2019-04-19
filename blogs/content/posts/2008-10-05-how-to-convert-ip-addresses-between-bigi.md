@@ -44,7 +44,7 @@ add the fourth value + (256 \* 256 \* 256) =16777216
 
 So in our case the select would be
 
-sql
+```sql
 select
 1 +
 0 * 256 +
@@ -58,7 +58,7 @@ which is
 
 So to convert from IP Adress to integer is very simple, you use PARSENAME to split it up and do the math. Here is the function.
 
-sql
+```sql
 CREATE FUNCTION dbo.IPAddressToInteger (@IP AS varchar(15))
 RETURNS bigint
 AS
@@ -78,7 +78,7 @@ It is the reversed of what we did before (surprise) so instead of multiplying we
   
 Here is the funcion
 
-sql
+```sql
 CREATE FUNCTION dbo.IntegerToIPAddress (@IP AS bigint)
 RETURNS varchar(15)
 AS
@@ -105,7 +105,7 @@ END
 
 Now let's try this out, first run this
 
-sql
+```sql
 select dbo.IPAddressToInteger('127.0.0.1')
 ```
 
@@ -113,7 +113,7 @@ That returns 2130706433
   
 Now run this
 
-sql
+```sql
 select dbo.IntegerToIPAddress(2130706433)
 ```
 

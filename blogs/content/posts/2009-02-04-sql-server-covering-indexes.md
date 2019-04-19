@@ -22,7 +22,7 @@ There is a 'type' of index that performs better than a clustered index. You can 
 
 For example:
 
-sql
+```sql
 Create Table PeopleTest(Id int Identity(1,1), Name VarChar(20), FavoriteColor VarChar(20))
 
 Create Clustered Index idx_PeopleTest_Id On PeopleTest(id)
@@ -39,7 +39,7 @@ Insert Into PeopleTest(Name, FavoriteColor) Values('Denis',  'Black')
 
 Now, let's look at some queries.
 
-sql
+```sql
 Select FavoriteColor
 From   PeopleTest
 Where  Id = 2
@@ -48,13 +48,13 @@ This will return 'Green'. Simple, right. Well... here's what's happening behind 
 
 Now, add this nonclustered index:
 
-sql
+```sql
 Create nonclustered index idx_PeopleTest_Id_FavoriteColor On PeopleTest(Id, FavoriteColor)
 ```
 
 Notice that there are 2 columns in the index (Id and FavoriteColor). Now, let's run the exact same query and look at the execution plan again.
 
-sql
+```sql
 Select FavoriteColor
 From   PeopleTest
 Where  Id = 2
@@ -63,7 +63,7 @@ This time, you will see that there is an index seek (instead of clustered index 
 
 Now, let's look at another query.
 
-sql
+```sql
 Select Name, FavoriteColor
 From   PeopleTest
 Where  Id = 2
@@ -72,7 +72,7 @@ This time, when you run the query, it goes back to a clustered index seek (becau
 
 Ok, so you're probably thinking, I can create an index that has all 3 columns to improve performance, right? The answer is, yes, but you need to be careful about it too. If you create this index...
 
-sql
+```sql
 Create nonclustered index idx_PeopleTest_Name_Id_FavoriteColor On PeopleTest(Name, Id, FavoriteColor)
 ```
 
@@ -88,7 +88,7 @@ John                 2           Green</pre>
 
 Since the where clause is looking for Id = 2, it would need to examine every row in the index to find it. For this query, the covering index would look like this:
 
-sql
+```sql
 Create nonclustered index idx_PeopleTest_Id_Name_FavoriteColor On PeopleTest(Id, Name, FavoriteColor)
 ```
 

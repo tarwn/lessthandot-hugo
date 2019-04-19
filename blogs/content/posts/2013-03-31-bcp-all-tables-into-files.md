@@ -41,13 +41,13 @@ Sometimes you want to dump the data from all the tables in a database into files
   
 The query to grab all the names is
 
-sql
+```sql
 SELECT name FROM sys.tables
 ```
 
 However if you use schemas then that won't work, you need to do the following
 
-sql
+```sql
 SELECT SCHEMA_NAME(SCHEMA_ID),name 
 FROM sys.tables
 ```
@@ -58,7 +58,7 @@ The reason for this is that you can have the same table name in different schema
   
 Sometimes you have table names that have spaces in them or start perhaps with a number. If you have tables like that, you have to put brackets around it. One way to put brackets around tables names is to just do something like this `'[' + name + ']'` another way is to use the QUOTENAME function
 
-sql
+```sql
 SELECT   QUOTENAME(SCHEMA_NAME(SCHEMA_ID))+ '.'
 +  QUOTENAME(name) FROM sys.tables
 ```
@@ -91,7 +91,7 @@ If you have to give the files to be imported on a Linux/unix systems then you wa
   
 In that case you end up with something like this
 
-sql
+```sql
 SELECT    REPLACE(SCHEMA_NAME(schema_id),' ','') + '_' 
 +  REPLACE(name,' ','') 
 +  QUOTENAME(name) FROM sys.tables
@@ -105,7 +105,7 @@ You can use password and username to connect to SQL Server or you can use a trus
 
 Here is the complete query
 
-sql
+```sql
 SELECT 'EXEC xp_cmdshell ''bcp '           --bcp
 +  QUOTENAME(DB_NAME())+ '.'               --database name
 +  QUOTENAME(SCHEMA_NAME(SCHEMA_ID))+ '.'  -- schema
@@ -119,7 +119,7 @@ FROM sys.tables
 
 Running that query will give you something like the following
 
-sql
+```sql
 EXEC xp_cmdshell 'bcp [AdventureWorks2012].[Production].[ScrapReason] out c:tempProduction_ScrapReason.txt -T -c'
 
 EXEC xp_cmdshell 'bcp [AdventureWorks2012].[HumanResources].[Shift] out c:tempHumanResources_Shift.txt -T -c'
@@ -149,7 +149,7 @@ NULL
 
 Sometines you don't want to see that output,In that case we need to [suppress xp_cmdshell output][1], you do this by adding ,no_output at the end
 
-sql
+```sql
 SELECT 'EXEC xp_cmdshell ''bcp '           --bcp
 +  QUOTENAME(DB_NAME())+ '.'               --database name
 +  QUOTENAME(SCHEMA_NAME(SCHEMA_ID))+ '.'  -- schema
@@ -163,7 +163,7 @@ FROM sys.tables
 
 Now you get something like the following
 
-sql
+```sql
 EXEC xp_cmdshell 'bcp [AdventureWorks2012].[Production].[ScrapReason] out c:tempProduction_ScrapReason.txt -T -c',no_output
 
 EXEC xp_cmdshell 'bcp [AdventureWorks2012].[HumanResources].[Shift] out c:tempHumanResources_Shift.txt -T -c',no_output
@@ -181,7 +181,7 @@ If you don't want to use xp\_cmdshell, you can also dump the results without the
 
 That query would look like this
 
-sql
+```sql
 SELECT 'bcp '           --bcp
 +  QUOTENAME(DB_NAME())+ '.'               --database name
 +  QUOTENAME(SCHEMA_NAME(SCHEMA_ID))+ '.'  -- schema

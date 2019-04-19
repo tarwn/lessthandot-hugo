@@ -23,7 +23,7 @@ The CSS SQL Server Engineers have posted an interesting post, I myself don't hav
 
 The following pattern typically stems from an old practice used in SQL 4.x and 6.x days, before IDENTITY was introduced.
 
-sql
+```sql
 begin tran 
 declare @iVal int
 
@@ -42,7 +42,7 @@ This can be a dangerous construct. Assume that the query is cancelled (attention
 
 One Statement Fix
 
-sql
+```sql
 declare @iVal int
 
 update CounterTable 

@@ -63,7 +63,7 @@ Eventually, you will probably want to stop this trace. Collecting an infinite am
 
 First, you'll need the trace ID. 
 
-sql
+```sql
 SELECT * FROM :: fn_trace_getinfo(default)
 ```
 
@@ -93,7 +93,7 @@ The status options are:
 
 I determine that the trace I just started has the ID of 2. To stop the trace, I use sp\_trace\_setstatus. The syntax is 
 
-sql
+```sql
 sp_trace_setstatus traceid, statusid
 ```
 
@@ -107,13 +107,13 @@ The status options are:
 
 So, to stop traceid 2, I run this command: 
 
-sql
+```sql
 sp_trace_setstatus 2, 0
 ```
 
 I can verify it has been stopped by re-running 
 
-sql
+```sql
 SELECT * FROM :: fn_trace_getinfo(default) 
 ```
 

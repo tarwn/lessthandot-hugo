@@ -34,7 +34,7 @@ Given the names in the format of LastName (Suffix), FirstName (MiddleInitial) (w
 
 Here is the script that does it using my favorite CROSS APPLY technique and step by step approach:
 
-sql
+```sql
 /*create table #temp 
 ( 
     FULLNAME        VARCHAR(100), 

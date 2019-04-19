@@ -26,7 +26,7 @@ tags:
 ---
 Sometimes you want to quickly see if there are any databases or logs being backed up or restored at this moment. I blogged at one point how you can check how much longer the restore will take here: [How much longer will the SQL Server database restore take][1]. The other day someone wanted to know this information for all databases on a server, he wanted to know this for restores as well as backups. The query below will give you that info as well as the percentage that is complete for each operation
 
-sql
+```sql
 SELECT 
     d.PERCENT_COMPLETE AS [%Complete],
     d.TOTAL_ELAPSED_TIME/60000 AS ElapsedTimeMin,

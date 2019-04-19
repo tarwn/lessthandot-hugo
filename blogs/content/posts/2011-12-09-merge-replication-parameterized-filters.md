@@ -24,7 +24,7 @@ Merge Replication offers _data partitions_, <ins datetime="2011-12-06T10:03" cit
 
 For instance, if we altered the table Person.Person in the database AdventureWorks to <ins datetime="2011-12-06T10:03" cite="mailto:Theodore%20Krueger"></ins>support of Merge Replication, we would add a column named, LoginAccount.  This new column would hold user domain accounts (DOMAINusername).  A parameterized filter on this column could then be setup to evaluate each row that matches an SUSER_SNAME() passed in by the connecting domain user.  When this occurs, we can compare this with a T-SQL SELECT statement as shown below
 
-sql
+```sql
 SELECT * FROM Person.Person WHERE [LoginAccount] = SUSER_SNAME()
 ```
 
@@ -58,7 +58,7 @@ sp\_helptext 'dbo.MSmerge\_MultipleSubs\_ParamFilters\_Person\_PARTITION\_VIEW'
 
 The definition of this view
 
-sql
+```sql
 create view dbo.[MSmerge_MultipleSubs_ParamFilters_Person_PARTITION_VIEW] 
 as  
 select [Person].[rowguid], [Person].[LoginAccount], msp.partition_id from [Person].[Person] [Person] , dbo.MSmerge_partition_groups msp where (msp.publication_number = 5 and ( (
@@ -95,7 +95,7 @@ Person.Person would be indexed on LoginAccount from the predicate and then inclu
 
  
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX [IDX_PARTITION_LOGIN_GUID_ASC]
 ON [Person].[Person] ([LoginAccount])
 INCLUDE ([rowguid])
@@ -108,7 +108,7 @@ Creating this index alone will improve our performance by an estimated 80%, as t
 
  
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX [IDX_PARTITION_EVAL_ASC]
 ON dbo.MSmerge_partition_groups ([publication_number])
 INCLUDE ([SUSER_SNAME_FN],[partition_id])

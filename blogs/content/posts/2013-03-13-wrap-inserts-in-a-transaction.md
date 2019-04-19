@@ -27,7 +27,7 @@ Sometimes you have to insert a bunch of data and you can't use BCP or another bu
 
 Let's take a look. first create the following table
 
-sql
+```sql
 CREATE TABLE Sometest(id INT PRIMARY KEY, SomeCol VARCHAR(200), SomeDate DATETIME,SomeCol2 VARCHAR(200), SomeDate2 DATETIME,
 SomeCol3 VARCHAR(200), SomeDate3 DATETIME,SomeCol4 VARCHAR(200), SomeDate4 DATETIME)
 GO
@@ -35,7 +35,7 @@ GO
 
 Now run the following code
 
-sql
+```sql
 TRUNCATE TABLE Sometest
 DECLARE @start DATETIME = GETDATE()
 SET NOCOUNT ON
@@ -59,7 +59,7 @@ That takes 1153 milliseconds on my machine
 
 Run the same code but now uncomment the transaction
 
-sql
+```sql
 TRUNCATE TABLE Sometest
 DECLARE @start DATETIME = GETDATE()
 SET NOCOUNT ON

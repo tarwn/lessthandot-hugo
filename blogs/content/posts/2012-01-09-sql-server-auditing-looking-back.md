@@ -51,7 +51,7 @@ _Note. This is necessary to capture the events. Previously a Server Audit Specif
 
 To create the same audit using TSQL(which is easier) is as follows:
 
-sql
+```sql
 USE [master]
 GO
 
@@ -138,7 +138,7 @@ Audit Files:
 
 Below are the create conditions:
 
-sql
+```sql
 --- Audit_Condition
 
 Declare @condition_id int
@@ -464,7 +464,7 @@ GO
 ```
 Next are the policies:
 
-sql
+```sql
 Declare @object_set_id int
 EXEC msdb.dbo.sp_syspolicy_add_object_set @object_set_name=N'Audit_Policy_ObjectSet', @facet=N'Audit', @object_set_id=@object_set_id OUTPUT
 Select @object_set_id
@@ -522,7 +522,7 @@ So you are capturing audits to a remote server, and they are all sitting there a
 
 In this form they're not providing you with any insight. Let's rather pull it into a database. First off we need one:
 
-sql
+```sql
 /*
 This is just a template to create a table that will host the audit information.
 Personally I would recommend to use the following format to name the table especially if it gets centralized:
@@ -599,7 +599,7 @@ This gives us our database, you can just move you files to the correct directory
 
 Next we need to get the audit information into the database, below is the script I used and can be modified to fit into either a SQL Job or SSIS package.
 
-sql
+```sql
 /*
 This script contains some insert statements as to how you will go about inserting your captured audit events into a SQL database.
 Note that I am using event_time as this is the most unique value that will be written down. I am also reading all the information
@@ -637,7 +637,7 @@ This is currently very basic, and I included some comments into the scripts to g
 
 For one of the audits used in demoing the SQL Server Auditing feature, I pulled all the information into a table. As per the sys.fn\_get\_audit\_file we can return the same results from the table. In the following example I'm using sys.dm\_audit_actions to join to the table to make the information more clear:
 
-sql
+```sql
 USE AuditingLogs ;
 go
 

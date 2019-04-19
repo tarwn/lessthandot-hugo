@@ -46,7 +46,7 @@ Instance 3 (The new principle) MYNEWLAB
 
 To set up your mirror initially let's do the following
 
-sql
+```sql
 CREATE DATABASE [NEEDTOMOVE] ON  PRIMARY 
 ( NAME = N'NEEDTOMOVE', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOMOVE.mdf' , SIZE = 2048KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
@@ -58,7 +58,7 @@ If you have your model set to Simple recovery you will need to convert to Full r
 
 Next, create your secondary database (the mirror)
 
-sql
+```sql
 CREATE DATABASE [NEEDTOMOVE] ON  PRIMARY 
 ( NAME = N'NEEDTOMOVE', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOMOVE_mirror.mdf' , SIZE = 2048KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
@@ -70,19 +70,19 @@ Let's get mirroring by backing up the log on the principle so we can bring the m
 
 Run a full backup of the principle. Since this is a new database in our lab, a full backup is required to start the full recovery process off. Once the full backup is completed, the log backup can follow. 
 
-sql
+```sql
 BACKUP DATABASE [NEEDTOMOVE] TO DISK = 'C:needtomove_full_initial.bak'
 ```
 
 Now run your tail end log backup
 
-sql
+```sql
 BACKUP LOG [NEEDTOMOVE] TO DISK = 'C:needtomove_taillog_initial.trn'
 ```
 
 Now that we have out backups ready we can start the restore process. The key to getting the mirror database ready to configure and start mirroring, is for us to bring the mirror database in synch with the principle and in recovering status. This is required so the mirror can accept transactions from the principle. The concept of a read-only (stand by) database with log shipping is on the same lines of this process. 
 
-sql
+```sql
 RESTORE DATABASE [NEEDTOMOVE] 
 FROM DISK = 'C:needtomove_full_initial.bak'
 WITH NORECOVERY,
@@ -93,7 +93,7 @@ MOVE 'NEEDTOMOVE_log' TO N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANE
 
 Now we can restore the log
 
-sql
+```sql
 RESTORE LOG [NEEDTOMOVE] FROM DISK = 'C:needtomove_taillog_initial.trn' WITH NORECOVERY
 ```
 
@@ -114,7 +114,7 @@ For T-SQL setup the process we can follow the sequence below.
 
 Here is an example of a script that I wrote to execute the series of tasks. Note the helpful numbering, always a time saver when you come back to re-use to cannibalize a script 6 months later. 
 
-sql
+```sql
 --On the principle run
 --1
 CREATE ENDPOINT [Mirroring] 

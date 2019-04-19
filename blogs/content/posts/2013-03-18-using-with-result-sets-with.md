@@ -27,7 +27,7 @@ Yesterday I blogged about using WITH RESULT SETS with the EXECUTE command here: 
 
 So today we are going to look at how we can do this. Let's say we execute the following stored procedure without specifying an object name
 
-sql
+```sql
 EXEC sp_spaceused
 ```
 
@@ -39,7 +39,7 @@ You will get two resultsets, the output will look something like this
 
 Now let's see what happens if we only specify the first result set
 
-sql
+```sql
 EXEC sp_spaceused 
 WITH RESULT SETS
 ( 
@@ -62,7 +62,7 @@ As you can see both result sets have to be accounted for when using WITH RESULT 
   
 Adding the second result set will fix this, run the following
 
-sql
+```sql
 EXEC sp_spaceused 
 WITH RESULT SETS
 ( 

@@ -46,7 +46,7 @@ For the examples below, [Process Monitor][3] will be used to monitor the ldf fil
 
 Below, the example will run through showing updates referring to a primary key or clustered index that affects logging.
 
-sql
+```sql
 CREATE TABLE tblPrimaryKeyUpdate (
 	ID1 INT
 	,ID2 INT
@@ -66,7 +66,7 @@ We do not need any more data than the one row to complete the test.
 
 Run a CHECKPOINT to ensure everything that was just logged to the transaction log is flushed.
 
-sql
+```sql
 CHECKPOINT
 ```
 
@@ -81,7 +81,7 @@ CHECKPOINT
 
 Review the transaction log contents using fn_dblog function.
 
-sql
+```sql
 SELECT * FROM fn_dblog(NULL, NULL)
 ```
 
@@ -90,7 +90,7 @@ SELECT * FROM fn_dblog(NULL, NULL)
 
 The above results show the checkpoint and only in the transaction log currently.  Now that the transaction log is cleared of any previous changes, the table and row inserted into tblPrimaryKeyUpdate can be updated.  In this test, we will update the column, COLVAL to itself.
 
-sql
+```sql
 UPDATE tblPrimaryKeyUpdate 
 SET COLVAL = COLVAL
 ```
@@ -108,7 +108,7 @@ From the results shown in process monitor
 
 We see that there was no activity on the ldf file from the update statement that was executed.   Rerun the statement to review the results from fn_dblog.  From the results, you'll see that the transaction log has not logged any new rows.  This is due to the update statement not altering either column that is part of the composite key.  Next, update one of the ID columns to the same value.
 
-sql
+```sql
 UPDATE tblPrimaryKeyUpdate
 SET ID1 = ID1
 ```
@@ -131,7 +131,7 @@ The second scenario that is taken into account is, is the table a HEAP table?  
 
 For example, create a HEAP table as shown below.
 
-sql
+```sql
 CREATE TABLE tblHEAPUpdate (
 	ID1 INT
 	,ID2 INT
@@ -141,7 +141,7 @@ CREATE TABLE tblHEAPUpdate (
 
 Use the same insert and update statements from the examples working on tblPrimaryKeyUpdate by changing the table name.  Make sure a CHECKPOINT is executed again prior to the update statements.
 
-sql
+```sql
 CREATE TABLE tblHEAPUpdate (
 	ID1 INT
 	,ID2 INT

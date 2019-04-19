@@ -30,7 +30,7 @@ tags:
 ---
 To bring a SQL Server database online or offline you can use a command like the following if your database is named test.
 
-sql
+```sql
 ALTER DATABASE test SET OFFLINE;
 
 ALTER DATABASE test SET ONLINE;
@@ -40,13 +40,13 @@ When running SQL Server on Amazon's Relational Database Service it is done a lit
 
 I you have a database name test and you execute the following it will work
 
-sql
+```sql
 ALTER DATABASE test SET OFFLINE
 ```
 
 You can verify this by running the following
 
-sql
+```sql
 USE test
 GO
 ```
@@ -59,7 +59,7 @@ Database 'test' cannot be opened because it is offline._
 
 If you try running the following command to bring the database online
 
-sql
+```sql
 ALTER DATABASE test SET ONLINE;
 ```
 
@@ -77,14 +77,14 @@ So what can you do? RDS has a special stored procedure that will bring the datab
 
 Here is how you use it
 
-sql
+```sql
 EXEC rdsadmin.dbo.rds_set_database_online  'test'
 GO
 ```
 
 Now you can use the test database again
 
-sql
+```sql
 USE test
 GO
 ```

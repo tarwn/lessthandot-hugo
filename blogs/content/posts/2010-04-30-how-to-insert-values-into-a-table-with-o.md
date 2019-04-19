@@ -25,14 +25,14 @@ Some databases have something called a sequence, you can use this to generate va
   
 The reason I am writing this is because I saw the following table
 
-sql
+```sql
 CREATE TABLE Sequence (ID int identity not null primary key,Dummy tinyint)
 GO
 ```
 
 I was thinking to myself why they have that dummy value, so I spoke to one of these people who were using the system. The reason they have this dummy value is so that they can insert into this table like this
 
-sql
+```sql
 INSERT INTO Sequence VALUES(1)
 INSERT INTO Sequence VALUES(1)
 INSERT INTO Sequence VALUES(1)
@@ -40,7 +40,7 @@ INSERT INTO Sequence VALUES(1)
 
 And now when you query the table
 
-sql
+```sql
 SELECT ID 
 FROM  Sequence 
 ```
@@ -56,20 +56,20 @@ So the dummy value is there so that they can insert into the table. Even though 
   
 Let's do this a different way. First drop the table we created before.
 
-sql
+```sql
 DROP TABLE Sequence
 ```
 
 Now create the table like this; without the dummy value
 
-sql
+```sql
 CREATE TABLE Sequence (ID int identity not null primary key)
 GO
 ```
 
 Here is how the insert looks like if you only have the identity column
 
-sql
+```sql
 INSERT INTO Sequence DEFAULT VALUES
 INSERT INTO Sequence DEFAULT VALUES
 INSERT INTO Sequence DEFAULT VALUES
@@ -78,7 +78,7 @@ INSERT INTO Sequence DEFAULT VALUES
 
 All you need to use is default values in the insert statements, it will then generate the identity
 
-sql
+```sql
 SELECT ID 
 FROM  Sequence 
 ```
@@ -91,7 +91,7 @@ FROM  Sequence
 
 Let's take a look at another example, what if we had two other columns and they had defaults on them? First create this table.
 
-sql
+```sql
 CREATE TABLE Sequence2 (ID int identity not null primary key, 
 			Somedate datetime default getdate() not null,
 			SomeID int default 0 not null)
@@ -100,7 +100,7 @@ GO
 
 Now run these statements
 
-sql
+```sql
 INSERT INTO Sequence2 DEFAULT VALUES
 INSERT INTO Sequence2 DEFAULT VALUES
 INSERT INTO Sequence2 DEFAULT VALUES
@@ -109,7 +109,7 @@ INSERT INTO Sequence2 DEFAULT VALUES
 
 Now let's look what is in the table
 
-sql
+```sql
 SELECT * FROM  Sequence2
 ```
 

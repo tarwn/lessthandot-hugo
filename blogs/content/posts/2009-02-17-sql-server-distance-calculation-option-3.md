@@ -60,20 +60,20 @@ I've never tried to optimize this (it is pretty fast as is), but I am sure it is
 
 Once this is done, compile that sucker! The trickiest part here is really deploying it to your server, but even that is simple, just a lot of steps. First, you'll need to put the file in a location where the server can see it. On the server would be a nice easy place. Now we need to create an assembly in SQL Server for it. This is simple too:
 
-sql
+```sql
 CREATE ASSEMBLY DistanceCalculations FROM 'C:DistanceCalculationLibrary.dll'
 ```
 
 Ok, we're getting close. Once this assembly is created, you need to enable the CLR (it is disabled by default).
 
-sql
+```sql
 exec sp_configure 'clr enabled',1
 reconfigure
 ```
 
 And finally, create our SQL Server udf referencing the assembly. 
 
-sql
+```sql
 CREATE FUNCTION [dbo].[clrDistCalc](@long1 [float], @lat1 [float], @long2 [float], @lat2 [float])
 RETURNS [float] WITH EXECUTE AS CALLER
 AS 
@@ -81,7 +81,7 @@ EXTERNAL NAME [DistanceCalculations].[UserDefinedFunctions].[clrDistCalc]
 ```
 You can test it by writing some queries against the same table used for Denis' example (or George's). Here's an example using Denis' data:
 
-sql
+```sql
 SELECT h.*
    FROM zipcodes g
    INNER JOIN zipcodes h ON g.zipcode <> h.zipcode

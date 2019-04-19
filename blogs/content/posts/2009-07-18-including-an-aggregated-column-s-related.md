@@ -20,7 +20,7 @@ In this co-authored blog post, [Naomi][1] and I will present six different solut
 
 It's a fairly simple query to select the maximum date for each group in a GROUP BY query. You just throw in a Max() on the date column and then GROUP BY the other columns. For example,
 
-sql
+```sql
 SELECT
    CustomerID,
    LastOrderDate = Max(OrderDate)
@@ -30,7 +30,7 @@ GROUP BY CustomerID
 
 But a common query need is to include other column values from the same row as the most recent date. Unfortunately, putting aggregates on other columns doesn't work:
 
-sql
+```sql
 SELECT
    CustomerID,
    LastOrderDate = Max(OrderDate),
@@ -43,7 +43,7 @@ It's almost like you need some kind of Max(OrderDate->SubTotal).
 
 Note that the desired results are fairly easy in MS Access using the aggregate functions Last and First:
 
-sql
+```sql
 SELECT
    CustomerID,
    LastOrderDate = Last(OrderDate),
@@ -67,7 +67,7 @@ Note that the aggregate doesn't have to be on a date. Perhaps you want to know t
 
 The basic query we'll be working with is:
 
-sql
+```sql
 SELECT
    C.AccountNumber,
    LastOrderDate = Max(O.OrderDate)
@@ -109,7 +109,7 @@ So let's use those ideas and turn them into real queries. Unless otherwise state
   * Performance degrades geometrically as rows increase.
   * Does not handle NULLs correctly.
 
-sql
+```sql
 SELECT
    C.AccountNumber,
    O.OrderDate,
@@ -127,7 +127,7 @@ WHERE
 
 Another version of correlated subquery which sometimes performs much better is
 
-sql
+```sql
 SELECT
    C.AccountNumber,
    O.OrderDate,
@@ -145,7 +145,7 @@ WHERE
 
 Another variation of this query is (suggested by Alejandro Mesa (Hunchback) in this [MSDN thread][2]):
 
-sql
+```sql
 SELECT
    C.AccountNumber,
    O1.OrderDate,
@@ -159,7 +159,7 @@ Note, that the first variation of this query may return duplicate rows, but the 
 
 The third variation of this query with NOT EXISTS will produce duplicates in case of the same date, but can also be easily adjusted to return only one row with the max OrderID:
 
-sql
+```sql
 SELECT
    C.AccountNumber,
    O1.OrderDate,
@@ -178,7 +178,7 @@ WHERE not exists (select 1 from Sales.SalesOrderHeader O2 where O2.CustomerID = 
   * Performance degrades linearly as rows increase.
   * Does not handle NULLs correctly.
 
-sql
+```sql
 SELECT
    C.AccountNumber,
    O.OrderDate,
@@ -209,7 +209,7 @@ The windowing functions were introduced in SQL Server 2005, so the two queries b
 
   * A common table expression is not needed, but is cleaner. The CTE query can be made into a derived table if desired.
 
-sql
+```sql
 WITH OrderData AS (
    SELECT
       C.AccountNumber,
@@ -227,7 +227,7 @@ WHERE Selector = 1
 
 ### 4. Windowing Function – One Stage
 
-sql
+```sql
 SELECT TOP 1 WITH TIES
    C.AccountNumber,
    O.OrderDate,
@@ -253,7 +253,7 @@ ORDER BY
   * As given, this query does not handle NULLs at all. A few strategic Coalesces can fix that.
   * There is no significant performance difference between unpacking one many-item compound value or many one-item compound values (though you'd always include all columns needed for ordering).
 
-sql
+```sql
 SELECT
    CustomerID,
    LastOrderDate,

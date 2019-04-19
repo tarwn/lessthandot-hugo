@@ -87,7 +87,7 @@ Here is the output from that, this creates 216 warnings, I have not pasted the w
 
 Now I was intrigued so I picked the aspnet\_Applications\_CreateApplication stored procedure from that list.
 
-sql
+```sql
 USE [aspnetdb]
 GO
 /****** Object:  StoredProcedure [dbo].[aspnet_Applications_CreateApplication]    Script Date: 01/17/2010 15:51:15 ******/
@@ -152,7 +152,7 @@ It actually tells you on which line and position this is actually used (ASPNET\_
 
 Here is another stored procedure, this one uses the LOWER function and old style joins
 
-sql
+```sql
 USE [aspnetdb]
 GO
 /****** Object:  StoredProcedure [dbo].[aspnet_UsersInRoles_RemoveUsersFromRoles]    Script Date: 01/17/2010 15:53:59 ******/

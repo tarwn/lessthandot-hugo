@@ -30,7 +30,7 @@ The hardship to this task is, two machines can't have the same name on the netwo
 
 Note: if you are unsure which mdf and ldf files are being used for the subscriber database, use the following query either in SSMS or SQLCMD to return the files and paths.
 
-sql
+```sql
 SELECT physical_name FROM sys.master_files WHERE name = '<db name>'
 ```
 
@@ -39,7 +39,7 @@ SELECT physical_name FROM sys.master_files WHERE name = '<db name>'
 
 One way to accomplish this task is to use detach and attach in SQL Server.  First, detach the database that is the subscriber on the old machine.  If your database name is, SalesMan, the detach would appear as shown below.
 
-sql
+```sql
 EXEC sp_detach_db 'SalesMan', 'true';
 ```
 
@@ -50,7 +50,7 @@ Now, copy the mdf and ldf filed for the database to an external storage device.�
 
 Once you've renamed the new machine to the same as the old machine, attach the database.  This is done by first copying the mdf and ldf into the directory on the machine where you want them to be located.  Then attach the database using the CREATE DATABASE statement.
 
-sql
+```sql
 USE [master]
 GO
 CREATE DATABASE [SalesMan] ON

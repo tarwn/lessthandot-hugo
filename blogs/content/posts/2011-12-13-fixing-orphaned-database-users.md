@@ -79,7 +79,7 @@ The below script has a work flow of first identifying the orphaned database user
 
 **SQL Server 2005, 2008, 2008 R2 Versions**
 
-sql
+```sql
 SET NOCOUNT ON
 USE AdventureWorks
 GO
@@ -117,7 +117,7 @@ SET NOCOUNT OFF
 
 **SQL Server 2005, 2008, 2008 R2 and 2012 Version with Windows Login check**
 
-sql
+```sql
 SET NOCOUNT ON
 USE AdventureWorks
 GO

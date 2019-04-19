@@ -23,7 +23,7 @@ SQL Server 2005 introduced a new function called NewSequentialId(). This functio
 
 **How to detect this problem:**
 
-sql
+```sql
 Select  so.name as TableName, 
         sind.name as IndexName, 
         sik.keyno, 

@@ -27,7 +27,7 @@ You can also review this article [Retrieving the Just-Inserted ID of an IDENTITY
 
 First, I show the whole stored procedure code. Don't be surprised about the non-normalized data, this is what we were dealing with.
 
-sql
+```sql
 /****** Object:  StoredProcedure [dbo].[PersonInsert]    Script Date: 06/25/2008 15:38:00 ******/
         SET ANSI_NULLS ON
         GO

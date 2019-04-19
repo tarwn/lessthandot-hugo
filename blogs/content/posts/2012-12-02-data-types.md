@@ -57,7 +57,7 @@ Let's take a quick look by running some T-SQL
 
 First create these two tables
 
-sql
+```sql
 CREATE TABLE TestChar (SomeCol char(10))
 GO
 
@@ -67,7 +67,7 @@ GO
 
 Now populate each with some data
 
-sql
+```sql
 INSERT TestChar
 SELECT TOP 1000000 '1234567890'
 FROM sys.sysobjects c1
@@ -87,7 +87,7 @@ GO
 
 Let's see how much space is used by both tables
 
-sql
+```sql
 EXEC sp_spaceused 'TestChar'
 
 EXEC sp_spaceused 'TestNChar'
@@ -103,7 +103,7 @@ If you looked at the reserved column, you will see that the nchar data is using 
 
 Besides the storage increase there is also a problem when querying for data that looks like varchar but is stored as unicode. Run the code below. 
 
-sql
+```sql
 SET SHOWPLAN_TEXT ON
 GO
 DECLARE @v varchar(10) = '0123456789'
@@ -124,14 +124,14 @@ If we look at the plan we can see that this looks pretty good
   
 Usually people will sometimes change the datatype of a column but will not change any code that access this column. Let's now change the data type of the column to nchar
 
-sql
+```sql
 ALTER TABLE TestChar ALTER COLUMN SomeCol nchar(10)
 GO
 ```
 
 Run the query that gives you the plan again
 
-sql
+```sql
 SET SHOWPLAN_TEXT ON
 GO
 DECLARE @v varchar(10) = '0123456789'
@@ -153,7 +153,7 @@ As you can see, there is a conversion going on right now.
 
 In order to get rid of the conversion, use the correct data types
 
-sql
+```sql
 SET SHOWPLAN_TEXT ON
 GO
 DECLARE @v nvarchar(10) = '0123456789'

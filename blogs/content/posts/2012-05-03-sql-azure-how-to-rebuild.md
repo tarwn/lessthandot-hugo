@@ -31,7 +31,7 @@ Let's say you have a table with a clustered index on a uniqueidentifier column, 
 
 First create the following table with a clustered index
 
-sql
+```sql
 CREATE TABLE Test(bla uniqueidentifier default newid())
 
 CREATE CLUSTERED INDEX ix_Test_bla on Test(bla)
@@ -40,7 +40,7 @@ GO
 
 Now run the following block of code
 
-sql
+```sql
 ;WITH CTE AS (SELECT 1 AS A 
 			UNION ALL SELECT 2 
 			UNION ALL SELECT 3 
@@ -72,7 +72,7 @@ Batch execution completed 5 times.
 
 Let's see how fragmented the index is
 
-sql
+```sql
 SELECT Object_name(s.object_id) as Tablename,s.name as Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent
@@ -88,7 +88,7 @@ Test	        ix_Test_bla	CLUSTERED INDEX	34.4827586206897                 58</pr
 
 Now it is time to 'fix' the index, we can either defragment/reorganize or rebuild the index
 
-sql
+```sql
 ALTER INDEX ix_Test_bla ON [dbo].[Test] REORGANIZE
 ```
 
@@ -100,7 +100,7 @@ Okay, so SQL Azure does not support reorganizing the index
   
 What if we drop the index and then create it again?
 
-sql
+```sql
 DROP INDEX [ix_Test_bla] ON [dbo].[Test] 
 GO
 ```
@@ -113,7 +113,7 @@ The statement has been terminated._
 
 Mmmm, not supported either, let's try creating the index with the drop_existing clause
 
-sql
+```sql
 CREATE CLUSTERED INDEX [ix_Test_bla] ON [dbo].[Test]
 (
 	[bla] ASC
@@ -123,7 +123,7 @@ GO
 
 That worked, let's check fragmentation again
 
-sql
+```sql
 SELECT Object_name(s.object_id) as Tablename,s.name as Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent
@@ -140,7 +140,7 @@ Test	        ix_Test_bla	CLUSTERED INDEX	4.76190476190476                21
 
 Mmmm, didn't get rid of all the fragmentation. What happens if we try to do the same again?
 
-sql
+```sql
 CREATE CLUSTERED INDEX [ix_Test_bla] ON [dbo].[Test]
 (
 	[bla] ASC
@@ -148,7 +148,7 @@ CREATE CLUSTERED INDEX [ix_Test_bla] ON [dbo].[Test]
 GO
 ```
 
-sql
+```sql
 SELECT Object_name(s.object_id) as Tablename,s.name as Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent
@@ -167,7 +167,7 @@ Still didn't get rid of all fragmentation
   
 Let's try something else, first we are going to add some more data
 
-sql
+```sql
 ;WITH CTE AS (SELECT 1 AS A 
 			UNION ALL SELECT 2 
 			UNION ALL SELECT 3 
@@ -185,7 +185,7 @@ go 5
 
 Let's check fragmentation
 
-sql
+```sql
 SELECT Object_name(s.object_id) as Tablename,s.name as Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent
@@ -204,13 +204,13 @@ Oh yeah, that is real bad
 
 Now let's rebuild the index instead
 
-sql
+```sql
 ALTER INDEX ix_Test_bla ON [dbo].[Test] REBUILD
 ```
 
 Check fragmentation again
 
-sql
+```sql
 SELECT Object_name(s.object_id) as Tablename,s.name as Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent

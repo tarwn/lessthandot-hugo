@@ -49,7 +49,7 @@ We are going to go through a step-by-step to get CDC going without falling into 
 
 To ensure CDC is not setup, we can check sys.databases and the is\_cdc\_enabled column. You will see either a 1 for enabled or 0 for disabled. 
 
-sql
+```sql
 SELECT database_id ,
         name ,
         is_cdc_enabled
@@ -62,7 +62,7 @@ If is\_cdc\_enabled is set to 0, use sys.sp\_cdc\_enable\_db to enable CDC. sys.
 
 Below is something you could run as a check and enable task:
 
-sql
+```sql
 If (select is_cdc_enabled from sys.databases where [name] = 'AdventureWorks') = 0
  begin
 	Exec sys.sp_cdc_enable_db
@@ -88,7 +88,7 @@ If you run into a failure to authenticate:
 
 It is due to a bad owner state. You can fix this by running: 
 
-sql
+```sql
 exec sp_changedbowner 'sa','dbo'
 ```
 
@@ -106,7 +106,7 @@ We will show the filegroup practice so let's create a filegroup for our CDC inst
 
 **Create a filegroup** 
 
-sql
+```sql
 USE master
 GO
 ALTER DATABASE AdventureWorks
@@ -129,7 +129,7 @@ To enable CDC, we use sys.sp\_cdc\_enable_table as mentioned earlier.
 
 Run the following to enable CDC on the table Employee in the AdventureWorks database (the entire table will be monitored):
 
-sql
+```sql
 USE AdventureWorks
 GO
 EXEC sys.sp_cdc_enable_table
@@ -157,7 +157,7 @@ Once you execute the enabling table procedure, some table valued functions will 
 
 To obtain the latest and first LSN we can use sys.fn\_cdc\_getmax_lsn and min:
 
-sql
+```sql
 select sys.fn_cdc_get_min_lsn('HumanResources_Employee');
 select sys.fn_cdc_get_max_lsn
 ```
@@ -165,7 +165,7 @@ select sys.fn_cdc_get_max_lsn
 
 **Putting this to work to review CDC**
 
-sql
+```sql
 declare @begin binary(10), @end binary(10);
 set @begin = sys.fn_cdc_get_min_lsn('HumanResources_Employee');
 set @end = sys.fn_cdc_get_max_lsn();
@@ -175,7 +175,7 @@ go
 
 Time to play with what we've setup on the Employee table. Let's break login id for employeeid 1
 
-sql
+```sql
 select * from HumanResources.Employee
 --adventure-worksguy1 „²we'll take the first one
 update HumanResources.Employee
@@ -204,7 +204,7 @@ We already have CDC enabled, so executing the Update statement again, the cost i
 
 To disable CDC on a table we use the, sys.sp\_cdc\_disable_table procedure as shown below:
 
-sql
+```sql
 exec sys.sp_cdc_disable_table 
   @source_schema = 'HumanResources', 
   @source_name = 'Employee',

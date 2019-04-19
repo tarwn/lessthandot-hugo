@@ -34,7 +34,7 @@ Even though the text data type is deprecated, you can still use the text data ty
 
 To quickly find out if you are using features that have been deprecated, you can run the following query
 
-sql
+```sql
 select instance_name,cntr_value
 from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Deprecated Features'

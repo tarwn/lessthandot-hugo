@@ -25,7 +25,7 @@ This indicated that the metadata was indeed being examined.  What I found is, i
 
 The following example will go over what Laerte Junior pointed out.
 
-sql
+```sql
 USE master
 GO
 CREATE LOGIN colUser WITH PASSWORD=N'passmein'
@@ -42,7 +42,7 @@ GO
 ```
 In the new query window using the context of coluser
 
-sql
+```sql
 USE AdventureWorks
 GO
 BEGIN TRY

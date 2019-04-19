@@ -21,7 +21,7 @@ tags:
 ---
 Someone posted a question, they wanted to return the quarters and years within a range that were passed in. The problem they had is that they stored this data in a year and a quarter column. The table looked like this
 
-sql
+```sql
 CREATE TABLE Periods(PeriodQuarter INT,PeriodYear INT)
 INSERT Periods VALUES (1,2009)
 INSERT Periods VALUES (2,2009)
@@ -37,7 +37,7 @@ GO
 
 When we do this simple select query
 
-sql
+```sql
 SELECT *
 FROM Periods
 ```
@@ -182,7 +182,7 @@ The first query creates a date from the 2 columns and then checks if that date f
   
 Run the statement below, it returns '2009-01-01 00:00:00.000'. Mess around with the numbers to to see how it works.
 
-sql
+```sql
 SELECT DATEADD(qq,1-1,DATEADD(yy,2009 -1900,0))
 ```
 
@@ -190,7 +190,7 @@ SELECT DATEADD(qq,1-1,DATEADD(yy,2009 -1900,0))
   
 Here is the first query:
 
-sql
+```sql
 declare @startDate datetime
 declare @endDate datetime
 
@@ -219,7 +219,7 @@ This is the execution plan, as you can see it uses a Clustered Index Scan
   
 Query 2 is a little smarter, it checks for the year which is the first key in the composite clustered index and thus avoids a Clustered Index Scan like the query above.
 
-sql
+```sql
 declare @startDate datetime
 declare @endDate datetime
 
@@ -249,7 +249,7 @@ Here is the plan, as you can see it results in a Clustered Index Seek.
   
 Query 3 is very similar to query 2 but instead of dateadd it uses arithmetic to grab the correct rows
 
-sql
+```sql
 SELECT *
 FROM Periods
 WHERE
@@ -274,14 +274,14 @@ Here is the plan, as you can see it results in a Clustered Index Seek also.
 
 Instead of converting and doing arithmetic, you could add a computed column to the table
 
-sql
+```sql
 ALTER TABLE Periods ADD PeriodDate AS DATEADD(qq,PeriodQuarter-1,DATEADD(yy,PeriodYear -1900,0))  
 GO
 ```
 
 Now, when we query the table
 
-sql
+```sql
 SELECT *
 FROM Periods
 ```
@@ -406,7 +406,7 @@ FROM Periods
 
 Now the query is much simpler
 
-sql
+```sql
 DECLARE @startDate DATETIME
 DECLARE @endDate DATETIME
 
@@ -420,14 +420,14 @@ WHERE PeriodDate BETWEEN @startDate AND @endDate
 
 So we still have an index scan, but if we create an index on the computed column now, we can find out if that helps.
 
-sql
+```sql
 CREATE INDEX ix_PeriodDate ON Periods(PeriodDate)
 GO
 ```
 
 Now, if we run the same query again.
 
-sql
+```sql
 DECLARE @startDate DATETIME
 DECLARE @endDate DATETIME
 

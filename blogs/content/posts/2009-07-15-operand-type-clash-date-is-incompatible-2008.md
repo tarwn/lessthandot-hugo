@@ -23,7 +23,7 @@ If you don't care for the time portion of the date you can now use the date data
 
 So take a look at this code
 
-sql
+```sql
 declare @d datetime
 select @d = getdate()
 
@@ -33,7 +33,7 @@ select @d
 
 To convert this to SQL Server 2008 logically you would think that all you had to do is change datetime to date. Go ahead...run it...make my day
 
-sql
+```sql
 declare @d date
 select @d = getdate()
 
@@ -49,7 +49,7 @@ Operand type clash: date is incompatible with int
 
 Now what you can do is use dateadd instead
 
-sql
+```sql
 declare @d date
 select @d = getdate()
 
@@ -63,7 +63,7 @@ But wait....scroll down in the next 5 seconds and you will get another option as
 
 What about this?
 
-sql
+```sql
 declare @d date 
 select @d = getdate() +1
 
@@ -76,7 +76,7 @@ But wait....scroll down in the next 5 seconds and you will get another option wh
 
 Here is another version which is a little shorter
 
-sql
+```sql
 declare @d date = getdate() +1
 select @d 
 ```

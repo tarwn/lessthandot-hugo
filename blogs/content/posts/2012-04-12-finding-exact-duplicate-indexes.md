@@ -34,7 +34,7 @@ Column ordering for include columns does not matter, but which columns are inclu
 
 **The query to identify exact duplicates:**
 
-sql
+```sql
 ; With IndexColumns As
 (
 	select	I.object_id,

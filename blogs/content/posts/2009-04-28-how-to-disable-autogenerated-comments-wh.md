@@ -25,7 +25,7 @@ If you have your stored procedures in source control and you want to see if they
 
 Let's see what happens, create this proc
 
-sql
+```sql
 Create procedure prTest
 as
 set nocount on
@@ -39,7 +39,7 @@ Now script it out, you do this by finding the proc under your <ins>database</ins
   
 Your procedure will look like this
 
-sql
+```sql
 /****** Object:StoredProcedure [dbo].[prTest] Script Date: 04/28/2009 10:07:19 ******/
 SET ANSI_NULLS ON
 GO

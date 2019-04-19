@@ -32,7 +32,7 @@ To check the performance impact I use a tool called [SQLQueryStress][2] to execu
   
 To get started I need a table with a large number of columns, data is not necessary for this test so I use this script to generate a table with 127 columns:
 
-sql
+```sql
 DECLARE @colnumber int = 1
 DECLARE @command VARCHAR(4000) =''
 
@@ -59,7 +59,7 @@ Using SELECT * in Views is also a bad practice because changes to the underlying
   
 First I create a table and insert some data:
 
-sql
+```sql
 --Create the table
 CREATE TABLE StarBreak
  (
@@ -77,7 +77,7 @@ GO
 ```
 Now I create and query a View to return all the columns:
 
-sql
+```sql
 CREATE VIEW GetStarFromStarBreak
 	AS
 		SELECT * from Starbreak;
@@ -92,7 +92,7 @@ And I get this result back:
 
 Now let's drop the table and recreate it but switch the position of the two datecolumns:
 
-sql
+```sql
 --Drop the table
 DROP TABLE StarBreak;
 GO
@@ -128,7 +128,7 @@ You see that the column headers are in the same order as in the initial table bu
   
 Dropping the table, and adding a column in the middle will also result in the above behavior:
 
-sql
+```sql
 --Drop the table
 DROP TABLE StarBreak;
 GO
@@ -154,7 +154,7 @@ GO
 
 What happens when I recreate the table but only 3 instead of 4 columns? Let's try:
 
-sql
+```sql
 --Drop the table
 DROP TABLE StarBreak;
 GO
@@ -175,7 +175,7 @@ GO
 ```
 Now query the view again but use this query to make sure you only select the 3 existing columns:
 
-sql
+```sql
 SELECT ID, Name, DateLastPost FROM GetStarFromStarBreak
 ```
 

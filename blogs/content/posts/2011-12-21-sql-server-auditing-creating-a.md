@@ -74,7 +74,7 @@ _Note: It is the default behaviour of Management Studio to create the specificat
 
 So now that both the audit and the specification is in place, I made a few changes to a database and now we can look into the file using the following code:
 
-sql
+```sql
 --returns all the columns for the file
 SELECT * FROM fn_get_audit_file ('E:SQLAuditingSQLAudit_DBChanges*.sqlaudit',DEFAULT,DEFAULT)
 

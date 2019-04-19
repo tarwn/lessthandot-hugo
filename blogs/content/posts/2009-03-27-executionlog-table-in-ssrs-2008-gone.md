@@ -18,7 +18,7 @@ You may notice that now in SSRS 2008 you are missing a critical reporting table 
 
 This table was the bread and butter of trending for administrators. If you weren't using it to gauge your reporting services activity then you should. A simple query like
 
-sql
+```sql
 select Count(*) cnt,[Name] ReportName
 from executionlog a
 join catalog b on a.reportid = b.itemid

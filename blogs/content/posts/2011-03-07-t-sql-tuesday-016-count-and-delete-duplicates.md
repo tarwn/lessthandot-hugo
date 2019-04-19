@@ -41,7 +41,7 @@ COUNT has some concerns.  For finding duplicates in a table where a primary key
 
 To show this, let's create a table named DUPS.
 
-sql
+```sql
 IF EXISTS(SELECT 1 FROM SYS.objects WHERE [name] = 'DUPS')
  BEGIN
 	DROP TABLE DUPS
@@ -55,7 +55,7 @@ GO
 
 Now insert some values into this new table with NULL values in the CUST column
 
-sql
+```sql
 INSERT INTO DUPS 
 VALUES (NULL,'Test'),
 ('Test','Test'),
@@ -67,7 +67,7 @@ VALUES (NULL,'Test'),
 
 You may write a simple query using COUNT to return the count of the column CUST as:
 
-sql
+```sql
 SELECT COUNT(CUST) FROM DUPS
 ```
 
@@ -81,7 +81,7 @@ Looking for duplicates and NULL values plays a key role in what we just went ove
 
 The combination of COUNT, HAVING and GROUP BY is how we will look for duplicates today.  We will use a test script that is shown below.  The test script creates out table and inserts 10,000 rows.  There are three columns.  One is the primary key and is an identity insert.  The other two are customer number (CUST) and an order number (ORDERNUM).  A loop is used to insert test data into the new table.
 
-sql
+```sql
 IF EXISTS(SELECT 1 FROM SYS.objects WHERE [name] = 'DUPS')
  BEGIN
 	DROP TABLE DUPS
@@ -120,7 +120,7 @@ The results from running this transaction will insert 15,000 rows.  We know thi
 
 The HAVING clause will be exactly what grouping will result from a query.  An example of this can be shown by querying the sys.master_files system view for a unique database ID.
 
-sql
+```sql
 SELECT 
  SUM(database_id)
 FROM sys.master_files
@@ -130,7 +130,7 @@ HAVING database_id = 1
 
 To use this in a duplicate search, add COUNT to the HAVING clause
 
-sql
+```sql
 SELECT 
  database_id
 FROM sys.master_files
@@ -142,7 +142,7 @@ This would show us the entire database ID's that have more than 2 files associat
 
 Taking this to work for us with our earlier table and data, we could do the following
 
-sql
+```sql
 SELECT 
 	MAX(IDENT),
 	ORDERNUM
@@ -161,7 +161,7 @@ The results shown list all the order numbers that are found to be duplicates (or
 
 Loaded with this information, adding a DELETE to the statement and anything that is not listed as our MAX identity, will remove all duplicates and leave the last one inserted (based on the identity seed)
 
-sql
+```sql
 DELETE FROM DUPS 
 WHERE IDENT NOT IN (
 SELECT 
@@ -177,7 +177,7 @@ Once this statement is executed, the table is cleansed of the duplicates and bac
 
 The MIN can also be used if the first inserted row is to be retained.  The other CTE method mentioned earlier can also be done by using PARTITION BY and ROW_NUMBER
 
-sql
+```sql
 ;WITH DUP_CTE AS
 (
 SELECT ORDERNUM,ROW_NUMBER() OVER (PARTITION BY ORDERNUM ORDER BY (SELECT 0)) RN FROM DUPS 

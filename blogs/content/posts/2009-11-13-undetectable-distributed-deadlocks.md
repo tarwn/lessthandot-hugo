@@ -22,7 +22,7 @@ Normally, when SQL server detects this kind of mutual block, it picks one proces
 
 But what if the two resources in question are on separate servers? For SQL Server to detect deadlocks, it has to have enough information to see that a pattern of blocks is mutual.
 
-sql
+```sql
 --Query 1
 UPDATE B
 SET B.Name = A.Name

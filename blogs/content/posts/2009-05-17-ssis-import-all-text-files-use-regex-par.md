@@ -27,7 +27,7 @@ There is also a requirement to know a few ways of reading text files into tables
 
 One is BULK INSERT in T-SQL for reading each line.
 
-sql
+```sql
 CREATE TABLE #temp (contents varchar(max))
 
 BULK INSERT #temp
@@ -38,7 +38,7 @@ SELECT contents FROM #temp
 ```
 OPENROWSET is another for reading the lot of the data
 
-sql
+```sql
 SELECT *
 FROM OPENROWSET (BULK 'C:resumesresume.txt', SINGLE_CLOB) ResFile
 ```
@@ -46,7 +46,7 @@ BCP and a few others out of scope. SSIS is how we'll do this one though and futu
   
 Here are the supporting tables for this exercise
 
-sql
+```sql
 CREATE TABLE ResumeText (
 		ident int identity(1,1) primary key,
 		contents varchar(max),
@@ -131,7 +131,7 @@ Now that the script task is completed, we can start working on the data flow tas
 
 The select would be in our case
 
-sql
+```sql
 SELECT 
 	contents
 	,ident
@@ -200,7 +200,7 @@ The last steps are to map the destination and update our processed flag indicato
 
 Back in the control flow tab, bring over an Execute SQL Task and use the connection already created to your instance. Use the following statement then to update the flag
 
-sql
+```sql
 Update ResumeText 
 Set Processed = 1
 WHERE Processed = 0

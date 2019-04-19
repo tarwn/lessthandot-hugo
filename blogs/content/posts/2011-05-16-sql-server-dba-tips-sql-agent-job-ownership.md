@@ -28,7 +28,7 @@ On the other side of how ownership is impersonated; permission issues with jobs 
 
 To fix this there are two options.  Grant Fred SELECT on SQLAgent2\_Tbl or change the ownership of the job to an account that already has the needed SELECT permissions.  In this example, change job ownership to the SQL Server Agent account which has SELECT permissions to both tables in both databases by using sp\_update_job procedure in the MSDB databases.
 
-sql
+```sql
 Exec sp_update_job @job_name = 'AgentOwnerExample', @owner_login_name = 'DOMAINAgentAccount'
 ```
 

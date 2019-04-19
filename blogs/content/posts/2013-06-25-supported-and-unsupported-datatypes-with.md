@@ -70,7 +70,7 @@ There is also a limit of 8060 bytes on row size, this includes variable length c
 
 if you try to do the following, you will get an error
 
-sql
+```sql
 CREATE TABLE [dbo].[HekaTest]
 ( [Col1] varchar(5000), 
   [Col2] varchar(4000) NOT NULL,  

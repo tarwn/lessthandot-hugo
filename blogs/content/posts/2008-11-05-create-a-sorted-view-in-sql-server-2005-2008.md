@@ -27,7 +27,7 @@ I saw that some people are hitting our site with a search for how to create a so
 
 You all know that in SQL Server 2000 you can create a view and use TOP 100 PERCENT with ORDER By and it will be sorted. Since SQL server 2005 that doesn't work anymore. I actually never understood the need for sorted views to begin with, how hard is it to do something like this
 
-sql
+```sql
 SELECT * 
 FROM View
 ORDER By Column
@@ -43,7 +43,7 @@ Now let's get started with the code
   
 Create this table
 
-sql
+```sql
 create table TestSort (id int not null)
 insert TestSort values(1)
 insert TestSort values(3)
@@ -57,7 +57,7 @@ insert TestSort values(6)
 
 And create the view
 
-sql
+```sql
 create view vTestSort
 as
 select top 100 percent id from TestSort
@@ -66,7 +66,7 @@ order by id
 
 Now do a select from the view
 
-sql
+```sql
 select * from vTestSort
 ```
 
@@ -92,7 +92,7 @@ Oops it is not sorted
   
 Let's try something else, we will use 99.99 percent
 
-sql
+```sql
 create view vTestSort2
 as
 select top 99.99 percent  id from TestSort
@@ -101,7 +101,7 @@ order by id
 
 Run the select against the view
 
-sql
+```sql
 select * from vTestSort2
 ```
 
@@ -127,7 +127,7 @@ look at that, magic! It works
 
 Let's try another way by using the max value of an integer
 
-sql
+```sql
 create view vTestSort3
 as
 select top 2147483648 id from TestSort
@@ -136,7 +136,7 @@ order by id
 
 Run the select against the view
 
-sql
+```sql
 select * from vTestSort3
 ```
 
@@ -162,7 +162,7 @@ And bingo, it also works.
 
 Now, just because this works right now it doesn't mean that it will work after you apply the next hotfix or service pack. Why not doing this instead
 
-sql
+```sql
 select * from vTestSort3
 order by id
 ```

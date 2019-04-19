@@ -26,7 +26,7 @@ A recent [MSDN thread][1] presented a very interesting problem – find duplicat
 
 Here is the data table we will be working with:
 
-sql
+```sql
 CREATE TABLE tblTEST ( 
   ID           INT    UNIQUE    NOT NULL, 
   FirstColumn  VARCHAR(50)    NOT NULL, 
@@ -295,19 +295,19 @@ This problem is different from the typical find the duplicates problem and at fi
 
 The first idea that comes to mind is to UNPIVOT values from these 5 columns into rows. This is simple enough with this code:
 
-sql
+```sql
 ;with UnPvt AS (SELECT ID, ColValue FROM tblTEST 
 UNPIVOT (ColValue FOR ColName IN ([FirstColumn],[SecondColumn],[ThirdColumn],[FourthColumn], [FifthColumn])) unpvt),
 ```
 The second step is also more or less clear – find possible duplicates by counting IDs partitioned by ColValue
 
-sql
+```sql
 SameVals as (SELECT * FROM (select *, COUNT(ID) OVER (PARTITION by ColValue) as cntSame from UnPvt) X WHERE cntSame >=2),
 ```
 
 Now, what can we do next? The next step was a road block for me. But then, an Eureka moment – we can use CROSS APPLY and find all records that have more than 4 values matching the current record values
 
-sql
+```sql
 DupRecs as (select T.*,S.cntDups, S.ID as DupID
  from tblTEST T CROSS APPLY (select S.ID, COUNT(*) as cntDups from SameVals S
 WHERE T.ID < S.ID and S.ColValue IN (T.FirstColumn,T.SecondColumn,T.ThirdColumn,T.FourthColumn, T.FifthColumn) GROUP BY S.ID) S),
@@ -320,14 +320,14 @@ Say, in our sample rows 1 & 2 match. So, do we want to delete the row 2? Well, r
 
 So, my final select is
 
-sql
+```sql
 select Distinct DupID from Candidates where DupID not IN (select ID from Candidates)
 ```
 This select will only produce real duplicates.
 
 Now, this is the whole solution again as one statement:
 
-sql
+```sql
 ;with UnPvt as (select ID, ColValue from tblTEST 
 UNPIVOT (ColValue for ColName IN ([FirstColumn],[SecondColumn],[ThirdColumn],[FourthColumn], [FifthColumn])) unpvt),
 SameVals as (select * from (select *, COUNT(ID) over (partition by ColValue) as cntSame from UnPvt) X where cntSame >=2),
@@ -344,7 +344,7 @@ Well, even the above solution is not quite right as now it doesn't delete all du
 
 After some more discussion in the mentioned thread and with the help of Peter Larsson, here is the solution that seems to work for the problem:
 
-sql
+```sql
 DECLARE  @DupLoop INT 
 
 SET @DupLoop = 1 

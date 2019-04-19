@@ -26,7 +26,7 @@ So SQL Server 2005 and up implemented a long awaited method of emailing without 
 
 So let's first setup you instance for database mail abilities. First you'll have to verify that database mail is enabled. you can do that with surface area configuration by going into the surface area configuration features. Then select Database Mail and make sure it is Enabled. Remember by default most of SQL Server 2005 features are disabled. You can also run
 
-sql
+```sql
 USE Master
 GO
 sp_configure 'show advanced options', 1
@@ -44,7 +44,7 @@ Now you're going to need a profile and account. Out of scope for me to go step b
 
 So now that you have that all running you can test it by this simple little script
 
-sql
+```sql
 EXEC msdb.dbo.sp_send_dbmail @recipients='you@yourcompany.com',
 @subject = 'My Test Email',
 @body = 'It works!',
@@ -62,7 +62,7 @@ So for a simple job notification and example of what you can do we can create so
 
 First create a new job. Then add a step. Something like this
 
-sql
+```sql
 USE [msdb]
 GO
 BEGIN TRANSACTION

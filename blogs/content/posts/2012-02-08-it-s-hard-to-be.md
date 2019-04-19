@@ -36,7 +36,7 @@ Let's use the AdventureWorks2008R2 sample database to explore these functions. W
 
 To begin, create a view that takes the orders, by salesperson, for a year, and sums the number of orders and value of orders. 
 
-sql
+```sql
 CREATE VIEW Sales.OrdersBySalesperson 
 AS 
 SELECT SOH.SalesOrderID, SOH.OrderDate, SOH.SalesPersonID, SOH.CustomerID, SUM(SOD.OrderQty) AS Qty, SUM(SOD.LineTotal) AS Value
@@ -54,7 +54,7 @@ The mean is calculated by adding all the values in a data set, then dividing by 
 
 In SQL Server, this can easily be achieved by using the AVG function. (Note that NULL values are ignored by this function.) 
 
-sql
+```sql
 SELECT SalesPersonID, AVG(Value) AS MeanValue 
 FROM Sales.OrdersBySalesperson AS OBSP 
 WHERE SalesPersonID IN (274, 275, 277, 278, 279, 282)
@@ -72,7 +72,7 @@ The median is calculated by arranging all values in the data set in order, then 
 
 First, we create a CTE that will order the sales value. The ROW_NUMBER function ranks the orders by value, looking at each salesperson separately. The COUNT function will tell us how many orders the salesperson has. 
 
-sql
+```sql
 WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
 (
 	SELECT SalesPersonID, 
@@ -93,7 +93,7 @@ Here's a sample of the results. As you can see, salesperson 275 has a total of 8
 
 We're going to add a WHERE clause to the CTE: 
 
-sql
+```sql
 WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
 (
 	SELECT SalesPersonID, 
@@ -115,7 +115,7 @@ What does this _mean_? (Please laugh at that.) Remember, to calculate median, we
 
 The next query will find the average of the two middle values, if necessary. If the two middle values are not the same, it will return a value that is not in the data set (and that's OK!). 
 
-sql
+```sql
 WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
 (
 	SELECT SalesPersonID, 
@@ -142,7 +142,7 @@ In the newest version of SQL Server, it gets even easier to calculate a median v
 
 You will specify the percentile you want – in this case, we want the 50th, so we use (0.5). Then, we use WITHIN GROUP (ORDER BY ... ) to tell the function which values to sort and compute. I'm using OVER (PARTITION BY ... ) to tell the function that I want to divide the values up by salesperson. 
 
-sql
+```sql
 SELECT DISTINCT OBSP.SalesPersonID, 
 	PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY OBSP.Value) 
 		OVER (PARTITION BY OBSP.SalesPersonID) AS MedianCont 
@@ -163,7 +163,7 @@ The mode is the most frequently occurring value in a data set. This is more usef
 
 To translate this into T-SQL, let's look at the quantities of an item sold. We'll get the COUNT of the quantity, and put it in descending order to see what quantity of the item is ordered most frequently. 
 
-sql
+```sql
 SELECT COUNT(SOD.OrderQty) AS FrequencyOfValue, SOD.OrderQty
 FROM Sales.SalesOrderHeader AS SOH 
 	INNER JOIN Sales.SalesOrderDetail AS SOD ON SOD.SalesOrderID = SOH.SalesOrderID
@@ -179,7 +179,7 @@ ORDER BY COUNT(SOD.OrderQty) DESC;
 
 Now, we will use the TOP clause to get the most-frequently-ordered quantity. Make sure you use WITH TIES so that if if two or more values occur with the same frequency, both are listed. 
 
-sql
+```sql
 SELECT TOP 1 WITH TIES SOD.OrderQty
 FROM Sales.SalesOrderHeader AS SOH 
 	INNER JOIN Sales.SalesOrderDetail AS SOD ON SOD.SalesOrderID = SOH.SalesOrderID

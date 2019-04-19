@@ -32,7 +32,7 @@ This works, but there is one big issue with it that most people learn the hard w
 
 For example, let's create a simple table with some data and a view over it (because we are using really simple code, I'm not going format visually the way I normally do).
 
-sql
+```sql
 CREATE TABLE tblViewExample (col1 INT NULL);
 GO
 CREATE VIEW vViewExample AS SELECT * FROM tblViewExample
@@ -51,7 +51,7 @@ I did break the rule of no SELECT * again but it's to demonstrate the point of t
   
 So far everything is being returned as we expect it. Now let's change the schema of our table and see what happens.
 
-sql
+```sql
 ALTER TABLE tblViewExample ADD col2 INT NULL;
 GO
 UPDATE tblViewExample SET col2 = col1 * 5;
@@ -64,7 +64,7 @@ SELECT * FROM vViewExample;
 
 Notice that col2 is missing even though the view is using SELECT *. Let's see what happens if we try to use the view to insert a new record with data in col2.
 
-sql
+```sql
 INSERT INTO vViewExample (col1, col2) VALUES (5, 5);
 ```
 <div class="image_block">
@@ -73,7 +73,7 @@ INSERT INTO vViewExample (col1, col2) VALUES (5, 5);
 
 To fix the “broken” view, we have to rebuild it.
 
-sql
+```sql
 DROP VIEW vViewExample;
 GO
 CREATE VIEW vViewExample AS SELECT * FROM tblViewExample
@@ -81,7 +81,7 @@ CREATE VIEW vViewExample AS SELECT * FROM tblViewExample
 
 Now let's try the insert statement again and then the select statement.
 
-sql
+```sql
 INSERT INTO vViewExample (col1, col2) VALUES (5, 5);
 
 SELECT * FROM vViewExample;
@@ -92,7 +92,7 @@ SELECT * FROM vViewExample;
 
 And of course, let's clean up after ourselves!
 
-sql
+```sql
 DROP VIEW vViewExample;
 DROP TABLE tblViewExample;
 ```

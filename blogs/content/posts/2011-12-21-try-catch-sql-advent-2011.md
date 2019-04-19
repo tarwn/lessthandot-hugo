@@ -53,7 +53,7 @@ returns the complete text of the error message. The text includes the values sup
 
 Let's run an example that generates a divide by zero error, in the catch we are just doing a simple select that calls the functions mentioned before to see what they return
 
-sql
+```sql
 BEGIN TRY
     --  divide-by-zero error.
     SELECT 1/0
@@ -81,7 +81,7 @@ As you can see we got all that information back, that was pretty nice. Let's tak
 
 Create the following table to store all the error information in
 
-sql
+```sql
 CREATE TABLE LogErrors (ErrorTime datetime,
 			ErrorNumber int,
 			ErrorSeverity int,
@@ -94,7 +94,7 @@ GO
 
 Create this stored procedure that will insert into the table we just created
 
-sql
+```sql
 CREATE PROCEDURE prInsertError
 AS
 INSERT LogErrors
@@ -110,7 +110,7 @@ GO
 
 Run these 3 queries, they will generate 3 inserts into the LogErrors table
 
-sql
+```sql
 BEGIN TRY
     SELECT 1/0
 END TRY
@@ -136,7 +136,7 @@ END CATCH;
 ```
 If you check now what is in the table, you will see 3 rows
 
-sql
+```sql
 SELECT * FROM LogErrors
 ```
 

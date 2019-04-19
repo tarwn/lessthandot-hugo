@@ -40,7 +40,7 @@ The syntax for EOMONTH is
 
 If you pass in getdate() you will get the last day of the month for the current month
 
-sql
+```sql
 SELECT EOMONTH(getdate())
 ```
 
@@ -48,7 +48,7 @@ SELECT EOMONTH(getdate())
 
 If you pass in a date, you will also get the last date for that month
 
-sql
+```sql
 SELECT EOMONTH('20110615')
 ```
 
@@ -64,7 +64,7 @@ If this argument is specified, then EOMONTH adds the specified number of months 
 
 So if we pass 1 for month\_to\_add it will add a month
 
-sql
+```sql
 SELECT EOMONTH('20110615',1)
 ```
 
@@ -72,7 +72,7 @@ SELECT EOMONTH('20110615',1)
 
 If we pass -1 for month\_to\_add it will subtract a month
 
-sql
+```sql
 SELECT EOMONTH('20110615',-1)
 ```
 

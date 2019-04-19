@@ -34,7 +34,7 @@ Before I answer why someone would need ALTER TABLE permissions when the person a
 
 First create a Test database, add one table and insert one row
 
-sql
+```sql
 CREATE DATABASE Test
 go
 
@@ -49,7 +49,7 @@ GO
 ```
 Now create a new user and give the user datareader and datawriter permissions
 
-sql
+```sql
 USE master
 GO
 CREATE LOGIN TestLogin WITH PASSWORD=N'Test', 
@@ -71,7 +71,7 @@ GO
 
 Now that the user is created, login as that user and run the TRUNCATE TABLE command
 
-sql
+```sql
 TRUNCATE TABLE TestTruncate
 ```
 
@@ -81,7 +81,7 @@ Cannot find the object “TestTruncate” because it does not exist or you do no
 
 As you can see, you don't have permission. A delete will work just fine
 
-sql
+```sql
 DELETE TestTruncate
 ```
 
@@ -89,7 +89,7 @@ DELETE TestTruncate
 
 Before I give you a workaround, let's try to figure out why the minimum requirement is ALTER TABLE. What is the difference between a DELETE and a TRUNCATE in terms of logging? When a TRUNCATE occurs, the operation does not log individual row deletions, a DELETE operation does. The reason this is important is because if you have a trigger on the table, in needs to be disabled before the TRUNCATE occurs. **Now you know why ALTER TABLE is required, triggers need to be disabled.**
 
-sql
+```sql
 ALTER TABLE SomeTable DISABLE TRIGGER SomeTrigger
 ```
 
@@ -97,7 +97,7 @@ And in order to disable the trigger, ALTER TABLE permissions are required as a m
 
 But I don't want people altering tables on our staging and QA servers, so here is one way of giving the person the ability to TRUNCATE a table without giving them permissions explicitly. Create a stored procedure and use WITH EXECUTE AS, this will define the execution context of the stored procedure. In the example below, I picked a user that has sufficient privileges to perform the TRUNCATE.
 
-sql
+```sql
 CREATE PROCEDURE prTruncate
 WITH EXECUTE AS 'SuperUser'
 AS
@@ -107,14 +107,14 @@ GO
 
 All you have to do is give your user execute permissions to the stored procedure you just created
 
-sql
+```sql
 GRANT EXECUTE ON prTruncate TO TestLogin
 GO
 ```
 
 Now if you execute the stored procedure as the TestLogin user, you will see it will run just fine
 
-sql
+```sql
 EXEC prTruncate
 ```
 

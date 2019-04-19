@@ -27,7 +27,7 @@ Missing Indexes
 
 Missing indexes can be found in detail by looking into the <span class="MT_green">sys.dm_db_missing_index_details</span>, <span class="MT_green">sys.dm_db_missing_index_groups</span> DMVs and <span class="MT_green">sys.dm_db_missing_index_columns</span> DMF.  These three objects are the base to retrieve the details to make observations on what SQL Server has determined is a missing index.  The example code below shows them in use.
 
-sql
+```sql
 SELECT 
 	*
 FROM sys.dm_db_missing_index_details AS details
@@ -45,7 +45,7 @@ Using the Person.Address table in AdventureWorks, disable indexes IX\_Address\_A
 
 Run the following query while having “show actual execution plan” set on.
 
-sql
+```sql
 SELECT 
 	AddressID,
 	AddressLine1,
@@ -68,7 +68,7 @@ With the query we wrote earlier using the DMV and DMFs, we can also see the resu
 
 Now run the following query on the Person.Address table.
 
-sql
+```sql
 SELECT 
 	AddressID,
 	AddressLine1,
@@ -94,7 +94,7 @@ Down to it with the Tip
 
 The missing index query using the DMVs and DMF we have shown is great but as discussed, may produce results that will require analysis on the reviewers' part.  In the example covered, the best course would be to create one index covering both query's requirements.  (While also placing in the covering aspects of the select statement.)
 
-sql
+```sql
 CREATE INDEX IDX_CITY_ADDY1_ASC ON Person.Address (City,AddressLine1)
 INCLUDE (AddressLine2)
 WITH DROP_EXISTING  

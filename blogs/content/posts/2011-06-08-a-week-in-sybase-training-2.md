@@ -34,7 +34,7 @@ There is a proc that is named sp_dbextend that you can use to manage all this st
 
 Here is an example that defines the rate of growth as 5% of current value, in each expansion attempt for the database pubs2
 
-sql
+```sql
 sp_dbextend 'modify', 'database', pubs2, logsegment, 'growby', '5%'
 ```
 
@@ -48,13 +48,13 @@ I learned some interesting things in regards to tempdb. In Sybase you can have u
 
 Here is how you create a temporary database
 
-sql
+```sql
 create temporary database tempdb_01 on some_tempdb_device = 10
 ```
 
 Then to add that database to the default group, you would do this
 
-sql
+```sql
 sp_tempdb 'add', tempdb_01, 'default'
 ```
 
@@ -66,7 +66,7 @@ select db_name(@@tempdbid)
 
 You can also make sure that login Menace will always use the tempdb_01 temporary database by binding that login to that database
 
-sql
+```sql
 sp_tempdb bind, 'LG', 'Menace', 'DB', 'tempdb_01'
 ```
 
@@ -98,7 +98,7 @@ You can enable or disable roles by using the set role RoleName [on | off]
 
 To check if you have a role or not, you can use the proc_role function, here is an example
 
-sql
+```sql
 select proc_role('sa_role')
 ```
 
@@ -108,19 +108,19 @@ To see all the roles for a login you can use the sp_displaylogin stored procedur
 
 Here is an example
 
-sql
+```sql
 sp_displaylogin 'sa'
 ```
 
 You can grant a role or roles to someone by using the grant role command. Here is an example
 
-sql
+```sql
 grant role sso_role, sa_role, oper_role to SQLMenace
 ```
 
 To take away the sso_role, you would use revoke
 
-sql
+```sql
 revoke role sso_role from SQLMenace
 ```
 

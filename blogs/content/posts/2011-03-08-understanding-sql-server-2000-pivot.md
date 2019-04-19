@@ -59,7 +59,7 @@ As you can see, the original data had the name and shoe size for each person on 
 
 Setting up the code....
 
-sql
+```sql
 Create Table #Temp(Id Int, Name VarChar(20), Value VarChar(20))
 
 Insert Into #Temp Values(1, 'Name','George')
@@ -77,14 +77,14 @@ Insert Into #Temp Values(4, 'ShoeSize','9')
 
 Our first query will simply show the data.
 
-sql
+```sql
 Select *
 From   #Temp
 ```
 
 Simple. We see all the data in the table. For our next step, let's set up the output structure. We know we want to see the ID column and the Value column twice, once for the person's name and again for the shoe size. 
 
-sql
+```sql
 Select Id,
        Value,
        Value
@@ -104,7 +104,7 @@ From   #Temp
 
 This query is simply duplicating the data in two columns. Ultimately, we will want the second column to show the person's name, and the third column to show the shoe size. For the next step, let's show just the name in the second column and the shoe size in the third. We will do this using a case expression:
 
-sql
+```sql
 Select Id,
        Case When Name = 'Name' Then Value End,
        Case When Name = 'ShoeSize' Then Value End
@@ -124,7 +124,7 @@ From   #Temp
 
 Take a look at the case expression. Notice that there is no ELSE clause. Without an ELSE, the CASE expression will return NULL. This is extremely important for our end result. However, it's important to realize that the second column has the person's name and NULL, and the third column has shoe size and null. Next we will introduce column aliases.
 
-sql
+```sql
 Select Id,
        Case When Name = 'Name' Then Value End As Name,
        Case When Name = 'ShoeSize' Then Value End As ShoeSize
@@ -144,7 +144,7 @@ From   #Temp
 
 Nothing fancy here. Just the column names. We still have NULL's in our data that we will want to eliminate. Which leads us to our next step, and the most important part, too. When we use aggregates, it's important to realize that they ignore NULL's in the data. For example, if we have 2 rows with “George” in one row and NULL in the other row, Max(Column) will ignore the NULL and return George. We can use that to our advantage here.
 
-sql
+```sql
 Select Id,
        Min(Case When Name = 'Name' Then Value End) As Name,
        Min(Case When Name = 'ShoeSize' Then Value End) As ShoeSize

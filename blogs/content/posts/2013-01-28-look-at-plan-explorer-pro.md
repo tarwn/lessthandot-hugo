@@ -43,7 +43,7 @@ Kids: don't try this at home. And by home, I mean a production server.
 
 Open SSMS and open three query windows. In this example, the three query windows are holding session IDs 58, 59 and 60.  In each query window, paste the following T-SQL code.
 
-sql
+```sql
 USE QTuner_Design
 GO
 BEGIN TRAN

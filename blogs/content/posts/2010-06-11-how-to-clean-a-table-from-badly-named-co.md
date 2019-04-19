@@ -30,7 +30,7 @@ The solution is to loop over information\_schema.columns, find all the columns t
 
 First create these two tables
 
-sql
+```sql
 CREATE TABLE Test ([col%1] VARCHAR(50),[col_2] VARCHAR(40))
 GO
 
@@ -40,7 +40,7 @@ GO
 
 Now here is the code that will rename this in one shot. I have placed comments in the code to show you what the code does. If you want to know how sp_rename works visit the Books On Line link here: http://msdn.microsoft.com/en-us/library/ms188351.aspx
 
-sql
+```sql
 --Grab the table and columns that we need and store it in a temp table
 SELECT IDENTITY(INT,1,1) AS id ,column_name,table_name, table_schema
 INTO #LOOP
@@ -80,7 +80,7 @@ DROP TABLE #LOOP
 
 Run a simple select statement to verify that the columns have been renamed
 
-sql
+```sql
 SELECT * FROM Test2
 ```
 
@@ -90,7 +90,7 @@ As you can see, there are no more underscores and percent signs in the column na
 
 Here is the other way of doing the same thing. First drop and create the tables again
 
-sql
+```sql
 DROP TABLE Test,Test2
 
 CREATE TABLE Test ([col%1] VARCHAR(50),[col_2] VARCHAR(40))
@@ -102,7 +102,7 @@ GO
 
 Now hit CTRL + T to display the output in text, run the query below
 
-sql
+```sql
 SELECT		'EXEC sp_rename ''' 
 			+ QUOTENAME(TABLE_SCHEMA) + '.' 
 			+ QUOTENAME(TABLE_NAME) + '.' 
@@ -116,7 +116,7 @@ OR column_name LIKE '%[_]%'
 
 The output from that query is the following T-SQL
 
-sql
+```sql
 EXEC sp_rename '[dbo].[Test].[col%1]', 'col1', 'COLUMN' 
 GO
 EXEC sp_rename '[dbo].[Test2].[col%2]', 'col2', 'COLUMN' 
@@ -130,7 +130,7 @@ GO
 ```
 You can run that SQL and then you can run the same query against the table to see that the columns names don't have those unwanted characters anymore
 
-sql
+```sql
 select * from Test2
 ```
 

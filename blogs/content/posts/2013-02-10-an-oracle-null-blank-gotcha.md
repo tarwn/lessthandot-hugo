@@ -28,7 +28,7 @@ In my [Differences between Oracle and SQL Server when working with NULL and blan
 
 I you have a varchar or char datatype in SQL Server and you store a blank, you get back a blank or padded spaces.
 
-sql
+```sql
 DECLARE @Test1 varchar(10) = ''
 DECLARE @Test2 char(10) = ''
 
@@ -39,7 +39,7 @@ The output is one blank and ten spaces.
 
 You can verify this by using the `DATALENGTH` function .
 
-sql
+```sql
 DECLARE @Test1 varchar(10) = ''
 DECLARE @Test2 char(10) = ''
 
@@ -87,7 +87,7 @@ However when inserting into a table this becomes a little bit different with Ora
 
 Running this in SQL Server
 
-sql
+```sql
 CREATE TABLE TestNull(Col1 CHAR(10),Col2 VARCHAR(10));
 INSERT INTO TestNull VALUES(NULL,NULL);
 INSERT INTO TestNull VALUES('','');

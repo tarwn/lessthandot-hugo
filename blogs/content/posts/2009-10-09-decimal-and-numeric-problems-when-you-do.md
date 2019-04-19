@@ -17,7 +17,7 @@ When you don't specify the precision and scale for your decimal data types, SQL 
 
 For example:
 
-sql
+```sql
 Declare @Blah Decimal  
 
 Set @Blah = 65.00  

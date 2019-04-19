@@ -16,7 +16,7 @@ categories:
 ---
 Earlier this week I decided that I wanted to generate a report that shows me how the security is set up on my databases. I'm mainly intersted in my database roles and how they're set up, and logins assigned to the database. So I did some snooping around and generated 3 queries for myself.
 
-sql
+```sql
 select
 	dpr.name,
 	dpr.principal_id,
@@ -55,7 +55,7 @@ This query displays all rights explicitly granted and denied in the database to 
 
 In this query, name is the name of the database role. Type and type\_desc describe what the grantee principal id is. class and class\_desc describes what is having a right granted to it. Permission_name shows the permission, and state shows if that permission is being granted or denied. Object name is the object that is having a right granted, schema name is the schema name that's being granted a right.
 
-sql
+```sql
 select
 	dpr.name,
 	dpr.principal_id,
@@ -94,7 +94,7 @@ where dpr.type in
 ```
 This query shows all of the rights explicitly granted/denied to logins.
 
-sql
+```sql
 SELECT 
 	dpm.name as Member,
 	dpg.name as Grp
@@ -110,7 +110,7 @@ Now, these three queries gave me a good starting point, but to run these you hav
 
 here's the script to create the sp's that i made.
 
-sql
+```sql
 -- =============================================
 -- Author:		David Forck DF
 -- Create date: 01Oct10

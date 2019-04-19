@@ -32,13 +32,13 @@ If you have a login on one server and you have the same login on another server 
 
 This is the old way
 
-sql
+```sql
 EXECUTE sp_change_users_login 'Update_One', 'UserName', 'UserName'
 ```
 
 And here is the new way, much cleaner
 
-sql
+```sql
 ALTER USER UserName WITH LOGIN = UserName
 ```
 
@@ -46,7 +46,7 @@ Let's write some code and see how this all works
 
 First we are creating a new user named TestLogin
 
-sql
+```sql
 USE [master]
 GO
 CREATE LOGIN [TestLogin] WITH PASSWORD=N'test', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
@@ -54,7 +54,7 @@ GO
 ```
 Now it is time to create a new database, in this database we will create the user TestLogin
 
-sql
+```sql
 CREATE DATABASE TestLogin
 GO
 
@@ -68,7 +68,7 @@ GO
 
 Now we will backup the database
 
-sql
+```sql
 USE master
 GO
 
@@ -77,7 +77,7 @@ SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 ```
 And now we can drop the database since we will create it again later anyhow
 
-sql
+```sql
 USE master
 GO
 
@@ -87,7 +87,7 @@ GO
 
 Since I want to show you the code so that you can run it on the same server, we will just drop and recreate the login
 
-sql
+```sql
 USE [master]
 GO
 
@@ -104,7 +104,7 @@ GO
 
 Now, we will create the same database again with the same user
 
-sql
+```sql
 CREATE DATABASE TestLogin
 GO
 
@@ -120,7 +120,7 @@ GO
 ```
 Go ahead and restore the backup we created before
 
-sql
+```sql
 ALTER DATABASE TestLogin SET SINGLE_USER WITH ROLLBACK IMMEDIATE
 GO
 
@@ -135,7 +135,7 @@ GO
 
 We now will use this database and use the sp\_change\_users_login procedure to see if any SIDs are mismatched
 
-sql
+```sql
 USE TestLogin
 GO
 
@@ -149,7 +149,7 @@ TestLogin	0x7ED6E205155E9C40BA684E72453BAE1B</pre>
 
 We can easily test this because if you try to login as that user and then execute the command below you will get an error message
 
-sql
+```sql
 USE testlogin
 GO
 ```
@@ -162,19 +162,19 @@ Leave that query window open for now, we will get back to it later.
   
 Now let's fix the user by mapping the user to the login
 
-sql
+```sql
 EXECUTE sp_change_users_login 'Update_One', 'TestLogin', 'TestLogin'
 ```
 
 Now this query doesn't return any rows since the user has been fixed
 
-sql
+```sql
 EXECUTE sp_change_users_login 'report'
 ```
 
 Now refresh the query or connect again and run this
 
-sql
+```sql
 USE testlogin
 GO
 ```
@@ -182,7 +182,7 @@ As you can see it is fine now
 
 Disconnect from the DB with the TestLogin account and then drop the database
 
-sql
+```sql
 USE master
 GO
 
@@ -192,7 +192,7 @@ GO
 
 We will create the database again, create the user again and finally we will restore the database
 
-sql
+```sql
 USE master
 GO
 
@@ -224,7 +224,7 @@ GO
 
 Just as before, we are getting back the mis matched SID
 
-sql
+```sql
 USE TestLogin
 GO
 
@@ -236,7 +236,7 @@ TestLogin	0x7ED6E205155E9C40BA684E72453BAE1B</pre>
 
 You will get the same error from before if you try to connect to this database
 
-sql
+```sql
 USE testlogin
 GO
 ```
@@ -247,13 +247,13 @@ The server principal “TestLogin” is not able to access the database “TestL
 
 Here is how to do the same thing with ALTER USER as with sp\_change\_users_login 
 
-sql
+```sql
 ALTER USER TestLogin WITH LOGIN = TestLogin
 ```
 
 As you can see, this doesn't return anything anymore
 
-sql
+```sql
 EXECUTE sp_change_users_login 'report'
 ```
 

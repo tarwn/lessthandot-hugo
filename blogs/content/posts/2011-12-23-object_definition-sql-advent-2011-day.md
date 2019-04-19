@@ -53,7 +53,7 @@ So let's take a quick look
 
 Here is how you would use sp_helptext 
 
-sql
+```sql
 EXEC sp_helptext 'uspGetBillOfMaterials'
 ```
 
@@ -61,7 +61,7 @@ That returns the definition of the stored procedure
 
 Here is how to use the OBJECT_DEFINITION function
 
-sql
+```sql
 SELECT OBJECT_DEFINITION(OBJECT_ID('uspGetBillOfMaterials'))
 ```
 
@@ -69,7 +69,7 @@ That also returns the definition of the stored procedure
 
 So you say...so what, what is the big deal, seems the same to me? I say, hold on, let me show you this......what if I wanted to have the definition of every trigger, stored procedure or function that references the Production.BillOfMaterials table. Here is how simple that is
 
-sql
+```sql
 SELECT OBJECT_DEFINITION(OBJECT_ID),OBJECT_NAME(OBJECT_ID) AS  NameOfObject
 FROM sys.all_sql_modules a
 JOIN sys.sysobjects  s ON a.object_id = s.id
@@ -84,7 +84,7 @@ But there is an easier way, you don't even need the function in this case, the s
 
 Here is how you do it
 
-sql
+```sql
 SELECT definition,OBJECT_NAME(OBJECT_ID) AS  NameOfObject
 FROM sys.all_sql_modules a
 JOIN sysobjects  s ON a.object_id = s.id
@@ -95,7 +95,7 @@ AND REPLACE(REPLACE(definition,']',''),'[','') like '%Production.BillOfMaterials
 
 Create this simple proc
 
-sql
+```sql
 CREATE PROCEDURE prTest 
 AS
 SELECT * FROM Production.BillOfMaterials
@@ -103,7 +103,7 @@ GO
 ```
 Run this query again
 
-sql
+```sql
 SELECT definition,OBJECT_NAME(OBJECT_ID) AS  NameOfObject
 FROM sys.all_sql_modules a
 JOIN sysobjects  s ON a.object_id = s.id

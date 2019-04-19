@@ -28,7 +28,7 @@ It's important to note that compilation is where the effects of this occur.  Th
 
 To look closely at the difference in compilation and execution time, take the following two queries.
 
-sql
+```sql
 SELECT SalesOrderID FROM Sales.SalesOrderHeader 
 WHERE EXISTS (SELECT * FROM Sales.SalesOrderDetail WHERE CarrierTrackingNumber = '4911-403C-98')
 OPTION (RECOMPILE)
@@ -55,7 +55,7 @@ As shown, there is a slight improvement with the use of SELECT 1.  Running this
 
 Now, the impact of .0190 is extremely low.  In order to really see if the metadata expansion of the columns has a larger impact when there are a high number of columns, run the following code to create an extremely wide table.
 
-sql
+```sql
 DECLARE @int int = 1
 DECLARE @cmd VARCHAR(max) = ''
 

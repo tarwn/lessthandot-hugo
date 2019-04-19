@@ -40,20 +40,20 @@ Here is what the regular expression looks like \[DMOPT\]\[0-9\][0-9], that will 
 
 Enough talking let's look at some code, first create this table
 
-sql
+```sql
 create table blatest(code char(3))
 ```
 
 now add the check constraint
 
-sql
+```sql
 alter table blatest add  constraint ck_bla 
 check (code like '[DMOPT][0-9][0-9]' )
 GO
 ```
 Now we can run some tests
 
-sql
+```sql
 insert blatest values('a12') --fails
 insert blatest values('M12')  --good
 insert blatest values('D12') --good
@@ -76,7 +76,7 @@ check (code like '\[DMOPT\]\[0-9\][0-9]' COLLATE SQL\_Latin1\_General\_CP1\_CS_A
 
 What we did is used the SQL\_Latin1\_General\_CP1\_CS_AS collation, to find out what this collation does, run the following
 
-sql
+```sql
 select * from ::fn_helpcollations()
 where name = 'SQL_Latin1_General_CP1_CS_AS'
 ```
@@ -91,20 +91,20 @@ SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data
 
 Let's create the constraint, first we need to drop the old constraint
 
-sql
+```sql
 alter table blatest drop  constraint ck_bla
 go
 ```
 
 Now we will create the new case sensitive constraint
 
-sql
+```sql
 alter table blatest add  constraint ck_bla 
 check (code like '[DMOPT][0-9][0-9]' COLLATE SQL_Latin1_General_CP1_CS_AS )
 GO
 ```
 
-sql
+```sql
 insert blatest values('D12') --good
 insert blatest values('d12') --fails
 ```

@@ -21,7 +21,7 @@ tags:
 ---
 A question was asked on StackOverflow about how NTILE() works: [Want to learn more on NTILE()][1] I answered that question and then started thinking about NTILE(), I realized that I have never used this function in production code. Everytime I used it was for demoware purposes. I did a quick check against a bunch of databases
 
-sql
+```sql
 SELECT * FROM sys.sql_modules
 WHERE OBJECT_DEFINITION(object_id) LIKE '%ntile%'
 ```
@@ -36,7 +36,7 @@ For you that don't know what NTILE() does it basically distributes the rows in a
 
 Let's look at some code to understand how it works, first create this simple table
 
-sql
+```sql
 CREATE TABLE  #temp(StudentID CHAR(2),  Score  INT) 
 
 INSERT #temp  VALUES('S1',75 ) 
@@ -48,7 +48,7 @@ INSERT #temp  VALUES('S5',93 )
 
 Now if you use NTILE() to create 2 buckets, you will see 1 and 2 as NtileValue
 
-sql
+```sql
 SELECT NTILE(2) OVER(ORDER BY Score) AS NtileValue,*
 FROM #temp
 ORDER BY 1
@@ -67,13 +67,13 @@ Since the number of rows are not even, the first bucket will have three rows and
 
 Let's add one more row to this table
 
-sql
+```sql
 INSERT #temp  VALUES('S6',92 ) 
 ```
 
 Now let's run the same query as before
 
-sql
+```sql
 SELECT NTILE(2) OVER(ORDER BY Score) AS NtileValue,*
 FROM #temp
 ORDER BY 1
@@ -93,7 +93,7 @@ As you can see both buckets now have three rows
 
 What if we use NTILE(3)?
 
-sql
+```sql
 SELECT NTILE(3) OVER(ORDER BY Score) AS NtileValue,*
 FROM #temp
 ORDER BY 1

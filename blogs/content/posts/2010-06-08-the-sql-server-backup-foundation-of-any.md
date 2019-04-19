@@ -89,7 +89,7 @@ The [BACKUP DATABASE][4] statement can be daunting at first glance so can the SS
 
 Example: Create a database DBA and we will run a full backup on it
 
-sql
+```sql
 CREATE DATABASE TEST_DR_BACKUP 
 GO
 ALTER DATABASE TEST_DR_BACKUP SET RECOVERY FULL
@@ -98,7 +98,7 @@ GO
 
 Now that we have a database to backup, let's execute a typical full backup statement
 
-sql
+```sql
 BACKUP DATABASE TEST_DR_BACKUP
 TO DISK = N'C:TEST_DR_BACKUP.BAK'
 GO
@@ -106,7 +106,7 @@ GO
 
 This gives us a backup file in the C drive of TEST\_DR\_BACKUP.BAK. The backup contains everything we need to recover the database as is. If you notice, this backup statement was pretty quick. If we add CHECKSUM and the COPY_ONLY option to this statement, the execution time will be slightly longer.
 
-sql
+```sql
 BACKUP DATABASE TEST_DR_BACKUP
 TO DISK = N'C:TEST_DR_BACKUP.BAK'
 WITH CHECKSUM,COPY_ONLY
@@ -129,7 +129,7 @@ Example: We have a Full backup located at C:sql\_full\_backupdbadba\_full\_20100
 
 We could test this backup set by issuing the follow RESTORE VERIFYONLY statement
 
-sql
+```sql
 RESTORE VERIFYONLY
 FROM DISK = N'C:sql_full_backupdbadba_full_20100606.bak'
 GO 

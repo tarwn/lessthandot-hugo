@@ -38,7 +38,7 @@ Let's setup a test database to play with. We'll create, backup and restore to st
   
 
 
-sql
+```sql
 CREATE DATABASE bah
 GO
 BACKUP DATABASE bah TO DISK = 'C:bah.bak'
@@ -58,7 +58,7 @@ To do this we perform the following steps
   
 
 
-sql
+```sql
 USE MASTER
 GO
 ALTER DATABASE bah SET OFFLINE
@@ -68,7 +68,7 @@ Now go to the default folder where the mdf and other files are located and copy/
 
 Once you've copied the files off, run the following to bring the database back up
 
-sql
+```sql
 USE MASTER
 GO
 ALTER DATABASE bah SET ONLINE
@@ -82,7 +82,7 @@ Next, we only need to attach the files to a new instance given the following com
 
 On the secondary instance do the following steps
 
-sql
+```sql
 CREATE DATABASE bah
 ON 
 ( NAME = bah_data,FILENAME = 'c:restorebah.mdf')
@@ -103,7 +103,7 @@ Now we can see already in the tree of object explorer that the database online a
 
 To verify, we can check the read only state in sys.databases
 
-sql
+```sql
 select is_read_only from sys.databases where [name] = 'bah'
 ```
 

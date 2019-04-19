@@ -26,7 +26,7 @@ Converting from an encoded string to a real Unicode string is more difficult tha
 
 The basis for the function below is the CharIndex SQL Server functions. CharIndex has an optional 3rd parameter that allows you to specify where (within the string) to start searching. What we do is first find where the encoded Unicode data starts, and then where it ends. Once we know this, we do a simple replace. Since there can be multiple encoded Unicode characters, we put the whole thing in to a while loop.
 
-sql
+```sql
 Create Function DecodeUnicodeData(@Data nVarChar(4000), @Prefix VarChar(100), @Suffix VarChar(100))
 Returns nvarchar(4000)
 As
@@ -49,13 +49,13 @@ End
 
 You can call it like this:
 
-sql
+```sql
 Select dbo.DecodeUnicodeData('&#937;mega', '&#', ';')
 ```
 
 This blog wouldn't be complete if I didn't also give you a function for encoding data, too. What I mean is, suppose you need to supply data in this format. How would you do it?
 
-sql
+```sql
 Create Function EncodeUnicodeData(@Data NVarChar(4000), @Prefix VarChar(20), @Suffix VarChar(20))
 Returns VarChar(8000)
 As 
@@ -82,6 +82,6 @@ End
 
 You can call it like this:
 
-sql
+```sql
 Select dbo.EncodeUnicodeData(N'&#937;mega', '&#', ';')
 ```

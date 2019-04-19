@@ -31,7 +31,7 @@ let me show you what I mean.
   
 Run the following block of code
 
-sql
+```sql
 CREATE TABLE TestTable (id INT,SomeCol VARCHAR(666))
 GO
 
@@ -52,7 +52,7 @@ GO
 ```
 Now we will change that table by adding another column
 
-sql
+```sql
 ALTER TABLE TestTable
 ADD Col2 DATETIME DEFAULT CURRENT_TIMESTAMP
 GO
@@ -62,7 +62,7 @@ GO
 ```
 Now run the selects again
 
-sql
+```sql
 SELECT * FROM TestTable
 GO
 
@@ -72,7 +72,7 @@ GO
 
 See what happened? The TestView does not include the Col2 column. So what can you do? There are at least two things that you can do. You can recreate the view with a create or alter statement or you can use sp_refreshview, run the code below to see how that works
 
-sql
+```sql
 sp_refreshview TestView
 GO
 

@@ -18,7 +18,7 @@ tags:
 ---
 This is just a quick post in case you run into this problem. This is an interesting error and it had a coworker worry about table corruption. This coworker connected to a database on a fairly new server, he then executed a query like the following
 
-sql
+```sql
 SELECT *
 FROM SomeTable
 ```

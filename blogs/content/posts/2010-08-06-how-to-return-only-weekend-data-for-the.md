@@ -26,7 +26,7 @@ Of course not everyone has a calendar table so here is a way to do it without.
 
 First create this table
 
-sql
+```sql
 CREATE TABLE TestData (id INT NOT NULL PRIMARY KEY, 
 			SomeData VARCHAR(36) NOT NULL, 
 			SomeDate DATETIME NOT NULL)
@@ -35,7 +35,7 @@ GO
 
 Now we have to insert some data, the query below will insert 2048 rows into the table
 
-sql
+```sql
 INSERT TestData
 SELECT number, NEWID(), DATEADD(hh,- number,GETDATE())
 FROM master..spt_values
@@ -60,7 +60,7 @@ So what we did is take the getdate() value and then subtract one hour from it fo
 
 Next up is creating an index on the SomeDate column
 
-sql
+```sql
 CREATE  INDEX ix_SomeDate ON TestData(SomeDate)
 GO
 ```
@@ -73,7 +73,7 @@ If you run that today on August 8 2010 it returns 2010-07-09 00:00:00.000
   
 Try it yourself
 
-sql
+```sql
 SELECT CONVERT(DATE,DATEADD(WK,-4,GETDATE()))
 
 SELECT DATEADD(DD, DATEDIFF(dd, 0, DATEADD(WK,-4,GETDATE()))+0, 0)
@@ -81,13 +81,13 @@ SELECT DATEADD(DD, DATEDIFF(dd, 0, DATEADD(WK,-4,GETDATE()))+0, 0)
 
 Now we have to do the weekend part, in the US the start of the week is Sunday, if you check @@DATEFIRST it should return a 7
 
-sql
+```sql
 SELECT @@DATEFIRST
 ```
 
 In Holland for example the week start on Saturday, run this to see what @@DATEFIRST returns for a different language
 
-sql
+```sql
 SET LANGUAGE Dutch;
 GO
 SELECT @@DATEFIRST;  --1
@@ -99,7 +99,7 @@ SELECT @@DATEFIRST;  --7
 
 You can use DATEFIRST to change that, the command below will make the week start at 1
 
-sql
+```sql
 SET DATEFIRST 1;
 ```
 
@@ -107,7 +107,7 @@ So DATEPART(dw, Date) will return 7 for Sunday and 1 for Saturday in the US, in 
 
 Finally the query looks like this if you are not on SQL Server 2008 yet
 
-sql
+```sql
 SELECT * FROM TestData
 WHERE SomeDate >=DATEADD(DD, DATEDIFF(dd, 0, DATEADD(WK,-4,GETDATE()))+0, 0)
 AND DATEPART(dw,SomeDate  ) IN(1,7)
@@ -115,7 +115,7 @@ AND DATEPART(dw,SomeDate  ) IN(1,7)
 
 If you are on SQl Server 2008, then you can use this query
 
-sql
+```sql
 SELECT * FROM TestData
 WHERE SomeDate >=CONVERT(DATE,DATEADD(WK,-4,GETDATE()))
 AND DATEPART(dw,SomeDate  ) IN(1,7)

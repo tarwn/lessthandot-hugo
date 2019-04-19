@@ -35,7 +35,7 @@ Without having any other active logging mechanisms in place, the default trace c
 
 To search the default trace, first determine if the default trace is enabled. In SQL Server 2005 this can be done by running sp_configure as follows:
 
-sql
+```sql
 EXEC master.dbo.sp_configure 'show advanced options', 1; 
 GO 
 EXEC master.dbo.sp_configure 'default trace enabled';
@@ -51,7 +51,7 @@ SQL Server 2008 uses Policy Management for enabling the default trace and can be
 
 Once the default trace is validated and running, determine the location the trace files are being written to by running the function, fn\_trace\_getinfo
 
-sql
+```sql
 SELECT * 
 FROM fn_trace_getinfo(default);
 GO
@@ -61,7 +61,7 @@ This will result in the properties that are set for the default trace. Property 
 
 To read the trace file, use fn\_trace\_gettable. This will pull all the data from the trace file and show it in a table format in SSMS for ease of reviewing
 
-sql
+```sql
 SELECT 
 	TextData,
 	HostName,

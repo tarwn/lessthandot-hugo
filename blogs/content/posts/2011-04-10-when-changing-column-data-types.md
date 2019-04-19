@@ -64,7 +64,7 @@ Let's take a closer look at the T-SQL needed for this
 
 First create the following table and insert one row
 
-sql
+```sql
 USE tempdb
 GO
 
@@ -85,7 +85,7 @@ Datetime accepts dates in the range from January 1, 1753, through December 31, 9
   
 Run the code below which will try to insert January 1, 1600, to see the error
 
-sql
+```sql
 INSERT Test values ('16000101')
 ```
 
@@ -103,19 +103,19 @@ For our table the syntax will be the following: _ALTER TABLE Test ALTER column S
   
 Run the code below to make that happen
 
-sql
+```sql
 ALTER TABLE Test ALTER column SomeDate datetime2
 GO
 ```
 So now, if we try to insert January 1, 1600, it should succeeed
 
-sql
+```sql
 INSERT Test values ('16000101')
 ```
 
 Now, you can look what is in the table
 
-sql
+```sql
 SELECT * FROM Test
 GO
 ```
@@ -136,7 +136,7 @@ Learn the product and learn it well. Don't overly depend on the wizards in SSMS,
 
 The wizards are nice but sometimes they get it wrong. Here is the code that the wizard generates to change the column
 
-sql
+```sql
 /* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
 BEGIN TRANSACTION
 SET QUOTED_IDENTIFIER ON

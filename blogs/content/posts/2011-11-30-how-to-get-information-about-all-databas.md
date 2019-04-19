@@ -54,7 +54,7 @@ Here is a script demonstrating this idea – it lists indexes in all databases w
 
 ## Indexes in all databases with their usage {#1}
 
-sql
+```sql
 declare @SQL nvarchar(max)
 if object_id('tempdb..#Result','U') IS not NULL
  drop table #Result
@@ -79,7 +79,7 @@ drop table #Result
 ```
 ## Indexes in all databases with their physical stats {#2}
 
-sql
+```sql
 declare @SQL nvarchar(max)
 set @SQL = ''
 select @SQL = @SQL +
@@ -108,7 +108,7 @@ Using this same idea you can get a count of all objects in all your databases us
 
 ## Count of all objects in all databases {#3}
 
-sql
+```sql
 declare @Qry nvarchar(max) 
 select @Qry = coalesce(@Qry + char(13) + char(10) + ' UNION ALL ','') + '
 select ' + quotename([Name],'''') + ' as DBName, [AGGREGATE_FUNCTION], [CHECK_CONSTRAINT],[DEFAULT_CONSTRAINT],
@@ -154,7 +154,7 @@ The script below will give you a count of records in every table in a database:
 
 ## Record Count in every table in a database {#4}
 
-sql
+```sql
 DECLARE  @DynamicSQL NVARCHAR(MAX)
  
 SELECT   @DynamicSQL = COALESCE(@DynamicSQL + CHAR(13) + ' UNION ALL ' + CHAR(13),
@@ -173,7 +173,7 @@ Quick row count in all tables in all databases in the server instance (you can e
 
 ## Quick Record Count in All Tables in All Databases {#5}
 
-sql
+```sql
 declare @SQL nvarchar(max)
 
 set @SQL = ''
@@ -200,7 +200,7 @@ Another way with less info:
 
 ## Quick Record Count in All Tables in All Databases {#6}
 
-sql
+```sql
 declare @SQL nvarchar(max)
 
 set @SQL = ''
@@ -219,7 +219,7 @@ Here is a script showing sizes from all tables in a database.
 
 ## Sizes of All Tables in a Database {#7}
 
-sql
+```sql
 --exec sp_MSforeachtable 'print ''?'' exec sp_spaceused ''?'''
 if OBJECT_ID('tempdb..#TablesSizes') IS NOT NULL
    drop table #TablesSizes
@@ -242,7 +242,7 @@ Before I show the T-SQL code I'd like to point to this [very interesting blog][2
 
 ## Database Files Sizes in All Databases {#8}
 
-sql
+```sql
 create  table #FileSizes (DBName sysname, [File Name] varchar(max), [Physical Name] varchar(max),
 Size decimal(12,2))
 declare @SQL nvarchar(max)
@@ -260,7 +260,7 @@ select * from #FileSizes order by DBName, [File Name]
 
 You can also find the script to show all database sizes using sp_MsForEachDB [here][21]. See also this [relevant thread][22] at MSDN.
 
-sql
+```sql
 declare @Sql varchar(max)
 select @SQL =coalesce(@SQL + char(13) + 'UNION ALL 
 ' ,'') + 'SELECT ''' + name + ''' AS DBNAME,' + 
@@ -277,7 +277,7 @@ execute (@SQL)
 
 Note, that this script assumes that database files have the same name as the database itself. If this is not true, this script will not return correct result.
 
-sql
+```sql
 create table #Test (DbName sysname, TotalSize decimal(20,2), Used decimal(20,2), [free space percentage] decimal(20,2))
 
 declare @SQL nvarchar(max)
@@ -301,7 +301,7 @@ This script will backup all databases (using compression):
 
 ## Backup All Databases with Compression (SQL 2008+) {#10}
 
-sql
+```sql
 Declare @ToExecute nvarChar(max);
 declare @cBackupPath nvarchar(max) = N'D:\SQL Server Databases\SQL 2014\Backup';
 
@@ -325,7 +325,7 @@ Execute (@ToExecute)
 
 ## All Schema Names in All Databases {#11}
 
-sql
+```sql
 declare @Sql nvarchar(max)
 create table AllDBSchemas ([DB Name] sysname, [Schema Name] sysname)
 
@@ -345,7 +345,7 @@ select * from AllDBSchemas order by [DB Name],[SCHEMA NAME]
 
 ## List of All Tables in All Databases {#12}
 
-sql
+```sql
 CREATE TABLE AllTables ([DB Name] sysname, [Schema Name] sysname, [Table Name] sysname)
 
 DECLARE @SQL NVARCHAR(MAX)
@@ -366,7 +366,7 @@ Alternative way to get all tables in all databases:
 
 ## List of All Tables in All Databases {#13}
 
-sql
+```sql
 if object_ID('TempDB..#AllTables','U') IS NOT NULL drop table #AllTables
 CREATE TABLE #AllTables ([DB Name] sysname, [Schema Name] nvarchar(128) NULL, [Table Name] sysname, create_date datetime, modify_date datetime)
 
@@ -384,7 +384,7 @@ EXECUTE(@SQL)
 
 ## List of all Stored Procedures in All Databases {#14}
 
-sql
+```sql
 create table #SPList ([DB Name] sysname, [SP Name] sysname, create_date datetime, modify_date datetime)
 
 declare @SQL nvarchar(max)
@@ -400,7 +400,7 @@ select * from #SPList order by [DB Name], [SP Name]
 
 ## Database Files Growth {#15}
 
-sql
+```sql
 --select * from sys.sysfiles  
 
 declare @SQL nvarchar(max)

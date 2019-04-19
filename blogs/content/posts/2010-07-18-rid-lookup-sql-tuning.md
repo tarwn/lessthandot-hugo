@@ -50,7 +50,7 @@ First step will be to create a database that we can work in. We will then create
 
 Run the following to prepare the database and needed objects:
 
-sql
+```sql
 USE master
 GO
 CREATE DATABASE [EXE_PLANS] ON  PRIMARY 
@@ -92,7 +92,7 @@ Now that we have our testing area, we can create some common indexes that may be
 
 First a nonclustered index on the ITEMCODE
 
-sql
+```sql
 CREATE UNIQUE NONCLUSTERED INDEX IDX_ITEMID ON ITEMS
 (ITEMCODE)
 WITH (FILLFACTOR = 85)
@@ -101,7 +101,7 @@ GO
 
 Next, a nonclustered index on CREATETIME, ITEMCODE and CREATEDATE
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_PRODID_DATE_ASC ON ITEMS
 (CREATETIME,ITEMCODE,CREATEDATE)
 INCLUDE (ITEMNAME)
@@ -111,7 +111,7 @@ GO
 
 Once these indexes are created we can run a basic query to extract ITEMNAME and CREATETIME with a WHERE clause only looking at a specific ITEMCODE value. 
 
-sql
+```sql
 SELECT
  ITEMS.ITEMNAME,
  ITEMS.CREATETIME
@@ -133,7 +133,7 @@ The lookup is caused by the fact that there is not a covering index to fulfill t
 
 To create a covering index we can do the following
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_COVERING_ASC ON ITEMS
 (ITEMCODE,LASTMODIFY,ITEMNAME,CREATETIME)
 WITH (FILLFACTOR=80)

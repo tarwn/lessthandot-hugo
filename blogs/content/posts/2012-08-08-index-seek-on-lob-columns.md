@@ -24,7 +24,7 @@ To show the effects of using the method Paul discussed, I will create a table th
 
 Create the table, PerfLOB
 
-sql
+```sql
 CREATE TABLE PerfLOB 
 (ID INT IDENTITY(1,1) PRIMARY KEY, 
 USERNAME VARCHAR(155), 
@@ -38,7 +38,7 @@ For testing purposes, the below statement will insert 1000 copies of a Word docu
 
  
 
-sql
+```sql
 INSERT INTO PerfLOB (USERNAME,LOBVAL)
 VALUES (SUSER_SNAME(),(SELECT * FROM OPENROWSET(BULK N'C:NoSecColumStoreIndexBasics.docx', SINGLE_BLOB) AS guts))
 GO 1000
@@ -49,7 +49,7 @@ GO 1000
 
 Review the contents by using a select statement and the LEN() function.  Set Statistics IO on at this point so you can better see the system requirements to fulfill the query.
 
-sql
+```sql
 SET STATISTICS IO ON
 SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB
 ```
@@ -70,7 +70,7 @@ This query requires an extreme amount of resources to complete, as we've shown m
 
 Now, let's take a look at something that could be a requirement in a production environment for updating the PerfLOB table.  The USERNAME column must be updated so ownership of the documents are maintained.  This could be done with the following query.
 
-sql
+```sql
 DECLARE @Doc VARBINARY(MAX)
 SET @Doc = (SELECT BulkColumn FROM OPENROWSET(BULK N'C:NoSecColumStoreIndexBasics.docx', SINGLE_BLOB) AS guts)
 UPDATE PerfLOB
@@ -88,7 +88,7 @@ The update above that is relying on searching for the matching document, like th
 
 We have the SUB_CONTENT column and can make it the key column in the index, we can use the INCLUDE option to include the actual LOB column as a non-key column; LOBVAL.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_LOGSTRING ON PerfLOB (SUB_CONTENT) INCLUDE (LOBVAL)
 ```
 
@@ -107,7 +107,7 @@ We could visualize this as
 
 Something to consider about the storage needs for and time of a nonclustered index creation is that the LOB_DATA page will exist in the nonclustered index.  We can take a closer look at this by running the following query to dig into the pages.
 
-sql
+```sql
 select 
 	obj.name, 
 	idx.name,
@@ -131,7 +131,7 @@ Notice that there is a LOB_DATA page type for both the clustered and the nonclus
 
 Now that the nonclustered index has been created on the computed column, run the same query as earlier, with minor changes to utilize the computed column as the predicate.  Alter the query as shown to force the use of the new nonclustered index with an index hint.
 
-sql
+```sql
 DECLARE @SUBString VARCHAR(100)
 DECLARE @PK INT
 SET @SUBString = (SELECT CONVERT(VARCHAR(100),BulkColumn) FROM OPENROWSET(BULK N'C:NoSecColumStoreIndexBasics.docx', SINGLE_BLOB) AS guts)

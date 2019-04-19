@@ -33,14 +33,14 @@ When using dates make sure that you are using the same data type, don't mix date
 
 First create this table with a datetime column
 
-sql
+```sql
 CREATE TABLE TestDatetime(SomeDate DATETIME)
 GO
 ```
 
 Now create this proc which accepts a smalldatetime
 
-sql
+```sql
 CREATE PROC prTestDatetime
 @SomeDate SMALLDATETIME
 AS 
@@ -51,7 +51,7 @@ GO
 ```
 Now call the procedure with the following value
 
-sql
+```sql
 DECLARE @d DATETIME
 SELECT @d = '2011-04-04 23:59:59.000'
 
@@ -62,7 +62,7 @@ GO
 
 When you check the table now you will see that it has become the next day
 
-sql
+```sql
 SELECT * FROM TestDatetime
 ```
 
@@ -70,7 +70,7 @@ SELECT * FROM TestDatetime
 
 The query below will illustrate the same problem
 
-sql
+```sql
 DECLARE @d DATETIME
 SELECT @d = '2011-04-04 23:59:59.000'
 SELECT CONVERT(DATETIME,@d), CONVERT(SMALLDATETIME,@d)
@@ -94,7 +94,7 @@ When dealing with integers, you are in luck because it will just blow up in your
 
 Create this stored procedure
 
-sql
+```sql
 CREATE PROC prTestInt
 @Someint smallint
 AS 
@@ -105,7 +105,7 @@ GO
 
 Run it by passing in something that is greater than the small integer data type can hold
 
-sql
+```sql
 DECLARE @i int
 SELECT @i = 99999
 
@@ -130,7 +130,7 @@ varchar, nvarchar, char and nchar have a bunch of interesting inconsistencies, t
 
 Here is one example, create the following procedure
 
-sql
+```sql
 CREATE PROC prTestVarchar
 @Somevarchar varchar(3)
 AS 
@@ -141,7 +141,7 @@ GO
 
 Now run it like this
 
-sql
+```sql
 DECLARE @v VARCHAR(10)
 SELECT @v = '9999999999'
 
@@ -164,7 +164,7 @@ People coming from languages where you define something as a string usually make
 
 Create the following stored procedure
 
-sql
+```sql
 CREATE PROC prTestVarchar2
 @Somevarchar varchar
 AS 
@@ -175,7 +175,7 @@ GO
 
 Run the proc
 
-sql
+```sql
 DECLARE @v VARCHAR(10)
 SELECT @v = '9999999999'
 
@@ -192,7 +192,7 @@ Output
 
 In this case SQL Server used a size of 1 since nothing was specified. However when you use varchar in a cast or convert function and you don't specify a size, it will default to 30 characters
 
-sql
+```sql
 SELECT CONVERT(VARCHAR,'1111111111222222222233333333334')
 ```
 
@@ -210,7 +210,7 @@ Decimal (or numeric) will round down or up if it can't hold the whole value
   
 Take a look by running this
 
-sql
+```sql
 DECLARE @d DECIMAL(4,3)
 DECLARE @d2 DECIMAL(4,2)
 SELECT @d = 1.999

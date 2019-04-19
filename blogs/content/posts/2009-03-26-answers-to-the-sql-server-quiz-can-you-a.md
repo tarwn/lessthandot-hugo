@@ -31,7 +31,7 @@ A table can only have one primary key but can have more than one unique constrai
 
 **2) If your database is in simple recovery model and you run code that looks like this**
 
-sql
+```sql
 BULK INSERT Northwind.dbo.[Order Details]
    FROM 'f:orderslineitem.tbl'
    WITH 
@@ -46,7 +46,7 @@ There are some additional things you need to do before a bulk insert is minimall
 
 Here is an example
 
-sql
+```sql
 BULK INSERT Northwind.dbo.[Order Details]
    FROM 'f:orderslineitem.tbl'
    WITH 
@@ -68,7 +68,7 @@ A minimally logged bulk copy can be performed if all of these conditions are met
 
 **3) How many flaws/worst practices are in this piece of code**
 
-sql
+```sql
 select * 
 from SomeTable
 Where left(SomeColumn,1) ='A'
@@ -89,7 +89,7 @@ This where clause is not sargable instead of left(SomeColumn,1) ='A' do this Som
 
 **4) When we use Try and Catch will the following tran be commited?**
 
-sql
+```sql
 BEGIN TRANSACTION TranA
     BEGIN TRY
      DECLARE  @cond INT;
@@ -105,7 +105,7 @@ No this will result in a doomed transaction and you will see the following messa
 
 Before I show you what you can do first run this
 
-sql
+```sql
 BEGIN TRANSACTION TranA
     BEGIN TRY
      DECLARE  @cond INT;
@@ -119,7 +119,7 @@ BEGIN TRANSACTION TranA
 
 See that was no problem at all, the first code blew up because it is a non trapable error. You can use XACT_STATE() to see what state the transaction is in
 
-sql
+```sql
 BEGIN TRANSACTION TranA
     BEGIN TRY
      DECLARE  @cond INT;
@@ -142,7 +142,7 @@ To learn more about errors and transactions I highly recommend these two links b
 
 **5)Take a look at the code below, what will the last select return?**
 
-sql
+```sql
 declare @SQL varchar(100)
 declare @Val varchar(10)
 
@@ -153,7 +153,7 @@ select @SQL + isnull(@Val,' currently not available')
 
 Running that code will return the following: The value this item is.. currently. This is because isnull looks at @Val which is varchar(10) and chops off everything after 10 characters. If you use coalesce then you don't have this problem, run the following
 
-sql
+```sql
 declare @SQL varchar(100)
 declare @Val varchar(10)
 
@@ -166,7 +166,7 @@ And now this is returned The value this item is.. currently not available
 
 **6)What will the returned when you run the following query?**
 
-sql
+```sql
 select 3/2
 ```
 
@@ -174,7 +174,7 @@ So running that returns 1, surprised? Don't be the result of division with two i
 
 Here is how you can fix it by doing explicit and implicit conversions
 
-sql
+```sql
 --Implicit
     SELECT 3/(2*1.0)
     --Explicit
@@ -183,7 +183,7 @@ sql
 
 **7)How many rows will the select query return from the table with 3 rows**
 
-sql
+```sql
 CREATE TABLE #testnulls (ID INT)
 INSERT INTO #testnulls VALUES (1)
 INSERT INTO #testnulls VALUES (2)
@@ -197,7 +197,7 @@ The answer is one row, the reason for that is that a null is not equal to anythi
 
 Run this to see what I mean
 
-sql
+```sql
 if null = null
 print 'yes null = null'
 else
@@ -219,7 +219,7 @@ To check for null you would use IS NULL and IS NOT NULL or NOT IS NULL, you woul
 
 **8)If you run the code below what will the len function return, can you also answer why?**
 
-sql
+```sql
 declare @v varchar(max)
 select @v =replicate('a',20000)
 
@@ -228,7 +228,7 @@ select len(@v)
 
 8000 will be returned because 'a' is a varchar which goes up to 8000 max. Here is one way to get around it
 
-sql
+```sql
 declare @v varchar(max)
 select @v =replicate(convert(varchar(max),'a'),20000)
 
@@ -237,7 +237,7 @@ select len(@v)
 
 **9) If you have the following table**
 
-sql
+```sql
 CREATE TABLE #testnulls2 (ID INT)
 INSERT INTO #testnulls2 VALUES (1)
 INSERT INTO #testnulls2 VALUES (2)
@@ -245,7 +245,7 @@ INSERT INTO #testnulls2 VALUES (null)
 ```
 what will the query below return?
 
-sql
+```sql
 select count(*), count(id)
 from #testnulls2
 ```
@@ -254,7 +254,7 @@ This will return 3 and 2. this is because count(*) counts all the columns and co
 
 **10)If you have the following two tables**
 
-sql
+```sql
 CREATE TABLE TestOne (id INT IDENTITY,SomeDate DATETIME)
 CREATE TABLE TestTwo (id INT IDENTITY,TestOneID INT,SomeDate DATETIME)
  
@@ -267,7 +267,7 @@ CREATE TABLE TestTwo (id INT IDENTITY,TestOneID INT,SomeDate DATETIME)
 
 If table TestOne now has the following trigger added to it
 
-sql
+```sql
 CREATE TRIGGER trTestOne ON [dbo].[TestOne]
     FOR INSERT
     AS
@@ -281,7 +281,7 @@ CREATE TRIGGER trTestOne ON [dbo].[TestOne]
 
 What will be the value that the @@identity function returns after a new insert into the TestOne table?
 
-sql
+```sql
 INSERT TestOne VALUES(GETDATE())
 select @@identity
 ```
@@ -290,7 +290,7 @@ You will get back the value 1 and not 5. This is because @@IDENTITY doesn't care
   
 Run this now and you will see both values and you can see that they are indeed different
 
-sql
+```sql
 INSERT TestOne VALUES(GETDATE())
 select scope_identity(), @@identity
 ```

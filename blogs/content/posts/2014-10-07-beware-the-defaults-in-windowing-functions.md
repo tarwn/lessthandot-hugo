@@ -22,7 +22,7 @@ tags:
   Some time ago I was writing some windowing functions on a set of data. Basically I was looking for the last date an event had occurred for each type of event. Let's illustrate with an example:
 </p>
 
-sql
+```sql
 CREATE TABLE dbo.TestOver
 	(ID INT IDENTITY(1,1) PRIMARY KEY NOT NULL
 	,[Group] CHAR(1) NOT NULL
@@ -42,7 +42,7 @@ VALUES	 ('A',1)
   Using the data above, I need to find the value 4 for group A and the value 9 for group B. I first wrote the following T-SQL statement to retrieve the data:
 </p>
 
-sql
+```sql
 SELECT DISTINCT [Group], MAX(Value) OVER (PARTITION BY [Group] ORDER BY Value)
 FROM dbo.TestOver;
 ```<p style="text-align: justify">
@@ -71,7 +71,7 @@ FROM dbo.TestOver;
   In SQL Server 2005, the <a href="http://msdn.microsoft.com/en-us/library/ms189461(v=sql.90).aspx">OVER clause</a> was introduced and it simplified some aggregations like the one we're doing here. When using the ranking window functions the ORDER BY clause is mandatory, but when using a regular aggregate window function the ORDER BY clause is not allowed. This gives us the following T-SQL which is the perfect solution for our problem here:
 </p>
 
-sql
+```sql
 SELECT DISTINCT [Group], MAX(Value) OVER (PARTITION BY [Group])
 FROM dbo.TestOver;
 ```<p style="text-align: justify">

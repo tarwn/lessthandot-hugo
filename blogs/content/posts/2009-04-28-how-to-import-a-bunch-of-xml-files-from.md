@@ -105,7 +105,7 @@ file2.xml
 
 Now that we have our files we are ready to grab all the files in the directory. We will use a plain vanilla DOS dir command for this with the B switch so that we don't get a lot of garbage returned. Here is what this block of code looks like
 
-sql
+```sql
 IF OBJECT_ID('tempdb..#tempList') IS NOT NULL
 DROP TABLE #tempList
 
@@ -129,7 +129,7 @@ go
 
 Now let's see what has actually been inserted into the table
 
-sql
+```sql
 select * from #tempList
 ```
 
@@ -143,7 +143,7 @@ file2.xml	2</pre>
 
 The following table will be used to store the XML.
 
-sql
+```sql
 CREATE TABLE [dbo].[XMLImport](
     [filename] [VARCHAR](500) NULL,
     [timecreated] [DATETIME] NULL,
@@ -156,7 +156,7 @@ Here is where the import happens, since we have to use dynamic SQL to do the XML
   
 I have put comments in this codeblock but if you need more information how exactly this works then leave me a comment.
 
-sql
+```sql
 truncate table XMLImport --in case you want to rerun just this codeblock
 declare @Directory varchar(50)
 select @Directory = 'c:testxml'
@@ -214,7 +214,7 @@ END
 
 So that is all the code that you need to make this happen, let's see what is actually inserted into the table
 
-sql
+```sql
 select * from XMLImport
 ```
 
@@ -242,7 +242,7 @@ SQL Server blocked access to procedure 'sys.xp\_cmdshell' of component 'xp\_cmds
 
 To enable xp_cmdshell execute the following code
 
-sql
+```sql
 EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
@@ -266,7 +266,7 @@ SQL Server blocked access to STATEMENT 'OpenRowset/OpenDatasource' of component 
 
 To enable OPENROWSET and OPENQUERY you can use the previous script but instead of 'xp_cmdshell' you will use 'Ad Hoc Distributed Queries'. The script to enable Ad Hoc Distributed Queries is below
 
-sql
+```sql
 EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO

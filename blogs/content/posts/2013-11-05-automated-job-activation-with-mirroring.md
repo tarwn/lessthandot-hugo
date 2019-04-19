@@ -35,7 +35,7 @@ As with any customized process, the process is only as good as the effort put in
 
 In order to maintain a result set check and an efficient way of validating the flow, a metadata table is created in a database designed to retain administrative objects.  The table creation statement is shown below.
 
-sql
+```sql
 CREATE TABLE [dbo].[Mirroring_Jobs](
 	[JobName] [nvarchar](128) NOT NULL,
 	[RunStatus] [tinyint] NULL,
@@ -65,7 +65,7 @@ In order to actively monitor the mirror state of this session, another job is cr
 
 In order to maintain an object that is easily updated and retained in the administrative database, a procedure is created that is executed from the monitoring job.  The procedure has the same process as the flow chart earlier discussed.  The primary task of the procedure is to first check if the state of the mirroring session has changed for the mirror databases.  If it has changed and the roles are set for mirror, the jobs will be enabled by calling the sp\_update\_job procedure in the MSDB database. If the roles are set as mirror and the databases are found to be in a mirroring state and the jobs are enabled, the jobs will be set to disabled.   This will protect against a mirror failover being reset back to the originating principal.
 
-sql
+```sql
 CREATE PROCEDURE [dbo].[dba_CheckMirrorForJobs]
 AS
 DECLARE @Loop INT = 1

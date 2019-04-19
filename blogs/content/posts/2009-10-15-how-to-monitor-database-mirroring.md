@@ -231,7 +231,7 @@ So what would be a better way to monitor and alert a DBA when there is a change 
 
 Now that we know the Event and the State here is how to add an Alert to notify you that the state of DB mirroring has changed.
 
-sql
+```sql
 USE [msdb]
 GO
 
@@ -328,7 +328,7 @@ What other Mirror Events should every DBA monitor? I find the unsent and unresto
 
 You can also script this by using sp\_add\_alert as follows:
 
-sql
+```sql
 USE [msdb]
 GO
 

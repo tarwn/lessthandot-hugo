@@ -18,7 +18,7 @@ This is a quick and probably extremely basic trick to get rid of a scan when opt
 
 Take a look at a thin test table
 
-sql
+```sql
 SET ANSI_NULLS ON
 GO
 
@@ -40,7 +40,7 @@ We now have a column that we at one point in time may want to loop through or gr
 
 Let's look at this query
 
-sql
+```sql
 Declare @cnt_test bigint
 Set @cnt_test = (Select count(*) From dbo.test_scan)
 ```
@@ -52,7 +52,7 @@ The resulting plan will show an index scan on our index PK\_test\_scan.
 
 That is something we'd like to get out of there. Really a seek will come from us being a bit more graphic in what we want from the tables. Saying that is the answer to the problem though. If you have an identity column and you haven't gone into the negative range of the values to utilize space then you already know the column will consist of data greater than 0. Remember this is on an IDENTITY(1,1) column. So we have our answer because we know to get a seek out of the query we need to get the count of the rows in that table is simply 
 
-sql
+```sql
 Select count(*) From dbo.test_scan where MyID >= 0
 ```
 Running this and showing the plan we can see our scan now is doing a seek on PK\_test\_scan. 
@@ -63,7 +63,7 @@ Running this and showing the plan we can see our scan now is doing a seek on PK\
 
 So now if we perform a 
 
-sql
+```sql
 Declare @cnt_test bigint
 Set @cnt_test = (Select count(*) From dbo.test_scan where MyID >= 0)
 ```

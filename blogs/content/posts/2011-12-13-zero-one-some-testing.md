@@ -88,7 +88,7 @@ The join type (e.g. inner, left or right outer, full) must also be considered. T
 
 **Filters**: Zero-one-some is also particularly useful in filters, such as WHERE clauses. Consider the following sub-query, for example:
 
-sql
+```sql
 SELECT Name   
 FROM OrderMgmt.Customer  
 WHERE CustomerId =        

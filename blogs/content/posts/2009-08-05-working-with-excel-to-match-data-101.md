@@ -29,7 +29,7 @@ First you need the Excel sheet in the DBA database. Either the import wizard or 
 
 To do that, right click the database, scroll to tasks and select Import Data. Select “Microsoft Excel” in the Data source listing. Note: if you receive an Excel file version 2007+, you need to use Office 12 OLEDB providers. You can read about that [here][1] and how to set the properties or if you allow OPENROWSET then you can simply throw this in there and execute it.
 
-sql
+```sql
 SELECT * 
 INTO EXCELDATA
 FROM 
@@ -37,7 +37,7 @@ OPENROWSET('Microsoft.ACE.OLEDB.12.0','Excel 12.0;Database=C:ExcelFile.xlsx', 'S
 ```
 Nice thing about this is, it will work with pre-2007 versions so you don't' have to alter the statement to import other Excel files older as long as you have Office 12 objects installed on the machine importing. If you don't you can do the older statement of
 
-sql
+```sql
 SELECT * 
 INTO EXCELDATA
 FROM OPENROWSET('MSDASQL', 
@@ -61,7 +61,7 @@ Hit next and then hit finish. That should be it.
   
 In the Excel sheet I populated Sheet1 with this from AdventureWorks.
 
-sql
+```sql
 Select TOP 10000 OrderDate,SalesOrderNumber from Sales.SalesOrderHeader
 ```
 
@@ -69,13 +69,13 @@ The request at hand is to match up these orders with salesman. Granted this is a
   
 So running this
 
-sql
+```sql
 Select * From BOSSIMPORT
 ```
 
 We can see our data is in there and waiting for us to complete the task. In AdventureWorks the schema for sales is, Sales. This referes the objects of sales and all pertinent data. Just looking at the design of the schema you can see immediately that Sales.SalesPerson is what you're going to need to fulfill the additional column of sales person to the order numbers. We can then build a query like this 
 
-sql
+```sql
 Select
 	import.*
 	,salesper.FullName
@@ -98,7 +98,7 @@ Left Join (
 
 With that then you just do an alter to add the columns on the import table and then an update for the data
 
-sql
+```sql
 Update import
 Set import.FullName = salesper.FullName
 	,import.SalesPersonID = salesper.SalesPersonID
@@ -122,7 +122,7 @@ Now selecting all from the BOSSIMPORT will give you everything. I just copy past
 
 The OPENROWSET then can be constructed off the statements above as just
 
-sql
+```sql
 SELECT * 
 INTO BOSSIMPORT
 FROM OPENROWSET('MSDASQL', 

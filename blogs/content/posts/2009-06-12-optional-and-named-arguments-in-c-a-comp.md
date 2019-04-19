@@ -25,7 +25,7 @@ So let's get started. First the SQL Server version
   
 Create the following stored procedure which has 3 optional parameters
 
-sql
+```sql
 create procedure OptionalTest
 @Param1 varchar(10),
 @Param2 varchar(10) = 'Two',
@@ -43,7 +43,7 @@ end
 
 Execute it with just the first parameter
 
-sql
+```sql
 exec OptionalTest 'bla'
 ```
 
@@ -59,7 +59,7 @@ Here is the output
 
 When executing it with values for the first two parameters the output for the 2nd parameter changes
 
-sql
+```sql
 exec OptionalTest 'bla' ,'Twelve'
 ```
 
@@ -73,7 +73,7 @@ exec OptionalTest 'bla' ,'Twelve'
 
 When executing with three parameters the third value changes
 
-sql
+```sql
 exec OptionalTest 'bla' ,'Twelve','Thirsty'
 ```
 
@@ -87,7 +87,7 @@ exec OptionalTest 'bla' ,'Twelve','Thirsty'
 
 And with four parameters all the values that are passed in are printed
 
-sql
+```sql
 exec OptionalTest 'bla' ,'Twelve','Thirsty','Forty'
 ```
 
@@ -101,7 +101,7 @@ exec OptionalTest 'bla' ,'Twelve','Thirsty','Forty'
 
 If we pass in the first parameter and we olso want to pass in the third parameter we need to use named parameters, in this case we do this @Param3 = 'Thirsty'
 
-sql
+```sql
 exec OptionalTest 'bla' ,@Param3 = 'Thirsty'
 ```
 
@@ -115,7 +115,7 @@ exec OptionalTest 'bla' ,@Param3 = 'Thirsty'
 
 If you want to pass in the first and the fourt parameter then you need to name the fourth one
 
-sql
+```sql
 exec OptionalTest 'bla' ,@Param4 = 'Thirsty'
 ```
 
@@ -129,7 +129,7 @@ exec OptionalTest 'bla' ,@Param4 = 'Thirsty'
 
 Omitting parameters won't run or parse for that matter
 
-sql
+```sql
 exec OptionalTest 'bla' ,,,'Thirsty'
 ```
 
@@ -139,7 +139,7 @@ Incorrect syntax near ','.
 
 You can use nulls but as you can see from the output nothing gets printed at all for paraeter 2 or 3, this is because when you concatenate a NULL value with something else you get nothing back
 
-sql
+```sql
 exec OptionalTest 'bla' ,null,null,'Thirsty'
 ```
 

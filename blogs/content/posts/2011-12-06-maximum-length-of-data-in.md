@@ -27,7 +27,7 @@ LEN function can be used with many SQL Server types excluding text and new types
 
 I am using one of my favorite ideas of generating script to run using available meta-data.
 
-sql
+```sql
 USE AdventureWorks2008R2
 
 --declare @TableName sysname = 'Employee', @TableSchema sysname = 'HumanResources'
@@ -54,7 +54,7 @@ EXECUTE (@SQL)
 
 Here is another version of the same script which attempts to list every column in a table but uses DATALENGTH function instead of LEN for the types where we can not use LEN function:
 
-sql
+```sql
 USE AdventureWorks2008R2
 --declare @TableName sysname = 'Employee', @TableSchema sysname = 'HumanResources'
 DECLARE @TableName sysname = 'Address', @TableSchema sysname = 'Person'

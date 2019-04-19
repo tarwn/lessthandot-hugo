@@ -27,7 +27,7 @@ categories:
 ---
 Sometimes you get some dynamic SQL handed to you which is 2 pages long with all kind of parameters. Of course you yourself would never write such a monstrosity, but how can you verify that all parameters in the code have been declared? Let's say you have the following piece of dynamic SQL
 
-sql
+```sql
 DECLARE @DynamicSql nvarchar(1000)
 SELECT @DynamicSql = N'DECLARE @Type nchar(3) = ''P'' SELECT *
 FROM master..spt_values where type =@Type'
@@ -37,7 +37,7 @@ exec( @DynamicSql )
 
 That will execute just fine. What if you forgot the `DECLARE @Type nchar(3) = ''P''` part?
 
-sql
+```sql
 DECLARE @DynamicSql nvarchar(1000)
 SELECT @DynamicSql = N'SELECT *
 FROM master..spt_values where type =@Type'
@@ -58,7 +58,7 @@ Here is how Books On Line describes the sp\_describe\_undeclared_parameters stor
 
 Here is how you can easily test the code. Change `exec( @DynamicSql )` to `exec sp_describe_undeclared_parameters  @DynamicSql`
 
-sql
+```sql
 DECLARE @DynamicSql nvarchar(1000)
 SELECT @DynamicSql = N'SELECT *
 FROM master..spt_values where type =@Type'
@@ -76,7 +76,7 @@ There are more columns in the output, feel free to run this yourself to see all 
 
 How many times have you done something like the following
 
-sql
+```sql
 EXEC sp_executesql @tsql = 
 N'SELECT id, name, xtype 
 FROM sys.sysobjects
@@ -94,7 +94,7 @@ Here is how to quickly test that as well, take the code from above and grab ever
 
 Basically, you now have this
 
-sql
+```sql
 exec sp_executesql @tsql = 
 N'SELECT id, name, xtype 
 FROM sys.sysobjects
@@ -106,7 +106,7 @@ Now change sp\_executesql to sp\_describe\_undeclared\_parameters
 
 Run that
 
-sql
+```sql
 exec sp_describe_undeclared_parameters @tsql = 
 N'SELECT id, name, xtype 
 FROM sys.sysobjects
@@ -123,7 +123,7 @@ Again there are more columns so feel free to run this yourself. So far I showed 
 
 Here is what it looks like with 4 undeclared parameters
 
-sql
+```sql
 DECLARE @DynamicSql nvarchar(1000)
 SELECT @DynamicSql = N'SELECT *
 FROM master..spt_values where type =@Type

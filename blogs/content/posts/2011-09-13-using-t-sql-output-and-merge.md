@@ -27,7 +27,7 @@ Recently I needed the ability to transfer records (and control of the data) betw
 
 To get us started, I've created some simplified, substitute table for the post. Using simpler tables that are far fewer in count will let us focus more on the problem at hand and less on my data definition skills.
 
-sql
+```sql
 use SampleStuff;
 Go
 
@@ -76,7 +76,7 @@ If this was a one-shot ETL load, I would probably add a temporary column to the 
 
 Added in SQL Server 2005 (6 years ago already?), OUTPUT can be used to return data from inside INSERT, UPDATE, DELETE, and MERGE statements. This solves the first part, giving us access to the new key when it's generated. Well, almost.
 
-sql
+```sql
 CREATE TABLE #ID_Transfer(new_key int, old_key int);
 
 INSERT INTO dbo.New_User(Username)
@@ -94,7 +94,7 @@ MERGE was added in SQL 2008 and allows us to define a source dataset, target dat
 
 By forcing the merge to always perform an INSERT, we will satisfy our needs for inserting the data into the “New” tables as well as have the capability to capture both the original and new key in a single OUTPUT statement.
 
-sql
+```sql
 CREATE TABLE #ID_Transfer(new_key int, old_key int);
 
 MERGE INTO dbo.New_User AS [Target]
@@ -111,7 +111,7 @@ OUTPUT INSERTED.New_User_Key, source.Orig_USer_Key INTO #ID_Transfer;
 
 With the critical pieces out of the way, it's easy now to create the full round-trip update.
 
-sql
+```sql
 CREATE TABLE #ID_Transfer(new_key int, old_key int);
 
 DECLARE @TargetUserKey int;
@@ -135,7 +135,7 @@ DROP TABLE #ID_Transfer;
 ```
 And we can see the updated values like so:
 
-sql
+```sql
 SELECT TOP 20 *
 FROM dbo.Orig_User O
 LEFT JOIN dbo.New_User N ON N.New_User_Key = O.New_User_Key
@@ -148,7 +148,7 @@ Given the sample tables above, it would now be fairly straightforward to apply t
 
 Setup script:
 
-sql
+```sql
 use SampleStuff;
 Go
 

@@ -24,7 +24,7 @@ Every now and then someone will ask how to return a list of all the identity val
 
 If you don't have a table of numbers, here is some code that will create a table with numbers between 1\` and 2048
 
-sql
+```sql
 create table Numbers (number int not null primary key )
 go
 insert Numbers 
@@ -35,7 +35,7 @@ where s.type='P'
 
 Now that we have our numbers table we can proceed with creating another table which we will populate with some numbers
 
-sql
+```sql
 create table #bla(id int)
 
 insert #bla values(1)
@@ -48,7 +48,7 @@ insert #bla values(12)
 
 Here is the code that will return the gaps (the values 3,6,7,8,10,11) from the temp table
 
-sql
+```sql
 select number 
 from Numbers n
 left join #bla b on n.number = b.id

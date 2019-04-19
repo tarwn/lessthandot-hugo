@@ -37,7 +37,7 @@ Let's take a look at a simple example. Let's say we have a book store and we wan
 
 You might come up with a table like this right?
 
-sql
+```sql
 CREATE TABLE Books (BookdId int, Title varchar(100), PublishDate datetime, Author varchar(100))
 GO
 ```
@@ -46,14 +46,14 @@ One of the problems is that if an author wrote more than one book, the author wi
 
 Let's drop that table since we are going to recreate it
 
-sql
+```sql
 DROP TABLE Books
 GO
 ```
 
 Now, let's create two tables, we are going to create an Author table and a Books table. The Author table will hold the AuthotID, the last name as well as the first name. Now we can use the AuthorID and store that in the Books table
 
-sql
+```sql
 Create Table Authors (AuthorID int, FirstName varchar(100), LastName varchar(100))
 GO
 
@@ -65,14 +65,14 @@ So what is the problem with this so called design? Ever heard of a book that had
 
 Let's drop those tables since we are going to recreate it.
 
-sql
+```sql
 DROP TABLE Books, Authors
 GO
 ```
 
 Now what we have to add is a third table, this table will have just two columns, the BookID and the AuthorID, now you can handle many authors per book without a problem. The AuthorID column will now be eliminated from the Books table as well.
 
-sql
+```sql
 Create Table Authors (AuthorID int, FirstName varchar(100), LastName varchar(100))
 GO
 
@@ -93,7 +93,7 @@ Here is what you will end up with
 
 Now, here is the code to add the primary keys and foreign keys to the table
 
-sql
+```sql
 ALTER TABLE dbo.Books ADD CONSTRAINT
 	PK_Books PRIMARY KEY CLUSTERED 
 	(BookdID) ON [PRIMARY]
@@ -101,7 +101,7 @@ ALTER TABLE dbo.Books ADD CONSTRAINT
 GO
 ```
 
-sql
+```sql
 ALTER TABLE dbo.BookAuthors ADD CONSTRAINT
 	PK_BookAuthors PRIMARY KEY CLUSTERED 
 	(BookdID,AuthorID)  ON [PRIMARY]
@@ -109,13 +109,13 @@ ALTER TABLE dbo.BookAuthors ADD CONSTRAINT
 GO
 ```
 
-sql
+```sql
 ALTER TABLE dbo.Authors ADD CONSTRAINT
 	PK_Authors PRIMARY KEY CLUSTERED 
 	(AuthorID) ON [PRIMARY]
 ```
 
-sql
+```sql
 ALTER TABLE [dbo].[BookAuthors]  WITH CHECK ADD  CONSTRAINT [FK_BookAuthors_Authors] FOREIGN KEY([AuthorID])
 REFERENCES [dbo].[Authors] ([AuthorID])
 GO
@@ -124,7 +124,7 @@ ALTER TABLE [dbo].[BookAuthors] CHECK CONSTRAINT [FK_BookAuthors_Authors]
 GO
 ```
 
-sql
+```sql
 ALTER TABLE [dbo].[BookAuthors]  WITH CHECK ADD  CONSTRAINT [FK_BookAuthors_Books] FOREIGN KEY([BookdID])
 REFERENCES [dbo].[Books] ([BookdID])
 GO

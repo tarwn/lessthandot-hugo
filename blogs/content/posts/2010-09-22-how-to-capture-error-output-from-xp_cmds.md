@@ -46,7 +46,7 @@ _The system cannot find the path specified._
 
 Now let's look at some code by running a dir command on a drive that doesn't exist, if you do have a z drive then change it to something that you don't have
 
-sql
+```sql
 DECLARE @cmdline VARCHAR(500),
 		@ReturnCode INT, 
 		@ErrorMessage varchar(2000)
@@ -109,13 +109,13 @@ After you run that you should see the following
 
 Change 
 
-sql
+```sql
 SELECT @cmdline = 'dir z:'
 ```
 
 to 
 
-sql
+```sql
 SELECT @cmdline = 'bla bla z:'
 ```
 

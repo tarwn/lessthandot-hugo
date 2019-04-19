@@ -19,7 +19,7 @@ This is a naming convention issue. Tables should not be prefaced with tbl becaus
 
 **How to detect this problem:**
 
-sql
+```sql
 Select	* 
 From	Information_Schema.tables 
 Where	Table_Type = 'Base Table'

@@ -38,7 +38,7 @@ Let's look at some sample data, and the expected results when rounded to 1 decim
   
 This method always rounds the number up to the next highest number. For example, 3.1 rounded up is 4 and -3.1 rounded up is -3. In SQL Server, the easiest way to achieve 'RoundUp' is to use the ceiling function. Unfortunately, the Ceiling function only works with whole numbers. There's no built-in function that RoundsUp where you can specify the number of digits. This is no problem, we can just build our own.
 
-sql
+```sql
 Create Function dbo.RoundUp(@Val Decimal(32,16), @Digits Int)
 Returns Decimal(32,16)
 AS
@@ -53,7 +53,7 @@ End
   
 This method is similar to rounding up, except it is rounded to the nearest smaller number. For example, 3.1 rounded down is 3, -3.1 rounded down is -4. SQL Server has a floor function that rounds down for up. Just like the ceiling function, the floor function does not accommodate the number of digits (it only works on whole numbers). Another function to the rescue.
 
-sql
+```sql
 Create Function dbo.RoundDown(@Val Decimal(32,16), @Digits Int)
 Returns Decimal(32,16)
 AS
@@ -78,7 +78,7 @@ In this method, 3.5 rounds down to 3, but -3.5 rounds up to -3. Implementing Rou
 
 Using the 3rd argument of the round function will blindly truncate the trailing numbers, so both would be rounded to 4.1. This is not what we want, so we'll need to write another function.
 
-sql
+```sql
 Create Function dbo.RoundToZero(@Val Decimal(32,16), @Digits Int)
 Returns Decimal(32,16)
 AS
@@ -103,7 +103,7 @@ This occurs because everything to the right of the number of digits (5) is exact
 
 We can write another function in SQL Server to implement bankers rounding.
 
-sql
+```sql
 Create Function dbo.BankersRound(@Val Decimal(32,16), @Digits Int)
 Returns Decimal(32,16)
 AS
@@ -118,7 +118,7 @@ End
   
 This is similar to 'Round to even'. When the remaining digits is a 5 followed by zeros, we randomly round down or up. Implementing this is a bit more difficult because SQL Server doesn't like random numbers in user defined function. To work-around this limitation, we can create a view that returns a random number and call that view from within the function. First, the view:
 
-sql
+```sql
 Create View vw_RandomBit
 As
 Select Case When Convert(Char(1), Convert(VarChar(36), NewId())) > '7' 
@@ -129,7 +129,7 @@ Select Case When Convert(Char(1), Convert(VarChar(36), NewId())) > '7'
 
 Then, we can create this function.
 
-sql
+```sql
 Create Function dbo.StochasticRound(@Val Decimal(32,16), @Digits Int)
 Returns Decimal(32,16)
 AS

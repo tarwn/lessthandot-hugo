@@ -34,7 +34,7 @@ The first idea of approaching this problem is in using NTILE() ranking function.
 
 Here is an example that demonstrates discrepancy:
 
-sql
+```sql
 USE AdventureWorks2008R2 
 GO
 ;with cte as (SELECT p.FirstName, p.LastName
@@ -72,7 +72,7 @@ As we can see in our small set of only 17 records, first 7 groups have 2 records
 
 On the big enough sets the NTILE() is working correctly. Here is an example suggested by Peter Larsson, that demonstrates it:
 
-sql
+```sql
 ;WITH cteRandomData(Value)
 AS (
            SELECT     ABS(CHECKSUM(NEWID())) AS Value

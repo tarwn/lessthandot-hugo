@@ -40,7 +40,7 @@ If the stored procedure returns a recordset, then the Execute() method of the co
 
 Consder the following stored procedure:
 
-sql
+```sql
 create procedure TestProcedure as
 select 1 [testValue] union
 select 2 [testValue] union
@@ -68,7 +68,7 @@ If a stored procedure returns a return value, then a return value parameter is r
 
 Consider the following procedure:
 
-sql
+```sql
 create procedure TestProcedure2 as
 return 1
 ```
@@ -89,7 +89,7 @@ oConn.Close();
 ```
 Now, things get a little tricky if you have a recordset and a return value in the same procedure:
 
-sql
+```sql
 create procedure TestProcedure3 as
 select 1 [testValue] union
 select 2 [testValue] union

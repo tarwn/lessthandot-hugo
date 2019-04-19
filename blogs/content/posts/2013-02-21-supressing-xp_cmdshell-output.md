@@ -36,7 +36,7 @@ NULL
 
 If I want to move a file from c:temp to c:tempold, I would execute the following
 
-sql
+```sql
 xp_cmdshell 'move c:tempbla.txtc:tempoldbla.txt'
 ```
 
@@ -48,7 +48,7 @@ As you can see you get a resultset, in order to surpress that, you can add no\_o
 
 Here is what the command looks like
 
-sql
+```sql
 xp_cmdshell 'move c:tempbla.txt c:tempoldbla.txt',no_output
 ```
 

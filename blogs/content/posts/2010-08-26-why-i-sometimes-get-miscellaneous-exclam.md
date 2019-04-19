@@ -21,7 +21,7 @@ Using SQL server to generate automatic emails, I've noticed from time to time th
 
 Here's an example to replicate the situation. We'll generate a table with multiple rows of the alphabet and email the contents:
 
-sql
+```sql
 declare @t table (letters varchar(100))
 declare @counter int
 declare @string varchar(8000)
@@ -70,7 +70,7 @@ Fortunately, the solution is fairly simple. Microsoft Outlook seems to insert th
 
 So, stick a line feed after each alphabet and the exclamation marks will disappear from the email:
 
-sql
+```sql
 select @string = @string + letters + '<br>' + char(10)
 from @t
 ```

@@ -25,7 +25,7 @@ The first idea that came to mind was to use sp_MSForEachDB non-documented stored
   
 Based on Duncan's comments the better code than I suggested would be
 
-sql
+```sql
 sp_MSForEachDb 'IF ''?'' NOT IN (''master'', ''tempdb'', ''tempdev'', ''model'', ''msdb'')
 AND (SELECT recovery_model FROM master.sys.databases WHERE name = ''?'') = 1
 AND (SELECT is_read_only FROM master.sys.databases WHERE name = ''?'') = 0
@@ -44,7 +44,7 @@ END'
 
 It may be even a better idea of using dynamic SQL and implicit looping through databases instead of undocumented SP, like this
 
-sql
+```sql
 declare @SQL nvarchar(max)
 
   select @SQL = coalesce(@SQL + char(13) + char(10),'') + N'
@@ -72,7 +72,7 @@ execute (@SQL)
   
 Interestingly, this solution, proposed by Borislav Borissov, still attempts to change recovery model in TempDB – not clear why:
 
-sql
+```sql
 sp_MSForEachDb 'IF LOWER(''?'') NOT IN (''master'', ''tempdb'', ''tempdev'', ''model'', ''msdb'')
                  BEGIN
                      declare @LogFile nvarchar(2000)
@@ -90,7 +90,7 @@ sp_MSForEachDb 'IF LOWER(''?'') NOT IN (''master'', ''tempdb'', ''tempdev'', ''m
 ```
 However, the solution suggested by George Mastros of first creating a stored procedure and then executing it, works fine
 
-sql
+```sql
 sp_msforeachdb 'If ''?'' Not In (''master'',''tempdb'',''model'',''msdb'') 
       Begin
             Declare @LogFile nvarchar(2000)

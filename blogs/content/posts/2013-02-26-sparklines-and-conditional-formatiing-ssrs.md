@@ -35,7 +35,7 @@ Below is how the Sparkline with multiple data points and conditional formatting 
 
 After opening report server project and creating a data source, create a data set. Right click on shared datasets and choose add new dataset. Following is the query I am using for this example which runs against AdventureWorksDW2008R2 sample database.
 
-sql
+```sql
 SELECT T.CalendarYear
 	, T.CalendarQuarter
 	, T.MonthNumberOfYear

@@ -26,7 +26,7 @@ Today I saw someone asked a question in MSDN t-sql forums [“How to calculate t
              
 This is a good and methodical approach. In this approach, the database has a table that has all the dates that we can represent using sql server. The following script will insert all the dates between 1/1/1753 (minimum date sql can recognize in sql) and 12/31/9999 (maximum date sql can recognize in sql).
 
-sql
+```sql
 create table AuxCalendarDates
 (
 	CalDate datetime
@@ -51,7 +51,7 @@ Once, calendar table created, Solving this is fairly straight forward. It needs 
 
 1. The Calendar date should between the 2 given dates. using a where clause like below will do the trick.
 
-sql
+```sql
 where caldate between @startdate and @enddate 
    
 ```
@@ -64,7 +64,7 @@ But unfortunately this function depends on the @@datefirst settings.
   
 If we change the datefirst value, we will get an different week day. run the below code in SSMS. It will give different week numbers for different datefirst values.
 
-sql
+```sql
 set datefirst 7
 select datepart(dw,getdate())
 set datefirst 5
@@ -74,7 +74,7 @@ There is another way to find a weekday,
   
 Calculating the number of days since the beginning and calculating the remainder by dividing with 7.
 
-sql
+```sql
 select datediff(dd,0,getdate())%7
 ```
 The above expression will give 0 for Monday, 1 for Tuesday, 2 for Wednesday , 3 for Thursday ,4 for Friday , 5 for Saturday and 6 for Sunday.
@@ -83,12 +83,12 @@ The above expression is also independent of datefirst settings.
 
 Now using the above expression, to check the weekday, 
 
-sql
+```sql
 datediff(dd,0,Caldate)%7 between 0 and 4
 ```
 finally, keeping it in a function, will make this re-usable.
 
-sql
+```sql
 create function [dbo].[fn_NoofWorkdaysBetweenDates_Table]
 (
 	@StartDate datetime,
@@ -157,7 +157,7 @@ Now, to use this table in query, concatenate these all columns into single row, 
   
 so, final implementation of this function will be
 
-sql
+```sql
 Create function [dbo].[fn_NoofWorkdaysBetweenDates]
 (
 	@StartDate datetime,

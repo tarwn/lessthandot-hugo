@@ -30,7 +30,7 @@ We will look at an example by creating a table, fragmenting the heck out of it a
 
 First create this table
 
-sql
+```sql
 CREATE TABLE TestIndex (name1 varchar(500) 
 not null,id int 
 not null,userstat  int not null,
@@ -40,7 +40,7 @@ SomeVal uniqueidentifier not null)
 
 Now insert 50000 rows
 
-sql
+```sql
 INSERT TestIndex
 SELECT top 50000 s.name,s.id,s.userstat,s2.name,newid() 
 FROM master..sysobjects s
@@ -49,13 +49,13 @@ CROSS JOIN master..sysobjects s2
 
 Now create this index
 
-sql
+```sql
 CREATE CLUSTERED INDEX IX_TestIndex_Index ON TestIndex(SomeVal)
 ```
 
 Now let us look at some data by using the sys.dm\_db\_index\_physical\_stats DMV. Keep this query handy, we will run it many times
 
-sql
+```sql
 SELECT Object_name(object_id) as Tablename,s.name as Indexname
 ,index_type_desc
 ,avg_fragmentation_in_percent
@@ -116,7 +116,7 @@ and s.name ='IX_TestIndex_Index'
 
 That is good, almost no fragmentation. Let's change that shall we?
 
-sql
+```sql
 UPDATE TestIndex
 SET SomeVal = NEWID()
 ```
@@ -175,7 +175,7 @@ There are two ways to fix fragmentation, one is to reorganize the index and the 
   
 Here is how to do a reorganize
 
-sql
+```sql
 ALTER INDEX IX_TestIndex_Index ON TestIndex
 REORGANIZE;
 ```
@@ -232,7 +232,7 @@ As you can see after the reorganize(DBCC INDEXDEFRAG for you SQL Server 2000 fol
 
 Just for fun let's also rebuild (Drop and recreate the index for you SQL Server 2000 folks) the index
 
-sql
+```sql
 ALTER INDEX IX_TestIndex_Index ON TestIndex
 REBUILD;
 ```
@@ -307,7 +307,7 @@ In order to run the query that checks for fragmented indexes, you need to have V
 
 To determine if you have this permission:
 
-sql
+```sql
 IF Exists(SELECT 1 FROM fn_my_permissions (NULL, 'DATABASE') WHERE permission_name = 'VIEW DATABASE STATE')
   SELECT 'You have permission'
 ELSE
@@ -315,7 +315,7 @@ ELSE
 ```
 If you do not have permissions, a security admin on your server can grant you permissions with the following query:
 
-sql
+```sql
 GRANT VIEW DATABASE STATE TO YourLoginName
 ```
 
@@ -323,7 +323,7 @@ GRANT VIEW DATABASE STATE TO YourLoginName
 
 You can also deny this permission to a user with the following query:
 
-sql
+```sql
 DENY VIEW DATABASE STATE TO YourLoginName
 ```
 

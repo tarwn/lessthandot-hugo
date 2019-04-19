@@ -64,7 +64,7 @@ Download SSMS Tools PACK here: <http://www.ssmstoolspack.com/Download.aspx>
 
 After it is installed create this table
 
-sql
+```sql
 CREATE TABLE Test (ID INT PRIMARY KEY IDENTITY,
                     LastName VARCHAR(40) not null,
                     FirstName VARCHAR(40) not null,
@@ -94,7 +94,7 @@ I like to prefix my procs with pr instead of usp_ (See pic below)
 
 You can customize how the procs will be generated, so for example the INSERT proc template looks like this
 
-sql
+```sql
 IF OBJECT_ID('[|schema|].[|procName|]') IS NOT NULL
 BEGIN
     DROP PROC [|schema|].[|procName|]
@@ -143,7 +143,7 @@ Right click on the table you created, select SSMS Tools and then Create CRUD (Se
 
 The following code will be generated
 
-sql
+```sql
 USE [Test];
 GO
  

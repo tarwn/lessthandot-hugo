@@ -243,7 +243,7 @@ Unfortunately, when I downloaded this there was no documentation available yet, 
 
 If you would like a list of all dynamic management views in SQL Server Denali then run this query
 
-sql
+```sql
 select * from sysobjects
 where name like 'dm[_]%'
 ```

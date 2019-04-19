@@ -30,7 +30,7 @@ The master table will hold the primary information about the files. With any tab
 
 The master table, SystemConfigMaster is below
 
-sql
+```sql
 CREATE TABLE [dbo].[SystemConfigMaster](
 	[ConfigID] [int] IDENTITY(1,1) NOT NULL,
 	[SystemName] [varchar](255) NULL,
@@ -50,7 +50,7 @@ GO
 
 ConfigID will be the primary key that will relate to the next table, ConfigRepository
 
-sql
+```sql
 CREATE TABLE [dbo].[ConfigRepository](
 	[ContentConfigID] [int] IDENTITY(1,1) NOT NULL,
 	[SystemConfigID] [int] NULL,
@@ -104,7 +104,7 @@ Now that the package is altered to process all the data required, create the act
 
 **UDATE Procedure**
 
-sql
+```sql
 CREATE PROCEDURE [dbo].[dba_UpdateNewConfig] (@date datetime, @ConfigID INT,@ConfigContents varchar(max))
 AS
 SET NOCOUNT ON
@@ -122,7 +122,7 @@ GO
 
 **INSERT Procedure**
 
-sql
+```sql
 CREATE PROCEDURE [dbo].[dba_InsertNewConfig] (@date datetime, @ConfigPath varchar(1500),@ConfigContents varchar(max), @Filename varchar(255), @ServerName varchar(255))
 AS
 SET NOCOUNT ON

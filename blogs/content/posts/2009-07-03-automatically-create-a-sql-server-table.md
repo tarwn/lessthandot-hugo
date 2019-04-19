@@ -25,7 +25,7 @@ Enough of the chatter, let's see how this can be done.
 
 First, create a table in the Model database.
 
-sql
+```sql
 use Model
 go
 
@@ -36,14 +36,14 @@ Insert Into TestAutoDBCreation Values(2, 'Blue')
 
 Now, let's create a new database.
 
-sql
+```sql
 use Master
 go
 Create Database NewDatabaseWithModelTable
 ```
 Now, let's make sure the table (and it's data) exist in the new database.
 
-sql
+```sql
 use NewDatabaseWithModelTable
 go
 Select * From TestAutoDBCreation
@@ -52,7 +52,7 @@ As you can see, the table that was created in Model exists in the newly created 
 
 Now, let's clean up after ourselves:
 
-sql
+```sql
 Use Model
 go
 Drop Table TestAutoDBCreation

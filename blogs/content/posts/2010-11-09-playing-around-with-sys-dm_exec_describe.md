@@ -24,7 +24,7 @@ tags:
 ---
 If you have a stored procedure which returns two result sets up till now there was now way to get the meta data easily about the first result set. Let's take a look what is new in SQL Server Denali, first create this very simple stored procedure.
 
-sql
+```sql
 create procedure prTest
 as
 select 1 as a, 'B' as b
@@ -37,7 +37,7 @@ Go
 
 Run the following query
 
-sql
+```sql
 select * 
 from sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('prTest'),1)
 ```
@@ -163,7 +163,7 @@ This query is more interesting because it will look at a dynamic query. Let's sa
 
 Here is how that would work
 
-sql
+```sql
 declare @n nvarchar(100) = N'SELECT * FROM sysobjects SELECT 3'
 
 SELECT *

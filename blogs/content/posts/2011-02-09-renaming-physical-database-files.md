@@ -59,7 +59,7 @@ public partial class StoredProcedures
 
 Then to follow this you can run the following T-SQL Statement to execute the change to master and also change the physical file names 
 
-sql
+```sql
 USE MASTER
 Go
 DECLARE @MDF NVARCHAR(1000)

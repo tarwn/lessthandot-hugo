@@ -31,7 +31,7 @@ I was looking through some code recently and noticed all these sp_executesql cal
   
 A typical SQL statement would look like this
 
-sql
+```sql
 declare @Col2 smallint
 declare @Col1 int
 
@@ -53,7 +53,7 @@ Below is some code to demonstrate what I mean, I have tested this code on SQL Se
 
 First create this table
 
-sql
+```sql
 create table dbo.test (Col1 int primary key,
 Col2 smallint not null,
 SomeDate datetime default getdate(),
@@ -63,7 +63,7 @@ GO
 
 Insert a bunch of rows
 
-sql
+```sql
 insert dbo.test(Col1,Col2)
 select number+ 1,number from master..spt_values
 where type = 'P'
@@ -72,7 +72,7 @@ order by number
 
 Now let's see what we inserted
 
-sql
+```sql
 select * from dbo.test
 ```
 
@@ -106,13 +106,13 @@ Col1 Col2 SomeDate SomeValue
 
 First let's clear our procedure cache
 
-sql
+```sql
 dbcc freeproccache
 ```
 
 run these 2 queries 5 times
 
-sql
+```sql
 select * from dbo.test
 where Col2 = 3
 and Col1 = 4
@@ -126,7 +126,7 @@ go
 
 Now run the following query to see how many plans we have.
 
-sql
+```sql
 select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
@@ -143,7 +143,7 @@ As you can see we have 2 plans and each was used 5 times. So for each change in 
 
 Let's clear the cache again
 
-sql
+```sql
 dbcc freeproccache
 ```
 
@@ -151,7 +151,7 @@ Using dynamic SQL with changing parameters also creates a new plan every time yo
   
 Run the following block of code 5 times
 
-sql
+```sql
 declare @Col2 smallint
 declare @Col1 int
 
@@ -184,7 +184,7 @@ go
 
 Now let's see how many plans we have
 
-sql
+```sql
 select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
@@ -203,7 +203,7 @@ Now let's convert that query to use sp_executesql instead of exec
 
 Run the query below
 
-sql
+```sql
 declare @Col2 smallint
 declare @Col1 int
 
@@ -229,13 +229,13 @@ This is because sp_executesql expects nvarchar and not varchar
 
 Below is the correct query(but it is not correctly parameterized). First clear the cache again
 
-sql
+```sql
 dbcc freeproccache
 ```
 
 Now run the following queries 5 times each
 
-sql
+```sql
 declare @Col2 smallint
 declare @Col1 int
 
@@ -268,7 +268,7 @@ GO
 ```
 Now check again for the plans
 
-sql
+```sql
 select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
@@ -289,13 +289,13 @@ Below is the query which is correctly parameterized. As you can see we have vari
 
 First clear the cache again
 
-sql
+```sql
 dbcc freeproccache
 ```
 
 Now run the following queries 5 times each
 
-sql
+```sql
 declare @Col2 smallint, @Col1 int
 select @Col2 = 3,@Col1 = 4
 
@@ -337,7 +337,7 @@ go
 
 Check the plans again
 
-sql
+```sql
 select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
@@ -356,13 +356,13 @@ Instead of running the query like we did before we can also do the following. We
 
 First clear the cache yet again
 
-sql
+```sql
 dbcc freeproccache
 ```
 
 Here is the rewritten query, execute it 5 times
 
-sql
+```sql
 declare @Col2 smallint, @Col1 int
 select @Col2 = 3,@Col1 = 4
 
@@ -391,7 +391,7 @@ go
 
 And we will check the plans yet again
 
-sql
+```sql
 select q.text,cp.usecounts,cp.objtype,p.*,
 q.*,
 cp.plan_handle
@@ -414,7 +414,7 @@ Take a look at the following queries
 
 Here is the EXEC version
 
-sql
+```sql
 --EXEC (SQL)
 DECLARE @TableName VARCHAR(100),
 @TableCount INT,
@@ -437,7 +437,7 @@ GO
 
 Here is the sp_executesql version
 
-sql
+```sql
 --sp_executesql
 DECLARE @TableName VARCHAR(100),
 @TableCount INT,

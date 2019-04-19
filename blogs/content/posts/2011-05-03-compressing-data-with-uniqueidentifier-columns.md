@@ -24,7 +24,7 @@ To return a sampling of the compression result, use the procedure sp\_estimate\_
 
 To run a test, create the following table and then execute the estimation procedure on both samplings for ROW and PAGE level compression.
 
-sql
+```sql
 create table compress_test (id uniqueidentifier default newid())
 go
 insert into compress_test default values;
@@ -55,7 +55,7 @@ With uniqueidentifier data types, this is the case.  Compression at this stage 
 
 This doesn't mean NOT to enable compression by default because you see a uniqueidentifier column in a table.  In fact, let's test the next script.
 
-sql
+```sql
 create table compress_test_char (id uniqueidentifier default newid(), CHAR_COL CHAR(8000) default 'Take all this space, plus some')
 go
 insert into compress_test_char default values;
@@ -79,7 +79,7 @@ As stated before, each table's results will be unique when the estimation is com
 
 A perfect example to leave you with is the Sales.SalesOrderDetail table in AdventureWorks.  I searched AW to find a table with a combination of data types that probably would not be beneficial from enabling compression.  SalesOrderDetail was such a case just on the fence.
 
-sql
+```sql
 EXEC sp_estimate_data_compression_savings 'Sales', 'SalesOrderDetail', NULL, NULL, 'PAGE' ;
 GO
 ```

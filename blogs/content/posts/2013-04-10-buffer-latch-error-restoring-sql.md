@@ -20,7 +20,7 @@ When working on SQL Server that is stretching IO and the subsystem to its limits
 
 In this case, the restore statement was as simple as it can get.
 
-sql
+```sql
 USE [master]
 RESTORE DATABASE TempRestore FROM  DISK = N'E:Backup DataTempRestore.bak' 
 WITH  FILE = 1,  MOVE N'TempRestore' TO N'I:TempRestore.mdf',  MOVE N' TempRestore_log' TO N'I:TempRestore.ldf',  NOUNLOAD,  REPLACE,  STATS = 5
@@ -79,7 +79,7 @@ As shown, the error occurred upgrading the database and the restore failed. At t
 
 Since the database was restored successfully and the only part that remained was to bring it online, upgrading the internal database version, the following statement should resolve the problem without requiring a completely new restore execution. In most cases, a restore is a one-way street. Start a restore and if it errors, there is no other way but starting over. In this case, don't be so quick to take that ultimatum.
 
-sql
+```sql
 RESTORE DATABASE TempRestore WITH RECOVERY
 GO
 ```

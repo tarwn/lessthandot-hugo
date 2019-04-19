@@ -27,7 +27,7 @@ let's take a look at how that works
 
 First create this awesome stored procedure
 
-sql
+```sql
 create procedure prBla
 as
 select * from Blah 
@@ -36,7 +36,7 @@ go
 
 Now execute sp_depends
 
-sql
+```sql
 exec sp_depends 'Blah'
 ```
 
@@ -46,7 +46,7 @@ The object 'Blah' does not exist in database 'tempdb' or is invalid for this ope
 
 So that tells us that the table Blah does not exist. Fine, what happens if we run sp_depends for the proc?
 
-sql
+```sql
 exec sp_depends 'prBla'
 ```
 
@@ -54,20 +54,20 @@ Object does not reference any object, and no objects reference it.
 
 That makes sense since the table does not exist. Let's create this table
 
-sql
+```sql
 create table Blah
 (SomeCol int)
 ```
 
 Now run sp_depends again for the table and the project
 
-sql
+```sql
 exec sp_depends 'Blah'
 ```
 
 Object does not reference any object, and no objects reference it.
 
-sql
+```sql
 exec sp_depends 'prBla'
 ```
 
@@ -77,17 +77,17 @@ Okay so SQL server knows that the table Blah has been created but it still does 
 
 Will executing the proc change that perhaps?
 
-sql
+```sql
 exec  prBla
 ```
 
-sql
+```sql
 exec sp_depends 'Blah'
 ```
 
 Object does not reference any object, and no objects reference it.
 
-sql
+```sql
 exec sp_depends 'prBla'
 ```
 
@@ -97,13 +97,13 @@ Nope, no such luck, that didn't do anything
   
 Now execute the sp_refreshsqlmodule proc
 
-sql
+```sql
 exec sp_refreshsqlmodule 'prBla'
 ```
 
 Execute sp_depends again
 
-sql
+```sql
 exec sp_depends 'Blah'
 ```
 
@@ -116,7 +116,7 @@ Yep, now it is showing us that table Blah is used by the stored proc prBla
   
 Will it work when we run sp_depends for the stored procedure?
 
-sql
+```sql
 exec sp_depends 'prBla'
 ```
 
@@ -129,7 +129,7 @@ And as you can see it also shows that the table is used..like Borat would say â€
 
 Clean up by dropping these sample objects
 
-sql
+```sql
 drop table Blah
 go
 drop procedure prBla

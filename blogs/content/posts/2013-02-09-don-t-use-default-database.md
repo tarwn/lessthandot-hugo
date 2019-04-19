@@ -27,7 +27,7 @@ In my opinion, it is best practice to set the default database for every login t
 
 To check the logins with an invalid default database:
 
-sql
+```sql
 SELECT	L.name, L.dbName
 FROM	master.sys.syslogins L
 		Inner Join sys.databases D
@@ -38,7 +38,7 @@ WHERE	L.dbname <> 'master'
 
 To check the logins that have a database other than master:
 
-sql
+```sql
 SELECT	L.name, L.dbName
 FROM	master.sys.syslogins L
 WHERE	L.dbname <> 'master'
@@ -46,7 +46,7 @@ WHERE	L.dbname <> 'master'
 
 To change the default database to master:
 
-sql
+```sql
 ALTER LOGIN [YourLoginNameHere] WITH DEFAULT_DATABASE = [master]
 ```
 

@@ -33,7 +33,7 @@ First task for us to prepare the new server was to restore a full backup of the 
   
 To run our full backup and transaction log backup run the following script
 
-sql
+```sql
 BACKUP DATABASE [NEEDTOMOVE] TO DISK = 'C:needtomove_full_migration.bak'
 Go
 BACKUP LOG [NEEDTOMOVE] TO DISK = 'C:needtomove_taillog_migration.trn'
@@ -43,7 +43,7 @@ Once our backups are created we can move to the new server and restore them. As 
 
 To accomplish the full restore run the following statements on MYLABNEW
 
-sql
+```sql
 RESTORE DATABASE [NEEDTOMOVE] 
 FROM DISK = 'C:needtomove_full_migration.bak'
 WITH NORECOVERY,
@@ -58,7 +58,7 @@ We now have the new server and database ready for mirroring. In order for us to 
 
 To stop and remove mirroring run the following ALTER statement from the principle database server. 
 
-sql
+```sql
 ALTER DATABASE NEEDTOMOVE SET PARTNER OFF
 ```
 
@@ -66,13 +66,13 @@ Setting the partner (mirror) off will remove all mirroring configurations saved 
   
 To remove the endpoint if no other mirrors are running we can run the following statement
 
-sql
+```sql
 DROP ENDPOINT Mirroring
 ```
 
 At this stage we are ready to configure mirroring from the principle to our new database server. While we have the mirroring endpoint already created on our principle database server, we still need to create a new endpoint on the new server. Using the script from part 1 for configuring the initial mirror, we can remove the first CREATE ENDPOINT statement and then re-sequence the steps to accomplish setting up the new mirror.
 
-sql
+```sql
 --On the secondary (mirror) run
 --1
 CREATE ENDPOINT [Mirroring_Migration] 
@@ -112,7 +112,7 @@ From within SSMS you can right click the database and select properties. Then fr
 
 To accomplish this same task from TSQL we can execute the following statement
 
-sql
+```sql
 ALTER DATABASE NEEDTOMOVE SET SAFETY FULL
 GO
 ALTER DATABASE NEEDTOMOVE SET PARTNER FAILOVER
@@ -120,7 +120,7 @@ GO
 ```
 Then we can go on the new principle and reset out safety level to off with
 
-sql
+```sql
 ALTER DATABASE NEEDTOMOVE SET SAFETY OFF
 GO
 ```

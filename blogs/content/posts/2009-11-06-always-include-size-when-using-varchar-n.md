@@ -21,7 +21,7 @@ There are several string data types in SQL Server. There are varchar, nvarchar, 
 
 SQL 2005 (and up)
 
-sql
+```sql
 Select  Name 
 From    sys.sysobjects 
 Where   XType = 'P'
@@ -31,7 +31,7 @@ Order By Name
 ```
 SQL2000
 
-sql
+```sql
 Select  Name
 From    (
         Select S.Name, C.Text

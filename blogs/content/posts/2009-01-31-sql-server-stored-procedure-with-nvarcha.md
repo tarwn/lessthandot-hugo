@@ -19,7 +19,7 @@ I really wish the T-SQL parser would error when trying to use a string type with
 
 Anyway... you can test this for yourself by create a stored procedure with an nvarchar parameter without specifying the size. Like this:
 
-sql
+```sql
 Create Procedure TestParameterLength
 	@Data nvarchar
 As
@@ -27,7 +27,7 @@ Select @Data As Data
 ```
 Clearly, the stored procedure is rather useless, but you might think that it will return whatever string is passed to it. Not so. Since the @Data parameter does not have a size, it defaults to 1 character and will truncate the data that is passed to it. You can test this by calling the stored procedure like this:
 
-sql
+```sql
 exec TestParameterLength N'Hello World'
 ```
 The output you get will be:
@@ -41,7 +41,7 @@ H
 
 The same problem occurs when you declare a variable within a stored procedure. It defaults to 1 character. However, this is inconsistent with the convert function. If you convert to nvarchar without specifying the size, it defaults to 30 characters. Take a look at the following stored procedure to see what I mean:
 
-sql
+```sql
 Create Procedure TestVariableLength
 	@Data nvarchar(100)
 As
@@ -64,7 +64,7 @@ Clearly @AnotherVariable is large enough to store anything in @Data, but since I
 
 You can test it like this:
 
-sql
+```sql
 exec TestVariableLength N'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789'
 ```
 The output:

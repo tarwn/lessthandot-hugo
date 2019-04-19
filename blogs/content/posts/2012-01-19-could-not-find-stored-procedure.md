@@ -23,7 +23,7 @@ The database that I was testing on was AdventureWorks.  AdventureWorks has a co
 
 As a quick test, in your own AdventureWorks database, run the following
 
-sql
+```sql
 EXEC sp_ExecuteSQL N'SELECT * FROM sys.databases'
 ```
 
@@ -34,7 +34,7 @@ resulting in the following error
 
 The correct syntax would be
 
-sql
+```sql
 EXEC sp_executesql N'SELECT * FROM sys.databases'
 ```
 

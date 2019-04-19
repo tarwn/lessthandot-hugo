@@ -22,14 +22,14 @@ The Model database is used as a template for all user databases that are created
 
 A quick view into the value of altering Model to manage new user database creations can be found in pre-setting the recovery model.  On development and some other SQL Server installations that may not require a full recovery model, databases are often changed after they are created to be set in the simple recovery model.  Instead of adding that extra step to new databases or preventing the step from being forgotten all together, change Model to use a simple recovery model.
 
-sql
+```sql
 ALTER DATABASE MODEL SET RECOVERY SIMPLE
 ```
 
 
 Now create a new database with all defaults set
 
-sql
+```sql
 CREATE DATABASE DeleteThisTest
 ```
 
@@ -38,7 +38,7 @@ CREATE DATABASE DeleteThisTest
 
 To check the recovery model of the new database, DeleteThisTest, run the following query on the sys.databases view.
 
-sql
+```sql
 select recovery_model_desc from sys.databases where name = 'DeleteThisTest'
 ```
 

@@ -33,7 +33,7 @@ So let's look at some code
   
 First create the following stored procedure
 
-sql
+```sql
 create proc prTestProc
 as
 select * from master..spt_values where type = 'P'
@@ -42,36 +42,36 @@ go
 
 Now run this query 5 times
 
-sql
+```sql
 select * from master..spt_values where type = 'P'
 ```
 Run this query 6 times
 
-sql
+```sql
 select count(*) from master..spt_values where type = 'P'
 ```
 
 Run this query 7 times
 
-sql
+```sql
 select count(*) from master..spt_values
 ```
 
 Run this query 8 times
 
-sql
+```sql
 select count(*) from master..spt_values where type <> 'P'
 ```
 
 Run this stored procedure 9 times
 
-sql
+```sql
 exec prTestProc
 ```
 
 Now let's look at the output. Here is the query that returns all the queries, their execution counts, if they were ad hoc or not and their last execution time. The query works by using the sys.dm\_exec\_query\_stats and sys.dm\_exec\_sql\_text dynamic management views to bring back the SQL statements themselves. 
 
-sql
+```sql
 SELECT * FROM(SELECT coalesce(object_name(s2.objectid),'Ad-Hoc') as ProcName,execution_count, 
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 , 
       ( (CASE WHEN statement_end_offset = -1 
@@ -99,19 +99,19 @@ Let's look at the query in more detail
 
 This line below has the name of the table we are searching for
 
-sql
+```sql
 where sql_statement like '%spt_values%'
 ```
 
 The line below excludes the query that we are running itself since that is not what we want to return
 
-sql
+```sql
 AND sql_statement NOT like 'SELECT * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid)%'
 ```
 
 The line below will return Ad Hoc or the name of the object that the code was in, if s2.objectid is NULL then it was an Ad-Hoc query
 
-sql
+```sql
 coalesce(object_name(s2.objectid),'Ad Hoc')
 ```
 

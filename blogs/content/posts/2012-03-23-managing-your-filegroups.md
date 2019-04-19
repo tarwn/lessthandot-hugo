@@ -25,7 +25,7 @@ I found myself having this inner monologue the other day after I pushed a databa
 
 I realized that I hadn't generated the file groups or extra files on the second server. I created them and then used this query to find out where the tables and indexes were:
 
-sql
+```sql
 select distinct
 	s.name as SchemaName,
 	t.name as TableName,
@@ -47,7 +47,7 @@ In SSMS, as long as you don't have a lot of data in the table, the tables (aka t
 
 Behind the scenes SSMS will create a new table with the same structure on the filegroup, copy the data, drop the old table and rename the new table to the appropriate name. Now do you see why it matters how much data you have? If you've got a lot of data then you need to drop the Clustered index, move it, and then recreate the Clustered Index.
 
-sql
+```sql
 ALTER TABLE dbo.Blah DROP CONSTRAINT PK_Blah WITH (MOVE TO Secondary)
 GO
 ALTER TABLE dbo.Blah ADD CONSTRAINT PK_Blah PRIMARY KEY(blah1)
@@ -62,7 +62,7 @@ To move the stragglers using SSMS right click-properties on the index, go to sto
 
 Behind the scenes SQL Server will just run a create statement, utilizing the DROP_EXISTING command to delete the index if it already exists:
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX [IDX_Blah] ON [dbo].[Blah] 
 (
 	[ColA] ASC

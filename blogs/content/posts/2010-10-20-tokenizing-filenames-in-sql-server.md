@@ -26,7 +26,7 @@ tags:
 ---
 Someone at my job needed to grab a filepath, take out the filename and then split all the pieces into their own columns which were separated by either a dot or an underscore. If you had the following table
 
-sql
+```sql
 CREATE TABLE #test (id INT primary key, PATH VARCHAR(1000))
 INSERT #test VALUES(1,'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK')
 INSERT #test VALUES(2,'Y:dgfdbla_2010_10_15_Pre_Calc.BAK')
@@ -288,7 +288,7 @@ In order to attack this problem you have to divide and conquer. Here are the fou
 
 This is pretty easy, all you have to do is use the replace function and replace '.' with '_'
 
-sql
+```sql
 declare @FilePath varchar(100)
 SELECT @FilePath = 'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK'
 SELECT REPLACE(@FilePath,'.','_')
@@ -304,7 +304,7 @@ Y:dgfdgdgd\_Databla\_2010\_10\_14\_Pre\_Calc_BAK
 
 To get just the filename, you use the reverse function, then you look for the position of the first backslash, you will then use the right function and use the position of the first backslash as the number of characters to keep. You add -1 to the length because you do not want the backslash included.
 
-sql
+```sql
 declare @FilePath varchar(100)
 SELECT @FilePath = 'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK'
 SELECT RIGHT(@FilePath,PATINDEX('%%',REVERSE(@FilePath))-1) AS PATH
@@ -320,7 +320,7 @@ bla\_2010\_10\_14\_Pre_Calc.BAK
 
 This is just a combination of 1 and 2, take the dot out and get just the file name
 
-sql
+```sql
 declare @FilePath varchar(100)
 SELECT @FilePath = 'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK'
 SELECT RIGHT(REPLACE(@FilePath,'.','_'),PATINDEX('%%',REVERSE(@FilePath))-1) AS PATH
@@ -336,7 +336,7 @@ bla\_2010\_10\_14\_Pre\_Calc\_BAK
 
 To split the string we can use the built in table of numbers master..spt_values. Running the code below
 
-sql
+```sql
 declare @FilePath varchar(100)
 SELECT @FilePath = 'Y:dgfdgdgd_Databla_2010_10_14_Pre_Calc.BAK'
 SELECT @FilePath = RIGHT(REPLACE(@FilePath,'.','_'),PATINDEX('%%',REVERSE(@FilePath))-1) 
@@ -439,7 +439,7 @@ We are almost there, instead of just one string we want to grab the whole table.
   
 Run this to see what we have so far
 
-sql
+```sql
 SELECT id,PATH, SUBSTRING('_' + PATH + '_', Number + 1,
     CHARINDEX('_', '_' + PATH + '_', Number + 1) - Number -1)AS VALUE,
     ROW_NUMBER() OVER (PARTITION BY id ORDER BY id,number ) AS ROW
@@ -964,7 +964,7 @@ Here is the output
 
 The missing piece is transposing the columns, this is easily accomplished by using the PIVOT operator. As you can see we use the ROW_NUMBER function to create a number for us, this number is then used as a column name by the Pivot operator. Here is the final query which produced the desired output
 
-sql
+```sql
 SELECT * FROM
    ( 
     SELECT id,PATH, SUBSTRING('_' + PATH + '_', Number + 1,

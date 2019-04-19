@@ -19,7 +19,7 @@ categories:
 ---
 Fact: every SQL Server database has an “owner”. You can check the owner of a database by running this query: 
 
-sql
+```sql
 SELECT NAME, SUSER_SNAME(owner_sid) 
 FROM   sys.databases 
 WHERE NAME = 'DatabaseName'
@@ -63,7 +63,7 @@ The BOL syntax is:
 
 So, to use this: My “class\_type” is DATABASE, my “entity\_name” is the database name, and my “principal name” is my login. My complete statement looks like this:
 
-sql
+```sql
 ALTER AUTHORIZATION ON DATABASE::AdventureWorks TO grrlgeek
 ```
 
@@ -71,7 +71,7 @@ I ran that successfully, and there are no more errors.
 
 I can check the owner was changed by running my sys.databases query again. 
 
-sql
+```sql
 SELECT NAME, SUSER_SNAME(owner_sid) 
 FROM   sys.databases 
 WHERE NAME = 'DatabaseName'

@@ -28,7 +28,7 @@ I used to also have a debate with a fellow DBA about @@ROWCOUNT. I use it all th
   
 Here is some sample code that illustrates how triggers affect @@IDENTITY, @@ROWCOUNT and also demonstrates SCOPE_IDENTITY().
 
-sql
+```sql
 CREATE TABLE tblTest (col1 INT IDENTITY (1,1) NOT NULL, col2 INT NULL);
 
 GO

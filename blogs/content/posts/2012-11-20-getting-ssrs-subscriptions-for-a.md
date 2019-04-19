@@ -93,7 +93,7 @@ The query returns the Path to the Report, the Report Name, the owner of the Subs
 
 This by no means a finished and completely polished query, but rather a good starting point for others to use for their purposes.
 
-sql
+```sql
 DECLARE	 @Date			DATETIME
 		,@DaysOfWeek	INT
 		,@DaysOfMonth	INT;

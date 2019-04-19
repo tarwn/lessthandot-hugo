@@ -18,7 +18,7 @@ There are various methods to accommodate this problem, let's examine a few of th
 
 For most of us, the typical method for accommodating divide by zero is to first check the denominator to see if it is equal to zero. If it is, then return 0, otherwise perform the division. Like this...
 
-sql
+```sql
 Select Case When Denominator = 0
             Then 0             
             Else Numerator/Denominator             
@@ -30,7 +30,7 @@ Most programmers are very familiar with this syntax, and often times, it's the b
 
 The problem occurs when the denominator is a calculated value, and that calculation is slow.
 
-sql
+```sql
 Select Case When dbo.SlowPerformingFunction() = 0
             Then 0
             Else Numerator / dbo.SlowPerformingFunction()
@@ -42,7 +42,7 @@ In this case, the SlowPerformingFunction is evaluated twice, once in the test an
 
 SQL Server has a NULLIF function. This function accepts 2 parameters. If the first parameter is equal to the second parameter, NULL is returned. Otherwise, the value in the first parameter is returned. EX:
 
-sql
+```sql
 Select NullIf(0,0) -- Returns NULL
 Select NullIf(7,0) -- Returns 7
 ```
@@ -50,14 +50,14 @@ Select NullIf(7,0) -- Returns 7
 
 Another handy function to know is COALESCE. Coalesce accepts multiple parameters. It checks each parameter and returns the first one that is NOT NULL. If all parameters are NULL, NULL is returned. Ex:
 
-sql
+```sql
 Select Coalesce(NULL, NULL, NULL, 'Apple') -- Returns Apple
 ```
 
 
 Lastly, we need to think about the division. If you try to divide any number by zero, you will get an error. However, if you divide a number by NULL, you get NULL. We can use this to our advantage to prevent the 'divide by zero' error while evaluating slow performing functions just once. Like this:
 
-sql
+```sql
 Select Coalesce(Numerator / NullIf(dbo.SlowPerformingFunction(), 0), 0) As [CalculatedColumn]
 ```
 

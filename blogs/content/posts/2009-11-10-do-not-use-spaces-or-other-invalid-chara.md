@@ -22,7 +22,7 @@ Based on a comment from Aaron Bertrand, I decided to modify the code below. I re
 
 **How to detect this problem:**
 
-sql
+```sql
 Declare @AcceptableSymbols VarChar(100)
 
 Set @AcceptableSymbols = '_$'

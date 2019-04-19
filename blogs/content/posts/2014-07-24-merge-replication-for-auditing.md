@@ -110,7 +110,7 @@ Copy the PersonAudit.dll to your COM directory within the SQL Server system dire
   
 Once the .DLL is copied, the resolver must be registered. This is done by using the sp_registercustomresolver procedure.
 
-sql
+```sql
 Use Distribution
 GO
 sp_unregistercustomresolver @article_resolver='PersonAudit'
@@ -141,7 +141,7 @@ On the publisher and the AdventureWorks2012 database, we can run a test by updat
 
 First, check the value of Title for BusinessEntityID of 1
 
-sql
+```sql
 SELECT * FROM Person.Person WHERE BusinessEntityID = 1
 ```
 
@@ -149,7 +149,7 @@ SELECT * FROM Person.Person WHERE BusinessEntityID = 1
 
 Now execute a simple UPDATE statement (The Title initial value was Test2 for this publication initialization)
 
-sql
+```sql
 UPDATE Person.Person
 SET Title = 'Test5'
 WHERE BusinessEntityID = 1

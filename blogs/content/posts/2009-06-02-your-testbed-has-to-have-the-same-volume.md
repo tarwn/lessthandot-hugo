@@ -35,7 +35,7 @@ Now let's look at some code to see what the difference is
 
 First create these two tables
 
-sql
+```sql
 create table TestSmall (id int identity not null,Somevalue char(108),SomeValue2 uniqueidentifier)
 go
 
@@ -45,7 +45,7 @@ go
 
 We will populate the small table with 256 rows and the big one with 65536 rows
 
-sql
+```sql
 --256 rows
 insert TestSmall
 select convert(varchar(36),newid())
@@ -70,7 +70,7 @@ go
 
 Now we will create a clustered index on each table
 
-sql
+```sql
 create clustered index ix_somevalue_small on TestSmall(Somevalue)
 go
 create clustered index ix_somevalue_big on TestBig(Somevalue)
@@ -81,13 +81,13 @@ Time to run some code
   
 First we have to turn on statistics for time
 
-sql
+```sql
 set statistics io on
 ```
 
 Now run these queries
 
-sql
+```sql
 select * from TestSmall
 where Somevalue like '2%'
 
@@ -103,7 +103,7 @@ As you can see the reads are much higher for the TestBig table, this is of cours
 
 What will happen if we write a non sargable query by using a function in the WHERE clause?
 
-sql
+```sql
 select * from TestSmall
 where left(Somevalue,1) = '2'
 
@@ -119,19 +119,19 @@ Okay, so the smaller table had 3.5 times more reads while the bigger table had 1
 
 Time to turn of the statistics for IO
 
-sql
+```sql
 set statistics io off
 ```
 
 Now we will look at statistics for time, you can do that by running the following command
 
-sql
+```sql
 set statistics time on
 ```
 
 Let's run the same queries again
 
-sql
+```sql
 select * from TestSmall
 where Somevalue like '2%'
 
@@ -151,7 +151,7 @@ As you can see the numbers are much better for the smaller table
   
 When we do the non sargable queries the numbers don't increase for the smaller table but they do for the bigger table
 
-sql
+```sql
 select * from TestSmall
 where left(Somevalue,1) = '2'
 
@@ -169,7 +169,7 @@ CPU time = 31 ms, elapsed time = 132 ms.
 
 Since data might be cached and you would like to start fresh every time you can execute the following command to clear the cache
 
-sql
+```sql
 dbcc freeproccache
 dbcc dropcleanbuffers
 ```
@@ -178,7 +178,7 @@ Finally I will leave you with execution plan pics
 
 **Sargable Query**
 
-sql
+```sql
 select * from TestSmall
 where Somevalue like '2%'
 
@@ -190,7 +190,7 @@ where Somevalue like '2%'
 
 **Non Sargable Query**
 
-sql
+```sql
 select * from TestSmall
 where left(Somevalue,1) = '2'
 

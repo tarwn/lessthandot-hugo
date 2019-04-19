@@ -22,7 +22,7 @@ Table name is POP10500. The ERP system is Microsoft Dyanmics Great Plains v9 so 
 
 So I see my fragmentation by running the following
 
-sql
+```sql
 SELECT  
 	OBJECT_NAME(i.OBJECT_ID) AS TableName,
 	i.name AS IndexName,
@@ -43,7 +43,7 @@ Which shows I'm at 89.41%. No one wants to see that number in the avg\_fragmenta
 
 I know one key variable to my task of fixing this. The users and system tasks always hit column DEX\_ROW\_ID. I can create a nonclustered index on DEX\_ROW\_ID as
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IX_DEX_ROW_ID
     ON dbo.POP10500(DEX_ROW_ID)
     WITH (FILLFACTOR = 70,
@@ -52,7 +52,7 @@ GO
 ```
 But I also know that DEX\_ROW\_ID is unique. I can confirm that with
 
-sql
+```sql
 SELECT COUNT(*),DEX_ROW_ID
 FROM POP10500
 GROUP BY DEX_ROW_ID
@@ -60,13 +60,13 @@ HAVING COUNT(*) > 1
 ```
 And by determining the use of this table from the ERP documentation. Yes, you should read all the documentation not only for the databases you support, but for the applications you support. DEX\_ROW\_ID is simply therelational key to the header and detail purchase order tables. This table in question is a transactions tables. So why not kill the fragmentation all together taking advantage of DEX\_ROW\_ID? let's try...
 
-sql
+```sql
 CREATE UNIQUE CLUSTERED INDEX IX_CLUS ON dbo.POP10500(DEX_ROW_ID);
 GO
 ```
 Let's check fragmentation now
 
-sql
+```sql
 SELECT  
 	OBJECT_NAME(i.OBJECT_ID) AS TableName,
 	i.name AS IndexName,
@@ -85,7 +85,7 @@ Where OBJECT_NAME(i.OBJECT_ID) = 'POP10500'
 ```
 0% 🙂 Happy days! Drop the clustered index
 
-sql
+```sql
 DROP INDEX IX_CLUS ON dbo.POP10500
 GO
 ```
@@ -97,7 +97,7 @@ and cluster it. This will fix the fragmentation. You want to do your best to ord
   
 data the way you want it though. Let's say PONUMBER is the column that is always filtered on.
 
-sql
+```sql
 ALTER TABLE POP10500
 	ADD CLUSCOL INT IDENTITY(1,1)
 GO

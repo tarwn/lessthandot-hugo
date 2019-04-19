@@ -32,7 +32,7 @@ tags:
 ---
 Take a look at this code
 
-sql
+```sql
 create table Foo2(id int,
 id2 int constraint DefaultID2 default 1)
 ```
@@ -41,7 +41,7 @@ As you can see it is a simple table with 2 columns, the second column has a cons
   
 We can verify that the table has a default on that column by writing something like this
 
-sql
+```sql
 select column_default 
 from information_schema.columns 
 where table_name = 'Foo2' 
@@ -56,7 +56,7 @@ How can you get the default name?
   
 On version 7 and up run this
 
-sql
+```sql
 select s.name --default name
 from sysobjects s 
 join syscolumns c on s.parent_obj = c.id
@@ -68,7 +68,7 @@ and c.name ='id2'
 
 On 2005 and up run this(the previous code also runs on SQL Server 2005 and SQL Server 2008)
 
-sql
+```sql
 select s.name --default name
 from sys.sysobjects s 
 join sys.syscolumns c on s.parent_obj = c.id
@@ -80,20 +80,20 @@ and c.name ='id2'
 
 How do you drop such a constraint? Very easy you do this
 
-sql
+```sql
 ALTER table foo2 drop DefaultID2
 ```
 
 Now we will create a table with two default constraints and both of them will be created without a name when running the create table DDL
 
-sql
+```sql
 create table Foo(id int default 0,
 id2 int default 1)
 ```
 
 Now let's see if the default is created
 
-sql
+```sql
 select column_default 
 from information_schema.columns 
 where table_name = 'Foo' 
@@ -108,7 +108,7 @@ All fine, now how can we drop the default for the id2 column on the Foo table?
 
 Running this code
 
-sql
+```sql
 select s.name --default name
 from sys.sysobjects s 
 join sys.syscolumns c on s.parent_obj = c.id
@@ -122,7 +122,7 @@ Will give use the default name, in this case it is DF\_\_Foo\_\_id2__7D439ABD
   
 So now we can drop the default by doing this
 
-sql
+```sql
 ALTER table foo2 drop DF__Foo__id2__7D439ABD
 ```
 
@@ -142,7 +142,7 @@ Could not drop constraint. See previous errors.
 
 Then you will get a call that your script is broken, you will tell him that it works on staging. In the end you will have to do something like this so that it can run on any server as long as the table and column name are the same
 
-sql
+```sql
 declare @default sysname
 declare @tableName sysname
 declare @columnname sysname

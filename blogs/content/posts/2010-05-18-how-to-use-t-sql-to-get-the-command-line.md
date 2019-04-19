@@ -52,7 +52,7 @@ More info about how to use sp_readerrorlog is available on our wiki here: [Read 
 
 To search the current error log we can do this
 
-sql
+```sql
 EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters'
 ```
 
@@ -62,7 +62,7 @@ Here is the output
 
 You can also use 2 search arguments like this
 
-sql
+```sql
 EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/c'
 ```
 
@@ -94,7 +94,7 @@ The SQL Server (MSSQLSERVER) service was started successfully.</pre>
 
 Now let's run the same stored procedure from before
 
-sql
+```sql
 EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters'
 ```
 
@@ -106,13 +106,13 @@ Now you can also search for /c or /g and the result is the same as before
   
 Search for /c
 
-sql
+```sql
 EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/c'
 ```
 
 Search for /g
 
-sql
+```sql
 EXEC sp_readerrorlog 0, 1, 'Command Line Startup Parameters','/g'
 ```
 

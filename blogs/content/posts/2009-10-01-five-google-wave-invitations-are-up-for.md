@@ -37,7 +37,7 @@ Here is the SQL Code that will determine who will win
 
 First the create table and insert statement
 
-sql
+```sql
 CREATE TABLE #TEMP(LuckyWinner varchar(500))
 
 
@@ -85,7 +85,7 @@ insert #TEMP Values('wookielnx')
 ```
 The query below will pick the 5 random winners
 
-sql
+```sql
 SELECT TOP 5 * 
 FROM #TEMP
 ORDER BY NEWID()

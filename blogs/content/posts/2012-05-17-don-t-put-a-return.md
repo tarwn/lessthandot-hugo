@@ -32,7 +32,7 @@ I answered the following question earlier this evening: [Return an output parame
 
 Here is the proc in question, take a good look at it, do you see the problem?
 
-sql
+```sql
 ALTER PROCEDURE [dbo].[Insert_UnknownCustomer_Quote_Document]
 -- Add the parameters for the stored procedure here
 @NewDocumentFileName nvarchar(100),
@@ -79,7 +79,7 @@ END CATCH
 
 Here is a simplified version
 
-sql
+```sql
 CREATE proc prTest
 as
 DECLARE @id int
@@ -100,13 +100,13 @@ Let's see what happens when you try running it
 
 First create this table
 
-sql
+```sql
 CREATE TABLE TestID (id int identity)
 go
 ```
 Here is the proc again
 
-sql
+```sql
 CREATE proc prTest
 as
 DECLARE @id int
@@ -123,7 +123,7 @@ GO
 
 Go ahead and execute it
 
-sql
+```sql
 DECLARE @id int
 EXEC @id = prTest
 SELECT @id
@@ -137,7 +137,7 @@ So the stored procedure blew up, no big deal right?
   
 Open a new query window, run this
 
-sql
+```sql
 SELECT * FROM TestID
 ```
 
@@ -147,7 +147,7 @@ As you can see the query is stuck
   
 Now open yet another window and execute this
 
-sql
+```sql
 SELECT blocking_session_id,* 
 FROM sys.dm_exec_requests
 WHERE blocking_session_id <> 0
@@ -161,7 +161,7 @@ Go back to the first query window and either run COMMIT or ROLLBACK, the query w
 
 In the stored procedure, the return statement should come after the commit, it should look like this
 
-sql
+```sql
 ALTER proc prTest
 as
 DECLARE @id int
@@ -179,7 +179,7 @@ GO
 
 Now, you won't get an error or a hanging transaction. Run it again
 
-sql
+```sql
 DECLARE @id int
 EXEC @id = prTest
 SELECT @id
@@ -191,7 +191,7 @@ In general, I don't like to use return statements to return IDs, I like to use O
 
 Here is what the proc would look like with an OUTPUT parameter
 
-sql
+```sql
 ALTER proc prTest @id int OUTPUT
 AS
 
@@ -205,7 +205,7 @@ GO
 
 Here is how you call it
 
-sql
+```sql
 DECLARE @id int
 EXEC  prTest @id output
 SELECT @id

@@ -20,13 +20,13 @@ tags:
 ---
 You have a table and you would like to create a XSD schema based on that table. What is the easiest way to do that in SQL Server? The easiest way to do that would be to use FOR XML syntax with AUTO, ELEMENTS and XMLSCHEMA. If your table is named test and you want your schema to be named TestXsdSchema then you would do the following
 
-sql
+```sql
 SELECT * FROM Test FOR XML AUTO, ELEMENTS, XMLSCHEMA('TestXsdSchema')
 ```
 
 Let's look at a complete example. First create the table below
 
-sql
+```sql
 create table Test(id int identity,
 SomeName varchar(53) not null,
 SomeValue decimal(20,10) not null,
@@ -35,7 +35,7 @@ SomeGuid uniqueidentifier not null default newsequentialid())
 
 Now execute the following block of code
 
-sql
+```sql
 DECLARE @XsdSchema xml
 SET @XsdSchema = (SELECT * FROM Test FOR XML AUTO, ELEMENTS, XMLSCHEMA('TestXsdSchema'))
 SELECT @XsdSchema

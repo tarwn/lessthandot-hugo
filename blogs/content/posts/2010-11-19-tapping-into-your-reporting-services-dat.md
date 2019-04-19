@@ -26,7 +26,7 @@ For every instance of SQL Server Reporting Services (2005+) there are two databa
 
 The very first view I made using data from the Reporting Services database was a list of Report Executions. This view was great because I could see which reports were actually being used and which weren't, and who was using which reports. I made a report off of this view and provided it to a manager so they could track to make sure the other managers were checking their employee hours report.
 
-sql
+```sql
 CREATE VIEW [dbo].[ExecutionLogView]
 AS    SELECT TOP (100) PERCENT
             dbo.ExecutionLog.UserName,
@@ -43,7 +43,7 @@ AS    SELECT TOP (100) PERCENT
 ```
 One of the issues I had with one of my instances was subscriptions. There were scheduled subscriptions everywhere and a lot of them ran at the same time, but they weren't on a shared schedule.
 
-sql
+```sql
 create view dbo.ReportSubscriptionView
 as
 SELECT TOP (100) PERCENT
@@ -94,7 +94,7 @@ I discovered that SSRS creates a SQL Agent Job for every schedule subscription t
 
 One other view that I found useful was a view of the whole directory and the related security.
 
-sql
+```sql
 create view [dbo].[CatalogSecurity] as
 select  top (100) percent
 	c.ItemID,

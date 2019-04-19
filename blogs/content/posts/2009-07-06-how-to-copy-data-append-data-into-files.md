@@ -25,7 +25,7 @@ To copy data into a new file use BCP (Bulk Copy Program). To append to a file us
 
 Here is some sample code. First create this table
 
-sql
+```sql
 use tempdb
 go
 
@@ -48,7 +48,7 @@ insert TestData values(12,'abcdefg12',3.42)
 
 Now lets' first use BCP to copy data into a file. Here is what the command will look like
 
-sql
+```sql
 master..xp_cmdshell 'bcp "SELECT id, CHAR(34) + SomeValue + CHAR(34),SomeOtherValue FROM tempdb..TestData" queryout C:TestData.txt -t, -c -Slocalhost -T'
 ```
 
@@ -90,7 +90,7 @@ SQL Server blocked access to procedure 'sys.xp\_cmdshell' of component 'xp\_cmds
 
 To enable xp_cmdshell execute the following code
 
-sql
+```sql
 EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
@@ -114,7 +114,7 @@ SQL Server blocked access to STATEMENT 'OpenRowset/OpenDatasource' of component 
 
 To enable OPENROWSET and OPENQUERY you can use the previous script but instead of 'xp_cmdshell' you will use 'Ad Hoc Distributed Queries'. The script to enable Ad Hoc Distributed Queries is below
 
-sql
+```sql
 EXECUTE SP_CONFIGURE 'show advanced options', 1
 RECONFIGURE WITH OVERRIDE
 GO
@@ -130,7 +130,7 @@ GO
 
 Now it is time to execute our query, make sure that everything in the code below is on one line in your query window.
 
-sql
+```sql
 master..xp_cmdshell 'bcp "SELECT id, CHAR(34) + SomeValue + CHAR(34),SomeOtherValue FROM tempdb..TestData ORDER BY id" queryout C:TestData.txt -t, -c -Slocalhost -T'
 ```
 
@@ -152,7 +152,7 @@ NULL_
 
 Now we will use OPENROWSET to read the file we just created
 
-sql
+```sql
 select * from OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
 'Text;Database=C:;HDR=No;', 'SELECT * FROM TestData.txt')
 ```
@@ -161,7 +161,7 @@ If everything is correct and ad-hoc queries are enabled on your instance you sho
 
 Now let's append a row to the file
 
-sql
+```sql
 INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
 'Text;Database=C:;HDR=Yes;', 'SELECT * FROM TestData.txt')
 select 13,'abcdefg13',3.43
@@ -169,7 +169,7 @@ select 13,'abcdefg13',3.43
 
 Running this query below will now return 13 rows
 
-sql
+```sql
 INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
 'Text;Database=C:;HDR=Yes;', 'SELECT * FROM TestData.txt')
 select 13,'abcdefg13',3.43
@@ -177,7 +177,7 @@ select 13,'abcdefg13',3.43
 
 What if you want to use OPENROWSET to insert into a file that does not exist yet? Let's try it out by changing the name to TestData2.txt.
 
-sql
+```sql
 INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
 'Text;Database=C:;HDR=Yes;', 'SELECT * FROM TestData2.txt')
 select 13,'abcdefg13',3.43
@@ -195,7 +195,7 @@ OLE DB error trace [OLE/DB Provider 'Microsoft.Jet.OLEDB.4.0' IColumnsInfo::GetC
 
 Mmm, what if we create a file from within a shell command?
 
-sql
+```sql
 master..xp_cmdshell 'copy nul c:TestData2.txt'
 ```
 
@@ -207,7 +207,7 @@ _
 
 Now that we created the file, let's try again
 
-sql
+```sql
 INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
 'Text;Database=C:;HDR=Yes;', 'SELECT * FROM TestData2.txt')
 select * from TestData

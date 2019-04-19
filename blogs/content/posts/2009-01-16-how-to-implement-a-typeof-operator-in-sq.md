@@ -15,7 +15,7 @@ categories:
 ---
 I posted a puzzle here [Prove that this is an integer][1] asking people to prove that the following code is indeed an int
 
-sql
+```sql
 DECLARE @d INT
 SELECT @d = 500
 ```
@@ -24,7 +24,7 @@ or this the number 5 itself, how do you know that this is an integer?
   
 Well this is pretty easy, you can sql\_variant\_property with the BaseType property. Run this code
 
-sql
+```sql
 IF cast(sql_variant_property(@d,'BaseType') as varchar(20)) = 'int'
 PRINT 'yes'
 ELSE
@@ -33,7 +33,7 @@ PRINT 'no'
 
 As you can see yes is printed, the code below will return int for the number 5
 
-sql
+```sql
 select cast(sql_variant_property(5,'BaseType') as varchar(20))
 ```
 
@@ -41,7 +41,7 @@ what about scale and precision?
   
 Here run this
 
-sql
+```sql
 select    
             cast(sql_variant_property(14400195639.123,'BaseType') as varchar(20)) + '(' + 
             cast(sql_variant_property(14400195639.123,'Precision') as varchar(10)) + ',' + 
@@ -52,19 +52,19 @@ Running that code will return numeric(14,3)
 
 Now, why would you ever need this? Sometimes it is handy whene you have a table like this
 
-sql
+```sql
 declare table Foo(bar smallint ,col1 varchar(40), col2..........)
 ```
 
 when you run a query like this
 
-sql
+```sql
 select * from Foo where bar = 3
 ```
 
 you might get an index scan because 3 is not a smallint and you get a conversion. Here is a way to get around that
 
-sql
+```sql
 select * from Foo where bar = convert(smallint,3)
 ```
 

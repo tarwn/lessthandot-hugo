@@ -28,7 +28,7 @@ However, there are some issues explicit to data warehouses that SQLCop doesn't l
 
 Tables in a warehouse are generally prefixed with Dim and Fact for dimensions and fact respectively, to easily distinguish them.
 
-sql
+```sql
 SELECT  [schema_name] = s.name ,
         table_name = t.name
 FROM    sys.tables t
@@ -43,7 +43,7 @@ WHERE   t.name NOT LIKE 'Dim%'
 
 Like in OLTP databases, all tables in a data warehouse also should have a primary key defined.
 
-sql
+```sql
 SELECT  schema_name = SCHEMA_NAME(schema_id) ,
         table_name = name
 FROM    sys.tables
@@ -58,7 +58,7 @@ ORDER BY SCHEMA_NAME(schema_id) ,
 
 A composite primary key on a dimension table causes degraded performance. It is best to create a single column primary key.
 
-sql
+```sql
 SELECT  c.TABLE_NAME ,
         COUNT(*)
 FROM    INFORMATION_SCHEMA.TABLE_CONSTRAINTS pk ,
@@ -77,7 +77,7 @@ HAVING  COUNT(*) > 1
 
 Usually, surrogate key is made the primary key of the dimension table. Surrogate key is an auto generated Identity value.
 
-sql
+```sql
 SELECT  dim_table = t.name ,
         primary_key = c.name ,
         c.is_identity
@@ -99,7 +99,7 @@ WHERE   t.TYPE = 'U'
 
 #### Detect primary keys that don't follow the naming convention:
 
-sql
+```sql
 SELECT  dim_table = t.name ,
         primary_key = c.name
 FROM    sys.tables t
@@ -122,7 +122,7 @@ WHERE   t.TYPE = 'U'
 
 Without a foreign key, a fact table isn't really a fact table.
 
-sql
+```sql
 SELECT table_name = t.name
 		, fk_count = COUNT(*)
     FROM sys.tables t
@@ -139,7 +139,7 @@ SELECT table_name = t.name
 
 It's unlikely to have a fact table related to another fact table.
 
-sql
+```sql
 SELECT  foreign_key = fk.name ,
         child_table = t.name ,
         parent_name = rt.name
@@ -155,7 +155,7 @@ WHERE   rt.name LIKE 'Fact%'
 
 I stole the following query from [here][3] posted by [George Mastros][4], and replaced ID with Key to use it for data warehouse scenario.
 
-sql
+```sql
 SELECT  C.TABLE_SCHEMA,C.TABLE_NAME,C.COLUMN_NAME
     FROM    INFORMATION_SCHEMA.COLUMNS C          
             INNER Join INFORMATION_SCHEMA.TABLES T            

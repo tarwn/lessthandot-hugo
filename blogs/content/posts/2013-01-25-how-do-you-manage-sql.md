@@ -22,7 +22,7 @@ tags:
 ---
 I have a bunch of SQL Agent jobs that execute T-SQL against databases. A bunch of these databases are mirrored. Of course if the database is the principal then these jobs will work without a problem. But what happens if you failover? Now these jobs will start failing. You can either have the same jobs on both servers and have them enabled or disabled depending where the mirror or principal is. You can very easy enable or disable these whenever you failover. For example
 
-sql
+```sql
 USE msdb
 GO
 
@@ -35,7 +35,7 @@ Or another way would be to check if the database is online to see if the job sho
 
 Here is such an example
 
-sql
+```sql
 IF EXISTS(
 SELECT  1  FROM sys.databases
 WHERE state_desc = 'ONLINE'

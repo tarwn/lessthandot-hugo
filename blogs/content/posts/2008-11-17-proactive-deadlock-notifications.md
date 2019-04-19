@@ -21,14 +21,14 @@ To set a trace flag I still use the DBCC command of “DBCC TRACEON”.
   
 Example: 
 
-sql
+```sql
 DBCC TRACEON (3605,1204,1222,-1)
 ```
 That is the manual way, but you can also set trace flags to start in the startup options of SQL Server by using the -T switch. So if I wanted 1204 to be turned on every time I restart my database server, I would use a “-T1204” in the startup options.
   
 If you're curious to see, if you're running any trace flags, you can call a TRACESTATUS by passing in -1 as the trace flag like this
 
-sql
+```sql
 DBCC TRACESTATUS(-1)
 ```
 You can also pass the trace event flag you want to see to the TRACESTATUS. Usually you won't have many trace flags running, so it's common to view them all. Something I should note, is some trace flags can be performance issues themselves. Trace flags that log information on every transaction or if you have a high user count and they log on each security pass will slow performance due to the nature of the logging events. Just be careful, that only the trace events you want to always be running, are set and the ones that are meant for troubleshooting real-time issues are only used periodically. 
@@ -47,7 +47,7 @@ Now you're setup to catch deadlocks. After the traces are running it's really ju
 
 So let's get right to the small and simple script:
 
-sql
+```sql
 If OBJECT_ID('tempdb..#ErrorLog') Is Not Null
  Begin
   Drop Table #ErrorLog

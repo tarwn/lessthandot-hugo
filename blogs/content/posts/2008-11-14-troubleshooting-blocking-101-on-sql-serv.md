@@ -27,7 +27,7 @@ For now let's be old fassion and cheap...
 
 First query the master.dbo.sysprocesses view. There is a column named “blocked”. If the value is 1 then you have blocking going on. So if you wanted to do something really simple you could create a job that runs to check for this and send an email out to you.
 
-sql
+```sql
 Declare @body varchar(1000)
 Set @body = 'Blocking on ' + @@servername 
 
@@ -41,7 +41,7 @@ Yes that is crude. Not real great at all. I just wanted to show you that you can
 
 So what I had to do next now that I knew blocking was occuring was find out the blocking transaction. Again using SQLDM this is easy but sp_lock will give you the same information.
 
-sql
+```sql
 Exec sp_lock
 ```
 What I could see then was the transaction locking the object and another transaction trying to grab another lock on it. My write up on deadlock notifications is close to come for how this could go even farther south.
@@ -56,21 +56,21 @@ So the next step is to get the batch 177 is sending over. The way to do this is 
 
 so first my ID is 208
 
-sql
+```sql
 select * from sys.dm_exec_requests where session_id = 208
 ```
 This returned a sql_handle of 0x020000005B7A3A210C1B9AEEC5467BB6AFC4BA74F1C4964A for my session id
 
 now we can grab the text
 
-sql
+```sql
 select * from  sys.dm_exec_sql_text(0x02000000E7CB3C0ADF13F985EC06EB70C8FD4EB6F9F686BA) 
 ```
 which returned “select * from sys.dm\_exec\_requests”
 
 We could also use a CROSS APPLY to the sys.dm_exec-connections to grab all the SQL text like
 
-sql
+```sql
 select 
  *
 from 

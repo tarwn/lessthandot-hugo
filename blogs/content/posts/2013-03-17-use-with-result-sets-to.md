@@ -34,7 +34,7 @@ SQL Server 2012 has added WITH RESULT SETS to the EXCECUTE command. You can now 
   
 Here is one example where we change the name of the column from _name_ to _TableName_
 
-sql
+```sql
 EXEC ('SELECT name FROM sys.tables' )
 WITH RESULT SETS
 ( 
@@ -54,7 +54,7 @@ Of course we could have just aliased it as well instead.
   
 You can also changed the datatype, here is a silly example
 
-sql
+```sql
 EXEC ('SELECT object_id FROM sys.tables' )
 WITH RESULT SETS
 ( 
@@ -74,7 +74,7 @@ So far we could have accomplished everything we did by using an alias or cast/co
   
 Take sp_helpdb for example. If you execute the following
 
-sql
+```sql
 EXEC sp_helpdb
 ```
 
@@ -87,7 +87,7 @@ AdventureWorksDW2012  201.74 MB	DenisDenis	14	Mar 16 2013	Status=ONLINE.....	110
 
 Let's say we want to change the names of all the columns and also we want to make the column created return a datetime value. You can of course dump the stored procedure output in a temporary table and select from that table. But in this case I think WITH RESULT SETS shows its value. Here is how we do this with sp_helpdb
 
-sql
+```sql
 EXEC sp_helpdb
 WITH RESULT SETS
 ( 

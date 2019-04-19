@@ -30,7 +30,7 @@ msdb followed by a couple of user database, then tempdb and then again some user
 
 Here is what the query looks like
 
-sql
+```sql
 CREATE TABLE #test (name varchar(100), db_size varchar(100),owner varchar(100),db_id int,created varchar(100),status varchar(1000),compatibility_level int)
  
 INSERT #test 

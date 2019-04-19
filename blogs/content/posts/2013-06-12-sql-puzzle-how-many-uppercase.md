@@ -32,7 +32,7 @@ In this week's puzzle we are going to try to figure out how many uppercase, how 
 
 Here is the table and the data
 
-sql
+```sql
 CREATE TABLE Puzzle
      (Col1 varchar(10));
  

@@ -43,7 +43,7 @@ Application Name=TOAD;Workstation ID=LarryEllison-PC
 
 Now you can verify that what you have entered is returned from SQL Server
 
-sql
+```sql
 SELECT host_name,program_name 
 FROM  sys.dm_exec_sessions
 WHERE session_id = @@spid
@@ -72,7 +72,7 @@ Click on options >>, click on the Additional Connection Parameters tab and paste
 
 Just to verify, run the following query
 
-sql
+```sql
 SELECT @@SERVERNAME
 ```
 
@@ -86,7 +86,7 @@ I see PDWSQLServer2015 everywhere else.
   
 Now run your query which returns 0 rows
 
-sql
+```sql
 SELECT * FROM HugeTable
 ```
 

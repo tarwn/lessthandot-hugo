@@ -92,7 +92,7 @@ I answered [this question][1] today and decided to share here as well
 
 Here is how you can find that info, you can use my favorite table spt_values
 
-sql
+```sql
 SELECT name
 FROM master..spt_values
 WHERE type = 'O9T'
@@ -159,7 +159,7 @@ X : extended stored proc
 
 Now if you want to split it into two columns, you can use the LEFT and RIGHT functions together with the PATINDEX function
 
-sql
+```sql
 SELECT LEFT(name,PATINDEX('%:%',name)-1) AS xtype,
 RIGHT(name, (LEN(name) - PATINDEX('%:%',name))) AS Description
 FROM master..spt_values

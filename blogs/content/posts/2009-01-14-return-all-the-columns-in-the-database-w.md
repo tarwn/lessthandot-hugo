@@ -22,7 +22,7 @@ This question popped up on the MSDN forum today: [Status of BIT type columns][1]
 
 Here is a way to quickly find all the columns in your database which allow NULLS
 
-sql
+```sql
 select table_name,column_name
 from information_schema.columns
 where is_nullable ='YES'
@@ -30,7 +30,7 @@ order by table_name,column_name
 ```
 Now you might have noticed that some of these are views. You can join with information\_schema.tables and filter on table\_type = 'base table' to list just the tables.
 
-sql
+```sql
 select c.table_name,c.column_name,t.table_type
 from information_schema.columns c 
 join information_schema.tables t on c.table_name = t.table_name
@@ -41,7 +41,7 @@ order by table_name,column_name
 
 To list all the columns in your database regardless if they are in a view or a table and if they allow NULLS or not use this
 
-sql
+```sql
 select table_name,column_name,is_nullable
  from information_schema.columns
 order by table_name,column_name

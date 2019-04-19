@@ -51,7 +51,7 @@ To do this in T-SQL we can run one of a few system procedures or query off the s
 
 Option 1)
 
-sql
+```sql
 sp_helpsrvrole 'sysadmin'
 ```
 
@@ -63,7 +63,7 @@ http://wiki.ltd.local/index.php/Find\_Out\_Server\_Roles\_For\_a\_SQL\_Server\_L
 
 In Denis's Wiki entry there is a query at the end that gives us exactly what we need here also
 
-sql
+```sql
 SELECT [name],sysadmin,bulkadmin
 FROM master..syslogins
 WHERE sysadmin =1 or bulkadmin =1

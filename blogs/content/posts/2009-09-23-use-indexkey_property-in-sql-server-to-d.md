@@ -25,7 +25,7 @@ tags:
 ---
 How can you find out if the columns that are part of the index are sorted descending or ascending in that index? For example when you create the following index
 
-sql
+```sql
 CREATE CLUSTERED  INDEX ix_test_clust ON test (id ASC, col1 DESC)
 ```
 
@@ -35,7 +35,7 @@ Before starting I need to warn you that this will only run on SQL Server 2005 an
 
 Let's see how that works. first create this table in the tempdb
 
-sql
+```sql
 USE tempdb
 go
  
@@ -45,7 +45,7 @@ go
 
 Now create 2 indexes, one clustered with 2 columns and one non clustered with 4 columns
 
-sql
+```sql
 CREATE NONCLUSTERED  INDEX ix_test ON test (id ASC, col1 DESC,col2 DESC, col3 ASC)
 go
  
@@ -144,7 +144,7 @@ So to use it we need to know a couple of things, we need the table name, the ind
   
 Run the following query which will give you all that info for the table Test, change the table name if you are interested in other tables.
 
-sql
+```sql
 select OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,k.keyno,k.indid as IndexID 
 from sys.sysindexes i
 join sys.sysindexkeys k on i.id = k.id
@@ -315,7 +315,7 @@ Here is the output
 
 Now with the output from above can easily call the INDEXKEY_PROPERTY function, we use the IsDescending property to find out the sort order, below are the function calls for the two indexes we created.
 
-sql
+```sql
 --index ix_test 
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 2 , 1 , 'isdescending' )
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 2 , 2 , 'isdescending' )
@@ -323,7 +323,7 @@ SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 2 , 3 , 'isdescending' )
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 2 , 4 , 'isdescending' )
 ```
 
-sql
+```sql
 -- index ix_test_clust
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 1 , 1 , 'isdescending' )
 SELECT INDEXKEY_PROPERTY ( OBJECT_ID('Test') , 1 , 2 , 'isdescending' )
@@ -333,7 +333,7 @@ Of course we are not amateurs and nobody wants to type all that stuff, we will j
   
 Run the code below to see how that works.
 
-sql
+```sql
 select INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') as IsDescending,OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,c.colid,k.indid as IndexID 
 from sys.sysindexes i
 join sys.sysindexkeys k on i.id = k.id
@@ -529,7 +529,7 @@ Here is the output
 
 Of course if you can do that you can also very simply write a query that returns all the columns that are sorted descending in any index by making the WHERE clause the following: where INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') = 1. Run the query below to see how that works
 
-sql
+```sql
 select INDEXKEY_PROPERTY (k.id,k.indid ,k.keyno,'isdescending') as IsDescending,OBJECT_NAME(k.id) as TableName,i.name as IndexName,c.name as ColumnName,k.keyno,k.indid as IndexID 
 from sys.sysindexes i
 join sys.sysindexkeys k on i.id = k.id

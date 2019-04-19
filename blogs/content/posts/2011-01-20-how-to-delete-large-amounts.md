@@ -21,7 +21,7 @@ Recently I had a request to DELETE all the data except the last 30 days of data 
 
 For Example:
 
-sql
+```sql
 DECLARE @Timestamp datetime
 DELETE TOP (10000) from  Log With (tablockx, holdlock)
 WHERE Timestamp < @Timestamp

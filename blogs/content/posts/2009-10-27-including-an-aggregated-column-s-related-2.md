@@ -23,7 +23,7 @@ One more [related discussion on MSDN][4] with more performance tests.
 
 Take a look also at this [T-SQL challenge][5] 
 
-sql
+```sql
 USE AdventureWorks
  
 -- This solution is SQL Server 2000 compatible - correlated subquery
@@ -180,7 +180,7 @@ The execution plans
 
 This illustrates a real case scenario – see [ASP.NET forum's thread][6]
 
-sql
+```sql
 CREATE TABLE Items(
 	ItemId int NOT NULL,
 	ItemName varchar(20) NOT NULL,
@@ -215,7 +215,7 @@ GO
 ALTER TABLE dbo.Bid CHECK CONSTRAINT FK_Bid_Items1
 GO
 ```
-sql
+```sql
 SET NOCOUNT ON
 Declare @i int
 Declare @j int
@@ -243,7 +243,7 @@ GO
 ```
 ### 6 cases combined:
 
-sql
+```sql
 set nocount on
 declare @ItemsCount int, @BidsCount int
 

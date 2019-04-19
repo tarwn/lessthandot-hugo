@@ -47,7 +47,7 @@ Knowing this and already knowing a base utilization of the transaction log, we n
 
 To monitor the log growth, the SQL Agent can be utilized along with reading the DMV sys.dm\_os\_performance_counters.
 
-sql
+```sql
 SELECT db.[name] AS [Database Name]
 	,ls.cntr_value AS [Log Size (KB)]
 	,lu.cntr_value AS [Log Used (KB)]
@@ -70,7 +70,7 @@ This query will provide the database, log size, log used in KB and then the log 
 
 To complete the actual job steps, prepare by creating a table in a database outside the one that is being loaded by utilizing the SELECT INTO statement.
 
-sql
+```sql
 SELECT db.[name] AS [Database Name]
 	,ls.cntr_value AS [Log Size (KB)]
 	,lu.cntr_value AS [Log Used (KB)]
@@ -92,7 +92,7 @@ OPTION (RECOMPILE);
 
 Then for the actual job step, simply perform an INSERT on each execution
 
-sql
+```sql
 INSERT INTO [WATCH]
 SELECT db.[name] AS [Database Name]
 	,ls.cntr_value AS [Log Size (KB)]
@@ -131,7 +131,7 @@ With this, we can see that the setup that was put in place to back the log up ev
 
 The information above has all been based on a 10 million row table that is archived, or data moved, to another table.  The identifier was a combination of a transaction date and identity seed column as the row identifier.  To allow this to move into a batch processing method, insert the rows that are to be archived into a table that holds the identity column.  This is used while processing to manage while rows have to be moved.  While each batch, 10,000 or another number designated as a good batch size, set a column to in process and then when completed, processed.  A transaction log was set at 1GB and then monitored for normal usage of around 2%.
 
-sql
+```sql
 CREATE TABLE [dbo].[ArchiveTemp](
 	[ROWID] [int] IDENTITY(1,1) NOT NULL,
 	[ID] [int] NULL,
@@ -146,7 +146,7 @@ CREATE TABLE [dbo].[ArchiveTemp](
 
 Above is what this type of processing table would appear as.  With this, the initial load for any data older than the most recent 2 years, appears as follows.
 
-sql
+```sql
 INSERT INTO ArchiveTemp (ID,TABLENAME)
 SELECT ID,'MyTable' FROM 'MyTable' WHERE TRANSACTIONDATE <= (SELECT DATEADD(Year,-2,MAX(TRANSACTIONDATE)) FROM TRANFILE)
 AND ID NOT IN (SELECT ID FROM ArchiveTemp WHERE TABLENAME = 'MyTable')

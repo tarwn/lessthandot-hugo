@@ -33,7 +33,7 @@ At first thought, the task seemed simple.  Just replace all NOLOCK matches, rig
 
 With AdventureWorks, you could do anyone of the following
 
-sql
+```sql
 SELECT * FROM HumanResources.Department WITH (NOLOCK,INDEX(AK_Department_Name))
 SELECT * FROM HumanResources.Department WITH (INDEX(AK_Department_Name),NOLOCK)
 SELECT * FROM HumanResources.Department NOLOCK
@@ -77,7 +77,7 @@ elseif([regex]::IsMatch($str, "(WITHs(({0,1}NOLOCK){0,1})|({0,1}NOLOCK){0,1})","
 ```
 The file posh.sql contains the T-SQL statements from earlier and outputs the statements as valid SELECT statements shown below.
 
-sql
+```sql
 SELECT * FROM HumanResources.Department WITH (INDEX(AK_Department_Name))
 SELECT * FROM HumanResources.Department WITH (INDEX(AK_Department_Name))
 SELECT * FROM HumanResources.Department

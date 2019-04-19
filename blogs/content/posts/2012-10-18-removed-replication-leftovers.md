@@ -25,7 +25,7 @@ With Merge Replication, each table that is part of a publication requires a UNIQ
 
 For example, take a table named MergeMe in database QTuner.
 
-sql
+```sql
 CREATE TABLE MergeMe (CUSTID INT IDENTITY(1,1) PRIMARY KEY, CUSTNAME NVARCHAR(50), CUSTADDR NVARCHAR(50))
 GO
 ```
@@ -55,7 +55,7 @@ Up to this point, Merge Replication controls these objects and knows that if rep
 
 For example, the following index may be created
 
-sql
+```sql
 CREATE INDEX IDX_ROWGUID ON MergeMe (ROWGUID ,CUSTNAME)  
 GO
 ```
@@ -80,7 +80,7 @@ For example, take this sequence of events:
 
 2)      Application errors are reported on rowguid so rowguid is added back to the table
 
-sql
+```sql
 IF NOT EXISTS (SELECT 1 FROM sys.columns where Name = N'rowguid' and Object_ID = Object_ID(N'MergeMe'))
 	ALTER TABLE MergeMe ADD rowguid UNIQUEIDENTIFIER DEFAULT (newsequentialid())
 GO
@@ -93,7 +93,7 @@ GO
   * Drop the constraints 
   * Drop the column 
 
-sql
+```sql
 USE QTuner
 GO
 DECLARE @int INT = 1

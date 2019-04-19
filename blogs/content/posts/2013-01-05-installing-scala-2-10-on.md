@@ -341,7 +341,7 @@ Fri May 13 2022
 
 With SQL Server, you can just use a number table
 
-sql
+```sql
 SELECT DATEADD(m, number,'1998-01-13')
  FROM  master..spt_values WHERE type = 'P'
 and DATENAME(dw,DATEADD(m, number,'1998-01-13')) = 'friday'

@@ -37,25 +37,25 @@ Beyond the basics of her blog post, here are the steps I went through to view a 
 
 I issue DBCC IND to view a list of pages that belong to a table or index. The syntax for the command is:
 
-sql
+```sql
 DBCC IND ('DBName', 'TableName', <indexnumber>);
 ```
 
 I run the command:
 
-sql
+```sql
 DBCC IND ('CorruptMe', 'DeadBirdies', 2);
 ```
 
 Make note of a file and page number to work with. I issue a DBCC PAGE command to view page 1116. The syntax for the command is:
 
-sql
+```sql
 DBCC PAGE( {'dbname' | dbid}, filenum, pagenum [, printopt={0|1|2|3} ]);
 ```
 
 I run the command:
 
-sql
+```sql
 DBCC PAGE('CorruptMe', 1, 1116, 3);
 ```
 
@@ -85,7 +85,7 @@ I click on the first T and type X. Apparently I've just changed the data in my d
 
 I save the file and go back to SSMS. I bring the database online. That works without a problem. I run a query to view data in that table, which should access the nonclustered index I mangled.
 
-sql
+```sql
 USE CorruptMe;
 GO
 SELECT birdName
@@ -118,7 +118,7 @@ First, I go to SSMS and expand the database, table, and indexes. I right-click t
 
 I run the query to drop the index:
 
-sql
+```sql
 DROP INDEX dbo.DeadBirdies.ncBirds;
 ```
 
@@ -130,7 +130,7 @@ When I run the query again, data is returned! This time, there is no error.
 
 Now, I rebuild the nonclustered index using the Create statement I scripted, and I can still run the query without errors.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX ncBirds ON dbo.DeadBirdies(BirdName);
 ```
 

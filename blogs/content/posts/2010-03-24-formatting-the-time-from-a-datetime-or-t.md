@@ -32,7 +32,7 @@ So let's say for example that you have this datetime '2010-03-24 16:20:01.800' a
 
 Let's take a look, if you are on SQL Server 2008 you can convert to time
 
-sql
+```sql
 DECLARE @t TIME = '2010-03-24 16:20:01.800'
 SELECT @t AS TIME
 ```
@@ -45,7 +45,7 @@ Okay that gives me 16:20:01.8000000, not what the original poster wanted
 
 You can do this
 
-sql
+```sql
 DECLARE @t TIME = '2010-03-24 16:20:01.800'
 SELECT CONVERT(VARCHAR(30),@t,100)
 ```
@@ -58,7 +58,7 @@ That gives me 4:20PM. But how can I add a space between 0 and PM? Say hello to m
 
 Take a look at what I mean
 
-sql
+```sql
 SELECT STUFF('4:20PM',5,0,' ')
 ```
 
@@ -68,7 +68,7 @@ SELECT STUFF('4:20PM',5,0,' ')
 
 Now let's use the code from before and wrap the STUFF function around it
 
-sql
+```sql
 DECLARE @t TIME = '2010-03-24 16:20:01.800'
 SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@t,100),7),6,0,' ') AS FormattedTime
 ```
@@ -78,7 +78,7 @@ SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@t,100),7),6,0,' ') AS FormattedTim
 
 Okay but what if you are not on SQL Server 2008? No problem really, it is almost the same
 
-sql
+```sql
 DECLARE @d datetime 
 SET @d = '2010-03-24 16:20:01.800'
 SELECT STUFF(RIGHT(' ' + CONVERT(VARCHAR(30),@d,100),7),6,0,' ')

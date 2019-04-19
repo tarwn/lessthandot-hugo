@@ -26,7 +26,7 @@ Let's get the basics out of the way on SQL CLR. SQL CLR is only good once it's i
 
 I went out and google'd “fast split function t-sql”. Found a few and tested them against the CLR split method. I found a dozen or so split functions that looked good. I still went with a numbers table one after testing them out next to each other. Here is one of the functions I used. If you have a better one, post it in the comments and I can edit the post. 
 
-sql
+```sql
 ALTER FUNCTION [dbo].[Split] ( 
 @List varchar(7998), --The delimited list 
 @Del char(1) = ',' --The delimiter 
@@ -91,7 +91,7 @@ After execution of the CLR function you can see the differences
 
 Call these functions as
 
-sql
+```sql
 Declare @bigdamnvar varchar(max)
 Set @bigdamnvar = (Select * From OpenRowSet ('MSDASQL', 'Driver={Microsoft Text Driver (*.txt; *.csv)};DBQ=C:', 'SELECT * from Data.txt'))
 Select * From dbo.CLR_Split(@bigdamnvar, '%')
@@ -104,7 +104,7 @@ Below you can see first execution and then how quickly performance picks up on t
 
 and
 
-sql
+```sql
 Declare @bigdamnvar varchar(max)
 Set @bigdamnvar = (Select * From OpenRowSet ('MSDASQL', 'Driver={Microsoft Text Driver (*.txt; *.csv)};DBQ=C:', 'SELECT * from Data.txt'))
 Select * From dbo.[Split](@bigdamnvar, '%')

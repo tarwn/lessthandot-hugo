@@ -39,7 +39,7 @@ Unlike with SQL Server that code won't run in Oracle, Oracle requires the use of
 
 If you try to run something like this
 
-sql
+```sql
 select 2;
 ```
 
@@ -73,7 +73,7 @@ So there you have it, this is why the Dual table exists.
 
 If you need to do something like this
 
-sql
+```sql
 SELECT 3/2
 ```
 

@@ -28,7 +28,7 @@ Here is what we will do; we will create two databases with only one table. In on
 
 Let's get started, first we will create the database that will not use compression
 
-sql
+```sql
 USE [master]
 GO
 
@@ -44,7 +44,7 @@ GO
 
 Now we will create the database that will use data compression
 
-sql
+```sql
 USE [master]
 GO
 CREATE DATABASE [TestCompressed] ON  PRIMARY 
@@ -59,7 +59,7 @@ GO
 
 The following block of code will create a table with 3 million rows in the database that will not use compression
 
-sql
+```sql
 USE [TestUncompressed]
 GO
 
@@ -89,7 +89,7 @@ CROSS JOIN master..sysobjects s2) x
 
 The following block of code will create a table with 3 million rows in the database that will use data compression
 
-sql
+```sql
 USE [TestCompressed]
 GO
 
@@ -114,7 +114,7 @@ SELECT * FROM [TestUncompressed]..Test
 
 Now it is time to do the backups, we will do 4 backups. Each database will be backed up compressed and uncompressed. Here is the code that will do that. I use the _C:DbTest_ folder, if you want to run this, code make sure that you create that folder.
 
-sql
+```sql
 BACKUP DATABASE TestCompressed TO DISK='C:DbTestTestCompressedBackupCompressed.bak' 
 WITH  COMPRESSION
 GO

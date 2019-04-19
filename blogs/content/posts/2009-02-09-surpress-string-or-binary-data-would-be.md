@@ -25,7 +25,7 @@ This is a frequent enough question on various forums, I answered this one also t
 
 Run this code
 
-sql
+```sql
 create table bla(id varchar(2))
 go
 
@@ -42,7 +42,7 @@ The statement has been terminated.
 
 But what if you don't care about if data is truncated, what if you want to store only what fits? You could do something like this
 
-sql
+```sql
 insert bla values (left('123',2))
 ```
 
@@ -50,7 +50,7 @@ But since most programmers are lazy they prefer not to change code (and introduc
 
 Here is one way to do it without changing code but by setting ANSI Warnings to off
 
-sql
+```sql
 SET ANSI_WARNINGS  OFF
 
 insert bla values ('123')

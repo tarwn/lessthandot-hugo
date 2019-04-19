@@ -110,7 +110,7 @@ Add an ADO.NET Source and ADO.NET Destination to the data flow.
 
 To configure the source, first select the dynamic connection created earlier.   Next, to allow for the retrieval of all the databases on the instance and the actual instance that is being focused on, use the following query as a SQL command in the source
 
-sql
+```sql
 SELECT [Name],@@SERVERNAME ServerName FROM sys.databases
 ```
 
@@ -127,7 +127,7 @@ Click OK to close and save the configuration.
 
 To configure the destination, create the following table in the database and instance that has been selected as the repository for the data retrieved from the other, dynamic instances.
 
-sql
+```sql
 CREATE TABLE [dbo].[AllMyDatabases](
 	[Name] [nvarchar](128) NULL,
 	[ServerName] [nvarchar](128) NULL

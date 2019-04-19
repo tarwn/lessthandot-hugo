@@ -25,7 +25,7 @@ The first thing we need to do is load our data. There are various sources for th
 
 Once you have downloaded your data, the next step is to import it in to your database. You can use the following script to do it.
 
-sql
+```sql
 If Exists(Select * 
           From   Information_Schema.Tables 
           Where  Table_Name = 'ZipCodes' 
@@ -70,7 +70,7 @@ The original function that calculates distances has been replaced with this one.
 
 Credit for finding the flaw goes to <span class="MT_red"><strong>Chris</strong></span>. Thank you.
 
-sql
+```sql
 CREATE Function [dbo].[CalculateDistance]
 	(@Longitude1 Decimal(8,5), 
 	@Latitude1   Decimal(8,5),
@@ -92,14 +92,14 @@ Return (3958.75586574 * acos(@Temp)	)
 
 End
 ```
-sql
+```sql
 Create Function [dbo].[LatitudePlusDistance](@StartLatitude Float, @Distance Float) Returns Float
 As
 Begin
     Return (Select @StartLatitude + Sqrt(@Distance * @Distance / 4766.8999155991))
 End
 ```
-sql
+```sql
 Create Function [dbo].[LongitudePlusDistance]
     (@StartLongitude Float,
     @StartLatitude Float,
@@ -112,7 +112,7 @@ End
 ```
 Finally, we can begin writing some interesting queries. For example, return a list of zipcodes within 20 miles of zipcode 20013 (Washington, DC).
 
-sql
+```sql
 -- Declare some variables that we will need.
 Declare @Longitude Decimal(8,5),
         @Latitude Decimal(8,5),
@@ -146,7 +146,7 @@ You could also use this for a “store locator”. On a website, potential custo
   
 The query shown below assumes you have a Stores table with a ZipCode column.
 
-sql
+```sql
 Declare @Longitude Decimal(8,5)
 Declare @Latitude Decimal(8,5)
 

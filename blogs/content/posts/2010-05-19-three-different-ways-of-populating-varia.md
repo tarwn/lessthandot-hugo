@@ -38,7 +38,7 @@ And there might be a dozen more configurations for a process
   
 In general people will do 3 selects if there are 3 values, let's take a look at what I mean. First create this table
 
-sql
+```sql
 CREATE TABLE SomeConfigurations(Typeid INT NOT NULL, 
 			TypeName VARCHAR(100), 
 			TypeValue VARCHAR(100))
@@ -52,7 +52,7 @@ INSERT SomeConfigurations VALUES (1,'LogTableName','LogFileTable')
 
 This is what I usually see, one query for each value.
 
-sql
+```sql
 DECLARE @ActiveServerName VARCHAR(100),
 		@DatabaseName VARCHAR(100),
 		@LogTableName VARCHAR(100)
@@ -84,7 +84,7 @@ Next up.. a different approach...
 
 Pivot was introduced in SQL Server 2005 and here is how you can change those three selects into one select
 
-sql
+```sql
 DECLARE @ActiveServerName VARCHAR(100),
 		@DatabaseName VARCHAR(100),
 		@LogTableName VARCHAR(100)
@@ -110,7 +110,7 @@ I prefer that over those three selects any time. Not only is it less code but it
 
 Even for you people who are still on SQL Server 2000 there is a way to do this in one select, take a look at the query below
 
-sql
+```sql
 DECLARE @ActiveServerName VARCHAR(100),
 		@DatabaseName VARCHAR(100),
 		@LogTableName VARCHAR(100)

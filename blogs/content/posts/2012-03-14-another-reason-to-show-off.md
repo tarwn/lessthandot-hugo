@@ -20,7 +20,7 @@ categories:
 
 <span style="font-family: verdana,geneva;"><br /></span>
 
-sql
+```sql
 SELECT 'Happy ' + CAST(CONVERT(DECIMAL(5,2),ROUND(PI(),2,1)) AS VARCHAR(4)) + ' Day!'
 SELECT 'Happy ' + CAST(MONTH(GETDATE()) AS VARCHAR(2)) + '.' + CAST(DAY(GETDATE()) AS VARCHAR(2)) + ' Day!'
 ```

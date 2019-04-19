@@ -31,7 +31,7 @@ I wrote something in AdventureWorks to for this example so if you have Adventure
 
 Here is our procedure. I'm sure my methods will take great notice from my local TSQL friends 🙂 The dynamic SQL more so than anything...
 
-sql
+```sql
 Create Procedure GetSalesPerWeek
 As
 Declare @weeks_ordered Table (num varchar(3))
@@ -139,7 +139,7 @@ The problem with all of this is the dynamic nature of the column names. In repor
 
 So create a new report in your solution and add a new DataSet. Make it a text call with the following statement
 
-sql
+```sql
 Exec GetSalesPerWeek
 ```
 

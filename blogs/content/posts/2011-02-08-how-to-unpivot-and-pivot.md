@@ -26,7 +26,7 @@ but again these don't tell me a whole lot about what's going on, just the before
 
 At my part time job, we were working on a Workforce Availability study. As part of the study, we hired out to a phone survey company. We created a survey script for their callers and gave it to them. The company made a lot of phone calls and when all was said and done they provided us with a spreadsheet of the answers. Needless to say this spreadsheet was in no way normalized for data import. It looked a something like this: 
 
-sql
+```sql
 declare @survey table (Respondent int identity(1,1), Q1 int, Q2 int, Q3 int, Q4 int, Q5 int)
 
 insert into @survey values (1,3,1,5,8)
@@ -41,7 +41,7 @@ select * from @survey
 
 Well, right now that's a decent sized mess to clean up using union alls. However, we don't have to make that big mess thanks to unpivot. Here's what the unpivot code looks like. 
 
-sql
+```sql
 select 
 	Respondent,
 	Q, 
@@ -56,7 +56,7 @@ The way this works is in the unpivot statement, the A for Q statement breaks apa
 
 Now that the data's normalized we can join to it rather easily. 
 
-sql
+```sql
 declare @survey table (Respondent int identity(1,1), Q1 int, Q2 int, Q3 int, Q4 int, Q5 int)
 declare @questions table (PK_quID int identity(1,1), quName varchar(255))
 declare @answers table (PK_anID int identity(1,1), anName varchar(255))
@@ -107,7 +107,7 @@ from
 ```
 Well, seeing as my data is now normalized I can put it into my responses table. 
 
-sql
+```sql
 declare @responses table (Respondent int, FK_quID int, FK_anID int)
 
 insert into @responses
@@ -128,7 +128,7 @@ unpivot
 ```
 Alright, now I've got my survey data stored and I want to run some analytics. One of the ways to analyze the data is to run a crosstab off of the data. Here's a crosstab using pivot: 
 
-sql
+```sql
 select
 *
 from

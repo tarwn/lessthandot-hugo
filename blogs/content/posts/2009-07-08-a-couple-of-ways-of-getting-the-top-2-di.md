@@ -43,7 +43,7 @@ You want to get the 2 highest amounts in that table the values 100 and 99, how w
   
 Let's take a look at some posibillities, first create this table and populate it with data
 
-sql
+```sql
 create table TestTies (id int identity,SomeValue tinyint)
 
 insert TestTies values(100)
@@ -59,7 +59,7 @@ insert TestTies values(90)
 
 Top 2 obviously will not work
 
-sql
+```sql
 select top 2 id, SomeValue
 from TestTies
 order by SomeValue desc
@@ -73,7 +73,7 @@ id	SomeValue
 
 You also cannot use WITH TIES because that just brings the value 100
 
-sql
+```sql
 select top 2  WITH TIES id, SomeValue
 from TestTies
 order by SomeValue desc
@@ -101,7 +101,7 @@ id	SomeValue
 
 The first one is by using the DENSE_RANK() function. The queries below are functionally identical, one is using a Common Table Expression while the other one is using a subquery
 
-sql
+```sql
 --query 1
 with rankings as (
 select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank 
@@ -111,7 +111,7 @@ select id, SomeValue from rankings
 where Rank <=2
 ```
 
-sql
+```sql
 --query 2
 select id, SomeValue from   (
 select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank 
@@ -121,7 +121,7 @@ where Rank <=2
 
 We can also use the MAX function twice like in the query below
 
-sql
+```sql
 --query 3
 select *
 from TestTies
@@ -133,7 +133,7 @@ where SomeValue >= (select max(SomeValue)
 
 Another option is to use distinct top 2 in a sub query
 
-sql
+```sql
 --query 4
 select *
 from TestTies
@@ -145,7 +145,7 @@ order by SomeValue desc)
 
 Finally in query 5 we do a running count, as you can see that looks complicated
 
-sql
+```sql
 --query 5
 select l.id, l.SomeValue
 from(select v.SomeValue, v.id,
@@ -161,7 +161,7 @@ So how do these queries perform in regards to each other?
 
 Hit CTRL + K, select all the code in the code block below and hit F5/execute
 
-sql
+```sql
 --query 1
 with rankings as (
 select *,DENSE_RANK() OVER ( ORDER BY SomeValue desc)  as Rank 
@@ -224,7 +224,7 @@ Wow, query 5 running count is slower than the other 4 combined, this was expecte
   
 Let's do some more testing, we will create a non clustered index on the SomeValue column
 
-sql
+```sql
 create index ix_SomeValue on TestTies(SomeValue desc)
 ```
 
@@ -242,7 +242,7 @@ query 5 34.32% (running count)
 
 As you can see now dense_rank is fastest. Let's make that non clustered index a clustered index and look at the plans again.
 
-sql
+```sql
 drop index  TestTies.ix_SomeValue
 
 create clustered index ix_SomeValue on TestTies(SomeValue desc)

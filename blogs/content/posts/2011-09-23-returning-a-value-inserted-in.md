@@ -27,7 +27,7 @@ This [question][1] came up yesterday and I decided to do a little blog post abou
 
 First create this table
 
-sql
+```sql
 USE tempdb
 GO
 CREATE TABLE bla(ID INT,SomeID UNIQUEIDENTIFIER DEFAULT newsequentialid())
@@ -39,7 +39,7 @@ GO
 
 Do a simple select....
 
-sql
+```sql
 SELECT * FROM bla
 ```
 
@@ -50,7 +50,7 @@ As you can see we have 1 row
 
 Here is what the insert looks like that also returns the uniqueidentifier just created by the newsequentialid()default
 
-sql
+```sql
 INSERT bla (ID)
     OUTPUT INSERTED.SomeID
 VALUES(2)
@@ -67,7 +67,7 @@ Pretty simple so far
   
 Now, we should have two rows in the table
 
-sql
+```sql
 SELECT * FROM bla
 ```
 
@@ -79,7 +79,7 @@ SELECT * FROM bla
 
 You can also populate a table variable and then use that to return the values
 
-sql
+```sql
 DECLARE @MyTableVar TABLE( SomeID UNIQUEIDENTIFIER)
 INSERT bla (ID)
     OUTPUT INSERTED.SomeID
@@ -96,7 +96,7 @@ D26351C1-0AE6-E011-A428-0021867E1D41</pre>
 
 Finally we can run a select that confirms all 3 inserts actually have happened
 
-sql
+```sql
 SELECT * FROM bla
 ```
 

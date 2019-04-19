@@ -36,7 +36,7 @@ What I frequently wanted to know was how large the log was, how much space was b
 
 I'm able to pull information using a DBCC command, SQLPERF, and the system catalog view, sys.databases. Having this information exposed is very helpful to us. 
 
-sql
+```sql
 -- Set database name 
 DECLARE @DatabaseName VARCHAR(50);
 SET @DatabaseName = 'AdventureWorks2008R2'; 
@@ -55,7 +55,7 @@ WHERE name = @DatabaseName;
 
 DBCC SQLPERF is used to get transaction log usage information. It returns Database Name, Log Size (MB), Log Space Used (%), and Status. It requires VIEW SERVER STATE permissions. In addition, you can reset DMV information for latch statistics or wait statistics by passing in parameters. This can help with additional troubleshooting. Here's the full syntax: 
 
-sql
+```sql
 DBCC SQLPERF 
 (
      [ LOGSPACE ]

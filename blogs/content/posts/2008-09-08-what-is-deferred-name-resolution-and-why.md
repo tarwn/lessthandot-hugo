@@ -22,7 +22,7 @@ tags:
 ---
 So I posted [a teaser in the puzzles forum][1]. Without running this, try to guess what will happen?
 
-sql
+```sql
 DECLARE @x INT
  
 SET @x = 1
@@ -47,7 +47,7 @@ There is already an object named '#temptable' in the database.
 
 You can do something like this to get around the issue with the temp table
 
-sql
+```sql
 DECLARE @x INT
  
 SET @x = 1
@@ -79,7 +79,7 @@ So what is happening is that beginning with SQL server 7 deferred name resolutio
   
 Run this to see what I mean
 
-sql
+```sql
 DECLARE @x INT
  
 SET @x = 1
@@ -98,7 +98,7 @@ SELECT * FROM temptable --what does this return
 
 What about variables? Let's try it out, run this
 
-sql
+```sql
 DECLARE @x INT
  
 SET @x = 1
@@ -127,7 +127,7 @@ Now why do you need to care about deferred name resolution? Let's take another e
 
 First create this proc
 
-sql
+```sql
 CREATE PROC SomeTestProc
 AS
 SELECT dbo.somefuction(1)
@@ -136,7 +136,7 @@ GO
 
 now create this function
 
-sql
+```sql
 CREATE FUNCTION somefuction(@id int)
 RETURNS int
 AS
@@ -149,7 +149,7 @@ Go
 
 now run this
 
-sql
+```sql
 sp_depends 'somefuction'
 ```
 
@@ -159,7 +159,7 @@ Most people will not create a proc before they have created the function. So whe
 
 SQL Server 2005 makes it pretty easy to do it yourself
 
-sql
+```sql
 SELECT specific_name,* 
 FROM information_schema.routines 
 WHERE object_definition(object_id(specific_name)) LIKE '%somefuction%' 

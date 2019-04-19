@@ -35,7 +35,7 @@ The syntax of the CONCAT function looks like this
 
 You can concatenate between 2 and 254 values, if you use for example only one value, you will get an error
 
-sql
+```sql
 select CONCAT (1)
 ```
 
@@ -49,7 +49,7 @@ _CONCAT takes a variable number of string arguments and concatenates them into a
 
 Let's run some code and do some comparison with a regular string concatenation by using the @val + @val2
 
-sql
+```sql
 declare @i char(1)  ='1'
 declare @i3 char(1)  ='3'
 
@@ -68,7 +68,7 @@ As you can see both of these return the value 13
 
 What happens if one of the data type is an integer?
 
-sql
+```sql
 declare @i char(1)  ='1'
 declare @i3 int  ='3'
 
@@ -87,7 +87,7 @@ As you can see CONCAT concatenates the values while the other method does arithm
 
 Here is another example that does the same
 
-sql
+```sql
 declare @i char(1)  ='1'
 declare @i2 int  =2
 declare @i3 char(1)  ='3'
@@ -106,7 +106,7 @@ select @i+ @i2+ @i3
 
 What happens if one of the values is NULL?
 
-sql
+```sql
 declare @i char(1)  ='1'
 declare @i2 int  =null
 declare @i3 char(1)  ='3'
@@ -127,7 +127,7 @@ As you can see the CONCAT functions makes the NULL an empty string while the oth
 
 In order to get the same output, the old method is a lot more code
 
-sql
+```sql
 declare @i char(1)  ='1'
 declare @i2 int  =null
 declare @i3 char(1)  ='3'

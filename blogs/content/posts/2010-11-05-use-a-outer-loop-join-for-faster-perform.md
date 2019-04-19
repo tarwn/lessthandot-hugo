@@ -38,7 +38,7 @@ First we need to create some data, in order to do that we will create a small ta
 
 This table will hold values from AAA until ZZZ
 
-sql
+```sql
 create table TestSomeValue (SomeChar char(3))
 go
 
@@ -56,7 +56,7 @@ cross join cte c3
 
 This will be our large table with 20212400 rows, this might run for a couple of minutes
 
-sql
+```sql
 create table TestLarge (SomeValue char(3), SomeDate datetime, SomeFlag char(1), SomeOtherValue varchar(100))
 go
 
@@ -73,7 +73,7 @@ and number < 1150) x
 
 This will be our small table and will have 115456 rows
 
-sql
+```sql
 create table TestSmall (SomeValue char(3), SomeDate datetime, SomeFlag char(1), SomeOtherValue varchar(100))
 go
 
@@ -94,7 +94,7 @@ from TestLarge
 
 Create a clustered index on both tables, this also might take a couple of minutes
 
-sql
+```sql
 create clustered index ix_TestSmall on TestSmall(SomeValue,SomeDate,SomeFlag,SomeOtherValue)
 go
 
@@ -107,7 +107,7 @@ Here we have the 3 versions of the same kind of query, a plain vanilla left join
 
 Include the actual execution plan and run these 3 queries
 
-sql
+```sql
 Select COUNT(*) -- 105456
 from TestSmall t1
 left join TestLarge t2 on t1.SomeValue = t2.SomeValue
@@ -143,7 +143,7 @@ As you can see the loop join doesn't look that impressive compared to the rest, 
 
 What about the reads? Run the following query
 
-sql
+```sql
 set statistics io on
 go
 select COUNT(*) -- 105456
@@ -200,7 +200,7 @@ Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead r
 
 Finally let's look at how long each query took
 
-sql
+```sql
 set statistics time on
 go
 select COUNT(*) -- 105456

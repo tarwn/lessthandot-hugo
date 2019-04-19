@@ -53,14 +53,14 @@ To clear the cache, use DBCC FREEPROCCACHE
 
 Executing FREEPROCCACHE
 
-sql
+```sql
 DBCC FREEPROCCACHE
 GO
 ```
 
 We can test removing a single plan by running the following query on the AdventureWorks database
 
-sql
+```sql
 SELECT  SalesOrderNumber
 FROM    AdventureWorks.Sales.SalesOrderHeader header
         JOIN AdventureWorks.Sales.SalesOrderDetail details ON header.salesorderid = details.salesorderid
@@ -69,7 +69,7 @@ WHERE   customerid = 11091
 
 Once this Adhoc query has been cached we can search for it with a simplified join of the DMVs (sys) dm\_exec\_query\_stats, dm\_exec\_cached\_plans and DMFs dm\_exec\_sql\_text and dm\_exec\_query\_plan. 
 
-sql
+```sql
 SELECT  [text] ,
         cp.plan_handle ,
         sql_handle
@@ -89,7 +89,7 @@ Once the plan has been identified and the decision has been made to remove it, F
 
 Execute DBCC FREEPROCCACHE with the sql_handle as a parameter from our previous output
 
-sql
+```sql
 DBCC FREEPROCCACHE (0x06000C00FCCD0D0FB8C0500B000000000000000000000000)
 GO
 ```
@@ -109,7 +109,7 @@ To show some more common operations and tuning methods utilizing execution plans
 
 To prepare the database, tables and import the data from an already existing AdventureWorks database local to the instance, run the following statements in the order they appear. Modify the file paths to match your own development file system structure.
 
-sql
+```sql
 USE Master
 GO
 
@@ -266,7 +266,7 @@ The below query requests five columns from the tables we created. Within the que
 
 We can see statistics by viewing them in SSMS by expanding the database/tables/table in question and then statistics node. The system view, sys.stats, can also be queried to view statistics information on the tables. The following query shows an example filtered on the tables we created
 
-sql
+```sql
 SELECT  *
 FROM    sys.STATS
 WHERE   OBJECT_ID = OBJECT_ID(N'WISSUG.SalesOrderDetail')
@@ -285,7 +285,7 @@ To view the estimated execution plan, click the button located in the menu strip
 
 Place the query below into a new query window while under the context of the PLANLAB database and execute the estimated execution plan.
 
-sql
+```sql
 SELECT  SalesOrderNumber ,
         OrderDate ,
         ShipDate ,
@@ -316,7 +316,7 @@ In the JOIN condition, SalesOrderID is being used in order to bring SalesOrderDe
 
 To create a clustered index on SalesOrderID in the SalesOrderHeader table, run the following CREATE INDEX statement.
 
-sql
+```sql
 CREATE CLUSTERED INDEX IDX_UNIQUEKEY ON WISSUG.SalesOrderHeader(SalesOrderID)
 GO
 ```
@@ -332,7 +332,7 @@ Looking further at the query and SalesOrderHeader, we can see we are requesting 
 
 To create the nonclustered index on SalesOrderHeader, execute the following statement.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_SalesNumOrderDate_Ship_ASC ON WISSUG.SalesOrderHeader(SalesOrderNumber,OrderDate,AccountNumber)
 GO
 ```
@@ -352,7 +352,7 @@ Hovering over the index scan with the mouse pointer shows that we are covering e
 
 To tune further, we now need to change our indexing so that the two columns shown in the details are included in the index. Using the CREATE INDEX statement, use the WITH(DROP\_EXISTING=ON) to make this task easier. The DROP\_EXISTING still performs the same operations of dropping the index in place already and recreating it, but does it in one statement versus multiple statements. In the new index, we introduce another option called INCLUDE. INCLUDE adds columns to the leaf level of the index and does not require any sorting which makes them more efficient when we are only interested in covering the column in the index. This benefits us by reducing overhead on the index itself.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_SalesNumOrderDate_Ship_ASC ON WISSUG.SalesOrderHeader(SalesOrderNumber,OrderDate,AccountNumber)
 INCLUDE (customerid,shipdate)
 WITH (DROP_EXISTING=ON)
@@ -370,7 +370,7 @@ The plan that is created from the index change shows that an index scan persists
 
 To restructure the index to handle this specific query, there is a need to move the predicate of CustomerID to the column list. The above image shows the predicate value listed in the tooltip properties. This will force the covering index concept to the include as the ordering is not a requirement for returning those columns.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_SalesNumOrderDate_Ship_ASC ON WISSUG.SalesOrderHeader(CustomerID)
 INCLUDE (SalesOrderNumber,OrderDate,AccountNumber,shipdate)
 WITH (DROP_EXISTING=ON)
@@ -404,7 +404,7 @@ A Key Lookup operation is performed when a supporting index operation is utilize
 
 To show a Key Lookup, alter the index previously created to restructure the columns in order SalesOrderNumber, OrderDate and AccountNumber. Place the CustomerID column in the index by means of INCLUDE.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_SalesNumOrderDate_Ship_ASC ON WISSUG.SalesOrderHeader(SalesOrderNumber,OrderDate,AccountNumber)
 INCLUDE (customerid)
 WITH (DROP_EXISTING=ON)
@@ -422,7 +422,7 @@ Recall earlier that SalesOrderDetail did not have a clustered index created on i
 
 One of the side effects of a HEAP table is an operation called a RID Lookup. Like a Key Lookup, an index scan or seek is not able to completely satisfy the request so it must do a lookup in order to retrieve the remaining records. In most cases, creating clustered indexes is the best solution to resolve RID Lookup operations. This allows for better plan generation and also helps with maintenance of the table itself in regards to fragmentation. Below we will show how to resolve a RID Lookup by changing our query to additionally check SalesOrderDetail.UnitPriceDiscount where the data is greater than 0.00. This will also be added to the output CarrierTrackingNumber
 
-sql
+```sql
 SELECT  SalesOrderNumber ,
         OrderDate ,
         ShipDate ,
@@ -470,7 +470,7 @@ Bmk1003,
 
 Between these three operations we can see that the nested loop is joining the seek output to the lookup output to obtain CarrierTrackingNumber. This tells us that there is a covering index problem. To fix the RID Lookup, we could alter the index IDX\_SalesID\_LineTotal_ASC or add a new index to support the query. Adding new indexes may not be optimal either if the index still fulfills the needs of the other statements that it was created for. In this case, altering the index to add CarrierTrackingNumber in the INCLUDE section makes more sense given the covering of all the statements we have tested so far.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_SalesID_LineTotal_ASC ON WISSUG.SalesOrderDetail(salesorderid)
 INCLUDE (LineTotal,UnitPriceDiscount,CarrierTrackingNumber)
 WITH (DROP_EXISTING=ON)
@@ -491,7 +491,7 @@ In some cases, sorting may not be needed at all in statements. Even in cases whe
 
 Running the example below will show how we could return the results without the SUM(LineTotal) while utilizing something like SSRS functions and expressions to add the SUM(LineTotal) on a grouped result set directly to the dataset at the time the report is rendered.
 
-sql
+```sql
 SELECT  SalesOrderNumber ,
         OrderDate ,
         ShipDate ,
@@ -511,14 +511,14 @@ In the tuning exercises so far, we've created 3 indexes to tune the query. Howev
 
 To show this, drop the clustered index SalesOrderHeader.IDX_UNIQUEKEY
 
-sql
+```sql
 DROP INDEX WISSUG.SalesOrderHeader.IDX_UNIQUEKEY
 GO
 ```
 
 To fix this without a clsutered index on SalesOrderID, change the final nonclustered index to add SalesOrderID
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_SalesNumOrderDate_Ship_ASC ON WISSUG.SalesOrderHeader(CustomerID,SalesOrderID)
 INCLUDE (SalesOrderNumber,OrderDate,AccountNumber,shipdate)
 WITH (DROP_EXISTING=ON)
@@ -535,14 +535,14 @@ In our previous examples, this would force a scan on SalesOrderHeader if UnitPri
 
 > <span class="MT_red">Note: This is for example purposes only and to show the resulting joins make a difference in the operations that are shown by the optmizer. You should always tune by the concept that data grows in size and prepare for that in your indexing and development of T-SQL.</span>
 
-sql
+```sql
 DROP INDEX WISSUG.SalesOrderHeader.IDX_SalesNumOrderDate_Ship_ASC
 GO
 ```
 
 And now rerun the execution plan with the change to UnitPriceDiscount
 
-sql
+```sql
 SELECT  SalesOrderNumber ,
         OrderDate ,
         ShipDate ,

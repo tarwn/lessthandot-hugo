@@ -23,7 +23,7 @@ What is the percentage of null values in a table for a column? This question com
 
 We will start by creating the following table
 
-sql
+```sql
 CREATE TABLE #perc ( Column1 INT,Column2 INT,Column3 INT)
 INSERT INTO #perc
 SELECT NULL,1,1
@@ -49,13 +49,13 @@ There are a couple of ways to calculate this but first we need to understand one
 
 Here is one way to calculate the percentages, you use the following formula
 
-sql
+```sql
 SUM(CASE WHEN ColumnName IS NULL THEN 1 ELSE 0 END) / COUNT(*)
 ```
 
 Run this query below
 
-sql
+```sql
 SELECT 100.0 * SUM(CASE WHEN Column1 IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS Column1Percent,
 100.0 * SUM(CASE WHEN Column2 IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS Column2Percent,
 100.0 * SUM(CASE WHEN Column3 IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS Column3Percent
@@ -69,13 +69,13 @@ output
 
 Instead of using SUM and a CASE statement you can also just do the formula below to get the percentage of NULLS
 
-sql
+```sql
 (COUNT(*) - COUNT(ColumnName)) / COUNT(*)
 ```
 
 The query below will return the same output as the query above
 
-sql
+```sql
 SELECT 100.0 * (COUNT(*) - COUNT(Column1)) / COUNT(*) AS Column1Percent,
 100.0 * (COUNT(*) - COUNT(Column2)) / COUNT(*) AS Column2Percent,
 100.0 * (COUNT(*) - COUNT(Column3)) / COUNT(*) AS Column3Percent
@@ -89,7 +89,7 @@ output
 
 What if you want to get a percentage of all values in the column? So for example we will take Column3 from the table
 
-sql
+```sql
 select Column3 from #perc
 ```
 
@@ -113,7 +113,7 @@ As you can see we have
 
 Here is the query which accomplishes this requirement
 
-sql
+```sql
 SELECT COALESCE(CONVERT(VARCHAR(50),Column3),'NULL') AS Value,
 COUNT(Column3) AS ValueCount,
 100.0 * COUNT(*)/(SELECT COUNT(*) FROM #perc ) AS Percentage

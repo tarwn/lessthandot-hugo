@@ -30,7 +30,7 @@ The following publication and subscription utilize Parameterized and Join filter
 
 If you need to download AdventureWorks, you can find it on [Codeplex][1].  To create the subscriber database, the following script can be executed.
 
-sql
+```sql
 CREATE DATABASE [AdventureWorksSalesperson]
 ON PRIMARY 
 (NAME = N'AdventureWorks2008R2_Data', FILENAME = N'C:SQLRCAdventureWorksSalesperson_Data.mdf' , SIZE = 220928KB , MAXSIZE = UNLIMITED, FILEGROWTH = 102400KB )
@@ -45,7 +45,7 @@ GO
 > _Note: This database default growth for data and log files has been calculated based on the partition size that will be applied.  You should always estimate the partition size and create databases to follow that size requirement to prevent unwanted data and log growth._</p>
 A good way to prepare for creating a publication that uses filters is to write the query that mimics the same functionality.  In this case, the publication is using parameterized filter SUSER_SNAME() on Person.Person and then Join Filters on Sales.SalesOrderHeader, Sales.SalesOrderDetail and Production.TransactionHistory.
 
-sql
+```sql
 SELECT 
 	1
 FROM Person.Person
@@ -59,7 +59,7 @@ This query represents the resulting partition of data that will be sent to a sub
 
 In order to utilize AdventureWorks to publish data with parameterized filters, the Person table needs to be altered to include a column that will hold SUSER_SNAME().
 
-sql
+```sql
 ALTER TABLE Person.Person
 ADD LoginAccount NVARCHAR(128)
 ```
@@ -68,7 +68,7 @@ Update all columns that match a BusinessEntityID of 275 to match your login acco
 
 Example
 
-sql
+```sql
 UPDATE Person.Person
 SET LoginAccount = 'ONPNTtkrueger'
 WHERE BusinessEntityID = 275
@@ -288,7 +288,7 @@ INSTANCE-database-publication-increment – Example: ONPNTRC0-AdventureWorks-Sal
 
 Test the publication and subscription by altering data in the SalesOrderHeader table on the subscriber database, AdventureWorksSalesperson.
 
-sql
+```sql
 update Sales.SalesOrderHeader
 set ShipDate = getdate(), OrderDate = getdate()-10,DueDate = getdate()-1
 where SalesPersonID = 275
@@ -302,7 +302,7 @@ Back in the replication monitor, click the All Subscriptions tab.  Right click 
 
 Check the changes were sent to the publisher by querying the AdventureWorks database.
 
-sql
+```sql
 select * from Sales.SalesOrderHeader where SalesPersonID = 275
 ```
 

@@ -21,7 +21,7 @@ So to make it easy we have the sp\_purge\_jobhistory procedure. To run you have 
 
 So to make this simple and much quicker so your computer doesn't lock on you execute something such as
 
-sql
+```sql
 Declare @oldest datetime
 Set @oldest = Getdate() - 14
 

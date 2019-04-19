@@ -24,7 +24,7 @@ If you are using snapshots be aware that running sp_helpdb reports wrong files. 
 
 First create a test database
 
-sql
+```sql
 use master
 go
 
@@ -38,7 +38,7 @@ GO
 
 Now let's create a table and populate it with some data
 
-sql
+```sql
 USE test
 go
 
@@ -55,7 +55,7 @@ go
 ```
 Now create the snapshot database
 
-sql
+```sql
 use master
 go
 
@@ -68,7 +68,7 @@ GO
 
 Now run a count for that table against the test database and against the snapshot
 
-sql
+```sql
 select COUNT(*) from TestSnapshot..TestTable
 select COUNT(*) from Test..TestTable
 ```
@@ -82,7 +82,7 @@ As you can see the count is the same
 
 Now run sp_helpdb and look at the sizes, we will come back to this output later
 
-sql
+```sql
 sp_helpdb 'Test'
 ```
 
@@ -93,7 +93,7 @@ test_log	2	C:test_log.LDF	        NULL	1792 KB</pre>
 
 Let's add some more data to our table
 
-sql
+```sql
 use Test
 go
 
@@ -109,7 +109,7 @@ cross join sysobjects s3
 
 Now if we run the count we will see that the count for the table in the Test database has increased (as expected)
 
-sql
+```sql
 select COUNT(*) from TestSnapshot..TestTable
 select COUNT(*) from Test..TestTable
 ```
@@ -121,7 +121,7 @@ select COUNT(*) from Test..TestTable
 
 Okay now it is time to run sp_helpdb again
 
-sql
+```sql
 sp_helpdb 'Test'
 ```
 
@@ -130,7 +130,7 @@ sp_helpdb 'Test'
 test		1	C:test.mdf		PRIMARY	20736 KB
 test_log	2	C:test_log.LDF	        NULL	69760 KB</pre>
 
-sql
+```sql
 sp_helpdb 'TestSnapshot'
 ```
 
@@ -143,7 +143,7 @@ Do you see that? When you run sp\_helpdb against the snapshot now it reports wha
 
 Now run this query
 
-sql
+```sql
 select db_name(dbid) as DB_Name,name,filename,size * 8 from master..sysaltfiles
 where dbid in (db_id('Test'),db_id('TestSnapshot'))
 ```
@@ -161,7 +161,7 @@ So where is the problem? The problem is in the sysfiles table, it has the wrong 
 
 Run these two queries to verify that
 
-sql
+```sql
 select size * 8 as Size,filename from Test..sysfiles
 select size * 8 as Size,filename from TestSnapshot..sysfiles
 ```
@@ -180,14 +180,14 @@ sp\_helpdb actually calls the sys.sp\_helpfile proc to get the size and file nam
   
 run this and you will see that it is the second result set of sp_helpdb
 
-sql
+```sql
 exec Test.sys.sp_helpfile
 exec TestSnapshot.sys.sp_helpfile
 ```
 
 Inside the sys.sp_helpfile proc you will find the following code
 
-sql
+```sql
 select  name,  fileid, filename,  
  filegroup = filegroup_name(groupid),  
  'size' = convert(nvarchar(15), convert (bigint, size) * 8) + N' KB',  
@@ -207,7 +207,7 @@ As you can see it uses the sysfiles table
 
 If you want to see what the code for sp\_helpdb and sys.sp\_helpfile looks like execute the following
 
-sql
+```sql
 exec sp_helptext 'sp_helpdb'
 exec sp_helptext 'sys.sp_helpfile'
 ```

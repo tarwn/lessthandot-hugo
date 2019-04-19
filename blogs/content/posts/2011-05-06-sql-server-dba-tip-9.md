@@ -26,7 +26,7 @@ The Default Trace's value may provide a reason to leave the trace enabled.  The
 
  
 
-sql
+```sql
 sp_configure 'show advanced options', 1
 GO
 RECONFIGURE
@@ -43,7 +43,7 @@ The Default Trace tracks events that revolve around configurations changes and c
 
  
 
-sql
+```sql
 SELECT 
 	TraceEvents.name as [Event], 
 	TraceData.name as [Data Collected]
@@ -78,7 +78,7 @@ Here we will test the capture of TABLE CREATE, ALTER and DROP running the follow
 
  
 
-sql
+```sql
 CREATE TABLE Junked (COL INT)
 GO
 ALTER TABLE Junked
@@ -94,7 +94,7 @@ To query the event that was forced above, we can use the fn\_trace\_gettable to 
 
  
 
-sql
+```sql
 SELECT * FROM ::fn_trace_getinfo(default)
 ```
 
@@ -112,7 +112,7 @@ Then use the file path as:
 
  
 
-sql
+```sql
 SELECT 
 	TraceInfo.ServerName,
 	TraceInfo.StartTime,

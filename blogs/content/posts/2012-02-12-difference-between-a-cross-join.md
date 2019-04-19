@@ -52,7 +52,7 @@ Here is what wikipedia has on full outer join: http://en.wikipedia.org/wiki/Join
 
 Time to look at some code. First create these two really simple tables
 
-sql
+```sql
 CREATE TABLE TableA (IDA int)
 GO
 
@@ -72,7 +72,7 @@ GO
 
 As you can see both table have 3 rows but only 2 rows are common to both tables. If we do a full outer join now, we will get back a result set that has 4 rows. We get 2 rows that are common to both tables, then we get 1 row from TableA which does not exist in TableB, we also get 1 row from TableB which does not exist in TableA
 
-sql
+```sql
 SELECT * FROM TableA a
 FULL OUTER JOIN TableB b on a.IDA = b.IDB
 ```
@@ -137,7 +137,7 @@ As you can see there are two rows that have NULL in them, these are the ones tha
 
 Now, let's look at the cross join. We will get back 9 rows since we have 3 rows in both tables, output will be 3 x 3 rows
 
-sql
+```sql
 SELECT * FROM TableA a
 CROSS JOIN TableB b 
 ORDER BY a.IDA,b.IDB

@@ -30,7 +30,7 @@ The question is the following: _How can you add a new column to existing table (
 
 Let's take a look. First create this very simple table
 
-sql
+```sql
 CREATE TABLE bla (id INT)
 INSERT BLA VALUES(1)
 INSERT BLA VALUES(2)
@@ -41,7 +41,7 @@ INSERT BLA VALUES(5)
 
 What you want to do is have the sequence start at 6, here is how to do that.
 
-sql
+```sql
 CREATE SEQUENCE GlobalCounter
     AS INT
     MINVALUE 1
@@ -54,7 +54,7 @@ Use START WITH to indicate that the sequence should start at 6
 
 The next step is to add a default to the column, this default would use the sequence
 
-sql
+```sql
 ALTER TABLE bla
 ADD CONSTRAINT id_default_sequence
 DEFAULT NEXT VALUE FOR GlobalCounter FOR ID;
@@ -62,7 +62,7 @@ DEFAULT NEXT VALUE FOR GlobalCounter FOR ID;
 
 Now if we do an insert, followed by a select
 
-sql
+```sql
 INSERT bla DEFAULT VALUES
 
 SELECT * FROM Bla

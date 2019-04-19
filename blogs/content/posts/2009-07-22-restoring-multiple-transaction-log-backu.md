@@ -19,7 +19,7 @@ A good tip when you have to do this is to use vbscript or some other scripting t
 
 So for example, I use Quest Litespeed for compression (see [here][1] for more info). This means I have a few procedures at my disposal in which I can use to perform my restores from compressed backups. So given a restore script for [Litespeed][2] like this
 
-sql
+```sql
 exec master.dbo.xp_restore_log @database = N'dbname' ,
 @filename = N'pathbackup.trn',
 @filenumber = 1,

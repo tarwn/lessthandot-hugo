@@ -32,19 +32,19 @@ I forgot to mention [yesterday][1], half of the people are in this class because
 
 Today we continued with configurations. Sybase has something called a data cache, you can have more than 1 cache. to increase the default data cache to 100MB you would issue the following command
 
-sql
+```sql
 sp_cacheconfig 'default data cache', '100M'
 ```
 
 to create a new cache name SQLMenace with 10MB, your command would look like this
 
-sql
+```sql
 sp_cacheconfig SQLMenace, '10M'
 ```
 
 To drop the cache that is named SQLMenace your command would look like this
 
-sql
+```sql
 sp_cacheconfig SQLMenace, '0'
 ```
 
@@ -62,7 +62,7 @@ sp_diskdefault DeviceName, defaultoff|defaulton
 
 so to make master not default, you would do
 
-sql
+```sql
 sp_diskdefault master, defaultoff
 ```
 
@@ -70,7 +70,7 @@ You can have many devices just like you can have many files in SQL Server. <del>
 
 Here is how you create a new device
 
-sql
+```sql
 disk init 
 name = "my_device", 
 physname = "/usr/u/sybase/data/my_device.dat", 
@@ -109,7 +109,7 @@ There is also an option to create an identity column on every table by default. 
 
 Here is what it looks like
 
-sql
+```sql
 sp_dboption database_name, "auto identity", "true" 
 ```
 
@@ -125,7 +125,7 @@ Creates a threshold to monitor space on a database segment. When free space on t
 
 Example
 
-sql
+```sql
 sp_addthreshold mydb, segment1, 200, pr_threshold_warning
 ```
 

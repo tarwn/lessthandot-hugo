@@ -42,7 +42,7 @@ tags:
   Suppose I want to create an update statement to update the Employee dimension of the AdventureWorks database. The source data is located in a staging table with almost the exact schema of the target table. Typically this staging table is populated with update data coming from an incremental load SSIS package. Using a staging table and an update statement in an Execute SQL Task allows us to get rid of the OLE DB Command, which issues updates row by row in SSIS. Which we do not want. Anyway, I digress. Let's assume the staging table has the following schema:
 </p>
 
-sql
+```sql
 USE [AdventureWorksDW2012]
 GO
 

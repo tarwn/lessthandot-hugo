@@ -47,7 +47,7 @@ In the following setup we will work through setting up a snapshot on a mirror to
 
 To fully show our lab and setup steps, I will be using the mirror that we setup in, [Using mirroring to Reduce Migration Downtime (Part 1)][2]. Once we have the mirror setup, creating the actual snapshot from the secondary in the mirroring configure in a T-SQL statement.
 
-sql
+```sql
 CREATE DATABASE NEEDTOMOVE_20100203072007 ON
 (
 NAME = NEEDTOMOVE,

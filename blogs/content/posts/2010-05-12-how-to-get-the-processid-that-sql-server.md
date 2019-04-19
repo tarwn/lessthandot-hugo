@@ -30,7 +30,7 @@ Can you tell which process is the 2008 instance and which process is the 2008 R2
 
 Run the following query in a query window
 
-sql
+```sql
 select SERVERPROPERTY('processid'),SERVERPROPERTY('productversion')
 ```
 

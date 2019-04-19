@@ -18,7 +18,7 @@ categories:
 ---
 In SQL Server 2005 to 2012, row limits took on a slightly new limit expectation when variable length data types were used: varchar, nvarchar, varbinary, sql\_variant or CLR. Essentially, this is done by the addition of a large object page: Row Overflow Pages or pages in the ROW\_OVERFLOW\_DATA allocation unit. The row overflow page type allows a row to exceed the 8060 byte row limitation by performing exactly what the name implies by extending the row into an overflow page. In order to accomplish this, a 24 byte pointer is retained on the original pages which still reside in the IN\_ROW_DATA allocation unit. This is also the same when multiple row overflow pages are introduced. The row overflow pages can be another factor when indexing and reviewing existing execution plans. The end result should be to generate a good execution plan while bringing in as few pages as needed to fulfill the needs of the transaction. 
 
-sql
+```sql
 CREATE TABLE SpanOverFlow (COL1 VARCHAR(8000),COL2 VARCHAR(8000),COL3 VARCHAR(8000),COL4 VARCHAR(8000),COL5 VARCHAR(8000),COL6 VARCHAR(8000),COL7 VARCHAR(8000))
 GO
 ```
@@ -31,7 +31,7 @@ In listing 2, the insert statement greatly exceeds the 8060 byte row limit by 39
 
  
 
-sql
+```sql
 INSERT INTO SpanOverFlow SELECT REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000),REPLICATE('0',8000)
 GO
 ```
@@ -44,7 +44,7 @@ To review the current pages for a table, including the row overflow pages, the u
 
  
 
-sql
+```sql
 DBCC IND('QTuner','SpanOverFlow',1)
 ```
 
@@ -59,7 +59,7 @@ Another, more simplistic method using the DMV (Dynamic Management View) sys.dm\_
 
  
 
-sql
+```sql
 SELECT 
 	object_name(object_id),
 	alloc_unit_type_desc,
@@ -84,7 +84,7 @@ When row overflow pages are created, there is a small amount of overhead that wi
 
 For example, the query in listing 5 shows the creation of a basic table containing a primary key used as the clustered index and 2 more columns that potentially could cause an overflow page to be created.
 
-sql
+```sql
 IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'OverFlowPages')
   BEGIN
 	DROP TABLE OverFlowPages
@@ -100,7 +100,7 @@ To show what we've discussed already regarding when a row overflow page would be
 
  
 
-sql
+```sql
 INSERT INTO OverFlowPages SELECT REPLICATE('0',5000),REPLICATE('0',3000)
 ```
 
@@ -117,7 +117,7 @@ Further investigation of this table is done by using listing 7. This will insert
 
  
 
-sql
+```sql
 DECLARE @STR DATETIME = GETDATE()
 INSERT INTO OverFlowPages SELECT REPLICATE('0',5000),REPLICATE('0',3000)
 SELECT DATEDIFF(ms,@STR,GETDATE())
@@ -137,7 +137,7 @@ To see if a performance impact is made by the introduction of an overflow page c
 
  
 
-sql
+```sql
 DECLARE @STR DATETIME = GETDATE()
 INSERT INTO OverFlowPages SELECT REPLICATE('0',5000),REPLICATE('0',4000)
 SELECT DATEDIFF(ms,@STR,GETDATE())
@@ -151,7 +151,7 @@ The overall duration is the same even when we exceed the row size and introduce 
 
  
 
-sql
+```sql
 SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 1
 ```
 
@@ -168,7 +168,7 @@ As shown above, the statistics and actual execution plan that were generated fro
 
  
 
-sql
+```sql
 SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 50
 ```
 
@@ -191,7 +191,7 @@ Reducing the IO for this situation is usually done before the situation arises w
 
  
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_COVERING_ASC ON OverFlowPages (ID) INCLUDE (BadUseVarcharOne)
 ```
 
@@ -200,7 +200,7 @@ _Listing 11_
 
  __
 
-sql
+```sql
 SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 50
 ```
 
@@ -225,7 +225,7 @@ This was a specific situation and query given a fairly basic table.  In the cas
 
  
 
-sql
+```sql
 SELECT BadUseVarcharOne FROM OverFlowPages WITH (INDEX=IDX_COVERING_ASC) WHERE ID = 50
 ```
 

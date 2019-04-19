@@ -28,13 +28,13 @@ This post will focus on getting the physical name for the last backup for a data
 
 Create a test database
 
-sql
+```sql
 CREATE DATABASE test
 GO
 ```
 Create some sample data
 
-sql
+```sql
 USE test
 GO
 
@@ -44,7 +44,7 @@ GO
 ```
 Now it is time to do the backups, I have a C:Junkdraw folder on my machine and a job that runs every night that will delete everything older than 2 weeks (I got this idea from the [lifehacks][1] book and it really helps with getting rid of not needed files). If you want to run the backup commands on your PC, just make sure to change C:Junkdraw to something that does exist.
 
-sql
+```sql
 BACKUP DATABASE [Test] TO  DISK = N'C:JunkdrawTest.bak' WITH NOFORMAT, NOINIT
 ,SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO
@@ -56,7 +56,7 @@ GO
 
 In order to get the information about the backups we need to join the backupset and backupmediafamily tables. Here is the query that will give me the physical device name, backup start date, backup finish date and the size of the backup.
 
-sql
+```sql
 SELECT			physical_device_name,
 				backup_start_date,
 				backup_finish_date,
@@ -75,7 +75,7 @@ C:JunkdrawTest.bak	2010-03-24 12:43:33.000	2010-03-24 12:43:33.000	1482.000000</
 
 What if you want to know the time the last backup finished for all the databases? You can use the following query to get that info
 
-sql
+```sql
 WITH LastBackupTaken AS (
 SELECT database_name,
 backup_finish_date,

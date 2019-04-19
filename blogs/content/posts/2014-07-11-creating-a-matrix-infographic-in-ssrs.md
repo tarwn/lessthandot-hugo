@@ -32,7 +32,7 @@ Each cell has a unique number and we start with 1 in the left bottom corner and 
 
 The source query (complicated right?):
 
-sql
+```sql
 SELECT
 	 BottomStart	= 0 -- England wins
 	,BottomEnd		= 37

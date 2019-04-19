@@ -43,7 +43,7 @@ The reason that cursors are evil is that they tend to be slower than a set based
 
 Take a look at this code
 
-sql
+```sql
 CREATE FUNCTION dbo.cursorEnroll ()
     RETURNS INT AS
     BEGIN
@@ -69,7 +69,7 @@ CREATE FUNCTION dbo.cursorEnroll ()
 
 That whole flawed cursor logic can be replaced with one line of T-SQL
 
-sql
+```sql
 SELECT @studentsEnrolled = COUNT(*) FROM courseEnrollment
 ```
 
@@ -79,7 +79,7 @@ Which one do you think will perform faster?
 
 If cursors are evil, then what is more evil than a cursor? Nested cursors of course, especially three nested cursors. Here is an example of some horrible code where a cursor is not needed
 
-sql
+```sql
 CREATE PROCEDURE [dbo].[sp_SomeMadeUpName]
 AS
 
@@ -152,7 +152,7 @@ Usually you will find a loop in a trigger that will call some sort of stored pro
 
 Here is where you will find the biggest offenders. All you have to do to find the procs with cursors is run the following piece of code
 
-sql
+```sql
 SELECT * FROM sys.procedures 
 WHERE OBJECT_DEFINITION((object_id) )LIKE '%DECLARE%%cursor%'
 ```
@@ -167,7 +167,7 @@ One of the few times I will use cursors or while loops is if I need to get infor
 
 Here is an example
 
-sql
+```sql
 CREATE TABLE #tempSpSpaceUsed (TableName VARCHAR(100),
 								Rows INT,
 								Reserved VARCHAR(100),
@@ -195,7 +195,7 @@ SELECT * FROM #tempSpSpaceUsed
 ```
 Of course this can be simplified as well, you can just run this instead of the while loop and run the output
 
-sql
+```sql
 SELECT DISTINCT 'INSERT #tempSpSPaceUsed
 EXEC sp_spaceused ''' + [name] + ''''
 FROM sys.tables

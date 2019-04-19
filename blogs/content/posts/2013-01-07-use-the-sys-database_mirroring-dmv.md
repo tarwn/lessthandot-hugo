@@ -38,7 +38,7 @@ The mirroring connection to “TCP://SomeServer.SomeNetwork:5022” has timed ou
 
 I myself like the sys.database_mirroring dynamic management view. This view will give you the state that the mirror is in, the partner name, mirror role, what the safety level is, the connection timeout and more. Here is a query I like to run
 
-sql
+```sql
 SELECT	db_name(sd.[database_id])              AS [Database Name]
 		  ,sd.mirroring_state                  AS [Mirror State]
 		  ,sd.mirroring_state_desc             AS [Mirror State] 

@@ -40,7 +40,7 @@ In order to calculate the Buffer cache hit ratio we need to query the sys.dm\_os
   
 Here is the query that will do that, this query will only work on SQL Server 2005 and up.
 
-sql
+```sql
 SELECT (a.cntr_value * 1.0 / b.cntr_value) * 100.0 as BufferCacheHitRatio
 FROM sys.dm_os_performance_counters  a
 JOIN  (SELECT cntr_value,OBJECT_NAME 
@@ -59,7 +59,7 @@ Page life expectancy is the number of seconds a page will stay in the buffer poo
 
 Here is how to get the Page life expectancy
 
-sql
+```sql
 SELECT *
 FROM sys.dm_os_performance_counters  
 WHERE counter_name = 'Page life expectancy'

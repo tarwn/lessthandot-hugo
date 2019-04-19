@@ -51,7 +51,7 @@ The views are useful but given columnstore indexing and the needs compared to ro
 
 Relating the two catalog views, sys.column\_store\_dictionaries and sys.column\_store\_segments is relatively straight forward when reviewing the raw data returned from both views.  Run the following two select statements on the AdventureWorkdDW2012 database that hold the columnstore indexes created from, “[Columnstore Index Basics][5]”. (We'll assume AdventureWorksDW2012 and the indexes exist from here.)
 
-sql
+```sql
 select * from sys.column_store_dictionaries
 select * from sys.column_store_segments
 ```
@@ -80,7 +80,7 @@ The next part that holds value is the range values.  This was discussed earlier
 
 In the above image, the range for column\_id 1 (column\_id 1 is the first 4 rows) is a minimum of 1 and a maximum of 10.  We can determine the actual column_id and the column name referred to by adding in the partitions view to locate the actual partition, segment and then column.
 
-sql
+```sql
 SELECT segs.on_disk_size, cols.name
 FROM sys.partitions AS parts
 JOIN sys.column_store_segments AS segs ON parts.hobt_id = segs.hobt_id
@@ -106,7 +106,7 @@ Referring back to the min and max range and the block they are in, we do not kno
 
 Moving to the view, sys.column\_store\_index\_stats, you'll quickly find that the object doesn't exist any longer in SQL Server 2012.  Instead, the same index stats DMV, sys.dm\_db\_index\_usage\_stats, can be used in RTM to see the statistics information of a columnstore index.  The column\_store\_index\_stats view was seemingly dropped and functionality or information results were moved to index\_usage\_stats.
 
-sql
+```sql
 select 
 	object_name(stats.object_id) [Table or View Name]
 	,idx.[name]
@@ -129,7 +129,7 @@ Columnstore indexes cannot use a seek operator so the only information that is v
 
 Although operational_stats will return and retain columnstore index information, the returned results will be zeros so there isn't much value unfortunately.
 
-sql
+```sql
 SELECT * FROM sys.dm_db_index_operational_stats(DB_ID(), OBJECT_ID('dbo.FactInternetSales_VLT'), NULL, NULL);
 ```
 

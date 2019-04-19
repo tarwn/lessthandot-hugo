@@ -17,7 +17,7 @@ categories:
 ---
 I started to think about this problem, when I saw [this][1] question asked by Sankar Reddy in SQL Server Quiz 2010. I have a fair bit of idea about Index fragmentation and defragmentation. I checked fragmentation of some of my table indexes previously and rebuilt the indexes when fragmentation percentage is too high. But I never thought about how exactly these will be calculated. But after looking at this question, I thought of finding how SQL server will calculate this. Let's have a look at this example.
 
-sql
+```sql
 create table tblNumbers
 (
 	Id int identity(1,1) primary key,
@@ -53,7 +53,7 @@ In one way, a Fragment can also be indicated as a part. In our example, the CI h
 
 Let's try to implement this method. The idea is to first load all the pages allocated to the Clustered Index into a temporary table and assign the sequence number to those pages and join each record with next record and find out the records where the difference is not equal to 1.
 
-sql
+```sql
 -- Table to hold Pages of the CI,
 CREATE TABLE sp_tablepages
 (

@@ -31,7 +31,7 @@ There was [a requirement][1] to create a new user who would have only insert per
 
 This is pretty simple to accomplish. First create this simple database with two tables
 
-sql
+```sql
 CREATE DATABASE TestPermission
 GO
 
@@ -50,7 +50,7 @@ GO
 
 Create the new user
 
-sql
+```sql
 USE [master]
 GO
 CREATE LOGIN [SomeTestUser] WITH PASSWORD=N'TestPAss', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
@@ -63,7 +63,7 @@ GO
 
 Now just give the user insert permissions to the TestAccess table
 
-sql
+```sql
 USE TestPermissions
 GO
 
@@ -73,7 +73,7 @@ GRANT INSERT ON TestAccess TO SomeTestUser
 
 Login as the newly created user and try to run the following
 
-sql
+```sql
 SELECT * FROM TestAccess
 ```
 
@@ -85,13 +85,13 @@ The SELECT permission was denied on the object 'TestAccess', database 'TestPermi
 
 Running the insert statement is no problem
 
-sql
+```sql
 INSERT TestAccess VALUES (1)
 ```
 
 Go back to the admin connection and run the following
 
-sql
+```sql
 GRANT SELECT,INSERT ON TestAccess2 TO SomeTestUser
 ```
 
@@ -101,14 +101,14 @@ You just gave insert and select permissions to SomeTestUser for the TestAccess2 
 
 Now if you go back to the connection, you can run the following without a problem
 
-sql
+```sql
 INSERT TestAccess2 VALUES (1)
 SELECT * FROM TestAccess2
 ```
 
 In general you probably want a user to have read permissions or write permissions for all the tables, in that case you can use a role. The following will give read and write permissions for all the tables in the database
 
-sql
+```sql
 USE [TestPermissions]
 GO
 EXEC sp_addrolemember N'db_datareader', N'SomeTestUser'

@@ -31,7 +31,7 @@ Let's take a quick look at how this works
   
 First create this table
 
-sql
+```sql
 CREATE TABLE [TestTable] (
 [id] [int] IDENTITY (1, 1) NOT NULL ,
 [itemdate] [datetime] NOT NULL ,
@@ -41,14 +41,14 @@ CREATE TABLE [TestTable] (
 
 Now insert one row of data
 
-sql
+```sql
 insert [TestTable]
 select getdate(),'bla'
 ```
 
 Now do a simple select and verify that you have one row of data
 
-sql
+```sql
 select * from [TestTable]
 ```
 
@@ -62,13 +62,13 @@ We will change the column from varchar 500 to varchar 2000. All you have to do i
   
 So in this case the command would look like this
 
-sql
+```sql
 alter table [TestTable] alter column [title] [varchar] (2000)
 ```
 
 To verify that indeed the column is now varchar 2000 run the following query
 
-sql
+```sql
 select COLUMN_NAME,DATA_TYPE,CHARACTER_MAXIMUM_LENGTH
 from INFORMATION_SCHEMA.COLUMNS
 where table_name = 'TestTable'
@@ -84,13 +84,13 @@ title           varchar         2000</pre>
 
 Now let's change the datetime column to a varchar, execute the following query
 
-sql
+```sql
 alter table [TestTable] alter column [itemdate] [varchar] (49)
 ```
 
 Now verify that it was changed
 
-sql
+```sql
 select COLUMN_NAME,DATA_TYPE,CHARACTER_MAXIMUM_LENGTH
 from INFORMATION_SCHEMA.COLUMNS
 where table_name = 'TestTable'
@@ -106,14 +106,14 @@ title           varchar         2000</pre>
 
 Insert a new row
 
-sql
+```sql
 insert [TestTable]
 select getdate(),'bla'
 ```
 
 Now check what is in the table
 
-sql
+```sql
 select * from [TestTable]
 ```
 
@@ -126,13 +126,13 @@ Results
 
 Now we will add a column. The command to add a column is very similar to the one where you alter a column, the difference is that you don't use the column keyword. Below is a query that will add an int column with a default of 0
 
-sql
+```sql
 alter table [TestTable] add  [SomeInt] int default 0 not null
 ```
 
 Run this query to see what is in the table now
 
-sql
+```sql
 select * from [TestTable]
 ```
 
@@ -147,7 +147,7 @@ As you can see the column was added and the default of 0 was used.
 
 We can interrogate the INFORMATION_SCHEMA.COLUMNS view again to verify that the column is there
 
-sql
+```sql
 select COLUMN_NAME,DATA_TYPE,CHARACTER_MAXIMUM_LENGTH
 from INFORMATION_SCHEMA.COLUMNS
 where table_name = 'TestTable'
@@ -164,14 +164,14 @@ SomeInt		int		NULL</pre>
 
 Now let's insert a row, we will use a value of 2 for the newly added SomeInt column
 
-sql
+```sql
 insert [TestTable]
 select getdate(),'bla',2
 ```
 
 When we run this query again
 
-sql
+```sql
 select * from [TestTable]
 ```
 
@@ -187,7 +187,7 @@ Results
 
 If you try to change a column to a datatype which is incompatible with the data that is stored you will get an error message
 
-sql
+```sql
 alter table [TestTable] alter column [itemdate] int
 ```
 

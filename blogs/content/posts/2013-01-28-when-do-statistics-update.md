@@ -52,7 +52,7 @@ Let's run an example to see if the 20% + 500 really is accurate.  To monitor th
 
 Setup XEvent “auto_stats”
 
-sql
+```sql
 CREATE EVENT SESSION [AutoStats_Monitor] ON SERVER 
 ADD EVENT sqlserver.auto_stats(
     ACTION(package0.collect_cpu_cycle_time,package0.collect_current_thread_id,package0.collect_system_time,sqlos.cpu_id,sqlserver.client_hostname,sqlserver.client_pid,sqlserver.database_id,sqlserver.database_name,sqlserver.nt_username,sqlserver.plan_handle,sqlserver.request_id,sqlserver.sql_text,sqlserver.username)) 
@@ -67,7 +67,7 @@ GO
 
 To query the events captured, use the following query
 
-sql
+```sql
 DECLARE @xeventdata XML
 SELECT @xeventdata = CAST(target_data AS XML)
 FROM sys.dm_xe_sessions AS s 
@@ -92,7 +92,7 @@ To read more about extended Events, look to [Jonathan Kehayias's series on SQLSk
 
 Set up a test table named statsupdate.
 
-sql
+```sql
 IF EXISTS(SELECT 1 FROM sys.objects WHERE Name = 'statsupdate')
  BEGIN
 	DROP TABLE statsupdate
@@ -110,7 +110,7 @@ GO 11000
 The test table now has 11,000 rows in it.  We should be able to determine how many rows would need to change before statistics would automatically update by running the following statement.
 
 > Note: when the 20% + 500 row change count is reached, the statistics are flagged to be updated.  The actual updating event will occur at the next time a query is issued and the statistics are needed.  This is a key piece of information when data is updated often but seldom read</p>
-sql
+```sql
 SELECT COUNT(*) *.20 + 500 [When will they update?] FROM statsupdate
 ```
 
@@ -123,7 +123,7 @@ SELECT COUNT(*) *.20 + 500 [When will they update?] FROM statsupdate
 
 This means that 2,700 rows would need to change before statistics will update.  Of course, we do not have any statistics on the table at this point due to there not being a clustered index, nonclustered index or querying the table.  To create some statistics to monitor, create the following nonclustered index.
 
-sql
+```sql
 CREATE INDEX IDX_Col1 ON statsupdate (Col1)
 INCLUDE (ID)
 GO
@@ -140,7 +140,7 @@ Viewing the statistics area in Object Explorer in SSMS, we can see the statistic
 
 We can also see this by querying the [sys.stats][3] catalog view.
 
-sql
+```sql
 SELECT * FROM sys.stats WHERE name = 'IDX_Col1'
 ```
 
@@ -153,7 +153,7 @@ SELECT * FROM sys.stats WHERE name = 'IDX_Col1'
 
 Given the following query, the statistics and index IDX_Col1 will be utilized.
 
-sql
+```sql
 SELECT id FROM statsupdate WHERE Col1 = REPLICATE('x',10)
 GO
 ```
@@ -173,7 +173,7 @@ Reviewing the Top Operations in Plan Explorer, we can see that the estimation wa
 
 Next, execute an update to alter 2699 rows in the statsupdate table (1 row under the 2700 count or 20% + 500 to update statistics)
 
-sql
+```sql
 UPDATE statsupdate 
 	SET col1 = REPLICATE('a',10)
 WHERE id <= 2699
@@ -183,7 +183,7 @@ WHERE id <= 2699
 
 As stated earlier, we truly do not know if the statistics were flagged for auto updating until we try to use them.  To ensure this happens, run the same query from earlier
 
-sql
+```sql
 SELECT id FROM statsupdate WHERE Col1 = REPLICATE('x',10) 
 GO
 ```
@@ -204,7 +204,7 @@ At this time we are at a 20% + 499 row changes to the data in the statsupdate ta
 
 Execute the following to update one more row.
 
-sql
+```sql
 UPDATE statsupdate 
 	SET col1 = REPLICATE('a',10)
 WHERE id > 2699 AND id <= 2700
@@ -214,7 +214,7 @@ WHERE id > 2699 AND id <= 2700
 
 Query the table to ensure, if flagged, the statistics will update.
 
-sql
+```sql
 SELECT id FROM statsupdate WHERE Col1 = REPLICATE('x',10)
 GO
 ```

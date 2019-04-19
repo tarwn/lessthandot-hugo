@@ -32,7 +32,7 @@ In order to run the solution I implemented, we need to create a Numbers table in
 
 Here is a script I use to create both Numbers and Calendar tables once in the Model database so all other user databases will inherit them:
 
-sql
+```sql
 USE model
 GO
 
@@ -101,7 +101,7 @@ FROM  (
 
 Now, we need to create a function that will split the values. I chose the Numbers table variation of this function:
 
-sql
+```sql
 CREATE FUNCTION [dbo].[fnSplit2](
   @List       VARCHAR(MAX),
    @Delimiter  VARCHAR(10)
@@ -125,7 +125,7 @@ GO
 
 And now we can create our final solution:
 
-sql
+```sql
 use AdventureWorks
 --select * from Sales.SalesOrderHeader order by CustomerID
 
@@ -183,7 +183,7 @@ select   T.*, F.Pos, F.Value from @t T OUTER apply dbo.fnSplit2(T.cValue, '..') 
 
 There is a simpler XML based solution presented by Peso (Peter Larsson) in the following  [MSDN Thread][6]:
 
-sql
+```sql
 DECLARE	@Sample TABLE
 	(
 		ID INT,

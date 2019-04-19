@@ -37,7 +37,7 @@ Here are the answers
   
 The minutes are the last 2 characters
 
-sql
+```sql
 declare @date varchar(100)
 select @date = '2009-06-26 14:30:00.000Z+4:30'
 
@@ -48,7 +48,7 @@ select right(@date,2)
   
 The hour starts after the Z and last for 2 or 3 characters including the sign, we will just grab 3 and replace : with an empty string
 
-sql
+```sql
 declare @date varchar(100)
 select @date = '2009-06-26 14:30:00.000Z+4:30'
 select replace(substring(@date,patindex('%z%',@date)+ 1,3),':','')
@@ -57,7 +57,7 @@ go
 
 +4
 
-sql
+```sql
 declare @date varchar(100)
 select @date = '2009-06-26 14:30:00.000Z-4:30'
 select replace(substring(@date,patindex('%z%',@date)+ 1,3),':','')
@@ -66,7 +66,7 @@ go
 
 -4
 
-sql
+```sql
 declare @date varchar(100)
 select @date = '2009-06-26 14:30:00.000Z+14:30'
 select replace(substring(@date,patindex('%z%',@date)+ 1,3),':','')
@@ -78,7 +78,7 @@ select replace(substring(@date,patindex('%z%',@date)+ 1,3),':','')
   
 That we already grabbed above for the hour, for the minute we need to do something like this
 
-sql
+```sql
 declare @date varchar(100),@multiplier int
 
 select @date = '2009-06-26 14:30:00.000Z+4:30'
@@ -89,7 +89,7 @@ We also need to convert the stuff we did above to integers in order to add
 
 So here is the complete code
 
-sql
+```sql
 declare @date varchar(100),@multiplier int
 
 select @date = '2009-06-26 14:30:00.000Z+4:30'

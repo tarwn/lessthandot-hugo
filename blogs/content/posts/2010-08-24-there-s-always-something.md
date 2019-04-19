@@ -17,7 +17,7 @@ It's always amazing to go back and look at code that you wrote just over a year 
 
 I recently got a request to make a rehash of a report I did a year ago, except that the drill down order is different. Cool. Copy, pase, drag, change a couple things, done. I deployed the new report to the dev server and off it goes. I then decided to go ahead and look at the stored procedure running the report to see exactly what it was doing, since I haven't looked at it in about a year. Wow, I was a bit surprised when I opened it. Here's what I found.
 
-sql
+```sql
 ALTER PROCEDURE [rp].[CompanyMoodList] 
 AS
 BEGIN
@@ -97,7 +97,7 @@ END
 ```
 I decided to clean that up somewhat, since i definately don't need those temp tables. Here's what I ended up with (note that this is just in a query window on the prod server, I'm not actually modifying live code, that's a No-No!)
 
-sql
+```sql
 select 
 	a.WASSN_ID, 
 	c.WPROJ_ID, 

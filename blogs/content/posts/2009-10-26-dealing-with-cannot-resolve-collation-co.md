@@ -30,7 +30,7 @@ This was asked on twitter recently and I gave the answer there. I decided to wri
   
 You will see the Cannot resolve collation conflict for equal to operation error when you try to join 2 tables. let's take a look at what we need to do to resolve this. First create and populate these two tables
 
-sql
+```sql
 use tempdb
 go
 
@@ -47,7 +47,7 @@ insert Test2 values('bla')
 ```
 Now run the following join between the Test and Test2 tables
 
-sql
+```sql
 select * from Test t1
 join Test2 t2 on t1.SomeColumn = t2.SomeColumn
 ```
@@ -60,14 +60,14 @@ Cannot resolve collation conflict for equal to operation.**
 
 To quickly fix this you can use collate in your SQL, you have to make sure that the collation is the same on both columns. So you either add the collate with the collation of the column in test2 to the column in the test table or vice-versa. Here is one example
 
-sql
+```sql
 select * from Test t1
 join Test2 t2 on t1.SomeColumn = t2.SomeColumn collate Traditional_Spanish_CI_AI
 ```
 
 You can also apply collate on the other column...first we need to know what the default was in your database. We can use the ANSI information\_schema.columns view to get this info, we need to use the collation\_name column. Run the following query to grab it
 
-sql
+```sql
 select column_name,collation_name
 from information_schema.columns
 where table_name = 'test'
@@ -75,14 +75,14 @@ where table_name = 'test'
 
 In my case it is SQL\_Latin1\_General\_CP1\_CI_AS, now the query becomes the following
 
-sql
+```sql
 select * from Test t1
 join Test2 t2 on t1.SomeColumn collate SQL_Latin1_General_CP1_CI_AS = t2.SomeColumn
 ```
 
 Just for fun let's see what the collation is for the column in the Test2 table
 
-sql
+```sql
 select column_name,collation_name
 from information_schema.columns
 where table_name = 'Test2'
@@ -94,7 +94,7 @@ You can use the ::fn_helpcollations()function which returns a list of all the co
 
 Run the following query (and yes :: is not a typo)
 
-sql
+```sql
 select * from ::fn_helpcollations()
 where name ='Traditional_Spanish_CI_AI'
 ```

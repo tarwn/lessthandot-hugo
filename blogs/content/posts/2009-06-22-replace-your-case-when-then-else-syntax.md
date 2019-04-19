@@ -22,7 +22,7 @@ tags:
 ---
 If you want to show a 1 when there is a value for something in the column and 0 if none of the rows have that values you typically do something like this
 
-sql
+```sql
 CASE WHEN SUM(CONVERT(INT,SomeValue)) > 0 THEN 1 ELSE 0 END
 ```
 
@@ -32,7 +32,7 @@ Here is what it might look like in code
 
 First create the following table with this data
 
-sql
+```sql
 create table #Cars(id int,brand varchar(20),HasDefects bit)
 
 insert #Cars values(1,'Chevy Corvette',1)
@@ -46,7 +46,7 @@ insert #Cars values(7,'Fiat 500',1)
 
 And here is our CASE WHEN THEN ELSE query
 
-sql
+```sql
 SELECT brand,CASE WHEN SUM(convert(int,HasDefects)) > 0 THEN 1 ELSE 0 END AS HasDefects
 from #Cars
 group by brand
@@ -60,7 +60,7 @@ The sum or average aggregate operation cannot take a bit data type as an argumen
 
 So how can we change that to use the sign function? It is very easy all you have to do is wrap the sign function around the sign function
 
-sql
+```sql
 select brand, sign(sum(convert(int,HasDefects))) as HasDefects
 from #Cars
 group by brand
@@ -94,7 +94,7 @@ Scale will affect the output also; if you use -22.0001 then -1.0000 will be retu
   
 Here is a query you can run to see what sign returns for different values
 
-sql
+```sql
 select 	sign (0),  -- 0
 	sign (1),  -- 1
 	sign (-1), -- -1

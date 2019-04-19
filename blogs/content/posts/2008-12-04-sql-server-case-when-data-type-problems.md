@@ -23,7 +23,7 @@ This article describes data type precedence that sql server uses:
 
 Here is some code that highlights this issue:
 
-sql
+```sql
 Declare @Data VarChar(20)
 
 Set @Data = ''
@@ -39,7 +39,7 @@ When mixing numbers and strings, SQL Server prefers (based on data type preceden
 
 The fix for this particular problem is to convert everything to a string. Basically, if you want even just one branch of a Case/When statement to return a string, then you should make sure all branches return a string.
 
-sql
+```sql
 Declare @Data VarChar(20)
 
 Set @Data = ''

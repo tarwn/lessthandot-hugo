@@ -31,7 +31,7 @@ This is day three of the [SQL Advent 2012 series][1] of blog posts. Today we are
 
 Some examples that are not sargable 
 
-sql
+```sql
 WHERE LEFT(Name,1) = 'S'
 WHERE Year(SomeDate) = 2012
 WHERE OrderID * 3 = 33000
@@ -39,7 +39,7 @@ WHERE OrderID * 3 = 33000
 
 Those three should be rewritten like this in order to become sargable 
 
-sql
+```sql
 WHERE Name LIKE 'S%'
 WHERE SomeDate >= '20120101' AND SomeDate < '20130101'
 WHERE OrderID = 33000/3
@@ -49,13 +49,13 @@ Let's create a table, insert some data so that we can look at the execution plan
   
 Create this simple table
 
-sql
+```sql
 CREATE TABLE Test(SomeID varchar(100))
 ```
 
 Let's insert some data that will start with a letter followed by some digits
 
-sql
+```sql
 INSERT Test
 SELECT LEFT(v2.type,1) +RIGHT('0000' + CONVERT(varchar(4),v1.number),4) 
 FROM master..spt_values v1
@@ -68,13 +68,13 @@ That insert should have generated 32768 rows
 
 Now create this index on that table
 
-sql
+```sql
 CREATE CLUSTERED INDEX cx_test ON Test(SomeID)
 ```
 
 Let's take a look at the execution plan, hit CTRL + M, this will add the execution plan once the query is done running
 
-sql
+```sql
 SELECT * FROM Test
 WHERE SomeID LIKE 's%'
 
@@ -94,7 +94,7 @@ Hit CTRL + M again to disable the inclusion of the plan
 
 Run this codeblock, it will give you the plans in a text format
 
-sql
+```sql
 SET SHOWPLAN_TEXT ON
 GO
 
@@ -127,7 +127,7 @@ Here is an example to demonstrate what I mean
 
 This is a simple table created without a collation
 
-sql
+```sql
 CREATE TABLE TempCase1 (Val CHAR(1))
 INSERT TempCase1 VALUES('A')
 INSERT TempCase1 VALUES('a')
@@ -135,7 +135,7 @@ INSERT TempCase1 VALUES('a')
 
 Running this select statement will return both rows 
 
-sql
+```sql
 SELECT * FROM TempCase1
 WHERE Val = 'A' 
 ```
@@ -150,7 +150,7 @@ a
 
 Now create the same kind of table but with a case sensitive collation
 
-sql
+```sql
 CREATE TABLE TempCase2 (Val CHAR(1) COLLATE SQL_Latin1_General_CP1_CS_AS)
 INSERT TempCase2 VALUES('A')
 INSERT TempCase2 VALUES('a')
@@ -158,7 +158,7 @@ INSERT TempCase2 VALUES('a')
 
 Run the same query
 
-sql
+```sql
 SELECT * FROM TempCase2
 WHERE Val = 'A' 
 ```
@@ -171,7 +171,7 @@ A
 
 As you can see you only get the one row now that matches the case
 
-sql
+```sql
 SELECT * FROM TempCase1
 WHERE Val = 'A' COLLATE SQL_Latin1_General_CP1_CS_AS
 ```
@@ -188,7 +188,7 @@ Now let's take a look at how we can make the case sensitive search sargable
 
 First create this table and insert some data
 
-sql
+```sql
 CREATE TABLE TempCase (Val CHAR(1))
  
 INSERT TempCase VALUES('A')
@@ -203,20 +203,20 @@ INSERT TempCase VALUES('H')
 
 Now we will insert some lowercase characters
 
-sql
+```sql
 INSERT TempCase
 SELECT LOWER(Val) FROM TempCase
 ```
 
 Now we will create our real table which will have 65536 rows
 
-sql
+```sql
 CREATE TABLE CaseSensitiveSearch (Val VARCHAR(50))
 ```
 
 We will do a couple of cross joins to generate the data for our queries
 
-sql
+```sql
 INSERT CaseSensitiveSearch
 SELECT t1.val + t2.val + t3.val + t4.val
 FROM TempCase t1
@@ -227,13 +227,13 @@ CROSS JOIN TempCase t4
 
 Create an index on the table
 
-sql
+```sql
 CREATE INDEX IX_SearchVal ON CaseSensitiveSearch(Val)
 ```
 
 Just like before, if we run this we will get back the exact value we passed in and also all the upper case and lower case variations
 
-sql
+```sql
 SELECT * FROM CaseSensitiveSearch
 WHERE Val = 'ABCD' 
 ```
@@ -278,7 +278,7 @@ AbcD
 
 If you add the collation to the query, you will get only what matches your value
 
-sql
+```sql
 SELECT * FROM CaseSensitiveSearch
 WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS
 ```
@@ -297,7 +297,7 @@ First grab all case sensitive and case insensitive values and then after that fi
 
 Here is what that query will look like
 
-sql
+```sql
 SELECT * FROM CaseSensitiveSearch
 WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS
 AND Val LIKE 'ABCD'
@@ -307,7 +307,7 @@ AND Val LIKE 'ABCD' will result in a seek, now when it also does the Val = 'ABCD
 
 If you run both queries, you can look at the plan difference (hit CTRL + M so that the plan is included)
 
-sql
+```sql
 SELECT * FROM CaseSensitiveSearch
 WHERE Val = 'ABCD' COLLATE SQL_Latin1_General_CP1_CS_AS
 
@@ -327,7 +327,7 @@ As you can see, there is a big difference between the two
 
 Here is the plan in text as well
 
-sql
+```sql
 SET SHOWPLAN_TEXT ON
 GO
  

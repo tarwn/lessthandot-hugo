@@ -24,7 +24,7 @@ I see more and more people asking how to check if a temporary table exists. How 
 
 You can use IF OBJECT_ID('tempdb..#temp') IS NOT NULL Let's see how it works 
 
-sql
+```sql
 --Create table 
 USE Norhtwind 
 GO 
@@ -96,7 +96,7 @@ END
 
 now open a new window from Query Analyzer (CTRL + N) and run this code again 
 
-sql
+```sql
 --Check if it exists 
 IF OBJECT_ID('tempdb..#temp') IS NOT NULL 
 BEGIN 
@@ -112,7 +112,7 @@ It doesn't exist and that is correct since it's a local temp table not a global 
 
 Well let's test that statement 
 
-sql
+```sql
 --create a global temp table 
 CREATE TABLE ##temp(id INT) --Notice the 2 pound signs, that's how you create a global variable 
 
@@ -131,7 +131,7 @@ It exists, right?
   
 Now run the same code in a new Query Analyzer window (CTRL + N) 
 
-sql
+```sql
 --Check if it exists 
 IF OBJECT_ID('tempdb..##temp') IS NOT NULL 
 BEGIN 

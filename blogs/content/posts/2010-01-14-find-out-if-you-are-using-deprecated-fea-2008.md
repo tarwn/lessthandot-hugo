@@ -26,7 +26,7 @@ Yesterday we used the sys.dm\_os\_performance_counters dynamic management view i
 
 So you have upgraded your old server to SQL Server 2008 and you wonder if you have any deprecated features in your code. Well, there is a query for that, if I run this query below on one of my test servers where I have some databases that I just restored from a 2000 instance I get some results back
 
-sql
+```sql
 select instance_name,cntr_value 
 from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Deprecated Features'
@@ -103,7 +103,7 @@ You can also take a look at these blog posts by [George Mastros][2] that show yo
 
 In case you don't have access to this dynamic management view, here is the whole list of deprcated features that this query returns
 
-sql
+```sql
 select instance_name 
 from sys.dm_os_performance_counters
 where Object_name = 'SQLServer:Deprecated Features'

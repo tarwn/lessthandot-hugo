@@ -40,7 +40,7 @@ To test the situation of recovering from utilizing both the full backup from a p
 
 On NODE2, as a secondary preferred backup replica, we have a full COPY_ONLY job
 
-sql
+```sql
 IF sys.fn_hadr_backup_is_preferred_replica('AdventureWorks2008') = 1
 BEGIN
   DECLARE @CMD NVARCHAR(1500) 
@@ -51,7 +51,7 @@ END
 
 On NODE2, we also have a log backup, which is the primary offloading reasoning for the preferred backup replicas.
 
-sql
+```sql
 IF sys.fn_hadr_backup_is_preferred_replica('AdventureWorks2008') = 1
 BEGIN
   DECLARE @CMD NVARCHAR(1500) 
@@ -62,7 +62,7 @@ END
 
 Prior to running the COPY_ONLY, we want to execute, on the primary replica, a full backup.
 
-sql
+```sql
 BACKUP DATABASE [AdventureWorks2008] TO DISK = N'C:BackupsAW2008_FULL_PRIMARY.bak' WITH NOFORMAT, INIT,  NAME = N'AdventureWorks2008-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO
 ```
@@ -82,7 +82,7 @@ At this point, we can recover from the full taken from the primary or the COPY_O
 
 COPY_ONLY restore test to a database, AdventureWorks2008Recovery
 
-sql
+```sql
 USE [master]
 RESTORE DATABASE [AdventureWorks2008Recovery] FROM  DISK = N'C:backupsFull20131210181523.bak' WITH  FILE = 1,  MOVE N'AdventureWorks2008_Data' TO N'C:Program FilesMicrosoft SQL ServerMSSQL11.SHAREPOINT2013MSSQLDATAAdventureWorks2008Recovery_Data.mdf',  MOVE N'AdventureWorks2008_Log' TO N'C:Program FilesMicrosoft SQL ServerMSSQL11.SHAREPOINT2013MSSQLDATAAdventureWorks2008Recovery_Log.ldf',  NORECOVERY,  NOUNLOAD,  REPLACE,  STATS = 5
 GO
@@ -94,7 +94,7 @@ GO
 
 Now let's try the full taken from the primary and the log backups from the secondary to a database, AdventureWorks2008RecoveryFull
 
-sql
+```sql
 USE [master]
 RESTORE DATABASE [AdventureWorks2008RecoveryFull] FROM  DISK = N'\node1c$BackupsAW2008_FULL_PRIMARY.bak' WITH  FILE = 1,  MOVE N'AdventureWorks2008_Data' TO N'C:Program FilesMicrosoft SQL ServerMSSQL11.SHAREPOINT2013MSSQLDATAAdventureWorks2008RecoveryFull_Data.mdf',  MOVE N'AdventureWorks2008_Log' TO N'C:Program FilesMicrosoft SQL ServerMSSQL11.SHAREPOINT2013MSSQLDATAAdventureWorks2008RecoveryFull_Log.ldf',  NORECOVERY,  NOUNLOAD,  REPLACE,  STATS = 5
 GO

@@ -37,7 +37,7 @@ Here we are creating two databases, one with much bigger files than the other on
 
 This DB is correctly sized for the data that will be inserted
 
-sql
+```sql
 CREATE DATABASE [TestBigger]
  ON  PRIMARY 
 ( NAME = N'TestBigger', FILENAME = N'f:TempTestBigger.mdf' , 
@@ -50,7 +50,7 @@ GO
 
 This database is very small and will have to be expanded many times to accommodate all the data I will be inserting later on
 
-sql
+```sql
 CREATE DATABASE [TestSmaller]
  ON  PRIMARY 
 ( NAME = N'TestSmaller', FILENAME = N'f:TempTestSmaller.mdf' , 
@@ -81,7 +81,7 @@ SIZE = **1280KB** , FILEGROWTH = 1024KB</em>
   
 These two stored proc calls are just to verify that the files match with what we specified, you can use sp_helpdb to check the size of a database that you created when you don't specify the file sizes
 
-sql
+```sql
 EXEC sp_helpdb 'TestBigger'
 ```
 
@@ -91,7 +91,7 @@ TestBigger_log	f:TempTestBigger_log.ldf	NULL	502400 KB</pre>
 
 
 
-sql
+```sql
 EXEC sp_helpdb 'TestSmaller'
 ```
 
@@ -101,13 +101,13 @@ TestSmaller_log	f:TempTestSmaller_log.ldf	NULL	 512 KB</pre>
 
 Next, we are creating two identical tables, one in each database
 
-sql
+```sql
 USE TestSmaller
 GO
 CREATE TABLE test (SomeName VARCHAR(100), SomeID VARCHAR(36), SomeOtherID VARCHAR(100), SomeDate DATETIME)
 ```
 
-sql
+```sql
 USE TestBigger
 GO
 CREATE TABLE test (SomeName VARCHAR(100), SomeID VARCHAR(36), SomeOtherID VARCHAR(100), SomeDate DATETIME)
@@ -115,7 +115,7 @@ CREATE TABLE test (SomeName VARCHAR(100), SomeID VARCHAR(36), SomeOtherID VARCHA
 
 This query is just used so that the data is cached for the two inserts later on, this way the data doesn't have to be fatched from disk for either inserts, you can discard the results after the query is done
 
-sql
+```sql
 USE master
 GO
 
@@ -129,7 +129,7 @@ CROSS JOIN sys.sysobjects c4
 
 Here is the first insert into the bigger database
 
-sql
+```sql
 INSERT TestBigger.dbo.test
 SELECT TOP 1000000 c1.name,NEWID(),NEWID(),GETDATE() 
 FROM sys.sysobjects c1
@@ -140,7 +140,7 @@ CROSS JOIN sys.sysobjects c4
 
 Here is the second insert into the smaller database
 
-sql
+```sql
 INSERT TestSmaller.dbo.test
 SELECT TOP 1000000 c1.name,NEWID(),NEWID(),GETDATE() 
 FROM sys.sysobjects c1
@@ -152,7 +152,7 @@ On several machines I tested on, it takes half the time or less to insert the da
 
 Check the sizes of the databases again
 
-sql
+```sql
 exec sp_helpdb 'TestBigger'
 ```
 
@@ -162,7 +162,7 @@ TestBigger_log	f:TempTestBigger_log.ldf	NULL	502400 KB</pre>
 
 
 
-sql
+```sql
 exec sp_helpdb 'TestSmaller'
 ```
 

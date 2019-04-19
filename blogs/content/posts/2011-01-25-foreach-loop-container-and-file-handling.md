@@ -77,7 +77,7 @@ To insert the file contents of the files the loop container finds, the OPENROWSE
 
 Create the following staging table that will be used before editing the Execute SQL Task.
 
-sql
+```sql
 CREATE TABLE [dbo].[ConfigRepository_Temp](
 	[ContentConfigID] [int] IDENTITY(1,1) NOT NULL,
 	[SystemConfigID] [int] NULL,

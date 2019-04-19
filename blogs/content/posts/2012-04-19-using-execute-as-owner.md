@@ -27,7 +27,7 @@ First, review the ownership of a database.  If a database is created under sa o
 
 Let's look at an example.  Create the following database
 
-sql
+```sql
 CREATE DATABASE [OwnerTest] ON  PRIMARY 
 ( NAME = N'OwnerTest', FILENAME = N'C:OwnerTest.mdf' , SIZE = 409600KB , FILEGROWTH = 2%)
  LOG ON 
@@ -45,7 +45,7 @@ Notice we changed the owner to sa.  This was to set the database up for the exa
 
 Create a simple procedure to test
 
-sql
+```sql
 CREATE PROCEDURE Get_OwnerText
 WITH EXECUTE AS OWNER
 AS
@@ -64,7 +64,7 @@ This is all expected behavior.
 
 Create another database on a different instance but leave the owner as a user that does not have rights on the first SQL Server instance to any objects in the database itself or a valid login.
 
-sql
+```sql
 CREATE DATABASE [OwnerTest2] ON  PRIMARY 
 ( NAME = N'OwnerTest2', FILENAME = N'C:OwnerTest2.mdf' , SIZE = 409600KB , FILEGROWTH = 2%)
  LOG ON 
@@ -76,7 +76,7 @@ GO
 
 Run a simple backup of the database created on the second instance
 
-sql
+```sql
 BACKUP DATABASE [OwnerTest2] TO  DISK = N'C:OwnerTest2.bak' WITH NOFORMAT, NOINIT,  NAME = N'OwnerTest2-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO
 ```
@@ -103,7 +103,7 @@ BACKUP DATABASE successfully processed 218 pages in 0.227 seconds (7.472 MB/sec)
 
 Use the backup from the second instance housing database OwnerTest2 and restore it, replacing OwnerTest on the first instance.
 
-sql
+```sql
 USE Master
 GO
 RESTORE DATABASE [OwnerTest] FROM  DISK = N'C:OwnerTest2.bak' WITH  FILE = 1,  

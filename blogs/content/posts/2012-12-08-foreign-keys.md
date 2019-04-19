@@ -41,28 +41,28 @@ Most people will define a foreign key relationship between the foreign key and a
   
 First create a table to which we will add a unique constraint after creation
 
-sql
+```sql
 CREATE TABLE TestUniqueConstraint(id int)
 GO
 ```
 
 Add a unique constraint to the table
 
-sql
+```sql
 ALTER TABLE TestUniqueConstraint ADD CONSTRAINT ix_unique UNIQUE (id)
 GO
 ```
 
 Insert a value of 1, this should succeed
 
-sql
+```sql
 INSERT  TestUniqueConstraint VALUES(1)
 GO
 ```
 
 Insert a value of 1 again, this should fail
 
-sql
+```sql
 INSERT  TestUniqueConstraint VALUES(1)
 GO
 ```
@@ -75,14 +75,14 @@ The statement has been terminated._
 
 Now that we verified that we can't have duplicates, it is time to create the table that will have the foreign key
 
-sql
+```sql
 CREATE TABLE TestForeignConstraint(id int)
 GO
 ```
 
 Add the foreign key to the table
 
-sql
+```sql
 ALTER TABLE dbo.TestForeignConstraint ADD CONSTRAINT
 	FK_TestForeignConstraint_TestUniqueConstraint FOREIGN KEY
 	(id) REFERENCES dbo.TestUniqueConstraint(id) 
@@ -90,14 +90,14 @@ ALTER TABLE dbo.TestForeignConstraint ADD CONSTRAINT
 
 Insert a value that exist in the table that is referenced by the foreign key constraint
 
-sql
+```sql
 INSERT TestForeignConstraint  VALUES(1)
 INSERT TestForeignConstraint  VALUES(1)
 ```
 
 Insert a value that does not exist in the table that is referenced by the foreign key constraint
 
-sql
+```sql
 INSERT TestForeignConstraint  VALUES(2)
 ```
 
@@ -115,28 +115,28 @@ This section will be similar to the previous section, the difference is that we 
 
 First create a table to which we will add a unique index after creation
 
-sql
+```sql
 CREATE TABLE TestUniqueIndex(id int)
 GO
 ```
 
 Add the unique index
 
-sql
+```sql
 CREATE UNIQUE NONCLUSTERED INDEX ix_unique ON TestUniqueIndex(id)
 GO
 ```
 
 Insert a value of 1, this should succeed
 
-sql
+```sql
 INSERT  TestUniqueIndex VALUES(1)
 GO
 ```
 
 Insert a value of 1 again , this should now fail
 
-sql
+```sql
 INSERT  TestUniqueIndex VALUES(1)
 GO
 ```
@@ -149,14 +149,14 @@ The statement has been terminated._
 
 Now that we verified that we can't have duplicates, it is time to create the table that will have the foreign key
 
-sql
+```sql
 CREATE TABLE TestForeignIndex(id int)
 GO
 ```
 
 Add the foreign key constraint
 
-sql
+```sql
 ALTER TABLE dbo.TestForeignIndex ADD CONSTRAINT
 	FK_TestForeignIndex_TestUniqueIndex FOREIGN KEY
 	(id) REFERENCES dbo.TestUniqueIndex(id) 
@@ -164,14 +164,14 @@ ALTER TABLE dbo.TestForeignIndex ADD CONSTRAINT
 
 Insert a value that exist in the table that is referenced by the foreign key constraint
 
-sql
+```sql
 INSERT TestForeignIndex  VALUES(1)
 INSERT TestForeignIndex  VALUES(1)
 ```
 
 Insert a value that does not exist in the table that is referenced by the foreign key constraint
 
-sql
+```sql
 INSERT TestForeignIndex  VALUES(2)
 ```
 
@@ -191,7 +191,7 @@ When you create a primary key, SQL Server will by default make that a clustered 
 
 Scroll up to where we added the unique constraint to the TestUniqueConstraint table, you will see this code
 
-sql
+```sql
 ALTER TABLE TestUniqueConstraint ADD CONSTRAINT ix_unique UNIQUE (id)
 ```
 
@@ -199,7 +199,7 @@ All we did was add the constraint, SQL Server added the index behind the scenes 
 
 Now run this query below
 
-sql
+```sql
 SELECT OBJECT_NAME(object_id) as TableName,
 name as IndexName, 
 type_desc as StorageType
@@ -219,7 +219,7 @@ As you can see both tables have an index
 
 Now let's look at what the case is for the foreign key tables. Run the query below
 
-sql
+```sql
 SELECT OBJECT_NAME(object_id) as TableName,
 name as IndexName, 
 type_desc as StorageType

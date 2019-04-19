@@ -33,7 +33,7 @@ SQL Server has added a new type of index which is column based instead of row ba
 
 Both of these tables have identical data and have 1 million rows.
 
-sql
+```sql
 SELECT COUNT(*),SomeValue FROM TestRowStore 
 group by SomeValue
 
@@ -77,7 +77,7 @@ You cannot truncate a table with a columnstore index
 
 I decided to look in the sysmessages table for any messages that had columnstore in the description
 
-sql
+```sql
 select  description  from sys.sysmessages
 where msglangid = 1033
 and description like'%columnstore%'

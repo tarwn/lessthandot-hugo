@@ -34,7 +34,7 @@ On the principal (north region) create the primary database
   
 
 
-sql
+```sql
 CREATE DATABASE [remotemirror_deleteon03032010] ON  PRIMARY 
 ( NAME = N'remotemirror', FILENAME = N'C:remotemirror.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, 
 FILEGROWTH = 100MB )
@@ -48,7 +48,7 @@ Next, take our initial full backup followed by a tail-end transaction log backup
   
 
 
-sql
+```sql
 BACKUP DATABASE [remotemirror_deleteon03032010] TO  DISK = N'C:delelet_remotemirror.bak' 
 WITH NOFORMAT, NOINIT,  NAME = N'remotemirror-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO
@@ -62,7 +62,7 @@ On the designated mirror (southern region) restore the full and tail end transac
   
 
 
-sql
+```sql
 RESTORE DATABASE remotemirror_deleteon03032010 FROM  DISK = N'D:delelet_remotemirror.bak' 
 WITH  FILE = 1,  NORECOVERY,  NOUNLOAD,  REPLACE,  STATS = 10
 GO
@@ -84,7 +84,7 @@ Again, no complexity is added so the statistics.
   
 Execute the following statements step by step. 
 
-sql
+```sql
 CREATE TABLE MIRROR_TST_01 
 (
 ID INT IDENTITY(1,1)

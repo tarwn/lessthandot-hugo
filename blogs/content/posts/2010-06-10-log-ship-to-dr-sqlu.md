@@ -198,7 +198,7 @@ Once the restore is done and logs have shipped, you will start to notice them mo
 
 Now that LS is running we can look into the process and logging of the events. The log\_shipping\_monitor_history table is extremely useful for validating the entire process between the instances. The Message column has logged information that will explain in detail the process that is occurring:
 
-sql
+```sql
 select [message] from log_shipping_monitor_history_detail
 ```
 

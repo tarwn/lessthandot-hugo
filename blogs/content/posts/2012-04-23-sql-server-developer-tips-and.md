@@ -32,7 +32,7 @@ A bonus (or down side) is that SQL Server automatically wraps each column with b
 
 Sometimes you need to write a very long query that follows a certain pattern. One pattern could be an update statement comparing one table to another, and updating the destination table if there are any changes. The query could look something like this:
 
-sql
+```sql
 update dbo.DestinationTable
 set
 	Column1 = s.Column1,

@@ -39,7 +39,7 @@ The tables in each are identical and appear as follows
 
 To create our supporting SQL Server table run the following create statement
 
-sql
+```sql
 SET ANSI_NULLS ON
 GO
 

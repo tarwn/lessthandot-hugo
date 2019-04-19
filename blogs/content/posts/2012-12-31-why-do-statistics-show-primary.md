@@ -25,7 +25,7 @@ This is a great question and relates to an article I'm writing on selectivity an
 
 The first part of this is the index the statistics were created off of.  If the table being indexed is a clustered table, as shown in listing 1, the unique row indicator for that table will become the primary key.  In our case, Col_ID is now the row indicator for the table or referenced to the actual data row in case the need arises.
 
-sql
+```sql
 CREATE TABLE SelectivityIndexOrder (
 Col_ID INT IDENTITY(1,1) PRIMARY KEY,
 Col_String VARCHAR(25),
@@ -59,7 +59,7 @@ What this means is, in the case of the creation of a nonclustered index, the col
 
 Now that we know how the clustered values are used in a nonclustered index, let's take a look at the structure of the nonclustered index.  Using DBCC IND and PAGE, we can drill down to see the actual utilization of the keys.
 
-sql
+```sql
 DBCC IND('QTuner',"SelectivityIndexOrder",2)
 GO
 ```
@@ -73,7 +73,7 @@ Figure 1
 
  
 
-sql
+```sql
 DBCC TRACEON(3604)
 DBCC PAGE('QTuner',1,434394,3)
 GO
@@ -93,7 +93,7 @@ Now, knowing that statistics are generated automatically for indexes, this would
 
 Using SHOW_STATISTICS, we can see that happening on our example, as shown in Figure 3.
 
-sql
+```sql
 DBCC SHOW_STATISTICS ("SelectivityIndexOrder", IDX_BIT);
 GO
 ```
@@ -113,7 +113,7 @@ As shown up until now, the reason the key is stored in the statistics is due to 
 
 To test this, use listing 2.
 
-sql
+```sql
 CREATE TABLE SelectivityIndexOrderHeap (
 Col_ID INT IDENTITY(1,1),
 Col_String VARCHAR(25),
@@ -161,7 +161,7 @@ Figure 4
 
 Notice in figure 4 that the key, which doesn't exist on the table, is shown.  This goes back to the same reasoning of why a key is included in the statistics of a clustered table.  With a HEAP, however, the row indicator is a pointer directly to the data row.  In listing 3, running DBCC PAGE on the first page shown, we can see how to find the data.
 
-sql
+```sql
 DBCC IND('QTuner',SelectivityIndexOrderHeap,2)
 GO
 DBCC TRACEON(3604)

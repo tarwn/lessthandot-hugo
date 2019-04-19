@@ -32,7 +32,7 @@ To see how it works we will create a table with one clustered and one non cluste
   
 Here is the code for that
 
-sql
+```sql
 USE tempdb
 go
  
@@ -53,7 +53,7 @@ To use INDEXPROPERTY you need to know the table ID, the name of the index and us
   
 So for the index ix\_test on table Test we will use INDEXPROPERTY(OBJECT\_ID('Test'), 'ix_test','IsClustered')
 
-sql
+```sql
 SELECT 'ix_test',INDEXPROPERTY(OBJECT_ID('Test'), 'ix_test','IsClustered')
 union all
 SELECT 'ix_test_clust',INDEXPROPERTY(OBJECT_ID('Test'), 'ix_test_clust', 'IsClustered')
@@ -85,7 +85,7 @@ _0 = Heap
   
 >1 = Nonclustered index_
 
-sql
+```sql
 select name,case indid when 1 then 'Clustered' else 'Non Clustered' end as TypeOfIndex
 from sysindexes --or sys.sysindexes on sql 2005 and up
 where name in( 'ix_test', 'ix_test_clust')
@@ -101,7 +101,7 @@ ix_test	Non Clustered</pre>
 
 And of course you can combine the two methods
 
-sql
+```sql
 SELECT name,INDEXPROPERTY(id, name,'IsClustered')
 from sysindexes 
 where name in( 'ix_test', 'ix_test_clust')

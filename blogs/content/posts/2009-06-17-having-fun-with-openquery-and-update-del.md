@@ -23,19 +23,19 @@ Recently I had to do some data manipulation against a Sybase linked server runni
 
 So let's look at some code, first create a linked server on your machine that is linked to your machine. You can add a linked server through the wizard or through the sp_addlinkedserver stored proc
 
-sql
+```sql
 EXEC master.dbo.sp_addlinkedserver @server = N'localhost', @srvproduct=N'SQL Server'
 ```
 
 Test that the linked server was created and that you can execute queries against it
 
-sql
+```sql
 select * from openquery(localhost,'select * from sysobjects')
 ```
 
 Now that this is done we need to create a table and insert one row of data
 
-sql
+```sql
 use tempdb
 go
 
@@ -48,7 +48,7 @@ insert test values(1,'test1')
 
 Select from the table
 
-sql
+```sql
 select * from test
 ```
 
@@ -63,7 +63,7 @@ Output
   
 A select statement with openquery looks like this
 
-sql
+```sql
 select * from openquery(localhost,'select * from tempdb.dbo.test')
 ```
 
@@ -73,14 +73,14 @@ As you can see that was pretty standard
   
 an insert statement is a little odd looking because you still have the select in the openquery but the values that you want to insert look like a select statement that come after the openquery. It looks like this
 
-sql
+```sql
 INSERT  OPENQUERY(localhost,'SELECT id,col1 from tempdb.dbo.test ')
 SELECT 2,'Test2'
 ```
 
 Verify that the data is correct
 
-sql
+```sql
 select * from test
 ```
 
@@ -96,14 +96,14 @@ Output
   
 The update has a select with a where clause inside the openquery statement and the set statement comes after that. Here is what this looks like
 
-sql
+```sql
 UPDATE OPENQUERY(localhost, 'select id,col1 from tempdb.dbo.test where id = 1 ')
 SET id = 3,col1 = 'Test3'
 ```
 
 Verify that the data is correct
 
-sql
+```sql
 select * from test
 ```
 
@@ -119,13 +119,13 @@ Output
   
 Finally a delete will have the where clause inside openquery 
 
-sql
+```sql
 DELETE OPENQUERY(localhost, 'select id,col1 from tempdb.dbo.test where id = 2 ')
 ```
 
 Verify that the data is correct
 
-sql
+```sql
 select * from test
 ```
 
@@ -142,7 +142,7 @@ I showed you what worked, now let's look at some stuff that doesn't
   
 Create another table that looks like the table we had before but without a primary key
 
-sql
+```sql
 create table test2(id int, col1 varchar(20))
 go
 
@@ -151,7 +151,7 @@ insert test2 values(1,'test1')
 
 The select statement works without a problem
 
-sql
+```sql
 select * from openquery(localhost,'select * from tempdb.dbo.test2')
 ```
 
@@ -164,14 +164,14 @@ Output
 
 The insert statement also works
 
-sql
+```sql
 INSERT  OPENQUERY(localhost,'SELECT id,col1 from tempdb.dbo.test2 ')
 SELECT 2,'test2'
 ```
 
 Verify that the data is correct
 
-sql
+```sql
 select * from test2
 ```
 
@@ -180,7 +180,7 @@ select * from test2
 
 If you run the following update query
 
-sql
+```sql
 UPDATE OPENQUERY(localhost, 'select id,col1 from tempdb.dbo.test2 where id = 1 ')
 SET id = 3,col1 = 'test2'
 ```
@@ -197,7 +197,7 @@ OLE DB error trace [OLE/DB Provider 'SQLOLEDB' ICommandText::Execute returned 0x
 
 The delete has the same issue as the update statement, running the following
 
-sql
+```sql
 DELETE OPENQUERY(localhost, 'select id,col1 from tempdb.dbo.test2 where id = 2 ')
 ```
 will produce this error message
@@ -214,7 +214,7 @@ So what those errors are telling us is that a row lookup could not be performed,
 
 Now that we are done we can drop the linked server, you can use sp_dropserver to do that
 
-sql
+```sql
 sp_dropserver 'localhost'
 ```
 

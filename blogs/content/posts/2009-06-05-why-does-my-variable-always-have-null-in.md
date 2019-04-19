@@ -17,7 +17,7 @@ I'm sure one of us already Wiki'd this or put it in a blog but since I just had 
 
 PLEASE and I stress, PLEASE, make sure you initialize your variable in TSQL or at the least, use IsNull or coalesce to prevent this famous and all annoying issue from killing your hard work
 
-sql
+```sql
 Declare @AllImportantVarToRunThisScript varchar(30)
 Declare @MyVarThatIKnowHasValue varchar(30)
 
@@ -27,7 +27,7 @@ Select @AllImportantVarToRunThisScript
 ```
 Oops! You just lost the game and crashed and burned. Take care of your NULL's!!!!
 
-sql
+```sql
 Declare @AllImportantVarToRunThisScript varchar(30)
 Declare @MyVarThatIKnowHasValue varchar(30)
 

@@ -30,7 +30,7 @@ First I backed the database up, one backup used compression while the other one 
 
 Let's look at some code
 
-sql
+```sql
 BACKUP DATABASE [SmallDB] TO  DISK = N'V:SmallDB_Compressed.BAK' 
 WITH NOFORMAT, NOINIT,  
 NAME = N'SmallDB-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, COMPRESSION,  
@@ -40,7 +40,7 @@ GO
 
 The compressed backup took 34.313 seconds (138.881 MB/sec) to complete.
 
-sql
+```sql
 BACKUP DATABASE [SmallDB] TO  DISK = N'V:SmallDB_UnCompressed.BAK' 
 WITH NOFORMAT, NOINIT,  
 NAME = N'SmallDB-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,   
@@ -54,7 +54,7 @@ As you can see the compressed backup was a little faster. The size of the backup
 
 After I did the backups I decided to do the restores.
 
-sql
+```sql
 RESTORE DATABASE [SmallDB] 
 FROM  DISK = N'V:SmallDB_Compressed.BAK' 
 WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 1
@@ -63,7 +63,7 @@ GO
 
 RESTORE DATABASE successfully processed 609980 pages in 23.524 seconds (202.578 MB/sec).
 
-sql
+```sql
 RESTORE DATABASE [SmallDB] 
 FROM  DISK = N'V:SmallDB_UnCompressed.BAK' 
 WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 1
@@ -76,7 +76,7 @@ The restores had a bigger difference in time than the backups.
 
 After I was done with the small database I decided to take a bigger database, this database is 44 GB, I wanted to see if using a bigger database would make a bigger or a smaller difference when using compressed backups compared to uncompressed backups.
 
-sql
+```sql
 BACKUP DATABASE MediumDB TO  DISK = N'V:MediumDB_Compressed.BAK' 
 WITH NOFORMAT, NOINIT,  
 NAME = N'MediumDB-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, COMPRESSION,  
@@ -86,7 +86,7 @@ GO
 
 The compressed backup took 303.113 seconds (142.845 MB/sec) to complete.
 
-sql
+```sql
 BACKUP DATABASE MediumDB TO  DISK = N'V:MediumDB_UnCompressed.BAK' 
 WITH NOFORMAT, NOINIT,  
 NAME = N'MediumDB-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,   
@@ -100,7 +100,7 @@ Just as before with the small database, the compressed backup was a little faste
 
 Now let's take a look at the restore.
 
-sql
+```sql
 RESTORE DATABASE [MediumDB] 
 FROM  DISK = N'V:MediumDB_Compressed.BAK' 
 WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 1
@@ -109,7 +109,7 @@ GO
 
 RESTORE DATABASE successfully processed 5542183 pages in 215.319 seconds (201.089 MB/sec).
 
-sql
+```sql
 RESTORE DATABASE [MediumDB] 
 FROM  DISK = N'V:MediumDB_UnCompressed.BAK' 
 WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 1

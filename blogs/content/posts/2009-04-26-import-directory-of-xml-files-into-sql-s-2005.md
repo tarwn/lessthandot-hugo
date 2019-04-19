@@ -19,7 +19,7 @@ SQLCLR comes in for two tasks. The first is to grab some file attributes and the
 
 Here is the CREATE statements for the two tables I'll use in this example
 
-sql
+```sql
 CREATE TABLE [dbo].[XMLTestArchive](
 	[filenm] [varchar](500) NULL,
 	[timecreated] [datetime] NULL,
@@ -28,7 +28,7 @@ CREATE TABLE [dbo].[XMLTestArchive](
 ) ON [PRIMARY]
 GO
 ```
-sql
+```sql
 CREATE TABLE [dbo].[XMLImportWT](
 	[filenm] [varchar](500) NULL,
 	[timecreated] [datetime] NULL,
@@ -123,7 +123,7 @@ For test I'm using local directories, C:XML and C:XML_ARCHIVE.
   
 Given the procedure we just created was deployed successfully, I can now call the procedure to process everything in C:XML as
 
-sql
+```sql
 Exec dbo.ImportFileAttributes 'C:XML_ARCHIVE','C:XML','[XMLImportWT]'
 ```
 Executing this I can now see in XMLImportWT that I've grabbed the file names and file creation date and times.
@@ -136,7 +136,7 @@ Now let's finish the process and grab the XML data and move everything from the 
   
 First step, I will update the rownum column
 
-sql
+```sql
 Update a
 Set rownum = rowid
 from [XMLImportWT] a
@@ -179,7 +179,7 @@ While @int <= @loop
 ```
 Now it is just a matter of inserting the work table contents into the primary table. This is where we can filter out any file that is found in the primary table that may have been duplciated in the directory or some other process caused the duplication to come up in the process.
 
-sql
+```sql
 insert into XMLTestArchive
 select * from [XMLImportWT]
 where filenm not in (select filenm from XMLTestArchive)
@@ -200,7 +200,7 @@ This seems to run pretty well. I'd like to hear performance improvements on my T
 
 Wrapping this all up in a procedure that we can call would look like this
 
-sql
+```sql
 CREATE PROCEDURE [dbo].[GetAllXMLFiles] (@dest varchar(255),@source varchar(255),@workTable sysname)
 As
 Set nocount On
@@ -250,7 +250,7 @@ Set nocount off
 ```
 And the call would then just be
 
-sql
+```sql
 Exec [GetAllXMLFiles] 'C:XML_ARCHIVE','C:XML','[XMLImportWT]';
 ```
 This handles the entire process for us and can be placed in a SQL Agent job for automating the process.

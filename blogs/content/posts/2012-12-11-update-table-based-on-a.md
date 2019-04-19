@@ -32,7 +32,7 @@ This may seem like a simple and basic task but it is a common question asked, �
 
 Let's say you have a query such as the one below from AdventureWorks2012.
 
-sql
+```sql
 SELECT per.LastName
 	,emp.JobTitle
 	,salesp.CommissionPct
@@ -51,7 +51,7 @@ In the above query, let's say that you have to update CommissionPct by .002 for 
 
 To perform this type of update, it truly is not much different than a regular update but in this case, you'll use the alias from the table that needs to be updated in the FROM.  You could really look at this as an UPDATE on a derived table.   Take a look at a typical update statement
 
-sql
+```sql
 UPDATE [Sales].[SalesPerson] 
 SET [Sales].[SalesPerson].CommissionPct = [Sales].[SalesPerson].CommissionPct + .002
 ```
@@ -60,7 +60,7 @@ SET [Sales].[SalesPerson].CommissionPct = [Sales].[SalesPerson].CommissionPct + 
 
 In the update statement, the table SalesPerson is the object that is focused on or is being updated.  In this case, SalesPerson could reference an alias in order to qualify the path to the correct data to update.  So truly, you could perform this update like the below statement as well.
 
-sql
+```sql
 UPDATE a
 SET a.CommissionPct = a.CommissionPct + .002
 FROM [Sales].[SalesPerson] a
@@ -70,7 +70,7 @@ FROM [Sales].[SalesPerson] a
 
 Now that we know we can do this, why not use the FROM area to really pull together the information we need in order to make a successful update statement based on several bits of data from several tables that are joined together.
 
-sql
+```sql
 UPDATE salesp
 SET salesp.CommissionPct = salesp.CommissionPct + .002
 FROM [Person].[Person] per

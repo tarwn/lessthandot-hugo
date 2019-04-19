@@ -21,7 +21,7 @@ Under normal circumstances, it is best if all your collations match. This includ
 
 **How to detect this problem:**
 
-sql
+```sql
 Select	'Warning: Collation conflict between user database and TempDB' As Warning
 Where	DatabasePropertyEx('TempDB', 'Collation') <> DatabasePropertyEx(db_name(), 'Collation')
 ```
@@ -29,7 +29,7 @@ Where	DatabasePropertyEx('TempDB', 'Collation') <> DatabasePropertyEx(db_name(),
 
 ex:
 
-sql
+```sql
 Create Table #AnyNameYouWant(Id Int, EyeColor VarChar(20) Collate Database_Default)
 ```
 **Level of severity:** High. This is a hidden, hard to find bug, just waiting to happen.

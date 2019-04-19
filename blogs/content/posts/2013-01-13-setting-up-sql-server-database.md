@@ -28,7 +28,7 @@ Below is the whole thing in one easy to run script
   
 Make sure to change Your.Account@gmail.com to what your gmail account is, also notice that @enable_ssl =1 and that we are using port 587 (@port = '587')
 
-sql
+```sql
 IF NOT EXISTS(SELECT * FROM msdb.dbo.sysmail_profile WHERE  name = 'GmailDBMail') 
   BEGIN
     
@@ -84,7 +84,7 @@ You might have to restart SQL Agent for Database Mail to start working, so do th
 
 Now execute the following stored proc, change your.account@gmail.com to where you want to send it
 
-sql
+```sql
 EXEC msdb.dbo.sp_send_dbmail
     @profile_name = 'GmailDBMail',
     @recipients = 'your.account@gmail.com',

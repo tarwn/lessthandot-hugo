@@ -105,7 +105,7 @@ Would you like to know the last time DBCC ran successfully against your database
   
 This code would report that
 
-sql
+```sql
 CREATE TABLE #Test(ParentObject VARCHAR(500),Object VARCHAR(500),Field  VARCHAR(500),VALUE VARCHAR(500))
 
 DECLARE @db VARCHAR(500)
@@ -138,7 +138,7 @@ min server memory (MB)
 
 For example
 
-sql
+```sql
 SELECT * FROM sys.configurations
 WHERE name like( 'max%')
 
@@ -148,14 +148,14 @@ WHERE name like( 'min%')
 
 What about fillfactor?
 
-sql
+```sql
 SELECT * FROM sys.configurations
 WHERE name  = 'fill factor (%)'
 ```
 
 How about the 50 most used stored procedures
 
-sql
+```sql
 SELECT top 50 * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid),'Ad-Hoc') AS ProcName,execution_count,s2.objectid,
     (SELECT TOP 1 SUBSTRING(s2.TEXT,statement_start_offset / 2+1 ,
       ( (CASE WHEN statement_end_offset = -1
@@ -174,7 +174,7 @@ ORDER BY execution_count DESC
 
 How about stored procedures with the highest average CPU time
 
-sql
+```sql
 SELECT top 50 * FROM(SELECT COALESCE(OBJECT_NAME(s2.objectid),'Ad-Hoc') AS ProcName,execution_count,s2.objectid,
     (SELECT TOP 1 SUBSTRING(s2.TEXT,statement_start_offset / 2+1 ,
       ( (CASE WHEN statement_end_offset = -1
@@ -193,7 +193,7 @@ ORDER BY AverageCPUTime DESC
 
 Do you want to see all the different programs connected to your server?
 
-sql
+```sql
 SELECT COUNT(*) Count,program_name 
 FROM sys.sysprocesses
 WHERE status <> 'background'
@@ -214,7 +214,7 @@ This returns something like this on one of my boxes
 
 Do you want to know the file size, space used and free space for all of the files for your database?
 
-sql
+```sql
 select
     CONVERT(DATE,GETDATE()) AS [Date],
     a.FILEID,

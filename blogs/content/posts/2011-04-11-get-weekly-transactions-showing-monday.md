@@ -25,7 +25,7 @@ Rather than showing a solution for that particular thread, I show an AdventureWo
 
 Here is the query 
 
-sql
+```sql
 DECLARE  @First_Bow      DATETIME, 
          @Week_Start_Day TINYINT 
 

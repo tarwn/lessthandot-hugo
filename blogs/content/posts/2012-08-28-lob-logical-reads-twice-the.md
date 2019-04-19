@@ -18,7 +18,7 @@ categories:
 ---
 This is a follow-up article to, “[Index Seek on LOB Columns][1]”.  While working on the demonstration for the computed column method to achieve index seeks on a LOB data type, I noticed the lob logical reads were exactly twice the row count in the table that the queries were being executed on.  For example, the exact row count of PerfLOB was 100.  When running the query shown in listing 1, the statistics IO show exactly 200 lob logical reads.
 
-sql
+```sql
 SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB WITH (INDEX=IDX_LOGSTRING)
 ```
 
@@ -30,7 +30,7 @@ To understand the query in listing 1 and the read counts, let's investigate the 
 
 First, create a new table and insert 100 Word documents into it.  Change the path to a Word document on your system that the SQL Server service account has access to.
 
-sql
+```sql
 CREATE TABLE PerfLOB (ID INT IDENTITY(1,1) PRIMARY KEY, LOBVAL VARCHAR(MAX), SUB_CONTENT AS (CONVERT([varchar](100),substring([LOBVAL],(1),(100)),0)))
 GO
 INSERT INTO PerfLOB (LOBVAL)
@@ -41,14 +41,14 @@ GO 100
 
 Next, create the index that utilizes the computed column and the nonkey LOBVAL column.
 
-sql
+```sql
 CREATE NONCLUSTERED INDEX IDX_LOGSTRING ON PerfLOB (SUB_CONTENT) INCLUDE (LOBVAL)
 ```
 
 
 Set statistics IO on and run the query below:
 
-sql
+```sql
 SET STATISTICS IO ON 
 SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB WITH (INDEX=IDX_LOGSTRING)
 ```
@@ -66,7 +66,7 @@ Immediately we can see, even knowing we inserted only 100 rows into the table, w
 
 Create a table to hold the DBCC IND results so they can be reviewed easier.
 
-sql
+```sql
 IF  EXISTS (SELECT 1 FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IND_Results]') AND type in (N'U'))
 DROP TABLE [dbo].[IND_Results]
 GO
@@ -94,7 +94,7 @@ GO
 > Using DBCC IND and Dynamic SQL with the EXEC command is a common method to insert the results into a static table for later review.  It is a reliablemethod for capturing results as well.</p>
 To insert the DBCC IND results, use Exec as shown below
 
-sql
+```sql
 INSERT INTO IND_Results EXEC ('DBCC IND (QTuner, ''dbo.PerfLOB'', 2)') 
 GO
 ```
@@ -106,7 +106,7 @@ To read further on DBCC IND and the page types that can be returned in the resul
 
 Before looking too deep into the DBCC IND results, do a direct select on the IND_Results table to return all the information returned.
 
-sql
+```sql
 SELECT * FROM IND_Results
 ```
 
@@ -130,7 +130,7 @@ To visualize this, imagine the page layout shown below starting with the root pa
 > Note: the ordering of the pages as they are stored does not always go in order depicted. Page 20411 starts and contains the text tree to pages 20413 to 20417. Also, page 20411 may not relate directly to the other pages but the illustration shows a good visualization to the effects of the text page type relations and tree sharing.</p>
 This still doesn't answer the amount of reads until we look at the pages that are PageType 4.
 
-sql
+```sql
 SELECT COUNT(*) FROM IND_Results WHERE pagetype = 4
 ```
 
@@ -143,7 +143,7 @@ It is important to mention that the document that was tested and the needs it ha
 
 To further investigate how the storage is handled, and to look at the page types, take a more static and direct approach as shown below.  Performing this method allows us to remove the possibility of variable results based on a LOB insert from a document that may cause different page count needs.
 
-sql
+```sql
 USE tempdb;
 SET NOCOUNT ON;
 IF OBJECT_ID(N'Test', N'U') IS NOT NULL DROP TABLE dbo.Test;
@@ -159,7 +159,7 @@ The code example above creates a testing table, “Test” and inserts enough da
 
 With SQL Server 2012 a new undocumented DMV can be used to look further into the page storage and types, sys.dm\_db\_database\_page\_allocations.
 
-sql
+```sql
 SELECT
     rowset_id,
     allocation_unit_id,

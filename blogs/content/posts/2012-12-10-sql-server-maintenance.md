@@ -72,7 +72,7 @@ Paul Randal who worked on DBCC CHECKDB has a whole bunch of blog posts about DBC
 
 Running out of space on a drive is not fun stuff, suddenly you can't insert any more data into your tables because no new pages can be allocated. If you have tools in your shop like cacti then this is probably already monitored. If you don't have any tools then either get a tool or roll your own. Here is how you can get the free space fo the drives with T-SQL
 
-sql
+```sql
 CREATE TABLE #FixedDrives(Drive CHAR(1),MBFree INT)
 
 INSERT #FixedDrives
@@ -95,7 +95,7 @@ V	212075-- User databases </pre>
 
 Here is a simple way of using T-SQL to create a SQL Agent job that runs every 10 minutes and will send an email if you go below the threshold that you specified. This code is very simple and is just to show you that you can do this in T-SQL. You can make it more dynamic/configurable by not hardcoding the drives or thresholds
 
-sql
+```sql
 DECLARE @MBFreeD INT
 DECLARE @MBFreeE INT
 CREATE TABLE #FixedDrives(Drive CHAR(1),MBFree INT)
@@ -137,7 +137,7 @@ END
 
 In the [Sizing database files][11] I talked about the importance of sizing database files. Just like you can run out of hard drive space, you can also fill up a file used by SQL Server. here is query that will tell you how big the file is, how much space is use and how much free space is left. You can use a query like this to alert you before you run out of space
 
-sql
+```sql
 SELECT
 	a.FILEID,
 	[FILE_SIZE_MB] = 

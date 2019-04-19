@@ -35,7 +35,7 @@ public partial class UserDefinedFunctions
 ```
 Call
 
-sql
+```sql
 Select dbo.DateTimeTimeZoneOffset('2009-06-26')
 ```
 Usage of this is seen directly in the blog post from yesterday and how it can be a simply task for formatting things like DateTime. Don't let it stop there though. Formatting strings for file names, headers, logs and on can be done quickly and easily with C# (or VB.NET) and makes this a great tool to any DBA.
@@ -65,7 +65,7 @@ public partial class StoredProcedures
 ```
 Call
 
-sql
+```sql
 Exec MoveFile 'C:txt_doc.txt','C:txt_doc_new.txt'
 ```
 
@@ -90,7 +90,7 @@ public class SQLCLRIO
 ```
 Call
 
-sql
+```sql
 Exec WriteToFile 'Testing....','C:txt_doc_new.txt'
 ```
 
@@ -133,7 +133,7 @@ public partial class StoredProcedures
 ```
 Call
 
-sql
+```sql
 Exec RemoveOldBackups 'C:test',23
 ```
 

@@ -38,7 +38,7 @@ I'll dive into those points starting with leaving SA on the instance at all. Fir
 
 This is how...
 
-sql
+```sql
 ALTER LOGIN sa DISABLE;
 ALTER LOGIN sa WITH NAME = IAMGOD;
 ALTER LOGIN IAMGOD ENABLE;

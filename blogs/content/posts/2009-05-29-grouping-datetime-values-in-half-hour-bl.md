@@ -78,7 +78,7 @@ vCount time
 
 This is simple to do with a CASE statement in SQL Server. First create the following table with sample data
 
-sql
+```sql
 create table #temp (SomeDate datetime)
 insert #temp values ( '2009-05-12 11:13:19.667')
 insert #temp values ( '2009-05-12 11:12:19.667')
@@ -101,7 +101,7 @@ insert #temp values ( '2009-05-12 15:23:19.667')
 
 Here is what the select statement looks like
 
-sql
+```sql
 select count(*) as vCount,case when datepart(mi,Somedate) < 30 
 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
 else dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end as time
@@ -134,7 +134,7 @@ vCount time
 
 Here is what the data looks side by side if you run the following query
 
-sql
+```sql
 select Somedate,case when datepart(mi,Somedate) < 30 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
  else dateadd(mi,30,dateadd(hh, datediff(hh, 0, Somedate)+0, 0)) end
 from #temp
@@ -178,7 +178,7 @@ To do the same for 15 minute blocks is just adding 2 more CASE statements
 
 Here is what that looks like
 
-sql
+```sql
 select count(*) as vCount,case when datepart(mi,Somedate) < 15 
 then dateadd(hh, datediff(hh, 0, Somedate)+0, 0)
 when datepart(mi,Somedate) between 15 and 29

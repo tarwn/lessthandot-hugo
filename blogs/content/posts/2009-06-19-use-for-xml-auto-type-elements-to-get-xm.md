@@ -23,7 +23,7 @@ For every table that you have in a join it becomes a child of the table before. 
   
 First let's create some tables and insert some data
 
-sql
+```sql
 CREATE TABLE #tempCustomer (CustomerID INT)
 CREATE TABLE #tempAddress (CustomerID INT,FullAddress varchar(100))
 CREATE TABLE #tempPhone (CustomerID INT,PhoneNumber varchar(100))
@@ -39,7 +39,7 @@ INSERT #tempPhone VALUES(2,'212-777-8888')
 
 Now let's see what we have by running the following select statement
 
-sql
+```sql
 SELECT Customer.CustomerID,Address.FullAddress,Phone.PhoneNumber
 FROM #tempCustomer Customer
 JOIN #tempAddress Address ON Address.CustomerID= Customer.CustomerID
@@ -57,7 +57,7 @@ That is a very simple data set
 
 Now run the following query to get some XML
 
-sql
+```sql
 SELECT Customer.CustomerID,Address.FullAddress,Phone.PhoneNumber
 FROM #tempCustomer Customer
 JOIN #tempAddress Address ON Address.CustomerID= Customer.CustomerID
@@ -115,7 +115,7 @@ As you can see Phone and Address are on the same level
 
 Here is the query that will accomplish that
 
-sql
+```sql
 SELECT Customer.CustomerID,
 (SELECT FullAddress
 FROM #tempAddress Address
@@ -133,7 +133,7 @@ As you can see we used some subqueries to accomplish that.
   
 Actually we can eliminate one of the subqueries and use a join between Customer and Address and all we need is put Phone in a subquery in the select of Customer to make it the same level as address.
 
-sql
+```sql
 SELECT Customer.CustomerID,Address.FullAddress,
 (SELECT PhoneNumber
 FROM #tempPhone Phone
@@ -148,7 +148,7 @@ Did you notice we used FOR XML AUTO,TYPE, ELEMENTS? We need to use TYPE in the s
 
 Run this query
 
-sql
+```sql
 SELECT Customer.CustomerID,Address.FullAddress,
 (SELECT PhoneNumber
 FROM #tempPhone Phone

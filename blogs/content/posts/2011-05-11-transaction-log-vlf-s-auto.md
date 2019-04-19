@@ -91,13 +91,13 @@ Below is the schema for the table:
 
  
 
-sql
+```sql
 CREATE TABLE [dbo].[vlftab]( [ID] [int] IDENTITY(1,1) NOT NULL, [comment] [varchar](8000) NOT NULL, [Name] [varchar](20) NOT NULL, [surname] [varchar](40) NOT NULL, [DoB] [date] NOT NULL, [acc] [int] NOT NULL, [joindate] [datetime] NOT NULL)
 ```
 
 I then used three basic statements to test how long it takes to complete:
 
-sql
+```sql
 update presentation_fast..vlftab set comment = upper(comment),
 name = upper (name),
 surname = upper(surname)

@@ -37,7 +37,7 @@ Someone asked [two interesting questions][1] last night
 
 Let's look at question number one first. Is there a way to construct an empty CTE? Yes, there is, but why would you want to do this? Anyway, here is one way of having an empty CTE
 
-sql
+```sql
 WITH Hello 
 AS (
 SELECT  name
@@ -50,14 +50,14 @@ Question number two (Can a CTE be modified? Can I insert rows after it has been 
 
 We need to create a table first with 1 row
 
-sql
+```sql
 CREATE TABLE testNow(id int)
 INSERT testNow VALUES(1)
 ```
 
 Now run the following which will run an update statement against the CTE
 
-sql
+```sql
 ;WITH Hello 
 AS (
 SELECT id FROM testNow
@@ -68,13 +68,13 @@ UPDATE Hello SET id = 2
 ```
 If we check the table now, we can see that the value changed from 1 to 2
 
-sql
+```sql
 SELECT * FROM testNow
 ```
 
 What about inserts, can we insert into a common table expression? Sure, let's take a look how we can do that.
 
-sql
+```sql
 ;WITH Hello 
 AS (
 SELECT id FROM testNow
@@ -86,7 +86,7 @@ INSERT Hello VALUES( 3 )
 
 If we check the table now, we will see two rows in the table
 
-sql
+```sql
 SELECT * FROM testNow
 ```
 
@@ -94,7 +94,7 @@ So this is all, but what is the point? Really for the examples I gave there is n
 
 First we need to create the following table
 
-sql
+```sql
 CREATE TABLE SomeTable(id int,SomeVal char(1),SomeDate date)
 INSERT SomeTable 
 SELECT null,'A','20110101'
@@ -116,7 +116,7 @@ SELECT null,'C','20090101'
 
 Now run a simple select statement
 
-sql
+```sql
 SELECT * FROM SomeTable
 ```
 
@@ -150,7 +150,7 @@ First let's do the select statement, in order to accomplish what we set out to d
 
 Run the following statement
 
-sql
+```sql
 ;WITH cte AS(SELECT 
 		ROW_NUMBER() OVER(PARTITION BY SomeVal 
 				  ORDER BY SomeDate DESC) AS row,
@@ -174,7 +174,7 @@ So where row is 1 we will make SomeVal 1 otherwise we will make it 0, we can do 
 
 Here is what the update looks like
 
-sql
+```sql
 ;WITH cte AS(SELECT 
 		ROW_NUMBER() OVER(PARTITION BY SomeVal 
 				  ORDER BY SomeDate DESC) AS row,
@@ -186,7 +186,7 @@ SET id =  CASE WHEN row = 1 THEN 1 ELSE 0 END
 
 Now run the select against the table again
 
-sql
+```sql
 SELECT * FROM SomeTable
 ```
 

@@ -26,21 +26,21 @@ I once did some work for a company and noticed that they were running as sysadmi
 
 Yesterday I got a request from a person who wanted to be able to change two stored procedures on the staging server. There is no need to make this person a db_owner, you can just give the ALTER proc permissions. There are two flavors of the syntax
 
-sql
+```sql
 GRANT ALTER  ON OBJECT::ProcName TO UserName
 GRANT ALTER  ON  ProcName TO UserName
 ```
 
 Let's take a look at this by writing some code. First create a new database
 
-sql
+```sql
 CREATE DATABASE Test
 GO
 ```
 
 Create a user in that database
 
-sql
+```sql
 USE [master]
 GO
 CREATE LOGIN [TestUser] WITH PASSWORD=N'Test', DEFAULT_DATABASE=[test], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
@@ -53,7 +53,7 @@ GO
 
 Now create this very simple stored procedure
 
-sql
+```sql
 CREATE PROC prTest
 AS
 SELECT GETDATE()
@@ -61,7 +61,7 @@ SELECT GETDATE()
 
 Open up another connection, login as TestUser with the password Test. If you try to execuce the stored procedure you will get an error
 
-sql
+```sql
 EXEC prTest
 ```
 
@@ -71,7 +71,7 @@ The EXECUTE permission was denied on the object 'prTest', database 'test', schem
 
 In the window where you have all the permissions, give execute permissions to this stored procedure to the TestUser. You can use GRANT EXECUTE ON ProcName TO UserName to accomplish this, there is no need to give additional privileges like db_owner or sysadmin
 
-sql
+```sql
 GRANT EXECUTE  ON prTest  TO TestUser
 ```
 
@@ -79,7 +79,7 @@ Now you will see that TestUser can execute the stored procedure.
 
 If TestUser wants to modify the stored procedure you can give TestUser ALTER StoredProc permissions. First let's see what happens if TestUser tries to modify the stored procedure before we gave the permissions
 
-sql
+```sql
 ALTER PROC prTest
 AS
 SELECT GETDATE()
@@ -93,13 +93,13 @@ Cannot alter the procedure 'prTest', because it does not exist or you do not hav
 
 Execute the following in the window where you have all the permissions
 
-sql
+```sql
 GRANT ALTER ON prTest TO TestUser
 ```
 
 Now run this again in the window where you are logged in as TestUser
 
-sql
+```sql
 ALTER PROC prTest
 AS
 SELECT GETDATE()
@@ -109,7 +109,7 @@ As you now saw, this succeeded.
 
 You can also take away privileges, execute the following in the window where you have all the permissions.
 
-sql
+```sql
 REVOKE ALTER ON prTest  TO TestUser
 ```
 
@@ -117,7 +117,7 @@ Now when you try to alter the stored procedure again it will fail.
 
 Here is the other way to give permissions, I like the other syntax better, it is shorter and there are no double colon characters
 
-sql
+```sql
 GRANT ALTER  ON OBJECT::prTest TO TestUser
 ```
 

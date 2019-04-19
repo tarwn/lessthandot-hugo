@@ -35,7 +35,7 @@ This is pretty simple to do if you capture the output from the first procedure a
 
 This is our first proc, as you can see I hardcoded the value 1 so that we are sure this is returned from the first proc
 
-sql
+```sql
 CREATE PROC prtest1
 AS
 RETURN 1 --@@error
@@ -44,7 +44,7 @@ GO
 
 This is our second proc, as you can see I hardcoded the value 2 so that we are sure this is returned from the first proc. You can also see that I store the return value from the stored procedure prtest1 in the @error and this is an output parameter
 
-sql
+```sql
 CREATE PROC prtest2 @error INT OUTPUT
 AS
 EXEC @error = prtest1
@@ -55,7 +55,7 @@ Here is now how you bring both statuses back by using a combination of a return 
 
 This part _@error = @FirstProc OUTPUT_ will get the value that is returned from the output parameter
 
-sql
+```sql
 DECLARE @SecondProc INT, @FirstProc INT
 EXEC @SecondProc = prtest2 @error = @FirstProc   OUTPUT
 
@@ -71,7 +71,7 @@ Output
 
 I prefer to return errors that I capture from within the proc as output parameters, I will also use the _ERROR_MESSAGE()_ function to return something that makes more sense to the user than a number. Below is an example
 
-sql
+```sql
 BEGIN TRY
      SELECT 1/0
 END TRY

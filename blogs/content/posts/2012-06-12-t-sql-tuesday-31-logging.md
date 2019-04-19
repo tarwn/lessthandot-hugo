@@ -32,7 +32,7 @@ _For the purpose of these examples I'm going to be logging the database growth i
 
 First up, let's create a table to store the raw data in:
 
-sql
+```sql
 CREATE TABLE dbo.DatabaseSizeLog(
 	Id		int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	LogTime		DateTime2 NOT NULL,
@@ -51,7 +51,7 @@ Note that I am capturing both ids and names for the table and index. We could JO
 
 Once we have the raw table, we need the query to capture the data:
 
-sql
+```sql
 INSERT INTO dbo.DatabaseSizeLog(LogTime, DatabaseId, ObjectId, 
 				TableName, IndexId, IndexName, AllocatedBytes, 
 				UsedBytes, UnusedBytes, [RowCount])
@@ -80,7 +80,7 @@ Once we have some data in the table, we can build some information gathering que
 
 **What are our largest tables right now?**
 
-sql
+```sql
 DECLARE @TargetTime DateTime;
 SELECT TOP 1 @TargetTime = LogTime FROM dbo.DatabaseSizeLog ORDER BY LogTime DESC;
 
@@ -97,7 +97,7 @@ ORDER BY SUM(AllocatedBytes) DESC;
 ```
 **What percentage of our largest tables is indexes?**
 
-sql
+```sql
 DECLARE @TargetTime DateTime;
 SELECT TOP 1 @TargetTime = LogTime FROM dbo.DatabaseSizeLog ORDER BY LogTime DESC;
 
@@ -113,7 +113,7 @@ ORDER BY SUM(AllocatedBytes) DESC;
 ```
 **Which tables are growing the quickest?**
 
-sql
+```sql
 WITH LogHistory AS (
 	SELECT Id, LogTime, DatabaseId, ObjectId, 
 			TableName, IndexId, IndexName, AllocatedBytes, 
@@ -144,7 +144,7 @@ Besides being able to look at some general statistics, if we have a system that 
   
 Most recent total allocated size of the database (in MB).
 
-sql
+```sql
 SELECT TOP 1 SUM(AllocatedBytes) / 1048576.0
 FROM dbo.DatabaseSizeLog
 GROUP BY LogTime
@@ -154,7 +154,7 @@ ORDER BY LogTime DESC;
   
 Hourly growth in MB/hour for the last two entries
 
-sql
+```sql
 WITH LastTwoEntries AS (
 	SELECT TOP 2 
 			SizeInMB = SUM(AllocatedBytes) / 1048576.0,
@@ -171,7 +171,7 @@ FROM LastTwoEntries LTE1
   
 This lists all tables that have shrunk by more than 10% since the previous log entry.
 
-sql
+```sql
 WITH Entries AS (
 	SELECT  ObjectId,
 			TableName,

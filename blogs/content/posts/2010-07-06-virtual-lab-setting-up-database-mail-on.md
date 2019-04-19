@@ -130,7 +130,7 @@ Here are the commands we will be using:
 
 And if we put it all together then we can duplicate the wizardy approach above like so:
 
-sql
+```sql
 ---- Enable the XPs for Database Mail
 EXECUTE sp_configure 'show advanced', 1;
 RECONFIGURE;

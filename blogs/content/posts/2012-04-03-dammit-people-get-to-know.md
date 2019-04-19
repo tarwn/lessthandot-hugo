@@ -33,14 +33,14 @@ Let's look at some examples
 
 First create this table
 
-sql
+```sql
 create table SomeTable(code char(3) not null)
 GO
 ```
 
 Now let's say we want to restrict the values that you can insert to only accept characters from a through z, here is what the constraint looks like
 
-sql
+```sql
 alter table SomeTable add  constraint ck_bla
 check (code like '[a-Z][a-Z][a-Z]' )
 GO
@@ -48,7 +48,7 @@ GO
 
 If you now run the following insert statement....
 
-sql
+```sql
 insert SomeTable values ('123')
 ```
 
@@ -62,14 +62,14 @@ The statement has been terminated._
 
 What if you have a tinyint column but you want to make sure that values are less then 100? Easy as well, first create this table
 
-sql
+```sql
 create table SomeTable2(SomeCol tinyint not null)
 GO
 ```
 
 Now add this constraint
 
-sql
+```sql
 alter table SomeTable2 add  constraint ck_SomeTable2
 check (SomeCol < 100 )
 GO
@@ -77,7 +77,7 @@ GO
 
 Try to insert the value 100
 
-sql
+```sql
 insert SomeTable2 values ('100')
 ```
 
@@ -89,7 +89,7 @@ The statement has been terminated._
 
 Okay, what happens if you try to insert -1?
 
-sql
+```sql
 insert SomeTable2 values ('-1')
 ```
 

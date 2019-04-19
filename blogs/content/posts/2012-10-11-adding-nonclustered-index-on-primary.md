@@ -24,7 +24,7 @@ I'd like to focus on what would be the largest aspect to why you would use an in
 
 Using AdventureWork2012, create a table from Sales.SalesOrderHeader that can be manipulated to fit the following tuning steps.
 
-sql
+```sql
 SELECT * INTO dbo.IndexPageCount FROM Sales.SalesOrderHeader
 GO
 ALTER TABLE dbo.IndexPageCount 
@@ -33,7 +33,7 @@ GO
 ```
 The above statement will create dbo.IndexPageCount and make the SalesOrderID the primary key column.  At this point, no other indexing has been done.  If a query was executed that relied on a predicate of the SalesOrderID, technically, further indexing may not be needed.  For example, review the following query and execution plan generated from how the table and indexing is setup on IndexPageCount.
 
-sql
+```sql
 SET STATISTICS IO ON
 
 SELECT 
@@ -62,7 +62,7 @@ In all respects, this plan is optimized fairly well.  The one key aspect to the
 
 Query referenced from: <http://www.sqlteam.com/article/what-data-is-in-sql-server-memory>
 
-sql
+```sql
 SELECT TOP 25 
 	obj.[name],
 	i.[name],
@@ -103,21 +103,21 @@ To lower the page count, we essentially need to lessen the need to pull the page
 
 Clear the buffer so we are sure we  look at the new index and compare the page count in the buffer to the previous results.
 
-sql
+```sql
 DBCC DROPCLEANBUFFERS
 ```
 
 
 Next, run the script below to create the nonclustered index or, covering index that consists of the key column being the primary key column of SalesOrderID and INCLUDE the DueDate, ShipDate and SunTotal columns.
 
-sql
+```sql
 CREATE INDEX IDX_SalesOrderID_COVER_ASC ON dbo.IndexPageCount (SalesOrderID) INCLUDE (DueDate,ShipDate,SubTotal)
 ```
 
 
 Execute the previously used query
 
-sql
+```sql
 SELECT 
 	hdr.DueDate
 	,hdr.ShipDate

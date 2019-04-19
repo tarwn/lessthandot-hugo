@@ -25,7 +25,7 @@ This month's topic is “Prox n' Funx”. I am going to show something that frus
 
 I'm using SQL Server Reporting Services 2008R2 and AdventureWorks2008R2. I built a stored procedure that returns all products in a category, then a count of the number of products in the category, and the count of the number of products in that category in a specific color. 
 
-sql
+```sql
 ALTER PROCEDURE [dbo].[ProductCountByCatColor]
 	@Category varchar(25), 
 	@Color varchar(25)

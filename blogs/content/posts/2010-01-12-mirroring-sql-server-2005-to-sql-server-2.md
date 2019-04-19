@@ -30,7 +30,7 @@ For our lab, let's start by setting up the database and the mirror. The followin
 
 Create the database on the SQL Server 2005 instance, run a full backup and then a backup of the transaction log to capture the tail-end transactions for applying to the secondary database (mirror). 
 
-sql
+```sql
 CREATE DATABASE NEEDTOUPGRADE ON  PRIMARY 
 ( NAME = N'NEEDTOUPGRADE', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATANEEDTOUPGRADE.mdf' , SIZE = 2048KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
@@ -44,7 +44,7 @@ BACKUP LOG NEEDTOUPGRADE TO DISK = 'C:NEEDTOUPGRADE_taillog_initial.trn'
 
 Next, we'll use a basic endpoint configuration and start the endpoint to prepare it for the mirror.
 
-sql
+```sql
 CREATE ENDPOINT [Mirroring] 
     AUTHORIZATION [PMHCtkrueger]
     STATE=STARTED
@@ -56,7 +56,7 @@ CREATE ENDPOINT [Mirroring]
 
 Now let's move to the SQL Server 2008 instance and restore the database from our full backup. After this we can apply the log backup to bring us to up to the level we can initialize synchronization between the databases.
 
-sql
+```sql
 --restore the full
 RESTORE DATABASE NEEDTOUPGRADE 
 FROM DISK = 'C:NEEDTOUPGRADE_full_initial.bak'
@@ -76,7 +76,7 @@ Now the database on SQL Server 2008 is in no recovery and we can start by config
 
 First, let's create the endpoint on the mirror (SQL Server 2008)
 
-sql
+```sql
 CREATE ENDPOINT [Mirroring] 
     AUTHORIZATION [PMHCtkrueger]
     STATE=STARTED
@@ -87,7 +87,7 @@ CREATE ENDPOINT [Mirroring]
 
 Now configure the database so it will act as the partner
 
-sql
+```sql
 ALTER DATABASE NEEDTOUPGRADE SET PARTNER= N'TCP://Servername:5022'
 ```
 
@@ -95,13 +95,13 @@ Once the mirror is ready to accept transactions, we can configure the principle.
 
 Back on our SQL Server 2005 instance we simply can tell the NEEDTOUPGRADE database that it is the partner for port 5023. 
 
-sql
+```sql
 ALTER DATABASE NEEDTOUPGRADE SET PARTNER= N'TCP://Servername:5023'
 ```
 
 We're not using a witness so at this point we want to set safety off. While still on the principle SQL Server 2005 instance run the following alter database statement to turn safety off.
 
-sql
+```sql
 ALTER DATABASE NEEDTOUPGRADE SET SAFETY OFF
 ```
 </p> 
@@ -118,19 +118,19 @@ The database is in compatibility mode 90, version 611 and in principle and suspe
 
 To remove mirroring, on the SQL Server 2008 instance run
 
-sql
+```sql
 ALTER DATABASE NEEDTOUPGRADE SET PARTNER OFF
 ```
 
 Removing mirroring accomplishes cleaning the upgrade mirror configuration and upgrades our database to version 655 for us. This does not remove endpoints though. You can verify the version change of the database with
 
-sql
+```sql
 SELECT DATABASEPROPERTY('NEEDTOUPGRADE','version')
 ```
 
 Next we can change to compatibility level 100 (SQL Server 2008) with the following 
 
-sql
+```sql
 ALTER DATABASE NEEDTOUPGRADE SET COMPATIBILITY_LEVEL = 100
 ```
 </p> 

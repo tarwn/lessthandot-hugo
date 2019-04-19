@@ -40,13 +40,13 @@ All you have to do is change the owner to a valid login
 
 If you want it to be sa or a sql login, this example is for sa, change sa to something else if you want a different sql login
 
-sql
+```sql
 ALTER AUTHORIZATION ON DATABASE::[YourDatabase] TO [sa];
 ```
 
 If you want it to be a windows login, you can do the following
 
-sql
+```sql
 ALTER AUTHORIZATION ON DATABASE::[YourDatabase] TO [DomainLogin];
 ```
 
@@ -54,7 +54,7 @@ If you run sp_helpdb now, you will see that the owner has been changed
 
 If you are old school, you can also use sp_changedbowner to make the change
 
-sql
+```sql
 USE YourDatabase
 GO
 

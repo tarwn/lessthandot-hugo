@@ -167,7 +167,7 @@ You can setup alarms as well, here is what that looks like
 
 Run some queries, see what works what doesn't. I decided to run sp_helpdb
 
-sql
+```sql
 sp_helpdb
 ```
 

@@ -137,7 +137,7 @@ Here is what Books On Line has on the use of wild cards
 
 Let's take a look at some examples, first create this table and insert some data.
 
-sql
+```sql
 CREATE TABLE TestLike (SomeCol VARCHAR(200))
 GO
 INSERT TestLike VALUES ('12345')
@@ -151,7 +151,7 @@ INSERT TestLike VALUES ('bla')
 
 So what happens if you do the following
 
-sql
+```sql
 SELECT * FROM TestLike
 where SomeCol LIKE '%_%'
 ```
@@ -176,7 +176,7 @@ bla
 
 You get back everything. This is because in a regular expression, the underscore means any single character. In order to search for an underscore, you need to put it in brackets
 
-sql
+```sql
 SELECT * FROM TestLike
 where SomeCol LIKE '%[_]%'
 ```
@@ -193,20 +193,20 @@ Let's take a look at another example, what if you want to search for the left br
 
 First insert the following row
 
-sql
+```sql
 INSERT TestLike VALUES ('2222[2222')
 ```
 
 Now when you do something like this
 
-sql
+```sql
 SELECT * FROM TestLike
 where SomeCol LIKE '%[%'
 ```
 
 Nothing is returned. You can however put the left bracket in brackets
 
-sql
+```sql
 SELECT * FROM TestLike
 where SomeCol LIKE '%[[]%'
 ```
@@ -219,14 +219,14 @@ output
 
 Brackets are also required for ranges. If you want to return all the rows where any of characters is 2 or 3, you can't do this
 
-sql
+```sql
 SELECT * FROM TestLike
 where SomeCol LIKE '%2-3%'
 ```
 
 You can surround that with brackets
 
-sql
+```sql
 SELECT * FROM TestLike
 where SomeCol LIKE '%[2-3]%'
 ```
@@ -243,7 +243,7 @@ abd23bbb
 
 You can of course also use OR
 
-sql
+```sql
 SELECT * FROM TestLike
 where SomeCol LIKE '%2%'
 OR SomeCol LIKE '%3%'
@@ -251,7 +251,7 @@ OR SomeCol LIKE '%3%'
 
 But what if you want to expand that to check for a range between 2 and 6
 
-sql
+```sql
 SELECT * FROM TestLike
 where SomeCol LIKE '%2%'
 OR SomeCol LIKE '%3%'
@@ -262,7 +262,7 @@ OR SomeCol LIKE '%6%'
 
 This way is much cleaner in my opinion
 
-sql
+```sql
 SELECT * FROM TestLike
 where SomeCol LIKE '%[2-6]%'
 ```

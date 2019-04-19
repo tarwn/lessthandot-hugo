@@ -17,7 +17,7 @@ categories:
 ---
 What's wrong with the following code?
 
-sql
+```sql
 SELECT 
     a.[BusinessEntityID]
     , b.[FirstName]
@@ -31,7 +31,7 @@ Nothing – except for my poor choice of using meaningless single characters as 
 
 What about now? Is there anything wrong still?
 
-sql
+```sql
 SELECT 
     e.[BusinessEntityID]
     , p.[FirstName]
@@ -46,7 +46,7 @@ But I notice a problem in team environments. Different developers use different 
 
 For example, some other developer might choose emp and ps instead of e and p like below.
 
-sql
+```sql
 SELECT 
     emp.[BusinessEntityID]
     , ps.[FirstName]
@@ -60,7 +60,7 @@ FROM [HumanResources].[Employee] emp
 
 I use extended properties – following is an example script.
 
-sql
+```sql
 EXEC sys.sp_addextendedproperty
 @name = N'TableAlias', 
 @value = N'emp', 
@@ -77,7 +77,7 @@ GO
 ```
 Make no mistake, developers are still free to use different aliases, but it is at least easy to quickly see the standard alias by executing either of the following queries.
 
-sql
+```sql
 SELECT [Schema] = s.NAME
 	, [Table] = t.NAME
 	, [Alias] = ep.value

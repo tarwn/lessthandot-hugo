@@ -23,7 +23,7 @@ Again today I read a few threads and even saw on twitter where a person (DBA or 
 
 First run this on a local or development instance
 
-sql
+```sql
 CREATE DATABASE [LOGLOSS] ON PRIMARY
 ( NAME = N'LOGLOSS', FILENAME = N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATALOGLOSS.mdf' , SIZE = 3048KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
 LOG ON
@@ -34,7 +34,7 @@ GO
 ```
 Now run this little gem of a statement...
 
-sql
+```sql
 ALTER DATABASE LOGLOSS SET OFFLINE
 ```
 
@@ -42,7 +42,7 @@ Now go to the directory you created the DB in and delete the LOGLOSS_log.ldf
   
 First let's see how bad that really made things for us. Run this...
 
-sql
+```sql
 ALTER DATABASE LOGLOSS SET ONLINE
 ```
 
@@ -67,7 +67,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 
 This is pretty basic at that. It comes down to the following in our test case
 
-sql
+```sql
 sp_attach_single_file_db @dbname='LOGLOSS'
         ,@physname=N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATALOGLOSS.mdf'
 ```
@@ -78,7 +78,7 @@ So if you haven't, go into the Data directory and copy the mdf to the backup dir
   
 Now run the DROP statement as
 
-sql
+```sql
 DROP DATABASE LOGLOSS
 ```
 
@@ -88,7 +88,7 @@ Now let's attach the LOGLOSS database again
 
 Running
 
-sql
+```sql
 sp_attach_single_file_db @dbname='LOGLOSS'
         ,@physname=N'C:Program FilesMicrosoft SQL ServerMSSQL.1MSSQLDATALOGLOSS.mdf'
 ```
@@ -104,7 +104,7 @@ Yay!!!
 
 Don't forget to checkdb the thing
 
-sql
+```sql
 DBCC CHECKDB('LOGLOSS')
 ```
 

@@ -93,7 +93,7 @@ All we need to accomplish here is to validate the files existence. If the file d
   
 Next step, drag over a Data Flow task. Add to the connection managers a flat file connection to the csv file in the instance\_search folder as a flat file connection. Second, add an ADO.NET or OLEDB connection to your instance. In my case I have a DBA database on the instance that this package is created. In this database I created a table instance\_audit. This table is where we pump the results from SQL Ping in order to report on later. The create table would be...
 
-sql
+```sql
 CREATE TABLE [dbo].[instance_audit](
 	[ServerIP] [varchar](50) NULL,
 	[TCPPort] [varchar](5) NULL,
@@ -128,7 +128,7 @@ Running this package fills the discovered instances into the instance_audit tabl
   
 Such as...
 
-sql
+```sql
 EXEC msdb.dbo.sp_send_dbmail @recipients='dba@your_company.com',
 	@subject = 'Instance discovery completed.',
 	@body = 'Review attachment for results of SQL Server scan of the network',

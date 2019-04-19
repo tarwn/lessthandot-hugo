@@ -62,7 +62,7 @@ Create this and deploy it to your DBA restricted database. As most of my readers
 
 Now call the UDF to search the network for SQL Servers. 
 
-sql
+```sql
 SELECT * FROM InstanceFinder();
 ```
 
@@ -90,7 +90,7 @@ and should appear like this in the prompts...
 
 Save all of this and then in the text for the dataset use
 
-sql
+```sql
 Select [Name] From sys.databases
 ```
 

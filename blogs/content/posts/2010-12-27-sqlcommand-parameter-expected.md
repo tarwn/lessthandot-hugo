@@ -28,7 +28,7 @@ I was recently asked for some help with a very strange situation involving SQL S
 
 The developer did exactly the right steps in troubleshooting the problem. Once the application was failing due to SQL Server return errors, Profiler was enlisted to determine the exact transaction that was being sent to SQL Server. The transaction was found to be sent without specifying the parameters thought to be formed
 
-sql
+```sql
 sp_executesql N'dbo.uspGetEmployeeManagers',N'@EmployeeID INT',@EmployeeID=1
 ```
 
@@ -40,7 +40,7 @@ When running this, the error returned is
 
 Looking at the statement closer and verifying with BOL sp_executesql syntax, the parameter mapping is not completely set. The proper statement should be called as follows
 
-sql
+```sql
 exec sp_executesql N'dbo.uspGetEmployeeManagers @EmployeeID',N'@EmployeeID INT',@EmployeeID=1
 ```
 

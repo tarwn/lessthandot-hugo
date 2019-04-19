@@ -36,7 +36,7 @@ In this post I'm going to use information from the following Dynamic Management 
 
 In fact I use following query to get the results:
 
-sql
+```sql
 SELECT cp.objtype, cp.cacheobjtype, cp.usecounts, cp.size_in_bytes, st.[text], qp.query_plan
 	FROM sys.dm_exec_cached_plans cp
 	CROSS APPLY sys.dm_exec_sql_text(cp.plan_handle) st
@@ -54,7 +54,7 @@ The result set can contain thousands of rows, depending on the uptime of the ser
   
 So let's create a simple Stored Procedure that executes against the AdventureWorks2008R2 database:
 
-sql
+```sql
 USE AdventureWorks2008R2;
 GO
 
@@ -81,13 +81,13 @@ The results of the query aren't important what is important is to see what happe
 
 <span class="MT_red">WARNING: executing the following code deletes all cached plans from the Procedure Cache. All Execution Plans need to be recompiled. This can result in a slow or unresponsive server.<br /> DON'T EXECUTE THE FOLLOWING CODE ON A PRODUCTION SERVER!!!<br /> </span>
 
-sql
+```sql
 DBCC FREEPROCCACHE;
 GO
 ```
 When you execute our first query again:
 
-sql
+```sql
 SELECT cp.objtype, cp.cacheobjtype, cp.usecounts, cp.size_in_bytes, st.[text], qp.query_plan
 	FROM sys.dm_exec_cached_plans cp
 	CROSS APPLY sys.dm_exec_sql_text(cp.plan_handle) st
@@ -101,13 +101,13 @@ You can see in the result set that only the Execution Plan from the above query 
 
 Now execute the stored procedure:
 
-sql
+```sql
 EXEC TwoPlans 1;
 GO
 ```
 Execute the query against the Procedure Cache again:
 
-sql
+```sql
 SELECT cp.objtype, cp.cacheobjtype, cp.usecounts, cp.size_in_bytes, st.[text], qp.query_plan
 	FROM sys.dm_exec_cached_plans cp
 	CROSS APPLY sys.dm_exec_sql_text(cp.plan_handle) st
@@ -170,7 +170,7 @@ After doing this SQL Sentry Plan Explorer will give you all the details about th
   
 Now let's create 2 Stored Procedures that each will execute 1 part of the code from the previous query:
 
-sql
+```sql
 CREATE PROCEDURE EmpCntCity
 AS
 	SET NOCOUNT ON;
@@ -194,7 +194,7 @@ GO
 ```
 Next we create a Stored Procedure that will contain the IF...ELSE logic and based on the input parameter will execute one of the above Stored Procedures:
 
-sql
+```sql
 CREATE PROCEDURE TwoProcs
 	@IfParameter int
 AS
@@ -207,13 +207,13 @@ GO
 ```
 Now we can call our Stored Procedure and execute 1 of the Stored Procedures:
 
-sql
+```sql
 EXEC TwoProcs 1;
 GO
 ```
 Let's again query the Procedure Cache:
 
-sql
+```sql
 SELECT cp.objtype, cp.cacheobjtype, cp.usecounts, cp.size_in_bytes, st.[text], qp.query_plan
 	FROM sys.dm_exec_cached_plans cp
 	CROSS APPLY sys.dm_exec_sql_text(cp.plan_handle) st

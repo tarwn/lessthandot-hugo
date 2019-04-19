@@ -423,7 +423,7 @@ find the biggest number of consecutive wins or loses regardless of the team.
 
 Here is the code that creates our team table:
 
-sql
+```sql
 CREATE TABLE team ( 
   Team   CHAR(1), 
   DATE   DATETIME, 
@@ -521,7 +521,7 @@ This problem is known as 'finding islands of data', and I always refer to this b
 
 The idea of a solution is to first identify the blocks of consecutive wins or loses by each team. Applying the idea from Plamen's blog first step will be
 
-sql
+```sql
 ;WITH cte AS (SELECT *, 
 ROW_NUMBER() OVER 
 (
@@ -533,7 +533,7 @@ By assigning GroupID we identified blocks of winning or losing streaks.
 
 The last two steps are simple enough:
 
-sql
+```sql
 -- Calculate Wins/Loses totals per each team/block
 cte1 AS (SELECT team, 
 SUM(CASE WHEN WiLose = 'Win' THEN 1 ELSE 0 END) AS [Wins],

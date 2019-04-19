@@ -61,7 +61,7 @@ If using partitions you can now rebuild just one partition of the index, this wi
   
 When you have a small database, you can delete all the rows from a table without a problem generally. Every now and then you will have someone do this, they will of course do this just one because after that you will have _THE TALK_ with them about this
 
-sql
+```sql
 DELETE HugeTable
 ```
 
@@ -71,7 +71,7 @@ Instead of doing that, use truncate or do deletes in batches of 50000 for exampl
   
 Every now and then you will have someone execute something like the following
 
-sql
+```sql
 SELECT * 
 FROM HugeTable
 ORDER By SomeColumn

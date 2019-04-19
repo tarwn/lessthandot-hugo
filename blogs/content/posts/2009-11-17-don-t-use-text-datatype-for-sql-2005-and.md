@@ -21,7 +21,7 @@ The query presented below will display all the columns in all the tables within 
 
 **How to detect this problem:**
 
-sql
+```sql
 Select  O.Name, 
         col.name as ColName,
         systypes.name

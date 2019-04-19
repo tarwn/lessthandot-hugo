@@ -25,7 +25,7 @@ Someone asked about this error [this morning][1] and I decided to turn it into a
 
 First create the following table.
 
-sql
+```sql
 CREATE TABLE Test(col1 VARCHAR(200));
 go
 INSERT INTO Test (col1) VALUES('<ccc>ddd</ccc>')
@@ -68,14 +68,14 @@ Of course this is also yet another reason to have a primary key on the table.
 
 What can we do to resolve this? Easy, stop using the wizard and get familiar with Transact SQL. Open a new query window and then you can use either of these two queries
 
-sql
+```sql
 DELETE TOP (1)
 FROM Test
 WHERE col1 = '<ccc>ddd</ccc>'
 ```
 The query above uses the TOP operator
 
-sql
+```sql
 SET rowcount 1
    
 DELETE

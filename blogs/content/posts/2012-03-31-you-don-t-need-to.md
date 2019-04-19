@@ -49,7 +49,7 @@ So let's debunk that myth shall we?
 
 First create these 3 database, they will be 3 MB, 3 GB and 9 GB in size
 
-sql
+```sql
 CREATE DATABASE [TestSmall]
  ON  PRIMARY 
 ( NAME = N'TestSmall', FILENAME = N'C:SQLFilesTestSmall.mdf' , SIZE = 3072KB , FILEGROWTH = 1024KB )
@@ -97,7 +97,7 @@ You can see that the files are indeed in the GB and in the MB range
 
 Now back the database up, these are plain vanilla backups, no compression is applied
 
-sql
+```sql
 BACKUP DATABASE [TestLarge] TO  DISK = N'D:SQLBackupsTestLarge.BAK' 
 WITH NOFORMAT, NOINIT,  NAME = N'TestLarge-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO

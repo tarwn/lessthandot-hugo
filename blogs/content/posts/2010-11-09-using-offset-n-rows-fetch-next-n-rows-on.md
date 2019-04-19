@@ -24,7 +24,7 @@ tags:
 ---
 SQL Server Denali makes it much easier to do paging compared to previous versions of SQL Server. In SQL Server 2005 or 2008 you would do something like the following to skip the first 50 rows
 
-sql
+```sql
 WITH cte AS (SELECT ROW_NUMBER() OVER(ORDER BY number) AS ROW,* 
 FROM master..spt_values
 WHERE TYPE ='P'
@@ -35,7 +35,7 @@ WHERE ROW BETWEEN 51 AND 100
 ```
 Take a look at how you do this in SQL Server Denali, it is much easier and cleaner in my opinion
 
-sql
+```sql
 SELECT * 
 FROM master..spt_values
 WHERE type ='P'
@@ -45,7 +45,7 @@ OFFSET 50 ROWS FETCH NEXT 50 ROWS ONLY;
 
 This syntax also works with parameters, here is the same code using a parameter for both the SQL Server Denali and 2005/2008 version.
 
-sql
+```sql
 DECLARE @i int = 51;
 
 WITH cte AS (SELECT ROW_NUMBER() OVER(ORDER BY number) AS ROW,* 
@@ -56,7 +56,7 @@ WHERE TYPE ='P'
 SELECT * FROM cte
 WHERE ROW BETWEEN @i AND (@i * 2) -1
 ```
-sql
+```sql
 DECLARE @i int = 50
 
 SELECT * 
@@ -68,7 +68,7 @@ OFFSET @i ROWS FETCH NEXT  @i ROWS ONLY;
 
 If you want all rows after skipping the first 50 rows, you would do something like this in a version pre SQL Server Denali
 
-sql
+```sql
 DECLARE @i int = 51;
 
 WITH cte AS (SELECT ROW_NUMBER() OVER(ORDER BY number) AS ROW,* 
@@ -82,7 +82,7 @@ WHERE ROW >= @i
 
 In SQL Server Denali it becomes very simple, all you need to do is OFFSET N ROWS
 
-sql
+```sql
 DECLARE @i int = 50
 
 SELECT * 

@@ -21,7 +21,7 @@ The second catch is identity_insert issues. If you change the creation command a
 
 To create the scenario I'm trying to show let's create a few databases and setup replication.
 
-sql
+```sql
 CREATE DATABASE db1 
 GO
 ALTER DATABASE db1 SET RECOVERY SIMPLE
@@ -57,7 +57,7 @@ At this point you do not have a primary key or an identity seed on db2.tbl1. Go 
 
 This was a quick way to get the table setup. You can also create the table with the primary key and identity as
 
-sql
+```sql
 USE [db2]
 GO
 CREATE TABLE [dbo].[tbl1](
@@ -75,7 +75,7 @@ Then use identity_insert to bring over the data to sync it up.
 
 If you run this on db2.tbl1 after the data is in sync
 
-sql
+```sql
 DBCC CHECKIDENT
 (
   tbl1
@@ -90,7 +90,7 @@ Let's setup replication and initialize everything to db2.tbl1
 
 To setup the publisher execute the following
 
-sql
+```sql
 use db1
 GO
 exec sp_replicationdboption @dbname = N'db1', @optname = N'publish', @value = N'true'
@@ -133,7 +133,7 @@ GO
 ```
 Now the first test subscriber
 
-sql
+```sql
 use [db2]
 GO
 exec sp_addpullsubscription 
@@ -172,14 +172,14 @@ Launching the replication monitor will show the snapshot delivery
 
 Test it out
 
-sql
+```sql
 INSERT INTO db1.dbo.tbl1 VALUES ('mytest 99')
 ```
 Check db2.tbl1 to ensure your replication is functioning and the transaction pulled over. If you check the design of the table, you will see the drop functioned correctly and reset everything. This included the not for replication setting to yes.
 
 Now check the seed 
 
-sql
+```sql
 USE db2
 Go
 
@@ -213,7 +213,7 @@ So now the point of all of this is removing the subscriber. Go ahead and delete 
   
 e.g.
 
-sql
+```sql
 use [db2]
 GO
 exec sp_droppullsubscription @publisher = N'LKFW00TK', @publisher_db = N'db1', @publication = N'Tables'
@@ -228,7 +228,7 @@ Now insert a value into db2.tbl1
   
 Of course this will happen sense your seed wants to use 27 in my results above. To fix this it's a very simple change to our DBCC CHECKIDENT command
 
-sql
+```sql
 DBCC CHECKIDENT
 (
   tbl1

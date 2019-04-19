@@ -22,7 +22,7 @@ tags:
 ---
 A question was posted in our [SQL Server programming forum][1] [today][2]. A person had this stored procedure
 
-sql
+```sql
 CREATE PROCEDURE TestStuff
 @id INT,
 @Val1 VARCHAR(20),
@@ -34,13 +34,13 @@ SELECT @id,@Val1,@Val2
 
 Executing it like this works
 
-sql
+```sql
 EXEC TestStuff 1,'test1','Test2'
 ```
 
 However executing it like this also works
 
-sql
+```sql
 EXEC TestStuff 1,test1,Test2
 ```
 
@@ -64,7 +64,7 @@ As you can see that is not right at all, I checked Books on line for SQL Server 
 
 So now that we know that you can do that, then why can you not do this?
 
-sql
+```sql
 DECLARE @v VARCHAR(20)
  
 SELECT @v = a
@@ -82,7 +82,7 @@ Of course there are other inconsistent things in SQL Server, here is a perfect e
 
 Varchar defaults to 1 character here
 
-sql
+```sql
 DECLARE @v VARCHAR
 SELECT @v = 'aaaaaa'
 SELECT @v
@@ -90,7 +90,7 @@ SELECT @v
 
 Varchar defaults to 30 characters here
 
-sql
+```sql
 SELECT CONVERT(VARCHAR,'aaaaa')
 ```
 
