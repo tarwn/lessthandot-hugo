@@ -29,7 +29,7 @@ Linchi Shea's three-part post about performance impact with file fragmentation a
 
 **[Defensive database programming: fun with UPDATE.][4]**
   
-Alexander Kuznetsov explains that it is well known that UPDATE … FROM command does not detect ambiguities. Also it well known that ANSI standard UPDATE may perform very poorly and may be difficult to maintain
+Alexander Kuznetsov explains that it is well known that UPDATE ... FROM command does not detect ambiguities. Also it well known that ANSI standard UPDATE may perform very poorly and may be difficult to maintain
 
 **[Podcast: Ryan Dunn – SQL Data Services (SQL in the cloud)][5] (show number 42)**
   
@@ -59,7 +59,7 @@ Nice post by Dan Guzman showing some code to get some details and the rowcount f
 
 **[Never Index a BIT?][9]**
   
-Indexing a bit column, that is just crazy talk…….or is it? Jason Massie shows some code which will make your decision if this is crazy or not really simple
+Indexing a bit column, that is just crazy talk.......or is it? Jason Massie shows some code which will make your decision if this is crazy or not really simple
 
 **[Diagnosing Transaction Log Performance Issues and Limits of the Log Manager][10]**
   
@@ -71,7 +71,7 @@ For transactional workloads I/O performance of the writes to the SQL Server tran
 
 **[Is LINQ the next OLE DB? “LINQ-ed” Server as a rowset source?][11]**
   
-Bob Beauchemin writes “The “relational database bigots” I hang out with don't like LINQ at all. They hope it would shrivel up in a corner and become part of the fad-technology graveyard. Or they're waiting to make big bucks fixing the performance problems they think will ensue………….”
+Bob Beauchemin writes “The “relational database bigots” I hang out with don't like LINQ at all. They hope it would shrivel up in a corner and become part of the fad-technology graveyard. Or they're waiting to make big bucks fixing the performance problems they think will ensue.............”
   
 You can read the rest there and tell me what you think.
 

@@ -39,7 +39,7 @@ With compressing a table with one column, the results would be thought to compre
   <a href="/wp-content/uploads/blogs/DataMgmt/-51.png?mtime=1304392780"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-51.png?mtime=1304392780" width="624" height="118" /></a>
 </div>
 
-**Hold on…let’s talk**
+**Hold on...let's talk**
 
 Before going over the results, note: compression will vary slightly based on the data types that are in the table.  There are many data types that cannot be compressed and some that can be greatly impacted by enabling either ROW or PAGE.  In most cases, ROW and PAGE level compression will also have drastic differences.  A perfect example of a high impact compression can make is on CHAR data types.  The benefit of the compression on CHAR is the removal of the trailing space. 
 
@@ -53,7 +53,7 @@ _If the results of running sp\_estimate\_data\_compression\_savings indicate tha
 
 With uniqueidentifier data types, this is the case.  Compression at this stage will take more to perform. 
 
-This doesn’t mean NOT to enable compression by default because you see a uniqueidentifier column in a table.  In fact, let’s test the next script.
+This doesn't mean NOT to enable compression by default because you see a uniqueidentifier column in a table.  In fact, let's test the next script.
 
 sql
 create table compress_test_char (id uniqueidentifier default newid(), CHAR_COL CHAR(8000) default 'Take all this space, plus some')
@@ -75,7 +75,7 @@ This reason for this is the effects from the CHAR data type and the padding remo
 
 **Double Check Before Enabling**
 
-As stated before, each table’s results will be unique when the estimation is complete.  The data types in them will cause them to fail or succeed on being benefiting from compression.  A combination of data types that benefit from compression and those that don’t will make or break the case.
+As stated before, each table's results will be unique when the estimation is complete.  The data types in them will cause them to fail or succeed on being benefiting from compression.  A combination of data types that benefit from compression and those that don't will make or break the case.
 
 A perfect example to leave you with is the Sales.SalesOrderDetail table in AdventureWorks.  I searched AW to find a table with a combination of data types that probably would not be beneficial from enabling compression.  SalesOrderDetail was such a case just on the fence.
 

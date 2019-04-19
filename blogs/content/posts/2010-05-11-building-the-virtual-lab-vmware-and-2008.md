@@ -90,7 +90,7 @@ Here is a sample set of questions you should consider:
       My lab will be running multiple Windows servers and 1-2 linux systems
     </li>
     <li>
-      Software packages: SQL Server (of course), TFS, Active Directory, Sharepoint, potentially a DC, possibly Exchange, …pretty much anything in Microsoft's catalog or that comes in as a user request is fair game
+      Software packages: SQL Server (of course), TFS, Active Directory, Sharepoint, potentially a DC, possibly Exchange, ...pretty much anything in Microsoft's catalog or that comes in as a user request is fair game
     </li>
     <li>
       None of these systems will go to a production environment or be accessed by active development environments
@@ -209,7 +209,7 @@ We are now ready to turn our machine on for the first time and install Windows. 
   This is the point I ran into an issue with VMWare's console. VMWare continued to present me with a black screen when I opened the console. I believe the change that fixed this issue was setting the DNS address on the vmnet1 network connection, but it could just as easily have been the firewall being turned off when VMWare started or the couple changes I made to IE's trusted sites. An excellent, practical example of why you should always make one change at a time and write down what you changed when you are troubleshooting a systems problem.
 </div>
 
-The first decision the installer requires is selection between the various versions of Windows. Based on the options available, the trade-offs outlined in [the feature comparison][8], and the fact that I have already written down my MSDN Enterprise key, I will be installing Enterprise edition. I'm not actually sure how long the installation took, I wandered off and found something else to do for a while (Peanut butter jelly time, peanut b…oh). I've installed windows a few more times than your average developer, so my bet is on 39 minutes. 😉
+The first decision the installer requires is selection between the various versions of Windows. Based on the options available, the trade-offs outlined in [the feature comparison][8], and the fact that I have already written down my MSDN Enterprise key, I will be installing Enterprise edition. I'm not actually sure how long the installation took, I wandered off and found something else to do for a while (Peanut butter jelly time, peanut b...oh). I've installed windows a few more times than your average developer, so my bet is on 39 minutes. 😉
 
 <div class="hint">
   The default Windows password policy is probably going to annoy you if you haven't run into it before. It will not tell you what the policy is when your password fails and the policy itself is well-defined. In a production environment one of our first steps would likely be to change it to meet our business needs or current setup.</p> 

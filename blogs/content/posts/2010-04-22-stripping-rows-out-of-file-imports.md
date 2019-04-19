@@ -17,7 +17,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Scott Stauffer ([blog][1] | [twitter][2]) asked a question on #sqlhelp a few days ago and thought I’d go into actually doing an example on the task he was trying to accomplish. 
+Scott Stauffer ([blog][1] | [twitter][2]) asked a question on #sqlhelp a few days ago and thought I'd go into actually doing an example on the task he was trying to accomplish. 
 
 Below is a snapshot of the tweet.
 
@@ -29,7 +29,7 @@ My first thought was to throw in a script component to transformation. With each
 
 
 
-## Let’s get some things out of the way
+## Let's get some things out of the way
 
 
 
@@ -37,7 +37,7 @@ The script component will read every row. That in itself will run slower than ot
 
 Special circumstances do call for methods that may perform slower at times to provide stability and validation processing. The reasoning for showing this method is to provide the validation on the rows from regular expressions and pattern matches. This will provide a higher amount of freedom on resources as well by reading the rows into the buffer and out. When methods such as the script task are used to modify flat files prior to imports, the entire file is pulled into memory and given some large imports, this can be a hardship to manage on mid-size servers. 
 
-Let’s look at the two methods that are mentioned above. The first will be the script component to match the string value we need.
+Let's look at the two methods that are mentioned above. The first will be the script component to match the string value we need.
   
 
   
@@ -72,7 +72,7 @@ test
 test
 ```
 
-Bring over a data flow task and let’s name it, “DF Flat File Pump”
+Bring over a data flow task and let's name it, “DF Flat File Pump”
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/buffer_2.gif" alt="" title="" width="394" height="124" />
@@ -147,7 +147,7 @@ Public Class ScriptMain
 End Class
 ```
 
-Drag and drop two OLEDB Destination’s into the data flow and rename them “data pump” and “headers”. We are only creating the headers destination for our testing purposes to validate the headers coming out and for later utilization if needed.
+Drag and drop two OLEDB Destination's into the data flow and rename them “data pump” and “headers”. We are only creating the headers destination for our testing purposes to validate the headers coming out and for later utilization if needed.
   
 
   
@@ -173,7 +173,7 @@ Querying this in SSMS shows
   <img src="/wp-content/uploads/blogs/DataMgmt/buffer_5.gif" alt="" title="" width="335" height="281" />
 </div></p> 
 
-The major problem with this process is the fact we are processing row by row while putting the row under a microscope. Imagine this in a 300M row import. It wouldn’t go very well but would go if needed.
+The major problem with this process is the fact we are processing row by row while putting the row under a microscope. Imagine this in a 300M row import. It wouldn't go very well but would go if needed.
 
 The next solution that will be much easier to implement, maintain and gain performance will follow in a second part to this post. We will utilize a script task to manipulate the file before hand, assign the variable, delete the header and import the data as needed.
 

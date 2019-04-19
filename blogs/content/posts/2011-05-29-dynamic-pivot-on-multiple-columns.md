@@ -8,7 +8,7 @@ excerpt: |
   In this blog post I want to discuss a problem I encounter frequently in SQL related forums - how to perform dynamic PIVOT involving multiple columns using pure T-SQL solution.
   
   With the introduction of PIVOT operator in SQL 2005, it became very easy t&hellip;
-url: /index.php/datamgmt/datadesign/dynamic-pivot-on-multiple-columns/
+url: hugo 
 views:
   - 44111
 rp4wp_auto_linked:

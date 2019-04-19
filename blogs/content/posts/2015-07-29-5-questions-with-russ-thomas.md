@@ -55,7 +55,7 @@ Every time I see a cruiser race by with full lights and sirens I get homesick, b
   
 2. Book of Mormon – yep, I'm Mormon
   
-3. And let's see… probably the Martian – great book, especially for someone stranded and deserted.
+3. And let's see... probably the Martian – great book, especially for someone stranded and deserted.
 
 **There's a lot of talk about getting kids involved in STEM early to help them choose that as a career path. As a dad, what are your thoughts on that?** 
 

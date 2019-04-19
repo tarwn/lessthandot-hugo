@@ -24,7 +24,7 @@ The short answer: When auto update stats is enabled in a database, statistics wi
 
 If you attend sessions or read many tuning articles that involve statistics on the internet, you may have seen the statement, “20% + 500 rows” more than a few times.  Some related information on when the 20% + 500 does actually come into play and how the cardinality of the table plays a role can be found in KB 195565, “[Statistical maintenance functionality (autostats) in SQL Server][1]”.
 
-Specifically a section extracted…
+Specifically a section extracted...
 
 > _The basic algorithm for auto update statistics is:_ </p> 
 > 
@@ -42,13 +42,13 @@ The best way to look at this is to give it a try and see if the statement is acc
 
 Statistics are the lifeline of generating an efficient method for retrieving data by the optimizer.  Statistics will base the cost in a form of the estimated amount of data that will be retrieved.  This could mean the difference between operations such as physical join operations leading to sorts or inadequate estimation of memory allocation needs.  If statistics are outdated or missing, execution plans can be inaccurate and cause severe performance issues.
 
-Since statistics are so critical to cost estimation and plan generation, knowing how and when statistics are updated is just as critical.  Of course, this knowledge isn’t just wasted space in the mix of knowing how SQL Server works but gives a person in charge of maintaining a database power to know how to maintain statistics correctly.
+Since statistics are so critical to cost estimation and plan generation, knowing how and when statistics are updated is just as critical.  Of course, this knowledge isn't just wasted space in the mix of knowing how SQL Server works but gives a person in charge of maintaining a database power to know how to maintain statistics correctly.
 
-Given statistics will be automatically updated when 20% + 500 rows have changed, we can estimate based on the total number of rows or growth expectancy, when statistics may be outdated and cause a potential issue.  Imagine a table that has 5000 rows of data in it, and that data changes often.  This would indicate 5,000 \* .2 + 500 = 1,500 rows would have to change before statistics would be updated.  1,500 rows to 5,000 isn’t truly a great deal of data when the 5,000 is being changed at a high rate.  Now, think of a table that has 1,000,000 rows in it.  This would equate to 1,000,000 \* .2 + 500 = 200,500 rows before statistics will update.  200,500 rows is a much larger number and if it took a long time to reach that, but possibly reaches 190,000 quickly, we potentially have an issue and statistics could be poorly representing the data in the table.
+Given statistics will be automatically updated when 20% + 500 rows have changed, we can estimate based on the total number of rows or growth expectancy, when statistics may be outdated and cause a potential issue.  Imagine a table that has 5000 rows of data in it, and that data changes often.  This would indicate 5,000 \* .2 + 500 = 1,500 rows would have to change before statistics would be updated.  1,500 rows to 5,000 isn't truly a great deal of data when the 5,000 is being changed at a high rate.  Now, think of a table that has 1,000,000 rows in it.  This would equate to 1,000,000 \* .2 + 500 = 200,500 rows before statistics will update.  200,500 rows is a much larger number and if it took a long time to reach that, but possibly reaches 190,000 quickly, we potentially have an issue and statistics could be poorly representing the data in the table.
 
 **20% + 500**
 
-Let’s run an example to see if the 20% + 500 really is accurate.  To monitor the update of statistics, extended events will be used.  This is also a great way to monitor your systems for auto update stats being heavily performed and potentially a reason to turn off auto update stats.
+Let's run an example to see if the 20% + 500 really is accurate.  To monitor the update of statistics, extended events will be used.  This is also a great way to monitor your systems for auto update stats being heavily performed and potentially a reason to turn off auto update stats.
 
 Setup XEvent “auto_stats”
 
@@ -88,7 +88,7 @@ SELECT
 
  
 
-To read more about extended Events, look to [Jonathan Kehayias’s series on SQLSkills.com][2].
+To read more about extended Events, look to [Jonathan Kehayias's series on SQLSkills.com][2].
 
 Set up a test table named statsupdate.
 

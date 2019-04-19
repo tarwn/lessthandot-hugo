@@ -20,7 +20,7 @@ tags:
   - sql
 
 ---
-SQL performance tuning is probably one of those things you can do to really make a HUGE difference in performance. Let’s put this in perspective: take a typical application, if you can improve the performance by 100% then you really made a huge improvement. You can improve a SQL query by 1000% with 2 lines of code (sometimes all you have to do is take away a % sign). If you can make a query sargable so that the optimizer can do an index seek instead of an index scan your query might go from 12 seconds to 200 milliseconds. Now try doing that in an application, even if you change all the string concatenation to use a stringbuilder instead of creating new strings all the time you will not get such a drastic performance improvement. I am sure you get the point by now, let’s talk about the book. 
+SQL performance tuning is probably one of those things you can do to really make a HUGE difference in performance. Let's put this in perspective: take a typical application, if you can improve the performance by 100% then you really made a huge improvement. You can improve a SQL query by 1000% with 2 lines of code (sometimes all you have to do is take away a % sign). If you can make a query sargable so that the optimizer can do an index seek instead of an index scan your query might go from 12 seconds to 200 milliseconds. Now try doing that in an application, even if you change all the string concatenation to use a stringbuilder instead of creating new strings all the time you will not get such a drastic performance improvement. I am sure you get the point by now, let's talk about the book. 
 
 [Inside Microsoft SQL Server 2005: Query Tuning and Optimization][1] is part 4 of the Inside Microsoft SQL Server 2005 series, it is written by Kalen Delaney and five other authors. There are 6 chapters in this book
 
@@ -32,7 +32,7 @@ This chapter explains some typical things that affect performance and also gives
 
 2 Tracing and Profiling
   
-This chapter explains how to use the profiler and how to analyze traces. SQL Server’s built-in traces are also covered
+This chapter explains how to use the profiler and how to analyze traces. SQL Server's built-in traces are also covered
 
 3 Query Execution
   

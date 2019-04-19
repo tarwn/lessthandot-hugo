@@ -16,7 +16,7 @@ categories:
 ---
 On Thursday, September 20, 2012, I will be presenting (remotely!) to [OKPASS][1], based in Okanagan, BC, Canada. The meeting starts at 5:30 pm PST. Thank you Melody for asking me to speak!
 
-I’ll be giving a new talk!
+I'll be giving a new talk!
 
 ### What is Report Builder 3.0?
 

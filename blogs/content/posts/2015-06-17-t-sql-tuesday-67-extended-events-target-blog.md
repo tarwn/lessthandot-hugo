@@ -23,10 +23,10 @@ categories:
     Rob Farley – “<a href="http://sqlblog.com/blogs/rob_farley/archive/2015/06/09/dbas-and-the-internet-of-things.aspx" target="_blank">DBAs and the Internet of Things</a>” – “<span style="color: #000000">Imagine that each configured event is a smart device, sitting somewhere, producing data in some semi-structured form.” Rob tells us why he thinks DBAs should be using XE to help them be superheros in an IoT world. </span>
   </li>
   <li>
-    Boris Hristov – “<a href="http://borishristov.com/blog/t-sql-tuesday-67-extended-events-and-distributed-replay/" target="_blank">Extended Events and… Distributed Replay</a>?” – Distributed Replay is one of those tools, like the first iterations of XE, that I don't use enough because it's not intuitive – and there's no GUI to get started with. Boris loves it, though. Here, he walks us through how he solved the problem of capturing a workload with XE, then converted it to a trace that DR could read. This is great stuff! I love that he walks us through his troubleshooting approach.
+    Boris Hristov – “<a href="http://borishristov.com/blog/t-sql-tuesday-67-extended-events-and-distributed-replay/" target="_blank">Extended Events and... Distributed Replay</a>?” – Distributed Replay is one of those tools, like the first iterations of XE, that I don't use enough because it's not intuitive – and there's no GUI to get started with. Boris loves it, though. Here, he walks us through how he solved the problem of capturing a workload with XE, then converted it to a trace that DR could read. This is great stuff! I love that he walks us through his troubleshooting approach.
   </li>
   <li>
-    Wayne Sheffield – “<a href="http://www.sqlsolutionsgroup.com/wean-off-sql-profiler-part-1/" target="_blank">Weaning yourself off of SQL Profiler (Part 1)</a>” – Wayne breaks down a problem many of us have – we've been using SQL Server for so long that a lot of our default troubleshooting tools use…Profiler. How do you move from Profiler to XE? Read his blog! (And…part 1? I can't wait for the series, Wayne!)
+    Wayne Sheffield – “<a href="http://www.sqlsolutionsgroup.com/wean-off-sql-profiler-part-1/" target="_blank">Weaning yourself off of SQL Profiler (Part 1)</a>” – Wayne breaks down a problem many of us have – we've been using SQL Server for so long that a lot of our default troubleshooting tools use...Profiler. How do you move from Profiler to XE? Read his blog! (And...part 1? I can't wait for the series, Wayne!)
   </li>
   <li>
     Aaron Bertrand – “<a href="http://sqlperformance.com/2015/06/extended-events/t-sql-tuesday-67-backup-restore" target="_blank">New Backup and Restore Extended Events</a>” – Backups and restores are the bread and butter of being a <del>good</del> great DBA. Aaron found some new XE events for backups and restores in SQL Server 2016 CTP2. I can't wait to try these out!
@@ -65,8 +65,8 @@ categories:
     Jason Brimhall – “<a href="http://bit.ly/XETreehugger" target="_blank">Extended Events, Birkenstocks and SQL Server</a>” –  Jason wins Most Creative Blog Title this month! If your SQL Servers are set to tree-hugger mode – Power Saving – they are not pushing out the CPU cycles you need. How can you tell? XE to the rescue! I loved this blog post.
   </li>
   <li>
-    Chris Yates… TBD. Yep, Chris, you said you were going to write a post, and I'm eagerly waiting to read it!
+    Chris Yates... TBD. Yep, Chris, you said you were going to write a post, and I'm eagerly waiting to read it!
   </li>
 </ol>
 
-What a great set of blogs to read! I hope this keeps you busy reading and learning for a couple of weeks…just in time to catch the July 2015 edition of T-SQL Tuesday!
+What a great set of blogs to read! I hope this keeps you busy reading and learning for a couple of weeks...just in time to catch the July 2015 edition of T-SQL Tuesday!

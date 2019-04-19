@@ -29,11 +29,11 @@ I went to Programs > Administrative Tools > Data Sources (ODBC). I set up a Syst
 
 ![][3]
 
-Then I opened Excel 2010 and went to Data > From Other Sources > From Microsoft Query. The DSN isn’t there. What happened? 
+Then I opened Excel 2010 and went to Data > From Other Sources > From Microsoft Query. The DSN isn't there. What happened? 
 
 ![][4]
 
-I scratched my head over this for a while, and then emailed my team. One of my senior DBAs had run into this before and pointed me to this Microsoft KB article: <http://support.microsoft.com/kb/942976>. On a 64-bit computer, the DSN will be set up as 64-bit. However, a 32-bit application can’t see a 64-bit DSN. Excel 2010 is a 32-bit application.
+I scratched my head over this for a while, and then emailed my team. One of my senior DBAs had run into this before and pointed me to this Microsoft KB article: <http://support.microsoft.com/kb/942976>. On a 64-bit computer, the DSN will be set up as 64-bit. However, a 32-bit application can't see a 64-bit DSN. Excel 2010 is a 32-bit application.
   
 To solve this problem, I needed to set up a 32-bit DSN. I did that by going running the 32-bit ODBC Data Source Administrator tool from C:WindowsSysWOW64odbcad32.exe. I created the same DSN, with _32Bit in the name. 
 

@@ -16,17 +16,17 @@ categories:
 
 ---
 <p class="MsoNormal">
-  <span style="font-family: tahoma,arial,helvetica,sans-serif;">Slicers are sup</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"><a href="/media/users/joshuafennessy/Slicer.png?mtime=1343099573"><img style="float: left;" src="/wp-content/uploads/users/joshuafennessy/Slicer.png?mtime=1343099573" alt="" width="167" height="223" /></a></span><span style="font-family: tahoma,arial,helvetica,sans-serif;">er cool!  By extending the power of filtering to apply to multiple PivotTables (or PivotCharts) they have really increas</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"> </span><span style="font-family: tahoma,arial,helvetica,sans-serif;">ed the reporting and data delivery power of Excel 2010.  Not only do they look cool and are fun to interact with, t</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"></span><span style="font-family: tahoma,arial,helvetica,sans-serif;">hey are also extremely functional.  The fact that you can indeed apply a slicer value to multiple PivotTable objects was a big step forward for Excel based dashboarding and reporting.  I’ve used them in nearly every Excel 2010 report that I’ve written since the product release.</span>
+  <span style="font-family: tahoma,arial,helvetica,sans-serif;">Slicers are sup</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"><a href="/media/users/joshuafennessy/Slicer.png?mtime=1343099573"><img style="float: left;" src="/wp-content/uploads/users/joshuafennessy/Slicer.png?mtime=1343099573" alt="" width="167" height="223" /></a></span><span style="font-family: tahoma,arial,helvetica,sans-serif;">er cool!  By extending the power of filtering to apply to multiple PivotTables (or PivotCharts) they have really increas</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"> </span><span style="font-family: tahoma,arial,helvetica,sans-serif;">ed the reporting and data delivery power of Excel 2010.  Not only do they look cool and are fun to interact with, t</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"></span><span style="font-family: tahoma,arial,helvetica,sans-serif;">hey are also extremely functional.  The fact that you can indeed apply a slicer value to multiple PivotTable objects was a big step forward for Excel based dashboarding and reporting.  I've used them in nearly every Excel 2010 report that I've written since the product release.</span>
 </p>
 
-<span style="font-family: tahoma,arial,helvetica,sans-serif;">One thing that they are not so good at doing</span> <span style="font-family: tahoma,arial,helvetica,sans-serif;">is interacting with objects that are based on a different data source.  I know, you’re going to say “But THAT’S how they are designed!”  Sure, it’s true that they are, but as data developers we are often asked to do the impossible (or the improbable)</span>
+<span style="font-family: tahoma,arial,helvetica,sans-serif;">One thing that they are not so good at doing</span> <span style="font-family: tahoma,arial,helvetica,sans-serif;">is interacting with objects that are based on a different data source.  I know, you're going to say “But THAT'S how they are designed!”  Sure, it's true that they are, but as data developers we are often asked to do the impossible (or the improbable)</span>
 
 <p class="MsoNormal">
-  <span style="font-family: tahoma,arial,helvetica,sans-serif;">Often, I’ve had to tell users that “this isn’t possible”.  Connecting a slicer to an object created from a different data source was one of those things.  I finally ran into a situation that I couldn’t just brush off as “impossible”.  I was working on some Excel reporting that used PivotTables based on a TSQL query.  I needed to create a slicer based on one of the data sets and have it interact with the other. </span>
+  <span style="font-family: tahoma,arial,helvetica,sans-serif;">Often, I've had to tell users that “this isn't possible”.  Connecting a slicer to an object created from a different data source was one of those things.  I finally ran into a situation that I couldn't just brush off as “impossible”.  I was working on some Excel reporting that used PivotTables based on a TSQL query.  I needed to create a slicer based on one of the data sets and have it interact with the other. </span>
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: tahoma,arial,helvetica,sans-serif;">I decided that I was going to solve this problem, and solve it I did.  It DOES require the use of VBA, which I normally try to avoid, but in this case, it was the right solution.  Let’s take a look at the anatomy of this solution.</span>
+  <span style="font-family: tahoma,arial,helvetica,sans-serif;">I decided that I was going to solve this problem, and solve it I did.  It DOES require the use of VBA, which I normally try to avoid, but in this case, it was the right solution.  Let's take a look at the anatomy of this solution.</span>
 </p>
 
 <p class="MsoNormal">
@@ -52,7 +52,7 @@ categories:
 
   1. <span style="font-family: tahoma,arial,helvetica,sans-serif;">Identify all of the correct objects in play<br /></span>
   2. <span style="font-family: tahoma,arial,helvetica,sans-serif;">Collect a list of selected values in the slicer object</span>
-  3. <span style="font-family: tahoma,arial,helvetica,sans-serif;">Find the correct field to filter on in the PivotTable.  This field NEEDS to be what’s known as a PAGE type field.  Most commonly, this is a field in the FILTERS section of the PivotTable.</span>
+  3. <span style="font-family: tahoma,arial,helvetica,sans-serif;">Find the correct field to filter on in the PivotTable.  This field NEEDS to be what's known as a PAGE type field.  Most commonly, this is a field in the FILTERS section of the PivotTable.</span>
   4. <span style="font-family: tahoma,arial,helvetica,sans-serif;">Pass the list of selected values to the PivotTable object.  <strong> </strong></span>
 
 <p class="MsoNormal">

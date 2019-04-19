@@ -1,5 +1,5 @@
 ---
-title: Help, my company won’t pay for training!
+title: Help, my company won't pay for training!
 author: Jes Borland
 type: post
 date: 2016-06-23T17:25:34+00:00

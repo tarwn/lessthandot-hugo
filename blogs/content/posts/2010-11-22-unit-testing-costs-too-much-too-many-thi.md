@@ -19,13 +19,13 @@ tags:
   - visual studio
 
 ---
-For someone that is just interested in trying out Unit Testing the number of topics out there can seem overwhelming. From passionate articles about using TDD, to deeply technical articles around the differences in mocking frameworks, to complete sidetracks into architecture theory and how to make code more testable…just learning enough to get started and try out Unit Testing can seem like you need weeks of classes.
+For someone that is just interested in trying out Unit Testing the number of topics out there can seem overwhelming. From passionate articles about using TDD, to deeply technical articles around the differences in mocking frameworks, to complete sidetracks into architecture theory and how to make code more testable...just learning enough to get started and try out Unit Testing can seem like you need weeks of classes.
 
 If you're just catching up, I've been sharing commentary on the costs (and value) of Unit Testing, starting with [a brief (intended to be humorous) post][1], a presentation at the [Raleigh CodeCamp][2], and last weeks discussion of the [“Twice as Much Code”][3] issue.
 
 This article will try to convey the ease with which you can add Unit Testing to a current project without (in the case of visual studio) extra downloads, installs, or configurations. Costing only a few minutes, and without any of the other terminology, products, or theory, we can get started trying out this Unit Testing concept in our own environment.
 
-## TDD, Mocks, Testability…
+## TDD, Mocks, Testability...
 
 Automated unit testing has been around for a while and, as such, there has been time for people to define common methods to help make code more testable, components to help reduce the burden of testing certain complex interactions, and processes whose value we may not currently have the context with which to understand.
 

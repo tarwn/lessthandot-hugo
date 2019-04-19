@@ -29,7 +29,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  After configuring SharePoint in the <a href="/index.php/DataMgmt/business-intelligence-1/sharepoint-2013-bi-part-7">part 7</a>, we will now verify if the configuration was successful and if everything works correctly. The verification process is described in the following MSDN article: <a href="http://msdn.microsoft.com/en-us/library/hh231684.aspx">Verify a PowerPivot for SharePoint Installation</a>. First of all let’s start by verifying the site level integration. Navigate to our newly created PowerPivot site, <a href="http://sp2013bi/">http://sp2013bi</a>.
+  After configuring SharePoint in the <a href="/index.php/DataMgmt/business-intelligence-1/sharepoint-2013-bi-part-7">part 7</a>, we will now verify if the configuration was successful and if everything works correctly. The verification process is described in the following MSDN article: <a href="http://msdn.microsoft.com/en-us/library/hh231684.aspx">Verify a PowerPivot for SharePoint Installation</a>. First of all let's start by verifying the site level integration. Navigate to our newly created PowerPivot site, <a href="http://sp2013bi/">http://sp2013bi</a>.
 </p>
 
 <p style="text-align: justify;">
@@ -54,7 +54,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_22.png?mtime=1370375951"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_22.png?mtime=1370375951" alt="" width="994" height="448" /></a>
 </p>
 
-<span style="text-align: justify;">Let’s proceed with the verification. In the navigation menu, click on </span>_Site Contents_<span style="text-align: justify;">. Next click on </span>_add an app_<span style="text-align: justify;">.</span>
+<span style="text-align: justify;">Let's proceed with the verification. In the navigation menu, click on </span>_Site Contents_<span style="text-align: justify;">. Next click on </span>_add an app_<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_02a.png?mtime=1370375907"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_02a.png?mtime=1370375907" alt="" width="205" height="164" /></a>
@@ -78,7 +78,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_04.png?mtime=1370375907"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_04.png?mtime=1370375907" alt="" width="1005" height="487" /></a>
 </p>
 
-<span style="text-align: justify;">Back in the Central Admin, click on </span>_Manage Services on Server_<span style="text-align: justify;">. The </span>**SQL Server PowerPivot System Service** <span style="text-align: justify;">should be started. The documentation also mentions also a SQL Server Analysis Services service, however this service cannot be found in the list. I don’t have a SharePoint 2010 installation to verify if it is there in that edition, but you don’t seem to need it in SharePoint 2013. We do know for sure the PowerPivot SSAS service, installed in </span><a style="text-align: justify;" href="/index.php/DataMgmt/business-intelligence-1/sharepoint-2013-bi-part-6">part 6</a><span style="text-align: justify;">, is running.</span>
+<span style="text-align: justify;">Back in the Central Admin, click on </span>_Manage Services on Server_<span style="text-align: justify;">. The </span>**SQL Server PowerPivot System Service** <span style="text-align: justify;">should be started. The documentation also mentions also a SQL Server Analysis Services service, however this service cannot be found in the list. I don't have a SharePoint 2010 installation to verify if it is there in that edition, but you don't seem to need it in SharePoint 2013. We do know for sure the PowerPivot SSAS service, installed in </span><a style="text-align: justify;" href="/index.php/DataMgmt/business-intelligence-1/sharepoint-2013-bi-part-6">part 6</a><span style="text-align: justify;">, is running.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_05.png?mtime=1370375908"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_05.png?mtime=1370375908" alt="" width="751" height="484" /></a>
@@ -96,7 +96,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_07.png?mtime=1370375908"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_07.png?mtime=1370375908" alt="" width="803" height="445" /></a>
 </p>
 
-<span style="text-align: justify;">This might be caused by the fact you haven’t done much PowerPivot related activity on your server, but also because the </span>_PowerPivot Management Dashboard Processing Timer Job_ <span style="text-align: justify;">(quite a mouthful) hasn’t run yet and thus hasn’t collected any data yet. So click on </span>_Review timer job definitions_ <span style="text-align: justify;">to take a look at the job schedules. You’ll see the Dashboard job has a daily schedule.</span>
+<span style="text-align: justify;">This might be caused by the fact you haven't done much PowerPivot related activity on your server, but also because the </span>_PowerPivot Management Dashboard Processing Timer Job_ <span style="text-align: justify;">(quite a mouthful) hasn't run yet and thus hasn't collected any data yet. So click on </span>_Review timer job definitions_ <span style="text-align: justify;">to take a look at the job schedules. You'll see the Dashboard job has a daily schedule.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_08.png?mtime=1370375908"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_08.png?mtime=1370375908" alt="" width="928" height="172" /></a>
@@ -108,7 +108,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_08a.png?mtime=1370375908"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_08a.png?mtime=1370375908" alt="" width="447" height="435" /></a>
 </p>
 
-<span style="text-align: justify;">Click on </span>_Run Now_ <span style="text-align: justify;">to launch the job immediately. You’ll have to wait for a few minutes until the job has finished and the dashboard has been updated. However, in my case, the dashboard stayed empty. So I investigated the issue! In the job definitions menu, you can click on the </span>_Job History_ <span style="text-align: justify;">link at the left of the screen.</span>
+<span style="text-align: justify;">Click on </span>_Run Now_ <span style="text-align: justify;">to launch the job immediately. You'll have to wait for a few minutes until the job has finished and the dashboard has been updated. However, in my case, the dashboard stayed empty. So I investigated the issue! In the job definitions menu, you can click on the </span>_Job History_ <span style="text-align: justify;">link at the left of the screen.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_08b.png?mtime=1370375908"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_08b.png?mtime=1370375908" alt="" width="129" height="124" /></a>
@@ -162,7 +162,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_14.png?mtime=1370375909"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_14.png?mtime=1370375909" alt="" width="471" height="147" /></a>
 </p>
 
-<span style="text-align: justify;">You’ll see the PowerPivot Management Data workbook and a folder called 1033. In the folder you will find a connection and two workbooks, Server Health and Workbook Activity.</span>
+<span style="text-align: justify;">You'll see the PowerPivot Management Data workbook and a folder called 1033. In the folder you will find a connection and two workbooks, Server Health and Workbook Activity.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_15.png?mtime=1370375909"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_15.png?mtime=1370375909" alt="" width="546" height="181" /></a>

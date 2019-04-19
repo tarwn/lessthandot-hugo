@@ -20,7 +20,7 @@ tags:
 ---
 Recently I was working on a library to consume a REST API without exposing any of the specifics to the rest of the application. Implementing a common interface and set of custom exceptions was easy enough, but exercising the internal logic was going to be tough. 
 
-While I could use the live REST API to verify the general logic worked, I had limited options when it came to the full range of HTTP responses and communication failures. Add in the impact those live API calls would have on my build process performance, the occasional failures of my build due the imperfections of talking to a live service, and the overhead of maintaining separation between my test and live data in that service…what I really had on my hands was the beginning of years of random, painful maintenance.
+While I could use the live REST API to verify the general logic worked, I had limited options when it came to the full range of HTTP responses and communication failures. Add in the impact those live API calls would have on my build process performance, the occasional failures of my build due the imperfections of talking to a live service, and the overhead of maintaining separation between my test and live data in that service...what I really had on my hands was the beginning of years of random, painful maintenance.
 
 If only I could mock WebRequest and have it return carefully crafted responses to test my code with, all without ever touching the real network.
 

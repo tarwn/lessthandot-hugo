@@ -21,4 +21,4 @@ This is not meant to denigrate those who obsess over the aspects of how to best 
 
 This does not mean that everyone will become good developers. Developers, as I envision them, do more than just code and not everyone can or should aspire to that. But developers should be used for more than just writing code and can only be better by learning and understanding more than just the code they read and write.
 
-And, along the lines of code monkeys, I was urged to include this video… Enjoy! :p [video:youtube:v4Wy7gRGgeA]
+And, along the lines of code monkeys, I was urged to include this video... Enjoy! :p [video:youtube:v4Wy7gRGgeA]

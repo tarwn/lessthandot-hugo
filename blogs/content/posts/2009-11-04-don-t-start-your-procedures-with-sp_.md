@@ -1,5 +1,5 @@
 ---
-title: Don’t start your procedures with SP_
+title: Don't start your procedures with SP_
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-04T13:16:28+00:00

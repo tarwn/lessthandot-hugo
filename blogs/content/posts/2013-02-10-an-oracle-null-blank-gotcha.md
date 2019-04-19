@@ -50,7 +50,7 @@ Ouput
 
 <pre>0     10</pre>
 
-In Oracle…not the same
+In Oracle...not the same
 
 If you run this
 

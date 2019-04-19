@@ -28,7 +28,7 @@ tags:
 ---
 Best Practice: coding SQL Server triggers for multi-row operations
 
-There are many forum posts where people code triggers but these triggers are coded incorrectly because they don't account for multi-row operations. A trigger fires per batch not per row, if you are lucky you will get an error…if you are not lucky you will not get an error but it might take a while before you notice that you are missing a whole bunch of data
+There are many forum posts where people code triggers but these triggers are coded incorrectly because they don't account for multi-row operations. A trigger fires per batch not per row, if you are lucky you will get an error...if you are not lucky you will not get an error but it might take a while before you notice that you are missing a whole bunch of data
   
 Let's take a look, first create these two tables
 

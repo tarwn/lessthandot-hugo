@@ -35,7 +35,7 @@ Now let's see how I did
 
 ## Upgrade our servers to SQL Server 2008
 
-This was done and we are all on SQL Server 2008 now. No more replication, we can now use all the fancy T-SQL….everyone is happy
+This was done and we are all on SQL Server 2008 now. No more replication, we can now use all the fancy T-SQL....everyone is happy
 
 ## Read 2 books per month
 
@@ -73,7 +73,7 @@ Stephenie Meyer: [Eclipse][11]
   
 Stephenie Meyer: [Breaking Dawn][12]
 
-Why oh why did I start this series, the first two books were fine but then it became ridiculous. Renesmee really…? Renesmee is a vampire/human hybrid member of the Olympic Coven. She is the daughter of Edward Cullen and Bella Swan, and the imprintee of Jacob Black
+Why oh why did I start this series, the first two books were fine but then it became ridiculous. Renesmee really...? Renesmee is a vampire/human hybrid member of the Olympic Coven. She is the daughter of Edward Cullen and Bella Swan, and the imprintee of Jacob Black
   
 Of course after I 'invested' all the time into the books so far I had no choice to finish it. I do not recommend this
 

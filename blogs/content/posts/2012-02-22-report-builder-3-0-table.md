@@ -30,7 +30,7 @@ In this post, I'm going to introduce you to one the Table or Matrix Wizard.
   <img style="vertical-align: middle" src="/wp-content/uploads/users/grrlgeek/Wizard.jpg?mtime=1329921629" alt="" width="196" height="225" />
 </p>
 
-SQL Server Report Builder 3.0 has a built-in Table or Matrix Wizard. It will walk you through all the necessary building blocks for a table or matrix, and generate a report layout for you. This is great if you’re not comfortable with starting a report from scratch, or want to quickly create a report.
+SQL Server Report Builder 3.0 has a built-in Table or Matrix Wizard. It will walk you through all the necessary building blocks for a table or matrix, and generate a report layout for you. This is great if you're not comfortable with starting a report from scratch, or want to quickly create a report.
 
 The Table or Matrix Wizard can be accessed in two ways. It will appear on the splash screen when you open Report Builder. It can also be found under File > New.
 
@@ -46,13 +46,13 @@ I created a new dataset to connect to AdventureWorks2008R2.
 
 ![][3]
 
-The Design a Query screen can be intimidating at first glance. There is a lot of information in one place. It’s easy to understand once it’s broken down, though.
+The Design a Query screen can be intimidating at first glance. There is a lot of information in one place. It's easy to understand once it's broken down, though.
 
 On the left, the Database View column shows the database, sorted by schema. Expand a schema to see its tables, views and stored procedures. Expand a table or view and click on the box in front of a column to add it to the report. Expand stored procedures, and check one to use it in the report.
 
 The right pane has three sections: Selected Fields, Relationships and Applied Filters.
 
-Selected Fields shows you the fields that you’ve selected for use in this query. In the top right, use the X to delete a column, or the arrows to reorder your selections. You can use Group and Aggregate to select a field to aggregate and other fields to group by.
+Selected Fields shows you the fields that you've selected for use in this query. In the top right, use the X to delete a column, or the arrows to reorder your selections. You can use Group and Aggregate to select a field to aggregate and other fields to group by.
 
 Relationships shows the relationships between tables. You can use Auto Detect to find relationships based on primary and foreign keys defined in the database. You can also edit an existing relationship, or create one yourself.
 
@@ -80,7 +80,7 @@ In my example, I do not want any grouping, so I only add Values.
 
 ![][6]
 
-Choose the Layout shows you how the report will look. Don’t like the order of the columns or rows? You can go back and rearrange if needed.
+Choose the Layout shows you how the report will look. Don't like the order of the columns or rows? You can go back and rearrange if needed.
 
 ![][7]
 
@@ -88,7 +88,7 @@ Choose A Style will apply a set of colors and fonts to the report. (Anyone that 
 
 ![][8]
 
-The report is created and displayed on the main screen. It’s now able to be edited further, or run.
+The report is created and displayed on the main screen. It's now able to be edited further, or run.
 
 ![][9]
 
@@ -98,7 +98,7 @@ Click Save to save the .rdl.
 
 **Deploying** 
 
-Is that perfect, brand new, shiny report ready to be turned loose in the business? It’s time to deploy it!
+Is that perfect, brand new, shiny report ready to be turned loose in the business? It's time to deploy it!
 
 In the bottom left corner, you should see “No current report server.” Click Connect. Enter the Report Server URL.
 
@@ -122,7 +122,7 @@ If you choose Review and Modify, it lets you select which parts of the report to
 
 The Table or Matrix Wizard is a powerful tool to help you quickly design reports in Report Builder.
 
-Next, we’ll look at the Chart Wizard!
+Next, we'll look at the Chart Wizard!
 
  [1]: /wp-content/uploads/users/grrlgeek/RB3TableWiz1.JPG?mtime=1329271885
  [2]: /wp-content/uploads/users/grrlgeek/RB3TableWiz2.JPG?mtime=1329271885

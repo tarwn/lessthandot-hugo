@@ -1,5 +1,5 @@
 ---
-title: There Is Never Time For … (Part 2)
+title: There Is Never Time For ... (Part 2)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-04-09T13:37:24+00:00
@@ -19,11 +19,11 @@ So we might have some idea on how to improve our skills and knowledge, but it st
 
 _This is the second article in a three part series on major gaps that we never seem to have the time to address as well as ideas on how to overcome and initiate processes for closing or reducing those gaps. Each article is based on one high-level subject and provides ideas on how to gain individual and group level traction._
 
-## [Coding|Provisioning|Reporting|…] Standards
+## [Coding|Provisioning|Reporting|...] Standards
 
 It's always easy to put off little tasks until later. Labeling new equipment, updating a diagram of a wiring cabinet or server rack, creating monitors for performance and temperatures, testing your backups. Ok, some of these are less than small, and yet we continue to put them off.
   
-Take a moment and list two or three items you would like to make part of your process for deploying new code, new servers, new databases, new (whatever you do all day long). Ok, now open up your calendar and look forward to the next month, two months, 6 months…where is the reminder that your going to start doing that task, that your going to go back and do it for all the work you have completed to date? Yeah, thought so. This isn't a “one day” task, it's a “Never would have done it” task. Remember, I've been there too. 
+Take a moment and list two or three items you would like to make part of your process for deploying new code, new servers, new databases, new (whatever you do all day long). Ok, now open up your calendar and look forward to the next month, two months, 6 months...where is the reminder that your going to start doing that task, that your going to go back and do it for all the work you have completed to date? Yeah, thought so. This isn't a “one day” task, it's a “Never would have done it” task. Remember, I've been there too. 
 
 ### Step 1: Make a Standard
 
@@ -64,11 +64,11 @@ There is never time to sit and reflect on how your job gets done, experiment to 
 
 Miss an article in the series?
   
-There Is Never Time For … [Part 1: Training and Development][1]
+There Is Never Time For ... [Part 1: Training and Development][1]
   
-There Is Never Time For … _Part 2: Standard Processes_
+There Is Never Time For ... _Part 2: Standard Processes_
   
-There Is Never Time For … [Part 3: Process Improvement][2]
+There Is Never Time For ... [Part 3: Process Improvement][2]
 
  [1]: /index.php/ITProfessionals/ITProcesses/there-is-never-time-for-part-1 "Read the first article in the series"
  [2]: /index.php/ITProfessionals/ITServiceManagement/there-is-never-time-for-part-3

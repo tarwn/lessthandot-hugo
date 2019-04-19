@@ -25,7 +25,7 @@ tags:
 
 Internet Explorer 9 is available for a test drive
 
-Microsoft detailed its support for a number of HTML5 specifications, including CSS3, Scalable Vector Graphics (SVG), XHTML parsing, and the video and audio tags using industry-standard (H.264/MPEG4 and MP3/AAC) codecs, among others. In addition, Microsoft demonstrated a new JavaScript engine that uses the multiple cores of today’s modern chips to effectively manage computing resources and improve Web performance. By combining increased interoperability with a new JavaScript engine and Direct 2D technology, Internet Explorer 9 enables Web developers to provide users with richer experiences that render more quickly and consistently.
+Microsoft detailed its support for a number of HTML5 specifications, including CSS3, Scalable Vector Graphics (SVG), XHTML parsing, and the video and audio tags using industry-standard (H.264/MPEG4 and MP3/AAC) codecs, among others. In addition, Microsoft demonstrated a new JavaScript engine that uses the multiple cores of today's modern chips to effectively manage computing resources and improve Web performance. By combining increased interoperability with a new JavaScript engine and Direct 2D technology, Internet Explorer 9 enables Web developers to provide users with richer experiences that render more quickly and consistently.
 
 The new IE 9 script engine is codenamed “Chakra”
   
@@ -55,7 +55,7 @@ If you look at the SunSpider results in the image below, you can see that IE 9 i
 
 Microsoft also announced increased support of client development through the jQuery JavaScript Library
 
-As part of Microsoft’s broad engagement with open source communities, Corporate Vice President Scott Guthrie today announced that Microsoft is investing resources to contribute to the development of the jQuery JavaScript Library to help improve the development process of standards-based Web applications. Microsoft will also work to provide better interoperability between ASP.NET and the jQuery JavaScript Library by enhancing ASP.NET so .NET developers can better incorporate jQuery capabilities. In addition, Microsoft will actively promote and distribute versions of the jQuery JavaScript Library by packaging it with popular products such as Microsoft Visual Studio 2010 and ASP.NET MVC 2. As a first step, Microsoft will contribute a templating engine to the jQuery JavaScript Library Team to simplify Web applications.
+As part of Microsoft's broad engagement with open source communities, Corporate Vice President Scott Guthrie today announced that Microsoft is investing resources to contribute to the development of the jQuery JavaScript Library to help improve the development process of standards-based Web applications. Microsoft will also work to provide better interoperability between ASP.NET and the jQuery JavaScript Library by enhancing ASP.NET so .NET developers can better incorporate jQuery capabilities. In addition, Microsoft will actively promote and distribute versions of the jQuery JavaScript Library by packaging it with popular products such as Microsoft Visual Studio 2010 and ASP.NET MVC 2. As a first step, Microsoft will contribute a templating engine to the jQuery JavaScript Library Team to simplify Web applications.
 
 You can take Internet Explorer 9 for a test drive here
   

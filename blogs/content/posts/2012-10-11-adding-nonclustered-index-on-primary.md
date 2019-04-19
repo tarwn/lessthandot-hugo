@@ -18,9 +18,9 @@ categories:
 ---
 Recently, during a pre-conference seminar that I presented, the group and I had a long discussion about why there would be a need to add a nonclustered index that consisted of the primary key as the key column.  This topic also came up in a client training session I presented and in passing with a few peers.  Given the topic and the overall consensus that this was a bad practice, I wanted to discuss it in a post and show a reason why creating a nonclustered index with a key column only being the primary key is actually a great optimization for some plans.
 
-I’d like to focus on what would be the largest aspect to why you would use an index strategy of creating nonclustered indexes with only the primary key as the key columns: pages pulled into the buffer.
+I'd like to focus on what would be the largest aspect to why you would use an index strategy of creating nonclustered indexes with only the primary key as the key columns: pages pulled into the buffer.
 
-**Let’s go through an example**
+**Let's go through an example**
 
 Using AdventureWork2012, create a table from Sales.SalesOrderHeader that can be manipulated to fit the following tuning steps.
 
@@ -138,10 +138,10 @@ Looking at the execution plan, we can see the new nonclustered index is effectiv
   <a href="/wp-content/uploads/blogs/DataMgmt/-162.png?mtime=1349983071"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-162.png?mtime=1349983071" width="624" height="338" /></a>
 </div>
 
-Of course, we’ve only replaced an index seek for another index seek.  To see the real optimization, the IO and then equating that to review of the pages pulled into the buffer should be checked.  Execute the query to review the pages in the buffer that was used previously.
+Of course, we've only replaced an index seek for another index seek.  To see the real optimization, the IO and then equating that to review of the pages pulled into the buffer should be checked.  Execute the query to review the pages in the buffer that was used previously.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-163.png?mtime=1349983071"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-163.png?mtime=1349983071" width="607" height="58" /></a>
 </div>
 
-As shown, the page count in the buffer is drastically lower than the previous count of 172.  Based on this, we’ve optimized the execution of the query and plan but, more importantly, optimized the resources that are being used by the execution of the query.
+As shown, the page count in the buffer is drastically lower than the previous count of 172.  Based on this, we've optimized the execution of the query and plan but, more importantly, optimized the resources that are being used by the execution of the query.

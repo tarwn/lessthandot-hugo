@@ -57,7 +57,7 @@ The data is relatively simple, but is meant to demonstrate the concept. The goal
 
 As you can see, the original data had the name and shoe size for each person on separate rows. The output has just a single row per person but with additional columns for the data.
 
-Setting up the code….
+Setting up the code....
 
 sql
 Create Table #Temp(Id Int, Name VarChar(20), Value VarChar(20))

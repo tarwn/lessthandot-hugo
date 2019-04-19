@@ -20,7 +20,7 @@ With SQL Server 2012, the power of Availability Groups is arguably one of the be
 
 With all of the availability group power added, it is common to take advantage of the new features and implement them outside of other databases that may still be on 2008 and awaiting an upgrade plan.  Since availability groups and mirroring utilize the same endpoint, there is one key setting that needs to be altered in order for you to successfully setup a mirror to an existing availability group – encryption.
 
-When setting up availability groups, the default endpoint encryption is AES or [Advanced Encryption Standard][1].  However, with mirroring prior to 2012, the endpoint that is created by default is RC4 or [Rivest Cipher 4][2].  It’s important to note, this is more than likely due to [RC4 encryption being deprecated][3] , as pointed out in the note contained in the linked article.
+When setting up availability groups, the default endpoint encryption is AES or [Advanced Encryption Standard][1].  However, with mirroring prior to 2012, the endpoint that is created by default is RC4 or [Rivest Cipher 4][2].  It's important to note, this is more than likely due to [RC4 encryption being deprecated][3] , as pointed out in the note contained in the linked article.
 
 The difference in encryption types can cause a problem. If you have an existing availability group and the default endpoint Hadr_endpoint created, and then attempt to create a mirroring session to a database not in the availability group for upgrade purposes while letting the wizard create the default mirroring endpoint or preexisting mirroring endpoint, the encryption difference will cause the error shown below.
 

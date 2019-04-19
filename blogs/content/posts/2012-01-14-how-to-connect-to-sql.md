@@ -93,7 +93,7 @@ That will open the Connection Properties tab
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServer.PNG?mtime=1326571269"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServer.PNG?mtime=1326571269" width="401" height="348" /></a>
 </div>
 
-Whatever you do, do not select _Browse server…_ from the connect to database option, if you do that you will get the following error
+Whatever you do, do not select _Browse server..._ from the connect to database option, if you do that you will get the following error
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServerError.PNG?mtime=1326571280"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServerError.PNG?mtime=1326571280" width="614" height="167" /></a>

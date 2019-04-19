@@ -21,10 +21,10 @@ With <a href="http://www.sqlpass.org/summit/2014/Home.aspx" target="_blank">PASS
   <strong>Are Your Indexes Hurting You or Helping You?</strong><br /> Queries need your help! Your mission, should you choose to accept it, is to make great decisions about what indexes are best for your workload. In this session, we'll review the difference between clustered and nonclustered indexes, show when to use included columns, understand what sargability means, and introduce statistics. You'll leave this session with the ability to confidently determine why, or why not, SQL Server uses your indexes when executing queries.
 </p>
 
-On Thursday, September 11, I'll be presenting (remotely) for the <a href="http://detroit.sqlpass.org/" target="_blank">Detroit SQL Server User Group</a>. I've been asked to talk about…presenting! (Sense a theme with this blog yet?)
+On Thursday, September 11, I'll be presenting (remotely) for the <a href="http://detroit.sqlpass.org/" target="_blank">Detroit SQL Server User Group</a>. I've been asked to talk about...presenting! (Sense a theme with this blog yet?)
 
 <p style="padding-left: 30px">
-  <strong>You CAN Give a Technical Presentation!</strong><br /> You're dreaming. In the dream, you’re standing in front of a room full of dozens of people, presentation mouse in hand, about to present to them on (insert SQL Server feature here). You wake up in a cold sweat. You’re either terrified – or excited and terrified. Are you ready to start presenting? Join Jes as she shares her secrets to building and giving successful technical presentations!
+  <strong>You CAN Give a Technical Presentation!</strong><br /> You're dreaming. In the dream, you're standing in front of a room full of dozens of people, presentation mouse in hand, about to present to them on (insert SQL Server feature here). You wake up in a cold sweat. You're either terrified – or excited and terrified. Are you ready to start presenting? Join Jes as she shares her secrets to building and giving successful technical presentations!
 </p>
 
 Then, I'm on a plane to Vegas to present at <a href="http://www.devconnections.com/Dev14/public/enter.aspx" target="_blank">IT/Dev Connections</a>! I'll be there Tuesday, September 16 – Thursday, September 18. This is my first trip to this conference, and I'm really excited about it. I am most looking forward to the various technologies covered – I've even seen a session on Fiddler that I'm interested in! I'll be presenting two sessions on Wednesday, September 17. My presentations:

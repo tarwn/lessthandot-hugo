@@ -1,5 +1,5 @@
 ---
-title: Attending PASS Summit 2011? Want Lunch? And Free Career Advice? I Have Just The Event…
+title: Attending PASS Summit 2011? Want Lunch? And Free Career Advice? I Have Just The Event...
 author: Jes Borland
 type: post
 date: 2011-09-15T12:14:00+00:00
@@ -31,7 +31,7 @@ One event you should not miss that week is the [Women In Technology Lunch and Pa
 
 Who will be leading the discussion? The panelists are: Karen Lopez, from InfoAdvisors. She's smart, snarky, and wants you to Love Your Data. She's also a chronic volunteer and national spokesperson for WIT issues. Yanni Robel is the leader of the DBA team at AllRecipes.com. This woman is dedicated and determined in everything she does. She's one smart cookie! Rick Bolesta is a VP at CA, is on the PASS Board of Directors, and is going to have some great insights on this topic. Sharon Dooley is a very busy, very accomplished SQL Server consultant who will also be able to provide some great information for us. 
 
-And, leading this dicussion as the moderator will be…me! I will get to introduce the panelists, guide the discussion, and make sure the audience gets to be involved in the discussion. I can't wait to be part of this amazing event. 
+And, leading this dicussion as the moderator will be...me! I will get to introduce the panelists, guide the discussion, and make sure the audience gets to be involved in the discussion. I can't wait to be part of this amazing event. 
 
 Not registered for PASS Summit yet? Hurry! [Register today][5]! When you register, make sure you indicate you'll be attending the lunch! I can't wait to see you there!
 

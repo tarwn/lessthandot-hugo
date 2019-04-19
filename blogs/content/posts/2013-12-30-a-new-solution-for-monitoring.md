@@ -49,7 +49,7 @@ The Analysis tab lets you view a history of various metrics on the system. I can
 
 Security shouldn't be a concern – everything sent between your server and Red Gate's server is SSL-encrypted, and the credentials are stored on your server, not Red Gate's.
 
-If you're looking for a monitoring solution that will be full-featured but lightweight in your environment, give SQL Monitor Hosted a try, and give Red Gate feedback – they’d love to hear more about it!
+If you're looking for a monitoring solution that will be full-featured but lightweight in your environment, give SQL Monitor Hosted a try, and give Red Gate feedback – they'd love to hear more about it!
 
  [1]: http://www.red-gate.com/
  [2]: http://www.red-gate.com/products/dba/sql-monitor/

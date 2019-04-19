@@ -29,7 +29,7 @@ Collecting information on SQL Server has been extremely simplified since the rel
 
 Even with the work that Glenn has done for us, there is a small amount of effort needed.  In the case of the queries Glenn provides, SQL Server Integration Services (SSIS) retains much power in a rapid development platform that can be automated for later executions.
 
-After reviewing the queries Glenn has provided, 32 distinct tables can be formed from them.  Creating all these tables may seem at first to be a daunting task but it can be simplified.  Working through Glenn’s SQL script, identify the segments and queries that retain value for collecting them over a period of time.  Run each statement taking advantage of the SELECT INTO statement.
+After reviewing the queries Glenn has provided, 32 distinct tables can be formed from them.  Creating all these tables may seem at first to be a daunting task but it can be simplified.  Working through Glenn's SQL script, identify the segments and queries that retain value for collecting them over a period of time.  Run each statement taking advantage of the SELECT INTO statement.
 
 **_Note: before reading on, please ensure to always show the recognition that is deserved while using anything someone has provided to the public for use.  In this case, always place the header in each area the code is used to show Glenn as the author and SQLskills.com as the supporting company._**
 
@@ -84,7 +84,7 @@ After performing this task for all the information to be collected, the tables w
 
 **SSIS Automation**
 
-After you’ve created all the tables found to be of value, the SSIS package can be created to automate loading the data based on a schedule.  In a stripped down form, the SSIS package can be executed with nothing more than the use of a series of Data Flow Tasks (DFT) and a Foreach Loop Container.   The Data Flow Tasks will be a direct source to destination loading scenario except for the initial task of loading a table with the information for the instances.  Loading the information about the instances is a task that requires a lookup to decide if something has changed.  If nothing has changed, there is no need to insert duplicate rows, which will only make reporting off the information more difficult in the future.  This lookup task would lead off the entire process.
+After you've created all the tables found to be of value, the SSIS package can be created to automate loading the data based on a schedule.  In a stripped down form, the SSIS package can be executed with nothing more than the use of a series of Data Flow Tasks (DFT) and a Foreach Loop Container.   The Data Flow Tasks will be a direct source to destination loading scenario except for the initial task of loading a table with the information for the instances.  Loading the information about the instances is a task that requires a lookup to decide if something has changed.  If nothing has changed, there is no need to insert duplicate rows, which will only make reporting off the information more difficult in the future.  This lookup task would lead off the entire process.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/base_2.png?mtime=1367922905"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_2.png?mtime=1367922905" width="269" height="88" /></a>
@@ -141,7 +141,7 @@ The finished SSIS Package would appear as shown below.
 
 **Baseline Reporting**
 
-Up to this point, the effort put into the baseline collection process has been minimal.  Without a doubt, the reporting aspect will be a time consumption that far outweighs the SSIS or database creation to retain the information.  Of course, skills may be much higher than this author’s in creating visualization of data.  In fact, for the task at hand, I enlisted the expert knowledge of Jes Borland to offer a hand in making a representation of a few pieces of that data in the collection database.
+Up to this point, the effort put into the baseline collection process has been minimal.  Without a doubt, the reporting aspect will be a time consumption that far outweighs the SSIS or database creation to retain the information.  Of course, skills may be much higher than this author's in creating visualization of data.  In fact, for the task at hand, I enlisted the expert knowledge of Jes Borland to offer a hand in making a representation of a few pieces of that data in the collection database.
 
 Without visually being able to review the baseline data, it does not offer much value.  The baseline data can be queried when needed but the overall needs of a baseline do not end with troubleshooting.  We can obtain the needed information for requesting new hardware, consolidation needs and overall knowledge of data growth and business requirements that demand the need for SQL Server and the resources to evolve.
 
@@ -157,7 +157,7 @@ In this chart, we can quickly see on 4/1/2013, the pk_tblEntry (a master data ta
 
 **Summary**
 
-Baselines are a critical information collection process to all data services.  This doesn’t stop with SQL Server but spreads to all data services.  With the help and validation of resources available online in the form of scripts, blogs and articles, a solution can be development and implemented with a much lower amount of resources needed over the complete creation from the bottom, up.
+Baselines are a critical information collection process to all data services.  This doesn't stop with SQL Server but spreads to all data services.  With the help and validation of resources available online in the form of scripts, blogs and articles, a solution can be development and implemented with a much lower amount of resources needed over the complete creation from the bottom, up.
 
 If you would like to play with the SSIS Package that was written for this article and the database, you can [download this compressed file][3]. The database is SQL Server 2012. Restore the database and add the DTSX file to a new solution in SSDT 2012. Edit the variable User::SQLInstance to the instance you would like to start collecting from.
 

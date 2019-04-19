@@ -19,7 +19,7 @@ categories:
 ---
 I took some time off so apologize to readers for my lack of writing lately.
 
-Today I thought I'd talk about the report manager and SSRS. Personally I'm not a big fan of it. It lands in there with SSMS and tasks like creating or modifying indexes. I use it when I need it really quick and it's the only thing I need to touch. If you have to modify or create a bunch of things it becomes very cumbersome and pretty much an annoyance. Any browser based front end is a dog. Sense report manager is just that, you can expect refresh issues, slow response and having to hit 30 “OK” buttons to get one thing saved. The nice thing about most SQL Server Services is they are controlled by system procedures, functions etc… This means in most cases you can utilize these same system objects to your advantage. One that I'll show you today is the create subscriptions procedure named, “CreateSubscription” for Reporting Services.
+Today I thought I'd talk about the report manager and SSRS. Personally I'm not a big fan of it. It lands in there with SSMS and tasks like creating or modifying indexes. I use it when I need it really quick and it's the only thing I need to touch. If you have to modify or create a bunch of things it becomes very cumbersome and pretty much an annoyance. Any browser based front end is a dog. Sense report manager is just that, you can expect refresh issues, slow response and having to hit 30 “OK” buttons to get one thing saved. The nice thing about most SQL Server Services is they are controlled by system procedures, functions etc... This means in most cases you can utilize these same system objects to your advantage. One that I'll show you today is the create subscriptions procedure named, “CreateSubscription” for Reporting Services.
 
 If you're are using SSRS and in a high reporting environment like most are, then you more than likely have dozens if not hundreds of subscriptions setup so reports are automatically delivered to users on a time basis. In most cases the business has critical tasks that reply on reports to be run at specific times. If those reports are not run at the exact time specified, there may be missed opportunities or missed issues that can be hidden by data later on. When I first started using SSRS years back I dreaded the task of creating a subscription for a report to run here and there through the day. It was time consuming and again, an annoyance. This lead me to run profiler and do a bit of reading on what SSRS does behind the scenes in report manager. Once I found the CreateSubscription procedure, creating a dozen scheduled subscriptions for days in the week was actually pretty easy. 
 
@@ -46,7 +46,7 @@ public partial class UserDefinedFunctions
 ```
 You can then pass to this function a basic datetime value while only needing to worry about sending the time that you want over to it.
 
-as such…
+as such...
 
 sql
 Set @time_send = (Select dbo.DateTimeTimeZoneOffset(Cast('2009-06-25 08:00:00' as datetime)))

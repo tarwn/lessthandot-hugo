@@ -20,7 +20,7 @@ Just saw the X# language website, what do you think of X#?
 
 X# (pronounced X-sharp) is a domain specific language designed to quickly create Web applications and services. In X# everything is represented as a hierarchical structure or tree and instead of using functions to manipulate information or perform actions, all possible operations you can think of are done by adding, removing or changing nodes from this tree. Since there are no functions to learn and everything is done intuitively, even inexperienced developers can create complex Web applications and services in record time.
 
-X# is …
+X# is ...
 
 Unlike other similar DSLs which require developers to learn hundreds of libraries and thousands of functions, X# is simple, intuitive, and easy to learn. It only uses 30 statements and four data types (node, string, number, and boolean) to create any application or service you can think of.
 

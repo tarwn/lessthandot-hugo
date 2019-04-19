@@ -27,7 +27,7 @@ Now how on earth can you expect anything to behave the same when you compare 100
   
 This is one of the fundamental flaws when people design a database, move it to production and then find out that it blows up/breaks down/is unusable on production
 
-The worst case I have seen was when someone designed a table with a CompanyName column which was CHAR(5000). Yes you read that right CHAR(5000) nor VARCHAR(5000). On 'staging' it was all fine with 50 rows or so. They moved this to production loaded it up with 100000 rows and it was slow as hell. What can you expect when you have only one row per page…..this was just terrible.
+The worst case I have seen was when someone designed a table with a CompanyName column which was CHAR(5000). Yes you read that right CHAR(5000) nor VARCHAR(5000). On 'staging' it was all fine with 50 rows or so. They moved this to production loaded it up with 100000 rows and it was slow as hell. What can you expect when you have only one row per page.....this was just terrible.
 
 I understand that not every shop has the money to store terabytes of data but guess what? You can buy a USB TB hard drive for about $100. Plug in 5 of those and test with volume otherwise you will suffer later.
 

@@ -142,15 +142,15 @@ In the next article we will explore using a temporary Kanban process to manage a
 
 If you have missed prior articles in the series you can find them here:
   
-Applying Kanban … Part 1: [Kanban Overview][2]
+Applying Kanban ... Part 1: [Kanban Overview][2]
   
-_Applying Kanban … Part 2: Kanban applied to Tech Support_
+_Applying Kanban ... Part 2: Kanban applied to Tech Support_
   
-Applying Kanban … Part 3: [Kanban applied to PC Deployment][3]
+Applying Kanban ... Part 3: [Kanban applied to PC Deployment][3]
   
-Applying Kanban … Part 4: [Kanban applied to a Development Group][4]
+Applying Kanban ... Part 4: [Kanban applied to a Development Group][4]
   
-Applying Kanban … Part 5: [Challenges, Additional Concepts, and Wrapup][5]
+Applying Kanban ... Part 5: [Challenges, Additional Concepts, and Wrapup][5]
 
  [1]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-1
  [2]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-1 "Read the first article"

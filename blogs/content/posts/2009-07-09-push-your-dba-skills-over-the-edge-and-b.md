@@ -119,7 +119,7 @@ Using the InstallUtil.exe you install the service by simply calling the executab
   
 InstallUtil “C:BackupCopyCopyService.exe”
 
-The installation is controlled by your installer you added to the project. The settings like user logon, start mode etc… are all set there. If you have a hard time with this I would use sites like [code project][1] and such to get you going on the fundamentals of writing windows services. They really are simple to get going. They are a pain to debug, but simple in comparison to other development tasks.
+The installation is controlled by your installer you added to the project. The settings like user logon, start mode etc... are all set there. If you have a hard time with this I would use sites like [code project][1] and such to get you going on the fundamentals of writing windows services. They really are simple to get going. They are a pain to debug, but simple in comparison to other development tasks.
 
 So there is my plea to all the DBAs to go out and have the motivation to learn some development skills. It can really make you an exceptional DBA and push you over that level of just another DBA monitoring index fragmentation. 🙂
 

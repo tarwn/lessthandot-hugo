@@ -37,7 +37,7 @@ INSERT bla (ID) VALUES(1)
 GO
 ```
 
-Do a simple select….
+Do a simple select....
 
 sql
 SELECT * FROM bla
@@ -61,7 +61,7 @@ VALUES(2)
 <pre>SomeID
 28E798A8-0AE6-E011-A428-0021867E1D41</pre>
 
-As you can see you get the uniqueidentifier just created back, all we have added was OUTPUT INSERTED.SomeID between INSERT….. and VALUES……
+As you can see you get the uniqueidentifier just created back, all we have added was OUTPUT INSERTED.SomeID between INSERT..... and VALUES......
   
 Pretty simple so far
   

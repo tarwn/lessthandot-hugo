@@ -84,7 +84,7 @@ Output
 
 What happens is because smalldatetime is accurate to 1 minute, it rounds up to the next hour and thus it becomes the next day
   
-Usually stuff like this happens where the table gets changed but someone forgot to also change the procedure, it could take a while until you catch a bug like this because unless you are passing in the last minute of the hour you won't see it…however the fact that the seconds are all 00 should give it away
+Usually stuff like this happens where the table gets changed but someone forgot to also change the procedure, it could take a while until you catch a bug like this because unless you are passing in the last minute of the hour you won't see it...however the fact that the seconds are all 00 should give it away
   
 
 

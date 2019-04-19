@@ -23,7 +23,7 @@ PASSMN is pleased to welcome author, SQL Server MVP, and SSIS Expert Brian Knigh
 
 > Ninja Data Visualization Moves by Brian Knight
 > 
-> Abstract: PowerPivot and PowerView brings with it some amazing business intelligence and data visualization enhancements. Watch how you can improve data cleansing with Excel 2013 and some of the new features integrated into Excel and the other Office tools to visualize data better than ever before. See how the new PowerPivot and PowerView features in Excel 2013 take your data to the next level of visualization. We’ll also show how you can visualize map data with GeoFlow and tie disparate data together with Data Explorer.
+> Abstract: PowerPivot and PowerView brings with it some amazing business intelligence and data visualization enhancements. Watch how you can improve data cleansing with Excel 2013 and some of the new features integrated into Excel and the other Office tools to visualize data better than ever before. See how the new PowerPivot and PowerView features in Excel 2013 take your data to the next level of visualization. We'll also show how you can visualize map data with GeoFlow and tie disparate data together with Data Explorer.
 > 
 > About Brian: Brian Knight, SQL Server MVP, MCITP, MCSE, MCDBA, is the owner and founder of Pragmatic Works. He is also the co-founder of SQLServerCentral.com, BIDN.com and SQLShare.com. He ran the local SQL Server user group in Jacksonville (JSSUG). Brian is a contributing columnist at several technical magazines and does regular webcasts at PragmaticWorks.com. He is the author of more than a dozen SQL Server books. Brian has spoken at conferences like PASS, SQL Connections and TechEd and many Code Camps. His blog can be found at http://www.bidn.com. 
 

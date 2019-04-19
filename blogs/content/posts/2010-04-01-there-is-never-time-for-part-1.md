@@ -1,5 +1,5 @@
 ---
-title: There Is Never Time For … (Part 1)
+title: There Is Never Time For ... (Part 1)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-04-01T10:01:17+00:00
@@ -57,15 +57,15 @@ These are just a few ideas, I'm sure if you spent a few minutes you could expand
 
 ## Next – Part 2
 
-We can't keep waiting for a CPU to fry from a failed fan, a 3AM outage from a full disk drive, or for database to corrupt before we find out no one has been switching out the tapes. Get your training and developmental tasks started, the next article is going to bring another gap…and another challenge.
+We can't keep waiting for a CPU to fry from a failed fan, a 3AM outage from a full disk drive, or for database to corrupt before we find out no one has been switching out the tapes. Get your training and developmental tasks started, the next article is going to bring another gap...and another challenge.
 
 Miss an article in the series?
   
-There Is Never Time For … _Part 1: Training and Development_
+There Is Never Time For ... _Part 1: Training and Development_
   
-There Is Never Time For … [Part 2: Standard Processes][2]
+There Is Never Time For ... [Part 2: Standard Processes][2]
   
-There Is Never Time For … [Part 3: Process Improvement][3]
+There Is Never Time For ... [Part 3: Process Improvement][3]
 
  [1]: http://www.sqlpass.org/ "Visit the PASS website"
  [2]: /index.php/ITProfessionals/ITProcesses/there-is-never-time-for-part-2

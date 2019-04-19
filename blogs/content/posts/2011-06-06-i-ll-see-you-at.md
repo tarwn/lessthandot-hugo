@@ -1,5 +1,5 @@
 ---
-title: 'I’ll See You At SQL Saturday #75 Columbus, OH'
+title: "I'll See You At SQL Saturday #75 Columbus, OH"
 author: Jes Borland
 type: post
 date: 2011-06-06T11:36:00+00:00
@@ -29,7 +29,7 @@ Are you busy this Saturday, June 11, 2011? If not, head out to [SQL Saturday #75
 
 What will you get? FREE training: 20 sessions from fellow SQL Server professionals, covering everything from baselines to Powershell to MDX. (Check out the full schedule [here][2].) Networking. (View the attendees [here][3].) A chance to interact with great vendors. (Check out this [sponsor list][4]!) 
 
-And…me! I'll be attending, and presenting “Reporting Services 201: From Basic To WOW!” I love this session. I get to show you how to take a basic Reporting Services report and make it pop with things like NoRows, tablix and charts. This is always an interactive session, with lots of questions, answers and exploration. 
+And...me! I'll be attending, and presenting “Reporting Services 201: From Basic To WOW!” I love this session. I get to show you how to take a basic Reporting Services report and make it pop with things like NoRows, tablix and charts. This is always an interactive session, with lots of questions, answers and exploration. 
 
 I'll also be moderating another fantastic Women in Technology lunch panel! I'll be discussing “Energizing the Next Generation” with Jen Myers ([blog][5] | [twitter][6]), Sarah Barela ([blog][7] | [twitter][8]), and Erin Stellato ([blog][9] | [twitter][10]). Make sure you grab lunch and listen to us discuss how to get the next generation of girls and boys excited about and involved in technology! 
 

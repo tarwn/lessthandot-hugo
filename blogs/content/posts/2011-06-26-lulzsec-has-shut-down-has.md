@@ -77,7 +77,7 @@ Here is the “press release”
 > 
 > Thank you for sailing with us. The breeze is fresh and the sun is setting, so now we head for the horizon.
 > 
-> Let it flow…
+> Let it flow...
 > 
 > Lulz Security – our crew of six wishes you a happy 2011, and a shout-out to all of our battlefleet members and supporters across the globe
 > 

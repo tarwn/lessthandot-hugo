@@ -24,7 +24,7 @@ This is part four of a series about Report Builder 3.0.
   * <a title="Report Builder 3.0 – Map Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-map/" target="_blank">Report Builder 3.0 – Map Wizard</a>
   * [Report Builder 3.0 – Report Parts][1]
 
-Charts and other visualizations can be a very powerful and effective way to make your data tell a story. A black and white table listing sales dollars per month can tell an executive which territory has the most sales. A line chart showing the change in sales per month per territory, with a table next to it indicating if the current month’s sales are above, in line with, or below last month’s sales, is a much more powerful story.
+Charts and other visualizations can be a very powerful and effective way to make your data tell a story. A black and white table listing sales dollars per month can tell an executive which territory has the most sales. A line chart showing the change in sales per month per territory, with a table next to it indicating if the current month's sales are above, in line with, or below last month's sales, is a much more powerful story.
 
 There are many types of charts and other visualizations, and many settings for them. I am going to show you the types of charts available; other visualizations such as data bars, spark lines, and indicators; and properties you can set to make charts pop.
 
@@ -51,7 +51,7 @@ _Column_ charts will show the data as a series of vertical bars. These are great
   Stacked Column
 </p>
 
-_Line_ charts show a series of data as a set of points, connected by a line. They’re useful for showing how a value moves up or down over time. Variations include smooth and stepped lines.
+_Line_ charts show a series of data as a set of points, connected by a line. They're useful for showing how a value moves up or down over time. Variations include smooth and stepped lines.
 
 <p style="text-align: center">
   <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Line.jpg?mtime=1331214360" alt="" />
@@ -153,7 +153,7 @@ The _Indicators_ included in Report Builder 3.0 are simple gauges that tell you 
 
 **Bringing Them To Life With Properties** 
 
-Within a chart, whatever type you choose, there will be many properties you can set. I’m going to cover a few common ones you can use to get the most out of your reports!
+Within a chart, whatever type you choose, there will be many properties you can set. I'm going to cover a few common ones you can use to get the most out of your reports!
 
 You can access the properties of a chart in two ways. First, you can right-click part of the chart and select the properties option there.
 
@@ -161,7 +161,7 @@ You can access the properties of a chart in two ways. First, you can right-click
   <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Rightclick.jpg?mtime=1331215185" alt="" width="300" height="221" />
 </p>
 
-The other option is to look to the right, in the Properties bar. (If you don’t see it, go to View and check Properties.)
+The other option is to look to the right, in the Properties bar. (If you don't see it, go to View and check Properties.)
 
 <p style="text-align: center">
   <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20PropertiesBar.jpg?mtime=1331215237" alt="" width="400" height="213" />
@@ -197,7 +197,7 @@ Area properties will determine the look of the background of the chart. Options 
 
 _Series Properties_ 
 
-The data series in a chart, whether it’s a column or a bar or any other sort, can also have their own Series Properties.
+The data series in a chart, whether it's a column or a bar or any other sort, can also have their own Series Properties.
 
 <p style="padding-left: 30px">
   Tooltip – Do you want the category name or sales figure to pop up when a user hovers over a bar or a line? Set this property to that value!
@@ -213,7 +213,7 @@ The data series in a chart, whether it’s a column or a bar or any other sort, 
 
 _Vertical Axis Properties_ 
 
-The vertical axis is generally where your values are going to be displayed. It can be helpful to customize this, especially if you’re working with numbers or currency.
+The vertical axis is generally where your values are going to be displayed. It can be helpful to customize this, especially if you're working with numbers or currency.
 
 <p style="padding-left: 30px">
   Axis Options – Range and Interval – Here, you can set the minimum and maximum values that will appear on the axis. You can also choose what interval is shown.

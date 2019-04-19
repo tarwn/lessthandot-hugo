@@ -47,7 +47,7 @@ So I might have enough information to put together a normalized database to supp
 Creating the first database was [fairly straightforward (video)][9] and consisted of setting up my subscription, creating a new server, and then creating the database. The main interface uses Silverlight, so unfortunately I wasn't able to use my \[insert tablet here\] (the future is here?). After the initial database 'server' was setup, I switched over to SSMS to actually build out my data model.
 
 <div style="padding: .5em; margin: 1.5em .5em .5em 0px; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <img src="http://tiernok.com/LTDBlog/azure/dbdiagram.jpg" alt="DB Diagram" /><br /> I Also Drew A Data Model…with Color (Oooo)
+  <img src="http://tiernok.com/LTDBlog/azure/dbdiagram.jpg" alt="DB Diagram" /><br /> I Also Drew A Data Model...with Color (Oooo)
 </div>
 
 The first step was to add my database to SSMS. As I already have 2008 RS on my local machine, this was fairly straightforward. I clicked the “Connect” button in SSMS, entered the full server name from the Azure interface (right toolbar after creating “Server”) and the credentials I had created as part of setting up the database “Server”. Voila, it's that easy. The database server is connected, but instead of the usual yellow cylinder I get this nifty new  ![Azure DB Icon][10]icon. 

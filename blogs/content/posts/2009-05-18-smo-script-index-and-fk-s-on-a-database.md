@@ -1,5 +1,5 @@
 ---
-title: SMO Script Index and FK’s on a database
+title: SMO Script Index and FK's on a database
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-05-18T18:26:17+00:00

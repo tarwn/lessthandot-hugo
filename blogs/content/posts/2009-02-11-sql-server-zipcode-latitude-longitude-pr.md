@@ -64,7 +64,7 @@ GO
 
 Select * From ZipCodes
 ```
-Next, we’ll need to add a couple of functions that will allow us to use this data.
+Next, we'll need to add a couple of functions that will allow us to use this data.
 
 The original function that calculates distances has been replaced with this one. There was a flaw in the original version. Based on rounding errors, the calculations fed in to the arc-cosine (acos) function could be greater than 1 or less than -1 which would cause a domain error. To accommodate this flaw, I perform the calculations in multiple steps so that I can catch the values that result in the domain error. 
 

@@ -20,7 +20,7 @@ tags:
 
 That is right
 
-> First and foremost, 32-bit is done. History. Archives. Windows Server 2008 R2 is the first Windows OS platform to go 64-bit only, and frankly it was high time. Customers have been unable to purchase a 32-bit server CPU for over two years now, and the advancements in CPU architectures really dictated that we squeeze as much performance out of customers’ hardware purchases as possible. The move to 64-bit is a first step
+> First and foremost, 32-bit is done. History. Archives. Windows Server 2008 R2 is the first Windows OS platform to go 64-bit only, and frankly it was high time. Customers have been unable to purchase a 32-bit server CPU for over two years now, and the advancements in CPU architectures really dictated that we squeeze as much performance out of customers' hardware purchases as possible. The move to 64-bit is a first step
 
 Mmm, that means that I will have no choice but to deploy the 64 bit version of SQL server 2008 later on (I was planning on going to 64 bit anyway)
   

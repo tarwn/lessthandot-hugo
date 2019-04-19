@@ -7,7 +7,7 @@ ID: 1928
 excerpt: |
   It was a little remark from Bob Beauchemin (B|T) during the Belgian SQL Server Days that started me writing this post.
   Showing cached Execution Plans
-  In this post I’m going to use information from the following Dynamic Management Views and Functions t&hellip;
+  In this post I'm going to use information from the following Dynamic Management Views and Functions t&hellip;
 url: /index.php/datamgmt/dbprogramming/why-avoiding-multiple-code-blocks/
 views:
   - 15388
@@ -28,9 +28,9 @@ It was a little remark from Bob Beauchemin ([B][1]|[T][2]) during the [Belgian S
 
 **Showing cached Execution Plans**
   
-In this post I’m going to use information from the following Dynamic Management Views and Functions to show some information about the cached Execution Plans of the queries used in this post:
+In this post I'm going to use information from the following Dynamic Management Views and Functions to show some information about the cached Execution Plans of the queries used in this post:
 
-  * sys.dm\_exec\_cached_plans shows types, usage, size… of the Execution Plans;
+  * sys.dm\_exec\_cached_plans shows types, usage, size... of the Execution Plans;
   * sys.dm\_exec\_sql_text shows the actual code of the query;
   * sys.dm\_exec\_query_plan is used to get the XML Execution Plan itself.
 
@@ -48,11 +48,11 @@ The result set of this query looks like this:
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB1.JPG?mtime=1358775444"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB1.JPG?mtime=1358775444" width="933" height="427" /></a>
 </div>
 
-The result set can contain thousands of rows, depending on the uptime of the server, the number of queries and their corresponding execution plans, the available buffer memory…
+The result set can contain thousands of rows, depending on the uptime of the server, the number of queries and their corresponding execution plans, the available buffer memory...
 
 **IF using 2 code blocks**
   
-So let’s create a simple Stored Procedure that executes against the AdventureWorks2008R2 database:
+So let's create a simple Stored Procedure that executes against the AdventureWorks2008R2 database:
 
 sql
 USE AdventureWorks2008R2;
@@ -77,9 +77,9 @@ AS
 		ORDER BY DATEPART(yyyy,OrderDate);
 GO
 ```
-The results of the query aren’t important what is important is to see what happens in the Procedure Cache. To be able to see what’s happening we are going to empty the procedure cache:
+The results of the query aren't important what is important is to see what happens in the Procedure Cache. To be able to see what's happening we are going to empty the procedure cache:
 
-<span class="MT_red">WARNING: executing the following code deletes all cached plans from the Procedure Cache. All Execution Plans need to be recompiled. This can result in a slow or unresponsive server.<br /> DON’T EXECUTE THE FOLLOWING CODE ON A PRODUCTION SERVER!!!<br /> </span>
+<span class="MT_red">WARNING: executing the following code deletes all cached plans from the Procedure Cache. All Execution Plans need to be recompiled. This can result in a slow or unresponsive server.<br /> DON'T EXECUTE THE FOLLOWING CODE ON A PRODUCTION SERVER!!!<br /> </span>
 
 sql
 DBCC FREEPROCCACHE;
@@ -139,13 +139,13 @@ ShowPlanXML xmlns="http://schemas.microsoft.com/sqlserver/2004/07/showplan" Vers
             <Statements>
               <StmtSimple StatementText="&#x9;SELECT a.City, COUNT(bea.AddressID) EmployeeCount&#xD;&#xA;&#x9;&#x9;FROM Person.BusinessEntityAddress bea &#xD;&#xA;&#x9;&#x9;&#x9;INNER JOIN Person.Address a&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;ON bea.AddressID = a.AddressID&#xD;&#xA;&#x9;&#x9;GROUP BY a.City&#xD;&#xA;&#x9;&#x9;ORDER BY a.City&#xD;&#xA;" StatementId="3" StatementCompId="5" StatementType="SELECT" StatementSubTreeCost="0.604708" StatementEstRows="574.696" StatementOptmLevel="FULL" QueryHash="0x03E92D79FC617C86" QueryPlanHash="0xED13B89036D1A5E6" StatementOptmEarlyAbortReason="GoodEnoughPlanFound">
                 <StatementSetOptions QUOTED_IDENTIFIER="true" ARITHABORT="true" CONCAT_NULL_YIELDS_NULL="true" ANSI_NULLS="true" ANSI_PADDING="true" ANSI_WARNINGS="true" NUMERIC_ROUNDABORT="false" />
-                <QueryPlan CachedPlanSize="32" CompileTime="7" CompileCPU="7" CompileMemory="344">…
+                <QueryPlan CachedPlanSize="32" CompileTime="7" CompileCPU="7" CompileMemory="344">...
              </StmtSimple>
             </Statements>
           </Then>
           <Else>
             <Statements>
-              <StmtSimple StatementText="&#x9;Else&#xD;&#xA;&#x9;&#x9;SELECT DATEPART(yyyy,OrderDate) AS N'Year'&#xD;&#xA;&#x9;&#x9;&#x9;,SUM(TotalDue) AS N'Total Order Amount'&#xD;&#xA;&#x9;&#x9;FROM Sales.SalesOrderHeader&#xD;&#xA;&#x9;&#x9;GROUP BY DATEPART(yyyy,OrderDate)&#xD;&#xA;&#x9;&#x9;ORDER BY DATEPART(yyyy,OrderDate);&#xD;" StatementId="4" StatementCompId="8" StatementType="SELECT" StatementSubTreeCost="0.780189" StatementEstRows="4" StatementOptmLevel="FULL" QueryHash="0xA73814A2D4649412" QueryPlanHash="0x7A5BDE1102728DAA" StatementOptmEarlyAbortReason="GoodEnoughPlanFound">…
+              <StmtSimple StatementText="&#x9;Else&#xD;&#xA;&#x9;&#x9;SELECT DATEPART(yyyy,OrderDate) AS N'Year'&#xD;&#xA;&#x9;&#x9;&#x9;,SUM(TotalDue) AS N'Total Order Amount'&#xD;&#xA;&#x9;&#x9;FROM Sales.SalesOrderHeader&#xD;&#xA;&#x9;&#x9;GROUP BY DATEPART(yyyy,OrderDate)&#xD;&#xA;&#x9;&#x9;ORDER BY DATEPART(yyyy,OrderDate);&#xD;" StatementId="4" StatementCompId="8" StatementType="SELECT" StatementSubTreeCost="0.780189" StatementEstRows="4" StatementOptmLevel="FULL" QueryHash="0xA73814A2D4649412" QueryPlanHash="0x7A5BDE1102728DAA" StatementOptmEarlyAbortReason="GoodEnoughPlanFound">...
             </Statements>
           </Else>
         </StmtCond>
@@ -160,7 +160,7 @@ An easier trick to see the Graphical Execution Plans is to open [SQL Sentry Plan
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB5.JPG?mtime=1358775444"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB5.JPG?mtime=1358775444" width="652" height="298" /></a>
 </div>
 
-After doing this SQL Sentry Plan Explorer will give you all the details about the Execution Plan and you’ll see in the Plan Diagram that SQL Server created an Execution Plan for both the queries altough only the first one was used:
+After doing this SQL Sentry Plan Explorer will give you all the details about the Execution Plan and you'll see in the Plan Diagram that SQL Server created an Execution Plan for both the queries altough only the first one was used:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB6.JPG?mtime=1358775445"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB6.JPG?mtime=1358775445" width="1347" height="765" /></a>
@@ -168,7 +168,7 @@ After doing this SQL Sentry Plan Explorer will give you all the details about th
 
 **IF calling 2 Stored Procedures**
   
-Now let’s create 2 Stored Procedures that each will execute 1 part of the code from the previous query:
+Now let's create 2 Stored Procedures that each will execute 1 part of the code from the previous query:
 
 sql
 CREATE PROCEDURE EmpCntCity
@@ -192,7 +192,7 @@ AS
 	ORDER BY DATEPART(yyyy,OrderDate);
 GO
 ```
-Next we create a Stored Procedure that will contain the IF…ELSE logic and based on the input parameter will execute one of the above Stored Procedures:
+Next we create a Stored Procedure that will contain the IF...ELSE logic and based on the input parameter will execute one of the above Stored Procedures:
 
 sql
 CREATE PROCEDURE TwoProcs
@@ -211,7 +211,7 @@ sql
 EXEC TwoProcs 1;
 GO
 ```
-Let’s again query the Procedure Cache:
+Let's again query the Procedure Cache:
 
 sql
 SELECT cp.objtype, cp.cacheobjtype, cp.usecounts, cp.size_in_bytes, st.[text], qp.query_plan
@@ -229,7 +229,7 @@ Now we see that executing the second Stored Procedure also created 2 Executions 
 
 **Conclusion**
   
-Avoid Stored Procedures that contain complete code blocks encapsulated in IF…ELSE or CASE blocks. It will result in SQL Server creating Execution Plans for all possibilities, consuming more Buffer Cache (memory) and in the end slow down the execution of the code.
+Avoid Stored Procedures that contain complete code blocks encapsulated in IF...ELSE or CASE blocks. It will result in SQL Server creating Execution Plans for all possibilities, consuming more Buffer Cache (memory) and in the end slow down the execution of the code.
   
 As a bonus, troubleshooting the individual Stored Procedures will be much easier and there is a bigger chance that you can reuse the Stored Procedures.
 

@@ -36,11 +36,11 @@ The best part of this event continues to be the range of people that attend. The
 
 ### Thank You
 
-Thank you to my fellow brewmasters, Derek and Mark. We are a team, and we make a great team. This event wouldn’t happen without you. Thank you to the many people who helped spread the word through email, blogging, and Twitter. Thank you for supporting and believing in us. And thank you to everyone that attended – we do this for you, and hope you gain many things from it!
+Thank you to my fellow brewmasters, Derek and Mark. We are a team, and we make a great team. This event wouldn't happen without you. Thank you to the many people who helped spread the word through email, blogging, and Twitter. Thank you for supporting and believing in us. And thank you to everyone that attended – we do this for you, and hope you gain many things from it!
 
 ### Tech on Tap v2.1
 
-We’re ready to roll for our second year! Our first event in 2013 will be on Saturday, February 2 – please plan to join us!
+We're ready to roll for our second year! Our first event in 2013 will be on Saturday, February 2 – please plan to join us!
 
  [1]: http://www.techontap.org/2012/08/10/announcing-tech-on-tap-v1-3-powershell/
  [2]: http://stonecellarbrewpub.com/index.php

@@ -21,7 +21,7 @@ Here is what I found interesting this past week in SQL Land:
 
 **[A DBA utility database in every SQL Server instance?][1]**
   
-Linchi Shea writes: I was reading Louis Davidson’s post earlier today, and what he said below caught my attention:
+Linchi Shea writes: I was reading Louis Davidson's post earlier today, and what he said below caught my attention:
 
 > I am a big believer in having the database be as self contained as possible, so I try to put [maintenance] objects and such in the database, typically in a schema named utility.
 
@@ -37,7 +37,7 @@ What is clean buffer? What is cold buffer cache? The PSS SQL Server Engineers ex
   
 [Set based calculation of products of several numbers][3]**
   
-Alexander Kuznetsov shows us how we can use use SUM to calculate the sum of several numbers, but you cannot directly use set-based logic to calculate a product. Yet there is a very simple trick – you can use EXP(SUM(LOG(…))) and get a product of several numbers without a loop
+Alexander Kuznetsov shows us how we can use use SUM to calculate the sum of several numbers, but you cannot directly use set-based logic to calculate a product. Yet there is a very simple trick – you can use EXP(SUM(LOG(...))) and get a product of several numbers without a loop
 
 
 

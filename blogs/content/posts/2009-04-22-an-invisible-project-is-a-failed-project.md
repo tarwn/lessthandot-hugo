@@ -47,7 +47,7 @@ So your net gain is:
   * One to 4 weeks of improvement in the company
   * A handwritten reminder to yourself that you did that thing for Joe down the hall
 
-Perhaps if we reduce your pay and vacation time your boss will be able to sell this as netting even when he has to justify your salary (and his) at the end of the year…
+Perhaps if we reduce your pay and vacation time your boss will be able to sell this as netting even when he has to justify your salary (and his) at the end of the year...
 
 **Succeeding**
   
@@ -64,7 +64,7 @@ Even small projects should have some type of appreciable benefit for the company
   * Cycle time – _process time reduction_
   * Task execution time – _end-user time reduction_
 
-Now you have some numbers, it's time to determine how you will communicate those results to the company. If you wait until your annual review then your going to get some credit for it, but your boss needs something to take to their annual review, as does the 'Stakeholder', their boss, your CEO, … the list goes on. The quantified benefits need to be communicated up the chain, preferably in a way that does not cause your coworkers to make additions to your coffee every time you turn your back.
+Now you have some numbers, it's time to determine how you will communicate those results to the company. If you wait until your annual review then your going to get some credit for it, but your boss needs something to take to their annual review, as does the 'Stakeholder', their boss, your CEO, ... the list goes on. The quantified benefits need to be communicated up the chain, preferably in a way that does not cause your coworkers to make additions to your coffee every time you turn your back.
 
 So back to the conversation you are having with your Stakeholder at the beginning of the project. This time there are a few extra items you are going to discuss, such as a method of reporting the project status and the benefits. This should be a very simple method, both to generate and to understand. Next, while your discussing the potential benefits and the method you will use to report the project status and gains, you are going to extend the project by a couple months.
   
@@ -84,6 +84,6 @@ Lets outline how many ways we just succeeded:
   * Longer-term positive appreciation from the Stakeholder because that post-implementation meeting forced them to evaluate the difference in greater detail
   * Repeat all of the above for your minions and add in higher morale and extra willingness to work with you on future projects
   * Higher levels of Business-IT engagement and the perception that your on the business side of the business/ivory-tower-techie divide
-  * All of these items are reportable for your year-end review, your bosses year-end review, your Stakeholder's year-end review…
+  * All of these items are reportable for your year-end review, your bosses year-end review, your Stakeholder's year-end review...
 
 Or if we go back to the beginning we could spend 4-8 hours less and simply complete the project, one more easily ignored item when we share our tasks in the staff meeting.

@@ -23,7 +23,7 @@ But I know myself, and I know that come mid-January, the cold weather and windy 
 
 The good news is that I have a cure for all that will ail me mid-January: <a href="http://sqlcruise.com/" target="_blank">SQL Cruise</a>. The Norwegian Escape sets sail on Saturday, January 30, 2016 and returns on Saturday, February 6. Seven fun-filled days of sailing, snorkeling, shuffleboard, and SQL Server training will happen between.
 
-That's right…adventure on the high seas! Pirates! Rum! SQL Server!
+That's right...adventure on the high seas! Pirates! Rum! SQL Server!
 
 <div id="attachment_3238" style="width: 310px" class="wp-caption alignright">
   <a href="/wp-content/uploads/2015/02/IMAG0532_1.jpg"><img class="size-medium wp-image-3238" src="/wp-content/uploads/2015/02/IMAG0532_1-300x169.jpg" alt="On the beach in Nassau after the best on-shore day ever " width="300" height="169" srcset="/wp-content/uploads/2015/02/IMAG0532_1-300x169.jpg 300w, /wp-content/uploads/2015/02/IMAG0532_1-1024x579.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>

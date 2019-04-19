@@ -1,5 +1,5 @@
 ---
-title: Catching Key Conflicts with Perl’s Class::DBI
+title: Catching Key Conflicts with Perl's Class::DBI
 author: Rob Earl
 type: post
 date: 2011-01-31T09:52:00+00:00

@@ -34,9 +34,9 @@ I gave it some thought, looked at the pros and cons and decided to go for it.
 
 # Why?
 
-After 12 years of explaining how you can prevent the unstoppable logfile growth, explaining the foreign key principles to senior developers, removing unused indexes… I found for myself I was still interested in SQL Server but not in the things I needed to do for the customers. So it was time for a new challenge and it was offered on a silver plate. So why not?
+After 12 years of explaining how you can prevent the unstoppable logfile growth, explaining the foreign key principles to senior developers, removing unused indexes... I found for myself I was still interested in SQL Server but not in the things I needed to do for the customers. So it was time for a new challenge and it was offered on a silver plate. So why not?
   
-To make sure there was a way back, I booked the exams to upgrade my SQL Server certifications to MCSE data platform so in case of… I could still return to the market with a valid certificate for some years.
+To make sure there was a way back, I booked the exams to upgrade my SQL Server certifications to MCSE data platform so in case of... I could still return to the market with a valid certificate for some years.
   
 So I hope to share the journey of learning all about Product Information Management and a bit about E-commerce on this site.
 

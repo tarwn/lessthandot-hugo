@@ -45,7 +45,7 @@ The enhanced for loop looks like this: `for(Number n : Numbers.getList())`
   
 In C# the foreach loop looks like this: `foreach (Number n in Numbers.getList())`
 
-Java doesn't have a goto statement but you can accomplish the same thing by using a label…see you can still write spaghetti code 🙂
+Java doesn't have a goto statement but you can accomplish the same thing by using a label...see you can still write spaghetti code 🙂
 
 **Switch statement**
   
@@ -170,9 +170,9 @@ varargs is a variable-length argument list
 
 public static void main(String[] args)
   
-public static void main(String… args)
+public static void main(String... args)
 
-public static void main(String… args){
+public static void main(String... args){
       
 for (String s: args ) System.out.println(s);
     

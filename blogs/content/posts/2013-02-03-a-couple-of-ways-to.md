@@ -80,7 +80,7 @@ DECLARE @s varchar(100) = '1111122222'
 SELECT STUFF(@S,6,0,'.....')
 ```
 
-11111…..22222
+11111.....22222
 
 One or more characters doesn't make a difference, the rest still gets shifted to the right
 
@@ -89,7 +89,7 @@ DECLARE @s varchar(100) = '1111122222'
 SELECT STUFF(@S,6,5,'.....')
 ```
 
-11111…..
+11111.....
 
 Since we used 5, the 5 left most characters after position 6 get replaced by our dots
 
@@ -98,7 +98,7 @@ DECLARE @s varchar(100) = '1111122222'
 SELECT STUFF(@S,6,2,'.....')
 ```
 
-11111…..222
+11111.....222
 
 Now we used 2 instead of 5, as you can see 3 (5-2) are still there from the original value
 

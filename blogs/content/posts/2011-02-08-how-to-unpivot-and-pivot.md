@@ -4,7 +4,7 @@ author: David Forck (thirster42)
 type: post
 date: 2011-02-08T12:25:00+00:00
 ID: 1031
-excerpt: Pivoting and Unpivoting data has been one of the parts of tsql that has been eluding my grasp for a while now.  I’ve seen plenty of examples for both of these, but none of those examples really helped me in understanding exactly what’s going on.
+excerpt: Pivoting and Unpivoting data has been one of the parts of tsql that has been eluding my grasp for a while now.  I've seen plenty of examples for both of these, but none of those examples really helped me in understanding exactly what's going on.
 url: /index.php/datamgmt/dbprogramming/how-to-unpivot-and-pivot/
 views:
   - 25723
@@ -20,9 +20,9 @@ tags:
   - unpivot
 
 ---
-Pivoting and Unpivoting data has been one of the parts of tsql that has been eluding my grasp for a while now. I’ve seen plenty of examples for both of these, but none of those examples really helped me in understanding exactly what’s going on. We have a wiki article for each here on LTD, [Pivot][1] and [Unpivot][2],
+Pivoting and Unpivoting data has been one of the parts of tsql that has been eluding my grasp for a while now. I've seen plenty of examples for both of these, but none of those examples really helped me in understanding exactly what's going on. We have a wiki article for each here on LTD, [Pivot][1] and [Unpivot][2],
   
-but again these don’t tell me a whole lot about what’s going on, just the before and after pictures. Well, I was messing around with the unpivot code the other day, and how it worked finally dawned on me. So, I would like to share what I learned. 
+but again these don't tell me a whole lot about what's going on, just the before and after pictures. Well, I was messing around with the unpivot code the other day, and how it worked finally dawned on me. So, I would like to share what I learned. 
 
 At my part time job, we were working on a Workforce Availability study. As part of the study, we hired out to a phone survey company. We created a survey script for their callers and gave it to them. The company made a lot of phone calls and when all was said and done they provided us with a spreadsheet of the answers. Needless to say this spreadsheet was in no way normalized for data import. It looked a something like this: 
 
@@ -39,7 +39,7 @@ select * from @survey
 ```
 ![Pivot 1][3]
 
-Well, right now that’s a decent sized mess to clean up using union alls. However, we don’t have to make that big mess thanks to unpivot. Here’s what the unpivot code looks like. 
+Well, right now that's a decent sized mess to clean up using union alls. However, we don't have to make that big mess thanks to unpivot. Here's what the unpivot code looks like. 
 
 sql
 select 
@@ -54,7 +54,7 @@ unpivot
 ```
 The way this works is in the unpivot statement, the A for Q statement breaks apart each column you list in the in statement. So for columns Q1, Q2, Q3, Q4, and Q5, the unpivot function breaks it apart, putting the column name in Q, and putting the actual value into A. 
 
-Now that the data’s normalized we can join to it rather easily. 
+Now that the data's normalized we can join to it rather easily. 
 
 sql
 declare @survey table (Respondent int identity(1,1), Q1 int, Q2 int, Q3 int, Q4 int, Q5 int)
@@ -126,7 +126,7 @@ unpivot
 	A for Q in (Q1, Q2, Q3, Q4, Q5)
 ) as u
 ```
-Alright, now I’ve got my survey data stored and I want to run some analytics. One of the ways to analyze the data is to run a crosstab off of the data. Here’s a crosstab using pivot: 
+Alright, now I've got my survey data stored and I want to run some analytics. One of the ways to analyze the data is to run a crosstab off of the data. Here's a crosstab using pivot: 
 
 sql
 select
@@ -161,17 +161,17 @@ pivot
 		)
 ) as pvt
 ```
-In this I’m joining my response table to my questions and answers table in a subquery. I then pivot all of that data using the pivot function. The pivot function takes an aggregate and applies that across the columns and rows. In this example, I specify count(a.Respondent) as my aggregate, and then I specify that I want that across anName (and I provide a list of values that I want it applied to) on the X axis. Unpivot then takes the last column and applies that to the Y column, and then applies the aggregate data to any pieces of that that match up on the X and Y axis. 
+In this I'm joining my response table to my questions and answers table in a subquery. I then pivot all of that data using the pivot function. The pivot function takes an aggregate and applies that across the columns and rows. In this example, I specify count(a.Respondent) as my aggregate, and then I specify that I want that across anName (and I provide a list of values that I want it applied to) on the X axis. Unpivot then takes the last column and applies that to the Y column, and then applies the aggregate data to any pieces of that that match up on the X and Y axis. 
 
 ![Pivot 2][4]
 
-So, in the entire survey, three respondents answered yes to having a driver’s license, while two answered no, four answered as having hair while one answered no. 
+So, in the entire survey, three respondents answered yes to having a driver's license, while two answered no, four answered as having hair while one answered no. 
 
-If you remove quName from the subquery, pivot doesn’t have a third data point to aggregate the data to, so it’ll just aggregate to the X axis. 
+If you remove quName from the subquery, pivot doesn't have a third data point to aggregate the data to, so it'll just aggregate to the X axis. 
 
 ![Pivot 3][5]
 
-You can play with the aggregate in the query a little bit. If you change it to avg, it’ll average all the respondent ids. If you change it to min, it’ll show you which respondent provided each answer for each question first.
+You can play with the aggregate in the query a little bit. If you change it to avg, it'll average all the respondent ids. If you change it to min, it'll show you which respondent provided each answer for each question first.
 
  [1]: http://wiki.ltd.local/index.php/Row_To_Column_(PIVOT)
  [2]: http://wiki.ltd.local/index.php/Column_To_Row_(UNPIVOT)

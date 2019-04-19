@@ -1,5 +1,5 @@
 ---
-title: Please don’t use blacklists, use parameterized queries or stored procs instead
+title: Please don't use blacklists, use parameterized queries or stored procs instead
 author: SQLDenis
 type: post
 date: 2012-04-05T10:55:00+00:00

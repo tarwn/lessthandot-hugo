@@ -22,6 +22,6 @@ At my previous employer, I was the senior developer and had created most of the 
 
 However, in that time, I feel that I have learned a great deal to which I had not previously been exposed – both coding and process-wise. I have also learned that while I am not as smart or as good as some of the more senior-level developers, I am also not as dumb or as incompetent as I have sometimes felt in the past. More open communication with my counterparts has allowed me to see that many of the questions and concerns I have regarding the work that I do is not just limited to my own mind but to see that others have similar questions and concerns. Knowing this has allowed me to emerge from my concerns and be more open about both the things I want and need to learn as well as to offer my own suggestions on different processes or methodologies where I feel they may be appropriate or applicable. While the idea of being a fraud will likely never be far removed from my concerns, I tend to use it more now as motivation to do more and to prove what I can do rather than allow it to hold me back.
 
-And I wonder if a few of my counterparts (both here at LessThanDot and in my real-life dealings) may consider themselves frauds, too…
+And I wonder if a few of my counterparts (both here at LessThanDot and in my real-life dealings) may consider themselves frauds, too...
 
  [1]: http://blog.asmartbear.com/self-doubt-fraud.html

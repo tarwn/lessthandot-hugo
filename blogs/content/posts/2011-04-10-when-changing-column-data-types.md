@@ -1,5 +1,5 @@
 ---
-title: When changing column data types use ALTER TABLE TableName ALTER Column syntax, don’t drop and recreate column
+title: When changing column data types use ALTER TABLE TableName ALTER Column syntax, don't drop and recreate column
 author: SQLDenis
 type: post
 date: 2011-04-10T22:27:00+00:00

@@ -27,7 +27,7 @@ Microsoft was kind enough to give me 3 MSDN Ultimate Subscriptions. I gave two o
 
 **Update
   
-[Ted Krueger][2] decided to add one of his, so now there will be two that we will be giving away……that just doubled your chances** 
+[Ted Krueger][2] decided to add one of his, so now there will be two that we will be giving away......that just doubled your chances** 
 
 **Update 2
   

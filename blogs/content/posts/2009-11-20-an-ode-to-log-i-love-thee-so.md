@@ -50,7 +50,7 @@ Hey Everyone,
 ### By Your Powers Combined
 
 <p style="text-indent: 30pt;">
-  We store the Environment Provider Context on each session. This is actually a function of the Environment Provider. When an application calls the EP web service, in addition to all of the environment data, it also gets a SessionID. The call into the Environment Provider calls the logging service which creates the log session, populates the appropriate data and logs an application start event. This allows us to quickly identify log entries not just to an application, but to a specific user, on a specific server, with a specific data connection, etc…
+  We store the Environment Provider Context on each session. This is actually a function of the Environment Provider. When an application calls the EP web service, in addition to all of the environment data, it also gets a SessionID. The call into the Environment Provider calls the logging service which creates the log session, populates the appropriate data and logs an application start event. This allows us to quickly identify log entries not just to an application, but to a specific user, on a specific server, with a specific data connection, etc...
 </p>
 
 ### Getting at More Data

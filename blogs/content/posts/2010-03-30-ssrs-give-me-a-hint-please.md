@@ -22,7 +22,7 @@ categories:
   <img src="/wp-content/uploads/blogs/DataMgmt/ssrs_error.gif" alt="" title="" width="288" height="150" align="left" />
 </div>
 
-Today a friend of mine asked for a hand with an SSRS error he was getting. I have to admit, at the time I was pretty busy and feel bad that I didn’t answer the question completely. The error was resolved though and the find/fix by him was impressive to say the least. One thing that was frustrating for both of us was the error presented from the report server when this particular report execution failed. In short, the error was not helpful at all. There is resource to find more in-depth descriptions on the error though by turning to the trace logs that are enabled on reporting services. Below, we will go through searching for these descriptive errors in the logs.
+Today a friend of mine asked for a hand with an SSRS error he was getting. I have to admit, at the time I was pretty busy and feel bad that I didn't answer the question completely. The error was resolved though and the find/fix by him was impressive to say the least. One thing that was frustrating for both of us was the error presented from the report server when this particular report execution failed. In short, the error was not helpful at all. There is resource to find more in-depth descriptions on the error though by turning to the trace logs that are enabled on reporting services. Below, we will go through searching for these descriptive errors in the logs.
 
 On the report server, navigate through the directory structure to the installation folders for the SSRS binary files. In these folder you will find a folder named, LogFiles. This folder will house the default report server trace logs. All execution trace events will be logged in these flat files and can be excellent information to troubleshooting report execution issues. After understanding the trace files, it is also a great way to utilize SSIS to import and report off of them to be more proactive on the report executions. 
 
@@ -38,7 +38,7 @@ Knowing the recycle times and when a new log is created can lower the length of 
 
 ## Troubleshoot the report error
 
-To show an error in a real-life scenario, I forced a deadlock while executing a report. In Reporting Services the error messages presented in reporting frontend and in the tables located in the ReportServer are limited. This isn’t a horrible aspect given the amount of further logging we have to utilize.
+To show an error in a real-life scenario, I forced a deadlock while executing a report. In Reporting Services the error messages presented in reporting frontend and in the tables located in the ReportServer are limited. This isn't a horrible aspect given the amount of further logging we have to utilize.
   
 
   

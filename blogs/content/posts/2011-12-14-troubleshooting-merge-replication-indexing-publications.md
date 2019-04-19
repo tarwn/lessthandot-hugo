@@ -68,7 +68,7 @@ Here is a look at the plan a select on all the columns returns after the IDX\_PA
   <a href="/wp-content/uploads/blogs/DataMgmt/-89.png?mtime=1323567448"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-89.png?mtime=1323567448" width="531" height="270" /></a>
 </div>
 
-From reviewing the IO statistics and the execution plan, we have altered the previous index scan on the Person table.  However, we have also introduced a Key Lookup operation.  This is due to the lack of a covering index.  A covering index refers to an index covering all the columns that are used in a query’s results as well as any predicates used.  In other terms, the index satisfies all the column needs of the query.
+From reviewing the IO statistics and the execution plan, we have altered the previous index scan on the Person table.  However, we have also introduced a Key Lookup operation.  This is due to the lack of a covering index.  A covering index refers to an index covering all the columns that are used in a query's results as well as any predicates used.  In other terms, the index satisfies all the column needs of the query.
 
 In reality, and replication terms, you want to only replicate the columns you require but it is common that all columns are required.
 

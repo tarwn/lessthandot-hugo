@@ -48,7 +48,7 @@ The more complex a problem is, the easier it is to get the answer wrong. The tot
 
 Project success is not a boolean matter, it is a complex, organic, human one.
 
-## But We Were Talking About Clean Code…?
+## But We Were Talking About Clean Code...?
 
 Ok, so coming back down to Earth for a moment, what does all of this have to do with clean code?
 
@@ -56,7 +56,7 @@ As I mentioned above, projects are somewhat resilient. A single failure will rar
 
 So the lack of clean code is not, in and of itself a failure, it is an increase in risk which indicates a willingness to accept a higher cost for each change. The slower or more expensive the changes, the easier it is to get bogged down, behind, or cancelled.
 
-> Managing complexity is the most important technical topic in software development. In my view, it’s so important that Software’s Primary Technical Imperative has to be managing complexity.
+> Managing complexity is the most important technical topic in software development. In my view, it's so important that Software's Primary Technical Imperative has to be managing complexity.
 > 
 > <div style="text-align: right">
 >   Steve McConnell, Code Complete
@@ -68,11 +68,11 @@ Project Management, in all of it's flavors, exists to help manage the complexity
 
 To find out how processes work, Lean Manufacturing emphasizes the importance of going and seeing with our own eyes. This helps mitigate the complexities introduced by having someone explain their own process and needs through several layers of communications. This technique helps mitigate risks in analysis, definition, and improvement efforts. 
 
-Software Architecture, Agile Modeling, … we acknowledge that the complex, organic process an end user follows does not translate one-for-one into a software product and that the high level design of a project needs to react and reflect the refined or changing needs of the end user over the course of the project.
+Software Architecture, Agile Modeling, ... we acknowledge that the complex, organic process an end user follows does not translate one-for-one into a software product and that the high level design of a project needs to react and reflect the refined or changing needs of the end user over the course of the project.
 
 And so on.
 
-## So…Who do We Blame?
+## So...Who do We Blame?
 
 Projects are big, organic beasts of intertwined complexities. It's difficult to even consider how to put a single number on the risk inherent in executing a project, it's level of resiliency to failures or misunderstandings at any level, and the direct benefits derived from following good practices. 
 

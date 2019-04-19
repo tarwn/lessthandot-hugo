@@ -191,7 +191,7 @@ Below is a 10 part blog post series by Reed Copsey, Jr about parallelism in .net
 
 [Part 7, Some Differences between PLINQ and LINQ to Objects][10]
 
-[Part 8, PLINQ’s ForAll Method][11]
+[Part 8, PLINQ's ForAll Method][11]
 
 [Part 9, Configuration in PLINQ and TPL][12]
 

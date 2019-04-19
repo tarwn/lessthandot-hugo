@@ -1,5 +1,5 @@
 ---
-title: 'MADPASS’s First Birthday: They Grow Up So Fast!'
+title: "MADPASS's First Birthday: They Grow Up So Fast!"
 author: Jes Borland
 type: post
 date: 2012-02-23T11:49:00+00:00
@@ -14,9 +14,9 @@ categories:
   - Professional Development
 
 ---
-Last night I attended the monthly [MADPASS][1] SQL Server user group meeting, along with about 20 other people. I go every month, but this month was special – it was our first birthday! It’s hard to believe that the group we worked so hard to get started and draw people to has been meeting for a year already.
+Last night I attended the monthly [MADPASS][1] SQL Server user group meeting, along with about 20 other people. I go every month, but this month was special – it was our first birthday! It's hard to believe that the group we worked so hard to get started and draw people to has been meeting for a year already.
 
-The meeting was sponsored by [Confio][2] – I want to thank their rep, John, for coming, and for the Mastercard and Amazon gift cards and other swag. User groups wouldn’t be the same without sponsors, and we appreciate ours.
+The meeting was sponsored by [Confio][2] – I want to thank their rep, John, for coming, and for the Mastercard and Amazon gift cards and other swag. User groups wouldn't be the same without sponsors, and we appreciate ours.
 
 I presented the first session, giving “Make Your Voice Heard”, with tips and tricks for helping the SQL Server community through Twitter, forums, and blogging. I love talking about how to get involved in the community. I hope everyone was able to learn something new.
 
@@ -36,9 +36,9 @@ After dinner and networking, our main presentation got underway. Bob Pusateri ([
 
 To wrap up the evening, we gave away some great raffle prizes, like a SQLSkills bag, an ARC mouse, the PASS Summit 2011 DVDs, and books. It was a great meeting, as always.
 
-Lesson learned: celebrate your successes. No matter how small they are, they are still successes. For me, starting a user group was not small. It has been a lot of hard work and required the dedication of a lot of people. And it’s been worth every minute of that work!
+Lesson learned: celebrate your successes. No matter how small they are, they are still successes. For me, starting a user group was not small. It has been a lot of hard work and required the dedication of a lot of people. And it's been worth every minute of that work!
 
-Also, have fun at things like this! Our goal for MADPASS has always been to be casual and laid back. We have a cooler of microbrew beers and sodas. We do giveaways at every meeting. We had birthday cake! When you’re getting together for professional things outside of work hours, enjoy it.
+Also, have fun at things like this! Our goal for MADPASS has always been to be casual and laid back. We have a cooler of microbrew beers and sodas. We do giveaways at every meeting. We had birthday cake! When you're getting together for professional things outside of work hours, enjoy it.
 
 I hope we celebrate many more birthdays, MADPASS!
 

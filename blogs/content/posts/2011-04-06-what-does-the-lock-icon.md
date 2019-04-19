@@ -98,7 +98,7 @@ The user will now see both procs with a lock on them
 
 <img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions3.PNG/fit-400x320.PNG?mtime=1302099825" width="267" height="199" />
 
-If I grant view definition to the user….
+If I grant view definition to the user....
 
 sql
 GRANT VIEW DEFINITION ON prTestEncrypted TO test
@@ -109,7 +109,7 @@ The user will now see the lock only on the encrypted stored procedures, just lik
 
 <img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions.PNG/fit-400x320.PNG?mtime=1302099806" width="242" height="228" />
 
-I think there should be different lock icons in SSMS, this way you will now if the proc is encrypted or that you don't have view definition permissions…what do you think?
+I think there should be different lock icons in SSMS, this way you will now if the proc is encrypted or that you don't have view definition permissions...what do you think?
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 

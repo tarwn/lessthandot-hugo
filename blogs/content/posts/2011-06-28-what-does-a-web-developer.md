@@ -301,7 +301,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Knows at least one framework (jQuery, Prototype, YUI, Dojo, MooTools, …)
+      Knows at least one framework (jQuery, Prototype, YUI, Dojo, MooTools, ...)
     </td>
   </tr>
   

@@ -1,5 +1,5 @@
 ---
-title: BI Interview Questions….
+title: BI Interview Questions....
 author: SQLology ~ Kim Tessereau
 type: post
 date: 2011-05-01T14:44:00+00:00
@@ -64,7 +64,7 @@ Performs insert, update, or delete operations on a target table based on the res
 
 **Are there any performance issues with having a lot of indexes on a table?**
 
-**What’s the difference in using a table variable and a temp table?**
+**What's the difference in using a table variable and a temp table?**
 
 **The first difference** is that transaction logs are not recorded for the table variables.  **The second** major difference is that any procedure with a temporary table cannot be pre-compiled, while an execution plan of procedures with table variables can be statically compiled in advance. Pre-compiling a script gives a major advantage to its speed of execution.  **Finally**, table variables exist only in the same scope as variables. Contrary to the temporary tables, they are not visible in inner stored procedures and in exec(string) statements.
 

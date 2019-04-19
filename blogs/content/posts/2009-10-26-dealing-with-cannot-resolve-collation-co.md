@@ -65,7 +65,7 @@ select * from Test t1
 join Test2 t2 on t1.SomeColumn = t2.SomeColumn collate Traditional_Spanish_CI_AI
 ```
 
-You can also apply collate on the other column…first we need to know what the default was in your database. We can use the ANSI information\_schema.columns view to get this info, we need to use the collation\_name column. Run the following query to grab it
+You can also apply collate on the other column...first we need to know what the default was in your database. We can use the ANSI information\_schema.columns view to get this info, we need to use the collation\_name column. Run the following query to grab it
 
 sql
 select column_name,collation_name
@@ -103,7 +103,7 @@ The query returns the following description for Traditional\_Spanish\_CI_AI'
 
 Traditional-Spanish, case-insensitive, accent-insensitive, kanatype-insensitive, width-insensitive
 
-One thing to be aware of is that when using collate it needs to do a conversion so you might get performance problems…make sure to check those execution plans.
+One thing to be aware of is that when using collate it needs to do a conversion so you might get performance problems...make sure to check those execution plans.
 
 Hopefully this will help some person when dealing with this in the future.
 

@@ -23,7 +23,7 @@ Lately I've been exploring an idea around applying custom, user-defined rules to
 
 I prefer the speed of local development feedback cycles. Getting HTTP Functions running locally was easy with serverless-offline, Kinesis was a lot trickier with more false starts. If you're trying to get local node.js Lambdas running for HTTP and Kinesis, hopefully this will help.
 
-## Spoilers…
+## Spoilers...
 
 By the end of this post, we'll have an HTTP endpoint that can accept POSTed events and publish to a Kinesis stream. We'll have another function pulling events off that stream and processing them. No infrastructure, no polling code, no webserver configurations, less than 40 lines of code, and a simple cli command to deploy: `serverless deploy`
 
@@ -45,7 +45,7 @@ That's pretty standard FaaS stuff, but I can't stand the latency of deploying to
   </p>
 </div>
 
-Here comes the details…
+Here comes the details...
 
 ## Laying the Groundwork: An HTTP Function
 
@@ -85,7 +85,7 @@ service: example-offline-http
 plugins:
   - serverless-offline
 
-# set a default stage in case I don’t provide one
+# set a default stage in case I don't provide one
 custom:
   defaults:
     stage: dev
@@ -159,7 +159,7 @@ This is easy to make available in the serverless config, using a coalesce to loo
 **OfflineHttpAndKinesis/serverless.yml** [(github)][10]
 
 ```text
-…
+...
 
 custom:
   defaults:
@@ -171,7 +171,7 @@ provider:
   region: us-east-1
   environment: ${file(./config/env.yml):${opt:stage, self:custom.defaults.stage}}
 
-…
+...
 ```
 As we add the bootstrap and kinesis runner, we'll pull these environment variables in as well.
 
@@ -284,7 +284,7 @@ const functions = [
 ];
 initialize(functions);
 
-// … more code …
+// ... more code ...
 ```
 The key part of this file to edit is the names in the array of functions. `funName` is a human-readable name you will see in the console output, `handlerPath` is the relative path to the file the handler is in, `handlerName` is the module. Everything else is read from the environment variables that are pulled in from the env.yml file and you can add as few or as many entries to the functions array as you like. This file also invalidates the require() cache while it's running, so you can make changes to functions and fire new events and the new code will be picked up immediately without restarting anything.
 

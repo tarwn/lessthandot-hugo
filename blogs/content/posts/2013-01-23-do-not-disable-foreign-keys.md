@@ -18,11 +18,11 @@ categories:
 ---
 Foreign keys and primary keys play a crucial part in all relational databases – referential integrity.  [Referential integrity][1] is essentially the glue that holds together one or more columns between two or more tables.  This _glue_ dictates if a value is found in one table, it can then exist in another; primary to foreign relationships.
 
-With referential integrity come more complex situations for manipulating data.  This is seen primarily with deletions, although it’s just as prevalent in updates and insertions.  The importance of referential integrity comes in preventing corruption of the integrity itself.  If referential integrity is compromised, queries may fail, return false information or, in a critical stage, prevent data access all together.
+With referential integrity come more complex situations for manipulating data.  This is seen primarily with deletions, although it's just as prevalent in updates and insertions.  The importance of referential integrity comes in preventing corruption of the integrity itself.  If referential integrity is compromised, queries may fail, return false information or, in a critical stage, prevent data access all together.
 
 Focusing on delete events, we can take a look at a common but extremely poor practice when a database is designed properly and referential integrity has been implemented and a delete action is attempted but fails.
 
-Let’s say a SQL Developer has been tasked with removing outdated records from a database.  This has been found to be safe, provided an archiving strategy is put in place and the items are now archived out to a secondary source.  The archiving strategy, however, did not provide a method to remove the original items.  Given this, the developer has to remove the items manually at a time not within normal operating hours.  The database was designed by the team’s DBA and has implemented a relationship between the table the items need to be removed from and another table for customer ordering details.
+Let's say a SQL Developer has been tasked with removing outdated records from a database.  This has been found to be safe, provided an archiving strategy is put in place and the items are now archived out to a secondary source.  The archiving strategy, however, did not provide a method to remove the original items.  Given this, the developer has to remove the items manually at a time not within normal operating hours.  The database was designed by the team's DBA and has implemented a relationship between the table the items need to be removed from and another table for customer ordering details.
 
 sql
 CREATE TABLE item_table (itemnumber int PRIMARY KEY IDENTITY(1,1), itemdesc varchar(10), itemstatus tinyint)
@@ -38,7 +38,7 @@ GO
 
  
 
-The customer ordering details table holds data that is automatically inserted and is then replicated to another source for reporting.  The developer does not really care too much about the customer ordering details because that data is for reporting and if it doesn’t go over, it simply will not replicate.  However, the developer runs a DELETE FROM item_table WHERE itemnumber in (item1, item2) and receives the following error.
+The customer ordering details table holds data that is automatically inserted and is then replicated to another source for reporting.  The developer does not really care too much about the customer ordering details because that data is for reporting and if it doesn't go over, it simply will not replicate.  However, the developer runs a DELETE FROM item_table WHERE itemnumber in (item1, item2) and receives the following error.
 
 <span class="MT_red">Msg 547, Level 16, State 0, Line 1<br /> The DELETE statement conflicted with the REFERENCE constraint “fk_itemnumber”. The conflict occurred in database “QTuner_Design”, table “dbo.cust_item_ordering”, column 'itemnumber'.<br /> </span>
 
@@ -48,20 +48,20 @@ The statement has been terminated.
 
 The developer proceeds to search and finds a solution to get beyond the error.  The developer sends the solution to the DBA as follows.
 
-Please execute the following on server A in database B.  I’ll let you know when to run the next step when I finish getting something done.
+Please execute the following on server A in database B.  I'll let you know when to run the next step when I finish getting something done.
 
 sql
 EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"
 ```
 
 
-We’ll stop here and discuss this situation.
+We'll stop here and discuss this situation.
 
 **The Situation**
 
 This example is being written exactly how it has played out thousands of times in real-life data teams.  It has happened to me hundreds of times and the request has always been denied.  Although the request has been denied, I also replied to it with a solution that will maintain the integrity of the database.
 
-Before going into the solution and reasons not to disable the foreign key, I chose this example because it has a common situation in which the primary key is a critical table but the table where the foreign key resides isn’t.  The foreign key table has been setup to primarily act as a reporting solution.  Even with this situation, the foreign key constraint should not be disabled.  If the foreign key constraint is disabled in order to remove the primary key rows, we are breaking the referential integrity of the foreign key table.  This can lead to report failures, queries that may need to look back at the primary keys for critical data as it moves through an analytical reporting solution or predictive analytical solutions, from either returning no data or inaccurate data.
+Before going into the solution and reasons not to disable the foreign key, I chose this example because it has a common situation in which the primary key is a critical table but the table where the foreign key resides isn't.  The foreign key table has been setup to primarily act as a reporting solution.  Even with this situation, the foreign key constraint should not be disabled.  If the foreign key constraint is disabled in order to remove the primary key rows, we are breaking the referential integrity of the foreign key table.  This can lead to report failures, queries that may need to look back at the primary keys for critical data as it moves through an analytical reporting solution or predictive analytical solutions, from either returning no data or inaccurate data.
 
 The best practice in this situation is to never break the referential integrity of the database.  To do so is a form of laziness in maintaining the data as it has been defined by the business needs and overall design implemented to store the data accurately.
 

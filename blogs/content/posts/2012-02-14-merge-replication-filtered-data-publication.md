@@ -22,7 +22,7 @@ This article will show you how to use two methods in order to restrict the amoun
 
 Join Filters are exactly what they sound like.  If a Join Filter is configured in a publication, the publication acts almost exactly as a join in a T-SQL query would.  The tables are joined on key columns and the data is thus filtered down through the tables.
 
-Parameterized Filters are used to restrict data to partitions of data that are related to a user or host name.  This is extremely useful when data is mobile, and online and offline situations are involved.  Data can be configured into partitions based on a user’s SUSER_SNAME() or a machine’s HOSTNAME().  Not only can this be valuable in filtering what a user will receive for data but it can also be a valuable method in creating Re-Publisher publications based on the HOSTNAME() values.
+Parameterized Filters are used to restrict data to partitions of data that are related to a user or host name.  This is extremely useful when data is mobile, and online and offline situations are involved.  Data can be configured into partitions based on a user's SUSER_SNAME() or a machine's HOSTNAME().  Not only can this be valuable in filtering what a user will receive for data but it can also be a valuable method in creating Re-Publisher publications based on the HOSTNAME() values.
 
 **Setup and configure Sales Publication**
 
@@ -160,7 +160,7 @@ Click the radio button to specify “A row from this table will go to only one s
 
 Click OK to save the filter on Person.
 
-Click the Add list again and select “Add Join to Extend the Selected Filter…”
+Click the Add list again and select “Add Join to Extend the Selected Filter...”
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-10.png?mtime=1329263429"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-10.png?mtime=1329263429" width="624" height="141" /></a>
@@ -176,7 +176,7 @@ Leave Use the builder to create the statement selected.  For Filtered table col
 
 Click OK to close and add the join filter.
 
-Back in the article properties window, click the Add list again and select “Add Join to Extend the Selected Filter…”
+Back in the article properties window, click the Add list again and select “Add Join to Extend the Selected Filter...”
 
 Drop down the Joined table and select Sales.SalesOrderDetail.  In the join statement step 2, use SalesOrderID (int) for the filtered table column and SalesOrderID (int) in the joined table column.
 
@@ -192,7 +192,7 @@ The filter window should appear as shown below.
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-13.png?mtime=1329263430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-13.png?mtime=1329263430" width="624" height="204" /></a>
 </div>
 
-Back in the article properties window, click the Add list again and select “Add Join to Extend the Selected Filter…”
+Back in the article properties window, click the Add list again and select “Add Join to Extend the Selected Filter...”
 
 Drop down the Joined table and select Production.TransationHistory.  In the join statement step 2, use SalesOrderID (int) for the filtered table column and ReferenceOrderID (int) in the joined table column.
 
@@ -240,7 +240,7 @@ Click Finish to create the publication.
 
 To add a subscription to the publication just created, follow these steps.
 
-Right click the new publication and select New Subscriptions…
+Right click the new publication and select New Subscriptions...
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-20.png?mtime=1329263553"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-20.png?mtime=1329263553" width="502" height="451" /></a>

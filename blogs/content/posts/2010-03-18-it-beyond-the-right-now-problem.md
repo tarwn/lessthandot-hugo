@@ -1,5 +1,5 @@
 ---
-title: 'IT: Beyond the ‘Right Now’ Problem'
+title: "IT: Beyond the 'Right Now' Problem"
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-03-18T13:22:28+00:00
@@ -73,11 +73,11 @@ One more step.
 
 Now that the business trusts our judgment to spend time correcting ills that are readily apparent, we need to take what we have learned and start projecting forward. By this point the team is solving immediate and future problems with equal ease, members of the team are starting to show proclivities towards one or the other set of problems, and the business has been much more willing to try applying sometimes outlandish solutions to less than immediate problems. Time to scale up.
 
-As our businesses continue to grow and mature, they are going to be looking at new markets, new acquisitions, new tools, new methods….there is a whole lot of _“new”_ coming for the business. IT can be a business driver and help provide tools that grow the bottom and top lines, but it won't be able to help growth or accommodate change smoothly if all we are doing is solving immediate problems. Just as we collected information on individual pains that were occurring and used those to solve underlying problems, we need to start collecting information about the long terms plans from departments and executives. That information, in combination with our newly whetted imaginations and skills from root cause sessions, is going to help us start building a framework to solve “pains” that have not yet occurred. 
+As our businesses continue to grow and mature, they are going to be looking at new markets, new acquisitions, new tools, new methods....there is a whole lot of _“new”_ coming for the business. IT can be a business driver and help provide tools that grow the bottom and top lines, but it won't be able to help growth or accommodate change smoothly if all we are doing is solving immediate problems. Just as we collected information on individual pains that were occurring and used those to solve underlying problems, we need to start collecting information about the long terms plans from departments and executives. That information, in combination with our newly whetted imaginations and skills from root cause sessions, is going to help us start building a framework to solve “pains” that have not yet occurred. 
 
 Internally it is time to start planning. Each server and software package should have a next step, PC retention plans should be in place for end user equipment, that projector in the conference room should have plans for warranty extension or replacement. Software should be evaluated to determine how well it aligns with future plans to grow or acquire new businesses, the potential for the vendor staying in business, and the direction of competing packages. Competitors should be evaluated to see what technologies or services they are beginning to offer, emerging technologies evaluated to see if they can offer additional services to the customer and increase entanglement, and on, and on.
 
-There's a lot of catch up to do to get on top of your environment, but the end goal is worth it. Lower stress, higher pride, smoother operations…Just as a fit body is stricken less often by illness or infirmities, a fit IT group functions more smoothly and can handle a much wider range of calamity.
+There's a lot of catch up to do to get on top of your environment, but the end goal is worth it. Lower stress, higher pride, smoother operations...Just as a fit body is stricken less often by illness or infirmities, a fit IT group functions more smoothly and can handle a much wider range of calamity.
 
 ## More Information
 

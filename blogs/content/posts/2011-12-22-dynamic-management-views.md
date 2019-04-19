@@ -101,7 +101,7 @@ usp_GetLast	1		901578250	2010-02-12 09:11:59.840</pre>
 
 
 
-Imagine doing stuff like this in the SQL Server 2000 days…..better get profiler and some traces running.
+Imagine doing stuff like this in the SQL Server 2000 days.....better get profiler and some traces running.
 
 What if you want to know the stored procedures with the highest average CPU time in SQL Server? That is pretty easy as well, here is the query for that
 
@@ -246,7 +246,7 @@ SELECT * FROM master.sys.sysobjects
 WHERE name like 'dm[_]%'
 ```
 
-The list below links to Books On Line for related Dynamic Management Views, if you want to know about mirroring Dynamic Management Views then click on the [Database Mirroring Related Dynamic Management Views][2] link. I would say, go to each section and maybe spend a week on it…by the middle of spring you should be the Dynamic Management Views master 🙂
+The list below links to Books On Line for related Dynamic Management Views, if you want to know about mirroring Dynamic Management Views then click on the [Database Mirroring Related Dynamic Management Views][2] link. I would say, go to each section and maybe spend a week on it...by the middle of spring you should be the Dynamic Management Views master 🙂
 
 [Change Data Capture Related Dynamic Management Views][3]
   

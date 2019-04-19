@@ -25,7 +25,7 @@ Open report manager. If you do not already have a folder set aside for SSAS data
 
 Once the folder is created, go into it and click the “New Data Source” button in the menu strip. In the new data source screen enter a meaningful name for the data source and give it a description. For connection type click the drop down and select Microsoft SQL Server Analysis Services.
 
-like so…
+like so...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//model_2.gif" alt="" title="" width="436" height="287" />

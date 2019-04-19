@@ -49,7 +49,7 @@ After you have imported everything you need, click on one of the connections wit
     </p>
     
     <p>
-      <em>config loaded for site 'connectDC.pcf'<br /> configuring client settings…<br /> attached to key daemon …<br /> peer configured<br /> iskamp proposal configured<br /> esp proposal configured<br /> client configured<br /> local id configured<br /> pre-shared key configured<br /> bringing up tunnel …<br /> network device configured<br /> tunnel enabled</em>
+      <em>config loaded for site 'connectDC.pcf'<br /> configuring client settings...<br /> attached to key daemon ...<br /> peer configured<br /> iskamp proposal configured<br /> esp proposal configured<br /> client configured<br /> local id configured<br /> pre-shared key configured<br /> bringing up tunnel ...<br /> network device configured<br /> tunnel enabled</em>
     </p>
     
     <p>

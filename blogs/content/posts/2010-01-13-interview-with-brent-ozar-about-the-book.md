@@ -127,7 +127,7 @@ I love it. I really wish I had more hours in the day to spend on SQLServerPedia.
 
 EVERYWHERE, MUHAHAHA. Okay, maybe not. I'll be at the WorkTamer conferences in Canada, the Microsoft MVP Summit in Seattle, SQLSaturday Chicago, the PASS Summit in Seattle, and maybe the European one as well. I'm aiming for the Microsoft Certified Master program in March, and if that happens, I'll be off the radar for a few weeks.
 
-I've got a day-long free virtual event coming in February with Kevin Kline and Ari Weil, too – we'll be talking DMVs all day long. More news soon…
+I've got a day-long free virtual event coming in February with Kevin Kline and Ari Weil, too – we'll be talking DMVs all day long. More news soon...
 
 That is it, thanks to Brent for the interview, you can visit Brent's site here: http://www.brentozar.com/ and you can follow him on twitter here: http://twitter.com/brento
 

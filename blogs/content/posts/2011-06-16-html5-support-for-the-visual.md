@@ -31,7 +31,7 @@ The first Web Standards Update for Visual Studio 2010 SP1 is available for downl
 
 > We just released the first Web Standards Update for Visual Studio 2010 SP1. Despite its name, the update also works for Visual Web Developer Express 2010 SP1. You can read more on our team blog.
 > 
-> In this first release of the update, we have focused on bringing the HTML5 support up-to-date, adding CSS 3 support and bring more new API’s to the JavaScript intellisense. The plan is to make a release about every 3 months to keep Visual Studio updated with the changes made by W3C.
+> In this first release of the update, we have focused on bringing the HTML5 support up-to-date, adding CSS 3 support and bring more new API's to the JavaScript intellisense. The plan is to make a release about every 3 months to keep Visual Studio updated with the changes made by W3C.
 
 Here are some of the features that the Visual Studio Web Standards Update provides you with intellisense and validation for
   

@@ -25,7 +25,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  Recently some SQL Server instances at a client were upgraded to the latest cumulative update of SQL Server 2012 service pack 1. The reason for this update was the added functionality to create Power View reports on top of Analysis Services Multidimensional. However, one of the instances also has Master Data Services (MDS) installed and after the update we couldn’t connect to the Master Data Manage anymore using the browser. There were two separate issues that had to be solved.
+  Recently some SQL Server instances at a client were upgraded to the latest cumulative update of SQL Server 2012 service pack 1. The reason for this update was the added functionality to create Power View reports on top of Analysis Services Multidimensional. However, one of the instances also has Master Data Services (MDS) installed and after the update we couldn't connect to the Master Data Manage anymore using the browser. There were two separate issues that had to be solved.
 </p>
 
 <h3 style="text-align: justify;">
@@ -41,7 +41,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  For once, the error message is crystal clear: <em>Cannot read configuration file due to insufficient permissions</em>. It even details the location of the web.config file. All we have to do now is add the local account <strong>MDS_ServiceAccounts</strong> if it isn’t added yet and give this account read permission on the config file.
+  For once, the error message is crystal clear: <em>Cannot read configuration file due to insufficient permissions</em>. It even details the location of the web.config file. All we have to do now is add the local account <strong>MDS_ServiceAccounts</strong> if it isn't added yet and give this account read permission on the config file.
 </p>
 
 <p style="text-align: justify;">
@@ -57,7 +57,7 @@ tags:
 </h3>
 
 <p style="text-align: justify;">
-  Unfortunately our problems weren’t over, as we were now greeted with another error screen when trying to connect.
+  Unfortunately our problems weren't over, as we were now greeted with another error screen when trying to connect.
 </p>
 
 <p style="text-align: justify;">
@@ -65,7 +65,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  MDS now complains the database version (meaning SQL Server) has a more recent version than the client (which is MDS itself). Let’s take a look at the MDS Server Configuration Manager to see what is going on. Make sure you open the Configuration Manager using admin privileges. We can immediately see that something is wrong at the welcome screen:
+  MDS now complains the database version (meaning SQL Server) has a more recent version than the client (which is MDS itself). Let's take a look at the MDS Server Configuration Manager to see what is going on. Make sure you open the Configuration Manager using admin privileges. We can immediately see that something is wrong at the welcome screen:
 </p>
 
 <p style="text-align: justify;">
@@ -73,7 +73,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  It looks like no SQL Server database has been configured, while this was the case before the upgrade. Let’s go to the database configuration tab.
+  It looks like no SQL Server database has been configured, while this was the case before the upgrade. Let's go to the database configuration tab.
 </p>
 
 <p style="text-align: justify;">
@@ -81,7 +81,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  Hmm, this looks pretty empty. Click on <em>Select Database…</em> and configure your MDS database in the prompt.
+  Hmm, this looks pretty empty. Click on <em>Select Database...</em> and configure your MDS database in the prompt.
 </p>
 
 <p style="text-align: justify;">
@@ -97,7 +97,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  This error says the database needs to be upgraded. Right next to it is a button called <em>Upgrade Database</em> so it seems obvious we’ll click that one. This will start a wizard which will guide you through the upgrade process. Hit <em>Next</em> until the upgrading begins. The wizard will fire off some scripts against the database to get it to consistent version.
+  This error says the database needs to be upgraded. Right next to it is a button called <em>Upgrade Database</em> so it seems obvious we'll click that one. This will start a wizard which will guide you through the upgrade process. Hit <em>Next</em> until the upgrading begins. The wizard will fire off some scripts against the database to get it to consistent version.
 </p>
 
 <p style="text-align: justify;">

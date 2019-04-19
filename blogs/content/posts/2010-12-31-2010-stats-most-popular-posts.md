@@ -323,7 +323,7 @@ ssrs multi value parameter
 
 # Happy New Year
 
-And finally…**Happy New Year** and may 2011 be a better year for all of us
+And finally...**Happy New Year** and may 2011 be a better year for all of us
 
 [<img src="http://farm6.static.flickr.com/5081/5273859719_6867a81f23.jpg" width="500" height="313" alt="Happy New Year 2011" />][14]
 

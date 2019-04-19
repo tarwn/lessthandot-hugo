@@ -69,7 +69,7 @@ Why do we need indexes and what purpose do they serve?
 
 SQL Advent 2012 Day 14: [When to say no][11]
   
-Sometines you have to say no….even to your boss
+Sometines you have to say no....even to your boss
 
 SQL Advent 2012 Day 13: [Features enabled that are not used][12]
   

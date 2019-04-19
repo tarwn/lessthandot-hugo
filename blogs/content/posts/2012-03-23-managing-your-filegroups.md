@@ -5,7 +5,7 @@ type: post
 date: 2012-03-23T12:29:00+00:00
 ID: 1571
 excerpt: |
-  It’s 4 PM; do you know what’s in your filegroups are?
+  It's 4 PM; do you know what's in your filegroups are?
   
   I found myself having this inner monologue the other day after I pushed a database form dev to test.  On the dev server I had split the database into two filegroups, one to store the data for the&hellip;
 url: /index.php/datamgmt/datadesign/managing-your-filegroups/
@@ -17,13 +17,13 @@ categories:
   - Data Modelling and Design
 
 ---
-It’s 4 PM; do you know what's in your filegroups?
+It's 4 PM; do you know what's in your filegroups?
 
 I found myself having this inner monologue the other day after I pushed a database form dev to test. On the dev server I had split the database into two filegroups, one to store the data for the staging tables, and one to store the data for the end results. The files essentially looked like this:
 
 ![Database Files][1]
 
-I realized that I hadn’t generated the file groups or extra files on the second server. I created them and then used this query to find out where the tables and indexes were:
+I realized that I hadn't generated the file groups or extra files on the second server. I created them and then used this query to find out where the tables and indexes were:
 
 sql
 select distinct
@@ -41,11 +41,11 @@ from sys.tables t
 order by s.name, t.name, fg.name
 ```
 
-In SSMS, as long as you don’t have a lot of data in the table, the tables (aka the clustered indexes) are easy to move. Just right click- design on the table and change the filegroup (and text/image filegroup) to secondary and save. 
+In SSMS, as long as you don't have a lot of data in the table, the tables (aka the clustered indexes) are easy to move. Just right click- design on the table and change the filegroup (and text/image filegroup) to secondary and save. 
 
 ![Properties][2]
 
-Behind the scenes SSMS will create a new table with the same structure on the filegroup, copy the data, drop the old table and rename the new table to the appropriate name. Now do you see why it matters how much data you have? If you’ve got a lot of data then you need to drop the Clustered index, move it, and then recreate the Clustered Index.
+Behind the scenes SSMS will create a new table with the same structure on the filegroup, copy the data, drop the old table and rename the new table to the appropriate name. Now do you see why it matters how much data you have? If you've got a lot of data then you need to drop the Clustered index, move it, and then recreate the Clustered Index.
 
 sql
 ALTER TABLE dbo.Blah DROP CONSTRAINT PK_Blah WITH (MOVE TO Secondary)
@@ -54,7 +54,7 @@ ALTER TABLE dbo.Blah ADD CONSTRAINT PK_Blah PRIMARY KEY(blah1)
 GO
 ```
 
-Now you can rerun the query to see where all the indexes are. If you have any non-clustered indexes you’ll notice that they didn’t get moved to the secondary filegroup when you moved the table. GRR! However, this could be a good thing if you want to seperate out the reeds for your non-clustered and clustered indexes. For my purposes I chose to keep them on the same filegroup.
+Now you can rerun the query to see where all the indexes are. If you have any non-clustered indexes you'll notice that they didn't get moved to the secondary filegroup when you moved the table. GRR! However, this could be a good thing if you want to seperate out the reeds for your non-clustered and clustered indexes. For my purposes I chose to keep them on the same filegroup.
 
 To move the stragglers using SSMS right click-properties on the index, go to storage, change the filegroup, and click ok. This should move the index.
 

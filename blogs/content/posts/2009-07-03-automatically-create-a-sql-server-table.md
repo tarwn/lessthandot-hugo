@@ -19,7 +19,7 @@ I've seen this question numerous times in the forums I like to frequent. The ide
 
 The process mentioned here may not be useful for everyone, but it is certainly something to consider.
 
-There is a system database named Model. This database is used when you create a new user database. In fact, any object (table, view, stored procedures, functions, etc…) that exists in the model database will be copied to your newly created database. This may be a blessing and a curse, so use this suggestion wisely. If you have a SQL Instance where you need to set up a new database for each customer, and that is all the instance is used for, then it makes sense to create your objects in the Model database. However, if you have a general purpose instance that you are using for various databases, you probably won’t want to put your objects in the Model database. 
+There is a system database named Model. This database is used when you create a new user database. In fact, any object (table, view, stored procedures, functions, etc...) that exists in the model database will be copied to your newly created database. This may be a blessing and a curse, so use this suggestion wisely. If you have a SQL Instance where you need to set up a new database for each customer, and that is all the instance is used for, then it makes sense to create your objects in the Model database. However, if you have a general purpose instance that you are using for various databases, you probably won't want to put your objects in the Model database. 
 
 Enough of the chatter, let's see how this can be done.
 
@@ -34,7 +34,7 @@ Insert Into TestAutoDBCreation Values(1, 'Red')
 Insert Into TestAutoDBCreation Values(2, 'Blue')
 ```
 
-Now, let’s create a new database.
+Now, let's create a new database.
 
 sql
 use Master
@@ -50,7 +50,7 @@ Select * From TestAutoDBCreation
 ```
 As you can see, the table that was created in Model exists in the newly created database. It even has all the data that was loaded in to it. 
 
-Now, let’s clean up after ourselves:
+Now, let's clean up after ourselves:
 
 sql
 Use Model

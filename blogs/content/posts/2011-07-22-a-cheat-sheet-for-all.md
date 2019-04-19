@@ -15,7 +15,7 @@ categories:
   - Database Programming
 
 ---
-I’ve gone to The Dark Side: I took a PowerShell class. I've started writing new scripts and replacing old VBscripts. Was it scary? Terrifying. Learning a new language – programming or speaking – is never easy. Do I know everything? Not even close. I know how to get help (get-help – get it? harharhar…), and who to ask for help. 
+I've gone to The Dark Side: I took a PowerShell class. I've started writing new scripts and replacing old VBscripts. Was it scary? Terrifying. Learning a new language – programming or speaking – is never easy. Do I know everything? Not even close. I know how to get help (get-help – get it? harharhar...), and who to ask for help. 
 
 One of the biggest obstacles for me was figuring out the punctuation and syntax in PowerShell. How do I comment out a line? Why (), [] and {}? _What does it all mean?_ 
 

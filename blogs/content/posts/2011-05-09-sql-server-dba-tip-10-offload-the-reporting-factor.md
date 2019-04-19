@@ -99,7 +99,7 @@ Log shipping performed to a standby database (read-only) is not common and has o
 
  
 
-SQL Server Integration Service (SSIS) is SQL Server’s Export, Transform and Load platform.  SSIS is listed in every stage because there are abilities to utilize SSIS to load an entire database and incrementally load only changed data into a database.  This allows for SSIS to be extremely flexible for use with how old data can be in the reporting database.  For more on loading data based only on changes made, read [Backup file contents with SSIS – INSERT/UPDATE Decisions][2].
+SQL Server Integration Service (SSIS) is SQL Server's Export, Transform and Load platform.  SSIS is listed in every stage because there are abilities to utilize SSIS to load an entire database and incrementally load only changed data into a database.  This allows for SSIS to be extremely flexible for use with how old data can be in the reporting database.  For more on loading data based only on changes made, read [Backup file contents with SSIS – INSERT/UPDATE Decisions][2].
 
 SSIS has a minimal learning curve allowing it to be quickly utilized for these operations.  After the knowledge of SSIS increases, many more uses are found in other administrative areas allowing more value to be added.
 

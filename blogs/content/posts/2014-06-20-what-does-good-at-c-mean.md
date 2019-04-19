@@ -288,7 +288,7 @@ We have a good handle on the non-technical developer skills and our codebase, th
   
   <tr>
     <td>
-      Testing – NUnit, MSTest, Moq, Rhino …
+      Testing – NUnit, MSTest, Moq, Rhino ...
     </td>
     
     <td>

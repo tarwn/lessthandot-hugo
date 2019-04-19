@@ -22,7 +22,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  Last week my colleague Valentino and I did a session on <a href="/index.php/DataMgmt/business-intelligence-1/data-visualization-tips-tricks">Data Visualisation Tips & Tricks</a> at the Belgian <a href="http://www.communityday.be/">Community Day</a>. At the beginning of the session there were only a handful of people in the room but luckily we quickly realized the keynote was running over time. So after the keynote speaker finally wrapped up his talk, our audience steadily grow to about 60 people which exceeded our expectations. Valentino’s demos didn’t fail, I didn’t fall of the stage and I heard good feedback, so we’re safe to say our session was a bit of a success.
+  Last week my colleague Valentino and I did a session on <a href="/index.php/DataMgmt/business-intelligence-1/data-visualization-tips-tricks">Data Visualisation Tips & Tricks</a> at the Belgian <a href="http://www.communityday.be/">Community Day</a>. At the beginning of the session there were only a handful of people in the room but luckily we quickly realized the keynote was running over time. So after the keynote speaker finally wrapped up his talk, our audience steadily grow to about 60 people which exceeded our expectations. Valentino's demos didn't fail, I didn't fall of the stage and I heard good feedback, so we're safe to say our session was a bit of a success.
 </p>
 
 <p style="text-align: justify;">

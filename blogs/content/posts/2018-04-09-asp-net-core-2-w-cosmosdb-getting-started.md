@@ -16,7 +16,7 @@ tags:
   - CosmosDB
 
 ---
-I am building the basic foundation for a B2C web application, using ASP.Net Core 2 and Cosmos DB. Along the way I'm going to need authentication, source control, CI/CD, … but first I have to start learning what's changed in ASP.Net Core 2 and how to use Cosmos DB beyond the 5-minute console application demo. There aren't a lot of ASP.net Core 2 and Cosmos DB blog posts out there, so I thought we could do this together and hopefully my experiments and errors will help you get there faster.
+I am building the basic foundation for a B2C web application, using ASP.Net Core 2 and Cosmos DB. Along the way I'm going to need authentication, source control, CI/CD, ... but first I have to start learning what's changed in ASP.Net Core 2 and how to use Cosmos DB beyond the 5-minute console application demo. There aren't a lot of ASP.net Core 2 and Cosmos DB blog posts out there, so I thought we could do this together and hopefully my experiments and errors will help you get there faster.
 
 I'm in the writers chair, though, so this will be somewhat opinionated. We'll be ignoring some pre-packaged solutions (like ASP.Net Identity, Entity Framework, Bootstrap), shipping in small increments, and aiming for a balance between [YAGNI][1] and a clean foundation.
 
@@ -28,7 +28,7 @@ I'm in the writers chair, though, so this will be somewhat opinionated. We'll be
   </p>
 </div>
 
-Who is this for? If you have worked with earlier versions of ASP.Net Core and need a hand starting with Core 2, wanted to try out Cosmos DB, wondered how to create Custom Authentication without the clumsy abstraction of Identity model, worked in other ASP.Net projects but never created one on your own … I hope this will help.
+Who is this for? If you have worked with earlier versions of ASP.Net Core and need a hand starting with Core 2, wanted to try out Cosmos DB, wondered how to create Custom Authentication without the clumsy abstraction of Identity model, worked in other ASP.Net projects but never created one on your own ... I hope this will help.
 
 ## Bite-size pieces
 
@@ -43,7 +43,7 @@ I'm not 100% how far this series is going to go, but I need this foundation for 
   * Expand to support multiple authentication methods
   * Apply better patterns for Cosmos DB setup and usage
   * Ensure forms are safe from [Cross site request forgery][2]
-  * …And maybe: Solid error handling, generic error pages, basic instrumentation, API token authentication, CI/CD, unit tests, and more
+  * ...And maybe: Solid error handling, generic error pages, basic instrumentation, API token authentication, CI/CD, unit tests, and more
 
 We will do this all without letting the standard templates steer us into using bootstrap, Entity Framework, “install all the things” authentication checkboxes, buttons that manually deploy completely unrepeatable local builds, or any other magic that would get in the way of learning how these things work. 
 
@@ -51,7 +51,7 @@ Ready? Awesome, let's go!
 
 ## Task 1: Create the Solution
 
-We'll start with the ASP.Net Core Web Application with the API template (Create new project…). This includes the minimal set of nuget packages we need without creating piles of example and template files we'd have to go through and clean out. Also be sure to <u>not</u> choose an Authentication option. That magic is best left for temporary projects when you're trying to decode the documentation, but don't want to accidentally add 100 packages to your real system.
+We'll start with the ASP.Net Core Web Application with the API template (Create new project...). This includes the minimal set of nuget packages we need without creating piles of example and template files we'd have to go through and clean out. Also be sure to <u>not</u> choose an Authentication option. That magic is best left for temporary projects when you're trying to decode the documentation, but don't want to accidentally add 100 packages to your real system.
 
 <div id="attachment_9088" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_001-600x395.png" alt="Creating an ASP.Net Core 2 Project" width="600" height="395" class="size-medium-width wp-image-9088" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_001-600x395.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_001-300x198.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_001-768x506.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_001-455x300.png 455w, /wp-content/uploads/2018/04/aspnetcore2cosmos_001.png 791w" sizes="(max-width: 600px) 100vw, 600px" />

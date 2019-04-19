@@ -22,7 +22,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  I’m currently setting up a demo environment using SQL Server 2012 and SharePoint 2013 (more on that in later blog posts). This gives me the chance to play around with Power View for SharePoint and I absolutely love it. I ran into an issue however because the Windows Authentication wasn’t working properly. When I view a Power View report I get the following error:
+  I'm currently setting up a demo environment using SQL Server 2012 and SharePoint 2013 (more on that in later blog posts). This gives me the chance to play around with Power View for SharePoint and I absolutely love it. I ran into an issue however because the Windows Authentication wasn't working properly. When I view a Power View report I get the following error:
 </p>
 
 <p style="text-align: justify;">
@@ -31,10 +31,10 @@ tags:
 
 [<img src="/wp-content/uploads/users/koenverbeeck/PowerViewDataSource/errorbis.png?mtime=1367999572" alt="" width="802" height="361" />][1]
 
-<span style="text-align: justify;">Not exactly what you want to encounter when giving a sales demo. So I had two options: either deal with Windows Token Claims / Kerberos or set up an unattended account to run the report. Since I’d rather jab myself in the eye with a rusty nail then dealing with Kerberos, I chose the last option. Setting up an unattended account is my preferred method for authentication, as it gives the least amount of troubles. I do it for Reporting Services reports and PowerPivot workbooks, so I’d also like to do it for Power View as well.</span>
+<span style="text-align: justify;">Not exactly what you want to encounter when giving a sales demo. So I had two options: either deal with Windows Token Claims / Kerberos or set up an unattended account to run the report. Since I'd rather jab myself in the eye with a rusty nail then dealing with Kerberos, I chose the last option. Setting up an unattended account is my preferred method for authentication, as it gives the least amount of troubles. I do it for Reporting Services reports and PowerPivot workbooks, so I'd also like to do it for Power View as well.</span>
 
 <p style="text-align: justify;">
-  So how do you modify a Power View data source? Luckily it’s pretty straight forward if you know where to look. Go to the library where your Power View report is stored.
+  So how do you modify a Power View data source? Luckily it's pretty straight forward if you know where to look. Go to the library where your Power View report is stored.
 </p>
 
 <p style="text-align: justify;">
@@ -53,7 +53,7 @@ tags:
   <a href="/media/users/koenverbeeck/PowerViewDataSource/library_03.png?mtime=1367999616"><img src="/wp-content/uploads/users/koenverbeeck/PowerViewDataSource/library_03.png?mtime=1367999616" alt="" width="470" height="141" /></a>
 </p>
 
-<span style="text-align: justify;">Here we can finally modify the data source. You can choose a shared data source, modify the connection string (a PowerPivot workbook in my case) and set the credentials, which we are interested in. Fill in a user name and password under </span>_Stored Credentials_ <span style="text-align: justify;">to specify an unattended execution account. Don’t forget to check the </span>_Use as Windows credentials_ <span style="text-align: justify;">checkbox.</span>
+<span style="text-align: justify;">Here we can finally modify the data source. You can choose a shared data source, modify the connection string (a PowerPivot workbook in my case) and set the credentials, which we are interested in. Fill in a user name and password under </span>_Stored Credentials_ <span style="text-align: justify;">to specify an unattended execution account. Don't forget to check the </span>_Use as Windows credentials_ <span style="text-align: justify;">checkbox.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/PowerViewDataSource/library_04.png?mtime=1368000128"><img src="/wp-content/uploads/users/koenverbeeck/PowerViewDataSource/library_04.png?mtime=1368000128" alt="" width="616" height="548" /></a>

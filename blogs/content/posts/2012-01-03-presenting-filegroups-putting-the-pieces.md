@@ -21,7 +21,7 @@ categories:
   <img src="http://www.popculturemadness.com/Entertainment/Decades/images/greatest-show-on-earth.jpg" alt="" title="" />
 </p>
 
-_Come one, come all to…_
+_Come one, come all to..._
 
 **Filegroups: Putting The Pieces Together** 
 

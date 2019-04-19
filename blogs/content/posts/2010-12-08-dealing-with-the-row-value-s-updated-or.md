@@ -60,7 +60,7 @@ Error Message: The row value(s) updated or deleted either do not make the row un
 
 Correct the errors and attempt to delete the row again or press ESC to cancel the change(s).
 
-This is really a limitation of the designer/tool. So when a human looks at that grid with the 2 rows, the human knows that it wants to delete the first row….however since the 2 rows are completely identical SQL Server does not know which row to delete from the table.
+This is really a limitation of the designer/tool. So when a human looks at that grid with the 2 rows, the human knows that it wants to delete the first row....however since the 2 rows are completely identical SQL Server does not know which row to delete from the table.
 
 Of course this is also yet another reason to have a primary key on the table.
 

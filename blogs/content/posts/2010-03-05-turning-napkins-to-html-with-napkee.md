@@ -45,7 +45,7 @@ It can even be spread across multiple lines.</textarea>
 
 The different objects don't really appear to be placed on in any particular order, but that is an illusion. They are placed in the order that I added them to the mockup (which is also the order the XML representations of the components appear in the .bmml file). I've typically worked more on the back-end of projects, within fairly tight confines with regard to layout. I'll admit that for a few minutes I wondered how this could ever work. Clicking through the other tabs, the method behind the madness quickly became apparent though.
 
-It turns out that what Napkee exports is actually much less vanilla than I initially expected. The other tabs are not actually for separate JS or CSS files – this is what threw me off. There's a separate css file that uses [jQuery UI][4] to style the different widgets. The CSS that is generated for each mockup is embedded within the exported HTML file, and used for defining an element's position, font size, color, etc… Here's an example:
+It turns out that what Napkee exports is actually much less vanilla than I initially expected. The other tabs are not actually for separate JS or CSS files – this is what threw me off. There's a separate css file that uses [jQuery UI][4] to style the different widgets. The CSS that is generated for each mockup is embedded within the exported HTML file, and used for defining an element's position, font size, color, etc... Here's an example:
 
 ```css
 #nap5{

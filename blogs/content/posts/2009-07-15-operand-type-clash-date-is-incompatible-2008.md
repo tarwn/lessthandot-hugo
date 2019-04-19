@@ -31,7 +31,7 @@ select @d  =@d+1
 select @d
 ```
 
-To convert this to SQL Server 2008 logically you would think that all you had to do is change datetime to date. Go ahead…run it…make my day
+To convert this to SQL Server 2008 logically you would think that all you had to do is change datetime to date. Go ahead...run it...make my day
 
 sql
 declare @d date
@@ -59,7 +59,7 @@ select @d
 
 So that will work with both date and datetime (should work with all the date datatypes) and it is clear what you are doing.
 
-But wait….scroll down in the next 5 seconds and you will get another option as a bonus.
+But wait....scroll down in the next 5 seconds and you will get another option as a bonus.
 
 What about this?
 
@@ -72,7 +72,7 @@ select @d
 
 That does the addition before assignment.
 
-But wait….scroll down in the next 5 seconds and you will get another option which is even shorter as a bonus.
+But wait....scroll down in the next 5 seconds and you will get another option which is even shorter as a bonus.
 
 Here is another version which is a little shorter
 
@@ -81,7 +81,7 @@ declare @d date = getdate() +1
 select @d 
 ```
 
-Even though the last two versions are shorter, I would opt for using dateadd. With dateadd you know what you are doing, what does +1 mean? Are you adding days, hours or what…it is not clear from just looking at the code without running it
+Even though the last two versions are shorter, I would opt for using dateadd. With dateadd you know what you are doing, what does +1 mean? Are you adding days, hours or what...it is not clear from just looking at the code without running it
 
 
 

@@ -25,11 +25,11 @@ categories:
 
 This past weekend I presented a new session titled SSIS: The DBA Multipler.  The session covered taking the power of SSIS and extending the SQL Server Agent with it in order to multiply and automate DBA tasks.  The session went very well and I received a lot of great feedback.  Thank you again to all that attended.
 
-In the session I went into an SSIS package that is close to something I have used for automating development restores.  There is much manual effort in restoring production database to development and this task over the years was one I humored many methods for automation.  I’ve recently written PowerShell scripts to do the same process and SSIS still seems to be more stable for this process.
+In the session I went into an SSIS package that is close to something I have used for automating development restores.  There is much manual effort in restoring production database to development and this task over the years was one I humored many methods for automation.  I've recently written PowerShell scripts to do the same process and SSIS still seems to be more stable for this process.
 
 There are some key variables that need to be addressed before blindly running an automated restore over a database.  The primary is: can you overwrite the database in development to begin with?  Development work that is not stored in source control and easily deployed back to a database can result in lost work.  That is the last thing our automation should cause.  Why automate if it creates longer and more work for us?  Yes, even if it creates more work for the developers.
 
-If development work is in something like Team Foundation Server (TFS) or Subversion, you can deploy the database scripts back to the database after the restore is done.  You can also use something such as Red Gate’s compare to automate the backup of changes and then apply them once the restore is done.  There are many options in that step to prevent loss of work.  Asking if loss of work is a possibility is the main objective before starting this automated process.
+If development work is in something like Team Foundation Server (TFS) or Subversion, you can deploy the database scripts back to the database after the restore is done.  You can also use something such as Red Gate's compare to automate the backup of changes and then apply them once the restore is done.  There are many options in that step to prevent loss of work.  Asking if loss of work is a possibility is the main objective before starting this automated process.
 
  
 
@@ -137,7 +137,7 @@ With the package we are building, the variables outlined below are required.  A
 
 **Expressions**
 
-As stated in the Variables section; Expressions are used in several areas for this task in order to allow for mobility and reusability of the package.  Creating the package to run one distinct restore on a specific database is fine, but we’d want to prevent work hours wasted on changing hard-coded values later when we want to expand the use.
+As stated in the Variables section; Expressions are used in several areas for this task in order to allow for mobility and reusability of the package.  Creating the package to run one distinct restore on a specific database is fine, but we'd want to prevent work hours wasted on changing hard-coded values later when we want to expand the use.
 
 The variables, DiffBackupPath, DiffRestorePath, FullBackupPath and FullRestorePath are the first evaluated variables we will look at.
 
@@ -174,7 +174,7 @@ The expression for the task to restore the differential backup file:
 Evaluated, this expression results in:
 
 ```text
-RESTORE DATABASE [DBA_DEV] FROM  DISK = N'c:restoresFULL_12122001.BAK’ WITH  FILE = 1,  MOVE N’DBA’ TO N’C:SQL2008R2MSSQL10_50.TK2008R2MSSQLDATADBA_DEV.mdf’, MOVE N’DBA_LOG’ TO N’C:SQL2008R2MSSQL10_50.TK2008R2MSSQLDATADBA_DEV_1.ldf’,  NOUNLOAD, REPLACE,  STATS = 10
+RESTORE DATABASE [DBA_DEV] FROM  DISK = N'c:restoresFULL_12122001.BAK' WITH  FILE = 1,  MOVE N'DBA' TO N'C:SQL2008R2MSSQL10_50.TK2008R2MSSQLDATADBA_DEV.mdf', MOVE N'DBA_LOG' TO N'C:SQL2008R2MSSQL10_50.TK2008R2MSSQLDATADBA_DEV_1.ldf',  NOUNLOAD, REPLACE,  STATS = 10
 ```
 SqlStatementSource values are exclusively used on all the T-SQL Tasks in this package.  Again, this allows us to freely change these values at run-time so we can reuse the package on several different database or configurations.
 

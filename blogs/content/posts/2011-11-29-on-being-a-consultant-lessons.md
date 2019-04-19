@@ -37,7 +37,7 @@ I hope I can repay this all, someday.
 
 ![][1]
 
-My comfort zone is…comfortable. Like my favorite running t-shirt. But if I stayed there all the time, I wouldn't learn new things. I wouldn't come up with new ideas. I wouldn't find new solutions. (I probably wouldn't be looking around the room, terrified, wondering if anyone will figure out that I don't know everything, either.) 
+My comfort zone is...comfortable. Like my favorite running t-shirt. But if I stayed there all the time, I wouldn't learn new things. I wouldn't come up with new ideas. I wouldn't find new solutions. (I probably wouldn't be looking around the room, terrified, wondering if anyone will figure out that I don't know everything, either.) 
 
 Outside my comfort zone, I discover new things. I uncover new strengths. I use my talents. I hope that one day, those two circles overlap. Or at least get closer together.
 

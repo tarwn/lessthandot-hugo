@@ -20,7 +20,7 @@ tags:
   - standards
 
 ---
-## So what is a CDM ?… 
+## So what is a CDM ?... 
 
 A Canonical Data Model is most simply explained as a standardised way of representing data that generically applies to multiple systems and data models – kind of like the master data model, but for semantics aswell as content. It can be used as a data model standard template for new systems development, or as an intermediary serialised data format – which is the aspect I'll focus on mostly here.
 
@@ -44,7 +44,7 @@ It's not always clear when first thinking about this design why it is so importa
 
 ## Some of the Key Benefits and Advantages
 
-<span style="font-weight:800;text-decoration:underline;">Connect Once, Integrate Many</span> – once connected to the information network via the canonical adapter, you can communicate with any other connected system as long as it is in context (e.g. order requests aren't likely to work with Proof of Delivery)… but having said that, things do become somewhat adaptable, even out of context… for example: an order quite often contains customer information and product information, as well as being an outline of the shipment. With this in mind you \*could\* (and that doesn't mean \*should\* 😀 ) feed a customer master or CRM application with the customer information, a Product Master or Stock Management application with the product information 'just-in-time' for the order to be processed should the information not have been provided before (unlikely for the product master, but you get the idea). You could even feed a shipment scheduling system, shipment event tracking system and plenty of others just from that single message (the most valuable might be your data warehouse).
+<span style="font-weight:800;text-decoration:underline;">Connect Once, Integrate Many</span> – once connected to the information network via the canonical adapter, you can communicate with any other connected system as long as it is in context (e.g. order requests aren't likely to work with Proof of Delivery)... but having said that, things do become somewhat adaptable, even out of context... for example: an order quite often contains customer information and product information, as well as being an outline of the shipment. With this in mind you \*could\* (and that doesn't mean \*should\* 😀 ) feed a customer master or CRM application with the customer information, a Product Master or Stock Management application with the product information 'just-in-time' for the order to be processed should the information not have been provided before (unlikely for the product master, but you get the idea). You could even feed a shipment scheduling system, shipment event tracking system and plenty of others just from that single message (the most valuable might be your data warehouse).
 
 Here's a comparison of point to point integration versus a canonical model:
 
@@ -68,7 +68,7 @@ PTP Integration: sources MULTIPLIED by targets
   
 CDM Integration: sources PLUS targets 
 
-This starts to demonstrate itself very quickly when you look at 10 sources and 10 targets… would you prefer to build 20 components, or 100 ?
+This starts to demonstrate itself very quickly when you look at 10 sources and 10 targets... would you prefer to build 20 components, or 100 ?
 
 <span style="font-weight:800;text-decoration:underline;">Standardised Information Architecture Foundation</span> – the concept and importance of an Information Oriented Architecture (IOA) should not be understated. Architecture within an IT environment is mostly about abstraction, generalisation and standardisation of concepts to deliver sustainable, re-usable solutions and technology. One of the most popular architectures in previous years has been the N-Tier architecture where layers of the solution are packaged into abstracted levels that are 'theoretically' interchangeable etc. Furthermore, the more recent Service Oriented Architecture (SOA) expands / explodes that concept somewhat (there's a bit more to it, but for examples sake..) into a distributed network oriented environment, with the addition of a bus to provide the glue that binds all the interchangeable parts together. In both of these concepts, information should be standardised, or if not possible (e.g. from multiple sources, which SOA is very prone to) then to abstract the differences between the data sources and present (e.g. via the Data Access Tier, Business Data Objects, Composite Services etc) a standardised version.
 
@@ -100,7 +100,7 @@ Then (ideally) you want to define an information architecture strategy as thorou
 
 Once you have a good framework and strategy, you can start analysing the detail and pulling together a Requirements Analysis Spec and the Architecture/Design for the solution. BUT.. this bit should be done in small manageable chunks – that way a) you minimise risk of failure b) minimise impact if things do go wrong and c) show fast, measurable results to encourage people to continue to take-up this strategy. I'll post again soon with more detailed steps to this approach
 
-I hope this has either inspired you to look at implementing a Canonical Data Model as part of your enterprise Information Architecture strategy, or enraged you enough to think of some better way…
+I hope this has either inspired you to look at implementing a Canonical Data Model as part of your enterprise Information Architecture strategy, or enraged you enough to think of some better way...
 
  [1]: http://www.damber.net/blog/files/imgs/canonical_diagram_simple.gif
  [2]: http://www.damber.net/blog/files/imgs/ptp_v_cdm.gif

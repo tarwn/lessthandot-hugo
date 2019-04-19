@@ -95,7 +95,7 @@ Final result?
 
 ## Graphs and Numbers, woohoo!
 
-So what happened when I upgrade to MVC4? faster, slower, … ? And how much faster did Asynchronous actions make it? 1 order of magnitude? 2 orders?
+So what happened when I upgrade to MVC4? faster, slower, ... ? And how much faster did Asynchronous actions make it? 1 order of magnitude? 2 orders?
 
 What happened was object lessons in why having load measurements are useful and why identifying your performance bottlenecks is critical, instead of treating asynchronous actions as magic pixie dust.
 

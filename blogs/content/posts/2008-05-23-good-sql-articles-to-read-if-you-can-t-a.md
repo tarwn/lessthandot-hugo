@@ -1,5 +1,5 @@
 ---
-title: Good SQL Articles To Read If You Can’t Afford Books
+title: Good SQL Articles To Read If You Can't Afford Books
 author: SQLDenis
 type: post
 date: 2008-05-23T13:11:30+00:00

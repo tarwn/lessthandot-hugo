@@ -29,7 +29,7 @@ I also like working at the Hadoop scale. I've always had a fascination with dist
 
 Oh man, this is one of things I really love about my job. Working from home really is great, except when it isn't. Sometimes it's hard. Sometimes it's lonely. But there are some really easy tips that I use to make sure that things are running smoothly.
 
-1.) Get dressed for work. Now, I don't wear a shirt and tie everyday, but I do get ready in the morning. Contrary to popular belief, I wear pants every day…never sweat pants. Always nice jeans or slacks. T-shirts are ok, but nothing ratty. I have to feel like I'm in working mode, or it just doesn't happen.
+1.) Get dressed for work. Now, I don't wear a shirt and tie everyday, but I do get ready in the morning. Contrary to popular belief, I wear pants every day...never sweat pants. Always nice jeans or slacks. T-shirts are ok, but nothing ratty. I have to feel like I'm in working mode, or it just doesn't happen.
 
 2.). Working hours. I don't mean that I only work between 8 and 5, but generally, during the day, I'm working. Sometimes I take some time off in the afternoon, and work in the late evening, but I try to not make it a habit. When I start breaking this schedule, I notice my productivity really suffers. It's really important for my own personal schedule to separate work time and personal time.
 
@@ -55,7 +55,7 @@ PASS Summit will always hold a special place in my heart. I'm so honored to be s
 
 ### If you weren't in technology, what completely different career would you choose, regardless of schooling required or salary earned?
 
-Lumberjack. Seriously. Chainsaws, flannel, beards…who could ask for more? Ok, maybe that's too much work.
+Lumberjack. Seriously. Chainsaws, flannel, beards...who could ask for more? Ok, maybe that's too much work.
 
 Oh I know, you know those guys that drive RVs across then country to deliver them to dealerships? I'll be one of those. Camping, driving, sightseeing, and getting paid. SHUT UP AND TAKE MY APPLICATION!!!
 

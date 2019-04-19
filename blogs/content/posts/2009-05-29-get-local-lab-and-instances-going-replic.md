@@ -37,7 +37,7 @@ GO
 ```
 Restart SQL Server and you'll get in at least.
 
-Second issue. SQL Agent wasn't running mostly because I don't let it so my laptop actually runs and isn't bogged down. So I start it…
+Second issue. SQL Agent wasn't running mostly because I don't let it so my laptop actually runs and isn't bogged down. So I start it...
   
 Error: “SQLServerAgent could not be started (reason: SQLServerAgent must be able to connect to SQLServer as SysAdmin, but '(Unknown)' is not a member of the SysAdmin role). ”
 
@@ -48,6 +48,6 @@ e.g.
 sql
 select * from msdb..syscachedcredentials
 ```
-OK, I'm the only one. That's good. Thinking….
+OK, I'm the only one. That's good. Thinking....
 
 OK, for the record. If you get this error and you have way too many instances installed, go to services.msc first and make sure you are running the SQL Server services and the SQL Server Agent under the same account. This is the quick fix 🙂 Either that or ensure the account is a local administrator if you have BUILTINAdministrators in the sysadmin role. Now back to the other blog which caused me so many headaches.

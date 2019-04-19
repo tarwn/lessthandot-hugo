@@ -20,7 +20,7 @@ tags:
 ---
 Microsoft Corp. today announced the availability of Silverlight 2, one of the industry's most comprehensive and powerful solutions for the creation and delivery of applications and media experiences through a Web browser. Silverlight 2 delivers a wide range of new features and tools that enable designers and developers to better collaborate while creating more accessible, more discoverable and more secure user experiences.
   
-Microsoft also announced further support of open source communities by funding advanced Silverlight development capabilities with the Eclipse Foundation’s integrated development environment (IDE) and by providing new controls to developers with the Silverlight Control Pack (SCP) under the Microsoft Permissive License.
+Microsoft also announced further support of open source communities by funding advanced Silverlight development capabilities with the Eclipse Foundation's integrated development environment (IDE) and by providing new controls to developers with the Silverlight Control Pack (SCP) under the Microsoft Permissive License.
 
 > “We launched Silverlight just over a year ago, and already one in four consumers worldwide has access to a computer with Silverlight already installed,” said Scott Guthrie, corporate vice president of the .NET Developer Division at Microsoft. “Silverlight represents a radical improvement in the way developers and designers build applications on the Web. This release will further accelerate our efforts to make Silverlight, Visual Studio and Microsoft Expression Studio the preeminent solutions for the creation and delivery of media and rich Internet application experiences.”
   

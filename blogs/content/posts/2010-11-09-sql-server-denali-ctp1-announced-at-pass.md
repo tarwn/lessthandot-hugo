@@ -38,7 +38,7 @@ I have been playing around with Denali for a couple of weeks now and created a c
 
 [A first look at sequences in SQL Server Denali][5]
 
-[Don’t install Denali BIDS side by side with a 2008 instance][6]
+[Don't install Denali BIDS side by side with a 2008 instance][6]
 
 <The new Dynamic Management Views in SQL Server Denali>
 

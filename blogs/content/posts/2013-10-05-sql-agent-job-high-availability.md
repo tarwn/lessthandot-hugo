@@ -20,17 +20,17 @@ The concept of SQL Agent Jobs being highly available or having a high level of f
 
 First, I truly think Availability Groups (AG) are one of the best features released with SQL Server.  Being involved in high availability (HA) and disaster and recovery (DR) designs for a number of years, due to loving the concept of recovery methods, AG has provided something mirroring or other past features truly were missing; True HA with no intervention.  Of course, I spent a lot of time writing and inventing ways to make mirroring, which is a great feature also, work with many applications and services.  This was always what it sounds like though, a lot of time to make things work in a failover event.  So, AG allows all of this to function out of the box by implementing clustering designs of one point entry, operating system, hardware and database level failure protection.
 
-Now that we’ve talked up AG, back to SQL Agent and HA.  A good friend and one of the most highly respected SQL Server experts in the field, [Jonathan Kehayias][1] of SQLskills, [released a free add-in][2] to SQL Server Management Studio (SSMS) that allows for quick synchronization of logins and SQL Agent jobs between AG replicas.  The add-in is pretty straight forward.  Right click you AG in SSMS, navigate to SQLskills.com, and select Synchronize Uncontained Objects.
+Now that we've talked up AG, back to SQL Agent and HA.  A good friend and one of the most highly respected SQL Server experts in the field, [Jonathan Kehayias][1] of SQLskills, [released a free add-in][2] to SQL Server Management Studio (SSMS) that allows for quick synchronization of logins and SQL Agent jobs between AG replicas.  The add-in is pretty straight forward.  Right click you AG in SSMS, navigate to SQLskills.com, and select Synchronize Uncontained Objects.
 
 ![][3]
 
-You get an easy to use wizard that ends in generating a script that will synchronize any jobs with your replicas.  I can’t say how useful this tool is enough.  I spent some time writing my own SMO and PoSH scripts to do just what this tool does in a nicely packaged container.
+You get an easy to use wizard that ends in generating a script that will synchronize any jobs with your replicas.  I can't say how useful this tool is enough.  I spent some time writing my own SMO and PoSH scripts to do just what this tool does in a nicely packaged container.
 
 Typically, the synchronized jobs on each replica would be disabled.  In the case of a failover, the jobs would then be enabled.  The problem lies in the fact there is either an effort needed to enable to jobs automatically, which goes back to those efforts we dealt with in mirroring, or the jobs need manual intervention to be enabled.  There is one nice feature in AG that you can take advantage of however, to have both replica jobs running and have them intelligent enough to know if they should run or not.
 
 **Secondary Backups in Availability Groups**
 
-With AG, you can designate one or more replicas as the replica that backups should be run on.  These backups are full copy only and log backups.  With this option, you’ll normally setup jobs on each replicas that check a database and validate if it is designated for preferred backups.  This is done with the system function [sys.fn\_hadr\_backup\_is\_preferred_replica][4].  Pass in a database name and if you result in 1, the replica has been set to have backups performed on it.
+With AG, you can designate one or more replicas as the replica that backups should be run on.  These backups are full copy only and log backups.  With this option, you'll normally setup jobs on each replicas that check a database and validate if it is designated for preferred backups.  This is done with the system function [sys.fn\_hadr\_backup\_is\_preferred_replica][4].  Pass in a database name and if you result in 1, the replica has been set to have backups performed on it.
 
 Now, thinking about other SQL Agent jobs, you can take advantage of that easy to use system function and the setting of a certain replica for preferred backups.  Take a task such as external calls to other database servers, SQL Server Integration Services package executions, or even SQL Server Analysis Services XMLA command calls.  All of these could easily take advantage of the system function and either make a quick decision to continue on execution or end without doing anything.
 
@@ -40,7 +40,7 @@ This could be taken even further with read replicas such as the configuration vi
 
 In the above case, NODE1 and NODE2 are set for automatic failover and NODE2 is the only replica that will accept backups.  This is done by excluding NODE3 for backups.  In the case of a failover, NODE1 becomes the secondary and then is the preferred replica for backups.
 
-Let’s say you have a job that checks orders in AdventureWorks database.  If the ship dates of orders are NULL and the due date of that order is in the past, those orders should be sent as a notification or some sort of daily reporting.  In AG, setting a replica that is set for preferred backups and the database you are looking at is set for reading, you could run the following query on that replica.
+Let's say you have a job that checks orders in AdventureWorks database.  If the ship dates of orders are NULL and the due date of that order is in the past, those orders should be sent as a notification or some sort of daily reporting.  In AG, setting a replica that is set for preferred backups and the database you are looking at is set for reading, you could run the following query on that replica.
 
 sql
 IF EXISTS(SELECT 1 FROM AdventureWorks2008.[Sales].[SalesOrderHeader]

@@ -28,7 +28,7 @@ tags:
 ---
 ### 1. Not adjusting memory settings on your database server
 
-Below is a screen shot of the dreaded default 214748367 maximum server memory allowed to SQL Server. Will it take it? Yes, it will. It holds no sympathy for others and will leave no crumbs behind for mere OS operations or paging. Set this to an allowable maximum based on your server’s actual available memory. Leave some for the OS to survive. The server will thank you later. Trust me!
+Below is a screen shot of the dreaded default 214748367 maximum server memory allowed to SQL Server. Will it take it? Yes, it will. It holds no sympathy for others and will leave no crumbs behind for mere OS operations or paging. Set this to an allowable maximum based on your server's actual available memory. Leave some for the OS to survive. The server will thank you later. Trust me!
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/memmaximum_BAD.gif" alt="" title="" width="448" height="401" />
@@ -56,19 +56,19 @@ SA is a landmark and an object not to be tangled with. Think of Dirty Harry and 
 
 ### 5. Never maintaining indexes and statistics
 
-You’ve spent days researching and configuring IO, memory, SQL Server configurations down to the last MAXDOP setting. It truly is a remarkable feeling you can only explain by feeling it yourself. Problem is, when it stops there and maintaining the database server is left to the planning and implementation. Indexes and Statistics alike need special care. They can enforce performance beyond your most exotic dreams when used and maintained. They can become your nightmarish horrors if not maintained at the same time. 
+You've spent days researching and configuring IO, memory, SQL Server configurations down to the last MAXDOP setting. It truly is a remarkable feeling you can only explain by feeling it yourself. Problem is, when it stops there and maintaining the database server is left to the planning and implementation. Indexes and Statistics alike need special care. They can enforce performance beyond your most exotic dreams when used and maintained. They can become your nightmarish horrors if not maintained at the same time. 
 
 
 
 ### 6. Installing EVERYTHING including binary, data and log files to the C drive
 
-If you are installing SQL Server on your desktop or laptop at home and have one 25GB drive, then sure, install to the C drive. Most of us have those “server” things. They have drive bays, and sometimes we even get a D or an E drive. When you install SQL Server it will want and request you to install everything to the C drive (or the volume letter you pick for the OS). It’s ok for the setup team to do this. I respect that not all best practices can be programmed into everything. So here is the almighty: If you have a data drive, log drive and OS drive or anything other than the drive for the OS, please use it for your data. Your database server will thank you when it is not contending with other IO operations. 
+If you are installing SQL Server on your desktop or laptop at home and have one 25GB drive, then sure, install to the C drive. Most of us have those “server” things. They have drive bays, and sometimes we even get a D or an E drive. When you install SQL Server it will want and request you to install everything to the C drive (or the volume letter you pick for the OS). It's ok for the setup team to do this. I respect that not all best practices can be programmed into everything. So here is the almighty: If you have a data drive, log drive and OS drive or anything other than the drive for the OS, please use it for your data. Your database server will thank you when it is not contending with other IO operations. 
 
 
 
 ### 7. Relying on RAID as a recovery plan
 
-RAID is not going to save you. Before last year or so when it was publicized that a company literally was found whimpering in the corner after losing all of their data from relying on RAID levels to protect against failures, we didn’t think it was possible to fathom this concept. Who would think this way? Well, someone did, so we need to say it. 
+RAID is not going to save you. Before last year or so when it was publicized that a company literally was found whimpering in the corner after losing all of their data from relying on RAID levels to protect against failures, we didn't think it was possible to fathom this concept. Who would think this way? Well, someone did, so we need to say it. 
 
 
 
@@ -86,7 +86,7 @@ Sizing is an art for database servers. It is also an art form to not size your d
 
 ### 10. Forgetting the network is just as important as IO performance
 
-It’s the network! Blaming the network on slow performance is fun. Network and database administrators like to blame each other on performance being slow. The nice part about the network is if there isn’t much monitoring in place, we can get away with it as DBAs so much easier. OK, is it really the network or not? If you do not have a network that is stable and can handle your data flying around the business, your hardcore, supersonic, beefy, brat- eating server doesn’t help you at all. Get with your network group and discuss the amount of expected data. ASYNC\_NETWORK\_IO waits are not fun when you are plagued with them on a database server. 
+It's the network! Blaming the network on slow performance is fun. Network and database administrators like to blame each other on performance being slow. The nice part about the network is if there isn't much monitoring in place, we can get away with it as DBAs so much easier. OK, is it really the network or not? If you do not have a network that is stable and can handle your data flying around the business, your hardcore, supersonic, beefy, brat- eating server doesn't help you at all. Get with your network group and discuss the amount of expected data. ASYNC\_NETWORK\_IO waits are not fun when you are plagued with them on a database server. 
 
 
 
@@ -96,14 +96,14 @@ So the CFO comes to your office and he just went to this really cool lightshow e
 
 
 
-### 12. Backups are for sissies so I don’t do them or restore them to test
+### 12. Backups are for sissies so I don't do them or restore them to test
 
-Everyone knows the signature. It’s comical in passing and at user group meetings. Is it true? Not even close. Backups are your foundation for recovery. Your ability to save the universe from data gremlins that chew their way through your NIC port into the chassis, feasting on the RAM before moving to your beloved disk. Wait, listen to this:
+Everyone knows the signature. It's comical in passing and at user group meetings. Is it true? Not even close. Backups are your foundation for recovery. Your ability to save the universe from data gremlins that chew their way through your NIC port into the chassis, feasting on the RAM before moving to your beloved disk. Wait, listen to this:
 
-**Jan:** _My database blew up. Something about corrupt, torn pages and Google can’t save me. John, can you help?_
+**Jan:** _My database blew up. Something about corrupt, torn pages and Google can't save me. John, can you help?_
 
-**John:** _Jan, let’s just restore to the other server so we can figure this out without being on the verge of heart attacks._ 
+**John:** _Jan, let's just restore to the other server so we can figure this out without being on the verge of heart attacks._ 
 
 **jan :** _backups?_
 
-Don’t be that person! Backup your data and back it up as much as you possibly can. Most of all restore it wherever you can to test it, well, can be restored. This is a nice feature to know you have before you need to have it.
+Don't be that person! Backup your data and back it up as much as you possibly can. Most of all restore it wherever you can to test it, well, can be restored. This is a nice feature to know you have before you need to have it.

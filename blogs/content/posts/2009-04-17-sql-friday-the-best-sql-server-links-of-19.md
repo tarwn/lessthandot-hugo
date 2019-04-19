@@ -43,7 +43,7 @@ Aaron Bertrand tells us that if you were among those who installed CU4 for SQL S
   
 Gail writes: “I was listening to a podcast on nHibernate this morning. Most of it was very good, but there was one section that absolutly made me see red.
 
-The guest on the show was asked how the DBAs felt about the use of nHibernate for a new app on an existing (old) database. The reply essentially was 'We haven't told them and we’re not going to tell them.'”
+The guest on the show was asked how the DBAs felt about the use of nHibernate for a new app on an existing (old) database. The reply essentially was 'We haven't told them and we're not going to tell them.'”
 
 
 

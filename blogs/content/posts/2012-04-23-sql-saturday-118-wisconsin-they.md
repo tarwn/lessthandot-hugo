@@ -1,5 +1,5 @@
 ---
-title: 'SQL Saturday #118 Wisconsin: They Came, They Saw…Did They Tip Cows?'
+title: 'SQL Saturday #118 Wisconsin: They Came, They Saw...Did They Tip Cows?'
 author: Jes Borland
 type: post
 date: 2012-04-23T16:32:00+00:00
@@ -16,7 +16,7 @@ categories:
 ---
 I am constantly awed and humbled by the hard work, dedication, generosity, and selflessness of the people I am surrounded with. The SQL Server community is no exception. A few months ago, I had an idea to bring a SQL Saturday to Wisconsin. Two days ago, that idea became reality with [SQL Saturday #118 Wisconsin][1]. It exceeded all my expectations. I did not do it alone, though.
 
-Thank you is not big enough for Ted Krueger ([b][2] | [t][3]), Gina Meronek ([t][4]), Leonard Murphy ([t][5]), Tim Benninghoff ([t][6]), Tony Sebion ([t][7]), Matt Cherwin ([t][8]), and Steve Novoselac ([b][9] | [t][10]). Without you, this wouldn’t have happened.
+Thank you is not big enough for Ted Krueger ([b][2] | [t][3]), Gina Meronek ([t][4]), Leonard Murphy ([t][5]), Tim Benninghoff ([t][6]), Tony Sebion ([t][7]), Matt Cherwin ([t][8]), and Steve Novoselac ([b][9] | [t][10]). Without you, this wouldn't have happened.
 
 Thank you to the staff and students at [MATC][11]. They helped reserve rooms, put out tables, put up signs, monitored rooms, and fed us well. It was a pleasure to work with them, and I would do it again.
 
@@ -36,7 +36,7 @@ First, establish your posse. One person cannot do a SQL Saturday single-handedly
 
 Then, establish regular planning meetings – they could be in-person, or conference calls. I did not do this early enough, and two months out I started to panic. At the advice of a mentor, I started weekly half-hour conference calls. That made a huge difference. It helps when everyone in your posse knows what is going on.
 
-My super-magic Jes Secret to Success: Organization. The super-magic Secret to Organization: To-Do Lists. I had lists every week of what needed to be done and who was doing it. The week of the event, I created a list of what needed to be brought on Friday and Saturday, and who was bringing it. There was a list of what needed to be done on Friday and Saturday, and who was doing it. Write it down as you think of it. Check it off when it’s done. Keep that as a record. This will make your life easier.
+My super-magic Jes Secret to Success: Organization. The super-magic Secret to Organization: To-Do Lists. I had lists every week of what needed to be done and who was doing it. The week of the event, I created a list of what needed to be brought on Friday and Saturday, and who was bringing it. There was a list of what needed to be done on Friday and Saturday, and who was doing it. Write it down as you think of it. Check it off when it's done. Keep that as a record. This will make your life easier.
 
 There are two members of your posse that will stand out in the two weeks leading up to your SQL Saturday. These are positions I stress more than anything: someone to organize and wrangle volunteers (Gina), and someone to handle all communications with attendees (Leonard). These are huge tasks. They were done so well I hardly needed to be involved.
 
@@ -44,27 +44,27 @@ There are a few things speakers want to know ahead of time: if there will be a P
 
 Make the day smoother on your posse and your speakers by having a volunteer in each room as a room monitor. We had morning and afternoon shifts. These great people handed out evaluation forms, collected them, gave them to the speakers, and made sure everything ran smoothly. It required a few extra people but eliminated a lot of headaches.
 
-As I mentioned above, you need sponsors to make your event happen. Don’t forget to look for local sponsors! You can get them. They will appreciate the exposure. We asked our user group members to ask their employers. We asked local tech recruiting and placement firms. They said “yes”! We equally appreciate the national vendors that supported us, knowing that it is hard for them to spread their marketing dollars to every SQL-related event.
+As I mentioned above, you need sponsors to make your event happen. Don't forget to look for local sponsors! You can get them. They will appreciate the exposure. We asked our user group members to ask their employers. We asked local tech recruiting and placement firms. They said “yes”! We equally appreciate the national vendors that supported us, knowing that it is hard for them to spread their marketing dollars to every SQL-related event.
 
 With that in mind, when the day comes, put the sponsors in a high-traffic area. They want to – and deserve to – be visible and accessible to the attendees all day. Remember, their products and services can make your life easier. Tap into that!
 
-How do you know where your sponsors, and your speaker room, and your lunch will be? Review your venue beforehand. Know exactly where you want everything. When I was able to walk into MATC on Friday night and tell the facilities staff exactly where I wanted tables set up, they were happy. We didn’t have to spend an hour hemming and hawing over where things should go. This goes back to my point about being organized.
+How do you know where your sponsors, and your speaker room, and your lunch will be? Review your venue beforehand. Know exactly where you want everything. When I was able to walk into MATC on Friday night and tell the facilities staff exactly where I wanted tables set up, they were happy. We didn't have to spend an hour hemming and hawing over where things should go. This goes back to my point about being organized.
 
 All day Saturday, I carried my iPad with me. I was able to check the schedule, my email, Twitter, the PASS website,etc. I made notes throughout the day of what to say during closing ceremonies. I was able to network with people instantly. If you have something like this: use it!
 
 In the long run, attendees care less about getting t-shirts and books than high-quality sessions and face time with the speakers and other attendees. Remember this in your planning.
 
-However, if you do decide to have some giveaways, order stuff like shirts or bags at least three weeks before. You will need time to gather copy and logos, get them to your supplier, have them printed, and have them shipped. Do _not_ wait until the last week to do this. You will be stressed and you will likely pay rush charges and upgraded shipping charges. (I’d also like to plug my supplier, [4imprint][21]. They rock. Use them.)
+However, if you do decide to have some giveaways, order stuff like shirts or bags at least three weeks before. You will need time to gather copy and logos, get them to your supplier, have them printed, and have them shipped. Do _not_ wait until the last week to do this. You will be stressed and you will likely pay rush charges and upgraded shipping charges. (I'd also like to plug my supplier, [4imprint][21]. They rock. Use them.)
 
-Accept this fact: attendees and even speakers will cancel. It happens. Life happens. When making the schedule, pick 3-5 sessions as alternates. Ask another speaker to cover if needed. I had also made up my mind that if anyone cancelled within three days of the event, that session would be cancelled. I don’t think it’s fair to ask anyone to contribute on that short notice.
+Accept this fact: attendees and even speakers will cancel. It happens. Life happens. When making the schedule, pick 3-5 sessions as alternates. Ask another speaker to cover if needed. I had also made up my mind that if anyone cancelled within three days of the event, that session would be cancelled. I don't think it's fair to ask anyone to contribute on that short notice.
 
-On a related note: don’t speak at the event you’re organizing. I thought I could. I did, but I didn’t prepare well enough beforehand, and I didn’t give the presentation 100%. As soon as I was done speaking, I went to the speaker room, curled up on the floor, and passed out. It was that exhausting. I had to remind myself I am not Wonder Woman, no matter how much I want to be.
+On a related note: don't speak at the event you're organizing. I thought I could. I did, but I didn't prepare well enough beforehand, and I didn't give the presentation 100%. As soon as I was done speaking, I went to the speaker room, curled up on the floor, and passed out. It was that exhausting. I had to remind myself I am not Wonder Woman, no matter how much I want to be.
 
-The only other thing I would do over would be to have an opening keynote, even if it was only 15 minutes long, to let people know what was going on. Close to 75% of our attendees were at their first SQL Saturday. I wish I could have explained how the day was going to run, what the Cows of a Spot tables at lunch were for, to make sure they stopped by the sponsor tables, and to remind them to network. Next time, I’ll add this in.
+The only other thing I would do over would be to have an opening keynote, even if it was only 15 minutes long, to let people know what was going on. Close to 75% of our attendees were at their first SQL Saturday. I wish I could have explained how the day was going to run, what the Cows of a Spot tables at lunch were for, to make sure they stopped by the sponsor tables, and to remind them to network. Next time, I'll add this in.
 
 Last but not least, put your mark on the event. This is your chance to show off your user group, your city, your state, and your people. I tried to do this by washing the speaker shirts, having Wisconsin brats for lunch, and re-naming “Birds of a Feather” tables to “Cows of a Spot” tables. PASS has provided a great template for SQL Saturday. Embrace it, then make it yours. Have fun with it!
 
-Most of all, enjoy your day. You’re bringing high-quality, free training and networking to people. They will appreciate it, learn from it, and spread the word. Enjoy it!
+Most of all, enjoy your day. You're bringing high-quality, free training and networking to people. They will appreciate it, learn from it, and spread the word. Enjoy it!
 
 _No cows were tipped in the making of this SQL Saturday. That I am aware of._
 

@@ -25,7 +25,7 @@ tags:
 
 Microsoft Corp. today provided the first look at the next version of its developer tools and platform, which will be named Visual Studio 2010 and the .NET Framework 4.0. Microsoft described the next release through the following five focus areas: riding the next-generation platform wave, inspiring developer delight, powering breakthrough departmental applications, enabling emerging trends such as cloud computing, and democratizing application life-cycle management (ALM).
 
-Today’s announcement included an in-depth look at how Visual Studio Team System (VSTS) 2010 (code-named “Rosario”) will help democratize ALM with a unique solution that brings all the members of a development organization into the application development life cycle, and removes many of the existing barriers to integration. Additional details on the other focus areas will be disclosed over the product development cycle.
+Today's announcement included an in-depth look at how Visual Studio Team System (VSTS) 2010 (code-named “Rosario”) will help democratize ALM with a unique solution that brings all the members of a development organization into the application development life cycle, and removes many of the existing barriers to integration. Additional details on the other focus areas will be disclosed over the product development cycle.
 
 Some details:
   

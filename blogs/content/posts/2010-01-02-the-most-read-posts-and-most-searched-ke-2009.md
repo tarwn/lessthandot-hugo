@@ -16,7 +16,7 @@ tags:
   - recap
 
 ---
-So finally it is a new year and a new decade (this of course all depends if there is a year zero or not). The Dow Jones Industrial Average (yes the DJI is an average and not an index) closed lower than it was a decade ago, as a matter of fact it is a 1000 points lower now. Just keep in mind that the stock market still hasn't recovered in Japan and that has been going on for 20 years now. We had 3 bubbles during the last decade..internet….housing…oil. For the next decade gold is looking to be perhaps the first bubble to burst. 
+So finally it is a new year and a new decade (this of course all depends if there is a year zero or not). The Dow Jones Industrial Average (yes the DJI is an average and not an index) closed lower than it was a decade ago, as a matter of fact it is a 1000 points lower now. Just keep in mind that the stock market still hasn't recovered in Japan and that has been going on for 20 years now. We had 3 bubbles during the last decade..internet....housing...oil. For the next decade gold is looking to be perhaps the first bubble to burst. 
 
 During the last decade technology continued with its innovation, memory and hard drives increased by a 100 times. You had a 20 GB hard drive in 1999 now you have a 2 TB drive. Instead of 64 MB of ram now you have 6 GB of ram. You can read about my favorite technologies of the last decade here: [My top ten favorite technologies of this decade][1]
 
@@ -114,7 +114,7 @@ Below is the breakdown off all the browsers that visited our site<table cellspac
 
 **Operating Systems**
   
-Here are all the operating systems that visited our site in 2009. No surprises here really, I expect that Android will make great gains in the next year…keep an eye out for that Nexus One announcement by Google on January 5th<table cellspacing = "5" 
+Here are all the operating systems that visited our site in 2009. No surprises here really, I expect that Android will make great gains in the next year...keep an eye out for that Nexus One announcement by Google on January 5th<table cellspacing = "5" 
 
 </table> 
 

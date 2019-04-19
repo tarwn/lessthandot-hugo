@@ -17,11 +17,11 @@ tags:
   - technology
 
 ---
-This week I had training in a building on campus where I have never been before. The interesting part besides the training was that there was a mini museum in this building. There were a bunch of old and very old pieces of technology stored here. I had to laugh when I picked up a mobile phone from the early 80s, this thing weighed several pounds. Make sure to take a look at that 10 pound hard drive with all those 12 inch platter….or what about that PDP/11?…..good times….I don't even know what half of these things are.
+This week I had training in a building on campus where I have never been before. The interesting part besides the training was that there was a mini museum in this building. There were a bunch of old and very old pieces of technology stored here. I had to laugh when I picked up a mobile phone from the early 80s, this thing weighed several pounds. Make sure to take a look at that 10 pound hard drive with all those 12 inch platter....or what about that PDP/11?.....good times....I don't even know what half of these things are.
 
-The quality of the pics is so so, it was in a room without too much light and I took it with a BlackBerry…not the best camera around
+The quality of the pics is so so, it was in a room without too much light and I took it with a BlackBerry...not the best camera around
 
-Enjoy the pics…scroll down to the bottom, I also have a video now
+Enjoy the pics...scroll down to the bottom, I also have a video now
 
 [<img src="http://farm7.static.flickr.com/6051/6291350007_6195d0e947_z.jpg" width="640" height="326" alt="TechHistory10" />][1]
 

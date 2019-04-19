@@ -25,7 +25,7 @@ As part of SQL Server “Kilimanjaro”, we have announced baseline investments 
 
 **Microsoft SQL Server 2008 Free Trial Offer**
 
-Dell, MaximumASP, and PASS, the Professional Association for SQL Server have partnered to bring you a Microsoft® SQL Server 2008® trial account, absolutely free. Try it out online in a secure hosted environment – you don’t have to download or install a thing – and your feedback will influence the final release.
+Dell, MaximumASP, and PASS, the Professional Association for SQL Server have partnered to bring you a Microsoft® SQL Server 2008® trial account, absolutely free. Try it out online in a secure hosted environment – you don't have to download or install a thing – and your feedback will influence the final release.
 
 From the basic capabilities needed for a shared-hosting platform requiring support for Microsoft .NET and PHP technologies, to Hyper-V based virtual servers, to the sophisticated needs of a dedicated server, SQL Server 2008 can accommodate and grow with your data-management needs.
 

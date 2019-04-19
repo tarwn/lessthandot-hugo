@@ -113,15 +113,15 @@ In the next article we will explore the usage of Kanban by a software developmen
 
 If you have missed prior articles in the series you can find them here:
   
-Applying Kanban … Part 1: [Kanban Overview][4]
+Applying Kanban ... Part 1: [Kanban Overview][4]
   
-Applying Kanban … Part 2: [Kanban applied to Tech Support][5]
+Applying Kanban ... Part 2: [Kanban applied to Tech Support][5]
   
-_Applying Kanban … Part 3: Kanban applied to PC Deployment_
+_Applying Kanban ... Part 3: Kanban applied to PC Deployment_
   
-Applying Kanban … Part 4: [Kanban applied to a Development Group][6]
+Applying Kanban ... Part 4: [Kanban applied to a Development Group][6]
   
-Applying Kanban … Part 5: [Challenges, Additional Concepts, and Wrapup][7]
+Applying Kanban ... Part 5: [Challenges, Additional Concepts, and Wrapup][7]
 
  [1]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-1
  [2]: /index.php/ITProfessionals/ProjectManagement/an-invisible-project-is-a-failed-project

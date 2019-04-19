@@ -18,7 +18,7 @@ categories:
   - Professional Development
 
 ---
-This post really started over fifteen years ago, if only I had known it then. You see, once upon a time I wrote a piece of code with nonsense variable names and, another time, a bunch of dynamic, inline SQL, and there was that time I tried to write half the program on one line. And lets not even get started on error messages….
+This post really started over fifteen years ago, if only I had known it then. You see, once upon a time I wrote a piece of code with nonsense variable names and, another time, a bunch of dynamic, inline SQL, and there was that time I tried to write half the program on one line. And lets not even get started on error messages....
 
 Then I got better.
 
@@ -44,13 +44,13 @@ And as far as creativity goes, unless you're taking part in a [code obfuscation 
 
 I'm not a fan of inline SQL. It tends to be written poorly, doesn't get tested for syntax errors until the first time you hit that code path, can be nearly impossible to locate when you decide to change a field name in the database, and often gets written in a solid block of unformatted text.
 
-And the same happens with varying degree in HTML, LINQ, Perl, … really anything that resembles 50 lines of content without a carriage return.
+And the same happens with varying degree in HTML, LINQ, Perl, ... really anything that resembles 50 lines of content without a carriage return.
 
 Even with guidelines for structuring our code, we need to be mindful of the blobs we produce. These blobs are difficult to read, adding to the level of frustration and time wasted when a future developer has to work with our code (_Who wrote this garbage code!? Oh, me, argh_). If the blob is truly a string, it deserves good formatting and consistent capitalization just as much as our code. In fact, I would say being consistent is even more important here, where color-coding and syntax checking tends to be unavailable.
 
 And it's ugly. We may have saved 30 seconds and got the job done, but it's not worth taking pride in.
 
-## Well, I Can See What You Were Trying To Do…
+## Well, I Can See What You Were Trying To Do...
 
 I once reverse engineered some business logic out of a chemical cooker simulation program written in the early to mid 80's, revised 3 times by other developers, and utterly lacking in comments. There were no unit tests, there was one comment in the entire codebase (and it was wrong), and I often ran into cases where I could very clearly see that the developer was doing math, but couldn't figure out why he had chosen to use set V<sub>T</sub> = f(V<sub>T+1</sub>) when everywhere else we were calculating V<sub>T+1</sub> = f(V<sub>T</sub>). 
 

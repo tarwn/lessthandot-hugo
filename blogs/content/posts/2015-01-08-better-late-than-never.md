@@ -1,5 +1,5 @@
 ---
-title: Better late than never…
+title: Better late than never...
 author: Koen Verbeeck
 type: post
 date: 2015-01-08T14:37:54+00:00

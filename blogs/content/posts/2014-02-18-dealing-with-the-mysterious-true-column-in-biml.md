@@ -33,7 +33,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <i>The data type for input buffer column 'True’ on the ScriptComponent input buffer 'Input0’ does not match the mapped output column from the previous transformation.</i>
+  <i>The data type for input buffer column 'True' on the ScriptComponent input buffer 'Input0' does not match the mapped output column from the previous transformation.</i>
 </p>
 
 <p style="text-align: justify">
@@ -45,7 +45,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  So let’s take another good look at the error message. It mentions something about data types not being correct. All the data types were simple varchars, numerics and datetimes and I was sure I mapped them to the corresponding <a href="http://msdn.microsoft.com/en-us/library/system.data.dbtype(v=vs.110).aspx">DBType</a>. After all, the code works for other tables.
+  So let's take another good look at the error message. It mentions something about data types not being correct. All the data types were simple varchars, numerics and datetimes and I was sure I mapped them to the corresponding <a href="http://msdn.microsoft.com/en-us/library/system.data.dbtype(v=vs.110).aspx">DBType</a>. After all, the code works for other tables.
 </p>
 
 <p style="text-align: justify">

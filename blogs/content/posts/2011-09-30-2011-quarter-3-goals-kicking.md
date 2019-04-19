@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2011-09-30T10:58:00+00:00
 ID: 1333
-excerpt: It’s the end of the third quarter. What a fun year!
+excerpt: It's the end of the third quarter. What a fun year!
 url: /index.php/datamgmt/dbprogramming/2011-quarter-3-goals-kicking/
 views:
   - 2875
@@ -17,13 +17,13 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-It’s the end of the third quarter. What a fun year! Right now, I’m practically falling out of my chair with excitement. Next Friday, I leave for a nine-day trip that includes [SQL Saturday #92][1] in Portland, OR; the [Portland Half Marathon][2]; and [PASS Summit][3] in Seattle, WA. Who needs sleep? 
+It's the end of the third quarter. What a fun year! Right now, I'm practically falling out of my chair with excitement. Next Friday, I leave for a nine-day trip that includes [SQL Saturday #92][1] in Portland, OR; the [Portland Half Marathon][2]; and [PASS Summit][3] in Seattle, WA. Who needs sleep? 
 
 So, three-quarters of the way through the year, how am I doing on my [2011 goals][4]? 
 
 **Blogging** 
 
-Thumbs up. Way up. I had 9 blogs this quarter, including three of my favorite of all time. I talked about [user groups][5], [PowerShell punctuation][6], and [making SSMS awesome][7]. And I’m back in the writing groove. I have one new series started already, and two more ideas. 
+Thumbs up. Way up. I had 9 blogs this quarter, including three of my favorite of all time. I talked about [user groups][5], [PowerShell punctuation][6], and [making SSMS awesome][7]. And I'm back in the writing groove. I have one new series started already, and two more ideas. 
 
 <p align="center">
   <img src="http://farm1.static.flickr.com/23/24720422_1453032576.jpg" alt="" title="" />
@@ -41,7 +41,7 @@ I could present every day. I am already working on where I will try to present n
 
 **Attend PASS Summit** 
 
-12 days and counting. I’m so excited, I can’t focus. I’ll be in a first timers group, I’m participating in the Quiz Bowl at the welcome reception, I’m presenting Reporting Services 201 on Wednesday, and I’m moderating the WIT lunch on Thursday. 
+12 days and counting. I'm so excited, I can't focus. I'll be in a first timers group, I'm participating in the Quiz Bowl at the welcome reception, I'm presenting Reporting Services 201 on Wednesday, and I'm moderating the WIT lunch on Thursday. 
 
 <p align="center">
   <img src="/wp-content/uploads/users/grrlgeek/PASS_2011_SpeakingButton_180x180-black.png?mtime=1312531636" alt="" title="" />
@@ -49,9 +49,9 @@ I could present every day. I am already working on where I will try to present n
 
 **Support Cool Community Projects** 
 
-I’m almost ready to let the cat out of the bag about my latest project. Almost. Stay tuned for details. 
+I'm almost ready to let the cat out of the bag about my latest project. Almost. Stay tuned for details. 
 
-Note to self: get better at saying “no”. That’s hard for me. 
+Note to self: get better at saying “no”. That's hard for me. 
 
 **Help Others** 
 
@@ -59,11 +59,11 @@ I hope I am doing this, every single day.
 
 **Help Myself** 
 
-I learn more every week than I ever imagined I would, and it’s wonderful. I’m still figuring out XEvents and XQuery. I still need to reschedule that certification exam. It seems less important now than it did at the beginning of the year. 
+I learn more every week than I ever imagined I would, and it's wonderful. I'm still figuring out XEvents and XQuery. I still need to reschedule that certification exam. It seems less important now than it did at the beginning of the year. 
 
 **Running** 
 
-I am very close to my goal of 500 miles for the year. I’m running in my second half marathon next weekend. I would give this goal a thumbs up as well! 
+I am very close to my goal of 500 miles for the year. I'm running in my second half marathon next weekend. I would give this goal a thumbs up as well! 
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/runningshoes.jpg?mtime=1317387489"><img alt="" src="/wp-content/uploads/blogs/All/runningshoes.jpg?mtime=1317387489" width="405" height="225" /></a>

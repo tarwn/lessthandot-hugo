@@ -72,7 +72,7 @@ sp_tempdb bind, 'LG', 'Menace', 'DB', 'tempdb_01'
 
 If you want to check what tempdb a certain process id has assigned, you can use the tempdb_id() function, you would pass in the SPID
 
-All in all interesting stuff…..however if the original tempdb is down, you are still out of luck
+All in all interesting stuff.....however if the original tempdb is down, you are still out of luck
   
 In the SQL Server world people have been asking for 1 tempdb per database for a while to get around the tempdb contention issues
 
@@ -146,4 +146,4 @@ This is very similar to SQL Server, it even has that proc we all know sp_helprot
   
 One interesting thins is that if I create Table A with a PK and you create table B with a FK to my table, then I have to give you references permissions on my table or specific columns
 
-Everything else is similar to SQL Server, there is object chaining, there are roles. What does not exists in Sybase(and this has nothing to do with security but we discussed bit) is deferred name resolution….the way they do it is creating a dummy table and then dropping it after the proc has been created.
+Everything else is similar to SQL Server, there is object chaining, there are roles. What does not exists in Sybase(and this has nothing to do with security but we discussed bit) is deferred name resolution....the way they do it is creating a dummy table and then dropping it after the proc has been created.

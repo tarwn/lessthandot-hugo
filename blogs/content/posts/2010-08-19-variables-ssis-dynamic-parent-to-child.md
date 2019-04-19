@@ -33,7 +33,7 @@ We could do this in one package by configuring each connection including flat fi
 
 **Showing Parent to Child in action**
 
-To show how we can do this, we will use another form of configurations management to pass variables from the parent package to the child package. Let’s build an example to pass ServerName and DefaultCatalog for another connection.
+To show how we can do this, we will use another form of configurations management to pass variables from the parent package to the child package. Let's build an example to pass ServerName and DefaultCatalog for another connection.
 
 First, add a new package to the existing solution we started manipulating the connection with configuration files on. If you did not run through that example, create a new solution and add a new package. Leave the default, package name. Now create another package and again, leave the default, package1.dtsx name.
 
@@ -43,7 +43,7 @@ Drag an Execute Package Task over into the Control Flow. Double click the new ta
   <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_10.gif" alt="" title="" width="513" height="127" />
 </div>
 
-In the File Connection Manager Editor, click the Browse button. By default, new packages that are created as files are stored in the product folder. If this doesn’t default to that location, browse to your projects folder. Select Package1.dtsx for the file and click OK to save the new package connection.
+In the File Connection Manager Editor, click the Browse button. By default, new packages that are created as files are stored in the product folder. If this doesn't default to that location, browse to your projects folder. Select Package1.dtsx for the file and click OK to save the new package connection.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_11.gif" alt="" title="" width="499" height="397" />
@@ -101,7 +101,7 @@ Once completed, you should have the following listening in the configurations. N
   <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_18.gif" alt="" title="" width="628" height="163" />
 </div>
 
-Now that we’ve setup and configured the relationships from the parent variables to the child variables, we can test this.
+Now that we've setup and configured the relationships from the parent variables to the child variables, we can test this.
 
 I like script tasks in the IDE as a quick test for variables values. It is just one of those old school methods. So add a script task to the child package, Pacakge1.dtsx. Enter in the ReadOnlyVariables
 
@@ -134,6 +134,6 @@ More importantly, the connection string was dynamically generated
 
 **Conclusion for now**
 
-We’ve only scratched the surface so far on making communications from parent to child packages flow along with true dynamic values so we can reuse packages. This and several other techniques make developing SSIS packages flow from system to system and even provide the ability for automated DR strategies with simply storing a configuration file just for the purpose of DR (or HA).
+We've only scratched the surface so far on making communications from parent to child packages flow along with true dynamic values so we can reuse packages. This and several other techniques make developing SSIS packages flow from system to system and even provide the ability for automated DR strategies with simply storing a configuration file just for the purpose of DR (or HA).
 
  [1]: /index.php/DataMgmt/DBAdmin/making-ssis-dynamic-configuration-manage

@@ -67,14 +67,14 @@ FROM            DimProductCategory;
 =iif(CountRows() = 0,False,True)
 ```
 <p style="text-align: justify">
-  You can find more info on CountRows <a href="http://technet.microsoft.com/en-us/library/ms156330(v=sql.100).aspx">here</a>. However, when I ran the report the extra row didn’t show up. Maybe I needed to add a scope as a parameter to the CountRows function? So I changed the expression to this, with <em>TablixTest</em> being the name of the Tablix:
+  You can find more info on CountRows <a href="http://technet.microsoft.com/en-us/library/ms156330(v=sql.100).aspx">here</a>. However, when I ran the report the extra row didn't show up. Maybe I needed to add a scope as a parameter to the CountRows function? So I changed the expression to this, with <em>TablixTest</em> being the name of the Tablix:
 </p>
 
 ```vb
 =iif(CountRows(“TablixTest”) = 0,False,True)
 ```
 <p style="text-align: justify">
-  The line still didn’t show up. I changed the scope to <i>Detail</i> (in the hope it would count the detail lines), but no luck. To be honest, I don’t know much about scopes in SSRS. Then I had an idea: I added the extra row to the details of the tablix. What if I added it outside that group?
+  The line still didn't show up. I changed the scope to <i>Detail</i> (in the hope it would count the detail lines), but no luck. To be honest, I don't know much about scopes in SSRS. Then I had an idea: I added the extra row to the details of the tablix. What if I added it outside that group?
 </p>
 
 <p style="text-align: justify">

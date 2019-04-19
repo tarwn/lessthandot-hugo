@@ -4,7 +4,7 @@ author: David Forck (thirster42)
 type: post
 date: 2011-11-09T13:17:00+00:00
 ID: 1377
-excerpt: 'Have you been watching Brent Ozar PLF’s Technology Triage Tuesdays?  If you’re not, you should.  I’ve been watching for the last couple of months, and every web cast is a golden nugget of information.  However, don’t feel blue for missing out on this gr&hellip;'
+excerpt: "Have you been watching Brent Ozar PLF's Technology Triage Tuesdays?  If you're not, you should.  I've been watching for the last couple of months, and every web cast is a golden nugget of information.  However, don't feel blue for missing out on this gr&hellip;"
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/you-should-be-watching/
 views:
   - 3981
@@ -15,9 +15,9 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Have you been watching Brent Ozar PLF’s Technology Triage Tuesdays? If you’re not, you should. I’ve been watching for the last couple of months, and every web cast is a golden nugget of information. However, don’t feel blue for missing out on this great opportunity because Brent, Jeremiah, Kendra, and Tim record each webcast and post it on their site, [BrentOzar.com][1].
+Have you been watching Brent Ozar PLF's Technology Triage Tuesdays? If you're not, you should. I've been watching for the last couple of months, and every web cast is a golden nugget of information. However, don't feel blue for missing out on this great opportunity because Brent, Jeremiah, Kendra, and Tim record each webcast and post it on their site, [BrentOzar.com][1].
 
-Here’s a few of the ones that I’ve watched that I’ve enjoyed and learned a lot:
+Here's a few of the ones that I've watched that I've enjoyed and learned a lot:
   
 [There's something about nolock][2]
   
@@ -27,7 +27,7 @@ Here’s a few of the ones that I’ve watched that I’ve enjoyed and learned a
   
 [How to design smarter indexes][5]
 
-They also have an easy list of free training videos, but they’re not always as adamant to keep this list up to date with the Tech Triage Tuesday videos. It can be found here: http://www.brentozar.com/sql-server-training-videos/
+They also have an easy list of free training videos, but they're not always as adamant to keep this list up to date with the Tech Triage Tuesday videos. It can be found here: http://www.brentozar.com/sql-server-training-videos/
 
 Their upcoming web casts can be found here: https://brentozarevents.webex.com/mw0306ld/mywebex/default.do?siteurl=brentozarevents
 

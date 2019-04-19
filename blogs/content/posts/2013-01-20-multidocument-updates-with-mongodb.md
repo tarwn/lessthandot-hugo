@@ -99,6 +99,6 @@ Here are the results
 
 As you can see both have now 42 for age
 
-Be aware of these differences compared to traditional RDBMS systems when doing updates, you might be wrecking your data without realizing it immediately……… and when you do realize it, it might be too late 🙁
+Be aware of these differences compared to traditional RDBMS systems when doing updates, you might be wrecking your data without realizing it immediately......... and when you do realize it, it might be too late 🙁
 
  [1]: /index.php/DataMgmt/DBProgramming/doing-upserts-in-mongodb

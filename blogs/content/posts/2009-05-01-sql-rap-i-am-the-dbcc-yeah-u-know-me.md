@@ -21,7 +21,7 @@ Well I don't think I have any skillz (in that regard) so here it goes
 
 _Who you trying to get crazy with SA?
   
-Don't you know I'm loco……….</p> 
+Don't you know I'm loco..........</p> 
 
 ashes 2 ashes and dust 2 dust
   

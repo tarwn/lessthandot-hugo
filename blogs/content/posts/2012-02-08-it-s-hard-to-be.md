@@ -1,5 +1,5 @@
 ---
-title: 'It’s Hard To Be “Average”: Mean, Median, and Mode in SQL Server'
+title: "It's Hard To Be “Average”: Mean, Median, and Mode in SQL Server"
 author: Jes Borland
 type: post
 date: 2012-02-08T12:45:00+00:00
@@ -113,7 +113,7 @@ WHERE RowNum BETWEEN (CountOrders + 1)/2 AND (CountOrders + 2)/2;
 
 What does this _mean_? (Please laugh at that.) Remember, to calculate median, we have to determine the middle row. This will vary depending on whether we have an even or odd number of rows. So, for a salesperson with an even number of orders, it is getting the two in the middle. For a salesperson with an odd number of orders, it is getting the one in the middle. 
 
-The next query will find the average of the two middle values, if necessary. If the two middle values are not the same, it will return a value that is not in the data set (and that’s OK!). 
+The next query will find the average of the two middle values, if necessary. If the two middle values are not the same, it will return a value that is not in the data set (and that's OK!). 
 
 sql
 WITH OrdersBySP (SPID, Value, RowNum, CountOrders) AS  
@@ -140,7 +140,7 @@ You can see that this yields a different result set than using the AVG function 
 
 In the newest version of SQL Server, it gets even easier to calculate a median value. There is a new function, PERCENTILE_CONT. It “calculates a percentile based on a continuous distribution of the column value” (to quote Books Online). Let's see how this works. 
 
-You will specify the percentile you want – in this case, we want the 50th, so we use (0.5). Then, we use WITHIN GROUP (ORDER BY … ) to tell the function which values to sort and compute. I'm using OVER (PARTITION BY … ) to tell the function that I want to divide the values up by salesperson. 
+You will specify the percentile you want – in this case, we want the 50th, so we use (0.5). Then, we use WITHIN GROUP (ORDER BY ... ) to tell the function which values to sort and compute. I'm using OVER (PARTITION BY ... ) to tell the function that I want to divide the values up by salesperson. 
 
 sql
 SELECT DISTINCT OBSP.SalesPersonID, 

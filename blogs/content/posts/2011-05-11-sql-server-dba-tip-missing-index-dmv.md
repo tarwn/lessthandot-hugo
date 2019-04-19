@@ -92,7 +92,7 @@ The missing index suggestion in green shown in the actual execution plan is very
 
 Down to it with the Tip
 
-The missing index query using the DMVs and DMF we have shown is great but as discussed, may produce results that will require analysis on the reviewers’ part.  In the example covered, the best course would be to create one index covering both query’s requirements.  (While also placing in the covering aspects of the select statement.)
+The missing index query using the DMVs and DMF we have shown is great but as discussed, may produce results that will require analysis on the reviewers' part.  In the example covered, the best course would be to create one index covering both query's requirements.  (While also placing in the covering aspects of the select statement.)
 
 sql
 CREATE INDEX IDX_CITY_ADDY1_ASC ON Person.Address (City,AddressLine1)

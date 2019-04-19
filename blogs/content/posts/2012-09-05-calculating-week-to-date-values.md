@@ -20,11 +20,11 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">In this post, I’ll show you what inputs are needed for the DATESBETWEEN function, how to create a custom start date using DAX, and how to implement this solution in your Tabular Model.  Note that this solution will also work with PowerPivot for Excel, but the examples show will be using SQL Server Data Tools.</span>
+  <span style="font-family: verdana,geneva;">In this post, I'll show you what inputs are needed for the DATESBETWEEN function, how to create a custom start date using DAX, and how to implement this solution in your Tabular Model.  Note that this solution will also work with PowerPivot for Excel, but the examples show will be using SQL Server Data Tools.</span>
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">First, let’s take a look a simple model I have here: </span>
+  <span style="font-family: verdana,geneva;">First, let's take a look a simple model I have here: </span>
 </p>
 
 <p class="MsoNormal">
@@ -60,17 +60,17 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">In this calculation, I want to use the <em style="mso-bidi-font-style: normal;">week start date</em> in the second parameter, and the currently selected date in the third parameter.  Let’s take a look at how to create the <em style="mso-bidi-font-style: normal;">week start date</em>.</span>
+  <span style="font-family: verdana,geneva;">In this calculation, I want to use the <em style="mso-bidi-font-style: normal;">week start date</em> in the second parameter, and the currently selected date in the third parameter.  Let's take a look at how to create the <em style="mso-bidi-font-style: normal;">week start date</em>.</span>
 </p>
 
 ### <span style="font-family: verdana,geneva;">Creating the Week Start Date</span> {.MsoNormal}
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">In order to create the <em style="mso-bidi-font-style: normal;">week start date</em> I need to first decide what day my week starts on.  For example purposes, let’s pick Tuesday.  To support this, first I need to add a column that contains the <em style="mso-bidi-font-style: normal;">DayNameOfWeek</em> value.  Use the following expression in a calculated field:<br /></span>
+  <span style="font-family: verdana,geneva;">In order to create the <em style="mso-bidi-font-style: normal;">week start date</em> I need to first decide what day my week starts on.  For example purposes, let's pick Tuesday.  To support this, first I need to add a column that contains the <em style="mso-bidi-font-style: normal;">DayNameOfWeek</em> value.  Use the following expression in a calculated field:<br /></span>
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: courier new,courier;"> =FORMAT('Dates’[ActualDate], “dddd”)</span>
+  <span style="font-family: courier new,courier;"> =FORMAT('Dates'[ActualDate], “dddd”)</span>
 </p>
 
 <p class="MsoNormal">
@@ -94,7 +94,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">This function is using a clever switching of filtering context to return a set of dates less than the current date, and filter that to include only Tuesdays.  Then, with that set handy, the MAX() function is used to return the latest Tuesday.  This equates to the latest Tuesday less than the current date; or in other words, last Tuesday.  My Dates table now looks like this…</span>
+  <span style="font-family: verdana,geneva;">This function is using a clever switching of filtering context to return a set of dates less than the current date, and filter that to include only Tuesdays.  Then, with that set handy, the MAX() function is used to return the latest Tuesday.  This equates to the latest Tuesday less than the current date; or in other words, last Tuesday.  My Dates table now looks like this...</span>
 </p>
 
 <p class="MsoNormal">
@@ -120,7 +120,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">With all of the ground work done in the date table, this expression ends up to be pretty easy!  It’s simply calculating the SUM of [SalesAmount] over a filtered set of DATESBETWEEN() our predefined start date and the end date selected on a report.  Note that in order for this to work, the LASTDATE() function will need to be used.  The DATESBETWEEN() function expects a date value, not a column.  With this calculation created, I can browse the model in Excel and see that it is correctly calculating values.</span>
+  <span style="font-family: verdana,geneva;">With all of the ground work done in the date table, this expression ends up to be pretty easy!  It's simply calculating the SUM of [SalesAmount] over a filtered set of DATESBETWEEN() our predefined start date and the end date selected on a report.  Note that in order for this to work, the LASTDATE() function will need to be used.  The DATESBETWEEN() function expects a date value, not a column.  With this calculation created, I can browse the model in Excel and see that it is correctly calculating values.</span>
 </p>
 
 <p class="MsoNormal">
@@ -140,7 +140,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">If you would like to see this in action, I’ve created a version of this in PowerPivot.  You can download it <a href="https://skydrive.live.com/redir?resid=B33397EE4D528C9A!9620" target="_blank">here</a>.</span>
+  <span style="font-family: verdana,geneva;">If you would like to see this in action, I've created a version of this in PowerPivot.  You can download it <a href="https://skydrive.live.com/redir?resid=B33397EE4D528C9A!9620" target="_blank">here</a>.</span>
 </p>
 
 <p class="MsoNormal">

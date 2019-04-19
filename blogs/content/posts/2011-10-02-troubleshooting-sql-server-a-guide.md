@@ -1,10 +1,10 @@
 ---
-title: 'Troubleshooting SQL Server: A guide for the Accidental DBA'
+title: "Troubleshooting SQL Server: A guide for the Accidental DBA"
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-10-02T19:41:00+00:00
 ID: 1335
-excerpt: 'I’m very excited to announce that the book, “Troubleshooting SQL Server: A guide for the Accidental DBA” will be at the PASS Summit this year.  Jonathan Kehayias is well known as one of the best all-around SQL Server Professionals out there and any publ&hellip;'
+excerpt: "I'm very excited to announce that the book, “Troubleshooting SQL Server: A guide for the Accidental DBA” will be at the PASS Summit this year.  Jonathan Kehayias is well known as one of the best all-around SQL Server Professionals out there and any publ&hellip;"
 url: /index.php/datamgmt/dbprogramming/troubleshooting-sql-server-a-guide/
 views:
   - 10218
@@ -18,7 +18,7 @@ categories:
 
 ---
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-family: Calibri; font-size: small;">I’m very excited to announce that the book, “</span><a href="http://www.simple-talk.com/books/sql-books/troubleshooting-sql-server-a-guide-for-the-accidental-dba/"><span style="font-family: Calibri; font-size: small;">Troubleshooting SQL Server: A guide for the Accidental DBA</span></a><span style="font-size: small;"><span style="font-family: Calibri;">” will be at the PASS Summit this year.<span style="mso-spacerun: yes;">  </span>Jonathan Kehayias is well known as one of the best all-around SQL Server Professionals out there and any publication is always valued.<span style="mso-spacerun: yes;">  </span>This book is composed of some of the most common problems and real-life experiences that go into resolving them.<span style="mso-spacerun: yes;">  E</span>ven the thought of the caliber of the names on this book putting on paper all they have in steps to resolving some of the worst problems out there, holds a lot of value that can prove, priceless.<span style="mso-spacerun: yes;">  </span>It gets better.<span style="mso-spacerun: yes;">  </span>Gail Shaw has also contributed as the editor and contributor on this book.<span style="mso-spacerun: yes;">  </span>The addition of Gail in this book rounds it out as, in my opinion, one of the best DBA books that you can have on your shelf.<span style="mso-spacerun: yes;">  One that you can turn to in any event you are in need of determining resolutions to many problems that may happen with SQL Server.</span></span></span>
+  <span style="font-family: Calibri; font-size: small;">I'm very excited to announce that the book, “</span><a href="http://www.simple-talk.com/books/sql-books/troubleshooting-sql-server-a-guide-for-the-accidental-dba/"><span style="font-family: Calibri; font-size: small;">Troubleshooting SQL Server: A guide for the Accidental DBA</span></a><span style="font-size: small;"><span style="font-family: Calibri;">” will be at the PASS Summit this year.<span style="mso-spacerun: yes;">  </span>Jonathan Kehayias is well known as one of the best all-around SQL Server Professionals out there and any publication is always valued.<span style="mso-spacerun: yes;">  </span>This book is composed of some of the most common problems and real-life experiences that go into resolving them.<span style="mso-spacerun: yes;">  E</span>ven the thought of the caliber of the names on this book putting on paper all they have in steps to resolving some of the worst problems out there, holds a lot of value that can prove, priceless.<span style="mso-spacerun: yes;">  </span>It gets better.<span style="mso-spacerun: yes;">  </span>Gail Shaw has also contributed as the editor and contributor on this book.<span style="mso-spacerun: yes;">  </span>The addition of Gail in this book rounds it out as, in my opinion, one of the best DBA books that you can have on your shelf.<span style="mso-spacerun: yes;">  One that you can turn to in any event you are in need of determining resolutions to many problems that may happen with SQL Server.</span></span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">

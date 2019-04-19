@@ -19,7 +19,7 @@ Erin Stellato ([blog][1] | [twitter][2]) announced the most recent incaration of
 
 I knew I had a trip to Boston coming up, so I thought, hey, I should chronicle a day on the road.
 
-I'm going to actually follow a proper 24 hour day, starting at 9pm on Monday 7/16, finishing on 9pm Tuesday 7/17. Here goes…
+I'm going to actually follow a proper 24 hour day, starting at 9pm on Monday 7/16, finishing on 9pm Tuesday 7/17. Here goes...
 
 **Monday** 
 
@@ -99,14 +99,14 @@ about how it works.  I tell him about DelegConfig.  He is ecstatic.  Interal 
 that there would be now way of testing the infrastructure after configuration. I think he's going    
 to keep it in his back pocket and use it when the time is right.
 
-**4:00 pm** —  Hmmm, test job failed….this isn't good.
+**4:00 pm** —  Hmmm, test job failed....this isn't good.
 
 **4:10 pm** —  Appears that tempdb is suffering some issues with an ACTIVE_TRANSACTION status in the    
 log\_reuse\_wait_description column.  To the boogle!
 
 **4:45pm** — Still nothing really, confused.  Client finds Robert Davis' ( [twitter][3] | [blog][4] ) blog while searching for    
 info.  Makes joke about SQL Cruise.  I explain that my friend Tim Ford ([twitter][5] | [blog][6]) runs it.     
-I explain what it is.  He sends email to manager asking about training funds…
+I explain what it is.  He sends email to manager asking about training funds...
 
 **5:00 pm** — Figure out (with client's help) how to get to Fenway from their office.  Going to a game    
 tomorrow night.
@@ -135,7 +135,7 @@ to “home”.  My brain never seems to work right after a good run.  Takes an
 **10:20 pm** — I THINK I BROKE THE TIME-SPACE CONTINUIUM.
 
 **10:45 pm** — Future Josh is logging back into work.  Going to get a head start on some changes discussed today for    
-tomorrow. I have a feeling tomorrow is going to be full of figuring out the tempdb issue…
+tomorrow. I have a feeling tomorrow is going to be full of figuring out the tempdb issue...
 
 #CONNECTIONTERMINATED
 

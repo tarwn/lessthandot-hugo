@@ -37,7 +37,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part7/PowerPivotConfigWizard_00.png?mtime=1370373774"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part7/PowerPivotConfigWizard_00.png?mtime=1370373774" alt="" width="281" height="117" /></a>
 </p>
 
-<span style="text-align: justify;">If you get the following message when launching the wizard, it means you forgot to apply SQL Server 2012 service pack 1 to the PowerPivot instance (like I first did if you’re wondering how I made the screenshot). So hurry back to </span><a style="text-align: justify;" href="/index.php/DataMgmt/business-intelligence-1/sharepoint-2013-bi-part-6">part 6 of the series</a> <span style="text-align: justify;">and apply that service pack!</span>
+<span style="text-align: justify;">If you get the following message when launching the wizard, it means you forgot to apply SQL Server 2012 service pack 1 to the PowerPivot instance (like I first did if you're wondering how I made the screenshot). So hurry back to </span><a style="text-align: justify;" href="/index.php/DataMgmt/business-intelligence-1/sharepoint-2013-bi-part-6">part 6 of the series</a> <span style="text-align: justify;">and apply that service pack!</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part7/PowerPivotConfigWizard_01.png?mtime=1370373774"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part7/PowerPivotConfigWizard_01.png?mtime=1370373774" alt="" width="391" height="152" /></a>
@@ -52,7 +52,7 @@ tags:
 <span style="text-align: justify;">The wizard consists of a list of sections. In some sections you need to supply parameters, such as passwords or service accounts, in other sections you are not required to take action (indicated with green flags). If you have already setup a farm and configured some services, the wizard will detect this and will automatically fill in the necessary values. In our case we are dealing with a blank server. In each section you can also inspect the PowerShell script that eventually will do the actual configuration. It might come in handy if you want to do a scripted deployment in the future. Since the wizard executes the PowerShell statements behind the scenes, it is possible to configure SharePoint without the use of a domain controller. I leave it up to you to decide if you want to include a domain controller or not.</span>
 
 <p style="text-align: justify;">
-  I’ll go over each section where input is needed, but a lot of parameters might have already default values specified.
+  I'll go over each section where input is needed, but a lot of parameters might have already default values specified.
 </p>
 
 <p style="text-align: justify;">
@@ -161,7 +161,7 @@ _Create Default Web Application_ <span style="text-align: justify;">follows in t
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part7/PowerPivotConfigWizard_23.png?mtime=1370373803"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part7/PowerPivotConfigWizard_23.png?mtime=1370373803" alt="" width="506" height="412" /></a>
 </p>
 
-<span style="text-align: justify;">In the next walkthrough, we’ll go deeper into verifying if everything behaves as expected.</span>
+<span style="text-align: justify;">In the next walkthrough, we'll go deeper into verifying if everything behaves as expected.</span>
 
 Go back to [overview][1].   
 Previous part: [Installing PowerPivot for SharePoint][2].   

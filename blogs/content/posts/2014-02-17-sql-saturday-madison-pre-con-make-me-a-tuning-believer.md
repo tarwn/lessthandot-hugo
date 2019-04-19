@@ -28,7 +28,7 @@ Last but not least, I'll be teaming up with fellow LessThanDot blogger Ted Krueg
 </p>
 
 <p style="padding-left: 30px">
-  Come to this class to build your query and execution plan tuning skills from beginning to end. We’ll focus on the everyday DBA’s and developer’s needs for tuning, and build up to more advanced methods which can be taken directly to work and bring immediate improvements in performance.
+  Come to this class to build your query and execution plan tuning skills from beginning to end. We'll focus on the everyday DBA's and developer's needs for tuning, and build up to more advanced methods which can be taken directly to work and bring immediate improvements in performance.
 </p>
 
 <p style="padding-left: 30px">

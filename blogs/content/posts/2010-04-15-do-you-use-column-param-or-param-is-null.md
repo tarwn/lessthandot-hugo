@@ -1,5 +1,5 @@
 ---
-title: 'Do you use  Column=@Param OR @Param IS NULL in your WHERE clause? Don’t, it doesn’t perform'
+title: "Do you use  Column=@Param OR @Param IS NULL in your WHERE clause? Don't, it doesn't perform"
 author: SQLDenis
 type: post
 date: 2010-04-15T09:55:44+00:00

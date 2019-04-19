@@ -21,7 +21,7 @@ With high availability, the least amount of time data is unavailable, the higher
 
 **Mean Uptime Equation**
 
-The mean uptime equation takes into account any object that can prevent a request from reaching the originating requester.  The object can be a computer, appliance, database server, server, network or storage.  Consider each one of these pieces in planning database availability is critical.  For example, if a database server’s high availability has maintained the five nines but the appliance that maintains availability of the VPN capabilities to reach that database server had a loss of 10% on uptime, the overall achieved uptime should be measured as 90%. Now that does not mean as a database administrator you should be harsh on your overall goals for uptime.  The database server may have still reached a 99.999% uptime.  As such, the goal would be met if the five nines were set as the achievement for the year.  However, we gauge ourselves on the user’s experience, and that requires an equation that consists of the total over infrastructure from point A to point B for total availability.  Point A being the user and point B being the data they request.
+The mean uptime equation takes into account any object that can prevent a request from reaching the originating requester.  The object can be a computer, appliance, database server, server, network or storage.  Consider each one of these pieces in planning database availability is critical.  For example, if a database server's high availability has maintained the five nines but the appliance that maintains availability of the VPN capabilities to reach that database server had a loss of 10% on uptime, the overall achieved uptime should be measured as 90%. Now that does not mean as a database administrator you should be harsh on your overall goals for uptime.  The database server may have still reached a 99.999% uptime.  As such, the goal would be met if the five nines were set as the achievement for the year.  However, we gauge ourselves on the user's experience, and that requires an equation that consists of the total over infrastructure from point A to point B for total availability.  Point A being the user and point B being the data they request.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-97.png?mtime=1327282693"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-97.png?mtime=1327282693" width="362" height="177" /></a>
@@ -35,7 +35,7 @@ Uptime minutes / Planned Uptime * 100 = Uptime %
 
 Planned uptime should always be set forth and well-documented.  This is more relevant if the systems are not a 24 by 7 operation.  Estimating weekends when no connectivity is required could prove to have a drastic negative impact on the overall uptime.  This would involve normal updates to operating systems, database servers, effects from other key system components, and maintenance.  Maintenance can be a gray area so plan well.  If running something like SQL Server Standard Edition, maintenance on indexes can be a factor in overall planned downtime and uptime.  This is due to the time it takes for large indexes to be rebuilt and the data not being available during that time.  Without planning uptime, or planned downtime, the objectives can be nearly impossible to estimate.
 
-Now that uptime has been defined and explained, add in the remaining components defined earlier that are required for an overall uptime objective.  Let’s assume we planned uptime has been set to allow for 60 minutes of downtime for each component; uptime minutes / 525900 \* 100 = Uptime %.  Planned uptime minutes = (365.25 \* 24 * 60) – 60 = 525900
+Now that uptime has been defined and explained, add in the remaining components defined earlier that are required for an overall uptime objective.  Let's assume we planned uptime has been set to allow for 60 minutes of downtime for each component; uptime minutes / 525900 \* 100 = Uptime %.  Planned uptime minutes = (365.25 \* 24 * 60) – 60 = 525900
 
 If we achieved 525800 minutes of uptime, this would mean we achieved 99.98% uptime.
 
@@ -43,7 +43,7 @@ For each component, finding the overall uptime would be done with the following.
 
 ((uptime minutes / 525900) + (uptime minutes / 525900) + (uptime minutes / 525900) + (uptime minutes / 525900) + (uptime minutes / 525900))/5 * 100 = Complete Uptime %
 
-If the 525800 was only due to Point B, network outage, this would yield an overall uptime from Point A to Point F of 99.98%.  Let’s say that Point B had 525800 and Point F had 525650. Plug these new overall uptime minutes into the equation.
+If the 525800 was only due to Point B, network outage, this would yield an overall uptime from Point A to Point F of 99.98%.  Let's say that Point B had 525800 and Point F had 525650. Plug these new overall uptime minutes into the equation.
 
 ((525800 / 525900) + (525900 / 525900) + (525900 / 525900) + (525900 / 525900) + (525650 / 525900))/5 * 100 = \_____%
 

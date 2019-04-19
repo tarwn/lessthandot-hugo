@@ -33,7 +33,7 @@ The PSS SQL Server Engineers have a blogpost showing you what they fixed in rega
 
 **[SQL Server And NULL Values, Revisited][4]**
   
-Do you love or do you hate NULLs, Are you scared of NULLs? Aaron Alton has a nice post about NULLs….and don't be scared of NULLs
+Do you love or do you hate NULLs, Are you scared of NULLs? Aaron Alton has a nice post about NULLs....and don't be scared of NULLs
 
 **[Steps to Troubleshoot Connections to your SQL Server][5]**Denny Cherry outlines some thoubleshooting steps that people should take in order to find out what the problem is with connecting to SQL Server.
 

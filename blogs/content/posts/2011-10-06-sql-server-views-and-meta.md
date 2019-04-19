@@ -19,7 +19,7 @@ categories:
 ---
 Something that came out of a recent session I gave at SQL Saturday in Iowa was a discussion on views and the Meta Data that comes along with them. The discussion came about when I had commented, during a session that views were a pain spot for me. Misuse by means of over using them as well as seeing over the years, very little attention to the Meta Data of them. I wanted to give a little more information on the discussion here.
 
-Non-schema Bound Views in SQL Server rely on returning accurate and reliable results based from the underlying metadata. This is mostly in part to dependencies. With Schema-Bound Views this isn’t as much of a concern since underlying objects cannot be altered without errors being generated. This is the definition of binding them together. With Non-schema Bound Views however, this isn’t the case. In fact, we can create views without the underlying objects ever being in existence in some cases. Before we go into views and maintaining them, let’s dig into the underlying object references we just mentioned.
+Non-schema Bound Views in SQL Server rely on returning accurate and reliable results based from the underlying metadata. This is mostly in part to dependencies. With Schema-Bound Views this isn't as much of a concern since underlying objects cannot be altered without errors being generated. This is the definition of binding them together. With Non-schema Bound Views however, this isn't the case. In fact, we can create views without the underlying objects ever being in existence in some cases. Before we go into views and maintaining them, let's dig into the underlying object references we just mentioned.
 
 **How to look at your dependencies?**
 
@@ -34,7 +34,7 @@ In order to review dependencies in SQL Server 2008+, we can use sys.sql\_express
 
 Reference: http://msdn.microsoft.com/en-us/library/bb677315.aspx
 
-Of course seeing this means much more. Let’s take a look at AdventureWorks2008. The view HumanResources.vEmployee as the following definition
+Of course seeing this means much more. Let's take a look at AdventureWorks2008. The view HumanResources.vEmployee as the following definition
 
 sql
 SELECT 
@@ -51,7 +51,7 @@ INNER JOIN [Person].[StateProvince] sp ON sp.[StateProvinceID] = a.[StateProvinc
 INNER JOIN [Person].[CountryRegion] cr ON cr.[CountryRegionCode] = sp.[CountryRegionCode];
 ```
 
-Looking at this view’s definition we can see that several columns are referred to from the tables. SQL Server tracks these dependencies between the objects by name. 
+Looking at this view's definition we can see that several columns are referred to from the tables. SQL Server tracks these dependencies between the objects by name. 
 
 For example, take the view vEmployee. As the definition shows, the tables Employee, Contact, EmployeeAddress, Address, StateProvince and CountryRegion. Using sys.sql\_expression\_dependencies this can also be reviewed with a short query.
 
@@ -160,7 +160,7 @@ e.g. SELECT * FROM sysdepends where id = OBJECT_ID('dbo.vTbl')
   <a href="/wp-content/uploads/blogs/All/-27.png?mtime=1317908836"><img alt="" src="/wp-content/uploads/blogs/All/-27.png?mtime=1317908836" width="589" height="156" /></a>
 </div>
 
-WHOA!!! Yes, we have a problem here and actually one of the points where the problem starts with what we tested above. Now we’ve identified this one reaction to the underlying table changes but there are more. Several issues can come from a non-schema bound view and the changes to underlying tables. Mostly the wildcard usage is the worst case practice. Like we said earlier, image calculations being run off the wrong column when the view is using an underlying definition that has been set to calculate things on specific columns. We could fall into sales reporting incorrectly, shipments going to the wrong locations and a mess of other possibilities.
+WHOA!!! Yes, we have a problem here and actually one of the points where the problem starts with what we tested above. Now we've identified this one reaction to the underlying table changes but there are more. Several issues can come from a non-schema bound view and the changes to underlying tables. Mostly the wildcard usage is the worst case practice. Like we said earlier, image calculations being run off the wrong column when the view is using an underlying definition that has been set to calculate things on specific columns. We could fall into sales reporting incorrectly, shipments going to the wrong locations and a mess of other possibilities.
 
 **How to protect from this?**
 
@@ -204,4 +204,4 @@ Reference: http://wiki.ltd.local/index.php/Sp\_refreshview\_for\_all\_views\_in\
 
 **Closing**
 
-Don’t forget the views! They can be overused and become an extreme pain point for a DBA but they can be managed. Now if the view usage becomes to the point you have developers nesting view after view, rethink the designs and how you are obtaining your data.
+Don't forget the views! They can be overused and become an extreme pain point for a DBA but they can be managed. Now if the view usage becomes to the point you have developers nesting view after view, rethink the designs and how you are obtaining your data.

@@ -1,5 +1,5 @@
 ---
-title: Don’t install Denali BIDS side by side with a 2008 instance
+title: Don't install Denali BIDS side by side with a 2008 instance
 author: SQLDenis
 type: post
 date: 2010-11-09T16:28:22+00:00

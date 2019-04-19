@@ -82,7 +82,7 @@ Since IIF supports the true/false expressions you can even put logical expressio
 
 **CHOOSE**
 
-CHOOSE('index','expr1','expr2',…,'exprn') is also known in MS Access and new in SQL Server 2012 and gives the possibility to use an index number and the result of the corresponding index expression:
+CHOOSE('index','expr1','expr2',...,'exprn') is also known in MS Access and new in SQL Server 2012 and gives the possibility to use an index number and the result of the corresponding index expression:
 
 sql
 SELECT FirstName, LastName, MiddleName, CHOOSE(2,FirstName, LastName, MiddleName) AS Chosen

@@ -91,6 +91,6 @@ FROM #TEMP
 ORDER BY NEWID()
 ```
 
-**And the lucky winners are: @AaronBertrand, @misterjp, @Jorriss,@russconklin and sqlsister. Invitations have been entered into Google Wave…now you have to wait for the Wave team**
+**And the lucky winners are: @AaronBertrand, @misterjp, @Jorriss,@russconklin and sqlsister. Invitations have been entered into Google Wave...now you have to wait for the Wave team**
 
  [1]: http://imgur.com/1mKn7.png

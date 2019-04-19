@@ -26,7 +26,7 @@ This same type of requirement brings up the question of how we can connect to mu
 
 **Dynamic Connections**
 
-To create a dynamic connection strategy, we will first create two packages, Parent.dtsx and Child.dtsx.  Once we have these packages created the steps will be…
+To create a dynamic connection strategy, we will first create two packages, Parent.dtsx and Child.dtsx.  Once we have these packages created the steps will be...
 
 1)       Create and configure the variables to be used
 
@@ -147,7 +147,7 @@ Execute the parent package to ensure everything works as it should.
 
 Success!!! Connect to the destination and verify the contents loaded.
 
-If you go down this route of dynamic connections, it is recommended to read [Jamie Thomson][2]’s [blog][3], “[Verify a connection before using it [SSIS]”][3] on validating the connection are active before allowing a long hanging process and failures in the packages.
+If you go down this route of dynamic connections, it is recommended to read [Jamie Thomson][2]'s [blog][3], “[Verify a connection before using it [SSIS]”][3] on validating the connection are active before allowing a long hanging process and failures in the packages.
 
 Happy auditing and I hope this helps both on dynamic connections and utilizing multiple packages.
 

@@ -1,10 +1,10 @@
 ---
-title: A Glance of Plan Explorer Pro’s Deadlock Analysis
+title: "A Glance of Plan Explorer Pro's Deadlock Analysis"
 author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-28T11:41:00+00:00
 ID: 1942
-excerpt: 'Analyzing deadlocks in SQL Server can be a frustrating and painful task.  As frustrating as they are, often as a DBA, you’ll also have to explain what, why and how a deadlock(s) were causing performance or loss of transactions.  With Plan Explorer Pro n&hellip;'
+excerpt: "Analyzing deadlocks in SQL Server can be a frustrating and painful task.  As frustrating as they are, often as a DBA, you'll also have to explain what, why and how a deadlock(s) were causing performance or loss of transactions.  With Plan Explorer Pro n&hellip;"
 url: /index.php/datamgmt/dbadmin/look-at-plan-explorer-pro/
 views:
   - 44644
@@ -15,17 +15,17 @@ categories:
   - Microsoft SQL Server
 
 ---
-Analyzing [deadlocks][1] in SQL Server can be a frustrating and painful task.  As frustrating as they are, often as a DBA, you’ll also have to explain what, why and how a deadlock(s) were causing performance or loss of transactions.  With Plan Explorer Pro now having a deadlock graph analyzer, this task has been simplified a bit.  Plan Explorer Pro has also given the DBA a way to portray deadlocks to other business or technical teams.
+Analyzing [deadlocks][1] in SQL Server can be a frustrating and painful task.  As frustrating as they are, often as a DBA, you'll also have to explain what, why and how a deadlock(s) were causing performance or loss of transactions.  With Plan Explorer Pro now having a deadlock graph analyzer, this task has been simplified a bit.  Plan Explorer Pro has also given the DBA a way to portray deadlocks to other business or technical teams.
 
 **What is a deadlock?**
 
 There are many definitions of deadlocks, and a vast amount of articles written about them on the internet.  One thing is certain: deadlocks are a performance and data integrity issue that can cause much pain and loss of business time.  A clear definition to use for a deadlock is: deadlocks are an event when two queries have a lock on resources both require in order to complete their transaction.  For example, imagine a transaction comes in from an application and locks an order table where the order number is 1, so it can update the order.  Another transaction comes in and locks an order detail table where the primary key relates back to the order table of an order number 1, so it can update order details.  The first transaction updates the order table but triggers an event to update the order details table due to a trigger on the order table.  While this is happening, the second transaction updates the order detail table and also triggers an event to update the order table due to another trigger on the order detail table.  At this point, the first transaction holds an exclusive lock on the order table and the second transaction holds an exclusive lock on the order detail table. Each transaction has caused a triggered event.  The first transaction must update the order detail table to complete; the second transaction must update the order table to complete.  Neither transaction can complete since there are exclusive locks held on the tables that they both need to finish.
 
-The example above is a classic design flaw and cause for deadlocks in a database.  Applications can effectively cause the same event by design if they open transactions, place a lock on a row and don’t release that lock correctly or quick enough.  Another instance of the same application could come in and lock another row but come around to require the row that is already locked in order to complete.  That example is typically due to leaving transactions open and not committing them – the easiest way to mimic a deadlock.
+The example above is a classic design flaw and cause for deadlocks in a database.  Applications can effectively cause the same event by design if they open transactions, place a lock on a row and don't release that lock correctly or quick enough.  Another instance of the same application could come in and lock another row but come around to require the row that is already locked in order to complete.  That example is typically due to leaving transactions open and not committing them – the easiest way to mimic a deadlock.
 
 **Cause a deadlock and capture it with Profiler**
 
-Let’s go over a simplistic example of a deadlock and show how Plan Explorer Pro can help determining the root cause and next steps in the resolution of a deadlock.
+Let's go over a simplistic example of a deadlock and show how Plan Explorer Pro can help determining the root cause and next steps in the resolution of a deadlock.
 
 The following example will utilize the database QTuner_Design from previous articles on LessThandot.com.
 
@@ -39,7 +39,7 @@ To setup profile to capture the deadlock graph, start Profiler and alter the eve
 
 Start Profiler and leave it running in the background.
 
-Kids: don’t try this at home. And by home, I mean a production server.
+Kids: don't try this at home. And by home, I mean a production server.
 
 Open SSMS and open three query windows. In this example, the three query windows are holding session IDs 58, 59 and 60.  In each query window, paste the following T-SQL code.
 
@@ -58,7 +58,7 @@ SET customerName = 'Deadlock'
 WHERE ordernum = 4688235
 ```
 
-Go back to session 60 (first query window opened) and execute the statement. Then execute the statement in 59 and 58 in sequential order.  At this point, 60 is blocking the other statements from completing and would remain so if the sessions were left as is.  To force a deadlock, all that is needed is to COMMIT session 60.  To do this, go to session 60’s query window and type “COMMIT”, highlight COMMIT and execute the statement.
+Go back to session 60 (first query window opened) and execute the statement. Then execute the statement in 59 and 58 in sequential order.  At this point, 60 is blocking the other statements from completing and would remain so if the sessions were left as is.  To force a deadlock, all that is needed is to COMMIT session 60.  To do this, go to session 60's query window and type “COMMIT”, highlight COMMIT and execute the statement.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-205.png?mtime=1359304373"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-205.png?mtime=1359304373" width="370" height="156" /></a>
@@ -118,7 +118,7 @@ When the COMMIT is executed, session 59 will throw a deadlock error as shown bel
 </p>
 
 <p>
-  To look at this in more detail and a bit clearer, save the graph so we can open it with Plan Explorer Pro.  To do this, right click the Deadlock graph row in profiler and select Extract event data…When prompted, save the graph as an XDL file named deadlockgraph.xdl.
+  To look at this in more detail and a bit clearer, save the graph so we can open it with Plan Explorer Pro.  To do this, right click the Deadlock graph row in profiler and select Extract event data...When prompted, save the graph as an XDL file named deadlockgraph.xdl.
 </p>
 
 <p>

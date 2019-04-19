@@ -16,7 +16,7 @@ categories:
 ---
 There are various methods to accommodate this problem, let's examine a few of them and also check performance. When you divide two numbers, and the denominator is 0, the result of the operation is undefined. In reality, we usually define some alternative number to use (usually 0). In the example and the code I show below, I will assume that the expected result for a 'divide by zero' condition is 0.
 
-For most of us, the typical method for accommodating divide by zero is to first check the denominator to see if it is equal to zero. If it is, then return 0, otherwise perform the division. Like this…
+For most of us, the typical method for accommodating divide by zero is to first check the denominator to see if it is equal to zero. If it is, then return 0, otherwise perform the division. Like this...
 
 sql
 Select Case When Denominator = 0

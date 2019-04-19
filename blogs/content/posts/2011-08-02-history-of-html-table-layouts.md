@@ -20,7 +20,7 @@ tags:
   <img src="http://tiernok.com/LTDBlog/rant.png" alt="Ranting Guy" style="height: 75px; " />
 </div>
 
-The argument over table vs non-table layouts has been going on for years. I remember seeing online conversations as far back as ten years ago on the topic, and given my notoriously bad memory that should be taken as a minimum. Along the way we have dealt with partial CSS implementations, inconsistent rendering behavior, slow implementation of standards, competing proprietary implementations…it's been a long road.
+The argument over table vs non-table layouts has been going on for years. I remember seeing online conversations as far back as ten years ago on the topic, and given my notoriously bad memory that should be taken as a minimum. Along the way we have dealt with partial CSS implementations, inconsistent rendering behavior, slow implementation of standards, competing proprietary implementations...it's been a long road.
 
 Table layouts are still in use and in some places they are still the default. They are easy to implement and the browser and standards wars of the late 90's and early 00's have left behind a lot of people who remember how impossible it sometimes felt to make a non-tabular layout. However, while there are still browser inconsistencies and delays in standards adoptions, sometimes I wonder if we have forgotten just how long it has been since we started down this non-tabular path.
 
@@ -98,7 +98,7 @@ I understand deadlines, the pressure from the business to deliver, and the fact 
 
 But you need to go get started. Yesterday.
 
-If your company is hesitant to let you spend the time, point out the costs involved with supporting new browsers as they come out, the advantages of good searchability, the wave of mobile devices that are flooding the market…clean markup can help all of these and there's any number of sites out there that will provide longer, better articulated lists of costs and benefits (we've had a lot of time to think about it). 
+If your company is hesitant to let you spend the time, point out the costs involved with supporting new browsers as they come out, the advantages of good searchability, the wave of mobile devices that are flooding the market...clean markup can help all of these and there's any number of sites out there that will provide longer, better articulated lists of costs and benefits (we've had a lot of time to think about it). 
 
 And don't forget to point out that since table layouts are contrary to the standard, what you are actually providing to your customer is a defective product.
 
@@ -106,7 +106,7 @@ And don't forget to point out that since table layouts are contrary to the stand
 
 When we follow standards, the browser developers can spend more time on new and interesting advancements. When we violate standards, we force them to spend time making sense out of the random, invalid junk we've sent to the browser.
 
-Poorly structured, non-standard HTML (like table layouts) takes more bandwidth, takes longer for browsers to render, is more fragile, is harder for experienced web developers to work with, basically forces a rewrite for mobile devices, wastes the time and efforts of browser developers … it's bad code. 
+Poorly structured, non-standard HTML (like table layouts) takes more bandwidth, takes longer for browsers to render, is more fragile, is harder for experienced web developers to work with, basically forces a rewrite for mobile devices, wastes the time and efforts of browser developers ... it's bad code. 
 
 It might be acceptable for a beginner to use tables for layout, by definition a beginner is just learning the ropes. But part of being a beginner is learning and growing past that stage. With non-tabular layouts being around for 13 years, it's long past the time we, as professionals, start requiring ourselves to know how to use them.
 

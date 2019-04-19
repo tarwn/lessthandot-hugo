@@ -4,7 +4,15 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-10T10:50:34+00:00
 ID: 815
-excerpt: 'Welcome to day three of HA and DR week of SQL University.  Today we are going to look at cheap DR.  Yes, setting up DR can be inexpensive.  The best part of this strategy is it comes along with most of the editions of SQL Server.  The method is Log Shipping.  Log shipping (LS) has a bad name in the Disaster / Recovery (DR) world.  There are concerns with the ability to fail back to primary sites in the case of disasters, and LS is often thought of as a maintenance intense setup along with file mess.  Today’s class will go over some methods to handle these and other concerns, along with the simplicity of configuring and monitoring LS in SQL Server 2008 (R2).'
+excerpt: Welcome to day three of HA and DR week of SQL University.  Today we are 
+  going to look at cheap DR.  Yes, setting up DR can be inexpensive.  The best part 
+  of this strategy is it comes along with most of the editions of SQL Server.  The
+   method is Log Shipping.  Log shipping (LS) has a bad name in the Disaster / Recovery 
+   (DR) world.  There are concerns with the ability to fail back to primary sites in 
+   the case of disasters, and LS is often thought of as a maintenance intense setup 
+   along with file mess.  Today's class will go over some methods to handle these and
+    other concerns, along with the simplicity of configuring and monitoring LS in SQL 
+    Server 2008 (R2).'
 url: /index.php/datamgmt/dbprogramming/log-ship-to-dr-sqlu/
 views:
   - 20248
@@ -33,7 +41,7 @@ tags:
 
 Welcome to day three of HA and DR week of SQL University. Today we are going to look at cheap DR. Yes, setting up DR can be inexpensive. The best part of this strategy is it comes along with most of the editions of SQL Server. The method is Log Shipping. 
 
-Log shipping (LS) has a bad name in the Disaster / Recovery (DR) world. There are concerns with the ability to fail back to primary sites in the case of disasters, and LS is often thought of as a maintenance intense setup along with file mess. Today’s class will go over some methods to handle these and other concerns, along with the simplicity of configuring and monitoring LS in SQL Server 2008 (R2). 
+Log shipping (LS) has a bad name in the Disaster / Recovery (DR) world. There are concerns with the ability to fail back to primary sites in the case of disasters, and LS is often thought of as a maintenance intense setup along with file mess. Today's class will go over some methods to handle these and other concerns, along with the simplicity of configuring and monitoring LS in SQL Server 2008 (R2). 
 
 
 
@@ -129,7 +137,7 @@ By default, Log Shipping is disabled on each database. In order to go further, w
 > <span class="MT_red">Note: If you have other transaction log backups running, they should be turned off prior to starting the new Log Shipping plans.</span>
 
   4. Click the “Backup Settings” button to open the configuration wizard.
-Earlier we mentioned preparing for Log Shipping and the shares required. You can use admin shares (e.g. \onpnt_xpsd$) but this isn’t recommended as the admin shares should be for administrative purposes only. For our setup we will be using the following for processing backups:
+Earlier we mentioned preparing for Log Shipping and the shares required. You can use admin shares (e.g. \onpnt_xpsd$) but this isn't recommended as the admin shares should be for administrative purposes only. For our setup we will be using the following for processing backups:
 
 \onpnt\_xpspub\_logs
   
@@ -159,7 +167,7 @@ The next step in the process is to set any subscribers and monitoring servers if
 
   7. Click Add under the Secondary databases
   8. Click Connect and connect to the instance you want to Log Ship to
-  9. On the Initialize Secondary Database tab, select “Yes, generate a full backup of the primary…”
+  9. On the Initialize Secondary Database tab, select “Yes, generate a full backup of the primary...”
 This will back the AdventureWorks database up and restore it as the database we specify to be the subscriber. Ensure if you do this lab on a single SQL Server to change the name of the Secondary database to something other than the default of the primary. 
 
  10. Click the restore options and ensure the data and log files go into the correct directories per your disk configurations. 
@@ -226,9 +234,9 @@ SSMS and built in reporting already available also provides us with a great way 
 
 Now that log shipping is setup we should discuss some pitfalls to watch for.
 
-One big problem that comes up with any fully logged database is maintenance tasks. Index maintenance is a prime example. The growth in logging on the transaction log that happens from index maintenance while in Full recovery is large. Once this maintenance and logging begins, the log grows and this means the backups grow as they do. Coming up with the best time to do these types of maintenance tasks and the interval in which you should log ship the transaction logs is critical for this. If you have a 10GB log file and you rebuild a 5GB Index, it will take the log space to do the rebuild. This could cause growth in the log which is something we don’t really want happening a lot. So if the scheduled log backup is set to keep the free space down in the log during these tasks and normal operations, you can manage the logs very well and keep them in check while performing to the best they can.
+One big problem that comes up with any fully logged database is maintenance tasks. Index maintenance is a prime example. The growth in logging on the transaction log that happens from index maintenance while in Full recovery is large. Once this maintenance and logging begins, the log grows and this means the backups grow as they do. Coming up with the best time to do these types of maintenance tasks and the interval in which you should log ship the transaction logs is critical for this. If you have a 10GB log file and you rebuild a 5GB Index, it will take the log space to do the rebuild. This could cause growth in the log which is something we don't really want happening a lot. So if the scheduled log backup is set to keep the free space down in the log during these tasks and normal operations, you can manage the logs very well and keep them in check while performing to the best they can.
 
-Networks will need to be able to handle the files moving. Imagine if you start to copy a 10GB file over the regular LAN that users are connected to and working on. This happens in regular offices often. Users copy large files down or up to user home directories and it slows the entire network. The only way to clean it up is to stop the copy or wait for it to finish. This can be the same problem if the network isn’t configured to handle it. Meet with the network administrators and make sure everyone knows the traffic that will be added to the network. 
+Networks will need to be able to handle the files moving. Imagine if you start to copy a 10GB file over the regular LAN that users are connected to and working on. This happens in regular offices often. Users copy large files down or up to user home directories and it slows the entire network. The only way to clean it up is to stop the copy or wait for it to finish. This can be the same problem if the network isn't configured to handle it. Meet with the network administrators and make sure everyone knows the traffic that will be added to the network. 
 
 With any database that is shipped, mirrored or restored to another site, remember that logins, SQL Agent Jobs, configurations outside of the databases and objects such as endpoints or linked servers will not be sent. These must be done outside of the normal tasks. SSIS can assist in this with the use of SMO or the Transfer Server Objects Task. PowerShell can also bring in a useful container to work these tasks on schedules. It is a good idea to move these as SQL script files to the offsite server and apply them. Test and test this often.
 

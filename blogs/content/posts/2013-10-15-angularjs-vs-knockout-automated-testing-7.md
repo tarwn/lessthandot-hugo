@@ -195,7 +195,7 @@ There were a number of frustrations before I got this working.
 
 ### Injecting Dependencies
 
-Again, kudos to the AngularJS team for making testing such a major focus. Unfortunately, I'm still parsing and re-parsing the inject() documentation to try and understand how what I did above works. I think part of the problem is that it's a little recursive, as the injector is being used and replaced all at once…or something. Basically I'm a monkey with a lighter at this point, I know how to make the fire come out but have no idea why or how it does so.
+Again, kudos to the AngularJS team for making testing such a major focus. Unfortunately, I'm still parsing and re-parsing the inject() documentation to try and understand how what I did above works. I think part of the problem is that it's a little recursive, as the injector is being used and replaced all at once...or something. Basically I'm a monkey with a lighter at this point, I know how to make the fire come out but have no idea why or how it does so.
 
 And then we get to RequireJS, which has no focus on unit testing and the couple libraries that have tied into it have very few blogs posts and little documentation behind them. Once I got this first example together, I am feeling much more confidant about doing it again. Unlike Angular's inject method, I think I have a pretty good idea how Squire works, but it was still frustrating to get that first test worked out.
 

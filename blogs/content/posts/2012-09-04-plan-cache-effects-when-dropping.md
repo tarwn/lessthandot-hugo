@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Recently the question was raised, “If you drop a column on a table, does it also drop the statistics and remove the cached plans that relates to the column?”  To answer the question on statistics directly, yes.  SQL Server will remove any statistics for the column that is dropped on the table.  For the plan cache and any plans that relate back to either the statistics or the column, the answer isn’t quite as easy.
+Recently the question was raised, “If you drop a column on a table, does it also drop the statistics and remove the cached plans that relates to the column?”  To answer the question on statistics directly, yes.  SQL Server will remove any statistics for the column that is dropped on the table.  For the plan cache and any plans that relate back to either the statistics or the column, the answer isn't quite as easy.
 
 <p style="padding-left: 30px;">
   1)      SQL Server will remove, in the plan that is cached, the reference to the statistics
@@ -28,7 +28,7 @@ Recently the question was raised, “If you drop a column on a table, does it al
 
 This does raise a good question since we now know that SQL Server will not remove the entire plan from cache.  Essentially, that plan is not optimal any longer and would likely be removed or cycled out as the cache is used through the life between restarts or freeing the cache.  On larger SQL Server instances that are using a large amount of memory and cache, you could see some benefit from those plans being removed prior to the natural cycle.  Luckily, there is a way we can proactively remove them so we can immediately free those resources.
 
-Let’s look at one example and follow through with the entire process of how SQL Server reacts to a DROP COLUMN in regards to statistics and the plans cached.
+Let's look at one example and follow through with the entire process of how SQL Server reacts to a DROP COLUMN in regards to statistics and the plans cached.
 
 Using the script in listing 1.1, create a table named, CustTable and insert some test data into it.
 
@@ -132,7 +132,7 @@ Rerun the query from listing 1.5.
   <a href="/wp-content/uploads/blogs/DataMgmt/-160.png?mtime=1346787648"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-160.png?mtime=1346787648" width="624" height="37" /></a>
 </div>
 
-Notice the statistic, \_WA\_Sys\_00000002\_02FC7413 is no longer referenced and shown in the results.  Overall, this plan is not optimal given the CustName column reference.  It would be ideal for SQL Server to remove it as part of the DROP COLUMN but given resource utilization and the mechanism for the plan being cycled out at the time of need, it isn’t a critical situation.  However, as mentioned earlier, there can be value to clearing the plan from the cache for some instances.
+Notice the statistic, \_WA\_Sys\_00000002\_02FC7413 is no longer referenced and shown in the results.  Overall, this plan is not optimal given the CustName column reference.  It would be ideal for SQL Server to remove it as part of the DROP COLUMN but given resource utilization and the mechanism for the plan being cycled out at the time of need, it isn't a critical situation.  However, as mentioned earlier, there can be value to clearing the plan from the cache for some instances.
 
 **Removing plans from cache by column reference**
 
@@ -187,4 +187,4 @@ Using listing 1.7, examine the cache to see if the column is referenced in any r
 
 In many cases, the cache can be left to recycling plans as it sees fit.  However, in large cache intense needs, or in cases where large plans consume significant space in the cache, planning to clear specific plans as we have shown today can have value.  Taking into account a zero downtime SQL Server, this method can also prove valuable as opposed to some methods when administrators will restart SQL Server or run a FREEPROCCACHE to clear all the plans and allow the plans to compile back to cache.
 
-Also, as a reality check, dropping columns doesn’t happen daily or in some cases, yearly.  Given the needs for dropping columns is so rare, this is not a good automated process candidate.  These types of plan cache manipulation and topics should always be review with great scrutiny and manually executed based on the findings such as the ones we have shown here in this article.
+Also, as a reality check, dropping columns doesn't happen daily or in some cases, yearly.  Given the needs for dropping columns is so rare, this is not a good automated process candidate.  These types of plan cache manipulation and topics should always be review with great scrutiny and manually executed based on the findings such as the ones we have shown here in this article.

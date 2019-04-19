@@ -1,5 +1,5 @@
 ---
-title: 'Why you shouldn’t use SELECT *'
+title: "Why you shouldn't use SELECT *"
 author: Axel Achten (axel8s)
 type: post
 date: 2013-01-02T11:28:00+00:00
@@ -90,7 +90,7 @@ And I get this result back:
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform2.JPG?mtime=1357132538"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform2.JPG?mtime=1357132538" width="261" height="95" /></a>
 </div>
 
-Now let’s drop the table and recreate it but switch the position of the two datecolumns:
+Now let's drop the table and recreate it but switch the position of the two datecolumns:
 
 sql
 --Drop the table
@@ -152,7 +152,7 @@ GO
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform5.JPG?mtime=1357132571"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform5.JPG?mtime=1357132571" width="258" height="96" /></a>
 </div>
 
-What happens when I recreate the table but only 3 instead of 4 columns? Let’s try:
+What happens when I recreate the table but only 3 instead of 4 columns? Let's try:
 
 sql
 --Drop the table

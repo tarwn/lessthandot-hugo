@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2012-02-15T15:13:00+00:00
 ID: 1531
-excerpt: 'I’ve been building reports with SQL Server Reporting Services for a few years. Until recently, I exclusively used Report Designer, which let me build reports in Business Intelligence Development Studio, a Visual Studio environment. I decided to step outside my comfort zone and learn a new tool - Report Builder 3.0.'
+excerpt: "I've been building reports with SQL Server Reporting Services for a few years. Until recently, I exclusively used Report Designer, which let me build reports in Business Intelligence Development Studio, a Visual Studio environment. I decided to step outside my comfort zone and learn a new tool - Report Builder 3.0."
 url: /index.php/datamgmt/dbprogramming/report-builder-3-0-the/
 views:
   - 17941
@@ -24,7 +24,7 @@ This is part one of a series about Report Builder 3.0.
   * <a title="Report Builder 3.0 – Map Wizard" href="/index.php/datamgmt/dbprogramming/report-builder-3-0-map/" target="_blank">Report Builder 3.0 – Map Wizard</a>
   * <a title="Report Builder 3.0 – Report Parts" href="/index.php/datamgmt/dbprogramming/mssqlserver/report-builder-3-0-report/" target="_blank">Report Builder 3.0 – Report Parts</a>
 
-I’ve been building reports with SQL Server Reporting Services for a few years. Until recently, I exclusively used Report Designer, which let me build reports in Business Intelligence Development Studio, a Visual Studio environment. This was warm and fuzzy and comfortable to this (gasp) former programmer.
+I've been building reports with SQL Server Reporting Services for a few years. Until recently, I exclusively used Report Designer, which let me build reports in Business Intelligence Development Studio, a Visual Studio environment. This was warm and fuzzy and comfortable to this (gasp) former programmer.
 
 <p style="text-align: center">
   <img title="Yes, @onpnt, I stole your image!" src="/wp-content/uploads/users/grrlgeek/RB3.0 Intro Programmer.gif" alt="" width="277" height="282" />
@@ -37,7 +37,7 @@ I’ve been building reports with SQL Server Reporting Services for a few years.
 </p>
 
 <p class="MsoNormal">
-  Both Report Designer and Report Builder are authoring tools for SQL Server Reporting Services. Report Designer is a very programmer-friendly environment, since it’s built on the Visual Studio shell. Report Builder is a very business-user-friendly environment, as it mimics the ribbon and layout of Microsoft Office that is familiar to so many people.
+  Both Report Designer and Report Builder are authoring tools for SQL Server Reporting Services. Report Designer is a very programmer-friendly environment, since it's built on the Visual Studio shell. Report Builder is a very business-user-friendly environment, as it mimics the ribbon and layout of Microsoft Office that is familiar to so many people.
 </p>
 
 <p class="MsoNormal">
@@ -61,7 +61,7 @@ I’ve been building reports with SQL Server Reporting Services for a few years.
 </p>
 
 <p class="MsoNormal">
-  Report Builder 3.0 generates RDLs that are for SQL Server 2008R2. Thus, you can’t publish these reports to SSRS 2008 or SSRS 2005 instances. (Of course, you can use those as data sources.)
+  Report Builder 3.0 generates RDLs that are for SQL Server 2008R2. Thus, you can't publish these reports to SSRS 2008 or SSRS 2005 instances. (Of course, you can use those as data sources.)
 </p>
 
 <p class="MsoNormal">
@@ -69,7 +69,7 @@ I’ve been building reports with SQL Server Reporting Services for a few years.
 </p>
 
 <p class="MsoNormal">
-  Let’s open Report Builder 3.0 and take it for a test drive.
+  Let's open Report Builder 3.0 and take it for a test drive.
 </p>
 
 <p class="MsoNormal">
@@ -109,7 +109,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  If you don’t select any of those options, you’re taken to the main screen. This is a combination of the Office ribbons and the Visual Studio sidebars. I found it very easy to start using right away, as I’m familiar with both programs.
+  If you don't select any of those options, you're taken to the main screen. This is a combination of the Office ribbons and the Visual Studio sidebars. I found it very easy to start using right away, as I'm familiar with both programs.
 </p>
 
 <p class="MsoNormal">
@@ -189,7 +189,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  The Properties window is a great resource. When you have any item on the report selected, whether that is the body, an individual textbox in a tablix, or a chart, you can set properties here. It’s a quick way to view and set many common properties.
+  The Properties window is a great resource. When you have any item on the report selected, whether that is the body, an individual textbox in a tablix, or a chart, you can set properties here. It's a quick way to view and set many common properties.
 </p>
 
 <p class="MsoNormal">
@@ -197,7 +197,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  Those are the main components of Report Builder 3.0. Thank you for keeping your hands and feet inside the ride at all times. Next, we’ll look at how to build a table or matrix using the built-in wizard (which, compared to the Report Designer wizard, is far cooler).
+  Those are the main components of Report Builder 3.0. Thank you for keeping your hands and feet inside the ride at all times. Next, we'll look at how to build a table or matrix using the built-in wizard (which, compared to the Report Designer wizard, is far cooler).
 </p>
 
 <p class="MsoNormal">

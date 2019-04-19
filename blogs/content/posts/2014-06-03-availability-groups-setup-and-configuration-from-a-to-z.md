@@ -19,7 +19,7 @@ categories:
 ---
 Availability Groups were introduced in SQL Server 2012 and have quickly become the forefront of high availability for the SQL Server Database Engine Services.  In prior versions of SQL Server, true high availability was not a complete solution packaged with the native installation and feature set.  While mirroring was introduced in SQL Server 2005 and provided a much-needed advance towards achieving highly available data services, mirroring still required much customization to effectively provide a true high availability solution.
 
-It’s important to define high availability as it pertains to database level services – database high availability requires the means of retaining data services to users, applications and services within a defined allowable interruption of data services.  This equates simply as, are data services available to _any_ connection within a given tolerance.  The _nines_ has always been the flavor of measuring availability in the way of uptime.  “_My database server achieved four nines availability last year!”_  This achievement is essentially stating the database services were not available for an estimated .01% of the total operating hours in a year or, 52 minutes.  Remember, this achievement is based on service level agreements that can have vast variations.  While even Full Clustered Instances of SQL Server implement a level of high availability, there is still the single point of failure that is of highest importance to the data services – the database.  Points of failure and focusing on where they may occur, begins allowing a visual representation of how availability achievements can be achieved.
+It's important to define high availability as it pertains to database level services – database high availability requires the means of retaining data services to users, applications and services within a defined allowable interruption of data services.  This equates simply as, are data services available to _any_ connection within a given tolerance.  The _nines_ has always been the flavor of measuring availability in the way of uptime.  “_My database server achieved four nines availability last year!”_  This achievement is essentially stating the database services were not available for an estimated .01% of the total operating hours in a year or, 52 minutes.  Remember, this achievement is based on service level agreements that can have vast variations.  While even Full Clustered Instances of SQL Server implement a level of high availability, there is still the single point of failure that is of highest importance to the data services – the database.  Points of failure and focusing on where they may occur, begins allowing a visual representation of how availability achievements can be achieved.
 
 Points of Failure
 
@@ -285,7 +285,7 @@ On a local computer with Failover Manager installed, or one of the servers that 
 
 (If the welcome screen is shown, click Next.)
 
-Enter in each server’s name that will be part of the cluster.  Click Add after typing in the server name or utilize the Browse button to search the domain for registered server names.
+Enter in each server's name that will be part of the cluster.  Click Add after typing in the server name or utilize the Browse button to search the domain for registered server names.
 
 [<img class="size-full wp-image-2693 aligncenter" src="/wp-content/uploads/2014/06/ag6.png" alt="ag6" width="624" height="374" srcset="/wp-content/uploads/2014/06/ag6.png 624w, /wp-content/uploads/2014/06/ag6-300x179.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][6]
 
@@ -342,7 +342,7 @@ Each server that will take part as a replica must be in a WSFC.
   3. Each server that will act as a replica must have AlwaysOn features enabled in SQL Server.
   4.  The database(s) that will be in the Availability Group should be restored or created on the replica that will act as the primary.  These database(s) should be in RECOVERY mode and set to a recovery model of Full.
   5. Each database on the primary requires a full backup to be executed.
-  6. A share should be created to retain the full backup of the primary replica’s database(s).  This share can be located on any of the replica servers or an external share resource.
+  6. A share should be created to retain the full backup of the primary replica's database(s).  This share can be located on any of the replica servers or an external share resource.
 
 Once the above security and required resources are available, continue with the steps below to create the AG.
 
@@ -384,7 +384,7 @@ After performing the required prerequisites, click Refresh to re-validate the da
 
 [<img class="alignnone size-full wp-image-2708" src="/wp-content/uploads/2014/06/ag21.png" alt="ag21" width="567" height="361" srcset="/wp-content/uploads/2014/06/ag21.png 567w, /wp-content/uploads/2014/06/ag21-300x191.png 300w" sizes="(max-width: 567px) 100vw, 567px" />][21]
 
-In the Specify Replicas screen, click the Add Replica…button to add the replicas that will be part of the Availability Group.
+In the Specify Replicas screen, click the Add Replica...button to add the replicas that will be part of the Availability Group.
 
 Make the configuration changes as shown below
 
@@ -527,7 +527,7 @@ GO
 
 ## Connecting to SQL Server and the Availability Group
 
-Every Availability Group utilizes the listener for connectivity between an external source and the actual database(s) enrolled in the Availability Group.  It is possible, for administrative purposes only, to connect directly to each replica’s SQL Server instance directly.  These direct connections should be performed for instance level configurations such as MAXDOP, memory and so on.  Configuring or making changes to the Availability Group should also be performed on the primary replica by directly connecting to it.  For example: the primary in the configuration is NODE1 and this would be the instance to connect to for configuration of the Availability Group.
+Every Availability Group utilizes the listener for connectivity between an external source and the actual database(s) enrolled in the Availability Group.  It is possible, for administrative purposes only, to connect directly to each replica's SQL Server instance directly.  These direct connections should be performed for instance level configurations such as MAXDOP, memory and so on.  Configuring or making changes to the Availability Group should also be performed on the primary replica by directly connecting to it.  For example: the primary in the configuration is NODE1 and this would be the instance to connect to for configuration of the Availability Group.
 
 For database level changes such as security, connect to the database through the listener name.
 
@@ -557,7 +557,7 @@ Follow the screens and fill in each required piece of information that is specif
 
 When the wizard has completed, the database will have a full backup taken and restored to all replicas, and a tail-end log backup will be taken, before it is added to the Availability Group.  During this time the other databases and the Availability Group will be available to all connections.  There are no requirements beyond these steps to add a database to the Availability Group.
 
-To remove a database, right click the database in the listing and select Remove Database from Availability Group.  Note: this will remove the database from the Availability Group only.  This will not delete the physical database located on all replicas.  The primary database will persist allowing direct connections and all replica databases will be in a NORECOVERY state (restoring…).
+To remove a database, right click the database in the listing and select Remove Database from Availability Group.  Note: this will remove the database from the Availability Group only.  This will not delete the physical database located on all replicas.  The primary database will persist allowing direct connections and all replica databases will be in a NORECOVERY state (restoring...).
 
 [<img class="alignnone size-full wp-image-2676" src="/wp-content/uploads/2014/06/ag35.png" alt="ag35" width="506" height="311" srcset="/wp-content/uploads/2014/06/ag35.png 506w, /wp-content/uploads/2014/06/ag35-300x184.png 300w" sizes="(max-width: 506px) 100vw, 506px" />][35]
 
@@ -607,7 +607,7 @@ Changes that can be performed
 
 ### Initiate a Failover
 
-To simulate and test a failover scenario, connect to the primary or listener via SSMS 2012.  Expand the AlawaysOn High Availability list and Availability Groups’ node.  Right click the Availability Group to be tested and select Failover.
+To simulate and test a failover scenario, connect to the primary or listener via SSMS 2012.  Expand the AlawaysOn High Availability list and Availability Groups' node.  Right click the Availability Group to be tested and select Failover.
 
 [<img class="alignnone size-full wp-image-2679" src="/wp-content/uploads/2014/06/ag38.png" alt="ag38" width="423" height="466" srcset="/wp-content/uploads/2014/06/ag38.png 423w, /wp-content/uploads/2014/06/ag38-272x300.png 272w" sizes="(max-width: 423px) 100vw, 423px" />][38]
 
@@ -659,7 +659,7 @@ Import-Module FailoverClusters
 </h2>
 
 <p style="margin: 0in 0in 8pt">
-  <span style="color: #000000;font-family: Calibri;font-size: medium">Following this example of setting up a lab to test on with Availability groups, we’ll show how to script this entire solution with PoSh and T-SQL to ensure the setup, configuration and additional databases placed on the group, are not as long-winded of a process.</span>
+  <span style="color: #000000;font-family: Calibri;font-size: medium">Following this example of setting up a lab to test on with Availability groups, we'll show how to script this entire solution with PoSh and T-SQL to ensure the setup, configuration and additional databases placed on the group, are not as long-winded of a process.</span>
 </p>
 
  [1]: /wp-content/uploads/2014/06/ag1.png

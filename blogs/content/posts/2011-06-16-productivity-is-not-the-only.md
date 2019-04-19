@@ -142,7 +142,7 @@ Lead time is the average time elapsed from receiving a request to delivering the
 
 Lead time measures how quickly we respond and is an excellent number to use when it comes to improvement measures. When lead times get long, you start hearing about how unresponsive the IT department is, how they never get anything done. Short lead times and the IT department is responsive, friendly, busy. Quick lead times also reduce the occurrences of shadow IT and prevalence of do-it-yourself-ers. 
 
-## Measure twice…
+## Measure twice...
 
 Often when we decide we need measurements, we stop at “how much work is getting done”, but Productivity is not the only measure. Selecting the right measurements depends on our environment, business, and what we intend to achieve.
 

@@ -30,7 +30,7 @@ I recently read an article discussing the idea of loyalty, particularly as it ap
 </p>
 
 <p class="MsoNoSpacing">
-  But having loyalty to the company should not be the sole definition. Instead, employees should recognize that they also need to be loyal to themselves and their careers. As a company is typically loyal to its stockholders and its own self-interests, the employees should be equally committed to their own self-interests and development. Loyalty to one’s career, advancing yourself as well as your skills, and staying employed should be the cornerstone of loyalty. Furthermore, loyalty to one’s own self-interest also does not equate to disloyalty to external interests (in this case, the company). Indeed, furthering one’s own development can be seen as a form of loyalty to the company whereby both employee and employer benefit.
+  But having loyalty to the company should not be the sole definition. Instead, employees should recognize that they also need to be loyal to themselves and their careers. As a company is typically loyal to its stockholders and its own self-interests, the employees should be equally committed to their own self-interests and development. Loyalty to one's career, advancing yourself as well as your skills, and staying employed should be the cornerstone of loyalty. Furthermore, loyalty to one's own self-interest also does not equate to disloyalty to external interests (in this case, the company). Indeed, furthering one's own development can be seen as a form of loyalty to the company whereby both employee and employer benefit.
 </p>
 
 <p class="MsoNoSpacing">

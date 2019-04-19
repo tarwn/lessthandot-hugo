@@ -45,7 +45,7 @@ END
 
 If you are thinking _silly you, you can't have an IF statement like that in a function_, then you have disappointed me. What you really should be saying is the following: [why are you hardcoding this, create a heights table and then grab all the heights that are valid for the range][1]
 
-Yes, I grabbed this example from the following question: [TSQL – If..Else statement inside Table-Valued Functions – cant go through…][2]. As you can see several people answered with how to use a CASE statement instead. That is all nice and dandy but the information should be in a table instead
+Yes, I grabbed this example from the following question: [TSQL – If..Else statement inside Table-Valued Functions – cant go through...][2]. As you can see several people answered with how to use a CASE statement instead. That is all nice and dandy but the information should be in a table instead
 
 # Single Source of Truth
 
@@ -121,7 +121,7 @@ If tomorrow I decide that tall people have to be taller than 180 centimeters, I 
 
 P.S.
   
-Yes, I know, instead of having a player column I should have at least first and last name columns (preferably in a person table) but in the day and age of internet induced ADD I didn't feel it would add anything to the point I was trying to make in this post……so forgive me
+Yes, I know, instead of having a player column I should have at least first and last name columns (preferably in a person table) but in the day and age of internet induced ADD I didn't feel it would add anything to the point I was trying to make in this post......so forgive me
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 

@@ -1,5 +1,5 @@
 ---
-title: Including an Aggregated Column’s Related Values – Part 2
+title: Including an Aggregated Column's Related Values – Part 2
 author: Naomi Nosonovsky
 type: post
 date: 2009-10-27T05:51:34+00:00

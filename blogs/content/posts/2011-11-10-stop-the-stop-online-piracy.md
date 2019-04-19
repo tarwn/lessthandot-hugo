@@ -1,5 +1,5 @@
 ---
-title: Stop the 'Stop Online Piracy’ Act
+title: Stop the 'Stop Online Piracy' Act
 author: Alex Ullrich
 type: post
 date: 2011-11-10T23:28:00+00:00

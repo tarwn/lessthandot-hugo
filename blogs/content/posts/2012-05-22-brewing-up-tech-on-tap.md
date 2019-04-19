@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2012-05-22T11:03:00+00:00
 ID: 1633
-excerpt: The first Tech on Tap was so much fun that we decided to do it again! Tech on Tap v1.2 SharePoint will be held Saturday, June 9, 2012, at Stone Cellar Brewpub in Appleton, WI! What’s on tap?
+excerpt: The first Tech on Tap was so much fun that we decided to do it again! Tech on Tap v1.2 SharePoint will be held Saturday, June 9, 2012, at Stone Cellar Brewpub in Appleton, WI! What's on tap?
 url: /index.php/itprofessionals/professionaldevelopment/brewing-up-tech-on-tap/
 views:
   - 3377
@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-The first [Tech on Tap][1] was [so much fun][2] that we decided to do it again! Tech on Tap v1.2 SharePoint will be held Saturday, June 9, 2012, at Stone Cellar Brewpub in Appleton, WI! What’s on tap?
+The first [Tech on Tap][1] was [so much fun][2] that we decided to do it again! Tech on Tap v1.2 SharePoint will be held Saturday, June 9, 2012, at Stone Cellar Brewpub in Appleton, WI! What's on tap?
 
  
 
@@ -24,7 +24,7 @@ The first [Tech on Tap][1] was [so much fun][2] that we decided to do it again! 
 
 **The Topic** 
 
-[Microsoft SharePoint][3] is everywhere, in organizations of all sizes. If it is in yours, or your company is considering implementing it, you won't want to miss this. What is SharePoint? It’s a presentation and collaboration platform. It’s a document authoring and sharing tool. People can set up web sites with it, manage documents, and publish reports.
+[Microsoft SharePoint][3] is everywhere, in organizations of all sizes. If it is in yours, or your company is considering implementing it, you won't want to miss this. What is SharePoint? It's a presentation and collaboration platform. It's a document authoring and sharing tool. People can set up web sites with it, manage documents, and publish reports.
 
  
 
@@ -46,11 +46,11 @@ We have four fantastic speakers coming to teach us!
 
 [Rick Fischer][6], a local presenter from Oracular, asks us Are You Drowning in a Sea of Data? InfoPath, SharePoint, and Workflows Can Help You Swim To Safety!
 
-[David Peterson][7], from Trek Bicycle Corporation, will teach us about Demystifying PowerPivot from the SharePoint Admin’s Perspective.
+[David Peterson][7], from Trek Bicycle Corporation, will teach us about Demystifying PowerPivot from the SharePoint Admin's Perspective.
 
 **The Beers** 
 
-It wouldn’t be Tech on Tap without microbrews on tap! We’ll be featuring [Stone Cellar Brewpub’s][8] Marquette Pilsner, Pie Eyed India Pale Ale, and Stone Cellar Stout. The organizers have been taste-testing the beers to make sure we bring you the best. 😉
+It wouldn't be Tech on Tap without microbrews on tap! We'll be featuring [Stone Cellar Brewpub's][8] Marquette Pilsner, Pie Eyed India Pale Ale, and Stone Cellar Stout. The organizers have been taste-testing the beers to make sure we bring you the best. 😉
 
  
 
@@ -64,7 +64,7 @@ It wouldn’t be Tech on Tap without microbrews on tap! We’ll be featuring [St
 
 All of this is being brought to you by our awesome sponsors, [Dell][9] and [Idera][10]! Make sure to thank them for their support!
 
-What is this excellent day of top-notch training, tasty lunch, and delicious microbrew going to cost you? Nothing! It’s a free event, thanks to the generosity of our sponsors. [**Register today!**][11]
+What is this excellent day of top-notch training, tasty lunch, and delicious microbrew going to cost you? Nothing! It's a free event, thanks to the generosity of our sponsors. [**Register today!**][11]
 
  [1]: http://www.techontap.org/
  [2]: /index.php/ITProfessionals/ProfessionalDevelopment/tech-on-tap-v1-1

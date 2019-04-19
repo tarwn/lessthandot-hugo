@@ -22,7 +22,7 @@ categories:
   <a href="/wp-content/uploads/blogs/ITProfessionals/const_22.gif?mtime=1355163751"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/const_22.gif?mtime=1355163751" width="379" height="324" /></a>
 </div></p> 
 
-Estimating work is both an art and a skill as a consultant.  There isn’t one way or set of standards someone can show you to take and use for every client or project you confront.  What a seasoned consultant can do isprovide a basis you can utilize for each potential client, project or task.
+Estimating work is both an art and a skill as a consultant.  There isn't one way or set of standards someone can show you to take and use for every client or project you confront.  What a seasoned consultant can do isprovide a basis you can utilize for each potential client, project or task.
 
 > Note: Many consultants have different techniques for estimation.  This will only go over one method that works for some consultants.  Your own skills and time management is a large part in estimation which makes estimation a task that is difficult to set a standard for. Keep that in mind while reading on.</p>
 A good way to look at estimation is to look at estimating an actual project.  For this, the following fictitious project and client will be used.
@@ -76,7 +76,7 @@ For Widget Maker LTD, the needs of the upgrade to SQL Server 2008 R2 may initial
 
 Mistaken discovery of these only being the major components to the project may lead to a small amount of hours allocated to the project.  Some may even bypass the discovery phase all together as being completed and no hours allocated.
 
-In reality, the discovery stage for this has only begun.  Let’s break it down and see how the thought process should go while adding hours to each discovery item.
+In reality, the discovery stage for this has only begun.  Let's break it down and see how the thought process should go while adding hours to each discovery item.
 
   * SQL Server 2005 upgrade to SQL Server 2008 R2<o :p></o>
   * 10 – Deprecated feature usage discovery <o :p></o>
@@ -99,7 +99,7 @@ In reality, the discovery stage for this has only begun.  Let’s break it down
 
   * Any other features installed<o :p></o>
 
-  * SSIS, SSRS, SSAS, FILESTREAM, Full Text etc…<o :p></o>
+  * SSIS, SSRS, SSAS, FILESTREAM, Full Text etc...<o :p></o>
 
   * 5 – Server clustering involvement<o :p></o>
 
@@ -155,15 +155,15 @@ Break down the development and design for Widget Maker LTD SQL Server upgrade. 
   * 10 – Application development needs<o :p></o>
   * 15 – SSIS changes<o :p></o>
 
-We’ve really put this estimation stage down in a high level and, in most cases, it will be.  Estimating the design and development above is made from a seasoned data architect that has performed these steps before.  Now, even seasoned consultants perform the estimation stages.  So don’t assume experience bypasses important steps in estimating work to be performed.  If it is, failure typically creeps into a project.
+We've really put this estimation stage down in a high level and, in most cases, it will be.  Estimating the design and development above is made from a seasoned data architect that has performed these steps before.  Now, even seasoned consultants perform the estimation stages.  So don't assume experience bypasses important steps in estimating work to be performed.  If it is, failure typically creeps into a project.
 
 Given the Widget Maker LTD needs the mirror in place, a seasoned architect would typically take advantage of that mirroring installation for the upgrade.  This reduces hours and reduces downtime for the client.  Recall, the client requires a maximum of 10 minutes of downtime to the databases.  Utilizing the mirror in this case is a perfect method and one that will reduce both our hours estimated and the downtime requirements to be met.
 
 Notice the recovery hours allocated are high.  This is due to the downtime factoring of the client.  Ensure that all steps to accomplish the task are estimated.  In this projects estimation, recovery may have been deemed part of the method of upgrade.  In many cases, underestimating hours creeps in when major tasks are combined.  Breaking them out is a much more stable method and allows us to make better estimates.
 
-We are now up to an estimated 250 hours.  We’ve blown our time essentially at this point.  As mentioned before, to reduce hours and ultimately win the client and work to be done, there can be a merger of stages.  At this point, the hours for design and development can be merged into the actual development of the project.  We would also want to start considering utilizing the clients personnel in the SOW to accomplish the overall amount of work.  This would drastically reduce the hours needed.
+We are now up to an estimated 250 hours.  We've blown our time essentially at this point.  As mentioned before, to reduce hours and ultimately win the client and work to be done, there can be a merger of stages.  At this point, the hours for design and development can be merged into the actual development of the project.  We would also want to start considering utilizing the clients personnel in the SOW to accomplish the overall amount of work.  This would drastically reduce the hours needed.
 
-For example, the Widget Maker LTD Company has a team of DBAs.  These DBAs could be added as utilized resources to the SOW.  This resource utilization method potentially reduces the overall hours by 100 hours.  Let’s outline this as follows.
+For example, the Widget Maker LTD Company has a team of DBAs.  These DBAs could be added as utilized resources to the SOW.  This resource utilization method potentially reduces the overall hours by 100 hours.  Let's outline this as follows.
 
 Discovery and Design/Development to be performed by client personnel (DBAs)
 
@@ -181,22 +181,22 @@ Discovery and Design/Development to be performed by client personnel (DBAs)
 
   * Perform actual upgrade of mirror and re-implement mirroring from 2005 to new 2008 R2 mirror – All performed based on documentation provided by consultant<o :p></o>
 
-As you can see, moving these major tasks and further, finding more tasks to offload, greatly reduces the hours needed by the actual consultant or consulting company.  By doing this, let’s say our estimation is now down to 125 hours.  Since the SOW will be written to allow the internal resources of Widget Maker LTD, the hours internally and the hours by the consultant can be performed concurrently.  This reduces our estimated overall time to 4 weeks.
+As you can see, moving these major tasks and further, finding more tasks to offload, greatly reduces the hours needed by the actual consultant or consulting company.  By doing this, let's say our estimation is now down to 125 hours.  Since the SOW will be written to allow the internal resources of Widget Maker LTD, the hours internally and the hours by the consultant can be performed concurrently.  This reduces our estimated overall time to 4 weeks.
 
 **Implementation**
 
-As we’ve seen, estimation has many factors that allow us to both manipulate the hours needed as well as critical stages in the estimation and see where hours may be more critically needed.  Implementation is another major stage in an estimation and the successful writing of an SOW.  Implementation can have many factors that the other stages may not have though. In many cases, implementation is not allowed by the actual consulting services.  Internal security and resources are required.  This equates to documentation and efforts put forth by the consultant to ensure the internal resources are aware of exactly what is needed and how each step should be done.
+As we've seen, estimation has many factors that allow us to both manipulate the hours needed as well as critical stages in the estimation and see where hours may be more critically needed.  Implementation is another major stage in an estimation and the successful writing of an SOW.  Implementation can have many factors that the other stages may not have though. In many cases, implementation is not allowed by the actual consulting services.  Internal security and resources are required.  This equates to documentation and efforts put forth by the consultant to ensure the internal resources are aware of exactly what is needed and how each step should be done.
 
 With a restriction of not being able to actual perform the implementation of a project, manipulates the hours estimated greatly.  For one, support is added into the SOW for after the implementation.  Always estimated support hours.  This builds relationships and future work.  What we do have to consider is the hours needed to write an implementation document and if needed, training.
 
-Although documentation and training can be lower than the hours estimated to actually perform the steps provided by consulting services, don’t take them for granted.  This stage is one that truly is dependent on the skills of the consultant.  Having set standards on how to document and how to train is a good way to not blow the hours estimated for these tasks.
+Although documentation and training can be lower than the hours estimated to actually perform the steps provided by consulting services, don't take them for granted.  This stage is one that truly is dependent on the skills of the consultant.  Having set standards on how to document and how to train is a good way to not blow the hours estimated for these tasks.
 
-For the given Widget Maker LTD Company, estimating 20 hours to documenting and 20 hours to implementation training would be extremely sound.  This allocates the last week to the task.  Also, as we’ve seen, merging tasks is a great reduction in hours estimated to meet needs of the client and cost restrictions.  As with the development merging, documentation over the entire span of work can be done as time moves.  This would end in a document needing polishing but overall, completion while the tasks have been performed.
+For the given Widget Maker LTD Company, estimating 20 hours to documenting and 20 hours to implementation training would be extremely sound.  This allocates the last week to the task.  Also, as we've seen, merging tasks is a great reduction in hours estimated to meet needs of the client and cost restrictions.  As with the development merging, documentation over the entire span of work can be done as time moves.  This would end in a document needing polishing but overall, completion while the tasks have been performed.
 
 Given the merging, utilization of resources and writing of the SOW and estimation, we have concluded on the Widget Maker LTD Company that we need 4 weeks to complete the work.  This meets the time needs as well as us, the consultant, working on our hourly rate to meet the budget limits.
 
 **Summary**
 
-This article has gone over a lot of information, put a lot of hours on a project that was focused on.  As we’ve also gone over, the real art to estimation is the movement of hours and knowing how we can manage estimating work accurately as it meets the skills, resources and client needs.  When estimating work as a consultant, ensure that all stages are considered critical but even more importantly; ensure each stage is related to the next estimation stage.  Pulling hours and merging them into each stage to accomplish the client’s needs will always be more successful as it starts with winning a bid and writing a better SOW.
+This article has gone over a lot of information, put a lot of hours on a project that was focused on.  As we've also gone over, the real art to estimation is the movement of hours and knowing how we can manage estimating work accurately as it meets the skills, resources and client needs.  When estimating work as a consultant, ensure that all stages are considered critical but even more importantly; ensure each stage is related to the next estimation stage.  Pulling hours and merging them into each stage to accomplish the client's needs will always be more successful as it starts with winning a bid and writing a better SOW.
 
  [1]: /index.php/ITProfessionals/consulting/successful-consulting-series

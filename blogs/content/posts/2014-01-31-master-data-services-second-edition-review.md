@@ -28,7 +28,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  I had almost no prior experience with MDS up to this point (I very quickly glanced over it in preparation for the 70-463 exam and I guess I didn’t answer a lot of questions about MDS correctly), so I needed a book that could introduce me to the concepts of MDS and how I can effectively manage master data using this tool.
+  I had almost no prior experience with MDS up to this point (I very quickly glanced over it in preparation for the 70-463 exam and I guess I didn't answer a lot of questions about MDS correctly), so I needed a book that could introduce me to the concepts of MDS and how I can effectively manage master data using this tool.
 </p>
 
 <p style="text-align: justify">
@@ -36,7 +36,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Tyler Graham was part of the development team of SQL Server Master Data Services right from the start, so if anyone is qualified about writing a book about MDS it’s probably him. You can notice his profound knowledge throughout the book, as he frequently delves deeper in the MDS web service (I didn’t even know there was one) and references hidden stored procedures and views to make MDS do your bidding. The book accomplishes its goal: I know have a good working knowledge of the tool and if I have to use it in a project tomorrow, I know where to start.
+  Tyler Graham was part of the development team of SQL Server Master Data Services right from the start, so if anyone is qualified about writing a book about MDS it's probably him. You can notice his profound knowledge throughout the book, as he frequently delves deeper in the MDS web service (I didn't even know there was one) and references hidden stored procedures and views to make MDS do your bidding. The book accomplishes its goal: I know have a good working knowledge of the tool and if I have to use it in a project tomorrow, I know where to start.
 </p>
 
 <p style="text-align: justify">
@@ -44,7 +44,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Chapter 5 explains how you can import data into MDS, using the various staging tables. I would have put this chapter later in the book, because the examples show you how to populate objects you have never even heard of and you don’t exactly know what they represent or how you can use them. A bit confusing. The author talks how you can automate the import process using stored procedures – very useful when you plan on using SSIS to load MDS – and he says he will explain them in the next section. However, the next section is about web services and he never mentions the stored procedures again. A missed opportunity…
+  Chapter 5 explains how you can import data into MDS, using the various staging tables. I would have put this chapter later in the book, because the examples show you how to populate objects you have never even heard of and you don't exactly know what they represent or how you can use them. A bit confusing. The author talks how you can automate the import process using stored procedures – very useful when you plan on using SSIS to load MDS – and he says he will explain them in the next section. However, the next section is about web services and he never mentions the stored procedures again. A missed opportunity...
 </p>
 
 <p style="text-align: justify">
@@ -56,11 +56,11 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Then there’s a whole chapter on using Excel as the front-end for MDS. This is great, as this really opens up MDS for the business user, which gives MDS an advantage over its competitors. However, the book uses a sample workbook you can supposedly download from <a href="http://www.mdsuser.com/">mdsuser.com</a>. But the Excel is nowhere to be found in this site. The book also mentions another site you can download samples from, but that site doesn’t even exist anymore.
+  Then there's a whole chapter on using Excel as the front-end for MDS. This is great, as this really opens up MDS for the business user, which gives MDS an advantage over its competitors. However, the book uses a sample workbook you can supposedly download from <a href="http://www.mdsuser.com/">mdsuser.com</a>. But the Excel is nowhere to be found in this site. The book also mentions another site you can download samples from, but that site doesn't even exist anymore.
 </p>
 
 <p style="text-align: justify">
-  At that point we’re at chapter 11, which is a long chapter on how to implement security. The author goes into great detail to explain how it works in MDS. This chapter is certainly useful as a reference when you are implementing permissions in MDS. Chapter 12 shortly explains how to create subscription views so that you can extract data from the system (which is basically the point of a master data implementation, otherwise it wouldn’t be a much use). The next chapter is all about web services, so I gladly skipped that one. The last chapter talks about advanced modelling, but is just a few pages with a few tips and a few reminders of what not to do with MDS. Very interesting though was the authors take on MDS and slowly changing dimensions.
+  At that point we're at chapter 11, which is a long chapter on how to implement security. The author goes into great detail to explain how it works in MDS. This chapter is certainly useful as a reference when you are implementing permissions in MDS. Chapter 12 shortly explains how to create subscription views so that you can extract data from the system (which is basically the point of a master data implementation, otherwise it wouldn't be a much use). The next chapter is all about web services, so I gladly skipped that one. The last chapter talks about advanced modelling, but is just a few pages with a few tips and a few reminders of what not to do with MDS. Very interesting though was the authors take on MDS and slowly changing dimensions.
 </p>
 
 <p style="text-align: justify">
@@ -76,5 +76,5 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  This might be normal for an actual eBook for reading on a Kindle or a tablet (I have no idea, I own neither of both), but when I buy a PDF I expect it to look like the actual book. Again, this has nothing to do with the efforts of the author: he wrote an excellent book on Master Data Services. The samples are OK with this book, but a few more effort could be put into them. All in all I recommend this book to everyone who wants to learn more about SQL Server 2012 Master Data Services. Just don’t buy it from ebooks.com.
+  This might be normal for an actual eBook for reading on a Kindle or a tablet (I have no idea, I own neither of both), but when I buy a PDF I expect it to look like the actual book. Again, this has nothing to do with the efforts of the author: he wrote an excellent book on Master Data Services. The samples are OK with this book, but a few more effort could be put into them. All in all I recommend this book to everyone who wants to learn more about SQL Server 2012 Master Data Services. Just don't buy it from ebooks.com.
 </p>

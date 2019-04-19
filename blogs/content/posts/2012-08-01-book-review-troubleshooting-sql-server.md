@@ -27,15 +27,15 @@ Topics that are covered include disk I/O configuration, CPU, memory, indexes, bl
 
 **The Good** 
 
-This isn't an in-depth look into how SQL Server works. (If that is what you’re looking for, I recommend [SQL Server 2008 Internals][6].) It's a high-level overview of what you need to know right now to keep SQL Server instances and databases running. It's well written and to the point. Each chapter includes a list of additional resources, which is invaluable.
+This isn't an in-depth look into how SQL Server works. (If that is what you're looking for, I recommend [SQL Server 2008 Internals][6].) It's a high-level overview of what you need to know right now to keep SQL Server instances and databases running. It's well written and to the point. Each chapter includes a list of additional resources, which is invaluable.
 
-After reading it, I can honestly say I wish I’d had it five years ago, when the DBA left my company and the reins were handed to me. I was a decent report writer, but didn’t know nearly enough about SQL Server administration to handle some of the problems I faced. I’m going to recommend this book to anyone just getting started as a DBA, or to anyone who has to deal with SQL Server part time. It’s a great reference.
+After reading it, I can honestly say I wish I'd had it five years ago, when the DBA left my company and the reins were handed to me. I was a decent report writer, but didn't know nearly enough about SQL Server administration to handle some of the problems I faced. I'm going to recommend this book to anyone just getting started as a DBA, or to anyone who has to deal with SQL Server part time. It's a great reference.
 
 **The Bad** 
 
-With a few years of experience with SQL Server, I wanted a little more information in some sections. I reminded myself that wasn’t the goal of the book. There were a couple areas I thought could have used more basic information, such as no example of STOPAT in a RESTORE statement. Overall, though, it was a solid book that covered the basics.
+With a few years of experience with SQL Server, I wanted a little more information in some sections. I reminded myself that wasn't the goal of the book. There were a couple areas I thought could have used more basic information, such as no example of STOPAT in a RESTORE statement. Overall, though, it was a solid book that covered the basics.
 
-This book is administration-focused. It does not cover any T-SQL or programming concepts. (I wasn’t expecting this, but if that’s what you’re looking for, this isn’t the right book either.)
+This book is administration-focused. It does not cover any T-SQL or programming concepts. (I wasn't expecting this, but if that's what you're looking for, this isn't the right book either.)
 
 **Chapter 1 – Troubleshooting** 
 
@@ -65,19 +65,19 @@ There is a good review of index basics, stressing the difference between key col
 
 **Chapter 6 – Blocking** 
 
-When first starting as a DBA, it was hard to understand the difference between latches and locks, necessary to the operation of SQL Server, and blocking, which happens but isn’t desirable. This chapter covers the basics of the types of locks and latches, which is all an accidental DBA really needs to understand at first. Queries using DMVs are given to help troubleshoot what tasks are blocked or waiting. The part I was most interested in was automatic detection and notification. In particular, I've started learning more about the blocked process report recently, and was happy to see information about it. Other topics like event notifications using Service Broker and Extended Events in SQL Server 2012 are covered.
+When first starting as a DBA, it was hard to understand the difference between latches and locks, necessary to the operation of SQL Server, and blocking, which happens but isn't desirable. This chapter covers the basics of the types of locks and latches, which is all an accidental DBA really needs to understand at first. Queries using DMVs are given to help troubleshoot what tasks are blocked or waiting. The part I was most interested in was automatic detection and notification. In particular, I've started learning more about the blocked process report recently, and was happy to see information about it. Other topics like event notifications using Service Broker and Extended Events in SQL Server 2012 are covered.
 
 **Chapter 7 – Handling Deadlocks** 
 
-Several methods to gather deadlock information by capturing deadlock graphs are covered. Information on how to read the graphs is also included. It’s not enough to know what statements are causing the deadlock; how to fix it – or how not to fix it – is equally important. I agree with the advice here that issuing a KILL command isn’t always the best choice, and oftentimes the application code that caused the problem needs to be revisited.
+Several methods to gather deadlock information by capturing deadlock graphs are covered. Information on how to read the graphs is also included. It's not enough to know what statements are causing the deadlock; how to fix it – or how not to fix it – is equally important. I agree with the advice here that issuing a KILL command isn't always the best choice, and oftentimes the application code that caused the problem needs to be revisited.
 
 **Chapter 8 – Large or Full Transaction Log** 
 
-I have run into problems with transaction logs that filled up drives, or long-running transactions that took up a lot of space in the log, many times. The chapter starts with a quick review of how the transaction log works. Several reasons the log could grow outrageously are discussed. Then, methods to fix it such as taking a log backup or adding space are discussed. What’s equally important is the “what not to do” section. There is a lot of bad advice given on the internet, and I’m glad that issue is addressed here.
+I have run into problems with transaction logs that filled up drives, or long-running transactions that took up a lot of space in the log, many times. The chapter starts with a quick review of how the transaction log works. Several reasons the log could grow outrageously are discussed. Then, methods to fix it such as taking a log backup or adding space are discussed. What's equally important is the “what not to do” section. There is a lot of bad advice given on the internet, and I'm glad that issue is addressed here.
 
 **Chapter 9 – Truncated Tables, Dropped Objects, and Other Accidents Waiting to Happen** 
 
-The chapter starts with real-world stories of tables that have been dropped from production systems, whether through bad security practices or an accident. I’ve had moments like that, too – I’ve dropped tables from databases because of a missing WHERE clause. In real life, it happens. It’s how you react to it that’s important. Good guidelines are given, and the advice to “keep calm” is really important.
+The chapter starts with real-world stories of tables that have been dropped from production systems, whether through bad security practices or an accident. I've had moments like that, too – I've dropped tables from databases because of a missing WHERE clause. In real life, it happens. It's how you react to it that's important. Good guidelines are given, and the advice to “keep calm” is really important.
 
 **A Practical Everyday Reference** 
 

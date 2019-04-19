@@ -78,7 +78,7 @@ _Listing 4_
 
 **How can Row Overflow affect performance by introducing more pages?**
 
-So far, we’ve discussed what the row overflow page is, how it is stored, and when the engine decides it is needed. The question arises; can row overflow pages cause a performance problem by introducing more reads?
+So far, we've discussed what the row overflow page is, how it is stored, and when the engine decides it is needed. The question arises; can row overflow pages cause a performance problem by introducing more reads?
 
 When row overflow pages are created, there is a small amount of overhead that will come with them. This is from having to pull from these pages to fulfill requests made of them. However, with proper indexing, the overhead is typically contained to a minimum and other bottlenecks in performance are typically at the front line. However, this brings up a situation in which a normal exercise of tuning by utilizing execution plans can mislead a DBA or Developer into missing a key step in tuning when row overflow pages are involved.
 
@@ -96,7 +96,7 @@ _Listing 5_
 
  
 
-To show what we’ve discussed already regarding when a row overflow page would be created, listing 6 shows an insert into the new table, OverFlowPages, that would not exceed the row limit of 8060 bytes.
+To show what we've discussed already regarding when a row overflow page would be created, listing 6 shows an insert into the new table, OverFlowPages, that would not exceed the row limit of 8060 bytes.
 
  
 

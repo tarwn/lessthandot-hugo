@@ -23,7 +23,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <em>Every time I do something “stupid”, which happens from time to time, I’ll do a little blog post on what happened and how I solved it. The reason for this is twofold: I’ll have a solution online I can consult if it happens again and other people can benefit from my mistakes as well. Because remember the ancient Chinese proverb</em>: <em>“It’s only stupid if you don’t turn it into a learning experience”. </em><em>Okay, I might have made that last one up…</em>
+  <em>Every time I do something “stupid”, which happens from time to time, I'll do a little blog post on what happened and how I solved it. The reason for this is twofold: I'll have a solution online I can consult if it happens again and other people can benefit from my mistakes as well. Because remember the ancient Chinese proverb</em>: <em>“It's only stupid if you don't turn it into a learning experience”. </em><em>Okay, I might have made that last one up...</em>
 </p>
 
 <p style="text-align: justify">
@@ -87,7 +87,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  However, I did not recall making any change to the projection manager. And then it hit me. I generated all of the packages using BIML. In the BIML script, I also generate the connection managers as they are needed during compile time (as far as I know BIML doesn’t realize they are actually already there in the project). I didn’t include the expressions in the BIML script as I do not actually generate them. When the BIML script is finished, it asks you if you want to overwrite existing items. I simply deselect the checkboxes for the connection managers and everything is fine in the world.
+  However, I did not recall making any change to the projection manager. And then it hit me. I generated all of the packages using BIML. In the BIML script, I also generate the connection managers as they are needed during compile time (as far as I know BIML doesn't realize they are actually already there in the project). I didn't include the expressions in the BIML script as I do not actually generate them. When the BIML script is finished, it asks you if you want to overwrite existing items. I simply deselect the checkboxes for the connection managers and everything is fine in the world.
 </p>
 
 <p style="text-align: justify">

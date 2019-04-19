@@ -174,13 +174,13 @@ The main task will require you to push to the successful notification upon a suc
 
 Make sure you use your successful notification task in the On success action or you're job will have an unreachable task and complain when you save it. Then make sure your Success Caller reports success but if failure points to the failure caller task. In your failure task your always going to want to report failure on success. So you're other tasks advanced options will appear as 
 
-Success…
+Success...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//job2.gif" alt="" title="" width="702" height="246" />
 </div>
 
-Failure…
+Failure...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//job3.gif" alt="" title="" width="705" height="323" />

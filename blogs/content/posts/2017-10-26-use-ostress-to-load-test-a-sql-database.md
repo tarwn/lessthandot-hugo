@@ -22,9 +22,9 @@ Ostress.exe is part of the RML utilities. The first step is to download it from 
 
 Ostress allows you to specify one file, or a folder that contains multiple files, to run. You can also specify a number of connections to be made to the database, to simulate multiple users or applications running the same query. Each connection can then run the file one or more times.
 
-The next thing you’ll need is one or more .sql files that the tool will run.
+The next thing you'll need is one or more .sql files that the tool will run.
 
-To run a load test, you’ll open RML cmd prompt and enter your command. A few common parameters, which you’ll be using:
+To run a load test, you'll open RML cmd prompt and enter your command. A few common parameters, which you'll be using:
 
 <p style="padding-left: 30px">
   -S – server name – this works for a SQL Server or an Azure SQL Database.<br /> -E – Windows authentication. The other option is -U and -P for SQL authentication.<br /> -d – database name.<br /> -i – Path to batch file(s), such as C:\ostress\ostress_batch_file.sql.<br /> -n – Number of connections to create.<br /> -r – Number of iterations through the file each connection will make.<br /> -q – Quiet mode – no result display.<br /> -o – Output file directory.

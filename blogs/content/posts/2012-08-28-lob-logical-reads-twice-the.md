@@ -24,9 +24,9 @@ SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB WITH (INDEX=IDX_LOGSTRING)
 
 
 > Note: To follow the examples in this article, please refer to the scripts in Index Seek on LOB Columns and utilize the Word document available for download, “[Columnstore Index Basics][2]”.</p>
-I recalled reading an article by Paul White, “[Beware Sneaky Reads with Unique Indexes][3]” that explains the reasoning to why these reads were coming in higher.  As always, Paul’s deep understanding of and ability to explain the optimizer’s internals are shown in the article.
+I recalled reading an article by Paul White, “[Beware Sneaky Reads with Unique Indexes][3]” that explains the reasoning to why these reads were coming in higher.  As always, Paul's deep understanding of and ability to explain the optimizer's internals are shown in the article.
 
-To understand the query in listing 1 and the read counts, let’s investigate the pages.
+To understand the query in listing 1 and the read counts, let's investigate the pages.
 
 First, create a new table and insert 100 Word documents into it.  Change the path to a Word document on your system that the SQL Server service account has access to.
 
@@ -100,7 +100,7 @@ GO
 ```
 
 
-The above DBCC IND command will return the information on the index ID 2; index IDX_LOGSTRING. For more information on DBCC IND, read Paul Randal’s article, “[Inside the Storage Engine: Using DBCC PAGE and DBCC IND to find out if the page splits ever roll back][4]”
+The above DBCC IND command will return the information on the index ID 2; index IDX_LOGSTRING. For more information on DBCC IND, read Paul Randal's article, “[Inside the Storage Engine: Using DBCC PAGE and DBCC IND to find out if the page splits ever roll back][4]”
 
 To read further on DBCC IND and the page types that can be returned in the results, read “[Inside the Storage Engine: The Anatomy of a page][5]”, by Paul Randal.
 
@@ -128,7 +128,7 @@ To visualize this, imagine the page layout shown below starting with the root pa
 </div>
 
 > Note: the ordering of the pages as they are stored does not always go in order depicted. Page 20411 starts and contains the text tree to pages 20413 to 20417. Also, page 20411 may not relate directly to the other pages but the illustration shows a good visualization to the effects of the text page type relations and tree sharing.</p>
-This still doesn’t answer the amount of reads until we look at the pages that are PageType 4.
+This still doesn't answer the amount of reads until we look at the pages that are PageType 4.
 
 sql
 SELECT COUNT(*) FROM IND_Results WHERE pagetype = 4
@@ -184,7 +184,7 @@ From the results, the illustration below shows a more descriptive layout of the 
 
 The true advantage to knowing how data and specific data types are stored allows us to better manage storage and performance.  This is done by constructing unique disk structures for LOB, database structures and other tuning methods.  Reviewing how a query is affecting disk and overall IO can be extremely beneficial while working to lower the overall need for excessive IO.
 
-LOB data in particular has a unique storage structure.  While working with LOB data, take into account what we’ve gone over and how you can better enhance the overall experience.
+LOB data in particular has a unique storage structure.  While working with LOB data, take into account what we've gone over and how you can better enhance the overall experience.
 
  [1]: /index.php/DataMgmt/DBAdmin/index-seek-on-lob-columns
  [2]: http://t.co/mi59IABR

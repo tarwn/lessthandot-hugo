@@ -26,7 +26,7 @@ During a service issue recently, this scenario presented itself in a service hun
 
 The steps initially taken to troubleshoot this were pretty direct in the line that you would take, aside from the corruption internally.  The first problem that comes into play is the identifying problem of the MSSQLSERVER service being hung in stopping.  This is the point we came in to check the problem.
 
-At the point any service is _hung,_ you’ll need to put the service in a state you can work with it. In SQL Server’s case, you’ll need to first start the MSSQLSERVER (or named instance service name) and follow the event of failure through.  This is as it would be with any faulting windows service.  Start the service, review the event logs after failure and follow that through with SQL Server’s logging in the event of a startup failure – ERRORLOG.
+At the point any service is _hung,_ you'll need to put the service in a state you can work with it. In SQL Server's case, you'll need to first start the MSSQLSERVER (or named instance service name) and follow the event of failure through.  This is as it would be with any faulting windows service.  Start the service, review the event logs after failure and follow that through with SQL Server's logging in the event of a startup failure – ERRORLOG.
 
 TASKKILL
 

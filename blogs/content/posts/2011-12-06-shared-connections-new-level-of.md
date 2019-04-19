@@ -37,7 +37,7 @@ To create a Shared Connection Manager, open SQL Server Data Tools and create a n
 
 The new connection wizard has not changed much.  Follow the steps to create the connection as you would normally.  In this example, ADO.NET connections were created.
 
-Once you’ve created a connection, you will see the connections start to show in the Connection Managers window.
+Once you've created a connection, you will see the connections start to show in the Connection Managers window.
 
  
 

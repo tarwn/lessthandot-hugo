@@ -41,7 +41,7 @@ Jonathan Kehayias explains how to move tempdb
 
 **[Seek or scan?][5]**
   
-One very common question that I see on the forums is on index seeks and index scans. A query is resulting in a table/clustered index scan, even though there’s an index on one or more of the columns been searched on. Gail Shaw does a nice explanation
+One very common question that I see on the forums is on index seeks and index scans. A query is resulting in a table/clustered index scan, even though there's an index on one or more of the columns been searched on. Gail Shaw does a nice explanation
 
 **[Don't Touch that Shrink Button!][6]**
   

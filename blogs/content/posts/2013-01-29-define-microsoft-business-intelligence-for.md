@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2013-01-29T20:45:00+00:00
 ID: 1947
-excerpt: 'What is Microsoft Business Intelligence?  I’m not asked this question very often because it’s typically an assumption.  As we know, assumptions can lead to misguidance or misrepresentation of a topic. This topic has been defined in so many different way&hellip;'
+excerpt: "What is Microsoft Business Intelligence?  I'm not asked this question very often because it's typically an assumption.  As we know, assumptions can lead to misguidance or misrepresentation of a topic. This topic has been defined in so many different way&hellip;"
 url: /index.php/datamgmt/datadesign/define-microsoft-business-intelligence-for/
 views:
   - 19027
@@ -20,7 +20,7 @@ categories:
   <a href="/wp-content/uploads/blogs/DataMgmt/-215.png?mtime=1359498894"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-215.png?mtime=1359498894" width="150" height="165" align="left" /></a>
 </div>
 
-What is Microsoft Business Intelligence? I’m not asked this question very often because it’s typically an assumption. As we know, assumptions can lead to misguidance or misrepresentation of a topic. This topic has been defined in so many different ways; I ask it in almost every interview I perform that has the word, “Data” in it. The reasoning for asking that question isn’t directly to say a person is wrong or right but to see the range they’ve taken on in knowing all the factors that lead to end solutions in data. 
+What is Microsoft Business Intelligence? I'm not asked this question very often because it's typically an assumption. As we know, assumptions can lead to misguidance or misrepresentation of a topic. This topic has been defined in so many different ways; I ask it in almost every interview I perform that has the word, “Data” in it. The reasoning for asking that question isn't directly to say a person is wrong or right but to see the range they've taken on in knowing all the factors that lead to end solutions in data. 
 
  
 
@@ -32,7 +32,7 @@ As we can see, my definition does not have much revolving around SQL Server form
 
 A great example of how these two topics relate but can be considered on a different level of focus is the path one or more OLTP designed databases take to an OLAP designed database. With Microsoft, we look to a normal on-premise landscape that consists of one or more transactional databases housed on SQL Server; a push and pull method using SQL Server Integration Services as a high performance extract, transform and load structure; ending with SQL Server Analysis Services in a cube type layout of the data after manipulation or, real time manipulation occurring. 
 
-Seeing this path, we’ve only touched on the Business Intelligence area with the ending on SSAS. Once this task is completed, the real BI landscape sets in with the visualization of the data. During this entire transfer, BI and Performance cross each other in a few areas. To best illustrate this crossing of utilization, we can draw a guide. 
+Seeing this path, we've only touched on the Business Intelligence area with the ending on SSAS. Once this task is completed, the real BI landscape sets in with the visualization of the data. During this entire transfer, BI and Performance cross each other in a few areas. To best illustrate this crossing of utilization, we can draw a guide. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-214.png?mtime=1359498781"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-214.png?mtime=1359498781" width="839" height="224" /></a>

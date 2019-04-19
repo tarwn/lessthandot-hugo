@@ -19,7 +19,7 @@ tags:
 ---
 SQL is hard. Who's to say whether it's harder for the person that has no technical background or the one that is comfortable with object oriented, procedural, or functional styles and has to cross the great divide to set-based, declarative queries. In either case, there's a journey ahead of you.
 
-Luckily there are a lot of great resources out there to help. From live webcasts like [SQLLunch][1] and [24 hours of PASS][2], to local [SQL Saturday events][3], from [recorded TechEd sessions][4] to [hundreds of books][5] to [blogs posts on sites like this][6]….the list goes on.
+Luckily there are a lot of great resources out there to help. From live webcasts like [SQLLunch][1] and [24 hours of PASS][2], to local [SQL Saturday events][3], from [recorded TechEd sessions][4] to [hundreds of books][5] to [blogs posts on sites like this][6]....the list goes on.
 
 But it's still a long road, and building that initial solid foundation can be a hard step. 
 

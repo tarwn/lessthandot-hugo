@@ -38,7 +38,7 @@ FROM user.myTable mt
 WHERE mt.Status IN (10,20,30) AND mt.TransactionDate > DATE'2012-01-01';
 ```
 <p style="text-align: justify;">
-  The preview in the OLE DB worked flawlessly and I finished constructing my data flow. However, when I ran the package, I got all sorts of weird metadata errors indicating problems at the source. Basically the errors told me new columns needed to be added to the external columns collection (see the advanced editor of the source and check out the <em>Input and Output properties</em> tab) and that existing columns should be removed. Weird because the source and the SQL query hadn’t changed.
+  The preview in the OLE DB worked flawlessly and I finished constructing my data flow. However, when I ran the package, I got all sorts of weird metadata errors indicating problems at the source. Basically the errors told me new columns needed to be added to the external columns collection (see the advanced editor of the source and check out the <em>Input and Output properties</em> tab) and that existing columns should be removed. Weird because the source and the SQL query hadn't changed.
 </p>
 
 <p style="text-align: justify;">
@@ -69,11 +69,11 @@ FROM DUAL;
 > _<span style="font-size: x-small;">SSIS package “TestOracle.dtsx” starting. Information: 0x4004300A at (DFT) Read from Oracle, SSIS.Pipeline: Validation phase is beginning.<br /></span>__<span style="font-size: x-small;">Warning: 0x800470C8 at (DFT) Read from Oracle, (OLE_SRC) Read from DUAL [1]: The external columns for component “(OLE_SRC) Read from DUAL” (1) are out of synchronization with the data source columns. The <strong>column “TEST” needs to be added</strong> to the external columns.<br /></span>__<span style="font-size: x-small;">The <strong>external column “TESTDATE” (191) needs to be removed</strong> from the external columns.<br /></span>__<span style="font-size: x-small;">Error: 0xC004706B at (DFT) Read from Oracle, SSIS.Pipeline: “component “(OLE_SRC) Read from DUAL” (1)” failed validation and returned validation status “VS_NEEDSNEWMETADATA”.<br /></span>__<span style="font-size: x-small;">Error: 0xC004700C at (DFT) Read from Oracle, SSIS.Pipeline: One or more component failed validation.<br /></span>__ <span style="font-size: x-small;">Error: 0xC0024107 at (DFT) Read from Oracle: There were errors during task validation.<br /></span>__<span style="font-size: x-small;">SSIS package ” TestOracle.dtsx ” finished: Failure.</span>_
 
 <p style="text-align: justify;">
-  I marked the issues in bold. Apparently, SSIS insists there’s a new column called Test which isn’t included in the SQL statement but should be added to the metadata anyway. The TestDate column, which is real, should be removed. Somehow, SSIS interpretes the SQL statement wrong and truncates the column name TestDate to Test.
+  I marked the issues in bold. Apparently, SSIS insists there's a new column called Test which isn't included in the SQL statement but should be added to the metadata anyway. The TestDate column, which is real, should be removed. Somehow, SSIS interpretes the SQL statement wrong and truncates the column name TestDate to Test.
 </p>
 
 <p style="text-align: justify;">
-  Changing the <em>DelayValidation</em> property of the data flow to True didn’t have much effect. The package starts running but crashes at the source component:
+  Changing the <em>DelayValidation</em> property of the data flow to True didn't have much effect. The package starts running but crashes at the source component:
 </p>
 
 <div class="image_block" style="text-align: center;">
@@ -82,18 +82,18 @@ FROM DUAL;
 
 <span style="text-align: justify;">The output has also slightly changed:</span>
 
-> _<span style="font-size: x-small;">SSIS package ” TestOracle.dtsx ” starting.<br /></span>__<span style="font-size: x-small;">Information: 0x4004300A at (DFT) Read from Oracle, SSIS.Pipeline: Validation phase is beginning.<br /></span>__<span style="font-size: x-small;">…<br /></span>__<span style="font-size: x-small;">Information: 0x40043006 at (DFT) Read from Oracle, SSIS.Pipeline: Prepare for Execute phase is beginning.<br /></span>__<span style="font-size: x-small;">Information: 0x40043007 at (DFT) Read from Oracle, SSIS.Pipeline: Pre-Execute phase is beginning.<br /></span>__<span style="font-size: x-small;">Error: 0xC0202005 at (DFT) Read from Oracle, (OLE_SRC) Read from DUAL [210]: <strong>Column “TESTSTRING” cannot be found at the datasource</strong>.<br /></span>__<span style="font-size: x-small;">Error: 0xC004701A at (DFT) Read from Oracle, SSIS.Pipeline: component “(OLE_SRC) Read from DUAL” (210) failed the pre-execute phase and returned error code 0xC0202005.<br /></span>__<span style="font-size: x-small;">Information: 0x40043008 at (DFT) Read from Oracle, SSIS.Pipeline: Post Execute phase is beginning.<br /></span>__<span style="font-size: x-small;">Information: 0x40043009 at (DFT) Read from Oracle, SSIS.Pipeline: Cleanup phase is beginning.<br /></span>__<span style="font-size: x-small;">Task failed: (DFT) Read from Oracle<br /></span>__<span style="font-size: x-small;">SSIS package ” TestOracle.dtsx ” finished: Failure.</span>_
+> _<span style="font-size: x-small;">SSIS package ” TestOracle.dtsx ” starting.<br /></span>__<span style="font-size: x-small;">Information: 0x4004300A at (DFT) Read from Oracle, SSIS.Pipeline: Validation phase is beginning.<br /></span>__<span style="font-size: x-small;">...<br /></span>__<span style="font-size: x-small;">Information: 0x40043006 at (DFT) Read from Oracle, SSIS.Pipeline: Prepare for Execute phase is beginning.<br /></span>__<span style="font-size: x-small;">Information: 0x40043007 at (DFT) Read from Oracle, SSIS.Pipeline: Pre-Execute phase is beginning.<br /></span>__<span style="font-size: x-small;">Error: 0xC0202005 at (DFT) Read from Oracle, (OLE_SRC) Read from DUAL [210]: <strong>Column “TESTSTRING” cannot be found at the datasource</strong>.<br /></span>__<span style="font-size: x-small;">Error: 0xC004701A at (DFT) Read from Oracle, SSIS.Pipeline: component “(OLE_SRC) Read from DUAL” (210) failed the pre-execute phase and returned error code 0xC0202005.<br /></span>__<span style="font-size: x-small;">Information: 0x40043008 at (DFT) Read from Oracle, SSIS.Pipeline: Post Execute phase is beginning.<br /></span>__<span style="font-size: x-small;">Information: 0x40043009 at (DFT) Read from Oracle, SSIS.Pipeline: Cleanup phase is beginning.<br /></span>__<span style="font-size: x-small;">Task failed: (DFT) Read from Oracle<br /></span>__<span style="font-size: x-small;">SSIS package ” TestOracle.dtsx ” finished: Failure.</span>_
 
 <p style="text-align: justify;">
-  I highlighted the important issue in bold and I removed some warnings about my input columns not being used in the data flow. Now, SSIS complains about another column suddenly missing at the datasource. However, the dual table in Oracle hasn’t changed of course and the SQL statement is also still the same. It’s also remarkable the preview works every time, but the data flow still fails.
+  I highlighted the important issue in bold and I removed some warnings about my input columns not being used in the data flow. Now, SSIS complains about another column suddenly missing at the datasource. However, the dual table in Oracle hasn't changed of course and the SQL statement is also still the same. It's also remarkable the preview works every time, but the data flow still fails.
 </p>
 
 <p style="text-align: justify;">
-  So what’s causing the issue? After playing around with the original query, a colleague and I guessed it might had something to do with the date literals used in the query, because seemingly it affected columns around the column using the date literal.
+  So what's causing the issue? After playing around with the original query, a colleague and I guessed it might had something to do with the date literals used in the query, because seemingly it affected columns around the column using the date literal.
 </p>
 
 <p style="text-align: justify;">
-  I used the ANSI date literal to specify a hard-coded date value. For example: DATE’1900-01-01’. Check out the following Oracle documentation about date literals: <a href="http://docs.oracle.com/cd/B19306_01/server.102/b14200/sql_elements003.htm#BABGIGCJ">Literals</a>. Let’s replace this literal with the Oracle date value TO_DATE('1900-01-01’,’yyyy-mm-dd’):
+  I used the ANSI date literal to specify a hard-coded date value. For example: DATE'1900-01-01'. Check out the following Oracle documentation about date literals: <a href="http://docs.oracle.com/cd/B19306_01/server.102/b14200/sql_elements003.htm#BABGIGCJ">Literals</a>. Let's replace this literal with the Oracle date value TO_DATE('1900-01-01','yyyy-mm-dd'):
 </p>
 
 <div class="image_block" style="text-align: center;">
@@ -106,7 +106,7 @@ FROM DUAL;
   <a href="/media/users/koenverbeeck/Oracle_DateLiteral/success.PNG?mtime=1358753621"><img src="/wp-content/uploads/users/koenverbeeck/Oracle_DateLiteral/success.PNG?mtime=1358753621" alt="" width="295" height="230" /></a>
 </div>
 
-<span style="text-align: justify;">What’s more intriguing is that when I use the </span>_Microsoft OLE DB provider for Oracle_ <span style="text-align: justify;">using the original query, the package also runs succesfully. So it seems the Oracle OLE DB provider, downloaded from the Oracle website, has some sort of issue with the ANSI date literal. I haven’t found any documentation why the provider messes up the columns like that, but if someone has better Google skills, please drop a note in the comments.</span>
+<span style="text-align: justify;">What's more intriguing is that when I use the </span>_Microsoft OLE DB provider for Oracle_ <span style="text-align: justify;">using the original query, the package also runs succesfully. So it seems the Oracle OLE DB provider, downloaded from the Oracle website, has some sort of issue with the ANSI date literal. I haven't found any documentation why the provider messes up the columns like that, but if someone has better Google skills, please drop a note in the comments.</span>
 
 <p style="text-align: justify;">
   <strong>Conclusion</strong>

@@ -1,5 +1,5 @@
 ---
-title: Technical nepotism…do you suffer from it?
+title: Technical nepotism...do you suffer from it?
 author: SQLDenis
 type: post
 date: 2013-08-21T17:08:00+00:00
@@ -35,7 +35,7 @@ Looking at that, we can then easily say that you picked technology A because you
 
 Luckily in my job I don't have such restrictions, I can use SQL Server, if MongoDB is better we might use that and if Hadoop is the way to go then that is what we will use instead
 
-What about you and your company, do you have a technology stack that has to be used or are you free to explore other technologies? Are there restrictive policies and standards in place that makes this very difficult. Of course picking something non standard can cause problems down the road, what if you decided to use Silverlight instead of HTML 5…guess who has a problem now?
+What about you and your company, do you have a technology stack that has to be used or are you free to explore other technologies? Are there restrictive policies and standards in place that makes this very difficult. Of course picking something non standard can cause problems down the road, what if you decided to use Silverlight instead of HTML 5...guess who has a problem now?
 
  [1]: http://www.flickr.com/photos/johnbullas/676691952/ "nepotism by DrJohnBullas, on Flickr"
  [2]: http://en.wikipedia.org/wiki/Nepotism

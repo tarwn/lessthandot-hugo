@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2013-03-22T20:34:00+00:00
 ID: 2050
-excerpt: 'Loading data into SQL Databases (Azure) is fairly simple.  With SQL Server Integration Services (SSIS), the task becomes even more trivial as with many ETL tasks that we’ve done in the past from data source to data source.  Truly speaking, a data source&hellip;'
+excerpt: "Loading data into SQL Databases (Azure) is fairly simple.  With SQL Server Integration Services (SSIS), the task becomes even more trivial as with many ETL tasks that we've done in the past from data source to data source.  Truly speaking, a data source&hellip;"
 url: /index.php/datamgmt/dbprogramming/loading-large-volumes-of-data/
 views:
   - 29407
@@ -17,7 +17,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Loading data into SQL Databases (Azure) is fairly simple.  With SQL Server Integration Services (SSIS), the task becomes even more trivial as with many ETL tasks that we’ve done in the past from data source to data source.  Truly speaking, a data source is just that, a data source.  The true task at hand is in the preparation and transformation of the data between the source and destination.  Viewing SQL Databases as what they are, just another data source, makes the design of what you need to do less complicated.
+Loading data into SQL Databases (Azure) is fairly simple.  With SQL Server Integration Services (SSIS), the task becomes even more trivial as with many ETL tasks that we've done in the past from data source to data source.  Truly speaking, a data source is just that, a data source.  The true task at hand is in the preparation and transformation of the data between the source and destination.  Viewing SQL Databases as what they are, just another data source, makes the design of what you need to do less complicated.
 
 Simple Testing
 
@@ -59,7 +59,7 @@ Some things that are important and also recommended from the SQL CAT team when i
 
 The simple test of pushing data into SQL Azure is excellent for getting used to the slight differences and dealing with throwing data out into the cloud.  The problem you run into is going to be volume of data.  This is where the typical trial will cause some suffering on performance.
 
-Recently, I had the chance to finally load a real life amount of data into SQL Azure and I wasn’t all that happy with it.  Now, before going on, there are some things that could make it better.  More nodes in the cluster, a thicker network, possibly a design change to the table.  The list could go on but we’re talking about real life and I wanted to share this experience in case you run into it and know what to be prepared for.  Remember, this is pushing over the internet.  We’re not hard-lined into a network so that must be taken into account when we say, “it was slow”.
+Recently, I had the chance to finally load a real life amount of data into SQL Azure and I wasn't all that happy with it.  Now, before going on, there are some things that could make it better.  More nodes in the cluster, a thicker network, possibly a design change to the table.  The list could go on but we're talking about real life and I wanted to share this experience in case you run into it and know what to be prepared for.  Remember, this is pushing over the internet.  We're not hard-lined into a network so that must be taken into account when we say, “it was slow”.
 
 The amount of data that needed to be loaded from a SQL Server instance to SQL Azure was 90GB, comprised of one table.  The table was thin at 20 columns and a maximum row size of 233 bytes.  This information is important when considering your packet size.
 
@@ -73,15 +73,15 @@ The packet size was lowered slightly and use bulk load when available was checke
 
 **How long?**
 
-This was the painful part and really, why I’m writing this blog – prepare yourself.
+This was the painful part and really, why I'm writing this blog – prepare yourself.
 
 The SQL Azure destination had no indexing on it to enhance the ability to load the data.  The schema was identical as well so the data flow was a direct, source to destination (as shown above in the image).  The rate of loading the data was around ~500,000 rows per 14 minutes.  Minutes is not a typo.  Yet again, this is pushing over the internet to the cloud.
 
-Given this rate and the volume that needed to go up being around 260,000,000 rows in the first load, the estimated total time for this task was around 121 hours.  Whoa!!!  There’s some planning that needs to be done here, resources increased, horses kicked…something.
+Given this rate and the volume that needed to go up being around 260,000,000 rows in the first load, the estimated total time for this task was around 121 hours.  Whoa!!!  There's some planning that needs to be done here, resources increased, horses kicked...something.
 
 **Summary**
 
-This article wasn’t intended to show you a step-by-step SSIS setup to load data to SQL Azure.  Truly speaking, it is just another data source.  What we did take away is the time that is needed when you are loading a massive amount of data to SQL Azure as part of either a migration to the cloud, integration of historic data or other needs that have pushed your data into SQL Azure.
+This article wasn't intended to show you a step-by-step SSIS setup to load data to SQL Azure.  Truly speaking, it is just another data source.  What we did take away is the time that is needed when you are loading a massive amount of data to SQL Azure as part of either a migration to the cloud, integration of historic data or other needs that have pushed your data into SQL Azure.
 
 Plan for these lengths of time, take the options that need tuning into consideration, look at testing other load methods, and make sure the other cloud options are investigated.
 

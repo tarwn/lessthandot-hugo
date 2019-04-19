@@ -15,11 +15,11 @@ tags:
   - sql friday
 
 ---
-Here we are with another fascinating episode of the **SQL Friday, The Best SQL Server Links Of The Past Week** show. I can't believe it is week 10 already, if I continue like this I will be retired soon…..or just tired without the re prefix.
+Here we are with another fascinating episode of the **SQL Friday, The Best SQL Server Links Of The Past Week** show. I can't believe it is week 10 already, if I continue like this I will be retired soon.....or just tired without the re prefix.
   
 Here is what I found interesting this past week in SQL Land:
 
-**[Shrinking is a popular topic…][1]**
+**[Shrinking is a popular topic...][1]**
   
 Mike explains some concepts about shrinking and the transaction log
 
@@ -35,7 +35,7 @@ Allen White shows us how you can use PowerShell and SMO to get some information 
   
 Greg Low explains what you have to do to SQL Server logins that need to be moved between servers
 
-**[Back To Basics: Clustered vs NonClustered Indexes; what’s the difference?][5]**
+**[Back To Basics: Clustered vs NonClustered Indexes; what's the difference?][5]**
   
 Denny Cherry highlights some differences between Clustered and NonClustered Indexes
 

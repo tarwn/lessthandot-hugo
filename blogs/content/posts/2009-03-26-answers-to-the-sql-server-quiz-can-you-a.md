@@ -79,7 +79,7 @@ select @@rowcount as 'Rows returned'
 
 There are a couple of things that stand out
   
-You should never use * but only list the columns you really want, see also here: [Don’t use * but list the columns][2]
+You should never use * but only list the columns you really want, see also here: [Don't use * but list the columns][2]
   
 There is a missing qualifier in the table name
   

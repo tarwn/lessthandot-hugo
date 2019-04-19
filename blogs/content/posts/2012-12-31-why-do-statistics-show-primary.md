@@ -19,7 +19,7 @@ categories:
 ---
 I received an email the other day asking why, when running SHOW_STATISTICS, a person was always seeing the primary key in the statistics column density and other output, when the primary key was not part of the index the statistics were created from.
 
-This is a great question and relates to an article I’m writing on selectivity and ordering in the creation of an index while writing queries.  I thought a quick post would be great on it, since the answer isn’t truly standing out when you search for the reason statistics on nonclustered indexes will always contain the primary key or unique constraint column (on a table that is clustered).
+This is a great question and relates to an article I'm writing on selectivity and ordering in the creation of an index while writing queries.  I thought a quick post would be great on it, since the answer isn't truly standing out when you search for the reason statistics on nonclustered indexes will always contain the primary key or unique constraint column (on a table that is clustered).
 
 **Index Structure**
 
@@ -57,7 +57,7 @@ Listing 1
 
 What this means is, in the case of the creation of a nonclustered index, the column(s) that are being indexed are part of the index (the leaf node values).  The other structural part of a nonclustered index on a table with a clustered index is the row indicator.  In a clustered, unique situation, the best value for a row indicator is the clustered index.  This is the pointer back to the actual data row.
 
-Now that we know how the clustered values are used in a nonclustered index, let’s take a look at the structure of the nonclustered index.  Using DBCC IND and PAGE, we can drill down to see the actual utilization of the keys.
+Now that we know how the clustered values are used in a nonclustered index, let's take a look at the structure of the nonclustered index.  Using DBCC IND and PAGE, we can drill down to see the actual utilization of the keys.
 
 sql
 DBCC IND('QTuner',"SelectivityIndexOrder",2)
@@ -159,7 +159,7 @@ The output from listing 2 is shown in figure 4.
 
 Figure 4
 
-Notice in figure 4 that the key, which doesn’t exist on the table, is shown.  This goes back to the same reasoning of why a key is included in the statistics of a clustered table.  With a HEAP, however, the row indicator is a pointer directly to the data row.  In listing 3, running DBCC PAGE on the first page shown, we can see how to find the data.
+Notice in figure 4 that the key, which doesn't exist on the table, is shown.  This goes back to the same reasoning of why a key is included in the statistics of a clustered table.  With a HEAP, however, the row indicator is a pointer directly to the data row.  In listing 3, running DBCC PAGE on the first page shown, we can see how to find the data.
 
 sql
 DBCC IND('QTuner',SelectivityIndexOrderHeap,2)
@@ -177,12 +177,12 @@ Listing 3
 
 Figure 5
 
-I don’t want to dive too far into the PAGE output as it is out of scope.  What I will point out is the row outlined being the slot and the offset.  To really dig into PAGE, read, “[Inside the Storage Engine: Anatomy of a page][1]” by Paul Randal.
+I don't want to dive too far into the PAGE output as it is out of scope.  What I will point out is the row outlined being the slot and the offset.  To really dig into PAGE, read, “[Inside the Storage Engine: Anatomy of a page][1]” by Paul Randal.
 
 For the HEAP table and the nonclustered index, there is a need for the extra step, unlike the step utilizing a key in the clustered table, to utilize the row indicator directly back to the data rows in the HEAP structure.  Since this is not an actual column, that would not show in statistics.
 
 **Summary**
 
-As we’ve covered, the reason a you will see the primary key or unique keys in statistics, even when you do not specifically add them to a nonclustered index, is due to the need to have the row indicator as part of the index.
+As we've covered, the reason a you will see the primary key or unique keys in statistics, even when you do not specifically add them to a nonclustered index, is due to the need to have the row indicator as part of the index.
 
  [1]: http://www.sqlskills.com/blogs/paul/post/inside-the-storage-engine-anatomy-of-a-page.aspx

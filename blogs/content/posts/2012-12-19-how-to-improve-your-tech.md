@@ -111,7 +111,7 @@ An added bonus is that I have a code library that I can access anytime I want.
 
 ## Write a book
 
-If you are a masochistic type of person then I recommend you write a book, almost everybody in the tech world that I know swore that they would never write a book again when they were done…….and yet they did. In order to write a book you have to spend a LOT of time doing research, making sure your code is correct and much more. Once you are done with this if you were not a subject expert you will be now. The worst part of writing a book is the initial feedback you get pointing out all your mistakes, if you are not thick skinned this could become a problem.
+If you are a masochistic type of person then I recommend you write a book, almost everybody in the tech world that I know swore that they would never write a book again when they were done.......and yet they did. In order to write a book you have to spend a LOT of time doing research, making sure your code is correct and much more. Once you are done with this if you were not a subject expert you will be now. The worst part of writing a book is the initial feedback you get pointing out all your mistakes, if you are not thick skinned this could become a problem.
 
 ## Listen to podcast, watch webinars
 

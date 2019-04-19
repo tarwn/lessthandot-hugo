@@ -340,7 +340,7 @@ namespace MvcMusicStoreTests.Controllers {
 ```
 Like the initial test, I create the controller and populate it with an empty IMusicStoreEntities call from the factory. I then create an instance of the TestControllerBuilder class from the MVCContrib package, which will wire together all the stubs and fakes necessary to present Application, Session, and other necessary HttpContext values to the controller. I'll add my own FakeUser object (an implementation of IPrincipal) to the builder, then have it do it's magic on the CheckoutController instance. Voila, one fully wired up CheckoutController.
 
-### Totally Faked Out, Just Add Data…
+### Totally Faked Out, Just Add Data...
 
 Now that I have the controller logic able to run independently from a real HTTP request, I can return to finish work on the methods that interact more heavily with the data store.
 

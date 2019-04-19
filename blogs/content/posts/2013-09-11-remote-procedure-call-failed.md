@@ -45,7 +45,7 @@ You should come to either a 2005, 2008 or 2008 R2 configuration list
 
 Right click the SQL Server configuration Manager shortcut and go to properties.
 
-In the Target, you’ll see the snap is going to the SQLServerManager10.msc.  This is a 2008 R2 version and will not work well, if at all, with 2012 (or 2014).
+In the Target, you'll see the snap is going to the SQLServerManager10.msc.  This is a 2008 R2 version and will not work well, if at all, with 2012 (or 2014).
 
 C:WindowsSysWOW64mmc.exe /32 C:WindowsSysWOW64SQLServerManager10.msc
 

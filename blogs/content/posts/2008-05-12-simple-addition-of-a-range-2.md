@@ -15,7 +15,7 @@ categories:
 ---
 ## Adding a range of numbers
 
-Adding numbers is easy. Very easy for programs, right? How about adding up a range of numbers? 1 to 5 maybe ? 1+2+3+4+5 = 15 … easy !
+Adding numbers is easy. Very easy for programs, right? How about adding up a range of numbers? 1 to 5 maybe ? 1+2+3+4+5 = 15 ... easy !
 
 What about adding up 1 to 100 ? not so easy in your head, but with a little code this shouldn't be a problem. In fact a lot of programmers would approach it like the following:
 
@@ -27,7 +27,7 @@ for (i=1;i<=100;i++)
 }
 document.write("Loop: " + sumOfRangeLoop + "<br/>");	
 ```
-Great – it gets you the answer that you wanted. Now what about 25 to 25,000,000 ? OK, that takes a while to run…. What if I tried 234 to 435,657,123 ? Mmmm… ouch. This doesn't work too well does it ? 
+Great – it gets you the answer that you wanted. Now what about 25 to 25,000,000 ? OK, that takes a while to run.... What if I tried 234 to 435,657,123 ? Mmmm... ouch. This doesn't work too well does it ? 
 
 ## Improving Performance
 

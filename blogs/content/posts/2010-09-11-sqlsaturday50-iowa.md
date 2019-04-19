@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2010-09-11T14:09:16+00:00
 ID: 898
-excerpt: 'Last year I attended SQL Saturday in Iowa and enjoyed it immensely.  I was glad to see a follow up for this year coming this Friday, September 18th.  This year I’m very happy to announce that I will be attending Iowa’s second SQL Saturday and also contributing as a speaker.  If you have never been to a SQL Saturday event, I highly recommend attending this one or another in your area.  These events are free and organized by people just like you and I.'
+excerpt: Last year I attended SQL Saturday in Iowa and enjoyed it immensely.  I was glad to see a follow up for this year coming this Friday, September 18th.  This year I'm very happy to announce that I will be attending Iowa's second SQL Saturday and also contributing as a speaker.  If you have never been to a SQL Saturday event, I highly recommend attending this one or another in your area.  These events are free and organized by people just like you and I.
 url: /index.php/datamgmt/datadesign/sqlsaturday50-iowa/
 views:
   - 6428
@@ -28,7 +28,7 @@ tags:
   <img src="/wp-content/uploads/blogs/DataMgmt/sqlsat50.gif" alt="" title="" width="244" height="106" align="left" />
 </div>
 
-Last year I attended SQL Saturday in Iowa and enjoyed it immensely. I was glad to see a follow up for this year coming this Friday, September 18th. This year I’m very happy to announce that I will be attending [Iowa’s second SQL Saturday][1] and also contributing as a speaker. If you have never been to a SQL Saturday event, I highly recommend attending this one or another in your area. These events are free and organized by people just like you and I. That means they know what you want to hear and how to present that information to you. (Not to mention the awesome prizes that sponsors give out in the raffle)
+Last year I attended SQL Saturday in Iowa and enjoyed it immensely. I was glad to see a follow up for this year coming this Friday, September 18th. This year I'm very happy to announce that I will be attending [Iowa's second SQL Saturday][1] and also contributing as a speaker. If you have never been to a SQL Saturday event, I highly recommend attending this one or another in your area. These events are free and organized by people just like you and I. That means they know what you want to hear and how to present that information to you. (Not to mention the awesome prizes that sponsors give out in the raffle)
 
 These events are 100% free. One of the other great aspects to the SQL Community, we have a vast amount of truly community orientated vendors that sponsor SQL Saturday events. When you are attending, take the time out during lunch or between sessions to stop at the vendor booths to thank them and also find out what great new products they have to offer.
 

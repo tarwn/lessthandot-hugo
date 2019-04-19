@@ -26,7 +26,7 @@ I will start by saying that I truly enjoyed this book. The book is written in a 
 
 This book is filled with best practices and common sense. Each chapter ends with best practice consideration. The 3 page best practices considering security section in chapter 6 is something every SQL Server developer, administrator and especially an accidental DBA should memorize.
 
-The suggested work plan for a DBA is something I needed for a long time; it is there all in one place broken down by daily, weekly and monthly tasks. Besides best practices I found that this book also has the top 25 DBA worst practices…..I guarantee that almost everyone will have a couple of items on that list; now you have a chance to eliminate some of those.
+The suggested work plan for a DBA is something I needed for a long time; it is there all in one place broken down by daily, weekly and monthly tasks. Besides best practices I found that this book also has the top 25 DBA worst practices.....I guarantee that almost everyone will have a couple of items on that list; now you have a chance to eliminate some of those.
 
 Things that were introduced in SQL Server 2008 are marked with _New In 2008_, this enables someone with previous experience to quickly jump to those section and focus on the new stuff. Most of the material in this book also applies to previous versions of SQL Server; if you are not on version 2008 yet but will be in a year or so then this is good way to get yourself familiar with the new stuff while implementing best practices for your current environment.
 
@@ -84,7 +84,7 @@ appendix D Top 10 Management Studio enhancements
   
 appendix E Date/time data types in SQL Server 2008
 
-I would recommend this book to anyone who has to manage SQL Server, it doesn’t matter if the machines are already up and running or if you still have to install everything. The people who will benefit the most from this book are the accidental DBAs; these are the people who never managed a server before but because the company decided to downsize they became the DBA and it is only a matter of time before something happens.
+I would recommend this book to anyone who has to manage SQL Server, it doesn't matter if the machines are already up and running or if you still have to install everything. The people who will benefit the most from this book are the accidental DBAs; these are the people who never managed a server before but because the company decided to downsize they became the DBA and it is only a matter of time before something happens.
 
 The material in this book will make your job easier; it will make you a better administrator and why not invest in yourself by getting this book?
 

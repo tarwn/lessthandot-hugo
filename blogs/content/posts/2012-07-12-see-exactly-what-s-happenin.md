@@ -1,5 +1,5 @@
 ---
-title: See Exactly What’s Happenin’ with SSIS 2012 Data Taps
+title: See Exactly What's Happenin' with SSIS 2012 Data Taps
 author: joshuafennessy
 type: post
 date: 2012-07-12T20:49:00+00:00
@@ -22,7 +22,7 @@ categories:
 
 Experienced SSIS developers will recognize the usefulness of the simple _data viewer_ object used during the development process to peek into the data set and see what is going on at various stages of execution.
 
-One piece of functionality that has been missing since SQL 2005 is the ability to do this from a production SSIS server. Since the data viewer required the use of BIDS, and most organizations don’t allow development tools to be connected to production; troubleshooting data issues often involved lots of blind poking around and vague assumptions.
+One piece of functionality that has been missing since SQL 2005 is the ability to do this from a production SSIS server. Since the data viewer required the use of BIDS, and most organizations don't allow development tools to be connected to production; troubleshooting data issues often involved lots of blind poking around and vague assumptions.
 
 This problem is nullified in SQL 2012 with the introduction of the SSIS Data Tap. This is a **run-time** utility than can be used to peek into the data at various stages of execution – JUST LIKE THE DATA VIEWER!
 
@@ -42,7 +42,7 @@ _
 <img width="372" src="http://joshuafennessy.files.wordpress.com/2012/07/clip_image004.png" alt="IdentificationString property value" height="27" />  
 _ 
 
-With these two pieces of information, it’s off to SSMS for the rest of the procedure!
+With these two pieces of information, it's off to SSMS for the rest of the procedure!
 
 * * *
 
@@ -55,7 +55,7 @@ catalog.create_execution (<a href="http://msdn.microsoft.com/en-us/library/ff878
 catalog.add\_data\_tap (<a href="http://msdn.microsoft.com/en-us/library/hh230989" target="_blank">MSDN</a>)  
 catalog.start_execution (<a href="http://msdn.microsoft.com/en-us/library/ff878160" target="_blank">MSDN</a>)
 
-To make it REALLY easy, I’ve written a SQL Script using template parameters that YOU CAN HAVE! All you need to do is use <CTRL>+<SHIFT>+M to replace the defaults with the values that are required for your instance. Get a copy of the script [here][2]. If you have trouble with the download [email me][3] and I’ll be happy to send it to you.
+To make it REALLY easy, I've written a SQL Script using template parameters that YOU CAN HAVE! All you need to do is use <CTRL>+<SHIFT>+M to replace the defaults with the values that are required for your instance. Get a copy of the script [here][2]. If you have trouble with the download [email me][3] and I'll be happy to send it to you.
 
 * * *
 
@@ -72,8 +72,8 @@ There is your output! Now you can see EXACTLY what SSIS was working with at any 
 **— Some Important Notes —  
 ** 
 
-  * Data taps are only valid for ONE execution, so unless you create a job step with all of this code, you’ll only get a data tap when you explicitly specify it.
-  * Data taps create I/O (go figure). This means that performance WILL be affected when running a data tap. I wouldn’t recommend running them for every execution. Only use them when needed.
+  * Data taps are only valid for ONE execution, so unless you create a job step with all of this code, you'll only get a data tap when you explicitly specify it.
+  * Data taps create I/O (go figure). This means that performance WILL be affected when running a data tap. I wouldn't recommend running them for every execution. Only use them when needed.
   * Data taps use the catalog schema, which means they require an SSIS 2012 Integration Services Catalog to be used. Tapped packages also need to be deployed to this catalog.
 
  [1]: http://joshuafennessy.files.wordpress.com/2012/07/clip_image003.png

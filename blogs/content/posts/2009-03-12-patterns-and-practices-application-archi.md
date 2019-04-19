@@ -40,7 +40,7 @@ When getting started with your design, bear in mind the key principles that will
   * **Separation of concerns**. Break your application into distinct features that overlap in functionality as little as possible.
   * **Single Responsibility Principle**. Each component or a module should be responsible for only a specific feature or functionality.
   * **Principle of least knowledge**.\*\* A component or an object should not know about internal details of other components or objects. Also known as the Law of Demeter\*\* (LoD).
-  * **Don’t Repeat Yourself (DRY)**. There should be only one component providing a specific functionality; the functionality should not be duplicated in any other component.
+  * **Don't Repeat Yourself (DRY)**. There should be only one component providing a specific functionality; the functionality should not be duplicated in any other component.
   * **Avoid doing a big design upfront**. If your application requirements are unclear, or if there is a possibility of the design evolving over time, avoid making a large design effort prematurely. This design principle is often abbreviated as BDUF. 
   * **Prefer composition over inheritance**. Wherever possible, use composition over inheritance when reusing functionality because inheritance increases the dependency between parent and child classes, thereby limiting the reuse of child classes.
 

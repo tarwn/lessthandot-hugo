@@ -25,11 +25,11 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  I recently enrolled myself in the O’Reilly Blogger Review program, which basically allows me to get one O’Reilly eBook for free per month so I can review it on my blog. This works in both ways of course: I get free eBooks while they’re still hot from the press (figuratively speaking of course) and the books get some extra coverage on social media. A nice bonus is that Microsoft Press books are also published through O’Reilly, so it is possible I can get my hands early on new SQL Server books.
+  I recently enrolled myself in the O'Reilly Blogger Review program, which basically allows me to get one O'Reilly eBook for free per month so I can review it on my blog. This works in both ways of course: I get free eBooks while they're still hot from the press (figuratively speaking of course) and the books get some extra coverage on social media. A nice bonus is that Microsoft Press books are also published through O'Reilly, so it is possible I can get my hands early on new SQL Server books.
 </p>
 
 <p style="text-align: justify">
-  They do encourage you to do honest reviews, so don’t expect every review to go like “OMG this is the bestest most awesomesauce book I have ever read!”. It might though if it is an actual great book, but if it isn’t, I will surely mention it in the review.
+  They do encourage you to do honest reviews, so don't expect every review to go like “OMG this is the bestest most awesomesauce book I have ever read!”. It might though if it is an actual great book, but if it isn't, I will surely mention it in the review.
 </p>
 
 <p style="text-align: justify">
@@ -49,5 +49,5 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Personally I liked this book. Although it is focused on data science projects, there are plenty nuggets of wisdom that can be ported to the realm of business intelligence. The book isn’t too long – a mere 93 pages – which makes it easily digestible. If the book would have been longer, it might get a bit boring to read. The author has a pleasant writing style and uses examples throughout the book. Without the examples, the concepts would have been much harder to grasp. I would recommend this book to anyone who works with data professionally. It will help you to structure your thoughts before diving into the next project.
+  Personally I liked this book. Although it is focused on data science projects, there are plenty nuggets of wisdom that can be ported to the realm of business intelligence. The book isn't too long – a mere 93 pages – which makes it easily digestible. If the book would have been longer, it might get a bit boring to read. The author has a pleasant writing style and uses examples throughout the book. Without the examples, the concepts would have been much harder to grasp. I would recommend this book to anyone who works with data professionally. It will help you to structure your thoughts before diving into the next project.
 </p>

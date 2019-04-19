@@ -1,5 +1,5 @@
 ---
-title: 'More PetaPoco: Id’s and Multi-POCO queries'
+title: "More PetaPoco: Id's and Multi-POCO queries"
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2012-05-02T08:23:00+00:00

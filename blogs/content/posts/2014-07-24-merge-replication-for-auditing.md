@@ -15,11 +15,11 @@ categories:
 ---
 I recently had the pleasure of presenting for the <a href="http://adelaide.sqlpass.org/" title="Adelaide SQL Server User Group" target="_blank">Adelaide SQL Server User Group</a>. I truly enjoyed the presentation and the group attending. The best part of this presentation is, it was on Merge Replication and all the great things we can accomplish with it. 
 
-While setting up demonstrations for that presentation, I began to think about how effective we can be with SQL Server features. While some features may be specifically written for tasks, they are not always feasible in our specific environments. I’d like to share one of those features and methods to effectively take advantage of what we can do with SQL Server, in this article. 
+While setting up demonstrations for that presentation, I began to think about how effective we can be with SQL Server features. While some features may be specifically written for tasks, they are not always feasible in our specific environments. I'd like to share one of those features and methods to effectively take advantage of what we can do with SQL Server, in this article. 
 
-If I had to come up with a percentage of clients that have asked me to implement a way of monitoring or reviewing when and how data was changed, I’d have to say that percentage is hovering in the 80% range. In today’s data age, it is simply a much needed aspect to evolving data; knowledge of data change and point of origins. Change Data Capture (CDC) is a great feature and one that directly goes to answering this requirement. However, in some cases, CDC isn’t a viable solution. This could be due to implementation requirements, instance impact of log readers and so on. In that case, we have to start thinking outside the box of native, wizard-based installations, and start looking to how we can utilize other features. 
+If I had to come up with a percentage of clients that have asked me to implement a way of monitoring or reviewing when and how data was changed, I'd have to say that percentage is hovering in the 80% range. In today's data age, it is simply a much needed aspect to evolving data; knowledge of data change and point of origins. Change Data Capture (CDC) is a great feature and one that directly goes to answering this requirement. However, in some cases, CDC isn't a viable solution. This could be due to implementation requirements, instance impact of log readers and so on. In that case, we have to start thinking outside the box of native, wizard-based installations, and start looking to how we can utilize other features. 
 
-For this case, Merge Replication may be a good option and one I’ve effectively implemented in the past simply for change tracking and reporting. Merge Replication with a specific publication configuration, can work much like CDC or Transactional Replication but remove the log reader and other internal tables that would require reporting on, directly in the same database. We can enhance the designs of Merge Replication Publishers to also make effective use of conflicts with customer coding in business logic handlers. We then have the ability to begin altering the way the subscribers of the data begin to receive data. 
+For this case, Merge Replication may be a good option and one I've effectively implemented in the past simply for change tracking and reporting. Merge Replication with a specific publication configuration, can work much like CDC or Transactional Replication but remove the log reader and other internal tables that would require reporting on, directly in the same database. We can enhance the designs of Merge Replication Publishers to also make effective use of conflicts with customer coding in business logic handlers. We then have the ability to begin altering the way the subscribers of the data begin to receive data. 
 
 For example, take a scenario where we have the following requirements.
 
@@ -135,7 +135,7 @@ Now that we have a publication containing the Person.Person table as the article
 
 **Testing Audits**
   
-Again, our landscape consists of a publisher, a subscriber, and a resolver between them to manage the synchronization to the subscriber. The subscriber’s article is set for download only so we are assured no changes will be flowing back to the publisher.
+Again, our landscape consists of a publisher, a subscriber, and a resolver between them to manage the synchronization to the subscriber. The subscriber's article is set for download only so we are assured no changes will be flowing back to the publisher.
   
 On the publisher and the AdventureWorks2012 database, we can run a test by updating the Title column.
 
@@ -169,7 +169,7 @@ We can see that many tests have occurred but the existing Title still remains in
 
 **Summary**
   
-Taking advantage of the features natively available in SQL Server is an extremely effective way to accomplish tasks that may be nicely packaged in other features, simply not available to the edition or configurations. We’ve shown a great way of managing Merge Replication in a data audit solution just for this concept. Keep in mind, edition costs and other blocking events may cause you to not have access to features such as CDC but, there are many other features that provide much functionality far and beyond what they may seem to have on the surface.
+Taking advantage of the features natively available in SQL Server is an extremely effective way to accomplish tasks that may be nicely packaged in other features, simply not available to the edition or configurations. We've shown a great way of managing Merge Replication in a data audit solution just for this concept. Keep in mind, edition costs and other blocking events may cause you to not have access to features such as CDC but, there are many other features that provide much functionality far and beyond what they may seem to have on the surface.
 
  [1]: /wp-content/uploads/2014/07/merge_1.png
  [2]: /wp-content/uploads/2014/07/merge_2.png

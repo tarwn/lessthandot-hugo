@@ -10,7 +10,7 @@ excerpt: |
   Here is the info
   
   
-  Today we’re announcing schema.org, a new initiative from Yahoo!, Bing, and Google, to create and support a common set of schemas for structured data markup on web pages. With sch&hellip;
+  Today we're announcing schema.org, a new initiative from Yahoo!, Bing, and Google, to create and support a common set of schemas for structured data markup on web pages. With sch&hellip;
 url: /index.php/webdev/webdesigngraphicsstyling/bing-google-and-yahoo-announce/
 views:
   - 9970
@@ -29,7 +29,7 @@ Bing, Google and Yahoo! have announced [Schema.org][1]
 
 Here is the info
 
-Today we’re announcing schema.org, a new initiative from Yahoo!, Bing, and Google, to create and support a common set of schemas for structured data markup on web pages. With schema.org, webmasters and developers can learn about structured data and improve how their sites appear in search results on Bing, Google, and Yahoo!. Information and tips are available on schema.org, a one-stop resource for webmasters looking to add markup to make their pages better understood by search engines.
+Today we're announcing schema.org, a new initiative from Yahoo!, Bing, and Google, to create and support a common set of schemas for structured data markup on web pages. With schema.org, webmasters and developers can learn about structured data and improve how their sites appear in search results on Bing, Google, and Yahoo!. Information and tips are available on schema.org, a one-stop resource for webmasters looking to add markup to make their pages better understood by search engines.
 
 ## What is Schema.org?
 

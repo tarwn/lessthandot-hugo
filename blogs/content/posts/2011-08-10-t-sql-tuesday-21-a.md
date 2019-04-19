@@ -1,10 +1,10 @@
 ---
-title: 'T-SQL Tuesday #21 – A trigger can do that!'
+title: T-SQL Tuesday #21 – A trigger can do that!
 author: Ted Krueger (onpnt)
 type: post
 date: 2011-08-10T18:04:00+00:00
 ID: 1297
-excerpt: 'This month’s T-SQL Tuesday Wednesday topic is all about failure.  To be exact, Crap Code.  I’m not going to post any code but instead post the problem, solution and coding initiative that were taken.  Code was the “crap” part that in all was the failure&hellip;'
+excerpt: "This month's T-SQL Tuesday Wednesday topic is all about failure.  To be exact, Crap Code.  I'm not going to post any code but instead post the problem, solution and coding initiative that were taken.  Code was the “crap” part that in all was the failure&hellip;"
 url: /index.php/datamgmt/dbprogramming/t-sql-tuesday-21-a/
 views:
   - 43001
@@ -22,11 +22,11 @@ categories:
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-family: Calibri; font-size: small;">This month’s </span><a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"><span style="font-family: Calibri; color: #0000ff; font-size: small;">T-SQL Tuesday Wednesday topic is all about failure</span></a><span style="font-family: Calibri; font-size: small;">.<span style="mso-spacerun: yes;">  </span>To be exact, Crap Code.<span style="mso-spacerun: yes;">  </span>I’m not going to post any code but instead post the problem, solution and coding initiative that were taken.<span style="mso-spacerun: yes;">  </span>Code was the “crap” part that in all was the failure in this real-life event.<span style="mso-spacerun: yes;">  </span>For the record, the story I am about to tell everyone in this post, is a real-life story that I did early on in my career.<span style="mso-spacerun: yes;">  </span>Although it is my hope to always teach in order to prevent things like this particular failure to happen to all of you, I also have the belief that we learn from failure.<span style="mso-spacerun: yes;">  </span>Sometimes, a person just needs to have the reaction and heart pumping feeling from a complete failure that affects thousands of users, in order to harden how we need to approach anything.</span><a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"></a><em style="mso-bidi-font-style: normal;"><span style="line-height: 115%; font-family: Tahoma; font-size: 9.5pt;"> </span></em>
+  <span style="font-family: Calibri; font-size: small;">This month's </span><a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"><span style="font-family: Calibri; color: #0000ff; font-size: small;">T-SQL Tuesday Wednesday topic is all about failure</span></a><span style="font-family: Calibri; font-size: small;">.<span style="mso-spacerun: yes;">  </span>To be exact, Crap Code.<span style="mso-spacerun: yes;">  </span>I'm not going to post any code but instead post the problem, solution and coding initiative that were taken.<span style="mso-spacerun: yes;">  </span>Code was the “crap” part that in all was the failure in this real-life event.<span style="mso-spacerun: yes;">  </span>For the record, the story I am about to tell everyone in this post, is a real-life story that I did early on in my career.<span style="mso-spacerun: yes;">  </span>Although it is my hope to always teach in order to prevent things like this particular failure to happen to all of you, I also have the belief that we learn from failure.<span style="mso-spacerun: yes;">  </span>Sometimes, a person just needs to have the reaction and heart pumping feeling from a complete failure that affects thousands of users, in order to harden how we need to approach anything.</span><a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"></a><em style="mso-bidi-font-style: normal;"><span style="line-height: 115%; font-family: Tahoma; font-size: 9.5pt;"> </span></em>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <strong style="mso-bidi-font-weight: normal;"><span style="line-height: 115%; font-family: Tahoma; font-size: 9.5pt;">The scenario…</span></strong>
+  <strong style="mso-bidi-font-weight: normal;"><span style="line-height: 115%; font-family: Tahoma; font-size: 9.5pt;">The scenario...</span></strong>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -34,7 +34,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <em style="mso-bidi-font-style: normal;"><span style="font-size: small;"><span style="font-family: Calibri;">The first meeting is in session and you get all the requirements in front of you.<span style="mso-spacerun: yes;">  </span>As you see all the requirements you recall recently using a trigger for the first time to handle data in and data out of a table.<span style="mso-spacerun: yes;">  </span>Immediately you spout out, “We could do this in a trigger in a weeks’ time”.<span style="mso-spacerun: yes;">  </span></span></span></em>
+  <em style="mso-bidi-font-style: normal;"><span style="font-size: small;"><span style="font-family: Calibri;">The first meeting is in session and you get all the requirements in front of you.<span style="mso-spacerun: yes;">  </span>As you see all the requirements you recall recently using a trigger for the first time to handle data in and data out of a table.<span style="mso-spacerun: yes;">  </span>Immediately you spout out, “We could do this in a trigger in a weeks' time”.<span style="mso-spacerun: yes;">  </span></span></span></em>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -46,7 +46,7 @@ categories:
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <em style="mso-bidi-font-style: normal;"><span style="font-size: small;"><span style="font-family: Calibri;">The team doesn’t even question you.<span style="mso-spacerun: yes;">  </span>You are the brain child for SQL Server and knowledge base for .NET as combined to anything that has Microsoft on it.<span style="mso-spacerun: yes;">  </span>See, the team is an SAP/Oracle team.<span style="mso-spacerun: yes;">  </span>They have no clue what the other side of the wall does or can do.<span style="mso-spacerun: yes;">  </span></span></span></em>
+  <em style="mso-bidi-font-style: normal;"><span style="font-size: small;"><span style="font-family: Calibri;">The team doesn't even question you.<span style="mso-spacerun: yes;">  </span>You are the brain child for SQL Server and knowledge base for .NET as combined to anything that has Microsoft on it.<span style="mso-spacerun: yes;">  </span>See, the team is an SAP/Oracle team.<span style="mso-spacerun: yes;">  </span>They have no clue what the other side of the wall does or can do.<span style="mso-spacerun: yes;">  </span></span></span></em>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -54,7 +54,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-size: small;"><span style="font-family: Calibri;">I’m going to go over the way this project was attacked by non-other than, myself.<span style="mso-spacerun: yes;">  </span></span></span>
+  <span style="font-size: small;"><span style="font-family: Calibri;">I'm going to go over the way this project was attacked by non-other than, myself.<span style="mso-spacerun: yes;">  </span></span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -90,7 +90,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-family: Calibri; font-size: small;">We all see where this is going so we’ll stop and start to talk about this complete failure on my part.</span>
+  <span style="font-family: Calibri; font-size: small;">We all see where this is going so we'll stop and start to talk about this complete failure on my part.</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -98,15 +98,15 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-size: small;"><span style="font-family: Calibri;">Answer:<span style="mso-spacerun: yes;">  </span>Absolutely not!<span style="mso-spacerun: yes;">  </span>Simply because something is fresh in your mind does not mean it is appropriate for the next project.<span style="mso-spacerun: yes;">  </span>A skill learned is simply another skill in your arsenal.<span style="mso-spacerun: yes;">  </span>Each project should be approached with the mindset that it will require its unique method to achieve a successful implementation.<span style="mso-spacerun: yes;">  </span>Would a trigger be a possible solution?<span style="mso-spacerun: yes;">  </span>Possibly.<span style="mso-spacerun: yes;">  </span>However, given what I know now, do I even consider triggers?<span style="mso-spacerun: yes;">  </span>Not very often and we’ll get into why not.<span style="mso-spacerun: yes;">  </span></span></span>
+  <span style="font-size: small;"><span style="font-family: Calibri;">Answer:<span style="mso-spacerun: yes;">  </span>Absolutely not!<span style="mso-spacerun: yes;">  </span>Simply because something is fresh in your mind does not mean it is appropriate for the next project.<span style="mso-spacerun: yes;">  </span>A skill learned is simply another skill in your arsenal.<span style="mso-spacerun: yes;">  </span>Each project should be approached with the mindset that it will require its unique method to achieve a successful implementation.<span style="mso-spacerun: yes;">  </span>Would a trigger be a possible solution?<span style="mso-spacerun: yes;">  </span>Possibly.<span style="mso-spacerun: yes;">  </span>However, given what I know now, do I even consider triggers?<span style="mso-spacerun: yes;">  </span>Not very often and we'll get into why not.<span style="mso-spacerun: yes;">  </span></span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-family: Calibri; font-size: small;">Second, if you read closely, you would have caught this line, “<em style="mso-bidi-font-style: normal;">The trigger was lengthy due to some business logic that was required</em>”.<span style="mso-spacerun: yes;">  </span>OK, what’s the issue here?</span>
+  <span style="font-family: Calibri; font-size: small;">Second, if you read closely, you would have caught this line, “<em style="mso-bidi-font-style: normal;">The trigger was lengthy due to some business logic that was required</em>”.<span style="mso-spacerun: yes;">  </span>OK, what's the issue here?</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-size: small;"><span style="font-family: Calibri;">Answer:<span style="mso-spacerun: yes;">  </span>If I could go back to 14-15 years ago, or whenever this real-life example happened, I’d kick my own ass.<span style="mso-spacerun: yes;">  </span></span></span>
+  <span style="font-size: small;"><span style="font-family: Calibri;">Answer:<span style="mso-spacerun: yes;">  </span>If I could go back to 14-15 years ago, or whenever this real-life example happened, I'd kick my own ass.<span style="mso-spacerun: yes;">  </span></span></span>
 </p>
 
 <div class="image_block">
@@ -118,7 +118,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-size: small;"><span style="font-family: Calibri;">One of the most critical aspects to database designs I’ve learned is: Business Logic has no place in T-SQL and most of all at the transactional level.<span style="mso-spacerun: yes;">  </span>Databases are meant to store data.<span style="mso-spacerun: yes;">  </span>T-SQL is a set based language that is downright horrid at conditional logic or implementing rules based on the business.<span style="mso-spacerun: yes;">  </span>Implementing rules based on data is different.<span style="mso-spacerun: yes;">  </span>Defaults, constraints…all are good to manage the storage of data.<span style="mso-spacerun: yes;">  </span>The performance that came from this 300 line trigger based on the business logic completely drowned the applications speed and ability to insert new records on this particular table.<span style="mso-spacerun: yes;">  </span>That table happened to be the most critical table and starting point to an entire ticketing process.<span style="mso-spacerun: yes;">  </span>So we can see how having it function optimally was critical.<span style="mso-spacerun: yes;">  </span></span></span>
+  <span style="font-size: small;"><span style="font-family: Calibri;">One of the most critical aspects to database designs I've learned is: Business Logic has no place in T-SQL and most of all at the transactional level.<span style="mso-spacerun: yes;">  </span>Databases are meant to store data.<span style="mso-spacerun: yes;">  </span>T-SQL is a set based language that is downright horrid at conditional logic or implementing rules based on the business.<span style="mso-spacerun: yes;">  </span>Implementing rules based on data is different.<span style="mso-spacerun: yes;">  </span>Defaults, constraints...all are good to manage the storage of data.<span style="mso-spacerun: yes;">  </span>The performance that came from this 300 line trigger based on the business logic completely drowned the applications speed and ability to insert new records on this particular table.<span style="mso-spacerun: yes;">  </span>That table happened to be the most critical table and starting point to an entire ticketing process.<span style="mso-spacerun: yes;">  </span>So we can see how having it function optimally was critical.<span style="mso-spacerun: yes;">  </span></span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -146,7 +146,7 @@ categories:
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-size: small;"></span><span style="font-size: small;"><span style="font-family: Calibri;"><span style="mso-spacerun: yes;"> </span>I learned very quickly to keep my mouth shut when it comes to me “thinking” I have the answer.<span style="mso-spacerun: yes;">  </span>Discuss potential solutions and paths that can be reviewed as possible solutions.<span style="mso-spacerun: yes;">  </span>Research other possible solutions that may be in place already.<span style="mso-spacerun: yes;">  </span>Do the work and don’t commit to something as a solution simply because you were excited you recently learned it.<span style="mso-spacerun: yes;">  </span></span></span>
+  <span style="font-size: small;"></span><span style="font-size: small;"><span style="font-family: Calibri;"><span style="mso-spacerun: yes;"> </span>I learned very quickly to keep my mouth shut when it comes to me “thinking” I have the answer.<span style="mso-spacerun: yes;">  </span>Discuss potential solutions and paths that can be reviewed as possible solutions.<span style="mso-spacerun: yes;">  </span>Research other possible solutions that may be in place already.<span style="mso-spacerun: yes;">  </span>Do the work and don't commit to something as a solution simply because you were excited you recently learned it.<span style="mso-spacerun: yes;">  </span></span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">

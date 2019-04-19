@@ -13,13 +13,13 @@ categories:
   - Web Design, Graphics and Styling
 
 ---
-A healthy application is one which does not throw up any application errors. However in unexpected situations when it happens, error gets logged on the web server’s event log. It’s usually takes a little while to scroll through the event viewer to find your error. One good option is to create a separate application error log for your website. 
+A healthy application is one which does not throw up any application errors. However in unexpected situations when it happens, error gets logged on the web server's event log. It's usually takes a little while to scroll through the event viewer to find your error. One good option is to create a separate application error log for your website. 
 
-Let’s see some code now. Start by importing the System.Diagnostics namespace.
+Let's see some code now. Start by importing the System.Diagnostics namespace.
   
 Server.GetLastError() is accessible only at two places – 1. Page\_Error event handler of a page . 2. Application\_Error event handler in the global.asax 
 
-In this article, we’ll trap the unhandled errors in Application_Error event.
+In this article, we'll trap the unhandled errors in Application_Error event.
 
 ```csharp
 <%Import Namespace= “System.Diagnostics”%>
@@ -79,7 +79,7 @@ Continuing with the creation of Eventlog, create a sample page on your site to g
 
 9.Check event log. 
 
-The only drawback to create to an application specific event log is that you need admin rights on the web server. If that’s not possible, you can send out an email or write to a log file on the server. Code to send email –
+The only drawback to create to an application specific event log is that you need admin rights on the web server. If that's not possible, you can send out an email or write to a log file on the server. Code to send email –
 
 ```csharp
 <%Import System.Web.Mail%>

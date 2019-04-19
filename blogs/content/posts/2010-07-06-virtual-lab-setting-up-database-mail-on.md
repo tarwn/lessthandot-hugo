@@ -92,7 +92,7 @@ After a final review screen, press the 'Finish' button to implement the changes.
   <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/08_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/08_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS – Finished
 </div>
 
-The last step is to test our new setup. Right-click the Database Mail menu option in SSMS and select “Send Test Email…”.
+The last step is to test our new setup. Right-click the Database Mail menu option in SSMS and select “Send Test Email...”.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/DatabaseMail/orig/09_config.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/DatabaseMail/09_config.png" alt="SSMS DatabaseMail - Test Email" /></a><br /> SSMS Menu – Sending a Test Email

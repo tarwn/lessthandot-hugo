@@ -34,7 +34,7 @@ Does your company publishes an annual catalog, season special catalogs, flyers f
 
 # Marketing
 
-You spent weeks on creating a new marketing campaign with a new styling, product images, descriptions etc. And now you have to update the company websites, web shops, catalogs, flyers,… With a PIM solution you only have to update your product information in the PIM system and it will be pushed to all your channels. 
+You spent weeks on creating a new marketing campaign with a new styling, product images, descriptions etc. And now you have to update the company websites, web shops, catalogs, flyers,... With a PIM solution you only have to update your product information in the PIM system and it will be pushed to all your channels. 
 
 # Sales
 
@@ -42,7 +42,7 @@ More and more sales are confronted with customers looking up details on the inte
 
 # After-sales/Support
 
-In your PIM system you can find all the technical specifications of your products, including spare parts, accessories, follow up products, … So certainly if you keep all the product info in PIM even if you don't sell them anymore, after-sales can easily advise your customers if they are looking for spare parts or a new alternative for the product they bought from you years ago.
+In your PIM system you can find all the technical specifications of your products, including spare parts, accessories, follow up products, ... So certainly if you keep all the product info in PIM even if you don't sell them anymore, after-sales can easily advise your customers if they are looking for spare parts or a new alternative for the product they bought from you years ago.
 
 # The Customer
 

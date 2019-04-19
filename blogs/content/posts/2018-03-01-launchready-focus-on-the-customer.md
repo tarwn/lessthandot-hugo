@@ -33,7 +33,7 @@ When I started LaunchReady, it didn't even have a name. I had a general idea of 
   </p>
 </div>
 
-Initially, I was my target customer. This would be the product I was looking for when I scaled the engineering team at [PrecisionLender][1]. I had wanted a tool that would take all of the best learning from our core team and make it available to the new folks as they were getting up to speed. For reference, we were quadrupling the product development organization, launching a public API and third-party integrations, replatforming the entire 250KLOC front-end, refining existing features, and we added a newborn along the way for extra difficulty level…it was a busy time.
+Initially, I was my target customer. This would be the product I was looking for when I scaled the engineering team at [PrecisionLender][1]. I had wanted a tool that would take all of the best learning from our core team and make it available to the new folks as they were getting up to speed. For reference, we were quadrupling the product development organization, launching a public API and third-party integrations, replatforming the entire 250KLOC front-end, refining existing features, and we added a newborn along the way for extra difficulty level...it was a busy time.
 
 I wanted a product that focused on the fast growing, development organization that couldn't afford to go learn and build and support a whole second product to test their first one and didn't have experienced test automation folks on board already. And I wanted to challenge the conventions that UI Automation must be slow and fragile and hard to change.
 

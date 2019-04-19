@@ -185,7 +185,7 @@ db.Blog.find()
 { "_id" : ObjectId("510961b3e5247980b903c30f"), "name" : "Xavier", "age" : 10, "city" : "Barcelona"
 { "_id" : ObjectId("510961b5e5247980b903c310"), "name" : "Zen", "age" : 50, "city" : "Kyoto" }</pre>
 
-As you can see it it pretty straightforward to backup and restore databases. What if you just want to restore a collection? Aha…that will be tomorrow's post: [MongoDB: How to restore collections][2]
+As you can see it it pretty straightforward to backup and restore databases. What if you just want to restore a collection? Aha...that will be tomorrow's post: [MongoDB: How to restore collections][2]
 
 That is all for this post, if you are interested in my other MongoDB posts, you can find them here:
   

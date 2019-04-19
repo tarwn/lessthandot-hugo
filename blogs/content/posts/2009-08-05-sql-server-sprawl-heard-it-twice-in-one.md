@@ -25,7 +25,7 @@ In this book there is a mention of SQL Server sprawl, interesting I have never h
 
 If you need to find out all the instances that are on your network then check out this fine post by [onpnt][3]: [Scan network for SQL Server instances][4]. In that post you will learn how you can use SQL ping to find these instances
 
-What is the solution to SQL Server sprawl? Virtualization is one of the solutions mentioned, this is probably fine for smaller databases but I don’t see my databases going the virtual route any time soon, as a matter of fact we just purchased new servers for our SQL Servers and soon I will be running SQL server 2008 only 🙂
+What is the solution to SQL Server sprawl? Virtualization is one of the solutions mentioned, this is probably fine for smaller databases but I don't see my databases going the virtual route any time soon, as a matter of fact we just purchased new servers for our SQL Servers and soon I will be running SQL server 2008 only 🙂
 
 If you would like to read a sample chapter of SQL Server 2008 Administration In Action then visit this link http://www.manning.com/colledge/ There are 2 sample chapters available right now. The book should be available August 10 and you can already preorder it from [Amazon][2]. I will have my review up in a week or two.
 

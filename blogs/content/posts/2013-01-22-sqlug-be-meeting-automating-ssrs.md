@@ -7,7 +7,7 @@ ID: 1930
 excerpt: |
    
   
-  Next Tuesday – 29 januari 2013 – my colleague Valentino (blog | twitter) and I will give two sessions on the topic of Reporting Services deployments. In contrast with SSIS and SSAS, there isn’t much available to automate this, so we’ll be spending&hellip;
+  Next Tuesday – 29 januari 2013 – my colleague Valentino (blog | twitter) and I will give two sessions on the topic of Reporting Services deployments. In contrast with SSIS and SSAS, there isn't much available to automate this, so we'll be spending&hellip;
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sqlug-be-meeting-automating-ssrs/
 views:
   - 6975
@@ -33,7 +33,7 @@ tags:
 </div>
 
 <p style="text-align: justify;">
-  Next Tuesday – 29 januari 2013 – my colleague Valentino (<a href="http://blog.hoegaerden.be/">blog</a> | <a href="https://twitter.com/ValentinoV42">twitter</a>) and I will give two sessions on the topic of Reporting Services deployments at the Belgian SQL Server User Group. In contrast with SSIS and SSAS, there isn’t much available to automate this, so we’ll be spending some time exploring how this gap can be crossed. Each of us will present a different method. Mine is about MSBUILD, an idea presented to my Jamie Thomson (<a href="http://sqlblog.com/blogs/jamie_thomson/default.aspx">blog</a> | <a href="https://twitter.com/jamiet">twitter</a>), who pointed me to one of his blog posts: <a href="http://sqlblog.com/blogs/jamie_thomson/archive/2009/10/31/deploying-reporting-services-reports-using-msbuild.aspx">Deploying Reporting Services reports using msbuild</a>.
+  Next Tuesday – 29 januari 2013 – my colleague Valentino (<a href="http://blog.hoegaerden.be/">blog</a> | <a href="https://twitter.com/ValentinoV42">twitter</a>) and I will give two sessions on the topic of Reporting Services deployments at the Belgian SQL Server User Group. In contrast with SSIS and SSAS, there isn't much available to automate this, so we'll be spending some time exploring how this gap can be crossed. Each of us will present a different method. Mine is about MSBUILD, an idea presented to my Jamie Thomson (<a href="http://sqlblog.com/blogs/jamie_thomson/default.aspx">blog</a> | <a href="https://twitter.com/jamiet">twitter</a>), who pointed me to one of his blog posts: <a href="http://sqlblog.com/blogs/jamie_thomson/archive/2009/10/31/deploying-reporting-services-reports-using-msbuild.aspx">Deploying Reporting Services reports using msbuild</a>.
 </p>
 
 <p style="text-align: justify;">
@@ -60,9 +60,9 @@ Yes there is! Koen Verbeeck will show you in this session how the MSBUILD platfo
 **Speaker:** Koen Verbeeck   
 **Level:** 300
 
-All of this goodness will take place in the Ordina Belgium offices. Catering will be provided. This hasn’t been confirmed yet, but it might be pizza and beer 🙂 I will put my slides and demo material online after the session.
+All of this goodness will take place in the Ordina Belgium offices. Catering will be provided. This hasn't been confirmed yet, but it might be pizza and beer 🙂 I will put my slides and demo material online after the session.
 
-More information and registration (there’s still room left) on the [SQLUG.be website][1].
+More information and registration (there's still room left) on the [SQLUG.be website][1].
 
 **UPDATE:** It has been confirmed there will be pizza! 🙂
 

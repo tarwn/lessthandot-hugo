@@ -148,7 +148,7 @@ And if you look now in SSMS, you will be able to see the User-Defined Table Type
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/tvp.PNG?mtime=1332357761"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/tvp.PNG?mtime=1332357761" width="305" height="481" /></a>
 </div>
 
-That's it for this post…hopefully this will help someone else in the future
+That's it for this post...hopefully this will help someone else in the future
 
 See also my post [SQL Advent 2011 Day 18: Table-valued Parameters][1] for some more info about User-Defined Table Types
 

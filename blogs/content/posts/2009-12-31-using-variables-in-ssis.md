@@ -19,9 +19,9 @@ categories:
 ---
 The ability to be dynamic in your work with SSIS promotes the ability to develop much more scalable packages which are easier to maintain and transport from development to user acceptance testing to production. As an ETL developer or administrator, you will also have the ability to easily maintain upgrades, migrations and new implementations into the landscape by making packages as dynamic in nature as possible.
 
-Variables are a key piece in this concept and have been since the advent of any development platform. If you’ve ever written a program in any language or on any platform or framework, you may already have a grasp of the importance of variables. Imagine writing one of those programs or scripts without having variables or constants. Writing one may not be hard to accomplish but executing them in a moving business model would prove to be more than cumbersome. SSIS and variable usage has few limitations when it comes to setting property values for tasks and components. This is advanced further in that the developer is given the ability to set variable values on execution of packages. This promotes mobility in packages by using them in the same manner as methods are used in the .NET Framework. 
+Variables are a key piece in this concept and have been since the advent of any development platform. If you've ever written a program in any language or on any platform or framework, you may already have a grasp of the importance of variables. Imagine writing one of those programs or scripts without having variables or constants. Writing one may not be hard to accomplish but executing them in a moving business model would prove to be more than cumbersome. SSIS and variable usage has few limitations when it comes to setting property values for tasks and components. This is advanced further in that the developer is given the ability to set variable values on execution of packages. This promotes mobility in packages by using them in the same manner as methods are used in the .NET Framework. 
 
-Below, we’re going to work through several essential tasks that are most common in every SSIS installation with variable usage. We’ll also go through the foreach loop container to show how variables can create extremely mobile file processing routines. 
+Below, we're going to work through several essential tasks that are most common in every SSIS installation with variable usage. We'll also go through the foreach loop container to show how variables can create extremely mobile file processing routines. 
 
 ## The business requirement for file processing
 
@@ -31,9 +31,9 @@ To complete this process we will employ the foreach loop container along with a 
 
 ## Setting up a foreach with variables
 
-The foreach loop container gives us the ability to enumerate a directory while processing all files or a specific grouping of files based on the naming conventions we use. For import purposes, this container can be extremely powerful and provide hands off processing of files. To show this and how variables in nature can make the container more useful, we’re going to use the container in our process that is required of us to accomplish. 
+The foreach loop container gives us the ability to enumerate a directory while processing all files or a specific grouping of files based on the naming conventions we use. For import purposes, this container can be extremely powerful and provide hands off processing of files. To show this and how variables in nature can make the container more useful, we're going to use the container in our process that is required of us to accomplish. 
 
-Setting up the container is the first step. The initial setting we’ll need is the type of enumeration-which is _file_ in our case, and then the folder and files we want. The file pattern is typical of any other commonly used file selection. The wildcard \* is utilized to match all with a static string parameter. In this case, \*.csv is used to find only files with names that end in .csv.
+Setting up the container is the first step. The initial setting we'll need is the type of enumeration-which is _file_ in our case, and then the folder and files we want. The file pattern is typical of any other commonly used file selection. The wildcard \* is utilized to match all with a static string parameter. In this case, \*.csv is used to find only files with names that end in .csv.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/var_1.gif" alt="" title="" width="442" height="375" />
@@ -51,7 +51,7 @@ The container is now setup to enumerate the files in our folder and set for each
 
 ## Variables in a script task
 
-The script task in our example shows just how we can access variables in this powerful task. When we open the script task editor, we will see in the initial panel that there are two types of protocols to access variables; ReadOnlyVariables and ReadWriteVariable. These settings allow us to set explicitly set how the variables are used. ReadOnly will provide a constant while ReadWrite allows for this to truly act as a variable type we can assign values to and manipulate values to. For this exercise we’ll show both examples. In order to log the file processing, we will extract the name and set the value of a processed variable. The processed variable setting will be used later for notification usage to show us how to work with variables in the script task. 
+The script task in our example shows just how we can access variables in this powerful task. When we open the script task editor, we will see in the initial panel that there are two types of protocols to access variables; ReadOnlyVariables and ReadWriteVariable. These settings allow us to set explicitly set how the variables are used. ReadOnly will provide a constant while ReadWrite allows for this to truly act as a variable type we can assign values to and manipulate values to. For this exercise we'll show both examples. In order to log the file processing, we will extract the name and set the value of a processed variable. The processed variable setting will be used later for notification usage to show us how to work with variables in the script task. 
 
 We want focused_fil to be a constant in our script task so add it to the ReadOnlyVariables collection. Next add a variable to the package container scope named _processed_ as a string data type and in the ReadWriteVariables collection. This will be used to determine what we email the DBA to state if the file was processed. 
 
@@ -79,7 +79,7 @@ Reading, [Dynamic SQL Server connections in Reporting Services][1] goes in-depth
 
 This blog revolves around SSRS but there is a class named InstanceSearch that can be extremely handy in SSIS as well. You can test, set and connect to an instance using this class by dynamically seraching for the instances we need. In that class you can set variables using the syntax and method shown above by referencing the ReadWrite variable collection and setting it to a required value. 
 
-Once we’ve set the variable as needed and create a connection, you can dictate using variables what server and database we want to connect to. This is illustrated below for our data flow destination connection.
+Once we've set the variable as needed and create a connection, you can dictate using variables what server and database we want to connect to. This is illustrated below for our data flow destination connection.
 
 ## Data Flow Setup
 
@@ -112,11 +112,11 @@ Saving this as C:transmission\_1.csv we set the file location in the editor and 
   <img src="/wp-content/uploads/blogs/DataMgmt/var_6.gif" alt="" title="" width="437" height="325" />
 </div>
 
-Once we connect the flow to the destination we can open the destination editor to see how the variables are working for the destination. Drop down the table listing and you’ll see that the validation process will use the variables for the connection string and initial catalog to load the table listing in the editor. First success! 
+Once we connect the flow to the destination we can open the destination editor to see how the variables are working for the destination. Drop down the table listing and you'll see that the validation process will use the variables for the connection string and initial catalog to load the table listing in the editor. First success! 
 
 ## Recap
 
-So far we’ve gone over the following ways to use variables
+So far we've gone over the following ways to use variables
 
   1. Foreach container and file focus with variables
   2. Script task readonly and readwrite variables while setting them programmatically
@@ -146,7 +146,7 @@ We want to move the file so there is no reprocessing occurring so change the ope
 
 The script task is the place we can do these validations by using the System.IO and associated methods to check if the file exists that is stored in the focused file variable beforehand. We can avoid the static settings by working with the property values that way.
 
-Now that we have gone over our finally functional example of using variables by dynamically setting a file archive operation, let’s run our new package created through these examples to see how it flows.
+Now that we have gone over our finally functional example of using variables by dynamically setting a file archive operation, let's run our new package created through these examples to see how it flows.
 
 ## Our completed package execution
 

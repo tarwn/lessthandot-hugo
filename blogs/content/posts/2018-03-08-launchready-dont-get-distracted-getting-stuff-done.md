@@ -1,5 +1,5 @@
 ---
-title: 'LaunchReady: Don’t Get Distracted, Getting Stuff Done'
+title: "LaunchReady: Don't Get Distracted, Getting Stuff Done"
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2018-03-08T20:57:08+00:00
@@ -105,7 +105,7 @@ Each Sunday, I would make a copy of the template and start logging my week. It n
 
 ### Ship something (again)
 
-Even with scheduled time, sometimes you sit down on a Tuesday night after a long day and just can't get started. There's still so much to do, I'm tired from the day, nothing seems interesting, … So I would pick one small ticket for the marketing site or the application and I would do it. Then I would pick up one more. And before I knew it it was 10PM and I had shipped 3.5 hours of features or website improvements.
+Even with scheduled time, sometimes you sit down on a Tuesday night after a long day and just can't get started. There's still so much to do, I'm tired from the day, nothing seems interesting, ... So I would pick one small ticket for the marketing site or the application and I would do it. Then I would pick up one more. And before I knew it it was 10PM and I had shipped 3.5 hours of features or website improvements.
 
 <div id="attachment_8987" style="width: 329px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/02/launchreadypost_09.png" alt="Some Easy 1 Hour tasks" width="319" height="376" class="size-full wp-image-8987" srcset="/wp-content/uploads/2018/02/launchreadypost_09.png 319w, /wp-content/uploads/2018/02/launchreadypost_09-255x300.png 255w" sizes="(max-width: 319px) 100vw, 319px" />
@@ -115,7 +115,7 @@ Even with scheduled time, sometimes you sit down on a Tuesday night after a long
   </p>
 </div>
 
-But to feel a sense of accomplishment from shipping small work, I need small work to work on. Which brings me to…
+But to feel a sense of accomplishment from shipping small work, I need small work to work on. Which brings me to...
 
 ### Break the work down into bite-size pieces
 
@@ -129,7 +129,7 @@ So I stopped and closed out the functional task list and replaced it with bits o
 
 And because I needed small tasks to build momentum on tough days, I sliced these very thin so I could accomplish them and ship something small on rough days or on the two nights I only had 1.5 hours of coding time. 
 
-But keeping the tasks organized became overwhelming, so….
+But keeping the tasks organized became overwhelming, so....
 
 ### Use a ticket system
 

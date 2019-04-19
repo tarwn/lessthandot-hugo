@@ -31,13 +31,13 @@ Welcome to SQL Server Reporting Services week at [SQL University][1]. This is a 
 
 **SQL Server Reporting Services Configuration Files** 
 
-If you’ve ever set up or troubleshot a SQL Server Reporting Services installation, you have probably used the Configuration Manager. This is a nice graphical tool provided with SSRS to set things like the service account, the URLs, and more. All of this information, and much more, is stored in a series of XML configuration files. 
+If you've ever set up or troubleshot a SQL Server Reporting Services installation, you have probably used the Configuration Manager. This is a nice graphical tool provided with SSRS to set things like the service account, the URLs, and more. All of this information, and much more, is stored in a series of XML configuration files. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/SSRSConfigMgr.JPG?mtime=1296005044"><img alt="" src="/wp-content/uploads/blogs/All/SSRSConfigMgr.JPG?mtime=1296005044" width="974" height="735" /></a>
 </div>
 
-The main file is RSReportServer.config. We’ll explore the options you can set in this post. 
+The main file is RSReportServer.config. We'll explore the options you can set in this post. 
 
 The first thing you need to do? Find the files (and I see a lot of forum questions about where these are located). The RSReportServer.config file default location is C:Program FilesMicrosoft SQL ServerMSRS10_50.MSSQLSERVERReporting ServicesReportServer. 
 
@@ -49,15 +49,15 @@ Once you find the file and open it in a text editor (remember, it's just an XML 
   <a href="/wp-content/uploads/blogs/All/ConfigFileStart.JPG?mtime=1296005818"><img alt="" src="/wp-content/uploads/blogs/All/ConfigFileStart.JPG?mtime=1296005818" width="730" height="245" /></a>
 </div>
 
-Let’s break it down! 
+Let's break it down! 
 
 **General Configuration Settings** 
 
 The first section is general settings. Here are a few to pay attention to.
 
-**DSN:** This is the connection string to the ReportServer database. It’s encrypted.
+**DSN:** This is the connection string to the ReportServer database. It's encrypted.
   
-**MaxActiveReqForOneUser:** The number of reports one user can process at one time. The default is 20. It’s hard to believe a user could run that many concurrent reports, but it is possible.
+**MaxActiveReqForOneUser:** The number of reports one user can process at one time. The default is 20. It's hard to believe a user could run that many concurrent reports, but it is possible.
   
 **DatabaseQueryTimeout:** This determines how long it takes a connection to time out. This is in seconds, and the default is 120.
   
@@ -67,7 +67,7 @@ The first section is general settings. Here are a few to pay attention to.
 
 **URL Reservations** 
 
-This section defines the URLs for your report server instance. However, you don’t want to edit the settings here. You want to go into the Configuration Manager and change them. These settings are on the Web Service URL and Report Manager URL screens. 
+This section defines the URLs for your report server instance. However, you don't want to edit the settings here. You want to go into the Configuration Manager and change them. These settings are on the Web Service URL and Report Manager URL screens. 
 
 **Authentication** 
 
@@ -101,19 +101,19 @@ _NULL:_ This provider is used to preload a cache for reports. There are no optio
 
 **Delivery UI:** This is what appears when setting up a subscription manually. 
 
-**Render**: The list of rendering extensions available. Only modify this section if you’re adding a custom extension. 
+**Render**: The list of rendering extensions available. Only modify this section if you're adding a custom extension. 
 
 **Data:** Data processing extensions tell you what types of data sources you can connect to. You can create custom extensions and add them here. 
 
-**Semantic Query:** This is an internal section for report models. Don’t touch! 
+**Semantic Query:** This is an internal section for report models. Don't touch! 
 
-**Model Generation:** This is also an internal section for report models. Don’t touch! 
+**Model Generation:** This is also an internal section for report models. Don't touch! 
 
-**Security:** Determines what type of authorization is used by the report server. The default is Windows, and shouldn’t be modified. 
+**Security:** Determines what type of authorization is used by the report server. The default is Windows, and shouldn't be modified. 
 
-**Authentication:** Determines what type of authorization is used by Reporting Services. The default is Windows, and shouldn’t be modified unless you’re implementing a custom extension. 
+**Authentication:** Determines what type of authorization is used by Reporting Services. The default is Windows, and shouldn't be modified unless you're implementing a custom extension. 
 
-**Event Processing:** An internal-only section for event handlers. Don’t touch! 
+**Event Processing:** An internal-only section for event handlers. Don't touch! 
 
 **MapTileServerConfiguration**
 

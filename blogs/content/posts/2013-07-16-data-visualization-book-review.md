@@ -5,7 +5,7 @@ type: post
 date: 2013-07-16T12:27:00+00:00
 ID: 2127
 excerpt: |
-  To prepare myself for my session Data Visualization Tips &amp; Tricks, I read a few books. In this blog post, I’ll give a short review for each one of them.
+  To prepare myself for my session Data Visualization Tips &amp; Tricks, I read a few books. In this blog post, I'll give a short review for each one of them.
   Information Dashboard Design
   This book, written by Stephen Few, was the first one I read. And&hellip;
 url: /index.php/itprofessionals/book-review/data-visualization-book-review/
@@ -23,7 +23,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  To prepare myself for my session <a href="/index.php/DataMgmt/business-intelligence-1/data-visualization-tips-tricks">Data Visualization Tips & Tricks</a>, I read a few books. In this blog post, I’ll give a short review for each one of them.
+  To prepare myself for my session <a href="/index.php/DataMgmt/business-intelligence-1/data-visualization-tips-tricks">Data Visualization Tips & Tricks</a>, I read a few books. In this blog post, I'll give a short review for each one of them.
 </p>
 
 <p style="text-align: justify">
@@ -36,7 +36,7 @@ tags:
   </div>
   
   <p style="text-align: justify">
-    This book, written by <a href="http://www.perceptualedge.com/blog/">Stephen Few</a>, was the first one I read. And it was a fascinating read! I went through the book in one long haul. It’s very well written and the design of the book is very well done. A big plus is that the printed version of the book is in color.
+    This book, written by <a href="http://www.perceptualedge.com/blog/">Stephen Few</a>, was the first one I read. And it was a fascinating read! I went through the book in one long haul. It's very well written and the design of the book is very well done. A big plus is that the printed version of the book is in color.
   </p>
   
   <p style="text-align: justify">
@@ -60,15 +60,15 @@ tags:
   </div>
   
   <p style="text-align: justify">
-    The second book I read was written by Andy Kirk (<a href="http://www.visualisingdata.com/">blog</a> | <a href="https://twitter.com/visualisingdata">twitter</a>), who also gives training classes about data visualization. In contrast with the previous book, this one talks about the design approach on how to create visualizations. In other words, it describes a project-based methodology on how to tackle the process of creating a visualization. This might make the book a bit more “dry” to read, but that doesn’t make it less interesting.
+    The second book I read was written by Andy Kirk (<a href="http://www.visualisingdata.com/">blog</a> | <a href="https://twitter.com/visualisingdata">twitter</a>), who also gives training classes about data visualization. In contrast with the previous book, this one talks about the design approach on how to create visualizations. In other words, it describes a project-based methodology on how to tackle the process of creating a visualization. This might make the book a bit more “dry” to read, but that doesn't make it less interesting.
   </p>
   
   <p style="text-align: justify">
-    <span style="text-align: justify">The first chapter deals about the context of data visualizations and serves as a general introduction. Chapter 2 talks about setting the scope – or intent – of your visualization project and the different roles that exist in such a project. The 3</span><sup>rd</sup><span style="text-align: justify"> chapter is about finding the right story (editorial focus) and explains the importance of preparing your data. Chapter 4 delves into various design choices, such as choosing the right visualization method and goes for example into detail about color usage. This chapter has quite some similarities with some chapters of Stephen Few’s book. Chapter 5 gives a very extensive overview of different chart/visualization types. The final part, chapter 6, touches the concept of evaluating data visualizations and gives a whole bunch of links to designing tools, resources about data visualization et cetera.</span>
+    <span style="text-align: justify">The first chapter deals about the context of data visualizations and serves as a general introduction. Chapter 2 talks about setting the scope – or intent – of your visualization project and the different roles that exist in such a project. The 3</span><sup>rd</sup><span style="text-align: justify"> chapter is about finding the right story (editorial focus) and explains the importance of preparing your data. Chapter 4 delves into various design choices, such as choosing the right visualization method and goes for example into detail about color usage. This chapter has quite some similarities with some chapters of Stephen Few's book. Chapter 5 gives a very extensive overview of different chart/visualization types. The final part, chapter 6, touches the concept of evaluating data visualizations and gives a whole bunch of links to designing tools, resources about data visualization et cetera.</span>
   </p>
   
   <p style="text-align: justify">
-    It was a nice book to read and because of the process-based approach of the book it’s something completely different then <em>Information Dashboard Design</em>. So it is very well worth the effort to read both books. My main criticism about this book is that it is not in color, which is a pity since it’s about data visualization. Some examples were not clear as you could not make any distinction between the colors. Perhaps the e-book version is in color, but I haven’t been able to look into that one, so it is probably worth checking out the e-book instead of the printed version.
+    It was a nice book to read and because of the process-based approach of the book it's something completely different then <em>Information Dashboard Design</em>. So it is very well worth the effort to read both books. My main criticism about this book is that it is not in color, which is a pity since it's about data visualization. Some examples were not clear as you could not make any distinction between the colors. Perhaps the e-book version is in color, but I haven't been able to look into that one, so it is probably worth checking out the e-book instead of the printed version.
   </p>
   
   <p style="text-align: justify">
@@ -80,15 +80,15 @@ tags:
   </div>
   
   <p style="text-align: justify">
-    During the dry-run of my data visualization session a BI manager of my company recommended me this book. It’s written by Gene Zelazny, a consultant by McKinsey. It is quite an old book, initially written in 1985 and already in its fourth edition! However, it still talks about some universal concepts of data visualization which still hold firm today. As with the other two books, there are not a lot of pages so you’ll breeze through it.
+    During the dry-run of my data visualization session a BI manager of my company recommended me this book. It's written by Gene Zelazny, a consultant by McKinsey. It is quite an old book, initially written in 1985 and already in its fourth edition! However, it still talks about some universal concepts of data visualization which still hold firm today. As with the other two books, there are not a lot of pages so you'll breeze through it.
   </p>
   
   <p style="text-align: justify">
-    <span style="text-align: justify">The book is divided 4 large sections. The first section introduces you to charts. First it gives an example of a guy giving a presentation and of course doing everything wrong. It presents you with 5 basic chart types – pie chart, bar chart, column chart, line chart and dot chart – which are according to the book the only ones you’ll ever need. A bit short-sighted, but probably due to the age of the book. With all the designer tools and computing power we have nowadays, there are certainly more chart types available which are also efficient in its communication.</span>
+    <span style="text-align: justify">The book is divided 4 large sections. The first section introduces you to charts. First it gives an example of a guy giving a presentation and of course doing everything wrong. It presents you with 5 basic chart types – pie chart, bar chart, column chart, line chart and dot chart – which are according to the book the only ones you'll ever need. A bit short-sighted, but probably due to the age of the book. With all the designer tools and computing power we have nowadays, there are certainly more chart types available which are also efficient in its communication.</span>
   </p>
   
   <p style="text-align: justify">
-    The second section gives 80 examples of every possible combination of those 5 basic charts. This is very good introduction to people new to charts and it is also a good source for inspiration. The third section talks about concepts and metaphors and is in my opinion worthless. It’s over 60 pages full of outdated sketches. For example on how to use arrows to symbolize process or interrelationships. Basically a lot of PowerPoint/Visio/Clip Art objects. This section was written in a time with no Internet so I get the idea, giving the people some inspiration, but it should’ve been thrown out in later editions. The last edition was published in 2001 and surely there was already some digital revolution going on. Speaking of, the last section goes into detail about the wonders that this revolution has given us. It was added in the latest edition and it is the only one in color. It talks about how computers simplify the development of visualizations and what powerful/beautiful creations can be made with all this new technology. However, it is already 12 years old and it looks – again – very outdated and to be honest, ugly as well. There are a few design errors which the other two books warn about. This section is in serious need of an update. It even talks about animation and gives examples, which is a bit pointless in a written medium such as a book.
+    The second section gives 80 examples of every possible combination of those 5 basic charts. This is very good introduction to people new to charts and it is also a good source for inspiration. The third section talks about concepts and metaphors and is in my opinion worthless. It's over 60 pages full of outdated sketches. For example on how to use arrows to symbolize process or interrelationships. Basically a lot of PowerPoint/Visio/Clip Art objects. This section was written in a time with no Internet so I get the idea, giving the people some inspiration, but it should've been thrown out in later editions. The last edition was published in 2001 and surely there was already some digital revolution going on. Speaking of, the last section goes into detail about the wonders that this revolution has given us. It was added in the latest edition and it is the only one in color. It talks about how computers simplify the development of visualizations and what powerful/beautiful creations can be made with all this new technology. However, it is already 12 years old and it looks – again – very outdated and to be honest, ugly as well. There are a few design errors which the other two books warn about. This section is in serious need of an update. It even talks about animation and gives examples, which is a bit pointless in a written medium such as a book.
   </p>
   
   <p style="text-align: justify">

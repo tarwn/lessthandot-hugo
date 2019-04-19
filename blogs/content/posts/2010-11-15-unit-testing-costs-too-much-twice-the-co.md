@@ -81,9 +81,9 @@ The value we gain from Unit Testing is value to the team and the business, not t
 
 There is a cost to writing Unit Tests that we have to balance with the potential savings and risk reduction. I don't believe there is a universal answer as to how much Unit Testing is appropriate for a given environment, project, and team. Many teams take it on faith that 100% coverage is their best bet, but I am not convinced. 
 
-What I can tell you is that all of the benefits of this tool are out of your reach if you don’t give it a test drive. 
+What I can tell you is that all of the benefits of this tool are out of your reach if you don't give it a test drive. 
 
-As several people saw in my CodeCamp presentation, it doesn’t take long to add a Unit Testing project to an existing application and build a few tests. Pick a particularly complex business function or an existing bug in need of correction. If you decide to start evaluating it for greater implementation, the list of costs above should provide some pointers on where you can create some measurements to determine the level of value you are receiving.
+As several people saw in my CodeCamp presentation, it doesn't take long to add a Unit Testing project to an existing application and build a few tests. Pick a particularly complex business function or an existing bug in need of correction. If you decide to start evaluating it for greater implementation, the list of costs above should provide some pointers on where you can create some measurements to determine the level of value you are receiving.
 
 Other posts in this unplanned series:
 

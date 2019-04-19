@@ -138,7 +138,7 @@ You should see the following output
 
 _NULL
   
-Starting copy…
+Starting copy...
   
 NULL
   

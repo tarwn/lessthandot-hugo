@@ -24,7 +24,7 @@ A while back I ran into an issue where a user was complaining about @@IDENTITY n
 
 This was happening on a table that was setup using 3rd party cross database platform replication software. The software used triggers to capture the changes to the table to send them over to an Oracle table and a DB2 table. The issue was caused by the trigger inserting records into another table that also had an identity column and that was being returned instead of the one from the original insert.
 
-I used to also have a debate with a fellow DBA about @@ROWCOUNT. I use it all the time and haven’t had any issues. But I also wanted to know if triggers could affect it.
+I used to also have a debate with a fellow DBA about @@ROWCOUNT. I use it all the time and haven't had any issues. But I also wanted to know if triggers could affect it.
   
 Here is some sample code that illustrates how triggers affect @@IDENTITY, @@ROWCOUNT and also demonstrates SCOPE_IDENTITY().
 

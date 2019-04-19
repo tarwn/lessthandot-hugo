@@ -17,7 +17,7 @@ categories:
   - Professional Development
 
 ---
-This post could have also been titled, “A New Job & Everything That Goes Along With It”…
+This post could have also been titled, “A New Job & Everything That Goes Along With It”...
 
 ## My New Job
 

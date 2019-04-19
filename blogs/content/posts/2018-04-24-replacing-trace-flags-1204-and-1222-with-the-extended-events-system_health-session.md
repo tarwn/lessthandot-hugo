@@ -16,11 +16,11 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Deadlocks in a SQL Server instance are problematic. They can cause application errors, slow performance, and unhappy users. As a DBA or developer, it’s very helpful to be able to find deadlocks, review what caused them, and fix it permanently, if possible.
+Deadlocks in a SQL Server instance are problematic. They can cause application errors, slow performance, and unhappy users. As a DBA or developer, it's very helpful to be able to find deadlocks, review what caused them, and fix it permanently, if possible.
 
-How do you find deadlocks? Over the years, there have been various methods, depending on what tools were available in SQL Server. Many of us used to run a Profiler or server trace to capture the Deadlock Graph event – useful if we knew when they were occurring (or they occurred all the time). We could also enable trace flags 1204 and/or 1222 to write the information to the event log – better if we knew there were issues, but they weren’t predictable.
+How do you find deadlocks? Over the years, there have been various methods, depending on what tools were available in SQL Server. Many of us used to run a Profiler or server trace to capture the Deadlock Graph event – useful if we knew when they were occurring (or they occurred all the time). We could also enable trace flags 1204 and/or 1222 to write the information to the event log – better if we knew there were issues, but they weren't predictable.
 
-However, I don’t like a messy event log. I like it neat and clean, so I can see errors easily. For example, I enable TF 3226 to suppress “Log was backed up” messages. With SQL Server 2012+, I also prefer to use the Extended Events default system_health session to view deadlock graphs – with no extra work required!
+However, I don't like a messy event log. I like it neat and clean, so I can see errors easily. For example, I enable TF 3226 to suppress “Log was backed up” messages. With SQL Server 2012+, I also prefer to use the Extended Events default system_health session to view deadlock graphs – with no extra work required!
 
 Let me walk through what a deadlock looks like with TF 1222 and compare that to the XE session.
 
@@ -61,9 +61,9 @@ If I open the error log, I can see the details of the deadlock. Every bit of inf
 
 [<img class="aligncenter size-full wp-image-9229" src="/wp-content/uploads/2018/04/deadlock-error-log.png" alt="deadlock-error-log" width="726" height="636" srcset="/wp-content/uploads/2018/04/deadlock-error-log.png 726w, /wp-content/uploads/2018/04/deadlock-error-log-300x263.png 300w, /wp-content/uploads/2018/04/deadlock-error-log-600x526.png 600w, /wp-content/uploads/2018/04/deadlock-error-log-342x300.png 342w" sizes="(max-width: 726px) 100vw, 726px" />][3]
 
-This one isn’t bad, but imagine a multi-statement deadlock, or a server with several deadlocks in an hour – how do you easily see if there were other errors on the server at the same time?
+This one isn't bad, but imagine a multi-statement deadlock, or a server with several deadlocks in an hour – how do you easily see if there were other errors on the server at the same time?
 
-With SQL Server 2012+, we have a better tool to see when deadlocks occur – and the deadlock graphs are saved by default, so we don’t have to read the text version to figure it out, or run a separate trace to capture them.
+With SQL Server 2012+, we have a better tool to see when deadlocks occur – and the deadlock graphs are saved by default, so we don't have to read the text version to figure it out, or run a separate trace to capture them.
 
 In SSMS, open Object Explorer and navigate to Extended Events > Sessions > system\_health > package0.event\_file. Double-click to view the data.
 
@@ -75,11 +75,11 @@ I go right to Filters to find the xml\_deadlock\_report events.
 
 [<img class="aligncenter size-full wp-image-9232" src="/wp-content/uploads/2018/04/xe-filter-screen.png" alt="xe-filter-screen" width="637" height="411" srcset="/wp-content/uploads/2018/04/xe-filter-screen.png 637w, /wp-content/uploads/2018/04/xe-filter-screen-300x194.png 300w, /wp-content/uploads/2018/04/xe-filter-screen-600x387.png 600w, /wp-content/uploads/2018/04/xe-filter-screen-465x300.png 465w" sizes="(max-width: 637px) 100vw, 637px" />][6]
 
-Here you’ll see deadlocks that have occurred. The Value field will show the XML values that you also see in the log. You can double-click on the Value field to bring up the XML.
+Here you'll see deadlocks that have occurred. The Value field will show the XML values that you also see in the log. You can double-click on the Value field to bring up the XML.
 
 [<img class="aligncenter size-full wp-image-9233" src="/wp-content/uploads/2018/04/details.png" alt="details" width="515" height="238" srcset="/wp-content/uploads/2018/04/details.png 515w, /wp-content/uploads/2018/04/details-300x139.png 300w" sizes="(max-width: 515px) 100vw, 515px" />][7]
 
-Don’t ignore that sneaky “Deadlock” tab, however – that’s where you’ll find the easier-to-read deadlock graph!
+Don't ignore that sneaky “Deadlock” tab, however – that's where you'll find the easier-to-read deadlock graph!
 
 [<img class="aligncenter size-large wp-image-9234" src="/wp-content/uploads/2018/04/deadlock-1024x433.png" alt="deadlock" width="1024" height="433" srcset="/wp-content/uploads/2018/04/deadlock-1024x433.png 1024w, /wp-content/uploads/2018/04/deadlock-300x127.png 300w, /wp-content/uploads/2018/04/deadlock-768x324.png 768w, /wp-content/uploads/2018/04/deadlock-600x253.png 600w, /wp-content/uploads/2018/04/deadlock-710x300.png 710w, /wp-content/uploads/2018/04/deadlock.png 1044w" sizes="(max-width: 1024px) 100vw, 1024px" />][8]
 

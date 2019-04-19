@@ -19,7 +19,7 @@ categories:
 ---
 With this blog post I am hoping to start a new series of blogs devoted to the interesting T-SQL problems I encounter in forums during the week.
 
-The idea of this blog series came to me on Wednesday night when I thought I solved a complex problem…
+The idea of this blog series came to me on Wednesday night when I thought I solved a complex problem...
 
 # First Problem – Divide data into 15 min. time intervals
 
@@ -650,7 +650,7 @@ EXECUTE SP_EXECUTESQL
   @TotalCount
 ```
 
-Hope you find these problems interesting as well and see you in a week (or more)…
+Hope you find these problems interesting as well and see you in a week (or more)...
 
 The next series of this blog:
 

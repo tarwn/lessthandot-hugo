@@ -42,7 +42,7 @@ So for example with this mirroring lab we are configuring, you may want to list 
 
 When setting up mirroring there are two points to troubleshoot if the mirror will not start synchronizing. Those are:
 
-  1. Restore of the tail log wasn’t done or successful – restore procedure as a whole
+  1. Restore of the tail log wasn't done or successful – restore procedure as a whole
   2. Firewall preventing the endpoints from talking – test telnet to your ports
 
 Below is the setup used if you want to follow along exactly while configuring your own lab.
@@ -67,7 +67,7 @@ IF (DATABASEPROPERTYEX('AdventureWorks', 'RECOVERY') <> 'FULL')
  
 --SELECT DATABASEPROPERTYEX('AdventureWorks', 'RECOVERY')
 ```
-If you have an existing AdventureWorks database on the SQL Server you will be using for the mirror, you will need to know the mdf, ldf and any ndf’s and their locations. 
+If you have an existing AdventureWorks database on the SQL Server you will be using for the mirror, you will need to know the mdf, ldf and any ndf's and their locations. 
 
 You can check for these files using sysaltfiles
 

@@ -42,7 +42,7 @@ But since I only need SQL Server information I will filter out all the other ser
 Get-Service -ComputerName <SQLServerHostName> -name "MSSQL*"
 ```
 
-As you can see we can now see the installed instances of SQL Server on our remote server. Only if the Instance name is too long you will see … at some point:
+As you can see we can now see the installed instances of SQL Server on our remote server. Only if the Instance name is too long you will see ... at some point:
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/axel8s/PSSQLService2.PNG?mtime=1349948026"><img alt="" src="/wp-content/uploads/users/axel8s/PSSQLService2.PNG?mtime=1349948026" width="575" height="138" /></a>
@@ -74,6 +74,6 @@ Executing the script will look like this:
   <a href="/wp-content/uploads/users/axel8s/PSSQLService4.PNG?mtime=1349948043"><img alt="" src="/wp-content/uploads/users/axel8s/PSSQLService4.PNG?mtime=1349948043" width="983" height="253" /></a>
 </div>
 
-Et voila, another point I can take of my list of items I can't do on a Server Core…
+Et voila, another point I can take of my list of items I can't do on a Server Core...
 
  [1]: /index.php/SysAdmins/OS/Windows/getting-remote-disk-information-with

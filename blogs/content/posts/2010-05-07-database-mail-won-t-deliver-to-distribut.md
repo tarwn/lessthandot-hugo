@@ -1,5 +1,5 @@
 ---
-title: Database Mail Won’t Deliver to Distribution Group
+title: Database Mail Won't Deliver to Distribution Group
 author: David Forck (thirster42)
 type: post
 date: 2010-05-07T16:30:50+00:00

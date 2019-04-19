@@ -20,7 +20,7 @@ tags:
 ---
 This question was asked yesterday in our forums
   
-[A transport-level error has occurred when sending the][1]….. by Impal3r
+[A transport-level error has occurred when sending the][1]..... by Impal3r
 
 > When i have a query window open In SSMS and I step away for a while and then I run the query I get the following error
 > 
@@ -40,7 +40,7 @@ A transport-level error has occurred when sending the request to the server.
   
 
   
-What you can do is connect to the server again and try running your query and that will solve it. There is a faster/easier way…..just hit F5 or the execute icon again and the query will also run. That is much easier isn't it?
+What you can do is connect to the server again and try running your query and that will solve it. There is a faster/easier way.....just hit F5 or the execute icon again and the query will also run. That is much easier isn't it?
 
 
 

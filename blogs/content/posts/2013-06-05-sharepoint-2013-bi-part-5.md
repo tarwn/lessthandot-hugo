@@ -5,7 +5,7 @@ type: post
 date: 2013-06-05T11:57:00+00:00
 ID: 2096
 excerpt: |
-  Let’s get started with the next step in the series: installing SharePoint. We will install only the software, but we do not configure it. We will do this later with the PowerPivot Configuration Tool, which is explained in another blog post.
+  Let's get started with the next step in the series: installing SharePoint. We will install only the software, but we do not configure it. We will do this later with the PowerPivot Configuration Tool, which is explained in another blog post.
   The first s&hellip;
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sharepoint-2013-bi-part-5/
 views:
@@ -29,7 +29,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  Let’s get started with the next step in the series: installing SharePoint. We will install only the software, but we do not configure it. We will do this later with the PowerPivot Configuration Tool, which is explained in another blog post.
+  Let's get started with the next step in the series: installing SharePoint. We will install only the software, but we do not configure it. We will do this later with the PowerPivot Configuration Tool, which is explained in another blog post.
 </p>
 
 <p style="text-align: justify;">
@@ -40,7 +40,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_00.png?mtime=1370291429"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_00.png?mtime=1370291429" alt="" width="271" height="270" /></a>
 </p>
 
-<span style="text-align: justify;">The next step is to attach the SharePoint image to the DVD drive of the VM and to start the prerequisite installer. This installer will install some software on the machine needed for SharePoint. It’s possible you have to run it more than once, as you may have to reboot a couple of times.</span>
+<span style="text-align: justify;">The next step is to attach the SharePoint image to the DVD drive of the VM and to start the prerequisite installer. This installer will install some software on the machine needed for SharePoint. It's possible you have to run it more than once, as you may have to reboot a couple of times.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_01.png?mtime=1370291434"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_01.png?mtime=1370291434" alt="" width="435" height="168" /></a>
@@ -58,7 +58,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_03.png?mtime=1370291452"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_03.png?mtime=1370291452" alt="" width="407" height="306" /></a>
 </p>
 
-<span style="text-align: justify;">Wait until everything is installed… (grab a coffee, you know the drill)</span>
+<span style="text-align: justify;">Wait until everything is installed... (grab a coffee, you know the drill)</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_04.png?mtime=1370291453"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_04.png?mtime=1370291453" alt="" width="411" height="307" /></a>
@@ -110,13 +110,13 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_11.png?mtime=1370291499"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_11.png?mtime=1370291499" alt="" width="369" height="300" /></a>
 </p>
 
-<span style="text-align: justify;">Once the installation is finished, you’ll get the option to also configure it with the SharePoint configuration wizard. Since we are going to use the PowerPivot Configuration Wizard, deselect the checkbox and click </span>_Close_<span style="text-align: justify;">.</span>
+<span style="text-align: justify;">Once the installation is finished, you'll get the option to also configure it with the SharePoint configuration wizard. Since we are going to use the PowerPivot Configuration Wizard, deselect the checkbox and click </span>_Close_<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_13.png?mtime=1370291507"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part5/InstallSharePoint_13.png?mtime=1370291507" alt="" width="370" height="298" /></a>
 </p>
 
-<span style="text-align: justify;">That’s it, SharePoint is now installed on the virtual machine, but it is not configured yet, so it is still useless. (some might argue it’s also useless after it has been configured, but let's not get into that)</span>
+<span style="text-align: justify;">That's it, SharePoint is now installed on the virtual machine, but it is not configured yet, so it is still useless. (some might argue it's also useless after it has been configured, but let's not get into that)</span>
 
 Go back to [overview][1].   
 Previous part: [Installing SQL Server][2].   

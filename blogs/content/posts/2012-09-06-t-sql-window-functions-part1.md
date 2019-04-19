@@ -81,7 +81,7 @@ The PARTITION BY clause is used to reduce the scope of the window to which the a
 
 ## ORDER BY
 
-The ORDER BY clause is used to order how the partitions apply the window function. For instance, when an ORDER BY is present in our current illustration, it will sum all of Beth’s order amounts, but will then add Joe’s to the total as he is the next in order. In the following illustration, no partition is specified so the partition is still the whole table. You can now see how partitions and ordering affect the window function. 
+The ORDER BY clause is used to order how the partitions apply the window function. For instance, when an ORDER BY is present in our current illustration, it will sum all of Beth's order amounts, but will then add Joe's to the total as he is the next in order. In the following illustration, no partition is specified so the partition is still the whole table. You can now see how partitions and ordering affect the window function. 
 
 <code class="codespan">select CustomerName<br />
 	,SUM(OrderAmt) OVER () as NoParm<br />
@@ -106,7 +106,7 @@ The following image visually illustrates the how the PARTITION BY and ORDER BY c
 
 The final clauses that can be used to define a partition are the ROWS and RANGE functions. This functionality was introduced in SQL Server 2012. These functions will specify a set of rows based on the position of the current row and as a result both functions require the use of the ORDER BY clause. Because each partition is anchored to the current row, the rows or range specifications are based on their proximity to the current row. A number of key words can be used with this clause to define the window frame used by the window functions. 
 
-• CURRENT ROW: That’s what it means. It identifies the current row as part of the ROWS or RANGE. This key word is supported by ROWS and RANGE.
+• CURRENT ROW: That's what it means. It identifies the current row as part of the ROWS or RANGE. This key word is supported by ROWS and RANGE.
   
 • UNBOUNDED PRECEDING: Go to the beginning of the partition. This is supported by both ROWS and RANGE.
   

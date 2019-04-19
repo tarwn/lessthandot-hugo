@@ -169,15 +169,15 @@ Next week we will be wrapping up this 5-part series on Applying Kanban to IT Pro
 
 If you have missed prior articles in the series you can find them here:
   
-Applying Kanban … Part 1: [Kanban Overview][5]
+Applying Kanban ... Part 1: [Kanban Overview][5]
   
-Applying Kanban … Part 2: [Kanban applied to Tech Support][6]
+Applying Kanban ... Part 2: [Kanban applied to Tech Support][6]
   
-Applying Kanban … Part 3: [Kanban applied to PC Deployment][7]
+Applying Kanban ... Part 3: [Kanban applied to PC Deployment][7]
   
-_Applying Kanban … Part 4: Kanban applied to a Development Group_
+_Applying Kanban ... Part 4: Kanban applied to a Development Group_
   
-Applying Kanban … Part 5: [Challenges, Additional Concepts, and Wrapup][8]
+Applying Kanban ... Part 5: [Challenges, Additional Concepts, and Wrapup][8]
 
  [1]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-1
  [2]: http://en.wikipedia.org/wiki/Waterfall_model#Sashimi_model "Sashimi model at Wikipedia"

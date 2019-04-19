@@ -41,7 +41,7 @@ Tibor Karaszi explains what Instant File Initialization is and why it matters
 
 **[Is it time for SQL Server to have Isolated Transactions?][6]**
   
-Arnie Rowland suggests that there is a need for a completely 'Isolated Transaction’. That is, a transaction that can be started in the midst of a 'regular’ transaction (parent), and that will be durable regardless of the outcome of the parent transaction. Using this 'Isolated Transaction’, once a commit occurs, even a rollback of the parent transaction will not undo the saved work. The activity log is properly persisted and durable.
+Arnie Rowland suggests that there is a need for a completely 'Isolated Transaction'. That is, a transaction that can be started in the midst of a 'regular' transaction (parent), and that will be durable regardless of the outcome of the parent transaction. Using this 'Isolated Transaction', once a commit occurs, even a rollback of the parent transaction will not undo the saved work. The activity log is properly persisted and durable.
 
 **[Granting rights to all objects in a database][7]**
   

@@ -1,5 +1,5 @@
 ---
-title: I’m Speaking! PASS Summit 2011
+title: I'm Speaking! PASS Summit 2011
 author: Jes Borland
 type: post
 date: 2011-06-17T10:29:00+00:00

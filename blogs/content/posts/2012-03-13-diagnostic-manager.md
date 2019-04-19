@@ -29,7 +29,7 @@ The next time I saw an e-mail asking what happened that morning around 4:00AM, I
 [<img style="border-style: initial; border-color: initial;" src="/wp-content/uploads/users/kconan/DM - History Browser Button.jpg?mtime=1331600719" alt="" width="476" height="130" />][1]
 
 <p style="text-align: left;">
-  On the right side of the screen, we can now navigate the Calendar to quickly go back to a specific day.  Because the issue I was looking at was from that day, I figured I just needed to scroll down to 4:00 AM and start looking at the different metrics.  Well imagine my surprise when I couldn't find anything from before 8:00 AM!  I looked at previous days and they only had data from 8:00 AM to 5:00 PM…
+  On the right side of the screen, we can now navigate the Calendar to quickly go back to a specific day.  Because the issue I was looking at was from that day, I figured I just needed to scroll down to 4:00 AM and start looking at the different metrics.  Well imagine my surprise when I couldn't find anything from before 8:00 AM!  I looked at previous days and they only had data from 8:00 AM to 5:00 PM...
 </p>
 
 <div class="image_block" style="text-align: left;">

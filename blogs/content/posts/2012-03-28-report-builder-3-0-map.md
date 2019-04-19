@@ -26,7 +26,7 @@ This is part five of a series about Report Builder 3.0.
 
 When SQL Server 2008 was introduced, it included the new spatial data types of [geometry and geography][6]. Report Builder 3.0 gave us the capability to add maps to reports, which can utilize those data types to visualize data.
 
-The Map Wizard in Report Builder 3.0 provides a simple way for you to create a map or map layer, tying it to spatial data. To begin, you need to understand that a report needs spatial data, to show the points you’re trying to display, and _can_ have analytical data, to show more information. I’ll walk you through using the wizard to create a simple two-layer map that shows the sales (analytical data) per AdventureWorks store (spatial data) in the state of New York.
+The Map Wizard in Report Builder 3.0 provides a simple way for you to create a map or map layer, tying it to spatial data. To begin, you need to understand that a report needs spatial data, to show the points you're trying to display, and _can_ have analytical data, to show more information. I'll walk you through using the wizard to create a simple two-layer map that shows the sales (analytical data) per AdventureWorks store (spatial data) in the state of New York.
 
 The Chart Wizard can be accessed in two ways. It will appear on the splash screen when you open Report Builder. It can also be found under File > New.
 
@@ -103,7 +103,7 @@ When you click anywhere on the map, the Map Layers screen will pop up. Here, you
 
 Running the report right now will result in a map of the state of New York, with the names of a few counties displayed. We need to add a dataset to tell the report what data to display.
 
-I’m going to use AdventureWorks2008R2. You’ll need to go to your database and create this view:
+I'm going to use AdventureWorks2008R2. You'll need to go to your database and create this view:
 
  
 
@@ -196,7 +196,7 @@ Here, you'll see a point for each city that has a store. Each point has a differ
 
 ![][13]
 
-Maps are a great addition to Report Builder 3.0. You can easily align data from sales, customers, products, campaigns, or even the miles you’ve run each week with built-in maps. This takes reporting to a new level.
+Maps are a great addition to Report Builder 3.0. You can easily align data from sales, customers, products, campaigns, or even the miles you've run each week with built-in maps. This takes reporting to a new level.
 
 This was a very basic introduction – there is much more you can accomplish with maps. Check out these additional resources for more information!
 

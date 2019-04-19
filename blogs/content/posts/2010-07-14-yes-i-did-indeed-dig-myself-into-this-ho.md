@@ -1,5 +1,5 @@
 ---
-title: Yes, I did indeed dig myself into this hole…
+title: Yes, I did indeed dig myself into this hole...
 author: chaospandion
 type: post
 date: 2010-07-14T21:33:50+00:00
@@ -16,7 +16,7 @@ tags:
   - 'c# .net'
 
 ---
-Folks, please remember to refactor early and often… 
+Folks, please remember to refactor early and often... 
 
 ```CSharp
 private Element ReadMemberExpression()

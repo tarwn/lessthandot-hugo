@@ -34,7 +34,7 @@ Dynamic lookup as well as named and optional parameters both help making program
 
 **Variance**
   
-It used to be that an IEnumerable<string> wasn’t an IEnumerable<object>. Now it is – C# embraces type safe “co-and contravariance” and common BCL types are updated to take advantage of that.
+It used to be that an IEnumerable<string> wasn't an IEnumerable<object>. Now it is – C# embraces type safe “co-and contravariance” and common BCL types are updated to take advantage of that.
 
 You can download a Word document written by Mads Torgersen with a little more info here: [C# 4.0][1]
 

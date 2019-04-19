@@ -192,7 +192,7 @@ See that, it took a long time, you don't want to grow a one terabyte file by ten
   
 Separate the log files from the data files by placing them on separate hard drives. Placing the files on separate drives allows I/O activity to occur at the same time for both the data and log files. Instead of having huge files consider having smaller files in separate filegroups. Put different tables used in the same join queries in different filegroups as well. This will improve performance, because of parallel disk I/O searching for joined data.
 
-Put heavily accessed tables and the nonclustered indexes that belong to those tables on different filegroups. This will improve performance, because of parallel I/O if the files are located on different physical disks. Just remember that you can't separate the clustered indexes from the base table, you can only do this for non clustered indexes. Of course people can get very creative, I have worked with a database once where each table was placed in its own filegroups, there were hundreds of files….what a mess
+Put heavily accessed tables and the nonclustered indexes that belong to those tables on different filegroups. This will improve performance, because of parallel I/O if the files are located on different physical disks. Just remember that you can't separate the clustered indexes from the base table, you can only do this for non clustered indexes. Of course people can get very creative, I have worked with a database once where each table was placed in its own filegroups, there were hundreds of files....what a mess
 
 **Tempdb**
   

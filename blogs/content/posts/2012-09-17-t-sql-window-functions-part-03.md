@@ -729,7 +729,7 @@ The expression above returns the following error:
   
 <span class="MT_red">Column 'CTEOrders.OrderAmt' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause</span>
 
-The goal of the statement above was to show the customer’s total order amount with the overall order amount. The following statement resolves this issue because it is aggregating the aggregates. The window is now summing the aggregated amount which are grouped on the customer name.
+The goal of the statement above was to show the customer's total order amount with the overall order amount. The following statement resolves this issue because it is aggregating the aggregates. The window is now summing the aggregated amount which are grouped on the customer name.
 
 <code class="codespan">select sum(OrderAmt)<br />
 	, sum(sum(OrderAmt)) over() as TotalOrderAmt<br />
@@ -1794,7 +1794,7 @@ This next example is more creative. It begins to show how powerful the window fu
   </tr>
 </table>
 
-The ORDER BY clause creates an expanding group within the partition. In the examples above, the partition was the customer. Within each partition, ordered groups based on order date and order id are “created”. At each row, the order date and order id groups are aggregated up to the current row’s group thus producing the running total. If more than one row has the same order grouping, all of the rows in the group are aggregated into the total as shown in the second example above with the days and years. 
+The ORDER BY clause creates an expanding group within the partition. In the examples above, the partition was the customer. Within each partition, ordered groups based on order date and order id are “created”. At each row, the order date and order id groups are aggregated up to the current row's group thus producing the running total. If more than one row has the same order grouping, all of the rows in the group are aggregated into the total as shown in the second example above with the days and years. 
 
 # Aggregates with ROWS
 

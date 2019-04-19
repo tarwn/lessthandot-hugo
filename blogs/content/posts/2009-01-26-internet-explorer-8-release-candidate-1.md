@@ -25,11 +25,11 @@ IT Professionals should visit http://technet.microsoft.com/ie
 
 Developers should visit http://msdn.microsoft.com/ie
 
-Since Beta 2, you’ll note some of the changes in RC1 include the following:
+Since Beta 2, you'll note some of the changes in RC1 include the following:
 
 **ClickJacking protection**. The SmartScreen Filter now includes the ability to help detect and prevent “ClickJacking” which is a malicious technique of tricking web users into revealing confidential information or taking control of their computer.
 
-**InPrivate™**. Helps to protect user’s data and privacy from being retained “locally” on a PC. InPrivate Browsing and InPrivate Filtering can now be used independently.
+**InPrivate™**. Helps to protect user's data and privacy from being retained “locally” on a PC. InPrivate Browsing and InPrivate Filtering can now be used independently.
 
 **Performance improvements**. Reduces the time that users must wait when starting the browser, opening a “new tab”, or loading a page.
 

@@ -33,7 +33,7 @@ Analysis Management Objects (AMO) is a .NET Framework object model that enables 
 
 **Microsoft SQL Server 2008 Analysis Services 10.0 OLE DB Provider**
   
-The Analysis Services 10.0 OLE DB Provider is a COM component that software developers can use to create client-side applications that browse metadata and query data stored in Microsoft SQL Server 2008 Analysis Services. This provider implements both the OLE DB specification and the specification’s extensions for online analytical processing (OLAP) and data mining.
+The Analysis Services 10.0 OLE DB Provider is a COM component that software developers can use to create client-side applications that browse metadata and query data stored in Microsoft SQL Server 2008 Analysis Services. This provider implements both the OLE DB specification and the specification's extensions for online analytical processing (OLAP) and data mining.
 
 **Microsoft SQL Server 2005 Backward Compatibility Components**
   

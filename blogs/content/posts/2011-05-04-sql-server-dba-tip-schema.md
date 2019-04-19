@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-04T10:24:00+00:00
 ID: 1134
-excerpt: 'It was a dark and stormy night.  Database User Fred had an idea to venture into tables he wasn’t supposed to be in…OK, really that was for my buddy Noel McKinney (Twitter | Blog).  At some point when you are writing, the single largest barrier is the fi&hellip;'
+excerpt: It was a dark and stormy night.  Database User Fred had an idea to venture into tables he wasn't supposed to be in...OK, really that was for my buddy Noel McKinney.  At some point when you are writing, the single largest barrier is the fi&hellip;
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-schema/
 views:
   - 7897
@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-It was a dark and stormy night.  Database User Fred had an idea to venture into tables he wasn’t supposed to be in…OK, really that was for my buddy Noel McKinney ([Twitter][1] | [Blog][2]).  At some point when you are writing, the single largest barrier is the first line.  Thanks to Noel, I have my first line and we can get to it…
+It was a dark and stormy night.  Database User Fred had an idea to venture into tables he wasn't supposed to be in...OK, really that was for my buddy Noel McKinney ([Twitter][1] | [Blog][2]).  At some point when you are writing, the single largest barrier is the first line.  Thanks to Noel, I have my first line and we can get to it...
 
 Prior to SQL Server 2005, Schemas were not much more than a form of a database user.  Schemas since the SQL Server 2005 release are now a form of containment in which grouping of objects can be performed.   This is beneficial to security because we can create inner secured groupings of objects in a single database and quickly move objects contained in that group to other areas.  The value in this for a DBA is seen in controlling their own work.  Best practice tells us we should create a user database that we use for maintenance and other administrative tasks on SQL Server.  These databases can quickly become littered with tables and their exact purposes hard to manage.  Using Schemas, DBAs can group the tables into meaningful groups, such as index tables in an IndexMaint schema and DMV collections into a Baseline schema.  Once this is set up, the tables are identified quickly by the schema they are contained in.
 

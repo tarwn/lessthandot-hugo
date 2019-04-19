@@ -253,7 +253,7 @@ Every week in my shop we do cross training. Someone brings in something they are
   </p>
   
   <h3>
-    And Around, And Around, And Around…
+    And Around, And Around, And Around...
   </h3>
   
   <p>

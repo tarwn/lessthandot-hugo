@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-“It’s not just about software — the <strong class="markup--strong markup--pullquote-strong">Enterprise</strong> is <strong class="markup--strong markup--pullquote-strong"><em class="markup--em markup--pullquote-em">the System”</em></strong>
+“It's not just about software — the <strong class="markup--strong markup--pullquote-strong">Enterprise</strong> is <strong class="markup--strong markup--pullquote-strong"><em class="markup--em markup--pullquote-em">the System”</em></strong>
 
 <p id="595b" class="graf graf--p graf-after--pullquote">
   The “<em class="markup--em markup--p-em">Mastering Digital: Software Engineering Report</em>” (2017) provides analysis of detailed feedback from Architects and Engineers about their work on software projects for organisations of all types and sizes.
@@ -53,7 +53,7 @@ categories:
   </li>
 </ul>
 
-Find out more here…
+Find out more here...
 
 [EnterpriseCore.io: The State of Software Engineering Report, 2017][1]
 

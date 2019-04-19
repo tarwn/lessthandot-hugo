@@ -22,7 +22,7 @@ tags:
 ---
 Several weeks ago I started digging into WebMatrix. Over the course of a weekend I was able to put together a quick, functioning website, pick up some basics of working with WebMatrix and the deployment tool, and play with a few other technologies as well. Then I stepped back and realized I was only using a percentage of it's capabilities.
 
-I've read a lot of blogs and articles on Web Matrix and none of them prepared me for the sheer range of capabilities this little tool offers. One would mention writing a web page, another would talk about deployment, a third about WordPress…it wasn't until I started playing with it and went to write a blog entry of my own that I realized how much capability was packed into this one 'little' tool. 
+I've read a lot of blogs and articles on Web Matrix and none of them prepared me for the sheer range of capabilities this little tool offers. One would mention writing a web page, another would talk about deployment, a third about WordPress...it wasn't until I started playing with it and went to write a blog entry of my own that I realized how much capability was packed into this one 'little' tool. 
 
 This isn't a deep dive, there's plenty of those. This is a shallow float across the surface of what is actually a quite impressive (and don't forget free) tool.
 
@@ -34,7 +34,7 @@ So is it a tool? A set of templates? A language? A publication engine?
 
 Yes.
 
-And an IIS express manager, database configurator, generator of CMS-driven sites …The kitchen sink is in there somewhere.
+And an IIS express manager, database configurator, generator of CMS-driven sites ...The kitchen sink is in there somewhere.
 
 ## Building Sites
 
@@ -82,7 +82,7 @@ And to be honest I haven't even had time to try the rest, but they all seem fair
   
 **More Depth:** [Trying Out WebMatrix and Razor][6] by Chrissie
   
-**More Depth:** Not finding a good Classic ASP link…
+**More Depth:** Not finding a good Classic ASP link...
 
 Unfortunately intellisense is either non-existent or just extremely limited and not noticeable after a day using Visual Studio. However, if you have Visual Studio available then you can click the Visual Studio button on the WebMatrix tool bar and the project and file you are currently working on will immediately open in Visual Studio, allowing you to take advantage of it's more extensive editing (and of course intellisense) capabilities.
 

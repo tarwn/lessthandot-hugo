@@ -4,7 +4,7 @@ author: SQLDenis
 type: post
 date: 2011-11-27T12:42:00+00:00
 ID: 1397
-excerpt: 'SQL Server 2012 is around the corner, perhaps you are ready to upgrade and perhaps you are not. Maybe you just have upgraded to SQL Server 2008 R2 without software assurance and thus you don’t qualify for SQL Server 2012 upgrades..  Even though most peo&hellip;'
+excerpt: "SQL Server 2012 is around the corner, perhaps you are ready to upgrade and perhaps you are not. Maybe you just have upgraded to SQL Server 2008 R2 without software assurance and thus you don't qualify for SQL Server 2012 upgrades..  Even though most peo&hellip;"
 url: /index.php/datamgmt/datadesign/are-you-ready-for-sql/
 views:
   - 12015
@@ -19,15 +19,15 @@ tags:
   - sql server 2012
 
 ---
-SQL Server 2012 is around the corner, perhaps you are ready to upgrade and perhaps you are not. Maybe you just have upgraded to SQL Server 2008 R2 without software assurance and thus you don’t qualify for SQL Server 2012 upgrades.. Even though most people are on SQL Server 2005 or higher these days, I see plenty of database code that is being written today in SQL Server 2000 syntax; I guess old habits are hard to break indeed! In the next 25 days I want to take a stab to identify 25 of these habits and see if we can bring them to this century. Think of it as the “SQL Server upgrade your code” advent calendar.
+SQL Server 2012 is around the corner, perhaps you are ready to upgrade and perhaps you are not. Maybe you just have upgraded to SQL Server 2008 R2 without software assurance and thus you don't qualify for SQL Server 2012 upgrades.. Even though most people are on SQL Server 2005 or higher these days, I see plenty of database code that is being written today in SQL Server 2000 syntax; I guess old habits are hard to break indeed! In the next 25 days I want to take a stab to identify 25 of these habits and see if we can bring them to this century. Think of it as the “SQL Server upgrade your code” advent calendar.
 
-Another reason I want to do is because some of the 2000 syntax or pre 2000 syntax won’t work anymore in SQL Server 2012 Are you still using old style left joins with \*= and =\*? If so then you will be greeted with the following message: Incorrect syntax near '*'.
+Another reason I want to do is because some of the 2000 syntax or pre 2000 syntax won't work anymore in SQL Server 2012 Are you still using old style left joins with \*= and =\*? If so then you will be greeted with the following message: Incorrect syntax near '*'.
 
 Most people who upgrade do something like this: backup the database, restore on the new server, sometimes set the compatibility level to whatever is the current one and they are done. This will work of course but you can do much better, why not changing some of the code to take advantage of new features, maybe all you want is the date instead of datetime, just making this change will save 5 bytes per row.
 
-Another advantage of using new functionality is that it is better for your career. I interview plenty of people who have SQL Server 2005 and 2008 on their resume, I have yet to find one person who can write the ROW_NUMBER() syntax on the whiteboard for me. The snapshot isolation level is another mystery to the people I have interviewed. The blessing of an IT worker is that you will never be bored, there is always something to learn. The curse is the same as the blessing, if you don’t keep up then you become obsolete. Your job really doesn’t end when you get home, you have to spend an additional 10 -20 hours a week upgrading your skills, this can be done by listening to podcasts, messing around with the latest CTPs, answering question in forums , reading blogs and maintaining your own technical blog
+Another advantage of using new functionality is that it is better for your career. I interview plenty of people who have SQL Server 2005 and 2008 on their resume, I have yet to find one person who can write the ROW_NUMBER() syntax on the whiteboard for me. The snapshot isolation level is another mystery to the people I have interviewed. The blessing of an IT worker is that you will never be bored, there is always something to learn. The curse is the same as the blessing, if you don't keep up then you become obsolete. Your job really doesn't end when you get home, you have to spend an additional 10 -20 hours a week upgrading your skills, this can be done by listening to podcasts, messing around with the latest CTPs, answering question in forums , reading blogs and maintaining your own technical blog
 
-Hopefully I didn’t ramble on too much about keeping your skills up to date but it is very important!!
+Hopefully I didn't ramble on too much about keeping your skills up to date but it is very important!!
 
 December 1st I will have part 1 out of 25 posted, keep coming back every day and we will do a recap after day 25.
 

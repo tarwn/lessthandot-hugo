@@ -36,7 +36,7 @@ Let's look at some sample data, and the expected results when rounded to 1 decim
 
 **Round Up:**
   
-This method always rounds the number up to the next highest number. For example, 3.1 rounded up is 4 and -3.1 rounded up is -3. In SQL Server, the easiest way to achieve 'RoundUp’ is to use the ceiling function. Unfortunately, the Ceiling function only works with whole numbers. There’s no built-in function that RoundsUp where you can specify the number of digits. This is no problem, we can just build our own.
+This method always rounds the number up to the next highest number. For example, 3.1 rounded up is 4 and -3.1 rounded up is -3. In SQL Server, the easiest way to achieve 'RoundUp' is to use the ceiling function. Unfortunately, the Ceiling function only works with whole numbers. There's no built-in function that RoundsUp where you can specify the number of digits. This is no problem, we can just build our own.
 
 sql
 Create Function dbo.RoundUp(@Val Decimal(32,16), @Digits Int)
@@ -76,7 +76,7 @@ In this method, 3.5 rounds down to 3, but -3.5 rounds up to -3. Implementing Rou
   
 4.15000001 should round to 4.2
 
-Using the 3rd argument of the round function will blindly truncate the trailing numbers, so both would be rounded to 4.1. This is not what we want, so we’ll need to write another function.
+Using the 3rd argument of the round function will blindly truncate the trailing numbers, so both would be rounded to 4.1. This is not what we want, so we'll need to write another function.
 
 sql
 Create Function dbo.RoundToZero(@Val Decimal(32,16), @Digits Int)
@@ -99,7 +99,7 @@ Example,
   
 4.25 Bankers Rounded to 1 digits is 4.2
 
-This occurs because everything to the right of the number of digits (5) is exactly 5. Had it been 51, the number would have been rounded up. Less than 50, and the number is rounded down. Since it is exactly 50, we need to examine the digit to the left of it (the 1st decimal place). If it’s an even number, the rounded value is truncated. If it’s an odd number (like the 1 in 4.15), then it’s rounded to the next even number (to become 4.2). 
+This occurs because everything to the right of the number of digits (5) is exactly 5. Had it been 51, the number would have been rounded up. Less than 50, and the number is rounded down. Since it is exactly 50, we need to examine the digit to the left of it (the 1st decimal place). If it's an even number, the rounded value is truncated. If it's an odd number (like the 1 in 4.15), then it's rounded to the next even number (to become 4.2). 
 
 We can write another function in SQL Server to implement bankers rounding.
 

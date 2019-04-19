@@ -91,7 +91,7 @@ End Class
 ```
 All we need to accomplish here is to validate the files existence. If the file does not exist then our steps will go to the send failure email task and notify you.
   
-Next step, drag over a Data Flow task. Add to the connection managers a flat file connection to the csv file in the instance\_search folder as a flat file connection. Second, add an ADO.NET or OLEDB connection to your instance. In my case I have a DBA database on the instance that this package is created. In this database I created a table instance\_audit. This table is where we pump the results from SQL Ping in order to report on later. The create table would be…
+Next step, drag over a Data Flow task. Add to the connection managers a flat file connection to the csv file in the instance\_search folder as a flat file connection. Second, add an ADO.NET or OLEDB connection to your instance. In my case I have a DBA database on the instance that this package is created. In this database I created a table instance\_audit. This table is where we pump the results from SQL Ping in order to report on later. The create table would be...
 
 sql
 CREATE TABLE [dbo].[instance_audit](
@@ -126,7 +126,7 @@ Go back the control flow tab and connect all your steps to the email tasks so no
 
 Running this package fills the discovered instances into the instance_audit table for later reporting in SSRS or you can send out a notification with a query attachment for review.
   
-Such as…
+Such as...
 
 sql
 EXEC msdb.dbo.sp_send_dbmail @recipients='dba@your_company.com',

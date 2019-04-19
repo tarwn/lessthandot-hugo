@@ -16,7 +16,7 @@ categories:
 ---
 Late last night my blackberry went nuts again. Sometimes I like that and sometimes I just want to keep sleeping. I know it may be a little odd to say I like having my database servers page me in the middle of the night, but troubleshooting problems is a major reason I went into the database administration field. Turns out the pages were all about blocking issues. Once I went into the blocks and drilled to batches that were abusing my database server, I found the reason to be a matter of fragmentation on a HEAP table. To date I still don't undertand HEAP tables. Well, I understand them. My point is, why use them? Is it really that hard to design tables so this is prevented? No, it's not. The problem still exists though and I had to fix it and fix it quick. Here is how I did. 
 
-So I have a HEAP table with about 1 million rows in it. The HEAP table is fragmented to around 89% when I checked my fragementation logs and it bothers me to greatly. This bothers me mostly due to the fact this table is read countless times by the ERP system. As much as I want to call the designers of the ERP system up and school them on database design and concepts, we all know how far it will get me. So how I can I fix fragmented tables? Here is how…
+So I have a HEAP table with about 1 million rows in it. The HEAP table is fragmented to around 89% when I checked my fragementation logs and it bothers me to greatly. This bothers me mostly due to the fact this table is read countless times by the ERP system. As much as I want to call the designers of the ERP system up and school them on database design and concepts, we all know how far it will get me. So how I can I fix fragmented tables? Here is how...
 
 Table name is POP10500. The ERP system is Microsoft Dyanmics Great Plains v9 so any alterations to the table structure will essentially take down the system. That means this is offline or after hours only. That pretty much goes for any tables you decide to do this to no matter how it affects the applications.
 
@@ -58,7 +58,7 @@ FROM POP10500
 GROUP BY DEX_ROW_ID
 HAVING COUNT(*) > 1
 ```
-And by determining the use of this table from the ERP documentation. Yes, you should read all the documentation not only for the databases you support, but for the applications you support. DEX\_ROW\_ID is simply therelational key to the header and detail purchase order tables. This table in question is a transactions tables. So why not kill the fragmentation all together taking advantage of DEX\_ROW\_ID? let's try…
+And by determining the use of this table from the ERP documentation. Yes, you should read all the documentation not only for the databases you support, but for the applications you support. DEX\_ROW\_ID is simply therelational key to the header and detail purchase order tables. This table in question is a transactions tables. So why not kill the fragmentation all together taking advantage of DEX\_ROW\_ID? let's try...
 
 sql
 CREATE UNIQUE CLUSTERED INDEX IX_CLUS ON dbo.POP10500(DEX_ROW_ID);

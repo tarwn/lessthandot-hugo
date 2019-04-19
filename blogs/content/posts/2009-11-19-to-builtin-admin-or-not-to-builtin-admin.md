@@ -17,9 +17,9 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-A while back I wrote, “[To SA or not to SA][1]”. That blog touched my security side that I take very seriously in my database server landscape. I’m glad to have seen so many read the blog in hopes it brought attention to the SA account where it may have been overlooked. In a reply to one of the comments I touched on another default setting for SQL Server regarding the BUILTIN Administrators group. BUILTINAdministrators is created by default on windows operating systems. This group has little to no limitations on the OS and application installations on the server.
+A while back I wrote, “[To SA or not to SA][1]”. That blog touched my security side that I take very seriously in my database server landscape. I'm glad to have seen so many read the blog in hopes it brought attention to the SA account where it may have been overlooked. In a reply to one of the comments I touched on another default setting for SQL Server regarding the BUILTIN Administrators group. BUILTINAdministrators is created by default on windows operating systems. This group has little to no limitations on the OS and application installations on the server.
 
-So to put it as slightly as I did with SA…
+So to put it as slightly as I did with SA...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/NoEntry_admin.gif" alt="" title="" width="292" height="301" />
@@ -29,7 +29,7 @@ If you are on SQL Server 2008 and upgraded by using a fresh install, you do not 
 
 Most database installations are not easily upgraded of course. I know a few DBAs I communicate with often that even have compatibility levels pre-dating 80 in their respected environments. My own landscape is composed 90% of SQL Server 2005 and plans for 2008 across the board are not slated until Q2, 2010. So if you have SQL Server 2005 or are restricted in use to pre-2008, the BUILTINAdmin group is still of much concern.
 
-## _Taking a look…_
+## _Taking a look..._
 
 To check your BUILTIN Administrators group and the server role you can do few things.
 
@@ -61,7 +61,7 @@ For query abilities, Denis Gobo also has a handy query on the syslogins here
   
 http://wiki.ltd.local/index.php/Find\_Out\_Server\_Roles\_For\_a\_SQL\_Server\_Login
 
-In Denis’s Wiki entry there is a query at the end that gives us exactly what we need here also
+In Denis's Wiki entry there is a query at the end that gives us exactly what we need here also
 
 sql
 SELECT [name],sysadmin,bulkadmin
@@ -71,11 +71,11 @@ WHERE sysadmin =1 or bulkadmin =1
 
 This will show us everyone in the sysadmin role. 
 
-## _So what’s the problem?_
+## _So what's the problem?_
 
-The primary problem with leaving the BUILTINAdmin group in the sysadmin role is it has no control. This leads into most windows server installations that have Domain Admins as local administrators on the servers. This brings you to the point of having all Domain Admins as sysadmin’s on your database servers. Several problems arrise from this sitaution. Database creations without control, server connections that can cause problems and security gaps to other instances, monitoring concerns and many more uncontrolled issues.
+The primary problem with leaving the BUILTINAdmin group in the sysadmin role is it has no control. This leads into most windows server installations that have Domain Admins as local administrators on the servers. This brings you to the point of having all Domain Admins as sysadmin's on your database servers. Several problems arrise from this sitaution. Database creations without control, server connections that can cause problems and security gaps to other instances, monitoring concerns and many more uncontrolled issues.
 
-## _Solution…_
+## _Solution..._
 
 There is only one real solution and it starts with the DBA. Here are a few things as a DBA you should think about while either installing a fresh instance or upgrading.
 

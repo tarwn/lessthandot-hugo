@@ -64,7 +64,7 @@ It is clear from this requirement that multiple orders must be processed. By app
 
   * If there are no orders in the past 3 months, what should the report display? Should it list each month with 0 orders and $0?
   * If there are no orders for any particular month, should that month still be listed in the report?
-  * Aggregations are always interesting spots to test. If there is a null value for an order amount, how should that be treated in the sum? If it’s not included in the revenue, should it also not be included in the count?
+  * Aggregations are always interesting spots to test. If there is a null value for an order amount, how should that be treated in the sum? If it's not included in the revenue, should it also not be included in the count?
 
 ## Notes:
 
@@ -84,7 +84,7 @@ The join type (e.g. inner, left or right outer, full) must also be considered. T
   * A record exists in the left table and there is exactly one match in the right table.
   * A record exists in the left table and has multiple matches in the right table.
   * A record exists in the right table, but has no matches in the left table.
-  * And so on…
+  * And so on...
 
 **Filters**: Zero-one-some is also particularly useful in filters, such as WHERE clauses. Consider the following sub-query, for example:
 

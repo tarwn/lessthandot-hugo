@@ -1,5 +1,5 @@
 ---
-title: Speaking of resolutions…
+title: Speaking of resolutions...
 author: chopstik
 type: post
 date: 2013-01-01T15:18:00+00:00

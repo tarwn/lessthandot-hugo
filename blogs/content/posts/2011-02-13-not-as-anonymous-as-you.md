@@ -1,5 +1,5 @@
 ---
-title: Not as anonymous as you thought you were…
+title: Not as anonymous as you thought you were...
 author: chopstik
 type: post
 date: 2011-02-13T23:28:00+00:00

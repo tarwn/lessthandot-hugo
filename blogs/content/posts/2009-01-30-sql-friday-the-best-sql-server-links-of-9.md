@@ -23,7 +23,7 @@ Calculating running totals is notoriously slow, whether you do it with a cursor 
 
 **[Creating a 60 GB Index][2]**
   
-Recently, I needed to create an index on a 1.5 billion row table. I’ve created some large indexes before, but this was the largest, so I thought I’d share my experience in case anyone was interested
+Recently, I needed to create an index on a 1.5 billion row table. I've created some large indexes before, but this was the largest, so I thought I'd share my experience in case anyone was interested
 
 **[Back To Basics: What are indexes and what are they used for?][3]**
   
@@ -49,7 +49,7 @@ Interesting post make sure you read the comments
 
 **[The IDENTITY Property: A Much-Maligned Construct in SQL Server][8]**
   
-I’d be willing to place a bet that on any given week, I’ll field at least one question on the MSDN Forums that reads a bit like this:
+I'd be willing to place a bet that on any given week, I'll field at least one question on the MSDN Forums that reads a bit like this:
 
 “I need to create a unique key for a table using a Stored Procedure|User-Defined Function. Please do NOT suggest IDENTITY.”
 

@@ -1,5 +1,5 @@
 ---
-title: Dealing with the could not allocate new page for database 'TEMPDB’. There are no more pages available in filegroup DEFAULT error message
+title: Dealing with the could not allocate new page for database 'TEMPDB'. There are no more pages available in filegroup DEFAULT error message
 author: SQLDenis
 type: post
 date: 2009-07-21T18:01:51+00:00

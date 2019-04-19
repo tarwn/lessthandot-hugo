@@ -27,6 +27,6 @@ A major point of failure in a full recovery model is not testing your backups. Y
   4. Push testing further than one time restore. Automate your RESTORE tests either daily, weekly or what your resources permit. Remember, just because you go on vacation does not mean your methods change and your duties go away.
   5. Document the results and let management know of those results with either simple reporting results of utilizing SSRS for subscription automation.
 
-Testing your backups will expose problems that will save you when your backup strategies are put to the test in a real life disaster that your normal DR strategy fails to recover from. The last thing any DBA wants is to tell them the restore doesn’t work. As DBAs, securing the data is the number one priority in your list of duties and responsibilities. Backups are the fundamental method for doing just that.
+Testing your backups will expose problems that will save you when your backup strategies are put to the test in a real life disaster that your normal DR strategy fails to recover from. The last thing any DBA wants is to tell them the restore doesn't work. As DBAs, securing the data is the number one priority in your list of duties and responsibilities. Backups are the fundamental method for doing just that.
 
 Remember, if you don't test your backups regularly then you will end up testing them when their failure could hurt you the most.

@@ -1,5 +1,5 @@
 ---
-title: 2012 Analytics about Searches, Countries and Content…….
+title: 2012 Analytics about Searches, Countries and Content.......
 author: SQLDenis
 type: post
 date: 2012-12-27T13:26:00+00:00

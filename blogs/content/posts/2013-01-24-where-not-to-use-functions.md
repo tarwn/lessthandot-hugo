@@ -24,7 +24,7 @@ tags:
 ---
 Functions can be very powerful, but used in the wrong place in a query they can show some unexpected behavior.
   
-In this post I will be using the AdventureWorks2008R2 database and I will query the Sales.SalesOrderHeader to get all the 2006 OrderDates. A query that doesn’t make much sense but will return some interesting results.
+In this post I will be using the AdventureWorks2008R2 database and I will query the Sales.SalesOrderHeader to get all the 2006 OrderDates. A query that doesn't make much sense but will return some interesting results.
   
 Take the following query:
 
@@ -97,8 +97,8 @@ But when we look at the execution plan:
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction5.png?mtime=1359036029"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction5.png?mtime=1359036029" width="622" height="149" /></a>
 </div>
 
-We see that our index isn’t seeked anymore but gets a complete scan. So instead of searching in some 4K rows, SQL Server is scanning more than 30K of rows. This is because SQL Server is applying the function to all of the rows in our Sales.SalesOrderHeader table before it’s compared to our desired value.
+We see that our index isn't seeked anymore but gets a complete scan. So instead of searching in some 4K rows, SQL Server is scanning more than 30K of rows. This is because SQL Server is applying the function to all of the rows in our Sales.SalesOrderHeader table before it's compared to our desired value.
 
 **Conclusion**
   
-Be careful when using functions in the WHERE clause of a query. It’s possible that the function will be applied to all the rows before the filter is applied. Resulting in scans, non used indexes, more I/O, memory consumption and a poor performing query.
+Be careful when using functions in the WHERE clause of a query. It's possible that the function will be applied to all the rows before the filter is applied. Resulting in scans, non used indexes, more I/O, memory consumption and a poor performing query.

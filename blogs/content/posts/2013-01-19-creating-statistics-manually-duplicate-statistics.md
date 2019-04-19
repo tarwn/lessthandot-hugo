@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Something I never really would have thought much about was the creation of statistics does as it impacts an index creation – mostly, the naming convention.  In some situations, there may be a need to create your own statistics.  Now, 99.999% of the time you will likely be indexing and creating statistics in a much different form than what I’m about to show but nonetheless, it happened to me today so I’m going to show it so others can avoid it.
+Something I never really would have thought much about was the creation of statistics does as it impacts an index creation – mostly, the naming convention.  In some situations, there may be a need to create your own statistics.  Now, 99.999% of the time you will likely be indexing and creating statistics in a much different form than what I'm about to show but nonetheless, it happened to me today so I'm going to show it so others can avoid it.
 
 Take an example table named, testarea loaded with some test data.
 
@@ -30,7 +30,7 @@ GO 1000
 
  
 
-At the time of this table’s creation, you may already know that colint is going to be needed in a predicate form.  At this time you could create your own statistics on colint.
+At the time of this table's creation, you may already know that colint is going to be needed in a predicate form.  At this time you could create your own statistics on colint.
 
 sql
 CREATE STATISTICS colint_cover ON [dbo].[testarea]([colint])
@@ -42,7 +42,7 @@ GO
 
 So far, nothing is a big surprise here.  We have a table and a column that we created statistics on effectively getting ahead of the game.  What we do need to pay close attention to is the name of the statistics we have chosen.
 
-In the case of the colint column, we’ll effectively want to have an index if it is being used as a predicate.  In this case, we could call that index colint_cover, while it may include non-key columns to cover queries.
+In the case of the colint column, we'll effectively want to have an index if it is being used as a predicate.  In this case, we could call that index colint_cover, while it may include non-key columns to cover queries.
 
  
 

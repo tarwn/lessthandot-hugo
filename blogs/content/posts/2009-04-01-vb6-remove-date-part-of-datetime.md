@@ -38,7 +38,7 @@ The Int function performs a simple truncate on a number. Note: this does not do 
 Debug.Print Now - Int(Now)
 0.390729166669189 </span> </pre>
 
-Surprised to see a number instead of a time? Me too. But… in VB6, when you subtract dates, the resulting data type is a double.
+Surprised to see a number instead of a time? Me too. But... in VB6, when you subtract dates, the resulting data type is a double.
 
 <pre><span class="MT_blue">Debug.Print TypeName(Now - Int(Now))
 Double</span> </pre>

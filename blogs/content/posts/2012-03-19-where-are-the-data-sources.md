@@ -40,7 +40,7 @@ Next you would make a Data Source View based on the Data Source just created by 
 
 In the screen that pop's up you get the list of available Data Sources and after selecting one the Connection Manager is created.
   
-The last step is to create the Connection Manager that will be based on the Data Source. This is accomplished by right clicking in the Connection Manager pane and by selecting “New Connection From Data Source…”:
+The last step is to create the Connection Manager that will be based on the Data Source. This is accomplished by right clicking in the Connection Manager pane and by selecting “New Connection From Data Source...”:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV4.png?mtime=1332153238"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV4.png?mtime=1332153238" width="694" height="363" /></a>

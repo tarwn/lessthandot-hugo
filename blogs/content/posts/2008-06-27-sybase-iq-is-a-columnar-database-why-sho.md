@@ -16,7 +16,7 @@ categories:
 ---
 Maybe you heard about Sybase IQ and maybe you did not. So what is Sybase IQ? Sybase IQ is a columnar database. What does this mean? This mean that the data is stored in columns and not in rows. Inserts are slower that a traditional row based database but selects are many times faster (up to 50 times). The good thing about this technology is that the SQL looks the same, the only difference is that the data is stored in a different way.
 
-Sybase announced that they have [Set Guinness World Record for World’s Largest Data Warehouse][1] 
+Sybase announced that they have [Set Guinness World Record for World's Largest Data Warehouse][1] 
 
 > Powered by the category-leading column-oriented database Sybase IQ, the data warehouse is certified to support a record-breaking one petabyte of mixed relational and unstructured data—more than 34 times larger than the largest industry standard benchmark1 and twice the size of the largest commercial data warehouse known to date2. In total, the data warehouse contains six trillion rows of transactional data and more than 185 million content-searchable documents, such as emails, reports, spreadsheets and other multimedia objects. 
 

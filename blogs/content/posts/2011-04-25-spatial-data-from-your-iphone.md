@@ -62,7 +62,7 @@ If the file you are opening is not a SQL Lite file the plugin will give you an e
 
 Once you've found the correct file, make a note of the full path and file name as you'll need it in a few minutes. Also, it's worth noting that this file name doesn't seem to change after syncing your iPhone. I've synced a few times after doing the initial discovery and the file is updated but the name remains the same.
 
-Hang in there, we're almost to the good stuff…
+Hang in there, we're almost to the good stuff...
 
 **Connect to the Data:**  
 To access the file and import your data into SQL Server you'll need to install the SQLite ODBC drivers available for free from <http://www.ch-werner.de/sqliteodbc/>   
@@ -81,7 +81,7 @@ Next, in SQL Server create a new linked server and choose the Microsoft OLE DB P
   <a href="/media/blogs/DataMgmt/ip6.jpg?mtime=1303757085"><img src="/wp-content/uploads/blogs/DataMgmt/ip6.jpg?mtime=1303757085" alt="" width="692" height="353" /></a>
 </div>
 
-Alright! Discovery and setup are done and since you've stuck with me this long it's time for some fun…
+Alright! Discovery and setup are done and since you've stuck with me this long it's time for some fun...
 
 **Show Me The Data!**  
 Now that you've got your linked server setup let's look at how we get the data out of SQL Lite and into SQL Server. You can run the following query to get the location data out of the SQL Lite database.
@@ -128,11 +128,11 @@ Now that you've got your spatial fix, let's add some bling or rather Bing, maps 
   <a href="/wp-content/uploads/blogs/DataMgmt/ip21.jpg?mtime=1303786798"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/ip21.jpg?mtime=1303786798" width="610" height="372" /></a>
 </div>
 
-**OK, I've Done All This and it's Pretty Cool…Now What?**
+**OK, I've Done All This and it's Pretty Cool...Now What?**
 
 That depends on you. If you're really interested in tracking the data on an ongoing basis you could automate the loading of the data from consolidated.db file and deploy the report we created. You could also take a look at some of the other data available and do some analysis of it and create other reports. If you've never played with spatial data before this is a good chance to do so and to use some personal data to make it even more interesting.
 
-**What's that? The spatial data is cool but you want more data from your iPhone…**
+**What's that? The spatial data is cool but you want more data from your iPhone...**
 
 Well, you're in luck! There is a good possibility that you can get a lot more data using these same steps. Instead of looking specifically for the consolidated.db file, look for any file that starts with 'SQLite' and take a look at the data it contains just like we did above. I'll bet you find some interesting stuff, I know I did. I use an application called NewsRack for reading RSS feeds and another application called CardBank to store all of my 'customer loyality' card information instead of having them all on my key chain or in my wallet. Guess what? Yep, you're right, they both use SQL Lite to store the data and I can pull that data into SQL Server.
 

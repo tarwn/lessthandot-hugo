@@ -123,8 +123,8 @@ The new optimized plan
   <a href="/wp-content/uploads/blogs/DataMgmt/-69.png?mtime=1323215615"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-69.png?mtime=1323215615" width="624" height="152" /></a>
 </div>
 
-**What’s next?**
+**What's next?**
 
  
 
-We’ve gone over parameterized filters with merge replication and also a key performance tuning aspect with the data partition views in this.  Furthering the topic, next we will discuss join filters and the added need for performance tuning and design considerations.  Data partitions and merge replication offer an enhanced ability to distribute data in a set base designed for specific subscriptions and users.  This ability allows for devices and slower connection speeds access to data, options to alter that data or insert new data and synchronize to sources.  In business, this can open several development possibilities and creating an overall more efficient process and in turn, revenue builder.
+We've gone over parameterized filters with merge replication and also a key performance tuning aspect with the data partition views in this.  Furthering the topic, next we will discuss join filters and the added need for performance tuning and design considerations.  Data partitions and merge replication offer an enhanced ability to distribute data in a set base designed for specific subscriptions and users.  This ability allows for devices and slower connection speeds access to data, options to alter that data or insert new data and synchronize to sources.  In business, this can open several development possibilities and creating an overall more efficient process and in turn, revenue builder.

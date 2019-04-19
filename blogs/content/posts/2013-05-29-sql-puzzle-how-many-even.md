@@ -1,5 +1,5 @@
 ---
-title: SQL Puzzle…how many even numbers are there in a row
+title: SQL Puzzle...how many even numbers are there in a row
 author: SQLDenis
 type: post
 date: 2013-05-29T07:29:00+00:00

@@ -20,19 +20,19 @@ categories:
 ---
 **Merge Replication: Snapshot Performance with Data Partitions**
 
-This week is [SQL University Performance week][1].  Grant Fritchey ([Blog][2] | [Twitter][3]) and myself are on point (get it?).  There are many things we could talk about when it comes to improving performance for SQL Server.  As most of the SQL world knows, Grant is one part human and three parts Optimizer.  There are only a few people I know of that have the knowledge of everything that goes into the life cycle of a transaction.   With that, Grant’s part of the week and that side of performance will be well covered and handled.
+This week is [SQL University Performance week][1].  Grant Fritchey ([Blog][2] | [Twitter][3]) and myself are on point (get it?).  There are many things we could talk about when it comes to improving performance for SQL Server.  As most of the SQL world knows, Grant is one part human and three parts Optimizer.  There are only a few people I know of that have the knowledge of everything that goes into the life cycle of a transaction.   With that, Grant's part of the week and that side of performance will be well covered and handled.
 
 My goal this week was to bring to everyone something that I thought was overlooked: Merge Replication and Applying Snapshots. 
 
-There are a few things that are important in merge replication when performance comes to mind.  Filters and tuning the database to handle those filters, snapshot tuning switches such as the MaxBCPThreads switch, active connections, synchronizing boosts with more switches all the way down to network performance with replication.  We’re going to focus on one of those that are overlooked.  If overlooked, this topic can also cause much grief and cause merge replication to be the thorn in your administration tasks each day.
+There are a few things that are important in merge replication when performance comes to mind.  Filters and tuning the database to handle those filters, snapshot tuning switches such as the MaxBCPThreads switch, active connections, synchronizing boosts with more switches all the way down to network performance with replication.  We're going to focus on one of those that are overlooked.  If overlooked, this topic can also cause much grief and cause merge replication to be the thorn in your administration tasks each day.
 
 **Geographically distant pull subscribers on parameterized filter publications**
 
-Today we are going to talk about the snapshot process when you are replicating over a vast geographical distance.  The problem that needs to be solved with this situation revolves around connectivity.  If connectivity was at blazing speeds all the time, there really wouldn’t be a problem.  Or would there?  If a publication is large, your initialization times will be lengthy.  During that time you would be taking resources from SQL Server and the articles that are in the snapshot generated from the publication.  Those resources would be in contention with normal operations and other replicating subscribers.
+Today we are going to talk about the snapshot process when you are replicating over a vast geographical distance.  The problem that needs to be solved with this situation revolves around connectivity.  If connectivity was at blazing speeds all the time, there really wouldn't be a problem.  Or would there?  If a publication is large, your initialization times will be lengthy.  During that time you would be taking resources from SQL Server and the articles that are in the snapshot generated from the publication.  Those resources would be in contention with normal operations and other replicating subscribers.
 
 Replication has built in compression for snapshots.  This is a mechanism that will run a snapshot and then compress it.  Then the subscriber can download the compressed version of the snapshot, uncompress<span style="text-decoration: line-through;">ing</span> and apply it.  Sounds like a perfect solution to free network connectivity and contention issues.  The problem with using the compression option in replication is that you are limited to 2 GB in size and, more importantly, compression utilizes one resource extensively: CPU.  Since compression utilizes so much CPU (based completely on the hardware at hand on how much) using it as a solution can be a problem in itself.  With these considerations and limitations, the solution almost seems unusable. 
 
-Why don’t we reinvent the wheel but remove some of the cons that the wheel initially introduced into the situation?
+Why don't we reinvent the wheel but remove some of the cons that the wheel initially introduced into the situation?
 
 **Reinventing the Wheel of Compression for Snapshots**
 
@@ -59,7 +59,7 @@ Establishing the needs, we are looking at utilizing Dynamic Folder settings for 
 
 **Data Partitions**
 
-In the situation we’ll cover, the partition that is created will be for an SUSER_NAME.  A [data partition][4] is created upon synchronizing or by manually adding the SUSER\_NAME (or HOST\_NAME) to the publication.  This is a unique value that is used to run a specific snapshot based on only the rows that belong to value. 
+In the situation we'll cover, the partition that is created will be for an SUSER_NAME.  A [data partition][4] is created upon synchronizing or by manually adding the SUSER\_NAME (or HOST\_NAME) to the publication.  This is a unique value that is used to run a specific snapshot based on only the rows that belong to value. 
 
 **Design Workflow**
 
@@ -90,7 +90,7 @@ This pseudo coded flow is the first step in development.  With the flow chart a
 
 The next step is to start writing the SSIS package that will run and handle this entire process.  This will be done in the second part of this week.  Think about the design and flow of this process until then.  How would you do it?  Would you use a windows service to handle the entire process? 
 
-If you are reading this as a student of SQL University; I’d like to hear those answers and discussion thread here in the comments area.
+If you are reading this as a student of SQL University; I'd like to hear those answers and discussion thread here in the comments area.
 
  [1]: http://sqlchicken.com/sql-university/
  [2]: http://www.scarydba.com/

@@ -21,9 +21,9 @@ First, let's take a look at what some of that data might look like:
 
 <span style="color:blue;">2.1 miles<br /> 4 miles<br /> Approximately 6.5 miles<br /> 3.9<br /> 7.2miles</span>
 
-Suppose we wanted to extract just the numeric portion of the text. How would we do this? My first reaction was to use PatIndex to find the first non-numeric character. Unfortunately, this won’t work because of the 3rd row (Approximately 6.5 miles). Then, I thought about CharIndex, knowing there is an optional 3rd parameter that allows us to pick the starting location for the search. Unfortunately, CharIndex doesn’t allow pattern matching, and PatIndex doesn’t accommodate starting somewhere other than the beginning. 
+Suppose we wanted to extract just the numeric portion of the text. How would we do this? My first reaction was to use PatIndex to find the first non-numeric character. Unfortunately, this won't work because of the 3rd row (Approximately 6.5 miles). Then, I thought about CharIndex, knowing there is an optional 3rd parameter that allows us to pick the starting location for the search. Unfortunately, CharIndex doesn't allow pattern matching, and PatIndex doesn't accommodate starting somewhere other than the beginning. 
 
-How do we do this? Well… it get’s tricky.
+How do we do this? Well... it get's tricky.
 
 The first thing we need to do is to find the character that is a number. For this, we can use PatIndex:
 

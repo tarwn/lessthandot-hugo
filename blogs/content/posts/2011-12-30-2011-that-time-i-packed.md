@@ -18,7 +18,7 @@ A year ago, I sat down and wrote [2011 Goals: Bring It On][1]. I wanted to go bi
 
 **Highlights** 
 
-  * The people. From the LTD posse to my MADPASS posse to the people I met at the FreeCon in March to all 1,000 people I introduced myself to at Summit (I'll get the other 4,000 next year)…the best part of my year was the people. 
+  * The people. From the LTD posse to my MADPASS posse to the people I met at the FreeCon in March to all 1,000 people I introduced myself to at Summit (I'll get the other 4,000 next year)...the best part of my year was the people. 
   * Speaking at PASS Summit. It's that awesome. I hope I can do it again. 
   * Starting a user group, and 10 months later, still having it go strong. 
   * Running with SQL people at events. This will never get old. Two of my loves, combined. 

@@ -134,7 +134,7 @@ The other day I had some complaints about Sybase Central, I still think it sucks
   
 When I said that I didn't see results when running two commands, this is because by default Sybase Central only shows one result set. The icons are hideous, some of them have to be from NT4 or even windows 3.11
   
-You will like this one…there is no shortcut or toolbar options to uncomment or comment a block of text….you have to go line by line or place /\* before and \*/ after the text you want to comment. You can't use multiple windows open in the same session, CTRL + N and it closes what you had open and you have a blank window, you have to open another instance of Interactive SQL to have multiple connections and sessions
+You will like this one...there is no shortcut or toolbar options to uncomment or comment a block of text....you have to go line by line or place /\* before and \*/ after the text you want to comment. You can't use multiple windows open in the same session, CTRL + N and it closes what you had open and you have a blank window, you have to open another instance of Interactive SQL to have multiple connections and sessions
   
 For the rest, you will think that you are back using Query Analyzer
 
@@ -148,7 +148,7 @@ Discussed next was how to monitor lock contention by using the sp\_oject\_stats 
 
 **MDA Tables**
   
-These tables are similar to the sys.dm…… views in SQL Server. There are over 30 of these tables
+These tables are similar to the sys.dm...... views in SQL Server. There are over 30 of these tables
 
 **sp_sysmon**
   

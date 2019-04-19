@@ -338,7 +338,7 @@ return result;
 ```
 And there we have it, we start with one randomly submitted code file and end with the results of automated evaluation.
 
-## But What About…?
+## But What About...?
 
 This is only one small part of our interview process and, before anyone brings it up, we do also evaluate for things the computer can't, such as readability of the code. While I have considered some options like incorporating NDepend evaluation, we'll likely never be able to completely automate this. That being said, having this portion automated does reduce the amount of manual evaluation we do, so overall we still save quite a bit of effort.
 

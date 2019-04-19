@@ -52,7 +52,7 @@ All in all it seems you have to configure a lot more in Sybase compared to SQL S
 
 #### Tools
 
-I will never ever complain about SSMS again. Interactive SQL in Sybase Central brings all the pains (without the joys) of Query Analyzer back to the present day. I can't even find a shortcut to quickly comment or uncomment a selection. If you want to run a selection you have to press F9, F5 will run the first statement on a page only. But F9 is not any better it will only run the first line in a selection, if you put a GO in between it only runs the second command…..I can see the making of big mistakes if you are not aware of this behavior.
+I will never ever complain about SSMS again. Interactive SQL in Sybase Central brings all the pains (without the joys) of Query Analyzer back to the present day. I can't even find a shortcut to quickly comment or uncomment a selection. If you want to run a selection you have to press F9, F5 will run the first statement on a page only. But F9 is not any better it will only run the first line in a selection, if you put a GO in between it only runs the second command.....I can see the making of big mistakes if you are not aware of this behavior.
 
 #### Devices
 
@@ -77,7 +77,7 @@ physname = "/usr/u/sybase/data/my_device.dat",
 vdevno = 2, size = 5120, dsync = true
 ```
 
-A couple of things…
+A couple of things...
   
 **name** is the name
   
@@ -95,9 +95,9 @@ When you drop a device by using sp_dropdevice, you also have to remove it from t
 
 **Databases**
   
-Sybase needs a lot more hand holding compared to SQL Server when creating databases. It is very important to save the scripts that you used to create the databases. If on one server you have 2 data files and 1 log 1 and on the other server you create the same but the order is not the same…you have a lot of problems (also know as job security I guess, you need to document everything, you can also grab this info from the sysusages table and them do some math to get to the same sizes)
+Sybase needs a lot more hand holding compared to SQL Server when creating databases. It is very important to save the scripts that you used to create the databases. If on one server you have 2 data files and 1 log 1 and on the other server you create the same but the order is not the same...you have a lot of problems (also know as job security I guess, you need to document everything, you can also grab this info from the sysusages table and them do some math to get to the same sizes)
 
-Sybase has something called segments….I guess it is similar to a filegroup.
+Sybase has something called segments....I guess it is similar to a filegroup.
   
 Here is what the documentation says
 

@@ -59,7 +59,7 @@ This part has a lot of stuff and as a Java developer you should really know how 
   
 Chapter 7 Alternative JVM languages
   
-Chapter 8 Groovy: Java’s dynamic friend
+Chapter 8 Groovy: Java's dynamic friend
   
 Chapter 9 Scala: powerful and concise
   
@@ -191,7 +191,7 @@ Summary
   
 Chapter 7 Alternative JVM languages
   
-** Java too clumsy? Them’s fighting words!
+** Java too clumsy? Them's fighting words!
   
 Language zoology
   
@@ -203,7 +203,7 @@ How the JVM supports alternative languages
   
 Summary
 
-**Chapter 8 Groovy: Java’s dynamic friend**
+**Chapter 8 Groovy: Java's dynamic friend**
   
 Getting started with Groovy
   
@@ -225,7 +225,7 @@ Is Scala right for my project?
   
 Making code beautiful again with Scala
   
-Scala’s object model—similar but different
+Scala's object model—similar but different
   
 Data structures and collections
   

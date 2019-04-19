@@ -65,7 +65,7 @@ This type of chart and query are extremely common with this type of visual repre
 
 **The Code Tuning Exercise**
 
-When code comes across from new development, it is the best time to make changes for best practices and efficiency before it is introduced into a production situation. Let’s look at the query in listing 1.
+When code comes across from new development, it is the best time to make changes for best practices and efficiency before it is introduced into a production situation. Let's look at the query in listing 1.
 
 There are a few things we want to key on
 
@@ -78,7 +78,7 @@ Of course, best practices should always be a task in review for any query review
 
 **Sargability – Code Changes**
 
-Sargable queries come down to search argument capable, or effectively utilizing indexing to minimize time, memory usage and overall consumption of resource like IO to fulfill the query’s needs. This indicates the primary area to review first is the WHERE – the predicates area of the query.
+Sargable queries come down to search argument capable, or effectively utilizing indexing to minimize time, memory usage and overall consumption of resource like IO to fulfill the query's needs. This indicates the primary area to review first is the WHERE – the predicates area of the query.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-172.png?mtime=1355031677"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-172.png?mtime=1355031677" width="418" height="174" /></a><br /> Figure 4
@@ -187,7 +187,7 @@ As shown, the use of tempdb when the estimated memory needs of the plan is excee
   <a href="/wp-content/uploads/blogs/DataMgmt/-179.png?mtime=1355031680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-179.png?mtime=1355031680" width="252" height="230" /></a><br /> Figure 11
 </div>
 
-The above query could effectively be sorted in the final tool to eliminate the ORDER BY all together. Reporting Services has its own sorting capability as do most of the other reporting mechanisms used in most enterprise installations. The key is to measure the effects of the reporting tools or services against the needs of SQL Server performing the sorting. You will find that this tuning effort does lend to a 50/50 finding of, 50% will kick back to better performance, even with the tempdb utilization, over the reporting tool’s memory consumption of overall performance of sorting the data at runtime. 
+The above query could effectively be sorted in the final tool to eliminate the ORDER BY all together. Reporting Services has its own sorting capability as do most of the other reporting mechanisms used in most enterprise installations. The key is to measure the effects of the reporting tools or services against the needs of SQL Server performing the sorting. You will find that this tuning effort does lend to a 50/50 finding of, 50% will kick back to better performance, even with the tempdb utilization, over the reporting tool's memory consumption of overall performance of sorting the data at runtime. 
 
 **Memory allocation needs (cache)**
 
@@ -203,7 +203,7 @@ Executing the query from listing 1 results in the following buffer allocations
 
 At this time, no indexing has been performed on the tables the query is reading. This results in 3 HEAP tables and an overall consumption of 39MB of the buffer.
 
-The next step to perform in the tuning efforts would be to effectively lower the pages that are read into the buffer. This is done by effective indexing and by the methods we’ve already covered. Since indexing can single-handedly have the most impact on performance, that is what we will cover next. While working through indexing the query in listing 1, we will monitor the pages allocated and refer back to this section to show how indexing efforts not only enhance the speed of the query but, lower the complete resource consumption on the SQL Server entirely. 
+The next step to perform in the tuning efforts would be to effectively lower the pages that are read into the buffer. This is done by effective indexing and by the methods we've already covered. Since indexing can single-handedly have the most impact on performance, that is what we will cover next. While working through indexing the query in listing 1, we will monitor the pages allocated and refer back to this section to show how indexing efforts not only enhance the speed of the query but, lower the complete resource consumption on the SQL Server entirely. 
 
 **Indexing**
 
@@ -308,7 +308,7 @@ The final step will be reviewing the buffered pages again to ensure the query is
 
 **Summary**
 
-With all the tuning efforts that are made with today’s high-volume databases, indexing and coding best practices are still an extremely effective and important first stage for ensuring resources are utilized effectively. Best practice coding standards such as writing sargable queries can ensure coding efforts prove the efficiency they have to offer while returning mission critical data. Finally, while indexing, monitoring buffer and extending to resource needs, should be done on even the simplest queries.
+With all the tuning efforts that are made with today's high-volume databases, indexing and coding best practices are still an extremely effective and important first stage for ensuring resources are utilized effectively. Best practice coding standards such as writing sargable queries can ensure coding efforts prove the efficiency they have to offer while returning mission critical data. Finally, while indexing, monitoring buffer and extending to resource needs, should be done on even the simplest queries.
 
 Using these steps in their basic form is almost a daily review of any SQL Server and database resource. Although many other tuning areas are to be performed such as IO subsystems configurations, memory expansion and types as well as CPU expansion while taking into account altering and setting SQL Server configurations as needed, indexing and what has been covered today still remains the highest impact areas of the relational database.
 

@@ -44,7 +44,7 @@ Select FavoriteColor
 From   PeopleTest
 Where  Id = 2
 ```
-This will return 'Green'. Simple, right. Well… here's what's happening behind the scenes. SQL Server will use the clustered index to quickly locate the row where ID = 2. It will then go to the table to get FavoriteColor. Essentially, there are 2 steps. Locate the row in the index and use it to look up the row in the table.
+This will return 'Green'. Simple, right. Well... here's what's happening behind the scenes. SQL Server will use the clustered index to quickly locate the row where ID = 2. It will then go to the table to get FavoriteColor. Essentially, there are 2 steps. Locate the row in the index and use it to look up the row in the table.
 
 Now, add this nonclustered index:
 
@@ -70,7 +70,7 @@ Where  Id = 2
 ```
 This time, when you run the query, it goes back to a clustered index seek (because that index has less columns and will therefore perform better). There are 3 columns that this query uses. Name, FavoriteColor, and ID. Since there are no indexes that contain all of these column, the best execution plan is to look up the row based on the where clause and then go to the table data to get the Name and FavoriteColor.
 
-Ok, so you're probably thinking, I can create an index that has all 3 columns to improve performance, right? The answer is, yes, but you need to be careful about it too. If you create this index…
+Ok, so you're probably thinking, I can create an index that has all 3 columns to improve performance, right? The answer is, yes, but you need to be careful about it too. If you create this index...
 
 sql
 Create nonclustered index idx_PeopleTest_Name_Id_FavoriteColor On PeopleTest(Name, Id, FavoriteColor)
@@ -78,7 +78,7 @@ Create nonclustered index idx_PeopleTest_Name_Id_FavoriteColor On PeopleTest(Nam
 
 The index will not be used because the first column in the index is name. This index would need to be scanned (not seeked) to get the row (and the data).
 
-Think of the index data sorted first by Name, then ID, and finally FavoriteColor, like this…
+Think of the index data sorted first by Name, then ID, and finally FavoriteColor, like this...
 
 <pre style="color:green;">Name                 Id          FavoriteColor
 -------------------- ----------- --------------------

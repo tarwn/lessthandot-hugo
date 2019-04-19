@@ -55,7 +55,7 @@ Enter the product key of your installation and click _Next_.
 
 [<img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part3/InstallOS_06.png?mtime=1369927220" alt="" width="381" height="286" />][6]
 
-Choose the type of server installation. We’ll make life easy and choose for the GUI version.  If you want to do a hardcore installation with only a command line, go for the core version. Click _Next_.
+Choose the type of server installation. We'll make life easy and choose for the GUI version.  If you want to do a hardcore installation with only a command line, go for the core version. Click _Next_.
 
 [<img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part3/InstallOS_07.png?mtime=1369927220" alt="" width="379" height="283" />][7]
 
@@ -83,7 +83,7 @@ The login page appears. Login and behold the beauty of Windows Server 2012.
 
 [<img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part3/InstallOS_13.png?mtime=1369927220" alt="" width="455" height="199" />][13]
 
-Next we’ll give some components friendlier names. Start up the PowerShell command window as an administrator (right-click on the icon in the start menu and select _Run As Administrator_ at the bottom). Execute the following commands:
+Next we'll give some components friendlier names. Start up the PowerShell command window as an administrator (right-click on the icon in the start menu and select _Run As Administrator_ at the bottom). Execute the following commands:
 
 _Rename-NetAdapter -Name “Ethernet” -NewName “EXTLAN”   
 Rename-NetAdapter -Name “Ethernet 2” -NewName “INTLAN”   
@@ -109,7 +109,7 @@ The intent of this environment is a single-user demo environment, so a firewall 
 [<img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part3/InstallOS_16.png?mtime=1369927221" alt="" width="372" height="212" />][15]
 
   4. Activate Windows
-Bit self-explanatory why you need to do this of course. You’ll need a network connection in order to activate Windows.
+Bit self-explanatory why you need to do this of course. You'll need a network connection in order to activate Windows.
 
   5. Enable Remote Desktop
 Remote Desktop has some advantages over the Hyper-V management window, such as copy-paste in both directions. You can enable this feature from the server manager as well.
@@ -117,14 +117,14 @@ Remote Desktop has some advantages over the Hyper-V management window, such as c
 [<img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part3/InstallOS_17.png?mtime=1369927221" alt="" width="291" height="329" />][16]
 
   6. Turn off Shutdown Event Tracker
-Unless you want to type a reason every time you restart the server, you’ll want to disable this. This feature can be configured through the Group Policy editor. Go to Local Computer Policy > Computer Configuration > Administrative Templates > System. Double click _Disable Shutdown Event Tracker_ from the list and select the _Disable_ radio button. Click _OK_.
+Unless you want to type a reason every time you restart the server, you'll want to disable this. This feature can be configured through the Group Policy editor. Go to Local Computer Policy > Computer Configuration > Administrative Templates > System. Double click _Disable Shutdown Event Tracker_ from the list and select the _Disable_ radio button. Click _OK_.
 
 <img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part3/InstallOS_18.png?mtime=1369927221" alt="" width="575" height="387" /></p> 
 
 </a>
 
   * Install updates
-If you have plenty of time and patience, you can use Windows Update to get your Windows Server up to date. Make sure to disable Windows Update after you’re finished, because you don’t want your server rebooting in the middle of a demo.
+If you have plenty of time and patience, you can use Windows Update to get your Windows Server up to date. Make sure to disable Windows Update after you're finished, because you don't want your server rebooting in the middle of a demo.
 
 [<img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part3/InstallOS_19.png?mtime=1369927221" alt="" width="357" height="106" />][17]
 

@@ -92,13 +92,13 @@ Enter the product key and accept the license terms.
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part6/InstallPowerPivotInstance_12.png?mtime=1370293353"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part6/InstallPowerPivotInstance_12.png?mtime=1370293353" alt="" width="488" height="364" /></a>
 </p>
 
-<span style="text-align: justify;">Review the installation and click </span>_Install_ <span style="text-align: justify;">if you’re satisfied.</span>
+<span style="text-align: justify;">Review the installation and click </span>_Install_ <span style="text-align: justify;">if you're satisfied.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part6/InstallPowerPivotInstance_13.png?mtime=1370293361"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part6/InstallPowerPivotInstance_13.png?mtime=1370293361" alt="" width="487" height="363" /></a>
 </p>
 
-<span style="text-align: justify;">Go grab a beverage of your choice while the SSAS instance is being installed…</span>
+<span style="text-align: justify;">Go grab a beverage of your choice while the SSAS instance is being installed...</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part6/InstallPowerPivotInstance_14.png?mtime=1370293368"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part6/InstallPowerPivotInstance_14.png?mtime=1370293368" alt="" width="485" height="362" /></a>

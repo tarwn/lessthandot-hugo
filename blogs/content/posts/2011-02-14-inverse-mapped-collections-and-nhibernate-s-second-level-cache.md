@@ -1,5 +1,5 @@
 ---
-title: Inverse Mapped Collections and NHibernate’s Second-Level Cache
+title: Inverse Mapped Collections and NHibernate's Second-Level Cache
 author: Alex Ullrich
 type: post
 date: 2011-02-14T13:42:00+00:00
@@ -205,7 +205,7 @@ public sealed class AdditionUseRepository : CollectionEvictingRepository<Additio
 }
 ```
 
-All told this is a pretty naive implementation (You'll need to check for null after casting to MemberExpression, etc…) but I think it shows the idea pretty well. You may not ever need to use an Inverse relationship, but if you do, and need to pair it with a second level cache, something like this might come in handy.
+All told this is a pretty naive implementation (You'll need to check for null after casting to MemberExpression, etc...) but I think it shows the idea pretty well. You may not ever need to use an Inverse relationship, but if you do, and need to pair it with a second level cache, something like this might come in handy.
 
  [1]: http://ajava.org/online/hibernate3api/org/hibernate/SessionFactory.html#evictCollection%28java.lang.String,%20java.io.Serializable%29
  [2]: /index.php/All/?disp=authdir&author=225

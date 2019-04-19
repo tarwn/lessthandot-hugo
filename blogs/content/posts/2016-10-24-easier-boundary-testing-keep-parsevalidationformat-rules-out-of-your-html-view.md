@@ -30,7 +30,7 @@ Meanwhile, testing below the UI means we can do this:
   </p>
 </div>
 
-In [MVVM Validation with KnockoutJS – Don’t put it in the View/HTML][1], I created a small, artificial codebase to show a method of embedding user input logic in code rather than HTML attributes. Some of the value to this approach includes being able to define a domain-specific set of formats/validation for your application, access to the read/write pipelines to add extra behavior or transformations, freedom to assume only good values make it into your business logic, and the ability to write basic unit tests to verify your application behavior for good and bad inputs. 
+In [MVVM Validation with KnockoutJS – Don't put it in the View/HTML][1], I created a small, artificial codebase to show a method of embedding user input logic in code rather than HTML attributes. Some of the value to this approach includes being able to define a domain-specific set of formats/validation for your application, access to the read/write pipelines to add extra behavior or transformations, freedom to assume only good values make it into your business logic, and the ability to write basic unit tests to verify your application behavior for good and bad inputs. 
 
 Today we'll explore one of the opportunities we left the door open to: whether validation rules like min/max are actually working correctly.
 
@@ -223,7 +223,7 @@ describe('boundary tests', function(){
 			{ name: 'currency input - max',				options: { type: currencyType, min: 0, max: 10 }, input: '10', isError: false },
 			{ name: 'currency input - more than max',	options: { type: currencyType, min: 0, max: 10 }, input: '10.5', isError: true },
 
-			…
+			...
 			
 			{ name: 'string input - longer than max',	options: { type: stringType, min: 5, max: 8 }, input: '123456789', isError: true },
 
@@ -250,7 +250,7 @@ We have a common component that handles all input logic that is governed by each
 
 That's true, it isn't. And since we already put some thought into our abstraction of the user input logic, it's possible this won't catch any errors that a unit test would miss. On the other hand, had we included the validation and formatting as attributes in the HTML, not only would we have a lot of duplication of effort, this would have required us to pull out our UI automation frameworks, with all the performance and ongoing maintenance costs that assumes. Instead, we can implement boundary testing fairly cheaply even if we thin it might be overkill, and let it run with our unit test suite at unit test speeds. The only gap that real user inputs would add, at far higher cost, is whether we had bound the UI component correctly to the input behind the scenes, which feels like another class of problem which would have effect reaching far beyond boundary conditions and probably [should be tested on it's own][4].
 
- [1]: /index.php/webdev/mvvm-validation-with-knockoutjs-dont-put-it-in-the-viewhtml/ "MVVM Validation with KnockoutJS – Don’t put it in the View/HTML"
+ [1]: /index.php/webdev/mvvm-validation-with-knockoutjs-dont-put-it-in-the-viewhtml/ "MVVM Validation with KnockoutJS – Don't put it in the View/HTML"
  [2]: https://github.com/tarwn/Blog_KnockoutMVVMPatterns/tree/master/validationWithTests
  [3]: http://knockoutjs.com/
  [4]: /index.php/webdev/using-selenium-for-view-testing-with-knockout-and-requirejs/ "Using Selenium for View testing with knockout and RequireJS"

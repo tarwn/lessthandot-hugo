@@ -1,5 +1,5 @@
 ---
-title: We’re Sorry, There Was An Error and We’re Clueless Monkeys
+title: We're Sorry, There Was An Error and We're Clueless Monkeys
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: -001-11-30T00:00:00+00:00

@@ -18,7 +18,7 @@ tags:
   - ssrs
 
 ---
-When creating reports, I try to keep them simple, clean and with as little information as possible. What I mean by as little information as possible is that I try to keep the information summarized so that the value of the report isn’t lost in a sea of details. However, for some reports you still need those details to back up the summary and to allow for digging deeper into issues.
+When creating reports, I try to keep them simple, clean and with as little information as possible. What I mean by as little information as possible is that I try to keep the information summarized so that the value of the report isn't lost in a sea of details. However, for some reports you still need those details to back up the summary and to allow for digging deeper into issues.
 
 What I have found works well is to add links in the summary report to the detail report. This approach allows us to pass in parameters to it and still limit the detail report to just the information that is needed. 
 

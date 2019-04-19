@@ -4,7 +4,7 @@ author: Koen Verbeeck
 type: post
 date: 2013-06-12T12:21:00+00:00
 ID: 2105
-excerpt: 'In exactly one week I’ll be giving a session with my colleague Valentino Vranken (blog | twitter) at the Belgian Community Day. We’ll be talking about Data Visualization. I’ll be talking about the tips: how do you need to visualize your data without the&hellip;'
+excerpt: "In exactly one week I'll be giving a session with my colleague Valentino Vranken (blog | twitter) at the Belgian Community Day. We'll be talking about Data Visualization. I'll be talking about the tips: how do you need to visualize your data without the&hellip;"
 url: /index.php/datamgmt/ssrs/data-visualization-tips-tricks/
 views:
   - 16912
@@ -23,7 +23,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  In exactly one week I’ll be giving a session with my colleague Valentino Vranken (<a href="http://blog.hoegaerden.be/">blog</a> | <a href="https://twitter.com/ValentinoV42">twitter</a>) at the <a href="http://www.communityday.be/">Belgian Community Day</a>. We’ll be talking about Data Visualization. I’ll be talking about the <em>tips</em>: how do you need to visualize your data without the audience scratching their eyes out because of the ugly colors you used? Why would or wouldn’t you use pie charts? And what’s the difference between an analytical dashboard and an operational dashboard? You can find answers on such question in this session.
+  In exactly one week I'll be giving a session with my colleague Valentino Vranken (<a href="http://blog.hoegaerden.be/">blog</a> | <a href="https://twitter.com/ValentinoV42">twitter</a>) at the <a href="http://www.communityday.be/">Belgian Community Day</a>. We'll be talking about Data Visualization. I'll be talking about the <em>tips</em>: how do you need to visualize your data without the audience scratching their eyes out because of the ugly colors you used? Why would or wouldn't you use pie charts? And what's the difference between an analytical dashboard and an operational dashboard? You can find answers on such question in this session.
 </p>
 
 <p style="text-align: justify;">

@@ -17,7 +17,7 @@ When I first installed SQL Server 2008 in my environment one of the first things
   
 and start messing around with connectivity to the instance. That failed miserably. Errors were abound!
   
-All hope is not lost though…
+All hope is not lost though...
 
 The last thing I want to do is install side by side versions of VS.NET. The IDE is heavy and sucks the life out of
   
@@ -49,7 +49,7 @@ Remember you need SP1 on VS.NET 2005 installed. Personally I think 2005 was the 
   
 my hard head is sticking with it until they really put the pressure on me. 
 
-The install process is a next…next…finish one as usual. You should now be able to connect to SQL Server 2008
+The install process is a next...next...finish one as usual. You should now be able to connect to SQL Server 2008
   
 “almost error free”. I say almost because there is still the nice little gotcha listed on the download page of
 

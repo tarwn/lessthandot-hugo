@@ -244,7 +244,7 @@ Here is a rundown of the numbers and my 2013 year in writing. I hope they have p
   <tr>
     <td width="627" valign="top">
       <p>
-        <strong><span style="text-decoration: underline;"><a title="A Glance of Plan Explorer Proâ€™s Deadlock Analysis" href="/index.php/All/?p=2052">A Glance of Plan Explorer Pro’s Deadlock Analysis </a></span></strong>
+        <strong><span style="text-decoration: underline;"><a title="A Glance of Plan Explorer Proâ€™s Deadlock Analysis" href="/index.php/All/?p=2052">A Glance of Plan Explorer Pro's Deadlock Analysis </a></span></strong>
       </p>
     </td>
     
@@ -496,7 +496,7 @@ Here is a rundown of the numbers and my 2013 year in writing. I hope they have p
   <tr>
     <td width="627" valign="top">
       <p>
-        <strong><span style="text-decoration: underline;"><a title="Microsoft Isnâ€™t the Devil" href="/index.php/All/?p=2258">Microsoft Isn’t the Devil </a></span></strong>
+        <strong><span style="text-decoration: underline;"><a title="Microsoft Isnâ€™t the Devil" href="/index.php/All/?p=2258">Microsoft Isn't the Devil </a></span></strong>
       </p>
     </td>
     

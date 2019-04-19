@@ -16,7 +16,7 @@ tags:
   - CosmosDB
 
 ---
-I’m building a B2C website with Cosmos DB as the back-end store and starting with common elements like Authentication. In [my prior post][1], we connected the Cookie Middleware with custom membership logic and a standard username/password login method. In this one, we'll be extending the system to also allow users to register and login via a third party provider (Twitter). 
+I'm building a B2C website with Cosmos DB as the back-end store and starting with common elements like Authentication. In [my prior post][1], we connected the Cookie Middleware with custom membership logic and a standard username/password login method. In this one, we'll be extending the system to also allow users to register and login via a third party provider (Twitter). 
 
 <div id="attachment_9155" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />

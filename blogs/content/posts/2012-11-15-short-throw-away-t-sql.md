@@ -29,7 +29,7 @@ Well, that is what I'm going to start attempting to do.  Don't get too excited.
 
 Another way to get them out there, blogging them.  On that note, today's short-throw-away script is grabbing the count of tables in a database and printing them out in SSMS with the table name.  This was for a quick reply in an email.  Hopefully it will help someone else out at some point.
 
-To add to all of this and the idea, I’m tagging anyone that reads this to do the same on your own blog.  All of those quick hacks in T-SQL or even C# and so on, post them up.  It’s a blog post, it’s sharing and it just might save someone a lot of time.
+To add to all of this and the idea, I'm tagging anyone that reads this to do the same on your own blog.  All of those quick hacks in T-SQL or even C# and so on, post them up.  It's a blog post, it's sharing and it just might save someone a lot of time.
 
 > Disclaimer: throw away scripts are just that. Untested and not run threw a ringer. Test them first 🙂</p>
 sql

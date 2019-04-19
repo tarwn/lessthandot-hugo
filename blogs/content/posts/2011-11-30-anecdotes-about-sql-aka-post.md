@@ -111,7 +111,7 @@ Ted Krueger ([@onpnt][12]), [Blog][13]
 
 Steve Jones ([@way0utwest][14]), [Blog][15]
 
-* * *Way back in the 1980’s, I was studying all of the currently available database systems and data-centric programming languages. Email was still at least 7 years away and the Internet was 10 years to come. To be honest, they were not at all intuitive or sensible. But a new database model was emerging, the relational database. Database normalization and design just 'clicked’ for me. It simply made sense. And on top of the much easier design methods, the language that came along with the relational database, SQL, also made sense – a lot of sense. I’d worked with Fortran, COBOL, and dBase quite a lot by that time. But none of those programming languages could come close to the ease and simplicity of a SELECT statement. Hey, what could be easier than asking for the columns of data you wanted FROM a specific table WHERE it met a specific set of conditions? It was exhilarating and powerful! I’ve been stuck on SQL ever since and, while many other technologies have come and gone, I believe that I’ll be able to finish my career still working with and enjoying SQL.</p> 
+* * *Way back in the 1980's, I was studying all of the currently available database systems and data-centric programming languages. Email was still at least 7 years away and the Internet was 10 years to come. To be honest, they were not at all intuitive or sensible. But a new database model was emerging, the relational database. Database normalization and design just 'clicked' for me. It simply made sense. And on top of the much easier design methods, the language that came along with the relational database, SQL, also made sense – a lot of sense. I'd worked with Fortran, COBOL, and dBase quite a lot by that time. But none of those programming languages could come close to the ease and simplicity of a SELECT statement. Hey, what could be easier than asking for the columns of data you wanted FROM a specific table WHERE it met a specific set of conditions? It was exhilarating and powerful! I've been stuck on SQL ever since and, while many other technologies have come and gone, I believe that I'll be able to finish my career still working with and enjoying SQL.</p> 
 
 Kevin Kline ([@kekline][16]), [Blog][17]
 
@@ -137,7 +137,7 @@ Three cheers for “I've taken a class in SQL” woman!
 
 Emtucifor [Blog][20]
 
-* * *In 2000 I’ve been on a project involving Oracle. That was when I decided to stay away from databases. In 2003 I’ve been doing some .Net work (no db’s remember ) and had to pivot some results in SQL Server.
+* * *In 2000 I've been on a project involving Oracle. That was when I decided to stay away from databases. In 2003 I've been doing some .Net work (no db's remember ) and had to pivot some results in SQL Server.
 
 
   
@@ -149,11 +149,11 @@ Next logical step was to start speaking about SQL Server and learning about it.
   
 I was always more of a dev guy with only doing DBA work the last year or two.
   
-It’s not really about the product but about the people I meet in the process.
+It's not really about the product but about the people I meet in the process.
   
 Learning a product is always relatively easy. Meeting people too.
   
-But meeting cool people isn’t.</p> 
+But meeting cool people isn't.</p> 
 
 Mladen Prajdić ([@mladenprajdic][21]), [Blog][22]
 
@@ -177,11 +177,11 @@ Naomi Nosonovsky ([@NaomiNos][25]), [Blog][26], [Beyond Relationa][27]l, [Guest 
 
 Jes Borland ([@grrl_geek][29]), [Blog][30]
 
-* * *I started as an application developer and my back-end was Access. However, once I learned how to actually write SQL code, I could not go back to the GUI of Access and prefer it even to some of the front-end development that I still have to do sometimes. There is something that is intrinsically more “real” to me with SQL and data than other aspects of development. After all, at the end of the day, the data is still the primary factor behind almost all development and the ability to work well with it is important – at least to me. And I would be remiss if I didn’t point out the great help that my friends at LessThanDot have offered that allowed me to learn what I have.</p> 
+* * *I started as an application developer and my back-end was Access. However, once I learned how to actually write SQL code, I could not go back to the GUI of Access and prefer it even to some of the front-end development that I still have to do sometimes. There is something that is intrinsically more “real” to me with SQL and data than other aspects of development. After all, at the end of the day, the data is still the primary factor behind almost all development and the ability to work well with it is important – at least to me. And I would be remiss if I didn't point out the great help that my friends at LessThanDot have offered that allowed me to learn what I have.</p> 
 
 Chopstik ([@Chopstik][31]), [Blog][32]
 
-* * *My first foray into SQL Server I was fresh from MySQL and MS Access and couldn't see past the first couple layers of tables and queries. Fast forward a few years and I was working with procedures and views and just starting to understand indexing. A few more years and I was working with SSRS and learning a lot more about tuning and topics like SARGability. SSAS, SSIS, the power of system views, backup and restore strategies, monitoring, … The deeper and further I go, the more there is to learn, and it doesn't seem to be ending any time soon.</p> 
+* * *My first foray into SQL Server I was fresh from MySQL and MS Access and couldn't see past the first couple layers of tables and queries. Fast forward a few years and I was working with procedures and views and just starting to understand indexing. A few more years and I was working with SSRS and learning a lot more about tuning and topics like SARGability. SSAS, SSIS, the power of system views, backup and restore strategies, monitoring, ... The deeper and further I go, the more there is to learn, and it doesn't seem to be ending any time soon.</p> 
 
 Funny anecdote/story: I was once performing destructive maintenance on a server (detaching and removing old databases) as well as rearranging data files for some active databases. I cleaned up all the stale Dbs and finished moving them from the old location to the new one with time to spare in my outage window. About an hour afterwards I received a phone call from the shipping office, who had tried all the normal troubleshooting steps (reboot, reboot again, etc) to figure out why their MS Access app was having problems. Halfway through walking them through checking their ethernet outlet, while literally saying something like “wiggle the cable and then try again”, I realized that there was one obscure database that a single form in their app relied on. I quickly reattached the forgotten DB just in time for them to connect properly. The rest of my time with the company the shipping office always wiggled their ethernet cable before calling me, and I haven't forgotten to reattach a database since. Sometimes it's the lessons from when we screw up that stick with us the longest.
 

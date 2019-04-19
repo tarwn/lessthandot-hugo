@@ -33,13 +33,13 @@ Duplicates in data can be detrimental to how you return data from tables.  They
 
 Removing duplicates begins with finding them.  Hopefully at the stage in which you are trying to find duplicates in a table (or several), you have proactively found problems they cause before they have had a negative impact on business. 
 
-Many methods are out there to find duplicates.  Common Table Expressions (CTE) is a known method as well as joining derived tables to each other.  In some odd cases, case statements are used along with ranking functions in them.  All of these methods are viable solutions but over the years I have come to like the use of COUNT and the HAVING clause.  This month’s T-SQL Tuesday on aggregates (e.g. COUNT) got me to thinking this would make a good post.
+Many methods are out there to find duplicates.  Common Table Expressions (CTE) is a known method as well as joining derived tables to each other.  In some odd cases, case statements are used along with ranking functions in them.  All of these methods are viable solutions but over the years I have come to like the use of COUNT and the HAVING clause.  This month's T-SQL Tuesday on aggregates (e.g. COUNT) got me to thinking this would make a good post.
 
 **Some things to consider**
 
 COUNT has some concerns.  For finding duplicates in a table where a primary key is set as an identity seed, it has challenges.  HEAP tables are actually much easier to use this method as the grouping becomes much less complex.  One other problem that is well known with COUNT is the fact it does not interpret NULL values. 
 
-To show this, let’s create a table named DUPS.
+To show this, let's create a table named DUPS.
 
 sql
 IF EXISTS(SELECT 1 FROM SYS.objects WHERE [name] = 'DUPS')
@@ -116,7 +116,7 @@ WHILE @LOOP <= 10000
 
  
 
-The results from running this transaction will insert 15,000 rows.  We know this from using COUNT(\*).  Ah, COUNT(\*) doesn’t care about NULL values.  (tip just provided). 
+The results from running this transaction will insert 15,000 rows.  We know this from using COUNT(\*).  Ah, COUNT(\*) doesn't care about NULL values.  (tip just provided). 
 
 The HAVING clause will be exactly what grouping will result from a query.  An example of this can be shown by querying the sys.master_files system view for a unique database ID.
 
@@ -138,7 +138,7 @@ GROUP BY database_id
 HAVING COUNT(database_id) > 2
 ```
 
-This would show us the entire database ID’s that have more than 2 files associated with them.
+This would show us the entire database ID's that have more than 2 files associated with them.
 
 Taking this to work for us with our earlier table and data, we could do the following
 

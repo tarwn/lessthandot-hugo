@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2013-04-09T18:58:00+00:00
 ID: 2065
-excerpt: 'I’ve had the chance to talk to quite a few people over the last few months about my experiences with Windows 8.  So far, and I can’t see it changing, I’ve been very impressed with Windows 8 and the efficiency boost it has provided me in normal, day-to-d&hellip;'
+excerpt: "I've had the chance to talk to quite a few people over the last few months about my experiences with Windows 8.  So far, and I can't see it changing, I've been very impressed with Windows 8 and the efficiency boost it has provided me in normal, day-to-d&hellip;"
 url: /index.php/enterprisedev/application-lifecycle-management/windows-8-for-the-enterprise/
 views:
   - 4970
@@ -17,13 +17,13 @@ categories:
   - Enterprise Development
 
 ---
-I’ve had the chance to talk to quite a few people over the last few months about my experiences with Windows 8.  So far, and I can’t see it changing, I’ve been very impressed with Windows 8 and the efficiency boost it has provided me in normal, day-to-day operations.  I’ve cut down the time it takes to manage how I utilize a machine.  This includes even simple operations like Windows management.
+I've had the chance to talk to quite a few people over the last few months about my experiences with Windows 8.  So far, and I can't see it changing, I've been very impressed with Windows 8 and the efficiency boost it has provided me in normal, day-to-day operations.  I've cut down the time it takes to manage how I utilize a machine.  This includes even simple operations like Windows management.
 
-This isn’t about how much faster Windows 8 can make you though.  Well, in a way it is.  What I wanted to let everyone know about is an upcoming event that BlueMetal and Microsoft together will be providing to anyone that wants to attend – Windows 8 for the Enterprise – Demo Day.
+This isn't about how much faster Windows 8 can make you though.  Well, in a way it is.  What I wanted to let everyone know about is an upcoming event that BlueMetal and Microsoft together will be providing to anyone that wants to attend – Windows 8 for the Enterprise – Demo Day.
 
-[BlueMetal in Chicago][1] is on the front lines of Window 8 development.  Some of the most effective, efficient and promising business-impacting solutions are coming from BlueMetal in the form of Windows 8 development.  This has been around much tablet work as well.  It takes a lot to impress me, given how many applications or systems I’ve seen that promise to fix the world of computing.  I can honestly say, the Windows 8 development coming from BlueMetal will make businesses function more effectively.
+[BlueMetal in Chicago][1] is on the front lines of Window 8 development.  Some of the most effective, efficient and promising business-impacting solutions are coming from BlueMetal in the form of Windows 8 development.  This has been around much tablet work as well.  It takes a lot to impress me, given how many applications or systems I've seen that promise to fix the world of computing.  I can honestly say, the Windows 8 development coming from BlueMetal will make businesses function more effectively.
 
-To find out how this all happens, evolves and is put to work, attend this event.  BTW…It's FREE and all are welcome!
+To find out how this all happens, evolves and is put to work, attend this event.  BTW...It's FREE and all are welcome!
 
 Below is the link to register and the event details – click the image to register.
 

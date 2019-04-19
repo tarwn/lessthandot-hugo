@@ -13,13 +13,13 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-If you ever replicate tables that have identity seeds on columns you're more than likely going to have a headache on your first try of setting this up. There are several things you have to consider and take into account when replicating these types of columns. Of course you want them replicated and you can very easily do so while retaining the integrity between the tables. However, if you ever remove replication from the subscriber table, you’re going to find yourself in a sticky situation no matter what setting you have for the replication. 
+If you ever replicate tables that have identity seeds on columns you're more than likely going to have a headache on your first try of setting this up. There are several things you have to consider and take into account when replicating these types of columns. Of course you want them replicated and you can very easily do so while retaining the integrity between the tables. However, if you ever remove replication from the subscriber table, you're going to find yourself in a sticky situation no matter what setting you have for the replication. 
 
-There are a few catches to mention. The first is not to use the drop option in the @pre\_creation\_cmd parameter of the sp_addarticle execution if you want to retain the last set seed on the subscriber table. I say this because if you go on your subscriber after initializing it and check your seed, it will be set to NULL. This is normal for how the drop and even the truncate option handles the seed. You’ll see the same results if you use truncate on a table that has a identity column. What you’ll want to do is use the delete in this option to retain the seed where it is at the subscriber level.
+There are a few catches to mention. The first is not to use the drop option in the @pre\_creation\_cmd parameter of the sp_addarticle execution if you want to retain the last set seed on the subscriber table. I say this because if you go on your subscriber after initializing it and check your seed, it will be set to NULL. This is normal for how the drop and even the truncate option handles the seed. You'll see the same results if you use truncate on a table that has a identity column. What you'll want to do is use the delete in this option to retain the seed where it is at the subscriber level.
   
 The second catch is identity_insert issues. If you change the creation command and then initilize your subscriber, you will soon find that the replication job is failing misserably upon inserts. This is due to more than likely to you having the “not for replication” setting on the subscriber table set to No. Best way to see all of this is to show you.
 
-To create the scenario I’m trying to show let’s create a few databases and setup replication.
+To create the scenario I'm trying to show let's create a few databases and setup replication.
 
 sql
 CREATE DATABASE db1 
@@ -86,7 +86,7 @@ After making all these changes, you will see that 10 is still our seed.
   
 <span class="MT_red"><br /> Checking identity information: current identity value '10', current column value '10'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
   
-Let’s setup replication and initialize everything to db2.tbl1
+Let's setup replication and initialize everything to db2.tbl1
 
 To setup the publisher execute the following
 
@@ -207,7 +207,7 @@ Like this
   
 <span class="MT_red"><br /> Checking identity information: current identity value '26', current column value '30'.<br /> DBCC execution completed. If DBCC printed error messages, contact your system administrator.<br /> </span>
 
-I personally like this. It gives me point in time reference. You don’t need this of course but it is nice to have with using the delete option.
+I personally like this. It gives me point in time reference. You don't need this of course but it is nice to have with using the delete option.
   
 So now the point of all of this is removing the subscriber. Go ahead and delete the subscriber from db2
   
@@ -226,7 +226,7 @@ Now insert a value into db2.tbl1
   
 <span class="MT_red"><br /> Msg 2627, Level 14, State 1, Line 1<br /> Violation of PRIMARY KEY constraint 'PK_tbl1'. Cannot insert duplicate key in object 'dbo.tbl1'.<br /> The statement has been terminated.<br /> </span>
   
-Of course this will happen sense your seed wants to use 27 in my results above. To fix this it’s a very simple change to our DBCC CHECKIDENT command
+Of course this will happen sense your seed wants to use 27 in my results above. To fix this it's a very simple change to our DBCC CHECKIDENT command
 
 sql
 DBCC CHECKIDENT
@@ -235,9 +235,9 @@ DBCC CHECKIDENT
   ,RESEED
 )
 ```
-This goes ahead and grabs the highest value in the table and uses it to reseed the identity. Now if you insert into the table it will begin from 30 and you’ll be good to go.
+This goes ahead and grabs the highest value in the table and uses it to reseed the identity. Now if you insert into the table it will begin from 30 and you'll be good to go.
 
-Reality is, you may never have to deal with this. Removing replication typically means the tables on the subscriber are no longer needed. There are cases of it though when the business or projects dictate the sites that you are replicating to for data support to applications become disconnected. That means they are on islands and replication isn’t an option any longer. In order to have the applications function once again as separate entities, these types of modifications have to be accomplished to the tables.
+Reality is, you may never have to deal with this. Removing replication typically means the tables on the subscriber are no longer needed. There are cases of it though when the business or projects dictate the sites that you are replicating to for data support to applications become disconnected. That means they are on islands and replication isn't an option any longer. In order to have the applications function once again as separate entities, these types of modifications have to be accomplished to the tables.
 
 Thanks goes out to [mrdenny][1] for the review of this blog.
 

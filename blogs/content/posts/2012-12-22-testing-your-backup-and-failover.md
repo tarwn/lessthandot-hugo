@@ -40,7 +40,7 @@ Where do you store your backups? Next to the server in a bin are all the tapes? 
 
 See also this post by Ted Krueger for some more backup information: [Backups are for sissies!!!][2]
 
-We have a 200 page or so document that explains in detail what needs to happen if we switch data centers or if we have to rebuild a whole data center in the case of a catastrophe. How long would it take you to rebuild a server, install SQL server, installing all the apps and making sure that all the permissions are correct…….oh what…oh you didn't think you needed to backup master and tempdb. Hopefully you have all your jobs and SSIS packages scripted out or backed up. What about the permissions and accounts, do you know all the accounts that you need to create in case you don't have a master backup?
+We have a 200 page or so document that explains in detail what needs to happen if we switch data centers or if we have to rebuild a whole data center in the case of a catastrophe. How long would it take you to rebuild a server, install SQL server, installing all the apps and making sure that all the permissions are correct.......oh what...oh you didn't think you needed to backup master and tempdb. Hopefully you have all your jobs and SSIS packages scripted out or backed up. What about the permissions and accounts, do you know all the accounts that you need to create in case you don't have a master backup?
 
 When you boss asks next time what you do all day, make sure to tell him or her that you are making sure that in the case of a catastrophe the company is back in business in an instant, it is part of your job and your duty to yourself and the company
 

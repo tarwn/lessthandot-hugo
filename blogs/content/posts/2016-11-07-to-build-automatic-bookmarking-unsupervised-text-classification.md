@@ -175,7 +175,7 @@ Keyword: open visual studio code, score: 12
 Keyword: ext install\nwallaby-vscode\nwallaby
 </pre>
 
-Well…that didn't go as planned.
+Well...that didn't go as planned.
 
 Rake seemed to get closer to a good set of results and was twice as fast as the TF-IDF version (which, as written, will get progressively worse with every link we add to the pile). Unfortunately, we're running into a Garbage-In Garbage-Out problem.
 
@@ -231,7 +231,7 @@ Page http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyj
 ```
 Now with a cleaner content to work with, TF-IDF has pulled out a pretty good set of keywords. RAKE has pulled out a good set of phrases from the document, in terms of importance, but not really something I would use for keywords. Neither is knocking it out of the ballpark yet, so more work is needed.
 
-## And thus it goes…
+## And thus it goes...
 
 This started as some scratch code to try and generate keywords for a consistent set of HTML pages, with the intent of applying what I built here to a diverse set (everything I've read and remembered to bookmark in the past 7 years). My next steps are going to be to try TextRank against the data to evaluate how it does and to modify the RAKE code to accept some constraints to see if, for instance, a limit of 2-3 word phrases nets a better set.
 

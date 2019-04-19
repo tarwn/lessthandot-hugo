@@ -78,7 +78,7 @@ Ensure that SQL Server Replication is installed on the SQL Server instance. If i
   
 On Server B, acting as our remote distributor, setup is required prior to configuring Server A for publication of the tables we want to replicate. To set the distributor up, follow these steps.
 
-Using the wizard: right click Replication in the tree view in SSMS and select, configure Distribution…
+Using the wizard: right click Replication in the tree view in SSMS and select, configure Distribution...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_02.gif" alt="" title="" width="390" height="90" />
@@ -146,7 +146,7 @@ These steps are shown in order below ordered left to right
 
 Recap: At this point we have a distributor role on R2Distributor, Server B; and a publication role on XPS2008R2, Server A. 
 
-To finish the replication setup, create a subscription to the publication on ONPNT_XPS, Server C. To do this, connect to the SQL Server in SSMS, right click the subscriptions and select New Subscriptions…
+To finish the replication setup, create a subscription to the publication on ONPNT_XPS, Server C. To do this, connect to the SQL Server in SSMS, right click the subscriptions and select New Subscriptions...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_11.gif" alt="" title="" width="361" height="132" />
@@ -177,7 +177,7 @@ Each step shown below ordered left to right
   <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_14.gif" alt="" title="" width="732" height="332" />
 </div>
 
-We’ve successfully setup transactional replication at this point and can move to setting up the mirroring session. The mirror will exist between Server A (Replication Publisher) and Server B (Replication Distributor). To set mirroring up, refer to the following blog on [setting mirroring up with Developer Edition][1].
+We've successfully setup transactional replication at this point and can move to setting up the mirroring session. The mirror will exist between Server A (Replication Publisher) and Server B (Replication Distributor). To set mirroring up, refer to the following blog on [setting mirroring up with Developer Edition][1].
 
 Once the mirror setup is completed, replication must be configured further to ensure a failover in the mirror is also followed with a failover in the replication. To accomplish this, the agent profiles for all replication agents must have the –PublisherFailoverPartner set. This ensures that in the event of a failover, the agents know what the mirror is.
 

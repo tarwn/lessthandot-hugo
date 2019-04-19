@@ -29,7 +29,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  However, there’s one small step missing in the deployment script posted by Matt. I’ll use this blog article to post the entire deployment script, so that I have a full script online as an easy reference.
+  However, there's one small step missing in the deployment script posted by Matt. I'll use this blog article to post the entire deployment script, so that I have a full script online as an easy reference.
 </p>
 
 <p style="text-align: justify;">
@@ -43,7 +43,7 @@ tags:
 <span style="text-align: justify;">When I deploy the project, I want to hook the OLE_TEST connection manager to an environment, so that I can easily change the destination server and/or database.</span>
 
 <p style="text-align: justify;">
-  The original script from Matt’s blog – modified for my project – looks like this:
+  The original script from Matt's blog – modified for my project – looks like this:
 </p>
 
 ```powershell
@@ -106,7 +106,7 @@ $project.Alter()
  
 Write-Host "All done."
 ```<p style="text-align: justify;">
-  The script deploys the project to the Catalog, creates an environment and links the environment to the project. The environment has two variables: one to set the server name and one to set the database. Let’s inspect the results. When you right-click on the project, you can choose <em>Configure</em>. In the Configure window, you can see the connection managers used in the project in the Connection Managers tab. When we take a look at the Initial Catalog property of the OLE_TEST connection manager, you can see it is not yet linked to an environment variable.
+  The script deploys the project to the Catalog, creates an environment and links the environment to the project. The environment has two variables: one to set the server name and one to set the database. Let's inspect the results. When you right-click on the project, you can choose <em>Configure</em>. In the Configure window, you can see the connection managers used in the project in the Connection Managers tab. When we take a look at the Initial Catalog property of the OLE_TEST connection manager, you can see it is not yet linked to an environment variable.
 </p>
 
 <p style="text-align: justify;">
@@ -144,7 +144,7 @@ $ssisPackage.Alter()
   <a href="/media/users/koenverbeeck/SSISDeploymentPowershell/executePackage.png?mtime=1377025062"><img src="/wp-content/uploads/users/koenverbeeck/SSISDeploymentPowershell/executePackage.png?mtime=1377025062" alt="" width="530" height="363" /></a>
 </p>
 
-<span style="text-align: justify;">To wrap-up this post, here’s the entire deployment script for easier copy-paste:</span>
+<span style="text-align: justify;">To wrap-up this post, here's the entire deployment script for easier copy-paste:</span>
 
 ```powershell
 # Variables

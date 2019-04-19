@@ -42,7 +42,7 @@ In order they are:
   
 5. Settings
 
-There is one thing about charms which is a very subtle yet powerful feature… it is context sensitive! Depending which application is active, will depend what charms enables you to do. Some of you might have downloaded the Wikipedia app (for example) from the store; good looking, side scrolling; so how do you search? With the charms menu, just open it up and search whatever you're looking for. For those of you which lives in a suffocated broadband area like me – this is also where you go to limit the amount of data which live tiles uses in the Win8UI (this however is only from RTM onwards).
+There is one thing about charms which is a very subtle yet powerful feature... it is context sensitive! Depending which application is active, will depend what charms enables you to do. Some of you might have downloaded the Wikipedia app (for example) from the store; good looking, side scrolling; so how do you search? With the charms menu, just open it up and search whatever you're looking for. For those of you which lives in a suffocated broadband area like me – this is also where you go to limit the amount of data which live tiles uses in the Win8UI (this however is only from RTM onwards).
 
 Another handy feature is Flip-2D – better known as the 3D Aero flip in Windows Vista/7. This is done by moving your mouse to the top left corner of the screen, or pressing WIN + Tab.
 

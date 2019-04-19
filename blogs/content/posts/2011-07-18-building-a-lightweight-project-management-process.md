@@ -25,11 +25,11 @@ Working as a Software Developer* in a range of small companies and organizations
 
 This isn't a new process or even a sales pitch on how you too can implement my process and save thousands. It's simply a walk through of the challenges that led to the process, the tools and practices I incorporated, and the steps I followed to build a lightweight process.
 
-_*Software Developer: It seems every developer position I've held has had a different definition of 'Developer' ([and 'Programmer'][1], and…you get the point). The positive side of this is lots of great experiences, the negative side is all the fun things I got to use/do and never again._
+_*Software Developer: It seems every developer position I've held has had a different definition of 'Developer' ([and 'Programmer'][1], and...you get the point). The positive side of this is lots of great experiences, the negative side is all the fun things I got to use/do and never again._
 
 ## Building a Process
 
-Just as we do (or should do) when building software, we need to have a purpose. Often the largest, clumsiest processes occur through a lack of focus or a desire to focus in every direction (ultimate flexibility, no limits, etc). That lack of focus leads everyone to add their own bits to the mix. One person adds what worked in his last project, someone else adds something she always wanted to try, more pieces are added to cover ever eventuality or risk that can be thought of….and Colossus is born, moving so slowly that all involved often think they are moving backwards and could be beaten by a 2 man team in a garage.
+Just as we do (or should do) when building software, we need to have a purpose. Often the largest, clumsiest processes occur through a lack of focus or a desire to focus in every direction (ultimate flexibility, no limits, etc). That lack of focus leads everyone to add their own bits to the mix. One person adds what worked in his last project, someone else adds something she always wanted to try, more pieces are added to cover ever eventuality or risk that can be thought of....and Colossus is born, moving so slowly that all involved often think they are moving backwards and could be beaten by a 2 man team in a garage.
 
 The purpose of process is to provide consistency and ground rules. A good process is an enabler.
 
@@ -161,7 +161,7 @@ If you are interested, here are some random links on related topics (plenty more
   * [The Uncertainty Principle OR How to Choose the Right Methodology – Kosmothink][4]
   * [Waterfall v Agile: How Should I Approach My Software Development Project?][5]
   * [Time Boxing Strategies to Help You Get Things Done in Your Project][6]
-  * [Methodology Doesn’t Matter][7]
+  * [Methodology Doesn't Matter][7]
   * [Visual Management for Agile Teams][8]
 
  [1]: /index.php/ITProfessionals/ProfessionalDevelopment/the-programmer-vs-the-developer "Read more on my thoughts of the Developer vs Programmer title"
@@ -170,5 +170,5 @@ If you are interested, here are some random links on related topics (plenty more
  [4]: http://kosmothink.com/2010/12/31/the-uncertainty-principal-or-how-to-choose-the-right-methodology/ "The Uncertainty Principle OR How to Choose the Right Methodology - Kosmothink"
  [5]: http://www.projectsmart.co.uk/waterfall-v-agile-how-should-i-approach-my-software-development-project.html "Waterfall v Agile: How Should I Approach My Software Development Project?"
  [6]: http://lisamdrake.wordpress.com/2011/05/28/time-boxing-strategies-to-help-you-get-things-done-in-your-project/ "Time Boxing Strategies to Help You Get Things Done in Your Project"
- [7]: http://www.jessefewell.com/2009/12/20/methodology-doesnt-matter/ "Methodology Doesn’t Matter"
+ [7]: http://www.jessefewell.com/2009/12/20/methodology-doesnt-matter/ "Methodology Doesn't Matter"
  [8]: http://www.xqa.com.ar/visualmanagement/2009/02/visual-management-for-agile-teams/ "Visual Management for Agile Teams"

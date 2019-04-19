@@ -22,7 +22,7 @@ The Default Trace exists in SQL Server 2005 and higher versions, in all editions
 
 The Default Trace is a trace prepackaged into SQL Server and enabled by default when you install SQL Server.  You cannot alter the events the Default Trace captures but can disable the trace by executing the following.
 
-The Default Trace’s value may provide a reason to leave the trace enabled.  The code below is provided to show of how to disable it is provided in case the need arises for it to be disabled.
+The Default Trace's value may provide a reason to leave the trace enabled.  The code below is provided to show of how to disable it is provided in case the need arises for it to be disabled.
 
  
 

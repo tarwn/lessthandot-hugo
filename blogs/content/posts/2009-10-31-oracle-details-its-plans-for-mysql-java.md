@@ -9,7 +9,7 @@ excerpt: |
   
   Below are the relevant pieces from that document.
   
-  What are Oracle’s plans fo&hellip;
+  What are Oracle's plans fo&hellip;
 url: /index.php/enterprisedev/appserver/jee/oracle-details-its-plans-for-mysql-java/
 views:
   - 15399
@@ -33,7 +33,7 @@ Oracle has updated the [Sun Acquisition FAQ][1]. The FAQ now has Oracle's plans 
 
 Below are the relevant pieces from that document.
 
-**What are Oracle’s plans for the GlassFish Enterprise (Java
+**What are Oracle's plans for the GlassFish Enterprise (Java
   
 EE) Server after the transaction closes?**
   
@@ -51,7 +51,7 @@ and GlassFish Enterprise Server to benefit both Oracle WebLogic Server and
   
 GlassFish Enterprise Server customers.
 
-**What are Oracle’s plans for NetBeans?**
+**What are Oracle's plans for NetBeans?**
   
 Oracle has a strong track record of demonstrating commitment to choice for
   
@@ -61,9 +61,9 @@ source option and complement to the two free tools Oracle already offers for
   
 enterprise Java development: Oracle JDeveloper and Oracle Enterprise Pack for
   
-Eclipse. While Oracle JDeveloper remains Oracle’s strategic development tool
+Eclipse. While Oracle JDeveloper remains Oracle's strategic development tool
   
-for the broad portfolio of Oracle Fusion Middleware products and for Oracle’s
+for the broad portfolio of Oracle Fusion Middleware products and for Oracle's
   
 next generation of enterprise applications, developers will be able to use
   
@@ -71,13 +71,13 @@ whichever free tool they are most comfortable with for pure Java and Java EE
   
 development: JDeveloper, Enterprise Pack for Eclipse, or NetBeans. 
 
-**What are Oracle’s plans for MySQL?**
+**What are Oracle's plans for MySQL?**
   
 Oracle plans to spend more money developing MySQL than Sun does now.
   
 Oracle expects to continue to develop and provide the open source MySQL
   
-database after the transaction closes. Oracle plans to add MySQL to Oracle’s
+database after the transaction closes. Oracle plans to add MySQL to Oracle's
   
 existing suite of database products, which already includes Berkeley DB, an
   
@@ -89,7 +89,7 @@ engine under MySQL. Oracle already distributes MySQL as part of our
   
 Enterprise Linux offering.
 
-**What is Oracle’s plan for OpenOffice?**
+**What is Oracle's plan for OpenOffice?**
   
 Oracle has a history of developing complete, integrated, and open products,
   
@@ -125,15 +125,15 @@ Berkeley DB, and InnoDB. Oracle continues to embrace and offer open source
   
 solutions as a viable choice for development and deployment. More information
   
-about Oracle’s support of open source can be found at
+about Oracle's support of open source can be found at
   
 oracle.com/opensource. 
 
-**Will Oracle continue Sun’s virtualization strategy?**
+**Will Oracle continue Sun's virtualization strategy?**
   
-Yes, Oracle plans to continue Sun’s “desktop to datacenter virtualization”
+Yes, Oracle plans to continue Sun's “desktop to datacenter virtualization”
   
-strategy and integrate with Oracle’s virtualization products. By unifying
+strategy and integrate with Oracle's virtualization products. By unifying
   
 management across desktop virtualization, server virtualization, storage
   
@@ -143,7 +143,7 @@ comprehensive, flexible, eco-efficient solutions to maximize utilization,
   
 consolidate to reduce costs, increase productivity, and decrease management
   
-complexity. We expect to continue Sun’s desktop virtualization products:
+complexity. We expect to continue Sun's desktop virtualization products:
   
 VDI, Secure Global Desktop, Sun Ray, and VirtualBox.
 
@@ -153,13 +153,13 @@ Oracle plans to accelerate investment in the Java platform for the
   
 benefit of customers and the Java community. Java is one of the
   
-computer industry’s best-known brands and the Java platform is
+computer industry's best-known brands and the Java platform is
   
-one of the industry’s most widely deployed technologies. Oracle has
+one of the industry's most widely deployed technologies. Oracle has
   
 been a leader in the Java community since the inception of the Java
   
-programming language and already has the world’s largest investment
+programming language and already has the world's largest investment
   
 in the Java platform, which provides the foundation for its Oracle
   

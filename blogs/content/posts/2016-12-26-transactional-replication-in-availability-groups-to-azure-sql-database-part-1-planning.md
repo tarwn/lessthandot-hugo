@@ -59,11 +59,11 @@ GO</pre>
 EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;</pre>
 
-In the AG, all the replicas must be readable. If they aren’t, the distributor can’t read them, and the setup won’t work.
+In the AG, all the replicas must be readable. If they aren't, the distributor can't read them, and the setup won't work.
 
-The distribution database should not be on a replica server. If that server is lost and the HA of the AG kicks in, you’ve lost a huge part of your replication strategy. Your distribution database needs to reside on a SQL Server that is outside of your AG.
+The distribution database should not be on a replica server. If that server is lost and the HA of the AG kicks in, you've lost a huge part of your replication strategy. Your distribution database needs to reside on a SQL Server that is outside of your AG.
 
-The service accounts for the engine and Agent on all publishers, distributor, and subscribers must be Windows accounts. Don’t do this with NT Service accounts. Also, make sure the accounts have minimum permissions or you may get SSPI errors. (Described at <https://cmatskas.com/fixing-error-cannot-generate-sspi-context-after-changing-sql-service-account/>.)
+The service accounts for the engine and Agent on all publishers, distributor, and subscribers must be Windows accounts. Don't do this with NT Service accounts. Also, make sure the accounts have minimum permissions or you may get SSPI errors. (Described at <https://cmatskas.com/fixing-error-cannot-generate-sspi-context-after-changing-sql-service-account/>.)
 
 The service account of the Log Reader Agent must be a db_owner in the publication database. As a matter of fact, there are a whole lot of rules about service accounts and permissions. Read <a href="https://msdn.microsoft.com/en-us/library/ms151227.aspx" target="_blank">Replication Agent Security Model</a> and apply all these rules. Do not just automatically make accounts sysadmin and local admins. It will be hard and frustrating – but your setup needs to be secure.
 
@@ -77,7 +77,7 @@ Make sure the IP address of every publisher and distributor is allowed through t
 
 Using SSMS, verify you can connect from each publisher and distributor to the SQL DB. Resolve any errors before continuing.
 
-Use the “Deploy Database to Microsoft Azure SQL Database” wizard to find any incompatibilities within the database. If there are stored procedures that cross-reference another database, for example, that isn’t supported in SQL Database and those objects can’t be replicated.
+Use the “Deploy Database to Microsoft Azure SQL Database” wizard to find any incompatibilities within the database. If there are stored procedures that cross-reference another database, for example, that isn't supported in SQL Database and those objects can't be replicated.
 
 With all those pieces in place, let's get started!
 

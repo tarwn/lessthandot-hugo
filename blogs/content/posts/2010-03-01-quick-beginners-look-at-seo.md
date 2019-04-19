@@ -25,7 +25,7 @@ Every few years I throw away my website and re-invent it. This time I had decide
 
 Time to hit the books.
 
-## Instant Knowledge…
+## Instant Knowledge...
 
 I won't lead you down all the blind alleys, scams, and occasionally clueless articles I ran into. Instead I'll leave you with a few key links that stood out during my beginners education.
 

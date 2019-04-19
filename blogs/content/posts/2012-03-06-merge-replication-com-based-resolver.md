@@ -63,7 +63,7 @@ For further verification that the replrec.dll was indeed being utilized fully fo
 
 The SQLConflictResolver.dll is the conflict resolver itself but we can see the replrec.dll it referrred to by replmerg.exe to complete the interface process.
 
-Once the review of the il file was performed and the parameter changes from Doug’s article were changed, the buffer errors were not resolved.  The next stages were to revert any parameter changes (following the 4-step troubleshooting process) and then compare the actual replrec.dll file itself to the previous version prior to the file that SP3 installed.
+Once the review of the il file was performed and the parameter changes from Doug's article were changed, the buffer errors were not resolved.  The next stages were to revert any parameter changes (following the 4-step troubleshooting process) and then compare the actual replrec.dll file itself to the previous version prior to the file that SP3 installed.
 
 A copy of replrec.dll was obtained prior to SP3 being applied and a replrec.dll after SP3 was applied.  Running the following commands genearted the il files for each.
 

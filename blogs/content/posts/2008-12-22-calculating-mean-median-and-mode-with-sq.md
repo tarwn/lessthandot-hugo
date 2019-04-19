@@ -20,7 +20,7 @@ categories:
 ---
 Calculating Median and Mode with SQL Server can be frustrating for some developers, but it doesn't have to be. Often times, inexperienced developers will attempt to write this with procedural programming practices, but set based methods do exist.
 
-Before showing you methods to calculate these values, it’s probably best to explain what they are.
+Before showing you methods to calculate these values, it's probably best to explain what they are.
   
 Mean is another name for average. SQL Server has a built-in function to calculate this value.
 
@@ -123,7 +123,7 @@ From   @Temp
   
 To calculate the median, we will select the last value in the top 50 percent of rows, and the first value in the bottom 50 percent (all while ignoring NULL values).
   
-To get the last value in the top 50 percent of rows….
+To get the last value in the top 50 percent of rows....
 
 <pre>Select Top 1 Data
 		From   (
@@ -134,7 +134,7 @@ To get the last value in the top 50 percent of rows….
 				) As A
 		Order By Data DESC</pre>
 
-To get the first value in the last 50 percent of rows…
+To get the first value in the last 50 percent of rows...
 
 <pre>Select Top 1 Data
 		From   (

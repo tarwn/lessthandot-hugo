@@ -7,7 +7,7 @@ ID: 1109
 excerpt: |
   Optimize For Ad Hoc Workloads – Observations......
    
-  I’ve been watching this one particular server that has been throwing alerts for high physical memory usage from Red Gate’s SQL Monitoring tool.  I was discussing this with a friend of mine, Clayton&hellip;
+  I've been watching this one particular server that has been throwing alerts for high physical memory usage from Red Gate's SQL Monitoring tool.  I was discussing this with a friend of mine, Clayton&hellip;
 url: /index.php/datamgmt/dbadmin/observing-optimize-for-ad-hoc/
 views:
   - 7823
@@ -20,7 +20,7 @@ categories:
 
 ---
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
-  <strong style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri; font-size: 11pt;">Optimize For Ad Hoc Workloads – Observations……</span></strong>
+  <strong style="mso-bidi-font-weight: normal;"><span style="font-family: Calibri; font-size: 11pt;">Optimize For Ad Hoc Workloads – Observations......</span></strong>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
@@ -28,7 +28,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
-  <strong style="mso-bidi-font-weight: normal;"><span style="font-family: &amp;amp; font-size: 8pt;">I’ve been watching this one particular server that has been throwing alerts for high physical memory usage from Red Gate’s SQL Monitoring tool.<span style="mso-spacerun: yes;">  </span>I was discussing this with a friend of mine, Clayton Hoyt and he mentioned that I might want to look at the “Optimize for Ad Hoc Workloads” advanced server configuration options.<span style="mso-spacerun: yes;">  </span>I took him up on his advice and googled for the “Optimize For Ad Hoc Workloads” and “SQLSkills”.<span style="mso-spacerun: yes;">  </span>I found a wonderful article from Kimberly Tripp on just this topic.<span style="mso-spacerun: yes;">  </span>Here is the link.</span></strong>
+  <strong style="mso-bidi-font-weight: normal;"><span style="font-family: &amp;amp; font-size: 8pt;">I've been watching this one particular server that has been throwing alerts for high physical memory usage from Red Gate's SQL Monitoring tool.<span style="mso-spacerun: yes;">  </span>I was discussing this with a friend of mine, Clayton Hoyt and he mentioned that I might want to look at the “Optimize for Ad Hoc Workloads” advanced server configuration options.<span style="mso-spacerun: yes;">  </span>I took him up on his advice and googled for the “Optimize For Ad Hoc Workloads” and “SQLSkills”.<span style="mso-spacerun: yes;">  </span>I found a wonderful article from Kimberly Tripp on just this topic.<span style="mso-spacerun: yes;">  </span>Here is the link.</span></strong>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
@@ -44,7 +44,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">The article suggests running the below query to determine the number of plans in cache and the total space that they are taking up.<span style="mso-spacerun: yes;">  </span>So I ran the query on my memory hungry server and the following is what happened……</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">The article suggests running the below query to determine the number of plans in cache and the total space that they are taking up.<span style="mso-spacerun: yes;">  </span>So I ran the query on my memory hungry server and the following is what happened......</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -256,7 +256,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">Buffer Free Pages climbing from .7 million to 1.1 million. I thought I would see Buffer Free Pages go through the roof, but I’m guessing that data cache stepped in and took over what had become available.</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">Buffer Free Pages climbing from .7 million to 1.1 million. I thought I would see Buffer Free Pages go through the roof, but I'm guessing that data cache stepped in and took over what had become available.</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -264,7 +264,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">What I expect to see in the next 12 hours is that the total plans and total MB’s will grow again, but not to the size that it was in the first query.<span style="mso-spacerun: yes;">  </span>I’m going to bed now and I’ll check the server in the morning……</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">What I expect to see in the next 12 hours is that the total plans and total MB's will grow again, but not to the size that it was in the first query.<span style="mso-spacerun: yes;">  </span>I'm going to bed now and I'll check the server in the morning......</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -272,7 +272,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">And…I’m back… </span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">And...I'm back... </span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">

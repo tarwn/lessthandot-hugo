@@ -33,9 +33,9 @@ I enjoyed this post because I myself have to deal with people like this every da
 
 **[Index columns, selectivity and equality predicates][4]**
   
-Gail Shaw writes “There’s a common piece of advice given about columns in an index key that says that the most selective column should go first. I’m not going to say that’s incorrect, because it’s not. The problem is that it’s often given without any explanation as to why the most selective column should go first, nor are the other considerations for index key order mentioned.
+Gail Shaw writes “There's a common piece of advice given about columns in an index key that says that the most selective column should go first. I'm not going to say that's incorrect, because it's not. The problem is that it's often given without any explanation as to why the most selective column should go first, nor are the other considerations for index key order mentioned.
 
-This can lead to misunderstandings like, in the extreme case, where one person after hearing that advice went and added the primary key column as the leading column of every single nonclustered index (because it’s highly selective), and then wondered why his database performance decreased dramatically.”
+This can lead to misunderstandings like, in the extreme case, where one person after hearing that advice went and added the primary key column as the leading column of every single nonclustered index (because it's highly selective), and then wondered why his database performance decreased dramatically.”
 
 **[Breaking a String into “Words”][5]**
   

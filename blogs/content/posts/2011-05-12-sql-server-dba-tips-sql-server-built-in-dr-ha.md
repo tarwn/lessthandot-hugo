@@ -47,7 +47,7 @@ _Copy Database and SSIS_ can both be placed in the same category.  Copy Databas
 
 **What are the choices in HA?**
 
-High Availability (HA) brings a new element to the concept of recovery.  The allowance is again dictated by the business.  This is more of a decision on the needs of implementing any HA solution however.  It is very uncommon to find a business with a data loss allowance that can be met with log shipping.  True HA requires an automated and nearly real-time fail safe mechanism allowing for clients to “always” have data availability.  Log shipping does not provide this.  Even if setup schedules for log shipping are down to 3 or 4 minutes and SSIS or some other custom solution is put in place to automatically fail an instance over; Log Shipping has a greater chance for data loss than other HA solutions, minutes of downtime to make the change and in most cases, it’s not fully available for automated failovers.  If Log Shipping is mentioned in HA planning in your environment, definitely question how effective it will be.
+High Availability (HA) brings a new element to the concept of recovery.  The allowance is again dictated by the business.  This is more of a decision on the needs of implementing any HA solution however.  It is very uncommon to find a business with a data loss allowance that can be met with log shipping.  True HA requires an automated and nearly real-time fail safe mechanism allowing for clients to “always” have data availability.  Log shipping does not provide this.  Even if setup schedules for log shipping are down to 3 or 4 minutes and SSIS or some other custom solution is put in place to automatically fail an instance over; Log Shipping has a greater chance for data loss than other HA solutions, minutes of downtime to make the change and in most cases, it's not fully available for automated failovers.  If Log Shipping is mentioned in HA planning in your environment, definitely question how effective it will be.
 
 So why then is Log Shipping listed here, “[High Availability Solutions Overview][3]”?  Truly, it should not be in the case of a true HA definition of always having data available.  This requires an automated solution for failing over to the secondary sources in the event of a disaster.  The tip in evaluating options secondary to the topic of this post is; consider the concept of HA being an automated failover process.
 
@@ -65,7 +65,7 @@ Replication is also transactional process which can be considered for use as a H
   <a href="/media/blogs/DataMgmt/-57.png?mtime=1305135956"><img src="/wp-content/uploads/blogs/DataMgmt/-57.png?mtime=1305135956" alt="" width="72" height="48" align="left" /></a>
 </div>
 
-Debating the choices to use will be impacted once determining the levels of a disaster that your unique databases can handle.  [Beginning stages of a DR plan for SQL Server][4] goes over steps of a disaster recovery planning.  Once you’ve gone through these steps and how they fit into your environment for each database, these choices become easier. 
+Debating the choices to use will be impacted once determining the levels of a disaster that your unique databases can handle.  [Beginning stages of a DR plan for SQL Server][4] goes over steps of a disaster recovery planning.  Once you've gone through these steps and how they fit into your environment for each database, these choices become easier. 
 
 Make these decisions with great scrutiny.  Placing a stable and tested DR and HA solution in place will ensure the data the business relies on so heavily is available to sustain revenue for the years to come. 
 
@@ -79,7 +79,7 @@ Make these decisions with great scrutiny.  Placing a stable and tested DR and H
 
 **High Availability/ Disaster Recovery SQL University Geoff Hiten, Robert Davis and Allan Hirt******
 
-[SQLU Post #1: What’s In a Name? (Part One)][8]
+[SQLU Post #1: What's In a Name? (Part One)][8]
 
 [SQLU HA/DR Week – Database Mirroring Performance Counters][9]
 

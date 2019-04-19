@@ -20,7 +20,7 @@ tags:
   - ssis
 
 ---
-If you are installing SQL Server Denali CTP 1 on a computer which already has SQL Server 2008 or 2008 R2 installed, please read: [Don’t install Denali BIDS side by side with a 2008 instance][1]. For CTP 1 BIDS is still based on VS 2008 once they switch to 2010 this won't be a problem.
+If you are installing SQL Server Denali CTP 1 on a computer which already has SQL Server 2008 or 2008 R2 installed, please read: [Don't install Denali BIDS side by side with a 2008 instance][1]. For CTP 1 BIDS is still based on VS 2008 once they switch to 2010 this won't be a problem.
 
 The first thing you will notice is that the icons are new, here is just a simple package that shows some of these icons
   

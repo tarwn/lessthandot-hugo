@@ -50,7 +50,7 @@ When I run the report, it is sorted in the order I specified.
   <img src="/wp-content/uploads/users/grrlgeek/sorting 4.png?mtime=1360154754" alt="" width="476" height="498" />
 </p>
 
-This can be useful when datasets return data from stored procedure that isn’t sorted. It can also be useful when you add grouping to the tablix and want to sort the various groups.
+This can be useful when datasets return data from stored procedure that isn't sorted. It can also be useful when you add grouping to the tablix and want to sort the various groups.
 
 **Further reading:**
 

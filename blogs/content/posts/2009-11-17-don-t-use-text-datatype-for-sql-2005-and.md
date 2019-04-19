@@ -1,5 +1,5 @@
 ---
-title: Don’t use text datatype for SQL 2005 and up
+title: Don't use text datatype for SQL 2005 and up
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-17T19:24:01+00:00

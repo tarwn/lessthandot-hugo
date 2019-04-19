@@ -29,7 +29,7 @@ First there is the Partner Centers' website where you can book the training, the
 
 What happens when you're in the “wrong training”?
   
-Well it depends, if you don't meet the prerequisites, you'll lose interest, get bored, and miss some essential information so you completely can't follow anymore,… You just wasted you're time and money. The same happens when you already have too much knowledge. It's good that you have some working experience before you come follow a course. But if you work for 5 years with the previous release you shouldn't follow the complete basic course of the next release. You will get the same result.
+Well it depends, if you don't meet the prerequisites, you'll lose interest, get bored, and miss some essential information so you completely can't follow anymore,... You just wasted you're time and money. The same happens when you already have too much knowledge. It's good that you have some working experience before you come follow a course. But if you work for 5 years with the previous release you shouldn't follow the complete basic course of the next release. You will get the same result.
   
 On the other hand you will also ask a lot of questions, because you don't know how to get the exercises to work or because you can ask all the exceptions you ran into the last 5 years to the teachers. In both scenario's you will annoy you're co-students for slowing down they're training experience, taking too much teacher time and so on.
   

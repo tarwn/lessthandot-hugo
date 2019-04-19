@@ -8,7 +8,7 @@ excerpt: |
   I was installing an instance of SQL Server on a VM this afternoon and ran into the following error
   Rule “Consistency validation for SQL Server registry keys” failed.
    
-  The error isn’t very common, that I knew of.  Before we go about why this error di&hellip;
+  The error isn't very common, that I knew of.  Before we go about why this error di&hellip;
 url: /index.php/datamgmt/datadesign/sql-server-installation-error-consistency/
 views:
   - 15873
@@ -29,11 +29,11 @@ Rule “Consistency validation for SQL Server registry keys” failed.
   <a href="/wp-content/uploads/blogs/DataMgmt/-113.png?mtime=1329268052"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-113.png?mtime=1329268052" width="624" height="344" /></a>
 </div>
 
-The error isn’t very common, that I knew of.  Before we go about why this error did actually happen and how to fix it in the case of this installation, let’s go through troubleshooting an error that occurs in the setups rules validation steps.
+The error isn't very common, that I knew of.  Before we go about why this error did actually happen and how to fix it in the case of this installation, let's go through troubleshooting an error that occurs in the setups rules validation steps.
 
 **Troubleshooting Rules Validation Steps**
 
-During the setup process for SQL Server, the folder Setup Bootstrap directory is utilized heavily to monitor the state of the installation.  This directory will retain another directory named Log.  In the Log directory, another directory is created to hold all the logs of that setup instance.  This is where we need to go for the logs to troubleshoot this error.  It’s important to note that these directories do not get removed when the setup either rolls back or the setup is successful.
+During the setup process for SQL Server, the folder Setup Bootstrap directory is utilized heavily to monitor the state of the installation.  This directory will retain another directory named Log.  In the Log directory, another directory is created to hold all the logs of that setup instance.  This is where we need to go for the logs to troubleshoot this error.  It's important to note that these directories do not get removed when the setup either rolls back or the setup is successful.
 
 Each log directory will be named as follows
 

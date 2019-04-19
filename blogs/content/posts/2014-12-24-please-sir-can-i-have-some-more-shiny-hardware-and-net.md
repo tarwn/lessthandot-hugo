@@ -21,13 +21,13 @@ I think as I have become more experienced over time as a developer I have starte
 
 This wasn't so much a case of tight purse strings as lack of understanding at the time as to what developers require and as it was usually up to the infrastructure folks to commission the hardware they usually ended up delivering what other users had which wasn't always right and equally I think some developers had a vague idea of what they needed but were not hardware addicts or power users like other IT folks so they didn't always voice concerns or specific requirements.
 
-I am fortunate in that I have done development roles were the hardware was inadequate and abysmal and in one case it took over a year to obtain more memory into what was an already struggling Dell desktop machine…with a single screen – THE HORROR!
+I am fortunate in that I have done development roles were the hardware was inadequate and abysmal and in one case it took over a year to obtain more memory into what was an already struggling Dell desktop machine...with a single screen – THE HORROR!
 
 Things did improve, alibet slowly and I think that was down more to me as a developer because over time in interviews and/or during 1-2-1 and developer forums I would start to raise concerns and in the case of some recent past interviews one of my primary questions to the employers was: “What's the hardware like, what's the software like, how is the Group policy, Servers” and so on because as a developer I should know what I need to do my job and equally development managers should know what their guys need to work efficiently.
 
 Fortunately the last 5+ years I have always used HP hardware from the might Z600 Xeon Workstation to the rather nifty small form factor EliteDesk series PC's and always in all cases HP's workstation build quality impressed me as did the consistent performance and reliability.
 
-So this set the ball in motion…for a long time I have been promising myself a new mobile workstation for the home however at the time (couple of years ago) I was struggling for choice as there wasn't much on the market in this category and what was available was either very expensive or came in the guise of one of those behemoth gaming notebooks.
+So this set the ball in motion...for a long time I have been promising myself a new mobile workstation for the home however at the time (couple of years ago) I was struggling for choice as there wasn't much on the market in this category and what was available was either very expensive or came in the guise of one of those behemoth gaming notebooks.
 
 Why a gaming notebook?  It was (and still is to some degree) the only notebook that had the spec to give me confidence it would not become redundant after a years use but also the fact that I could tap into desktop workstation like performance.  So this left little choice:
 
@@ -139,7 +139,7 @@ This will execute the Winsat command and create an xml results file that you can
 </p>
 
 <p style="color: #000000">
-  The HP 8560w scored an impressive 6.7 base score with high scores of 7.1 and 7.3 for the CPU and memory…and that memory, it makes such a difference when you use the notebook for development running a local SQL 2012 Development server, several Visual Studio 2013 instances and a few other tools to boot plus Firefox browser – there is no lag, at all.
+  The HP 8560w scored an impressive 6.7 base score with high scores of 7.1 and 7.3 for the CPU and memory...and that memory, it makes such a difference when you use the notebook for development running a local SQL 2012 Development server, several Visual Studio 2013 instances and a few other tools to boot plus Firefox browser – there is no lag, at all.
 </p>
 
 <p style="color: #000000">
@@ -151,7 +151,7 @@ This will execute the Winsat command and create an xml results file that you can
 </p>
 
 <p style="color: #000000">
-  So in conclusion…
+  So in conclusion...
 </p>
 
 <p style="color: #000000">

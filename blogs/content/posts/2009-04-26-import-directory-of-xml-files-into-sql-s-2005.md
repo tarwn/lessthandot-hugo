@@ -17,7 +17,7 @@ Here is an interesting way to import a directory that contains XML files using S
   
 SQLCLR comes in for two tasks. The first is to grab some file attributes and the second is to move files around. The file attribute procedure will receive 3 parameters, path to an archive directory, root path to grab files from and the work table to initially insert the data. We use a work table for the simple task of ensuring we do not get files into the main table multiple times. 
 
-Here is the CREATE statements for the two tables I’ll use in this example
+Here is the CREATE statements for the two tables I'll use in this example
 
 sql
 CREATE TABLE [dbo].[XMLTestArchive](
@@ -37,7 +37,7 @@ CREATE TABLE [dbo].[XMLImportWT](
 ) ON [PRIMARY]
 GO
 ```
-Basically they are identical but one I have plans to ship offsite for recovery purposes. The path parameter is important for archiving the files. This way they go to normal tape backups and can be restored with the slower process of file backup services. The basic task is to ensure a structure exists of, “[archive directory]YYYYMM”. All the files will be moved accordingly to these folders once they are imported into our table and any other needed processing performed. You can manage that directory structure simply by doing …
+Basically they are identical but one I have plans to ship offsite for recovery purposes. The path parameter is important for archiving the files. This way they go to normal tape backups and can be restored with the slower process of file backup services. The basic task is to ensure a structure exists of, “[archive directory]YYYYMM”. All the files will be moved accordingly to these folders once they are imported into our table and any other needed processing performed. You can manage that directory structure simply by doing ...
 
 ```CSHARP
 public static void ImportFileAttributes(string dest_path,string source_path, string insert_Table)
@@ -117,22 +117,22 @@ Second, read Adam Machanic blog from a few years ago title “Writing SQL Server
   
 http://searchsqlserver.techtarget.com/tip/0,289483,sid87_gci1165410,00.html
 
-Now back to the process at hand…
+Now back to the process at hand...
 
-For test I’m using local directories, C:XML and C:XML_ARCHIVE.
+For test I'm using local directories, C:XML and C:XML_ARCHIVE.
   
 Given the procedure we just created was deployed successfully, I can now call the procedure to process everything in C:XML as
 
 sql
 Exec dbo.ImportFileAttributes 'C:XML_ARCHIVE','C:XML','[XMLImportWT]'
 ```
-Executing this I can now see in XMLImportWT that I’ve grabbed the file names and file creation date and times.
+Executing this I can now see in XMLImportWT that I've grabbed the file names and file creation date and times.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//xmlimport_1.gif" alt="" title="" width="540" height="141" />
 </div>
 
-Now let’s finish the process and grab the XML data and move everything from the work table to the table that we actually want in our DR strategies.
+Now let's finish the process and grab the XML data and move everything from the work table to the table that we actually want in our DR strategies.
   
 First step, I will update the rownum column
 
@@ -142,11 +142,11 @@ Set rownum = rowid
 from [XMLImportWT] a
 join (select ROW_NUMBER() OVER (ORDER BY filenm ASC) AS ROWID, * from [XMLImportWT]) b on a.filenm = b.filenm
 ```
-This only gives me looping structure and the column really isn’t required but one thing it does, is tell me what was batched together and inserted given any execution. 
+This only gives me looping structure and the column really isn't required but one thing it does, is tell me what was batched together and inserted given any execution. 
 
 Next I want to grab all the XML data and get it into the XML type column “xmldata”
   
-Create my supporting variables in order to process everything along with the ability to utilize an existing SQL CLR procedure I’ve used to move files around. That procedure is nothing more than a File.Move method call.
+Create my supporting variables in order to process everything along with the ability to utilize an existing SQL CLR procedure I've used to move files around. That procedure is nothing more than a File.Move method call.
 
 The main process to grab the XML data and update the work table is below
 
@@ -196,7 +196,7 @@ The XMLTestArchive table also has all of our XML and file attribute data
   <img src="/wp-content/uploads/blogs/DataMgmt//xmlimport_3.gif" alt="" title="" width="628" height="123" />
 </div>
 
-This seems to run pretty well. I’d like to hear performance improvements on my T-SQL if anyone has some of course. I wrote this without looking at my original coding but I think it was pretty close minus all the extra steps to handle errors and such. 
+This seems to run pretty well. I'd like to hear performance improvements on my T-SQL if anyone has some of course. I wrote this without looking at my original coding but I think it was pretty close minus all the extra steps to handle errors and such. 
 
 Wrapping this all up in a procedure that we can call would look like this
 
@@ -255,6 +255,6 @@ Exec [GetAllXMLFiles] 'C:XML_ARCHIVE','C:XML','[XMLImportWT]';
 ```
 This handles the entire process for us and can be placed in a SQL Agent job for automating the process.
 
-I went over a few different topics by doing all of this. XML file import, SQLCLR moving files, SQLCLR FileInfo and getting file attributes and some simple directory navigation and creation. The entire task can be done using xp_cmdshell and T-SQL and I wouldn’t put that option aside. This was one solution over that method. I mentioned DR a few times in this and the reason for that was due to how I used something very similar in a production envirinment. The reason I did this was due to orders coming in as XML files and I needed a good way to grab these files as quick as possible and get them into a DR strategy. My best option was to utilize the already existing log shipping methods. Once I had the XML data, file creation datetime and file name in a table, it was trivial to get the data offsite. It overcomes longer restores from tape as well.
+I went over a few different topics by doing all of this. XML file import, SQLCLR moving files, SQLCLR FileInfo and getting file attributes and some simple directory navigation and creation. The entire task can be done using xp_cmdshell and T-SQL and I wouldn't put that option aside. This was one solution over that method. I mentioned DR a few times in this and the reason for that was due to how I used something very similar in a production envirinment. The reason I did this was due to orders coming in as XML files and I needed a good way to grab these files as quick as possible and get them into a DR strategy. My best option was to utilize the already existing log shipping methods. Once I had the XML data, file creation datetime and file name in a table, it was trivial to get the data offsite. It overcomes longer restores from tape as well.
 
 Given a situation the XML can be redirected to the database server directly, SQL Server Broker would be the option to look into. Either that or web services using endpoints. There are plenty of options in that situation.

@@ -29,7 +29,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  Anyway, I gave a session about using <a href="/index.php/DataMgmt/ssis/speaking-about-biml">BIML</a> to generate SSIS packages based on metadata. The session went pretty well: demos didn’t crash and the audience had some good questions (which I was luckily able to answer).
+  Anyway, I gave a session about using <a href="/index.php/DataMgmt/ssis/speaking-about-biml">BIML</a> to generate SSIS packages based on metadata. The session went pretty well: demos didn't crash and the audience had some good questions (which I was luckily able to answer).
 </p>
 
 <p style="text-align: justify;">

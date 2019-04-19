@@ -78,7 +78,7 @@ SELECT @ActiveServerName,@DatabaseName,@LogTableName
 
 Okay so that is not really something I want to maintain. I guess if you get paid by lines of code written it makes you look good 🙂
   
-Next up.. a different approach…
+Next up.. a different approach...
 
 ## Enter the pivot.
 

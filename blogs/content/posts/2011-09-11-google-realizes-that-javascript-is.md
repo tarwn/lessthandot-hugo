@@ -125,7 +125,7 @@ Even if this new language is better than JavaScript will all the other browser v
 
 I am skeptical about all of this but of course I could be dead wrong
 
-Time will tell………
+Time will tell.........
 
  [1]: http://markmail.org/message/uro3jtoitlmq6x7t
  [2]: http://gotocon.com/aarhus-2011/presentation/Opening%20Keynote:%20Dart,%20a%20new%20programming%20language%20for%20structured%20web%20programming

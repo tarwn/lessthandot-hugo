@@ -25,11 +25,11 @@ So this is my 300th post on lessthandot, I decided to make this a post about why
   * You will have a code library online
   * Your blog will be part of your business card
 
-Let’s take a look at these 4 items listed above.
+Let's take a look at these 4 items listed above.
 
 # You will write better code and research more
 
-This one can be pretty harsh, you wrote that awesome 50 line piece of code, you created a blog post with that code only to be told by someone that why didn’t you just use the built in function. Here is such an example of some code that flips the sign on a number.
+This one can be pretty harsh, you wrote that awesome 50 line piece of code, you created a blog post with that code only to be told by someone that why didn't you just use the built in function. Here is such an example of some code that flips the sign on a number.
 
 ```java
 int x = numberToInvertSign;
@@ -113,7 +113,7 @@ class WindowsVista extends WindowsXP implements Nothing
 }
 ```
 
-I cannot tell you how many times I search my old blog posts for either myself or co-workers, the post [How to enable xp_cmdshell and Ad Hoc Distributed Queries on SQL Server 2005][2] is probably my most searched post. Whenever I or someone else installs SQL Server, the first issue is always openrowset and xp_cmdshell don’t work..what do I do? Of course I have all the source code in SVN but when a friend or a newsgroup user asks how to do something, it is much easier to just give them the link to the blog post. Sometimes a person will leave a comment with another way to accomplish the same task, this is great because now you have both of them in the same place.
+I cannot tell you how many times I search my old blog posts for either myself or co-workers, the post [How to enable xp_cmdshell and Ad Hoc Distributed Queries on SQL Server 2005][2] is probably my most searched post. Whenever I or someone else installs SQL Server, the first issue is always openrowset and xp_cmdshell don't work..what do I do? Of course I have all the source code in SVN but when a friend or a newsgroup user asks how to do something, it is much easier to just give them the link to the blog post. Sometimes a person will leave a comment with another way to accomplish the same task, this is great because now you have both of them in the same place.
 
 # Your blog will be part of your business card
 
@@ -127,7 +127,7 @@ Usually if someone has a blog it means that he enjoys programming and is not a p
 
 [<img src="http://farm1.static.flickr.com/134/318947873_12028f1b66_m.jpg" width="240" height="186" alt="Questions" />][4]
   
-Technology is changing at an incredible pace so there is no lack of new material to write about. Once that new and shiny beta or CTP version of some of your favorite software comes out, download it, install it and start playing with it. Once you played around with it, start creating blog posts about the new version, you can list what you like, what you don’t like, what the new features are and which feature the most beneficial will be to you and others.
+Technology is changing at an incredible pace so there is no lack of new material to write about. Once that new and shiny beta or CTP version of some of your favorite software comes out, download it, install it and start playing with it. Once you played around with it, start creating blog posts about the new version, you can list what you like, what you don't like, what the new features are and which feature the most beneficial will be to you and others.
 
 One of the best ways for me to get new ideas is participating in newsgroups, I think that at least half of my blog posts are the result of answering questions in newsgroups and forums. Once you are active for a bit on the newsgroups/forums you will see that there are a whole lot of questions that are variations on a handful of questions, this was the reason that I wrote the [The Ten Most Asked SQL Server Questions And Their Answers][5] post. Now I can just give the person the link and be done with it, this saves me time and the person will have something he can bookmark for future references. In this case 120 people bookmarked the [The Ten Most Asked SQL Server Questions And Their Answers][5] post on delicious: http://www.delicious.com/url/e73c8b3f59393bf8222aaff053bd21b6
 

@@ -49,7 +49,7 @@ For the uninitiated, when viewing a .rdlc file (or .rdl) as an XML document, the
 
 Pretty simple stuff, but defining it can make setting up a new report somewhat daunting. As we start getting requests for more and more new reports, automating this process looks more and more appealing, and this morning it was finally looking appealing enough that I dropped everything else for about half an hour to figure it out. It ended up being much easier than I expected.
 
-What makes it so easy is the GetSchemaTable method ([see returned table layout][1]) on the IDataReader interface. The first thing we need to do is get the schema table. In this instance its' set up to just take a complete query string (parameters and all) – this is for a command line app used by developers, and SQL injection / plan caching / etc… is simply not as valuable as the ability to enter whatever query we want into the CLI and have it run. We're interested in the ColumnName and DataType columns in this case. Not much to this method: 
+What makes it so easy is the GetSchemaTable method ([see returned table layout][1]) on the IDataReader interface. The first thing we need to do is get the schema table. In this instance its' set up to just take a complete query string (parameters and all) – this is for a command line app used by developers, and SQL injection / plan caching / etc... is simply not as valuable as the ability to enter whatever query we want into the CLI and have it run. We're interested in the ColumnName and DataType columns in this case. Not much to this method: 
 
 ```csharp
 public static DataTable SchemaTable(String source_query)

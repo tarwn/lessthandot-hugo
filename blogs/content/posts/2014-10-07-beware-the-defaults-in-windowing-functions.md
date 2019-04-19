@@ -19,7 +19,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  Some time ago I was writing some windowing functions on a set of data. Basically I was looking for the last date an event had occurred for each type of event. Let’s illustrate with an example:
+  Some time ago I was writing some windowing functions on a set of data. Basically I was looking for the last date an event had occurred for each type of event. Let's illustrate with an example:
 </p>
 
 sql
@@ -58,17 +58,17 @@ FROM dbo.TestOver;
 </p>
 
 <p style="text-align: justify">
-  I really didn’t think twice over this, until I joined the session <a href="http://www.sqlserverdays.be/powerful-t-sql-improvements-that-reduce-query-complexity/">Powerful T-SQL Improvements that Reduce Query Complexity</a> by Hugo Kornelis (<a href="http://sqlblog.com/blogs/hugo_kornelis/">blog</a> | <a href="https://twitter.com/Hugo_Kornelis">twitter</a>) on the SQL Server Days. I learned two things.
+  I really didn't think twice over this, until I joined the session <a href="http://www.sqlserverdays.be/powerful-t-sql-improvements-that-reduce-query-complexity/">Powerful T-SQL Improvements that Reduce Query Complexity</a> by Hugo Kornelis (<a href="http://sqlblog.com/blogs/hugo_kornelis/">blog</a> | <a href="https://twitter.com/Hugo_Kornelis">twitter</a>) on the SQL Server Days. I learned two things.
 </p>
 
 <ol style="text-align: justify">
   <li>
-    You don’t need to specify the ORDER BY.
+    You don't need to specify the ORDER BY.
   </li>
 </ol>
 
 <p style="text-align: justify">
-  In SQL Server 2005, the <a href="http://msdn.microsoft.com/en-us/library/ms189461(v=sql.90).aspx">OVER clause</a> was introduced and it simplified some aggregations like the one we’re doing here. When using the ranking window functions the ORDER BY clause is mandatory, but when using a regular aggregate window function the ORDER BY clause is not allowed. This gives us the following T-SQL which is the perfect solution for our problem here:
+  In SQL Server 2005, the <a href="http://msdn.microsoft.com/en-us/library/ms189461(v=sql.90).aspx">OVER clause</a> was introduced and it simplified some aggregations like the one we're doing here. When using the ranking window functions the ORDER BY clause is mandatory, but when using a regular aggregate window function the ORDER BY clause is not allowed. This gives us the following T-SQL which is the perfect solution for our problem here:
 </p>
 
 sql
@@ -85,7 +85,7 @@ FROM dbo.TestOver;
 </ol>
 
 <p style="text-align: justify">
-  Starting from SQL Server 2012, the T-SQL windowing functions and the <a href="http://msdn.microsoft.com/en-us/library/ms189461(v=sql.120).aspx">OVER clause</a> were greatly enhanced. Suddenly you can specify an ORDER BY for the aggregate windowing functions (which I did in the first attempts, remember?). However, if you specify an ORDER BY clause but no ROW or RANGE clause, SQL Server will apply the following defaults: RANGE UNBOUNDED PRECEDING as the lower limit and CURRENT ROW for the upper limit of the window. When Hugo explained this, I had my “Eureka” moment (or rather my “How could I have been this stupid?” moment). Because of these defaults, the MAX aggregate was calculated over the wrong windows! Let’s illustrate the concept for group A:
+  Starting from SQL Server 2012, the T-SQL windowing functions and the <a href="http://msdn.microsoft.com/en-us/library/ms189461(v=sql.120).aspx">OVER clause</a> were greatly enhanced. Suddenly you can specify an ORDER BY for the aggregate windowing functions (which I did in the first attempts, remember?). However, if you specify an ORDER BY clause but no ROW or RANGE clause, SQL Server will apply the following defaults: RANGE UNBOUNDED PRECEDING as the lower limit and CURRENT ROW for the upper limit of the window. When Hugo explained this, I had my “Eureka” moment (or rather my “How could I have been this stupid?” moment). Because of these defaults, the MAX aggregate was calculated over the wrong windows! Let's illustrate the concept for group A:
 </p>
 
 <p style="text-align: justify">

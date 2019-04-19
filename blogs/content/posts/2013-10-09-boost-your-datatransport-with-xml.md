@@ -176,7 +176,7 @@ We haven't gone to the bottom yet though, where XML is concerned. There still is
 ```
 As you can see, this is XML in it's very most compact form. JSON can hardly do better than this ( in fact, it can't). Notice that I used a dot within the attributes to have some sort of indication that we are dealing with a composition of elements really, which has to be taken into account when deserialising back into objects. In fact, the dot serves as a degenerate dimension, in database speak. The dot is arbitrarily chosen from my part ( as are the composition identifiers A for Address, P1 for Phonenumber1, P2 for Phonenumber2 ). It might as well have been an underscore or whatever. But a dot is fine and it's use within attribute names does seem to pass inspection on validity. 
 
-Now everything is in place for generating very compact XML and an easy deserialisation into complex types . But… ( oh yes, there's a but )… each attribute within an XML tag must be unique. There's always a way to work around this of course, but in the end the easiest solution is to introduce an extra property ( which will not be serialized of course ) within classes that will participate in data-transport. We will name this property **_SequenceID_** (but you can pick another name if you like to). 
+Now everything is in place for generating very compact XML and an easy deserialisation into complex types . But... ( oh yes, there's a but )... each attribute within an XML tag must be unique. There's always a way to work around this of course, but in the end the easiest solution is to introduce an extra property ( which will not be serialized of course ) within classes that will participate in data-transport. We will name this property **_SequenceID_** (but you can pick another name if you like to). 
 
 On a note: I for my self allways add a property SequenceID to my domain classes. On another level, it allows me for example to use this property for binding in XAML to a SortDescription. In that way I only have to manage the SequenceID of my classes in code behind, when sorting is involved. Binding will do the rest. 
 
@@ -212,7 +212,7 @@ Public Class Person
         End Get
     End Property
 ```
-As for the FromXML method, here we do pay the price for denormalization. We have to get the XML content back into normalized form in order to deserialize back into an object. We can do this in LINQ by means of a self join or a groupby. Moreover, we will have to do this on an element of the array resulting from a String.Split function. It will take a second self join though to be able to fill the newly created object. But that’s not all: we need the sequenceid to be able to serialize. Easy enough with a direct invoke of a lambda. But we cannot do that on the second self join, because it will not get the same result as what a ROW_NUMBER function would do in TSQL. So we have to iterate through the collection again to create that sequenceid. OK, this maybe is 1 step too much. We could go for the serialization of this SequenceID property also. Then again, that would add to the size of the generated XML, and it would not add to the content, since this property only serves to create unique attributenames. Again : denormalization also has drawbacks. 
+As for the FromXML method, here we do pay the price for denormalization. We have to get the XML content back into normalized form in order to deserialize back into an object. We can do this in LINQ by means of a self join or a groupby. Moreover, we will have to do this on an element of the array resulting from a String.Split function. It will take a second self join though to be able to fill the newly created object. But that's not all: we need the sequenceid to be able to serialize. Easy enough with a direct invoke of a lambda. But we cannot do that on the second self join, because it will not get the same result as what a ROW_NUMBER function would do in TSQL. So we have to iterate through the collection again to create that sequenceid. OK, this maybe is 1 step too much. We could go for the serialization of this SequenceID property also. Then again, that would add to the size of the generated XML, and it would not add to the content, since this property only serves to create unique attributenames. Again : denormalization also has drawbacks. 
 
 ```vbnet
 Public Shared ReadOnly Property FromXML(xml As XElement) As Person
@@ -263,7 +263,7 @@ Public Shared ReadOnly Property FromXML(xml As XElement) As Person
         End Get
     End Property
 ```
-There’s one extra which is not related to XML serialization but which I do want to mention here. We have seen the power of XML literals in VB. Well, this feature can very handily be used for overrides of ToString functions. Which we will do here. 
+There's one extra which is not related to XML serialization but which I do want to mention here. We have seen the power of XML literals in VB. Well, this feature can very handily be used for overrides of ToString functions. Which we will do here. 
 
 ```vbnet
 Public Overrides Function ToString() As String

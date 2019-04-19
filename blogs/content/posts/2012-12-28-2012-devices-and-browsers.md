@@ -548,7 +548,7 @@ Here is the data for mobile operating systems, I just picked the top 3 and only 
   </table>
 </div>
 
-Next year will be very interesting, we have to see what will happen in terms of new android and iOS devices. Will the Surface Pro help Microsoft win some tables market share or will the partners have to step up and come out with some cool Windows 8 tables? Time will tell……
+Next year will be very interesting, we have to see what will happen in terms of new android and iOS devices. Will the Surface Pro help Microsoft win some tables market share or will the partners have to step up and come out with some cool Windows 8 tables? Time will tell......
 
  [1]: /index.php/ITProfessionals/other/2012-searches-countries-and-devices
  [2]: /wp-content/uploads/blogs/ITProfessionals/Denis/StatsBrowsers.PNG?mtime=1356640800

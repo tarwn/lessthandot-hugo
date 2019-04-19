@@ -1,5 +1,5 @@
 ---
-title: Dude, where’s my Power Map?
+title: Dude, where's my Power Map?
 author: Koen Verbeeck
 type: post
 date: 2014-02-26T22:27:48+00:00
@@ -25,7 +25,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  If you haven’t noticed lately, Power Map has gone into General Availability as of 25 of February 2014. It comes along with service pack 1 of Office 2013, which you can download <a href="http://www.microsoft.com/en-us/download/details.aspx?id=42006">here</a>. There are two ways of getting this update:
+  If you haven't noticed lately, Power Map has gone into General Availability as of 25 of February 2014. It comes along with service pack 1 of Office 2013, which you can download <a href="http://www.microsoft.com/en-us/download/details.aspx?id=42006">here</a>. There are two ways of getting this update:
 </p>
 
 <ul style="text-align: justify">
@@ -42,11 +42,11 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  As outlined in <a href="http://cwebbbi.wordpress.com/2014/02/25/power-map-is-released/">this blog</a> post by Chris Webb, you can only enjoy Power Map if you have the Office 365 version of Office 2013 Professional Plus. You know, <i>cloud first</i> and all that stuff. No worries, I thought, we have Office 365 at element61 (the company I work at if you’re wondering).
+  As outlined in <a href="http://cwebbbi.wordpress.com/2014/02/25/power-map-is-released/">this blog</a> post by Chris Webb, you can only enjoy Power Map if you have the Office 365 version of Office 2013 Professional Plus. You know, <i>cloud first</i> and all that stuff. No worries, I thought, we have Office 365 at element61 (the company I work at if you're wondering).
 </p>
 
 <p style="text-align: justify">
-  Time to check out the new goodies so I went ahead and downloaded the service pack. After installing it and rebooting my computer I fired up Excel and went straight for the <i>Insert</i> tab, the new habit for Power Map. However, no Power Map in sight. I didn’t have the preview installed by the way, I’m a bit of a late adapter sometimes. After holding back a few swears it came to me that I might have to enable some add-in, just like with Power Pivot/View. But, no Power Map add-in to be found.  I forgot to take screenshots out of pure frustration, so you have to believe me on my word on that.
+  Time to check out the new goodies so I went ahead and downloaded the service pack. After installing it and rebooting my computer I fired up Excel and went straight for the <i>Insert</i> tab, the new habit for Power Map. However, no Power Map in sight. I didn't have the preview installed by the way, I'm a bit of a late adapter sometimes. After holding back a few swears it came to me that I might have to enable some add-in, just like with Power Pivot/View. But, no Power Map add-in to be found.  I forgot to take screenshots out of pure frustration, so you have to believe me on my word on that.
 </p>
 
 <p style="text-align: justify">
@@ -74,7 +74,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Office is installed in the background …
+  Office is installed in the background ...
 </p>
 
 <p style="text-align: justify">
@@ -82,7 +82,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  … while you can admire the sales video and OneDrive (formerly known as SkyDrive).
+  ... while you can admire the sales video and OneDrive (formerly known as SkyDrive).
 </p>
 
 <p style="text-align: justify">
@@ -90,7 +90,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  After a while, set-up has finished and you’re good to go.
+  After a while, set-up has finished and you're good to go.
 </p>
 
 <p style="text-align: justify">
@@ -114,7 +114,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  But back on-topic: where’s my Power Map? Luckily, after installing the “streaming” version of Office, Power Map was where it belongs: in the Insert tab.
+  But back on-topic: where's my Power Map? Luckily, after installing the “streaming” version of Office, Power Map was where it belongs: in the Insert tab.
 </p>
 
 <p style="text-align: justify">
@@ -138,7 +138,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Conclusion: 1 wasted download (luckily there are almost no more download limits in Belgium), 1 Click-To-Run version installed and Power Map at my fingertips! Uninstalling Office 2013 and installing its alternative took me less than half an hour and I am really pleased with how smooth and painless it went. Time well spent since now every update of Power BI comes rolling in automatically. And all was good…
+  Conclusion: 1 wasted download (luckily there are almost no more download limits in Belgium), 1 Click-To-Run version installed and Power Map at my fingertips! Uninstalling Office 2013 and installing its alternative took me less than half an hour and I am really pleased with how smooth and painless it went. Time well spent since now every update of Power BI comes rolling in automatically. And all was good...
 </p>
 
 <p style="text-align: justify">

@@ -77,7 +77,7 @@ And now on to the opinions.
 
 I think the all-in-one approach of [AngularJS][1] makes it a great choice for small projects (less than 10 screens or 10-20 JavaScript files) that are using a SPA model or want to take advantage of several of AngularJS's capabilities. You have a single package to maintain with reasonable tools that can operate at higher scales and there are tons of examples available. 
 
-When the project starts getting larger, I don't think there is a clear advantage to either. Knockout would obviously require a composition approach at any scale, meaning more packages to find, monitor, and maintain and several communities for support and continued developent instead of just the one. But from what I can see, you're going to need to start adding more overhead on the AngularJS side as well, either in the form of custom routing packages, a full DOM manipulation library like [jQuery][6], unit test libraries, 3rd party web component libraries, … When we start talking about larger scale projects, it stops being an all-in-one vs composition conversation and is instead a flavors of composition conversation.
+When the project starts getting larger, I don't think there is a clear advantage to either. Knockout would obviously require a composition approach at any scale, meaning more packages to find, monitor, and maintain and several communities for support and continued developent instead of just the one. But from what I can see, you're going to need to start adding more overhead on the AngularJS side as well, either in the form of custom routing packages, a full DOM manipulation library like [jQuery][6], unit test libraries, 3rd party web component libraries, ... When we start talking about larger scale projects, it stops being an all-in-one vs composition conversation and is instead a flavors of composition conversation.
 
 I am concerned that most all-in-one solutions I've worked with in the past tend to be good at a couple things and mediocre at the rest. In some cases this means you're just screwed (VB6 seemed to have a few places where the bar was pretty low, then you would try to surpass it and suddenly it was 100x harder), which leaves you either living with the mediocre bits or replacing them with better ones and just living with the overhead.
 
@@ -133,7 +133,7 @@ AngularJS has silent binding failures, Knockout produces errors. Of the two, tha
 
 ## Which am I Choosing?
 
-One of my projects is big and is going to have a constant flow of features added, credibility and trust are very important, size of the script files are going to be very important, asynchronous script loading is going to be important, I don't plan on rebuilding it for a while … that one should be obvious.
+One of my projects is big and is going to have a constant flow of features added, credibility and trust are very important, size of the script files are going to be very important, asynchronous script loading is going to be important, I don't plan on rebuilding it for a while ... that one should be obvious.
 
 That being said, I have every intention of using both of these in smaller projects and even reworking the knockout code in [SQLisHard.com][20] at some point in the future. 
 

@@ -97,7 +97,7 @@ GO
   <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_3.gif" alt="" title="" width="747" height="110" />
 </div></p> 
 
-If we then search for the plan by the sql_handle, we’ll see it has been removed
+If we then search for the plan by the sql_handle, we'll see it has been removed
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_4.gif" alt="" title="" width="721" height="265" />
@@ -382,7 +382,7 @@ GO
 
 The Index Seek is now present and performed on the SalesOrderHeader table. This is the optimal operation to have here and the index structure accomplishes this.
 
-So far, we’ve learned about the need for covering indexes and also how the structure of the index is important to accomplishing the needed index seeks. With this information we can move to the second table scan in our plan. 
+So far, we've learned about the need for covering indexes and also how the structure of the index is important to accomplishing the needed index seeks. With this information we can move to the second table scan in our plan. 
 
 Hover over the table scan on SalesOrderDetail.
 
@@ -400,7 +400,7 @@ With this information we can write the following nonclustered index to cover the
 
 **Key Lookup**
 
-A Key Lookup operation is performed when a supporting index operation is utilized. However, to fulfill the requirements of the statement, a bookmark lookup must be performed in order to return the remaining output required. This operation can cause a statement’s performance to be very poor given the added need to retrieve what is needed to satisfy the requirements.
+A Key Lookup operation is performed when a supporting index operation is utilized. However, to fulfill the requirements of the statement, a bookmark lookup must be performed in order to return the remaining output required. This operation can cause a statement's performance to be very poor given the added need to retrieve what is needed to satisfy the requirements.
 
 To show a Key Lookup, alter the index previously created to restructure the columns in order SalesOrderNumber, OrderDate and AccountNumber. Place the CustomerID column in the index by means of INCLUDE.
 
@@ -507,7 +507,7 @@ WHERE   customerid = 11091
 
 **Wrapping up**
 
-In the tuning exercises so far, we’ve created 3 indexes to tune the query. However, we could accomplish this with two indexes. The clustered index could be removed and create another HEAP table situation. This situation is also common when the primary key (or clustered index) is another column on the table that isn't part of the query and thus does not assist in improving performance of the statement. 
+In the tuning exercises so far, we've created 3 indexes to tune the query. However, we could accomplish this with two indexes. The clustered index could be removed and create another HEAP table situation. This situation is also common when the primary key (or clustered index) is another column on the table that isn't part of the query and thus does not assist in improving performance of the statement. 
 
 To show this, drop the clustered index SalesOrderHeader.IDX_UNIQUEKEY
 

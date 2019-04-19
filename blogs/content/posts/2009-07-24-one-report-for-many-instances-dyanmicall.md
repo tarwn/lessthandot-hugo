@@ -78,11 +78,11 @@ Save that by hitting OK and now let's create a parameter that our dataset will p
 
 Now back in the Data tab create another dataset. Name this one DBListing. We need a new data source now sense our goal here is to connect to whatever SQL Server the UDF finds. So click the drop down for Data Source and hit create new. Name this DS NoInitialCatalog. That's as meaningful of a name as we can get as that is the key to how we do this. To create this type of connection string all we do is specify the Data Source itself without a initial catalog. For the connection string we need to use our parameter for the server as well. All we do is add it in there as an expression to accomplish that.
 
-like so…
+like so...
 
 =”Data Source=” & Parameters!ServerName.Value
 
-and should appear like this in the prompts…
+and should appear like this in the prompts...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//srv_2.gif" alt="" title="" width="474" height="408" />

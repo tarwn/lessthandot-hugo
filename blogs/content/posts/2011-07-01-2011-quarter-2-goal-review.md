@@ -31,7 +31,7 @@ My focus for the next quarter is shifting. I want one blog a week. I'm going to 
 
 I am in love. I would stand up in front of a room of people and teach every day if I could. In April, I presented for MADPASS, and in June I gave a presentation at SQL Saturday 75. 
 
-Goal count: 2 of 3 user groups, 2 of 3 SQL Saturdays, and 1 other event (24 HOP). I've even surpassed my own expectations for the year. Read on for more…
+Goal count: 2 of 3 user groups, 2 of 3 SQL Saturdays, and 1 other event (24 HOP). I've even surpassed my own expectations for the year. Read on for more...
 
 **Attend PASS Summit:** 
 
@@ -67,7 +67,7 @@ I also got the opportunity to help a friend, Steve Jones, [celebrate his 1000th 
 
 Coming up in July: my two year run-aversary. I hope you'll join me for a run on Wednesday, July 13! 
 
-**So Far…So Good** 
+**So Far...So Good** 
 
 This year keeps getting better and better. I didn't think anything could beat 2010, but 2011 is proving me wrong. I can't thank my friends and family enough for supporting me while I do all this crazy stuff. I have to thank the people that are reading my blogs and attending my sessions for giving me a reason to keep going. And I definitely have to thank the SQL community for being so damn awesome.
 

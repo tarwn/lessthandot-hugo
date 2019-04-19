@@ -25,7 +25,7 @@ tags:
 
 There are four Windows Phone starter kits available for download
 
-These starter kits are great to get an app working and to understand how it woks, all you have to do is add your own artwork, make a couple of tweaks and you are ready to go.  Below is a link to all of them and a short description of what they do….happy coding
+These starter kits are great to get an app working and to understand how it woks, all you have to do is add your own artwork, make a couple of tweaks and you are ready to go.  Below is a link to all of them and a short description of what they do....happy coding
 
 <a style="color: #1155cc; font-family: arial, sans-serif; line-height: normal;" href="http://code.msdn.microsoft.com/Windows-Phone-Starter-Kit-390ee0ef" target="_blank"><strong>Windows Phone Starter Kit for RSS</strong></a> <span style="font-family: arial, sans-serif; line-height: normal;"></span>
 

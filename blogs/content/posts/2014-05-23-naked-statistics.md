@@ -22,7 +22,7 @@ tags:
 </p>
 
 > <p style="text-align: justify">
->   Once considered tedious, the field of statistics is rapidly evolving into a discipline Hal Varian, chief economist at Google, has actually called “sexy.” From batting averages and political polls to game shows and medical research, the real-world application of statistics continues to grow by leaps and bounds. How can we catch schools that cheat on standardized tests? How does Netflix know which movies you’ll like? What is causing the rising incidence of autism? As best-selling author Charles Wheelan shows us in Naked Statistics, the right data and a few well-chosen statistical tools can help us answer these questions and more.
+>   Once considered tedious, the field of statistics is rapidly evolving into a discipline Hal Varian, chief economist at Google, has actually called “sexy.” From batting averages and political polls to game shows and medical research, the real-world application of statistics continues to grow by leaps and bounds. How can we catch schools that cheat on standardized tests? How does Netflix know which movies you'll like? What is causing the rising incidence of autism? As best-selling author Charles Wheelan shows us in Naked Statistics, the right data and a few well-chosen statistical tools can help us answer these questions and more.
 > </p>
 
 <p style="text-align: justify">
@@ -34,7 +34,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Throughout the book, the author uses compelling anecdotes and use cases that really explain the subject matter at a comprehensible, attractive and accessible level. There are almost no formulas in this book, so you probably don’t want to use this book as reference material, but it keeps the subject matter rather light. It also give you a bunch of fun stories that you can use to explain statistical concepts to others. For me, this was one of the greatest strengths of the book. I have a basic background on statistics (although the course was 10 years ago and it was given by quite a boring professor), but the examples used in the book made more practical sense than the traditional “I’m pulling some colored marbles out of an urn”.
+  Throughout the book, the author uses compelling anecdotes and use cases that really explain the subject matter at a comprehensible, attractive and accessible level. There are almost no formulas in this book, so you probably don't want to use this book as reference material, but it keeps the subject matter rather light. It also give you a bunch of fun stories that you can use to explain statistical concepts to others. For me, this was one of the greatest strengths of the book. I have a basic background on statistics (although the course was 10 years ago and it was given by quite a boring professor), but the examples used in the book made more practical sense than the traditional “I'm pulling some colored marbles out of an urn”.
 </p>
 
 <p style="text-align: justify">

@@ -27,7 +27,7 @@ What is going to make Tech On Tap so different – and so great?
   * It's small, so it's intimate, and people will get to know each other. Our attendees won't be sitting in a room of 200 people for one hour, then a room of 75 different people the next hour. The group stays together, all day, to talk and learn together. 
   * We're drinking beer! Our events are going to be at local brew pubs. What's better than technology and beer? 
 
-Virtualization will be explored by three great speakers – Brian Lewis ([twitter][3] | [blog][4]) from Microsoft, Bob Plankers ([twitter][5] | [blog][6]) from UW Madison, and Grant Fritchey ([twitter][7] | [blog][8]) from Red Gate (with a little help from me). I’m definitely looking forward to the panel/Q&A/networking at the end of the day, too. 
+Virtualization will be explored by three great speakers – Brian Lewis ([twitter][3] | [blog][4]) from Microsoft, Bob Plankers ([twitter][5] | [blog][6]) from UW Madison, and Grant Fritchey ([twitter][7] | [blog][8]) from Red Gate (with a little help from me). I'm definitely looking forward to the panel/Q&A/networking at the end of the day, too. 
 
 The event is happening at [Stone Cellar Brewpub][9], in a gorgeous 150-year-old building. We have three great beers on tap for the day – Marquette Pilsner, Vanishing Vanilla Stout, and Pie Eyed India Pale Ale. 
 

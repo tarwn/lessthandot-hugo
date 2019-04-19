@@ -40,7 +40,7 @@ I will continue to post updates as we go.
   
 12:58 PM EST – Finished Blogs
   
-1:04 PM EST – DONE! …ish
+1:04 PM EST – DONE! ...ish
 
 **The Bottom!**
   

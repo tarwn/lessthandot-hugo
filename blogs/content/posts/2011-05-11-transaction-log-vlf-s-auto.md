@@ -1,5 +1,5 @@
 ---
-title: 'Transaction Log: VLF’s, Auto Growth and Performance'
+title: "Transaction Log: VLF's, Auto Growth and Performance"
 author: SQLArcher
 type: post
 date: 2011-05-11T09:03:00+00:00

@@ -119,7 +119,7 @@ I had to do this several times, so I also got to learn how to update versions:
         Update the version in either <code><CodePackage Name="Code" Version="1.0.3"></code> or <code><ConfigPackage Name="Config" Version="1.0.4" /></code>
       </li>
       <li>
-        Update the Package version in the <code><ServiceManifest … Version="1.0.2" …></code> root element
+        Update the Package version in the <code><ServiceManifest ... Version="1.0.2" ...></code> root element
       </li>
       <li>
         Save
@@ -133,7 +133,7 @@ I had to do this several times, so I also got to learn how to update versions:
         Find <code><ServiceManifestRef ..></code> and update ServiceManifestVersion to match the ServiceManifest version above
       </li>
       <li>
-        Update the ApplicationTypeVersion property in the <code><ApplicationManifest … ></code> root element
+        Update the ApplicationTypeVersion property in the <code><ApplicationManifest ... ></code> root element
       </li>
       <li>
         Save

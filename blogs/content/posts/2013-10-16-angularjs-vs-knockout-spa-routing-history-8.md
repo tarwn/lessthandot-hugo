@@ -113,7 +113,7 @@ The HTML templates then look like this:
 ```
 In contrast to some of the other AngularJS examples in earlier posts, this one just worked. I didn't have to worry about how to make hash URLs work, detecting changes and writing code to parse the URLs, or anything, just a few simple, direct rules and a controller and template for each one. 
 
-## Routing in … Knockout?
+## Routing in ... Knockout?
 
 Well, crap. Up until now there has been some clear, obvious answers when I needed to pull in an extra library for Knockout. When it comes to routing and SPA-like behavior, the two answers I see the most frequently are [Durandal][7] (see Avi, I spelled it right that time) and [Sammy.js][8]. Knockout has dynamic template bindings, so for this post maybe Sammy will be enough? And why get locked in, let's pick a few others at random and do them too. So here we go.
 

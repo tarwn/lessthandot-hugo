@@ -1,5 +1,5 @@
 ---
-title: Changing exec to sp_executesql doesn’t provide any benefit if you are not using parameters correctly
+title: Changing exec to sp_executesql doesn't provide any benefit if you are not using parameters correctly
 author: SQLDenis
 type: post
 date: 2009-06-09T18:36:42+00:00
@@ -94,11 +94,11 @@ Col1 Col2 SomeDate SomeValue
   
 7 6 2009-06-09 11:50:04.327 ABCDEFG
   
-…..
+.....
   
-…..
+.....
   
-…..
+.....
   
 2047 2046 2009-06-09 11:50:04.327 ABCDEFG
   

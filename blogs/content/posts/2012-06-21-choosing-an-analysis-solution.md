@@ -18,11 +18,11 @@ With the introduction of the SQL Server PowerPivot for Excel and SharePoint in S
 
 ### **xVelocity** formerly known as Vertipaq
 
-When it was initially released, the in-memory data solution was called Vertipaq. With the release of SQL Server 2012, the Vertipaq engine was rebranded to xVelocity which includes all of Microsoft’s in-memory technologies. In the case of SQL Server and PowerPivot, Vertipaq is called “xVelocity in-memory analytics engine”, which I will refer to as xVelocity for the duration of this blog.
+When it was initially released, the in-memory data solution was called Vertipaq. With the release of SQL Server 2012, the Vertipaq engine was rebranded to xVelocity which includes all of Microsoft's in-memory technologies. In the case of SQL Server and PowerPivot, Vertipaq is called “xVelocity in-memory analytics engine”, which I will refer to as xVelocity for the duration of this blog.
 
 ### The Engine Options
 
-Now that we have covered the xVelocity impact and name change, I want to call out the three core data analysis engines Microsoft has made available through SQL Server. _(Note: I am referring to these as engines to differentiate between end user tools and those tools which store and organize data for use. Here an engine is used to store and organize data for analysis.)_ Microsoft’s original data analysis engine was OLAP Services which has grown into Analysis Services – Multidimensional Model. Next came PowerPivot followed by Analysis Services –Tabular Model.
+Now that we have covered the xVelocity impact and name change, I want to call out the three core data analysis engines Microsoft has made available through SQL Server. _(Note: I am referring to these as engines to differentiate between end user tools and those tools which store and organize data for use. Here an engine is used to store and organize data for analysis.)_ Microsoft's original data analysis engine was OLAP Services which has grown into Analysis Services – Multidimensional Model. Next came PowerPivot followed by Analysis Services –Tabular Model.
 
 #### Analysis Services – Multidimensional Model
 
@@ -36,7 +36,7 @@ The next engine released by Microsoft was the PowerPivot add-in for SharePoint a
 
 PowerPivot allows a user to add data into their PowerPivot tables from a variety of data sources including SQL Server, Oracle, Excel, text and even SSRS reports. Once the data has been “loaded” into the PowerPivot tables, the user can build relationships between the tables allowing for a “cube-like” experience without building a cube or ETL process. Once built and deployed to SharePoint, you can build reports against a PowerPivot data source in the same manner you would build a report against the multidimensional model. 
 
-PowerPivot does support calculations and uses DAX as its native query language. This is the same query language used in the Tabular model and can be considered the query language for Microsoft’s in-memory data stores.
+PowerPivot does support calculations and uses DAX as its native query language. This is the same query language used in the Tabular model and can be considered the query language for Microsoft's in-memory data stores.
   
 Finally, it is important to note that the size limit for a PowerPivot database is 2 GB. This is an “artificial” restriction that allows it to be uploaded into SharePoint. While this does hold a large amount of data because of the compression capability of xVelocity, it is still smaller in scope than either the multidimensional or tabular model options.
 
@@ -60,6 +60,6 @@ As you start working with the solutions, you will likely find tabular models and
 
 A solid BI solution within any company will likely be a combination of each of these engines based on the business need. A natural progression could be a business user creates a PowerPivot source that is deployed to SharePoint. This eventually can get upgraded to tabular to support additional growth in users and data volume. From there, you can build out a multidimensional model to support more complex structures as the requirements grow. The one thing that is true about BI is that it will always change. So planning for change and involving the business in the process will help the BI solution be a central part of the business without becoming that database that no one uses.
 
-Keep your options open and use what is available to you to deliver the best solution you can to your users. With Microsoft’s BI offerings you have a multiple engine options as well as a diverse set of visualization tools in SQL Server, SharePoint and Office. In the end, if your BI solution is not usable or correct, it is not the right solution.
+Keep your options open and use what is available to you to deliver the best solution you can to your users. With Microsoft's BI offerings you have a multiple engine options as well as a diverse set of visualization tools in SQL Server, SharePoint and Office. In the end, if your BI solution is not usable or correct, it is not the right solution.
 
-For more information, check out Microsoft’s Business Intelligence site which has information on all of Microsoft’s offerings as well as the MSDN topic on Comparing Tabular and Multidimensional Solutions.
+For more information, check out Microsoft's Business Intelligence site which has information on all of Microsoft's offerings as well as the MSDN topic on Comparing Tabular and Multidimensional Solutions.

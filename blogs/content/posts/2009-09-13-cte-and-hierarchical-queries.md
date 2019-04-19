@@ -25,7 +25,7 @@ See also this interesting article on recursive CTE implementation [T-SQL: Using 
 
 You may find this [article][4] by SQLUSA (Kalman Toth) very interesting.
 
-I think you will find these blogs by Brad Schulz [Viva la Famiglia!][5] and [This Article On Recurson Is Entitled “This Article On Recursion Is Entitled “This Article…][6] interesting and useful and enjoyable reading.
+I think you will find these blogs by Brad Schulz [Viva la Famiglia!][5] and [This Article On Recurson Is Entitled “This Article On Recursion Is Entitled “This Article...][6] interesting and useful and enjoyable reading.
 
 See also [Challenge 17][7] and its solutions at [Challenge 17 – Winners][8]
 
@@ -346,7 +346,7 @@ pk_rights   fk_rights   RightsName                                         Right
 15          14          EditCategory Caption                               0           EditCategory Caption</pre>
 
 <p>
-  I need the output to look like this…. the indents are for readability only but the rows must be ordered in this sequence.
+  I need the output to look like this.... the indents are for readability only but the rows must be ordered in this sequence.
 </p>
 
 <pre lang="">

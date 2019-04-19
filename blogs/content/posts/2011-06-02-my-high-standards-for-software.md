@@ -1,5 +1,5 @@
 ---
-title: My 'High Standards’ for Software Development
+title: My 'High Standards' for Software Development
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-06-02T10:22:00+00:00
@@ -30,7 +30,7 @@ _Note: this has been sitting the queue for several months. It's not the product 
 Usability isn't a black and white topic. You don't have to be an Apple to provide a User Experience that seems intuitive or simply <span class="MT_under">doesn't</span> generate confusion and anxiety. Direct benefits can be found in increased customer understanding (especially critical during hand-offs), lower training costs, lower support costs, increased return business, and improved ability to catch gaps and misunderstandings (the earlier these are caught, the cheaper they are to correct). However many people stop at the surface arguments, that incorporating basic usability costs too much, takes to long, or requires an expert.
 
 <div style="text-align: center; color: #999999;">
-  <img src="http://tiernok.com/LTDBlog/ExtraFeatures.png" alt="Features are useless if it doesn't work" style="height: 75px" /><br /> And it's labeled in a dead language…
+  <img src="http://tiernok.com/LTDBlog/ExtraFeatures.png" alt="Features are useless if it doesn't work" style="height: 75px" /><br /> And it's labeled in a dead language...
 </div>
 
 ### The Costs

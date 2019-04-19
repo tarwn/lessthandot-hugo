@@ -1,10 +1,10 @@
 ---
-title: '#meme15: I’m A Blogger. Why?'
+title: "#meme15: I'm A Blogger. Why?"
 author: Jes Borland
 type: post
 date: 2011-12-15T18:15:00+00:00
 ID: 1444
-excerpt: "It's time for a new meme! My good friend Jason Strate (twitter | blog) wants us to blog on the 15th-ish of each month. The first topic is: Blogging. Why did I start blogging? Why do I keep doing it?"
+excerpt: "It's time for a new meme! My good friend Jason Strate wants us to blog on the 15th-ish of each month. The first topic is: Blogging. Why did I start blogging? Why do I keep doing it?"
 url: /index.php/itprofessionals/professionaldevelopment/meme15-i-m-a-blogger/
 views:
   - 4002

@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2011-10-28T14:41:00+00:00
 ID: 1363
-excerpt: I’m in love. With a PowerShell script I wrote.
+excerpt: I'm in love. With a PowerShell script I wrote.
 url: /index.php/datamgmt/dbadmin/my-favorite-powershell-script-reading/
 views:
   - 8549
@@ -15,7 +15,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-I’m in love. With a PowerShell script I wrote. 
+I'm in love. With a PowerShell script I wrote. 
 
 We have multiple SQL Server Agent jobs that run on a daily or weekly basis. These jobs write logs to a folder on the server. Example: D:mssqlserverbackup
 
@@ -23,7 +23,7 @@ When a job fails, we receive a ticket for it. The ticket does not include the re
 
 I knew there had to be a better way. Once I learned enough about PowerShell to be dangerous, I put together this script. 
 
-> Disclaimer: I know it’s not perfect. Yes, there are probably improvements I could make. It’s a giant step forward for me.
+> Disclaimer: I know it's not perfect. Yes, there are probably improvements I could make. It's a giant step forward for me.
 
 ```powershell
 #Go to a server share, read log 
@@ -61,4 +61,4 @@ It used to take about 3 minutes to determine the cause of the error. It now take
 
 Six hundred hours. 
 
-If you haven’t learned PowerShell yet, now is the time.
+If you haven't learned PowerShell yet, now is the time.

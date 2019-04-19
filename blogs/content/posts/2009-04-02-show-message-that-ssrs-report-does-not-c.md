@@ -16,7 +16,7 @@ categories:
 ---
 It is good practice to show the user a message if your report does not return any data. There are a few methods to do this and here is a simple one that can be added to most existing reports that are subscription based.
   
-Create a blank report. Add a dataset that returns some data. You can use the following query to create your example…
+Create a blank report. Add a dataset that returns some data. You can use the following query to create your example...
 
 sql
 select 1 col1,2 col2,3 col3,4 col4,5 col5
@@ -57,13 +57,13 @@ Change {dataset name} to what you named your dataset. Click OK to save the expre
   
 In the new textbox type =”No data returned. Report executed on “ & Now
   
-Like this…
+Like this...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//ssrs_ex_2.gif" alt="" title="" width="516" height="83" />
 </div>
 
-Now you don’t want to see the textbox all the time. The two options you have are to hide it or set the visibility based on something. I like to hide it sense checking for things will obviously take more time.
+Now you don't want to see the textbox all the time. The two options you have are to hide it or set the visibility based on something. I like to hide it sense checking for things will obviously take more time.
   
 So make sure you have the textbox selected. Right click and select “Send to Back”. Start hitting the up arrow (on the keyboard) so you move the textbox behind the Table. keep doing this until you cannot see the box anymore.
   
@@ -89,10 +89,10 @@ sql
 declare @tbl table (col1 int,col2 int,col3 int,col4 int,col5 int)
 select * from @tbl
 ```
-Don’t forget to hit the refresh dataset button and then preview your report again. 
+Don't forget to hit the refresh dataset button and then preview your report again. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//ssrs_ex_5.gif" alt="" title="" />
 </div>
 
-Nice! Now the users know why there is nothing in your report and will refrain from calling you and complaining the hours you put in creating it was futile and it just doesn’t work.
+Nice! Now the users know why there is nothing in your report and will refrain from calling you and complaining the hours you put in creating it was futile and it just doesn't work.

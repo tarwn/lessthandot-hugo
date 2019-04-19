@@ -83,15 +83,15 @@ _Later articles will be published at one week intervals and announced on Twitter
 
 If you have missed prior articles in the series you can find them here:
   
-_Applying Kanban … Part 1: Kanban Overview_
+_Applying Kanban ... Part 1: Kanban Overview_
   
-Applying Kanban … Part 2: [Kanban applied to Tech Support][7]
+Applying Kanban ... Part 2: [Kanban applied to Tech Support][7]
   
-Applying Kanban … Part 3: [Kanban applied to PC Deployment][8]
+Applying Kanban ... Part 3: [Kanban applied to PC Deployment][8]
   
-Applying Kanban … Part 4: [Kanban applied to a Development Group][9]
+Applying Kanban ... Part 4: [Kanban applied to a Development Group][9]
   
-Applying Kanban … Part 5: [Challenges, Additional Concepts, and Wrapup][10]
+Applying Kanban ... Part 5: [Challenges, Additional Concepts, and Wrapup][10]
 
  [1]: http://www.infoq.com/articles/agile-kanban-boards
  [2]: http://en.wikipedia.org/wiki/Just-in-time_%28business%29

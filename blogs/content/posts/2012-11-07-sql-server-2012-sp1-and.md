@@ -47,7 +47,7 @@ Download Service Pack 1 for SQL Server 2012 here: http://www.microsoft.com/en-us
 
 Project codenamed “Hekaton,” a new in-memory technology for transaction processing that will be built directly into the data platform and ship in the next major version of SQL Server.
 
-Currently in private technology preview with a small set of customers, “Hekaton” will complete Microsoft’s portfolio of in-memory capabilities across analytics, transactions, streaming and caching workloads.
+Currently in private technology preview with a small set of customers, “Hekaton” will complete Microsoft's portfolio of in-memory capabilities across analytics, transactions, streaming and caching workloads.
   
 Based on customer testing to date, “Hekaton” will offer performance gains of up to 10 times for existing apps and up to 50 times for new applications optimized for in-memory performance.
   
@@ -55,7 +55,7 @@ We will also announce the next version of our enterprise-class appliance, SQL Se
   
 SQL Server 2012 PDW will be powered by PolyBase, a breakthrough data processing engine that will enable queries across relational data and non-relational Hadoop data.
   
-Built to tackle customers’ big data challenges, SQL Server 2012 PDW will offer next-generation performance at scale and a redesigned architecture to reduce hardware footprint, all at the lowest total cost in the industry.
+Built to tackle customers' big data challenges, SQL Server 2012 PDW will offer next-generation performance at scale and a redesigned architecture to reduce hardware footprint, all at the lowest total cost in the industry.
 
 The Hekaton announcement can be found here: http://blogs.technet.com/b/dataplatforminsider/archive/2012/11/07/pass-summit-2012-accelerating-business-through-data-insights.aspx
 

@@ -4,7 +4,7 @@ author: SQLDenis
 type: post
 date: 2011-02-21T23:27:00+00:00
 ID: 1049
-excerpt: 'I have been interviewing people for a SQL Server position for the past six weeks and all I can say that I am glad it is over. What a frustrating experience, people with over 10 years’ experience could not tell me the difference between UNION and UNION A&hellip;'
+excerpt: I have been interviewing people for a SQL Server position for the past six weeks and all I can say that I am glad it is over. What a frustrating experience, people with over 10 years' experience could not tell me the difference between UNION and UNION A&hellip;
 url: /index.php/datamgmt/datadesign/what-does-a-sql-server/
 views:
   - 28299
@@ -22,7 +22,7 @@ tags:
   - sql server 2008
 
 ---
-I have been interviewing people for a SQL Server position for the past six weeks and all I can say that I am glad it is over. What a frustrating experience, people with over 10 years’ experience could not tell me the difference between UNION and UNION ALL, most of the people never heard of TRUNCATE. We finally got our guy and he starts tomorrow.
+I have been interviewing people for a SQL Server position for the past six weeks and all I can say that I am glad it is over. What a frustrating experience, people with over 10 years' experience could not tell me the difference between UNION and UNION ALL, most of the people never heard of TRUNCATE. We finally got our guy and he starts tomorrow.
   
 So I would like to ask you the reader what a SQL Server developer should know when he falls into these levels.
 

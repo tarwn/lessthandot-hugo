@@ -30,7 +30,7 @@ That's right, a blank project, I didn't want the templates doing the work for me
 
 <img src="http://www.vurso.co.uk/ltd/mvc-4-with-razor-starter-guide/punchedmylaptoptodeath.jpg" alt="Punched My Laptop To Death @ vurso.co.uk" width="350" height="85" />
 
-Yes, metaphorically speaking as per my above tweet…I came close to actually doing it in real life, that's how frustrated I was but alas frustration can often lead to lots of fun learning which I did in between the random expletives and “WTF!” shouts throughout this process.
+Yes, metaphorically speaking as per my above tweet...I came close to actually doing it in real life, that's how frustrated I was but alas frustration can often lead to lots of fun learning which I did in between the random expletives and “WTF!” shouts throughout this process.
 
 So lets start, the first thing you want to do is <span style="background-color: #ffcc00;">NOT USE THE TEMPLATES!</span> I know I know, sounds crazy but trust me you want to do it right and this is the best way my friends.
 
@@ -106,11 +106,11 @@ Modify the contents of the class block to look like this:
                 <span style="color: #dfaf8f;">"~/Scripts/modernizr-*"</span>));
 }</span></pre>
 
-Now save the file and we need to create a controller file and two view pages.  Right-click the Controllers folder and left-click on <span style="background-color: #99ccff;">Add > Controller…</span> to display the New Controller dialog:
+Now save the file and we need to create a controller file and two view pages.  Right-click the Controllers folder and left-click on <span style="background-color: #99ccff;">Add > Controller...</span> to display the New Controller dialog:
 
 <img src="http://www.vurso.co.uk/ltd/mvc-4-with-razor-starter-guide/newcontroller.jpg" alt="New MVC 4 Controller" width="280" height="145" />
 
-Give it the name <span style="background-color: #99ccff;">HomeController</span> and left-click on Add to continue.  Now we need to create the Index view the controller will work with.  Before we do that we need to create a view that will <a title="ASP.NET MVC 3: Layouts with Razor" href="http://weblogs.asp.net/scottgu/archive/2010/10/22/asp-net-mvc-3-layouts.aspx" target="_blank">“automagically” assign the same razor layout</a> to all your views so right-click the <span style="background-color: #99ccff;">Views</span> folder and left-click on <span style="background-color: #99ccff;">Add > View…</span> (VS 2012 is clever enough to recognise the context you're in, in this case the Views folder).  The Add View dialog box will appear:
+Give it the name <span style="background-color: #99ccff;">HomeController</span> and left-click on Add to continue.  Now we need to create the Index view the controller will work with.  Before we do that we need to create a view that will <a title="ASP.NET MVC 3: Layouts with Razor" href="http://weblogs.asp.net/scottgu/archive/2010/10/22/asp-net-mvc-3-layouts.aspx" target="_blank">“automagically” assign the same razor layout</a> to all your views so right-click the <span style="background-color: #99ccff;">Views</span> folder and left-click on <span style="background-color: #99ccff;">Add > View...</span> (VS 2012 is clever enough to recognise the context you're in, in this case the Views folder).  The Add View dialog box will appear:
 
 <img src="http://www.vurso.co.uk/ltd/mvc-4-with-razor-starter-guide/addview.jpg" alt="ASP.NET MVC 4 Add View" width="200" height="252" />
 
@@ -122,7 +122,7 @@ Now modify the file to look like this:
     Layout = <span style="color: #dfaf8f;">"~/Views/Shared/_Layout.cshtml"</span>;
 }</span></pre>
 
-Next we need to create the Index View so right-click the Home folder (the one you created earlier) and select <span style="background-color: #99ccff;">Add > View…</span> to display the Add View dialog box and label this view page <span style="background-color: #99ccff;">Index</span> and finally left-click Add to create it.
+Next we need to create the Index View so right-click the Home folder (the one you created earlier) and select <span style="background-color: #99ccff;">Add > View...</span> to display the Add View dialog box and label this view page <span style="background-color: #99ccff;">Index</span> and finally left-click Add to create it.
 
 Modify the contents of the file to look like this:
 
@@ -134,7 +134,7 @@ Modify the contents of the file to look like this:
      <<span style="color: #efc986;">h1</span>>Hello, World!</<span style="color: #efc986;">h1</span>>
 }</span></pre>
 
-Finally you need to create the shared layout view page, right-click the <span style="background-color: #99ccff;">Shared</span> folder and left-click <span style="background-color: #99ccff;">Add > View…</span> to display the Add View dialog box, label the view page as <span style="background-color: #99ccff;">_Layout</span> and ensure as with the previous pages the “Use a layout or master page” checkbox is un-ticked.
+Finally you need to create the shared layout view page, right-click the <span style="background-color: #99ccff;">Shared</span> folder and left-click <span style="background-color: #99ccff;">Add > View...</span> to display the Add View dialog box, label the view page as <span style="background-color: #99ccff;">_Layout</span> and ensure as with the previous pages the “Use a layout or master page” checkbox is un-ticked.
 
 Modify the <span style="background-color: #99ccff;">_Layout.cshtml</span> view page to look like this:
 

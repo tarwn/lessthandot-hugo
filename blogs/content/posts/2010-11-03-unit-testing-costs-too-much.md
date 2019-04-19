@@ -35,21 +35,21 @@ _(Check out the follow-up link below for a lot more on this one)_
 
 ## I Don't Want To TDD/BDD/ADHD/OMGWTFBBQ!?!?
 
-It seems like I have to learn 5 new things and start a blog just to do unit testing. Why do I have to care about 100% code coverage just to do some tests? Why am I doing it wrong to test the code after I write? And I have to be Agile to unit test? This seems like a much bigger investment of my time then I thought…
+It seems like I have to learn 5 new things and start a blog just to do unit testing. Why do I have to care about 100% code coverage just to do some tests? Why am I doing it wrong to test the code after I write? And I have to be Agile to unit test? This seems like a much bigger investment of my time then I thought...
 
 ## I'm A Developer, Not QA!
 
-I mean, we hired all these people to test our application and now you want me to do all the testing? are we duplicating effort or are we doing different types of testing? And is there really value in having two groups test? Wait a minute, these QA people have it all figured out, they're going to stop testing as soon as I take it over….how do I transfer?
+I mean, we hired all these people to test our application and now you want me to do all the testing? are we duplicating effort or are we doing different types of testing? And is there really value in having two groups test? Wait a minute, these QA people have it all figured out, they're going to stop testing as soon as I take it over....how do I transfer?
 
 ## I'm Paid To Code, My Boss Told Me So
 
-My boss measures my work based on how long I am pounding on the keyboard and churning out real code. How do I communicate the value and get buy in on writing code that isn't directly linked to a feature the customer can see? Is this going to be like that time I tried to explain fencepost errors, because that didn't go over so well…
+My boss measures my work based on how long I am pounding on the keyboard and churning out real code. How do I communicate the value and get buy in on writing code that isn't directly linked to a feature the customer can see? Is this going to be like that time I tried to explain fencepost errors, because that didn't go over so well...
 
-## I'll Never Catch Them All…
+## I'll Never Catch Them All...
 
 I'm going to be preemptive about this. Unit testing won't catch all the bugs in my application, so I don't see the point in even taking the time to do it. I'd be better off getting another feature or three done and just fixing the bugs when we find them.
 
-## And So On…
+## And So On...
 
 This wasn't the end of the list, but one or two of you may show up on Saturday and I don't want to give the whole show away. For those that are interested, I'll release the full presentation notes and slides afterward on my personal site and do a follow-up post with links.
 

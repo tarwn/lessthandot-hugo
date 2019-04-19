@@ -71,7 +71,7 @@ Updated versions of the storage emulator trail months behind the release, ensuri
 
 And the removal of the unit tests doesn't fill me with a high level of confidence either. I didn't particularly like the style of the older tests, but at least they were there.
 
-So here we are, at another major release and a silent deprecation of 1.7. I've personally wasted a lot of time upgrading from 1.7 to 1.7.1, then throwing that work out when 1.7.1 remained a preview (with all the extra conversation that causes in support cases) and 2.0 didn't look anything at all like 1.7.1, upgrading to 2.0 and filling in the holes they decided to add, then backing it all out again due to other conflicts and the fact that none of this has any value at all for our customers and…well, you get the picture.
+So here we are, at another major release and a silent deprecation of 1.7. I've personally wasted a lot of time upgrading from 1.7 to 1.7.1, then throwing that work out when 1.7.1 remained a preview (with all the extra conversation that causes in support cases) and 2.0 didn't look anything at all like 1.7.1, upgrading to 2.0 and filling in the holes they decided to add, then backing it all out again due to other conflicts and the fact that none of this has any value at all for our customers and...well, you get the picture.
 
 A huge part of the value in releasing more frequently is bringing the pain to the surface _and then fixing it_. It seems the frequent release half of the equation has happened, now I'm looking forward to the part where they start attacking these pains.
 

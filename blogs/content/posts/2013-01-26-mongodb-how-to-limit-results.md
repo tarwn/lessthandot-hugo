@@ -108,7 +108,7 @@ Here are the results
 
 Just a warning when using sort(), be aware of the following limitation
 
-> Warning The sort function requires that the entire sort be able to complete within 32 megabytes. When the sort option consumes more than 32 megabytes, MongoDB will return an error. Use cursor.limit(), or create an index on the field that you’re sorting to avoid this error.
+> Warning The sort function requires that the entire sort be able to complete within 32 megabytes. When the sort option consumes more than 32 megabytes, MongoDB will return an error. Use cursor.limit(), or create an index on the field that you're sorting to avoid this error.
 
 That is all for this post, if you are interested in my other MongoDB posts, you can find them here:
   

@@ -81,7 +81,7 @@ Some things to mention is for one the sp\_cycle\_errorlog. What this system proc
 
 Notice I place my error log rate into a table. This is just to make it easier for me to review the deadlock that just came up while not constantly messing with the error log. Loading the error log into a table view every time you want to see if again will of course be done on the database server and we don't want to do that while users are working there. It's our job to fix performance issues recall, not make more. 
 
-There is a way with the advent of DMV's as well to do this all as well. Problem here is it is geared towards problem child proc's, queries etc…
+There is a way with the advent of DMV's as well to do this all as well. Problem here is it is geared towards problem child proc's, queries etc...
   
 You can see that here
   

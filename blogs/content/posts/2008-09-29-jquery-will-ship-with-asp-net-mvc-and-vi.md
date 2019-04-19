@@ -27,7 +27,7 @@ John Resig writes:
   
 
 
-> Microsoft is looking to make jQuery part of their official development platform. Their JavaScript offering today includes the ASP.NET Ajax Framework and they’re looking to expand it with the use of jQuery. This means that jQuery will be distributed with Visual Studio (which will include jQuery intellisense, snippets, examples, and documentation).</p> 
+> Microsoft is looking to make jQuery part of their official development platform. Their JavaScript offering today includes the ASP.NET Ajax Framework and they're looking to expand it with the use of jQuery. This means that jQuery will be distributed with Visual Studio (which will include jQuery intellisense, snippets, examples, and documentation).</p> 
 > 
 > Additionally Microsoft will be developing additional controls, or widgets, to run on top of jQuery that will be easily deployable within your .NET applications. jQuery helpers will also be included in the server-side portion of .NET development (in addition to the existing helpers) providing complementary functions to existing ASP.NET AJAX capabilities.
 

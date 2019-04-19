@@ -108,7 +108,7 @@ insert SomeData values('2013-01-09',1)
 insert SomeData values('2013-01-09',1)
 ```
 
-Querying from this table…..
+Querying from this table.....
 
 sql
 select OrderDate, count(somecol) as SomeCount

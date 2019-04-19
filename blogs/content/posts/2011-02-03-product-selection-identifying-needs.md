@@ -83,7 +83,7 @@ All of which is wasted if what they are selling is different from what we think 
 
 This is a difficult situation to work with, because often people will see having a selection process to be a waste of effort. However we can play off the fact that there isn't a clearly defined need and even if we are purchasing from that vendor, we need to make sure we buy the correct package, support options, and integration services. And in order to do that we need to evaluate our own needs and see what other, similar companies offer to make sure we are getting all of the options we need. And now we're back on track, defining a need instead of impulse buying.
 
-### (And Other Tricky Situations…)
+### (And Other Tricky Situations...)
 
 These are not the only tricky situations, but the key is to use these situations to the opposite effect that people are expecting. If the product selection is a foregone conclusion, then we use the process to select options inside that pool and engage that person or persons in the selection process. If we are seen as protecting their interests and needs (which we are, by the way, just in a broader fashion then they are expecting), then we can spend less time arguing and more time helping them get what they really need.
 

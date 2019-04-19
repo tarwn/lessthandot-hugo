@@ -1,5 +1,5 @@
 ---
-title: You don’t need to shrink a database to get a smaller backup
+title: You don't need to shrink a database to get a smaller backup
 author: SQLDenis
 type: post
 date: 2012-03-31T16:23:00+00:00
@@ -43,7 +43,7 @@ Here is what the database looked like after I did the maintenance
 
 As you can see I did nicely here, free space for fileid 4 went from 46 GB to 175 GB, for fileid 1 it went from 16 GB to 69 GB
 
-Of course I had to brag about this and then it happened….the sentence you never want to hear…….how come you didn't shrink the database, the backups will still be as big…you are wasting space….if only I could send Paul Randal or Ted Krueger to this person…….
+Of course I had to brag about this and then it happened....the sentence you never want to hear.......how come you didn't shrink the database, the backups will still be as big...you are wasting space....if only I could send Paul Randal or Ted Krueger to this person.......
 
 So let's debunk that myth shall we?
 

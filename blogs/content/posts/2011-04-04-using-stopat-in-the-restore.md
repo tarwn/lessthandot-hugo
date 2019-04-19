@@ -22,7 +22,7 @@ One of the most important tasks a DBA should know how to perform, and should tes
 The basic RESTORE syntax looks like: 
 
 ```sql
-RESTORE DATABASE [Name] FROM [Device] WITH [Options]…
+RESTORE DATABASE [Name] FROM [Device] WITH [Options]...
 ```
 
 That restores an entire database to the last full backup. You can restore specific files, filegroups, and pages. You can also restore transaction log backups, if you have those for the database. 
@@ -31,7 +31,7 @@ I had become very familiar with database backups and restores. Most of my experi
 
 One day, however, a developer came to me for help. An application change had been made which entered unwanted information in the database. We had a full backup from the previous night, and transaction logs through the current moment. The last full transaction log backup was from 11:00 AM. The user wanted QA restored to 2:00 PM, when this change was made. It was 4:00 PM. 
 
-I was going to tell him it couldn’t be done, that I could only restore to 11:00 AM. I was quickly corrected, however, and I learned something new! Using STOPAT, you can restore only to a specific point in time in a database or log backup. 
+I was going to tell him it couldn't be done, that I could only restore to 11:00 AM. I was quickly corrected, however, and I learned something new! Using STOPAT, you can restore only to a specific point in time in a database or log backup. 
 
 [<img src="http://farm6.static.flickr.com/5143/5562927331_d499103e16.jpg" width="250" height="165" alt="SQL Saturday 2011 Raffle 110" />][1]
   

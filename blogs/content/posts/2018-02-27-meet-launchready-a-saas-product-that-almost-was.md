@@ -35,7 +35,7 @@ Before it gets lost in the mists of archive.org, I thought I would try to captur
   </p>
 </div>
 
-The ultimate reason it's shutting down is not a groundbreaking discovery. Sales is a critical part of any product, especially at the beginning. Some forms of sales I have more experience in (pitching a company to prospective employees, for instance), but cold calling and getting a product to market are new to me. When I reach the beginning of 2018 and realized I had a minimum of 12+ months of being a beginner sales person in the evenings just to get to the point where I could pay myself to do it during the day, … I just couldn't get myself over the hump to continue..
+The ultimate reason it's shutting down is not a groundbreaking discovery. Sales is a critical part of any product, especially at the beginning. Some forms of sales I have more experience in (pitching a company to prospective employees, for instance), but cold calling and getting a product to market are new to me. When I reach the beginning of 2018 and realized I had a minimum of 12+ months of being a beginner sales person in the evenings just to get to the point where I could pay myself to do it during the day, ... I just couldn't get myself over the hump to continue..
 
 I still took away a lot from the experience and hopefully I can pass on some of the things I learned to help others chase their ideas.
 

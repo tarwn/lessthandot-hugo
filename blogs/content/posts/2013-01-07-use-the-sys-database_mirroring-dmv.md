@@ -22,9 +22,9 @@ tags:
 ---
 I have been using mirroring for about three years now and I must say it is one of the best features that have been added to SQL Server. We used to do plain old replication and log shipping in the past but almost all of those have been replaced by mirroring. 
 
-Someone at work asked me how to check what state the databases are in and if a database on one server is the principal or the mirror. There are a couple of ways you can check this. You can open up SSMS and expand the database folder. You will see something like the following next to the database name _(Mirror, Synchronized / Restoring…)_ or you might see _(Principal, Synchronized)_, other states are possible, for example disconnected, synchronizing, suspended.
+Someone at work asked me how to check what state the databases are in and if a database on one server is the principal or the mirror. There are a couple of ways you can check this. You can open up SSMS and expand the database folder. You will see something like the following next to the database name _(Mirror, Synchronized / Restoring...)_ or you might see _(Principal, Synchronized)_, other states are possible, for example disconnected, synchronizing, suspended.
 
-Another way to see what is going on is to launch Database Mirroring Monitor. You launch the Database Mirroring Monitor by right clicking on the database, selecting Tasks, then click on Launch Database Mirroring Monitor…
+Another way to see what is going on is to launch Database Mirroring Monitor. You launch the Database Mirroring Monitor by right clicking on the database, selecting Tasks, then click on Launch Database Mirroring Monitor...
 
 Another option is to check the error log, messages might look like these
 

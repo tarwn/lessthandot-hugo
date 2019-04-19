@@ -29,7 +29,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  A week ago I gave a session for the Belgian SQL Server user group, <a href="http://sqlug.be/">SQLUG.be</a>, about how MSBUILD can be used to automate SSRS deployments. Thanks to a lovely strike of the taxi drivers in Brussels it took me only 2 hours to get at the location, but hey, the turnout was great, there was beer and pizza and the demo’s didn’t crash.
+  A week ago I gave a session for the Belgian SQL Server user group, <a href="http://sqlug.be/">SQLUG.be</a>, about how MSBUILD can be used to automate SSRS deployments. Thanks to a lovely strike of the taxi drivers in Brussels it took me only 2 hours to get at the location, but hey, the turnout was great, there was beer and pizza and the demo's didn't crash.
 </p>
 
 <p style="text-align: justify;">

@@ -26,7 +26,7 @@ tags:
   - ssms
 
 ---
-This post was already published yesterday, someone deleted it by mistake so I had to recreate it…sorry for that (and thanks for google cache :-))
+This post was already published yesterday, someone deleted it by mistake so I had to recreate it...sorry for that (and thanks for google cache :-))
 
 SSMS Tools PACK is an Add-In (Add-On) for Microsoft SQL Server Management Studio and Microsoft SQL Server Management Studio Express, this tool is developed by [Mladen Prajdić][1]. 
 

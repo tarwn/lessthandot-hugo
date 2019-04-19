@@ -1,5 +1,5 @@
 ---
-title: 'SQL University Women In Technology (WIT) Week: My Name Is Jes, and I’m a WIT'
+title: SQL University Women In Technology (WIT) Week - My Name Is Jes, and I'm a WIT
 author: Jes Borland
 type: post
 date: 2011-03-07T11:40:00+00:00
@@ -18,7 +18,7 @@ categories:
 
 Welcome to Women In Technology week at [SQL University][2]! This is a great blog project put together by Jorge Segarra ([Twitter][3] | [Blog][4]), and contributed to by many SQL professionals. If you aren't a student yet, head over to the website and get started!
 
-This week, you get to meet a fantastic group of women, all of whom work with SQL Server and are involved in the community. These women are smart, talented, driven and amazing. We're going to talk about how we got involved in technology, how we encourage children to think about tech as a career path, and what you can do to help! You'll get to meet Audrey Hammonds ([Twitter][5] | [Blog][6]), Julie Smith ([Twitter][7] | [Blog][6]), Jen McCown ([Twitter][8] | [Blog][9]) and Wendy Pastrick ([Twitter][10] | [Blog][11]). And then, there's me….
+This week, you get to meet a fantastic group of women, all of whom work with SQL Server and are involved in the community. These women are smart, talented, driven and amazing. We're going to talk about how we got involved in technology, how we encourage children to think about tech as a career path, and what you can do to help! You'll get to meet Audrey Hammonds ([Twitter][5] | [Blog][6]), Julie Smith ([Twitter][7] | [Blog][6]), Jen McCown ([Twitter][8] | [Blog][9]) and Wendy Pastrick ([Twitter][10] | [Blog][11]). And then, there's me....
 
 **How this Grrl Became A Geek** 
 

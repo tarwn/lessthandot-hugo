@@ -27,7 +27,7 @@ Latency troubleshooting
   
 Application issues
   
-resource issues (Memory etc…)
+resource issues (Memory etc...)
   
 and the list goes on for awhile. 
 

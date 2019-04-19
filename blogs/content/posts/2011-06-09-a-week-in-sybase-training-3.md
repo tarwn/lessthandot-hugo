@@ -147,15 +147,15 @@ Here are some of them and what they call under the hood
 
 dbcc checkdb, this calls the following dbcc command for every table
   
-…dbcc checktable
+...dbcc checktable
 
 dbcc checkalloc, this one will call these 3
   
-….dbcc tablealloc
+....dbcc tablealloc
   
-….dbcc indexalloc
+....dbcc indexalloc
   
-….dbcc textalloc
+....dbcc textalloc
 
 dbcc checkcatalog, this one checks the catalogs
 

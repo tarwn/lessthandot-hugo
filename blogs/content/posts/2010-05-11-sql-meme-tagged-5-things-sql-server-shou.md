@@ -82,7 +82,7 @@ AS
 SELECT TOP 99.99 PERCENT  id FROM TestSort
 ORDER BY id
 ```
-I say get rid of that, if people want the view to be in a specific order then specify ORDER BY…how lazy can you be?
+I say get rid of that, if people want the view to be in a specific order then specify ORDER BY...how lazy can you be?
 
 ### Unique constraints with one NULL value
 
@@ -103,11 +103,11 @@ Aaron already touched upon this with timestamp and rowversion in his post. SQL S
 
 **ISNULL and COALESCE**
   
-Those are not really the same, COALESCE allows for more than 1 expressions, preserves the datatype and is ANSI standard. So why do we need ISNULL? I know, I know..someone will post that ISNULL performs better……..
+Those are not really the same, COALESCE allows for more than 1 expressions, preserves the datatype and is ANSI standard. So why do we need ISNULL? I know, I know..someone will post that ISNULL performs better........
 
 **CURRENT_TIMESTAMP and GETDATE()**
   
-Banish GETDATE() and use CURRENT\_TIMESTAMP instead, the only reason people (me included) use GETDATE() is because we are lazy and it is shorter. As a matter of fact use CURRENT\_TIMESTAMP when you create a table and then script the table out…what do you see? It will be GETDATE()
+Banish GETDATE() and use CURRENT\_TIMESTAMP instead, the only reason people (me included) use GETDATE() is because we are lazy and it is shorter. As a matter of fact use CURRENT\_TIMESTAMP when you create a table and then script the table out...what do you see? It will be GETDATE()
 
 **User functions**
 

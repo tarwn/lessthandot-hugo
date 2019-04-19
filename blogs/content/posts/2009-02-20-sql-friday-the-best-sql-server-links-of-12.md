@@ -61,7 +61,7 @@ The PSS SQL Server Engineers show us how to migrate SQL Server 2000 DTS packages
 
 **[Estimated and Actual execution plan revisited][8]**
   
-Gail Shaw explains why the terms 'estimated execution plan’ and 'actual execution plan’ are perhaps a little bit misleading.
+Gail Shaw explains why the terms 'estimated execution plan' and 'actual execution plan' are perhaps a little bit misleading.
 
 
 

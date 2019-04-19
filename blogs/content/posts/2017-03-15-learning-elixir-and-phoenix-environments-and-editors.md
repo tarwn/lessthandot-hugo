@@ -119,7 +119,7 @@ I've been using Atom far more, so I haven't tried step-through debugging and hav
 
 # Next Up: Learning to Code
 
-So, I have a set of environments and some editors, next up is figuring out how the heck to write in the language, what the idioms are, and then throw a completely new web framework (and template language, and ORM, and nodejs tools, and…) on top of the mix. See you there!
+So, I have a set of environments and some editors, next up is figuring out how the heck to write in the language, what the idioms are, and then throw a completely new web framework (and template language, and ORM, and nodejs tools, and...) on top of the mix. See you there!
 
  [1]: https://github.com/asdf-vm/asdf
  [2]: https://github.com/asdf-vm/asdf#setup

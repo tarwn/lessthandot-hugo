@@ -36,7 +36,7 @@ A cross join produces the Cartesian product of the tables involved in the join. 
 
 Here what Wikipedia has to say about it: http://en.wikipedia.org/wiki/Cartesian_product
 
-> For example, the Cartesian product of the 13-element set of standard playing card ranks {Ace, King, Queen, Jack, 10, 9, 8, 7, 6, 5, 4, 3, 2} and the four-element set of card suits {&#9824;, &#9829;, &#9830;, &#9827;} is the 52-element set of all possible playing cards: ranks × suits = {(Ace, &#9824;), (King, &#9824;), …, (2, &#9824;), (Ace, &#9829;), …, (3, &#9827;), (2, &#9827;)}. The corresponding Cartesian product has 52 = 13 × 4 elements. The Cartesian product of the suits × ranks would still be the 52 pairings, but in the opposite order {(&#9824;, Ace), (&#9824;, King), …}. Ordered pairs (a kind of tuple) have order, but sets are unordered. The order in which the elements of a set are listed is irrelevant; the deck can be shuffled and it is still the same set of cards.
+> For example, the Cartesian product of the 13-element set of standard playing card ranks {Ace, King, Queen, Jack, 10, 9, 8, 7, 6, 5, 4, 3, 2} and the four-element set of card suits {&#9824;, &#9829;, &#9830;, &#9827;} is the 52-element set of all possible playing cards: ranks × suits = {(Ace, &#9824;), (King, &#9824;), ..., (2, &#9824;), (Ace, &#9829;), ..., (3, &#9827;), (2, &#9827;)}. The corresponding Cartesian product has 52 = 13 × 4 elements. The Cartesian product of the suits × ranks would still be the 52 pairings, but in the opposite order {(&#9824;, Ace), (&#9824;, King), ...}. Ordered pairs (a kind of tuple) have order, but sets are unordered. The order in which the elements of a set are listed is irrelevant; the deck can be shuffled and it is still the same set of cards.
 
 ## Full outer join
 

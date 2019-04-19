@@ -1,5 +1,5 @@
 ---
-title: 'The Lazy DBA Series: Email me,  I’m broke!'
+title: "The Lazy DBA Series: Email me,  I'm broke!"
 author: Ted Krueger (onpnt)
 type: post
 date: 2010-08-24T10:40:42+00:00
@@ -28,7 +28,7 @@ I won't try to fool anyone reading this, SQL Server 2000 and previous versions w
   <img src="/wp-content/uploads/blogs/DataMgmt/lazydba.gif" alt="" title="" width="378" height="378" />
 </div>
 
-Jump ahead 300 years in computing years and we have SQL Server 2008 R2. I’m impressed! Did I mention that? SQL Server has evolved and done so very rapidly while showing growth that leaves itself with the top database servers out there.
+Jump ahead 300 years in computing years and we have SQL Server 2008 R2. I'm impressed! Did I mention that? SQL Server has evolved and done so very rapidly while showing growth that leaves itself with the top database servers out there.
 
 SQL Server 2008 (R2) provides us with Extended Events, Default Trace, DMV/DMF and Database Mail just to name a few ways we can use automation for events and review of daily and real-time maintaining of data availability. I like the Lazy DBA feel to all these new awesome features. So where is an example of this goodness we speak of?
 
@@ -36,11 +36,11 @@ SQL Server 2008 (R2) provides us with Extended Events, Default Trace, DMV/DMF an
 
 Let me first say, wow! Extended Events are event driven logging that has the ability to capture information that is vital to troubleshooting and automating being truly proactive in finding and resolving problems before they begin. And that was a mouthful but Extended Events have given us a mouth full in the ability to really key in on problems and events as they happen.
 
-There are several things we can do with Extended Events. Events like Deadlocks and System Resources usage to name two major events. Jonathan Kehayias ([Twitter][1] | [Blog][2]) covers Deadlocks in great depth [here][3]. Jonathan also wrote one of the best whitepapers I’ve seen on Extended Events to date [here][4]. A good example of system resources and Events is CPU usage. Everyone has had CPU problems at one time or another. Even [BOL][5] notes the use of Extended Events for troubleshooting CPU. Really, it is that useful of a method to monitor and troubleshoot CPU problems.
+There are several things we can do with Extended Events. Events like Deadlocks and System Resources usage to name two major events. Jonathan Kehayias ([Twitter][1] | [Blog][2]) covers Deadlocks in great depth [here][3]. Jonathan also wrote one of the best whitepapers I've seen on Extended Events to date [here][4]. A good example of system resources and Events is CPU usage. Everyone has had CPU problems at one time or another. Even [BOL][5] notes the use of Extended Events for troubleshooting CPU. Really, it is that useful of a method to monitor and troubleshoot CPU problems.
 
-I think we can mostly agree that bad execution plans cause high and out of control CPU usage. It is commonly the first place to look when your CPU suddenly jumps and hovers around the 50-100% mark (in my case, getting the tremors when it hits 20% for longer than a second). I’m not going to rewrite the same code that is out there to set up Extended Events to capture high CPU because Paul Randal ([Twitter][6] | [Blog][6]) does a very good job of that [here][7]. And this series of Lazy DBA articles are meant to be quick and short.
+I think we can mostly agree that bad execution plans cause high and out of control CPU usage. It is commonly the first place to look when your CPU suddenly jumps and hovers around the 50-100% mark (in my case, getting the tremors when it hits 20% for longer than a second). I'm not going to rewrite the same code that is out there to set up Extended Events to capture high CPU because Paul Randal ([Twitter][6] | [Blog][6]) does a very good job of that [here][7]. And this series of Lazy DBA articles are meant to be quick and short.
 
-The following statement from Paul’s blog shows the test for events and where email notifications come into play 
+The following statement from Paul's blog shows the test for events and where email notifications come into play 
 
 ```SQL
 SELECT COUNT (*) FROM sys.fn_xe_file_target_read_file
@@ -51,7 +51,7 @@ GO
 
 Can you test this in an Agent job with T-SQL or SSIS package? Yes! And then using sp\_send\_dbmail, you can attach the result from the fn\_xe\_file\_target\_read_file into an email and send it off to the lucky DBA winner of the day. You just found a problem by not even looking at a database server!!! 
 
-Wait a minute! Is that real-time? It depends on your definition of real-time. Mine doesn't define that as true real-time notifications of events. It does however tell me quickly enough when a problem is there. Wait for it…[Event Notifications][8]. The name says it all. Event Notifications are notifications designed to notify you upon the action you have defined. This can be DDL events and SQL Trace events. SQL Trace events opens a big range of things we can actively notify when they come up. Deadlock events are common notifications. Before we had to go to lengths like, [Proactive Deadlock Notifications][9]. Now this is extremely [simplified with Event Notifications][10]. 
+Wait a minute! Is that real-time? It depends on your definition of real-time. Mine doesn't define that as true real-time notifications of events. It does however tell me quickly enough when a problem is there. Wait for it...[Event Notifications][8]. The name says it all. Event Notifications are notifications designed to notify you upon the action you have defined. This can be DDL events and SQL Trace events. SQL Trace events opens a big range of things we can actively notify when they come up. Deadlock events are common notifications. Before we had to go to lengths like, [Proactive Deadlock Notifications][9]. Now this is extremely [simplified with Event Notifications][10]. 
 
 From what we've touched on, we can come to a conclusion that for one, being Lazy is cool. Second, what we have now in SQL Server is a step in the right direction and had given us only one problem. Our excuses for not knowing when events and problems occur is all but NULL. 
 

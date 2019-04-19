@@ -24,7 +24,7 @@ tags:
 ---
 I was recently asked for some help with a very strange situation involving SQL Server and a .NET application using SqlCommand calls. It was thought to be a problem with SQL Server and in particular, sp_execute not being formed correctly.
 
-**Let’s go through the steps to this point**
+**Let's go through the steps to this point**
 
 The developer did exactly the right steps in troubleshooting the problem. Once the application was failing due to SQL Server return errors, Profiler was enlisted to determine the exact transaction that was being sent to SQL Server. The transaction was found to be sent without specifying the parameters thought to be formed
 
@@ -69,7 +69,7 @@ reader.Close();
 
 This test application appeared to work as it should and the sp_executesql was sent as expected. After exhausting attempts to force the not well-formed statement on SQL Server, sections of the .NET code itself were looked at closer. In order to test different scenarios, certain lines were commented out to change the way the code was being handled.
 
-Specifically, when the command type setting for stored procedure was commented out, the exact situation was successfully recreated. Unfortunately the BOL entry for SQLCommand.CommandType wasn’t much help here other than this section
+Specifically, when the command type setting for stored procedure was commented out, the exact situation was successfully recreated. Unfortunately the BOL entry for SQLCommand.CommandType wasn't much help here other than this section
 
 > When you set the CommandType property to StoredProcedure, you should set the CommandText property to the name of the stored procedure. The command executes this stored procedure when you call one of the Execute methods.
 > 

@@ -5,7 +5,7 @@ type: post
 date: 2012-05-21T23:04:00+00:00
 ID: 1630
 excerpt: |
-  This is the third year I’ve headed south to Chicago for SQL Saturday. The first, in 2010, was my first SQL Saturday ever. The second, in 2011, was the first time I ever spoke at a SQL Saturday. Could it get better this year? It could, and it did!
+  This is the third year I've headed south to Chicago for SQL Saturday. The first, in 2010, was my first SQL Saturday ever. The second, in 2011, was the first time I ever spoke at a SQL Saturday. Could it get better this year? It could, and it did!
    &hellip;
 url: /index.php/datamgmt/datadesign/sql-saturday-119-chicago-2012/
 views:
@@ -16,7 +16,7 @@ categories:
   - Data Modelling and Design
 
 ---
-This is the third year I’ve headed south to Chicago for SQL Saturday. The first, in 2010, was my first SQL Saturday ever. The second, in 2011, was the first time I ever spoke at a SQL Saturday. Could it get better this year? It could, and it did!
+This is the third year I've headed south to Chicago for SQL Saturday. The first, in 2010, was my first SQL Saturday ever. The second, in 2011, was the first time I ever spoke at a SQL Saturday. Could it get better this year? It could, and it did!
 
  
 
@@ -26,9 +26,9 @@ This is the third year I’ve headed south to Chicago for SQL Saturday. The firs
 
 **Friday – SQLFriends Lunch** 
 
-Earlier this year, my friend Aaron Lowe ([b][1] | [t][2]) had an idea for an event – get a group of SQL people together for networking. Isn’t that always the best part of events? He created [SQLFriends][3], and held the first lunch in March. The second was on Friday, and the guest host was LessThanDot’s own Ted Krueger ([b][4] | [t][5]). The point is to get people in a room, with no session or agenda, to network and talk.
+Earlier this year, my friend Aaron Lowe ([b][1] | [t][2]) had an idea for an event – get a group of SQL people together for networking. Isn't that always the best part of events? He created [SQLFriends][3], and held the first lunch in March. The second was on Friday, and the guest host was LessThanDot's own Ted Krueger ([b][4] | [t][5]). The point is to get people in a room, with no session or agenda, to network and talk.
 
-And talk we did. There were a dozen people, from at least four states; from consultants with decades of experience to a student graduating later this month. We talked about consulting, writing books, running (I was there, after all), SQL features, and more. It was fun and inspiring. It allowed me to get to know several people better. Ted was a great host, sharing stories and advice. The only time we really got quiet was when he was telling us about a [bug he discovered with SQL Server Replication][6]. Yes, we’re geeks.
+And talk we did. There were a dozen people, from at least four states; from consultants with decades of experience to a student graduating later this month. We talked about consulting, writing books, running (I was there, after all), SQL features, and more. It was fun and inspiring. It allowed me to get to know several people better. Ted was a great host, sharing stories and advice. The only time we really got quiet was when he was telling us about a [bug he discovered with SQL Server Replication][6]. Yes, we're geeks.
 
 <p style="text-align: center;">
   <img src="https://p.twimg.com/AtMRhQ_CMAIQKxw.jpg" alt="" />
@@ -38,17 +38,17 @@ And talk we did. There were a dozen people, from at least four states; from cons
   <em>SQLFriends lunch (photo courtesy of Aaron Lowe)</em>
 </p>
 
-Thank you, Aaron, for putting this event together. He’s looking to spread this idea, so if you have a great location and a possible guest host, let him know!
+Thank you, Aaron, for putting this event together. He's looking to spread this idea, so if you have a great location and a possible guest host, let him know!
 
 **SQL Saturday** 
 
-The main event took place on…wait for it…Saturday. We were at DeVry University, the same location as last year, which is a great location. I grabbed some Dunkin’ Donuts coffee and a bagel and went to the sponsor room. That was set up really well, and I got a chance to chat with the national and local companies supporting the SQL community. Thank you to the sponsors!
+The main event took place on...wait for it...Saturday. We were at DeVry University, the same location as last year, which is a great location. I grabbed some Dunkin' Donuts coffee and a bagel and went to the sponsor room. That was set up really well, and I got a chance to chat with the national and local companies supporting the SQL community. Thank you to the sponsors!
 
-I caught part of the WIT lunch session, between waiting in a long line for [Portillo’s][7] and dashing off to present. Thank you to Wendy Pastrick, Erin Stellato, Hope Foley, and Shelly Noll for sharing their experiences and advice!
+I caught part of the WIT lunch session, between waiting in a long line for [Portillo's][7] and dashing off to present. Thank you to Wendy Pastrick, Erin Stellato, Hope Foley, and Shelly Noll for sharing their experiences and advice!
 
 **My Session** 
 
-I presented my “Reporting Services: From Basic to WOW!” session after lunch. I always like the challenge of keeping people awake after a good lunch (and Portillo’s was a _good_ lunch). I had a packed, energetic room that I really had a great time presenting to. About half the attendees were at their very first SQL Saturday, which was exciting for me.
+I presented my “Reporting Services: From Basic to WOW!” session after lunch. I always like the challenge of keeping people awake after a good lunch (and Portillo's was a _good_ lunch). I had a packed, energetic room that I really had a great time presenting to. About half the attendees were at their very first SQL Saturday, which was exciting for me.
 
 <p style="text-align: center;">
   <img src="http://farm8.staticflickr.com/7231/7228783742_b07cb28466.jpg" alt="" />
@@ -74,15 +74,15 @@ There was something new at SQL Saturday Chicago this year. The organizers worked
   <em style="text-align: center;">Ted and I in the student lab (photo courtesy of Michael Kappel)</em>
 </p>
 
-I think this would be a great way for other SQL Saturday organizers to give back to their local community. I know it’s a lot of work and coordination, but I think there’s a lot of value.
+I think this would be a great way for other SQL Saturday organizers to give back to their local community. I know it's a lot of work and coordination, but I think there's a lot of value.
 
 **Saturday – The After Party** 
 
-What happens at #sqlkaraoke stays at #sqlkaraoke. If you go to a SQL Saturday and there is an after party hosted, try to go. It’s nice to get to know people outside of a classroom.
+What happens at #sqlkaraoke stays at #sqlkaraoke. If you go to a SQL Saturday and there is an after party hosted, try to go. It's nice to get to know people outside of a classroom.
 
 As always, my favorite part of the weekend was all the people. I got to see many old friends, and met some new ones. The people are what make this community awesome.
 
-Chicago, I’ll see you again next year!
+Chicago, I'll see you again next year!
 
  [1]: http://www.aaronlowe.net/
  [2]: https://twitter.com/#!/Vendoran

@@ -20,15 +20,15 @@ categories:
 
 Welcome to T-SQL Tuesday #18, hosted by Bob Pusateri ([blog][3] | [twitter][4]). Bob, thanks for hosting. From past experience, I know it takes time and effort. 
 
-Bob asked us to write about something I embraced many years ago: Common Table Expressions (CTEs). “Have you ever solved or created a problem by using CTEs? Got a tip, trick, or something nifty to share? I’d love to see your posts about any of the above.” 
+Bob asked us to write about something I embraced many years ago: Common Table Expressions (CTEs). “Have you ever solved or created a problem by using CTEs? Got a tip, trick, or something nifty to share? I'd love to see your posts about any of the above.” 
 
-I’ve used CTEs for many things, but always avoided learning a recursive CTE. So, I challenged myself to sit down, find a use for one, write the code for it, and blog it. Challenge met. 
+I've used CTEs for many things, but always avoided learning a recursive CTE. So, I challenged myself to sit down, find a use for one, write the code for it, and blog it. Challenge met. 
 
 <p align="center">
   <img src="/wp-content/uploads/users/grrlgeek/RecursionAgain250x200.png?mtime=1304994446" alt="" title="" />
 </p>
 
-I didn’t want to go down the manager/employee or order/item path. Those have been done, many times, and I’m not interested in them. Then I remembered a challenge I’d run into at my previous job that I had always looked for a new solution to: building a dates table. (I am not going to go into whether or not this is the _best_ way or the _most efficient_ way or the _prettiest_ way to build this table. I believe those debates have been raging for years, and I have nothing new to add to any side of the argument. I simply wanted to _do it_.) 
+I didn't want to go down the manager/employee or order/item path. Those have been done, many times, and I'm not interested in them. Then I remembered a challenge I'd run into at my previous job that I had always looked for a new solution to: building a dates table. (I am not going to go into whether or not this is the _best_ way or the _most efficient_ way or the _prettiest_ way to build this table. I believe those debates have been raging for years, and I have nothing new to add to any side of the argument. I simply wanted to _do it_.) 
 
 **What I Want** 
 
@@ -50,7 +50,7 @@ SELECT @GoDate,
 
 **Step 1: A Recursive CTE** 
 
-First, I’m going to build a recursive CTE to select the current date, and then another year’s worth of dates. 
+First, I'm going to build a recursive CTE to select the current date, and then another year's worth of dates. 
 
 ```sql
 DECLARE @GoDate DATE = GETDATE()
@@ -120,7 +120,7 @@ UNION ALL
 
 The final piece is a query, which is the result of all sets returned by the UNION ALL. In this query, I could also join to other tables, another really beautiful part of the CTE. (I find this especially useful when using CTEs for aggregation. Not to distract you. Or me. I have to finish this post first.) 
 
-Because I don’t have a WHERE clause in my second query, this could be an infinite loop. (Unless you believe the world is going to end on December 21, 2012. But that wasn’t coded into SQL Server.) How do I prevent this? I use the query hint OPTION (MAXRECURSION X). 
+Because I don't have a WHERE clause in my second query, this could be an infinite loop. (Unless you believe the world is going to end on December 21, 2012. But that wasn't coded into SQL Server.) How do I prevent this? I use the query hint OPTION (MAXRECURSION X). 
 
 What I learned while writing this post: if not explicitly specified, the default MAXRECURSION is 100. The range is 0 – 32,767. 0 indicates “no limit”. Also, and I quote from [Books Online][6], “When the specified or default number for MAXRECURSION limit is reached during query execution, the query is ended and an error is returned. Because of this error, all effects of the statement are rolled back. If the statement is a SELECT statement, partial results or no results may be returned. Any partial results returned may not include all rows on recursion levels beyond the specified maximum recursion level.” This will come back to haunt me later, as you will see. 
 
@@ -135,7 +135,7 @@ Here are my query results. Note that the count is 366 rows: the original anchor 
 
 **Step 2: The Dates Table** 
 
-The query results aren’t very useful if you have to run the query every time you want to use it. Solution: build a table! 
+The query results aren't very useful if you have to run the query every time you want to use it. Solution: build a table! 
 
 ```sql
 CREATE TABLE Dates
@@ -237,7 +237,7 @@ I have successfully inserted 366 rows into my Dates table.
 
 **Ta-Da!** 
 
-I’m glad I took the time to break down the recursive CTE and learn how to use it. I know I’ll use it in the future. The CTE has limitations, and is not always the most efficient SQL, but it is useful and flexible. I suggest you learn to write CTEs and recursive CTEs, to have another tool in your SQL toolbox.
+I'm glad I took the time to break down the recursive CTE and learn how to use it. I know I'll use it in the future. The CTE has limitations, and is not always the most efficient SQL, but it is useful and flexible. I suggest you learn to write CTEs and recursive CTEs, to have another tool in your SQL toolbox.
 
  [1]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif ""
  [2]: http://www.bobpusateri.com/archive/2011/04/invitation-to-t-sql-tuesday-18-ctes/

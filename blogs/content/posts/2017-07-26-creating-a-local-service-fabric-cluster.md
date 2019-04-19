@@ -187,7 +187,7 @@ Here are the errors as I work through them:
 
 ### Missing Firewall Rule
 
-**Error:** “Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: A connection attempt failed because the conncted party did not properly respond…” (classic timeout error)
+**Error:** “Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: A connection attempt failed because the conncted party did not properly respond...” (classic timeout error)
 
 **Fix:** Add the Firewall rule I mentioned above to allow traffic on 135, 137, 138, 139, and 445.
 
@@ -216,9 +216,9 @@ Here's a summary of what the script is running (so you know it hasn't gone off t
   * Check and create if necessary: Runtime directory
   * Check and create if necessary: Trace folder
   * Download Runtime package (small delay for download time)
-  * Creating Service fabric Cluster…
-  * Details per machine: Configuring, Configured, Started FabricInstallerSvc, …(HDD clicky clicky)…, Started FabricHostSvc, (short delay)
-  * Your cluster is successful created! …
+  * Creating Service fabric Cluster...
+  * Details per machine: Configuring, Configured, Started FabricInstallerSvc, ...(HDD clicky clicky)..., Started FabricHostSvc, (short delay)
+  * Your cluster is successful created! ...
 
 This took a few minutes to run for me, but of course YMMV depending on internet speed, CPU resources, etc.
 

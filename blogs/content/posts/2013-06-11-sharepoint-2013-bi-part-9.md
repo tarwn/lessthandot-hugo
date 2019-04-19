@@ -62,7 +62,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_07.png?mtime=1370459858"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_07.png?mtime=1370459858" alt="" width="487" height="365" /></a>
 </p>
 
-<span style="text-align: justify;">After all of this hard work, you deserve a coffee…</span>
+<span style="text-align: justify;">After all of this hard work, you deserve a coffee...</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_08.png?mtime=1370459858"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_08.png?mtime=1370459858" alt="" width="487" height="365" /></a>
@@ -80,13 +80,13 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_10.png?mtime=1370459859"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_10.png?mtime=1370459859" alt="" width="468" height="236" /></a>
 </p>
 
-<span style="text-align: justify;">What’s the problem? We forgot to update the Reporting Services installation with service pack 1! So launch the sp1 setup and go through the wizard.</span>
+<span style="text-align: justify;">What's the problem? We forgot to update the Reporting Services installation with service pack 1! So launch the sp1 setup and go through the wizard.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_12.png?mtime=1370459859"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_12.png?mtime=1370459859" alt="" width="487" height="365" /></a>
 </p>
 
-<span style="text-align: justify;">You also might want to run the KB again we discussed in </span><a style="text-align: justify;" href="/index.php/DataMgmt/business-intelligence-1/sharepoint-2013-bi-part-4">part 4</a><span style="text-align: justify;">. It’s possible a reboot is needed after these updates.</span>
+<span style="text-align: justify;">You also might want to run the KB again we discussed in </span><a style="text-align: justify;" href="/index.php/DataMgmt/business-intelligence-1/sharepoint-2013-bi-part-4">part 4</a><span style="text-align: justify;">. It's possible a reboot is needed after these updates.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_13.png?mtime=1370459859"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_13.png?mtime=1370459859" alt="" width="487" height="365" /></a>
@@ -134,7 +134,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_21.png?mtime=1370459879"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_21.png?mtime=1370459879" alt="" width="402" height="515" /></a>
 </p>
 
-<span style="text-align: justify;">Locate the </span>_Power View Integration Feature_ <span style="text-align: justify;">and activate it if it isn’t already.</span>
+<span style="text-align: justify;">Locate the </span>_Power View Integration Feature_ <span style="text-align: justify;">and activate it if it isn't already.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_22.png?mtime=1370459879"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part9/InstallSSRS_22.png?mtime=1370459879" alt="" width="1011" height="142" /></a>

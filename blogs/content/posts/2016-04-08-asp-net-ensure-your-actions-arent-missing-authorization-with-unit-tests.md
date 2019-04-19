@@ -1,5 +1,5 @@
 ---
-title: ASP.Net – Ensure your Actions aren’t missing Authorization with Unit Tests
+title: ASP.Net – Ensure your Actions aren't missing Authorization with Unit Tests
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-04-08T13:44:47+00:00
@@ -17,11 +17,11 @@ tags:
   - reflection
 
 ---
-Have you ever found yourself working on an ASP.net Action and noticed there isn't a single Authorization attribute in sight? Or gone to edit an endpoint in WebAPI, only to realize you took a coffee break at exactly the wrong time and forgot to come back and add the authorization attribute…a month ago? Or the time you found an MVC endpoint with WebAPI Authorization attributes on it? 
+Have you ever found yourself working on an ASP.net Action and noticed there isn't a single Authorization attribute in sight? Or gone to edit an endpoint in WebAPI, only to realize you took a coffee break at exactly the wrong time and forgot to come back and add the authorization attribute...a month ago? Or the time you found an MVC endpoint with WebAPI Authorization attributes on it? 
 
 While relying on code reviews and regular reminders to the team can reduce occurrences of this, we're human and can only catch so much. Instead, it would be nice if a warning popped up before we ever pushed the code out: “You haven't defined authentication for the XYZ endpoint yet!”. Luckily we have a CI environment (right???), so we can use Unit Tests to provide that warning and serve as a safety net to make sure we can't push unprotected endpoints out to production.
 
-Code for this post: [Github: tarwn/Blog_KnockoutMVVMPatterns/…/AuthorizationSafetyNetTests.cs][1]
+Code for this post: [Github: tarwn/Blog_KnockoutMVVMPatterns/.../AuthorizationSafetyNetTests.cs][1]
 
 ## Detecting Authentication Holes for ASP.Net MVC
 

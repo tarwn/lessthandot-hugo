@@ -160,7 +160,7 @@ sql
 
 ## Modify The SSRS Report
 
-1. Update the Dataset. On the Data tab, either create a new Dataset or update an existing Dataset so that it has the correct SP name and finds the new parameter you added. To edit a Dataset, click the “…” button to the right of the Dataset name dropdown.
+1. Update the Dataset. On the Data tab, either create a new Dataset or update an existing Dataset so that it has the correct SP name and finds the new parameter you added. To edit a Dataset, click the “...” button to the right of the Dataset name dropdown.
 
 2. Decide whether the report's default list of available document names will be hard-coded in the report or supplied by a query. I chose to make it data-driven so that if a new document is added, it will show up in the report without any changes to it, or with only a change to a shared data source, rather than having to change the SSRS report itself. I always prefer to make changes to data or shared objects than to code or types of things that have to be tested and deployed. 
 
@@ -193,7 +193,7 @@ sql
 </li>
 
 <li>
-If you had to add the multi-value report parameter manually, edit the source Dataset and make sure it is mapped properly. Click on the Data tab, select the correct Dataset, click the “…” edit button, select Parameters, and make sure that the Name is mapped to the Value. <p>
+If you had to add the multi-value report parameter manually, edit the source Dataset and make sure it is mapped properly. Click on the Data tab, select the correct Dataset, click the “...” edit button, select Parameters, and make sure that the Name is mapped to the Value. <p>
 <img src="/wp-content/uploads/blogs/DataMgmt/ssrs_multi_value_parameters/MultiValueDataSet.PNG" alt="SSRS Dataset Parameters" title="Mapping A Dataset Parameter to a Report Parameter" /></li> </ol> 
 
 <h1>

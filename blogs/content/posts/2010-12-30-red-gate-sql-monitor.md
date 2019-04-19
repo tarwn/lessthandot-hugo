@@ -43,7 +43,7 @@ Installing SQL Monitor
 
 </strong>
 
-Installing some products can be a painful process. This pain can be from confusion and requirements for hardware or added licensing for other products to support it. In reality, the most successful process of installing a product is when clicking Next, Next, Finish results in a working product after the click of the finish button. SQL Monitor. Let’s go over some aspects that were noticed during the process.
+Installing some products can be a painful process. This pain can be from confusion and requirements for hardware or added licensing for other products to support it. In reality, the most successful process of installing a product is when clicking Next, Next, Finish results in a working product after the click of the finish button. SQL Monitor. Let's go over some aspects that were noticed during the process.
 
 **</p> 
 
@@ -57,7 +57,7 @@ Installation high points
   * This installation used SQL Express as the repository database for SQL Monitor. This availability means that an added license for SQL Server is not required if you stay under the limitation of SQL Express.
   * Setup is, as with most Red Gate products, easy and clear.
 
-To login you will need to create a password. The needs for the password were a little unclear but later it is clear upon logging out of the monitor and back in. When logging in, all you need is a password. That was a little surprising since I picked windows authentication for everything during the setup. Not 100% sure I like the fact that there isn’t a user account so then multiple users could be controlled for accessing the monitor.
+To login you will need to create a password. The needs for the password were a little unclear but later it is clear upon logging out of the monitor and back in. When logging in, all you need is a password. That was a little surprising since I picked windows authentication for everything during the setup. Not 100% sure I like the fact that there isn't a user account so then multiple users could be controlled for accessing the monitor.
 
 <div class="image_block">
   <a href="/media/blogs/DataMgmt/-1.png?mtime=1293723941"><img src="/wp-content/uploads/blogs/DataMgmt/-1.png?mtime=1293723941" alt="" width="567" height="102" /></a>
@@ -67,9 +67,9 @@ On startup, adding servers is pretty clear as far as how to do it. There is a co
 
 A note on adding servers that I think could be added to the process: the monitor does not seem to check for the actual existence of the instance before adding it to the monitored servers listing. I would like to see an option to install the instance if it is not readily pinged. The primary reason for this would be typos and misspelling the instance name. If you make the mistake, you will need to go through removing the instance to fix it.
 
-For example: I added an instance to the Monitor that was named, foo. This instance does not exist but it went through registering it and entering it into the Monitor’s database for me to later clean up.
+For example: I added an instance to the Monitor that was named, foo. This instance does not exist but it went through registering it and entering it into the Monitor's database for me to later clean up.
 
-By default the monitor looks for a default instance as well. That was a nice feature. Makes sure you monitor the instance you installed the DB on (as it appears). Only thing was, I didn’t have a default instance so it showed a big red x when one wasn’t needed.
+By default the monitor looks for a default instance as well. That was a nice feature. Makes sure you monitor the instance you installed the DB on (as it appears). Only thing was, I didn't have a default instance so it showed a big red x when one wasn't needed.
 
 One instance (a SQL Express instance) failed to register. Error: Bad Data. 
 
@@ -85,7 +85,7 @@ First thing I want setup
 
 </strong>
 
-There are a few things that I as a DBA want setup before doing anything else. One of those is email alerts. Let’s be honest, there is only so much time in a day and opening a tool and looking at everything is not as easy as it sounds. Email alerting is a must when it comes to our instances. When SQL Monitor was finished installing and I logged in, there was a nice view of four tabs that I had available. One of those tabs was, “configuration”. A thorn in any product is when configuring it is painful or so complex that you simply do not set it up just how you want it. Sometimes that even goes as far as getting to configuration settings. SQL Monitor makes this entire process easy and clear.
+There are a few things that I as a DBA want setup before doing anything else. One of those is email alerts. Let's be honest, there is only so much time in a day and opening a tool and looking at everything is not as easy as it sounds. Email alerting is a must when it comes to our instances. When SQL Monitor was finished installing and I logged in, there was a nice view of four tabs that I had available. One of those tabs was, “configuration”. A thorn in any product is when configuring it is painful or so complex that you simply do not set it up just how you want it. Sometimes that even goes as far as getting to configuration settings. SQL Monitor makes this entire process easy and clear.
 
 **</p> 
 
@@ -95,7 +95,7 @@ Setting up email alerts
 
 To setup the email alerts, go into the configuration page and click, “Email settings”. Enter all your information for where to send emails, the sender (which I made, SQLMonitor@mydomain.com) and then mail server settings.
 
-Next, make sure you setup your alerts and what you want to be alerted on. Trust me, your inbox will be filled with alerts that you just don’t want in there. When I say filled, I mean filled. It is good that SQL Monitor has a default listing of what to email out. I like this very much for a more junior level position where the question may be raised on what really is important.
+Next, make sure you setup your alerts and what you want to be alerted on. Trust me, your inbox will be filled with alerts that you just don't want in there. When I say filled, I mean filled. It is good that SQL Monitor has a default listing of what to email out. I like this very much for a more junior level position where the question may be raised on what really is important.
 
 <div class="image_block">
   <a href="/media/blogs/DataMgmt/-2.png?mtime=1293723941"><img src="/wp-content/uploads/blogs/DataMgmt/-2.png?mtime=1293723941" alt="" width="624" height="199" /></a>
@@ -103,7 +103,7 @@ Next, make sure you setup your alerts and what you want to be alerted on. Trust 
 
 **</p> 
 
-Let’s take a tour
+Let's take a tour
 
 </strong>
 
@@ -113,7 +113,7 @@ The first things we all do when installing a new product is take a tour. At firs
   <a href="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_4.gif?mtime=1293726680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_4.gif?mtime=1293726680" width="624" height="284" /></a>
 </div>
 
-As you can see, my instances aren’t doing very well.
+As you can see, my instances aren't doing very well.
 
 The first thing we notice is the SQL Server Agent Service Status alerts. This is alerting me on the agent status for SQL Express. SQL Express is a sore spot again here. The agent service is, if you will, an unusable service installed with SQL Express. This is probably the reasoning for the alert showing as this service does not function as other more comprehensive editions.
 
@@ -133,7 +133,7 @@ Disk Space
 
 </strong>
 
-Disk space is probably one the high points in my work helping others with system problems. SQL Server installations not configured correctly often cause disk space to run low. Log file growth, backup plans etc… all can cause disk space to run low very quickly.
+Disk space is probably one the high points in my work helping others with system problems. SQL Server installations not configured correctly often cause disk space to run low. Log file growth, backup plans etc... all can cause disk space to run low very quickly.
 
 <div class="image_block">
   <a href="/media/blogs/DataMgmt/-5.png?mtime=1293723944"><img src="/wp-content/uploads/blogs/DataMgmt/-5.png?mtime=1293723944" alt="" width="624" height="35" /></a>
@@ -164,7 +164,7 @@ Making alert tasks
 
 </strong>
 
-A monitoring system for SQL Server is enhanced by becoming a task repository. Let’s face the fact that through the day DBAs can and often have a large amount of tasks, alert and solutions that are handed to us. Reviewing alerts and acting on them right then and there is just not feasible at times. SQL Monitor has a great function in which you can comment on all the views to manage tasks for scheduling traces, assigning to others or adding comments to mention why a spike or alert occurred.
+A monitoring system for SQL Server is enhanced by becoming a task repository. Let's face the fact that through the day DBAs can and often have a large amount of tasks, alert and solutions that are handed to us. Reviewing alerts and acting on them right then and there is just not feasible at times. SQL Monitor has a great function in which you can comment on all the views to manage tasks for scheduling traces, assigning to others or adding comments to mention why a spike or alert occurred.
 
 For example: in a performance data view of SQL Server on my monitor, an alert was raised around 6:28AM for high wait times. I could have dug into management objects and historic data of the processes and transactions that were hitting my database server at that time but alas, I was required to get a project out at the same time. Since the wait time was a spike and released, I can add a comment that a trace will be scheduled to capture all the information I need to resolve the high waits or check it off as a onetime issue.
 
@@ -180,7 +180,7 @@ View a database
 
 </strong>
 
-Let’s think of a high-level database view in a few ways
+Let's think of a high-level database view in a few ways
 
   1. Information to better help us quickly troubleshoot issues
   2. Documentation

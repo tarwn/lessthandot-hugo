@@ -1,5 +1,5 @@
 ---
-title: 'Book review: Quantum Man: Richard Feynman’s Life in Science'
+title: "Book review: Quantum Man: Richard Feynman's Life in Science"
 author: SQLDenis
 type: post
 date: 2011-06-05T12:43:00+00:00

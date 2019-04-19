@@ -1,5 +1,5 @@
 ---
-title: Don’t put a return statement in a stored procedure inside a transaction
+title: Don't put a return statement in a stored procedure inside a transaction
 author: SQLDenis
 type: post
 date: 2012-05-18T00:57:00+00:00

@@ -95,7 +95,7 @@ var Runner = {
             var page = require('webpage').create();
     
             page.onConsoleMessage = function(msg) {
-                // … handle console output coming back from console worker
+                // ... handle console output coming back from console worker
             };
     
             // build some fake content instead of using a real file/URL
@@ -181,15 +181,15 @@ var StatsProcessor = {
         },
     
         flattenSpecs: function(description, stats, flatStats, flatSuites){
-            // … work …
+            // ... work ...
         },
     
         getAverages: function(flatStats){
-            // … calculate avg and stddev …
+            // ... calculate avg and stddev ...
         },
     
         getPercentOfTotalIndex: function(sortedFlatStats, averages, percentage){
-            // … find tests that are responsiblce for _percentage_ of execution time …
+            // ... find tests that are responsiblce for _percentage_ of execution time ...
         }
     };
     
@@ -203,7 +203,7 @@ javascript
 Runner.execute(function(result){
         var stats = StatsProcessor.evaluate(result);
     
-        /* … display stats output … */
+        /* ... display stats output ... */
     
         phantom.exit();
     });

@@ -1,5 +1,5 @@
 ---
-title: Dealing with the Column name 'TEXT()’ contains an invalid XML identifier as required by FOR XML; '('(0x0028) is the first character at fault error
+title: Dealing with the Column name 'TEXT()' contains an invalid XML identifier as required by FOR XML; '('(0x0028) is the first character at fault error
 author: SQLDenis
 type: post
 date: 2012-12-05T11:42:00+00:00
@@ -90,7 +90,7 @@ sql
 SELECT  BookName + ', ' AS [text()]
 ```
 
-Once you make the change, the error will disappear. My suspicion is that some code formatting tool made it uppercase, perhaps the programmer copied and pasted it into some window and then packaged the output…I will have to follow up on that one
+Once you make the change, the error will disappear. My suspicion is that some code formatting tool made it uppercase, perhaps the programmer copied and pasted it into some window and then packaged the output...I will have to follow up on that one
 
 If you are interested what that function is used for, take a look at [Concatenate Values From Multiple Rows Into One Column][1]
 

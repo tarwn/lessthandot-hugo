@@ -28,7 +28,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <span style="line-height: 1.5em">Of course, a few weeks later I had completely forgotten why I had chosen that particular length. That’s why I wrote this blog post, so that I might never forget it again.</span>
+  <span style="line-height: 1.5em">Of course, a few weeks later I had completely forgotten why I had chosen that particular length. That's why I wrote this blog post, so that I might never forget it again.</span>
 </p>
 
 <p style="text-align: justify">
@@ -52,7 +52,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  That’s when it hit me: the text input is first encoded the Unicode, so when you directly cast the output hex string to a string, you might get Unicode characters as well. And indeed, when you cast in T-SQL:
+  That's when it hit me: the text input is first encoded the Unicode, so when you directly cast the output hex string to a string, you might get Unicode characters as well. And indeed, when you cast in T-SQL:
 </p>
 
 <p style="text-align: justify">
@@ -68,5 +68,5 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  So, now you know and I hopefully don’t forget.
+  So, now you know and I hopefully don't forget.
 </p>

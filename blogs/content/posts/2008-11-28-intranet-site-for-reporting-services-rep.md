@@ -27,7 +27,7 @@ Change the web reference name say ReportingService and click Add Web Reference. 
   <img src="/wp-content/uploads/blogs/WebDev/RSWebService.JPG" alt="" title="" width="640" height="400" />
 </div>
 
-Once the reference is added,open the web.config file. You’ll notice a new section has been added the web.config
+Once the reference is added,open the web.config file. You'll notice a new section has been added the web.config
 
 ```xml
 <appSettings>
@@ -83,7 +83,7 @@ using ReportingServices;
 ```
 ListChildren method requires 2 parameters. The first parameter is the path of the folder to look in and the second parameter is a flag to indicate if the method should recurse through subdirectories.
   
-The method returns an array of catalogitem objects based on the user permissions. The catalog items can be reports,data sources,folders Once we get the array of catalog items, we loop through the array and read the properties of each catalogitem. A catalogitem properties give us information about the item like Name,Created By, Description, Path, Type etc. Here we mainly make use of the type and Name. If an item is of type “Folder” we add the item to combo box. Since we don’t want to show data sources folder to users, we check for the name “Data Sources” and ignore it.
+The method returns an array of catalogitem objects based on the user permissions. The catalog items can be reports,data sources,folders Once we get the array of catalog items, we loop through the array and read the properties of each catalogitem. A catalogitem properties give us information about the item like Name,Created By, Description, Path, Type etc. Here we mainly make use of the type and Name. If an item is of type “Folder” we add the item to combo box. Since we don't want to show data sources folder to users, we check for the name “Data Sources” and ignore it.
 
 6.The next method ListReports is written for SelectedIndexChanged event of the folders combobox which means when an item in the folders combobox is selected this event is fired. As the name suggests this method lists all the reports in the selected folder item. We pass the path of the selected folder as a parameter to the List Children method. This time we check if the Item.type is Report.
 
@@ -166,4 +166,4 @@ The simplest way to deploy the application on your intranet is by hosting the si
 ```
 When the reporting server and web server are on different machines, Kerberos authenication protocol is required to pass the user credentails from web server to reporting server.
 
-That’s about it. Creating a repository of reports is pretty straighforward using Reporting Services web service. I hope you’ll find this example useful.
+That's about it. Creating a repository of reports is pretty straighforward using Reporting Services web service. I hope you'll find this example useful.

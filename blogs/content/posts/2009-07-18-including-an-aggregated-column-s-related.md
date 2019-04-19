@@ -1,5 +1,5 @@
 ---
-title: Including an Aggregated Column’s Related Values
+title: Including an Aggregated Column's Related Values
 author: Erik
 type: post
 date: 2009-07-18T04:51:05+00:00

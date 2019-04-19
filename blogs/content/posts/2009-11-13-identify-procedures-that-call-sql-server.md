@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-When you use an undocumented stored procedure, you run the risk of not being able to upgrade your database to a new version. What's worse… you could have broken functionality and not even know it. With undocumented stored procedures, Microsoft may not document when they decide to deprecate it, so you may not know about your broken functionality until it's too late.
+When you use an undocumented stored procedure, you run the risk of not being able to upgrade your database to a new version. What's worse... you could have broken functionality and not even know it. With undocumented stored procedures, Microsoft may not document when they decide to deprecate it, so you may not know about your broken functionality until it's too late.
 
 Presented below is a hard coded list of undocumented stored procedures. By their very nature, it is hard to find documentation on undocumented procedures. Therefore, the procedures in the list below is likely to be incomplete.
 

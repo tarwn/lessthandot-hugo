@@ -22,7 +22,7 @@ _Tuesday, February 21, 6:00 pm Central_
 
 [I-380 Corridor (East Iowa) SQL Server User Group][2]
 
-I’ll be presenting via Live Meeting for my friends in East Iowa. Hopefully someone there brings construction paper and crayons!
+I'll be presenting via Live Meeting for my friends in East Iowa. Hopefully someone there brings construction paper and crayons!
 
 Make Your Voice Heard SQL Server professionals like to talk – a lot! We blog, we tweet, we answer forum questions, and more. Add your voice! Learn about the different ways you can share your experience and knowledge. Once you start teaching others, you'll realize how much knowledge you have! This session will cover how to use LinkedIn, Twitter, forums, and blogging to extend your reach.
 
@@ -32,7 +32,7 @@ _Wednesday, February 22, 5:30 pm Central_
 
 [MADPASS SQL Server User Group][4]
 
-I’ll be giving an abbreviated version of the same presentation for “my” user group. If you’re in the Madison area, make plans to attend! You’ll also get to hear a great presentation from Bob Pusateri ([twitter][5] | [blog][6]) about backups and recovery.
+I'll be giving an abbreviated version of the same presentation for “my” user group. If you're in the Madison area, make plans to attend! You'll also get to hear a great presentation from Bob Pusateri ([twitter][5] | [blog][6]) about backups and recovery.
 
 Make Your Voice Heard
 
@@ -44,7 +44,7 @@ _Thursday, February 23, 1:00 pm Central_
 
 [PASS Performance Virtual Chapter][8]
 
-I’m going to be live on the internet! This will be my first presentation for the Performance VC and I’m excited about it.
+I'm going to be live on the internet! This will be my first presentation for the Performance VC and I'm excited about it.
 
 Filegroups: Putting The Pieces Together Every DBA must know how to create and maintain filegroups because they affect performance, maintenance, and security of your data. What are filegroups, and how do you use them? In this session, I'll show you how to create filegroups, create objects in them, move objects to them, perform maintenance, and walk through piecemeal restores.
 

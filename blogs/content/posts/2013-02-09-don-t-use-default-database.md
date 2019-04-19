@@ -1,5 +1,5 @@
 ---
-title: Don’t use Default Database in SQL Server
+title: Don't use Default Database in SQL Server
 author: George Mastros (gmmastros)
 type: post
 date: -001-11-30T00:00:00+00:00

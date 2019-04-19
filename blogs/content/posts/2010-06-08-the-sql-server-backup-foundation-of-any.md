@@ -4,7 +4,13 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-08T08:39:36+00:00
 ID: 811
-excerpt: 'Welcome to our second class of HA and DR week of SQL University.  Today we are going to focus on the concept, “Backups are for sissies!”  OK, we’re really going to look at backup and restore for Disaster / Recovery (DR) and how being a sissy and always backing up our databases and testing out restores is a proven strategy for DR.   When all else fails and the walls are falling down on the database servers, backups will be your life preserver.  Backups are the foundation for Disaster and Recovery (DR).  Backups can also save you when high Availability (HA) completely fails you.   Let’s get started!'
+excerpt: Welcome to our second class of HA and DR week of SQL University.  Today we are 
+  going to focus on the concept, “Backups are for sissies!”  OK, we're really going to 
+  look at backup and restore for Disaster / Recovery (DR) and how being a sissy and always 
+  backing up our databases and testing out restores is a proven strategy for DR.   When 
+  all else fails and the walls are falling down on the database servers, backups will 
+  be your life preserver.  Backups are the foundation for Disaster and Recovery (DR).  
+  Backups can also save you when high Availability (HA) completely fails you.   Let's get started!
 url: /index.php/datamgmt/dbprogramming/the-sql-server-backup-foundation-of-any/
 views:
   - 12449
@@ -30,9 +36,9 @@ tags:
   <img src="/wp-content/uploads/blogs/DataMgmt/sqlu_logo.gif" alt="" title="" width="150" height="166" align="left" />
 </div>
 
-Welcome to our second class for HA and DR week of [SQL University][1]. Yesterday we went through defining HA and DR along with some common practices you can use. Today we are going to focus on the concept, “Backups are for sissies!” OK, we’re really going to look at backup and restore for Disaster / Recovery (DR) and how being a sissy and always backing up our databases and testing out restores is a proven strategy for DR. 
+Welcome to our second class for HA and DR week of [SQL University][1]. Yesterday we went through defining HA and DR along with some common practices you can use. Today we are going to focus on the concept, “Backups are for sissies!” OK, we're really going to look at backup and restore for Disaster / Recovery (DR) and how being a sissy and always backing up our databases and testing out restores is a proven strategy for DR. 
 
-When all else fails and the walls are falling down on the database servers, backups will be your life preserver. Backups are the foundation for Disaster and Recovery (DR). Backups can also save you when high Availability (HA) completely fails you. Let’s get started!
+When all else fails and the walls are falling down on the database servers, backups will be your life preserver. Backups are the foundation for Disaster and Recovery (DR). Backups can also save you when high Availability (HA) completely fails you. Let's get started!
 
 
 
@@ -44,7 +50,7 @@ A full database backup contains a full representation of the database [with enou
 
 **Differential Backup** – Differential backups add benefits to backup strategies by giving you a quicker recovery path. These backups contain the changes between the previous full backup and when the differential was executed. If you are recovering from a disaster and have a database in Full Recovery Model with transaction log backups, you are not required to restore the base, the differentials, and all the transaction log backups. Only the base and the differential are required to bring you to the point in time of the differential backup. 
 
-**Transaction Log Backup** – This type of backup contains the transactions since the last backup. This only applies to databases in Full or Bulk-Logged Recovery Model. For recovery to point-in-time, transaction log backups are needed, as well as required when in Full recovery to maintain the log files. By default, the Model database is set to Full recovery model which dictates how new databases are created. This means that any database you create without specifying default properties will adopt the Model’s recovery model. A common practice is to alter the Model database and set the recovery model to Simple. This will prevent out-of-control log growth when these types of backups are not put in place. 
+**Transaction Log Backup** – This type of backup contains the transactions since the last backup. This only applies to databases in Full or Bulk-Logged Recovery Model. For recovery to point-in-time, transaction log backups are needed, as well as required when in Full recovery to maintain the log files. By default, the Model database is set to Full recovery model which dictates how new databases are created. This means that any database you create without specifying default properties will adopt the Model's recovery model. A common practice is to alter the Model database and set the recovery model to Simple. This will prevent out-of-control log growth when these types of backups are not put in place. 
 
 **Partial Backup** – Partial backups are primarily used when all you want is in the primary filegroup of a database. This leaves all the other filegroups out of the backup and reduces the size of the overall backup file. 
 
@@ -139,7 +145,7 @@ In case of a torn page, the information would be written along with the page loc
 
 For backups in DR to be useful, we must test them by restoring them on a consistent schedule. Every backup has differences as does every database. Those differences are the state of the data and the state of the hardware when the backup was taken. Hardware problems can cause torn pages in a database and these issues will follow through to the backups. If a backup was completely successful and things like CHECKSUM (defined earlier) are not used to log errors, a backup can possibly fail to restore successfully and more importantly, become useless in a recovery plan. Best practice would be to restore every Full Backup and test the recovering levels of differentials and log backups in a Full Recovery model. 
 
-Automating these restore tests can help the process greatly. SQL Server Integration Services has the facilities to do this for you. Let’s look at a method with SSIS that can accomplish automating the restore process and reporting. 
+Automating these restore tests can help the process greatly. SQL Server Integration Services has the facilities to do this for you. Let's look at a method with SSIS that can accomplish automating the restore process and reporting. 
 
 > Note: large databases will add complexity and even inabilities to use these methods. File backups and other means that prevent automation will apply but should not forego testing by restoring.
 
@@ -176,7 +182,7 @@ Going farther:
 
 [BOL, BACKUP (Transact-SQL)][6]
 
-[Paul Randal’s corrupt database for testing][7]
+[Paul Randal's corrupt database for testing][7]
 
 > Why did I link to Paul's corrupt database? This is a valuable resource to test on. Through backup and restore and through all of this week of blogs, use this database to really see if you can recover using a DR or HA strategy. 
 

@@ -4,7 +4,15 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2010-06-04T12:29:42+00:00
 ID: 809
-excerpt: 'This post will illustrate two methods for removing old files from directories using SSIS.  This task is often used to delete old backup files and other ETL files that are not required any longer.  We’ll step through two methods.  First method uses a script task entirely for the removal and the logging events.  This method will also have some comments in for logging and using the FireInformation method to mimic the normal logging abilities of SSIS.  The FireInformation method didn’t provide much more of a performance boost so it wasn’t used here.  Second method uses a Foreach Loop Container, Script Task for logic and a File System Task for the delete event.  SSIS Logging will be utilized with the OnPreExecute and OnPostExecute events in the second method over the System.IO method of AppendText.'
+excerpt: This post will illustrate two methods for removing old files from directories using SSIS. 
+  This task is often used to delete old backup files and other ETL files that are not required any 
+  longer.  We'll step through two methods.  First method uses a script task entirely for the 
+  removal and the logging events.  This method will also have some comments in for logging and 
+  using the FireInformation method to mimic the normal logging abilities of SSIS.  The 
+  FireInformation method didn't provide much more of a performance boost so it wasn't used here.  
+  Second method uses a Foreach Loop Container, Script Task for logic and a File System Task for
+   the delete event.  SSIS Logging will be utilized with the OnPreExecute and OnPostExecute 
+   events in the second method over the System.IO method of AppendText.
 url: /index.php/datamgmt/dbprogramming/removing-old-files-with-ssis-sql-server/
 views:
   - 23280
@@ -24,7 +32,7 @@ tags:
   - ssis
 
 ---
-This post will illustrate two methods for removing old files from directories using SSIS. This task is often used to delete old backup files and other ETL files that are not required any longer. We’ll step through two methods. First method uses a script task entirely for the removal and the logging events. This method will also have some comments in for logging and using the FireInformation method to mimic the normal logging abilities of SSIS. The FireInformation method didn’t provide much more of a performance boost so it wasn’t used here. Second method uses a Foreach Loop Container, Script Task for logic and a File System Task for the delete event. SSIS Logging will be utilized with the OnPreExecute and OnPostExecute events in the second method over the System.IO method of AppendText. 
+This post will illustrate two methods for removing old files from directories using SSIS. This task is often used to delete old backup files and other ETL files that are not required any longer. We'll step through two methods. First method uses a script task entirely for the removal and the logging events. This method will also have some comments in for logging and using the FireInformation method to mimic the normal logging abilities of SSIS. The FireInformation method didn't provide much more of a performance boost so it wasn't used here. Second method uses a Foreach Loop Container, Script Task for logic and a File System Task for the delete event. SSIS Logging will be utilized with the OnPreExecute and OnPostExecute events in the second method over the System.IO method of AppendText. 
 
 The use of System.IO in a script task performed much better than the use of the File System Task. 
 

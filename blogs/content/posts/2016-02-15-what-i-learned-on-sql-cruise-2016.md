@@ -28,7 +28,7 @@ categories:
   </p>
 </div>
 
-4. <a href="https://twitter.com/GFritchey" target="_blank">Grant Fritchey</a> from <a href="http://www.red-gate.com/" target="_blank">Red Gate</a> brought his A game to talk about Query Store, a new feature in SQL Server 2016…but already available in Azure SQL Database. Red Gate continues to be an awesome sponsor of the cruise, and I'm thrilled they sent Grant to speak.
+4. <a href="https://twitter.com/GFritchey" target="_blank">Grant Fritchey</a> from <a href="http://www.red-gate.com/" target="_blank">Red Gate</a> brought his A game to talk about Query Store, a new feature in SQL Server 2016...but already available in Azure SQL Database. Red Gate continues to be an awesome sponsor of the cruise, and I'm thrilled they sent Grant to speak.
 
 <div id="attachment_4368" style="width: 310px" class="wp-caption aligncenter">
   <img class="size-medium wp-image-4368" src="/wp-content/uploads/2016/02/IMAG1840-300x168.jpg" alt="Listening to Grant talk. " width="300" height="168" srcset="/wp-content/uploads/2016/02/IMAG1840-300x168.jpg 300w, /wp-content/uploads/2016/02/IMAG1840-1024x576.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />
@@ -64,6 +64,6 @@ categories:
 
 9. <a href="https://twitter.com/kleegeek" target="_blank">David Klee</a> of <a href="http://heraflux.com/" target="_blank">Heraflux Technologies </a>is an amazing resource for anything infrastructure related, and has great resources on his website.
 
-10. Not that we didn't know, but <a href="https://twitter.com/DBArgenis" target="_blank">Argenis Fernandez</a> reminded us, “Security is not easy”…as he hacked SQL Server data from packets and read through dlls for dangerous data.
+10. Not that we didn't know, but <a href="https://twitter.com/DBArgenis" target="_blank">Argenis Fernandez</a> reminded us, “Security is not easy”...as he hacked SQL Server data from packets and read through dlls for dangerous data.
 
 11. The 2017 itineraries are going to be amazing. Keep an eye on <a href="http://sqlcruise.com/" target="_blank">http://sqlcruise.com/</a> for the details!

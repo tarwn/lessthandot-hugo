@@ -31,7 +31,7 @@ CREATE CLUSTERED  INDEX ix_test_clust ON test (id ASC, col1 DESC)
 
 How would you find out without scripting the index if the columns are in descending or ascending order? SQL Server has a function for that, the name of this function is INDEXKEY_PROPERTY
   
-Before starting I need to warn you that this will only run on SQL Server 2005 and above, I have not tested this on SQL Server 2000 but if you need it to run on SQL Server 2000 remove sys. in front of the tables…so instead of sys.sysindexes use sysindexes that should do the trick.
+Before starting I need to warn you that this will only run on SQL Server 2005 and above, I have not tested this on SQL Server 2000 but if you need it to run on SQL Server 2000 remove sys. in front of the tables...so instead of sys.sysindexes use sysindexes that should do the trick.
 
 Let's see how that works. first create this table in the tempdb
 

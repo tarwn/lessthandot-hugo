@@ -29,7 +29,7 @@ _identify that:
   
 no procs start with sp_
   
-no tables are named tbl…..
+no tables are named tbl.....
   
 no column names have spaces or other crazy characters in them
   

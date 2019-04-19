@@ -20,7 +20,7 @@ LessThanDot has had a stable layout and design for a couple years now, giving al
   <img src="http://www.tiernok.com/downloads/LTD/Tidbit_1.png" alt="LTD Tidbit Image" />
 </center>
 
-And apparently there is listening and then there is listening…
+And apparently there is listening and then there is listening...
 
 ## The Redesign
 
@@ -30,7 +30,7 @@ After the recent LTD Meet & Greet I convinced myself to start following our blog
   <img src="http://www.tiernok.com/downloads/LTD/Tidbit_4.png" alt="LTD Tidbit Image" />
 </center>
 
-After continued reflection (in some cases nearly an hour spent behind someone doing 5 under in the left lane…), I realized that the most significant culprit for my poor reading experience was a combination of the reading area layout and mixed font and color usage. Luckily I had some free time on my hands one Friday evening while waiting for Onpnt to review a few _\*cough\*_ minor reviewing notes I left on one of his posts. Since I had downtime and we had decided to test Google Video and Voice, I opened Photoshop and started trying to visualize a better reading experience. I'm not the handiest of graphics people but my CSS skills are pretty good and we have several founders who were willing to provide opinions, ideas and assistance as we turned those first drawings into a credible and, more importantly, readable site design.
+After continued reflection (in some cases nearly an hour spent behind someone doing 5 under in the left lane...), I realized that the most significant culprit for my poor reading experience was a combination of the reading area layout and mixed font and color usage. Luckily I had some free time on my hands one Friday evening while waiting for Onpnt to review a few _\*cough\*_ minor reviewing notes I left on one of his posts. Since I had downtime and we had decided to test Google Video and Voice, I opened Photoshop and started trying to visualize a better reading experience. I'm not the handiest of graphics people but my CSS skills are pretty good and we have several founders who were willing to provide opinions, ideas and assistance as we turned those first drawings into a credible and, more importantly, readable site design.
 
 <center>
   <img src="http://www.tiernok.com/downloads/LTD/Tidbit_3.png" alt="LTD Tidbit Image" />

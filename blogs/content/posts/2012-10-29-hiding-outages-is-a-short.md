@@ -26,7 +26,7 @@ And then some scheduled jobs in our development and staging environments kick of
 
 **6.45 PM**. Calling support leaves me in a hold queue that is experiencing “longer than normal call volume”. Maybe this isn't just me? I check the service status page and everything is green. Still waiting on hold. I check twitter and don't see any mentions. 
 
-**7:10 PM**. Lets check the public forums…ah, there's a few other people with this problem. I add my own personal story so we can help flesh out the picture of what's going on. 
+**7:10 PM**. Lets check the public forums...ah, there's a few other people with this problem. I add my own personal story so we can help flesh out the picture of what's going on. 
 
 **7:15 PM**. 30 minutes into the hold queue and I just got transferred to a ringing phone. After seeing the forum post, I suspect I'll end up getting a canned “We know there's a problem, we don't know what it is or when it will be fixed, thank you for all your money” speech. So I'm a little surprised when after two minutes of ringing the phone simply goes dead. 
 
@@ -46,7 +46,7 @@ I would bet we have all worked with companies or products that go to great pains
 
 Maybe we're afraid of upsetting users that weren't online at the time, of losing customers, of warning off potential users, of providing inside information to our competitors, or getting negative press.
 
-### Been There…
+### Been There...
 
 I once worked with a manager that screened each outage email, broadcasting only the ones that he felt were important enough to be forwarded, which tended to be none of them. Our service levels improved amazingly in the short term. Unfortunately since we weren't keeping our users informed, each outage took longer to correct as we also fielded calls from end users thinking it was just a problem with their system. Which meant our mean time to fix outages went down and affected more people. Which meant that the overall public consensus of our service level got poorer, especially as people realized we were simply not reporting our outages anymore. 
 

@@ -187,7 +187,7 @@ Storage size is 4 bytes. Integer data from -2^31 (-2,147,483,648) through 2^31 �
   
 Storage size is 8 bytes. Integer data from -2^63 (-9,223,372,036,854,775,808) through 2^63-1 (9,223,372,036,854,775,807).
 
-Now imagine facebook with a billion users decided to use bigint as CountryID in their Country table, this key is then uses as a foreign key in the user demographics table. This is wasteful,either use a smallint since we won't go through 32 thousand countries in the forseeable feature or use the 2 or 3 character ISO code. The problem is even worse if you have a compound 6 column key and it is used as a foreign key in tons of other tables…that was real fun to clean up….use a surrogate 1 column key in that case…but be sure to test….normalize till it hurts then denormalize till it works….I will cover normalization in another post…just wanted to mention it
+Now imagine facebook with a billion users decided to use bigint as CountryID in their Country table, this key is then uses as a foreign key in the user demographics table. This is wasteful,either use a smallint since we won't go through 32 thousand countries in the forseeable feature or use the 2 or 3 character ISO code. The problem is even worse if you have a compound 6 column key and it is used as a foreign key in tons of other tables...that was real fun to clean up....use a surrogate 1 column key in that case...but be sure to test....normalize till it hurts then denormalize till it works....I will cover normalization in another post...just wanted to mention it
 
 That is all for day two of the SQL Advent 2012 series, come back tomorrow for the next one, you can also check out all the posts from last year here: [SQL Advent 2011 Recap][2]
 

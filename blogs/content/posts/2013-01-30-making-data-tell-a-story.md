@@ -23,7 +23,7 @@ SQL Server Reporting Services is one of my favorite parts of the Microsoft SQL S
   <em>Which one of these tells the story better?</em>
 </p>
 
-I’ve used SSRS for years, and discovered many little tips and tricks to make reports stand out. For the next month, I’m going to be blogging about various properties in SSRS. Some are simple to find and set; some are more complex and require a few steps or expressions. Each of them will make your reports tell a story more clearly.
+I've used SSRS for years, and discovered many little tips and tricks to make reports stand out. For the next month, I'm going to be blogging about various properties in SSRS. Some are simple to find and set; some are more complex and require a few steps or expressions. Each of them will make your reports tell a story more clearly.
 
 Here is a list of the blogs in this series. All examples were created using SQL Server 2012, SQL Server Data Tools 2012, and AdventureWorks2012.
 

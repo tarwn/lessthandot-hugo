@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2012-10-30T13:22:00+00:00
 ID: 1774
-excerpt: It’s time to try something new! I was recently challenged to show something in database page with a hex editor for another blog post. I thought, “Hex what? Are we casting spells?” Let’s start with, “What is a hex editor?”
+excerpt: It's time to try something new! I was recently challenged to show something in database page with a hex editor for another blog post. I thought, “Hex what? Are we casting spells?” Let's start with, “What is a hex editor?”
 url: /index.php/datamgmt/dbprogramming/hex-editoring/
 views:
   - 9488
@@ -17,11 +17,11 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-It’s time to try something new! I was recently challenged to show something in database page with a hex editor for another blog post. I thought, “Hex what? Are we casting spells?”
+It's time to try something new! I was recently challenged to show something in database page with a hex editor for another blog post. I thought, “Hex what? Are we casting spells?”
 
-Let’s start with, “What is a hex editor?” It’s a program that lets you view the binary of a computer file – the 0’s and 1’s that it’s made of. There are many available.
+Let's start with, “What is a hex editor?” It's a program that lets you view the binary of a computer file – the 0's and 1's that it's made of. There are many available.
 
-I started with my coworker Kendra Little’s ([blog][1] | [twitter][2]) blog[, Corrupting Databases for Dummies- Hex Editor Edition][3]. I downloaded the hex editor [XVI32][4], as recommended. She gives instructions on how to install the software, create a database, create some objects, and then open the hex editor to break a page.
+I started with my coworker Kendra Little's ([blog][1] | [twitter][2]) blog[, Corrupting Databases for Dummies- Hex Editor Edition][3]. I downloaded the hex editor [XVI32][4], as recommended. She gives instructions on how to install the software, create a database, create some objects, and then open the hex editor to break a page.
 
 <p style="text-align: center;">
   <a href="http://www.flickr.com/photos/12739382@N04/3607882912/lightbox/"><img src="/wp-content/uploads/users/grrlgeek/skull crossbones.jpg?mtime=1351608410" alt="" /></a>
@@ -59,11 +59,11 @@ sql
 DBCC PAGE('CorruptMe', 1, 1116, 3);
 ```
 
-Following the steps in Kendra’s blog, I take the database offline, copy the physical file location, and figure out my page offset. I’ll need that information going forward.
+Following the steps in Kendra's blog, I take the database offline, copy the physical file location, and figure out my page offset. I'll need that information going forward.
 
 ### **The Hex Editor**
 
-Next, I open XVI32 and open the file. Well, that’s kind of fun-looking!
+Next, I open XVI32 and open the file. Well, that's kind of fun-looking!
 
  
 
@@ -71,9 +71,9 @@ Next, I open XVI32 and open the file. Well, that’s kind of fun-looking!
   <img src="/wp-content/uploads/users/grrlgeek/Hex 1.JPG?mtime=1351608565" alt="" />
 </p>
 
-Quite frankly, I have no idea what the heck I’m looking at.
+Quite frankly, I have no idea what the heck I'm looking at.
 
-To find the page I had selected, I go to Address > Go To and enter my offset value. I’m now seeing the page on the right side. I can tell this because I can see the word “Tweetie” – the data I inserted in the table.
+To find the page I had selected, I go to Address > Go To and enter my offset value. I'm now seeing the page on the right side. I can tell this because I can see the word “Tweetie” – the data I inserted in the table.
 
  
 
@@ -81,7 +81,7 @@ To find the page I had selected, I go to Address > Go To and enter my offset val
   <img src="/wp-content/uploads/users/grrlgeek/Hex 2.JPG?mtime=1351608653" alt="" />
 </p>
 
-I click on the first T and type X. Apparently I’ve just changed the data in my data file. Oops! I’ve corrupted a data file!
+I click on the first T and type X. Apparently I've just changed the data in my data file. Oops! I've corrupted a data file!
 
 I save the file and go back to SSMS. I bring the database online. That works without a problem. I run a query to view data in that table, which should access the nonclustered index I mangled.
 
@@ -136,7 +136,7 @@ CREATE NONCLUSTERED INDEX ncBirds ON dbo.DeadBirdies(BirdName);
 
 **What I Learned** 
 
-Someday, I may need to manually edit a database (or other) file. This is one of those tasks it’s nice to know I’ve done in practice before I ever need to actually do it – I know what to look for and what to do. I won’t need to panic at a critical moment.
+Someday, I may need to manually edit a database (or other) file. This is one of those tasks it's nice to know I've done in practice before I ever need to actually do it – I know what to look for and what to do. I won't need to panic at a critical moment.
 
 Magical! Where is [@SQLUnicorn][5] when I need him?
 

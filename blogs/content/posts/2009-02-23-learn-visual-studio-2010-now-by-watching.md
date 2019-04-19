@@ -23,15 +23,15 @@ Channel 9 has a bunch of videos showing all the new stuff in Visual Studio 2010.
 
 **[Episode 1: Working with the Visual Studio 2010 CTP VPC][1]**
   
-we’ll look at how to download and use the Virtual PC image of the Visual Studio 2010 September CTP. We’ll give you tips on how to download this massive (7GB+ compressed) VPC, show you how to get past some pesky expiration issues, and get you started with the CTP walkthroughs
+we'll look at how to download and use the Virtual PC image of the Visual Studio 2010 September CTP. We'll give you tips on how to download this massive (7GB+ compressed) VPC, show you how to get past some pesky expiration issues, and get you started with the CTP walkthroughs
 
 **[Episode 2: Welcome to Visual Studio 2010][2]**
   
-we’ll take a very high-level look at Visual Studio 2010. We’ll discuss what types of features you can expect to see in Visual Studio 2010 and .NET Framework 4.0 depending on what type of developer you are. And lastly we’ll go ahead and dive into a revised area of Visual Studio: the Start Page. The Start Page in Visual Studio 2010 has been revised to be XAML-based and allows full customization.
+we'll take a very high-level look at Visual Studio 2010. We'll discuss what types of features you can expect to see in Visual Studio 2010 and .NET Framework 4.0 depending on what type of developer you are. And lastly we'll go ahead and dive into a revised area of Visual Studio: the Start Page. The Start Page in Visual Studio 2010 has been revised to be XAML-based and allows full customization.
   
 **[Episode 3: ASP.NET WebForms 4.0][3]**
   
-We’ll begin seeing how Visual Studio 10 and the .NET Framework 4.0 offer compelling new functionality for web developers. In this episode we’ll be specifically focusing on ASP.NET WebForms 4.0, and what enhancements it offers.
+We'll begin seeing how Visual Studio 10 and the .NET Framework 4.0 offer compelling new functionality for web developers. In this episode we'll be specifically focusing on ASP.NET WebForms 4.0, and what enhancements it offers.
 
 **[Episode 4: No More Parallel Development Pain][4]**
   
@@ -51,7 +51,7 @@ We look at how Team Foundation Server 2010 will help you more easily plan the wo
 
 **[Episode 8: Pure Client-Side Development with ASP.NET AJAX 4.0][8]**
   
-We introduce some of the new features and functionality of ASP.NET AJAX 4.0. We’ll see how ASP.NET AJAX can be leveraged in a complete client-side environment, making it easier to develop rich web applications.
+We introduce some of the new features and functionality of ASP.NET AJAX 4.0. We'll see how ASP.NET AJAX can be leveraged in a complete client-side environment, making it easier to develop rich web applications.
 
 **[Episode 9: Visual Basic 10][9]**
   

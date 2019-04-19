@@ -33,7 +33,7 @@ Columns: the number of columns the final report will have.
 
 ColumnSpacing: the space between the columns.
 
-**Example**: I want to create a multi-column report to print mailing labels. (I’ve described this process in more detail [here][2].)
+**Example**: I want to create a multi-column report to print mailing labels. (I've described this process in more detail [here][2].)
 
 I set Columns to 3 and ColumnSpacing to .03125.
 
@@ -53,7 +53,7 @@ I must set the margins for proper padding. I set left, right, and bottom to 0, a
   <img src="/wp-content/uploads/users/grrlgeek/columns 3.png?mtime=1359640987" alt="" width="302" height="91" />
 </p>
 
-I can then drag an item on to the column. To create mailing labels, I need a list and a textbox. I place the list first, and set the width and height equal to that of the labels I’ll be working with.
+I can then drag an item on to the column. To create mailing labels, I need a list and a textbox. I place the list first, and set the width and height equal to that of the labels I'll be working with.
 
 <p style="text-align: center;">
   <img src="/wp-content/uploads/users/grrlgeek/columns 4.png?mtime=1359640987" alt="" width="299" height="57" />

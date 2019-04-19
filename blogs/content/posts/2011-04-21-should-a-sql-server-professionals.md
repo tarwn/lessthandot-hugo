@@ -21,7 +21,7 @@ categories:
   <a href="/media/blogs/DataMgmt/-40.png?mtime=1303401309"><img src="/wp-content/uploads/blogs/DataMgmt/-40.png?mtime=1303401309" alt="" width="78" height="75" align="left" /></a>
 </div>
 
-Yes, absolutely!  I strongly feel that all SQL Server Database Administrators and Developers should not only learn the basics and fundamental internals of Oracle, but should expand that to others such as DB2 and Sybase.  Why?  SQL Server is my mojo after all.  There shouldn’t be much reason to venture into Klingon territory and maybe start a database server uprising.  There actually is one major reason it should be a requirement to know more than SQL Server: Not everyone runs SQL Server. (Although they may want to)
+Yes, absolutely!  I strongly feel that all SQL Server Database Administrators and Developers should not only learn the basics and fundamental internals of Oracle, but should expand that to others such as DB2 and Sybase.  Why?  SQL Server is my mojo after all.  There shouldn't be much reason to venture into Klingon territory and maybe start a database server uprising.  There actually is one major reason it should be a requirement to know more than SQL Server: Not everyone runs SQL Server. (Although they may want to)
 
 So today we are going to focus on some very basic Oracle setup steps and commands to get us started on merging SQL Server skills into Oracle skills.  By the end of this series, we should be better prepared when the word, “Oracle” comes up in meetings and project discussions.  We really can all get along in the SQL Server and Oracle world.
 
@@ -29,11 +29,11 @@ So today we are going to focus on some very basic Oracle setup steps and command
 
 Focusing on Oracle; many people that are working with SQL Server think they simply do not have the ability to get their hands on Oracle due to the HUGE (yes that was a HUGE) costs that come along with it.  SQL Server has Developer Edition for next to nothing at $40 or so dollars.  Then there is SQL Server Express which has just about all the internal engine functionality as all editions do.  That means we get the same internal speed of what SQL Server is capable of with something that is totally free.
 
-Ah, guess what?  If you didn’t already know, there is an [Oracle Express][1].  Yes, it is free to download and use under the typical [Oracle licensing agreements][2].  You also need to create an account that requires a little more information that most are willing to give up but I’ve never been hounded by anyone from Oracle after creating the account.
+Ah, guess what?  If you didn't already know, there is an [Oracle Express][1].  Yes, it is free to download and use under the typical [Oracle licensing agreements][2].  You also need to create an account that requires a little more information that most are willing to give up but I've never been hounded by anyone from Oracle after creating the account.
 
 I found out about Oracle Express many years ago.  I had the need to know more about Oracle so I went out and found the best, and cheapest, way I could accomplish that.  Once I had the basic abilities needed to interact with Oracle, the specific project was much less intimidating and was a success.
 
-For a SQL Server Professional, setting anything up in Oracle can be frustrating and confusing.  There is simply more to it than SQL Server.  Let’s face it; we’ve been spoiled with the installation process SQL Server comes with and the ease of configuration changes.  With that, let’s setup Oracle Express.  Then later, we’ll show a quick SQL Server Integration Services DTSX connection to that Oracle Express Instance and push some data into an Oracle database.
+For a SQL Server Professional, setting anything up in Oracle can be frustrating and confusing.  There is simply more to it than SQL Server.  Let's face it; we've been spoiled with the installation process SQL Server comes with and the ease of configuration changes.  With that, let's setup Oracle Express.  Then later, we'll show a quick SQL Server Integration Services DTSX connection to that Oracle Express Instance and push some data into an Oracle database.
 
 **Installing Oracle Express**
 
@@ -48,19 +48,19 @@ _Any use of the Oracle Database Express Edition is subject to the following limi
 
 Setting up Oracle Express
 
-If using Windows; there are two downloads you will need.  I picked the Oracle Universal and then, the pain we all know, the Oracle Client.  We’ll step over the basic setup process of Oracle Express Universal.  Essentially, you can click “_Next”_ for every step with a basic Windows OS to get the install going.  Ensure that the port selections that Oracle installer wants to use are open on your machine.  You can alter them but it is far easier when learning this process to allow the ports and leave the defaults in the installer.
+If using Windows; there are two downloads you will need.  I picked the Oracle Universal and then, the pain we all know, the Oracle Client.  We'll step over the basic setup process of Oracle Express Universal.  Essentially, you can click “_Next”_ for every step with a basic Windows OS to get the install going.  Ensure that the port selections that Oracle installer wants to use are open on your machine.  You can alter them but it is far easier when learning this process to allow the ports and leave the defaults in the installer.
 
 After the installation is complete, launch the Home Page for your Oracle Express Instance to start working with Oracle. 
 
-> Here is the first catch: you will be presented with a login screen requiring a user name and password.  During the installation you should have set the system administrator password.  Now, if you didn’t read that screen thoroughly or it was confusing about which password you were setting; the password was for SYS.  Use that login for this screen to get going.  So, username: SYS password: <one you created>
+> Here is the first catch: you will be presented with a login screen requiring a user name and password.  During the installation you should have set the system administrator password.  Now, if you didn't read that screen thoroughly or it was confusing about which password you were setting; the password was for SYS.  Use that login for this screen to get going.  So, username: SYS password: <one you created>
 
 **Home Page**
 
-The home page is straight forward.  The Administration area has with it the ability to set configurations for storage, memory down to managing database users.  The first thing to do is create a new user.  In my case, I created ONPNT.  Now when I log into the Home Page I don’t have to use SYS.
+The home page is straight forward.  The Administration area has with it the ability to set configurations for storage, memory down to managing database users.  The first thing to do is create a new user.  In my case, I created ONPNT.  Now when I log into the Home Page I don't have to use SYS.
 
 **Simple commands**
 
-At this point Oracle Express is running and you can create tables and have all kinds of database fun.  Showing how we can interact with Oracle can be done from the SQL Commands page, which is located in the SQL area from the Home Page.   Let’s send a statement through the SQL Commands tool to show how it works.
+At this point Oracle Express is running and you can create tables and have all kinds of database fun.  Showing how we can interact with Oracle can be done from the SQL Commands page, which is located in the SQL area from the Home Page.   Let's send a statement through the SQL Commands tool to show how it works.
 
 In the panel where you can add commands, enter “SELECT * FROM SYSTEM.HELP”.  This shows all the rows in the system help table. 
 
@@ -112,7 +112,7 @@ DESCRIBE imports
 
 **Installation and verification completed**
 
-In this post we’ve installed Oracle Express and found out how we can connect and run commands.  So far we have done everything directly on Oracle though and to really utilize it, we need to set things up so SQL Server can connect to it.  This way we can learn how we may have to interact with Oracle as SQL Server Professionals.  The post that follows will go over setting up the Oracle Client and TNSNAMES.ora.  TNSNAMES is a SQL*NET configuration that will essentially be used to direct out communications to the Oracle Instance and database. 
+In this post we've installed Oracle Express and found out how we can connect and run commands.  So far we have done everything directly on Oracle though and to really utilize it, we need to set things up so SQL Server can connect to it.  This way we can learn how we may have to interact with Oracle as SQL Server Professionals.  The post that follows will go over setting up the Oracle Client and TNSNAMES.ora.  TNSNAMES is a SQL*NET configuration that will essentially be used to direct out communications to the Oracle Instance and database. 
 
  
 

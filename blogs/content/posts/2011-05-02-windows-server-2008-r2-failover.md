@@ -1,5 +1,5 @@
 ---
-title: 'Windows Server 2008 R2 Failover Clustering: It’s Cool'
+title: Windows Server 2008 R2 Failover Clustering - It's Cool
 author: Jes Borland
 type: post
 date: 2011-05-02T11:43:00+00:00
@@ -21,17 +21,17 @@ I recently took a three-day class on [Windows Server 2008 R2: Deploying and Mana
   <a href="/wp-content/uploads/users/grrlgeek/blackboardteacher.JPG?mtime=1304295364"><img alt="" src="/wp-content/uploads/users/grrlgeek/blackboardteacher.JPG?mtime=1304295364" width="309" height="256" title="Class Is In Session" /></a>
 </div>
 
-My clustering experience: At my previous job, I had supported SQL Server 2005 on a Windows Server 2003 cluster for a couple of years. I had tried to install a Windows Server 2008 cluster last year (and failed miserably, because I didn’t know anything). With my current job, I support several instances of SQL Server 2008 on Windows Server 2008 and SQL Server 2005 on Windows Server 2003. 
+My clustering experience: At my previous job, I had supported SQL Server 2005 on a Windows Server 2003 cluster for a couple of years. I had tried to install a Windows Server 2008 cluster last year (and failed miserably, because I didn't know anything). With my current job, I support several instances of SQL Server 2008 on Windows Server 2008 and SQL Server 2005 on Windows Server 2003. 
 
-What I knew about clusters: I could fail over a cluster resource and make sure it came back online. I understood the concept of nodes, quorum and shared disk. That was about it. I don’t think I had any idea how much I didn’t know until I took this class. 
+What I knew about clusters: I could fail over a cluster resource and make sure it came back online. I understood the concept of nodes, quorum and shared disk. That was about it. I don't think I had any idea how much I didn't know until I took this class. 
 
 Here are a few of the things I learned about clustering, and specifically things that are new to Windows Server 2008 R2 Failover Clustering. 
 
-First, there is a big difference between someone who knows a lot about a subject and can teach it, and a good teacher. The instructor, while extremely knowledgeable, was a little dry and I don’t feel he managed to keep the entire class engaged. The format was lecture, then lab. I felt he could have walked through the labs with us, answering questions as went, rather than just letting us go on our own. As a speaker, I learned a lot from him, and will always strive to be a good teacher. 
+First, there is a big difference between someone who knows a lot about a subject and can teach it, and a good teacher. The instructor, while extremely knowledgeable, was a little dry and I don't feel he managed to keep the entire class engaged. The format was lecture, then lab. I felt he could have walked through the labs with us, answering questions as went, rather than just letting us go on our own. As a speaker, I learned a lot from him, and will always strive to be a good teacher. 
 
 Second, the capabilities of PowerShell stood out in this class. 
 
-The basics of clustering: it’s a high-availability technology. Clustering involves setting up nodes that communicate with each other. They share storage. If one node goes down, it fails over to another on the cluster (if all goes according to plan!). Here’s what else I learned. 
+The basics of clustering: it's a high-availability technology. Clustering involves setting up nodes that communicate with each other. They share storage. If one node goes down, it fails over to another on the cluster (if all goes according to plan!). Here's what else I learned. 
 
 **Quorum** 
 
@@ -61,17 +61,17 @@ This is cool. If you have a cluster that is a series of Hyper-V virtual machines
 
 **DFS FTW** 
 
-Until this class, I had not heard of DFS (Distributed File System). Because of that, I hadn’t heard of DFS Replication. What was I missing? A lot! DFS is, if I understand it correctly, a way to logically organize a series of folders on multiple disks, which users see as a series of folders and subfolders. Add in DFS Replication and it takes it up a level. It allows you to keep a set of folders in sync across multiple servers, using replication and clustering. 
+Until this class, I had not heard of DFS (Distributed File System). Because of that, I hadn't heard of DFS Replication. What was I missing? A lot! DFS is, if I understand it correctly, a way to logically organize a series of folders on multiple disks, which users see as a series of folders and subfolders. Add in DFS Replication and it takes it up a level. It allows you to keep a set of folders in sync across multiple servers, using replication and clustering. 
 
 **Paxos** 
 
-For the first time, I looked at the cluster keys in the registry. One of the most important has the coolest name: Paxos. It’s a tag that ensures consistency on all nodes. It’s in the format: 3:3:157. 
+For the first time, I looked at the cluster keys in the registry. One of the most important has the coolest name: Paxos. It's a tag that ensures consistency on all nodes. It's in the format: 3:3:157. 
 
 These are the NextEpoch Number, LastEpoch Number, and Sequence Number. All nodes should have the same tag in the registry. Any time a change is made to the cluster configuration, the sequence number is increased. 
 
 **Security Changes** 
 
-There’s been a big change for cluster security. The cluster service account is no longer a domain user account, but is a local system account. This can prevent changes to a domain account, even if they were accidental, from adversely impacting the cluster. 
+There's been a big change for cluster security. The cluster service account is no longer a domain user account, but is a local system account. This can prevent changes to a domain account, even if they were accidental, from adversely impacting the cluster. 
 
 The default authentication method in clusters has also changed to Kerberos. NTLM authentication will still be usable, if necessary. 
 
@@ -105,7 +105,7 @@ On a Windows Server 2008 R2 Core, on both nodes you configure the shared storage
 
 **Take-Away** 
 
-I will probably not need to research, prepare and install a cluster from scratch anytime in the near future – I have an entire server team that takes care of that. However, I have a much better understanding of clustering in general now. I will be able to troubleshoot problems with clusters better. I know my way around Failover Cluster Manager. I could add a resource. I can use PowerShell commands to easily check settings. I can even create a Hyper V machine. All in all, it was a great class and I’m glad I took it.
+I will probably not need to research, prepare and install a cluster from scratch anytime in the near future – I have an entire server team that takes care of that. However, I have a much better understanding of clustering in general now. I will be able to troubleshoot problems with clusters better. I know my way around Failover Cluster Manager. I could add a resource. I can use PowerShell commands to easily check settings. I can even create a Hyper V machine. All in all, it was a great class and I'm glad I took it.
 
  [1]: http://www.google.com/url?sa=t&source=web&cd=1&ved=0CBYQFjAA&url=http%3A%2F%2Fdownload.microsoft.com%2Fdocuments%2Faustralia%2Fservices%2Fdatasheets%2FWindows_Server_2008_R2_Deploying_and_Managing_Failover_Cluster_WorkshopPLUS(4Days).pdf&ei=ekm8TfKdJtGQtgeI8JiPBA&usg=AFQjCNFfCz9b2ZWH2vfUDWO4a9TSMw-iHA
  [2]: http://support.microsoft.com/kb/302873

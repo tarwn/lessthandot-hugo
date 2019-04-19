@@ -124,7 +124,7 @@ Here are the errors I had to work through in order to get the initial build to w
       * I rebooted to finish windows update, installed tortoisehg, rebooted to have clean startup (and paths), and the issue was corrected
   2. Failure – In the console log it complained about not being able to find the MS Build executable 
       * Returned to project settings and switched MS Build option from (default) to the one I had configured above in global settings
-  3. Error MSB4019: The imported project “C: … Microsoft.WebApplication.targets” was not found 
+  3. Error MSB4019: The imported project “C: ... Microsoft.WebApplication.targets” was not found 
       * Options: 
           * Install VS 2010 Shell (http://www.microsoft.com/download/en/details.aspx?id=115)
           * Install Visual Studio

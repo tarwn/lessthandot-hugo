@@ -95,15 +95,15 @@ I would like to thank everyone that has helped me review and edit these articles
 
 If you have missed prior articles in the series you can find them here:
   
-Applying Kanban … Part 1: [Kanban Overview][2]
+Applying Kanban ... Part 1: [Kanban Overview][2]
   
-Applying Kanban … Part 2: [Kanban applied to Tech Support][3]
+Applying Kanban ... Part 2: [Kanban applied to Tech Support][3]
   
-Applying Kanban … Part 3: [Kanban applied to PC Deployment][4]
+Applying Kanban ... Part 3: [Kanban applied to PC Deployment][4]
   
-Applying Kanban … Part 4: [Kanban applied to a Development Group][5]
+Applying Kanban ... Part 4: [Kanban applied to a Development Group][5]
   
-_Applying Kanban … Part 5: Challenges, Additional Concepts, and Wrapup_
+_Applying Kanban ... Part 5: Challenges, Additional Concepts, and Wrapup_
 
  [1]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-1
  [2]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-1 "Read the first article"

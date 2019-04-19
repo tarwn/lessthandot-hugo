@@ -47,7 +47,7 @@ Horrible, horrible reviews on Amazon. Still an interesting story of how to cope 
 
 4) [Brave New World][5] by Aldous Huxley
   
-It was interesting…I am sure it was eye opening and way ahead of its time when it was published in 1932. Some interesting things like the use of Our Ford (instead of Our Lord and of course the assembly lines that Ford first used which is I guess a metaphor for life in the World State). Soma…the good feel drug….I wonder how he came up with that one. Reminded me of 1984, the matrix and V for Vendetta.At times it was difficult to read..and I had to re-read paragraphs.
+It was interesting...I am sure it was eye opening and way ahead of its time when it was published in 1932. Some interesting things like the use of Our Ford (instead of Our Lord and of course the assembly lines that Ford first used which is I guess a metaphor for life in the World State). Soma...the good feel drug....I wonder how he came up with that one. Reminded me of 1984, the matrix and V for Vendetta.At times it was difficult to read..and I had to re-read paragraphs.
 
 5) [The War of the World][6] by Niall Ferguson
   
@@ -55,7 +55,7 @@ This book is about the conflicts in the 20th century and maybe a reminder what c
 
 6) [The big short][7] by Michael Lewis
   
-The best book I read so far this year….deals with the financial crisis of 2007/2008 but written in a very witty way…very much like Liar's Poker..his first book…highly recommended
+The best book I read so far this year....deals with the financial crisis of 2007/2008 but written in a very witty way...very much like Liar's Poker..his first book...highly recommended
 
 7) [Full Dark, No Stars][8] by Stephen King
   
@@ -71,7 +71,7 @@ This is a comedy book written by a comedian..nothing to do with zombies..pretty 
 
 10) [How an Economy Grows and Why It Crashes][11] by Peter D. Schiff and Andrew J. Schiff
   
-Interesting book, explaining why we have the crisis and why Quantitative Easing is not the solution…also everything is explained with stories on a small island..highly recommended
+Interesting book, explaining why we have the crisis and why Quantitative Easing is not the solution...also everything is explained with stories on a small island..highly recommended
 
 11) [The Girl with the Dragon Tattoo][12] by Stieg Larsson
   

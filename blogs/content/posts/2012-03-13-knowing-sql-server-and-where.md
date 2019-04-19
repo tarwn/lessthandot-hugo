@@ -18,15 +18,15 @@ categories:
 
  
 
-_So, in this installment of T-SQL Tuesday I’d like to ask you to blog about your experience. Tell us why you specialized, or why you’d like to specialize. If you don’t think that specialization is a good thing, tell us why. Discuss. Argue your point(s)._
+_So, in this installment of T-SQL Tuesday I'd like to ask you to blog about your experience. Tell us why you specialized, or why you'd like to specialize. If you don't think that specialization is a good thing, tell us why. Discuss. Argue your point(s)._
 
 I like this topic very much and wanted to get a short but effective message out to my readers on what I think regarding specializing in a specific technology.
 
-I’ve always been an advocate of teaching others coming up in this field that knowing all the variables in a system is a critical step in gaining the true ability to be capable at a principal level.  This can go as far into a topic like SQL Server as understanding how a disk drive functions to how the effects of shrinking a file has on that drives performance as it relates to the operating system.
+I've always been an advocate of teaching others coming up in this field that knowing all the variables in a system is a critical step in gaining the true ability to be capable at a principal level.  This can go as far into a topic like SQL Server as understanding how a disk drive functions to how the effects of shrinking a file has on that drives performance as it relates to the operating system.
 
-First, let me answer the question: I think you have to specialize but only after you’ve created a base, well-rounded, skillset of the overall platforms that your chosen specialty will live on.
+First, let me answer the question: I think you have to specialize but only after you've created a base, well-rounded, skillset of the overall platforms that your chosen specialty will live on.
 
-I never look at anything as it pertains to today when it comes to skills and I personally set as goals or achievements.  This goes along with specializing in SQL Server as a complete enterprise database management system.  Notice yet that I am skating around claiming I specialize in any one part of SQL Server?  I like to think I specialize in SQL server.  I understand and consume everything from internals to integration services.  This allows me to be a more rounded consultant, in my opinion.  That doesn’t mean you should be the same but how you get there is the important concept I want to use this month’s T-SQL Tuesday to discuss.
+I never look at anything as it pertains to today when it comes to skills and I personally set as goals or achievements.  This goes along with specializing in SQL Server as a complete enterprise database management system.  Notice yet that I am skating around claiming I specialize in any one part of SQL Server?  I like to think I specialize in SQL server.  I understand and consume everything from internals to integration services.  This allows me to be a more rounded consultant, in my opinion.  That doesn't mean you should be the same but how you get there is the important concept I want to use this month's T-SQL Tuesday to discuss.
 
 <p style="text-align: left;">
    
@@ -36,7 +36,7 @@ I never look at anything as it pertains to today when it comes to skills and I p
 
 <blockquote>
   <p>
-    “I’ve always been an advocate of teaching others coming up in this field that knowing all the variables in a system is a critical step in gaining the true ability to be capable at a principal level”
+    “I've always been an advocate of teaching others coming up in this field that knowing all the variables in a system is a critical step in gaining the true ability to be capable at a principal level”
   </p>
 </blockquote>
 
@@ -52,11 +52,11 @@ I never look at anything as it pertains to today when it comes to skills and I p
   </p>
   
   <p>
-    Graduating, if you will, from a support level into an administrative level comes next.  Now the stepping stone of controlling how a system functions is under your control.  In this stage you learn more about subsystems and how they reflect the overall performance of the specialized technology you’ve chosen.
+    Graduating, if you will, from a support level into an administrative level comes next.  Now the stepping stone of controlling how a system functions is under your control.  In this stage you learn more about subsystems and how they reflect the overall performance of the specialized technology you've chosen.
   </p>
   
   <p>
-    Fast forward your career and all the heartache and trials you’ve taken to a point in time you’ve become an extremely formidable specialist in something like SQL Server.  Given your careers path and choosing to be more active in learning all aspects to computing around SQL Server, you’ve gained a complete understanding far beyond install, complete and run.
+    Fast forward your career and all the heartache and trials you've taken to a point in time you've become an extremely formidable specialist in something like SQL Server.  Given your careers path and choosing to be more active in learning all aspects to computing around SQL Server, you've gained a complete understanding far beyond install, complete and run.
   </p>
   
   <p>

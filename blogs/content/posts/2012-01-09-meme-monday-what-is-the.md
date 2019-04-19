@@ -31,7 +31,7 @@ Here is mine, it is from September 15, 2005, it was about something that trips p
   
 > I have seen this problem posted many times on newsgroups and It actually happened to a co-worker not too long ago
   
-> This 'problem’ can occur when you do an insert into Table A and there is at trigger defined that fires when the insert happens and this trigger does an insert into table B.
+> This 'problem' can occur when you do an insert into Table A and there is at trigger defined that fires when the insert happens and this trigger does an insert into table B.
   
 > What @@IDENTITY returns is actually the identity from Table B
   

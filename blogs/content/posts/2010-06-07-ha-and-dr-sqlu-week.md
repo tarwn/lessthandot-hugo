@@ -30,11 +30,11 @@ During the week, we will talk about defining HA and DR and introduce some points
 
 ### Defining the disaster and the recovery
 
-For the SQL Server world, a disaster can mean several things. It can include loss of disk, network, physical or virtual servers, software, even a memory module and in some cases, people. Loss of any of these can be detrimental to providing data services. Anyone in charge of maintaining service levels is included in the group in charge of protecting it. Yes, don’t turn the other way looking for the person behind you. We know who you are.
+For the SQL Server world, a disaster can mean several things. It can include loss of disk, network, physical or virtual servers, software, even a memory module and in some cases, people. Loss of any of these can be detrimental to providing data services. Anyone in charge of maintaining service levels is included in the group in charge of protecting it. Yes, don't turn the other way looking for the person behind you. We know who you are.
 
 It is inevitable that a disaster will hit an installation at some point in time. When a disaster does bring data services down, being prepared is the only way for you to recover with as little loss as possible. Once you are prepared for a disaster, the disaster and recovery plan should be tested to the point that it can be followed through without question. These types of drills will uncover bottlenecks in the process of recovery. These bottlenecks can cause the same type of data loss as the disaster itself, and in some cases, can make reverting back from the disaster, a disaster. The business is also important to your disaster and recovery plans. Will it need to alter its operations? Will remote abilities and processes need to be put in place? Remote call centers? Do remote “cloud” solutions need to be considered? Each business entity must be aware of the recovery plan and follow the same guidelines as the data team in bringing the remote recovery site online.
 
-Before we start looking at the native SQL Server features for both HA and DR, let’s define the two and also discuss our options and common practices. 
+Before we start looking at the native SQL Server features for both HA and DR, let's define the two and also discuss our options and common practices. 
 
 ## Disaster / Recovery
 
@@ -112,7 +112,7 @@ With the major changes to SQL Server in release 2005, Database Mirroring became 
   * High Protection (Synchronous Mirroring with Safety Off) – Includes 2 designated SQL Server instances – Principal and Mirror.
   * High Performance (Asynchronous Mirroring) – Includes 2 designated SQL Server instances – Principal and Mirror.
 
-High Availability operating mode is truly HA with the automated failover capabilities. Some critical aspects to automated failover need to be considered just as considerations come in with DR failover events. Two questions we can ask ourselves before moving forward are: Can the applications supporting the business handle an automated failover? Can the application’s performance handle this operating mode?
+High Availability operating mode is truly HA with the automated failover capabilities. Some critical aspects to automated failover need to be considered just as considerations come in with DR failover events. Two questions we can ask ourselves before moving forward are: Can the applications supporting the business handle an automated failover? Can the application's performance handle this operating mode?
   
 The second question is one that must be answered by testing and knowing the load on the applications with the equation of the infrastructure and server resources. Mirroring over a WAN, for example, will weigh heavily on the ability to retain the synchronous operations of writing to the logs. In many cases, switching to asynchronous and giving up the automated abilities built in is required. In these cases, monitoring the mirroring state is required so you can make decisions on failing over to the mirror. In-place scripts can then be executed, if the strategy has been set and tested for stability. 
 

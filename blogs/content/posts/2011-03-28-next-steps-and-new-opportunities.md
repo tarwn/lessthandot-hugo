@@ -16,7 +16,7 @@ categories:
 ---
 In a week and a half I will be the newest Senior Developer at a local manufacturing company. In a career path where most developers are seeking software development companies, it's probably not surprising that I'm one of the ones going the other direction.
 
-## So Far…
+## So Far...
 
 My career has been focused on development, but not necessarily on writing code.
 

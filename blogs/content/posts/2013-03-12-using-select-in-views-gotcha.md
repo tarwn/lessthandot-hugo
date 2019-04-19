@@ -30,7 +30,7 @@ One place that DBAs use SELECT * is when they create views. The idea is that you
 
 This works, but there is one big issue with it that most people learn the hard way. If the schema of the source table that the view is selecting from changes, the view will NOT automatically update to include those changes.
 
-For example, let’s create a simple table with some data and a view over it (because we are using really simple code, I’m not going format visually the way I normally do).
+For example, let's create a simple table with some data and a view over it (because we are using really simple code, I'm not going format visually the way I normally do).
 
 sql
 CREATE TABLE tblViewExample (col1 INT NULL);
@@ -47,9 +47,9 @@ SELECT * FROM vViewExample;
   <a href="/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883" width="67" height="83" /></a>
 </div>
 
-I did break the rule of no SELECT * again but it’s to demonstrate the point of this article.
+I did break the rule of no SELECT * again but it's to demonstrate the point of this article.
   
-So far everything is being returned as we expect it. Now let’s change the schema of our table and see what happens.
+So far everything is being returned as we expect it. Now let's change the schema of our table and see what happens.
 
 sql
 ALTER TABLE tblViewExample ADD col2 INT NULL;
@@ -62,7 +62,7 @@ SELECT * FROM vViewExample;
   <a href="/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883" width="67" height="83" /></a>
 </div>
 
-Notice that col2 is missing even though the view is using SELECT *. Let’s see what happens if we try to use the view to insert a new record with data in col2.
+Notice that col2 is missing even though the view is using SELECT *. Let's see what happens if we try to use the view to insert a new record with data in col2.
 
 sql
 INSERT INTO vViewExample (col1, col2) VALUES (5, 5);
@@ -79,7 +79,7 @@ GO
 CREATE VIEW vViewExample AS SELECT * FROM tblViewExample
 ```
 
-Now let’s try the insert statement again and then the select statement.
+Now let's try the insert statement again and then the select statement.
 
 sql
 INSERT INTO vViewExample (col1, col2) VALUES (5, 5);
@@ -90,7 +90,7 @@ SELECT * FROM vViewExample;
   <a href="/wp-content/uploads/users/kconan/view3.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/view3.JPG?mtime=1363096883" width="108" height="102" /></a>
 </div>
 
-And of course, let’s clean up after ourselves!
+And of course, let's clean up after ourselves!
 
 sql
 DROP VIEW vViewExample;

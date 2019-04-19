@@ -1,5 +1,5 @@
 ---
-title: Windows Azure From A Developer’s Perspective Post
+title: Windows Azure From A Developer's Perspective Post
 author: SQLDenis
 type: post
 date: 2008-11-04T14:00:53+00:00

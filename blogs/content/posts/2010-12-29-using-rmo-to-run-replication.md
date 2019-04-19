@@ -27,7 +27,7 @@ RMO and working with SQL Server Replication
 
 </strong>
 
-I’ve started to add [Wiki entries here on LessThanDot][1] for Replication Management Objects (RMO).  RMO is not a new assembly and has been around a long time for use with replication.  In most cases RMO is extremely beneficial to merge replication when the subscriptions are editions like SQL Express.  This is due to the lack of a SQL Server Agent on the Express side.  With RMO you can run almost every task that involves replication including monitoring.
+I've started to add [Wiki entries here on LessThanDot][1] for Replication Management Objects (RMO).  RMO is not a new assembly and has been around a long time for use with replication.  In most cases RMO is extremely beneficial to merge replication when the subscriptions are editions like SQL Express.  This is due to the lack of a SQL Server Agent on the Express side.  With RMO you can run almost every task that involves replication including monitoring.
 
 I will build on the RMO listing in the Wiki area and keep this post updated for quick links to them.
 

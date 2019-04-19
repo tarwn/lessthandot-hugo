@@ -19,7 +19,7 @@ tags:
 ---
 You have all seen sites that popup messages telling you that your IE6 browser is insecure and that you should upgrade to IE7/8, FireFox or Chrome. The reason for this is of course that IE6 is a terrible browser to develop against; nobody wants to spend half their time putting in CSS hacks so that their webpage looks halfway decent. Some sites like [37signals decided to dump IE6][1] completely 
 
-So here is the problem with this, most companies I interact with won’t let you run as an administrator and you cannot install a single thing. Yeah you can download another browser but you can’t install it. Most of these companies also have windows update disabled on the machines, updates are pushed through LANDesk. A new browser is not part of these update pushes. Just imagine that you call help desk to ask them to install a new browser on your machine. Most probably you will get an answer that IE6 is the corporate standard and that it is the browser you have to use.
+So here is the problem with this, most companies I interact with won't let you run as an administrator and you cannot install a single thing. Yeah you can download another browser but you can't install it. Most of these companies also have windows update disabled on the machines, updates are pushed through LANDesk. A new browser is not part of these update pushes. Just imagine that you call help desk to ask them to install a new browser on your machine. Most probably you will get an answer that IE6 is the corporate standard and that it is the browser you have to use.
 
 Of course some companies developed internal apps that use ActiveX and will only work on IE6, this is another reason that IE6 will not go away any time soon.
 

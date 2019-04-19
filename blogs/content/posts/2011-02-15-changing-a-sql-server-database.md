@@ -41,11 +41,11 @@ Without a database owner, you can't view the database properties. You may run in
 
 **The Old Way: sp_changedbowner** 
 
-Normally, I would use sp_changedbowner. Why? It’s familiar. It’s comfortable, like my favorite socks. But there’s a new way, and it’s time for me to learn that. (Also, Microsoft has indicated [it will be removed in a future version][1].) 
+Normally, I would use sp_changedbowner. Why? It's familiar. It's comfortable, like my favorite socks. But there's a new way, and it's time for me to learn that. (Also, Microsoft has indicated [it will be removed in a future version][1].) 
 
 **The New Way: ALTER AUTHORIZATION**
 
-I had to fumble around a bit to find this command. I am familiar with using ALTER DATABASE SET… to change many database facets. However, in looking through Books Online, I didn’t see a way to use this to change the database owner. I dug a little further, and found [ALTER AUTHORIZATION][2]. 
+I had to fumble around a bit to find this command. I am familiar with using ALTER DATABASE SET... to change many database facets. However, in looking through Books Online, I didn't see a way to use this to change the database owner. I dug a little further, and found [ALTER AUTHORIZATION][2]. 
 
 The BOL syntax is: 
 

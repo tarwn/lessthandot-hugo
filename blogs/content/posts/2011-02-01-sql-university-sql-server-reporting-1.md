@@ -41,7 +41,7 @@ When you install SQL Server Reporting Services, you will be able to access the m
 
 All of these settings, and many more, are stored in a series of XML configuration files. Understanding what is in these files can help you understand the SSRS architecture better, troubleshoot problems more in-depth, and customize your installations. 
 
-Let’s take a look at what these files are. 
+Let's take a look at what these files are. 
 
 **Where ARE They?**
 
@@ -51,7 +51,7 @@ I see this question posted on forums a lot: where are the configuration files hi
 
 Located in the ReportServer folder, this is the meat-and-potatoes of the SSRS files. The settings here are used by Report Manager, the Report Server web service, and background processes. 
 
-Some of the settings you’ll find here include: 
+Some of the settings you'll find here include: 
 
   * Logon credentials
   * Timeout information
@@ -67,7 +67,7 @@ This file is located in the ReportServerbin folder.
 
 Reporting Services has log files, separate from the SQL Server error log files. These are stored at C:Program FilesMicrosoft SQL ServerMSRS10_50.MSSQLSERVERReporting ServicesLogFiles. In this config file, you can edit settings related to these. 
 
-Some of the settings you’ll find here include:
+Some of the settings you'll find here include:
   
 • What level of logging you want on your log files.
   
@@ -77,7 +77,7 @@ Some of the settings you’ll find here include:
   
 • How log to retain log files. 
 
-This is a great place to show an example of how to modify the config files. Let’s use FileName. By default, it’s ReportServerService_. 
+This is a great place to show an example of how to modify the config files. Let's use FileName. By default, it's ReportServerService_. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/ReportingServicesService Config.JPG?mtime=1296100414"><img alt="" src="/wp-content/uploads/users/grrlgeek/ReportingServicesService Config.JPG?mtime=1296100414" width="478" height="287" /></a>
@@ -103,7 +103,7 @@ And my log files are now named differently:
 
 **RSSrvPolicy , RSMgrPolicy , and RSPreviewPolicy** 
 
-These three configuration files store security settings for various components. It isn’t recommended that you edit these files, but it’s helpful to know what they correspond to. 
+These three configuration files store security settings for various components. It isn't recommended that you edit these files, but it's helpful to know what they correspond to. 
 
 **RSSrvPolicy** – Report Server. Located at C:Program FilesMicrosoft SQL ServerMSRS10_50.MSSQLSERVERReporting ServicesReportServer
   
@@ -117,7 +117,7 @@ This file holds settings for rendering formats and data extensions in the Report
 
 **A Word of Caution** 
 
-As with any changes to a system, make sure you back up your files before making changes. Also, be aware that some settings can only be changed from the Configuration Manager, and some are internal and can’t be changed at all. 
+As with any changes to a system, make sure you back up your files before making changes. Also, be aware that some settings can only be changed from the Configuration Manager, and some are internal and can't be changed at all. 
 
 My next post will explore ReportingServicesService, giving you information to make your SSRS installations more customized and powerful.
 

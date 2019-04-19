@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-02T10:26:00+00:00
 ID: 1130
-excerpt: 'SQL Server performs best when paired with hardware and an OS configured only for the core functionality of the SQL Server Engine.  Installing other features along with the engine can degrade performance and the engine’s ability to process transactions. &hellip;'
+excerpt: SQL Server performs best when paired with hardware and an OS configured only for the core functionality of the SQL Server Engine.  Installing other features along with the engine can degrade performance and the engine's ability to process transactions. &hellip;
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-4/
 views:
   - 4855
@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-SQL Server performs best when paired with hardware and an OS configured only for the core functionality of the SQL Server Engine.  Installing other features along with the engine can degrade performance and the engine’s ability to process transactions.  With this knowledge, why would anyone ever want to install one of the SQL Server features with the core engine?  This usually comes down to cost.
+SQL Server performs best when paired with hardware and an OS configured only for the core functionality of the SQL Server Engine.  Installing other features along with the engine can degrade performance and the engine's ability to process transactions.  With this knowledge, why would anyone ever want to install one of the SQL Server features with the core engine?  This usually comes down to cost.
 
 **Cost considerations when installing features of SQL Server**
 
@@ -32,7 +32,7 @@ With licensing and hardware costs aside, the recommendation is to always separat
   <a href="/media/blogs/DataMgmt/-45.png?mtime=1303501614"><img src="/wp-content/uploads/blogs/DataMgmt/-45.png?mtime=1303501614" alt="" width="476" height="256" /></a>
 </div>
 
-The physical setup above, with fully licensed models, also allows for workloads to be distributed <span style="text-decoration: line-through;">set</span> across the environment.  This can prevent unwanted waits on the business’s primary database server(s).  Use time and internal features such as mirroring and database snapshots to move data between the servers.  This movement allows for optimal performance for the customer facing requests.
+The physical setup above, with fully licensed models, also allows for workloads to be distributed <span style="text-decoration: line-through;">set</span> across the environment.  This can prevent unwanted waits on the business's primary database server(s).  Use time and internal features such as mirroring and database snapshots to move data between the servers.  This movement allows for optimal performance for the customer facing requests.
 
 **Resources**
 

@@ -51,11 +51,11 @@ In a class the main routine is the start of a program
   
 The main routine will look like this
 
-public static void main(String[] args) {…….}
+public static void main(String[] args) {.......}
 
 A java source file has to end in .java, for example MyClass.java this will produce a file called MyClass.class. you can't have more than one public class in a source file, you cannot have partial classes like in .net either.
 
-Java runs on top of the JVM, the JVM is different per operating system. No need to recompile Java…Write once run everywhere….some people like to say write once…debug everywhere 🙂
+Java runs on top of the JVM, the JVM is different per operating system. No need to recompile Java...Write once run everywhere....some people like to say write once...debug everywhere 🙂
 
 **Java versions and flavors**
   
@@ -203,7 +203,7 @@ SAR (service archive) is similar to EAR. It provides a service.xml file and acco
   
 APK (Android Application Package), a variant of the Java archive format, is used for Android applications.[3]
 
-We compiled and ran some programs from the command line, it is amazing how many people have problems with the path and classpath variables to get it to work…but we all did and now we are allowed to use Eclipese or Netbeans instead
+We compiled and ran some programs from the command line, it is amazing how many people have problems with the path and classpath variables to get it to work...but we all did and now we are allowed to use Eclipese or Netbeans instead
 
 **Javadoc comments**
   
@@ -275,4 +275,4 @@ When you want to have only one copy of a class variable, make it static, then if
   
 Static variables are available to use as soon as a class is loaded
 
-Brain fried……time to go…….. back tomorrow
+Brain fried......time to go........ back tomorrow

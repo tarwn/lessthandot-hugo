@@ -31,7 +31,7 @@ And here is the error message he got
 
 Then I decided to run the same query from my machine and it all worked without a problem. From here it is pretty easy since the problem must be with the client software. And after we checked the version of SSMS we noticed that he connected to the 2008 instance with a 2005 SSMS client. He then connected with SSMS 2008 and it all worked again. What is interesting is that if you use Query Analyzer then you don't get an error and it just works
 
-Lesson learned…it is not the server..it is you!
+Lesson learned...it is not the server..it is you!
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 

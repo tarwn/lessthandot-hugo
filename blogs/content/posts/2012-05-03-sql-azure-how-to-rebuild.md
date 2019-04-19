@@ -224,6 +224,6 @@ and s.name = 'ix_Test_bla'
 <pre>Tablename	Indexname	index_type_desc	avg_fragmentation_in_percent	page_count
 Test	        ix_Test_bla	CLUSTERED INDEX	0                               41</pre>
 
-And just like that all the fragmentation is gone…..good times
+And just like that all the fragmentation is gone.....good times
 
  [1]: /index.php/DataMgmt/DataDesign/a-couple-of-things-to

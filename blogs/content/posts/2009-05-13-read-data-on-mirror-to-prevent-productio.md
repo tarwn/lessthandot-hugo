@@ -30,7 +30,7 @@ Now to get a mirror up and running you have the basic 1,2,3 setup as I call it.
   
 3. Restore to secondary with norecovery
 
-There really is not much more to it than that to actually get a mirror up. The part that you need to use your brain on is the means in which you want to synchronize the mirror and the type of failover you are looking for. For this example I’m going to use asynchronous mirroring. I suggest that you read up on these types if you ahve not already. Refer to these links for a starting point 
+There really is not much more to it than that to actually get a mirror up. The part that you need to use your brain on is the means in which you want to synchronize the mirror and the type of failover you are looking for. For this example I'm going to use asynchronous mirroring. I suggest that you read up on these types if you ahve not already. Refer to these links for a starting point 
 
 http://msdn.microsoft.com/en-us/library/ms187110.aspx
   
@@ -108,9 +108,9 @@ ALTER DATABASE [PRINCIPLE_DB]
 SET PARTNER = 'TCP://mirror.fullyqualifiedname.com:5022'
 GO
 ```
-Mirroring should be going after this point. If you get local copy errors or endpoint errors you more than likely have either the RTM version running and need to start trace flag 1400 or your backup/restore wasn’t done correctly. Try to go through the steps again and see if the error is resolved.
+Mirroring should be going after this point. If you get local copy errors or endpoint errors you more than likely have either the RTM version running and need to start trace flag 1400 or your backup/restore wasn't done correctly. Try to go through the steps again and see if the error is resolved.
 
-Now we have a mirror to actually answer the question that was asked on SQL Server Central, we can actually answer it. Basically creating snapshots is the answer. A few important things to think about here are Enterprise edition is the only way you’re going to get what you need. Mirroring is available in standard but only as that. You cannot backup or read the mirror in standard. This is an Enterprise feature so plan for this when asking for licensing. Luckily, developer edition is identical to enterprise. This means for around $40 you can learn how to configure all the editions and use all the features.
+Now we have a mirror to actually answer the question that was asked on SQL Server Central, we can actually answer it. Basically creating snapshots is the answer. A few important things to think about here are Enterprise edition is the only way you're going to get what you need. Mirroring is available in standard but only as that. You cannot backup or read the mirror in standard. This is an Enterprise feature so plan for this when asking for licensing. Luckily, developer edition is identical to enterprise. This means for around $40 you can learn how to configure all the editions and use all the features.
 
 On your mirror instance start a new query window in the master context.
   

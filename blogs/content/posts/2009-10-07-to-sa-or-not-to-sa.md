@@ -18,7 +18,7 @@ categories:
 ---
 The question was raised again if SA should be disabled. First, it doesn't matter if you do not utilize SQL Server Authentication. The account is then disabled in the first place. Most instances have mixed mode enabled however so SA is a major concern and a huge pet peeve of mine.
 
-So to put it lightly…
+So to put it lightly...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//NoEntry.gif" alt="" title="" width="292" height="301" />
@@ -34,9 +34,9 @@ I want to get some things out of the way first that I believe in and go about wh
   
 4. The sa account should not be the all mighty saving grace
 
-I’ll dive into those points starting with leaving SA on the instance at all. First note that in 2005 we were giving the ability to rename Mr. SA. It’s rather nice actually if you have to expose an instance to a DMZ
+I'll dive into those points starting with leaving SA on the instance at all. First note that in 2005 we were giving the ability to rename Mr. SA. It's rather nice actually if you have to expose an instance to a DMZ
 
-This is how…
+This is how...
 
 sql
 ALTER LOGIN sa DISABLE;
@@ -51,9 +51,9 @@ How many times have you seen this connection string?
 Provider=SQLNCLI10;Server=(local);Database=master;Uid=sa; Pwd=youbloodyidiot;
 ```
 
-That’s just wrong people! Let me ask this question. Is the application you decided needed SA in the connection strings a DBA? Even the applications I write to get me the one button click maintenance do not connect with SA. And I am the DBA! That alone should tell you the connection is really bad.
+That's just wrong people! Let me ask this question. Is the application you decided needed SA in the connection strings a DBA? Even the applications I write to get me the one button click maintenance do not connect with SA. And I am the DBA! That alone should tell you the connection is really bad.
 
-So what are the best practices for handling the SA account? I’ve always been frustrated that BOL never really hard a hardened best practice. At least I’ve never read on in the release of best practices on each version of SQL Server
+So what are the best practices for handling the SA account? I've always been frustrated that BOL never really hard a hardened best practice. At least I've never read on in the release of best practices on each version of SQL Server
 
 Check 2008 here: http://msdn.microsoft.com/en-us/library/dd283095.aspx
 
@@ -71,10 +71,10 @@ First, Active Directory group setup for the DBAs is the only ones that have acce
 
 So now that I got it out that only the DBAs should at any time be able to access sa in any way shape or form, what about the password?
 
-Here is how I’ve handled SA and its password in my career. Bi-weekly (every two weeks) I have a process that calls a password generator to create an extremely strong password. This process first updates the encrypted password in the place they are stored and then resets the SA accounts actual password to the new one. 
+Here is how I've handled SA and its password in my career. Bi-weekly (every two weeks) I have a process that calls a password generator to create an extremely strong password. This process first updates the encrypted password in the place they are stored and then resets the SA accounts actual password to the new one. 
 
 That does a few things for you. First it resets the password frequently enough it is less likely to be compromised. Two, if it is somehow used by some person that you trusted with your life, whatever they used it on will break. I love that moment when it does to 😉 Out come the lashes with a wet noodle!
 
-Last point I wanted to talk about is the fact that SA should never be the account you go to in order to save your ass. Yes, I really meant to be that direct on that statement. You as a DBA are in charge of securing the database servers. That means you have to secure your path into them for disasters and recovery points as well. This means the thought process must be handled of a complete loss of active directory and most accounts that would be typical or default to SQL Server. The SA account is default and that being said can be a point of disaster itself. In the least you should have an account on SQL Authentication that you can utilize for single user controls or dedicated admin connections. Trust me from experience of having these things break. You don’t want to be google'ing, “How do I recover the sa password” 
+Last point I wanted to talk about is the fact that SA should never be the account you go to in order to save your ass. Yes, I really meant to be that direct on that statement. You as a DBA are in charge of securing the database servers. That means you have to secure your path into them for disasters and recovery points as well. This means the thought process must be handled of a complete loss of active directory and most accounts that would be typical or default to SQL Server. The SA account is default and that being said can be a point of disaster itself. In the least you should have an account on SQL Authentication that you can utilize for single user controls or dedicated admin connections. Trust me from experience of having these things break. You don't want to be google'ing, “How do I recover the sa password” 
 
 Happy is the DBA that protects from disaster!

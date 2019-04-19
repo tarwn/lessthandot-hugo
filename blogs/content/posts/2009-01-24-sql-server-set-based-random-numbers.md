@@ -95,7 +95,7 @@ From   (Select 1 As NUM Union All
 
 Now, we are guaranteed to get a Random number between 0 and 9. Suppose you want to get a random number between 10 and 15. The range of numbers is 6 (10,11,12,13,14,15). The mod value for this needs to be 6, to get a number in the range of 0 to 5. Then, we add 10 to the result to get a number in the range of 10 to 15.
 
-If you want to generate a random number between -5 and 5, don’t be tempted to remove the absolute value function, because you will get numbers that appears to be random, but are not 'as random' as they should be. 
+If you want to generate a random number between -5 and 5, don't be tempted to remove the absolute value function, because you will get numbers that appears to be random, but are not 'as random' as they should be. 
 
 In my database, I have a numbers table with 1,000,000 rows. When I run this code:
 

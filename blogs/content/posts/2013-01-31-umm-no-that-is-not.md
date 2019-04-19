@@ -1,5 +1,5 @@
 ---
-title: Umm….No…that is not how you export a table into a file with SQL Server
+title: Umm....No...that is not how you export a table into a file with SQL Server
 author: SQLDenis
 type: post
 date: 2013-01-31T22:28:00+00:00
@@ -21,13 +21,13 @@ tags:
   - sql server 2012
 
 ---
-Sometimes the creativity of the human species is truly amazing. Someone needed to export a table into a file from within SQL Server. Now there are several ways to do this like bcp, export wizard, Query..Results To File, SSIS etc etc. Today I noticed someone found yet another way….
+Sometimes the creativity of the human species is truly amazing. Someone needed to export a table into a file from within SQL Server. Now there are several ways to do this like bcp, export wizard, Query..Results To File, SSIS etc etc. Today I noticed someone found yet another way....
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914" width="304" height="409" /></a>
 </div>
 
-This person decided to use a SQL Agent job to create the file. That is still not strange but here comes the interesting part…
+This person decided to use a SQL Agent job to create the file. That is still not strange but here comes the interesting part...
 
 Here is what the person did, first a job was added with a query.
 

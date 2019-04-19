@@ -25,7 +25,7 @@ Since the default trace is enabled by default, the chances of this logging mecha
 
 **Take the following scenario:**
 
-Company’s database team consists of six DBAs and each of these DBAs is in charge of specific SQL Server instances. Although each is assigned a specific group of the total number of instances, when the need arises, they will take care of each other’s instances. One of the DBAs noticed that a transaction log file on one of their database servers has been truncated and a shrink file run on it. The question came up, “My log file was truncated, shrunk and blown to the wind. Who did it?” 
+Company's database team consists of six DBAs and each of these DBAs is in charge of specific SQL Server instances. Although each is assigned a specific group of the total number of instances, when the need arises, they will take care of each other's instances. One of the DBAs noticed that a transaction log file on one of their database servers has been truncated and a shrink file run on it. The question came up, “My log file was truncated, shrunk and blown to the wind. Who did it?” 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/shrinkfile_1.gif" alt="" title="" width="307" height="203" />

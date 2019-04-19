@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2011-04-07T10:38:00+00:00
 ID: 1106
-excerpt: 'This week at SQL University we’re talking about Performance Tuning.  Performance tuning SQL Server means just about anything that increases the availability of data to the client requesting it.  This could be anything from an index to a team configurati&hellip;'
+excerpt: This week at SQL University we're talking about Performance Tuning.  Performance tuning SQL Server means just about anything that increases the availability of data to the client requesting it.  This could be anything from an index to a team configurati&hellip;
 url: /index.php/datamgmt/dbadmin/compress-data-partition-snapshots-with/
 views:
   - 9165
@@ -17,7 +17,7 @@ categories:
   - SSIS
 
 ---
-This week at [SQL University][1] we’re talking about Performance Tuning.  Performance tuning SQL Server means just about anything that increases the availability of data to the client requesting it.  This could be anything from an index to a team configuration on your NICs.  During this week’s class, I’m talking about something that is normally not brought up in tuning discussions: Merge Replication and how data partitions and applying snapshots can be optimized.
+This week at [SQL University][1] we're talking about Performance Tuning.  Performance tuning SQL Server means just about anything that increases the availability of data to the client requesting it.  This could be anything from an index to a team configuration on your NICs.  During this week's class, I'm talking about something that is normally not brought up in tuning discussions: Merge Replication and how data partitions and applying snapshots can be optimized.
 
 When looking at a data partition or any publication dealing with transactional or merge replication, the database is the first place to tune.  Replication is just like any other process that is going to query the database.   When working with data partitions based on SUSER_SNAME, for example, we would tune for the fact that these snapshots are going to be requesting data only related to that specific column.  Index wisely in this case.  A slow snapshot agent means longer locking on the tables, more resources consumed and fewer resources for the client requests.
 
@@ -34,7 +34,7 @@ A short review before we dive into the SSIS package:
   5. If the date calculation is in the past, execute the agent job to run a snapshot
   6. Once the agent job is done, compress the folder and move to another location available to subscribers
 
-SSIS is made to move data.  Andy Leonard does a great job of saying that and [showing it here][5].  I like to push SSIS as an extension to SQL Servers ability to act as a job server as well as data mover.  I still believe that the right tool for the job should be used.  In this case, SQL Server is directly involved in the merge replication process and we’ll keep it on a job server close to home. 
+SSIS is made to move data.  Andy Leonard does a great job of saying that and [showing it here][5].  I like to push SSIS as an extension to SQL Servers ability to act as a job server as well as data mover.  I still believe that the right tool for the job should be used.  In this case, SQL Server is directly involved in the merge replication process and we'll keep it on a job server close to home. 
 
 **Getting to it!**
 
@@ -52,7 +52,7 @@ GO
 
 The filter on the table is, WHERE [UserCreate] = suser_sname()
 
-I won’t go into the setup script for this publication as it is out of scope.  These details should be enough to get your own test publication going.  In the publication two accounts were added.  FRED and ONPNT.
+I won't go into the setup script for this publication as it is out of scope.  These details should be enough to get your own test publication going.  In the publication two accounts were added.  FRED and ONPNT.
 
 Data inserted as follows:
 
@@ -68,7 +68,7 @@ The first step is to setup the request for the publication information.  We do 
 
 The SqlStatement being used is: sp_helpmergepublication @publication = 'Prescriptions'
 
-> Note: we are not using a variable in this example but for reuse; change this to utilize a variable and a property expression to build the SqlStatement source. Don’t forget to set, Bypass Prepare to true for the task!</p>
+> Note: we are not using a variable in this example but for reuse; change this to utilize a variable and a property expression to build the SqlStatement source. Don't forget to set, Bypass Prepare to true for the task!</p>
 Create two variables at this time with both set as strings.  User::PubName and User::Retention. 
 
 Bring the success precedence constraint to a Foreach Loop Container and name it, Enumerate publications.  Set the enumerator type to Foreach ADO Enumerator.
@@ -104,7 +104,7 @@ At this point the package is ready to start working on a partition.  We have th
 
 **The insides of the loop**
 
-The partition loop will use script tasks, Execute SQL Task by expression, File System Task and a [CozyRoc custom task][6] for compressing folders named Zip Task.  Yes, I think they could have worked on that name a little more but the zip task is pretty awesome and I recommend it.  It’s a little rough to set the properties for dynamic use, but once set, the speed is comparable to a lot of custom compression components.
+The partition loop will use script tasks, Execute SQL Task by expression, File System Task and a [CozyRoc custom task][6] for compressing folders named Zip Task.  Yes, I think they could have worked on that name a little more but the zip task is pretty awesome and I recommend it.  It's a little rough to set the properties for dynamic use, but once set, the speed is comparable to a lot of custom compression components.
 
 Create the remaining variables that are required.
 
@@ -204,7 +204,7 @@ Marking the IsSource and IsDestination variable values to true allows you to use
 
 The last step is the CozyRoc Zip Task.  You can download and test this task from their site for this example, but follow through with the rules they have and, well, pay them and stuff.  They have very good products and components for SSIS in my opinion.
 
-The Task is hard to set at first.  One thing I realized, you must set the properties before going into the editor if you want to use variables for the source and destination.  This isn’t like most built-in SSIS tasks, so it was a gotcha. 
+The Task is hard to set at first.  One thing I realized, you must set the properties before going into the editor if you want to use variables for the source and destination.  This isn't like most built-in SSIS tasks, so it was a gotcha. 
 
 Follow the directions and steps for configuring the Zip Task for variables from the CozyRoc site [here][6]. 
 
@@ -240,7 +240,7 @@ Viewing that folder shows the results.
   <a href="/wp-content/uploads/blogs/DataMgmt/-33.png?mtime=1302147664"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-33.png?mtime=1302147664" width="594" height="117" /></a>
 </div>
 
-We’ve now set the snapshots and have them ready for download.
+We've now set the snapshots and have them ready for download.
 
 In the next post we will talk about applying these snapshots, and some settings required on the subscriber. 
 

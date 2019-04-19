@@ -31,7 +31,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Note that this is not an exclusive feature, you can do this in some other applications as well (like Word and Notepad++). An alternative is holding Alt+Shift and moving the cursor with the arrow keys. This can be useful for example when working on a laptop without a mouse present and you don’t really trust yourself holding Alt, the select button and moving the touchpad at the same time. This alternative doesn’t work in every application though. In Word this keyboard shortcut is used to move the current paragraph.
+  Note that this is not an exclusive feature, you can do this in some other applications as well (like Word and Notepad++). An alternative is holding Alt+Shift and moving the cursor with the arrow keys. This can be useful for example when working on a laptop without a mouse present and you don't really trust yourself holding Alt, the select button and moving the touchpad at the same time. This alternative doesn't work in every application though. In Word this keyboard shortcut is used to move the current paragraph.
 </p>
 
 <p style="text-align: justify">
@@ -39,7 +39,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Suppose I want to create an update statement to update the Employee dimension of the AdventureWorks database. The source data is located in a staging table with almost the exact schema of the target table. Typically this staging table is populated with update data coming from an incremental load SSIS package. Using a staging table and an update statement in an Execute SQL Task allows us to get rid of the OLE DB Command, which issues updates row by row in SSIS. Which we do not want. Anyway, I digress. Let’s assume the staging table has the following schema:
+  Suppose I want to create an update statement to update the Employee dimension of the AdventureWorks database. The source data is located in a staging table with almost the exact schema of the target table. Typically this staging table is populated with update data coming from an incremental load SSIS package. Using a staging table and an update statement in an Execute SQL Task allows us to get rid of the OLE DB Command, which issues updates row by row in SSIS. Which we do not want. Anyway, I digress. Let's assume the staging table has the following schema:
 </p>
 
 sql
@@ -76,11 +76,11 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 	[Status] [nvarchar](50) NULL,
 	[EmployeePhoto] [varbinary](max) NULL);
 ```<p style="text-align: justify">
-  This update table has all the updateable columns of the Employee dimension and the surrogate key, but not the business key (since it won’t change anyway). The surrogate key does not have the IDENTITY property, as it will be retrieved from the Employee dimension with a Lookup component in the SSIS package.
+  This update table has all the updateable columns of the Employee dimension and the surrogate key, but not the business key (since it won't change anyway). The surrogate key does not have the IDENTITY property, as it will be retrieved from the Employee dimension with a Lookup component in the SSIS package.
 </p>
 
 <p style="text-align: justify">
-  OK, now let’s create the update statement. We start with the list of updateable columns from the dimension, the UPDATE clause and the FROM and JOIN clauses.
+  OK, now let's create the update statement. We start with the list of updateable columns from the dimension, the UPDATE clause and the FROM and JOIN clauses.
 </p>
 
 <p style="text-align: justify">
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  This is easy with the mouse and you don’t even need a cursor position to start from. You can select literally every block you want. If you want to do this with the keyboard only, you need to tab to the position you want and then start selecting.
+  This is easy with the mouse and you don't even need a cursor position to start from. You can select literally every block you want. If you want to do this with the keyboard only, you need to tab to the position you want and then start selecting.
 </p>
 
 <p style="text-align: justify">
@@ -108,7 +108,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  Great isn’t it? Now select all of the columns with the Alt button and copy them.
+  Great isn't it? Now select all of the columns with the Alt button and copy them.
 </p>
 
 <p style="text-align: justify">
@@ -124,7 +124,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  That was created pretty fast, right? A lot faster than typing everything, even with Intellisense. Of course, we want an efficient update statement, so we’ll add a WHERE clause with the same techniques that will check if anything has changed at all.
+  That was created pretty fast, right? A lot faster than typing everything, even with Intellisense. Of course, we want an efficient update statement, so we'll add a WHERE clause with the same techniques that will check if anything has changed at all.
 </p>
 
 <p style="text-align: justify">
@@ -160,5 +160,5 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  Don’t forget the semicolon at the end! To really top it off, we should include ISNULL functions everywhere to account for NULL values, but I’ll leave that as an exercise for the reader 😉
+  Don't forget the semicolon at the end! To really top it off, we should include ISNULL functions everywhere to account for NULL values, but I'll leave that as an exercise for the reader 😉
 </p>

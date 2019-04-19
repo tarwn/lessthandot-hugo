@@ -1,5 +1,5 @@
 ---
-title: Don’t prefix your table names with tbl
+title: Don't prefix your table names with tbl
 author: George Mastros (gmmastros)
 type: post
 date: 2009-11-05T11:29:28+00:00
@@ -25,7 +25,7 @@ From	Information_Schema.tables
 Where	Table_Type = 'Base Table'
        	And Table_Name Like 'tbl%'
 ```
-**How to correct it:** Rename the table to remove the prefix. This is not as simple as it seems because this table could be referenced from a number of places, including views, stored procedures, user defined functions, index creation scripts, in-line SQL (embedded within front end applications), etc…
+**How to correct it:** Rename the table to remove the prefix. This is not as simple as it seems because this table could be referenced from a number of places, including views, stored procedures, user defined functions, index creation scripts, in-line SQL (embedded within front end applications), etc...
 
 **Level of severity:** mild
 

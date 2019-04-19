@@ -39,7 +39,7 @@ Indexing on ColComputed is typically performed at this point to fulfill the obje
 
 **Taking a deeper look**
 
-As we’ve discussed, using computed columns can be a good tuning method in some cases.  Computed columns and cardinality or estimation of rows is also directly affected by how the computed column is created.
+As we've discussed, using computed columns can be a good tuning method in some cases.  Computed columns and cardinality or estimation of rows is also directly affected by how the computed column is created.
 
 To look at the cardinality a little closer, take the following query that was written to read the Credit database from SQLSkills.
 
@@ -50,7 +50,7 @@ corp_name + ' ' + city = 'Corp. Boston Key StonesInc.  '
 
  
 
-A query written this way is not as uncommon as you may think.  I’ve seen many instances in both client and mobile applications where string values like the above 'Corp. Boston Key StonesInc.’, are sent to the database engine to prevent multiple calls and _trim_ the packet that is needed to be sent.  This type of query requires some work on the tuner’s part to find an optimal plan.
+A query written this way is not as uncommon as you may think.  I've seen many instances in both client and mobile applications where string values like the above 'Corp. Boston Key StonesInc.', are sent to the database engine to prevent multiple calls and _trim_ the packet that is needed to be sent.  This type of query requires some work on the tuner's part to find an optimal plan.
 
 Looking at the plan as it is written above, we can see there is areas that can be improved.  One of those areas is the estimation versus the actual rows that are generated.
 
@@ -69,11 +69,11 @@ select member_no from member where lastname + ',' + firstname = 'INFANTE,WLTANAW
 
  
 
-The member table has 10,000 rows and the estimated rows generated from the above query are 1000.  As we’ve seen, the 30% is an estimated number that can be thought of as, up to 30% on a high range.  In this case, only 10% was generated.
+The member table has 10,000 rows and the estimated rows generated from the above query are 1000.  As we've seen, the 30% is an estimated number that can be thought of as, up to 30% on a high range.  In this case, only 10% was generated.
 
 **Computed Column**
 
-Fixing the above plan when performance problems are seen from the query being executed several times can be done by utilizing computed columns.  This method is the same concept that was mentioned earlier when a calculation is performed on two or more columns in order to retrieve data matching the expressions final value.  There is really one _gotcha_ that should be taken into account when creating a computed column: whether it should be persisted or not.   Let’s look at a non-persisted computed column first.
+Fixing the above plan when performance problems are seen from the query being executed several times can be done by utilizing computed columns.  This method is the same concept that was mentioned earlier when a calculation is performed on two or more columns in order to retrieve data matching the expressions final value.  There is really one _gotcha_ that should be taken into account when creating a computed column: whether it should be persisted or not.   Let's look at a non-persisted computed column first.
 
 Alter the corporation table to add a computed column on the expression corp_name + ' ' + city.
 
@@ -95,7 +95,7 @@ select corp_name + ' ' + city from corporation where
 
  
 
-We’ve actually introduced more problems with the computed problem as seen above.  Now the compute scalar operations are required, and notice the estimated versus actual rows are now showing 500.  500 is the total number of rows in the corporation table.  The reason for this is the failure to use persisted on the computed column.  Recall, without a persisted computed column, the expression is evaluated every time the systems  needs to read the data.  So, in order to fulfill the query, the entire nonclustered index is scanned and the computed column is evaluated.  Although we’ve corrected the fact that the estimated and actual rows (cardinality) are now the same, we’ve introduced something that can be, in some cases, even more of a performance problem.
+We've actually introduced more problems with the computed problem as seen above.  Now the compute scalar operations are required, and notice the estimated versus actual rows are now showing 500.  500 is the total number of rows in the corporation table.  The reason for this is the failure to use persisted on the computed column.  Recall, without a persisted computed column, the expression is evaluated every time the systems  needs to read the data.  So, in order to fulfill the query, the entire nonclustered index is scanned and the computed column is evaluated.  Although we've corrected the fact that the estimated and actual rows (cardinality) are now the same, we've introduced something that can be, in some cases, even more of a performance problem.
 
 **Add Persisted**
 

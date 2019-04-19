@@ -28,9 +28,9 @@ In order to ascertain which of these designs required, there are two simple ques
   1. Is this for an [OLTP][1] or [OLAP][2] installation?
   2. Do I normalize or de-normalize?
 
-These two questions are truly one and the same.  The first, OLTP or OLAP, dictates the second.  In an OLTP situation, what we’ll talk about today, normalization is going to effectively be critical to the performance we will have.  On the same side, OLAP designed database can suffer drastically from a deeply normalized design due to the movement from high write to high read events.  With the normalization being so critical, the first stage in that is to meet some level of normalization in an OLTP situation.  If situations do present themselves where normalization has become a performance problem due to read/write variations, de-normalization can be effective.
+These two questions are truly one and the same.  The first, OLTP or OLAP, dictates the second.  In an OLTP situation, what we'll talk about today, normalization is going to effectively be critical to the performance we will have.  On the same side, OLAP designed database can suffer drastically from a deeply normalized design due to the movement from high write to high read events.  With the normalization being so critical, the first stage in that is to meet some level of normalization in an OLTP situation.  If situations do present themselves where normalization has become a performance problem due to read/write variations, de-normalization can be effective.
 
-[Normalization][3] is the standard process of reducing redundancy in a database.  Although there are many levels of normalization, called normalized form, we’re going to focus on a simplistic level of normalization and a secondary level or 2NF for the example shown in this article.  In this state of normalization, we will still see a high benefit in performance enhancements.
+[Normalization][3] is the standard process of reducing redundancy in a database.  Although there are many levels of normalization, called normalized form, we're going to focus on a simplistic level of normalization and a secondary level or 2NF for the example shown in this article.  In this state of normalization, we will still see a high benefit in performance enhancements.
 
 In the following two table structures, an ordering system was needed.  Both table structures meet the needs of an order header, details and shipment storage.  As shown in figure 1, the non-normalized structure has the word “poor” in the naming convention.
 
@@ -70,7 +70,7 @@ In the results above, we can see that the data in customerAddress, customerCity,
 
 **Internal Structure Effects**
 
-Internally, these designs also affect storage.  Since the designs are similar and the tables are relatively small, you may thing normalization isn’t needed.  Normalization relates to performance, though.  Some of the poor designs lead to inability to enhance performance with features available due to growth or scalability.  Take a simple tuning effort such as the disk subsystems.  A common standard is to locate files of different read and write needs on differently configured disks.  In another simplistic example, allocating tables to specific physical disk heads can have a major increase on overall performance.  Given the poor design in Figure 1, we have few options to effectively perform some of these methods to increase performance For example, if we rarely update customer addresses but insert a high number of order headers, we would want order headers to be located on a highly writable disk configuration, with the address data on cheaper, slower disk.
+Internally, these designs also affect storage.  Since the designs are similar and the tables are relatively small, you may thing normalization isn't needed.  Normalization relates to performance, though.  Some of the poor designs lead to inability to enhance performance with features available due to growth or scalability.  Take a simple tuning effort such as the disk subsystems.  A common standard is to locate files of different read and write needs on differently configured disks.  In another simplistic example, allocating tables to specific physical disk heads can have a major increase on overall performance.  Given the poor design in Figure 1, we have few options to effectively perform some of these methods to increase performance For example, if we rarely update customer addresses but insert a high number of order headers, we would want order headers to be located on a highly writable disk configuration, with the address data on cheaper, slower disk.
 
 Another aspect to look at is how the design is affecting the overall page storage needs.  Setting data types aside, the normalization level will have a direct effect on how many pages are needed. In both designs, we can use catalog views to look at how this impacts page counts.
 
@@ -98,7 +98,7 @@ Although this information may not seem useful initially, it is critical to the p
 
 **Looking at Query Basics**
 
-Querying data that is not normalized has a few concerns and performance aspects that should be taken into consideration.  The first is, querying data is faster when you have less need for joining tables. In a normalized design, joining tables is required.  As you normalize to higher forms, more joins may be needed.  Although this isn’t a new concept, you will still see a performance increase from simple queries from a normalized factor over the non-normalized design due to the overall page counts pulled into the buffer or, memory.
+Querying data that is not normalized has a few concerns and performance aspects that should be taken into consideration.  The first is, querying data is faster when you have less need for joining tables. In a normalized design, joining tables is required.  As you normalize to higher forms, more joins may be needed.  Although this isn't a new concept, you will still see a performance increase from simple queries from a normalized factor over the non-normalized design due to the overall page counts pulled into the buffer or, memory.
 
 Take the example below and the plan generated from the query
 
@@ -149,7 +149,7 @@ With the new plan after tuning with the indexing, the number of pages being pull
 
 Figure 6 – Buffer review after tuning
 
-This plan isn’t bad and will perform fairly well under normal conditions.  Let’s compare this to the same procedure and the plan that is generated based on the design of the normalized tables.
+This plan isn't bad and will perform fairly well under normal conditions.  Let's compare this to the same procedure and the plan that is generated based on the design of the normalized tables.
 
 sql
 CREATE PROCEDURE select_OrderDetailsByOrderNumv2 (@ordernum INT)
@@ -239,9 +239,9 @@ Resulting in the following plan and buffer needs as page counts.
   <a href="/wp-content/uploads/blogs/All/design_perf_20.gif?mtime=1358784827"><img alt="" src="/wp-content/uploads/blogs/All/design_perf_20.gif?mtime=1358784827" width="716" height="298" /></a>
 </div>
 
-As we can see, there isn’t a large difference.  So far we’ve looked at queries and plans that are similar in resource consumption, other than a slight variance in pages pulled into the buffer.  Let’s take a look at the order header table now.  The order header table takes on a severe non-normalized factor.  The first thing that is obvious is the customer data.  In the poorly designed order header table, the customer data is not unique – it’s repeated and redundancy starts to creep in.
+As we can see, there isn't a large difference.  So far we've looked at queries and plans that are similar in resource consumption, other than a slight variance in pages pulled into the buffer.  Let's take a look at the order header table now.  The order header table takes on a severe non-normalized factor.  The first thing that is obvious is the customer data.  In the poorly designed order header table, the customer data is not unique – it's repeated and redundancy starts to creep in.
 
-With the order header table, poor design and working towards normalization, we’ll start to see a larger impact to the IO requirements, equating to more CPU and buffer usage, from querying the table.  Let’s take a typical example where a query is needed to return customers that have placed more than 3 orders, the number of orders they have placed, and only orders that have shipped will be acceptable.  To perform this query, we would read both designs slightly differently.
+With the order header table, poor design and working towards normalization, we'll start to see a larger impact to the IO requirements, equating to more CPU and buffer usage, from querying the table.  Let's take a typical example where a query is needed to return customers that have placed more than 3 orders, the number of orders they have placed, and only orders that have shipped will be acceptable.  To perform this query, we would read both designs slightly differently.
 
 Poor design – non-normalized
 
@@ -277,7 +277,7 @@ having count(*) > 3
 
  
 
-Both of these queries are easily tuned with indexing on ShipID.  Further indexing could be done but we’ll look at indexing ShipID given it has the highest cost for both queries.
+Both of these queries are easily tuned with indexing on ShipID.  Further indexing could be done but we'll look at indexing ShipID given it has the highest cost for both queries.
 
 sql
 CREATE NONCLUSTERED INDEX IDX_ShipIDPoor
@@ -333,11 +333,11 @@ As we can see, the impact of these two designs and either normalizing or not, ha
   <a href="/wp-content/uploads/blogs/All/-62.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-62.png?mtime=1358783966" width="782" height="299" /></a>
 </div>
 
-The normalized procedure to insert a header row takes more effort with a lookup to the contact table to ensure there isn’t a violation of the key constraint.  The resources used in the insert and the page level, all equating to more IO, cause this to still be slightly more efficient though.
+The normalized procedure to insert a header row takes more effort with a lookup to the contact table to ensure there isn't a violation of the key constraint.  The resources used in the insert and the page level, all equating to more IO, cause this to still be slightly more efficient though.
 
 **Summary**
 
-As shown, normalization is the basis of removing redundancy in a database.  Although redundancy may not seem, at first, like a concept that could impact performance, we’ve learned today that even a small amount of redundant data in a few columns can impact a database’s  resource needs, growth and scalability.
+As shown, normalization is the basis of removing redundancy in a database.  Although redundancy may not seem, at first, like a concept that could impact performance, we've learned today that even a small amount of redundant data in a few columns can impact a database's  resource needs, growth and scalability.
 
 When designing OLTP or OLAP databases, take into account the data that will be stored.  Manipulate the tables as you design and go through modeling practices with data that would represent the future, completed design.  This will help identify needs for normalization or de-normalization, depending on which design you are working to accomplish.
 

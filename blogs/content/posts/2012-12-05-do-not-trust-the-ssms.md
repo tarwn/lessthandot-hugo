@@ -162,7 +162,7 @@ ALTER TABLE dbo.TestInt ADD CONSTRAINT
 GO
 COMMIT
 ```
-You might ask yourself why you should care, all the tables are small, this is not a big issue. This might be true now, what if you start a new job and now you have to supply alter, delete and create scripts? Now you are in trouble. I used to do the same when I started, I used the designers for everything, I didn't even know Query Analyzer existed when I started, I created and modified the stored procedures straight inside Enterprise Manager. Trying to modify a view that had a CASE statement in Enterprise Manager from the designer….yeah good luck with that one….you would get some error that it wasn't supported, I believe it also injected TOP 100 PERCENT ORDER BY in the view as well
+You might ask yourself why you should care, all the tables are small, this is not a big issue. This might be true now, what if you start a new job and now you have to supply alter, delete and create scripts? Now you are in trouble. I used to do the same when I started, I used the designers for everything, I didn't even know Query Analyzer existed when I started, I created and modified the stored procedures straight inside Enterprise Manager. Trying to modify a view that had a CASE statement in Enterprise Manager from the designer....yeah good luck with that one....you would get some error that it wasn't supported, I believe it also injected TOP 100 PERCENT ORDER BY in the view as well
 
 I don't miss those days at all. Get to learn T-SQL and get to love it, you might suffer when you start but you will become a better database developer.
 

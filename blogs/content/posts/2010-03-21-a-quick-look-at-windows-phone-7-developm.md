@@ -49,7 +49,7 @@ Microsoft Windows Phone Developers Tools CTP
   
 Microsoft XNA Game Studio 4.0
   
-Microsoft XNA Game Studio 4.0 Windows…..
+Microsoft XNA Game Studio 4.0 Windows.....
   
 Silverlight 4 Tools for Visual Studio 2010 RC_
 

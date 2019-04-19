@@ -96,7 +96,7 @@ Here I am going to have to diverge from Devlin again, but I'm pretty sure it's a
 
 Again, this is an example of one type of improvement a Quality Assurance team could make in a business. This one may be more successful than the incentivising one above, but I think it's going to depend on the environment it's implemented in and, as such, isn't something I can comment on.
 
-**8. QA is the Whole Team’s responsibility.**
+**8. QA is the Whole Team's responsibility.**
 
 I started out agreeing with Devlin, but I'm going to have to revise my opinion. I think the idea of continuous improvement should be built into the whole team, so that everyone takes responsibility for improving their surroundings, processes, and selves. And I think this directly feeds Quality, because the improvements we are making should be improving the quality of things, either as measured by the customer (product quality) or our coworkers, management, or even cleaning staff. So in a perfect world, building in improvements to improve Quality is part of the individual team members responsibilities. 
 

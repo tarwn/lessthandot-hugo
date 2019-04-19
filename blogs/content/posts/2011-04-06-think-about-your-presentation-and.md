@@ -16,9 +16,9 @@ categories:
   - SSIS
 
 ---
-One of my new friends that I was fortunate to make while attending the MVP Summit, Dan English ([Twitter][1] | [Blog][2] | [MVP][3]), mentioned last night something that hit home pretty hard and fast.  I was writing an SSIS package to go along with one of my [SQL University][4] posts and posted an image of my first initial execution of the package.  See, all of the boxes were green on that first try and it’s always a smile when you get all green boxes on your first run.  But what if you can’t see the color green?
+One of my new friends that I was fortunate to make while attending the MVP Summit, Dan English ([Twitter][1] | [Blog][2] | [MVP][3]), mentioned last night something that hit home pretty hard and fast.  I was writing an SSIS package to go along with one of my [SQL University][4] posts and posted an image of my first initial execution of the package.  See, all of the boxes were green on that first try and it's always a smile when you get all green boxes on your first run.  But what if you can't see the color green?
 
-Dan’s reply to my tweet:
+Dan's reply to my tweet:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-24.png?mtime=1302094637"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-24.png?mtime=1302094637" width="312" height="82" /></a>
@@ -26,7 +26,7 @@ Dan’s reply to my tweet:
 
 This is something I had never considered and I will be very honest in saying that.  After reading this tweet, it hit me that I really should have thought about this a long time ago and been very proactive about it. 
 
-What Dan mentions in the tweet is the labels we can turn on for precedence constraints.  He also has a great blog that goes over this, “[Integration Services (SSIS) Package Designing Tips][2]”.  I realize just how important this is so I’m going to put it up here as well.
+What Dan mentions in the tweet is the labels we can turn on for precedence constraints.  He also has a great blog that goes over this, “[Integration Services (SSIS) Package Designing Tips][2]”.  I realize just how important this is so I'm going to put it up here as well.
 
 Simply stated; turning precedence labels on will show precedence as success, failure and completion will be written next to the precedence connections.  (See below)
 
@@ -42,7 +42,7 @@ So set this option on go to Tools a Options and select Business Intelligence Des
 
 Now when the package executes, the tasks that run and the flow will be easier to distinguish when green or red may not be accessible. 
 
-From Dan’s blog there is also mention of naming your objects in SSIS with something meaningful.  I’m guilty in some of my blogs and articles where I have not done this.  I would like to say I could just go with the saying, “Do what I say, not what I do”.  But I won’t.  In the packages you write for work, presentations, blogs, articles or even a funny image you tweet on twitter; make sure you name them appropriately so it makes sense when someone looks at it. 
+From Dan's blog there is also mention of naming your objects in SSIS with something meaningful.  I'm guilty in some of my blogs and articles where I have not done this.  I would like to say I could just go with the saying, “Do what I say, not what I do”.  But I won't.  In the packages you write for work, presentations, blogs, articles or even a funny image you tweet on twitter; make sure you name them appropriately so it makes sense when someone looks at it. 
 
 I also suggest changing the objects so the text is bold for presentation purposes along with the use of ZoomIt.
 

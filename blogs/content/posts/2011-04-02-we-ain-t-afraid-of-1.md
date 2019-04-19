@@ -1,5 +1,5 @@
 ---
-title: We ain’t afraid of no errors!
+title: We ain't afraid of no errors!
 author: SQLology ~ Kim Tessereau
 type: post
 date: 2011-04-03T02:28:00+00:00
@@ -15,7 +15,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-<span style="font-family: &amp;amp; font-size: 10pt;">Good old fashion error handling……….This is something that is often skipped over when we code because we don't stop and take the time out to plan it out.  I've put together a presentation on this topic and I'll be submitting it to the next SQL Saturday that I attend, but would like to share the main points here.</span><span style="font-size: small;"><span style="font-family: Times New Roman;"><span style="mso-spacerun: yes;">  </span>Obviously, there is a lot I left out here, don’t want to spoil the presentation!</span></span>
+<span style="font-family: &amp;amp; font-size: 10pt;">Good old fashion error handling..........This is something that is often skipped over when we code because we don't stop and take the time out to plan it out.  I've put together a presentation on this topic and I'll be submitting it to the next SQL Saturday that I attend, but would like to share the main points here.</span><span style="font-size: small;"><span style="font-family: Times New Roman;"><span style="mso-spacerun: yes;">  </span>Obviously, there is a lot I left out here, don't want to spoil the presentation!</span></span>
 
 <p style="line-height: 14.25pt; text-indent: -0.25in; padding-left: 30px; margin-left: 0.25in; mso-list: l0 level1 lfo2;">
   <span style="font-family: Symbol; font-size: 10pt; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;"><span style="mso-list: Ignore;">·<span style="font: 7pt &amp;amp;">         </span></span></span><strong><span style="font-family: arial,helvetica,sans-serif;"><span style="font-family: &amp;amp; font-size: 10pt; mso-fareast-font-family: +mn-ea; mso-bidi-font-family: +mn-cs; mso-font-kerning: 12.0pt; mso-hansi-font-family: Arial;">Why do we need error handling?</span></span></strong>

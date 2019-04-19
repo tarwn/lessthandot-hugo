@@ -24,8 +24,8 @@ So here are the things we want to test:
   * No 404s
   * No Script Errors
   * Load time (and comparison to a standard expectation)
-  * File count (and comparison…)
-  * File count (and comparison…)
+  * File count (and comparison...)
+  * File count (and comparison...)
 
 And here are the hard parts:
 
@@ -158,7 +158,7 @@ The BrowserController wraps around the PhantomJS page events and pushes the appr
   <b>Ask Me About PhantomJS and GZip</b><br />I later found out that size is not going to happen. Phantom doesn't't handle/expose gzip or chunked file size properly even when supplied in the Response headers. “Disable gzip” was a common “fix” that totally ignores the fact that the only reason to use Phantom is to validate your site and turning off gzip means you're validating it completely unrealistically (since you probably had it turned on for a reason).
 </div>
 
-Moving on…0…
+Moving on...0...
 
 [/AdvancedSmokeTest/browser/browserController.js][7]
 
@@ -327,7 +327,7 @@ module.exports = {
 ```
 You can see this is a pretty small file and it wouldn't be hard to define multiple of these pages to support a larger number of tests. The pageUtils library provides the ability to get DOM elements that have been wrapped with helper functions for visibility, click interaction, and even typing values. We expose abstractions that are simple enough to describe to someone over the phone (are you logged in? what does the welcome text say? Press the login button) and wire this to the lower-level language the browser's JavaScript engine understands.
 
-# But that's not everything…
+# But that's not everything...
 
 This provides a base I need to start implementing smoke tests against my target front-end application. My next steps will be to layer in logic to track the files being downloaded and build statistics around timing and quantity. I currently output a log message for the page load time, but would like to expose this as a property instead so we could assert against it. I also want to add some masking capabilities to the output to mask things like the password values I have passed in so they don't get preserved in a build server log somewhere.
 

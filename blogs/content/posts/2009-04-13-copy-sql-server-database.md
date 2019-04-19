@@ -23,7 +23,7 @@ Below you can see both methods and how to set them up quickly.
 
 Copy Database Wizard
 
-1) Connect to the instance using SSMS. Right click the database you want to copy. Scroll to Tasks and select “Copy Database…”
+1) Connect to the instance using SSMS. Right click the database you want to copy. Scroll to Tasks and select “Copy Database...”
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//copydb_1.gif" alt="" title="" />
@@ -47,7 +47,7 @@ Copy Database Wizard
   <img src="/wp-content/uploads/blogs/DataMgmt//copydb_4.gif" alt="" title="" />
 </div>
 
-5) Configuring the copied database is probably where you need to put the most thought in. Of course stay true to your disk configuration and alter and default locations as needed. Name the new database something meaningful. In my case I show this as DBA05_DR. We want a recovery database that may contain any configuration changes that were made over the time frame so tick the Drop any database on the destination… option.
+5) Configuring the copied database is probably where you need to put the most thought in. Of course stay true to your disk configuration and alter and default locations as needed. Name the new database something meaningful. In my case I show this as DBA05_DR. We want a recovery database that may contain any configuration changes that were made over the time frame so tick the Drop any database on the destination... option.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//copydb_5.gif" alt="" title="" />
@@ -57,13 +57,13 @@ Copy Database Wizard
 
 7) The next screen will give you scheduling options. Remember that even if you do not schedule this wizard and hence package creation, the job is still created on your instance. So if this is a onetime situation make sure you go back and clean up the job created
 
-8) Click Finish on the last screen and that’s all it takes. 
+8) Click Finish on the last screen and that's all it takes. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//copydb_6.gif" alt="" title="" />
 </div>
 
-Second option is to create the job in SSIS yourself. This can be useful if you have 3 or 4 databases you want to copy or run scripts before or after. It’s a good idea to run DBCC CHECKDB after the transfer and other tasks that will ensure the copy was handled on the instance correctly. Primary concern is to make sure you have a working copy of the database in case of an emergency. You don’t want to find out at the time of a failure if your copied database is corrupted. 
+Second option is to create the job in SSIS yourself. This can be useful if you have 3 or 4 databases you want to copy or run scripts before or after. It's a good idea to run DBCC CHECKDB after the transfer and other tasks that will ensure the copy was handled on the instance correctly. Primary concern is to make sure you have a working copy of the database in case of an emergency. You don't want to find out at the time of a failure if your copied database is corrupted. 
 
 1) Open BIDS and create a new Integrated Services Project
   
@@ -85,4 +85,4 @@ Second option is to create the job in SSIS yourself. This can be useful if you h
   <img src="/wp-content/uploads/blogs/DataMgmt//copydb_7.gif" alt="" title="" />
 </div>
 
-Save your package and upload it to your SSIS instance. Schedule a job off the SSIS package you just created and again, we’re done. Good luck and please, always test your DR systems with a simulated LIVE disaster scenario. Don't want to find out they don't work when you really need them 🙂
+Save your package and upload it to your SSIS instance. Schedule a job off the SSIS package you just created and again, we're done. Good luck and please, always test your DR systems with a simulated LIVE disaster scenario. Don't want to find out they don't work when you really need them 🙂

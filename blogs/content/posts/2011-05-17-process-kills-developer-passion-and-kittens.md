@@ -1,5 +1,5 @@
 ---
-title: Process Kills Developer Passion…and Kittens, Lots of Kittens
+title: Process Kills Developer Passion...and Kittens, Lots of Kittens
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-05-17T15:34:00+00:00
@@ -34,13 +34,13 @@ Or, you know, not.
 
 (Welcome to me, unplugged and only somewhat toned down. I usually reserve these commentaries for private conversations and the LTD summit, but I figured I would give them a break this time around.)
 
-## If you were following best practices…
+## If you were following best practices...
 
-If you were following today's 'best practices'…
+If you were following today's 'best practices'...
 
-Wait, what are today's best practices? Because last I heard, TDD was out, BDD was in, we're using Kanban boards to manage our processes, we're practicing servant leadership, wait self-organization, wait no leadership, wait … are we back to Taylorism yet?
+Wait, what are today's best practices? Because last I heard, TDD was out, BDD was in, we're using Kanban boards to manage our processes, we're practicing servant leadership, wait self-organization, wait no leadership, wait ... are we back to Taylorism yet?
 
-And let's not even try to dig into which software frameworks we should be using, because that's a whole different level of vi vs Emacs….
+And let's not even try to dig into which software frameworks we should be using, because that's a whole different level of vi vs Emacs....
 
 Whether we're operating now, 10 years ago, or ten years in the future, which practices we follow are not the issue. The waterfall process does, in fact, work in some situations, despite initial creation as an intentionally flawed [strawman argument][2]. Slamming code into an editor furiously, with no regard for change management, requirements elicitation, or even five minutes of up front planning also works in some situations.
 
@@ -50,9 +50,9 @@ Whether we're operating now, 10 years ago, or ten years in the future, which pra
 
 And hell, some of us even like exploring processes, practices, and all those other things. Think of it like coding against a quantum compiler that never returns the same result twice, and occasionally turns into a spherical chicken for no apparent reason. Because, you know, as if projects aren't tricky enough, they keep staffing them with us developers, and we can complexify anything.
 
-## Ok, but what about the Scrum Kool-aid…
+## Ok, but what about the Scrum Kool-aid...
 
-Ok, yes, any process can be implemented poorly. A few years ago people were saying the same thing about RUP, and before that…well, lets pretend there was no before that, we like reinventing things. 
+Ok, yes, any process can be implemented poorly. A few years ago people were saying the same thing about RUP, and before that...well, lets pretend there was no before that, we like reinventing things. 
 
 MVC is [over 30 years old][3]. Scrum? [Longer than you think][4]. Any guesses on when we started adding behavior to objects?
 
@@ -70,7 +70,7 @@ There are going to be things we dislike about any practice, and that's going to 
 
 > Disaffected programmers write poor code, and poor code makes management add more process in an attempt to “make” their programmers write good code. That just makes morale worse, and so on.
 
-Yep, totally agree, and I think a lot of people would be willing to volunteer my experience with similar issues over the years. I do tend to go on….
+Yep, totally agree, and I think a lot of people would be willing to volunteer my experience with similar issues over the years. I do tend to go on....
 
 ## Right, you were solving this, weren't you?
 

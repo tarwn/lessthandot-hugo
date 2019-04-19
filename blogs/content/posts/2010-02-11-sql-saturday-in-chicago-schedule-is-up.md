@@ -61,7 +61,7 @@ categories:
   </p>
   
   <p>
-    We will be holding an, “Ask the experts” session after the regular schedule also. This means basically you bring your questions to all of us and we’ll do our best to answer them then and there. If we can’t, we’ll twitter it and get an answer in a few minutes using #sqlhelp 😉 Jorge already tested that theory at the last SSUG he was attending.
+    We will be holding an, “Ask the experts” session after the regular schedule also. This means basically you bring your questions to all of us and we'll do our best to answer them then and there. If we can't, we'll twitter it and get an answer in a few minutes using #sqlhelp 😉 Jorge already tested that theory at the last SSUG he was attending.
   </p>
   
   <p>
@@ -84,7 +84,7 @@ categories:
     </p>
     
     <p>
-      Each company has been great to work with and I’m looking forward to learning more about some of the products they have introduced me to while discussing SQL with them.<br /> We still have a few sponsors to get up on the site so check back regularly to see who will be active in the event as sponsors.
+      Each company has been great to work with and I'm looking forward to learning more about some of the products they have introduced me to while discussing SQL with them.<br /> We still have a few sponsors to get up on the site so check back regularly to see who will be active in the event as sponsors.
     </p>
     
     <p>

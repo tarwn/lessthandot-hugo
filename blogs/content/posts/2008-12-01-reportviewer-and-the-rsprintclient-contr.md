@@ -26,7 +26,7 @@ So this did work. Only problem is it only worked as far as the ReportServer woul
 
 So if you found yourself with the update mentioned don't uninstall it for one. Microsoft releases these for a reason and uninstalling them usually isn't the best course. If you're smart you have WSUS running and you're controlling in a test environment before applying anyhow. The company we are with now does not but they will get there. Growing and growing fast. 
 
-So in an attempt to fix the error try these steps…
+So in an attempt to fix the error try these steps...
   
 1. Verify you have KB956391 installed. If it isn't you have other issues
   
@@ -44,7 +44,7 @@ Again the blog I found and that helped me fix this is @ http://blogs.msdn.com/br
 
 I thank that person for taking the time to write it up. 
 
-Listing of related links…
+Listing of related links...
   
 KB954606 http://www.microsoft.com/downloads/details.aspx?familyid=5148B887-F323-4ADB-9721-61E1C0CFD213&displaylang=en
 

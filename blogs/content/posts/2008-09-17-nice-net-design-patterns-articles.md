@@ -45,7 +45,7 @@ In this part of the design patterns series we will take a look at the observer d
   
 4 Implementing our design
   
-5 Aren’t events already in .NET?
+5 Aren't events already in .NET?
   
 6 Summary
 

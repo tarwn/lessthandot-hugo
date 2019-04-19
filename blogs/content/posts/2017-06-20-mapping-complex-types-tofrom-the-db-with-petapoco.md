@@ -75,7 +75,7 @@ This logic looks exactly the same as if I had two int properties on my object in
 
 ## Case 2: Mixed Array to varchar(MAX)
 
-In the second case, I have a workflow composed of steps, each described as an object Array (a parsed statement in a custom grammar). The database doesn’t need to know the details of the step beyond the fact that it hs an id, and order number, and that chunk of grammar representing the work fo the step. So in this case, I chose to map the step details from to a basic CSV value and store it in a varchar column.
+In the second case, I have a workflow composed of steps, each described as an object Array (a parsed statement in a custom grammar). The database doesn't need to know the details of the step beyond the fact that it hs an id, and order number, and that chunk of grammar representing the work fo the step. So in this case, I chose to map the step details from to a basic CSV value and store it in a varchar column.
 
 This is the child-child-child class of the object I'm loading, UserStep:
 

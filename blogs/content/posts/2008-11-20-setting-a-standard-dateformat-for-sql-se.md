@@ -23,7 +23,7 @@ sp_configure 'default language'
 
 This will tell you what the default language is (sort of). It actually returns a config_value with an integer that represents the language id.
 
-You can then run…
+You can then run...
 
 sql
 sp_helplanguage

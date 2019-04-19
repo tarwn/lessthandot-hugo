@@ -21,7 +21,7 @@ tags:
 ---
 That's right! I will solve a performance issue by adding a UNION into the query. Interested? Read on!
 
-I recently encountered a curious issue with a query. The query itself wasn’t exactly rocket science: it read data from a few tables and calculated the start and the end dates of a contract in the SELECT statement. In an outer query there’s a range join with a date dimension to explode the data over the different months. Let me explain that last part. Suppose we have a contract with ID 5 that is valid between January 2015 and March 2015. The range join with the date dimension would thus return 3 rows:
+I recently encountered a curious issue with a query. The query itself wasn't exactly rocket science: it read data from a few tables and calculated the start and the end dates of a contract in the SELECT statement. In an outer query there's a range join with a date dimension to explode the data over the different months. Let me explain that last part. Suppose we have a contract with ID 5 that is valid between January 2015 and March 2015. The range join with the date dimension would thus return 3 rows:
 
 [<img class="alignnone size-full wp-image-3257" src="/wp-content/uploads/2015/02/Exploding.png" alt="Exploding" width="187" height="97" />][1]
 
@@ -45,7 +45,7 @@ JOIN dateDim		d ON	d.[Date]	BETWEEN c.ContractFrom AND c.ContractTo
 						AND	d.[Day]		= 1; -- only get the first of the month 
 
 ```
-The query is a bit more complex, but you get the idea. On the test server, the query took 1 minute and 24 seconds to return about 90,000 rows. That’s a tad slow if you ask me. I didn’t see anything wrong with the query (and indexes wouldn’t help), so I just blamed it on the server and on the standard edition of SQL Server. That was until I came across a very similar query. That query did about the same thing, but it also fetched data from another table and appended it to the first result set with a UNION. Something like this:
+The query is a bit more complex, but you get the idea. On the test server, the query took 1 minute and 24 seconds to return about 90,000 rows. That's a tad slow if you ask me. I didn't see anything wrong with the query (and indexes wouldn't help), so I just blamed it on the server and on the standard edition of SQL Server. That was until I came across a very similar query. That query did about the same thing, but it also fetched data from another table and appended it to the first result set with a UNION. Something like this:
 
 sql
 WITH CTE_Contracts AS
@@ -72,7 +72,7 @@ JOIN dateDim		d ON	d.[Date]	BETWEEN c.ContractFrom AND c.ContractTo
 						AND	d.[Day]		= 1; -- only get the first of the month
 
 ```
-Now this query returned about 120,000 rows in 6 seconds. What? More rows in less time? How’s that possible? Time to take a look at the execution plans. The execution plan of the second query:
+Now this query returned about 120,000 rows in 6 seconds. What? More rows in less time? How's that possible? Time to take a look at the execution plans. The execution plan of the second query:
 
 [<img class="alignnone size-full wp-image-3258" src="/wp-content/uploads/2015/02/executionplan_1.png" alt="executionplan_1" width="852" height="511" srcset="/wp-content/uploads/2015/02/executionplan_1.png 852w, /wp-content/uploads/2015/02/executionplan_1-300x179.png 300w" sizes="(max-width: 852px) 100vw, 852px" />][2]
 

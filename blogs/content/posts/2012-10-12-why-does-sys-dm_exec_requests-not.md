@@ -15,7 +15,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-This morning, like many other mornings, I ran [sys.dm\_exec\_requests][1] to check for an open transaction.  This was due to an application faulting and leaving an update in an uncommitted state.  Ignoring the concept of why this happened and the transaction isn’t rolled back as typical when a connection is forcibly closed, sys.dm\_exec\_requests, introduced with the new metadata in SQL Server 2005, is usually the first DMV I run.  Usually, after I run the DMV, I yell at myself and go to others.  This is why.
+This morning, like many other mornings, I ran [sys.dm\_exec\_requests][1] to check for an open transaction.  This was due to an application faulting and leaving an update in an uncommitted state.  Ignoring the concept of why this happened and the transaction isn't rolled back as typical when a connection is forcibly closed, sys.dm\_exec\_requests, introduced with the new metadata in SQL Server 2005, is usually the first DMV I run.  Usually, after I run the DMV, I yell at myself and go to others.  This is why.
 
 sys.dm\_exec\_requests will capture any session that is active at the time you execute the DMV.  In the concept of an uncommitted transaction, this should still show in the results from sys.dm\_exec\_requests though, right?  Not always.
 
@@ -52,7 +52,7 @@ The above result should show the active session but it does not.  Look further 
 
 What You Should Look For
 
-Now, what would be effective is for sys.dm\_exec\_requests to actually work the way it implies, but that isn’t the fact.  In this case, look at [DBCC OPENTRAN][2] to verify we have the open transaction we think we do.
+Now, what would be effective is for sys.dm\_exec\_requests to actually work the way it implies, but that isn't the fact.  In this case, look at [DBCC OPENTRAN][2] to verify we have the open transaction we think we do.
 
 sql
 dbcc opentran
@@ -111,7 +111,7 @@ As shown, we now have the open session as well as the statement run so we can fi
 
 **Summary**
 
-If you ran this example, don’t forget to COMMIT that statement for session 57.  This really shows us that each DMV has a purpose and the reason or reasons it does not show us what we may think at times.  Utilize the power all the DMVs have when they are needed.  More importantly, use them together and make sure, if one doesn’t result in what you think it should, if another DMV is more suited to the task at hand.
+If you ran this example, don't forget to COMMIT that statement for session 57.  This really shows us that each DMV has a purpose and the reason or reasons it does not show us what we may think at times.  Utilize the power all the DMVs have when they are needed.  More importantly, use them together and make sure, if one doesn't result in what you think it should, if another DMV is more suited to the task at hand.
 
  [1]: http://msdn.microsoft.com/en-us/library/ms177648.aspx
  [2]: http://msdn.microsoft.com/en-us/library/ms182792.aspx

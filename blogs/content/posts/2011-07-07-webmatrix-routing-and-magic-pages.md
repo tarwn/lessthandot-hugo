@@ -29,7 +29,7 @@ _Note: I know in my [last post][2] I said the application was WebMatrix and the 
 
 The first problem I had when I deployed my site to a live host was getting the darn pages to work. No matter how I typed the paths, the cshtml pages wouldn't stop reporting a 404. So of course I started digging into the IIS settings. And fixed the meta settings. And fixed the extension. And fixed something else. And then found out I wasn't supposed to fix it and the real problem was the guy sitting behind my keyboard typing instead of reading the manual. Oops.
 
-When we build a razor site (or is it a WebPages site? WebMatrix site? argh…), it takes advantage of additions in the 4.0 Framework to provide routing automatically. Every cshtml file we create automatically becomes part of the route check when a request comes into IIS. This is similar to the ASP.Net MVC routing, but instead requires no up front work, running 100% on pixie dust.
+When we build a razor site (or is it a WebPages site? WebMatrix site? argh...), it takes advantage of additions in the 4.0 Framework to provide routing automatically. Every cshtml file we create automatically becomes part of the route check when a request comes into IIS. This is similar to the ASP.Net MVC routing, but instead requires no up front work, running 100% on pixie dust.
 
 Say I ask for http://MyAwesomeSite.com/blueberries/and/cream. Note that we don't include the .cshtml extension. Behind the scenes, my webserver basically has this conversation with itself:
 
@@ -49,11 +49,11 @@ Say I ask for http://MyAwesomeSite.com/blueberries/and/cream. Note that we don't
   
 > Ah, ok.
   
-> Are you busy tomorrow night…
+> Are you busy tomorrow night...
   
 > Yep.
   
-> Oh…er, ok, well here's your file then. 
+> Oh...er, ok, well here's your file then. 
 
 The most specific file match wins, without the need for setting up routing ahead of time. Simply drop an appropriately named file in a folder and point an href at it. 
 

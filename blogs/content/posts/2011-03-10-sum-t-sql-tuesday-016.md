@@ -22,7 +22,7 @@ I'd like to give a shout out to my LessThanDot.com posse for letting me host, an
 
 A special thank you goes to the 13 Microsoft MVPs for sharing your expertise with us, especially since many of you were at Summit and had a busy week. MVPs are the cream of the crop – they are experts in the field, and they put their time and energy into the community, as well. Thanks for helping! 
 
-With that…drumroll please…
+With that...drumroll please...
 
 **Forty-Two Blogs on Aggregation** 
 

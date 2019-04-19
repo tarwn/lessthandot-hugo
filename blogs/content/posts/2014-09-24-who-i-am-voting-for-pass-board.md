@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-All this negative junk flying around makes for a waste of a lot of time. Negative is good but there is always a positive. Although, I'm thinking…how about the real reason of me telling you I am voting for my friend, Grant Fritchey?
+All this negative junk flying around makes for a waste of a lot of time. Negative is good but there is always a positive. Although, I'm thinking...how about the real reason of me telling you I am voting for my friend, Grant Fritchey?
 
 Honestly, look at him
 

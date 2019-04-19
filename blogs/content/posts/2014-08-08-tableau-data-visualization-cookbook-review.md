@@ -27,7 +27,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  The book promises “Over 70 recipes for creating visual stories with your data using Tableau”. That sounds like a lot and it is, because the book (the actual content, not counting preface, indexes …) is about 150 pages long. In other words, a little over 2 pages per recipe. In fact, I actually counted them (I have apparently nothing better to do). There are 74 recipes spread out over 147 pages, so 1.986 pages per recipe. Those are not long recipes. Some other numbers: the shortest recipe is 2 bullet points. It’s about adding a wildcard filter on a worksheet, but it actually builds upon a previous recipe, so it doesn’t count. The following scatter plot (created with Tableau of course) gives an overview of the various lengths of the recipes encountered in the book:
+  The book promises “Over 70 recipes for creating visual stories with your data using Tableau”. That sounds like a lot and it is, because the book (the actual content, not counting preface, indexes ...) is about 150 pages long. In other words, a little over 2 pages per recipe. In fact, I actually counted them (I have apparently nothing better to do). There are 74 recipes spread out over 147 pages, so 1.986 pages per recipe. Those are not long recipes. Some other numbers: the shortest recipe is 2 bullet points. It's about adding a wildcard filter on a worksheet, but it actually builds upon a previous recipe, so it doesn't count. The following scatter plot (created with Tableau of course) gives an overview of the various lengths of the recipes encountered in the book:
 </p>
 
 <p style="text-align: justify">
@@ -70,11 +70,11 @@ tags:
 </ol>
 
 <p style="text-align: justify">
-  Maybe in another chapter you get a recipe for cooking vegetables and in another for grilling meat, but you don’t get instructions to cook a lovely meal with all of the ingredients (and now I’m hungry…). There are three chapter dealing with almost the same basic stuff: creating visualizations with one measure, creating visualizations with two measures and finally creating visualizations with multiple measures. Those should be combined in one single chapter with just a couple of interesting recipes.
+  Maybe in another chapter you get a recipe for cooking vegetables and in another for grilling meat, but you don't get instructions to cook a lovely meal with all of the ingredients (and now I'm hungry...). There are three chapter dealing with almost the same basic stuff: creating visualizations with one measure, creating visualizations with two measures and finally creating visualizations with multiple measures. Those should be combined in one single chapter with just a couple of interesting recipes.
 </p>
 
 <p style="text-align: justify">
-  Another issue is that the author sometimes doesn’t bother to give more information on how the resulting visualization should be interpreted (from time to time the resulting visualization looks nice, but is rubbish from a business perspective becomes it doesn’t really give useful insights). Anyway, this is just a detail. The author does include a lot of links to reference material however, which is certainly a big plus. He also gives some good advice about the different types of charts, for example what the downsides are of pie charts and stacked area charts and how to avoid them.
+  Another issue is that the author sometimes doesn't bother to give more information on how the resulting visualization should be interpreted (from time to time the resulting visualization looks nice, but is rubbish from a business perspective becomes it doesn't really give useful insights). Anyway, this is just a detail. The author does include a lot of links to reference material however, which is certainly a big plus. He also gives some good advice about the different types of charts, for example what the downsides are of pie charts and stacked area charts and how to avoid them.
 </p>
 
 <p style="text-align: justify">
@@ -82,5 +82,5 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  The book is way too basic and this because of the overly simplistic recipes. Get this book only if you are an absolute beginner in Tableau and have never read anything about this tool or if you are an absolute novice in data visualizations tools. In my opinion, the <a href="/index.php/webdev/business-intelligence/tableau-dashboard-cookbook-by-jen-stirrup/">Tableau Dashboard Cookbook</a> by Jen Stirrup offers considerable more depth (despite the editing issues) and you’ll learn more tricks than in this book.
+  The book is way too basic and this because of the overly simplistic recipes. Get this book only if you are an absolute beginner in Tableau and have never read anything about this tool or if you are an absolute novice in data visualizations tools. In my opinion, the <a href="/index.php/webdev/business-intelligence/tableau-dashboard-cookbook-by-jen-stirrup/">Tableau Dashboard Cookbook</a> by Jen Stirrup offers considerable more depth (despite the editing issues) and you'll learn more tricks than in this book.
 </p>

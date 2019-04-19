@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Do you know your sa password? Or let me put that a different way and say, does anyone besides you know the sa password? To build on that question, does anyone know the AD SQL Server service account password? Or any service account passwords. How about some of the sql authenticated users you've setup for reporting, system integration etc… ????
+Do you know your sa password? Or let me put that a different way and say, does anyone besides you know the sa password? To build on that question, does anyone know the AD SQL Server service account password? Or any service account passwords. How about some of the sql authenticated users you've setup for reporting, system integration etc... ????
 
 If you just said yes and they are in an excel file sitting either in a network drive or on your machine then you should be flipping burgers at McDonalds. Yes I really do feel that way. What is the sense of us as systems security and support employees that are entrusted with these key strings that can gain access to just about anything the company has to hold personal. BOM's, Sales, Customers and on. All of this will mean nothing if you don't also secure the passwords to gain access to your instances.
 
@@ -26,9 +26,9 @@ Ok so you want to see some cool graphs? Click here http://msdn.microsoft.com/en-
 
 Ok pictures aside in order to get yourself in the position to encrypt data you first need a cert. The certificate will give you the ability to then create a key in order to encrypt the data when inserting into the tables you have. Encryption can be intimidating which is why I thought of writing this. I want to write by example and not give you a bunch of techy garbage that will only confuse you. I think the power of learning is by means of the ability to perform. So back on track we're going to create a simplistic ASP.NET front-end for you to view and add network and SQL Server authenticated passwords using a self-signed certificate and symmetric key.
 
-Let’s do it…
+Let's do it...
 
-First let's get your database setup. Notes: encryption is slow. Don’t forget that! Also don't fall under the belief the master key can encrypt data. You still need to create a key.
+First let's get your database setup. Notes: encryption is slow. Don't forget that! Also don't fall under the belief the master key can encrypt data. You still need to create a key.
 
 Again I use a DBA database on all instances so you will see that through my blogs. This code is littered all over the internet. In fact a friend and probably the best DBA I know has a much better blog on just this @ http://searchsqlserver.techtarget.com/tip/0,289483,sid87_gci1285699,00.html# I suggest you read it. Denny goes into far better encryption and algorithm details than I.
 
@@ -36,9 +36,9 @@ Here are the steps in order
 
 1. Create a table to hold your passwords and relevant data
 
-2. Create your certificate to gain access to our key. Don’t forget to put a description on it so you know what it's for or the next poor DBA does. My example does not use a string password but I highly recommend more complexity to it. 
+2. Create your certificate to gain access to our key. Don't forget to put a description on it so you know what it's for or the next poor DBA does. My example does not use a string password but I highly recommend more complexity to it. 
 
-3. Create you symmetric key passed of your new certificate and we'll use the AES_256 algorithm. (note: windows 2000 and or Xp does not support this. You’ll have to choose another encryption. Read here http://msdn.microsoft.com/en-us/library/ms345262.aspx)
+3. Create you symmetric key passed of your new certificate and we'll use the AES_256 algorithm. (note: windows 2000 and or Xp does not support this. You'll have to choose another encryption. Read here http://msdn.microsoft.com/en-us/library/ms345262.aspx)
 
 4. This is the step that is what you will utilize on insert every time. Open the key. 
 
@@ -93,7 +93,7 @@ Create proc [dbo].[GrabNameList](@type varchar(255))
 as 
 select 'User: ' + UserN + ' On: ' + SystemN from SSPasswordList where SystemType = @type
 ```
-So how can we use this then. Let's do this. I'm not going to talk about how to write ASP.NET or C# or anything on IIS etc… There are plenty of other things out there to help you with that. I'm just giving you the code so you can try it out. Create a new web site in VS.NET (I'm on 2.0 and 2005). In your Default.aspx replace the code with the below
+So how can we use this then. Let's do this. I'm not going to talk about how to write ASP.NET or C# or anything on IIS etc... There are plenty of other things out there to help you with that. I'm just giving you the code so you can try it out. Create a new web site in VS.NET (I'm on 2.0 and 2005). In your Default.aspx replace the code with the below
 
 ```html
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>

@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2012-06-11T23:03:00+00:00
 ID: 1648
-excerpt: To sum up my latest adventure, Tech on Tap v1.2 SharePoint, here’s a simple Top 10 List – in no particular order.
+excerpt: To sum up my latest adventure, Tech on Tap v1.2 SharePoint, here's a simple Top 10 List – in no particular order.
 url: /index.php/itprofessionals/professionaldevelopment/the-tech-on-tap-v1/
 views:
   - 3069
@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-To sum up my latest adventure, [Tech on Tap v1.2 SharePoint][1], here’s a simple Top 10 List – in no particular order.
+To sum up my latest adventure, [Tech on Tap v1.2 SharePoint][1], here's a simple Top 10 List – in no particular order.
 
 10. The [Stone Cellar Brewpub][2] Scottish Ale. This was a smooth, rich beer. Yum.
 
@@ -28,7 +28,7 @@ To sum up my latest adventure, [Tech on Tap v1.2 SharePoint][1], here’s a simp
   <img src="/wp-content/uploads/users/grrlgeek/ToT12Beer.jpg?mtime=1339462924" alt="" />
 </p>
 
-7. Our fantastic sponsors – [Dell][6], [Idera][7], and [Oracular][8]. The willingness of national and local sponsors to contribute to the local tech community continues to amaze me. I’m always grateful.
+7. Our fantastic sponsors – [Dell][6], [Idera][7], and [Oracular][8]. The willingness of national and local sponsors to contribute to the local tech community continues to amaze me. I'm always grateful.
 
 6. Finding out about the [Fox Valley  Sharepoint and BI user group][9].
 
@@ -40,7 +40,7 @@ To sum up my latest adventure, [Tech on Tap v1.2 SharePoint][1], here’s a simp
 
 2. Quote: “There is more than one way to skin a cat, and every one of them will kill a cat.”
 
-1. Watching the looks on people’s faces as they progress through a day of training and networking. The excitement, thoughtfulness, and hunger to learn are apparent. It’s what keeps me going and makes me want to do this again.
+1. Watching the looks on people's faces as they progress through a day of training and networking. The excitement, thoughtfulness, and hunger to learn are apparent. It's what keeps me going and makes me want to do this again.
 
 Which is good, because we announced **Tech on Tap v1.3 PowerShell**, to be held on Saturday, October 13, 2012! I hope you consider joining us!
 

@@ -17,7 +17,7 @@ categories:
 ---
 This morning I got up, went to the gym and ran three miles, and headed to a testing center to take the Microsoft MCTS 70-432 SQL Server Implementation and Maintenance exam. I wasn't expecting to ace it, since I'd been struggling with the practice exams. But I was hoping that three years of work with SQL Server and two months of studying would get me through. 
 
-I arrived early and got to start early. There were 45 questions, and I was given two hours to complete it. I went through each question carefully, marking some for review. After I went through all of them, I reviewed every question again. I changed a couple answers. I waited a minute, then hit Submit. And my score was…a big fail. Passing was 700, and I scored a 531. Ouch. 
+I arrived early and got to start early. There were 45 questions, and I was given two hours to complete it. I went through each question carefully, marking some for review. After I went through all of them, I reviewed every question again. I changed a couple answers. I waited a minute, then hit Submit. And my score was...a big fail. Passing was 700, and I scored a 531. Ouch. 
 
 What happened? 
 

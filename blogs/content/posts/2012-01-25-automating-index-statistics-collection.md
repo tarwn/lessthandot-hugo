@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2012-01-25T11:26:00+00:00
 ID: 1506
-excerpt: 'Undeniably, the largest impact a database administrator can have on a database server’s performance is with indexing.  One index can mean the difference between a 30 minute overall time of execution or a few seconds overall time of execution.  At the sa&hellip;'
+excerpt: "Undeniably, the largest impact a database administrator can have on a database server's performance is with indexing.  One index can mean the difference between a 30 minute overall time of execution or a few seconds overall time of execution.  At the sa&hellip;"
 url: /index.php/datamgmt/dbprogramming/automating-index-statistics-collection/
 views:
   - 9447
@@ -16,13 +16,13 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Undeniably, the largest impact a database administrator can have on a database server’s performance is with indexing.  One index can mean the difference between a 30 minute overall time of execution or a few seconds overall time of execution.  At the same time, indexing can have a negative impact on overall database server performance.  This negative impact can be from too many indexes, overlapping indexes, or indexes that are not defined correctly.
+Undeniably, the largest impact a database administrator can have on a database server's performance is with indexing.  One index can mean the difference between a 30 minute overall time of execution or a few seconds overall time of execution.  At the same time, indexing can have a negative impact on overall database server performance.  This negative impact can be from too many indexes, overlapping indexes, or indexes that are not defined correctly.
 
 Jason Strate ([Blog][1] | [Twitter][2]) has written an [index analysis script][3] that can assist in showing statistics for all types of index-related topics including missing indexes, foreign key indexing, alignment of indexes, and overall performance of an index.  To further the value of this script Jason has developed, we can automate the use of the script by utilizing SQL Server Integration Services to execute the script and export the results to a file that can be later analyzed.  This gives us analysis over time, proactive analysis on a database that may change often for query needs and retention of performance impacts from that analysis for later review.
 
 **Designing an SSIS Package**
 
-The design of the SSIS package that will use Jason’s script involves utilizing dynamic features and methods.  This dynamic nature of the package will allow for the script to be executed on several SQL Server Instances and several databases that are located on each of those instances.
+The design of the SSIS package that will use Jason's script involves utilizing dynamic features and methods.  This dynamic nature of the package will allow for the script to be executed on several SQL Server Instances and several databases that are located on each of those instances.
 
 **The Design**
 
@@ -34,7 +34,7 @@ The SSIS package will first use an external file that will have a list of all th
 
 Once the variable is loaded with the list of servers from the file in a table format, a Foreach Loop Container is utilized to perform the actual shredding task.  For each row in the table contained in the variable, the internal processing will occur.
 
-The internal processing of the Foreach Loop will consist of an Execute T-SQL Task to execute Jason’s script based on the instance the Foreach Loop is focused on (or indexed currently), which will pass the results to another Foreach Loop Container that will process each row returned and insert the row into a flat file destination.
+The internal processing of the Foreach Loop will consist of an Execute T-SQL Task to execute Jason's script based on the instance the Foreach Loop is focused on (or indexed currently), which will pass the results to another Foreach Loop Container that will process each row returned and insert the row into a flat file destination.
 
 **The SSIS Control Flow**
 
@@ -202,7 +202,7 @@ This package runs well and performed the exact task that was required of it.  T
 
 **Review and Problems with this Design**
 
-In review, we’ve talked about how to do several things to make this package possible.
+In review, we've talked about how to do several things to make this package possible.
 
   1. Dynamic file lists for reusable package executions on several SQL Server Instances
   2. Shred variables and map them to multiple variables for each column returned by using the Foreach Loop Container and the ADO Enumerator

@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Troubleshooting any type of problem can be stressful and tedious.  SQL Server performance issues are no exception.  If an instance of SQL Server suddenly shows a spike or immediate bottleneck with one or many resources, determining the cause of that spike can test any DBA’s patience. 
+Troubleshooting any type of problem can be stressful and tedious.  SQL Server performance issues are no exception.  If an instance of SQL Server suddenly shows a spike or immediate bottleneck with one or many resources, determining the cause of that spike can test any DBA's patience. 
 
 What can make troubleshooting a performance problem in SQL Server more confusing is the lack of a true baseline.  A baseline can be any set of metrics that have been recorded about SQL Server.  Baselines will show normal operating behavior and, more importantly, show a DBA a true problem verses a normal tasking effect of the usage of your database server.
 
@@ -52,7 +52,7 @@ Using the assistance of a third party solution to gather statistics on SQL Serve
 
 **Notable**
 
-A few months before writing this article I attended, presented and help organize [SQL Saturday in Chicago][5].  During that event I sat in on Erin Stellato’s ([Twitter][6] | [Blog][7]) session, “[Baseline First, Troubleshooting Second][8]”.  This presentation was excellent and went over this very topic.  Being a strong believer that you can become far more stable and efficient as a DBA by taking the necessary steps, like baselines, first in an environment, I thoroughly enjoyed the session.
+A few months before writing this article I attended, presented and help organize [SQL Saturday in Chicago][5].  During that event I sat in on Erin Stellato's ([Twitter][6] | [Blog][7]) session, “[Baseline First, Troubleshooting Second][8]”.  This presentation was excellent and went over this very topic.  Being a strong believer that you can become far more stable and efficient as a DBA by taking the necessary steps, like baselines, first in an environment, I thoroughly enjoyed the session.
 
 If you have the opportunity to have Erin come near your area and she is presenting this session, or any other, I strongly encourage attending.  You will see the tools that this “Tip” did not go in-depth over.  Tools such as, PerfMon, PAL, Profiler, RMLUtils and on were mentioned, used and demonstrated. 
 

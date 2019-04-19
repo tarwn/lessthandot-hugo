@@ -21,7 +21,7 @@ tags:
 Over my years in (and before) IT, I've seen long projects, failed projects, confused projects, wildly successful projects, and even fun projects that ended far differently than we expected. The consistent take-away for me is that I am a big picture type of person, and that understanding that big, abstract picture cuts out a lot of wasted time sprinting down the wrong paths.
 
 <div style="font-size: .8em; color: #666666; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/modeling/sprint.jpg" alt="Don't Sprint Blindly" /><br /> Don't Sprint Blindly…<br />(care of <a href="http://www.dmitriev.com/blog/2009-04-14/wrong-sprint-burndown/">dmitriev.com</a>)
+  <img src="http://tiernok.com/LTDBlog/modeling/sprint.jpg" alt="Don't Sprint Blindly" /><br /> Don't Sprint Blindly...<br />(care of <a href="http://www.dmitriev.com/blog/2009-04-14/wrong-sprint-burndown/">dmitriev.com</a>)
 </div>
 
 Creating a model forces me to refine a concept down to it's simplest elements, forces me to face the unknowns that my mind has so casually been skipping over. When done well, a model communicates a clear idea and replaces not only the thousands words required to explain it, but the 9000 I would have wasted getting there.
@@ -108,12 +108,12 @@ Colors, re-arranging layout to alter proximity, fonts, and even line thicknesses
 
 While working with the composition, I will also create temporary versions to play with drastically different layouts or shapes. This gives me a fresh look at a concept that has undoubtedly been on my whiteboard for days, giving me an opportunity to catch last minute holes or simply provide alternative layout options.
 
-## Sounds Like a Lot of Work…
+## Sounds Like a Lot of Work...
 
 There are different levels of work involved in modeling. In some cases even finding the time to stop doing and try to draw an idea may seem like a waste. 
 
 <div style="float: right; font-size: .8em; color: #666666; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/modeling/lookbothways.jpg" title="No Need To Look Ahead" /><br /> Not looking ahead?<br />Diagram for that too…
+  <img src="http://tiernok.com/LTDBlog/modeling/lookbothways.jpg" title="No Need To Look Ahead" /><br /> Not looking ahead?<br />Diagram for that too...
 </div>
 
 <div style="font-size: .8em; margin: 1em;  padding: 1em;">
@@ -128,7 +128,7 @@ There are different levels of work involved in modeling. In some cases even find
   </p>
   
   <p>
-    <strong>3 Hours:</strong> If it takes 3 hours, we end with more questions than we started with, half the questions have the potential for refocusing the project, and we're still trying to figure out what to call this thing…yeah, it's definitely time to get a handle on what we're spending time on. </div> 
+    <strong>3 Hours:</strong> If it takes 3 hours, we end with more questions than we started with, half the questions have the potential for refocusing the project, and we're still trying to figure out what to call this thing...yeah, it's definitely time to get a handle on what we're spending time on. </div> 
     
     <p>
       Jumping right into any project when we can't draw a high level summary means we're spending time and resources on something we can't adequately define. It doesn't matter how fast we're moving if we're spending that time running in random directions and ignoring cross-traffic.

@@ -286,7 +286,7 @@ SELECT *
 FROM Periods
 ```
 
-… the data looks like this
+... the data looks like this
 
 <div class="tables">
   <table>

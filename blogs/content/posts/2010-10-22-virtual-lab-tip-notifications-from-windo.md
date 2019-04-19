@@ -31,7 +31,7 @@ Windows Vista, 7, and 2008 have a built-in option that allows us to attach actio
 
 First we need an example of the event and, being lazy, I'm going to generate one the easy way. Shutting down a SQL Server service generates the first event I want to track (and makes SQL admins everywhere cringe a little, mission accomplished). Later in the post we'll cover creating tasks without restarting our server, since people tend to get upset when we do things like that in production.
 
-When we open the Event Log from Administrative Tools menu in Windows, there are several logs available. SQL Server and other service log entries are logged to the Application log. To create my new event-driven task, I locate the entry I just created, right click it, and select “Attach Task to This Event…”.
+When we open the Event Log from Administrative Tools menu in Windows, there are several logs available. SQL Server and other service log entries are logged to the Application log. To create my new event-driven task, I locate the entry I just created, right click it, and select “Attach Task to This Event...”.
 
 <div class="screenshot">
   <a href="http://tiernok.com/LTDBlog/EventMonitor/orig/01_screen.png" title="View Fullsize" target="_blank"><img src="http://tiernok.com/LTDBlog/EventMonitor/01_screen.png" alt="Attach Task to Event Dialog" /></a><br /> Attach Task to Event – Dialog

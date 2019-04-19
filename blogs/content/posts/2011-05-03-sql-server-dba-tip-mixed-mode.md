@@ -24,9 +24,9 @@ When operating in Mixed Mode, both Windows Authentication and SQL Authentication
 
 **Why would I ever use SQL Authentication?**
 
-Controlling security based on SQL Authentication isn’t a bad thing.  The loss of the domain and failures to login by means of Windows Authentication alone can push to enabling mixed mode.  One tip that should be noted with configuring mixed mode security: sa is a known system administrator account on SQL Server and is commonly part of malicious attacks.  Leaving this account enabled is not recommended.  To read more on enabling or disabling sa, [To SA or not to SA][2].  ****
+Controlling security based on SQL Authentication isn't a bad thing.  The loss of the domain and failures to login by means of Windows Authentication alone can push to enabling mixed mode.  One tip that should be noted with configuring mixed mode security: sa is a known system administrator account on SQL Server and is commonly part of malicious attacks.  Leaving this account enabled is not recommended.  To read more on enabling or disabling sa, [To SA or not to SA][2].  ****
 
-**I didn’t enable mixed mode and need it now**
+**I didn't enable mixed mode and need it now**
 
 Luckily, if mixed mode was not selected and the need for SQL Authentication arises, it is a configuration change that can be performed without a major effect on SQL Server.  Restarting SQL Server is not required for the change and the user activities are not directly impacted at the time the change is made.
 

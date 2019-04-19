@@ -28,7 +28,7 @@ Here is what they have said about this on their [blog][2]
 
 That is just bizarre, to set up backups is one of the easiest things to do in SQL Server and should also be one of the first things you do. You also have to make sure that you test these backups because if you can't recover from them then you do NOT have backups
   
-Another thing that you should be aware of is that the backup should never ever be in the same location as your server. It should be stored in another location preferably at least 50 miles from the original location. We had our servers in WTC building one and the backups in WTC building 2, you already know how that ended……..
+Another thing that you should be aware of is that the backup should never ever be in the same location as your server. It should be stored in another location preferably at least 50 miles from the original location. We had our servers in WTC building one and the backups in WTC building 2, you already know how that ended........
 
  [1]: http://journalspace.com/this_is_the_way_the_world_ends/not_with_a_bang_but_a_whimper.html
  [2]: http://journalspace.com/blog/

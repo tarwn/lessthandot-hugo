@@ -93,7 +93,7 @@ Keep in mind that I have some throw-away databases that I use to answer question
 
 So how does this query help you? Well, you are at least aware that you are using these deprecated features inside your code somewhere. It is time to call the object_definition function to find exactly where this happens 🙂
 
-It could also be that internal code uses these deprecated features….wouldn't that be ironic?
+It could also be that internal code uses these deprecated features....wouldn't that be ironic?
 
 You can also take a look at these blog posts by [George Mastros][2] that show you how you can find out where some of this stuff is called from
 

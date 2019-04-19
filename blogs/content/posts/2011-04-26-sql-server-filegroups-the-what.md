@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2011-04-26T10:28:00+00:00
 ID: 1141
-excerpt: A filegroup is a logical structure to group objects in a database. Don’t confuse filegroups with actual files (.mdf, .ddf, .ldf, etc.). You can have multiple filegroups per database.
+excerpt: A filegroup is a logical structure to group objects in a database. Don't confuse filegroups with actual files (.mdf, .ddf, .ldf, etc.). You can have multiple filegroups per database.
 url: /index.php/datamgmt/dbadmin/sql-server-filegroups-the-what/
 views:
   - 44773
@@ -25,7 +25,7 @@ _Shudder._ I like things organized, from the files on my desk to the files in my
 
 **What is a Filegroup?** 
 
-A filegroup is a logical structure to group objects in a database. Don’t confuse filegroups with actual files (.mdf, .ddf, .ndf, .ldf, etc.). You can have multiple filegroups per database. One filegroup will be the primary, and all system tables are stored on it. Then, you add additional filegroups. You can specify one filegroup as the default, and objects not specifically assigned to a filegroup will exist in the default. In a filegroup, you can have multiple files. <p align = "center">
+A filegroup is a logical structure to group objects in a database. Don't confuse filegroups with actual files (.mdf, .ddf, .ndf, .ldf, etc.). You can have multiple filegroups per database. One filegroup will be the primary, and all system tables are stored on it. Then, you add additional filegroups. You can specify one filegroup as the default, and objects not specifically assigned to a filegroup will exist in the default. In a filegroup, you can have multiple files. <p align = "center">
 
  ![][1]</p> 
 
@@ -35,7 +35,7 @@ Only data files can be assigned to filegroups. Log space is managed separately f
 
 There are two primary reasons for creating filegroups: performance and recovery. 
 
-Filegroups that contain files created on specific disks can alleviate disk performance issues. For example, you may have one very large table in your database with a lot of read and write activity – an orders table, perhaps. You can create a filegroup, create a file in the filegroup, and then move a table to the filegroup by moving the clustered index. (I’ll cover how to do this later in this post.) If the file is created on a disk separate from other files, you are going to have better performance. This is similar to the logic behind separating data and log files in a database. Performance improves when you spread files across multiple disks because you have multiple heads reading and writing, rather than one doing all the work. 
+Filegroups that contain files created on specific disks can alleviate disk performance issues. For example, you may have one very large table in your database with a lot of read and write activity – an orders table, perhaps. You can create a filegroup, create a file in the filegroup, and then move a table to the filegroup by moving the clustered index. (I'll cover how to do this later in this post.) If the file is created on a disk separate from other files, you are going to have better performance. This is similar to the logic behind separating data and log files in a database. Performance improves when you spread files across multiple disks because you have multiple heads reading and writing, rather than one doing all the work. 
 
 Filegroups can be backed up and restored separately as well. This can enable faster object recovery in the case of a disaster. It can also help the administration of large databases. 
 
@@ -58,7 +58,7 @@ LOG ON
  FILENAME = 'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLDATAFGTest_log.ldf')
 ```
 
-If you have an existing database, use can use the ALTER DATABASE statement to add a filegroup. I’m going to add **FGTestFG3** to **FilegroupTest**. 
+If you have an existing database, use can use the ALTER DATABASE statement to add a filegroup. I'm going to add **FGTestFG3** to **FilegroupTest**. 
 
 sql
 ALTER DATABASE FilegroupTest 
@@ -77,7 +77,7 @@ FROM sys.filegroups
   <a href="/wp-content/uploads/users/grrlgeek/sysfilegroups.JPG?mtime=1303779715"><img alt="" src="/wp-content/uploads/users/grrlgeek/sysfilegroups.JPG?mtime=1303779715" width="805" height="113" /></a>
 </div>
 
-To create a new file, **FGTest3_dat**, and assign it to **FGTestFG3**, I’ll use ALTER DATABASE again. 
+To create a new file, **FGTest3_dat**, and assign it to **FGTestFG3**, I'll use ALTER DATABASE again. 
 
 sql
 ALTER DATABASE FilegroupTest 
@@ -141,7 +141,7 @@ I cannot move the table only. That is simply not part of the ALTER TABLE syntax.
 
 Note: It is possible to create a table in a secondary filegroup, move the data from the first filegroup to the second, and then drop the table from the primary. Be aware that these types of operations cause a high level of transaction log entries. Ensure that the transaction log is properly sized to prevent a large amount of growth in the logs or inadvertently affect things that rely on the transaction logs such as log shipping or mirroring. 
 
-I’m going to add a clustered index to the table. When I do this, I specify which filegroup I want it created on. I create **StuffJunk** on **FGTestFG2**. 
+I'm going to add a clustered index to the table. When I do this, I specify which filegroup I want it created on. I create **StuffJunk** on **FGTestFG2**. 
 
 sql
 CREATE CLUSTERED INDEX StuffJunk 
@@ -155,7 +155,7 @@ If I run my sys.filegroups query again, I can see I have the same object_id, but
   <a href="/wp-content/uploads/users/grrlgeek/objectid2.JPG?mtime=1303780550"><img alt="" src="/wp-content/uploads/users/grrlgeek/objectid2.JPG?mtime=1303780550" width="208" height="83" /></a>
 </div>
 
-How would I move a table with an existing clustered index? Let’s move **StuffAndJunk** back to **FGTestFG3**. I would issue a create clustered index command with the option to drop existing, like this. 
+How would I move a table with an existing clustered index? Let's move **StuffAndJunk** back to **FGTestFG3**. I would issue a create clustered index command with the option to drop existing, like this. 
 
 sql
 CREATE CLUSTERED INDEX StuffJunk 
@@ -178,7 +178,7 @@ Help your databases look like this:
   <a href="/wp-content/uploads/users/grrlgeek/organized-filing-cabinet.jpg?mtime=1303781231"><img alt="" src="/wp-content/uploads/users/grrlgeek/organized-filing-cabinet.jpg?mtime=1303781231" width="336" height="448" /></a>
 </div>
 
-Filegroups are a great way to organize your data, increasing performance and providing additional disaster recovery. If you can do this in the planning stages, it’s great, but be aware that you can add filegroups in later, too.
+Filegroups are a great way to organize your data, increasing performance and providing additional disaster recovery. If you can do this in the planning stages, it's great, but be aware that you can add filegroups in later, too.
 
  [1]: /wp-content/uploads/users/grrlgeek/Filegroup.jpg?mtime=1303779237 ""
  [2]: http://msdn.microsoft.com/en-us/library/ms190273.aspx

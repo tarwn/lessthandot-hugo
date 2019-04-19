@@ -196,7 +196,7 @@ Exec msdb.dbo.sp_start_job @job_name = N'CallSSIS'
 
 Note that the parameters are in Unicode and should be converted as such.
 
-With any statement, error handling should be used. In this example, adding the TRY…CATCH and utilizing RAISERROR can be used to handle exceptions in the execution of sp\_start\_job.
+With any statement, error handling should be used. In this example, adding the TRY...CATCH and utilizing RAISERROR can be used to handle exceptions in the execution of sp\_start\_job.
 
 The complete stored procedure, CallUpEmpCheck, would be as follows
 

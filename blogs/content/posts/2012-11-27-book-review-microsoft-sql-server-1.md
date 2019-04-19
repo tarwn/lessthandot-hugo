@@ -64,7 +64,7 @@ The chapter starts with the theory of transactions, locks, blocks and some copy 
 
 **Chapter 10: Programmable Objects**
   
-The last chapter in the book is about variables, batches, cursors, procedures,etc. … And because they are not considered as fundamentals you get an overview with decent examples to get you started. 
+The last chapter in the book is about variables, batches, cursors, procedures,etc. ... And because they are not considered as fundamentals you get an overview with decent examples to get you started. 
 
 **Conclusion**
   

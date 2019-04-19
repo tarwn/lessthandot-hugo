@@ -27,7 +27,7 @@ The reason is that the [Belgian SQL Server User Group][2] organizes yearly a 2 d
 
 But I disagree, as a full-time SQL Server consultant, I can't justify going to an event where there is no SQL content at all. I know there are some other interesting sessions about Windows Server, SCOM, etc. but they aren't the core of my job so I can't register for this event and thus I will miss the opportunity to:
 
-  * learn about new features in Windows server, SCOM, PowerShell…;
+  * learn about new features in Windows server, SCOM, PowerShell...;
   * network with current and former co-workers outside the office;
   * network with other SQL Server DBA's and developers;
   * enthusiasm young developers and system administrators to learn more about SQL Server;
@@ -41,7 +41,7 @@ And how about young, all-round system administrators and developers who can't ju
   * SQL Server supports Server Core
   * cursors are bad for SQL Server
   * there such things as graphical execution plans
-  * …
+  * ...
 
 Anyways that's my vision on the subject, feel free to agree or disagree in the comments, discussing this with me at the Techdays will probably be a no show.
 

@@ -21,7 +21,7 @@ tags:
 ---
 Microsoft just announced that Microsoft Security Essentials will be available for download tomorrow. From the press release
 
-> Microsoft Security Essentials, Microsoft Corp.’s new no-cost, core anti-malware service that helps protect consumers against viruses, spyware and other malicious software, will be available tomorrow, Tuesday, Sept. 29. Microsoft Security Essentials, independently certified by West Coast Labs, is backed by the company’s global security response team and is built on the same award-winning core security technology found in the company’s security solutions for businesses. It requires no registration, trials or renewals and will be available for download directly from Microsoft at http://www.microsoft.com/security_essentials.
+> Microsoft Security Essentials, Microsoft Corp.'s new no-cost, core anti-malware service that helps protect consumers against viruses, spyware and other malicious software, will be available tomorrow, Tuesday, Sept. 29. Microsoft Security Essentials, independently certified by West Coast Labs, is backed by the company's global security response team and is built on the same award-winning core security technology found in the company's security solutions for businesses. It requires no registration, trials or renewals and will be available for download directly from Microsoft at http://www.microsoft.com/security_essentials.
 
 Some more info can be found here: http://www.microsoft.com/Presspass/press/2009/sep09/09-28SecurityEssentialsPR.mspx?rss_fdn=Press%20Releases
 

@@ -24,7 +24,7 @@ This would also play nicely for a Jr. DBA.
       * Disk considerations such as file placement on spindles and dual channel configurations
       * Processing power. 
       * OS editions. Standard vs. Enterprise and memory usage on 32bit. 
-      * Internal disk plus external disk (Storage Area Network, Network Attached Storage etc…)
+      * Internal disk plus external disk (Storage Area Network, Network Attached Storage etc...)
   * Focus on disk configuration. RAID, controllers and such. High writes vs. reads and what RAID is better. This is key to disk performance and if not done correctly will kill performance
   * Learn about indexing. Using SQL Server tools like Database Tuning Advisor. Microsoft does a good job giving you tools to assist you so use them. Read about clustered, non-clustered and affects and differences. 
   * Learn how to create statistics. It is not good enough to check “create statistics automatically”
@@ -33,7 +33,7 @@ This would also play nicely for a Jr. DBA.
       * Table scans, index scans and seeks
       * Sargable conditions (index usage)
   * Attempt to sell the purchase of monitoring and management tools from third party companies like Quest and Idera
-  * Disaster/Recovery IS YOUR JOB! Read on Mirroring, log shipping and replication. You don’t have to be an expert to setup a mirror. It is that easy
+  * Disaster/Recovery IS YOUR JOB! Read on Mirroring, log shipping and replication. You don't have to be an expert to setup a mirror. It is that easy
   * Clustering is better in Windows 2003 and 2008. Look into it.
   * Understand fragmentation and data storage in SQL Server
   * Understand common performance issues like Blocking and deadlocks, high cpu times, disk queue lengths and how to troubleshoot them or at least gather data on the events.
@@ -44,4 +44,4 @@ This would also play nicely for a Jr. DBA.
   * Never and I mean never agree to a developer just because you want to get rid of them. Be critical of what you put on the database servers. If it goes down you're the one they will come after. 
   * Security is the last item. I cannot stress enough about security. Use roles and schemas to manage things. It will make life easier for you and allow less time spent managing. And of all don't give ANYONE the “sa” password!!!
 
-I think that's a good start. Remember, we don’t all need to be SQL Server MVPs to be a successful DBA. Just having the knowledge of knowing where to look is power in itself.
+I think that's a good start. Remember, we don't all need to be SQL Server MVPs to be a successful DBA. Just having the knowledge of knowing where to look is power in itself.

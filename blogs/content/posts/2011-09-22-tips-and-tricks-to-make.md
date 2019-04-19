@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2011-09-22T10:51:00+00:00
 ID: 1324
-excerpt: SQL Server Management Studio is the de facto tool for working with SQL Server. But its default options may not always be the best way for you to work. After working with it for years, I’ve come up with a list of my favorite features.
+excerpt: SQL Server Management Studio is the de facto tool for working with SQL Server. But its default options may not always be the best way for you to work. After working with it for years, I've come up with a list of my favorite features.
 url: /index.php/datamgmt/dbprogramming/tips-and-tricks-to-make/
 views:
   - 124601
@@ -17,7 +17,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-SQL Server Management Studio is the de facto tool for working with SQL Server. But its default options may not always be the best way for you to work. After working with it for years, I’ve come up with a list of my favorite features. 
+SQL Server Management Studio is the de facto tool for working with SQL Server. But its default options may not always be the best way for you to work. After working with it for years, I've come up with a list of my favorite features. 
 
 (Secret: This is also my way of recording this so that the next time I need to set up a new PC, I just have to come back here.) 
 
@@ -27,7 +27,7 @@ In SSMS, go to Tools > Options.
 
 **> Environment**
   
-**>> Keyboard:** Here you can set up “Query shortcuts”. By default, sp\_help, sp\_who and sp_lock are there. I’ve added things like [sp_whoisactive][1]. Are there other queries you use regularly? Set up shortcuts here, to save yourself the trouble of having to open a script file, or (gasp) typing them each time.
+**>> Keyboard:** Here you can set up “Query shortcuts”. By default, sp\_help, sp\_who and sp_lock are there. I've added things like [sp_whoisactive][1]. Are there other queries you use regularly? Set up shortcuts here, to save yourself the trouble of having to open a script file, or (gasp) typing them each time.
 
  ![][2]
 
@@ -37,11 +37,11 @@ In SSMS, go to Tools > Options.
   
 **>>> General**
   
-**>>>> Word wrap:** I’m not sure where I would be without this setting. Who wants to scroll back and forth constantly? 
+**>>>> Word wrap:** I'm not sure where I would be without this setting. Who wants to scroll back and forth constantly? 
 
 ![][3]
 
-**>>>> Line numbers:** it’s just what it means. Go from this:
+**>>>> Line numbers:** it's just what it means. Go from this:
 
  ![][4]
 
@@ -73,7 +73,7 @@ This can be broken into two sections.
 
 **> Query Results**
   
-**>> SQL Server:** Here, I can choose the default location for saving my results, if I don’t want to save it in the location Microsoft specifies. 
+**>> SQL Server:** Here, I can choose the default location for saving my results, if I don't want to save it in the location Microsoft specifies. 
 
 ![][11]
 
@@ -99,7 +99,7 @@ I see this:
 
 ![][15]
 
-**>> Scripting:** there is a wealth of options here that will turn things on or off when you right-click an object and choose to Script To…
+**>> Scripting:** there is a wealth of options here that will turn things on or off when you right-click an object and choose to Script To...
 
 Some of my favorites: Include descriptive headers, Script USE database, Include IF NOT EXISTS clause, and Schema qualify object names. Take the time to look through this list and understand what you can turn on and off in SSMS. 
 
@@ -115,7 +115,7 @@ Some of my favorites: Include descriptive headers, Script USE database, Include 
 
 There are a couple cool things you can do with Object Explorer that I find people are unaware of. 
 
-First, when you are writing a query, especially against an older database that doesn’t have IntelliSense support, you can drag table, view, column and stored procedure names to the query pane instead of typing them. 
+First, when you are writing a query, especially against an older database that doesn't have IntelliSense support, you can drag table, view, column and stored procedure names to the query pane instead of typing them. 
 
 ![][18]
 
@@ -127,11 +127,11 @@ Second, you can filter the items you see in a database. The little blue funnel a
 
 ![][20]
 
-Here, I’m going to filter on the “Person” schema. 
+Here, I'm going to filter on the “Person” schema. 
 
 ![][21]
 
-My results are much easier to read. This isn’t a huge deal in AdventureWorks, but when you get into databases with hundreds or thousands of objects, this is very handy. 
+My results are much easier to read. This isn't a huge deal in AdventureWorks, but when you get into databases with hundreds or thousands of objects, this is very handy. 
 
 ![][22]
 
@@ -147,9 +147,9 @@ Window Connection Coloring – want to have a green bar at the top of queries ag
 
 New Query Template – want to have the same text appear in every new query you open up? Me too. Create a template. 
 
-Want to have your query history saved to a text file or a database table? It’s all here. 
+Want to have your query history saved to a text file or a database table? It's all here. 
 
-And that’s just scratching the surface. Download this tool! 
+And that's just scratching the surface. Download this tool! 
 
 ![][23]
 

@@ -172,7 +172,7 @@ Now, we are going to sort by age ascending and name descending
 
 As you can see sorting is very easy to do in MongoDB. One thing to keep in mind
 
-> The sort function requires that the entire sort be able to complete within 32 megabytes. When the sort option consumes more than 32 megabytes, MongoDB will return an error. Use cursor.limit(), or create an index on the field that you’re sorting to avoid this error.
+> The sort function requires that the entire sort be able to complete within 32 megabytes. When the sort option consumes more than 32 megabytes, MongoDB will return an error. Use cursor.limit(), or create an index on the field that you're sorting to avoid this error.
 
 We are going to look at how to create indexes in the next post: [Indexes in MongoDB: A quick overview][3]
 

@@ -41,7 +41,7 @@ And how ironic is this? Google itself shows up as malware LOL
 
 <a href="http://tinypic.com" target="_blank"><img src="http://i41.tinypic.com/2gvr5dv.jpg" border="0" alt="Google Is Malware?" /></a>
 
-Google seemed to have fixed this problem, Took about an hour or so…..wonder if they lost any money during this time
+Google seemed to have fixed this problem, Took about an hour or so.....wonder if they lost any money during this time
 
 Here is what happened according to the [Official Google Blog][1]
 

@@ -1,5 +1,5 @@
 ---
-title: The WordPress Migration You Probably Didn’t Know About
+title: The WordPress Migration You Probably Didn't Know About
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-01-22T16:15:15+00:00
@@ -59,7 +59,7 @@ And I think we have been successful.
 
 I'm pretty sure someone else did the original LessThanDot teeming work on B2Evolution but I created the new new layout theme for B2Evo that we have sported since 2009. I remember having to do a lot of guessing and print statements to try and figure out what files did what in the templates, and the documentation was only of limited helpfulness.
 
-### I Just Built It…
+### I Just Built It...
 
 I started out the WordPress migration with a blank theme folder called “LessThanDot2009”. There are a plethora of posts out there on creating a custom theme, but the one I liked walked through the creation of a theme in small steps, building it up one piece at a time. I followed along, using LessThanDot code snippets where the author was using bootstrap, until before I knew it I had most of our site put together. 
 
@@ -114,7 +114,7 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <p>
-  Next up was data integration and showing posts on the front page of LessThanDot.com…
+  Next up was data integration and showing posts on the front page of LessThanDot.com...
 </p>
 
 <p>
@@ -134,15 +134,15 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <p>
-  It all really moved this fast. As I had a few hours or a half day on a Saturday, I would sit down and just knock out a whole section of functionality (then take 3-4 weeks off to do other things). If this had been a real job, I'm confidant this would have taken less than a week…well, if you don't count importing.
+  It all really moved this fast. As I had a few hours or a half day on a Saturday, I would sit down and just knock out a whole section of functionality (then take 3-4 weeks off to do other things). If this had been a real job, I'm confidant this would have taken less than a week...well, if you don't count importing.
 </p>
 
 <h3>
-  Argh, importing…
+  Argh, importing...
 </h3>
 
 <p>
-  The hard part ended up being the data. We had over 2000 posts we wanted to bring across, blog authors we wanted to preserve, thousands of custom tags, way too many categories, more thousands of comments, view counts I wanted to preserve, images in posts that needed their URL redirected to wherever I ended up copying the b2evo image folders, … surely this had been solved before.
+  The hard part ended up being the data. We had over 2000 posts we wanted to bring across, blog authors we wanted to preserve, thousands of custom tags, way too many categories, more thousands of comments, view counts I wanted to preserve, images in posts that needed their URL redirected to wherever I ended up copying the b2evo image folders, ... surely this had been solved before.
 </p>
 
 <p>
@@ -249,12 +249,12 @@ endforeach;
   <a href="/wp-content/uploads/2014/01/wordpress-spam.png"><img src="/wp-content/uploads/2014/01/wordpress-spam-300x55.png" alt="Time to empty out the spam for the day..." width="300" height="55" class="size-medium wp-image-2289" srcset="/wp-content/uploads/2014/01/wordpress-spam-300x55.png 300w, /wp-content/uploads/2014/01/wordpress-spam.png 363w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
-    Time to empty out the spam for the day…
+    Time to empty out the spam for the day...
   </p>
 </div>
 
 <p>
-  Oh my god the spam. We have built up our spam rules on B2Evo over the course of years without even realising how much spam LessThanDot would be getting without those rules. Within the first 8 minutes of switching the sub-domain to show WordPress instead of B2Evo, we received more than 10 spam comments. Chrissie started deleting, I started deleting, a vast array of spammers kept at it, I started banning IPs…and the flood kept coming at a steady pace of 2 spam comments/minute. I finally found a good spam plugin the next day that has managed the 2/minute load just fine without any performance impact on our servers (we still have to empty out the spam folder occasionally though, oh well).
+  Oh my god the spam. We have built up our spam rules on B2Evo over the course of years without even realising how much spam LessThanDot would be getting without those rules. Within the first 8 minutes of switching the sub-domain to show WordPress instead of B2Evo, we received more than 10 spam comments. Chrissie started deleting, I started deleting, a vast array of spammers kept at it, I started banning IPs...and the flood kept coming at a steady pace of 2 spam comments/minute. I finally found a good spam plugin the next day that has managed the 2/minute load just fine without any performance impact on our servers (we still have to empty out the spam folder occasionally though, oh well).
 </p>
 
 <p>

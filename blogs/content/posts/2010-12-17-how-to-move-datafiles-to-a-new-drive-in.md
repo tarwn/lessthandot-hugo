@@ -61,7 +61,7 @@ GO
 SELECT * FROM Test
 ```
 
-Now instead of having the data files in the C:DB\_Files we want to move them to the D:DB\_Files directory. You can use ALTER DATABASE…MODIFY FILE to do that, you just specify the new file locations, just make sure that the directory exists.
+Now instead of having the data files in the C:DB\_Files we want to move them to the D:DB\_Files directory. You can use ALTER DATABASE...MODIFY FILE to do that, you just specify the new file locations, just make sure that the directory exists.
 
 The following code will change the location of the data files
 

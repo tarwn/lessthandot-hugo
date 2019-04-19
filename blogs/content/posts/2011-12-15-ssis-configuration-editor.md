@@ -57,7 +57,7 @@ categories:
 
 <span style="font-family: verdana,geneva;"><span style="font-size: small;"> </span></span>
 
-<span style="font-family: verdana,geneva;"><span style="font-size: small;">In a production setting and more commonly in my own practices, Business Intelligence Studio or any version of Visual Studio is not allowed as a standard installation. This is to prevent unwanted use of resources on the server. Servers should be built and maintained for their distinct purpose. A database server’s purpose is not to be a development ready machine. SSIS Configuration Editor assists in not having those IDEs on the servers by allowing a thin and simple method to configure configuration files.</span></span>
+<span style="font-family: verdana,geneva;"><span style="font-size: small;">In a production setting and more commonly in my own practices, Business Intelligence Studio or any version of Visual Studio is not allowed as a standard installation. This is to prevent unwanted use of resources on the server. Servers should be built and maintained for their distinct purpose. A database server's purpose is not to be a development ready machine. SSIS Configuration Editor assists in not having those IDEs on the servers by allowing a thin and simple method to configure configuration files.</span></span>
 
 <span style="font-family: verdana,geneva;"><span style="font-size: small;"> </span></span>
 

@@ -30,7 +30,7 @@ SQL Server MVP Erland Sommarskog has posted his latest article yesterday and I h
   
 Of course I think most of you are already familiar with Erland's article [The curse and blessings of dynamic SQL][1], this article I am sure will be linked in answers as much as the dynamic SQL one
 
-Remember all those question you get where a query is fast in SSMS but slow from ADO.NET? Yep that pesky ARITHABORT setting which causes problem…this is covered in this article.
+Remember all those question you get where a query is fast in SSMS but slow from ADO.NET? Yep that pesky ARITHABORT setting which causes problem...this is covered in this article.
 
 Here is the whole outline
 
@@ -54,7 +54,7 @@ The Effects of Statement Recompile
         
 The Story So Far
      
-**It's Not Always Parameter Sniffing…**
+**It's Not Always Parameter Sniffing...**
         
 Replacing Variables and Parameters
         
@@ -110,7 +110,7 @@ Plan Guides
 
 You can find the article here: [Slow in the Application, Fast in SSMS?
   
-Understanding Performance Mysteries][2]….enjoy
+Understanding Performance Mysteries][2]....enjoy
 
  [1]: http://www.sommarskog.se/dynamic_sql.html
  [2]: http://www.sommarskog.se/query-plan-mysteries.html

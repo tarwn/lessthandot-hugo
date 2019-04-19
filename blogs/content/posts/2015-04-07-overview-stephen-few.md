@@ -36,7 +36,7 @@ tags:
 </ul>
 
 <p style="text-align: justify">
-  I’m a huge fan of Few’s work and this blog post is meant as an introduction to his different titles, so people know what to expect when they read one of his books. I’ll review each of them in the order that I’ve read them (which actually has no specific meaning).
+  I'm a huge fan of Few's work and this blog post is meant as an introduction to his different titles, so people know what to expect when they read one of his books. I'll review each of them in the order that I've read them (which actually has no specific meaning).
 </p>
 
 <h1 style="text-align: justify">

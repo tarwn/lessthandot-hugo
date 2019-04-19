@@ -1,5 +1,5 @@
 ---
-title: 'From Eli’s Shelves: Books for IT Management'
+title: "From Eli's Shelves: Books for IT Management"
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-05-27T15:32:00+00:00

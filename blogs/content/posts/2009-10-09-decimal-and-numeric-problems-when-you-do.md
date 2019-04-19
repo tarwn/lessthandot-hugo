@@ -1,5 +1,5 @@
 ---
-title: Decimal and Numeric problems when you don’t specify precision and scale
+title: Decimal and Numeric problems when you don't specify precision and scale
 author: George Mastros (gmmastros)
 type: post
 date: 2009-10-09T11:24:21+00:00

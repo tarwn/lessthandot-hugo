@@ -20,13 +20,13 @@ The enhancements to the Activity Monitor were an extremely useful addition to SQ
 
 One method we can use is SQL Server Profiler to capture and reuse valuable information gathered from the new Activity Monitor. Profiler allows us to see exactly what is populating the tables behind the engine. 
 
-## Let’s take a look
+## Let's take a look
 
 Open SSMS 2008 and connect to a development instance. Once open, right click the server name in object explorer and select Activity Monitor from the list.
 
 Now open SQL Server Profiler from the performance tools section located in the all programs section of SQL Server 2008. 
 
-Create a new trace and either save to a table or a file for the output. Saving to a table for this type of task is useful so we can query the results later and will not be a heavy performance issue as the trace will not be running long. Next, click the Event Selection so we can filter out most of the batch statements that we don’t want to see. I put my filter to only show ApplicationName value of “Microsoft SQL Server Management Studio” and also LoginName of myself. 
+Create a new trace and either save to a table or a file for the output. Saving to a table for this type of task is useful so we can query the results later and will not be a heavy performance issue as the trace will not be running long. Next, click the Event Selection so we can filter out most of the batch statements that we don't want to see. I put my filter to only show ApplicationName value of “Microsoft SQL Server Management Studio” and also LoginName of myself. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/am2.png" alt="" title="" width="480" height="315" />
@@ -36,9 +36,9 @@ Once that is completely setup, hit Run to start the trace.
 
 You should start to see all of the main statements that are driving the Activity Monitor start coming into profiler. 
 
-We can see that the queries are based on several DMV/DMF and are being inserted into temporary tables for the Activity Monitor to show. At this point the query isn’t helpful sense the data is being inserted into temporary tables we cannot control. The temporary tables are already created by the monitor so recreating them manually ourselves would also cause a problem. We can use these queries though to manage our own results by simple changes in them and executing them in tasks we create ourselves.
+We can see that the queries are based on several DMV/DMF and are being inserted into temporary tables for the Activity Monitor to show. At this point the query isn't helpful sense the data is being inserted into temporary tables we cannot control. The temporary tables are already created by the monitor so recreating them manually ourselves would also cause a problem. We can use these queries though to manage our own results by simple changes in them and executing them in tasks we create ourselves.
 
-Let’s show this by grabbing the query that populates the file information in the “Data File I/O” section of the Activity Monitor. The query that does this should look like this in the beginning of the batch
+Let's show this by grabbing the query that populates the file information in the “Data File I/O” section of the Activity Monitor. The query that does this should look like this in the beginning of the batch
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/am.gif" alt="" title="" width="555" height="177" />
@@ -63,4 +63,4 @@ INNER JOIN sys.databases d ON d.database_id = fs.database_id;
 
 We can take this even further by using the statements we captured in order to insert data from SQL Server over a time period.
 
-We can already see the value in the information we’ve captured out of Profiler and the Activity Monitor for our own use in reporting and overtime analysis of SQL Server with a rapid development feel to the process.
+We can already see the value in the information we've captured out of Profiler and the Activity Monitor for our own use in reporting and overtime analysis of SQL Server with a rapid development feel to the process.

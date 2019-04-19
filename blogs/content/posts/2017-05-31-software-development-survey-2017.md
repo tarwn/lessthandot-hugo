@@ -30,7 +30,7 @@ categories:
 &nbsp;
 
 <p id="f163" class="graf graf--p graf-after--figure">
-  So, you’re a developer? or an architect? or maybe even a technical delivery manager?
+  So, you're a developer? or an architect? or maybe even a technical delivery manager?
 </p>
 
 <p id="654c" class="graf graf--p graf-after--p">
@@ -42,11 +42,11 @@ categories:
 </p>
 
 <p id="4ba4" class="graf graf--p graf-after--p">
-  I’m currently doing some research for an upcoming book, and for a new software product, and who better to ask than those that are building and delivering software solutions each and every day?
+  I'm currently doing some research for an upcoming book, and for a new software product, and who better to ask than those that are building and delivering software solutions each and every day?
 </p>
 
 <p id="4b38" class="graf graf--p graf-after--p">
-  So I’d like you to share the wisdom of your experience, by filling in a survey that will take you about 10–15 minutes to complete, about your experiences with designing, building, running and managing software. Start-ups and Enterprises both welcome.
+  So I'd like you to share the wisdom of your experience, by filling in a survey that will take you about 10–15 minutes to complete, about your experiences with designing, building, running and managing software. Start-ups and Enterprises both welcome.
 </p>
 
 <p id="5c00" class="graf graf--p graf-after--p">
@@ -54,7 +54,7 @@ categories:
 </p>
 
 <p id="8b54" class="graf graf--p graf-after--p">
-  So, if you design, build or manage software on a regular basis, I would like to hear from you…
+  So, if you design, build or manage software on a regular basis, I would like to hear from you...
 </p>
 
 <p id="3ecf" class="graf graf--p graf-after--p">

@@ -18,7 +18,7 @@ categories:
   - SSRS
 
 ---
-I don’t know how to describe how awesome and amazing my first PASS Summit was. I’m normally verbose, but don’t know where to start. Perhaps “a picture is worth a thousand words” will help me here. 
+I don't know how to describe how awesome and amazing my first PASS Summit was. I'm normally verbose, but don't know where to start. Perhaps “a picture is worth a thousand words” will help me here. 
 
 **Monday, October 10** 
 
@@ -44,7 +44,7 @@ Eating lunch at a Russian restaurant Buck Woody recommended.
 
 I “squeeeeeeeeeeeed” myself hoarse in the registration area. 
 
-I ate dinner at Lowell’s with Steve Jones, Andy Warren, and several hundred of our closest SQL friends. 
+I ate dinner at Lowell's with Steve Jones, Andy Warren, and several hundred of our closest SQL friends. 
 
 I went to Bush Gardens for #sqlkaraoke.
   
@@ -86,7 +86,7 @@ And about 40 other #sqlgeeks.
 
 I attended the keynote. 
 
-I attended the Red Gate announcement: they are sending a DBA into SPACE. OUTER SPACE. ROCKETS. ASTRONAUTS. I’MMA DIE OF EXCITEMENT.
+I attended the Red Gate announcement: they are sending a DBA into SPACE. OUTER SPACE. ROCKETS. ASTRONAUTS. I'MMA DIE OF EXCITEMENT.
   
 ![][13]
 
@@ -94,7 +94,7 @@ I walked around the vendor show. I talked to cool people. I collected cool swag.
 
 I attended the chapter lunch. I met people interested in attending and speaking at my user group, MADPASS. 
 
-Drumroll please…I was giving my first PASS Summit presentation, “Reporting Services 201”.
+Drumroll please...I was giving my first PASS Summit presentation, “Reporting Services 201”.
   
 ![][14]
 
@@ -102,11 +102,11 @@ Here is my room, from the front. Look at all the chairs.
   
 ![][15]
 
-View from the back, halfway through. Look at all the PEOPLE. I’mma die of excitement.
+View from the back, halfway through. Look at all the PEOPLE. I'mma die of excitement.
   
 ![][16]
 
-I attended Grant Fritchey’s DMOs session. 
+I attended Grant Fritchey's DMOs session. 
 
 I attended the exhibitor reception, my Microsoft region reception, and the SolidQ reception. 
 
@@ -124,7 +124,7 @@ I met a well-dressed Buck Woody before the Women In Technology lunch.
   
 ![][19]
 
-I moderated the Women In Technology lunch panel. Here’s a view from the stage.
+I moderated the Women In Technology lunch panel. Here's a view from the stage.
   
 ![][20]
 
@@ -132,29 +132,29 @@ I watched Doug Lane give his first Summit presentation.
   
 ![][21]
 
-I attended Kalen Delaney’s plan cache session. I smacked my forehead on the chair ahead of me in said session. 
+I attended Kalen Delaney's plan cache session. I smacked my forehead on the chair ahead of me in said session. 
 
 I had dinner with the Damn Strates, Jason and Sarah, and Colin. We found a new WIT logo.
   
 ![][22]
 
-I attended the Gameworks party. I got video of our MADPASS chapter president, Tim, playing Dance Dance Revolution. You’ll have to attend the next MADPASS meeting to watch. 
+I attended the Gameworks party. I got video of our MADPASS chapter president, Tim, playing Dance Dance Revolution. You'll have to attend the next MADPASS meeting to watch. 
 
 **Friday, October 14** 
 
 I woke up sick. Really, really sick. Yuck. #nerdflu sucks. 
 
-I attended the Birds of a Feather Lunch and sat at Aaron Nelson’s PowerShell table. 
+I attended the Birds of a Feather Lunch and sat at Aaron Nelson's PowerShell table. 
 
 I watched Jessica Moss present “Preventing the “Oh Poop!” Reporting Services Situation”. 
 
-I watched Lightning Talks. If you’ve never had David Stein explain database lessons learned from The Godfather, well, you ought to. Also, if you’ve never heard Doug Lane explain why, with both donkeys and dashboards, framing matters, you ought to. 
+I watched Lightning Talks. If you've never had David Stein explain database lessons learned from The Godfather, well, you ought to. Also, if you've never heard Doug Lane explain why, with both donkeys and dashboards, framing matters, you ought to. 
 
-I watched Jonathan Kehayias’ presentation on Event Notifications. He presented in his awesome pink Superman shirt.
+I watched Jonathan Kehayias' presentation on Event Notifications. He presented in his awesome pink Superman shirt.
   
 ![][23]
 
-I tried on Rob Farley’s name tag. He’s a proper bit taller than I am.
+I tried on Rob Farley's name tag. He's a proper bit taller than I am.
   
 ![][24]
 

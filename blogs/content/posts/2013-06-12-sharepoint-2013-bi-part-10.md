@@ -50,7 +50,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_03.png?mtime=1370461325"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_03.png?mtime=1370461325" alt="" width="638" height="244" /></a>
 </p>
 
-<span style="text-align: justify;">So let’s activate this feature. Go to Site Settings > Site Collection Features and activate the </span>**SharePoint Server Publishing Infrastructure** <span style="text-align: justify;">feature.</span>
+<span style="text-align: justify;">So let's activate this feature. Go to Site Settings > Site Collection Features and activate the </span>**SharePoint Server Publishing Infrastructure** <span style="text-align: justify;">feature.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_06.png?mtime=1370461325"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_06.png?mtime=1370461325" alt="" width="1000" height="107" /></a>
@@ -68,7 +68,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_07.png?mtime=1370461325"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_07.png?mtime=1370461325" alt="" width="607" height="203" /></a>
 </p>
 
-<span style="text-align: justify;">What? Another error! The Performance Point features must also be activated before you can create a BI site. (I hope you are reading through this blog first before you actually try it out). Although I will probably not use Performance Point – like many other – I still need to enable it in order to create my site. So let’s do this.</span>
+<span style="text-align: justify;">What? Another error! The Performance Point features must also be activated before you can create a BI site. (I hope you are reading through this blog first before you actually try it out). Although I will probably not use Performance Point – like many other – I still need to enable it in order to create my site. So let's do this.</span>
 
 <p style="text-align: justify;">
   Go to Central Administration > System Settings > Manage services on server and activate the Performance Point Service.
@@ -96,7 +96,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/EnablePerformancePoint_02b.png?mtime=1370461326"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/EnablePerformancePoint_02b.png?mtime=1370461326" alt="" width="414" height="407" /></a>
 </p>
 
-<span style="text-align: justify;">When the creation was successful, you’ll get a list of possible follow-up actions. Click </span>_OK_<span style="text-align: justify;">.</span>
+<span style="text-align: justify;">When the creation was successful, you'll get a list of possible follow-up actions. Click </span>_OK_<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/EnablePerformancePoint_03.png?mtime=1370461326"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/EnablePerformancePoint_03.png?mtime=1370461326" alt="" width="375" height="345" /></a>
@@ -138,13 +138,13 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_08.png?mtime=1370461325"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_08.png?mtime=1370461325" alt="" width="613" height="322" /></a>
 </p>
 
-<span style="text-align: justify;">All that’s left is to adjust this site to your preferences. This is for example how my Power View library looks like at the time of writing.</span>
+<span style="text-align: justify;">All that's left is to adjust this site to your preferences. This is for example how my Power View library looks like at the time of writing.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_09.png?mtime=1370461326"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/CreateSite_09.png?mtime=1370461326" alt="" width="906" height="564" /></a>
 </p>
 
-<span style="text-align: justify;">If you want to use a SharePoint list as an OData source for your demos, you don’t need to install ADO.NET data services like in SharePoint 2010. This functionality is already present.</span>
+<span style="text-align: justify;">If you want to use a SharePoint list as an OData source for your demos, you don't need to install ADO.NET data services like in SharePoint 2010. This functionality is already present.</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part10/AlreadyInstalled.png?mtime=1370462164"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part10/AlreadyInstalled.png?mtime=1370462164" alt="" width="606" height="292" /></a>

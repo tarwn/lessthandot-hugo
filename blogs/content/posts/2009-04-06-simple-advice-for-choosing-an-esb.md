@@ -29,15 +29,15 @@ tags:
 ---
 I thought I would share a recent question that was raised on LinkedIn, which asked:
 
-> _**Starting the Holy Wars on ESB? Who brings the best package deal to the table i.e IBM, MSFT…… Look at this way ” A mid sized cash crunched has to implement ESB what are the options it has” or rather who should it be married to. Any thoughts**_
+> _**Starting the Holy Wars on ESB? Who brings the best package deal to the table i.e IBM, MSFT...... Look at this way ” A mid sized cash crunched has to implement ESB what are the options it has” or rather who should it be married to. Any thoughts**_
 > 
 > Tons of ESB from various players are in the market IBM, MSFT, Oracle , SAP but remember its a cash crunched company which requires the ESB. I can provide more details on the technical side. The idea is to throw open the debate to get various perspective. 
 
-Well, let's forget for the moment that the question was raised by a Microsoft employee, and focus more on the general principle of the question… What should companies look for in an [ESB][1]? In my brief answer, I aim to get across the point that asking which ESB vendor you should be “Married to” is very much the wrong question to ask, and to consider that there is more to solving this problem intelligently (and thus cost effectively) than simply 'buying technology'. No single technology will solve your problem out of the box, so be careful not to expect or ask it to do so. 
+Well, let's forget for the moment that the question was raised by a Microsoft employee, and focus more on the general principle of the question... What should companies look for in an [ESB][1]? In my brief answer, I aim to get across the point that asking which ESB vendor you should be “Married to” is very much the wrong question to ask, and to consider that there is more to solving this problem intelligently (and thus cost effectively) than simply 'buying technology'. No single technology will solve your problem out of the box, so be careful not to expect or ask it to do so. 
 
 Here's the Answer in full:
 
-> As always… understand the problem first…
+> As always... understand the problem first...
 > 
 > Step 1: Understand the problem you are trying to solve (e.g. Imperatives, Current Pain Points, As-Is Landscape, Use Cases, etc)
   
@@ -45,7 +45,7 @@ Here's the Answer in full:
   
 > Step 3: Create a high level Roadmap to get from your current environment to your target architecture
   
-> Step 4: Now… Search for a technology that will support this need.
+> Step 4: Now... Search for a technology that will support this need.
 > 
 > I would highly recommend not starting by talking to vendors about how they will solve your problem. Strangely enough, their products always have the answer 🙂
 > 
@@ -59,7 +59,7 @@ Here's the Answer in full:
   
 > Flexibility
 > 
-> – This is where you need to really think about why you have an integration problem in the first place… closed, insular approaches to application design. This indicates that we want an OPEN and INTEROPERABLE environment which is based on STANDARDS to give you FLEXIBILITY.
+> – This is where you need to really think about why you have an integration problem in the first place... closed, insular approaches to application design. This indicates that we want an OPEN and INTEROPERABLE environment which is based on STANDARDS to give you FLEXIBILITY.
 > 
 > The problem with a lot of products on the market if not understood or used properly is that you can very soon become (in your words) “Married” to that vendor's solution. This destroys the core principles of what integration is all about – you are simply adding the same problem on top of the original problems.
 > 
@@ -67,7 +67,7 @@ Here's the Answer in full:
 > 
 > Additionally, you need to consider that properly integrating your environment is not just about purchasing / implementing an ESB. This is just one component of the overall solution, which should consider the need for MDM, Data Architecture and Canonicalisation, Portals, Business Rules, Registry/Repository, Modelling Tools, Business Process Management and Orchestration, amongst others. The commercial vendors will be more than willing to sell you complete stacks for these things, but be prepared to do things their way, and have a certain amount of lock-in to that vendor.
 > 
-> As you work there, I'm sure you realise that Microsoft is very Microsoft focused, so is only really sensible for Microsoft only environments. However, your recent deal with SOPERA now gives support for both native .NET and Java environments. Maybe there is hope…
+> As you work there, I'm sure you realise that Microsoft is very Microsoft focused, so is only really sensible for Microsoft only environments. However, your recent deal with SOPERA now gives support for both native .NET and Java environments. Maybe there is hope...
 > 
 > Oracle and SAP have some good concepts, but unfortunately they are again very insular – if you only have SAP then XI will be wonderful for you, same with Oracle Fusion and their AIA offering – extending outside the environment is possible, but often ugly.
 > 
@@ -75,11 +75,11 @@ Here's the Answer in full:
 > 
 > Webmethods provides you with a well integrated set of tools and features, again application agnostic, though it's sweet spot is Process Management, and isn't the most open/standards compliant.
 > 
-> If a company is really strapped for cash… then an open source option may be best. But you may have to work harder to get a complete solution up and running.
+> If a company is really strapped for cash... then an open source option may be best. But you may have to work harder to get a complete solution up and running.
 > 
 > You can get all of the components to integrate your environment for free – but you have to implement them, they may not be that pretty/easy to use, or performant, and if you choose not to pay for ongoing support then you are putting your company at risk.
 > 
-> You also have to ask yourself if you are really doing pure SOA, or whether you are needing to do application integration…
+> You also have to ask yourself if you are really doing pure SOA, or whether you are needing to do application integration...
 > 
 > above all, the right architecture will win over a technology choice 
 
@@ -95,7 +95,7 @@ I touch briefly on a couple of points I want to highlight here.
 
 There are others (e.g. Apache FUSE), though I'll save the details for another day – check out the above and see how it may suit your needs.
 
-**The second point** is the question of whether you are really doing pure SOA or not, or whether you're either doing application integration (not too dissimilar in objective, but different in concept) or just 'web services'. Have a think about that… what exactly is SOA to you? And do you think everyone else thinks the same? Feel free to post your thoughts below…
+**The second point** is the question of whether you are really doing pure SOA or not, or whether you're either doing application integration (not too dissimilar in objective, but different in concept) or just 'web services'. Have a think about that... what exactly is SOA to you? And do you think everyone else thinks the same? Feel free to post your thoughts below...
 
 _The full Q&A from linkedin here:_
   

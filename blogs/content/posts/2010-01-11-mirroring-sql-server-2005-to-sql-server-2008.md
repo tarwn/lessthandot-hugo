@@ -21,11 +21,11 @@ categories:
   <img src="/wp-content/uploads/blogs/DataMgmt/mirror.gif" alt="" title="" width="550" height="678" />
 </div>
 
-Over the weekend I started writing my documentation and lab work for a few database servers that I will be upgrading to SQL Server 2008 in the first quarter of 2010. Upgrading SQL Server has benefits in having multiple ways to go about how you plan and execute the process. I can’t praise the SQL Server team enough for making the task of upgrading much less stressful than other database servers I have worked on.
+Over the weekend I started writing my documentation and lab work for a few database servers that I will be upgrading to SQL Server 2008 in the first quarter of 2010. Upgrading SQL Server has benefits in having multiple ways to go about how you plan and execute the process. I can't praise the SQL Server team enough for making the task of upgrading much less stressful than other database servers I have worked on.
   
 
   
-The company I currently work for has little tolerance to downtime. Seconds can do severe damage to the process flow of money in and out. This means that my process of maintenance, upgrades, migrations and such must be quick with little disruption to the business. One method I’ve adopted is to use mirroring for migrations and moving to other hardware for SQL Server. This method has worked exteremely well and I wanted to test feasiblity for upgrading as well. Given the concept, this can be a very powerful method of upgrading to new versions of SQL Server now that mirroring is on the list of features for SQL Server Enterprise and Standard editions. 
+The company I currently work for has little tolerance to downtime. Seconds can do severe damage to the process flow of money in and out. This means that my process of maintenance, upgrades, migrations and such must be quick with little disruption to the business. One method I've adopted is to use mirroring for migrations and moving to other hardware for SQL Server. This method has worked exteremely well and I wanted to test feasiblity for upgrading as well. Given the concept, this can be a very powerful method of upgrading to new versions of SQL Server now that mirroring is on the list of features for SQL Server Enterprise and Standard editions. 
 
 ## What I found in my tests 
 
@@ -49,7 +49,7 @@ Converting database 'JUNK' from version 611 to the current version 655.
     Database 'JUNK' running the upgrade step from version 611 to version 621.
     Database 'JUNK' running the upgrade step from version 621 to version 622.
     Database 'JUNK' running the upgrade step from version 622 to version 625.
-    ………
+    .........
     Database 'JUNK' running the upgrade step from version 652 to version 653.
     Database 'JUNK' running the upgrade step from version 653 to version 654.
     Database 'JUNK' running the upgrade step from version 654 to version 655.

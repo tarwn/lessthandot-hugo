@@ -206,7 +206,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <p>
-      (The process improvement from this section is almost always “you spent all the time talking” (aimed at me). But, seriously, how can you answer questions about a whole company in less than an hour AND not talk most of the time…sheesh.)
+      (The process improvement from this section is almost always “you spent all the time talking” (aimed at me). But, seriously, how can you answer questions about a whole company in less than an hour AND not talk most of the time...sheesh.)
     </p>
     
     <p>
@@ -294,7 +294,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </h2>
     
     <p>
-      By this point we already know salary requirements and can have a conversation about those, the benefits we offer (great), the advantages of the environment and benefits you get here (also great), and so on. When we have an agreement, we put together a formal offer letter to make it all official. When we get this back, we start picking out who the onboarding partner is going to be. Then we'll schedule your background and drug screen, start piling up forms in your inbox, send you a looooong list of great articles and videos that helped shape us, ….
+      By this point we already know salary requirements and can have a conversation about those, the benefits we offer (great), the advantages of the environment and benefits you get here (also great), and so on. When we have an agreement, we put together a formal offer letter to make it all official. When we get this back, we start picking out who the onboarding partner is going to be. Then we'll schedule your background and drug screen, start piling up forms in your inbox, send you a looooong list of great articles and videos that helped shape us, ....
     </p>
     
     <p>

@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2012-05-23T13:08:00+00:00
 ID: 1636
-excerpt: 'In another life, I’m a professional bookworm who gets to read and review books full-time. My latest SQL read was SQL Server MVP Deep Dives. It’s a compilation – 59 chapters – on various SQL Server topics, written by&hellip;'
+excerpt: "In another life, I'm a professional bookworm who gets to read and review books full-time. My latest SQL read was SQL Server MVP Deep Dives. It's a compilation – 59 chapters – on various SQL Server topics, written by&hellip;"
 url: /index.php/itprofessionals/professionaldevelopment/book-review-sql-server-mvp/
 views:
   - 12438
@@ -16,7 +16,7 @@ categories:
 
 ---
 **  
-** In another life, I’m a professional bookworm who gets to read and review books full-time.
+** In another life, I'm a professional bookworm who gets to read and review books full-time.
 
  
 
@@ -28,23 +28,23 @@ categories:
   <em>I'd like to live here, please.</em>
 </p>
 
-My latest SQL read was [SQL Server MVP Deep Dives][1]. It’s a compilation – 59 chapters – on various SQL Server topics, written by Microsoft MVPs. What's so cool about this book, as opposed to most, is that it plays to an author's strengths and passions. It doesn’t cover one topic; it covers every aspect of SQL Server. 
+My latest SQL read was [SQL Server MVP Deep Dives][1]. It's a compilation – 59 chapters – on various SQL Server topics, written by Microsoft MVPs. What's so cool about this book, as opposed to most, is that it plays to an author's strengths and passions. It doesn't cover one topic; it covers every aspect of SQL Server. 
 
 **Part 1 – Database Design and Architecture   
 **    
-I found this section relevant when I opened this book because I was starting two database design projects. Louis Davidson and Paul Nielsen’s database design ideas are useful for everyone to review from time to time.
+I found this section relevant when I opened this book because I was starting two database design projects. Louis Davidson and Paul Nielsen's database design ideas are useful for everyone to review from time to time.
 
 **Part 2 – Database Development   
 **    
-The “Error Handling in SQL Server applications” chapter by Bill Graziano was immediately useful and impactful. Using “Try…Catch” and RAISERROR are often overlooked, but shouldn’t be, when writing T-SQL. 
+The “Error Handling in SQL Server applications” chapter by Bill Graziano was immediately useful and impactful. Using “Try...Catch” and RAISERROR are often overlooked, but shouldn't be, when writing T-SQL. 
 
 “Introduction to XQuery” by Michael Coles also caught my attention, as learning it is one of my goals for 2012.
 
 “Full-text searching” by Robert C. Cain is an awesome chapter. It covers how to set up, use, and maintain full-text catalogs and indexes. I've read about it before, but this had some of the best real-world examples. I had been looking at implementing it in a project at that time, so it was great timing.
 
-Reading “Why every SQL developer needs a tools database” by LessThanDot’s very own Denis Gobo was cool. (You guys! I get to blog with authors and MVPs and really smart, amazing people!) Denis makes a great case for a separate database to hold shared functions. He also emphasizes the need for a numbers table, which I've recently re-acquainted myself with. Trust us, you want one.
+Reading “Why every SQL developer needs a tools database” by LessThanDot's very own Denis Gobo was cool. (You guys! I get to blog with authors and MVPs and really smart, amazing people!) Denis makes a great case for a separate database to hold shared functions. He also emphasizes the need for a numbers table, which I've recently re-acquainted myself with. Trust us, you want one.
 
-I learned something brand new! (At 5:55 am, no less!) “Deprecation feature” by Cristian Lefter showed how to track the use of deprecated features through perfmon, a trace, or (my favorite) extended events. How did I NOT know about this? What a great audit tool. Now, how to effectively implement this…
+I learned something brand new! (At 5:55 am, no less!) “Deprecation feature” by Cristian Lefter showed how to track the use of deprecated features through perfmon, a trace, or (my favorite) extended events. How did I NOT know about this? What a great audit tool. Now, how to effectively implement this...
 
 I like the fact that non-SQL MVPs are also contributing. Even a (gasp) Access MVP.
 
@@ -52,7 +52,7 @@ I like the fact that non-SQL MVPs are also contributing. Even a (gasp) Access MV
 **    
 “My favorite DMVs, and why” by Aaron Bertrand is one of my favorite chapters. DMVs are great. What I learned is that Aaron made his own sp_who! I wish I was still in a large corporate environment to test that. He also shows an uptime function that he created in his utility database, which he uses in almost all DMV queries. Good idea!
 
-Ron Talmage wrote “Some practical issues in table partitioning”. It covered the basics – usually writing about this topic is overwhelming. I know I don’t fully understand partitioning yet. One thing I know: I think LEFT is easier to understand.
+Ron Talmage wrote “Some practical issues in table partitioning”. It covered the basics – usually writing about this topic is overwhelming. I know I don't fully understand partitioning yet. One thing I know: I think LEFT is easier to understand.
 
 Scott Stauffer wrote “Successfully implementing Kerberos delegation”. In February, I had the pleasure of meeting Scott in Redmond, WA. I remember many Kerberos issues from my previous job. I never had a solid understanding of all the pieces until now. He provides a great great list of resources. I would love to see more people understand Active Directory and related services. (As Argenis Fernandez once tweeted, you can't be really good at SQL Server until you get AD.) 
 
@@ -70,7 +70,7 @@ Cristian Lefter talks about Xevents in “XEVENT: the next event infrastructure 
 
 **Part 5: Business Intelligence** 
 
-Erin Welker’s “BI for the relational guy” gives a good overview of how OLTP differs from OLAP. She discusses what Microsoft products are BI-related. There’s also a list of further reading material. (More books to put on my list…)
+Erin Welker's “BI for the relational guy” gives a good overview of how OLTP differs from OLAP. She discusses what Microsoft products are BI-related. There's also a list of further reading material. (More books to put on my list...)
 
 William Vaughn's writing style for “U nlocking the secrets of SQL Server 2008 Reporting Services” had me giggling from start to finish. He gives a thorough overview of the many often -overlapping parts of SSRS. He also makes note of things like IIS no longer being required. 
 
@@ -80,9 +80,9 @@ The book closes with an excellent chapter by Andy Leonard, “Incremental Loads 
 
 This section made me realize how little I know about SSIS, SSAS, and data mining.
 
-**59 Chapters Later…** 
+**59 Chapters Later...** 
 
-I would recommend this book to anyone who works with SQL Server in any capacity. It touches on so many topics that anyone can find something of interest. Everyone is guaranteed to learn something. It’s easy enough to read one chapter in the morning, or at lunch, or before bed. Thank you to all of the authors who worked on it!
+I would recommend this book to anyone who works with SQL Server in any capacity. It touches on so many topics that anyone can find something of interest. Everyone is guaranteed to learn something. It's easy enough to read one chapter in the morning, or at lunch, or before bed. Thank you to all of the authors who worked on it!
 
  [1]: http://manning.com/nielsen/
  [2]: http://www.red-gate.com/products/dba/sql-monitor/entrypage/dmv?utm_source=bradmcgehee&utm_medium=banner&utm_content=dmv_201007&utm_campaign=sqlresponse

@@ -20,7 +20,7 @@ categories:
 ---
 After upgrading my SQL Toolbelt installation recently, I came across a new entry in the SQL Prompt menu that is integrated into SQL Server Management Studio. So I have decided to put out a quick post on one of the features which I find is handy.
 
-With the new SQL Toolbelt, I've also installed the Redgate integration which integrates all the tools for you into Management Studio. On my way to make some changes to my configuration for SQL Prompt, I noticed the Experimental Features… portion which altered my curiosity setting to a full 100%.
+With the new SQL Toolbelt, I've also installed the Redgate integration which integrates all the tools for you into Management Studio. On my way to make some changes to my configuration for SQL Prompt, I noticed the Experimental Features... portion which altered my curiosity setting to a full 100%.
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/sqlarcher/Redgate_SQLTabMagic/Menu.jpg?mtime=1329394384"><img alt="" src="/wp-content/uploads/users/sqlarcher/Redgate_SQLTabMagic/Menu.jpg?mtime=1329394384" width="282" height="472" /></a>

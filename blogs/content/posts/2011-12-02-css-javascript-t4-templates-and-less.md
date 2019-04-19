@@ -37,7 +37,7 @@ This morning, while looking into the potential of using LESS or SASS to reduce t
 
 I initially looked at using SASS with the [Mindscape Web Workbench][1] plugin. This seemed like a good solution, but something I read recently about design-time T4 templates led me to wonder if someone had created a T4 template that would transform LESS or SASS syntax into a nice clean CSS file. 
 
-What did we do before search engines…
+What did we do before search engines...
 
 ## Implement T4CSS Template
 

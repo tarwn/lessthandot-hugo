@@ -41,7 +41,7 @@ For more details go to http://sqlconnections.eventbrite.com/
   
 
   
-Once the session is completed, I’ll upload the slides and accompanying package (with supporting files) to this post.
+Once the session is completed, I'll upload the slides and accompanying package (with supporting files) to this post.
   
 
   

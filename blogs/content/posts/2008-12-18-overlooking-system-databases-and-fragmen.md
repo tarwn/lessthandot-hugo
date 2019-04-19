@@ -15,7 +15,7 @@ categories:
 ---
 A common mistake DBAs make is overlooking the need to maintain the indexes that ship with system databases. Fragmentation is a concern on user databases but also is something that must be maintained on databases like ReportServer for SSRS. 
 
-I’m going to focus on SSRS as an example but keep this open to all of the systems databases you have on your instances. 
+I'm going to focus on SSRS as an example but keep this open to all of the systems databases you have on your instances. 
 
 Most successful reporting services implementations come with daily report generations, changes and high execution rates. That means the tables in the ReportServer database will change along with your reports. One key table to focus on for maintaining performance will be the ExecutionLog. One reporting services instance I have goes well over the 75% fragmentation mark around every 6 hours. That will be common for the ExecutionLog and in larger companies you can see indexes becoming fragmented in as little as the hour increments.
 

@@ -116,9 +116,9 @@ Weekends are best.
   
 Weekends are best.
 
-Who wrote that…Monday is my favorite day 🙂
+Who wrote that...Monday is my favorite day 🙂
 
-That is it for today…tomorrow we will start on generics which of course in java is just syntactic sugar unlike in c#, java uses a technique called erasure…..the generic type is erased at runtime
+That is it for today...tomorrow we will start on generics which of course in java is just syntactic sugar unlike in c#, java uses a technique called erasure.....the generic type is erased at runtime
 
 From the Java docs
 

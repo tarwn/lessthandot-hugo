@@ -46,7 +46,7 @@ Some high points that we covered were
 
 Overall we talked about a lot of topics and still have so much more we could talk about.
 
-I really hope everyone did enjoy Andy and my presentations.  I know for my part, it was a really great night of SQL Server, making new friends and catching up with old friends.  I’m looking forward to coming back in March!
+I really hope everyone did enjoy Andy and my presentations.  I know for my part, it was a really great night of SQL Server, making new friends and catching up with old friends.  I'm looking forward to coming back in March!
 
 You can download the deck using this link, [Merge Replication for Offline Data Mobility.pdf][6].  I will make the code that went with my presentation available soon.  Doing some clean up because of that developer that was making me sweat it in the front row.  😉
 

@@ -106,7 +106,7 @@ _
   
 **Datacenter**</p> 
 
-Built on SQL Server 2008 R2 Enterprise, SQL Server 2008 R2 Datacenter is designed to deliver a high-performing data platform that provides the highest levels of scalability for large application workloads, virtualization and consolidation, and management for an organization’s database infrastructure. Datacenter helps enable organizations to cost effectively scale their mission-critical environment.
+Built on SQL Server 2008 R2 Enterprise, SQL Server 2008 R2 Datacenter is designed to deliver a high-performing data platform that provides the highest levels of scalability for large application workloads, virtualization and consolidation, and management for an organization's database infrastructure. Datacenter helps enable organizations to cost effectively scale their mission-critical environment.
 
 **Key features new to Datacenter:**
 

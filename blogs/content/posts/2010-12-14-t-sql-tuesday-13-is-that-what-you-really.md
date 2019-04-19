@@ -26,11 +26,11 @@ categories:
   
 **Ted:** what did they have you doing??
   
-**George:** They refuse to use (software) they way it was intended. They want a “Blah Blah Report” where each….. This report is not accurate because (software) wasn't designed this way. Instead, each… then a report showing… should be used instead.
+**George:** They refuse to use (software) they way it was intended. They want a “Blah Blah Report” where each..... This report is not accurate because (software) wasn't designed this way. Instead, each... then a report showing... should be used instead.
   
 **Ted:** so they want you to write a report that doesn't even reflect the way the system works.
   
-**George:** It's like…. well…. trying to use Excel to manage a sql database.
+**George:** It's like.... well.... trying to use Excel to manage a sql database.
   
 **Ted:** LOL
   
@@ -38,7 +38,7 @@ categories:
   
 **Ted:** LOL
   
-**George:** oh…. and I'm supposed to make it faster, too.
+**George:** oh.... and I'm supposed to make it faster, too.
   
 **Ted:** ROFL but of course!Whenever I run in to a problem with a customer, I try to use the following steps.1. Manage expectations at the beginning. This allows you to prevent possible complications in the future by expressing what the customer should reasonably expect from the software.2. Effectively train the customer in the proper operation of the software. Part of the training process should be the “big picture” because it allows them to see and appreciate your methods for handling the business problems in an efficient manner.3. When a customer has unrealistic expectations, it's important to explain (at a high level) why they are unrealistic. Explain the benefits of the currently implemented method and the draw backs with their proposed method.4. When they insist on new/different functionality, you should attempt to work out a compromise that allows your existing functionality to satisfy their requirements. Often times, a small tweak to current functionality will satisfy their requirements.5. When all else fails, the customer is always right. If you refuse to implement the functionality they want, you run the risk of losing their business, and potentially word-of-mouth business as well.As developers, we have a responsibility to provide software that makes our customers job easier and more efficient. We also have a responsibility to advise them of alternative methods (new to them) that would improve their efficiency. If all else fails, be prepared to give the customer what they want.
 

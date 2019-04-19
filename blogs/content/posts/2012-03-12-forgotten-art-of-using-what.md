@@ -24,7 +24,7 @@ One thing that can be very hard to learn early in your career is the art of igno
 
 _Result = Time Estimation – ((Technology \* Time in Hours) + (Implementation \* Time in Hours) )_
 
-The formula that goes into completing a task may be something so trivial to most; it isn’t even a thought process that you go through.  With earlier career building and becoming more efficient in your profession, the formula you utilize in completing tasks can be critical to how efficient you are now and later in your career.  One part in the formula is the technology to be consumed by the task.  This can be critical to a successful result for the task that you’ve been handed.
+The formula that goes into completing a task may be something so trivial to most; it isn't even a thought process that you go through.  With earlier career building and becoming more efficient in your profession, the formula you utilize in completing tasks can be critical to how efficient you are now and later in your career.  One part in the formula is the technology to be consumed by the task.  This can be critical to a successful result for the task that you've been handed.
 
  
 
@@ -68,7 +68,7 @@ What happened here was the utilization of high-level skills already existing to 
 
 **How strict should you be with this?**
 
-Creating a situation where you run your day based on formulas that you abide by without misdirection can create a more efficient process overall.  However, taking risk factors on certain tasks that have a lower level impact is also as important.  Utilizing PowerShell, mentioned in our example above, may be the right option to allow you the ability to learn the newer scripting abilities.  It may prove to be a future replacement for what was selected as a technology to utilize.  This can be seen in efficiency and effectiveness in overall time to develop the scripts (or programs, statements, etc…) The impact level should be considered, always. 
+Creating a situation where you run your day based on formulas that you abide by without misdirection can create a more efficient process overall.  However, taking risk factors on certain tasks that have a lower level impact is also as important.  Utilizing PowerShell, mentioned in our example above, may be the right option to allow you the ability to learn the newer scripting abilities.  It may prove to be a future replacement for what was selected as a technology to utilize.  This can be seen in efficiency and effectiveness in overall time to develop the scripts (or programs, statements, etc...) The impact level should be considered, always. 
 
 Following this task formula can be extremely effective when risk and impact to the requirements of the task area also taken into account.  Remember, learning new technologies has its place and is an absolute critical aspect to a computing profession.  Putting aside efficiency and success rates in your career should not be done however to utilize those technologies simply because they exist.
 

@@ -40,7 +40,7 @@ Using PASSMN as my “practice venue”, I delivered my first UG presentation in
 
 So what is my advice for someone, like me, just starting out?  Throw yourself, head first, into the SQL Server community. Find a speaker you respect and pick their brain a bit. Odds are they won't bite and are willing to provide valuable insight. Feel free to ping me anytime for advice!
 
-Thanks to Bob for hosting this topic.  As I said…. it is very timely for me!
+Thanks to Bob for hosting this topic.  As I said.... it is very timely for me!
 
  [1]: http://ltd.local/
  [2]: http://www.bobpusateri.com/archive/2013/04/t-sql-tuesday-41-how-i-came-to-love-presenting/

@@ -96,7 +96,7 @@ _sys.database\_audit\_specifications_
 
 The views return the specification names, enabled audit actions, audit results, etc.
 
-Now that we've got the views covered, a question still lingers… “How do we manage audits across multiple servers?” Well the answer is quite simple, we make use of another new feature introduced in SQL Server 2008 which is Policy Based Management, otherwise known as PBM.
+Now that we've got the views covered, a question still lingers... “How do we manage audits across multiple servers?” Well the answer is quite simple, we make use of another new feature introduced in SQL Server 2008 which is Policy Based Management, otherwise known as PBM.
 
 So PBM is a subject on it's own, so I will not go in depth into this topic.
 

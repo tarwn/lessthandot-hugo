@@ -6,7 +6,7 @@ date: 2012-12-11T12:20:00+00:00
 ID: 1849
 excerpt: |
   This may seem like a simple and basic task but it is a common question asked, “How do I update a column based on a query that has joins in it?”
-  Let’s say you have a query such as the one below from AdventureWorks2012.
+  Let's say you have a query such as the one below from AdventureWorks2012.
   SELECT per.LastName
   	,emp.JobTit&hellip;
 url: /index.php/datamgmt/dbprogramming/update-table-based-on-a/
@@ -24,13 +24,13 @@ categories:
   <a href="http://sqlity.net/en/1175/t-sql-tuesday-37-invite-to-join-me-in-a-month-of-joins/"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/tsql2sday.gif?mtime=1355235468" width="98" height="99" align="left" /></a>
 </div>
 
-This month’s T-SQL Tuesday is hosted by Sebastian Meine ([blog][1] | [twitter][2]) and the topic is joins. He has a whole month worth of topics about joins: [A Join A Day – Introduction][3].</p> 
+This month's T-SQL Tuesday is hosted by Sebastian Meine ([blog][1] | [twitter][2]) and the topic is joins. He has a whole month worth of topics about joins: [A Join A Day – Introduction][3].</p> 
 
-I thought I’d write about a question I get often from Developers and some DBAs.
+I thought I'd write about a question I get often from Developers and some DBAs.
   
 This may seem like a simple and basic task but it is a common question asked, “How do I update a column based on a query that has joins in it?”
 
-Let’s say you have a query such as the one below from AdventureWorks2012.
+Let's say you have a query such as the one below from AdventureWorks2012.
 
 sql
 SELECT per.LastName
@@ -47,9 +47,9 @@ WHERE terr.NAME = 'Northwest'
 
  
 
-In the above query, let’s say that you have to update CommissionPct by .002 for the territory NorthWest.  In order to do this, you need to join all the tables to satisfy the predicate of the territory name and ensure that only the sales people for that territory have the adjustment.
+In the above query, let's say that you have to update CommissionPct by .002 for the territory NorthWest.  In order to do this, you need to join all the tables to satisfy the predicate of the territory name and ensure that only the sales people for that territory have the adjustment.
 
-To perform this type of update, it truly is not much different than a regular update but in this case, you’ll use the alias from the table that needs to be updated in the FROM.  You could really look at this as an UPDATE on a derived table.   Take a look at a typical update statement
+To perform this type of update, it truly is not much different than a regular update but in this case, you'll use the alias from the table that needs to be updated in the FROM.  You could really look at this as an UPDATE on a derived table.   Take a look at a typical update statement
 
 sql
 UPDATE [Sales].[SalesPerson] 
@@ -86,7 +86,7 @@ Notice the use and qualifying of the alias salesp so we can find the direct path
 
 **Summary**
 
-This task may seem trivial and simplistic for many DBAs and Developers but we do have to remember that not everyone writes T-SQL daily or may have even written T-SQL in the past month.  It’s the job of the DBA or Developer that has the knowledge of how to write accurate and functionally performing T-SQL code, for anyone that is in need or wants to learn the many methods in which we utilize this set-based language.
+This task may seem trivial and simplistic for many DBAs and Developers but we do have to remember that not everyone writes T-SQL daily or may have even written T-SQL in the past month.  It's the job of the DBA or Developer that has the knowledge of how to write accurate and functionally performing T-SQL code, for anyone that is in need or wants to learn the many methods in which we utilize this set-based language.
 
 Happy T-SQLing!!!
 

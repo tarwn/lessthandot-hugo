@@ -26,7 +26,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  What I want to describe in this blog post is a method forcing a parent-child hierarchy in SSAS to show the parent’s own data value, instead of the sum of the aggregated values of its children. Why would I want to do such a thing? A client of mine once asked me to create a cube on some financial data. However, the data was delivered by a 3rd party and could not be changed. This means that a parent-child hierarchy – for example the chart of accounts on a Profit&Loss report – should display the values from the database, not vpalues calculated or aggregated by SSAS. In most cases the values would have been the same, but sometimes it wouldn’t, hence the need to create an alternative solution.
+  What I want to describe in this blog post is a method forcing a parent-child hierarchy in SSAS to show the parent's own data value, instead of the sum of the aggregated values of its children. Why would I want to do such a thing? A client of mine once asked me to create a cube on some financial data. However, the data was delivered by a 3rd party and could not be changed. This means that a parent-child hierarchy – for example the chart of accounts on a Profit&Loss report – should display the values from the database, not vpalues calculated or aggregated by SSAS. In most cases the values would have been the same, but sometimes it wouldn't, hence the need to create an alternative solution.
 </p>
 
 <p style="text-align: justify;">
@@ -38,7 +38,7 @@ tags:
 </div>
 
 <p style="text-align: justify;">
-  The bloggers themselves have the following parent-child hierarchy. (Disclaimer: this is just a fabricated sample. It doesn’t represent any actual hierarchy 🙂 )
+  The bloggers themselves have the following parent-child hierarchy. (Disclaimer: this is just a fabricated sample. It doesn't represent any actual hierarchy 🙂 )
 </p>
 
 <div class="image_block" style="text-align: center;">
@@ -101,14 +101,14 @@ tags:
   <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_NoCalc.PNG?mtime=1355177121"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_NoCalc.PNG?mtime=1355177121" alt="" width="251" height="164" /></a>
 </div>
 
-<span style="text-align: justify;">This is even worse, as it’s not clear how a parent gets its value. For example, blogger onpnt has a value of 406, but grrlgeek has the value 108. The pivot table does not show how the value 406 is calculated, again leading to much confusion.</span>
+<span style="text-align: justify;">This is even worse, as it's not clear how a parent gets its value. For example, blogger onpnt has a value of 406, but grrlgeek has the value 108. The pivot table does not show how the value 406 is calculated, again leading to much confusion.</span>
 
 <p class="MsoNormal" style="text-align: justify;">
   <strong><span lang="EN-US">Defining our semi-additive measure</span></strong><span lang="EN-US"> </span>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <span lang="EN-US">SSAS has the possibility to </span><a href="http://msdn.microsoft.com/en-US/library/ms175356(v=sql.105).aspx" target="_blank"><span lang="EN-US">define semi-additive measures</span></a><span lang="EN-US"> – at least in the Enterprise edition for SQL Server 2008 R2 – but unfortunately this doesn’t work for our case: only the time dimension can be taken into account for semi-additive behavior.</span>
+  <span lang="EN-US">SSAS has the possibility to </span><a href="http://msdn.microsoft.com/en-US/library/ms175356(v=sql.105).aspx" target="_blank"><span lang="EN-US">define semi-additive measures</span></a><span lang="EN-US"> – at least in the Enterprise edition for SQL Server 2008 R2 – but unfortunately this doesn't work for our case: only the time dimension can be taken into account for semi-additive behavior.</span>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
@@ -126,7 +126,7 @@ tags:
   <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_Calc.PNG?mtime=1355177136"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_Calc.PNG?mtime=1355177136" alt="" width="346" height="206" /></a>
 </div>
 
-<span style="text-align: justify;">We are on the right track: each parent displays its own actual value. However, the parents are duplicated. Remember the </span>_NonLeafDataHidden_ <span style="text-align: justify;">property? Let’s use this to get rid of those extra child members:</span>
+<span style="text-align: justify;">We are on the right track: each parent displays its own actual value. However, the parents are duplicated. Remember the </span>_NonLeafDataHidden_ <span style="text-align: justify;">property? Let's use this to get rid of those extra child members:</span>
 
 <div class="image_block" style="text-align: center;">
   <div class="image_block">
@@ -140,7 +140,7 @@ tags:
   <a href="/media/users/koenverbeeck/DisableAggregations/browseotherdimensions.PNG?mtime=1355177061"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/browseotherdimensions.PNG?mtime=1355177061" alt="" width="390" height="154" /></a>
 </div>
 
-<span style="text-align: justify;">There’s no difference between our calculated measure and the normal measure defined in the measure group. We can mix all the dimensions together and the values are still displayed correctly:</span>
+<span style="text-align: justify;">There's no difference between our calculated measure and the normal measure defined in the measure group. We can mix all the dimensions together and the values are still displayed correctly:</span>
 
 <div class="image_block" style="text-align: center;">
   <a href="/media/users/koenverbeeck/DisableAggregations/Excel_Final.PNG?mtime=1355177155"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_Final.PNG?mtime=1355177155" alt="" width="599" height="216" /></a>

@@ -31,7 +31,7 @@ I was fortunate enough to receive MSDN Ultimate Subscriptions as well as SQLDeni
 
 
 
-To go over what the response should consist of again…
+To go over what the response should consist of again...
 
   1. Why do you need this, what are you going to build with this, will it help other people's lives?
   2. What specific functionality that is only part of Ultimate are you going to use?

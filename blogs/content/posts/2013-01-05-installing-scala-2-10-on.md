@@ -34,7 +34,7 @@ The first thing you have to do is downloading version 2.10 of Scala, you can dow
 
 After it is downloaded and installed, it is time to get the Eclipse plugin for Scala 2.10
 
-The way you do this is you click on Help followed by Install New Software… from the menu in Eclipse
+The way you do this is you click on Help followed by Install New Software... from the menu in Eclipse
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno2.PNG?mtime=1357398056"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno2.PNG?mtime=1357398056" width="552" height="169" /></a>
@@ -167,7 +167,7 @@ Site is LessThanDot
   
 Role is blogger
   
-1,2,3, Testing 1,2,3…..
+1,2,3, Testing 1,2,3.....
   
 Here is what my Eclipse window looks like
 
@@ -240,7 +240,7 @@ The following exciting — experimental — features are part of 2.10.0:
 
 * * *That is all for this post, Scala is just one of the languages I will explore in my quest to be more of a polyglot this year. Have you looked at Scala or some other functional language like F#?
 
-Edit…….
+Edit.......
 
 And I played a little more with this and decided to do one of our [Friday the Thirteenths][4]
 
@@ -347,7 +347,7 @@ SELECT DATEADD(m, number,'1998-01-13')
 and DATENAME(dw,DATEADD(m, number,'1998-01-13')) = 'friday'
 ```
 
-That is really it for this post…
+That is really it for this post...
 
  [1]: /index.php/ITProfessionals/ProfessionalDevelopment/ah-yes-those-pesky-resolutions
  [2]: https://issues.scala-lang.org/browse/SI-1133

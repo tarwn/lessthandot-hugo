@@ -239,4 +239,4 @@ Where's LINQ???!? In the .Net Framework of course:
   * ASP.Net – Web API 2
   * ASP.Net – OData
 
-Whew, and that doesn't even count all of the extra nuget packages that are out there now…It's hard to remember how we managed without some of this stuff back in the 1.0 and 1.1 days.
+Whew, and that doesn't even count all of the extra nuget packages that are out there now...It's hard to remember how we managed without some of this stuff back in the 1.0 and 1.1 days.

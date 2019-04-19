@@ -6,7 +6,7 @@ date: 2013-04-20T10:41:00+00:00
 ID: 2069
 excerpt: |
   Missing index suggestion – Duplicate Index
-  The missing index feature while tuning or checking estimated and actual plans is very helpful.  Something that is key in that sentence is the word, helpful.  Don’t run out and simply create all of them.  Make&hellip;
+  The missing index feature while tuning or checking estimated and actual plans is very helpful.  Something that is key in that sentence is the word, helpful.  Don't run out and simply create all of them.  Make&hellip;
 url: /index.php/datamgmt/dbadmin/missing-index-suggestion-duplicate-index/
 views:
   - 21330
@@ -20,9 +20,9 @@ categories:
 ---
 Missing index suggestion – Duplicate Index
 
-The missing index feature, while tuning or checking estimated and actual plans, is very helpful.  Something that is key in that sentence is the word, helpful.  Don’t run out and simply create all of them.  Make sure it is a viable solution that does not implement the three major faults in index strategies: duplicates, overlapping and misalignment.
+The missing index feature, while tuning or checking estimated and actual plans, is very helpful.  Something that is key in that sentence is the word, helpful.  Don't run out and simply create all of them.  Make sure it is a viable solution that does not implement the three major faults in index strategies: duplicates, overlapping and misalignment.
 
-In SQL Server 2008 and previous versions, the missing index suggestions had a little feature (read as bug) that would suggest an identical index to what was already on the table.  In fact, in some cases, it would use the index that was a duplicate and still suggest to create it.  You can see a great article on this from Paul Randal, “[Missing index DMV bug that could cost your sanity…”.][1]
+In SQL Server 2008 and previous versions, the missing index suggestions had a little feature (read as bug) that would suggest an identical index to what was already on the table.  In fact, in some cases, it would use the index that was a duplicate and still suggest to create it.  You can see a great article on this from Paul Randal, “[Missing index DMV bug that could cost your sanity...”.][1]
 
 With SQL Server 2012, this was thought to be resolved but we still can end up with the same situation.
 
@@ -70,6 +70,6 @@ As we can see, the two indexes are duplicated.  If you were to create this sugg
 
 **Summary**
 
-We do not always see performance issues from duplicated indexes from blindly creating indexes suggested by SQL Server.  This is typically due to the fact that tables may not be large enough at the time to really see how the impact can degrade performance.  When indexing, you always want to think, at a minimum, 20 times larger than what the table is and how it may impact how the table is used.  If you have that mindset, even if it does not always apply to table like metadata tables, you’ll implement better indexing and better management solutions.
+We do not always see performance issues from duplicated indexes from blindly creating indexes suggested by SQL Server.  This is typically due to the fact that tables may not be large enough at the time to really see how the impact can degrade performance.  When indexing, you always want to think, at a minimum, 20 times larger than what the table is and how it may impact how the table is used.  If you have that mindset, even if it does not always apply to table like metadata tables, you'll implement better indexing and better management solutions.
 
  [1]: http://www.sqlskills.com/blogs/paul/missing-index-dmvs-bug-that-could-cost-your-sanity/

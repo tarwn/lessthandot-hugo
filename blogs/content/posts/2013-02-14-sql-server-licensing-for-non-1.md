@@ -39,13 +39,13 @@ Now I too had a stake in finding the correct answer this licensing question. So 
 
 # 2nd Assumption
 
-My second assumption was that someone who didn’t work directly from Microsoft can 100% be trusted with licensing questions. SQL Server Licensing is well known for being complex and very difficult to understand. I do not blame or think less of our software vendor for coming back with the wrong answer because I’m sure my preconceived thoughts on what the right answer is swayed them.
+My second assumption was that someone who didn't work directly from Microsoft can 100% be trusted with licensing questions. SQL Server Licensing is well known for being complex and very difficult to understand. I do not blame or think less of our software vendor for coming back with the wrong answer because I'm sure my preconceived thoughts on what the right answer is swayed them.
 
 I replied back on the twitter conversation with what I talked about with my vendor. Fortunately Steinar Anderson ([T][3]|[B][4]) challenged me again to go straight to Microsoft to verify what the correct answer is.
 
 # The truth (for my situation)
 
-I called Microsoft’s Licensing and was able to get ahold of someone with a couple minutes and they told me that unless you have an Enterprise Agreement, Microsoft does not look at production and non-production differently. You have to license each one. For the non-production SQL Instances you can use Developer Edition but must have a license of it purchased for each person who will use any of the Developer Edition SQL Instances.
+I called Microsoft's Licensing and was able to get ahold of someone with a couple minutes and they told me that unless you have an Enterprise Agreement, Microsoft does not look at production and non-production differently. You have to license each one. For the non-production SQL Instances you can use Developer Edition but must have a license of it purchased for each person who will use any of the Developer Edition SQL Instances.
 
 So now I will leave you with two of the favorite DBA sayings about Licensing: “It depends” and “Always confirm with Microsoft about your licensing situation”.
 

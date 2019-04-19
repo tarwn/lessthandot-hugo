@@ -22,21 +22,21 @@ This morning, I noticed there were hundreds of [European Starlings][1] flying ov
 
 **A little history on Starlings**
 
-Something that always intrigued me was how the European Starling came to inhabit North America.  In the nineteenth century, Shakespeare enthusiasts released 60 European Starlings into New York’s Central Park.  Although many views are written as to why this was done, one is that [Eugene Scheiffelin][2] did this due to the mention in the works of Shakespeare of every bird species into all land masses.  I won’t go into a long winded battle of which story is right, but the fact is, they were released.  For the heyday of adaptation of overpowering spread of a certain species, the European Starling population went from those 60 birds to over 150 million birds just in the USA.
+Something that always intrigued me was how the European Starling came to inhabit North America.  In the nineteenth century, Shakespeare enthusiasts released 60 European Starlings into New York's Central Park.  Although many views are written as to why this was done, one is that [Eugene Scheiffelin][2] did this due to the mention in the works of Shakespeare of every bird species into all land masses.  I won't go into a long winded battle of which story is right, but the fact is, they were released.  For the heyday of adaptation of overpowering spread of a certain species, the European Starling population went from those 60 birds to over 150 million birds just in the USA.
 
 **How is code like birds?** 
 
 ![][3]
 
-During the code review mentioned earlier, a piece of poorly written code was uncovered.  This code followed two major bad practices; use of the * character and alias naming of a, b, c etc…
+During the code review mentioned earlier, a piece of poorly written code was uncovered.  This code followed two major bad practices; use of the * character and alias naming of a, b, c etc...
 
 Shortly after pointing this out, a _constructive argument_ followed about how the f code worked and the need for it to be resolved.  Outside of the technical reasoning of table alterations affecting the results of the query and qualifying with aliases and ability to read code and utilize meaningful aliases, I brought the concept of the European Starling to the conversation.
 
-Simply stated: _The Starling spread from a mere 60 birds into 150 million in, what in Earth’s time, is an extremely short amount of time.  In the same way, a piece of poorly written code to the overall eyes and developers that will consume it, can conceptually spread throughout both the application and the common method of writing code._
+Simply stated: _The Starling spread from a mere 60 birds into 150 million in, what in Earth's time, is an extremely short amount of time.  In the same way, a piece of poorly written code to the overall eyes and developers that will consume it, can conceptually spread throughout both the application and the common method of writing code._
 
 **Summary**
 
-As the story and events that I’ve talked about here and made a direct comparison to the European Starling and how Eugen Schieffelin once thought the releasing of them was not a threatening act of to North America but one of pure literature and following that literature, the way code is written could spread throughout the layers of an organization just as easily.
+As the story and events that I've talked about here and made a direct comparison to the European Starling and how Eugen Schieffelin once thought the releasing of them was not a threatening act of to North America but one of pure literature and following that literature, the way code is written could spread throughout the layers of an organization just as easily.
 
 Think about this.  A simple act of letting a feathered friend go a long way from him home can lead to your applications poorly utilizing the data sources they so critically rely on.
 

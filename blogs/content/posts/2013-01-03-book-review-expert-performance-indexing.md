@@ -38,7 +38,7 @@ There is an overview of three not-as-common index types here – XML, spatial, a
 
 **Index Myths and Best Practices**
 
-There are a lot of misconceptions about how to use indexes in SQL Server. Myths such as “primary keys are always clustered” and “fill factor is applied to indexes during inserts” are broken down in this chapter. It’s a great look at how these things actually work. Best practices for indexes are also covered in this chapter.
+There are a lot of misconceptions about how to use indexes in SQL Server. Myths such as “primary keys are always clustered” and “fill factor is applied to indexes during inserts” are broken down in this chapter. It's a great look at how these things actually work. Best practices for indexes are also covered in this chapter.
 
 **Index Maintenance**
 
@@ -46,7 +46,7 @@ How fragmentation occurs, and how to fix it, is covered in detail. Defragmentati
 
 **Indexing Tools**
 
-Taking care of the existing indexes in your database isn’t enough. You’ll need to add new indexes over time, as your data and applications change. SQL Server offers two main tools to help you determine what indexes to add – the missing index DMOs and the Database Tuning Advisor (DTA). I admit that I’ve been skeptical of DTA up to this point, but I think I’ll give it another try soon, now that I have more information on the best way to use it.
+Taking care of the existing indexes in your database isn't enough. You'll need to add new indexes over time, as your data and applications change. SQL Server offers two main tools to help you determine what indexes to add – the missing index DMOs and the Database Tuning Advisor (DTA). I admit that I've been skeptical of DTA up to this point, but I think I'll give it another try soon, now that I have more information on the best way to use it.
 
 **Index Strategies**
 
@@ -54,7 +54,7 @@ This chapter covers how to spot patterns in your data to help identify potential
 
 **Query Strategies**
 
-Adding or removing indexes isn’t the only way to improve performance in the database. Sometimes, modifying your queries to take advantage of indexes can do just as much good. Strategies such as using LIKE, concatenation, and computed columns – and how they use or don’t use indexes – are broken down in this chapter. This is a chapter I wish everyone that writes T-SQL would read!
+Adding or removing indexes isn't the only way to improve performance in the database. Sometimes, modifying your queries to take advantage of indexes can do just as much good. Strategies such as using LIKE, concatenation, and computed columns – and how they use or don't use indexes – are broken down in this chapter. This is a chapter I wish everyone that writes T-SQL would read!
 
 **Index Analysis**
 
@@ -62,7 +62,7 @@ The final chapter is about putting it all together. A three-step process of moni
 
 ### 5 of 5 Stars
 
-This book is already one of the most valuable resources in my library. I know it will be referenced frequently (it already has been, and it’s littered with Post-It flags). I recommend anyone that works with SQL Server – whether as a developer, a DBA, or any combination thereof – pick up this book and read it. You don’t have to be a SQL Server expert to pick up this book and learn from it, and even experienced users will learn something new and interesting. You won’t find a more comprehensive index resource anywhere.
+This book is already one of the most valuable resources in my library. I know it will be referenced frequently (it already has been, and it's littered with Post-It flags). I recommend anyone that works with SQL Server – whether as a developer, a DBA, or any combination thereof – pick up this book and read it. You don't have to be a SQL Server expert to pick up this book and learn from it, and even experienced users will learn something new and interesting. You won't find a more comprehensive index resource anywhere.
 
  [1]: http://www.apress.com/9781430237419
  [2]: http://www.jasonstrate.com/

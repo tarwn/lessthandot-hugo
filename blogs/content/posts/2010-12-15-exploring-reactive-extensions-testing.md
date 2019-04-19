@@ -15,7 +15,7 @@ categories:
 ---
 Now that the [setup][1] is out of the way, let's look at how we can get this stuff tested. 
 
-I'm a bit more interested in the observable side of the relationship so I'll start there, looking at the method using winforms events first. Testing our Send method when using events is just a matter of checking to see if the event we expected is raised. If we were doing this for real, we'd want some kind of mock handler that records not only whether it was called but what parameters were passed, etc… But for simplicity's sake we will just capture whether or not the handler got called.
+I'm a bit more interested in the observable side of the relationship so I'll start there, looking at the method using winforms events first. Testing our Send method when using events is just a matter of checking to see if the event we expected is raised. If we were doing this for real, we'd want some kind of mock handler that records not only whether it was called but what parameters were passed, etc... But for simplicity's sake we will just capture whether or not the handler got called.
 
 ```csharp
 [Test]

@@ -67,7 +67,7 @@ SELECT OBJECT_DEFINITION(OBJECT_ID('uspGetBillOfMaterials'))
 
 That also returns the definition of the stored procedure
 
-So you say…so what, what is the big deal, seems the same to me? I say, hold on, let me show you this……what if I wanted to have the definition of every trigger, stored procedure or function that references the Production.BillOfMaterials table. Here is how simple that is
+So you say...so what, what is the big deal, seems the same to me? I say, hold on, let me show you this......what if I wanted to have the definition of every trigger, stored procedure or function that references the Production.BillOfMaterials table. Here is how simple that is
 
 sql
 SELECT OBJECT_DEFINITION(OBJECT_ID),OBJECT_NAME(OBJECT_ID) AS  NameOfObject

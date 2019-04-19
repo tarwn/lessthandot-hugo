@@ -1,5 +1,5 @@
 ---
-title: Moving On, Getting Converted…
+title: Moving On, Getting Converted...
 author: SQLArcher
 type: post
 date: 2012-03-13T07:56:00+00:00

@@ -135,7 +135,7 @@ You can now take that and run it. When you run it, you will see the following ou
 
 NULL
   
-Starting copy…
+Starting copy...
   
 NULL
   

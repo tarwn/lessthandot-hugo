@@ -49,7 +49,7 @@ Here is what the 25 posts will look like, the order that the posts are listed is
   
 8 [Standardized naming conventions][8]
   
-9 [Don’t trust the designers][9]
+9 [Don't trust the designers][9]
   
 10 [Lack of constraints][10]
   

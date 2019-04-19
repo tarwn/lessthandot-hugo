@@ -32,7 +32,7 @@ The meeting is held in Waukesha, WI.
 
 To all my Illinois and #ChiSQL friends, the drive is actually short and an easy one. Take I-94 straight up and just west of Milwaukee. Check the construction schedules and detours of course. Milwaukee area like many other areas is in an ever changing battle with those orange cones and roads closing.
 
-I hope to see everyone there! Let’s make the turnout a good one this month.
+I hope to see everyone there! Let's make the turnout a good one this month.
 
 **Session Description**
 
@@ -40,7 +40,7 @@ I hope to see everyone there! Let’s make the turnout a good one this month.
 <span class="MT_smaller"> 
 
 <p>
-  Have you ever had a query take FOREVER to execute? I have and it isn’t a good feeling. Often those queries still end up on Production simply because, “they work”. Let’s go behind the scenes of each query and address one of the largest factors in predicting how queries will perform, and even potentially lower the resource cost on the database server itself: Execution Plans.
+  Have you ever had a query take FOREVER to execute? I have and it isn't a good feeling. Often those queries still end up on Production simply because, “they work”. Let's go behind the scenes of each query and address one of the largest factors in predicting how queries will perform, and even potentially lower the resource cost on the database server itself: Execution Plans.
 </p>
 
 <p>

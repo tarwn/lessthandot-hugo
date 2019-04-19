@@ -23,4 +23,4 @@ I checked up on my friend's work until I was comfortable with his level of knowl
 
 And none of that would have happened without a level of trust. Trust on my part that he could do the job he said he could when he was interviewed. Trust on his part that I would make him not only a part of the team but that I would help him to continue to learn and develop. Trust is not an easy thing to have and it is far too easily broken, but without it, the IT world would not be where it is today. 
 
-After all, open-source technology is probably a direct result of trust…
+After all, open-source technology is probably a direct result of trust...

@@ -1,5 +1,5 @@
 ---
-title: 'From Eli’s Shelves: Books for IT Architecture'
+title: "From Eli's Shelves: Books for IT Architecture"
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-07-11T15:54:00+00:00

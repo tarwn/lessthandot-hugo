@@ -42,7 +42,7 @@ I build my query using the Production.Product, Production.ProductCategory and Pr
 
 ![][4]
 
-Then, I have to Choose a chart type. I select Pie. (Mmm…pie!)
+Then, I have to Choose a chart type. I select Pie. (Mmm...pie!)
 
 ![][5]
 
@@ -60,7 +60,7 @@ A further explanation of these can be found here <http://technet.microsoft.com/e
 
 On the Choose a Style screen, you can choose the color palette for your chart. I choose Mahogany.
 
-When I click Finish, I’m at the main Report Builder screen.
+When I click Finish, I'm at the main Report Builder screen.
 
 ![][7]
 

@@ -33,7 +33,7 @@ The result looks like this:
   <a href="/wp-content/uploads/users/axel8s/PSDiskInfo1.PNG?mtime=1349357595"><img alt="" src="/wp-content/uploads/users/axel8s/PSDiskInfo1.PNG?mtime=1349357595" width="232" height="536" /></a>
 </div>
 
-As you can see, the requested information is there and if I only need to do this just once it's fine but I'm going to need this information several times on different servers so let’s make the result more user friendly.
+As you can see, the requested information is there and if I only need to do this just once it's fine but I'm going to need this information several times on different servers so let's make the result more user friendly.
   
 First things first, let's just select the data I need, with a pipe I pass the input from the Get-WmiObject to the second part of my command and there I use the Select-Object to specify the object that I want:
 

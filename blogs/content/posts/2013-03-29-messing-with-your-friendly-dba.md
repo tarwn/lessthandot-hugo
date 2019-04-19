@@ -1,5 +1,5 @@
 ---
-title: Messing with your friendly DBA on April Fools’ Day
+title: Messing with your friendly DBA on April Fools' Day
 author: SQLDenis
 type: post
 date: 2013-03-29T10:27:00+00:00
@@ -54,9 +54,9 @@ WHERE session_id = @@spid
 <pre>host_name	    program_name
 LarryEllison-PC	    TOAD</pre>
 
-If the DBA monitors the connection he might notice…..if not, time for plan B
+If the DBA monitors the connection he might notice.....if not, time for plan B
 
-## Kick it up a notch….or two
+## Kick it up a notch....or two
 
 Time to become real evil 🙂
   
@@ -90,6 +90,6 @@ sql
 SELECT * FROM HugeTable
 ```
 
-Call your DBA to stop by and then ask him if he deleted all 3 billion rows from this table? Look at his face..let him run `sp_spaceused 'HugeTable'`. Once the panic sets in tell him he has be pranked…….
+Call your DBA to stop by and then ask him if he deleted all 3 billion rows from this table? Look at his face..let him run `sp_spaceused 'HugeTable'`. Once the panic sets in tell him he has be pranked.......
 
-Of course there is a chance that all your permissions will be taken away…..
+Of course there is a chance that all your permissions will be taken away.....

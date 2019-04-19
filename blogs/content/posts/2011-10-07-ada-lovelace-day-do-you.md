@@ -31,7 +31,7 @@ Someone posted an [Ada Lovelace day message in our forum][1]. Here is what it sa
 
 More information can be found here: http://findingada.com/
 
-After thinking a little, I realized that I am not doing what I am doing because of any man or woman, but I am better at what I do thanks to a woman….
+After thinking a little, I realized that I am not doing what I am doing because of any man or woman, but I am better at what I do thanks to a woman....
 
 This person is of course **Kalen Delaney**. It started all with the Inside SQL Server books for me..I still have the hardcover 2000 edition at home and will keep it for sentimental reasons (same is true for Ken Henderson's guru books)
 
@@ -41,9 +41,9 @@ After reading the Inside SQL book certain things about SQL Server made a lot mor
 
 Kalen is also involved with the [SQL Server MVP Deep Dives Vol. 2][4] book, just like with the previous version all author royalties will be donated to charity.
 
-Thank you Kalen for providing all that wonderful information in a variety of formats…the SQL community is thankful!!
+Thank you Kalen for providing all that wonderful information in a variety of formats...the SQL community is thankful!!
 
-So my readers, which women have influenced you over the years? Leave me a comment or blog about it and drop me a link in the comments….
+So my readers, which women have influenced you over the years? Leave me a comment or blog about it and drop me a link in the comments....
 
  [1]: http://forum.ltd.local/viewtopic.php?f=100&t=15486
  [2]: http://sqlblog.com/blogs/kalen_delaney/

@@ -106,4 +106,4 @@ Here is the output for a fairly large database restore that I started last night
       </p>
       
       <p>
-        Hopefully this will help you with those nagging types…….<br /> </table> </table> </div>
+        Hopefully this will help you with those nagging types.......<br /> </table> </table> </div>

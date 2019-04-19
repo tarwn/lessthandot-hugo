@@ -30,7 +30,7 @@ I am an Assistant Vice President | Database Administration Manager at Republic B
   * Ensure that information needs and business rules are in compliance with global policies and standards
   * Participate in evaluating new technologies to ensure the continuity and advancement of data and technology within Republic Bank's information needs
 
-End of the day I’m a regular guy who hopes to inspire others to be the best they can be whether it is being a DBA or something else.
+End of the day I'm a regular guy who hopes to inspire others to be the best they can be whether it is being a DBA or something else.
 
 ### You're an athlete – we share a love of running, and you love basketball (although this five-foot-tall person does not). What is the most important life lesson you've learned from athletics?
 

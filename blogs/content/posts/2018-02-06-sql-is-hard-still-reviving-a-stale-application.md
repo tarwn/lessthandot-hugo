@@ -99,7 +99,7 @@ Several years ago, I [launched SQLisHard][1] to help folks learn SQL. Some folks
 </p>
 
 <p>
-  Visibility into the flow from step to step helped me make adjustments and help folks make it all the way through the exercises. This site used a bunch of experimental things, so the data originally lived in a beta Splunk Cloud offering that was discontinued years ago (and replaced by a cloud offering that did not have an API…). Unfortunately, this activity is not tracked well in the database either.
+  Visibility into the flow from step to step helped me make adjustments and help folks make it all the way through the exercises. This site used a bunch of experimental things, so the data originally lived in a beta Splunk Cloud offering that was discontinued years ago (and replaced by a cloud offering that did not have an API...). Unfortunately, this activity is not tracked well in the database either.
 </p>
 
 <p>

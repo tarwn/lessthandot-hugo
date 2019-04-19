@@ -29,7 +29,7 @@ My first LessThanDot post was a [wall of text][2] in April 2009 that talked abou
 
 I think the last one was the most surprising.
 
-## But further back…
+## But further back...
 
 But before my LessThanDot posts I kept a private site with 10's of hits a month. <img src="http://tiernok.com/LTDBlog/success.jpg" alt="Success!" style="float: right; margin: 0px 0px .5em 1em;" />Or maybe a little less. My first post on this site was dated in August of 2002, a [Classic ASP tutorial][6] on creating files that incorporated multiple pages. 
 

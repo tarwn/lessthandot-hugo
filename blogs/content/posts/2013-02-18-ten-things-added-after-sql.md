@@ -163,7 +163,7 @@ Compound Operators make it possible to declare and assign a value at the same ti
 
 
 
-I could go on and on about even more stuff I like, I am just going to list 15 or so more things infomercial style….. 
+I could go on and on about even more stuff I like, I am just going to list 15 or so more things infomercial style..... 
 
 SSMS
   

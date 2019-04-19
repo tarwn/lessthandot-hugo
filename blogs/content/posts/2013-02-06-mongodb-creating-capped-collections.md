@@ -205,7 +205,7 @@ Here are some restrictions that you have to be aware of
 > 
 > If you plan to update documents in a capped collection, remember to create an index to prevent update operations that require a table scan.
 > 
-> You cannot delete documents from a capped collection. To remove all records from a capped collection, use the 'emptycapped’ command. To remove the collection entirely, use the drop() method. 
+> You cannot delete documents from a capped collection. To remove all records from a capped collection, use the 'emptycapped' command. To remove the collection entirely, use the drop() method. 
 
 You can use capped collections if you are only interested in the last x number of items inserted, for example you want to show only the last 50 twitter messages or the last 100 trades for a particular stock.
 

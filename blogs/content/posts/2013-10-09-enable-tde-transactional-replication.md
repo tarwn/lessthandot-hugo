@@ -27,7 +27,7 @@ To further go over implementing TDE for a database that is being replicated with
 
 A database, DBA, exists on a master server.  This database is a repository for secondary ETL processing that pushes data into several tables within the DBA database from source systems.  The DBA database is under a great deal of pressure from the ETL processing so there is a limited standard set for what can be placed upon it for additional reporting.  A table exists in the DBA database, ShippingDelays that you have a requirement to report on for delivery failures in the business.  In order to report on this table, you have to move the data from the DBA.ShippingDelays table into a secondary reporting database engine.  After careful consideration, Transactional Replication was implemented to handle this data movement and has been working extremely well for a long period of time.  It has later been found that order numbers fall into a category of data that must be secured further with encryption.  TDE was chosen but the question has been asked if it will break replication upon implementing TDE.
 
-The problem is identified and relates directly to the question we asked in the first sentence of this article.  The solution has also been found but a proof of concept is required.  Let’s show the steps that are needed to implement TDE in a database while other features are present, such as replication.
+The problem is identified and relates directly to the question we asked in the first sentence of this article.  The solution has also been found but a proof of concept is required.  Let's show the steps that are needed to implement TDE in a database while other features are present, such as replication.
 
 The complete solution is illustrated below.
 
@@ -100,7 +100,7 @@ GO
 
 At this point, the DBA database on the publisher has TDE enabled and is being encrypted on the file level.  Before starting replication, we need to ensure the subscriber is performing the same tasks, with the same certificate.
 
-Connect to the subscriber and create a master key and a certificate.  Create the certificate based on the file copied earlier from the publisher’s certificate.
+Connect to the subscriber and create a master key and a certificate.  Create the certificate based on the file copied earlier from the publisher's certificate.
 
 sql
 CREATE MASTER KEY ENCRYPTION

@@ -4,7 +4,7 @@ author: Koen Verbeeck
 type: post
 date: 2013-10-15T11:36:00+00:00
 ID: 2180
-excerpt: 'I’m very thrilled to be selected again as a speaker for the sixth edition of the SQL Server Days! The biggest SQL Server event of the year in Belgium, with lots of learning opportunities for developers, BI folks and DBAs. This event is organized by SQLU&hellip;'
+excerpt: "I'm very thrilled to be selected again as a speaker for the sixth edition of the SQL Server Days! The biggest SQL Server event of the year in Belgium, with lots of learning opportunities for developers, BI folks and DBAs. This event is organized by SQLU&hellip;"
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/speaking-about-biml/
 views:
   - 24375
@@ -28,7 +28,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  I’m very thrilled to be selected again as a speaker for the sixth edition of the SQL Server Days! The biggest SQL Server event of the year in Belgium, with lots of learning opportunities for developers, BI folks and DBAs. This event is organized by SQLUG, the Belgian SQL Server user group.
+  I'm very thrilled to be selected again as a speaker for the sixth edition of the SQL Server Days! The biggest SQL Server event of the year in Belgium, with lots of learning opportunities for developers, BI folks and DBAs. This event is organized by SQLUG, the Belgian SQL Server user group.
 </p>
 
 <p style="text-align: justify;">
@@ -37,7 +37,7 @@ tags:
 
 <span style="text-align: justify;">My session is titled </span>_Create ETL solutions faster with metadata driven development_ <span style="text-align: justify;">and shows you how you can use </span><a style="text-align: justify;" href="http://www.varigence.com/Products/Biml/Capabilities">BIML</a> <span style="text-align: justify;">and metadata to create SSIS solutions dynamically. The abstract is as follows:</span>
 
-_Working on your 20th staging package? Do you need to import 30 different flat files? Don’t have the time to create all those packages?_
+_Working on your 20th staging package? Do you need to import 30 different flat files? Don't have the time to create all those packages?_
 
 <p style="text-align: justify;">
   <em>By using Biml – Business Intelligence Markup Language – you can describe your BI solution in a declarative fashion. You can turn tedious, repetitive work into reusable scripts which generate SSIS packages for you, cutting back drastically on development time.</em>

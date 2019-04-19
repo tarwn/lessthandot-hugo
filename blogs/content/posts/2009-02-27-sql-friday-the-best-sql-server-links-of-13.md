@@ -21,7 +21,7 @@ Here is what I found interesting this past week in SQL Land:
 
 **[Is CHECKDB A Necessity?][1]**
   
-I'm often asked by professionals whether CheckDB is still recommended on SQL2k8. SQL is calculating a checksum to avoid physical page corruption since 2k5. However in my experience (starting with SQL 7.0) I’ve never been able to clearly say that CheckDB is not necessary .. Does anyone have a good advice? Read the post to find out the answer
+I'm often asked by professionals whether CheckDB is still recommended on SQL2k8. SQL is calculating a checksum to avoid physical page corruption since 2k5. However in my experience (starting with SQL 7.0) I've never been able to clearly say that CheckDB is not necessary .. Does anyone have a good advice? Read the post to find out the answer
 
 **[Run-time Execution Plan Options][2]**
   

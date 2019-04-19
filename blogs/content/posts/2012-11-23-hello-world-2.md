@@ -39,7 +39,7 @@ tags:
 </div>
 
 <p style="text-align: justify;">
-  I intend to write most blog posts about SSIS, occasionally deviating in the wider area of BI, such as Analysis Services (SSAS), Reporting Services (SSRS) or just SQL Server in general. I probably will be taking baby steps at first, writing smaller posts of content I’m already familiar with, until I get my writing skills up to speed.
+  I intend to write most blog posts about SSIS, occasionally deviating in the wider area of BI, such as Analysis Services (SSAS), Reporting Services (SSRS) or just SQL Server in general. I probably will be taking baby steps at first, writing smaller posts of content I'm already familiar with, until I get my writing skills up to speed.
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">

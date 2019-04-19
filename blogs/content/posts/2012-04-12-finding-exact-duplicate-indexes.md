@@ -26,7 +26,7 @@ If you have a wide table with many rows, a non-clustered index that matches the 
 
 **This query will ignore partial duplicates with similar keys.**
   
-It is possible to create indexes with similar keys, and sometimes it is beneficial to do so. For example, suppose you had an index with key columns (Col1, Col2) and another with (Col1, Col2, Col3). You probably don’t need the first index because the second index will suffice. However, there are cases where Col3 could be wide and using it would cause extra I/O compared to the first index. It is probably rare that you would see any difference in performance between these indexes. I will be writing another article that explains this in depth and provides a query that will return these possible duplicates.
+It is possible to create indexes with similar keys, and sometimes it is beneficial to do so. For example, suppose you had an index with key columns (Col1, Col2) and another with (Col1, Col2, Col3). You probably don't need the first index because the second index will suffice. However, there are cases where Col3 could be wide and using it would cause extra I/O compared to the first index. It is probably rare that you would see any difference in performance between these indexes. I will be writing another article that explains this in depth and provides a query that will return these possible duplicates.
 
 **This query will ignore partial duplicates with the same keys and similar includes.**
   

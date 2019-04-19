@@ -18,18 +18,18 @@ tags:
   - quotes
 
 ---
-A few tag lines for your motivational posters at work… 
+A few tag lines for your motivational posters at work... 
 
   * Rome did not create a great empire by having meetings, they did it by killing all those who opposed them.
-  * If you can stay calm, while all around you is chaos… then you probably haven't completely understood the seriousness of the situation. 
+  * If you can stay calm, while all around you is chaos... then you probably haven't completely understood the seriousness of the situation. 
   * Doing a job RIGHT the first time gets the job done. Doing the job WRONG fourteen times gives you job security. 
   * Eagles may soar, but weasels don't get sucked into jet engines. 
   * Artificial Intelligence is no match for Natural Stupidity 
-  * A person who smiles in the face of adversity… probably has a scapegoat. 
+  * A person who smiles in the face of adversity... probably has a scapegoat. 
   * Plagiarism saves time. 
   * If at first you don't succeed, try management. 
   * Never put off until tomorrow what you can avoid altogether. 
-  * TEAMWORK… means never having to take all the blame yourself. 
+  * TEAMWORK... means never having to take all the blame yourself. 
   * The beatings will continue until morale improves. 
   * Never underestimate the power of very stupid people in large groups. 
   * We waste time, so you don't have to. 

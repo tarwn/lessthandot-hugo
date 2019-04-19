@@ -1,5 +1,5 @@
 ---
-title: '24 Hours of PASS: WIT Edition – Awesome Women I’d Love to Hear Talk SQL'
+title: 24 Hours of PASS - WIT Edition – Awesome Women I'd Love to Hear Talk SQL
 author: Jes Borland
 type: post
 date: 2011-01-07T17:49:00+00:00

@@ -1,5 +1,5 @@
 ---
-title: I hold this blog hostage for 1 million views mahaaahaha mahahaha….
+title: I hold this blog hostage for 1 million views mahaaahaha mahahaha....
 author: SQLDenis
 type: post
 date: 2011-07-05T10:54:00+00:00

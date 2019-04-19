@@ -36,7 +36,7 @@ While the final measurements are being tested right now by our beta members, we 
 
 In Technical-ese? We took advantage of the fact that most of you will finally be off of IE6 and that let us use some of the newer CSS attributes that Microsoft has finally started to implement, such as min-width and max-width. There may also be a little JQuery trickery involved by the time we launch to make the margins even more fluidy (keep your scrabble rules to yourself), but this will be dependent on beta feedback.
 
-(Late Addition: There is indeed some jquery magic now for those of you using the [8 year old][2] browser. Feel free to buy me a beer to make up for that evening of my life…)
+(Late Addition: There is indeed some jquery magic now for those of you using the [8 year old][2] browser. Feel free to buy me a beer to make up for that evening of my life...)
 
 ### Color and Font Changes
 
@@ -50,7 +50,7 @@ The close-to-50 font family declarations have been replaced by approximately 2 a
 
 In Beer-ese? We take big-big CSS files, whack them with a delete button, and make teeny new CSS files. All better. (Except for phpBB, there is no axe large enough)
 
-## And more…
+## And more...
 
 There are more changes still, the next tidbit entry will cover a little more about the changes we made to the major page elements (yawn) and social networking (less-yawn).
 

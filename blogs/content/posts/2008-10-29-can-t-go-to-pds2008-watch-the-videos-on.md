@@ -1,5 +1,5 @@
 ---
-title: Can’t go to PDC 2008, watch the videos on Channel 9 and on the PDC 2008 site
+title: Can't go to PDC 2008, watch the videos on Channel 9 and on the PDC 2008 site
 author: SQLDenis
 type: post
 date: 2008-10-29T14:48:16+00:00

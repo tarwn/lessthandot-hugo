@@ -186,7 +186,7 @@ Before we can create the new deployment, we check to see if there is already a d
 <a href="http://msdn.microsoft.com/en-us/library/dn495143.aspx" title="New-AzureDeployment on MSDN">New-AzureDeployment</a> creates a new deployment in the specified slot, using the supplied package URI and the configuration file path. I opted to treat warnings as errors because I'd rather clean up warnings immediately. Unfortunately this parameter does not support URLs. By default the deployment will be started, though there is a -DoNotStart parameter if you do not want this behavior. </div> 
 
 <h3>
-  Wait for all of the instances…
+  Wait for all of the instances...
 </h3>
 
 <p>
@@ -286,7 +286,7 @@ Performing the VIP swap is a simple command and the Powershell cmdlet turns that
 <a href="http://msdn.microsoft.com/en-us/library/dn722529.aspx" title="Remove-AzureAccount on MSDN">Remove-AzureAccount</a> is used to remove the Azure subscription data from the Powershell session, basically the “logout” equivalent to Import-AzurePublishSettingsFile's “login” </div> 
 
 <h2>
-  And we're deployed…
+  And we're deployed...
 </h2>
 
 <p>
@@ -294,7 +294,7 @@ Performing the VIP swap is a simple command and the Powershell cmdlet turns that
 </p>
 
 <p>
-  While this may not be a production-ready script, it's not far off (and I've used worse). The few cmdlets above should start to show the pattern that Microsoft used with this Powershell library. There are plenty of additional cmdlets to interact with storage services, VMs, affinity groups, HDInsight, Media Services…you name it, it's probably in there.
+  While this may not be a production-ready script, it's not far off (and I've used worse). The few cmdlets above should start to show the pattern that Microsoft used with this Powershell library. There are plenty of additional cmdlets to interact with storage services, VMs, affinity groups, HDInsight, Media Services...you name it, it's probably in there.
 </p>
 
 <p>

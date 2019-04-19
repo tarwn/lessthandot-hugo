@@ -22,7 +22,7 @@ Bing is the latest version of a search engine developed by Microsoft. Microsoft 
 
 Search is very important because 1% of the search market is roughly worth 1 billion dollars. This means that the number two player can make some decent money. Microsoft doesn't have to become number one but they need to just grab around 30% or so and they are in good shape. Since Bing was launched it actually surpassed Yahoo and took market share away from both Google and Yahoo. Google must be eyeing this with great interest because a couple of weeks ago the [WolframAlpha][1] decision engine was launched and now Bing is here. Did you see the pathetic answer from Google to WolframAlpha named [Google Squared][2]
 
-I have tried to use a search engine developed by Microsoft several times in the past. I tried MSN search and it didn’t do the job, I tried LiveSearch and that was barely better. 
+I have tried to use a search engine developed by Microsoft several times in the past. I tried MSN search and it didn't do the job, I tried LiveSearch and that was barely better. 
 
 With Bing Microsoft finally hit the nail on its head. The search works and finally you can use Bing as a verb: let me Bing that. That is much better than let me MSNSearch that for you. 
 
@@ -54,16 +54,16 @@ If you are a developer then take a look at the [Project Silk Road][10]
 
 **Bing API 2.0**
   
-A key part of Project Silk Road is a re-architected Bing API that offers open, flexible options for building or enhancing your site or applications. Developing an application with the new API is straightforward: Choose a SourceType (or SourceTypes – you’re not limited to one), choose an output protocol (JSON, SOAP, or XML) and then customize according to your needs. All you need to get going is an AppID.
+A key part of Project Silk Road is a re-architected Bing API that offers open, flexible options for building or enhancing your site or applications. Developing an application with the new API is straightforward: Choose a SourceType (or SourceTypes – you're not limited to one), choose an output protocol (JSON, SOAP, or XML) and then customize according to your needs. All you need to get going is an AppID.
   
 Key improvements to the Bing API include:
 
   * Multiple protocols: JSON, XML, SOAP
-  * Multiple SourceTypes: Web, Images, InstantAnswer, Phonebook, RelatedSearch, Spell, and more…
+  * Multiple SourceTypes: Web, Images, InstantAnswer, Phonebook, RelatedSearch, Spell, and more...
   * Unlimited use for customer-facing sites and applications
   * Flexible presentation options: No restrictions on ordering and blending results
 
-I doubt that a majority of people will make the switch because I don’t think it is so much better than Google to make people switch who have been using Google for a long time. For new computer users Bing is good enough that there is no reason to switch to Google
+I doubt that a majority of people will make the switch because I don't think it is so much better than Google to make people switch who have been using Google for a long time. For new computer users Bing is good enough that there is no reason to switch to Google
 
 **How do you make Bing your default search engine?**
   

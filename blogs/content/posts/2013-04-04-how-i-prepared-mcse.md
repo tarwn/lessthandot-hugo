@@ -30,7 +30,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  Last week I took the final exam to acquire the <a href="http://www.microsoft.com/learning/en/us/mcse-sql-business-intelligence.aspx#fbid=EmSJ9xHTLm0">MCSE – Business Intelligence</a> certification. This blog post describes my preparation for all of the exams. It is not a strict guideline of course, it’s just what suited best for me.
+  Last week I took the final exam to acquire the <a href="http://www.microsoft.com/learning/en/us/mcse-sql-business-intelligence.aspx#fbid=EmSJ9xHTLm0">MCSE – Business Intelligence</a> certification. This blog post describes my preparation for all of the exams. It is not a strict guideline of course, it's just what suited best for me.
 </p>
 
 <p style="text-align: justify">
@@ -58,17 +58,17 @@ tags:
 <a style="text-align: justify" href="/media/users/koenverbeeck/MCSEPrep/MCSE.jpg?mtime=1365060226"><img style="float: left;margin-left: 10px;margin-right: 10px" src="/wp-content/uploads/users/koenverbeeck/MCSEPrep/MCSE.jpg?mtime=1365060226" alt="" width="300" height="171" /></a>
 
 <div class="image_block" style="text-align: justify">
-  The MCSA exams are the same for everyone; it doesn’t matter if you are going for the MCSE – Business Intelligence or for MCSE – Data Platform. Personally I like this decision, as everyone with the MCSA has the same common ground in the SQL Server platform. There’s always some overlap between the tasks a specific role is supposed to do. For example, DBA’s need SSIS from time to time to move data around and BI developers might need to set-up replication to feed a reporting database. Forcing everyone to do the same exams ensures certification holders have a certain skill set in the most important aspects of SQL Server.
+  The MCSA exams are the same for everyone; it doesn't matter if you are going for the MCSE – Business Intelligence or for MCSE – Data Platform. Personally I like this decision, as everyone with the MCSA has the same common ground in the SQL Server platform. There's always some overlap between the tasks a specific role is supposed to do. For example, DBA's need SSIS from time to time to move data around and BI developers might need to set-up replication to feed a reporting database. Forcing everyone to do the same exams ensures certification holders have a certain skill set in the most important aspects of SQL Server.
 </div>
 
-<span style="text-align: justify">Before I started my certification spree on SQL Server 2012, I already had the three MCTS certifications for SQL Server 2008 (BI, DBA en database developer) and the MCITP: Business Intelligence Developer 2008. So I only had to refresh the older material – especially the DBA stuff – and learn all the new features. Why didn’t I took the upgrade exams? Because I like to challenge myself and I wanted to make sure I learned as much as possible in the progress.</span>
+<span style="text-align: justify">Before I started my certification spree on SQL Server 2012, I already had the three MCTS certifications for SQL Server 2008 (BI, DBA en database developer) and the MCITP: Business Intelligence Developer 2008. So I only had to refresh the older material – especially the DBA stuff – and learn all the new features. Why didn't I took the upgrade exams? Because I like to challenge myself and I wanted to make sure I learned as much as possible in the progress.</span>
 
 <p style="text-align: justify">
   <strong>70-463</strong>
 </p>
 
 <p style="text-align: justify">
-  This is the first exam that I took. It deals mostly with SSIS, but has also some sections about DQS, MDS and dimensional modeling. I took this exam a year ago in beta, so there were no preparation materials available. Luckily I consider myself quite proficient in SSIS, so I didn’t need much preparation. After all, if you are going for one of the MCSE certifications, you should have at least one specialization in the SQL Server stack.
+  This is the first exam that I took. It deals mostly with SSIS, but has also some sections about DQS, MDS and dimensional modeling. I took this exam a year ago in beta, so there were no preparation materials available. Luckily I consider myself quite proficient in SSIS, so I didn't need much preparation. After all, if you are going for one of the MCSE certifications, you should have at least one specialization in the SQL Server stack.
 </p>
 
 <p style="text-align: justify">
@@ -100,7 +100,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  The last item on the list for this exam is Master Data Services (MDS). Since it only takes a small percentage of the questions and I’m not really convinced by the product – to be honest – I didn’t put much investigation to it. I read the free e-book <a href="http://amzn.to/1LlkyNj">Introducing SQL Server 2012 training kit</a>, so I at least knew how to handle the product.
+  The last item on the list for this exam is Master Data Services (MDS). Since it only takes a small percentage of the questions and I'm not really convinced by the product – to be honest – I didn't put much investigation to it. I read the free e-book <a href="http://amzn.to/1LlkyNj">Introducing SQL Server 2012 training kit</a>, so I at least knew how to handle the product.
 </p>
 
 <p style="text-align: justify">
@@ -112,11 +112,11 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  Every person working closely with SQL Server, be it a DBA, a database developer or a BI developer, should know at least the basics of T-SQL. So this exam shouldn’t be too hard for most people. To prepare myself, I read the book <a href="http://amzn.to/1LlkInS">SQL Server 2012 High-Performance T-SQL Using Window Functions</a> by Itzik Ben-Gan to learn more about the windowing functions introduced in SQL Server 2012. I can absolutely recommend this book to everyone to get up to speed with Windowing Functions in SQL Server. Itzik really does a great job by explaining all the concepts very clearly and uses a lot of practical examples. A must-read.
+  Every person working closely with SQL Server, be it a DBA, a database developer or a BI developer, should know at least the basics of T-SQL. So this exam shouldn't be too hard for most people. To prepare myself, I read the book <a href="http://amzn.to/1LlkInS">SQL Server 2012 High-Performance T-SQL Using Window Functions</a> by Itzik Ben-Gan to learn more about the windowing functions introduced in SQL Server 2012. I can absolutely recommend this book to everyone to get up to speed with Windowing Functions in SQL Server. Itzik really does a great job by explaining all the concepts very clearly and uses a lot of practical examples. A must-read.
 </p>
 
 <p style="text-align: justify">
-  Next I read blog posts and MSDN articles about the new T-SQL functionality, such as TRY_PARSE, THROW and LAG/LEAD. <a href="http://msdn.microsoft.com/en-us/library/09f0096e-ab95-4be0-8c01-f98753255747">This MSDN page</a> gives a nice overview. Since the exam might contain questions that require you to write code, I refreshed my knowledge on the syntax of the several TSQL statements. Finally I re-read the chapters about T-SQL of the <a href="http://amzn.to/1PmAAUY">training kit for the 70-433 exam</a>, especially the one about XML. Because you know, I use this everyday so I’m an expert at it (uh-hum. Irony).
+  Next I read blog posts and MSDN articles about the new T-SQL functionality, such as TRY_PARSE, THROW and LAG/LEAD. <a href="http://msdn.microsoft.com/en-us/library/09f0096e-ab95-4be0-8c01-f98753255747">This MSDN page</a> gives a nice overview. Since the exam might contain questions that require you to write code, I refreshed my knowledge on the syntax of the several TSQL statements. Finally I re-read the chapters about T-SQL of the <a href="http://amzn.to/1PmAAUY">training kit for the 70-433 exam</a>, especially the one about XML. Because you know, I use this everyday so I'm an expert at it (uh-hum. Irony).
 </p>
 
 <p style="text-align: justify">
@@ -128,11 +128,11 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  This was the exam I feared the most. I’m certainly no DBA and although I already had the MCTS for administrating SQL Server 2008, I had to relearn almost everything again as I didn’t have much real-time practice regarding administration. So I took my time preparing myself for the exam, going over the <a href="http://amzn.to/1fpNe9s">training kit</a> a few times and watching some TechEd videos on Channel9.
+  This was the exam I feared the most. I'm certainly no DBA and although I already had the MCTS for administrating SQL Server 2008, I had to relearn almost everything again as I didn't have much real-time practice regarding administration. So I took my time preparing myself for the exam, going over the <a href="http://amzn.to/1fpNe9s">training kit</a> a few times and watching some TechEd videos on Channel9.
 </p>
 
 <p style="text-align: justify">
-  I did all the exercises of the training kit by setting up a virtual environment with a few servers using HyperV and doing all the DBA stuff such as mirroring, replication database, taking back-ups et cetera. The training kit briefly describes how to set this environment up, but it really doesn’t go in too much detail, so you’re pretty much on your own. If you have never heard of differencing disks for virtual machines before – like I did – prepare yourself to do some research. There was especially no information on how to set-up the networking, which appears to be crucial when you went to set-up clustering, as you need to have multiple networks. I briefly go over my set-up in this <a href="http://www.sqlservercentral.com/Forums/Topic1377933-10-1.aspx#bm1421996">forum thread</a>. The training kit and the matching practice tests also have some errors, so make sure to check out the <a href="http://oreilly.com/catalog/errataunconfirmed.csp?isbn=0790145345134">Errata</a> page of the book.
+  I did all the exercises of the training kit by setting up a virtual environment with a few servers using HyperV and doing all the DBA stuff such as mirroring, replication database, taking back-ups et cetera. The training kit briefly describes how to set this environment up, but it really doesn't go in too much detail, so you're pretty much on your own. If you have never heard of differencing disks for virtual machines before – like I did – prepare yourself to do some research. There was especially no information on how to set-up the networking, which appears to be crucial when you went to set-up clustering, as you need to have multiple networks. I briefly go over my set-up in this <a href="http://www.sqlservercentral.com/Forums/Topic1377933-10-1.aspx#bm1421996">forum thread</a>. The training kit and the matching practice tests also have some errors, so make sure to check out the <a href="http://oreilly.com/catalog/errataunconfirmed.csp?isbn=0790145345134">Errata</a> page of the book.
 </p>
 
 <p style="text-align: justify">
@@ -140,7 +140,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  All in all the training kit did a good job preparing me for the exam, as I passed it on the first try, but my score really wasn’t that impressive. But hey, what do you expect from a BI guy J Finishing this exam gave me the MCSA certification.
+  All in all the training kit did a good job preparing me for the exam, as I passed it on the first try, but my score really wasn't that impressive. But hey, what do you expect from a BI guy J Finishing this exam gave me the MCSA certification.
 </p>
 
 <p style="text-align: justify">
@@ -152,11 +152,11 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  I started by reading the excellent book <a href="http://amzn.to/1Lll6Ts">Microsoft SQL Server 2012 Analysis Services: The BISM Tabular Model</a> by SSAS Maestros Chris Webb, Alberto Ferrari and Marco Russo, which comes at a whopping 656 pages. It’s a great book and it will teach you everything you need to know about tabular models and DAX, but actually it’s much too detailed for just exam preparation. But hey, a little too much knowledge doesn’t hurt anyone, right? So if you just want to get up to speed with SSAS tabular you can skip a few chapters, such as DAX Advanced for example.
+  I started by reading the excellent book <a href="http://amzn.to/1Lll6Ts">Microsoft SQL Server 2012 Analysis Services: The BISM Tabular Model</a> by SSAS Maestros Chris Webb, Alberto Ferrari and Marco Russo, which comes at a whopping 656 pages. It's a great book and it will teach you everything you need to know about tabular models and DAX, but actually it's much too detailed for just exam preparation. But hey, a little too much knowledge doesn't hurt anyone, right? So if you just want to get up to speed with SSAS tabular you can skip a few chapters, such as DAX Advanced for example.
 </p>
 
 <p style="text-align: justify">
-  For SSAS multidimensional and Reporting Services, I just re-read the relevant chapters of <a href="http://amzn.to/1fpNzJi">the 70-448 training kit</a>, giving more attention to features I don’t use a lot, like pro-active caching, MDX (I know, sorry Chris Webb) and administrating SSAS and SSRS servers. I skipped the data mining chapter, as it apparently didn’t make the exam <em>Skills Measured</em> section. I digged deeper into SSAS and SSRS administration by reading relevant blogs and MSDN articles, such as <a href="http://msdn.microsoft.com/en-us/library/ms157403.aspx">Reporting Services Execution and Trace Logging</a>.
+  For SSAS multidimensional and Reporting Services, I just re-read the relevant chapters of <a href="http://amzn.to/1fpNzJi">the 70-448 training kit</a>, giving more attention to features I don't use a lot, like pro-active caching, MDX (I know, sorry Chris Webb) and administrating SSAS and SSRS servers. I skipped the data mining chapter, as it apparently didn't make the exam <em>Skills Measured</em> section. I digged deeper into SSAS and SSRS administration by reading relevant blogs and MSDN articles, such as <a href="http://msdn.microsoft.com/en-us/library/ms157403.aspx">Reporting Services Execution and Trace Logging</a>.
 </p>
 
 <p style="text-align: justify">
@@ -172,11 +172,11 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  To prepare myself I went over <a href="http://www.microsoft.com/learning/en/us/course.aspx?id=20467a#fbid=HsP2QW2phvi">course 20467A: Designing Business Intelligence Solutions with Microsoft SQL Server 2012</a>, which is a fascinating read. I revisited some chapters about administration for SSRS and SSAS and I dug a bit deeper into SharePoint integration (but let’s face it, I’ll never get that Kerberos authentication thingy).
+  To prepare myself I went over <a href="http://www.microsoft.com/learning/en/us/course.aspx?id=20467a#fbid=HsP2QW2phvi">course 20467A: Designing Business Intelligence Solutions with Microsoft SQL Server 2012</a>, which is a fascinating read. I revisited some chapters about administration for SSRS and SSAS and I dug a bit deeper into SharePoint integration (but let's face it, I'll never get that Kerberos authentication thingy).
 </p>
 
 <p style="text-align: justify">
-  The exam itself wasn’t that easy, but I managed to get through, so now I’m the proud holder of the MCSE – Business Intelligence certification!
+  The exam itself wasn't that easy, but I managed to get through, so now I'm the proud holder of the MCSE – Business Intelligence certification!
 </p>
 
 <p style="text-align: justify">
@@ -184,7 +184,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  This was my entire preparation. I’m done now with exams for a while J
+  This was my entire preparation. I'm done now with exams for a while J
 </p>
 
 <p style="text-align: justify">

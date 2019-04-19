@@ -1,5 +1,5 @@
 ---
-title: Get weekly transactions showing Monday’s date
+title: Get weekly transactions showing Monday's date
 author: Naomi Nosonovsky
 type: post
 date: 2011-04-11T11:25:00+00:00

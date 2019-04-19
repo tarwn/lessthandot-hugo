@@ -57,7 +57,7 @@ In SSIS we have the unique ability to show a DTSX package from Business Intellig
 
 Of course designing a package is the second to last step just before testing your development efforts. The above illustration is given to show the comparison to your workflow creation and how it can be viewed in a finished product from BIDS. 
 
-In our design we have identified the tasks and components we will need to accomplish the design, the actual processing steps and focus points that we will need to develop and a final defining view of what we’re looking to achieve. Research to accomplishing this falls into line next. With experience, simple and complex tasks can be common knowledge to an individual performing the actual development. More commonly, questions come up that require the needs to look for the bests answer. The above designing phases allow those questions to be uncovered and answered long before finding out that one must start over due to a mistake or assumed ability of one particular task. 
+In our design we have identified the tasks and components we will need to accomplish the design, the actual processing steps and focus points that we will need to develop and a final defining view of what we're looking to achieve. Research to accomplishing this falls into line next. With experience, simple and complex tasks can be common knowledge to an individual performing the actual development. More commonly, questions come up that require the needs to look for the bests answer. The above designing phases allow those questions to be uncovered and answered long before finding out that one must start over due to a mistake or assumed ability of one particular task. 
 
 **Closing part 1**
 

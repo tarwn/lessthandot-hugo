@@ -29,9 +29,9 @@ tags:
 
 The topic really does cause pain. Shrinking a file in SQL Server is inherently a terrible action to take. However, we all know that in some cases when maintenance was never setup and recovery models were not properly chosen, the need does come up. An interesting [topic][1] came up on LTD in the forums regarding moving an overloaded and unmaintained log file to a server that had less disk space than the original. The first inclination would be to shrink the log and then backup/restore it to the new location. Seeing as the full backup consists of the data and just enough log to recover, the assumption would be that you would only get this in the new database. However, in this case, shrinking the log will not be the last step in the process. The initial size of the log will also need to change. 
 
-## Let’s take a look…
+## Let's take a look...
 
-In this case let’s say we have a database that is 300MB with a transaction log that is 3000MB. 
+In this case let's say we have a database that is 300MB with a transaction log that is 3000MB. 
 
 The database is a test log shipping database we will pick on named, “LOGSHIP_PUB”
 
@@ -49,7 +49,7 @@ insert #temp EXEC ('dbcc sqlperf(logspace)')
 select SpaceUsedPerc from #temp where DatabaseName = 'LOGSHIP_PUB'
 ```
 
-Resulting in 0.028… give or take a few thousands places.
+Resulting in 0.028... give or take a few thousands places.
 
 The initial thought may be to run a backup now and move the database over. You should see if you run a full backup on the database, the size will only be around 2MB. 
 
@@ -59,7 +59,7 @@ The initial thought may be to run a backup now and move the database over. You s
 
 The problem we will run into will be when this backup is restored. Even knowing the backup shows the 2MB, this is only the data and log to the point of recovering retained in the backup. You may find yourself copying this backup considering the restore to be limited to what is in it. What will happen is the restore will take the Meta for the database and create the initial sizes for the files contained in it. This will result in a required space of all the files initial sizes. In our case that totals 3300MB + the padding required. 
 
-Best way to see is by example so let’s restore the database.
+Best way to see is by example so let's restore the database.
 
 sql
 RESTORE DATABASE [LOGSHIP_PUB_SECONDARY] FROM  DISK = N'C:LOGSHIP_PUB_FULL.bak' 
@@ -72,7 +72,7 @@ GO
 
 First thing we may notice is the time this restore takes. It will be slightly more than expected from a 300MB database. Your typical IO should give this in around a 2-3 seconds but given the need to expand the log(s) and any other files that may consist in the restore, the time will be lengthened slightly. Of course this varies given different resources and even more when compression is involved.
   
-Our successful restore…
+Our successful restore...
 
 > SQL Server parse and compile time:
      
@@ -101,11 +101,11 @@ Select [size],[name],[filename] from sysaltfiles
   <img src="/wp-content/uploads/blogs/DataMgmt/shrunk_4.gif" alt="" title="" width="628" height="141" />
 </div></p> 
 
-## So the bottom-line…
+## So the bottom-line...
 
 Moving databases using backup/restore is a good method if your activity allows for this method. Just ensure a few things
 
-  * If log maintenance was not performed and you are stuck in Full recovery while finding the need for a shrink, you can do this successfully without a truncate_only but don’t forget to resize your files.
+  * If log maintenance was not performed and you are stuck in Full recovery while finding the need for a shrink, you can do this successfully without a truncate_only but don't forget to resize your files.
   * Do the full backup after the resize to prevent longer restores and maintaining the disk usage you really require.
   * A well maintained transaction log structure will prevent all of this. You will know precisely the sizing requirements at this level.
 

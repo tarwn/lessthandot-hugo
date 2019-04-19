@@ -26,7 +26,7 @@ The first issue we ran into was the difficulty in writing tests around this alre
 Somewhere between looking into examples that use promises and talking through how a perfect test would look, we came upon something profound (to us at least): “the user is an asynchronous API”.
 
 <div style="background-color: #eeeeee; margin: .5em; margin-bottom: 1.5em; padding: .5em">
-  Like the <a href="/index.php/webdev/mvvm-validation-with-knockoutjs-dont-put-it-in-the-viewhtml/" title="MVVM Validation with KnockoutJS – Don’t put it in the View/HTML">prior post</a>, the “Large modular SPA” in this case was a complete replatform of a 300+ KLOC Silverlight application with 30+ discrete screens ranging from “simple” in-screen search results that make IE tables weep, to complex SVG dashboards, to a multi-tabbed screen that can scale from 50 inputs to 1000's, depending on the complexity of the user and their use case.
+  Like the <a href="/index.php/webdev/mvvm-validation-with-knockoutjs-dont-put-it-in-the-viewhtml/" title="MVVM Validation with KnockoutJS – Don't put it in the View/HTML">prior post</a>, the “Large modular SPA” in this case was a complete replatform of a 300+ KLOC Silverlight application with 30+ discrete screens ranging from “simple” in-screen search results that make IE tables weep, to complex SVG dashboards, to a multi-tabbed screen that can scale from 50 inputs to 1000's, depending on the complexity of the user and their use case.
 </div>
 
 Th fulle sample code for these posts is on github here: [tarwn/Blog_KnockoutMVVMPatterns][1]

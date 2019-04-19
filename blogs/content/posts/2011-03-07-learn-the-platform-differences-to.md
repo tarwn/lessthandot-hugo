@@ -28,7 +28,7 @@ A couple of minutes ago I saw this question on StackOverflow: [SQL Server equiva
 
 The person wanted the following
 
-> I have an application that uses a SQL Server database with several instances of the database…test, prod, etc… I am making some application changes and one of the changes involves changing a column from a nvarchar(max) to a nvarchar(200) so that I can add a unique constraint on it. SQL Server tells me that this requires dropping the table and recreating it.
+> I have an application that uses a SQL Server database with several instances of the database...test, prod, etc... I am making some application changes and one of the changes involves changing a column from a nvarchar(max) to a nvarchar(200) so that I can add a unique constraint on it. SQL Server tells me that this requires dropping the table and recreating it.
 > 
 > I want to put together a script that will do the table drop, recreate it with the new schema, and then reinsert the data that was there previously all in one go, if possible, just to keep things simple for use when I migrate this change to production.
 > 
@@ -63,7 +63,7 @@ Here is the error that is raised
   Msg 1919, Level 16, State 1, Line 1<br /> Column 'SomeColumn' in table 'Test' is of a type that is invalid for use as a key column in an index.
 </div>
 
-Now, let's change the column to nvarchar(200). You can do this by using the ALTER TABLE…ALTER COLUMN syntax. Here is what it looks like for this table
+Now, let's change the column to nvarchar(200). You can do this by using the ALTER TABLE...ALTER COLUMN syntax. Here is what it looks like for this table
 
 sql
 ALTER TABLE Test ALTER COLUMN SomeColumn NVARCHAR(200)

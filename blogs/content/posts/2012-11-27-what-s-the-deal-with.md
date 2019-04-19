@@ -1,10 +1,10 @@
 ---
-title: 'What’s the deal with Excel & SSIS?'
+title: "What's the deal with Excel & SSIS?"
 author: Koen Verbeeck
 type: post
 date: 2012-11-27T10:45:00+00:00
 ID: 1803
-excerpt: 'When it comes to importing data from an Excel sheet with SSIS, Excel has quite a reputation. And not a terribly good one. Well deserved, to be honest, because numerous issues can rise when dealing with this piece of software. This blog post will deal wi&hellip;'
+excerpt: When it comes to importing data from an Excel sheet with SSIS, Excel has quite a reputation. And not a terribly good one. Well deserved, to be honest, because numerous issues can rise when dealing with this piece of software. This blog post will deal wi&hellip;
 url: /index.php/datamgmt/dbprogramming/mssqlserver/what-s-the-deal-with/
 views:
   - 86994
@@ -29,7 +29,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <span lang="EN-US">There are already a numerous blog posts, articles and forum posts written on this subject, but most of them only deal with parts of the issue. I would like a single, comprehensive reference I can point to in the forums, hence this blog post. And because, you know, world domination has to start somewhere…</span>
+  <span lang="EN-US">There are already a numerous blog posts, articles and forum posts written on this subject, but most of them only deal with parts of the issue. I would like a single, comprehensive reference I can point to in the forums, hence this blog post. And because, you know, world domination has to start somewhere...</span>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
@@ -102,14 +102,14 @@ tags:
   <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_2.png?mtime=1353998997"><img src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_2.png?mtime=1353998997" alt="" width="612" height="278" /></a>
 </p>
 
-<span style="text-align: justify;">That looks a little bit better, doesn’t it?</span>
+<span style="text-align: justify;">That looks a little bit better, doesn't it?</span>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <strong><span lang="EN-US">However…</span></strong>
+  <strong><span lang="EN-US">However...</span></strong>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <span lang="EN-US">The NULL in the house number column disappeared and made place for the actual value, but the NULL in the zip code column is still present. What did just happen here? Remember when I said earlier that the providers <em>sample</em> the data to determine the data type? The JET and ACE OLE DB provider take the first x number of rows, where x is the number specified in the <em>TypeGuessRows</em> registry setting, which has the default of 8. If the first occurrence of intermixed data types happens after this sample, the providers take the data type found in the sample. Again, big trouble for us as we’re still losing data.</span>
+  <span lang="EN-US">The NULL in the house number column disappeared and made place for the actual value, but the NULL in the zip code column is still present. What did just happen here? Remember when I said earlier that the providers <em>sample</em> the data to determine the data type? The JET and ACE OLE DB provider take the first x number of rows, where x is the number specified in the <em>TypeGuessRows</em> registry setting, which has the default of 8. If the first occurrence of intermixed data types happens after this sample, the providers take the data type found in the sample. Again, big trouble for us as we're still losing data.</span>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
@@ -148,10 +148,10 @@ tags:
 
  
 
-<span style="font-weight: bold; text-align: justify;">But what if…</span>
+<span style="font-weight: bold; text-align: justify;">But what if...</span>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <span lang="EN-US">What if the first occurrence of intermixed data types happens after row number 16384? (You just don’t have any luck, don’t you?) Or what if the administrator doesn’t allow you to modify the registry? (Always the same with those paranoia people) If you can control the template of the Excel, you can do the following: add a dummy row at the beginning of the sheet, which has alphanumeric data for the violating columns. This way you’ll be sure string data is always included in the sample and that the resulting data type is always alphanumeric. Hide the dummy row in the template and get rid of it in the SSIS dataflow using a conditional split.</span>
+  <span lang="EN-US">What if the first occurrence of intermixed data types happens after row number 16384? (You just don't have any luck, don't you?) Or what if the administrator doesn't allow you to modify the registry? (Always the same with those paranoia people) If you can control the template of the Excel, you can do the following: add a dummy row at the beginning of the sheet, which has alphanumeric data for the violating columns. This way you'll be sure string data is always included in the sample and that the resulting data type is always alphanumeric. Hide the dummy row in the template and get rid of it in the SSIS dataflow using a conditional split.</span>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
@@ -159,7 +159,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <span lang="EN-US">But what if you can’t control the template? Sometimes the Excel files are automatically generated or supplied by a third party. Suck it up and try convincing the supplier of the Excel files to use a file type that is actually intended to store flat file data, such as .csv files or ragged right flat files, instead of bug-inducing spreadsheets. Believe me; it will make your life easier.</span>
+  <span lang="EN-US">But what if you can't control the template? Sometimes the Excel files are automatically generated or supplied by a third party. Suck it up and try convincing the supplier of the Excel files to use a file type that is actually intended to store flat file data, such as .csv files or ragged right flat files, instead of bug-inducing spreadsheets. Believe me; it will make your life easier.</span>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
@@ -178,7 +178,7 @@ tags:
   <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/ExcelComments.png?mtime=1353999029"><img src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/ExcelComments.png?mtime=1353999029" alt="" width="332" height="334" /></a>
 </p>
 
-_Bob really hated that customer service…_
+_Bob really hated that customer service..._
 
 <span style="font-weight: bold;">The solution part III</span>
 
@@ -191,7 +191,7 @@ _Bob really hated that customer service…_
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <span lang="EN-US">If the length exceeds 4000 characters, we have a totally different problem, since it doesn’t fit into the DT_WSTR data type. We need the DT_NTEXT data type – which is a LOB data type – to store the data into the pipeline. This corresponds with a text or nvarchar(max) data type in SQL Server. The solution is the same as before: adjust the TypeGuessRows registry setting so the provider will pick up those lengthy comments and determine the correct data type to store the values.</span>
+  <span lang="EN-US">If the length exceeds 4000 characters, we have a totally different problem, since it doesn't fit into the DT_WSTR data type. We need the DT_NTEXT data type – which is a LOB data type – to store the data into the pipeline. This corresponds with a text or nvarchar(max) data type in SQL Server. The solution is the same as before: adjust the TypeGuessRows registry setting so the provider will pick up those lengthy comments and determine the correct data type to store the values.</span>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
@@ -200,7 +200,7 @@ _Bob really hated that customer service…_
 
 _The values are shown as <Long Text> as the data viewer can't show LOB data._
 
-<span style="text-align: justify;">Sometimes SSIS and Excel stubbornly refuse to play nice together and won't adjust the column data type. In that case you’ll have to adjust the data type yourself in the advanced editor of the Excel source.</span>
+<span style="text-align: justify;">Sometimes SSIS and Excel stubbornly refuse to play nice together and won't adjust the column data type. In that case you'll have to adjust the data type yourself in the advanced editor of the Excel source.</span>
 
 <p class="MsoNormal" style="text-align: justify;">
   <strong><span lang="EN-US">Conclusion</span></strong>

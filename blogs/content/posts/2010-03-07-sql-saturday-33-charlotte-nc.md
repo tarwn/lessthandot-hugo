@@ -24,7 +24,7 @@ This weekend was SQL Saturday #33 in Charlotte NC and also the first one I atten
 
 ## Background
 
-Sorry SQL Saturday? Tarwn and SQL? We have questions and we know how painful it is for you to write short blog posts…
+Sorry SQL Saturday? Tarwn and SQL? We have questions and we know how painful it is for you to write short blog posts...
 
 ### SQL What?
 
@@ -76,7 +76,7 @@ Kevin Kline** ([blog][19] | [twitter][20])
   
 An excellent session from Kevin on the top 10 <u>DBA</u> mistakes he has seen in his experiences. From lack of troubleshooting methodology to not testing backups, he covered a number of assumptions and bad practices that we have probably all been guilty of, at one time or another.
   
-_Note: The linked slides page above has the 2005 version of this Top 10… slides, but not the newer 2008 one he presented yesterday. I assume that will be posted soon, though_
+_Note: The linked slides page above has the 2005 version of this Top 10... slides, but not the newer 2008 one he presented yesterday. I assume that will be posted soon, though_
 
 ## The Community
 

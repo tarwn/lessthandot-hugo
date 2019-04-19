@@ -1,5 +1,5 @@
 ---
-title: 'Developing KBay: It’s All About the Team'
+title: "Developing KBay: It's All About the Team"
 author: ThatRickGuy
 type: post
 date: 2009-11-18T13:14:59+00:00

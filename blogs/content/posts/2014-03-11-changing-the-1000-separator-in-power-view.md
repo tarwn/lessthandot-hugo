@@ -84,11 +84,11 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <b>SharePoint to the rescue…</b>
+  <b>SharePoint to the rescue...</b>
 </p>
 
 <p style="text-align: justify">
-  Let’s take a look at the site settings.
+  Let's take a look at the site settings.
 </p>
 
 <p style="text-align: justify">

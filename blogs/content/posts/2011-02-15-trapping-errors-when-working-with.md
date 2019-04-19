@@ -23,7 +23,7 @@ tags:
   - trapping
 
 ---
-I have a bunch of linked servers to SQL Servers and also to Sybase ASE Servers ON AIX machines. There are some interesting things that can happen. For example if you type the name of the object or the linked server itself wrong, you can't trap this….. or can you?
+I have a bunch of linked servers to SQL Servers and also to Sybase ASE Servers ON AIX machines. There are some interesting things that can happen. For example if you type the name of the object or the linked server itself wrong, you can't trap this..... or can you?
 
 Let's take a look. Open up SSMS and connect to your local instance. Now create a linked server named TestLinkedServer which points to the local server. The code to do that is below.
 

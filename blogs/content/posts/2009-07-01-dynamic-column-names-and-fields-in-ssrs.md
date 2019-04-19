@@ -4,7 +4,10 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2009-07-01T16:26:57+00:00
 ID: 492
-excerpt: 'I had no choice but to do work with creating dynamic column headings and dynamically determine what field in my dataset should go where in a report today.  Since this is the second time I’ve gone through this exercise and knowing the lack of information&hellip;'
+excerpt: I had no choice but to do work with creating dynamic column headings and 
+  dynamically determine what field in my dataset should go where in a report today.
+  Since this is the second time I've gone through this exercise and knowing the lack 
+  of information
 url: /index.php/datamgmt/datadesign/dynamic-column-names-and-fields-in-ssrs/
 views:
   - 70469
@@ -18,15 +21,15 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-I had no choice but to do work with creating dynamic column headings and dynamically determine what field in my dataset should go where in a report today. Since this is the second time I’ve gone through this exercise and knowing the lack of information out there on really how to do it, I thought it deserves a blog entry.
+I had no choice but to do work with creating dynamic column headings and dynamically determine what field in my dataset should go where in a report today. Since this is the second time I've gone through this exercise and knowing the lack of information out there on really how to do it, I thought it deserves a blog entry.
 
 So here is the basis of the requirements. You have a query that uses PIVOT but thrown into the mix is the need for dynamic columns in the PIVOT. This is usually a task when you are going after things like current week plus the last 52 weeks. That was the case in this situation. I needed to bring in a dynamic set of columns to be used in PIVOT. The matrix in 2005 did not give me what I needed in the end result so this is the path I took.
 
-First task is to write the procedure to use PIVOT with dynamic column headers. I’m not going to go into that method since it’s well documented out there and out of scope. I will point you to [Pivots with Dynamic Columns in SQL Server 2005][1] as it explains the way to accomplish this well. 
+First task is to write the procedure to use PIVOT with dynamic column headers. I'm not going to go into that method since it's well documented out there and out of scope. I will point you to [Pivots with Dynamic Columns in SQL Server 2005][1] as it explains the way to accomplish this well. 
 
 I wrote something in AdventureWorks to for this example so if you have AdventureWorks floating around you should be able to read this and run through step for step with success.
 
-Here is our procedure. I’m sure my methods will take great notice from my local TSQL friends 🙂 The dynamic SQL more so than anything…
+Here is our procedure. I'm sure my methods will take great notice from my local TSQL friends 🙂 The dynamic SQL more so than anything...
 
 sql
 Create Procedure GetSalesPerWeek
@@ -132,7 +135,7 @@ The results shows us the PIVOT results of each account number and the sales for 
   <img src="/wp-content/uploads/blogs/DataMgmt//pivot_1.gif" alt="" title="" width="628" height="354" />
 </div>
 
-The problem with all of this is the dynamic nature of the column names. In reporting services we’re used to handling column names as static entities. So here is how we’ll build our report given the fact these column names can and will change over time.
+The problem with all of this is the dynamic nature of the column names. In reporting services we're used to handling column names as static entities. So here is how we'll build our report given the fact these column names can and will change over time.
 
 So create a new report in your solution and add a new DataSet. Make it a text call with the following statement
 
@@ -146,7 +149,7 @@ Run the DataSet to verify everything comes in ok.
   <img src="/wp-content/uploads/blogs/DataMgmt//pivot_2.gif" alt="" title="" width="628" height="354" />
 </div>
 
-Now add a new table to your empty report. Add the account number and product number as you would normally. Next we need to figure out what week is actually first. To do this we’re going to write a function in the code section of SSRS
+Now add a new table to your empty report. Add the account number and product number as you would normally. Next we need to figure out what week is actually first. To do this we're going to write a function in the code section of SSRS
 
 In the layout tab go to Report and select Report Properties. This will give you the properties for the entire report. Select the Code tab. Copy and paste the following code into the window
 
@@ -182,7 +185,7 @@ Recall in our procedure we return each week as Wnn for the week number. So in ou
 
 =Fields(“W” & Code.GetColumnHeading(0)).Value
 
-Most developers don’t know they can reference the fields by name in this manner. Usually it just isn’t required and that is the case. It can be useful to note that you can dynamically fill the object name in though and get the same results as Fields!name.Value
+Most developers don't know they can reference the fields by name in this manner. Usually it just isn't required and that is the case. It can be useful to note that you can dynamically fill the object name in though and get the same results as Fields!name.Value
 
 I went ahead and put a few more columns and increased the index requested from the ArrayList. Running that results in the following.
 
@@ -192,7 +195,7 @@ I went ahead and put a few more columns and increased the index requested from t
 
 Now you have your customer matrix by means of dynamic column and field referencing. You also a nice example of PIVOT by means of dynamic column names.
 
-This blog probably has about 12 pages worth of explanations but I’d like to leave those to the forums so please follow the directions below if you want to discuss this method further. Otherwise, have fun with it!
+This blog probably has about 12 pages worth of explanations but I'd like to leave those to the forums so please follow the directions below if you want to discuss this method further. Otherwise, have fun with it!
 
 
 

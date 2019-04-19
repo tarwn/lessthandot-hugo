@@ -18,7 +18,7 @@ Today, I came across a question in MSDN forums “How to pick 5 random records?�
 sql
 select top 5 * from Orders  order by NEWID()
 ```
-This approach will always scan the entire table irrespective of number of rows requested. It retrieves each record in the table, appends a new GUID for each row, then based on that GUID it sorts the rows and presents the top 5 rows. Disadvantage here is it scans the entire table (if it’s heap) or Clustered Index. 
+This approach will always scan the entire table irrespective of number of rows requested. It retrieves each record in the table, appends a new GUID for each row, then based on that GUID it sorts the rows and presents the top 5 rows. Disadvantage here is it scans the entire table (if it's heap) or Clustered Index. 
 
 After thinking for a while, I got an idea; If the table has a Unique column and its covered by an index, we can use that column to select the required random records and then join it with the table. This is going to improve performance.
         

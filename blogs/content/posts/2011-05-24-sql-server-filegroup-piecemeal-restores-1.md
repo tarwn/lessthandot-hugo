@@ -18,7 +18,7 @@ categories:
 ---
 This is a follow-up to my previous post, [SQL Server Filegroups: The What, The Why and The How][1]. In that post, I described how you could create a database with multiple files spanning multiple filegroups, and how that can improve performance and administration. 
 
-In this post, I’m going to show you another benefit of creating databases with multiple filegroups: the ability to restore one filegroup at a time, allowing part of the database to be accessible while the rest is being restored. This is known as a piecemeal restore. 
+In this post, I'm going to show you another benefit of creating databases with multiple filegroups: the ability to restore one filegroup at a time, allowing part of the database to be accessible while the rest is being restored. This is known as a piecemeal restore. 
 
 > Note: This feature is only available in SQL Server Enterprise Edition.
 
@@ -26,13 +26,13 @@ In this post, I’m going to show you another benefit of creating databases with
 
 I am going to create a database with four filegroups: Primary, FGFull2, FGFull3, and FGFull4. The Primary filegroup will be used only for system information. FGFull2 will be the default, and will contain order information from 2011. FGFull3 will contain order information from 2010. FGFull4 will contain order information from 2009, and will be read-only. 
 
-I will show you how to create the database with multiple filegroups, and how to set options like the default and read-only. Then, I’ll pretend I broke the database, and show you how to restore individual filegroups. 
+I will show you how to create the database with multiple filegroups, and how to set options like the default and read-only. Then, I'll pretend I broke the database, and show you how to restore individual filegroups. 
 
-Ready? Grab a cup of coffee, and let’s go. 
+Ready? Grab a cup of coffee, and let's go. 
 
 **Creating and Populating the Database** 
 
-First, I’ll create a database with three filegroups, and one file per filegroup. 
+First, I'll create a database with three filegroups, and one file per filegroup. 
 
 sql
 USE master;
@@ -58,7 +58,7 @@ ALTER DATABASE FilegroupFull SET RECOVERY FULL;
 GO
 ```
 
-You can easily add another filegroup and file to an existing database. I’m going to add a fourth. 
+You can easily add another filegroup and file to an existing database. I'm going to add a fourth. 
 
 sql
 ALTER DATABASE FilegroupFull ADD FILEGROUP FGFullFG4 
@@ -93,7 +93,7 @@ I can also access this information by right-clicking the database name in Object
   <a href="/wp-content/uploads/users/grrlgeek/Filegroup2.JPG?mtime=1306200507"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup2.JPG?mtime=1306200507" width="699" height="625" /></a>
 </div>
 
-In your databases, you probably have Important Data that is accessed most frequently. This may be customer information, recent orders, or current stock. Your less-important data may be historical sales information, or a table listing ledger accounts in your accounting system. In the event of a disaster, during the recovery period, wouldn’t it be great to be able to get the 20% of the data that is used 80% of the time online and usable first, and then work on restoring the remaining data while the business continues to function? How long will it take to restore a filegroup with, say 20 GB of data, instead of 120 GB? With some advance planning, this is possible. 
+In your databases, you probably have Important Data that is accessed most frequently. This may be customer information, recent orders, or current stock. Your less-important data may be historical sales information, or a table listing ledger accounts in your accounting system. In the event of a disaster, during the recovery period, wouldn't it be great to be able to get the 20% of the data that is used 80% of the time online and usable first, and then work on restoring the remaining data while the business continues to function? How long will it take to restore a filegroup with, say 20 GB of data, instead of 120 GB? With some advance planning, this is possible. 
 
 Next is creating tables and adding some orders. I am creating three tables. One will have orders for 2011, the second will have orders for 2010, and the third will be for 2009. This will be an example of how multiple filegroups can be useful, especially when combined with piecemeal restores.
 
@@ -108,7 +108,7 @@ CREATE TABLE Orders2011
  CONSTRAINT PKOrders PRIMARY KEY CLUSTERED (OrderID))
 ```
 
-Let’s check which filegroup this is created on. Will it be created on PRIMARY? 
+Let's check which filegroup this is created on. Will it be created on PRIMARY? 
 
 sql
 SELECT PA.OBJECT_ID, FG.name
@@ -124,7 +124,7 @@ WHERE PA.OBJECT_ID =
 
 Because I specified FGFullF2 as the default, that is where this table is created. 
 
-Let’s continue creating and populating tables. For my 2010 and 2009 tables, I will specify the filegroups I want them created on. 
+Let's continue creating and populating tables. For my 2010 and 2009 tables, I will specify the filegroups I want them created on. 
 
 sql
 CREATE TABLE Orders2010 
@@ -171,7 +171,7 @@ FROM InsertOrders
 OPTION (MAXRECURSION 100);
 ```
 
-I’m going to mark FGFullFG4 as read-only, so I can show you the difference between restoring a read-write and a read-only filegroup. 
+I'm going to mark FGFullFG4 as read-only, so I can show you the difference between restoring a read-write and a read-only filegroup. 
 
 sql
 ALTER DATABASE FilegroupFull SET RESTRICTED_USER WITH ROLLBACK IMMEDIATE;
@@ -190,7 +190,7 @@ sql
 BACKUP DATABASE FilegroupFull TO DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_full.bak'
 ```
 
-Now, I’ll add a record to my Orders2011 table. 
+Now, I'll add a record to my Orders2011 table. 
 
 sql
 USE FilegroupFull;
@@ -205,25 +205,25 @@ sql
 BACKUP LOG FilegroupFull TO DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_tlog1.trn'
 ```
 
-I’ll add one more record to the table. 
+I'll add one more record to the table. 
 
 sql
 INSERT INTO Orders2011 
 VALUES(400202, '2011/08/29')
 ```
 
-Then, I’ll do one more step that you may need to, depending on what scenario you are faced with. I am going to back up the tail of the transaction log. 
+Then, I'll do one more step that you may need to, depending on what scenario you are faced with. I am going to back up the tail of the transaction log. 
 
 sql
 BACKUP LOG FilegroupFull TO DISK = N'C:Program FilesMicrosoft SQL ServerMSSQL10_50.MSSQLSERVERMSSQLBackupFilegroupFull_tlogtail.trn' 
 WITH NORECOVERY, NO_TRUNCATE;
 ```
 
-Now, let’s talk disaster. You should have, and regularly test, a disaster recovery process. I will simulate a disaster by dropping the database. Then, I will begin the restore. 
+Now, let's talk disaster. You should have, and regularly test, a disaster recovery process. I will simulate a disaster by dropping the database. Then, I will begin the restore. 
 
-The first RESTORE statement in a piecemeal restore, which is known as a _partial-restore sequence_, must include the PRIMARY filegroup. It also must include the option WITH PARTIAL. You can restore as many filegroups as you want in the first restore. This is when testing your backups regularly comes into play. You should know how large your filegroups are, and how long they will take to restore, and how many you can restore at one time, to meet your company’s disaster recovery business requirements. 
+The first RESTORE statement in a piecemeal restore, which is known as a _partial-restore sequence_, must include the PRIMARY filegroup. It also must include the option WITH PARTIAL. You can restore as many filegroups as you want in the first restore. This is when testing your backups regularly comes into play. You should know how large your filegroups are, and how long they will take to restore, and how many you can restore at one time, to meet your company's disaster recovery business requirements. 
 
-I’m going to begin with a restore of PRIMARY only. Because this database is in FULL recovery mode, I will need to restore the logs with every filegroup that is in read-write mode. 
+I'm going to begin with a restore of PRIMARY only. Because this database is in FULL recovery mode, I will need to restore the logs with every filegroup that is in read-write mode. 
 
 sql
 RESTORE DATABASE FilegroupFull 

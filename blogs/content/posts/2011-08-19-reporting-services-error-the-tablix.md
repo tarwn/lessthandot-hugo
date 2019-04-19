@@ -28,7 +28,7 @@ I have created a simple report, with a table. I drag a list control on the body,
   <a href="/wp-content/uploads/users/grrlgeek/SSRS List Design.JPG?mtime=1313722870"><img alt="" src="/wp-content/uploads/users/grrlgeek/SSRS List Design.JPG?mtime=1313722870" width="776" height="265" /></a>
 </div>
 
-I go to the Preview tab. I see this error: “The tablix 'tablixname’ has a detail member with inner members. Detail members can only contain static inner members.” 
+I go to the Preview tab. I see this error: “The tablix 'tablixname' has a detail member with inner members. Detail members can only contain static inner members.” 
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/SSRS List Preview Error.JPG?mtime=1313722871"><img alt="" src="/wp-content/uploads/users/grrlgeek/SSRS List Preview Error.JPG?mtime=1313722871" width="820" height="160" /></a>
@@ -36,7 +36,7 @@ I go to the Preview tab. I see this error: “The tablix 'tablixname’ has a de
 
 **Say what?** 
 
-A table with detail rows is considered “dynamic” because the number of rows can change. A list is also dynamic, because the number of rows returned can change. A dynamic object can’t be nested inside another. The table must be static, not dynamic. To achieve this, I edit the table so all information is in the header and there are no detail rows. To do so, I right-click the header and choose to Insert Row > Below. 
+A table with detail rows is considered “dynamic” because the number of rows can change. A list is also dynamic, because the number of rows returned can change. A dynamic object can't be nested inside another. The table must be static, not dynamic. To achieve this, I edit the table so all information is in the header and there are no detail rows. To do so, I right-click the header and choose to Insert Row > Below. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/SSRS List Editing Table 1.jpg?mtime=1313722871"><img alt="" src="/wp-content/uploads/users/grrlgeek/SSRS List Editing Table 1.jpg?mtime=1313722871" width="807" height="264" /></a>
@@ -60,6 +60,6 @@ Now, when I Preview the report, I see two rows for each item. The first row is t
   <a href="/wp-content/uploads/users/grrlgeek/SSRS List Preview Fixed.JPG?mtime=1313722873"><img alt="" src="/wp-content/uploads/users/grrlgeek/SSRS List Preview Fixed.JPG?mtime=1313722873" width="743" height="232" /></a>
 </div>
 
-That’s one more Unsolved Mystery put to rest!
+That's one more Unsolved Mystery put to rest!
 
  [1]: http://www.sqlpass.org/summit/2011/Speakers/CallForSpeakers/SessionDetail.aspx?sid=1004

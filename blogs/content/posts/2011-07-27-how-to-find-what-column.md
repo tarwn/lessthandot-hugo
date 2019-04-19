@@ -87,7 +87,7 @@ String or binary data would be truncated.
   
 The statement has been terminated._
 
-Yes, very nice….could you indicate which column it actually has a problem with?
+Yes, very nice....could you indicate which column it actually has a problem with?
 
 Now the purpose of this post is to create code that you then can modify for your own needs and can use it to compare any two tables.
 
@@ -331,7 +331,7 @@ exec ('drop table ' + @ImportTableCompare+ ',' + @DestinationTableCompare )
 
 ### To Do list
 
-Here are some things for you to add…….
+Here are some things for you to add.......
 
 Now if you have worked with SQL Server for a while now, you might notice that what I did was not really what you would call defensive programming.
   

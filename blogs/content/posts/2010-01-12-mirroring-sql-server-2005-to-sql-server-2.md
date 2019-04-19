@@ -20,11 +20,11 @@ categories:
 
 This is an extension of [part 1][1] and the feasibility of mirroring a SQL Server 2005 Enterprise database to SQL Server 2008 Enterprise database in order to have a limited downtime upgrade path.
 
-In this part, we’re going to work through the actual test case and setup of the process.
+In this part, we're going to work through the actual test case and setup of the process.
 
 I recommend this type of upgrade only if downtime is extremely limited in your installation. Remember to always backup your databases and all associated sql agent jobs, scripts, logins and objects before going through with a complete upgrade of SQL Server. My normal process on planning an upgrade is, if you spent an hour determining what needs to be done, you need to add another 5 hours validating your thoughts. 
 
-For our lab, let’s start by setting up the database and the mirror. The following steps we will go through will be almost identical to the steps we worked through together in a [previous exercise][2] to move databases between SQL Server instances of the same 2005 versions using mirroring. 
+For our lab, let's start by setting up the database and the mirror. The following steps we will go through will be almost identical to the steps we worked through together in a [previous exercise][2] to move databases between SQL Server instances of the same 2005 versions using mirroring. 
 
 ## Let's jump in
 
@@ -42,7 +42,7 @@ BACKUP DATABASE NEEDTOUPGRADE TO DISK = 'C:NEEDTOUPGRADE_full_initial.bak'
 BACKUP LOG NEEDTOUPGRADE TO DISK = 'C:NEEDTOUPGRADE_taillog_initial.trn'
 ```
 
-Next, we’ll use a basic endpoint configuration and start the endpoint to prepare it for the mirror.
+Next, we'll use a basic endpoint configuration and start the endpoint to prepare it for the mirror.
 
 sql
 CREATE ENDPOINT [Mirroring] 
@@ -54,7 +54,7 @@ CREATE ENDPOINT [Mirroring]
 ```
 </p> 
 
-Now let’s move to the SQL Server 2008 instance and restore the database from our full backup. After this we can apply the log backup to bring us to up to the level we can initialize synchronization between the databases.
+Now let's move to the SQL Server 2008 instance and restore the database from our full backup. After this we can apply the log backup to bring us to up to the level we can initialize synchronization between the databases.
 
 sql
 --restore the full
@@ -74,7 +74,7 @@ Now the database on SQL Server 2008 is in no recovery and we can start by config
 
 > <span class="MT_red">Note: Our database is still version 611. SQL Server 2008 will be version 655. This prevents us from making normal snapshots and some other things we normally can do on a mirror. This was covered in some cons about this process in part 1.</span>
 
-First, let’s create the endpoint on the mirror (SQL Server 2008)
+First, let's create the endpoint on the mirror (SQL Server 2008)
 
 sql
 CREATE ENDPOINT [Mirroring] 
@@ -99,7 +99,7 @@ sql
 ALTER DATABASE NEEDTOUPGRADE SET PARTNER= N'TCP://Servername:5023'
 ```
 
-We’re not using a witness so at this point we want to set safety off. While still on the principle SQL Server 2005 instance run the following alter database statement to turn safety off.
+We're not using a witness so at this point we want to set safety off. While still on the principle SQL Server 2005 instance run the following alter database statement to turn safety off.
 
 sql
 ALTER DATABASE NEEDTOUPGRADE SET SAFETY OFF

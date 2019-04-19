@@ -17,7 +17,7 @@ tags:
   - CosmosDB
 
 ---
-I’m building the foundation for an ASP.Net Core 2 site with [Cosmos DB][1] as the back-end store and want to build in the idea of user-manageable API keys. In the past two posts, I've added interactive registration and login to the application using built-in Cookie and Twitter middleware on top of custom authorization logic and Cosmos DB. In this one, we'll be adding endpoints that require API Keys that can be created and revoked by the user.
+I'm building the foundation for an ASP.Net Core 2 site with [Cosmos DB][1] as the back-end store and want to build in the idea of user-manageable API keys. In the past two posts, I've added interactive registration and login to the application using built-in Cookie and Twitter middleware on top of custom authorization logic and Cosmos DB. In this one, we'll be adding endpoints that require API Keys that can be created and revoked by the user.
 
 <div id="attachment_9155" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -424,7 +424,7 @@ public async Task<RevocationDetails> RevokeAuthenticationAsync(string userId, st
 
 <div class="warning-area">
   <p>
-    So, ask me about class initializers…
+    So, ask me about class initializers...
   </p>
   
   <p>

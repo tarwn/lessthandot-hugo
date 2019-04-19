@@ -23,7 +23,7 @@ Alright so you won't listen and fight for the PO. Here is the cheapest and less 
 
 First I recemmend looking at setting the threshold. You can read more on that and blocking from Rob's blog blogs.technet.com/rob/archive/2008/05/26/detecting-sql-server-2005-blocking.aspx
 
-For now let's be old fassion and cheap…
+For now let's be old fassion and cheap...
 
 First query the master.dbo.sysprocesses view. There is a column named “blocked”. If the value is 1 then you have blocking going on. So if you wanted to do something really simple you could create a job that runs to check for this and send an email out to you.
 
@@ -87,7 +87,7 @@ I was left to look at both the blocking statement and what was being blocked. Th
 
 Long story short I found there were status keys not being set right and I created a sql job to set them to prevent the program that was processing row for row and sending updates on each row to the same tables hence causing the blocking situation.
 
-So you see the steps now…
+So you see the steps now...
 
   * identifiy the locking IDs
   * identify the statements and optimize. This 90% of the time will fixs it

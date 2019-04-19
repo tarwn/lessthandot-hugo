@@ -45,7 +45,7 @@ It may not always be necessary to ask the business this (hopefully if you work t
   <a href="http://www.flickr.com/photos/miranda_jc/3406275289/"><img src="http://tiernok.com/LTDBlog/conceptual/sneakycat.png" alt="Evaluate outside influences" title="Evaluate outside influences" /></a><br />Outside influences can sneak up<br />Sneaky Cat on <a href="http://www.flickr.com/photos/miranda_jc/3406275289/" title="See original on Flickr">Flickr</a>
 </div>
 
-### About those other materials…
+### About those other materials...
 
 Any additional materials, products, or people referenced in that first conversation need to be tracked down. Materials will expose a much more detailed list of potential data fields then you will hear in a conversation, competing products or products priced out of the organizations range will provide additional terminology and purpose, while other people will provide both a sounding board for the assumptions so far and a source of secondary translations and assumptions. The important part is that we all started with the same base story (the initial business owner) before getting this far, as that frames these conversations and investigations. And yes, I really want to use the word _context_ again.
 
@@ -53,7 +53,7 @@ Any additional materials, products, or people referenced in that first conversat
 
 The last source of information we want to address is projects that are starting in the near future, strategic initiatives, and similar surprises waiting only a few weeks down the road. Going back to the business to ask about planned projects in the near future can often uncover additional information that will be critical to the model. Changes in business direction, assumptions of geographic growth or acquisitions, and even projects that are intended to tie into this data source can all mean the difference between a completed model and a redo of the modeling effort.
 
-### Put it all together…
+### Put it all together...
 
 So by now we should be able to put it all together, right? Well, maybe. Probably not.
 
@@ -69,7 +69,7 @@ As we look through our list of entities and potential attributes, we want to que
 
   * Do we need to track the value as it changes over time?
   * Do we need to provide a mechanism to enter future values?
-  * Do these values get deleted, flagged as inactive, or …?
+  * Do these values get deleted, flagged as inactive, or ...?
   * Do different variations of the value exist based on Location? Language? Currency? Person viewing the data?
   * Can entities be re-categorized (ie, relationships changed)?
   * Can relationships/categorizations be duplicated? Many-to-Many? Time sensitive?

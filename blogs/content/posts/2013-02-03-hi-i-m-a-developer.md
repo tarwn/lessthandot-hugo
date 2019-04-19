@@ -34,11 +34,11 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">It seems the world of development has changed a great deal and gone are the days when you could just be a code cutter (though such roles do exist and are required), it seems a developer has to now master a wide array of skills and do battle with various foes like the Windows Operating System (<em>level 72 elite boss for those that are keeping track…</em>) as well trying to do their day job (<em>which in itself now consists of different minion roles</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">It seems the world of development has changed a great deal and gone are the days when you could just be a code cutter (though such roles do exist and are required), it seems a developer has to now master a wide array of skills and do battle with various foes like the Windows Operating System (<em>level 72 elite boss for those that are keeping track...</em>) as well trying to do their day job (<em>which in itself now consists of different minion roles</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">With the advances in .NET development there are a wide range of Frameworks, Tools and Add-Ons that can be worked with, installed and generally cried over (<em>a black hole in which I have been sucked into, the crying bit…</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">With the advances in .NET development there are a wide range of Frameworks, Tools and Add-Ons that can be worked with, installed and generally cried over (<em>a black hole in which I have been sucked into, the crying bit...</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -58,15 +58,15 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">And this is where my hell begins…</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">And this is where my hell begins...</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 10pt; line-height: 14.25pt;">Now don't get me wrong, I enjoy the techie element of my role, I feel I fulfil the developer title more fully by being able to flex my many different skills (<em>making me adaptable for almost any occasion</em>), a result of accumulating experience in a wide range of sectors starting from my humble beginnings as an IT Support guy, moving into a System Administration role, sideways across into Application Support, Technical Project Lead, Solution Architecture and back into Software Development in my current role as an Senior .NET Enterprise Developer (</span><span style="font-size: 10pt; line-height: 14.25pt;"><em>not Star Trek…I wish it was, but it's not and I have to live with that disappointment for the rest of my career life…I tried do the Spock hand thing, got strange looks from the others in the developer forum…</em></span><span style="font-size: 10pt; line-height: 14.25pt;">).</span></span>
+  <span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 10pt; line-height: 14.25pt;">Now don't get me wrong, I enjoy the techie element of my role, I feel I fulfil the developer title more fully by being able to flex my many different skills (<em>making me adaptable for almost any occasion</em>), a result of accumulating experience in a wide range of sectors starting from my humble beginnings as an IT Support guy, moving into a System Administration role, sideways across into Application Support, Technical Project Lead, Solution Architecture and back into Software Development in my current role as an Senior .NET Enterprise Developer (</span><span style="font-size: 10pt; line-height: 14.25pt;"><em>not Star Trek...I wish it was, but it's not and I have to live with that disappointment for the rest of my career life...I tried do the Spock hand thing, got strange looks from the others in the developer forum...</em></span><span style="font-size: 10pt; line-height: 14.25pt;">).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">In the company where I work now, my team is fairly self-sufficient and that often means we do a lot of the stuff ourselves (<em>whilst still going through proper channels as required</em>) which is great as it means we can quickly prototype solutions through a Virtual Machine on our PC or install a particular tool we need to perform some task – all of this means that we generally have control over our own PC's (<em>as all developers should…but they don't unfortunately</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">In the company where I work now, my team is fairly self-sufficient and that often means we do a lot of the stuff ourselves (<em>whilst still going through proper channels as required</em>) which is great as it means we can quickly prototype solutions through a Virtual Machine on our PC or install a particular tool we need to perform some task – all of this means that we generally have control over our own PC's (<em>as all developers should...but they don't unfortunately</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -78,15 +78,15 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">So begins my particular episode…</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">So begins my particular episode...</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have a pretty snazzy developer PC inherited from my predecessor, a rather cool Hewlet Packard Z600 Workstation specced up to the hilt with serious 'Uber' hardware (<em>dual quad Xeon's, stupid amount of memory, SSD's, drool…</em>) and thankfully I have complete control over it (<em>mostly</em>) so I had the chance to configure my PC the way I wanted it to do the development I needed to do.</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have a pretty snazzy developer PC inherited from my predecessor, a rather cool Hewlet Packard Z600 Workstation specced up to the hilt with serious 'Uber' hardware (<em>dual quad Xeon's, stupid amount of memory, SSD's, drool...</em>) and thankfully I have complete control over it (<em>mostly</em>) so I had the chance to configure my PC the way I wanted it to do the development I needed to do.</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have the usual culprits on there, Visual Studio 2010 Premium SP1, MSSQL Server 2008 R2, VMware, lots of useful tools (<em>Notepad++, Red Gate, Solitaire</em>) all running on a Windows 7 Professional 64 bit…nothing out of the ordinary there I hear you say, ah I haven’t told you about that little evil gremlin called Oracle, more specifically Oracle 64 bit and 32 bit clients on a 64 bit operating system (<em>yes, that combination should cause you to feel nauseous</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I have the usual culprits on there, Visual Studio 2010 Premium SP1, MSSQL Server 2008 R2, VMware, lots of useful tools (<em>Notepad++, Red Gate, Solitaire</em>) all running on a Windows 7 Professional 64 bit...nothing out of the ordinary there I hear you say, ah I haven't told you about that little evil gremlin called Oracle, more specifically Oracle 64 bit and 32 bit clients on a 64 bit operating system (<em>yes, that combination should cause you to feel nauseous</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -98,7 +98,7 @@ tags:
   * <span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 10pt;"><span style="font-size: 7pt; line-height: normal;"> </span></span><span style="font-size: 10pt;">Install the 32 bit Client (ODT with ODAC)</span></span>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Simple enough I thought, having virtual zero Oracle skills I was up for the challenge and felt confident I had the knowhow and experience (<em>plus large balls</em>) to deal with any issues that might crop up and like a true techie I refused to read the manual (<em>text file in the case of Oracle products</em>)…I was in for a bumpy ride it seems.</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Simple enough I thought, having virtual zero Oracle skills I was up for the challenge and felt confident I had the knowhow and experience (<em>plus large balls</em>) to deal with any issues that might crop up and like a true techie I refused to read the manual (<em>text file in the case of Oracle products</em>)...I was in for a bumpy ride it seems.</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -124,7 +124,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Or something similar to the above command which should go ahead and install the required ODAC bits into the proper place (<em>you need to ensure you specify the Oracle Home directory</em>).  Again this went fairly smoothly as well with no hick-ups so up next was the 32 bit client and here you need to make sure you install the Oracle Developer Tools with ODAC which includes the 32 bit client otherwise you will experience much pain as I did (<em>where I installed the 32 bit client, then ODAC and other bits which caused no end of pain due to path problems, mismatched versions of dll’s etc</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Or something similar to the above command which should go ahead and install the required ODAC bits into the proper place (<em>you need to ensure you specify the Oracle Home directory</em>).  Again this went fairly smoothly as well with no hick-ups so up next was the 32 bit client and here you need to make sure you install the Oracle Developer Tools with ODAC which includes the 32 bit client otherwise you will experience much pain as I did (<em>where I installed the 32 bit client, then ODAC and other bits which caused no end of pain due to path problems, mismatched versions of dll's etc</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -132,7 +132,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Now the above hard work should be adequate to get a working Developer Workstation with both 64 bit and 32 bit Oracle Clients and Developer Tools however there is always a but…what I didn’t tell you was the amount of pain I went through to get the above installation list right, and believe me it was extremely painful and as I have found out after posting this blog page, there a few other client combinations that can work e.g. having a primary 32 bit Oracle Client installation with the developer tools and a 64 bit Instant Client installation (<em>will save this for a future post</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Now the above hard work should be adequate to get a working Developer Workstation with both 64 bit and 32 bit Oracle Clients and Developer Tools however there is always a but...what I didn't tell you was the amount of pain I went through to get the above installation list right, and believe me it was extremely painful and as I have found out after posting this blog page, there a few other client combinations that can work e.g. having a primary 32 bit Oracle Client installation with the developer tools and a 64 bit Instant Client installation (<em>will save this for a future post</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -148,7 +148,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">What I haven’t shared is the nightmare scenario I ended up in with a totally messed up pair of gac’s (<em>32 bit and 64 bit</em>) and problems compiling any of our projects because they all used one combination or another of the Oracle client (<em>mostly 64 bit now</em>).  So if anyone has had this problem here is the proper way to deal with it…</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">What I haven't shared is the nightmare scenario I ended up in with a totally messed up pair of gac's (<em>32 bit and 64 bit</em>) and problems compiling any of our projects because they all used one combination or another of the Oracle client (<em>mostly 64 bit now</em>).  So if anyone has had this problem here is the proper way to deal with it...</span></span>
 </p>
 
 <p style="line-height: 14.25pt; tab-stops: 522.0pt;">
@@ -160,7 +160,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt; tab-stops: 522.0pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Once the de-installation (<em>uninstall to you and me…Oracle people…</em>) is complete you need to run the Oracle Universal Installer (<em>semi-cool Java tool…Java is not cool, the app is however</em>).  When this app fires up you have the option to Deinstall any installations on your system:</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Once the de-installation (<em>uninstall to you and me...Oracle people...</em>) is complete you need to run the Oracle Universal Installer (<em>semi-cool Java tool...Java is not cool, the app is however</em>).  When this app fires up you have the option to Deinstall any installations on your system:</span></span>
 </p>
 
 <span style="font-family: arial, helvetica, sans-serif;"><img src="/wp-content/uploads/users/kermit/oracle-installer-deinstall.jpg?mtime=1359936990" alt="Oracle Deinstall" width="372" height="270" /></span>
@@ -220,15 +220,15 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt; tab-stops: 522.0pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Set aside time to climb a difficult mountain and get your hands cut, you will need to work out the many holes in your nice setup and as more and more technical requirements popup don’t expect everything to work well together the first time (<em>you have to integrate your own development environment first</em>). </span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Set aside time to climb a difficult mountain and get your hands cut, you will need to work out the many holes in your nice setup and as more and more technical requirements popup don't expect everything to work well together the first time (<em>you have to integrate your own development environment first</em>). </span></span>
 </p>
 
 <p style="line-height: 14.25pt; tab-stops: 522.0pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">So key here is to develop the expertise if you don’t have it at hand, become adaptable but remain honest to yourself (<em>you will have to go through some pain to get to the fruits of your labour</em>).  Use knowledge base tools (<em>Wiki</em>) to record your efforts, communicate your findings with your colleagues and attempt to automate and make reusable as much of what you use as possible.</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">So key here is to develop the expertise if you don't have it at hand, become adaptable but remain honest to yourself (<em>you will have to go through some pain to get to the fruits of your labour</em>).  Use knowledge base tools (<em>Wiki</em>) to record your efforts, communicate your findings with your colleagues and attempt to automate and make reusable as much of what you use as possible.</span></span>
 </p>
 
 <p style="line-height: 14.25pt; tab-stops: 522.0pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">This will help you better deal with those moments when you have to spend most of your effort on the administration of your development work as appose to the actual developing and as a bonus increase your skills repertoire which every modern developer shouldn’t shy away from (<em>becoming more agile in nature by having a can-do attitude</em>).</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">This will help you better deal with those moments when you have to spend most of your effort on the administration of your development work as appose to the actual developing and as a bonus increase your skills repertoire which every modern developer shouldn't shy away from (<em>becoming more agile in nature by having a can-do attitude</em>).</span></span>
 </p>
 
 <p style="line-height: 14.25pt;">

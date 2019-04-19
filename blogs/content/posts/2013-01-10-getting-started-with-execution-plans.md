@@ -98,7 +98,7 @@ sql
 SELECT * FROM Sales.vStoreWithContacts
 WHERE Firstname = 'Alan'
 ```
-You’ll see some green text in the top of the Execution Plan:
+You'll see some green text in the top of the Execution Plan:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP9.JPG?mtime=1357810926"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP9.JPG?mtime=1357810926" width="1081" height="77" /></a>
@@ -119,7 +119,7 @@ WHERE FirstName IN (SELECT FirstName FROM Sales.vStoreWithContacts
 WHERE FirstName NOT LIKE 'A%');
 GO
 ```
-When you execute the queries you’ll see they both return the same 70 rows but when you look at the header of the Execution Plans you’ll see that the first query costs less than the second one in this batch:
+When you execute the queries you'll see they both return the same 70 rows but when you look at the header of the Execution Plans you'll see that the first query costs less than the second one in this batch:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ep10.JPG?mtime=1357810927"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ep10.JPG?mtime=1357810927" width="275" height="150" /></a>

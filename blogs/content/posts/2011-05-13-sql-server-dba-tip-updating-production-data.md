@@ -63,7 +63,7 @@ END CATCH;
 
 ```
 
-A basic try catch statement around this update would prevent the worst case of corrupting the data and compromising integrity of the data.  Now the example has no logic or reason to it.  In a situation where enumerating row-by-row data to perform updates, this is extremely effective error handling.  Mass updating based on updates from join statements can also be placed into a try catch.  The entire statement’s failure is then logged in a table or other means that fit the process. 
+A basic try catch statement around this update would prevent the worst case of corrupting the data and compromising integrity of the data.  Now the example has no logic or reason to it.  In a situation where enumerating row-by-row data to perform updates, this is extremely effective error handling.  Mass updating based on updates from join statements can also be placed into a try catch.  The entire statement's failure is then logged in a table or other means that fit the process. 
 
 Error handling should be thought through.  Protect your data from every point of failure and ensure there are no possibilities for failures to follow through to the production databases.
 
@@ -79,7 +79,7 @@ Very seldom will a database have tables that are completely unrelated.  That be
 
 Updates, inserts and deletes are inherently dangerous transactions when performed out of the normal processing set in place.  These transactions are the responsibility of the DBA to perform safely and without damaging results.  Never treat any of these transactions as too simple to take seriously, cut corners and not put time into ensuring they will function the way they are meant to. 
 
-Making mistakes is a part of growing as a DBA (and any other profession).  When mistakes are made, learn from them in knowing how important the steps like the ones mentioned in this article are.  It’s as important not to be hard on yourself to the point the failure does not help the future as it is to know these steps should be done. 
+Making mistakes is a part of growing as a DBA (and any other profession).  When mistakes are made, learn from them in knowing how important the steps like the ones mentioned in this article are.  It's as important not to be hard on yourself to the point the failure does not help the future as it is to know these steps should be done. 
 
  
 

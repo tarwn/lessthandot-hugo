@@ -1,5 +1,5 @@
 ---
-title: Don’t fall for the social engineering scam that makes you go to ammyy.com
+title: Don't fall for the social engineering scam that makes you go to ammyy.com
 author: SQLDenis
 type: post
 date: 2011-09-18T12:10:00+00:00
@@ -31,7 +31,7 @@ I heard about this on Twit's [Security Now][1]( With Steve Gibson and Leo Laport
 
 Of course everyone that has been using windows for a while will know that it will always have errors.
 
-The next part is pretty funny….
+The next part is pretty funny....
 
 They will tell you to go back to the Run box and type “inf”, then they will tell you that inf stands for **infected files**. They make you go to C:Windowsinf After you are there they will ask you if you can you see a lot of .inf and .pnf files in the INF directory. If you say yes, and you will, they will tell you that those are corrupted files. Next they will tell you to double-click one of the PNF files. Once you double-click it, you will see an error message like the one below
 

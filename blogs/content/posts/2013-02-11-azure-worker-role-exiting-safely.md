@@ -24,7 +24,7 @@ The basic Azure Worker Role consists of a run method, an endless loop, and a sle
 
 Every exit is a crash.
 
-The basic Worker Role is a while(true) statement that alternates between doing work and sleeping for a period of time. When it's time for Azure to recycle the instance, deploy a new one, scale…what happens to this while(true) statement?
+The basic Worker Role is a while(true) statement that alternates between doing work and sleeping for a period of time. When it's time for Azure to recycle the instance, deploy a new one, scale...what happens to this while(true) statement?
 
 It's killed. 
 

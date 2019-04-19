@@ -36,7 +36,7 @@ Besides trying out the built-in tools, I also intend on playing with some of the
   * [MS Scrum Template 1.0][5]
   * [EMC's Scrum for Team System][6]
 
-As if that isn't enough, there is a remarkable amount of information at [MSDN][7] on the test labs, Build process, Branching, Requirements Management, Integration, … the list goes on.
+As if that isn't enough, there is a remarkable amount of information at [MSDN][7] on the test labs, Build process, Branching, Requirements Management, Integration, ... the list goes on.
 
  [1]: http://www.microsoft.com/downloads/details.aspx?FamilyID=e0198b64-4acb-4709-b07f-359fb4d523bc "Download Hyper-V image"
  [2]: http://www.microsoft.com/downloads/details.aspx?FamilyID=509c3ba1-4efc-42b5-b6d8-0232b2cbb26e "Download Win 7 Virtual PC Image"

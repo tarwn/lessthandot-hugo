@@ -1,5 +1,5 @@
 ---
-title: Can’t depend on sp_depends? Try using sp_refreshsqlmodule
+title: Can't depend on sp_depends? Try using sp_refreshsqlmodule
 author: SQLDenis
 type: post
 date: 2009-06-26T14:17:48+00:00

@@ -25,7 +25,7 @@ Merge Replication is a powerful beastly thing that can bring great joy and great
 
 SQL Server has grown from a small slice of overcooked microwave bacon into a full order of thick sliced mouthwatering heaven.  This growth has placed it amongst the leaders in the Database Server world, a place that was well earned, and we are all reaping the rewards of its success.  While this was all going down, Merge Replication formed a stance and started working very well.  Limitations were and are still there but fewer than years past.  
 
-Today we’re going to talk about a limitation that in all respect isn’t a limitation but more a default behavior in SQL Server.  Then we’ll show how to work around it (or with it).   We want to get to the thick sliced bacon by the end.
+Today we're going to talk about a limitation that in all respect isn't a limitation but more a default behavior in SQL Server.  Then we'll show how to work around it (or with it).   We want to get to the thick sliced bacon by the end.
 
 **Bulk Loading Data**
 
@@ -37,11 +37,11 @@ DBA Fred is in charge of loading sales into the CHEESE\_WAREHOUSE\_DB.  The CHE
 
 DBA Joe is in charge of Merge Replication for the entire company.  Joe gets a call that there are 361,970 rows of data missing from the offsite location but when the users connect to the home office, the data is there.  Users are a little angry because Citrix is used and calling UPS to get the data shipped is quicker that pulling the reports using Citrix.
 
-Fred loaded the data into the home office database using SSIS with an OLE DB Destination set to use TABLOCK and OpenRowset with FastLoad.  By all means, Fred should have used SSIS because this loaded the data in under 8 seconds.  His manager even gave him a bonus because the load was done so quickly.  Fred shouldn’t spend it just yet.
+Fred loaded the data into the home office database using SSIS with an OLE DB Destination set to use TABLOCK and OpenRowset with FastLoad.  By all means, Fred should have used SSIS because this loaded the data in under 8 seconds.  His manager even gave him a bonus because the load was done so quickly.  Fred shouldn't spend it just yet.
 
-Joe isn’t happy.  Replication Monitor shows no errors and the data simply is not there without any explanations at all.  TableDiff shows the difference as well as queries he runs.  Why does Joe not see the data on the subscriber? 
+Joe isn't happy.  Replication Monitor shows no errors and the data simply is not there without any explanations at all.  TableDiff shows the difference as well as queries he runs.  Why does Joe not see the data on the subscriber? 
 
-The triggers that should have fired to load the merge tracking tables did not due to the bulk insert operations done by Fred’s package.  (no pun intended)
+The triggers that should have fired to load the merge tracking tables did not due to the bulk insert operations done by Fred's package.  (no pun intended)
 
 **Walk Through**
 
@@ -73,7 +73,7 @@ From the above status after completing the agent execution, no data was moved. 
 
 Further validation of PUB.dbo.PUB_INVENTORY shows the count did increase to 1,507,713 rows.
 
-The reason this happened was due to the triggers for Merge Replication not firing during the BULK INSERT that SSIS performs with the FastLoad option.  To fix this situation, the SSIS package’s AccessMode can be set to OpenRowset and perform normal insert logging operations.  This causes the performance of the total data load to be reduced from 8 seconds to over 14 minutes.  The option is almost unusable for Fred.  Alternatively, the FastLoadOptions can be used to force the firing of the triggers during the BULK INSERT.
+The reason this happened was due to the triggers for Merge Replication not firing during the BULK INSERT that SSIS performs with the FastLoad option.  To fix this situation, the SSIS package's AccessMode can be set to OpenRowset and perform normal insert logging operations.  This causes the performance of the total data load to be reduced from 8 seconds to over 14 minutes.  The option is almost unusable for Fred.  Alternatively, the FastLoadOptions can be used to force the firing of the triggers during the BULK INSERT.
 
 Set the destination options to add the FIRE_TRIGGERS option.  The total value and combined options for the FastLoadOptions is as follows.
 

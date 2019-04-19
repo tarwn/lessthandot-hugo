@@ -20,7 +20,7 @@ categories:
   
 The twenty-fifth installation of T-SQL Tuesday is brought to us by Allen White ([twitter][3] | [blog][4]). The topic is [“T-SQL Tricks”][2]. 
 
-As a database administrator, one of the most common calls I receive from developers is, “I’m getting an error saying the log is full.” This could happen for a variety of reasons:
+As a database administrator, one of the most common calls I receive from developers is, “I'm getting an error saying the log is full.” This could happen for a variety of reasons:
 
 • Data was being loaded into the database.
   
@@ -34,7 +34,7 @@ I could have simply expanded the transaction log file without any questions, but
 
 What I frequently wanted to know was how large the log was, how much space was being used, and what recovery model the database was in. I put together a simple script to check this information, and used it frequently. 
 
-I’m able to pull information using a DBCC command, SQLPERF, and the system catalog view, sys.databases. Having this information exposed is very helpful to us. 
+I'm able to pull information using a DBCC command, SQLPERF, and the system catalog view, sys.databases. Having this information exposed is very helpful to us. 
 
 sql
 -- Set database name 
@@ -53,7 +53,7 @@ FROM sys.databases
 WHERE name = @DatabaseName;
 ```
 
-DBCC SQLPERF is used to get transaction log usage information. It returns Database Name, Log Size (MB), Log Space Used (%), and Status. It requires VIEW SERVER STATE permissions. In addition, you can reset DMV information for latch statistics or wait statistics by passing in parameters. This can help with additional troubleshooting. Here’s the full syntax: 
+DBCC SQLPERF is used to get transaction log usage information. It returns Database Name, Log Size (MB), Log Space Used (%), and Status. It requires VIEW SERVER STATE permissions. In addition, you can reset DMV information for latch statistics or wait statistics by passing in parameters. This can help with additional troubleshooting. Here's the full syntax: 
 
 sql
 DBCC SQLPERF 
@@ -67,11 +67,11 @@ DBCC SQLPERF
      [WITH NO_INFOMSGS ]
 ```
 
-sys.databases will provide information about each database on a SQL Server instance. Just a few of the things you can view are the compatibility level, collation, recovery model, and state. Here, I’m returning the database name, the recovery model, and what the log is waiting on. If a user can connect to a database, they can view the sys.databases information for that database. 
+sys.databases will provide information about each database on a SQL Server instance. Just a few of the things you can view are the compatibility level, collation, recovery model, and state. Here, I'm returning the database name, the recovery model, and what the log is waiting on. If a user can connect to a database, they can view the sys.databases information for that database. 
 
-A great reference (and one of my inspirations for this script) was Gail Shaw’s blog, [“Why is my transaction log full?”][5] With this information, I could choose to change the recovery model, expand the log, or wait for the next transaction log backup. 
+A great reference (and one of my inspirations for this script) was Gail Shaw's blog, [“Why is my transaction log full?”][5] With this information, I could choose to change the recovery model, expand the log, or wait for the next transaction log backup. 
 
-If the database was in full recovery mode, and the users did not need point-in-time recovery (perhaps it’s a development environment), I could choose to set it to simple recovery. If there would be valid reasons for the expansion – frequent data loads, or long-running queries – I could expand the log to a reasonable size. If the database was in full recovery, and this was a one-time operation, I could issue a transaction log backup to clear space. Knowing why a transaction log is expanding, and if it will happen again, is an important part of your job as a DBA. 
+If the database was in full recovery mode, and the users did not need point-in-time recovery (perhaps it's a development environment), I could choose to set it to simple recovery. If there would be valid reasons for the expansion – frequent data loads, or long-running queries – I could expand the log to a reasonable size. If the database was in full recovery, and this was a one-time operation, I could issue a transaction log backup to clear space. Knowing why a transaction log is expanding, and if it will happen again, is an important part of your job as a DBA. 
 
 Advice I would give to anyone new to SQL Server, and even those who have worked with it for some time, is to become familiar with the system catalog views. Catalog views expose the catalog metadata that the SQL Server Engine uses. They are well documented in BOL and efficient for retrieving valuable information to make logical decisions. Catalog views are a powerful way to troubleshoot SQL Server.
 

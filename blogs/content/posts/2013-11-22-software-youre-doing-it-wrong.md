@@ -1,5 +1,5 @@
 ---
-title: Software, You’re Doing it Wrong
+title: Software, You're Doing it Wrong
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2013-11-22T14:10:00+00:00
@@ -50,7 +50,7 @@ You might be surprised to learn that the intended end user of an API or SDK is n
   I work regularly with the Microsoft Azure API and the .Net Azure SDK. They are both well documented and have numerous examples posted. I've also built my own SDK to consume the API, as well as some one-off chunks of code that interact directly with the API. When I have a choice, I use my own SDK over Microsoft's. This is not because I'm smarter or more technically proficient (I'm not), but because my SDK is easier to use, provides better feedback to the rest of the application, is consistent with the API and API documentation, and in many cases requires exactly one method call for each action I want to do against the API.</p> 
   
   <p>
-    The Microsoft SDK has clumsier interfaces, requires a second set of instructions, requires extra abstraction work to allow me to write unit tests for my own code, … it's the generic MP3 player before iPods ate their cake.
+    The Microsoft SDK has clumsier interfaces, requires a second set of instructions, requires extra abstraction work to allow me to write unit tests for my own code, ... it's the generic MP3 player before iPods ate their cake.
   </p>
 </div>
 

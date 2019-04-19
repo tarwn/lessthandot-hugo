@@ -1,5 +1,5 @@
 ---
-title: There Is Never Time For … (Part 3)
+title: There Is Never Time For ... (Part 3)
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2010-04-21T11:24:43+00:00
@@ -22,7 +22,7 @@ Our ticket counts are down, the systems are failing less often, and we're report
 
 _This is the third article in a three part series on major gaps that we never seem to have the time to address as well as ideas on how to overcome and initiate processes for closing or reducing those gaps. Each article is based on one high-level subject and provides ideas on how to gain individual and group level traction._
 
-We will initially cover some key concepts in Process Improvement and Lean, then jump right into a PC Request process that is modeled on a real process I have worked with in the past…and in one pass we will cut the PC ordering process in half.
+We will initially cover some key concepts in Process Improvement and Lean, then jump right into a PC Request process that is modeled on a real process I have worked with in the past...and in one pass we will cut the PC ordering process in half.
 
 ## Firefighting Is Not Our Job
 
@@ -113,7 +113,7 @@ As we make improvements we need to communicate them to the wider company. By con
 
 The next step is to grow the process, to be an agent of change in your business. There are others that are or will be interested in continuous improvement, but as you start to widen the scope you need to get buy-in from managers and executives. Having real-world examples of the savings the company has already achieved is going to be a strong argument for taking time away from day-to-day tasks and applying it towards a cultural shift that is an investment in [an unknown ROI][5].
 
-## Why Improve…
+## Why Improve...
 
 While it may take more research and thought to identify wastes and start improving your environment, while it may seem easier to simply stand still and keep throwing more technology at problems as they appear, remember that there are companies adopting practices for improvement as part of Agile, Lean, and other cultural shifts. At the worst you will be increasing your effectiveness, decreasing costs, and improving your understanding of the business, at the best you could be starting a company-wide culture shift that requires managers to shift towards leadership and servant-leader roles, requires greater levels of respect for non-managers from the business, and enables businesses to provide high quality results at competitive prices, even when those competitors are offshore at much lower wages.
 
@@ -121,11 +121,11 @@ And the last benefit? Most of us are in our jobs because we like identifying pro
 
 Miss an article in the series?
   
-There Is Never Time For … [Part 1: Training and Development][6]
+There Is Never Time For ... [Part 1: Training and Development][6]
   
-There Is Never Time For … [Part 2: Standard Processes][7]
+There Is Never Time For ... [Part 2: Standard Processes][7]
   
-There Is Never Time For … _Part 3: Process Improvement_
+There Is Never Time For ... _Part 3: Process Improvement_
 
  [1]: http://en.wikipedia.org/wiki/W._Edwards_Deming "More on Dr Deming at Wikipedia"
  [2]: http://en.wikipedia.org/wiki/Lean_manufacturing#Types_of_wastes "Seven Wastes at Wikipedia"

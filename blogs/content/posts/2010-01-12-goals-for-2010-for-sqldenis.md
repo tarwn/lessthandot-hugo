@@ -33,7 +33,7 @@ This is an easy one since it already happened this week. We went to new machines
 
 ## Read 2 books per month
 
-There was a time when I commuted to NYC from Princeton and would read between 50 and 60 books per year. Now that my commute is mostly walking I don’t read that much, I like to increase that. So far I already have finished one book, this book is called Deamon and I already blogged about it here: [Daemon by Daniel Suarez is a book every programmer will love][3]
+There was a time when I commuted to NYC from Princeton and would read between 50 and 60 books per year. Now that my commute is mostly walking I don't read that much, I like to increase that. So far I already have finished one book, this book is called Deamon and I already blogged about it here: [Daemon by Daniel Suarez is a book every programmer will love][3]
   
 One way to read more is by using audio books, this way you can listen at the gym, while you are walking around etc etc. Audio books are sometimes read by really good people. A couple of audio books I really enjoyed are: Angels and Demons, Digital Fortress, and Daemon. Audio books really add another dimension to an already interesting book. For example those creepy synthetic voices in Daemon really bring the book to life. Some of the books that are on my list for this year are below.
 
@@ -73,7 +73,7 @@ For some people this might seem strange because they would probably want to decr
   
 Simpsons, Family guy, Lost, CSI (any flavor), Seinfeld, Baywatch, X files, 24, Frazier and this list goes on and on.
   
-When I do watch shows it is mostly on HBO or Showtime, I love Sopranos, Oz, True Blood, Dexter, Californication…basically shows that run for 13 weeks and that don’t skip 2 months like for example Jericho. Jericho was of course the one network show I truly like and it was cancelled.
+When I do watch shows it is mostly on HBO or Showtime, I love Sopranos, Oz, True Blood, Dexter, Californication...basically shows that run for 13 weeks and that don't skip 2 months like for example Jericho. Jericho was of course the one network show I truly like and it was cancelled.
 
 <div class="image_block">
   <img src="http://farm1.static.flickr.com/103/300654059_1e473fcb1e_m.jpg" alt="Play more computer games" title="Play more computer games" />
@@ -85,7 +85,7 @@ There was a time when I played games on the computer at least a couple of day a 
   
 These days I think the games are too complicated or you need to spend several hours just to learn how to play this game. I like my games to be simple..I have a weapon..you move ..I shoot. Games should be to relax not a commitment, if you don't play for a week suddenly a whole bunch of people have higher levels than you in WoW.
 
-So that is it…nothing major really…I decided not to tag anyone since it is already practically the middle of January.
+So that is it...nothing major really...I decided not to tag anyone since it is already practically the middle of January.
 
  [1]: /index.php/ITProfessionals/EthicsIT/what-was-your-first-computer-and-what-we
  [2]: /index.php/ITProfessionals/EthicsIT/goals-for-2010

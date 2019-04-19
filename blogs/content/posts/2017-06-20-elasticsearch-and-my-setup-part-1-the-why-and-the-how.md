@@ -47,7 +47,7 @@ The repo does not contain the zip,deb or iso-files.
 
 # Why?
 
-This will create 5 servers for which you will need a lot of memory to run them 3\*24GB and 2\*8GB that's… a lot of memory. So why do the elasticsearch servers have so much RAM. Becuase that's what I found on the internet to be the best. 12GB for elastic and 12GB for the full text index engine. I only have a few million documents a day and have yet to see it use all the memory.
+This will create 5 servers for which you will need a lot of memory to run them 3\*24GB and 2\*8GB that's... a lot of memory. So why do the elasticsearch servers have so much RAM. Becuase that's what I found on the internet to be the best. 12GB for elastic and 12GB for the full text index engine. I only have a few million documents a day and have yet to see it use all the memory.
   
 The disks on the servers are 200GB. And they use 4vCPUs. But since this is a script you can change all this.
   

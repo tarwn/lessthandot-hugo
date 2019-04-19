@@ -83,9 +83,9 @@ Looking at the php documentation for the [ABS function][3] we find a bunch of co
 
 Isn't this just basic math that was taught to us in grammar school? Of course it doesn't stop here, how many people these day can convert numbers between hexadecimal (base-16), binary (base-2) and decimal (base-10) without using a tool?
   
-Of course the future is that people will rely more and more on frameworks and wizards, this could be bad if you need to fix something in your code. Take a look at jQuery, people just love this because JavaScript is hard and they don't have to deal with it…the tool shields them from that. Another example is ORM….people hate writing queries and just want to create some classes and then some tool will spit out all the CRUD code for them. Sometimes these tools produce some bad SQL and it takes a effort to figure out why your calls to the DB are suddenly slow
+Of course the future is that people will rely more and more on frameworks and wizards, this could be bad if you need to fix something in your code. Take a look at jQuery, people just love this because JavaScript is hard and they don't have to deal with it...the tool shields them from that. Another example is ORM....people hate writing queries and just want to create some classes and then some tool will spit out all the CRUD code for them. Sometimes these tools produce some bad SQL and it takes a effort to figure out why your calls to the DB are suddenly slow
 
-Enough ranting for the day….
+Enough ranting for the day....
   
 What do you think is it inexcusable that a programmer does not know that you can flip a sign by doing the following
 

@@ -1,5 +1,5 @@
 ---
-title: 'You’re Invited to T-SQL Tuesday #67: Extended Events'
+title: "You're Invited to T-SQL Tuesday #67: Extended Events"
 author: Jes Borland
 type: post
 date: 2015-06-02T14:36:44+00:00
@@ -39,8 +39,8 @@ In the post title, include “T-SQL Tuesday #67″.
   
 Tweet your blog post with the hash tag #tsql2sday.
   
-Consider hosting in the future, and contact Adam if you’re interested.
+Consider hosting in the future, and contact Adam if you're interested.
 
-I’ll be reading through all the blog posts and posting a round-up. I can’t wait to read your experiences with and your questions about Extended Events!
+I'll be reading through all the blog posts and posting a round-up. I can't wait to read your experiences with and your questions about Extended Events!
 
 (Want to know what past topics have been? Huge thanks to Steve Jones for keeping the list <a href="https://voiceofthedba.wordpress.com/2014/11/10/t-sql-tuesday-topics-december-2012-update/" target="_blank">here</a>!)

@@ -30,6 +30,6 @@ All job changes come with a certain amount of disconnect while the adjustments a
 
 I look forward to the future and sharing everything it has with the community.
 
-Personal thanks go out to my future new coworkers Aaron Lowe and Wendy Patrick. I can’t wait to get the SQL Saturday in Chicago crew back together now in roles where we can take over the data architecture world!
+Personal thanks go out to my future new coworkers Aaron Lowe and Wendy Patrick. I can't wait to get the SQL Saturday in Chicago crew back together now in roles where we can take over the data architecture world!
 
  [1]: http://www.magenic.com/

@@ -1,5 +1,5 @@
 ---
-title: (Very) Poor Man’s Infinite Scroll using angular-inview
+title: (Very) Poor Man's Infinite Scroll using angular-inview
 author: Alex Ullrich
 type: post
 date: 2015-03-09T16:12:37+00:00

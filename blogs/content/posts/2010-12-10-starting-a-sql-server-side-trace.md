@@ -17,7 +17,7 @@ tags:
   - sql server profiler
 
 ---
-Stop me if you've heard this one…a programmer walks up to a DBA and says, “The database is slow.” 
+Stop me if you've heard this one...a programmer walks up to a DBA and says, “The database is slow.” 
 
 One of the many performance tuning and troubleshooting tools in the SQL Server DBA toolbelt is Profiler. You pick events you want to see, set up a trace, and watch the events roll by. The problem is that this graphical tool, especially when run from a workstation, can place a heavy load on the server. 
 
@@ -31,7 +31,7 @@ First, set up the trace using SQL Server Profiler, preferably against a developm
   <img src="/wp-content/uploads/users/grrlgeek/ProfilerPropertiesGeneral.JPG" alt="" title="" width="886" height="641" />
 </div>
 
-Next, go to Events Selection and check your events. I’ve chosen a standard template for this test. 
+Next, go to Events Selection and check your events. I've chosen a standard template for this test. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/users/grrlgeek/ProfilerPropertiesEvents.JPG" alt="" title="" width="888" height="641" />
@@ -55,13 +55,13 @@ Now, open the .sql file in SQL Server Management Studio. It will look similar to
 
 On line 19, you will need to specify where to save the output files. This might be a location on the server, or a share drive on your network. 
 
-Once those settings have been chosen, verify that you are connected to the correct server and Execute. Ta-da! You’ve just started a server-side trace. 
+Once those settings have been chosen, verify that you are connected to the correct server and Execute. Ta-da! You've just started a server-side trace. 
 
 **Stopping the Server-Side Trace** 
 
 Eventually, you will probably want to stop this trace. Collecting an infinite amount of data may sound fun, but there won't be any value in it. 
 
-First, you’ll need the trace ID. 
+First, you'll need the trace ID. 
 
 sql
 SELECT * FROM :: fn_trace_getinfo(default)

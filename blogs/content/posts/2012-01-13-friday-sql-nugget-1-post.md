@@ -5,7 +5,7 @@ type: post
 date: 2012-01-13T17:03:00+00:00
 ID: 1489
 excerpt: |
-  I was tagged by Ted Krueger in his Friday SQL Nugget #1 post. This Friday’s nugget is: Deciding I need to delete it all and start over again.
+  I was tagged by Ted Krueger in his Friday SQL Nugget #1 post. This Friday's nugget is: Deciding I need to delete it all and start over again.
   
   
   Since programmers are lazy, they usually prefer to make changes to existing tables/packages/stored procedu&hellip;
@@ -21,13 +21,13 @@ tags:
   - starting over
 
 ---
-I was tagged by Ted Krueger in his [Friday SQL Nugget #1][1] post. This Friday’s nugget is: Deciding I need to delete it all and start over again.
+I was tagged by Ted Krueger in his [Friday SQL Nugget #1][1] post. This Friday's nugget is: Deciding I need to delete it all and start over again.
 
-Since programmers are lazy, they usually prefer to make changes to existing tables/packages/stored procedures to make something fit in instead of starting from scratch. This makes sense usually because the change is small and you don't have to test that much. But then another changes comes along…and another…and another…and before you know it, you have created a patched up solution with so many band-aids that you better be standing close by with that mop to clean up all the leaks
+Since programmers are lazy, they usually prefer to make changes to existing tables/packages/stored procedures to make something fit in instead of starting from scratch. This makes sense usually because the change is small and you don't have to test that much. But then another changes comes along...and another...and another...and before you know it, you have created a patched up solution with so many band-aids that you better be standing close by with that mop to clean up all the leaks
 
 Another reason that this happen is that you inherit someone else's code and you are not quite sure how it all works, you add something to it, you didn't break functionality and you are happy. There is no ROI on reinventing the wheel and the business people will ask you why you are doing just that when all they want is a small change, these people don't understand what is involved with programming, not everything is a silo
 
-I am guilty of patching things as well, this is usually done because of time constraints. When you redesign something, you start with a clean slate, there is nothing that holds you back because you have something that needs to be in a certain table or format…this is what views are for 🙂
+I am guilty of patching things as well, this is usually done because of time constraints. When you redesign something, you start with a clean slate, there is nothing that holds you back because you have something that needs to be in a certain table or format...this is what views are for 🙂
 
 When I redesigned our current web reporting functionality, it was about 1000% faster, no code changes were needed from the applications because I created views that had the same name as the old tables.
 

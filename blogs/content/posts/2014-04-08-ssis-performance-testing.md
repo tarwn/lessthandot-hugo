@@ -20,7 +20,7 @@ tags:
   - tuning
 
 ---
-I had to do some performance testing for an upcoming [MSSQLTips][1] article and I thought I’d share the framework I used in a blog post.
+I had to do some performance testing for an upcoming [MSSQLTips][1] article and I thought I'd share the framework I used in a blog post.
 
 First of all we have to log start and end dates of the package to a table so we can easily calculate the duration a package took to finish. This can probably be calculated from the SSIS catalog as well, but I was a bit too <del>busy</del> lazy to find out how to do this. Anyway, the logging table is created using the following statement:
 
@@ -94,7 +94,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id;
 GO
 ```
 
-The proc passes the @RunID parameter to the package, as well as other usual suspects, such as the package name, folder name and project name. You can also choose if a package is run synchronously or asynchronously. When run synchronously, the stored procedure doesn’t finish until the package is finished as well.
+The proc passes the @RunID parameter to the package, as well as other usual suspects, such as the package name, folder name and project name. You can also choose if a package is run synchronously or asynchronously. When run synchronously, the stored procedure doesn't finish until the package is finished as well.
 
 Using this stored procedure, it is easy to run a package multiple times in a row using a WHILE loop.
 

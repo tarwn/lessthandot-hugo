@@ -18,7 +18,7 @@ categories:
 ---
 ## _Part 1_
 
-In the first part to this article we went over setting up the lab to show exactly how to perform a migration of databases to a new server with limited downtime. If you haven’t read the first part, you can find it [here][1]. Together we went over how to create a mirror and prepare a test lab for utilizing this method. If you already have a mirror in your test or development landscape then you can use that for the follow up. If you need a test lab setup, part 1 will get you in the position to go through all the steps that will follow.
+In the first part to this article we went over setting up the lab to show exactly how to perform a migration of databases to a new server with limited downtime. If you haven't read the first part, you can find it [here][1]. Together we went over how to create a mirror and prepare a test lab for utilizing this method. If you already have a mirror in your test or development landscape then you can use that for the follow up. If you need a test lab setup, part 1 will get you in the position to go through all the steps that will follow.
 
 ## _The Migration_
 
@@ -94,13 +94,13 @@ ALTER DATABASE [NEEDTOMOVE] SET SAFETY OFF
 --5 + 6
 EXEC sys.sp_dbmmonitoraddmonitoring
 ```
-You may notice that my endpoint in the script has a change to the name from Mirroring to Mirroring_Migration. This is due to my local installations and the configuration not accepting the same name of Mirroring while bringing mirroring up on the new instance. I’m still investigating this problem in my test lab but would very much like to hear from others if they have had this scenario in their own labs with multiple instances side-by-side.
+You may notice that my endpoint in the script has a change to the name from Mirroring to Mirroring_Migration. This is due to my local installations and the configuration not accepting the same name of Mirroring while bringing mirroring up on the new instance. I'm still investigating this problem in my test lab but would very much like to hear from others if they have had this scenario in their own labs with multiple instances side-by-side.
 
 We now have mirroring going from our old production server to our new production server successfully. During that process there was a brief time where the failover process was vulnerable but as you can see the time lines are short and acceptable in migration steps in most scenarios. 
 
-## _Wrapping it up…_
+## _Wrapping it up..._
 
-There is only one step that remains in our migration of the database to our new server. We need to fail the mirror over and typically this requires the applications that are using the data source to either be restarted or require a time with no activity on the databases. More often than not, the applications you have on site are all going to have different configurations and needs when a data source is altered. Some will be affected by IP changes, server name changes, services changing etc… All of the things identified in the applications that need to be configured should be weighed heavily before actually doing the failover to the new server. Once all of these are carefully planned out the actually failover is quick and painless from the database side. 
+There is only one step that remains in our migration of the database to our new server. We need to fail the mirror over and typically this requires the applications that are using the data source to either be restarted or require a time with no activity on the databases. More often than not, the applications you have on site are all going to have different configurations and needs when a data source is altered. Some will be affected by IP changes, server name changes, services changing etc... All of the things identified in the applications that need to be configured should be weighed heavily before actually doing the failover to the new server. Once all of these are carefully planned out the actually failover is quick and painless from the database side. 
 
 The failover can be accomplished by means of SSMS or a statement executed on the principle database server. 
 
@@ -126,6 +126,6 @@ GO
 ```
 This is followed by any configuration you may need to reset applications for the users to point to our new database server.
 
-Once all of this is accomplished you do have a choice or retaining the old hardware as the mirror but configurations should be altered to act as a primary mirror. If you retire the old server completely, setting up the new mirror is the same as we’ve done in this test case.
+Once all of this is accomplished you do have a choice or retaining the old hardware as the mirror but configurations should be altered to act as a primary mirror. If you retire the old server completely, setting up the new mirror is the same as we've done in this test case.
 
  [1]: /index.php/DataMgmt/DBAdmin/move-databases-to-new-server-with-little-1

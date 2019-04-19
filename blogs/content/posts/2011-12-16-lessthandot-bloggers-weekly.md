@@ -5,9 +5,9 @@ type: post
 date: 2011-12-16T16:39:00+00:00
 ID: 1446
 excerpt: |
-  This week was an active week for the bloggers on LessThanDot.  Here is a recap on everyone’s contributions.
+  This week was an active week for the bloggers on LessThanDot.  Here is a recap on everyone's contributions.
   Week 12/11 – 12/15
-  Saturday started with Denis Gobo continuing an excellent series titled, “SQL Advent 2011”.  This week’s daily blogs for Deni&hellip;
+  Saturday started with Denis Gobo continuing an excellent series titled, “SQL Advent 2011”.  This week's daily blogs for Deni&hellip;
 url: /index.php/itprofessionals/professionaldevelopment/lessthandot-bloggers-weekly/
 views:
   - 3073
@@ -17,11 +17,11 @@ categories:
   - Professional Development
 
 ---
-This week was an active week for the bloggers on LessThanDot.  Here is a recap on everyone’s contributions.
+This week was an active week for the bloggers on LessThanDot.  Here is a recap on everyone's contributions.
 
 **Week 12/11 – 12/15**
 
-Saturday started with [Denis Gobo][1] continuing an excellent series titled, “SQL Advent 2011”.  This week’s daily blogs for Denis’s series were
+Saturday started with [Denis Gobo][1] continuing an excellent series titled, “SQL Advent 2011”.  This week's daily blogs for Denis's series were
 
 [SQL Advent 2011 Day 15: Joins][2]
 
@@ -39,7 +39,7 @@ DDL Triggers you say?  I can have a trigger on my database for catching events 
 
 [SQL Advent 2011 Day 12: Table Value Constructor][5]
 
-Ah, the TVC.  How I learned to love thee.  Really, out of everything became useful immediately and was a welcome enhancement.  Remember those old Classic ASP days where you’d build a really long and nasty string with hundreds of “INSERT INTO….”  Well, thankfully, this was a great addition to SQL Server.
+Ah, the TVC.  How I learned to love thee.  Really, out of everything became useful immediately and was a welcome enhancement.  Remember those old Classic ASP days where you'd build a really long and nasty string with hundreds of “INSERT INTO....”  Well, thankfully, this was a great addition to SQL Server.
 
 [SQL Advent 2011 Day 11: DML statements with the OUTPUT clause][6]
 
@@ -55,9 +55,9 @@ Jes Borland added to the week starting off with the monthly T-SQL Tuesday post.�
 
 [#meme15: I'm A Blogger. Why?][8]
 
-This was a new monthly posting that Jason Strate started up and Jes joined in.  The topic this month was, why you blog and continue to blog.  I’m happy to read Jes’s post on this.  Although she hints that it was me that helped her get into blogging, we’re really the lucky ones on LessThanDot to have her here.
+This was a new monthly posting that Jason Strate started up and Jes joined in.  The topic this month was, why you blog and continue to blog.  I'm happy to read Jes's post on this.  Although she hints that it was me that helped her get into blogging, we're really the lucky ones on LessThanDot to have her here.
 
-Jes got a last minute, [Friday post in for us][9].  This post is on a professional development side of the fence.  Jes recently went into consulting for the first time in her career and these are some high points of what she has learned so far.  Yes, consulting isn’t like your everyday fulltime job.
+Jes got a last minute, [Friday post in for us][9].  This post is on a professional development side of the fence.  Jes recently went into consulting for the first time in her career and these are some high points of what she has learned so far.  Yes, consulting isn't like your everyday fulltime job.
 
   * Ask a Million Questions. Then Ask One More. 
   * Depend on Your Network 
@@ -87,7 +87,7 @@ I contributed this week with topics on Replication, Orphaned Database Users, SSI
 
 #### [George Mastros][16]
 
-blogged this week about **[Zero-One-Some Testing][17]**. George goes over this method of testing extremely well.  One line I’d like to point out that I think makes the most impact and value from George’s blog is, ****
+blogged this week about **[Zero-One-Some Testing][17]**. George goes over this method of testing extremely well.  One line I'd like to point out that I think makes the most impact and value from George's blog is, ****
 
 _“Tests for zero records seem to uncover missing requirements or defects in code involving aggregations or in places where programmers assume that there will simply be data (perhaps because their test database already has data in it).”_ __
 
@@ -97,7 +97,7 @@ Need I say more?  I recommend reading this blog highly and following the direct
 
 #### [Eli Weinstock-Herman][18]
 
-blogged this week about using the Continuous Delivery Model for his home lab.   Eli shows us the setup that is planned and a “next steps” preview.  I’m looking forward to this mostly because if Eli is doing it, it means I will probably want to pay attention and follow suite in my own labs at home.
+blogged this week about using the Continuous Delivery Model for his home lab.   Eli shows us the setup that is planned and a “next steps” preview.  I'm looking forward to this mostly because if Eli is doing it, it means I will probably want to pay attention and follow suite in my own labs at home.
 
 One part that sticks out on the concept and reasoning for why you would want to stick to this model
 
@@ -109,11 +109,11 @@ Eli follows that blog up with [Continuous Delivery Project – Making MVCMusicSt
 
 **Milestones on LessThanDot** 
 
-Denis Gobo and Christiaan Baes went over 400 blog posts a while ago.  400!  That is remarkable and a great accomplishment.  I feel like I’ve been writing forever myself and I’m nowhere near that level.
+Denis Gobo and Christiaan Baes went over 400 blog posts a while ago.  400!  That is remarkable and a great accomplishment.  I feel like I've been writing forever myself and I'm nowhere near that level.
 
-Jes Borland is over the 50 posts hump.  It’s all uphill from here!
+Jes Borland is over the 50 posts hump.  It's all uphill from here!
 
-As always, thank you to the LessThanDot bloggers for your contributions.  The site has evolved into a highly respected resource on the web and it’s great to see it building.
+As always, thank you to the LessThanDot bloggers for your contributions.  The site has evolved into a highly respected resource on the web and it's great to see it building.
 
  [1]: /index.php/All/?disp=authdir&author=420
  [2]: /index.php/All/?p=1545 "SQL Advent 2011 Day 15: Joins"

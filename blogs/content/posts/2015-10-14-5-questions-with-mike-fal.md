@@ -15,7 +15,7 @@ categories:
 ---
 Today, let me introduce you to Mike Fal (<a href="http://www.mikefal.net/" target="_blank">blog </a>| <a href="https://twitter.com/Mike_Fal" target="_blank">twitter </a>| <a href="https://www.linkedin.com/pub/michael-fal/13/b70/b97" target="_blank">linkedin</a>). His blog header says a lot about him – it shows a pile of SQL books and a trombone – but it isn't everything. First, it can't show his sense of humor, or love of a good beer. Second, it doesn't convey that he's one of the smartest and most helpful PowerShell users I know. Mike even has <a href="https://github.com/mikefal" target="_blank">his own GitHub repository of helpful POSH scripts</a>!
 
-Let's chat with Mike…
+Let's chat with Mike...
 
 ### Mike, what's your job title, and what does that mean? What do you _do_ every day?
 
@@ -45,4 +45,4 @@ Because it's awesome! 300 days plus of sunshine is a great start, making it an o
 
 * * *
 
-Well, what do you know…I have a tattoo inspired by Dune (the Litany Against Fear), and I definitely want to move to Colorado! Make sure you say hi to Mike when you see him at a user group, SQL Saturday, conference, or Zing The Great Big Band Performance!
+Well, what do you know...I have a tattoo inspired by Dune (the Litany Against Fear), and I definitely want to move to Colorado! Make sure you say hi to Mike when you see him at a user group, SQL Saturday, conference, or Zing The Great Big Band Performance!

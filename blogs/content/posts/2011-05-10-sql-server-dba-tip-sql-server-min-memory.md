@@ -22,7 +22,7 @@ Tip 11 of this series is being added in as the topic has come up during the seri
   <a href="/wp-content/uploads/blogs/DataMgmt/-55.png?mtime=1304943624"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-55.png?mtime=1304943624" width="93" height="92" align="left" /></a>
 </div>
 
-There really isn’t an answer to this question other than: the minimum memory value should always be set given the physical resources.  We’ve discussed the importance of setting the [MAX Memory value][1].  Today we are going to go over the MIN Memory value. 
+There really isn't an answer to this question other than: the minimum memory value should always be set given the physical resources.  We've discussed the importance of setting the [MAX Memory value][1].  Today we are going to go over the MIN Memory value. 
 
 **What does the MIN Memory setting do?**
 

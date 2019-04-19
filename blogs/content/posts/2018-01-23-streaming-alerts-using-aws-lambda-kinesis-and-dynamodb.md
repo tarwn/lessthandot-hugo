@@ -186,7 +186,7 @@ module.exports.streamProcessor = (kinesisEvent, context, callback) => {
     const eventGroups = helper.groupEventsByClient(events);
 
     Promise.all(eventGroups.map((group) => evaluateAndStore(group)))
-    // …
+    // ...
     .then((nestedAlerts) => {
         var alerts = flatten(nestedAlerts);
 
@@ -195,7 +195,7 @@ module.exports.streamProcessor = (kinesisEvent, context, callback) => {
         });
         return Promise.all(publishAlerts);
     })
-    // …
+    // ...
 };
 
 function evaluateAndStore(eventGroup){
@@ -242,7 +242,7 @@ function evaluateAndStore(eventGroup){
     </h2>
     
     <p>
-      This proved out the big question I had, and maybe helped some folks with running Kinesis functions locally (previous post), so I'm calling it a win. If I were building this for production, the next steps would be to continue making the rules richer, figure out how to age data out of the result set I'm storing in DynamoDB, and start building an interface that would allow you to create and store a rule on your own. Another big question would be whether I also need some sort of regular event (second? Minute) to re-evaluate rules for data to fall off or for queries that want to rely on the continued state of a value without needing new events to come in and restart it (the machine is still running, still running, still running…).
+      This proved out the big question I had, and maybe helped some folks with running Kinesis functions locally (previous post), so I'm calling it a win. If I were building this for production, the next steps would be to continue making the rules richer, figure out how to age data out of the result set I'm storing in DynamoDB, and start building an interface that would allow you to create and store a rule on your own. Another big question would be whether I also need some sort of regular event (second? Minute) to re-evaluate rules for data to fall off or for queries that want to rely on the continued state of a value without needing new events to come in and restart it (the machine is still running, still running, still running...).
     </p>
 
  [1]: https://spark.apache.org/

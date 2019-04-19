@@ -31,7 +31,7 @@ When I went down this path, I decided it had to be a realistic. The API side had
   </p>
 </div>
 
-I drop a file in my Dropbox folder, it’s picked up and processed into a similarly named JSON blob, a “latest” JSON blob, and an entry in the “list” of archived entries, all in Azure Storage from the original CSV file within 15 seconds or less. API Management then serves as a gateway to give me rate-limited, documented, etc, etc access to those pre-generated JSON responses.
+I drop a file in my Dropbox folder, it's picked up and processed into a similarly named JSON blob, a “latest” JSON blob, and an entry in the “list” of archived entries, all in Azure Storage from the original CSV file within 15 seconds or less. API Management then serves as a gateway to give me rate-limited, documented, etc, etc access to those pre-generated JSON responses.
 
 ### Tools and Services
 
@@ -139,7 +139,7 @@ And dive into details like response times around the world for specific date ran
   <a href="/wp-content/uploads/2016/11/CSVaaS_Analytics.jpg"><img src="/wp-content/uploads/2016/11/CSVaaS_Analytics.jpg" alt="Response Analytics for Geography by Date Rage, Operation, ..." width="800" height="319" class="size-full wp-image-4878" srcset="/wp-content/uploads/2016/11/CSVaaS_Analytics.jpg 800w, /wp-content/uploads/2016/11/CSVaaS_Analytics-300x119.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
-    Response Analytics for Geography by Date Rage, Operation, …
+    Response Analytics for Geography by Date Rage, Operation, ...
   </p>
 </div>
 

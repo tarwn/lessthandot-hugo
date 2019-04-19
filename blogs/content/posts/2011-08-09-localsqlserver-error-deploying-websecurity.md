@@ -1,10 +1,10 @@
 ---
-title: ‘LocalSqlServer’ Error Deploying WebSecurity in WebMatrix/Web Pages
+title: "'LocalSqlServer' Error Deploying WebSecurity in WebMatrix/Web Pages"
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2011-08-09T10:52:00+00:00
 ID: 1282
-excerpt: "Several weeks ago I was working on a sample site in Web Matrix and ran into a brick wall when I attempted to implement WebSecurity against my website. It seemed no matter what I tried I was getting errors about my database, errors about a database I didn't know about, errors trying to deploy the config file at all."
+excerpt: Several weeks ago I was working on a sample site in Web Matrix and ran into a brick wall when I attempted to implement WebSecurity against my website. It seemed no matter what I tried I was getting errors about my database, errors about a database I didn't know about, errors trying to deploy the config file at all.
 url: /index.php/webdev/serverprogramming/localsqlserver-error-deploying-websecurity/
 views:
   - 4693

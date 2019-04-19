@@ -30,11 +30,11 @@ When you go to make a backup of a database in standby, you will be presented wit
   
 
   
-In the state the database is in, you will not be able to use normal methods to get this task done. Depending on the restore rate you have for LS, you could also break the LS stream and in the worst case scenario, cause you to reinitialize the entire LS plan. I’d like to show you a quick and easy solution to that though. 
+In the state the database is in, you will not be able to use normal methods to get this task done. Depending on the restore rate you have for LS, you could also break the LS stream and in the worst case scenario, cause you to reinitialize the entire LS plan. I'd like to show you a quick and easy solution to that though. 
 
 > Note: This method is the quickest way I have found. As always with my work, I am open to others knowing better and more efficient methods. There is a break point below in the copy. It is a good idea to disable you LS plan while you perform this to prevent failed restore job. 
 
-Let’s setup a test database to play with. We’ll create, backup and restore to standby…
+Let's setup a test database to play with. We'll create, backup and restore to standby...
   
 
 
@@ -52,7 +52,7 @@ GO
 
 We should now have, “bah (Standby /Read-Only) listed in our database tree.
 
-The regular Copy Database with either detaching or SMO is not ideal for us at this point. We can however take this database offline, grab the mdf, ndf’s and ldf’s to bring to the other instance we want to restore them to. 
+The regular Copy Database with either detaching or SMO is not ideal for us at this point. We can however take this database offline, grab the mdf, ndf's and ldf's to bring to the other instance we want to restore them to. 
 
 To do this we perform the following steps
   
@@ -66,7 +66,7 @@ ALTER DATABASE bah SET OFFLINE
 
 Now go to the default folder where the mdf and other files are located and copy/paste them to a local drive. I mentioned local drive because we need to do this as quickly as possible. If there is enough free space locally, it will be the fastest copy transmission. Otherwise at this stage it is crucial to ensure you have disabled the LS plans so no unwanted jobs attempt to access the database while it is offline. 
 
-Once you’ve copied the files off, run the following to bring the database back up
+Once you've copied the files off, run the following to bring the database back up
 
 sql
 USE MASTER

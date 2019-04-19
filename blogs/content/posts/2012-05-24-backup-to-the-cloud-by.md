@@ -84,7 +84,7 @@ On the next page you can now fill the details in for the stuff you picked in the
   <a href="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati07.PNG?mtime=1337909236"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati07.PNG?mtime=1337909236" width="505" height="377" /></a>
 </div>
 
-Backup is running….and it is done
+Backup is running....and it is done
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati08.PNG?mtime=1337909236"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Duplicati/Duplicati08.PNG?mtime=1337909236" width="472" height="412" /></a>

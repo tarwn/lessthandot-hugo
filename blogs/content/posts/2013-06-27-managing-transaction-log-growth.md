@@ -21,7 +21,7 @@ With almost all databases running on SQL Server, at some point there will be a n
 
 For over a decade now, one of the most commonly answered questions on the community forums and all around is, “My transaction log grew out of control and I need to reclaim my disk space.  How do I prevent this?”
 
-First, this falls under the concept that most have that SQL Server has a memory leak.  No, there isn’t a memory leak in SQL Server.  It is all your fault why SQL Server processes consume all the memory on a server due to not configuring the instances accurately.  With transaction log management, this is the same concept.  While in full recovery model, transactions are required to be logged in order to be in a recoverable state based on the concepts of a full recovery model.  This means that a large batch operation that is not in true bulk load modes, will be logged at a higher rate than normal operations.  With this being known, the transaction log requires attention and management during the process of the tasks that are loading a higher rate of data into or out of a database.
+First, this falls under the concept that most have that SQL Server has a memory leak.  No, there isn't a memory leak in SQL Server.  It is all your fault why SQL Server processes consume all the memory on a server due to not configuring the instances accurately.  With transaction log management, this is the same concept.  While in full recovery model, transactions are required to be logged in order to be in a recoverable state based on the concepts of a full recovery model.  This means that a large batch operation that is not in true bulk load modes, will be logged at a higher rate than normal operations.  With this being known, the transaction log requires attention and management during the process of the tasks that are loading a higher rate of data into or out of a database.
 
 Before looking at a method for doing this, there are several key questions that need to be answered before considering what and how a transaction log will be maintained during the processing.
 
@@ -64,7 +64,7 @@ OPTION (RECOMPILE);
 ```
 
 
-Original query utilized from Glenn Berry’s [diagnostic queries][1] and altered for the needs of this task
+Original query utilized from Glenn Berry's [diagnostic queries][1] and altered for the needs of this task
 
 This query will provide the database, log size, log used in KB and then the log used as a percentage.  To fully baseline the process, utilizing a SQL Agent Job to run every 10 seconds is optimal.  Once the process to archive is completed, the data will allow for a determination of when and how often a transaction log backup will need to occur to maintain the transaction log and prevent unwanted growth.
 

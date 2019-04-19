@@ -31,7 +31,7 @@ I'm assuming you at least have SSRS installed on your PC but preferably you've t
 
 When you run the msi all it does is decompress some rdl's and a .sql script to the typical folder location of “C:Program FilesMicrosoft SQL Server90ToolsPerformanceDashboard”
 
-First thing is you need to put the procedures in the msdb on the instance you want to monitor. Microsoft has the scrip tin the folder you just added name, “setup.sql”. creative huh? Open ths script on the instance and run it. Don't worry because if you are a smart DBA you have a backup of the sys databases ;). Really though all this does is install some MS_PerfDashboard… procedures to the msdb. Yes make your sys backups if you haven't first though. 
+First thing is you need to put the procedures in the msdb on the instance you want to monitor. Microsoft has the scrip tin the folder you just added name, “setup.sql”. creative huh? Open ths script on the instance and run it. Don't worry because if you are a smart DBA you have a backup of the sys databases ;). Really though all this does is install some MS_PerfDashboard... procedures to the msdb. Yes make your sys backups if you haven't first though. 
 
 Now open up VS.NET or BIDS and create a new Report Server Project named “SQL Server DBA”. In the fresh project right click the Reports folder and go to Add, Existing Item.
 

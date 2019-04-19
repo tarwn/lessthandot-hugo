@@ -53,13 +53,13 @@ Late Friday afternoon we received an update from Host4Geeks. Apparently they hav
           
 what I can tell this doesn't fall under natural disasters, DDOS attacks, or planned maintenance, so we'll also be working on getting credits for the service outage. 
 
-## So…ETA?
+## So...ETA?
 
 So where is our server? I'm not entirely sure. We have not been given an ETA on when we can expect to be back online. Obviously this sucks for you, because you were probably trying to get to some very useful content. It sucks for us because we'd like to write some more really useful content. In the meantime, we'll be working on some more content for everyone, considering our hosting options, and we'll update this page as we have more information. 
 
 ## Updated, Server Still MIA, 2013-08-27 9:45PM EDT (28th 1:45AM UTC)
 
-Good news, our host has informed us they recovered some of their servers! Well, not our server, but woohoo! Er…yeah. We have now been down for over 120 hours. We will be back, it's just a question of whether they find our server before they have to offer us free hosting for life or not. We've also been discussing better disaster recovery plans (it's a good thing none of us do that for a living, oh wait…), so on a positive note once we get through this outage we'll be in a better place. And how often can you tell people your server is down because it was migrated to a truck in a dark parking lot somewhere… 
+Good news, our host has informed us they recovered some of their servers! Well, not our server, but woohoo! Er...yeah. We have now been down for over 120 hours. We will be back, it's just a question of whether they find our server before they have to offer us free hosting for life or not. We've also been discussing better disaster recovery plans (it's a good thing none of us do that for a living, oh wait...), so on a positive note once we get through this outage we'll be in a better place. And how often can you tell people your server is down because it was migrated to a truck in a dark parking lot somewhere... 
 
 ## Updated, No SLA, No ETA, 2013-09-03 {#updated}
 

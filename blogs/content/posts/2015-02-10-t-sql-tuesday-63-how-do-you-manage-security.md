@@ -19,15 +19,15 @@ tags:
 
 ---
 <p style="text-align: justify">
-  <a href="http://sqlstudies.com/2015/02/03/tsql-tuesday-63-how-do-you-manage-security/"><img style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2014/01/TSQL2sday.png" alt="TSQL2sday" width="133" height="134" /></a>This month’s T-SQL Tuesday is hosted by Kenneth Fisher (<a href="http://sqlstudies.com/">blog </a>| <a href="https://twitter.com/sqlstudent144">twitter</a>) and its subject is about security.
+  <a href="http://sqlstudies.com/2015/02/03/tsql-tuesday-63-how-do-you-manage-security/"><img style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2014/01/TSQL2sday.png" alt="TSQL2sday" width="133" height="134" /></a>This month's T-SQL Tuesday is hosted by Kenneth Fisher (<a href="http://sqlstudies.com/">blog </a>| <a href="https://twitter.com/sqlstudent144">twitter</a>) and its subject is about security.
 </p>
 
 <p style="text-align: justify">
-  <em>Security is one of those subjects that most DBAs have to deal with regardless of specialty. So as something we all have to work with at some point or another what are some tips you’d like to share? What’s the best security design? You’ve picked up a legacy system and the security is awful, how do you fix it? Any great tools out there you’d like to share? Hate it or love it I’m betting we all have something to say.</em>
+  <em>Security is one of those subjects that most DBAs have to deal with regardless of specialty. So as something we all have to work with at some point or another what are some tips you'd like to share? What's the best security design? You've picked up a legacy system and the security is awful, how do you fix it? Any great tools out there you'd like to share? Hate it or love it I'm betting we all have something to say.</em>
 </p>
 
 <p style="text-align: justify">
-  Now, I’m not exactly a DBA but even ETL developers have to deal with security from time to time. In this blog post, I’d like to talk about the built-in security of the SSIS packages. You see, SSIS packages can store sensitive data inside them, such as the passwords for the connection managers for example. In order to protect that information, SSIS uses <a href="https://msdn.microsoft.com/en-us/library/ms141747.aspx">protection levels</a> which is a package-level property. These are the available protection levels:
+  Now, I'm not exactly a DBA but even ETL developers have to deal with security from time to time. In this blog post, I'd like to talk about the built-in security of the SSIS packages. You see, SSIS packages can store sensitive data inside them, such as the passwords for the connection managers for example. In order to protect that information, SSIS uses <a href="https://msdn.microsoft.com/en-us/library/ms141747.aspx">protection levels</a> which is a package-level property. These are the available protection levels:
 </p>
 
 <ul style="text-align: justify">

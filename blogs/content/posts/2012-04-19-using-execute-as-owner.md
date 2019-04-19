@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2012-04-19T14:35:00+00:00
 ID: 1599
-excerpt: 'It’s very common to come across user-defined modules that are written to execute as the owner.  Not to be confused with the EXECUTE AS, the EXECUTE AS Clause will change the account context that is used to validate if the procedure, function etc… can be&hellip;'
+excerpt: "It's very common to come across user-defined modules that are written to execute as the owner.  Not to be confused with the EXECUTE AS, the EXECUTE AS Clause will change the account context that is used to validate if the procedure, function etc... can be&hellip;"
 url: /index.php/datamgmt/dbadmin/using-execute-as-owner/
 views:
   - 20116
@@ -15,7 +15,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-It’s very common to come across user-defined modules that are written to execute as the owner.  Not to be confused with the EXECUTE AS, the EXECUTE AS Clause will change the account context that is used to validate if the procedure, function etc… can be executed under the credentials.  This can be useful when you want to control permissions to a certain extent.  However, it can also be problematic when certain ownership changes have been made.
+It's very common to come across user-defined modules that are written to execute as the owner.  Not to be confused with the EXECUTE AS, the EXECUTE AS Clause will change the account context that is used to validate if the procedure, function etc... can be executed under the credentials.  This can be useful when you want to control permissions to a certain extent.  However, it can also be problematic when certain ownership changes have been made.
 
 **Troubleshooting Failures** 
 
@@ -25,7 +25,7 @@ One of the most common failures that you will run into when the EXECUTE AS OWNER
 
 First, review the ownership of a database.  If a database is created under sa ownership, the ownership flows to all the objects under it unless specifically changed.  This would allow the EXECUTE AS OWNER to be used freely and execute everything that falls in the confines of the database ownership and sa context.  If the owner is change, possibly during a restore or some other reasoning, the objects that fall under it will fail with the EXECUTE AS OWNER are essentially broken.
 
-Let’s look at an example.  Create the following database
+Let's look at an example.  Create the following database
 
 sql
 CREATE DATABASE [OwnerTest] ON  PRIMARY 
@@ -191,5 +191,5 @@ Go</pre>
 </p>
 
 <p>
-  Using the EXECUTE AS Clause does have value and can allow the ability for modules to be executed with limited needs put into security.  However, it isn’t as secure as creating a solid security setup and schema setup and controlling each object execution under the executing account. It is also prone to some errors when the chain of ownership has been broken.
+  Using the EXECUTE AS Clause does have value and can allow the ability for modules to be executed with limited needs put into security.  However, it isn't as secure as creating a solid security setup and schema setup and controlling each object execution under the executing account. It is also prone to some errors when the chain of ownership has been broken.
 </p>

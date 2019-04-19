@@ -20,13 +20,13 @@ I was working on my resolution post yesterday and was going to post it on my per
   
 I noticed last night on my [twitter][1] feed that [Jason Massie][2] tagged me here:
   
-My list is more a to-do list for the year than a resolution, since I am as perfect as Chrissie1 having a resolution would mean I wasn’t perfect, this clearly isn’t so.
+My list is more a to-do list for the year than a resolution, since I am as perfect as Chrissie1 having a resolution would mean I wasn't perfect, this clearly isn't so.
 
 Here is what I intend to do in 2009
 
 **Reading more books (at least 2 books a month)**
   
-When I commuted to New York City from Princeton I read about 60 books a year. This was easily accomplished because my commute was about an hour each way. Now that I have a 6 minute commute this becomes a little harder. I have three kids under the age of five; two of them just entered their terrible two stage. While they are awake you cannot read because you want to spend some time with them, then there is the wife who doesn’t want to be ignored either. Luckily I don’t watch that much TV a week, maybe 3 hours max. All this leaves me with about 4 or 5 hours to read per week at home. I could read at work during lunch for 30 minutes a day and surf the other 30 minutes. I don’t know yet how this will work out but somehow I hope I can manage it.
+When I commuted to New York City from Princeton I read about 60 books a year. This was easily accomplished because my commute was about an hour each way. Now that I have a 6 minute commute this becomes a little harder. I have three kids under the age of five; two of them just entered their terrible two stage. While they are awake you cannot read because you want to spend some time with them, then there is the wife who doesn't want to be ignored either. Luckily I don't watch that much TV a week, maybe 3 hours max. All this leaves me with about 4 or 5 hours to read per week at home. I could read at work during lunch for 30 minutes a day and surf the other 30 minutes. I don't know yet how this will work out but somehow I hope I can manage it.
 
 **Answering at least 10 questions a day on various sites**
   
@@ -48,7 +48,7 @@ I admit I am not nearly as good in C# as in SQL; this is of course because 90% o
 
 **Finishing the SQL admin hacks** 
   
-This is another thing I just can’t seem to finish, I wrote the [SQL Server Programming Hacks][6] in the first half of this year; I started the [SQL Server Admin Hacks][7] the second half of this year but I am just pushing it off. just like Peter in Office Space I am thinking “Where is the motivation Bob?”
+This is another thing I just can't seem to finish, I wrote the [SQL Server Programming Hacks][6] in the first half of this year; I started the [SQL Server Admin Hacks][7] the second half of this year but I am just pushing it off. just like Peter in Office Space I am thinking “Where is the motivation Bob?”
 
 That is it for me, I will add some personal stuff to this on my [personal blog][8]
 

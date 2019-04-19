@@ -1,5 +1,5 @@
 ---
-title: MVVM Validation with KnockoutJS – Don’t put it in the View/HTML
+title: MVVM Validation with KnockoutJS – Don't put it in the View/HTML
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2016-03-02T18:22:10+00:00

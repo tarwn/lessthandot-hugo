@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2013-01-14T11:27:00+00:00
 ID: 1914
-excerpt: 'Last year, I had the opportunity to contribute to my first book, Pro SQL Server 2012 Practices. This was a huge honor, and the list of my co-authors is remarkable. What we’ve decided to do is each take one chapter, written by someone else, and post a re&hellip;'
+excerpt: "Last year, I had the opportunity to contribute to my first book, Pro SQL Server 2012 Practices. This was a huge honor, and the list of my co-authors is remarkable. What we've decided to do is each take one chapter, written by someone else, and post a re&hellip;"
 url: /index.php/itprofessionals/book-review/book-review-pro-sql-server-1/
 views:
   - 11930
@@ -14,7 +14,7 @@ categories:
   - Book Review
 
 ---
-Last year, I had the opportunity to contribute to my first book, [Pro SQL Server 2012 Practices][1]. This was a huge honor, and the list of my co-authors is remarkable. What we’ve decided to do is each take one chapter, written by someone else, and post a review. I reviewed Jason Strate’s ([blog][2] | [twitter][3]) chapter, “Indexing Outside the Bubble”.
+Last year, I had the opportunity to contribute to my first book, [Pro SQL Server 2012 Practices][1]. This was a huge honor, and the list of my co-authors is remarkable. What we've decided to do is each take one chapter, written by someone else, and post a review. I reviewed Jason Strate's ([blog][2] | [twitter][3]) chapter, “Indexing Outside the Bubble”.
 
 <img style="float: right;" src="http://www.apress.com/media/catalog/product/cache/9/image/9df78eab33525d08d6e5fb8d27136e95/A/9/A9781430247708-3d_1.png" alt="" width="277" height="350" />
 
@@ -30,7 +30,7 @@ When it comes to the business, Jason covers two important points. An index may n
 
 All of these approaches are things I deal with weekly as a consultant. Indexing a database is something that can be easily overlooked, or considered a set-it-and-forget-it strategy. It should not be. A constant cycle of reviewing current index usage and adding new indexes is integral to having a well-performing database and application. This chapter gives you a set of tools to start that cycle.
 
-This chapter is an excellent segue into the book Jason and Ted Krueger wrote about indexes – [Expert Performance Indexing for SQL Server 2012][4]. I’ve been reading this for the last couple of months and it’s proved invaluable in my day-to-day work.
+This chapter is an excellent segue into the book Jason and Ted Krueger wrote about indexes – [Expert Performance Indexing for SQL Server 2012][4]. I've been reading this for the last couple of months and it's proved invaluable in my day-to-day work.
 
 Make sure you check out Pro SQL Server 2012 Practices today!
 

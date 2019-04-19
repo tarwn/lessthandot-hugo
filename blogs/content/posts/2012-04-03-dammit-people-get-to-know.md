@@ -25,7 +25,7 @@ tags:
   - trick
 
 ---
-A couple of months back we were interviewing people for 2 positions, one of the questions I like to ask is the following: If you have a column in a table that's an integer data type how can you restrict the values to be between 1 and 10? Most of the people start by saying that they restrict it in the application, when I ask how they would prevent from someone who has write access to do it they usually say that they would add a trigger. Only about 20% of the people know that there is something in the table designer where they can enter a range. Between 5 and 10% of the people know that this is called a **check constraint**. If you know what a check constraint is…bravo, you my friend are an elitist!
+A couple of months back we were interviewing people for 2 positions, one of the questions I like to ask is the following: If you have a column in a table that's an integer data type how can you restrict the values to be between 1 and 10? Most of the people start by saying that they restrict it in the application, when I ask how they would prevent from someone who has write access to do it they usually say that they would add a trigger. Only about 20% of the people know that there is something in the table designer where they can enter a range. Between 5 and 10% of the people know that this is called a **check constraint**. If you know what a check constraint is...bravo, you my friend are an elitist!
 
 I forgot about these interviews but this question [Overriding the maximum value of a bigint datatype in MSSQL][1] made it reappear like a phoenix that rises from the ashes.
 
@@ -46,7 +46,7 @@ check (code like '[a-Z][a-Z][a-Z]' )
 GO
 ```
 
-If you now run the following insert statement….
+If you now run the following insert statement....
 
 sql
 insert SomeTable values ('123')
