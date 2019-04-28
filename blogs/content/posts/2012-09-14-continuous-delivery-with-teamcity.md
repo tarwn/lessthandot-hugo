@@ -35,7 +35,7 @@ The build pipeline is the process the code goes through from committing the code
 The current Jenkins build pipeline looks like this (plus lots of static analysis that doesn't fit in the picture):
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/pipeline_load.png" title="Continuous Delivery Pipeline with Load Test Step" /><br /> Continuous Delivery Pipeline with Load Test Step
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/pipeline_load.png" title="Continuous Delivery Pipeline with Load Test Step" /><br /> Continuous Delivery Pipeline with Load Test Step
 </div>
 
 These are the portion I intend to do in TeamCity:
@@ -83,31 +83,31 @@ The CI project is probably the most complex one due to the number of steps and f
 The project serves as the container for the builds, creating one only requires a name and optional description:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_01.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_01_sm.png" alt="TeamCity - Project Setup" /><br /> </a><br /> Team City – Project Setup
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_01.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_01_sm.png" alt="TeamCity - Project Setup" /><br /> </a><br /> Team City – Project Setup
 </div>
 
 Once the project is named, I can add my first build step (don't worry, I'll only do these screen shots one time):
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_02.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_02_sm.png" alt="TeamCity - Ready to add builds" /><br /> </a><br /> Team City – Ready to add builds
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_02.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_02_sm.png" alt="TeamCity - Ready to add builds" /><br /> </a><br /> Team City – Ready to add builds
 </div>
 
 Here I'll name the build step and define the artifacts I want to store for later use, including the deployment package I intend to make and the folder of environment-specific configurations.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_03.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_03_sm.png" alt="TeamCity - Adding a Build" /><br /> </a><br /> Team City – Adding a Build
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_03.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_03_sm.png" alt="TeamCity - Adding a Build" /><br /> </a><br /> Team City – Adding a Build
 </div>
 
 Next is the settings for the main site code repository. To create VCS settings for the build we need to create the VCS root (which includes the polling settings) then define the settings that are specific to this build. 
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_04.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_04_sm.png" alt="TeamCity - Defining Version Control" /><br /> </a><br /> Team City – Defining Version Control
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_04.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_04_sm.png" alt="TeamCity - Defining Version Control" /><br /> </a><br /> Team City – Defining Version Control
 </div>
 
 At this point I can start adding my build steps. These build steps will duplicate the ones I used in Jenkins. An advantage over the Jenkins setup is that the MSBuild runner already has versions configured and there is a built-in MSTest runner. When entering the command-line calls I used in Jenkins, I'll substitute in TeamCity variables using the small  ![Popup icon][2]image next to the inputs.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_05.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_05_sm.png" alt="TeamCity - Build Steps" /><br /> </a><br /> Team City – Build Steps
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_05.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_05_sm.png" alt="TeamCity - Build Steps" /><br /> </a><br /> Team City – Build Steps
 </div>
 
 Below the build steps I have used the report processing feature to process the results of the smoke test script ([original post here][3]), which outputs in JUnit format. TeamCity will automatically collect the results from the MSTest step and this step and make them available in the summary and run details.
@@ -115,19 +115,19 @@ Below the build steps I have used the report processing feature to process the r
 The second to last steps is to setup a build trigger to run on VCS changes, which is a couple clicks and extremely straightforward.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_06.png" alt="TeamCity - Adding a Trigger" /><br /> Team City – Adding a Trigger
+  <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_06.png" alt="TeamCity - Adding a Trigger" /><br /> Team City – Adding a Trigger
 </div>
 
 Then the last step is to define the build parameters. TeamCity automatically detected the extra unrecognized parameters from my command-line build steps and has added them to the list of build configurations, which I thought was pretty slick. To make it even better, I can reference these parameters from later builds to reduce the number of places I need to define unique settings.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_07.png" alt="TeamCity - Build Parameters" /><br /> Team City – Build Parameters
+  <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_07.png" alt="TeamCity - Build Parameters" /><br /> Team City – Build Parameters
 </div>
 
 Once I have finished setting up this build, I can return to the main dashboard and run it on demand by pressing the “Run” button.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_08.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_08_sm.png" alt="TeamCity - Dashboard" /><br /> </a><br /> Team City – Dashboard
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_08.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_08_sm.png" alt="TeamCity - Dashboard" /><br /> </a><br /> Team City – Dashboard
 </div>
 
 And we have the first build stage done.
@@ -137,19 +137,19 @@ And we have the first build stage done.
 The interface testing build ([original post here][4]) is only a few steps. The first few stages of this build are the same, I create the build, define a VCS root that points to the Interface testing project on BitBucket, then add the build steps. I use an MSBuild step to build the automated interface test project (SpecFlow, Nunit, Selenium), command-line steps to call MSDeploy and the smoke test script, copy in the automated test settings for the tests, then use the built-in Nunit test runner to run the automated test assembly.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_09.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_09_sm.png" alt="TeamCity - Interface Test Build" /><br /> </a><br /> Team City – Interface Test Build
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_09.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_09_sm.png" alt="TeamCity - Interface Test Build" /><br /> </a><br /> Team City – Interface Test Build
 </div>
 
 Skipping ahead to the Dependencies section, I'll add a snapshot dependency on the CI stage so that builds of the Interface stage use snapshots from the same point in time as it's linked CI build. I'll also add an artifact dependency to pull all of the artifacts from the CI build into a local folder named PriorArtifacts, keeping with the pattern I used in the Jenkins build. 
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_10.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_10_sm.png" alt="TeamCity - Dependencies" /><br /> </a><br /> Team City – Dependencies
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_10.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_10_sm.png" alt="TeamCity - Dependencies" /><br /> </a><br /> Team City – Dependencies
 </div>
 
 Next I add a build trigger to run after a successful build of the CI stage and fill the dependencies with references to the values from the CI Build where I can.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_11.png" alt="TeamCity - Build Parameters" /><br /> Team City – Build Parameters
+  <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_11.png" alt="TeamCity - Build Parameters" /><br /> Team City – Build Parameters
 </div>
 
 And the last step is to return to the project screen and define the Artifacts for this stage as “PriorArtifacts/*” so it will pass on all of the artifacts it pulled in from the prior stage.
@@ -157,7 +157,7 @@ And the last step is to return to the project screen and define the Artifacts fo
 Running this build reminded me that Firefox has a nasty habit of downloading updates when you least want them, as the interface tests started timing out because they couldn't quit. A quick tweak to the Firefox settings and I have a successful interface test step running, with the test results showing in the summary just like the CI stage.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_12.png" alt="TeamCity - Interface Tests" /><br /> Team City – Interface Tests
+  <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_12.png" alt="TeamCity - Interface Tests" /><br /> Team City – Interface Tests
 </div>
 
 Note: The build number for each build allows you to define your own pattern. By setting it to %dep.bt2.build.number%, each of my builds use the build number I created in the CI stage (which is used again in the smoke tests).
@@ -179,13 +179,13 @@ The last two are rinse and repeats. Take the build number and artifact settings,
 Those 5 builds compromise the core of the pipeline and show up in the TeamCity dashboard like so:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_13.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_13_sm.png" alt="TeamCity - Full Dashboard" /><br /> </a><br /> Team City – Full Dashboard
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_13.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_13_sm.png" alt="TeamCity - Full Dashboard" /><br /> </a><br /> Team City – Full Dashboard
 </div>
 
 To get to the build chains view, go into the Project page and click the last tab to the right, titled “Build Chains”.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_14.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_14_sm.png" alt="TeamCity - Build Chains" /><br /> </a><br /> Team City – Build Chains
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_14.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_14_sm.png" alt="TeamCity - Build Chains" /><br /> </a><br /> Team City – Build Chains
 </div>
 
 The summary bar lists the final step and status in the chain, the last step that ran, and the date. Expanding it shows the full chain (though there are some scrolling issues).
@@ -195,7 +195,7 @@ The summary bar lists the final step and status in the chain, the last step that
 This was an interesting project, as I was able to take a fairly complex build and see how it would work in a completely different engine. The addition of a first class pipeline view is probably the biggest item on my wishlist and I look forward to seeing what they do with it in the future. Even without that, though, it was a great tool to use and offered me none of the teething problems I had with several of the Jenkins plugins.
 
  [1]: /index.php/EnterpriseDev/application-lifecycle-management/starting-a-continuous-delivery-project "Starting a Continuous Delivery Project"
- [2]: http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCityPopup.gif
+ [2]: http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCityPopup.gif
  [3]: /index.php/EnterpriseDev/application-lifecycle-management/continuous-delivery-project-deploy-and "Continuous Delivery Project - Deploy and Smoke Test"
  [4]: /index.php/EnterpriseDev/application-lifecycle-management/continuous-delivery-adding-an-automated "
 Continuous Delivery - Adding an Automated Interface Test Stage"

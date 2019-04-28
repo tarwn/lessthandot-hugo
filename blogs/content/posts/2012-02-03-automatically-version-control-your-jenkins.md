@@ -64,19 +64,19 @@ One of the advantages I sold myself on was the hands off nature of the final sol
 First up, I'll create a new job named “Backup Configurations”.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/JenkinsBackups/1.png" title="General Job Settings" /><br /> General Job Settings
+  <img src="http://www.tiernok.com/LTDBlog/JenkinsBackups/1.png" title="General Job Settings" /><br /> General Job Settings
 </div>
 
 I want this to run every night, so I'll setup a trigger to run at 1:30 every night by specifying “Build Periodically” with a setting of “30 1 \* \* *”.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/JenkinsBackups/2.png" title="Build Trigger Settings" /><br /> Build Trigger Settings
+  <img src="http://www.tiernok.com/LTDBlog/JenkinsBackups/2.png" title="Build Trigger Settings" /><br /> Build Trigger Settings
 </div>
 
 And then the last step is to add an “Execute Windows Batch Command” step to my job that executes a similar commit and push to the ones above. Because I am in a subfolder of the repository, I don't have to add in any path commands or other trickery.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/JenkinsBackups/3.png" title="Build Step" /><br /> Build Step
+  <img src="http://www.tiernok.com/LTDBlog/JenkinsBackups/3.png" title="Build Step" /><br /> Build Step
 </div>
 
 Save the job and kick it off once to verify it does indeed work (after making a minor change to a config file, of course) and I can see I have a working, automated backup.

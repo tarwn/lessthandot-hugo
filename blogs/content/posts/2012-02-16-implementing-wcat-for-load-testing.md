@@ -79,7 +79,7 @@ Sign me up.
 To get started I opened Fiddler, opened Chrome, then opened one of the sub-sites on my beta VM. This generated a bunch of traffic (especially with Firefox in the background throwing our requests to Delicious and Facebook). 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/wcat_fiddler_1.png" title="Fiddler Screenshot" /><br /> Fiddler Screenshot
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/wcat_fiddler_1.png" title="Fiddler Screenshot" /><br /> Fiddler Screenshot
 </div>
 
 So I cleared the cache in Chrome and deleted all these entries (select them all, press delete). Clean slate.
@@ -87,7 +87,7 @@ So I cleared the cache in Chrome and deleted all these entries (select them all,
 My load test is going to be a worst case. Every “end user” will visit with a cold cache and buy just a single item. This will give me a good combination of reads, writes, cart processing logic, and authentication. Generating the session information is as easy as following the path I want to test with Fiddler capturing the individual GET and POST requests in the background.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/wcat_fiddler_2.png" title="Fiddler Screenshot" /><br /> Fiddler Screenshot
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/wcat_fiddler_2.png" title="Fiddler Screenshot" /><br /> Fiddler Screenshot
 </div>
 
 After deleting all the irrelevant traffic, like the Tweetdeck calls to twitter, I have a list of GET/POST requests that ended in 200 and 302 statuses. Form the file menu I'll select “Export Sessions”, “All Sessions”. The dialog offers several options for export, but the one I want is the WCAT option as the bottom.
@@ -110,7 +110,7 @@ FiddlerExport.wcat is my scenario file, settings.ubr is my settings file, the -s
 Running this command, the controller opens in one console window, then a second opens as my single client. The default options from the fiddler export are a 30 second warmup period, followed by a 120s test run, and then a 10s cooldown. In other words, just enough time to go top off the coffee cup.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/wcat_controller.png" title="WCAT Controller Screenshot" /><br /> WCAT Controller Screenshot
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/wcat_controller.png" title="WCAT Controller Screenshot" /><br /> WCAT Controller Screenshot
 </div>
 
 The controller stays open with the numbers from the last run and a log.xml file is produced with the results in the current directory. As you can see from the screenshot above, my little single-core, 1GB of RAM VM is managing to serve up ~30 requests/second and it's erroring on just under 1% of the requests. The log file is more accurate, listing decimal places for values that are shown only as rounded ints on the console (that 1 transaction/second is actually 1.9, for instance).

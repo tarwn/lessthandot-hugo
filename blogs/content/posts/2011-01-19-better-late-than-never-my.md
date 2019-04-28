@@ -17,7 +17,7 @@ tags:
 
 ---
 <div style="border: 1px solid #AAAAAA; float: right; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
-  <img src="http://tiernok.com/LTDBlog/01152011484_sm.jpg" alt="Baby Ian - Picture Copyright: Eli, 2011" style="padding-bottom: 5px;" /><br /> Baby Ian
+  <img src="http://www.tiernok.com/LTDBlog/01152011484_sm.jpg" alt="Baby Ian - Picture Copyright: Eli, 2011" style="padding-bottom: 5px;" /><br /> Baby Ian
 </div>
 
 Another year done and another year to look forward to. Last year I focused on the long term, refining an amorphous long term picture into something with a bit more substance. Along the way I began some good habits and succeeded in a number of near term goals. This year the theme is continued development and new beginnings. With the birth of my son on January 14th, my focus will be less on big achievements and more on items I can work on in small chunks of time (possibly at 4AM with one arm otherwise occupied by baby).

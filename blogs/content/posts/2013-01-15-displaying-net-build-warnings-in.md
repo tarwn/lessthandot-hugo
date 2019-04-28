@@ -40,7 +40,7 @@ Since I am using MSBuild, the build warnings have a consistent pattern and MSBui
 Parameter to add to MSBuild: <code class="codespan">/l:FileLogger,Microsoft.Build.Engine;logfile=%BuildLogFilename%</code>
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/MSBuildParameter.png" alt="Adding the MS Build Parameter" style="border: 1px solid #666666;" /><br /> Adding the MS Build Parameter
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/MSBuildParameter.png" alt="Adding the MS Build Parameter" style="border: 1px solid #666666;" /><br /> Adding the MS Build Parameter
 </div>
 
 Each time MSBuild runs, it will log it's output to the specified file. We can use powershell to extract the warnings from the output, like so:
@@ -73,7 +73,7 @@ $warnings | % { Write-Host " * $_" }
 This will output a section at the bottom of the build log that contains our warnings, like so:
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/LogOutput.png" alt="Warnings in the Bottom of a Build Log" style="border: 1px solid #666666;" /><br /> Warnings in the Bottom of a Build Log
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/LogOutput.png" alt="Warnings in the Bottom of a Build Log" style="border: 1px solid #666666;" /><br /> Warnings in the Bottom of a Build Log
 </div>
 
 Which I suppose is fine, but doesn't really add that much value over the ones listed further up the log by MSBuild itself.
@@ -107,19 +107,19 @@ if($RawOutputPath){
 Then I'll configure the project to capture that output file as an artifact:
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/ArtifactConfig_RawOutput.png" alt="Artifact Configuration" style="border: 1px solid #666666;" /><br /> Artifact Configuration
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/ArtifactConfig_RawOutput.png" alt="Artifact Configuration" style="border: 1px solid #666666;" /><br /> Artifact Configuration
 </div>
 
 Et voila, the file shows up in my archived items:
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/Artifact_Display.png" alt="List of archived items from a run" style="border: 1px solid #666666;" /><br /> List of archived items from a run
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/Artifact_Display.png" alt="List of archived items from a run" style="border: 1px solid #666666;" /><br /> List of archived items from a run
 </div>
 
 And I have a clean, archived list of my warnings:
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/Artifact_File.png" alt="Display of archived text file" style="border: 1px solid #666666;" /><br /> Display of archived text file
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/Artifact_File.png" alt="Display of archived text file" style="border: 1px solid #666666;" /><br /> Display of archived text file
 </div>
 
 But, really, we can do better.
@@ -131,7 +131,7 @@ Part of the goal was to be able to see the warning count change with no extra wo
 Before:
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/BuildStatusBefore.png" alt="Build status on dashboard" style="border: 1px solid #666666;" /><br /> Build status on dashboard
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/BuildStatusBefore.png" alt="Build status on dashboard" style="border: 1px solid #666666;" /><br /> Build status on dashboard
 </div>
 
 TeamCity provides support for [setting the build status from a build script][3]. By adding some output to the powershell script, like so:
@@ -143,7 +143,7 @@ Write-Host "##teamcity[buildStatus text='{build.status.text}, Build warnings: $c
 Each successful build will also display the number of warnings that were captured.
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/BuildStatusAfter.png" alt="Build status on dashboard, with warnings" style="border: 1px solid #666666;" /><br /> Build status on dashboard, with warnings
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/BuildStatusAfter.png" alt="Build status on dashboard, with warnings" style="border: 1px solid #666666;" /><br /> Build status on dashboard, with warnings
 </div>
 
 Better, but what about historical values? And I still don't like that text file artifact.
@@ -165,7 +165,7 @@ Adding a [custom chart][5] requires us to dig into the configurations of TeamCit
 This will add a chart to the Statistics tab of the build. After a few builds this is what I have:
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/WarningChart.png" alt="Build Warning Statistics" style="border: 1px solid #666666;" /><br /> Build Warning Statistics
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/WarningChart.png" alt="Build Warning Statistics" style="border: 1px solid #666666;" /><br /> Build Warning Statistics
 </div>
 
 It probably would look better if I hadn't built with the same number of warnings each time, but you get the point. The mouse hover works just like the built-in charts, linking to the run status for the individual point.
@@ -197,7 +197,7 @@ I've added HTML output to the script with a hardcoded output location that ensur
 The next step is to configure the project to capture the folder as an artifact:
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/ArtifactConfig_Report.png" alt="Artifact configuration" style="border: 1px solid #666666;" /><br /> Artifact configuration
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/ArtifactConfig_Report.png" alt="Artifact configuration" style="border: 1px solid #666666;" /><br /> Artifact configuration
 </div>
 
 Then the last step is to modify the TeamCity configuration to recognize that when I output archives like that, I want to treat them as a report. To do this I add the following chunk of XML to my <code class="codespan">[TeamCity data directory]/config/main-config.xml</code> file (per the documentation link above):
@@ -208,7 +208,7 @@ Then the last step is to modify the TeamCity configuration to recognize that whe
 And there we go, the custom report tab is available in the build results:
 
 <div style="text-align: center; font-size: 90%; color: #666666; margin: .5em">
-  <img src="http://tiernok.com/LTDBlog/TeamCityBuildWarnings/WarningsTab.png" alt="Build Warnings tab in Run Results" style="border: 1px solid #666666;" /><br /> Build Warnings tab in Run Results
+  <img src="http://www.tiernok.com/LTDBlog/TeamCityBuildWarnings/WarningsTab.png" alt="Build Warnings tab in Run Results" style="border: 1px solid #666666;" /><br /> Build Warnings tab in Run Results
 </div>
 
 Which takes us from no visibility into our warnings, to five different methods of viewing the information.

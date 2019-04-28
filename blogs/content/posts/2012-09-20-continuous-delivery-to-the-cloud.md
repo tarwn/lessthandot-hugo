@@ -36,25 +36,25 @@ The target of this exercise was to get the project deploying automatically to th
 First up was creating an Azure account, which I did via [WindowsAzure.com][4]. The Web Sites feature is still in Preview mode, so I had to go the preview features and enable it.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-01.png" alt="WindowsAzure.com - Preview Features Option" /><br /> WindowsAzure.com – Preview Features Option
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-01.png" alt="WindowsAzure.com - Preview Features Option" /><br /> WindowsAzure.com – Preview Features Option
 </div>
 
 The Web Sites option is at the bottom and enabled with a button and dialog:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-02.png" alt="WindowsAzure.com - Preview Features" /><br /> WindowsAzure.com – Preview Features
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-02.png" alt="WindowsAzure.com - Preview Features" /><br /> WindowsAzure.com – Preview Features
 </div>
 
 Once it's enabled, I can go into the portal and when I press the “New” button at the bottom, I'll have options to create a new Web Site instance.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-03.png" alt="WindowsAzure.com - New Website" /><br /> WindowsAzure.com – New Website
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-03.png" alt="WindowsAzure.com - New Website" /><br /> WindowsAzure.com – New Website
 </div>
 
 After creating the new site, it will provision and show up in my dashboard:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-04.png" alt="WindowsAzure.com - Dashboard" /><br /> WindowsAzure.com – Dashboard
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-04.png" alt="WindowsAzure.com - Dashboard" /><br /> WindowsAzure.com – Dashboard
 </div>
 
 That's all it takes to have a new Web Site in Windows Azure. Of course it's not doing anything useful at the moment, so lets go back to the build process and fix that.
@@ -68,7 +68,7 @@ In the properties dashboard for the new website above, there is a link to downlo
 I made a copy of my final “Deploy to Production” step and modified the msdeploy step to use a new Param file. The Param file is used during the deployment to set the IIS name and connection strings, you can see all of them on [BitBucket][5]. 
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-05.png" alt="TeamCity Build Steps" /><br /> TeamCity Build Steps
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-05.png" alt="TeamCity Build Steps" /><br /> TeamCity Build Steps
 </div>
 
 **MSDeploy Command (TeamCity version):**
@@ -79,25 +79,25 @@ I made a copy of my final “Deploy to Production” step and modified the msdep
 I then updated the Configuration Parameters to reflect the Azure credentials and URL so the deployment and smoke test would work properly and entered the username and password entered in the Azure Dashboard in the prior step.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-07.png" alt="TeamCity Configuration Parameters" /><br /> TeamCity Configuration Parameters
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-07.png" alt="TeamCity Configuration Parameters" /><br /> TeamCity Configuration Parameters
 </div>
 
 And that's it, probably the fastest on premises to cloud change. Press the build button in TeamCity and we have a green build to the cloud:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-08.png" alt="TeamCity Build Successful" /><br /> TeamCity Build Successful
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-08.png" alt="TeamCity Build Successful" /><br /> TeamCity Build Successful
 </div>
 
 And after a similar set of changes in Jenkins, I have a parallel production step that targets Azure as well:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-9.png" alt="Jenkins Build Pipeline" /><br /> Jenkins Build Pipeline
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-9.png" alt="Jenkins Build Pipeline" /><br /> Jenkins Build Pipeline
 </div>
 
 And of course I had to push the button a few times:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Azure-10.png" alt="Jenkins Build Success" /><br /> Jenkins Build Success
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-10.png" alt="Jenkins Build Success" /><br /> Jenkins Build Success
 </div>
 
 You can see the site here: http://elismvcmusicstore.azurewebsites.net

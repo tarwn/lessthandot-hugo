@@ -49,7 +49,7 @@ A good, automated build and deployment process would not only do everything cons
 The new process is not very complex. 
 
 <div style="text-align: center; color: #666666; font-size: .85em;">
-  <img src="http://tiernok.com/LTDBlog/LTDBuild.png" alt="LTD Build Process" /><br /> This should say DEV Stage, QA Stage, PROD Stage – Human Copy/Paste Error Strikes Again
+  <img src="http://www.tiernok.com/LTDBlog/LTDBuild.png" alt="LTD Build Process" /><br /> This should say DEV Stage, QA Stage, PROD Stage – Human Copy/Paste Error Strikes Again
 </div>
 
 As changes are committed into our source code repository, they are picked up and run through the DEV step. The build does a small amount of work, then deploys them. When we are ready, we push a button to run the QA step, which picks up the last set of files processed by DEV and deploys them to a folder in the QA environment. Same thing for the production step.

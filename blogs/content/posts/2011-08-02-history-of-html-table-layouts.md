@@ -17,7 +17,7 @@ tags:
 
 ---
 <div style="float: left; margin: .5em 1em .5em .5em;">
-  <img src="http://tiernok.com/LTDBlog/rant.png" alt="Ranting Guy" style="height: 75px; " />
+  <img src="http://www.tiernok.com/LTDBlog/rant.png" alt="Ranting Guy" style="height: 75px; " />
 </div>
 
 The argument over table vs non-table layouts has been going on for years. I remember seeing online conversations as far back as ten years ago on the topic, and given my notoriously bad memory that should be taken as a minimum. Along the way we have dealt with partial CSS implementations, inconsistent rendering behavior, slow implementation of standards, competing proprietary implementations...it's been a long road.

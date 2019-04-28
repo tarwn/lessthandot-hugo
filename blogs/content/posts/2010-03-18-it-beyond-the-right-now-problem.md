@@ -89,7 +89,7 @@ For more information on long term architectural planning and some additional inf
 _This is just a brief thought on another way of looking at IT maturity in business environments. Recently I've been tied up with [refreshing my site][4] and trying to [recapture my personal brand][5]. While I haven't had as many opportunities to post as I would like, I have had the time to finish a couple new books and learn a few new things as I rolled out the site. More to come soon._
 
  [1]: /index.php/ITProfessionals/ITProcesses/applying-kanban-to-it-processes-part-2 "Applying Kanban in IT - Help Desk Scenario"
- [2]: http://tiernok.com/books.php#at
- [3]: http://tiernok.com/books.php#wci
- [4]: http://tiernok.com "Visit my site"
+ [2]: http://www.tiernok.com/books.php#at
+ [3]: http://www.tiernok.com/books.php#wci
+ [4]: http://www.tiernok.com "Visit my site"
  [5]: /index.php/WebDev/WebDesignGraphicsStyling/quick-beginners-look-at-seo "A Beginners Look at SEO"

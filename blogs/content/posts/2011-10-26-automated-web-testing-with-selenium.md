@@ -47,13 +47,13 @@ First we need to download the plugin (assuming you have Firefox installed): [Dow
 After downloading the plugin and restarting, we should have a “Selenium IDE” option in the Tools menu (Windows users can press the 'Alt' key to see the top menu). 
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/selenium/FF_Menu.jpg" alt="Selenium IDE in Firefox" /><br /> Selenium IDE in the Firefox Menu
+  <img src="http://www.tiernok.com/LTDBlog/selenium/FF_Menu.jpg" alt="Selenium IDE in Firefox" /><br /> Selenium IDE in the Firefox Menu
 </div>
 
 Pressing that Selenium IDE button will give us both a popup interface and a set of release notes that unfortunately are probably less than useful to a first time user.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/selenium/SeleniumIDE.jpg" alt="Selenium IDE" /><br /> Selenium IDE
+  <img src="http://www.tiernok.com/LTDBlog/selenium/SeleniumIDE.jpg" alt="Selenium IDE" /><br /> Selenium IDE
 </div>
 
 The main areas of the interface are:
@@ -80,12 +80,12 @@ We are now ready to start recording our first test. This test will click the “
 
 ### Creating a Basic Recording
 
-With our browser open, click the red circular icon on the right side of the Selenium IDE toolbar ![Record button][4]. This tells Selenium IDE to start recording our browser interactions. Returning to the browser window, enter “http://tiernok.com” in the address bar to navigate to the site. Click the “home” link in the navigation will load the index page. Once this is done, we can return to the IDE and stop the recording by pressing the record button again.
+With our browser open, click the red circular icon on the right side of the Selenium IDE toolbar ![Record button][4]. This tells Selenium IDE to start recording our browser interactions. Returning to the browser window, enter “http://www.tiernok.com” in the address bar to navigate to the site. Click the “home” link in the navigation will load the index page. Once this is done, we can return to the IDE and stop the recording by pressing the record button again.
 
 At this point we see a few things in the interface. 
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_01.jpg" alt="Selenium IDE - Getting Started" /><br /> Selenium IDE – Getting Started
+  <img src="http://www.tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_01.jpg" alt="Selenium IDE - Getting Started" /><br /> Selenium IDE – Getting Started
 </div>
 
 The Base URL field above the toolbar has populated with the URL of the site we are testing, the “Untitled” test case has a star next to it to indicate unsaved changes, and the command list in the right window has been populated with two commands. Let's save these changes (Ctrl + S) and test them. Navigate the browser to a different site, return to the Selenium IDE window, and press the “Play Current Test Case” button (the play symbol with a single horizontal line in focus). As expected, the browser opens the root URL (step 1), then presses the “Home” link. The results are displayed under the test case list as 1 Run and 0 Failures and we see the details of the commands echoed in the Log tab at the bottom. 
@@ -97,7 +97,7 @@ Now that we have the mechanics, lets add verifications. We are going to make som
 To add an assertion command in the command list, select the empty row below the “clickAndWait” command.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_02.jpg" alt="Selenium IDE - Adding a Command" /><br /> Selenium IDE – Adding a Command
+  <img src="http://www.tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_02.jpg" alt="Selenium IDE - Adding a Command" /><br /> Selenium IDE – Adding a Command
 </div>
 
 Under the command list, we have three inputs for the new command: “Command”, “Target”, and “Value”. Theoretically these are used to define what command Selenium should execute, the target it is acting on, and a value for the command. These are not always 100% accurate, as we are about to see.
@@ -109,13 +109,13 @@ Let's try an incorrect value first, just to see what happens when a test fails. 
 The result is different this time. Under the Test Case list we still have 1 run, but now we have 1 failure and a red bar. In the command list to the right, the “assertTitle” line has a red background (unless it currently has focus). In the log at the bottom we have some red text indicating the command that failed.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_03.jpg" alt="Selenium IDE - Results" /><br /> Selenium IDE – Results
+  <img src="http://www.tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_03.jpg" alt="Selenium IDE - Results" /><br /> Selenium IDE – Results
 </div>
 
 We have actually learned one more thing. If we look closely at the error we will see that it tried to match the page title against an empty string and failed. The “assertTitle” command actually reads it's argument from the “target” input, not the “value” one. A better way to think of these inputs is as “Argument 1” and “Argument 2” rather than as “Target” and “Value”. If we put the value “Eli Weinstock-Herman | Tarwn” in the “target” input and run the tests again, it should Pass.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_04.jpg" alt="Selenium IDE - Results" /><br /> Selenium IDE – Results
+  <img src="http://www.tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_04.jpg" alt="Selenium IDE - Results" /><br /> Selenium IDE – Results
 </div>
 
 Which it does. Now we need to move on to the slightly more complex case of verifying the presence of elements that change on every page load.
@@ -129,7 +129,7 @@ Add a new command to the Test Case, this time entering “assertElementPresent�
 To test that there are two books, we are going to be sneaky and use the CSS selector “css=.book + .book”. Since this CSS path will only locate an element if it finds two book elements in a row, it is an easy way to verify that both are present. We can update the command with this new locator target and run the Test Case to see it passes successfully. 
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_05.jpg" alt="Selenium IDE - Test Case Commands" /><br /> Selenium IDE – Test Case Commands
+  <img src="http://www.tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_05.jpg" alt="Selenium IDE - Test Case Commands" /><br /> Selenium IDE – Test Case Commands
 </div>
 
 The last thing we need to do is rename the Test Case to something useful. Right-Click the Test Case in the Test Case list on the left and edit the test name. I named my test “HomeLinkDisplaysHomePageWithBooks”, which may seem a bit clumsy but tells me exactly what I'm tetsing without loking at the details.
@@ -148,10 +148,10 @@ To start, lets create a new test case by selecting “New Test Case” from the 
 
 _Note: Something to consider when naming tests is how you want to organize them. Besides being descriptive, I also try to use a consistent pattern to make them easily sortable/searchable in the file system._
 
-Let's start another recording and open “http://tiernok.com” again. Click the “Contact” link in the top navigation, enter text in the Name and Message inputs in the form, then press the submit button. That's the whole workflow, so lets stop the recording and see what we have.
+Let's start another recording and open “http://www.tiernok.com” again. Click the “Contact” link in the top navigation, enter text in the Name and Message inputs in the form, then press the submit button. That's the whole workflow, so lets stop the recording and see what we have.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_06.jpg" alt="Selenium IDE - Test Recording" /><br /> Selenium IDE – Test Recording
+  <img src="http://www.tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_06.jpg" alt="Selenium IDE - Test Recording" /><br /> Selenium IDE – Test Recording
 </div>
 
 This test has some new commands in it, but they are pretty self explanatory. We opened the root site, clicked on the “Contact” link and waited for the page to load, typed in two input boxes, and clicked the submit button, again waiting for the next page to load. To finish up the test, lets add an assertion for the error message.
@@ -161,7 +161,7 @@ This test has some new commands in it, but they are pretty self explanatory. We 
 Like the earlier Test Case, there are a few different ways we can write this assertion. In this case the two obvious methods are using either “assertTextPresent”, which tests that the text shows up somewhere on the page, “assertElementPresent”, which could look for an element with the “.err” CSS class, or “assertText”, which combines the two commands above to test that a specific element has specific text.
 
 <div style="text-align: center; margin: 1em; color: #666666; font-size: 80%">
-  <img src="http://tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_07.jpg" alt="Selenium IDE - Error Assertion" /><br /> Selenium IDE – Error Assertion
+  <img src="http://www.tiernok.com/LTDBlog/selenium/SeleniumIDE_Rec_07.jpg" alt="Selenium IDE - Error Assertion" /><br /> Selenium IDE – Error Assertion
 </div>
 
 I've used the last option in my Test Case (as well as Firebug again to locate the element in the browser). If I save the Test Case and run it, I should see the browser run through the steps and Pass, just like our earlier test.
@@ -195,7 +195,7 @@ Next Post: [Automated Web Testing with Selenium WebDriver][7]
  [1]: http://seleniumhq.org/projects/ide/ "Go to the Selenium IDE website"
  [2]: http://seleniumhq.org/download/ "Download the plugin"
  [3]: http://getfirebug.com/ "Go get Firebug Extension"
- [4]: http://tiernok.com/LTDBlog/selenium/SeleniumIDE_RecordButton.jpg
+ [4]: http://www.tiernok.com/LTDBlog/selenium/SeleniumIDE_RecordButton.jpg
  [5]: http://release.seleniumhq.org/selenium-core/1.0/reference.html#storeXpathCount "See more information in the Selenium IDE Reference"
  [6]: http://release.seleniumhq.org/selenium-core/1.0/reference.html "View the command reference"
  [7]: /index.php/WebDev/UIDevelopment/automated-web-testing-with-selenium-2 "Automated Web Testing with Selenium WebDriver"

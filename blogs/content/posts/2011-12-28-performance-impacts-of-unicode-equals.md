@@ -23,7 +23,7 @@ After reading this, I was curious. Does that follow with char and nchar also? Ho
 The results are based on 4 runs of each query against 1,000,000 rows with explicitly limited parallelism. The name identifies the type, which operation was used (equals or LIKE), and the size of the field. All data was 36 characters, so “(36)” tests are fully populated values and “(72)” tests are half-full values.
 
 <div style="font-size: 80%; color: #666666; text-align: center">
-  <img src="http://tiernok.com/LTDBlog/nchar_all.png" title="Graph of all Results" /><br /> All Results, Normalized to Shortest Value (Char 32 – Equals)
+  <img src="http://www.tiernok.com/LTDBlog/nchar_all.png" title="Graph of all Results" /><br /> All Results, Normalized to Shortest Value (Char 32 – Equals)
 </div>
 
 This graph shows the average for each type as a percentage of the smallest value, 'Char(72) – Equals'. What's immediately obvious is the level of difference between an equals operation and a LIKE, especially when we get to the trailing, partially filed NCHAR field (wow!).
@@ -271,7 +271,7 @@ _Note: I originally had 5 runs, but removed the first since it had consistently 
 There is limited statistical significance in the fixed-width EQUALs, but the values do group together by type. 
 
 <div style="font-size: 80%; color: #666666; text-align: center">
-  <img src="http://tiernok.com/LTDBlog/nchar_equals.png" title="Graph of Equals Results" /><br /> Equals Results, Normalized to Shortest Value (Char 32 – Equals)
+  <img src="http://www.tiernok.com/LTDBlog/nchar_equals.png" title="Graph of Equals Results" /><br /> Equals Results, Normalized to Shortest Value (Char 32 – Equals)
 </div>
 
 It is interesting to note that there is a pretty consistent 20% gap between fixed and variable widths for the same types (char to varchar, for instance), regardless of whether the column is partially or fully populated.
@@ -281,7 +281,7 @@ It is interesting to note that there is a pretty consistent 20% gap between fixe
 There is a much broader impact when we start looking at the LIKE statement comparisons. Like Michael's post above, there is a noticeable difference (on my system, ~650%) between searching a varchar and an nvarchar column.
 
 <div style="font-size: 80%; color: #666666; text-align: center">
-  <img src="http://tiernok.com/LTDBlog/nchar_like.png" title="Graph of LIKE Results" /><br /> LIKE Results, Normalized to Shortest Value (Char 32 – Like)
+  <img src="http://www.tiernok.com/LTDBlog/nchar_like.png" title="Graph of LIKE Results" /><br /> LIKE Results, Normalized to Shortest Value (Char 32 – Like)
 </div>
 
 The conclusions I see are:

@@ -21,7 +21,7 @@ tags:
 As I've moved from project to project, environment to environment, I've had opportunities to write unit tests after coding, do test first development, and once use unit tests as a living spec for an external developer (code none unit testing?). One of the biggest friction points, once you settle on a framework, is the constant cycle back and forth between coding, building, running tests, and flipping back. Whether you are using MS Test and the built-in test result viewer, the external NUnit GUI, or a 3rd party test runner, that constant switching is actually stealing precious moments of concentration and time. 
 
 <div style="text-align:center; color: #666666; font-size: 90%">
-  <img src="http://tiernok.com/LTDBlog/AddressTDD/CodeBuildTest.png" alt="The Code, Build, Test Cycle" /><br /> The Code, Build, Test Cycle
+  <img src="http://www.tiernok.com/LTDBlog/AddressTDD/CodeBuildTest.png" alt="The Code, Build, Test Cycle" /><br /> The Code, Build, Test Cycle
 </div>
 
 Imagine for a moment that you have finished writing a piece of code. Maybe it's the test, maybe it's the code you intend to test. Instead of kicking off a build and switching mental mode to run the tests, the results simply start appearing. Your test lights up red, then green as you switch to building the logic that satisfies it, never once breaking stride to wait for the test suite to run. Your uncovered code is clearly marked as uncovered before you even finish writing it to press save. It's magic.
@@ -36,7 +36,7 @@ Let's get started.
 
 ## What are we doing?
 
- <img src="http://tiernok.com/LTDBlog/AddressTDD/Letter.png" alt="Letter" style="float: left; margin-top: 8px;" />
+ <img src="http://www.tiernok.com/LTDBlog/AddressTDD/Letter.png" alt="Letter" style="float: left; margin-top: 8px;" />
 
 The goal of this exercise is to build an Address class that is the business and formatting logic behind entry of a mailing address. The Address class will expose properties to tell an interface what address fields are available, what they should be labelled, whether the address has all the required values, and a displayable formatted address. In return, it will expect that interface to populate input properties for all the address input values. 
 
@@ -49,7 +49,7 @@ Luckily there are some people that have tried to pull together all of the rules 
 There are two projects in the solution, one to hold the Address class (Main) and one for the tests (Main.Tests). 
 
 <div style="text-align:center; color: #666666; font-size: 90%">
-  <img src="http://tiernok.com/LTDBlog/AddressTDD/SolutionExplorer.png" alt="Solution Explorer - Projects" /><br /> Just a pair of small projects, nothing scary here
+  <img src="http://www.tiernok.com/LTDBlog/AddressTDD/SolutionExplorer.png" alt="Solution Explorer - Projects" /><br /> Just a pair of small projects, nothing scary here
 </div>
 
 The Address class already has the basic properties it needs, but everything else is up to you.
@@ -77,7 +77,7 @@ Open up the AddressTests file in Main.Tests and the Specs.md file from the root 
 This test is the second rule in the included Specs.md file. After you add the test code, red dots will show up next to executable lines in the test that are on the path to a failed assertion. 
 
 <div style="text-align:center; color: #666666; font-size: 90%">
-  <img src="http://tiernok.com/LTDBlog/AddressTDD/TestsAreRed.png" alt="Tests Are Red" /><br /> Tests are automatically red/failing
+  <img src="http://www.tiernok.com/LTDBlog/AddressTDD/TestsAreRed.png" alt="Tests Are Red" /><br /> Tests are automatically red/failing
 </div>
 
 NCrunch is building and running the tests behind the scenes as you add more code, automagically. Switching over to the Address class, we'll notice that it also has dots to indicate portions of the class that are referenced by failing tests. Right-clicking on any of these dots provides more details, options to run tests in debug mode, and so on.
@@ -85,7 +85,7 @@ NCrunch is building and running the tests behind the scenes as you add more code
 Now add some code to satisfy that test. As you make addition, NCrunch continues to build and test in the background, displaying the updated dots as you work. 
 
 <div style="text-align:center; color: #666666; font-size: 90%">
-  <img src="http://tiernok.com/LTDBlog/AddressTDD/TestsAreGreen.png" alt="Tests Are Green" /><br /> Tests and code turn Green automatically
+  <img src="http://www.tiernok.com/LTDBlog/AddressTDD/TestsAreGreen.png" alt="Tests Are Green" /><br /> Tests and code turn Green automatically
 </div>
 
 When you get to all green dots, you're done. No need to stop, just move right on to the next test. [video:youtube:E0PztmQQlOQ] 

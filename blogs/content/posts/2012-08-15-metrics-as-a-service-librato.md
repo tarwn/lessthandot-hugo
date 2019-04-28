@@ -17,7 +17,7 @@ categories:
 Several weeks ago I posted a [three][1] [part][2] [series][3] on the ability to use available online logging services for instrumenting applications. None of the services overwhelmed me, but there was an additional service I found that caters specifically to numeric metrics. Given that I've had a tab sitting open on the [Librato site][4] for the past several weeks, I thought it was time to actually do the review.
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://tiernok.com/LTDBlog/instrumentation/metrics_0.png" alt="Sample screenshot from interface" /><br /> Sample screenshot from interface
+  <img src="http://www.tiernok.com/LTDBlog/instrumentation/metrics_0.png" alt="Sample screenshot from interface" /><br /> Sample screenshot from interface
 </div>
 
 Spoilers: I liked it. A lot.
@@ -68,13 +68,13 @@ Librato.Token = your-token-here
 Load up the sample app, click some buttons, then switch over to Metrics to see the results. You should see several new gauges and counters in your Metrics list: 
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://tiernok.com/LTDBlog/instrumentation/metrics_01.png" alt="Metrics List" /><br /> Metrics List
+  <img src="http://www.tiernok.com/LTDBlog/instrumentation/metrics_01.png" alt="Metrics List" /><br /> Metrics List
 </div>
 
 Clicking on one of these metrics will open the metric so you can see it's display settings and a graph of it's recent values:
 
 <div style="color: #666666; text-align: center; font-size: 90%">
-  <img src="http://tiernok.com/LTDBlog/instrumentation/metrics_2.png" alt="Metric Details" /><br /> Metric Details
+  <img src="http://www.tiernok.com/LTDBlog/instrumentation/metrics_2.png" alt="Metric Details" /><br /> Metric Details
 </div>
 
 We could spend a lot more time getting into the details of creating instruments, dashboards, alerts and so on, but at this point you should have everything you need to start playing with those on your own.

@@ -35,7 +35,7 @@ You can read more about Model View Presenter at <a href="http://en.wikipedia.org
 Passive View is a subset of the Model-View-Presenter pattern. In Passive View, the interface is responsible for handling interface-specific logic, such as figuring out how to put a value in a textbox or react to events from button clicks, but all actions and logic outside of the raw UI are sent to the Presenter to execute or manage. The Presenter is responsible for calling business methods in the Business model and updating the data that is available in the View. 
 
 <div style="text-align: center; font-size: .8em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/MVP/mvp.png" alt="Basic Model-View-Presenter diagram" /><br /> Basic Model-View-Presenter Diagram
+  <img src="http://www.tiernok.com/LTDBlog/MVP/mvp.png" alt="Basic Model-View-Presenter diagram" /><br /> Basic Model-View-Presenter Diagram
 </div>
 
 From the outside in, the architecture for Passive View looks something like this:
@@ -68,7 +68,7 @@ _My unwritten, final requirement was to finish the whole thing in half a day, th
 To start I created a diagram of the application architecture:
 
 <div style="text-align: center; font-size: .8em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/MVP/mvp_arch_01.png" alt="More extensive M-V-P Diagram" /><br /> More Extensive Model-View-Presenter Diagram
+  <img src="http://www.tiernok.com/LTDBlog/MVP/mvp_arch_01.png" alt="More extensive M-V-P Diagram" /><br /> More Extensive Model-View-Presenter Diagram
 </div>
 
 The purple layer is my presentation layer, which reflects the View. The blue layer is my Presenter layer which contains the logic for interacting between the end user and interface as well as a definition, or contract, of the information available in the View. The Green is the Model (or is behind the model, depending on your viewpoint) and exposes business functions and data entities for the Presenter to interact with.
@@ -92,7 +92,7 @@ To keep the project to a single morning but also allow the ability to come back 
 My final Visio diagram ended up looking like this:
 
 <div style="text-align: center; font-size: .8em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/MVP/mvp_arch_02.png" alt="Example Application Diagram" /><br /> Diagram of Example Application
+  <img src="http://www.tiernok.com/LTDBlog/MVP/mvp_arch_02.png" alt="Example Application Diagram" /><br /> Diagram of Example Application
 </div>
 
 In this case the left side represents basic components (bases classes and interfaces) that are used to define common structure or contracts on the right side. 

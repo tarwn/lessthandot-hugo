@@ -21,7 +21,7 @@ tags:
 Over my years in (and before) IT, I've seen long projects, failed projects, confused projects, wildly successful projects, and even fun projects that ended far differently than we expected. The consistent take-away for me is that I am a big picture type of person, and that understanding that big, abstract picture cuts out a lot of wasted time sprinting down the wrong paths.
 
 <div style="font-size: .8em; color: #666666; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/modeling/sprint.jpg" alt="Don't Sprint Blindly" /><br /> Don't Sprint Blindly...<br />(care of <a href="http://www.dmitriev.com/blog/2009-04-14/wrong-sprint-burndown/">dmitriev.com</a>)
+  <img src="http://www.tiernok.com/LTDBlog/modeling/sprint.jpg" alt="Don't Sprint Blindly" /><br /> Don't Sprint Blindly...<br />(care of <a href="http://www.dmitriev.com/blog/2009-04-14/wrong-sprint-burndown/">dmitriev.com</a>)
 </div>
 
 Creating a model forces me to refine a concept down to it's simplest elements, forces me to face the unknowns that my mind has so casually been skipping over. When done well, a model communicates a clear idea and replaces not only the thousands words required to explain it, but the 9000 I would have wasted getting there.
@@ -31,7 +31,7 @@ I model to think through processes, question my assumptions, and provide guidanc
 ## Purpose – What are We Drawing?
 
 <div style="float: right; font-size: .8em; color: #666666; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/modeling/dostuff.jpg" title="Do Stuff!" /><br /> No Goal? Here's a Diagram.
+  <img src="http://www.tiernok.com/LTDBlog/modeling/dostuff.jpg" title="Do Stuff!" /><br /> No Goal? Here's a Diagram.
 </div>
 
 As with all things, a diagram should have a goal. A model that isn't trying to communicate an idea is filler for a report no one is going to read anyway. A goal should be concise and limited to a single subject or perspective:
@@ -81,7 +81,7 @@ This stage is also where I figure out my wording. Because it's so easy to see th
 ## Medium – Where is it Going?
 
 <div style="float: left; font-size: .8em; color: #666666; text-align: center; margin: 2em 1em 1em 1em">
-  <img src="http://tiernok.com/trent/2004_11_05_04_sm.jpg" title="Content needs context" /><br /> Content needs Context
+  <img src="http://www.tiernok.com/trent/2004_11_05_04_sm.jpg" title="Content needs context" /><br /> Content needs Context
 </div>
 
 As I make the transition from whiteboard to diagramming software, the last piece of the equation is to consider the medium I am going to use to communicate the model. A standalone diagram may put higher priority on further simplicity of shapes and colors, where a presentation model may put lower priority on text and higher priority on subtleties for deeper conversation. 
@@ -93,7 +93,7 @@ The context the diagram will be communicating in will determine the last set of 
 ## Terminology – The Wrong Word Invalidates the Model
 
 <div style="float: right; font-size: .8em; color: #666666; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/modeling/van-venn-diagram.jpg" title="'Van' Diagram" /><br /> Using the right terminology, <br />thanks <a href="http://www.lolcaption.com/random-funny/what-is-a-van-diagram-you-ask-well-let-me-show-you/">lolcaption.com</a>
+  <img src="http://www.tiernok.com/LTDBlog/modeling/van-venn-diagram.jpg" title="'Van' Diagram" /><br /> Using the right terminology, <br />thanks <a href="http://www.lolcaption.com/random-funny/what-is-a-van-diagram-you-ask-well-let-me-show-you/">lolcaption.com</a>
 </div>
 
 General wording may have been roughed in on the whiteboard and some really good words may have been chosen, but these now need to be examined in light of the future medium as well as the audience. In many cases, using a word out of context can distract my audience or even negate the model's message entirely.
@@ -113,7 +113,7 @@ While working with the composition, I will also create temporary versions to pla
 There are different levels of work involved in modeling. In some cases even finding the time to stop doing and try to draw an idea may seem like a waste. 
 
 <div style="float: right; font-size: .8em; color: #666666; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/modeling/lookbothways.jpg" title="No Need To Look Ahead" /><br /> Not looking ahead?<br />Diagram for that too...
+  <img src="http://www.tiernok.com/LTDBlog/modeling/lookbothways.jpg" title="No Need To Look Ahead" /><br /> Not looking ahead?<br />Diagram for that too...
 </div>
 
 <div style="font-size: .8em; margin: 1em;  padding: 1em;">

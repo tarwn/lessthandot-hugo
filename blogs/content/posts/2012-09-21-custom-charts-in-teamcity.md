@@ -60,7 +60,7 @@ To match this in TeamCity I created the project-wide graph settings like so:
 Besides the key in each valueType tag, I also include a buildTypeid that is the internal build ID for my automated load test build. I found this in the address bar after clicking the build's link on the dashboard:
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCityCharts_link.png" alt="TeamCity - Build URL" /><br /> Team City – Build URL
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCityCharts_link.png" alt="TeamCity - Build URL" /><br /> Team City – Build URL
 </div>
 
 ## Defining the Data
@@ -123,7 +123,7 @@ TeamCity replaces the variables with the correct values and transforms the gener
 I wasn't happy about editing settings file in TeamCity directly, especially given the implications this has in a real environment (how many people would need to be involved to do this in a heavily audited environment?). However that was the only issue I had and I am happy with the results (the build versions are the same because I rebuilt several times so I would have a decent chart):
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
-  <a href="http://tiernok.com/LTDBLog/ContinuousDelivery/TeamCityCharts.png" target="_blank"><br /> <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/TeamCityCharts_sm.png" alt="TeamCity - Finished Charts" /><br /> </a><br /> Team City – Finished Charts
+  <a href="http://www.tiernok.com/LTDBLog/ContinuousDelivery/TeamCityCharts.png" target="_blank"><br /> <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCityCharts_sm.png" alt="TeamCity - Finished Charts" /><br /> </a><br /> Team City – Finished Charts
 </div>
 
 For bonus points, the same functionality you have with the built-in charts is available here. You can change the time period, view averages of the values, and change which points are graphed by checking or unchecking them.

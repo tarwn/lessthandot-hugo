@@ -35,7 +35,7 @@ Build running, deploying for smoke test, failed. Page Won't Load.
 
 The CI build step runs the build and creates a publishable package that will be archived for all later build stages and final deployment. The last step of the CI stage deploys the package to a VM and does an HTTP GET on the front page, just to ensure it's deployable. Turns out the site deployed fine, but the front page refused to display.
 
-<img src="http://tiernok.com/LTDBlog/MVC4/folders.png" alt="Project folders" style="margin: .5em .5em .5em 0; float: left;" />Deploying MVC3 early on took advantage of a special folder named \_bin\_deployableAssemblies, so MSBuild was overwriting the MVC4 assemblies with the contents of this folder (MVC3) and then giving me errors on the razor stack when I tried to actually load the page. The build server didn't mind because it was using either GAC'd or Reference Assemblies instead of the local DLLs.
+<img src="http://www.tiernok.com/LTDBlog/MVC4/folders.png" alt="Project folders" style="margin: .5em .5em .5em 0; float: left;" />Deploying MVC3 early on took advantage of a special folder named \_bin\_deployableAssemblies, so MSBuild was overwriting the MVC4 assemblies with the contents of this folder (MVC3) and then giving me errors on the razor stack when I tried to actually load the page. The build server didn't mind because it was using either GAC'd or Reference Assemblies instead of the local DLLs.
 
 I initially delete the folder to fix this, which turned out to be overkill because I also had SQL Server CE assemblies in there. The final result was to clear out just the MVC3 assemblies from the folder, leaving the SQL Server CE ones.
 
@@ -100,13 +100,13 @@ So what happened when I upgrade to MVC4? faster, slower, ... ? And how much fast
 What happened was object lessons in why having load measurements are useful and why identifying your performance bottlenecks is critical, instead of treating asynchronous actions as magic pixie dust.
 
 <div style="text-align:center;">
-  <img src="http://tiernok.com/LTDBlog/MVC4/rate.png" alt="Load test - Request Rates" />
+  <img src="http://www.tiernok.com/LTDBlog/MVC4/rate.png" alt="Load test - Request Rates" />
 </div>
 
 On the left side of this graph you can see that the MVC 3 rate has averaged 75 requests/second with a pretty high level of variability. Switching to MVC4 moved us to a much more consistent 95-100 requests/second average, then throwing async in the mix reduced the rate to the 80's. In each case, the requests are all of the files our browser would request when we browse the index page, select a genre to the genre page, select an album to the album page, and then check out, so some of this is dynamic content and some is static image and script files.
 
 <div style="text-align:center;">
-  <img src="http://tiernok.com/LTDBlog/MVC4/responseTime.png" alt="Load test - Response Times" />
+  <img src="http://www.tiernok.com/LTDBlog/MVC4/responseTime.png" alt="Load test - Response Times" />
 </div>
 
 The other interesting number is the lack of difference in Response Times. Somehow MVC4 unlocked more throughput for the system without impacting the Response Time for those requests. There was also no change at all in Response Times at all after adding Async actions, something that underlines and bolds the fact that the database calls were not the performance bottleneck for these test VMs.

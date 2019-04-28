@@ -38,7 +38,7 @@ These results are a subset of a larger set using TF-IDF, RAKE, and TextRank for 
 
 Here are results for two recent posts:
 
-URL: <http://tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html>
+URL: <http://www.tiernok.com/posts/continuous-javascript-test-execution-with-wallabyjs.html>
 
 <pre>RAKE:
  * radiates test statuses directly
@@ -60,7 +60,7 @@ TextRank:
  * development feedback
 </pre>
 
-URL: <http://tiernok.com/posts/stop-manually-updating-your-jasmine-specrunner.html>
+URL: <http://www.tiernok.com/posts/stop-manually-updating-your-jasmine-specrunner.html>
 
 <pre>RAKE:
  * greatly simplify future updates

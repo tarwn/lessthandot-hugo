@@ -23,7 +23,7 @@ tags:
 Executing an integration build and unit test run on the build server is all well and good, but before we can say a build is complete and ready to go, it's a good idea to know it will work when it is deployed. Executing a test deployment and then smoke testing it will ensure the archived build is ready to be deployed to test or production environments and that the necessary configurations and resources are available and working.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/Overview_p4.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline – Focus of Current Post
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Overview_p4.png" title="Delivery Pipeline - Focus of Current Post" /><br /> Delivery Pipeline – Focus of Current Post
 </div>
 
 This is the fifth post in a multi-part series on my Continuous Deployment pipeline project. The [previous post][1] covered integrating unit tests into the Continuous Integration stage. This post will cover the final portion of that stage, an automated deployment of the site and smoke test to make sure it can be deployed in a working state.
@@ -63,13 +63,13 @@ This command basically says that I want to deploy from the packaged zip file to 
 Removing the whatif flag, I can now try to do a full deployment. Unfortunately the site does not run, replying with an ASP.Net error screen that points out missing helper references. Following the helpful instructions [on this site][3], I'll modify my project properties to include the necessary libraries. After a fresh build and second manual deployment, the site loads correctly.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_deploy.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_deploy.png" title="Deployed to SmokeTest Location" /></a><br /> Deployed to SmokeTest Location
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_deploy.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_deploy.png" title="Deployed to SmokeTest Location" /></a><br /> Deployed to SmokeTest Location
 </div>
 
 With the manual command successfully deploying, it's now a simple matter to add a new step to my job to execute this same command on every build.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/firstdeploy.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/firstdeploy.png" title="Deployed Site" /></a><br /> Deployed Site
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/firstdeploy.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/firstdeploy.png" title="Deployed Site" /></a><br /> Deployed Site
 </div>
 
 To catch us up to date, the build is now getting latest from the code repository, building it, running the unit test suite, and successfully deploying it to IIS on a test server.
@@ -134,7 +134,7 @@ With the version number stored in my application, I can output that value in the
 With the application will displaying the value from the BuildVersion file, all that is left is to insert a step in my job to write the current build number to the file before the project is built and packaged up.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_buildnumber.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_buildnumber.png" title="Adding Build Number to Site" /></a><br /> Adding Build Number to Site
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_buildnumber.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_buildnumber.png" title="Adding Build Number to Site" /></a><br /> Adding Build Number to Site
 </div>
 
 Ad the build number isadded as part of the CI build job, I'll see the word “DEV” in my development environment and the appropriate build number everywhere else. Now I can automate tests to check for the expected build number and trace deployed sites back to their original build history.
@@ -167,19 +167,19 @@ A recent sample of the output looks like this:
 With the script built, all I need to do is add a final “Windows Batch Command” step to my job to execute this script.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Job Configuration - Smoke Test" /></a><br /> Job Configuration – Smoke Test
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Job Configuration - Smoke Test" /></a><br /> Job Configuration – Smoke Test
 </div>
 
 And then configure the post-build step to import the result file as a Junit test result file.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <a href="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketestresult.png" title="Larger picture" target="_blank"><img src="http://tiernok.com/LTDBlog/ContinuousDelivery/config_smoketestresult.png" title="Job Configuration - Smoke Test Results" /></a><br /> Job Configuration – Smoke Test Results
+  <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_smoketestresult.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_smoketestresult.png" title="Job Configuration - Smoke Test Results" /></a><br /> Job Configuration – Smoke Test Results
 </div>
 
 With this method I not only get the tests executed as part of every build, but the results are nicely aggregated with the unit test results.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://tiernok.com/LTDBlog/ContinuousDelivery/alltests.png" title="All Tests for CI Build" /><br /> All Tests for CI Build
+  <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/alltests.png" title="All Tests for CI Build" /><br /> All Tests for CI Build
 </div>
 
 ## Next Steps

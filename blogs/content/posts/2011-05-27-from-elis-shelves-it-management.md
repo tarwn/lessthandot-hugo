@@ -32,7 +32,7 @@ The IT Program manager or owner is responsible for the people that consume the p
 It's not about the computers, it's about the people, both those inside and outside the group. 
 
 <div style="float: left; padding: .5em; width: 170px; margin: 0em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <a href="http://www.amazon.com/Peopleware-Productive-Projects-Teams-Second/dp/0932633439" title="Peopleware: Productive Projects and Teams"><img src="http://tiernok.com/_n_images/books/pppat.jpg" alt="Peopleware: Productive Projects and Teams" /></a><br /> Peopleware
+  <a href="http://www.amazon.com/Peopleware-Productive-Projects-Teams-Second/dp/0932633439" title="Peopleware: Productive Projects and Teams"><img src="http://www.tiernok.com/_n_images/books/pppat.jpg" alt="Peopleware: Productive Projects and Teams" /></a><br /> Peopleware
 </div>
 
 ### [Peopleware: Productive Projects and Teams][1]  
@@ -41,7 +41,7 @@ Tom DeMarco, Timeothy Lister
 It's said that at one point every new manager at Microsoft, when walking into their office for the first time, would find this book waiting for them. I don't know if that's true or not, but I like to think that it was. Peopleware was first published in 1987 and was updated in 1999. The core premise of the book is that people are not modular cogs and we really ought to stop treating them as such. From building teams to selecting the furniture, to the idea that work can be fun, rather than just onerous, the authors cover a lot of ground without stretching the book into 800 pages. <br style="clear: left" />
 
 <div style="float: left; padding: .5em; width: 170px; margin: 0em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <a href="http://www.amazon.com/World-Class-Businesses-Succeed-Triumphs/dp/0470450185/ref=sr_1_1?ie=UTF8&s=books&qid=1266457090&sr=1-1" title="World Class IT: Why Businesses Succeed When IT Triumphs at Amazon"><img src="http://tiernok.com/_n_images/books/wci.jpg" alt="World Class IT: Why Businesses Succeed When IT Triumphs" /></a><br /> World Class IT
+  <a href="http://www.amazon.com/World-Class-Businesses-Succeed-Triumphs/dp/0470450185/ref=sr_1_1?ie=UTF8&s=books&qid=1266457090&sr=1-1" title="World Class IT: Why Businesses Succeed When IT Triumphs at Amazon"><img src="http://www.tiernok.com/_n_images/books/wci.jpg" alt="World Class IT: Why Businesses Succeed When IT Triumphs" /></a><br /> World Class IT
 </div>
 
 ### [World Class IT: Why Businesses Succeed When IT Triumphs][2]  

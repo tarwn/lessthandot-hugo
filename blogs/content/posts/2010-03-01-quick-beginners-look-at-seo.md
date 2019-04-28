@@ -51,7 +51,7 @@ I won't lead you down all the blind alleys, scams, and occasionally clueless art
 :   In order to try and get a handle on outstanding issues, I added my site to Google Analytics and watched it daily. I tweaked my (until then missing) robots file to keep the search engines pointed at the pages I wanted them on, instead of the ones they had somehow found, and watched the traffic each day to see what was getting picked up.
 
 <div style="background-color: #eeeeee; padding: 1em; font-style: italic">
-  Note: if you visit my site's <a href="http://tiernok.com" title="Tarwn's About Site page">About page</a>, you will notice a simple graphic on the right side that shows time for ongoing development. Each of these bars (after the first few) were driven from the Analytics and Ranking tools, as I continue to expand the site, attempt to engage my target keywords, and capture existing search engine topics that previously linked to me.
+  Note: if you visit my site's <a href="http://www.tiernok.com" title="Tarwn's About Site page">About page</a>, you will notice a simple graphic on the right side that shows time for ongoing development. Each of these bars (after the first few) were driven from the Analytics and Ranking tools, as I continue to expand the site, attempt to engage my target keywords, and capture existing search engine topics that previously linked to me.
 </div>
 
 

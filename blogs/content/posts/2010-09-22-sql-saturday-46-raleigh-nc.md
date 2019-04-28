@@ -23,7 +23,7 @@ It's been a few days since SQL Saturday 46 and I have finally found some time to
 ## The Event
 
 <div style="float: left; margin: .5em 2em .5em 0px; color: #666666; font-size: 80%; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/sqlsat46_2010/volunteers.png" alt="The volunteers that made it happen" /><br /> The excellent group of volunteers <br />that pulled it all together
+  <img src="http://www.tiernok.com/LTDBlog/sqlsat46_2010/volunteers.png" alt="The volunteers that made it happen" /><br /> The excellent group of volunteers <br />that pulled it all together
 </div>
 
 There were [6 tracks of events][1], which were balanced more towards the BI and SSIS side of things than the previous events I've attended. Registration was hiccup free (though I was early and missed the rush), rooms were all located in close proximity to one another, and the lunch room flowed pretty quickly despite an early line. The signs and schedule were excellent, with 8.5 ×11 placards posted for all of the sessions on each room's door as well as large grids posted on the wall in two locations, displaying the whole schedule. Once I figured out the room numbering, it was easy to locate the sessions or speakers I was interested in. The event was organized by members of [TriPASS][2], the local SQL Server User Group in Raleigh, and I'm looking forward to getting involved with the next one they put together. If I had to pick one element of the event that characterized it the most, that element would be how smoothly the execution went.
@@ -31,7 +31,7 @@ There were [6 tracks of events][1], which were balanced more towards the BI and 
 ## Sessions
 
 <div style="float: right; margin: .5em 0 .5em 2em; color: #666666; font-size: 80%; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/sqlsat46_2010/grant.png" alt="Grant Fritchey starting his session" /><br /> Grant Fritchey getting <br /> started on his session
+  <img src="http://www.tiernok.com/LTDBlog/sqlsat46_2010/grant.png" alt="Grant Fritchey starting his session" /><br /> Grant Fritchey getting <br /> started on his session
 </div>
 
 I started my morning off with Geoff Hiten's ([blog][3] | [twitter][4]) “Clustering for Mere Mortals” session, which gave me enough basic knowledge that there may be a clustering blog article in the near future. Geoff did an excellent job of communicating a complex task to his audience, balancing just enough background knowledge, direct examples, and good practices from his own experience.
@@ -43,7 +43,7 @@ After lunch, I attended Grant Fritchey's ([blog][6] | [twitter][7]) “Identifyi
 After Grant's session I caught Andy Leonard's ([blog][8] | [twitter][9]) “SSIS Design Patterns” session. I was completely out of my depth here, being far more of a beginner in SSIS (it doesn't get much more beginner), but I was still able to take away quite a bit of information from the session, including some ideas I will likely try to put into practice in an upcoming project.
 
 <div style="margin: .5em 2em .5em 0px; color: #666666; font-size: 80%; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/sqlsat46_2010/andyquote.png" alt="Andy Leonard Quote" />
+  <img src="http://www.tiernok.com/LTDBlog/sqlsat46_2010/andyquote.png" alt="Andy Leonard Quote" />
 </div>
 
 ## The After-thing
@@ -53,7 +53,7 @@ I managed to run into quite a few of the local members of the user group, who di
 The day ended on a high note, around a table with Grant, Allen White ([blog][14]|[twitter][15]), Brent Kremer, and David Elvikis. Stories were traded, good food was eaten (not counting the fried pickles that showed up), and I think we all had a fun time. It was great to find out that Grant and Allen were just two more normal (well, close to normal) people like the rest of us. Somehow I managed to leave owing a round. So the next time we end up at the same event Grant, don't be surprised if a drink shows up 😀
 
 <div style="margin: .5em 2em .5em 0px; color: #666666; font-size: 80%; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/sqlsat46_2010/scotch.png" alt="Glass of Scotch (The Macallen 12)" />
+  <img src="http://www.tiernok.com/LTDBlog/sqlsat46_2010/scotch.png" alt="Glass of Scotch (The Macallen 12)" />
 </div>
 
 Unfortunately I fell down on the job where pictures and tweets were concerned, so there aren't as many as there have been for past events. 

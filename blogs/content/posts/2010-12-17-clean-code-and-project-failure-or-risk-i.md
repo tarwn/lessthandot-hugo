@@ -17,7 +17,7 @@ categories:
 
 ---
 <div style="float: left; padding: .5em; margin: 1.5em .5em .5em 0px; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center; position: relative;">
-  <img src="http://tiernok.com/LTDBlog/toolbox.jpg" alt="Toolbox" height="200" /><br /> Toolbox photo, by way<br /> of <a href="http://www.flickr.com/photos/98897452@N00/1262659991/in/pool-390517@N21/" title="See original">Flickr</a>
+  <img src="http://www.tiernok.com/LTDBlog/toolbox.jpg" alt="Toolbox" height="200" /><br /> Toolbox photo, by way<br /> of <a href="http://www.flickr.com/photos/98897452@N00/1262659991/in/pool-390517@N21/" title="See original">Flickr</a>
 </div>
 
 I recently tuned into an ongoing debate in the software craftsmanship world on the main cause of project failure. Most people responding to the original request for opinions on twitter pointed to business as the key failure point of software projects, specifically areas like scheduling, budgeting, and understanding requirements. The remainder were examples of bad architecture or poor coding practices sinking the project (or in come cases the company).
@@ -41,7 +41,7 @@ The key ingredient to all of these is the same thing; complexity and our failure
 Humans follow complex, organic processes that are often defined more by the exceptions than the standard. Communicating this process is challenging and prone to error, and that's before we notice how many steps we miss and take for granted. Compounding this is the fact that we aren't just developing a complex, logical application to replace or enhance a complex, organic process, but we are using <u>other</u> complex, organic processes to do so, such as requirements analysis, project management, software development, budgeting, and so on.
 
 <div style="max-width: 520px; padding: .5em; margin: .5em auto; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/process.jpg" alt="Toolbox" /><br /> The sum of two organic processes is not a neat, easily digitized process flow
+  <img src="http://www.tiernok.com/LTDBlog/process.jpg" alt="Toolbox" /><br /> The sum of two organic processes is not a neat, easily digitized process flow
 </div>
 
 The more complex a problem is, the easier it is to get the answer wrong. The total sum of complexity in a software project is so incredible that it is hardly surprising that so many solutions fail or end in mediocre results. However we can make that complexity work for us by building in a certain level of resiliency; Processes or artifacts in one step of the process can help overcome gaps or failures in others. 
@@ -79,7 +79,7 @@ Projects are big, organic beasts of intertwined complexities. It's difficult to 
 Success and failure are not boolean, there are many levels of success, mediocrity, and failure.
 
 <div style="max-width: 520px; padding: .5em; margin: .5em auto; border: 1px solid #dddddd; color: #666666; font-size: .8em; text-align: center;">
-  <img src="http://tiernok.com/LTDBlog/successbar.png" alt="Success is not Boolean" /><br /> Success and Failure are not Boolean
+  <img src="http://www.tiernok.com/LTDBlog/successbar.png" alt="Success is not Boolean" /><br /> Success and Failure are not Boolean
 </div>
 
 Only after a project is complete can we judge whether we believe tactics like producing clean code affected our level of success or failure. Ultimately the blame for failures, mediocrity, and opportunity costs lies with the person decided it was acceptable to forgo processes designed to best mitigate complexity and position the project for success. Whether this person is responsible for the entire project, a key piece of the process, accepting a project that is not financially viable, or simply a developer on one portion of the project, the decision to operate at a higher level of risk means accepting a greater chance of failure.

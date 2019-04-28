@@ -143,19 +143,19 @@ And there we have it.
 Now when we start typing in the XML file we will get intellisense suggestions/completion:
 
 <div style="text-align:center; margin: .5em 0;">
-  <img src="http://tiernok.com/LTDBlog/XmlSchemaIntellisense/Intellisense.png" alt="Intellisense suggestions" />
+  <img src="http://www.tiernok.com/LTDBlog/XmlSchemaIntellisense/Intellisense.png" alt="Intellisense suggestions" />
 </div>
 
 We also get warnings when we forget a required attribute:
 
 <div style="text-align:center; margin: .5em 0;">
-  <img src="http://tiernok.com/LTDBlog/XmlSchemaIntellisense/SchemaWarning.png" alt="Intellisense suggestions" />
+  <img src="http://www.tiernok.com/LTDBlog/XmlSchemaIntellisense/SchemaWarning.png" alt="Intellisense suggestions" />
 </div>
 
 And when we use the wrong type:
 
 <div style="text-align:center; margin: .5em 0;">
-  <img src="http://tiernok.com/LTDBlog/XmlSchemaIntellisense/WrongTypeWarning.png" alt="Intellisense suggestions" />
+  <img src="http://www.tiernok.com/LTDBlog/XmlSchemaIntellisense/WrongTypeWarning.png" alt="Intellisense suggestions" />
 </div>
 
 _Hopefully the custom color scheme isn't confusing, was feeling too lazy to switch it and switch it back_

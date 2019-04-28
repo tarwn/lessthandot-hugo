@@ -68,7 +68,7 @@ When you are first starting out it will be easier to pick processes that you kno
 Select a process that is commonly considered slow or costly to perform. Starting at the beginning of the process, for instance when the request is generated or when a system triggers a process, draw each step the task goes through on it's way to completion and communications of that completion. At each step write down the average amount of time (you could also choose to write down the maximum, just be consistent). What you should end up with is something like this:
 
 <div style="text-align: center; color: #666666; ">
-  <img src="http://tiernok.com/LTDBlog/nevertime_workflow.png" alt="Sample Workflow Diagram" /><br /> Diagram #1: Partial sample workflow of PC request process
+  <img src="http://www.tiernok.com/LTDBlog/nevertime_workflow.png" alt="Sample Workflow Diagram" /><br /> Diagram #1: Partial sample workflow of PC request process
 </div>
 
 In our example workflow it takes almost 20 days from the first request to actually get hardware in so we can start installing software. At each step in the diagram we should be asking ourselves what value is provided by the step and why it takes as long as it does. For example, the most obvious items on the diagram are probably the time for filling out the form and generating the PO. Cutting those two in half would be a 13% improvement in the process time from the request to getting the equipment in. But lets look at a couple more, what value does it provide for the IT Manager to sign off on both the request and the Purchase Order Request? What value does it provide to quote each PC request individually? We now have 4 items to work on improving. 

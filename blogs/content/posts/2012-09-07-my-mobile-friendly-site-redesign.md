@@ -42,7 +42,7 @@ As the available screen real estate gets larger, the logo size increases, the nu
 
 While my site doesn't have a lot of functionality, achieving the layout changes and addition of features at the largest sizes was still a nice challenge. The key to the site is the CSS media queries that alter the visibility of elements and areas, combined with some javascript to load in larger images or additional elements when relevant. In the event that a browser doesn't support media queries and javascript, they will receive the smallest possible layout. Though there are workarounds, I purposefully left the IE8/IE7 layout in this mode, which would also be used for most mobile browsers.
 
-If you load the site in the secondary window and drag the width around, you will be able to see the transitions: <a href="http://tiernok.com" target="_blank">http://tiernok.com</a>
+If you load the site in the secondary window and drag the width around, you will be able to see the transitions: <a href="http://www.tiernok.com" target="_blank">http://www.tiernok.com</a>
 
 ### Images
 
@@ -99,8 +99,8 @@ Currently a mobile device without javascript will load about 83KB of content (ob
 
 Overall I am very happy with it. The size is usable at every resolution I try and this method doesn't rely on the client-side user agent. Additional functionality would be easy to add, as I could use feature detection to add functionality only if the end user's browser supported it, regardless of the user agent string. I'm very happy with the result.
 
- [1]: http://tiernok.com/LTDBlog/website/SmallPhone.png
- [2]: http://tiernok.com/LTDBlog/website/LargePhone.png
- [3]: http://tiernok.com/LTDBlog/website/SmallBrowser.png
- [4]: http://tiernok.com/LTDBlog/website/LargeBrowser.png
+ [1]: http://www.tiernok.com/LTDBlog/website/SmallPhone.png
+ [2]: http://www.tiernok.com/LTDBlog/website/LargePhone.png
+ [3]: http://www.tiernok.com/LTDBlog/website/SmallBrowser.png
+ [4]: http://www.tiernok.com/LTDBlog/website/LargeBrowser.png
  [5]: http://html5boilerplate.com/
