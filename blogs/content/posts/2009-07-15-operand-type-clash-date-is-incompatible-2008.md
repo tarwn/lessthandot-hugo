@@ -6,7 +6,7 @@ date: 2009-07-15T11:40:06+00:00
 ID: 511
 url: /index.php/datamgmt/datadesign/operand-type-clash-date-is-incompatible-2008/
 aliases:
-  - url: /index.php/datamgmt/datadesign/operand-type-clash-date-is-incompatible--2008/
+  - /index.php/datamgmt/datadesign/operand-type-clash-date-is-incompatible--2008/
 views:
   - 73569
 rp4wp_auto_linked:

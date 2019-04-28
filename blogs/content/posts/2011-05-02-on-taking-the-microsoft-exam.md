@@ -28,5 +28,5 @@ As for the Reporting Services piece, I've been creating reports for a few years 
 
 I will retake the exam – after a whole lot more studying.  Now I know these certifications demonstrate not just knowledge, but mastery of a subject area.  And I'm not quite there, yet.
 
- [1]: http://blogs.ltd.local
+ [1]: 
  [2]: http://twitter.com/#!/onpnt
