@@ -1,6 +1,6 @@
 name = "Ted Krueger (onpnt)"
 image = ""
 twitter = "onpnt"
-linkedin = "http://www.linkedin.com/pub/ted-krueger/2/183/b66"
-homepage = "http://www.datametricsconsulting.com/"
+linkedin = "https://www.linkedin.com/pub/ted-krueger/2/183/b66"
+homepage = "https://www.datametricsconsulting.com/"
 bio = "Ted Krueger is a SQL Server MVP and Author that has been working in development and database administration and the owner of a successful consulting business, DataMetrics Consulting. Specialties range from High Availability and Disaster / Recovery setup and testing methods down to custom assembly development for SQL Server Reporting Services. Ted blogs and is also one of the founders of LessThanDot.com technology community. Some of the articles focused on are Backup / Recovery, Security, SSIS and working on SQL Server and using all of the SQL Server features available to create stable and scalable database services. "

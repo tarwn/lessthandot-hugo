@@ -1,4 +1,4 @@
-baseURL = "http://blogs.lessthandot.com"
+baseURL = "https://blogs.lessthandot.com"
 languageCode = "en-us"
 title = "LessThanDot Archive"
 theme = "lessthandot"
