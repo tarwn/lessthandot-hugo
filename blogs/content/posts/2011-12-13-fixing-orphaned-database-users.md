@@ -6,6 +6,8 @@ date: 2011-12-13T11:40:00+00:00
 ID: 1438
 excerpt: 'This will be my contribution to the T-SQL Tuesday Challenge that was originally created by Adam Machanic.  This month, my good friend Allen White (Blog | Twitter) is hosting the challenge.  The topic he has chosen is, “What T-SQL tricks do you use today&hellip;'
 url: /index.php/datamgmt/dbprogramming/fixing-orphaned-database-users/
+aliases: 
+  - /index.php/DataMgmt/DBAdmin/fixing-orphaned-database-users/
 views:
   - 64275
 rp4wp_auto_linked:

@@ -9,6 +9,8 @@ excerpt: |
   
   Please also take a look at this&hellip;
 url: /index.php/webdev/webdesigngraphicsstyling/how-to-insert-information-into-multiple/
+aliases: 
+  - /index.php/webdev/webdesigngraphicsstyling/how-to-insert-information-into-multiple-/
 views:
   - 78933
 rp4wp_auto_linked:

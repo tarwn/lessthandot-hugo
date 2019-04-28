@@ -5,6 +5,8 @@ type: post
 date: 2010-05-12T11:58:28+00:00
 ID: 789
 url: /index.php/datamgmt/dbprogramming/how-to-get-the-processid-that-sql-server/
+aliases:
+  - /index.php/datamgmt/dbadmin/mssqlserveradmin/how-to-get-the-processid-that-sql-server
 views:
   - 18981
 rp4wp_auto_linked:

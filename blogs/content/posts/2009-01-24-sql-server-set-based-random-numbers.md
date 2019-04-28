@@ -1,5 +1,5 @@
 ---
-title: SQL Server – Set based random numbers
+title: SQL Server - Set based random numbers
 author: George Mastros (gmmastros)
 type: post
 date: 2009-01-24T18:35:59+00:00
